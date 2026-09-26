@@ -146,10 +146,10 @@ third spatial dimension differently.
 
 ## Comparative panel
 
-An outcome-blind screen started from 19 checksum-pinned Movebank bat event sources. Six sources
-from four taxa passed fixed structural requirements for same-event x-y-height data and repeat
-tracking. Sources without native height or adequate repeat individuals were excluded before
-numeric height outcomes.
+An outcome-blind search covered 23 Movebank bat parent datasets. Nineteen exposed raw event CSVs
+directly and four legacy packages were recovered through child handles. Six sources from four taxa
+passed fixed structural requirements for same-event x-y-height data and repeat tracking. Sources
+without native height or adequate repeat individuals were excluded before numeric height outcomes.
 
 This makes *Phyllostomus*' failure to replicate the place-coupled pattern especially informative:
 it was not selected after seeing a favorable result.
