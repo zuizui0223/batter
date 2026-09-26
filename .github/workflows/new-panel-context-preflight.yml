@@ -1,0 +1,26 @@
+name: new-panel-context-preflight-v1
+
+on:
+  push:
+    branches:
+      - study/individual-vertical-strategies-v1
+    paths:
+      - "scripts/preflight_new_panel_context.py"
+      - ".github/workflows/new-panel-context-preflight.yml"
+  workflow_dispatch:
+
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python scripts/preflight_new_panel_context.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: batter-new-panel-context-preflight-v1
+          path: results/new_panel_context_preflight_v1.json
