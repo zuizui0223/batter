@@ -20,12 +20,13 @@
 
 ## Introduction
 
-Individual specialization is a fundamental source of population niche structure. Conspecific
+Individual specialization is a fundamental source of population niche structure (Bolnick et al. 2003). Conspecific
 animals may differ consistently in resources, habitats, routes or activity, such that a pooled
 population distribution represents a mixture of non-exchangeable individuals rather than a
-single strategy. In bats, repeated horizontal space use and foraging-site fidelity have provided
-clear examples of this phenomenon. Three-dimensional tracking now makes it possible to ask a
-parallel question in the vertical dimension.
+single strategy. In bats, repeated horizontal space use and foraging-site fidelity provide clear
+examples of this phenomenon (Kerches-Rogeri et al. 2020; Mordue et al. 2023), and the magnitude
+of spatial individual specialization can change across seasons (Wang et al. 2023).
+Three-dimensional tracking now makes it possible to ask a parallel question in the vertical dimension.
 
 Vertical individuality can take several forms that are biologically distinct but easily
 confounded in pooled analyses. One animal may simply use a higher or lower overall range of
@@ -247,6 +248,18 @@ The main empirical opportunity now lies outside this frozen public-data programm
 three-dimensional tracking of the same individuals across experimentally or naturally contrasting
 contexts would allow direct testing of whether conditional-versus-marginal architecture is itself
 a plastic individual trait.
+
+## References
+
+Bolnick, D.I., Svanbäck, R., Fordyce, J.A., Yang, L.H., Davis, J.M., Hulsey, C.D. & Forister, M.L. (2003). The ecology of individuals: Incidence and implications of individual specialization. *The American Naturalist*, **161**, 1–28. https://doi.org/10.1086/343878
+
+Kerches-Rogeri, P., Niebuhr, B.B., Muylaert, R.L. & Mello, M.A.R. (2020). Individual specialization in the use of space by frugivorous bats. *Journal of Animal Ecology*, **89**, 2584–2595. https://doi.org/10.1111/1365-2656.13339
+
+Mordue, S., Mill, A., Shirley, M. & Aegerter, J. (2023). Foraging fidelity and individual specialisation in a temperate bat *Myotis nattereri*. *European Journal of Wildlife Research*, **69**, 121. https://doi.org/10.1007/s10344-023-01744-5
+
+O'Mara, M.T., Amorim, F., Scacco, M., McCracken, G.F., Safi, K., Mata, V., Tomé, R., Swartz, S., Wikelski, M., Beja, P., Rebelo, H. & Dechmann, D.K.N. (2021). Bats use topography and nocturnal updrafts to fly high and fast. *Current Biology*, **31**, 1311–1316.e4. https://doi.org/10.1016/j.cub.2020.12.042
+
+Wang, Z., Gong, L., Huang, Z., Geng, Y., Zhang, W., Si, M., Wu, H., Feng, J. & Jiang, T. (2023). Linking changes in individual specialization and population niche of space use across seasons in the great evening bat (*Ia io*). *Movement Ecology*, **11**, 32. https://doi.org/10.1186/s40462-023-00394-1
 
 ## Ethics statement
 
