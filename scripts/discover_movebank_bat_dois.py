@@ -15,7 +15,7 @@ def fetch_json(url):
 def main():
     hits={}
     for q in QUERIES:
-        url=DATACITE+"?"+urllib.parse.urlencode({"query":q,"page[size]":100})
+        url=DATACITE+"?"+urllib.parse.urlencode({"prefix":"10.5441","query":q,"page[size]":100,"disable-facets":"true"})
         payload=fetch_json(url)
         for item in payload.get("data",[]):
             attrs=item.get("attributes",{})
