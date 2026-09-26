@@ -41,7 +41,7 @@ def main() -> int:
     ax.set_xlabel("Horizontal conditioning cell size (km)")
     ax.set_ylabel("Conditional identity gain (nats/fix)")
     ax.set_xticks([2.5, 5.0, 10.0])
-    ax.set_title("Spatial grain of cross-night vertical individuality")
+    ax.set_title("Exploratory spatial grain of cross-night vertical identity")
     ax.legend(frameon=False, fontsize=8)
     fig.tight_layout()
     OUT.parent.mkdir(parents=True, exist_ok=True)
