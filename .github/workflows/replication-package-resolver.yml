@@ -1,0 +1,26 @@
+name: replication-package-resolver-v1
+
+on:
+  push:
+    branches:
+      - study/individual-vertical-strategies-v1
+    paths:
+      - "scripts/resolve_replication_packages.py"
+      - ".github/workflows/replication-package-resolver.yml"
+  workflow_dispatch:
+
+jobs:
+  resolve:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python scripts/resolve_replication_packages.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: batter-replication-package-resolver-v1
+          path: results/replication_package_resolver_v1.json
