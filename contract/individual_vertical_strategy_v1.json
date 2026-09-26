@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-individual-vertical-strategy-v1",
+  "taxon": "Tadarida teniotis",
+  "question": "Does an individual bat's location-conditioned vertical-use distribution repeat across tracking sessions better than a distribution learned from other bats?",
+  "source": {
+    "repository_doi": "10.5441/001/1.52nn82r9",
+    "paper_doi": "10.1016/j.cub.2020.12.042",
+    "bitstream_url": "https://datarepository.movebank.org/server/api/core/bitstreams/2d629393-4266-4f85-88db-001faeab669d/content",
+    "expected_size_bytes": 1926056,
+    "checksum_type": "MD5",
+    "checksum": "570872ab7aba674b9bdc2f2ee6044a71"
+  },
+  "semantics": {
+    "primary_vertical_field": "height_above_msl",
+    "primary_interpretation": "vertical flight use",
+    "foraging_claim_authorized": false,
+    "height_above_ground_claim_authorized": false
+  },
+  "primary": {
+    "exclude_source_marked_outliers": true,
+    "session_gap_hours": 4,
+    "minimum_fixes_per_session": 50,
+    "crs": "EPSG:3035",
+    "cell_size_m": 5000,
+    "z_edges_m": [
+      "-inf",
+      0,
+      50,
+      100,
+      200,
+      400,
+      800,
+      1600,
+      3200,
+      "inf"
+    ],
+    "jeffreys_alpha": 0.5,
+    "minimum_scored_fixes_per_target_session": 50,
+    "self_model_weighting": "equal session",
+    "population_model_weighting": "equal individual",
+    "endpoint": "mean log P_self(z|x,y) - log P_other_individuals(z|x,y)",
+    "summary_unit": "individual"
+  },
+  "competing_explanations": [
+    "repeatable individual specialization",
+    "night-specific atmospheric conditions",
+    "within-individual behavioral flexibility",
+    "unequal horizontal/topographic support"
+  ],
+  "second_stage": {
+    "authorized_only_as_separate_mechanism_analysis": true,
+    "candidates": [
+      "terrain-relative height",
+      "terrain/topographic exposure",
+      "wind",
+      "orographic uplift",
+      "individual random slopes"
+    ]
+  },
+  "odsp_boundary": "Separate ecological study. Do not retune, rerun, or reinterpret the frozen ODSP bat terminal endpoint."
+}
