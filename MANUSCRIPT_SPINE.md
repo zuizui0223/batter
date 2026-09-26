@@ -1,107 +1,191 @@
-# Manuscript spine v0.1
+# Manuscript spine v0.2 — cross-species replication
 
 ## Working title
 
-**Individual bats repeat fine-scale vertical routes through a shared nocturnal airspace**
+**Individual specialization in three-dimensional airspace use is place-specific rather than altitude-wide**
 
 Alternative:
-**Individual specialization in three-dimensional airspace use is local rather than altitude-wide**
+**Bats repeat individual vertical routes across nights and landscapes**
 
 ## One-sentence claim
 
-Repeated 3-D GPS tracking of European free-tailed bats shows that individual identity predicts
-where vertical flight layers are used across nights; this repeatability persists relative to
-terrain, is strongest at fine spatial scales, and is not explained by repeated microtopographic
-routes alone.
+Repeated 3-D tracking shows that individual bats carry repeatable vertical signatures across
+nights primarily through **place × vertical-state coupling**, rather than through a single
+preferred flight height; this pattern persists relative to terrain in *Tadarida teniotis* and
+replicates prospectively in an independent *Eidolon helvum* panel.
 
 ## Biological question
 
-Animal movement studies usually quantify individual specialization on a horizontal map. But
-flying animals occupy a three-dimensional landscape. Does individual specialization extend to
-the vertical dimension, and if so, is it a stable preferred flight height or a place-specific
-vertical routing rule?
+Individual specialization is usually drawn on a horizontal map: animals differ in where they
+forage, commute or establish home ranges. Flying animals also choose a vertical coordinate.
+Does individual specialization extend into this third spatial dimension? If it does, is the
+repeatable property simply “how high this animal flies,” or is it a local rule linking particular
+parts of the landscape to particular vertical layers?
 
-## Hypotheses and answers
+## Study logic
+
+The project began from a paradox in *T. teniotis*: the population was descriptively vertically
+thick (~4.02 effective altitude states after x-y was known), yet a pooled
+`P(z|x,y)` did not transfer to held-out individuals. Rather than treating that as absence of
+vertical structure, we tested whether the failed population transfer arose because vertical
+organization is individualized.
+
+The decisive validation target is cross-night self-transfer:
+
+`same individual on another night > other individuals`.
+
+The primary inference unit is the individual, not the 30-s GPS fix.
+
+## Focal species — *Tadarida teniotis*
 
 ### H1. Individuals repeat vertical use across nights
-Supported descriptively. At 5 km, conditional MSL self-transfer is +0.428 nats/fix on the matched
-annotated dataset; 5/6 evaluable individuals are positive.
+
+Supported. At 5-km horizontal conditioning, matched annotated data give MSL conditional
+self-transfer of **+0.428 nats/fix**, with 5/6 evaluable individuals positive.
 
 ### H2. Individuality is a stable preferred altitude
-Not supported as the general explanation. Marginal MSL identity gain is only +0.052; matched AGL
-marginal identity is -0.255.
+
+Not supported as the general explanation. Marginal MSL identity gain is only **+0.052**.
+For terrain-relative height, marginal AGL identity is **-0.255**.
 
 ### H3. Individuality resides in place × vertical-state coupling
-Supported. Identity × location increments are +0.376 for MSL and +0.591 for AGL at 5 km.
 
-### H4. The signal is only repeated use of the same terrain
-Not supported at 5 km. Terrain-elevation self-transfer is +0.007, versus +0.337 AGL and +0.428 MSL.
+Supported. At 5 km, identity × location increments are:
 
-### H5. A single repeatable response to vertical wind explains the individual routes
-Not supported by the frozen mechanism endpoint. Only two repeat-tracked individuals passed the
-predeclared W-variation gate and their results conflicted.
+- MSL: **+0.376**
+- AGL: **+0.591**
 
-### H6. The signal is only a shared night-specific environmental state
-Not supported as the general explanation. In a stricter control, the same bat on another night
-outpredicted other bats flying during the target calendar night. Mean self-vs-same-night gain was
-+0.484 nats/fix for AGL and +0.436 for MSL, with 4/5 evaluable individuals positive in each
-coordinate frame. Thus contemporaneous night context does not erase the individual vertical
-signature.
+The AGL result is particularly diagnostic: an animal's overall height-above-ground distribution
+does not transfer, but its location-conditioned AGL organization does.
+
+### H4. The signal is repeated use of the same microtopography
+
+Not supported at 5 km. Conditional terrain-elevation self-transfer is **+0.007**, compared with
++0.337 for AGL and +0.428 for MSL. At 2.5 km some terrain-route repeatability appears (+0.187),
+but it remains much smaller than AGL/MSL vertical organization.
+
+### H5. One repeatable vertical-wind reaction norm explains the routes
+
+Not supported by the separately frozen mechanism endpoint. Only two repeat-tracked bats passed
+the predeclared within-session variation gate for `W.Component`; their cross-night slope results
+conflicted and the permutation p-value was 0.334. The gate was not retuned.
+
+### H6. The signature is only a shared night-specific environmental state
+
+Not supported as the general explanation. The same bat on another night was compared directly
+against other bats tracked during the target calendar night.
+
+- AGL self-vs-same-night gain: **+0.484**, 4/5 individuals positive
+- MSL self-vs-same-night gain: **+0.436**, 4/5 positive
+
+Thus contemporaneous nightly context does not erase the cross-night individual signature.
+
+## Prospectively frozen independent replication — *Eidolon helvum*
+
+The second species was selected through an outcome-blind repository and structural screen.
+Before numeric height values were opened, the archive provided 18,154 GPS records from 63
+individuals, including 42 with at least two >=50-fix sessions. The native vertical field is
+`height_above_ellipsoid`.
+
+To avoid geographic or annual identity masquerading as individual identity, all other-individual
+baselines were restricted to the exact same **study site × year** cohort. The 5-km pass rule was
+frozen before height outcomes.
+
+### H7. The conditional-over-marginal identity pattern replicates in a second bat species
+
+**Supported under every frozen criterion.**
+
+At 5 km:
+
+- evaluable individuals: **20**
+- conditional identity gain: **+0.219 nats/fix**
+- positive individual means: **17/20 (85%)**
+- marginal-height identity gain: **+0.002**
+- identity × location increment: **+0.217**
+- median individual conditional gain: **+0.156**
+
+Every site-year cohort with an evaluable individual had a positive cohort-mean conditional gain.
+The pattern also remained positive in the frozen 2.5-km and 10-km scale checks.
+
+This is the crucial replication: a second species reproduces the result that individual
+information lies mainly in **where a vertical layer is used**, not in a bat-wide preferred
+height.
 
 ## Ecological interpretation
 
-The population-level vertical niche is not a single shared 3-D map. It is partly an overlay of
-individual-specific local vertical routes. These routes are not simply individual-wide flight
-height preferences: identity information appears when vertical state is conditioned on place.
+The population-level vertical niche should not always be interpreted as one shared 3-D
+probability surface. In these data it is partly an overlay of **individual-specific local
+vertical routes**.
 
-The persistence of self-transfer in AGL shows that this is not just an artefact of absolute\nelevation or repeated passage over the same terrain. A same-night control further shows that\nanother night from the same bat usually predicts vertical state better than contemporaneous\nother bats, arguing against shared night conditions as the sole explanation. Conversely,\nindividual contrasts between AGL and MSL suggest heterogeneity in how bats organize 3-D\nmovement relative to terrain.
+The inference is stronger than simple route fidelity. In the focal species, the signature
+survives conversion to height above ground and is much larger than terrain-elevation transfer.
+It is also stronger than a contemporaneous other-bat baseline on the same night.
 
-## Relation to previous work
+The independent fruit-bat panel then reproduces the conditional-over-marginal signature across
+several African site-year contexts. Previous work on *E. helvum* has documented strong variation
+among individual movements and fidelity to foraging areas; the present result adds a third
+spatial dimension to that individual-level organization.
 
-O'Mara et al. (2021) showed that *Tadarida teniotis* exploits topography and nocturnal uplift to
-reach high altitude. The present re-analysis asks a different question: whether different
-individuals repeatedly organize their use of that 3-D energy landscape in different ways.
+The mechanism is deliberately left open. Different individuals could achieve repeatable 3-D
+routes through route memory, resource geography, topographic flow, wind exploitation, sensory
+rules or combinations of these. The failed common uplift-reaction endpoint argues against
+collapsing all individuals onto one wind-response mechanism.
 
-Previous bat studies have documented individual specialization and foraging-site fidelity in
-horizontal space. This study extends the individual-specialization question to vertical
-airspace and explicitly separates global altitude preference from local place-by-height routing.
+## Exploratory comparative prediction: specialization has a spatial grain
+
+The two species differ descriptively in scale profile.
+
+- *T. teniotis*: strong at 2.5 km, weaker at 5 km, approximately absent by 10 km.
+- *E. helvum*: positive at 2.5, 5 and 10 km.
+
+With only two species this is **not** a comparative trait result. It motivates a new prediction:
+the horizontal grain at which vertical individuality is expressed may scale with movement
+ecology, landscape use or flight mode.
 
 ## Figures
 
-### Figure 1 — Concept and data
-3-D tracks of the eight bats, with AGL/MSL distinction and study design:
-same individual other night versus other individuals.
+### Figure 1 — The individual-vertical-specialization problem
+Conceptual diagram showing why a pooled thick 3-D niche can fail between individuals yet repeat
+within individuals. Show marginal height versus place-conditioned vertical rules.
 
-### Figure 2 — Cross-night self-transfer
-Per-individual conditional self-transfer gains at 5 km for MSL and AGL.
-Show zero line and paired individuals.
+### Figure 2 — Focal-species cross-night self-transfer
+Per-individual *Tadarida* gains for MSL and AGL at 5 km, with paired identities and zero line.
 
 ### Figure 3 — Where identity information lives
-For terrain, AGL and MSL, show:
-marginal identity gain versus identity × location increment.
+Terrain, AGL and MSL decomposition into marginal identity and identity × location. Main visual:
+terrain near zero; AGL/MSL interaction dominated.
 
-Main visual result: terrain near zero, vertical components positive and interaction-dominated.
+### Figure 4 — Shared-night control
+Self-on-another-night versus contemporaneous-other-bat prediction for AGL/MSL.
 
-### Figure 4 — Scale dependence
-Conditional self-transfer at 2.5, 5 and 10 km for AGL/MSL.
-Individual specialization is strongest at fine horizontal scales.
+### Figure 5 — Independent replication
+Per-individual *Eidolon* conditional and marginal gains, grouped by site-year. Highlight
+17/20 conditional-positive individuals and near-zero marginal mean.
 
-### Figure 5 — Individual heterogeneity
-Paired AGL versus MSL gains per bat, highlighting Bat7 as terrain-relative and Bat4 as
-MSL-dominant. Label as exploratory coordinate-frame heterogeneity.
+### Figure 6 — Spatial grain
+2.5/5/10-km conditional identity profiles for the two species, explicitly labelled exploratory
+because vertical semantics and movement ecology differ.
 
 ## Main limitations
 
-- eight individuals and one to three tracked nights each;
-- observational, not experimental;
-- no validated foraging-state label, so claims concern flight/airspace use;
-- the wind-response mechanism endpoint has limited cross-night estimability;
-- GPS/DEM uncertainty remains in AGL;
-- individual strategy classes are exploratory, not confirmatory.
+- focal species: eight individuals and one to three tracked sessions each;
+- independent species uses ellipsoid height, not AGL;
+- observation schedules and vertical reference systems differ across species;
+- no validated common foraging-state classifier, so the central claim concerns flight/airspace use;
+- observational repeatability does not establish personality, learning or causation;
+- the wind-response mechanism test has limited cross-night estimability;
+- cross-species spatial-grain interpretation is hypothesis-generating with two species.
+
+## Current paper-level conclusion
+
+> **Individual specialization in bat airspace is not adequately described by a preferred flight
+> altitude. Across a focal 3-D tracking study and a prospectively frozen independent species,
+> individual identity is expressed mainly through repeatable coupling between horizontal place
+> and vertical state.**
 
 ## Next data priority
 
-The highest-value extension is not more re-tuning of this dataset. It is an independent bat panel
-with repeated nights per individual and 3-D GPS/altimetry, ideally with wind fields and behavioural
-classification. The prospective prediction is that fine-scale place × AGL self-transfer exceeds
-marginal-height identity and terrain-only transfer.
+Do not retune the completed *Tadarida* or *Eidolon* endpoints. The highest-value next extension is
+a broader independent multi-species panel with repeated nights and explicit terrain-relative
+height, allowing the spatial grain of vertical specialization to become a comparative ecological
+trait rather than an exploratory two-species observation.
