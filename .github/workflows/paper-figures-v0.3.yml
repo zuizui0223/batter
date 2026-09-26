@@ -1,0 +1,57 @@
+name: paper-figures-v0.3
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "results/architecture_primary_v0_3.csv"
+      - "results/architecture_primary_v0_3.json"
+      - "results/architecture_pairwise_v0_3.csv"
+      - "results/architecture_pairwise_v0_3.json"
+      - "figures/plot_architecture_plane.py"
+      - "pyproject.toml"
+      - ".github/workflows/paper-figures-v0.3.yml"
+  workflow_dispatch:
+
+jobs:
+  figure:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -e ".[figure]"
+      - name: Validate frozen architecture decomposition
+        run: |
+          python - <<'PY'
+          import csv
+          from pathlib import Path
+
+          for path in [
+              Path("results/architecture_primary_v0_3.csv"),
+              Path("results/architecture_pairwise_v0_3.csv"),
+          ]:
+              with path.open(newline="", encoding="utf-8") as fh:
+                  rows=list(csv.DictReader(fh))
+              assert rows
+              for r in rows:
+                  if "conditional_identity_nats_per_fix" in r:
+                      c=float(r["conditional_identity_nats_per_fix"])
+                      m=float(r["marginal_identity_nats_per_fix"])
+                      x=float(r["place_x_height_nats_per_fix"])
+                  else:
+                      c=float(r["conditional_pairwise_gain"])
+                      m=float(r["marginal_pairwise_gain"])
+                      x=float(r["place_x_height_pairwise_gain"])
+                  assert abs(c-(m+x)) < 1e-12, (path, r["panel_id"], c, m, x)
+          print("Frozen architecture tables satisfy conditional = marginal + interaction.")
+          PY
+      - run: python figures/plot_architecture_plane.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: batter-paper-figure-architecture-plane-v0.3
+          path: figures/architecture_plane_v0_3.pdf
+          if-no-files-found: error
