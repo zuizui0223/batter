@@ -1,0 +1,99 @@
+{
+  "schema": "batter.individual_vertical_strategy.result_record.v1",
+  "authoritative_execution": {
+    "workflow_run_id": 36239266732,
+    "workflow_job_id": 108396595234,
+    "head_sha": "1ba148dd807c8360a51ff4b8320c2f55104c5f55",
+    "artifact_id": 10905516855,
+    "artifact_digest": "sha256:5d9b0f8031e429de2621cdb6ee490f84f0688aabf43c57d6d11798b6295cc7a5"
+  },
+  "source_result_fingerprint": "cab07a8f804143637362cd6a634333e9814864d12a6dda895c8893a718b3724b",
+  "eligible_frozen_cell_event_count": 5473,
+  "individual_count": 8,
+  "primary": {
+    "shrinkage_lambda": 20,
+    "terminal_category": "individual_specific_spatial_vertical_strategy",
+    "identity_permutation": {
+      "observed_diagonal_mean_gain": 0.16822184209024452,
+      "null_mean": -0.03666145335083307,
+      "null_q05": -0.1565524685556345,
+      "null_q95": 0.07072912887660605,
+      "one_sided_p": 0.00017361111111111112,
+      "permutations": 40320
+    },
+    "positive_total_identity_count": 6,
+    "positive_spatial_increment_count": 5,
+    "positive_marginal_identity_count": 4,
+    "self_map_strict_top1_count": 5,
+    "late_event_counts": {
+      "Bat1_3D6001852B958": 187,
+      "Bat2_3D6001852B95D": 143,
+      "Bat3_3D6001852B978": 276,
+      "Bat4_3D6001852B980": 288,
+      "Bat5_3D6001852B98C": 238,
+      "Bat6_3D6001852B98E": 476,
+      "Bat7_3D6001852B9A3": 525,
+      "Bat8_3D6001852B9A7": 276
+    },
+    "individual_total_identity_advantage": {
+      "Bat1_3D6001852B958": 0.02479451270119859,
+      "Bat2_3D6001852B95D": 0.15451404147744108,
+      "Bat3_3D6001852B978": -0.08152883696646751,
+      "Bat4_3D6001852B980": -0.04077694997037851,
+      "Bat5_3D6001852B98C": 0.4618463044992623,
+      "Bat6_3D6001852B98E": 0.3536914432884294,
+      "Bat7_3D6001852B9A3": 0.1645201717518221,
+      "Bat8_3D6001852B9A7": 0.30871404994064855
+    },
+    "individual_marginal_identity_advantage": {
+      "Bat1_3D6001852B958": -1.253798062101216,
+      "Bat2_3D6001852B95D": -0.14999344598510067,
+      "Bat3_3D6001852B978": -0.21091553524605366,
+      "Bat4_3D6001852B980": -0.03722959942622084,
+      "Bat5_3D6001852B98C": 0.23987186590446957,
+      "Bat6_3D6001852B98E": 0.7123926205661738,
+      "Bat7_3D6001852B9A3": 0.1992264271884293,
+      "Bat8_3D6001852B9A7": 0.1840033065826211
+    },
+    "individual_within_spatial_increment": {
+      "Bat1_3D6001852B958": 0.8989572493529825,
+      "Bat2_3D6001852B95D": 0.03850798060316829,
+      "Bat3_3D6001852B978": 0.1295662199866623,
+      "Bat4_3D6001852B980": -0.14672042749054715,
+      "Bat5_3D6001852B98C": -0.07978028981750562,
+      "Bat6_3D6001852B98E": 0.23285399268959606,
+      "Bat7_3D6001852B9A3": -0.30138234090298754,
+      "Bat8_3D6001852B9A7": 0.11615664185196084
+    }
+  },
+  "sensitivities": {
+    "lambda5": {
+      "identity_permutation_p": 0.0009424603174603175,
+      "observed_diagonal_mean_gain": 0.12965206670187607,
+      "positive_total_identity_count": 6,
+      "positive_spatial_increment_count": 4,
+      "terminal_category": "individual_specificity_supported_but_decomposition_mixed"
+    },
+    "lambda50": {
+      "identity_permutation_p": 0.00014880952380952382,
+      "observed_diagonal_mean_gain": 0.1575754412493589,
+      "positive_total_identity_count": 7,
+      "positive_spatial_increment_count": 4,
+      "terminal_category": "individual_specificity_supported_but_decomposition_mixed"
+    }
+  },
+  "scientific_interpretation": [
+    "Identity-matched early vertical maps predict later vertical states substantially better than random reassignment of individual maps.",
+    "The result supports stable individual specificity in vertical-state organization within the frozen horizontal cells.",
+    "Five of eight individuals also show positive own conditional-versus-own marginal increments under the primary shrinkage rule, meeting the preregistered spatial-strategy category."
+  ],
+  "prohibited_interpretations": [
+    "height above ground",
+    "causal habitat preference",
+    "personality or cognition",
+    "fitness benefit",
+    "fundamental niche",
+    "species-wide universal individual specialization",
+    "reinterpretation of the ODSP species-level transfer endpoint as successful"
+  ]
+}
