@@ -116,7 +116,8 @@ That is now the center of the project.
 
 ## Outcome-blind source screen
 
-A fixed checksum-pinned screen started from 19 public Movebank bat event sources. Numeric height
+A fixed checksum-pinned search covered 23 public Movebank bat parent datasets. Nineteen exposed
+raw event CSVs directly; four legacy packages were recovered through child handles. Numeric height
 values were not used for admission.
 
 Only six sources from four taxa passed all structural requirements:
