@@ -70,6 +70,7 @@ def build_events(
     gap_hours: float = 4.0,
     exclude_marked_outliers: bool = True,
     min_session_fixes: int = 50,
+    z_edges: tuple[float, ...] = Z_EDGES,
 ) -> tuple[list[Event], dict]:
     parsed = []
     outliers = 0
@@ -93,7 +94,7 @@ def build_events(
             "individual": individual,
             "timestamp": timestamp,
             "cell": (math.floor(x / cell_size_m), math.floor(y / cell_size_m)),
-            "zbin": z_bin(height),
+            "zbin": z_bin(height, edges=z_edges),
         })
 
     assignments = assign_sessions(parsed, gap_hours=gap_hours)
@@ -162,9 +163,10 @@ def score_session(
     *,
     alpha: float = 0.5,
     minimum_scored_fixes: int = 50,
+    n_z_bins: int = 9,
 ) -> dict:
-    p_self = conditional_profile(self_training, unit="session", alpha=alpha)
-    p_pop = conditional_profile(population_training, unit="individual", alpha=alpha)
+    p_self = conditional_profile(self_training, unit="session", alpha=alpha, k=n_z_bins)
+    p_pop = conditional_profile(population_training, unit="individual", alpha=alpha, k=n_z_bins)
     supported = [e for e in target if e.cell in p_self and e.cell in p_pop]
     if len(supported) < minimum_scored_fixes:
         return {
@@ -187,7 +189,7 @@ def score_session(
     }
 
 
-def leave_one_session_out(events: list[Event], *, alpha: float = 0.5, minimum_scored_fixes: int = 50) -> dict:
+def leave_one_session_out(events: list[Event], *, alpha: float = 0.5, minimum_scored_fixes: int = 50, n_z_bins: int = 9) -> dict:
     sessions = sorted({e.session for e in events})
     by_session = {s: [e for e in events if e.session == s] for s in sessions}
     results = []
@@ -210,7 +212,7 @@ def leave_one_session_out(events: list[Event], *, alpha: float = 0.5, minimum_sc
             continue
         scored = score_session(
             target, self_training, population_training,
-            alpha=alpha, minimum_scored_fixes=minimum_scored_fixes,
+            alpha=alpha, minimum_scored_fixes=minimum_scored_fixes, n_z_bins=n_z_bins,
         )
         scored.update({
             "session": session,
