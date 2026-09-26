@@ -118,6 +118,15 @@ def focal_reconciliation():
 
 def architecture_plane():
     rows = read_csv("architecture_primary_v0_3.csv")
+    offsets = {
+        "tadarida_agl": (6, 10),
+        "tadarida_msl": (6, 5),
+        "eidolon": (6, 8),
+        "hypsignathus": (6, 12),
+        "phyllostomus_2016": (8, 18),
+        "phyllostomus_2023": (8, -16),
+        "phyllostomus_2022": (6, 8),
+    }
     fig, ax = plt.subplots(figsize=(7.2, 5.7))
     for r in rows:
         x = float(r["marginal_identity_nats_per_fix"])
@@ -136,6 +145,14 @@ def architecture_plane():
 
 def pairwise_plane():
     rows = read_csv("architecture_pairwise_v0_3.csv")
+    offsets = {
+        "tadarida_agl": (6, 10),
+        "tadarida_msl": (6, 5),
+        "eidolon": (6, 8),
+        "hypsignathus": (6, 14),
+        "phyllostomus_2023": (8, -16),
+        "phyllostomus_2022": (6, 8),
+    }
     fig, ax = plt.subplots(figsize=(7.2, 5.7))
     for r in rows:
         x = float(r["marginal_pairwise_gain"])
