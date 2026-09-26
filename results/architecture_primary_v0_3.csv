@@ -1,0 +1,8 @@
+panel_id,taxon,context,vertical_reference,role,evaluable_individuals,conditional_identity_nats_per_fix,marginal_identity_nats_per_fix,place_x_height_nats_per_fix,positive_conditional_fraction,frozen_status
+tadarida_msl,Tadarida teniotis,focal,MSL,focal validation,6,0.42804057006673096,0.052484319998149565,0.37555625006858145,0.8333333333333334,supported
+tadarida_agl,Tadarida teniotis,focal,AGL,focal semantic validation,6,0.33655976011332095,-0.25489567533550034,0.5914554354488213,0.6666666666666666,supported
+eidolon,Eidolon helvum,multi-site-year,ellipsoid,prospective independent replication,20,0.2189834066380572,0.00210276447543965,0.21688064216261763,0.85,supported
+hypsignathus,Hypsignathus monstrosus,Lek Njoukou 2020,ellipsoid,prospective independent replication,24,0.029329026741430914,-0.020660262506134546,0.04998928924756546,0.5416666666666666,supported
+phyllostomus_2022,Phyllostomus hastatus,Aj-cave and La Gruta 2022,MSL,prospective independent replication,33,0.055713950418866134,0.17585833694181663,-0.12014438652295047,0.42424242424242425,place-coupled prediction not supported
+phyllostomus_2023,Phyllostomus hastatus,Aj-cave and La Gruta 2023,ellipsoid,prospective temporal replication,16,0.03332180095813036,0.013281138695873029,0.02004066226225732,0.6875,supported
+phyllostomus_2016,Phyllostomus hastatus,La Gruta 2016,MSL,prospective dry-architecture test,10,0.05758943117796057,0.01645912628764278,0.04113030489031777,0.6,2022-like altitude-wide prediction not supported
