@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "resolver_run": 36246973363,
+  "selection_basis": "Legacy Movebank child handles recovered after parent-DOI repository resolution failed; no bitstream content inspected before this fixed set.",
+  "sources": [
+    {
+      "id": "grey_headed_flying_fox",
+      "taxon_hint": "Pteropus poliocephalus",
+      "doi": "10.5441/001/1.5bd6pq55/1",
+      "bitstream_id": "792122ca-c534-4607-81d4-1154cb7a5196",
+      "filename": "Grey-headed flying fox, Adelaide, 2015-2018.csv",
+      "size_bytes": 30732701,
+      "md5": "72fc6f9c8819675666259e4db9eb6395",
+      "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/792122ca-c534-4607-81d4-1154cb7a5196/content"
+    },
+    {
+      "id": "common_noctule_3d_migration",
+      "taxon_hint": "Nyctalus noctula",
+      "doi": "10.5441/001/1.5d736bf0/1",
+      "bitstream_id": "6b6017d6-136f-4c28-966b-39156a509088",
+      "filename": "3D migration flights of common noctules (data from O'Mara et al. 2019).csv",
+      "size_bytes": 272399,
+      "md5": "9bc3fb9e861a4c3173573a0705f0038e",
+      "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/6b6017d6-136f-4c28-966b-39156a509088/content"
+    },
+    {
+      "id": "christmas_island_flying_fox",
+      "taxon_hint": "Pteropus melanotus natalis",
+      "doi": "10.5441/001/1.mn019k4d/1",
+      "bitstream_id": "ac55f315-c032-43b3-8908-c752bde64d11",
+      "filename": "Movements of the Christmas Island flying fox Australia.csv",
+      "size_bytes": 1394765,
+      "md5": "c13ea335d7f46987d2e06959b81f552b",
+      "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/ac55f315-c032-43b3-8908-c752bde64d11/content"
+    },
+    {
+      "id": "lyles_flying_fox",
+      "taxon_hint": "Pteropus lylei",
+      "doi": "10.5441/001/1.j25661td/1",
+      "bitstream_id": "bfebccea-5324-4490-8a6f-3703831dc653",
+      "filename": "Foraging movements of Lyle's flying foxes in Cambodia (data from Choden et al. 2019).csv",
+      "size_bytes": 3110922,
+      "md5": "203e27ccc65338b786d50729fc3dc3bf",
+      "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/bfebccea-5324-4490-8a6f-3703831dc653/content"
+    }
+  ]
+}
