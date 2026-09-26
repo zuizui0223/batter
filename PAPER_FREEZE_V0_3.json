@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "freeze_id": "batter-paper-v0.3-freeze",
+  "date": "2026-09-26",
+  "central_claim": "Individual specialization in bat airspace has multiple spatial architectures: cross-night identity may be altitude-wide, place-coupled, or mixed, and the balance can vary across ecological contexts.",
+  "fixed_public_data_universe": {
+    "movebank_parent_datasets_considered": 23,
+    "directly_resolved_event_sources": 19,
+    "recovered_legacy_child_sources": 4,
+    "admitted_sources": 6,
+    "admitted_taxa": [
+      "Tadarida teniotis",
+      "Eidolon helvum",
+      "Hypsignathus monstrosus",
+      "Phyllostomus hastatus"
+    ],
+    "further_source_mining_permitted": false
+  },
+  "completed_core_results": {
+    "tadarida": {
+      "role": "focal ecological validation",
+      "architecture": "place-coupled",
+      "conditional_5km": 0.428,
+      "marginal_5km": 0.052,
+      "interaction_5km": 0.376,
+      "agl_interaction_5km": 0.591,
+      "controls": [
+        "terrain decomposition",
+        "same-night control",
+        "pairwise fingerprint",
+        "scale sensitivity"
+      ],
+      "common_uplift_mechanism_supported": false
+    },
+    "eidolon": {
+      "role": "prospective independent species replication",
+      "architecture": "place-coupled",
+      "evaluable_individuals": 20,
+      "conditional_5km": 0.219,
+      "marginal_5km": 0.002,
+      "interaction_5km": 0.217,
+      "positive_individuals": "17/20",
+      "frozen_replication_supported": true
+    },
+    "hypsignathus": {
+      "role": "prospective independent species replication",
+      "architecture": "place-coupled, fine-grained",
+      "evaluable_individuals": 24,
+      "conditional_5km": 0.029,
+      "marginal_5km": -0.021,
+      "interaction_5km": 0.05,
+      "frozen_replication_supported": true,
+      "pairwise_conditional": 0.115,
+      "pairwise_marginal": 0.008,
+      "pairwise_interaction": 0.107
+    },
+    "phyllostomus_2022": {
+      "role": "prospective independent species replication that failed the place-coupled prediction",
+      "architecture": "altitude-wide dominated",
+      "evaluable_individuals": 33,
+      "conditional_5km": 0.056,
+      "marginal_5km": 0.176,
+      "interaction_5km": -0.12,
+      "place_coupled_replication_supported": false,
+      "pairwise_conditional": 0.285,
+      "pairwise_marginal": 0.323,
+      "pairwise_interaction": -0.038
+    },
+    "phyllostomus_2023": {
+      "role": "prospective within-species temporal replication",
+      "architecture": "weak place-coupled",
+      "evaluable_individuals": 16,
+      "conditional_5km": 0.033,
+      "marginal_5km": 0.013,
+      "interaction_5km": 0.02,
+      "pairwise_conditional": 0.148,
+      "pairwise_marginal": 0.028,
+      "pairwise_interaction": 0.12
+    },
+    "phyllostomus_2016": {
+      "role": "prospective test of the 2022 dry-season altitude-wide architecture",
+      "architecture": "mixed / not 2022-like",
+      "evaluable_individuals": 10,
+      "conditional_5km": 0.058,
+      "marginal_5km": 0.016,
+      "interaction_5km": 0.041,
+      "dry_architecture_prediction_supported": false
+    }
+  },
+  "retained_negative_results": [
+    "Tadarida common uplift reaction norm not supported",
+    "Phyllostomus 2022 place-coupled replication failed",
+    "Phyllostomus 2016 prospective dry-season architecture replication failed"
+  ],
+  "prohibited_post_freeze_actions": [
+    "lower structural gates to admit excluded datasets",
+    "add newly discovered public datasets to rescue generality",
+    "retune spatial scales or height bins to change primary conclusions",
+    "relabel flight-use as foraging without independent behavior validation",
+    "discard negative prospective endpoints"
+  ],
+  "allowed_post_freeze_work": [
+    "figure generation",
+    "manuscript drafting and editing",
+    "reproducibility cleanup",
+    "code tests",
+    "provenance tables",
+    "non-outcome-changing bug fixes"
+  ]
+}
