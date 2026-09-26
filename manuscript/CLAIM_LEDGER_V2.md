@@ -1,37 +1,50 @@
-# Final claim ledger v2
+# Final claim ledger v3
 
-## Primary supported statements
+## Focal *Tadarida* claims
 
 | Claim | Status | Evidence |
 |---|---|---|
-| Population-level support is vertically thick. | supported from prior frozen ODSP endpoint | 4.022 effective vertical states. |
-| The population-level location-conditioned vertical map did not transfer to the two sealed bats. | supported from prior frozen ODSP endpoint | gains -0.4354 and -0.02194. |
-| Individual identity carries temporally repeatable information about later conditional vertical state. | supported | v1 exact 8! assignment P=0.000174; diagonal mean +0.1682; 6/8 positive relative to population cell map. |
-| Individual-specific location-by-vertical interaction remains after marginal altitude preference is controlled. | not supported | v2 P=0.160; 5/8 positive. |
-| Marginal altitude identity is relatively more matched than random identity assignment. | descriptive / relative repeatability | v3 P=0.0224, but only 4/8 positive relative to pooled marginal; frozen support rule fails. |
-| Horizontal cell-use identity is relatively more matched than random identity assignment. | descriptive / relative repeatability | v3 P=0.00233, but only 4/8 positive relative to pooled cell distribution; frozen support rule fails. |
-| One simple mechanism explains the identity signal. | not supported | v3 synthesis category = unresolved_identity_mechanism. |
+| Population support is vertically thick. | supported | ODSP: 4.022 effective MSL states. |
+| Pooled location-conditioned vertical map failed cross-individual transfer. | supported | two sealed gains -0.4354 and -0.02194. |
+| Individual identity carries temporally repeatable conditional vertical information. | supported | early/late V1: exact p=0.000174; diagonal +0.1682; 6/8 positive. |
+| Horizontal location adds predictive individual information in session-level scoring. | supported descriptively/predictively | MSL conditional +0.428 vs marginal +0.052; AGL +0.337 vs -0.255. |
+| A stable individual-specific cell × height residual map remains after marginal altitude adjustment. | **not supported** | V2: residual +0.0240; p=0.160; 5/8 positive. |
+| Terrain elevation alone explains focal conditional dominance. | not supported | terrain-only conditional +0.007. |
+| Shared calendar-night context alone explains focal identity. | not supported as general explanation | same-bat other-night predictor beats contemporaneous other bats for most evaluable individuals. |
+| One common uplift response explains focal identity. | not supported | frozen mechanism test p=0.334 with conflicting bats. |
+
+## Comparative claims
+
+| Claim | Status | Evidence |
+|---|---|---|
+| Conditional-dominant vertical identity occurs outside *Tadarida*. | supported | prospective *Eidolon* and *Hypsignathus* panels. |
+| Vertical identity is universally conditional-dominant. | not supported | *Phyllostomus* 2022 is marginal-dominant. |
+| Strong 2022 *Phyllostomus* marginal dominance is a stable dry-season architecture. | not supported | untouched 2016 prospective prediction failed. |
+| Predictive architecture can vary across temporal contexts within a species. | supported descriptively | *P. hastatus* 2016/2022/2023 differ in conditional-versus-marginal balance. |
+| Pairwise architecture depends on pooling alternative bats. | not supported | direct pairwise comparisons retain the same qualitative directions. |
 
 ## Preferred synthesis
 
-> A vertically thick population niche contains repeatable individual signatures, so conspecific movement-state maps are not fully exchangeable; however, the identity signal is composite and is not explained by a single stable altitude offset, horizontal distribution, or individual-by-location vertical interaction.
+> **Individual vertical identity has multiple predictive architectures. Some systems are
+> conditional-dominant, whereas another independent panel is marginal-dominant; this balance can
+> vary across contexts.**
 
-## Allowed ecological language
+## Terminology
 
-- partial individual specialization;
+Preferred:
+
+- repeatable vertical identity;
 - individual non-exchangeability;
-- repeatable individual movement-state signatures;
-- within-population heterogeneity in vertical-state use;
-- population niche as a mixture of heterogeneous individuals.
+- conditional identity;
+- marginal identity;
+- conditional advantage;
+- conditional-dominant / marginal-dominant predictive architecture.
 
-## Avoid
+Avoid as demonstrated mechanisms:
 
-- every bat has its own distinct vertical strategy;
-- individual personality;
-- learned flight routes;
+- stable place-specific route;
+- stable individual-by-location vertical strategy;
+- personality;
+- learned flight route;
 - adaptive specialization;
-- causal resource partitioning;
-- height above ground;
-- species-wide generality;
-- independent confirmation from this same dataset;
-- rewriting the original ODSP non-transfer endpoint as positive.
+- causal resource partitioning.
