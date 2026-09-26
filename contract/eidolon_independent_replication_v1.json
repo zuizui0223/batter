@@ -23,7 +23,8 @@
   "exclusions": {
     "deployment_manipulation": "exclude reference deployments whose manipulation_type is present and not 'none'",
     "missing_xy_height_time": "exclude",
-    "session_minimum_events": 50
+    "session_minimum_events": 50,
+    "source_outliers": "exclude events marked true in any explicit source outlier flag (manually_marked_outlier, import_marked_outlier, algorithm_marked_outlier) when present; if no explicit outlier fields exist but visible exists, require visible=true"
   },
   "session": {
     "split_rule": "gap > 4 hours within individual",
