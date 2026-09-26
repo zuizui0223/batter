@@ -34,5 +34,13 @@
   ],
   "duplicate_taxon_rule": "Multiple datasets from the same taxon may pass structurally, but only one can enter a species-level comparative panel unless a priori treated as independent populations.",
   "selection_rule": "All fixed sources are screened with the same gate. No source is admitted or rejected using numeric vertical outcomes.",
-  "next_step": "For each newly passing taxon, freeze a dataset-specific cohorting and spatial design before numeric height is opened."
+  "next_step": "For each newly passing taxon, freeze a dataset-specific cohorting and spatial design before numeric height is opened.",
+  "source_outlier_handling": {
+    "explicit_flags": [
+      "manually_marked_outlier",
+      "import_marked_outlier",
+      "algorithm_marked_outlier"
+    ],
+    "rule": "exclude rows marked true in any explicit source outlier flag; if no explicit flag exists and visible is present, retain only visible=true; otherwise retain"
+  }
 }
