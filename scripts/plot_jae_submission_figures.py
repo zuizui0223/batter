@@ -58,10 +58,10 @@ def conceptual_framework():
 
     boxes = [
         (0.5, 4.6, 2.4, 1.3, "Pooled population\nvertically thick"),
-        (3.8, 4.6, 2.4, 1.3, "Individual A / B\nnot fully exchangeable"),
-        (7.1, 5.2, 2.4, 1.0, "Marginal identity\nP(z)"),
-        (7.1, 3.8, 2.4, 1.0, "Conditional identity\nP(z | x,y)"),
-        (3.8, 1.2, 2.8, 1.2, "Conditional advantage\nG_cond − G_marg"),
+        (3.6, 4.6, 2.4, 1.3, "Individual A / B\nnot fully exchangeable"),
+        (6.7, 5.1, 2.3, 1.0, "Marginal identity\nP(z)"),
+        (6.7, 3.4, 2.3, 1.0, "Conditional identity\nP(z | x,y)"),
+        (6.45, 1.5, 2.8, 1.1, "Conditional advantage\nG_cond − G_marg"),
     ]
     for x, y, w, h, label in boxes:
         patch = FancyBboxPatch((x, y), w, h, boxstyle="round,pad=0.05", fill=False, linewidth=1.2)
@@ -69,11 +69,11 @@ def conceptual_framework():
         ax.text(x + w/2, y + h/2, label, ha="center", va="center", fontsize=10)
 
     arrows = [
-        ((2.9, 5.25), (3.8, 5.25)),
-        ((6.2, 5.25), (7.1, 5.7)),
-        ((6.2, 5.05), (7.1, 4.3)),
-        ((8.3, 3.8), (6.6, 2.0)),
-        ((8.3, 5.2), (6.6, 2.0)),
+        ((2.9, 5.25), (3.6, 5.25)),
+        ((6.0, 5.25), (6.7, 5.6)),
+        ((6.0, 5.05), (6.7, 3.9)),
+        ((8.9, 5.1), (9.15, 2.35)),
+        ((6.75, 3.4), (6.75, 2.35)),
     ]
     for start, end in arrows:
         ax.annotate("", xy=end, xytext=start, arrowprops={"arrowstyle":"->","linewidth":1.0})
@@ -84,14 +84,13 @@ def conceptual_framework():
         fontsize=9, va="top"
     )
     ax.text(
-        0.5, 0.5,
+        0.5, 0.45,
         "Claim boundary: positive conditional advantage means horizontal context adds predictive identity information;\n"
         "it does not prove a stable latent individual-specific cell × height map.",
         fontsize=8.5, va="bottom"
     )
     ax.set_title("From pooled vertical airspace to predictive individual identity", fontsize=12)
     save(fig, "figure1_conceptual_framework")
-
 
 def focal_reconciliation():
     v1 = json.loads((RESULTS / "individual_vertical_strategy_result_v1.json").read_text())
@@ -124,7 +123,7 @@ def architecture_plane():
         x = float(r["marginal_identity_nats_per_fix"])
         y = float(r["place_x_height_nats_per_fix"])  # frozen column; interpreted as conditional advantage
         ax.scatter(x, y, s=65)
-        ax.annotate(PANEL_LABEL[r["panel_id"]], (x, y), xytext=(5, 5), textcoords="offset points", fontsize=8)
+        ax.annotate(PANEL_LABEL[r["panel_id"]], (x, y), xytext=offsets.get(r["panel_id"], (5, 5)), textcoords="offset points", fontsize=8)
     ax.axhline(0.0, linewidth=0.8)
     ax.axvline(0.0, linewidth=0.8)
     ax.set_xlabel("Marginal identity gain (nats/fix)")
@@ -142,7 +141,7 @@ def pairwise_plane():
         x = float(r["marginal_pairwise_gain"])
         y = float(r["place_x_height_pairwise_gain"])  # frozen column; interpreted as conditional advantage
         ax.scatter(x, y, s=65)
-        ax.annotate(PANEL_LABEL[r["panel_id"]], (x, y), xytext=(5, 5), textcoords="offset points", fontsize=8)
+        ax.annotate(PANEL_LABEL[r["panel_id"]], (x, y), xytext=offsets.get(r["panel_id"], (5, 5)), textcoords="offset points", fontsize=8)
     ax.axhline(0.0, linewidth=0.8)
     ax.axvline(0.0, linewidth=0.8)
     ax.set_xlabel("Pairwise marginal self-vs-alternative gain (nats/fix)")
