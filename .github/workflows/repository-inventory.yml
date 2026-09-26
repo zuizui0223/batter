@@ -1,0 +1,26 @@
+name: repository-inventory-v1
+
+on:
+  push:
+    branches:
+      - study/individual-vertical-strategies-v1
+    paths:
+      - "scripts/inventory_repository.py"
+      - ".github/workflows/repository-inventory.yml"
+  workflow_dispatch:
+
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python scripts/inventory_repository.py --output results/repository_inventory_v1.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: batter-repository-inventory-v1
+          path: results/repository_inventory_v1.json
