@@ -101,10 +101,10 @@ against assigning the *Phyllostomus* architecture to dry season alone.
 
 ## Source-screen transparency
 
-A checksum-pinned outcome-blind screen considered 19 public Movebank bat event sources. Only six
-sources from four taxa met the fixed requirements of native same-event x-y-height data, >=8
-individuals, and >=5 repeat-tracked individuals. Numeric height values were not used for source
-admission.
+A checksum-pinned outcome-blind search covered 23 public Movebank bat parent datasets, including
+four legacy child-handle recoveries. Only six sources from four taxa met the fixed requirements of
+native same-event x-y-height data, >=8 individuals, and >=5 repeat-tracked individuals. Numeric
+height values were not used for source admission.
 
 This leaves the comparative panel constrained by data architecture rather than by favorable
 outcomes.
