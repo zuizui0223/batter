@@ -1,0 +1,48 @@
+name: Individual vertical strategy v1
+
+on:
+  push:
+    branches:
+      - study/individual-vertical-strategy-v1
+    paths:
+      - 'analysis/**'
+      - 'tests/**'
+      - '.github/workflows/individual-vertical-strategy-v1.yml'
+  pull_request:
+    paths:
+      - 'analysis/**'
+      - 'tests/**'
+      - '.github/workflows/individual-vertical-strategy-v1.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  analysis:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install
+        run: pip install numpy pyproj pytest
+      - name: Contract tests
+        run: pytest -q tests
+      - name: Run frozen individual-specificity analysis
+        run: python analysis/run_individual_vertical_strategy_v1.py
+      - name: Validate output
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=json.loads(Path('results/individual_vertical_strategy_result_v1.json').read_text())
+          assert p['individual_count']==8
+          assert p['primary']['identity_permutation_test']['permutation_count']==40320
+          assert p['original_odsp_result_unchanged'] is True
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: individual-vertical-strategy-v1
+          path: results/individual_vertical_strategy_result_v1.json
+          if-no-files-found: error
