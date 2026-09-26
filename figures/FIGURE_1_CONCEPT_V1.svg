@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="520" viewBox="0 0 1000 520">
+<rect width="1000" height="520" fill="white"/>
+<text x="500" y="42" text-anchor="middle" font-family="Arial" font-size="25" font-weight="bold">Population breadth and individual exchangeability are different properties</text>
+<rect x="55" y="105" width="250" height="245" rx="18" fill="white" stroke="black" stroke-width="2"/>
+<text x="180" y="140" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold">Population movement niche</text>
+<text x="180" y="185" text-anchor="middle" font-family="Arial" font-size="15">18 frozen 5-km cells</text>
+<text x="180" y="215" text-anchor="middle" font-family="Arial" font-size="15">fixed MSL altitude states</text>
+<text x="180" y="258" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold">4.02 effective</text>
+<text x="180" y="290" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold">vertical states</text>
+<text x="180" y="325" text-anchor="middle" font-family="Arial" font-size="13">Broad population state space</text>
+<line x1="305" y1="228" x2="390" y2="228" stroke="black" stroke-width="3"/><polygon points="390,228 374,219 374,237" fill="black"/>
+<rect x="395" y="105" width="250" height="245" rx="18" fill="white" stroke="black" stroke-width="2"/>
+<text x="520" y="140" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold">Population-map transfer</text>
+<text x="520" y="185" text-anchor="middle" font-family="Arial" font-size="15">Two independently sealed bats</text>
+<text x="520" y="235" text-anchor="middle" font-family="Arial" font-size="17">Gain = -0.435</text>
+<text x="520" y="268" text-anchor="middle" font-family="Arial" font-size="17">Gain = -0.0219</text>
+<text x="520" y="316" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold">Species-average map did not transfer</text>
+<line x1="645" y1="228" x2="730" y2="228" stroke="black" stroke-width="3"/><polygon points="730,228 714,219 714,237" fill="black"/>
+<rect x="735" y="105" width="220" height="245" rx="18" fill="white" stroke="black" stroke-width="3"/>
+<text x="845" y="140" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold">Identity transfer test</text>
+<text x="845" y="185" text-anchor="middle" font-family="Arial" font-size="15">8 bats × early/late</text>
+<text x="845" y="225" text-anchor="middle" font-family="Arial" font-size="17" font-weight="bold">Diagonal +0.168</text>
+<text x="845" y="258" text-anchor="middle" font-family="Arial" font-size="17" font-weight="bold">Exact P = 0.000174</text>
+<text x="845" y="300" text-anchor="middle" font-family="Arial" font-size="15">6/8 own maps beat</text>
+<text x="845" y="325" text-anchor="middle" font-family="Arial" font-size="15">population cell map</text>
+<text x="500" y="415" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold">A thick population niche can contain repeatable, non-exchangeable individual signatures</text>
+<text x="500" y="454" text-anchor="middle" font-family="Arial" font-size="14">No single altitude, horizontal, or individual×location component fully explains the signature</text>
+<text x="500" y="488" text-anchor="middle" font-family="Arial" font-size="12">Vertical axis is GPS height above mean sea level; no height-above-ground inference is made</text>
+</svg>
