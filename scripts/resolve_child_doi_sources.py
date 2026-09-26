@@ -8,10 +8,10 @@ import urllib.request
 
 REPO="https://datarepository.movebank.org"
 CANDIDATES=[
-  {"id":"grey_headed_flying_fox","doi":"10.5441/001/1.5bd6pq55/1","taxon_hint":"Pteropus poliocephalus"},
-  {"id":"common_noctule_3d_migration","doi":"10.5441/001/1.5d736bf0/1","taxon_hint":"Nyctalus noctula"},
-  {"id":"christmas_island_flying_fox","doi":"10.5441/001/1.mn019k4d/1","taxon_hint":"Pteropus melanotus natalis"},
-  {"id":"lyles_flying_fox","doi":"10.5441/001/1.j25661td/1","taxon_hint":"Pteropus lylei"},
+  {"id":"grey_headed_flying_fox","doi":"10.5441/001/1.5bd6pq55/1","handle":"10255/move.1219","taxon_hint":"Pteropus poliocephalus"},
+  {"id":"common_noctule_3d_migration","doi":"10.5441/001/1.5d736bf0/1","handle":"10255/move.841","taxon_hint":"Nyctalus noctula"},
+  {"id":"christmas_island_flying_fox","doi":"10.5441/001/1.mn019k4d/1","handle":"10255/move.1406","taxon_hint":"Pteropus melanotus natalis"},
+  {"id":"lyles_flying_fox","doi":"10.5441/001/1.j25661td/1","handle":"10255/move.870","taxon_hint":"Pteropus lylei"},
 ]
 
 def fetch_json(url):
@@ -37,6 +37,7 @@ def checksum(bs):
 
 def resolve(c):
     urls=[
+      f"{REPO}/server/api/pid/find?id={urllib.parse.quote(c['handle'],safe='')}",
       f"{REPO}/server/api/pid/find?id={urllib.parse.quote(c['doi'],safe='')}",
       f"{REPO}/server/api/pid/find?id={urllib.parse.quote('https://doi.org/'+c['doi'],safe='')}",
     ]
