@@ -1,0 +1,48 @@
+{
+  "schema": "batter.spatial_interaction_refinement.contract.v2",
+  "frozen_date": "2026-09-26",
+  "trigger": "v1 identity-specific vertical-state prediction was positive; v2 prospectively tests whether that identity signal remains after absorbing each individual's marginal altitude preference.",
+  "relationship_to_v1": {
+    "v1_result_fingerprint": "cab07a8f804143637362cd6a634333e9814864d12a6dda895c8893a718b3724b",
+    "v1_primary_category": "individual_specific_spatial_vertical_strategy",
+    "v1_result_not_recomputed_or_reclassified": true
+  },
+  "inherited_without_change": {
+    "source": "analysis/individual_vertical_strategy_contract_v1.json",
+    "geometry": "same 18 frozen 5-km cells",
+    "z_bins": "same frozen MSL altitude bins",
+    "temporal_split": "same within-individual early/late split",
+    "primary_lambda": 20,
+    "sensitivity_lambdas": [
+      5,
+      50
+    ],
+    "jeffreys_alpha": 0.5
+  },
+  "models": {
+    "species_conditional": "P_species(z|cell) from equal-individual early distributions.",
+    "species_marginal": "P_species(z) from equal-individual early marginals.",
+    "individual_marginal": "P_i(z) shrunk toward P_species(z) by lambda equivalent events.",
+    "marginal_adjusted_cell_baseline": "For individual i, P_i_add(z|cell) proportional to P_species(z|cell) * P_i(z)/P_species(z). This carries individual marginal altitude preference but no individual-by-cell interaction.",
+    "individual_spatial_model": "P_i_full(z|cell) = (raw early individual-cell z counts + lambda * P_i_add(z|cell)) / (n_i_cell + lambda). With no early events in a cell it equals P_i_add exactly."
+  },
+  "primary_test": {
+    "pairwise_gain": "For source individual i and target late individual j, mean log P_i_full(z|cell) - log P_i_add(z|cell).",
+    "observed": "mean diagonal gain across 8 identity-matched source-target pairs",
+    "null": "all 8! permutations of source individual identity assigned to late target individuals",
+    "one_sided_p": "fraction of all permutations with assigned mean gain >= observed diagonal mean",
+    "support_rule": "p <= 0.05 and at least 6 of 8 diagonal residual gains > 0",
+    "interpretation_if_pass": "stable individual-by-location vertical organization remains after marginal altitude preference is controlled",
+    "interpretation_if_fail": "v1 identity signal is not sufficient to establish location-specific strategy beyond marginal altitude preference"
+  },
+  "sensitivities_cannot_replace_primary": true,
+  "prohibited": [
+    "height above ground",
+    "causal habitat preference",
+    "personality",
+    "learned route mechanism",
+    "fitness advantage",
+    "independent replication",
+    "post-hoc change to lambda, cells, bins, or temporal split after v2 output"
+  ]
+}
