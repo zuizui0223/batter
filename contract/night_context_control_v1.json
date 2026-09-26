@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-night-context-control-v1",
+  "status": "frozen_before_same-night_control_outcomes",
+  "source": {
+    "file": "TadaridaHighFast_annotated.csv",
+    "checksum": "e0f6faedfd1f21bac222d9da430ea5d8",
+    "rows": 9873
+  },
+  "question": "Does an individual's other-night vertical rule predict a target session better than other bats observed during the same calendar night?",
+  "night_definition": {
+    "rule": "UTC timestamp shifted backward by 12 hours, then calendar date",
+    "rationale": "keeps evening-to-next-morning nocturnal tracks in one start-night bin without using outcome values"
+  },
+  "axes": {
+    "primary": [
+      "height_true",
+      "height-above-msl"
+    ],
+    "semantics": {
+      "height_true": "height above ground level from 30 m ASTER DEM",
+      "height-above-msl": "GPS height above mean sea level"
+    },
+    "z_edges_m": [
+      "-inf",
+      0,
+      50,
+      100,
+      200,
+      400,
+      800,
+      1600,
+      3200,
+      "inf"
+    ]
+  },
+  "horizontal": {
+    "crs": "EPSG:3035",
+    "cell_size_m": 5000
+  },
+  "session": {
+    "id": "animal-id × BatDay",
+    "minimum_rows": 50,
+    "require_single_shifted_night_fraction": 0.95
+  },
+  "predictors": {
+    "self": "equal-session P(z|x,y) from the same bat's other sessions",
+    "same_night_other": "equal-individual P(z|x,y) from other bats on the target calendar night"
+  },
+  "scoring": {
+    "minimum_scored_target_rows": 50,
+    "common_support_only": true,
+    "endpoint": "mean log P_self(z|x,y) - log P_same_night_other(z|x,y)",
+    "summary_unit": "individual"
+  },
+  "interpretation": {
+    "positive": "cross-night individual identity predicts vertical state better than contemporaneous other bats, arguing against calendar-night environment as the sole explanation",
+    "nonpositive": "night-specific shared context is at least as predictive as individual history"
+  },
+  "claim_boundary": "Post-primary context control; cannot alter the frozen MSL/AGL self-transfer endpoints."
+}

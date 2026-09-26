@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "screen_id": "batter-recovered-child-structural-screen-v1",
+  "status": "frozen_before_numeric_height_values",
+  "source_config": "config/recovered_child_sources_v1.json",
+  "height_priority": [
+    "height_above_msl",
+    "height_above_ellipsoid",
+    "height_raw",
+    "height_above_ground",
+    "height_above_ground_level"
+  ],
+  "session": {
+    "gap_hours": 4,
+    "minimum_events": 50
+  },
+  "gate": {
+    "minimum_individuals_with_xy_height_presence": 8,
+    "minimum_repeat_individuals": 5
+  },
+  "source_outliers": {
+    "explicit_flags": [
+      "manually_marked_outlier",
+      "import_marked_outlier",
+      "algorithm_marked_outlier"
+    ],
+    "fallback": "if no explicit flag and visible exists, require visible=true"
+  },
+  "allowed_reads": [
+    "headers",
+    "individual identifiers",
+    "timestamps",
+    "finite x-y",
+    "height presence/missingness as strings",
+    "taxon labels"
+  ],
+  "forbidden_reads": [
+    "numeric height values",
+    "height histograms",
+    "vertical bins",
+    "self-transfer outcomes"
+  ],
+  "selection_rule": "Every recovered source is screened by the same fixed gate. Outcome values cannot affect admission."
+}

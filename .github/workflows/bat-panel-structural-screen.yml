@@ -1,0 +1,28 @@
+name: bat-panel-structural-screen-v1
+
+on:
+  push:
+    branches:
+      - study/individual-vertical-strategies-v1
+    paths:
+      - "scripts/screen_bat_panel_structure.py"
+      - "config/bat_panel_sources_v1.json"
+      - "contract/bat_panel_structural_screen_v1.json"
+      - ".github/workflows/bat-panel-structural-screen.yml"
+  workflow_dispatch:
+
+jobs:
+  screen:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python scripts/screen_bat_panel_structure.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: batter-bat-panel-structural-screen-v1
+          path: results/bat_panel_structural_screen_v1.json

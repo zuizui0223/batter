@@ -1,0 +1,64 @@
+{
+  "study_id": "batter-individual-vertical-strategy-v1",
+  "workflow_run_id": 36229132196,
+  "head_sha": "ef7aaa17f7fe670ba3eb24dd6a25e982918e348e",
+  "artifact_id": 10902326132,
+  "source_md5": "570872ab7aba674b9bdc2f2ee6044a71",
+  "events_after_primary_outlier_exclusion": 9873,
+  "individuals": 8,
+  "sessions": 16,
+  "primary_5km": {
+    "eligible_individuals": 6,
+    "equal_individual_mean_gain_nats_per_fix": 0.42595530374485807,
+    "positive_individuals": 5,
+    "individual_mean_gains": {
+      "Bat3_3D6001852B978": 0.27352639815931123,
+      "Bat4_3D6001852B980": 0.8424824588007019,
+      "Bat5_3D6001852B98C": 0.45273728382250966,
+      "Bat6_3D6001852B98E": 0.7907728850151904,
+      "Bat7_3D6001852B9A3": -0.20546638500301376,
+      "Bat8_3D6001852B9A7": 0.4016791816744495
+    }
+  },
+  "post_primary_robustness": {
+    "grid_2500_m": {
+      "eligible_individuals": 5,
+      "mean_gain": 0.8587863247916854,
+      "positive_individuals": 4
+    },
+    "grid_10000_m": {
+      "eligible_individuals": 7,
+      "mean_gain": -0.03341484846336725,
+      "positive_individuals": 5
+    },
+    "fine_z_bins": {
+      "eligible_individuals": 6,
+      "mean_gain": 0.4259403837662585,
+      "positive_individuals": 5
+    },
+    "coarse_z_bins": {
+      "eligible_individuals": 6,
+      "mean_gain": 0.42586196633129986,
+      "positive_individuals": 5
+    },
+    "include_source_marked_outliers": {
+      "eligible_individuals": 6,
+      "mean_gain": 0.363758210708829,
+      "positive_individuals": 5
+    }
+  },
+  "current_claim": "Most evaluable bats repeat individual-specific fine-scale place-by-altitude organization across sessions. The identity signal is mainly conditional on location, not a simple individual-wide altitude set-point; the population also contains at least one consistently non-repeatable individual under the 5-km endpoint.",
+  "forbidden_claims": [
+    "verified foraging-height specialization",
+    "height-above-ground specialization",
+    "causal intrinsic personality",
+    "universal fixed individual strategy"
+  ],
+  "post_primary_decomposition_5km": {
+    "conditional_identity_gain_nats_per_fix": 0.42595530374485807,
+    "marginal_identity_gain_nats_per_fix": 0.05323737103278975,
+    "identity_x_location_gain_nats_per_fix": 0.3727179327120684,
+    "identity_x_location_positive_individuals": 5,
+    "interpretation": "Most repeatable identity information is in the place-by-altitude coupling rather than in an individual-wide marginal altitude distribution."
+  }
+}

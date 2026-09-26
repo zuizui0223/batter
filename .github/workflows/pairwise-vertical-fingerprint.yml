@@ -1,0 +1,28 @@
+name: pairwise-vertical-fingerprint-v1
+
+on:
+  push:
+    branches:
+      - study/individual-vertical-strategies-v1
+    paths:
+      - "scripts/run_pairwise_vertical_fingerprint.py"
+      - "contract/pairwise_vertical_fingerprint_v1.json"
+      - ".github/workflows/pairwise-vertical-fingerprint.yml"
+  workflow_dispatch:
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -e .
+      - run: python scripts/run_pairwise_vertical_fingerprint.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: batter-pairwise-vertical-fingerprint-v1
+          path: results/pairwise_vertical_fingerprint_v1.json

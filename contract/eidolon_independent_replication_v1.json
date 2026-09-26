@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-eidolon-independent-replication-v1",
+  "status": "frozen_before_numeric_height_open",
+  "selection_provenance": {
+    "selected_taxon": "Eidolon helvum",
+    "movebank_study_id": 404939825,
+    "repository_doi": "10.5441/001/1.k8n02jn8",
+    "gps_bitstream_id": "82b726a4-bc78-497a-81d9-a19844cb61fc",
+    "gps_size_bytes": 4497472,
+    "gps_md5": "5f301a9e28c74d9b4823b6c5aa70cacf",
+    "reference_bitstream_id": "245d9c8c-8d79-46b4-9f6f-fb4e2a4087e3",
+    "reference_md5": "2d0a9de5564c0547657d8f83bdebce6d",
+    "structural_preflight": {
+      "gps_rows": 18154,
+      "individuals_with_xy_height_presence": 63,
+      "repeat_individuals_with_two_sessions_or_more": 42,
+      "native_height_field": "height_above_ellipsoid",
+      "numeric_height_values_parsed": false
+    }
+  },
+  "biological_prediction": "Individual-specific fine-scale place-by-height organization should replicate in a different bat species and region: a bat's other nights should predict its vertical state better than other bats from the same site-year cohort, and the identity signal should be stronger conditionally on place than as a marginal height preference.",
+  "exclusions": {
+    "deployment_manipulation": "exclude reference deployments whose manipulation_type is present and not 'none'",
+    "missing_xy_height_time": "exclude",
+    "session_minimum_events": 50,
+    "source_outliers": "exclude events marked true in any explicit source outlier flag (manually_marked_outlier, import_marked_outlier, algorithm_marked_outlier) when present; if no explicit outlier fields exist but visible exists, require visible=true"
+  },
+  "session": {
+    "split_rule": "gap > 4 hours within individual",
+    "self_training": "other eligible sessions of the same individual within the same cohort"
+  },
+  "cohort": {
+    "definition": "exact Movebank study_site × shifted-night calendar year",
+    "shifted_night_rule": "timestamp minus 12 hours, then calendar date",
+    "minimum_total_individuals": 4,
+    "minimum_repeat_individuals": 3,
+    "pooling_across_cohorts_forbidden": true
+  },
+  "horizontal": {
+    "projection_rule": "per cohort, UTM zone selected from median longitude/latitude before numeric height is parsed",
+    "primary_cell_size_m": 5000,
+    "sensitivity_cell_sizes_m": [
+      2500,
+      10000
+    ],
+    "grid_origin_m": [
+      0,
+      0
+    ]
+  },
+  "vertical": {
+    "field": "height_above_ellipsoid",
+    "semantics": "native GPS height above reference ellipsoid; not AGL and not MSL",
+    "primary_edges_m": [
+      "-inf",
+      0,
+      50,
+      100,
+      200,
+      400,
+      800,
+      1600,
+      3200,
+      "inf"
+    ],
+    "numeric_height_open_after_contract": true
+  },
+  "probability_model": {
+    "jeffreys_alpha": 0.5,
+    "self_weighting": "equal session",
+    "population_weighting": "equal individual within cohort",
+    "target_scoring": "only target fixes whose horizontal cell is supported by both predictors",
+    "minimum_scored_target_fixes": 50
+  },
+  "primary_endpoints": {
+    "conditional_identity_gain": "mean log P_self(z|x,y) - log P_other_cohort(z|x,y)",
+    "marginal_identity_gain": "mean log P_self(z) - log P_other_cohort(z)",
+    "identity_x_location_increment": "conditional identity gain - marginal identity gain",
+    "aggregation": "equal-session within individual, then equal-individual across the entire admitted panel; cohort summaries also reported"
+  },
+  "replication_rule": {
+    "minimum_evaluable_individuals": 15,
+    "required": [
+      "equal-individual mean conditional identity gain > 0",
+      "more than half of evaluable individuals have positive conditional identity gain",
+      "equal-individual mean identity_x_location_increment > 0",
+      "conditional identity gain exceeds marginal identity gain"
+    ],
+    "sensitivities_cannot_override_primary": true
+  },
+  "claim_boundary": [
+    "replication concerns vertical flight-use organization, not foraging",
+    "ellipsoid height is not terrain-relative height",
+    "observational repeatability is not intrinsic personality or causation",
+    "site-year stratification prevents geographic/year identity from serving as the population baseline"
+  ]
+}

@@ -1,0 +1,28 @@
+name: three-component-transfer-v1
+
+on:
+  push:
+    branches:
+      - study/individual-vertical-strategies-v1
+    paths:
+      - "scripts/run_three_component_transfer.py"
+      - "contract/three_component_transfer_v1.json"
+      - ".github/workflows/three-component-transfer.yml"
+  workflow_dispatch:
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -e .
+      - run: python scripts/run_three_component_transfer.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: batter-three-component-transfer-v1
+          path: results/three_component_transfer_v1.json

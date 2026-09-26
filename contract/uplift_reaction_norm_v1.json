@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-uplift-reaction-norm-v1",
+  "status": "frozen_before_numeric_mechanism_summary",
+  "source": {
+    "annotated_file": "TadaridaHighFast_annotated.csv",
+    "bitstream_id": "a6a6db33-0aca-4902-a58d-f32980c1a3e1",
+    "expected_size_bytes": 3630088,
+    "checksum_type": "MD5",
+    "checksum": "e0f6faedfd1f21bac222d9da430ea5d8",
+    "documented_row_count": 9873
+  },
+  "ecological_question": "Do individual bats show repeatable cross-session differences in their vertical flight response to modeled vertical wind?",
+  "primary": {
+    "session_id": "animal-id × BatDay",
+    "predictor": "W.Component",
+    "predictor_semantics": "vertical wind component, m/s",
+    "response": "climb.rate",
+    "response_semantics": "vertical speed between fixes, m/s",
+    "minimum_finite_rows_per_session": 50,
+    "minimum_predictor_sd_m_per_s": 0.05,
+    "session_model": "OLS climb.rate = intercept + slope * W.Component",
+    "training_weighting": {
+      "self": "equal session coefficient mean from the same individual excluding the target session",
+      "population": "equal-individual coefficient mean from all other individuals"
+    },
+    "endpoint": "absolute slope error improvement = |target slope - population-predicted slope| - |target slope - self-predicted slope|",
+    "positive_meaning": "the individual's own other sessions predict its uplift-response slope better than other bats do",
+    "summary_unit": "individual",
+    "all_raw_fixes_are_not_independent_replicates": true
+  },
+  "secondary": {
+    "target_fix_mse_improvement": "MSE(population regression on target fixes) - MSE(self regression on the same target fixes)",
+    "slope_identity_permutation": {
+      "statistic": "within-individual sum of squared deviations of session slopes from individual means",
+      "permutations": 9999,
+      "seed": 220223,
+      "tail": "smaller observed within-individual variation indicates repeatability"
+    },
+    "agl_context": {
+      "field": "height_true",
+      "semantics": "height above ground level from 30 m ASTER DEM, m",
+      "role": "descriptive and later moderation analysis; cannot replace the primary uplift reaction norm"
+    }
+  },
+  "claim_boundary": [
+    "positive repeatability supports stable individual reaction norms to modeled vertical wind under this dataset",
+    "does not establish genetic personality, learning, optimality, or causal preference",
+    "does not establish foraging because no validated foraging-state label is present",
+    "mechanism analysis cannot alter the previously obtained place-by-height self-transfer result"
+  ]
+}

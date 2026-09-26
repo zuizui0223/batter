@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "screen_id": "batter-bat-panel-structural-screen-v1",
+  "status": "frozen_before_panel_height_values",
+  "source_config": "config/bat_panel_sources_v1.json",
+  "height_field_priority": [
+    "height_above_msl",
+    "height_above_ellipsoid",
+    "height_raw",
+    "height_above_ground",
+    "height_above_ground_level"
+  ],
+  "session_rule": {
+    "gap_hours": 4,
+    "minimum_events": 50
+  },
+  "gate": {
+    "minimum_individuals_with_xy_height_presence": 8,
+    "minimum_individuals_with_two_or_more_eligible_sessions": 5
+  },
+  "allowed_reads": [
+    "CSV headers",
+    "individual IDs",
+    "timestamps",
+    "finite x-y",
+    "height presence/missingness without numeric parsing",
+    "taxon labels"
+  ],
+  "forbidden_reads": [
+    "numeric height values",
+    "height distribution",
+    "vertical bins",
+    "self-transfer outcomes"
+  ],
+  "duplicate_taxon_rule": "Multiple datasets from the same taxon may pass structurally, but only one can enter a species-level comparative panel unless a priori treated as independent populations.",
+  "selection_rule": "All fixed sources are screened with the same gate. No source is admitted or rejected using numeric vertical outcomes.",
+  "next_step": "For each newly passing taxon, freeze a dataset-specific cohorting and spatial design before numeric height is opened.",
+  "source_outlier_handling": {
+    "explicit_flags": [
+      "manually_marked_outlier",
+      "import_marked_outlier",
+      "algorithm_marked_outlier"
+    ],
+    "rule": "exclude rows marked true in any explicit source outlier flag; if no explicit flag exists and visible is present, retain only visible=true; otherwise retain"
+  }
+}

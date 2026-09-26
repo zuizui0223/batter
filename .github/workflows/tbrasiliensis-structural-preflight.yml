@@ -1,0 +1,26 @@
+name: tbrasiliensis-structural-preflight-v1
+
+on:
+  push:
+    branches:
+      - study/individual-vertical-strategies-v1
+    paths:
+      - "scripts/preflight_tbrasiliensis_replication.py"
+      - ".github/workflows/tbrasiliensis-structural-preflight.yml"
+  workflow_dispatch:
+
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python scripts/preflight_tbrasiliensis_replication.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: batter-tbrasiliensis-structural-preflight-v1
+          path: results/tbrasiliensis_structural_preflight_v1.json

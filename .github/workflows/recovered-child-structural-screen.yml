@@ -1,0 +1,28 @@
+name: recovered-child-structural-screen-v1
+
+on:
+  push:
+    branches:
+      - study/individual-vertical-strategies-v1
+    paths:
+      - "scripts/screen_recovered_child_sources.py"
+      - "config/recovered_child_sources_v1.json"
+      - "contract/recovered_child_structural_screen_v1.json"
+      - ".github/workflows/recovered-child-structural-screen.yml"
+  workflow_dispatch:
+
+jobs:
+  screen:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python scripts/screen_recovered_child_sources.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: batter-recovered-child-structural-screen-v1
+          path: results/recovered_child_structural_screen_v1.json

@@ -1,0 +1,25 @@
+name: individual-vertical-strategy-v1
+
+on:
+  push:
+    branches:
+      - study/individual-vertical-strategies-v1
+  workflow_dispatch:
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -e ".[test]"
+      - run: pytest -q
+      - run: python scripts/run_analysis.py --output results/individual_vertical_strategy_v1.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: batter-individual-vertical-strategy-v1
+          path: results/individual_vertical_strategy_v1.json

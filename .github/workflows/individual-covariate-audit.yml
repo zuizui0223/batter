@@ -1,0 +1,26 @@
+name: individual-covariate-audit-v1
+
+on:
+  push:
+    branches:
+      - study/individual-vertical-strategies-v1
+    paths:
+      - "scripts/audit_individual_covariates.py"
+      - ".github/workflows/individual-covariate-audit.yml"
+  workflow_dispatch:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python scripts/audit_individual_covariates.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: batter-individual-covariate-audit-v1
+          path: results/individual_covariate_audit_v1.json

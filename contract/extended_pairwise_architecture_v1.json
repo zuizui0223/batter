@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-extended-pairwise-architecture-v1",
+  "status": "frozen_before_pairwise_outcomes",
+  "role": "post-primary robustness of specialization architecture against pooled-population baselines",
+  "panels": [
+    {
+      "id": "hypsignathus_2020",
+      "contract": "contract/hypsignathus_replication_v1.json"
+    },
+    {
+      "id": "phyllostomus_2022",
+      "contract": "contract/phyllostomus_replication_v1.json"
+    },
+    {
+      "id": "phyllostomus_2023",
+      "contract": "contract/phyllostomus_2023_replication_v1.json"
+    }
+  ],
+  "design": {
+    "cell_size_m": 5000,
+    "target_session": "one eligible session held out",
+    "self_predictor": "same individual's other eligible sessions within the exact admitted cohort",
+    "alternative_predictor": "one alternative individual at a time within the exact admitted cohort",
+    "common_support_only": true,
+    "minimum_scored_target_fixes": 50,
+    "conditional_endpoint": "mean log P_self(z|x,y) - log P_alternative(z|x,y)",
+    "marginal_endpoint": "mean log P_self(z) - log P_alternative(z)",
+    "architecture_endpoint": "conditional - marginal",
+    "self_win": "gain > 0",
+    "aggregation": "equal alternatives within target session, equal sessions within individual, equal individuals in panel"
+  },
+  "predictions": {
+    "hypsignathus": "conditional pairwise gain and conditional self-win fraction should exceed marginal counterparts if place-coupled architecture is not a pooling artefact",
+    "phyllostomus_2022": "marginal pairwise gain should exceed conditional pairwise gain if the altitude-wide architecture is not a pooling artefact",
+    "phyllostomus_2023": "reported descriptively as temporal robustness; no rescue criterion"
+  },
+  "claim_boundary": [
+    "post-primary robustness only",
+    "cannot redefine any frozen species-level replication result",
+    "vertical flight-use organization only; foraging state not inferred"
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-phyllostomus-2023-temporal-replication-v1",
+  "status": "frozen_before_numeric_height_open",
+  "role": "within-species temporal replication held separate from the species-level comparative panel",
+  "taxon": "Phyllostomus hastatus",
+  "repository_doi": "10.5441/001/1.322",
+  "source": {
+    "gps": {
+      "bitstream_id": "a842b308-d4a1-4c31-81db-acf699e5cadb",
+      "url": "https://datarepository.movebank.org/server/api/core/bitstreams/a842b308-d4a1-4c31-81db-acf699e5cadb/content",
+      "size_bytes": 3355955,
+      "md5": "327c31ea3e129d692bbb527ad32995f1"
+    },
+    "reference": {
+      "bitstream_id": "31403d15-5784-4b01-80bd-9ef9c0a7f4cd",
+      "url": "https://datarepository.movebank.org/server/api/core/bitstreams/31403d15-5784-4b01-80bd-9ef9c0a7f4cd/content",
+      "size_bytes": 8384,
+      "md5": "9880d2b155237d61ce6e6391296df1da"
+    }
+  },
+  "biological_prediction": "Cross-night individual identity should be expressed more strongly in place-conditioned vertical state than in a bat-wide marginal height distribution.",
+  "exclusions": {
+    "deployment_manipulation": "exclude reference deployments whose manipulation_type is present and not 'none'",
+    "source_outliers": "exclude explicit source outlier flags; if only visible exists, require visible=true",
+    "missing_xy_height_time": "exclude",
+    "session_minimum_events": 50
+  },
+  "session": {
+    "split_rule": "gap > 4 hours within individual",
+    "self_training": "other eligible sessions of the same individual within the same admitted cohort only"
+  },
+  "cohort": {
+    "definition": "exact study_site × shifted-night calendar year",
+    "shifted_night_rule": "timestamp minus 12 hours, then calendar date",
+    "minimum_total_individuals": 4,
+    "minimum_repeat_individuals": 3,
+    "pooling_across_cohorts_forbidden": true
+  },
+  "horizontal": {
+    "projection_rule": "per admitted cohort, choose UTM zone from median x-y before numeric height is parsed",
+    "primary_cell_size_m": 5000,
+    "sensitivity_cell_sizes_m": [
+      2500,
+      10000
+    ],
+    "grid_origin_m": [
+      0,
+      0
+    ]
+  },
+  "vertical": {
+    "primary_edges_m": [
+      "-inf",
+      0,
+      50,
+      100,
+      200,
+      400,
+      800,
+      1600,
+      3200,
+      "inf"
+    ],
+    "field": "height_above_ellipsoid",
+    "semantics": "native GPS height above reference ellipsoid; not AGL",
+    "numeric_height_open_after_contract": true
+  },
+  "probability_model": {
+    "jeffreys_alpha": 0.5,
+    "self_weighting": "equal session",
+    "population_weighting": "equal individual within cohort",
+    "target_scoring": "only target fixes whose horizontal cell is supported by both predictors",
+    "minimum_scored_target_fixes": 50
+  },
+  "primary_endpoints": {
+    "conditional_identity_gain": "mean log P_self(z|x,y) - log P_other_cohort(z|x,y)",
+    "marginal_identity_gain": "mean log P_self(z) - log P_other_cohort(z)",
+    "identity_x_location_increment": "conditional - marginal",
+    "aggregation": "equal-session within individual, then equal-individual"
+  },
+  "claim_boundary": [
+    "vertical flight-use organization, not verified foraging",
+    "observational repeatability is not personality, learning or causation",
+    "sensitivities cannot override the primary 5-km result"
+  ],
+  "replication_rule": {
+    "minimum_evaluable_individuals": 10,
+    "required": [
+      "equal-individual mean conditional identity gain > 0",
+      "more than half of evaluable individuals have positive conditional identity gain",
+      "equal-individual mean identity_x_location_increment > 0",
+      "conditional identity gain exceeds marginal identity gain"
+    ]
+  }
+}

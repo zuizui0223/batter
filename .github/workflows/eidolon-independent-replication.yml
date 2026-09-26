@@ -1,0 +1,25 @@
+name: eidolon-independent-replication-v1
+on:
+  push:
+    branches: [study/individual-vertical-strategies-v1]
+    paths:
+      - "scripts/run_eidolon_independent_replication.py"
+      - "contract/eidolon_independent_replication_v1.json"
+      - ".github/workflows/eidolon-independent-replication.yml"
+  workflow_dispatch:
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -e .
+      - run: python scripts/run_eidolon_independent_replication.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: batter-eidolon-independent-replication-v1
+          path: results/eidolon_independent_replication_v1.json
