@@ -1,204 +1,165 @@
-# Manuscript spine v0.3 — architectures of 3-D individual specialization
+# Manuscript spine v0.3.1 — predictive architectures of 3-D vertical identity
 
 ## Working title
 
-**Individual specialization in three-dimensional airspace has multiple spatial architectures**
+**Bat vertical individuality has conditional and marginal predictive architectures**
 
 Alternative:
-**Bat vertical individuality is encoded by altitude preferences and place-specific routes**
+**The predictive architecture of individual vertical identity varies across bat systems**
 
 ## One-sentence claim
 
-Across four bat taxa, repeated 3-D tracking reveals cross-night individual vertical signatures,
-but the signature is not encoded in one universal way: some systems are dominated by
-place-specific vertical routing whereas another independent panel is dominated by an
-animal-wide altitude distribution, and the architecture can change across temporal contexts
-within a species.
+Across four bat taxa, cross-night vertical identity is repeatable but not organized in one
+universal way: some systems are **conditional-dominant**, where horizontal location strongly
+increases individual vertical information, whereas another independent panel is
+**marginal-dominant**, and that balance changes across temporal contexts within a species.
 
 ## Biological question
 
-Individual specialization is usually described by horizontal home ranges, sites or resources.
-Flying animals additionally occupy a vertical axis. Does individuality extend into vertical
-airspace, and if so, **what spatial architecture carries that identity**?
+Individual specialization is usually described by horizontal space or resource use. Flying
+animals additionally occupy a vertical axis.
 
-Two non-equivalent forms are possible:
+Does individual identity recur in vertical state across nights, and is that identity carried
+mainly by:
 
-1. an individual-wide vertical distribution — “this animal tends to use these heights”;
-2. a place-coupled vertical rule — “at this place, this animal tends to use this vertical layer.”
+1. an animal-wide vertical distribution; or
+2. additional information that appears when vertical state is conditioned on horizontal place?
 
 ## Predictive decomposition
 
-For a held-out night:
+For a held-out session:
 
 ```text
-G_cond = mean log P_self(z | x,y) / P_other(z | x,y)
-G_marg = mean log P_self(z)     / P_other(z)
-G_place = G_cond - G_marg
+G_cond = mean log P_self(z|x,y) - log P_other(z|x,y)
+G_marg = mean log P_self(z)     - log P_other(z)
+G_adv  = G_cond - G_marg
 ```
 
-Thus:
+We call positive `G_adv` **conditional-dominant** and the opposite pattern
+**marginal-dominant**.
 
-```text
-conditional identity = altitude-wide identity + place-coupled identity
-```
+Crucially, `G_adv` is a predictive contrast. It is not identical to a latent
+individual × location interaction.
 
-All inference is cross-night; GPS fixes estimate distributions but individuals are the summary
-unit.
-
-## H1. Vertical individual identity exists across nights
+## H1. Individual vertical identity recurs across nights
 
 Supported in multiple systems.
 
-Primary 5-km conditional identity gains:
+The focal early/late identity-assignment test is particularly strong:
+*Tadarida* diagonal gain +0.1682, exact permutation p=0.000174, 6/8 positive.
 
-- *Tadarida teniotis*: +0.428;
-- *Eidolon helvum*: +0.219;
-- *Hypsignathus monstrosus*: +0.029;
-- *Phyllostomus hastatus* 2022: +0.056.
-
-The magnitude and individual consistency vary, so this is not a claim that every bat is strongly
-specialized.
-
-## H2. Vertical identity is universally a preferred altitude
+## H2. Vertical identity is universally marginal
 
 Not supported.
 
-*Tadarida*, *Eidolon* and *Hypsignathus* have marginal gains near zero or negative compared with
-their place-conditioned gains.
+At 5 km, *Tadarida*, *Eidolon* and *Hypsignathus* all have conditional identity greater than
+marginal identity.
 
-## H3. Vertical identity is universally place-coupled
+## H3. Vertical identity is universally conditional-dominant
 
 Also not supported.
 
-The frozen *P. hastatus* 2022 endpoint is altitude-wide dominated:
+The prospectively frozen *Phyllostomus hastatus* 2022 panel is marginal-dominant:
 
 - conditional +0.056;
 - marginal +0.176;
-- place × height −0.120.
+- conditional advantage -0.120.
 
-This is a qualitatively different specialization architecture.
+## H4. Focal conditional dominance is robust, but stable residual maps are not established
 
-## H4. Place-coupled identity is biologically real in the focal system
+Supported predictive result:
 
-Supported by several orthogonal checks in *Tadarida*:
-
-- AGL conditional +0.337 and place × AGL +0.591;
+- *Tadarida* MSL conditional +0.428 versus marginal +0.052;
+- AGL conditional +0.337 versus marginal -0.255;
 - terrain-only conditional +0.007;
-- another night from the same bat beats contemporaneous other bats
-  (+0.484 AGL; +0.436 MSL);
-- pairwise self-win fractions 0.736 AGL and 0.776 MSL.
+- same-bat other-night prediction usually beats contemporaneous other bats;
+- direct pairwise conditional self-win exceeds marginal self-win.
 
-Thus focal place-coupled identity is not simply MSL elevation, microtopographic route fidelity,
-night-wide environmental state or pooling of heterogeneous alternatives.
+But the separately frozen early/late residual-map refinement fails:
 
-## H5. The place-coupled architecture replicates in independent taxa
+- residual gain +0.0240;
+- exact permutation p=0.160;
+- 5/8 positive.
 
-Supported in two prospectively evaluated species:
+Therefore the focal data support **conditional-dominant identity**, not proof of a stable
+individual-specific place × height route.
+
+## H5. Conditional dominance replicates independently
 
 ### *Eidolon helvum*
-20 evaluable individuals; conditional +0.219, marginal +0.002, interaction +0.217;
-17/20 positive.
+
+- 20 evaluable individuals;
+- conditional +0.219;
+- marginal +0.002;
+- conditional advantage +0.217;
+- 17/20 conditional-positive.
 
 ### *Hypsignathus monstrosus*
-24 evaluable individuals; conditional +0.029, marginal −0.021, interaction +0.050;
-the frozen replication rule passed, with the clearest signal at 2.5 km.
 
-These replications show that local 3-D routing individuality is not peculiar to
-*T. teniotis*.
+- 24 evaluable individuals;
+- conditional +0.029;
+- marginal -0.021;
+- conditional advantage +0.050.
 
-## H6. Specialization architecture is a fixed species or seasonal property
+Direct pairwise analyses preserve the same direction in both species.
 
-Not supported by *P. hastatus*.
+## H6. Predictive architecture varies within *Phyllostomus*
 
-A direct pairwise check shows that this contrast is not produced by population averaging:
-2022 has marginal pairwise gain +0.323 versus conditional +0.285 (interaction −0.038), whereas
-2023 has conditional +0.148 versus marginal +0.028 (interaction +0.120).
+- 2022: marginal-dominant (+0.176 marginal vs +0.056 conditional);
+- 2023: weak conditional dominance (+0.033 vs +0.013);
+- 2016 La Gruta: +0.058 vs +0.016.
 
-- 2022 primary panel: altitude-wide dominated (+0.176 marginal, −0.120 interaction).
-- 2023 temporal panel: weak place-coupled (+0.013 marginal, +0.020 interaction).
-- 2016 La Gruta, prospectively frozen as a dry-season replication of the 2022 architecture:
-  +0.016 marginal, +0.041 interaction; the predefined altitude-wide replication rule failed.
+An untouched 2016 dry-season panel was prospectively frozen to reproduce the strong 2022
+marginal-dominant architecture and failed. A simple dry-season explanation is therefore blocked.
 
-The 2016 failure is retained. It specifically blocks a simple “dry season causes altitude-wide
-specialization” narrative.
+## H7. One common uplift mechanism explains the focal result
 
-## H7. One common vertical-wind reaction norm explains the focal architecture
-
-Not supported. The frozen *Tadarida* uplift-reaction endpoint had only two repeat-evaluable
-individuals and conflicting signs (permutation p=0.334).
+Not supported. The frozen *Tadarida* uplift-reaction endpoint was weakly estimable and conflicting
+(permutation p=0.334).
 
 Mechanism remains open.
 
 ## Ecological interpretation
 
-Three-dimensional individual specialization is not one number and not one geometry.
+The population-level vertical distribution can be a mixture of non-exchangeable individuals, but
+the way identity appears predictively differs among systems.
 
-An animal can be repeatable because it carries:
+Some panels carry much more individual information when horizontal place is known. Another panel
+carries stronger individual information in the overall vertical distribution.
 
-- an **altitude-wide signature**;
-- a **place-coupled vertical-route signature**;
-- or a mixture whose balance changes with ecological context.
-
-That distinction matters because pooling individuals can create a vertically thick population
-while no single pooled place-by-height map transfers to new animals. The apparent “failure of
-generality” is then a biological property of the population: different animals organize the
-third spatial dimension differently.
+This difference is ecologically meaningful without requiring a claim that one stable
+place-specific route map has been identified.
 
 ## Comparative panel
 
-An outcome-blind search covered 23 Movebank bat parent datasets. Nineteen exposed raw event CSVs
-directly and four legacy packages were recovered through child handles. Six sources from four taxa
-passed fixed structural requirements for same-event x-y-height data and repeat tracking. Sources
-without native height or adequate repeat individuals were excluded before numeric height outcomes.
-
-This makes *Phyllostomus*' failure to replicate the place-coupled pattern especially informative:
-it was not selected after seeing a favorable result.
+An outcome-blind public search covered 23 Movebank bat parent datasets plus legacy child-handle
+recovery. Six sources from four taxa passed fixed repeated same-event x-y-height requirements.
+Source admission did not use numeric height outcomes.
 
 ## Main figures
 
-### Figure 1 — Two architectures of vertical individuality
-Concept diagram: altitude-wide versus place-coupled specialization.
-
-### Figure 2 — Focal *Tadarida* validation
-MSL/AGL/terrain decomposition, same-night control and pairwise fingerprint.
-
-### Figure 3 — Architecture plane
-For each primary taxon/context, plot:
-x = marginal identity;
-y = place × height identity.
-Diagonal/zero guides separate altitude-wide and place-coupled dominance without forcing discrete
-classes.
-
-### Figure 4 — Independent taxa
-Per-individual conditional and marginal gains for *Eidolon*, *Hypsignathus* and
-*Phyllostomus* 2022.
-
-### Figure 5 — Within-species architecture instability
-*Phyllostomus* 2016, 2022 and 2023, with cohort-specific points and the prospective 2016
-prediction failure marked explicitly.
-
-### Figure 6 — Spatial grain
-2.5/5/10-km architecture trajectories. Use as exploratory comparative ecology, not as a trait
-regression with only four taxa.
-
-## Main limitations
-
-- source-specific vertical references differ (AGL, MSL, ellipsoid);
-- no common validated foraging-state classifier;
-- observational repeatability does not establish personality or mechanism;
-- source datasets differ in schedule, region and context;
-- *Phyllostomus* context differences do not identify a causal season/year/colony driver;
-- only four taxa pass the fixed public-data architecture screen.
+1. Concept: marginal-dominant versus conditional-dominant predictive identity.
+2. Focal *Tadarida*: conditional/marginal results plus explicit V2 residual-map negative.
+3. Architecture plane: x=marginal identity, y=conditional advantage.
+4. Independent *Eidolon* and *Hypsignathus* replications.
+5. *Phyllostomus* 2016/2022/2023 context instability.
+6. Pairwise robustness and scale profiles.
 
 ## Paper-level conclusion
 
-> **Individual specialization in bat airspace has multiple spatial architectures. Cross-night
-> identity may reside in a bat-wide altitude distribution or in a local coupling between place
-> and vertical state, and the balance between these components can vary across ecological
-> contexts.**
+> **Individual vertical identity in bat airspace has multiple predictive architectures. Across
+> nights, identity may be expressed mainly in an animal-wide height distribution or become much
+> stronger when vertical state is conditioned on horizontal place, and that balance can vary
+> across ecological contexts.**
 
-## Next empirical priority
+## Claim ceiling
 
-Do not rescue or retune completed endpoints. The highest-value next data are repeated 3-D
-tracking of the **same individuals across contrasting environmental contexts**, which can test
-whether specialization architecture itself is a plastic individual trait.
+Do not claim:
+
+- stable individual-specific place × height maps from the focal dataset;
+- personality, learning, optimality or adaptation;
+- validated foraging specialization;
+- a universal environmental mechanism.
+
+The v0.3.1 claim-language amendment changes wording only; the v0.3 empirical freeze remains
+unchanged.
