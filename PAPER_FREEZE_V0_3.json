@@ -106,5 +106,29 @@
     "code tests",
     "provenance tables",
     "non-outcome-changing bug fixes"
-  ]
+  ],
+  "claim_language_amendment": {
+    "amendment_id": "batter-v0.3.1-claim-language",
+    "date": "2026-09-27",
+    "empirical_freeze_unchanged": true,
+    "trigger": "reconciliation with independently frozen focal residual-map V2 negative",
+    "focal_residual_map_result": {
+      "gain": 0.024,
+      "permutation_p": 0.16,
+      "positive_individuals": "5/8",
+      "supported": false
+    },
+    "preferred_central_claim": "Individual vertical identity in bat airspace has multiple predictive architectures: across nights, identity can be more informative in a location-conditioned vertical distribution than in an animal-wide height distribution, or vice versa, and that balance can vary across ecological contexts.",
+    "preferred_terms": [
+      "conditional identity",
+      "marginal identity",
+      "conditional advantage",
+      "conditional-dominant",
+      "marginal-dominant"
+    ],
+    "avoid_as_demonstrated_mechanism": [
+      "stable place-specific route",
+      "stable individual-specific cell-by-height map"
+    ]
+  }
 }
