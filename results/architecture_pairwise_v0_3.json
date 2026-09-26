@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "freeze_id": "batter-paper-v0.3-freeze",
+  "role": "post-primary direct individual-to-individual robustness",
+  "units": "nats per scored fix",
+  "rows": [
+    {
+      "panel_id": "tadarida_msl",
+      "taxon": "Tadarida teniotis",
+      "context": "focal",
+      "vertical_reference": "MSL",
+      "n": 6,
+      "conditional": 0.6425985477224107,
+      "marginal": 0.09623434586884771,
+      "place_x_height": 0.546364201853563,
+      "conditional_self_win": 0.775925925925926,
+      "marginal_self_win": 0.49444444444444446
+    },
+    {
+      "panel_id": "tadarida_agl",
+      "taxon": "Tadarida teniotis",
+      "context": "focal",
+      "vertical_reference": "AGL",
+      "n": 6,
+      "conditional": 0.6108348460361034,
+      "marginal": -0.1964804393263915,
+      "place_x_height": 0.8073152853624949,
+      "conditional_self_win": 0.7361111111111112,
+      "marginal_self_win": 0.5
+    },
+    {
+      "panel_id": "eidolon",
+      "taxon": "Eidolon helvum",
+      "context": "multi-site-year",
+      "vertical_reference": "ellipsoid",
+      "n": 20,
+      "conditional": 0.3978604692657364,
+      "marginal": 0.01291254965008464,
+      "place_x_height": 0.3849479196156518,
+      "conditional_self_win": 0.8747845804988662,
+      "marginal_self_win": 0.6936590790162218
+    },
+    {
+      "panel_id": "hypsignathus",
+      "taxon": "Hypsignathus monstrosus",
+      "context": "Lek Njoukou 2020",
+      "vertical_reference": "ellipsoid",
+      "n": 24,
+      "conditional": 0.1153283409455584,
+      "marginal": 0.00798766926057085,
+      "place_x_height": 0.10734067168498757,
+      "conditional_self_win": 0.7651240281709032,
+      "marginal_self_win": 0.6031171516299357
+    },
+    {
+      "panel_id": "phyllostomus_2022",
+      "taxon": "Phyllostomus hastatus",
+      "context": "Aj-cave and La Gruta 2022",
+      "vertical_reference": "MSL",
+      "n": 33,
+      "conditional": 0.28533103960446865,
+      "marginal": 0.32324837107237575,
+      "place_x_height": -0.037917331467907114,
+      "conditional_self_win": 0.8510014747667246,
+      "marginal_self_win": 0.74436000365029
+    },
+    {
+      "panel_id": "phyllostomus_2023",
+      "taxon": "Phyllostomus hastatus",
+      "context": "Aj-cave and La Gruta 2023",
+      "vertical_reference": "ellipsoid",
+      "n": 16,
+      "conditional": 0.14807746867933452,
+      "marginal": 0.02775056880451903,
+      "place_x_height": 0.12032689987481551,
+      "conditional_self_win": 0.76073082010582,
+      "marginal_self_win": 0.5972883597883598
+    }
+  ],
+  "provenance": {
+    "focal_eidolon_workflow_run": 36240027181,
+    "extended_pairwise_workflow_run": 36246860359
+  }
+}
