@@ -34,7 +34,7 @@ def main():
     verify(annotated,ANNOTATED_MD5)
 
     text=annotated.decode("utf-8-sig")
-    reader=csv.reader(io.StringIO(text))
+    reader=csv.reader(io.StringIO(text, newline=""))
     header=next(reader)
     row_count=sum(1 for _ in reader)
 
