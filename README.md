@@ -1,113 +1,153 @@
 # batter
 
-Ecological re-analysis of 3-D movement in the European free-tailed bat (*Tadarida teniotis*).
+Ecological analysis of individual specialization in three-dimensional bat airspace.
 
-## Question
+## Biological question
 
-Does an individual bat carry a repeatable vertical-use strategy across nights, after horizontal position is already known?
+When a bat repeats its vertical use across nights, **what exactly is repeatable**?
 
-The project starts from an earlier ODSP result: the population support is vertically thick
-(`exp(H(Z|X,Y)) = 4.02` effective altitude states), yet a pooled location-conditioned
-vertical distribution did not transfer to two held-out individuals. That result is treated as
-motivation only. `batter` is a separate ecological study and does not retune or reopen the
-frozen ODSP endpoint.
+Two different architectures can produce an individual vertical signature:
 
-## Primary hypothesis
+1. **altitude-wide identity** — an animal repeats an overall vertical distribution;
+2. **place-coupled identity** — an animal repeats which vertical layer it uses at particular
+   horizontal places.
 
-If vertical flight strategy is individualized and repeatable, then for a held-out bat-night,
-the target bat's own other-night distribution `P(z | x,y, individual)` should predict vertical
-state better than a population distribution learned from other individuals.
+The predictive decomposition is:
 
-Primary endpoint:
+```text
+conditional identity gain
+= marginal-height identity gain
++ identity × location increment
+```
 
-`mean[log P_same-individual(z|x,y) - log P_other-individuals(z|x,y)]`
+All main tests are cross-night. GPS fixes estimate distributions; the biological summary unit is
+the individual.
 
-The sampling unit is a bat-night/session, not a 30-s GPS fix. Fixes are used to estimate
-within-session distributions; inference is summarized at the individual level.
+## Origin
 
-## Important semantic boundary
+The project began from an ODSP result in *Tadarida teniotis*: the fitted population was vertically
+thick (`exp(H(Z|X,Y)) ≈ 4.02` effective states) but its pooled `P(z|x,y)` failed to transfer
+to held-out individuals.
 
-The raw tracking stream measures flight height, not verified foraging. Until a behavioural
-classifier or independent foraging annotation is validated, this repository uses the terms
-**vertical flight-use strategy** and **vertical-use strategy**, not “foraging-height strategy”.
+`batter` asks whether that failure reflects **individual specialization**, rather than absence of
+vertical structure. The frozen ODSP endpoint is not retuned or reopened.
 
-## Data
+## Current result
 
-Primary source: O'Mara et al. 2021, Current Biology, Movebank Data Repository
-DOI 10.5441/001/1.52nn82r9. The exact original CSV is checksum-pinned in the study contract.
-
-## Workflow
-
-1. Verify the archived source byte-for-byte.
-2. Exclude source-marked manual outliers for the primary analysis.
-3. Segment each individual's record into tracking sessions using a frozen 4-hour gap rule.
-4. Project x-y to EPSG:3035 and use the inherited 5-km grid.
-5. Hold out each eligible session in turn.
-6. Predict it from the same bat's other sessions and from other bats.
-7. Score only x-y cells supported by both predictors.
-8. Aggregate session scores to equal-weight individual summaries.
-9. Treat topography/wind/AGL mechanisms as a second-stage analysis, not as a rescue if repeatability is absent.
-
-See `STUDY_CONTRACT.md` and `contract/individual_vertical_strategy_v1.json`.
-
-
-## Current ecological result
-
-The original *Tadarida teniotis* signal is now independently replicated.
-
-### Focal *Tadarida teniotis*
+### *Tadarida teniotis* — focal 3-D validation
 
 At 5-km horizontal conditioning:
 
-- MSL conditional self-transfer = **+0.428 nats/fix** (5/6 evaluable bats positive)
-- AGL conditional self-transfer = **+0.337** (4/6 positive)
-- terrain-elevation self-transfer = **+0.007**
-- MSL identity × location = **+0.376**
-- AGL identity × location = **+0.591**
+- conditional MSL identity: **+0.428 nats/fix**, 5/6 bats positive;
+- marginal MSL identity: +0.052;
+- place × MSL identity: **+0.376**;
+- conditional AGL identity: +0.337;
+- marginal AGL identity: −0.255;
+- place × AGL identity: **+0.591**;
+- terrain-elevation conditional identity: +0.007.
 
-The signal therefore lies mainly in place-specific vertical organization rather than a stable
-preferred height or repeated microtopographic elevation.
+The focal signature is therefore primarily place-coupled rather than a simple preferred height
+or repeated microtopographic elevation.
 
-### Independent *Eidolon helvum*
+Orthogonal controls strengthen that interpretation:
 
-The source and pass rule were frozen before numeric height was opened. Within exact site × year
-cohorts, the 5-km replication returned:
+- another night from the same bat beats contemporaneous other bats on the target night
+  (+0.484 AGL; +0.436 MSL);
+- direct pairwise self-win fractions are 0.736 for AGL and 0.776 for MSL;
+- a frozen common uplift-reaction mechanism was not supported.
 
-- **20 evaluable individuals**
-- conditional identity gain = **+0.219 nats/fix**
-- **17/20 (85%)** individual means positive
-- marginal-height identity = **+0.002**
-- identity × location = **+0.217**
-- all five frozen replication criteria passed
+### *Eidolon helvum* — independent prospective replication
 
-Thus a second bat species independently reproduces the key conditional-over-marginal result.
+Before numeric height was opened, source identity, cohorting and the pass rule were frozen.
 
-The current biological statement is:
+At 5 km within site × year cohorts:
 
-> **Individual bats carry repeatable, place-specific vertical signatures across nights. Identity
-> is expressed mainly through coupling between horizontal place and vertical state, not through
-> one individual-wide preferred flight altitude.**
+- **20 evaluable individuals**;
+- conditional identity: **+0.219**;
+- marginal identity: +0.002;
+- place × height: **+0.217**;
+- **17/20** individuals positive.
 
-See `MANUSCRIPT_SPINE.md`, `CROSS_SPECIES_SYNTHESIS.md`,
-`EIDOLON_INDEPENDENT_REPLICATION_RESULT.md`, `THREE_COMPONENT_RESULT.md`,
-`AGL_SELF_TRANSFER_RESULT.md`, and `UPLIFT_REACTION_NORM_RESULT.md`.
+All frozen place-coupled replication criteria passed.
 
-## Same-night context control
+### *Hypsignathus monstrosus* — second independent species replication
 
-A post-primary control compared each target session against two sources of information: the same
-bat on another night versus other bats tracked on the target calendar night. At 5 km, the
-cross-night self predictor still won for most evaluable bats:
+At 5 km:
 
-- AGL: +0.484 nats/fix, 4/5 individuals positive;
-- MSL: +0.436 nats/fix, 4/5 individuals positive.
+- 24 evaluable individuals;
+- conditional identity: **+0.029**;
+- marginal identity: −0.021;
+- place × height: **+0.050**;
+- 13/24 positive.
 
-Thus the fine-scale vertical signature is not well explained by a shared calendar-night state
-alone. See `NIGHT_CONTEXT_CONTROL_RESULT.md`.
+Its frozen replication rule passed. The signature is clearest at 2.5 km
+(conditional +0.131; place × height +0.152).
 
-## Independent replication
+### *Phyllostomus hastatus* — a different architecture
 
-Completed successfully in *Eidolon helvum*. Candidate selection, source identity, structural
-eligibility, site-year cohorting, 5-km primary scale and the five-part pass rule were frozen before
-numeric height outcomes were opened. The resulting 20-individual panel passed every criterion.
-The 2.5-km and 10-km frozen sensitivities also retained positive conditional and
-identity × location gains.
+The prospectively frozen 2022 panel did **not** replicate place-coupled specialization.
+
+At 5 km:
+
+- 33 evaluable individuals;
+- conditional identity: +0.056;
+- marginal identity: **+0.176**;
+- place × height: **−0.120**.
+
+This is biologically informative: vertical identity is concentrated in an animal-wide height
+distribution rather than in a local routing rule.
+
+The architecture is not a stable species or simple seasonal property:
+
+- 2023: conditional +0.033, marginal +0.013, interaction +0.020;
+- an untouched 2016 dry-season panel was prospectively frozen to replicate the 2022
+  altitude-wide architecture, but **failed**:
+  conditional +0.058, marginal +0.016, interaction +0.041.
+
+So the data do not support a simple “dry season → altitude-wide” explanation.
+
+## Main ecological statement
+
+> **Individual specialization in bat airspace has multiple spatial architectures. Cross-night
+> identity can reside in a bat-wide altitude distribution, in repeatable place-specific vertical
+> routing, or in a mixture of both; the balance need not be fixed even within a species.**
+
+That is now the center of the project.
+
+## Outcome-blind source screen
+
+A fixed checksum-pinned screen started from 19 public Movebank bat event sources. Numeric height
+values were not used for admission.
+
+Only six sources from four taxa passed all structural requirements:
+
+- native vertical state on the same event as x-y and time;
+- >=8 individuals with x-y-height presence;
+- >=5 repeat-tracked individuals with >=50-fix sessions.
+
+Many otherwise interesting bat datasets were excluded because a native same-event height field
+was absent. The Brazilian free-tailed bat dataset, for example, contains seven animals and no
+native height column in the public GPS table.
+
+## Key files
+
+- `MANUSCRIPT_SPINE.md` — current paper logic
+- `SPECIALIZATION_ARCHITECTURE_SYNTHESIS.md` — architecture table and interpretation
+- `CROSS_SPECIES_SYNTHESIS.md` — cross-taxon synthesis
+- `RESULTS_V1.md` — focal *Tadarida* self-transfer
+- `AGL_SELF_TRANSFER_RESULT.md` — terrain-relative validation
+- `THREE_COMPONENT_RESULT.md` — terrain/AGL/MSL decomposition
+- `NIGHT_CONTEXT_CONTROL_RESULT.md` — contemporaneous-night control
+- `PAIRWISE_VERTICAL_FINGERPRINT_RESULT.md` — direct individual-to-individual comparison
+- `EIDOLON_INDEPENDENT_REPLICATION_RESULT.md` — first independent species replication
+- `UPLIFT_REACTION_NORM_RESULT.md` — closed mechanism test
+- `REPLICATION_CANDIDATE_LEDGER.md` — outcome-blind candidate decisions
+
+## Claim boundary
+
+The analyses concern repeatable **vertical flight/airspace use**. They do not by themselves
+establish foraging state, personality, learning, optimality or a causal environmental mechanism.
+
+Vertical reference systems differ among source datasets (AGL, MSL, ellipsoid). Cross-species
+comparisons therefore concern the architecture of predictive identity, not equality of absolute
+flight heights.
