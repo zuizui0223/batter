@@ -47,11 +47,18 @@
       "positive_individuals": 5
     }
   },
-  "current_claim": "Repeatable individual-specific organization of vertical flight use is supported descriptively in most evaluable bats at 2.5-5 km conditioning scales; one bat is consistently non-repeatable and the mean signal disappears at 10 km.",
+  "current_claim": "Most evaluable bats repeat individual-specific fine-scale place-by-altitude organization across sessions. The identity signal is mainly conditional on location, not a simple individual-wide altitude set-point; the population also contains at least one consistently non-repeatable individual under the 5-km endpoint.",
   "forbidden_claims": [
     "verified foraging-height specialization",
     "height-above-ground specialization",
     "causal intrinsic personality",
     "universal fixed individual strategy"
-  ]
+  ],
+  "post_primary_decomposition_5km": {
+    "conditional_identity_gain_nats_per_fix": 0.42595530374485807,
+    "marginal_identity_gain_nats_per_fix": 0.05323737103278975,
+    "identity_x_location_gain_nats_per_fix": 0.3727179327120684,
+    "identity_x_location_positive_individuals": 5,
+    "interpretation": "Most repeatable identity information is in the place-by-altitude coupling rather than in an individual-wide marginal altitude distribution."
+  }
 }
