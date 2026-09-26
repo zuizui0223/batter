@@ -5,7 +5,7 @@ from __future__ import annotations
 import re
 from pathlib import Path
 
-PATH = Path("manuscript/MANUSCRIPT_DRAFT_V0_3_1.md")
+PATH = Path("manuscript/MANUSCRIPT_DRAFT_V0_3_2.md")
 TEXT = PATH.read_text(encoding="utf-8")
 
 WORD_LIMIT = 8500
