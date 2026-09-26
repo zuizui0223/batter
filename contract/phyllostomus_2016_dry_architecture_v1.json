@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-phyllostomus-2016-dry-architecture-v1",
+  "status": "frozen_before_numeric_height_open",
+  "role": "prospective within-species replication of the altitude-wide dry-season architecture discovered in the frozen 2022 endpoint",
+  "taxon": "Phyllostomus hastatus",
+  "season_context": {
+    "season": "dry",
+    "year": 2016,
+    "external_basis": "source study methods identify February-March 2016 and 2022 as dry-season sampling",
+    "no_causal_season_claim_from_this_test": true
+  },
+  "source": {
+    "gps": {
+      "bitstream_id": "40623d69-2787-4aec-8237-4d2264bd665f",
+      "url": "https://datarepository.movebank.org/server/api/core/bitstreams/40623d69-2787-4aec-8237-4d2264bd665f/content",
+      "size_bytes": 50919501,
+      "md5": "58d555f48e07b5e41e2c5d1983b25e80"
+    },
+    "reference": {
+      "bitstream_id": "35cd7452-fe48-4423-81fb-4ff8e0717da8",
+      "url": "https://datarepository.movebank.org/server/api/core/bitstreams/35cd7452-fe48-4423-81fb-4ff8e0717da8/content",
+      "size_bytes": 7299,
+      "md5": "17bf1ab59daeb37b5ee1f8f1c127d0b4"
+    }
+  },
+  "exclusions": {
+    "deployment_manipulation": "exclude if manipulation_type is present and not 'none'",
+    "source_outliers": "no explicit outlier field exists; require visible=true when visible is present",
+    "session_minimum_events": 50
+  },
+  "session": {
+    "split_rule": "gap > 4 hours within individual",
+    "self_training": "other eligible sessions from the same individual within the same cohort only"
+  },
+  "cohort": {
+    "definition": "exact study_site × shifted-night calendar year",
+    "shifted_night_rule": "timestamp minus 12 hours, then calendar date",
+    "minimum_total_individuals": 4,
+    "minimum_repeat_individuals": 3,
+    "pooling_across_cohorts_forbidden": true
+  },
+  "horizontal": {
+    "projection_rule": "per admitted cohort UTM chosen from median x-y before height values are parsed",
+    "primary_cell_size_m": 5000,
+    "sensitivity_cell_sizes_m": [
+      2500,
+      10000
+    ]
+  },
+  "vertical": {
+    "primary_field": "height_above_msl",
+    "primary_semantics": "native GPS height above mean sea level, matching the 2022 dry-season dataset",
+    "semantic_sensitivity_field": "height_above_ellipsoid",
+    "semantic_sensitivity_cannot_override_primary": true,
+    "edges_m": [
+      "-inf",
+      0,
+      50,
+      100,
+      200,
+      400,
+      800,
+      1600,
+      3200,
+      "inf"
+    ]
+  },
+  "probability_model": {
+    "jeffreys_alpha": 0.5,
+    "self_weighting": "equal session",
+    "population_weighting": "equal individual within cohort",
+    "minimum_scored_target_fixes": 50,
+    "common_horizontal_support_only": true
+  },
+  "prediction": {
+    "origin": "new prediction generated from the already frozen 2022 dry-season result before 2016 numeric height values were opened",
+    "expected_architecture": "altitude-wide rather than place-specific",
+    "primary_required": [
+      "minimum evaluable individuals >= 6",
+      "equal-individual mean marginal identity gain > 0",
+      "more than half of evaluable individuals have positive marginal identity gain",
+      "equal-individual mean identity_x_location increment < 0",
+      "more than half of evaluable individuals have negative identity_x_location increment",
+      "marginal identity gain exceeds conditional identity gain"
+    ]
+  },
+  "claim_boundary": [
+    "a pass would replicate the 2022 dry-season specialization architecture in an earlier dry-season panel",
+    "it would not prove season causation because year, instrumentation and other context differ",
+    "a failure is retained and the rule is not retuned",
+    "flight-use organization only; no direct foraging-state classification is imposed"
+  ]
+}
