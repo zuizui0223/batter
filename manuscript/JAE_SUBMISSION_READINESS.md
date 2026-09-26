@@ -42,14 +42,11 @@ No additional public-data mining belongs in this paper.
 
 ### Required before submission
 
-1. Produce Figure 1 conceptual schematic from the frozen definitions.
-2. Generate final Figures 2–6 and inspect labels at journal size.
-3. Add a complete formatted reference list.
-4. Add explicit Data and Code Availability statements with repository/data-package DOIs.
-5. Add an Ethics statement clarifying that this is a reanalysis of public tracking data and
-   citing original source-study approvals where required.
-6. Add author contribution, funding, conflicts and acknowledgements on the separate title page.
-7. Render a double-spaced, continuously line-numbered anonymous review PDF.
+1. Inspect generated Figures 1–6 at journal size.
+2. Mint a permanent versioned archive DOI for code/provenance and replace the GitHub-only placeholder.
+3. Fill author contribution, funding, conflicts and acknowledgements on the separate title page.
+4. Confirm original-source ethics/permit citations are sufficient for the journal's reanalysis policy.
+5. Render a double-spaced, continuously line-numbered anonymous review PDF.
 
 ### Editorial polishing
 
