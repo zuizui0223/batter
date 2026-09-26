@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="680" viewBox="0 0 920 680">
+<rect width="920" height="680" fill="white"/>
+<text x="460" y="42" text-anchor="middle" font-family="Arial" font-size="24" font-weight="bold">Decomposition of the individual identity signal</text>
+<text x="460" y="72" text-anchor="middle" font-family="Arial" font-size="15">Observed identity-matched statistic and exact permutation-null 5th–95th percentile</text>
+<line x1="744.7826086956522" y1="100" x2="744.7826086956522" y2="580" stroke="black" stroke-width="1" stroke-dasharray="5,5"/><text x="290" y="150" text-anchor="end" font-family="Arial" font-size="14">Full conditional identity</text>
+ <line x1="710.7494633574709" y1="145" x2="760.1585062775231" y2="145" stroke="black" stroke-width="6"/>
+ <line x1="710.7494633574709" y1="136" x2="710.7494633574709" y2="154" stroke="black" stroke-width="2"/>
+ <line x1="760.1585062775231" y1="136" x2="760.1585062775231" y2="154" stroke="black" stroke-width="2"/>
+ <circle cx="781.3525743674445" cy="145" r="10" fill="black" stroke="black" stroke-width="3"/>
+ <text x="825" y="150" font-family="Arial" font-size="13">P=0.000174</text><text x="290" y="280" text-anchor="end" font-family="Arial" font-size="14">Cell interaction after altitude control</text>
+ <line x1="713.8071547734894" y1="275" x2="756.5662828596755" y2="275" stroke="black" stroke-width="6"/>
+ <line x1="713.8071547734894" y1="266" x2="713.8071547734894" y2="284" stroke="black" stroke-width="2"/>
+ <line x1="756.5662828596755" y1="266" x2="756.5662828596755" y2="284" stroke="black" stroke-width="2"/>
+ <circle cx="750.0053535865703" cy="275" r="10" fill="white" stroke="black" stroke-width="3"/>
+ <text x="825" y="280" font-family="Arial" font-size="13">P=0.160</text><text x="290" y="410" text-anchor="end" font-family="Arial" font-size="14">Marginal altitude identity</text>
+ <line x1="656.809790355652" y1="405" x2="731.28637489518" y2="405" stroke="black" stroke-width="6"/>
+ <line x1="656.809790355652" y1="396" x2="656.809790355652" y2="414" stroke="black" stroke-width="2"/>
+ <line x1="731.28637489518" y1="396" x2="731.28637489518" y2="414" stroke="black" stroke-width="2"/>
+ <circle cx="738.0188221802285" cy="405" r="10" fill="white" stroke="black" stroke-width="3"/>
+ <text x="825" y="410" font-family="Arial" font-size="13">P=0.022</text><text x="290" y="540" text-anchor="end" font-family="Arial" font-size="14">Horizontal cell-use identity</text>
+ <line x1="350.43558517281446" y1="535" x2="591.1019331600796" y2="535" stroke="black" stroke-width="6"/>
+ <line x1="350.43558517281446" y1="526" x2="350.43558517281446" y2="544" stroke="black" stroke-width="2"/>
+ <line x1="591.1019331600796" y1="526" x2="591.1019331600796" y2="544" stroke="black" stroke-width="2"/>
+ <circle cx="680.0018600665418" cy="535" r="10" fill="white" stroke="black" stroke-width="3"/>
+ <text x="825" y="540" font-family="Arial" font-size="13">P=0.002</text><line x1="310" y1="580" x2="310" y2="588" stroke="black"/><text x="310" y="610" text-anchor="middle" font-family="Arial" font-size="13">-2</text><line x1="418.69565217391306" y1="580" x2="418.69565217391306" y2="588" stroke="black"/><text x="418.69565217391306" y="610" text-anchor="middle" font-family="Arial" font-size="13">-1.5</text><line x1="527.3913043478261" y1="580" x2="527.3913043478261" y2="588" stroke="black"/><text x="527.3913043478261" y="610" text-anchor="middle" font-family="Arial" font-size="13">-1</text><line x1="636.0869565217391" y1="580" x2="636.0869565217391" y2="588" stroke="black"/><text x="636.0869565217391" y="610" text-anchor="middle" font-family="Arial" font-size="13">-0.5</text><line x1="744.7826086956522" y1="580" x2="744.7826086956522" y2="588" stroke="black"/><text x="744.7826086956522" y="610" text-anchor="middle" font-family="Arial" font-size="13">0</text><line x1="799.1304347826087" y1="580" x2="799.1304347826087" y2="588" stroke="black"/><text x="799.1304347826087" y="610" text-anchor="middle" font-family="Arial" font-size="13">0.25</text><line x1="310" y1="580" x2="810" y2="580" stroke="black" stroke-width="1.5"/>
+<text x="560" y="642" text-anchor="middle" font-family="Arial" font-size="14">Mean matched-identity log-score gain</text>
+<text x="460" y="668" text-anchor="middle" font-family="Arial" font-size="12">Filled point: frozen support rule passed. Open points did not pass the full support rule.</text></svg>
