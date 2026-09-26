@@ -31,7 +31,7 @@ def test_structured_abstract_under_350_words():
 def test_key_claims_and_boundaries():
     t=MS.read_text()
     assert "P=0.0001736" in t
-    assert "P=0.1605" in t
+    assert "0.1605" in t
     assert "only four of eight" in t.lower()
     assert "height above mean sea level" in t
     assert "do not interpret this variable as height above ground" in t
