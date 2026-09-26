@@ -156,6 +156,27 @@ def conditional_profile(
     return {cell: np.mean(np.stack(probs), axis=0) for cell, probs in per_cell.items()}
 
 
+def marginal_profile(
+    events: Iterable[Event],
+    *,
+    unit: str,
+    alpha: float = 0.5,
+    k: int = 9,
+) -> np.ndarray:
+    if unit not in {"session", "individual"}:
+        raise ValueError("unit must be session or individual")
+    by_unit: dict[str, np.ndarray] = {}
+    for event in events:
+        unit_id = event.session if unit == "session" else event.individual
+        if unit_id not in by_unit:
+            by_unit[unit_id] = np.zeros(k, dtype=float)
+        by_unit[unit_id][event.zbin] += 1
+    if not by_unit:
+        raise ValueError("cannot build marginal profile from zero units")
+    probs = [_smoothed(counts, alpha) for counts in by_unit.values()]
+    return np.mean(np.stack(probs), axis=0)
+
+
 def score_session(
     target: list[Event],
     self_training: list[Event],
@@ -167,6 +188,12 @@ def score_session(
 ) -> dict:
     p_self = conditional_profile(self_training, unit="session", alpha=alpha, k=n_z_bins)
     p_pop = conditional_profile(population_training, unit="individual", alpha=alpha, k=n_z_bins)
+    p_self_marginal = marginal_profile(self_training, unit="session", alpha=alpha, k=n_z_bins)
+    p_pop_marginal = marginal_profile(population_training, unit="individual", alpha=alpha, k=n_z_bins)
+
+    # Use exactly the same target fixes for every score in the decomposition.
+    # This keeps the conditional-vs-marginal comparison from becoming a support
+    # coverage comparison.
     supported = [e for e in target if e.cell in p_self and e.cell in p_pop]
     if len(supported) < minimum_scored_fixes:
         return {
@@ -175,17 +202,44 @@ def score_session(
             "target_fixes": len(target),
             "coverage": len(supported) / len(target) if target else 0.0,
             "gain_nats_per_fix": None,
+            "conditional_identity_gain_nats_per_fix": None,
+            "marginal_identity_gain_nats_per_fix": None,
+            "identity_x_location_gain_nats_per_fix": None,
+            "self_location_gain_nats_per_fix": None,
+            "population_location_gain_nats_per_fix": None,
         }
-    values = [
-        math.log(float(p_self[e.cell][e.zbin])) - math.log(float(p_pop[e.cell][e.zbin]))
-        for e in supported
-    ]
+
+    conditional_identity = []
+    marginal_identity = []
+    self_location = []
+    population_location = []
+    for event in supported:
+        z = event.zbin
+        cell = event.cell
+        log_self_cond = math.log(float(p_self[cell][z]))
+        log_pop_cond = math.log(float(p_pop[cell][z]))
+        log_self_marg = math.log(float(p_self_marginal[z]))
+        log_pop_marg = math.log(float(p_pop_marginal[z]))
+        conditional_identity.append(log_self_cond - log_pop_cond)
+        marginal_identity.append(log_self_marg - log_pop_marg)
+        self_location.append(log_self_cond - log_self_marg)
+        population_location.append(log_pop_cond - log_pop_marg)
+
+    cond_gain = float(np.mean(conditional_identity))
+    marginal_gain = float(np.mean(marginal_identity))
+    interaction_gain = cond_gain - marginal_gain
     return {
         "evaluable": True,
         "scored_fixes": len(supported),
         "target_fixes": len(target),
         "coverage": len(supported) / len(target),
-        "gain_nats_per_fix": float(np.mean(values)),
+        # Backward-compatible alias for the frozen primary endpoint.
+        "gain_nats_per_fix": cond_gain,
+        "conditional_identity_gain_nats_per_fix": cond_gain,
+        "marginal_identity_gain_nats_per_fix": marginal_gain,
+        "identity_x_location_gain_nats_per_fix": interaction_gain,
+        "self_location_gain_nats_per_fix": float(np.mean(self_location)),
+        "population_location_gain_nats_per_fix": float(np.mean(population_location)),
     }
 
 
@@ -221,33 +275,68 @@ def leave_one_session_out(events: list[Event], *, alpha: float = 0.5, minimum_sc
         })
         results.append(scored)
 
+    metric_names = [
+        "conditional_identity_gain_nats_per_fix",
+        "marginal_identity_gain_nats_per_fix",
+        "identity_x_location_gain_nats_per_fix",
+        "self_location_gain_nats_per_fix",
+        "population_location_gain_nats_per_fix",
+    ]
     per_individual = {}
     for individual in sorted({e.individual for e in events}):
+        evaluable = [
+            r for r in results
+            if r.get("individual") == individual and r.get("evaluable")
+        ]
+        metrics = {}
+        for name in metric_names:
+            values = [r[name] for r in evaluable if r.get(name) is not None]
+            metrics[f"mean_{name}"] = float(np.mean(values)) if values else None
         gains = [
-            r["gain_nats_per_fix"] for r in results
-            if r.get("individual") == individual and r.get("evaluable") and r.get("gain_nats_per_fix") is not None
+            r["conditional_identity_gain_nats_per_fix"] for r in evaluable
+            if r.get("conditional_identity_gain_nats_per_fix") is not None
         ]
         per_individual[individual] = {
             "evaluable_sessions": len(gains),
+            # Backward-compatible primary field.
             "mean_gain_nats_per_fix": float(np.mean(gains)) if gains else None,
             "positive_session_fraction": float(np.mean(np.array(gains) > 0.0)) if gains else None,
+            **metrics,
         }
 
-    eligible_individual_gains = [
-        v["mean_gain_nats_per_fix"] for v in per_individual.values()
+    eligible = [
+        v for v in per_individual.values()
         if v["mean_gain_nats_per_fix"] is not None
     ]
+    eligible_primary = [v["mean_gain_nats_per_fix"] for v in eligible]
+
+    def equal_individual_mean(field: str):
+        values = [v[field] for v in eligible if v.get(field) is not None]
+        return float(np.mean(values)) if values else None
+
     return {
         "session_results": results,
         "individual_results": per_individual,
-        "eligible_individual_count": len(eligible_individual_gains),
+        "eligible_individual_count": len(eligible_primary),
         "equal_individual_mean_gain_nats_per_fix": (
-            float(np.mean(eligible_individual_gains)) if eligible_individual_gains else None
+            float(np.mean(eligible_primary)) if eligible_primary else None
         ),
         "positive_individual_fraction": (
-            float(np.mean(np.array(eligible_individual_gains) > 0.0))
-            if eligible_individual_gains else None
+            float(np.mean(np.array(eligible_primary) > 0.0))
+            if eligible_primary else None
         ),
+        "decomposition": {
+            "equal_individual_mean_conditional_identity_gain_nats_per_fix":
+                equal_individual_mean("mean_conditional_identity_gain_nats_per_fix"),
+            "equal_individual_mean_marginal_identity_gain_nats_per_fix":
+                equal_individual_mean("mean_marginal_identity_gain_nats_per_fix"),
+            "equal_individual_mean_identity_x_location_gain_nats_per_fix":
+                equal_individual_mean("mean_identity_x_location_gain_nats_per_fix"),
+            "equal_individual_mean_self_location_gain_nats_per_fix":
+                equal_individual_mean("mean_self_location_gain_nats_per_fix"),
+            "equal_individual_mean_population_location_gain_nats_per_fix":
+                equal_individual_mean("mean_population_location_gain_nats_per_fix"),
+        },
     }
 
 
