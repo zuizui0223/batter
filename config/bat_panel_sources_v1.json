@@ -1,0 +1,181 @@
+{
+  "schema_version": 1,
+  "inventory_boundary_commit": "379dd8e110c249e89dd936a35f3b9b8bd7d9c580",
+  "inventory_workflow_run": 36240093800,
+  "inventory_artifact_id": 10905373696,
+  "inventory_artifact_digest": "sha256:a294ca760314cb31189e6e92f97ce124ac568d828106a60474f4b34f13faf657",
+  "source_count": 19,
+  "sources": [
+    {
+      "doi": "10.5441/001/1.15pq1m81",
+      "title": "Foraging and roosting behaviour of fringe-lipped bats",
+      "bitstream_id": "e0b610de-7324-4e81-8e51-49aeeb817410",
+      "filename": "Fringe-lipped bat BCI Panama (data from Jones et al. 2017).csv",
+      "size_bytes": 295892,
+      "checksum": "93875a5ebec0032f2d130ab42a48e982",
+      "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/e0b610de-7324-4e81-8e51-49aeeb817410/content"
+    },
+    {
+      "doi": "10.5441/001/1.278",
+      "title": "Hammer-headed fruit bats, Republic of Congo",
+      "bitstream_id": "7cc2bd3f-a9d3-4529-bd6d-7fc1fc47e000",
+      "filename": "Hammer-headed fruit bats (Hypsignathus monstrosus) in the Republic of Congo-gps.csv",
+      "size_bytes": 9383514,
+      "checksum": "e2fd92d7647c745b54191def19131570",
+      "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/7cc2bd3f-a9d3-4529-bd6d-7fc1fc47e000/content"
+    },
+    {
+      "doi": "10.5441/001/1.282",
+      "title": "Greater spear-nosed bats, Bocas del Toro",
+      "bitstream_id": "40623d69-2787-4aec-8237-4d2264bd665f",
+      "filename": "Foraging movements of greater spear-nosed bats Bocas del Toro.csv",
+      "size_bytes": 50919501,
+      "checksum": "58d555f48e07b5e41e2c5d1983b25e80",
+      "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/40623d69-2787-4aec-8237-4d2264bd665f/content"
+    },
+    {
+      "doi": "10.5441/001/1.297",
+      "title": "Lesser bulldog bat foraging behaviour",
+      "bitstream_id": "e4517ad0-82dc-4d4b-bdf0-97e84dab03c2",
+      "filename": "Lesser bulldog bat foraging behavior_part.csv",
+      "size_bytes": 1362496,
+      "checksum": "d9ef6ef04695e2d66c7c96fe2013c36c",
+      "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/e4517ad0-82dc-4d4b-bdf0-97e84dab03c2/content"
+    },
+    {
+      "doi": "10.5441/001/1.319",
+      "title": "Common noctule spring migration",
+      "bitstream_id": "6fbf9b01-f456-43e8-83bc-cc40aa13bcab",
+      "filename": "Common noctule migration SigFox MPIAB.csv",
+      "size_bytes": 1276538,
+      "checksum": "073c2aff738b8bb35f989707a5e80f81",
+      "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/6fbf9b01-f456-43e8-83bc-cc40aa13bcab/content"
+    },
+    {
+      "doi": "10.5441/001/1.321",
+      "title": "Greater spear-nosed bat 2021-2022",
+      "bitstream_id": "fa2e42c9-275a-4833-b74f-3e2715c8794d",
+      "filename": "Greater spear-nosed bat (Phyllostomus hastatus) in Bocas del Toro 2021-2022-gps.csv",
+      "size_bytes": 5846425,
+      "checksum": "7bae1d6d59acad98a4df7348c04d5ea6",
+      "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/fa2e42c9-275a-4833-b74f-3e2715c8794d/content"
+    },
+    {
+      "doi": "10.5441/001/1.322",
+      "title": "Greater spear-nosed bat 2023",
+      "bitstream_id": "a842b308-d4a1-4c31-81db-acf699e5cadb",
+      "filename": "Greater spear-nosed bat (Phyllostomus hastatus) in Bocas del Toro 2023.csv",
+      "size_bytes": 3355955,
+      "checksum": "327c31ea3e129d692bbb527ad32995f1",
+      "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/a842b308-d4a1-4c31-81db-acf699e5cadb/content"
+    },
+    {
+      "doi": "10.5441/001/1.3pk82706",
+      "title": "Greater horseshoe bat, France",
+      "bitstream_id": "395661d5-b347-4873-bdc4-f7f613c4d171",
+      "filename": "Greater horseshoe bat Annepont France (data from Pinaud et al. 2018).csv",
+      "size_bytes": 12539,
+      "checksum": "110fdfe17a7f10dd9d5f5c471249a060",
+      "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/395661d5-b347-4873-bdc4-f7f613c4d171/content"
+    },
+    {
+      "doi": "10.5441/001/1.44183438",
+      "title": "Straw-coloured fruit bat seed dispersal",
+      "bitstream_id": "1078cf1d-9bac-4fd0-9592-ef9349078aad",
+      "filename": "Long-distance seed dispersal by straw-coloured fruit bats (data from Abedi-Lartey et al. 2016)-gps.csv",
+      "size_bytes": 1131744,
+      "checksum": "94fe7f5c8755f77c8c5b5854c605de4f",
+      "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/1078cf1d-9bac-4fd0-9592-ef9349078aad/content"
+    },
+    {
+      "doi": "10.5441/001/1.52nn82r9",
+      "title": "European free-tailed bat 3-D flights",
+      "bitstream_id": "2d629393-4266-4f85-88db-001faeab669d",
+      "filename": "3D flights of European free-tailed bats.csv",
+      "size_bytes": 1926056,
+      "checksum": "570872ab7aba674b9bdc2f2ee6044a71",
+      "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/2d629393-4266-4f85-88db-001faeab669d/content"
+    },
+    {
+      "doi": "10.5441/001/1.62h1f7k9",
+      "title": "Trawling bat movement coordination",
+      "bitstream_id": "1005e394-6b9d-4ac4-a27f-1c071b84ccca",
+      "filename": "Movement coordination in trawling bats (data from Giuggioli et al. 2015).csv",
+      "size_bytes": 20358684,
+      "checksum": "b1d930833827713e3245e8098375239f",
+      "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/1005e394-6b9d-4ac4-a27f-1c071b84ccca/content"
+    },
+    {
+      "doi": "10.5441/001/1.62s17b4v",
+      "title": "Fruit bats in Ghana wind commuting",
+      "bitstream_id": "c5a13692-624a-4f9a-be60-c72513355c68",
+      "filename": "Fruit bats in Ghana (data from Sapir et al. 2014).csv",
+      "size_bytes": 161607,
+      "checksum": "bd876c0e1ccb9a7e927717868004d055",
+      "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/c5a13692-624a-4f9a-be60-c72513355c68/content"
+    },
+    {
+      "doi": "10.5441/001/1.696",
+      "title": "Mexican long-nosed bat foraging movement",
+      "bitstream_id": "053abff7-3c06-40c9-acfb-c7ac47df8814",
+      "filename": "Foraging movement patterns of lactating Mexican long-nosed bats in central Mexico.csv",
+      "size_bytes": 236719,
+      "checksum": "715324075d2a2a45f8775a308026cdff",
+      "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/053abff7-3c06-40c9-acfb-c7ac47df8814/content"
+    },
+    {
+      "doi": "10.5441/001/1.7t4b97qf",
+      "title": "Common noctule foraging heights",
+      "bitstream_id": "bccf6770-f978-4e97-b0d2-d48abfbfbd66",
+      "filename": "Foraging heights of common noctules (data from O'Mara et al. 2019).csv",
+      "size_bytes": 917739,
+      "checksum": "df0dacfdc82e5956f01a8b0385450907",
+      "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/bccf6770-f978-4e97-b0d2-d48abfbfbd66/content"
+    },
+    {
+      "doi": "10.5441/001/1.bc72jg61",
+      "title": "Carollia short-tailed bats, Panama",
+      "bitstream_id": "cbf1e2d2-36ef-419e-9d4c-c2aec514ed99",
+      "filename": "Carollia Short-tailed Bats Thies BCI Panama.csv",
+      "size_bytes": 673303,
+      "checksum": "db23215e534a8438c3b82f92d2b96884",
+      "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/cbf1e2d2-36ef-419e-9d4c-c2aec514ed99/content"
+    },
+    {
+      "doi": "10.5441/001/1.f01815nq",
+      "title": "Noctule post-hibernation and early migration",
+      "bitstream_id": "1f47044f-e8c5-467b-92c7-fdedc72ab6f3",
+      "filename": "Post-hibernation and early migration in noctule bats (data from Dechmann et al. 2014).csv",
+      "size_bytes": 206608,
+      "checksum": "92da6956a45893fe551d3ffcfb235e0c",
+      "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/1f47044f-e8c5-467b-92c7-fdedc72ab6f3/content"
+    },
+    {
+      "doi": "10.5441/001/1.k8n02jn8",
+      "title": "Straw-coloured fruit bat Africa 2009-2014",
+      "bitstream_id": "82b726a4-bc78-497a-81d9-a19844cb61fc",
+      "filename": "Straw-colored fruit bats (Eidolon helvum) in Africa 2009-2014-gps.csv",
+      "size_bytes": 4497472,
+      "checksum": "5f301a9e28c74d9b4823b6c5aa70cacf",
+      "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/82b726a4-bc78-497a-81d9-a19844cb61fc/content"
+    },
+    {
+      "doi": "10.5441/001/1.kk3bg2f4",
+      "title": "Mexican fish-eating bat",
+      "bitstream_id": "8c34b3fd-d746-4716-bc67-8c770810d1dd",
+      "filename": "Mexican fish-eating bat in Isla Partida Norte, Mexico.csv",
+      "size_bytes": 2462362,
+      "checksum": "07d8e34a973c361dada5dc46da90ed80",
+      "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/8c34b3fd-d746-4716-bc67-8c770810d1dd/content"
+    },
+    {
+      "doi": "10.5441/001/1.n157b4n8",
+      "title": "Desert-dwelling bat movement seasonality",
+      "bitstream_id": "918a7906-e3fb-4257-ab31-346fa5e4746d",
+      "filename": "Movement seasonality in a desert-dwelling bat revealed by miniature GPS loggers (Conenna et al. 2019).csv",
+      "size_bytes": 370663,
+      "checksum": "4fe08361a138c50f9b61e425de439b85",
+      "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/918a7906-e3fb-4257-ab31-346fa5e4746d/content"
+    }
+  ]
+}
