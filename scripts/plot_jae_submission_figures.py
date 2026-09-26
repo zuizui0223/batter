@@ -7,6 +7,7 @@ import json
 from pathlib import Path
 
 import matplotlib.pyplot as plt
+from matplotlib.patches import FancyBboxPatch
 
 ROOT = Path(__file__).resolve().parents[1]
 RESULTS = ROOT / "results"
@@ -45,6 +46,51 @@ def save(fig, stem: str):
     fig.savefig(OUT / f"{stem}.pdf")
     fig.savefig(OUT / f"{stem}.png", dpi=240)
     plt.close(fig)
+
+
+
+def conceptual_framework():
+    """Figure 1: concept only; no empirical outcome is generated here."""
+    fig, ax = plt.subplots(figsize=(8.2, 5.2))
+    ax.set_xlim(0, 10)
+    ax.set_ylim(0, 7)
+    ax.axis("off")
+
+    boxes = [
+        (0.5, 4.6, 2.4, 1.3, "Pooled population\nvertically thick"),
+        (3.8, 4.6, 2.4, 1.3, "Individual A / B\nnot fully exchangeable"),
+        (7.1, 5.2, 2.4, 1.0, "Marginal identity\nP(z)"),
+        (7.1, 3.8, 2.4, 1.0, "Conditional identity\nP(z | x,y)"),
+        (3.8, 1.2, 2.8, 1.2, "Conditional advantage\nG_cond − G_marg"),
+    ]
+    for x, y, w, h, label in boxes:
+        patch = FancyBboxPatch((x, y), w, h, boxstyle="round,pad=0.05", fill=False, linewidth=1.2)
+        ax.add_patch(patch)
+        ax.text(x + w/2, y + h/2, label, ha="center", va="center", fontsize=10)
+
+    arrows = [
+        ((2.9, 5.25), (3.8, 5.25)),
+        ((6.2, 5.25), (7.1, 5.7)),
+        ((6.2, 5.05), (7.1, 4.3)),
+        ((8.3, 3.8), (6.6, 2.0)),
+        ((8.3, 5.2), (6.6, 2.0)),
+    ]
+    for start, end in arrows:
+        ax.annotate("", xy=end, xytext=start, arrowprops={"arrowstyle":"->","linewidth":1.0})
+
+    ax.text(
+        0.5, 3.6,
+        "ODSP motivation: pooled P(z|x,y) can fail transfer\neven when vertical support remains thick.",
+        fontsize=9, va="top"
+    )
+    ax.text(
+        0.5, 0.5,
+        "Claim boundary: positive conditional advantage means horizontal context adds predictive identity information;\n"
+        "it does not prove a stable latent individual-specific cell × height map.",
+        fontsize=8.5, va="bottom"
+    )
+    ax.set_title("From pooled vertical airspace to predictive individual identity", fontsize=12)
+    save(fig, "figure1_conceptual_framework")
 
 
 def focal_reconciliation():
@@ -147,6 +193,7 @@ def spatial_grain():
 
 
 def main() -> int:
+    conceptual_framework()
     focal_reconciliation()
     architecture_plane()
     pairwise_plane()
