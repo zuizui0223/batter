@@ -111,11 +111,21 @@ This is the crucial replication: a second species reproduces the result that ind
 information lies mainly in **where a vertical layer is used**, not in a bat-wide preferred
 height.
 
+### H8. The result is an artefact of pooling all other bats
+Not supported. A post-primary pairwise fingerprint test compared the same bat directly against
+each alternative individual.
+
+- *Tadarida* AGL: conditional self-win fraction **0.736** versus marginal-height **0.500**;
+- *Tadarida* MSL: **0.776** versus **0.494**;
+- *Eidolon*: **0.875** versus **0.694**.
+
+Mean conditional pairwise gains were +0.611, +0.643 and +0.398 nats/fix respectively, and the
+conditional-minus-marginal increments were positive. Thus the signature survives removal of the
+pooled-population baseline.
+
 ## Ecological interpretation
 
-The population-level vertical niche should not always be interpreted as one shared 3-D
-probability surface. In these data it is partly an overlay of **individual-specific local
-vertical routes**.
+The population-level vertical niche should not always be interpreted as one shared 3-D\nprobability surface. In these data it is partly an overlay of **individual-specific local\nvertical routes**. Pairwise comparisons show that these routes act as a cross-night statistical\n**vertical fingerprint**: the same individual usually outpredicts alternative bats when place\nand height are considered jointly.
 
 The inference is stronger than simple route fidelity. In the focal species, the signature
 survives conversion to height above ground and is much larger than terrain-elevation transfer.
