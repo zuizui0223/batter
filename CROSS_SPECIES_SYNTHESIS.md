@@ -1,64 +1,110 @@
-# Cross-species synthesis v1
+# Cross-species synthesis v2 — vertical specialization architecture
 
 ## Core result
 
-The original ODSP finding — a vertically thick population whose pooled x-y-conditioned vertical
-map failed to transfer among *Tadarida teniotis* individuals — is better interpreted as an
-individual-specialization signal than as absence of vertical structure.
+Repeated 3-D tracking across four bat taxa shows that individual vertical use can be repeatable
+across nights, but **where the individual information resides is not universal**.
 
-Two independent empirical stages now support that interpretation.
+The predictive decomposition is:
 
-### Focal species: *Tadarida teniotis*
+```text
+conditional identity
+= marginal-height identity
++ place × height identity
+```
 
-At 5 km, another session from the same animal predicts vertical state better than other animals:
+This turns the original ODSP paradox into a biological question about the architecture of
+individual specialization in three-dimensional airspace.
 
-- MSL conditional identity: +0.428 nats/fix, 5/6 bats positive;
-- MSL marginal identity: +0.052;
-- MSL identity × location: +0.376;
-- AGL conditional identity: +0.337;
-- AGL marginal identity: -0.255;
-- AGL identity × location: +0.591;
-- terrain-elevation conditional identity: +0.007.
+## Focal *Tadarida teniotis*
 
-A same-night control still favors cross-night individual history over other animals experiencing
-the target night (+0.484 AGL; +0.436 MSL).
+At 5 km:
 
-### Independent species: *Eidolon helvum*
+- conditional identity: +0.428 nats/fix;
+- marginal height: +0.052;
+- place × height: +0.376;
+- AGL place × height: +0.591;
+- terrain-only conditional identity: +0.007.
 
-The candidate and pass rule were frozen before numeric height outcomes. Within site × year
-cohorts:
+The signature survives a same-night control and direct pairwise alternative-individual
+comparisons. It is therefore primarily a repeatable local vertical-routing signal rather than a
+simple height preference or repeated microtopographic route.
 
-- 20 individuals evaluable;
-- conditional identity: +0.219 nats/fix;
-- marginal identity: +0.002;
-- identity × location: +0.217;
-- 17/20 individuals positive;
-- all five frozen replication conditions passed.
+## Independent *Eidolon helvum*
+
+Prospectively frozen independent replication:
+
+- 20 evaluable individuals;
+- conditional identity: +0.219;
+- marginal height: +0.002;
+- place × height: +0.217;
+- 17/20 conditional-positive.
+
+The place-coupled architecture replicated across multiple African site-year cohorts.
+
+## Independent *Hypsignathus monstrosus*
+
+A second new species also passed the frozen place-coupled replication rule:
+
+- 24 evaluable individuals;
+- conditional identity: +0.029;
+- marginal height: −0.021;
+- place × height: +0.050;
+- 13/24 conditional-positive.
+
+The signal is strongest at 2.5 km (+0.131 conditional; +0.152 place × height) and nearly
+disappears by 10 km, indicating fine-grained specialization.
+
+## *Phyllostomus hastatus*: a different architecture
+
+The prospectively frozen 2022 species-level panel did **not** replicate the place-coupled
+architecture.
+
+At 5 km:
+
+- 33 evaluable individuals;
+- conditional identity: +0.056;
+- marginal height: **+0.176**;
+- place × height: **−0.120**;
+- 14/33 conditional-positive.
+
+This is not absence of individual vertical structure. Instead, self-information is concentrated
+in an animal-wide vertical distribution rather than in a local place × height rule.
+
+A 2023 temporal panel returned a weak place-coupled architecture
+(+0.033 conditional, +0.013 marginal, +0.020 interaction), while a newly frozen prospective test
+of the 2022 altitude-wide architecture in an untouched 2016 dry-season panel failed
+(+0.058, +0.016, +0.041 respectively).
+
+Therefore neither a universal place-coupled rule nor a simple dry-season altitude-wide rule is
+supported.
 
 ## Ecological conclusion
 
-The recurring unit is not a bat-wide preferred altitude. It is a **local 3-D routing rule**:
-individual identity becomes predictive when the vertical layer is asked at a particular
-horizontal place.
+The emerging generality is:
 
-That result appears in two very different systems. The focal free-tailed bat analysis shows the
-signature relative to local ground and separates it from terrain-only route fidelity. The fruit
-bat replication shows the same conditional-over-marginal signature across several African
-site-year cohorts.
+> **Bats can carry repeatable individual vertical signatures, but the spatial architecture of
+> that specialization is context dependent. Some systems encode identity mainly in local 3-D
+> routing; others encode it in an animal-wide altitude distribution.**
 
-The paper should therefore center on **individual specialization in three-dimensional airspace
-use**, with projection-loss/ODSP history relegated to motivation and method provenance.
+The population-level vertical niche is therefore not always one shared three-dimensional surface,
+nor is individual variation reducible to one preferred height.
 
-## Open mechanism
+## Comparative prediction
 
-The frozen vertical-wind reaction-norm endpoint did not generalize across the focal bats. The
-mechanistic question remains open: different individuals may achieve repeatable 3-D routes via
-different combinations of topography, wind, route memory, resource location or other context.
+The next comparative target is not simply the magnitude of specialization but its
+**architecture and spatial grain**. Candidate drivers include movement extent, route fidelity,
+resource patchiness, topographic complexity, social organization and environmental variability.
 
-## New comparative prediction
+Current data do not identify a causal driver. In particular, the prospective 2016 failure argues
+against assigning the *Phyllostomus* architecture to dry season alone.
 
-The spatial grain of individual vertical organization may differ among movement ecologies.
-*Tadarida* shows a strong fine-scale signal that disappears near 10-km conditioning, whereas
-*Eidolon* remains positive from 2.5 to 10 km. This is exploratory with n=2 species and should be
-presented as a prediction for a broader comparative panel, not as a demonstrated trait
-relationship.
+## Source-screen transparency
+
+A checksum-pinned outcome-blind screen considered 19 public Movebank bat event sources. Only six
+sources from four taxa met the fixed requirements of native same-event x-y-height data, >=8
+individuals, and >=5 repeat-tracked individuals. Numeric height values were not used for source
+admission.
+
+This leaves the comparative panel constrained by data architecture rather than by favorable
+outcomes.
