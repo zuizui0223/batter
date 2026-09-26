@@ -146,7 +146,7 @@ def main():
         "id":r["id"],"doi":r["doi"],"status":r["status"],
         "files":[{
           k:f.get(k) for k in ["filename","status","row_count","native_height_field","individual_count","repeat_individual_count","passes_gate","size_bytes"]
-        } for f in r.get("plausible_event_files",[])
+        } for f in r.get("plausible_event_files",[])]
       } for r in results],
       "numeric_height_values_parsed":False,
     },sort_keys=True))
