@@ -1,0 +1,49 @@
+{
+  "schema": "batter.identity_component_decomposition.contract.v3",
+  "frozen_date": "2026-09-26",
+  "trigger": "v1 detected strong identity-matched conditional prediction; v2 found no significant individual-by-location residual after marginal altitude preference was absorbed.",
+  "inherited": {
+    "source_and_geometry": "analysis/individual_vertical_strategy_contract_v1.json",
+    "early_late_split": "unchanged",
+    "primary_lambda": 20,
+    "sensitivity_lambdas": [
+      5,
+      50
+    ],
+    "jeffreys_alpha": 0.5,
+    "horizontal_cells": 18
+  },
+  "components": {
+    "altitude_identity": {
+      "model": "early P_i(z) shrunk toward equal-individual species P(z)",
+      "pairwise_gain": "score source i marginal altitude model on target j late z, minus species marginal log score",
+      "null": "all 8! source-to-target identity permutations",
+      "support_rule": "one-sided p <=0.05 and at least 6/8 diagonal gains >0"
+    },
+    "horizontal_identity": {
+      "model": "early P_i(cell) across the 18 frozen cells shrunk toward equal-individual species P(cell)",
+      "pairwise_gain": "score source i horizontal cell model on target j late cell, minus species cell-marginal log score",
+      "null": "all 8! source-to-target identity permutations",
+      "support_rule": "one-sided p <=0.05 and at least 6/8 diagonal gains >0"
+    },
+    "location_specific_vertical_interaction": {
+      "source": "frozen v2 result",
+      "interpretation": "already tested as full individual P(z|cell) versus a marginal-altitude-adjusted cell baseline; no reanalysis or threshold change"
+    }
+  },
+  "synthesis_rule": {
+    "additive_individual_niche_partition": "altitude identity and/or horizontal identity passes while v2 location-specific interaction remains unsupported",
+    "primarily_horizontal_fidelity": "horizontal passes, altitude fails, v2 fails",
+    "primarily_altitude_specialization": "altitude passes, horizontal fails, v2 fails",
+    "compound_altitude_and_horizontal_specialization": "altitude and horizontal both pass, v2 fails",
+    "unresolved_identity_mechanism": "neither altitude nor horizontal passes and v2 fails"
+  },
+  "prohibited": [
+    "claiming independence among v1-v3 sequential follow-ups",
+    "causal explanation of why individuals differ",
+    "height above ground",
+    "behavioral personality",
+    "fitness benefit",
+    "post-output threshold changes"
+  ]
+}
