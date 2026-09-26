@@ -9,6 +9,10 @@ on:
       - "results/architecture_pairwise_v0_3.csv"
       - "results/architecture_pairwise_v0_3.json"
       - "figures/plot_architecture_plane.py"
+      - "figures/plot_spatial_grain.py"
+      - "figures/plot_phyllostomus_context.py"
+      - "results/spatial_grain_v0_3.csv"
+      - "results/spatial_grain_v0_3.json"
       - "pyproject.toml"
       - ".github/workflows/paper-figures-v0.3.yml"
   workflow_dispatch:
@@ -50,8 +54,13 @@ jobs:
           print("Frozen architecture tables satisfy conditional = marginal + interaction.")
           PY
       - run: python figures/plot_architecture_plane.py
+      - run: python figures/plot_spatial_grain.py
+      - run: python figures/plot_phyllostomus_context.py
       - uses: actions/upload-artifact@v4
         with:
           name: batter-paper-figure-architecture-plane-v0.3
-          path: figures/architecture_plane_v0_3.pdf
+          path: |
+            figures/architecture_plane_v0_3.pdf
+            figures/spatial_grain_v0_3.pdf
+            figures/phyllostomus_context_v0_3.pdf
           if-no-files-found: error
