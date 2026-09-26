@@ -1,0 +1,28 @@
+name: uplift-reaction-norm-v1
+
+on:
+  push:
+    branches:
+      - study/individual-vertical-strategies-v1
+    paths:
+      - "scripts/run_uplift_reaction_norm.py"
+      - "contract/uplift_reaction_norm_v1.json"
+      - ".github/workflows/uplift-reaction-norm.yml"
+  workflow_dispatch:
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -e .
+      - run: python scripts/run_uplift_reaction_norm.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: batter-uplift-reaction-norm-v1
+          path: results/uplift_reaction_norm_v1.json
