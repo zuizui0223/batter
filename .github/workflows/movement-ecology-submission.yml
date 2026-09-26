@@ -1,0 +1,53 @@
+name: Movement Ecology submission QA
+
+on:
+  push:
+    branches:
+      - paper/movement-ecology-v1
+    paths:
+      - 'manuscript/**'
+      - 'figures/**'
+      - 'tests/test_movement_ecology_submission_v1.py'
+      - '.github/workflows/movement-ecology-submission.yml'
+  pull_request:
+    paths:
+      - 'manuscript/**'
+      - 'figures/**'
+      - 'tests/test_movement_ecology_submission_v1.py'
+      - '.github/workflows/movement-ecology-submission.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  manuscript-qa:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run submission guards
+        run: |
+          pip install pytest
+          pytest -q tests/test_movement_ecology_submission_v1.py
+      - name: Check submission surface
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          required = [
+              'manuscript/MOVEMENT_ECOLOGY_MANUSCRIPT_V1.md',
+              'manuscript/COVER_LETTER_MOVEMENT_ECOLOGY_V1.md',
+              'manuscript/SUBMISSION_CHECKLIST_MOVEMENT_ECOLOGY_V1.md',
+              'manuscript/JOURNAL_FIT_V1.md',
+              'manuscript/FIGURE_CAPTIONS_V1.md',
+              'figures/FIGURE_1_CONCEPT_V1.svg',
+              'figures/FIGURE_2_TRANSFER_MATRIX_V1.svg',
+              'figures/FIGURE_3_DECOMPOSITION_V1.svg',
+          ]
+          missing=[p for p in required if not Path(p).exists()]
+          assert not missing, missing
+          for p in required[-3:]:
+              text=Path(p).read_text()
+              assert text.startswith('<svg')
+          PY
