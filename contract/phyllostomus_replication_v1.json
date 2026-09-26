@@ -27,7 +27,8 @@
     "session_minimum_events": 50
   },
   "session": {
-    "split_rule": "gap > 4 hours within individual"
+    "split_rule": "gap > 4 hours within individual",
+    "self_training": "other eligible sessions of the same individual within the same admitted cohort only"
   },
   "cohort": {
     "definition": "exact study_site × shifted-night calendar year",
