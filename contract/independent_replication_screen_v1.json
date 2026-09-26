@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "screen_id": "batter-independent-bat-replication-screen-v1",
+  "status": "frozen_before_candidate_height_values",
+  "candidates": [
+    {
+      "study_id": 404939825,
+      "taxon": "Eidolon helvum",
+      "evidence": "Movebank Data Repository DOI 10.5441/001/1.k8n02jn8",
+      "reason": "large public multi-individual GPS dataset with recorded altitude"
+    },
+    {
+      "study_id": 433126,
+      "taxon": "Tadarida brasiliensis",
+      "evidence": "Movebank Data Repository DOI 10.5441/001/1.td71sn54",
+      "reason": "independent free-tailed bat GPS dataset with 3-D flight measurements"
+    }
+  ],
+  "allowed_reads": [
+    "study metadata and license",
+    "attribute names",
+    "individual identifiers",
+    "timestamps",
+    "finite x-y structure",
+    "presence/missingness of native height field without numeric parsing"
+  ],
+  "forbidden_reads": [
+    "numeric height values or distributions",
+    "vertical bins",
+    "self-transfer gains",
+    "AGL/MSL outcomes"
+  ],
+  "height_priority": [
+    "height_above_msl",
+    "height_above_ellipsoid",
+    "height_raw"
+  ],
+  "session_rule": {
+    "split_gap_hours": 4,
+    "minimum_events_per_session": 50
+  },
+  "candidate_gate": {
+    "minimum_individuals_with_xy_and_height_presence": 8,
+    "minimum_individuals_with_two_or_more_eligible_sessions": 5
+  },
+  "selection_rule": "Prefer the candidate with the largest number of repeated-session individuals among candidates passing all gates; ties use the larger total event count. No biological height outcome may be used for selection.",
+  "next_step": "Freeze candidate-specific spatial grid and vertical semantics before numeric height values are opened."
+}
