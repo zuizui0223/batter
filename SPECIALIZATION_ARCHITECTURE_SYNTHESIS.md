@@ -74,6 +74,20 @@ The same species also returned a weakly positive place-coupled architecture in 2
 (conditional +0.033, marginal +0.013, interaction +0.020), with substantial colony
 heterogeneity.
 
+## Direct pairwise robustness
+
+The architecture contrast survives removal of the pooled other-individual baseline.
+
+At 5 km:
+
+- *Hypsignathus*: conditional pairwise +0.115, marginal +0.008, interaction +0.107;
+- *Phyllostomus* 2022: conditional +0.285, marginal +0.323, interaction −0.038;
+- *P. hastatus* 2023: conditional +0.148, marginal +0.028, interaction +0.120.
+
+Together with the earlier *Tadarida* and *Eidolon* pairwise checks, this shows that both
+place-coupled and altitude-wide architectures persist when the target bat is compared against
+individual alternatives one at a time.
+
 ## Ecological interpretation
 
 The general result is no longer that vertical specialization must be place-specific.
