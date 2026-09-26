@@ -38,6 +38,32 @@ The current pattern is therefore not "every bat has one fixed altitude strategy.
 working hypothesis is that a population contains **different degrees of vertical consistency**:
 some animals repeat individualized local vertical-use rules, whereas others are more flexible.
 
+## Conditional-versus-marginal decomposition
+
+A post-primary decomposition used the exact same scored target fixes and compared four models:
+same-individual versus other-individuals, each with and without x-y conditioning.
+
+At the 5-km primary scale:
+
+- conditional identity gain: **+0.426 nats/fix**
+- marginal-altitude identity gain: **+0.053 nats/fix**
+- identity × location increment: **+0.373 nats/fix**
+- positive individual identity × location increments: **5/6**
+
+The marginal result is positive for only 2/6 evaluable bats, whereas the location-conditioned
+identity increment is positive for 5/6. Thus the primary signal is not well described as
+"individual A flies high and individual B flies low." It is predominantly **individualized
+coupling between horizontal place and vertical state**.
+
+Descriptively, the current bats also hint at multiple strategy types:
+
+- Bat3/Bat4/Bat5: strong local-routing individuality despite non-positive marginal-altitude identity;
+- Bat6: strong marginal-altitude individuality, with little added benefit from identity-specific location coupling;
+- Bat8: moderate marginal-altitude individuality plus a small location-specific increment;
+- Bat7: neither predictor gives a positive identity advantage at 5 km, consistent with a more flexible/context-driven individual.
+
+These labels are exploratory descriptions, not latent classes.
+
 ## Spatial-scale robustness
 
 Post-primary checks inherited the already-used ODSP scale/bin family; they cannot redefine the
