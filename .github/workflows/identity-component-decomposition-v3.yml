@@ -1,0 +1,38 @@
+name: Identity component decomposition v3
+
+on:
+  push:
+    branches:
+      - study/individual-vertical-strategy-v1
+    paths:
+      - 'analysis/identity_component_decomposition_contract_v3.json'
+      - 'analysis/run_identity_component_decomposition_v3.py'
+      - 'results/spatial_interaction_refinement_result_v2.json'
+      - 'tests/test_identity_component_decomposition_v3.py'
+      - '.github/workflows/identity-component-decomposition-v3.yml'
+  pull_request:
+    paths:
+      - 'analysis/identity_component_decomposition_contract_v3.json'
+      - 'analysis/run_identity_component_decomposition_v3.py'
+      - 'results/spatial_interaction_refinement_result_v2.json'
+      - 'tests/test_identity_component_decomposition_v3.py'
+      - '.github/workflows/identity-component-decomposition-v3.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  analysis:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy pyproj pytest
+      - run: pytest -q tests/test_identity_component_decomposition_v3.py
+      - run: cd analysis && python run_identity_component_decomposition_v3.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: identity-component-decomposition-v3
+          path: results/identity_component_decomposition_result_v3.json
+          if-no-files-found: error
