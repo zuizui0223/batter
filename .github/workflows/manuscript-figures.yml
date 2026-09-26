@@ -3,6 +3,7 @@ name: manuscript-figures-v0.3.1
 on:
   push:
     branches:
+      - main
       - study/individual-vertical-strategies-v1
     paths:
       - "figures/architecture_summary_v0_3_1.csv"
