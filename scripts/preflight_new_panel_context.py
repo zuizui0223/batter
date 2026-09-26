@@ -13,6 +13,13 @@ import urllib.request
 
 CANDIDATES=[
   {
+    "id":"phyllostomus_2016",
+    "doi":"10.5441/001/1.282",
+    "taxon":"Phyllostomus hastatus",
+    "gps":{"url":"https://datarepository.movebank.org/server/api/core/bitstreams/40623d69-2787-4aec-8237-4d2264bd665f/content","md5":"58d555f48e07b5e41e2c5d1983b25e80","size":50919501},
+    "ref":{"url":"https://datarepository.movebank.org/server/api/core/bitstreams/35cd7452-fe48-4423-81fb-4ff8e0717da8/content","md5":"17bf1ab59daeb37b5ee1f8f1c127d0b4","size":7299}
+  },
+  {
     "id":"hypsignathus",
     "doi":"10.5441/001/1.278",
     "taxon":"Hypsignathus monstrosus",
