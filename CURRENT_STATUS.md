@@ -1,51 +1,104 @@
 # Current scientific status
 
-Date: 2026-09-26
+Date: 2026-09-27
 
-## Closed analyses
+## Empirical programme
 
-### V1 — identity-matched conditional vertical prediction
+The public-data programme is frozen at four admitted bat taxa after an outcome-blind search of
+23 Movebank parent datasets plus legacy child-handle recovery.
+
+No further source mining or endpoint retuning is permitted inside this paper programme.
+
+## Focal *Tadarida teniotis*
+
+### Population result inherited from ODSP
+
+- vertical thickness: 4.022 effective MSL states after x-y is known;
+- pooled `P(z|x,y)` failed to transfer to both sealed bats.
+
+### Early/late identity assignment V1
 
 PASS.
 
-- observed diagonal mean gain +0.1682218421;
-- exact permutation P=0.0001736111;
-- 6/8 positive own-map gains;
-- strict top-1 own map 5/8.
+- diagonal conditional identity gain +0.1682;
+- exact 8! permutation p=0.000174;
+- 6/8 positive own-map gains.
 
-### V2 — location-specific vertical interaction after marginal altitude control
+Conclusion: individual identity carries temporally repeatable information about later conditional
+vertical state.
+
+### Residual cell × height stability V2
 
 NO SUPPORT under frozen rule.
 
-- observed residual diagonal +0.0240246265;
-- exact permutation P=0.16046627;
-- 5/8 positive residual gains;
+- residual gain +0.0240;
+- exact permutation p=0.160;
+- 5/8 positive;
 - lambda sensitivities also fail.
 
-### V3 — component decomposition
+Conclusion: stable individual-specific cell × height organization is **not established** after
+marginal altitude identity is explicitly absorbed.
 
-Neither simple component passed the frozen "better than pooled baseline for >=6/8" rule.
+### Session-level predictive architecture
 
-Altitude identity:
-- identity matching P=0.0224454;
-- 4/8 positive versus pooled marginal.
+At 5 km:
 
-Horizontal identity:
-- identity matching P=0.00233135;
-- 4/8 positive versus pooled cell distribution.
+- MSL conditional identity +0.428;
+- MSL marginal identity +0.052;
+- conditional advantage +0.376;
+- AGL conditional identity +0.337;
+- AGL marginal identity -0.255;
+- AGL conditional advantage +0.591.
 
-Synthesis:
-**unresolved_identity_mechanism**.
+These are evidence for **conditional-dominant predictive identity**, not proof of a stable latent
+place-specific route.
 
-## Publication decision
+Controls retained:
 
-Proceed with an ecological paper only if framed around:
-- population niche thickness;
-- individual non-exchangeability / repeatable identity signatures;
-- failure of a single simple decomposition.
+- terrain-only conditional identity +0.007;
+- same-bat other-night predictor beats contemporaneous other bats for most evaluable targets;
+- direct pairwise self-versus-alternative comparisons favor the same bat conditionally;
+- common uplift reaction norm not supported.
 
-Do not frame it as a demonstrated individual-by-location vertical strategy paper.
+## Comparative predictive architectures
 
-First journal route:
-1. Journal of Animal Ecology if positioned around individual specialization and population niche heterogeneity.
-2. Movement Ecology if positioned around 3D movement-state transfer and identity repeatability.
+Primary 5-km results:
+
+| Taxon/context | Conditional identity | Marginal identity | Conditional advantage |
+|---|---:|---:|---:|
+| *Tadarida teniotis* | +0.428 | +0.052 | +0.376 |
+| *Eidolon helvum* | +0.219 | +0.002 | +0.217 |
+| *Hypsignathus monstrosus* | +0.029 | -0.021 | +0.050 |
+| *Phyllostomus hastatus* 2022 | +0.056 | +0.176 | -0.120 |
+| *P. hastatus* 2023 | +0.033 | +0.013 | +0.020 |
+| *P. hastatus* 2016 La Gruta | +0.058 | +0.016 | +0.041 |
+
+Thus three focal systems are conditional-dominant, whereas the independent *P. hastatus* 2022
+panel is marginal-dominant.
+
+The strong 2022 architecture did not prospectively recur in an untouched 2016 dry-season panel,
+blocking a simple dry-season explanation.
+
+## Paper-level synthesis
+
+> **Individual vertical identity in bat airspace can be conditional-dominant or marginal-dominant,
+> and that predictive architecture can vary among systems and temporal contexts.**
+
+The latent biological mechanism that produces conditional dominance remains unresolved.
+
+## Claim boundary
+
+Allowed:
+
+- repeatable individual vertical identity;
+- individual non-exchangeability;
+- conditional-dominant versus marginal-dominant predictive architecture;
+- context dependence of predictive architecture.
+
+Not established:
+
+- stable individual-specific place × height map in the focal species;
+- immutable individual route strategy;
+- personality, learning, adaptation or optimality;
+- validated foraging specialization;
+- one universal causal mechanism.

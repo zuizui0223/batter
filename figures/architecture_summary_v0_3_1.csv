@@ -1,0 +1,7 @@
+panel,taxon,context,evaluable_individuals,conditional_identity,marginal_identity,conditional_advantage,architecture
+Tadarida_teniotis,Tadarida teniotis,focal,6,0.428,0.052,0.376,conditional-dominant
+Eidolon_helvum,Eidolon helvum,independent replication,20,0.219,0.002,0.217,conditional-dominant
+Hypsignathus_monstrosus,Hypsignathus monstrosus,independent replication,24,0.029,-0.021,0.050,conditional-dominant
+Phyllostomus_2022,Phyllostomus hastatus,2022 primary panel,33,0.056,0.176,-0.120,marginal-dominant
+Phyllostomus_2023,Phyllostomus hastatus,2023 temporal panel,16,0.033,0.013,0.020,weak conditional-dominant
+Phyllostomus_2016,Phyllostomus hastatus,2016 La Gruta prospective test,10,0.058,0.016,0.041,weak conditional-dominant

@@ -1,110 +1,95 @@
-# Cross-species synthesis v2 — vertical specialization architecture
+# Cross-species synthesis v3 — predictive architectures of vertical identity
 
 ## Core result
 
-Repeated 3-D tracking across four bat taxa shows that individual vertical use can be repeatable
-across nights, but **where the individual information resides is not universal**.
+Repeated 3-D tracking across four bat taxa shows that individual vertical information can recur
+across nights, but the **predictive architecture carrying that identity is not universal**.
 
-The predictive decomposition is:
+Define:
 
 ```text
-conditional identity
-= marginal-height identity
-+ place × height identity
+G_cond = self-versus-other log-score gain for P(z | x,y)
+G_marg = self-versus-other log-score gain for P(z)
+conditional advantage = G_cond - G_marg
 ```
 
-This turns the original ODSP paradox into a biological question about the architecture of
-individual specialization in three-dimensional airspace.
+A positive conditional advantage means horizontal location increases predictive identity
+information. It does **not** by itself prove a stable individual-specific cell × height map.
 
 ## Focal *Tadarida teniotis*
 
-At 5 km:
+Session-level 5-km architecture:
 
-- conditional identity: +0.428 nats/fix;
-- marginal height: +0.052;
-- place × height: +0.376;
-- AGL place × height: +0.591;
-- terrain-only conditional identity: +0.007.
+- conditional identity +0.428;
+- marginal identity +0.052;
+- conditional advantage +0.376;
+- AGL conditional advantage +0.591;
+- terrain-only conditional identity +0.007.
 
-The signature survives a same-night control and direct pairwise alternative-individual
-comparisons. It is therefore primarily a repeatable local vertical-routing signal rather than a
-simple height preference or repeated microtopographic route.
+A separate early/late identity assignment strongly supports repeatable conditional identity
+(p=0.000174).
+
+However, the stronger residual-map test after marginal altitude adjustment does **not** pass
+(p=0.160). Therefore the focal result is correctly described as **conditional-dominant
+predictive identity**, not as demonstrated stable place-specific routing.
 
 ## Independent *Eidolon helvum*
 
 Prospectively frozen independent replication:
 
 - 20 evaluable individuals;
-- conditional identity: +0.219;
-- marginal height: +0.002;
-- place × height: +0.217;
+- conditional +0.219;
+- marginal +0.002;
+- conditional advantage +0.217;
 - 17/20 conditional-positive.
 
-The place-coupled architecture replicated across multiple African site-year cohorts.
+The conditional-dominant pattern replicates across multiple African site-year cohorts.
 
 ## Independent *Hypsignathus monstrosus*
 
-A second new species also passed the frozen place-coupled replication rule:
-
 - 24 evaluable individuals;
-- conditional identity: +0.029;
-- marginal height: −0.021;
-- place × height: +0.050;
-- 13/24 conditional-positive.
+- conditional +0.029;
+- marginal -0.021;
+- conditional advantage +0.050.
 
-The signal is strongest at 2.5 km (+0.131 conditional; +0.152 place × height) and nearly
-disappears by 10 km, indicating fine-grained specialization.
+Direct pairwise comparison also remains conditional-dominant
+(+0.115 conditional versus +0.008 marginal).
 
-## *Phyllostomus hastatus*: a different architecture
+## *Phyllostomus hastatus*: marginal-dominant architecture
 
-The prospectively frozen 2022 species-level panel did **not** replicate the place-coupled
-architecture.
+The prospectively frozen 2022 panel differs:
 
-At 5 km:
+- conditional +0.056;
+- marginal +0.176;
+- conditional advantage -0.120.
 
-- 33 evaluable individuals;
-- conditional identity: +0.056;
-- marginal height: **+0.176**;
-- place × height: **−0.120**;
-- 14/33 conditional-positive.
+Pairwise comparison preserves this direction (+0.285 conditional, +0.323 marginal).
 
-This is not absence of individual vertical structure. Instead, self-information is concentrated
-in an animal-wide vertical distribution rather than in a local place × height rule.
+This is not absence of individual vertical identity. It is a different predictive architecture:
+overall height distribution carries more self-information than the location-conditioned
+increment.
 
-A 2023 temporal panel returned a weak place-coupled architecture
-(+0.033 conditional, +0.013 marginal, +0.020 interaction), while a newly frozen prospective test
-of the 2022 altitude-wide architecture in an untouched 2016 dry-season panel failed
-(+0.058, +0.016, +0.041 respectively).
+## Context instability within *P. hastatus*
 
-Therefore neither a universal place-coupled rule nor a simple dry-season altitude-wide rule is
-supported.
+- 2023: conditional +0.033, marginal +0.013, advantage +0.020;
+- untouched 2016 La Gruta dry-season test: +0.058, +0.016, +0.041.
+
+The prospectively frozen prediction that the strong 2022 marginal-dominant architecture would
+repeat in 2016 dry season failed.
+
+Thus the data do not support a simple season-only explanation.
 
 ## Ecological conclusion
 
-The emerging generality is:
+> **Individual vertical identity can be conditional-dominant or marginal-dominant across bat
+> systems, and that balance can change across temporal contexts within a species.**
 
-> **Bats can carry repeatable individual vertical signatures, but the spatial architecture of
-> that specialization is context dependent. Some systems encode identity mainly in local 3-D
-> routing; others encode it in an animal-wide altitude distribution.**
-
-The population-level vertical niche is therefore not always one shared three-dimensional surface,
-nor is individual variation reducible to one preferred height.
-
-## Comparative prediction
-
-The next comparative target is not simply the magnitude of specialization but its
-**architecture and spatial grain**. Candidate drivers include movement extent, route fidelity,
-resource patchiness, topographic complexity, social organization and environmental variability.
-
-Current data do not identify a causal driver. In particular, the prospective 2016 failure argues
-against assigning the *Phyllostomus* architecture to dry season alone.
+This is a comparative result about predictive organization. The latent mechanism remains open:
+route memory, resource geography, atmospheric structure, social organization and other processes
+could all contribute.
 
 ## Source-screen transparency
 
-A checksum-pinned outcome-blind search covered 23 public Movebank bat parent datasets, including
-four legacy child-handle recoveries. Only six sources from four taxa met the fixed requirements of
-native same-event x-y-height data, >=8 individuals, and >=5 repeat-tracked individuals. Numeric
-height values were not used for source admission.
-
-This leaves the comparative panel constrained by data architecture rather than by favorable
-outcomes.
+The public search universe is frozen. Twenty-three Movebank parent datasets plus legacy
+child-handle recovery were screened without using numeric height outcomes for admission. Six
+sources from four taxa met the fixed repeated x-y-height requirements.

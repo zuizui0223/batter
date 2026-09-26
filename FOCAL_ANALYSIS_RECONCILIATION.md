@@ -1,102 +1,112 @@
-# Reconciliation of focal *Tadarida* analysis generations
+# Focal analysis reconciliation — predictive architecture versus residual map stability
 
-Date: 2026-09-26
+Date: 2026-09-27
 
-Two analysis families in this repository ask related but non-identical questions about the same
-*Tadarida teniotis* tracking study. Both are retained because they provide different evidence
-about individual non-exchangeability.
+## Why this reconciliation is necessary
 
-## Legacy early/late identity-assignment family
+Two frozen analysis families in `batter` ask related but non-identical questions about the
+*Tadarida teniotis* focal dataset.
 
-This family was added independently on `main` before the v0.3 synthesis branch was merged.
+The later cross-night comparative programme uses
 
-### V1 — conditional identity assignment
+`G_cond = log P_self(z|x,y) - log P_other(z|x,y)`
 
-Each bat's early individualized `P_i(z|cell)` map was scored against every bat's later events
-inside the same 18 frozen 5-km cells, with fixed shrinkage toward the species distribution.
+and
 
-Result:
+`G_marg = log P_self(z) - log P_other(z)`
 
-- observed diagonal mean gain: **+0.1682 nats/event**;
-- exact 8! identity-permutation **p = 0.000174**;
-- 6/8 own-map gains positive;
-- strict top-1 own map: 5/8.
+with the descriptive contrast
 
-This is strong evidence that individual identity contains temporally repeatable vertical-state
-information.
+`G_cond - G_marg`.
 
-### V2 — residual individual-by-location assignment
+The earlier identity-refinement programme instead asks whether an **individual-specific
+cell-by-height residual map** remains stable after each individual's marginal altitude preference
+has already been absorbed into a fixed additive baseline.
 
-The same early/late identity test was repeated after constructing a marginal-altitude-adjusted
-cell baseline.
+These are not the same estimand.
 
-Result:
+## Frozen results that must all be retained
 
-- observed residual diagonal: **+0.0240**;
-- exact permutation **p = 0.160**;
-- 5/8 diagonal residuals positive.
+### Early/late identity assignment V1
 
-Under that frozen assignment test, a stable source-identity-specific cell interaction was **not**
-supported.
+Supported:
 
-### V3 — simple component decomposition
+- diagonal conditional identity gain = +0.1682;
+- exact 8! identity-assignment p = 0.000174;
+- 6/8 own-map gains positive.
 
-Altitude-only and horizontal-only identity assignments were each more identity-matched than
-random permutation, but each beat its pooled baseline for only 4/8 bats under the frozen rule.
-The terminal mechanistic category was therefore unresolved.
+Thus individual identity carries temporally repeatable information about later conditional
+vertical state.
 
-## v0.3 cross-session architecture family
+### Residual cell-by-height stability V2
 
-The later ecological programme uses a different validation target:
+Not supported:
 
-`same animal on another discrete tracking session > other animals`.
+- residual diagonal gain = +0.0240;
+- exact permutation p = 0.160;
+- 5/8 residual gains positive;
+- frozen lambda sensitivities also fail.
 
-Important design differences are:
+Therefore the focal dataset does **not** establish a stable individual-specific cell × height map
+after marginal altitude identity is explicitly absorbed.
 
-| Dimension | Early/late family | v0.3 session family |
-|---|---|---|
-| Temporal unit | first versus second half of each individual's eligible fixes | leave-one-BatDay/session-out |
-| Focal support | same 18 frozen cells | target fixes on common support of self and alternative predictors |
-| Individual model | fixed lambda shrinkage toward species | equal-session/individual probabilities with Jeffreys smoothing |
-| Main contrast | exact identity assignment permutation | predictive self-versus-other log-score gain |
-| Data stream | raw native MSL tracking stream | matched annotated stream for MSL/AGL/terrain decomposition |
-| Inference emphasis | strict global identity assignment | ecological architecture and independent replication |
+### Session-level conditional-versus-marginal prediction
 
-At 5 km, the session family gives:
+At 5 km, the separate leave-one-session-out analysis gives:
 
-- MSL conditional identity +0.428;
-- MSL marginal identity +0.052;
-- MSL place × height increment +0.376;
-- AGL place × height increment +0.591.
+- conditional MSL identity = +0.428;
+- marginal MSL identity = +0.052;
+- conditional-minus-marginal = +0.376.
 
-## Why these results are not interchangeable
+AGL gives the same qualitative conditional dominance:
 
-A positive mean `conditional - marginal` prediction gain does not imply that an 8×8
-source-to-target interaction matrix must pass the exact permutation test used in legacy V2.
+- conditional AGL identity = +0.337;
+- marginal AGL identity = -0.255;
+- conditional-minus-marginal = +0.591.
 
-The legacy V2 null asks whether the correctly labelled set of eight individual interaction maps
-is unusually well aligned relative to **all identity permutations** under a fixed shared-cell
-and shrinkage architecture.
+These results show that horizontal location **increases predictive individual information** under
+that scoring architecture. They do not override V2 and cannot be relabelled as proof that a
+specific individual cell × height map is temporally stable.
 
-The v0.3 endpoint asks whether, for a held-out session, **that same animal's other session(s)**
-carry more predictive information than alternatives on jointly supported target fixes.
+## Correct terminology
 
-The first is a stricter global identity-map assignment statement; the second is a
-cross-session ecological repeatability statement.
+Use:
 
-## Synthesis
+- **conditional-dominant vertical identity** when `G_cond > G_marg`;
+- **marginal-dominant vertical identity** when `G_marg > G_cond`;
+- **conditional advantage** for `G_cond - G_marg`;
+- **repeatable vertical identity / non-exchangeability** for the general biological phenomenon.
 
-The two families agree on the core result:
+Do not use as a demonstrated mechanism:
 
-> individual bats are not exchangeable in vertical-state use across time.
+- stable place-specific route;
+- stable individual-by-location vertical strategy;
+- fixed place × height rule.
 
-They differ on how strongly one can claim a single stable individual-by-cell map in the focal
-eight-bat sample.
+“Place-coupled” may be used only as shorthand for the predictive conditional contrast if it is
+immediately defined and explicitly separated from residual-map stability. The preferred paper
+language is **conditional-dominant**.
 
-Accordingly, the v0.3 paper should **not** claim that legacy V2 was positive. The stronger
-place-coupled interpretation rests on the session-based MSL/AGL/terrain decomposition, same-night
-control, direct pairwise tests and prospective independent taxa.
+## Cross-taxon consequence
 
-The legacy negative remains useful: it motivates the current conclusion that individual
-specialization is an **architecture of predictive information**, not necessarily one immutable
-3-D reaction map.
+The comparative result survives this correction.
+
+At 5 km:
+
+- *Tadarida*: conditional +0.428 > marginal +0.052;
+- *Eidolon*: conditional +0.219 > marginal +0.002;
+- *Hypsignathus*: conditional +0.029 > marginal -0.021;
+- *Phyllostomus* 2022: marginal +0.176 > conditional +0.056.
+
+Therefore the supported comparative statement is:
+
+> Cross-night vertical identity can be **conditional-dominant** or **marginal-dominant** across
+> bat systems, and that balance can vary across temporal contexts within a species.
+
+This is a predictive ecological architecture, not proof of the latent behavioural mechanism that
+generates it.
+
+## Status
+
+This is a claim-boundary correction only. No data, score, bin, scale, source, admission rule or
+negative result is changed.
