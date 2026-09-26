@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-three-component-transfer-v1",
+  "status": "exploratory_component_decomposition_frozen_before_component_outcomes",
+  "source": {
+    "file": "TadaridaHighFast_annotated.csv",
+    "checksum": "e0f6faedfd1f21bac222d9da430ea5d8",
+    "rows": 9873
+  },
+  "purpose": "Separate coarse-cell microtopographic route fidelity from terrain-relative vertical airspace fidelity.",
+  "axes": [
+    {
+      "id": "terrain",
+      "field": "height_terrain",
+      "semantics": "terrain elevation from 30 m ASTER DEM, m amsl"
+    },
+    {
+      "id": "agl",
+      "field": "height_true",
+      "semantics": "height above ground level, m"
+    },
+    {
+      "id": "msl",
+      "field": "height-above-msl",
+      "semantics": "GPS height above mean sea level, m"
+    }
+  ],
+  "common_design": {
+    "sessions": "animal-id × BatDay",
+    "horizontal_crs": "EPSG:3035",
+    "cell_size_m": 5000,
+    "sensitivity_cell_size_m": 2500,
+    "z_edges_m": [
+      "-inf",
+      0,
+      50,
+      100,
+      200,
+      400,
+      800,
+      1600,
+      3200,
+      "inf"
+    ],
+    "jeffreys_alpha": 0.5,
+    "minimum_session_rows": 50,
+    "minimum_target_scored_rows": 50,
+    "endpoint": "held-out conditional self-vs-other log-score gain",
+    "decomposition": [
+      "marginal identity gain",
+      "identity × location increment"
+    ]
+  },
+  "interpretation": {
+    "terrain_positive": "repeatable sub-cell choice of terrain elevations/ridges/valleys",
+    "agl_positive": "repeatable vertical airspace use relative to local ground",
+    "msl_positive": "repeatable combined absolute 3-D altitude organization",
+    "note": "The three components are not assumed statistically additive."
+  },
+  "claim_boundary": "Exploratory component decomposition; cannot replace frozen primary AMSL or AGL endpoints."
+}
