@@ -83,3 +83,24 @@ so the cause of these individual 3-D routes remains open.
 
 See `MANUSCRIPT_SPINE.md`, `THREE_COMPONENT_RESULT.md`,
 `AGL_SELF_TRANSFER_RESULT.md`, and `UPLIFT_REACTION_NORM_RESULT.md`.
+
+
+## Same-night context control
+
+A post-primary control compared each target session against two sources of information: the same
+bat on another night versus other bats tracked on the target calendar night. At 5 km, the
+cross-night self predictor still won for most evaluable bats:
+
+- AGL: +0.484 nats/fix, 4/5 individuals positive;
+- MSL: +0.436 nats/fix, 4/5 individuals positive.
+
+Thus the fine-scale vertical signature is not well explained by a shared calendar-night state
+alone. See `NIGHT_CONTEXT_CONTROL_RESULT.md`.
+
+## Independent replication
+
+The next stage is prospectively separated from the focal dataset. Public bat GPS datasets are
+being screened using only metadata, timestamps, x-y structure and the presence of native height
+fields. Numeric height outcomes are forbidden during candidate selection. The replication target
+is the qualitative ordering established here: fine-scale conditional vertical identity should
+outperform marginal-height identity and terrain-only structure.
