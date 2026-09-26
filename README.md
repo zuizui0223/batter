@@ -49,3 +49,37 @@ DOI 10.5441/001/1.52nn82r9. The exact original CSV is checksum-pinned in the stu
 9. Treat topography/wind/AGL mechanisms as a second-stage analysis, not as a rescue if repeatability is absent.
 
 See `STUDY_CONTRACT.md` and `contract/individual_vertical_strategy_v1.json`.
+
+
+## Current ecological result
+
+The first study version now supports a more specific interpretation than the original ODSP
+motivation.
+
+On the matched annotated dataset, at 5-km horizontal conditioning:
+
+- MSL conditional self-transfer = **+0.428 nats/fix** (5/6 evaluable bats positive)
+- AGL conditional self-transfer = **+0.337** (4/6 positive)
+- terrain-elevation self-transfer = **+0.007**
+
+The signal is primarily place-specific rather than a stable population-wide height preference:
+
+- MSL identity × location increment = **+0.376**
+- AGL identity × location increment = **+0.591**
+- AGL marginal identity gain = **-0.255**
+
+At 2.5 km the conditional gains rise to +0.866 (MSL) and +0.766 (AGL); at 10 km the AGL
+mean falls to -0.045. Individual specialization is therefore strongest at fine horizontal scales.
+
+The current biological statement is:
+
+> **European free-tailed bats show repeatable individual fine-scale organization of vertical
+> airspace use. Individual identity is carried mainly by place × vertical-state coupling,
+> persists when altitude is expressed relative to terrain, and is not explained by
+> microtopographic route fidelity alone.**
+
+A separately frozen cross-night uplift reaction-norm test did not establish one shared mechanism,
+so the cause of these individual 3-D routes remains open.
+
+See `MANUSCRIPT_SPINE.md`, `THREE_COMPONENT_RESULT.md`,
+`AGL_SELF_TRANSFER_RESULT.md`, and `UPLIFT_REACTION_NORM_RESULT.md`.
