@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-agl-self-transfer-v1",
+  "status": "frozen_before_agl_self_transfer_outcomes",
+  "source": {
+    "annotated_file": "TadaridaHighFast_annotated.csv",
+    "bitstream_id": "a6a6db33-0aca-4902-a58d-f32980c1a3e1",
+    "checksum_type": "MD5",
+    "checksum": "e0f6faedfd1f21bac222d9da430ea5d8",
+    "row_count": 9873
+  },
+  "ecological_question": "Does repeatable individual place-by-height organization persist when vertical state is defined relative to terrain rather than mean sea level?",
+  "vertical_axis": {
+    "field": "height_true",
+    "semantics": "height above ground level from 30 m ASTER DEM, meters",
+    "primary_edges_m": [
+      "-inf",
+      0,
+      50,
+      100,
+      200,
+      400,
+      800,
+      1600,
+      3200,
+      "inf"
+    ]
+  },
+  "horizontal_axis": {
+    "crs": "EPSG:3035",
+    "primary_cell_size_m": 5000,
+    "sensitivities_m": [
+      2500,
+      10000
+    ]
+  },
+  "session": {
+    "id": "animal-id × BatDay",
+    "minimum_rows": 50
+  },
+  "probability_model": {
+    "jeffreys_alpha": 0.5,
+    "self_weighting": "equal session",
+    "population_weighting": "equal individual"
+  },
+  "primary_endpoint": "held-out mean log P_self(AGL_bin|x,y) - log P_other_individuals(AGL_bin|x,y)",
+  "decomposition": {
+    "marginal_identity": "same-individual AGL marginal versus other-individual AGL marginal",
+    "identity_x_location": "conditional identity gain minus marginal identity gain"
+  },
+  "summary_unit": "individual",
+  "claim_boundary": [
+    "positive transfer supports repeatable individual organization of flight height above ground",
+    "does not identify foraging state",
+    "does not establish intrinsic personality or causal preference",
+    "cannot alter the frozen AMSL result or the closed uplift reaction-norm result"
+  ]
+}
