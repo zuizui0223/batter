@@ -1,0 +1,54 @@
+name: Spatial interaction refinement v2
+
+on:
+  push:
+    branches:
+      - study/individual-vertical-strategy-v1
+    paths:
+      - 'analysis/spatial_interaction_refinement_contract_v2.json'
+      - 'analysis/run_spatial_interaction_refinement_v2.py'
+      - 'analysis/run_individual_vertical_strategy_v1.py'
+      - 'analysis/individual_vertical_strategy_contract_v1.json'
+      - 'tests/test_spatial_interaction_refinement_v2.py'
+      - '.github/workflows/spatial-interaction-refinement-v2.yml'
+  pull_request:
+    paths:
+      - 'analysis/spatial_interaction_refinement_contract_v2.json'
+      - 'analysis/run_spatial_interaction_refinement_v2.py'
+      - 'analysis/run_individual_vertical_strategy_v1.py'
+      - 'analysis/individual_vertical_strategy_contract_v1.json'
+      - 'tests/test_spatial_interaction_refinement_v2.py'
+      - '.github/workflows/spatial-interaction-refinement-v2.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  analysis:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install
+        run: pip install numpy pyproj pytest
+      - name: Contract tests
+        run: pytest -q tests/test_spatial_interaction_refinement_v2.py
+      - name: Run frozen v2
+        run: cd analysis && python run_spatial_interaction_refinement_v2.py
+      - name: Validate
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=json.loads(Path('results/spatial_interaction_refinement_result_v2.json').read_text())
+          assert p['individual_count']==8
+          assert p['primary']['identity_permutation_test']['permutation_count']==40320
+          assert p['v1_result_reclassified'] is False
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: spatial-interaction-refinement-v2
+          path: results/spatial_interaction_refinement_result_v2.json
+          if-no-files-found: error

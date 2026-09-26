@@ -1,0 +1,113 @@
+{
+  "schema": "batter.individual_vertical_strategy.contract.v1",
+  "frozen_date": "2026-09-26",
+  "scientific_question": "Is the x-y-conditioned vertical organization of European free-tailed bat flight altitude temporally repeatable within individuals but poorly transferable among individuals?",
+  "relationship_to_odsp": {
+    "source_endpoint": "odsp N2 European free-tailed bat terminal result",
+    "source_terminal_category": "empirical_n2_thickness_not_generalizing",
+    "source_result_already_opened": true,
+    "purpose": "mechanism follow-up explaining non-transferability, not rescue or independent replication",
+    "original_claim_unchanged": true
+  },
+  "source": {
+    "taxon": "Tadarida teniotis",
+    "doi": "10.5441/001/1.52nn82r9",
+    "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/2d629393-4266-4f85-88db-001faeab669d/content",
+    "size_bytes": 1926056,
+    "md5": "570872ab7aba674b9bdc2f2ee6044a71",
+    "expected_rows": 10335,
+    "expected_individuals": 8,
+    "axis": "height_above_msl"
+  },
+  "frozen_geometry": {
+    "crs": "EPSG:3035",
+    "cell_size_m": 5000,
+    "cell_rule": "floor(E/5000):floor(N/5000)",
+    "eligible_cells": [
+      "575:440",
+      "576:439",
+      "577:438",
+      "577:439",
+      "578:438",
+      "579:436",
+      "579:437",
+      "579:438",
+      "580:435",
+      "580:436",
+      "580:437",
+      "581:435",
+      "582:434",
+      "583:434",
+      "584:433",
+      "584:434",
+      "585:433",
+      "586:433"
+    ],
+    "z_edges_m": [
+      "-inf",
+      0,
+      50,
+      100,
+      200,
+      400,
+      800,
+      1600,
+      3200,
+      "inf"
+    ]
+  },
+  "temporal_split": {
+    "unit": "individual",
+    "rule": "Within each individual, sort eligible finite events by timestamp and assign the first floor(n/2) events to early and the remaining events to late.",
+    "minimum_eligible_events_each_half": 100,
+    "no_row_level_random_split": true
+  },
+  "probability_model": {
+    "species_conditional": "Equal-individual mean of Jeffreys-smoothed early P_i(z|cell) among individuals represented in each cell.",
+    "species_marginal": "Equal-individual mean of Jeffreys-smoothed early P_i(z) across individuals.",
+    "jeffreys_alpha": 0.5,
+    "individualized_conditional": "For source individual i and cell c, shrink i's early raw z counts toward species P(z|c) with fixed equivalent sample size lambda; if i has no early event in c, use species P(z|c).",
+    "individualized_marginal": "Shrink i's all-cell early z counts toward species P(z) with the same lambda.",
+    "shrinkage_equivalent_events": 20
+  },
+  "primary_test": {
+    "score_matrix": "For each source individual i and target individual j, mean late-event log P_i(z|cell) on target j, relative to the matched species P(z|cell) baseline.",
+    "observed_statistic": "Unweighted mean of diagonal source==target gains across the eight target individuals.",
+    "null": "Enumerate all 8! permutations assigning early individual maps to late target identities.",
+    "one_sided_p": "fraction of all permutations with mean assigned gain >= observed diagonal mean.",
+    "support_rule": "p <= 0.05 and at least 6 of 8 diagonal individual gains > 0"
+  },
+  "decomposition": {
+    "total_identity_advantage": "own conditional P_i(z|cell) minus species conditional P_species(z|cell)",
+    "marginal_identity_advantage": "own marginal P_i(z) minus species marginal P_species(z)",
+    "within_individual_spatial_increment": "own conditional P_i(z|cell) minus own marginal P_i(z)",
+    "interpretation_rule": {
+      "individual_specific_spatial_strategy": "primary test passes and at least 5 of 8 within-individual spatial increments are >0",
+      "individual_specific_altitude_without_spatial_map": "primary test passes, fewer than 5 spatial increments >0, and at least 5 of 8 marginal identity advantages are >0",
+      "no_stable_individual_specificity": "primary test fails"
+    }
+  },
+  "sensitivities": {
+    "shrinkage_lambda": [
+      5,
+      50
+    ],
+    "cannot_replace_primary": true
+  },
+  "claim_boundary": {
+    "allowed": [
+      "temporal repeatability of individual-specific vertical-state prediction within the frozen horizontal cells",
+      "cross-individual transfer asymmetry under the fixed MSL altitude axis",
+      "individual specialization as a statistical description if the frozen rule passes"
+    ],
+    "prohibited": [
+      "height above ground",
+      "causal habitat preference",
+      "individual personality or cognition",
+      "fitness advantage",
+      "fundamental niche",
+      "species-wide universal individual specialization",
+      "reinterpretation of the original ODSP endpoint as successful transfer"
+    ]
+  }
+}
