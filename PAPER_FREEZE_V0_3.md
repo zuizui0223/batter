@@ -1,3 +1,5 @@
+> **Claim-language note (2026-09-27):** The empirical freeze below is unchanged, but the central wording is amended by `PAPER_FREEZE_V0_3_1_CLAIM_AMENDMENT.md`. “Place-coupled” must not be read as proof of a stable individual-specific cell × height map; the preferred terms are **conditional-dominant** and **marginal-dominant predictive identity**. The frozen focal residual-map test remains negative (p=0.160).
+
 # batter paper freeze v0.3
 
 The empirical programme is frozen at the four-taxon specialization-architecture result.
