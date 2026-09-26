@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "freeze_id": "batter-paper-v0.3-freeze",
+  "role": "frozen spatial-scale sensitivities; exploratory comparative figure only",
+  "warning": "Vertical reference systems and observation architectures differ. Do not fit a species-trait regression from this six-trajectory table.",
+  "source_csv": "results/spatial_grain_v0_3.csv",
+  "scales_m": [
+    2500,
+    5000,
+    10000
+  ],
+  "provenance": {
+    "tadarida_agl_workflow_run": 36232868596,
+    "eidolon_workflow_run": 36239067232,
+    "new_species_workflow_run": 36242652117,
+    "phyllostomus_2016_workflow_run": 36246489553
+  }
+}
