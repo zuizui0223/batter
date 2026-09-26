@@ -42,14 +42,14 @@ def main() -> int:
     ax.axhline(0.0, linewidth=0.8)
     ax.axvline(0.0, linewidth=0.8)
     ax.set_xlabel("Marginal-height identity gain (nats/fix)")
-    ax.set_ylabel("Place × height identity increment (nats/fix)")
-    ax.set_title("Architectures of cross-night vertical individual specialization")
+    ax.set_ylabel("Conditional advantage = conditional − marginal (nats/fix)")
+    ax.set_title("Predictive architectures of cross-night vertical identity")
     ax.text(
-        0.98, 0.97, "place-coupled",
+        0.98, 0.97, "conditional-dominant",
         transform=ax.transAxes, ha="right", va="top", fontsize=9,
     )
     ax.text(
-        0.98, 0.03, "altitude-wide dominance",
+        0.98, 0.03, "marginal-dominant",
         transform=ax.transAxes, ha="right", va="bottom", fontsize=9,
     )
     fig.tight_layout()
