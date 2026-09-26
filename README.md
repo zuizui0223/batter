@@ -53,37 +53,44 @@ See `STUDY_CONTRACT.md` and `contract/individual_vertical_strategy_v1.json`.
 
 ## Current ecological result
 
-The first study version now supports a more specific interpretation than the original ODSP
-motivation.
+The original *Tadarida teniotis* signal is now independently replicated.
 
-On the matched annotated dataset, at 5-km horizontal conditioning:
+### Focal *Tadarida teniotis*
+
+At 5-km horizontal conditioning:
 
 - MSL conditional self-transfer = **+0.428 nats/fix** (5/6 evaluable bats positive)
 - AGL conditional self-transfer = **+0.337** (4/6 positive)
 - terrain-elevation self-transfer = **+0.007**
+- MSL identity × location = **+0.376**
+- AGL identity × location = **+0.591**
 
-The signal is primarily place-specific rather than a stable population-wide height preference:
+The signal therefore lies mainly in place-specific vertical organization rather than a stable
+preferred height or repeated microtopographic elevation.
 
-- MSL identity × location increment = **+0.376**
-- AGL identity × location increment = **+0.591**
-- AGL marginal identity gain = **-0.255**
+### Independent *Eidolon helvum*
 
-At 2.5 km the conditional gains rise to +0.866 (MSL) and +0.766 (AGL); at 10 km the AGL
-mean falls to -0.045. Individual specialization is therefore strongest at fine horizontal scales.
+The source and pass rule were frozen before numeric height was opened. Within exact site × year
+cohorts, the 5-km replication returned:
+
+- **20 evaluable individuals**
+- conditional identity gain = **+0.219 nats/fix**
+- **17/20 (85%)** individual means positive
+- marginal-height identity = **+0.002**
+- identity × location = **+0.217**
+- all five frozen replication criteria passed
+
+Thus a second bat species independently reproduces the key conditional-over-marginal result.
 
 The current biological statement is:
 
-> **European free-tailed bats show repeatable individual fine-scale organization of vertical
-> airspace use. Individual identity is carried mainly by place × vertical-state coupling,
-> persists when altitude is expressed relative to terrain, and is not explained by
-> microtopographic route fidelity alone.**
+> **Individual bats carry repeatable, place-specific vertical signatures across nights. Identity
+> is expressed mainly through coupling between horizontal place and vertical state, not through
+> one individual-wide preferred flight altitude.**
 
-A separately frozen cross-night uplift reaction-norm test did not establish one shared mechanism,
-so the cause of these individual 3-D routes remains open.
-
-See `MANUSCRIPT_SPINE.md`, `THREE_COMPONENT_RESULT.md`,
+See `MANUSCRIPT_SPINE.md`, `CROSS_SPECIES_SYNTHESIS.md`,
+`EIDOLON_INDEPENDENT_REPLICATION_RESULT.md`, `THREE_COMPONENT_RESULT.md`,
 `AGL_SELF_TRANSFER_RESULT.md`, and `UPLIFT_REACTION_NORM_RESULT.md`.
-
 
 ## Same-night context control
 
@@ -99,8 +106,8 @@ alone. See `NIGHT_CONTEXT_CONTROL_RESULT.md`.
 
 ## Independent replication
 
-The next stage is prospectively separated from the focal dataset. Public bat GPS datasets are
-being screened using only metadata, timestamps, x-y structure and the presence of native height
-fields. Numeric height outcomes are forbidden during candidate selection. The replication target
-is the qualitative ordering established here: fine-scale conditional vertical identity should
-outperform marginal-height identity and terrain-only structure.
+Completed successfully in *Eidolon helvum*. Candidate selection, source identity, structural
+eligibility, site-year cohorting, 5-km primary scale and the five-part pass rule were frozen before
+numeric height outcomes were opened. The resulting 20-individual panel passed every criterion.
+The 2.5-km and 10-km frozen sensitivities also retained positive conditional and
+identity × location gains.
