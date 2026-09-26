@@ -1,0 +1,27 @@
+name: independent-replication-screen-v1
+
+on:
+  push:
+    branches:
+      - study/individual-vertical-strategies-v1
+    paths:
+      - "scripts/screen_independent_replication.py"
+      - "contract/independent_replication_screen_v1.json"
+      - ".github/workflows/independent-replication-screen.yml"
+  workflow_dispatch:
+
+jobs:
+  screen:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python scripts/screen_independent_replication.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: batter-independent-replication-screen-v1
+          path: results/independent_replication_screen_v1.json
