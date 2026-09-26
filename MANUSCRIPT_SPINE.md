@@ -41,15 +41,20 @@ Not supported at 5 km. Terrain-elevation self-transfer is +0.007, versus +0.337 
 Not supported by the frozen mechanism endpoint. Only two repeat-tracked individuals passed the
 predeclared W-variation gate and their results conflicted.
 
+### H6. The signal is only a shared night-specific environmental state
+Not supported as the general explanation. In a stricter control, the same bat on another night
+outpredicted other bats flying during the target calendar night. Mean self-vs-same-night gain was
++0.484 nats/fix for AGL and +0.436 for MSL, with 4/5 evaluable individuals positive in each
+coordinate frame. Thus contemporaneous night context does not erase the individual vertical
+signature.
+
 ## Ecological interpretation
 
 The population-level vertical niche is not a single shared 3-D map. It is partly an overlay of
 individual-specific local vertical routes. These routes are not simply individual-wide flight
 height preferences: identity information appears when vertical state is conditioned on place.
 
-The persistence of self-transfer in AGL shows that this is not just an artefact of absolute
-elevation or repeated passage over the same terrain. Conversely, individual contrasts between
-AGL and MSL suggest heterogeneity in how bats organize 3-D movement relative to terrain.
+The persistence of self-transfer in AGL shows that this is not just an artefact of absolute\nelevation or repeated passage over the same terrain. A same-night control further shows that\nanother night from the same bat usually predicts vertical state better than contemporaneous\nother bats, arguing against shared night conditions as the sole explanation. Conversely,\nindividual contrasts between AGL and MSL suggest heterogeneity in how bats organize 3-D\nmovement relative to terrain.
 
 ## Relation to previous work
 
