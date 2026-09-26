@@ -122,9 +122,9 @@ def architecture_plane():
         "tadarida_agl": (6, 10),
         "tadarida_msl": (6, 5),
         "eidolon": (6, 8),
-        "hypsignathus": (6, 12),
-        "phyllostomus_2016": (8, 18),
-        "phyllostomus_2023": (8, -16),
+        "hypsignathus": (-88, 14),
+        "phyllostomus_2016": (10, 28),
+        "phyllostomus_2023": (10, -18),
         "phyllostomus_2022": (6, 8),
     }
     fig, ax = plt.subplots(figsize=(7.2, 5.7))
@@ -149,8 +149,8 @@ def pairwise_plane():
         "tadarida_agl": (6, 10),
         "tadarida_msl": (6, 5),
         "eidolon": (6, 8),
-        "hypsignathus": (6, 14),
-        "phyllostomus_2023": (8, -16),
+        "hypsignathus": (-12, 18),
+        "phyllostomus_2023": (10, -20),
         "phyllostomus_2022": (6, 8),
     }
     fig, ax = plt.subplots(figsize=(7.2, 5.7))
