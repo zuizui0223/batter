@@ -30,11 +30,11 @@ def main() -> int:
 
     fig, ax = plt.subplots(figsize=(6.6, 5.2))
     ax.plot(x, marginal, marker="o", label="Marginal-height identity")
-    ax.plot(x, interaction, marker="o", label="Place × height identity")
+    ax.plot(x, interaction, marker="o", label="Conditional advantage")
     ax.axhline(0.0, linewidth=0.8)
     ax.set_xticks(list(x), [LABELS[r["panel_id"]] for r in rows])
     ax.set_ylabel("Identity information (nats/fix)")
-    ax.set_title("Within-species variation in vertical specialization architecture")
+    ax.set_title("Within-species variation in vertical identity architecture")
     ax.legend(frameon=False)
     fig.tight_layout()
     OUT.parent.mkdir(parents=True, exist_ok=True)
