@@ -110,6 +110,10 @@ These replications show that local 3-D routing individuality is not peculiar to
 
 Not supported by *P. hastatus*.
 
+A direct pairwise check shows that this contrast is not produced by population averaging:
+2022 has marginal pairwise gain +0.323 versus conditional +0.285 (interaction −0.038), whereas
+2023 has conditional +0.148 versus marginal +0.028 (interaction +0.120).
+
 - 2022 primary panel: altitude-wide dominated (+0.176 marginal, −0.120 interaction).
 - 2023 temporal panel: weak place-coupled (+0.013 marginal, +0.020 interaction).
 - 2016 La Gruta, prospectively frozen as a dry-season replication of the 2022 architecture:
