@@ -2,34 +2,21 @@
 
 ## Working title
 
-**Bat vertical individuality has conditional and marginal predictive architectures**
+**Individual vertical identity has multiple predictive architectures across bat systems**
 
 ## Abstract
 
-Individual specialization is usually quantified through horizontal space use, resources or
-activity, yet flying animals repeatedly occupy a third spatial dimension. We asked whether
-individual identity in bat vertical airspace is repeatable across nights and, if so, whether that
-identity is expressed mainly in an animal-wide height distribution or becomes more informative
-when vertical state is conditioned on horizontal place. We analysed repeated three-dimensional
-tracking in a focal population of European free-tailed bats (*Tadarida teniotis*) and then applied
-prospectively frozen replication designs to public tracking panels spanning three additional bat
-taxa. For held-out sessions we quantified self-versus-other predictive information in
-location-conditioned vertical distributions, (G_{cond}), and in marginal vertical
-distributions, (G_{marg}), and defined their difference as the conditional advantage. In the
-focal species, individual identity predicted later conditional vertical state in an independent
-early/late identity-assignment test (exact permutation p = 0.000174). Session-level identity was
-conditional-dominant at 5 km (MSL: (G_{cond}=0.428), (G_{marg}=0.052)); the same qualitative
-pattern persisted using height above ground. However, a stronger frozen test of a stable
-individual-specific cell-by-height residual map after marginal altitude adjustment did not pass
-(p = 0.160), placing an explicit ceiling on mechanistic interpretation. Conditional-dominant
-identity replicated prospectively in *Eidolon helvum* and *Hypsignathus monstrosus*. In contrast,
-a prospectively frozen *Phyllostomus hastatus* 2022 panel was marginal-dominant
-((G_{cond}=0.056), (G_{marg}=0.176)). The strong 2022 architecture did not recur in a
-prospectively frozen 2016 dry-season panel. These results show that repeatable vertical identity
-is not organized through one universal geometry: horizontal context can substantially increase
-individual information in some systems, whereas overall height distribution is more informative
-in another. Predictive architecture itself therefore emerges as a dimension of within-population
-movement heterogeneity.
+1. Individual specialization is commonly quantified through horizontal space or resource use, but flying animals also occupy a vertical axis. We asked whether individual identity in bat vertical airspace is repeatable across nights and whether that identity is expressed mainly in an animal-wide height distribution or becomes more informative when vertical state is conditioned on horizontal place.
+
+2. We analysed repeated three-dimensional tracking in a focal population of European free-tailed bats (*Tadarida teniotis*) and applied prospectively frozen replication designs to public tracking panels spanning three additional bat taxa. For held-out sessions we quantified self-versus-other predictive information in location-conditioned vertical distributions (conditional identity), in marginal vertical distributions (marginal identity), and their difference (conditional advantage).
+
+3. In *T. teniotis*, an independent early/late identity-assignment test showed repeatable conditional identity (exact permutation p = 0.000174). Session-level identity was conditional-dominant at 5 km (conditional = 0.428 nats/fix; marginal = 0.052), and the same qualitative pattern persisted using height above ground. However, a stronger frozen test of a stable individual-specific cell-by-height residual map after marginal altitude adjustment did not pass (p = 0.160).
+
+4. Conditional-dominant identity replicated prospectively in *Eidolon helvum* (0.219 versus 0.002 nats/fix) and *Hypsignathus monstrosus* (0.029 versus -0.021). In contrast, a prospectively frozen *Phyllostomus hastatus* 2022 panel was marginal-dominant (0.056 versus 0.176). An untouched 2016 dry-season panel failed to reproduce that 2022 architecture.
+
+5. Individual vertical identity therefore has multiple predictive architectures: horizontal context can substantially increase individual information in some systems, whereas animal-wide height is more informative in another. This architecture can vary across ecological contexts, while the behavioural mechanism producing it remains unresolved.
+
+**Keywords:** bats; individual specialization; movement ecology; non-exchangeability; predictive identity; three-dimensional movement; vertical space use
 
 ## Introduction
 
