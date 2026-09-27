@@ -1,0 +1,63 @@
+name: effect-translation-null-calibration-v1
+
+on:
+  push:
+    branches:
+      - diagnostic/cross-panel-confound-audit-v1
+    paths:
+      - "contract/effect_translation_null_calibration_v1.json"
+      - "EFFECT_TRANSLATION_NULL_CALIBRATION_CONTRACT.md"
+      - "CROSS_PANEL_CONFOUND_AUDIT_FREEZE_V1.md"
+      - "scripts/run_effect_translation_null_calibration.py"
+      - "scripts/run_biological_effect_translation.py"
+      - "scripts/run_cross_panel_estimator_calibration.py"
+      - ".github/workflows/effect-translation-null-calibration-v1.yml"
+      - "pyproject.toml"
+  workflow_dispatch:
+
+jobs:
+  pairwise:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        panel:
+          - tadarida
+          - eidolon
+          - hypsignathus
+          - phyllostomus_2022
+          - phyllostomus_2023
+          - phyllostomus_2016
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -e .
+      - name: Calibrate pairwise self-win null
+        run: python scripts/run_effect_translation_null_calibration.py --mode pairwise --panel "${{ matrix.panel }}"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: effect-null-pairwise-${{ matrix.panel }}-v1
+          path: results/effect_null_pairwise_${{ matrix.panel }}_v1.json
+          if-no-files-found: error
+
+  agl-separation:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -e .
+      - name: Calibrate focal AGL separation null
+        run: python scripts/run_effect_translation_null_calibration.py --mode agl-separation
+      - uses: actions/upload-artifact@v4
+        with:
+          name: effect-null-tadarida-agl-separation-v1
+          path: results/effect_null_tadarida_agl_separation_v1.json
+          if-no-files-found: error
