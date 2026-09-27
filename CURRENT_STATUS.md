@@ -197,8 +197,13 @@ Main-side validation at scientific-content commit `29c18a9f3c29ee2f561e0f7d28cd3
 
 The v0.3.4 scientific content remains frozen at `29c18a9f3c29ee2f561e0f7d28cd340fcc55aa22`.
 The rc1 provenance baseline is `1f28e833402d3fdd7dd6ce274e5392bf253fee84`.
-A packaging-only rc2 adds a strict final-upload metadata/DOI guard and retires the superseded
+A packaging-only rc2 added a strict final-upload metadata/DOI guard and retired the superseded
 Movement Ecology PR without changing the manuscript's scientific content.
+
+Packaging-only **rc3** additionally fixes double-anonymous review leakage of the repository owner,
+adds an anonymity CI guard, makes the title-page data-availability statement enumerate all six
+Movebank source DOIs, and adds a Zenodo release-readiness gate. RC3 still points to the same
+scientific-content commit.
 
 ## Claim boundary
 
