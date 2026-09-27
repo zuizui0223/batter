@@ -18,7 +18,7 @@ Those are release-metadata decisions, not empirical-analysis gaps.
 4. In Zenodo, connect the GitHub account and enable `zuizui0223/batter` for archiving.
 5. Create the GitHub release from the final packaging release candidate.
 6. After Zenodo ingests the release, copy the version DOI into
-   `manuscript/TITLE_PAGE_TEMPLATE_V0_3_5.md`.
+   `manuscript/TITLE_PAGE_TEMPLATE_V0_3_6.md`.
 7. Run `python scripts/check_jae_upload_ready.py`; it should then be blocked only by any remaining
    author/funding/conflict metadata.
 8. Upload the separate title page and anonymous review manuscript to Journal of Animal Ecology.
@@ -30,7 +30,7 @@ explicit human input and are therefore hard blockers rather than silently guesse
 
 ## Scientific freeze
 
-The current scientific package is v0.3.5. Its cross-panel confound and effect-null audit is complete,
+The current scientific package is v0.3.6. Its cross-panel confound, effect-null and final tag-altitude-bias audits are complete,
 and the v0.3.4 rc3 branch is retained as the immutable pre-audit baseline.
 
 Nothing in this release-readiness layer reopens data selection, endpoints, estimator calibration,
