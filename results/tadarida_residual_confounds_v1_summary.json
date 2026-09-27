@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-tadarida-residual-confounds-v1",
+  "contract": "contract/tadarida_residual_confounds_v1.json",
+  "agl_primary": {
+    "workflow_run_id": 36296387142,
+    "artifact_id": 10924560305,
+    "artifact_digest": "sha256:12c962211ac7973b7577e1aee694043703d669fb093eefe0aa1f71f88fe4adfb",
+    "evaluable_individuals": 6,
+    "common_cell_marginal": 0.26572353924630754,
+    "null_mean": -0.180223408939487,
+    "calibrated": 0.4459469481857945,
+    "p_upper": 0.0161,
+    "bootstrap_95": [
+      -0.02139036409561877,
+      0.597767852338777
+    ],
+    "common_cell_advantage": 0.07083622086701333,
+    "common_cell_advantage_p_upper": 0.0316,
+    "pass": true
+  },
+  "endpoint_proxy_primary_1000m": {
+    "workflow_run_id": 36296479565,
+    "artifact_id": 10923544674,
+    "artifact_digest": "sha256:e5911a208914434462278c9305ad879b16b0308c3d10fed29e36e3e8145ec920",
+    "excluded_events": 602,
+    "retained_events": 9227,
+    "evaluable_individuals": 6,
+    "common_cell_marginal": 0.09864895118597121,
+    "null_mean": -0.18042397058062734,
+    "calibrated": 0.27907292176659854,
+    "p_upper": 0.1109,
+    "bootstrap_95": [
+      -0.41344945186032284,
+      0.5627318791617221
+    ],
+    "common_cell_advantage": 0.11762344128739316,
+    "common_cell_advantage_p_upper": 0.0158,
+    "pass": false
+  },
+  "endpoint_proxy_sensitivities": {
+    "500m": {
+      "artifact_id": 10923709310,
+      "common_cell_marginal": 0.13148509987100832,
+      "calibrated": 0.3034570223028471,
+      "p_upper": 0.0978,
+      "pass": false
+    },
+    "2000m": {
+      "artifact_id": 10924370911,
+      "common_cell_marginal": 0.05882277505155595,
+      "calibrated": 0.2657819959443363,
+      "p_upper": 0.1446,
+      "pass": false
+    }
+  },
+  "grid_sensitivity": {
+    "2500m": {
+      "artifact_id": 10924665127,
+      "artifact_digest": "sha256:54bb2a1e6d8bddc906a2dab4c3d3bbf97b928177a40e9df8b050b8a02fb23eb9",
+      "evaluable_individuals": 5,
+      "common_cell_marginal": 0.6032011192179304,
+      "null_mean": -0.1088627380585488,
+      "calibrated": 0.7120638572764793,
+      "p_upper": 0.011,
+      "bootstrap_95": [
+        0.04573132850332342,
+        1.3572224033736469
+      ],
+      "pass": true
+    },
+    "10000m": {
+      "artifact_id": 10923529857,
+      "artifact_digest": "sha256:1c5b93bca076bbec8662b610b78a79612dcc09400ade3be3e2413a1a53dc4f57",
+      "evaluable_individuals": 7,
+      "common_cell_marginal": -0.013228812723792172,
+      "null_mean": -0.250185185829286,
+      "calibrated": 0.23695637310549383,
+      "p_upper": 0.1018,
+      "bootstrap_95": [
+        -0.3425582790453443,
+        0.2353263323309844
+      ],
+      "pass": false
+    }
+  },
+  "predeclared_decision": {
+    "test_A": "PASS",
+    "test_B": "FAIL",
+    "test_C": "PARTIAL: 2.5 km PASS, 10 km FAIL",
+    "strongest_claim_allowed": false,
+    "focal_claim": "Terrain-relative vertical identity is supported at 5 km and 2.5 km after horizontal standardization, but night-endpoint/central-place structure remains a viable contributor and the effect is not robust at 10 km.",
+    "prohibited_after_result": [
+      "claiming independence from roost/departure-arrival structure",
+      "claiming robustness across the full 2.5–10 km grain",
+      "retuning the endpoint proxy or radii",
+      "using secondary common-cell advantage to rescue the failed primary endpoint"
+    ]
+  }
+}
