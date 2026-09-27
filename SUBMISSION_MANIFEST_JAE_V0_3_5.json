@@ -25,14 +25,20 @@
   },
   "automated_validation": {
     "manuscript_figures": {
-      "run_id": 36322870626,
-      "conclusion": "success"
+      "run_id": 36323405231,
+      "head_sha": "f71338069874fb02b8238602f05e562db7f1feee",
+      "conclusion": "success",
+      "artifact_id": 10933407021,
+      "artifact_digest": "sha256:9635be7a309d72948d95b1cc184370c7971445a89bfbc7bdb6a931c98e8a126f"
     },
     "anonymous_review_pdf": {
-      "run_id": 36322873490,
+      "run_id": 36323197108,
+      "head_sha": "7166ebf4e849476a4717102472da057ba3fb8c1f",
       "conclusion": "success",
       "anonymity_guard": "pass",
-      "pages": 24
+      "pages": 24,
+      "artifact_id": 10932923119,
+      "artifact_digest": "sha256:7b33395d7fde9d6c75528b0e7022463bb4484320486637d1e8df5cb1b3d83b4e"
     },
     "final_visual_inspection": {
       "figures_1_to_6": "passed",
@@ -51,7 +57,6 @@
     "fill conflict-of-interest declaration",
     "finalize CITATION.cff or .zenodo.json",
     "enable repository in Zenodo and mint version DOI",
-    "insert DOI into title page",
-    "perform final visual inspection and journal upload"
+    "insert DOI into title page"
   ]
 }
