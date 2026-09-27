@@ -1,0 +1,53 @@
+name: tag-altitude-bias-stationary-v1
+
+on:
+  push:
+    branches:
+      - diagnostic/tag-altitude-bias-audit-v1
+    paths:
+      - "config/tag_altitude_bias_stationary_applicability_v1.json"
+      - "TAG_ALTITUDE_BIAS_STATIONARY_APPLICABILITY_FREEZE.md"
+      - "contract/tag_altitude_bias_audit_v1.json"
+      - "scripts/run_tag_altitude_bias_stationary.py"
+      - ".github/workflows/tag-altitude-bias-stationary-v1.yml"
+      - "pyproject.toml"
+  workflow_dispatch:
+
+jobs:
+  stationary:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    permissions:
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        panel:
+          - hypsignathus
+          - phyllostomus_2016
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -e .
+      - name: Download canonical x-y/time-only preflight artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: tag-bias-preflight-${{ matrix.panel }}-v1
+          path: _preflight
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          run-id: 36325288331
+      - name: Stage frozen preflight JSON
+        run: |
+          mkdir -p results
+          src="$(find _preflight -type f -name "tag_altitude_bias_preflight_${{ matrix.panel }}_v1.json" -print -quit)"
+          test -n "$src"
+          cp "$src" "results/tag_altitude_bias_preflight_${{ matrix.panel }}_v1.json"
+      - name: Run frozen stationary-height correction
+        run: python scripts/run_tag_altitude_bias_stationary.py --panel "${{ matrix.panel }}"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tag-bias-stationary-${{ matrix.panel }}-v1
+          path: results/tag_altitude_bias_stationary_${{ matrix.panel }}_v1.json
+          if-no-files-found: error
