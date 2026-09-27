@@ -1,0 +1,39 @@
+{
+  "schema": "batter.spatial_interaction_refinement.result_record.v2",
+  "authoritative_execution": {
+    "workflow_run_id": 36239531435,
+    "workflow_job_id": 108397309210,
+    "head_sha": "2e44f01923cc124aeaa8a270604503b9b97a000e",
+    "artifact_id": 10905602063,
+    "artifact_digest": "sha256:815bf3c41aa6be87754b6a2625b6b64afc9ac1f81708b50bd93489f5ab7950ed"
+  },
+  "result_fingerprint": "ba552559a73071d00a60bfe84e3b5a93f78ed0faa07845f89fd21a98dbac4c20",
+  "primary": {
+    "lambda": 20,
+    "category": "individual_by_location_vertical_strategy_not_supported",
+    "observed_diagonal_mean_residual_gain": 0.02402462649822336,
+    "one_sided_p": 0.16046626984126985,
+    "permutation_count": 40320,
+    "positive_diagonal_count": 5,
+    "self_map_strict_top1_count": 1
+  },
+  "sensitivities": {
+    "lambda5": {
+      "observed_diagonal_mean_residual_gain": -0.03295596194159421,
+      "one_sided_p": 0.24848710317460318,
+      "positive_diagonal_count": 4,
+      "category": "individual_by_location_vertical_strategy_not_supported"
+    },
+    "lambda50": {
+      "observed_diagonal_mean_residual_gain": 0.042211284984442585,
+      "one_sided_p": 0.06512896825396826,
+      "positive_diagonal_count": 5,
+      "category": "individual_by_location_vertical_strategy_not_supported"
+    }
+  },
+  "interpretation": [
+    "The v1 identity signal survives as a general individual-specific vertical-state signal, but the preregistered v2 test does not support an additional individual-by-location interaction after each individual's marginal altitude preference is absorbed.",
+    "The strongest defensible ecological interpretation is individual-specific vertical-state use, not a proven location-specific vertical strategy."
+  ],
+  "v1_reclassified": false
+}
