@@ -108,15 +108,15 @@ Finally, an independently frozen mechanism analysis tested whether cross-night d
 
 ### Independent comparative panels
 
-For *Eidolon helvum* (DOI 10.5441/001/1.k8n02jn8), 18,154 GPS records from 63 animals passed the initial structural presence screen, and 42 animals had at least two >=50-fix sessions before numeric height was opened. The native vertical field was height above the GPS reference ellipsoid. Analyses were stratified within exact study-site × shifted-night-year cohorts. Cohorts required at least four total individuals and three repeat-tracked individuals. Horizontal projection was selected per cohort from median coordinates before numeric height was parsed.
+For *Eidolon helvum* (O'Mara et al. 2019; repository DOI 10.5441/001/1.k8n02jn8), 18,154 GPS records from 63 animals passed the initial structural presence screen, and 42 animals had at least two >=50-fix sessions before numeric height was opened. The native vertical field was height above the GPS reference ellipsoid. Analyses were stratified within exact study-site × shifted-night-year cohorts. Cohorts required at least four total individuals and three repeat-tracked individuals. Horizontal projection was selected per cohort from median coordinates before numeric height was parsed.
 
-For *Hypsignathus monstrosus* (DOI 10.5441/001/1.278), the structural screen retained 32 animals with native ellipsoid height, including 24 with repeated eligible sessions. The primary admitted context was Lek Njoukou in 2020. The same session, cohort, grid, smoothing and scoring logic was frozen before numeric height outcomes were opened.
+For *Hypsignathus monstrosus* (Schloesing et al. 2023; repository DOI 10.5441/001/1.278), the structural screen retained 32 animals with native ellipsoid height, including 24 with repeated eligible sessions. The primary admitted context was Lek Njoukou in 2020. The same session, cohort, grid, smoothing and scoring logic was frozen before numeric height outcomes were opened.
 
-For the species-level *Phyllostomus hastatus* replication, the 2021–2022 dataset (DOI 10.5441/001/1.321) was selected among three structurally passing *Phyllostomus* sources because it had the largest repeat-individual panel before height outcomes were examined. The primary vertical field was height above MSL. The frozen biological prediction was conditional dominance, using the same four-part direction rule applied to independent replications.
+For the species-level *Phyllostomus hastatus* replication, the 2021–2022 dataset (Calderón-Capote et al. 2024; repository DOI 10.5441/001/1.321) was selected among three structurally passing *Phyllostomus* sources because it had the largest repeat-individual panel before height outcomes were examined. The primary vertical field was height above MSL. The frozen biological prediction was conditional dominance, using the same four-part direction rule applied to independent replications.
 
-After the 2022 result was known, the 2023 dataset (DOI 10.5441/001/1.322) was frozen as a within-species temporal replication before its numeric height outcomes were opened. Its native vertical field was height above ellipsoid.
+After the 2022 result was known, the 2023 dataset (Calderón-Capote et al. 2024; repository DOI 10.5441/001/1.322) was frozen as a within-species temporal replication before its numeric height outcomes were opened. Its native vertical field was height above ellipsoid.
 
-A further prospective test used an untouched 2016 dry-season panel from DOI 10.5441/001/1.282. This test was not a generic retry of the original prediction. Instead, after the 2022 panel had produced a marginal-dominant result, we froze the specific prediction that a similar marginal-dominant architecture would recur in an earlier dry-season panel. The rule required positive mean marginal identity, a majority of marginal-positive individuals, negative mean conditional advantage, a majority of negative individual conditional advantages, and marginal identity greater than conditional identity. Failure was retained without retuning.
+A further prospective test used an untouched 2016 dry-season panel from O'Mara and Dechmann (2023; repository DOI 10.5441/001/1.282). This test was not a generic retry of the original prediction. Instead, after the 2022 panel had produced a marginal-dominant result, we froze the specific prediction that a similar marginal-dominant architecture would recur in an earlier dry-season panel. The rule required positive mean marginal identity, a majority of marginal-positive individuals, negative mean conditional advantage, a majority of negative individual conditional advantages, and marginal identity greater than conditional identity. Failure was retained without retuning.
 
 Because the source archives use MSL, ellipsoid and, for the focal semantic validation, AGL height, we do not compare absolute flight heights among taxa. Cross-system comparisons concern predictive architecture and sign/direction of information contrasts.
 
@@ -125,6 +125,16 @@ Because the source archives use MSL, ellipsoid and, for the focal semantic valid
 The independent *Eidolon* and *Hypsignathus* replication rules required at least 15 evaluable individuals, positive mean conditional identity, more than half of individual conditional gains positive, positive mean conditional advantage, and conditional identity greater than marginal identity. The primary cell size was 5 km; 2.5- and 10-km results were frozen sensitivities and could not redefine a failed primary result.
 
 The *Phyllostomus* 2022 panel was evaluated under the same place-conditioned prediction. Its failure is therefore part of the comparative result rather than a basis for changing the rule. The 2023 and 2016 panels were prospectively defined follow-ups with their own frozen roles.
+
+### Ethics provenance of the source tracking datasets
+
+This study conducted no new capture, handling or instrumentation. We nevertheless traced the animal-use approvals reported for each source tracking programme. The focal *T. teniotis* study states that all methods were approved by ICNF—Instituto de Conservação da Natureza e Florestas, Portugal—under permit 665/2017/CAPT (O'Mara et al. 2021).
+
+The *E. helvum* tracking programme followed local requirements and American Society of Mammalogists guidance. Work in Ghana was approved by the Wildlife Division of the Forestry Commission (FCWD/GH-01 24/08/09 and 02/02/11) and the Veterinary Services of the Ghana Armed Forces Medical Directorate; work in Zambia was approved by the Zambia Wildlife Authority (ZAWA 421902, 29/11/13; ZAWA 547649, 26/11/14); and work in Burkina Faso was conducted with approval of the Director of Parc Urbain Bangr-Weoogo, Ouagadougou (O'Mara et al. 2019).
+
+The *H. monstrosus* source study reports approval by the Ministry of Agriculture, Livestock and Fisheries of the Republic of Congo and by the French VetAgro Sup ethics committee (approval 1805-V2, 3 July 2018), noting that no animal ethics committee existed in the Republic of Congo at that time (Schloesing et al. 2023).
+
+For the 2016 *P. hastatus* tracking, work was approved by the Ministerio del Ambiente, Panamá (SE/A-96-15) and the Smithsonian Tropical Research Institute Animal Care and Use Committee (2014-0701-2017), and followed the ASAB/ABS Guidelines for the Use of Animals in Research (O'Mara & Dechmann 2023). The longitudinal 2021–2023 *P. hastatus* programme reports Ministerio del Ambiente permits SE/A-96-15, SE/A-96-18 and SE/A-38-2020 and STRI Animal Care and Use Committee approvals 2014-0701-2017, 2017-0815-2020-A2 and 2020-0212-2023, again under the ASAB/ABS guidelines (Calderón-Capote et al. 2024).
 
 ### Reproducibility and analysis freeze
 
@@ -278,6 +288,8 @@ Treating individual specialization only as a single magnitude can miss this dist
 
 Bolnick, D.I., Svanbäck, R., Fordyce, J.A., Yang, L.H., Davis, J.M., Hulsey, C.D. & Forister, M.L. (2003). The ecology of individuals: Incidence and implications of individual specialization. *The American Naturalist*, **161**, 1–28. https://doi.org/10.1086/343878
 
+Calderón-Capote, M.C., van Toor, M.L., O'Mara, M.T., Bayer, T.D., Crofoot, M.C. & Dechmann, D.K.N. (2024). Consistent long-distance foraging flights across years and seasons at colony level in a neotropical bat. *Biology Letters*, **20**, 20240424. https://doi.org/10.1098/rsbl.2024.0424
+
 Carrasco, J.L. (2024). Assessing repeatability of spatial trajectories. *Methods in Ecology and Evolution*, **15**, 144–152. https://doi.org/10.1111/2041-210X.14266
 
 Gámez, S. & Harris, N.C. (2022). Conceptualizing the 3D niche and vertical space use. *Trends in Ecology & Evolution*, **37**, 953–962. https://doi.org/10.1016/j.tree.2022.06.012
@@ -286,7 +298,13 @@ Kerches-Rogeri, P., Niebuhr, B.B., Muylaert, R.L. & Mello, M.A.R. (2020). Indivi
 
 Mordue, S., Mill, A., Shirley, M. & Aegerter, J. (2023). Foraging fidelity and individual specialisation in a temperate bat *Myotis nattereri*. *European Journal of Wildlife Research*, **69**, 121. https://doi.org/10.1007/s10344-023-01744-5
 
+O'Mara, M.T., Scharf, A.K., Fahr, J., Abedi-Lartey, M., Wikelski, M., Dechmann, D.K.N. & Safi, K. (2019). Overall dynamic body acceleration in straw-colored fruit bats increases in headwinds but not with airspeed. *Frontiers in Ecology and Evolution*, **7**, 200. https://doi.org/10.3389/fevo.2019.00200
+
 O'Mara, M.T., Amorim, F., Scacco, M., McCracken, G.F., Safi, K., Mata, V., Tomé, R., Swartz, S., Wikelski, M., Beja, P., Rebelo, H. & Dechmann, D.K.N. (2021). Bats use topography and nocturnal updrafts to fly high and fast. *Current Biology*, **31**, 1311–1316.e4. https://doi.org/10.1016/j.cub.2020.12.042
+
+O'Mara, M.T. & Dechmann, D.K.N. (2023). Greater spear-nosed bats commute long distances alone, rest together, but forage apart. *Animal Behaviour*, **204**, 37–48. https://doi.org/10.1016/j.anbehav.2023.08.001
+
+Schloesing, E., Caron, A., Chambon, R., Courbin, N., Labadie, M., Nina, R., Mouiti Mbadinga, F., Ngoubili, W., Sandiala, D., N'Kaya Tobi, Bourgarel, M., De Nys, H.M. & Cappelle, J. (2023). Foraging and mating behaviors of *Hypsignathus monstrosus* at the bat-human interface in a central African rainforest. *Ecology and Evolution*, **13**, e10240. https://doi.org/10.1002/ece3.10240
 
 Wang, Z., Gong, L., Huang, Z., Geng, Y., Zhang, W., Si, M., Wu, H., Feng, J. & Jiang, T. (2023). Linking changes in individual specialization and population niche of space use across seasons in the great evening bat (*Ia io*). *Movement Ecology*, **11**, 32. https://doi.org/10.1186/s40462-023-00394-1
 
@@ -308,7 +326,7 @@ Xing, S., Leahy, L., Ashton, L.A., Kitching, R.L., Bonebrake, T.C. & Scheffers, 
 
 ## Ethics statement
 
-This study is a secondary analysis of publicly archived animal-tracking data and involved no new capture, handling or experimental manipulation of animals. Ethical approvals, permits and animal-handling procedures for the original deployments are reported in the corresponding source studies and repository records. The present analyses use only published tracking measurements and source animal identifiers.
+This study is a secondary analysis of publicly archived animal-tracking data and involved no new capture, handling or experimental manipulation of animals. The original tracking programmes were conducted under the permits and institutional approvals detailed in Materials and Methods, including ICNF Portugal, relevant local and national authorities in Ghana, Zambia and Burkina Faso, the Republic of Congo and VetAgro Sup, and Ministerio del Ambiente Panamá and the Smithsonian Tropical Research Institute Animal Care and Use Committee. The present analyses use only published tracking measurements and source animal identifiers.
 
 ## Data and code availability
 
