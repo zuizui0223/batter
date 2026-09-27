@@ -75,7 +75,7 @@ def main() -> int:
 
     data_access = section(title_page, "Data availability statement")
     archive_doi = re.search(
-        r"archive DOI:\\s*(10\\.\\d{4,9}/[-._;()/:A-Z0-9]+)",
+        r"archive DOI:\s*(10\.\d{4,9}/[-._;()/:A-Z0-9]+)",
         data_access,
         flags=re.IGNORECASE,
     )
