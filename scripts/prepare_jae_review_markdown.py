@@ -4,9 +4,9 @@ from __future__ import annotations
 
 from pathlib import Path
 
-SRC = Path("manuscript/MANUSCRIPT_DRAFT_V0_3_3.md")
-OUT = Path("manuscript/generated/JAE_REVIEW_V0_3_3.md")
-TITLE = "Individual vertical identity has multiple predictive architectures across bat systems"
+SRC = Path("manuscript/MANUSCRIPT_DRAFT_V0_3_4.md")
+OUT = Path("manuscript/generated/JAE_REVIEW_V0_3_4.md")
+TITLE = "Repeatable vertical identity in bat airspace persists after horizontal occupancy is standardized"
 
 
 def main() -> int:
@@ -17,7 +17,7 @@ def main() -> int:
     cleaned = []
     skip_title_value = False
     for line in lines:
-        if line.strip() == "# Manuscript draft v0.3.3":
+        if line.strip() == "# Manuscript draft v0.3.4":
             continue
         if line.strip() == "## Working title":
             skip_title_value = True

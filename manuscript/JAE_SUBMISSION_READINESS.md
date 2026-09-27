@@ -1,89 +1,96 @@
-# JAE submission readiness v0.3.3
+# JAE submission readiness v0.3.4
 
 Checked: 2026-09-27
 
 ## Current target
 
-First shot: **Journal of Animal Ecology — Research Article**.
-
+First shot: **Journal of Animal Ecology — Research Article**.  
 Backup: **Movement Ecology**.
 
-## Manuscript status
+## Scientific status
 
-- full ecological draft: `manuscript/MANUSCRIPT_DRAFT_V0_3_3.md`;
-- CI word estimate: **7,287 words**;
-- abstract: **261 words** in five numbered factual statements;
-- keywords: **7**, alphabetized;
-- standard JAE structure: Introduction / Materials and Methods / Results / Discussion / References;
-- figure legends included in the manuscript;
-- Figures 1–6 generated reproducibly;
-- empirical programme remains frozen.
+The superseded v0.3.3 architecture manuscript must not be submitted.
 
-The current JAE initial-submission limits are 8,500 words for Research Articles and 350 words for the numbered abstract. The automated gate is `scripts/check_jae_submission.py`.
+Current manuscript:
+`manuscript/MANUSCRIPT_DRAFT_V0_3_4.md`
 
-## Scientific gates already closed
+Current central claim:
 
-- focal early/late conditional identity repeatability;
-- focal residual-map negative retained in main text and Figure 2;
-- AGL / terrain semantic validation;
-- same-night context control;
-- pairwise alternative-individual robustness;
-- *Eidolon* independent replication;
-- *Hypsignathus* independent replication;
-- *Phyllostomus* 2022 marginal-dominant counterexample;
-- 2023 temporal panel;
-- untouched 2016 prospective 2022-like prediction failure;
-- common uplift mechanism negative;
-- outcome-blind 23-dataset public search closeout.
+> Across six bat tracking panels, identity-matched vertical profiles retain more held-out
+> predictive information than expected under session-level exchangeability after occupancy among
+> the tested horizontal cells is standardized.
 
-No additional public-data mining belongs in this paper.
+This claim is intentionally narrower than “independent of horizontal fidelity.” Fine-scale
+within-cell and central-place structure remain possible contributors.
 
-## Submission package completed
+## Completed scientific gates
 
-- [x] Full-length JAE-oriented manuscript.
-- [x] Numbered abstract and keywords.
-- [x] Verified core ecological references.
-- [x] Figure 1 conceptual framework.
-- [x] Figures 2–6 quantitative figures.
-- [x] Figure legends.
-- [x] Ethics statement with source-study permit provenance.
-- [x] Data and Code Availability statement with source-data DOIs.
-- [x] Anonymous cover-letter draft.
-- [x] Separate title-page template.
-- [x] Automated JAE format gate.
-- [x] Automated anonymous review-PDF workflow.
+- [x] outcome-blind public source universe closed;
+- [x] focal early/late identity assignment supported;
+- [x] stable residual cell × height map negative retained;
+- [x] estimator non-zero-null concern tested under frozen calibration;
+- [x] common-cell horizontal standardization applied to all six panels;
+- [x] old marginal-dominant 2022 classification shown not robust and superseded;
+- [x] AGL common-cell calibration frozen before output and passed at 5 km;
+- [x] 2.5-km focal AGL sensitivity passed;
+- [x] 10-km focal AGL sensitivity failed and retained;
+- [x] predeclared 1-km night-endpoint-neighbourhood exclusion failed and retained;
+- [x] fixed 0.5/2-km endpoint sensitivities failed and retained;
+- [x] descriptive biological effect translations frozen before output;
+- [x] source-study ethics provenance verified.
 
-## Source-study ethics provenance
+No new public-data mining belongs in this paper.
 
-Verified source-by-source permit and committee details are recorded in
-`manuscript/SOURCE_ETHICS_PROVENANCE_V0_3_3.md` and summarized in the manuscript Methods/Ethics
-sections.
+## Submission package
 
-## Human-input items still required
+- [x] v0.3.4 ecological manuscript;
+- [x] five-statement numbered abstract;
+- [x] updated vertical-specialization literature positioning;
+- [x] calibrated Figures 1–6;
+- [x] v0.3.4 anonymous review-PDF workflow;
+- [x] v0.3.4 cover-letter draft;
+- [x] v0.3.4 title-page template;
+- [x] claim-amendment history for Supporting Information.
 
-1. Mint a permanent versioned archive DOI for the code/provenance release and replace the GitHub-only placeholder.
-2. Fill final author list, affiliations, corresponding-author details and CRediT contributions.
-3. Fill funding, acknowledgements and conflict-of-interest declarations.
-4. Perform one final page-level inspection of the generated anonymous review PDF and figures after the ethics-provenance update.
+## Automated format status
+
+- manuscript CI estimate: **6,384 words**;
+- abstract: **286 words**;
+- numbered abstract statements: **5**;
+- keywords: **7**;
+- calibrated Figures 1–6: generated and visually inspected;
+- anonymous double-spaced line-numbered review PDF: **22 pages**, all pages visually inspected;
+- no clipping, overlapping text or broken glyphs observed.
+
+## Required before release candidate
+
+1. Merge the clean v0.3.4 revision to main.
+2. Rerun manuscript/figure and PDF workflows on main.
+3. Retire superseded v0.3.3 submission workflows.
+4. Freeze a new `release/jae-v0.3.4-rc1` from the validated main commit.
+
+## Human-input items before journal upload
+
+- permanent versioned archive DOI;
+- final authors and affiliations;
+- corresponding-author details and ORCID;
+- CRediT contributions;
+- funding and acknowledgements;
+- conflict-of-interest declaration.
 
 ## Claim boundary
 
-Use:
+Supported:
+- repeatable vertical individual identity;
+- vertical identity beyond occupancy differences among tested coarse horizontal cells;
+- direct pairwise vertical distinguishability under common horizontal weighting;
+- terrain-relative focal identity at 2.5–5 km.
 
-- repeatable vertical identity;
-- individual non-exchangeability;
-- marginal identity;
-- conditional identity;
-- conditional advantage;
-- conditional-dominant / marginal-dominant predictive architecture.
-
-Do not claim:
-
-- stable individual-specific cell × height maps from the focal dataset;
-- personality, learning, optimality or adaptation;
-- verified foraging specialization;
-- a universal environmental mechanism.
-
-## Stop rule
-
-After the five human-input items above are completed, submit the frozen RC to *Journal of Animal Ecology*. Do not reopen empirical source search or retune completed endpoints.
+Not supported:
+- complete removal of fine-scale horizontal fidelity;
+- independence from central-place departure/arrival structure;
+- 10-km focal scale invariance;
+- stable individual-specific 3-D route maps;
+- personality, learning, adaptation or optimality;
+- harmonized foraging-height specialization;
+- one universal causal mechanism.
