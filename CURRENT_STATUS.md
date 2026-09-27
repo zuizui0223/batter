@@ -86,6 +86,60 @@ A secondary result is that retaining horizontal cell identity adds only a small 
 although that increment is consistently larger than the negatively shifted exchangeability null
 of the estimator.
 
+## Focal residual-confound robustness
+
+The remaining focal confounds were frozen before output in
+`contract/tadarida_residual_confounds_v1.json`.
+
+### Terrain-relative AGL calibration
+
+PASS at 5 km:
+
+- common-cell AGL marginal identity +0.266;
+- permutation-null mean -0.180;
+- calibrated difference +0.446;
+- permutation p=0.0161;
+- n=6.
+
+Thus the focal vertical-identity signal is not restricted to MSL altitude.
+
+### Night-endpoint / roost-proxy exclusion
+
+FAIL under the predeclared 1-km primary rule:
+
+- 602 events removed;
+- common-cell AGL marginal +0.099;
+- calibrated difference +0.279;
+- p=0.1109;
+- n=6.
+
+The fixed 500-m and 2,000-m sensitivities also fail (p=0.0978 and 0.1446).
+
+The endpoint proxy is not a verified biological roost. The inference is therefore that
+departure/arrival or central-place spatial structure remains a viable contributor; it is not
+evidence that a specific roost mechanism is proven.
+
+### Horizontal grain
+
+- 2.5 km: PASS; common-cell AGL marginal +0.603, calibrated +0.712, p=0.011, n=5.
+- 10 km: FAIL; common-cell AGL marginal -0.013, calibrated +0.237, p=0.1018, n=7.
+
+The focal terrain-relative result is therefore supported at 2.5–5 km but not established at
+10 km.
+
+### Focal claim ceiling
+
+Allowed:
+
+> European free-tailed bats show repeatable terrain-relative vertical identity after horizontal
+> cell-use standardization at fine-to-intermediate horizontal grain (2.5–5 km).
+
+Required qualifications:
+
+- central-place departure/arrival structure remains a possible contributor;
+- broad 2.5–10-km grain invariance is not supported;
+- the stronger stable residual cell × height map remains unsupported (p=0.160).
+
 ## Submission status
 
 **JAE v0.3.3 rc2 is on scientific hold and must not be submitted.**
