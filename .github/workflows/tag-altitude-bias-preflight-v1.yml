@@ -1,0 +1,43 @@
+name: tag-altitude-bias-preflight-v1
+
+on:
+  push:
+    branches:
+      - diagnostic/tag-altitude-bias-audit-v1
+    paths:
+      - "contract/tag_altitude_bias_preflight_v1.json"
+      - "TAG_ALTITUDE_BIAS_PREFLIGHT_CONTRACT.md"
+      - "scripts/run_tag_altitude_bias_preflight.py"
+      - ".github/workflows/tag-altitude-bias-preflight-v1.yml"
+      - "pyproject.toml"
+  workflow_dispatch:
+
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    permissions:
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        panel:
+          - tadarida
+          - eidolon
+          - hypsignathus
+          - phyllostomus_2022
+          - phyllostomus_2023
+          - phyllostomus_2016
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -e .
+      - name: Run x-y/time-only tag-bias preflight
+        run: python scripts/run_tag_altitude_bias_preflight.py --panel "${{ matrix.panel }}"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tag-bias-preflight-${{ matrix.panel }}-v1
+          path: results/tag_altitude_bias_preflight_${{ matrix.panel }}_v1.json
+          if-no-files-found: error
