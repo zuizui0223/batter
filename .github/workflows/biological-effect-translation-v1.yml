@@ -1,0 +1,47 @@
+name: biological-effect-translation-v1
+
+on:
+  push:
+    branches:
+      - analysis/biological-effect-translation-v1
+    paths:
+      - "contract/biological_effect_translation_v1.json"
+      - "BIOLOGICAL_EFFECT_TRANSLATION_CONTRACT.md"
+      - "results/calibrated_vertical_identity_effect_input_v1.csv"
+      - "scripts/run_biological_effect_translation.py"
+      - "scripts/run_cross_panel_estimator_calibration.py"
+      - "scripts/run_new_species_replications.py"
+      - "scripts/run_eidolon_independent_replication.py"
+      - ".github/workflows/biological-effect-translation-v1.yml"
+      - "pyproject.toml"
+  workflow_dispatch:
+
+jobs:
+  effect:
+    strategy:
+      fail-fast: false
+      matrix:
+        panel:
+          - tadarida
+          - eidolon
+          - hypsignathus
+          - phyllostomus_2022
+          - phyllostomus_2023
+          - phyllostomus_2016
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -e .
+      - name: Translate calibrated identity to biological effect scales
+        run: python scripts/run_biological_effect_translation.py --panel "${{ matrix.panel }}"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: biological-effect-${{ matrix.panel }}-v1
+          path: results/biological_effect_translation_${{ matrix.panel }}_v1.json
+          if-no-files-found: error

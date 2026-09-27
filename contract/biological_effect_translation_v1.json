@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-biological-effect-translation-v1",
+  "frozen_date": "2026-09-27",
+  "status": "descriptive effect-size definitions frozen before outputs were opened",
+  "purpose": "Translate calibrated vertical-identity log scores into interpretable magnitudes without changing any inferential endpoint.",
+  "relation_to_inference": {
+    "existing_calibration_p_values_unchanged": true,
+    "no_new_pass_fail_gate": true,
+    "no_panel_ranking": true,
+    "no_cross_datum_meter_comparison": true
+  },
+  "panels": [
+    "tadarida",
+    "eidolon",
+    "hypsignathus",
+    "phyllostomus_2022",
+    "phyllostomus_2023",
+    "phyllostomus_2016"
+  ],
+  "metrics": {
+    "observed_likelihood_multiplier": {
+      "definition": "exp(observed common-cell marginal identity)",
+      "interpretation": "Geometric-mean per-fix likelihood ratio of the same-individual vertical profile relative to the other-individual profile under identical horizontal cell weights.",
+      "caveat": "A value below 1 is possible even when the estimator-calibrated signal exceeds exchangeability expectation."
+    },
+    "calibrated_likelihood_multiplier": {
+      "definition": "exp(observed common-cell marginal identity - panel-specific permutation-null mean)",
+      "interpretation": "Multiplicative scale of the log-score excess above the finite-sample exchangeability expectation.",
+      "caveat": "This is a calibrated effect scale, not a literal probability ratio between two biological generative models."
+    },
+    "entropy_equivalent_fraction": {
+      "definition": "(observed common-cell marginal identity - panel-specific permutation-null mean) / equal-individual mean empirical Shannon entropy of target vertical bins on exactly the scored fixes",
+      "units": "dimensionless",
+      "interpretation": "Size of calibrated identity information relative to the target session's vertical-state uncertainty.",
+      "caveat": "Not mutual information, not variance explained, and not constrained to 0–1."
+    },
+    "pairwise_self_identification": {
+      "definition": "For each held-out target session and each alternative individual in the same cohort, integrate the self and alternative P(z|cell) under the same equal-session self cell-use weights on common supported cells; score the target z values; a self win is gain >0. Aggregate alternative comparisons within target session, sessions within individual, then individuals equally.",
+      "outputs": [
+        "equal-individual self-win fraction",
+        "individual-bootstrap 95% interval",
+        "number of evaluable pair comparisons"
+      ],
+      "chance_reference": 0.5,
+      "interpretation": "How often the same bat's vertical profile outpredicts a specific other bat after horizontal weighting is held common.",
+      "inferential_role": "descriptive only"
+    },
+    "focal_agl_height_separation_m": {
+      "scope": "Tadarida AGL only",
+      "definition": "For each held-out target session, estimate each training session's mean AGL within supported 5-km cells. Average cell means equally across self sessions and equally across other individuals, then integrate both using the same self cell-use weights. Record absolute difference between the self and other expected AGL. Aggregate sessions within individual then individuals equally.",
+      "outputs": [
+        "mean absolute separation_m",
+        "median individual separation_m",
+        "individual-bootstrap 95% interval"
+      ],
+      "caveat": "Captures mean-height separation only; distribution-shape differences can exist even when this value is small."
+    }
+  },
+  "uncertainty": {
+    "unit": "individual",
+    "bootstrap_replicates": 20000,
+    "seed_base": 2026100100,
+    "interval": "percentile 95%"
+  },
+  "stop_rule": [
+    "Do not add or remove effect-size metrics after any output is opened.",
+    "Do not select only panels with large translated effects.",
+    "Do not interpret calibrated likelihood multipliers as raw biological odds.",
+    "Do not compare meter-scale height separation across MSL and ellipsoid panels; meter translation is focal AGL only."
+  ]
+}
