@@ -21,10 +21,11 @@ Crucially, this remains true after self and other vertical profiles are integrat
 
 Therefore the main ecological conclusion is:
 
-> **Repeatable individual vertical identity in bat airspace persists after self and other
-> profiles are standardized to the same occupancy among the tested coarse 5-km horizontal cells.
-> It therefore cannot be reduced to occupancy differences among those cells alone, although
-> endpoint/central-place-associated structure remains a panel-dependent contributor.**
+> **Repeatable individual vertical identity persists after self and other profiles are standardized
+> to the same occupancy among tested coarse 5-km horizontal cells. In five of six panels, identity
+> also persists after every session's absolute altitude level is removed. Additive constant
+> tag/device offsets therefore cannot explain the cross-panel pattern generally, although focal
+> *Tadarida* remains an explicit device-offset-sensitive exception.**
 
 ## Why the claim changed
 
@@ -96,15 +97,27 @@ The reviewer-facing v1 audit was frozen before output and is complete.
 
 See `CROSS_PANEL_CONFOUND_AUDIT_RESULT_V1.md`.
 
+## Final tag-altitude-bias audit
+
+The final predeclared scientific audit is complete.
+
+- session-median centering: **5/6 panels PASS**;
+- focal *Tadarida*: FAIL, calibrated excess -0.022, p=0.5121;
+- stationary-height correction: **2/2 structurally eligible panels PASS** (both p=0.0002);
+- timing overlap is weakest in *P. hastatus* 2016 and remains a limitation;
+- no further new scientific analysis family is authorized before submission.
+
+See `TAG_ALTITUDE_BIAS_AUDIT_RESULT.md`.
+
 ## Submission status
 
 The v0.3.4 rc3 package is retained as the pre-audit baseline and must not be submitted as the final
 scientific version.
 
-The current manuscript is `manuscript/MANUSCRIPT_DRAFT_V0_3_5.md`, titled **“Repeatable vertical
+The current manuscript is `manuscript/MANUSCRIPT_DRAFT_V0_3_6.md`, titled **“Repeatable vertical
 identity in bat airspace persists after coarse horizontal occupancy is standardized.”** The
-v0.3.5 manuscript/figure and anonymous-review workflows have passed on the diagnostic branch and
-are revalidated on main before the release candidate is frozen.
+v0.3.6 manuscript/figure and anonymous-review workflows pass with 7,932 words, a 273-word
+five-statement abstract, seven figures and a 26-page anonymous review PDF.
 
 ## Claim boundary
 
