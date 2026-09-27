@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "submission_id": "batter-jae-v0.3.4-rc1",
+  "date": "2026-09-27",
+  "journal_target": "Journal of Animal Ecology",
+  "backup_journal": "Movement Ecology",
+  "status": "release-candidate basis; empirical source universe closed",
+  "scientific_content_commit": "29c18a9f3c29ee2f561e0f7d28cd340fcc55aa22",
+  "repository_main_before_manifest": "2146eb836f14e6aab7188fefc6ea972bea92c78a",
+  "supersedes": {
+    "submission_id": "batter-jae-v0.3.3-rc2",
+    "reason": "Estimator calibration showed that raw conditional-minus-marginal architecture classes were not robust; the apparent marginal-dominant Phyllostomus 2022 panel disappeared after common horizontal weighting."
+  },
+  "manuscript": {
+    "path": "manuscript/MANUSCRIPT_DRAFT_V0_3_4.md",
+    "blob_sha": "20a2bc65b29c97b8e83b74649827b0bd7f04778c",
+    "ci_word_estimate": 6384,
+    "abstract_words": 286,
+    "abstract_numbered_statements": 5,
+    "keywords": 7,
+    "title": "Repeatable vertical identity in bat airspace persists after horizontal occupancy is standardized"
+  },
+  "central_claim": "Across six bat tracking panels, identity-matched vertical profiles retain more held-out predictive information than expected under session-level exchangeability after self and other profiles are standardized to the same occupancy among the tested 5-km horizontal cells.",
+  "automated_validation": {
+    "manuscript_figures": {
+      "workflow": "jae-submission-v0.3.4",
+      "run_id": 36308168273,
+      "head_sha": "29c18a9f3c29ee2f561e0f7d28cd340fcc55aa22",
+      "conclusion": "success",
+      "artifact_id": 10928037886,
+      "artifact_name": "batter-jae-v0-3-4-figures",
+      "artifact_digest": "sha256:e529abc806193a12e256e6a792a010222c51592c601acf045edd22d45623e73d"
+    },
+    "anonymous_review_pdf": {
+      "workflow": "jae-review-pdf-v0.3.4",
+      "run_id": 36308168258,
+      "head_sha": "29c18a9f3c29ee2f561e0f7d28cd340fcc55aa22",
+      "conclusion": "success",
+      "artifact_id": 10927338781,
+      "artifact_name": "batter-jae-review-manuscript-v0-3-4",
+      "artifact_digest": "sha256:d40fd2f2d5eb1cf16099e75eb023b753b32c1d64620d14c5d459c05b4305df51",
+      "rendered_pages": 22,
+      "visual_inspection": "passed: all 22 pages inspected; no clipping, overlap or broken glyphs"
+    }
+  },
+  "calibration_provenance": {
+    "focal_estimator_calibration": {
+      "workflow_run_id": 36291669628,
+      "permutations": 9999,
+      "result": "non-zero negative pipeline null confirmed; common-cell horizontal weighting materially changed the marginal/conditional decomposition"
+    },
+    "cross_panel_calibration": {
+      "workflow_run_id": 36292039473,
+      "permutations_per_nonfocal_panel": 4999,
+      "result": "all six panels show common-cell vertical identity above their panel-specific exchangeability expectations; raw architecture classes superseded"
+    },
+    "focal_agl_calibration": {
+      "workflow_run_id": 36296387142,
+      "result": "5-km terrain-relative AGL common-cell identity PASS, p=0.0161"
+    },
+    "focal_residual_confounds": {
+      "workflow_run_id": 36296479565,
+      "results": {
+        "agl_2500_km": "PASS, p=0.011",
+        "agl_10000_km": "FAIL, p=0.1018",
+        "endpoint_proxy_500_m": "FAIL, p=0.0978",
+        "endpoint_proxy_1000_m": "FAIL, p=0.1109",
+        "endpoint_proxy_2000_m": "FAIL, p=0.1446"
+      }
+    },
+    "biological_effect_translation": {
+      "workflow_run_id": 36296977883,
+      "result": "pairwise self-identification 0.77-0.86 in five panels; 2016 Phyllostomus weaker at 0.594; focal AGL expected-height separation mean 256 m and median individual 145 m"
+    }
+  },
+  "focal_claim_ceiling": {
+    "supported": [
+      "repeatable focal vertical identity",
+      "terrain-relative AGL identity at 2.5 and 5 km after common-cell weighting"
+    ],
+    "not_supported": [
+      "complete removal of fine-scale horizontal fidelity",
+      "independence from central-place departure/arrival structure",
+      "10-km focal grain robustness",
+      "stable individual-specific cell-by-height route map",
+      "personality, learning, adaptation or optimality",
+      "verified foraging-height specialization",
+      "one universal environmental mechanism"
+    ],
+    "residual_map_p": 0.16,
+    "endpoint_proxy_primary_p": 0.1109,
+    "agl_10km_p": 0.1018
+  },
+  "source_search": {
+    "status": "closed",
+    "considered_parent_datasets": 23,
+    "admitted_sources": 6,
+    "admitted_taxa": 4,
+    "no_new_source_mining": true
+  },
+  "key_blobs": {
+    "scripts/plot_jae_v0_3_4_figures.py": "9bde0b12a7c8b143d48a148ace308eec1311b9ed",
+    "scripts/check_jae_submission.py": "ffbbed1d834c8eae7aa006373fec9f75255a7980",
+    "scripts/prepare_jae_review_markdown.py": "fb9490726a5f73ef82835ca7b1db275369ea271a",
+    "manuscript/CLAIM_AMENDMENT_HISTORY_V0_3_4.md": "333af9e1df48290d7be622170689ffe19330033c",
+    "manuscript/LITERATURE_POSITIONING_V4_HORIZONTAL_STANDARDIZED.md": "e5435f96a0c614e9279f7370945e89f9d4f1cdff"
+  },
+  "remaining_human_input": [
+    "mint permanent versioned archive DOI",
+    "fill final authors and affiliations",
+    "fill corresponding-author details and ORCID",
+    "fill CRediT contributions",
+    "fill funding and acknowledgements",
+    "fill conflict-of-interest declaration",
+    "perform final journal upload"
+  ]
+}
