@@ -229,6 +229,66 @@ The scientific hold created for the cross-panel confound audit is therefore reso
 blockers are non-scientific: software licensing, final author/declaration metadata, archival DOI
 and journal upload.
 
+## Final tag altitude-bias audit v1
+
+The v0.3.5 package entered one final, predeclared audit for additive tag/device altitude offsets.
+
+### Primary shift-invariant result
+
+Every retained session was translated to zero median before vertical binning, removing any
+additive constant tag offset exactly and also removing session-specific constant altitude shifts.
+
+**Five of six panels pass** their frozen calibrated shape-identity rule:
+
+- *Eidolon*: calibrated excess +0.443, p=0.0002;
+- *Hypsignathus*: +0.177, p=0.0002;
+- *P. hastatus* 2022: +0.111, p=0.0002;
+- *P. hastatus* 2023: +0.118, p=0.0002;
+- *P. hastatus* 2016: +0.574, p=0.0076;
+- focal *Tadarida*: -0.022, p=0.5121 — **FAIL**.
+
+Under the predeclared decision matrix this is the **5/6 PASS** category.
+
+Therefore a constant additive tag/device altitude offset is not a general explanation for the
+cross-panel result. Five panels retain individual identity in vertical-distribution shape after
+absolute altitude level is removed.
+
+Focal *Tadarida* is the required exception. Its evidence does not survive session centering, so
+its absolute vertical-location component may contain genuine mean-height specialization, additive
+device offset, or both. This does not prove tag bias because centering removes both possibilities.
+
+The focal raw 256-m AGL translation is consequently demoted from headline biological evidence.
+
+### Stationary-height structural preflight
+
+The x-y/time-only preflight opened no numeric height values.
+
+Stationary correction is permitted only for:
+
+- *Hypsignathus*: 12 supported individuals (threshold 12);
+- *P. hastatus* 2016: 11 supported individuals (threshold 5).
+
+It is prohibited by the frozen structural gate for *Tadarida*, *Eidolon*, *P. hastatus* 2022 and
+*P. hastatus* 2023.
+
+The two permitted secondary corrections are queued. They are corroborative only and cannot change
+the 5/6 primary decision.
+
+### Tracking-window overlap
+
+Positive overlap among repeat-individual tracking windows is 71.4% (*Tadarida*), 86.0%
+(*Eidolon*), 91.7% (*Hypsignathus*), 76.6% (*P. hastatus* 2022), 100% (*P. hastatus* 2023), and
+31.1% (*P. hastatus* 2016).
+
+Temporal context therefore remains a limitation, especially for 2016. No new time-block
+permutation family is authorized.
+
+### Stop rule
+
+This tag-bias v1 family is the final new scientific audit before submission. After its two
+predeclared stationary corrections are recorded, manuscript revision is mechanical and no new
+scientific analysis family is opened.
+
 ## Submission status
 
 **JAE v0.3.3 rc2 is scientifically superseded and must not be submitted.**
