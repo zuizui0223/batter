@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-tadarida-residual-confounds-v1",
+  "frozen_date": "2026-09-27",
+  "status": "frozen before AGL/common-cell, roost-proxy exclusion, and AGL grid-sensitivity outputs were opened",
+  "trigger": "After cross-panel estimator calibration established repeatable vertical identity beyond horizontal cell-use weighting, three remaining focal Tadarida confounds were identified before manuscript rewrite: terrain datum, near-roost/departure-arrival structure, and dependence on the 5-km grid.",
+  "relation_to_existing_results": {
+    "source_search_closed": true,
+    "original_v0_3_endpoints_unchanged": true,
+    "estimator_calibration_v1_unchanged": true,
+    "this_is_post_freeze_robustness_not_original_preregistration": true,
+    "may_weaken_or_qualify_next_manuscript": true,
+    "may_not_rescue_a_failed_existing_endpoint": true
+  },
+  "source": {
+    "annotated_bitstream_url": "https://datarepository.movebank.org/server/api/core/bitstreams/a6a6db33-0aca-4902-a58d-f32980c1a3e1/content",
+    "expected_size_bytes": 3630088,
+    "expected_md5": "e0f6faedfd1f21bac222d9da430ea5d8",
+    "expected_rows": 9873
+  },
+  "fixed_common_design": {
+    "taxon": "Tadarida teniotis",
+    "session_id": "animal-id × BatDay",
+    "minimum_session_rows": 50,
+    "horizontal_crs": "EPSG:3035",
+    "vertical_field": "height_true",
+    "vertical_semantics": "height above ground level derived in the archived source workflow from the 30-m ASTER terrain model",
+    "z_edges_m": [
+      "-inf",
+      0,
+      50,
+      100,
+      200,
+      400,
+      800,
+      1600,
+      3200,
+      "inf"
+    ],
+    "jeffreys_alpha": 0.5,
+    "minimum_scored_target_fixes": 50,
+    "self_weighting": "equal session",
+    "other_weighting": "equal individual",
+    "common_cell_weighting": "For each target, restrict to horizontal cells supported by both conditional predictors. Compute each self-training session's frequency distribution over those supported cells, average those distributions equally across self sessions, renormalize, and apply the identical weights to self and other P(z|cell).",
+    "primary_vertical_identity_metric": "common-cell-weighted marginal identity",
+    "secondary_metric": "common-cell conditional advantage = conditional identity - common-cell-weighted marginal identity",
+    "calibration_null": "whole retained session-block individual-label permutation preserving all within-session x-y-z observations and the exact session-count vector per individual label",
+    "rng": "numpy PCG64"
+  },
+  "test_A_agl_common_cell": {
+    "question": "Does repeatable vertical identity persist when vertical state is terrain-relative rather than MSL?",
+    "cell_size_m": 5000,
+    "permutations": 9999,
+    "permutation_seed": 2026092901,
+    "bootstrap_replicates": 20000,
+    "bootstrap_seed": 2026093001,
+    "frozen_consistency_target": {
+      "ordinary_conditional": 0.33655976011332095,
+      "ordinary_marginal": -0.25489567533550034,
+      "ordinary_advantage": 0.5914554354488213,
+      "evaluable_individuals": 6,
+      "absolute_tolerance": 1e-12
+    },
+    "pass_rule": {
+      "minimum_evaluable_individuals": 5,
+      "calibrated_common_cell_marginal_positive": true,
+      "one_sided_permutation_tail_max": 0.05
+    },
+    "interpretation": {
+      "pass": "Supports repeatable terrain-relative vertical identity at 5 km after horizontal cell-use standardization.",
+      "fail": "Do not use AGL as evidence that the focal identity is independent of terrain datum; retain the MSL result but explicitly leave terrain-relative robustness unresolved."
+    }
+  },
+  "test_B_night_endpoint_roost_proxy_exclusion": {
+    "question": "Is the AGL vertical identity result retained after removing fixes near a predeclared x-y-only proxy for each bat's nightly departure/arrival area?",
+    "semantic_warning": "The proxy is not claimed to be the true biological roost because no source field explicitly identifying individual roost coordinates is used.",
+    "proxy_definition": {
+      "input": "Only horizontal x-y and timestamp from retained animal-id × BatDay sessions; vertical values are never used.",
+      "endpoint_fixes_per_side": 5,
+      "per_session_endpoint_set": "first 5 and last 5 finite projected fixes after sorting by timestamp",
+      "individual_proxy_center": "medoid of all pooled endpoint fixes for that individual: the observed endpoint fix minimizing the sum of Euclidean distances to all other pooled endpoint fixes",
+      "no_outcome_adaptive_trimming": true,
+      "no_source_capture_location_used": true
+    },
+    "primary_exclusion_radius_m": 1000,
+    "descriptive_radius_sensitivities_m": [
+      500,
+      2000
+    ],
+    "event_exclusion": "Remove every event whose Euclidean distance to its own individual's proxy center is strictly less than the radius. Exclude events from target and training sets symmetrically.",
+    "session_reeligibility": "Keep the original BatDay session identity but require at least 50 remaining events after exclusion; sessions falling below 50 are dropped before scoring/permutation.",
+    "primary_cell_size_m": 5000,
+    "primary_permutations": 9999,
+    "primary_permutation_seed": 2026092902,
+    "sensitivity_permutations_each": 4999,
+    "sensitivity_seeds": {
+      "500m": 2026092903,
+      "2000m": 2026092904
+    },
+    "bootstrap_replicates": 20000,
+    "bootstrap_seed": 2026093002,
+    "pass_rule": {
+      "minimum_evaluable_individuals": 5,
+      "calibrated_common_cell_marginal_positive": true,
+      "one_sided_permutation_tail_max": 0.05
+    },
+    "interpretation": {
+      "pass": "Supports repeatable AGL identity away from the predeclared night-endpoint/roost-proxy neighborhood.",
+      "fail": "Do not claim the focal AGL identity is independent of departure/arrival or near-roost spatial structure. Report the retained effect, if any, as potentially including central-place transition behavior."
+    }
+  },
+  "test_C_agl_grid_sensitivity": {
+    "question": "Is horizontally standardized AGL identity restricted to the 5-km conditioning grain?",
+    "cell_sizes_m": [
+      2500,
+      10000
+    ],
+    "permutations_each": 4999,
+    "permutation_seeds": {
+      "2500m": 2026092905,
+      "10000m": 2026092906
+    },
+    "bootstrap_replicates_each": 10000,
+    "bootstrap_seeds": {
+      "2500m": 2026093003,
+      "10000m": 2026093004
+    },
+    "endpoint": "common-cell-weighted marginal identity only is the primary scale-robustness endpoint; common-cell conditional advantage is reported descriptively",
+    "pass_rule_per_scale": {
+      "minimum_evaluable_individuals": 5,
+      "calibrated_common_cell_marginal_positive": true,
+      "one_sided_permutation_tail_max": 0.05
+    },
+    "global_interpretation": {
+      "both_scales_pass": "May state that focal terrain-relative vertical identity is detectable across the tested 2.5–10-km horizontal grains.",
+      "exactly_one_scale_pass": "State explicit scale dependence; do not claim broad grain robustness.",
+      "neither_scale_pass": "Restrict the focal terrain-relative statement to the frozen 5-km analysis."
+    },
+    "frozen_consistency_targets": {
+      "2500m": {
+        "ordinary_conditional": 0.765597965810336,
+        "ordinary_marginal": 0.09027353932570703,
+        "ordinary_advantage": 0.6753244264846291,
+        "evaluable_individuals": 5,
+        "absolute_tolerance": 1e-12
+      },
+      "10000m": {
+        "ordinary_conditional": -0.04500055406329954,
+        "ordinary_marginal": -0.2198245415954591,
+        "ordinary_advantage": 0.17482398753215955,
+        "evaluable_individuals": 7,
+        "absolute_tolerance": 1e-12
+      }
+    }
+  },
+  "manuscript_decision_matrix": {
+    "strongest_claim_requires": [
+      "test_A_agl_common_cell pass",
+      "test_B primary 1000-m exclusion pass",
+      "test_C both 2.5-km and 10-km scales pass"
+    ],
+    "strongest_claim": "In the focal species, repeatable vertical identity persists relative to terrain, away from the night-endpoint/roost-proxy neighborhood, and across 2.5–10-km horizontal grain.",
+    "if_A_pass_B_fail": "Terrain-relative identity is supported at 5 km, but central-place departure/arrival structure remains a viable contributor.",
+    "if_A_fail": "Do not claim terrain-relative robustness in the focal species; retain only the MSL/absolute-height evidence.",
+    "if_C_partial_or_fail": "Do not generalize the focal effect across horizontal grains beyond scales that pass.",
+    "bootstrap_role": "Individual-bootstrap intervals are mandatory descriptive uncertainty but are not an additional pass/fail criterion because the calibration test is explicitly against the finite-sample pipeline null.",
+    "no_claim_adjustment_after_output": true
+  },
+  "stop_rule": [
+    "Do not alter the endpoint-fix count, proxy-center algorithm, exclusion radii, permutation counts, seeds, cell sizes, vertical bins, smoothing, or eligibility thresholds after any output is opened.",
+    "Retain failures and contradictory radius/scale sensitivities.",
+    "Do not rewrite the manuscript's focal robustness claim until all three primary tests are complete.",
+    "No new public dataset search is authorized."
+  ]
+}

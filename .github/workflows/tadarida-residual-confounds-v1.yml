@@ -1,0 +1,42 @@
+name: tadarida-residual-confounds-v1
+
+on:
+  push:
+    branches:
+      - diagnostic/tadarida-residual-confounds-v1
+    paths:
+      - "contract/tadarida_residual_confounds_v1.json"
+      - "TADARIDA_RESIDUAL_CONFOUNDS_CONTRACT.md"
+      - "scripts/run_tadarida_residual_confounds.py"
+      - ".github/workflows/tadarida-residual-confounds-v1.yml"
+      - "pyproject.toml"
+  workflow_dispatch:
+
+jobs:
+  robustness:
+    strategy:
+      fail-fast: false
+      matrix:
+        test:
+          - roost_1000
+          - roost_500
+          - roost_2000
+          - grid_2500
+          - grid_10000
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -e .
+      - name: Run frozen residual-confound robustness
+        run: python scripts/run_tadarida_residual_confounds.py --test "${{ matrix.test }}"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tadarida-residual-confounds-${{ matrix.test }}-v1
+          path: results/tadarida_residual_confounds_${{ matrix.test }}_v1.json
+          if-no-files-found: error
