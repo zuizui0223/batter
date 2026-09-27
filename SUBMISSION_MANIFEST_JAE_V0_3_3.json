@@ -64,10 +64,8 @@
     ]
   },
   "remaining_human_input": [
-    "mint permanent versioned archive DOI for code/provenance",
-    "fill author list, affiliations, corresponding-author details and CRediT contributions",
-    "fill funding, acknowledgements and conflict-of-interest declarations",
-    "perform final journal upload"
+    "Do not submit v0.3.3 rc2.",
+    "Rewrite manuscript around calibrated vertical identity before archive DOI or journal submission."
   ],
   "ethics_provenance": {
     "status": "verified source-by-source",
@@ -80,5 +78,16 @@
       "Phyllostomus hastatus 2016",
       "Phyllostomus hastatus 2021–2023"
     ]
+  },
+  "submission_status": "scientifically_superseded_do_not_submit",
+  "superseded_by": {
+    "commit": "dfd620fb71b4457d0f2531dd9e44241932a1faf5",
+    "reason": "Post-freeze estimator calibration showed panel-specific negative null bias and that the sole marginal-dominant Phyllostomus 2022 classification disappears after common-cell horizontal standardization.",
+    "key_files": [
+      "TADARIDA_ESTIMATOR_CALIBRATION_RESULT.md",
+      "CROSS_PANEL_ESTIMATOR_CALIBRATION_RESULT.md",
+      "PAPER_FREEZE_V0_3_4_CALIBRATION_AMENDMENT.md"
+    ],
+    "next_manuscript_direction": "repeatable vertical identity beyond horizontal fidelity; estimator-calibrated inference; no qualitative conditional/marginal architecture classes"
   }
 }
