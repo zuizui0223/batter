@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "submission_id": "batter-jae-v0.3.3-rc1",
+  "date": "2026-09-27",
+  "journal_target": "Journal of Animal Ecology",
+  "backup_journal": "Movement Ecology",
+  "empirical_freeze": {
+    "status": "closed",
+    "prior_release_branch": "release/jae-v0.3.2-rc1",
+    "no_new_public_source_mining": true,
+    "no_endpoint_retuning": true
+  },
+  "scientific_content_commit": "f3381fbbd5afb425cf317410747e169e150ec49f",
+  "repository_main_before_manifest": "ea608f5aeeb3b3cb4af63c4016746110ff096d95",
+  "manuscript": {
+    "path": "manuscript/MANUSCRIPT_DRAFT_V0_3_3.md",
+    "blob_sha": "9ded4fe0eb288353ec18f5fdc9232357da42f898",
+    "ci_word_estimate": 6777,
+    "abstract_words": 261,
+    "abstract_numbered_statements": 5,
+    "keywords": 7
+  },
+  "automated_validation": {
+    "manuscript_figure_gate": {
+      "workflow": "jae-submission-v0.3.3",
+      "run_id": 36286204768,
+      "head_sha": "f3381fbbd5afb425cf317410747e169e150ec49f",
+      "conclusion": "success",
+      "artifact_id": 10920752267,
+      "artifact_name": "batter-jae-v0-3-3-figures",
+      "artifact_digest": "sha256:8b34fd6b9868f933f77b757d0cf50bc759e6bc4281ef6209254b6f1b3f9cc26a"
+    },
+    "anonymous_review_pdf": {
+      "workflow": "jae-review-pdf-v0.3.3",
+      "run_id": 36286204727,
+      "head_sha": "f3381fbbd5afb425cf317410747e169e150ec49f",
+      "conclusion": "success",
+      "artifact_id": 10920083363,
+      "artifact_name": "batter-jae-review-manuscript-v0-3-3",
+      "artifact_digest": "sha256:49cdda456748d0f4c65998e9a516866890d05bccfe8808861238374827ad5277",
+      "rendered_pages": 23,
+      "visual_inspection": "passed: no clipping, overlap or broken glyphs observed"
+    }
+  },
+  "key_blobs": {
+    "scripts/check_jae_submission.py": "cbe4466d7bc6f25221ac1f8adbf1c845c3c5af64",
+    "scripts/plot_jae_submission_figures.py": "0ee33abfa46024e1d8fb3c371f4a460906ab6991",
+    "scripts/prepare_jae_review_markdown.py": "f535dc5ae5b49098fc80fff9633b15fe6b7c02c4",
+    "manuscript/jae_review_header.tex": "bcadcb2d4597239e6ef82ad166ce69f9ee980d45",
+    ".github/workflows/jae-submission-v0.3.3.yml": "adc017125b268b9601b6156792a1c38b0e355078",
+    ".github/workflows/jae-review-pdf-v0.3.3.yml": "f3a85b990a868aa294e5a40a2921d96ba68b4000"
+  },
+  "claim_boundary": {
+    "central_claim": "Individual vertical identity can be conditional-dominant or marginal-dominant across bat systems and temporal contexts.",
+    "focal_residual_map_supported": false,
+    "focal_residual_map_p": 0.16046626984126985,
+    "prohibited": [
+      "stable individual-specific cell-by-height route map as demonstrated mechanism",
+      "personality",
+      "learning",
+      "adaptive optimality",
+      "verified foraging specialization",
+      "universal environmental mechanism"
+    ]
+  },
+  "remaining_human_input": [
+    "mint permanent versioned archive DOI for code/provenance",
+    "fill author list, affiliations, corresponding-author details and CRediT contributions",
+    "fill funding, acknowledgements and conflict-of-interest declarations",
+    "confirm original-source ethics/permit citations",
+    "perform final journal upload"
+  ]
+}
