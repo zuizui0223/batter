@@ -181,11 +181,51 @@ Retain nats/fix for exact statistical reporting. Entropy-normalized calibrated g
 Supporting Information only because the ratio is not mutual information, is not variance
 explained and can exceed one.
 
+## Cross-panel confound audit v1
+
+The rc3 package was placed on scientific hold before two additional result families were opened.
+Both families were frozen before output and are now complete.
+
+### Endpoint-neighbourhood exclusion
+
+At the predeclared 1-km radius, four of five comparative panels pass. *Eidolon* retains a strong
+calibrated excess (+0.390; p=0.0002) but fails because n=11 is below the frozen minimum 15.
+The earlier focal *Tadarida* result remains FAIL (p=0.1109).
+
+Across the six paper panels, the endpoint audit therefore passes in 4/6, fails inferentially in
+*Tadarida*, and fails by sample-size gate in *Eidolon*. Central-place/end-point structure is not a
+general explanation, but it is not universally excluded.
+
+### Effect-translation null calibration
+
+Pairwise self-identification exceeds its own whole-session exchangeability null in five panels:
+*Tadarida* p=0.0189 and *Eidolon*, *Hypsignathus*, *P. hastatus* 2022 and 2023 p=0.0002.
+*P. hastatus* 2016 does not pass (p=0.1168).
+
+The focal AGL raw mean absolute separation of 256.459 m has a non-zero null mean of 133.733 m.
+The calibrated excess is 122.727 m, p=0.0297, so the metre-scale translation survives when
+reported against its correct baseline.
+
+### Scientific revision
+
+The audit is incorporated in `manuscript/MANUSCRIPT_DRAFT_V0_3_5.md`.
+
+Working title:
+
+> **Repeatable vertical identity in bat airspace persists after coarse horizontal occupancy is
+> standardized**
+
+v0.3.4 rc3 remains the immutable pre-audit packaging baseline. v0.3.5 is the current scientific
+candidate and must pass its manuscript/figure and anonymous-PDF gates before the submission hold
+is released.
+
 ## Submission status
 
 **JAE v0.3.3 rc2 is scientifically superseded and must not be submitted.**
 
-Current manuscript: `manuscript/MANUSCRIPT_DRAFT_V0_3_4.md`.
+Current scientific candidate: `manuscript/MANUSCRIPT_DRAFT_V0_3_5.md`.
+
+The v0.3.4 rc3 package is retained as the pre-audit baseline and must not be submitted as the final scientific version.
 
 Main-side validation at scientific-content commit `29c18a9f3c29ee2f561e0f7d28cd340fcc55aa22`:
 
