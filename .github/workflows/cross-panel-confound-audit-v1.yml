@@ -1,23 +1,8 @@
 name: cross-panel-confound-audit-v1
 
+# Frozen result family. The canonical successful run is 36317089590.
+# Manual-only after completion so manuscript/package commits cannot rerun the scientific audit.
 on:
-  pull_request:
-    branches:
-      - main
-    paths:
-      - "contract/cross_panel_endpoint_exclusion_v1.json"
-      - "contract/effect_translation_null_calibration_v1.json"
-      - "CROSS_PANEL_ENDPOINT_EXCLUSION_CONTRACT.md"
-      - "EFFECT_TRANSLATION_NULL_CALIBRATION_CONTRACT.md"
-      - "CROSS_PANEL_CONFOUND_AUDIT_FREEZE_V1.md"
-      - "scripts/run_cross_panel_endpoint_exclusion.py"
-      - "scripts/run_effect_translation_null_calibration.py"
-      - "scripts/run_cross_panel_estimator_calibration.py"
-      - "scripts/run_biological_effect_translation.py"
-      - "scripts/run_new_species_replications.py"
-      - "scripts/run_eidolon_independent_replication.py"
-      - ".github/workflows/cross-panel-confound-audit-v1.yml"
-      - "pyproject.toml"
   workflow_dispatch:
 
 jobs:
