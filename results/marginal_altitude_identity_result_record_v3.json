@@ -1,0 +1,20 @@
+{
+  "schema": "batter.marginal_altitude_identity.result_record.v3",
+  "authoritative_execution": {
+    "workflow_run_id": 36286074349,
+    "workflow_job_id": 108526987467,
+    "head_sha": "78d7e77b3f9d6cf65e93ec6f779a845a6ad70b3a"
+  },
+  "result_fingerprint": "66b57b0e261530d6c2c907360fc536e1cddf609772dd809959200de1744530ad",
+  "primary": {
+    "category": "individual_specific_marginal_altitude_distribution_not_supported",
+    "observed_diagonal_mean_gain": -0.031113417970948992,
+    "null_mean": -0.219697358125321,
+    "null_q05": -0.4046749643640004,
+    "null_q95": -0.06208267548217248,
+    "one_sided_p": 0.022445436507936508,
+    "positive_diagonal_count": 4,
+    "self_distribution_strict_top1_count": 2
+  },
+  "interpretation": "Identity matching ranks unusually high relative to arbitrary source-target assignments, but own marginal altitude distributions do not improve absolute prediction over the species marginal for the frozen majority rule; marginal altitude preference alone is therefore insufficient."
+}
