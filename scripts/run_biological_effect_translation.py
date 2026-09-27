@@ -214,6 +214,7 @@ def pairwise_identification(A):
         "equal_individual_self_win_fraction":float(np.mean(vals)) if vals else None,
         "pair_count":len(rows),
         "individual_results":per_ind,
+        "session_results":session_rows,
     }
 
 
@@ -315,16 +316,27 @@ def main():
 
     entropy_rows=[]
     pair_rows=[]
-    pair_ind={}
-    # Entropy pooled over cohorts.
+    pair_sessions=[]
+    # Entropy and pairwise rows are pooled across cohorts, then sessions are
+    # averaged within the biological individual across all admitted cohorts.
     for cohort,A in arrays.items():
         for r in pooled_support_entropy(A):
             r["cohort"]=cohort; entropy_rows.append(r)
         p=pairwise_identification(A)
-        # Same individual can appear in multiple cohorts; retain cohort namespace for aggregation.
-        for iid,v in p["individual_results"].items():
-            pair_ind[f"{cohort}::{iid}"]=v
+        for r in p["session_results"]:
+            r["cohort"]=cohort
+            pair_sessions.append(r)
         pair_rows.append(p["pair_count"])
+
+    pair_ind={}
+    for iid in sorted({r["individual"] for r in pair_sessions}):
+        rs=[r for r in pair_sessions if r["individual"]==iid]
+        pair_ind[iid]={
+            "win_fraction":float(np.mean([r["win_fraction"] for r in rs])),
+            "mean_pairwise_gain":float(np.mean([r["mean_pairwise_gain"] for r in rs])),
+            "evaluable_sessions":len(rs),
+            "cohorts":sorted({r["cohort"] for r in rs}),
+        }
 
     mean_entropy,entropy_per=aggregate_equal_individual(entropy_rows,"entropy_nats")
     observed_cc=float(inp["common_cell_marginal"])
