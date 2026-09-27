@@ -32,9 +32,12 @@ Key results:
 
 ## Manuscript and figures
 
-JAE v0.3.5 manuscript/figure workflow:
-- run: **36322870626**
+JAE v0.3.5 manuscript/figure workflow (final main figure build):
+- run: **36323405231**
+- head: `f71338069874fb02b8238602f05e562db7f1feee`
 - conclusion: **success**
+- artifact: `10933407021`
+- digest: `sha256:9635be7a309d72948d95b1cc184370c7971445a89bfbc7bdb6a931c98e8a126f`
 - manuscript CI word estimate: **7,047**
 - abstract: **271 words**
 - numbered abstract statements: **5**
@@ -43,9 +46,12 @@ JAE v0.3.5 manuscript/figure workflow:
 
 ## Anonymous review PDF
 
-JAE v0.3.5 review-PDF workflow:
-- run: **36322873490**
+JAE v0.3.5 review-PDF workflow (main):
+- run: **36323197108**
+- head: `7166ebf4e849476a4717102472da057ba3fb8c1f`
 - conclusion: **success**
+- artifact: `10932923119`
+- digest: `sha256:7b33395d7fde9d6c75528b0e7022463bb4484320486637d1e8df5cb1b3d83b4e`
 - anonymity guard: **PASS**
 - rendered pages: **24**
 - page size: US Letter
@@ -79,4 +85,4 @@ Not established:
 - finalize CITATION.cff or .zenodo.json;
 - enable GitHub repository in Zenodo and mint the version DOI;
 - insert DOI into title page;
-- final visual inspection/upload.
+- final Journal of Animal Ecology upload.
