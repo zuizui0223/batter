@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-cross-panel-estimator-calibration-v1",
+  "workflow_run_id": 36292039473,
+  "head_sha": "6042cc858a99ebbd2eb2ad307f5d16dc7801f101",
+  "status": "all five non-Tadarida panels completed successfully; Tadarida from separately frozen focal calibration",
+  "rows": [
+    {
+      "panel": "tadarida",
+      "n": 6,
+      "raw_adv": 0.37555625006858145,
+      "cc_marg": 0.37930589754175675,
+      "cc_adv": 0.04873467252497423,
+      "null_cc_adv": -0.23335482777160188,
+      "cal_cc_adv": 0.2820895002965761,
+      "p_upper": 0.0127,
+      "boot_lo": -0.042420469114559156,
+      "boot_hi": 0.2030960518220483,
+      "cc_marg_p": 0.0005
+    },
+    {
+      "panel": "eidolon",
+      "n": 20,
+      "raw_adv": 0.21688064216261765,
+      "cc_marg": 0.17679556925459966,
+      "cc_adv": 0.042187837383457646,
+      "null_cc_adv": -0.038648608576897316,
+      "cal_cc_adv": 0.08083644596035497,
+      "p_upper": 0.006,
+      "boot_lo": 0.0031585992055124705,
+      "boot_hi": 0.09009401684891757,
+      "cc_marg_p": 0.0002
+    },
+    {
+      "panel": "hypsignathus",
+      "n": 24,
+      "raw_adv": 0.04998928924756515,
+      "cc_marg": 0.022237567805763,
+      "cc_adv": 0.007091458935667669,
+      "null_cc_adv": -0.0354023060788311,
+      "cal_cc_adv": 0.04249376501449877,
+      "p_upper": 0.0002,
+      "boot_lo": -0.0028087747113187595,
+      "boot_hi": 0.017181932773716196,
+      "cc_marg_p": 0.0002
+    },
+    {
+      "panel": "phyllostomus_2022",
+      "n": 33,
+      "raw_adv": -0.1201443865229505,
+      "cc_marg": 0.049154571334488285,
+      "cc_adv": 0.00655937908437785,
+      "null_cc_adv": -0.05944021525487301,
+      "cal_cc_adv": 0.06599959433925086,
+      "p_upper": 0.0002,
+      "boot_lo": -0.027934129639606793,
+      "boot_hi": 0.052812626236191734,
+      "cc_marg_p": 0.0002
+    },
+    {
+      "panel": "phyllostomus_2023",
+      "n": 16,
+      "raw_adv": 0.020040662262257335,
+      "cc_marg": 0.03251739539282026,
+      "cc_adv": 0.0008044055653101071,
+      "null_cc_adv": -0.039645562721246745,
+      "cal_cc_adv": 0.04044996828655685,
+      "p_upper": 0.0144,
+      "boot_lo": -0.013362847058879843,
+      "boot_hi": 0.015756929213801625,
+      "cc_marg_p": 0.0002
+    },
+    {
+      "panel": "phyllostomus_2016",
+      "n": 10,
+      "raw_adv": 0.041130304890317895,
+      "cc_marg": -0.003910474764283787,
+      "cc_adv": 0.06149990594224436,
+      "null_cc_adv": -0.160178686694292,
+      "cal_cc_adv": 0.22167859263653636,
+      "p_upper": 0.0036,
+      "boot_lo": -0.04367771035994654,
+      "boot_hi": 0.16705531441410643,
+      "cc_marg_p": 0.0422
+    }
+  ],
+  "synthesis": {
+    "original_multiple_architectures_claim_robust": false,
+    "phyllostomus_2022_marginal_dominance_survives_common_cell_weighting": false,
+    "all_panels_show_positive_calibrated_common_cell_advantage": true,
+    "all_panels_show_common_cell_marginal_above_panel_specific_null": true,
+    "raw_common_cell_advantage_small_across_panels": true,
+    "new_central_claim": "Repeatable individual vertical identity persists after horizontal cell-use standardization across six panels from four bat taxa; the original conditional-versus-marginal architecture classes are not robust to estimator calibration.",
+    "submission_status": "hold until manuscript is reframed"
+  },
+  "artifacts": {
+    "eidolon": {
+      "id": 10922124498,
+      "digest": "sha256:b240927ccf7c6261baf1b9871f79f344ab07b79b1e55b23675bccb82d3d17429"
+    },
+    "hypsignathus": {
+      "id": 10923046352,
+      "digest": "sha256:a2c996f580f87814b2a96c68b79b43dacf76ea184107f243dbd6a30ddf6ebbc6"
+    },
+    "phyllostomus_2022": {
+      "id": 10922527812,
+      "digest": "sha256:73028f1724ed4f3230266fd78f4fb0a0414068b155e03b6270e7b0d6f78fcf06"
+    },
+    "phyllostomus_2023": {
+      "id": 10922790939,
+      "digest": "sha256:aba3252bc368872cc95457287c82677b54a04fe3c58cb330837f8a34a8914c48"
+    },
+    "phyllostomus_2016": {
+      "id": 10922397933,
+      "digest": "sha256:29d7d5d109238d7b1e69a97996537d03c1e1dec3804b8da17d2718993b7830e5"
+    }
+  }
+}
