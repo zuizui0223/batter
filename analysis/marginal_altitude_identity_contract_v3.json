@@ -1,0 +1,40 @@
+{
+  "schema": "batter.marginal_altitude_identity.contract.v3",
+  "frozen_date": "2026-09-27",
+  "role": "post-v2 explanatory decomposition; not independent confirmation",
+  "trigger": "v2 did not support residual individual-by-location interaction after marginal altitude preference was controlled",
+  "inherited": {
+    "source_contract": "analysis/individual_vertical_strategy_contract_v1.json",
+    "source_md5": "570872ab7aba674b9bdc2f2ee6044a71",
+    "temporal_split": "same early/late split",
+    "z_bins": "same fixed MSL altitude bins",
+    "individual_count": 8,
+    "jeffreys_alpha": 0.5,
+    "primary_lambda": 20,
+    "sensitivity_lambdas": [
+      5,
+      50
+    ]
+  },
+  "model": {
+    "species_marginal": "Equal-individual mean of Jeffreys-smoothed early P_i(z).",
+    "individual_marginal": "P_i(z) = (raw early individual z counts + lambda * P_species(z)) / (n_i + lambda)."
+  },
+  "primary_test": {
+    "pairwise_gain": "For source individual i and target late individual j, mean log P_i(z) - log P_species(z).",
+    "observed": "mean identity-matched diagonal gain across eight individuals",
+    "null": "all 8! permutations of source identity assigned to late target identity",
+    "one_sided_p": "fraction of all permutations with assigned mean gain >= observed diagonal mean",
+    "support_rule": "P <= 0.05 and at least 6 of 8 diagonal gains > 0",
+    "interpretation_if_pass": "stable individual-specific marginal altitude distributions explain a substantial component of the v1 identity-transfer signal",
+    "interpretation_if_fail": "marginal altitude preference alone does not explain the v1 identity-transfer signal"
+  },
+  "prohibited": [
+    "independent replication",
+    "height above ground",
+    "causal habitat preference",
+    "personality or cognition",
+    "adaptive significance",
+    "post-hoc change to lambda or z bins after v3 output"
+  ]
+}
