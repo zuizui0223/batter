@@ -229,13 +229,18 @@ def shared_stationary_support(candidates,cell_m,min_ind,min_per_ind,min_total_in
 
 def temporal_overlap(records):
     by=defaultdict(list)
+    sessions=defaultdict(set)
     for r in records:
         by[(r["cohort"],r["iid"])].append(r["t"])
+        sessions[(r["cohort"],r["iid"])].add(r["session"])
 
     pair_rows=[]
     cohorts=sorted({c for c,_ in by})
     for cohort in cohorts:
-        ids=sorted(i for c,i in by if c==cohort)
+        ids=sorted(
+            i for c,i in by
+            if c==cohort and len(sessions[(c,i)])>=2
+        )
         windows={iid:(min(by[(cohort,iid)]),max(by[(cohort,iid)])) for iid in ids}
         for i in range(len(ids)):
             for j in range(i+1,len(ids)):
