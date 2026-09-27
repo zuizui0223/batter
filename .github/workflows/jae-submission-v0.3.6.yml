@@ -1,0 +1,42 @@
+name: jae-submission-v0.3.6
+
+on:
+  push:
+    branches:
+      - revision/jae-v0.3.6-tag-bias
+      - main
+    paths:
+      - "manuscript/MANUSCRIPT_DRAFT_V0_3_6.md"
+      - "manuscript/TITLE_PAGE_TEMPLATE_V0_3_6.md"
+      - "results/calibrated_vertical_identity_v0_3_6.csv"
+      - "results/endpoint_exclusion_v0_3_6.csv"
+      - "results/tag_altitude_bias_shape_v1.csv"
+      - "results/tag_altitude_bias_audit_v1_summary.json"
+      - "results/individual_vertical_strategy_result_v1.json"
+      - "results/spatial_interaction_refinement_result_v2.json"
+      - "scripts/check_jae_submission_v0_3_6.py"
+      - "scripts/plot_jae_v0_3_6_figures.py"
+      - ".github/workflows/jae-submission-v0.3.6.yml"
+      - "pyproject.toml"
+  workflow_dispatch:
+
+jobs:
+  submission-gate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -e ".[figure]"
+      - name: Check JAE v0.3.6 manuscript gates
+        run: python scripts/check_jae_submission_v0_3_6.py
+      - name: Build JAE v0.3.6 figures
+        run: python scripts/plot_jae_v0_3_6_figures.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: batter-jae-v0-3-6-figures
+          path: figures/submission_v0_3_6/
+          if-no-files-found: error
