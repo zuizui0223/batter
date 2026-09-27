@@ -46,10 +46,8 @@ def main() -> int:
     # the review manuscript. The non-anonymous title page retains the final
     # repository/archive information for the editorial office.
     review_text = review_text.replace(
-        "the public GitHub repository \`zuizui0223/batter\`. A permanent versioned archive DOI "
-        "should be minted from the final submission release before journal submission.",
-        "an anonymous code and provenance archive prepared for peer review. The permanent "
-        "versioned archive citation will be supplied to the journal separately."
+        "`zuizui0223/batter`",
+        "[code repository anonymized for peer review]",
     )
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
