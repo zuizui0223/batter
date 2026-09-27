@@ -147,7 +147,8 @@ def fig6():
     for i,r in enumerate(rr):
         ax.plot([i,i],[null[i],obs[i]],linewidth=0.8)
         verdict="PASS" if r["passes"]=="true" else ("FAIL n" if r["fail_reason"]=="n_gate" else "FAIL p")
-        ax.text(i,max(obs[i],null[i])+0.04,verdict,ha="center",fontsize=8)
+        ax.text(i,max(obs[i],null[i])+0.025,verdict,ha="center",fontsize=8)
+    ax.set_ylim(min(null)-0.03,max(obs)+0.075)
     ax.axhline(0,linewidth=0.8)
     ax.set_xticks(x,[r["label"] for r in rr],rotation=24,ha="right")
     ax.set_ylabel("Common-cell vertical identity (nats/fix)")
