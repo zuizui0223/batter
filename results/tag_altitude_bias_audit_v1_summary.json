@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "study_id": "batter-tag-altitude-bias-audit-v1",
-  "status": "primary_complete_secondary_stationary_pending",
+  "status": "complete",
   "preflight": {
     "workflow_run_id": 36325288331,
     "head_sha": "c059e7567469b00074b3a857608f56f4ccbc73e3",
@@ -144,7 +144,36 @@
     "cross_panel": "Additive constant tag/device altitude offsets are not a general explanation because five panels retain calibrated vertical-distribution shape identity after session-median centering.",
     "tadarida": "Focal Tadarida does not retain identity after session centering; its absolute vertical-location component may be biological, device-related, or both.",
     "metre_translation": "The focal 256-m AGL separation is demoted from headline biological evidence and may be retained only as a raw translation with additive-offset caveat.",
-    "timing": "No new time-block permutation family is opened; tracking-window overlap is reported as a limitation."
+    "timing": "No new time-block permutation family is opened; tracking-window overlap is reported as a limitation.",
+    "stationary": "In both structurally eligible panels, empirical stationary-height offset correction retains calibrated vertical identity (p=0.0002 in each), corroborating the primary conclusion that additive device offsets are not a general explanation.",
+    "final_stop": "Tag-altitude-bias audit v1 is complete. No further new scientific audit family is authorized before submission."
   },
-  "secondary_stationary": null
+  "secondary_stationary": {
+    "workflow_run_id": 36327934667,
+    "head_sha": "e4b65a94ff7d03b2b9a7b1462f85775084ff4145",
+    "runtime": "macos-latest",
+    "result": "2_of_2_structurally_eligible_panels_retain_signal_after_stationary_offset_correction",
+    "rows": [
+      {
+        "panel": "hypsignathus",
+        "offset_individuals": 12,
+        "evaluable_individuals_after_correction": 10,
+        "median_absolute_offset_m": 4.637500000000003,
+        "observed": 0.020766394393039185,
+        "null_mean": -0.04638258911471718,
+        "calibrated_excess": 0.06714898350775636,
+        "p_upper": 0.0002
+      },
+      {
+        "panel": "phyllostomus_2016",
+        "offset_individuals": 11,
+        "evaluable_individuals_after_correction": 7,
+        "median_absolute_offset_m": 2,
+        "observed": 0.15980963770227982,
+        "null_mean": -0.22101214677439232,
+        "calibrated_excess": 0.38082178447667214,
+        "p_upper": 0.0002
+      }
+    ]
+  }
 }
