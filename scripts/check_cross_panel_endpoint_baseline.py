@@ -2,6 +2,12 @@
 from __future__ import annotations
 import argparse
 import json
+from pathlib import Path
+import sys
+
+ROOT=Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0,str(ROOT))
 
 import scripts.run_cross_panel_endpoint_exclusion as ep
 import scripts.run_cross_panel_estimator_calibration as cal
