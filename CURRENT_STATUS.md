@@ -195,7 +195,10 @@ Main-side validation at scientific-content commit `29c18a9f3c29ee2f561e0f7d28cd3
 - anonymous double-spaced line-numbered review PDF: workflow success, 22 pages;
 - all figure and review-PDF pages visually inspected.
 
-The v0.3.4 submission package is the current JAE release-candidate basis.
+The v0.3.4 scientific content remains frozen at `29c18a9f3c29ee2f561e0f7d28cd340fcc55aa22`.
+The rc1 provenance baseline is `1f28e833402d3fdd7dd6ce274e5392bf253fee84`.
+A packaging-only rc2 adds a strict final-upload metadata/DOI guard and retires the superseded
+Movement Ecology PR without changing the manuscript's scientific content.
 
 ## Claim boundary
 
