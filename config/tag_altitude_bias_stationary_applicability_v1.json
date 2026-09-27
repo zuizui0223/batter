@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-tag-altitude-bias-stationary-applicability-v1",
+  "frozen_date": "2026-09-27",
+  "source_preflight": {
+    "workflow_run_id": 36325288331,
+    "head_sha": "c059e7567469b00074b3a857608f56f4ccbc73e3",
+    "numeric_vertical_values_parsed": false
+  },
+  "rule_source": "contract/tag_altitude_bias_preflight_v1.json",
+  "panels": {
+    "tadarida": {
+      "feasible": false,
+      "supported_individual_count": 0,
+      "feasibility_threshold": 5,
+      "supported_individuals": [],
+      "eligible_cohorts": [],
+      "reason": "no shared stationary 100-m cells under the frozen x-y/time rule"
+    },
+    "eidolon": {
+      "feasible": false,
+      "supported_individual_count": 4,
+      "feasibility_threshold": 10,
+      "supported_individuals": [],
+      "eligible_cohorts": [],
+      "reason": "supported individual count below frozen feasibility threshold"
+    },
+    "hypsignathus": {
+      "feasible": true,
+      "supported_individual_count": 12,
+      "feasibility_threshold": 12,
+      "supported_individuals": [
+        "7243",
+        "7247",
+        "7249",
+        "7250",
+        "7251",
+        "7254b",
+        "7446",
+        "7455",
+        "7464",
+        "7473",
+        "7481",
+        "7483"
+      ],
+      "eligible_cohorts": [
+        "Lek Njoukou::2020"
+      ],
+      "supported_repeat_individuals_by_cohort": {
+        "Lek Njoukou::2020": 10
+      }
+    },
+    "phyllostomus_2022": {
+      "feasible": false,
+      "supported_individual_count": 13,
+      "feasibility_threshold": 17,
+      "supported_individuals": [],
+      "eligible_cohorts": [],
+      "reason": "supported individual count below frozen feasibility threshold"
+    },
+    "phyllostomus_2023": {
+      "feasible": false,
+      "supported_individual_count": 0,
+      "feasibility_threshold": 8,
+      "supported_individuals": [],
+      "eligible_cohorts": [],
+      "reason": "no shared stationary 100-m cells under the frozen x-y/time rule"
+    },
+    "phyllostomus_2016": {
+      "feasible": true,
+      "supported_individual_count": 11,
+      "feasibility_threshold": 5,
+      "supported_individuals": [
+        "71A0D95",
+        "71A111A",
+        "74D8954",
+        "74D8C25",
+        "74D932E",
+        "74DA92F",
+        "74DCA83",
+        "74DCBCC",
+        "74DE4E7",
+        "74F9F83",
+        "74FE24E"
+      ],
+      "eligible_cohorts": [
+        "La Gruta::2016"
+      ],
+      "supported_repeat_individuals_by_cohort": {
+        "La Gruta::2016": 7
+      }
+    }
+  },
+  "stop_rule": "This applicability file was frozen after x-y/time-only preflight and before any stationary-height correction output. It may not be changed to admit additional panels."
+}
