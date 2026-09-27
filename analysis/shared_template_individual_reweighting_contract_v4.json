@@ -1,0 +1,43 @@
+{
+  "schema": "batter.shared_template_individual_reweighting.contract.v4",
+  "frozen_date": "2026-09-27",
+  "role": "post-v2/v3 explanatory decomposition; not independent confirmation",
+  "trigger": "v1 full conditional identity transfer was positive, whereas v2 residual individual-by-location interaction and v3 marginal-only altitude identity did not meet their frozen support rules.",
+  "inherited": {
+    "source_contract": "analysis/individual_vertical_strategy_contract_v1.json",
+    "source_md5": "570872ab7aba674b9bdc2f2ee6044a71",
+    "geometry": "same 18 frozen 5-km cells",
+    "temporal_split": "same early/late split",
+    "z_bins": "same fixed MSL altitude bins",
+    "individual_count": 8,
+    "jeffreys_alpha": 0.5,
+    "primary_lambda": 20,
+    "sensitivity_lambdas": [
+      5,
+      50
+    ]
+  },
+  "model": {
+    "shared_spatial_template": "P_species(z|cell), the equal-individual early species conditional distribution.",
+    "species_marginal": "P_species(z), the equal-individual early marginal distribution.",
+    "individual_marginal": "P_i(z) shrunk toward P_species(z) by lambda equivalent events.",
+    "reweighted_shared_template": "P_i_reweight(z|cell) proportional to P_species(z|cell) * P_i(z)/P_species(z). No individual-by-cell residual is fitted."
+  },
+  "primary_test": {
+    "pairwise_gain": "For source individual i and target late individual j, mean log P_i_reweight(z|cell) - log P_species(z|cell).",
+    "observed": "mean identity-matched diagonal gain across eight individuals",
+    "null": "all 8! permutations of source individual reweightings assigned to late target identities",
+    "one_sided_p": "fraction of all permutations with assigned mean gain >= observed diagonal mean",
+    "support_rule": "P <= 0.05 and at least 6 of 8 diagonal gains > 0",
+    "interpretation_if_pass": "individual specificity is largely expressible as individual-specific reweighting of a shared species spatial template, without requiring an independently supported individual-by-location residual interaction",
+    "interpretation_if_fail": "the v1 identity signal is not captured by either marginal-only, residual-spatial, or shared-template reweighting decompositions"
+  },
+  "prohibited": [
+    "independent replication",
+    "height above ground",
+    "individual-specific habitat selection mechanism",
+    "personality, learning or cognition",
+    "adaptive or fitness interpretation",
+    "post-hoc change to lambda, cells, bins, or split after v4 output"
+  ]
+}
