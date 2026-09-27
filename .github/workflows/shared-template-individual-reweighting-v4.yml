@@ -1,0 +1,44 @@
+name: Shared-template individual reweighting v4
+
+on:
+  push:
+    branches:
+      - study/individual-vertical-strategy-v1
+    paths:
+      - 'analysis/shared_template_individual_reweighting_contract_v4.json'
+      - 'analysis/run_shared_template_individual_reweighting_v4.py'
+      - 'tests/test_shared_template_individual_reweighting_v4.py'
+      - '.github/workflows/shared-template-individual-reweighting-v4.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  analysis:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install
+        run: pip install numpy pyproj pytest
+      - name: Contract tests
+        run: pytest -q tests/test_shared_template_individual_reweighting_v4.py
+      - name: Run explanatory v4
+        run: cd analysis && python run_shared_template_individual_reweighting_v4.py
+      - name: Validate
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=json.loads(Path('results/shared_template_individual_reweighting_result_v4.json').read_text())
+          assert p['individual_count']==8
+          assert p['primary']['identity_permutation_test']['permutation_count']==40320
+          assert p['v1_v2_v3_unchanged'] is True
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: shared-template-individual-reweighting-v4
+          path: results/shared_template_individual_reweighting_result_v4.json
+          if-no-files-found: error
