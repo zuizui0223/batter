@@ -76,11 +76,14 @@ Therefore the previous “multiple predictive architectures” synthesis is supe
 
 ## New paper-level synthesis
 
-> **Across six tracking panels from four bat taxa, vertical airspace use contains repeatable
-> individual identity that persists after horizontal space-use differences are standardized.**
+> **Across six tracking panels from four bat taxa, identity-matched vertical profiles retain more
+> held-out predictive information than expected under session-level exchangeability after self
+> and other profiles are standardized to the same occupancy among the tested 5-km horizontal
+> cells.**
 
-This directly rejects a simple horizontal-fidelity explanation for the vertical individuality
-signal.
+This rejects the explanation that the cross-panel vertical signal is only a consequence of
+different occupancy among those coarse cells. It does not remove fine-scale within-cell horizontal
+or central-place structure.
 
 A secondary result is that retaining horizontal cell identity adds only a small raw increment,
 although that increment is consistently larger than the negatively shifted exchangeability null
@@ -180,15 +183,19 @@ explained and can exceed one.
 
 ## Submission status
 
-**JAE v0.3.3 rc2 is on scientific hold and must not be submitted.**
+**JAE v0.3.3 rc2 is scientifically superseded and must not be submitted.**
 
-The next manuscript version should be rebuilt around:
+Current manuscript: `manuscript/MANUSCRIPT_DRAFT_V0_3_4.md`.
 
-1. repeatable vertical identity;
-2. horizontal-standardization control;
-3. estimator-calibrated inference;
-4. explicit focal residual-map negative;
-5. no qualitative conditional/marginal architecture classes.
+Main-side validation at scientific-content commit `29c18a9f3c29ee2f561e0f7d28cd340fcc55aa22`:
+
+- manuscript CI estimate: 6,384 words;
+- abstract: 286 words in five numbered statements;
+- calibrated Figures 1–6: workflow success;
+- anonymous double-spaced line-numbered review PDF: workflow success, 22 pages;
+- all figure and review-PDF pages visually inspected.
+
+The v0.3.4 submission package is the current JAE release-candidate basis.
 
 ## Claim boundary
 
@@ -196,11 +203,14 @@ Allowed:
 
 - repeatable vertical individual identity;
 - individual non-exchangeability;
-- vertical identity beyond horizontal space-use weighting;
-- estimator-calibrated additional conditional information.
+- vertical identity beyond occupancy differences among the tested coarse horizontal cells;
+- estimator-calibrated additional conditional information;
+- descriptive pairwise vertical self-identification under common horizontal weighting.
 
 Not established:
 
+- complete removal of fine-scale horizontal fidelity;
+- independence from central-place departure/arrival structure;
 - conditional-dominant versus marginal-dominant biological classes;
 - stable individual-specific place × height maps;
 - personality, learning, adaptation or optimality;
