@@ -9,7 +9,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 LICENSE_CANDIDATES = ("LICENSE", "LICENSE.md", "LICENSE.txt")
-PLACEHOLDER = re.compile(r"\[INSERT\b|\bTBD\b|\bTODO\b", re.IGNORECASE)\nEXPECTED_VERSION = "v0.3.5"
+PLACEHOLDER = re.compile(r"\[INSERT\b|\bTBD\b|\bTODO\b", re.IGNORECASE)
+EXPECTED_VERSION = "v0.3.5"
 
 
 def fail(message: str, failures: list[str]) -> None:
@@ -25,6 +26,7 @@ def main() -> int:
 
     cff = ROOT / "CITATION.cff"
     zenodo = ROOT / ".zenodo.json"
+
     if not cff.exists() and not zenodo.exists():
         fail("no release metadata: create CITATION.cff or .zenodo.json", failures)
     if cff.exists() and zenodo.exists():
@@ -37,6 +39,9 @@ def main() -> int:
         for key in ("cff-version:", "title:", "type:", "authors:", "version:", "date-released:"):
             if key not in text:
                 fail(f"CITATION.cff missing required release field: {key}", failures)
+        version_match = re.search(r"(?m)^version:\s*['\"]?([^'\"\s]+)['\"]?\s*$", text)
+        if not version_match or version_match.group(1) != EXPECTED_VERSION:
+            fail(f"CITATION.cff version must be {EXPECTED_VERSION}", failures)
 
     if zenodo.exists():
         try:
@@ -51,10 +56,13 @@ def main() -> int:
                 fail(".zenodo.json missing title", failures)
             if not payload.get("creators"):
                 fail(".zenodo.json missing creators", failures)
+            if payload.get("version") != EXPECTED_VERSION:
+                fail(f".zenodo.json version must be {EXPECTED_VERSION}", failures)
 
     template = ROOT / "CITATION.cff.template"
-    if template.exists() and cff.exists() and template.read_text(encoding="utf-8") == cff.read_text(encoding="utf-8"):
-        fail("CITATION.cff is still identical to the placeholder template", failures)
+    if template.exists() and cff.exists():
+        if template.read_text(encoding="utf-8") == cff.read_text(encoding="utf-8"):
+            fail("CITATION.cff is still identical to the placeholder template", failures)
 
     if failures:
         print("Zenodo/GitHub release gate: BLOCKED")
@@ -63,7 +71,7 @@ def main() -> int:
         return 1
 
     print("Zenodo/GitHub release gate: READY")
-    print("License and release metadata are present with no obvious placeholders.")
+    print(f"License and {EXPECTED_VERSION} release metadata are present with no obvious placeholders.")
     print("This check does not verify whether the repository has been enabled in the user's Zenodo account.")
     return 0
 
