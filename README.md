@@ -21,8 +21,9 @@ Crucially, this remains true after self and other vertical profiles are integrat
 
 Therefore the main ecological conclusion is:
 
-> **Repeatable individual vertical identity in bat airspace is not reducible to horizontal
-> space-use fidelity.**
+> **Repeatable individual vertical identity in bat airspace persists after self and other
+> profiles are standardized to the same occupancy among the tested 5-km horizontal cells. It
+> therefore cannot be reduced to occupancy differences among those cells alone.**
 
 ## Why the claim changed
 
@@ -82,12 +83,16 @@ No new source search belongs in the current paper programme.
 
 ## Submission status
 
-The previous JAE v0.3.3 rc2 package is scientifically superseded and should not be submitted.
+The previous JAE v0.3.3 rc2 package is scientifically superseded and must not be submitted.
 
-The next manuscript must be reframed around vertical identity beyond horizontal fidelity.
+The current manuscript is `manuscript/MANUSCRIPT_DRAFT_V0_3_4.md`, reframed around vertical
+identity after common coarse horizontal occupancy weighting. Its JAE manuscript/figure gate and
+anonymous review-PDF workflow pass on main.
 
 ## Claim boundary
 
-The analyses concern vertical flight/airspace use and predictive individual identity. They do not
-by themselves establish foraging, personality, learning, optimality, stable learned routes or a
-universal causal environmental mechanism.
+The analyses concern vertical flight/airspace use and predictive individual identity. Common-cell
+weighting removes occupancy differences among the tested horizontal cells, not all fine-scale
+horizontal fidelity. The analyses do not by themselves establish independence from central-place
+structure, foraging, personality, learning, optimality, stable learned routes or a universal
+causal environmental mechanism.
