@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-biological-effect-translation-v1",
+  "workflow_run_id": 36296977883,
+  "head_sha": "035d1063c2331000b1129003fe78c8b4b700fdde",
+  "rows": [
+    {
+      "panel": "tadarida",
+      "observed_likelihood_multiplier": 1.4612699662729975,
+      "calibrated_multiplier": 1.8262079648310545,
+      "entropy_equivalent_ratio": 1.1350431162054293,
+      "pairwise_self_win": 0.7935185185185185,
+      "pairwise_boot_95": [
+        0.6555555555555556,
+        0.9305555555555557
+      ]
+    },
+    {
+      "panel": "eidolon",
+      "observed_likelihood_multiplier": 1.1933871031734116,
+      "calibrated_multiplier": 1.3037402973379744,
+      "entropy_equivalent_ratio": 1.0382175191972698,
+      "pairwise_self_win": 0.8579478458049886,
+      "pairwise_boot_95": [
+        0.7319841269841271,
+        0.9612811791383219
+      ]
+    },
+    {
+      "panel": "hypsignathus",
+      "observed_likelihood_multiplier": 1.022486665532488,
+      "calibrated_multiplier": 1.0789469809263463,
+      "entropy_equivalent_ratio": 0.5993028118909333,
+      "pairwise_self_win": 0.7670633735477486,
+      "pairwise_boot_95": [
+        0.6994249461620556,
+        0.8332947575138981
+      ]
+    },
+    {
+      "panel": "phyllostomus_2022",
+      "observed_likelihood_multiplier": 1.0503826972478838,
+      "calibrated_multiplier": 1.2216824345537782,
+      "entropy_equivalent_ratio": 0.3181922419250142,
+      "pairwise_self_win": 0.8416215678661566,
+      "pairwise_boot_95": [
+        0.799846529032135,
+        0.8830002927567863
+      ]
+    },
+    {
+      "panel": "phyllostomus_2023",
+      "observed_likelihood_multiplier": 1.0330518633306394,
+      "calibrated_multiplier": 1.1276375952082904,
+      "entropy_equivalent_ratio": 0.10473780277296531,
+      "pairwise_self_win": 0.7823784722222222,
+      "pairwise_boot_95": [
+        0.6587152777777777,
+        0.8651785714285714
+      ]
+    },
+    {
+      "panel": "phyllostomus_2016",
+      "observed_likelihood_multiplier": 0.9960971611855183,
+      "calibrated_multiplier": 1.309976490494006,
+      "entropy_equivalent_ratio": 0.4696267775168483,
+      "pairwise_self_win": 0.593620642701525,
+      "pairwise_boot_95": [
+        0.4954221132897604,
+        0.7038470179738562
+      ]
+    }
+  ],
+  "focal_tadarida_agl": {
+    "mean_absolute_self_other_expected_height_separation_m": 256.4593439137133,
+    "median_individual_separation_m": 144.5732455509692,
+    "bootstrap_95": [
+      69.81948409303531,
+      466.0927039794264
+    ],
+    "evaluable_sessions": 12
+  },
+  "interpretation": {
+    "pairwise_self_identification_strong_in_five_panels": "Five panels have point estimates 0.77–0.86 and individual-bootstrap intervals entirely above 0.5; the 2016 Phyllostomus panel is weaker and its interval includes 0.5.",
+    "entropy_ratio_boundary": "Entropy-equivalent ratios are normalization aids only. Values above 1 occur and must not be called percent entropy explained.",
+    "focal_meter_scale": "In Tadarida AGL, same-bat and other-bat horizontally standardized expected mean heights differ by about 256 m on average across individuals, but the effect is heterogeneous.",
+    "manuscript_use": "Lead with pairwise self-identification and focal AGL meter scale; keep nats and entropy-equivalent ratios as quantitative support rather than headline biology."
+  },
+  "artifacts": {
+    "tadarida": {
+      "id": 10924346608,
+      "digest": "sha256:5a2180ab9cdfe7f16b6bbe4c8fdc071a145c88b90bae03ede9d8f61619f4aed4"
+    },
+    "eidolon": {
+      "id": 10923991719,
+      "digest": "sha256:78db033d4e58e62f260f640e71a27c460d5de7bf7aecb45a40c33690c2b54f43"
+    },
+    "hypsignathus": {
+      "id": 10924401636,
+      "digest": "sha256:d352b954ed23eabfefa1d472c7b3a98501b07462757035db6645f6d2ced1cc56"
+    },
+    "phyllostomus_2022": {
+      "id": 10924305928,
+      "digest": "sha256:ead62d00af05767f145df4f7fdb889159e576bd5dc5e7cf817c94295562e2f1f"
+    },
+    "phyllostomus_2023": {
+      "id": 10924680320,
+      "digest": "sha256:f5ca3141d5e5b436d4da8ca465309ecfb043533e42c899b9be35d9a3ef2b8d64"
+    },
+    "phyllostomus_2016": {
+      "id": 10924260966,
+      "digest": "sha256:6b0eb1d719b4dc925681e089338f6a43a00493fa0c894259e17370161d97675d"
+    }
+  }
+}
