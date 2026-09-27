@@ -1,91 +1,77 @@
-# Individual-specific vertical strategies in European free-tailed bats
+# Individual-specific vertical-state use in European free-tailed bats
 
 ## Scientific question
 
-Do individual *Tadarida teniotis* bats retain temporally repeatable, location-conditioned vertical-use patterns that are not transferable among individuals?
+Why did the species-average x-y-conditioned vertical map fail to transfer among *Tadarida teniotis* individuals despite substantial vertical thickness?
 
 ## Starting observation
 
-The preceding ODSP analysis established two facts under a frozen 5-km x-y grid and fixed MSL-altitude bins:
+The preceding ODSP analysis established:
 
 1. species-level vertical support was descriptively thick: 4.022 effective vertical states;
 2. the pooled species-level `P(z|x,y)` failed to improve prediction for either sealed bat relative to the pooled marginal `P(z)`.
 
-That endpoint remains negative for species-level transfer.
+That species-level transfer endpoint remains negative.
 
-The present follow-up asks why.
+## v1 identity-transfer result
 
-## Prospective follow-up design
+All eight tracked bats were divided chronologically into early and late halves inside the exact 18 five-kilometre cells and fixed MSL-altitude bins inherited from ODSP.
 
-All eight tracked bats were retained. The 18 horizontal cells and vertical bins were inherited unchanged from the original frozen ODSP endpoint.
+Early individual maps were scored on every individual's later observations.
 
-Within each bat, eligible observations were divided chronologically into early and late halves.
+The identity-matched diagonal mean gain over the species-level cell-specific map was:
 
-Early data were used to construct:
+- **+0.1682 nats/event**;
+- exact 8! permutation **P = 0.000174**;
+- 6/8 individual diagonal gains positive;
+- own map strict top-1 for 5/8 individuals.
 
-- a species-level cell-specific vertical distribution;
-- an individual-specific cell distribution shrunk toward that species distribution;
-- a species marginal vertical distribution;
-- an individual marginal vertical distribution.
+Thus individual identity carried strong temporally persistent information about later vertical state.
 
-Each early individual map was then scored on every bat's late observations, giving a complete 8 × 8 source-to-target transfer matrix.
+## v2 refinement: does identity operate through location-specific vertical strategy?
 
-The primary statistic was the equal-individual mean of the identity-matched diagonal gains relative to the species-level cell-specific baseline. Its null distribution was obtained from all 8! = 40,320 assignments of early individual maps to late individual identities.
+A stricter preregistered refinement first absorbed each individual's marginal altitude distribution. The baseline for individual i became
 
-## Result
+`P_i_add(z|cell) ∝ P_species(z|cell) × P_i(z)/P_species(z)`.
 
-The identity-matched diagonal mean gain was **+0.1682 nats per late event**.
+The only remaining benefit available to the full individual model was the individual-by-cell interaction.
 
-Across all 40,320 permutations:
+Primary v2 result:
 
-- null mean = -0.0367;
-- null 5th–95th percentile = -0.1566 to +0.0707;
-- one-sided exact permutation **P = 0.000174**.
+- residual diagonal gain **+0.0240 nats/event**;
+- exact 8! permutation **P = 0.1605**;
+- 5/8 individual residual gains positive;
+- own map strict top-1 for only 1/8.
 
-Thus an individual's own earlier vertical map predicted its later vertical state much better than expected if individual identity were exchangeable.
+Frozen sensitivities were also non-supportive:
 
-At the individual level:
+- λ=5: gain -0.0330, P=0.2485;
+- λ=50: gain +0.0422, P=0.0651.
 
-- 6/8 bats had positive own-map advantage over the species-level cell-specific map;
-- 5/8 had positive own location-conditioned map versus own marginal altitude distribution;
-- 5/8 had their own early map as the strict best of all eight candidate individual maps.
+Therefore **location-specific individual vertical strategy is not supported after marginal altitude preference is controlled**.
 
-The preregistered terminal category was therefore:
+## Updated ecological interpretation
 
-**individual_specific_spatial_vertical_strategy**.
+The evidence now supports a narrower but cleaner biological statement:
 
-## Why this changes the ecological interpretation
+> Vertical-state use is temporally repeatable and individual-specific, but the present data do not show that this individuality is primarily a stable individual-by-location vertical map.
 
-The original non-transfer result is not well described as an absence of vertical organization.
+This means the species-average map can fail cross-individual transfer because individuals differ in their vertical-state distributions, even though the detailed spatial interaction is not independently identified.
 
-Instead, the combined evidence now supports a hierarchical interpretation:
+The next decomposition asks whether the individual-specific signal is concentrated in the **marginal altitude distribution itself**. That analysis is explicitly explanatory/post-v2, not a new independent confirmation.
 
-- the species occupies a vertically thick state space;
-- vertical organization is not represented well by one species-average x-y-conditioned map;
-- individual identity carries temporally persistent predictive information;
-- for a majority of individuals under the primary rule, that information includes location-conditioned vertical structure rather than only a different overall altitude distribution.
+## Claim ceiling
 
-This is consistent with individual specialization in vertical space use.
+Allowed:
+- temporally repeatable individual-specific vertical-state use;
+- poor exchangeability of individual vertical-state distributions;
+- failure of the stricter individual-by-location refinement.
 
-## What it does not show
-
-The altitude variable is GPS height above mean sea level, not height above ground. Horizontal cell conditioning helps prevent simple home-range location differences from being mistaken for a common species-level vertical map, but it does not convert MSL altitude into canopy-relative or terrain-relative flight height.
-
-The analysis also does not identify why individuals differ. Sex, reproductive state, colony membership, prey fields, weather, terrain, energetic state and learned route use remain possible explanations.
-
-## Sensitivity
-
-The identity-permutation result was robust to the two frozen shrinkage sensitivities:
-
-- λ=5: diagonal +0.1297, P=0.000942, 6/8 positive total identity gains;
-- λ=50: diagonal +0.1576, P=0.000149, 7/8 positive total identity gains.
-
-The finer decomposition into conditional-versus-marginal spatial organization was more sensitive (4/8 positive under both λ=5 and λ=50), so the strongest robust claim is **individual-specific vertical-state prediction**, with the primary λ=20 analysis additionally meeting the prespecified spatial-strategy rule.
-
-## Paper direction
-
-Working ecological claim:
-
-> A species-level vertical niche can be thick yet fail cross-individual transfer because vertical-state organization is partly individualized.
-
-This turns the previous negative transfer result into a biological question about individual specialization rather than a method failure.
+Not allowed:
+- stable individual-specific location-conditioned vertical strategy as a confirmed mechanism;
+- height above ground;
+- causal habitat preference;
+- personality, cognition or learned route use;
+- fitness consequences;
+- species-wide universality;
+- reinterpretation of the original ODSP species-level transfer endpoint as positive.
