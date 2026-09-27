@@ -1,0 +1,49 @@
+name: cross-panel-estimator-calibration-v1
+
+on:
+  push:
+    branches:
+      - diagnostic/tadarida-estimator-calibration-v1
+    paths:
+      - "contract/cross_panel_estimator_calibration_v1.json"
+      - "CROSS_PANEL_ESTIMATOR_CALIBRATION_CONTRACT.md"
+      - "scripts/run_cross_panel_estimator_calibration.py"
+      - "scripts/run_new_species_replications.py"
+      - "scripts/run_eidolon_independent_replication.py"
+      - "contract/eidolon_independent_replication_v1.json"
+      - "contract/hypsignathus_replication_v1.json"
+      - "contract/phyllostomus_replication_v1.json"
+      - "contract/phyllostomus_2023_replication_v1.json"
+      - "contract/phyllostomus_2016_dry_architecture_v1.json"
+      - ".github/workflows/cross-panel-estimator-calibration-v1.yml"
+      - "pyproject.toml"
+  workflow_dispatch:
+
+jobs:
+  calibrate:
+    strategy:
+      fail-fast: false
+      matrix:
+        panel:
+          - eidolon
+          - hypsignathus
+          - phyllostomus_2022
+          - phyllostomus_2023
+          - phyllostomus_2016
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -e .
+      - name: Run frozen panel calibration
+        run: python scripts/run_cross_panel_estimator_calibration.py --panel "${{ matrix.panel }}"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cross-panel-calibration-${{ matrix.panel }}-v1
+          path: results/cross_panel_calibration_${{ matrix.panel }}_v1.json
+          if-no-files-found: error
