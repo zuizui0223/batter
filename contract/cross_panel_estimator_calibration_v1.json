@@ -100,7 +100,8 @@
     "one-sided P(null >= observed)",
     "null-standardized deviation (observed-null mean)/null SD",
     "individual-bootstrap 95% interval",
-    "observed and null evaluable-individual counts"
+    "observed and null evaluable-individual counts",
+    "lower-tail P(null <= observed) for diagnosing marginal-dominant/negative architecture"
   ],
   "interpretation_rules": {
     "no_raw_sign_classification": "Do not call a panel conditional- or marginal-dominant from uncalibrated G_adv sign alone.",
