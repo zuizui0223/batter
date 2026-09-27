@@ -48,4 +48,4 @@ archive DOI: [INSERT PERMANENT ARCHIVE DOI].
 
 ## Word count
 
-Current v0.3.6 CI estimate: **7,047 words** under the repository counting rule. Reconfirm on the final release commit.
+Current v0.3.6 manuscript CI estimate: **7,932 words** under the repository counting rule. Reconfirm the combined journal word count after final title-page metadata are inserted.
