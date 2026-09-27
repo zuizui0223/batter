@@ -39,8 +39,19 @@ def main() -> int:
         "---",
         "",
     ]
+    review_text = "\n".join(front + cleaned).strip() + "\n"
+
+    # JAE initial submissions use double-anonymized peer review. Keep public-data
+    # DOIs visible, but suppress the author-identifying code-repository owner in
+    # the review manuscript. The non-anonymous title page retains the final
+    # repository/archive information for the editorial office.
+    review_text = review_text.replace(
+        "`zuizui0223/batter`",
+        "[code repository anonymized for peer review]",
+    )
+
     OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text("\n".join(front + cleaned).strip() + "\n", encoding="utf-8")
+    OUT.write_text(review_text, encoding="utf-8")
     print(OUT)
     return 0
 
