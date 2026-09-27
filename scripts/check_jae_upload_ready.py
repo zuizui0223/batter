@@ -73,7 +73,7 @@ def main() -> int:
     if not ORCID_RE.search(corresponding):
         failures.append("corresponding-author section has no ORCID-formatted identifier")
 
-    data_access = section(title_page, "Data accessibility")
+    data_access = section(title_page, "Data availability statement")
     if not DOI_RE.search(data_access):
         failures.append("data-accessibility section has no permanent DOI")
 
@@ -84,7 +84,7 @@ def main() -> int:
         "Acknowledgements",
         "Funding",
         "Conflict of interest",
-        "Data accessibility",
+        "Data availability statement",
     )
     for heading in required_sections:
         body = section(title_page, heading)
