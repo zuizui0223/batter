@@ -7,7 +7,7 @@ Date: 2026-09-27
 Target: **Journal of Animal Ecology — Research Article**  
 Backup: **Movement Ecology**
 
-Scientific-content commit: `f3381fbbd5afb425cf317410747e169e150ec49f`
+Scientific-content commit: `5238d60e4c3788d4aa17b56b5d10d970fe665c37`
 
 The empirical programme is closed. No additional public source mining, lowered admission gates,
 retuned scales/bins/endpoints or rescue of negative results belongs in this manuscript.
@@ -15,8 +15,8 @@ retuned scales/bins/endpoints or rescue of negative results belongs in this manu
 ## Manuscript
 
 - file: `manuscript/MANUSCRIPT_DRAFT_V0_3_3.md`
-- blob SHA: `9ded4fe0eb288353ec18f5fdc9232357da42f898`
-- CI word estimate: **6,777**
+- blob SHA: `195463fde433b91ddc0814002cf29f2d88b4ede5`
+- CI word estimate: **7,287**
 - abstract: **261 words**
 - numbered abstract statements: **5**
 - keywords: **7**
@@ -26,20 +26,26 @@ retuned scales/bins/endpoints or rescue of negative results belongs in this manu
 ### Manuscript + figures
 
 - workflow: `jae-submission-v0.3.3`
-- run: `36286204768`
+- run: `36286936357`
 - result: **success**
-- figures artifact: `10920752267`
-- digest: `sha256:8b34fd6b9868f933f77b757d0cf50bc759e6bc4281ef6209254b6f1b3f9cc26a`
+- figures artifact: `10920703685`
+- digest: `sha256:5e212ef99a2b301583733c030495ce9d6a9f19f930b085f3342bf3e5329f9d3a`
 
 ### Anonymous review PDF
 
 - workflow: `jae-review-pdf-v0.3.3`
-- run: `36286204727`
+- run: `36286936404`
 - result: **success**
-- artifact: `10920083363`
-- digest: `sha256:49cdda456748d0f4c65998e9a516866890d05bccfe8808861238374827ad5277`
-- rendered pages: **23**
-- visual inspection: **passed**; no clipping, overlap or broken glyphs observed
+- artifact: `10920074259`
+- digest: `sha256:df40dc3db69812a8dbde297495bb0b855f647adc491eebe63b45e58812372751`
+- rendered pages: **24**
+- visual inspection: **passed**; all pages inspected with no clipping, overlap or broken glyphs observed
+
+## Ethics provenance
+
+Source-study permits and institutional approvals are verified and recorded in
+`manuscript/SOURCE_ETHICS_PROVENANCE_V0_3_3.md` (blob
+`13ad840c347ba889685d30b82e7e12a95f8945a6`).
 
 ## Frozen claim boundary
 
@@ -61,5 +67,4 @@ Do not reinterpret conditional advantage as proof of a stable individual-specifi
 - final author/affiliation/corresponding-author information;
 - CRediT contributions;
 - funding, acknowledgements and conflicts;
-- final source-ethics/permit confirmation;
 - journal upload.
