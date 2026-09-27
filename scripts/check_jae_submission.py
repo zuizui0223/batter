@@ -5,7 +5,7 @@ from __future__ import annotations
 import re
 from pathlib import Path
 
-PATH = Path("manuscript/MANUSCRIPT_DRAFT_V0_3_2.md")
+PATH = Path("manuscript/MANUSCRIPT_DRAFT_V0_3_3.md")
 TEXT = PATH.read_text(encoding="utf-8")
 
 WORD_LIMIT = 8500
@@ -51,7 +51,7 @@ def main() -> int:
     total_words = len(words(TEXT))
     assert total_words <= WORD_LIMIT, total_words
 
-    required = ["Introduction", "Methods", "Results", "Discussion", "Conclusion"]
+    required = ["Introduction", "Materials and Methods", "Results", "Discussion", "Conclusion"]
     for name in required:
         assert f"## {name}" in TEXT, f"missing section: {name}"
 

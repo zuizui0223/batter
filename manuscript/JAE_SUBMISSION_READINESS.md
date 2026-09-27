@@ -1,4 +1,4 @@
-# JAE submission readiness v0.3.2
+# JAE submission readiness v0.3.3
 
 Checked: 2026-09-27
 
@@ -8,29 +8,29 @@ First shot: **Journal of Animal Ecology — Research Article**.
 
 Backup: **Movement Ecology**.
 
-## JAE format gates already implemented
+## Manuscript status
 
-- main text in English;
-- standard Introduction / Methods / Results / Discussion structure;
-- numbered abstract with five factual statements;
-- abstract CI limit: <=350 words;
-- alphabetized keywords: <=8;
-- manuscript CI word-count ceiling: <=8,500 words;
-- central claim reconciled with focal V2 negative;
-- public-data source universe frozen and closed.
+- full ecological draft: `manuscript/MANUSCRIPT_DRAFT_V0_3_3.md`;
+- CI word estimate: **6,777 words**;
+- abstract: **261 words** in five numbered factual statements;
+- keywords: **7**, alphabetized;
+- standard JAE structure: Introduction / Materials and Methods / Results / Discussion / References;
+- figure legends included in the manuscript;
+- Figures 1–6 generated reproducibly;
+- empirical programme remains frozen.
 
-The automated gate is `scripts/check_jae_submission.py`.
+The current JAE initial-submission limits are 8,500 words for Research Articles and 350 words for the numbered abstract. The automated gate is `scripts/check_jae_submission.py`.
 
 ## Scientific gates already closed
 
-- focal conditional identity repeatability;
-- focal residual-map negative retained;
+- focal early/late conditional identity repeatability;
+- focal residual-map negative retained in main text and Figure 2;
 - AGL / terrain semantic validation;
 - same-night context control;
 - pairwise alternative-individual robustness;
 - *Eidolon* independent replication;
 - *Hypsignathus* independent replication;
-- *Phyllostomus* marginal-dominant counterexample;
+- *Phyllostomus* 2022 marginal-dominant counterexample;
 - 2023 temporal panel;
 - untouched 2016 prospective 2022-like prediction failure;
 - common uplift mechanism negative;
@@ -38,36 +38,47 @@ The automated gate is `scripts/check_jae_submission.py`.
 
 No additional public-data mining belongs in this paper.
 
-## Remaining submission tasks
+## Submission package completed
 
-### Required before submission
+- [x] Full-length JAE-oriented manuscript.
+- [x] Numbered abstract and keywords.
+- [x] Verified core ecological references.
+- [x] Figure 1 conceptual framework.
+- [x] Figures 2–6 quantitative figures.
+- [x] Figure legends.
+- [x] Ethics statement.
+- [x] Data and Code Availability statement with source-data DOIs.
+- [x] Anonymous cover-letter draft.
+- [x] Separate title-page template.
+- [x] Automated JAE format gate.
+- [x] Automated anonymous review-PDF workflow.
 
-1. Inspect generated Figures 1–6 at journal size.
-2. Mint a permanent versioned archive DOI for code/provenance and replace the GitHub-only placeholder.
-3. Fill author contribution, funding, conflicts and acknowledgements on the separate title page.
+## Human-input items still required
+
+1. Mint a permanent versioned archive DOI for the code/provenance release and replace the GitHub-only placeholder.
+2. Fill final author list, affiliations, corresponding-author details and CRediT contributions.
+3. Fill funding, acknowledgements and conflict-of-interest declarations.
 4. Confirm original-source ethics/permit citations are sufficient for the journal's reanalysis policy.
-5. Render a double-spaced, continuously line-numbered anonymous review PDF.
+5. Perform one final page-level inspection of the generated anonymous review PDF and figures.
 
-### Editorial polishing
+## Claim boundary
 
-- shorten Methods implementation detail that belongs in Supporting Information;
-- make the ecological principle explicit in the first and final Introduction paragraphs;
-- keep ODSP to motivation/provenance only;
-- call G_cond - G_marg **conditional advantage**, not a latent interaction;
-- preserve prospective negative results in main text rather than hiding them in supplement.
+Use:
 
-## Cover-letter angle
+- repeatable vertical identity;
+- individual non-exchangeability;
+- marginal identity;
+- conditional identity;
+- conditional advantage;
+- conditional-dominant / marginal-dominant predictive architecture.
 
-A short optional JAE cover letter should emphasize:
+Do not claim:
 
-- individual specialization is usually treated as a magnitude, but this paper asks how identity
-  is spatially organized;
-- an outcome-blind public-data screen yields contrasting predictive architectures rather than a
-  uniformly positive result;
-- a stronger focal mechanism test and a prospective within-species prediction both fail and are
-  retained, sharpening the claim rather than rescuing it.
+- stable individual-specific cell × height maps from the focal dataset;
+- personality, learning, optimality or adaptation;
+- verified foraging specialization;
+- a universal environmental mechanism.
 
 ## Stop rule
 
-If Figures 1–6, references and availability/ethics statements are complete and the automated JAE
-gate passes, the manuscript is submission-ready under the current empirical freeze.
+After the five human-input items above are completed, submit the frozen RC to *Journal of Animal Ecology*. Do not reopen empirical source search or retune completed endpoints.
