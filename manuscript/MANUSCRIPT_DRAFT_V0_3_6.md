@@ -376,6 +376,8 @@ Xing, S., Leahy, L., Ashton, L.A., Kitching, R.L., Bonebrake, T.C. & Scheffers, 
 
 **Figure 6. Endpoint-neighbourhood robustness across six bat tracking panels.** Points show the common-cell vertical identity remaining after the predeclared 1-km endpoint-neighbourhood exclusion; crosses show the corresponding whole-session permutation-null means. Four comparative panels pass the frozen rule. *Eidolon* retains a strong calibrated signal but fails the predeclared minimum-evaluable-individual gate, while focal *Tadarida* fails its inferential tail criterion.
 
+**Figure 7. Shift-invariant vertical-distribution identity after removal of absolute altitude level.** For each panel, every retained session was median-centered before vertical binning, so any additive constant tag/device altitude offset was removed exactly. Points show observed common-cell centered-shape identity and crosses show panel-specific whole-session permutation-null means. Five panels exceed their calibrated null; focal *Tadarida teniotis* does not (p=0.5121).
+
 ## Ethics statement
 
 This study is a secondary analysis of publicly archived animal-tracking data and involved no new capture, handling or experimental manipulation of animals. The original tracking programmes were conducted under the permits and institutional approvals detailed in Materials and Methods and in the repository's source-ethics provenance ledger. The present analyses use only published tracking measurements and source animal identifiers.
@@ -385,6 +387,4 @@ This study is a secondary analysis of publicly archived animal-tracking data and
 All tracking data analysed here are publicly archived in the Movebank Data Repository. The focal *Tadarida teniotis* data are available at DOI 10.5441/001/1.52nn82r9. Independent comparative sources include *Eidolon helvum* (10.5441/001/1.k8n02jn8), *Hypsignathus monstrosus* (10.5441/001/1.278), and *Phyllostomus hastatus* panels archived under 10.5441/001/1.282, 10.5441/001/1.321 and 10.5441/001/1.322. Exact source bitstreams and checksums are recorded in the repository contracts and provenance files.
 
 All analysis code, frozen contracts, source-screen records, calibration history, result summaries and figure-generation scripts are maintained in the public GitHub repository `zuizui0223/batter`. A permanent versioned archive DOI should be minted from the final submission release before journal submission.
-
-**Figure 7. Shift-invariant vertical-distribution identity after removal of absolute altitude level.** For each panel, every retained session was median-centered before vertical binning, so any additive constant tag/device altitude offset was removed exactly. Points show observed common-cell centered-shape identity and crosses show panel-specific whole-session permutation-null means. Five panels exceed their calibrated null; focal *Tadarida teniotis* does not (p=0.5121).
 
