@@ -4,7 +4,7 @@ Date: 2026-09-27
 
 ## Status
 
-**DO NOT SUBMIT. DO NOT CREATE THE FINAL ZENODO RELEASE YET.**
+**SCIENTIFIC HOLD RESOLVED FOR v0.3.5.**
 
 The frozen v0.3.4 rc3 package remains the archival pre-audit baseline. A reviewer-facing audit
 identified two inferential gaps that can be resolved without reopening source discovery:
@@ -40,3 +40,22 @@ Scientific-content commit before this audit:
 
 Packaging baseline:
 `release/jae-v0.3.4-rc3`.
+
+## Resolution
+
+Both required audit families were frozen before output, executed, and retained without rescue.
+The completed synthesis is in `CROSS_PANEL_CONFOUND_AUDIT_RESULT_V1.md`.
+
+The manuscript was then revised to `manuscript/MANUSCRIPT_DRAFT_V0_3_5.md` with the title
+explicitly restricted to **coarse horizontal occupancy**. The completed audit shows:
+
+- 4/5 comparative panels pass the frozen 1-km endpoint-neighbourhood rule;
+- *Eidolon* retains p=0.0002 but fails the frozen post-exclusion n gate;
+- focal *Tadarida* remains FAIL at p=0.1109;
+- calibrated pairwise self-identification passes in 5/6 panels;
+- focal raw 256.459-m AGL separation has a 133.733-m null mean and 122.727-m calibrated excess,
+  p=0.0297.
+
+No additional ecological analysis is required by this v1 audit family. Final release remains
+blocked only by packaging/human metadata tasks such as visual inspection, software license,
+author metadata and Zenodo DOI.
