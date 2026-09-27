@@ -135,6 +135,22 @@
       "both_scales_pass": "May state that focal terrain-relative vertical identity is detectable across the tested 2.5–10-km horizontal grains.",
       "exactly_one_scale_pass": "State explicit scale dependence; do not claim broad grain robustness.",
       "neither_scale_pass": "Restrict the focal terrain-relative statement to the frozen 5-km analysis."
+    },
+    "frozen_consistency_targets": {
+      "2500m": {
+        "ordinary_conditional": 0.765597965810336,
+        "ordinary_marginal": 0.09027353932570703,
+        "ordinary_advantage": 0.6753244264846291,
+        "evaluable_individuals": 5,
+        "absolute_tolerance": 1e-12
+      },
+      "10000m": {
+        "ordinary_conditional": -0.04500055406329954,
+        "ordinary_marginal": -0.2198245415954591,
+        "ordinary_advantage": 0.17482398753215955,
+        "evaluable_individuals": 7,
+        "absolute_tolerance": 1e-12
+      }
     }
   },
   "manuscript_decision_matrix": {
