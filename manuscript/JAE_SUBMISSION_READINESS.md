@@ -62,12 +62,13 @@ No new public-data mining belongs in this paper.
 - anonymous double-spaced line-numbered review PDF: **22 pages**, all pages visually inspected;
 - no clipping, overlapping text or broken glyphs observed.
 
-## Required before release candidate
+## Release-candidate status
 
-1. Merge the clean v0.3.4 revision to main.
-2. Rerun manuscript/figure and PDF workflows on main.
-3. Retire superseded v0.3.3 submission workflows.
-4. Freeze a new `release/jae-v0.3.4-rc1` from the validated main commit.
+- [x] clean v0.3.4 revision merged to main;
+- [x] v0.3.4 manuscript/figure workflow passed on main;
+- [x] v0.3.4 anonymous review-PDF workflow passed on main;
+- [x] superseded v0.3.3 submission/PDF workflows retired;
+- [ ] freeze `release/jae-v0.3.4-rc1` after the final submission manifest is committed.
 
 ## Human-input items before journal upload
 
