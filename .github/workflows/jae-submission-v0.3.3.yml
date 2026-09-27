@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - revision/jae-v0.3.3-full-draft
+      - revision/jae-v0.3.3-ethics-provenance
       - main
     paths:
       - "manuscript/**"
