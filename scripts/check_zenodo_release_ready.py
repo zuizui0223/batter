@@ -10,7 +10,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 LICENSE_CANDIDATES = ("LICENSE", "LICENSE.md", "LICENSE.txt")
 PLACEHOLDER = re.compile(r"\[INSERT\b|\bTBD\b|\bTODO\b", re.IGNORECASE)
-EXPECTED_VERSION = "v0.3.5"
+EXPECTED_VERSION = "v0.3.6"
 
 
 def fail(message: str, failures: list[str]) -> None:
