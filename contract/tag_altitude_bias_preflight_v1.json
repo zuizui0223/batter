@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-tag-altitude-bias-preflight-v1",
+  "frozen_date": "2026-09-27",
+  "status": "frozen before stationary-cluster support or deployment-overlap outputs were opened",
+  "purpose": "Determine, using x-y/time and deployment metadata only, which frozen panels can support an empirical stationary-height offset correction. Numeric vertical values are prohibited in this preflight.",
+  "panels": [
+    {
+      "id": "tadarida",
+      "taxon": "Tadarida teniotis",
+      "original_evaluable_n": 6,
+      "session_rule": "animal-id × BatDay",
+      "cohort_rule": "single focal panel"
+    },
+    {
+      "id": "eidolon",
+      "taxon": "Eidolon helvum",
+      "original_evaluable_n": 20,
+      "contract": "contract/eidolon_independent_replication_v1.json"
+    },
+    {
+      "id": "hypsignathus",
+      "taxon": "Hypsignathus monstrosus",
+      "original_evaluable_n": 24,
+      "contract": "contract/hypsignathus_replication_v1.json"
+    },
+    {
+      "id": "phyllostomus_2022",
+      "taxon": "Phyllostomus hastatus",
+      "original_evaluable_n": 33,
+      "contract": "contract/phyllostomus_replication_v1.json"
+    },
+    {
+      "id": "phyllostomus_2023",
+      "taxon": "Phyllostomus hastatus",
+      "original_evaluable_n": 16,
+      "contract": "contract/phyllostomus_2023_replication_v1.json"
+    },
+    {
+      "id": "phyllostomus_2016",
+      "taxon": "Phyllostomus hastatus",
+      "original_evaluable_n": 10,
+      "contract": "contract/phyllostomus_2016_dry_architecture_v1.json"
+    }
+  ],
+  "stationary_definition": {
+    "inputs_allowed": [
+      "projected x",
+      "projected y",
+      "timestamp",
+      "frozen individual ID",
+      "frozen session ID",
+      "frozen cohort",
+      "deployment/tag identifiers from source reference metadata"
+    ],
+    "numeric_vertical_values_forbidden": true,
+    "projection": "reuse the already-frozen panel/cohort projection",
+    "neighbor_rule": "A fix is stationary-candidate only if it has both a previous and next fix in the same frozen session; both adjacent time gaps are >0 and <=1200 s; and both adjacent horizontal speeds are <=0.5 m/s.",
+    "speed_max_m_per_s": 0.5,
+    "neighbor_gap_max_s": 1200,
+    "stationary_grid_cell_m": 100,
+    "shared_cell_rule": {
+      "min_distinct_individuals": 3,
+      "min_stationary_candidate_fixes_per_individual_in_cell": 5
+    },
+    "individual_offset_support_rule": {
+      "min_stationary_candidate_fixes_across_shared_cells": 10,
+      "min_shared_cells": 1
+    }
+  },
+  "panel_feasibility_rule": {
+    "minimum_supported_individuals": "max(5, ceil(0.5 × original evaluable individual count))",
+    "cohort_requirement": "At least one originally admitted cohort must contain >=3 supported individuals each with >=2 originally eligible sessions.",
+    "role": "Determines only whether stationary-height correction is structurally estimable. Failure does not count as evidence for or against tag bias."
+  },
+  "deployment_metadata_audit": {
+    "fields_sought": [
+      "deployment_id",
+      "tag_local_identifier",
+      "tag_id",
+      "deploy_on_date",
+      "deploy_off_date"
+    ],
+    "report": "For each frozen biological individual, report distinct non-empty deployment/tag identifiers where available. No pass/fail rule."
+  },
+  "temporal_overlap_summary": {
+    "unit": "pairs of repeat individuals within the same originally admitted cohort",
+    "individual_window": "minimum to maximum timestamp across that individual's originally eligible sessions in the cohort",
+    "report": [
+      "number of individual pairs",
+      "fraction with positive tracking-window overlap",
+      "median positive overlap hours",
+      "median absolute difference in tracking-window start dates, days",
+      "25th/75th percentiles of start-date difference"
+    ],
+    "inferential_role": "descriptive limitation only; this v1 audit does not open a new time-block permutation family"
+  },
+  "stop_rule": [
+    "Do not inspect or parse numeric vertical values during preflight.",
+    "Do not change speed threshold, gap threshold, 100-m grid, shared-cell support, individual support, or panel feasibility thresholds after any preflight output is opened.",
+    "If few panels are structurally eligible for stationary correction, retain that fact and rely on the separately predeclared shift-invariant shape audit as the cross-panel primary tag-offset test.",
+    "No new source search or device metadata enrichment after output."
+  ]
+}
