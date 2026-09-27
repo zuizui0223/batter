@@ -7,7 +7,7 @@ on:
       - ".github/workflows/pairwise-null-vectorized-v1.yml"
   workflow_dispatch:
 jobs:
-  null:
+  vectorized-null:
     runs-on: ubuntu-latest
     timeout-minutes: 90
     permissions:
