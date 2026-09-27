@@ -30,12 +30,12 @@ Checked: 2026-09-27
 
 ## Automated package
 
-- [x] v0.3.6 manuscript/figure workflow success — run 36329395938;
+- [x] v0.3.6 manuscript/figure workflow success — run 36329796558;
 - [x] manuscript CI estimate 7,932 words;
 - [x] abstract 273 words in five numbered statements;
 - [x] seven keywords;
 - [x] Figures 1–7 generated and visually inspected;
-- [x] anonymous review PDF success — run 36329434589;
+- [x] anonymous review PDF success — run 36329796749;
 - [x] anonymity guard PASS;
 - [x] 26-page review PDF;
 - [x] final page-26 Figure 7 legend placement re-inspected;
