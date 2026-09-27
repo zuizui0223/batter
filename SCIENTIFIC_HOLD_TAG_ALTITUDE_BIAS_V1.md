@@ -1,36 +1,35 @@
-# Final scientific hold — tag-altitude-bias audit v1
+# Scientific submission hold — tag altitude-bias audit v1
 
 Date: 2026-09-27
 
 ## Status
 
-**ONE FINAL EMPIRICAL AUDIT BEFORE SUBMISSION.**
+**FINAL SCIENTIFIC AUDIT BEFORE SUBMISSION. DO NOT MINT THE FINAL ZENODO RELEASE YET.**
 
-JAE v0.3.5 rc1/rc2 remains the audited pre-tag-bias baseline. A remaining reviewer-facing
-alternative is that repeated individual vertical identity partly reflects a persistent
-device/tag-specific additive altitude offset because the same individual is generally tracked by
-the same deployment.
+The v0.3.5 manuscript has passed the completed cross-panel confound and effect-null audits. One
+remaining reviewer-facing alternative is being tested: a constant device/individual-specific
+vertical offset could contribute to apparent vertical identity.
 
-This hold authorizes exactly one new scientific family:
-`batter-tag-altitude-bias-audit-v1`.
+This v1 family is explicitly the final new scientific audit. After it is complete, remaining
+concerns about deployment timing, behavioural state, fine-scale horizontal structure and unknown
+device properties are handled as limitations rather than by opening new analysis families.
 
-It does not authorize new source search, new taxa, new environmental covariates, retuned grids,
-new vertical bin tuning after output, or new rescue analyses.
+## Audit logic
 
-## Planned audit
+1. Run an x-y/time-only structural preflight. No numeric vertical values are used.
+2. Freeze which panels have enough shared stationary-cluster support for an empirical
+   stationary-height offset correction.
+3. Independently of stationary-cluster availability, test a shift-invariant vertical-shape
+   fingerprint that removes each held-out session's absolute vertical location before comparing
+   candidate shapes.
+4. Summarize cohort deployment/tracking-window overlap descriptively from timestamps only.
+5. Open vertical outcomes only after the structural preflight and final decision contract are
+   frozen.
 
-1. **Primary, all six panels:** remove a training-estimated additive individual vertical shift
-   before re-binning and rerun the same common-cell identity pipeline under the existing
-   whole-session permutation designs.
-2. **Secondary where structurally identifiable:** estimate relative altitude offsets from
-   x-y/time-defined shared stationary clusters, without using altitude to define stationary
-   eligibility, then rerun the original vertical pipeline after correction.
-3. **Descriptive temporal-overlap audit:** summarize tracking-date overlap within each frozen
-   cohort using session timestamps/deployment metadata only. No outcome-dependent temporal block
-   width will be selected after results.
+## Closed dimensions
 
-## Stop rule
+No new source search, taxa, panels, terrain products, horizontal grids, endpoint radii, behavioural
+classifiers, or post-output threshold tuning is authorized.
 
-After this v1 family is completed and incorporated, **no further post-hoc empirical robustness
-families will be added before submission**. Any remaining concerns will be stated in Limitations,
-unless a reproducibility bug invalidates an already reported result.
+The current pre-audit manuscript is:
+`manuscript/MANUSCRIPT_DRAFT_V0_3_5.md`.
