@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-effect-translation-null-calibration-v1",
+  "workflow_run_id": 36317089590,
+  "contract_blob_sha": "169caf84fb96db70a937b6ecf14486c6e5eb6e1a",
+  "pairwise": [
+    {
+      "panel": "tadarida",
+      "observed": 0.7935185185185185,
+      "null_mean": 0.5075058033959102,
+      "calibrated_excess": 0.2860127151226083,
+      "p_upper": 0.0189,
+      "main_text": true
+    },
+    {
+      "panel": "eidolon",
+      "observed": 0.8579478458049886,
+      "null_mean": 0.5829392347727727,
+      "calibrated_excess": 0.27500861103221597,
+      "p_upper": 0.0002,
+      "main_text": true
+    },
+    {
+      "panel": "hypsignathus",
+      "observed": 0.7670633735477486,
+      "null_mean": 0.5407910555172238,
+      "calibrated_excess": 0.22627231803052472,
+      "p_upper": 0.0002,
+      "main_text": true
+    },
+    {
+      "panel": "phyllostomus_2022",
+      "observed": 0.8416215678661566,
+      "null_mean": 0.531721908193662,
+      "calibrated_excess": 0.30989965967249455,
+      "p_upper": 0.0002,
+      "main_text": true
+    },
+    {
+      "panel": "phyllostomus_2023",
+      "observed": 0.7823784722222222,
+      "null_mean": 0.5349493282960383,
+      "calibrated_excess": 0.24742914392618398,
+      "p_upper": 0.0002,
+      "main_text": true
+    },
+    {
+      "panel": "phyllostomus_2016",
+      "observed": 0.593620642701525,
+      "null_mean": 0.4978844760250074,
+      "calibrated_excess": 0.09573616667651763,
+      "p_upper": 0.1168,
+      "main_text": false
+    }
+  ],
+  "tadarida_agl_separation": {
+    "observed_mean_absolute_m": 256.4593439137133,
+    "observed_median_individual_m": 144.5732455509692,
+    "null_mean_m": 133.73264127560807,
+    "null_sd_m": 54.904787048930366,
+    "null_q025_m": 56.462140733521636,
+    "null_q50_m": 120.66143391427215,
+    "null_q975_m": 262.5985381300959,
+    "calibrated_excess_m": 122.72670263810525,
+    "p_upper": 0.0297,
+    "retain_headline": true
+  }
+}
