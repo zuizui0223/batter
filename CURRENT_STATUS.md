@@ -216,8 +216,18 @@ Working title:
 > standardized**
 
 v0.3.4 rc3 remains the immutable pre-audit packaging baseline. v0.3.5 is the current scientific
-candidate and must pass its manuscript/figure and anonymous-PDF gates before the submission hold
-is released.
+candidate.
+
+### Submission-readiness consequence
+
+The v0.3.5 manuscript/figure gate passed (7,047 words; 271-word abstract; Figures 1–6 generated),
+the double-anonymous review gate passed, and the 24-page review PDF plus all six figures were
+visually inspected. A Figure 6 verdict-label overlap found during visual QA was corrected and
+re-inspected.
+
+The scientific hold created for the cross-panel confound audit is therefore resolved. Remaining
+blockers are non-scientific: software licensing, final author/declaration metadata, archival DOI
+and journal upload.
 
 ## Submission status
 
