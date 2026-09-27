@@ -33,6 +33,12 @@
       "conclusion": "success",
       "anonymity_guard": "pass",
       "pages": 24
+    },
+    "final_visual_inspection": {
+      "figures_1_to_6": "passed",
+      "review_pdf_pages": 24,
+      "review_pdf": "passed",
+      "note": "Figure 6 verdict-label overlap corrected and re-inspected before rc1 freeze"
     }
   },
   "preaudit_baseline": "release/jae-v0.3.4-rc3",
