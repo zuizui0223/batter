@@ -54,11 +54,11 @@ Scientific consequence:
 ## Manuscript and figures
 
 Final v0.3.6 manuscript/figure workflow:
-- run: **36329796558**
-- head: `906a42f841e639d5a4ab1d4397c7425df250d5ab`
+- run: **36330015862**
+- head: `864a6908b09b0dcdbcb1b1468b87aa2a59cdf6cc`
 - conclusion: **success**
-- artifact: `10935342423`
-- digest: `sha256:48066b7c8e43db7862621a2ee7d1a0015c73f566c8e96ffb3fef4c5eb1e38f4c`
+- artifact: `10935526906`
+- digest: `sha256:f2aebffbc7d51b4081cd217dd9ef963cb9629b1e2e9459ad54a85667020d6e9b`
 - manuscript CI estimate: **7,932 words**
 - abstract: **273 words**
 - numbered statements: **5**
