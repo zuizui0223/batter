@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-effect-translation-null-calibration-v1",
+  "frozen_date": "2026-09-27",
+  "status": "frozen before pairwise-win or AGL-separation null outputs were opened",
+  "trigger": "The manuscript already emphasizes that finite-sample prediction-pipeline null expectations need not be zero. Two biological effect translations remained referenced to intuitive 0/0.5 baselines without their own session-label exchangeability nulls.",
+  "relation_to_existing_results": {
+    "original_effect_translation_values_are_fixed_consistency_targets": true,
+    "common_cell_primary_inference_unchanged": true,
+    "this_family_cannot_rescue_a_failed_primary_identity_endpoint": true,
+    "source_search_closed": true
+  },
+  "pairwise_self_win_null": {
+    "panels": [
+      {
+        "id": "tadarida",
+        "observed": 0.7935185185185185,
+        "permutations": 9999,
+        "seed": 20260927,
+        "source_null": "tadarida_estimator_calibration_v1 MSL whole-session label permutation"
+      },
+      {
+        "id": "eidolon",
+        "observed": 0.8579478458049886,
+        "permutations": 4999,
+        "seed": 2026092701,
+        "source_null": "cross_panel_estimator_calibration_v1"
+      },
+      {
+        "id": "hypsignathus",
+        "observed": 0.7670633735477486,
+        "permutations": 4999,
+        "seed": 2026092702,
+        "source_null": "cross_panel_estimator_calibration_v1"
+      },
+      {
+        "id": "phyllostomus_2022",
+        "observed": 0.8416215678661566,
+        "permutations": 4999,
+        "seed": 2026092703,
+        "source_null": "cross_panel_estimator_calibration_v1"
+      },
+      {
+        "id": "phyllostomus_2023",
+        "observed": 0.7823784722222222,
+        "permutations": 4999,
+        "seed": 2026092704,
+        "source_null": "cross_panel_estimator_calibration_v1"
+      },
+      {
+        "id": "phyllostomus_2016",
+        "observed": 0.593620642701525,
+        "permutations": 4999,
+        "seed": 2026092705,
+        "source_null": "cross_panel_estimator_calibration_v1"
+      }
+    ],
+    "statistic": "equal-individual mean pairwise self-win fraction; alternatives averaged within target session, sessions equally within individual, individuals equally within panel",
+    "candidate_profiles": "same common-cell weighting and candidate self/alternative profile construction as biological_effect_translation_v1",
+    "null": "apply the exact existing panel whole-session label-permutation algorithm and seed to the fixed session blocks, then recompute the entire pairwise self-win pipeline under the permuted labels",
+    "report": [
+      "observed",
+      "null mean",
+      "null SD",
+      "2.5/50/97.5% null quantiles",
+      "observed-minus-null-mean",
+      "one-sided P(null >= observed)",
+      "0.5 intuitive reference"
+    ],
+    "interpretation": "The panel-specific null mean replaces 0.5 as the inferential reference. 0.5 may remain only as an intuitive visual reference.",
+    "manuscript_rule": {
+      "calibrated_excess_positive_and_p_le_0_05": "May describe the pairwise rate as a calibrated biological translation of the already-supported identity signal.",
+      "otherwise": "Do not use that panel's pairwise rate as independent evidence; report it descriptively with its null baseline or move it to Supporting Information."
+    }
+  },
+  "tadarida_agl_absolute_separation_null": {
+    "observed_mean_absolute_separation_m": 256.4593439137133,
+    "observed_median_individual_separation_m": 144.5732455509692,
+    "evaluable_sessions": 12,
+    "vertical_axis": "height_true AGL",
+    "cell_size_m": 5000,
+    "statistic": "equal-individual mean across sessions of |self_expected_AGL - other_expected_AGL| under common self-session horizontal weights",
+    "permutation_null": "reuse the exact Tadarida AGL whole-session label-permutation design from test_A_agl_common_cell, including B=9999, seed=2026092901, fixed session blocks and label-slot multiset; recompute the full absolute-separation statistic under each permuted label assignment",
+    "permutations": 9999,
+    "seed": 2026092901,
+    "report": [
+      "observed raw separation",
+      "null mean",
+      "null SD",
+      "2.5/50/97.5% null quantiles",
+      "observed-minus-null-mean separation",
+      "one-sided P(null >= observed)"
+    ],
+    "manuscript_rule": {
+      "calibrated_excess_positive_and_p_le_0_05": "May retain metre-scale separation in the main text, but report the null mean/calibrated excess alongside the raw 256 m.",
+      "otherwise": "Remove 256 m as headline biological magnitude from abstract/main synthesis; retain only as a raw descriptive value with its non-zero null in Supporting Information."
+    },
+    "prohibited_switch": "Do not switch after output to target-error distance or another separation statistic."
+  },
+  "figure_rule": {
+    "pairwise_baseline": "plot panel-specific permutation-null means as the inferential baseline; 0.5 may be retained as a lighter intuitive reference only",
+    "separation": "if retained in main text, annotate raw, null mean, and calibrated excess rather than raw 256 m alone"
+  },
+  "stop_rule": [
+    "Do not change the observed effect definitions, session blocks, common-cell weights, candidate-profile construction, permutation unit, permutation seeds, or B after any null output is opened.",
+    "Do not treat this family as an independent confirmatory replication of the primary common-cell identity test.",
+    "Retain null means even if they make the biological effect look smaller.",
+    "Do not choose between absolute-separation calibration and target-error calibration after seeing results."
+  ]
+}
