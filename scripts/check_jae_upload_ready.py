@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Strict final-upload guard for the JAE v0.3.4 package.
+"""Strict final-upload guard for the JAE v0.3.5 package.
 
 This is intentionally separate from the scientific manuscript/figure gate.
 It should fail until human metadata and the permanent archive DOI are filled.
@@ -13,9 +13,9 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-TITLE_PAGE = ROOT / "manuscript" / "TITLE_PAGE_TEMPLATE_V0_3_4.md"
-MANIFEST = ROOT / "SUBMISSION_MANIFEST_JAE_V0_3_4.json"
-MANUSCRIPT = ROOT / "manuscript" / "MANUSCRIPT_DRAFT_V0_3_4.md"
+TITLE_PAGE = ROOT / "manuscript" / "TITLE_PAGE_TEMPLATE_V0_3_5.md"
+MANIFEST = ROOT / "SUBMISSION_MANIFEST_JAE_V0_3_5.json"
+MANUSCRIPT = ROOT / "manuscript" / "MANUSCRIPT_DRAFT_V0_3_5.md"
 
 PLACEHOLDER_PATTERNS = (
     r"\[INSERT\b",
@@ -97,13 +97,13 @@ def main() -> int:
             failures.append(f"required title-page section is empty or missing: {heading}")
 
     if failures:
-        print("JAE v0.3.4 final upload gate: BLOCKED")
+        print("JAE v0.3.5 final upload gate: BLOCKED")
         for item in failures:
             print(f" - {item}")
         print(f"\n{len(failures)} blocker(s) remain. Scientific RC content is not being re-evaluated.")
         return 1
 
-    print("JAE v0.3.4 final upload gate: READY")
+    print("JAE v0.3.5 final upload gate: READY")
     print("Human metadata placeholders are cleared and a permanent DOI is present.")
     print("This guard does not re-open or alter the frozen empirical programme.")
     return 0
