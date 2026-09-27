@@ -1,0 +1,125 @@
+name: cross-panel-confound-audit-v1
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "contract/cross_panel_endpoint_exclusion_v1.json"
+      - "contract/effect_translation_null_calibration_v1.json"
+      - "CROSS_PANEL_ENDPOINT_EXCLUSION_CONTRACT.md"
+      - "EFFECT_TRANSLATION_NULL_CALIBRATION_CONTRACT.md"
+      - "CROSS_PANEL_CONFOUND_AUDIT_FREEZE_V1.md"
+      - "scripts/run_cross_panel_endpoint_exclusion.py"
+      - "scripts/run_effect_translation_null_calibration.py"
+      - "scripts/run_cross_panel_estimator_calibration.py"
+      - "scripts/run_biological_effect_translation.py"
+      - "scripts/run_new_species_replications.py"
+      - "scripts/run_eidolon_independent_replication.py"
+      - ".github/workflows/cross-panel-confound-audit-v1.yml"
+      - "pyproject.toml"
+  workflow_dispatch:
+
+jobs:
+  syntax-and-freeze:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate frozen contracts and runner syntax
+        run: |
+          python -m json.tool contract/cross_panel_endpoint_exclusion_v1.json >/dev/null
+          python -m json.tool contract/effect_translation_null_calibration_v1.json >/dev/null
+          python -m py_compile scripts/run_cross_panel_endpoint_exclusion.py
+          python -m py_compile scripts/run_effect_translation_null_calibration.py
+      - name: Assert freeze record points to v1 contracts
+        run: |
+          grep -q "cross_panel_endpoint_exclusion_v1.json" CROSS_PANEL_CONFOUND_AUDIT_FREEZE_V1.md
+          grep -q "effect_translation_null_calibration_v1.json" CROSS_PANEL_CONFOUND_AUDIT_FREEZE_V1.md
+
+  endpoint-exclusion:
+    needs: syntax-and-freeze
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    permissions:
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        panel:
+          - eidolon
+          - hypsignathus
+          - phyllostomus_2022
+          - phyllostomus_2023
+          - phyllostomus_2016
+        radius:
+          - 500
+          - 1000
+          - 2000
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -e .
+      - name: Run frozen endpoint exclusion
+        run: python scripts/run_cross_panel_endpoint_exclusion.py --panel "${{ matrix.panel }}" --radius "${{ matrix.radius }}"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: endpoint-${{ matrix.panel }}-${{ matrix.radius }}m-v1
+          path: results/cross_panel_endpoint_exclusion_${{ matrix.panel }}_${{ matrix.radius }}m_v1.json
+          if-no-files-found: error
+
+  pairwise-null:
+    needs: syntax-and-freeze
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    permissions:
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        panel:
+          - tadarida
+          - eidolon
+          - hypsignathus
+          - phyllostomus_2022
+          - phyllostomus_2023
+          - phyllostomus_2016
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -e .
+      - name: Run frozen pairwise self-win null
+        run: python scripts/run_effect_translation_null_calibration.py --mode pairwise --panel "${{ matrix.panel }}"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pairwise-null-${{ matrix.panel }}-v1
+          path: results/effect_null_pairwise_${{ matrix.panel }}_v1.json
+          if-no-files-found: error
+
+  agl-separation-null:
+    needs: syntax-and-freeze
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -e .
+      - name: Run frozen Tadarida AGL separation null
+        run: python scripts/run_effect_translation_null_calibration.py --mode agl-separation
+      - uses: actions/upload-artifact@v4
+        with:
+          name: agl-separation-null-tadarida-v1
+          path: results/effect_null_tadarida_agl_separation_v1.json
+          if-no-files-found: error
