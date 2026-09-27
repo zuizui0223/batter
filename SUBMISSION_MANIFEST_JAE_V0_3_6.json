@@ -38,11 +38,11 @@
   },
   "automated_validation": {
     "manuscript_figures": {
-      "run_id": 36329796558,
-      "head_sha": "906a42f841e639d5a4ab1d4397c7425df250d5ab",
+      "run_id": 36330015862,
+      "head_sha": "864a6908b09b0dcdbcb1b1468b87aa2a59cdf6cc",
       "conclusion": "success",
-      "artifact_id": 10935342423,
-      "artifact_digest": "sha256:48066b7c8e43db7862621a2ee7d1a0015c73f566c8e96ffb3fef4c5eb1e38f4c"
+      "artifact_id": 10935526906,
+      "artifact_digest": "sha256:f2aebffbc7d51b4081cd217dd9ef963cb9629b1e2e9459ad54a85667020d6e9b"
     },
     "anonymous_review_pdf": {
       "run_id": 36329796749,
@@ -58,7 +58,8 @@
       "review_pdf": "passed",
       "review_pdf_pages": 26,
       "note": "Full prior v0.3.6 build visually inspected; final build differs only on page 26. Final page 26 re-inspected after Figure 7 legend placement and anonymous repository wording fix."
-    }
+    },
+    "packaging_note": "Title-page word-count field corrected to the v0.3.6 manuscript CI estimate (7,932) before rc2 freeze."
   },
   "supersedes": "batter-jae-v0.3.5-rc1",
   "remaining_human_input": [
