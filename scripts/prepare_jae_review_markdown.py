@@ -39,8 +39,21 @@ def main() -> int:
         "---",
         "",
     ]
+    review_text = "\n".join(front + cleaned).strip() + "\n"
+
+    # JAE initial submissions use double-anonymized peer review. Keep public-data
+    # DOIs visible, but suppress the author-identifying code-repository owner in
+    # the review manuscript. The non-anonymous title page retains the final
+    # repository/archive information for the editorial office.
+    review_text = review_text.replace(
+        "the public GitHub repository \`zuizui0223/batter\`. A permanent versioned archive DOI "
+        "should be minted from the final submission release before journal submission.",
+        "an anonymous code and provenance archive prepared for peer review. The permanent "
+        "versioned archive citation will be supplied to the journal separately."
+    )
+
     OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text("\n".join(front + cleaned).strip() + "\n", encoding="utf-8")
+    OUT.write_text(review_text, encoding="utf-8")
     print(OUT)
     return 0
 
