@@ -52,14 +52,22 @@ No new public-data mining belongs in this paper.
 - [x] v0.3.4 title-page template;
 - [x] claim-amendment history for Supporting Information.
 
+## Automated format status
+
+- manuscript CI estimate: **6,384 words**;
+- abstract: **286 words**;
+- numbered abstract statements: **5**;
+- keywords: **7**;
+- calibrated Figures 1–6: generated and visually inspected;
+- anonymous double-spaced line-numbered review PDF: **22 pages**, all pages visually inspected;
+- no clipping, overlapping text or broken glyphs observed.
+
 ## Required before release candidate
 
-1. Confirm final v0.3.4 CI word and abstract counts after abstract tightening.
-2. Inspect final Figures 1–6 and all review-PDF pages.
-3. Merge the clean v0.3.4 revision to main.
-4. Rerun manuscript/figure and PDF workflows on main.
-5. Retire superseded v0.3.3 submission workflows.
-6. Freeze a new `release/jae-v0.3.4-rc1` from the validated main commit.
+1. Merge the clean v0.3.4 revision to main.
+2. Rerun manuscript/figure and PDF workflows on main.
+3. Retire superseded v0.3.3 submission workflows.
+4. Freeze a new `release/jae-v0.3.4-rc1` from the validated main commit.
 
 ## Human-input items before journal upload
 
