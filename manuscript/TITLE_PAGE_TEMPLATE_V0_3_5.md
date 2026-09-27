@@ -48,4 +48,4 @@ archive DOI: [INSERT PERMANENT ARCHIVE DOI].
 
 ## Word count
 
-Reconfirm on the final v0.3.5 release commit after the updated manuscript gate passes.
+Current v0.3.5 CI estimate: **7,047 words** under the repository counting rule. Reconfirm on the final release commit.
