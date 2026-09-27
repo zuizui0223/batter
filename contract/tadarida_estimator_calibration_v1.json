@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-tadarida-estimator-calibration-v1",
+  "date_frozen": "2026-09-27",
+  "status": "post-freeze diagnostic calibration frozen before calibration outputs were opened",
+  "trigger": "Estimator-bias audit identified that G_adv can have a non-zero finite-sample null expectation and that marginal identity can contain horizontal cell-use information.",
+  "relation_to_existing_freeze": {
+    "primary_empirical_endpoints_unchanged": true,
+    "cannot_rescue_or_redefine_frozen_primary": true,
+    "cannot_be_described_as_original_preregistration": true,
+    "may_weaken_or_qualify_manuscript_claims": true,
+    "public_source_search_remains_closed": true
+  },
+  "focal_target": {
+    "taxon": "Tadarida teniotis",
+    "paper_panel_id": "tadarida_msl",
+    "source": {
+      "repository_doi": "10.5441/001/1.52nn82r9",
+      "annotated_bitstream_url": "https://datarepository.movebank.org/server/api/core/bitstreams/a6a6db33-0aca-4902-a58d-f32980c1a3e1/content",
+      "expected_size_bytes": 3630088,
+      "expected_md5": "e0f6faedfd1f21bac222d9da430ea5d8",
+      "expected_rows": 9873
+    },
+    "session_rule": "animal-id × BatDay",
+    "horizontal_crs": "EPSG:3035",
+    "cell_size_m": 5000,
+    "vertical_field": "height-above-msl",
+    "z_edges_m": [
+      "-inf",
+      0,
+      50,
+      100,
+      200,
+      400,
+      800,
+      1600,
+      3200,
+      "inf"
+    ],
+    "jeffreys_alpha": 0.5,
+    "minimum_session_fixes": 50,
+    "minimum_scored_target_fixes": 50,
+    "self_weighting": "equal session",
+    "other_weighting": "equal individual",
+    "observed_consistency_target": {
+      "conditional_identity": 0.42804057006673096,
+      "marginal_identity": 0.052484319998149565,
+      "conditional_advantage": 0.37555625006858145,
+      "evaluable_individuals": 6,
+      "tolerance_abs": 1e-12
+    }
+  },
+  "calibration_null": {
+    "unit": "whole retained session block",
+    "destroyed_structure": "mapping between session and biological individual identity",
+    "preserved": [
+      "all within-session x-y-z observations",
+      "timestamps",
+      "session fix counts",
+      "horizontal coverage",
+      "vertical counts",
+      "number of retained sessions assigned to each individual label"
+    ],
+    "permutation_algorithm": "Randomly permute the multiset of individual-label slots across the fixed retained session blocks. Original label assignment is allowed by chance.",
+    "monte_carlo_permutations": 9999,
+    "rng": "numpy PCG64",
+    "seed": 20260927,
+    "valid_replicate_rule": "retain every permutation with at least one evaluable pseudo-individual; report the full eligible-individual-count distribution",
+    "reported_metrics": [
+      "G_cond",
+      "G_marg",
+      "G_adv",
+      "common-cell-weighted marginal identity",
+      "common-cell-weighted conditional advantage"
+    ],
+    "calibration_summary": [
+      "null mean",
+      "null standard deviation",
+      "2.5%, 50%, and 97.5% null quantiles",
+      "observed minus null mean",
+      "one-sided Monte Carlo tail probability P(null >= observed)"
+    ]
+  },
+  "common_cell_reweighting": {
+    "purpose": "Remove marginal identity created only because self and other predictors occupy horizontal cells at different frequencies.",
+    "supported_cells": "intersection of self and other conditional-profile cells for the held-out target",
+    "weights": "For each self-training session, compute its cell-frequency distribution over supported cells; average these distributions equally across self sessions; renormalize to sum to one.",
+    "self_common_marginal": "sum_c w_self(c) P_self(z|c)",
+    "other_common_marginal": "sum_c w_self(c) P_other(z|c)",
+    "score": "Mean held-out log self_common_marginal(z) minus log other_common_marginal(z), using exactly the target fixes used by G_cond.",
+    "derived_common_cell_advantage": "G_cond - common-cell-weighted marginal identity",
+    "interpretation": "Diagnostic separation of vertical conditional identity from horizontal occupancy weighting; not a replacement primary endpoint."
+  },
+  "uncertainty": {
+    "unit": "individual",
+    "bootstrap_replicates": 20000,
+    "rng": "numpy PCG64",
+    "seed": 20260928,
+    "interval": "percentile 95%",
+    "metrics": [
+      "G_cond",
+      "G_marg",
+      "G_adv",
+      "common-cell-weighted marginal identity",
+      "common-cell-weighted conditional advantage"
+    ],
+    "note": "Bootstrap uses the frozen observed set of evaluable individuals and is descriptive uncertainty, not a new significance gate."
+  },
+  "stop_rule": {
+    "after_output": [
+      "Do not change permutation unit, B, seeds, cell weights, bins, grid, smoothing, or eligibility thresholds.",
+      "If observed architecture is compatible with the calibrated null, weaken the manuscript claim.",
+      "If it remains extreme, report calibration as robustness rather than reclassifying it as confirmatory.",
+      "Do not expand to other taxa until this focal diagnostic is interpreted and a separate cross-panel calibration contract is frozen."
+    ],
+    "roost_exclusion": "Not included in v1 because a biologically defensible roost definition/radius is not yet frozen independently of outcomes."
+  }
+}
