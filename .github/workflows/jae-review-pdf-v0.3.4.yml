@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - revision/jae-v0.3.4-horizontal-standardized
-      - revision/jae-v0.3.4-anonymity-gate-v1
       - main
     paths:
       - "manuscript/MANUSCRIPT_DRAFT_V0_3_4.md"
