@@ -1,0 +1,17 @@
+name: zenodo-release-readiness
+
+on:
+  workflow_dispatch:
+
+jobs:
+  release-readiness:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check release license and Zenodo metadata
+        run: python scripts/check_zenodo_release_ready.py
