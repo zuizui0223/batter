@@ -328,6 +328,12 @@ scientific-content commit.
 The final tag-bias audit is complete. No further new scientific analysis is required or authorized
 before submission.
 
+### v0.3.6 rc2 packaging
+
+The scientific v0.3.6 package is unchanged. A packaging-only rc2 corrects the title-page
+word-count field from the superseded v0.3.5 value to the current 7,932-word manuscript estimate.
+The corrected package passes main submission CI (run 36330015862).
+
 ## Claim boundary
 
 Allowed:
