@@ -11,7 +11,7 @@ Backup: **Movement Ecology**.
 ## Manuscript status
 
 - full ecological draft: `manuscript/MANUSCRIPT_DRAFT_V0_3_3.md`;
-- CI word estimate: **6,777 words**;
+- CI word estimate: **7,287 words**;
 - abstract: **261 words** in five numbered factual statements;
 - keywords: **7**, alphabetized;
 - standard JAE structure: Introduction / Materials and Methods / Results / Discussion / References;
@@ -46,20 +46,25 @@ No additional public-data mining belongs in this paper.
 - [x] Figure 1 conceptual framework.
 - [x] Figures 2–6 quantitative figures.
 - [x] Figure legends.
-- [x] Ethics statement.
+- [x] Ethics statement with source-study permit provenance.
 - [x] Data and Code Availability statement with source-data DOIs.
 - [x] Anonymous cover-letter draft.
 - [x] Separate title-page template.
 - [x] Automated JAE format gate.
 - [x] Automated anonymous review-PDF workflow.
 
+## Source-study ethics provenance
+
+Verified source-by-source permit and committee details are recorded in
+`manuscript/SOURCE_ETHICS_PROVENANCE_V0_3_3.md` and summarized in the manuscript Methods/Ethics
+sections.
+
 ## Human-input items still required
 
 1. Mint a permanent versioned archive DOI for the code/provenance release and replace the GitHub-only placeholder.
 2. Fill final author list, affiliations, corresponding-author details and CRediT contributions.
 3. Fill funding, acknowledgements and conflict-of-interest declarations.
-4. Confirm original-source ethics/permit citations are sufficient for the journal's reanalysis policy.
-5. Perform one final page-level inspection of the generated anonymous review PDF and figures.
+4. Perform one final page-level inspection of the generated anonymous review PDF and figures after the ethics-provenance update.
 
 ## Claim boundary
 
