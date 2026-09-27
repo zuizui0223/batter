@@ -39,7 +39,7 @@ JAE v0.3.5 manuscript/figure workflow:
 - abstract: **271 words**
 - numbered abstract statements: **5**
 - keywords: **7**
-- Figures 1–6: generated successfully
+- Figures 1–6: generated successfully and visually inspected; Figure 6 label-overlap fix verified
 
 ## Anonymous review PDF
 
@@ -49,6 +49,7 @@ JAE v0.3.5 review-PDF workflow:
 - anonymity guard: **PASS**
 - rendered pages: **24**
 - page size: US Letter
+- visual inspection: **passed on all 24 pages**; no clipping, overlap or broken glyphs after the final Figure 6 legend update
 
 ## Claim boundary
 
