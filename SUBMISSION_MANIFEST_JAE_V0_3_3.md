@@ -1,4 +1,4 @@
-# JAE submission manifest v0.3.3
+> **SCIENTIFIC HOLD — DO NOT SUBMIT**\n>\n> JAE v0.3.3 rc2 was superseded on 2026-09-27 by the estimator calibration merged at\n> `dfd620fb71b4457d0f2531dd9e44241932a1faf5`. The prior conditional-/marginal-dominant\n> architecture classification is not robust. See `PAPER_FREEZE_V0_3_4_CALIBRATION_AMENDMENT.md`\n> and `CROSS_PANEL_ESTIMATOR_CALIBRATION_RESULT.md`.\n\n# JAE submission manifest v0.3.3
 
 Date: 2026-09-27
 
