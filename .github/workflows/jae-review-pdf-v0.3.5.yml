@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - diagnostic/cross-panel-confound-audit-v1
+      - main
     paths:
       - "manuscript/MANUSCRIPT_DRAFT_V0_3_5.md"
       - "manuscript/jae_review_header.tex"
