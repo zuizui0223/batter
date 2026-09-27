@@ -1,0 +1,34 @@
+{
+  "schema": "batter.shared_template_individual_reweighting.result_record.v4",
+  "authoritative_execution": {
+    "workflow_run_id": 36286163249,
+    "workflow_job_id": 108527231312,
+    "head_sha": "afc675b7e20e3c18fe342ecf56b1521cf222e3a2",
+    "artifact_id": 10920299032,
+    "artifact_digest": "sha256:cae8e62dde190fd958c6c1fe54820fb9cf998d665f662a85fb7f7e4c2947af1e"
+  },
+  "result_fingerprint": "4bb60c2c2b86f08818ce31b3a17f797e7d67f1d1118add2ae1015893a60c3f46",
+  "primary": {
+    "category": "shared_spatial_template_individual_reweighting_not_supported",
+    "observed_diagonal_mean_gain": -0.00016110644163366827,
+    "null_mean": -0.13444706146871388,
+    "null_q05": -0.3112977210229366,
+    "null_q95": 0.009290793482835626,
+    "one_sided_p": 0.06629464285714286,
+    "positive_diagonal_count": 5,
+    "self_reweighting_strict_top1_count": 3
+  },
+  "sensitivities": {
+    "lambda5": {
+      "gain": -0.054121712333778826,
+      "p": 0.09253472222222223,
+      "positive": 5
+    },
+    "lambda50": {
+      "gain": 0.03252067891731289,
+      "p": 0.055679563492063495,
+      "positive": 5
+    }
+  },
+  "interpretation": "A shared species spatial template reweighted only by individual marginal altitude preference does not meet the frozen identity-support rule. The positive v1 identity signal is not reducible to this simple additive decomposition."
+}
