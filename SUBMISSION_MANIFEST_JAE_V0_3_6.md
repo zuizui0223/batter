@@ -54,11 +54,11 @@ Scientific consequence:
 ## Manuscript and figures
 
 Final v0.3.6 manuscript/figure workflow:
-- run: **36329395938**
-- head: `b0fdea5dd191eeb7759fec84a899b0bdd78994cd`
+- run: **36329796558**
+- head: `906a42f841e639d5a4ab1d4397c7425df250d5ab`
 - conclusion: **success**
-- artifact: `10935221530`
-- digest: `sha256:2e58d1883f22beacff27bc8e2f828828216dd473cb51da674b43d7a2aa4b91e0`
+- artifact: `10935342423`
+- digest: `sha256:48066b7c8e43db7862621a2ee7d1a0015c73f566c8e96ffb3fef4c5eb1e38f4c`
 - manuscript CI estimate: **7,932 words**
 - abstract: **273 words**
 - numbered statements: **5**
@@ -68,11 +68,11 @@ Final v0.3.6 manuscript/figure workflow:
 ## Anonymous review PDF
 
 Final v0.3.6 review-PDF workflow:
-- run: **36329434589**
-- head: `8e02d1329fcf2fd0dee5ff96090272a70d353263`
+- run: **36329796749**
+- head: `906a42f841e639d5a4ab1d4397c7425df250d5ab`
 - conclusion: **success**
-- artifact: `10935232608`
-- digest: `sha256:98c54670f7e74904aea05577560d6e7edea47a468453774985c99f7aa05572a1`
+- artifact: `10935182096`
+- digest: `sha256:8a7fb006f7e0d5c0f29ddb732039cb3447c50562b0d5a8ec7d10f384e3592d25`
 - anonymity guard: **PASS**
 - rendered pages: **26**
 - page size: US Letter
