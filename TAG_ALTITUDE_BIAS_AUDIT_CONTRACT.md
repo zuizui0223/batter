@@ -34,8 +34,8 @@ Within each shared stationary 100-m cell:
 1. take the median primary height for each supported individual;
 2. define the cell reference as the median of those individual medians;
 3. individual cell offset = individual median - cell reference;
-4. individual offset = median of its offsets across shared cells;
-5. subtract that offset from all heights for the supported individual;
+4. within each cohort, individual offset = median of its offsets across supported shared cells;
+5. subtract that individual × cohort offset from all heights for the supported individual in that cohort;
 6. rerun the original v0.3.5 bins and 5-km common-cell calibration.
 
 This is corroborative only. A stationary result cannot rescue a failed centered-shape primary test.
