@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-tadarida-estimator-calibration-v1",
+  "workflow_run_id": 36291669628,
+  "artifact_id": 10922168504,
+  "artifact_digest": "sha256:06426a59951bc6b5ed849dd12ffeb4a9d5b0e6da512f61a7c2472210ca9bf7ac",
+  "head_sha": "56a6ba8ac0e6c73c964a235237665faa02716d5b",
+  "source_md5": "e0f6faedfd1f21bac222d9da430ea5d8",
+  "observed": {
+    "conditional": 0.42804057006673096,
+    "marginal": 0.05248431999814956,
+    "advantage": 0.37555625006858145,
+    "common_cell_marginal": 0.37930589754175675,
+    "common_cell_advantage": 0.04873467252497423,
+    "evaluable_individuals": 6,
+    "positive_common_cell_advantage_individuals": 2
+  },
+  "permutation_null": {
+    "B": 9999,
+    "conditional": {
+      "mean": -0.45629059684364043,
+      "observed_minus_null_mean": 0.8843311669103714,
+      "p_null_ge_observed": 0.0003
+    },
+    "marginal": {
+      "mean": -0.13933620628610927,
+      "observed_minus_null_mean": 0.19182052628425883,
+      "p_null_ge_observed": 0.0777
+    },
+    "advantage": {
+      "mean": -0.31695439055753116,
+      "observed_minus_null_mean": 0.6925106406261126,
+      "p_null_ge_observed": 0.0058
+    },
+    "common_cell_marginal": {
+      "mean": -0.2229357690720385,
+      "observed_minus_null_mean": 0.6022416666137953,
+      "p_null_ge_observed": 0.0005
+    },
+    "common_cell_advantage": {
+      "mean": -0.23335482777160188,
+      "observed_minus_null_mean": 0.2820895002965761,
+      "p_null_ge_observed": 0.0127
+    },
+    "eligible_individual_count": {
+      "mean": 4.802180218021802,
+      "q025": 3,
+      "q50": 5,
+      "q975": 6,
+      "observed": 6
+    }
+  },
+  "individual_bootstrap_95": {
+    "conditional": [
+      0.141642064547652,
+      0.6909692666566478
+    ],
+    "marginal": [
+      -0.3184316825190932,
+      0.48533440780964643
+    ],
+    "advantage": [
+      0.04278687149157995,
+      0.6905877428442441
+    ],
+    "common_cell_marginal": [
+      0.12168833683885712,
+      0.6214074501387657
+    ],
+    "common_cell_advantage": [
+      -0.042420469114559156,
+      0.2030960518220483
+    ]
+  },
+  "interpretation": {
+    "estimator_bias_confirmed": true,
+    "raw_G_adv_zero_is_not_valid_null": true,
+    "repeatable_vertical_identity_survives": true,
+    "simple_conditional_dominant_classification_is_not_robust": true,
+    "common_horizontal_weighting_shifts_marginal_identity_up_by": 0.3268215775436072,
+    "common_horizontal_weighting_reduces_raw_advantage_by": 0.32682157754360724,
+    "manuscript_action": "Hold cross-panel architecture claim until the same calibration is frozen and run for every panel."
+  }
+}

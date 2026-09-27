@@ -4,126 +4,90 @@ Ecological analysis of repeatable individual identity in three-dimensional bat a
 
 ## Biological question
 
-When a bat carries vertical information across nights, **where is that individual information
-predictively expressed**?
+Do individual bats carry repeatable information about **vertical airspace use** across sessions,
+and does that information persist after differences in horizontal space use are standardized?
 
-Two non-equivalent predictive architectures are compared:
+The project began from an ODSP result in *Tadarida teniotis*: the population retained substantial
+vertical thickness after x-y was known, but a pooled location-conditioned vertical distribution
+did not transfer to sealed individuals.
 
-1. **marginal identity** — the same animal repeats an informative overall vertical distribution;
-2. **conditional identity** — individual identity becomes more informative when vertical state is
-   predicted conditional on horizontal place.
+## Core result
 
-We summarize
+Across six tracking panels from four bat taxa, the same individual's vertical use is more
+predictable than expected under whole-session identity exchangeability.
 
-```text
-conditional advantage
-= conditional identity gain - marginal identity gain
-```
+Crucially, this remains true after self and other vertical profiles are integrated under the
+**same horizontal cell-use weights**.
 
-A positive conditional advantage is called **conditional-dominant**. A negative value with
-stronger marginal identity is **marginal-dominant**.
+Therefore the main ecological conclusion is:
 
-This is predictive terminology. It is not automatically evidence for a stable latent
-individual-specific cell × height route.
+> **Repeatable individual vertical identity in bat airspace is not reducible to horizontal
+> space-use fidelity.**
 
-## Origin
+## Why the claim changed
 
-The project began from an ODSP result in *Tadarida teniotis*: the fitted population was
-vertically thick (~4.02 effective MSL states after x-y was known), but the pooled
-`P(z|x,y)` did not transfer to two held-out individuals.
+Earlier versions of this repository classified panels as “conditional-dominant” or
+“marginal-dominant” using the raw sign of
 
-`batter` asks whether this non-transfer reflects within-population individual
-non-exchangeability.
+`G_adv = G_cond - G_marg`.
 
-## Focal *Tadarida teniotis*
+A post-freeze diagnostic calibration showed that this classifier was not valid:
 
-Several frozen analyses must be read together.
+- the exchangeability null of G_adv is negative and panel-specific;
+- ordinary marginal identity is sensitive to horizontal cell-use weighting;
+- the apparent marginal-dominant *Phyllostomus hastatus* 2022 panel changes from
+  G_adv = -0.120 to a common-cell advantage of +0.0066.
 
-### Repeatable conditional identity
+The old multiple-architecture synthesis is therefore superseded.
 
-An early/late identity-assignment test passed:
+## Calibrated 5-km result
 
-- diagonal conditional gain +0.1682;
-- exact permutation p=0.000174;
-- 6/8 own-map gains positive.
+| Panel | Common-cell marginal | Raw common-cell advantage | Calibrated advantage | Permutation p |
+|---|---:|---:|---:|---:|
+| *Tadarida teniotis* | +0.379 | +0.049 | +0.282 | 0.0127 |
+| *Eidolon helvum* | +0.177 | +0.042 | +0.081 | 0.0060 |
+| *Hypsignathus monstrosus* | +0.022 | +0.007 | +0.042 | 0.0002 |
+| *Phyllostomus hastatus* 2022 | +0.049 | +0.0066 | +0.066 | 0.0002 |
+| *P. hastatus* 2023 | +0.033 | +0.0008 | +0.040 | 0.0144 |
+| *P. hastatus* 2016 | -0.0039 | +0.061 | +0.222 | 0.0036 |
 
-Thus individual identity predicts later conditional vertical state.
+“Calibrated advantage” means observed common-cell advantage minus that panel's permutation-null
+mean. It is an estimator-calibrated contrast, not an absolute biological effect size.
 
-### Stronger residual-map claim does not pass
+## Focal claim boundary
 
-After each bat's marginal altitude preference was absorbed into the baseline, the frozen
-individual-specific cell × height residual test did **not** pass:
+*Tadarida* still shows strong repeatable identity, but the stronger frozen residual-map test
+remains negative:
 
 - residual gain +0.0240;
-- exact permutation p=0.160;
-- 5/8 positive.
+- exact permutation p=0.160.
 
-Therefore this dataset does not demonstrate a stable individual-specific place × height map.
-
-### Session-level predictive architecture
-
-At 5 km:
-
-- MSL conditional identity +0.428;
-- MSL marginal identity +0.052;
-- conditional advantage +0.376;
-- AGL conditional identity +0.337;
-- AGL marginal identity -0.255;
-- conditional advantage +0.591;
-- terrain-elevation conditional identity +0.007.
-
-The defensible interpretation is **conditional-dominant vertical identity**: horizontal location
-adds substantial predictive identity information.
-
-Controls show that this contrast is not simply terrain elevation, a shared calendar-night state
-or averaging heterogeneous alternative bats. A frozen common uplift-reaction mechanism was not
-supported.
-
-## Independent comparative panels
-
-At 5 km:
-
-| Taxon/context | Conditional | Marginal | Conditional advantage |
-|---|---:|---:|---:|
-| *Tadarida teniotis* | +0.428 | +0.052 | +0.376 |
-| *Eidolon helvum* | +0.219 | +0.002 | +0.217 |
-| *Hypsignathus monstrosus* | +0.029 | -0.021 | +0.050 |
-| *Phyllostomus hastatus* 2022 | +0.056 | +0.176 | -0.120 |
-
-*Eidolon* and *Hypsignathus* prospectively reproduce conditional-dominant identity.
-*Phyllostomus* 2022 instead produces a marginal-dominant architecture.
-
-Within *P. hastatus*, the architecture is not fixed:
-
-- 2023: conditional +0.033, marginal +0.013, advantage +0.020;
-- untouched 2016 dry-season prospective test: +0.058, +0.016, +0.041 and failure of the
-  preregistered 2022-like marginal-dominant prediction.
-
-## Central ecological statement
-
-> **Individual vertical identity in bat airspace has multiple predictive architectures. Across
-> nights, identity can be more informative in a location-conditioned vertical distribution than
-> in an animal-wide height distribution, or vice versa, and that balance can vary across
-> ecological contexts.**
+Thus the study does not establish one stable individual-specific cell × height route map.
 
 ## Public-data search
 
-The source universe is closed. An outcome-blind search covered 23 Movebank bat parent datasets
-plus legacy child-handle recovery. Six sources from four taxa passed the fixed requirements for
-same-event x-y-height data and repeated tracking. Numeric height values were not used for source
-admission.
+The source universe is closed. The original outcome-blind search covered 23 Movebank parent
+datasets plus legacy child-handle recovery. Six sources from four taxa met the fixed same-event
+x-y-height and repeat-tracking requirements.
 
-## Key files
+No new source search belongs in the current paper programme.
 
-- `FOCAL_ANALYSIS_RECONCILIATION.md` — reconciles the conditional architecture with the frozen
-  residual-map negative result
-- `PAPER_FREEZE_V0_3_1_CLAIM_AMENDMENT.md` — claim-only amendment; empirical freeze unchanged
-- `MANUSCRIPT_SPINE.md` — current paper logic
-- `SPECIALIZATION_ARCHITECTURE_SYNTHESIS.md` — comparative architecture synthesis
-- `BAT_PANEL_SEARCH_CLOSEOUT.md` — outcome-blind public-data closeout
+## Key calibration files
+
+- `TADARIDA_ESTIMATOR_CALIBRATION_CONTRACT.md`
+- `TADARIDA_ESTIMATOR_CALIBRATION_RESULT.md`
+- `CROSS_PANEL_ESTIMATOR_CALIBRATION_CONTRACT.md`
+- `CROSS_PANEL_ESTIMATOR_CALIBRATION_RESULT.md`
+- `PAPER_FREEZE_V0_3_4_CALIBRATION_AMENDMENT.md`
+
+## Submission status
+
+The previous JAE v0.3.3 rc2 package is scientifically superseded and should not be submitted.
+
+The next manuscript must be reframed around vertical identity beyond horizontal fidelity.
 
 ## Claim boundary
 
-The analyses concern vertical flight/airspace use and predictive individual identity. They do
-not by themselves establish foraging, personality, learning, optimality, stable learned routes
-or a causal environmental mechanism.
+The analyses concern vertical flight/airspace use and predictive individual identity. They do not
+by themselves establish foraging, personality, learning, optimality, stable learned routes or a
+universal causal environmental mechanism.
