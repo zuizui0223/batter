@@ -68,7 +68,18 @@ No new public-data mining belongs in this paper.
 - [x] v0.3.4 manuscript/figure workflow passed on main;
 - [x] v0.3.4 anonymous review-PDF workflow passed on main;
 - [x] superseded v0.3.3 submission/PDF workflows retired;
-- [ ] freeze `release/jae-v0.3.4-rc1` after the final submission manifest is committed.
+- [x] `release/jae-v0.3.4-rc1` frozen after the final submission manifest was committed; main and rc1 were verified identical at `1f28e833` before packaging-only follow-up.
+
+## Final upload guard
+
+A separate strict guard now checks only upload-time metadata:
+`python scripts/check_jae_upload_ready.py`.
+
+It is intentionally expected to fail until the final title page contains the author list,
+affiliations, corresponding-author email and ORCID, CRediT statement, acknowledgements, funding,
+conflict declaration, and a permanent archive DOI. The matching GitHub Actions workflow is
+manual-only (`jae-upload-readiness-v0.3.4`) so unresolved human metadata does not turn the
+scientific RC CI red. This guard does not re-open empirical analyses.
 
 ## Human-input items before journal upload
 
