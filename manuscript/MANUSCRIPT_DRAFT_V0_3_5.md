@@ -334,7 +334,7 @@ Xing, S., Leahy, L., Ashton, L.A., Kitching, R.L., Bonebrake, T.C. & Scheffers, 
 
 **Figure 5. Why the original architecture classification was superseded.** Original conditional advantage and common-cell conditional increment are shown for each panel. In *P. hastatus* 2022, the apparent marginal-dominant value changes from -0.120 to +0.0066 after common horizontal weighting, demonstrating that raw conditional-minus-marginal signs cannot be interpreted as biological architecture classes.
 
-**Figure 6. Endpoint-neighbourhood robustness and focal terrain-relative limits.** The focal *Tadarida* AGL result passes at 2.5 and 5 km but not 10 km and fails its primary 1-km endpoint-neighbourhood exclusion. Under the separately frozen cross-panel 1-km exclusion, four of five comparative panels pass; *Eidolon* retains a strong calibrated signal but fails the predeclared minimum-evaluable-individual gate.
+**Figure 6. Endpoint-neighbourhood robustness across six bat tracking panels.** Points show the common-cell vertical identity remaining after the predeclared 1-km endpoint-neighbourhood exclusion; crosses show the corresponding whole-session permutation-null means. Four comparative panels pass the frozen rule. *Eidolon* retains a strong calibrated signal but fails the predeclared minimum-evaluable-individual gate, while focal *Tadarida* fails its inferential tail criterion.
 
 ## Ethics statement
 
