@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-cross-panel-endpoint-exclusion-v1",
+  "frozen_date": "2026-09-27",
+  "status": "frozen before any non-Tadarida endpoint-exclusion output was opened",
+  "trigger": "The focal Tadarida 1-km x-y-only night-endpoint exclusion failed (p=0.1109), leaving departure/arrival or other central-place structure as a viable contributor. The five comparative panels had not yet been subjected to the same outcome-blind exclusion.",
+  "relation_to_existing_freeze": {
+    "source_search_closed": true,
+    "no_new_panels": true,
+    "original_common_cell_results_unchanged": true,
+    "tadarida_endpoint_result_is_prior_fixed_context": true,
+    "this_is_post_freeze_robustness_not_original_preregistration": true,
+    "may_only_weaken_or_qualify_manuscript": true
+  },
+  "prior_fixed_tadarida_context": {
+    "primary_radius_m": 1000,
+    "result": "FAIL",
+    "p_null_ge_observed": 0.1109,
+    "interpretation": "central-place departure/arrival structure remains a viable contributor in the focal panel"
+  },
+  "panels": [
+    {
+      "id": "eidolon",
+      "taxon": "Eidolon helvum",
+      "contract": "contract/eidolon_independent_replication_v1.json",
+      "minimum_evaluable_individuals": 15,
+      "primary_seed": 2026100201,
+      "sensitivity_seed_500m": 2026100211,
+      "sensitivity_seed_2000m": 2026100221
+    },
+    {
+      "id": "hypsignathus",
+      "taxon": "Hypsignathus monstrosus",
+      "contract": "contract/hypsignathus_replication_v1.json",
+      "minimum_evaluable_individuals": 15,
+      "primary_seed": 2026100202,
+      "sensitivity_seed_500m": 2026100212,
+      "sensitivity_seed_2000m": 2026100222
+    },
+    {
+      "id": "phyllostomus_2022",
+      "taxon": "Phyllostomus hastatus",
+      "contract": "contract/phyllostomus_replication_v1.json",
+      "minimum_evaluable_individuals": 15,
+      "primary_seed": 2026100203,
+      "sensitivity_seed_500m": 2026100213,
+      "sensitivity_seed_2000m": 2026100223
+    },
+    {
+      "id": "phyllostomus_2023",
+      "taxon": "Phyllostomus hastatus",
+      "contract": "contract/phyllostomus_2023_replication_v1.json",
+      "minimum_evaluable_individuals": 10,
+      "primary_seed": 2026100204,
+      "sensitivity_seed_500m": 2026100214,
+      "sensitivity_seed_2000m": 2026100224
+    },
+    {
+      "id": "phyllostomus_2016",
+      "taxon": "Phyllostomus hastatus",
+      "contract": "contract/phyllostomus_2016_dry_architecture_v1.json",
+      "minimum_evaluable_individuals": 6,
+      "primary_seed": 2026100205,
+      "sensitivity_seed_500m": 2026100215,
+      "sensitivity_seed_2000m": 2026100225
+    }
+  ],
+  "proxy_definition": {
+    "inputs": "horizontal x-y and timestamp only from sessions already admitted under each frozen source contract; numeric vertical values are never used to define the proxy",
+    "coordinate_system": "use the already-frozen cohort-specific UTM projection for each comparative panel",
+    "unit": "individual within admitted cohort",
+    "endpoint_fixes_per_side": 5,
+    "per_session_endpoint_set": "first 5 and last 5 finite projected fixes after sorting the originally eligible session by timestamp",
+    "center": "medoid of all pooled endpoint fixes for that individual within that cohort; choose the observed endpoint minimizing summed Euclidean distance to all pooled endpoints",
+    "target_session_contributes_to_proxy": true,
+    "rationale": "matches the already-frozen focal Tadarida proxy construction and uses x-y/time only",
+    "prohibited": [
+      "source capture/roost coordinates",
+      "vertical values",
+      "outcome-adaptive endpoint trimming",
+      "species-specific radius tuning"
+    ]
+  },
+  "exclusion_and_scoring": {
+    "primary_radius_m": 1000,
+    "descriptive_sensitivity_radii_m": [
+      500,
+      2000
+    ],
+    "event_exclusion": "remove every numeric-scored event whose Euclidean distance to its own individual-within-cohort proxy center is strictly less than the radius; apply to target and training events symmetrically",
+    "session_identity": "retain the original frozen session ID",
+    "session_reeligibility": "after exclusion require at least 50 numeric-scored events; otherwise drop the whole session",
+    "cohort_membership": "do not rediscover or expand cohorts; use only originally admitted cohorts and surviving sessions",
+    "cell_size_m": 5000,
+    "vertical_field_and_bins": "unchanged from each panel's frozen source contract",
+    "jeffreys_alpha": 0.5,
+    "minimum_scored_target_fixes": 50,
+    "common_cell_weighting": "identical to cross_panel_estimator_calibration_v1",
+    "primary_metric": "equal-individual common-cell-weighted marginal identity",
+    "permutation_unit": "whole surviving session block",
+    "permutation_scope": "within originally admitted cohort",
+    "permutation_preserves": "all within-session x-y-z observations after the fixed exclusion and the exact multiset of surviving session counts assigned to individual labels within cohort",
+    "primary_permutations_per_panel": 4999,
+    "sensitivity_permutations_per_panel_radius": 1999,
+    "rng": "numpy PCG64"
+  },
+  "panel_pass_rule": {
+    "minimum_evaluable_individuals": "panel-specific threshold frozen above",
+    "calibrated_common_cell_marginal_positive": true,
+    "one_sided_p_null_ge_observed_max": 0.05,
+    "sensitivity_radii_are_not_pass_fail_gates": true
+  },
+  "manuscript_decision_matrix": {
+    "all_five_comparative_panels_pass": "May state that the five comparative panels retain calibrated vertical identity after the same 1-km night-endpoint exclusion. Because focal Tadarida already failed, do not claim universal independence from central-place structure; describe the contribution as panel-dependent.",
+    "one_or_more_comparative_panels_fail": "Do not present the six-panel result as vertical individuality independent of central-place/end-point structure. Report which panels retain or lose support and state that repeatable 3-D airspace identity may include departure/arrival, roost/colony/lek, commuting, or other central-place-associated structure.",
+    "all_five_comparative_panels_fail": "Reframe the ecological interpretation away from generic vertical specialization and toward repeatable individual 3-D airspace use potentially generated by central-place or endpoint-associated movement structure.",
+    "mechanism_language": "Never infer a true roost, colony departure mechanism, or lek mechanism from this proxy alone.",
+    "title_rule": "Regardless of outcome, replace 'horizontal occupancy' in the title with 'coarse horizontal occupancy' or explicit '5-km horizontal occupancy' before submission.",
+    "no_claim_adjustment_until_family_complete": true
+  },
+  "stop_rule": [
+    "Do not alter endpoint-fix count, proxy-center algorithm, 1-km primary radius, 0.5/2-km descriptive radii, panel eligibility thresholds, grid, bins, smoothing, permutation counts, seeds, or cohort/session definitions after any new output is opened.",
+    "Retain failures and contradictory radius sensitivities.",
+    "Do not add verified or inferred roost/colony/lek coordinates after results are seen.",
+    "Do not reopen public source search."
+  ]
+}
