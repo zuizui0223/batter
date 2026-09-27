@@ -30,7 +30,7 @@ Checked: 2026-09-27
 
 ## Automated package
 
-- [x] v0.3.6 manuscript/figure workflow success — run 36329796558;
+- [x] v0.3.6 manuscript/figure workflow success — run 36330015862;
 - [x] manuscript CI estimate 7,932 words;
 - [x] abstract 273 words in five numbered statements;
 - [x] seven keywords;
@@ -39,7 +39,8 @@ Checked: 2026-09-27
 - [x] anonymity guard PASS;
 - [x] 26-page review PDF;
 - [x] final page-26 Figure 7 legend placement re-inspected;
-- [x] no clipping, overlap or broken glyphs found.
+- [x] no clipping, overlap or broken glyphs found;
+- [x] title-page word-count field corrected to 7,932 before rc2 packaging freeze.
 
 ## Remaining human / archive items
 
