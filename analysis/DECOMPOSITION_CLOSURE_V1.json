@@ -1,0 +1,43 @@
+{
+  "schema": "batter.individual_vertical_strategy.decomposition_closure.v1",
+  "closed_date": "2026-09-27",
+  "status": "closed_after_v1_positive_and_three_frozen_refinements",
+  "v1": {
+    "status": "supported",
+    "claim": "individual-specific vertical-state prediction",
+    "diagonal_mean_gain": 0.16822184209024452,
+    "exact_permutation_p": 0.00017361111111111112,
+    "positive_individuals": 6,
+    "rule_passed": true
+  },
+  "refinements": [
+    {
+      "version": "v2",
+      "hypothesis": "individual-by-location residual after marginal altitude preference",
+      "gain": 0.02402462649822336,
+      "p": 0.16046626984126985,
+      "positive": 5,
+      "supported": false
+    },
+    {
+      "version": "v3",
+      "hypothesis": "individual marginal altitude distribution alone",
+      "gain": -0.031113417970948992,
+      "p": 0.022445436507936508,
+      "positive": 4,
+      "supported": false,
+      "note": "permutation rank is unusual but the frozen absolute/majority support rule fails"
+    },
+    {
+      "version": "v4",
+      "hypothesis": "individual marginal reweighting of a shared species spatial template",
+      "gain": -0.00016110644163366827,
+      "p": 0.06629464285714286,
+      "positive": 5,
+      "supported": false
+    }
+  ],
+  "final_interpretation": "Vertical-state use contains temporally repeatable individual identity information, but that information was not reducible under the frozen follow-ups to a simple marginal altitude effect, a simple individual-by-location residual, or a marginal reweighting of a shared species spatial template.",
+  "no_further_same_dataset_decomposition_without_external_hypothesis": true,
+  "original_odsp_species_transfer_result_unchanged": true
+}
