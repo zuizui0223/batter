@@ -1,0 +1,37 @@
+name: pairwise-null-fast-v1
+
+on:
+  push:
+    branches:
+      - diagnostic/cross-panel-confound-audit-v1
+    paths:
+      - "scripts/run_effect_translation_null_calibration_fast.py"
+      - ".github/workflows/pairwise-null-fast-v1.yml"
+  workflow_dispatch:
+
+jobs:
+  fast-null:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    permissions:
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        panel:
+          - tadarida
+          - phyllostomus_2022
+          - hypsignathus
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -e .
+      - name: Run optimized frozen pairwise null
+        run: python scripts/run_effect_translation_null_calibration_fast.py --panel "${{ matrix.panel }}"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pairwise-null-fast-${{ matrix.panel }}-v1
+          path: results/effect_null_pairwise_fast_${{ matrix.panel }}_v1.json
+          if-no-files-found: error
