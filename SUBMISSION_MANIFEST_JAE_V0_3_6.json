@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "submission_id": "batter-jae-v0.3.6-rc1",
+  "date": "2026-09-27",
+  "journal_target": "Journal of Animal Ecology",
+  "manuscript": {
+    "path": "manuscript/MANUSCRIPT_DRAFT_V0_3_6.md",
+    "title": "Repeatable vertical identity in bat airspace persists after coarse horizontal occupancy is standardized",
+    "ci_word_estimate": 7932,
+    "abstract_words": 273,
+    "abstract_numbered_statements": 5,
+    "keywords": 7,
+    "figures": 7
+  },
+  "scientific_audits": {
+    "tag_altitude_bias": {
+      "primary_run_id": 36324896204,
+      "primary_result": "5_of_6_pass_after_session_median_centering",
+      "tadarida": {
+        "calibrated_excess": -0.02216560464721118,
+        "p_upper": 0.5121,
+        "pass": false
+      },
+      "stationary_run_id": 36327934667,
+      "stationary_result": "2_of_2_structurally_eligible_panels_pass",
+      "hypsignathus": {
+        "median_absolute_offset_m": 4.637500000000003,
+        "calibrated_excess": 0.06714898350775636,
+        "p_upper": 0.0002
+      },
+      "phyllostomus_2016": {
+        "median_absolute_offset_m": 2,
+        "calibrated_excess": 0.38082178447667214,
+        "p_upper": 0.0002
+      },
+      "final_stop": true
+    }
+  },
+  "automated_validation": {
+    "manuscript_figures": {
+      "run_id": 36329395938,
+      "head_sha": "b0fdea5dd191eeb7759fec84a899b0bdd78994cd",
+      "conclusion": "success",
+      "artifact_id": 10935221530,
+      "artifact_digest": "sha256:2e58d1883f22beacff27bc8e2f828828216dd473cb51da674b43d7a2aa4b91e0"
+    },
+    "anonymous_review_pdf": {
+      "run_id": 36329434589,
+      "head_sha": "8e02d1329fcf2fd0dee5ff96090272a70d353263",
+      "conclusion": "success",
+      "anonymity_guard": "pass",
+      "pages": 26,
+      "artifact_id": 10935232608,
+      "artifact_digest": "sha256:98c54670f7e74904aea05577560d6e7edea47a468453774985c99f7aa05572a1"
+    },
+    "final_visual_inspection": {
+      "figures_1_to_7": "passed",
+      "review_pdf": "passed",
+      "review_pdf_pages": 26,
+      "note": "Full prior v0.3.6 build visually inspected; final build differs only on page 26. Final page 26 re-inspected after Figure 7 legend placement and anonymous repository wording fix."
+    }
+  },
+  "supersedes": "batter-jae-v0.3.5-rc1",
+  "remaining_human_input": [
+    "choose repository software license",
+    "fill final authors and affiliations",
+    "fill corresponding-author postal address email and ORCID",
+    "fill CRediT contributions",
+    "fill funding and acknowledgements",
+    "fill conflict-of-interest declaration",
+    "finalize CITATION.cff or .zenodo.json",
+    "enable repository in Zenodo and mint version DOI",
+    "insert DOI into title page",
+    "perform final journal upload"
+  ]
+}
