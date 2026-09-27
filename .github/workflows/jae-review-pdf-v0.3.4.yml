@@ -9,6 +9,7 @@ on:
       - "manuscript/MANUSCRIPT_DRAFT_V0_3_4.md"
       - "manuscript/jae_review_header.tex"
       - "scripts/prepare_jae_review_markdown.py"
+      - "scripts/check_jae_review_anonymity.py"
       - ".github/workflows/jae-review-pdf-v0.3.4.yml"
   workflow_dispatch:
 
@@ -24,6 +25,8 @@ jobs:
           python-version: "3.12"
       - name: Prepare anonymous review markdown
         run: python scripts/prepare_jae_review_markdown.py
+      - name: Check double-anonymous review manuscript
+        run: python scripts/check_jae_review_anonymity.py
       - name: Install PDF toolchain
         run: |
           sudo apt-get update
