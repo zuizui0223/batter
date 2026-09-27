@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "submission_id": "batter-jae-v0.3.3-rc1",
+  "submission_id": "batter-jae-v0.3.3-rc2",
   "date": "2026-09-27",
   "journal_target": "Journal of Animal Ecology",
   "backup_journal": "Movement Ecology",
@@ -10,12 +10,12 @@
     "no_new_public_source_mining": true,
     "no_endpoint_retuning": true
   },
-  "scientific_content_commit": "f3381fbbd5afb425cf317410747e169e150ec49f",
+  "scientific_content_commit": "5238d60e4c3788d4aa17b56b5d10d970fe665c37",
   "repository_main_before_manifest": "ea608f5aeeb3b3cb4af63c4016746110ff096d95",
   "manuscript": {
     "path": "manuscript/MANUSCRIPT_DRAFT_V0_3_3.md",
-    "blob_sha": "9ded4fe0eb288353ec18f5fdc9232357da42f898",
-    "ci_word_estimate": 6777,
+    "blob_sha": "195463fde433b91ddc0814002cf29f2d88b4ede5",
+    "ci_word_estimate": 7287,
     "abstract_words": 261,
     "abstract_numbered_statements": 5,
     "keywords": 7
@@ -23,23 +23,23 @@
   "automated_validation": {
     "manuscript_figure_gate": {
       "workflow": "jae-submission-v0.3.3",
-      "run_id": 36286204768,
-      "head_sha": "f3381fbbd5afb425cf317410747e169e150ec49f",
+      "run_id": 36286936357,
+      "head_sha": "5238d60e4c3788d4aa17b56b5d10d970fe665c37",
       "conclusion": "success",
-      "artifact_id": 10920752267,
+      "artifact_id": 10920703685,
       "artifact_name": "batter-jae-v0-3-3-figures",
-      "artifact_digest": "sha256:8b34fd6b9868f933f77b757d0cf50bc759e6bc4281ef6209254b6f1b3f9cc26a"
+      "artifact_digest": "sha256:5e212ef99a2b301583733c030495ce9d6a9f19f930b085f3342bf3e5329f9d3a"
     },
     "anonymous_review_pdf": {
       "workflow": "jae-review-pdf-v0.3.3",
-      "run_id": 36286204727,
-      "head_sha": "f3381fbbd5afb425cf317410747e169e150ec49f",
+      "run_id": 36286936404,
+      "head_sha": "5238d60e4c3788d4aa17b56b5d10d970fe665c37",
       "conclusion": "success",
-      "artifact_id": 10920083363,
+      "artifact_id": 10920074259,
       "artifact_name": "batter-jae-review-manuscript-v0-3-3",
-      "artifact_digest": "sha256:49cdda456748d0f4c65998e9a516866890d05bccfe8808861238374827ad5277",
-      "rendered_pages": 23,
-      "visual_inspection": "passed: no clipping, overlap or broken glyphs observed"
+      "artifact_digest": "sha256:df40dc3db69812a8dbde297495bb0b855f647adc491eebe63b45e58812372751",
+      "rendered_pages": 24,
+      "visual_inspection": "passed: all 24 pages rendered and inspected; no clipping, overlap or broken glyphs observed"
     }
   },
   "key_blobs": {
@@ -67,7 +67,18 @@
     "mint permanent versioned archive DOI for code/provenance",
     "fill author list, affiliations, corresponding-author details and CRediT contributions",
     "fill funding, acknowledgements and conflict-of-interest declarations",
-    "confirm original-source ethics/permit citations",
     "perform final journal upload"
-  ]
+  ],
+  "ethics_provenance": {
+    "status": "verified source-by-source",
+    "ledger_path": "manuscript/SOURCE_ETHICS_PROVENANCE_V0_3_3.md",
+    "ledger_blob_sha": "13ad840c347ba889685d30b82e7e12a95f8945a6",
+    "source_programmes": [
+      "Tadarida teniotis",
+      "Eidolon helvum",
+      "Hypsignathus monstrosus",
+      "Phyllostomus hastatus 2016",
+      "Phyllostomus hastatus 2021–2023"
+    ]
+  }
 }
