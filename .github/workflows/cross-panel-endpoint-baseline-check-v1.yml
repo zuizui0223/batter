@@ -1,0 +1,32 @@
+name: cross-panel-endpoint-baseline-check-v1
+
+on:
+  push:
+    branches:
+      - diagnostic/cross-panel-confound-audit-v1
+    paths:
+      - "scripts/check_cross_panel_endpoint_baseline.py"
+      - ".github/workflows/cross-panel-endpoint-baseline-check-v1.yml"
+  workflow_dispatch:
+
+jobs:
+  baseline:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        panel:
+          - eidolon
+          - hypsignathus
+          - phyllostomus_2022
+          - phyllostomus_2023
+          - phyllostomus_2016
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -e .
+      - run: python scripts/check_cross_panel_endpoint_baseline.py --panel "${{ matrix.panel }}"
