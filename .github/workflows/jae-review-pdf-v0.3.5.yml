@@ -1,52 +1,11 @@
-name: jae-review-pdf-v0.3.5
+name: jae-review-pdf-v0.3.5-retired
 
+# Scientifically superseded by v0.3.6 after the final tag-altitude-bias audit.
 on:
-  push:
-    branches:
-      - diagnostic/cross-panel-confound-audit-v1
-      - main
-    paths:
-      - "manuscript/MANUSCRIPT_DRAFT_V0_3_5.md"
-      - "manuscript/jae_review_header.tex"
-      - "scripts/prepare_jae_review_markdown_v0_3_5.py"
-      - "scripts/check_jae_review_anonymity_v0_3_5.py"
-      - ".github/workflows/jae-review-pdf-v0.3.5.yml"
   workflow_dispatch:
 
 jobs:
-  render:
+  provenance-note:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-      - name: Prepare anonymous review markdown
-        run: python scripts/prepare_jae_review_markdown_v0_3_5.py
-      - name: Check double-anonymous review manuscript
-        run: python scripts/check_jae_review_anonymity_v0_3_5.py
-      - name: Install PDF toolchain
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y pandoc texlive-xetex texlive-latex-extra poppler-utils
-      - name: Render double-spaced line-numbered review PDF
-        run: |
-          pandoc manuscript/generated/JAE_REVIEW_V0_3_5.md \
-            --from=gfm \
-            --standalone \
-            --pdf-engine=xelatex \
-            --include-in-header=manuscript/jae_review_header.tex \
-            --variable fontsize=11pt \
-            --metadata author="" \
-            --metadata date="" \
-            -o manuscript/generated/JAE_REVIEW_V0_3_5.pdf
-          pdfinfo manuscript/generated/JAE_REVIEW_V0_3_5.pdf | grep -E "^(Pages|Page size):"
-      - uses: actions/upload-artifact@v4
-        with:
-          name: batter-jae-review-manuscript-v0-3-5
-          path: |
-            manuscript/generated/JAE_REVIEW_V0_3_5.md
-            manuscript/generated/JAE_REVIEW_V0_3_5.pdf
-          if-no-files-found: error
+      - run: echo "v0.3.5 review PDF is a provenance baseline; use jae-review-pdf-v0.3.6."

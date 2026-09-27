@@ -9,26 +9,27 @@ https://besjournals.onlinelibrary.wiley.com/hub/journal/13652656/author-guidelin
 
 - **Article type:** Research Article.
 - **Word limit:** journal limit 8,500 words including title page, abstract, references and legends.
-  Repository v0.3.5 main-manuscript CI estimate is 7,047 words; final combined count must be reconfirmed
+  Repository v0.3.6 main-manuscript CI estimate is 7,932 words; final combined count must be reconfirmed
   after title-page metadata are filled.
-- **Abstract:** 271 words, below the 350-word limit.
+- **Abstract:** 273 words, below the 350-word limit.
 - **Abstract structure:** five numbered statements.
 - **Keywords:** seven, alphabetized, below the maximum of eight.
 - **Review format:** double-spaced, continuous line numbering and page numbering are produced by
   the review-PDF workflow.
-- **Double anonymization:** the v0.3.5 review generator suppresses the author-identifying repository
-  owner; the dedicated leak guard passes on the 24-page review PDF.
-- **Separate title page:** present as `manuscript/TITLE_PAGE_TEMPLATE_V0_3_5.md`.
+- **Double anonymization:** the v0.3.6 review generator suppresses the author-identifying repository
+  owner; the dedicated leak guard passes on the 26-page review PDF.
+- **Separate title page:** present as `manuscript/TITLE_PAGE_TEMPLATE_V0_3_6.md`.
 - **Data availability:** the title page now lists all six Movebank dataset DOIs; the permanent
   code/provenance archive DOI remains a deliberate placeholder.
 - **Conflict of interest:** required by the journal and still awaiting human input.
 - **Authors / affiliations / corresponding author:** still awaiting final human metadata.
-- **References:** all 14 references currently in v0.3.5 include DOI links.
+- **References:** all 14 references currently in v0.3.6 include DOI links.
 - **Graphical abstract:** not treated as an initial-submission blocker; the journal requests it at
   revision stage.
 
 - **Cross-panel confound audit:** completed under pre-output frozen contracts; failures and sample-size attrition are retained in the main manuscript.
-- **Effect-size null calibration:** pairwise and metre-scale biological translations now use their own session-label exchangeability baselines.
+- **Effect-size null calibration:** pairwise and metre-scale biological translations use their own session-label exchangeability baselines.
+- **Final tag-altitude-bias audit:** complete under pre-output frozen rules; 5/6 panels retain centered-shape identity and 2/2 structurally eligible panels retain identity after stationary offset correction.
 
 ## Remaining blockers
 
@@ -42,4 +43,4 @@ https://besjournals.onlinelibrary.wiley.com/hub/journal/13652656/author-guidelin
 8. permanent code/provenance archive DOI;
 9. final combined word-count confirmation and journal upload.
 
-No additional ecological analysis is required for these items.
+No additional ecological analysis is required or authorized before submission.
