@@ -175,7 +175,9 @@ This is heterogeneous among individuals and is not a universal fixed height offs
 
 ### Reporting preference
 
-Use pairwise self-identification and the focal metre-scale effect for biological interpretation.
+Use calibrated pairwise self-identification for biological interpretation. The focal 256-m
+metre-scale value is descriptive only after the tag-bias audit because *Tadarida* does not retain
+identity after session-centering.
 
 Retain nats/fix for exact statistical reporting. Entropy-normalized calibrated gains are
 Supporting Information only because the ratio is not mutual information, is not variance
@@ -291,7 +293,7 @@ further scientific analysis family is opened.
 
 **JAE v0.3.3 rc2 is scientifically superseded and must not be submitted.**
 
-Current scientific candidate: `manuscript/MANUSCRIPT_DRAFT_V0_3_5.md`.
+Current scientific candidate: `manuscript/MANUSCRIPT_DRAFT_V0_3_6.md`.
 
 The v0.3.4 rc3 package is retained as the pre-audit baseline and must not be submitted as the final scientific version.
 
@@ -312,6 +314,19 @@ Packaging-only **rc3** additionally fixes double-anonymous review leakage of the
 adds an anonymity CI guard, makes the title-page data-availability statement enumerate all six
 Movebank source DOIs, and adds a Zenodo release-readiness gate. RC3 still points to the same
 scientific-content commit.
+
+## v0.3.6 automated validation
+
+- manuscript CI estimate: **7,932 words**;
+- abstract: **273 words**, five numbered statements;
+- keywords: **7**;
+- Figures 1–7: generated and visually inspected;
+- anonymous review PDF: **26 pages**;
+- anonymity gate: **PASS**;
+- final PDF visual diff from the prior full-inspection build is confined to page 26; Figure 7 legend placement and anonymous repository wording were re-inspected.
+
+The final tag-bias audit is complete. No further new scientific analysis is required or authorized
+before submission.
 
 ## Claim boundary
 
