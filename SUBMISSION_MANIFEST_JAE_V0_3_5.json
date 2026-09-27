@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "submission_id": "batter-jae-v0.3.5-rc1",
+  "date": "2026-09-27",
+  "journal_target": "Journal of Animal Ecology",
+  "manuscript": {
+    "path": "manuscript/MANUSCRIPT_DRAFT_V0_3_5.md",
+    "title": "Repeatable vertical identity in bat airspace persists after coarse horizontal occupancy is standardized",
+    "ci_word_estimate": 7047,
+    "abstract_words": 271,
+    "abstract_numbered_statements": 5,
+    "keywords": 7
+  },
+  "audit": {
+    "run_id": 36317089590,
+    "conclusion": "success",
+    "endpoint_primary": "4/5 comparative panels pass; Eidolon fails n gate; prior Tadarida fails p gate",
+    "pairwise": "5/6 panels exceed panel-specific pairwise null; Phyllostomus 2016 p=0.1168",
+    "agl_separation": {
+      "raw_mean_m": 256.4593439137133,
+      "null_mean_m": 133.73264127560807,
+      "calibrated_excess_m": 122.72670263810525,
+      "p_upper": 0.0297
+    }
+  },
+  "automated_validation": {
+    "manuscript_figures": {
+      "run_id": 36322870626,
+      "conclusion": "success"
+    },
+    "anonymous_review_pdf": {
+      "run_id": 36322873490,
+      "conclusion": "success",
+      "anonymity_guard": "pass",
+      "pages": 24
+    }
+  },
+  "preaudit_baseline": "release/jae-v0.3.4-rc3",
+  "remaining_human_input": [
+    "choose repository software license",
+    "fill final authors and affiliations",
+    "fill corresponding-author postal address email and ORCID",
+    "fill CRediT contributions",
+    "fill funding and acknowledgements",
+    "fill conflict-of-interest declaration",
+    "finalize CITATION.cff or .zenodo.json",
+    "enable repository in Zenodo and mint version DOI",
+    "insert DOI into title page",
+    "perform final visual inspection and journal upload"
+  ]
+}
