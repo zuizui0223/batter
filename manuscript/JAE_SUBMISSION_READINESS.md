@@ -81,6 +81,19 @@ conflict declaration, and a permanent archive DOI. The matching GitHub Actions w
 manual-only (`jae-upload-readiness-v0.3.4`) so unresolved human metadata does not turn the
 scientific RC CI red. This guard does not re-open empirical analyses.
 
+## Archive-release readiness
+
+A separate manual guard, `python scripts/check_zenodo_release_ready.py`, now blocks a GitHub
+release intended for Zenodo until an explicit software LICENSE and one final metadata source
+(`CITATION.cff` or `.zenodo.json`) are present without placeholders.
+
+The repository currently remains **BLOCKED** at this archival layer because neither the software
+license nor final release metadata has been supplied. This does not affect the frozen empirical
+result.
+
+The current JAE requirements audit is
+`manuscript/JAE_INITIAL_SUBMISSION_AUDIT_2026_09_27.md`.
+
 ## Human-input items before journal upload
 
 - permanent versioned archive DOI;
