@@ -1,0 +1,179 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-tag-altitude-bias-audit-v1",
+  "status": "complete",
+  "preflight": {
+    "workflow_run_id": 36325288331,
+    "head_sha": "c059e7567469b00074b3a857608f56f4ccbc73e3",
+    "numeric_vertical_values_parsed": false,
+    "stationary_feasible_panels": [
+      "hypsignathus",
+      "phyllostomus_2016"
+    ],
+    "stationary_ineligible": {
+      "tadarida": {
+        "supported": 0,
+        "threshold": 5
+      },
+      "eidolon": {
+        "supported": 4,
+        "threshold": 10
+      },
+      "phyllostomus_2022": {
+        "supported": 13,
+        "threshold": 17
+      },
+      "phyllostomus_2023": {
+        "supported": 0,
+        "threshold": 8
+      }
+    },
+    "timing_overlap": [
+      {
+        "panel": "tadarida",
+        "pairs": 21,
+        "positive_overlap_fraction": 0.7142857142857143,
+        "median_positive_overlap_hours": 29.168055555555554,
+        "median_start_difference_days": 0.005127314814814815
+      },
+      {
+        "panel": "eidolon",
+        "pairs": 107,
+        "positive_overlap_fraction": 0.8598130841121495,
+        "median_positive_overlap_hours": 83.50583263888889,
+        "median_start_difference_days": 1.001087962962963
+      },
+      {
+        "panel": "hypsignathus",
+        "pairs": 276,
+        "positive_overlap_fraction": 0.9166666666666666,
+        "median_positive_overlap_hours": 179.91027777777776,
+        "median_start_difference_days": 1.031388888888889
+      },
+      {
+        "panel": "phyllostomus_2022",
+        "pairs": 295,
+        "positive_overlap_fraction": 0.7661016949152543,
+        "median_positive_overlap_hours": 102.52013888888888,
+        "median_start_difference_days": 1.0208564814814816
+      },
+      {
+        "panel": "phyllostomus_2023",
+        "pairs": 66,
+        "positive_overlap_fraction": 1,
+        "median_positive_overlap_hours": 77.90166666666667,
+        "median_start_difference_days": 0.04225115740740741
+      },
+      {
+        "panel": "phyllostomus_2016",
+        "pairs": 45,
+        "positive_overlap_fraction": 0.3111111111111111,
+        "median_positive_overlap_hours": 38.44611111111111,
+        "median_start_difference_days": 4.014768518518519
+      }
+    ],
+    "multiple_tag_or_deployment_metadata": {
+      "phyllostomus_2022": {
+        "individuals_with_multiple_deployment_ids": 2,
+        "individuals_with_multiple_tag_ids": 2
+      }
+    }
+  },
+  "primary_shift_invariant_shape": {
+    "workflow_run_id": 36324896204,
+    "contract_head_sha": "e2321e7c1424794be4269d173c77e81bed6158c4",
+    "result_category": "5_of_6_pass",
+    "rows": [
+      {
+        "panel": "tadarida",
+        "n": 6,
+        "observed": -0.2629362601335861,
+        "null_mean": -0.24077065548637494,
+        "calibrated_excess": -0.02216560464721118,
+        "p_upper": 0.5121,
+        "pass": false
+      },
+      {
+        "panel": "eidolon",
+        "n": 20,
+        "observed": 0.3719193340623328,
+        "null_mean": -0.07099783433884925,
+        "calibrated_excess": 0.44291716840118206,
+        "p_upper": 0.0002,
+        "pass": true
+      },
+      {
+        "panel": "hypsignathus",
+        "n": 24,
+        "observed": 0.07362979912287582,
+        "null_mean": -0.1031550113137133,
+        "calibrated_excess": 0.1767848104365891,
+        "p_upper": 0.0002,
+        "pass": true
+      },
+      {
+        "panel": "phyllostomus_2022",
+        "n": 33,
+        "observed": -0.03938733846604477,
+        "null_mean": -0.15083216594070384,
+        "calibrated_excess": 0.11144482747465906,
+        "p_upper": 0.0002,
+        "pass": true
+      },
+      {
+        "panel": "phyllostomus_2023",
+        "n": 16,
+        "observed": 0.0454271303053492,
+        "null_mean": -0.07262765031065291,
+        "calibrated_excess": 0.11805478061600211,
+        "p_upper": 0.0002,
+        "pass": true
+      },
+      {
+        "panel": "phyllostomus_2016",
+        "n": 10,
+        "observed": -0.008440772417901093,
+        "null_mean": -0.5824275968718731,
+        "calibrated_excess": 0.573986824453972,
+        "p_upper": 0.0076,
+        "pass": true
+      }
+    ]
+  },
+  "interpretation": {
+    "cross_panel": "Additive constant tag/device altitude offsets are not a general explanation because five panels retain calibrated vertical-distribution shape identity after session-median centering.",
+    "tadarida": "Focal Tadarida does not retain identity after session centering; its absolute vertical-location component may be biological, device-related, or both.",
+    "metre_translation": "The focal 256-m AGL separation is demoted from headline biological evidence and may be retained only as a raw translation with additive-offset caveat.",
+    "timing": "No new time-block permutation family is opened; tracking-window overlap is reported as a limitation.",
+    "stationary": "In both structurally eligible panels, empirical stationary-height offset correction retains calibrated vertical identity (p=0.0002 in each), corroborating the primary conclusion that additive device offsets are not a general explanation.",
+    "final_stop": "Tag-altitude-bias audit v1 is complete. No further new scientific audit family is authorized before submission."
+  },
+  "secondary_stationary": {
+    "workflow_run_id": 36327934667,
+    "head_sha": "e4b65a94ff7d03b2b9a7b1462f85775084ff4145",
+    "runtime": "macos-latest",
+    "result": "2_of_2_structurally_eligible_panels_retain_signal_after_stationary_offset_correction",
+    "rows": [
+      {
+        "panel": "hypsignathus",
+        "offset_individuals": 12,
+        "evaluable_individuals_after_correction": 10,
+        "median_absolute_offset_m": 4.637500000000003,
+        "observed": 0.020766394393039185,
+        "null_mean": -0.04638258911471718,
+        "calibrated_excess": 0.06714898350775636,
+        "p_upper": 0.0002
+      },
+      {
+        "panel": "phyllostomus_2016",
+        "offset_individuals": 11,
+        "evaluable_individuals_after_correction": 7,
+        "median_absolute_offset_m": 2,
+        "observed": 0.15980963770227982,
+        "null_mean": -0.22101214677439232,
+        "calibrated_excess": 0.38082178447667214,
+        "p_upper": 0.0002
+      }
+    ]
+  }
+}
