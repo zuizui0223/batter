@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-cross-panel-estimator-calibration-v1",
+  "date_frozen": "2026-09-27",
+  "status": "frozen before any non-Tadarida calibration outputs were opened",
+  "trigger": "Tadarida post-freeze calibration showed a non-zero estimator null and strong sensitivity of ordinary marginal identity to horizontal cell weighting.",
+  "relation_to_freeze": {
+    "original_primary_results_remain_historical_and_unchanged": true,
+    "this_is_post_freeze_diagnostic_not_original_preregistration": true,
+    "calibration_may_weaken_or_replace_cross_panel_architecture_language": true,
+    "source_search_remains_closed": true,
+    "no_new_datasets": true
+  },
+  "panels": [
+    {
+      "id": "eidolon",
+      "taxon": "Eidolon helvum",
+      "contract": "contract/eidolon_independent_replication_v1.json",
+      "observed": {
+        "conditional": 0.2189834066380572,
+        "marginal": 0.00210276447543965,
+        "advantage": 0.21688064216261763,
+        "n": 20
+      },
+      "perm_seed": 2026092701,
+      "boot_seed": 2026092801
+    },
+    {
+      "id": "hypsignathus",
+      "taxon": "Hypsignathus monstrosus",
+      "contract": "contract/hypsignathus_replication_v1.json",
+      "observed": {
+        "conditional": 0.029329026741430914,
+        "marginal": -0.020660262506134546,
+        "advantage": 0.04998928924756546,
+        "n": 24
+      },
+      "perm_seed": 2026092702,
+      "boot_seed": 2026092802
+    },
+    {
+      "id": "phyllostomus_2022",
+      "taxon": "Phyllostomus hastatus",
+      "contract": "contract/phyllostomus_replication_v1.json",
+      "observed": {
+        "conditional": 0.055713950418866134,
+        "marginal": 0.17585833694181663,
+        "advantage": -0.12014438652295047,
+        "n": 33
+      },
+      "perm_seed": 2026092703,
+      "boot_seed": 2026092803
+    },
+    {
+      "id": "phyllostomus_2023",
+      "taxon": "Phyllostomus hastatus",
+      "contract": "contract/phyllostomus_2023_replication_v1.json",
+      "observed": {
+        "conditional": 0.03332180095813036,
+        "marginal": 0.013281138695873029,
+        "advantage": 0.02004066226225732,
+        "n": 16
+      },
+      "perm_seed": 2026092704,
+      "boot_seed": 2026092804
+    },
+    {
+      "id": "phyllostomus_2016",
+      "taxon": "Phyllostomus hastatus",
+      "contract": "contract/phyllostomus_2016_dry_architecture_v1.json",
+      "observed": {
+        "conditional": 0.05758943117796057,
+        "marginal": 0.01645912628764278,
+        "advantage": 0.04113030489031777,
+        "n": 10
+      },
+      "perm_seed": 2026092705,
+      "boot_seed": 2026092805
+    }
+  ],
+  "common_design": {
+    "cell_size_m": 5000,
+    "preserve_original_vertical_field_and_bins": true,
+    "preserve_original_cohort_definition": true,
+    "permutation_unit": "whole retained session block",
+    "permutation_scope": "within each admitted cohort",
+    "preserve": "exact per-cohort number of retained sessions assigned to every original individual label, plus all within-session x-y-z data and coverage",
+    "monte_carlo_permutations_per_panel": 4999,
+    "rng": "numpy PCG64",
+    "common_cell_reweighting": "identical to tadarida_estimator_calibration_v1: equal-session self cell-frequency weights over conditional common-support cells applied to both self and other P(z|cell)",
+    "individual_bootstrap_replicates": 10000,
+    "bootstrap_interval": "percentile 95%"
+  },
+  "reported_metrics": [
+    "ordinary G_cond, G_marg, G_adv",
+    "common-cell-weighted marginal identity",
+    "common-cell-weighted conditional advantage",
+    "panel-specific null mean/SD/quantiles",
+    "observed-minus-null-mean calibration",
+    "one-sided P(null >= observed)",
+    "null-standardized deviation (observed-null mean)/null SD",
+    "individual-bootstrap 95% interval",
+    "observed and null evaluable-individual counts"
+  ],
+  "interpretation_rules": {
+    "no_raw_sign_classification": "Do not call a panel conditional- or marginal-dominant from uncalibrated G_adv sign alone.",
+    "standardized_architecture": "Primary diagnostic comparison across panels is the calibrated common-cell advantage: observed common-cell advantage minus that panel's permutation-null mean; report raw common-cell advantage alongside it.",
+    "robust_conditional_evidence": "Requires calibrated common-cell advantage > 0 and one-sided permutation tail <= 0.05. Bootstrap interval is reported but is not a second pass/fail gate.",
+    "marginal_dominance_check": "For Phyllostomus 2022, specifically test whether common-cell weighting and panel-specific null calibration remove, preserve, or reverse the negative architecture.",
+    "no_species_trait_inference": true,
+    "no_absolute_nats_effect_size_ranking_across_vertical_reference_systems": true
+  },
+  "stop_rule": [
+    "Do not alter B, seeds, cohort scope, reweighting, bins, grid, smoothing, or eligibility after any non-Tadarida calibration output is opened.",
+    "Retain negative and contradictory panel results.",
+    "If the original architecture categories change after calibration, amend the manuscript before submission.",
+    "Do not reopen source search."
+  ]
+}
