@@ -22,6 +22,8 @@ import scripts.run_new_species_replications as core
 import scripts.run_eidolon_independent_replication as eid
 
 CONTRACT = Path("contract/cross_panel_endpoint_exclusion_v1.json")
+BASELINE = Path("results/calibrated_vertical_identity_effect_input_v1.csv")
+TOL = 1e-12
 CELL_SIZE = 5000.0
 MIN_SESSION = 50
 PRIMARY_RADIUS = 1000
@@ -31,6 +33,15 @@ SENSITIVITY_RADII = {500, 2000}
 def load_contract():
     cfg = json.loads(CONTRACT.read_text(encoding="utf-8"))
     return cfg, {p["id"]: p for p in cfg["panels"]}
+
+
+def baseline_targets():
+    import csv
+    with BASELINE.open(newline="", encoding="utf-8") as fh:
+        return {
+            r["panel_id"]: float(r["common_cell_marginal"])
+            for r in csv.DictReader(fh)
+        }
 
 
 def adjusted_source_contract(panel_id: str, spec: dict) -> dict:
@@ -281,6 +292,35 @@ def main():
         raise SystemExit(f"unknown panel {args.panel}")
     spec, records, k, source, pre, numeric_failures = load_raw_panel(args.panel)
 
+    # Two pre-output consistency checks. First reproduce the published no-exclusion
+    # common-cell endpoint using the existing calibration loader; then reproduce it
+    # from this runner's projected-record path with a zero-radius exclusion.
+    _old_spec, old_events, old_k, _old_source, _old_pre, _old_fail = cal.load_panel(args.panel)
+    old_arrays = {
+        cohort: cal.make_cohort_arrays(events, old_k)
+        for cohort, events in sorted(old_events.items())
+    }
+    old_observed, _, _ = cal.observed_eval(old_arrays)
+    expected = baseline_targets()[args.panel]
+    if abs(float(old_observed["common_cell_marginal"]) - expected) > TOL:
+        raise RuntimeError(
+            f"existing calibration baseline mismatch {args.panel}: "
+            f"{old_observed['common_cell_marginal']} != {expected}"
+        )
+
+    zero_events, zero_qc = events_after_exclusion(records, 0)
+    zero_arrays = {
+        cohort: cal.make_cohort_arrays(events, k)
+        for cohort, events in sorted(zero_events.items())
+        if events
+    }
+    zero_observed, _, _ = cal.observed_eval(zero_arrays)
+    if abs(float(zero_observed["common_cell_marginal"]) - expected) > TOL:
+        raise RuntimeError(
+            f"endpoint-runner reconstruction mismatch {args.panel}: "
+            f"{zero_observed['common_cell_marginal']} != {expected}"
+        )
+
     events_by_cohort, qc = events_after_exclusion(records, args.radius)
     if args.radius == PRIMARY_RADIUS:
         B = int(cfg["exclusion_and_scoring"]["primary_permutations_per_panel"])
@@ -319,6 +359,13 @@ def main():
         "source": source,
         "original_admitted_cohorts": list(pre["admitted_cohorts"]),
         "numeric_height_parse_failures": numeric_failures,
+        "pre_exclusion_consistency": {
+            "expected_common_cell_marginal": expected,
+            "existing_loader_common_cell_marginal": old_observed["common_cell_marginal"],
+            "endpoint_runner_zero_radius_common_cell_marginal": zero_observed["common_cell_marginal"],
+            "absolute_tolerance": TOL,
+            "zero_radius_qc": zero_qc,
+        },
         "qc": qc,
         "observed": {
             **observed,
