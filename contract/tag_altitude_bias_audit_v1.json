@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-tag-altitude-bias-audit-v1",
+  "frozen_date": "2026-09-27",
+  "status": "primary shift-invariant rules frozen before any centered-height output; stationary-correction applicability will be copied mechanically from the separately frozen x-y/time-only preflight",
+  "purpose": "Test whether the six-panel vertical-identity result can be explained by a constant device/individual-specific vertical offset.",
+  "primary_shift_invariant_shape_test": {
+    "scope": "all six frozen paper panels",
+    "source_and_session_rules": "unchanged from v0.3.5",
+    "horizontal_cell_size_m": 5000,
+    "transformation": "Within every originally retained session, compute the median of that session's numeric primary vertical coordinate and subtract it from every vertical observation in the session before binning. The centered residual observations remain attached to the session block under permutation.",
+    "rationale": "Any additive constant tag/device offset is removed exactly; session centering is stronger because it also removes night-specific additive vertical shifts.",
+    "target_centering": "The held-out target session is centered by its own session median using the same deterministic transformation applied to every session before prediction. This nuisance transformation does not use candidate identity and is held fixed under label permutation.",
+    "centered_vertical_edges_m": [
+      "-inf",
+      -400,
+      -200,
+      -100,
+      -50,
+      0,
+      50,
+      100,
+      200,
+      400,
+      "inf"
+    ],
+    "jeffreys_alpha": 0.5,
+    "self_weighting": "equal session",
+    "other_weighting": "equal individual within frozen cohort",
+    "common_cell_weighting": "identical to v0.3.5 common-cell calibration: equal-session self horizontal weights over cells supported by both candidate conditional profiles, applied identically to self and other centered P(residual z | cell)",
+    "minimum_scored_target_fixes": 50,
+    "required_evaluable_individuals": {
+      "tadarida": 6,
+      "eidolon": 20,
+      "hypsignathus": 24,
+      "phyllostomus_2022": 33,
+      "phyllostomus_2023": 16,
+      "phyllostomus_2016": 10
+    },
+    "permutation": {
+      "unit": "whole centered session block",
+      "scope": "within frozen admitted cohort",
+      "preserve": "all centered within-session x-y-residual-z observations and exact original session-count multiset per label",
+      "rng": "numpy PCG64",
+      "settings": [
+        {
+          "panel": "tadarida",
+          "B": 9999,
+          "seed": 20260927
+        },
+        {
+          "panel": "eidolon",
+          "B": 4999,
+          "seed": 2026092701
+        },
+        {
+          "panel": "hypsignathus",
+          "B": 4999,
+          "seed": 2026092702
+        },
+        {
+          "panel": "phyllostomus_2022",
+          "B": 4999,
+          "seed": 2026092703
+        },
+        {
+          "panel": "phyllostomus_2023",
+          "B": 4999,
+          "seed": 2026092704
+        },
+        {
+          "panel": "phyllostomus_2016",
+          "B": 4999,
+          "seed": 2026092705
+        }
+      ]
+    },
+    "panel_pass_rule": {
+      "exact_required_evaluable_individual_count": true,
+      "observed_minus_null_mean_common_cell_shape_identity_positive": true,
+      "one_sided_p_null_ge_observed_max": 0.05
+    }
+  },
+  "secondary_stationary_height_correction": {
+    "applicability": "only panels declared feasible by tag_altitude_bias_preflight_v1 under its already-frozen structural rule; no threshold may be changed after preflight output",
+    "estimator": "For each shared stationary 100-m cell, compute each supported individual's median primary vertical coordinate across its frozen stationary-candidate fixes in that cell. The cell reference is the median of those individual medians, giving equal individual weight. The individual's cell offset is its median minus the cell reference. The final individual offset is the median of its cell offsets across all supported shared cells.",
+    "correction": "Subtract the frozen individual offset from every numeric primary-height event for that supported individual before applying the original v0.3.5 vertical bins and 5-km common-cell calibration.",
+    "scope_after_correction": "Restrict the audit to supported individuals with offset estimates; retain original cohorts and sessions that still satisfy the existing >=50 event and prediction-support rules.",
+    "permutation": "Whole corrected session blocks are permuted using the same panel-specific B and seed as the primary shape test.",
+    "pass_rule": "Descriptive robustness: report corrected observed, null mean, calibrated excess and p. No stationary result can rescue failure of the all-panel shift-invariant primary test.",
+    "warning": "Stationary cells are empirical calibration locations, not verified roost height references; residual biological perch/tree/cave height differences within a 100-m cell can remain."
+  },
+  "temporal_confounding": {
+    "action": "Use the x-y/time-only preflight overlap summary in Supporting Information and add a limitation sentence to the manuscript.",
+    "no_new_inferential_family": true,
+    "reason": "This audit is the predeclared stopping point; time-block permutations would open a distinct inferential family and are not authorized."
+  },
+  "manuscript_decision_matrix": {
+    "six_of_six_shape_pass": "May state that additive tag/device offsets cannot explain the cross-panel result; all panels retain repeatable vertical distribution-shape identity after session centering.",
+    "four_or_five_shape_pass": "May state that additive offsets are not a general explanation, but identify non-passing panels as potentially dominated by vertical-location effects that can include biological or device offsets.",
+    "one_to_three_shape_pass": "Restrict the biological generalization substantially: only the passing systems show identity beyond additive vertical location; keep the pipeline-calibration methodological result as the general contribution.",
+    "zero_shape_pass": "Do not claim vertical individuality independent of additive altitude offsets. Reframe the ecological result as repeatable absolute vertical-location identity potentially confounded with device offset; the methodological calibration result remains.",
+    "stationary_correction_role": "Use only as corroboration in structurally eligible panels, never to override the primary centered-shape decision.",
+    "final_stop": "After this v1 family is complete and incorporated, no further new scientific audit is opened before submission."
+  },
+  "stop_rule": [
+    "Do not change centered residual bins, session median transformation, grid, smoothing, panel B/seeds, eligibility, or pass criteria after any centered-height output.",
+    "Do not alter stationary preflight feasibility thresholds after preflight output.",
+    "Retain all non-passing panels and contradictory stationary-correction results.",
+    "Do not open time-block permutation, new device metadata search, or new source panels after this audit."
+  ]
+}
