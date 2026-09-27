@@ -42,7 +42,7 @@ Tracking data are publicly archived in the Movebank Data Repository. Analysis co
 
 ## Main-manuscript word count
 
-Current CI estimate for `MANUSCRIPT_DRAFT_V0_3_3.md`: **6,777 words**, including references and figure legends under the repository's Markdown-light counting rule.
+Current CI estimate for `MANUSCRIPT_DRAFT_V0_3_3.md`: **7,287 words**, including references and figure legends under the repository's Markdown-light counting rule.
 
 ## Submission files
 
