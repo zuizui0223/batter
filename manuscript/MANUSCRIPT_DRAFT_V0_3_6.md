@@ -144,15 +144,13 @@ Absolute separation is positive even under exchangeability. We therefore froze a
 
 ### Additive tag/device altitude-bias audit
 
-GPS altitude can contain device-specific additive offsets, and one biological individual is often associated with one tag within a deployment. A stable altitude zero-point difference could therefore mimic repeatable individual vertical location. We froze a final audit before opening its outcomes and declared it the stopping point for new scientific analysis families before submission.
+GPS altitude can contain device-specific additive offsets, so a stable tag zero point could mimic repeatable individual vertical location. We therefore froze one final audit before output and declared it the stopping point for new scientific analyses.
 
-The primary test was deliberately independent of any external calibration location. Within every already-retained session, we subtracted that session's median primary vertical coordinate from every fix before vertical binning. Centered residual heights were assigned to fixed bins with edges -∞, -400, -200, -100, -50, 0, 50, 100, 200, 400 and +∞ m. Horizontal cells, cohort definitions, self/other weighting, minimum scored fixes and whole-session identity permutations were unchanged. Session centering removes every additive constant tag/device offset exactly and also removes session-specific constant altitude shifts. Each panel was required to retain exactly its original evaluable-individual count. Support required positive observed-minus-null common-cell shape identity and one-sided P(null >= observed) <=0.05.
+For the primary test, each retained session was translated to zero median before vertical binning, using fixed residual-height edges of -∞, -400, -200, -100, -50, 0, 50, 100, 200, 400 and +∞ m. Horizontal cells, cohort definitions, weighting, scoring thresholds and whole-session permutations were unchanged. This removes any additive constant tag/device offset, as well as session-specific constant height shifts. Panels had to retain their original evaluable-individual counts; support required positive observed-minus-null common-cell shape identity and one-sided P(null >= observed) <=0.05.
 
-Before opening numeric height for a separate empirical correction, we froze an x-y/time-only stationary preflight. A fix was a stationary candidate only when both adjacent time gaps were <=20 min and horizontal speed to both neighbours was <=0.5 m/s. Candidates were assigned to fixed 100-m cells. A cell was shared when at least three individuals each contributed at least five candidate fixes; an individual was supported with at least 10 candidate fixes across at least one shared cell. A panel was eligible for stationary-height correction only when supported individuals numbered at least max(5, ceil(0.5 × original evaluable n)) and an admitted cohort retained at least three supported repeat individuals. This gate admitted only *Hypsignathus monstrosus* and *Phyllostomus hastatus* 2016.
+A separate x-y/time-only preflight defined stationary candidates by both adjacent gaps <=20 min and both adjacent horizontal speeds <=0.5 m/s. Shared 100-m cells required at least three individuals with >=5 candidate fixes each; supported individuals required >=10 candidate fixes. Stationary correction was allowed only when supported individuals numbered at least max(5, ceil(0.5 × original evaluable n)) and an admitted cohort retained >=3 supported repeat individuals. Only *Hypsignathus monstrosus* and *Phyllostomus hastatus* 2016 passed this gate.
 
-For those two panels, within each shared stationary cell we computed each supported individual's median primary height, defined the cell reference as the median of those individual medians, and estimated individual-by-cohort offsets from the median difference across supported cells. Those offsets were subtracted from all primary-height observations before the original v0.3.5 vertical bins and 5-km common-cell calibration were rerun. This stationary correction was corroborative only and could not rescue a failed primary centered-shape test.
-
-The same x-y/time-only preflight summarized overlap in tracking windows between repeat individuals within cohort. This timing analysis was descriptive only. No additional time-block permutation family was opened.
+For those panels, individual-by-cohort offsets were estimated relative to the median individual height in each shared stationary cell, subtracted from all primary-height observations, and the original vertical bins and 5-km calibration were rerun. This correction was corroborative only. The same preflight summarized tracking-window overlap descriptively; no time-block permutation family was opened.
 
 ### Source-study ethics
 
@@ -228,15 +226,11 @@ The frozen decision matrix therefore classified the audit as 5/6 PASS: additive 
 
 ### Stationary-height correction corroborates the two structurally eligible panels
 
-The x-y/time-only preflight permitted stationary correction only for *H. monstrosus* and *P. hastatus* 2016. In *H. monstrosus*, offsets were estimated for 12 individuals; 10 remained evaluable after correction. The median absolute estimated offset was 4.64 m, and corrected common-cell identity was +0.0208 versus a null mean of -0.0464 (calibrated excess +0.0671; p=0.0002).
-
-In *P. hastatus* 2016, offsets were estimated for 11 individuals; seven remained evaluable. The median absolute offset was 2.00 m, and corrected identity was +0.1598 versus a null mean of -0.2210 (+0.3808; p=0.0002).
-
-Thus both structurally eligible panels retained calibrated identity after empirical stationary offset correction. This analysis is corroborative rather than definitive because shared stationary 100-m cells are empirical calibration locations, not verified equal-height roost or perch references, and four panels lacked sufficient predeclared stationary support.
+Only *H. monstrosus* and *P. hastatus* 2016 passed the x-y/time-only support gate. In *H. monstrosus*, 12 offsets were estimated, 10 individuals remained evaluable, and the median absolute offset was 4.64 m; corrected identity retained calibrated excess +0.0671 (p=0.0002). In *P. hastatus* 2016, 11 offsets were estimated, seven individuals remained evaluable, and the median absolute offset was 2.00 m; calibrated excess was +0.3808 (p=0.0002). Shared stationary cells are empirical calibration locations rather than verified equal-height roost or perch references.
 
 ### Tracking-window overlap is substantial in five panels but weaker in the 2016 panel
 
-Repeat-individual tracking windows overlapped for 71.4% of focal *Tadarida* pairs, 86.0% of *Eidolon* pairs, 91.7% of *Hypsignathus* pairs, 76.6% of *P. hastatus* 2022 pairs and all *P. hastatus* 2023 pairs. The 2016 *P. hastatus* panel was less contemporaneous, with positive overlap in 31.1% of repeat-individual pairs and a median start-date difference of 4.0 d. Individual identity and short-term temporal context can therefore remain partly confounded, particularly in the 2016 panel.
+Positive tracking-window overlap among repeat-individual pairs was 71.4% in *Tadarida*, 86.0% in *Eidolon*, 91.7% in *Hypsignathus*, 76.6% in *P. hastatus* 2022, 100% in 2023 and 31.1% in 2016. The 2016 panel also had a median start-date difference of 4.0 d, leaving the strongest residual individual-versus-time limitation.
 
 ### Focal metre-scale translation is descriptive after the device-bias audit
 
@@ -272,17 +266,15 @@ For this reason, we describe the comparative result as vertical identity beyond 
 
 ### Additive device offsets are not a general explanation, but tighten the focal claim ceiling
 
-A stable tag-specific altitude offset is an important confound for individual-level vertical tracking because tag and individual are often aligned. The shift-invariant audit gives a direct test without requiring knowledge of the true device error: translating each session to zero median removes every additive constant offset exactly.
+Session centering removes every additive altitude offset without requiring knowledge of device error. Five panels retain calibrated identity after this transformation, demonstrating repeatable individuality in vertical-distribution **shape** beyond absolute altitude level.
 
-Five panels retain identity after this transformation. The comparative conclusion therefore does not depend generally on individuals carrying different altitude zero points. More specifically, those five systems retain repeatable individuality in the **shape** of the vertical distribution after absolute level is removed.
+*Tadarida* is the exception. Its centered-shape score matches its permutation null, so the focal result is best interpreted as repeatable absolute vertical-location identity. That component may reflect genuine mean flight-height specialization, additive tag offset, or both; AGL transformation cannot distinguish them because a common terrain model does not remove device-specific bias.
 
-*Tadarida* is the exception. Its centered-shape score is indistinguishable from its permutation null. Consequently, the focal result should be interpreted as repeatable absolute vertical-location identity rather than evidence for a distinct distributional shape after translation. The absolute component may reflect genuine mean flight-height specialization, additive tag offset, or both. AGL transformation does not solve this problem because subtracting a common terrain model does not remove tag-specific altitude bias.
-
-The empirical stationary correction provides limited but concordant evidence. In the only two panels that passed the outcome-blind structural support gate, calibrated identity remained after individual-by-cohort altitude offsets were estimated from shared stationary cells and removed. Those offsets were modest on average, but the analysis cannot be generalized to the four panels that lacked sufficient stationary support.
+Stationary correction gives limited concordant evidence: both panels that passed the outcome-blind support gate retained identity after estimated offsets were removed. The result cannot be generalized to the four panels lacking sufficient stationary support.
 
 ### Temporal context remains a limitation
 
-Most panels contain substantial overlap in individual tracking windows, reducing but not eliminating individual-versus-time confounding. The 2016 *Phyllostomus* panel has notably weaker overlap. Stable short-term weather or seasonal context could therefore contribute to individual identity, especially in that panel. Because the tag-bias audit was predeclared as the stopping point for new scientific analyses, we report this limitation rather than opening an additional outcome-driven time-block permutation family.
+Tracking windows overlap substantially in most panels but much less in *P. hastatus* 2016. Short-term weather or seasonal context could therefore contribute there. As predeclared, we report this limitation rather than open another outcome-driven permutation family.
 
 ### Pipeline-specific nulls are part of biological inference
 
