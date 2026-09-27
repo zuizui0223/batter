@@ -27,7 +27,8 @@ def main():
         cleaned.append(line)
     front=["---",f'title: "{TITLE}"','author: ""','date: ""',"---",""]
     review="\n".join(front+cleaned).strip()+"\n"
-    review=review.replace("the public GitHub repository `zuizui0223/batter`","an anonymous code repository prepared for peer review")\n    review=review.replace("`zuizui0223/batter`","[code repository anonymized for peer review]")
+    review=review.replace("the public GitHub repository `zuizui0223/batter`","an anonymous code repository prepared for peer review")
+    review=review.replace("`zuizui0223/batter`","[code repository anonymized for peer review]")
     OUT.parent.mkdir(parents=True,exist_ok=True)
     OUT.write_text(review,encoding="utf-8")
     print(OUT)
