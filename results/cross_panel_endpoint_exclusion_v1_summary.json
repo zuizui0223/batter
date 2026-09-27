@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-cross-panel-endpoint-exclusion-v1",
+  "contract": "contract/cross_panel_endpoint_exclusion_v1.json",
+  "contract_blob_sha": "84998d2e6daf4f60054be2fc6ba96118396164c8",
+  "result_run_id": 36317089590,
+  "baseline_qa_run_id": 36319042915,
+  "baseline_qa": "PASS: all five panels reproduce the pre-exclusion common-cell endpoint to absolute tolerance 1e-12 using both the existing loader and the zero-radius endpoint runner",
+  "prior_tadarida": {
+    "radius_m": 1000,
+    "status": "FAIL",
+    "calibrated_excess": 0.279,
+    "p_upper": 0.1109,
+    "interpretation": "central-place/departure-arrival structure remains a viable contributor"
+  },
+  "comparative_primary_1000m": [
+    {
+      "panel": "eidolon",
+      "n": 11,
+      "minimum_n": 15,
+      "observed": 0.24999553591001256,
+      "null_mean": -0.13995704122834823,
+      "calibrated_excess": 0.3899525771383608,
+      "p_upper": 0.0002,
+      "pass": false,
+      "formal_failure_reason": "evaluable individual count 11 < frozen minimum 15",
+      "artifact_id": 10930468879
+    },
+    {
+      "panel": "hypsignathus",
+      "n": 19,
+      "minimum_n": 15,
+      "observed": 0.19088908755426276,
+      "null_mean": -0.11735886198251261,
+      "calibrated_excess": 0.30824794953677537,
+      "p_upper": 0.0002,
+      "pass": true,
+      "artifact_id": 10930229182
+    },
+    {
+      "panel": "phyllostomus_2022",
+      "n": 30,
+      "minimum_n": 15,
+      "observed": 0.05523575005129288,
+      "null_mean": -0.1639530965596658,
+      "calibrated_excess": 0.2191888466109587,
+      "p_upper": 0.0002,
+      "pass": true,
+      "artifact_id": 10931147306
+    },
+    {
+      "panel": "phyllostomus_2023",
+      "n": 12,
+      "minimum_n": 10,
+      "observed": 0.0929842614159746,
+      "null_mean": -0.059435906906086876,
+      "calibrated_excess": 0.15242016832206148,
+      "p_upper": 0.0002,
+      "pass": true,
+      "artifact_id": 10931520139
+    },
+    {
+      "panel": "phyllostomus_2016",
+      "n": 10,
+      "minimum_n": 6,
+      "observed": 0.09083454818935796,
+      "null_mean": -0.2670011326175612,
+      "calibrated_excess": 0.3578356808069192,
+      "p_upper": 0.0002,
+      "pass": true,
+      "artifact_id": 10931092372
+    }
+  ],
+  "descriptive_sensitivities": {
+    "eidolon": {
+      "500m": {
+        "n": 13,
+        "observed": 0.24436173406490871,
+        "null_mean": -0.14160740694345847,
+        "excess": 0.3859691410083672,
+        "p_upper": 0.0005,
+        "artifact_id": 10929979781
+      },
+      "2000m": {
+        "n": 11,
+        "observed": 0.2679375268560473,
+        "null_mean": -0.1276031100414986,
+        "excess": 0.3955406368975459,
+        "p_upper": 0.0005,
+        "artifact_id": 10931426046
+      }
+    },
+    "hypsignathus": {
+      "500m": {
+        "n": 20,
+        "observed": 0.10064495298935205,
+        "null_mean": -0.09606691443406011,
+        "excess": 0.19671186742341218,
+        "p_upper": 0.0005,
+        "artifact_id": 10931510350
+      },
+      "2000m": {
+        "n": 16,
+        "observed": 0.20491617831103281,
+        "null_mean": -0.08780138181321502,
+        "excess": 0.2927175601242478,
+        "p_upper": 0.0005,
+        "artifact_id": 10930623573
+      }
+    },
+    "phyllostomus_2022": {
+      "500m": {
+        "n": 31,
+        "observed": 0.0507155732123488,
+        "null_mean": -0.15971310723644722,
+        "excess": 0.210428680448796,
+        "p_upper": 0.0005,
+        "artifact_id": 10931062750
+      },
+      "2000m": {
+        "n": 30,
+        "observed": 0.06946365761313474,
+        "null_mean": -0.16251254819376337,
+        "excess": 0.2319762058068981,
+        "p_upper": 0.0005,
+        "artifact_id": 10930224105
+      }
+    },
+    "phyllostomus_2023": {
+      "500m": {
+        "n": 13,
+        "observed": 0.012628553107982802,
+        "null_mean": -0.06692725328364094,
+        "excess": 0.07955580639162374,
+        "p_upper": 0.002,
+        "artifact_id": 10930718269
+      },
+      "2000m": {
+        "n": 12,
+        "observed": 0.11478653939377596,
+        "null_mean": -0.06324991600552123,
+        "excess": 0.1780364553992972,
+        "p_upper": 0.0005,
+        "artifact_id": 10930819071
+      }
+    },
+    "phyllostomus_2016": {
+      "500m": {
+        "n": 10,
+        "observed": 0.07607505151845143,
+        "null_mean": -0.3129187319841605,
+        "excess": 0.38899378350261193,
+        "p_upper": 0.0095,
+        "artifact_id": 10930309138
+      },
+      "2000m": {
+        "n": 9,
+        "observed": 0.013731675866041453,
+        "null_mean": -0.24298417113995363,
+        "excess": 0.2567158470059951,
+        "p_upper": 0.0345,
+        "artifact_id": 10931480574
+      }
+    }
+  },
+  "interpretation": {
+    "comparative_primary_pass_count": "4/5",
+    "eidolon": "Formal primary FAIL is caused by attrition below the frozen n>=15 gate, not by disappearance of the calibrated identity signal; p=0.0002 at 1 km and both fixed sensitivity radii remain strongly above their permutation nulls.",
+    "cross_panel": "The comparative signal is not generally eliminated by removing the predeclared endpoint neighbourhood. However, Tadarida remains a fixed failure and Eidolon fails the predeclared sample-size gate, so universal independence from central-place/end-point structure is not supported.",
+    "mechanism": "The x-y-only proxy does not identify a true roost, colony, lek, or causal central-place mechanism."
+  }
+}
