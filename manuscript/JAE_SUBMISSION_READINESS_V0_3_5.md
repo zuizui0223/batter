@@ -39,7 +39,7 @@ claimed absent.
 
 ## Remaining human / archive items
 
-- [ ] final visual inspection of v0.3.5 figures and 24-page review PDF;
+- [x] final visual inspection of v0.3.5 Figures 1–6 and 24-page review PDF; Figure 6 verdict-label overlap corrected before release;
 - [ ] choose/add repository software LICENSE;
 - [ ] final authors / affiliations;
 - [ ] corresponding author / ORCID;
