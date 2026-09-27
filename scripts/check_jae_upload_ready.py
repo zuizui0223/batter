@@ -74,8 +74,13 @@ def main() -> int:
         failures.append("corresponding-author section has no ORCID-formatted identifier")
 
     data_access = section(title_page, "Data availability statement")
-    if not DOI_RE.search(data_access):
-        failures.append("data-accessibility section has no permanent DOI")
+    archive_doi = re.search(
+        r"archive DOI:\\s*(10\\.\\d{4,9}/[-._;()/:A-Z0-9]+)",
+        data_access,
+        flags=re.IGNORECASE,
+    )
+    if not archive_doi:
+        failures.append("data-availability section has no permanent code/provenance archive DOI")
 
     required_sections = (
         "Authors",
