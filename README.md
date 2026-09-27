@@ -22,8 +22,9 @@ Crucially, this remains true after self and other vertical profiles are integrat
 Therefore the main ecological conclusion is:
 
 > **Repeatable individual vertical identity in bat airspace persists after self and other
-> profiles are standardized to the same occupancy among the tested 5-km horizontal cells. It
-> therefore cannot be reduced to occupancy differences among those cells alone.**
+> profiles are standardized to the same occupancy among the tested coarse 5-km horizontal cells.
+> It therefore cannot be reduced to occupancy differences among those cells alone, although
+> endpoint/central-place-associated structure remains a panel-dependent contributor.**
 
 ## Why the claim changed
 
@@ -80,14 +81,30 @@ No new source search belongs in the current paper programme.
 - `CROSS_PANEL_ESTIMATOR_CALIBRATION_CONTRACT.md`
 - `CROSS_PANEL_ESTIMATOR_CALIBRATION_RESULT.md`
 - `PAPER_FREEZE_V0_3_4_CALIBRATION_AMENDMENT.md`
+- `CROSS_PANEL_CONFOUND_AUDIT_FREEZE_V1.md`
+- `CROSS_PANEL_CONFOUND_AUDIT_RESULT_V1.md`
+
+## Cross-panel confound audit
+
+The reviewer-facing v1 audit was frozen before output and is complete.
+
+- 1-km endpoint-neighbourhood robustness: 4/5 comparative panels PASS; *Eidolon* fails only its
+  frozen n gate, while focal *Tadarida* remains an inferential FAIL.
+- calibrated pairwise self-identification: PASS in 5/6 panels; *P. hastatus* 2016 does not pass.
+- focal raw AGL separation: 256.459 m; exchangeability null mean 133.733 m; calibrated excess
+  122.727 m; p=0.0297.
+
+See `CROSS_PANEL_CONFOUND_AUDIT_RESULT_V1.md`.
 
 ## Submission status
 
-The previous JAE v0.3.3 rc2 package is scientifically superseded and must not be submitted.
+The v0.3.4 rc3 package is retained as the pre-audit baseline and must not be submitted as the final
+scientific version.
 
-The current manuscript is `manuscript/MANUSCRIPT_DRAFT_V0_3_4.md`, reframed around vertical
-identity after common coarse horizontal occupancy weighting. Its JAE manuscript/figure gate and
-anonymous review-PDF workflow pass on main.
+The current manuscript is `manuscript/MANUSCRIPT_DRAFT_V0_3_5.md`, titled **“Repeatable vertical
+identity in bat airspace persists after coarse horizontal occupancy is standardized.”** The
+v0.3.5 manuscript/figure and anonymous-review workflows have passed on the diagnostic branch and
+are revalidated on main before the release candidate is frozen.
 
 ## Claim boundary
 
