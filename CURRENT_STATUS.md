@@ -140,6 +140,44 @@ Required qualifications:
 - broad 2.5–10-km grain invariance is not supported;
 - the stronger stable residual cell × height map remains unsupported (p=0.160).
 
+## Biological effect translation
+
+The calibrated log-score results were translated into descriptive biological-scale quantities
+under definitions frozen before output.
+
+### Pairwise self-identification after horizontal standardization
+
+Equal-individual self-win fractions:
+
+- *Tadarida teniotis*: **79.4%** (individual-bootstrap 95% 65.6–93.1%);
+- *Eidolon helvum*: **85.8%** (73.2–96.1%);
+- *Hypsignathus monstrosus*: **76.7%** (69.9–83.3%);
+- *Phyllostomus hastatus* 2022: **84.2%** (80.0–88.3%);
+- *P. hastatus* 2023: **78.2%** (65.9–86.5%);
+- *P. hastatus* 2016: 59.4% (49.5–70.4%).
+
+Thus five panels show a descriptive self-identification rate around 77–86% after candidate
+vertical profiles are placed under identical horizontal cell-use weights.
+
+### Focal metre-scale translation
+
+For *Tadarida* AGL at 5 km, the same-bat and other-bat profiles differ in common-cell-weighted
+expected mean height above ground by:
+
+- equal-individual mean absolute separation: **256 m**;
+- median individual separation: **145 m**;
+- bootstrap 95%: **70–466 m**.
+
+This is heterogeneous among individuals and is not a universal fixed height offset.
+
+### Reporting preference
+
+Use pairwise self-identification and the focal metre-scale effect for biological interpretation.
+
+Retain nats/fix for exact statistical reporting. Entropy-normalized calibrated gains are
+Supporting Information only because the ratio is not mutual information, is not variance
+explained and can exceed one.
+
 ## Submission status
 
 **JAE v0.3.3 rc2 is on scientific hold and must not be submitted.**
