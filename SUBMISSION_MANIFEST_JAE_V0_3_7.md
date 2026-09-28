@@ -104,3 +104,18 @@ Stages:
 
 No human identity, authorship, license, funding, conflict declaration, ORCID, postal address or DOI
 is inferred.
+
+
+## Packaging validation
+
+v0.3.7 one-source metadata workflow:
+- synthetic self-test run: `36371640078` — **success**
+- pre-release assembly: READY
+- post-DOI assembly: READY
+- final JAE upload gate: READY
+- synthetic combined count: 6,730 words pre-release / 6,725 words post-DOI
+
+Active-reference guard:
+- run: `36371726985` — **success**
+
+No authorship, license, ORCID, funding, conflict declaration, postal address or DOI was inferred.
