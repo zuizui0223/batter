@@ -88,7 +88,34 @@
       "post-doi"
     ],
     "expected_release_tag": "jae-v0.3.8",
-    "release_notes": "RELEASE_NOTES_JAE_V0_3_8.md"
+    "release_notes": "RELEASE_NOTES_JAE_V0_3_8.md",
+    "synthetic_self_test": {
+      "workflow_run_id": 36381513500,
+      "conclusion": "success",
+      "pre_release_combined_words": 7125,
+      "post_doi_combined_words": 7120,
+      "pre_release": "ready",
+      "post_doi": "ready",
+      "jae_final_upload_gate": "ready"
+    },
+    "github_release_preflight": {
+      "script": "scripts/check_github_release_preflight.py",
+      "workflow": ".github/workflows/jae-github-release-preflight-v0.3.8.yml",
+      "release_notes": "RELEASE_NOTES_JAE_V0_3_8.md",
+      "expected_tag": "jae-v0.3.8",
+      "expected_candidate": "release/jae-v0.3.8-rc1",
+      "auto_publish": false,
+      "self_test": {
+        "workflow_run_id": 36381579802,
+        "conclusion": "success",
+        "candidate_integrity": "ready",
+        "target_tag_release_absence": "ready"
+      }
+    },
+    "active_reference_guard": {
+      "workflow_run_id": 36381673963,
+      "conclusion": "success"
+    }
   },
   "remaining_human_input": {
     "source": "submission/jae_v0_3_8_metadata.json",
