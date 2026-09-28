@@ -27,14 +27,16 @@ The central ecological result is comparative:
 v0.3.8 adds **no new inferential test**. It adds one frozen descriptive visualization of the
 already-tested common-cell centered self profiles.
 
-That figure shows that individual shape differences correspond visibly to:
+That figure illustrates visible variation in the estimated profiles in:
 
 - central concentration around the session-specific median;
 - upper-tail use;
 - lower-tail use;
 - tail asymmetry.
 
-No clustering or strategy classes are inferred.
+These component-wise ranges were not separately calibrated against exchangeability and may include
+finite-session profile-estimation noise. They are not used to infer which component carries the
+validated whole-profile identity signal. No clustering or strategy classes are inferred.
 
 ## Methodological contribution
 
@@ -110,12 +112,14 @@ Result summary:
 Supported:
 - repeatable vertical identity beyond coarse 5-km horizontal occupancy;
 - repeatable centered vertical-distribution shape in all five comparative panels;
-- descriptive between-individual differences in profile concentration and tail use;
+- descriptive, uncalibrated variation in displayed profile concentration and tail use;
 - stationary-offset corroboration in both structurally eligible comparative panels;
 - pipeline-specific exchangeability calibration as a general methodological lesson.
 
 Not established:
 - device-independent centered-shape individuality in *Tadarida*;
+- which descriptive concentration/tail component carries the calibrated whole-profile identity signal;
+- inferential component-wise differences from the uncalibrated Figure 6 ranges;
 - complete removal of fine-scale horizontal fidelity or central-place structure;
 - behavioural-state-specific vertical strategies;
 - tag-specific variance-free measurement;

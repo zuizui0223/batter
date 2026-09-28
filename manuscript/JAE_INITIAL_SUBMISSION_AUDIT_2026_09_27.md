@@ -28,7 +28,7 @@ https://besjournals.onlinelibrary.wiley.com/hub/journal/13652656/author-guidelin
 - **Cross-panel confound audit:** completed under pre-output frozen contracts; failures and sample-size attrition are retained in the main manuscript.
 - **Effect-size null calibration:** pairwise and metre-scale biological translations use their own session-label exchangeability baselines.
 - **Final tag-altitude-bias audit:** complete under pre-output frozen rules; 5/6 panels retain centered-shape identity and 2/2 structurally eligible panels retain identity after stationary offset correction.
-- **Ecological shape visualization:** descriptive Figure 6 reconstructs the already-tested common-cell self profiles and shows individual differences in central concentration and tail use; no new inference is added.
+- **Ecological shape visualization:** descriptive Figure 6 reconstructs the already-tested common-cell self profiles and visually illustrates variation in central concentration and tail use. Those component ranges are not separately exchangeability-calibrated and may include finite-session estimation noise; the inferential claim remains at the full centered-profile level.
 
 ## Remaining blockers
 

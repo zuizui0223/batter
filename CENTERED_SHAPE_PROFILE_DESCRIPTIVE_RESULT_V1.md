@@ -26,10 +26,11 @@ The evaluable individual counts exactly reproduce the frozen audit:
 ## What the descriptive figure shows
 
 After every session is translated to zero median and profiles are integrated under the frozen
-common horizontal weights, individuals within the same panel do **not** collapse to one common
-vertical-distribution shape.
+common horizontal weights, the displayed individual profile estimates are visibly heterogeneous.
+The inferential evidence for non-exchangeable centered shape comes from the separately calibrated
+whole-profile test, not from the component ranges summarized below.
 
-The main visible differences are:
+Visible features of the displayed estimates include:
 
 - how strongly probability is concentrated in the central -50 to +50 m bins;
 - how much mass extends into the upper tail at >=100 m;
@@ -49,18 +50,25 @@ No cluster or strategy type is assigned.
 | *P. hastatus* 2016 | 0.548–0.994 | 0.0009–0.0686 | 0.0009–0.0408 |
 
 These ranges are descriptive summaries of the plotted profiles, not confidence intervals or new
-tests.
+tests. They were not calibrated against session-label exchangeability. Because each profile is
+estimated from a finite number of leave-one-session-out training sets, part of the displayed
+between-individual spread can arise from profile-estimation noise even when identities are
+exchangeable.
 
-The 2016 panel is especially centrally concentrated overall, whereas the other four comparative
-panels display broader between-individual variation in tail use. *Eidolon* includes the strongest
-lower-tail extension, while the 2023 *P. hastatus* panel includes the largest displayed upper-tail
-mass.
+In the displayed estimates, the 2016 panel appears especially centrally concentrated overall,
+whereas the other four comparative panels show broader apparent variation in tail use. *Eidolon*
+includes the strongest displayed lower-tail extension, while the 2023 *P. hastatus* panel includes
+the largest displayed upper-tail mass. These are visual descriptions only; no component-wise
+inferential comparison is made.
 
 ## Ecological interpretation
 
 The previously reported "shape individuality" is therefore not only an abstract classification
-score. In the comparative panels it corresponds visibly to repeatable differences in **vertical
-concentration and tail use around the individual's session-specific median altitude**.
+score. Figure 6 illustrates plausible visible dimensions of the estimated profile heterogeneity,
+including **vertical concentration and tail use around the session-specific median altitude**.
+However, those component-wise summaries were not separately null-calibrated, so this descriptive
+layer does not establish that concentration or either tail specifically carries the validated
+whole-profile identity signal.
 
 This remains a statement about vertical space use. The figure does not distinguish commuting,
 foraging, exploration or other behavioural states, and it does not establish vertical-niche
@@ -70,6 +78,9 @@ strategy classes.
 
 - no new p-values;
 - no new permutation family;
+- component ranges not separately exchangeability-calibrated;
+- component-wise spread may include finite-session profile-estimation noise;
+- no claim that concentration or tail use specifically carries the whole-profile identity signal;
 - no clustering;
 - no strategy/type classification;
 - no behavioural-state assignment;
