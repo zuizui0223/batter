@@ -131,3 +131,13 @@ metadata/CITATION/LICENSE are complete, the archive DOI is still empty before mi
 notes contain no placeholders, and the target tag/release do not already exist.
 
 The preflight never creates a tag or publishes a release.
+
+
+Release-preflight synthetic self-test:
+- run: `36373116328`
+- conclusion: **success**
+- synthetic pre-release metadata assembly: READY
+- Zenodo release gate: READY
+- release-candidate integrity: READY
+- target tag `jae-v0.3.7`: absent
+- GitHub Release using that tag: absent
