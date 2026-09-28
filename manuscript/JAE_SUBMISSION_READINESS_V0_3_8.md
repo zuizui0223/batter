@@ -40,7 +40,7 @@ Checked: 2026-09-28
 - [x] anonymity guard PASS;
 - [x] review PDF **27 pages**;
 - [x] all 27 rendered pages visually inspected; no clipping, overlap or broken glyphs found;
-- [x] metadata assembly self-test — run 36398712014;
+- [x] metadata assembly self-test — run 36473746777;
 - [x] GitHub/Zenodo release-preflight self-test — run 36398767110;
 - [x] active-reference guard — run 36398917758.
 
