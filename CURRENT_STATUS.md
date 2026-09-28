@@ -321,7 +321,7 @@ scientific-content commit.
 - abstract: **273 words**, five numbered statements;
 - keywords: **7**;
 - Figures 1–7: generated and visually inspected;
-- anonymous review PDF: **26 pages**;
+- anonymous review PDF: **27 pages**;
 - anonymity gate: **PASS**;
 - final PDF visual diff from the prior full-inspection build is confined to page 26; Figure 7 legend placement and anonymous repository wording were re-inspected.
 
@@ -412,11 +412,11 @@ The current manuscript is ecology-first:
 > **Repeatable individual shapes of vertical space use persist beyond coarse horizontal occupancy in bats**
 
 Validated main package:
-- manuscript CI estimate: **7,729 words**;
-- abstract: **264 words**;
+- manuscript CI estimate: **7,953 words**;
+- abstract: **282 words**;
 - Introduction: **685 words**;
-- Results: **1,270 words**;
-- Discussion: **1,686 words**;
+- Results: **1,328 words**;
+- Discussion: **1,739 words**;
 - main figures: **6**;
 - Supporting Figures: **2**;
 - anonymous review PDF: **26 pages**;

@@ -27,20 +27,20 @@ Checked: 2026-09-28
 
 ## Automated package
 
-- [x] manuscript/figure workflow success — run 36397413406;
-- [x] manuscript CI estimate **7,729 words**;
-- [x] abstract **264 words** in five numbered statements;
+- [x] manuscript/figure workflow success — run 36473273535;
+- [x] manuscript CI estimate **7,953 words**;
+- [x] abstract **282 words** in five numbered statements;
 - [x] Introduction **685 words**;
-- [x] Results **1,270 words**;
-- [x] Discussion **1,686 words**;
+- [x] Results **1,328 words**;
+- [x] Discussion **1,739 words**;
 - [x] main Figures **1-6** generated and visually inspected;
 - [x] Supporting Figures **S1-S2** generated and visually inspected;
 - [x] descriptive profile artifact generated from frozen definition;
-- [x] anonymous review PDF success — run 36397413360;
+- [x] anonymous review PDF success — run 36473273481;
 - [x] anonymity guard PASS;
-- [x] review PDF **26 pages**;
-- [x] no clipping, overlap or broken glyphs found;
-- [x] metadata assembly self-test — run 36398712014;
+- [x] review PDF **27 pages**;
+- [x] all 27 rendered pages visually inspected; no clipping, overlap or broken glyphs found;
+- [x] metadata assembly self-test — run 36473746777;
 - [x] GitHub/Zenodo release-preflight self-test — run 36398767110;
 - [x] active-reference guard — run 36398917758.
 

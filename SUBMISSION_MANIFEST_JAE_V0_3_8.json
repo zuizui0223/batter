@@ -6,11 +6,11 @@
   "manuscript": {
     "path": "manuscript/MANUSCRIPT_DRAFT_V0_3_8.md",
     "title": "Repeatable individual shapes of vertical space use persist beyond coarse horizontal occupancy in bats",
-    "ci_word_estimate": 7729,
-    "abstract_words": 264,
+    "ci_word_estimate": 7953,
+    "abstract_words": 282,
     "introduction_words": 685,
-    "results_words": 1270,
-    "discussion_words": 1686,
+    "results_words": 1328,
+    "discussion_words": 1739,
     "abstract_numbered_statements": 5,
     "keywords": 7,
     "main_figures": 6,
@@ -42,24 +42,24 @@
   },
   "automated_validation": {
     "manuscript_figures": {
-      "run_id": 36397413406,
-      "head_sha": "67b053eb0a3db2539c8fb4beb593c9e5759910fe",
+      "run_id": 36473273535,
+      "head_sha": "591b82da7498682b298a2311b62a44a2dd409684",
       "conclusion": "success",
-      "main_artifact_id": 10959445079,
-      "main_artifact_digest": "sha256:370f2f3c320e3269ec191ee6e2a8fbf039a8e365ea135d829cb413de9190797c",
-      "supporting_artifact_id": 10959285815,
-      "supporting_artifact_digest": "sha256:82b0e537e41e244cb000dd9ffd5fdb50e6d9b5049e67ba7f9f1ce81b95055172",
-      "descriptive_profiles_artifact_id": 10959246005,
-      "descriptive_profiles_artifact_digest": "sha256:2c62b18b8c1dd51e14865d5390ad382d8ce4a2b07ffb5901e9cd27f7a21f5f04"
+      "main_artifact_id": 10992433031,
+      "main_artifact_digest": "sha256:19d26b53a480674733a63acbfd2a44c6e19505a7c6f18acc5fb5c55100828019",
+      "supporting_artifact_id": 10992442954,
+      "supporting_artifact_digest": "sha256:87c410a83e4c94bce3086f7498854bbb60e39e29da8258e3540b8717802b6206",
+      "descriptive_profiles_artifact_id": 10992497867,
+      "descriptive_profiles_artifact_digest": "sha256:05da68591c3b4d9820b4591ad745b64b1c97917c607a5e6f0e0f8fefa01d618f"
     },
     "anonymous_review_pdf": {
-      "run_id": 36397413360,
-      "head_sha": "67b053eb0a3db2539c8fb4beb593c9e5759910fe",
+      "run_id": 36473273481,
+      "head_sha": "591b82da7498682b298a2311b62a44a2dd409684",
       "conclusion": "success",
       "anonymity_guard": "pass",
-      "pages": 26,
-      "artifact_id": 10959430022,
-      "artifact_digest": "sha256:c4207ffbeffea32046bcf02f2ddf92857c423c796b69b7f7e88cecfb88d24c77"
+      "pages": 27,
+      "artifact_id": 10992717441,
+      "artifact_digest": "sha256:2777b7565012e1473c325b99a8de4de0e95f987cdae4118bfbd5a1b9f29efbcc"
     },
     "descriptive_profile_reproducibility": {
       "frozen_contract": "contract/centered_shape_profile_descriptive_v1.json",
@@ -77,7 +77,7 @@
     "visual_inspection": {
       "main_figures_1_to_6": "passed",
       "supporting_figures_S1_to_S2": "passed",
-      "review_pdf_26_pages": "passed"
+      "review_pdf_27_pages": "passed"
     }
   },
   "supersedes": "batter-jae-v0.3.7-rc2",
@@ -93,10 +93,10 @@
     "expected_release_tag": "jae-v0.3.8",
     "release_notes": "RELEASE_NOTES_JAE_V0_3_8.md",
     "synthetic_self_test": {
-      "workflow_run_id": 36398712014,
+      "workflow_run_id": 36473746777,
       "conclusion": "success",
-      "pre_release_combined_words": 7912,
-      "post_doi_combined_words": 7907,
+      "pre_release_combined_words": 8136,
+      "post_doi_combined_words": 8131,
       "pre_release": "ready",
       "post_doi": "ready",
       "jae_final_upload_gate": "ready"

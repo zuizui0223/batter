@@ -51,43 +51,43 @@ Observed examples include:
 ## Validated v0.3.8 package
 
 Main manuscript/figure workflow:
-- run: **36397413406**
-- head: `67b053eb0a3db2539c8fb4beb593c9e5759910fe`
+- run: **36473273535**
+- head: `591b82da7498682b298a2311b62a44a2dd409684`
 - conclusion: **success**
-- manuscript CI estimate: **7,729 words**
-- abstract: **264 words**
+- manuscript CI estimate: **7,953 words**
+- abstract: **282 words**
 - Introduction: **685 words**
-- Results: **1,270 words**
-- Discussion: **1,686 words**
+- Results: **1,328 words**
+- Discussion: **1,739 words**
 - keywords: **7**
 - main figures: **6**
 - Supporting Figures: **2**
 
 Main-figure artifact:
-- id: `10959445079`
-- digest: `sha256:370f2f3c320e3269ec191ee6e2a8fbf039a8e365ea135d829cb413de9190797c`
+- id: `10992433031`
+- digest: `sha256:19d26b53a480674733a63acbfd2a44c6e19505a7c6f18acc5fb5c55100828019`
 
 Supporting-figure artifact:
-- id: `10959285815`
-- digest: `sha256:82b0e537e41e244cb000dd9ffd5fdb50e6d9b5049e67ba7f9f1ce81b95055172`
+- id: `10992442954`
+- digest: `sha256:87c410a83e4c94bce3086f7498854bbb60e39e29da8258e3540b8717802b6206`
 
 Descriptive profile artifact:
-- id: `10959246005`
-- digest: `sha256:2c62b18b8c1dd51e14865d5390ad382d8ce4a2b07ffb5901e9cd27f7a21f5f04`
+- id: `10992497867`
+- digest: `sha256:05da68591c3b4d9820b4591ad745b64b1c97917c607a5e6f0e0f8fefa01d618f`
 
 Anonymous review workflow:
-- run: **36397413360**
+- run: **36473273481**
 - head: `67b053eb0a3db2539c8fb4beb593c9e5759910fe`
 - conclusion: **success**
 - anonymity guard: **PASS**
-- review PDF: **26 pages**
-- artifact id: `10959430022`
-- digest: `sha256:c4207ffbeffea32046bcf02f2ddf92857c423c796b69b7f7e88cecfb88d24c77`
+- review PDF: **27 pages**
+- artifact id: `10992717441`
+- digest: `sha256:2777b7565012e1473c325b99a8de4de0e95f987cdae4118bfbd5a1b9f29efbcc`
 
 Visual QA:
 - main Figures 1-6 inspected;
 - Supporting Figures S1-S2 inspected;
-- final 26-page review PDF rendered and inspected;
+- final 27-page review PDF rendered and inspected;
 - no clipping, overlap or broken glyphs found.
 
 ## Descriptive Figure 6 provenance
@@ -153,11 +153,11 @@ is inferred.
 ## Packaging validation
 
 One-source metadata workflow:
-- self-test run: `36398712014` — **success**
+- self-test run: `36473746777` — **success**
 - pre-release assembly: READY
 - post-DOI assembly: READY
 - final JAE upload gate: READY
-- synthetic combined count: 7,912 words pre-release / 7,907 words post-DOI
+- synthetic combined count: 8,136 words pre-release / 8,131 words post-DOI
 
 GitHub/Zenodo release preflight:
 - self-test run: `36398767110` — **success**
