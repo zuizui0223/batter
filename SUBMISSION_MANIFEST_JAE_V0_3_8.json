@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "submission_id": "batter-jae-v0.3.8-rc1",
+  "date": "2026-09-28",
+  "journal_target": "Journal of Animal Ecology",
+  "manuscript": {
+    "path": "manuscript/MANUSCRIPT_DRAFT_V0_3_8.md",
+    "title": "Repeatable individual shapes of vertical space use persist beyond coarse horizontal occupancy in bats",
+    "ci_word_estimate": 6942,
+    "abstract_words": 264,
+    "introduction_words": 685,
+    "results_words": 1270,
+    "discussion_words": 1161,
+    "abstract_numbered_statements": 5,
+    "keywords": 7,
+    "main_figures": 6,
+    "supporting_figures": 2,
+    "supporting_information": "manuscript/SUPPORTING_INFORMATION_CLAIM_AMENDMENT_HISTORY.md"
+  },
+  "scientific_status": {
+    "inferential_programme_closed": true,
+    "inherited_inference_from": "v0.3.6",
+    "comparative_centered_shape_panels_pass": 5,
+    "tadarida_centered_shape_pass": false,
+    "descriptive_shape_visualization_new_in_v0_3_8": true,
+    "descriptive_visualization_adds_inference": false
+  },
+  "ecological_interpretation": {
+    "main_result": "repeatable individual vertical-distribution shapes in five comparative panels after coarse horizontal and additive-altitude controls",
+    "visible_shape_components": [
+      "central concentration",
+      "upper-tail use",
+      "lower-tail use",
+      "tail asymmetry"
+    ],
+    "tadarida_role": "motivating_boundary_case",
+    "preferred_term": "vertical space use",
+    "vertical_niche_strategy_classes_inferred": false
+  },
+  "automated_validation": {
+    "manuscript_figures": {
+      "run_id": 36376329983,
+      "head_sha": "cc38e0a65de59149c84baef5dbc502563f089309",
+      "conclusion": "success",
+      "main_artifact_id": 10951435890,
+      "main_artifact_digest": "sha256:ac07aba21dbeae8ea34b1a2f3ef23808235f1d1120b417694111e6f4e9da10b3",
+      "supporting_artifact_id": 10951131726,
+      "supporting_artifact_digest": "sha256:119be3a54054dddba95268b07b4d1ab735ebeb916f16bfe5d00b983d90d77c55",
+      "descriptive_profiles_artifact_id": 10950564968,
+      "descriptive_profiles_artifact_digest": "sha256:6f7e9732adff711d574c882f87055516a4b11594823ed6ba16ebe5cf349fe085"
+    },
+    "anonymous_review_pdf": {
+      "run_id": 36376329976,
+      "head_sha": "cc38e0a65de59149c84baef5dbc502563f089309",
+      "conclusion": "success",
+      "anonymity_guard": "pass",
+      "pages": 24,
+      "artifact_id": 10950848523,
+      "artifact_digest": "sha256:94e6b3bfb541fdb9c0341e3dffc0876cf9876e7b9d620728c669863b444784ac"
+    },
+    "descriptive_profile_reproducibility": {
+      "frozen_contract": "contract/centered_shape_profile_descriptive_v1.json",
+      "canonical_run_id": 36375056204,
+      "independent_macos_run_id": 36375120545,
+      "exact_evaluable_n": [
+        20,
+        24,
+        33,
+        16,
+        10
+      ],
+      "inferential_test_added": false
+    },
+    "visual_inspection": {
+      "main_figures_1_to_6": "passed",
+      "supporting_figures_S1_to_S2": "passed",
+      "review_pdf_24_pages": "passed"
+    }
+  },
+  "supersedes": "batter-jae-v0.3.7-rc2",
+  "packaging": {
+    "release_candidate": "v0.3.8-rc1",
+    "metadata_source": "submission/jae_v0_3_8_metadata.json",
+    "metadata_template": "submission/jae_v0_3_8_metadata.template.json",
+    "assembler": "scripts/apply_jae_v0_3_8_metadata.py",
+    "stages": [
+      "pre-release",
+      "post-doi"
+    ],
+    "expected_release_tag": "jae-v0.3.8",
+    "release_notes": "RELEASE_NOTES_JAE_V0_3_8.md"
+  },
+  "remaining_human_input": {
+    "source": "submission/jae_v0_3_8_metadata.json",
+    "pre_release": [
+      "copy and fill metadata template except archive_doi",
+      "choose software license and add matching LICENSE",
+      "run pre-release metadata assembler",
+      "make Zenodo release gate READY",
+      "run GitHub release preflight",
+      "enable repository in Zenodo and publish one GitHub release"
+    ],
+    "post_doi": [
+      "insert minted Zenodo version DOI into archive_doi",
+      "run post-DOI metadata assembler",
+      "make final JAE upload gate READY",
+      "confirm combined word count <= 8500",
+      "perform final journal upload"
+    ]
+  }
+}
