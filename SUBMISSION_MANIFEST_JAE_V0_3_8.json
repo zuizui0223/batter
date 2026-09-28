@@ -28,14 +28,17 @@
   "ecological_interpretation": {
     "main_result": "repeatable individual vertical-distribution shapes in five comparative panels after coarse horizontal and additive-altitude controls",
     "visible_shape_components": [
-      "central concentration",
-      "upper-tail use",
-      "lower-tail use",
-      "tail asymmetry"
+      "descriptive central concentration",
+      "descriptive upper-tail use",
+      "descriptive lower-tail use",
+      "descriptive tail asymmetry"
     ],
     "tadarida_role": "motivating_boundary_case",
     "preferred_term": "vertical space use",
-    "vertical_niche_strategy_classes_inferred": false
+    "vertical_niche_strategy_classes_inferred": false,
+    "component_ranges_exchangeability_calibrated": false,
+    "component_ranges_include_estimation_noise": true,
+    "component_specific_identity_inferred": false
   },
   "automated_validation": {
     "manuscript_figures": {
