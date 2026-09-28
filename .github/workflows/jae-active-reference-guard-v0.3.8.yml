@@ -1,0 +1,30 @@
+name: jae-active-reference-guard-v0.3.8
+
+on:
+  push:
+    branches:
+      - packaging/jae-v0.3.8-finalize-clean
+      - main
+    paths:
+      - "README.md"
+      - "CURRENT_STATUS.md"
+      - "manuscript/JAE_INITIAL_SUBMISSION_AUDIT_2026_09_27.md"
+      - "SUBMISSION_MANIFEST_JAE_V0_3_8.md"
+      - "SUBMISSION_MANIFEST_JAE_V0_3_8.json"
+      - "manuscript/JAE_SUBMISSION_READINESS_V0_3_8.md"
+      - "FINAL_METADATA_INTAKE_JAE_V0_3_8.md"
+      - "scripts/check_active_submission_refs.py"
+      - ".github/workflows/jae-active-reference-guard-v0.3.8.yml"
+  workflow_dispatch:
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python scripts/check_active_submission_refs.py
