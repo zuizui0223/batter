@@ -76,14 +76,18 @@ def main() -> int:
         failures.append("corresponding-author section has no ORCID-formatted identifier")
 
     data_access = section(title_page, "Data availability statement")
-    doi_match = DOI_RE.search(data_access)
+    archive_match = re.search(
+        r"archived\s+at\s+https://doi\.org/(10\.\d{4,9}/\S+)",
+        data_access,
+        flags=re.IGNORECASE,
+    )
     metadata_doi = str(metadata.get("archive_doi", "")).strip()
-    if not doi_match:
+    if not archive_match:
         failures.append("data-availability section has no permanent code/provenance archive DOI")
     elif not metadata_doi:
         failures.append("metadata JSON archive_doi is empty")
-    elif doi_match.group(0).rstrip(".,;") != metadata_doi:
-        failures.append("title-page DOI does not match metadata JSON archive_doi")
+    elif archive_match.group(1).rstrip(".,;") != metadata_doi:
+        failures.append("title-page archive DOI does not match metadata JSON archive_doi")
 
     required_sections = (
         "Authors",
