@@ -49,10 +49,10 @@ Observed examples include:
 ## Validated v0.3.8 package
 
 Main manuscript/figure workflow:
-- run: **36380837565**
-- head: `d6d0cd51854c9ada2eefbd069a08bc1db514bbf9`
+- run: **36397413406**
+- head: `67b053eb0a3db2539c8fb4beb593c9e5759910fe`
 - conclusion: **success**
-- manuscript CI estimate: **7,542 words**
+- manuscript CI estimate: **7,729 words**
 - abstract: **264 words**
 - Introduction: **685 words**
 - Results: **1,270 words**
@@ -62,25 +62,25 @@ Main manuscript/figure workflow:
 - Supporting Figures: **2**
 
 Main-figure artifact:
-- id: `10952945637`
-- digest: `sha256:65ef32e64d355694720791f74daad764e8ac9bedd117fefd7ad5e65137fcab6d`
+- id: `10959445079`
+- digest: `sha256:370f2f3c320e3269ec191ee6e2a8fbf039a8e365ea135d829cb413de9190797c`
 
 Supporting-figure artifact:
-- id: `10953025517`
-- digest: `sha256:a94e779c17ea091ec8a3dca16760df5f47daaccc254d1e6d5f851718b7fc16c7`
+- id: `10959285815`
+- digest: `sha256:82b0e537e41e244cb000dd9ffd5fdb50e6d9b5049e67ba7f9f1ce81b95055172`
 
 Descriptive profile artifact:
-- id: `10951779884`
-- digest: `sha256:a730606c21fe79ef74e676fc1bf93ba4bf5980b8ecb396dea3a453aad4f1f120`
+- id: `10959246005`
+- digest: `sha256:2c62b18b8c1dd51e14865d5390ad382d8ce4a2b07ffb5901e9cd27f7a21f5f04`
 
 Anonymous review workflow:
-- run: **36380837508**
-- head: `cc38e0a65de59149c84baef5dbc502563f089309`
+- run: **36397413360**
+- head: `67b053eb0a3db2539c8fb4beb593c9e5759910fe`
 - conclusion: **success**
 - anonymity guard: **PASS**
 - review PDF: **26 pages**
-- artifact id: `10953190261`
-- digest: `sha256:8aded294361636a945383f0b3064dc49e126df74ec84cff6070985cb806a8cb6`
+- artifact id: `10959430022`
+- digest: `sha256:c4207ffbeffea32046bcf02f2ddf92857c423c796b69b7f7e88cecfb88d24c77`
 
 Visual QA:
 - main Figures 1-6 inspected;
@@ -149,19 +149,19 @@ is inferred.
 ## Packaging validation
 
 One-source metadata workflow:
-- self-test run: `36381513500` — **success**
+- self-test run: `36398712014` — **success**
 - pre-release assembly: READY
 - post-DOI assembly: READY
 - final JAE upload gate: READY
-- synthetic combined count: 7,125 words pre-release / 7,120 words post-DOI
+- synthetic combined count: 7,912 words pre-release / 7,907 words post-DOI
 
 GitHub/Zenodo release preflight:
-- self-test run: `36381579802` — **success**
+- self-test run: `36398767110` — **success**
 - metadata/CITATION/LICENSE synthetic state: READY
 - candidate integrity: READY
 - target tag/release absence check: READY
 
 Active-reference guard:
-- run: `36381673963` — **success**
+- run: `36398917758` — **success**
 
 No authorship, license, funding, conflict declaration, ORCID, postal address or DOI is inferred.
