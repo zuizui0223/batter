@@ -312,9 +312,13 @@ The ecological conclusion is therefore bounded but substantive: **repeatable ind
 
 Bolnick, D.I., Svanbäck, R., Fordyce, J.A., Yang, L.H., Davis, J.M., Hulsey, C.D. & Forister, M.L. (2003). The ecology of individuals: Incidence and implications of individual specialization. *The American Naturalist*, **161**, 1–28. https://doi.org/10.1086/343878
 
+Calderón-Capote, M.C., Dechmann, D.K.N., Fahr, J., Wikelski, M., Kays, R. & O'Mara, M.T. (2020). Foraging movements are density-independent among straw-coloured fruit bats. *Royal Society Open Science*, **7**, 200274. https://doi.org/10.1098/rsos.200274
+
 Calderón-Capote, M.C., van Toor, M.L., O'Mara, M.T., Bayer, T.D., Crofoot, M.C. & Dechmann, D.K.N. (2024). Consistent long-distance foraging flights across years and seasons at colony level in a neotropical bat. *Biology Letters*, **20**, 20240424. https://doi.org/10.1098/rsbl.2024.0424
 
 Dreelin, R.A., Shipley, J.R. & Winkler, D.W. (2018). Flight behavior of individual aerial insectivores revealed by novel altitudinal dataloggers. *Frontiers in Ecology and Evolution*, **6**, 182. https://doi.org/10.3389/fevo.2018.00182
+
+Fahr, J., Abedi-Lartey, M., Esch, T., Machwitz, M., Suu-Ire, R., Wikelski, M. & Dechmann, D.K.N. (2015). Pronounced seasonal changes in the movement ecology of a highly gregarious central-place forager, the African straw-coloured fruit bat (*Eidolon helvum*). *PLOS ONE*, **10**, e0138985. https://doi.org/10.1371/journal.pone.0138985
 
 Gámez, S. & Harris, N.C. (2022). Conceptualizing the 3D niche and vertical space use. *Trends in Ecology & Evolution*, **37**, 953–962. https://doi.org/10.1016/j.tree.2022.06.012
 
@@ -322,15 +326,11 @@ Kerches-Rogeri, P., Niebuhr, B.B., Muylaert, R.L. & Mello, M.A.R. (2020). Indivi
 
 McIntyre, T., Bester, M.N., Bornemann, H., Tosh, C.A. & de Bruyn, P.J.N. (2017). Slow to change? Individual fidelity to three-dimensional foraging habitats in southern elephant seals, *Mirounga leonina*. *Animal Behaviour*, **127**, 91–99. https://doi.org/10.1016/j.anbehav.2017.03.006
 
-O'Mara, M.T., Scharf, A.K., Fahr, J., Abedi-Lartey, M., Wikelski, M., Dechmann, D.K.N. & Safi, K. (2019). Overall dynamic body acceleration in straw-colored fruit bats increases in headwinds but not with airspeed. *Frontiers in Ecology and Evolution*, **7**, 200. https://doi.org/10.3389/fevo.2019.00200
+O'Mara, M.T. & Dechmann, D.K.N. (2023). Greater spear-nosed bats commute long distances alone, rest together, but forage apart. *Animal Behaviour*, **204**, 37–48. https://doi.org/10.1016/j.anbehav.2023.08.001
 
 O'Mara, M.T., Amorim, F., Scacco, M., McCracken, G.F., Safi, K., Mata, V., Tomé, R., Swartz, S., Wikelski, M., Beja, P., Rebelo, H. & Dechmann, D.K.N. (2021). Bats use topography and nocturnal updrafts to fly high and fast. *Current Biology*, **31**, 1311–1316.e4. https://doi.org/10.1016/j.cub.2020.12.042
 
-Fahr, J., Abedi-Lartey, M., Esch, T., Machwitz, M., Suu-Ire, R., Wikelski, M. & Dechmann, D.K.N. (2015). Pronounced seasonal changes in the movement ecology of a highly gregarious central-place forager, the African straw-coloured fruit bat (*Eidolon helvum*). *PLOS ONE*, **10**, e0138985. https://doi.org/10.1371/journal.pone.0138985
-
-Calderón-Capote, M.C., Dechmann, D.K.N., Fahr, J., Wikelski, M., Kays, R. & O'Mara, M.T. (2020). Foraging movements are density-independent among straw-coloured fruit bats. *Royal Society Open Science*, **7**, 200274. https://doi.org/10.1098/rsos.200274
-
-O'Mara, M.T. & Dechmann, D.K.N. (2023). Greater spear-nosed bats commute long distances alone, rest together, but forage apart. *Animal Behaviour*, **204**, 37–48. https://doi.org/10.1016/j.anbehav.2023.08.001
+O'Mara, M.T., Scharf, A.K., Fahr, J., Abedi-Lartey, M., Wikelski, M., Dechmann, D.K.N. & Safi, K. (2019). Overall dynamic body acceleration in straw-colored fruit bats increases in headwinds but not with airspeed. *Frontiers in Ecology and Evolution*, **7**, 200. https://doi.org/10.3389/fevo.2019.00200
 
 Ratcliffe, N., Takahashi, A., O'Sullivan, C., Adlard, S., Trathan, P.N., Harris, M.P. & Wanless, S. (2013). The roles of sex, mass and individual specialisation in partitioning foraging-depth niches of a pursuit-diving predator. *PLOS ONE*, **8**, e79107. https://doi.org/10.1371/journal.pone.0079107
 
