@@ -18,11 +18,9 @@ https://besjournals.onlinelibrary.wiley.com/hub/journal/13652656/author-guidelin
   the review-PDF workflow.
 - **Double anonymization:** the v0.3.6 review generator suppresses the author-identifying repository
   owner; the dedicated leak guard passes on the 26-page review PDF.
-- **Separate title page:** present as `manuscript/TITLE_PAGE_TEMPLATE_V0_3_6.md`.
-- **Data availability:** the title page now lists all six Movebank dataset DOIs; the permanent
-  code/provenance archive DOI remains a deliberate placeholder.
-- **Conflict of interest:** required by the journal and still awaiting human input.
-- **Authors / affiliations / corresponding author:** still awaiting final human metadata.
+- **Separate title page:** the frozen scaffold is `manuscript/TITLE_PAGE_TEMPLATE_V0_3_6.md`; the journal-upload title page is generated as `manuscript/TITLE_PAGE_V0_3_6.md` from the one-source metadata JSON.
+- **Data availability:** the title-page scaffold lists all six Movebank dataset DOIs. The final versioned Zenodo DOI is inserted only in the post-DOI metadata stage, after Zenodo has archived the GitHub release.
+- **Human metadata:** authorship, affiliations, corresponding-author details, CRediT, acknowledgements, funding and conflict declaration are all centralized in `submission/jae_v0_3_6_metadata.json`; none are inferred.
 - **References:** all 14 references currently in v0.3.6 include DOI links.
 - **Graphical abstract:** not treated as an initial-submission blocker; the journal requests it at
   revision stage.
@@ -33,14 +31,15 @@ https://besjournals.onlinelibrary.wiley.com/hub/journal/13652656/author-guidelin
 
 ## Remaining blockers
 
-1. final author list and affiliations;
-2. corresponding-author postal address, email and ORCID;
-3. author-contribution statement;
-4. acknowledgements and funding;
-5. conflict-of-interest declaration;
-6. explicit repository software license;
-7. final release metadata and Zenodo-enabled GitHub release;
-8. permanent code/provenance archive DOI;
-9. final combined word-count confirmation and journal upload.
+1. fill the one-source metadata JSON except `archive_doi`;
+2. choose/add the matching repository software LICENSE;
+3. pass the pre-release metadata assembler and Zenodo release gate;
+4. enable the repository in Zenodo and publish the GitHub release;
+5. insert the minted version DOI into the same metadata JSON;
+6. pass the post-DOI assembler and final JAE upload gate;
+7. confirm the generated combined word count remains <=8,500;
+8. perform final journal upload.
+
+The metadata path has passed an end-to-end synthetic Actions self-test (run 36366987729).
 
 No additional ecological analysis is required or authorized before submission.
