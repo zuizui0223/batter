@@ -334,6 +334,19 @@ The scientific v0.3.6 package is unchanged. A packaging-only rc2 corrects the ti
 word-count field from the superseded v0.3.5 value to the current 7,932-word manuscript estimate.
 The corrected package passes main submission CI (run 36330015862).
 
+### v0.3.6 rc3 metadata infrastructure
+
+The scientific package is unchanged. Final human/archive metadata now use one explicit source:
+`submission/jae_v0_3_6_metadata.json`.
+
+A deterministic assembler generates the journal title page, `CITATION.cff`, and a combined
+word-count summary. The workflow is split into pre-release and post-Zenodo-DOI stages so it does
+not require a DOI before Zenodo has minted one. Release and journal-upload gates cross-check
+version, license, release date, DOI and the 8,500-word limit.
+
+The entire path has passed an end-to-end synthetic Actions self-test. No human identity,
+authorship, license choice or DOI is inferred.
+
 ## Claim boundary
 
 Allowed:
