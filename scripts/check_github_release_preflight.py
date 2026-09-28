@@ -56,8 +56,8 @@ def main() -> int:
         failures.append(f"metadata package_version must be {EXPECTED_VERSION}")
     if str(metadata.get("archive_doi", "")).strip():
         failures.append("archive_doi must still be empty before the Zenodo-minting GitHub release")
-    if manifest.get("submission_id") != "batter-jae-v0.3.7-rc1":
-        failures.append("machine manifest is not the v0.3.7 rc1 submission package")
+    if manifest.get("submission_id") != "batter-jae-v0.3.7-rc2":
+        failures.append("machine manifest is not the v0.3.7 rc2 submission package")
     if manifest.get("manuscript", {}).get("path") != "manuscript/MANUSCRIPT_DRAFT_V0_3_7.md":
         failures.append("machine manifest does not point to the v0.3.7 manuscript")
 
