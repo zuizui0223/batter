@@ -409,20 +409,30 @@ The current manuscript is ecology-first:
 > **Repeatable individual shapes of vertical space use persist beyond coarse horizontal occupancy in bats**
 
 Validated main package:
-- manuscript CI estimate: **6,942 words**;
+- manuscript CI estimate: **7,542 words**;
 - abstract: **264 words**;
 - Introduction: **685 words**;
 - Results: **1,270 words**;
-- Discussion: **1,161 words**;
+- Discussion: **1,686 words**;
 - main figures: **6**;
 - Supporting Figures: **2**;
-- anonymous review PDF: **24 pages**;
+- anonymous review PDF: **26 pages**;
 - anonymity gate: **PASS**.
 
 Descriptive Figure 6 provenance:
 - canonical Linux run: `36375056204`;
 - independent macOS run: `36375120545`;
 - identical panel n and upper-tail ranges.
+
+### Working mechanism hierarchy
+
+The current data do not identify the cause of centered-shape individuality. The Discussion treats
+resource-linked behavioural allocation as the leading cross-panel working hypothesis, with
+competition/social information as a possible mediator rather than a universal sole cause.
+Morphology, memory and individual experience remain additional candidates, while atmospheric
+structure is retained as relevant especially for high-altitude/open-air flight.
+
+This hierarchy is interpretive only; no new mechanism test has been added.
 
 ## Claim boundary
 
