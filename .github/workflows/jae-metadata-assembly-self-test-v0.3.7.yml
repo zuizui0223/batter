@@ -2,6 +2,15 @@
 name: jae-metadata-assembly-self-test-v0.3.7
 
 on:
+  push:
+    branches:
+      - packaging/jae-v0.3.7-promote
+    paths:
+      - "scripts/apply_jae_v0_3_7_metadata.py"
+      - "scripts/check_jae_upload_ready.py"
+      - "scripts/check_zenodo_release_ready.py"
+      - "submission/jae_v0_3_7_metadata.template.json"
+      - ".github/workflows/jae-metadata-assembly-self-test-v0.3.7.yml"
   workflow_dispatch:
 
 jobs:
