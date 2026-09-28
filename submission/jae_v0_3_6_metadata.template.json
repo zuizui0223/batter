@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "package_version": "v0.3.6",
+  "manuscript_title": "Repeatable vertical identity in bat airspace persists after coarse horizontal occupancy is standardized",
+  "release_date": "[INSERT YYYY-MM-DD WHEN RELEASE IS PUBLISHED]",
+  "software_license_spdx": "[INSERT SPDX IDENTIFIER MATCHING LICENSE FILE]",
+  "authors": [
+    {
+      "given_names": "[INSERT GIVEN NAMES]",
+      "family_names": "[INSERT FAMILY NAME]",
+      "orcid": "[INSERT ORCID AS 0000-0000-0000-0000 OR EMPTY IF NONE]",
+      "affiliation_ids": [
+        "1"
+      ],
+      "credit_roles": [
+        "[INSERT CRediT ROLE]"
+      ],
+      "corresponding": true
+    }
+  ],
+  "affiliations": {
+    "1": "[INSERT FULL AFFILIATION]"
+  },
+  "corresponding_author": {
+    "postal_address": "[INSERT POSTAL ADDRESS]",
+    "email": "[INSERT EMAIL]"
+  },
+  "acknowledgements": "[INSERT ACKNOWLEDGEMENTS; USE 'None' IF NONE]",
+  "funding": "[INSERT FUNDING SOURCES / GRANT NUMBERS; USE 'None' IF NONE]",
+  "conflict_of_interest": "[INSERT DECLARATION; E.G. 'The authors declare no conflicts of interest.']",
+  "archive_doi": "[INSERT VERSIONED ZENODO DOI, E.G. 10.5281/zenodo.XXXXXXX]"
+}
