@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "submission_id": "batter-jae-v0.3.6-rc1",
-  "date": "2026-09-27",
+  "submission_id": "batter-jae-v0.3.6-rc4",
+  "date": "2026-09-28",
   "journal_target": "Journal of Animal Ecology",
   "manuscript": {
     "path": "manuscript/MANUSCRIPT_DRAFT_V0_3_6.md",
@@ -62,20 +62,25 @@
     "packaging_note": "Title-page word-count field corrected to the v0.3.6 manuscript CI estimate (7,932) before rc2 freeze."
   },
   "supersedes": "batter-jae-v0.3.5-rc1",
-  "remaining_human_input": [
-    "choose repository software license",
-    "fill final authors and affiliations",
-    "fill corresponding-author postal address email and ORCID",
-    "fill CRediT contributions",
-    "fill funding and acknowledgements",
-    "fill conflict-of-interest declaration",
-    "finalize CITATION.cff or .zenodo.json",
-    "enable repository in Zenodo and mint version DOI",
-    "insert DOI into title page",
-    "perform final journal upload"
-  ],
+  "remaining_human_input": {
+    "source": "submission/jae_v0_3_6_metadata.json",
+    "pre_release": [
+      "copy and fill metadata template except archive_doi",
+      "choose software license and add matching LICENSE",
+      "run pre-release metadata assembler",
+      "make Zenodo release gate READY",
+      "enable repository in Zenodo and publish GitHub release"
+    ],
+    "post_doi": [
+      "insert minted Zenodo version DOI into archive_doi",
+      "run post-DOI metadata assembler",
+      "make final JAE upload gate READY",
+      "confirm combined word count <= 8500",
+      "perform final journal upload"
+    ]
+  },
   "packaging": {
-    "release_candidate": "v0.3.6-rc3",
+    "release_candidate": "v0.3.6-rc4",
     "scientific_content_unchanged": true,
     "metadata_source": "submission/jae_v0_3_6_metadata.json",
     "metadata_template": "submission/jae_v0_3_6_metadata.template.json",
@@ -91,6 +96,11 @@
       "zenodo_release_gate": "ready",
       "post_doi": "ready",
       "jae_final_upload_gate": "ready"
+    },
+    "active_reference_guard": {
+      "script": "scripts/check_active_submission_refs.py",
+      "workflow": ".github/workflows/jae-active-reference-guard-v0.3.6.yml",
+      "status": "required"
     }
   }
 }

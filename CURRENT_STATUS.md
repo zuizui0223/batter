@@ -217,8 +217,8 @@ Working title:
 > **Repeatable vertical identity in bat airspace persists after coarse horizontal occupancy is
 > standardized**
 
-v0.3.4 rc3 remains the immutable pre-audit packaging baseline. v0.3.5 is the current scientific
-candidate.
+v0.3.4 rc3 remains the immutable pre-audit packaging baseline. At that historical stage, v0.3.5
+was the scientific candidate; it has since been superseded by the current v0.3.6 package.
 
 ### Submission-readiness consequence
 
@@ -346,6 +346,12 @@ version, license, release date, DOI and the 8,500-word limit.
 
 The entire path has passed an end-to-end synthetic Actions self-test. No human identity,
 authorship, license choice or DOI is inferred.
+
+### v0.3.6 rc4 active-reference integrity
+
+RC4 is packaging-only. The scientific v0.3.6 manuscript and all audit results are unchanged.
+Active submission documents now consistently identify v0.3.6/rc4, the generated final title page,
+and the one-source metadata JSON. A CI guard blocks stale current-package references.
 
 ## Claim boundary
 

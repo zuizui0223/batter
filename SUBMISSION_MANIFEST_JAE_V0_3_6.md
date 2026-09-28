@@ -1,6 +1,6 @@
-# JAE submission manifest v0.3.6 rc1
+# JAE submission manifest v0.3.6 rc4
 
-Date: 2026-09-27
+Date: 2026-09-28
 
 ## Scientific status
 
@@ -100,16 +100,22 @@ Not established:
 
 ## Remaining non-scientific blockers
 
-- choose/add repository software LICENSE;
-- fill final author list and affiliations;
-- corresponding-author postal address, email and ORCID;
-- CRediT contributions;
-- funding and acknowledgements;
-- conflict-of-interest declaration;
-- finalize CITATION.cff or .zenodo.json;
-- enable GitHub repository in Zenodo and mint the version DOI;
-- insert DOI into the v0.3.6 title page;
-- final Journal of Animal Ecology upload.
+All human metadata are centralized in
+`submission/jae_v0_3_6_metadata.json`.
+
+Pre-release:
+- copy/fill the metadata template except `archive_doi`;
+- choose/add the matching repository LICENSE;
+- generate title page + CITATION.cff;
+- make the Zenodo release gate READY;
+- enable the repository in Zenodo and publish the GitHub release.
+
+Post-DOI:
+- insert the minted version DOI into the same metadata JSON;
+- regenerate the final journal title page;
+- make the JAE final-upload gate READY;
+- confirm combined manuscript + title-page count <=8,500;
+- perform the Journal of Animal Ecology upload.
 
 
 ## Packaging rc3 — one-source final metadata
@@ -133,3 +139,19 @@ Synthetic end-to-end Actions self-test:
 - final JAE upload gate: READY
 
 The workflow does not infer authors, licensing, funding, conflicts, ORCIDs, postal address or DOI.
+
+
+## Packaging rc4 — active-reference integrity
+
+Scientific content is unchanged.
+
+RC4 makes the current submission pointers internally consistent:
+
+- manifest identity is rc4;
+- current manuscript remains v0.3.6;
+- final human metadata source remains the one-source JSON;
+- the final journal title page is the generated `manuscript/TITLE_PAGE_V0_3_6.md`;
+- historical v0.3.5 references remain only as provenance, not as current-package pointers.
+
+A dedicated active-reference guard prevents stale current-package wording from re-entering the
+manifest, CURRENT_STATUS, JAE audit or readiness documents.
