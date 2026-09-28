@@ -100,7 +100,9 @@
     "active_reference_guard": {
       "script": "scripts/check_active_submission_refs.py",
       "workflow": ".github/workflows/jae-active-reference-guard-v0.3.6.yml",
-      "status": "required"
+      "workflow_run_id": 36367893566,
+      "head_sha": "f64ad1f44322daa46f5ed18398c35dfbbf7b5b0f",
+      "conclusion": "success"
     }
   }
 }
