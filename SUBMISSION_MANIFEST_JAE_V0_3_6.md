@@ -1,4 +1,4 @@
-# JAE submission manifest v0.3.6 rc3
+# JAE submission manifest v0.3.6 rc4
 
 Date: 2026-09-28
 
@@ -139,3 +139,19 @@ Synthetic end-to-end Actions self-test:
 - final JAE upload gate: READY
 
 The workflow does not infer authors, licensing, funding, conflicts, ORCIDs, postal address or DOI.
+
+
+## Packaging rc4 — active-reference integrity
+
+Scientific content is unchanged.
+
+RC4 makes the current submission pointers internally consistent:
+
+- manifest identity is rc4;
+- current manuscript remains v0.3.6;
+- final human metadata source remains the one-source JSON;
+- the final journal title page is the generated `manuscript/TITLE_PAGE_V0_3_6.md`;
+- historical v0.3.5 references remain only as provenance, not as current-package pointers.
+
+A dedicated active-reference guard prevents stale current-package wording from re-entering the
+manifest, CURRENT_STATUS, JAE audit or readiness documents.
