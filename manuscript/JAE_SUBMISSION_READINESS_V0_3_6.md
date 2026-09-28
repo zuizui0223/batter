@@ -41,7 +41,8 @@ Checked: 2026-09-27
 - [x] final page-26 Figure 7 legend placement re-inspected;
 - [x] no clipping, overlap or broken glyphs found;
 - [x] title-page word-count field corrected to 7,932 before rc2 packaging freeze;
-- [x] one-source metadata infrastructure added and integration-tested.
+- [x] one-source metadata infrastructure added and integration-tested;
+- [x] active-reference guard success — run 36367893566.
 
 ## Remaining human / archive items
 
