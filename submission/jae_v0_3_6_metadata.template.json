@@ -28,5 +28,5 @@
   "acknowledgements": "[INSERT ACKNOWLEDGEMENTS; USE 'None' IF NONE]",
   "funding": "[INSERT FUNDING SOURCES / GRANT NUMBERS; USE 'None' IF NONE]",
   "conflict_of_interest": "[INSERT DECLARATION; E.G. 'The authors declare no conflicts of interest.']",
-  "archive_doi": "[INSERT VERSIONED ZENODO DOI, E.G. 10.5281/zenodo.XXXXXXX]"
+  "archive_doi": ""
 }
