@@ -83,7 +83,8 @@
       "jae_final_upload_gate": "ready"
     },
     "active_reference_guard": {
-      "workflow_run_id": 36371726985,
+      "workflow_run_id": 36373286245,
+      "head_sha": "d41aedcb8a4cd897a374138305d235e405b20804",
       "conclusion": "success"
     },
     "github_release_preflight": {
