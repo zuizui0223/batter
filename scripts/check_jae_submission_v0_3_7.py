@@ -5,7 +5,9 @@ import re
 from pathlib import Path
 
 PATH=Path("manuscript/MANUSCRIPT_DRAFT_V0_3_7.md")
+SI_PATH=Path("manuscript/SUPPORTING_INFORMATION_CLAIM_AMENDMENT_HISTORY.md")
 TEXT=PATH.read_text(encoding="utf-8")
+SI_TEXT=SI_PATH.read_text(encoding="utf-8")
 WORD_LIMIT=8500
 ABSTRACT_LIMIT=350
 KEYWORD_LIMIT=8
@@ -58,8 +60,6 @@ def main():
         "2.00 m",
         "31.1%",
         "altitude-error variance",
-        "Supporting Figure S1",
-        "Supporting Figure S2",
         "Pipeline calibration changed the inferential baseline",
         "*Tadarida* is a motivating boundary case rather than the comparative template",
     ]
@@ -70,9 +70,12 @@ def main():
         assert phrase not in body, f"focal metre translation remains in abstract: {phrase}"
 
     main_legends=re.findall(r"(?m)^\*\*Figure (\d+)\.",TEXT)
-    support_legends=re.findall(r"(?m)^\*\*Supporting Figure (S\d+)\.",TEXT)
+    support_legends_main=re.findall(r"(?m)^\*\*Supporting Figure (S\d+)\.",TEXT)
+    support_legends_si=re.findall(r"(?m)^\*\*Supporting Figure (S\d+)\.",SI_TEXT)
     assert main_legends==["1","2","3","4","5"], main_legends
-    assert support_legends==["S1","S2"], support_legends
+    assert support_legends_main==[], support_legends_main
+    assert support_legends_si==["S1","S2"], support_legends_si
+    assert "Supporting Figure S1" in TEXT and "Supporting Figure S2" in TEXT
     assert "Figure 6" not in TEXT
     assert "Figure 7" not in TEXT
 
@@ -88,7 +91,7 @@ def main():
         "abstract_numbered_statements":len(numbered),
         "keywords":keywords,
         "main_figures":len(main_legends),
-        "supporting_figures":len(support_legends),
+        "supporting_figures":len(support_legends_si),
         "jae_word_limit":WORD_LIMIT,
         "comparative_first":True,
     })
