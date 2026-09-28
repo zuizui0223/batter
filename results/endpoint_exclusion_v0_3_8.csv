@@ -1,0 +1,7 @@
+panel_id,label,n,min_n,observed,null_mean,calibrated_excess,p_upper,passes,fail_reason
+tadarida,T. teniotis,6,5,0.09864895118597121,-0.18042397058062734,0.27907292176659854,0.1109,false,p_tail
+eidolon,E. helvum,11,15,0.25,-0.14,0.39,0.0002,false,n_gate
+hypsignathus,H. monstrosus,19,15,0.1909,-0.1174,0.3082,0.0002,true,
+phyllostomus_2022,P. hastatus 2022,30,15,0.0552,-0.1640,0.2192,0.0002,true,
+phyllostomus_2023,P. hastatus 2023,12,10,0.0930,-0.0594,0.1524,0.0002,true,
+phyllostomus_2016,P. hastatus 2016,10,6,0.0908,-0.2670,0.3578,0.0002,true,
