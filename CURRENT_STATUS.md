@@ -347,6 +347,12 @@ version, license, release date, DOI and the 8,500-word limit.
 The entire path has passed an end-to-end synthetic Actions self-test. No human identity,
 authorship, license choice or DOI is inferred.
 
+### v0.3.6 rc4 active-reference integrity
+
+RC4 is packaging-only. The scientific v0.3.6 manuscript and all audit results are unchanged.
+Active submission documents now consistently identify v0.3.6/rc4, the generated final title page,
+and the one-source metadata JSON. A CI guard blocks stale current-package references.
+
 ## Claim boundary
 
 Allowed:
