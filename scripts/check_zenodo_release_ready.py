@@ -37,8 +37,14 @@ def main() -> int:
         except json.JSONDecodeError as exc:
             fail(f"metadata JSON is invalid: {exc}", failures)
         else:
+            if PLACEHOLDER.search(json.dumps(metadata, ensure_ascii=False)):
+                fail("metadata JSON still contains placeholder text", failures)
             if metadata.get("package_version") != EXPECTED_VERSION:
                 fail(f"metadata package_version must be {EXPECTED_VERSION}", failures)
+            if not str(metadata.get("software_license_spdx", "")).strip():
+                fail("metadata software_license_spdx is empty", failures)
+            if not str(metadata.get("release_date", "")).strip():
+                fail("metadata release_date is empty", failures)
 
     if not cff.exists() and not zenodo.exists():
         fail("no release metadata: create CITATION.cff or .zenodo.json", failures)
