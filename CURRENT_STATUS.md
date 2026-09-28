@@ -293,7 +293,7 @@ further scientific analysis family is opened.
 
 **JAE v0.3.3 rc2 is scientifically superseded and must not be submitted.**
 
-Current scientific candidate: `manuscript/MANUSCRIPT_DRAFT_V0_3_7.md`.
+Current scientific candidate: `manuscript/MANUSCRIPT_DRAFT_V0_3_8.md`.
 
 The v0.3.4 rc3 package is retained as the pre-audit baseline and must not be submitted as the final scientific version.
 
@@ -379,6 +379,60 @@ metadata/CITATION/LICENSE completeness, pending pre-mint DOI state, release-note
 and absence of an existing target tag/release before publication.
 
 The preflight never creates a tag or publishes a release. Release-preflight self-test: run 36373116328 — PASS.
+
+## v0.3.8 ecology-first shape interpretation
+
+The inferential scientific programme is unchanged and remains closed.
+
+v0.3.8 adds one frozen **descriptive-only** layer to show what the already-supported centered-shape
+individuality means biologically.
+
+The exact common-cell leave-one-session-out self profiles were reconstructed for all evaluable
+individuals in the five comparative panels. Evaluable n exactly matches the frozen audit:
+
+- *Eidolon*: 20;
+- *Hypsignathus*: 24;
+- *P. hastatus* 2022: 33;
+- *P. hastatus* 2023: 16;
+- *P. hastatus* 2016: 10.
+
+Visible differences are mainly in:
+- central concentration around the session-specific median;
+- upper-tail use;
+- lower-tail use;
+- tail asymmetry.
+
+No cluster, strategy type, behavioural state or new p-value is inferred.
+
+The current manuscript is ecology-first:
+
+> **Repeatable individual shapes of vertical space use persist beyond coarse horizontal occupancy in bats**
+
+Validated main package:
+- manuscript CI estimate: **7,729 words**;
+- abstract: **264 words**;
+- Introduction: **685 words**;
+- Results: **1,270 words**;
+- Discussion: **1,686 words**;
+- main figures: **6**;
+- Supporting Figures: **2**;
+- anonymous review PDF: **26 pages**;
+- anonymity gate: **PASS**.
+
+Descriptive Figure 6 provenance:
+- canonical Linux run: `36375056204`;
+- independent macOS run: `36375120545`;
+- identical panel n and upper-tail ranges.
+
+### Working mechanism hierarchy
+
+The current data do not identify the cause of centered-shape individuality. The Discussion treats
+resource-linked behavioural allocation as the leading cross-panel working hypothesis, with
+competition/social information as a possible mediator rather than a universal sole cause.
+Morphology, memory and individual experience remain additional candidates, while atmospheric
+structure is retained as relevant especially for high-altitude/open-air flight.
+
+This hierarchy is interpretive only; no new mechanism test has been added.
 
 ## Claim boundary
 
