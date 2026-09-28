@@ -34,9 +34,9 @@ already implicated by the frozen inferential audit. Across the five comparative 
 profiles differ visibly in central concentration and in upper/lower tail use around the
 session-specific median. No clustering, strategy classes or new hypothesis tests are introduced.
 
-The manuscript discusses resource-linked behavioural allocation as the leading cross-panel working
-hypothesis, with competition/social information as a possible mediator and morphology, memory,
-experience and atmospheric structure retained as alternative contributors.
+The manuscript treats resource-linked behavioural allocation, individual resource
+specialization/social information, morphology-memory-experience and atmospheric structure as
+parallel prospective working hypotheses. None is ranked or established by the present data.
 
 ## Reproducibility and provenance
 
