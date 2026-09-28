@@ -38,7 +38,10 @@ Checked: 2026-09-28
 - [x] anonymous review PDF success — run 36380837508;
 - [x] anonymity guard PASS;
 - [x] review PDF **26 pages**;
-- [x] no clipping, overlap or broken glyphs found.
+- [x] no clipping, overlap or broken glyphs found;
+- [x] metadata assembly self-test — run 36381513500;
+- [x] GitHub/Zenodo release-preflight self-test — run 36381579802;
+- [x] active-reference guard — run 36381673963.
 
 ## Remaining human/archive items
 
