@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-centered-shape-profile-descriptive-v1",
+  "frozen_date": "2026-09-28",
+  "purpose": "Descriptive visualization only; no new inferential endpoint, hypothesis test, clustering, type classification, threshold optimization, or claim expansion.",
+  "inherited_from": {
+    "centered_shape_contract": "contract/tag_altitude_bias_audit_v1.json",
+    "centered_shape_runner": "scripts/run_tag_altitude_bias_shape.py",
+    "horizontal_cell_m": 5000,
+    "centered_edges_m": [
+      "-inf",
+      -400,
+      -200,
+      -100,
+      -50,
+      0,
+      50,
+      100,
+      200,
+      400,
+      "inf"
+    ],
+    "jeffreys_alpha": 0.5,
+    "minimum_scored_target_fixes": 50
+  },
+  "panels": [
+    "eidolon",
+    "hypsignathus",
+    "phyllostomus_2022",
+    "phyllostomus_2023",
+    "phyllostomus_2016"
+  ],
+  "profile_definition": {
+    "target_sessions": "Exactly the target sessions that are evaluable under the frozen centered-shape audit.",
+    "session_profile": "For each evaluable target session, reconstruct the identity-matched self predictor used by the frozen common-cell centered-shape estimator: equal-session self conditional P(residual z | cell), restricted to cells jointly supported by self and other predictors for that target, then integrated over the exact self-derived common-cell weights used by the estimator.",
+    "individual_profile": "Equal-weight mean of that individual's evaluable target-session self profiles across admitted cohorts.",
+    "smoothing": "Inherited Jeffreys alpha 0.5 inside each session-by-cell conditional profile; no additional smoothing of displayed individual profiles.",
+    "row_sum": "Each displayed individual profile sums to 1 across the ten frozen centered-height bins."
+  },
+  "display_definition": {
+    "main_figure": "One descriptive heatmap figure with one stacked panel per taxon/year panel.",
+    "columns": "The ten frozen centered-height bins in ascending order.",
+    "rows": "One evaluable biological individual per row.",
+    "row_order": "Within each panel, sort by displayed profile upper-tail mass P(residual height > 100 m), ascending; ties by individual identifier. Sorting is descriptive only and does not define classes.",
+    "color_scale": "Single linear probability scale shared across all five panel heatmaps, from 0 to the observed maximum displayed cell probability.",
+    "individual_labels": "Do not print source individual identifiers on the figure; report n per panel and retain identifiers only in the machine-readable descriptive table.",
+    "annotations": "No PASS/FAIL labels, p-values, clusters, dendrograms, or inferred strategy names."
+  },
+  "machine_outputs": [
+    "results/centered_shape_individual_profiles_v1.csv",
+    "results/centered_shape_individual_profiles_v1.json",
+    "figures/submission_v0_3_7/figure6_individual_centered_shape_profiles.pdf",
+    "figures/submission_v0_3_7/figure6_individual_centered_shape_profiles.png"
+  ],
+  "claim_boundary": [
+    "The figure visualizes the content of an already-completed inferential audit; it is not a new statistical test.",
+    "Differences in displayed profile width, tails, asymmetry, or multimodality are descriptive observations only.",
+    "No behavioral-state interpretation is assigned.",
+    "No vertical-niche type or individual strategy class is inferred.",
+    "Non-additive and heteroscedastic device error remains unresolved."
+  ]
+}
