@@ -72,7 +72,20 @@
     "stages": [
       "pre-release",
       "post-doi"
-    ]
+    ],
+    "synthetic_self_test": {
+      "workflow_run_id": 36371640078,
+      "conclusion": "success",
+      "pre_release_combined_words": 6730,
+      "post_doi_combined_words": 6725,
+      "pre_release": "ready",
+      "post_doi": "ready",
+      "jae_final_upload_gate": "ready"
+    },
+    "active_reference_guard": {
+      "workflow_run_id": 36371726985,
+      "conclusion": "success"
+    }
   },
   "remaining_human_input": {
     "source": "submission/jae_v0_3_7_metadata.json",
