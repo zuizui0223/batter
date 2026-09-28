@@ -144,3 +144,24 @@ GitHub release-preflight target:
 
 No human identity, authorship, license, funding, conflict declaration, ORCID, postal address or DOI
 is inferred.
+
+
+## Packaging validation
+
+One-source metadata workflow:
+- self-test run: `36381513500` — **success**
+- pre-release assembly: READY
+- post-DOI assembly: READY
+- final JAE upload gate: READY
+- synthetic combined count: 7,125 words pre-release / 7,120 words post-DOI
+
+GitHub/Zenodo release preflight:
+- self-test run: `36381579802` — **success**
+- metadata/CITATION/LICENSE synthetic state: READY
+- candidate integrity: READY
+- target tag/release absence check: READY
+
+Active-reference guard:
+- run: `36381673963` — **success**
+
+No authorship, license, funding, conflict declaration, ORCID, postal address or DOI is inferred.
