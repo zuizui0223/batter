@@ -3,7 +3,7 @@ name: jae-active-reference-guard-v0.3.8
 on:
   push:
     branches:
-      - packaging/jae-v0.3.8-promote
+      - packaging/jae-v0.3.8-promote-clean
       - main
     paths:
       - "README.md"
