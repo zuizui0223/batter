@@ -1,3 +1,4 @@
+# Final v0.3.8 7669-word package validation.
 # End-to-end synthetic metadata test. Synthetic identity/license exist only in the Actions workspace.
 name: jae-metadata-assembly-self-test-v0.3.8
 
