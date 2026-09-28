@@ -20,9 +20,11 @@ self and other profiles are integrated under the **same 5-km horizontal cell-use
 More importantly, all five comparative panels retain vertical-distribution shape identity after
 every session is translated to zero median, removing any additive constant altitude offset.
 
-The descriptive reconstruction of those already-tested profiles shows what differs biologically:
-individuals vary in **central concentration and upper/lower tail use** around their session-specific
-median altitude.
+The descriptive reconstruction of those already-tested profiles visually illustrates candidate
+dimensions of shape heterogeneity: estimated profiles vary in **central concentration and
+upper/lower tail use** around their session-specific median altitude. Those component-wise ranges
+were not separately null-calibrated and may include finite-session profile-estimation noise; the
+inferential result applies to the full centered distribution shape.
 
 Therefore the main ecological conclusion is:
 
@@ -38,13 +40,15 @@ The final descriptive Figure 6 is frozen as a visualization-only layer. It recon
 leave-one-session-out common-cell self profiles used by the centered-shape estimator and averages
 them equally within biological individual.
 
-Across the five comparative panels, individuals differ visibly in:
+Across the five comparative panels, the displayed profile estimates vary visibly in:
 - central mass around -50 to +50 m;
 - upper-tail use at >=100 m;
 - lower-tail use at <=-100 m;
 - tail asymmetry.
 
-No cluster, strategy class, behavioural state or additional p-value is inferred.
+These component summaries are descriptive only. They were not calibrated against exchangeability,
+so the figure does not identify which component carries the validated whole-profile identity
+signal. No cluster, strategy class, behavioural state or additional p-value is inferred.
 
 See `CENTERED_SHAPE_PROFILE_DESCRIPTIVE_RESULT_V1.md`.
 
@@ -146,6 +150,6 @@ Current release packaging target: `release/jae-v0.3.8-rc1`.
 The analyses concern vertical space use and repeatable individual distribution shape. Common-cell
 weighting removes occupancy differences among the tested horizontal cells, not all fine-scale
 horizontal fidelity. Session centering removes additive altitude level, not tag-specific error
-variance or behavioural-state composition. The analyses do not establish vertical-niche strategy
-classes, foraging specialization, personality, learning, optimality, stable learned routes or a
-universal causal mechanism.
+variance or behavioural-state composition. The analyses do not establish which visual component of Figure 6 carries the calibrated
+whole-profile identity signal, vertical-niche strategy classes, foraging specialization,
+personality, learning, optimality, stable learned routes or a universal causal mechanism.
