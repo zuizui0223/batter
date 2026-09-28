@@ -27,6 +27,17 @@ The repository also preserves the methodological audit showing that intuitive ze
 references are not universal nulls for finite prediction pipelines. The complete prediction
 statistic is therefore calibrated under session-label exchangeability.
 
+## Descriptive ecology layer
+
+v0.3.8 adds a descriptive-only reconstruction of the exact centered common-cell self profiles
+already implicated by the frozen inferential audit. Across the five comparative panels, individual
+profiles differ visibly in central concentration and in upper/lower tail use around the
+session-specific median. No clustering, strategy classes or new hypothesis tests are introduced.
+
+The manuscript discusses resource-linked behavioural allocation as the leading cross-panel working
+hypothesis, with competition/social information as a possible mediator and morphology, memory,
+experience and atmospheric structure retained as alternative contributors.
+
 ## Reproducibility and provenance
 
 This release contains:
