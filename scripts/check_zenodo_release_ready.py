@@ -10,8 +10,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 LICENSE_CANDIDATES = ("LICENSE", "LICENSE.md", "LICENSE.txt")
 PLACEHOLDER = re.compile(r"\[INSERT\b|\bTBD\b|\bTODO\b", re.IGNORECASE)
-EXPECTED_VERSION = "v0.3.6"
-METADATA = ROOT / "submission" / "jae_v0_3_6_metadata.json"
+EXPECTED_VERSION = "v0.3.7"
+METADATA = ROOT / "submission" / "jae_v0_3_7_metadata.json"
 
 
 def fail(message: str, failures: list[str]) -> None:
@@ -30,7 +30,7 @@ def main() -> int:
 
     metadata = None
     if not METADATA.is_file():
-        fail("missing submission/jae_v0_3_6_metadata.json", failures)
+        fail("missing submission/jae_v0_3_7_metadata.json", failures)
     else:
         try:
             metadata = json.loads(METADATA.read_text(encoding="utf-8"))
