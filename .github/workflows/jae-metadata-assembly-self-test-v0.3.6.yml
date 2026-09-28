@@ -1,16 +1,7 @@
-# Final infrastructure validation after DOI-targeting and consistency hardening.
+# End-to-end synthetic metadata test. Synthetic identity/license exist only in the Actions workspace.
 name: jae-metadata-assembly-self-test-v0.3.6
 
 on:
-  push:
-    branches:
-      - packaging/jae-v0.3.6-metadata-intake
-    paths:
-      - "scripts/apply_jae_v0_3_6_metadata.py"
-      - "scripts/check_jae_upload_ready.py"
-      - "scripts/check_zenodo_release_ready.py"
-      - "submission/jae_v0_3_6_metadata.template.json"
-      - ".github/workflows/jae-metadata-assembly-self-test-v0.3.6.yml"
   workflow_dispatch:
 
 jobs:
