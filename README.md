@@ -136,7 +136,7 @@ The v0.3.4 rc3 package is retained as the pre-audit baseline and must not be sub
 scientific version.
 
 The current manuscript is `manuscript/MANUSCRIPT_DRAFT_V0_3_8.md`, titled **“Repeatable individual shapes of vertical space use persist beyond coarse horizontal occupancy in bats.”** The v0.3.8
-manuscript/figure and anonymous-review workflows pass with 7,542 words, a 264-word five-statement
+manuscript/figure and anonymous-review workflows pass with 7,669 words, a 264-word five-statement
 abstract, six main figures plus two Supporting Figures, and a 26-page anonymous review PDF.
 
 Current release packaging target: `release/jae-v0.3.8-rc1`.
