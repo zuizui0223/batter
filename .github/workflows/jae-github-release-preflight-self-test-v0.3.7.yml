@@ -1,0 +1,69 @@
+name: jae-github-release-preflight-self-test-v0.3.7
+
+on:
+  push:
+    branches:
+      - packaging/jae-v0.3.7-release-preflight
+    paths:
+      - "scripts/check_github_release_preflight.py"
+      - "RELEASE_NOTES_JAE_V0_3_7.md"
+      - "submission/jae_v0_3_7_metadata.template.json"
+      - "scripts/apply_jae_v0_3_7_metadata.py"
+      - "scripts/check_zenodo_release_ready.py"
+      - ".github/workflows/jae-github-release-preflight-self-test-v0.3.7.yml"
+  workflow_dispatch:
+
+jobs:
+  self-test:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Create synthetic pre-release metadata in workspace only
+        run: |
+          echo "Synthetic self-test license only" > LICENSE
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = json.loads(Path("submission/jae_v0_3_7_metadata.template.json").read_text())
+          p["release_date"] = "2026-09-28"
+          p["software_license_spdx"] = "MIT"
+          p["authors"] = [{
+              "given_names": "Test",
+              "family_names": "Author",
+              "orcid": "0000-0000-0000-0000",
+              "affiliation_ids": ["1"],
+              "credit_roles": ["Conceptualization", "Writing – original draft"],
+              "corresponding": True
+          }]
+          p["affiliations"] = {"1": "Synthetic University, Test City"}
+          p["corresponding_author"] = {
+              "postal_address": "1 Test Street, Test City 00000",
+              "email": "test.author@example.org"
+          }
+          p["acknowledgements"] = "None"
+          p["funding"] = "None"
+          p["conflict_of_interest"] = "The authors declare no conflicts of interest."
+          p["archive_doi"] = ""
+          Path("submission/jae_v0_3_7_metadata.json").write_text(json.dumps(p, indent=2) + "\n")
+          PY
+      - name: Assemble synthetic pre-release files
+        run: python scripts/apply_jae_v0_3_7_metadata.py --stage pre-release
+      - name: Check synthetic Zenodo readiness
+        run: python scripts/check_zenodo_release_ready.py
+      - name: Simulate final-candidate equality for local integrity check
+        run: git update-ref refs/remotes/origin/main HEAD
+      - name: Run GitHub release preflight logic
+        run: python scripts/check_github_release_preflight.py
+      - name: Verify real target tag/release are absent
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          test -z "$(git ls-remote --tags origin refs/tags/jae-v0.3.7)"
+          test "$(gh api "repos/${GITHUB_REPOSITORY}/releases" --jq '[.[] | select(.tag_name == "jae-v0.3.7")] | length')" = "0"
