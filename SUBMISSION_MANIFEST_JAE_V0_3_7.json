@@ -91,7 +91,15 @@
       "workflow": ".github/workflows/jae-github-release-preflight-v0.3.7.yml",
       "release_notes": "RELEASE_NOTES_JAE_V0_3_7.md",
       "expected_tag": "jae-v0.3.7",
-      "auto_publish": false
+      "auto_publish": false,
+      "self_test": {
+        "workflow_run_id": 36373116328,
+        "conclusion": "success",
+        "zenodo_gate": "ready",
+        "candidate_integrity": "ready",
+        "target_tag_absent": true,
+        "target_release_absent": true
+      }
     }
   },
   "remaining_human_input": {
