@@ -1,0 +1,31 @@
+name: jae-metadata-preflight-v0.3.7
+
+on:
+  workflow_dispatch:
+    inputs:
+      stage:
+        description: "Metadata stage"
+        required: true
+        default: "pre-release"
+        type: choice
+        options:
+          - pre-release
+          - post-doi
+
+jobs:
+  metadata-preflight:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate one-source human metadata
+        run: python scripts/apply_jae_v0_3_7_metadata.py --stage "${{ inputs.stage }}" --check-only
+      - name: Check Zenodo release metadata
+        run: python scripts/check_zenodo_release_ready.py
+      - name: Check final JAE title-page and DOI readiness
+        if: ${{ inputs.stage == 'post-doi' }}
+        run: python scripts/check_jae_upload_ready.py

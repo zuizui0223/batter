@@ -10,15 +10,15 @@ ROOT = Path(__file__).resolve().parents[1]
 
 CURRENT = ROOT / "CURRENT_STATUS.md"
 AUDIT = ROOT / "manuscript" / "JAE_INITIAL_SUBMISSION_AUDIT_2026_09_27.md"
-MANIFEST_MD = ROOT / "SUBMISSION_MANIFEST_JAE_V0_3_6.md"
-MANIFEST_JSON = ROOT / "SUBMISSION_MANIFEST_JAE_V0_3_6.json"
-READINESS = ROOT / "manuscript" / "JAE_SUBMISSION_READINESS_V0_3_6.md"
-METADATA_GUIDE = ROOT / "FINAL_METADATA_INTAKE_JAE_V0_3_6.md"
+MANIFEST_MD = ROOT / "SUBMISSION_MANIFEST_JAE_V0_3_7.md"
+MANIFEST_JSON = ROOT / "SUBMISSION_MANIFEST_JAE_V0_3_7.json"
+READINESS = ROOT / "manuscript" / "JAE_SUBMISSION_READINESS_V0_3_7.md"
+METADATA_GUIDE = ROOT / "FINAL_METADATA_INTAKE_JAE_V0_3_7.md"
 
-EXPECTED_RC = "v0.3.6-rc4"
-EXPECTED_MANUSCRIPT = "manuscript/MANUSCRIPT_DRAFT_V0_3_6.md"
-EXPECTED_FINAL_TITLE_PAGE = "manuscript/TITLE_PAGE_V0_3_6.md"
-EXPECTED_METADATA = "submission/jae_v0_3_6_metadata.json"
+EXPECTED_RC = "v0.3.7-rc1"
+EXPECTED_MANUSCRIPT = "manuscript/MANUSCRIPT_DRAFT_V0_3_7.md"
+EXPECTED_FINAL_TITLE_PAGE = "manuscript/TITLE_PAGE_V0_3_7.md"
+EXPECTED_METADATA = "submission/jae_v0_3_7_metadata.json"
 
 
 def need(text: str, phrase: str, label: str, failures: list[str]) -> None:
@@ -49,24 +49,24 @@ def main() -> int:
     need(audit, EXPECTED_METADATA, "JAE initial audit", failures)
     forbid(audit, "present as manuscript/TITLE_PAGE_TEMPLATE_V0_3_6.md", "JAE initial audit", failures)
 
-    need(manifest_md, "# JAE submission manifest v0.3.6 rc4", "manifest markdown", failures)
+    need(manifest_md, "# JAE submission manifest v0.3.7 rc1", "manifest markdown", failures)
     need(manifest_md, EXPECTED_METADATA, "manifest markdown", failures)
 
-    if manifest.get("submission_id") != "batter-jae-v0.3.6-rc4":
-        failures.append("machine manifest submission_id is not batter-jae-v0.3.6-rc3")
+    if manifest.get("submission_id") != "batter-jae-v0.3.7-rc1":
+        failures.append("machine manifest submission_id is not batter-jae-v0.3.7-rc3")
     if manifest.get("manuscript", {}).get("path") != EXPECTED_MANUSCRIPT:
-        failures.append("machine manifest manuscript path is not v0.3.6")
+        failures.append("machine manifest manuscript path is not v0.3.7")
     if manifest.get("packaging", {}).get("release_candidate") != EXPECTED_RC:
-        failures.append("machine manifest packaging.release_candidate is not v0.3.6-rc3")
+        failures.append("machine manifest packaging.release_candidate is not v0.3.7-rc3")
     if manifest.get("packaging", {}).get("metadata_source") != EXPECTED_METADATA:
         failures.append("machine manifest metadata source is not the one-source JSON")
     remaining = manifest.get("remaining_human_input")
     if not isinstance(remaining, dict) or remaining.get("source") != EXPECTED_METADATA:
         failures.append("machine manifest remaining_human_input is not centralized in the one-source JSON")
 
-    need(readiness, EXPECTED_METADATA, "v0.3.6 readiness", failures)
-    need(readiness, "Phase A — before Zenodo", "v0.3.6 readiness", failures)
-    need(readiness, "Phase B — after Zenodo", "v0.3.6 readiness", failures)
+    need(readiness, EXPECTED_METADATA, "v0.3.7 readiness", failures)
+    need(readiness, "Phase A — before Zenodo", "v0.3.7 readiness", failures)
+    need(readiness, "Phase B — after Zenodo", "v0.3.7 readiness", failures)
 
     need(metadata_guide, "--stage pre-release", "metadata guide", failures)
     need(metadata_guide, "--stage post-doi", "metadata guide", failures)

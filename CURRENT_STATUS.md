@@ -293,7 +293,7 @@ further scientific analysis family is opened.
 
 **JAE v0.3.3 rc2 is scientifically superseded and must not be submitted.**
 
-Current scientific candidate: `manuscript/MANUSCRIPT_DRAFT_V0_3_6.md`.
+Current scientific candidate: `manuscript/MANUSCRIPT_DRAFT_V0_3_7.md`.
 
 The v0.3.4 rc3 package is retained as the pre-audit baseline and must not be submitted as the final scientific version.
 
@@ -352,6 +352,24 @@ authorship, license choice or DOI is inferred.
 RC4 is packaging-only. The scientific v0.3.6 manuscript and all audit results are unchanged.
 Active submission documents now consistently identify v0.3.6/rc4, the generated final title page,
 and the one-source metadata JSON. A CI guard blocks stale current-package references.
+
+## v0.3.7 comparative-first editorial revision
+
+The scientific analyses and claim ceiling are unchanged. The manuscript narrative now leads with
+the five comparative panels that retain centered vertical-distribution shape identity. *Tadarida*
+is treated as the motivating boundary case.
+
+Validated main package:
+- manuscript CI estimate: **6,548 words**;
+- abstract: **255 words**;
+- Introduction: **685 words**;
+- main figures: **5**;
+- Supporting Figures: **2**;
+- anonymous review PDF: **22 pages**;
+- anonymity gate: **PASS**.
+
+Detailed amendment history and the former Tadarida/architecture figures are now Supporting
+Information.
 
 ## Claim boundary
 

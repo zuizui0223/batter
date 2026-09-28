@@ -114,12 +114,12 @@ See `TAG_ALTITUDE_BIAS_AUDIT_RESULT.md`.
 The v0.3.4 rc3 package is retained as the pre-audit baseline and must not be submitted as the final
 scientific version.
 
-The current manuscript is `manuscript/MANUSCRIPT_DRAFT_V0_3_6.md`, titled **“Repeatable vertical
+The current manuscript is `manuscript/MANUSCRIPT_DRAFT_V0_3_7.md`, titled **“Repeatable vertical
 identity in bat airspace persists after coarse horizontal occupancy is standardized.”** The
-v0.3.6 manuscript/figure and anonymous-review workflows pass with 7,932 words, a 273-word
-five-statement abstract, seven figures and a 26-page anonymous review PDF.
+v0.3.7 manuscript/figure and anonymous-review workflows pass with 6,548 words, a 255-word
+five-statement abstract, five main figures plus two Supporting Figures, and a 22-page anonymous review PDF.
 
-Current release packaging: `release/jae-v0.3.6-rc4` (packaging-only successor; scientific v0.3.6 content unchanged).
+Current release packaging: `release/jae-v0.3.7-rc1` (packaging-only successor; scientific v0.3.6 content unchanged).
 
 ## Claim boundary
 

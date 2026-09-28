@@ -1,0 +1,17 @@
+name: jae-upload-readiness-v0.3.7
+
+on:
+  workflow_dispatch:
+
+jobs:
+  final-upload-gate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check v0.3.7 human metadata and permanent DOI
+        run: python scripts/check_jae_upload_ready.py

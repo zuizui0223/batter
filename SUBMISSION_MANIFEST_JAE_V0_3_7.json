@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "submission_id": "batter-jae-v0.3.7-rc1",
+  "date": "2026-09-28",
+  "journal_target": "Journal of Animal Ecology",
+  "manuscript": {
+    "path": "manuscript/MANUSCRIPT_DRAFT_V0_3_7.md",
+    "title": "Repeatable vertical identity in bat airspace persists after coarse horizontal occupancy is standardized",
+    "ci_word_estimate": 6548,
+    "abstract_words": 255,
+    "introduction_words": 685,
+    "results_words": 1059,
+    "discussion_words": 1077,
+    "abstract_numbered_statements": 5,
+    "keywords": 7,
+    "main_figures": 5,
+    "supporting_figures": 2,
+    "supporting_information": "manuscript/SUPPORTING_INFORMATION_CLAIM_AMENDMENT_HISTORY.md"
+  },
+  "scientific_audits": {
+    "inherited_from": "v0.3.6",
+    "scientific_content_unchanged": true,
+    "tag_altitude_bias": {
+      "primary_result": "5_of_6_pass_after_session_median_centering",
+      "tadarida": {
+        "calibrated_excess": -0.02216560464721118,
+        "p_upper": 0.5121,
+        "pass": false
+      },
+      "stationary_result": "2_of_2_structurally_eligible_panels_pass",
+      "final_stop": true
+    }
+  },
+  "editorial_reframe": {
+    "comparative_first": true,
+    "tadarida_role": "motivating_boundary_case",
+    "detailed_amendment_history_moved_to_supporting_information": true,
+    "main_figure_count_reduced_from": 7,
+    "main_figure_count": 5
+  },
+  "automated_validation": {
+    "manuscript_figures": {
+      "run_id": 36371352865,
+      "head_sha": "5f0c68b316c909250ed68065a1c36b807b8e5f2a",
+      "conclusion": "success",
+      "main_artifact_id": 10949730214,
+      "main_artifact_digest": "sha256:789ad64f884dc4125e427c77ca5ba2b806d27a1bf0c4d034e3152a2b25ef939d",
+      "supporting_artifact_id": 10949575931,
+      "supporting_artifact_digest": "sha256:e9c86535aca5a5f547da252bacbfdc5df74b3a7ce6274cb0830c191194a01781"
+    },
+    "anonymous_review_pdf": {
+      "run_id": 36371352895,
+      "head_sha": "5f0c68b316c909250ed68065a1c36b807b8e5f2a",
+      "conclusion": "success",
+      "anonymity_guard": "pass",
+      "pages": 22,
+      "artifact_id": 10948449463,
+      "artifact_digest": "sha256:1712cc2f367d39eca904f13e3c97309faa1409f72cafc14d1fa9a3de6621bcac"
+    },
+    "visual_inspection": {
+      "main_figures_1_to_5": "passed",
+      "supporting_figures_S1_to_S2": "passed",
+      "review_pdf": "passed"
+    }
+  },
+  "supersedes": "batter-jae-v0.3.6-rc4",
+  "packaging": {
+    "release_candidate": "v0.3.7-rc1",
+    "metadata_source": "submission/jae_v0_3_7_metadata.json",
+    "metadata_template": "submission/jae_v0_3_7_metadata.template.json",
+    "assembler": "scripts/apply_jae_v0_3_7_metadata.py",
+    "stages": [
+      "pre-release",
+      "post-doi"
+    ],
+    "synthetic_self_test": {
+      "workflow_run_id": 36371640078,
+      "conclusion": "success",
+      "pre_release_combined_words": 6730,
+      "post_doi_combined_words": 6725,
+      "pre_release": "ready",
+      "post_doi": "ready",
+      "jae_final_upload_gate": "ready"
+    },
+    "active_reference_guard": {
+      "workflow_run_id": 36371726985,
+      "conclusion": "success"
+    }
+  },
+  "remaining_human_input": {
+    "source": "submission/jae_v0_3_7_metadata.json",
+    "pre_release": [
+      "copy and fill metadata template except archive_doi",
+      "choose software license and add matching LICENSE",
+      "run pre-release metadata assembler",
+      "make Zenodo release gate READY",
+      "enable repository in Zenodo and publish GitHub release"
+    ],
+    "post_doi": [
+      "insert minted Zenodo version DOI into archive_doi",
+      "run post-DOI metadata assembler",
+      "make final JAE upload gate READY",
+      "confirm combined word count <= 8500",
+      "perform final journal upload"
+    ]
+  }
+}
