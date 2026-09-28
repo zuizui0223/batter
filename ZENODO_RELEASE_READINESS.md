@@ -1,4 +1,4 @@
-# Zenodo release readiness — JAE v0.3.6
+# Zenodo release readiness — JAE v0.3.7
 
 Checked: 2026-09-28
 
@@ -7,22 +7,22 @@ Checked: 2026-09-28
 **BLOCKED intentionally on human metadata.**
 
 The scientific package is frozen. Release readiness now has one human metadata source:
-`submission/jae_v0_3_6_metadata.json`, created from the checked-in template.
+`submission/jae_v0_3_7_metadata.json`, created from the checked-in template.
 
 ## Phase A — pre-release
 
-1. Copy `submission/jae_v0_3_6_metadata.template.json` to
-   `submission/jae_v0_3_6_metadata.json`.
+1. Copy `submission/jae_v0_3_7_metadata.template.json` to
+   `submission/jae_v0_3_7_metadata.json`.
 2. Fill authorship, affiliations, corresponding-author details, CRediT roles, acknowledgements,
    funding, conflict declaration, release date and software-license SPDX identifier.
 3. Leave `archive_doi` empty: Zenodo has not minted it yet.
 4. Add the matching repository `LICENSE` file.
 5. Run:
-   `python scripts/apply_jae_v0_3_6_metadata.py --stage pre-release`.
+   `python scripts/apply_jae_v0_3_7_metadata.py --stage pre-release`.
 6. Run:
    `python scripts/check_zenodo_release_ready.py`.
 7. Commit the explicit metadata JSON, LICENSE, generated `CITATION.cff`,
-   pre-release `manuscript/TITLE_PAGE_V0_3_6.md`, and metadata summary.
+   pre-release `manuscript/TITLE_PAGE_V0_3_7.md`, and metadata summary.
 8. Enable `zuizui0223/batter` in the repository owner's Zenodo GitHub integration.
 9. Publish the GitHub release from the final release candidate only when the Zenodo gate reports
    READY.
@@ -33,9 +33,9 @@ yet the journal-upload title page.
 ## Phase B — after Zenodo creates the version DOI
 
 1. Copy the minted version DOI into `archive_doi` in
-   `submission/jae_v0_3_6_metadata.json`.
+   `submission/jae_v0_3_7_metadata.json`.
 2. Run:
-   `python scripts/apply_jae_v0_3_6_metadata.py --stage post-doi`.
+   `python scripts/apply_jae_v0_3_7_metadata.py --stage post-doi`.
 3. Run:
    - `python scripts/check_zenodo_release_ready.py`
    - `python scripts/check_jae_upload_ready.py`
@@ -61,7 +61,7 @@ committing the synthetic identity or license.
 
 ## Scientific freeze
 
-The current scientific package is v0.3.6. Cross-panel confound, effect-null and final
+The current scientific package is v0.3.7. Cross-panel confound, effect-null and final
 tag-altitude-bias audits are complete. Nothing in this release-readiness layer reopens source
 selection, endpoints, estimator calibration, scales, exclusions, bins, smoothing, results or
 claims.
