@@ -15,7 +15,7 @@ MANIFEST_JSON = ROOT / "SUBMISSION_MANIFEST_JAE_V0_3_7.json"
 READINESS = ROOT / "manuscript" / "JAE_SUBMISSION_READINESS_V0_3_7.md"
 METADATA_GUIDE = ROOT / "FINAL_METADATA_INTAKE_JAE_V0_3_7.md"
 
-EXPECTED_RC = "v0.3.7-rc1"
+EXPECTED_RC = "v0.3.7-rc2"
 EXPECTED_MANUSCRIPT = "manuscript/MANUSCRIPT_DRAFT_V0_3_7.md"
 EXPECTED_FINAL_TITLE_PAGE = "manuscript/TITLE_PAGE_V0_3_7.md"
 EXPECTED_METADATA = "submission/jae_v0_3_7_metadata.json"
@@ -49,10 +49,10 @@ def main() -> int:
     need(audit, EXPECTED_METADATA, "JAE initial audit", failures)
     forbid(audit, "present as manuscript/TITLE_PAGE_TEMPLATE_V0_3_6.md", "JAE initial audit", failures)
 
-    need(manifest_md, "# JAE submission manifest v0.3.7 rc1", "manifest markdown", failures)
+    need(manifest_md, "# JAE submission manifest v0.3.7 rc2", "manifest markdown", failures)
     need(manifest_md, EXPECTED_METADATA, "manifest markdown", failures)
 
-    if manifest.get("submission_id") != "batter-jae-v0.3.7-rc1":
+    if manifest.get("submission_id") != "batter-jae-v0.3.7-rc2":
         failures.append("machine manifest submission_id is not batter-jae-v0.3.7-rc3")
     if manifest.get("manuscript", {}).get("path") != EXPECTED_MANUSCRIPT:
         failures.append("machine manifest manuscript path is not v0.3.7")

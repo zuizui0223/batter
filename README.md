@@ -119,7 +119,7 @@ identity in bat airspace persists after coarse horizontal occupancy is standardi
 v0.3.7 manuscript/figure and anonymous-review workflows pass with 6,548 words, a 255-word
 five-statement abstract, five main figures plus two Supporting Figures, and a 22-page anonymous review PDF.
 
-Current release packaging: `release/jae-v0.3.7-rc1` (packaging-only successor; scientific v0.3.6 content unchanged).
+Current release packaging: `release/jae-v0.3.7-rc2` (packaging-only successor; scientific v0.3.6 content unchanged).
 
 ## Claim boundary
 

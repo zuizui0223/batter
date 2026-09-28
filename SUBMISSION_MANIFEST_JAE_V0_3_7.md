@@ -1,4 +1,4 @@
-# JAE submission manifest v0.3.7 rc1
+# JAE submission manifest v0.3.7 rc2
 
 Date: 2026-09-28
 
@@ -119,3 +119,25 @@ Active-reference guard:
 - run: `36371726985` — **success**
 
 No authorship, license, ORCID, funding, conflict declaration, postal address or DOI was inferred.
+
+
+## Packaging rc2 — final GitHub release preflight
+
+Scientific content is unchanged.
+
+RC2 adds a fail-closed manual preflight immediately before the one GitHub Release intended for
+Zenodo archiving. It verifies the final release-candidate commit matches current main, human
+metadata/CITATION/LICENSE are complete, the archive DOI is still empty before minting, release
+notes contain no placeholders, and the target tag/release do not already exist.
+
+The preflight never creates a tag or publishes a release.
+
+
+Release-preflight synthetic self-test:
+- run: `36373116328`
+- conclusion: **success**
+- synthetic pre-release metadata assembly: READY
+- Zenodo release gate: READY
+- release-candidate integrity: READY
+- target tag `jae-v0.3.7`: absent
+- GitHub Release using that tag: absent

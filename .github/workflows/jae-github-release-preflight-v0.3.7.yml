@@ -1,0 +1,44 @@
+name: jae-github-release-preflight-v0.3.7
+
+on:
+  workflow_dispatch:
+    inputs:
+      candidate_ref:
+        description: "Final release-candidate branch/ref"
+        required: true
+        default: "release/jae-v0.3.7-rc2"
+        type: string
+
+jobs:
+  release-preflight:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.candidate_ref }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fetch current main
+        run: git fetch origin main --no-tags
+      - name: Check v0.3.7 release metadata
+        run: python scripts/apply_jae_v0_3_7_metadata.py --stage pre-release --check-only
+      - name: Check Zenodo release readiness
+        run: python scripts/check_zenodo_release_ready.py
+      - name: Check release-candidate integrity
+        run: python scripts/check_github_release_preflight.py
+      - name: Verify target tag/release do not already exist
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          test -z "$(git ls-remote --tags origin refs/tags/jae-v0.3.7)"
+          test "$(gh api "repos/${GITHUB_REPOSITORY}/releases" --jq '[.[] | select(.tag_name == "jae-v0.3.7")] | length')" = "0"
+      - name: Print release instruction
+        run: |
+          echo "READY: publish one GitHub release from ${{ inputs.candidate_ref }}"
+          echo "Tag: jae-v0.3.7"
+          echo "Release notes: RELEASE_NOTES_JAE_V0_3_7.md"
+          echo "Do not publish until the repository is enabled in Zenodo."
