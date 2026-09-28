@@ -73,5 +73,24 @@
     "enable repository in Zenodo and mint version DOI",
     "insert DOI into title page",
     "perform final journal upload"
-  ]
+  ],
+  "packaging": {
+    "release_candidate": "v0.3.6-rc3",
+    "scientific_content_unchanged": true,
+    "metadata_source": "submission/jae_v0_3_6_metadata.json",
+    "metadata_template": "submission/jae_v0_3_6_metadata.template.json",
+    "assembler": "scripts/apply_jae_v0_3_6_metadata.py",
+    "stages": [
+      "pre-release",
+      "post-doi"
+    ],
+    "synthetic_self_test": {
+      "workflow_run_id": 36366987729,
+      "conclusion": "success",
+      "pre_release": "ready",
+      "zenodo_release_gate": "ready",
+      "post_doi": "ready",
+      "jae_final_upload_gate": "ready"
+    }
+  }
 }
