@@ -1,0 +1,77 @@
+# End-to-end synthetic metadata test. Synthetic identity/license exist only in the Actions workspace.
+name: jae-metadata-assembly-self-test-v0.3.8
+
+on:
+  push:
+    branches:
+      - packaging/jae-v0.3.8-promote
+    paths:
+      - "scripts/apply_jae_v0_3_8_metadata.py"
+      - "scripts/check_jae_upload_ready.py"
+      - "scripts/check_zenodo_release_ready.py"
+      - "submission/jae_v0_3_8_metadata.template.json"
+      - ".github/workflows/jae-metadata-assembly-self-test-v0.3.8.yml"
+  workflow_dispatch:
+
+jobs:
+  self-test:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Create synthetic human metadata in workspace only
+        run: |
+          echo "Synthetic self-test license only" > LICENSE
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = json.loads(Path("submission/jae_v0_3_8_metadata.template.json").read_text())
+          p["release_date"] = "2026-09-28"
+          p["software_license_spdx"] = "MIT"
+          p["authors"] = [{
+              "given_names": "Test",
+              "family_names": "Author",
+              "orcid": "0000-0000-0000-0000",
+              "affiliation_ids": ["1"],
+              "credit_roles": ["Conceptualization", "Writing – original draft"],
+              "corresponding": True,
+          }]
+          p["affiliations"] = {"1": "Synthetic University, Test City"}
+          p["corresponding_author"] = {
+              "postal_address": "1 Test Street, Test City 00000",
+              "email": "test.author@example.org",
+          }
+          p["acknowledgements"] = "None"
+          p["funding"] = "None"
+          p["conflict_of_interest"] = "The authors declare no conflicts of interest."
+          p["archive_doi"] = ""
+          Path("submission/jae_v0_3_8_metadata.json").write_text(json.dumps(p, indent=2) + "\n")
+          PY
+      - name: Assemble pre-release metadata
+        run: python scripts/apply_jae_v0_3_8_metadata.py --stage pre-release
+      - name: Check pre-release Zenodo readiness
+        run: python scripts/check_zenodo_release_ready.py
+      - name: Confirm pre-release title page still awaits DOI
+        run: grep -F "versioned Zenodo DOI" manuscript/TITLE_PAGE_V0_3_8.md
+      - name: Simulate minted Zenodo DOI
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          path = Path("submission/jae_v0_3_8_metadata.json")
+          p = json.loads(path.read_text())
+          p["archive_doi"] = "10.5281/zenodo.1234567"
+          path.write_text(json.dumps(p, indent=2) + "\n")
+          PY
+      - name: Assemble post-DOI metadata
+        run: python scripts/apply_jae_v0_3_8_metadata.py --stage post-doi
+      - name: Recheck Zenodo metadata consistency
+        run: python scripts/check_zenodo_release_ready.py
+      - name: Check final JAE upload readiness
+        run: python scripts/check_jae_upload_ready.py
+      - name: Confirm final DOI is the archive DOI
+        run: grep -F "https://doi.org/10.5281/zenodo.1234567" manuscript/TITLE_PAGE_V0_3_8.md
