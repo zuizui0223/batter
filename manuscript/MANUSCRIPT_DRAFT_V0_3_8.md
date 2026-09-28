@@ -150,6 +150,14 @@ A separate x-y/time-only preflight defined stationary candidates by both adjacen
 
 For those panels, individual-by-cohort offsets were estimated relative to the median individual height in each shared stationary cell, subtracted from all primary-height observations, and the original vertical bins and 5-km calibration were rerun. This correction was corroborative only. The same preflight summarized tracking-window overlap descriptively; no time-block permutation family was opened.
 
+### Descriptive visualization of individual centered-shape profiles
+
+To expose the biological content of the already-tested centered-shape individuality, we froze a descriptive visualization before opening any individual-profile output. This step added no new hypothesis test, permutation family, clustering, strategy classification or threshold optimization.
+
+For each evaluable target session in the five comparative panels, we reconstructed the exact identity-matched self profile used by the frozen centered-shape estimator. Self conditional residual-height distributions were learned from the individual's other sessions, restricted to the target's jointly supported 5-km cells, and integrated under the same equal-session self-derived common-cell weights used in the inferential analysis. We then averaged those target-session self profiles equally within biological individual. Each displayed individual profile therefore sums to one across the ten already-frozen session-centered residual-height bins.
+
+For Figure 6, rows were ordered within panel by descriptive upper-tail mass at residual height >=100 m, with ties broken by individual identifier. A common linear probability scale was used across panels. Individual identifiers were retained only in the machine-readable output and were not displayed in the paper figure. We did not infer clusters, strategy classes or behavioural states from the visualization.
+
 ### Source-study ethics
 
 This study conducted no new capture, handling or instrumentation. The focal *T. teniotis* source study reports ICNF Portugal permit 665/2017/CAPT (O'Mara et al. 2021). The *E. helvum* programme reports approvals from relevant wildlife and veterinary authorities in Ghana, Zambia and Burkina Faso (O'Mara et al. 2019). The *H. monstrosus* study reports approval by the Ministry of Agriculture, Livestock and Fisheries of the Republic of Congo and the VetAgro Sup ethics committee, approval 1805-V2 (Schloesing et al. 2023). The *P. hastatus* programmes report Ministerio del Ambiente Panamá permits and Smithsonian Tropical Research Institute Animal Care and Use Committee approvals detailed in the source papers (O'Mara & Dechmann 2023; Calderón-Capote et al. 2024). Full source-by-source permit provenance is archived with the analysis.
