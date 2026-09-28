@@ -3,7 +3,7 @@ name: jae-github-release-preflight-self-test-v0.3.8
 on:
   push:
     branches:
-      - packaging/jae-v0.3.8-promote
+      - packaging/jae-v0.3.8-promote-clean
     paths:
       - "scripts/check_github_release_preflight.py"
       - "RELEASE_NOTES_JAE_V0_3_8.md"
