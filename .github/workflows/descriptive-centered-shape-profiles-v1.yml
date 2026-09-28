@@ -1,0 +1,37 @@
+name: descriptive-centered-shape-profiles-v1
+
+on:
+  push:
+    branches:
+      - descriptive/vertical-shape-profiles-v1
+    paths:
+      - "contract/centered_shape_profile_descriptive_v1.json"
+      - "CENTERED_SHAPE_PROFILE_DESCRIPTIVE_FREEZE_V1.md"
+      - "scripts/build_centered_shape_profile_descriptive_v1.py"
+      - ".github/workflows/descriptive-centered-shape-profiles-v1.yml"
+      - "pyproject.toml"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -e ".[figure]"
+      - name: Build frozen descriptive centered-shape profiles
+        run: python scripts/build_centered_shape_profile_descriptive_v1.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: centered-shape-profile-descriptive-v1
+          path: |
+            results/centered_shape_individual_profiles_v1.csv
+            results/centered_shape_individual_profiles_v1.json
+            figures/submission_v0_3_7/figure6_individual_centered_shape_profiles.pdf
+            figures/submission_v0_3_7/figure6_individual_centered_shape_profiles.png
+          if-no-files-found: error
