@@ -371,6 +371,15 @@ Validated main package:
 Detailed amendment history and the former Tadarida/architecture figures are now Supporting
 Information.
 
+## v0.3.7 rc2 release preflight
+
+RC2 is packaging-only. Scientific content and the comparative-first v0.3.7 manuscript are unchanged.
+A manual, fail-closed GitHub/Zenodo release preflight now verifies the final candidate commit,
+metadata/CITATION/LICENSE completeness, pending pre-mint DOI state, release-note placeholders,
+and absence of an existing target tag/release before publication.
+
+The preflight never creates a tag or publishes a release.
+
 ## Claim boundary
 
 Allowed:
