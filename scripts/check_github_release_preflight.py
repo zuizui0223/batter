@@ -12,13 +12,13 @@ import subprocess
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-EXPECTED_VERSION = "v0.3.7"
-EXPECTED_TAG = "jae-v0.3.7"
-METADATA = ROOT / "submission" / "jae_v0_3_7_metadata.json"
+EXPECTED_VERSION = "v0.3.8"
+EXPECTED_TAG = "jae-v0.3.8"
+METADATA = ROOT / "submission" / "jae_v0_3_8_metadata.json"
 CFF = ROOT / "CITATION.cff"
-NOTES = ROOT / "RELEASE_NOTES_JAE_V0_3_7.md"
-MANIFEST = ROOT / "SUBMISSION_MANIFEST_JAE_V0_3_7.json"
-TITLE_PAGE = ROOT / "manuscript" / "TITLE_PAGE_V0_3_7.md"
+NOTES = ROOT / "RELEASE_NOTES_JAE_V0_3_8.md"
+MANIFEST = ROOT / "SUBMISSION_MANIFEST_JAE_V0_3_8.json"
+TITLE_PAGE = ROOT / "manuscript" / "TITLE_PAGE_V0_3_8.md"
 LICENSE_CANDIDATES = ("LICENSE", "LICENSE.md", "LICENSE.txt")
 PLACEHOLDER = re.compile(r"\[INSERT\b|\bTBD\b|\bTODO\b", re.IGNORECASE)
 
@@ -56,17 +56,17 @@ def main() -> int:
         failures.append(f"metadata package_version must be {EXPECTED_VERSION}")
     if str(metadata.get("archive_doi", "")).strip():
         failures.append("archive_doi must still be empty before the Zenodo-minting GitHub release")
-    if manifest.get("submission_id") != "batter-jae-v0.3.7-rc2":
-        failures.append("machine manifest is not the v0.3.7 rc2 submission package")
-    if manifest.get("manuscript", {}).get("path") != "manuscript/MANUSCRIPT_DRAFT_V0_3_7.md":
-        failures.append("machine manifest does not point to the v0.3.7 manuscript")
+    if manifest.get("submission_id") != "batter-jae-v0.3.8-rc2":
+        failures.append("machine manifest is not the v0.3.8 rc2 submission package")
+    if manifest.get("manuscript", {}).get("path") != "manuscript/MANUSCRIPT_DRAFT_V0_3_8.md":
+        failures.append("machine manifest does not point to the v0.3.8 manuscript")
 
     for label, text in (("metadata JSON", json.dumps(metadata)), ("CITATION.cff", cff), ("release notes", notes)):
         if PLACEHOLDER.search(text):
             failures.append(f"{label} still contains placeholder text")
 
     if not re.search(r"(?m)^version:\s*['\"]?v0\.3\.7['\"]?\s*$", cff):
-        failures.append("CITATION.cff version is not v0.3.7")
+        failures.append("CITATION.cff version is not v0.3.8")
     if "versioned Zenodo DOI" not in title:
         failures.append("pre-release title page does not state that the Zenodo DOI is pending")
 
