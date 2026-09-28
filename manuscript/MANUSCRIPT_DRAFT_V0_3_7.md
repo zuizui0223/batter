@@ -320,12 +320,6 @@ Xing, S., Leahy, L., Ashton, L.A., Kitching, R.L., Bonebrake, T.C. & Scheffers, 
 
 **Figure 5. Shift-invariant vertical-distribution identity after removal of absolute altitude level.** Every retained session was median-centered before vertical binning, so any additive constant tag/device altitude offset was removed exactly. All five comparative panels exceed their calibrated null; the motivating *Tadarida teniotis* panel does not (p=0.5121).
 
-### Supporting figure legends
-
-**Supporting Figure S1. Motivating *Tadarida teniotis* repeatable identity and mechanistic ceiling.** Early individual conditional maps contain strongly repeatable identity information (exact assignment p=0.000174), whereas a stronger residual cell-by-height stability test after marginal-altitude adjustment is not supported (p=0.160).
-
-**Supporting Figure S2. Why the original architecture classification was superseded.** Original conditional advantage and common-cell conditional increment are shown for each panel. In *P. hastatus* 2022, the apparent marginal-dominant value changes from -0.120 to +0.0066 after common horizontal weighting, demonstrating that raw conditional-minus-marginal signs cannot be interpreted as biological architecture classes.
-
 ## Ethics statement
 
 This study is a secondary analysis of publicly archived animal-tracking data and involved no new capture, handling or experimental manipulation of animals. The original tracking programmes were conducted under the permits and institutional approvals detailed in Materials and Methods and in the repository's source-ethics provenance ledger. The present analyses use only published tracking measurements and source animal identifiers.
