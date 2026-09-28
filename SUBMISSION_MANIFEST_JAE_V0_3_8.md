@@ -49,38 +49,38 @@ Observed examples include:
 ## Validated v0.3.8 package
 
 Main manuscript/figure workflow:
-- run: **36380837565**
-- head: `d6d0cd51854c9ada2eefbd069a08bc1db514bbf9`
+- run: **36389987590**
+- head: `f1ad08babcfbac583beabdeb9dc388ea316b4c43`
 - conclusion: **success**
-- manuscript CI estimate: **7,542 words**
+- manuscript CI estimate: **7,669 words**
 - abstract: **264 words**
 - Introduction: **685 words**
 - Results: **1,270 words**
-- Discussion: **1,686 words**
+- Discussion: **1,651 words**
 - keywords: **7**
 - main figures: **6**
 - Supporting Figures: **2**
 
 Main-figure artifact:
-- id: `10952945637`
-- digest: `sha256:65ef32e64d355694720791f74daad764e8ac9bedd117fefd7ad5e65137fcab6d`
+- id: `10955439110`
+- digest: `sha256:296d0fbb058911cfb37bf712ba37997b3af5e013409df0d8474a9f74eb6689db`
 
 Supporting-figure artifact:
-- id: `10953025517`
-- digest: `sha256:a94e779c17ea091ec8a3dca16760df5f47daaccc254d1e6d5f851718b7fc16c7`
+- id: `10956201812`
+- digest: `sha256:cda07611463574edcaff9b2104655673793bf07dc8f8d08461fb2e5776e0944e`
 
 Descriptive profile artifact:
-- id: `10951779884`
-- digest: `sha256:a730606c21fe79ef74e676fc1bf93ba4bf5980b8ecb396dea3a453aad4f1f120`
+- id: `10955726980`
+- digest: `sha256:56b98daa292beab95f400bf53358f958793dcc5f296e7fee8850f69762c16f3c`
 
 Anonymous review workflow:
-- run: **36380837508**
-- head: `cc38e0a65de59149c84baef5dbc502563f089309`
+- run: **36389987050**
+- head: `f1ad08babcfbac583beabdeb9dc388ea316b4c43`
 - conclusion: **success**
 - anonymity guard: **PASS**
 - review PDF: **26 pages**
-- artifact id: `10953190261`
-- digest: `sha256:8aded294361636a945383f0b3064dc49e126df74ec84cff6070985cb806a8cb6`
+- artifact id: `10955419420`
+- digest: `sha256:0a6221befb863e42e6b380746525d2c8573bddf2bba2442efa84d1994f32cbfb`
 
 Visual QA:
 - main Figures 1-6 inspected;
