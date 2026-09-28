@@ -384,8 +384,8 @@ The preflight never creates a tag or publishes a release. Release-preflight self
 
 The inferential scientific programme is unchanged and remains closed.
 
-v0.3.8 adds one frozen **descriptive-only** layer to show what the already-supported centered-shape
-individuality means biologically.
+v0.3.8 adds one frozen **descriptive-only** layer to visualize the already-tested centered-shape
+profiles. The inferential result remains the calibrated whole-profile identity test.
 
 The exact common-cell leave-one-session-out self profiles were reconstructed for all evaluable
 individuals in the five comparative panels. Evaluable n exactly matches the frozen audit:
@@ -396,13 +396,16 @@ individuals in the five comparative panels. Evaluable n exactly matches the froz
 - *P. hastatus* 2023: 16;
 - *P. hastatus* 2016: 10.
 
-Visible differences are mainly in:
+Visible features of the displayed estimates include:
 - central concentration around the session-specific median;
 - upper-tail use;
 - lower-tail use;
 - tail asymmetry.
 
-No cluster, strategy type, behavioural state or new p-value is inferred.
+These component-wise ranges were not separately calibrated against exchangeability and can include
+finite-session profile-estimation noise. They therefore illustrate candidate dimensions of shape
+heterogeneity but do not identify which component carries the validated whole-profile identity
+signal. No cluster, strategy type, behavioural state or new p-value is inferred.
 
 The current manuscript is ecology-first:
 
@@ -452,4 +455,6 @@ Not established:
 - stable individual-specific place × height maps;
 - personality, learning, adaptation or optimality;
 - verified foraging specialization;
+- which Figure 6 component specifically carries the calibrated whole-profile identity signal;
+- inferential between-individual or between-panel differences in the uncalibrated central/tail ranges;
 - one universal causal mechanism.
