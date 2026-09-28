@@ -6,7 +6,7 @@ on:
       candidate_ref:
         description: "Final release-candidate branch/ref"
         required: true
-        default: "release/jae-v0.3.7-rc1"
+        default: "release/jae-v0.3.7-rc2"
         type: string
 
 jobs:
