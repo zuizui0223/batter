@@ -40,19 +40,30 @@ Checked: 2026-09-27
 - [x] 26-page review PDF;
 - [x] final page-26 Figure 7 legend placement re-inspected;
 - [x] no clipping, overlap or broken glyphs found;
-- [x] title-page word-count field corrected to 7,932 before rc2 packaging freeze.
+- [x] title-page word-count field corrected to 7,932 before rc2 packaging freeze;
+- [x] one-source metadata infrastructure added and integration-tested.
 
 ## Remaining human / archive items
 
-- [ ] choose/add repository software LICENSE;
-- [ ] final authors / affiliations;
-- [ ] corresponding author / ORCID;
-- [ ] CRediT;
-- [ ] funding / acknowledgements;
-- [ ] conflict declaration;
-- [ ] final release metadata;
-- [ ] Zenodo DOI;
-- [ ] DOI insertion into v0.3.6 title page;
-- [ ] final JAE upload.
+All human fields are now centralized in
+`submission/jae_v0_3_6_metadata.json`.
 
-No further ecological analysis is required or authorized before submission.
+### Phase A — before Zenodo
+
+- [ ] copy/fill the metadata template except `archive_doi`;
+- [ ] choose/add repository software LICENSE;
+- [ ] run the pre-release metadata assembler;
+- [ ] make `check_zenodo_release_ready.py` report READY;
+- [ ] enable the GitHub repository in Zenodo;
+- [ ] publish the GitHub release and obtain the version DOI.
+
+### Phase B — after Zenodo
+
+- [ ] insert the minted version DOI into the metadata JSON;
+- [ ] rerun metadata assembly in post-DOI mode;
+- [ ] make `check_jae_upload_ready.py` report READY;
+- [ ] confirm the generated combined word count remains <=8,500;
+- [ ] perform final JAE upload.
+
+The metadata assembly/gate path has an end-to-end synthetic Actions self-test. No additional
+ecological analysis is required or authorized before submission.
