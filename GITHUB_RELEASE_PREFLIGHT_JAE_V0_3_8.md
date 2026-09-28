@@ -20,7 +20,7 @@ Use the manual workflow:
 
 `jae-github-release-preflight-v0.3.8`
 
-with the final release-candidate ref (current packaging target: `release/jae-v0.3.8-rc2`).
+with the final release-candidate ref (current packaging target: `release/jae-v0.3.8-rc1`).
 
 The workflow verifies:
 
