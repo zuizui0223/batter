@@ -54,7 +54,7 @@ def author_name(author: dict) -> str:
     return f"{author['given_names'].strip()} {author['family_names'].strip()}".strip()
 
 
-def validate(payload: dict) -> list[str]:
+def validate(payload: dict, stage: str) -> list[str]:
     failures: list[str] = []
 
     if payload.get("schema_version") != 1:
@@ -143,8 +143,11 @@ def validate(payload: dict) -> list[str]:
             fail(f"{key} is required; write 'None' explicitly if applicable", failures)
 
     doi = str(payload.get("archive_doi", "")).strip()
-    if not DOI_RE.match(doi):
-        fail("archive_doi must be an explicit DOI beginning with 10.", failures)
+    if stage == "post-doi":
+        if not DOI_RE.match(doi):
+            fail("post-doi stage requires archive_doi beginning with 10.", failures)
+    elif doi and not DOI_RE.match(doi):
+        fail("archive_doi must be empty before minting or be a valid DOI beginning with 10.", failures)
 
     if corresponding:
         corr_author = authors[corresponding[0]]
@@ -179,6 +182,14 @@ def render_title_page(payload: dict) -> str:
         f"{corr_meta['postal_address'].strip()}  \n"
         f"Email: {corr_meta['email'].strip()}  \n"
         f"ORCID: https://orcid.org/{corr_orcid}"
+    )
+
+    doi = payload.get("archive_doi", "").strip()
+    archive_sentence = (
+        f"Analysis code, frozen contracts, calibration history and source provenance are archived "
+        f"at https://doi.org/{doi}."
+        if doi
+        else "A versioned Zenodo DOI for the analysis code and provenance will be inserted here after the final GitHub release is archived."
     )
 
     return f"""# Title page v0.3.6
@@ -225,8 +236,7 @@ Tracking data are publicly archived in the Movebank Data Repository. The dataset
 available at DOIs 10.5441/001/1.52nn82r9 (*Tadarida teniotis*),
 10.5441/001/1.k8n02jn8 (*Eidolon helvum*), 10.5441/001/1.278
 (*Hypsignathus monstrosus*), and 10.5441/001/1.282, 10.5441/001/1.321 and
-10.5441/001/1.322 (the three *Phyllostomus hastatus* panels). Analysis code, frozen contracts,
-calibration history and source provenance are archived at https://doi.org/{payload['archive_doi'].strip()}.
+10.5441/001/1.322 (the three *Phyllostomus hastatus* panels). {archive_sentence}
 
 ## Word count
 
@@ -274,6 +284,12 @@ def main() -> int:
         help="final metadata JSON (not the template)",
     )
     ap.add_argument(
+        "--stage",
+        choices=("pre-release", "post-doi"),
+        default="pre-release",
+        help="pre-release allows archive_doi to be empty; post-doi requires the minted version DOI",
+    )
+    ap.add_argument(
         "--check-only",
         action="store_true",
         help="validate and report without writing TITLE_PAGE_V0_3_6.md or CITATION.cff",
@@ -287,7 +303,7 @@ def main() -> int:
         return 1
 
     payload = json.loads(path.read_text(encoding="utf-8"))
-    failures = validate(payload)
+    failures = validate(payload, args.stage)
     if failures:
         print("JAE v0.3.6 metadata assembly: BLOCKED")
         for item in failures:
@@ -318,7 +334,9 @@ def main() -> int:
             next(a for a in payload["authors"] if a.get("corresponding") is True)
         ),
         "software_license_spdx": payload["software_license_spdx"],
-        "archive_doi": payload["archive_doi"],
+        "stage": args.stage,
+        "archive_doi": payload.get("archive_doi", ""),
+        "archive_doi_status": "minted" if payload.get("archive_doi", "").strip() else "pending_zenodo",
         "release_date": payload["release_date"],
         "manuscript_words_ci_estimate": manuscript_words,
         "title_page_words_ci_estimate": title_words,
@@ -333,7 +351,7 @@ def main() -> int:
         SUMMARY_OUT.parent.mkdir(parents=True, exist_ok=True)
         SUMMARY_OUT.write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8")
 
-    print("JAE v0.3.6 metadata assembly: READY")
+    print(f"JAE v0.3.6 metadata assembly ({args.stage}): READY")
     print(json.dumps(summary, indent=2))
     if args.check_only:
         print("check-only mode: no generated files were written")
