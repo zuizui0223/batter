@@ -61,6 +61,7 @@ def main():
         "five comparative panels",
         "central concentration",
         "upper and lower tails",
+        "not separately calibrated",
         "Figure 6",
         "p=0.5121",
         "4.64 m",
@@ -86,8 +87,8 @@ def main():
     assert support_legends_si==["S1","S2"], support_legends_si
     assert "Figure 7" not in TEXT
 
-    assert results.index("Five comparative panels retain vertical-distribution shape") < results.index("Descriptive profiles show individuality in central concentration and tail use")
-    assert results.index("Descriptive profiles show individuality in central concentration and tail use") < results.index("*Tadarida* is a motivating boundary case")
+    assert results.index("Five comparative panels retain vertical-distribution shape") < results.index("Descriptive profiles illustrate variation in central concentration and tail use")
+    assert results.index("Descriptive profiles illustrate variation in central concentration and tail use") < results.index("*Tadarida* is a motivating boundary case")
     assert discussion.index("Comparative populations contain repeatable individual shapes of vertical space use") < discussion.index("*Tadarida* defines the boundary")
 
     print({
