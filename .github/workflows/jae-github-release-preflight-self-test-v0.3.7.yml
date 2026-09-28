@@ -57,6 +57,12 @@ jobs:
         run: python scripts/apply_jae_v0_3_7_metadata.py --stage pre-release
       - name: Check synthetic Zenodo readiness
         run: python scripts/check_zenodo_release_ready.py
+      - name: Commit synthetic final-candidate state locally only
+        run: |
+          git config user.name "metadata-self-test"
+          git config user.email "metadata-self-test@example.invalid"
+          git add LICENSE CITATION.cff manuscript/TITLE_PAGE_V0_3_7.md submission/jae_v0_3_7_metadata.json submission/jae_v0_3_7_metadata_summary.json
+          git commit -m "Synthetic local release-candidate state"
       - name: Simulate final-candidate equality for local integrity check
         run: git update-ref refs/remotes/origin/main HEAD
       - name: Run GitHub release preflight logic
