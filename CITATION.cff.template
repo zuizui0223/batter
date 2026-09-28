@@ -9,6 +9,6 @@ authors:
     given-names: "[INSERT GIVEN NAMES]"
     orcid: "https://orcid.org/[INSERT ORCID IF AVAILABLE]"
 version: "v0.3.8"
-date-released: "2026-09-27"
+date-released: "[INSERT YYYY-MM-DD]"
 repository-code: "https://github.com/zuizui0223/batter"
 license: "[INSERT SPDX LICENSE IDENTIFIER MATCHING THE LICENSE FILE]"
