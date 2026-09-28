@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Strict final-upload guard for the JAE v0.3.7 package.
+"""Strict final-upload guard for the JAE v0.3.8 package.
 
 This is intentionally separate from the scientific manuscript/figure gate.
 It should fail until human metadata and the permanent archive DOI are filled.
@@ -13,10 +13,10 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-TITLE_PAGE = ROOT / "manuscript" / "TITLE_PAGE_V0_3_7.md"
-METADATA = ROOT / "submission" / "jae_v0_3_7_metadata.json"
-MANIFEST = ROOT / "SUBMISSION_MANIFEST_JAE_V0_3_7.json"
-MANUSCRIPT = ROOT / "manuscript" / "MANUSCRIPT_DRAFT_V0_3_7.md"
+TITLE_PAGE = ROOT / "manuscript" / "TITLE_PAGE_V0_3_8.md"
+METADATA = ROOT / "submission" / "jae_v0_3_8_metadata.json"
+MANIFEST = ROOT / "SUBMISSION_MANIFEST_JAE_V0_3_8.json"
+MANUSCRIPT = ROOT / "manuscript" / "MANUSCRIPT_DRAFT_V0_3_8.md"
 
 PLACEHOLDER_PATTERNS = (
     r"\[INSERT\b",
@@ -103,8 +103,8 @@ def main() -> int:
         if not body:
             failures.append(f"required title-page section is empty or missing: {heading}")
 
-    if metadata.get("package_version") != "v0.3.7":
-        failures.append("metadata JSON package_version is not v0.3.7")
+    if metadata.get("package_version") != "v0.3.8":
+        failures.append("metadata JSON package_version is not v0.3.8")
     if metadata.get("manuscript_title") != expected_title:
         failures.append("metadata JSON manuscript_title does not match manifest title")
 
@@ -118,13 +118,13 @@ def main() -> int:
         failures.append(f"combined manuscript + title-page count {combined_words} exceeds JAE 8500-word limit")
 
     if failures:
-        print("JAE v0.3.7 final upload gate: BLOCKED")
+        print("JAE v0.3.8 final upload gate: BLOCKED")
         for item in failures:
             print(f" - {item}")
         print(f"\n{len(failures)} blocker(s) remain. Scientific RC content is not being re-evaluated.")
         return 1
 
-    print("JAE v0.3.7 final upload gate: READY")
+    print("JAE v0.3.8 final upload gate: READY")
     print(f"Human metadata and DOI are consistent; combined CI word count = {combined_words}.")
     print("This guard does not re-open or alter the frozen empirical programme.")
     return 0
