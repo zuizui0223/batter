@@ -9,7 +9,7 @@ https://besjournals.onlinelibrary.wiley.com/hub/journal/13652656/author-guidelin
 
 - **Article type:** Research Article.
 - **Word limit:** journal limit 8,500 words including title page, abstract, references and legends.
-  Repository v0.3.8 main-manuscript CI estimate is 7,542 words; final combined count must be reconfirmed
+  Repository v0.3.8 main-manuscript CI estimate is 7,669 words; final combined count must be reconfirmed
   after title-page metadata are filled.
 - **Abstract:** 264 words, below the 350-word limit.
 - **Abstract structure:** five numbered statements.
