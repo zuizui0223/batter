@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - revision/jae-v0.3.8-shape-ecology
+      - revision/jae-v0.3.8-finalize-shape-ecology
       - main
     paths:
       - "manuscript/MANUSCRIPT_DRAFT_V0_3_8.md"
