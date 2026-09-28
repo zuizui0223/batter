@@ -217,8 +217,8 @@ Working title:
 > **Repeatable vertical identity in bat airspace persists after coarse horizontal occupancy is
 > standardized**
 
-v0.3.4 rc3 remains the immutable pre-audit packaging baseline. v0.3.5 is the current scientific
-candidate.
+v0.3.4 rc3 remains the immutable pre-audit packaging baseline. At that historical stage, v0.3.5
+was the scientific candidate; it has since been superseded by the current v0.3.6 package.
 
 ### Submission-readiness consequence
 
