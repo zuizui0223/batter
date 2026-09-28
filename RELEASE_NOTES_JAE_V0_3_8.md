@@ -16,9 +16,10 @@ individual identity in vertical-distribution shape after every session is transl
 median, which removes any additive constant altitude offset.
 
 v0.3.8 additionally visualizes the content of that already-completed centered-shape audit without
-adding a new inferential test. The leave-one-session-out common-cell self profiles show that
-individuals within the same panel differ in central concentration and in upper/lower tail use
-around their session-specific median altitude.
+adding a new inferential test. The leave-one-session-out common-cell self-profile estimates vary
+visibly in central concentration and in upper/lower tail use around the session-specific median
+altitude. Those component-wise ranges are descriptive, were not separately calibrated against
+exchangeability, and may include finite-session profile-estimation noise.
 
 The motivating *Tadarida teniotis* panel is retained as a boundary case because its centered-shape
 identity is not supported.
@@ -30,9 +31,11 @@ statistic is therefore calibrated under session-label exchangeability.
 ## Descriptive ecology layer
 
 v0.3.8 adds a descriptive-only reconstruction of the exact centered common-cell self profiles
-already implicated by the frozen inferential audit. Across the five comparative panels, individual
-profiles differ visibly in central concentration and in upper/lower tail use around the
-session-specific median. No clustering, strategy classes or new hypothesis tests are introduced.
+already implicated by the frozen inferential audit. Across the five comparative panels, the
+displayed estimates vary visibly in central concentration and in upper/lower tail use around the
+session-specific median. The figure illustrates candidate dimensions of heterogeneity but does not
+identify which component carries the calibrated whole-profile identity signal. No clustering,
+strategy classes or new hypothesis tests are introduced.
 
 The manuscript discusses resource-linked behavioural allocation as the leading cross-panel working
 hypothesis, with competition/social information as a possible mediator and morphology, memory,
