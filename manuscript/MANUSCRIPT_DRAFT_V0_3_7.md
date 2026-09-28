@@ -162,7 +162,7 @@ The outcome-blind source screen considered 23 Movebank parent bat datasets and a
 
 ### Five comparative panels retain vertical-distribution shape after absolute altitude level is removed
 
-The strongest ecological result came from the five comparative panels. Median-centering every retained session removed absolute vertical location before vertical binning and therefore removed any additive constant tag/device altitude offset. All five comparative panels nevertheless retained calibrated common-cell identity in vertical-distribution shape (Supporting Figure S2).
+The strongest ecological result came from the five comparative panels. Median-centering every retained session removed absolute vertical location before vertical binning and therefore removed any additive constant tag/device altitude offset. All five comparative panels nevertheless retained calibrated common-cell identity in vertical-distribution shape (Figure 5).
 
 *E. helvum* retained observed centered identity +0.372 nats/fix versus a null mean of -0.071 (calibrated excess +0.443; p=0.0002). *H. monstrosus* retained +0.074 versus -0.103 (+0.177; p=0.0002). *P. hastatus* 2022 retained -0.039 versus -0.151 (+0.111; p=0.0002), the 2023 panel +0.045 versus -0.073 (+0.118; p=0.0002), and the 2016 panel -0.008 versus -0.582 (+0.574; p=0.0076).
 
@@ -170,7 +170,7 @@ The motivating *T. teniotis* panel was the exception: observed centered-shape id
 
 ### Coarse-horizontal standardized identity exceeds exchangeability expectations in all six panels
 
-Before altitude centering, the identity-matched common-cell vertical score exceeded the panel-specific session-label permutation expectation in every panel after self and other profiles were integrated under identical 5-km horizontal weights (Supporting Figure S1).
+Before altitude centering, the identity-matched common-cell vertical score exceeded the panel-specific session-label permutation expectation in every panel after self and other profiles were integrated under identical 5-km horizontal weights (Figure 2).
 
 Observed-minus-null common-cell identity was +0.602 nats/fix in *T. teniotis* (p=0.0005), +0.265 in *E. helvum* (p=0.0002), +0.076 in *H. monstrosus* (p=0.0002), +0.200 in *P. hastatus* 2022 (p=0.0002), +0.120 in *P. hastatus* 2023 (p=0.0002), and +0.270 in *P. hastatus* 2016 (p=0.0422). The 2016 panel had a raw common-cell score near zero (-0.0039), but its exchangeability expectation was substantially lower (-0.274). The relevant result is therefore identity matching relative to the finite-sample prediction-pipeline null, not positivity relative to zero.
 
@@ -182,13 +182,13 @@ Thus both structurally eligible comparative panels retained identity after empir
 
 ### Endpoint-neighbourhood exclusion is robust in four comparative panels but not universal
 
-Four of five comparative panels passed the predeclared 1-km endpoint-neighbourhood exclusion (Figure 3). *H. monstrosus* retained calibrated excess +0.308 (p=0.0002; n=19), *P. hastatus* 2022 +0.219 (p=0.0002; n=30), the 2023 panel +0.152 (p=0.0002; n=12), and the 2016 panel +0.358 (p=0.0002; n=10).
+Four of five comparative panels passed the predeclared 1-km endpoint-neighbourhood exclusion (Figure 4). *H. monstrosus* retained calibrated excess +0.308 (p=0.0002; n=19), *P. hastatus* 2022 +0.219 (p=0.0002; n=30), the 2023 panel +0.152 (p=0.0002; n=12), and the 2016 panel +0.358 (p=0.0002; n=10).
 
 *E. helvum* retained a strong signal after exclusion (calibrated excess +0.390; p=0.0002) but fell to 11 evaluable individuals, below the frozen minimum of 15, and therefore failed the predeclared gate. The motivating *Tadarida* panel also failed its corresponding 1-km inferential criterion (p=0.1109). Endpoint-associated structure therefore does not generally erase the comparative signal, but it is not universally excluded.
 
 ### Pairwise self-identification exceeds its pipeline-specific null in five panels
 
-Direct same-individual versus specific-alternative comparisons gave an intuitive translation of the common-cell result (Supporting Figure S1). The same individual's profile won 0.794 of comparisons in *T. teniotis* versus a null mean of 0.508 (calibrated excess +0.286; p=0.0189), 0.858 in *E. helvum* versus 0.583 (+0.275; p=0.0002), 0.767 in *H. monstrosus* versus 0.541 (+0.226; p=0.0002), 0.842 in *P. hastatus* 2022 versus 0.532 (+0.310; p=0.0002), and 0.782 in the 2023 panel versus 0.535 (+0.247; p=0.0002).
+Direct same-individual versus specific-alternative comparisons gave an intuitive translation of the common-cell result (Figure 3). The same individual's profile won 0.794 of comparisons in *T. teniotis* versus a null mean of 0.508 (calibrated excess +0.286; p=0.0189), 0.858 in *E. helvum* versus 0.583 (+0.275; p=0.0002), 0.767 in *H. monstrosus* versus 0.541 (+0.226; p=0.0002), 0.842 in *P. hastatus* 2022 versus 0.532 (+0.310; p=0.0002), and 0.782 in the 2023 panel versus 0.535 (+0.247; p=0.0002).
 
 The 2016 *P. hastatus* panel did not retain independent pairwise support: observed self-win was 0.594 versus a null mean of 0.498 (calibrated excess +0.096; p=0.1168). Across panels, pairwise null means ranged from 0.498 to 0.583, showing that 0.5 is an intuitive reference rather than a universal exchangeability null.
 
