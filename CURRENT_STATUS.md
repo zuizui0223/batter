@@ -378,7 +378,7 @@ A manual, fail-closed GitHub/Zenodo release preflight now verifies the final can
 metadata/CITATION/LICENSE completeness, pending pre-mint DOI state, release-note placeholders,
 and absence of an existing target tag/release before publication.
 
-The preflight never creates a tag or publishes a release.
+The preflight never creates a tag or publishes a release. Release-preflight self-test: run 36373116328 — PASS.
 
 ## Claim boundary
 
