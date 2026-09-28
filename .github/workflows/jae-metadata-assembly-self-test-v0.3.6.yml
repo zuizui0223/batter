@@ -1,3 +1,4 @@
+# Final infrastructure validation after DOI-targeting and consistency hardening.
 name: jae-metadata-assembly-self-test-v0.3.6
 
 on:
