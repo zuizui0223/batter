@@ -49,43 +49,43 @@ Observed examples include:
 ## Validated v0.3.8 package
 
 Main manuscript/figure workflow:
-- run: **36376329983**
-- head: `cc38e0a65de59149c84baef5dbc502563f089309`
+- run: **36380837565**
+- head: `d6d0cd51854c9ada2eefbd069a08bc1db514bbf9`
 - conclusion: **success**
-- manuscript CI estimate: **6,942 words**
+- manuscript CI estimate: **7,542 words**
 - abstract: **264 words**
 - Introduction: **685 words**
 - Results: **1,270 words**
-- Discussion: **1,161 words**
+- Discussion: **1,686 words**
 - keywords: **7**
 - main figures: **6**
 - Supporting Figures: **2**
 
 Main-figure artifact:
-- id: `10951435890`
-- digest: `sha256:ac07aba21dbeae8ea34b1a2f3ef23808235f1d1120b417694111e6f4e9da10b3`
+- id: `10952945637`
+- digest: `sha256:65ef32e64d355694720791f74daad764e8ac9bedd117fefd7ad5e65137fcab6d`
 
 Supporting-figure artifact:
-- id: `10951131726`
-- digest: `sha256:119be3a54054dddba95268b07b4d1ab735ebeb916f16bfe5d00b983d90d77c55`
+- id: `10953025517`
+- digest: `sha256:a94e779c17ea091ec8a3dca16760df5f47daaccc254d1e6d5f851718b7fc16c7`
 
 Descriptive profile artifact:
-- id: `10950564968`
-- digest: `sha256:6f7e9732adff711d574c882f87055516a4b11594823ed6ba16ebe5cf349fe085`
+- id: `10951779884`
+- digest: `sha256:a730606c21fe79ef74e676fc1bf93ba4bf5980b8ecb396dea3a453aad4f1f120`
 
 Anonymous review workflow:
-- run: **36376329976**
+- run: **36380837508**
 - head: `cc38e0a65de59149c84baef5dbc502563f089309`
 - conclusion: **success**
 - anonymity guard: **PASS**
-- review PDF: **24 pages**
-- artifact id: `10950848523`
-- digest: `sha256:94e6b3bfb541fdb9c0341e3dffc0876cf9876e7b9d620728c669863b444784ac`
+- review PDF: **26 pages**
+- artifact id: `10953190261`
+- digest: `sha256:8aded294361636a945383f0b3064dc49e126df74ec84cff6070985cb806a8cb6`
 
 Visual QA:
 - main Figures 1-6 inspected;
 - Supporting Figures S1-S2 inspected;
-- final 24-page review PDF rendered and inspected;
+- final 26-page review PDF rendered and inspected;
 - no clipping, overlap or broken glyphs found.
 
 ## Descriptive Figure 6 provenance
