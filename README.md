@@ -1,31 +1,52 @@
 # batter
 
-Ecological analysis of repeatable individual identity in three-dimensional bat airspace.
+Ecological analysis of repeatable individual shapes of vertical space use in three-dimensional bat airspace.
 
 ## Biological question
 
-Do individual bats carry repeatable information about **vertical airspace use** across sessions,
-and does that information persist after differences in horizontal space use are standardized?
+Do bat populations contain repeatable **individual-specific shapes of vertical space use**, and do
+those shapes persist after coarse horizontal occupancy and additive altitude level are controlled?
 
-The project began from an ODSP result in *Tadarida teniotis*: the population retained substantial
-vertical thickness after x-y was known, but a pooled location-conditioned vertical distribution
-did not transfer to sealed individuals.
+The project began from an ODSP result in *Tadarida teniotis*, but the current paper is comparative:
+the strongest ecological result comes from five non-*Tadarida* panels that retain centered
+vertical-distribution shape identity.
 
 ## Core result
 
-Across six tracking panels from four bat taxa, the same individual's vertical use is more
-predictable than expected under whole-session identity exchangeability.
+Across six tracking panels from four bat taxa, same-individual vertical profiles retain more
+held-out predictive information than expected under whole-session identity exchangeability after
+self and other profiles are integrated under the **same 5-km horizontal cell-use weights**.
 
-Crucially, this remains true after self and other vertical profiles are integrated under the
-**same horizontal cell-use weights**.
+More importantly, all five comparative panels retain vertical-distribution shape identity after
+every session is translated to zero median, removing any additive constant altitude offset.
+
+The descriptive reconstruction of those already-tested profiles shows what differs biologically:
+individuals vary in **central concentration and upper/lower tail use** around their session-specific
+median altitude.
 
 Therefore the main ecological conclusion is:
 
-> **Repeatable individual vertical identity persists after self and other profiles are standardized
-> to the same occupancy among tested coarse 5-km horizontal cells. In five of six panels, identity
-> also persists after every session's absolute altitude level is removed. Additive constant
-> tag/device offsets therefore cannot explain the cross-panel pattern generally, although focal
-> *Tadarida* remains an explicit device-offset-sensitive exception.**
+> **Bat populations can contain repeatable individual shapes of vertical space use that persist
+> beyond coarse horizontal occupancy and additive altitude zero point.**
+
+The motivating *Tadarida* panel is the explicit boundary case: it retains repeatable absolute
+vertical-location identity but not centered-shape identity.
+
+## What the shape individuality looks like
+
+The final descriptive Figure 6 is frozen as a visualization-only layer. It reconstructs the exact
+leave-one-session-out common-cell self profiles used by the centered-shape estimator and averages
+them equally within biological individual.
+
+Across the five comparative panels, individuals differ visibly in:
+- central mass around -50 to +50 m;
+- upper-tail use at >=100 m;
+- lower-tail use at <=-100 m;
+- tail asymmetry.
+
+No cluster, strategy class, behavioural state or additional p-value is inferred.
+
+See `CENTERED_SHAPE_PROFILE_DESCRIPTIVE_RESULT_V1.md`.
 
 ## Why the claim changed
 
@@ -114,17 +135,17 @@ See `TAG_ALTITUDE_BIAS_AUDIT_RESULT.md`.
 The v0.3.4 rc3 package is retained as the pre-audit baseline and must not be submitted as the final
 scientific version.
 
-The current manuscript is `manuscript/MANUSCRIPT_DRAFT_V0_3_7.md`, titled **“Repeatable vertical
-identity in bat airspace persists after coarse horizontal occupancy is standardized.”** The
-v0.3.7 manuscript/figure and anonymous-review workflows pass with 6,548 words, a 255-word
-five-statement abstract, five main figures plus two Supporting Figures, and a 22-page anonymous review PDF.
+The current manuscript is `manuscript/MANUSCRIPT_DRAFT_V0_3_8.md`, titled **“Repeatable individual shapes of vertical space use persist beyond coarse horizontal occupancy in bats.”** The v0.3.8
+manuscript/figure and anonymous-review workflows pass with 7,542 words, a 264-word five-statement
+abstract, six main figures plus two Supporting Figures, and a 26-page anonymous review PDF.
 
-Current release packaging: `release/jae-v0.3.7-rc2` (packaging-only successor; scientific v0.3.6 content unchanged).
+Current release packaging target: `release/jae-v0.3.8-rc1`.
 
 ## Claim boundary
 
-The analyses concern vertical flight/airspace use and predictive individual identity. Common-cell
+The analyses concern vertical space use and repeatable individual distribution shape. Common-cell
 weighting removes occupancy differences among the tested horizontal cells, not all fine-scale
-horizontal fidelity. The analyses do not by themselves establish independence from central-place
-structure, foraging, personality, learning, optimality, stable learned routes or a universal
-causal environmental mechanism.
+horizontal fidelity. Session centering removes additive altitude level, not tag-specific error
+variance or behavioural-state composition. The analyses do not establish vertical-niche strategy
+classes, foraging specialization, personality, learning, optimality, stable learned routes or a
+universal causal mechanism.
