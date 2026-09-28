@@ -56,3 +56,10 @@ The tag/device altitude-bias audit was declared in advance as the final new scie
 Residual limitations—including fine-scale within-cell horizontal fidelity, central-place structure, tag-specific differences in error variance, behavioural-state heterogeneity and incomplete temporal overlap—are reported as limitations rather than used to open further outcome-driven analysis families.
 
 No failed result was rescued by changing radii, grids, bins, sample-size gates, permutation counts, seeds, source admission rules or panel membership after its outcome was known.
+
+
+## Supporting figure legends
+
+**Supporting Figure S1. Motivating *Tadarida teniotis* repeatable identity and mechanistic ceiling.** Early individual conditional maps contain strongly repeatable identity information (exact assignment p=0.000174), whereas a stronger residual cell-by-height stability test after marginal-altitude adjustment is not supported (p=0.160).
+
+**Supporting Figure S2. Why the original architecture classification was superseded.** Original conditional advantage and common-cell conditional increment are shown for each panel. In *P. hastatus* 2022, the apparent marginal-dominant value changes from -0.120 to +0.0066 after common horizontal weighting, demonstrating that raw conditional-minus-marginal signs cannot be interpreted as biological architecture classes.
