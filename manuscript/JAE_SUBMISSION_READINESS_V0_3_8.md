@@ -16,10 +16,11 @@ Checked: 2026-09-28
 
 - [x] title foregrounds individual shapes of vertical space use;
 - [x] "vertical niche" removed from keywords/main terminology;
-- [x] Abstract describes central concentration and tail use;
+- [x] Abstract marks central concentration and tail use as descriptive, uncalibrated component summaries;
 - [x] descriptive Figure 6 visualizes the exact already-tested self profiles;
+- [x] component ranges explicitly include finite-session estimation noise and are not separately exchangeability-calibrated;
 - [x] no new p-value, clustering or strategy classification added;
-- [x] Results state profile concentration/tail ranges descriptively;
+- [x] Results state profile concentration/tail ranges descriptively without attributing the whole-profile identity signal to them;
 - [x] Discussion interprets population vertical use as a mixture of individual distributions;
 - [x] *Tadarida* remains the explicit boundary case;
 - [x] pipeline-specific null calibration remains the second pillar.
