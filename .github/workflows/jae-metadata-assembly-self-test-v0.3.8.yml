@@ -4,7 +4,7 @@ name: jae-metadata-assembly-self-test-v0.3.8
 on:
   push:
     branches:
-      - packaging/jae-v0.3.8-promote
+      - packaging/jae-v0.3.8-promote-clean
     paths:
       - "scripts/apply_jae_v0_3_8_metadata.py"
       - "scripts/check_jae_upload_ready.py"
