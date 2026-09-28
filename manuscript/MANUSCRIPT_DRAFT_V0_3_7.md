@@ -156,169 +156,115 @@ This study conducted no new capture, handling or instrumentation. The focal *T. 
 
 ## Results
 
-### A closed public panel yielded six repeated 3-D bat datasets
+### A closed public-data screen yielded six repeated 3-D bat panels
 
-The outcome-blind source screen considered 23 Movebank parent bat datasets and admitted six sources spanning four taxa. Datasets were excluded structurally when a native same-event vertical coordinate was absent or too few individuals had repeated eligible tracking. The source universe was closed before the estimator-calibration work and was not expanded after the comparative outcomes.
+The outcome-blind source screen considered 23 Movebank parent bat datasets and admitted six sources spanning four taxa. The six paper panels were *Tadarida teniotis*, *Eidolon helvum*, *Hypsignathus monstrosus*, and three temporal *Phyllostomus hastatus* datasets. The source universe was closed before estimator calibration and was not expanded after comparative outcomes were observed.
 
-The six paper panels comprised focal *T. teniotis*, *E. helvum*, *H. monstrosus*, *P. hastatus* 2022, *P. hastatus* 2023 and *P. hastatus* 2016.
+### Five comparative panels retain vertical-distribution shape after absolute altitude level is removed
 
-### Focal individual identity repeats across time, but a fixed residual map is not established
-
-The focal early/late identity-assignment analysis strongly rejected individual exchangeability. The identity-matched diagonal gain was +0.1682 nats/event; six of eight bats had positive own-map gains and the exact 8! permutation probability was p = 0.000174 (Figure 2).
-
-The stronger residual-map test did not pass. After marginal altitude identity had been absorbed into each bat's cell baseline, the residual cell-by-height gain was +0.0240 nats/event, five of eight diagonal residuals were positive and the exact permutation probability was p = 0.160. The frozen shrinkage sensitivities also failed. Thus correct individual identity contains repeatable vertical information, but the focal dataset does not establish one stable cell-specific vertical route map.
-
-A separately frozen common-uplift reaction-norm analysis also did not establish a shared mechanism (permutation p = 0.334). We therefore retain the mechanism of individual vertical identity as unresolved.
-
-### The raw conditional-versus-marginal architecture was estimator dependent
-
-The original session-level focal decomposition produced conditional identity +0.428, ordinary marginal identity +0.052 and G_adv +0.376 nats/fix. However, the focal whole-session permutation calibration showed that the exchangeability mean of G_adv was -0.317 rather than zero. Common horizontal weighting also shifted the focal marginal score from +0.052 to +0.379 and reduced the raw conditional increment from +0.376 to +0.049.
-
-The same issue affected the comparative interpretation. Most decisively, *P. hastatus* 2022 changed from an original G_adv of -0.120 to a common-cell conditional increment of +0.0066. The previously described marginal-dominant architecture therefore disappeared after horizontal standardization. We consequently do not use the sign of ordinary G_adv as a biological classifier.
-
-### Individual vertical identity exceeds panel-specific exchangeability expectations in all six panels
-
-After horizontal occupancy was standardized, the identity-matched common-cell vertical score exceeded the panel-specific permutation expectation in every panel (Figure 3).
-
-For *T. teniotis*, observed G_cc was +0.379 nats/fix versus a null mean of -0.223 (observed-minus-null +0.602; p = 0.0005). *E. helvum* had observed +0.177 versus null -0.088 (+0.265; p = 0.0002). *H. monstrosus* had +0.022 versus -0.054 (+0.076; p = 0.0002). *P. hastatus* 2022 had +0.049 versus -0.151 (+0.200; p = 0.0002), and the 2023 panel had +0.033 versus -0.088 (+0.120; p = 0.0002).
-
-The 2016 *P. hastatus* panel was the weakest in raw terms: observed G_cc was -0.0039 nats/fix. Nevertheless, its exchangeability expectation was substantially lower at -0.274, yielding observed-minus-null +0.270 and p = 0.0422. Thus the central cross-panel result is not that raw same-individual scores are positive in every dataset, but that correct identity matching preserves more vertical predictive information than expected when session identities are exchangeable under the same analysis pipeline.
-
-### Pairwise self-identification exceeds its finite-sample null in five panels
-
-The pairwise translation removed the pooled other-individual baseline and compared the same bat with each specific alternative individual under identical horizontal weighting (Figure 4). Because the permutation baseline was not exactly 0.5, interpretation uses the panel-specific null rather than a universal chance line.
-
-The same individual's vertical profile won 0.794 of comparisons in *T. teniotis* versus a null mean of 0.508 (calibrated excess +0.286; p=0.0189), 0.858 in *E. helvum* versus 0.583 (+0.275; p=0.0002), 0.767 in *H. monstrosus* versus 0.541 (+0.226; p=0.0002), 0.842 in *P. hastatus* 2022 versus 0.532 (+0.310; p=0.0002), and 0.782 in *P. hastatus* 2023 versus 0.535 (+0.247; p=0.0002).
-
-The 2016 *P. hastatus* panel remained weaker: observed self-win was 0.594 versus a null mean of 0.498, giving calibrated excess +0.096 but p=0.1168. We therefore do not use its pairwise rate as independent main-text evidence.
-
-The null means ranged from 0.498 to 0.583, confirming that 0.5 is an intuitive reference rather than the inferential baseline. Observed common-cell scores corresponded to geometric per-fix likelihood multipliers of 1.46, 1.19, 1.02, 1.05, 1.03 and 1.00 across the six panels, respectively; these multipliers were not compounded over fixes.
-
-### Terrain-relative identity supports a vertical component in focal *Tadarida*
-
-At 5 km, AGL common-cell identity was +0.266 nats/fix, compared with a session-label permutation mean of -0.180. The null-centered difference was +0.446 and the frozen upper-tail probability was p = 0.0161 (n = 6; individual-bootstrap interval for the raw score -0.021 to +0.598). The result therefore passed the predeclared terrain-relative robustness rule.
-
-At 2.5 km the signal was stronger: common-cell AGL identity was +0.603, the null mean -0.109, the null-centered difference +0.712 and p = 0.011 (n = 5; bootstrap interval +0.046 to +1.357).
-
-At 10 km the result did not pass. Observed common-cell AGL identity was -0.013, the null mean -0.250 and the null-centered difference +0.237, but the upper-tail probability was p = 0.1018 (n = 7). The focal terrain-relative identity is therefore supported at 2.5–5 km but not established at 10 km.
-
-### Endpoint-neighbourhood exclusion produces panel-dependent robustness
-
-The focal *Tadarida* result remained the strongest caution. The x-y-only endpoint proxy removed 602 events at the predeclared 1-km radius while retaining all 16 sessions and 9,227 events. The remaining common-cell AGL identity was +0.099 nats/fix versus a null mean of -0.180. Although the null-centered difference remained positive (+0.279), the upper-tail probability was p=0.1109 and the frozen primary rule failed. The 500-m and 2,000-m fixed sensitivities also failed (p=0.0978 and 0.1446).
-
-The prospectively frozen cross-panel extension gave a different pattern. Four of five comparative panels passed the 1-km primary rule. *H. monstrosus* retained observed common-cell identity +0.191 versus null -0.117 (calibrated +0.308; p=0.0002; n=19). *P. hastatus* 2022 retained +0.055 versus -0.164 (+0.219; p=0.0002; n=30), the 2023 panel +0.093 versus -0.059 (+0.152; p=0.0002; n=12), and the 2016 panel +0.091 versus -0.267 (+0.358; p=0.0002; n=10).
-
-*E. helvum* did not pass because exclusion reduced the evaluable set to 11 individuals, below the frozen minimum of 15. Its calibrated signal itself remained strong: observed +0.250 versus null -0.140, calibrated excess +0.390, p=0.0002. The fixed 500-m and 2-km sensitivities also remained above their nulls but were descriptive and could not rescue the failed sample-size gate.
-
-Thus the endpoint-neighbourhood exclusion passes in four of six paper panels overall, fails inferentially in focal *Tadarida*, and fails by the predeclared sample-size gate in *Eidolon*. Endpoint-associated structure does not generally erase the comparative signal, but independence from central-place structure is not universal. The proxy is not a verified roost, colony or lek and cannot identify a causal mechanism.
-
-### Additive altitude offsets do not explain cross-panel identity generally
-
-Median-centering every retained session removed absolute vertical location before prediction. Five of six panels nevertheless retained calibrated common-cell identity in vertical-distribution shape.
+The strongest ecological result came from the five comparative panels. Median-centering every retained session removed absolute vertical location before vertical binning and therefore removed any additive constant tag/device altitude offset. All five comparative panels nevertheless retained calibrated common-cell identity in vertical-distribution shape (Supporting Figure S2).
 
 *E. helvum* retained observed centered identity +0.372 nats/fix versus a null mean of -0.071 (calibrated excess +0.443; p=0.0002). *H. monstrosus* retained +0.074 versus -0.103 (+0.177; p=0.0002). *P. hastatus* 2022 retained -0.039 versus -0.151 (+0.111; p=0.0002), the 2023 panel +0.045 versus -0.073 (+0.118; p=0.0002), and the 2016 panel -0.008 versus -0.582 (+0.574; p=0.0076).
 
-Focal *T. teniotis* did not retain calibrated centered-shape identity: observed -0.263 versus null -0.241, calibrated excess -0.022, p=0.5121. Thus the focal evidence is not supported once individual/session-specific absolute height location is removed. Because session centering removes genuine mean-height specialization together with any additive device offset, this failure does not demonstrate tag bias. It means that biological absolute height preference and device offset cannot be separated for the focal signal with the archived data.
+The motivating *T. teniotis* panel was the exception: observed centered-shape identity was -0.263 versus a null mean of -0.241 (calibrated excess -0.022; p=0.5121). Thus the cross-panel result falls in the predeclared 5/6-PASS category. Additive altitude zero-point differences cannot explain the comparative five-panel pattern, whereas the absolute vertical-location component in *Tadarida* remains inseparable from biological mean-height differences, device offset, or both.
 
-The frozen decision matrix therefore classified the audit as 5/6 PASS: additive tag/device offsets are not a general explanation for the comparative result, but the non-passing focal panel requires an explicit absolute-location/device-offset limitation.
+### Coarse-horizontal standardized identity exceeds exchangeability expectations in all six panels
 
-### Stationary-height correction corroborates the two structurally eligible panels
+Before altitude centering, the identity-matched common-cell vertical score exceeded the panel-specific session-label permutation expectation in every panel after self and other profiles were integrated under identical 5-km horizontal weights (Supporting Figure S1).
 
-Only *H. monstrosus* and *P. hastatus* 2016 passed the x-y/time-only support gate. In *H. monstrosus*, 12 offsets were estimated, 10 individuals remained evaluable, and the median absolute offset was 4.64 m; corrected identity retained calibrated excess +0.0671 (p=0.0002). In *P. hastatus* 2016, 11 offsets were estimated, seven individuals remained evaluable, and the median absolute offset was 2.00 m; calibrated excess was +0.3808 (p=0.0002). Shared stationary cells are empirical calibration locations rather than verified equal-height roost or perch references.
+Observed-minus-null common-cell identity was +0.602 nats/fix in *T. teniotis* (p=0.0005), +0.265 in *E. helvum* (p=0.0002), +0.076 in *H. monstrosus* (p=0.0002), +0.200 in *P. hastatus* 2022 (p=0.0002), +0.120 in *P. hastatus* 2023 (p=0.0002), and +0.270 in *P. hastatus* 2016 (p=0.0422). The 2016 panel had a raw common-cell score near zero (-0.0039), but its exchangeability expectation was substantially lower (-0.274). The relevant result is therefore identity matching relative to the finite-sample prediction-pipeline null, not positivity relative to zero.
 
-### Tracking-window overlap is substantial in five panels but weaker in the 2016 panel
+### Stationary-height correction corroborates the two structurally eligible comparative panels
 
-Positive tracking-window overlap among repeat-individual pairs was 71.4% in *Tadarida*, 86.0% in *Eidolon*, 91.7% in *Hypsignathus*, 76.6% in *P. hastatus* 2022, 100% in 2023 and 31.1% in 2016. The 2016 panel also had a median start-date difference of 4.0 d, leaving the strongest residual individual-versus-time limitation.
+The x-y/time-only preflight permitted empirical stationary-height correction only in *H. monstrosus* and *P. hastatus* 2016. In *H. monstrosus*, offsets were estimated for 12 individuals, 10 remained evaluable after correction, and the median absolute offset was 4.64 m; corrected identity retained calibrated excess +0.0671 (p=0.0002). In *P. hastatus* 2016, 11 offsets were estimated, seven remained evaluable, and the median absolute offset was 2.00 m; calibrated excess was +0.3808 (p=0.0002).
 
-### Focal metre-scale translation is descriptive after the device-bias audit
+Thus both structurally eligible comparative panels retained identity after empirical offset correction. Shared stationary 100-m cells are calibration locations rather than verified equal-height roost or perch references, so this analysis is corroborative rather than a universal device calibration.
 
-Under common 5-km horizontal weighting, the raw absolute difference between same-bat and other-bat expected AGL averaged 256.459 m across the six evaluable *Tadarida* individuals. Its session-label permutation null mean was 133.733 m, leaving a calibrated excess of 122.727 m (p=0.0297).
+### Endpoint-neighbourhood exclusion is robust in four comparative panels but not universal
 
-However, focal *Tadarida* did not retain identity after the stronger shift-invariant session-centering audit. We therefore treat the 256-m quantity only as a raw translation of the absolute vertical-location signal. It may contain genuine biological mean-height differences, additive device offset, or both, and is not independent evidence of biological separation.
+Four of five comparative panels passed the predeclared 1-km endpoint-neighbourhood exclusion (Figure 3). *H. monstrosus* retained calibrated excess +0.308 (p=0.0002; n=19), *P. hastatus* 2022 +0.219 (p=0.0002; n=30), the 2023 panel +0.152 (p=0.0002; n=12), and the 2016 panel +0.358 (p=0.0002; n=10).
+
+*E. helvum* retained a strong signal after exclusion (calibrated excess +0.390; p=0.0002) but fell to 11 evaluable individuals, below the frozen minimum of 15, and therefore failed the predeclared gate. The motivating *Tadarida* panel also failed its corresponding 1-km inferential criterion (p=0.1109). Endpoint-associated structure therefore does not generally erase the comparative signal, but it is not universally excluded.
+
+### Pairwise self-identification exceeds its pipeline-specific null in five panels
+
+Direct same-individual versus specific-alternative comparisons gave an intuitive translation of the common-cell result (Supporting Figure S1). The same individual's profile won 0.794 of comparisons in *T. teniotis* versus a null mean of 0.508 (calibrated excess +0.286; p=0.0189), 0.858 in *E. helvum* versus 0.583 (+0.275; p=0.0002), 0.767 in *H. monstrosus* versus 0.541 (+0.226; p=0.0002), 0.842 in *P. hastatus* 2022 versus 0.532 (+0.310; p=0.0002), and 0.782 in the 2023 panel versus 0.535 (+0.247; p=0.0002).
+
+The 2016 *P. hastatus* panel did not retain independent pairwise support: observed self-win was 0.594 versus a null mean of 0.498 (calibrated excess +0.096; p=0.1168). Across panels, pairwise null means ranged from 0.498 to 0.583, showing that 0.5 is an intuitive reference rather than a universal exchangeability null.
+
+### Tracking windows overlap strongly in five panels but less in the 2016 panel
+
+Positive overlap among repeat-individual tracking windows was 71.4% in *Tadarida*, 86.0% in *Eidolon*, 91.7% in *Hypsignathus*, 76.6% in *P. hastatus* 2022, 100% in 2023 and 31.1% in 2016. The 2016 panel also had a median start-date difference of 4.0 d, leaving the strongest residual individual-versus-time limitation in that dataset.
+
+### *Tadarida* is a motivating boundary case rather than the comparative template
+
+The motivating *T. teniotis* dataset contains repeatable individual information but repeatedly defines the claim ceiling. Its earlier early/late assignment test strongly rejected individual exchangeability (diagonal gain +0.1682 nats/event; exact p=0.000174), whereas a stronger residual cell-by-height stability test failed (p=0.160; Supporting Figure S1).
+
+Terrain-relative AGL identity remained supported at 5 km (calibrated +0.446; p=0.0161) and 2.5 km (+0.712; p=0.011), but not at 10 km (+0.237; p=0.1018). The 1-km endpoint-neighbourhood exclusion also failed (p=0.1109), and session-centering eliminated calibrated shape identity (p=0.5121).
+
+The raw common-cell AGL separation averaged 256.459 m, compared with a session-label null mean of 133.733 m (calibrated excess 122.727 m; p=0.0297). Because centered-shape identity failed, we treat this metre-scale quantity only as a descriptive translation of repeatable absolute vertical location, which can contain genuine biological mean-height differences, additive device bias, or both.
+
+### Pipeline calibration changed the inferential baseline
+
+The estimator audit altered interpretation rather than merely changing p-values. The original conditional-minus-marginal contrast had a negative panel-specific exchangeability expectation, and the ordinary marginal score inherited horizontal occupancy differences. Most visibly, *P. hastatus* 2022 changed from an apparent marginal-dominant value of G_adv = -0.120 to a common-cell conditional increment of approximately +0.0066 after horizontal standardization (Supporting Figure S2).
+
+The same principle appeared in the biological translations: pairwise null means ranged from 0.498 to 0.583 rather than being fixed at 0.5, and the focal absolute AGL separation had a positive null mean rather than zero. These results motivate pipeline-specific exchangeability calibration as a general methodological conclusion.
 
 ## Discussion
 
-### Vertical individual structure persists after coarse horizontal occupancy is standardized
+### Comparative vertical-distribution shape persists beyond coarse horizontal occupancy and additive altitude level
 
-Across six tracking panels from four bat taxa, identity-matched vertical profiles retained more held-out predictive information than expected under panel-specific session-label exchangeability after self and other individuals were integrated over identical horizontal-cell weights. This is the central ecological result.
+The clearest ecological result is comparative. All five non-*Tadarida* panels retained calibrated identity in vertical-distribution shape after self and other profiles were standardized to the same coarse horizontal occupancy and every session was translated to zero median. The result spans *Eidolon helvum*, *Hypsignathus monstrosus* and three *Phyllostomus hastatus* datasets. It therefore goes beyond the already established observation that individuals can differ in flight altitude, dive depth or three-dimensional habitat use: in these five panels, identity persists after two simpler alternatives—different coarse horizontal occupancy and additive altitude zero point—are removed.
 
-The result differs from ordinary demonstrations of individual flight-altitude or dive-depth variation. Vertical individual specialization is already known in diving seabirds and marine mammals, and individual flight-altitude differences are known in aerial insectivorous birds (Woo et al. 2008; Ratcliffe et al. 2013; McIntyre et al. 2017; Dreelin et al. 2018). The unresolved issue is whether a vertical signal merely reflects repeated use of different horizontal patches. Our common-cell comparison attacks that alternative directly at the tested horizontal grain.
+This distinction matters for population movement niches. A broad three-dimensional population distribution can arise because each animal is individually broad, because individuals occupy different horizontal places, or because individuals retain distinctive vertical distributions within comparable horizontal opportunity. The comparative results support the third component. Population-level vertical structure therefore need not describe an exchangeable representative individual.
 
-This distinction matters for interpreting population movement niches. A pooled three-dimensional niche can be broad because each animal is individually broad, because animals differ mainly in horizontal occupancy, or because individuals retain distinctive vertical distributions even when horizontal occupancy is held common. Our results support the third component in the admitted bat panels. Population-level vertical structure therefore need not describe an exchangeable representative individual.
+The stationary correction provides narrower but concordant evidence. Both comparative panels that passed the outcome-blind support gate retained identity after estimated individual-by-cohort altitude offsets were removed. Because four panels lacked sufficient shared stationary support, this is corroboration rather than a universal calibration.
 
-### The effect is not just a statistically significant number of nats
+### Pipeline-specific nulls are part of the biological inference
 
-The direct pairwise analysis provides an intuitive scale for this non-exchangeability, but only after its own finite-sample null is calibrated. Five panels retain clear excess self-identification above panel-specific exchangeability expectations. The older 2016 *Phyllostomus* panel does not, despite a raw value above 0.5, and remains an important weak case rather than a dataset to be discarded.
+The second major result is methodological. Prediction-based individuality statistics did not share universal intuitive nulls. The original conditional-minus-marginal contrast had a negative panel-specific expectation, pairwise self-identification nulls ranged from about 0.50 to 0.58, and an absolute height-separation statistic had a positive null mean rather than zero.
 
-The focal AGL metre-scale translation requires a stricter caveat after the final device-bias audit. The raw equal-individual mean separation is approximately 256 m and exceeds its 134-m label-permutation null, but focal *Tadarida* loses identity after every session is translated to zero median. The metre-scale value therefore describes repeatable absolute vertical location, not device-independent biological separation.
+These shifts arise from finite training structure, smoothing, eligibility rules, repeated-session geometry and transformations such as absolute differences. Consequently, a raw score of zero, a pairwise rate of 0.5 or an absolute separation of zero should not automatically be treated as the inferential baseline. Recomputing the complete statistic under biologically appropriate label exchangeability changed one qualitative architecture interpretation and removed one weak pairwise translation without requiring post hoc retuning. The detailed amendment sequence is retained in Supporting Information.
 
-### Horizontal standardization resolves one confound but not all spatial structure
+This is more than a technical correction. The baseline determines which apparent ecological differences can be attributed to individual identity rather than to the geometry of the estimator itself.
 
-The common-cell estimator removes differences in how much self and other predictors occupy the tested 5-km cells. It does not make individuals occupy identical continuous x-y coordinates. Fine-scale horizontal fidelity inside a cell can therefore still be translated into vertical differences through terrain, resource geometry or central-place routes.
+### Horizontal and central-place structure are reduced, not eliminated
 
-The focal controls show both the value and the limit of the current design. AGL identity persists at 5 km and becomes stronger at 2.5 km, arguing against an explanation based only on absolute terrain elevation. However, the result is not established at 10 km, showing clear scale dependence. The focal endpoint-neighbourhood exclusion also fails.
+Common-cell weighting removes differences in occupancy among the tested 5-km cells, but it does not force individuals to share identical continuous x-y positions. Fine-scale fidelity within a cell can therefore still translate into vertical differences through terrain, resources or central-place routes.
 
-The cross-panel extension shows that this focal weakness does not generalize uniformly. Four of five comparative panels retain calibrated identity after the same fixed 1-km exclusion. *Eidolon* retains a strong calibrated excess but fails because too few individuals remain under the predeclared n gate. Taken together, endpoint-associated structure is neither a sufficient general explanation nor a confound we can declare eliminated: it is a plausible, panel-dependent contributor.
+The endpoint-neighbourhood audit narrows this concern. Four comparative panels retain calibrated identity after the same fixed 1-km exclusion, and *Eidolon* retains a strong signal but fails the frozen post-exclusion sample-size gate. Endpoint-associated structure is therefore not a sufficient general explanation for the comparative result. At the same time, the failure in *Tadarida* and the lack of verified roost, colony or lek coordinates prevent a universal claim of central-place independence.
 
-For this reason, we describe the comparative result as vertical identity beyond **coarse-grained horizontal occupancy at the tested 5-km scale**, not as complete removal of horizontal fidelity or central-place effects. A stronger causal separation would require known roost locations, substantially finer tracking support shared among individuals, and terrain-relative vertical coordinates across all taxa.
+We therefore describe the result as vertical individuality beyond **coarse-grained horizontal occupancy at the tested 5-km scale**, not as complete removal of horizontal fidelity.
 
-### Additive device offsets are not a general explanation, but tighten the focal claim ceiling
+### Additive tag offsets are not a general explanation, but other device error remains possible
 
-Session centering removes every additive altitude offset without requiring knowledge of device error. Five panels retain calibrated identity after this transformation, demonstrating repeatable individuality in vertical-distribution **shape** beyond absolute altitude level.
+Session centering removes every additive altitude zero-point difference without requiring knowledge of the device-specific error. The persistence of calibrated shape identity in all five comparative panels therefore rules out a constant tag offset as a general explanation for those results.
 
-*Tadarida* is the exception. Its centered-shape score matches its permutation null, so the focal result is best interpreted as repeatable absolute vertical-location identity. That component may reflect genuine mean flight-height specialization, additive tag offset, or both; AGL transformation cannot distinguish them because a common terrain model does not remove device-specific bias.
+The audit is not a proof against every form of measurement error. Tag-specific differences in altitude-error variance, antenna orientation, reception quality or other state-dependent error could in principle broaden or narrow an individual's apparent vertical distribution. Tracking windows overlap strongly in most panels, so many animals shared broad atmospheric and satellite contexts, but heteroscedastic device error remains unresolved. Future prospective work should therefore include repeated device calibration or tag-swapping designs where feasible.
 
-Stationary correction gives limited concordant evidence: both panels that passed the outcome-blind support gate retained identity after estimated offsets were removed. The result cannot be generalized to the four panels lacking sufficient stationary support.
+### *Tadarida* defines the boundary of the current evidence
 
-Session centering removes additive zero-point error, but it does not remove tag-specific differences in altitude-error variance or state-dependent reception. Such heteroscedastic device error could in principle broaden or narrow an individual's apparent vertical distribution. Tracking windows overlap substantially in most panels, so many individuals shared broad atmospheric and satellite contexts, but device-specific variance remains an unresolved limitation.
+The motivating *Tadarida* dataset is informative precisely because it does not reproduce the strongest comparative result. Its identity signal is repeatable, persists in AGL at 2.5–5 km, and is not reducible to terrain elevation alone. Yet it fails the 10-km grain test, the endpoint-neighbourhood exclusion and the shift-invariant centered-shape test. The archived data therefore support repeatable absolute vertical-location identity in this system, but not device-independent vertical-distribution shape.
 
-### Temporal context remains a limitation
+This distinction also changes how the focal 256-m AGL translation should be read. Although the raw separation exceeds its own finite-sample null, it is not independent biological evidence once centered-shape identity fails. Genuine mean flight-height specialization and additive device offset remain inseparable in this panel.
 
-Tracking windows overlap substantially in most panels but much less in *P. hastatus* 2016. Short-term weather or seasonal context could therefore contribute there. As predeclared, we report this limitation rather than open another outcome-driven permutation family.
+The stronger residual cell-by-height test also remains negative, so repeatable identity should not be interpreted as one rigid three-dimensional route map. Morphology, resource use, atmospheric response, social routines and learned spatial histories remain plausible mechanisms rather than demonstrated causes.
 
-### Pipeline-specific nulls are part of biological inference
+### Comparative generality is encouraging but still limited
 
-A second general lesson is that intuitive reference values can be wrong for prediction-based individuality statistics. The exchangeability mean of the original conditional-minus-marginal score was negative, the pairwise self-win null ranged from about 0.50 to 0.58 among panels, and the absolute AGL separation null was about 134 m rather than zero. These shifts arise from the finite training structure, smoothing, eligibility filters, absolute-value transformation and repeated-session geometry of the pipeline.
+The admitted panels span four taxa, multiple regions and several tracking programmes, and the public-data source universe was closed before calibration. That consistency reduces the chance that the comparative pattern was created by repeatedly adding favourable examples.
 
-Accordingly, zero log-score difference, 0.5 pairwise accuracy and zero absolute separation should not automatically be treated as inferential nulls. Recomputing the complete statistic under biologically appropriate label exchangeability provides a more coherent baseline. In this study that calibration changed one qualitative architecture claim and removed one weak pairwise translation. The later device-bias audit then showed why null calibration and confound removal answer different questions: the focal 256-m raw translation exceeds its own finite-sample null, yet focal identity disappears when additive altitude level is removed.
+Nevertheless, this is not a phylogenetic comparative study. Only four taxa passed the fixed data gate, vertical datums differ among source programmes, and harmonized AGL was available only for *Tadarida*. We therefore compare within-panel predictive identity rather than absolute altitude among taxa.
 
-This is not merely a statistical technicality: the baseline determines which ecological differences are attributed to individual identity rather than to the geometry of the estimator.
-
-### Estimator calibration changed the biological story
-
-The analysis history is itself informative. The original decomposition classified panels using the sign of G_cond - G_marg and appeared to reveal conditional- and marginal-dominant architectures. A diagnostic audit then showed that the finite-sample null of this difference is negative and panel specific. It also showed that the ordinary marginal vertical distribution inherits each animal's own horizontal occupancy weighting.
-
-The biological consequence was large. The sole strong marginal-dominant counterexample, *P. hastatus* 2022, changed from G_adv = -0.120 to a common-cell increment of only +0.0066 after horizontal standardization. The apparent qualitative architecture contrast therefore disappeared.
-
-We did not retune the original endpoint to preserve its conclusion. Instead, the focal calibration was frozen before its result, the cross-panel calibration was frozen before the non-focal outputs, and the original architecture claim was explicitly superseded. This distinction between historical endpoint and corrected interpretation is important because analytical decompositions can look biologically categorical even when their baselines are shaped by finite-sample prediction geometry.
-
-The corrected result is simpler ecologically: vertical identity matching survives horizontal standardization in all six panels relative to each panel's exchangeability expectation, while any additional benefit from retaining horizontal cell identity is small in raw magnitude.
-
-### Repeatable identity does not imply a fixed route strategy
-
-The focal early/late analysis demonstrates that correct individual identity predicts later vertical state, but the stronger cell-by-height residual test remains negative. This prevents interpreting vertical individuality as a rigid three-dimensional route map.
-
-Several processes could produce repeatable vertical identity. Individuals could differ in morphology or flight performance, repeatedly encounter different resources within shared regions, respond differently to atmospheric conditions, use distinct social or central-place routines, or carry learned spatial histories. The source *Tadarida* study establishes that topography and nocturnal uplift shape flight behaviour at the population level (O'Mara et al. 2021), but our frozen individual uplift-reaction analysis did not identify one repeatable individual slope mechanism. The mechanism therefore remains open.
-
-This unresolved mechanism is not unusual in individual-specialization research. Dive-depth specialization in seabirds can reflect both repeated patch choice and genuinely different depth tactics over similar patches (Ratcliffe et al. 2013). The same conceptual alternatives likely apply to airborne vertical niches. The present study separates one axis of the problem—coarse horizontal occupancy—from vertical identity, but does not identify the causal trait or decision rule.
-
-### Comparative generality and its limits
-
-The consistency of calibrated identity across six panels is notable because the datasets span four taxa, multiple regions and several tracking programmes. The source universe was also closed before calibration, reducing the opportunity to continue adding favourable examples.
-
-This is nevertheless not a phylogenetic comparative study. Only four taxa passed the fixed public-data gate. Tracking schedules, source-study designs and vertical datums differ. MSL and ellipsoid heights are not directly interchangeable, and AGL was available only for the focal source. We therefore compare within-panel predictive identity, not absolute vertical position among taxa.
-
-The 2016 *Phyllostomus* panel is especially useful because it resists a simple universal story. Its raw common-cell score is approximately zero, its pairwise self-identification interval includes 0.5, yet its identity-matched score still exceeds the much lower finite-sample permutation expectation and its session-centered shape identity remains calibrated. At the same time, only 31.1% of repeat-individual tracking-window pairs overlap. This combination emphasizes why raw effect magnitude, calibrated evidence and temporal comparability are distinct.
-
-Behavioural state is another limitation. Several source papers concern foraging or commuting, but no harmonized behavioural classifier was imposed across datasets. We therefore refer to vertical airspace or flight use, not to foraging-height specialization. Similarly, observational repeatability cannot identify personality, learning, adaptation or optimality.
+Temporal comparability is also uneven. Repeat-individual tracking windows overlap strongly in five panels but only 31.1% of pairs in *P. hastatus* 2016. Stable short-term weather or seasonal context could therefore contribute to identity in that panel. Behavioural state is another limitation: no harmonized classifier was imposed across studies, so we refer to vertical airspace or flight use rather than foraging-height specialization. Observational repeatability also does not establish personality, learning, adaptation or optimality.
 
 ### A prospective test of vertical individuality
 
-The next decisive study should be designed prospectively rather than assembled from public archives. The same individuals should be tracked repeatedly with harmonized AGL or terrain-relative altitude, known roost locations, high-frequency horizontal positions and simultaneous atmospheric measurements.
+The next decisive study should track the same individuals repeatedly with harmonized terrain-relative altitude, known roost locations, high-frequency horizontal positions, simultaneous atmospheric measurements and explicit device calibration. Fine horizontal matched strata could then test whether an individual's vertical distribution predicts held-out nights when horizontal opportunity is nearly identical.
 
-A strong design would define fine horizontal matched strata around shared movement corridors and ask whether the same individual's vertical profile predicts held-out nights after exact or near-exact horizontal matching. Repeating that experiment across seasons would distinguish persistent individual identity from context-dependent vertical responses. Behavioural-state classification would also permit separate tests for commuting, foraging and departure/arrival phases.
+Tag swapping or repeated calibration against common stationary references would help separate biological distribution shape from device-specific variance. Repeating the design across seasons would distinguish persistent identity from temporal context, while behavioural-state classification could separate commuting, foraging and departure/arrival phases.
 
-Such a design would move from the current statement—vertical identity beyond coarse horizontal occupancy—to a stronger mechanistic question: **which individual traits or experiences generate repeatable vertical niche use when horizontal opportunity is genuinely shared?**
+Such a design would move beyond the present result—repeatable comparative vertical-distribution shape after coarse horizontal and additive-offset controls—to the stronger mechanistic question of which traits or experiences generate that individuality.
 
 ## Conclusion
 
@@ -366,17 +312,19 @@ Xing, S., Leahy, L., Ashton, L.A., Kitching, R.L., Bonebrake, T.C. & Scheffers, 
 
 **Figure 1. Separating vertical individuality from horizontal occupancy.** Conceptual workflow showing that repeated differences in horizontal occupancy can generate apparent vertical specialization when terrain or vertical opportunity varies across space. Self and other conditional vertical profiles are therefore integrated under identical self-derived horizontal-cell weights before vertical identity is evaluated.
 
-**Figure 2. Focal repeatable identity and its mechanistic ceiling in *Tadarida teniotis*.** Early individual conditional maps contain strongly repeatable identity information (exact assignment p = 0.000174), whereas a stronger residual cell-by-height stability test after marginal-altitude adjustment is not supported (p = 0.160).
+**Figure 2. Horizontally standardized vertical identity across six bat tracking panels.** Points show observed common-cell vertical identity with individual-bootstrap intervals; crosses show panel-specific whole-session permutation-null means. Identity-matched scores exceed exchangeability expectation in all six panels.
 
-**Figure 3. Horizontally standardized vertical identity across six bat tracking panels.** Points show observed common-cell vertical identity with individual-bootstrap intervals; crosses show panel-specific whole-session permutation-null means. Identity-matched scores exceed exchangeability expectation in all six panels.
+**Figure 3. Pairwise vertical self-identification after coarse horizontal standardization.** The y-axis is the equal-individual fraction of direct self-versus-specific-alternative comparisons won by the same individual's vertical profile. Error bars are individual-bootstrap 95% intervals. Panel-specific whole-session permutation-null means are the inferential baselines; a 0.5 line, if shown, is an intuitive reference only. Five panels exceed their calibrated pairwise null, whereas *P. hastatus* 2016 does not.
 
-**Figure 4. Pairwise vertical self-identification after coarse horizontal standardization.** The y-axis is the equal-individual fraction of direct self-versus-specific-alternative comparisons won by the same individual's vertical profile. Error bars are individual-bootstrap 95% intervals. Panel-specific whole-session permutation-null means are the inferential baselines; a 0.5 line, if shown, is an intuitive reference only. Five panels exceed their calibrated pairwise null, whereas *P. hastatus* 2016 does not.
+**Figure 4. Endpoint-neighbourhood robustness across six bat tracking panels.** Points show common-cell vertical identity remaining after the predeclared 1-km endpoint-neighbourhood exclusion; crosses show corresponding whole-session permutation-null means. Four comparative panels pass the frozen rule. *Eidolon* retains a strong calibrated signal but fails the minimum-evaluable-individual gate, while *Tadarida* fails its inferential tail criterion.
 
-**Figure 5. Why the original architecture classification was superseded.** Original conditional advantage and common-cell conditional increment are shown for each panel. In *P. hastatus* 2022, the apparent marginal-dominant value changes from -0.120 to +0.0066 after common horizontal weighting, demonstrating that raw conditional-minus-marginal signs cannot be interpreted as biological architecture classes.
+**Figure 5. Shift-invariant vertical-distribution identity after removal of absolute altitude level.** Every retained session was median-centered before vertical binning, so any additive constant tag/device altitude offset was removed exactly. All five comparative panels exceed their calibrated null; the motivating *Tadarida teniotis* panel does not (p=0.5121).
 
-**Figure 6. Endpoint-neighbourhood robustness across six bat tracking panels.** Points show the common-cell vertical identity remaining after the predeclared 1-km endpoint-neighbourhood exclusion; crosses show the corresponding whole-session permutation-null means. Four comparative panels pass the frozen rule. *Eidolon* retains a strong calibrated signal but fails the predeclared minimum-evaluable-individual gate, while focal *Tadarida* fails its inferential tail criterion.
+### Supporting figure legends
 
-**Figure 7. Shift-invariant vertical-distribution identity after removal of absolute altitude level.** For each panel, every retained session was median-centered before vertical binning, so any additive constant tag/device altitude offset was removed exactly. Points show observed common-cell centered-shape identity and crosses show panel-specific whole-session permutation-null means. Five panels exceed their calibrated null; focal *Tadarida teniotis* does not (p=0.5121).
+**Supporting Figure S1. Motivating *Tadarida teniotis* repeatable identity and mechanistic ceiling.** Early individual conditional maps contain strongly repeatable identity information (exact assignment p=0.000174), whereas a stronger residual cell-by-height stability test after marginal-altitude adjustment is not supported (p=0.160).
+
+**Supporting Figure S2. Why the original architecture classification was superseded.** Original conditional advantage and common-cell conditional increment are shown for each panel. In *P. hastatus* 2022, the apparent marginal-dominant value changes from -0.120 to +0.0066 after common horizontal weighting, demonstrating that raw conditional-minus-marginal signs cannot be interpreted as biological architecture classes.
 
 ## Ethics statement
 
