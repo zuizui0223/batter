@@ -26,18 +26,18 @@ Checked: 2026-09-28
 
 ## Automated package
 
-- [x] manuscript/figure workflow success — run 36376329983;
-- [x] manuscript CI estimate **6,942 words**;
+- [x] manuscript/figure workflow success — run 36380837565;
+- [x] manuscript CI estimate **7,542 words**;
 - [x] abstract **264 words** in five numbered statements;
 - [x] Introduction **685 words**;
 - [x] Results **1,270 words**;
-- [x] Discussion **1,161 words**;
+- [x] Discussion **1,686 words**;
 - [x] main Figures **1-6** generated and visually inspected;
 - [x] Supporting Figures **S1-S2** generated and visually inspected;
 - [x] descriptive profile artifact generated from frozen definition;
-- [x] anonymous review PDF success — run 36376329976;
+- [x] anonymous review PDF success — run 36380837508;
 - [x] anonymity guard PASS;
-- [x] review PDF **24 pages**;
+- [x] review PDF **26 pages**;
 - [x] no clipping, overlap or broken glyphs found.
 
 ## Remaining human/archive items
