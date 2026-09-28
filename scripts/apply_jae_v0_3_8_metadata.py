@@ -253,7 +253,7 @@ def render_cff(payload: dict) -> str:
     lines = [
         "cff-version: 1.2.0",
         f"message: {q('Please cite the archived release of this software.')}",
-        f"title: {q('batter: repeatable vertical identity in bat airspace after coarse horizontal occupancy standardization')}",
+        f"title: {q('batter: repeatable individual shapes of vertical space use beyond coarse horizontal occupancy')}",
         "type: software",
         "authors:",
     ]
