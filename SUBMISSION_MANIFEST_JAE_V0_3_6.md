@@ -110,3 +110,26 @@ Not established:
 - enable GitHub repository in Zenodo and mint the version DOI;
 - insert DOI into the v0.3.6 title page;
 - final Journal of Animal Ecology upload.
+
+
+## Packaging rc3 — one-source final metadata
+
+Scientific content is unchanged.
+
+Final human/archive metadata are now centralized in:
+`submission/jae_v0_3_6_metadata.json`.
+
+The deterministic assembler and gates implement two stages:
+
+1. **pre-release** — authorship/license/release metadata complete, archive DOI still empty;
+2. **post-DOI** — Zenodo version DOI inserted, final journal title page regenerated.
+
+Synthetic end-to-end Actions self-test:
+- run: **36366987729**
+- conclusion: **success**
+- pre-release assembly: READY
+- Zenodo release gate: READY
+- post-DOI assembly: READY
+- final JAE upload gate: READY
+
+The workflow does not infer authors, licensing, funding, conflicts, ORCIDs, postal address or DOI.
