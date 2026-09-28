@@ -119,6 +119,8 @@ identity in bat airspace persists after coarse horizontal occupancy is standardi
 v0.3.6 manuscript/figure and anonymous-review workflows pass with 7,932 words, a 273-word
 five-statement abstract, seven figures and a 26-page anonymous review PDF.
 
+Current release packaging: `release/jae-v0.3.6-rc4` (packaging-only successor; scientific v0.3.6 content unchanged).
+
 ## Claim boundary
 
 The analyses concern vertical flight/airspace use and predictive individual identity. Common-cell
