@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "submission_id": "batter-jae-v0.3.7-rc1",
+  "submission_id": "batter-jae-v0.3.7-rc2",
   "date": "2026-09-28",
   "journal_target": "Journal of Animal Ecology",
   "manuscript": {
@@ -65,7 +65,7 @@
   },
   "supersedes": "batter-jae-v0.3.6-rc4",
   "packaging": {
-    "release_candidate": "v0.3.7-rc1",
+    "release_candidate": "v0.3.7-rc2",
     "metadata_source": "submission/jae_v0_3_7_metadata.json",
     "metadata_template": "submission/jae_v0_3_7_metadata.template.json",
     "assembler": "scripts/apply_jae_v0_3_7_metadata.py",
@@ -85,6 +85,13 @@
     "active_reference_guard": {
       "workflow_run_id": 36371726985,
       "conclusion": "success"
+    },
+    "github_release_preflight": {
+      "script": "scripts/check_github_release_preflight.py",
+      "workflow": ".github/workflows/jae-github-release-preflight-v0.3.7.yml",
+      "release_notes": "RELEASE_NOTES_JAE_V0_3_7.md",
+      "expected_tag": "jae-v0.3.7",
+      "auto_publish": false
     }
   },
   "remaining_human_input": {
