@@ -1,0 +1,64 @@
+name: jae-submission-v0.3.8
+
+on:
+  push:
+    branches:
+      - revision/jae-v0.3.8-shape-ecology
+      - main
+    paths:
+      - "manuscript/MANUSCRIPT_DRAFT_V0_3_8.md"
+      - "manuscript/TITLE_PAGE_TEMPLATE_V0_3_8.md"
+      - "manuscript/SUPPORTING_INFORMATION_CLAIM_AMENDMENT_HISTORY.md"
+      - "results/calibrated_vertical_identity_v0_3_8.csv"
+      - "results/endpoint_exclusion_v0_3_8.csv"
+      - "results/tag_altitude_bias_shape_v1.csv"
+      - "results/tag_altitude_bias_audit_v1_summary.json"
+      - "results/individual_vertical_strategy_result_v1.json"
+      - "results/spatial_interaction_refinement_result_v2.json"
+      - "contract/centered_shape_profile_descriptive_v1.json"
+      - "scripts/build_centered_shape_profile_descriptive_v1.py"
+      - "scripts/check_jae_submission_v0_3_8.py"
+      - "scripts/plot_jae_v0_3_8_figures.py"
+      - ".github/workflows/jae-submission-v0.3.8.yml"
+      - "pyproject.toml"
+  workflow_dispatch:
+
+jobs:
+  submission-gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -e ".[figure]"
+      - name: Check JAE v0.3.8 manuscript gates
+        run: python scripts/check_jae_submission_v0_3_8.py
+      - name: Build JAE v0.3.8 main Figures 1-5 and Supporting Figures S1-S2
+        run: python scripts/plot_jae_v0_3_8_figures.py
+      - name: Rebuild frozen descriptive Figure 6
+        run: |
+          python scripts/build_centered_shape_profile_descriptive_v1.py
+          cp figures/submission_v0_3_7/figure6_individual_centered_shape_profiles.pdf figures/submission_v0_3_8/
+          cp figures/submission_v0_3_7/figure6_individual_centered_shape_profiles.png figures/submission_v0_3_8/
+          test -f figures/submission_v0_3_8/figure6_individual_centered_shape_profiles.pdf
+      - uses: actions/upload-artifact@v4
+        with:
+          name: batter-jae-v0-3-8-main-figures
+          path: figures/submission_v0_3_8/
+          if-no-files-found: error
+      - uses: actions/upload-artifact@v4
+        with:
+          name: batter-jae-v0-3-8-supporting-figures
+          path: figures/supporting_v0_3_8/
+          if-no-files-found: error
+      - uses: actions/upload-artifact@v4
+        with:
+          name: batter-jae-v0-3-8-descriptive-shape-profiles
+          path: |
+            results/centered_shape_individual_profiles_v1.csv
+            results/centered_shape_individual_profiles_v1.json
+          if-no-files-found: error
