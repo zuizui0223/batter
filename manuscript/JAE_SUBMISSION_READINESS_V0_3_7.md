@@ -35,6 +35,7 @@ Checked: 2026-09-28
 - [x] anonymity guard PASS;
 - [x] review PDF **22 pages**;
 - [x] release-preflight synthetic self-test — run 36373116328;
+- [x] active-reference guard success — run 36373286245;
 - [x] no clipping, overlap or broken glyphs found.
 
 ## Remaining human/archive items
