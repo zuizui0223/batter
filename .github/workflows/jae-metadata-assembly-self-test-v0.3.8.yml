@@ -5,7 +5,10 @@ on:
   push:
     branches:
       - packaging/jae-v0.3.8-finalize-clean
+      - packaging/jae-v0.3.8-post-claim-sync
+      - main
     paths:
+      - "manuscript/MANUSCRIPT_DRAFT_V0_3_8.md"
       - "scripts/apply_jae_v0_3_8_metadata.py"
       - "scripts/check_jae_upload_ready.py"
       - "scripts/check_zenodo_release_ready.py"
