@@ -1,6 +1,6 @@
-# JAE submission manifest v0.3.6 rc1
+# JAE submission manifest v0.3.6 rc3
 
-Date: 2026-09-27
+Date: 2026-09-28
 
 ## Scientific status
 
@@ -100,16 +100,22 @@ Not established:
 
 ## Remaining non-scientific blockers
 
-- choose/add repository software LICENSE;
-- fill final author list and affiliations;
-- corresponding-author postal address, email and ORCID;
-- CRediT contributions;
-- funding and acknowledgements;
-- conflict-of-interest declaration;
-- finalize CITATION.cff or .zenodo.json;
-- enable GitHub repository in Zenodo and mint the version DOI;
-- insert DOI into the v0.3.6 title page;
-- final Journal of Animal Ecology upload.
+All human metadata are centralized in
+`submission/jae_v0_3_6_metadata.json`.
+
+Pre-release:
+- copy/fill the metadata template except `archive_doi`;
+- choose/add the matching repository LICENSE;
+- generate title page + CITATION.cff;
+- make the Zenodo release gate READY;
+- enable the repository in Zenodo and publish the GitHub release.
+
+Post-DOI:
+- insert the minted version DOI into the same metadata JSON;
+- regenerate the final journal title page;
+- make the JAE final-upload gate READY;
+- confirm combined manuscript + title-page count <=8,500;
+- perform the Journal of Animal Ecology upload.
 
 
 ## Packaging rc3 — one-source final metadata
