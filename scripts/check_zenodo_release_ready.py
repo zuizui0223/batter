@@ -11,6 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 LICENSE_CANDIDATES = ("LICENSE", "LICENSE.md", "LICENSE.txt")
 PLACEHOLDER = re.compile(r"\[INSERT\b|\bTBD\b|\bTODO\b", re.IGNORECASE)
 EXPECTED_VERSION = "v0.3.6"
+METADATA = ROOT / "submission" / "jae_v0_3_6_metadata.json"
 
 
 def fail(message: str, failures: list[str]) -> None:
@@ -27,6 +28,18 @@ def main() -> int:
     cff = ROOT / "CITATION.cff"
     zenodo = ROOT / ".zenodo.json"
 
+    metadata = None
+    if not METADATA.is_file():
+        fail("missing submission/jae_v0_3_6_metadata.json", failures)
+    else:
+        try:
+            metadata = json.loads(METADATA.read_text(encoding="utf-8"))
+        except json.JSONDecodeError as exc:
+            fail(f"metadata JSON is invalid: {exc}", failures)
+        else:
+            if metadata.get("package_version") != EXPECTED_VERSION:
+                fail(f"metadata package_version must be {EXPECTED_VERSION}", failures)
+
     if not cff.exists() and not zenodo.exists():
         fail("no release metadata: create CITATION.cff or .zenodo.json", failures)
     if cff.exists() and zenodo.exists():
@@ -42,6 +55,13 @@ def main() -> int:
         version_match = re.search(r"(?m)^version:\s*['\"]?([^'\"\s]+)['\"]?\s*$", text)
         if not version_match or version_match.group(1) != EXPECTED_VERSION:
             fail(f"CITATION.cff version must be {EXPECTED_VERSION}", failures)
+        license_match = re.search(r"(?m)^license:\s*['\"]?([^'\"\n]+)['\"]?\s*$", text)
+        date_match = re.search(r"(?m)^date-released:\s*['\"]?([^'\"\n]+)['\"]?\s*$", text)
+        if metadata is not None:
+            if not license_match or license_match.group(1).strip() != str(metadata.get("software_license_spdx", "")).strip():
+                fail("CITATION.cff license does not match metadata software_license_spdx", failures)
+            if not date_match or date_match.group(1).strip() != str(metadata.get("release_date", "")).strip():
+                fail("CITATION.cff date-released does not match metadata release_date", failures)
 
     if zenodo.exists():
         try:
