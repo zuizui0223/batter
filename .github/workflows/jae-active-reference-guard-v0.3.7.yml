@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - packaging/jae-v0.3.7-promote
+      - packaging/jae-v0.3.7-release-preflight
       - main
     paths:
       - "README.md"
