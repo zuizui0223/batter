@@ -230,6 +230,20 @@ This distinction matters for interpreting population movement distributions. A b
 
 The stationary correction provides narrower but concordant evidence. Both comparative panels that passed the outcome-blind support gate retained identity after estimated individual-by-cohort altitude offsets were removed. Because four panels lacked sufficient shared stationary support, this is corroboration rather than a universal calibration. We do not assign the observed profile differences to commuting, foraging, exploration or other behavioural states; they are repeatable properties of vertical space-use distributions.
 
+### Resource landscapes and behavioural allocation are more plausible mechanisms than a simple climatic height niche
+
+The present data do not identify the mechanism producing those repeatable shapes, but the biology of the comparative taxa suggests a useful hierarchy of hypotheses. A simple climatic-height niche is unlikely to be a sufficient general explanation for these five panels. The centered profiles compare individuals tracked within the same population and broadly overlapping periods, and several comparative taxa are fruit- or nectar-feeding central-place foragers whose relevant resources occur as discrete trees, patches and commuting destinations rather than as continuous atmospheric layers.
+
+The first candidate is therefore **resource-linked behavioural allocation**. Individual bats may differ repeatedly in how much of a night is spent commuting between distant patches, moving among nearby feeding trees, remaining within a feeding area, or visiting social sites. Those differences can change the width and tails of a vertical distribution even if the animals experience broadly similar regional weather. This interpretation is especially plausible for *H. monstrosus*, in which the source population shows a documented trade-off between time spent at the lek and time and space allocated to foraging, and for *P. hastatus*, whose foraging behaviour varies strongly with the local resource landscape and with the availability and predictability of flowering and other food resources (Schloesing et al. 2023; Calderón-Capote et al. 2024).
+
+The second candidate is **individual resource specialization**, potentially reinforced by competition or social information. Individual specialization in spatial resource use is already known in frugivorous bats and can arise when individuals repeatedly exploit different food patches or resource types (Kerches-Rogeri et al. 2020). In *P. hastatus*, local resource conditions can alter whether females forage socially or independently, while in the highly gregarious *E. helvum* seasonal changes in fruit and flower resources are associated with major changes in commuting distance and foraging landscape. Competition may therefore promote or maintain individual differentiation, but the current data do not support competition as a universal sole cause: in *E. helvum*, foraging effort can remain surprisingly insensitive to colony size, consistent with migration and landscape choice buffering direct density-dependent competition.
+
+The third candidate is **individual morphology, memory and experience**. Wing morphology can alter the energetic and manoeuvring consequences of different flight paths, while long-term memory of profitable trees or routes can stabilize repeated resource use. These mechanisms could generate persistent differences in vertical concentration and tail use even without strong contemporaneous competition.
+
+Atmospheric structure remains relevant, especially for open-air insectivores and high-altitude commuting, and should not be dismissed. For example, high-flying molossid activity can track nocturnal boundary-layer structure, and the motivating *Tadarida* study explicitly linked high flight to topography and uplift. But that mechanism is less parsimonious as a single explanation for the comparative five-panel result than repeated differences in resource use and behavioural allocation.
+
+This hierarchy generates a prospective prediction rather than a retrospective claim: if resource and behavioural allocation drive the observed shapes, then individual differences in centered vertical concentration and tail use should covary with feeding-patch identity, commuting fraction, social-site attendance or diet when those variables are measured independently.
+
 ### Pipeline-specific nulls are part of the biological inference
 
 The second major result is methodological. Prediction-based individuality statistics did not share universal intuitive nulls. The original conditional-minus-marginal contrast had a negative panel-specific expectation, pairwise self-identification nulls ranged from about 0.50 to 0.58, and an absolute height-separation statistic had a positive null mean rather than zero.
@@ -303,6 +317,10 @@ McIntyre, T., Bester, M.N., Bornemann, H., Tosh, C.A. & de Bruyn, P.J.N. (2017).
 O'Mara, M.T., Scharf, A.K., Fahr, J., Abedi-Lartey, M., Wikelski, M., Dechmann, D.K.N. & Safi, K. (2019). Overall dynamic body acceleration in straw-colored fruit bats increases in headwinds but not with airspeed. *Frontiers in Ecology and Evolution*, **7**, 200. https://doi.org/10.3389/fevo.2019.00200
 
 O'Mara, M.T., Amorim, F., Scacco, M., McCracken, G.F., Safi, K., Mata, V., Tomé, R., Swartz, S., Wikelski, M., Beja, P., Rebelo, H. & Dechmann, D.K.N. (2021). Bats use topography and nocturnal updrafts to fly high and fast. *Current Biology*, **31**, 1311–1316.e4. https://doi.org/10.1016/j.cub.2020.12.042
+
+Scharf, A.K., Fahr, J., Abedi-Lartey, M., Wikelski, M., Dechmann, D.K.N. & Safi, K. (2015). Pronounced seasonal changes in the movement ecology of a highly gregarious central-place forager, the African straw-coloured fruit bat (*Eidolon helvum*). *PLOS ONE*, **10**, e0138985. https://doi.org/10.1371/journal.pone.0138985
+
+Abedi-Lartey, M., Dechmann, D.K.N., Wikelski, M., Scharf, A.K. & Fahr, J. (2020). Foraging movements are density-independent among straw-coloured fruit bats. *Royal Society Open Science*, **7**, 200470. https://doi.org/10.1098/rsos.200470
 
 O'Mara, M.T. & Dechmann, D.K.N. (2023). Greater spear-nosed bats commute long distances alone, rest together, but forage apart. *Animal Behaviour*, **204**, 37–48. https://doi.org/10.1016/j.anbehav.2023.08.001
 
