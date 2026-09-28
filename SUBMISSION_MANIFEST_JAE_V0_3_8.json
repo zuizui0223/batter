@@ -6,11 +6,11 @@
   "manuscript": {
     "path": "manuscript/MANUSCRIPT_DRAFT_V0_3_8.md",
     "title": "Repeatable individual shapes of vertical space use persist beyond coarse horizontal occupancy in bats",
-    "ci_word_estimate": 7542,
+    "ci_word_estimate": 7669,
     "abstract_words": 264,
     "introduction_words": 685,
     "results_words": 1270,
-    "discussion_words": 1686,
+    "discussion_words": 1651,
     "abstract_numbered_statements": 5,
     "keywords": 7,
     "main_figures": 6,
@@ -35,28 +35,29 @@
     ],
     "tadarida_role": "motivating_boundary_case",
     "preferred_term": "vertical space use",
-    "vertical_niche_strategy_classes_inferred": false
+    "vertical_niche_strategy_classes_inferred": false,
+    "mechanism_status": "resource-linked behaviour, individual resource specialization/social information, morphology-memory-experience, and atmospheric structure are parallel prospective working hypotheses; not ranked or tested"
   },
   "automated_validation": {
     "manuscript_figures": {
-      "run_id": 36380837565,
-      "head_sha": "d6d0cd51854c9ada2eefbd069a08bc1db514bbf9",
+      "run_id": 36389987590,
+      "head_sha": "f1ad08babcfbac583beabdeb9dc388ea316b4c43",
       "conclusion": "success",
-      "main_artifact_id": 10952945637,
-      "main_artifact_digest": "sha256:65ef32e64d355694720791f74daad764e8ac9bedd117fefd7ad5e65137fcab6d",
-      "supporting_artifact_id": 10953025517,
-      "supporting_artifact_digest": "sha256:a94e779c17ea091ec8a3dca16760df5f47daaccc254d1e6d5f851718b7fc16c7",
-      "descriptive_profiles_artifact_id": 10951779884,
-      "descriptive_profiles_artifact_digest": "sha256:a730606c21fe79ef74e676fc1bf93ba4bf5980b8ecb396dea3a453aad4f1f120"
+      "main_artifact_id": 10955439110,
+      "main_artifact_digest": "sha256:296d0fbb058911cfb37bf712ba37997b3af5e013409df0d8474a9f74eb6689db",
+      "supporting_artifact_id": 10956201812,
+      "supporting_artifact_digest": "sha256:cda07611463574edcaff9b2104655673793bf07dc8f8d08461fb2e5776e0944e",
+      "descriptive_profiles_artifact_id": 10955726980,
+      "descriptive_profiles_artifact_digest": "sha256:56b98daa292beab95f400bf53358f958793dcc5f296e7fee8850f69762c16f3c"
     },
     "anonymous_review_pdf": {
-      "run_id": 36380837508,
-      "head_sha": "d6d0cd51854c9ada2eefbd069a08bc1db514bbf9",
+      "run_id": 36389987050,
+      "head_sha": "f1ad08babcfbac583beabdeb9dc388ea316b4c43",
       "conclusion": "success",
       "anonymity_guard": "pass",
       "pages": 26,
-      "artifact_id": 10953190261,
-      "artifact_digest": "sha256:8aded294361636a945383f0b3064dc49e126df74ec84cff6070985cb806a8cb6"
+      "artifact_id": 10955419420,
+      "artifact_digest": "sha256:0a6221befb863e42e6b380746525d2c8573bddf2bba2442efa84d1994f32cbfb"
     },
     "descriptive_profile_reproducibility": {
       "frozen_contract": "contract/centered_shape_profile_descriptive_v1.json",
