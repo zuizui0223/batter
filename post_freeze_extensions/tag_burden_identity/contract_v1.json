@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-tag-burden-identity-v1",
+  "frozen_date": "2026-09-29",
+  "status": "technical-confound association frozen before individual tag-burden values are joined to vertical-identity outcomes",
+  "role": "post-freeze exploratory confound test; cannot alter v0.3.8 submission claims",
+  "question": "Is individual centered vertical-identity strength systematically related to relative biologger burden (tag mass / animal mass)?",
+  "panels": [
+    "eidolon",
+    "hypsignathus",
+    "phyllostomus_2022",
+    "phyllostomus_2023",
+    "phyllostomus_2016"
+  ],
+  "response": {
+    "name": "individual_null_calibrated_centered_vertical_identity",
+    "authoritative_source": {
+      "workflow_run_id": 36508617613,
+      "artifact_id": 11008176963,
+      "artifact_digest": "sha256:426c86df56b74483cdbe9b42087a82a5cbb99e93f5db3683193cd4228727ecf8",
+      "file": "result_v1.json"
+    },
+    "definition": "individual observed common-cell centered identity minus that original target individual's whole-session permutation null mean",
+    "rationale": "uses an individually null-centered identity score rather than a raw finite-sample prediction score"
+  },
+  "exposure": {
+    "primary": "tag_mass / animal_mass",
+    "source": "Movebank reference tables already checksum-pinned in the paper pipeline",
+    "required": "both positive finite animal_mass and tag_mass for the identity-matched individual",
+    "units": "dimensionless mass ratio",
+    "interpretation": "relative biologger load; not a direct measurement of aerodynamic drag or attachment effects"
+  },
+  "panel_test": {
+    "statistic": "absolute Spearman rho between relative tag burden and individual calibrated centered identity",
+    "minimum_matched_individuals": 8,
+    "null": "permute relative tag-burden values among matched individuals within panel; retain centered-identity values fixed",
+    "B": 99999,
+    "seeds": {
+      "eidolon": 20260929051,
+      "hypsignathus": 20260929052,
+      "phyllostomus_2022": 20260929053,
+      "phyllostomus_2023": 20260929054,
+      "phyllostomus_2016": 20260929055
+    },
+    "panel_p": "(1 + count(null_abs_rho >= observed_abs_rho))/(B+1)"
+  },
+  "cross_panel_test": {
+    "statistic": "equal-panel mean absolute Spearman rho across panels with >=8 matched individuals",
+    "null": "independently permute burden values within each panel and recompute equal-panel mean absolute rho",
+    "B": 99999,
+    "seed": 20260929056,
+    "support_rule": "p <= 0.05",
+    "rationale": "direction-free because greater relative load could either constrain movement into a more stereotyped profile or alter flight organization in the opposite direction"
+  },
+  "secondary_descriptive": [
+    "signed panel-specific Spearman rho",
+    "matched n and tag-burden range by panel",
+    "animal-mass-only correlation reported separately but cannot replace the primary relative-burden test"
+  ],
+  "interpretation_matrix": {
+    "supported": "A consistent monotonic association between relative tag burden and vertical-identity strength would keep tag loading as a plausible technical/biomechanical contributor, without proving causation.",
+    "unsupported": "Weakens a simple monotonic relative-tag-burden explanation of cross-panel individual vertical identity; non-monotonic or tag-specific effects remain possible."
+  },
+  "claim_boundary": [
+    "This test concerns strength of calibrated individual identity, not the direction or exact shape of vertical use.",
+    "No association cannot prove tags are irrelevant.",
+    "Association cannot distinguish payload biomechanics from correlated body-size or tag-design differences.",
+    "This extension remains outside the frozen v0.3.8 submission."
+  ],
+  "stop_rule": [
+    "Do not change response source, burden definition, minimum n, absolute-rho statistic, permutation counts/seeds or support rule after the join is opened.",
+    "Do not drop a panel because its sign differs.",
+    "Do not replace relative tag burden with tag mass or body mass if the primary fails."
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-tag-burden-identity-v1",
+  "authoritative_workflow": {
+    "run_id": 36520751223,
+    "head_sha": "bde657ea9c8444071e136da97f9e7a51d5189b1c",
+    "artifact_id": 11012234841,
+    "artifact_digest": "sha256:0aebb17bf6b9d80d473851938367d653073f33696d1cfb56030800de5d3d8c8b"
+  },
+  "identity_source_run_id": 36508617613,
+  "cross_panel": {
+    "mean_absolute_spearman_rho": 0.26774519703045835,
+    "p": 0.1399,
+    "supported": false
+  },
+  "panels": {
+    "eidolon": {
+      "n": 20,
+      "rho": -0.37081612250037416,
+      "p": 0.10697
+    },
+    "hypsignathus": {
+      "n": 24,
+      "rho": -0.03351470972180792,
+      "p": 0.87543
+    },
+    "phyllostomus_2022": {
+      "n": 31,
+      "rho": -0.40137155343054876,
+      "p": 0.02739
+    },
+    "phyllostomus_2023": {
+      "n": 16,
+      "rho": 0.19867555047552535,
+      "p": 0.45714
+    },
+    "phyllostomus_2016": {
+      "n": 10,
+      "rho": -0.33434804902403553,
+      "p": 0.33989
+    }
+  },
+  "interpretation": "Simple monotonic relative tag burden is not supported as a general explanation of centered vertical identity.",
+  "submission_claims_unchanged": true
+}
