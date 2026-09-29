@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-external-bat-panel-search-v1",
+  "frozen_date": "2026-09-29",
+  "status": "prospective external-source discovery contract frozen before any new vertical outcomes",
+  "role": "independent-data extension after closure of the Movebank/archive programme; cannot modify v0.3.8 unless separately reopened after external validation",
+  "search_universe": {
+    "excluded_universe": "all Movebank Data Repository parent/legacy bat packages already closed under BAT_PANEL_SEARCH_CLOSEOUT.md",
+    "included_repositories": [
+      "Dryad",
+      "Figshare",
+      "Zenodo",
+      "institutional repositories with direct public raw event files"
+    ],
+    "cutoff_date": "2026-09-29",
+    "taxon": "Chiroptera",
+    "data_type": "public individual-level movement tracks with timestamps and x-y positions"
+  },
+  "discovery_queries": [
+    "\"bat\" GPS tracking dataset altitude",
+    "\"Chiroptera\" GPS tracking dataset height",
+    "\"bat\" flight altitude GPS Dryad",
+    "\"bat\" GPS Figshare altitude",
+    "\"bat\" GPS Zenodo altitude",
+    "\"Nyctalus\" GPS dataset",
+    "\"Pteropus\" GPS dataset",
+    "\"Rousettus\" tracking dataset",
+    "\"flying fox\" GPS dataset"
+  ],
+  "outcome_blind_allowed_reads": [
+    "dataset title/abstract/methods",
+    "repository metadata and file names",
+    "raw table headers/schema",
+    "individual identifiers",
+    "timestamps",
+    "finite x-y presence",
+    "presence/missingness of a native event-level vertical field as a string",
+    "source quality/outlier flags",
+    "taxon labels"
+  ],
+  "prohibited_before_admission": [
+    "numeric vertical values",
+    "individual vertical distributions",
+    "self-vs-other predictive outcomes",
+    "any statistic derived from vertical magnitudes"
+  ],
+  "structural_gate": {
+    "native_vertical_axis": "same-event native vertical coordinate must be present in the public raw track table; externally joined DEM height alone does not qualify",
+    "minimum_individuals_with_xy_vertical_presence": 8,
+    "session_definition": "split each individual into nocturnal/frozen sessions using source-appropriate calendar-night/session identifiers without reading numeric height",
+    "minimum_fixes_per_session": 50,
+    "minimum_repeat_individuals": 5,
+    "repeat_definition": "at least two eligible >=50-fix sessions per individual",
+    "raw_event_requirement": "event-level timestamped tracks; nightly maxima, foraging-point summaries, or roost-only summaries do not qualify"
+  },
+  "source_independence": {
+    "exclude_existing_dois": [
+      "10.5441/001/1.52nn82r9",
+      "10.5441/001/1.k8n02jn8",
+      "10.5441/001/1.278",
+      "10.5441/001/1.282",
+      "10.5441/001/1.321",
+      "10.5441/001/1.322"
+    ],
+    "rule": "A candidate must be a genuinely distinct source package and tracking programme, not a repackaging of an existing six-source dataset."
+  },
+  "decision_rule": {
+    "pass": "Freeze source URL/DOI, file identity/checksum, taxon, schema and structural counts before reading numeric vertical values. Only then may a new validation contract be created.",
+    "fail": "Record the structural reason and do not inspect numeric vertical outcomes.",
+    "no_pass": "Close the external search at the frozen cutoff rather than weakening the gate."
+  },
+  "stop_rule": [
+    "Do not lower >=8-individual, >=5-repeat-individual, >=50-fix-session, or native-vertical requirements after candidate inspection.",
+    "Do not add a repository or search query because a candidate fails.",
+    "Do not select candidates using known vertical behavior from their papers beyond the binary fact that a native vertical field exists.",
+    "If no source passes, the next step is new field data or a later prospectively reopened search with a new calendar cutoff."
+  ]
+}
