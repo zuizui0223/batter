@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-fine-place-ultrafine-preflight-v1",
+  "authoritative_workflow": {
+    "run_id": 36537793408,
+    "head_sha": "80f5cef07dc8604b1178d918836ed38a13c6e168",
+    "artifact_id": 11019525475,
+    "artifact_digest": "sha256:7bad695adb10045621f9d2ed155f7b17328a733fe35443a4b232675ab11e0e01"
+  },
+  "baseline_500m": {
+    "hypsignathus": 19,
+    "phyllostomus_2022": 23,
+    "phyllostomus_2023": 11,
+    "phyllostomus_2016": 9
+  },
+  "required": {
+    "hypsignathus": 14,
+    "phyllostomus_2022": 17,
+    "phyllostomus_2023": 8,
+    "phyllostomus_2016": 7
+  },
+  "counts_250": {
+    "hypsignathus": 16,
+    "phyllostomus_2022": 19,
+    "phyllostomus_2023": 7,
+    "phyllostomus_2016": 9
+  },
+  "stage1_250m_all_pass": false,
+  "stage2_100m_evaluated": false,
+  "selected_grid_m": null,
+  "four_panel_ultrafine_feasible": false,
+  "structurally_evaluable_250m_subset": {
+    "panels": [
+      "hypsignathus",
+      "phyllostomus_2022",
+      "phyllostomus_2016"
+    ],
+    "expected_n": {
+      "hypsignathus": 16,
+      "phyllostomus_2022": 19,
+      "phyllostomus_2016": 9
+    },
+    "selected_pre_outcome": true
+  },
+  "submission_claims_unchanged": true
+}
