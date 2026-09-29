@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-body-mass-gradient-four-panel-v1",
+  "authoritative_workflow": {
+    "run_id": 36521938763,
+    "head_sha": "4f580759e037b119db23f0db3be1d00b92d8de7c",
+    "artifact_id": 11013004269,
+    "artifact_digest": "sha256:55c08ba1548a56bb476986ffa0a5bdf7f021495b61fe1ec1ee7ef12c338400c0"
+  },
+  "pass_count": 0,
+  "panel_count": 4,
+  "panels": {
+    "hypsignathus": {
+      "target_n": 21,
+      "mean_rho": -0.10772573731055851,
+      "p": 0.10734,
+      "pass": false
+    },
+    "phyllostomus_2022": {
+      "target_n": 30,
+      "mean_rho": -0.02326179281117841,
+      "p": 0.3915,
+      "pass": false
+    },
+    "phyllostomus_2023": {
+      "target_n": 13,
+      "mean_rho": 0.028192527347522627,
+      "p": 0.56509,
+      "pass": false
+    },
+    "phyllostomus_2016": {
+      "target_n": 10,
+      "mean_rho": 0.13817608585745794,
+      "p": 0.92733,
+      "pass": false
+    }
+  },
+  "interpretation": "Simple body-mass similarity is not supported as a general predictor of cross-individual vertical-profile transfer within 5-km place × speed×turn contexts.",
+  "eidolon_generalization": false,
+  "submission_claims_unchanged": true
+}
