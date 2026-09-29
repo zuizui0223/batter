@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-movement-state-conditioning-v1",
+  "preflight": {
+    "run_id": 36509596947,
+    "artifact_id": 11008372698,
+    "artifact_digest": "sha256:e8d97652a8ef45076a72596cbb574c9df1893d45d8aa1ce9c90887296ffab2a2",
+    "selected_candidate": "q3_dt1800",
+    "selected_before_vertical_outcome": true
+  },
+  "authoritative_workflow": {
+    "run_id": 36509985627,
+    "head_sha": "19b5a97ab51a98da23ee0e321151140316883327",
+    "artifact_id": 11008238534,
+    "artifact_digest": "sha256:2cce4df61d809c1dc716174a4cde576e685027bc2f30aa5df717fdd703b72672"
+  },
+  "panels": {
+    "eidolon": {
+      "n": 14,
+      "calibrated_excess": 0.3156645185821755,
+      "p": 0.0002,
+      "pass": true
+    },
+    "hypsignathus": {
+      "n": 24,
+      "calibrated_excess": 0.13450717511855872,
+      "p": 0.0002,
+      "pass": true
+    },
+    "phyllostomus_2022": {
+      "n": 33,
+      "calibrated_excess": 0.12796053571047603,
+      "p": 0.0002,
+      "pass": true
+    },
+    "phyllostomus_2023": {
+      "n": 14,
+      "calibrated_excess": 0.06033808439365927,
+      "p": 0.0002,
+      "pass": true
+    },
+    "phyllostomus_2016": {
+      "n": 10,
+      "calibrated_excess": 0.546971298281016,
+      "p": 0.0076,
+      "pass": true
+    }
+  },
+  "synthesis": {
+    "pass_count": 5,
+    "panel_count": 5,
+    "category": "4_or_5_pass",
+    "interpretation": "Broad movement-state mixture alone is insufficient as a general explanation; comparative individuality persists within movement-intensity states."
+  },
+  "submission_claims_unchanged": true
+}
