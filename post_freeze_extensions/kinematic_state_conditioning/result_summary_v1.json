@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-kinematic-state-conditioning-v1",
+  "preflight": {
+    "run_id": 36513203463,
+    "head_sha": "b0c5bea78464047f23a51d0670b28df1845c056e",
+    "artifact_id": 11009452235,
+    "artifact_digest": "sha256:c129f9035e19d92fc727b42a7f2fc56f0247f8710fdf60ed41efb89541ed60c2",
+    "selected_candidate": "speed2_turn2",
+    "selected_before_vertical_outcome": true
+  },
+  "authoritative_workflow": {
+    "run_id": 36513387942,
+    "head_sha": "d524729f9bafe8abc765fa6a529589dcaa141c76",
+    "artifact_id": 11009248007,
+    "artifact_digest": "sha256:39142c7b661182793a6720264f22b0b625721ed48e142c63b0b12158ebbfa76c"
+  },
+  "pass_count": 5,
+  "panel_count": 5,
+  "panels": {
+    "eidolon": {
+      "n": 12,
+      "calibrated_excess": 0.33543498758565166,
+      "p": 0.0002,
+      "retained_fraction_vs_speed_only": 1.0626312678164664,
+      "pass": true
+    },
+    "hypsignathus": {
+      "n": 23,
+      "calibrated_excess": 0.14848284339492424,
+      "p": 0.0002,
+      "retained_fraction_vs_speed_only": 1.1039027714621688,
+      "pass": true
+    },
+    "phyllostomus_2022": {
+      "n": 32,
+      "calibrated_excess": 0.10971174538813742,
+      "p": 0.0002,
+      "retained_fraction_vs_speed_only": 0.8573873560233572,
+      "pass": true
+    },
+    "phyllostomus_2023": {
+      "n": 14,
+      "calibrated_excess": 0.06051649411881459,
+      "p": 0.0002,
+      "retained_fraction_vs_speed_only": 1.0029568344263522,
+      "pass": true
+    },
+    "phyllostomus_2016": {
+      "n": 10,
+      "calibrated_excess": 0.526242378730329,
+      "p": 0.0064,
+      "retained_fraction_vs_speed_only": 0.962102363294322,
+      "pass": true
+    }
+  },
+  "interpretation": "Broad speed × turning-state composition alone is insufficient as a general explanation; centered vertical individuality persists within these kinematic states.",
+  "submission_claims_unchanged": true
+}
