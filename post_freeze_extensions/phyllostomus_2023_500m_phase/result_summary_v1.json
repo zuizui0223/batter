@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-phyllostomus-2023-500m-phase-v1",
+  "authoritative_workflow": {
+    "run_id": 36521691197,
+    "head_sha": "003cd29c3fc4dfe8f643ebb4efaee8a61607a708",
+    "artifact_id": 11012832646,
+    "artifact_digest": "sha256:6aa497e323d703fc3c51e3584cd43e4d249368ee6f9c691eb13ff5d7d8971dfd"
+  },
+  "preflight": {
+    "run_id": 36521295772,
+    "exact_n": 8,
+    "artifact_id": 11013081960
+  },
+  "result": {
+    "n": 8,
+    "calibrated_excess": 0.02460621349760219,
+    "p": 0.2036,
+    "pass": false
+  },
+  "triangulation": {
+    "fine500_kinematic": {
+      "calibrated_excess": 0.10152641549492719,
+      "p": 0.0006,
+      "pass": true
+    },
+    "fine500_kinematic_phase3": {
+      "calibrated_excess": 0.02460621349760219,
+      "p": 0.2036,
+      "pass": false
+    },
+    "same_night_2km_kinematic": {
+      "calibrated_excess": 0.08217380087970408,
+      "p": 0.0286,
+      "pass": true
+    }
+  },
+  "interpretation": "Within P. hastatus 2023, repeatable individual temporal allocation is the leading observed mediator of centered vertical individuality under the available proxies.",
+  "submission_claims_unchanged": true
+}
