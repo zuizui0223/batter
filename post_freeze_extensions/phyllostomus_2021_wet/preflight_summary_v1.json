@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-phyllostomus-2021-wet-preflight-v1",
+  "authoritative_workflow": {
+    "run_id": 36521026880,
+    "head_sha": "fb8dac0de5c229fb52fc1f95ab3836ae51864275",
+    "artifact_id": 11012866424,
+    "artifact_digest": "sha256:f4d4aa7023067fb984fcaaf39a416b3eda778a2071654dddea95bc1467cb28ee"
+  },
+  "admitted_cohorts": [
+    "Aj-cave (Colony 2)::2022",
+    "La Gruta (Colony 1)::2022"
+  ],
+  "target_2021": {
+    "cohort": "La Gruta (Colony 1)::2021",
+    "individual_count": 4,
+    "repeat_individual_count": 2,
+    "eligible_session_count": 6,
+    "admitted": false
+  },
+  "prospective_wet_validation_possible": false,
+  "numeric_2021_outcome_opened_by_this_audit": false,
+  "conclusion": "2021 wet-season data cannot provide a prospective validation under the frozen structural gate."
+}
