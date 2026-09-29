@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-post-freeze-mechanism-status-v5",
+  "frozen_submission_unchanged": true,
+  "five_panel": {
+    "broad_kinematic_mixture": "insufficient; 5/5 retain identity",
+    "simple_patch_fidelity": {
+      "supported": false,
+      "p": 0.05731
+    },
+    "relative_tag_burden": {
+      "supported": false,
+      "p": 0.1399
+    }
+  },
+  "four_panel_subset": {
+    "panels": [
+      "hypsignathus",
+      "phyllostomus_2022",
+      "phyllostomus_2023",
+      "phyllostomus_2016"
+    ],
+    "place_2000m_speed_turn": {
+      "pass_count": 4,
+      "panel_count": 4
+    },
+    "place_500m_speed_turn": {
+      "pass_count": 4,
+      "panel_count": 4
+    },
+    "same_night_2000m_speed_turn": {
+      "pass_count": 3,
+      "panel_count": 4,
+      "unresolved_panel": "phyllostomus_2016"
+    },
+    "temporal_phase3": {
+      "pass_count": 3,
+      "panel_count": 4,
+      "phase_causation_supported": false,
+      "attribution_p": 0.3774
+    },
+    "body_mass_gradient_500m_preflight": {
+      "feasible": false,
+      "counts": {
+        "hypsignathus": 9,
+        "phyllostomus_2022": 7,
+        "phyllostomus_2023": 5,
+        "phyllostomus_2016": 9
+      },
+      "required": {
+        "hypsignathus": 14,
+        "phyllostomus_2022": 17,
+        "phyllostomus_2023": 8,
+        "phyllostomus_2016": 7
+      }
+    }
+  },
+  "strongest_localization": "For four structurally evaluable non-Eidolon panels, centered vertical individuality persists within 500-m horizontal place and broad speed×turning state; broad shared-night context is also insufficient in 3/4 panels.",
+  "live_mechanisms": [
+    "sub-500-m route/resource/microhabitat allocation",
+    "within-context morphology/flight organization",
+    "memory/experience/learned routines",
+    "fine-scale individual environmental reaction norms"
+  ],
+  "archive_identifiability_limit": "Strict 500-m matching leaves insufficient cross-individual donor support for body-mass transfer in three of four panels."
+}
