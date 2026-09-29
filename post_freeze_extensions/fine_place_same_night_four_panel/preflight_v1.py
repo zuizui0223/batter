@@ -11,7 +11,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0,str(ROOT))
 
 from post_freeze_extensions.body_mass_transfer.preflight_v1 import xy_records
-from post_freeze_extensions.kinematic_state_conditioning.preflight_v1 import endpoints, assign_states
+import numpy as np
 
 CONTRACT=ROOT/"post_freeze_extensions/fine_place_same_night_four_panel/preflight_contract_v1.json"
 OUT=ROOT/"post_freeze_extensions/fine_place_same_night_four_panel/preflight_result_v1.json"
@@ -24,10 +24,49 @@ def shifted_night(t):
     return (t-timedelta(hours=12)).date().isoformat()
 
 
+def turn_angle(v1x,v1y,v2x,v2y):
+    a=math.hypot(v1x,v1y); b=math.hypot(v2x,v2y)
+    if a<=0 or b<=0:
+        return None
+    z=max(-1.0,min(1.0,(v1x*v2x+v1y*v2y)/(a*b)))
+    return math.acos(z)
+
+
+def timed_kinematic_endpoints(records,max_dt):
+    by=defaultdict(list)
+    for r in records:
+        by[(r["cohort"],r["session"])].append(r)
+    rows=[]
+    for (cohort,session),vals in sorted(by.items()):
+        vals=sorted(vals,key=lambda x:x["t"])
+        for i in range(2,len(vals)):
+            a,b,c=vals[i-2],vals[i-1],vals[i]
+            dt1=(b["t"]-a["t"]).total_seconds()
+            dt2=(c["t"]-b["t"]).total_seconds()
+            if not all(math.isfinite(x) and x>0 and x<=max_dt for x in (dt1,dt2)):
+                continue
+            v1x,v1y=b["x"]-a["x"],b["y"]-a["y"]
+            v2x,v2y=c["x"]-b["x"],c["y"]-b["y"]
+            tr=turn_angle(v1x,v1y,v2x,v2y)
+            if tr is None:
+                continue
+            sp=math.hypot(v2x,v2y)/dt2
+            rows.append({"cohort":cohort,"session":session,"iid":c["iid"],"t":c["t"],"x":c["x"],"y":c["y"],"speed":float(sp),"turn":float(tr)})
+    speeds=defaultdict(list); turns=defaultdict(list)
+    for r in rows:
+        speeds[r["cohort"]].append(r["speed"]); turns[r["cohort"]].append(r["turn"])
+    thresholds={cohort:{"speed":float(np.median(speeds[cohort])),"turn":float(np.median(turns[cohort]))} for cohort in sorted(speeds)}
+    out=[]
+    for r in rows:
+        th=thresholds[r["cohort"]]
+        state=int(r["speed"]>th["speed"])*2+int(r["turn"]>th["turn"])
+        out.append({**r,"state":state})
+    return out,thresholds
+
+
 def evaluate(panel,c):
     records=xy_records(panel)
-    eps=endpoints(records,int(c["context"]["maximum_step_interval_seconds"]))
-    eps,thresholds=assign_states(eps,CAND)
+    eps,thresholds=timed_kinematic_endpoints(records,int(c["context"]["maximum_step_interval_seconds"]))
 
     grid=float(c["context"]["horizontal_cell_m"])
     by_session=defaultdict(list)
