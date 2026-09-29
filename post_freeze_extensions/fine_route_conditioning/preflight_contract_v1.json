@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-fine-route-preflight-v1",
+  "frozen_date": "2026-09-29",
+  "status": "x-y-time-only fine-horizontal feasibility preflight frozen before fine-route-conditioned vertical outcomes",
+  "role": "post-freeze exploratory mechanism discrimination; cannot alter v0.3.8 submission claims",
+  "question": "At what finer horizontal grain can the already-frozen three-state movement conditioning be combined with place matching while retaining enough evaluable individuals in all five comparative panels?",
+  "parent_result": {
+    "study_id": "batter-movement-state-conditioning-v1",
+    "result_commit": "976554800fdba2830997c09bc981f817d6137068",
+    "pass_count": 5,
+    "movement_state_definition": "q3_dt1800"
+  },
+  "primary_panels": [
+    "eidolon",
+    "hypsignathus",
+    "phyllostomus_2022",
+    "phyllostomus_2023",
+    "phyllostomus_2016"
+  ],
+  "baseline_evaluable_individuals": {
+    "eidolon": 14,
+    "hypsignathus": 24,
+    "phyllostomus_2022": 33,
+    "phyllostomus_2023": 14,
+    "phyllostomus_2016": 10
+  },
+  "movement_state": {
+    "states": 3,
+    "max_dt_seconds": 1800,
+    "thresholds": "cohort-pooled valid horizontal step-speed tertiles",
+    "assignment": "endpoint fix of each valid step"
+  },
+  "candidates_in_priority_order": [
+    {
+      "id": "cell500",
+      "cell_m": 500
+    },
+    {
+      "id": "cell1000",
+      "cell_m": 1000
+    },
+    {
+      "id": "cell2000",
+      "cell_m": 2000
+    },
+    {
+      "id": "cell2500",
+      "cell_m": 2500
+    }
+  ],
+  "feasibility": {
+    "target_support": "A state-valid target event is structurally supported when its fine horizontal cell × movement-state pair occurs in at least one other session of the same individual and at least one retained session of another individual in the same cohort.",
+    "minimum_supported_target_events": 50,
+    "individual_evaluable": "at least one target session with >=50 supported target events",
+    "selection_rule": "Choose the first (finest) candidate for which every primary panel retains at least 70% of its movement-state-conditioned evaluable individuals and at least 5 individuals. If none passes, do not open the fine-route vertical outcome."
+  },
+  "planned_test_if_feasible": {
+    "route_habitat_hypothesis": "Within-state vertical individuality is largely generated because individuals repeatedly use different fine-scale horizontal routes or patches with different vertical opportunities.",
+    "within_matched_stratum_hypothesis": "Vertical individuality persists after self and other profiles are compared under identical fine-cell × movement-state weights.",
+    "vertical_test": "Reuse session-median centered vertical residuals and the frozen whole-session permutation scheme. Replace the 5-km horizontal cell in the movement-state-conditioned estimator with the selected fine cell.",
+    "panel_pass_rule": "exact preflight evaluable n, calibrated observed-minus-null-mean identity >0, and one-sided p(null >= observed)<=0.05"
+  },
+  "stop_rule": [
+    "Do not change candidate order, 70% retention rule, >=5 floor, >=50 target-event support, movement-state definition or support definition after preflight output is opened.",
+    "Do not inspect vertical outcomes while selecting horizontal grain.",
+    "If no fine cell passes, stop rather than lowering support thresholds.",
+    "This extension remains outside the frozen v0.3.8 submission package."
+  ]
+}
