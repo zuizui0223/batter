@@ -74,6 +74,20 @@ No harmonized direct foraging/feeding/activity/behaviour label exists across all
 
 Sex, life stage and reproductive condition cannot be a universal five-panel explanation because at least one panel lacks within-panel variation (notably *Hypsignathus*: all male/adult/mature).
 
+### 6. Body-mass similarity transfer preflight
+
+A prospective donor-transfer test was frozen: if body size helps determine vertical organization, held-out targets should be better predicted by other individuals with closer body mass than by mass-dissimilar donors.
+
+The mass + x-y-time-only preflight failed the all-panel support rule before any vertical transfer outcome was opened.
+
+- *Eidolon*: **3** evaluable targets; **9** required
+- *Hypsignathus*: 24; 17 required
+- *P. hastatus* 2022: 33; 23 required
+- *P. hastatus* 2023: 20; 10 required
+- *P. hastatus* 2016: 18; 7 required
+
+Interpretation: body mass remains unresolved. The limiting problem is again *Eidolon* cross-individual overlap, not a negative morphology result.
+
 ## What the evidence now says
 
 The simplest ecological explanation
@@ -93,9 +107,9 @@ Two live mechanisms remain unresolved:
 
 ## Next discriminating test
 
-The only harmonized varying individual trait currently available across all five panels is **animal mass**. A prospective morphology test can ask whether similarity in body mass predicts similarity in centered vertical organization, preferably as a donor-transfer test within cohort rather than simply correlating body mass with identity strength.
+The current public data have reached a clear identifiability boundary. Broad kinematic composition can be controlled and rejected as a sufficient general explanation, but the two strongest remaining mechanisms—fine-route/resource allocation and morphology-linked transfer—both become structurally unidentifiable in *Eidolon* because cross-individual spatial support collapses.
 
-Such a result would still be associative because wing area and direct wing loading are unavailable.
+The clean next experiment therefore requires deliberately overlapping tracking: repeatedly track individuals of measured body mass/wing morphology over the same fine-scale routes or resource patches, with independent behavioural-state labels and calibrated terrain-relative height. That design can separate fine-place allocation from within-context flight organization rather than trying to infer both from sparse archival overlap.
 
 ## Claim ceiling
 
