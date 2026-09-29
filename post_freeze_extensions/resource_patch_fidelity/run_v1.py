@@ -218,11 +218,11 @@ def centered_identity(panel, records, B, seed):
     return out
 
 
-def panel_dataset(panel, fine_grid_m, shape_settings):
-    records, source = shape.panel_raw(panel)
+def panel_dataset(panel, fine_grid_m, cached):
+    records = cached["records"]
+    source = cached["source"]
+    vert = cached["vertical_identity"]
     patch, patch_rows = patch_fidelity(records, fine_grid_m)
-    setting = shape_settings[panel]
-    vert = centered_identity(panel, records, int(setting["B"]), int(setting["seed"]))
 
     ids = sorted(set(patch) & set(vert))
     rows = []
@@ -306,9 +306,9 @@ def stratified_permutation(panel_results, B, seed):
     }
 
 
-def analyze_grid(grid, shape_settings, assoc_contract):
+def analyze_grid(grid, panel_cache, assoc_contract):
     panel_results = {
-        panel: panel_dataset(panel, grid, shape_settings)
+        panel: panel_dataset(panel, grid, panel_cache[panel])
         for panel in PRIMARY_PANELS
     }
     assoc = stratified_permutation(
@@ -368,8 +368,20 @@ def main():
         x["panel"]: x for x in shape_contract["primary_shift_invariant_shape_test"]["permutation"]["settings"]
     }
 
+    panel_cache = {}
+    for panel in PRIMARY_PANELS:
+        records, source = shape.panel_raw(panel)
+        setting = shape_settings[panel]
+        panel_cache[panel] = {
+            "records": records,
+            "source": source,
+            "vertical_identity": centered_identity(
+                panel, records, int(setting["B"]), int(setting["seed"])
+            ),
+        }
+
     primary_grid = int(contract["exposure"]["primary_fine_grid_m"])
-    panels, assoc = analyze_grid(primary_grid, shape_settings, contract["primary_association"])
+    panels, assoc = analyze_grid(primary_grid, panel_cache, contract["primary_association"])
     rule = contract["primary_association"]["support_rule"]
     verdict = {
         "mean_rho_positive": assoc["observed_equal_panel_mean_rho"] > 0,
@@ -380,7 +392,7 @@ def main():
 
     sensitivity = {}
     for grid in contract["exposure"]["sensitivities_fine_grid_m"]:
-        pr, ar = analyze_grid(int(grid), shape_settings, contract["primary_association"])
+        pr, ar = analyze_grid(int(grid), panel_cache, contract["primary_association"])
         sensitivity[str(grid)] = {
             "panels": pr,
             "association": ar,
