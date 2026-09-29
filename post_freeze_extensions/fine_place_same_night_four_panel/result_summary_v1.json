@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-fine-place-same-night-four-panel-v1",
+  "authoritative_workflow": {
+    "run_id": 36518735021,
+    "head_sha": "2a63679213a07effc39d40cccaf57cfd66dd87e8",
+    "artifact_id": 11015219112,
+    "artifact_digest": "sha256:ee6017479463c5eded4344fd5e733d4a0744b02fcd8e33d63903f71dd5a85e55"
+  },
+  "preflight_run_id": 36518495772,
+  "pass_count": 3,
+  "panel_count": 4,
+  "panels": {
+    "hypsignathus": {
+      "n": 19,
+      "observed_gain": 0.237103433961523,
+      "calibrated_excess": 0.30247121138717603,
+      "p": 0.0002,
+      "pass": true
+    },
+    "phyllostomus_2022": {
+      "n": 26,
+      "observed_gain": 0.10149803925585882,
+      "calibrated_excess": 0.16940106202099642,
+      "p": 0.0002,
+      "pass": true
+    },
+    "phyllostomus_2023": {
+      "n": 14,
+      "observed_gain": 0.030475762902606115,
+      "calibrated_excess": 0.08217380087970408,
+      "p": 0.0286,
+      "pass": true
+    },
+    "phyllostomus_2016": {
+      "n": 9,
+      "observed_gain": 0.2866078019968942,
+      "calibrated_excess": 0.5638550515444642,
+      "p": 0.0544,
+      "pass": false
+    }
+  },
+  "interpretation": "Broad same-night context is insufficient in 3/4 structurally evaluable panels after 2-km fine-place and speed×turn matching; 2016 is unresolved.",
+  "eidolon_generalization": false,
+  "submission_claims_unchanged": true
+}
