@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-body-mass-transfer-preflight-v1",
+  "frozen_date": "2026-09-29",
+  "status": "mass+x-y-time-only feasibility preflight frozen before vertical transfer outcomes",
+  "role": "post-freeze exploratory morphology mechanism test; cannot alter v0.3.8 submission claims",
+  "ecological_hypothesis": "If body size contributes to individual vertical organization, profiles from conspecific donors with body mass closer to the target should predict the target's centered vertical states better than profiles from mass-dissimilar donors.",
+  "panels": [
+    "eidolon",
+    "hypsignathus",
+    "phyllostomus_2022",
+    "phyllostomus_2023",
+    "phyllostomus_2016"
+  ],
+  "kinematic_state": {
+    "definition": "frozen speed2_turn2 from kinematic-state-conditioning-v1",
+    "maximum_step_interval_seconds": 1800,
+    "horizontal_cell_m": 5000
+  },
+  "mass": {
+    "field": "animal_mass",
+    "source": "Movebank reference table",
+    "donor_partition": "Within each target individual's frozen cohort, exclude the target, rank other individuals by absolute animal-mass difference, break ties lexicographically by donor ID, and split the ordered donors into a closer half and farther half. The closer half contains ceil(n_other/2) donors and the farther half the remaining floor(n_other/2).",
+    "require_both_groups_nonempty": true
+  },
+  "feasibility": {
+    "structural_support": "For each target session, derive frozen 5-km cell × speed2_turn2 strata using x-y-time only. A target endpoint is supported if its stratum occurs in at least one session from a closer-mass donor and at least one session from a farther-mass donor in the same cohort.",
+    "minimum_supported_target_events": 50,
+    "individual_evaluable": "at least one target session with >=50 common supported endpoints",
+    "required_panel_retention": "at least 70% of the kinematic-state-conditioned evaluable n and at least 5 individuals in every panel",
+    "baseline_n": {
+      "eidolon": 12,
+      "hypsignathus": 23,
+      "phyllostomus_2022": 32,
+      "phyllostomus_2023": 14,
+      "phyllostomus_2016": 10
+    },
+    "decision": "If every panel passes, freeze exact evaluable n before opening vertical outcomes; otherwise stop the five-panel mass-transfer family."
+  },
+  "planned_test_if_feasible": {
+    "endpoint": "mean target log P_close_mass(z_residual | cell,state) - log P_far_mass(z_residual | cell,state), scored only on target events supported by both donor pools",
+    "donor_weighting": "equal session within donor, then equal donor within close/far group",
+    "aggregation": "equal target session within target individual, then equal individual within panel",
+    "null": "permute animal-mass labels among eligible individuals within frozen cohort, rebuild close/far donor groups, and recompute the complete panel statistic",
+    "B": 9999,
+    "seeds": {
+      "eidolon": 20260929011,
+      "hypsignathus": 20260929012,
+      "phyllostomus_2022": 20260929013,
+      "phyllostomus_2023": 20260929014,
+      "phyllostomus_2016": 20260929015
+    },
+    "panel_support_rule": "observed close-minus-far gain > 0 and one-sided p(null >= observed) <= 0.05",
+    "synthesis": "4 or 5 panels support => body-mass similarity is a general predictor of vertical organization; 2 or 3 => context-dependent; 0 or 1 => simple body-mass similarity is not a general mechanism."
+  },
+  "claim_boundary": [
+    "Animal mass is not wing loading or full morphology.",
+    "A positive transfer effect would be associative, not causal.",
+    "A negative result would not rule out wing shape, age, experience or other stable traits.",
+    "This extension remains outside the frozen v0.3.8 submission package."
+  ],
+  "stop_rule": [
+    "Do not change close/far split, 50-event support, 70% retention, kinematic-state definition, panel set, permutation count/seeds or pass rules after preflight/output.",
+    "Do not substitute tag mass or sex if animal mass fails.",
+    "Do not drop a panel after seeing preflight or vertical outcomes."
+  ]
+}
