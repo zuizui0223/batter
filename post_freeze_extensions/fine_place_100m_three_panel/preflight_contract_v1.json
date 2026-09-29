@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-fine-place-100m-preflight-three-panel-v1",
+  "frozen_date": "2026-09-29",
+  "status": "x-y-time-only 100-m fine-place × speed-turn feasibility preflight frozen before any 100-m vertical outcome",
+  "role": "post-freeze exploratory spatial-localization stress test; opened after positive 250-m results; not independent confirmation",
+  "provenance": {
+    "source_ultrafine_preflight_run_id": 36537793408,
+    "source_250m_vertical_run_id": 36538110550,
+    "opened_after_positive_250m_results": true
+  },
+  "panels": [
+    "hypsignathus",
+    "phyllostomus_2022",
+    "phyllostomus_2016"
+  ],
+  "baseline_250m_n": {
+    "hypsignathus": 16,
+    "phyllostomus_2022": 19,
+    "phyllostomus_2016": 9
+  },
+  "context": {
+    "fine_grid_m": 100,
+    "movement_state": "frozen speed2_turn2",
+    "maximum_step_interval_seconds": 1800
+  },
+  "feasibility": {
+    "target_support": "A target endpoint is supported when its 100-m cell × speed×turn state occurs in at least one other session of the same individual and in at least one session from another individual in the same cohort.",
+    "minimum_supported_target_events": 50,
+    "individual_evaluable": "at least one target session with >=50 supported endpoints",
+    "panel_gate": "retain at least 70% of the frozen 250-m baseline n and at least 5 individuals in every panel",
+    "decision": "If all three panels pass, freeze exact n and open a 100-m vertical stress test. Otherwise stop before any 100-m vertical outcome."
+  },
+  "planned_vertical_test_if_feasible": {
+    "estimator": "P(centered residual height | 100-m cell, speed×turn state), equal-session self, equal-individual other, identical self-derived joint-stratum weights",
+    "calibration": "reuse frozen whole-session permutation B/seeds from the corresponding speed×turn analyses",
+    "panel_pass_rule": "exact preflight n; calibrated identity >0; one-sided p(null>=observed)<=0.05",
+    "synthesis": "3/3 PASS => in those systems, route/resource allocation at scales >=100 m remains insufficient; mixed/0 => localization boundary is between 100 and 250 m."
+  },
+  "claim_boundary": [
+    "100-m cells are still matching strata, not exact paths or resources.",
+    "This stress test was opened after positive 250-m results and is not independent confirmation.",
+    "No inference to P2023 or Eidolon.",
+    "Frozen v0.3.8 remains unchanged."
+  ],
+  "stop_rule": [
+    "Do not change 100-m grid, speed2_turn2 definition, 70% gate, >=5 floor, 50-event support or panel set after preflight output.",
+    "If any panel fails the support gate, stop before vertical outcome.",
+    "Do not invent a 150-m or other intermediate grid."
+  ]
+}

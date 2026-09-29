@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-fine-place-100m-preflight-three-panel-v1",
+  "authoritative_workflow": {
+    "run_id": 36562640821,
+    "head_sha": "0c18e6930cf26210afa79fbc94cd269ea707e536",
+    "artifact_id": 11030960735,
+    "artifact_digest": "sha256:93dc7bac3a0a9eb06727849d343cba4a85b2d0f76a2cdbdc714bed29bed80f25"
+  },
+  "feasible_to_open_vertical_outcome": false,
+  "baseline_250m": {
+    "hypsignathus": 16,
+    "phyllostomus_2022": 19,
+    "phyllostomus_2016": 9
+  },
+  "required": {
+    "hypsignathus": 12,
+    "phyllostomus_2022": 14,
+    "phyllostomus_2016": 7
+  },
+  "counts_100m": {
+    "hypsignathus": 10,
+    "phyllostomus_2022": 8,
+    "phyllostomus_2016": 9
+  },
+  "vertical_outcome_opened": false,
+  "interpretation": "Three-panel common spatial localization stops at 250 m under the frozen support rule.",
+  "submission_claims_unchanged": true
+}
