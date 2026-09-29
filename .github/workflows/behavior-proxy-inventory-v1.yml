@@ -1,0 +1,31 @@
+name: behavior-proxy-inventory-v1
+
+on:
+  push:
+    branches:
+      - exploratory/behavior-proxy-inventory-v1
+    paths:
+      - "post_freeze_extensions/behavior_proxy_inventory/**"
+      - ".github/workflows/behavior-proxy-inventory-v1.yml"
+  workflow_dispatch:
+
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Inventory source fields
+        run: python post_freeze_extensions/behavior_proxy_inventory/run_v1.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: batter-behavior-proxy-inventory-v1
+          path: |
+            post_freeze_extensions/behavior_proxy_inventory/result_v1.json
+            post_freeze_extensions/behavior_proxy_inventory/RESULT_V1.md
+          if-no-files-found: error
