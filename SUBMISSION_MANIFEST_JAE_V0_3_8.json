@@ -6,11 +6,11 @@
   "manuscript": {
     "path": "manuscript/MANUSCRIPT_DRAFT_V0_3_8.md",
     "title": "Repeatable individual shapes of vertical space use persist beyond coarse horizontal occupancy in bats",
-    "ci_word_estimate": 7953,
+    "ci_word_estimate": 7887,
     "abstract_words": 282,
-    "introduction_words": 685,
+    "introduction_words": 723,
     "results_words": 1328,
-    "discussion_words": 1739,
+    "discussion_words": 1602,
     "abstract_numbered_statements": 5,
     "keywords": 7,
     "main_figures": 6,
@@ -26,7 +26,7 @@
     "descriptive_visualization_adds_inference": false
   },
   "ecological_interpretation": {
-    "main_result": "repeatable individual vertical-distribution shapes in five comparative panels after coarse horizontal and additive-altitude controls",
+    "main_result": "repeatable individual organization of centered vertical space use in five comparative panels after coarse horizontal and additive-altitude controls",
     "visible_shape_components": [
       "descriptive central concentration",
       "descriptive upper-tail use",
@@ -38,28 +38,33 @@
     "vertical_niche_strategy_classes_inferred": false,
     "component_ranges_exchangeability_calibrated": false,
     "component_ranges_include_estimation_noise": true,
-    "component_specific_identity_inferred": false
+    "component_specific_identity_inferred": false,
+    "mechanism_hypotheses": [
+      "behavioural-mixture individuality",
+      "within-state individuality"
+    ],
+    "mechanism_tested": false
   },
   "automated_validation": {
     "manuscript_figures": {
-      "run_id": 36473273535,
-      "head_sha": "591b82da7498682b298a2311b62a44a2dd409684",
+      "run_id": 36506593033,
+      "head_sha": "2c84d11824dc410af3977f12d1fab5e3f6883bc1",
       "conclusion": "success",
-      "main_artifact_id": 10992433031,
-      "main_artifact_digest": "sha256:19d26b53a480674733a63acbfd2a44c6e19505a7c6f18acc5fb5c55100828019",
-      "supporting_artifact_id": 10992442954,
-      "supporting_artifact_digest": "sha256:87c410a83e4c94bce3086f7498854bbb60e39e29da8258e3540b8717802b6206",
-      "descriptive_profiles_artifact_id": 10992497867,
-      "descriptive_profiles_artifact_digest": "sha256:05da68591c3b4d9820b4591ad745b64b1c97917c607a5e6f0e0f8fefa01d618f"
+      "main_artifact_id": 11007013708,
+      "main_artifact_digest": "sha256:25cf432948626550b0f84257e55d7c924f26bc4f666d59f99e03b84b2203b5b5",
+      "supporting_artifact_id": 11007621411,
+      "supporting_artifact_digest": "sha256:feff1dc31f777c45b196009d3b07e1c332b45280e7e48825a41b6d42bd177664",
+      "descriptive_profiles_artifact_id": 11007651308,
+      "descriptive_profiles_artifact_digest": "sha256:fec9c49230a426e2883d4ba76928a6d523f60695feb315d52f08c10f9d740b6e"
     },
     "anonymous_review_pdf": {
-      "run_id": 36473273481,
-      "head_sha": "591b82da7498682b298a2311b62a44a2dd409684",
+      "run_id": 36506593064,
+      "head_sha": "2c84d11824dc410af3977f12d1fab5e3f6883bc1",
       "conclusion": "success",
       "anonymity_guard": "pass",
-      "pages": 27,
-      "artifact_id": 10992717441,
-      "artifact_digest": "sha256:2777b7565012e1473c325b99a8de4de0e95f987cdae4118bfbd5a1b9f29efbcc"
+      "pages": 26,
+      "artifact_id": 11006968753,
+      "artifact_digest": "sha256:f141c3605147066cf338a1554d4b72d295fa008f4e505bdf4d46a0afdb13bc22"
     },
     "descriptive_profile_reproducibility": {
       "frozen_contract": "contract/centered_shape_profile_descriptive_v1.json",
@@ -77,7 +82,7 @@
     "visual_inspection": {
       "main_figures_1_to_6": "passed",
       "supporting_figures_S1_to_S2": "passed",
-      "review_pdf_27_pages": "passed"
+      "review_pdf_26_pages": "passed"
     }
   },
   "supersedes": "batter-jae-v0.3.7-rc2",
@@ -93,10 +98,10 @@
     "expected_release_tag": "jae-v0.3.8",
     "release_notes": "RELEASE_NOTES_JAE_V0_3_8.md",
     "synthetic_self_test": {
-      "workflow_run_id": 36473746777,
+      "workflow_run_id": 36506593120,
       "conclusion": "success",
-      "pre_release_combined_words": 8136,
-      "post_doi_combined_words": 8131,
+      "pre_release_combined_words": 8070,
+      "post_doi_combined_words": 8065,
       "pre_release": "ready",
       "post_doi": "ready",
       "jae_final_upload_gate": "ready"
@@ -116,7 +121,7 @@
       }
     },
     "active_reference_guard": {
-      "workflow_run_id": 36398917758,
+      "workflow_run_id": 36506593111,
       "conclusion": "success"
     }
   },
