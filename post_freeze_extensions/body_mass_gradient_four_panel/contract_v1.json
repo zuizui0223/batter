@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-body-mass-gradient-four-panel-v1",
+  "frozen_date": "2026-09-29",
+  "status": "four-panel continuous body-mass donor-gradient test frozen after mass+x-y-time support preflight and before any donor vertical score",
+  "role": "post-freeze exploratory morphology mechanism test; cannot alter v0.3.8 or generalize to Eidolon",
+  "preflight": {
+    "source_family": "batter-body-mass-gradient-preflight-v1",
+    "vertical_outcome_opened_in_source": false,
+    "excluded_panel": "eidolon",
+    "exclusion_reason": "only 1/12 kinematic-state target individuals had >=4 supported donor individuals and >=3 distinct mass distances",
+    "included_panels": [
+      "hypsignathus",
+      "phyllostomus_2022",
+      "phyllostomus_2023",
+      "phyllostomus_2016"
+    ],
+    "expected_evaluable_targets": {
+      "hypsignathus": 21,
+      "phyllostomus_2022": 30,
+      "phyllostomus_2023": 13,
+      "phyllostomus_2016": 10
+    },
+    "selection_basis": "animal mass + x-y-time support only; no donor vertical predictive score used"
+  },
+  "ecological_hypothesis": "If body size contributes to within-context vertical organization, other-individual vertical profiles should transfer better to targets with more similar body mass.",
+  "context_matching": {
+    "movement_state": "frozen speed2_turn2",
+    "horizontal_cell_m": 5000,
+    "maximum_step_interval_seconds": 1800,
+    "vertical_centering": "subtract each retained session's median primary vertical coordinate",
+    "vertical_edges_m": [
+      "-inf",
+      -400,
+      -200,
+      -100,
+      -50,
+      0,
+      50,
+      100,
+      200,
+      400,
+      "inf"
+    ],
+    "stratum": "5-km horizontal cell × speed×turn state"
+  },
+  "mass": {
+    "field": "animal_mass",
+    "predictor": "absolute donor-target mass difference",
+    "no_grouping": true,
+    "within_cohort_only": true
+  },
+  "donor_score": {
+    "donor_profile": "equal-session P(centered residual height | 5-km cell,state) from one other-individual donor",
+    "baseline_profile": "equal-donor average vertical profile from all other eligible donors except the focal donor and target, evaluated on the same target-supported strata; require at least two baseline donors",
+    "target_session_support": "target endpoints whose cell×state stratum is supported by both focal donor and baseline profile",
+    "minimum_supported_target_events": 50,
+    "session_gain": "mean log P_focal_donor - log P_baseline_other_donors on common supported target endpoints",
+    "donor_target_gain": "equal-session mean session_gain for that target-donor pair"
+  },
+  "target_statistic": {
+    "statistic": "Spearman rho across structurally evaluable donor individuals between absolute donor-target mass difference and donor_target_gain",
+    "expected_sign": "negative",
+    "minimum_donors": 4,
+    "minimum_distinct_mass_distances": 3
+  },
+  "panel_statistic": {
+    "statistic": "equal-target mean of target-level Spearman rho",
+    "target_set": "exact preflight-selected target individuals with valid vertical donor scores under frozen support",
+    "exact_expected_n": {
+      "hypsignathus": 21,
+      "phyllostomus_2022": 30,
+      "phyllostomus_2023": 13,
+      "phyllostomus_2016": 10
+    }
+  },
+  "calibration": {
+    "null": "within each frozen cohort, permute animal-mass labels among eligible individuals while holding all donor-target vertical predictive scores and support fixed; recompute target rhos and equal-target panel mean",
+    "B": 99999,
+    "seeds": {
+      "hypsignathus": 20260929032,
+      "phyllostomus_2022": 20260929033,
+      "phyllostomus_2023": 20260929034,
+      "phyllostomus_2016": 20260929035
+    },
+    "panel_pass_rule": "observed equal-target mean rho < 0 and one-sided p(null <= observed) <= 0.05"
+  },
+  "synthesis": {
+    "decision_matrix": {
+      "3_or_4_pass": "Within the structurally evaluable four-panel subset, body-mass similarity predicts cross-individual transfer of vertical organization.",
+      "1_or_2_pass": "Body-mass association is context-dependent across the structurally evaluable subset.",
+      "0_pass": "Simple body-mass similarity is not supported as a general predictor of vertical-organization transfer in the structurally evaluable subset."
+    },
+    "generalization_limit": "No inference to Eidolon; animal mass is not wing loading or complete morphology."
+  },
+  "claim_boundary": [
+    "Subset membership was fixed by mass+x-y-time support before donor vertical scores were opened.",
+    "Animal mass is only a morphology proxy.",
+    "Association does not establish causal morphology.",
+    "A null result does not rule out wing shape, wing loading, experience, memory or other stable traits.",
+    "This test remains outside v0.3.8."
+  ],
+  "stop_rule": [
+    "Do not change target set, 5-km grid, speed2_turn2 state, >=50 pair support, >=4 donor minimum, >=3 mass-distance minimum, donor baseline, permutation B/seeds or pass rule after output.",
+    "If exact target n cannot be reproduced under the vertical scorer, stop and invalidate rather than retune."
+  ]
+}
