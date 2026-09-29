@@ -4,8 +4,9 @@ Ecological analysis of repeatable individual shapes of vertical space use in thr
 
 ## Biological question
 
-Do bat populations contain repeatable **individual-specific shapes of vertical space use**, and do
-those shapes persist after coarse horizontal occupancy and additive altitude level are controlled?
+Do bat populations contain repeatable **individual-specific organizations of vertical space use**—
+that is, different probability distributions around their session-specific typical altitude—and do
+those differences persist after coarse horizontal occupancy and additive altitude level are controlled?
 
 The project began from an ODSP result in *Tadarida teniotis*, but the current paper is comparative:
 the strongest ecological result comes from five non-*Tadarida* panels that retain centered
@@ -51,6 +52,21 @@ so the figure does not identify which component carries the validated whole-prof
 signal. No cluster, strategy class, behavioural state or additional p-value is inferred.
 
 See `CENTERED_SHAPE_PROFILE_DESCRIPTIVE_RESULT_V1.md`.
+
+## What could generate the repeatable shapes
+
+The calibrated result is distribution-level: individual identity predicts how vertical-use probability
+is organized around the session median. Two non-exclusive mechanisms could generate that result:
+
+- **behavioural-mixture individuality** — individuals repeatedly allocate different fractions of a
+  night to commuting, feeding-patch use, social-site visits or other behavioural states;
+- **within-state individuality** — individuals differ in vertical movement even within the same
+  behavioural state because of morphology, route memory, experience, resource choice or atmospheric
+  response.
+
+The present public datasets do not contain a harmonized behavioural-state classifier, so these are
+prospective mechanisms, not inferred causes. A decisive next test is whether identity disappears or
+persists after conditioning on independently classified behavioural state.
 
 ## Why the claim changed
 
