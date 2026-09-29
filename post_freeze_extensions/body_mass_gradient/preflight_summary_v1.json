@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-body-mass-gradient-preflight-v1",
+  "authoritative_workflow": {
+    "run_id": 36515396505,
+    "head_sha": "aa425333c2bd31e79d0fad66912edcdc0a8b575b",
+    "artifact_id": 11010746948,
+    "artifact_digest": "sha256:4cece2d2df4f5a43f6ce28c82170fbcc322930efbd5cb182b9a5c715ed9f1aa7"
+  },
+  "feasible_to_open_vertical_outcome": false,
+  "counts": {
+    "eidolon": 1,
+    "hypsignathus": 21,
+    "phyllostomus_2022": 30,
+    "phyllostomus_2023": 13,
+    "phyllostomus_2016": 10
+  },
+  "required": {
+    "eidolon": 9,
+    "hypsignathus": 17,
+    "phyllostomus_2022": 23,
+    "phyllostomus_2023": 10,
+    "phyllostomus_2016": 7
+  },
+  "retention": {
+    "eidolon": 0.08333333333333333,
+    "hypsignathus": 0.9130434782608695,
+    "phyllostomus_2022": 0.9375,
+    "phyllostomus_2023": 0.9285714285714286,
+    "phyllostomus_2016": 1
+  },
+  "limiting_panel": "eidolon",
+  "vertical_outcome_opened": false,
+  "interpretation": "Continuous body-mass donor transfer remains unidentifiable at the five-panel level because Eidolon lacks sufficient supported donor-target pairs.",
+  "submission_claims_unchanged": true
+}
