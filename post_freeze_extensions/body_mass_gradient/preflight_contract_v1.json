@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-body-mass-gradient-preflight-v1",
+  "frozen_date": "2026-09-29",
+  "status": "mass+x-y-time pair-support preflight frozen before donor vertical scores",
+  "role": "post-freeze exploratory morphology mechanism test; distinct continuous-gradient family; cannot alter v0.3.8 submission claims",
+  "ecological_hypothesis": "If body size contributes to vertical organization, vertical profiles from other individuals with body mass closer to the target should transfer better to that target than profiles from mass-dissimilar donors.",
+  "panels": [
+    "eidolon",
+    "hypsignathus",
+    "phyllostomus_2022",
+    "phyllostomus_2023",
+    "phyllostomus_2016"
+  ],
+  "baseline_n": {
+    "eidolon": 12,
+    "hypsignathus": 23,
+    "phyllostomus_2022": 32,
+    "phyllostomus_2023": 14,
+    "phyllostomus_2016": 10
+  },
+  "kinematic_context": {
+    "state_definition": "frozen speed2_turn2",
+    "maximum_step_interval_seconds": 1800,
+    "horizontal_cell_m": 5000,
+    "stratum": "5-km horizontal cell × speed-bin × turning-bin"
+  },
+  "mass": {
+    "field": "animal_mass",
+    "source": "Movebank reference table",
+    "predictor": "absolute donor-target animal-mass difference",
+    "no_grouping": true
+  },
+  "feasibility": {
+    "donor_pair_support": "For each target session and each other-individual donor in the same frozen cohort, a target endpoint is pair-supported if its 5-km cell × kinematic-state stratum occurs in at least one retained donor session.",
+    "minimum_supported_target_events_per_donor": 50,
+    "pair_aggregation": "A donor-target pair is structurally evaluable if at least one target session has >=50 donor-supported endpoints.",
+    "target_individual_evaluable": "at least 4 structurally evaluable donor individuals with nonmissing animal mass and at least 3 distinct absolute mass differences",
+    "panel_gate": "at least 70% of the kinematic-state baseline evaluable n and at least 5 target individuals in every panel",
+    "decision": "If all five panels pass, freeze exact target n and open the vertical donor-gradient outcome. Otherwise stop this five-panel continuous mass-gradient family."
+  },
+  "planned_vertical_test_if_feasible": {
+    "donor_profile": "equal-session P(centered residual height | 5-km cell, kinematic state) from the donor individual's retained sessions",
+    "target_session_score": "mean log donor profile probability on donor-supported target endpoints minus the equal-individual other-donor population profile probability on the same target endpoints",
+    "target_donor_score": "equal-session mean donor-specific predictive gain for that target individual",
+    "target_statistic": "Spearman rho between absolute donor-target mass difference and target-donor predictive gain; expected negative",
+    "panel_statistic": "equal-target mean Spearman rho",
+    "null": "permute animal-mass labels among eligible individuals within frozen cohort while holding all donor-target predictive scores and support fixed; recompute target rhos and panel mean",
+    "B": 99999,
+    "seeds": {
+      "eidolon": 20260929031,
+      "hypsignathus": 20260929032,
+      "phyllostomus_2022": 20260929033,
+      "phyllostomus_2023": 20260929034,
+      "phyllostomus_2016": 20260929035
+    },
+    "panel_support_rule": "observed panel mean rho < 0 and one-sided p(null <= observed) <= 0.05",
+    "synthesis": "4 or 5 panels support => body-mass similarity is a general predictor of cross-individual vertical organization; 2 or 3 => context-dependent; 0 or 1 => simple body mass is not a general mechanism."
+  },
+  "claim_boundary": [
+    "Animal mass is an incomplete morphology proxy and is not wing loading.",
+    "A negative gradient would be associative, not causal.",
+    "Failure would not rule out wing shape, experience, memory or other stable traits.",
+    "This family is distinct from the stopped close/far donor-pool design and is frozen before any vertical donor score is opened.",
+    "This extension remains outside the frozen v0.3.8 submission package."
+  ],
+  "stop_rule": [
+    "Do not change the >=50 pair support, >=4 donors, >=3 distinct mass distances, 70% panel retention, >=5 target floor, kinematic-state definition, panel set, permutation count/seeds or support rule after preflight/output.",
+    "Do not group mass or substitute tag mass/sex if the continuous gradient fails.",
+    "Do not drop a panel after seeing preflight or vertical outcomes."
+  ]
+}
