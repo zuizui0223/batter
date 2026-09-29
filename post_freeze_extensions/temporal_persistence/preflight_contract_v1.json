@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-temporal-persistence-preflight-v1",
+  "frozen_date": "2026-09-29",
+  "status": "x-y-time-only lag-restricted self-history feasibility preflight frozen before vertical outcomes",
+  "role": "post-freeze exploratory mechanism discrimination; cannot alter v0.3.8",
+  "question": "Does individual vertical organization persist when self-training information is restricted to sessions separated from the target by multiple days?",
+  "panels": [
+    "eidolon",
+    "hypsignathus",
+    "phyllostomus_2022",
+    "phyllostomus_2023",
+    "phyllostomus_2016"
+  ],
+  "kinematic_baseline_n": {
+    "eidolon": 12,
+    "hypsignathus": 23,
+    "phyllostomus_2022": 32,
+    "phyllostomus_2023": 14,
+    "phyllostomus_2016": 10
+  },
+  "state_definition": {
+    "source": "frozen speed2_turn2",
+    "maximum_step_interval_seconds": 1800,
+    "horizontal_cell_m": 5000,
+    "state_count": 4,
+    "thresholds": "cohort medians of valid endpoint speed and absolute turn angle"
+  },
+  "session_time": {
+    "definition": "median timestamp of valid speed×turn endpoints within each frozen session",
+    "lag": "absolute difference between target-session and training-session median timestamps"
+  },
+  "lag_candidates_in_priority_order": [
+    {
+      "id": "lag7d",
+      "minimum_days": 7
+    },
+    {
+      "id": "lag3d",
+      "minimum_days": 3
+    },
+    {
+      "id": "lag1d",
+      "minimum_days": 1
+    }
+  ],
+  "feasibility": {
+    "self_history": "same-individual sessions in the same frozen cohort whose median timestamp differs from the target by at least the candidate lag",
+    "other_history": "all retained sessions of other individuals in the same cohort",
+    "target_support": "target speed×turn endpoint whose 5-km cell×state stratum occurs in at least one lag-qualified self session and in at least one other-individual session",
+    "minimum_supported_target_events": 50,
+    "individual_evaluable": "at least one target session with >=50 supported endpoints",
+    "selection_rule": "Choose the first (largest-lag) candidate for which every panel retains at least 70% of the frozen speed×turn baseline n and at least 5 individuals. If none passes, stop the five-panel persistence family before vertical outcome."
+  },
+  "planned_test_if_feasible": {
+    "stable_individual_hypothesis": "Individual centered vertical organization persists across multi-day separation and is not only a short-lived state.",
+    "transient_context_hypothesis": "Identity weakens to its exchangeability null when only temporally distant self sessions are available.",
+    "estimator": "P(centered residual height | 5-km cell, speed×turn state) from lag-qualified same-individual sessions versus equal-individual other profiles on identical common support",
+    "calibration": "whole-session label permutation within frozen cohort; session timestamps and x-y-time-state-z blocks remain attached to session; lag qualification is rebuilt under each permuted identity assignment",
+    "panel_pass_rule": "exact observed preflight n; calibrated identity >0; one-sided p(null>=observed)<=0.05",
+    "synthesis": "4 or 5 PASS => multi-day stable individual organization; 2 or 3 => context-dependent persistence; 0 or 1 => short-lived context/state becomes a leading explanation."
+  },
+  "claim_boundary": [
+    "Multi-day persistence does not prove genetic or intrinsic personality effects.",
+    "The test distinguishes temporal stability from short-lived context only at the selected lag scale.",
+    "No inference applies beyond tracking durations represented in the public data.",
+    "This extension remains outside frozen v0.3.8."
+  ],
+  "stop_rule": [
+    "Do not change lag sequence 7/3/1 days, session-time definition, speed2_turn2 state, 5-km grid, 70% retention, >=5 floor or 50-event support after preflight output.",
+    "Do not inspect vertical outcomes while selecting lag.",
+    "If no lag passes all five panels, stop the five-panel family rather than inventing a shorter threshold."
+  ]
+}
