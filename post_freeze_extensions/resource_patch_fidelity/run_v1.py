@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import argparse
 import itertools
 import json
 import math
@@ -361,27 +362,60 @@ def markdown(payload):
     return "\n".join(lines)
 
 
-def main():
-    contract = json.loads(CONTRACT.read_text(encoding="utf-8"))
-    shape_contract = json.loads(SHAPE_CONTRACT.read_text(encoding="utf-8"))
-    shape_settings = {
-        x["panel"]: x for x in shape_contract["primary_shift_invariant_shape_test"]["permutation"]["settings"]
+def compute_panel_record(panel, contract, shape_settings):
+    records, source = shape.panel_raw(panel)
+    setting = shape_settings[panel]
+    vertical = centered_identity(panel, records, int(setting["B"]), int(setting["seed"]))
+    grids = [
+        int(contract["exposure"]["primary_fine_grid_m"]),
+        *[int(x) for x in contract["exposure"]["sensitivities_fine_grid_m"]],
+    ]
+    grid_results = {}
+    cached = {"records": records, "source": source, "vertical_identity": vertical}
+    for grid in grids:
+        grid_results[str(grid)] = panel_dataset(panel, grid, cached)
+    return {
+        "panel": panel,
+        "shape_permutation_B": int(setting["B"]),
+        "shape_permutation_seed": int(setting["seed"]),
+        "source": source,
+        "vertical_identity": vertical,
+        "grids": grid_results,
     }
 
-    panel_cache = {}
-    for panel in PRIMARY_PANELS:
-        records, source = shape.panel_raw(panel)
-        setting = shape_settings[panel]
-        panel_cache[panel] = {
-            "records": records,
-            "source": source,
-            "vertical_identity": centered_identity(
-                panel, records, int(setting["B"]), int(setting["seed"])
-            ),
-        }
 
+def write_panel(panel, contract, shape_settings, out_dir):
+    rec = compute_panel_record(panel, contract, shape_settings)
+    out_dir.mkdir(parents=True, exist_ok=True)
+    path = out_dir / f"panel_{panel}_v1.json"
+    path.write_text(json.dumps(rec, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    g = str(int(contract["exposure"]["primary_fine_grid_m"]))
+    print(json.dumps({
+        "panel": panel,
+        "n": rec["grids"][g]["n_matched_individuals"],
+        "rho_1km": rec["grids"][g]["spearman_rho"],
+    }, sort_keys=True))
+
+
+def load_panel_records(panel_dir):
+    out = {}
+    for panel in PRIMARY_PANELS + [BOUNDARY_PANEL]:
+        path = panel_dir / f"panel_{panel}_v1.json"
+        if not path.exists():
+            raise RuntimeError(f"missing panel result: {path}")
+        out[panel] = json.loads(path.read_text(encoding="utf-8"))
+    return out
+
+
+def aggregate_from_panel_records(contract, panel_records):
     primary_grid = int(contract["exposure"]["primary_fine_grid_m"])
-    panels, assoc = analyze_grid(primary_grid, panel_cache, contract["primary_association"])
+    primary_key = str(primary_grid)
+    panels = {p: panel_records[p]["grids"][primary_key] for p in PRIMARY_PANELS}
+    assoc = stratified_permutation(
+        panels,
+        int(contract["primary_association"]["B"]),
+        int(contract["primary_association"]["seed"]) + primary_grid,
+    )
     rule = contract["primary_association"]["support_rule"]
     verdict = {
         "mean_rho_positive": assoc["observed_equal_panel_mean_rho"] > 0,
@@ -392,24 +426,20 @@ def main():
 
     sensitivity = {}
     for grid in contract["exposure"]["sensitivities_fine_grid_m"]:
-        pr, ar = analyze_grid(int(grid), panel_cache, contract["primary_association"])
-        sensitivity[str(grid)] = {
+        key = str(int(grid))
+        pr = {p: panel_records[p]["grids"][key] for p in PRIMARY_PANELS}
+        ar = stratified_permutation(
+            pr,
+            int(contract["primary_association"]["B"]),
+            int(contract["primary_association"]["seed"]) + int(grid),
+        )
+        sensitivity[key] = {
             "panels": pr,
             "association": ar,
             "cannot_replace_primary": True,
         }
 
-    # Descriptive boundary comparator only.
-    t_records, t_source = shape.panel_raw(BOUNDARY_PANEL)
-    t_patch, t_patch_rows = patch_fidelity(t_records, primary_grid)
-    t_setting = shape_settings[BOUNDARY_PANEL]
-    t_vert = centered_identity(BOUNDARY_PANEL, t_records, int(t_setting["B"]), int(t_setting["seed"]))
-    t_ids = sorted(set(t_patch) & set(t_vert))
-    t_rows = [{"individual": iid, **t_patch[iid], **t_vert[iid]} for iid in t_ids]
-    t_rho = spearman(
-        [r["patch_fidelity_excess"] for r in t_rows],
-        [r["calibrated_centered_identity"] for r in t_rows],
-    ) if len(t_rows) >= 2 else None
+    t_res = panel_records[BOUNDARY_PANEL]["grids"][primary_key]
 
     if verdict["pass"]:
         interpretation = contract["interpretation_matrix"]["supported"]
@@ -418,7 +448,7 @@ def main():
     else:
         interpretation = contract["interpretation_matrix"]["unsupported"]
 
-    payload = {
+    return {
         "schema_version": 1,
         "study_id": contract["study_id"],
         "contract": str(CONTRACT.relative_to(ROOT)),
@@ -431,11 +461,7 @@ def main():
         },
         "sensitivities": sensitivity,
         "tadarida_descriptive_boundary": {
-            "source": t_source,
-            "n_matched_individuals": len(t_rows),
-            "spearman_rho": t_rho,
-            "individuals": t_rows,
-            "cohort_patch_rows": t_patch_rows,
+            **t_res,
             "excluded_from_primary_meta_statistic": True,
         },
         "interpretation": interpretation,
@@ -443,20 +469,52 @@ def main():
         "stop_rule": contract["stop_rule"],
     }
 
-    OUT_JSON.parent.mkdir(parents=True, exist_ok=True)
-    OUT_JSON.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
-    OUT_MD.write_text(markdown(payload), encoding="utf-8")
-    print(json.dumps({
-        "primary_mean_rho": assoc["observed_equal_panel_mean_rho"],
-        "primary_p": assoc["one_sided_p"],
-        "positive_panels": assoc["positive_panel_count"],
-        "primary_pass": verdict["pass"],
-        "panel_rhos": assoc["panel_rhos"],
-        "sensitivity_mean_rho": {
-            k: v["association"]["observed_equal_panel_mean_rho"] for k, v in sensitivity.items()
-        },
-        "tadarida_rho_descriptive": t_rho,
-    }, sort_keys=True))
+
+def main():
+    ap = argparse.ArgumentParser()
+    mode = ap.add_mutually_exclusive_group()
+    mode.add_argument("--panel", choices=PRIMARY_PANELS + [BOUNDARY_PANEL])
+    mode.add_argument("--aggregate", action="store_true")
+    ap.add_argument(
+        "--panel-dir",
+        default="post_freeze_extensions/resource_patch_fidelity/panel_results",
+    )
+    args = ap.parse_args()
+
+    contract = json.loads(CONTRACT.read_text(encoding="utf-8"))
+    shape_contract = json.loads(SHAPE_CONTRACT.read_text(encoding="utf-8"))
+    shape_settings = {
+        x["panel"]: x
+        for x in shape_contract["primary_shift_invariant_shape_test"]["permutation"]["settings"]
+    }
+    panel_dir = ROOT / args.panel_dir
+
+    if args.panel:
+        write_panel(args.panel, contract, shape_settings, panel_dir)
+        return 0
+
+    if args.aggregate:
+        panel_records = load_panel_records(panel_dir)
+        payload = aggregate_from_panel_records(contract, panel_records)
+        OUT_JSON.parent.mkdir(parents=True, exist_ok=True)
+        OUT_JSON.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+        OUT_MD.write_text(markdown(payload), encoding="utf-8")
+        a = payload["primary"]["association"]
+        print(json.dumps({
+            "primary_mean_rho": a["observed_equal_panel_mean_rho"],
+            "primary_p": a["one_sided_p"],
+            "positive_panels": a["positive_panel_count"],
+            "primary_pass": payload["primary"]["verdict"]["pass"],
+            "panel_rhos": a["panel_rhos"],
+            "sensitivity_mean_rho": {
+                k: v["association"]["observed_equal_panel_mean_rho"]
+                for k, v in payload["sensitivities"].items()
+            },
+            "tadarida_rho_descriptive": payload["tadarida_descriptive_boundary"]["spearman_rho"],
+        }, sort_keys=True))
+        return 0
+
+    raise SystemExit("choose --panel PANEL or --aggregate")
 
 
 if __name__ == "__main__":
