@@ -53,14 +53,46 @@
         "phyllostomus_2023": 8,
         "phyllostomus_2016": 7
       }
+    },
+    "persistence_1d": {
+      "pass_count": 4,
+      "panel_count": 4
+    },
+    "body_mass_gradient": {
+      "pass_count": 0,
+      "panel_count": 4
     }
   },
-  "strongest_localization": "For four structurally evaluable non-Eidolon panels, centered vertical individuality persists within 500-m horizontal place and broad speed×turning state; broad shared-night context is also insufficient in 3/4 panels.",
+  "strongest_localization": "A multi-day stable individual component persists after broad speed×turn matching; spatially, identity persists after 500-m matching in four systems and 250-m matching in three structurally evaluable systems.",
   "live_mechanisms": [
-    "sub-500-m route/resource/microhabitat allocation",
-    "within-context morphology/flight organization",
+    "sub-250-m exact route/resource/microhabitat allocation",
+    "unmeasured morphology/wing loading",
     "memory/experience/learned routines",
     "fine-scale individual environmental reaction norms"
   ],
-  "archive_identifiability_limit": "Strict 500-m matching leaves insufficient cross-individual donor support for body-mass transfer in three of four panels."
+  "archive_identifiability_limit": "Strict 500-m matching leaves insufficient cross-individual donor support for body-mass transfer in three of four panels.",
+  "three_panel_stress": {
+    "fine_place_250m": {
+      "panels": [
+        "hypsignathus",
+        "phyllostomus_2022",
+        "phyllostomus_2016"
+      ],
+      "pass_count": 3,
+      "panel_count": 3
+    },
+    "persistence_3d": {
+      "panels": [
+        "hypsignathus",
+        "phyllostomus_2022",
+        "phyllostomus_2023"
+      ],
+      "pass_count": 3,
+      "panel_count": 3
+    }
+  },
+  "pending": {
+    "fine_place_100m_three_panel_preflight": "running",
+    "persistence_7d_two_panel": "running"
+  }
 }
