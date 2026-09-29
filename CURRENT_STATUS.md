@@ -427,15 +427,25 @@ Descriptive Figure 6 provenance:
 - independent macOS run: `36375120545`;
 - identical panel n and upper-tail ranges.
 
-### Working mechanism hierarchy
+### Working mechanism decomposition
 
-The current data do not identify the cause of centered-shape individuality. The Discussion treats
-resource-linked behavioural allocation as the leading cross-panel working hypothesis, with
-competition/social information as a possible mediator rather than a universal sole cause.
-Morphology, memory and individual experience remain additional candidates, while atmospheric
-structure is retained as relevant especially for high-altitude/open-air flight.
+The current data establish non-exchangeability of the full centered vertical distribution, which
+can be interpreted as repeatable **organization of vertical space use** around each session's
+typical altitude. They do not identify its mechanism.
 
-This hierarchy is interpretive only; no new mechanism test has been added.
+The Discussion now separates two non-exclusive routes:
+
+1. **behavioural-mixture individuality** — individuals repeatedly allocate different fractions of
+   time among commuting, feeding-patch, social-site or other behavioural states;
+2. **within-state individuality** — individuals retain different vertical distributions even while
+   performing the same broad behaviour, potentially through morphology, route memory, experience,
+   resource choice or atmospheric response.
+
+Resource specialization can operate upstream of either route. The prospective discriminator is
+state conditioning: disappearance of identity after independent behavioural classification would
+support the mixture explanation as sufficient, whereas persistence within state would show a
+deeper level of movement individuality. No behavioural-state mechanism is inferred from the
+current data.
 
 ## Claim boundary
 
