@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-behavior-proxy-inventory-v1",
+  "frozen_date": "2026-09-29",
+  "purpose": "Inventory non-vertical event/reference fields that could support a more direct behavioural-allocation mechanism test in the five comparative panels.",
+  "panels": [
+    "eidolon",
+    "hypsignathus",
+    "phyllostomus_2022",
+    "phyllostomus_2023",
+    "phyllostomus_2016"
+  ],
+  "restrictions": [
+    "Inspect headers and documented field names only; do not summarize vertical outcomes.",
+    "Do not use this inventory to alter the frozen v0.3.8 submission.",
+    "Treat derived speed/heading fields as kinematic proxies unless source documentation independently validates a behavioural state.",
+    "A field name containing foraging/feeding/roost/behavior/activity is only a candidate proxy until semantics are verified."
+  ],
+  "candidate_keywords": [
+    "behav",
+    "activity",
+    "forag",
+    "feed",
+    "roost",
+    "lek",
+    "social",
+    "accel",
+    "odba",
+    "speed",
+    "velocity",
+    "heading",
+    "bearing",
+    "turn",
+    "flight",
+    "move",
+    "burst",
+    "sensor",
+    "event"
+  ]
+}
