@@ -1,0 +1,26 @@
+name: phyllostomus-2021-wet-preflight-v1
+on:
+  push:
+    branches: [exploratory/phyllostomus-2021-wet-preflight-v1]
+    paths:
+      - "post_freeze_extensions/phyllostomus_2021_wet/**"
+      - ".github/workflows/phyllostomus-2021-wet-preflight-v1.yml"
+  workflow_dispatch:
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    permissions: {contents: read}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: python -m pip install -e .
+      - run: python post_freeze_extensions/phyllostomus_2021_wet/preflight_v1.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: batter-phyllostomus-2021-wet-preflight-v1
+          path: |
+            post_freeze_extensions/phyllostomus_2021_wet/preflight_result_v1.json
+            post_freeze_extensions/phyllostomus_2021_wet/PREFLIGHT_RESULT_V1.md
+          if-no-files-found: error

@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-phyllostomus-2021-wet-preflight-v1",
+  "frozen_date": "2026-09-29",
+  "status": "year-specific x-y-time structural audit frozen before any new 2021-specific vertical endpoint is opened",
+  "role": "post-freeze hypothesis-generation follow-up; cannot alter v0.3.8",
+  "hypothesis_origin": "Generated after the phase3-conditioned result was retained in 2016 and 2022 dry-season panels but not in the 2023 wet-season panel.",
+  "ecological_prediction": {
+    "conditional": "If an independent structurally eligible 2021 wet-season panel exists and its 2021-specific vertical outcome has not already been used in the prior composite analysis, temporal-phase conditioning should attenuate centered vertical individuality more strongly than in the dry-season 2016/2022 panels.",
+    "status": "prospective only if 2021 is structurally eligible and demonstrably not already included in an opened numeric-height endpoint"
+  },
+  "source": {
+    "repository_doi": "10.5441/001/1.321",
+    "gps_contract": "contract/phyllostomus_replication_v1.json",
+    "known_sampling_context": "source publication identifies 2021 and 2023 as wet-season tracking and 2016/2022 as dry-season tracking"
+  },
+  "structural_preflight": {
+    "numeric_height_values_forbidden": true,
+    "allowed_fields": [
+      "individual identifier",
+      "timestamp",
+      "x-y",
+      "source outlier flags",
+      "reference study_site",
+      "presence/nonempty native height string"
+    ],
+    "session_rule": "same frozen gap >4 h and >=50 retained events",
+    "cohort_rule": "exact study_site × shifted-night calendar year; >=4 total individuals and >=3 repeat individuals",
+    "target_year": 2021,
+    "audit_existing_use": "Reproduce the original source's full admitted cohort set from x-y-time-only preprocessing. If any admitted 2021 cohort exists, flag that the original numeric pipeline would have included it unless a separate code-level year filter is documented."
+  },
+  "decision": {
+    "if_no_2021_admitted_cohort": "stop; no 2021 predictive test",
+    "if_2021_admitted_and_original_pipeline_includes_it": "do not call 2021 untouched; a year-specific follow-up may be descriptive only and cannot serve as prospective validation",
+    "if_2021_admitted_but_original_pipeline_excludes_it_before_numeric_parse": "freeze exact 2021 structure and open a prospective year-specific test"
+  },
+  "claim_boundary": [
+    "The wet-season mechanism prediction is generated after observing the 2023 temporal-phase result.",
+    "No 2021 result may be described as independent prospective validation unless prior numeric non-use is demonstrated.",
+    "Season is an ecological context, not a causal treatment.",
+    "This extension remains outside v0.3.8."
+  ]
+}
