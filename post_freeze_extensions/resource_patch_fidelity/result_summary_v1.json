@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-resource-patch-fidelity-v1",
+  "frozen_contract_commit": "1a52704431a92e07e70550b2d7054687d5334c5c",
+  "authoritative_workflow": {
+    "run_id": 36508617613,
+    "head_sha": "788a99b5af710092dd64a232b027c57cc8b67b02",
+    "artifact_id": 11008176963,
+    "artifact_digest": "sha256:426c86df56b74483cdbe9b42087a82a5cbb99e93f5db3683193cd4228727ecf8"
+  },
+  "primary": {
+    "grid_m": 1000,
+    "equal_panel_mean_spearman_rho": 0.17591139875962866,
+    "one_sided_p": 0.05731,
+    "positive_panels": 4,
+    "panels": 5,
+    "pass": false,
+    "panel_rhos": {
+      "eidolon": -0.5218045112781955,
+      "hypsignathus": 0.6034782608695652,
+      "phyllostomus_2022": 0.34725935828877,
+      "phyllostomus_2023": 0.12941176470588237,
+      "phyllostomus_2016": 0.3212121212121212
+    }
+  },
+  "sensitivities": {
+    "500m": {
+      "mean_rho": 0.13225967820038353,
+      "p": 0.11718,
+      "positive_panels": 3
+    },
+    "2000m": {
+      "mean_rho": 0.17798126972861122,
+      "p": 0.05508,
+      "positive_panels": 4
+    }
+  },
+  "tadarida_descriptive": {
+    "n": 6,
+    "rho": 0.5428571428571428,
+    "excluded_from_primary": true
+  },
+  "posthoc_eidolon": {
+    "kasanka_2014": {
+      "n": 8,
+      "rho": -0.023809523809523808,
+      "mean_patch_excess": 0.084,
+      "mean_calibrated_vertical_identity": 0.731
+    },
+    "ouagadougou_2014": {
+      "n": 5,
+      "rho": 0
+    },
+    "primary_rescue": false
+  },
+  "interpretation": "Simple fine-scale movement-patch fidelity is not supported as a general driver. Context-dependent behavioural allocation and within-state individuality remain viable.",
+  "submission_claims_unchanged": true
+}
