@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-fine-place-state-preflight-v1",
+  "frozen_date": "2026-09-29",
+  "status": "x-y-time-only fine-place x movement-state feasibility preflight frozen before vertical outcomes",
+  "role": "post-freeze exploratory mechanism discrimination; cannot alter v0.3.8 submission claims",
+  "question": "After the broad movement-state result persists, can we further condition comparisons on fine horizontal place × movement-intensity state without collapsing evaluable support?",
+  "primary_panels": [
+    "eidolon",
+    "hypsignathus",
+    "phyllostomus_2022",
+    "phyllostomus_2023",
+    "phyllostomus_2016"
+  ],
+  "state_conditioned_baseline_n": {
+    "eidolon": 14,
+    "hypsignathus": 24,
+    "phyllostomus_2022": 33,
+    "phyllostomus_2023": 14,
+    "phyllostomus_2016": 10
+  },
+  "movement_state": {
+    "source": "fixed by movement-state preflight q3_dt1800 before any state-conditioned vertical outcome",
+    "states": 3,
+    "maximum_step_interval_seconds": 1800,
+    "thresholds": "cohort-relative empirical 1/3 and 2/3 quantiles of valid horizontal step speed",
+    "input": "x-y-time only"
+  },
+  "fine_place_candidates_in_priority_order": [
+    {
+      "id": "grid500",
+      "fine_grid_m": 500
+    },
+    {
+      "id": "grid1000",
+      "fine_grid_m": 1000
+    },
+    {
+      "id": "grid2000",
+      "fine_grid_m": 2000
+    }
+  ],
+  "feasibility": {
+    "target_stratum": "fine horizontal cell × movement-state",
+    "target_support": "A target endpoint is supported when its fine-cell × state stratum occurs in at least one other retained session of the same individual and in at least one retained session of at least one other individual in the same cohort.",
+    "minimum_supported_target_events": 50,
+    "individual_evaluable": "at least one retained target session with >=50 supported target endpoint events",
+    "selection_rule": "Choose the first (finest) candidate for which every primary panel retains at least 70% of its state-conditioned baseline evaluable individuals and at least 5 individuals. If none passes, do not open the fine-place-conditioned vertical outcome."
+  },
+  "planned_test_if_feasible": {
+    "hypothesis_route_allocation": "Residual vertical individuality after broad movement-state conditioning is largely caused by individuals using different fine horizontal routes/patches within the same 5-km cell.",
+    "hypothesis_within_matched_place_state": "Individual vertical organization remains non-exchangeable even when self and other profiles are evaluated under identical fine-place × movement-state distributions.",
+    "estimator": "P(centered residual height | selected fine horizontal cell, movement state), with equal-session self profiles, equal-individual other profiles, and identical self-derived fine-cell × state weights applied to both predictors.",
+    "target_scoring": "Centered target endpoint events supported by both self and other fine-cell × state profiles.",
+    "calibration": "Reuse each panel's frozen whole-session label-permutation B and seed from the movement-state-conditioned test.",
+    "panel_pass_rule": "exact preflight-selected evaluable n; calibrated observed-minus-null-mean common fine-place-state identity > 0; one-sided p(null >= observed) <= 0.05",
+    "synthesis": "4 or 5 panels PASS => route/patch allocation at the selected scale is insufficient as a general explanation; 2 or 3 PASS => mixed; 0 or 1 PASS => fine-place allocation may account for much of the residual, subject to power/support loss."
+  },
+  "interpretation_boundary": [
+    "Fine horizontal cells are spatial matching strata, not verified feeding patches, routes, or resources.",
+    "Persistence after fine-place × state conditioning does not prove intrinsic morphology, memory, learning, or personality.",
+    "Loss after conditioning does not by itself prove route allocation because finer matching reduces training support and power.",
+    "This extension remains outside the frozen v0.3.8 submission package."
+  ],
+  "stop_rule": [
+    "Do not change movement-state definition q3_dt1800, grid priority 500/1000/2000 m, 70% retention rule, >=5-individual floor, 50-event target support, or support definition after preflight output is opened.",
+    "Do not inspect vertical outcomes while choosing the fine grid.",
+    "If no candidate passes, stop rather than loosening the grid or retention thresholds.",
+    "If a grid passes, freeze that grid before opening any fine-place-conditioned vertical result."
+  ]
+}
