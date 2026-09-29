@@ -10,7 +10,39 @@ on:
   workflow_dispatch:
 
 jobs:
-  exploratory-test:
+  panel:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    permissions:
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        panel:
+          - tadarida
+          - eidolon
+          - hypsignathus
+          - phyllostomus_2022
+          - phyllostomus_2023
+          - phyllostomus_2016
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install analysis package
+        run: python -m pip install -e ".[figure]"
+      - name: Run frozen panel calibration
+        run: python post_freeze_extensions/resource_patch_fidelity/run_v1.py --panel "${{ matrix.panel }}"
+      - name: Upload panel result
+        uses: actions/upload-artifact@v4
+        with:
+          name: resource-patch-panel-${{ matrix.panel }}-v1
+          path: post_freeze_extensions/resource_patch_fidelity/panel_results/panel_${{ matrix.panel }}_v1.json
+          if-no-files-found: error
+
+  aggregate:
+    needs: panel
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -21,8 +53,14 @@ jobs:
           python-version: "3.12"
       - name: Install analysis package
         run: python -m pip install -e ".[figure]"
-      - name: Run frozen resource-patch fidelity test
-        run: python post_freeze_extensions/resource_patch_fidelity/run_v1.py
+      - name: Download panel results
+        uses: actions/download-artifact@v4
+        with:
+          pattern: resource-patch-panel-*-v1
+          path: post_freeze_extensions/resource_patch_fidelity/panel_results
+          merge-multiple: true
+      - name: Aggregate frozen cross-panel test
+        run: python post_freeze_extensions/resource_patch_fidelity/run_v1.py --aggregate
       - name: Upload exploratory result
         uses: actions/upload-artifact@v4
         with:
@@ -30,3 +68,4 @@ jobs:
           path: |
             post_freeze_extensions/resource_patch_fidelity/result_v1.json
             post_freeze_extensions/resource_patch_fidelity/RESULT_V1.md
+          if-no-files-found: error
