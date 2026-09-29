@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-post-freeze-mechanism-status-v3",
+  "frozen_submission_unchanged": true,
+  "general_five_panel_results": {
+    "centered_shape_identity": "supported in all five comparative panels",
+    "speed_state_conditioning": "5/5 retain identity",
+    "speed_turn_conditioning": "5/5 retain identity",
+    "simple_patch_fidelity": {
+      "supported": false,
+      "mean_rho": 0.1759,
+      "p": 0.05731
+    },
+    "relative_tag_burden": {
+      "supported": false,
+      "mean_absolute_rho": 0.26774519703045835,
+      "p": 0.1399
+    }
+  },
+  "structurally_evaluable_four_panel_results": {
+    "panels": [
+      "hypsignathus",
+      "phyllostomus_2022",
+      "phyllostomus_2023",
+      "phyllostomus_2016"
+    ],
+    "fine_place_2000m": {
+      "pass_count": 4,
+      "panel_count": 4
+    },
+    "fine_place_500m": {
+      "pass_count": 4,
+      "panel_count": 4
+    },
+    "temporal_phase3": {
+      "pass_count": 3,
+      "panel_count": 4,
+      "exception": {
+        "panel": "phyllostomus_2023",
+        "calibrated_excess": 0.02209779378174622,
+        "p": 0.1068
+      }
+    }
+  },
+  "context_hypotheses": {
+    "phyllostomus_2016": "dry",
+    "phyllostomus_2022": "dry",
+    "phyllostomus_2023": "wet",
+    "wet_temporal_allocation_hypothesis": "generated; not causally established",
+    "phyllostomus_2021_wet_validation": "structurally unavailable under original cohort gate"
+  },
+  "structural_limits": {
+    "eidolon": {
+      "fine_place_speed_turn_500m": "1/12",
+      "fine_place_speed_turn_1000m": "1/12",
+      "fine_place_speed_turn_2000m": "1/12",
+      "temporal_phase3": "4/12",
+      "temporal_phase2": "7/12",
+      "same_night_preflight": "8/12 where 9 required",
+      "close_far_mass_transfer": "3 targets where 9 required",
+      "continuous_mass_gradient": "1/12 where 9 required"
+    }
+  },
+  "pending": {
+    "four_panel_fine_place_same_night": "running under pre-outcome exact-n contract"
+  },
+  "strongest_current_statement": "In four structurally evaluable non-Eidolon panels, centered vertical individuality persists after matching horizontal place to 500 m and matching broad speed × turning state; broad kinematic time budgets and >=500-m route/patch allocation are insufficient explanations in those systems.",
+  "live_mechanisms": [
+    "sub-500-m route/resource/microhabitat allocation",
+    "within-context individual flight organization",
+    "context-dependent temporal allocation",
+    "morphology/wing-loading effects",
+    "memory/experience/learned-route effects",
+    "individual environmental reaction norms"
+  ]
+}
