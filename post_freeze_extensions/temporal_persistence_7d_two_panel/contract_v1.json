@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-temporal-persistence-7d-two-panel-v1",
+  "frozen_date": "2026-09-29",
+  "status": "two-panel >=7-day persistence stress test frozen after x-y-time-only preflight and after positive shorter-lag results",
+  "role": "post-freeze exploratory temporal-stability stress test; not independent confirmation",
+  "provenance": {
+    "source_preflight_run_id": 36538374767,
+    "source_3d_run_id": 36539572278,
+    "opened_after_positive_shorter_lag_results": true
+  },
+  "subset": {
+    "minimum_self_lag_days": 7,
+    "included_panels": [
+      "hypsignathus",
+      "phyllostomus_2022"
+    ],
+    "excluded_panels": {
+      "phyllostomus_2023": "0/14 evaluable at >=7 days",
+      "phyllostomus_2016": "0/10 evaluable at >=7 days",
+      "eidolon": "0/12 evaluable at >=7 days"
+    },
+    "expected_evaluable_individuals": {
+      "hypsignathus": 20,
+      "phyllostomus_2022": 17
+    }
+  },
+  "ecological_question": "Does centered vertical organization remain individually predictive when same-individual training information is separated from the target by at least seven days?",
+  "state_definition": {
+    "horizontal_cell_m": 5000,
+    "source": "frozen speed2_turn2",
+    "maximum_step_interval_seconds": 1800,
+    "session_time": "median timestamp of valid speed×turn endpoints"
+  },
+  "estimator": {
+    "vertical_centering": "session median",
+    "vertical_edges_m": [
+      "-inf",
+      -400,
+      -200,
+      -100,
+      -50,
+      0,
+      50,
+      100,
+      200,
+      400,
+      "inf"
+    ],
+    "conditional_profile": "P(centered residual height | 5-km cell, speed×turn state)",
+    "self_training": "same-individual sessions in same cohort with absolute session-median-time lag >=7 days",
+    "self_weighting": "equal lag-qualified session",
+    "other_weighting": "equal individual within cohort",
+    "common_weighting": "identical self-derived joint-stratum weights for self and other",
+    "minimum_scored_target_events": 50
+  },
+  "calibration": {
+    "permutation_unit": "whole centered session block",
+    "lag_rebuild": "recompute >=7-day self training after each identity permutation",
+    "settings": [
+      {
+        "panel": "hypsignathus",
+        "B": 4999,
+        "seed": 20260929102
+      },
+      {
+        "panel": "phyllostomus_2022",
+        "B": 4999,
+        "seed": 20260929103
+      }
+    ],
+    "panel_pass_rule": "exact preflight n; calibrated identity >0; one-sided p(null>=observed)<=0.05"
+  },
+  "synthesis": {
+    "decision_matrix": {
+      "2_pass": "Both structurally evaluable systems retain vertical individuality across >=7-day separation.",
+      "1_pass": "Week-scale persistence is context-dependent.",
+      "0_pass": "The multi-day signal does not extend to a week in the structurally evaluable subset."
+    },
+    "generalization_limit": "No inference to panels without >=7-day structural support."
+  },
+  "claim_boundary": [
+    "This is a post-hoc stress test opened after positive 1-day and 3-day results.",
+    "Week-scale persistence does not establish lifetime stability or genetic determination.",
+    "No inference to P2023, P2016 or Eidolon.",
+    "Frozen v0.3.8 remains unchanged."
+  ],
+  "stop_rule": [
+    "Do not change subset, 7-day lag, session-time definition, 5-km grid, speed2_turn2, expected n, B/seeds or pass criteria after output.",
+    "If exact n fails, invalidate rather than retune.",
+    "Do not open longer lags after this result."
+  ]
+}
