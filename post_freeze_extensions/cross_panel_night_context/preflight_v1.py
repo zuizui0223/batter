@@ -94,7 +94,7 @@ def evaluate(panel,c):
         "panel_pass":len(eval_inds)>=required,
         "evaluable_individual_ids":sorted(eval_inds),
         "retained_session_count":len(retained),
-        "session_meta":session_meta,
+        "session_meta":{f"{k[0]}::{k[1]}":v for k,v in session_meta.items()},
         "session_support":rows
     }
 
