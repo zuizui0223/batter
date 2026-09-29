@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-phyllostomus-2023-temporal-schedule-v1",
+  "frozen_date": "2026-09-29",
+  "status": "direct x-y-time temporal-schedule identity test frozen before schedule-prediction output",
+  "role": "post-hoc direct mechanism test generated after the 2023 500-m vertical phase-conditioning result; no vertical height enters this test",
+  "panel": "phyllostomus_2023",
+  "hypothesis_origin": "500-m place×speed×turn vertical identity passes, but adding early/middle/late phase causes calibrated vertical identity to fail.",
+  "ecological_hypothesis": "Individuals repeat when during a tracked session they use otherwise similar fine horizontal and kinematic contexts, creating individual-specific temporal schedules that can mediate vertical individuality.",
+  "data": {
+    "vertical_height_used": false,
+    "source": "same frozen 2023 GPS event stream",
+    "session_rule": "unchanged frozen sessions",
+    "context_cell_m": 500,
+    "kinematic_state": "speed2_turn2",
+    "maximum_step_interval_seconds": 1800,
+    "phase": "relative elapsed-time fraction among valid kinematic endpoints within each session, split into early/middle/late thirds"
+  },
+  "estimator": {
+    "response": "phase3 category",
+    "conditional_profile": "P(phase | 500-m cell, speed×turn state)",
+    "self_predictor": "equal-session profile from same individual's other sessions",
+    "other_predictor": "equal-individual profile from other individuals in same frozen cohort",
+    "jeffreys_alpha": 0.5,
+    "target_scoring": "target endpoints whose 500-m cell×state context is supported by both self and other predictors",
+    "minimum_scored_target_events": 50,
+    "aggregation": "equal target session within individual, then equal individual",
+    "primary_statistic": "mean log P_self(phase|context) - log P_other(phase|context)"
+  },
+  "structural_expectation": {
+    "expected_evaluable_individuals": 11,
+    "source": "matched 500-m place×speed2_turn2 preflight run 36517151763; this n was known before the direct schedule test",
+    "exact_n_required": true
+  },
+  "calibration": {
+    "B": 9999,
+    "seed": 20260929061,
+    "permutation_unit": "whole session individual label",
+    "scope": "within frozen cohort",
+    "preserve": "all x-y-time-derived context and phase values within session plus exact individual session-count multiset",
+    "pass_rule": "exact n=11; calibrated observed-minus-null-mean schedule identity >0; one-sided p(null>=observed)<=0.05"
+  },
+  "interpretation": {
+    "pass": "Direct evidence that P. hastatus 2023 individuals have repeatable temporal schedules of fine-place/kinematic context use, supporting temporal allocation as a mediator of the vertical pattern.",
+    "fail": "The vertical attenuation after phase conditioning is not accompanied by detectable repeatable temporal-schedule identity under this direct proxy; support/power or a different phase mechanism remains possible."
+  },
+  "claim_boundary": [
+    "Relative tracked-session phase is not solar/circadian phase.",
+    "A PASS does not establish an intrinsic chronotype or wet-season causation.",
+    "This is post-hoc mechanism evidence and remains outside v0.3.8."
+  ],
+  "stop_rule": [
+    "Do not change 500-m context, speed2_turn2 state, phase3 definition, expected n=11, smoothing, 50-event support, B/seed or pass rule after output.",
+    "Do not try phase2 or another grid as rescue."
+  ]
+}
