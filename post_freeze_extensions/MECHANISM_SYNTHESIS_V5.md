@@ -32,6 +32,17 @@ The same four panels all retain centered identity after 500-m place × speed×tu
 
 Thus route/patch allocation at scales >=500 m is insufficient in this subset.
 
+### Horizontal route/patch allocation at >=250 m
+
+An outcome-blind ultrafine preflight stopped the four-panel generalization because *P. hastatus* 2023 retained 7/11 where 8 were required. Three systems remained structurally evaluable at 250 m.
+
+Those three all PASS:
+- *Hypsignathus*: +0.3115, p=0.0002
+- *P. hastatus* 2022: +0.0762, p=0.0002
+- *P. hastatus* 2016: +0.4472, p=0.0160
+
+**Inference:** in these three systems, route/resource allocation at scales >=250 m is insufficient. The unresolved spatial mechanism is pushed below 250 m there, and below 500 m in P2023.
+
 ### Simple movement-patch fidelity strength
 Cross-panel mean rho = +0.176, permutation p=0.05731, primary FAIL.
 
@@ -56,6 +67,31 @@ The same pipeline was independently reimplemented using cached session-level cou
 
 **Inference:** broad calendar-night context is insufficient as a general explanation in the structurally evaluable subset. Exact local wind, uplift, temperature and microclimate remain unmeasured.
 
+## Temporal stability: identity persists beyond short-lived state
+
+### >=1 day
+
+An outcome-blind lag preflight defined four structurally evaluable non-*Eidolon* panels.
+
+When self-training was restricted to sessions at least one day from the target, **4/4 PASS**:
+- *Hypsignathus*: +0.1483, p=0.0002
+- *P. hastatus* 2022: +0.1135, p=0.0002
+- *P. hastatus* 2023: +0.0604, p=0.0008
+- *P. hastatus* 2016: +0.5341, p=0.0188
+
+### >=3 days
+
+Three panels had sufficient pre-outcome support at >=3 days. This was a stress-test refinement opened after partial positive >=1-day results.
+
+**3/3 PASS**:
+- *Hypsignathus*: +0.1539, p=0.0002
+- *P. hastatus* 2022: +0.0959, p=0.0002
+- *P. hastatus* 2023: +0.0573, p=0.0216
+
+**Inference:** centered vertical organization contains a multi-day stable individual component in the structurally evaluable systems. It is not merely a same-night or adjacent-session state.
+
+A >=7-day two-panel stress test is running only in the two systems with sufficient pre-outcome support; it will not be generalized beyond them.
+
 ## Temporal phase: apparent attenuation, but no support-matched attribution
 
 Phase3 conditioning gave 3/4 PASS, with *P. hastatus* 2023 the only FAIL.
@@ -78,25 +114,27 @@ The wet-season temporal-allocation narrative is therefore hypothesis-generating 
 
 A prospective 2021 wet-season check was structurally unavailable under the original frozen cohort gate; no 2021 vertical outcome was opened.
 
-## Morphology / body mass: not rejected, but unidentifiable under strict matching
+## Morphology / body mass: simple mass similarity is not supported
 
 Animal mass is the only candidate trait that varies in every comparative reference dataset.
 
-Earlier five-panel body-mass donor-transfer designs were blocked primarily by *Eidolon* overlap.
+A structurally frozen four-panel donor-transfer test asked whether other-individual profiles transfer better when donor and target body masses are more similar, within 5-km place × speed×turn contexts.
 
-A stricter four-panel 500-m place × speed×turn donor-support preflight was therefore frozen before any vertical morphology-transfer outcome.
+**0/4 panels support the predicted negative mass-distance gradient**:
+- *Hypsignathus*: rho=-0.108, p=0.107
+- *P. hastatus* 2022: rho=-0.023, p=0.392
+- *P. hastatus* 2023: rho=+0.028, p=0.565
+- *P. hastatus* 2016: rho=+0.138, p=0.927
 
-Result:
-- *Hypsignathus*: 9/19 evaluable targets; 14 required
-- *P. hastatus* 2022: 7/23; 17 required
-- *P. hastatus* 2023: 5/11; 8 required
-- *P. hastatus* 2016: 9/9; 7 required
+**Inference:** simple body mass is not supported as a general predictor of vertical-organization transfer.
 
-Only 2016 passes the structural gate.
+A stricter 500-m body-mass donor-support preflight was then stopped before vertical outcome because three of four panels fell below the frozen support gate:
+- *Hypsignathus*: 9/19; 14 required
+- P2022: 7/23; 17 required
+- P2023: 5/11; 8 required
+- P2016: 9/9; 7 required
 
-**Inference:** body mass is not rejected. Rather, once context matching is tightened to 500 m, cross-individual donor overlap becomes too sparse in most panels to estimate a morphology-transfer gradient without relaxing frozen support rules.
-
-This is a design limit, not a negative morphology result.
+Thus body mass itself is weakened, while wing loading, wing shape, body condition and other morphology remain untested.
 
 ## Structural identifiability boundary: Eidolon
 
