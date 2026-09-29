@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-phyllostomus-2023-phase-attribution-v1",
+  "frozen_date": "2026-09-29",
+  "status": "post-hoc paired-support mechanism attribution frozen after the phase3 panel-level result and before paired phase-vs-collapsed output",
+  "role": "post-freeze exploratory localization; cannot alter v0.3.8 or serve as independent confirmation",
+  "target_panel": "phyllostomus_2023",
+  "hypothesis_origin": {
+    "observed_before_this_contract": true,
+    "source_result": "temporal_phase_kinematic_four_panel v1",
+    "phase3_result": {
+      "n": 14,
+      "calibrated_excess": 0.02209779378174622,
+      "p_upper": 0.1068,
+      "pass": false
+    },
+    "rationale": "Determine whether the 2023 loss of identity after phase conditioning reflects phase information itself rather than reduced support/sparsity."
+  },
+  "fixed_context": {
+    "horizontal_cell_m": 5000,
+    "kinematic_state": "speed2_turn2",
+    "maximum_step_interval_seconds": 1800,
+    "temporal_phase": "relative valid-endpoint elapsed-time thirds: early/middle/late",
+    "vertical_centering": "session median",
+    "vertical_edges_m": [
+      "-inf",
+      -400,
+      -200,
+      -100,
+      -50,
+      0,
+      50,
+      100,
+      200,
+      400,
+      "inf"
+    ],
+    "expected_evaluable_individuals": 14
+  },
+  "paired_estimand": {
+    "target_support": "For each target session under each observed/permuted label assignment, define scored target endpoints exclusively by support of the full cell × speed×turn × phase predictor in both self and other profiles.",
+    "phase_model": "P(z_residual | 5-km cell, speed×turn state, phase3)",
+    "collapsed_model": "P(z_residual | 5-km cell, speed×turn state), trained from the same phase-valid endpoint pool but with phase labels collapsed",
+    "target_matching": "Score both models on exactly the same phase-model-supported target endpoints.",
+    "self_weighting": "equal training session",
+    "other_weighting": "equal other individual within cohort",
+    "session_statistic": "mean target [log P_self_phase - log P_other_phase] minus mean target [log P_self_collapsed - log P_other_collapsed]",
+    "panel_statistic": "equal target session within individual, then equal individual",
+    "interpretation_of_negative": "Conditioning on phase removes part of the same-individual predictive advantage on an identical target-support set."
+  },
+  "calibration": {
+    "permutation_unit": "whole session label within frozen cohort",
+    "preserve": "session x-y-time-state-phase-z block and exact per-cohort session-count multiset per label",
+    "B": 4999,
+    "seed": 20260929061,
+    "primary_test": "observed paired phase increment < permutation null mean and one-sided p(null <= observed) <= 0.05",
+    "exact_n_required": 14
+  },
+  "secondary_descriptive": [
+    "observed support-matched collapsed gain",
+    "observed support-matched phase-conditioned gain",
+    "their separately null-centered values",
+    "individual paired increments"
+  ],
+  "claim_boundary": [
+    "This test was generated after observing the 2023 phase-conditioned failure; it is mechanistic localization, not confirmatory discovery.",
+    "Relative tracked-session phase is not solar/circadian phase.",
+    "A negative paired increment supports phase-linked organization relative to this proxy; it does not establish wet-season causation or a specific resource mechanism.",
+    "The test cannot distinguish resource timing, learned schedules, social timing or unmeasured time-varying environment.",
+    "This extension remains outside frozen v0.3.8."
+  ],
+  "stop_rule": [
+    "Do not change target support, phase definition, collapsed model, aggregation, exact n, B, seed or one-sided direction after any paired output.",
+    "Do not switch to phase2 or select individual phases if the primary paired attribution fails."
+  ]
+}

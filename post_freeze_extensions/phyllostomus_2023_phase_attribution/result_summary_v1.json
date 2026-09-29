@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-phyllostomus-2023-phase-attribution-v1",
+  "authoritative_workflow": {
+    "run_id": 36525701167,
+    "head_sha": "17ec5969fd4d737434ef15a5ef561714c93edc4b",
+    "artifact_id": 11015028995,
+    "artifact_digest": "sha256:4c8e501bec7dfb1a609158e2e25c5b892db0dadaabe721a5a08f87c9e2b7ccbb"
+  },
+  "n": 14,
+  "observed": {
+    "collapsed_gain": -0.024816149196765874,
+    "phase_gain": -0.07041361832377968,
+    "phase_increment": -0.0455974691270138
+  },
+  "permutation": {
+    "calibrated_phase_increment": -0.004806289152255443,
+    "p_lower": 0.3774
+  },
+  "supported": false,
+  "interpretation": "The 2023 phase3 attenuation is not distinguishable from support-matched exchangeability expectations; phase information itself is not established as the cause of attenuation.",
+  "submission_claims_unchanged": true
+}
