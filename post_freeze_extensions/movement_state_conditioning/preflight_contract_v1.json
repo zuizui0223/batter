@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-movement-state-preflight-v1",
+  "frozen_date": "2026-09-29",
+  "status": "x-y-time-only feasibility preflight frozen before movement-state-conditioned vertical outcomes",
+  "role": "post-freeze exploratory mechanism discrimination; cannot alter v0.3.8 submission claims",
+  "question": "Can a movement-intensity state defined only from horizontal displacement and time be conditioned on without collapsing evaluable support in the five comparative panels?",
+  "primary_panels": [
+    "eidolon",
+    "hypsignathus",
+    "phyllostomus_2022",
+    "phyllostomus_2023",
+    "phyllostomus_2016"
+  ],
+  "baseline_evaluable_individuals": {
+    "eidolon": 20,
+    "hypsignathus": 24,
+    "phyllostomus_2022": 33,
+    "phyllostomus_2023": 16,
+    "phyllostomus_2016": 10
+  },
+  "state_construction": {
+    "input": "x-y-time only; no vertical values enter state assignment or feasibility selection",
+    "projection": "reuse each frozen panel/cohort projection from the existing paper pipeline",
+    "step_speed": "Euclidean horizontal distance between consecutive fixes within the same frozen session divided by elapsed seconds",
+    "invalid_steps": "first fix, non-positive dt, or dt above candidate cap receive no movement state",
+    "thresholds": "Within each frozen cohort, pool all valid step speeds from retained sessions and cut at empirical equal-frequency quantiles for the candidate number of states.",
+    "state_label": "quantile bin of horizontal step speed within cohort",
+    "coarse_support": "5-km horizontal cell × movement-state pair"
+  },
+  "candidates_in_priority_order": [
+    {
+      "id": "q3_dt1800",
+      "states": 3,
+      "max_dt_seconds": 1800
+    },
+    {
+      "id": "q2_dt1800",
+      "states": 2,
+      "max_dt_seconds": 1800
+    },
+    {
+      "id": "q3_dt3600",
+      "states": 3,
+      "max_dt_seconds": 3600
+    },
+    {
+      "id": "q2_dt3600",
+      "states": 2,
+      "max_dt_seconds": 3600
+    }
+  ],
+  "feasibility": {
+    "target_support": "A target event is structurally supported when its 5-km cell × movement-state pair occurs in at least one other session of the same individual and in at least one retained session of at least one other individual in the same cohort.",
+    "minimum_supported_target_events": 50,
+    "individual_evaluable": "at least one retained target session with >=50 supported target events",
+    "selection_rule": "Choose the first candidate in priority order for which every primary panel retains at least 70% of its frozen centered-shape evaluable individuals and at least 5 individuals. If none passes, do not open the movement-state-conditioned vertical outcome."
+  },
+  "planned_mechanism_test_if_feasible": {
+    "hypothesis_A": "behavioural-mixture individuality: individual vertical identity is largely induced by repeatable differences in movement-state composition",
+    "hypothesis_B": "within-state individuality: individual vertical identity persists after conditioning on the same broad movement-intensity state",
+    "primary_test": "Using the selected preflight definition, recompute centered vertical self-vs-other prediction conditional on 5-km cell × movement state and calibrate the complete estimator with the same whole-session label-permutation scheme already frozen for each panel.",
+    "panel_support_rule": "calibrated observed-minus-null-mean identity > 0 and one-sided p(null >= observed) <= 0.05",
+    "interpretation": "Persistence supports within-state individuality relative to this x-y-time movement-state proxy. Loss of identity is consistent with behavioural-mixture sufficiency but can also reflect support/power loss, so attrition and null width must be reported."
+  },
+  "stop_rule": [
+    "Do not change candidate order, 70% retention rule, >=5-individual floor, 50-event target support, speed definition, quantile thresholds, or 5-km cell × state support after preflight output is opened.",
+    "Do not inspect vertical outcome while selecting the state definition.",
+    "If no candidate passes the preflight, stop this mechanism family rather than loosening thresholds.",
+    "This extension remains outside the frozen v0.3.8 submission package."
+  ]
+}
