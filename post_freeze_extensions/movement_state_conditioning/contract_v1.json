@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-movement-state-conditioning-v1",
+  "frozen_date": "2026-09-29",
+  "status": "mechanism test frozen after x-y-time-only feasibility preflight and before state-conditioned vertical output",
+  "role": "post-freeze exploratory mechanism discrimination; cannot alter v0.3.8 submission claims",
+  "preflight": {
+    "workflow_run_id": 36509596947,
+    "head_sha": "d8079ce22f8a16640b0f91d29c0be43c14f38645",
+    "artifact_id": 11008372698,
+    "artifact_digest": "sha256:e8d97652a8ef45076a72596cbb574c9df1893d45d8aa1ce9c90887296ffab2a2",
+    "selected_candidate_id": "q3_dt1800",
+    "vertical_values_used_for_selection": false,
+    "evaluable_individuals": {
+      "eidolon": 14,
+      "hypsignathus": 24,
+      "phyllostomus_2022": 33,
+      "phyllostomus_2023": 14,
+      "phyllostomus_2016": 10
+    }
+  },
+  "hypotheses": {
+    "behavioural_mixture": "Repeatable whole-session vertical individuality is largely induced by stable individual differences in the proportions of broad movement-intensity states.",
+    "within_state": "Individual vertical organization remains non-exchangeable even when self and other profiles are compared under identical horizontal-cell × movement-state weights."
+  },
+  "state_definition": {
+    "source": "x-y-time only; fixed by preflight",
+    "states": 3,
+    "maximum_step_interval_seconds": 1800,
+    "speed": "Euclidean projected horizontal step distance divided by elapsed seconds for consecutive fixes within a frozen session",
+    "thresholds": "Within each frozen cohort, pooled valid step speeds are divided at empirical 1/3 and 2/3 quantiles.",
+    "event_assignment": "The endpoint fix of each valid step receives its movement-state label; first fixes, non-positive intervals and intervals >1800 s are excluded from the state-conditioned estimator.",
+    "vertical_centering": "For every frozen session, subtract that session's median primary vertical coordinate computed from all retained numeric-height events before selecting state-valid endpoint fixes.",
+    "vertical_edges_m": [
+      "-inf",
+      -400,
+      -200,
+      -100,
+      -50,
+      0,
+      50,
+      100,
+      200,
+      400,
+      "inf"
+    ],
+    "horizontal_cell_m": 5000
+  },
+  "estimator": {
+    "conditional_profile": "P(z_residual | 5-km cell, movement state)",
+    "self_weighting": "equal session",
+    "other_weighting": "equal individual within frozen cohort",
+    "common_weighting": "For joint 5-km cell × movement-state strata supported by both self and other conditional profiles, compute the equal-session self training distribution over joint strata and apply exactly those same weights to both self and other vertical profiles.",
+    "rationale": "If whole-session individuality is caused only by different proportions of movement states, then self and other within-state vertical profiles should converge when evaluated under identical joint-stratum weights.",
+    "target_scoring": "Score the centered residual-height distribution of target events whose joint cell × state stratum is supported by both predictors.",
+    "minimum_scored_target_events": 50,
+    "expected_evaluable_individuals": {
+      "eidolon": 14,
+      "hypsignathus": 24,
+      "phyllostomus_2022": 33,
+      "phyllostomus_2023": 14,
+      "phyllostomus_2016": 10
+    }
+  },
+  "calibration": {
+    "permutation_unit": "whole centered session block with fixed x-y-time-derived movement states",
+    "scope": "within frozen cohort",
+    "preserve": "all within-session x-y-time-state-residual-z observations and exact original session-count multiset per label",
+    "settings": [
+      {
+        "panel": "eidolon",
+        "B": 4999,
+        "seed": 2026092701
+      },
+      {
+        "panel": "hypsignathus",
+        "B": 4999,
+        "seed": 2026092702
+      },
+      {
+        "panel": "phyllostomus_2022",
+        "B": 4999,
+        "seed": 2026092703
+      },
+      {
+        "panel": "phyllostomus_2023",
+        "B": 4999,
+        "seed": 2026092704
+      },
+      {
+        "panel": "phyllostomus_2016",
+        "B": 4999,
+        "seed": 2026092705
+      }
+    ],
+    "panel_pass_rule": "exact expected evaluable n; observed-minus-null-mean common joint-cell-state identity > 0; one-sided p(null >= observed) <= 0.05"
+  },
+  "synthesis": {
+    "primary_statistic": "number of the five comparative panels passing the frozen state-conditioned identity rule",
+    "decision_matrix": {
+      "4_or_5_pass": "Strong evidence that broad movement-state mixture alone is insufficient as a general explanation; comparative individuality persists within movement-intensity states.",
+      "2_or_3_pass": "Mixed mechanism: broad movement-state mixture may explain part of the pattern, while within-state individuality remains in some systems.",
+      "0_or_1_pass": "Consistent with broad movement-state composition being sufficient for much of the comparative signal, but power/support loss must be considered before a causal conclusion."
+    },
+    "descriptive_attenuation": "Report state-conditioned calibrated excess beside the already-frozen centered-shape calibrated excess (+0.443, +0.177, +0.111, +0.118, +0.574 for Eidolon, Hypsignathus, P. hastatus 2022, 2023, 2016). Do not use attenuation ratios as an inferential rescue."
+  },
+  "claim_boundary": [
+    "Movement-intensity states are an x-y-time proxy, not validated commuting/foraging/social behavioural labels.",
+    "Persistence supports within-state individuality relative to this proxy, not a specific morphology, memory, resource or atmospheric cause.",
+    "Loss of significance after conditioning is not by itself proof of behavioural-mixture causation because state conditioning reduces support.",
+    "No result from this extension modifies the frozen v0.3.8 submission manuscript before submission."
+  ],
+  "stop_rule": [
+    "Do not change q3_dt1800 state definition, vertical centering, bins, joint support, weighting, minimum scored events, expected n, panel B/seeds or pass criteria after any state-conditioned vertical output is opened.",
+    "Retain all non-passing panels and do not substitute q2 or dt3600 preflight alternatives.",
+    "Do not add a post-hoc state classifier if the frozen proxy fails."
+  ]
+}
