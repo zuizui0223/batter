@@ -98,7 +98,7 @@ def build_events(panel,c):
 
 
 def run_panel(panel,c):
-    expected=int(c["origin"]["expected_evaluable_individuals"][panel])
+    expected=int(c["preflight"]["expected_evaluable_individuals"][panel])
     settings={x["panel"]:x for x in c["calibration"]["settings"]}
     events_by_cohort,diag=build_events(panel,c)
     arrays={cohort:cal.make_cohort_arrays(events,len(EDGES)-1) for cohort,events in sorted(events_by_cohort.items())}
@@ -154,7 +154,7 @@ def run_panel(panel,c):
 
 def aggregate(c,panel_dir):
     panels={}
-    for p in c["origin"]["included_panels"]:
+    for p in c["preflight"]["included_panels"]:
         path=panel_dir/f"panel_{p}_v1.json"
         if not path.exists():
             raise RuntimeError(f"missing panel {path}")
@@ -209,7 +209,7 @@ def main():
     panel_dir=ROOT/args.panel_dir
 
     if args.panel:
-        if args.panel not in c["origin"]["included_panels"]:
+        if args.panel not in c["preflight"]["included_panels"]:
             raise SystemExit(f"unknown panel {args.panel}")
         payload=run_panel(args.panel,c)
         panel_dir.mkdir(parents=True,exist_ok=True)
