@@ -5,10 +5,10 @@ The frozen v0.3.8 submission on `main` is unchanged. This branch collects mechan
 ## Current synthesis
 
 Read:
-- `MECHANISM_SYNTHESIS_V3.md` — integrated ecological interpretation;
-- `MECHANISM_CAUSE_TREE_V2.md` — causal paths weakened, live, or structurally unidentifiable;
-- `mechanism_status_v3.json` — machine-readable state;
-- `NEXT_DECISIVE_MECHANISM_EXPERIMENT_V1.md` — field design required to identify the remaining mechanism.
+- `MECHANISM_SYNTHESIS_V4.md` — integrated ecological interpretation;
+- `MECHANISM_CAUSE_TREE_V3.md` — causal paths weakened, live, or structurally unidentifiable;
+- `mechanism_status_v4.json` — machine-readable state;
+- `NEXT_DECISIVE_MECHANISM_EXPERIMENT_V2.md` — field design required to identify the remaining mechanism.
 
 ## Strong results
 
@@ -35,3 +35,10 @@ Read:
 3. context-dependent temporal allocation, especially the wet-season 2023 *P. hastatus* signal.
 
 The four-panel same-night test remains running and will be added only after its frozen workflow completes.
+
+
+## Updated mechanism interpretation
+
+The apparent *P. hastatus* 2023 temporal-phase attenuation did **not** pass a support-matched attribution test (p=0.3774), so temporal-phase causation is not established.
+
+A separate 2-km place × speed×turn × same-night test passes in 3/4 structurally evaluable panels. Broad shared-night context is therefore insufficient as a general explanation in that subset; *P. hastatus* 2016 remains unresolved at p=0.0544.
