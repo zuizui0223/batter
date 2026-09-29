@@ -151,15 +151,25 @@ def choose_col(cols, pats):
                 return c
     return None
 
+def _present(series):
+    # Presence-only audit: never convert a vertical field to numeric or summarize its magnitude.
+    x = series.notna()
+    txt = series.astype(str).str.strip()
+    x &= txt.ne("")
+    x &= ~txt.str.lower().isin({"na", "nan", "null", "none"})
+    return x
+
 def infer_structural(df, flags):
     if df is None or not hasattr(df, "columns"):
         return {}
     cols = list(df.columns)
     id_col = choose_col(cols, [r"^bat_id$", r"^batid$", r"^individual.*id$", r"^animal.*id$", r"^ring_number$", r"^id$"])
     track_col = choose_col(cols, [r"^trackid$", r"flight.*path", r"^trip.*id$", r"^session.*id$", r"^night.*id$"])
-    time_col = choose_col(cols, [r"^timestamp$", r"datetime", r"date.*time", r"^date$", r"^time$"])
+    time_col = choose_col(cols, [r"^timestamp$", r"^utc$", r"datetime", r"date.*time", r"^date$", r"^time$"])
     x_col = choose_col(cols, [r"^longitude$", r"^lon$", r"^x_$", r"^x$", r"easting"])
     y_col = choose_col(cols, [r"^latitude$", r"^lat$", r"^y_$", r"^y$", r"northing"])
+    vertical_fields = list(flags.get("native_vertical_fields") or [])
+    vertical_col = vertical_fields[0] if vertical_fields else None
     out = {
         "row_count": int(len(df)),
         "selected_id_field": id_col,
@@ -167,38 +177,59 @@ def infer_structural(df, flags):
         "selected_time_field": time_col,
         "selected_x_field": x_col,
         "selected_y_field": y_col,
+        "selected_native_vertical_field": vertical_col,
     }
+
+    # Frozen structural gate uses only rows where identifying, horizontal and native-vertical
+    # fields are present. Vertical magnitude remains unopened: only blank/nonblank is evaluated.
+    required_presence = [c for c in [id_col, x_col, y_col, vertical_col] if c is not None]
+    usable_mask = pd.Series(True, index=df.index)
+    for c in required_presence:
+        usable_mask &= _present(df[c])
+    usable = df.loc[usable_mask].copy()
+    if vertical_col and x_col and y_col and id_col:
+        out["rows_with_id_xy_native_vertical_presence"] = int(usable_mask.sum())
+    else:
+        out["rows_with_id_xy_native_vertical_presence"] = 0
+
     if id_col:
-        ids = df[id_col].dropna().astype(str)
-        out["individual_count"] = int(ids.nunique())
-    # Track/session structure can be counted without looking at any vertical value.
+        ids_all = df.loc[_present(df[id_col]), id_col].astype(str)
+        out["individual_count_all_rows"] = int(ids_all.nunique())
+        ids_usable = usable[id_col].astype(str) if id_col in usable else pd.Series(dtype=str)
+        out["individual_count_with_xy_native_vertical_presence"] = int(ids_usable.nunique()) if vertical_col and x_col and y_col else 0
+
+    # Track/session structure is counted from presence-qualified rows when a native vertical
+    # field is available; otherwise it is descriptive only and can never yield source PASS.
+    base = usable if (vertical_col and x_col and y_col and id_col) else df
     if id_col and track_col:
-        d = df[[id_col, track_col]].dropna().astype(str)
+        needed = [id_col, track_col]
+        d = base.loc[_present(base[id_col]) & _present(base[track_col]), needed].astype(str)
         counts = d.groupby([id_col, track_col]).size()
         eligible = counts[counts >= 50]
-        repeat = eligible.reset_index().groupby(id_col)[track_col].nunique()
-        out["track_count"] = int(d[track_col].nunique())
-        out["tracks_ge50"] = int((counts >= 50).sum())
-        out["repeat_individuals_ge2_tracks_ge50"] = int((repeat >= 2).sum())
+        repeat = eligible.reset_index().groupby(id_col)[track_col].nunique() if len(eligible) else pd.Series(dtype=int)
+        out["track_count"] = int(d[track_col].nunique()) if len(d) else 0
+        out["tracks_ge50_presence_qualified"] = int((counts >= 50).sum())
+        out["repeat_individuals_ge2_tracks_ge50"] = int((repeat >= 2).sum()) if len(repeat) else 0
         out["individuals_with_any_track_ge50"] = int(repeat.size)
         out["structural_gate_pass_from_explicit_tracks"] = bool(
+            vertical_col and x_col and y_col and
             d[id_col].nunique() >= 8 and (repeat >= 2).sum() >= 5
         )
     elif id_col and time_col:
-        # Night-based fallback from timestamp. We only parse timestamps; vertical is untouched.
-        times = pd.to_datetime(df[time_col], errors="coerce", utc=True)
-        tmp = pd.DataFrame({"iid": df[id_col].astype(str), "t": times}).dropna()
+        # Night-based fallback from timestamps; native vertical is still only presence-qualified.
+        times = pd.to_datetime(base[time_col], errors="coerce", utc=True)
+        tmp = pd.DataFrame({"iid": base[id_col].astype(str), "t": times}).dropna()
         if not tmp.empty:
-            # shifted-night convention used elsewhere in batter
             night = (tmp["t"] - pd.Timedelta(hours=12)).dt.date.astype(str)
             counts = pd.DataFrame({"iid": tmp["iid"], "night": night}).groupby(["iid", "night"]).size()
             eligible = counts[counts >= 50]
-            repeat = eligible.reset_index().groupby("iid")["night"].nunique()
+            repeat = eligible.reset_index().groupby("iid")["night"].nunique() if len(eligible) else pd.Series(dtype=int)
             out["night_count"] = int(counts.size)
-            out["nights_ge50"] = int((counts >= 50).sum())
-            out["repeat_individuals_ge2_nights_ge50"] = int((repeat >= 2).sum())
+            out["nights_ge50_presence_qualified"] = int((counts >= 50).sum())
+            out["repeat_individuals_ge2_nights_ge50"] = int((repeat >= 2).sum()) if len(repeat) else 0
             out["individuals_with_any_night_ge50"] = int(repeat.size)
             out["structural_gate_pass_from_shifted_nights"] = bool(
+                vertical_col and x_col and y_col and
                 tmp["iid"].nunique() >= 8 and (repeat >= 2).sum() >= 5
             )
     return out
