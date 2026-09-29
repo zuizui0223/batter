@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-fine-place-kinematic-four-panel-v1",
+  "structural_preflight": {
+    "run_id": 36517151763,
+    "artifact_id": 11011795260,
+    "selected_pre_outcome": true,
+    "grid_m": 2000,
+    "excluded_panel": "eidolon"
+  },
+  "authoritative_workflow": {
+    "run_id": 36517411361,
+    "head_sha": "5e63b1206d68affa48020d31b830cd1e58986a6f",
+    "artifact_id": 11011043558,
+    "artifact_digest": "sha256:24ad67db71268da63a4a47ed1501bbb91f45b45a9d18d441d98ad397becebf1b"
+  },
+  "pass_count": 4,
+  "panel_count": 4,
+  "panels": {
+    "hypsignathus": {
+      "n": 22,
+      "calibrated_excess": 0.28643472819589033,
+      "p": 0.0002,
+      "pass": true
+    },
+    "phyllostomus_2022": {
+      "n": 30,
+      "calibrated_excess": 0.1868742286730979,
+      "p": 0.0002,
+      "pass": true
+    },
+    "phyllostomus_2023": {
+      "n": 14,
+      "calibrated_excess": 0.07229643333597938,
+      "p": 0.0022,
+      "pass": true
+    },
+    "phyllostomus_2016": {
+      "n": 10,
+      "calibrated_excess": 0.5454921061821778,
+      "p": 0.012,
+      "pass": true
+    }
+  },
+  "interpretation": "Within the structurally evaluable four-panel subset, centered vertical individuality persists after matching both 2-km horizontal place and broad speed×turning state. No inference to Eidolon.",
+  "submission_claims_unchanged": true
+}
