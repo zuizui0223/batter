@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-temporal-persistence-7d-two-panel-v1",
+  "authoritative_workflow": {
+    "run_id": 36562703089,
+    "head_sha": "b46eb23a6909165e88187d2866f88222b5261279",
+    "artifact_id": 11030553440,
+    "artifact_digest": "sha256:5ec3251d99db349109a0c1414f535ca9f2ae21ce0eb18af4117b8a5fc271c8bf"
+  },
+  "minimum_self_lag_days": 7,
+  "pass_count": 2,
+  "panel_count": 2,
+  "panels": {
+    "hypsignathus": {
+      "n": 20,
+      "calibrated_excess": 0.16469613326888416,
+      "p": 0.0002,
+      "pass": true
+    },
+    "phyllostomus_2022": {
+      "n": 17,
+      "calibrated_excess": 0.09990781667811544,
+      "p": 0.0002,
+      "pass": true
+    }
+  },
+  "interpretation": "Centered vertical individuality persists across >=7-day separation in both structurally evaluable systems.",
+  "submission_claims_unchanged": true
+}
