@@ -76,6 +76,21 @@ Only 2022 showed an isolated association (rho=-0.401, p=0.0274), with inconsiste
 
 **Inference:** simple monotonic payload burden is not a general technical explanation.
 
+### 6. Simple body-mass similarity
+
+A separate donor-transfer test used the four panels with adequate mass+x-y-time support. For each target, it asked whether vertical profiles from other individuals with more similar body mass transfer better within 5-km place × speed×turn contexts.
+
+Result: **0/4 panels support the predicted negative mass-distance gradient**:
+- *Hypsignathus*: mean target-level rho=-0.108, p=0.107
+- *P. hastatus* 2022: rho=-0.023, p=0.392
+- *P. hastatus* 2023: rho=+0.028, p=0.565
+- *P. hastatus* 2016: rho=+0.138, p=0.927
+
+A stricter 500-m morphology-transfer design was then stopped before vertical outcome because three of four panels lost the frozen donor-support gate.
+
+**Inference:** simple body mass is not supported as a general stable trait explaining cross-individual vertical-organization transfer. This does not test wing loading, wing shape, body condition or other morphology.
+
+
 ## Shared-night environmental context
 
 A structurally frozen four-panel comparison asked whether the same individual's history remained more informative than **other bats tracked on the same shifted night**, while also matching 2-km horizontal place and speed×turn state.
