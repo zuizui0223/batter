@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-cross-panel-night-context-preflight-v1",
+  "authoritative_workflow": {
+    "run_id": 36515065767,
+    "head_sha": "f304fd5267e4bd1f79a8e23141ddbce37d20ea2b",
+    "artifact_id": 11010439648,
+    "artifact_digest": "sha256:0d439cc64098eb2e759345e9d11785b1769ea3d4978f81e0087af63e74612671"
+  },
+  "feasible_to_open_vertical_outcome": false,
+  "counts": {
+    "eidolon": 8,
+    "hypsignathus": 20,
+    "phyllostomus_2022": 32,
+    "phyllostomus_2023": 13,
+    "phyllostomus_2016": 10
+  },
+  "required": {
+    "eidolon": 9,
+    "hypsignathus": 17,
+    "phyllostomus_2022": 23,
+    "phyllostomus_2023": 10,
+    "phyllostomus_2016": 7
+  },
+  "retention": {
+    "eidolon": 0.6666666666666666,
+    "hypsignathus": 0.8695652173913043,
+    "phyllostomus_2022": 1,
+    "phyllostomus_2023": 0.9285714285714286,
+    "phyllostomus_2016": 1
+  },
+  "limiting_panel": "eidolon",
+  "vertical_outcome_opened": false,
+  "submission_claims_unchanged": true
+}
