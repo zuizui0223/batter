@@ -20,7 +20,8 @@ Centered individual vertical organization
 |   +-- simple patch fidelity ----------------- general prediction FAIL
 |   +-- 2-km place x kinematic ---------------- 4/4 remain
 |   +-- 500-m place x kinematic --------------- 4/4 remain
-|   +-- sub-500-m exact route/resource -------- LIVE
+|   +-- 250-m place x kinematic --------------- 3/3 evaluable systems remain
+|   +-- <250-m exact route/resource ----------- LIVE
 |
 +-- broad environmental context
 |   +-- same-night + 2-km + kinematic
@@ -32,13 +33,14 @@ Centered individual vertical organization
 |   +-- common Tadarida uplift slope ---------- not supported
 |   +-- exact local environmental response ---- LIVE
 |
++-- temporal persistence
+|   +-- >=1-day self-history ------------------ 4/4 remain
+|   +-- >=3-day self-history ------------------ 3/3 evaluable systems remain
+|   +-- >=7-day self-history ------------------ RUNNING in 2 systems
+|
 +-- stable individual flight organization
-    +-- body mass donor transfer @500 m
-    |   +-- Hypsignathus ---------------------- structurally underpowered
-    |   +-- P. 2022 --------------------------- structurally underpowered
-    |   +-- P. 2023 --------------------------- structurally underpowered
-    |   +-- P. 2016 --------------------------- structurally feasible
-    |   +-- cross-panel morphology inference -- UNIDENTIFIED
+    +-- body-mass similarity @5 km ----------- 0/4 support
+    +-- body-mass transfer @500 m ------------- structurally unavailable in 3/4
     |
     +-- wing loading/morphology --------------- LIVE
     +-- memory/experience --------------------- LIVE
@@ -54,4 +56,4 @@ The unresolved mechanism is no longer plausibly explained by only:
 - >=500-m route allocation;
 - broad same-night context.
 
-The remaining causal scale is **sub-500-m / within-context**.
+The remaining causal scale is **sub-250–500-m / within-context**, with a demonstrable multi-day stable individual component.
