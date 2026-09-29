@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-fine-place-same-night-four-panel-preflight-v1",
+  "frozen_date": "2026-09-29",
+  "status": "x-y-time-only preflight frozen before fine-place same-night vertical outcome",
+  "role": "post-freeze exploratory mechanism discrimination; four-panel structurally-evaluable subset only; cannot alter v0.3.8",
+  "panels": [
+    "hypsignathus",
+    "phyllostomus_2022",
+    "phyllostomus_2023",
+    "phyllostomus_2016"
+  ],
+  "baseline_n": {
+    "hypsignathus": 22,
+    "phyllostomus_2022": 30,
+    "phyllostomus_2023": 14,
+    "phyllostomus_2016": 10
+  },
+  "baseline_source": "corrected 2-km fine-place × speed2_turn2 structural preflight selected before vertical outcome",
+  "context": {
+    "horizontal_cell_m": 2000,
+    "movement_state": "frozen speed2_turn2",
+    "maximum_step_interval_seconds": 1800,
+    "night_rule": "UTC timestamp shifted backward by 12 hours, then calendar date",
+    "minimum_session_night_purity": 0.95,
+    "stratum": "2-km horizontal cell × speed×turn state"
+  },
+  "feasibility": {
+    "self_history": "other retained sessions of same individual in same cohort",
+    "same_night_other": "retained sessions on target dominant shifted night from other individuals in same cohort",
+    "target_support": "target endpoint's 2-km cell × state occurs in both self-history and same-night-other pools",
+    "minimum_supported_target_events": 50,
+    "individual_evaluable": "at least one target session with >=50 common supported endpoints",
+    "panel_gate": "retain at least 70% of 2-km fine-place baseline n and at least 5 individuals in every panel",
+    "decision": "If all four panels pass, freeze exact n and open vertical self-history vs same-night-other test. Otherwise stop."
+  },
+  "planned_vertical_test_if_feasible": {
+    "response": "session-centered residual height",
+    "self_predictor": "equal-session P(z_residual | 2-km cell,state) from same individual's other sessions",
+    "same_night_other_predictor": "equal-individual P(z_residual | 2-km cell,state) from other individuals on target night",
+    "endpoint": "mean log P_self - log P_same_night_other on common supported target endpoints",
+    "aggregation": "equal target session within individual, then equal individual within panel",
+    "null": "within cohort, permute whole-session individual labels preserving exact session-count multiset while keeping night, x-y-time state and centered session data attached to blocks; rebuild both predictors",
+    "calibration_settings": [
+      {
+        "panel": "hypsignathus",
+        "B": 4999,
+        "seed": 20260929042
+      },
+      {
+        "panel": "phyllostomus_2022",
+        "B": 4999,
+        "seed": 20260929043
+      },
+      {
+        "panel": "phyllostomus_2023",
+        "B": 4999,
+        "seed": 20260929044
+      },
+      {
+        "panel": "phyllostomus_2016",
+        "B": 4999,
+        "seed": 20260929045
+      }
+    ],
+    "panel_pass_rule": "exact preflight n; observed-minus-null-mean self-vs-same-night gain >0; one-sided p(null>=observed)<=0.05",
+    "synthesis": "3 or 4 PASS => shared calendar-night context plus 2-km route/kinematic matching is insufficient as a general explanation in this subset; 1 or 2 => mixed; 0 => shared night context may explain much."
+  },
+  "claim_boundary": [
+    "Same-night matching controls calendar-night context, not exact local weather at every fix.",
+    "2-km cells are not exact resources/routes.",
+    "Persistence does not prove intrinsic phenotype.",
+    "No inference to Eidolon or five-panel generalization."
+  ],
+  "stop_rule": [
+    "Do not change 2-km grid, speed2_turn2 definition, shifted-night rule, 0.95 purity, 50-event support, 70% retention, >=5 floor or panel set after preflight.",
+    "Do not inspect vertical outcome before all four panels pass structural gate."
+  ]
+}
