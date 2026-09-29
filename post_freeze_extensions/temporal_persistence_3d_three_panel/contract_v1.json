@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-temporal-persistence-3d-three-panel-v1",
+  "frozen_date": "2026-09-29",
+  "status": "three-panel >=3-day temporal-persistence stress test frozen after x-y-time-only preflight and after partial >=1-day positive results",
+  "role": "post-freeze exploratory temporal-stability stress test; not independent confirmation and cannot alter v0.3.8",
+  "provenance": {
+    "source_preflight_run_id": 36538374767,
+    "source_preflight_artifact_id": 11018559529,
+    "opened_after_partial_1d_results": true,
+    "interpretation_rule": "Treat as a stress-test refinement of temporal stability, not independent confirmatory evidence."
+  },
+  "subset": {
+    "minimum_self_lag_days": 3,
+    "included_panels": [
+      "hypsignathus",
+      "phyllostomus_2022",
+      "phyllostomus_2023"
+    ],
+    "excluded_panels": {
+      "phyllostomus_2016": "0/10 evaluable at >=3 days",
+      "eidolon": "4/12 evaluable at >=3 days; below frozen gate"
+    },
+    "expected_evaluable_individuals": {
+      "hypsignathus": 22,
+      "phyllostomus_2022": 25,
+      "phyllostomus_2023": 11
+    }
+  },
+  "ecological_question": "Does centered vertical organization remain individually predictive when all same-individual training sessions are at least three days from the target?",
+  "state_definition": {
+    "horizontal_cell_m": 5000,
+    "source": "frozen speed2_turn2",
+    "maximum_step_interval_seconds": 1800,
+    "speed_bins": 2,
+    "turn_bins": 2,
+    "thresholding": "cohort medians",
+    "session_time": "median timestamp of valid speed×turn endpoints"
+  },
+  "estimator": {
+    "vertical_centering": "session median",
+    "vertical_edges_m": [
+      "-inf",
+      -400,
+      -200,
+      -100,
+      -50,
+      0,
+      50,
+      100,
+      200,
+      400,
+      "inf"
+    ],
+    "conditional_profile": "P(centered residual height | 5-km cell, speed×turn state)",
+    "self_training": "same-individual sessions in same cohort with absolute median-time lag >=3 days",
+    "self_weighting": "equal lag-qualified session",
+    "other_weighting": "equal individual within cohort",
+    "common_weighting": "equal-session self distribution over jointly supported cell×state strata, applied identically to self and other profiles",
+    "minimum_scored_target_events": 50
+  },
+  "calibration": {
+    "permutation_unit": "whole centered session block",
+    "scope": "within frozen cohort",
+    "preserve": "session time, x-y-time state and centered z remain with session block; exact label session-count multiset preserved",
+    "lag_rebuild": "recompute >=3-day self training after every label permutation",
+    "settings": [
+      {
+        "panel": "hypsignathus",
+        "B": 4999,
+        "seed": 20260929092
+      },
+      {
+        "panel": "phyllostomus_2022",
+        "B": 4999,
+        "seed": 20260929093
+      },
+      {
+        "panel": "phyllostomus_2023",
+        "B": 4999,
+        "seed": 20260929094
+      }
+    ],
+    "panel_pass_rule": "exact preflight n; calibrated common-cell identity >0; one-sided p(null>=observed)<=0.05"
+  },
+  "synthesis": {
+    "decision_matrix": {
+      "3_pass": "All three structurally evaluable systems retain vertical individuality across >=3-day self-history separation.",
+      "1_or_2_pass": "Multi-day temporal persistence is mixed across systems.",
+      "0_pass": "The >=1-day signal does not persist to >=3 days in the structurally evaluable subset."
+    },
+    "generalization_limit": "No inference to P2016, Eidolon, or persistence beyond three days."
+  },
+  "claim_boundary": [
+    "This is a post-hoc stress test opened after partial >=1-day results.",
+    "Persistence over three days does not prove immutable intrinsic traits.",
+    "Longer than three-day persistence remains unresolved.",
+    "Frozen v0.3.8 remains unchanged."
+  ],
+  "stop_rule": [
+    "Do not change subset, 3-day lag, session-time definition, 5-km grid, speed2_turn2, centering, bins, 50-event support, expected n, B/seeds or pass criteria after output.",
+    "If exact n fails, invalidate rather than retune."
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-temporal-persistence-3d-three-panel-v1",
+  "authoritative_workflow": {
+    "run_id": 36539572278,
+    "head_sha": "88b1bec135f223de319b3873f7079a0d2fb74f43",
+    "artifact_id": 11019714326,
+    "artifact_digest": "sha256:550b61525713ceaa7bca3a1a8fc24ccd72a8d9f948b96a8d77932b94de8e28f4"
+  },
+  "minimum_self_lag_days": 3,
+  "stress_test": true,
+  "independent_confirmation": false,
+  "pass_count": 3,
+  "panel_count": 3,
+  "panels": {
+    "hypsignathus": {
+      "n": 22,
+      "calibrated_excess": 0.15385422336828014,
+      "p": 0.0002,
+      "pass": true
+    },
+    "phyllostomus_2022": {
+      "n": 25,
+      "calibrated_excess": 0.09590586128179066,
+      "p": 0.0002,
+      "pass": true
+    },
+    "phyllostomus_2023": {
+      "n": 11,
+      "calibrated_excess": 0.057346314962232574,
+      "p": 0.0216,
+      "pass": true
+    }
+  },
+  "interpretation": "Centered vertical individuality persists across >=3-day separation in all three structurally evaluable systems.",
+  "submission_claims_unchanged": true
+}
