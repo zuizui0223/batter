@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-temporal-persistence-preflight-v1",
+  "authoritative_workflow": {
+    "run_id": 36538374767,
+    "head_sha": "5590f6a68e2a9f2b3303c0e23c3e4426c579bd4a",
+    "artifact_id": 11018559529,
+    "artifact_digest": "sha256:25ace01da68ba9fb8598d831481288c98f05fbc3f609096f654209c9761d12e0"
+  },
+  "counts": {
+    "lag7d": {
+      "eidolon": 0,
+      "hypsignathus": 20,
+      "phyllostomus_2022": 17,
+      "phyllostomus_2023": 0,
+      "phyllostomus_2016": 0
+    },
+    "lag3d": {
+      "eidolon": 4,
+      "hypsignathus": 22,
+      "phyllostomus_2022": 25,
+      "phyllostomus_2023": 11,
+      "phyllostomus_2016": 0
+    },
+    "lag1d": {
+      "eidolon": 7,
+      "hypsignathus": 22,
+      "phyllostomus_2022": 31,
+      "phyllostomus_2023": 13,
+      "phyllostomus_2016": 8
+    }
+  },
+  "baseline": {
+    "eidolon": 12,
+    "hypsignathus": 23,
+    "phyllostomus_2022": 32,
+    "phyllostomus_2023": 14,
+    "phyllostomus_2016": 10
+  },
+  "five_panel_feasible": false,
+  "structurally_evaluable_1d_subset": {
+    "panels": [
+      "hypsignathus",
+      "phyllostomus_2022",
+      "phyllostomus_2023",
+      "phyllostomus_2016"
+    ],
+    "expected_n": {
+      "hypsignathus": 22,
+      "phyllostomus_2022": 31,
+      "phyllostomus_2023": 13,
+      "phyllostomus_2016": 8
+    },
+    "selected_pre_outcome": true
+  },
+  "submission_claims_unchanged": true
+}
