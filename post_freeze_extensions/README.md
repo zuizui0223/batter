@@ -2,52 +2,59 @@
 
 The frozen v0.3.8 submission on `main` is unchanged. This branch collects mechanism work opened after that freeze.
 
-## Current synthesis
+## Read first
 
-Read:
-- `MECHANISM_SYNTHESIS_V5.md` — integrated ecological interpretation;
-- `MECHANISM_CAUSE_TREE_V4.md` — causal paths weakened, live, or structurally unidentifiable;
-- `mechanism_status_v5.json` — machine-readable state;
+- `MECHANISM_SYNTHESIS_V6.md` — final integrated archive-level ecological interpretation;
+- `MECHANISM_CAUSE_TREE_V5.md` — causal paths weakened, live, or structurally unidentifiable;
+- `mechanism_status_v6.json` — machine-readable final status;
+- `ARCHIVE_PROGRAMME_STOP_RULE_V1.md` — why no further post-hoc grids/lags/partitions should be opened;
 - `NEXT_DECISIVE_MECHANISM_EXPERIMENT_V2.md` — field design required to identify the remaining mechanism.
 
-## Strong results
+## Strongest results
 
-- speed-state conditioning: **5/5** comparative panels retain centered identity;
+- broad speed-state conditioning: **5/5** comparative panels retain centered identity;
 - speed × turning conditioning: **5/5** retain identity;
-- corrected 2-km place × speed×turn subset: **4/4** structurally evaluable non-*Eidolon* panels retain identity;
-- 500-m stress test: **4/4** retain identity;
-- temporal early/middle/late conditioning: **3/4** retain identity, with wet-season *P. hastatus* 2023 the exception.
+- 500-m place × speed×turn matching: **4/4** structurally evaluable non-*Eidolon* panels retain identity;
+- 250-m place × speed×turn stress test: **3/3** structurally evaluable systems retain identity;
+- >=1-day self-history separation: **4/4** retain identity;
+- >=3-day separation: **3/3** retain identity;
+- >=7-day separation: **2/2** retain identity;
+- 2-km place × speed×turn × same-night comparison: **3/4** PASS, with P2016 unresolved at p=0.0544.
 
-## Negative / weakened explanations
+## Explanations weakened or unsupported
 
-- simple movement-patch fidelity as a general driver: FAIL (mean rho +0.176, p=0.05731);
-- relative tag burden as a general driver: FAIL (mean |rho| 0.268, p=0.1399);
+- simple movement-patch fidelity: FAIL (mean rho +0.176, p=0.05731);
+- relative tag burden: FAIL (mean |rho| 0.268, p=0.1399);
+- simple body-mass donor similarity: **0/4 PASS**;
+- support-matched temporal-phase attribution in P2023: FAIL (p=0.3774);
 - common focal *Tadarida* uplift slope: not supported (p=0.334).
 
 ## Structural limits
 
-*Eidolon* has strong vertical individuality but very sparse cross-individual fine-place overlap. It repeatedly blocks five-panel fine-place, same-night, and morphology-transfer identification. This is treated as an identifiability boundary rather than solved by lowering gates or deleting the panel.
+- common 100-m spatial test fails support before vertical outcome;
+- 500-m same-night common test fails support by one P2022 individual;
+- 500-m body-mass transfer is structurally sparse in three of four panels;
+- *Eidolon* repeatedly lacks enough cross-individual fine-context overlap for the strongest mechanism tests.
 
-## Current live fork
+These are treated as identifiability boundaries rather than solved by weakening gates or deleting panels.
 
-1. sub-500-m exact route/resource/microhabitat allocation;
-2. within-context individual flight organization;
-3. context-dependent temporal allocation, especially the wet-season 2023 *P. hastatus* signal.
+## Current causal localization
 
-The four-panel same-night test remains running and will be added only after its frozen workflow completes.
+The archive supports a temporally persistent individual component of centered vertical organization that survives:
+- broad movement-state matching;
+- 500-m place matching in four systems;
+- 250-m place matching in three systems;
+- >=1-day self-history separation in four systems;
+- >=3-day separation in three systems;
+- >=7-day separation in two systems.
 
+The remaining causal fork is primarily:
 
-## Updated mechanism interpretation
+1. **very fine resource/route/microhabitat structure** below the archive's common spatial support limit; versus
+2. **stable within-context individual flight organization / fine environmental reaction norms**.
 
-The apparent *P. hastatus* 2023 temporal-phase attenuation did **not** pass a support-matched attribution test (p=0.3774), so temporal-phase causation is not established.
+## Programme status
 
-A separate 2-km place × speed×turn × same-night test passes in 3/4 structurally evaluable panels. Broad shared-night context is therefore insufficient as a general explanation in that subset; *P. hastatus* 2016 remains unresolved at p=0.0544.
+The archival mechanism programme is **closed**.
 
-
-## Current endpoint
-
-The archive now localizes the unresolved mechanism below **500 m horizontal place + broad speed×turn state** in four structurally evaluable non-Eidolon panels.
-
-Broad same-night context is insufficient in 3/4 of those panels. Temporal-phase causation is not established after support-matched attribution. Body-mass transfer under 500-m matching is structurally infeasible in three of four panels.
-
-The remaining decisive distinction is between sub-500-m resource/route/microhabitat allocation and within-context individual flight organization / fine environmental reaction norms.
+Do not add new spatial grids, lag thresholds, phase partitions, donor minima or post-outcome panel deletions. Further progress should come from a genuinely independent dataset or new overlapping field sampling.
