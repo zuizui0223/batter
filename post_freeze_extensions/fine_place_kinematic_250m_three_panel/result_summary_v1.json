@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-fine-place-kinematic-250m-three-panel-v1",
+  "authoritative_workflow": {
+    "run_id": 36538110550,
+    "head_sha": "547e7c375234e39eaf009d60519e64ba857a6bd0",
+    "artifact_id": 11020266530,
+    "artifact_digest": "sha256:9a92b2db28f192cac276b1c0f032ea28e41f5bebd850a7e980d10180ac9b53ae"
+  },
+  "preflight_run_id": 36537793408,
+  "fine_grid_m": 250,
+  "pass_count": 3,
+  "panel_count": 3,
+  "panels": {
+    "hypsignathus": {
+      "n": 16,
+      "calibrated_excess": 0.3114787300603592,
+      "p": 0.0002,
+      "pass": true
+    },
+    "phyllostomus_2022": {
+      "n": 19,
+      "calibrated_excess": 0.0762159654664583,
+      "p": 0.0002,
+      "pass": true
+    },
+    "phyllostomus_2016": {
+      "n": 9,
+      "calibrated_excess": 0.44722827049445957,
+      "p": 0.016,
+      "pass": true
+    }
+  },
+  "interpretation": "Centered vertical individuality persists after 250-m place × speed×turn matching in all three structurally evaluable systems.",
+  "submission_claims_unchanged": true
+}
