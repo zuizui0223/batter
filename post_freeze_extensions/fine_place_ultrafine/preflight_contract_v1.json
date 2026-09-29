@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-fine-place-ultrafine-preflight-v1",
+  "frozen_date": "2026-09-29",
+  "status": "x-y-time-only ultrafine-place x speed-turn feasibility preflight frozen before any <500-m vertical outcome",
+  "role": "post-freeze exploratory spatial-localization stress test; cannot alter frozen v0.3.8",
+  "hypothesis_origin": "Opened after centered vertical individuality survived matched 500-m place × speed×turn conditioning in all four structurally evaluable non-Eidolon panels.",
+  "panels": [
+    "hypsignathus",
+    "phyllostomus_2022",
+    "phyllostomus_2023",
+    "phyllostomus_2016"
+  ],
+  "baseline": {
+    "source_preflight_run_id": 36517151763,
+    "source_500m_result_run_id": 36519747717,
+    "expected_500m_evaluable_n": {
+      "hypsignathus": 19,
+      "phyllostomus_2022": 23,
+      "phyllostomus_2023": 11,
+      "phyllostomus_2016": 9
+    }
+  },
+  "state_definition": {
+    "source": "frozen speed2_turn2",
+    "maximum_step_interval_seconds": 1800,
+    "speed_bins": 2,
+    "speed_threshold": "cohort median",
+    "turn_bins": 2,
+    "turn_threshold": "cohort median absolute deflection angle",
+    "state_count": 4,
+    "input": "x-y-time only"
+  },
+  "candidates": [
+    {
+      "id": "grid250",
+      "fine_grid_m": 250,
+      "stage": 1
+    },
+    {
+      "id": "grid100",
+      "fine_grid_m": 100,
+      "stage": 2
+    }
+  ],
+  "feasibility": {
+    "target_support": "A target kinematic endpoint is supported when its fine-cell × speed×turn state occurs in at least one other session of the same individual and in at least one session from another individual in the same cohort.",
+    "minimum_supported_target_events": 50,
+    "individual_evaluable": "at least one target session with >=50 supported endpoints",
+    "panel_gate": "retain at least 70% of the frozen 500-m baseline n and at least 5 individuals in every panel",
+    "sequential_selection": "Evaluate 250 m first. Only if all four panels pass the frozen gate, evaluate 100 m. If 100 m also passes all four, select 100 m; otherwise select 250 m. If 250 m fails, stop before any <500-m vertical outcome."
+  },
+  "planned_vertical_test_if_feasible": {
+    "ecological_question": "Does the four-panel vertical-identity result persist after spatial matching is tightened below 500 m while broad speed×turn state remains matched?",
+    "estimator": "P(centered residual height | selected fine cell, speed×turn state), equal-session self, equal-individual other, identical self-derived joint-stratum weights",
+    "vertical_centering": "session median",
+    "vertical_edges_m": [
+      "-inf",
+      -400,
+      -200,
+      -100,
+      -50,
+      0,
+      50,
+      100,
+      200,
+      400,
+      "inf"
+    ],
+    "calibration": "reuse frozen whole-session permutation B/seeds from kinematic-state-conditioning-v1",
+    "panel_pass_rule": "exact preflight-selected n; calibrated identity > 0; one-sided p(null>=observed)<=0.05",
+    "synthesis": "3 or 4 PASS => route/resource allocation at or above the selected ultrafine grid remains insufficient in this subset; 1 or 2 => mixed; 0 => ultrafine spatial allocation becomes a leading explanation."
+  },
+  "claim_boundary": [
+    "Fine cells are matching strata, not verified exact flight paths, feeding trees or resources.",
+    "A PASS at 100 or 250 m does not rule out sub-grid microhabitat or microclimate.",
+    "This refinement is opened after positive 500-m results and is a stress test, not independent confirmation.",
+    "No inference applies to Eidolon.",
+    "Frozen v0.3.8 remains unchanged."
+  ],
+  "stop_rule": [
+    "Do not change the 250/100-m sequence, speed2_turn2 definition, 70% retention, >=5 floor, 50-event support, panel set, or baseline n after preflight output.",
+    "If 250 m fails, do not open 100 m or any vertical outcome.",
+    "Do not introduce an intermediate grid after seeing results.",
+    "If a grid is selected, freeze its exact evaluable n before any vertical outcome."
+  ]
+}
