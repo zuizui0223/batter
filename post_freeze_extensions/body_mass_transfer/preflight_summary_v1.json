@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-body-mass-transfer-preflight-v1",
+  "authoritative_workflow": {
+    "run_id": 36514220735,
+    "head_sha": "a3547c6d6d8e0a1c8d5b5cc95a29fa9f76524980",
+    "artifact_id": 11010034707,
+    "artifact_digest": "sha256:89322ba0d5a732f2b5a26d64ac6b00ea682f236977fc97c0d4e64c2b0ad151f0"
+  },
+  "feasible_to_open_vertical_outcome": false,
+  "counts": {
+    "eidolon": 3,
+    "hypsignathus": 24,
+    "phyllostomus_2022": 33,
+    "phyllostomus_2023": 20,
+    "phyllostomus_2016": 18
+  },
+  "required": {
+    "eidolon": 9,
+    "hypsignathus": 17,
+    "phyllostomus_2022": 23,
+    "phyllostomus_2023": 10,
+    "phyllostomus_2016": 7
+  },
+  "limiting_panel": "eidolon",
+  "interpretation": "Five-panel body-mass donor transfer is structurally infeasible because Eidolon lacks enough targets jointly supported by close-mass and far-mass donor pools. Body mass remains unresolved.",
+  "vertical_outcome_opened": false,
+  "submission_claims_unchanged": true
+}
