@@ -38,7 +38,7 @@ def build_events(panel,c):
 
     medians={}
     raw_endpoints=[]
-    max_dt=int(c["state_definition"]["maximum_step_interval_seconds"])
+    max_dt=int(c["context"]["maximum_step_interval_seconds"])
     for key,vals in sorted(by_session.items()):
         vals=sorted(vals,key=lambda x:x["t"])
         medians[key]=float(np.median([r["h"] for r in vals]))
