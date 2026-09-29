@@ -1,0 +1,51 @@
+name: fine-place-kinematic-250m-three-panel-v1
+on:
+  push:
+    branches: [exploratory/fine-place-kinematic-250m-three-panel-v1]
+    paths:
+      - "post_freeze_extensions/fine_place_kinematic_250m_three_panel/**"
+      - ".github/workflows/fine-place-kinematic-250m-three-panel-v1.yml"
+  workflow_dispatch:
+jobs:
+  panel:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    permissions: {contents: read}
+    strategy:
+      fail-fast: false
+      matrix:
+        panel: [hypsignathus, phyllostomus_2022, phyllostomus_2016]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: python -m pip install -e .
+      - name: Run frozen 250-m fine-place x kinematic test
+        run: python post_freeze_extensions/fine_place_kinematic_250m_three_panel/run_v1.py --panel "${{ matrix.panel }}"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: fine-place-kinematic-250m-${{ matrix.panel }}-v1
+          path: post_freeze_extensions/fine_place_kinematic_250m_three_panel/panel_results/panel_${{ matrix.panel }}_v1.json
+          if-no-files-found: error
+  aggregate:
+    needs: panel
+    runs-on: ubuntu-latest
+    permissions: {contents: read}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: python -m pip install -e .
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: fine-place-kinematic-250m-*-v1
+          path: post_freeze_extensions/fine_place_kinematic_250m_three_panel/panel_results
+          merge-multiple: true
+      - run: python post_freeze_extensions/fine_place_kinematic_250m_three_panel/run_v1.py --aggregate
+      - uses: actions/upload-artifact@v4
+        with:
+          name: batter-fine-place-kinematic-250m-three-panel-v1
+          path: |
+            post_freeze_extensions/fine_place_kinematic_250m_three_panel/result_v1.json
+            post_freeze_extensions/fine_place_kinematic_250m_three_panel/RESULT_V1.md
+          if-no-files-found: error
