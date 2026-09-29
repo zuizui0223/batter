@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-body-mass-gradient-500m-four-panel-preflight-v1",
+  "frozen_date": "2026-09-29",
+  "status": "mass+x-y-time-only 500-m donor-support preflight frozen before any body-mass vertical donor scores",
+  "role": "post-freeze exploratory morphology mechanism test in the four structurally evaluable non-Eidolon panels; cannot alter v0.3.8",
+  "hypothesis_origin": "Opened after 500-m place×speed×turn identity remained significant in all four structurally evaluable panels.",
+  "panels": [
+    "hypsignathus",
+    "phyllostomus_2022",
+    "phyllostomus_2023",
+    "phyllostomus_2016"
+  ],
+  "baseline": {
+    "source_preflight_run_id": 36517151763,
+    "source_artifact_id": 11011795260,
+    "context": "500-m horizontal cell × frozen speed2_turn2 state",
+    "expected_evaluable_n": {
+      "hypsignathus": 19,
+      "phyllostomus_2022": 23,
+      "phyllostomus_2023": 11,
+      "phyllostomus_2016": 9
+    }
+  },
+  "mass": {
+    "field": "animal_mass",
+    "source": "checksum-pinned Movebank reference tables",
+    "predictor": "absolute donor-target body-mass difference",
+    "no_grouping": true
+  },
+  "feasibility": {
+    "target_population": "only individuals structurally evaluable in the frozen 500-m place×speed×turn preflight",
+    "donor_support": "For each target session and each other-individual donor in the same frozen cohort, a target endpoint is supported when its 500-m cell×speed×turn state occurs in at least one retained donor session.",
+    "minimum_supported_target_events_per_donor": 50,
+    "donor_pair_evaluable": "at least one target session has >=50 donor-supported endpoints",
+    "target_individual_evaluable": "at least 4 donor individuals with finite mass and at least 3 distinct absolute donor-target mass differences",
+    "panel_gate": "retain at least 70% of the frozen 500-m baseline n and at least 5 target individuals",
+    "decision": "If all four panels pass, freeze exact target n before opening any vertical donor-gradient outcome; otherwise stop this four-panel family."
+  },
+  "planned_vertical_test_if_feasible": {
+    "target_question": "Among other individuals observed in the same 500-m place×speed×turn context, do body-mass-similar donors transfer vertical organization better?",
+    "donor_profile": "equal-session P(centered residual height | 500-m cell, speed×turn state) from one donor individual's retained sessions",
+    "target_donor_score": "equal-session mean target log donor-profile probability on donor-supported target endpoints, minus the equal-individual population of all other eligible donors on the same target support",
+    "target_statistic": "Spearman rho between absolute donor-target mass difference and donor predictive gain; expected negative",
+    "panel_statistic": "equal-target mean Spearman rho",
+    "null": "permute body-mass labels among eligible donor/target individuals within frozen cohort while leaving all donor predictive scores and support fixed",
+    "B": 99999,
+    "seeds": {
+      "hypsignathus": 20260929071,
+      "phyllostomus_2022": 20260929072,
+      "phyllostomus_2023": 20260929073,
+      "phyllostomus_2016": 20260929074
+    },
+    "panel_support_rule": "observed equal-target mean rho < 0 and one-sided p(null <= observed)<=0.05",
+    "synthesis": "3 or 4 supporting panels => body-mass similarity is a recurring predictor of within-context vertical organization; 1 or 2 => context-dependent; 0 => simple body mass is not a general mechanism."
+  },
+  "claim_boundary": [
+    "Body mass is not wing loading or full morphology.",
+    "A negative gradient is associative, not causal.",
+    "Failure does not rule out wing shape, experience, memory or other stable traits.",
+    "This family is opened after fine-place persistence was observed and is exploratory mechanism localization, not independent confirmation.",
+    "No inference applies to Eidolon.",
+    "This extension remains outside frozen v0.3.8."
+  ],
+  "stop_rule": [
+    "Do not change the 500-m baseline population, >=50 donor support, >=4 donors, >=3 distinct mass distances, 70% panel gate, >=5 target floor, or panel set after preflight output.",
+    "Do not inspect vertical donor scores before the preflight passes and exact n is frozen.",
+    "Do not group mass or substitute tag mass/sex if the continuous gradient fails."
+  ]
+}

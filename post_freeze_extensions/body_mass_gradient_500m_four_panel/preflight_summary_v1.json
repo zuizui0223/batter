@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-body-mass-gradient-500m-four-panel-preflight-v1",
+  "authoritative_workflow": {
+    "run_id": 36537035902,
+    "head_sha": "11dc678a7ceb349e4c681f0fc4adf6ff3f152823",
+    "artifact_id": 11018159563,
+    "artifact_digest": "sha256:4894660ce73be1b38f891befe7ce7c3e5886c757c771596547be231ddd9ce7d0"
+  },
+  "feasible_to_open_vertical_outcome": false,
+  "counts": {
+    "hypsignathus": 9,
+    "phyllostomus_2022": 7,
+    "phyllostomus_2023": 5,
+    "phyllostomus_2016": 9
+  },
+  "required": {
+    "hypsignathus": 14,
+    "phyllostomus_2022": 17,
+    "phyllostomus_2023": 8,
+    "phyllostomus_2016": 7
+  },
+  "retention": {
+    "hypsignathus": 0.47368421052631576,
+    "phyllostomus_2022": 0.30434782608695654,
+    "phyllostomus_2023": 0.45454545454545453,
+    "phyllostomus_2016": 1
+  },
+  "vertical_outcome_opened": false,
+  "interpretation": "Body mass remains unresolved; 500-m cross-individual donor overlap is insufficient in three of four panels.",
+  "submission_claims_unchanged": true
+}
