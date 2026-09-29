@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-behavioural-mixture-preflight-v1",
+  "frozen_date": "2026-09-29",
+  "status": "preflight_before_behavioural_composition_proxy_definition",
+  "role": "post-freeze exploratory mechanism preflight; cannot alter v0.3.8 submission claims",
+  "question": "Are x-y-time sampling intervals in the six frozen bat panels sufficiently structured to define a cross-panel movement-state composition proxy without using vertical outcomes?",
+  "panels": [
+    "tadarida",
+    "eidolon",
+    "hypsignathus",
+    "phyllostomus_2022",
+    "phyllostomus_2023",
+    "phyllostomus_2016"
+  ],
+  "inputs": {
+    "retained_records": "Use the same frozen panel/session loaders as the centered-shape audit.",
+    "summarized_fields": [
+      "cohort",
+      "individual",
+      "session",
+      "timestamp",
+      "projected x",
+      "projected y"
+    ],
+    "vertical_values_used_in_summary": false,
+    "note": "Existing loader may parse the frozen vertical field to reproduce retained records, but this preflight neither summarizes nor conditions decisions on vertical values."
+  },
+  "summaries": {
+    "consecutive_step_dt_seconds": [
+      "q10",
+      "q50",
+      "q90",
+      "q95",
+      "q99",
+      "max"
+    ],
+    "horizontal_step_distance_m": [
+      "q50",
+      "q90",
+      "q95",
+      "q99"
+    ],
+    "proportions_dt_le_seconds": [
+      60,
+      300,
+      600,
+      1800
+    ],
+    "counts": [
+      "sessions",
+      "individuals",
+      "steps",
+      "positive_dt_steps"
+    ]
+  },
+  "decision_rule": "Choose one harmonized maximum dt for the behavioural-composition analysis only after this x-y-time preflight. Prefer the smallest candidate among 300, 600, 1800 seconds that retains at least 80% of positive-dt steps in every primary comparative panel. If none does, use 1800 seconds and flag panels below 80%. Do not use vertical identity or future proxy correlations to choose the cap.",
+  "claim_boundary": "Preflight only; no behavioural state or mechanism is inferred."
+}
