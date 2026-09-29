@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-same-night-500m-preflight-v1",
+  "authoritative_workflow": {
+    "run_id": 36538720352,
+    "head_sha": "af4431f0ee2d0b3f53b69709971dab49b79743e4",
+    "artifact_id": 11019706931,
+    "artifact_digest": "sha256:7b0fdb5d1a3ef13c750ddf32ca817ee7a435b4fe48e7168ae3a953be9d58e78c"
+  },
+  "feasible_to_open_vertical_outcome": false,
+  "counts": {
+    "hypsignathus": 15,
+    "phyllostomus_2022": 16,
+    "phyllostomus_2023": 9,
+    "phyllostomus_2016": 8
+  },
+  "required": {
+    "hypsignathus": 14,
+    "phyllostomus_2022": 17,
+    "phyllostomus_2023": 8,
+    "phyllostomus_2016": 7
+  },
+  "limiting_panel": "phyllostomus_2022",
+  "vertical_outcome_opened": false,
+  "submission_claims_unchanged": true
+}
