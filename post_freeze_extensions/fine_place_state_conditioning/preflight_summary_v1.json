@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-fine-place-state-preflight-v1",
+  "authoritative_workflow": {
+    "run_id": 36512707482,
+    "head_sha": "90d7fce7ed2f17a619bd77e02992162ba03907d1",
+    "artifact_id": 11009637379,
+    "artifact_digest": "sha256:0c95d87ca11fe8cba909101e9d8a27f2cc959de1d0441919fdd92730b02bfe0d"
+  },
+  "selected_candidate": null,
+  "feasible_to_open_vertical_outcome": false,
+  "counts": {
+    "grid500": {
+      "eidolon": 2,
+      "hypsignathus": 21,
+      "phyllostomus_2022": 24,
+      "phyllostomus_2023": 12,
+      "phyllostomus_2016": 9
+    },
+    "grid1000": {
+      "eidolon": 2,
+      "hypsignathus": 21,
+      "phyllostomus_2022": 29,
+      "phyllostomus_2023": 14,
+      "phyllostomus_2016": 10
+    },
+    "grid2000": {
+      "eidolon": 2,
+      "hypsignathus": 22,
+      "phyllostomus_2022": 31,
+      "phyllostomus_2023": 14,
+      "phyllostomus_2016": 10
+    }
+  },
+  "interpretation": "Five-panel fine-place × movement-state conditioning is structurally infeasible because Eidolon retains only 2/14 individuals at every tested fine grid. The vertical outcome remains unopened.",
+  "submission_claims_unchanged": true
+}
