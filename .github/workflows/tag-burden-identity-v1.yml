@@ -1,0 +1,36 @@
+name: tag-burden-identity-v1
+on:
+  push:
+    branches: [exploratory/tag-burden-identity-v1]
+    paths:
+      - "post_freeze_extensions/tag_burden_identity/**"
+      - ".github/workflows/tag-burden-identity-v1.yml"
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    permissions:
+      contents: read
+      actions: read
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: python -m pip install -e .
+      - name: Download authoritative individual centered-identity artifact
+        run: |
+          mkdir -p post_freeze_extensions/tag_burden_identity/input
+          gh run download 36508617613 -n batter-resource-patch-fidelity-v1 -D post_freeze_extensions/tag_burden_identity/input
+          test -f post_freeze_extensions/tag_burden_identity/input/result_v1.json
+      - name: Run frozen relative tag-burden test
+        run: python post_freeze_extensions/tag_burden_identity/run_v1.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: batter-tag-burden-identity-v1
+          path: |
+            post_freeze_extensions/tag_burden_identity/result_v1.json
+            post_freeze_extensions/tag_burden_identity/RESULT_V1.md
+          if-no-files-found: error
