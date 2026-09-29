@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-post-freeze-mechanism-status-v6",
+  "frozen_submission_unchanged": true,
+  "five_panel_general": {
+    "speed_turn_conditioning": "5/5 retain centered identity",
+    "simple_patch_fidelity": {
+      "supported": false,
+      "p": 0.05731
+    },
+    "relative_tag_burden": {
+      "supported": false,
+      "p": 0.1399
+    }
+  },
+  "four_panel_subset": {
+    "fine_place_500m": {
+      "pass_count": 4,
+      "panel_count": 4
+    },
+    "persistence_1d": {
+      "pass_count": 4,
+      "panel_count": 4
+    },
+    "same_night_2km": {
+      "pass_count": 3,
+      "panel_count": 4
+    },
+    "body_mass_gradient": {
+      "pass_count": 0,
+      "panel_count": 4
+    }
+  },
+  "three_panel_stress": {
+    "fine_place_250m": {
+      "pass_count": 3,
+      "panel_count": 3
+    },
+    "persistence_3d": {
+      "pass_count": 3,
+      "panel_count": 3
+    }
+  },
+  "two_panel_stress": {
+    "persistence_7d": {
+      "pass_count": 2,
+      "panel_count": 2
+    }
+  },
+  "structural_stops": {
+    "fine_place_100m": {
+      "feasible": false,
+      "counts": {
+        "hypsignathus": 10,
+        "phyllostomus_2022": 8,
+        "phyllostomus_2016": 9
+      },
+      "required": {
+        "hypsignathus": 12,
+        "phyllostomus_2022": 14,
+        "phyllostomus_2016": 7
+      }
+    },
+    "same_night_500m": "four-panel gate failed by one P2022 individual",
+    "body_mass_500m": "three of four panels fail donor-support gate"
+  },
+  "phase_attribution": {
+    "supported": false,
+    "p": 0.3774
+  },
+  "strongest_statement": "A temporally persistent individual component of centered vertical organization survives broad kinematic matching and, where structurally testable, fine horizontal matching to 250–500 m; in two systems it persists across at least seven days.",
+  "live_mechanisms": [
+    "sub-250-m / sub-500-m exact route-resource-microhabitat allocation",
+    "unmeasured wing morphology or wing loading",
+    "memory/experience/learned movement routines",
+    "fine-scale individual environmental reaction norms"
+  ],
+  "archive_programme_status": "STOP: no new grid, lag, phase or donor thresholds should be introduced post hoc."
+}
