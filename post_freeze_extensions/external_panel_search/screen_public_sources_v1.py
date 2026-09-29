@@ -39,7 +39,7 @@ SOURCES = [
     },
 ]
 
-VERT_PATTERNS = re.compile(r"(height|altitude|elevation|(^|_)z($|_)|asl|agl)", re.I)
+VERT_PATTERNS = re.compile(r"^(height|altitude|elevation)(_|$)|(^|_)z($|_)|^(asl|agl)(_|$)", re.I)
 ID_PATTERNS = re.compile(r"(bat.?id|individual|animal|ring|track.?animal|subject)", re.I)
 TRACK_PATTERNS = re.compile(r"(track.?id|flight.?path|trip.?id|session|night)", re.I)
 TIME_PATTERNS = re.compile(r"(timestamp|date.?time|datetime|time|date)", re.I)
@@ -155,7 +155,7 @@ def infer_structural(df, flags):
     if df is None or not hasattr(df, "columns"):
         return {}
     cols = list(df.columns)
-    id_col = choose_col(cols, [r"^batid$", r"^individual.*id$", r"^animal.*id$", r"^ring_number$", r"^id$"])
+    id_col = choose_col(cols, [r"^bat_id$", r"^batid$", r"^individual.*id$", r"^animal.*id$", r"^ring_number$", r"^id$"])
     track_col = choose_col(cols, [r"^trackid$", r"flight.*path", r"^trip.*id$", r"^session.*id$", r"^night.*id$"])
     time_col = choose_col(cols, [r"^timestamp$", r"datetime", r"date.*time", r"^date$", r"^time$"])
     x_col = choose_col(cols, [r"^longitude$", r"^lon$", r"^x_$", r"^x$", r"easting"])
