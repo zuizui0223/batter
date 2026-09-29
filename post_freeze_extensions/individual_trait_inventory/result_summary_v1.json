@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-individual-trait-inventory-v1",
+  "authoritative_workflow": {
+    "run_id": 36513843634,
+    "head_sha": "320b074d419275e2985b1077e8e3f86cd6ec480c",
+    "artifact_id": 11010397760,
+    "artifact_digest": "sha256:922ea53d1694592a77a46043b2e828a5668601c939a6d2ac75344aec4539686f"
+  },
+  "common_candidate_fields": [
+    "animal_life_stage",
+    "animal_mass",
+    "animal_reproductive_condition",
+    "animal_sex",
+    "tag_mass"
+  ],
+  "variable_in_every_panel": [
+    "animal_mass"
+  ],
+  "five_panel_common_explanations_ruled_out_by_no_variation": [
+    "animal_sex",
+    "animal_life_stage",
+    "animal_reproductive_condition",
+    "tag_mass"
+  ],
+  "next_trait_candidate": "animal_mass",
+  "vertical_outcomes_used": false,
+  "submission_claims_unchanged": true
+}
