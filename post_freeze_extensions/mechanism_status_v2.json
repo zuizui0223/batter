@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-post-freeze-mechanism-status-v2",
+  "frozen_submission_unchanged": true,
+  "supported": [
+    "centered vertical individuality beyond coarse horizontal occupancy in five comparative panels",
+    "broad speed-state composition insufficient in 5/5 comparative panels",
+    "broad speed x turning-state composition insufficient in 5/5 comparative panels"
+  ],
+  "not_supported_as_general_driver": [
+    {
+      "mechanism": "simple fine-scale movement-patch fidelity",
+      "result": "mean rho +0.1759; one-sided p=0.05731; 4/5 positive; primary FAIL"
+    },
+    {
+      "mechanism": "common Tadarida uplift reaction-norm slope",
+      "result": "permutation p=0.334"
+    }
+  ],
+  "structurally_unidentified": [
+    {
+      "mechanism": "five-panel fine-place x state conditioning",
+      "limiting_panel": "eidolon",
+      "support": "2/14 even at 2 km"
+    },
+    {
+      "mechanism": "five-panel same-night comparative control",
+      "limiting_panel": "eidolon",
+      "support": "8/12; required 9"
+    },
+    {
+      "mechanism": "five-panel close-vs-far body-mass transfer",
+      "limiting_panel": "eidolon",
+      "support": "3 targets; required 9"
+    },
+    {
+      "mechanism": "five-panel continuous body-mass gradient transfer",
+      "limiting_panel": "eidolon",
+      "support": "1/12; required 9"
+    }
+  ],
+  "live_mechanisms": [
+    "fine-route/resource allocation within coarse matched contexts",
+    "within-context individual flight organization",
+    "morphology/wing-loading effects",
+    "memory/experience/learned-route effects",
+    "individual environmental reaction norms"
+  ],
+  "strongest_mechanism_statement": "Broad horizontal kinematic-state composition alone is insufficient to explain the five-panel vertical-individuality pattern."
+}
