@@ -4,15 +4,18 @@ from __future__ import annotations
 import itertools
 import json
 import math
+import sys
 from collections import defaultdict
 from pathlib import Path
 
 import numpy as np
 
+ROOT = Path(__file__).resolve().parents[2]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
 import scripts.run_cross_panel_estimator_calibration as cal
 import scripts.run_tag_altitude_bias_shape as shape
-
-ROOT = Path(__file__).resolve().parents[2]
 CONTRACT = ROOT / "post_freeze_extensions/resource_patch_fidelity/contract_v1.json"
 OUT_JSON = ROOT / "post_freeze_extensions/resource_patch_fidelity/result_v1.json"
 OUT_MD = ROOT / "post_freeze_extensions/resource_patch_fidelity/RESULT_V1.md"
