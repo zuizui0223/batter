@@ -1,0 +1,28 @@
+name: fine-place-same-night-fast-full-v1
+on:
+  push:
+    branches: [exploratory/fine-place-same-night-fast-v1]
+    paths:
+      - ".github/workflows/fine-place-same-night-fast-full-v1.yml"
+  workflow_dispatch:
+jobs:
+  panel:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    permissions: {contents: read}
+    strategy:
+      fail-fast: false
+      matrix:
+        panel: [hypsignathus, phyllostomus_2022, phyllostomus_2023, phyllostomus_2016]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: python -m pip install -e .
+      - name: Run cached-equivalent same-night test
+        run: python post_freeze_extensions/fine_place_same_night_four_panel_fast/run_fast_v1.py --panel "${{ matrix.panel }}"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: same-night-fast-${{ matrix.panel }}-v1
+          path: post_freeze_extensions/fine_place_same_night_four_panel_fast/panel_${{ matrix.panel }}_fast_v1.json
+          if-no-files-found: error
