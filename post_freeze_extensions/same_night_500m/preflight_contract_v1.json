@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-same-night-500m-preflight-v1",
+  "frozen_date": "2026-09-29",
+  "status": "x-y-time-only 500-m place × kinematic × same-night feasibility preflight frozen before vertical outcome",
+  "role": "post-freeze exploratory environmental-context mechanism test; cannot alter v0.3.8",
+  "panels": [
+    "hypsignathus",
+    "phyllostomus_2022",
+    "phyllostomus_2023",
+    "phyllostomus_2016"
+  ],
+  "baseline_n": {
+    "hypsignathus": 19,
+    "phyllostomus_2022": 23,
+    "phyllostomus_2023": 11,
+    "phyllostomus_2016": 9
+  },
+  "baseline_source": {
+    "fine_place_preflight_run_id": 36517151763,
+    "fine_place_500m_result_run_id": 36519747717,
+    "definition": "500-m horizontal cell × frozen speed2_turn2 state"
+  },
+  "context": {
+    "horizontal_cell_m": 500,
+    "state_definition": "frozen speed2_turn2",
+    "maximum_step_interval_seconds": 1800,
+    "night_rule": "UTC timestamp shifted backward by 12 hours, then calendar date",
+    "minimum_session_night_purity": 0.95
+  },
+  "feasibility": {
+    "self_history": "other retained sessions of the same individual in the same frozen cohort",
+    "same_night_other": "retained sessions assigned to the same shifted night from other individuals in the same cohort",
+    "target_support": "target endpoint whose 500-m cell×speed×turn stratum occurs in both self history and same-night-other history",
+    "minimum_supported_target_events": 50,
+    "individual_evaluable": "at least one target session with >=50 supported endpoints",
+    "panel_gate": "retain at least 70% of the frozen 500-m baseline n and at least 5 individuals in every panel",
+    "decision": "If all four panels pass, freeze exact n and open the 500-m same-night vertical comparison. Otherwise stop before vertical outcome."
+  },
+  "planned_vertical_test_if_feasible": {
+    "self_predictor": "equal-session P(centered residual height | 500-m cell,state) from same individual's other sessions",
+    "contemporaneous_predictor": "equal-individual P(centered residual height | 500-m cell,state) from other individuals on target shifted night",
+    "endpoint": "mean target log P_self - log P_same_night_other on identical supported target endpoints",
+    "calibration": "whole-session identity permutation within cohort while retaining session night, x-y-time state and centered z with the session block",
+    "panel_pass_rule": "exact preflight n; calibrated excess >0; one-sided p(null>=observed)<=0.05",
+    "synthesis": "3 or 4 PASS => broad shared-night context remains insufficient even at 500-m spatial matching; 1 or 2 => mixed; 0 => shared night becomes a leading explanation subject to power."
+  },
+  "claim_boundary": [
+    "Same-night is a broad temporal-context proxy, not exact local weather.",
+    "500-m matching does not equal exact route or microclimate matching.",
+    "No inference applies to Eidolon.",
+    "This extension is post-freeze and cannot alter v0.3.8."
+  ],
+  "stop_rule": [
+    "Do not change 500-m grid, night definition, purity, speed2_turn2 state, 70% gate, >=5 floor or 50-event support after preflight output.",
+    "Do not inspect vertical outcomes before all four panels pass the structural gate.",
+    "If the preflight fails, do not loosen support or revert to a coarser grid as rescue."
+  ]
+}
