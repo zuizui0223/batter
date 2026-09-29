@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-fine-place-kinematic-250m-three-panel-v1",
+  "frozen_date": "2026-09-29",
+  "status": "three-panel 250-m stress test frozen after x-y-time-only ultrafine preflight and before any 250-m vertical output",
+  "role": "post-freeze exploratory spatial-localization stress test; cannot alter v0.3.8 or generalize beyond the three structurally evaluable panels",
+  "preflight": {
+    "workflow_run_id": 36537793408,
+    "head_sha": "80f5cef07dc8604b1178d918836ed38a13c6e168",
+    "artifact_id": 11019525475,
+    "artifact_digest": "sha256:7bad695adb10045621f9d2ed155f7b17328a733fe35443a4b232675ab11e0e01",
+    "vertical_values_used": false,
+    "fine_grid_m": 250,
+    "included_panels": [
+      "hypsignathus",
+      "phyllostomus_2022",
+      "phyllostomus_2016"
+    ],
+    "excluded_panels": {
+      "phyllostomus_2023": "7/11 retained; frozen requirement 8",
+      "eidolon": "not structurally evaluable below 500 m in prior matched preflight"
+    },
+    "expected_evaluable_individuals": {
+      "hypsignathus": 16,
+      "phyllostomus_2022": 19,
+      "phyllostomus_2016": 9
+    }
+  },
+  "ecological_question": "Does centered vertical individuality persist after matching horizontal place to 250 m and broad speed×turn state in the three systems with sufficient pre-outcome support?",
+  "state_definition": {
+    "source": "frozen speed2_turn2",
+    "maximum_step_interval_seconds": 1800,
+    "speed_bins": 2,
+    "speed_threshold": "cohort median",
+    "turn_bins": 2,
+    "turn_threshold": "cohort median absolute deflection angle",
+    "state_count": 4
+  },
+  "estimator": {
+    "horizontal_cell_m": 250,
+    "vertical_centering": "subtract each retained session median from all retained numeric-height events before selecting valid kinematic endpoints",
+    "vertical_edges_m": [
+      "-inf",
+      -400,
+      -200,
+      -100,
+      -50,
+      0,
+      50,
+      100,
+      200,
+      400,
+      "inf"
+    ],
+    "conditional_profile": "P(centered residual height | 250-m cell, speed×turn state)",
+    "self_weighting": "equal session",
+    "other_weighting": "equal individual within frozen cohort",
+    "common_weighting": "equal-session self distribution over jointly supported 250-m cell×state strata, applied identically to self and other vertical profiles",
+    "target_scoring": "target kinematic endpoints whose 250-m cell×state stratum is supported by both predictors",
+    "minimum_scored_target_events": 50
+  },
+  "calibration": {
+    "permutation_unit": "whole centered session block with fixed x-y-time-derived kinematic states",
+    "scope": "within frozen cohort",
+    "settings": [
+      {
+        "panel": "hypsignathus",
+        "B": 4999,
+        "seed": 2026092702
+      },
+      {
+        "panel": "phyllostomus_2022",
+        "B": 4999,
+        "seed": 2026092703
+      },
+      {
+        "panel": "phyllostomus_2016",
+        "B": 4999,
+        "seed": 2026092705
+      }
+    ],
+    "panel_pass_rule": "exact preflight n; calibrated common 250-m-place-state identity > 0; one-sided p(null>=observed)<=0.05"
+  },
+  "synthesis": {
+    "decision_matrix": {
+      "3_pass": "All three structurally evaluable systems retain individuality at 250 m; route/resource allocation at scales >=250 m is insufficient in those systems.",
+      "1_or_2_pass": "Mixed ultrafine robustness; 250-m spatial allocation may explain part of the residual in some systems.",
+      "0_pass": "The 500-m result does not survive 250-m matching; spatial allocation below 500 m becomes a leading explanation."
+    },
+    "generalization_limit": "No inference to P. hastatus 2023, Eidolon, or the five-panel comparison."
+  },
+  "claim_boundary": [
+    "250-m cells are still matching strata, not exact paths/resources.",
+    "A PASS cannot rule out sub-250-m resource, corridor or microclimate structure.",
+    "This test is opened after positive 500-m results and is a stress test, not independent confirmation.",
+    "Frozen v0.3.8 remains unchanged."
+  ],
+  "stop_rule": [
+    "Do not change subset, 250-m grid, speed2_turn2 definition, centering, bins, 50-event support, expected n, B/seeds or pass criteria after output.",
+    "If any observed n differs from preflight expected n, invalidate rather than retune.",
+    "Do not open 100 m because the frozen four-panel sequential preflight stopped before that stage."
+  ]
+}
