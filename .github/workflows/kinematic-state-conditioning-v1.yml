@@ -1,0 +1,61 @@
+name: kinematic-state-conditioning-v1
+
+on:
+  push:
+    branches:
+      - exploratory/kinematic-state-conditioning-v1
+    paths:
+      - "post_freeze_extensions/kinematic_state_conditioning/contract_v1.json"
+      - "post_freeze_extensions/kinematic_state_conditioning/run_v1.py"
+      - ".github/workflows/kinematic-state-conditioning-v1.yml"
+  workflow_dispatch:
+
+jobs:
+  panel:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    permissions:
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        panel: [eidolon, hypsignathus, phyllostomus_2022, phyllostomus_2023, phyllostomus_2016]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -e .
+      - name: Run frozen speed x turning conditioned identity
+        run: python post_freeze_extensions/kinematic_state_conditioning/run_v1.py --panel "${{ matrix.panel }}"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: kinematic-state-panel-${{ matrix.panel }}-v1
+          path: post_freeze_extensions/kinematic_state_conditioning/panel_results/panel_${{ matrix.panel }}_v1.json
+          if-no-files-found: error
+
+  aggregate:
+    needs: panel
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -e .
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: kinematic-state-panel-*-v1
+          path: post_freeze_extensions/kinematic_state_conditioning/panel_results
+          merge-multiple: true
+      - name: Aggregate frozen kinematic-state test
+        run: python post_freeze_extensions/kinematic_state_conditioning/run_v1.py --aggregate
+      - uses: actions/upload-artifact@v4
+        with:
+          name: batter-kinematic-state-conditioning-v1
+          path: |
+            post_freeze_extensions/kinematic_state_conditioning/result_v1.json
+            post_freeze_extensions/kinematic_state_conditioning/RESULT_V1.md
+          if-no-files-found: error
