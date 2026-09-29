@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-kinematic-state-conditioning-v1",
+  "frozen_date": "2026-09-29",
+  "status": "mechanism test frozen after x-y-time-only preflight and before vertical output",
+  "role": "post-freeze exploratory mechanism discrimination; cannot alter v0.3.8 submission claims",
+  "preflight": {
+    "workflow_run_id": 36513203463,
+    "head_sha": "b0c5bea78464047f23a51d0670b28df1845c056e",
+    "artifact_id": 11009452235,
+    "artifact_digest": "sha256:c129f9035e19d92fc727b42a7f2fc56f0247f8710fdf60ed41efb89541ed60c2",
+    "selected_candidate_id": "speed2_turn2",
+    "selected_before_vertical_outcome": true,
+    "vertical_values_used_for_selection": false,
+    "evaluable_individuals": {
+      "eidolon": 12,
+      "hypsignathus": 23,
+      "phyllostomus_2022": 32,
+      "phyllostomus_2023": 14,
+      "phyllostomus_2016": 10
+    }
+  },
+  "hypotheses": {
+    "kinematic_mixture": "Repeatable whole-session vertical individuality is largely induced by stable individual differences in the proportions of broad speed × tortuosity modes.",
+    "within_kinematic_state": "Individual centered vertical organization remains non-exchangeable even when self and other profiles are compared under identical 5-km cell × speed × turning-state weights."
+  },
+  "state_definition": {
+    "source": "x-y-time only; fixed by preflight",
+    "maximum_step_interval_seconds": 1800,
+    "event_assignment": "fix i is valid when both adjacent step intervals i-2->i-1 and i-1->i are positive and <=1800 s",
+    "speed": "horizontal Euclidean step distance for i-1->i divided by elapsed seconds",
+    "turn_angle": "absolute deflection angle between the two consecutive horizontal step vectors, in [0, pi]",
+    "speed_bins": 2,
+    "speed_threshold": "cohort median of valid endpoint speeds",
+    "turn_bins": 2,
+    "turn_threshold": "cohort median of valid absolute turn angles",
+    "state_count": 4,
+    "state_index": "speed_bin * 2 + turn_bin",
+    "horizontal_cell_m": 5000,
+    "vertical_centering": "subtract each retained session's median primary vertical coordinate computed from all retained numeric-height events before selecting valid kinematic endpoints",
+    "vertical_edges_m": [
+      "-inf",
+      -400,
+      -200,
+      -100,
+      -50,
+      0,
+      50,
+      100,
+      200,
+      400,
+      "inf"
+    ]
+  },
+  "estimator": {
+    "conditional_profile": "P(centered residual height | 5-km cell, kinematic state)",
+    "self_weighting": "equal session",
+    "other_weighting": "equal individual within frozen cohort",
+    "common_weighting": "On joint 5-km cell × kinematic-state strata supported by both predictors, compute equal-session self training weights and apply exactly the same weights to self and other vertical profiles.",
+    "target_scoring": "score centered residual-height outcomes at target kinematic endpoints whose joint strata are supported by both predictors",
+    "minimum_scored_target_events": 50,
+    "expected_evaluable_individuals": {
+      "eidolon": 12,
+      "hypsignathus": 23,
+      "phyllostomus_2022": 32,
+      "phyllostomus_2023": 14,
+      "phyllostomus_2016": 10
+    }
+  },
+  "calibration": {
+    "permutation_unit": "whole centered session block with fixed x-y-time-derived kinematic states",
+    "scope": "within frozen cohort",
+    "preserve": "all within-session x-y-time-state-residual-z observations and exact original session-count multiset per label",
+    "settings": [
+      {
+        "panel": "eidolon",
+        "B": 4999,
+        "seed": 2026092701
+      },
+      {
+        "panel": "hypsignathus",
+        "B": 4999,
+        "seed": 2026092702
+      },
+      {
+        "panel": "phyllostomus_2022",
+        "B": 4999,
+        "seed": 2026092703
+      },
+      {
+        "panel": "phyllostomus_2023",
+        "B": 4999,
+        "seed": 2026092704
+      },
+      {
+        "panel": "phyllostomus_2016",
+        "B": 4999,
+        "seed": 2026092705
+      }
+    ],
+    "panel_pass_rule": "exact expected evaluable n; observed-minus-null-mean common joint-cell-state identity > 0; one-sided p(null >= observed) <= 0.05"
+  },
+  "synthesis": {
+    "primary_statistic": "number of the five comparative panels passing the frozen kinematic-state-conditioned identity rule",
+    "decision_matrix": {
+      "4_or_5_pass": "Strong evidence that broad speed × tortuosity mixture alone is insufficient as a general explanation; individuality persists within kinematic states.",
+      "2_or_3_pass": "Mixed mechanism: kinematic-state composition may account for part of the pattern, while within-state individuality remains in some systems.",
+      "0_or_1_pass": "Consistent with broad kinematic-state composition explaining much of the comparative signal, subject to support/power loss."
+    },
+    "descriptive_baseline_state_conditioned_excess": {
+      "eidolon": 0.3156645185821755,
+      "hypsignathus": 0.13450717511855872,
+      "phyllostomus_2022": 0.12796053571047603,
+      "phyllostomus_2023": 0.06033808439365927,
+      "phyllostomus_2016": 0.546971298281016
+    },
+    "note": "Report attenuation relative to the speed-only state-conditioned result descriptively; do not use attenuation ratios as inferential rescue."
+  },
+  "claim_boundary": [
+    "Speed × turning states are kinematic proxies, not validated commuting, foraging or social behavioural labels.",
+    "Persistence supports within-kinematic-state individuality relative to this proxy, not a specific morphology, memory, resource or atmospheric cause.",
+    "Loss after conditioning is not by itself proof of behavioural-mixture causation because richer conditioning reduces support.",
+    "No result from this extension modifies the frozen v0.3.8 submission package."
+  ],
+  "stop_rule": [
+    "Do not change the selected speed2_turn2 definition, dt cap, centering, bins, joint support, weighting, minimum scored events, expected n, panel B/seeds or pass criteria after any vertical output is opened.",
+    "Retain all non-passing panels and do not substitute the failed speed3_turn2 preflight candidate.",
+    "Do not add another post-hoc kinematic classifier if this frozen proxy fails."
+  ]
+}
