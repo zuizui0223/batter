@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-external-bat-panel-search-v1",
+  "vertical_numeric_values_read_for_admission": false,
+  "candidates": [
+    {
+      "taxon": "Hipposideros armiger + Hipposideros pratti",
+      "repository": "Dryad",
+      "doi": "10.5061/dryad.j0zpc86r1",
+      "native_vertical": {
+        "present": true,
+        "field": "height",
+        "reference": "AGL"
+      },
+      "individuals": 17,
+      "species_individuals": {
+        "armiger": 9,
+        "pratti": 8
+      },
+      "repeat_evidence": "source paper reports 7–10 consecutive nights of individual foraging-site fidelity and 105 bat-night observations",
+      "session_fix_gate": "pending_exact_counts",
+      "decision": "PENDING",
+      "priority": 1
+    },
+    {
+      "taxon": "Leptonycteris nivalis",
+      "repository": "Dryad",
+      "doi": "10.5061/dryad.stqjq2cfg",
+      "native_vertical": {
+        "present": true,
+        "field": "Altitude (m)",
+        "reference": "height above ellipsoid"
+      },
+      "individuals": 21,
+      "repeat_evidence": "10-min fixes sunset-to-sunrise; exact repeated-night structure not yet proven from public metadata",
+      "session_fix_gate": "pending_exact_counts",
+      "decision": "PENDING",
+      "priority": 2
+    },
+    {
+      "taxon": "Desmodus rotundus",
+      "repository": "Dryad",
+      "doi": "10.5061/dryad.7wm37pw53",
+      "native_vertical": {
+        "present": true,
+        "field": "ALTITUDE",
+        "reference": "MSL"
+      },
+      "individuals_tagged": 93,
+      "cleaned_individuals": 55,
+      "cleaned_fixes": 1321,
+      "cleaned_bat_nights": 242,
+      "session_fix_gate": "pending_exact_counts_but_sparse",
+      "decision": "PENDING_LOW_PRIORITY",
+      "priority": 3
+    },
+    {
+      "taxon": "Nyctalus aviator",
+      "repository": "Dryad",
+      "doi": "10.5061/dryad.mgqnk993n",
+      "decision": "FAIL",
+      "fail_reason": "study description reports one GPS-tagged individual; cannot meet >=8-individual gate"
+    },
+    {
+      "taxon": "Hypsignathus monstrosus / hammer-headed bat independent Dryad movement package",
+      "repository": "Dryad",
+      "doi": "10.5061/dryad.7m0cfxq4t",
+      "decision": "FAIL",
+      "fail_reason": "public bat event table documents x/y/time/trackId but no native event-level vertical coordinate"
+    },
+    {
+      "taxon": "small insectivorous bat spring migration",
+      "repository": "Zenodo",
+      "doi": "10.5281/zenodo.22017606",
+      "decision": "FAIL",
+      "fail_reason": "raw high-resolution spatial tracks restricted; public data are coordinate-free processed summaries"
+    },
+    {
+      "taxon": "Chirocopter recordings",
+      "repository": "Dryad",
+      "doi": "10.5061/dryad.cf472n3",
+      "decision": "FAIL",
+      "fail_reason": "UAV recordings are not individual timestamped tagged-bat movement tracks"
+    }
+  ],
+  "current_best_candidate": "10.5061/dryad.j0zpc86r1",
+  "admission_status": "NO_EXTERNAL_SOURCE_ADMITTED_YET",
+  "next_required_fact": "exact per-individual per-night usable-fix counts for Hipposideros and Leptonycteris without reading numeric vertical magnitudes"
+}
