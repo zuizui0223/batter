@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-behavior-proxy-inventory-v1",
+  "authoritative_workflow": {
+    "run_id": 36512982578,
+    "head_sha": "31b4a85fb6f6df613eed7ce23647417e76bcbae2",
+    "artifact_id": 11010182186,
+    "artifact_digest": "sha256:a0240013c4d0a92973d4294e27bb8b959d71adc744a8dbd17eca2dac9af2c26d"
+  },
+  "common_candidate_proxy_fields": [
+    "event_id",
+    "ground_speed",
+    "sensor_type"
+  ],
+  "panel_candidate_fields": {
+    "eidolon": [
+      "event_id",
+      "eobs_speed_accuracy_estimate",
+      "ground_speed",
+      "heading",
+      "sensor_type"
+    ],
+    "hypsignathus": [
+      "event_id",
+      "eobs_speed_accuracy_estimate",
+      "ground_speed",
+      "heading",
+      "sensor_type"
+    ],
+    "phyllostomus_2016": [
+      "event_id",
+      "ground_speed",
+      "sensor_type"
+    ],
+    "phyllostomus_2022": [
+      "event_id",
+      "ground_speed",
+      "sensor_type"
+    ],
+    "phyllostomus_2023": [
+      "event_id",
+      "ground_speed",
+      "sensor_type"
+    ]
+  },
+  "harmonized_direct_behavior_label_available": false,
+  "conclusion": "No harmonized direct behavioural-state field is available across all five comparative panels; richer common behavioural proxies must be derived from x-y-time kinematics.",
+  "submission_claims_unchanged": true
+}
