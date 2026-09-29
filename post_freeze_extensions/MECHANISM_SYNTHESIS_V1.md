@@ -77,6 +77,15 @@ The current evidence makes the following simple explanations increasingly inadeq
 
 For focal *Tadarida*, a separate same-night control also showed that another night from the same individual generally outpredicted other bats observed on the same night, weakening the simplest shared-night-environment explanation for its absolute vertical signature. *Tadarida* remains a boundary case because centered-shape identity itself is unsupported there.
 
+## Parallel boundary evidence from *Tadarida*
+
+The focal *Tadarida* system does not support centered-shape identity and therefore cannot supply the comparative mechanism result, but two earlier frozen controls help rule down simple environmental explanations for its repeatable absolute vertical signature.
+
+- **Same-night context control:** for most evaluable animals, another night from the same bat predicted local vertical state better than multiple other bats flying on the same calendar night. This weakens the simplest hypothesis that shared night-specific conditions alone generate the individual signature.
+- **Uplift reaction norm:** the frozen `climb.rate ~ W.Component` self-transfer endpoint was estimable for only two individuals; 1/2 improved under self history and the slope-identity permutation gave **p=0.3337**. Thus one universal pattern of individually repeatable response to modeled vertical wind is not supported.
+
+These results do not identify the comparative cause, but they make a single shared atmospheric explanation less compelling.
+
 ## Live ecological hypotheses
 
 The remaining mechanisms are narrower and biologically sharper:
