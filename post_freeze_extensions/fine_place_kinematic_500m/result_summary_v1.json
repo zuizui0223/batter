@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-fine-place-kinematic-500m-v1",
+  "authoritative_workflow": {
+    "run_id": 36519747717,
+    "head_sha": "1ae5e0cdb7d5f3680be05ac524c1d6f6cad35eea",
+    "artifact_id": 11012846854,
+    "artifact_digest": "sha256:afb4e6508adb3b7ed445b47097160934342d7863eedb3e0e89355b2be11cb707"
+  },
+  "fine_grid_m": 500,
+  "stress_test": true,
+  "independent_confirmation": false,
+  "pass_count": 4,
+  "panels": {
+    "hypsignathus": {
+      "n": 19,
+      "calibrated_excess": 0.38400231972735227,
+      "p": 0.0002,
+      "pass": true
+    },
+    "phyllostomus_2022": {
+      "n": 23,
+      "calibrated_excess": 0.08675910017357275,
+      "p": 0.0002,
+      "pass": true
+    },
+    "phyllostomus_2023": {
+      "n": 11,
+      "calibrated_excess": 0.10152641549492719,
+      "p": 0.0006,
+      "pass": true
+    },
+    "phyllostomus_2016": {
+      "n": 9,
+      "calibrated_excess": 0.4514183752230124,
+      "p": 0.0286,
+      "pass": true
+    }
+  },
+  "interpretation": "Within the structurally evaluable subset, route/patch allocation at >=500 m plus broad speed×turn composition is insufficient to explain centered vertical individuality.",
+  "eidolon_generalization": false,
+  "submission_claims_unchanged": true
+}
