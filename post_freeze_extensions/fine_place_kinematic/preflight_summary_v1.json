@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-fine-place-kinematic-preflight-v1",
+  "authoritative_workflow": {
+    "run_id": 36517151763,
+    "head_sha": "5b6120d7cf50e13e58486198212311d5eb612d9c",
+    "artifact_id": 11011795260,
+    "artifact_digest": "sha256:4b4cc09b7188f985ece1f17a938e40d3acdffee68cf7846a2c7e2599e7dad9c1"
+  },
+  "verified_5km_baseline": {
+    "eidolon": 12,
+    "hypsignathus": 23,
+    "phyllostomus_2022": 32,
+    "phyllostomus_2023": 14,
+    "phyllostomus_2016": 10
+  },
+  "counts": {
+    "grid500": {
+      "eidolon": 1,
+      "hypsignathus": 19,
+      "phyllostomus_2022": 23,
+      "phyllostomus_2023": 11,
+      "phyllostomus_2016": 9
+    },
+    "grid1000": {
+      "eidolon": 1,
+      "hypsignathus": 21,
+      "phyllostomus_2022": 27,
+      "phyllostomus_2023": 14,
+      "phyllostomus_2016": 10
+    },
+    "grid2000": {
+      "eidolon": 1,
+      "hypsignathus": 22,
+      "phyllostomus_2022": 30,
+      "phyllostomus_2023": 14,
+      "phyllostomus_2016": 10
+    }
+  },
+  "selected_candidate": null,
+  "five_panel_feasible": false,
+  "structurally_evaluable_four_panel_subset": {
+    "grid_m": 2000,
+    "panels": [
+      "hypsignathus",
+      "phyllostomus_2022",
+      "phyllostomus_2023",
+      "phyllostomus_2016"
+    ],
+    "expected_n": {
+      "hypsignathus": 22,
+      "phyllostomus_2022": 30,
+      "phyllostomus_2023": 14,
+      "phyllostomus_2016": 10
+    },
+    "selected_pre_outcome": true
+  },
+  "submission_claims_unchanged": true
+}
