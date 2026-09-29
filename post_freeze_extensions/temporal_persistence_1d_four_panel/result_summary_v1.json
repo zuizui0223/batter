@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-temporal-persistence-1d-four-panel-v1",
+  "authoritative_workflow": {
+    "run_id": 36539006089,
+    "head_sha": "870967d5deb3321ea252d9abb8a83a22e2f08944",
+    "artifact_id": 11020270049,
+    "artifact_digest": "sha256:4789b9e1e54ac1ef7c881cdf16f3bb164728974737483babf70af60520c1e339"
+  },
+  "preflight_run_id": 36538374767,
+  "minimum_self_lag_days": 1,
+  "pass_count": 4,
+  "panel_count": 4,
+  "panels": {
+    "hypsignathus": {
+      "n": 22,
+      "calibrated_excess": 0.1482604745530605,
+      "p": 0.0002,
+      "pass": true
+    },
+    "phyllostomus_2022": {
+      "n": 31,
+      "calibrated_excess": 0.11354746523705533,
+      "p": 0.0002,
+      "pass": true
+    },
+    "phyllostomus_2023": {
+      "n": 13,
+      "calibrated_excess": 0.06037784849966285,
+      "p": 0.0008,
+      "pass": true
+    },
+    "phyllostomus_2016": {
+      "n": 8,
+      "calibrated_excess": 0.5340594975501762,
+      "p": 0.0188,
+      "pass": true
+    }
+  },
+  "interpretation": "Centered vertical individuality persists when self history is restricted to sessions >=1 day from the target in all four structurally evaluable non-Eidolon panels.",
+  "eidolon_generalization": false,
+  "submission_claims_unchanged": true
+}
