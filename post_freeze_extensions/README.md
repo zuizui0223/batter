@@ -5,9 +5,9 @@ The frozen v0.3.8 submission on `main` is unchanged. This branch collects mechan
 ## Current synthesis
 
 Read:
-- `MECHANISM_SYNTHESIS_V4.md` — integrated ecological interpretation;
-- `MECHANISM_CAUSE_TREE_V3.md` — causal paths weakened, live, or structurally unidentifiable;
-- `mechanism_status_v4.json` — machine-readable state;
+- `MECHANISM_SYNTHESIS_V5.md` — integrated ecological interpretation;
+- `MECHANISM_CAUSE_TREE_V4.md` — causal paths weakened, live, or structurally unidentifiable;
+- `mechanism_status_v5.json` — machine-readable state;
 - `NEXT_DECISIVE_MECHANISM_EXPERIMENT_V2.md` — field design required to identify the remaining mechanism.
 
 ## Strong results
@@ -42,3 +42,12 @@ The four-panel same-night test remains running and will be added only after its 
 The apparent *P. hastatus* 2023 temporal-phase attenuation did **not** pass a support-matched attribution test (p=0.3774), so temporal-phase causation is not established.
 
 A separate 2-km place × speed×turn × same-night test passes in 3/4 structurally evaluable panels. Broad shared-night context is therefore insufficient as a general explanation in that subset; *P. hastatus* 2016 remains unresolved at p=0.0544.
+
+
+## Current endpoint
+
+The archive now localizes the unresolved mechanism below **500 m horizontal place + broad speed×turn state** in four structurally evaluable non-Eidolon panels.
+
+Broad same-night context is insufficient in 3/4 of those panels. Temporal-phase causation is not established after support-matched attribution. Body-mass transfer under 500-m matching is structurally infeasible in three of four panels.
+
+The remaining decisive distinction is between sub-500-m resource/route/microhabitat allocation and within-context individual flight organization / fine environmental reaction norms.
