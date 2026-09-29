@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-temporal-phase-kinematic-preflight-v1",
+  "authoritative_workflow": {
+    "run_id": 36519937105,
+    "head_sha": "e1d90dadabedea75760f583d7637e50a3dd60245",
+    "artifact_id": 11012412130,
+    "artifact_digest": "sha256:cf587588f9fb954460a5f908999f2ec8e851fa98ef3878283e31f48a9c69707a"
+  },
+  "baseline": {
+    "eidolon": 12,
+    "hypsignathus": 23,
+    "phyllostomus_2022": 32,
+    "phyllostomus_2023": 14,
+    "phyllostomus_2016": 10
+  },
+  "counts": {
+    "phase3": {
+      "eidolon": 4,
+      "hypsignathus": 20,
+      "phyllostomus_2022": 32,
+      "phyllostomus_2023": 14,
+      "phyllostomus_2016": 10
+    },
+    "phase2": {
+      "eidolon": 7,
+      "hypsignathus": 23,
+      "phyllostomus_2022": 32,
+      "phyllostomus_2023": 14,
+      "phyllostomus_2016": 10
+    }
+  },
+  "five_panel_feasible": false,
+  "four_panel_phase3_subset": {
+    "panels": [
+      "hypsignathus",
+      "phyllostomus_2022",
+      "phyllostomus_2023",
+      "phyllostomus_2016"
+    ],
+    "expected_n": {
+      "hypsignathus": 20,
+      "phyllostomus_2022": 32,
+      "phyllostomus_2023": 14,
+      "phyllostomus_2016": 10
+    },
+    "selected_pre_outcome": true
+  },
+  "submission_claims_unchanged": true
+}

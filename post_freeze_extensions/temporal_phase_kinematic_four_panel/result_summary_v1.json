@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-temporal-phase-kinematic-four-panel-v1",
+  "authoritative_workflow": {
+    "run_id": 36520166315,
+    "head_sha": "cc3b26e5ff39cb249d15ec823a59c6bb2b56694b",
+    "artifact_id": 11012861407,
+    "artifact_digest": "sha256:5c4abf40716e1300491689855fcb4d967111b7bc82371324e65c68303b5be88e"
+  },
+  "preflight_run_id": 36519937105,
+  "selected_phase": "phase3",
+  "pass_count": 3,
+  "panel_count": 4,
+  "panels": {
+    "hypsignathus": {
+      "n": 20,
+      "calibrated_excess": 0.1558132033588263,
+      "p": 0.0002,
+      "pass": true
+    },
+    "phyllostomus_2022": {
+      "n": 32,
+      "season": "dry",
+      "calibrated_excess": 0.08963690895417126,
+      "p": 0.0002,
+      "pass": true
+    },
+    "phyllostomus_2023": {
+      "n": 14,
+      "season": "wet",
+      "calibrated_excess": 0.02209779378174622,
+      "p": 0.1068,
+      "pass": false
+    },
+    "phyllostomus_2016": {
+      "n": 10,
+      "season": "dry",
+      "calibrated_excess": 0.4830705666252362,
+      "p": 0.0214,
+      "pass": true
+    }
+  },
+  "interpretation": "Temporal allocation is not a general explanation, but the wet-season 2023 P. hastatus panel is consistent with a strong temporal-allocation contribution. Season causation is hypothesis-generating only.",
+  "submission_claims_unchanged": true
+}
