@@ -1,0 +1,32 @@
+name: resource-patch-fidelity-v1
+
+on:
+  push:
+    branches:
+      - exploratory/resource-patch-fidelity-v1
+    paths:
+      - "post_freeze_extensions/resource_patch_fidelity/**"
+      - ".github/workflows/resource-patch-fidelity-v1.yml"
+  workflow_dispatch:
+
+jobs:
+  exploratory-test:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install analysis package
+        run: python -m pip install -e ".[figure]"
+      - name: Run frozen resource-patch fidelity test
+        run: python post_freeze_extensions/resource_patch_fidelity/run_v1.py
+      - name: Upload exploratory result
+        uses: actions/upload-artifact@v4
+        with:
+          name: batter-resource-patch-fidelity-v1
+          path: |
+            post_freeze_extensions/resource_patch_fidelity/result_v1.json
+            post_freeze_extensions/resource_patch_fidelity/RESULT_V1.md
