@@ -51,43 +51,43 @@ Observed examples include:
 ## Validated v0.3.8 package
 
 Main manuscript/figure workflow:
-- run: **36473273535**
-- head: `591b82da7498682b298a2311b62a44a2dd409684`
+- run: **36506593033**
+- head: `2c84d11824dc410af3977f12d1fab5e3f6883bc1`
 - conclusion: **success**
-- manuscript CI estimate: **7,953 words**
+- manuscript CI estimate: **7,887 words**
 - abstract: **282 words**
-- Introduction: **685 words**
+- Introduction: **723 words**
 - Results: **1,328 words**
-- Discussion: **1,739 words**
+- Discussion: **1,602 words**
 - keywords: **7**
 - main figures: **6**
 - Supporting Figures: **2**
 
 Main-figure artifact:
-- id: `10992433031`
-- digest: `sha256:19d26b53a480674733a63acbfd2a44c6e19505a7c6f18acc5fb5c55100828019`
+- id: `11007013708`
+- digest: `sha256:25cf432948626550b0f84257e55d7c924f26bc4f666d59f99e03b84b2203b5b5`
 
 Supporting-figure artifact:
-- id: `10992442954`
-- digest: `sha256:87c410a83e4c94bce3086f7498854bbb60e39e29da8258e3540b8717802b6206`
+- id: `11007621411`
+- digest: `sha256:feff1dc31f777c45b196009d3b07e1c332b45280e7e48825a41b6d42bd177664`
 
 Descriptive profile artifact:
-- id: `10992497867`
-- digest: `sha256:05da68591c3b4d9820b4591ad745b64b1c97917c607a5e6f0e0f8fefa01d618f`
+- id: `11007651308`
+- digest: `sha256:fec9c49230a426e2883d4ba76928a6d523f60695feb315d52f08c10f9d740b6e`
 
 Anonymous review workflow:
-- run: **36473273481**
+- run: **36506593064**
 - head: `67b053eb0a3db2539c8fb4beb593c9e5759910fe`
 - conclusion: **success**
 - anonymity guard: **PASS**
-- review PDF: **27 pages**
-- artifact id: `10992717441`
-- digest: `sha256:2777b7565012e1473c325b99a8de4de0e95f987cdae4118bfbd5a1b9f29efbcc`
+- review PDF: **26 pages**
+- artifact id: `11006968753`
+- digest: `sha256:f141c3605147066cf338a1554d4b72d295fa008f4e505bdf4d46a0afdb13bc22`
 
 Visual QA:
 - main Figures 1-6 inspected;
 - Supporting Figures S1-S2 inspected;
-- final 27-page review PDF rendered and inspected;
+- final 26-page review PDF rendered and inspected;
 - no clipping, overlap or broken glyphs found.
 
 ## Descriptive Figure 6 provenance
@@ -153,11 +153,11 @@ is inferred.
 ## Packaging validation
 
 One-source metadata workflow:
-- self-test run: `36473746777` — **success**
+- self-test run: `36506593120` — **success**
 - pre-release assembly: READY
 - post-DOI assembly: READY
 - final JAE upload gate: READY
-- synthetic combined count: 8,136 words pre-release / 8,131 words post-DOI
+- synthetic combined count: 8,070 words pre-release / 8,065 words post-DOI
 
 GitHub/Zenodo release preflight:
 - self-test run: `36398767110` — **success**
@@ -166,6 +166,6 @@ GitHub/Zenodo release preflight:
 - target tag/release absence check: READY
 
 Active-reference guard:
-- run: `36398917758` — **success**
+- run: `36506593111` — **success**
 
 No authorship, license, funding, conflict declaration, ORCID, postal address or DOI is inferred.
