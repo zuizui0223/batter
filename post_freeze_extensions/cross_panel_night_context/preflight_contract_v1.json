@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-cross-panel-night-context-preflight-v1",
+  "frozen_date": "2026-09-29",
+  "status": "x-y-time-only same-night feasibility preflight frozen before comparative vertical outcomes",
+  "role": "post-freeze exploratory mechanism discrimination; cannot alter v0.3.8 submission claims",
+  "question": "Can the five comparative panels test whether same-individual history predicts vertical organization better than contemporaneous other bats sharing the same night?",
+  "panels": [
+    "eidolon",
+    "hypsignathus",
+    "phyllostomus_2022",
+    "phyllostomus_2023",
+    "phyllostomus_2016"
+  ],
+  "baseline_evaluable_n": {
+    "eidolon": 12,
+    "hypsignathus": 23,
+    "phyllostomus_2022": 32,
+    "phyllostomus_2023": 14,
+    "phyllostomus_2016": 10
+  },
+  "night_definition": {
+    "rule": "UTC timestamp shifted backward by 12 hours, then calendar date",
+    "rationale": "keeps evening-to-next-morning nocturnal tracking in one start-night bin",
+    "session_night": "dominant shifted-night among state-valid endpoints in the frozen session",
+    "minimum_session_night_purity": 0.95
+  },
+  "kinematic_state": {
+    "source": "frozen speed2_turn2 definition selected before vertical outcome",
+    "maximum_step_interval_seconds": 1800,
+    "state_count": 4,
+    "speed_threshold": "cohort median",
+    "turn_threshold": "cohort median absolute deflection angle",
+    "stratum": "5-km horizontal cell × kinematic state"
+  },
+  "feasibility": {
+    "self_history": "other retained sessions of the same individual within the same frozen cohort",
+    "same_night_other": "retained sessions assigned to the same shifted night but belonging to other individuals in the same cohort",
+    "target_support": "target kinematic endpoint whose 5-km cell × state stratum appears in at least one self-history session and in at least one same-night-other session",
+    "minimum_supported_target_events": 50,
+    "individual_evaluable": "at least one target session with >=50 supported endpoints, >=1 self-history session, and >=1 same-night other individual",
+    "panel_gate": "retain at least 70% of the kinematic-state baseline evaluable n and at least 5 individuals in every panel",
+    "decision": "If all five panels pass, freeze exact evaluable n and open the vertical outcome. Otherwise stop this five-panel night-context family."
+  },
+  "planned_vertical_test_if_feasible": {
+    "response": "session-centered residual height using the frozen 10 residual-height bins",
+    "self_predictor": "equal-session P(z_residual | 5-km cell, speed×turn state) from the same individual's other sessions",
+    "contemporaneous_predictor": "equal-individual P(z_residual | 5-km cell, speed×turn state) from other individuals on the target shifted night",
+    "endpoint": "mean target log P_self - log P_same_night_other on common supported target endpoints",
+    "aggregation": "equal target session within individual, then equal individual within panel",
+    "null": "within each frozen cohort, permute whole-session individual labels while preserving the exact session-count multiset; shifted-night, x-y-time state and centered within-session data stay attached to each session block; rebuild both predictors and the complete endpoint",
+    "calibration_settings": [
+      {
+        "panel": "eidolon",
+        "B": 4999,
+        "seed": 20260929021
+      },
+      {
+        "panel": "hypsignathus",
+        "B": 4999,
+        "seed": 20260929022
+      },
+      {
+        "panel": "phyllostomus_2022",
+        "B": 4999,
+        "seed": 20260929023
+      },
+      {
+        "panel": "phyllostomus_2023",
+        "B": 4999,
+        "seed": 20260929024
+      },
+      {
+        "panel": "phyllostomus_2016",
+        "B": 4999,
+        "seed": 20260929025
+      }
+    ],
+    "panel_pass_rule": "exact frozen preflight n; observed-minus-null-mean self-vs-same-night gain > 0; one-sided p(null >= observed) <= 0.05",
+    "synthesis": "4 or 5 panels PASS => shared calendar-night context is insufficient as a general explanation; 2 or 3 => mixed; 0 or 1 => shared night context may explain much of the signal, subject to support/power."
+  },
+  "claim_boundary": [
+    "Calendar-night matching controls shared broad temporal context, not measured wind, temperature or uplift at each fix.",
+    "Same-night persistence does not prove intrinsic morphology, memory or personality.",
+    "A failure can reflect limited same-night overlap and is not itself proof of environmental causation.",
+    "This extension remains outside the frozen v0.3.8 submission package."
+  ],
+  "stop_rule": [
+    "Do not change shifted-night definition, 0.95 purity, speed×turn state definition, 50-event support, 70% panel retention, >=5 floor, panel set, permutation counts/seeds or pass rules after preflight/output.",
+    "Do not substitute a looser night definition or drop a panel if the preflight fails.",
+    "Do not inspect vertical outcomes before the preflight gate passes and exact n is frozen."
+  ]
+}
