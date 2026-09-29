@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-temporal-persistence-1d-four-panel-v1",
+  "frozen_date": "2026-09-29",
+  "status": "four-panel >=1-day persistence test frozen after x-y-time-only preflight and before vertical output",
+  "role": "post-freeze exploratory temporal-stability mechanism test; cannot alter frozen v0.3.8",
+  "preflight": {
+    "workflow_run_id": 36538374767,
+    "head_sha": "5590f6a68e2a9f2b3303c0e23c3e4426c579bd4a",
+    "artifact_id": 11018559529,
+    "artifact_digest": "sha256:25ace01da68ba9fb8598d831481288c98f05fbc3f609096f654209c9761d12e0",
+    "vertical_values_used": false,
+    "minimum_lag_days": 1,
+    "included_panels": [
+      "hypsignathus",
+      "phyllostomus_2022",
+      "phyllostomus_2023",
+      "phyllostomus_2016"
+    ],
+    "excluded_panel": "eidolon",
+    "expected_evaluable_individuals": {
+      "hypsignathus": 22,
+      "phyllostomus_2022": 31,
+      "phyllostomus_2023": 13,
+      "phyllostomus_2016": 8
+    }
+  },
+  "ecological_hypotheses": {
+    "stable_individual_organization": "Centered vertical organization remains individually predictive when self-training sessions are separated from the target by at least one day.",
+    "transient_context": "Individual identity is mainly a short-lived state and collapses when nearby-in-time self sessions are excluded."
+  },
+  "state_definition": {
+    "horizontal_cell_m": 5000,
+    "source": "frozen speed2_turn2",
+    "maximum_step_interval_seconds": 1800,
+    "speed_bins": 2,
+    "turn_bins": 2,
+    "thresholding": "cohort medians",
+    "session_time": "median timestamp of valid speed×turn endpoints",
+    "minimum_self_lag_days": 1
+  },
+  "estimator": {
+    "vertical_centering": "subtract each retained session's median primary height before selecting valid kinematic endpoints",
+    "vertical_edges_m": [
+      "-inf",
+      -400,
+      -200,
+      -100,
+      -50,
+      0,
+      50,
+      100,
+      200,
+      400,
+      "inf"
+    ],
+    "conditional_profile": "P(centered residual height | 5-km cell, speed×turn state)",
+    "self_training": "same individual's sessions in same cohort with absolute session-median-time lag >=1 day",
+    "self_weighting": "equal lag-qualified session",
+    "other_weighting": "equal individual within cohort",
+    "common_weighting": "equal-session self distribution over jointly supported cell×state strata, applied identically to self and other vertical profiles",
+    "target_scoring": "target kinematic endpoints on strata supported by both predictors",
+    "minimum_scored_target_events": 50
+  },
+  "calibration": {
+    "permutation_unit": "whole centered session block",
+    "scope": "within frozen cohort",
+    "preserve": "session time, x-y-time state and centered vertical outcomes attached to each session block; exact per-cohort label session-count multiset preserved",
+    "lag_rebuild": "after each label permutation, recompute lag-qualified self sessions from permuted identity labels and fixed session times",
+    "settings": [
+      {
+        "panel": "hypsignathus",
+        "B": 4999,
+        "seed": 20260929082
+      },
+      {
+        "panel": "phyllostomus_2022",
+        "B": 4999,
+        "seed": 20260929083
+      },
+      {
+        "panel": "phyllostomus_2023",
+        "B": 4999,
+        "seed": 20260929084
+      },
+      {
+        "panel": "phyllostomus_2016",
+        "B": 4999,
+        "seed": 20260929085
+      }
+    ],
+    "panel_pass_rule": "exact observed preflight n; calibrated common-cell identity >0; one-sided p(null>=observed)<=0.05"
+  },
+  "synthesis": {
+    "decision_matrix": {
+      "3_or_4_pass": "Vertical organization persists across >=1-day separation in most structurally evaluable panels, supporting a temporally stable individual component beyond short-lived nightly context.",
+      "1_or_2_pass": "Temporal persistence is context-dependent; short-lived context explains part of the comparative pattern.",
+      "0_pass": "Removing self sessions within one day removes most identity signal in this subset, making transient context a leading explanation."
+    },
+    "generalization_limit": "No inference to Eidolon or to persistence beyond the tracking lags represented by each source."
+  },
+  "claim_boundary": [
+    ">=1-day persistence does not prove genetic determination, personality or fixed intrinsic traits.",
+    "The test only distinguishes stability beyond short-term context at this lag scale.",
+    "Longer-lag persistence remains structurally unresolved in some panels.",
+    "This extension remains outside frozen v0.3.8."
+  ],
+  "stop_rule": [
+    "Do not change the 1-day lag, session-time definition, subset, 5-km grid, speed2_turn2 state, centering, bins, 50-event support, expected n, B/seeds or pass criteria after output.",
+    "If exact observed n differs from preflight expected n, invalidate rather than retune.",
+    "Do not introduce a shorter lag as rescue."
+  ]
+}
