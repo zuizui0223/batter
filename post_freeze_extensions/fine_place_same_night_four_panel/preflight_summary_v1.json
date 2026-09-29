@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-fine-place-same-night-four-panel-preflight-v1",
+  "authoritative_workflow": {
+    "run_id": 36518495772,
+    "head_sha": "d95f3d8b8c8e10ed5b371a466fcca90f655261c6",
+    "artifact_id": 11012176639,
+    "artifact_digest": "sha256:8bd5e71ce3487b060534f55df386c3af96458f481cefbcbaa862aea865bd1c32"
+  },
+  "feasible": true,
+  "exact_n": {
+    "hypsignathus": 19,
+    "phyllostomus_2022": 26,
+    "phyllostomus_2023": 14,
+    "phyllostomus_2016": 9
+  },
+  "baseline_n": {
+    "hypsignathus": 22,
+    "phyllostomus_2022": 30,
+    "phyllostomus_2023": 14,
+    "phyllostomus_2016": 10
+  },
+  "selected_pre_outcome": true,
+  "vertical_outcome_opened": false,
+  "submission_claims_unchanged": true
+}
