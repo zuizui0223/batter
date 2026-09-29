@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-fine-place-kinematic-500m-v1",
+  "frozen_date": "2026-09-29",
+  "status": "500-m stress-test family frozen after positive 2-km subset result and before any 500-m vertical outcome",
+  "role": "post-freeze exploratory robustness stress test; not independent confirmation, not rescue, and cannot alter v0.3.8",
+  "provenance": {
+    "matched_preflight_run_id": 36517151763,
+    "matched_preflight_head": "5b6120d7cf50e13e58486198212311d5eb612d9c",
+    "matched_preflight_artifact_id": 11011795260,
+    "preflight_vertical_outcome_used": false,
+    "two_km_result_run_id": 36517411361,
+    "two_km_result_known_before_this_family": true,
+    "interpretation_rule": "Because this 500-m refinement is opened after the positive 2-km result, treat it as a preflight-supported stress test rather than independent confirmatory evidence."
+  },
+  "subset": {
+    "included_panels": [
+      "hypsignathus",
+      "phyllostomus_2022",
+      "phyllostomus_2023",
+      "phyllostomus_2016"
+    ],
+    "excluded_panel": "eidolon",
+    "exclusion_reason": "only 1/12 retained at all predeclared fine grids under matched speed2_turn2 preflight",
+    "fine_grid_m": 500,
+    "expected_evaluable_individuals": {
+      "hypsignathus": 19,
+      "phyllostomus_2022": 23,
+      "phyllostomus_2023": 11,
+      "phyllostomus_2016": 9
+    },
+    "expected_n_source": "x-y-time-only matched speed2_turn2 preflight run 36517151763"
+  },
+  "ecological_question": "Does the already-observed four-panel within-context vertical identity survive a much stricter 500-m horizontal match while speed×turning state is also standardized?",
+  "state_definition": {
+    "source": "frozen speed2_turn2",
+    "maximum_step_interval_seconds": 1800,
+    "speed_bins": 2,
+    "speed_threshold": "cohort median",
+    "turn_bins": 2,
+    "turn_threshold": "cohort median absolute deflection angle",
+    "state_count": 4
+  },
+  "estimator": {
+    "horizontal_cell_m": 500,
+    "vertical_centering": "subtract each retained session median from all retained numeric-height events before selecting valid kinematic endpoints",
+    "vertical_edges_m": [
+      "-inf",
+      -400,
+      -200,
+      -100,
+      -50,
+      0,
+      50,
+      100,
+      200,
+      400,
+      "inf"
+    ],
+    "conditional_profile": "P(centered residual height | 500-m cell, speed×turn state)",
+    "self_weighting": "equal session",
+    "other_weighting": "equal individual within frozen cohort",
+    "common_weighting": "equal-session self distribution over jointly supported 500-m cell×state strata, applied identically to self and other profiles",
+    "target_scoring": "target kinematic endpoints whose 500-m cell×state stratum is supported by both predictors",
+    "minimum_scored_target_events": 50
+  },
+  "calibration": {
+    "permutation_unit": "whole centered session block with fixed x-y-time-derived speed×turn states",
+    "scope": "within frozen cohort",
+    "preserve": "within-session 500-m-place-state-residual-z observations and exact session-count multiset per label",
+    "settings": [
+      {
+        "panel": "hypsignathus",
+        "B": 4999,
+        "seed": 2026092702
+      },
+      {
+        "panel": "phyllostomus_2022",
+        "B": 4999,
+        "seed": 2026092703
+      },
+      {
+        "panel": "phyllostomus_2023",
+        "B": 4999,
+        "seed": 2026092704
+      },
+      {
+        "panel": "phyllostomus_2016",
+        "B": 4999,
+        "seed": 2026092705
+      }
+    ],
+    "panel_stress_pass_rule": "exact preflight n; calibrated common 500-m-place-state identity > 0; one-sided p(null>=observed)<=0.05"
+  },
+  "synthesis": {
+    "decision_matrix": {
+      "3_or_4_pass": "Strong 500-m robustness within the four structurally evaluable panels: individuality persists under much finer spatial matching as well as kinematic-state matching.",
+      "1_or_2_pass": "Mixed fine-scale robustness: sub-kilometre route allocation may explain substantial residual individuality in some systems.",
+      "0_pass": "The positive 2-km result does not survive 500-m matching; fine-scale route allocation becomes a leading explanation within the subset."
+    },
+    "generalization_limit": "No inference to Eidolon. Because this is post-2-km refinement, it is a stress test rather than independent confirmatory evidence."
+  },
+  "claim_boundary": [
+    "500-m cells remain matching strata, not exact flight paths, feeding trees or resources.",
+    "A PASS does not prove intrinsic phenotype; sub-500-m route, microhabitat and environmental exposure can remain.",
+    "A FAIL cannot erase the positive 2-km result; it would localize the residual mechanism below 2 km.",
+    "This family cannot alter the frozen v0.3.8 submission."
+  ],
+  "stop_rule": [
+    "Do not change subset, 500-m grid, speed2_turn2 definition, centering, bins, 50-event support, expected n, permutation B/seeds or pass rule after any 500-m output.",
+    "Do not open 1-km as a rescue if 500-m fails; the predeclared 2-km result remains separate.",
+    "If any observed n differs from the matched preflight expected n, invalidate rather than retune."
+  ]
+}
