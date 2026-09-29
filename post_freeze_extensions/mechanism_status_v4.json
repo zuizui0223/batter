@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-post-freeze-mechanism-status-v4",
+  "frozen_submission_unchanged": true,
+  "five_panel_general": {
+    "centered_shape_identity": "supported",
+    "speed_state_conditioning": "5/5 retain identity",
+    "speed_turn_conditioning": "5/5 retain identity",
+    "simple_patch_fidelity": {
+      "supported": false,
+      "mean_rho": 0.1759,
+      "p": 0.05731
+    },
+    "relative_tag_burden": {
+      "supported": false,
+      "mean_absolute_rho": 0.26774519703045835,
+      "p": 0.1399
+    }
+  },
+  "structurally_evaluable_four_panel_subset": {
+    "panels": [
+      "hypsignathus",
+      "phyllostomus_2022",
+      "phyllostomus_2023",
+      "phyllostomus_2016"
+    ],
+    "fine_place_2000m": {
+      "pass_count": 4,
+      "panel_count": 4
+    },
+    "fine_place_500m": {
+      "pass_count": 4,
+      "panel_count": 4
+    },
+    "same_night_2000m_kinematic": {
+      "pass_count": 3,
+      "panel_count": 4,
+      "unresolved_panel": {
+        "panel": "phyllostomus_2016",
+        "calibrated_excess": 0.5638550515444642,
+        "p": 0.0544
+      }
+    },
+    "temporal_phase3": {
+      "pass_count": 3,
+      "panel_count": 4,
+      "apparent_exception": "phyllostomus_2023",
+      "attribution": {
+        "supported": false,
+        "calibrated_phase_increment": -0.004806289152255443,
+        "p_lower": 0.3774
+      }
+    }
+  },
+  "temporal_context": {
+    "dry_panels": [
+      "phyllostomus_2016",
+      "phyllostomus_2022"
+    ],
+    "wet_panel": "phyllostomus_2023",
+    "season_mechanism_status": "hypothesis-generating only; support-matched phase attribution failed",
+    "phyllostomus_2021_wet_validation": "structurally unavailable under original frozen cohort gate"
+  },
+  "structural_limit": {
+    "panel": "eidolon",
+    "interpretation": "strong vertical individuality with insufficient cross-individual fine-context overlap for several mechanism tests"
+  },
+  "strongest_five_panel_statement": "Broad horizontal kinematic-state composition alone is insufficient to explain the comparative vertical-individuality pattern.",
+  "strongest_four_panel_statement": "Centered vertical individuality persists after matching horizontal place to 500 m and broad speed×turning state; in 3/4 panels it also exceeds same-night other individuals under 2-km place×kinematic matching.",
+  "live_mechanisms": [
+    "sub-500-m exact route/resource/microhabitat allocation",
+    "within-context individual flight organization",
+    "morphology/wing-loading effects",
+    "memory/experience/learned routines",
+    "fine-scale individual environmental reaction norms"
+  ]
+}
