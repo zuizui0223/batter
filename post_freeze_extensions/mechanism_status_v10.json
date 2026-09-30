@@ -25,9 +25,20 @@
       "direction": "positive"
     },
     "eligibility_robustness": {
-      "thresholds": [0, 20, 30, 40, 50, 75, 100],
+      "thresholds": [
+        0,
+        20,
+        30,
+        40,
+        50,
+        75,
+        100
+      ],
       "positive_excess_count": 7,
-      "range": [0.033903053415775646, 0.08600497756886367],
+      "range": [
+        0.033903053415775646,
+        0.08600497756886367
+      ],
       "median": 0.06086050756887755,
       "classification": "post-outcome convergent directional evidence"
     },
@@ -42,15 +53,30 @@
   "hipposideros": {
     "prospective_status": "genuinely response-unopened external primary",
     "mapping_history": {
-      "raw_prefix_counts": {"D": 11, "H": 8},
+      "raw_prefix_counts": {
+        "D": 11,
+        "H": 8
+      },
       "first_mapping_rule": "FAIL",
-      "preexisting_ge50_session_rule_effective_prefix_counts": {"D": 9, "H": 8},
-      "structurally_ineffective_ids": ["D21", "D22"],
-      "species_mapping": {"D": "Hipposideros armiger", "H": "Hipposideros pratti"}
+      "preexisting_ge50_session_rule_effective_prefix_counts": {
+        "D": 9,
+        "H": 8
+      },
+      "structurally_ineffective_ids": [
+        "D21",
+        "D22"
+      ],
+      "species_mapping": {
+        "D": "Hipposideros armiger",
+        "H": "Hipposideros pratti"
+      }
     },
     "preflight": {
       "height_opening_receipt_commit": "75bbbf1",
-      "evaluable_individuals": {"Hipposideros armiger": 8, "Hipposideros pratti": 5},
+      "evaluable_individuals": {
+        "Hipposideros armiger": 8,
+        "Hipposideros pratti": 5
+      },
       "source_total": 13
     },
     "primary": {
@@ -109,6 +135,23 @@
     "nyctalus_same_source_extensions": "PROHIBITED",
     "hipposideros_primary": "CLOSED WITHOUT RESCUE",
     "hipposideros_rescue_extensions": "PROHIBITED",
-    "next_progress": "new independent comparative systems or new field data"
+    "next_progress": "new independent comparative systems or new field data",
+    "leptonycteris_candidate": "PAUSED_UNOPENED_AFTER_HIPPOSIDEROS_PRIMARY_FAIL",
+    "external_serial_replication_search": "CLOSED",
+    "next_external_rule": "requires a separately frozen heterogeneity-oriented continuation programme; do not open Leptonycteris merely as a rescue search for a positive replication"
+  },
+  "next_programme_recommendation": {
+    "objective": "estimate cross-system heterogeneity in centered vertical individuality and identify predictors of its expression",
+    "not_objective": "serially search independent sources until one passes",
+    "must_freeze_before_new_vertical_outcome": [
+      "external source universe or sampling rule",
+      "common effect-size estimand",
+      "vertical-reference harmonization policy",
+      "structural eligibility",
+      "heterogeneity statistic/model",
+      "ecological predictors",
+      "source-level weighting",
+      "stopping rule"
+    ]
   }
 }
