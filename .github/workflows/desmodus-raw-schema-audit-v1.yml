@@ -1,0 +1,46 @@
+name: desmodus-raw-schema-audit-v1
+on:
+  push:
+    branches: [prospective/desmodus-comparative-source-v1]
+    paths:
+      - "post_freeze_extensions/comparative_generality/desmodus/raw_schema_*"
+      - "post_freeze_extensions/comparative_generality/desmodus/run_raw_schema_v1.py"
+      - ".github/workflows/desmodus-raw-schema-audit-v1.yml"
+  workflow_dispatch:
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+    env:
+      DRYAD_API_TOKEN: ${{ secrets.DRYAD_API_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install requests remotezip openpyxl
+      - name: Require Dryad token
+        run: |
+          test -n "$DRYAD_API_TOKEN" || (echo "DRYAD_API_TOKEN secret is not set" && exit 2)
+      - name: Audit only workbook sheet names and row-1 headers
+        run: python post_freeze_extensions/comparative_generality/desmodus/run_raw_schema_v1.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: batter-desmodus-raw-schema-audit-v1
+          path: |
+            post_freeze_extensions/comparative_generality/desmodus/raw_schema_result_v1.json
+            post_freeze_extensions/comparative_generality/desmodus/RAW_SCHEMA_RESULT_V1.md
+          if-no-files-found: error
+      - name: Pin schema audit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add post_freeze_extensions/comparative_generality/desmodus/raw_schema_result_v1.json post_freeze_extensions/comparative_generality/desmodus/RAW_SCHEMA_RESULT_V1.md
+          if git diff --cached --quiet; then
+            echo "No schema changes"
+          else
+            git commit -m "Record Desmodus raw schema audit"
+            git push origin HEAD:prospective/desmodus-comparative-source-v1
+          fi
