@@ -1,0 +1,44 @@
+name: pteropus-poliocephalus-source-preflight-v1
+on:
+  push:
+    branches: [prospective/pteropus-poliocephalus-source-v1]
+    paths:
+      - "post_freeze_extensions/comparative_generality/pteropus_poliocephalus/source_contract_v1.json"
+      - "post_freeze_extensions/comparative_generality/pteropus_poliocephalus/run_preflight_v1.py"
+      - ".github/workflows/pteropus-poliocephalus-source-preflight-v1.yml"
+  workflow_dispatch:
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install pandas numpy requests pyproj
+      - name: Compile frozen preflight
+        run: python -m py_compile post_freeze_extensions/comparative_generality/pteropus_poliocephalus/run_preflight_v1.py
+      - name: Run nonvertical preflight
+        run: python post_freeze_extensions/comparative_generality/pteropus_poliocephalus/run_preflight_v1.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: batter-pteropus-poliocephalus-source-preflight-v1
+          path: |
+            post_freeze_extensions/comparative_generality/pteropus_poliocephalus/preflight_result_v1.json
+            post_freeze_extensions/comparative_generality/pteropus_poliocephalus/PREFLIGHT_RESULT_V1.md
+            post_freeze_extensions/comparative_generality/pteropus_poliocephalus/height_opening_receipt_v1.json
+          if-no-files-found: error
+      - name: Pin preflight receipt
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add             post_freeze_extensions/comparative_generality/pteropus_poliocephalus/preflight_result_v1.json             post_freeze_extensions/comparative_generality/pteropus_poliocephalus/PREFLIGHT_RESULT_V1.md             post_freeze_extensions/comparative_generality/pteropus_poliocephalus/height_opening_receipt_v1.json
+          if git diff --cached --quiet; then
+            echo "No preflight changes"
+          else
+            git commit -m "Record Pteropus poliocephalus nonvertical preflight"
+            git push origin HEAD:prospective/pteropus-poliocephalus-source-v1
+          fi
