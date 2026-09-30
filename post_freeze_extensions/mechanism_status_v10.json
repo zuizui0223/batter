@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-post-freeze-mechanism-status-v10",
+  "frozen_submission_unchanged": true,
+  "submission_branch": "main",
+  "submission_version": "v0.3.8",
+  "current_synthesis": "MECHANISM_SYNTHESIS_V10.md",
+  "evidence_hierarchy": {
+    "submission_confirmed": "original six-panel programme and centered-shape audit on main",
+    "post_freeze_localization": "original archive stress tests plus same-source Nyctalus mechanism localization",
+    "prospective_external": "response-unopened external sources under fully frozen protocols"
+  },
+  "original_submission": {
+    "centered_shape_positive_panels": 5,
+    "centered_shape_boundary_panels": 1,
+    "boundary_taxon": "Tadarida teniotis",
+    "strongest_statement": "Repeatable vertical individual organization extends beyond coarse horizontal occupancy, and five comparative panels retain identity in centered distribution shape."
+  },
+  "nyctalus": {
+    "prospective_primary": {
+      "n": 27,
+      "calibrated_excess": 0.051747374510001,
+      "p_upper": 0.1224,
+      "pass": false,
+      "direction": "positive"
+    },
+    "eligibility_robustness": {
+      "thresholds": [
+        0,
+        20,
+        30,
+        40,
+        50,
+        75,
+        100
+      ],
+      "positive_excess_count": 7,
+      "range": [
+        0.033903053415775646,
+        0.08600497756886367
+      ],
+      "median": 0.06086050756887755,
+      "classification": "post-outcome convergent directional evidence"
+    },
+    "context_localization": {
+      "hmm_state_attenuation_p_lower": 0.5431,
+      "track_start_distance_attenuation_p_lower": 0.6886,
+      "potential_roost_x_landcover_attenuation_p_lower": 0.8204,
+      "synthesis": "measured context allocation does not explain the signal away where the Nyctalus signal is present"
+    },
+    "same_source_programme": "CLOSED"
+  },
+  "hipposideros": {
+    "prospective_status": "genuinely response-unopened external primary",
+    "mapping_history": {
+      "raw_prefix_counts": {
+        "D": 11,
+        "H": 8
+      },
+      "first_mapping_rule": "FAIL",
+      "preexisting_ge50_session_rule_effective_prefix_counts": {
+        "D": 9,
+        "H": 8
+      },
+      "structurally_ineffective_ids": [
+        "D21",
+        "D22"
+      ],
+      "species_mapping": {
+        "D": "Hipposideros armiger",
+        "H": "Hipposideros pratti"
+      }
+    },
+    "preflight": {
+      "height_opening_receipt_commit": "75bbbf1",
+      "evaluable_individuals": {
+        "Hipposideros armiger": 8,
+        "Hipposideros pratti": 5
+      },
+      "source_total": 13
+    },
+    "primary": {
+      "observed": -0.07574593988829564,
+      "null_mean": -0.031062326348481103,
+      "null_sd": 0.04189362476637872,
+      "calibrated_excess": -0.04468361353981454,
+      "p_upper": 0.8616,
+      "p_lower": 0.1385,
+      "pass": false,
+      "direction": "negative"
+    },
+    "secondary_species": {
+      "Hipposideros armiger": {
+        "n": 8,
+        "calibrated_excess": 0.01929302128606309,
+        "p_upper": 0.3721
+      },
+      "Hipposideros pratti": {
+        "n": 5,
+        "calibrated_excess": -0.10866024836569219,
+        "p_upper": 0.9678,
+        "descriptive_p_lower": 0.0323
+      }
+    },
+    "programme": "CLOSED WITHOUT RESCUE"
+  },
+  "prospective_external_summary": {
+    "successful_replication_established": false,
+    "nyctalus_direction": "positive but non-significant",
+    "hipposideros_direction": "negative",
+    "generality_status": "centered vertical individuality is recurrent but not universal across tested bat systems"
+  },
+  "current_general_ecological_synthesis": {
+    "name": "orthogonal / axis-specific spatial individuality",
+    "statement": "Horizontal site fidelity, absolute vertical level, and centered vertical-distribution shape are separable dimensions of individual spatial organization.",
+    "key_boundary_evidence": [
+      "original comparative systems retain vertical identity after coarse horizontal occupancy matching",
+      "Tadarida separates absolute vertical level from centered vertical shape",
+      "Hipposideros shows strong horizontal foraging-site fidelity without source-level centered vertical identity"
+    ]
+  },
+  "current_mechanistic_synthesis": {
+    "name": "context-residual individuality where present",
+    "statement": "When centered vertical individuality is present, measured movement/place/resource context may fail to explain it away; this is not a universal bat mechanism."
+  },
+  "strongest_general_statement": "Different dimensions of individual spatial specialization can dissociate. Centered vertical individuality occurs in multiple bat systems but is not universal across tested independent sources.",
+  "remaining_questions": [
+    "what predicts whether centered vertical individuality emerges at all",
+    "what generates within-context vertical individuality where it occurs",
+    "whether detailed morphology, fine local atmosphere, exact resource geometry, memory or experience explain cross-system heterogeneity"
+  ],
+  "programme_status": {
+    "original_archive": "CLOSED",
+    "nyctalus_same_source": "CLOSED",
+    "nyctalus_same_source_extensions": "PROHIBITED",
+    "hipposideros_primary": "CLOSED WITHOUT RESCUE",
+    "hipposideros_rescue_extensions": "PROHIBITED",
+    "next_progress": "new independent comparative systems or new field data",
+    "leptonycteris_candidate": "CLOSED_STRUCTURAL_FAIL_ALTITUDE_UNOPENED",
+    "external_serial_replication_search": "CLOSED",
+    "next_external_rule": "requires a separately frozen heterogeneity-oriented continuation programme; do not open Leptonycteris merely as a rescue search for a positive replication"
+  },
+  "next_programme_recommendation": {
+    "objective": "estimate cross-system heterogeneity in centered vertical individuality and identify predictors of its expression",
+    "not_objective": "serially search independent sources until one passes",
+    "must_freeze_before_new_vertical_outcome": [
+      "external source universe or sampling rule",
+      "common effect-size estimand",
+      "vertical-reference harmonization policy",
+      "structural eligibility",
+      "heterogeneity statistic/model",
+      "ecological predictors",
+      "source-level weighting",
+      "stopping rule"
+    ]
+  },
+  "external_candidate_structure": {
+    "Leptonycteris_nivalis": {
+      "source": "Dryad 10.5061/dryad.stqjq2cfg",
+      "individuals": 21,
+      "nonvertical_valid_rows": 2402,
+      "qualified_nights_ge50": 0,
+      "repeat_eligible_individuals": 0,
+      "required_repeat_individuals": 5,
+      "structural_pass": false,
+      "max_fixes_in_any_candidate_night": 49,
+      "numeric_altitude_opened": false,
+      "classification": "STRUCTURAL_FAIL_UNDER_FROZEN_COMMON_ESTIMATOR"
+    }
+  }
+}

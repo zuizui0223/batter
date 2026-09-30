@@ -1,111 +1,112 @@
-# Next external validation priority v1
+# External validation continuation status v2
 
 ## Status
 
-**OUTCOME-BLIND PRIORITY LOCK.**
+**THE ORIGINAL PRIORITY-LOCKED EXTERNAL-REPLICATION SEQUENCE IS CLOSED AFTER THE HIPPOSIDEROS PRIMARY RESULT.**
 
-This priority order uses candidates that were already present in the pre-Nyctalus external-candidate ledger and uses only source metadata / data structure, not any unopened vertical outcome.
+This file supersedes the operational interpretation of `NEXT_EXTERNAL_VALIDATION_PRIORITY_V1.md`.
 
-## Priority 1 — Hipposideros armiger + H. pratti
+The pre-Nyctalus candidate ledger originally placed:
+1. *Hipposideros armiger* + *H. pratti*;
+2. *Leptonycteris nivalis*.
 
-Source:
-- Dryad DOI: `10.5061/dryad.j0zpc86r1`
-- file: `GPS_data.csv`
+Priority 1 has now been completed under a genuinely response-unopened prospective protocol.
 
-Public metadata establish:
-- 17 tracked adults in total;
-- 9 *H. armiger* and 8 *H. pratti*;
-- GPS logging nominally every 10 min during the nocturnal tracking window, movement-triggered;
-- native `height` in metres above ground level;
-- ambient `temp` recorded by the logger;
-- source paper reports repeated individual foraging-site fidelity over 7–10 consecutive nights.
-
-Why first:
-1. native AGL is directly relevant to vertical space use;
-2. repeated-night structure is explicitly reported;
-3. two sympatric species provide a biologically interesting independent system;
-4. no public pre-processing exclusion of roost-neighbourhood GPS points is reported in the dataset metadata;
-5. source-level temperature may later support a separately frozen environmental context test if, and only if, primary replication is first completed under its own contract.
-
-Current status:
-- original structural gate criteria are retained on `prospective/hipposideros-structural-gate-v1`;
-- outcome-blind species mapping is now frozen on `prospective/hipposideros-species-mapping-v1`;
-- the complete prospective primary estimator is frozen on `prospective/hipposideros-primary-design-v1`;
-- numeric height remains unopened;
-- direct unauthenticated download fails because Dryad now requires authenticated API file download;
-- status = **PENDING_ACCESS**, not structural FAIL.
-
-Pre-frozen species mapping:
-- read only the GPS `id` strings;
-- proceed only if exactly two ID-prefix groups contain 9 and 8 unique individuals;
-- map the 9-ID prefix to *H. armiger* and the 8-ID prefix to *H. pratti*, matching the published tracked sample counts;
-- otherwise stop as `MAPPING_UNRESOLVED`; do not infer species from height, coordinates, behaviour or diet.
-
-Pre-frozen primary design:
-- session: nocturnal date under the deterministic timestamp rule;
-- >=50 presence-qualified fixes/night;
-- EPSG:32648 and fixed 5-km grid;
-- >=50 common-support target events;
-- exact target nights frozen before numeric height;
-- session-median-centered source AGL height;
-- frozen centered-height bins;
-- whole-night identity permutation within species;
-- equal-individual within species and equal-species source aggregation;
-- 9,999 permutations, seed 2026093007;
-- source-level calibrated excess >0 and one-sided p<=0.05 required for PASS.
-
-Authorized access route:
-- Dryad API `GET /api/v2/files/4102381/download` with a Bearer token;
-- GitHub workflow reads the token only from repository secret `DRYAD_API_TOKEN`;
-- the token must not be pasted into analysis files or chat transcripts.
-
-Execution order after access:
-1. run the authenticated outcome-blind preflight;
-2. if it passes, commit the generated `height_opening_receipt_v1.json` unchanged;
-3. only then run the receipt-gated primary vertical validator;
-4. preserve FAIL without rescue if the source-level primary rule is not met.
-
-## Priority 2 — Leptonycteris nivalis
+## Completed Priority 1 — Hipposideros
 
 Source:
-- Dryad DOI: `10.5061/dryad.stqjq2cfg`
-- file: `GPS_data_Leptonycteris_nivalis__Summer_2024_GPS__TX__USA.xlsx`
+- Dryad DOI `10.5061/dryad.j0zpc86r1`
+- file `GPS_data.csv`
+- native AGL `height`
 
-Public metadata establish:
-- 21 tagged bats;
-- fixes programmed every 10 min from sunset to sunrise;
-- native WGS84 ellipsoidal altitude;
-- GPS points within approximately 1 km of the protected roost were removed before public release.
+Outcome-blind source/preflight:
+- raw GPS IDs D=11 / H=8;
+- D21 and D22 had zero nights satisfying the already-frozen >=50-fix session threshold;
+- source-effective IDs therefore D=9 / H=8, matching the source paper's published tracked counts;
+- mapping frozen before Height: D = *H. armiger*, H = *H. pratti*;
+- estimator-evaluable after exact 5-km common-support gate:
+  - *H. armiger*: 8
+  - *H. pratti*: 5;
+- exact Height-opening receipt pinned before numeric Height was opened.
 
-Why second:
-- sample size and repeated nocturnal GPS scheduling are promising;
-- however the vertical reference is ellipsoidal rather than terrain-relative;
-- the public roost-neighbourhood exclusion removes one biologically important central-place context before analysis.
+Frozen primary:
+- observed = **-0.075746**
+- null mean = **-0.031062**
+- calibrated excess = **-0.044684**
+- p_upper = **0.8616**
+- verdict = **FAIL**
 
-Current status:
-- structural gate criteria frozen on `prospective/leptonycteris-structural-gate-v1`;
-- numeric altitude remains unopened;
-- direct file download currently requires authenticated Dryad access;
-- status = **PENDING_ACCESS**.
+The programme is closed without rescue.
 
-## Priority rule
+## Priority 2 — Leptonycteris structural gate completed
 
-Do not reorder candidates after seeing any future vertical outcome.
+Source:
+- Dryad DOI `10.5061/dryad.stqjq2cfg`
+- file `GPS_data_Leptonycteris_nivalis__Summer_2024_GPS__TX__USA.xlsx`
 
-If Priority 1 becomes accessible:
-- run its already-frozen structural gate first.
+The already-frozen structural gate was executed **without reading numeric Altitude**.
 
-If Priority 1 is structurally ineligible under the frozen gate:
-- retain that failure;
-- Priority 2 may then proceed under its already-frozen gate.
+Result:
+- 21 Tag IDs;
+- 2,402 nonvertical-valid GPS rows;
+- >=50-fix nights: **0**;
+- repeat-eligible individuals: **0**;
+- required repeat individuals: 5;
+- verdict: **STRUCTURAL FAIL**.
 
-If Priority 1 remains technically inaccessible:
-- Priority 2 may proceed when accessible, but must be reported as the second pre-existing candidate rather than a replacement selected from vertical outcomes.
+The maximum fixes in any candidate night was 49. The threshold is not lowered after seeing this structure.
 
-## External-validation objective
+Therefore Leptonycteris is closed as **structurally ineligible under the frozen common estimator**. Numeric altitude remains unopened.
 
-The next successful external programme should answer only:
+This result is not a negative biological result and cannot be used as another replication outcome.
 
-> Does centered individual vertical-distribution identity exceed its complete pipeline-specific identity-exchangeability null in a genuinely response-unopened bat tracking source?
+## What would justify a future Leptonycteris analysis
 
-Mechanism extensions are not opened unless separately frozen after the external primary result and must never overwrite the primary verdict.
+Leptonycteris may be reopened only under a new, separately frozen programme whose objective is not “find a successful replication.”
+
+A defensible new objective would be:
+
+> **estimate heterogeneity in the expression of centered vertical individuality across independent bat tracking systems and test why the axis is present in some systems but absent in others.**
+
+That programme should freeze before opening Leptonycteris altitude:
+- the complete set or sampling rule for external systems;
+- a common estimand;
+- how vertical-reference differences are handled;
+- minimum structural eligibility;
+- how system-level effect sizes are combined;
+- heterogeneity statistics;
+- ecological predictors selected independently of the system-level effects;
+- stopping rule / total source universe.
+
+Only such a design can turn additional sources into comparative evidence about heterogeneity rather than repeated attempts at confirmation.
+
+## Current prospective evidence
+
+External source 1 — *Nyctalus noctula*:
+- calibrated excess **+0.05175**
+- p=**0.1224**
+- positive direction, FAIL
+
+External source 2 — *Hipposideros*:
+- calibrated excess **-0.04468**
+- p=**0.8616**
+- negative direction, FAIL
+
+Successful prospective external replication is therefore not established.
+
+The scientifically useful next question is no longer simply “can another source pass?” but:
+
+> **what determines the cross-system expression of centered vertical individuality?**
+
+## Operational rule
+
+Until a heterogeneity-oriented continuation programme is frozen:
+
+- no Leptonycteris altitude opening or threshold relaxation;
+- no new external-source search selected to replace negative sources;
+- no change to the Hipposideros verdict;
+- no external subgroup rescue.
+
+A future programme using a different session threshold would be a new estimand and must be specified before opening any Leptonycteris vertical values.
+
+The frozen JAE v0.3.8 submission remains unchanged.
