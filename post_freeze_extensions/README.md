@@ -4,24 +4,27 @@ The frozen v0.3.8 JAE submission on `main` is unchanged.
 
 ## Read first
 
-- `MECHANISM_SYNTHESIS_V8.md` — current integrity-corrected synthesis;
-- `NYCTALUS_VALIDATION_HISTORY_V1.md` — complete chronology of the two same-source Nyctalus analyses;
-- `NYCTALUS_ELIGIBILITY_ROBUSTNESS_RESULT_V1.md` — fixed 0–100-fix eligibility sensitivity;
-- `mechanism_status_v8.json` — machine-readable current status;
-- `ARCHIVE_PROGRAMME_STOP_RULE_V1.md` — closure of the original archival mechanism programme;
-- `NEXT_DECISIVE_MECHANISM_EXPERIMENT_V2.md` — design required to identify the remaining fine-scale mechanism.
+- `MECHANISM_SYNTHESIS_V9.md` — current context-localization synthesis;
+- `mechanism_status_v9.json` — machine-readable current status;
+- `NYCTALUS_VALIDATION_HISTORY_V1.md` — complete Nyctalus inferential chronology;
+- `NYCTALUS_ELIGIBILITY_ROBUSTNESS_RESULT_V1.md` — 0–100-fix sensitivity;
+- `NYCTALUS_HMM_STATE_ATTRIBUTION_RESULT_V1.md` — support-matched HMM-state test;
+- `NYCTALUS_DIST_START_AUDIT_RESULT_V1.md` — validated track-start-distance semantics;
+- `NYCTALUS_CENTRAL_PLACE_ATTRIBUTION_RESULT_V1.md` — central-place / flight-stage attribution;
+- `NYCTALUS_RSF_CONTEXT_LINKAGE_RESULT_V1.md` — deterministic observed-to-source-RSF linkage;
+- `NYCTALUS_RESOURCE_CONTEXT_ATTRIBUTION_RESULT_V1.md` — final potential-roost × land-cover attribution;
+- `NYCTALUS_SAME_SOURCE_STOP_RULE_V1.md` — closure of same-source Nyctalus mechanism search;
+- `NEXT_DECISIVE_MECHANISM_EXPERIMENT_V2.md` — field design needed to identify the remaining mechanism.
 
-`MECHANISM_SYNTHESIS_V7.md` and `mechanism_status_v7.json` are retained as historical records but are **superseded** because they incorrectly classified the later n=36 Nyctalus analysis as a prospective primary replication.
+`MECHANISM_SYNTHESIS_V7.md` is historical and superseded by the integrity-corrected v8/v9 hierarchy.
 
-## Evidence hierarchy
+## Central result
 
-### Submission-confirmed
+The frozen submission establishes repeatable individual vertical organization beyond coarse horizontal occupancy. Five comparative panels retain centered vertical-distribution shape identity after session-median centering; focal `Tadarida` is the boundary case.
 
-The original comparative programme supports repeatable vertical individual organization beyond coarse horizontal occupancy. Five comparative panels retain centered vertical-distribution shape identity after session-median centering; focal `Tadarida` is the boundary case.
+## Post-freeze localization
 
-### Post-freeze mechanism localization
-
-In structurally evaluable original systems:
+Original comparative archive:
 - speed conditioning: 5/5 retain identity;
 - speed × turning: 5/5;
 - 2-km place × state: 4/4;
@@ -31,48 +34,35 @@ In structurally evaluable original systems:
 - >=3-day: 3/3;
 - >=7-day: 2/2.
 
-These are exploratory/stress-test evidence, not independent replication.
+Nyctalus:
+- first prospective primary: n=27, excess +0.05175, p=0.1224 — **FAIL**;
+- eligibility sensitivity: calibrated excess positive at **7/7** thresholds;
+- support-matched HMM-state attribution: **no attenuation**, p_lower=0.5431;
+- support-matched distance-from-track-start attribution: **no attenuation**, p_lower=0.6886;
+- support-matched potential-roost-distance × local 50-m land-cover attribution: **no attenuation**, p_lower=0.8204.
 
-### Nyctalus external evidence
+## Current interpretation
 
-The **first prospective primary** validation used the frozen >=50-fixes/source-track criterion:
+The strongest post-freeze mechanistic synthesis is:
 
-- n=27;
-- calibrated excess **+0.05175**;
-- p=**0.1224**;
-- verdict: **FAIL**.
+> **Context-residual individuality:** the measured individual signal is not well explained as a simple mixture of where an animal goes, which broad movement state it occupies, or which measured central-place/resource context it experiences. Substantial identity remains within matched contexts.
 
-A later same-source analysis with relaxed source-track eligibility gave:
-
-- n=36;
-- calibrated excess **+0.08600**;
-- p=**0.0115**.
-
-Because the same Height outcome had already been opened, that later result is a **post-outcome sensitivity**, not a new prospective primary test.
-
-A fixed eligibility diagnostic subsequently varied only the minimum source-track length (0, 20, 30, 40, 50, 75, 100 fixes). Calibrated excess was positive at **7/7** thresholds, ranging **+0.03390 to +0.08600**.
-
-Therefore the current external conclusion is:
-
-> **Nyctalus provides directionally robust convergent external evidence, but a successful prospective external replication is not yet established.**
-
-## Current causal interpretation
-
-The archive substantially weakens explanations based on coarse horizontal occupancy, broad kinematic-state composition, >=250–500-m patch allocation in evaluable systems, simple body mass, relative tag burden and simple shared calendar-night context.
+This does not identify the biological substrate of the residual signal.
 
 Still live:
-- sub-250–500-m route/resource/microhabitat allocation;
-- independently observed behavioural-state allocation;
-- wing morphology / wing loading;
-- memory, experience and learned routines;
-- individual local-environment reaction norms.
+- exact sub-50-m route/resource/microhabitat;
+- verified occupied roost identity;
+- local wind/uplift and individual environmental reaction norms;
+- wing loading / aspect ratio / detailed morphology;
+- memory, experience and learned routines.
 
 ## Programme status
 
 - original archive mechanism programme: **CLOSED**;
 - first Nyctalus validation: **CLOSED**;
-- same-source Nyctalus rescue analyses: **PROHIBITED**;
-- future external validation: requires a **new separately frozen programme**;
-- decisive mechanism identification: requires new overlap-rich data or an external source with exact route/resource/environment context.
+- same-source Nyctalus mechanism programme: **CLOSED**;
+- alternate same-source context variants/subgroups/grids: **PROHIBITED**;
+- future external validation: requires a new response-unopened source under a separate frozen programme;
+- decisive mechanism identification: requires overlap-rich field data or a new source with exact resource/route/environment context.
 
 No post-freeze result modifies the frozen v0.3.8 submission.

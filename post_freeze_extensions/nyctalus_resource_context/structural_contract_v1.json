@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-nyctalus-resource-context-preflight-v1",
+  "frozen_date": "2026-09-30",
+  "status": "post-outcome structural preflight; numeric Height prohibited",
+  "source": {
+    "record_id": 7535030,
+    "doi": "10.5281/zenodo.7535030",
+    "observed_file": "Observed_GPS_locations.csv",
+    "rsf_file": "Model_dataset_RSFFlight_Complete_EPSG25833.csv",
+    "observed_sha256": "2f373d47706c5b56313de70b623bb5446f5925c69af30f1b145993419e382aa9"
+  },
+  "linkage": {
+    "rsf_used_filter": "response_rvso == 1",
+    "scope": "within identical trackid",
+    "rule": "bijective nearest-neighbour assignment in projected x-y coordinates",
+    "maximum_allowed_distance_m": 1.0,
+    "expected_observed_rows": 8129,
+    "expected_tracks": 107
+  },
+  "fixed_context": {
+    "cohort": "Year x field_period",
+    "session": "trackid",
+    "individual": "bat_id",
+    "valid_move_states": ["ARM", "COM"],
+    "horizontal_grid_m": 5000,
+    "roost_distance_field": "DistanceAssumedRoostsInKm",
+    "roost_distance_bins_km": [0, 0.5, 2, 5, "inf"],
+    "detailed_landcover_field": "main_clc2_ratrel",
+    "coarse_landcover_field": "forestornot",
+    "minimum_supported_target_events": 50
+  },
+  "candidate_contexts": {
+    "roost_landcover": "5-km cell x HMM state x roost-distance bin x main_clc2_ratrel",
+    "roost_forest": "5-km cell x HMM state x roost-distance bin x forestornot",
+    "roost_only": "5-km cell x HMM state x roost-distance bin"
+  },
+  "selection_rule": {
+    "reference_state_5km_n": 27,
+    "minimum_retained_fraction": 0.70,
+    "required_n": 19,
+    "priority": ["roost_landcover", "roost_forest", "roost_only"],
+    "choose": "first context in priority order with >=19 evaluable individuals; if none, structural STOP and no vertical test"
+  },
+  "vertical_blindness": {
+    "numeric_height_values_allowed": false,
+    "allowed_height_operation": "presence/nonblank only",
+    "prohibited": [
+      "parse or summarize Height",
+      "alter roost-distance bins after support counts",
+      "change land-cover field after support counts",
+      "open separate vertical tests for multiple context candidates"
+    ]
+  },
+  "future_test_if_pass": {
+    "base_model": "P(centered z | 5-km cell x HMM state)",
+    "context_model": "P(centered z | selected source-RSF resource context)",
+    "target_matching": "score both on identical selected-context-supported target events",
+    "primary_attribution": "negative calibrated context-minus-base increment"
+  },
+  "claim_boundary": [
+    "DistanceAssumedRoostsInKm refers to source-defined potential roosts, not guaranteed occupied daytime roost for every fix",
+    "land cover is source-provided 50-m contextual classification",
+    "this preflight is support-only and cannot provide biological evidence by itself",
+    "any later result is post-outcome mechanism localization, not prospective replication"
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-nyctalus-resource-context-attribution-v1",
+  "frozen_date": "2026-09-30",
+  "status": "post-outcome paired-support resource/roost mechanism attribution; frozen before vertical paired output",
+  "role": "test whether source-provided potential-roost distance plus local land-cover context explains centered vertical individuality beyond 5-km place and source HMM state",
+  "source": {
+    "record_id": 7535030,
+    "doi": "10.5281/zenodo.7535030",
+    "observed_file": "Observed_GPS_locations.csv",
+    "rsf_file": "Model_dataset_RSFFlight_Complete_EPSG25833.csv",
+    "observed_sha256": "2f373d47706c5b56313de70b623bb5446f5925c69af30f1b145993419e382aa9"
+  },
+  "linkage": {
+    "rsf_used_filter": "response_rvso == 1",
+    "scope": "within identical trackid",
+    "method": "bijective nearest-neighbour matching in projected x-y",
+    "maximum_distance_m": 1.0,
+    "expected_rows": 8129,
+    "expected_tracks": 107
+  },
+  "structural_preflight": {
+    "run_id": 36701521537,
+    "selected_context": "roost_landcover",
+    "expected_evaluable_individuals": 20,
+    "roost_distance_bins_km": [0, 0.5, 2, 5, "inf"],
+    "landcover_field": "main_clc2_ratrel"
+  },
+  "fixed_context": {
+    "cohort": "Year x field_period",
+    "session": "trackid",
+    "individual": "bat_id",
+    "valid_source_states": ["ARM", "COM"],
+    "horizontal_grid_m": 5000,
+    "roost_distance_field": "DistanceAssumedRoostsInKm",
+    "vertical_centering": "full retained source-track median before ARM/COM filtering",
+    "vertical_edges_m": ["-inf", -400, -200, -100, -50, 0, 50, 100, 200, 400, "inf"],
+    "alpha": 0.5,
+    "minimum_scored_target_events": 50
+  },
+  "paired_estimand": {
+    "base_model": "P(centered z | 5-km cell x source HMM state)",
+    "context_model": "P(centered z | 5-km cell x source HMM state x frozen potential-roost-distance bin x main_clc2_ratrel)",
+    "event_pool": "ARM/COM observed GPS events deterministically linked to their source RSF used rows",
+    "target_support": "score both models only on target events whose full resource-context stratum is supported in both self and other context profiles and whose corresponding base stratum is supported in both base profiles",
+    "target_matching": "identical target events for base and context models",
+    "self_weighting": "equal eligible training source track",
+    "other_weighting": "pool source tracks within each other bat then equal-weight other bats within cohort",
+    "target_aggregation": "equal target track within bat, then equal bat",
+    "paired_increment": "resource-context identity gain minus base HMM-state identity gain; negative indicates attenuation after measured roost/resource context is conditioned"
+  },
+  "calibration": {
+    "permutation_unit": "whole source-track identity labels",
+    "scope": "within Year x field_period cohort",
+    "preserve": "track x-y-HMM-state-resource-context-centered-z block and exact per-cohort track-count multiset per identity",
+    "B": 4999,
+    "seed": 2026093005,
+    "primary_test": "observed paired context increment < permutation null mean and one-sided p(null <= observed) <= 0.05",
+    "exact_n_required": 20
+  },
+  "interpretation_matrix": {
+    "attenuation_PASS": "Measured potential-roost distance plus local land-cover context removes more same-individual predictive advantage than expected on identical target support, supporting persistent resource/central-place allocation as a contributor.",
+    "attenuation_FAIL": "Measured potential-roost distance plus local land-cover context does not measurably attenuate identity on support-matched events; these measured contexts are not supported as a sufficient explanation."
+  },
+  "claim_boundary": [
+    "DistanceAssumedRoostsInKm is source-defined distance to the closest potential roost, not proof of the actual occupied daytime roost for every event",
+    "main_clc2_ratrel is source-provided local land-cover context, not exact prey or feeding-resource identity",
+    "this is post-outcome mechanism localization, not confirmatory replication",
+    "a PASS identifies contribution relative to these measured proxies, not a unique causal mechanism",
+    "a FAIL does not exclude exact feeding patches, sub-50-m habitat, local atmosphere, morphology, memory or experience",
+    "this is the final same-source Nyctalus mechanism family; do not open additional context variants after its output"
+  ]
+}
