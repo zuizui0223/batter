@@ -14,7 +14,7 @@ import requests
 from pyproj import Transformer
 
 ROOT=Path(__file__).resolve().parents[2]
-MAP_CONTRACT=ROOT/"post_freeze_extensions/hipposideros_external_validation/species_mapping_contract_v1.json"
+MAP_CONTRACT=ROOT/"post_freeze_extensions/hipposideros_external_validation/species_mapping_contract_v2.json"
 PRIMARY_DESIGN=ROOT/"post_freeze_extensions/hipposideros_external_validation/primary_design_v1.json"
 OUT=ROOT/"post_freeze_extensions/hipposideros_external_validation/authenticated_preflight_v1.json"
 OUT_MD=ROOT/"post_freeze_extensions/hipposideros_external_validation/AUTHENTICATED_PREFLIGHT_V1.md"
@@ -65,46 +65,23 @@ def main():
     if missing:
         raise RuntimeError(f"missing required columns {missing}")
 
-    # ---------- Species mapping: ID strings only ----------
-    ids=sorted(set(df.loc[present(df["id"]),"id"].astype(str).str.strip()))
-    groups=defaultdict(list)
-    for iid in ids:
+    raw_ids=sorted(set(df.loc[present(df["id"]),"id"].astype(str).str.strip()))
+    raw_prefix_counts={}
+    for iid in raw_ids:
         p=leading_prefix(iid)
         if not p:
             raise RuntimeError(f"id has no leading alphabetic prefix: {iid!r}")
-        groups[p].append(iid)
-    prefix_counts={p:len(v) for p,v in sorted(groups.items())}
+        raw_prefix_counts[p]=raw_prefix_counts.get(p,0)+1
 
-    mapping_contract=json.loads(MAP_CONTRACT.read_text())
-    expected_counts=sorted(mapping_contract["published_species_counts"].values())
-    mapping_ok=(len(prefix_counts)==2 and sorted(prefix_counts.values())==expected_counts)
-    species_by_prefix={}
-    if mapping_ok:
-        for p,n in prefix_counts.items():
-            if n==9:
-                species_by_prefix[p]="Hipposideros armiger"
-            elif n==8:
-                species_by_prefix[p]="Hipposideros pratti"
-            else:
-                mapping_ok=False
-    if not mapping_ok:
-        raise RuntimeError(
-            f"MAPPING_UNRESOLVED: prefix counts {prefix_counts} are not uniquely {{9,8}}; "
-            "do not infer species from any other field"
-        )
-
-    id_to_species={}
-    for p,vals in groups.items():
-        for iid in vals:
-            id_to_species[iid]=species_by_prefix[p]
-
-    # ---------- Structural rows: height presence only ----------
+    # Presence-qualified structural rows. Height is presence-only.
     mask=pd.Series(True,index=df.index)
     for col in required:
         mask &= present(df[col])
     d=df.loc[mask,required].copy()
+    d["id"]=d["id"].astype(str).str.strip()
 
-    d["t"]=pd.to_datetime(d["timestamp"],errors="coerce")
+    # Numeric parsing allowed only for nonvertical fields.
+    d["t"]=pd.to_datetime(d["timestamp"],errors="coerce",format="mixed")
     d["lon_num"]=pd.to_numeric(d["longitude"],errors="coerce")
     d["lat_num"]=pd.to_numeric(d["latitude"],errors="coerce")
     nonvertical_bad=d["t"].isna()|d["lon_num"].isna()|d["lat_num"].isna()
@@ -119,10 +96,59 @@ def main():
         d["session_date"]=d["t"].dt.date.astype(str)
         session_rule="raw_calendar_date"
 
-    d["id"]=d["id"].astype(str).str.strip()
+    # ---------- Species mapping v2 ----------
+    # Use the already-frozen >=50-fix session threshold to identify the paper's
+    # source-effective tracked IDs before any numeric Height is parsed.
+    raw_night_counts=(
+        d.groupby(["id","session_date"],sort=True)
+        .size().rename("n").reset_index()
+    )
+    full_nights=raw_night_counts[raw_night_counts["n"]>=50].copy()
+    effective_ids=sorted(set(full_nights["id"].astype(str)))
+    ineffective_ids=sorted(set(raw_ids)-set(effective_ids))
+
+    effective_prefix_groups=defaultdict(list)
+    for iid in effective_ids:
+        p=leading_prefix(iid)
+        if not p:
+            raise RuntimeError(f"effective id has no leading prefix: {iid!r}")
+        effective_prefix_groups[p].append(iid)
+    effective_prefix_counts={p:len(v) for p,v in sorted(effective_prefix_groups.items())}
+
+    mapping_contract=json.loads(MAP_CONTRACT.read_text())
+    paper_counts=mapping_contract["source_evidence"]["published_tracking_counts"]
+    if len(effective_ids)!=17:
+        raise RuntimeError(
+            f"MAPPING_UNRESOLVED: effective IDs={len(effective_ids)} not published 17; "
+            "do not open Height"
+        )
+    if len(effective_prefix_counts)!=2 or sorted(effective_prefix_counts.values())!=[8,9]:
+        raise RuntimeError(
+            f"MAPPING_UNRESOLVED: effective prefix counts {effective_prefix_counts} "
+            "are not exactly {9,8}"
+        )
+
+    species_by_prefix={}
+    for p,n in effective_prefix_counts.items():
+        if n==9:
+            species_by_prefix[p]="Hipposideros armiger"
+        elif n==8:
+            species_by_prefix[p]="Hipposideros pratti"
+        else:
+            raise RuntimeError("unexpected effective prefix count")
+    if sorted(species_by_prefix.values())!=sorted(paper_counts):
+        raise RuntimeError("species mapping does not reproduce frozen paper species set")
+
+    id_to_species={}
+    for p,vals in effective_prefix_groups.items():
+        for iid in vals:
+            id_to_species[iid]=species_by_prefix[p]
+
+    # Structurally unusable raw IDs cannot enter validation.
+    d=d[d["id"].isin(effective_ids)].copy()
     d["species"]=d["id"].map(id_to_species)
     if d["species"].isna().any():
-        raise RuntimeError("species mapping missing for retained ID")
+        raise RuntimeError("species mapping missing for source-effective ID")
 
     # Frozen horizontal processing.
     transformer=Transformer.from_crs("EPSG:4326","EPSG:32648",always_xy=True)
@@ -133,13 +159,12 @@ def main():
     d["cell_y"]=(d["northing"]//5000).astype(int)
     d["cell"]=list(zip(d["cell_x"],d["cell_y"]))
 
-    # ---------- >=50-fix nightly gate ----------
-    minfix=50
+    # ---------- >=50-fix nightly repeat gate ----------
     counts_night=(
         d.groupby(["species","id","session_date"],sort=True)
         .size().rename("n").reset_index()
     )
-    qual=counts_night[counts_night["n"]>=minfix].copy()
+    qual=counts_night[counts_night["n"]>=50].copy()
 
     repeat_ids={}
     qualifying_sessions={}
@@ -169,7 +194,7 @@ def main():
     ]
     qd=d.loc[keep].copy()
 
-    # ---------- Exact common-support gate ----------
+    # ---------- Exact 5-km common-support gate ----------
     session_records={}
     sessions_by_species=defaultdict(list)
     sessions_by_ind=defaultdict(list)
@@ -245,7 +270,7 @@ def main():
             training_universe[sp][iid]=qualifying_sessions[sp][iid]
 
     payload={
-        "schema_version":1,
+        "schema_version":2,
         "study_id":"batter-hipposideros-authenticated-preflight-v1",
         "numeric_height_values_read":False,
         "dryad_file_id":FILE_ID,
@@ -254,11 +279,15 @@ def main():
         "raw_sha256":sha,
         "raw_size_bytes":len(raw),
         "rows_total":int(len(df)),
-        "rows_presence_qualified":int(len(d)),
-        "unique_ids":ids,
-        "prefix_counts":prefix_counts,
+        "rows_presence_qualified":int(mask.sum()),
+        "raw_ids":raw_ids,
+        "raw_prefix_counts":raw_prefix_counts,
+        "source_effective_ids":effective_ids,
+        "source_ineffective_ids_zero_ge50_night":ineffective_ids,
+        "effective_prefix_counts":effective_prefix_counts,
         "species_by_prefix":species_by_prefix,
         "species_mapping_resolved":True,
+        "species_mapping_contract":"species_mapping_contract_v2.json",
         "session_rule":session_rule,
         "projection":"EPSG:32648",
         "horizontal_grid_m":5000,
@@ -283,11 +312,13 @@ def main():
         for sp in eligible_species
     }
     receipt={
-        "schema_version":1,
+        "schema_version":2,
         "study_id":"batter-hipposideros-height-opening-receipt-v1",
         "status":"HEIGHT_MAY_OPEN" if primary_may_open else "STOP",
         "raw_sha256":sha,
         "dryad_file_id":FILE_ID,
+        "source_effective_ids":effective_ids,
+        "source_ineffective_ids_zero_ge50_night":ineffective_ids,
         "species_by_prefix":species_by_prefix,
         "eligible_species_panels":eligible_species,
         "estimator_evaluable_ids_by_species":{
@@ -302,6 +333,7 @@ def main():
         "minimum_supported_target_events":50,
         "primary_design":"post_freeze_extensions/hipposideros_external_validation/primary_design_v1.json",
         "primary_design_sha256":hashlib.sha256(PRIMARY_DESIGN.read_bytes()).hexdigest(),
+        "species_mapping_contract":"post_freeze_extensions/hipposideros_external_validation/species_mapping_contract_v2.json",
         "species_mapping_contract_sha256":hashlib.sha256(MAP_CONTRACT.read_bytes()).hexdigest(),
         "numeric_height_values_read":False,
         "next_step":(
@@ -316,12 +348,13 @@ def main():
         "# Hipposideros authenticated outcome-blind preflight v1","",
         "**Numeric height values were not parsed or summarized.**","",
         f"- raw SHA256: `{sha}`",
-        f"- rows: **{len(df)}**",
-        f"- ID prefix counts: **{prefix_counts}**",
+        f"- raw IDs: **{len(raw_ids)}**; prefix counts **{raw_prefix_counts}**",
+        f"- source-effective IDs (>=1 night with >=50 presence-qualified fixes): **{len(effective_ids)}**",
+        f"- ineffective raw IDs with zero >=50-fix nights: **{ineffective_ids}**",
+        f"- effective prefix counts: **{effective_prefix_counts}**",
         f"- species mapping: **{species_by_prefix}**",
         f"- session rule: **{session_rule}**",
-        f"- >=50-fix nights: **{len(qual)}**",
-        f"- repeat IDs by species: **{repeat_ids}**",
+        f"- >=50-fix repeat IDs by species: **{repeat_ids}**",
         f"- estimator-evaluable IDs by species: **{evaluable_ids}**",
         f"- estimator-evaluable individuals total: **{total_evaluable}**",
         f"- eligible species panels (>=3 estimator-evaluable IDs): **{eligible_species}**",
@@ -332,7 +365,10 @@ def main():
     OUT_MD.write_text("\n".join(lines),encoding="utf-8")
     print(json.dumps({
         "raw_sha256":sha,
-        "prefix_counts":prefix_counts,
+        "raw_prefix_counts":raw_prefix_counts,
+        "source_effective_ids":effective_ids,
+        "ineffective_ids":ineffective_ids,
+        "effective_prefix_counts":effective_prefix_counts,
         "species_by_prefix":species_by_prefix,
         "repeat_counts":{k:len(v) for k,v in repeat_ids.items()},
         "evaluable_counts":{k:len(v) for k,v in evaluable_ids.items()},
