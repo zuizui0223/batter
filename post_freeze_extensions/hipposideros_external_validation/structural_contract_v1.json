@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-hipposideros-structural-gate-v1",
+  "frozen_date": "2026-09-30",
+  "status": "prospective structural gate before any numeric height values",
+  "source": {
+    "repository": "Dryad",
+    "doi": "10.5061/dryad.j0zpc86r1",
+    "landing_url": "https://datadryad.org/dataset/doi:10.5061/dryad.j0zpc86r1",
+    "file": "GPS_data.csv",
+    "taxa": ["Hipposideros armiger", "Hipposideros pratti"],
+    "published_tracking_n": {"Hipposideros armiger": 9, "Hipposideros pratti": 8}
+  },
+  "fields_expected": {
+    "individual": "id",
+    "timestamp": "timestamp",
+    "longitude": "longitude",
+    "latitude": "latitude",
+    "vertical_presence_only": "height"
+  },
+  "outcome_blind_rules": {
+    "numeric_height_values_allowed": false,
+    "allowed_height_operation": "presence/nonblank only",
+    "allowed_nonvertical_operations": [
+      "parse timestamp/date",
+      "count rows per individual and night",
+      "count individuals and nights",
+      "inspect ID strings/prefixes",
+      "hash raw file",
+      "inspect column names"
+    ],
+    "forbidden_operations": [
+      "parse height numerically",
+      "summarize height magnitudes",
+      "plot height",
+      "select individuals or species using height"
+    ]
+  },
+  "session_definition": {
+    "rule": "calendar date encoded by source timestamp; each individual x date is one candidate night/session",
+    "rationale": "source paper reports GPS operation during nightly 20:00-06:00 windows and repeated 7-10-night tracking"
+  },
+  "presence_qualified_row": "nonblank id, timestamp, longitude, latitude and height presence; height magnitude remains unread",
+  "structural_gate": {
+    "minimum_presence_qualified_fixes_per_session": 50,
+    "repeat_individual": "at least two >=50-fix nights",
+    "minimum_repeat_individuals_total": 5,
+    "decision": "PASS if at least 5 individuals have at least two >=50-fix nights"
+  },
+  "species_mapping_gate": {
+    "status": "must be resolved outcome-blind before any vertical validation",
+    "rule": "do not pool the two species in one exchangeability cohort unless a separately frozen analysis explicitly models species; preferentially validate within species",
+    "next_step_if_structure_passes": "resolve individual-to-species mapping from source metadata, supplements, or deterministic documented ID convention without numeric height"
+  },
+  "future_validation_boundary": [
+    "Passing this structural gate does not authorize reading numeric height until species mapping and a full vertical estimator contract are frozen.",
+    "Failure may not be rescued by lowering the >=50-fix threshold within this prospective family.",
+    "No height-based subset or alternative session definition may be chosen after this gate."
+  ]
+}
