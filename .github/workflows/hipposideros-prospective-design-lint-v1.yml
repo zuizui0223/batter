@@ -1,0 +1,38 @@
+name: hipposideros-prospective-design-lint-v1
+on:
+  push:
+    branches: [prospective/hipposideros-primary-design-v1]
+    paths:
+      - "post_freeze_extensions/hipposideros_external_validation/**"
+      - ".github/workflows/hipposideros-*v1.yml"
+  workflow_dispatch:
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Parse frozen JSON contracts
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path("post_freeze_extensions/hipposideros_external_validation")
+          for p in [
+              root/"species_mapping_contract_v1.json",
+              root/"primary_design_v1.json",
+          ]:
+              json.loads(p.read_text())
+              print("JSON OK",p)
+          PY
+      - name: Compile prospective scripts
+        run: |
+          python -m py_compile             post_freeze_extensions/hipposideros_external_validation/authenticated_preflight_v1.py             post_freeze_extensions/hipposideros_external_validation/run_primary_v1.py
+      - name: Verify primary workflow is receipt-gated
+        run: |
+          grep -F "height_opening_receipt_v1.json" .github/workflows/hipposideros-primary-validation-v1.yml
+          grep -F "DRYAD_API_TOKEN" .github/workflows/hipposideros-primary-validation-v1.yml
