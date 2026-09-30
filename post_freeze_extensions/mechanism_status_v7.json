@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-post-freeze-mechanism-status-v7",
+  "frozen_submission_unchanged": true,
+  "external_validation": {
+    "taxon": "Nyctalus noctula",
+    "doi": "10.5281/zenodo.7535030",
+    "prospective": true,
+    "source_sha256": "2f373d47706c5b56313de70b623bb5446f5925c69af30f1b145993419e382aa9",
+    "primary_centered_5km": {
+      "n": 36,
+      "calibrated_excess": 0.08600497756886367,
+      "p": 0.0115,
+      "pass": true
+    },
+    "source_HMM_state_5km": {
+      "n": 27,
+      "calibrated_excess": 0.050736765421096244,
+      "p": 0.0707,
+      "pass": false
+    },
+    "state_500m": "structural STOP before Height",
+    "persistence_1d": "structural STOP before Height"
+  },
+  "general_rule_status": "prospectively externally replicated",
+  "mechanistic_generalization_status": "not established; external within-HMM-state test failed frozen threshold",
+  "strongest_general_statement": "Repeatable centered vertical-space organization is a cross-system individual property in bats and now has prospective independent support.",
+  "strongest_mechanism_statement": "No single universal mechanism is established; original systems show persistence beyond broad kinematic mixture, while external Nyctalus does not pass the stronger within-source-HMM-state test.",
+  "live_mechanisms": [
+    "behavioural-state allocation in some systems",
+    "fine route/resource/microhabitat allocation",
+    "unmeasured wing morphology or wing loading",
+    "memory/experience/learned routines",
+    "individual fine-scale environmental reaction norms"
+  ],
+  "programme_status": "CLOSED"
+}
