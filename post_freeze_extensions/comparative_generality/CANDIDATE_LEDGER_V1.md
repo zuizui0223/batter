@@ -87,3 +87,42 @@ This does not authorize:
 - substituting Cambodia for the Thailand panels based on a vertical effect.
 
 If it lacks a native event-level vertical field, it is REJECTED and the current search universe closes.
+
+
+## Subsequent separately frozen small-panel programme
+
+The statements above remain the final outcome of **comparative-generality v1**, whose frozen minimum was >=5 repeat individuals.
+
+After that v1 structural search closed, exactly two independent native-height sources had:
+- numeric vertical values still unopened;
+- exactly **4** repeat individuals under the unchanged >=50-event / >4-h-gap session rule.
+
+Those two sources were admitted **together** to a new programme, `small_panel_generality/contract_v1.json`, before either source's numeric vertical outcome was opened.
+
+The original v1 structural STOPs were not relabeled or deleted.
+
+### Outcome-blind horizontal axis
+
+Before vertical opening:
+
+| source | taxon | horizontal calibrated excess | p_upper |
+|---|---|---:|---:|
+| 10.5441/001/1.kk3bg2f4 | *Myotis vivesi* | -0.12378 | 0.5846 |
+| 10.5441/001/1.5bd6pq55 | *Pteropus poliocephalus* | +3.48659 | 0.0001 |
+
+Both sources then passed the separately frozen four-individual exact common-support gate.
+
+### Prospective vertical outcomes under the new n=4 design
+
+| source | taxon | centered vertical calibrated excess | p_upper | verdict |
+|---|---|---:|---:|---|
+| 10.5441/001/1.kk3bg2f4 | *Myotis vivesi* | +0.00470 | 0.4419 | FAIL |
+| 10.5441/001/1.5bd6pq55 | *Pteropus poliocephalus* | **+0.16873** | **0.0001** | **PASS** |
+
+Therefore:
+- comparative-generality v1 still has **0** opened outcomes under its >=5-individual gate;
+- the later small-panel programme has **2** prospective outcomes;
+- *P. poliocephalus* supplies a successful independent prospective external replication under that separately frozen design;
+- *M. vivesi* supplies a prospective null/FAIL under the same programme.
+
+Do not use the Pteropus PASS to rewrite the earlier v1 structural STOP. The two programmes answer related but distinct design questions.
