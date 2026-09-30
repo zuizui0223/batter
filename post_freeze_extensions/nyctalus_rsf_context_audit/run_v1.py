@@ -137,6 +137,8 @@ def main():
             track_rows=[]
             nearest=[]
             same_count=0
+            bijective_tracks=0
+            unique_match_total=0
             common_tracks=sorted(set(obs["trackid"].astype(str)) & set(used["trackid"].astype(str)))
             for tid in common_tracks:
                 og=obs[obs["trackid"].astype(str)==tid]
@@ -154,17 +156,27 @@ def main():
                 ux2=ux2[goodu]; uy2=uy2[goodu]
                 if len(ox2)==len(ux2):
                     same_count+=1
-                if len(ux2)>0:
-                    for a,b in zip(ox2,oy2):
-                        dd=np.hypot(ux2-a,uy2-b)
-                        nearest.append(float(dd.min()))
-                track_rows.append({"trackid":tid,"observed_n":int(len(ox2)),"used_n":int(len(ux2))})
+                unique_n=0
+                bijective=False
+                if len(ux2)>0 and len(ox2)>0:
+                    D=np.hypot(ox2[:,None]-ux2[None,:],oy2[:,None]-uy2[None,:])
+                    ix=np.argmin(D,axis=1)
+                    mins=D[np.arange(len(ox2)),ix]
+                    nearest.extend([float(x) for x in mins])
+                    unique_n=len(set(int(x) for x in ix))
+                    unique_match_total+=unique_n
+                    bijective=(len(ox2)==len(ux2) and unique_n==len(ox2))
+                    if bijective:
+                        bijective_tracks+=1
+                track_rows.append({"trackid":tid,"observed_n":int(len(ox2)),"used_n":int(len(ux2)),"unique_nearest_used_rows":int(unique_n),"bijective_nearest":bool(bijective)})
             nn=np.asarray(nearest,dtype=float)
             track_linkage={
                 "observed_track_count":int(obs["trackid"].astype(str).nunique()),
                 "used_track_count":int(used["trackid"].astype(str).nunique()),
                 "common_track_count":len(common_tracks),
                 "tracks_with_equal_row_count":int(same_count),
+                "tracks_with_bijective_nearest_mapping":int(bijective_tracks),
+                "unique_nearest_used_row_assignments_total":int(unique_match_total),
                 "nearest_within_track_n":int(len(nn)),
                 "nearest_distance_m_median":float(np.median(nn)) if len(nn) else None,
                 "nearest_distance_m_q95":float(np.quantile(nn,0.95)) if len(nn) else None,
