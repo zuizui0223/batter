@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-desmodus-raw-schema-audit-v1",
+  "frozen_date": "2026-09-30",
+  "status": "outcome-blind inner-XLSX schema audit before any GPS data row is decoded",
+  "archive": {
+    "dryad_file_id": 4910336,
+    "inner_path": "Data and scripts/total22_23_0s.xlsx",
+    "inventory_run": 36721702256,
+    "inventory_decision": "RAW_XLSX_MEMBER_FOUND",
+    "inner_uncompressed_bytes": 2307976,
+    "inner_compressed_bytes": 2203221
+  },
+  "allowed": [
+    "HTTP Range extraction of the exact frozen ZIP member",
+    "record SHA256 of the inner XLSX bytes",
+    "read workbook sheet names",
+    "read only row 1 of each sheet as candidate column headers",
+    "identify column names matching source README semantics for individual, session/time, longitude, latitude and altitude"
+  ],
+  "prohibited": [
+    "read row 2 or later from any sheet",
+    "parse numeric altitude",
+    "summarize coordinates",
+    "count individuals or sessions",
+    "select a different inner file after inspecting data values"
+  ],
+  "decision_rule": "Proceed only if exactly one sheet exposes a coherent event-table header containing an individual/bat-tag identifier, date/time fields, longitude, latitude and altitude. Otherwise stop before GPS data rows are read."
+}
