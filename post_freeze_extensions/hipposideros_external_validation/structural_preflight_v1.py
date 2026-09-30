@@ -55,8 +55,11 @@ def main():
     attempts=[]
     for u in candidates:
         rr=session.get(u,headers=headers,timeout=180,allow_redirects=True)
-        attempts.append({"url":u,"status":rr.status_code,"content_type":rr.headers.get("content-type","")})
-        if rr.status_code==200 and len(rr.content)>1000 and b"," in rr.content[:1000]:
+        ctype=rr.headers.get("content-type","")
+        first_line=rr.content[:4096].decode("utf-8",errors="ignore").splitlines()[0] if rr.content else ""
+        header_ok=all(x in first_line for x in ["id","timestamp","longitude","latitude","height"])
+        attempts.append({"url":u,"status":rr.status_code,"content_type":ctype,"csv_header_ok":header_ok})
+        if rr.status_code==200 and len(rr.content)>1000 and header_ok:
             raw=rr.content
             break
     if raw is None:
