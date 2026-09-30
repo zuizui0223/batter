@@ -16,18 +16,16 @@ with DATA.open(newline="", encoding="utf-8") as fh:
         rows.append(r)
 
 ys = list(range(len(rows), 0, -1))
-fig, ax = plt.subplots(figsize=(8.5, 4.8))
+fig, ax = plt.subplots(figsize=(8.0, 4.8))
 
 for y, r in zip(ys, rows):
     marker = "o" if r["verdict"] == "PASS" else "x"
     ax.scatter(r["calibrated_excess"], y, s=70, marker=marker)
-    ax.text(0.74, y, f"p={r['p_upper']:.4f}, n={r['n']}",
-            transform=ax.get_yaxis_transform(), ha="left", va="center", fontsize=8)
 
 ax.axvline(0, linewidth=1)
 ax.set_yticks(ys)
-ax.set_yticklabels([r["panel"] for r in rows])
-ax.set_xlim(-0.08, 0.72)
+ax.set_yticklabels([f"{r['panel']}  (n={r['n']})" for r in rows])
+ax.set_xlim(-0.08, 0.64)
 ax.set_xlabel("Null-calibrated centered vertical identity excess (nats/fix)")
 ax.set_title("Centered vertical-distribution individuality in the original archive")
 ax.set_ylim(0.5, len(rows) + 0.5)
