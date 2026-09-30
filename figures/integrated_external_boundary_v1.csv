@@ -1,0 +1,6 @@
+order,label,taxon,programme,endpoint,calibrated_excess,p_upper,verdict,n,inferential_class
+1,Nyctalus,*Nyctalus noctula*,first frozen external primary,centered native height,0.0517473745,0.1224,FAIL,27,prospective
+2,Hipposideros,*Hipposideros armiger/pratti*,frozen >=5 source programme,centered native height,-0.0446836135,0.8616,FAIL,13,prospective
+3,Myotis vivesi,*Myotis vivesi*,separate n=4 programme,centered native height,0.00470,0.4419,FAIL,4,prospective
+4,Pteropus MSL,*Pteropus poliocephalus*,separate n=4 programme,centered MSL,0.1687286906,0.0001,PASS,4,prospective
+5,Pteropus MSL-DEM,*Pteropus poliocephalus*,post-outcome frozen terrain audit,centered terrain-relative proxy,0.0323118391,0.0023,PASS,4,diagnostic
