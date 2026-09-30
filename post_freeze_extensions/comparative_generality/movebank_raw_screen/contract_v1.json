@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-movebank-raw-panel-screen-v1",
+  "frozen_date": "2026-09-30",
+  "status": "outcome-blind raw Movebank repository screen before numeric vertical values",
+  "programme": "batter-comparative-generality-program-v1",
+  "candidates": [
+    {
+      "doi": "10.5441/001/1.j25661td",
+      "taxon": "Pteropus lylei",
+      "reason": "raw GPS source underlying Cambodian flying-fox studies; distinct from processed Airflows segments"
+    },
+    {
+      "doi": "10.5441/001/1.n157b4n8",
+      "taxon": "Lavia frons",
+      "reason": "22 GPS-tracked bats in seasonal desert study"
+    },
+    {
+      "doi": "10.5441/001/1.kk3bg2f4",
+      "taxon": "Noctilio leporinus",
+      "reason": "marine fishing bat GPS source"
+    },
+    {
+      "doi": "10.5441/001/1.5bd6pq55",
+      "taxon": "Pteropus poliocephalus",
+      "reason": "urban grey-headed flying-fox GPS source"
+    },
+    {
+      "doi": "10.5441/001/1.297",
+      "taxon": "Noctilio albiventris",
+      "reason": "2024 lesser bulldog bat GPS tracks; 48 wet-season and 23 dry-season tracks reported"
+    },
+    {
+      "doi": "10.5441/001/1.f01815nq",
+      "taxon": "Vespertilio murinus",
+      "reason": "post-hibernation / migration tracking source"
+    },
+    {
+      "doi": "10.5441/001/1.3pk82706",
+      "taxon": "Rhinolophus ferrumequinum",
+      "reason": "greater horseshoe bat tracking source"
+    },
+    {
+      "doi": "10.5441/001/1.15pq1m81",
+      "taxon": "Trachops cirrhosus",
+      "reason": "fringe-lipped bat tracking source"
+    },
+    {
+      "doi": "10.5441/001/1.62h1f7k9",
+      "taxon": "Myotis daubentonii",
+      "reason": "trawling bat movement-coordination source; taxon from source study"
+    },
+    {
+      "doi": "10.5441/001/1.bc72jg61",
+      "taxon": "Carollia spp.",
+      "reason": "bat movement data source returned by frozen Movebank literature search; screen without assuming GPS altitude"
+    }
+  ],
+  "known_opened_or_overlap": [
+    {
+      "doi": "10.5441/001/1.k8n02jn8",
+      "taxon": "Eidolon helvum",
+      "status": "opened original archive"
+    },
+    {
+      "doi": "10.5441/001/1.278",
+      "taxon": "Hypsignathus monstrosus",
+      "status": "opened original archive"
+    },
+    {
+      "doi": "10.5441/001/1.282",
+      "taxon": "Phyllostomus hastatus",
+      "status": "opened original archive"
+    },
+    {
+      "doi": "10.5441/001/1.321",
+      "taxon": "Phyllostomus hastatus",
+      "status": "opened original archive"
+    },
+    {
+      "doi": "10.5441/001/1.322",
+      "taxon": "Phyllostomus hastatus",
+      "status": "opened original archive"
+    },
+    {
+      "doi": "10.5441/001/1.5d736bf0",
+      "taxon": "Nyctalus noctula",
+      "status": "known noctule source family; exclude from new count"
+    },
+    {
+      "doi": "10.5441/001/1.7t4b97qf",
+      "taxon": "Nyctalus noctula",
+      "status": "known noctule source family; exclude from new count"
+    },
+    {
+      "doi": "10.5441/001/1.td71sn54",
+      "taxon": "Tadarida brasiliensis",
+      "status": "previously screened; no native height field"
+    }
+  ],
+  "repository_resolution": {
+    "base": "https://datarepository.movebank.org",
+    "method": "resolve DOI through DSpace PID API; enumerate bitstreams in all bundles"
+  },
+  "gps_file_detection": {
+    "required_header_groups": [
+      [
+        "timestamp"
+      ],
+      [
+        "location_lat",
+        "location_long"
+      ],
+      [
+        "individual_local_identifier",
+        "individual_id"
+      ]
+    ],
+    "native_height_priority": [
+      "height_above_msl",
+      "height_above_ellipsoid",
+      "height_raw",
+      "height",
+      "altitude"
+    ],
+    "rule": "a candidate event CSV must contain timestamp, x-y, individual identity, and at least one native height/altitude field; if multiple event CSVs qualify, retain all and report ambiguity rather than selecting by outcome"
+  },
+  "allowed_reads": [
+    "repository metadata, bundle/file names, checksums and sizes",
+    "CSV header names",
+    "individual IDs",
+    "timestamps",
+    "longitude/latitude",
+    "presence/nonblank status of the selected native height field"
+  ],
+  "forbidden_reads": [
+    "parse numeric height or altitude",
+    "summarize or plot vertical values",
+    "select files, taxa, individuals or thresholds using vertical magnitude",
+    "change >=50-fix session rule after screening"
+  ],
+  "session_screen": {
+    "definition": "within individual, split consecutive presence-qualified events whenever timestamp gap >4 hours",
+    "minimum_presence_qualified_events_per_session": 50,
+    "repeat_individual": "at least two >=50-event sessions",
+    "minimum_repeat_individuals_for_candidate": 5
+  },
+  "screening_outcomes": [
+    "PASS_TO_SOURCE_PREFLIGHT",
+    "NO_NATIVE_HEIGHT_FIELD",
+    "STRUCTURAL_STOP",
+    "AMBIGUOUS_EVENT_FILE",
+    "TRANSPORT_OR_SCHEMA_FAILURE"
+  ],
+  "claim_boundary": [
+    "PASS only admits the source to a separately frozen horizontal/common-support preflight; it does not open vertical outcome.",
+    "NO_NATIVE_HEIGHT_FIELD and STRUCTURAL_STOP remain in the closed-universe ledger.",
+    "No candidate is replaced or thresholds lowered because of failure."
+  ]
+}
