@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import hashlib, io, json, re
 from pathlib import Path
+import numpy as np
 import pandas as pd
 import requests
 
