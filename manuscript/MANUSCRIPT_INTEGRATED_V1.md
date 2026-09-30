@@ -22,7 +22,7 @@
 
 Individual specialization means that a population niche can be a mixture of non-exchangeable individuals rather than a single strategy shared by all members of a population (Bolnick et al. 2003). In movement ecology, this heterogeneity is familiar in home ranges, routes, habitat use and foraging locations. Bats likewise show repeated individual differences in horizontal space use, with the degree of specialization varying among ecological contexts and seasons (Kerches-Rogeri et al. 2020; Wang et al. 2023). Such differences matter because population-level movement surfaces are often interpreted as if they describe an interchangeable representative individual.
 
-Animals also partition space vertically. Repeatable individual differences in dive depth, flight altitude and three-dimensional foraging habitat are already known in seabirds, marine mammals and aerial vertebrates (Woo et al. 2008; Ratcliffe et al. 2013; McIntyre et al. 2017; Dreelin et al. 2018). The novelty problem is therefore not whether vertical individuality exists. It is whether apparent vertical individuality remains when alternative explanations tied to where an animal moves, or how its device measures altitude, are removed.
+Animals also partition space vertically, and vertical gradients can structure terrestrial niches and ecological processes (Gámez & Harris 2022; Xing et al. 2023). Repeatable individual differences in dive depth, flight altitude and three-dimensional foraging habitat are already known in seabirds, marine mammals and aerial vertebrates (Woo et al. 2008; Ratcliffe et al. 2013; McIntyre et al. 2017; Dreelin et al. 2018). The novelty problem is therefore not whether vertical individuality exists. It is whether apparent vertical individuality remains when alternative explanations tied to where an animal moves, or how its device measures altitude, are removed.
 
 Two confounds are especially important. First, horizontal fidelity can generate a repeatable height distribution when animals repeatedly use ridges, valleys, bathymetric patches, commuting corridors or central-place approaches with characteristic vertical opportunity. Ratcliffe et al. (2013), for example, noted that individual dive-depth specialization can arise through repeated use of patches with different water depths. The airborne analogue is direct: terrain and route choice can convert horizontal fidelity into apparent altitude identity. Second, GPS altitude can contain device-specific offsets. If one animal repeatedly carries one tag, a stable altitude zero point can be mistaken for a stable individual mean height. These problems motivate a stricter counterfactual: **when individuals are compared under the same coarse horizontal occupancy, and when additive altitude level is removed, does identity still predict the shape of vertical use?**
 
@@ -291,9 +291,9 @@ The ecological contrast among currently opened systems generates a testable next
 
 ## References
 
-Bolnick, D.I., Svanbäck, R., Fordyce, J.A., Yang, L.H., Davis, J.M., Hulsey, C.D. & Forister, M.L. (2003). The ecology of individuals: Incidence and implications of individual specialization. *The American Naturalist*, **161**, 1–28. https://doi.org/10.1086/343878
+Boardman, W.S.J., Roshier, D., Reardon, T., Burbidge, K., McKeown, A., Westcott, D.A., Caraguel, C.G.B. & Prowse, T.A.A. (2021). Spring foraging movements of an urban population of grey-headed flying foxes (*Pteropus poliocephalus*). *Journal of Urban Ecology*, **7**, juaa034. https://doi.org/10.1093/jue/juaa034
 
-Calderón-Capote, M.C., Dechmann, D.K.N., Fahr, J., Wikelski, M., Kays, R. & O'Mara, M.T. (2020). Foraging movements are density-independent among straw-coloured fruit bats. *Royal Society Open Science*, **7**, 200274. https://doi.org/10.1098/rsos.200274
+Bolnick, D.I., Svanbäck, R., Fordyce, J.A., Yang, L.H., Davis, J.M., Hulsey, C.D. & Forister, M.L. (2003). The ecology of individuals: Incidence and implications of individual specialization. *The American Naturalist*, **161**, 1–28. https://doi.org/10.1086/343878
 
 Calderón-Capote, M.C., van Toor, M.L., O'Mara, M.T., Bayer, T.D., Crofoot, M.C. & Dechmann, D.K.N. (2024). Consistent long-distance foraging flights across years and seasons at colony level in a neotropical bat. *Biology Letters*, **20**, 20240424. https://doi.org/10.1098/rsbl.2024.0424
 
@@ -303,31 +303,31 @@ Fahr, J., Abedi-Lartey, M., Esch, T., Machwitz, M., Suu-Ire, R., Wikelski, M. & 
 
 Gámez, S. & Harris, N.C. (2022). Conceptualizing the 3D niche and vertical space use. *Trends in Ecology & Evolution*, **37**, 953–962. https://doi.org/10.1016/j.tree.2022.06.012
 
+Hurme, E., Gurarie, E., Greif, S., Herrera M., L.G., Flores-Martínez, J.J., Wilkinson, G.S. & Yovel, Y. (2019). Acoustic evaluation of behavioral states predicted from GPS tracking: a case study of a marine fishing bat. *Movement Ecology*, **7**, 21. https://doi.org/10.1186/s40462-019-0163-7
+
 Kerches-Rogeri, P., Niebuhr, B.B., Muylaert, R.L. & Mello, M.A.R. (2020). Individual specialization in the use of space by frugivorous bats. *Journal of Animal Ecology*, **89**, 2584–2595. https://doi.org/10.1111/1365-2656.13339
 
 McIntyre, T., Bester, M.N., Bornemann, H., Tosh, C.A. & de Bruyn, P.J.N. (2017). Slow to change? Individual fidelity to three-dimensional foraging habitats in southern elephant seals, *Mirounga leonina*. *Animal Behaviour*, **127**, 91–99. https://doi.org/10.1016/j.anbehav.2017.03.006
 
-O'Mara, M.T. & Dechmann, D.K.N. (2023). Greater spear-nosed bats commute long distances alone, rest together, but forage apart. *Animal Behaviour*, **204**, 37–48. https://doi.org/10.1016/j.anbehav.2023.08.001
+O'Mara, M.T., Scharf, A.K., Fahr, J., Abedi-Lartey, M., Wikelski, M., Dechmann, D.K.N. & Safi, K. (2019). Overall dynamic body acceleration in straw-colored fruit bats increases in headwinds but not with airspeed. *Frontiers in Ecology and Evolution*, **7**, 200. https://doi.org/10.3389/fevo.2019.00200
 
 O'Mara, M.T., Amorim, F., Scacco, M., McCracken, G.F., Safi, K., Mata, V., Tomé, R., Swartz, S., Wikelski, M., Beja, P., Rebelo, H. & Dechmann, D.K.N. (2021). Bats use topography and nocturnal updrafts to fly high and fast. *Current Biology*, **31**, 1311–1316.e4. https://doi.org/10.1016/j.cub.2020.12.042
 
-O'Mara, M.T., Scharf, A.K., Fahr, J., Abedi-Lartey, M., Wikelski, M., Dechmann, D.K.N. & Safi, K. (2019). Overall dynamic body acceleration in straw-colored fruit bats increases in headwinds but not with airspeed. *Frontiers in Ecology and Evolution*, **7**, 200. https://doi.org/10.3389/fevo.2019.00200
+O'Mara, M.T. & Dechmann, D.K.N. (2023). Greater spear-nosed bats commute long distances alone, rest together, but forage apart. *Animal Behaviour*, **204**, 37–48. https://doi.org/10.1016/j.anbehav.2023.08.001
 
 Ratcliffe, N., Takahashi, A., O'Sullivan, C., Adlard, S., Trathan, P.N., Harris, M.P. & Wanless, S. (2013). The roles of sex, mass and individual specialisation in partitioning foraging-depth niches of a pursuit-diving predator. *PLOS ONE*, **8**, e79107. https://doi.org/10.1371/journal.pone.0079107
 
-Schloesing, E., Caron, A., Chambon, R., Courbin, N., Labadie, M., Nina, R., Mouiti Mbadinga, F., Ngoubili, W., Sandiala, D., N'Kaya Tobi, Bourgarel, M., De Nys, H.M. & Cappelle, J. (2023). Foraging and mating behaviors of *Hypsignathus monstrosus* at the bat-human interface in a central African rainforest. *Ecology and Evolution*, **13**, e10240. https://doi.org/10.1002/ece3.10240\n\nSi, M., Wang, Z., Liu, Y., Song, Y., Gong, L., Zhu, D., Huang, Z., Feng, J. & Jiang, T. (2025). Individual asymmetric competition responses across multidimensional niches may enable coexistence of closely related species. *Functional Ecology*, **39**, 1957–1971. https://doi.org/10.1111/1365-2435.70088
+Reusch, C., Paul, A.A., Fritze, M., Kramer-Schadt, S. & Voigt, C.C. (2023). Wind energy production in forests conflicts with tree-roosting bats. *Current Biology*, **33**, 737–743.e3. https://doi.org/10.1016/j.cub.2022.12.050
+
+Schloesing, E., Caron, A., Chambon, R., Courbin, N., Labadie, M., Nina, R., Mouiti Mbadinga, F., Ngoubili, W., Sandiala, D., N'Kaya Tobi, Bourgarel, M., De Nys, H.M. & Cappelle, J. (2023). Foraging and mating behaviors of *Hypsignathus monstrosus* at the bat-human interface in a central African rainforest. *Ecology and Evolution*, **13**, e10240. https://doi.org/10.1002/ece3.10240
+
+Si, M., Wang, Z., Liu, Y., Song, Y., Gong, L., Zhu, D., Huang, Z., Feng, J. & Jiang, T. (2025). Individual asymmetric competition responses across multidimensional niches may enable coexistence of closely related species. *Functional Ecology*, **39**, 1957–1971. https://doi.org/10.1111/1365-2435.70088
 
 Wang, Z., Gong, L., Huang, Z., Geng, Y., Zhang, W., Si, M., Wu, H., Feng, J. & Jiang, T. (2023). Linking changes in individual specialization and population niche of space use across seasons in the great evening bat (*Ia io*). *Movement Ecology*, **11**, 32. https://doi.org/10.1186/s40462-023-00394-1
 
 Woo, K.J., Elliott, K.H., Davidson, M., Gaston, A.J. & Davoren, G.K. (2008). Individual specialization in diet by a generalist marine predator reflects specialization in foraging behaviour. *Journal of Animal Ecology*, **77**, 1082–1091. https://doi.org/10.1111/j.1365-2656.2008.01429.x
 
 Xing, S., Leahy, L., Ashton, L.A., Kitching, R.L., Bonebrake, T.C. & Scheffers, B.R. (2023). Ecological patterns and processes in the vertical dimension of terrestrial ecosystems. *Journal of Animal Ecology*, **92**, 538–551. https://doi.org/10.1111/1365-2656.13881
-
-Boardman, W.S.J., Roshier, D., Reardon, T., Burbidge, K., McKeown, A., Westcott, D.A., Caraguel, C.G.B. & Prowse, T.A.A. (2021). Spring foraging movements of an urban population of grey-headed flying foxes (*Pteropus poliocephalus*). *Journal of Urban Ecology*, **7**, juaa034. https://doi.org/10.1093/jue/juaa034
-
-Hurme, E., Gurarie, E., Greif, S., Herrera M., L.G., Flores-Martínez, J.J., Wilkinson, G.S. & Yovel, Y. (2019). Acoustic evaluation of behavioral states predicted from GPS tracking: a case study of a marine fishing bat. *Movement Ecology*, **7**, 21. https://doi.org/10.1186/s40462-019-0163-7
-
-Reusch, C., Paul, A.A., Fritze, M., Kramer-Schadt, S. & Voigt, C.C. (2023). Wind energy production in forests conflicts with tree-roosting bats. *Current Biology*, **33**, 737–743.e3. https://doi.org/10.1016/j.cub.2022.12.050
 
 ## Figure legends
 
