@@ -69,8 +69,8 @@ cb = fig.colorbar(im, ax=ax)
 cb.set_label("Null-calibrated centered identity excess (nats/fix)")
 ax.text(
     0.0, -0.18,
-    "NE = structurally non-evaluable under the frozen support gate. "
-    "Cells summarize post-freeze stress tests, not independent confirmation.",
+    "NE = structurally non-evaluable under the pre-specified support requirement. "
+    "Cells summarize secondary stress tests, not independent confirmation.",
     transform=ax.transAxes, ha="left", va="top", fontsize=8
 )
 fig.tight_layout()
