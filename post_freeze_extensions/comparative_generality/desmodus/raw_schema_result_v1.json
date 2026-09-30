@@ -1,0 +1,46 @@
+{
+  "candidate_event_sheets": [
+    "Sheet1"
+  ],
+  "decision": "SCHEMA_PASS",
+  "gps_data_rows_read": false,
+  "inner_sha256": "21c80d1b50992cd8c98588e68962a38ea111960f5dd99066f0222b52887f5a3a",
+  "numeric_altitude_values_read": false,
+  "schema_version": 1,
+  "sheet_headers": {
+    "Sheet1": [
+      "Department",
+      "Local",
+      "Lat1",
+      "Long1",
+      "ID_bat",
+      "Sex",
+      "TAG",
+      "RATE",
+      "DAY",
+      "DAYF",
+      "MONTH",
+      "MONTHF",
+      "YEAR",
+      "HOUR",
+      "UTC-5",
+      "MINUTE",
+      "SECOND",
+      "time",
+      "Period",
+      "SECOND OF THE DAY",
+      "No OF SATELLITES",
+      "LATITUDE",
+      "LONGITUDE",
+      "ALTITUDE",
+      "CLOCK OFFSET",
+      "ACCURACY INDICATOR",
+      "BATTERY LEVEL",
+      "individual",
+      "date",
+      "date_time",
+      "ID"
+    ]
+  },
+  "study_id": "batter-desmodus-raw-schema-audit-v1"
+}
