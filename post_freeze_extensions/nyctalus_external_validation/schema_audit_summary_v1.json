@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-nyctalus-schema-audit-v1",
+  "authoritative_workflow": {
+    "run_id": 36668180916,
+    "head_sha": "deabddf543eb3241a3343d84163bf42ba14c9e12",
+    "artifact_id": 11076596974,
+    "artifact_digest": "sha256:d0d26d62780e7364bf2132abca4ca98e91177d4a922895179b9b662ccaa7e0b3"
+  },
+  "source": {
+    "doi": "10.5281/zenodo.7535030",
+    "file": "Observed_GPS_locations.csv",
+    "sha256": "2f373d47706c5b56313de70b623bb5446f5925c69af30f1b145993419e382aa9"
+  },
+  "rows": 8129,
+  "individuals": 60,
+  "tracks": 107,
+  "height_presence_rows": 8129,
+  "numeric_height_values_read": false,
+  "cohorts": {
+    "2019::one": {
+      "individuals": 11,
+      "tracks": 19
+    },
+    "2019::two": {
+      "individuals": 16,
+      "tracks": 24
+    },
+    "2020::one": {
+      "individuals": 18,
+      "tracks": 33
+    },
+    "2020::two": {
+      "individuals": 15,
+      "tracks": 31
+    }
+  },
+  "move_states": [
+    "ARM",
+    "COM",
+    "undefined"
+  ]
+}
