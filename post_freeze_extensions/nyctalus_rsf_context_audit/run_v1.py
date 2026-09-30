@@ -98,6 +98,35 @@ def main():
                 "values":sorted(vals.unique().tolist())[:20]
             }
 
+    common_cols=sorted(set(obs.columns)&set(rsf.columns))
+    key_audit={}
+    for keys in [["bat_id","trackid","utc"],["id","trackid","utc"],["bat_id","utc"],["id","utc"],["trackid","utc"]]:
+        if all(k in obs.columns and k in rsf.columns for k in keys):
+            o=set(map(tuple,obs[keys].astype(str).itertuples(index=False,name=None)))
+            rr=set(map(tuple,rsf[keys].astype(str).itertuples(index=False,name=None)))
+            key_audit["+".join(keys)]={
+                "observed_unique_keys":len(o),
+                "rsf_unique_keys":len(rr),
+                "observed_keys_found_in_rsf":sum(x in rr for x in o),
+                "fraction":sum(x in rr for x in o)/len(o) if o else None
+            }
+
+    response_counts={}
+    response_used_match=None
+    if "response_rvso" in rsf.columns:
+        response_counts={str(k):int(v) for k,v in rsf["response_rvso"].astype(str).value_counts(dropna=False).items()}
+        used=rsf[rsf["response_rvso"].astype(str)=="1"].copy()
+        ux=pd.to_numeric(used[rx],errors="coerce")
+        uy=pd.to_numeric(used[ry],errors="coerce")
+        um=ux.notna()&uy.notna()
+        uset=set(zip(ux[um].astype(float),uy[um].astype(float)))
+        response_used_match={
+            "used_rows":int(len(used)),
+            "used_numeric_xy_rows":int(um.sum()),
+            "observed_exact_xy_match_rows":int(sum(p in uset for p in obs_pairs)),
+            "observed_exact_xy_match_fraction":float(sum(p in uset for p in obs_pairs)/len(obs_pairs)) if obs_pairs else None
+        }
+
     payload={
         "schema_version":1,
         "study_id":c["study_id"],
@@ -121,6 +150,10 @@ def main():
         },
         "candidate_context_columns":candidate_cols,
         "low_cardinality_fields":low_card,
+        "common_nonvertical_columns":common_cols,
+        "key_linkage_audit":key_audit,
+        "response_rvso_counts":response_counts,
+        "response_used_xy_linkage":response_used_match,
         "claim_boundary":c["claim_boundary"]
     }
     OUT.parent.mkdir(parents=True,exist_ok=True)
@@ -145,6 +178,11 @@ def main():
         "exact_match_fraction":payload["coordinate_linkage"]["exact_match_fraction"],
         "rounded_match_fraction":payload["coordinate_linkage"]["rounded_3dp_match_fraction"],
         "candidate_context_columns":candidate_cols,
+        "rsf_columns":list(rsf.columns),
+        "common_columns":common_cols,
+        "key_linkage_audit":key_audit,
+        "response_counts":response_counts,
+        "response_used_xy_linkage":response_used_match,
         "low_cardinality_fields":low_card
     },sort_keys=True))
     return 0
