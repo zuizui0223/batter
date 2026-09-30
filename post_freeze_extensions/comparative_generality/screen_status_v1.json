@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-comparative-generality-screen-closeout-v1",
+  "vertical_outcomes_opened": 0,
+  "structural_or_schema_candidates": {
+    "leptonycteris": {
+      "status": "STRUCTURAL_STOP",
+      "repeat_n": 0,
+      "vertical_unopened": true
+    },
+    "desmodus": {
+      "status": "STRUCTURAL_STOP",
+      "vertical_unopened": true
+    },
+    "hypsignathus_2022_2023": {
+      "status": "NO_VERTICAL_RESPONSE"
+    },
+    "airflows_five_panels": {
+      "status": "STRUCTURAL_STOP",
+      "passing_panels": 0,
+      "vertical_unopened": true
+    },
+    "pteropus_lylei_cambodia": {
+      "status": "NO_VERTICAL_RESPONSE"
+    },
+    "myotis_vivesi": {
+      "status": "STRUCTURAL_STOP",
+      "repeat_n": 4,
+      "required_repeat_n": 5,
+      "vertical_unopened": true
+    },
+    "pteropus_poliocephalus": {
+      "status": "STRUCTURAL_STOP",
+      "repeat_n": 4,
+      "required_repeat_n": 5,
+      "vertical_unopened": true
+    },
+    "other_movebank_no_height_count": 7
+  },
+  "primary_conclusion": "No genuinely new public source in the frozen v1 search universe reached the >=5-individual vertical-opening gate.",
+  "interpretation": "structural scarcity / data suitability result, not a biological negative result",
+  "separate_programme": "small-panel-generality-v1 was frozen after closure using only nonvertical structure; it does not alter v1 status."
+}
