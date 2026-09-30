@@ -2,9 +2,11 @@
 
 ## Status
 
-Frozen after the v10 external-boundary result and before opening any new vertical outcome in the comparative-generality programme.
+**TRIGGERED — PROGRAMME CLOSED AS STRUCTURAL SCARCITY.**
 
-## Closed search universe
+This rule was frozen after v10 and before any new comparative-source numeric vertical outcome was opened.
+
+## Frozen search universe
 
 Repositories:
 - Dryad
@@ -12,70 +14,73 @@ Repositories:
 - Figshare
 - Movebank Data Repository / public Movebank-derived records
 
-Frozen query families are those in `contract_v1.json`.
+Query families are those frozen in `contract_v1.json`.
 
-The search snapshot is closed after:
-1. every unique dataset returned by those frozen queries has been classified;
-2. duplicates / historical opened sources are marked;
-3. every plausible event-level tracking source has received metadata/schema screening.
+## Endpoint reached
 
-Do **not** add new search terms after seeing a new source's vertical result.
+Every plausible candidate from the frozen search snapshot has reached one of:
 
-## Current candidate classes
+- historical/source-universe overlap;
+- no-native-vertical / wrong-data-type REJECT;
+- outcome-blind STRUCTURAL STOP.
 
-### Historical / already opened
-- original six-panel archive;
-- Nyctalus;
-- Hipposideros.
+No genuinely new source reached the full gate for opening its centered vertical outcome.
 
-They do not count as new prospective sources.
+New-source vertical outcomes opened: **0**.
 
-### New sources screened
-- *Leptonycteris nivalis*: STRUCTURAL STOP before Altitude; 21 IDs but zero >=50-fix sessions.
-- *Desmodus rotundus*: STRUCTURAL STOP before Altitude; no local with >=3 repeat individuals under the frozen >=50-fix session rule.
-- *Hypsignathus monstrosus* Dryad 2022–2023: REJECT; event table documents x/y/time/ID but no raw vertical response.
-- Airflows multispecies Zenodo 10.5281/zenodo.21915776: metadata/schema audit pending.
+## Key structural stops
 
-### Wrong data type / no raw vertical trajectory
-Acoustic, monitoring, UAV-video, publication-only and derived-summary datasets returned by the frozen queries are rejected.
+- *Leptonycteris nivalis*: 0 >=50-fix sessions.
+- *Desmodus rotundus*: no local panel with enough repeat individuals.
+- *Myotis vivesi*: 4 repeat individuals; frozen minimum 5.
+- *Pteropus poliocephalus*: 4 repeat individuals; frozen minimum 5.
+- new Airflows *Pteropus lylei* Thailand panels: 0 >=50-fix nights in the compiled point source.
+
+## Key response-field rejects
+
+No accepted native event-level vertical response:
+- *Hypsignathus monstrosus* 2022–2023 Dryad;
+- *Pteropus lylei* Cambodia;
+- *Lavia frons*;
+- *Noctilio albiventris*;
+- *Vespertilio murinus*;
+- *Rhinolophus ferrumequinum*;
+- *Trachops cirrhosus*;
+- *Myotis daubentonii*;
+- *Carollia* spp.
+
+## Historical overlaps
+
+Already opened sources and exact underlying data universes do not count as new prospective panels.
+
+In particular, the three Airflows *Eidolon helvum* candidates derive from the historical `10.5441/001/1.k8n02jn8` data universe.
 
 ## Fail-closed rule
 
-If no new source passes the frozen source-level structural gate:
-- do not lower the >=50-fix session rule;
-- do not lower the >=50 common-support target rule;
-- do not redefine sessions post hoc;
-- do not use absolute altitude or another vertical endpoint as rescue;
-- do not continue searching with new query terms.
+Because the endpoint condition is met, do not:
+- lower the >=50-fix/event session rule;
+- lower the repeat-individual gate;
+- lower the >=50 common-support target rule;
+- redefine sessions;
+- switch to absolute altitude or another vertical endpoint;
+- open height/altitude from structurally stopped sources;
+- add new search terms to v1.
 
-The comparative programme then reports a **structural scarcity result**: public independent bat tracking sources with adequate repeated-session support for this estimator are rare under the predeclared design.
+## Interpretation
 
-## If Airflows produces candidate panels
+The result is **structural scarcity**, not biological failure.
 
-All candidate study×species panels passing the metadata necessary screen are carried forward, not only the most promising taxon.
+Within the frozen search universe, existing public bat datasets rarely satisfy all requirements needed for a prospective repeated-individual 3-D identity test:
+1. native event-level vertical coordinate;
+2. dense repeated sessions;
+3. enough repeat individuals;
+4. shared horizontal support.
 
-Exact duplicates of already opened sources are excluded from the *new prospective* count but retained in the provenance ledger.
+## Future work
 
-A point-level source may advance only under a separately frozen source/panel preflight before any vertical effect is inspected.
+A lower-density or small-panel estimator may be scientifically worthwhile, but it must begin as a new programme with:
+- a priori reliability criterion;
+- new null/calibration contract;
+- no reuse of v1 structural outcomes to choose a favorable threshold.
 
-## Outcome rule
-
-A new-source FAIL remains in the comparative panel.
-
-A new-source PASS does not reopen failed sources for threshold or endpoint rescue.
-
-## Programme endpoint
-
-The programme ends when either:
-
-1. all frozen-query candidates have reached one of:
-   - prospective vertical result,
-   - structural STOP,
-   - metadata/schema REJECT,
-   - exact historical duplicate;
-
-or
-
-2. at least eight genuinely new, structurally eligible source panels have been prospectively opened, at which point the separately frozen stage-2 cross-source predictor design may begin.
-
-No search expansion is permitted between stages.
+v1 remains closed.
