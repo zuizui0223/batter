@@ -190,7 +190,7 @@ def main():
     print(json.dumps({
         "n":observed["eligible_individuals"],
         "observed":observed["common_cell_marginal"],
-        "null_mean":primary["null_mean"],
+        "null_mean":primary["mean"],
         "calibrated_excess":primary["observed_minus_null_mean"],
         "p_upper":primary["p_null_ge_observed"],
         "pass":passed,
