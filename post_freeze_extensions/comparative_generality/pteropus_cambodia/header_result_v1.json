@@ -1,0 +1,2022 @@
+{
+  "candidate_link_count": 75,
+  "candidate_links": [
+    {
+      "href": "https://datarepository.movebank.org/bitstreams/bfebccea-5324-4490-8a6f-3703831dc653/download",
+      "text": "Foraging movements of Lyle's flying foxes in Cambodia (data from Choden et al. 2019).csv (2.97 MB) : dataset-file"
+    },
+    {
+      "href": "https://datarepository.movebank.org/bitstreams/e5417b00-4f95-4724-9b52-be4b1959c147/download",
+      "text": "README.txt (13.89 KB) : dc_readme"
+    },
+    {
+      "href": "https://datarepository.movebank.org/bitstreams/5f1367ce-d508-4438-8fd5-f12e6d60dd32/download",
+      "text": "Foraging movements of Lyle's flying foxes in Cambodia (data from Choden et al. 2019)-reference-data.csv (3.96 KB) : dataset-file"
+    },
+    {
+      "href": "https://www.movebank.org/cms/movebank-content/archiving-movebank#general_best_practice_tips",
+      "text": ""
+    },
+    {
+      "href": "https://www.movebank.org/cms/movebank-content/data-policy#data_licenses",
+      "text": ""
+    },
+    {
+      "href": "https://www.movebank.org/cms/movebank-content/data-policy",
+      "text": ""
+    },
+    {
+      "href": "https://www.movebank.org/cms/movebank-content/general-movebank-terms-of-use",
+      "text": ""
+    },
+    {
+      "href": "https://www.movebank.org/cms/movebank-content/privacy-policy",
+      "text": ""
+    },
+    {
+      "href": "https://www.movebank.org/cms/movebank-content/permissions-and-sharing#add_data_managers_&_collaborators",
+      "text": ""
+    },
+    {
+      "href": "https://www.movebank.org/cms/movebank-content/create-study-overview",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/core/bitstreamformats",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/core/bitstreams",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/contentreport",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/core/collections/e1ae0743-5f80-4700-b21f-0535a10daee9/bitstreamReadGroup",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/core/bundles/52e3ee8c-0bff-48f3-a6bb-4487b1471d8c/primaryBitstream",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/core/bitstreamformats/1",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/core/bitstreams/bfebccea-5324-4490-8a6f-3703831dc653/format",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/core/bitstreams/5f1367ce-d508-4438-8fd5-f12e6d60dd32/format",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/core/bitstreams/bfebccea-5324-4490-8a6f-3703831dc653",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/core/bitstreams/bfebccea-5324-4490-8a6f-3703831dc653/content",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/core/bitstreams/bfebccea-5324-4490-8a6f-3703831dc653/bundle",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/core/bitstreams/bfebccea-5324-4490-8a6f-3703831dc653/thumbnail",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/core/bitstreamformats/6",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/core/bitstreams/e5417b00-4f95-4724-9b52-be4b1959c147/format",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/core/bitstreams/96b4051c-b315-438f-9d8e-dc508d8015ba/format",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/core/bitstreams/c4f24cf3-f233-468a-a0fa-781c2a311526/format",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/core/bitstreams/e5417b00-4f95-4724-9b52-be4b1959c147",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/core/bitstreams/e5417b00-4f95-4724-9b52-be4b1959c147/content",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/core/bitstreams/e5417b00-4f95-4724-9b52-be4b1959c147/bundle",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/core/bitstreams/e5417b00-4f95-4724-9b52-be4b1959c147/thumbnail",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/core/bitstreams/5f1367ce-d508-4438-8fd5-f12e6d60dd32",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/core/bitstreams/5f1367ce-d508-4438-8fd5-f12e6d60dd32/content",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/core/bitstreams/5f1367ce-d508-4438-8fd5-f12e6d60dd32/bundle",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/core/bitstreams/5f1367ce-d508-4438-8fd5-f12e6d60dd32/thumbnail",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/core/bundles/52e3ee8c-0bff-48f3-a6bb-4487b1471d8c/bitstreams?size=5",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/core/bundles/52e3ee8c-0bff-48f3-a6bb-4487b1471d8c/bitstreams",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/core/bundles/a332cd9e-1455-40ac-aa36-26d93f4077cc/primaryBitstream",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/core/bitstreams/96b4051c-b315-438f-9d8e-dc508d8015ba",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/core/bitstreams/96b4051c-b315-438f-9d8e-dc508d8015ba/content",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/core/bitstreams/96b4051c-b315-438f-9d8e-dc508d8015ba/bundle",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/core/bitstreams/96b4051c-b315-438f-9d8e-dc508d8015ba/thumbnail",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/core/bitstreams/c4f24cf3-f233-468a-a0fa-781c2a311526",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/core/bitstreams/c4f24cf3-f233-468a-a0fa-781c2a311526/content",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/core/bitstreams/c4f24cf3-f233-468a-a0fa-781c2a311526/bundle",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/core/bitstreams/c4f24cf3-f233-468a-a0fa-781c2a311526/thumbnail",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/core/bundles/a332cd9e-1455-40ac-aa36-26d93f4077cc/bitstreams?size=5",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/core/bundles/a332cd9e-1455-40ac-aa36-26d93f4077cc/bitstreams",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/core/bundles/52e3ee8c-0bff-48f3-a6bb-4487b1471d8c/bitstreams?page=0&size=5",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/authz/authorizations/search/object?uri=https://datarepository.movebank.org/server/api/core/bitstreams/e5417b00-4f95-4724-9b52-be4b1959c147&feature=canRequestACopy",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/authz/authorizations/search/object?uri=https://datarepository.movebank.org/server/api/core/bitstreams/bfebccea-5324-4490-8a6f-3703831dc653&feature=canRequestACopy",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/authz/features/canDownload",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/authz/authorizations/canDownload_core.bitstream_5f1367ce-d508-4438-8fd5-f12e6d60dd32/feature",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/authz/authorizations/canDownload_core.bitstream_e5417b00-4f95-4724-9b52-be4b1959c147/feature",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/authz/authorizations/canDownload_core.bitstream_bfebccea-5324-4490-8a6f-3703831dc653/feature",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/authz/authorizations/canDownload_core.bitstream_5f1367ce-d508-4438-8fd5-f12e6d60dd32",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/authz/authorizations/canDownload_core.bitstream_5f1367ce-d508-4438-8fd5-f12e6d60dd32/eperson",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/authz/authorizations/canDownload_core.bitstream_5f1367ce-d508-4438-8fd5-f12e6d60dd32/object",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/authz/authorizations/search/object?uri=https://datarepository.movebank.org/server/api/core/bitstreams/5f1367ce-d508-4438-8fd5-f12e6d60dd32&feature=canDownload",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/authz/authorizations/canDownload_core.bitstream_e5417b00-4f95-4724-9b52-be4b1959c147",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/authz/authorizations/canDownload_core.bitstream_e5417b00-4f95-4724-9b52-be4b1959c147/eperson",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/authz/authorizations/canDownload_core.bitstream_e5417b00-4f95-4724-9b52-be4b1959c147/object",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/authz/authorizations/search/object?uri=https://datarepository.movebank.org/server/api/core/bitstreams/e5417b00-4f95-4724-9b52-be4b1959c147&feature=canDownload",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/authz/authorizations/search/object?uri=https://datarepository.movebank.org/server/api/core/bitstreams/5f1367ce-d508-4438-8fd5-f12e6d60dd32&feature=canRequestACopy",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/authz/authorizations/canDownload_core.bitstream_bfebccea-5324-4490-8a6f-3703831dc653",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/authz/authorizations/canDownload_core.bitstream_bfebccea-5324-4490-8a6f-3703831dc653/eperson",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/authz/authorizations/canDownload_core.bitstream_bfebccea-5324-4490-8a6f-3703831dc653/object",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/authz/authorizations/search/object?uri=https://datarepository.movebank.org/server/api/core/bitstreams/bfebccea-5324-4490-8a6f-3703831dc653&feature=canDownload",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/core/items/e3343be6-d586-4c65-8b0a-cd2a063f24c9/bundles?embed=primaryBitstream&embed.size=bitstreams=5&embed=bitstreams%2Fformat",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/core/items/e3343be6-d586-4c65-8b0a-cd2a063f24c9/bundles?size=9999&embed=primaryBitstream",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/authz/authorizations/search/object?uri=https://datarepository.movebank.org/server/api/core/bitstreams/bfebccea-5324-4490-8a6f-3703831dc653&feature=canDownload&embed=feature",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/authz/authorizations/search/object?uri=https://datarepository.movebank.org/server/api/core/bitstreams/e5417b00-4f95-4724-9b52-be4b1959c147&feature=canDownload&embed=feature",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/authz/authorizations/search/object?uri=https://datarepository.movebank.org/server/api/core/bitstreams/5f1367ce-d508-4438-8fd5-f12e6d60dd32&feature=canDownload&embed=feature",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/authz/authorizations/search/object?uri=https://datarepository.movebank.org/server/api/core/bitstreams/bfebccea-5324-4490-8a6f-3703831dc653&feature=canRequestACopy&embed=feature",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/authz/authorizations/search/object?uri=https://datarepository.movebank.org/server/api/core/bitstreams/e5417b00-4f95-4724-9b52-be4b1959c147&feature=canRequestACopy&embed=feature",
+      "text": ""
+    },
+    {
+      "href": "https://datarepository.movebank.org/server/api/authz/authorizations/search/object?uri=https://datarepository.movebank.org/server/api/core/bitstreams/5f1367ce-d508-4438-8fd5-f12e6d60dd32&feature=canRequestACopy&embed=feature",
+      "text": ""
+    }
+  ],
+  "claim_boundary": [
+    "This Cambodia dataset is distinct from the Airflows Thailand 2012 Pteropus panels.",
+    "Header PASS does not imply structural eligibility under the >=50-fix rule.",
+    "Header FAIL closes this provenance follow-up; do not add new search terms inside comparative-generality v1."
+  ],
+  "decision": "REJECT_NO_VERTICAL_RESPONSE",
+  "direct_header_results": [
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [
+            "individual-local-identifier",
+            "individual-local-identifier",
+            "tag-local-identifier"
+          ],
+          "latitude": [
+            "location-lat",
+            "location-lat"
+          ],
+          "longitude": [
+            "location-long",
+            "location-long"
+          ],
+          "timestamp": [
+            "timestamp"
+          ]
+        },
+        "event_header": true,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/octet-stream;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/core/bitstreams/bfebccea-5324-4490-8a6f-3703831dc653/content",
+      "header": [
+        "event-id",
+        "visible",
+        "timestamp",
+        "location-long",
+        "location-lat",
+        "external-temperature",
+        "gps:fix-type-raw",
+        "gps:hdop",
+        "gps:satellite-count",
+        "gps-time-to-fix",
+        "gps:vdop",
+        "habitat",
+        "tag-voltage",
+        "sensor-type",
+        "individual-taxon-canonical-name",
+        "tag-local-identifier",
+        "individual-local-identifier",
+        "study-name"
+      ],
+      "status": 206,
+      "text_hint": "Foraging movements of Lyle's flying foxes in Cambodia (data from Choden et al. 2019).csv (2.97 MB) : dataset-file",
+      "url": "https://datarepository.movebank.org/bitstreams/bfebccea-5324-4490-8a6f-3703831dc653/download"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "text/plain;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/core/bitstreams/e5417b00-4f95-4724-9b52-be4b1959c147/content",
+      "header": [
+        "README"
+      ],
+      "status": 206,
+      "text_hint": "README.txt (13.89 KB) : dc_readme",
+      "url": "https://datarepository.movebank.org/bitstreams/e5417b00-4f95-4724-9b52-be4b1959c147/download"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/octet-stream;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/core/bitstreams/5f1367ce-d508-4438-8fd5-f12e6d60dd32/content",
+      "header": [
+        "tag-id",
+        "animal-id",
+        "animal-taxon",
+        "deploy-on-date",
+        "deploy-off-date",
+        "animal-comments",
+        "animal-life-stage",
+        "animal-mass",
+        "animal-reproductive-condition",
+        "animal-sex",
+        "attachment-type",
+        "deploy-on-latitude",
+        "deploy-on-longitude",
+        "deployment-id",
+        "duty-cycle",
+        "manipulation-type",
+        "study-site",
+        "tag-manufacturer-name",
+        "tag-mass",
+        "tag-model",
+        "tag-readout-method"
+      ],
+      "status": 206,
+      "text_hint": "Foraging movements of Lyle's flying foxes in Cambodia (data from Choden et al. 2019)-reference-data.csv (3.96 KB) : dataset-file",
+      "url": "https://datarepository.movebank.org/bitstreams/5f1367ce-d508-4438-8fd5-f12e6d60dd32/download"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "text/html;charset=UTF-8",
+      "final_url": "https://www.movebank.org/cms/movebank-content/archiving-movebank#general_best_practice_tips",
+      "header": [
+        "<!doctype html>"
+      ],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://www.movebank.org/cms/movebank-content/archiving-movebank#general_best_practice_tips"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "text/html;charset=UTF-8",
+      "final_url": "https://www.movebank.org/cms/movebank-content/data-policy#data_licenses",
+      "header": [
+        "<!doctype html>"
+      ],
+      "status": 200,
+      "text_hint": "",
+      "url": "https://www.movebank.org/cms/movebank-content/data-policy#data_licenses"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "text/html;charset=UTF-8",
+      "final_url": "https://www.movebank.org/cms/movebank-content/data-policy",
+      "header": [
+        "<!doctype html>"
+      ],
+      "status": 200,
+      "text_hint": "",
+      "url": "https://www.movebank.org/cms/movebank-content/data-policy"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "text/html;charset=UTF-8",
+      "final_url": "https://www.movebank.org/cms/movebank-content/general-movebank-terms-of-use",
+      "header": [
+        "<!doctype html>"
+      ],
+      "status": 200,
+      "text_hint": "",
+      "url": "https://www.movebank.org/cms/movebank-content/general-movebank-terms-of-use"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "text/html;charset=UTF-8",
+      "final_url": "https://www.movebank.org/cms/movebank-content/privacy-policy",
+      "header": [
+        "<!doctype html>"
+      ],
+      "status": 200,
+      "text_hint": "",
+      "url": "https://www.movebank.org/cms/movebank-content/privacy-policy"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "text/html;charset=UTF-8",
+      "final_url": "https://www.movebank.org/cms/movebank-content/permissions-and-sharing#add_data_managers_&_collaborators",
+      "header": [
+        "<!doctype html>"
+      ],
+      "status": 200,
+      "text_hint": "",
+      "url": "https://www.movebank.org/cms/movebank-content/permissions-and-sharing#add_data_managers_&_collaborators"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "text/html;charset=UTF-8",
+      "final_url": "https://www.movebank.org/cms/movebank-content/create-study-overview",
+      "header": [
+        "<!doctype html>"
+      ],
+      "status": 200,
+      "text_hint": "",
+      "url": "https://www.movebank.org/cms/movebank-content/create-study-overview"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/hal+json;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/core/bitstreamformats",
+      "header": [
+        "{"
+      ],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/core/bitstreamformats"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/json;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/core/bitstreams",
+      "header": [],
+      "status": 401,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/core/bitstreams"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/hal+json;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/contentreport",
+      "header": [
+        "{"
+      ],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/contentreport"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/json;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/core/collections/e1ae0743-5f80-4700-b21f-0535a10daee9/bitstreamReadGroup",
+      "header": [],
+      "status": 401,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/core/collections/e1ae0743-5f80-4700-b21f-0535a10daee9/bitstreamReadGroup"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "",
+      "final_url": "https://datarepository.movebank.org/server/api/core/bundles/52e3ee8c-0bff-48f3-a6bb-4487b1471d8c/primaryBitstream",
+      "header": [],
+      "status": 204,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/core/bundles/52e3ee8c-0bff-48f3-a6bb-4487b1471d8c/primaryBitstream"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/hal+json;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/core/bitstreamformats/1",
+      "header": [
+        "{"
+      ],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/core/bitstreamformats/1"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/hal+json;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/core/bitstreams/bfebccea-5324-4490-8a6f-3703831dc653/format",
+      "header": [
+        "{"
+      ],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/core/bitstreams/bfebccea-5324-4490-8a6f-3703831dc653/format"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/hal+json;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/core/bitstreams/5f1367ce-d508-4438-8fd5-f12e6d60dd32/format",
+      "header": [
+        "{"
+      ],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/core/bitstreams/5f1367ce-d508-4438-8fd5-f12e6d60dd32/format"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/hal+json;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/core/bitstreams/bfebccea-5324-4490-8a6f-3703831dc653",
+      "header": [
+        "{"
+      ],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/core/bitstreams/bfebccea-5324-4490-8a6f-3703831dc653"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [
+            "individual-local-identifier",
+            "individual-local-identifier",
+            "tag-local-identifier"
+          ],
+          "latitude": [
+            "location-lat",
+            "location-lat"
+          ],
+          "longitude": [
+            "location-long",
+            "location-long"
+          ],
+          "timestamp": [
+            "timestamp"
+          ]
+        },
+        "event_header": true,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/octet-stream;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/core/bitstreams/bfebccea-5324-4490-8a6f-3703831dc653/content",
+      "header": [
+        "event-id",
+        "visible",
+        "timestamp",
+        "location-long",
+        "location-lat",
+        "external-temperature",
+        "gps:fix-type-raw",
+        "gps:hdop",
+        "gps:satellite-count",
+        "gps-time-to-fix",
+        "gps:vdop",
+        "habitat",
+        "tag-voltage",
+        "sensor-type",
+        "individual-taxon-canonical-name",
+        "tag-local-identifier",
+        "individual-local-identifier",
+        "study-name"
+      ],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/core/bitstreams/bfebccea-5324-4490-8a6f-3703831dc653/content"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/hal+json;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/core/bitstreams/bfebccea-5324-4490-8a6f-3703831dc653/bundle",
+      "header": [
+        "{"
+      ],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/core/bitstreams/bfebccea-5324-4490-8a6f-3703831dc653/bundle"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "",
+      "final_url": "https://datarepository.movebank.org/server/api/core/bitstreams/bfebccea-5324-4490-8a6f-3703831dc653/thumbnail",
+      "header": [],
+      "status": 204,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/core/bitstreams/bfebccea-5324-4490-8a6f-3703831dc653/thumbnail"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/hal+json;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/core/bitstreamformats/6",
+      "header": [
+        "{"
+      ],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/core/bitstreamformats/6"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/hal+json;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/core/bitstreams/e5417b00-4f95-4724-9b52-be4b1959c147/format",
+      "header": [
+        "{"
+      ],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/core/bitstreams/e5417b00-4f95-4724-9b52-be4b1959c147/format"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/hal+json;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/core/bitstreams/96b4051c-b315-438f-9d8e-dc508d8015ba/format",
+      "header": [
+        "{"
+      ],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/core/bitstreams/96b4051c-b315-438f-9d8e-dc508d8015ba/format"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/hal+json;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/core/bitstreams/c4f24cf3-f233-468a-a0fa-781c2a311526/format",
+      "header": [
+        "{"
+      ],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/core/bitstreams/c4f24cf3-f233-468a-a0fa-781c2a311526/format"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/hal+json;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/core/bitstreams/e5417b00-4f95-4724-9b52-be4b1959c147",
+      "header": [
+        "{"
+      ],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/core/bitstreams/e5417b00-4f95-4724-9b52-be4b1959c147"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "text/plain;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/core/bitstreams/e5417b00-4f95-4724-9b52-be4b1959c147/content",
+      "header": [
+        "README"
+      ],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/core/bitstreams/e5417b00-4f95-4724-9b52-be4b1959c147/content"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/hal+json;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/core/bitstreams/e5417b00-4f95-4724-9b52-be4b1959c147/bundle",
+      "header": [
+        "{"
+      ],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/core/bitstreams/e5417b00-4f95-4724-9b52-be4b1959c147/bundle"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "",
+      "final_url": "https://datarepository.movebank.org/server/api/core/bitstreams/e5417b00-4f95-4724-9b52-be4b1959c147/thumbnail",
+      "header": [],
+      "status": 204,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/core/bitstreams/e5417b00-4f95-4724-9b52-be4b1959c147/thumbnail"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/hal+json;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/core/bitstreams/5f1367ce-d508-4438-8fd5-f12e6d60dd32",
+      "header": [
+        "{"
+      ],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/core/bitstreams/5f1367ce-d508-4438-8fd5-f12e6d60dd32"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/octet-stream;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/core/bitstreams/5f1367ce-d508-4438-8fd5-f12e6d60dd32/content",
+      "header": [
+        "tag-id",
+        "animal-id",
+        "animal-taxon",
+        "deploy-on-date",
+        "deploy-off-date",
+        "animal-comments",
+        "animal-life-stage",
+        "animal-mass",
+        "animal-reproductive-condition",
+        "animal-sex",
+        "attachment-type",
+        "deploy-on-latitude",
+        "deploy-on-longitude",
+        "deployment-id",
+        "duty-cycle",
+        "manipulation-type",
+        "study-site",
+        "tag-manufacturer-name",
+        "tag-mass",
+        "tag-model",
+        "tag-readout-method"
+      ],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/core/bitstreams/5f1367ce-d508-4438-8fd5-f12e6d60dd32/content"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/hal+json;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/core/bitstreams/5f1367ce-d508-4438-8fd5-f12e6d60dd32/bundle",
+      "header": [
+        "{"
+      ],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/core/bitstreams/5f1367ce-d508-4438-8fd5-f12e6d60dd32/bundle"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "",
+      "final_url": "https://datarepository.movebank.org/server/api/core/bitstreams/5f1367ce-d508-4438-8fd5-f12e6d60dd32/thumbnail",
+      "header": [],
+      "status": 204,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/core/bitstreams/5f1367ce-d508-4438-8fd5-f12e6d60dd32/thumbnail"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/hal+json;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/core/bundles/52e3ee8c-0bff-48f3-a6bb-4487b1471d8c/bitstreams?size=5",
+      "header": [
+        "{"
+      ],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/core/bundles/52e3ee8c-0bff-48f3-a6bb-4487b1471d8c/bitstreams?size=5"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/hal+json;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/core/bundles/52e3ee8c-0bff-48f3-a6bb-4487b1471d8c/bitstreams",
+      "header": [
+        "{"
+      ],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/core/bundles/52e3ee8c-0bff-48f3-a6bb-4487b1471d8c/bitstreams"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "",
+      "final_url": "https://datarepository.movebank.org/server/api/core/bundles/a332cd9e-1455-40ac-aa36-26d93f4077cc/primaryBitstream",
+      "header": [],
+      "status": 204,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/core/bundles/a332cd9e-1455-40ac-aa36-26d93f4077cc/primaryBitstream"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/hal+json;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/core/bitstreams/96b4051c-b315-438f-9d8e-dc508d8015ba",
+      "header": [
+        "{"
+      ],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/core/bitstreams/96b4051c-b315-438f-9d8e-dc508d8015ba"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "text/plain;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/core/bitstreams/96b4051c-b315-438f-9d8e-dc508d8015ba/content",
+      "header": [],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/core/bitstreams/96b4051c-b315-438f-9d8e-dc508d8015ba/content"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/hal+json;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/core/bitstreams/96b4051c-b315-438f-9d8e-dc508d8015ba/bundle",
+      "header": [
+        "{"
+      ],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/core/bitstreams/96b4051c-b315-438f-9d8e-dc508d8015ba/bundle"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "",
+      "final_url": "https://datarepository.movebank.org/server/api/core/bitstreams/96b4051c-b315-438f-9d8e-dc508d8015ba/thumbnail",
+      "header": [],
+      "status": 204,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/core/bitstreams/96b4051c-b315-438f-9d8e-dc508d8015ba/thumbnail"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/hal+json;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/core/bitstreams/c4f24cf3-f233-468a-a0fa-781c2a311526",
+      "header": [
+        "{"
+      ],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/core/bitstreams/c4f24cf3-f233-468a-a0fa-781c2a311526"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "text/plain;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/core/bitstreams/c4f24cf3-f233-468a-a0fa-781c2a311526/content",
+      "header": [
+        "README"
+      ],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/core/bitstreams/c4f24cf3-f233-468a-a0fa-781c2a311526/content"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/hal+json;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/core/bitstreams/c4f24cf3-f233-468a-a0fa-781c2a311526/bundle",
+      "header": [
+        "{"
+      ],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/core/bitstreams/c4f24cf3-f233-468a-a0fa-781c2a311526/bundle"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "",
+      "final_url": "https://datarepository.movebank.org/server/api/core/bitstreams/c4f24cf3-f233-468a-a0fa-781c2a311526/thumbnail",
+      "header": [],
+      "status": 204,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/core/bitstreams/c4f24cf3-f233-468a-a0fa-781c2a311526/thumbnail"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/hal+json;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/core/bundles/a332cd9e-1455-40ac-aa36-26d93f4077cc/bitstreams?size=5",
+      "header": [
+        "{"
+      ],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/core/bundles/a332cd9e-1455-40ac-aa36-26d93f4077cc/bitstreams?size=5"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/hal+json;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/core/bundles/a332cd9e-1455-40ac-aa36-26d93f4077cc/bitstreams",
+      "header": [
+        "{"
+      ],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/core/bundles/a332cd9e-1455-40ac-aa36-26d93f4077cc/bitstreams"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/hal+json;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/core/bundles/52e3ee8c-0bff-48f3-a6bb-4487b1471d8c/bitstreams?page=0&size=5",
+      "header": [
+        "{"
+      ],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/core/bundles/52e3ee8c-0bff-48f3-a6bb-4487b1471d8c/bitstreams?page=0&size=5"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/hal+json;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/authz/authorizations/search/object?uri=https://datarepository.movebank.org/server/api/core/bitstreams/e5417b00-4f95-4724-9b52-be4b1959c147&feature=canRequestACopy",
+      "header": [
+        "{"
+      ],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/authz/authorizations/search/object?uri=https://datarepository.movebank.org/server/api/core/bitstreams/e5417b00-4f95-4724-9b52-be4b1959c147&feature=canRequestACopy"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/hal+json;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/authz/authorizations/search/object?uri=https://datarepository.movebank.org/server/api/core/bitstreams/bfebccea-5324-4490-8a6f-3703831dc653&feature=canRequestACopy",
+      "header": [
+        "{"
+      ],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/authz/authorizations/search/object?uri=https://datarepository.movebank.org/server/api/core/bitstreams/bfebccea-5324-4490-8a6f-3703831dc653&feature=canRequestACopy"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/hal+json;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/authz/features/canDownload",
+      "header": [
+        "{"
+      ],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/authz/features/canDownload"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/hal+json;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/authz/authorizations/canDownload_core.bitstream_5f1367ce-d508-4438-8fd5-f12e6d60dd32/feature",
+      "header": [
+        "{"
+      ],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/authz/authorizations/canDownload_core.bitstream_5f1367ce-d508-4438-8fd5-f12e6d60dd32/feature"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/hal+json;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/authz/authorizations/canDownload_core.bitstream_e5417b00-4f95-4724-9b52-be4b1959c147/feature",
+      "header": [
+        "{"
+      ],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/authz/authorizations/canDownload_core.bitstream_e5417b00-4f95-4724-9b52-be4b1959c147/feature"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/hal+json;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/authz/authorizations/canDownload_core.bitstream_bfebccea-5324-4490-8a6f-3703831dc653/feature",
+      "header": [
+        "{"
+      ],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/authz/authorizations/canDownload_core.bitstream_bfebccea-5324-4490-8a6f-3703831dc653/feature"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/hal+json;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/authz/authorizations/canDownload_core.bitstream_5f1367ce-d508-4438-8fd5-f12e6d60dd32",
+      "header": [
+        "{"
+      ],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/authz/authorizations/canDownload_core.bitstream_5f1367ce-d508-4438-8fd5-f12e6d60dd32"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "",
+      "final_url": "https://datarepository.movebank.org/server/api/authz/authorizations/canDownload_core.bitstream_5f1367ce-d508-4438-8fd5-f12e6d60dd32/eperson",
+      "header": [],
+      "status": 204,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/authz/authorizations/canDownload_core.bitstream_5f1367ce-d508-4438-8fd5-f12e6d60dd32/eperson"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/hal+json;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/authz/authorizations/canDownload_core.bitstream_5f1367ce-d508-4438-8fd5-f12e6d60dd32/object",
+      "header": [
+        "{"
+      ],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/authz/authorizations/canDownload_core.bitstream_5f1367ce-d508-4438-8fd5-f12e6d60dd32/object"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/hal+json;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/authz/authorizations/search/object?uri=https://datarepository.movebank.org/server/api/core/bitstreams/5f1367ce-d508-4438-8fd5-f12e6d60dd32&feature=canDownload",
+      "header": [
+        "{"
+      ],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/authz/authorizations/search/object?uri=https://datarepository.movebank.org/server/api/core/bitstreams/5f1367ce-d508-4438-8fd5-f12e6d60dd32&feature=canDownload"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/hal+json;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/authz/authorizations/canDownload_core.bitstream_e5417b00-4f95-4724-9b52-be4b1959c147",
+      "header": [
+        "{"
+      ],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/authz/authorizations/canDownload_core.bitstream_e5417b00-4f95-4724-9b52-be4b1959c147"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "",
+      "final_url": "https://datarepository.movebank.org/server/api/authz/authorizations/canDownload_core.bitstream_e5417b00-4f95-4724-9b52-be4b1959c147/eperson",
+      "header": [],
+      "status": 204,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/authz/authorizations/canDownload_core.bitstream_e5417b00-4f95-4724-9b52-be4b1959c147/eperson"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/hal+json;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/authz/authorizations/canDownload_core.bitstream_e5417b00-4f95-4724-9b52-be4b1959c147/object",
+      "header": [
+        "{"
+      ],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/authz/authorizations/canDownload_core.bitstream_e5417b00-4f95-4724-9b52-be4b1959c147/object"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/hal+json;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/authz/authorizations/search/object?uri=https://datarepository.movebank.org/server/api/core/bitstreams/e5417b00-4f95-4724-9b52-be4b1959c147&feature=canDownload",
+      "header": [
+        "{"
+      ],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/authz/authorizations/search/object?uri=https://datarepository.movebank.org/server/api/core/bitstreams/e5417b00-4f95-4724-9b52-be4b1959c147&feature=canDownload"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/hal+json;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/authz/authorizations/search/object?uri=https://datarepository.movebank.org/server/api/core/bitstreams/5f1367ce-d508-4438-8fd5-f12e6d60dd32&feature=canRequestACopy",
+      "header": [
+        "{"
+      ],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/authz/authorizations/search/object?uri=https://datarepository.movebank.org/server/api/core/bitstreams/5f1367ce-d508-4438-8fd5-f12e6d60dd32&feature=canRequestACopy"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/hal+json;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/authz/authorizations/canDownload_core.bitstream_bfebccea-5324-4490-8a6f-3703831dc653",
+      "header": [
+        "{"
+      ],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/authz/authorizations/canDownload_core.bitstream_bfebccea-5324-4490-8a6f-3703831dc653"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "",
+      "final_url": "https://datarepository.movebank.org/server/api/authz/authorizations/canDownload_core.bitstream_bfebccea-5324-4490-8a6f-3703831dc653/eperson",
+      "header": [],
+      "status": 204,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/authz/authorizations/canDownload_core.bitstream_bfebccea-5324-4490-8a6f-3703831dc653/eperson"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/hal+json;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/authz/authorizations/canDownload_core.bitstream_bfebccea-5324-4490-8a6f-3703831dc653/object",
+      "header": [
+        "{"
+      ],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/authz/authorizations/canDownload_core.bitstream_bfebccea-5324-4490-8a6f-3703831dc653/object"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/hal+json;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/authz/authorizations/search/object?uri=https://datarepository.movebank.org/server/api/core/bitstreams/bfebccea-5324-4490-8a6f-3703831dc653&feature=canDownload",
+      "header": [
+        "{"
+      ],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/authz/authorizations/search/object?uri=https://datarepository.movebank.org/server/api/core/bitstreams/bfebccea-5324-4490-8a6f-3703831dc653&feature=canDownload"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/json;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/core/items/e3343be6-d586-4c65-8b0a-cd2a063f24c9/bundles?embed=primaryBitstream&embed.size=bitstreams=5&embed=bitstreams%2Fformat",
+      "header": [
+        "{"
+      ],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/core/items/e3343be6-d586-4c65-8b0a-cd2a063f24c9/bundles?embed=primaryBitstream&embed.size=bitstreams=5&embed=bitstreams%2Fformat"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/json;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/core/items/e3343be6-d586-4c65-8b0a-cd2a063f24c9/bundles?size=9999&embed=primaryBitstream",
+      "header": [
+        "{"
+      ],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/core/items/e3343be6-d586-4c65-8b0a-cd2a063f24c9/bundles?size=9999&embed=primaryBitstream"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/json;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/authz/authorizations/search/object?uri=https://datarepository.movebank.org/server/api/core/bitstreams/bfebccea-5324-4490-8a6f-3703831dc653&feature=canDownload&embed=feature",
+      "header": [
+        "{"
+      ],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/authz/authorizations/search/object?uri=https://datarepository.movebank.org/server/api/core/bitstreams/bfebccea-5324-4490-8a6f-3703831dc653&feature=canDownload&embed=feature"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/json;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/authz/authorizations/search/object?uri=https://datarepository.movebank.org/server/api/core/bitstreams/e5417b00-4f95-4724-9b52-be4b1959c147&feature=canDownload&embed=feature",
+      "header": [
+        "{"
+      ],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/authz/authorizations/search/object?uri=https://datarepository.movebank.org/server/api/core/bitstreams/e5417b00-4f95-4724-9b52-be4b1959c147&feature=canDownload&embed=feature"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/json;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/authz/authorizations/search/object?uri=https://datarepository.movebank.org/server/api/core/bitstreams/5f1367ce-d508-4438-8fd5-f12e6d60dd32&feature=canDownload&embed=feature",
+      "header": [
+        "{"
+      ],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/authz/authorizations/search/object?uri=https://datarepository.movebank.org/server/api/core/bitstreams/5f1367ce-d508-4438-8fd5-f12e6d60dd32&feature=canDownload&embed=feature"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/json;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/authz/authorizations/search/object?uri=https://datarepository.movebank.org/server/api/core/bitstreams/bfebccea-5324-4490-8a6f-3703831dc653&feature=canRequestACopy&embed=feature",
+      "header": [
+        "{"
+      ],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/authz/authorizations/search/object?uri=https://datarepository.movebank.org/server/api/core/bitstreams/bfebccea-5324-4490-8a6f-3703831dc653&feature=canRequestACopy&embed=feature"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/json;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/authz/authorizations/search/object?uri=https://datarepository.movebank.org/server/api/core/bitstreams/e5417b00-4f95-4724-9b52-be4b1959c147&feature=canRequestACopy&embed=feature",
+      "header": [
+        "{"
+      ],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/authz/authorizations/search/object?uri=https://datarepository.movebank.org/server/api/core/bitstreams/e5417b00-4f95-4724-9b52-be4b1959c147&feature=canRequestACopy&embed=feature"
+    },
+    {
+      "classification": {
+        "event_groups": {
+          "individual": [],
+          "latitude": [],
+          "longitude": [],
+          "timestamp": []
+        },
+        "event_header": false,
+        "pass_header": false,
+        "vertical_matches": []
+      },
+      "content_type": "application/json;charset=UTF-8",
+      "final_url": "https://datarepository.movebank.org/server/api/authz/authorizations/search/object?uri=https://datarepository.movebank.org/server/api/core/bitstreams/5f1367ce-d508-4438-8fd5-f12e6d60dd32&feature=canRequestACopy&embed=feature",
+      "header": [
+        "{"
+      ],
+      "status": 206,
+      "text_hint": "",
+      "url": "https://datarepository.movebank.org/server/api/authz/authorizations/search/object?uri=https://datarepository.movebank.org/server/api/core/bitstreams/5f1367ce-d508-4438-8fd5-f12e6d60dd32&feature=canRequestACopy&embed=feature"
+    }
+  ],
+  "event_headers_without_vertical": [
+    {
+      "header": [
+        "event-id",
+        "visible",
+        "timestamp",
+        "location-long",
+        "location-lat",
+        "external-temperature",
+        "gps:fix-type-raw",
+        "gps:hdop",
+        "gps:satellite-count",
+        "gps-time-to-fix",
+        "gps:vdop",
+        "habitat",
+        "tag-voltage",
+        "sensor-type",
+        "individual-taxon-canonical-name",
+        "tag-local-identifier",
+        "individual-local-identifier",
+        "study-name"
+      ],
+      "type": "direct",
+      "url": "https://datarepository.movebank.org/server/api/core/bitstreams/bfebccea-5324-4490-8a6f-3703831dc653/content"
+    },
+    {
+      "header": [
+        "event-id",
+        "visible",
+        "timestamp",
+        "location-long",
+        "location-lat",
+        "external-temperature",
+        "gps:fix-type-raw",
+        "gps:hdop",
+        "gps:satellite-count",
+        "gps-time-to-fix",
+        "gps:vdop",
+        "habitat",
+        "tag-voltage",
+        "sensor-type",
+        "individual-taxon-canonical-name",
+        "tag-local-identifier",
+        "individual-local-identifier",
+        "study-name"
+      ],
+      "type": "direct",
+      "url": "https://datarepository.movebank.org/server/api/core/bitstreams/bfebccea-5324-4490-8a6f-3703831dc653/content"
+    }
+  ],
+  "landing": {
+    "content_type": "text/html; charset=utf-8",
+    "doi_url": "https://doi.org/10.5441/001/1.j25661td",
+    "final_url": "https://datarepository.movebank.org/entities/datapackage/e3343be6-d586-4c65-8b0a-cd2a063f24c9",
+    "status": 200
+  },
+  "numeric_event_rows_read": false,
+  "numeric_vertical_values_read": false,
+  "passing_event_headers": [],
+  "schema_version": 1,
+  "study_id": "batter-pteropus-cambodia-header-v1",
+  "zip_header_results": []
+}
