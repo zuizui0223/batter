@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-airflows-point-preflight-v1",
+  "frozen_date": "2026-09-30",
+  "status": "sealed nonvertical point-level preflight frozen before any vertical magnitude is inspected or summarized",
+  "programme": "batter-comparative-generality-program-v1",
+  "source": {
+    "repository": "Zenodo",
+    "record_id": 21915776,
+    "doi": "10.5281/zenodo.21915776",
+    "archive": "Data.zip",
+    "point_member_suffix": "BiologgingData/allStudies_allTags_allFlightSegments_binded_birdsBats_thresholdClass_transfGs_March2024_noDupl.rds"
+  },
+  "candidate_panels": [
+    {"study_id": "14253246", "species": "Eidolon helvum"},
+    {"study_id": "183770262", "species": "Eidolon helvum"},
+    {"study_id": "259100173", "species": "Eidolon helvum"},
+    {"study_id": "6609898", "species": "Pteropus lylei"},
+    {"study_id": "8239320", "species": "Pteropus lylei"}
+  ],
+  "historical_overlap_rule": {
+    "known_original_eidolon_study_id": "404939825",
+    "candidate_panel_study_ids_are_distinct": true,
+    "pteropus_is_new_taxon": true
+  },
+  "rds_vertical_isolation": {
+    "reason": "RDS serialization cannot be column-selectively opened by the available reader; the object must be deserialized before subsetting.",
+    "allowed_machine_operation": "deserialize the RDS once inside the frozen script, verify required column names, immediately copy only the frozen nonvertical columns, delete the full object, and never access, branch on, summarize, print, serialize or export any vertical column values",
+    "forbidden_vertical_columns": [
+      "height_gener",
+      "height.above.msl",
+      "height.above.ellipsoid",
+      "altitudeDiff",
+      "vertSpeed_ms"
+    ],
+    "human_or_model_vertical_value_exposure_before_receipt": false,
+    "inferential_status": "outcome-blind sealed machine read; vertical magnitudes are not available to source admission, structural eligibility, horizontal individuality or target-support decisions"
+  },
+  "nonvertical_columns": [
+    "timestamp",
+    "location.lat",
+    "location.long",
+    "study.id",
+    "study.name",
+    "individual.local.identifier",
+    "individual.tag.id",
+    "individual.taxon.canonical.name",
+    "track_flight_id"
+  ],
+  "session": {
+    "definition": "timestamp minus 12 hours, then calendar date, within exact studyID x species x individual",
+    "minimum_nonvertical_valid_fixes": 50,
+    "repeat_individual": "at least two >=50-fix nights"
+  },
+  "projection": {
+    "per_panel_rule": "derive UTM zone from median nonvertical longitude/latitude of the panel",
+    "grid_m": 5000,
+    "grid_origin": "native UTM origin; no data-dependent translation"
+  },
+  "horizontal_individuality": {
+    "role": "prospective nonvertical axis metric opened before vertical magnitude",
+    "alpha": 0.5,
+    "self_profile": "equal-weight other >=50-fix nights of same individual over the panel cell universe",
+    "other_profile": "pool >=50-fix nights within each other individual, then equal-weight other individuals",
+    "target_score": "mean target-event log P_self(cell) - log P_other(cell)",
+    "aggregation": "equal target night within individual, then equal individual",
+    "minimum_target_events": 50,
+    "null": "whole-night identity permutation within the panel, preserving the exact session-count multiset per identity",
+    "B": 9999,
+    "seed_base": 20260930120
+  },
+  "vertical_structural_gate": {
+    "training_universe": "all >=50-fix nights of repeat-eligible individuals within panel",
+    "target_common_support": "target event cell occurs in at least one other eligible night of the same individual and at least one eligible night of another individual",
+    "minimum_supported_target_events": 50,
+    "estimator_evaluable_individual": "at least one target night with >=50 common-support events",
+    "minimum_estimator_evaluable_individuals_per_panel": 5,
+    "advance_rule": "every candidate panel is evaluated; every panel passing this exact gate advances, every failing panel stops without threshold changes"
+  },
+  "receipt_freeze": [
+    "point RDS member checksum when available",
+    "exact candidate panel provenance",
+    "per-panel projection EPSG",
+    "per-panel cell universe",
+    "repeat-eligible IDs",
+    "training-night universe",
+    "horizontal individuality result",
+    "exact vertically evaluable target nights and common-support counts"
+  ],
+  "future_vertical_primary": {
+    "vertical_field": "height_gener",
+    "semantics": "source generic native height, populated from either height above mean sea level or height above ellipsoid according to source/tag; session centering is mandatory",
+    "session_centering": "subtract full frozen eligible-night median height_gener",
+    "centered_edges_m": ["-inf", -400, -200, -100, -50, 0, 50, 100, 200, 400, "inf"],
+    "common_cell_weighting": "identical self-derived horizontal weights for self and other vertical profiles",
+    "B": 9999,
+    "seed_base": 20260930140,
+    "pass_rule": "panel calibrated excess > 0 and one-sided p(null >= observed) <= 0.05"
+  },
+  "claim_boundary": [
+    "The Airflows source contains commuting flight segments extracted from thinned/subsampled original tracks; it is not a full-night raw tracking archive.",
+    "The sealed machine read preserves inferential blindness because vertical magnitudes are never exposed or used before the frozen receipt.",
+    "A panel that fails the >=50-fix-night/common-support gate is a structural STOP, not a negative vertical result.",
+    "No panel is dropped because it is the same taxon as an earlier source when its study ID is distinct.",
+    "No threshold, grid, session definition or candidate list may change after this preflight."
+  ]
+}
