@@ -1,0 +1,30 @@
+name: hipposideros-authenticated-preflight-v1
+on:
+  workflow_dispatch:
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+    env:
+      DRYAD_API_TOKEN: ${{ secrets.DRYAD_API_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -e . pandas requests
+      - name: Require Dryad API token
+        run: |
+          test -n "$DRYAD_API_TOKEN" || (echo "DRYAD_API_TOKEN secret is not set" && exit 2)
+      - name: Run authenticated outcome-blind preflight
+        run: python post_freeze_extensions/hipposideros_external_validation/authenticated_preflight_v1.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: batter-hipposideros-authenticated-preflight-v1
+          path: |
+            post_freeze_extensions/hipposideros_external_validation/authenticated_preflight_v1.json
+            post_freeze_extensions/hipposideros_external_validation/AUTHENTICATED_PREFLIGHT_V1.md
+            post_freeze_extensions/hipposideros_external_validation/height_opening_receipt_v1.json
+          if-no-files-found: error
