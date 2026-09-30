@@ -39,20 +39,36 @@
       "reason": "source README documents Bats2022_2023.csv as x, y, time, trackId only"
     },
     "Airflows multispecies Zenodo 21915776": {
-      "status": "POINT PREFLIGHT IN PROGRESS",
+      "status": "STRUCTURAL STOP BEFORE POINT VERTICAL",
       "schema_audit": {
-        "bat_species": ["Eidolon helvum", "Pteropus lylei"],
+        "bat_species": [
+          "Eidolon helvum",
+          "Pteropus lylei"
+        ],
         "bat_panels": 8,
-        "necessary_screen_candidate_panels": 5,
-        "candidate_panels": [
-          "14253246::Eidolon helvum",
-          "183770262::Eidolon helvum",
-          "259100173::Eidolon helvum",
-          "6609898::Pteropus lylei",
-          "8239320::Pteropus lylei"
-        ]
+        "necessary_screen_candidate_panels": 5
       },
-      "vertical_values_exposed_to_decision_maker": false
+      "point_preflight": {
+        "passing_panels": 0,
+        "qualifying_nights_ge50_by_candidate": {
+          "14253246::Eidolon helvum": 0,
+          "183770262::Eidolon helvum": 0,
+          "259100173::Eidolon helvum": 0,
+          "6609898::Pteropus lylei": 0,
+          "8239320::Pteropus lylei": 0
+        },
+        "vertical_values_accessed_by_analysis_logic": false
+      },
+      "provenance": {
+        "eidolon_candidates": "historical 10.5441/001/1.k8n02jn8 data universe; exclude from new prospective count",
+        "pteropus_candidates": "genuinely new Thailand 2012 panels, but thinned compilation structurally stopped"
+      },
+      "frozen_vertical_design": "UNUSED because receipt STOP"
+    },
+    "Pteropus lylei Cambodia Movebank 10.5441/001/1.j25661td": {
+      "status": "PROVENANCE FOLLOW-UP HEADER AUDIT PENDING",
+      "reason": "distinct public raw GPS source identified before any new comparative vertical outcome was opened",
+      "vertical_values_opened": false
     }
   },
   "current_comparative_question": "What predicts whether centered vertical individuality is expressed at all, and how does it covary with prospectively measured horizontal individuality?",
@@ -61,5 +77,6 @@
     "Historical opened sources cannot count as new prospective sources.",
     "No source threshold is lowered after structural output.",
     "New search queries are prohibited after the frozen search snapshot is exhausted."
-  ]
+  ],
+  "current_programme_state": "No genuinely new source has yet passed the frozen >=50-fix structural gate; Cambodia Pteropus header audit is the final provenance-follow-up before structural-scarcity closure."
 }
