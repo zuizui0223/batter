@@ -123,7 +123,7 @@ def main():
     sha=hashlib.sha256(raw).hexdigest()
 
     # Header-only vertical verification.
-    header=pd.read_excel(io.BytesIO(raw),nrows=0,engine="openpyxl")
+    sheet=c["source"]["sheet_name"]\n    header=pd.read_excel(io.BytesIO(raw),sheet_name=sheet,nrows=0,engine="openpyxl")
     required=c["outcome_blind_allowed_fields"]
     vertical=c["vertical_header_only"]
     missing=[x for x in required+[vertical] if x not in header.columns]
@@ -131,7 +131,7 @@ def main():
         raise RuntimeError(f"missing frozen fields: {missing}")
 
     # Numeric altitude is never loaded.
-    df=pd.read_excel(io.BytesIO(raw),usecols=required,dtype=str,engine="openpyxl")
+    df=pd.read_excel(io.BytesIO(raw),sheet_name=sheet,usecols=required,dtype=str,engine="openpyxl")
     if vertical in df.columns:
         raise RuntimeError("vertical field unexpectedly loaded")
 
@@ -174,11 +174,73 @@ def main():
                 for x in q.itertuples(index=False)
             ]
 
+    if not repeat_ids:
+        payload={
+            "schema_version":1,
+            "study_id":c["study_id"],
+            "numeric_altitude_values_read":False,
+            "raw_sha256":sha,
+            "raw_size_bytes":len(raw),
+            "sheet_name":sheet,
+            "rows_nonvertical_valid":int(len(d)),
+            "unique_ids":sorted(d["id"].unique()),
+            "unique_id_count":int(d["id"].nunique()),
+            "projection_epsg":epsg,
+            "horizontal_grid_m":5000,
+            "qualified_sessions_ge50":int(len(qual)),
+            "repeat_eligible_ids":[],
+            "repeat_eligible_id_count":0,
+            "horizontal_individuality":{"status":"NOT_EVALUABLE_UNDER_FROZEN_SESSION_GATE"},
+            "vertical_evaluable_ids":[],
+            "vertical_evaluable_id_count":0,
+            "vertical_gate_pass":False,
+            "decision":"STRUCTURAL_FAIL"
+        }
+        OUT.parent.mkdir(parents=True,exist_ok=True)
+        OUT.write_text(json.dumps(payload,indent=2,sort_keys=True)+"\\n",encoding="utf-8")
+        receipt={
+            "schema_version":1,
+            "study_id":"batter-leptonycteris-altitude-opening-receipt-v1",
+            "status":"STOP",
+            "raw_sha256":sha,
+            "sheet_name":sheet,
+            "projection_epsg":epsg,
+            "horizontal_grid_m":5000,
+            "minimum_session_fixes":50,
+            "minimum_supported_target_events":50,
+            "numeric_altitude_values_read":False,
+            "reason":"zero individuals have at least two >=50-fix sessions under the frozen source rule",
+            "next_step":"STOP; do not lower the session threshold or open Altitude."
+        }
+        RECEIPT.write_text(json.dumps(receipt,indent=2,sort_keys=True)+"\\n",encoding="utf-8")
+        OUT_MD.write_text(
+            "# Leptonycteris comparative-source preflight v1\\n\\n"
+            "**STRUCTURAL FAIL BEFORE ALTITUDE. Numeric Altitude values were not read.**\\n\\n"
+            f"- raw SHA256: \`{sha}\`\\n"
+            f"- GPS sheet: **{sheet}**\\n"
+            f"- nonvertical-valid rows: **{len(d)}**\\n"
+            f"- unique Tag IDs: **{d['id'].nunique()}**\\n"
+            f"- >=50-fix sessions: **{len(qual)}**\\n"
+            "- repeat-eligible IDs (>=2 such sessions): **0**\\n"
+            "- horizontal individuality: **NOT EVALUABLE under frozen session gate**\\n"
+            "- vertical gate: **FAIL / Altitude remains unopened**\\n\\n"
+            "Do not lower the >=50-fix session rule as rescue.\\n",
+            encoding="utf-8"
+        )
+        print(json.dumps({
+            "raw_sha256":sha,
+            "unique_ids":int(d["id"].nunique()),
+            "projection_epsg":epsg,
+            "repeat_eligible_n":0,
+            "horizontal_status":"NOT_EVALUABLE_UNDER_FROZEN_SESSION_GATE",
+            "vertical_gate_pass":False,
+            "decision":"STRUCTURAL_FAIL"
+        },sort_keys=True))
+        return 0
+
     keyset={(iid,x["session_date"]) for iid,ss in qualifying_sessions.items() for x in ss}
     keep=[(iid,sd) in keyset for iid,sd in zip(d["id"],d["session_date"])]
     qd=d.loc[keep].copy()
-    if not repeat_ids:
-        raise RuntimeError("no repeat-eligible individuals under frozen >=50 rule")
 
     session_records={}
     sessions_by_ind=defaultdict(list)
