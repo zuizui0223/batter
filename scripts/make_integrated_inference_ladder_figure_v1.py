@@ -20,7 +20,7 @@ xs = [0.13, 0.38, 0.63, 0.87]
 box(xs[0], 0.60, 0.21, 0.22, "1. Common-cell weighting\nSame 5-km x-y weights\nfor self and other")
 box(xs[1], 0.60, 0.21, 0.22, "2. Session centering\nSubtract session median")
 box(xs[2], 0.60, 0.21, 0.22, "3. Localization tests\nstate • place • time")
-box(xs[3], 0.60, 0.21, 0.22, "4. External tests\nnew frozen source systems")
+box(xs[3], 0.60, 0.21, 0.22, "4. External tests\nnew pre-specified source systems")
 
 arrow(0.235, 0.60, 0.275, 0.60)
 arrow(0.485, 0.60, 0.525, 0.60)
