@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-nyctalus-validation-preflight-v1",
+  "frozen_date": "2026-09-30",
+  "status": "outcome-blind structural preflight frozen before any numeric Height values",
+  "source": {
+    "doi": "10.5281/zenodo.7535030",
+    "record_id": 7535030,
+    "file": "Observed_GPS_locations.csv",
+    "sha256": "2f373d47706c5b56313de70b623bb5446f5925c69af30f1b145993419e382aa9",
+    "taxon": "Nyctalus noctula"
+  },
+  "cohort_definition": "Year × field_period from source columns. No cohort may be merged after Height is opened.",
+  "session_definition": "source trackid",
+  "event_filter": "rows with nonblank bat_id, trackid, utc, x, y and Height presence; Height magnitude is not parsed",
+  "primary_structure": {
+    "grid_m": 5000,
+    "stratum": "5-km x-y cell",
+    "target_support": "target event cell appears in at least one other track of the same bat within cohort and in at least one track of another bat within cohort",
+    "minimum_supported_target_events": 50,
+    "individual_evaluable": "at least one target track with >=50 supported events"
+  },
+  "mechanism_structure": {
+    "valid_move_states": [
+      "ARM",
+      "COM"
+    ],
+    "state_interpretation": "source HMM labels; undefined events excluded",
+    "state_5km": {
+      "stratum": "5-km cell × source move_state",
+      "minimum_supported_target_events": 50
+    },
+    "state_500m": {
+      "stratum": "500-m cell × source move_state",
+      "minimum_supported_target_events": 50
+    },
+    "persistence_1d": {
+      "stratum": "5-km cell × source move_state",
+      "self_history": "same bat tracks within cohort whose median UTC differs from target-track median UTC by >=1 day",
+      "other_history": "all tracks of other bats within cohort",
+      "minimum_supported_target_events": 50
+    }
+  },
+  "structural_progression": {
+    "primary_gate": "primary 5-km identity requires >=8 evaluable individuals",
+    "state_5km_gate": "proceed if >=70% of primary evaluable n and >=5 individuals",
+    "state_500m_gate": "proceed if >=70% of state-5km evaluable n and >=5 individuals",
+    "persistence_1d_gate": "proceed if >=70% of state-5km evaluable n and >=5 individuals"
+  },
+  "prohibited_reads": [
+    "numeric Height magnitudes",
+    "vertical bins/distributions",
+    "any vertical prediction statistic"
+  ],
+  "decision_rule": "Freeze exact eligible IDs/n for every structurally passing stage before opening Height. A structurally failing stage is not rescued by changing grid, support, state labels, cohort or lag."
+}
