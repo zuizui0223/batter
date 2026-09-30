@@ -51,3 +51,5 @@ This manifest supersedes v0.3.8 as the intended JAE submission route while prese
 ## Dataset citation check
 
 All ten public tracking datasets used in the integrated analysis now have full dataset citations in the manuscript's **Data sources** section, in addition to the Data and code availability statement. This satisfies the journal requirement to cite archived datasets with persistent identifiers rather than listing DOIs only.
+
+- Methods and Data availability both point to the **Data sources** section; ten archived tracking datasets have full persistent-identifier citations.
