@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-leptonycteris-structural-gate-v1",
+  "frozen_date": "2026-09-30",
+  "status": "prospective structural gate before any numeric altitude analysis",
+  "source": {
+    "repository": "Dryad",
+    "doi": "10.5061/dryad.stqjq2cfg",
+    "landing_url": "https://datadryad.org/dataset/doi:10.5061/dryad.stqjq2cfg",
+    "file": "GPS_data_Leptonycteris_nivalis__Summer_2024_GPS__TX__USA.xlsx",
+    "taxon": "Leptonycteris nivalis",
+    "published_tracking_n": 21
+  },
+  "fields_expected": {
+    "individual": "Tag ID",
+    "timestamp": "Fix Date-Time (UTC-5)",
+    "longitude": "Longitude",
+    "latitude": "Latitude",
+    "vertical_field": "Altitude (m)"
+  },
+  "outcome_blind_rules": {
+    "numeric_vertical_values_allowed": false,
+    "vertical_column_may_be_verified_by_header_only": true,
+    "excel_read_columns": ["Tag ID", "Fix Date-Time (UTC-5)", "Longitude", "Latitude"],
+    "forbidden_operations": [
+      "read Altitude (m) values",
+      "summarize or plot altitude",
+      "select individuals/nights using altitude",
+      "change the structural threshold after the gate"
+    ]
+  },
+  "session_definition": {
+    "rule": "calendar date of Fix Date-Time (UTC-5)",
+    "rationale": "source metadata states tags were programmed for nocturnal fixes; each Tag ID x local date is one candidate tracking night"
+  },
+  "structural_gate": {
+    "minimum_nonvertical_valid_fixes_per_session": 50,
+    "repeat_individual": "at least two >=50-fix nights",
+    "minimum_repeat_individuals_total": 5,
+    "decision": "PASS if at least 5 Tag IDs have at least two >=50-fix local-date sessions"
+  },
+  "future_validation_boundary": [
+    "A PASS only authorizes freezing a full vertical-validation contract; it does not authorize exploratory altitude inspection.",
+    "The full contract must fail closed if retained rows have missing/nonfinite Altitude values.",
+    "A FAIL cannot be rescued by lowering the >=50-fix threshold in this prospective family.",
+    "No alternate date grouping, tag subset, horizontal grid, or vertical endpoint may be selected after the structural result."
+  ]
+}
