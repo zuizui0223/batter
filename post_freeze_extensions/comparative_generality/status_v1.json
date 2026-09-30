@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-comparative-generality-status-v1",
+  "frozen_date": "2026-09-30",
+  "programme_contract": "post_freeze_extensions/comparative_generality/contract_v1.json",
+  "search_stop_rule": "post_freeze_extensions/comparative_generality/SEARCH_STOP_RULE_V1.md",
+  "historical_opened_sources": {
+    "original_archive": "not counted as new prospective source",
+    "Nyctalus noctula": {
+      "status": "prospective primary FAIL",
+      "calibrated_excess": 0.051747374510001,
+      "p_upper": 0.1224
+    },
+    "Hipposideros armiger + H. pratti": {
+      "status": "genuinely response-unopened prospective primary FAIL",
+      "calibrated_excess": -0.04468361353981454,
+      "p_upper": 0.8616
+    }
+  },
+  "new_source_screening": {
+    "Leptonycteris nivalis": {
+      "status": "STRUCTURAL STOP BEFORE ALTITUDE",
+      "unique_ids": 21,
+      "nonvertical_valid_rows": 2402,
+      "qualified_sessions_ge50": 0,
+      "horizontal_individuality": "not evaluable",
+      "numeric_altitude_opened": false
+    },
+    "Desmodus rotundus": {
+      "status": "STRUCTURAL STOP BEFORE ALTITUDE",
+      "presence_qualified_rows": 1678,
+      "qualified_sessions_ge50": 4,
+      "admitted_locals": 0,
+      "horizontal_individuality": "not evaluable",
+      "numeric_altitude_opened": false
+    },
+    "Hypsignathus monstrosus Dryad 2022-2023": {
+      "status": "REJECT NO VERTICAL RESPONSE",
+      "reason": "source README documents Bats2022_2023.csv as x, y, time, trackId only"
+    },
+    "Airflows multispecies Zenodo 21915776": {
+      "status": "STRUCTURAL STOP BEFORE POINT VERTICAL",
+      "schema_audit": {
+        "bat_species": [
+          "Eidolon helvum",
+          "Pteropus lylei"
+        ],
+        "bat_panels": 8,
+        "necessary_screen_candidate_panels": 5
+      },
+      "point_preflight": {
+        "passing_panels": 0,
+        "qualifying_nights_ge50_by_candidate": {
+          "14253246::Eidolon helvum": 0,
+          "183770262::Eidolon helvum": 0,
+          "259100173::Eidolon helvum": 0,
+          "6609898::Pteropus lylei": 0,
+          "8239320::Pteropus lylei": 0
+        },
+        "vertical_values_accessed_by_analysis_logic": false
+      },
+      "provenance": {
+        "eidolon_candidates": "historical 10.5441/001/1.k8n02jn8 data universe; exclude from new prospective count",
+        "pteropus_candidates": "genuinely new Thailand 2012 panels, but thinned compilation structurally stopped"
+      },
+      "frozen_vertical_design": "UNUSED because receipt STOP"
+    },
+    "Pteropus lylei Cambodia Movebank 10.5441/001/1.j25661td": {
+      "status": "REJECT NO NATIVE VERTICAL RESPONSE",
+      "header_audit_run": 36732197806,
+      "event_headers_found": 2,
+      "accepted_vertical_fields_found": 0,
+      "numeric_vertical_opened": false
+    },
+    "Pteropus poliocephalus Movebank 10.5441/001/1.5bd6pq55": {
+      "status": "STRUCTURAL STOP BEFORE HEIGHT",
+      "header_vertical_field": "height-above-msl",
+      "structural_run": 36733082342,
+      "rows_in_file": 148084,
+      "presence_qualified_rows": 145262,
+      "eligible_sessions_ge50": 158,
+      "individuals_with_presence": 4,
+      "repeat_individuals": 4,
+      "repeat_ids": [
+        "403",
+        "588",
+        "657",
+        "684"
+      ],
+      "minimum_repeat_individuals_required": 5,
+      "numeric_height_opened": false
+    },
+    "Myotis vivesi Movebank 10.5441/001/1.kk3bg2f4": {
+      "status": "STRUCTURAL STOP BEFORE HEIGHT",
+      "provenance_correction": "frozen raw-screen contract mislabeled taxon as Noctilio leporinus; associated source is Myotis vivesi",
+      "native_vertical_field": "height_above_ellipsoid",
+      "presence_qualified_rows": 14328,
+      "eligible_sessions_ge50": 15,
+      "individuals_with_presence": 11,
+      "repeat_individuals": 4,
+      "minimum_repeat_individuals_required": 5,
+      "numeric_height_opened": false
+    },
+    "Movebank seven additional raw candidates": {
+      "status": "REJECT NO NATIVE VERTICAL RESPONSE",
+      "taxa": [
+        "Lavia frons",
+        "Noctilio albiventris",
+        "Vespertilio murinus",
+        "Rhinolophus ferrumequinum",
+        "Trachops cirrhosus",
+        "Myotis daubentonii",
+        "Carollia spp."
+      ],
+      "numeric_vertical_opened": false
+    }
+  },
+  "current_comparative_question": "What predicts whether centered vertical individuality is expressed at all, and how does it covary with prospectively measured horizontal individuality?",
+  "claim_boundary": [
+    "Structural STOP is not a negative vertical result.",
+    "Historical opened sources cannot count as new prospective sources.",
+    "No source threshold is lowered after structural output.",
+    "New search queries are prohibited after the frozen search snapshot is exhausted."
+  ],
+  "current_programme_state": "CLOSED_STRUCTURAL_SCARCITY",
+  "new_vertical_outcomes_opened": 0,
+  "new_sources_reaching_full_vertical_gate": 0,
+  "structural_scarcity_statement": "Within the frozen public-repository search universe and predeclared >=50-event repeated-session design, no genuinely new source reached the full gate for opening a centered vertical outcome.",
+  "programme_close_reason": "All frozen-query candidates were classified as historical overlap, no-native-vertical/wrong-data-type reject, or structural STOP; the stop rule prohibits threshold lowering or new search terms."
+}
