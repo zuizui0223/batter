@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-nyctalus-context-audit-v1",
+  "frozen_date": "2026-09-30",
+  "status": "nonvertical provenance/semantics audit",
+  "source": {
+    "record_id": 7535030,
+    "doi": "10.5281/zenodo.7535030",
+    "file": "Observed_GPS_locations.csv",
+    "sha256": "2f373d47706c5b56313de70b623bb5446f5925c69af30f1b145993419e382aa9"
+  },
+  "question": "Does source field dist_start encode distance from the first recorded x-y point of each source track, and in what units?",
+  "allowed_fields": ["bat_id", "trackid", "utc", "x", "y", "dist_start", "move_state", "sex", "age_class", "Year", "field_period"],
+  "prohibited_fields": ["Height", "heightdiff_nextrec", "dist_nextrec_m_height", "speed_ms_height"],
+  "candidate_unit_scales_to_m": [0.001, 1, 1000],
+  "semantics_rule": "For each candidate scale, compare source dist_start*scale against Euclidean distance in source x-y coordinates from the first timestamped point of the same track. Report correlation and absolute/relative error; do not use vertical outcomes.",
+  "claim_boundary": [
+    "This audit may establish field semantics, not a biological effect.",
+    "No vertical outcome is read or summarized.",
+    "If dist_start is validated as start-point distance, a separate post-outcome mechanism contract is required before testing vertical identity conditional on this context."
+  ]
+}
