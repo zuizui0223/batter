@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-airflows-vertical-primary-v1",
+  "frozen_date": "2026-09-30",
+  "status": "receipt-gated vertical design frozen before any Airflows point-level vertical magnitude is inspected or summarized",
+  "source_contract": "post_freeze_extensions/comparative_generality/airflows/point_preflight_contract_v1.json",
+  "required_receipt": "post_freeze_extensions/comparative_generality/airflows/height_opening_receipt_v1.json",
+  "source": {
+    "record_id": 21915776,
+    "archive": "Data.zip",
+    "point_member_suffix": "BiologgingData/allStudies_allTags_allFlightSegments_binded_birdsBats_thresholdClass_transfGs_March2024_noDupl.rds",
+    "vertical_field": "height_gener"
+  },
+  "opening_firewall": [
+    "receipt file must exist and have status HEIGHT_MAY_OPEN",
+    "point-member SHA256 must match the receipt",
+    "current point-preflight contract SHA256 must match receipt",
+    "only panels listed in receipt.panels may be evaluated"
+  ],
+  "vertical_completeness": {
+    "rule": "within every frozen training night of an admitted panel, every retained row must have finite numeric height_gener",
+    "failure": "panel becomes VERTICAL_DATA_STOP; do not drop rows, sessions or individuals and do not change thresholds"
+  },
+  "processing": {
+    "session": "timestamp minus 12 hours then calendar date, exactly as frozen preflight",
+    "horizontal_grid_m": 5000,
+    "projection": "per-panel EPSG frozen in receipt",
+    "session_centering": "subtract median height_gener of the entire frozen retained night",
+    "centered_edges_m": ["-inf", -400, -200, -100, -50, 0, 50, 100, 200, 400, "inf"],
+    "alpha": 0.5,
+    "minimum_supported_target_events": 50
+  },
+  "estimator": {
+    "self_profile": "equal-weight other frozen training nights of same individual",
+    "other_profile": "pool frozen training nights within each other individual then equal-weight other individuals",
+    "common_cell_weighting": "derive equal-night self cell weights on target-supported cells and apply identical weights to self and other vertical profiles",
+    "target_score": "mean supported target-event log P_self(centered z) - log P_other(centered z)",
+    "aggregation": "equal frozen target night within individual, then equal individual"
+  },
+  "null": {
+    "unit": "whole frozen night",
+    "action": "permute individual identity labels across the frozen training-night universe within panel while preserving the exact session-count multiset per identity",
+    "target_sessions": "fixed receipt target sessions; recompute self/other profiles, support and common weights under each permutation",
+    "B": 9999,
+    "seed_base": 20260930140,
+    "p_upper": "(1 + count(null >= observed)) / (B_valid + 1)"
+  },
+  "panel_pass_rule": "observed minus null mean > 0 and one-sided p(null >= observed) <= 0.05",
+  "reporting": [
+    "panel observed centered identity",
+    "null mean and SD",
+    "calibrated excess",
+    "one-sided upper-tail p",
+    "evaluable individual count",
+    "horizontal calibrated excess and p copied verbatim from preflight receipt"
+  ],
+  "claim_boundary": [
+    "Each panel is an independent prospective panel only relative to its own unopened vertical magnitude under this programme.",
+    "A panel FAIL remains FAIL; do not change grid, bins, sessions, thresholds, target nights or individual membership.",
+    "A VERTICAL_DATA_STOP is not a negative vertical result.",
+    "Same-taxon Eidolon panels remain distinct studies and are not pooled into one source-level verdict.",
+    "No cross-panel predictor model is opened unless the separately frozen comparative-programme stage-2 threshold is reached."
+  ]
+}
