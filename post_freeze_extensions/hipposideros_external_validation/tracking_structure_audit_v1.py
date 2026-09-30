@@ -34,7 +34,7 @@ def main():
     mask=present(df["id"]) & present(df["timestamp"])
     d=df.loc[mask].copy()
     d["id"]=d["id"].astype(str).str.strip()
-    d["t"]=pd.to_datetime(d["timestamp"],errors="coerce")
+    d["t"]=pd.to_datetime(d["timestamp"],errors="coerce",format="mixed")
     if d["t"].isna().any():
         raise RuntimeError(f"timestamp parse failures: {int(d['t'].isna().sum())}")
     d["date"]=d["t"].dt.date.astype(str)
