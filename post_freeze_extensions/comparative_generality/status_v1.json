@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-comparative-generality-status-v1",
+  "frozen_date": "2026-09-30",
+  "programme_contract": "post_freeze_extensions/comparative_generality/contract_v1.json",
+  "search_stop_rule": "post_freeze_extensions/comparative_generality/SEARCH_STOP_RULE_V1.md",
+  "historical_opened_sources": {
+    "original_archive": "not counted as new prospective source",
+    "Nyctalus noctula": {
+      "status": "prospective primary FAIL",
+      "calibrated_excess": 0.051747374510001,
+      "p_upper": 0.1224
+    },
+    "Hipposideros armiger + H. pratti": {
+      "status": "genuinely response-unopened prospective primary FAIL",
+      "calibrated_excess": -0.04468361353981454,
+      "p_upper": 0.8616
+    }
+  },
+  "new_source_screening": {
+    "Leptonycteris nivalis": {
+      "status": "STRUCTURAL STOP BEFORE ALTITUDE",
+      "unique_ids": 21,
+      "nonvertical_valid_rows": 2402,
+      "qualified_sessions_ge50": 0,
+      "horizontal_individuality": "not evaluable",
+      "numeric_altitude_opened": false
+    },
+    "Desmodus rotundus": {
+      "status": "STRUCTURAL STOP BEFORE ALTITUDE",
+      "presence_qualified_rows": 1678,
+      "qualified_sessions_ge50": 4,
+      "admitted_locals": 0,
+      "horizontal_individuality": "not evaluable",
+      "numeric_altitude_opened": false
+    },
+    "Hypsignathus monstrosus Dryad 2022-2023": {
+      "status": "REJECT NO VERTICAL RESPONSE",
+      "reason": "source README documents Bats2022_2023.csv as x, y, time, trackId only"
+    },
+    "Airflows multispecies Zenodo 21915776": {
+      "status": "POINT PREFLIGHT IN PROGRESS",
+      "schema_audit": {
+        "bat_species": ["Eidolon helvum", "Pteropus lylei"],
+        "bat_panels": 8,
+        "necessary_screen_candidate_panels": 5,
+        "candidate_panels": [
+          "14253246::Eidolon helvum",
+          "183770262::Eidolon helvum",
+          "259100173::Eidolon helvum",
+          "6609898::Pteropus lylei",
+          "8239320::Pteropus lylei"
+        ]
+      },
+      "vertical_values_exposed_to_decision_maker": false
+    }
+  },
+  "current_comparative_question": "What predicts whether centered vertical individuality is expressed at all, and how does it covary with prospectively measured horizontal individuality?",
+  "claim_boundary": [
+    "Structural STOP is not a negative vertical result.",
+    "Historical opened sources cannot count as new prospective sources.",
+    "No source threshold is lowered after structural output.",
+    "New search queries are prohibited after the frozen search snapshot is exhausted."
+  ]
+}
