@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
-import hashlib, io, json, re
+import hashlib, io, json, os, re
 from pathlib import Path
 from urllib.parse import urljoin
 
@@ -33,28 +33,23 @@ def resolve_file(c,session):
     return urljoin(c["source"]["landing_url"],target)
 
 def download_public(c):
-    session=requests.Session()
-    session.headers.update({**UA,"Accept":"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"})
-    url=resolve_file(c,session)
-    headers={**UA,"Referer":c["source"]["landing_url"],"Accept":"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,*/*"}
-    candidates=[url]
-    m=re.search(r"/file_stream/(\d+)",url)
-    if m:
-        fid=m.group(1)
-        candidates += [
-            f"https://datadryad.org/stash/downloads/file_stream/{fid}",
-            f"https://datadryad.org/api/v2/files/{fid}/download",
-            f"https://datadryad.org/api/v2/files/{fid}/content",
-        ]
-    attempts=[]
-    for u in candidates:
-        rr=session.get(u,headers=headers,timeout=180,allow_redirects=True)
-        ctype=rr.headers.get("content-type","")
-        xlsx_magic=rr.content.startswith(b"PK\\x03\\x04")
-        attempts.append({"url":u,"status":rr.status_code,"content_type":ctype,"xlsx_magic":xlsx_magic})
-        if rr.status_code==200 and len(rr.content)>1000 and xlsx_magic:
-            return rr.content,attempts
-    raise RuntimeError(f"no public Dryad download route succeeded: {attempts}")
+    token=os.environ.get("DRYAD_API_TOKEN","").strip()
+    if not token:
+        raise RuntimeError("DRYAD_API_TOKEN missing; do not fall back to unauthenticated download")
+    url="https://datadryad.org/api/v2/files/4192796/download"
+    headers={
+        "Authorization":f"Bearer {token}",
+        "Accept":"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,*/*",
+        "User-Agent":"batter-leptonycteris-structural-gate-v1/1.0",
+    }
+    rr=requests.get(url,headers=headers,timeout=180,allow_redirects=True)
+    ctype=rr.headers.get("content-type","")
+    xlsx_magic=rr.content.startswith(b"PK\\x03\\x04")
+    attempts=[{"url":url,"status":rr.status_code,"content_type":ctype,"xlsx_magic":xlsx_magic}]
+    rr.raise_for_status()
+    if len(rr.content)<=1000 or not xlsx_magic:
+        raise RuntimeError(f"authenticated Dryad download is not the expected XLSX: {attempts}")
+    return rr.content,attempts
 
 def main():
     c=json.loads(CONTRACT.read_text())
