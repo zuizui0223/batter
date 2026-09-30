@@ -123,7 +123,8 @@ def main():
     sha=hashlib.sha256(raw).hexdigest()
 
     # Header-only vertical verification.
-    sheet=c["source"]["sheet_name"]\n    header=pd.read_excel(io.BytesIO(raw),sheet_name=sheet,nrows=0,engine="openpyxl")
+    sheet=c["source"]["sheet_name"]
+    header=pd.read_excel(io.BytesIO(raw),sheet_name=sheet,nrows=0,engine="openpyxl")
     required=c["outcome_blind_allowed_fields"]
     vertical=c["vertical_header_only"]
     missing=[x for x in required+[vertical] if x not in header.columns]
