@@ -28,15 +28,17 @@ The structural contract was frozen before any numeric height value was read.
 
 GitHub Actions attempted only transport/access operations.
 
-Observed HTTP results:
-- `https://datadryad.org/downloads/file_stream/4102381` -> **403**
-- `https://datadryad.org/stash/downloads/file_stream/4102381` -> **403**
-- `https://datadryad.org/api/v2/files/4102381/download` -> **401**
-- `https://datadryad.org/api/v2/files/4102381/content` -> **404**
+Latest fail-closed HTTP/content results:
+- `https://datadryad.org/downloads/file_stream/4102381` -> **200 HTML**, not the frozen CSV;
+- `https://datadryad.org/stash/downloads/file_stream/4102381` -> **200 HTML**, not the frozen CSV;
+- `https://datadryad.org/api/v2/files/4102381/download` -> **401 JSON**;
+- `https://datadryad.org/api/v2/files/4102381/content` -> **404 HTML**.
+
+The structural script now accepts a download only when its first CSV line contains the frozen required fields. The 200 HTML responses therefore fail closed before any table is parsed.
 
 Latest diagnostic run:
-- workflow `36695466162`
-- head `979c1e5373a9fa2903e47c8a177f90f2537047f9`
+- workflow `36696650337`
+- head `380c0d62f6eb900ce2fbbbf98863d43cbe1dcc13`
 
 ## Outcome-blindness status
 
