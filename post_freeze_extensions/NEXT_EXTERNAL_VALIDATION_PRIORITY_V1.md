@@ -38,27 +38,27 @@ Frozen primary:
 
 The programme is closed without rescue.
 
-## Priority 2 — Leptonycteris is now PAUSED
+## Priority 2 — Leptonycteris structural gate completed
 
 Source:
 - Dryad DOI `10.5061/dryad.stqjq2cfg`
 - file `GPS_data_Leptonycteris_nivalis__Summer_2024_GPS__TX__USA.xlsx`
 
-Its structural contract remains frozen and numeric altitude remains unopened.
+The already-frozen structural gate was executed **without reading numeric Altitude**.
 
-However, the original priority rule authorized moving to Priority 2 when Priority 1 was:
-- structurally ineligible, or
-- technically inaccessible.
+Result:
+- 21 Tag IDs;
+- 2,402 nonvertical-valid GPS rows;
+- >=50-fix nights: **0**;
+- repeat-eligible individuals: **0**;
+- required repeat individuals: 5;
+- verdict: **STRUCTURAL FAIL**.
 
-Priority 1 was neither. It was structurally eligible, accessible, and produced a completed **primary FAIL**.
+The maximum fixes in any candidate night was 49. The threshold is not lowered after seeing this structure.
 
-The original rule did **not** pre-authorize serial continuation to Priority 2 after a negative vertical outcome.
+Therefore Leptonycteris is closed as **structurally ineligible under the frozen common estimator**. Numeric altitude remains unopened.
 
-Therefore:
-
-> **Do not open Leptonycteris now as a replication rescue.**
-
-Doing so immediately after the Hipposideros FAIL would change the programme from a priority-locked prospective validation into serial outcome-guided searching for an external positive source.
+This result is not a negative biological result and cannot be used as another replication outcome.
 
 ## What would justify a future Leptonycteris analysis
 
@@ -102,10 +102,11 @@ The scientifically useful next question is no longer simply “can another sourc
 
 Until a heterogeneity-oriented continuation programme is frozen:
 
-- no Leptonycteris altitude opening;
-- no new external-source search;
-- no replacement candidate chosen because Hipposideros failed;
+- no Leptonycteris altitude opening or threshold relaxation;
+- no new external-source search selected to replace negative sources;
 - no change to the Hipposideros verdict;
 - no external subgroup rescue.
+
+A future programme using a different session threshold would be a new estimand and must be specified before opening any Leptonycteris vertical values.
 
 The frozen JAE v0.3.8 submission remains unchanged.
