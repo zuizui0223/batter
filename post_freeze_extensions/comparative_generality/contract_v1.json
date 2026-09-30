@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-comparative-generality-program-v1",
+  "frozen_date": "2026-09-30",
+  "status": "new prospective comparative programme frozen after v10 boundary result and before discovery of any new candidate vertical outcomes",
+  "motivation": "v10 shows that centered vertical individuality is recurrent but not universal, and that horizontal site fidelity and centered vertical organization can dissociate. The next question is what predicts expression versus absence across independent systems.",
+  "historical_sources": {
+    "discovery_archive": [
+      "Eidolon helvum",
+      "Hypsignathus monstrosus",
+      "Phyllostomus hastatus 2016",
+      "Phyllostomus hastatus 2022",
+      "Phyllostomus hastatus 2023",
+      "Tadarida teniotis"
+    ],
+    "prospective_external_already_opened": [
+      "Nyctalus noctula Zenodo 10.5281/zenodo.7535030",
+      "Hipposideros armiger / H. pratti Dryad 10.5061/dryad.j0zpc86r1"
+    ],
+    "role": "historical anchors only; they motivate the programme but are not counted as new prospective source replicates"
+  },
+  "closed_search_universe": {
+    "snapshot_date": "2026-09-30",
+    "repositories": [
+      "Dryad",
+      "Zenodo",
+      "Figshare",
+      "Movebank Data Repository / published Movebank studies with public downloadable event data"
+    ],
+    "search_queries": [
+      "bat GPS altitude dataset",
+      "bat GPS height dataset",
+      "bat tracking altitude data",
+      "bat 3D GPS tracking dataset",
+      "Chiroptera GPS altitude",
+      "Chiroptera GPS height",
+      "bat telemetry altitude raw data"
+    ],
+    "repository_specific_queries": [
+      "site:datadryad.org bat GPS altitude",
+      "site:datadryad.org bat GPS height",
+      "site:zenodo.org bat GPS altitude",
+      "site:zenodo.org bat GPS height",
+      "site:figshare.com bat GPS altitude",
+      "site:figshare.com bat GPS height"
+    ],
+    "search_rule": "screen all unique datasets returned by the frozen query set in the search snapshot; do not stop after finding a favorable candidate"
+  },
+  "metadata_admission": {
+    "taxon": "Chiroptera",
+    "required": [
+      "event-level or fix-level tracking table",
+      "individual identifier",
+      "timestamp or deterministic session identifier",
+      "horizontal coordinates or projected x-y",
+      "a source vertical field whose presence and semantics can be established without reading numeric vertical values",
+      "at least potentially repeated observations from multiple individuals"
+    ],
+    "exclude": [
+      "summary-only tables without event-level records",
+      "vertical field absent",
+      "single-individual studies",
+      "known duplicate/republication of an already-opened source",
+      "vertical values visible only in a figure with no raw event data",
+      "source whose species/individual identity cannot be resolved outcome-blind"
+    ]
+  },
+  "outcome_blind_screening": {
+    "allowed_before_vertical_opening": [
+      "column names",
+      "file metadata and checksums",
+      "individual IDs",
+      "timestamps",
+      "horizontal coordinates",
+      "vertical-field presence/nonblank status",
+      "source documentation of vertical reference",
+      "nonvertical structural support",
+      "nonvertical horizontal-identity metrics"
+    ],
+    "forbidden_before_vertical_opening": [
+      "parse, summarize or plot numeric altitude/height",
+      "select sources or subsets based on vertical effect",
+      "alter session/fix/support thresholds after vertical outcome",
+      "rank candidate sources by expected vertical individuality"
+    ]
+  },
+  "source_level_vertical_design": {
+    "default_horizontal_projection": "appropriate local metric CRS frozen per source before vertical opening",
+    "primary_grid_m": 5000,
+    "session_centering": "subtract full retained session median of the source vertical field",
+    "centered_height_edges_m": ["-inf", -400, -200, -100, -50, 0, 50, 100, 200, 400, "inf"],
+    "minimum_presence_qualified_fixes_per_session": 50,
+    "minimum_common_support_target_events": 50,
+    "minimum_estimator_evaluable_individuals": 5,
+    "self_profile": "equal other eligible sessions of same individual",
+    "other_profile": "pool sessions within each other individual then equal-weight other individuals",
+    "common_cell_weighting": "identical self-derived common-cell weights for self and other profiles",
+    "null": "whole-session identity permutation within the narrowest source-native taxon/cohort stratum frozen before vertical opening",
+    "B": 9999,
+    "source_primary_estimand": "observed common-cell centered identity minus permutation-null mean",
+    "source_primary_pass": "calibrated excess > 0 and one-sided p(null >= observed) <= 0.05"
+  },
+  "horizontal_axis_metric": {
+    "purpose": "quantify horizontal individuality without using vertical outcomes, so spatial axes can be compared prospectively",
+    "metric": "held-out same-individual versus other-individual predictive advantage for 5-km horizontal-cell occupancy using whole-session identity permutation",
+    "timing": "must be computed and frozen before numeric vertical values are opened for each new source",
+    "report": [
+      "observed horizontal identity advantage",
+      "permutation-null mean",
+      "calibrated excess",
+      "null-standardized deviation",
+      "one-sided p"
+    ]
+  },
+  "comparative_questions": {
+    "Q1": "How heterogeneous is centered vertical-individuality effect size across new independent bat tracking sources?",
+    "Q2": "Do horizontal identity and centered vertical identity occupy the same axis, or can their calibrated effects dissociate prospectively?",
+    "Q3": "Which predeclared ecological trait families should be tested in a later stage as predictors of centered vertical individuality expression?"
+  },
+  "cross_source_rules": {
+    "if_new_sources_lt_5": "report source-level effects and horizontal-vs-vertical bivariate positions descriptively; do not fit cross-source predictor models",
+    "if_new_sources_ge_5": "report median and range of calibrated vertical excess and fraction positive; no population-general p-value is claimed from convenience-source sampling",
+    "if_new_sources_ge_8": "a separately frozen stage-2 contract may test at most one primary cross-source predictor family plus one horizontal-axis covariate; predictor choice must be frozen before opening stage-2 vertical outcomes"
+  },
+  "candidate_predictor_families_for_future_stage_2": [
+    "horizontal individuality / site-fidelity strength",
+    "flight morphology: wing loading and aspect ratio",
+    "foraging / flight guild and clutter regime",
+    "resource vertical complexity",
+    "central-place geometry",
+    "fine atmospheric exposure / environmental variability",
+    "interspecific competition context"
+  ],
+  "claim_boundary": [
+    "This programme is not a rescue of Nyctalus or Hipposideros.",
+    "Historical opened sources may be displayed as anchors but cannot count as new prospective validation sources.",
+    "A new source FAIL is retained and does not trigger source replacement or alternate endpoint selection.",
+    "The programme asks why vertical individuality varies across systems, not whether every source can be made positive."
+  ]
+}
