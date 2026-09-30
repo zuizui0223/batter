@@ -19,8 +19,8 @@ def present(s):
     txt=s.astype(str).str.strip()
     return s.notna() & txt.ne("") & ~txt.str.lower().isin({"na","nan","null","none"})
 
-def resolve_file(c):
-    r=requests.get(c["source"]["landing_url"],headers=UA,timeout=90)
+def resolve_file(c,session):
+    r=session.get(c["source"]["landing_url"],headers=UA,timeout=90)
     r.raise_for_status()
     soup=BeautifulSoup(r.text,"html.parser")
     target=None
@@ -38,10 +38,29 @@ def resolve_file(c):
 
 def main():
     c=json.loads(CONTRACT.read_text())
-    url=resolve_file(c)
-    r=requests.get(url,headers=UA,timeout=180,allow_redirects=True)
-    r.raise_for_status()
-    raw=r.content
+    session=requests.Session()
+    session.headers.update({**UA,"Accept":"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"})
+    url=resolve_file(c,session)
+    headers={**UA,"Referer":c["source"]["landing_url"],"Accept":"text/csv,text/plain,*/*"}
+    candidates=[url]
+    m=re.search(r"/file_stream/(\\d+)",url)
+    if m:
+        fid=m.group(1)
+        candidates += [
+            f"https://datadryad.org/stash/downloads/file_stream/{fid}",
+            f"https://datadryad.org/api/v2/files/{fid}/download",
+            f"https://datadryad.org/api/v2/files/{fid}/content",
+        ]
+    raw=None
+    attempts=[]
+    for u in candidates:
+        rr=session.get(u,headers=headers,timeout=180,allow_redirects=True)
+        attempts.append({"url":u,"status":rr.status_code,"content_type":rr.headers.get("content-type","")})
+        if rr.status_code==200 and len(rr.content)>1000 and b"," in rr.content[:1000]:
+            raw=rr.content
+            break
+    if raw is None:
+        raise RuntimeError(f"no public Dryad download route succeeded: {attempts}")
     sha=hashlib.sha256(raw).hexdigest()
 
     df=pd.read_csv(io.BytesIO(raw),dtype=str,low_memory=False)
