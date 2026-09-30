@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-nyctalus-central-place-preflight-v1",
+  "frozen_date": "2026-09-30",
+  "status": "post-outcome structural preflight; vertical outcome not used for bin selection",
+  "source": {
+    "record_id": 7535030,
+    "doi": "10.5281/zenodo.7535030",
+    "file": "Observed_GPS_locations.csv",
+    "sha256": "2f373d47706c5b56313de70b623bb5446f5925c69af30f1b145993419e382aa9"
+  },
+  "question": "Can centered vertical identity be evaluated after additionally matching distance from track start within 5-km cell x source HMM state?",
+  "fixed_nonvertical_context": {
+    "cohort": "Year x field_period",
+    "session": "trackid",
+    "individual": "bat_id",
+    "valid_move_states": ["ARM", "COM"],
+    "horizontal_grid_m": 5000,
+    "dist_start_units": "km, validated independently against source x-y coordinates",
+    "minimum_supported_target_events": 50
+  },
+  "candidate_distance_bins_km": {
+    "near_only": [0, 0.5, "inf"],
+    "near_intermediate": [0, 0.5, 2, "inf"],
+    "near_mid_far": [0, 0.5, 2, 5, "inf"]
+  },
+  "selection_rule": {
+    "reference_state_5km_evaluable_n": 27,
+    "minimum_retained_fraction": 0.70,
+    "minimum_evaluable_individuals": 5,
+    "required_n": 19,
+    "choose": "the finest candidate binset with >=19 evaluable individuals; if none, structural STOP with no vertical test"
+  },
+  "vertical_blindness": {
+    "numeric_height_values_allowed": false,
+    "allowed_height_operation": "presence/nonblank only",
+    "prohibited": [
+      "parse or summarize Height",
+      "change distance thresholds after support counts",
+      "change minimum target events",
+      "switch to a different central-place proxy after failure"
+    ]
+  },
+  "future_test_if_pass": {
+    "paired_models": [
+      "base: P(centered z | 5-km cell x source HMM state)",
+      "context: P(centered z | 5-km cell x source HMM state x frozen distance-from-start bin)"
+    ],
+    "target_matching": "score both models on exactly the same context-supported target events",
+    "interpretation": "a negative calibrated paired increment would support central-place flight-stage allocation as a contributor"
+  },
+  "claim_boundary": [
+    "dist_start is distance from source-track start, not independently verified roost distance",
+    "this preflight selects by support only and uses no numeric vertical outcome",
+    "any later vertical test remains post-outcome mechanism localization, not prospective replication"
+  ]
+}

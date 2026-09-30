@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-nyctalus-central-place-attribution-v1",
+  "frozen_date": "2026-09-30",
+  "status": "post-outcome paired-support central-place mechanism attribution; frozen before vertical paired output",
+  "role": "test whether distance from track start explains centered vertical individuality beyond 5-km place and source HMM state",
+  "source": {
+    "record_id": 7535030,
+    "doi": "10.5281/zenodo.7535030",
+    "file": "Observed_GPS_locations.csv",
+    "sha256": "2f373d47706c5b56313de70b623bb5446f5925c69af30f1b145993419e382aa9"
+  },
+  "structural_preflight": {
+    "run_id": 36700126597,
+    "selected_binset": "near_mid_far",
+    "distance_bins_km": [0, 0.5, 2, 5, "inf"],
+    "expected_evaluable_individuals": 22
+  },
+  "fixed_context": {
+    "cohort": "Year x field_period",
+    "session": "trackid",
+    "individual": "bat_id",
+    "valid_source_states": ["ARM", "COM"],
+    "horizontal_grid_m": 5000,
+    "distance_field": "dist_start",
+    "distance_units": "km",
+    "vertical_centering": "full retained source-track median before ARM/COM filtering",
+    "vertical_edges_m": ["-inf", -400, -200, -100, -50, 0, 50, 100, 200, 400, "inf"],
+    "alpha": 0.5,
+    "minimum_scored_target_events": 50
+  },
+  "paired_estimand": {
+    "event_pool": "only ARM/COM events with valid dist_start; both models use identical events",
+    "base_model": "P(centered z | 5-km cell x source HMM state)",
+    "context_model": "P(centered z | 5-km cell x source HMM state x frozen distance-from-track-start bin)",
+    "target_support": "score both models only on target events whose full context stratum is supported in both self and other context profiles and whose corresponding base stratum is supported in both base profiles",
+    "target_matching": "identical target events for base and context models",
+    "self_weighting": "equal eligible training source track",
+    "other_weighting": "pool tracks within each other bat, then equal-weight other bats within cohort",
+    "target_aggregation": "equal target track within bat, then equal bat",
+    "paired_increment": "context-conditioned identity gain minus base HMM-state identity gain; negative indicates attenuation after central-place conditioning"
+  },
+  "calibration": {
+    "permutation_unit": "whole source-track identity labels",
+    "scope": "within Year x field_period cohort",
+    "preserve": "track x-y-HMM-state-dist_start-centered-z block and exact per-cohort track-count multiset per identity",
+    "B": 4999,
+    "seed": 2026093004,
+    "primary_test": "observed paired central-place increment < permutation null mean and one-sided p(null <= observed) <= 0.05",
+    "exact_n_required": 22
+  },
+  "interpretation_matrix": {
+    "attenuation_PASS": "Distance from track start removes more same-individual predictive advantage than expected on identical support, supporting repeatable central-place flight-stage allocation as a contributor.",
+    "attenuation_FAIL": "Adding distance from track start does not measurably attenuate identity on support-matched events; central-place flight stage is not supported as sufficient explanation at these frozen radial bins."
+  },
+  "claim_boundary": [
+    "dist_start is validated distance from track start, not independently verified distance from daytime roost",
+    "this is post-outcome mechanism localization, not confirmatory replication",
+    "a PASS would support central-place flight-stage allocation as a contributor, not prove it is the sole cause",
+    "a FAIL would not exclude sub-bin route/resource structure or exact roost geometry",
+    "do not change distance bins, grid, HMM-state filter, event minimum, B, seed or tail direction after output"
+  ]
+}
