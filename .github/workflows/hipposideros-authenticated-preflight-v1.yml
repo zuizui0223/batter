@@ -1,6 +1,10 @@
 name: hipposideros-authenticated-preflight-v1
 on:
   workflow_dispatch:
+  push:
+    branches: [prospective/hipposideros-primary-design-v1]
+    paths:
+      - ".github/workflows/hipposideros-authenticated-preflight-v1.yml"
 jobs:
   preflight:
     runs-on: ubuntu-latest
