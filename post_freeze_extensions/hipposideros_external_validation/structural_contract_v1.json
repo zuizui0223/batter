@@ -8,8 +8,14 @@
     "doi": "10.5061/dryad.j0zpc86r1",
     "landing_url": "https://datadryad.org/dataset/doi:10.5061/dryad.j0zpc86r1",
     "file": "GPS_data.csv",
-    "taxa": ["Hipposideros armiger", "Hipposideros pratti"],
-    "published_tracking_n": {"Hipposideros armiger": 9, "Hipposideros pratti": 8}
+    "taxa": [
+      "Hipposideros armiger",
+      "Hipposideros pratti"
+    ],
+    "published_tracking_n": {
+      "Hipposideros armiger": 9,
+      "Hipposideros pratti": 8
+    }
   },
   "fields_expected": {
     "individual": "id",
@@ -37,8 +43,9 @@
     ]
   },
   "session_definition": {
-    "rule": "calendar date encoded by source timestamp; each individual x date is one candidate night/session",
-    "rationale": "source paper reports GPS operation during nightly 20:00-06:00 windows and repeated 7-10-night tracking"
+    "rule": "If source timestamp contains a non-midnight time-of-day, define nocturnal session as calendar date after subtracting 12 hours; if all parsed timestamps are date-only/midnight, use the raw calendar date.",
+    "rationale": "The source paper reports nightly 20:00-06:00 GPS operation. The deterministic 12-hour shift keeps an evening-to-morning bout in one night while avoiding an artificial shift when the archived field is date-only.",
+    "decision_uses_vertical_outcome": false
   },
   "presence_qualified_row": "nonblank id, timestamp, longitude, latitude and height presence; height magnitude remains unread",
   "structural_gate": {
