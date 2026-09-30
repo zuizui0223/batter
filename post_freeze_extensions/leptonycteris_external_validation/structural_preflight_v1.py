@@ -44,7 +44,7 @@ def download_public(c):
     }
     rr=requests.get(url,headers=headers,timeout=180,allow_redirects=True)
     ctype=rr.headers.get("content-type","")
-    xlsx_magic=rr.content.startswith(b"PK\\x03\\x04")
+    xlsx_magic=rr.content.startswith(b"PK\x03\x04")
     attempts=[{"url":url,"status":rr.status_code,"content_type":ctype,"xlsx_magic":xlsx_magic}]
     rr.raise_for_status()
     if len(rr.content)<=1000 or not xlsx_magic:
