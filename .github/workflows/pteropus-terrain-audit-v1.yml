@@ -1,0 +1,43 @@
+name: pteropus-terrain-audit-v1
+on:
+  push:
+    branches: [revision/integrated-ecological-contingency-v1]
+    paths:
+      - "post_freeze_extensions/pteropus_terrain_audit/run_terrain_audit_v1.py"
+      - ".github/workflows/pteropus-terrain-audit-v1.yml"
+  workflow_dispatch:
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -e . pandas numpy requests pyproj
+      - name: Require pinned DEM receipt
+        run: |
+          test -f post_freeze_extensions/pteropus_terrain_audit/dem_preflight_receipt_v1.json || (echo "Missing DEM receipt" && exit 3)
+      - name: Run frozen terrain audit
+        run: python post_freeze_extensions/pteropus_terrain_audit/run_terrain_audit_v1.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: batter-pteropus-terrain-audit-v1
+          path: |
+            post_freeze_extensions/pteropus_terrain_audit/terrain_audit_result_v1.json
+            post_freeze_extensions/pteropus_terrain_audit/TERRAIN_AUDIT_RESULT_V1.md
+          if-no-files-found: error
+      - name: Pin terrain audit result
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add post_freeze_extensions/pteropus_terrain_audit/terrain_audit_result_v1.json post_freeze_extensions/pteropus_terrain_audit/TERRAIN_AUDIT_RESULT_V1.md
+          if git diff --cached --quiet; then
+            echo "No result changes"
+          else
+            git commit -m "Record Pteropus terrain-confound audit"
+            git push origin HEAD:revision/integrated-ecological-contingency-v1
+          fi
