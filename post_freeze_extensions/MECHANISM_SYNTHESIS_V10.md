@@ -407,6 +407,38 @@ Further progress requires a new question or new data, not reinterpretation of th
 
 ---
 
+## 12. External heterogeneity is now the right question — but not yet estimable
+
+The pre-existing external candidate universe now yields:
+
+- *Nyctalus noctula*: structurally evaluable; prospective source-level effect **+0.05175**;
+- *Hipposideros* source: structurally evaluable; prospective source-level effect **-0.04468**;
+- *Leptonycteris nivalis*: **structural FAIL** under the frozen common estimator, with 0 nights reaching >=50 fixes and numeric altitude unopened;
+- *Desmodus rotundus*: sparse external candidate without a comparable source-level effect currently established;
+- remaining screened candidates: fail individual-count, native-vertical, raw-event or tagged-track requirements.
+
+Thus only **two independent external systems** currently provide comparable centered-identity effects.
+
+That is enough to reject a simple universality narrative, because the two frozen prospective effects differ in direction.
+
+It is **not** enough to estimate a stable between-system effect distribution or test ecological predictors of heterogeneity.
+
+Therefore do not fit:
+- a random-effects meta-analysis and interpret tau as a population estimate;
+- source-level meta-regression;
+- ecological predictor selection;
+- rankings of systems by individuality.
+
+A future heterogeneity programme must first increase the number of independent, structurally comparable systems under a source universe and stopping rule frozen before their vertical outcomes are opened.
+
+The next programme should ask:
+
+> **What predicts whether horizontal fidelity, absolute vertical level, and centered vertical shape become individualized in the same or different ecological systems?**
+
+See `EXTERNAL_HETEROGENEITY_FEASIBILITY_V1.md`.
+
+---
+
 ## Final position
 
 The complete programme now supports five levels of inference.
