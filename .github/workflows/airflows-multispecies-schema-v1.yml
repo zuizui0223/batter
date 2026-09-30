@@ -1,0 +1,40 @@
+name: airflows-multispecies-schema-v1
+on:
+  push:
+    branches: [prospective/airflows-multispecies-schema-v1]
+    paths:
+      - "post_freeze_extensions/comparative_generality/airflows/**"
+      - ".github/workflows/airflows-multispecies-schema-v1.yml"
+  workflow_dispatch:
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install pandas requests remotezip
+      - name: Run nonvertical multispecies schema audit
+        run: python post_freeze_extensions/comparative_generality/airflows/run_schema_audit_v1.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: batter-airflows-multispecies-schema-v1
+          path: |
+            post_freeze_extensions/comparative_generality/airflows/schema_result_v1.json
+            post_freeze_extensions/comparative_generality/airflows/SCHEMA_RESULT_V1.md
+          if-no-files-found: error
+      - name: Pin schema audit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add             post_freeze_extensions/comparative_generality/airflows/schema_result_v1.json             post_freeze_extensions/comparative_generality/airflows/SCHEMA_RESULT_V1.md
+          if git diff --cached --quiet; then
+            echo "No schema changes"
+          else
+            git commit -m "Record Airflows multispecies nonvertical schema audit"
+            git push origin HEAD:prospective/airflows-multispecies-schema-v1
+          fi
