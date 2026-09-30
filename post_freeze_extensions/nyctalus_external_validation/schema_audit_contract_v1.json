@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-nyctalus-schema-audit-v1",
+  "frozen_date": "2026-09-30",
+  "status": "outcome-blind schema/context audit frozen before any numeric Height values",
+  "source": {
+    "repository": "Zenodo",
+    "doi": "10.5281/zenodo.7535030",
+    "record_id": 7535030,
+    "file": "Observed_GPS_locations.csv",
+    "sha256": "2f373d47706c5b56313de70b623bb5446f5925c69af30f1b145993419e382aa9",
+    "taxon": "Nyctalus noctula"
+  },
+  "allowed_reads": [
+    "column names",
+    "bat_id",
+    "trackid",
+    "utc timestamps",
+    "non-vertical categorical context fields",
+    "longitude/latitude or UTM x-y",
+    "blank/nonblank presence of Height"
+  ],
+  "prohibited_reads": [
+    "numeric Height magnitudes",
+    "vertical summaries",
+    "any self-vs-other vertical score"
+  ],
+  "context_goal": "Identify an outcome-blind cohort definition for whole-track identity exchangeability. Prefer explicit site/season/year fields if present; otherwise use source-method calendar year × source-defined spring(May-Jun)/late-summer(Aug-Sep).",
+  "stop_rule": "Do not revise cohort definition after numeric Height values or any vertical outcome are opened."
+}
