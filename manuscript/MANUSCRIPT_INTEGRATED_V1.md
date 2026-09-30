@@ -329,6 +329,28 @@ Woo, K.J., Elliott, K.H., Davidson, M., Gaston, A.J. & Davoren, G.K. (2008). Ind
 
 Xing, S., Leahy, L., Ashton, L.A., Kitching, R.L., Bonebrake, T.C. & Scheffers, B.R. (2023). Ecological patterns and processes in the vertical dimension of terrestrial ecosystems. *Journal of Animal Ecology*, **92**, 538–551. https://doi.org/10.1111/1365-2656.13881
 
+## Data sources
+
+Bayer, T.D., Barría, L.M., Gómez, L.F., Lee, J.P., Aguilar, G. & O'Mara, M.T. (2024). Data from: Consistent long-distance foraging flights across years and seasons at colony level in a Neotropical bat [2023] [Dataset]. Movebank Data Repository. https://doi.org/10.5441/001/1.322
+
+Boardman, W.S.J. & Roshier, D. (2020). Data from: Spring foraging movements of an urban population of grey-headed flying foxes (*Pteropus poliocephalus*) [Dataset]. Movebank Data Repository. https://doi.org/10.5441/001/1.5bd6pq55
+
+Calderón-Capote, M.C., van Toor, M.L., O'Mara, M.T., Bayer, T.D., Crofoot, M.C. & Dechmann, D.K.N. (2024). Data from: Consistent long-distance foraging flights across years and seasons at colony level in a Neotropical bat [2021–2022] [Dataset]. Movebank Data Repository. https://doi.org/10.5441/001/1.321
+
+Hurme, E., Gurarie, E., Greif, S., Herrera M., L.G., Flores-Martínez, J.J., Wilkinson, G.S. & Yovel, Y. (2019). Data from: Acoustic evaluation of behavioral states predicted from GPS tracking: a case study of a marine fishing bat [Dataset]. Movebank Data Repository. https://doi.org/10.5441/001/1.kk3bg2f4
+
+O'Mara, M.T., Amorim, F., McCracken, G.F., Mata, V., Safi, K., Wikelski, M., Beja, P., Rebelo, H. & Dechmann, D.K.N. (2021). Data from: European free-tailed bats use topography and nocturnal updrafts to fly high and fast [Dataset]. Movebank Data Repository. https://doi.org/10.5441/001/1.52nn82r9
+
+O'Mara, M.T. & Dechmann, D.K.N. (2023). Data from: Greater spear nosed bats commute long distances alone, rest together, but forage apart [Dataset]. Movebank Data Repository. https://doi.org/10.5441/001/1.282
+
+Reusch, C., Paul, A.A., Fritze, M., Kramer-Schadt, S. & Voigt, C.C. (2023). Annotated GPS locations [Dataset]. Zenodo. https://doi.org/10.5281/zenodo.7535030
+
+Scharf, A.K., Fahr, J., Abedi-Lartey, M., Safi, K., Dechmann, D.K.N., Wikelski, M. & O'Mara, M.T. (2019). Data from: Overall dynamic body acceleration in straw-colored fruit bats increases in headwinds but not with airspeed [Dataset]. Movebank Data Repository. https://doi.org/10.5441/001/1.k8n02jn8
+
+Schloesing, E., Caron, A., Chambon, R., Courbin, N., Labadie, M., Nina, R., Mouiti Mbadinga, F., Ngoubili, W., Sandiala, D. & N'Kaya Tobi (2024). Data from: Foraging and mating behaviors of *Hypsignathus monstrosus* at the bat-human interface in a central African rainforest [Dataset]. Movebank Data Repository. https://doi.org/10.5441/001/1.278
+
+Si, M., Wang, Z., Feng, J. & Jiang, T. (2025). Data from: Individual asymmetric competition responses across multidimensional niches may enable coexistence of closely related species [Dataset]. Dryad. https://doi.org/10.5061/dryad.j0zpc86r1
+
 ## Figure legends
 
 **Figure 1. Identifying vertical individuality and its ecological boundary.** Conceptual workflow showing four inferential stages: identical coarse horizontal-cell weighting of self and other vertical profiles; session centering to remove absolute altitude level; secondary matching of measured place, movement state and temporal separation; and prospective external tests. The final panel distinguishes established results from the post-hoc resource-anchoring × vertical-opportunity hypothesis.
@@ -347,7 +369,6 @@ This study is a secondary analysis of publicly archived animal-tracking data and
 
 ## Data and code availability
 
-All tracking data analysed here are publicly archived in source repositories. The original comparative archive is available through the Movebank Data Repository: *Tadarida teniotis* (10.5441/001/1.52nn82r9), *Eidolon helvum* (10.5441/001/1.k8n02jn8), *Hypsignathus monstrosus* (10.5441/001/1.278), and *Phyllostomus hastatus* panels (10.5441/001/1.282, 10.5441/001/1.321 and 10.5441/001/1.322). Exact source bitstreams and checksums are recorded in the repository contracts and provenance files.
+All tracking data are publicly archived under persistent identifiers; full dataset citations are given in **Data sources**. Exact source bitstreams and checksums are recorded in the frozen provenance files.
 
-All analysis code, frozen contracts, source-screen records, calibration history, result summaries and figure-generation scripts will be available in a permanent versioned archive. The repository identifier is withheld from the reviewer-facing manuscript for double-anonymized peer review and will be restored in the accepted/public version. The sequential external programme additionally uses the public *Nyctalus noctula* Zenodo archive (10.5281/zenodo.7535030), *Hipposideros armiger / H. pratti* Dryad archive (10.5061/dryad.j0zpc86r1), *Myotis vivesi* Movebank archive (10.5441/001/1.kk3bg2f4), and *Pteropus poliocephalus* Movebank archive (10.5441/001/1.5bd6pq55); complete source and checksum ledgers are retained in the archived analysis record.
-
+All analysis code, contracts, source-screen records, calibration history, result summaries and figure-generation scripts will be available in a permanent versioned archive. The repository identifier is withheld from the reviewer-facing manuscript for double-anonymized review and will be restored in the public version. Complete source and checksum ledgers are retained in the archived analysis record.
