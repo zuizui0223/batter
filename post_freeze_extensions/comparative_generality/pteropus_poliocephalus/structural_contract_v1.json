@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-pteropus-poliocephalus-structural-v1",
+  "frozen_date": "2026-09-30",
+  "status": "outcome-blind structural preflight after header PASS and before numeric height-above-msl",
+  "programme": "batter-comparative-generality-program-v1",
+  "source": {
+    "doi": "10.5441/001/1.5bd6pq55",
+    "taxon": "Pteropus poliocephalus",
+    "bitstream_id": "792122ca-c534-4607-81d4-1154cb7a5196",
+    "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/792122ca-c534-4607-81d4-1154cb7a5196/content",
+    "vertical_field": "height-above-msl"
+  },
+  "presence_qualified_row": [
+    "nonblank timestamp",
+    "nonblank location-long",
+    "nonblank location-lat",
+    "nonblank individual-local-identifier",
+    "nonblank height-above-msl presence only"
+  ],
+  "source_quality_filter": {
+    "algorithm_marked_outlier": "if column present, exclude rows whose normalized value is true/1/t/yes/y",
+    "visible": "do not additionally filter when explicit algorithm-marked-outlier is available"
+  },
+  "allowed_numeric_fields": [
+    "timestamp",
+    "location-long",
+    "location-lat"
+  ],
+  "prohibited": [
+    "parse or summarize height-above-msl",
+    "inspect ground-speed or accelerations",
+    "change session threshold after structure is known"
+  ],
+  "session_screen": {
+    "definition": "within each individual, order presence-qualified rows by timestamp and start a new session whenever the gap from the preceding retained row is >4 hours",
+    "minimum_presence_qualified_events_per_session": 50,
+    "repeat_individual": "at least two >=50-event sessions",
+    "minimum_repeat_individuals_for_candidate": 5
+  },
+  "decision_rule": {
+    "PASS_TO_SOURCE_PREFLIGHT": "repeat_individual_count >= 5",
+    "STRUCTURAL_STOP": "repeat_individual_count < 5"
+  },
+  "claim_boundary": [
+    "This is the final unresolved candidate in comparative-generality v1.",
+    "Height magnitude remains unopened.",
+    "A structural STOP closes the frozen search universe without threshold rescue.",
+    "A PASS only admits a separately frozen horizontal/common-support preflight."
+  ]
+}
