@@ -49,8 +49,10 @@ def download_public(c):
     attempts=[]
     for u in candidates:
         rr=session.get(u,headers=headers,timeout=180,allow_redirects=True)
-        attempts.append({"url":u,"status":rr.status_code,"content_type":rr.headers.get("content-type","")})
-        if rr.status_code==200 and len(rr.content)>1000:
+        ctype=rr.headers.get("content-type","")
+        xlsx_magic=rr.content.startswith(b"PK\\x03\\x04")
+        attempts.append({"url":u,"status":rr.status_code,"content_type":ctype,"xlsx_magic":xlsx_magic})
+        if rr.status_code==200 and len(rr.content)>1000 and xlsx_magic:
             return rr.content,attempts
     raise RuntimeError(f"no public Dryad download route succeeded: {attempts}")
 
