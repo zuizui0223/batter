@@ -1,0 +1,27 @@
+name: external-bat-candidate-screen-v1
+on:
+  push:
+    branches: [prospective/external-bat-panel-search-v1]
+    paths:
+      - "post_freeze_extensions/external_panel_search/**"
+      - ".github/workflows/external-bat-candidate-screen-v1.yml"
+  workflow_dispatch:
+jobs:
+  screen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions: {contents: read}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: python -m pip install requests openpyxl
+      - name: Run outcome-blind Dryad structural screen
+        run: python post_freeze_extensions/external_panel_search/screen_candidates_v1.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: batter-external-candidate-screen-v1
+          path: |
+            post_freeze_extensions/external_panel_search/candidate_screen_result_v1.json
+            post_freeze_extensions/external_panel_search/CANDIDATE_SCREEN_RESULT_V1.md
+          if-no-files-found: error
