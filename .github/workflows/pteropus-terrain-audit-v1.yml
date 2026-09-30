@@ -39,5 +39,7 @@ jobs:
             echo "No result changes"
           else
             git commit -m "Record Pteropus terrain-confound audit"
+            git fetch origin revision/integrated-ecological-contingency-v1
+            git rebase origin/revision/integrated-ecological-contingency-v1
             git push origin HEAD:revision/integrated-ecological-contingency-v1
           fi
