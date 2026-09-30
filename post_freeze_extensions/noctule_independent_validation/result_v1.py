@@ -179,7 +179,7 @@ def main():
         "**PROSPECTIVE EXTERNAL VALIDATION. Source selected and structural eligibility frozen before numeric Height was opened.**","",
         f"- evaluable individual×cohort units: **{observed['eligible_individuals']}**",
         f"- observed centered common-cell identity: **{observed['common_cell_marginal']:+.4f} nats/fix**",
-        f"- null mean: **{primary['null_mean']:+.4f}**",
+        f"- null mean: **{primary['mean']:+.4f}**",
         f"- calibrated excess: **{primary['observed_minus_null_mean']:+.4f}**",
         f"- p(null >= observed): **{primary['p_null_ge_observed']:.5f}**",
         f"- frozen primary verdict: **{'PASS' if passed else 'FAIL'}**","",
