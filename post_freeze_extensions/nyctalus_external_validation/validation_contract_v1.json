@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-nyctalus-independent-validation-v1",
+  "frozen_date": "2026-09-30",
+  "status": "fully prospective independent vertical validation contract frozen after source admission/schema/preflight and before numeric Height values",
+  "source": {
+    "taxon": "Nyctalus noctula",
+    "repository": "Zenodo",
+    "doi": "10.5281/zenodo.7535030",
+    "record_id": 7535030,
+    "file": "Observed_GPS_locations.csv",
+    "sha256": "2f373d47706c5b56313de70b623bb5446f5925c69af30f1b145993419e382aa9",
+    "study": "Wind energy production in forests conflicts with tree-roosting bats",
+    "independent_of_discovery_sources": true
+  },
+  "frozen_context": {
+    "cohort": "Year × field_period",
+    "session": "trackid",
+    "individual": "bat_id",
+    "x": "source x",
+    "y": "source y",
+    "native_vertical": "Height",
+    "vertical_reference": "GPS-estimated height above geoid / mean sea level",
+    "source_move_state": "move_state",
+    "valid_move_states": [
+      "ARM",
+      "COM"
+    ],
+    "undefined_move_state": "excluded only from state-conditioned test"
+  },
+  "vertical_processing": {
+    "fail_closed_parse": "Every structurally retained nonblank Height must parse to a finite numeric value. Any parse/nonfinite failure aborts; rows are not silently dropped after preflight.",
+    "session_centering": "subtract the median Height of every full retained source track before vertical binning",
+    "centered_height_edges_m": [
+      "-inf",
+      -400,
+      -200,
+      -100,
+      -50,
+      0,
+      50,
+      100,
+      200,
+      400,
+      "inf"
+    ],
+    "absolute_height_test": false,
+    "rationale": "Track median centering removes additive track/tag altitude level and makes the external test target vertical-distribution organization rather than absolute altitude."
+  },
+  "estimator_common": {
+    "alpha": 0.5,
+    "minimum_scored_target_events": 50,
+    "self_profile_weighting": "equal source track among other tracks of the same bat within the same cohort",
+    "other_profile_weighting": "first pool sessions within each other bat, then equal-weight other bats within cohort",
+    "common_weighting": "On target-supported strata available in both predictors, derive an equal-track self training stratum distribution and apply the identical stratum weights to self and other vertical profiles.",
+    "target_aggregation": "equal target track within original bat, then equal original bat across the panel",
+    "score": "mean target log P_self(z) - log P_other(z) under the identical common stratum weights"
+  },
+  "primary_external_replication": {
+    "name": "centered_5km_identity",
+    "expected_observed_evaluable_individuals": 36,
+    "horizontal_grid_m": 5000,
+    "stratum": "5-km x-y cell",
+    "response": "full centered vertical distribution",
+    "permutation": {
+      "unit": "whole source track",
+      "scope": "within Year × field_period cohort",
+      "action": "permute bat identity labels across tracks while preserving the exact track-count multiset per identity; keep x-y, timestamp, centered Height outcomes and track membership fixed",
+      "B": 9999,
+      "seed": 2026093001
+    },
+    "pass_rule": "observed exact n=36; observed-minus-null-mean common-stratum identity > 0; one-sided p(null >= observed) <= 0.05"
+  },
+  "independent_mechanism_replication": {
+    "name": "centered_5km_source_move_state_identity",
+    "expected_observed_evaluable_individuals": 27,
+    "horizontal_grid_m": 5000,
+    "stratum": "5-km x-y cell × source HMM move_state",
+    "event_filter": "move_state in {ARM, COM}; undefined excluded before profile construction",
+    "ecological_question": "Does same-individual vertical organization persist within the source study's independently classified commuting/area-restricted movement states?",
+    "permutation": {
+      "unit": "whole source track",
+      "scope": "within Year × field_period cohort",
+      "action": "same whole-track identity exchangeability null; source move_state remains attached to each event/track",
+      "B": 9999,
+      "seed": 2026093002
+    },
+    "pass_rule": "observed exact n=27; observed-minus-null-mean common-stratum identity > 0; one-sided p(null >= observed) <= 0.05"
+  },
+  "stopped_families": {
+    "state_500m": "preflight n=10 < frozen required 19; do not open Height outcome",
+    "persistence_1d": "preflight n=7 < frozen required 19; do not open Height outcome",
+    "no_new_grid_or_lag": true
+  },
+  "prospective_interpretation_matrix": {
+    "primary_PASS_state_PASS": "Independent external replication of centered individual vertical organization, with persistence within independently classified horizontal movement state. This materially strengthens a stable within-context individuality interpretation.",
+    "primary_PASS_state_FAIL": "Independent centered individuality replicates, but the external source does not establish persistence within source movement states; behavioural-state mixture remains a plausible contributor.",
+    "primary_FAIL": "The centered-individuality rule does not independently replicate in Nyctalus under the frozen estimator. Do not rescue with alternate bins, grids, cohorts, states or endpoints.",
+    "primary_FAIL_state_PASS": "Treat as internally inconsistent secondary evidence; the preregistered primary failure governs the external validation conclusion."
+  },
+  "claim_boundary": [
+    "This is an external validation of the statistical/ecological rule, not proof of a universal bat mechanism.",
+    "Source HMM ARM/COM states are independently generated behavioural proxies, but not exact resource identity.",
+    "A state-conditioned PASS does not prove morphology, memory, learning, personality or causal intrinsic phenotype.",
+    "No result may be generalized to 500-m matching or multi-day persistence because those families failed structural preflight.",
+    "The frozen v0.3.8 submission on main remains unchanged unless a separate post-validation manuscript decision is made."
+  ],
+  "stop_rule": [
+    "Do not change cohort, track definition, 5-km grid, vertical bins, alpha, common weighting, event minimum, expected n, state filter, B/seeds or pass rules after Height is opened.",
+    "Do not add absolute-height, 500-m, lag, alternative movement-state, sex/age, turbine-distance or other rescue analyses in this validation family.",
+    "If source SHA changes or exact observed n fails, stop and audit rather than retune."
+  ]
+}
