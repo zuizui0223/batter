@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-nyctalus-independent-validation-v1",
+  "authoritative_workflow": {
+    "run_id": 36668803219,
+    "head_sha": "6371c42acf01ae9aa87c639047881fcae9e53001",
+    "artifact_id": 11077433129,
+    "artifact_digest": "sha256:16bd0f7455a54f59fcb2aff82e88fd784f9c9689d5f82313a0788456357dd639"
+  },
+  "source": {
+    "taxon": "Nyctalus noctula",
+    "doi": "10.5281/zenodo.7535030",
+    "file": "Observed_GPS_locations.csv",
+    "sha256": "2f373d47706c5b56313de70b623bb5446f5925c69af30f1b145993419e382aa9"
+  },
+  "prospective_contract_frozen_before_numeric_height": true,
+  "primary_5km_centered": {
+    "n": 36,
+    "observed": 0.005267890839134833,
+    "null_mean": -0.08073708672972885,
+    "calibrated_excess": 0.08600497756886367,
+    "p": 0.0115,
+    "pass": true
+  },
+  "state_5km_ARM_COM": {
+    "n": 27,
+    "observed": 0.02400701022966298,
+    "null_mean": -0.026729755191433262,
+    "calibrated_excess": 0.050736765421096244,
+    "p": 0.0707,
+    "pass": false
+  },
+  "synthesis_key": "primary_PASS_state_FAIL",
+  "interpretation": "Independent centered individuality replicates, but the external source does not establish persistence within source movement states; behavioural-state mixture remains a plausible contributor.",
+  "stopped_families": {
+    "state_500m": "not opened; structural preflight failed",
+    "persistence_1d": "not opened; structural preflight failed"
+  },
+  "main_submission_unchanged": true
+}
