@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-external-bat-panel-search-v1",
+  "authoritative_screen": {
+    "workflow_run_id": 36625875776,
+    "head_sha": "96a1753c0f7251dcec2101af82051051b3c6e3fe",
+    "artifact_id": 11060441382,
+    "artifact_digest": "sha256:013272ffa19574500e4b0ab998171b5718df30c6ae4bd4b800d36033f9f817c3"
+  },
+  "numeric_vertical_values_used_for_admission": false,
+  "admitted_source": {
+    "taxon": "Nyctalus noctula",
+    "repository": "Zenodo",
+    "doi": "10.5281/zenodo.7535030",
+    "study_title": "Wind energy production in forests conflicts with tree-roosting bats",
+    "file": "Observed_GPS_locations.csv",
+    "sha256": "2f373d47706c5b56313de70b623bb5446f5925c69af30f1b145993419e382aa9",
+    "row_count": 8129,
+    "rows_with_id_xy_native_vertical_presence": 8129,
+    "individual_count": 60,
+    "track_count": 107,
+    "tracks_ge50": 76,
+    "individuals_with_any_track_ge50": 46,
+    "repeat_individuals_ge2_tracks_ge50": 30,
+    "id_field": "bat_id",
+    "track_field": "trackid",
+    "time_field": "utc",
+    "native_vertical_field": "Height",
+    "vertical_reference": "GPS-estimated height above geoid / mean sea level",
+    "admission_status": "PASS"
+  },
+  "search_status": "CLOSED_WITH_ONE_ADMITTED_EXTERNAL_SOURCE",
+  "next_step": "Freeze prospective Nyctalus independent-validation contract before reading numeric Height values."
+}
