@@ -8,6 +8,7 @@ The frozen v0.3.8 JAE submission on `main` is unchanged.
 - `mechanism_status_v10.json` — machine-readable current status;
 - `MECHANISM_CLAIM_LEDGER_V10.md` — strongest defensible claims and claim ceilings;
 - `SPATIAL_INDIVIDUALITY_AXES_V1.md` — horizontal fidelity, absolute vertical level and centered vertical shape as separable axes;
+- `EXTERNAL_HETEROGENEITY_FEASIBILITY_V1.md` — why heterogeneity is now the right question but k=2 external effects are not enough to model it;
 - `HIPPOSIDEROS_PRIMARY_CLOSEOUT_V1.md` — prospective Hipposideros primary FAIL and no-rescue closeout;
 - `LEPTONYCTERIS_STRUCTURAL_RESULT_V1.md` — outcome-blind structural FAIL with Altitude unopened;
 - `NYCTALUS_VALIDATION_HISTORY_V1.md` — complete Nyctalus inferential chronology;
