@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-pteropus-poliocephalus-source-v1",
+  "frozen_date": "2026-09-30",
+  "status": "prospective source-specific nonvertical preflight frozen before numeric height-above-msl is parsed",
+  "programme": "batter-comparative-generality-program-v1",
+  "source": {
+    "repository": "Movebank Data Repository",
+    "doi": "10.5441/001/1.5bd6pq55",
+    "taxon": "Pteropus poliocephalus",
+    "event_bitstream_id": "792122ca-c534-4607-81d4-1154cb7a5196",
+    "event_url": "https://datarepository.movebank.org/server/api/core/bitstreams/792122ca-c534-4607-81d4-1154cb7a5196/content",
+    "vertical_field": "height-above-msl",
+    "vertical_semantics": "source-native GPS height above mean sea level"
+  },
+  "outcome_blind_rows": {
+    "required_presence": [
+      "timestamp",
+      "location-long",
+      "location-lat",
+      "individual-local-identifier",
+      "height-above-msl"
+    ],
+    "allowed_nonvertical": [
+      "timestamp",
+      "location-long",
+      "location-lat",
+      "individual-local-identifier",
+      "visible",
+      "algorithm-marked-outlier"
+    ],
+    "height_operation": "presence/nonblank only; never numeric parse before receipt",
+    "source_quality_filters": [
+      "if visible is present and interpretable, exclude explicit false rows",
+      "if algorithm-marked-outlier is present and interpretable, exclude explicit true rows"
+    ]
+  },
+  "session": {
+    "rule": "within individual, sort retained events by timestamp and split whenever consecutive gap >4 hours",
+    "rationale": "identical to the already-frozen raw Movebank candidate screen; no new session rule is introduced",
+    "minimum_presence_qualified_events": 50,
+    "repeat_individual": "at least two >=50-event sessions"
+  },
+  "projection": {
+    "rule": "derive UTM zone from median retained longitude/latitude before numeric vertical opening",
+    "grid_m": 5000,
+    "origin": "native UTM origin"
+  },
+  "horizontal_individuality": {
+    "role": "prospective nonvertical axis metric opened before vertical magnitude",
+    "alpha": 0.5,
+    "cell_universe": "all frozen 5-km cells in >=50-event repeat-individual session universe",
+    "self_profile": "equal-weight other eligible sessions of same individual, Jeffreys-smoothed over frozen cell universe",
+    "other_profile": "pool sessions within each other individual, smooth over same cell universe, then equal-weight other individuals",
+    "target_score": "mean target-event log P_self(cell) - log P_other(cell)",
+    "aggregation": "equal target session within individual, then equal individual",
+    "minimum_target_events": 50,
+    "null": "whole-session identity permutation preserving exact session-count multiset per identity",
+    "B": 9999,
+    "seed": 20260930131
+  },
+  "vertical_structural_gate": {
+    "training_universe": "all >=50-event sessions of repeat-eligible individuals",
+    "target_common_support": "target event's 5-km cell must occur in at least one other eligible session of same individual and at least one eligible session of another individual",
+    "minimum_supported_target_events": 50,
+    "estimator_evaluable_individual": "at least one target session with >=50 common-support events",
+    "minimum_estimator_evaluable_individuals": 5,
+    "freeze_before_vertical": [
+      "event file SHA256",
+      "projection EPSG and cell universe",
+      "repeat-eligible IDs and all eligible sessions",
+      "horizontal individuality result",
+      "exact vertically evaluable target sessions and support counts"
+    ]
+  },
+  "future_vertical_primary": {
+    "field": "height-above-msl",
+    "session_centering": "subtract full frozen session median height-above-msl",
+    "centered_edges_m": [
+      "-inf",
+      -400,
+      -200,
+      -100,
+      -50,
+      0,
+      50,
+      100,
+      200,
+      400,
+      "inf"
+    ],
+    "alpha": 0.5,
+    "self_profile": "equal-weight other frozen eligible sessions of same individual",
+    "other_profile": "pool sessions within each other individual then equal-weight other individuals",
+    "common_cell_weighting": "identical self-derived common-cell weights for self and other vertical profiles",
+    "target_score": "mean supported target-event log P_self(centered z)-log P_other(centered z)",
+    "aggregation": "equal target session within individual then equal individual",
+    "null": "whole-session identity permutation over frozen training universe; replay full profile/support pipeline",
+    "B": 9999,
+    "seed": 20260930132,
+    "pass_rule": "calibrated excess >0 and one-sided p(null>=observed)<=0.05"
+  },
+  "claim_boundary": [
+    "Header PASS and structural PASS are distinct.",
+    "Horizontal identity is reported regardless of later vertical result.",
+    "If structural gate fails, height magnitude remains unopened and the source is a structural STOP.",
+    "If structural gate passes, the exact receipt must be committed before numeric height is opened.",
+    "No grid, session threshold, target-support threshold, individual exclusion or alternate vertical endpoint may change after output."
+  ]
+}
