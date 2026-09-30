@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-leptonycteris-comparative-source-v1",
+  "frozen_date": "2026-09-30",
+  "status": "prospective new-source contract frozen before numeric Altitude values are opened",
+  "programme": "batter-comparative-generality-program-v1",
+  "source": {
+    "repository": "Dryad",
+    "doi": "10.5061/dryad.stqjq2cfg",
+    "file_id": 4192796,
+    "file": "GPS_data_Leptonycteris_nivalis__Summer_2024_GPS__TX__USA.xlsx",
+    "taxon": "Leptonycteris nivalis",
+    "published_tagged_n": 21,
+    "vertical_field": "Altitude (m)",
+    "vertical_semantics": "source WGS84 ellipsoidal altitude in metres",
+    "sampling": "source metadata reports nocturnal fixes programmed at 10-minute intervals from sunset to sunrise",
+    "source_processing_boundary": "public GPS data exclude locations within approximately 1 km of the protected roost"
+  },
+  "outcome_blind_allowed_fields": [
+    "Tag ID",
+    "Fix Date-Time (UTC-5)",
+    "Longitude",
+    "Latitude"
+  ],
+  "vertical_header_only": "Altitude (m)",
+  "prohibited_before_vertical_opening": [
+    "read numeric Altitude (m) values",
+    "summarize or plot altitude",
+    "select individuals, sessions or grid based on altitude",
+    "alter structural or horizontal thresholds after horizontal result"
+  ],
+  "session": {
+    "definition": "calendar date of Fix Date-Time (UTC-5)",
+    "minimum_nonvertical_valid_fixes": 50,
+    "repeat_individual": "at least two >=50-fix sessions"
+  },
+  "projection": {
+    "rule": "derive UTM zone deterministically from median nonvertical longitude and latitude of all valid source rows; northern hemisphere uses EPSG 32600+zone, southern uses 32700+zone",
+    "grid_m": 5000,
+    "grid_origin": "native UTM origin; no data-dependent translation"
+  },
+  "horizontal_individuality": {
+    "role": "prospective nonvertical axis metric frozen and opened before altitude",
+    "cell_response": "5-km horizontal cell",
+    "cell_universe": "all 5-km cells in the structurally retained >=50-fix repeat-individual session universe",
+    "alpha": 0.5,
+    "self_profile": "equal-weight other eligible sessions of the target individual; each session cell distribution Jeffreys-smoothed over the frozen cell universe",
+    "other_profile": "pool eligible sessions within each other individual, Jeffreys-smooth over the frozen cell universe, then equal-weight other individuals",
+    "target_score": "mean target-event log P_self(cell) - log P_other(cell)",
+    "aggregation": "equal target session within individual, then equal individual",
+    "minimum_target_events": 50,
+    "null": "whole-session identity permutation across the structurally retained session universe, preserving the exact session-count multiset per identity and recomputing complete profiles",
+    "B": 9999,
+    "seed": 2026093011,
+    "report": [
+      "observed horizontal identity gain",
+      "null mean and SD",
+      "calibrated excess",
+      "one-sided p(null >= observed)",
+      "eligible individual count"
+    ]
+  },
+  "vertical_preflight": {
+    "training_universe": "all >=50-fix sessions of repeat-eligible individuals",
+    "target_common_support": "target event's frozen 5-km cell must occur in at least one other eligible session of the same individual and at least one eligible session of another individual",
+    "minimum_supported_target_events": 50,
+    "estimator_evaluable_individual": "at least one target session with >=50 common-support target events",
+    "minimum_estimator_evaluable_individuals": 5,
+    "freeze_before_altitude": [
+      "raw SHA256",
+      "projection EPSG",
+      "cell universe",
+      "repeat-eligible individuals",
+      "training-session universe",
+      "horizontal identity result",
+      "exact vertically evaluable target sessions and supported-event counts"
+    ]
+  },
+  "vertical_primary": {
+    "vertical_centering": "subtract the median source Altitude (m) of the full frozen eligible session before vertical binning",
+    "centered_edges_m": ["-inf", -400, -200, -100, -50, 0, 50, 100, 200, 400, "inf"],
+    "alpha": 0.5,
+    "self_profile": "equal-weight other frozen eligible sessions of same individual",
+    "other_profile": "pool frozen eligible sessions within each other individual, then equal-weight other individuals",
+    "common_cell_weighting": "derive equal-session self horizontal weights on target-supported cells and apply identical weights to self and other vertical profiles",
+    "target_score": "mean supported target-event log P_self(centered z) - log P_other(centered z)",
+    "aggregation": "equal target session within individual, then equal individual",
+    "null": "whole-session identity permutation over the frozen training universe, preserving exact session-count multiset per identity; replay full support/profile/weighting pipeline",
+    "B": 9999,
+    "seed": 2026093012,
+    "pass_rule": "calibrated excess > 0 and one-sided p(null >= observed) <= 0.05"
+  },
+  "claim_boundary": [
+    "This source is a new prospective source for the comparative-generality programme.",
+    "Public removal of roost-neighbourhood points is a fixed source property and must be reported; it is not altered.",
+    "Ellipsoidal altitude is not AGL. Session centering plus horizontal matching reduces but does not eliminate terrain-reference limitations.",
+    "A vertical FAIL remains in the comparative source set and cannot be rescued by alternate bins, grids, thresholds, absolute altitude or individual exclusions.",
+    "Horizontal individuality is an independent prospective axis metric and is reported regardless of the later vertical result."
+  ]
+}
