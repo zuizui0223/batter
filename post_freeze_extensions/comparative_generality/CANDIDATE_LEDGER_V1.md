@@ -18,7 +18,8 @@ Historical opened sources are excluded from the count of new prospective sources
 | Zenodo 10.5281/zenodo.7535030 | Zenodo | *Nyctalus noctula* | yes — native GPS `Height` | yes | **HISTORICAL OPENED / EXCLUDE FROM NEW COUNT** | first prospective primary already opened and FAIL; same-source programme closed |
 | Movebank 10.5441/001/1.278 | Movebank Data Repository | *Hypsignathus monstrosus* | yes — height above ellipsoid | yes | **HISTORICAL ORIGINAL ARCHIVE / EXCLUDE** | original comparative Hypsignathus panel |
 | Plazi / article-only Zenodo records returned by frozen queries | Zenodo | various Chiroptera | no event-level raw tracking table established | — | **REJECT** | publication/taxonomic record only |
-| Zenodo 10.5281/zenodo.21915776 | Zenodo | mixed birds + bats; 38 biologging species total | **PENDING SCHEMA AUDIT** | 1,524,121 GPS observations, 853 individuals in source RDS | **PENDING HEADER/SCHEMA AUDIT** | large multi-species dataset; must establish bat subset, individual/session fields and vertical field without reading numeric vertical values |
+| Zenodo 10.5281/zenodo.21915776 | Zenodo | mixed birds + bats; bat subset = *Eidolon helvum* + *Pteropus lylei* | yes in point RDS (`height_gener` from source MSL/ellipsoid height) | 8 bat study×species panels in segment metadata | **STRUCTURAL STOP / POINT VERTICAL UNOPENED** | 5 necessary-screen panels entered sealed point preflight; all 5 had zero >=50-fix nights. Three Eidolon panels belong to historical 10.5441/001/1.k8n02jn8 data universe; two Pteropus panels are new but structurally stopped in the thinned commuting-segment compilation |
+| Movebank 10.5441/001/1.j25661td | Movebank Data Repository | *Pteropus lylei* (Cambodia 2016) | **PENDING HEADER AUDIT** | 14 GPS-collared bats reported; repeated nights, heterogeneous 5/30-min schedules | **PROVENANCE FOLLOW-UP / VERTICAL UNOPENED** | added before any new-source vertical outcome was opened; inspect repository event header only for native altitude and structural potential; distinct from Airflows Thailand 2012 panels |
 | high-altitude bat acoustic/radar datasets returned by frozen queries | mixed | various Chiroptera | not individual fix-level GPS | no individual repeated trajectories | **REJECT** | wrong data type |
 | UAV / video bat datasets returned by frozen queries | mixed | various Chiroptera | not individual repeated GPS altitude trajectories | no | **REJECT** | wrong data type |
 
@@ -45,3 +46,27 @@ For every admitted new source:
 6. retain PASS or FAIL without rescue.
 
 No source is replaced because its vertical result is negative.
+
+
+## Airflows closure update
+
+The Airflows segment-table audit identified five necessary-screen panels, but the sealed point-level preflight showed **zero >=50-fix nights in all five panels**. No vertical magnitude was accessed or exported.
+
+- Eidolon 14253246: structural STOP; historical data-universe overlap.
+- Eidolon 183770262: structural STOP; historical data-universe overlap.
+- Eidolon 259100173: structural STOP; historical data-universe overlap.
+- Pteropus 6609898: structural STOP; genuinely new study panel, compiled data too sparse under frozen session rule.
+- Pteropus 8239320: structural STOP; genuinely new study panel, compiled data too sparse under frozen session rule.
+
+The pre-frozen Airflows vertical design remains **UNUSED** because the height-opening receipt is STOP.
+
+## Provenance-follow-up boundary
+
+The Cambodia *Pteropus lylei* repository DOI `10.5441/001/1.j25661td` is admitted only for an outcome-blind header/structure audit. It was identified while resolving raw provenance for the new Pteropus taxon and before any new-source vertical magnitude in this comparative programme was opened.
+
+This does not authorize:
+- new search terms after its header result;
+- lowering the current >=50-fix rule;
+- substituting Cambodia for the Thailand panels based on a vertical effect.
+
+If it lacks a native event-level vertical field, it is REJECTED and the current search universe closes.
