@@ -1,0 +1,213 @@
+{
+  "archive_api_url": "https://datadryad.org/api/v2/files/4910336/download",
+  "data_values_read": false,
+  "decision": "RAW_XLSX_MEMBER_FOUND",
+  "dryad_archive_file_id": 4910336,
+  "dryad_landing_download": "https://datadryad.org/downloads/file_stream/4910336",
+  "entries": [
+    {
+      "compress_size": 0,
+      "compress_type": 0,
+      "file_size": 0,
+      "filename": "Data and scripts/",
+      "is_dir": true
+    },
+    {
+      "compress_size": 11963,
+      "compress_type": 8,
+      "file_size": 57288,
+      "filename": "Data and scripts/Figures_and_SI.R",
+      "is_dir": false
+    },
+    {
+      "compress_size": 167,
+      "compress_type": 8,
+      "file_size": 319,
+      "filename": "__MACOSX/Data and scripts/._Figures_and_SI.R",
+      "is_dir": false
+    },
+    {
+      "compress_size": 1875,
+      "compress_type": 8,
+      "file_size": 1870,
+      "filename": "Data and scripts/field_data.rds",
+      "is_dir": false
+    },
+    {
+      "compress_size": 84,
+      "compress_type": 8,
+      "file_size": 163,
+      "filename": "__MACOSX/Data and scripts/._field_data.rds",
+      "is_dir": false
+    },
+    {
+      "compress_size": 13567,
+      "compress_type": 8,
+      "file_size": 16094,
+      "filename": "Data and scripts/Obs240422_213522_Tag47093.xlsx",
+      "is_dir": false
+    },
+    {
+      "compress_size": 1327,
+      "compress_type": 8,
+      "file_size": 1797,
+      "filename": "__MACOSX/Data and scripts/._Obs240422_213522_Tag47093.xlsx",
+      "is_dir": false
+    },
+    {
+      "compress_size": 292,
+      "compress_type": 8,
+      "file_size": 490,
+      "filename": "Data and scripts/BatID_2007_2019_weights.R",
+      "is_dir": false
+    },
+    {
+      "compress_size": 127,
+      "compress_type": 8,
+      "file_size": 219,
+      "filename": "__MACOSX/Data and scripts/._BatID_2007_2019_weights.R",
+      "is_dir": false
+    },
+    {
+      "compress_size": 6287550086,
+      "compress_type": 8,
+      "file_size": 6293822437,
+      "filename": "Data and scripts/model1_06vardv6.rds",
+      "is_dir": false
+    },
+    {
+      "compress_size": 86,
+      "compress_type": 8,
+      "file_size": 163,
+      "filename": "__MACOSX/Data and scripts/._model1_06vardv6.rds",
+      "is_dir": false
+    },
+    {
+      "compress_size": 2203221,
+      "compress_type": 8,
+      "file_size": 2307976,
+      "filename": "Data and scripts/total22_23_0s.xlsx",
+      "is_dir": false
+    },
+    {
+      "compress_size": 181,
+      "compress_type": 8,
+      "file_size": 287,
+      "filename": "__MACOSX/Data and scripts/._total22_23_0s.xlsx",
+      "is_dir": false
+    },
+    {
+      "compress_size": 1082,
+      "compress_type": 8,
+      "file_size": 3139,
+      "filename": "Data and scripts/testGPS.R",
+      "is_dir": false
+    },
+    {
+      "compress_size": 184,
+      "compress_type": 8,
+      "file_size": 319,
+      "filename": "__MACOSX/Data and scripts/._testGPS.R",
+      "is_dir": false
+    },
+    {
+      "compress_size": 57621,
+      "compress_type": 8,
+      "file_size": 779377,
+      "filename": "Data and scripts/BatID_2007_2019_public.csv",
+      "is_dir": false
+    },
+    {
+      "compress_size": 84,
+      "compress_type": 8,
+      "file_size": 163,
+      "filename": "__MACOSX/Data and scripts/._BatID_2007_2019_public.csv",
+      "is_dir": false
+    },
+    {
+      "compress_size": 14094,
+      "compress_type": 8,
+      "file_size": 48545,
+      "filename": "Data and scripts/Data_cleaning.R",
+      "is_dir": false
+    },
+    {
+      "compress_size": 202,
+      "compress_type": 8,
+      "file_size": 319,
+      "filename": "__MACOSX/Data and scripts/._Data_cleaning.R",
+      "is_dir": false
+    },
+    {
+      "compress_size": 2978,
+      "compress_type": 8,
+      "file_size": 7968,
+      "filename": "Data and scripts/Model.R",
+      "is_dir": false
+    },
+    {
+      "compress_size": 167,
+      "compress_type": 8,
+      "file_size": 319,
+      "filename": "__MACOSX/Data and scripts/._Model.R",
+      "is_dir": false
+    },
+    {
+      "compress_size": 3587,
+      "compress_type": 8,
+      "file_size": 13211,
+      "filename": "Data and scripts/GLM_roost_abandonment 2.R",
+      "is_dir": false
+    },
+    {
+      "compress_size": 167,
+      "compress_type": 8,
+      "file_size": 319,
+      "filename": "__MACOSX/Data and scripts/._GLM_roost_abandonment 2.R",
+      "is_dir": false
+    },
+    {
+      "compress_size": 197742,
+      "compress_type": 8,
+      "file_size": 205575,
+      "filename": "Data and scripts/final_GPS_2025.rds",
+      "is_dir": false
+    },
+    {
+      "compress_size": 84,
+      "compress_type": 8,
+      "file_size": 163,
+      "filename": "__MACOSX/Data and scripts/._final_GPS_2025.rds",
+      "is_dir": false
+    },
+    {
+      "compress_size": 701547,
+      "compress_type": 8,
+      "file_size": 723243,
+      "filename": "Data and scripts/diste_06vardv6.rds",
+      "is_dir": false
+    },
+    {
+      "compress_size": 86,
+      "compress_type": 8,
+      "file_size": 163,
+      "filename": "__MACOSX/Data and scripts/._diste_06vardv6.rds",
+      "is_dir": false
+    }
+  ],
+  "inner_entry_count": 27,
+  "schema_version": 1,
+  "study_id": "batter-desmodus-zip-inventory-v1",
+  "target_members": {
+    "Final_GPS_2025.rds": [],
+    "total22_23_0s.xlsx": [
+      {
+        "compress_size": 2203221,
+        "compress_type": 8,
+        "file_size": 2307976,
+        "filename": "Data and scripts/total22_23_0s.xlsx",
+        "is_dir": false
+      }
+    ]
+  }
+}
