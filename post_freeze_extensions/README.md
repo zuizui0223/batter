@@ -9,6 +9,7 @@ The frozen v0.3.8 JAE submission on `main` is unchanged.
 - `MECHANISM_CLAIM_LEDGER_V10.md` — strongest defensible claims and claim ceilings;
 - `SPATIAL_INDIVIDUALITY_AXES_V1.md` — horizontal fidelity, absolute vertical level and centered vertical shape as separable axes;
 - `HIPPOSIDEROS_PRIMARY_CLOSEOUT_V1.md` — prospective Hipposideros primary FAIL and no-rescue closeout;
+- `LEPTONYCTERIS_STRUCTURAL_RESULT_V1.md` — outcome-blind structural FAIL with Altitude unopened;
 - `NYCTALUS_VALIDATION_HISTORY_V1.md` — complete Nyctalus inferential chronology;
 - `NYCTALUS_ELIGIBILITY_ROBUSTNESS_RESULT_V1.md` — 0–100-fix sensitivity;
 - `NYCTALUS_HMM_STATE_ATTRIBUTION_RESULT_V1.md` — support-matched HMM-state test;
@@ -105,7 +106,7 @@ Prohibited:
 - temperature/speed/competition rescue;
 - automatic continuation to another external source merely because Hipposideros failed.
 
-`Leptonycteris` remains an outcome-unopened archived candidate, but is **PAUSED**. Opening it now would require a separately frozen continuation objective, preferably to estimate cross-system heterogeneity rather than to search serially for a positive replication.
+`Leptonycteris` has now completed its original frozen structural gate **without opening Altitude**: 21 individuals were present, but there were **0 nights with >=50 nonvertical-valid fixes**, so repeat-eligible n=0 and the candidate is structurally ineligible under the common estimator. The threshold is not lowered from 50 to 49 after seeing the structure.
 
 ## Next scientific questions
 
