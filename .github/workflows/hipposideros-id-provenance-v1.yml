@@ -1,0 +1,34 @@
+name: hipposideros-id-provenance-v1
+on:
+  push:
+    branches: [prospective/hipposideros-id-provenance-v1]
+    paths:
+      - "post_freeze_extensions/hipposideros_external_validation/id_provenance_*"
+      - ".github/workflows/hipposideros-id-provenance-v1.yml"
+  workflow_dispatch:
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+    env:
+      DRYAD_API_TOKEN: ${{ secrets.DRYAD_API_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install pandas requests
+      - name: Require Dryad token
+        run: |
+          test -n "$DRYAD_API_TOKEN" || (echo "DRYAD_API_TOKEN secret is not set" && exit 2)
+      - name: Run outcome-blind ID provenance audit
+        run: python post_freeze_extensions/hipposideros_external_validation/id_provenance_audit_v1.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: batter-hipposideros-id-provenance-v1
+          path: |
+            post_freeze_extensions/hipposideros_external_validation/id_provenance_result_v1.json
+            post_freeze_extensions/hipposideros_external_validation/ID_PROVENANCE_RESULT_V1.md
+          if-no-files-found: error
