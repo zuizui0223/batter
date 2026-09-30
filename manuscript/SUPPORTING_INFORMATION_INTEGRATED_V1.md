@@ -64,6 +64,14 @@ For each evaluable target session in the five comparative panels, we reconstruct
 
 For Figure 6, rows were ordered within panel by descriptive upper-tail mass at residual height >=100 m, with ties broken by individual identifier. A common linear probability scale was used across panels. Individual identifiers were retained only in the machine-readable output and were not displayed in the paper figure. Central-mass and tail-mass ranges were not compared with a permutation null; they are visualization summaries only and may include estimation variability from finite numbers of sessions. We therefore do not use them to infer which component of the profile carries individual identity, and we did not infer clusters, strategy classes or behavioural states from the visualization.
 
+
+### Additive tag/device altitude-bias audit — full support-gate details
+
+GPS altitude can contain device-specific additive offsets, so a stable tag zero point could mimic repeatable individual vertical location. For the primary test, each retained session was translated to zero median before vertical binning, using fixed residual-height edges of -∞, -400, -200, -100, -50, 0, 50, 100, 200, 400 and +∞ m. Horizontal cells, cohort definitions, weighting, scoring thresholds and whole-session permutations were unchanged. Panels had to retain their original evaluable-individual counts; support required positive observed-minus-null common-cell shape identity and one-sided P(null >= observed) <=0.05.
+
+A separate x-y/time-only preflight defined stationary candidates by both adjacent gaps <=20 min and both adjacent horizontal speeds <=0.5 m/s. Shared 100-m cells required at least three individuals with >=5 candidate fixes each; supported individuals required >=10 candidate fixes. Stationary correction was allowed only when supported individuals numbered at least max(5, ceil(0.5 × original evaluable n)) and an admitted cohort retained >=3 supported repeat individuals. Only *Hypsignathus monstrosus* and *Phyllostomus hastatus* 2016 passed this gate.
+
+For those panels, individual-by-cohort offsets were estimated relative to the median individual height in each shared stationary cell, subtracted from all primary-height observations, and the original vertical bins and 5-km calibration were rerun. This correction was corroborative only. The same preflight summarized tracking-window overlap descriptively; no time-block permutation family was opened.
 ## Supplementary Results
 
 ### Descriptive profiles illustrate variation in central concentration and tail use
