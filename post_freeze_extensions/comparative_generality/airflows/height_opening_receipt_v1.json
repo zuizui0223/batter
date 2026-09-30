@@ -1,0 +1,11 @@
+{
+  "next_step": "STOP. Do not lower session or common-support thresholds.",
+  "panels": {},
+  "point_member": "BiologgingData/allStudies_allTags_allFlightSegments_binded_birdsBats_thresholdClass_transfGs_March2024_noDupl.rds",
+  "point_member_sha256": "1c60343bbaac19433afef06826062a5328cb1877bda1940778fcca628d3d9b99",
+  "schema_version": 1,
+  "source_contract_sha256": "ce9d9579280cbbf8cccd0595f74f825fbe06c5c0670c304439c35b6965262d0d",
+  "status": "STOP",
+  "study_id": "batter-airflows-height-opening-receipt-v1",
+  "vertical_values_accessed_by_analysis_logic": false
+}

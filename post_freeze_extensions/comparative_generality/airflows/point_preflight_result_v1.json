@@ -1,0 +1,97 @@
+{
+  "candidate_panel_results": [
+    {
+      "horizontal_individuality": {
+        "status": "NOT_EVALUABLE_UNDER_FROZEN_SESSION_GATE"
+      },
+      "projection_epsg": 32630,
+      "qualified_nights_ge50": 0,
+      "repeat_eligible_ids": [],
+      "repeat_eligible_n": 0,
+      "rows_nonvertical": 203,
+      "species": "Eidolon helvum",
+      "status": "STRUCTURAL_STOP_NO_REPEAT_SUPPORT",
+      "study_id": "14253246",
+      "unique_individuals": 5,
+      "vertical_gate_pass": false
+    },
+    {
+      "horizontal_individuality": {
+        "status": "NOT_EVALUABLE_UNDER_FROZEN_SESSION_GATE"
+      },
+      "projection_epsg": 32630,
+      "qualified_nights_ge50": 0,
+      "repeat_eligible_ids": [],
+      "repeat_eligible_n": 0,
+      "rows_nonvertical": 863,
+      "species": "Eidolon helvum",
+      "status": "STRUCTURAL_STOP_NO_REPEAT_SUPPORT",
+      "study_id": "183770262",
+      "unique_individuals": 23,
+      "vertical_gate_pass": false
+    },
+    {
+      "horizontal_individuality": {
+        "status": "NOT_EVALUABLE_UNDER_FROZEN_SESSION_GATE"
+      },
+      "projection_epsg": 32736,
+      "qualified_nights_ge50": 0,
+      "repeat_eligible_ids": [],
+      "repeat_eligible_n": 0,
+      "rows_nonvertical": 1047,
+      "species": "Eidolon helvum",
+      "status": "STRUCTURAL_STOP_NO_REPEAT_SUPPORT",
+      "study_id": "259100173",
+      "unique_individuals": 14,
+      "vertical_gate_pass": false
+    },
+    {
+      "horizontal_individuality": {
+        "status": "NOT_EVALUABLE_UNDER_FROZEN_SESSION_GATE"
+      },
+      "projection_epsg": 32647,
+      "qualified_nights_ge50": 0,
+      "repeat_eligible_ids": [],
+      "repeat_eligible_n": 0,
+      "rows_nonvertical": 86,
+      "species": "Pteropus lylei",
+      "status": "STRUCTURAL_STOP_NO_REPEAT_SUPPORT",
+      "study_id": "6609898",
+      "unique_individuals": 7,
+      "vertical_gate_pass": false
+    },
+    {
+      "horizontal_individuality": {
+        "status": "NOT_EVALUABLE_UNDER_FROZEN_SESSION_GATE"
+      },
+      "projection_epsg": 32647,
+      "qualified_nights_ge50": 0,
+      "repeat_eligible_ids": [],
+      "repeat_eligible_n": 0,
+      "rows_nonvertical": 129,
+      "species": "Pteropus lylei",
+      "status": "STRUCTURAL_STOP_NO_REPEAT_SUPPORT",
+      "study_id": "8239320",
+      "unique_individuals": 8,
+      "vertical_gate_pass": false
+    }
+  ],
+  "claim_boundary": [
+    "The Airflows source contains commuting flight segments extracted from thinned/subsampled original tracks; it is not a full-night raw tracking archive.",
+    "The sealed machine read preserves inferential blindness because vertical magnitudes are never exposed or used before the frozen receipt.",
+    "A panel that fails the >=50-fix-night/common-support gate is a structural STOP, not a negative vertical result.",
+    "No panel is dropped because it is the same taxon as an earlier source when its study ID is distinct.",
+    "No threshold, grid, session definition or candidate list may change after this preflight."
+  ],
+  "decision": "ALL_PANELS_STRUCTURAL_STOP",
+  "full_rds_deserialized": true,
+  "nonvertical_rows_after_parse": 1524121,
+  "passing_panel_count": 0,
+  "passing_panels": [],
+  "point_member": "BiologgingData/allStudies_allTags_allFlightSegments_binded_birdsBats_thresholdClass_transfGs_March2024_noDupl.rds",
+  "point_member_sha256": "1c60343bbaac19433afef06826062a5328cb1877bda1940778fcca628d3d9b99",
+  "schema_version": 1,
+  "study_id": "batter-airflows-point-preflight-v1",
+  "vertical_values_accessed_by_analysis_logic": false,
+  "vertical_values_summarized_or_exported": false
+}
