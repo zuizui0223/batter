@@ -21,13 +21,15 @@
     "enumerate public bitstream/file names, sizes, checksums and content links",
     "read only the first CSV header row or equivalent schema metadata",
     "record column names",
-    "read reference-data header if needed to distinguish event from reference files"
+    "read reference-data header if needed to distinguish event from reference files",
+    "if the repository exposes only a ZIP package, read the ZIP central directory and the first header row of candidate CSV/TSV members only"
   ],
   "forbidden_operations": [
     "read numeric event rows beyond the header",
     "parse, summarize or plot any altitude/height value",
     "infer vertical eligibility from vertical magnitudes",
-    "change accepted vertical-field names after seeing data values"
+    "change accepted vertical-field names after seeing data values",
+    "extract or parse non-header rows from an archive member"
   ],
   "accepted_native_vertical_names": [
     "height_above_msl",
@@ -37,10 +39,26 @@
     "altitude"
   ],
   "required_event_header_groups": {
-    "individual": ["individual_local_identifier","individual.local.identifier","individual_id","individual.id","tag_local_identifier"],
-    "timestamp": ["timestamp"],
-    "longitude": ["location_long","location.long","longitude"],
-    "latitude": ["location_lat","location.lat","latitude"]
+    "individual": [
+      "individual_local_identifier",
+      "individual.local.identifier",
+      "individual_id",
+      "individual.id",
+      "tag_local_identifier"
+    ],
+    "timestamp": [
+      "timestamp"
+    ],
+    "longitude": [
+      "location_long",
+      "location.long",
+      "longitude"
+    ],
+    "latitude": [
+      "location_lat",
+      "location.lat",
+      "latitude"
+    ]
   },
   "decision_rule": [
     "Identify event-like CSV/TSV files from repository file names and headers only.",
