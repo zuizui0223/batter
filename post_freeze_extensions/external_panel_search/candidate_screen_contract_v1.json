@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-external-candidate-structural-screen-v1",
+  "frozen_date": "2026-09-30",
+  "parent_contract": "post_freeze_extensions/external_panel_search/contract_v1.json",
+  "status": "candidate file identities frozen before structural screening and before any numeric vertical values",
+  "candidates": [
+    {
+      "id": "hipposideros_dryad_2025",
+      "repository": "Dryad",
+      "doi": "10.5061/dryad.j0zpc86r1",
+      "taxon": "Hipposideros armiger + H. pratti",
+      "file_name": "GPS_data.csv",
+      "file_stream_id": 4102381,
+      "file_url": "https://datadryad.org/downloads/file_stream/4102381",
+      "expected_schema": {
+        "individual": "id",
+        "timestamp": "timestamp",
+        "longitude": "longitude",
+        "latitude": "latitude",
+        "vertical": "height"
+      },
+      "session_rule": "If timestamp includes time, shifted local/calendar night = timestamp - 12 h; if date-only, use source date as the session label.",
+      "source_context": "Published tracking programme reports 9 H. armiger + 8 H. pratti; 10-min GPS scheduling between 20:00–06:00 with movement-triggered recording."
+    },
+    {
+      "id": "leptonycteris_dryad_2025",
+      "repository": "Dryad",
+      "doi": "10.5061/dryad.stqjq2cfg",
+      "taxon": "Leptonycteris nivalis",
+      "file_name": "GPS_data_Leptonycteris_nivalis__Summer_2024_GPS__TX__USA.xlsx",
+      "file_stream_id": 4192796,
+      "file_url": "https://datadryad.org/downloads/file_stream/4192796",
+      "expected_schema": {
+        "individual": "Tag ID",
+        "timestamp": "Fix Date-Time (UTC-5)",
+        "longitude": "Longitude",
+        "latitude": "Latitude",
+        "vertical": "Altitude (m)"
+      },
+      "session_rule": "Local shifted night = Fix Date-Time (UTC-5) - 12 h, then calendar date.",
+      "source_context": "Dryad README reports 21 tagged bats and 10-min fixes between sunset and sunrise."
+    }
+  ],
+  "structural_gate": {
+    "minimum_individuals_with_xy_vertical_presence": 8,
+    "minimum_fixes_per_session": 50,
+    "minimum_repeat_individuals": 5,
+    "repeat_definition": "at least two eligible >=50-fix sessions per individual",
+    "native_vertical_required": true
+  },
+  "prohibited_reads": [
+    "numeric vertical magnitude",
+    "vertical summaries or distributions",
+    "self-vs-other vertical outcomes"
+  ],
+  "checksum_rule": "Compute SHA-256 from downloaded raw file before parsing and freeze it in the structural result.",
+  "decision_rule": "PASS only if all frozen structural gates are met from event-level source data; otherwise FAIL without inspecting numeric vertical values."
+}
