@@ -22,13 +22,14 @@ The frozen v0.3.8 manuscript on `main` remains provenance only and is no longer 
 Checked against the Journal of Animal Ecology author guidelines on 2026-10-01.
 
 - Research Article word limit: 8,500 words including title page, abstract, references, tables and figure legends; Supporting Information excluded.
-- Current reviewer-facing main manuscript repository count: **7,752 words** before the separate title-page metadata are filled.
+- Current reviewer-facing main manuscript repository count: **7,838 words**; current title-page template: **258 words**; combined repository estimate: **8,096 words**, leaving approximately 404 words before the 8,500-word ceiling.
 - Numbered English Abstract: **313 words**; limit 350.
 - Keywords: **7**, alphabetically ordered; limit 8.
 - Main manuscript has the required Introduction, Materials and Methods, Results, Discussion and References structure.
 - Data/archive statement is present.
 - Reviewer-facing manuscript scan finds no explicit project-owner name/repository identifier.
-- Supporting Information is separated from the journal word count.
+- Anonymous cover letter: **399 words**; journal limit 500.
+- Supporting Information is separated from the journal word count (**2,437 words** in the current repository file).
 
 A final journal-platform word count must be rechecked after author names, affiliations and other title-page metadata are inserted.
 
