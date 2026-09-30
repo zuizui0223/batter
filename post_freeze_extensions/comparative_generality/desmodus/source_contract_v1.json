@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-desmodus-comparative-source-v1",
+  "frozen_date": "2026-09-30",
+  "status": "prospective source contract frozen after row-1-only schema audit and before any numeric ALTITUDE magnitude is parsed",
+  "programme": "batter-comparative-generality-program-v1",
+  "source": {
+    "repository": "Dryad",
+    "doi": "10.5061/dryad.7wm37pw53",
+    "taxon": "Desmodus rotundus",
+    "dryad_archive_file_id": 4910336,
+    "inner_path": "Data and scripts/total22_23_0s.xlsx",
+    "inner_sha256": "21c80d1b50992cd8c98588e68962a38ea111960f5dd99066f0222b52887f5a3a",
+    "sheet": "Sheet1",
+    "schema_audit_run": 36721930666,
+    "vertical_field": "ALTITUDE",
+    "vertical_semantics": "elevation above sea level in metres; source code 0 means GPS failed to retrieve altitude"
+  },
+  "fields": {
+    "cohort": "Local",
+    "individual": "individual",
+    "session_date": "date",
+    "timestamp": "date_time",
+    "longitude": "LONGITUDE",
+    "latitude": "LATITUDE",
+    "altitude": "ALTITUDE"
+  },
+  "outcome_blind_vertical_operation": "ALTITUDE may be read only as a raw string to classify source-coded missingness (blank/NA/0 versus present); no numeric conversion, summary, sorting or plotting is allowed before the opening receipt",
+  "row_qualification": {
+    "required_nonvertical": ["Local","individual","date","date_time","LONGITUDE","LATITUDE"],
+    "coordinate_missing_codes": ["0","0.0","0.00"],
+    "altitude_missing_codes": ["0","0.0","0.00","NA","NaN","nan",""],
+    "rule": "retain rows with all required nonvertical fields, nonzero parseable longitude/latitude, and ALTITUDE not equal to a frozen missing code; ALTITUDE magnitude remains unparsed"
+  },
+  "session": {
+    "definition": "Local x individual x source date",
+    "minimum_presence_qualified_fixes": 50,
+    "repeat_individual": "at least two >=50-fix sessions"
+  },
+  "cohort_admission": {
+    "minimum_repeat_individuals": 3,
+    "reason": "self/other identity exchangeability is evaluated within source-native roost locality rather than across geographically distinct roosts"
+  },
+  "projection": {
+    "rule": "determine a UTM EPSG separately for each admitted Local from that Local's median nonvertical longitude/latitude; fixed native UTM origin",
+    "grid_m": 5000
+  },
+  "horizontal_individuality": {
+    "role": "opened before numeric ALTITUDE",
+    "response": "5-km horizontal-cell occupancy",
+    "alpha": 0.5,
+    "self_profile": "equal other eligible sessions of same individual within Local",
+    "other_profile": "pool sessions within each other individual in the same Local then equal-weight other individuals",
+    "session_score": "mean target-event log P_self(cell) - log P_other(cell), Jeffreys-smoothed over the frozen Local cell universe",
+    "aggregation": "equal target session within individual then equal individual across source",
+    "null": "whole-session identity permutation within Local preserving exact session-count multiset per identity",
+    "B": 9999,
+    "seed": 2026093013
+  },
+  "vertical_preflight": {
+    "training_universe": "all >=50-fix sessions of repeat-eligible individuals in admitted Local cohorts",
+    "target_common_support": "target 5-km cell present in at least one other training session of same individual and at least one training session of another individual within Local",
+    "minimum_supported_target_events": 50,
+    "estimator_evaluable_individual": "at least one target session with >=50 common-support events",
+    "minimum_estimator_evaluable_individuals_source": 5,
+    "freeze_before_altitude": [
+      "raw inner XLSX SHA256",
+      "admitted Local cohorts",
+      "per-Local projection EPSG",
+      "repeat individuals and training sessions",
+      "horizontal-individuality result",
+      "exact vertically evaluable target sessions and supported-event counts"
+    ]
+  },
+  "vertical_primary": {
+    "centering": "subtract full frozen session median ALTITUDE before binning",
+    "centered_edges_m": ["-inf",-400,-200,-100,-50,0,50,100,200,400,"inf"],
+    "alpha": 0.5,
+    "self_profile": "equal other frozen sessions of same individual within Local",
+    "other_profile": "pool sessions within each other individual within Local then equal-weight other individuals",
+    "common_cell_weighting": "identical self-derived common-cell weights for self and other profiles",
+    "aggregation": "equal target session within individual then equal individual across source",
+    "null": "whole-session identity permutation within Local over frozen training universe; replay full support/profile/weighting pipeline",
+    "B": 9999,
+    "seed": 2026093014,
+    "pass_rule": "calibrated excess > 0 and one-sided p(null >= observed) <= 0.05"
+  },
+  "claim_boundary": [
+    "This is a new prospective source; historical vampire-bat results are not part of the original batter archive.",
+    "Altitude is above sea level, not AGL. Session centering and horizontal matching do not fully remove terrain-reference limitations.",
+    "Sparse mountainous GPS sampling is a fixed source property.",
+    "A source structural FAIL or vertical FAIL is retained without lowering thresholds, pooling localities, alternate bins, absolute-altitude rescue or individual exclusions.",
+    "Horizontal individuality is reported independently of the later vertical result."
+  ]
+}
