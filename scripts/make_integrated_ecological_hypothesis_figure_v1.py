@@ -14,22 +14,22 @@ def box(x, y, text, width=0.24, height=0.16):
     ax.text(x, y, text, ha="center", va="center", fontsize=10, wrap=True)
 
 def arrow(x1, y1, x2, y2):
-    ax.annotate("", xy=(x2,y2), xytext=(x1,y1), arrowprops=dict(arrowstyle="->"))
+    ax.annotate("", xy=(x2, y2), xytext=(x1, y1), arrowprops=dict(arrowstyle="->"))
 
-box(0.13, 0.75, "Persistent spatial\nresource anchoring")
-box(0.13, 0.45, "Repeated vertical\nopportunity")
+box(0.15, 0.75, "Persistent spatial\nresource anchoring")
+box(0.15, 0.45, "Repeated vertical\nopportunity")
 box(0.44, 0.60, "Stable alternative spatial\nsolutions repeatedly available", width=0.28)
 box(0.76, 0.60, "Stronger expected expression\nof centered vertical individuality", width=0.30)
 
-arrow(0.25,0.75,0.31,0.64)
-arrow(0.25,0.45,0.31,0.56)
-arrow(0.58,0.60,0.61,0.60)
+arrow(0.27, 0.75, 0.31, 0.64)
+arrow(0.27, 0.45, 0.31, 0.56)
+arrow(0.58, 0.60, 0.61, 0.60)
 
-box(0.13, 0.18, "Mobile / ephemeral prey\nor surface-constrained feeding", width=0.27)
+box(0.15, 0.18, "Mobile / ephemeral prey\nor surface-constrained feeding", width=0.26)
 box(0.44, 0.18, "Fewer repeatable\nvertical choices", width=0.24)
 box(0.76, 0.18, "Weaker expected expression\nof centered vertical individuality", width=0.30)
-arrow(0.27,0.18,0.32,0.18)
-arrow(0.56,0.18,0.61,0.18)
+arrow(0.28, 0.18, 0.32, 0.18)
+arrow(0.56, 0.18, 0.61, 0.18)
 
 ax.text(
     0.5, 0.94,
@@ -44,12 +44,13 @@ ax.text(
 )
 ax.text(
     0.92, 0.39,
-    "Competing predictors:\nwing morphology\nphylogeny / sensory ecology\nhabitat structure\natmospheric forcing\ntracking technology",
+    "Competing predictors:\nwing morphology\nphylogeny / sensory ecology\nhabitat structure\n"
+    "atmospheric forcing\ntracking technology",
     ha="center", va="center", fontsize=8
 )
 
-ax.set_xlim(0,1)
-ax.set_ylim(0,1)
+ax.set_xlim(0, 1)
+ax.set_ylim(0, 1)
 fig.tight_layout()
 fig.savefig(OUT)
 print(OUT)
