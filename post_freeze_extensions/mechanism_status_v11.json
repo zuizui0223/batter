@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-post-freeze-mechanism-status-v11",
+  "frozen_submission_unchanged": true,
+  "submission_branch": "main",
+  "submission_version": "v0.3.8",
+  "current_synthesis": "MECHANISM_SYNTHESIS_V11.md",
+  "original_submission": {
+    "centered_shape_positive_panels": 5,
+    "centered_shape_boundary_panels": 1,
+    "boundary_taxon": "Tadarida teniotis",
+    "strongest_statement": "Multiple original bat systems retain repeatable centered vertical-distribution identity after coarse horizontal occupancy and absolute vertical level are controlled."
+  },
+  "prospective_external": {
+    "Nyctalus noctula": {
+      "programme": "first frozen external primary",
+      "n": 27,
+      "calibrated_vertical_excess": 0.051747374510001,
+      "p_upper": 0.1224,
+      "pass": false,
+      "direction": "positive"
+    },
+    "Hipposideros source": {
+      "programme": "species-stratified >=5-individual external primary",
+      "n_total": 13,
+      "calibrated_vertical_excess": -0.04468361353981454,
+      "p_upper": 0.8616,
+      "pass": false,
+      "direction": "negative"
+    },
+    "Myotis vivesi": {
+      "programme": "separately frozen four-individual small-panel programme",
+      "n": 4,
+      "horizontal_excess": -0.12377792158562373,
+      "horizontal_p_upper": 0.5846,
+      "calibrated_vertical_excess": 0.004702579344628057,
+      "vertical_p_upper": 0.4419,
+      "pass": false,
+      "direction": "approximately null"
+    },
+    "Pteropus poliocephalus": {
+      "programme": "separately frozen four-individual small-panel programme",
+      "n": 4,
+      "horizontal_excess": 3.4865883002101237,
+      "horizontal_p_upper": 0.0001,
+      "calibrated_vertical_excess": 0.16872869060124038,
+      "vertical_p_upper": 0.0001,
+      "pass": true,
+      "direction": "positive"
+    }
+  },
+  "external_replication_status": {
+    "successful_independent_prospective_replication_established": true,
+    "qualifying_source": "Pteropus poliocephalus",
+    "qualification": "under the separately frozen four-individual small-panel programme; does not retroactively satisfy the earlier >=5-individual programme",
+    "heterogeneity_status": "strong",
+    "prevalence_estimate_justified": false
+  },
+  "positive_system_localization": {
+    "original_archive": {
+      "speed_state": "5/5 retain identity",
+      "speed_turn_state": "5/5 retain identity",
+      "place_2km_state": "4/4 retain identity",
+      "place_500m_state": "4/4 retain identity",
+      "place_250m_state": "3/3 retain identity",
+      "persistence_1d": "4/4 retain identity",
+      "persistence_3d": "3/3 retain identity",
+      "persistence_7d": "2/2 retain identity"
+    },
+    "nyctalus": {
+      "hmm_state_attenuation_p_lower": 0.5431,
+      "track_start_distance_attenuation_p_lower": 0.6886,
+      "potential_roost_x_landcover_attenuation_p_lower": 0.8204
+    },
+    "synthesis": "context-residual individuality where the centered vertical signal is present"
+  },
+  "multidimensional_synthesis": {
+    "name": "configurable spatial individuality",
+    "statement": "Bat systems occupy different configurations across horizontal location identity, absolute vertical level, centered vertical-distribution shape, temporal persistence, and within-context residual identity.",
+    "examples": {
+      "Pteropus poliocephalus": "strong horizontal + strong centered vertical",
+      "Myotis vivesi": "weak horizontal + weak centered vertical",
+      "Hipposideros": "strong source-reported horizontal site fidelity + source-level centered vertical FAIL",
+      "Tadarida teniotis": "absolute vertical identity + centered-shape FAIL",
+      "original positive panels": "centered vertical identity beyond coarse horizontal occupancy"
+    },
+    "cross_source_horizontal_vertical_correlation_established": false
+  },
+  "comparative_search_boundary": {
+    "Leptonycteris nivalis": "structural STOP before altitude; 0 >=50-fix repeat individuals",
+    "Desmodus rotundus": "structural STOP before altitude; no admitted local panel",
+    "Airflows bat panels": "5 necessary-screen panels all structural STOP under >=50-fix-night rule",
+    "Myotis vivesi": "structural STOP under >=5 programme; evaluated only under separate frozen n=4 programme",
+    "Pteropus poliocephalus": "structural STOP under >=5 programme; evaluated only under separate frozen n=4 programme",
+    "multiple Movebank candidates": "rejected for absent native event-level vertical field"
+  },
+  "strongest_general_statement": "Centered vertical individuality is independently prospectively replicable but strongly heterogeneous across bat systems. Spatial individuality is multidimensional and its coupling across horizontal and vertical axes is system-dependent.",
+  "next_questions": [
+    "what predicts calibrated centered vertical-individuality effect size across systems",
+    "what predicts coupling versus decoupling of horizontal and vertical individuality",
+    "what generates within-context vertical individuality where it exists"
+  ],
+  "programme_status": {
+    "original_archive": "CLOSED",
+    "nyctalus": "CLOSED",
+    "hipposideros": "CLOSED WITHOUT RESCUE",
+    "comparative_generality_v1": "CLOSED AS >=5 STRUCTURAL SCREEN",
+    "small_panel_generality_v1": "CLOSED AFTER TWO PROSPECTIVE OUTCOMES",
+    "future_progress": "new independent systems under a predeclared heterogeneity-oriented comparative design"
+  }
+}
