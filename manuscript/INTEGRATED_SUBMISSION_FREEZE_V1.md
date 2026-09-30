@@ -11,10 +11,10 @@ The integrated manuscript supersedes v0.3.8 as the intended submission route. Th
 
 ## Final automated audit at freeze
 
-- reviewer-facing main manuscript: **7,803 words**
+- reviewer-facing main manuscript: **7,821 words**
 - current title-page template: **151 words**
-- combined repository estimate: **7,954 words**
-- remaining buffer to the 8,500-word Research Article ceiling: **546 words**
+- combined repository estimate: **7,972 words**
+- remaining buffer to the 8,500-word Research Article ceiling: **528 words**
 - numbered Abstract: **313 words**
 - anonymous cover letter: **399 words**
 - Supporting Information: **2,437 words**, outside the journal word count
@@ -53,3 +53,5 @@ Do not:
 - perform final upload-platform word-count verification.
 
 Any scientific change after this freeze requires an explicit documented unfreeze and must not be silently folded into the submission.
+
+- Methods and Data availability both point to the **Data sources** section; ten archived tracking datasets have full persistent-identifier citations.
