@@ -13,7 +13,7 @@
 
 Numbered English Abstract: **313 words** (JAE limit: 350).
 
-Repository word count after SI split: **7,691 words** for the current Markdown main document, including references and figure legends but before a separate title page is added.
+Repository word count after SI split: **7,752 words** for the current Markdown main document, including references and figure legends but before a separate title page is added.
 
 Journal of Animal Ecology Research Article limit checked on 2026-10-01: 8,500 words including title page, abstract, main text, references, tables and figure legends; Supporting Information is excluded.
 
