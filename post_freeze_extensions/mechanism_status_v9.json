@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-post-freeze-mechanism-status-v9",
+  "frozen_submission_unchanged": true,
+  "submission_branch": "main",
+  "submission_version": "v0.3.8",
+  "evidence_hierarchy": {
+    "submission_confirmed": "original six-panel programme and centered-shape audit on main",
+    "post_freeze_localization": "original archive stress tests plus same-source Nyctalus mechanism localization",
+    "prospective_external": "only response-unopened external sources under fully frozen protocols qualify"
+  },
+  "nyctalus_external_history": {
+    "prospective_primary": {
+      "n": 27,
+      "calibrated_excess": 0.051747374510001,
+      "p": 0.1224,
+      "pass": false
+    },
+    "later_relaxed_eligibility": {
+      "n": 36,
+      "calibrated_excess": 0.08600497756886367,
+      "p": 0.0115,
+      "classification": "post-outcome sensitivity"
+    },
+    "eligibility_curve": {
+      "thresholds": [0, 20, 30, 40, 50, 75, 100],
+      "positive_excess_count": 7,
+      "thresholds_evaluated": 7,
+      "range": [0.033903053415775646, 0.08600497756886367],
+      "median": 0.06086050756887755
+    }
+  },
+  "nyctalus_context_localization": {
+    "hmm_state": {
+      "n": 27,
+      "collapsed_calibrated_excess": 0.04821299214042518,
+      "state_calibrated_excess": 0.050437249611448354,
+      "paired_increment": 0.011909440062318739,
+      "null_centered_paired_increment": 0.0022242574710231618,
+      "attenuation_p_lower": 0.5431,
+      "attenuation_supported": false
+    },
+    "track_start_distance": {
+      "n": 22,
+      "base_calibrated_excess": 0.04103,
+      "context_calibrated_excess": 0.05654,
+      "paired_increment": 0.02927,
+      "null_centered_paired_increment": 0.01551,
+      "attenuation_p_lower": 0.6886,
+      "attenuation_supported": false
+    },
+    "potential_roost_x_landcover": {
+      "n": 20,
+      "base_calibrated_excess": 0.04355088399779697,
+      "context_calibrated_excess": 0.07226492850364172,
+      "paired_increment": 0.04223410160642553,
+      "null_centered_paired_increment": 0.028714044505844756,
+      "attenuation_p_lower": 0.8204,
+      "attenuation_supported": false
+    }
+  },
+  "original_archive_localization": {
+    "speed_state": "5/5 retain identity",
+    "speed_turn_state": "5/5 retain identity",
+    "place_2km_state": "4/4 structurally evaluable retain identity",
+    "place_500m_state": "4/4 structurally evaluable retain identity",
+    "place_250m_state": "3/3 structurally evaluable retain identity",
+    "place_100m": "structural STOP",
+    "persistence_1d": "4/4 retain identity",
+    "persistence_3d": "3/3 retain identity",
+    "persistence_7d": "2/2 retain identity",
+    "same_night_2km_state": "3/4 PASS",
+    "body_mass_gradient": "0/4 support",
+    "relative_tag_burden": "unsupported",
+    "patch_fidelity_primary": "FAIL p=0.05731",
+    "phase_attribution": "unsupported",
+    "uplift_reaction_norm": "unsupported / structurally sparse"
+  },
+  "current_mechanistic_synthesis": "context-residual individuality",
+  "strongest_mechanism_statement": "Across the original archive and Nyctalus localization, repeatable centered vertical organization is not well explained by measured context mixture alone; substantial identity remains within matched movement, spatial, central-place and source-defined resource contexts.",
+  "remaining_live_mechanisms": [
+    "exact sub-50-m route/resource/microhabitat allocation",
+    "verified occupied roost identity",
+    "fine local atmospheric exposure and individual reaction norms",
+    "wing loading / aspect ratio / detailed morphology",
+    "memory, experience and learned routines"
+  ],
+  "programme_status": {
+    "original_archive": "CLOSED",
+    "nyctalus_same_source": "CLOSED",
+    "nyctalus_same_source_extensions": "PROHIBITED",
+    "future_external_validation": "requires a new response-unopened source under a separate frozen programme",
+    "decisive_mechanism": "requires overlap-rich field data or a new source with exact resource/route/environment context"
+  }
+}
