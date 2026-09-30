@@ -60,13 +60,14 @@ def main():
     nonvertical=[f["individual"],f["timestamp"],f["longitude"],f["latitude"]]
 
     # Header-only read may verify that the vertical field exists, but its values are excluded.
-    header=pd.read_excel(io.BytesIO(raw),nrows=0,engine="openpyxl")
+    header=pd.read_excel(io.BytesIO(raw),sheet_name="LENI GPS Data",nrows=0,engine="openpyxl")
     missing=[x for x in nonvertical+[f["vertical_field"]] if x not in header.columns]
     if missing:
         raise RuntimeError(f"missing expected columns: {missing}")
 
     df=pd.read_excel(
         io.BytesIO(raw),
+        sheet_name="LENI GPS Data",
         usecols=nonvertical,
         dtype=str,
         engine="openpyxl"
