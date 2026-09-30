@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-hipposideros-tracking-structure-v1",
+  "frozen_date": "2026-09-30",
+  "status": "outcome-blind tracking-structure audit before any numeric height",
+  "source": {
+    "dataset_doi": "10.5061/dryad.j0zpc86r1",
+    "gps_file_id": 4102381
+  },
+  "allowed_fields": [
+    "id",
+    "timestamp"
+  ],
+  "allowed_summaries": [
+    "unique IDs",
+    "rows per ID",
+    "unique calendar dates per ID",
+    "rows per ID x date",
+    "first and last date per ID"
+  ],
+  "prohibited": [
+    "read height",
+    "read coordinates",
+    "read speed, angle, temperature or voltage",
+    "drop or relabel IDs based on anything except a separately frozen structural rule",
+    "infer species from temporal tracking patterns"
+  ],
+  "question": "Do the 19 raw GPS ID strings reduce to the paper's 17 tracked individuals through obvious tracking-structure evidence such as split deployments or structurally unusable IDs?",
+  "claim_boundary": [
+    "This audit is descriptive provenance only.",
+    "It cannot by itself delete IDs or assign species.",
+    "Any revised grouping/exclusion rule must be frozen after this audit and before Height is opened."
+  ]
+}
