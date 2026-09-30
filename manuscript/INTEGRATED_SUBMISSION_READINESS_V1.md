@@ -22,7 +22,7 @@ The frozen v0.3.8 manuscript on `main` remains provenance only and is no longer 
 Checked against the Journal of Animal Ecology author guidelines on 2026-10-01.
 
 - Research Article word limit: 8,500 words including title page, abstract, references, tables and figure legends; Supporting Information excluded.
-- Current reviewer-facing main manuscript repository count: **7,803 words**; current title-page template: **151 words**; combined repository estimate: **7,954 words**, leaving approximately 546 words before the 8,500-word ceiling.
+- Current reviewer-facing main manuscript repository count: **7,821 words**; current title-page template: **151 words**; combined repository estimate: **7,972 words**, leaving approximately 528 words before the 8,500-word ceiling.
 - Numbered English Abstract: **313 words**; limit 350.
 - Keywords: **7**, alphabetically ordered; limit 8.
 - Main manuscript has the required Introduction, Materials and Methods, Results, Discussion and References structure.
@@ -126,3 +126,5 @@ The integrated paper is now shorter, more falsifiable and more ecologically info
 ## Dataset citation check
 
 All ten public tracking datasets used in the integrated analysis now have full dataset citations in the manuscript's **Data sources** section, in addition to the Data and code availability statement. This satisfies the journal requirement to cite archived datasets with persistent identifiers rather than listing DOIs only.
+
+- Methods and Data availability both point to the **Data sources** section; ten archived tracking datasets have full persistent-identifier citations.
