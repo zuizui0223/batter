@@ -24,6 +24,10 @@ Ecological heterogeneity in bat vertical individuality
 
 [INSERT CRediT / journal-appropriate contribution statement]
 
+## Statement on inclusion
+
+[INSERT JOURNAL-APPROPRIATE INCLUSION STATEMENT FOR SUBMISSION]
+
 ## Acknowledgements
 
 [INSERT ACKNOWLEDGEMENTS]
