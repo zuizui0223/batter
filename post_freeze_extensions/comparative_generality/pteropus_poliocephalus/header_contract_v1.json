@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-pteropus-poliocephalus-header-v1",
+  "frozen_date": "2026-09-30",
+  "status": "technical-resolution header audit after generic raw Movebank PID resolver failed; before any numeric vertical outcome",
+  "programme": "batter-comparative-generality-program-v1",
+  "source": {
+    "repository": "Movebank Data Repository",
+    "doi": "10.5441/001/1.5bd6pq55",
+    "taxon": "Pteropus poliocephalus",
+    "study": "Spring foraging movements of an urban population of grey-headed flying foxes"
+  },
+  "allowed_operations": [
+    "resolve DOI and follow public redirects",
+    "read landing-page HTML and repository metadata",
+    "enumerate public bitstream/file names, sizes, checksums and content links",
+    "read only the first CSV/TSV header row or equivalent schema metadata",
+    "if only a ZIP package is exposed, read ZIP central directory and first header row of candidate tabular members only"
+  ],
+  "forbidden_operations": [
+    "read numeric event rows beyond the header",
+    "parse, summarize or plot any altitude/height value",
+    "infer vertical eligibility from numeric vertical magnitudes",
+    "change accepted vertical-field names after inspecting data rows"
+  ],
+  "accepted_native_vertical_names": [
+    "height_above_msl",
+    "height_above_ellipsoid",
+    "height_raw",
+    "height",
+    "altitude"
+  ],
+  "required_event_header_groups": {
+    "individual": ["individual_local_identifier","individual.local.identifier","individual_id","individual.id","tag_local_identifier"],
+    "timestamp": ["timestamp"],
+    "longitude": ["location_long","location.long","longitude"],
+    "latitude": ["location_lat","location.lat","latitude"]
+  },
+  "decision_rule": [
+    "PASS_TO_STRUCTURAL_PREFLIGHT only if an event-like table contains individual, timestamp, longitude, latitude and an accepted native vertical field.",
+    "REJECT_NO_VERTICAL_RESPONSE if an event-like table is identified and lacks every accepted vertical field.",
+    "PENDING_ACCESS if repository files cannot be enumerated/read.",
+    "No event values may be opened in this audit."
+  ],
+  "claim_boundary": [
+    "This resolves transport/schema only; it is not a biological test.",
+    "Header PASS does not imply >=50-fix repeated-session eligibility.",
+    "Header FAIL closes the final unresolved raw Movebank candidate in comparative-generality v1."
+  ]
+}
