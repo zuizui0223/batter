@@ -1,0 +1,47 @@
+name: desmodus-comparative-preflight-v1
+on:
+  push:
+    branches: [prospective/desmodus-comparative-source-v1]
+    paths:
+      - "post_freeze_extensions/comparative_generality/desmodus/source_contract_v1.json"
+      - "post_freeze_extensions/comparative_generality/desmodus/run_preflight_v1.py"
+      - ".github/workflows/desmodus-comparative-preflight-v1.yml"
+  workflow_dispatch:
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    permissions:
+      contents: write
+    env:
+      DRYAD_API_TOKEN: ${{ secrets.DRYAD_API_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install pandas numpy pyproj remotezip requests openpyxl
+      - name: Require Dryad token
+        run: |
+          test -n "$DRYAD_API_TOKEN" || (echo "DRYAD_API_TOKEN secret is not set" && exit 2)
+      - name: Run outcome-blind Desmodus preflight and horizontal individuality
+        run: python post_freeze_extensions/comparative_generality/desmodus/run_preflight_v1.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: batter-desmodus-comparative-preflight-v1
+          path: |
+            post_freeze_extensions/comparative_generality/desmodus/preflight_result_v1.json
+            post_freeze_extensions/comparative_generality/desmodus/PREFLIGHT_RESULT_V1.md
+            post_freeze_extensions/comparative_generality/desmodus/altitude_opening_receipt_v1.json
+          if-no-files-found: error
+      - name: Pin preflight and receipt
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add             post_freeze_extensions/comparative_generality/desmodus/preflight_result_v1.json             post_freeze_extensions/comparative_generality/desmodus/PREFLIGHT_RESULT_V1.md             post_freeze_extensions/comparative_generality/desmodus/altitude_opening_receipt_v1.json
+          if git diff --cached --quiet; then
+            echo "No preflight output changes"
+          else
+            git commit -m "Record outcome-blind Desmodus preflight receipt"
+            git push origin HEAD:prospective/desmodus-comparative-source-v1
+          fi
