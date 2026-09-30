@@ -112,7 +112,7 @@ Positive overlap among repeat-individual tracking windows was 71.4% in *Tadarida
 
 ### Pipeline calibration changed the inferential baseline
 
-The estimator audit altered interpretation rather than merely changing p-values. The original conditional-minus-marginal contrast had a negative panel-specific exchangeability expectation, and the ordinary marginal score inherited horizontal occupancy differences. Most visibly, *P. hastatus* 2022 changed from an apparent marginal-dominant value of G_adv = -0.120 to a common-cell conditional increment of approximately +0.0066 after horizontal standardization (Supporting Figure S2).
+The estimator audit altered interpretation rather than merely changing p-values. The original conditional-minus-marginal contrast had a negative panel-specific exchangeability expectation, and the ordinary marginal score inherited horizontal occupancy differences. Most visibly, *P. hastatus* 2022 changed from an apparent marginal-dominant value of G_adv = -0.120 to a common-cell conditional increment of approximately +0.0066 after horizontal standardization (see the estimator-audit results archived with the analysis).
 
 The same principle appeared in the biological translations: pairwise null means ranged from 0.498 to 0.583 rather than being fixed at 0.5, and the focal absolute AGL separation had a positive null mean rather than zero. These results motivate pipeline-specific exchangeability calibration as a general methodological conclusion.
 
