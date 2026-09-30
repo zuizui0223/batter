@@ -12,13 +12,14 @@
   },
   "prerequisites_before_height_opening": [
     "raw file obtained through an authorized Dryad route and checksum recorded",
-    "species mapping resolved under species_mapping_contract_v1.json or the programme stops",
+    "species mapping resolved under species_mapping_contract_v2.json or the programme stops",
     "structural gate including exact 5-km common-support/evaluability executed without numeric height and not altered after output",
     "exact eligible species, individual ids, target nights, training-night universe and supported-event counts frozen in a preflight receipt"
   ],
   "species_mapping": {
-    "contract": "post_freeze_extensions/hipposideros_external_validation/species_mapping_contract_v1.json",
-    "exchangeability": "identity labels are never permuted across species"
+    "contract": "post_freeze_extensions/hipposideros_external_validation/species_mapping_contract_v2.json",
+    "v1_history": "species_mapping_contract_v1.json failed because all raw IDs were D=11/H=8; v2 uses the already-frozen >=50-fix session threshold to identify the source paper's 17 effective tracked individuals before mapping 9/8 species counts",
+    "exchangeability": "identity labels are never permuted across mapped species"
   },
   "session_definition": {
     "if_timestamp_has_time": "timestamp shifted backward by 12 hours then calendar date",
