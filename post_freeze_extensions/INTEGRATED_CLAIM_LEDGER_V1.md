@@ -17,7 +17,7 @@ This ledger governs the one-paper integration of frozen JAE v0.3.8 and all post-
 | *Nyctalus noctula* meets its first frozen external primary | Tier 3 | FAIL, excess +0.05175, p=0.1224 | later same-source positives are sensitivity evidence |
 | *Hipposideros* source meets frozen source-level primary | Tier 3 | FAIL, excess -0.04468, p=0.8616 | no species/subset rescue |
 | *Myotis vivesi* meets frozen n=4 small-panel primary | Tier 3 | FAIL, excess +0.00470, p=0.4419 | n=4 programme only |
-| *Pteropus poliocephalus* meets frozen n=4 centered-MSL primary | Tier 3 | historical PASS, excess +0.16873, p=0.0001 | terrain robustness separately audited post outcome |
+| *Pteropus poliocephalus* meets frozen n=4 centered-MSL primary | Tier 3 | historical PASS, excess +0.16873, p=0.0001 | post-outcome terrain audit retains a smaller terrain-adjusted signal |
 | External programme estimates prevalence of vertical individuality in bats | none | prohibited | convenience/structurally filtered sources and distinct programmes |
 | Horizontal and centered-vertical individuality are universally coupled | cross-system synthesis | not established | Pteropus/Myotis alone cannot identify a cross-source relation |
 | “Configurable spatial individuality” predicts new outcomes | none | not established | retain only as optional descriptive vocabulary, not explanatory result |
@@ -42,9 +42,11 @@ Always report:
 The historical n=4 MSL PASS remains part of the chronology under every terrain-audit result.
 
 For the integrated ecological conclusion:
-- if MSL−DEM passes, Pteropus can be described as terrain-robust under the post-outcome diagnostic;
-- if MSL−DEM fails, Pteropus must be described as terrain-sensitive;
-- terrain-only identity determines whether fine-scale topographic use is positively supported as the leakage pathway.
+- the frozen terrain audit gives MSL−DEM calibrated excess +0.03231, p=0.0023: PASS;
+- centered DEM terrain itself gives excess +0.37887, p=0.0034: PASS;
+- therefore fine-scale topographic individuality is a supported leakage/context pathway, but it does not fully remove the terrain-adjusted centered signal;
+- the terrain-adjusted/original excess ratio 0.192 is descriptive only, not a causal mediation fraction;
+- the historical MSL PASS remains the prospective verdict; the terrain audit is post-outcome diagnosis.
 
 ## Species-versus-panel counting rule
 
