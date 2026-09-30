@@ -28,17 +28,42 @@ Why first:
 5. source-level temperature may later support a separately frozen environmental context test if, and only if, primary replication is first completed under its own contract.
 
 Current status:
-- structural gate criteria already frozen on `prospective/hipposideros-structural-gate-v1`;
-- numeric height remains unopened in that family;
-- direct file download currently fails because Dryad returns HTML / requires authenticated API download;
+- original structural gate criteria are retained on `prospective/hipposideros-structural-gate-v1`;
+- outcome-blind species mapping is now frozen on `prospective/hipposideros-species-mapping-v1`;
+- the complete prospective primary estimator is frozen on `prospective/hipposideros-primary-design-v1`;
+- numeric height remains unopened;
+- direct unauthenticated download fails because Dryad now requires authenticated API file download;
 - status = **PENDING_ACCESS**, not structural FAIL.
 
-Before any vertical analysis:
-- acquire the exact raw file through a normal authorized Dryad route;
-- verify source checksum;
-- resolve individual-to-species mapping without using height;
-- execute the already-frozen >=50-fix / >=2-night structural gate;
-- if PASS, freeze the full vertical estimator before numeric height is opened.
+Pre-frozen species mapping:
+- read only the GPS `id` strings;
+- proceed only if exactly two ID-prefix groups contain 9 and 8 unique individuals;
+- map the 9-ID prefix to *H. armiger* and the 8-ID prefix to *H. pratti*, matching the published tracked sample counts;
+- otherwise stop as `MAPPING_UNRESOLVED`; do not infer species from height, coordinates, behaviour or diet.
+
+Pre-frozen primary design:
+- session: nocturnal date under the deterministic timestamp rule;
+- >=50 presence-qualified fixes/night;
+- EPSG:32648 and fixed 5-km grid;
+- >=50 common-support target events;
+- exact target nights frozen before numeric height;
+- session-median-centered source AGL height;
+- frozen centered-height bins;
+- whole-night identity permutation within species;
+- equal-individual within species and equal-species source aggregation;
+- 9,999 permutations, seed 2026093007;
+- source-level calibrated excess >0 and one-sided p<=0.05 required for PASS.
+
+Authorized access route:
+- Dryad API `GET /api/v2/files/4102381/download` with a Bearer token;
+- GitHub workflow reads the token only from repository secret `DRYAD_API_TOKEN`;
+- the token must not be pasted into analysis files or chat transcripts.
+
+Execution order after access:
+1. run the authenticated outcome-blind preflight;
+2. if it passes, commit the generated `height_opening_receipt_v1.json` unchanged;
+3. only then run the receipt-gated primary vertical validator;
+4. preserve FAIL without rescue if the source-level primary rule is not met.
 
 ## Priority 2 — Leptonycteris nivalis
 
