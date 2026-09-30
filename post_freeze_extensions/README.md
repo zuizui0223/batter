@@ -4,22 +4,19 @@ The frozen v0.3.8 JAE submission on `main` is unchanged.
 
 ## Read first
 
-- `MECHANISM_SYNTHESIS_V10.md` — current synthesis after the prospective Hipposideros boundary test;
-- `mechanism_status_v10.json` — machine-readable current status;
-- `MECHANISM_CLAIM_LEDGER_V10.md` — strongest defensible claims and claim ceilings;
-- `SPATIAL_INDIVIDUALITY_AXES_V1.md` — horizontal fidelity, absolute vertical level and centered vertical shape as separable axes;
-- `EXTERNAL_HETEROGENEITY_FEASIBILITY_V1.md` — why heterogeneity is now the right question but k=2 external effects are not enough to model it;
+- `MECHANISM_SYNTHESIS_V11.md` — current synthesis: independent replication plus strong cross-system heterogeneity;
+- `mechanism_status_v11.json` — machine-readable current status;
+- `MECHANISM_CLAIM_LEDGER_V11.md` — strongest defensible claims and claim ceilings;
+- `MECHANISM_CAUSE_TREE_V10.md` — current multidimensional / configurable spatial-individuality tree;
+- `small_panel_generality/PRIMARY_RESULT_V1.md` — prospective four-individual Myotis/Pteropus outcomes;
+- `small_panel_generality/PREFLIGHT_RESULT_V1.md` — horizontal individuality and exact common-support receipt before vertical opening;
 - `HIPPOSIDEROS_PRIMARY_CLOSEOUT_V1.md` — prospective Hipposideros primary FAIL and no-rescue closeout;
-- `LEPTONYCTERIS_STRUCTURAL_RESULT_V1.md` — outcome-blind structural FAIL with Altitude unopened;
-- `NYCTALUS_VALIDATION_HISTORY_V1.md` — complete Nyctalus inferential chronology;
-- `NYCTALUS_ELIGIBILITY_ROBUSTNESS_RESULT_V1.md` — 0–100-fix sensitivity;
-- `NYCTALUS_HMM_STATE_ATTRIBUTION_RESULT_V1.md` — support-matched HMM-state test;
-- `NYCTALUS_CENTRAL_PLACE_ATTRIBUTION_RESULT_V1.md` — central-place / flight-stage attribution;
-- `NYCTALUS_RESOURCE_CONTEXT_ATTRIBUTION_RESULT_V1.md` — final potential-roost × land-cover attribution;
-- `NYCTALUS_SAME_SOURCE_STOP_RULE_V1.md` — closure of same-source Nyctalus mechanism search;
-- `NEXT_DECISIVE_MECHANISM_EXPERIMENT_V2.md` — field design needed to identify remaining positive-system mechanisms.
+- `NYCTALUS_VALIDATION_HISTORY_V1.md` — complete Nyctalus chronology;
+- `NYCTALUS_ELIGIBILITY_ROBUSTNESS_RESULT_V1.md` — fixed eligibility sensitivity;
+- `NYCTALUS_HMM_STATE_ATTRIBUTION_RESULT_V1.md`, `NYCTALUS_CENTRAL_PLACE_ATTRIBUTION_RESULT_V1.md`, and `NYCTALUS_RESOURCE_CONTEXT_ATTRIBUTION_RESULT_V1.md` — support-matched mechanism localization;
+- `comparative_generality/README.md` and `comparative_generality/CANDIDATE_LEDGER_V1.md` — closed public-source structural search.
 
-`MECHANISM_SYNTHESIS_V7.md`, v8 and v9 are historical stages. v10 is the current post-freeze interpretation.
+Earlier v7–v10 syntheses are retained as historical stages. **v11 is the current post-freeze interpretation.**
 
 ## Submission-confirmed result
 
@@ -29,57 +26,66 @@ No post-freeze result changes the frozen submission.
 
 ## Prospective external evidence
 
-### Nyctalus
+| source | design | calibrated centered vertical excess | p_upper | verdict |
+|---|---|---:|---:|---|
+| *Nyctalus noctula* | first frozen external primary | +0.05175 | 0.1224 | FAIL |
+| *Hipposideros* source | species-stratified >=5-individual primary | -0.04468 | 0.8616 | FAIL |
+| *Myotis vivesi* | separately frozen four-individual small-panel | +0.00470 | 0.4419 | FAIL |
+| *Pteropus poliocephalus* | separately frozen four-individual small-panel | **+0.16873** | **0.0001** | **PASS** |
 
-First frozen primary:
-- n=27;
-- calibrated excess **+0.05175**;
-- p=**0.1224**;
-- verdict: **FAIL**.
+Therefore:
 
-Later same-source sensitivity remains directionally positive across 7/7 frozen eligibility thresholds, but cannot restore prospective status.
+> **A successful independent prospective external replication is now established in Pteropus poliocephalus, while strong cross-system heterogeneity is simultaneously established.**
 
-### Hipposideros
+The Pteropus PASS belongs to the separately frozen n=4 programme. It does not retroactively satisfy the earlier >=5-individual comparative-generality gate.
 
-Genuinely response-unopened primary:
-- *H. armiger*: 8 estimator-evaluable individuals;
-- *H. pratti*: 5 estimator-evaluable individuals;
-- source calibrated excess **-0.04468**;
-- p=**0.8616**;
-- verdict: **FAIL**.
+No prevalence estimate across bats follows from this convenience-source set.
 
-The Hipposideros programme is closed without rescue.
+## Prospective horizontal axis in the small-panel programme
 
-Therefore successful prospective external replication of centered vertical individuality is **not established**.
+Horizontal individuality was opened and frozen before either source's vertical magnitude.
+
+- *Pteropus poliocephalus*: horizontal calibrated excess **+3.48659**, p=**0.0001**.
+- *Myotis vivesi*: horizontal calibrated excess **-0.12378**, p=**0.5846**.
+
+Thus the two directly comparable prospective sources occupy:
+- Pteropus: **high horizontal / high centered vertical**;
+- Myotis: **low horizontal / low centered vertical**.
+
+Two sources are not enough to estimate a cross-source correlation.
 
 ## Current ecological synthesis
 
-The broadest current result is **multidimensional / axis-specific spatial individuality**.
+The broadest current result is **configurable, multidimensional spatial individuality**.
 
-At minimum, three properties can dissociate:
-1. horizontal location fidelity;
+Relevant dimensions include:
+1. horizontal location identity;
 2. absolute vertical level;
-3. centered vertical-distribution shape.
+3. centered vertical-distribution shape;
+4. temporal persistence;
+5. residual identity within matched ecological context.
 
-Boundary evidence:
-- `Tadarida`: absolute vertical identity without centered-shape identity;
-- `Hipposideros`: strong source-reported horizontal site fidelity without successful centered-shape replication;
-- five original comparative panels: centered-shape identity remains after coarse horizontal occupancy is standardized.
+Observed configurations include:
+- *Pteropus poliocephalus*: strong horizontal + strong centered vertical;
+- *Myotis vivesi*: neither horizontal nor centered vertical supported;
+- Hipposideros: strong source-reported horizontal site fidelity + centered vertical primary FAIL;
+- *Tadarida*: absolute vertical identity + centered-shape FAIL;
+- original positive systems: centered vertical identity remains after coarse horizontal context is standardized.
 
-Thus:
+Therefore:
 
-> **Different dimensions of individual spatial specialization can vary independently across bat systems.**
+> **Spatial-individuality axes can couple or decouple differently among systems.**
 
-“Independent” here is ecological shorthand for separable dimensions that can dissociate, not a claim of exact zero statistical covariance.
+This is a comparative ecological synthesis, not yet a fitted latent-trait model.
 
-## Mechanistic localization where centered shape exists
+## Mechanistic localization where centered vertical individuality exists
 
 Original comparative archive:
 - speed conditioning: 5/5 retain identity;
 - speed × turning: 5/5;
 - 2-km place × state: 4/4;
-- 500-m: 4/4;
-- 250-m: 3/3;
+- 500-m place × state: 4/4;
+- 250-m place × state: 3/3;
 - >=1-day self-history: 4/4;
 - >=3-day: 3/3;
 - >=7-day: 2/2.
@@ -91,28 +97,49 @@ Nyctalus support-matched localization:
 
 This supports **context-residual individuality where the centered signal exists**, not a universal bat mechanism.
 
+## Public-data structural boundary
+
+The closed comparative source search also found many sources that cannot fairly evaluate the estimator under the frozen high-resolution repeated-session rule.
+
+Examples:
+- *Leptonycteris nivalis*: 21 IDs but 0 >=50-fix repeat sessions;
+- *Desmodus rotundus*: no admitted local panel;
+- five Airflows bat candidate panels: 0 qualifying >=50-fix nights in the thinned commuting-flight compilation;
+- multiple Movebank sources: no native event-level vertical field;
+- *Myotis vivesi* and *Pteropus poliocephalus*: exactly four repeat individuals, hence structural STOP under the original >=5 programme and later evaluated only under the separate frozen n=4 design.
+
+Do not treat these structural stops as negative vertical results.
+
 ## Programme status
 
 Closed:
 - original archive mechanism programme;
-- Nyctalus prospective primary;
-- Nyctalus same-source mechanism programme;
-- Hipposideros prospective primary.
+- Nyctalus prospective primary and same-source mechanism programme;
+- Hipposideros prospective primary;
+- comparative-generality v1 >=5-individual structural screen;
+- small-panel generality v1 after both prospective outcomes.
 
 Prohibited:
-- Hipposideros species-only rescue;
-- dropping H32;
-- alternate grids/bins/thresholds;
-- absolute-height rescue;
-- temperature/speed/competition rescue;
-- automatic continuation to another external source merely because Hipposideros failed.
-
-`Leptonycteris` has now completed its original frozen structural gate **without opening Altitude**: 21 individuals were present, but there were **0 nights with >=50 nonvertical-valid fixes**, so repeat-eligible n=0 and the candidate is structurally ineligible under the common estimator. The threshold is not lowered from 50 to 49 after seeing the structure.
+- same-source rescue of Nyctalus or Hipposideros;
+- Myotis subgroup fishing;
+- Pteropus individual removal/reweighting after outcome;
+- alternate grids/bins/session thresholds to improve either small-panel result;
+- treating the Pteropus PASS as if it had satisfied the earlier >=5-individual programme.
 
 ## Next scientific questions
 
-1. What generates within-context vertical individuality where it occurs?
-2. What ecological or biological conditions determine whether centered vertical individuality emerges at all?
-3. What predicts covariance or dissociation among horizontal fidelity, absolute altitude level and centered vertical shape?
+1. What predicts the **continuous calibrated strength** of centered vertical individuality across systems?
+2. What predicts **coupling versus decoupling** among horizontal and vertical individuality axes?
+3. What generates **within-context vertical individuality** where it occurs?
 
-Further progress should use new independent systems under a heterogeneity-oriented design or new field data with exact resource/route × behaviour × local-environment overlap.
+Candidate predictor families for future independent systems include:
+- wing loading / aspect ratio / flight morphology;
+- foraging guild and clutter regime;
+- resource vertical complexity;
+- central-place geometry;
+- exact route/resource structure;
+- local atmospheric variability and individual reaction norms;
+- memory / experience;
+- interspecific competition.
+
+Further progress should explain heterogeneity rather than search for another universal positive result.
