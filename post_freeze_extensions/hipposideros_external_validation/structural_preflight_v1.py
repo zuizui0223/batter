@@ -43,7 +43,7 @@ def main():
     url=resolve_file(c,session)
     headers={**UA,"Referer":c["source"]["landing_url"],"Accept":"text/csv,text/plain,*/*"}
     candidates=[url]
-    m=re.search(r"/file_stream/(\\d+)",url)
+    m=re.search(r"/file_stream/(\d+)",url)
     if m:
         fid=m.group(1)
         candidates += [
