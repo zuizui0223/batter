@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-nyctalus-hmm-state-attribution-v1",
+  "frozen_date": "2026-09-30",
+  "status": "post-outcome paired-support mechanism attribution; frozen before paired collapsed-vs-state output",
+  "role": "diagnose whether the previously observed Nyctalus HMM-state attenuation reflects state information itself rather than support loss; cannot restore prospective status",
+  "source": {
+    "taxon": "Nyctalus noctula",
+    "repository": "Zenodo",
+    "record_id": 7535030,
+    "doi": "10.5281/zenodo.7535030",
+    "file": "Observed_GPS_locations.csv",
+    "sha256": "2f373d47706c5b56313de70b623bb5446f5925c69af30f1b145993419e382aa9"
+  },
+  "hypothesis_origin": {
+    "observed_before_this_contract": true,
+    "later_same_source_state_result": {
+      "n": 27,
+      "calibrated_excess": 0.050736765421096244,
+      "p_upper": 0.0707,
+      "pass": false
+    },
+    "rationale": "Determine whether adding source HMM state removes same-individual predictive information on identical state-supported target events, rather than merely reducing evaluable support."
+  },
+  "fixed_context": {
+    "cohort": "Year x field_period",
+    "session": "trackid",
+    "individual": "bat_id",
+    "valid_source_states": ["ARM", "COM"],
+    "horizontal_grid_m": 5000,
+    "vertical_centering": "full retained source-track median before state filtering",
+    "vertical_edges_m": ["-inf", -400, -200, -100, -50, 0, 50, 100, 200, 400, "inf"],
+    "alpha": 0.5,
+    "minimum_scored_target_events": 50,
+    "expected_evaluable_individuals": 27
+  },
+  "paired_estimand": {
+    "event_pool": "only events with source move_state in {ARM, COM}; both models use this identical event pool",
+    "state_model": "P(centered z | 5-km cell x source HMM move_state)",
+    "collapsed_model": "P(centered z | 5-km cell), trained from the identical ARM/COM event pool with state collapsed",
+    "target_support": "score only target events whose full cell x state stratum is supported in both self and other state profiles and whose collapsed cell is supported in both collapsed profiles",
+    "target_matching": "both models are scored on exactly the same state-model-supported target events",
+    "self_weighting": "equal eligible training source track",
+    "other_weighting": "pool source tracks within each other bat, then equal-weight other bats within cohort",
+    "target_aggregation": "equal target track within bat, then equal bat",
+    "paired_increment": "state-conditioned identity gain minus collapsed identity gain; negative values indicate attenuation after state conditioning"
+  },
+  "calibration": {
+    "permutation_unit": "whole source-track identity labels",
+    "scope": "within Year x field_period cohort",
+    "preserve": "track x-y-state-centered-z block and exact per-cohort track-count multiset per identity",
+    "B": 9999,
+    "seed": 2026093003,
+    "primary_test": "observed paired state increment < permutation null mean and one-sided p(null <= observed) <= 0.05",
+    "exact_n_required": 27
+  },
+  "interpretation_matrix": {
+    "attenuation_PASS": "Source HMM state removes more same-individual predictive advantage than expected on identical target support, supporting behavioural-state allocation as a contributor in Nyctalus.",
+    "attenuation_FAIL": "The apparent HMM-state attenuation is not distinguishable from support-matched permutation expectation; support loss / finite-sample precision remains a viable explanation."
+  },
+  "claim_boundary": [
+    "This test is post-outcome mechanism localization, not confirmatory discovery or external prospective replication.",
+    "ARM/COM are source-study HMM behavioural proxies, not exact resource identity.",
+    "A significant negative paired increment would support state-linked organization as a contributor, not prove it is the sole mechanism.",
+    "A non-significant paired increment would not prove state is irrelevant; it would show the existing state-vs-primary contrast does not identify state causally.",
+    "No alternative state filter, grid, event minimum, vertical bins, B, seed or tail direction may be selected after output."
+  ]
+}
