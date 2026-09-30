@@ -47,7 +47,7 @@ def load_raw(token):
     return r.content
 
 def build_session_date(d, rule):
-    t=pd.to_datetime(d["timestamp"],errors="coerce")
+    t=pd.to_datetime(d["timestamp"],errors="coerce",format="mixed")
     if t.isna().any():
         raise RuntimeError(f"timestamp parse failures: {int(t.isna().sum())}")
     if rule=="timestamp_minus_12h_then_date":
