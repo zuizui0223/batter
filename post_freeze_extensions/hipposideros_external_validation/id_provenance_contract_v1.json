@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-hipposideros-id-provenance-v1",
+  "frozen_date": "2026-09-30",
+  "status": "outcome-blind identity provenance audit after prefix-count mapping failed and before any numeric height is opened",
+  "source": {
+    "dataset_doi": "10.5061/dryad.j0zpc86r1",
+    "gps_file_id": 4102381,
+    "allotu_file_id": 4102382,
+    "readme_file_id": 4102545
+  },
+  "allowed_operations": [
+    "read GPS id column only",
+    "read allotu.csv header names only; do not read OTU count values",
+    "read Dryad README text",
+    "compare identifier strings across files",
+    "report exact identifier sets and overlaps",
+    "search README text for explicit species-to-ID mapping statements"
+  ],
+  "prohibited_operations": [
+    "parse or summarize GPS height",
+    "read GPS longitude, latitude, speed, angle, temperature or battery voltage",
+    "read or summarize dietary OTU count values",
+    "infer species from GPS locations, behavior, diet composition or any outcome pattern",
+    "drop IDs merely because they have low sample size unless an explicit source document identifies them as excluded"
+  ],
+  "decision_rule": [
+    "If README or another source-native identifier table explicitly maps GPS IDs to species, use only that explicit mapping.",
+    "If allotu header IDs encode an explicit species label that can be deterministically cross-walked to GPS IDs without dietary values, report the crosswalk and its source.",
+    "If neither route uniquely resolves every GPS ID intended for the paper's 17 tracked adults, declare SPECIES_MAPPING_UNRESOLVED and do not open Height."
+  ],
+  "claim_boundary": [
+    "This audit may resolve identity provenance only.",
+    "The earlier 9-vs-8 prefix-count rule remains recorded as failed because GPS contains 11 D-prefix and 8 H-prefix IDs.",
+    "No vertical response is opened by this audit."
+  ]
+}
