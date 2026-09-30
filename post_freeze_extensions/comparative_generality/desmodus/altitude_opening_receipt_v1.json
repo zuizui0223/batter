@@ -1,0 +1,8 @@
+{
+  "inner_sha256": "21c80d1b50992cd8c98588e68962a38ea111960f5dd99066f0222b52887f5a3a",
+  "next_step": "STOP; do not lower gates or open numeric ALTITUDE.",
+  "numeric_altitude_values_parsed": false,
+  "reason": "no Local has >=3 repeat individuals under frozen >=50-fix-session rule",
+  "schema_version": 1,
+  "status": "STOP"
+}

@@ -1,0 +1,33 @@
+{
+  "admitted_locals": [],
+  "decision": "STRUCTURAL_FAIL",
+  "horizontal_individuality": {
+    "status": "NOT_EVALUABLE_NO_ADMITTED_LOCAL"
+  },
+  "inner_sha256": "21c80d1b50992cd8c98588e68962a38ea111960f5dd99066f0222b52887f5a3a",
+  "locals": [
+    "Chinchaypujio",
+    "Craneos",
+    "Machu Picchu",
+    "Mollebamba",
+    "Pacayca",
+    "Tiquihua"
+  ],
+  "numeric_altitude_values_parsed": false,
+  "qualified_sessions_ge50": 4,
+  "repeat_ids_by_local": {
+    "Chinchaypujio": [],
+    "Craneos": [],
+    "Machu Picchu": [],
+    "Mollebamba": [],
+    "Pacayca": [
+      "10649-122"
+    ],
+    "Tiquihua": []
+  },
+  "rows_presence_qualified": 1678,
+  "schema_version": 1,
+  "study_id": "batter-desmodus-comparative-source-v1",
+  "vertical_evaluable_ids": [],
+  "vertical_gate_pass": false
+}
