@@ -1,0 +1,46 @@
+name: desmodus-zip-inventory-v1
+on:
+  push:
+    branches: [prospective/desmodus-comparative-source-v1]
+    paths:
+      - "post_freeze_extensions/comparative_generality/desmodus/zip_inventory_*"
+      - "post_freeze_extensions/comparative_generality/desmodus/run_zip_inventory_v1.py"
+      - ".github/workflows/desmodus-zip-inventory-v1.yml"
+  workflow_dispatch:
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+    env:
+      DRYAD_API_TOKEN: ${{ secrets.DRYAD_API_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install requests beautifulsoup4 remotezip
+      - name: Require Dryad token
+        run: |
+          test -n "$DRYAD_API_TOKEN" || (echo "DRYAD_API_TOKEN secret is not set" && exit 2)
+      - name: Inventory ZIP central directory only
+        run: python post_freeze_extensions/comparative_generality/desmodus/run_zip_inventory_v1.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: batter-desmodus-zip-inventory-v1
+          path: |
+            post_freeze_extensions/comparative_generality/desmodus/zip_inventory_result_v1.json
+            post_freeze_extensions/comparative_generality/desmodus/ZIP_INVENTORY_RESULT_V1.md
+          if-no-files-found: error
+      - name: Pin inventory
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add post_freeze_extensions/comparative_generality/desmodus/zip_inventory_result_v1.json post_freeze_extensions/comparative_generality/desmodus/ZIP_INVENTORY_RESULT_V1.md
+          if git diff --cached --quiet; then
+            echo "No inventory changes"
+          else
+            git commit -m "Record Desmodus remote ZIP inventory"
+            git push origin HEAD:prospective/desmodus-comparative-source-v1
+          fi
