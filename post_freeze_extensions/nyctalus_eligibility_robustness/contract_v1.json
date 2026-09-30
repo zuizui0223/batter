@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-nyctalus-eligibility-robustness-v1",
+  "date": "2026-09-30",
+  "status": "post-outcome sensitivity diagnostic; not prospective confirmation and not a rescue test",
+  "source": {
+    "taxon": "Nyctalus noctula",
+    "repository": "Zenodo",
+    "record_id": 7535030,
+    "doi": "10.5281/zenodo.7535030",
+    "file": "Observed_GPS_locations.csv",
+    "sha256": "2f373d47706c5b56313de70b623bb5446f5925c69af30f1b145993419e382aa9"
+  },
+  "fixed_estimator": {
+    "cohort": "Year x field_period",
+    "session": "trackid",
+    "individual": "bat_id",
+    "horizontal_grid_m": 5000,
+    "session_centering": "subtract full retained track median Height",
+    "centered_height_edges_m": ["-inf", -400, -200, -100, -50, 0, 50, 100, 200, 400, "inf"],
+    "minimum_supported_target_events": 50,
+    "alpha": 0.5,
+    "self_profile_weighting": "equal eligible training track of target individual",
+    "other_profile_weighting": "pool tracks within each other individual then equal-weight other individuals",
+    "common_weighting": "identical self-derived common-cell weights for self and other profiles",
+    "permutation_unit": "whole track identity within cohort",
+    "B": 9999,
+    "seed": 2026093001
+  },
+  "only_varied_parameter": {
+    "name": "minimum_presence_qualified_fixes_per_session",
+    "thresholds": [0, 20, 30, 40, 50, 75, 100],
+    "interpretation": "0 means no minimum track-length eligibility filter beyond required nonblank fields; all target sessions still require at least 50 scored common-support events"
+  },
+  "known_anchor_runs": {
+    "threshold_0": {
+      "role": "revised-eligibility analysis already opened before this diagnostic",
+      "expected_n": 36,
+      "reported_calibrated_excess": 0.08600497756886367,
+      "reported_p": 0.0115
+    },
+    "threshold_50": {
+      "role": "original prospective primary validation",
+      "expected_n": 27,
+      "reported_calibrated_excess": 0.051747,
+      "reported_p": 0.1224
+    }
+  },
+  "frozen_reporting": {
+    "primary_diagnostic": "report calibrated excess at every threshold and whether its sign is positive; no threshold is selected as primary based on p-value",
+    "secondary_descriptives": [
+      "evaluable n at every threshold",
+      "observed identity and null mean",
+      "null SD and one-sided permutation p",
+      "range and median of calibrated excess",
+      "number of thresholds with positive calibrated excess"
+    ],
+    "forbidden_interpretations": [
+      "do not relabel any sensitivity threshold as a prospective replication",
+      "do not choose the threshold with the smallest p-value",
+      "do not treat p<=0.05 frequency across thresholds as multiplicity-corrected evidence",
+      "do not alter grids, vertical bins, target-event minimum, cohort definition, weighting, permutation unit, B or seed after results"
+    ]
+  },
+  "claim_boundary": [
+    "This diagnostic asks whether the Nyctalus effect direction and magnitude are fragile to the session-length eligibility rule.",
+    "The original >=50-fix prospective result remains the confirmatory external test and remains FAIL at its frozen threshold.",
+    "A stable positive sensitivity curve may support directional convergent evidence but cannot restore prospective status.",
+    "A highly irregular or sign-changing curve would show eligibility sensitivity and weaken the revised-eligibility interpretation."
+  ]
+}
