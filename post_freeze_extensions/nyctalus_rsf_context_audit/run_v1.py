@@ -113,6 +113,7 @@ def main():
 
     response_counts={}
     response_used_match=None
+    track_linkage=None
     if "response_rvso" in rsf.columns:
         response_counts={str(k):int(v) for k,v in rsf["response_rvso"].astype(str).value_counts(dropna=False).items()}
         used=rsf[rsf["response_rvso"].astype(str)=="1"].copy()
@@ -124,8 +125,54 @@ def main():
             "used_rows":int(len(used)),
             "used_numeric_xy_rows":int(um.sum()),
             "observed_exact_xy_match_rows":int(sum(p in uset for p in obs_pairs)),
-            "observed_exact_xy_match_fraction":float(sum(p in uset for p in obs_pairs)/len(obs_pairs)) if obs_pairs else None
+            "observed_exact_xy_match_fraction":float(sum(p in uset for p in obs_pairs)/len(obs_pairs)) if obs_pairs else None,
+            "observed_x_range":[float(obs_x[omask].min()),float(obs_x[omask].max())],
+            "observed_y_range":[float(obs_y[omask].min()),float(obs_y[omask].max())],
+            "used_x_range":[float(ux[um].min()),float(ux[um].max())],
+            "used_y_range":[float(uy[um].min()),float(uy[um].max())]
         }
+
+        if "trackid" in obs.columns and "trackid" in used.columns:
+            track_rows=[]
+            nearest=[]
+            same_count=0
+            common_tracks=sorted(set(obs["trackid"].astype(str)) & set(used["trackid"].astype(str)))
+            for tid in common_tracks:
+                og=obs[obs["trackid"].astype(str)==tid]
+                ug=used[used["trackid"].astype(str)==tid]
+                ox2=pd.to_numeric(og[ox],errors="coerce").to_numpy(dtype=float)
+                oy2=pd.to_numeric(og[oy],errors="coerce").to_numpy(dtype=float)
+                ux2=pd.to_numeric(ug[rx],errors="coerce").to_numpy(dtype=float)
+                uy2=pd.to_numeric(ug[ry],errors="coerce").to_numpy(dtype=float)
+                ox2=ox2[np.isfinite(ox2) & np.isfinite(oy2)]
+                oy2=pd.to_numeric(og[oy],errors="coerce").to_numpy(dtype=float)
+                goodo=np.isfinite(pd.to_numeric(og[ox],errors="coerce").to_numpy(dtype=float)) & np.isfinite(oy2)
+                ox2=pd.to_numeric(og[ox],errors="coerce").to_numpy(dtype=float)[goodo]
+                oy2=oy2[goodo]
+                goodu=np.isfinite(ux2) & np.isfinite(uy2)
+                ux2=ux2[goodu]; uy2=uy2[goodu]
+                if len(ox2)==len(ux2):
+                    same_count+=1
+                if len(ux2)>0:
+                    for a,b in zip(ox2,oy2):
+                        dd=np.hypot(ux2-a,uy2-b)
+                        nearest.append(float(dd.min()))
+                track_rows.append({"trackid":tid,"observed_n":int(len(ox2)),"used_n":int(len(ux2))})
+            nn=np.asarray(nearest,dtype=float)
+            track_linkage={
+                "observed_track_count":int(obs["trackid"].astype(str).nunique()),
+                "used_track_count":int(used["trackid"].astype(str).nunique()),
+                "common_track_count":len(common_tracks),
+                "tracks_with_equal_row_count":int(same_count),
+                "nearest_within_track_n":int(len(nn)),
+                "nearest_distance_m_median":float(np.median(nn)) if len(nn) else None,
+                "nearest_distance_m_q95":float(np.quantile(nn,0.95)) if len(nn) else None,
+                "nearest_distance_m_max":float(nn.max()) if len(nn) else None,
+                "fraction_nearest_le_1m":float(np.mean(nn<=1)) if len(nn) else None,
+                "fraction_nearest_le_10m":float(np.mean(nn<=10)) if len(nn) else None,
+                "fraction_nearest_le_100m":float(np.mean(nn<=100)) if len(nn) else None,
+                "track_counts":track_rows
+            }
 
     payload={
         "schema_version":1,
@@ -154,6 +201,7 @@ def main():
         "key_linkage_audit":key_audit,
         "response_rvso_counts":response_counts,
         "response_used_xy_linkage":response_used_match,
+        "trackwise_used_linkage":track_linkage,
         "claim_boundary":c["claim_boundary"]
     }
     OUT.parent.mkdir(parents=True,exist_ok=True)
@@ -183,6 +231,7 @@ def main():
         "key_linkage_audit":key_audit,
         "response_counts":response_counts,
         "response_used_xy_linkage":response_used_match,
+        "trackwise_used_linkage":track_linkage,
         "low_cardinality_fields":low_card
     },sort_keys=True))
     return 0
