@@ -97,7 +97,7 @@ Because *Pteropus poliocephalus* combines:
 - an MSL vertical coordinate;
 - a prospective centered-MSL PASS,
 
-the integrated manuscript will not treat it as terrain-robust until the separately frozen post-outcome terrain audit is complete.
+the integrated manuscript reports a separately frozen post-outcome terrain audit. Centered DEM terrain itself is individualized (excess +0.37887, p=0.0034), while centered MSL−DEM retains a smaller signal (excess +0.03231, p=0.0023). The descriptive excess ratio is 0.192 and is not interpreted as a mediation proportion.
 
 The audit asks:
 1. does centered individuality persist for `MSL - DEM`?
@@ -109,11 +109,8 @@ Historical Pteropus PASS remains in the record regardless of the audit.
 
 The integrated paper must remain publishable under every terrain-audit outcome.
 
-### If Pteropus is terrain-robust
-External generality is heterogeneous but includes one clean independent positive. The resource-anchoring hypothesis gains a stronger motivating example.
-
-### If Pteropus is terrain-sensitive
-The external programme becomes even more restrictive: the original positive archive is contrasted with three frozen external FAILs and one MSL positive that is not robust to terrain adjustment. This sharpens, rather than destroys, the question of why the original resource-anchored systems carried centered individuality.
+### Observed terrain outcome
+The audit is **AGL-proxy PASS / terrain PASS**. Fine-scale terrain use is therefore genuinely individualized and strongly attenuates the MSL-scale effect, but a smaller terrain-adjusted signal remains. This makes *Pteropus* a decomposition case rather than an unqualified clean positive: horizontal-topographic context and residual vertical individuality coexist.
 
 ## Introduction logic
 
