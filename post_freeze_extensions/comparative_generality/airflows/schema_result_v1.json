@@ -1,0 +1,752 @@
+{
+  "bat_panels": [
+    {
+      "data_sources": [
+        "Movebank"
+      ],
+      "date_end": "2013-04-29T20:00:46+00:00",
+      "date_start": "2013-04-24T12:40:21+00:00",
+      "individuals": 3,
+      "individuals_with_ge2_segments": 3,
+      "known_exact_study_overlap": false,
+      "known_taxon_overlap": false,
+      "necessary_screen_pass": false,
+      "panel_key": "studyID:10061238::Pteropus lylei",
+      "segments": 22,
+      "species": "Pteropus lylei",
+      "study_ids": [
+        "10061238"
+      ],
+      "study_names": [
+        "FAO-MPIAB; Pteropus lylei; Vietnam; 2013 Apr"
+      ],
+      "sum_totNlocs": 94
+    },
+    {
+      "data_sources": [
+        "Movebank"
+      ],
+      "date_end": "2013-09-07T19:32:40+00:00",
+      "date_start": "2013-08-10T21:52:36+00:00",
+      "individuals": 5,
+      "individuals_with_ge2_segments": 5,
+      "known_exact_study_overlap": false,
+      "known_taxon_overlap": true,
+      "necessary_screen_pass": true,
+      "panel_key": "studyID:14253246::Eidolon helvum",
+      "segments": 37,
+      "species": "Eidolon helvum",
+      "study_ids": [
+        "14253246"
+      ],
+      "study_names": [
+        "Eidolon helvum; Burkina Faso, Ouagadougou; wet season 2013 [eobs]"
+      ],
+      "sum_totNlocs": 203
+    },
+    {
+      "data_sources": [
+        "Movebank"
+      ],
+      "date_end": "2013-09-24T18:30:00+00:00",
+      "date_start": "2009-08-26T19:20:00+00:00",
+      "individuals": 23,
+      "individuals_with_ge2_segments": 19,
+      "known_exact_study_overlap": false,
+      "known_taxon_overlap": true,
+      "necessary_screen_pass": true,
+      "panel_key": "studyID:183770262::Eidolon helvum",
+      "segments": 97,
+      "species": "Eidolon helvum",
+      "study_ids": [
+        "183770262"
+      ],
+      "study_names": [
+        "Long-distance seed dispersal by straw-coloured fruit bats (data from Abedi-Lartey et al. 2016)"
+      ],
+      "sum_totNlocs": 863
+    },
+    {
+      "data_sources": [
+        "Movebank"
+      ],
+      "date_end": "2014-12-07T02:02:47+00:00",
+      "date_start": "2014-11-29T16:32:45+00:00",
+      "individuals": 14,
+      "individuals_with_ge2_segments": 14,
+      "known_exact_study_overlap": false,
+      "known_taxon_overlap": true,
+      "necessary_screen_pass": true,
+      "panel_key": "studyID:259100173::Eidolon helvum",
+      "segments": 136,
+      "species": "Eidolon helvum",
+      "study_ids": [
+        "259100173"
+      ],
+      "study_names": [
+        "Eidolon helvum; Zambia, Kasanka; 2014 [eobs]"
+      ],
+      "sum_totNlocs": 1038
+    },
+    {
+      "data_sources": [
+        "Movebank"
+      ],
+      "date_end": "2012-04-30T19:07:41+00:00",
+      "date_start": "2012-04-25T14:37:37+00:00",
+      "individuals": 7,
+      "individuals_with_ge2_segments": 5,
+      "known_exact_study_overlap": false,
+      "known_taxon_overlap": false,
+      "necessary_screen_pass": true,
+      "panel_key": "studyID:6609898::Pteropus lylei",
+      "segments": 22,
+      "species": "Pteropus lylei",
+      "study_ids": [
+        "6609898"
+      ],
+      "study_names": [
+        "FAO-MPIAB; Pteropus lylei; Thailand, Wat Luang; 2012 Apr"
+      ],
+      "sum_totNlocs": 86
+    },
+    {
+      "data_sources": [
+        "Movebank"
+      ],
+      "date_end": "2012-11-16T21:52:42+00:00",
+      "date_start": "2012-11-09T13:25:45+00:00",
+      "individuals": 8,
+      "individuals_with_ge2_segments": 6,
+      "known_exact_study_overlap": false,
+      "known_taxon_overlap": false,
+      "necessary_screen_pass": true,
+      "panel_key": "studyID:8239320::Pteropus lylei",
+      "segments": 31,
+      "species": "Pteropus lylei",
+      "study_ids": [
+        "8239320"
+      ],
+      "study_names": [
+        "FAO-MPIAB; Pteropus lylei; Thailand, Wat Luang; 2012 Nov"
+      ],
+      "sum_totNlocs": 129
+    },
+    {
+      "data_sources": [
+        "Movebank"
+      ],
+      "date_end": "2012-11-22T11:47:40+00:00",
+      "date_start": "2012-11-17T16:02:38+00:00",
+      "individuals": 3,
+      "individuals_with_ge2_segments": 1,
+      "known_exact_study_overlap": false,
+      "known_taxon_overlap": false,
+      "necessary_screen_pass": false,
+      "panel_key": "studyID:8266613::Pteropus lylei",
+      "segments": 7,
+      "species": "Pteropus lylei",
+      "study_ids": [
+        "8266613"
+      ],
+      "study_names": [
+        "FAO-MPIAB; Pteropus lylei; Thailand, Wat Pho; 2012 Nov"
+      ],
+      "sum_totNlocs": 31
+    },
+    {
+      "data_sources": [
+        "Movebank"
+      ],
+      "date_end": "2013-01-30T05:37:38+00:00",
+      "date_start": "2013-01-30T03:37:38+00:00",
+      "individuals": 1,
+      "individuals_with_ge2_segments": 0,
+      "known_exact_study_overlap": false,
+      "known_taxon_overlap": true,
+      "necessary_screen_pass": false,
+      "panel_key": "studyID:8862993::Eidolon helvum",
+      "segments": 1,
+      "species": "Eidolon helvum",
+      "study_ids": [
+        "8862993"
+      ],
+      "study_names": [
+        "Eidolon helvum; Ghana, Kibi; dry season 2013 [eobs]"
+      ],
+      "sum_totNlocs": 19
+    }
+  ],
+  "bat_segment_rows": 353,
+  "bat_species": [
+    "Eidolon helvum",
+    "Pteropus lylei"
+  ],
+  "bat_species_count": 2,
+  "claim_boundary": [
+    "This audit establishes candidate bat panels only.",
+    "Taxon overlap does not by itself establish source duplication; exact study provenance must be checked before admission.",
+    "No point-level vertical value is opened by this audit.",
+    "Any point-level RDS handling requires a separately frozen contract."
+  ],
+  "necessary_screen_candidate_count": 5,
+  "necessary_screen_candidate_panels": [
+    {
+      "data_sources": [
+        "Movebank"
+      ],
+      "date_end": "2013-09-07T19:32:40+00:00",
+      "date_start": "2013-08-10T21:52:36+00:00",
+      "individuals": 5,
+      "individuals_with_ge2_segments": 5,
+      "known_exact_study_overlap": false,
+      "known_taxon_overlap": true,
+      "necessary_screen_pass": true,
+      "panel_key": "studyID:14253246::Eidolon helvum",
+      "segments": 37,
+      "species": "Eidolon helvum",
+      "study_ids": [
+        "14253246"
+      ],
+      "study_names": [
+        "Eidolon helvum; Burkina Faso, Ouagadougou; wet season 2013 [eobs]"
+      ],
+      "sum_totNlocs": 203
+    },
+    {
+      "data_sources": [
+        "Movebank"
+      ],
+      "date_end": "2013-09-24T18:30:00+00:00",
+      "date_start": "2009-08-26T19:20:00+00:00",
+      "individuals": 23,
+      "individuals_with_ge2_segments": 19,
+      "known_exact_study_overlap": false,
+      "known_taxon_overlap": true,
+      "necessary_screen_pass": true,
+      "panel_key": "studyID:183770262::Eidolon helvum",
+      "segments": 97,
+      "species": "Eidolon helvum",
+      "study_ids": [
+        "183770262"
+      ],
+      "study_names": [
+        "Long-distance seed dispersal by straw-coloured fruit bats (data from Abedi-Lartey et al. 2016)"
+      ],
+      "sum_totNlocs": 863
+    },
+    {
+      "data_sources": [
+        "Movebank"
+      ],
+      "date_end": "2014-12-07T02:02:47+00:00",
+      "date_start": "2014-11-29T16:32:45+00:00",
+      "individuals": 14,
+      "individuals_with_ge2_segments": 14,
+      "known_exact_study_overlap": false,
+      "known_taxon_overlap": true,
+      "necessary_screen_pass": true,
+      "panel_key": "studyID:259100173::Eidolon helvum",
+      "segments": 136,
+      "species": "Eidolon helvum",
+      "study_ids": [
+        "259100173"
+      ],
+      "study_names": [
+        "Eidolon helvum; Zambia, Kasanka; 2014 [eobs]"
+      ],
+      "sum_totNlocs": 1038
+    },
+    {
+      "data_sources": [
+        "Movebank"
+      ],
+      "date_end": "2012-04-30T19:07:41+00:00",
+      "date_start": "2012-04-25T14:37:37+00:00",
+      "individuals": 7,
+      "individuals_with_ge2_segments": 5,
+      "known_exact_study_overlap": false,
+      "known_taxon_overlap": false,
+      "necessary_screen_pass": true,
+      "panel_key": "studyID:6609898::Pteropus lylei",
+      "segments": 22,
+      "species": "Pteropus lylei",
+      "study_ids": [
+        "6609898"
+      ],
+      "study_names": [
+        "FAO-MPIAB; Pteropus lylei; Thailand, Wat Luang; 2012 Apr"
+      ],
+      "sum_totNlocs": 86
+    },
+    {
+      "data_sources": [
+        "Movebank"
+      ],
+      "date_end": "2012-11-16T21:52:42+00:00",
+      "date_start": "2012-11-09T13:25:45+00:00",
+      "individuals": 8,
+      "individuals_with_ge2_segments": 6,
+      "known_exact_study_overlap": false,
+      "known_taxon_overlap": false,
+      "necessary_screen_pass": true,
+      "panel_key": "studyID:8239320::Pteropus lylei",
+      "segments": 31,
+      "species": "Pteropus lylei",
+      "study_ids": [
+        "8239320"
+      ],
+      "study_names": [
+        "FAO-MPIAB; Pteropus lylei; Thailand, Wat Luang; 2012 Nov"
+      ],
+      "sum_totNlocs": 129
+    }
+  ],
+  "numeric_point_level_vertical_values_read": false,
+  "point_level_rds_opened": false,
+  "schema_version": 1,
+  "segment_columns_read": [
+    "segmentID",
+    "individualID",
+    "studyName",
+    "studyID",
+    "species",
+    "dataSource",
+    "totNlocs",
+    "segm_timeStart",
+    "segm_timeEnd",
+    "segm_timeDuration_h",
+    "avg_timeLag_min"
+  ],
+  "segment_rows": 194558,
+  "segment_table_member": "ModelData/BIOLOGGING_finalSummaryDataset_perSegment_fromFix+COTvariables_Feb2025.csv",
+  "species_count": 38,
+  "study_id": "batter-airflows-multispecies-schema-v1",
+  "taxonomy": {
+    "Anas platyrhynchos": {
+      "canonicalName": "Anas platyrhynchos",
+      "confidence": 99,
+      "family": "Anatidae",
+      "matchType": "EXACT",
+      "order": "Anseriformes",
+      "rank": "SPECIES",
+      "scientificName": "Anas platyrhynchos Linnaeus, 1758",
+      "status": "ACCEPTED",
+      "usageKey": 9761484
+    },
+    "Anser albifrons": {
+      "canonicalName": "Anser albifrons",
+      "confidence": 99,
+      "family": "Anatidae",
+      "matchType": "EXACT",
+      "order": "Anseriformes",
+      "rank": "SPECIES",
+      "scientificName": "Anser albifrons (Scopoli, 1769)",
+      "status": "ACCEPTED",
+      "usageKey": 2498017
+    },
+    "Anser fabalis": {
+      "canonicalName": "Anser fabalis",
+      "confidence": 99,
+      "family": "Anatidae",
+      "matchType": "EXACT",
+      "order": "Anseriformes",
+      "rank": "SPECIES",
+      "scientificName": "Anser fabalis (Latham, 1787)",
+      "status": "ACCEPTED",
+      "usageKey": 2498027
+    },
+    "Anthropoides virgo": {
+      "canonicalName": "Anthropoides virgo",
+      "confidence": 99,
+      "family": "Gruidae",
+      "matchType": "EXACT",
+      "order": "Gruiformes",
+      "rank": "SPECIES",
+      "scientificName": "Anthropoides virgo (Linnaeus, 1758)",
+      "status": "ACCEPTED",
+      "usageKey": 2474936
+    },
+    "Aquila chrysaetos": {
+      "canonicalName": "Aquila chrysaetos",
+      "confidence": 99,
+      "family": "Accipitridae",
+      "matchType": "EXACT",
+      "order": "Accipitriformes",
+      "rank": "SPECIES",
+      "scientificName": "Aquila chrysaetos (Linnaeus, 1758)",
+      "status": "ACCEPTED",
+      "usageKey": 2480506
+    },
+    "Aquila nipalensis": {
+      "canonicalName": "Aquila nipalensis",
+      "confidence": 99,
+      "family": "Accipitridae",
+      "matchType": "EXACT",
+      "order": "Accipitriformes",
+      "rank": "SPECIES",
+      "scientificName": "Aquila nipalensis Hodgson, 1833",
+      "status": "ACCEPTED",
+      "usageKey": 2480513
+    },
+    "Aquila rapax": {
+      "canonicalName": "Aquila rapax",
+      "confidence": 99,
+      "family": "Accipitridae",
+      "matchType": "EXACT",
+      "order": "Accipitriformes",
+      "rank": "SPECIES",
+      "scientificName": "Aquila rapax (Temminck, 1828)",
+      "status": "ACCEPTED",
+      "usageKey": 2480514
+    },
+    "Buteo lagopus": {
+      "canonicalName": "Buteo lagopus",
+      "confidence": 99,
+      "family": "Accipitridae",
+      "matchType": "EXACT",
+      "order": "Accipitriformes",
+      "rank": "SPECIES",
+      "scientificName": "Buteo lagopus (Pontoppidan, 1763)",
+      "status": "ACCEPTED",
+      "usageKey": 2480524
+    },
+    "Calonectris diomedea": {
+      "canonicalName": "Calonectris diomedea",
+      "confidence": 99,
+      "family": "Procellariidae",
+      "matchType": "EXACT",
+      "order": "Procellariiformes",
+      "rank": "SPECIES",
+      "scientificName": "Calonectris diomedea (Scopoli, 1769)",
+      "status": "ACCEPTED",
+      "usageKey": 2481521
+    },
+    "Cathartes aura": {
+      "canonicalName": "Cathartes aura",
+      "confidence": 99,
+      "family": "Cathartidae",
+      "matchType": "EXACT",
+      "order": "Accipitriformes",
+      "rank": "SPECIES",
+      "scientificName": "Cathartes aura (Linnaeus, 1758)",
+      "status": "ACCEPTED",
+      "usageKey": 2481930
+    },
+    "Ciconia ciconia": {
+      "canonicalName": "Ciconia ciconia",
+      "confidence": 99,
+      "family": "Ciconiidae",
+      "matchType": "EXACT",
+      "order": "Ciconiiformes",
+      "rank": "SPECIES",
+      "scientificName": "Ciconia ciconia (Linnaeus, 1758)",
+      "status": "ACCEPTED",
+      "usageKey": 2481912
+    },
+    "Ciconia nigra": {
+      "canonicalName": "Ciconia nigra",
+      "confidence": 99,
+      "family": "Ciconiidae",
+      "matchType": "EXACT",
+      "order": "Ciconiiformes",
+      "rank": "SPECIES",
+      "scientificName": "Ciconia nigra (Linnaeus, 1758)",
+      "status": "ACCEPTED",
+      "usageKey": 2481909
+    },
+    "Creagrus furcatus": {
+      "canonicalName": "Creagrus furcatus",
+      "confidence": 99,
+      "family": "Laridae",
+      "matchType": "EXACT",
+      "order": "Charadriiformes",
+      "rank": "SPECIES",
+      "scientificName": "Creagrus furcatus (N\u00e9boux, 1842)",
+      "status": "ACCEPTED",
+      "usageKey": 2481225
+    },
+    "Cygnus buccinator": {
+      "canonicalName": "Cygnus buccinator",
+      "confidence": 99,
+      "family": "Anatidae",
+      "matchType": "EXACT",
+      "order": "Anseriformes",
+      "rank": "SPECIES",
+      "scientificName": "Cygnus buccinator Richardson, 1831",
+      "status": "ACCEPTED",
+      "usageKey": 2498345
+    },
+    "Cygnus cygnus": {
+      "canonicalName": "Cygnus cygnus",
+      "confidence": 99,
+      "family": "Anatidae",
+      "matchType": "EXACT",
+      "order": "Anseriformes",
+      "rank": "SPECIES",
+      "scientificName": "Cygnus cygnus (Linnaeus, 1758)",
+      "status": "ACCEPTED",
+      "usageKey": 2498347
+    },
+    "Eidolon helvum": {
+      "canonicalName": "Eidolon helvum",
+      "confidence": 99,
+      "family": "Pteropodidae",
+      "matchType": "EXACT",
+      "order": "Chiroptera",
+      "rank": "SPECIES",
+      "scientificName": "Eidolon helvum (Kerr, 1792)",
+      "status": "ACCEPTED",
+      "usageKey": 2432851
+    },
+    "Falco peregrinus": {
+      "canonicalName": "Falco peregrinus",
+      "confidence": 99,
+      "family": "Falconidae",
+      "matchType": "EXACT",
+      "order": "Falconiformes",
+      "rank": "SPECIES",
+      "scientificName": "Falco peregrinus Tunstall, 1771",
+      "status": "ACCEPTED",
+      "usageKey": 2481047
+    },
+    "Grus nigricollis": {
+      "canonicalName": "Grus nigricollis",
+      "confidence": 99,
+      "family": "Gruidae",
+      "matchType": "EXACT",
+      "order": "Gruiformes",
+      "rank": "SPECIES",
+      "scientificName": "Grus nigricollis Prjevalsky, 1876",
+      "status": "ACCEPTED",
+      "usageKey": 2474960
+    },
+    "Gyps africanus": {
+      "canonicalName": "Gyps africanus",
+      "confidence": 99,
+      "family": "Accipitridae",
+      "matchType": "EXACT",
+      "order": "Accipitriformes",
+      "rank": "SPECIES",
+      "scientificName": "Gyps africanus Salvadori, 1865",
+      "status": "ACCEPTED",
+      "usageKey": 9487001
+    },
+    "Gyps coprotheres": {
+      "canonicalName": "Gyps coprotheres",
+      "confidence": 99,
+      "family": "Accipitridae",
+      "matchType": "EXACT",
+      "order": "Accipitriformes",
+      "rank": "SPECIES",
+      "scientificName": "Gyps coprotheres (J.R.Forster, 1798)",
+      "status": "ACCEPTED",
+      "usageKey": 2480386
+    },
+    "Gyps fulvus": {
+      "canonicalName": "Gyps fulvus",
+      "confidence": 99,
+      "family": "Accipitridae",
+      "matchType": "EXACT",
+      "order": "Accipitriformes",
+      "rank": "SPECIES",
+      "scientificName": "Gyps fulvus (Hablizl, 1783)",
+      "status": "ACCEPTED",
+      "usageKey": 2480389
+    },
+    "Gyps himalayensis": {
+      "canonicalName": "Gyps himalayensis",
+      "confidence": 99,
+      "family": "Accipitridae",
+      "matchType": "EXACT",
+      "order": "Accipitriformes",
+      "rank": "SPECIES",
+      "scientificName": "Gyps himalayensis Hume, 1869",
+      "status": "ACCEPTED",
+      "usageKey": 9561629
+    },
+    "Gyps rueppellii": {
+      "canonicalName": "Gyps rueppellii",
+      "confidence": 99,
+      "family": "Accipitridae",
+      "matchType": "EXACT",
+      "order": "Accipitriformes",
+      "rank": "SPECIES",
+      "scientificName": "Gyps rueppellii (A.E.Brehm, 1852)",
+      "status": "ACCEPTED",
+      "usageKey": 2480384
+    },
+    "Milvus milvus": {
+      "canonicalName": "Milvus milvus",
+      "confidence": 99,
+      "family": "Accipitridae",
+      "matchType": "EXACT",
+      "order": "Accipitriformes",
+      "rank": "SPECIES",
+      "scientificName": "Milvus milvus (Linnaeus, 1758)",
+      "status": "ACCEPTED",
+      "usageKey": 5229168
+    },
+    "Mycteria americana": {
+      "canonicalName": "Mycteria americana",
+      "confidence": 99,
+      "family": "Ciconiidae",
+      "matchType": "EXACT",
+      "order": "Ciconiiformes",
+      "rank": "SPECIES",
+      "scientificName": "Mycteria americana Linnaeus, 1758",
+      "status": "ACCEPTED",
+      "usageKey": 2481937
+    },
+    "Necrosyrtes monachus": {
+      "canonicalName": "Necrosyrtes monachus",
+      "confidence": 99,
+      "family": "Accipitridae",
+      "matchType": "EXACT",
+      "order": "Accipitriformes",
+      "rank": "SPECIES",
+      "scientificName": "Necrosyrtes monachus (Temminck, 1823)",
+      "status": "ACCEPTED",
+      "usageKey": 2480715
+    },
+    "Pandion haliaetus": {
+      "canonicalName": "Pandion haliaetus",
+      "confidence": 99,
+      "family": "Pandionidae",
+      "matchType": "EXACT",
+      "order": "Accipitriformes",
+      "rank": "SPECIES",
+      "scientificName": "Pandion haliaetus (Linnaeus, 1758)",
+      "status": "ACCEPTED",
+      "usageKey": 2480726
+    },
+    "Pelecanus onocrotalus": {
+      "canonicalName": "Pelecanus onocrotalus",
+      "confidence": 99,
+      "family": "Pelecanidae",
+      "matchType": "EXACT",
+      "order": "Pelecaniformes",
+      "rank": "SPECIES",
+      "scientificName": "Pelecanus onocrotalus Linnaeus, 1758",
+      "status": "ACCEPTED",
+      "usageKey": 2480350
+    },
+    "Pernis apivorus": {
+      "canonicalName": "Pernis apivorus",
+      "confidence": 99,
+      "family": "Accipitridae",
+      "matchType": "EXACT",
+      "order": "Accipitriformes",
+      "rank": "SPECIES",
+      "scientificName": "Pernis apivorus (Linnaeus, 1758)",
+      "status": "ACCEPTED",
+      "usageKey": 2480420
+    },
+    "Phaethon rubricauda": {
+      "canonicalName": "Phaethon rubricauda",
+      "confidence": 99,
+      "family": "Phaethontidae",
+      "matchType": "EXACT",
+      "order": "Phaethontiformes",
+      "rank": "SPECIES",
+      "scientificName": "Phaethon rubricauda Boddaert, 1783",
+      "status": "ACCEPTED",
+      "usageKey": 2481361
+    },
+    "Pteropus lylei": {
+      "canonicalName": "Pteropus lylei",
+      "confidence": 99,
+      "family": "Pteropodidae",
+      "matchType": "EXACT",
+      "order": "Chiroptera",
+      "rank": "SPECIES",
+      "scientificName": "Pteropus lylei K.Andersen, 1908",
+      "status": "ACCEPTED",
+      "usageKey": 5218678
+    },
+    "Rissa tridactyla": {
+      "canonicalName": "Rissa tridactyla",
+      "confidence": 99,
+      "family": "Laridae",
+      "matchType": "EXACT",
+      "order": "Charadriiformes",
+      "rank": "SPECIES",
+      "scientificName": "Rissa tridactyla (Linnaeus, 1758)",
+      "status": "ACCEPTED",
+      "usageKey": 2481205
+    },
+    "Sula variegata": {
+      "canonicalName": "Sula variegata",
+      "confidence": 99,
+      "family": "Sulidae",
+      "matchType": "EXACT",
+      "order": "Suliformes",
+      "rank": "SPECIES",
+      "scientificName": "Sula variegata (Tschudi, 1843)",
+      "status": "ACCEPTED",
+      "usageKey": 2480970
+    },
+    "Tadorna ferruginea": {
+      "canonicalName": "Tadorna ferruginea",
+      "confidence": 99,
+      "family": "Anatidae",
+      "matchType": "EXACT",
+      "order": "Anseriformes",
+      "rank": "SPECIES",
+      "scientificName": "Tadorna ferruginea (Pallas, 1764)",
+      "status": "ACCEPTED",
+      "usageKey": 2498015
+    },
+    "Terathopius ecaudatus": {
+      "canonicalName": "Terathopius ecaudatus",
+      "confidence": 99,
+      "family": "Accipitridae",
+      "matchType": "EXACT",
+      "order": "Accipitriformes",
+      "rank": "SPECIES",
+      "scientificName": "Terathopius ecaudatus (Daudin, 1800)",
+      "status": "ACCEPTED",
+      "usageKey": 2480377
+    },
+    "Thalassarche chlororhynchos": {
+      "canonicalName": "Thalassarche chlororhynchos",
+      "confidence": 99,
+      "family": "Diomedeidae",
+      "matchType": "EXACT",
+      "order": "Procellariiformes",
+      "rank": "SPECIES",
+      "scientificName": "Thalassarche chlororhynchos (Gmelin, 1789)",
+      "status": "ACCEPTED",
+      "usageKey": 2481399
+    },
+    "Trigonoceps occipitalis": {
+      "canonicalName": "Trigonoceps occipitalis",
+      "confidence": 99,
+      "family": "Accipitridae",
+      "matchType": "EXACT",
+      "order": "Accipitriformes",
+      "rank": "SPECIES",
+      "scientificName": "Trigonoceps occipitalis (Burchell, 1824)",
+      "status": "ACCEPTED",
+      "usageKey": 2480408
+    },
+    "Vultur gryphus": {
+      "canonicalName": "Vultur gryphus",
+      "confidence": 99,
+      "family": "Cathartidae",
+      "matchType": "EXACT",
+      "order": "Accipitriformes",
+      "rank": "SPECIES",
+      "scientificName": "Vultur gryphus Linnaeus, 1758",
+      "status": "ACCEPTED",
+      "usageKey": 2481907
+    }
+  },
+  "taxonomy_unresolved_species": [],
+  "zenodo_archive": {
+    "checksum": "md5:e1f116e6576cf20e54dad16d2c91a26d",
+    "key": "Data.zip",
+    "size": 551470630
+  },
+  "zip_member_count": 13
+}
