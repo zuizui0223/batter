@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-pteropus-cambodia-header-v1",
+  "frozen_date": "2026-09-30",
+  "status": "final outcome-blind provenance follow-up before comparative-programme structural-scarcity closure",
+  "programme": "batter-comparative-generality-program-v1",
+  "source": {
+    "repository": "Movebank Data Repository",
+    "doi": "10.5441/001/1.j25661td",
+    "taxon": "Pteropus lylei",
+    "study": "Foraging movements of Lyle's flying foxes in Cambodia (data from Choden et al. 2019)",
+    "paper_reports": {
+      "gps_collars": 14,
+      "valid_locations": 13643,
+      "sampling": "collars 1-5 nominally 30-min; collars 6-14 nominally 30-min first night then 5-min on following nights"
+    }
+  },
+  "allowed_operations": [
+    "resolve DOI and follow public redirects",
+    "read landing-page HTML and repository metadata",
+    "enumerate public bitstream/file names, sizes, checksums and content links",
+    "read only the first CSV header row or equivalent schema metadata",
+    "record column names",
+    "read reference-data header if needed to distinguish event from reference files"
+  ],
+  "forbidden_operations": [
+    "read numeric event rows beyond the header",
+    "parse, summarize or plot any altitude/height value",
+    "infer vertical eligibility from vertical magnitudes",
+    "change accepted vertical-field names after seeing data values"
+  ],
+  "accepted_native_vertical_names": [
+    "height_above_msl",
+    "height_above_ellipsoid",
+    "height_raw",
+    "height",
+    "altitude"
+  ],
+  "required_event_header_groups": {
+    "individual": ["individual_local_identifier","individual.local.identifier","individual_id","individual.id","tag_local_identifier"],
+    "timestamp": ["timestamp"],
+    "longitude": ["location_long","location.long","longitude"],
+    "latitude": ["location_lat","location.lat","latitude"]
+  },
+  "decision_rule": [
+    "Identify event-like CSV/TSV files from repository file names and headers only.",
+    "PASS_TO_STRUCTURAL_PREFLIGHT only if one event file contains individual, timestamp, longitude, latitude and at least one accepted native vertical field.",
+    "If public repository files cannot be enumerated or header-read, classify PENDING_ACCESS rather than infer.",
+    "If event header lacks accepted native vertical field, classify REJECT_NO_VERTICAL_RESPONSE.",
+    "No event values may be opened in this audit."
+  ],
+  "claim_boundary": [
+    "This Cambodia dataset is distinct from the Airflows Thailand 2012 Pteropus panels.",
+    "Header PASS does not imply structural eligibility under the >=50-fix rule.",
+    "Header FAIL closes this provenance follow-up; do not add new search terms inside comparative-generality v1."
+  ]
+}
