@@ -1,74 +1,117 @@
 # Comparative generality programme v1
 
+## Status
+
+**CLOSED — STRUCTURAL SCARCITY.**
+
+No genuinely new source in the frozen public-repository search universe reached the predeclared structural gate for opening a centered vertical outcome.
+
+New comparative vertical outcomes opened: **0**.
+
+This is not a biological negative result for the screened taxa.
+
+Read first:
+- `contract_v1.json` — frozen programme design;
+- `CANDIDATE_LEDGER_V1.md` — complete candidate classification;
+- `SEARCH_STOP_RULE_V1.md` — predeclared stopping rule;
+- `STRUCTURAL_SCARCITY_RESULT_V1.md` — final programme result;
+- `status_v1.json` — machine-readable status.
+
 ## Question
 
-v10 changed the target from a universal-mechanism question to a comparative-expression question:
+v10 changed the target from a universal-mechanism question to:
 
 > Why do some bat tracking systems show repeatable centered vertical individuality while others do not?
 
-The programme is prospective with respect to **new source vertical outcomes**.
+This programme attempted to build a new prospective source panel before opening any new vertical outcome.
 
-## Historical anchors
+## Frozen design
 
-Already opened sources are not new prospective replicates:
-- original six-panel archive;
-- Nyctalus;
-- Hipposideros.
-
-They motivate the programme only.
-
-## New-source workflow
-
-1. search the frozen public-repository universe;
-2. screen metadata and raw-file structure without numeric vertical values;
-3. retain every structurally admissible independent source;
-4. compute a nonvertical horizontal-individuality metric first;
-5. freeze exact source eligibility / target support;
-6. open centered vertical response once;
-7. retain PASS or FAIL without rescue.
-
-## Fixed source-level centered vertical design
-
-Default:
-- fixed local metric projection;
-- 5-km horizontal cells;
+Default source gate:
+- native event-level vertical coordinate;
 - >=50 presence-qualified fixes/session;
-- >=50 common-support target events;
-- >=5 estimator-evaluable individuals;
-- session-median centering;
-- frozen centered-height bins;
+- >=2 eligible sessions per repeat individual;
+- enough repeat individuals for source/panel admission;
+- 5-km horizontal common support;
+- >=50 supported target events;
+- >=5 estimator-evaluable individuals for the standard source-level design;
+- horizontal individuality opened before vertical individuality;
+- session-median-centered vertical response;
 - whole-session identity permutation;
-- B=9,999.
+- no threshold rescue.
 
-Source-specific deviations are allowed only when forced by source semantics and must be frozen before numeric vertical values.
+## Final screening outcome
 
-## New comparative axis
+### Structural STOP before vertical magnitude
 
-Before vertical outcomes, each source receives a horizontal-individuality metric:
+- *Leptonycteris nivalis* — 21 IDs, but **0 >=50-fix sessions**.
+- *Desmodus rotundus* — only 4 >=50-fix sessions total; no admitted local panel.
+- *Pteropus poliocephalus* — native `height-above-msl`, 145,262 presence-qualified rows and 158 eligible sessions, but only **4 repeat individuals**; frozen minimum = 5.
+- *Myotis vivesi* — native `height_above_ellipsoid`, 14,328 presence-qualified rows and 15 eligible sessions, but only **4 repeat individuals**; frozen minimum = 5.
+- Airflows new *Pteropus lylei* Thailand panels — compiled/thinned point data produced **0 >=50-fix nights** in both new panels.
 
-> held-out same-individual versus other-individual predictive advantage for 5-km horizontal-cell occupancy.
+### Rejected: no native event-level vertical response
 
-This creates a prospective 2-D individuality plane:
-- horizontal individuality;
-- centered vertical individuality.
+- *Hypsignathus monstrosus* Dryad 2022–2023;
+- *Pteropus lylei* Cambodia;
+- *Lavia frons*;
+- *Noctilio albiventris*;
+- *Vespertilio murinus*;
+- *Rhinolophus ferrumequinum*;
+- *Trachops cirrhosus*;
+- *Myotis daubentonii*;
+- *Carollia* spp.
 
-The key question is whether those axes remain coupled or dissociate in new independent sources.
+### Historical overlap
 
-## Cross-source inference
+Three Airflows *Eidolon helvum* panels belong to the already opened `10.5441/001/1.k8n02jn8` data universe and do not count as new prospective sources.
 
-- <5 new sources: descriptive source panel only.
-- >=5: report distribution of calibrated vertical excess.
-- >=8: a separately frozen stage-2 predictor model may be opened.
+## Main result
 
-No convenience-sample population p-value is interpreted as universal bat prevalence.
+> **Within the frozen search universe, publicly available bat tracking data that simultaneously contain a native vertical coordinate, dense repeated sessions, enough repeat individuals, and adequate cross-individual horizontal support are structurally scarce.**
 
-## Outcome firewall
+The limiting quantity is not total GPS row count alone.
 
-Numeric vertical values are never used for:
-- candidate discovery;
-- source admission;
-- source ranking;
-- structural-threshold selection;
-- horizontal-identity calculation.
+For example, *P. poliocephalus* had >145k presence-qualified rows but only four repeat individuals under the frozen session rule.
 
-A failed source remains in the programme.
+## Why the threshold is not lowered
+
+Two vertical-capable Movebank sources stopped at four repeat individuals:
+- *Myotis vivesi*;
+- *Pteropus poliocephalus*.
+
+The frozen programme required five.
+
+Lowering the rule now would move the goalposts after structural screening. The programme therefore closes instead.
+
+A future lower-density estimator must be a **new separately frozen programme** with its own reliability justification.
+
+## Data-design implication
+
+A future study designed to test repeatable 3-D individuality should intentionally obtain:
+- substantially more than five tracked individuals;
+- at least two dense nights per individual;
+- >=50 usable fixes per repeated night under this estimator;
+- cross-individual overlap in horizontal context;
+- explicit native vertical-reference metadata;
+- raw event-level releases, not only thinned segments.
+
+For mechanism work, the stronger design remains:
+
+`exact route/resource × independent behavioural state × local environment × time window`
+
+with detailed flight morphology.
+
+## Relation to v10
+
+v10 concerns the biological boundary of centered vertical individuality in already evaluable systems.
+
+This programme adds a separate **data-availability boundary**:
+
+> many public bat tracking datasets cannot presently adjudicate repeatable centered vertical individuality under the frozen estimator without relaxing the design.
+
+Do not interpret structural STOP as biological absence.
+
+## Programme closure
+
+No new query terms, threshold reductions, alternate endpoints or structurally stopped vertical outcomes are opened within v1.
