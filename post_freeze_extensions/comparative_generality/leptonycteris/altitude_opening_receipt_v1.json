@@ -1,0 +1,14 @@
+{
+  "horizontal_grid_m": 5000,
+  "minimum_session_fixes": 50,
+  "minimum_supported_target_events": 50,
+  "next_step": "STOP; do not lower the session threshold or open Altitude.",
+  "numeric_altitude_values_read": false,
+  "projection_epsg": 32613,
+  "raw_sha256": "4283cac5eb8461665b4bb9482f44785da6df0825d18c634f6a626cc808237036",
+  "reason": "zero individuals have at least two >=50-fix sessions under the frozen source rule",
+  "schema_version": 1,
+  "sheet_name": "LENI GPS Data",
+  "status": "STOP",
+  "study_id": "batter-leptonycteris-altitude-opening-receipt-v1"
+}\n
