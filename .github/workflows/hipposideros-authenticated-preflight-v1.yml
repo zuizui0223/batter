@@ -5,12 +5,15 @@ on:
     branches: [prospective/hipposideros-primary-design-v1]
     paths:
       - ".github/workflows/hipposideros-authenticated-preflight-v1.yml"
+      - "post_freeze_extensions/hipposideros_external_validation/authenticated_preflight_v1.py"
+      - "post_freeze_extensions/hipposideros_external_validation/species_mapping_contract_v2.json"
+      - "post_freeze_extensions/hipposideros_external_validation/primary_design_v1.json"
 jobs:
   preflight:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     permissions:
-      contents: read
+      contents: write
     env:
       DRYAD_API_TOKEN: ${{ secrets.DRYAD_API_TOKEN }}
     steps:
@@ -32,3 +35,14 @@ jobs:
             post_freeze_extensions/hipposideros_external_validation/AUTHENTICATED_PREFLIGHT_V1.md
             post_freeze_extensions/hipposideros_external_validation/height_opening_receipt_v1.json
           if-no-files-found: error
+      - name: Pin outcome-blind preflight receipt
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add             post_freeze_extensions/hipposideros_external_validation/authenticated_preflight_v1.json             post_freeze_extensions/hipposideros_external_validation/AUTHENTICATED_PREFLIGHT_V1.md             post_freeze_extensions/hipposideros_external_validation/height_opening_receipt_v1.json
+          if git diff --cached --quiet; then
+            echo "No preflight output changes to commit"
+          else
+            git commit -m "Record outcome-blind Hipposideros preflight receipt"
+            git push origin HEAD:prospective/hipposideros-primary-design-v1
+          fi
