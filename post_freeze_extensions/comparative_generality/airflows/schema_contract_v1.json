@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-airflows-multispecies-schema-v1",
+  "frozen_date": "2026-09-30",
+  "status": "nonvertical metadata/schema audit before any point-level vertical values are opened",
+  "programme": "batter-comparative-generality-program-v1",
+  "source": {
+    "repository": "Zenodo",
+    "record_id": 21915776,
+    "doi": "10.5281/zenodo.21915776",
+    "archive": "Data.zip",
+    "segment_table": "ModelData/BIOLOGGING_finalSummaryDataset_perSegment_fromFix+COTvariables_Feb2025.csv"
+  },
+  "public_code_evidence": {
+    "repository": "mscacco/COT_publ",
+    "point_level_file": "BiologgingData/allStudies_allTags_allFlightSegments_binded_birdsBats_thresholdClass_transfGs_March2024_noDupl.rds",
+    "vertical_columns_created_before_final_save": [
+      "height.above.ellipsoid",
+      "height.above.msl",
+      "height_gener"
+    ],
+    "nonvertical_identity_columns": [
+      "timestamp",
+      "location.lat",
+      "location.long",
+      "study.id",
+      "study.name",
+      "individual.local.identifier",
+      "individual.tag.id",
+      "individual.taxon.canonical.name",
+      "track_flight_id"
+    ]
+  },
+  "allowed_segment_fields": [
+    "segmentID",
+    "individualID",
+    "studyName",
+    "studyID",
+    "species",
+    "dataSource",
+    "totNlocs",
+    "segm_timeStart",
+    "segm_timeEnd",
+    "segm_timeDuration_h",
+    "avg_timeLag_min"
+  ],
+  "forbidden_operations": [
+    "read any point-level RDS file",
+    "read or summarize height_gener, height.above.msl, height.above.ellipsoid or any numeric vertical field",
+    "rank panels by expected vertical individuality",
+    "drop panels because of expected vertical outcome"
+  ],
+  "taxonomy_rule": {
+    "method": "query GBIF species/match for every unique species name in the segment table",
+    "bat_definition": "accepted GBIF order == Chiroptera",
+    "failure": "if taxonomy cannot be resolved, mark TAXONOMY_UNRESOLVED rather than guessing"
+  },
+  "panel_definition": "exact studyID x species when studyID is present, otherwise exact studyName x species",
+  "screening_summary": [
+    "number of unique bat panels",
+    "individual count per panel",
+    "segment count per panel",
+    "total GPS-point count proxy as sum(totNlocs)",
+    "date span per panel",
+    "source dataSource field",
+    "known-taxon overlap with already opened batter sources"
+  ],
+  "structural_priority": {
+    "candidate_for_point_level_preflight": "panel has >=5 unique individuals and >=2 segments for at least 5 individuals in the segment-level table",
+    "meaning": "necessary screen only; does not guarantee >=50-fix session/common-support eligibility"
+  },
+  "known_opened_taxa": [
+    "Eidolon helvum",
+    "Hypsignathus monstrosus",
+    "Phyllostomus hastatus",
+    "Tadarida teniotis",
+    "Nyctalus noctula",
+    "Hipposideros armiger",
+    "Hipposideros pratti"
+  ],
+  "known_exact_movebank_study_ids": {
+    "Eidolon helvum": ["404939825"]
+  },
+  "claim_boundary": [
+    "This audit establishes candidate bat panels only.",
+    "Taxon overlap does not by itself establish source duplication; exact study provenance must be checked before admission.",
+    "No point-level vertical value is opened by this audit.",
+    "Any point-level RDS handling requires a separately frozen contract."
+  ]
+}
