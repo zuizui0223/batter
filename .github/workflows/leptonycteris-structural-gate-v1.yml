@@ -11,11 +11,16 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     permissions: {contents: read}
+    env:
+      DRYAD_API_TOKEN: ${{ secrets.DRYAD_API_TOKEN }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: {python-version: "3.12"}
       - run: python -m pip install -e . pandas requests beautifulsoup4 openpyxl
+      - name: Require Dryad token
+        run: |
+          test -n "$DRYAD_API_TOKEN" || (echo "DRYAD_API_TOKEN secret is not set" && exit 2)
       - name: Run outcome-blind structural gate
         run: python post_freeze_extensions/leptonycteris_external_validation/structural_preflight_v1.py
       - uses: actions/upload-artifact@v4
