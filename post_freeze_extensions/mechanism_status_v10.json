@@ -136,7 +136,7 @@
     "hipposideros_primary": "CLOSED WITHOUT RESCUE",
     "hipposideros_rescue_extensions": "PROHIBITED",
     "next_progress": "new independent comparative systems or new field data",
-    "leptonycteris_candidate": "PAUSED_UNOPENED_AFTER_HIPPOSIDEROS_PRIMARY_FAIL",
+    "leptonycteris_candidate": "CLOSED_STRUCTURAL_FAIL_ALTITUDE_UNOPENED",
     "external_serial_replication_search": "CLOSED",
     "next_external_rule": "requires a separately frozen heterogeneity-oriented continuation programme; do not open Leptonycteris merely as a rescue search for a positive replication"
   },
@@ -153,5 +153,19 @@
       "source-level weighting",
       "stopping rule"
     ]
+  },
+  "external_candidate_structure": {
+    "Leptonycteris_nivalis": {
+      "source": "Dryad 10.5061/dryad.stqjq2cfg",
+      "individuals": 21,
+      "nonvertical_valid_rows": 2402,
+      "qualified_nights_ge50": 0,
+      "repeat_eligible_individuals": 0,
+      "required_repeat_individuals": 5,
+      "structural_pass": false,
+      "max_fixes_in_any_candidate_night": 49,
+      "numeric_altitude_opened": false,
+      "classification": "STRUCTURAL_FAIL_UNDER_FROZEN_COMMON_ESTIMATOR"
+    }
   }
 }
