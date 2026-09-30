@@ -80,23 +80,36 @@ Do not show a pooled pass fraction.
 ### Figure 5 — From heterogeneity to a falsifiable ecological hypothesis
 Explicitly label **post-hoc hypothesis generation**.
 
-Arrange unique taxa, not duplicated *Phyllostomus* panels, along two conceptual axes:
+Do **not** place the current taxa on numeric or quasi-numeric resource-anchoring / vertical-opportunity axes. That would visually imply that the post-hoc ecological coding is an observed comparative predictor.
 
-- resource persistence/anchoring;
-- vertical opportunity/constraint.
+Instead use a causal-hypothesis schematic:
 
-Supported/boundary status is shown descriptively.
+1. persistent spatial resource anchoring;
+2. repeated vertical opportunity;
+3. repeated alternative spatial solutions available to individuals;
+4. stronger expression of stable centered vertical individuality.
+
+Show the contrasting route:
+
+1. mobile/ephemeral prey or surface-constrained feeding;
+2. fewer repeatable vertical choices;
+3. weaker expected centered vertical individuality.
+
+The current positive and boundary taxa may appear only as small motivating examples beside the two routes, explicitly labelled **observed systems that generated the hypothesis**, not as scored data points.
 
 Competing explanations shown alongside:
 - wing morphology;
 - phylogeny/sensory ecology;
 - atmospheric forcing;
+- habitat vertical structure;
 - tag/vertical-reference differences.
 
-End with prospective prediction:
-> new persistent-resource / vertically structured systems should show larger centered-vertical effects than mobile-prey or surface-constrained systems.
+End with the frozen prospective prediction:
+> new sources with high pre-outcome resource anchoring × vertical opportunity should show larger null-calibrated centered-vertical effects than low-opportunity sources.
 
-This is a hypothesis diagram, not a fitted comparative model.
+Reference the frozen future-data contract in `ECOLOGICAL_CONTINGENCY_PREDICTION_CONTRACT_V1.md`.
+
+This is a hypothesis diagram, not a fitted comparative model or retrospective guild analysis.
 
 ## Supporting information moves
 
