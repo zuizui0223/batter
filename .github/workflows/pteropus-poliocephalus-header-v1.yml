@@ -1,0 +1,40 @@
+name: pteropus-poliocephalus-header-v1
+on:
+  push:
+    branches: [prospective/pteropus-poliocephalus-header-v1]
+    paths:
+      - "post_freeze_extensions/comparative_generality/pteropus_poliocephalus/**"
+      - ".github/workflows/pteropus-poliocephalus-header-v1.yml"
+  workflow_dispatch:
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install requests beautifulsoup4 remotezip
+      - name: Run header-only repository audit
+        run: python post_freeze_extensions/comparative_generality/pteropus_poliocephalus/run_header_audit_v1.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: batter-pteropus-poliocephalus-header-v1
+          path: |
+            post_freeze_extensions/comparative_generality/pteropus_poliocephalus/header_result_v1.json
+            post_freeze_extensions/comparative_generality/pteropus_poliocephalus/HEADER_RESULT_V1.md
+          if-no-files-found: error
+      - name: Pin header audit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add             post_freeze_extensions/comparative_generality/pteropus_poliocephalus/header_result_v1.json             post_freeze_extensions/comparative_generality/pteropus_poliocephalus/HEADER_RESULT_V1.md
+          if git diff --cached --quiet; then
+            echo "No header result changes"
+          else
+            git commit -m "Record Pteropus poliocephalus header audit"
+            git push origin HEAD:prospective/pteropus-poliocephalus-header-v1
+          fi
