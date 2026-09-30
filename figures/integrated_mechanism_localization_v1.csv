@@ -1,0 +1,35 @@
+test,panel,calibrated_excess,p_upper,n,status
+Speed,Eidolon,0.3156645186,0.0002,14,PASS
+Speed,Hypsignathus,0.1345071751,0.0002,24,PASS
+Speed,Phyllostomus 2022,0.1279605357,0.0002,33,PASS
+Speed,Phyllostomus 2023,0.0603380844,0.0002,14,PASS
+Speed,Phyllostomus 2016,0.5469712983,0.0076,10,PASS
+Speed x turn,Eidolon,0.3354349876,0.0002,12,PASS
+Speed x turn,Hypsignathus,0.1484828434,0.0002,23,PASS
+Speed x turn,Phyllostomus 2022,0.1097117454,0.0002,32,PASS
+Speed x turn,Phyllostomus 2023,0.0605164941,0.0002,14,PASS
+Speed x turn,Phyllostomus 2016,0.5262423787,0.0064,10,PASS
+Place x state 2 km,Hypsignathus,0.2864347282,0.0002,22,PASS
+Place x state 2 km,Phyllostomus 2022,0.1868742287,0.0002,30,PASS
+Place x state 2 km,Phyllostomus 2023,0.0722964333,0.0022,14,PASS
+Place x state 2 km,Phyllostomus 2016,0.5454921062,0.0120,10,PASS
+Place x state 500 m,Hypsignathus,0.3840023197,0.0002,19,PASS
+Place x state 500 m,Phyllostomus 2022,0.0867591002,0.0002,23,PASS
+Place x state 500 m,Phyllostomus 2023,0.1015264155,0.0006,11,PASS
+Place x state 500 m,Phyllostomus 2016,0.4514183752,0.0286,9,PASS
+Place x state 250 m,Hypsignathus,0.3114787301,0.0002,16,PASS
+Place x state 250 m,Phyllostomus 2022,0.0762159655,0.0002,19,PASS
+Place x state 250 m,Phyllostomus 2016,0.4472282705,0.0160,9,PASS
+Self lag >=1 d,Hypsignathus,0.1482604746,0.0002,22,PASS
+Self lag >=1 d,Phyllostomus 2022,0.1135474652,0.0002,31,PASS
+Self lag >=1 d,Phyllostomus 2023,0.0603778485,0.0008,13,PASS
+Self lag >=1 d,Phyllostomus 2016,0.5340594976,0.0188,8,PASS
+Self lag >=3 d,Hypsignathus,0.1538542234,0.0002,22,PASS
+Self lag >=3 d,Phyllostomus 2022,0.0959058613,0.0002,25,PASS
+Self lag >=3 d,Phyllostomus 2023,0.0573463150,0.0216,11,PASS
+Self lag >=7 d,Hypsignathus,0.1646961333,0.0002,20,PASS
+Self lag >=7 d,Phyllostomus 2022,0.0999078167,0.0002,17,PASS
+Same-night 2 km,Hypsignathus,0.3024712114,0.0002,19,PASS
+Same-night 2 km,Phyllostomus 2022,0.1694010620,0.0002,26,PASS
+Same-night 2 km,Phyllostomus 2023,0.0821738009,0.0286,14,PASS
+Same-night 2 km,Phyllostomus 2016,0.5638550515,0.0544,9,UNRESOLVED
