@@ -172,7 +172,7 @@ Supporting analyses were concordant with, but subordinate to, the centered-shape
 
 ### *Tadarida* is a motivating boundary case rather than the comparative template
 
-The motivating *T. teniotis* dataset contains repeatable individual information but repeatedly defines the claim ceiling. Its earlier early/late assignment test strongly rejected individual exchangeability (diagonal gain +0.1682 nats/event; exact p=0.000174), whereas a stronger residual cell-by-height stability test failed (p=0.160; Supporting Figure S1).
+The motivating *T. teniotis* dataset contains repeatable individual information but repeatedly defines the claim ceiling. Its earlier early/late assignment test strongly rejected individual exchangeability (diagonal gain +0.1682 nats/event; exact p=0.000174), whereas a stronger residual cell-by-height stability test failed (p=0.160; Supporting Information).
 
 Terrain-relative AGL identity remained supported at 5 km (calibrated +0.446; p=0.0161) and 2.5 km (+0.712; p=0.011), but not at 10 km (+0.237; p=0.1018). The 1-km endpoint-neighbourhood exclusion also failed (p=0.1109), and session-centering eliminated calibrated shape identity (p=0.5121).
 
