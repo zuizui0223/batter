@@ -1,0 +1,2014 @@
+{
+  "candidate_count": 10,
+  "claim_boundary": [
+    "PASS only admits the source to a separately frozen horizontal/common-support preflight; it does not open vertical outcome.",
+    "NO_NATIVE_HEIGHT_FIELD and STRUCTURAL_STOP remain in the closed-universe ledger.",
+    "No candidate is replaced or thresholds lowered because of failure."
+  ],
+  "numeric_height_values_parsed": false,
+  "passing_candidates": [],
+  "passing_count": 0,
+  "results": [
+    {
+      "doi": "10.5441/001/1.j25661td",
+      "numeric_height_values_parsed": false,
+      "passes": false,
+      "reason": "RuntimeError: PID resolution failed: 404 Client Error: Not Found for url: https://datarepository.movebank.org/server/api/pid/find?id=https%3A%2F%2Fdoi.org%2F10.5441%2F001%2F1.j25661td",
+      "status": "TRANSPORT_OR_SCHEMA_FAILURE",
+      "taxon": "Pteropus lylei"
+    },
+    {
+      "csv_headers_inspected": [
+        {
+          "bitstream_id": "514515ea-69d8-45b9-ac96-b14a5b4e5847",
+          "bundle": "ORIGINAL",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "a1339ca0ae099be92103acc3d580cb70"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/514515ea-69d8-45b9-ac96-b14a5b4e5847/content",
+          "description": "",
+          "filename": "Movement seasonality in a desert-dwelling bat revealed by miniature GPS loggers (Conenna et al. 2019)-reference-data.csv",
+          "header": {
+            "canonical_header": [
+              "animal_id",
+              "animal_life_stage",
+              "animal_mass",
+              "animal_reproductive_condition",
+              "animal_sex",
+              "animal_taxon",
+              "attachment_type",
+              "deploy_off_date",
+              "deploy_on_date",
+              "deployment_comments",
+              "deployment_end_type",
+              "deployment_id",
+              "duty_cycle",
+              "manipulation_type",
+              "study_site",
+              "tag_id",
+              "tag_manufacturer_name",
+              "tag_model",
+              "tag_readout_method"
+            ],
+            "has_timestamp": false,
+            "has_xy": false,
+            "height_fields": [],
+            "individual_field": null,
+            "raw_header": [
+              "tag-id",
+              "animal-id",
+              "animal-taxon",
+              "deploy-on-date",
+              "deploy-off-date",
+              "animal-life-stage",
+              "animal-mass",
+              "animal-reproductive-condition",
+              "animal-sex",
+              "attachment-type",
+              "deployment-comments",
+              "deployment-end-type",
+              "deployment-id",
+              "duty-cycle",
+              "manipulation-type",
+              "study-site",
+              "tag-manufacturer-name",
+              "tag-model",
+              "tag-readout-method"
+            ],
+            "tracking_like": false
+          },
+          "mime_type": "",
+          "size_bytes": 5372
+        },
+        {
+          "bitstream_id": "918a7906-e3fb-4257-ab31-346fa5e4746d",
+          "bundle": "ORIGINAL",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "4fe08361a138c50f9b61e425de439b85"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/918a7906-e3fb-4257-ab31-346fa5e4746d/content",
+          "description": "",
+          "filename": "Movement seasonality in a desert-dwelling bat revealed by miniature GPS loggers (Conenna et al. 2019).csv",
+          "header": {
+            "canonical_header": [
+              "event_id",
+              "gps:hdop",
+              "individual_local_identifier",
+              "individual_taxon_canonical_name",
+              "location_lat",
+              "location_long",
+              "sensor_type",
+              "study_name",
+              "study_specific_measurement",
+              "tag_local_identifier",
+              "timestamp",
+              "visible"
+            ],
+            "has_timestamp": true,
+            "has_xy": true,
+            "height_fields": [],
+            "individual_field": "individual_local_identifier",
+            "raw_header": [
+              "event-id",
+              "visible",
+              "timestamp",
+              "location-long",
+              "location-lat",
+              "gps:hdop",
+              "study-specific-measurement",
+              "sensor-type",
+              "individual-taxon-canonical-name",
+              "tag-local-identifier",
+              "individual-local-identifier",
+              "study-name"
+            ],
+            "tracking_like": true
+          },
+          "mime_type": "",
+          "size_bytes": 370663
+        }
+      ],
+      "doi": "10.5441/001/1.n157b4n8",
+      "files": [
+        {
+          "bitstream_id": "514515ea-69d8-45b9-ac96-b14a5b4e5847",
+          "bundle": "ORIGINAL",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "a1339ca0ae099be92103acc3d580cb70"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/514515ea-69d8-45b9-ac96-b14a5b4e5847/content",
+          "description": "",
+          "filename": "Movement seasonality in a desert-dwelling bat revealed by miniature GPS loggers (Conenna et al. 2019)-reference-data.csv",
+          "mime_type": "",
+          "size_bytes": 5372
+        },
+        {
+          "bitstream_id": "6996d26e-acd8-4c96-b781-ecb045211e05",
+          "bundle": "ORIGINAL",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "7ec11ed28be2c76655e3eb1a8398ff53"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/6996d26e-acd8-4c96-b781-ecb045211e05/content",
+          "description": "",
+          "filename": "README.txt",
+          "mime_type": "",
+          "size_bytes": 11279
+        },
+        {
+          "bitstream_id": "918a7906-e3fb-4257-ab31-346fa5e4746d",
+          "bundle": "ORIGINAL",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "4fe08361a138c50f9b61e425de439b85"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/918a7906-e3fb-4257-ab31-346fa5e4746d/content",
+          "description": "",
+          "filename": "Movement seasonality in a desert-dwelling bat revealed by miniature GPS loggers (Conenna et al. 2019).csv",
+          "mime_type": "",
+          "size_bytes": 370663
+        },
+        {
+          "bitstream_id": "75705f74-231e-4027-a135-d84ab5aade8f",
+          "bundle": "TEXT",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "dc616fd4a6d618998bb8fbbdb4e6bed8"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/75705f74-231e-4027-a135-d84ab5aade8f/content",
+          "description": "",
+          "filename": "README.txt.txt",
+          "mime_type": "",
+          "size_bytes": 11239
+        },
+        {
+          "bitstream_id": "564c8d71-beb0-43f3-9922-a10e7e731627",
+          "bundle": "TEXT",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "d6d1976170458ea3e0914b018dd3c7f0"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/564c8d71-beb0-43f3-9922-a10e7e731627/content",
+          "description": "",
+          "filename": "README.txt.txt",
+          "mime_type": "",
+          "size_bytes": 11280
+        }
+      ],
+      "numeric_height_values_parsed": false,
+      "passes": false,
+      "reason": "22 GPS-tracked bats in seasonal desert study",
+      "repository_item_name": "Data from: Movement seasonality in a desert-dwelling bat revealed by miniature GPS loggers",
+      "repository_item_uuid": "a83f10a7-1068-480c-a317-b40cb5268a54",
+      "status": "NO_NATIVE_HEIGHT_FIELD",
+      "taxon": "Lavia frons",
+      "tracking_csvs_without_native_height": [
+        {
+          "bitstream_id": "918a7906-e3fb-4257-ab31-346fa5e4746d",
+          "bundle": "ORIGINAL",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "4fe08361a138c50f9b61e425de439b85"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/918a7906-e3fb-4257-ab31-346fa5e4746d/content",
+          "description": "",
+          "filename": "Movement seasonality in a desert-dwelling bat revealed by miniature GPS loggers (Conenna et al. 2019).csv",
+          "header": {
+            "canonical_header": [
+              "event_id",
+              "gps:hdop",
+              "individual_local_identifier",
+              "individual_taxon_canonical_name",
+              "location_lat",
+              "location_long",
+              "sensor_type",
+              "study_name",
+              "study_specific_measurement",
+              "tag_local_identifier",
+              "timestamp",
+              "visible"
+            ],
+            "has_timestamp": true,
+            "has_xy": true,
+            "height_fields": [],
+            "individual_field": "individual_local_identifier",
+            "raw_header": [
+              "event-id",
+              "visible",
+              "timestamp",
+              "location-long",
+              "location-lat",
+              "gps:hdop",
+              "study-specific-measurement",
+              "sensor-type",
+              "individual-taxon-canonical-name",
+              "tag-local-identifier",
+              "individual-local-identifier",
+              "study-name"
+            ],
+            "tracking_like": true
+          },
+          "mime_type": "",
+          "size_bytes": 370663
+        }
+      ]
+    },
+    {
+      "csv_headers_inspected": [
+        {
+          "bitstream_id": "8c34b3fd-d746-4716-bc67-8c770810d1dd",
+          "bundle": "ORIGINAL",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "07d8e34a973c361dada5dc46da90ed80"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/8c34b3fd-d746-4716-bc67-8c770810d1dd/content",
+          "description": "",
+          "filename": "Mexican fish-eating bat in Isla Partida Norte, Mexico.csv",
+          "header": {
+            "canonical_header": [
+              "behavioural_classification",
+              "event_id",
+              "gps:dop",
+              "gps:hdop",
+              "gps:satellite_count",
+              "height_above_ellipsoid",
+              "individual_local_identifier",
+              "individual_taxon_canonical_name",
+              "location_lat",
+              "location_long",
+              "sensor_type",
+              "study_name",
+              "tag_local_identifier",
+              "timestamp",
+              "visible"
+            ],
+            "has_timestamp": true,
+            "has_xy": true,
+            "height_fields": [
+              "height_above_ellipsoid"
+            ],
+            "individual_field": "individual_local_identifier",
+            "raw_header": [
+              "event-id",
+              "visible",
+              "timestamp",
+              "location-long",
+              "location-lat",
+              "behavioural-classification",
+              "gps:dop",
+              "gps:hdop",
+              "gps:satellite-count",
+              "height-above-ellipsoid",
+              "sensor-type",
+              "individual-taxon-canonical-name",
+              "tag-local-identifier",
+              "individual-local-identifier",
+              "study-name"
+            ],
+            "tracking_like": true
+          },
+          "mime_type": "",
+          "size_bytes": 2462362
+        },
+        {
+          "bitstream_id": "c429364a-802b-4fe5-9bcc-abe6fffe8062",
+          "bundle": "ORIGINAL",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "dac2b22f48c653b52398b86fac3d5801"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/c429364a-802b-4fe5-9bcc-abe6fffe8062/content",
+          "description": "",
+          "filename": "Mexican fish-eating bat in Isla Partida Norte, Mexico-reference-data.csv",
+          "header": {
+            "canonical_header": [
+              "animal_id",
+              "animal_life_stage",
+              "animal_mass",
+              "animal_reproductive_condition",
+              "animal_sex",
+              "animal_taxon",
+              "attachment_type",
+              "behavior_according_to",
+              "deploy_off_date",
+              "deploy_on_date",
+              "deployment_comments",
+              "deployment_end_comments",
+              "deployment_end_type",
+              "deployment_id",
+              "duty_cycle",
+              "location_accuracy_comments",
+              "manipulation_type",
+              "study_site",
+              "tag_id",
+              "tag_manufacturer_name",
+              "tag_mass",
+              "tag_model",
+              "tag_readout_method"
+            ],
+            "has_timestamp": false,
+            "has_xy": false,
+            "height_fields": [],
+            "individual_field": null,
+            "raw_header": [
+              "tag-id",
+              "animal-id",
+              "animal-taxon",
+              "deploy-on-date",
+              "deploy-off-date",
+              "animal-life-stage",
+              "animal-mass",
+              "animal-reproductive-condition",
+              "animal-sex",
+              "attachment-type",
+              "behavior-according-to",
+              "deployment-comments",
+              "deployment-end-comments",
+              "deployment-end-type",
+              "deployment-id",
+              "duty-cycle",
+              "location-accuracy-comments",
+              "manipulation-type",
+              "study-site",
+              "tag-manufacturer-name",
+              "tag-mass",
+              "tag-model",
+              "tag-readout-method"
+            ],
+            "tracking_like": false
+          },
+          "mime_type": "",
+          "size_bytes": 7150
+        }
+      ],
+      "doi": "10.5441/001/1.kk3bg2f4",
+      "files": [
+        {
+          "bitstream_id": "8c34b3fd-d746-4716-bc67-8c770810d1dd",
+          "bundle": "ORIGINAL",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "07d8e34a973c361dada5dc46da90ed80"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/8c34b3fd-d746-4716-bc67-8c770810d1dd/content",
+          "description": "",
+          "filename": "Mexican fish-eating bat in Isla Partida Norte, Mexico.csv",
+          "mime_type": "",
+          "size_bytes": 2462362
+        },
+        {
+          "bitstream_id": "e0b86f15-796b-4bef-8cad-0e2ace15a381",
+          "bundle": "ORIGINAL",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "4deda336d00f1d563ffc9eebca154b37"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/e0b86f15-796b-4bef-8cad-0e2ace15a381/content",
+          "description": "",
+          "filename": "README.txt",
+          "mime_type": "",
+          "size_bytes": 12586
+        },
+        {
+          "bitstream_id": "c429364a-802b-4fe5-9bcc-abe6fffe8062",
+          "bundle": "ORIGINAL",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "dac2b22f48c653b52398b86fac3d5801"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/c429364a-802b-4fe5-9bcc-abe6fffe8062/content",
+          "description": "",
+          "filename": "Mexican fish-eating bat in Isla Partida Norte, Mexico-reference-data.csv",
+          "mime_type": "",
+          "size_bytes": 7150
+        },
+        {
+          "bitstream_id": "308b188d-ac3b-4ad8-8942-6595e12fedc7",
+          "bundle": "TEXT",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "c6c21c5ecd37ddaedc92e28cc069628d"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/308b188d-ac3b-4ad8-8942-6595e12fedc7/content",
+          "description": "",
+          "filename": "README.txt.txt",
+          "mime_type": "",
+          "size_bytes": 12540
+        },
+        {
+          "bitstream_id": "52875477-e747-48be-942e-cdcf5c074fbf",
+          "bundle": "TEXT",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "f13236fa6fac3debe752d2e9a2ad87bc"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/52875477-e747-48be-942e-cdcf5c074fbf/content",
+          "description": "",
+          "filename": "README.txt.txt",
+          "mime_type": "",
+          "size_bytes": 12587
+        }
+      ],
+      "numeric_height_values_parsed": false,
+      "passes": false,
+      "reason": "marine fishing bat GPS source",
+      "repository_item_name": "Data from: Acoustic evaluation of behavioral states predicted from GPS tracking: a case study of a marine fishing bat",
+      "repository_item_uuid": "595664bf-661d-49d9-af92-ec8a41a50f50",
+      "selected_event_file": {
+        "bitstream_id": "8c34b3fd-d746-4716-bc67-8c770810d1dd",
+        "checksum": {
+          "algorithm": "MD5",
+          "value": "07d8e34a973c361dada5dc46da90ed80"
+        },
+        "filename": "Mexican fish-eating bat in Isla Partida Norte, Mexico.csv",
+        "selected_height_field": "height_above_ellipsoid",
+        "sha256": "38fdeda4a588f86f6f3f4d83dabed71c7e74dcbed1fe055a0aa9d8216be3ddcc",
+        "size_bytes": 2462362
+      },
+      "status": "STRUCTURAL_STOP",
+      "structural": {
+        "eligible_session_count_total": 15,
+        "eligible_session_size_max": 1556,
+        "eligible_session_size_median": 906.0,
+        "eligible_session_size_min": 361,
+        "individuals_with_presence": 11,
+        "numeric_height_values_parsed": false,
+        "passes": false,
+        "presence_qualified_rows": 14328,
+        "repeat_individual_count": 4,
+        "repeat_individual_ids": [
+          "Viv12",
+          "Viv14",
+          "Viv6",
+          "Viv8"
+        ],
+        "rows_in_file": 14328,
+        "selected_height_field": "height_above_ellipsoid",
+        "session_structure": {
+          "Viv12": {
+            "all_block_counts": [
+              473,
+              1252
+            ],
+            "eligible_session_count": 2,
+            "eligible_session_counts": [
+              473,
+              1252
+            ]
+          },
+          "Viv14": {
+            "all_block_counts": [
+              998,
+              361
+            ],
+            "eligible_session_count": 2,
+            "eligible_session_counts": [
+              998,
+              361
+            ]
+          },
+          "Viv15": {
+            "all_block_counts": [
+              772
+            ],
+            "eligible_session_count": 1,
+            "eligible_session_counts": [
+              772
+            ]
+          },
+          "Viv16": {
+            "all_block_counts": [
+              1556
+            ],
+            "eligible_session_count": 1,
+            "eligible_session_counts": [
+              1556
+            ]
+          },
+          "Viv18": {
+            "all_block_counts": [
+              1418
+            ],
+            "eligible_session_count": 1,
+            "eligible_session_counts": [
+              1418
+            ]
+          },
+          "Viv19": {
+            "all_block_counts": [
+              777
+            ],
+            "eligible_session_count": 1,
+            "eligible_session_counts": [
+              777
+            ]
+          },
+          "Viv21": {
+            "all_block_counts": [
+              491
+            ],
+            "eligible_session_count": 1,
+            "eligible_session_counts": [
+              491
+            ]
+          },
+          "Viv24": {
+            "all_block_counts": [
+              813
+            ],
+            "eligible_session_count": 1,
+            "eligible_session_counts": [
+              813
+            ]
+          },
+          "Viv5": {
+            "all_block_counts": [
+              906
+            ],
+            "eligible_session_count": 1,
+            "eligible_session_counts": [
+              906
+            ]
+          },
+          "Viv6": {
+            "all_block_counts": [
+              1150,
+              1056
+            ],
+            "eligible_session_count": 2,
+            "eligible_session_counts": [
+              1150,
+              1056
+            ]
+          },
+          "Viv8": {
+            "all_block_counts": [
+              820,
+              1485
+            ],
+            "eligible_session_count": 2,
+            "eligible_session_counts": [
+              820,
+              1485
+            ]
+          }
+        }
+      },
+      "taxon": "Noctilio leporinus"
+    },
+    {
+      "doi": "10.5441/001/1.5bd6pq55",
+      "numeric_height_values_parsed": false,
+      "passes": false,
+      "reason": "RuntimeError: PID resolution failed: 404 Client Error: Not Found for url: https://datarepository.movebank.org/server/api/pid/find?id=https%3A%2F%2Fdoi.org%2F10.5441%2F001%2F1.5bd6pq55",
+      "status": "TRANSPORT_OR_SCHEMA_FAILURE",
+      "taxon": "Pteropus poliocephalus"
+    },
+    {
+      "csv_headers_inspected": [
+        {
+          "bitstream_id": "e4517ad0-82dc-4d4b-bdf0-97e84dab03c2",
+          "bundle": "ORIGINAL",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "d9ef6ef04695e2d66c7c96fe2013c36c"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/e4517ad0-82dc-4d4b-bdf0-97e84dab03c2/content",
+          "description": "",
+          "filename": "Lesser bulldog bat foraging behavior_part.csv",
+          "header": {
+            "canonical_header": [
+              "event_id",
+              "individual_local_identifier",
+              "individual_taxon_canonical_name",
+              "location_lat",
+              "location_long",
+              "manually_marked_outlier",
+              "sensor_type",
+              "study_name",
+              "tag_local_identifier",
+              "timestamp",
+              "visible"
+            ],
+            "has_timestamp": true,
+            "has_xy": true,
+            "height_fields": [],
+            "individual_field": "individual_local_identifier",
+            "raw_header": [
+              "event-id",
+              "visible",
+              "timestamp",
+              "location-long",
+              "location-lat",
+              "manually-marked-outlier",
+              "sensor-type",
+              "individual-taxon-canonical-name",
+              "tag-local-identifier",
+              "individual-local-identifier",
+              "study-name"
+            ],
+            "tracking_like": true
+          },
+          "mime_type": "",
+          "size_bytes": 1362496
+        },
+        {
+          "bitstream_id": "a2c6d9dc-b67b-421b-a1f1-72de1137b44a",
+          "bundle": "ORIGINAL",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "52b7725308bd52148df6b25ec379ce5e"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/a2c6d9dc-b67b-421b-a1f1-72de1137b44a/content",
+          "description": "",
+          "filename": "Lesser bulldog bat foraging behavior_part-reference-data.csv",
+          "header": {
+            "canonical_header": [
+              "animal_comments",
+              "animal_id",
+              "animal_life_stage",
+              "animal_ring_id",
+              "animal_sex",
+              "animal_taxon",
+              "attachment_comments",
+              "capture_method",
+              "deploy_off_date",
+              "deploy_off_person",
+              "deploy_on_date",
+              "deploy_on_person",
+              "deployment_comments",
+              "deployment_end_type",
+              "deployment_id",
+              "manipulation_type",
+              "tag_id",
+              "tag_manufacturer_name",
+              "tag_model",
+              "tag_readout_method"
+            ],
+            "has_timestamp": false,
+            "has_xy": false,
+            "height_fields": [],
+            "individual_field": null,
+            "raw_header": [
+              "tag-id",
+              "animal-id",
+              "animal-taxon",
+              "deploy-on-date",
+              "deploy-off-date",
+              "animal-comments",
+              "animal-life-stage",
+              "animal-ring-id",
+              "animal-sex",
+              "attachment-comments",
+              "capture-method",
+              "deploy-off-person",
+              "deploy-on-person",
+              "deployment-comments",
+              "deployment-end-type",
+              "deployment-id",
+              "manipulation-type",
+              "tag-manufacturer-name",
+              "tag-model",
+              "tag-readout-method"
+            ],
+            "tracking_like": false
+          },
+          "mime_type": "",
+          "size_bytes": 9363
+        }
+      ],
+      "doi": "10.5441/001/1.297",
+      "files": [
+        {
+          "bitstream_id": "e4517ad0-82dc-4d4b-bdf0-97e84dab03c2",
+          "bundle": "ORIGINAL",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "d9ef6ef04695e2d66c7c96fe2013c36c"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/e4517ad0-82dc-4d4b-bdf0-97e84dab03c2/content",
+          "description": "",
+          "filename": "Lesser bulldog bat foraging behavior_part.csv",
+          "mime_type": "",
+          "size_bytes": 1362496
+        },
+        {
+          "bitstream_id": "a2c6d9dc-b67b-421b-a1f1-72de1137b44a",
+          "bundle": "ORIGINAL",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "52b7725308bd52148df6b25ec379ce5e"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/a2c6d9dc-b67b-421b-a1f1-72de1137b44a/content",
+          "description": "",
+          "filename": "Lesser bulldog bat foraging behavior_part-reference-data.csv",
+          "mime_type": "",
+          "size_bytes": 9363
+        },
+        {
+          "bitstream_id": "42d1c0a8-1c22-4528-b502-cdd1465942ca",
+          "bundle": "ORIGINAL",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "d7d35370082ffccbeb34fe51883da472"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/42d1c0a8-1c22-4528-b502-cdd1465942ca/content",
+          "description": "",
+          "filename": "README.txt",
+          "mime_type": "",
+          "size_bytes": 16766
+        }
+      ],
+      "numeric_height_values_parsed": false,
+      "passes": false,
+      "reason": "2024 lesser bulldog bat GPS tracks; 48 wet-season and 23 dry-season tracks reported",
+      "repository_item_name": "Data from: Seasonal shifts in tropical insect ephemerality drive bat foraging effort",
+      "repository_item_uuid": "7758fed2-dde3-47ae-a817-4d28032df60a",
+      "status": "NO_NATIVE_HEIGHT_FIELD",
+      "taxon": "Noctilio albiventris",
+      "tracking_csvs_without_native_height": [
+        {
+          "bitstream_id": "e4517ad0-82dc-4d4b-bdf0-97e84dab03c2",
+          "bundle": "ORIGINAL",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "d9ef6ef04695e2d66c7c96fe2013c36c"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/e4517ad0-82dc-4d4b-bdf0-97e84dab03c2/content",
+          "description": "",
+          "filename": "Lesser bulldog bat foraging behavior_part.csv",
+          "header": {
+            "canonical_header": [
+              "event_id",
+              "individual_local_identifier",
+              "individual_taxon_canonical_name",
+              "location_lat",
+              "location_long",
+              "manually_marked_outlier",
+              "sensor_type",
+              "study_name",
+              "tag_local_identifier",
+              "timestamp",
+              "visible"
+            ],
+            "has_timestamp": true,
+            "has_xy": true,
+            "height_fields": [],
+            "individual_field": "individual_local_identifier",
+            "raw_header": [
+              "event-id",
+              "visible",
+              "timestamp",
+              "location-long",
+              "location-lat",
+              "manually-marked-outlier",
+              "sensor-type",
+              "individual-taxon-canonical-name",
+              "tag-local-identifier",
+              "individual-local-identifier",
+              "study-name"
+            ],
+            "tracking_like": true
+          },
+          "mime_type": "",
+          "size_bytes": 1362496
+        }
+      ]
+    },
+    {
+      "csv_headers_inspected": [
+        {
+          "bitstream_id": "b3c8901d-113e-473f-91a6-9413abd2e7e0",
+          "bundle": "ORIGINAL",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "8006529dd40732a89c04c3488e2906b3"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/b3c8901d-113e-473f-91a6-9413abd2e7e0/content",
+          "description": "",
+          "filename": "Post-hibernation and early migration in noctule bats (data from Dechmann et al. 2014)-reference-data.csv",
+          "header": {
+            "canonical_header": [
+              "animal_id",
+              "animal_life_stage",
+              "animal_mass",
+              "animal_sex",
+              "animal_taxon",
+              "attachment_type",
+              "deploy_on_date",
+              "deployment_comments",
+              "deployment_end_comments",
+              "manipulation_type",
+              "study_site",
+              "tag_beacon_frequency",
+              "tag_id",
+              "tag_manufacturer_name",
+              "tag_mass",
+              "tag_model",
+              "tag_readout_method",
+              "tag_serial_no"
+            ],
+            "has_timestamp": false,
+            "has_xy": false,
+            "height_fields": [],
+            "individual_field": null,
+            "raw_header": [
+              "tag-id",
+              "animal-id",
+              "animal-taxon",
+              "deploy-on-date",
+              "animal-life-stage",
+              "animal-mass",
+              "animal-sex",
+              "attachment-type",
+              "deployment-comments",
+              "deployment-end-comments",
+              "manipulation-type",
+              "study-site",
+              "tag-beacon-frequency",
+              "tag-manufacturer-name",
+              "tag-mass",
+              "tag-model",
+              "tag-readout-method",
+              "tag-serial-no"
+            ],
+            "tracking_like": false
+          },
+          "mime_type": "",
+          "size_bytes": 9764
+        },
+        {
+          "bitstream_id": "1f47044f-e8c5-467b-92c7-fdedc72ab6f3",
+          "bundle": "ORIGINAL",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "92da6956a45893fe551d3ffcfb235e0c"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/1f47044f-e8c5-467b-92c7-fdedc72ab6f3/content",
+          "description": "",
+          "filename": "Post-hibernation and early migration in noctule bats (data from Dechmann et al. 2014).csv",
+          "header": {
+            "canonical_header": [
+              "comments",
+              "event_id",
+              "individual_local_identifier",
+              "individual_taxon_canonical_name",
+              "location_lat",
+              "location_long",
+              "migration_stage_standard",
+              "sensor_type",
+              "study_local_timestamp",
+              "study_name",
+              "study_timezone",
+              "tag_local_identifier",
+              "timestamp",
+              "utm_easting",
+              "utm_northing",
+              "utm_zone",
+              "visible"
+            ],
+            "has_timestamp": true,
+            "has_xy": true,
+            "height_fields": [],
+            "individual_field": "individual_local_identifier",
+            "raw_header": [
+              "event-id",
+              "visible",
+              "timestamp",
+              "location-long",
+              "location-lat",
+              "comments",
+              "migration-stage-standard",
+              "sensor-type",
+              "individual-taxon-canonical-name",
+              "tag-local-identifier",
+              "individual-local-identifier",
+              "study-name",
+              "utm-easting",
+              "utm-northing",
+              "utm-zone",
+              "study-timezone",
+              "study-local-timestamp"
+            ],
+            "tracking_like": true
+          },
+          "mime_type": "",
+          "size_bytes": 206608
+        }
+      ],
+      "doi": "10.5441/001/1.f01815nq",
+      "files": [
+        {
+          "bitstream_id": "b3c8901d-113e-473f-91a6-9413abd2e7e0",
+          "bundle": "ORIGINAL",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "8006529dd40732a89c04c3488e2906b3"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/b3c8901d-113e-473f-91a6-9413abd2e7e0/content",
+          "description": "",
+          "filename": "Post-hibernation and early migration in noctule bats (data from Dechmann et al. 2014)-reference-data.csv",
+          "mime_type": "",
+          "size_bytes": 9764
+        },
+        {
+          "bitstream_id": "2d6b1800-3b2e-482f-b18c-a02b6bb54397",
+          "bundle": "ORIGINAL",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "a2fff47765466221736078087995f626"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/2d6b1800-3b2e-482f-b18c-a02b6bb54397/content",
+          "description": "",
+          "filename": "README.txt",
+          "mime_type": "",
+          "size_bytes": 10955
+        },
+        {
+          "bitstream_id": "1f47044f-e8c5-467b-92c7-fdedc72ab6f3",
+          "bundle": "ORIGINAL",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "92da6956a45893fe551d3ffcfb235e0c"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/1f47044f-e8c5-467b-92c7-fdedc72ab6f3/content",
+          "description": "",
+          "filename": "Post-hibernation and early migration in noctule bats (data from Dechmann et al. 2014).csv",
+          "mime_type": "",
+          "size_bytes": 206608
+        },
+        {
+          "bitstream_id": "ce7bd6b2-b31b-4b48-8f32-aa5adcea2d09",
+          "bundle": "TEXT",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "4c1381e7cea9a61c05ce0aa6a9db8852"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/ce7bd6b2-b31b-4b48-8f32-aa5adcea2d09/content",
+          "description": "",
+          "filename": "README.txt.txt",
+          "mime_type": "",
+          "size_bytes": 10812
+        },
+        {
+          "bitstream_id": "3acbb93a-8015-4f4b-b0a2-52035baf0ed4",
+          "bundle": "TEXT",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "8c6b2464a44e8a3defd7b8897ad538cb"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/3acbb93a-8015-4f4b-b0a2-52035baf0ed4/content",
+          "description": "",
+          "filename": "README.txt.txt",
+          "mime_type": "",
+          "size_bytes": 10956
+        }
+      ],
+      "numeric_height_values_parsed": false,
+      "passes": false,
+      "reason": "post-hibernation / migration tracking source",
+      "repository_item_name": "Data from: Tracking post-hibernation behavior and early migration does not reveal the expected sex-differences in a \"female-migrating\u201c bat",
+      "repository_item_uuid": "5cdca828-9f1e-421f-bcac-cb56a691cb3e",
+      "status": "NO_NATIVE_HEIGHT_FIELD",
+      "taxon": "Vespertilio murinus",
+      "tracking_csvs_without_native_height": [
+        {
+          "bitstream_id": "1f47044f-e8c5-467b-92c7-fdedc72ab6f3",
+          "bundle": "ORIGINAL",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "92da6956a45893fe551d3ffcfb235e0c"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/1f47044f-e8c5-467b-92c7-fdedc72ab6f3/content",
+          "description": "",
+          "filename": "Post-hibernation and early migration in noctule bats (data from Dechmann et al. 2014).csv",
+          "header": {
+            "canonical_header": [
+              "comments",
+              "event_id",
+              "individual_local_identifier",
+              "individual_taxon_canonical_name",
+              "location_lat",
+              "location_long",
+              "migration_stage_standard",
+              "sensor_type",
+              "study_local_timestamp",
+              "study_name",
+              "study_timezone",
+              "tag_local_identifier",
+              "timestamp",
+              "utm_easting",
+              "utm_northing",
+              "utm_zone",
+              "visible"
+            ],
+            "has_timestamp": true,
+            "has_xy": true,
+            "height_fields": [],
+            "individual_field": "individual_local_identifier",
+            "raw_header": [
+              "event-id",
+              "visible",
+              "timestamp",
+              "location-long",
+              "location-lat",
+              "comments",
+              "migration-stage-standard",
+              "sensor-type",
+              "individual-taxon-canonical-name",
+              "tag-local-identifier",
+              "individual-local-identifier",
+              "study-name",
+              "utm-easting",
+              "utm-northing",
+              "utm-zone",
+              "study-timezone",
+              "study-local-timestamp"
+            ],
+            "tracking_like": true
+          },
+          "mime_type": "",
+          "size_bytes": 206608
+        }
+      ]
+    },
+    {
+      "csv_headers_inspected": [
+        {
+          "bitstream_id": "92a2d610-5f6f-44ec-a2b5-241b18d2aa6f",
+          "bundle": "ORIGINAL",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "7143723cbe613b22c21b86a5b6a9d6fa"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/92a2d610-5f6f-44ec-a2b5-241b18d2aa6f/content",
+          "description": "",
+          "filename": "Greater horseshoe bat Annepont France (data from Pinaud et al. 2018)-reference-data.csv",
+          "header": {
+            "canonical_header": [
+              "animal_id",
+              "animal_life_stage",
+              "animal_mass",
+              "animal_reproductive_condition",
+              "animal_sex",
+              "animal_taxon",
+              "attachment_type",
+              "deploy_off_date",
+              "deploy_on_date",
+              "deployment_comments",
+              "deployment_end_type",
+              "deployment_id",
+              "location_accuracy_comments",
+              "manipulation_type",
+              "study_site",
+              "tag_id",
+              "tag_manufacturer_name",
+              "tag_mass",
+              "tag_model",
+              "tag_readout_method"
+            ],
+            "has_timestamp": false,
+            "has_xy": false,
+            "height_fields": [],
+            "individual_field": null,
+            "raw_header": [
+              "tag-id",
+              "animal-id",
+              "animal-taxon",
+              "deploy-on-date",
+              "deploy-off-date",
+              "animal-life-stage",
+              "animal-mass",
+              "animal-reproductive-condition",
+              "animal-sex",
+              "attachment-type",
+              "deployment-comments",
+              "deployment-end-type",
+              "deployment-id",
+              "location-accuracy-comments",
+              "manipulation-type",
+              "study-site",
+              "tag-manufacturer-name",
+              "tag-mass",
+              "tag-model",
+              "tag-readout-method"
+            ],
+            "tracking_like": false
+          },
+          "mime_type": "",
+          "size_bytes": 2351
+        },
+        {
+          "bitstream_id": "395661d5-b347-4873-bdc4-f7f613c4d171",
+          "bundle": "ORIGINAL",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "110fdfe17a7f10dd9d5f5c471249a060"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/395661d5-b347-4873-bdc4-f7f613c4d171/content",
+          "description": "",
+          "filename": "Greater horseshoe bat Annepont France (data from Pinaud et al. 2018).csv",
+          "header": {
+            "canonical_header": [
+              "comments",
+              "event_id",
+              "individual_local_identifier",
+              "individual_taxon_canonical_name",
+              "location_lat",
+              "location_long",
+              "sensor_type",
+              "study_name",
+              "tag_local_identifier",
+              "timestamp",
+              "visible"
+            ],
+            "has_timestamp": true,
+            "has_xy": true,
+            "height_fields": [],
+            "individual_field": "individual_local_identifier",
+            "raw_header": [
+              "event-id",
+              "visible",
+              "timestamp",
+              "location-long",
+              "location-lat",
+              "comments",
+              "sensor-type",
+              "individual-taxon-canonical-name",
+              "tag-local-identifier",
+              "individual-local-identifier",
+              "study-name"
+            ],
+            "tracking_like": true
+          },
+          "mime_type": "",
+          "size_bytes": 12539
+        }
+      ],
+      "doi": "10.5441/001/1.3pk82706",
+      "files": [
+        {
+          "bitstream_id": "92a2d610-5f6f-44ec-a2b5-241b18d2aa6f",
+          "bundle": "ORIGINAL",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "7143723cbe613b22c21b86a5b6a9d6fa"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/92a2d610-5f6f-44ec-a2b5-241b18d2aa6f/content",
+          "description": "",
+          "filename": "Greater horseshoe bat Annepont France (data from Pinaud et al. 2018)-reference-data.csv",
+          "mime_type": "",
+          "size_bytes": 2351
+        },
+        {
+          "bitstream_id": "4c734a27-c953-4df3-bd00-c8a320ca625c",
+          "bundle": "ORIGINAL",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "527d9c7ced8160c6edee1e0814c51344"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/4c734a27-c953-4df3-bd00-c8a320ca625c/content",
+          "description": "",
+          "filename": "README.txt",
+          "mime_type": "",
+          "size_bytes": 10725
+        },
+        {
+          "bitstream_id": "395661d5-b347-4873-bdc4-f7f613c4d171",
+          "bundle": "ORIGINAL",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "110fdfe17a7f10dd9d5f5c471249a060"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/395661d5-b347-4873-bdc4-f7f613c4d171/content",
+          "description": "",
+          "filename": "Greater horseshoe bat Annepont France (data from Pinaud et al. 2018).csv",
+          "mime_type": "",
+          "size_bytes": 12539
+        },
+        {
+          "bitstream_id": "fd1849ed-3c47-4b5a-b701-f1fd53f11eb2",
+          "bundle": "TEXT",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "25c4c2196db7742340faacd49cdfd124"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/fd1849ed-3c47-4b5a-b701-f1fd53f11eb2/content",
+          "description": "",
+          "filename": "README.txt.txt",
+          "mime_type": "",
+          "size_bytes": 10617
+        },
+        {
+          "bitstream_id": "cc752bfa-b328-4a39-bb53-feea153e4799",
+          "bundle": "TEXT",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "85bf9fa87c49a3ee3e471d3aeb468683"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/cc752bfa-b328-4a39-bb53-feea153e4799/content",
+          "description": "",
+          "filename": "README.txt.txt",
+          "mime_type": "",
+          "size_bytes": 10726
+        }
+      ],
+      "numeric_height_values_parsed": false,
+      "passes": false,
+      "reason": "greater horseshoe bat tracking source",
+      "repository_item_name": "Data from: Modelling landscape connectivity for greater horseshoe bat using an empirical quantification of resistance",
+      "repository_item_uuid": "e81f2977-7caa-4f81-868b-5f067fd830b7",
+      "status": "NO_NATIVE_HEIGHT_FIELD",
+      "taxon": "Rhinolophus ferrumequinum",
+      "tracking_csvs_without_native_height": [
+        {
+          "bitstream_id": "395661d5-b347-4873-bdc4-f7f613c4d171",
+          "bundle": "ORIGINAL",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "110fdfe17a7f10dd9d5f5c471249a060"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/395661d5-b347-4873-bdc4-f7f613c4d171/content",
+          "description": "",
+          "filename": "Greater horseshoe bat Annepont France (data from Pinaud et al. 2018).csv",
+          "header": {
+            "canonical_header": [
+              "comments",
+              "event_id",
+              "individual_local_identifier",
+              "individual_taxon_canonical_name",
+              "location_lat",
+              "location_long",
+              "sensor_type",
+              "study_name",
+              "tag_local_identifier",
+              "timestamp",
+              "visible"
+            ],
+            "has_timestamp": true,
+            "has_xy": true,
+            "height_fields": [],
+            "individual_field": "individual_local_identifier",
+            "raw_header": [
+              "event-id",
+              "visible",
+              "timestamp",
+              "location-long",
+              "location-lat",
+              "comments",
+              "sensor-type",
+              "individual-taxon-canonical-name",
+              "tag-local-identifier",
+              "individual-local-identifier",
+              "study-name"
+            ],
+            "tracking_like": true
+          },
+          "mime_type": "",
+          "size_bytes": 12539
+        }
+      ]
+    },
+    {
+      "csv_headers_inspected": [
+        {
+          "bitstream_id": "e0b610de-7324-4e81-8e51-49aeeb817410",
+          "bundle": "ORIGINAL",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "93875a5ebec0032f2d130ab42a48e982"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/e0b610de-7324-4e81-8e51-49aeeb817410/content",
+          "description": "",
+          "filename": "Fringe-lipped bat BCI Panama (data from Jones et al. 2017).csv",
+          "header": {
+            "canonical_header": [
+              "event_id",
+              "individual_local_identifier",
+              "individual_taxon_canonical_name",
+              "location_lat",
+              "location_long",
+              "sensor_type",
+              "study_name",
+              "tag_local_identifier",
+              "timestamp",
+              "visible"
+            ],
+            "has_timestamp": true,
+            "has_xy": true,
+            "height_fields": [],
+            "individual_field": "individual_local_identifier",
+            "raw_header": [
+              "event-id",
+              "visible",
+              "timestamp",
+              "location-long",
+              "location-lat",
+              "sensor-type",
+              "individual-taxon-canonical-name",
+              "tag-local-identifier",
+              "individual-local-identifier",
+              "study-name"
+            ],
+            "tracking_like": true
+          },
+          "mime_type": "",
+          "size_bytes": 295892
+        },
+        {
+          "bitstream_id": "add823fb-a2f7-49cb-abc9-7783eaad91ee",
+          "bundle": "ORIGINAL",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "cd6e31707d443155f5b2231b871d93b5"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/add823fb-a2f7-49cb-abc9-7783eaad91ee/content",
+          "description": "",
+          "filename": "Fringe-lipped bat BCI Panama (data from Jones et al. 2017)-reference-data.csv",
+          "header": {
+            "canonical_header": [
+              "animal_id",
+              "animal_life_stage",
+              "animal_mass",
+              "animal_reproductive_condition",
+              "animal_sex",
+              "animal_taxon",
+              "attachment_type",
+              "deploy_off_date",
+              "deploy_on_date",
+              "deployment_end_type",
+              "deployment_id",
+              "manipulation_type",
+              "study_site",
+              "tag_id",
+              "tag_manufacturer_name",
+              "tag_mass",
+              "tag_model",
+              "tag_readout_method"
+            ],
+            "has_timestamp": false,
+            "has_xy": false,
+            "height_fields": [],
+            "individual_field": null,
+            "raw_header": [
+              "tag-id",
+              "animal-id",
+              "animal-taxon",
+              "deploy-on-date",
+              "deploy-off-date",
+              "animal-life-stage",
+              "animal-mass",
+              "animal-reproductive-condition",
+              "animal-sex",
+              "attachment-type",
+              "deployment-end-type",
+              "deployment-id",
+              "manipulation-type",
+              "study-site",
+              "tag-manufacturer-name",
+              "tag-mass",
+              "tag-model",
+              "tag-readout-method"
+            ],
+            "tracking_like": false
+          },
+          "mime_type": "",
+          "size_bytes": 1437
+        }
+      ],
+      "doi": "10.5441/001/1.15pq1m81",
+      "files": [
+        {
+          "bitstream_id": "e0b610de-7324-4e81-8e51-49aeeb817410",
+          "bundle": "ORIGINAL",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "93875a5ebec0032f2d130ab42a48e982"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/e0b610de-7324-4e81-8e51-49aeeb817410/content",
+          "description": "",
+          "filename": "Fringe-lipped bat BCI Panama (data from Jones et al. 2017).csv",
+          "mime_type": "",
+          "size_bytes": 295892
+        },
+        {
+          "bitstream_id": "d0919247-f4e1-4ade-acc8-32ea7365e3eb",
+          "bundle": "ORIGINAL",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "0d4b555ce0b1be82eb3cb7ae98ef492e"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/d0919247-f4e1-4ade-acc8-32ea7365e3eb/content",
+          "description": "",
+          "filename": "README.txt",
+          "mime_type": "",
+          "size_bytes": 9928
+        },
+        {
+          "bitstream_id": "add823fb-a2f7-49cb-abc9-7783eaad91ee",
+          "bundle": "ORIGINAL",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "cd6e31707d443155f5b2231b871d93b5"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/add823fb-a2f7-49cb-abc9-7783eaad91ee/content",
+          "description": "",
+          "filename": "Fringe-lipped bat BCI Panama (data from Jones et al. 2017)-reference-data.csv",
+          "mime_type": "",
+          "size_bytes": 1437
+        },
+        {
+          "bitstream_id": "764cdf8a-7ab8-4d15-b1a0-637817de9900",
+          "bundle": "TEXT",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "4500f43b28cbcf6c40f7396fa789f990"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/764cdf8a-7ab8-4d15-b1a0-637817de9900/content",
+          "description": "",
+          "filename": "README.txt.txt",
+          "mime_type": "",
+          "size_bytes": 9827
+        },
+        {
+          "bitstream_id": "56324d01-066d-43d3-b173-268da3303770",
+          "bundle": "TEXT",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "40dcc0d2a9d5815baef137ee706b0192"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/56324d01-066d-43d3-b173-268da3303770/content",
+          "description": "",
+          "filename": "README.txt.txt",
+          "mime_type": "",
+          "size_bytes": 9929
+        }
+      ],
+      "numeric_height_values_parsed": false,
+      "passes": false,
+      "reason": "fringe-lipped bat tracking source",
+      "repository_item_name": "Data from: Foraging and roosting behaviour of the fringe-lipped bat, Trachops cirrhosus, on Barro Colorado Island, Panama\u0301",
+      "repository_item_uuid": "9f0aeac2-dbd1-43f3-8146-599a1dd9baab",
+      "status": "NO_NATIVE_HEIGHT_FIELD",
+      "taxon": "Trachops cirrhosus",
+      "tracking_csvs_without_native_height": [
+        {
+          "bitstream_id": "e0b610de-7324-4e81-8e51-49aeeb817410",
+          "bundle": "ORIGINAL",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "93875a5ebec0032f2d130ab42a48e982"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/e0b610de-7324-4e81-8e51-49aeeb817410/content",
+          "description": "",
+          "filename": "Fringe-lipped bat BCI Panama (data from Jones et al. 2017).csv",
+          "header": {
+            "canonical_header": [
+              "event_id",
+              "individual_local_identifier",
+              "individual_taxon_canonical_name",
+              "location_lat",
+              "location_long",
+              "sensor_type",
+              "study_name",
+              "tag_local_identifier",
+              "timestamp",
+              "visible"
+            ],
+            "has_timestamp": true,
+            "has_xy": true,
+            "height_fields": [],
+            "individual_field": "individual_local_identifier",
+            "raw_header": [
+              "event-id",
+              "visible",
+              "timestamp",
+              "location-long",
+              "location-lat",
+              "sensor-type",
+              "individual-taxon-canonical-name",
+              "tag-local-identifier",
+              "individual-local-identifier",
+              "study-name"
+            ],
+            "tracking_like": true
+          },
+          "mime_type": "",
+          "size_bytes": 295892
+        }
+      ]
+    },
+    {
+      "csv_headers_inspected": [
+        {
+          "bitstream_id": "1005e394-6b9d-4ac4-a27f-1c071b84ccca",
+          "bundle": "ORIGINAL",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "b1d930833827713e3245e8098375239f"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/1005e394-6b9d-4ac4-a27f-1c071b84ccca/content",
+          "description": "",
+          "filename": "Movement coordination in trawling bats (data from Giuggioli et al. 2015).csv",
+          "header": {
+            "canonical_header": [
+              "comments",
+              "event_id",
+              "individual_local_identifier",
+              "individual_taxon_canonical_name",
+              "location_lat",
+              "location_long",
+              "sensor_type",
+              "study_local_timestamp",
+              "study_name",
+              "study_timezone",
+              "tag_local_identifier",
+              "timestamp",
+              "utm_easting",
+              "utm_northing",
+              "utm_zone",
+              "visible"
+            ],
+            "has_timestamp": true,
+            "has_xy": true,
+            "height_fields": [],
+            "individual_field": "individual_local_identifier",
+            "raw_header": [
+              "event-id",
+              "visible",
+              "timestamp",
+              "location-long",
+              "location-lat",
+              "comments",
+              "sensor-type",
+              "individual-taxon-canonical-name",
+              "tag-local-identifier",
+              "individual-local-identifier",
+              "study-name",
+              "utm-easting",
+              "utm-northing",
+              "utm-zone",
+              "study-timezone",
+              "study-local-timestamp"
+            ],
+            "tracking_like": true
+          },
+          "mime_type": "",
+          "size_bytes": 20358684
+        },
+        {
+          "bitstream_id": "c2c10b06-472c-4094-afb7-73e8d38b735e",
+          "bundle": "ORIGINAL",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "05c45de702412b973a8fa5161b752a4c"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/c2c10b06-472c-4094-afb7-73e8d38b735e/content",
+          "description": "",
+          "filename": "Movement coordination in trawling bats (data from Giuggioli et al. 2015)-reference-data.csv",
+          "header": {
+            "canonical_header": [
+              "animal_id",
+              "animal_taxon",
+              "deployment_comments",
+              "tag_comments",
+              "tag_id"
+            ],
+            "has_timestamp": false,
+            "has_xy": false,
+            "height_fields": [],
+            "individual_field": null,
+            "raw_header": [
+              "tag-id",
+              "animal-id",
+              "animal-taxon",
+              "deployment-comments",
+              "tag-comments"
+            ],
+            "tracking_like": false
+          },
+          "mime_type": "",
+          "size_bytes": 90726
+        }
+      ],
+      "doi": "10.5441/001/1.62h1f7k9",
+      "files": [
+        {
+          "bitstream_id": "1005e394-6b9d-4ac4-a27f-1c071b84ccca",
+          "bundle": "ORIGINAL",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "b1d930833827713e3245e8098375239f"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/1005e394-6b9d-4ac4-a27f-1c071b84ccca/content",
+          "description": "",
+          "filename": "Movement coordination in trawling bats (data from Giuggioli et al. 2015).csv",
+          "mime_type": "",
+          "size_bytes": 20358684
+        },
+        {
+          "bitstream_id": "ca0f3920-c1a4-4e32-a00d-058bd7e10f7a",
+          "bundle": "ORIGINAL",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "5614facbae82d4be4a255d3e41914478"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/ca0f3920-c1a4-4e32-a00d-058bd7e10f7a/content",
+          "description": "",
+          "filename": "README.txt",
+          "mime_type": "",
+          "size_bytes": 7919
+        },
+        {
+          "bitstream_id": "c2c10b06-472c-4094-afb7-73e8d38b735e",
+          "bundle": "ORIGINAL",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "05c45de702412b973a8fa5161b752a4c"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/c2c10b06-472c-4094-afb7-73e8d38b735e/content",
+          "description": "",
+          "filename": "Movement coordination in trawling bats (data from Giuggioli et al. 2015)-reference-data.csv",
+          "mime_type": "",
+          "size_bytes": 90726
+        },
+        {
+          "bitstream_id": "de8eca63-5258-457a-a818-c732a3c3fbba",
+          "bundle": "TEXT",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "9793870c1a5e0922ed309752e7d3cf5e"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/de8eca63-5258-457a-a818-c732a3c3fbba/content",
+          "description": "",
+          "filename": "README.txt.txt",
+          "mime_type": "",
+          "size_bytes": 7846
+        },
+        {
+          "bitstream_id": "b97f98af-e801-4003-b873-98ddd97ad1a3",
+          "bundle": "TEXT",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "082279d1f23e11efff8a89a9a213841e"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/b97f98af-e801-4003-b873-98ddd97ad1a3/content",
+          "description": "",
+          "filename": "README.txt.txt",
+          "mime_type": "",
+          "size_bytes": 7920
+        }
+      ],
+      "numeric_height_values_parsed": false,
+      "passes": false,
+      "reason": "trawling bat movement-coordination source; taxon from source study",
+      "repository_item_name": "Data from: Delayed response and biosonar perception explain movement coordination in trawling bats",
+      "repository_item_uuid": "bc728b1d-e903-43fc-925e-25b97577b41d",
+      "status": "NO_NATIVE_HEIGHT_FIELD",
+      "taxon": "Myotis daubentonii",
+      "tracking_csvs_without_native_height": [
+        {
+          "bitstream_id": "1005e394-6b9d-4ac4-a27f-1c071b84ccca",
+          "bundle": "ORIGINAL",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "b1d930833827713e3245e8098375239f"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/1005e394-6b9d-4ac4-a27f-1c071b84ccca/content",
+          "description": "",
+          "filename": "Movement coordination in trawling bats (data from Giuggioli et al. 2015).csv",
+          "header": {
+            "canonical_header": [
+              "comments",
+              "event_id",
+              "individual_local_identifier",
+              "individual_taxon_canonical_name",
+              "location_lat",
+              "location_long",
+              "sensor_type",
+              "study_local_timestamp",
+              "study_name",
+              "study_timezone",
+              "tag_local_identifier",
+              "timestamp",
+              "utm_easting",
+              "utm_northing",
+              "utm_zone",
+              "visible"
+            ],
+            "has_timestamp": true,
+            "has_xy": true,
+            "height_fields": [],
+            "individual_field": "individual_local_identifier",
+            "raw_header": [
+              "event-id",
+              "visible",
+              "timestamp",
+              "location-long",
+              "location-lat",
+              "comments",
+              "sensor-type",
+              "individual-taxon-canonical-name",
+              "tag-local-identifier",
+              "individual-local-identifier",
+              "study-name",
+              "utm-easting",
+              "utm-northing",
+              "utm-zone",
+              "study-timezone",
+              "study-local-timestamp"
+            ],
+            "tracking_like": true
+          },
+          "mime_type": "",
+          "size_bytes": 20358684
+        }
+      ]
+    },
+    {
+      "csv_headers_inspected": [
+        {
+          "bitstream_id": "8a1e5812-7115-4980-8f95-fe89baf289fa",
+          "bundle": "ORIGINAL",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "886563b37ca7ae2670f93ca106df1a30"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/8a1e5812-7115-4980-8f95-fe89baf289fa/content",
+          "description": "",
+          "filename": "Carollia Short-tailed Bats Thies BCI Panama-reference-data.csv",
+          "header": {
+            "canonical_header": [
+              "animal_id",
+              "animal_mass",
+              "animal_reproductive_condition",
+              "animal_sex",
+              "animal_taxon",
+              "attachment_type",
+              "behavior_according_to",
+              "deploy_off_date",
+              "deploy_on_date",
+              "deployment_id",
+              "duty_cycle",
+              "location_accuracy_comments",
+              "manipulation_type",
+              "study_site",
+              "tag_id",
+              "tag_manufacturer_name",
+              "tag_mass",
+              "tag_model",
+              "tag_readout_method"
+            ],
+            "has_timestamp": false,
+            "has_xy": false,
+            "height_fields": [],
+            "individual_field": null,
+            "raw_header": [
+              "tag-id",
+              "animal-id",
+              "animal-taxon",
+              "deploy-on-date",
+              "deploy-off-date",
+              "animal-mass",
+              "animal-reproductive-condition",
+              "animal-sex",
+              "attachment-type",
+              "behavior-according-to",
+              "deployment-id",
+              "duty-cycle",
+              "location-accuracy-comments",
+              "manipulation-type",
+              "study-site",
+              "tag-manufacturer-name",
+              "tag-mass",
+              "tag-model",
+              "tag-readout-method"
+            ],
+            "tracking_like": false
+          },
+          "mime_type": "",
+          "size_bytes": 7482
+        },
+        {
+          "bitstream_id": "cbf1e2d2-36ef-419e-9d4c-c2aec514ed99",
+          "bundle": "ORIGINAL",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "db23215e534a8438c3b82f92d2b96884"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/cbf1e2d2-36ef-419e-9d4c-c2aec514ed99/content",
+          "description": "",
+          "filename": "Carollia Short-tailed Bats Thies BCI Panama.csv",
+          "header": {
+            "canonical_header": [
+              "behavioural_classification",
+              "event_id",
+              "individual_local_identifier",
+              "individual_taxon_canonical_name",
+              "location_error_numerical",
+              "location_lat",
+              "location_long",
+              "sensor_type",
+              "study_name",
+              "tag_local_identifier",
+              "timestamp",
+              "visible"
+            ],
+            "has_timestamp": true,
+            "has_xy": true,
+            "height_fields": [],
+            "individual_field": "individual_local_identifier",
+            "raw_header": [
+              "event-id",
+              "visible",
+              "timestamp",
+              "location-long",
+              "location-lat",
+              "behavioural-classification",
+              "location-error-numerical",
+              "sensor-type",
+              "individual-taxon-canonical-name",
+              "tag-local-identifier",
+              "individual-local-identifier",
+              "study-name"
+            ],
+            "tracking_like": true
+          },
+          "mime_type": "",
+          "size_bytes": 673303
+        }
+      ],
+      "doi": "10.5441/001/1.bc72jg61",
+      "files": [
+        {
+          "bitstream_id": "8a1e5812-7115-4980-8f95-fe89baf289fa",
+          "bundle": "ORIGINAL",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "886563b37ca7ae2670f93ca106df1a30"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/8a1e5812-7115-4980-8f95-fe89baf289fa/content",
+          "description": "",
+          "filename": "Carollia Short-tailed Bats Thies BCI Panama-reference-data.csv",
+          "mime_type": "",
+          "size_bytes": 7482
+        },
+        {
+          "bitstream_id": "b487ea41-5bb5-4ea4-822e-0d6f2601f957",
+          "bundle": "ORIGINAL",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "81a16466d325dd2addc544190e5c523f"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/b487ea41-5bb5-4ea4-822e-0d6f2601f957/content",
+          "description": "",
+          "filename": "README.txt",
+          "mime_type": "",
+          "size_bytes": 13122
+        },
+        {
+          "bitstream_id": "cbf1e2d2-36ef-419e-9d4c-c2aec514ed99",
+          "bundle": "ORIGINAL",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "db23215e534a8438c3b82f92d2b96884"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/cbf1e2d2-36ef-419e-9d4c-c2aec514ed99/content",
+          "description": "",
+          "filename": "Carollia Short-tailed Bats Thies BCI Panama.csv",
+          "mime_type": "",
+          "size_bytes": 673303
+        },
+        {
+          "bitstream_id": "3ca81579-b7f2-43e8-9a5a-afb4ae6d3305",
+          "bundle": "TEXT",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "9de22b9aed727191e5e68353139de8f4"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/3ca81579-b7f2-43e8-9a5a-afb4ae6d3305/content",
+          "description": "",
+          "filename": "README.txt.txt",
+          "mime_type": "",
+          "size_bytes": 13030
+        },
+        {
+          "bitstream_id": "ba5a81d5-892e-433e-b40a-99cbf6e5f2ef",
+          "bundle": "TEXT",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "1d56f7149b4472ced815920a7e5c2353"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/ba5a81d5-892e-433e-b40a-99cbf6e5f2ef/content",
+          "description": "",
+          "filename": "README.txt.txt",
+          "mime_type": "",
+          "size_bytes": 13123
+        }
+      ],
+      "numeric_height_values_parsed": false,
+      "passes": false,
+      "reason": "bat movement data source returned by frozen Movebank literature search; screen without assuming GPS altitude",
+      "repository_item_name": "Data from: Defensive fruit metabolites obstruct seed dispersal by altering bat behavior and physiology at multiple temporal scales",
+      "repository_item_uuid": "38bee44f-ca80-4b02-a55c-7aa136872606",
+      "status": "NO_NATIVE_HEIGHT_FIELD",
+      "taxon": "Carollia spp.",
+      "tracking_csvs_without_native_height": [
+        {
+          "bitstream_id": "cbf1e2d2-36ef-419e-9d4c-c2aec514ed99",
+          "bundle": "ORIGINAL",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "db23215e534a8438c3b82f92d2b96884"
+          },
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/cbf1e2d2-36ef-419e-9d4c-c2aec514ed99/content",
+          "description": "",
+          "filename": "Carollia Short-tailed Bats Thies BCI Panama.csv",
+          "header": {
+            "canonical_header": [
+              "behavioural_classification",
+              "event_id",
+              "individual_local_identifier",
+              "individual_taxon_canonical_name",
+              "location_error_numerical",
+              "location_lat",
+              "location_long",
+              "sensor_type",
+              "study_name",
+              "tag_local_identifier",
+              "timestamp",
+              "visible"
+            ],
+            "has_timestamp": true,
+            "has_xy": true,
+            "height_fields": [],
+            "individual_field": "individual_local_identifier",
+            "raw_header": [
+              "event-id",
+              "visible",
+              "timestamp",
+              "location-long",
+              "location-lat",
+              "behavioural-classification",
+              "location-error-numerical",
+              "sensor-type",
+              "individual-taxon-canonical-name",
+              "tag-local-identifier",
+              "individual-local-identifier",
+              "study-name"
+            ],
+            "tracking_like": true
+          },
+          "mime_type": "",
+          "size_bytes": 673303
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "study_id": "batter-movebank-raw-panel-screen-v1"
+}
