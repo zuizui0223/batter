@@ -66,9 +66,53 @@
       "frozen_vertical_design": "UNUSED because receipt STOP"
     },
     "Pteropus lylei Cambodia Movebank 10.5441/001/1.j25661td": {
-      "status": "PROVENANCE FOLLOW-UP HEADER AUDIT PENDING",
-      "reason": "distinct public raw GPS source identified before any new comparative vertical outcome was opened",
-      "vertical_values_opened": false
+      "status": "REJECT NO NATIVE VERTICAL RESPONSE",
+      "header_audit_run": 36732197806,
+      "event_headers_found": 2,
+      "accepted_vertical_fields_found": 0,
+      "numeric_vertical_opened": false
+    },
+    "Pteropus poliocephalus Movebank 10.5441/001/1.5bd6pq55": {
+      "status": "STRUCTURAL STOP BEFORE HEIGHT",
+      "header_vertical_field": "height-above-msl",
+      "structural_run": 36733082342,
+      "rows_in_file": 148084,
+      "presence_qualified_rows": 145262,
+      "eligible_sessions_ge50": 158,
+      "individuals_with_presence": 4,
+      "repeat_individuals": 4,
+      "repeat_ids": [
+        "403",
+        "588",
+        "657",
+        "684"
+      ],
+      "minimum_repeat_individuals_required": 5,
+      "numeric_height_opened": false
+    },
+    "Myotis vivesi Movebank 10.5441/001/1.kk3bg2f4": {
+      "status": "STRUCTURAL STOP BEFORE HEIGHT",
+      "provenance_correction": "frozen raw-screen contract mislabeled taxon as Noctilio leporinus; associated source is Myotis vivesi",
+      "native_vertical_field": "height_above_ellipsoid",
+      "presence_qualified_rows": 14328,
+      "eligible_sessions_ge50": 15,
+      "individuals_with_presence": 11,
+      "repeat_individuals": 4,
+      "minimum_repeat_individuals_required": 5,
+      "numeric_height_opened": false
+    },
+    "Movebank seven additional raw candidates": {
+      "status": "REJECT NO NATIVE VERTICAL RESPONSE",
+      "taxa": [
+        "Lavia frons",
+        "Noctilio albiventris",
+        "Vespertilio murinus",
+        "Rhinolophus ferrumequinum",
+        "Trachops cirrhosus",
+        "Myotis daubentonii",
+        "Carollia spp."
+      ],
+      "numeric_vertical_opened": false
     }
   },
   "current_comparative_question": "What predicts whether centered vertical individuality is expressed at all, and how does it covary with prospectively measured horizontal individuality?",
@@ -78,5 +122,9 @@
     "No source threshold is lowered after structural output.",
     "New search queries are prohibited after the frozen search snapshot is exhausted."
   ],
-  "current_programme_state": "No genuinely new source has yet passed the frozen >=50-fix structural gate; Cambodia Pteropus header audit is the final provenance-follow-up before structural-scarcity closure."
+  "current_programme_state": "CLOSED_STRUCTURAL_SCARCITY",
+  "new_vertical_outcomes_opened": 0,
+  "new_sources_reaching_full_vertical_gate": 0,
+  "structural_scarcity_statement": "Within the frozen public-repository search universe and predeclared >=50-event repeated-session design, no genuinely new source reached the full gate for opening a centered vertical outcome.",
+  "programme_close_reason": "All frozen-query candidates were classified as historical overlap, no-native-vertical/wrong-data-type reject, or structural STOP; the stop rule prohibits threshold lowering or new search terms."
 }
