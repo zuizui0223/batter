@@ -211,13 +211,11 @@ This contrast is descriptive and post hoc. Diet, morphology, phylogeny, sensory 
 
 ### Comparative populations contain repeatable individual shapes of vertical space use
 
-The clearest ecological result is comparative. All five non-*Tadarida* panels retained calibrated identity in vertical-distribution shape after self and other profiles were standardized to the same coarse horizontal occupancy and every session was translated to zero median. The result spans *Eidolon helvum*, *Hypsignathus monstrosus* and three *Phyllostomus hastatus* datasets. It therefore goes beyond the already established observation that individuals can differ in mean flight altitude: in these five panels, individuality persists after both coarse horizontal occupancy and additive altitude level are removed.
+All five non-*Tadarida* panels retained calibrated identity in vertical-distribution shape after self and other profiles were standardized to the same coarse horizontal occupancy and every session was translated to zero median. The result spans *Eidolon helvum*, *Hypsignathus monstrosus* and three *Phyllostomus hastatus* datasets. Thus the validated signal is not simply that one individual flies higher than another: it is repeatable identity in how probability is allocated across residual-height states around a session-specific typical altitude.
 
-The descriptive profiles make the biological content of that result more concrete, but only illustratively. The estimated profiles varied in how concentrated probability was around the session-specific median and in how much mass extended into upper or lower altitude tails. Because those component-wise ranges were not separately exchangeability-calibrated, we cannot say that the validated individuality is carried specifically by concentration, upper-tail use or lower-tail use. The inferential result applies to the full centered distribution shape, not to any one plotted component.
+We use **organization of vertical space use** for this distribution-level property. A broad population distribution can arise because every animal is individually broad, because individuals use different horizontal places, or because the population mixes individuals with different repeatable vertical organizations. The centered-shape test supports this third component. Supporting descriptive profiles suggest differences in central concentration and tail use, but those components were not separately exchangeability-calibrated and are not interpreted as independent effects.
 
-This distinction matters for interpreting population movement distributions. After centering, the validated identity signal is no longer a simple statement that one individual flies higher than another; it is identity in how probability is allocated across residual-height states around the session median. We use **organization of vertical space use** for this distribution-level property. A broad population distribution can arise because every animal is individually broad, because individuals occupy different horizontal places, or because the population is a mixture of individuals with different repeatable organizations of vertical use. The calibrated centered-shape test supports this third component at the level of the full distributions. Supporting descriptive profiles suggest central concentration and tail use as candidate visible dimensions, but do not test them separately.
-
-The stationary correction provides narrower but concordant evidence. Both comparative panels that passed the outcome-blind support gate retained identity after estimated individual-by-cohort altitude offsets were removed. Because four panels lacked sufficient shared stationary support, this is corroboration rather than a universal calibration. We do not assign the calibrated whole-profile identity signal to commuting, foraging, exploration or other behavioural states, and we do not treat the uncalibrated component ranges as repeatable effects in their own right.
+Stationary-height correction provided narrower corroboration in the two panels that passed its frozen support gate. Full profile visualizations and offset-correction details are in Supporting Information.
 
 ### Broad state and place mixtures do not generally absorb individual organization of vertical space use
 
@@ -227,11 +225,7 @@ These analyses do not prove a single within-state biological phenotype. Kinemati
 
 ### Pipeline-specific nulls are part of the biological inference
 
-The second major result is methodological. Prediction-based individuality statistics did not share universal intuitive nulls. The original conditional-minus-marginal contrast had a negative panel-specific expectation, pairwise self-identification nulls ranged from about 0.50 to 0.58, and an absolute height-separation statistic had a positive null mean rather than zero.
-
-These shifts arise from finite training structure, smoothing, eligibility rules, repeated-session geometry and transformations such as absolute differences. Consequently, a raw score of zero, a pairwise rate of 0.5 or an absolute separation of zero should not automatically be treated as the inferential baseline. Recomputing the complete statistic under biologically appropriate label exchangeability changed one qualitative architecture interpretation and removed one weak pairwise translation without requiring post hoc retuning. The detailed amendment sequence is retained in Supporting Information.
-
-This is more than a technical correction. The baseline determines which apparent ecological differences can be attributed to individual identity rather than to the geometry of the estimator itself.
+Prediction-based individuality statistics did not share universal intuitive nulls. Finite training structure, smoothing and eligibility rules shifted exchangeability expectations away from zero or 0.5, and calibration changed one earlier qualitative architecture interpretation. We therefore base inference on the complete statistic recomputed under biologically appropriate whole-session label exchangeability rather than on an assumed reference value. The full amendment and calibration history is retained in Supporting Information.
 
 ### Horizontal and central-place structure are reduced, not eliminated
 
@@ -249,11 +243,7 @@ The audit is not a proof against every form of measurement error. Tag-specific d
 
 ### *Tadarida* defines the boundary of the current evidence
 
-The motivating *Tadarida* dataset is informative precisely because it does not reproduce the strongest comparative result. Its identity signal is repeatable, persists in AGL at 2.5–5 km, and is not reducible to terrain elevation alone. Yet it fails the 10-km grain test, the endpoint-neighbourhood exclusion and the shift-invariant centered-shape test. The archived data therefore support repeatable absolute vertical-location identity in this system, but not device-independent vertical-distribution shape.
-
-This distinction also changes how the focal 256-m AGL translation should be read. Although the raw separation exceeds its own finite-sample null, it is not independent biological evidence once centered-shape identity fails. Genuine mean flight-height specialization and additive device offset remain inseparable in this panel.
-
-The stronger residual cell-by-height test also remains negative, so repeatable identity should not be interpreted as one rigid three-dimensional route map. Morphology, resource use, atmospheric response, social routines and learned spatial histories remain plausible mechanisms rather than demonstrated causes.
+The motivating *Tadarida* dataset retains repeatable absolute vertical-location information and AGL identity at 2.5–5 km, but it fails the 10-km grain test, endpoint-neighbourhood exclusion and shift-invariant centered-shape test. Genuine mean-height specialization and additive device offset therefore remain inseparable in this panel, and its earlier 256-m AGL translation is not treated as independent device-free shape evidence. The stronger residual cell-by-height test is also negative, so repeatable identity should not be interpreted as one rigid three-dimensional route map.
 
 ### Vertical individuality is recurrent but not a universal bat property
 
