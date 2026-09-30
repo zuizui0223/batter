@@ -1,0 +1,7 @@
+order,panel,n,observed,null_mean,calibrated_excess,p_upper,verdict
+1,Tadarida teniotis,6,-0.2629,-0.2408,-0.0222,0.5121,FAIL
+2,Eidolon helvum,20,0.3719,-0.0710,0.4429,0.0002,PASS
+3,Hypsignathus monstrosus,24,0.0736,-0.1032,0.1768,0.0002,PASS
+4,Phyllostomus hastatus 2022,33,-0.0394,-0.1508,0.1114,0.0002,PASS
+5,Phyllostomus hastatus 2023,16,0.0454,-0.0726,0.1181,0.0002,PASS
+6,Phyllostomus hastatus 2016,10,-0.0084,-0.5824,0.5740,0.0076,PASS
