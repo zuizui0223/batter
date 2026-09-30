@@ -13,7 +13,7 @@ ROOT=Path(__file__).resolve().parents[2]
 CONTRACT=ROOT/"post_freeze_extensions/hipposideros_external_validation/structural_contract_v1.json"
 OUT=ROOT/"post_freeze_extensions/hipposideros_external_validation/structural_result_v1.json"
 OUT_MD=ROOT/"post_freeze_extensions/hipposideros_external_validation/STRUCTURAL_RESULT_V1.md"
-UA={"User-Agent":"batter-hipposideros-structural-gate-v1/1.0"}
+UA={"User-Agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36"}
 
 def present(s):
     txt=s.astype(str).str.strip()
