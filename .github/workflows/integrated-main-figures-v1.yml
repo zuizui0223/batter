@@ -3,7 +3,12 @@ on:
   push:
     branches: [revision/integrated-ecological-contingency-v1]
     paths:
+      - "figures/integrated_centered_shape_v1.csv"
+      - "figures/integrated_mechanism_localization_v1.csv"
       - "figures/integrated_external_boundary_v1.csv"
+      - "scripts/make_integrated_inference_ladder_figure_v1.py"
+      - "scripts/make_integrated_centered_shape_figure_v1.py"
+      - "scripts/make_integrated_mechanism_localization_figure_v1.py"
       - "scripts/make_integrated_external_boundary_figure_v1.py"
       - "scripts/make_integrated_ecological_hypothesis_figure_v1.py"
       - ".github/workflows/integrated-main-figures-v1.yml"
@@ -19,13 +24,19 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: python -m pip install matplotlib
+      - run: python -m pip install matplotlib numpy
+      - run: python scripts/make_integrated_inference_ladder_figure_v1.py
+      - run: python scripts/make_integrated_centered_shape_figure_v1.py
+      - run: python scripts/make_integrated_mechanism_localization_figure_v1.py
       - run: python scripts/make_integrated_external_boundary_figure_v1.py
       - run: python scripts/make_integrated_ecological_hypothesis_figure_v1.py
       - uses: actions/upload-artifact@v4
         with:
           name: batter-integrated-main-figures-v1
           path: |
+            figures/integrated_inference_ladder_v1.svg
+            figures/integrated_centered_shape_v1.svg
+            figures/integrated_mechanism_localization_v1.svg
             figures/integrated_external_boundary_v1.svg
             figures/integrated_ecological_hypothesis_v1.svg
           if-no-files-found: error
