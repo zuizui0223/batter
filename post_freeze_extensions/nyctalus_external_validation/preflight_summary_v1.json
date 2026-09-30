@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-nyctalus-validation-preflight-v1",
+  "authoritative_workflow": {
+    "run_id": 36668368016,
+    "head_sha": "35d2cf528149ecbee568bcfde84bbdc990149ec5",
+    "artifact_id": 11076459650,
+    "artifact_digest": "sha256:b4b3aeda22b0cd90a76173b76c69ba991ead1054a6a051bfd35c09e2f15b00d4"
+  },
+  "source_sha256": "2f373d47706c5b56313de70b623bb5446f5925c69af30f1b145993419e382aa9",
+  "numeric_height_values_read": false,
+  "cohort_definition": "Year × field_period",
+  "gates": {
+    "primary_5km": {
+      "n": 36,
+      "required": 8,
+      "pass": true
+    },
+    "state_5km": {
+      "n": 27,
+      "required": 26,
+      "pass": true
+    },
+    "state_500m": {
+      "n": 10,
+      "required": 19,
+      "pass": false
+    },
+    "persistence_1d": {
+      "n": 7,
+      "required": 19,
+      "pass": false
+    }
+  },
+  "allowed_vertical_outcomes": [
+    "primary_5km",
+    "state_5km"
+  ],
+  "stopped_vertical_outcomes": [
+    "state_500m",
+    "persistence_1d"
+  ]
+}
