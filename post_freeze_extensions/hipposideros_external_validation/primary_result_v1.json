@@ -1,0 +1,581 @@
+{
+  "claim_boundary": [
+    "The source-level verdict is primary; species-specific calibrations are secondary diagnostics.",
+    "A FAIL cannot be rescued by alternate grid, bins, species pooling, lower gates or alternate altitude endpoint.",
+    "Mechanism extensions cannot overwrite the primary external-validation verdict."
+  ],
+  "eligible_species_panels": [
+    "Hipposideros armiger",
+    "Hipposideros pratti"
+  ],
+  "frozen_expected_evaluable_individuals_by_species": {
+    "Hipposideros armiger": 8,
+    "Hipposideros pratti": 5
+  },
+  "height_opened_under_frozen_receipt": true,
+  "interpretation": "The external Hipposideros source does not meet the frozen replication criterion. Do not rescue with alternate grid size, vertical bins, species pooling, lower session thresholds or alternate altitude endpoints.",
+  "observed": {
+    "source_common_cell_centered_identity": -0.07574593988829564,
+    "species": {
+      "Hipposideros armiger": {
+        "common_cell_centered_identity": -0.029719296014709178,
+        "eligible_individuals": 8,
+        "individual_results": {
+          "D11": {
+            "common_cell_centered_identity": -0.01923399850675179,
+            "evaluable_target_sessions": 5
+          },
+          "D12": {
+            "common_cell_centered_identity": -0.037884686196365654,
+            "evaluable_target_sessions": 6
+          },
+          "D13": {
+            "common_cell_centered_identity": 0.0016564419814968853,
+            "evaluable_target_sessions": 4
+          },
+          "D23": {
+            "common_cell_centered_identity": 0.05303200463920849,
+            "evaluable_target_sessions": 4
+          },
+          "D25": {
+            "common_cell_centered_identity": -0.054981877486106334,
+            "evaluable_target_sessions": 7
+          },
+          "D31": {
+            "common_cell_centered_identity": -0.24076549158138755,
+            "evaluable_target_sessions": 1
+          },
+          "D32": {
+            "common_cell_centered_identity": 0.06287915425276397,
+            "evaluable_target_sessions": 3
+          },
+          "D33": {
+            "common_cell_centered_identity": -0.0024559152205314663,
+            "evaluable_target_sessions": 3
+          }
+        },
+        "session_results": [
+          {
+            "common_cell_centered_identity": 0.07077292547217472,
+            "original_target_individual": "D11",
+            "pseudo_individual": "D11",
+            "scored_events": 59,
+            "session": "D11::2022-07-09",
+            "species": "Hipposideros armiger"
+          },
+          {
+            "common_cell_centered_identity": 0.09097662464788651,
+            "original_target_individual": "D11",
+            "pseudo_individual": "D11",
+            "scored_events": 58,
+            "session": "D11::2022-07-10",
+            "species": "Hipposideros armiger"
+          },
+          {
+            "common_cell_centered_identity": -0.2725564442329121,
+            "original_target_individual": "D11",
+            "pseudo_individual": "D11",
+            "scored_events": 59,
+            "session": "D11::2022-07-11",
+            "species": "Hipposideros armiger"
+          },
+          {
+            "common_cell_centered_identity": -0.09396410836707168,
+            "original_target_individual": "D11",
+            "pseudo_individual": "D11",
+            "scored_events": 56,
+            "session": "D11::2022-07-12",
+            "species": "Hipposideros armiger"
+          },
+          {
+            "common_cell_centered_identity": 0.10860100994616359,
+            "original_target_individual": "D11",
+            "pseudo_individual": "D11",
+            "scored_events": 57,
+            "session": "D11::2022-07-13",
+            "species": "Hipposideros armiger"
+          },
+          {
+            "common_cell_centered_identity": -0.19630704919625844,
+            "original_target_individual": "D12",
+            "pseudo_individual": "D12",
+            "scored_events": 59,
+            "session": "D12::2022-07-09",
+            "species": "Hipposideros armiger"
+          },
+          {
+            "common_cell_centered_identity": -0.020293409118505436,
+            "original_target_individual": "D12",
+            "pseudo_individual": "D12",
+            "scored_events": 59,
+            "session": "D12::2022-07-10",
+            "species": "Hipposideros armiger"
+          },
+          {
+            "common_cell_centered_identity": 0.04846289557393012,
+            "original_target_individual": "D12",
+            "pseudo_individual": "D12",
+            "scored_events": 59,
+            "session": "D12::2022-07-11",
+            "species": "Hipposideros armiger"
+          },
+          {
+            "common_cell_centered_identity": 0.026151696095507073,
+            "original_target_individual": "D12",
+            "pseudo_individual": "D12",
+            "scored_events": 59,
+            "session": "D12::2022-07-12",
+            "species": "Hipposideros armiger"
+          },
+          {
+            "common_cell_centered_identity": -0.06783652085615148,
+            "original_target_individual": "D12",
+            "pseudo_individual": "D12",
+            "scored_events": 59,
+            "session": "D12::2022-07-13",
+            "species": "Hipposideros armiger"
+          },
+          {
+            "common_cell_centered_identity": -0.017485729676715786,
+            "original_target_individual": "D12",
+            "pseudo_individual": "D12",
+            "scored_events": 59,
+            "session": "D12::2022-07-14",
+            "species": "Hipposideros armiger"
+          },
+          {
+            "common_cell_centered_identity": -0.03970787613528718,
+            "original_target_individual": "D13",
+            "pseudo_individual": "D13",
+            "scored_events": 59,
+            "session": "D13::2022-07-11",
+            "species": "Hipposideros armiger"
+          },
+          {
+            "common_cell_centered_identity": -0.011158719308260448,
+            "original_target_individual": "D13",
+            "pseudo_individual": "D13",
+            "scored_events": 59,
+            "session": "D13::2022-07-12",
+            "species": "Hipposideros armiger"
+          },
+          {
+            "common_cell_centered_identity": -0.033221806076754117,
+            "original_target_individual": "D13",
+            "pseudo_individual": "D13",
+            "scored_events": 59,
+            "session": "D13::2022-07-13",
+            "species": "Hipposideros armiger"
+          },
+          {
+            "common_cell_centered_identity": 0.0907141694462893,
+            "original_target_individual": "D13",
+            "pseudo_individual": "D13",
+            "scored_events": 57,
+            "session": "D13::2022-07-14",
+            "species": "Hipposideros armiger"
+          },
+          {
+            "common_cell_centered_identity": 0.19778261109127548,
+            "original_target_individual": "D23",
+            "pseudo_individual": "D23",
+            "scored_events": 58,
+            "session": "D23::2022-07-31",
+            "species": "Hipposideros armiger"
+          },
+          {
+            "common_cell_centered_identity": -0.14740401582099302,
+            "original_target_individual": "D23",
+            "pseudo_individual": "D23",
+            "scored_events": 60,
+            "session": "D23::2022-08-01",
+            "species": "Hipposideros armiger"
+          },
+          {
+            "common_cell_centered_identity": -0.03317319334578726,
+            "original_target_individual": "D23",
+            "pseudo_individual": "D23",
+            "scored_events": 59,
+            "session": "D23::2022-08-02",
+            "species": "Hipposideros armiger"
+          },
+          {
+            "common_cell_centered_identity": 0.19492261663233876,
+            "original_target_individual": "D23",
+            "pseudo_individual": "D23",
+            "scored_events": 60,
+            "session": "D23::2022-08-03",
+            "species": "Hipposideros armiger"
+          },
+          {
+            "common_cell_centered_identity": -0.06252157068115237,
+            "original_target_individual": "D25",
+            "pseudo_individual": "D25",
+            "scored_events": 59,
+            "session": "D25::2022-07-31",
+            "species": "Hipposideros armiger"
+          },
+          {
+            "common_cell_centered_identity": -0.04904506787386311,
+            "original_target_individual": "D25",
+            "pseudo_individual": "D25",
+            "scored_events": 60,
+            "session": "D25::2022-08-01",
+            "species": "Hipposideros armiger"
+          },
+          {
+            "common_cell_centered_identity": -0.07171760692640625,
+            "original_target_individual": "D25",
+            "pseudo_individual": "D25",
+            "scored_events": 59,
+            "session": "D25::2022-08-02",
+            "species": "Hipposideros armiger"
+          },
+          {
+            "common_cell_centered_identity": -0.08189531547108501,
+            "original_target_individual": "D25",
+            "pseudo_individual": "D25",
+            "scored_events": 59,
+            "session": "D25::2022-08-03",
+            "species": "Hipposideros armiger"
+          },
+          {
+            "common_cell_centered_identity": 0.09703568517953745,
+            "original_target_individual": "D25",
+            "pseudo_individual": "D25",
+            "scored_events": 58,
+            "session": "D25::2022-08-04",
+            "species": "Hipposideros armiger"
+          },
+          {
+            "common_cell_centered_identity": -0.07788007291108126,
+            "original_target_individual": "D25",
+            "pseudo_individual": "D25",
+            "scored_events": 59,
+            "session": "D25::2022-08-05",
+            "species": "Hipposideros armiger"
+          },
+          {
+            "common_cell_centered_identity": -0.1388491937186938,
+            "original_target_individual": "D25",
+            "pseudo_individual": "D25",
+            "scored_events": 55,
+            "session": "D25::2022-08-06",
+            "species": "Hipposideros armiger"
+          },
+          {
+            "common_cell_centered_identity": -0.24076549158138755,
+            "original_target_individual": "D31",
+            "pseudo_individual": "D31",
+            "scored_events": 55,
+            "session": "D31::2022-08-13",
+            "species": "Hipposideros armiger"
+          },
+          {
+            "common_cell_centered_identity": -0.02637733011129897,
+            "original_target_individual": "D32",
+            "pseudo_individual": "D32",
+            "scored_events": 65,
+            "session": "D32::2022-08-13",
+            "species": "Hipposideros armiger"
+          },
+          {
+            "common_cell_centered_identity": 0.037035013325248625,
+            "original_target_individual": "D32",
+            "pseudo_individual": "D32",
+            "scored_events": 66,
+            "session": "D32::2022-08-14",
+            "species": "Hipposideros armiger"
+          },
+          {
+            "common_cell_centered_identity": 0.17797977954434224,
+            "original_target_individual": "D32",
+            "pseudo_individual": "D32",
+            "scored_events": 59,
+            "session": "D32::2022-08-15",
+            "species": "Hipposideros armiger"
+          },
+          {
+            "common_cell_centered_identity": -0.1103541180377114,
+            "original_target_individual": "D33",
+            "pseudo_individual": "D33",
+            "scored_events": 65,
+            "session": "D33::2022-08-13",
+            "species": "Hipposideros armiger"
+          },
+          {
+            "common_cell_centered_identity": -0.01467594952441327,
+            "original_target_individual": "D33",
+            "pseudo_individual": "D33",
+            "scored_events": 65,
+            "session": "D33::2022-08-14",
+            "species": "Hipposideros armiger"
+          },
+          {
+            "common_cell_centered_identity": 0.11766232190053028,
+            "original_target_individual": "D33",
+            "pseudo_individual": "D33",
+            "scored_events": 66,
+            "session": "D33::2022-08-15",
+            "species": "Hipposideros armiger"
+          }
+        ]
+      },
+      "Hipposideros pratti": {
+        "common_cell_centered_identity": -0.12177258376188212,
+        "eligible_individuals": 5,
+        "individual_results": {
+          "H11": {
+            "common_cell_centered_identity": 0.004625320462324501,
+            "evaluable_target_sessions": 6
+          },
+          "H12": {
+            "common_cell_centered_identity": -0.03111663301891181,
+            "evaluable_target_sessions": 5
+          },
+          "H22": {
+            "common_cell_centered_identity": 0.008210331050520532,
+            "evaluable_target_sessions": 4
+          },
+          "H23-1": {
+            "common_cell_centered_identity": 0.012290181651673057,
+            "evaluable_target_sessions": 4
+          },
+          "H32": {
+            "common_cell_centered_identity": -0.6028721189550168,
+            "evaluable_target_sessions": 1
+          }
+        },
+        "session_results": [
+          {
+            "common_cell_centered_identity": -0.39165641558826214,
+            "original_target_individual": "H11",
+            "pseudo_individual": "H11",
+            "scored_events": 60,
+            "session": "H11::2022-07-09",
+            "species": "Hipposideros pratti"
+          },
+          {
+            "common_cell_centered_identity": 0.15324046252074594,
+            "original_target_individual": "H11",
+            "pseudo_individual": "H11",
+            "scored_events": 58,
+            "session": "H11::2022-07-10",
+            "species": "Hipposideros pratti"
+          },
+          {
+            "common_cell_centered_identity": 0.2300586755692151,
+            "original_target_individual": "H11",
+            "pseudo_individual": "H11",
+            "scored_events": 59,
+            "session": "H11::2022-07-11",
+            "species": "Hipposideros pratti"
+          },
+          {
+            "common_cell_centered_identity": -0.08209132491086035,
+            "original_target_individual": "H11",
+            "pseudo_individual": "H11",
+            "scored_events": 60,
+            "session": "H11::2022-07-12",
+            "species": "Hipposideros pratti"
+          },
+          {
+            "common_cell_centered_identity": 0.0326743755422712,
+            "original_target_individual": "H11",
+            "pseudo_individual": "H11",
+            "scored_events": 59,
+            "session": "H11::2022-07-13",
+            "species": "Hipposideros pratti"
+          },
+          {
+            "common_cell_centered_identity": 0.08552614964083725,
+            "original_target_individual": "H11",
+            "pseudo_individual": "H11",
+            "scored_events": 59,
+            "session": "H11::2022-07-14",
+            "species": "Hipposideros pratti"
+          },
+          {
+            "common_cell_centered_identity": -0.28873968643886705,
+            "original_target_individual": "H12",
+            "pseudo_individual": "H12",
+            "scored_events": 58,
+            "session": "H12::2022-07-09",
+            "species": "Hipposideros pratti"
+          },
+          {
+            "common_cell_centered_identity": 0.09571212849430205,
+            "original_target_individual": "H12",
+            "pseudo_individual": "H12",
+            "scored_events": 58,
+            "session": "H12::2022-07-10",
+            "species": "Hipposideros pratti"
+          },
+          {
+            "common_cell_centered_identity": 0.10103175772130346,
+            "original_target_individual": "H12",
+            "pseudo_individual": "H12",
+            "scored_events": 59,
+            "session": "H12::2022-07-11",
+            "species": "Hipposideros pratti"
+          },
+          {
+            "common_cell_centered_identity": -0.08740845242470985,
+            "original_target_individual": "H12",
+            "pseudo_individual": "H12",
+            "scored_events": 59,
+            "session": "H12::2022-07-12",
+            "species": "Hipposideros pratti"
+          },
+          {
+            "common_cell_centered_identity": 0.02382108755341232,
+            "original_target_individual": "H12",
+            "pseudo_individual": "H12",
+            "scored_events": 59,
+            "session": "H12::2022-07-13",
+            "species": "Hipposideros pratti"
+          },
+          {
+            "common_cell_centered_identity": -0.06099406859907592,
+            "original_target_individual": "H22",
+            "pseudo_individual": "H22",
+            "scored_events": 59,
+            "session": "H22::2022-07-31",
+            "species": "Hipposideros pratti"
+          },
+          {
+            "common_cell_centered_identity": -0.06699448852493031,
+            "original_target_individual": "H22",
+            "pseudo_individual": "H22",
+            "scored_events": 59,
+            "session": "H22::2022-08-01",
+            "species": "Hipposideros pratti"
+          },
+          {
+            "common_cell_centered_identity": 0.10119011386190534,
+            "original_target_individual": "H22",
+            "pseudo_individual": "H22",
+            "scored_events": 59,
+            "session": "H22::2022-08-02",
+            "species": "Hipposideros pratti"
+          },
+          {
+            "common_cell_centered_identity": 0.059639767464183015,
+            "original_target_individual": "H22",
+            "pseudo_individual": "H22",
+            "scored_events": 60,
+            "session": "H22::2022-08-03",
+            "species": "Hipposideros pratti"
+          },
+          {
+            "common_cell_centered_identity": 0.12085261161739182,
+            "original_target_individual": "H23-1",
+            "pseudo_individual": "H23-1",
+            "scored_events": 60,
+            "session": "H23-1::2022-08-01",
+            "species": "Hipposideros pratti"
+          },
+          {
+            "common_cell_centered_identity": -0.007683928682637461,
+            "original_target_individual": "H23-1",
+            "pseudo_individual": "H23-1",
+            "scored_events": 60,
+            "session": "H23-1::2022-08-02",
+            "species": "Hipposideros pratti"
+          },
+          {
+            "common_cell_centered_identity": 0.03403147183649029,
+            "original_target_individual": "H23-1",
+            "pseudo_individual": "H23-1",
+            "scored_events": 60,
+            "session": "H23-1::2022-08-03",
+            "species": "Hipposideros pratti"
+          },
+          {
+            "common_cell_centered_identity": -0.09803942816455243,
+            "original_target_individual": "H23-1",
+            "pseudo_individual": "H23-1",
+            "scored_events": 60,
+            "session": "H23-1::2022-08-04",
+            "species": "Hipposideros pratti"
+          },
+          {
+            "common_cell_centered_identity": -0.6028721189550168,
+            "original_target_individual": "H32",
+            "pseudo_individual": "H32",
+            "scored_events": 65,
+            "session": "H32::2022-08-25",
+            "species": "Hipposideros pratti"
+          }
+        ]
+      }
+    }
+  },
+  "permutation": {
+    "B": 9999,
+    "invalid_replicates": 0,
+    "seed": 2026093007,
+    "source": {
+      "mean": -0.031062326348481103,
+      "n": 9999,
+      "null_standardized_deviation": -1.0665969772010488,
+      "observed": -0.07574593988829564,
+      "observed_minus_null_mean": -0.04468361353981454,
+      "p_null_ge_observed": 0.8616,
+      "p_null_le_observed": 0.1385,
+      "q025": -0.1149322653081796,
+      "q50": -0.03106936607072845,
+      "q975": 0.04982256832972883,
+      "sd": 0.04189362476637872
+    },
+    "species_evaluable_n_distribution": {
+      "Hipposideros armiger": {
+        "max": 9,
+        "mean": 8.686968696869688,
+        "min": 6
+      },
+      "Hipposideros pratti": {
+        "max": 7,
+        "mean": 6.762576257625763,
+        "min": 5
+      }
+    },
+    "species_secondary": {
+      "Hipposideros armiger": {
+        "mean": -0.04901231730077227,
+        "n": 9999,
+        "null_standardized_deviation": 0.33097669406156416,
+        "observed": -0.029719296014709178,
+        "observed_minus_null_mean": 0.01929302128606309,
+        "p_null_ge_observed": 0.3721,
+        "p_null_le_observed": 0.628,
+        "q025": -0.1714967841020238,
+        "q50": -0.04696541141773896,
+        "q975": 0.05868201583913054,
+        "sd": 0.05829117769384222
+      },
+      "Hipposideros pratti": {
+        "mean": -0.01311233539618993,
+        "n": 9999,
+        "null_standardized_deviation": -1.8045322570145972,
+        "observed": -0.12177258376188212,
+        "observed_minus_null_mean": -0.10866024836569219,
+        "p_null_ge_observed": 0.9678,
+        "p_null_le_observed": 0.0323,
+        "q025": -0.12863554688142295,
+        "q50": -0.014764906746216297,
+        "q975": 0.10714250379713774,
+        "sd": 0.06021518758853265
+      }
+    },
+    "valid_replicates": 9999
+  },
+  "primary_verdict": {
+    "calibrated_excess_positive": false,
+    "p_upper_le_0_05": false,
+    "pass": false
+  },
+  "raw_sha256": "263f2a6a9416939d4b61008b91077997d1f592be0ba5d1c23355a225f2c073c7",
+  "schema_version": 1,
+  "study_id": "batter-hipposideros-primary-validation-v1"
+}

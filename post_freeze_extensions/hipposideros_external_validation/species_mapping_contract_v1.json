@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-hipposideros-species-mapping-v1",
+  "frozen_date": "2026-09-30",
+  "status": "outcome-blind species-identity mapping rule frozen before raw GPS height access",
+  "source": {
+    "dataset_doi": "10.5061/dryad.j0zpc86r1",
+    "paper_doi": "10.1111/1365-2435.70088",
+    "file": "GPS_data.csv"
+  },
+  "published_species_counts": {
+    "Hipposideros armiger": 9,
+    "Hipposideros pratti": 8
+  },
+  "published_article_ids": {
+    "Hipposideros armiger": ["Ha1","Ha2","Ha3","Ha4","Ha5","Ha6","Ha7","Ha8","Ha9"],
+    "Hipposideros pratti": ["Hp1","Hp2","Hp3","Hp4","Hp5","Hp6","Hp7","Hp8"]
+  },
+  "dryad_metadata": {
+    "id_description": "unique alphanumeric identifier assigned to each tracked bat",
+    "examples": ["D11","H11"],
+    "species_field_present_in_gps_metadata": false
+  },
+  "allowed_raw_fields": ["id"],
+  "prohibited_raw_fields": [
+    "height",
+    "longitude",
+    "latitude",
+    "speed",
+    "angle",
+    "temp",
+    "v",
+    "timestamp"
+  ],
+  "mapping_algorithm": [
+    "Read only the GPS_data.csv id column as strings.",
+    "Extract the maximal leading alphabetic prefix from each unique id.",
+    "Count unique ids per prefix.",
+    "Proceed only if there are exactly two nonempty prefixes and their unique-id counts are exactly {9,8}.",
+    "Map the prefix with 9 unique ids to Hipposideros armiger and the prefix with 8 unique ids to Hipposideros pratti.",
+    "If the prefix counts are not exactly and uniquely 9 and 8, declare MAPPING_UNRESOLVED and stop. Do not infer species from coordinates, height, speed, temperature, dietary data, temporal behavior, or outcome patterns."
+  ],
+  "rationale": "The source paper explicitly reports nine tracked H. armiger and eight tracked H. pratti, while the Dryad GPS metadata uses anonymized alphanumeric IDs without a species column. The unequal published counts permit a deterministic outcome-blind mapping only if the raw ID prefixes partition uniquely into 9 and 8 individuals.",
+  "claim_boundary": [
+    "This mapping rule uses only published sample counts and GPS ID strings.",
+    "It does not assume that any specific prefix letter semantically denotes a species.",
+    "If the count pattern is not uniquely identifying, species mapping remains unresolved and the prospective validation must stop before height is opened."
+  ]
+}

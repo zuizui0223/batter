@@ -1,0 +1,37 @@
+name: hipposideros-record-primary-result-v1
+on:
+  push:
+    branches: [prospective/hipposideros-primary-design-v1]
+    paths:
+      - ".github/workflows/hipposideros-record-primary-result-v1.yml"
+  workflow_dispatch:
+jobs:
+  record:
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download authoritative primary artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p /tmp/hip_result
+          gh api             -H "Accept: application/vnd.github+json"             /repos/${{ github.repository }}/actions/artifacts/11096159784/zip             > /tmp/hip_result.zip
+          unzip -o /tmp/hip_result.zip -d /tmp/hip_result
+          test -f /tmp/hip_result/primary_result_v1.json
+          test -f /tmp/hip_result/PRIMARY_RESULT_V1.md
+      - name: Verify exact authoritative bytes
+        run: |
+          echo "79a8d368d877e0e702d57aefa70dc4dc04c6d2506f8e43cc93be0ba18aa41094  /tmp/hip_result/primary_result_v1.json" | sha256sum -c -
+          echo "25cb26e1e6f3a23ba4f981046ebf223c9740b29110a848767927493381c6f711  /tmp/hip_result/PRIMARY_RESULT_V1.md" | sha256sum -c -
+      - name: Pin authoritative result
+        run: |
+          cp /tmp/hip_result/primary_result_v1.json post_freeze_extensions/hipposideros_external_validation/primary_result_v1.json
+          cp /tmp/hip_result/PRIMARY_RESULT_V1.md post_freeze_extensions/hipposideros_external_validation/PRIMARY_RESULT_V1.md
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add             post_freeze_extensions/hipposideros_external_validation/primary_result_v1.json             post_freeze_extensions/hipposideros_external_validation/PRIMARY_RESULT_V1.md
+          git commit -m "Record prospective Hipposideros primary failure"
+          git push origin HEAD:prospective/hipposideros-primary-design-v1

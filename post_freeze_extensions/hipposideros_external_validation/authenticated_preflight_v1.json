@@ -1,0 +1,1559 @@
+{
+  "decision": "STRUCTURAL_PASS_HEIGHT_STILL_UNOPENED",
+  "dryad_file_id": 4102381,
+  "dryad_metadata": {
+    "_links": {
+      "curies": [
+        {
+          "href": "https://github.com/datadryad/dryad-app/blob/main/documentation/apis/link_relations.md#{rel}",
+          "name": "stash",
+          "templated": "true"
+        }
+      ],
+      "self": {
+        "href": "/api/v2/files/4102381"
+      },
+      "stash:dataset": {
+        "href": "/api/v2/datasets/doi%3A10.5061%2Fdryad.j0zpc86r1"
+      },
+      "stash:download": {
+        "href": "/api/v2/files/4102381/download"
+      },
+      "stash:files": {
+        "href": "/api/v2/versions/368335/files"
+      },
+      "stash:version": {
+        "href": "/api/v2/versions/368335"
+      }
+    },
+    "digest": "263f2a6a9416939d4b61008b91077997d1f592be0ba5d1c23355a225f2c073c7",
+    "digestType": "sha-256",
+    "mimeType": "text/csv",
+    "path": "GPS_data.csv",
+    "size": 408514,
+    "status": "copied"
+  },
+  "effective_prefix_counts": {
+    "D": 9,
+    "H": 8
+  },
+  "eligible_species_panels": [
+    "Hipposideros armiger",
+    "Hipposideros pratti"
+  ],
+  "estimator_evaluable_id_count_total": 13,
+  "estimator_evaluable_ids_by_species": {
+    "Hipposideros armiger": [
+      "D11",
+      "D12",
+      "D13",
+      "D23",
+      "D25",
+      "D31",
+      "D32",
+      "D33"
+    ],
+    "Hipposideros pratti": [
+      "H11",
+      "H12",
+      "H22",
+      "H23-1",
+      "H32"
+    ]
+  },
+  "file_name_expected": "GPS_data.csv",
+  "height_column_operation": "presence/nonblank only",
+  "horizontal_grid_m": 5000,
+  "numeric_height_values_read": false,
+  "primary_may_open": true,
+  "projection": "EPSG:32648",
+  "qualified_nights_ge50": 86,
+  "raw_ids": [
+    "D11",
+    "D12",
+    "D13",
+    "D21",
+    "D22",
+    "D23",
+    "D24",
+    "D25",
+    "D31",
+    "D32",
+    "D33",
+    "H11",
+    "H12",
+    "H21",
+    "H22",
+    "H23-1",
+    "H23-2",
+    "H31",
+    "H32"
+  ],
+  "raw_prefix_counts": {
+    "D": 11,
+    "H": 8
+  },
+  "raw_sha256": "263f2a6a9416939d4b61008b91077997d1f592be0ba5d1c23355a225f2c073c7",
+  "raw_size_bytes": 408514,
+  "repeat_ids_by_species": {
+    "Hipposideros armiger": [
+      "D11",
+      "D12",
+      "D13",
+      "D23",
+      "D24",
+      "D25",
+      "D31",
+      "D32",
+      "D33"
+    ],
+    "Hipposideros pratti": [
+      "H11",
+      "H12",
+      "H22",
+      "H23-1",
+      "H23-2",
+      "H31",
+      "H32"
+    ]
+  },
+  "rows_presence_qualified": 5696,
+  "rows_total": 5696,
+  "schema_version": 2,
+  "session_rule": "timestamp_minus_12h_then_date",
+  "source_effective_ids": [
+    "D11",
+    "D12",
+    "D13",
+    "D23",
+    "D24",
+    "D25",
+    "D31",
+    "D32",
+    "D33",
+    "H11",
+    "H12",
+    "H21",
+    "H22",
+    "H23-1",
+    "H23-2",
+    "H31",
+    "H32"
+  ],
+  "source_gate_pass": true,
+  "source_ineffective_ids_zero_ge50_night": [
+    "D21",
+    "D22"
+  ],
+  "species_by_prefix": {
+    "D": "Hipposideros armiger",
+    "H": "Hipposideros pratti"
+  },
+  "species_mapping_contract": "species_mapping_contract_v2.json",
+  "species_mapping_resolved": true,
+  "species_panel_gate": {
+    "Hipposideros armiger": true,
+    "Hipposideros pratti": true
+  },
+  "study_id": "batter-hipposideros-authenticated-preflight-v1",
+  "target_support": [
+    {
+      "evaluable": true,
+      "id": "D11",
+      "other_training_nights": 44,
+      "reason": "eligible",
+      "self_training_nights": 4,
+      "session_date": "2022-07-09",
+      "species": "Hipposideros armiger",
+      "support_fraction": 1.0,
+      "supported_events": 59,
+      "target_events": 59
+    },
+    {
+      "evaluable": true,
+      "id": "D11",
+      "other_training_nights": 44,
+      "reason": "eligible",
+      "self_training_nights": 4,
+      "session_date": "2022-07-10",
+      "species": "Hipposideros armiger",
+      "support_fraction": 1.0,
+      "supported_events": 58,
+      "target_events": 58
+    },
+    {
+      "evaluable": true,
+      "id": "D11",
+      "other_training_nights": 44,
+      "reason": "eligible",
+      "self_training_nights": 4,
+      "session_date": "2022-07-11",
+      "species": "Hipposideros armiger",
+      "support_fraction": 1.0,
+      "supported_events": 59,
+      "target_events": 59
+    },
+    {
+      "evaluable": true,
+      "id": "D11",
+      "other_training_nights": 44,
+      "reason": "eligible",
+      "self_training_nights": 4,
+      "session_date": "2022-07-12",
+      "species": "Hipposideros armiger",
+      "support_fraction": 1.0,
+      "supported_events": 56,
+      "target_events": 56
+    },
+    {
+      "evaluable": true,
+      "id": "D11",
+      "other_training_nights": 44,
+      "reason": "eligible",
+      "self_training_nights": 4,
+      "session_date": "2022-07-13",
+      "species": "Hipposideros armiger",
+      "support_fraction": 1.0,
+      "supported_events": 57,
+      "target_events": 57
+    },
+    {
+      "evaluable": true,
+      "id": "D12",
+      "other_training_nights": 43,
+      "reason": "eligible",
+      "self_training_nights": 5,
+      "session_date": "2022-07-09",
+      "species": "Hipposideros armiger",
+      "support_fraction": 1.0,
+      "supported_events": 59,
+      "target_events": 59
+    },
+    {
+      "evaluable": true,
+      "id": "D12",
+      "other_training_nights": 43,
+      "reason": "eligible",
+      "self_training_nights": 5,
+      "session_date": "2022-07-10",
+      "species": "Hipposideros armiger",
+      "support_fraction": 1.0,
+      "supported_events": 59,
+      "target_events": 59
+    },
+    {
+      "evaluable": true,
+      "id": "D12",
+      "other_training_nights": 43,
+      "reason": "eligible",
+      "self_training_nights": 5,
+      "session_date": "2022-07-11",
+      "species": "Hipposideros armiger",
+      "support_fraction": 1.0,
+      "supported_events": 59,
+      "target_events": 59
+    },
+    {
+      "evaluable": true,
+      "id": "D12",
+      "other_training_nights": 43,
+      "reason": "eligible",
+      "self_training_nights": 5,
+      "session_date": "2022-07-12",
+      "species": "Hipposideros armiger",
+      "support_fraction": 1.0,
+      "supported_events": 59,
+      "target_events": 59
+    },
+    {
+      "evaluable": true,
+      "id": "D12",
+      "other_training_nights": 43,
+      "reason": "eligible",
+      "self_training_nights": 5,
+      "session_date": "2022-07-13",
+      "species": "Hipposideros armiger",
+      "support_fraction": 1.0,
+      "supported_events": 59,
+      "target_events": 59
+    },
+    {
+      "evaluable": true,
+      "id": "D12",
+      "other_training_nights": 43,
+      "reason": "eligible",
+      "self_training_nights": 5,
+      "session_date": "2022-07-14",
+      "species": "Hipposideros armiger",
+      "support_fraction": 1.0,
+      "supported_events": 59,
+      "target_events": 59
+    },
+    {
+      "evaluable": false,
+      "id": "D13",
+      "other_training_nights": 43,
+      "reason": "insufficient_common_support",
+      "self_training_nights": 5,
+      "session_date": "2022-07-09",
+      "species": "Hipposideros armiger",
+      "support_fraction": 0.2711864406779661,
+      "supported_events": 16,
+      "target_events": 59
+    },
+    {
+      "evaluable": false,
+      "id": "D13",
+      "other_training_nights": 43,
+      "reason": "insufficient_common_support",
+      "self_training_nights": 5,
+      "session_date": "2022-07-10",
+      "species": "Hipposideros armiger",
+      "support_fraction": 0.1864406779661017,
+      "supported_events": 11,
+      "target_events": 59
+    },
+    {
+      "evaluable": true,
+      "id": "D13",
+      "other_training_nights": 43,
+      "reason": "eligible",
+      "self_training_nights": 5,
+      "session_date": "2022-07-11",
+      "species": "Hipposideros armiger",
+      "support_fraction": 1.0,
+      "supported_events": 59,
+      "target_events": 59
+    },
+    {
+      "evaluable": true,
+      "id": "D13",
+      "other_training_nights": 43,
+      "reason": "eligible",
+      "self_training_nights": 5,
+      "session_date": "2022-07-12",
+      "species": "Hipposideros armiger",
+      "support_fraction": 1.0,
+      "supported_events": 59,
+      "target_events": 59
+    },
+    {
+      "evaluable": true,
+      "id": "D13",
+      "other_training_nights": 43,
+      "reason": "eligible",
+      "self_training_nights": 5,
+      "session_date": "2022-07-13",
+      "species": "Hipposideros armiger",
+      "support_fraction": 1.0,
+      "supported_events": 59,
+      "target_events": 59
+    },
+    {
+      "evaluable": true,
+      "id": "D13",
+      "other_training_nights": 43,
+      "reason": "eligible",
+      "self_training_nights": 5,
+      "session_date": "2022-07-14",
+      "species": "Hipposideros armiger",
+      "support_fraction": 1.0,
+      "supported_events": 57,
+      "target_events": 57
+    },
+    {
+      "evaluable": true,
+      "id": "D23",
+      "other_training_nights": 45,
+      "reason": "eligible",
+      "self_training_nights": 3,
+      "session_date": "2022-07-31",
+      "species": "Hipposideros armiger",
+      "support_fraction": 1.0,
+      "supported_events": 58,
+      "target_events": 58
+    },
+    {
+      "evaluable": true,
+      "id": "D23",
+      "other_training_nights": 45,
+      "reason": "eligible",
+      "self_training_nights": 3,
+      "session_date": "2022-08-01",
+      "species": "Hipposideros armiger",
+      "support_fraction": 1.0,
+      "supported_events": 60,
+      "target_events": 60
+    },
+    {
+      "evaluable": true,
+      "id": "D23",
+      "other_training_nights": 45,
+      "reason": "eligible",
+      "self_training_nights": 3,
+      "session_date": "2022-08-02",
+      "species": "Hipposideros armiger",
+      "support_fraction": 1.0,
+      "supported_events": 59,
+      "target_events": 59
+    },
+    {
+      "evaluable": true,
+      "id": "D23",
+      "other_training_nights": 45,
+      "reason": "eligible",
+      "self_training_nights": 3,
+      "session_date": "2022-08-03",
+      "species": "Hipposideros armiger",
+      "support_fraction": 1.0,
+      "supported_events": 60,
+      "target_events": 60
+    },
+    {
+      "evaluable": false,
+      "id": "D24",
+      "other_training_nights": 41,
+      "reason": "insufficient_common_support",
+      "self_training_nights": 7,
+      "session_date": "2022-08-01",
+      "species": "Hipposideros armiger",
+      "support_fraction": 0.11864406779661017,
+      "supported_events": 7,
+      "target_events": 59
+    },
+    {
+      "evaluable": false,
+      "id": "D24",
+      "other_training_nights": 41,
+      "reason": "insufficient_common_support",
+      "self_training_nights": 7,
+      "session_date": "2022-08-02",
+      "species": "Hipposideros armiger",
+      "support_fraction": 0.0,
+      "supported_events": 0,
+      "target_events": 60
+    },
+    {
+      "evaluable": false,
+      "id": "D24",
+      "other_training_nights": 41,
+      "reason": "insufficient_common_support",
+      "self_training_nights": 7,
+      "session_date": "2022-08-03",
+      "species": "Hipposideros armiger",
+      "support_fraction": 0.0,
+      "supported_events": 0,
+      "target_events": 60
+    },
+    {
+      "evaluable": false,
+      "id": "D24",
+      "other_training_nights": 41,
+      "reason": "insufficient_common_support",
+      "self_training_nights": 7,
+      "session_date": "2022-08-04",
+      "species": "Hipposideros armiger",
+      "support_fraction": 0.016666666666666666,
+      "supported_events": 1,
+      "target_events": 60
+    },
+    {
+      "evaluable": false,
+      "id": "D24",
+      "other_training_nights": 41,
+      "reason": "insufficient_common_support",
+      "self_training_nights": 7,
+      "session_date": "2022-08-05",
+      "species": "Hipposideros armiger",
+      "support_fraction": 0.0,
+      "supported_events": 0,
+      "target_events": 60
+    },
+    {
+      "evaluable": false,
+      "id": "D24",
+      "other_training_nights": 41,
+      "reason": "insufficient_common_support",
+      "self_training_nights": 7,
+      "session_date": "2022-08-06",
+      "species": "Hipposideros armiger",
+      "support_fraction": 0.03333333333333333,
+      "supported_events": 2,
+      "target_events": 60
+    },
+    {
+      "evaluable": false,
+      "id": "D24",
+      "other_training_nights": 41,
+      "reason": "insufficient_common_support",
+      "self_training_nights": 7,
+      "session_date": "2022-08-07",
+      "species": "Hipposideros armiger",
+      "support_fraction": 0.0,
+      "supported_events": 0,
+      "target_events": 60
+    },
+    {
+      "evaluable": false,
+      "id": "D24",
+      "other_training_nights": 41,
+      "reason": "insufficient_common_support",
+      "self_training_nights": 7,
+      "session_date": "2022-08-08",
+      "species": "Hipposideros armiger",
+      "support_fraction": 0.7818181818181819,
+      "supported_events": 43,
+      "target_events": 55
+    },
+    {
+      "evaluable": true,
+      "id": "D25",
+      "other_training_nights": 42,
+      "reason": "eligible",
+      "self_training_nights": 6,
+      "session_date": "2022-07-31",
+      "species": "Hipposideros armiger",
+      "support_fraction": 1.0,
+      "supported_events": 59,
+      "target_events": 59
+    },
+    {
+      "evaluable": true,
+      "id": "D25",
+      "other_training_nights": 42,
+      "reason": "eligible",
+      "self_training_nights": 6,
+      "session_date": "2022-08-01",
+      "species": "Hipposideros armiger",
+      "support_fraction": 1.0,
+      "supported_events": 60,
+      "target_events": 60
+    },
+    {
+      "evaluable": true,
+      "id": "D25",
+      "other_training_nights": 42,
+      "reason": "eligible",
+      "self_training_nights": 6,
+      "session_date": "2022-08-02",
+      "species": "Hipposideros armiger",
+      "support_fraction": 1.0,
+      "supported_events": 59,
+      "target_events": 59
+    },
+    {
+      "evaluable": true,
+      "id": "D25",
+      "other_training_nights": 42,
+      "reason": "eligible",
+      "self_training_nights": 6,
+      "session_date": "2022-08-03",
+      "species": "Hipposideros armiger",
+      "support_fraction": 1.0,
+      "supported_events": 59,
+      "target_events": 59
+    },
+    {
+      "evaluable": true,
+      "id": "D25",
+      "other_training_nights": 42,
+      "reason": "eligible",
+      "self_training_nights": 6,
+      "session_date": "2022-08-04",
+      "species": "Hipposideros armiger",
+      "support_fraction": 1.0,
+      "supported_events": 58,
+      "target_events": 58
+    },
+    {
+      "evaluable": true,
+      "id": "D25",
+      "other_training_nights": 42,
+      "reason": "eligible",
+      "self_training_nights": 6,
+      "session_date": "2022-08-05",
+      "species": "Hipposideros armiger",
+      "support_fraction": 1.0,
+      "supported_events": 59,
+      "target_events": 59
+    },
+    {
+      "evaluable": true,
+      "id": "D25",
+      "other_training_nights": 42,
+      "reason": "eligible",
+      "self_training_nights": 6,
+      "session_date": "2022-08-06",
+      "species": "Hipposideros armiger",
+      "support_fraction": 1.0,
+      "supported_events": 55,
+      "target_events": 55
+    },
+    {
+      "evaluable": true,
+      "id": "D31",
+      "other_training_nights": 42,
+      "reason": "eligible",
+      "self_training_nights": 6,
+      "session_date": "2022-08-13",
+      "species": "Hipposideros armiger",
+      "support_fraction": 0.8333333333333334,
+      "supported_events": 55,
+      "target_events": 66
+    },
+    {
+      "evaluable": false,
+      "id": "D31",
+      "other_training_nights": 42,
+      "reason": "insufficient_common_support",
+      "self_training_nights": 6,
+      "session_date": "2022-08-14",
+      "species": "Hipposideros armiger",
+      "support_fraction": 0.06060606060606061,
+      "supported_events": 4,
+      "target_events": 66
+    },
+    {
+      "evaluable": false,
+      "id": "D31",
+      "other_training_nights": 42,
+      "reason": "insufficient_common_support",
+      "self_training_nights": 6,
+      "session_date": "2022-08-15",
+      "species": "Hipposideros armiger",
+      "support_fraction": 0.06060606060606061,
+      "supported_events": 4,
+      "target_events": 66
+    },
+    {
+      "evaluable": false,
+      "id": "D31",
+      "other_training_nights": 42,
+      "reason": "insufficient_common_support",
+      "self_training_nights": 6,
+      "session_date": "2022-08-16",
+      "species": "Hipposideros armiger",
+      "support_fraction": 0.06153846153846154,
+      "supported_events": 4,
+      "target_events": 65
+    },
+    {
+      "evaluable": false,
+      "id": "D31",
+      "other_training_nights": 42,
+      "reason": "insufficient_common_support",
+      "self_training_nights": 6,
+      "session_date": "2022-08-17",
+      "species": "Hipposideros armiger",
+      "support_fraction": 0.49230769230769234,
+      "supported_events": 32,
+      "target_events": 65
+    },
+    {
+      "evaluable": false,
+      "id": "D31",
+      "other_training_nights": 42,
+      "reason": "insufficient_common_support",
+      "self_training_nights": 6,
+      "session_date": "2022-08-18",
+      "species": "Hipposideros armiger",
+      "support_fraction": 0.26153846153846155,
+      "supported_events": 17,
+      "target_events": 65
+    },
+    {
+      "evaluable": false,
+      "id": "D31",
+      "other_training_nights": 42,
+      "reason": "insufficient_common_support",
+      "self_training_nights": 6,
+      "session_date": "2022-08-19",
+      "species": "Hipposideros armiger",
+      "support_fraction": 0.375,
+      "supported_events": 24,
+      "target_events": 64
+    },
+    {
+      "evaluable": true,
+      "id": "D32",
+      "other_training_nights": 46,
+      "reason": "eligible",
+      "self_training_nights": 2,
+      "session_date": "2022-08-13",
+      "species": "Hipposideros armiger",
+      "support_fraction": 1.0,
+      "supported_events": 65,
+      "target_events": 65
+    },
+    {
+      "evaluable": true,
+      "id": "D32",
+      "other_training_nights": 46,
+      "reason": "eligible",
+      "self_training_nights": 2,
+      "session_date": "2022-08-14",
+      "species": "Hipposideros armiger",
+      "support_fraction": 1.0,
+      "supported_events": 66,
+      "target_events": 66
+    },
+    {
+      "evaluable": true,
+      "id": "D32",
+      "other_training_nights": 46,
+      "reason": "eligible",
+      "self_training_nights": 2,
+      "session_date": "2022-08-15",
+      "species": "Hipposideros armiger",
+      "support_fraction": 1.0,
+      "supported_events": 59,
+      "target_events": 59
+    },
+    {
+      "evaluable": true,
+      "id": "D33",
+      "other_training_nights": 46,
+      "reason": "eligible",
+      "self_training_nights": 2,
+      "session_date": "2022-08-13",
+      "species": "Hipposideros armiger",
+      "support_fraction": 1.0,
+      "supported_events": 65,
+      "target_events": 65
+    },
+    {
+      "evaluable": true,
+      "id": "D33",
+      "other_training_nights": 46,
+      "reason": "eligible",
+      "self_training_nights": 2,
+      "session_date": "2022-08-14",
+      "species": "Hipposideros armiger",
+      "support_fraction": 0.9848484848484849,
+      "supported_events": 65,
+      "target_events": 66
+    },
+    {
+      "evaluable": true,
+      "id": "D33",
+      "other_training_nights": 46,
+      "reason": "eligible",
+      "self_training_nights": 2,
+      "session_date": "2022-08-15",
+      "species": "Hipposideros armiger",
+      "support_fraction": 1.0,
+      "supported_events": 66,
+      "target_events": 66
+    },
+    {
+      "evaluable": true,
+      "id": "H11",
+      "other_training_nights": 30,
+      "reason": "eligible",
+      "self_training_nights": 5,
+      "session_date": "2022-07-09",
+      "species": "Hipposideros pratti",
+      "support_fraction": 1.0,
+      "supported_events": 60,
+      "target_events": 60
+    },
+    {
+      "evaluable": true,
+      "id": "H11",
+      "other_training_nights": 30,
+      "reason": "eligible",
+      "self_training_nights": 5,
+      "session_date": "2022-07-10",
+      "species": "Hipposideros pratti",
+      "support_fraction": 1.0,
+      "supported_events": 58,
+      "target_events": 58
+    },
+    {
+      "evaluable": true,
+      "id": "H11",
+      "other_training_nights": 30,
+      "reason": "eligible",
+      "self_training_nights": 5,
+      "session_date": "2022-07-11",
+      "species": "Hipposideros pratti",
+      "support_fraction": 1.0,
+      "supported_events": 59,
+      "target_events": 59
+    },
+    {
+      "evaluable": true,
+      "id": "H11",
+      "other_training_nights": 30,
+      "reason": "eligible",
+      "self_training_nights": 5,
+      "session_date": "2022-07-12",
+      "species": "Hipposideros pratti",
+      "support_fraction": 1.0,
+      "supported_events": 60,
+      "target_events": 60
+    },
+    {
+      "evaluable": true,
+      "id": "H11",
+      "other_training_nights": 30,
+      "reason": "eligible",
+      "self_training_nights": 5,
+      "session_date": "2022-07-13",
+      "species": "Hipposideros pratti",
+      "support_fraction": 1.0,
+      "supported_events": 59,
+      "target_events": 59
+    },
+    {
+      "evaluable": true,
+      "id": "H11",
+      "other_training_nights": 30,
+      "reason": "eligible",
+      "self_training_nights": 5,
+      "session_date": "2022-07-14",
+      "species": "Hipposideros pratti",
+      "support_fraction": 1.0,
+      "supported_events": 59,
+      "target_events": 59
+    },
+    {
+      "evaluable": true,
+      "id": "H12",
+      "other_training_nights": 31,
+      "reason": "eligible",
+      "self_training_nights": 4,
+      "session_date": "2022-07-09",
+      "species": "Hipposideros pratti",
+      "support_fraction": 1.0,
+      "supported_events": 58,
+      "target_events": 58
+    },
+    {
+      "evaluable": true,
+      "id": "H12",
+      "other_training_nights": 31,
+      "reason": "eligible",
+      "self_training_nights": 4,
+      "session_date": "2022-07-10",
+      "species": "Hipposideros pratti",
+      "support_fraction": 1.0,
+      "supported_events": 58,
+      "target_events": 58
+    },
+    {
+      "evaluable": true,
+      "id": "H12",
+      "other_training_nights": 31,
+      "reason": "eligible",
+      "self_training_nights": 4,
+      "session_date": "2022-07-11",
+      "species": "Hipposideros pratti",
+      "support_fraction": 1.0,
+      "supported_events": 59,
+      "target_events": 59
+    },
+    {
+      "evaluable": true,
+      "id": "H12",
+      "other_training_nights": 31,
+      "reason": "eligible",
+      "self_training_nights": 4,
+      "session_date": "2022-07-12",
+      "species": "Hipposideros pratti",
+      "support_fraction": 1.0,
+      "supported_events": 59,
+      "target_events": 59
+    },
+    {
+      "evaluable": true,
+      "id": "H12",
+      "other_training_nights": 31,
+      "reason": "eligible",
+      "self_training_nights": 4,
+      "session_date": "2022-07-13",
+      "species": "Hipposideros pratti",
+      "support_fraction": 1.0,
+      "supported_events": 59,
+      "target_events": 59
+    },
+    {
+      "evaluable": true,
+      "id": "H22",
+      "other_training_nights": 32,
+      "reason": "eligible",
+      "self_training_nights": 3,
+      "session_date": "2022-07-31",
+      "species": "Hipposideros pratti",
+      "support_fraction": 1.0,
+      "supported_events": 59,
+      "target_events": 59
+    },
+    {
+      "evaluable": true,
+      "id": "H22",
+      "other_training_nights": 32,
+      "reason": "eligible",
+      "self_training_nights": 3,
+      "session_date": "2022-08-01",
+      "species": "Hipposideros pratti",
+      "support_fraction": 1.0,
+      "supported_events": 59,
+      "target_events": 59
+    },
+    {
+      "evaluable": true,
+      "id": "H22",
+      "other_training_nights": 32,
+      "reason": "eligible",
+      "self_training_nights": 3,
+      "session_date": "2022-08-02",
+      "species": "Hipposideros pratti",
+      "support_fraction": 1.0,
+      "supported_events": 59,
+      "target_events": 59
+    },
+    {
+      "evaluable": true,
+      "id": "H22",
+      "other_training_nights": 32,
+      "reason": "eligible",
+      "self_training_nights": 3,
+      "session_date": "2022-08-03",
+      "species": "Hipposideros pratti",
+      "support_fraction": 1.0,
+      "supported_events": 60,
+      "target_events": 60
+    },
+    {
+      "evaluable": true,
+      "id": "H23-1",
+      "other_training_nights": 32,
+      "reason": "eligible",
+      "self_training_nights": 3,
+      "session_date": "2022-08-01",
+      "species": "Hipposideros pratti",
+      "support_fraction": 1.0,
+      "supported_events": 60,
+      "target_events": 60
+    },
+    {
+      "evaluable": true,
+      "id": "H23-1",
+      "other_training_nights": 32,
+      "reason": "eligible",
+      "self_training_nights": 3,
+      "session_date": "2022-08-02",
+      "species": "Hipposideros pratti",
+      "support_fraction": 1.0,
+      "supported_events": 60,
+      "target_events": 60
+    },
+    {
+      "evaluable": true,
+      "id": "H23-1",
+      "other_training_nights": 32,
+      "reason": "eligible",
+      "self_training_nights": 3,
+      "session_date": "2022-08-03",
+      "species": "Hipposideros pratti",
+      "support_fraction": 1.0,
+      "supported_events": 60,
+      "target_events": 60
+    },
+    {
+      "evaluable": true,
+      "id": "H23-1",
+      "other_training_nights": 32,
+      "reason": "eligible",
+      "self_training_nights": 3,
+      "session_date": "2022-08-04",
+      "species": "Hipposideros pratti",
+      "support_fraction": 1.0,
+      "supported_events": 60,
+      "target_events": 60
+    },
+    {
+      "evaluable": false,
+      "id": "H23-2",
+      "other_training_nights": 33,
+      "reason": "insufficient_common_support",
+      "self_training_nights": 2,
+      "session_date": "2022-08-05",
+      "species": "Hipposideros pratti",
+      "support_fraction": 0.06666666666666667,
+      "supported_events": 4,
+      "target_events": 60
+    },
+    {
+      "evaluable": false,
+      "id": "H23-2",
+      "other_training_nights": 33,
+      "reason": "insufficient_common_support",
+      "self_training_nights": 2,
+      "session_date": "2022-08-06",
+      "species": "Hipposideros pratti",
+      "support_fraction": 0.1,
+      "supported_events": 6,
+      "target_events": 60
+    },
+    {
+      "evaluable": false,
+      "id": "H23-2",
+      "other_training_nights": 33,
+      "reason": "insufficient_common_support",
+      "self_training_nights": 2,
+      "session_date": "2022-08-07",
+      "species": "Hipposideros pratti",
+      "support_fraction": 0.13559322033898305,
+      "supported_events": 8,
+      "target_events": 59
+    },
+    {
+      "evaluable": false,
+      "id": "H31",
+      "other_training_nights": 29,
+      "reason": "insufficient_common_support",
+      "self_training_nights": 6,
+      "session_date": "2022-08-19",
+      "species": "Hipposideros pratti",
+      "support_fraction": 0.045454545454545456,
+      "supported_events": 3,
+      "target_events": 66
+    },
+    {
+      "evaluable": false,
+      "id": "H31",
+      "other_training_nights": 29,
+      "reason": "insufficient_common_support",
+      "self_training_nights": 6,
+      "session_date": "2022-08-20",
+      "species": "Hipposideros pratti",
+      "support_fraction": 0.06060606060606061,
+      "supported_events": 4,
+      "target_events": 66
+    },
+    {
+      "evaluable": false,
+      "id": "H31",
+      "other_training_nights": 29,
+      "reason": "insufficient_common_support",
+      "self_training_nights": 6,
+      "session_date": "2022-08-21",
+      "species": "Hipposideros pratti",
+      "support_fraction": 0.09090909090909091,
+      "supported_events": 6,
+      "target_events": 66
+    },
+    {
+      "evaluable": false,
+      "id": "H31",
+      "other_training_nights": 29,
+      "reason": "insufficient_common_support",
+      "self_training_nights": 6,
+      "session_date": "2022-08-22",
+      "species": "Hipposideros pratti",
+      "support_fraction": 0.15151515151515152,
+      "supported_events": 10,
+      "target_events": 66
+    },
+    {
+      "evaluable": false,
+      "id": "H31",
+      "other_training_nights": 29,
+      "reason": "insufficient_common_support",
+      "self_training_nights": 6,
+      "session_date": "2022-08-23",
+      "species": "Hipposideros pratti",
+      "support_fraction": 0.10606060606060606,
+      "supported_events": 7,
+      "target_events": 66
+    },
+    {
+      "evaluable": false,
+      "id": "H31",
+      "other_training_nights": 29,
+      "reason": "insufficient_common_support",
+      "self_training_nights": 6,
+      "session_date": "2022-08-24",
+      "species": "Hipposideros pratti",
+      "support_fraction": 0.07692307692307693,
+      "supported_events": 5,
+      "target_events": 65
+    },
+    {
+      "evaluable": false,
+      "id": "H31",
+      "other_training_nights": 29,
+      "reason": "insufficient_common_support",
+      "self_training_nights": 6,
+      "session_date": "2022-08-25",
+      "species": "Hipposideros pratti",
+      "support_fraction": 0.06451612903225806,
+      "supported_events": 4,
+      "target_events": 62
+    },
+    {
+      "evaluable": false,
+      "id": "H32",
+      "other_training_nights": 29,
+      "reason": "insufficient_common_support",
+      "self_training_nights": 6,
+      "session_date": "2022-08-19",
+      "species": "Hipposideros pratti",
+      "support_fraction": 0.24615384615384617,
+      "supported_events": 16,
+      "target_events": 65
+    },
+    {
+      "evaluable": false,
+      "id": "H32",
+      "other_training_nights": 29,
+      "reason": "insufficient_common_support",
+      "self_training_nights": 6,
+      "session_date": "2022-08-20",
+      "species": "Hipposideros pratti",
+      "support_fraction": 0.16923076923076924,
+      "supported_events": 11,
+      "target_events": 65
+    },
+    {
+      "evaluable": false,
+      "id": "H32",
+      "other_training_nights": 29,
+      "reason": "insufficient_common_support",
+      "self_training_nights": 6,
+      "session_date": "2022-08-21",
+      "species": "Hipposideros pratti",
+      "support_fraction": 0.13846153846153847,
+      "supported_events": 9,
+      "target_events": 65
+    },
+    {
+      "evaluable": false,
+      "id": "H32",
+      "other_training_nights": 29,
+      "reason": "insufficient_common_support",
+      "self_training_nights": 6,
+      "session_date": "2022-08-22",
+      "species": "Hipposideros pratti",
+      "support_fraction": 0.12307692307692308,
+      "supported_events": 8,
+      "target_events": 65
+    },
+    {
+      "evaluable": false,
+      "id": "H32",
+      "other_training_nights": 29,
+      "reason": "insufficient_common_support",
+      "self_training_nights": 6,
+      "session_date": "2022-08-23",
+      "species": "Hipposideros pratti",
+      "support_fraction": 0.18181818181818182,
+      "supported_events": 12,
+      "target_events": 66
+    },
+    {
+      "evaluable": false,
+      "id": "H32",
+      "other_training_nights": 29,
+      "reason": "insufficient_common_support",
+      "self_training_nights": 6,
+      "session_date": "2022-08-24",
+      "species": "Hipposideros pratti",
+      "support_fraction": 0.28125,
+      "supported_events": 18,
+      "target_events": 64
+    },
+    {
+      "evaluable": true,
+      "id": "H32",
+      "other_training_nights": 29,
+      "reason": "eligible",
+      "self_training_nights": 6,
+      "session_date": "2022-08-25",
+      "species": "Hipposideros pratti",
+      "support_fraction": 1.0,
+      "supported_events": 65,
+      "target_events": 65
+    }
+  ],
+  "training_universe_by_species": {
+    "Hipposideros armiger": {
+      "D11": [
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-07-09"
+        },
+        {
+          "presence_qualified_fixes": 58,
+          "session_date": "2022-07-10"
+        },
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-07-11"
+        },
+        {
+          "presence_qualified_fixes": 56,
+          "session_date": "2022-07-12"
+        },
+        {
+          "presence_qualified_fixes": 57,
+          "session_date": "2022-07-13"
+        }
+      ],
+      "D12": [
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-07-09"
+        },
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-07-10"
+        },
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-07-11"
+        },
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-07-12"
+        },
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-07-13"
+        },
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-07-14"
+        }
+      ],
+      "D13": [
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-07-09"
+        },
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-07-10"
+        },
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-07-11"
+        },
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-07-12"
+        },
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-07-13"
+        },
+        {
+          "presence_qualified_fixes": 57,
+          "session_date": "2022-07-14"
+        }
+      ],
+      "D23": [
+        {
+          "presence_qualified_fixes": 58,
+          "session_date": "2022-07-31"
+        },
+        {
+          "presence_qualified_fixes": 60,
+          "session_date": "2022-08-01"
+        },
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-08-02"
+        },
+        {
+          "presence_qualified_fixes": 60,
+          "session_date": "2022-08-03"
+        }
+      ],
+      "D24": [
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-08-01"
+        },
+        {
+          "presence_qualified_fixes": 60,
+          "session_date": "2022-08-02"
+        },
+        {
+          "presence_qualified_fixes": 60,
+          "session_date": "2022-08-03"
+        },
+        {
+          "presence_qualified_fixes": 60,
+          "session_date": "2022-08-04"
+        },
+        {
+          "presence_qualified_fixes": 60,
+          "session_date": "2022-08-05"
+        },
+        {
+          "presence_qualified_fixes": 60,
+          "session_date": "2022-08-06"
+        },
+        {
+          "presence_qualified_fixes": 60,
+          "session_date": "2022-08-07"
+        },
+        {
+          "presence_qualified_fixes": 55,
+          "session_date": "2022-08-08"
+        }
+      ],
+      "D25": [
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-07-31"
+        },
+        {
+          "presence_qualified_fixes": 60,
+          "session_date": "2022-08-01"
+        },
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-08-02"
+        },
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-08-03"
+        },
+        {
+          "presence_qualified_fixes": 58,
+          "session_date": "2022-08-04"
+        },
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-08-05"
+        },
+        {
+          "presence_qualified_fixes": 55,
+          "session_date": "2022-08-06"
+        }
+      ],
+      "D31": [
+        {
+          "presence_qualified_fixes": 66,
+          "session_date": "2022-08-13"
+        },
+        {
+          "presence_qualified_fixes": 66,
+          "session_date": "2022-08-14"
+        },
+        {
+          "presence_qualified_fixes": 66,
+          "session_date": "2022-08-15"
+        },
+        {
+          "presence_qualified_fixes": 65,
+          "session_date": "2022-08-16"
+        },
+        {
+          "presence_qualified_fixes": 65,
+          "session_date": "2022-08-17"
+        },
+        {
+          "presence_qualified_fixes": 65,
+          "session_date": "2022-08-18"
+        },
+        {
+          "presence_qualified_fixes": 64,
+          "session_date": "2022-08-19"
+        }
+      ],
+      "D32": [
+        {
+          "presence_qualified_fixes": 65,
+          "session_date": "2022-08-13"
+        },
+        {
+          "presence_qualified_fixes": 66,
+          "session_date": "2022-08-14"
+        },
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-08-15"
+        }
+      ],
+      "D33": [
+        {
+          "presence_qualified_fixes": 65,
+          "session_date": "2022-08-13"
+        },
+        {
+          "presence_qualified_fixes": 66,
+          "session_date": "2022-08-14"
+        },
+        {
+          "presence_qualified_fixes": 66,
+          "session_date": "2022-08-15"
+        }
+      ]
+    },
+    "Hipposideros pratti": {
+      "H11": [
+        {
+          "presence_qualified_fixes": 60,
+          "session_date": "2022-07-09"
+        },
+        {
+          "presence_qualified_fixes": 58,
+          "session_date": "2022-07-10"
+        },
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-07-11"
+        },
+        {
+          "presence_qualified_fixes": 60,
+          "session_date": "2022-07-12"
+        },
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-07-13"
+        },
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-07-14"
+        }
+      ],
+      "H12": [
+        {
+          "presence_qualified_fixes": 58,
+          "session_date": "2022-07-09"
+        },
+        {
+          "presence_qualified_fixes": 58,
+          "session_date": "2022-07-10"
+        },
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-07-11"
+        },
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-07-12"
+        },
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-07-13"
+        }
+      ],
+      "H22": [
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-07-31"
+        },
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-08-01"
+        },
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-08-02"
+        },
+        {
+          "presence_qualified_fixes": 60,
+          "session_date": "2022-08-03"
+        }
+      ],
+      "H23-1": [
+        {
+          "presence_qualified_fixes": 60,
+          "session_date": "2022-08-01"
+        },
+        {
+          "presence_qualified_fixes": 60,
+          "session_date": "2022-08-02"
+        },
+        {
+          "presence_qualified_fixes": 60,
+          "session_date": "2022-08-03"
+        },
+        {
+          "presence_qualified_fixes": 60,
+          "session_date": "2022-08-04"
+        }
+      ],
+      "H23-2": [
+        {
+          "presence_qualified_fixes": 60,
+          "session_date": "2022-08-05"
+        },
+        {
+          "presence_qualified_fixes": 60,
+          "session_date": "2022-08-06"
+        },
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-08-07"
+        }
+      ],
+      "H31": [
+        {
+          "presence_qualified_fixes": 66,
+          "session_date": "2022-08-19"
+        },
+        {
+          "presence_qualified_fixes": 66,
+          "session_date": "2022-08-20"
+        },
+        {
+          "presence_qualified_fixes": 66,
+          "session_date": "2022-08-21"
+        },
+        {
+          "presence_qualified_fixes": 66,
+          "session_date": "2022-08-22"
+        },
+        {
+          "presence_qualified_fixes": 66,
+          "session_date": "2022-08-23"
+        },
+        {
+          "presence_qualified_fixes": 65,
+          "session_date": "2022-08-24"
+        },
+        {
+          "presence_qualified_fixes": 62,
+          "session_date": "2022-08-25"
+        }
+      ],
+      "H32": [
+        {
+          "presence_qualified_fixes": 65,
+          "session_date": "2022-08-19"
+        },
+        {
+          "presence_qualified_fixes": 65,
+          "session_date": "2022-08-20"
+        },
+        {
+          "presence_qualified_fixes": 65,
+          "session_date": "2022-08-21"
+        },
+        {
+          "presence_qualified_fixes": 65,
+          "session_date": "2022-08-22"
+        },
+        {
+          "presence_qualified_fixes": 66,
+          "session_date": "2022-08-23"
+        },
+        {
+          "presence_qualified_fixes": 64,
+          "session_date": "2022-08-24"
+        },
+        {
+          "presence_qualified_fixes": 65,
+          "session_date": "2022-08-25"
+        }
+      ]
+    }
+  }
+}

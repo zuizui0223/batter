@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-hipposideros-primary-validation-summary-v1",
+  "inferential_status": "genuinely response-unopened external primary",
+  "preflight": {
+    "run_id": 36717598652,
+    "receipt_commit": "75bbbf1",
+    "raw_sha256": "263f2a6a9416939d4b61008b91077997d1f592be0ba5d1c23355a225f2c073c7",
+    "raw_prefix_counts": {
+      "D": 11,
+      "H": 8
+    },
+    "source_effective_prefix_counts": {
+      "D": 9,
+      "H": 8
+    },
+    "structurally_ineffective_ids": [
+      "D21",
+      "D22"
+    ],
+    "estimator_evaluable_n": {
+      "Hipposideros armiger": 8,
+      "Hipposideros pratti": 5
+    }
+  },
+  "primary": {
+    "run_id": 36717769795,
+    "head_sha": "8d214866163a568078607ee05a3eccb29bc85e38",
+    "artifact_id": 11096159784,
+    "artifact_digest": "sha256:269b56f7ee121fd5bb907f48846726e58bb9ad6f197d6f6a4a2711e6cdfbf3f5",
+    "observed": -0.07574593988829564,
+    "null_mean": -0.031062326348481103,
+    "null_sd": 0.04189362476637872,
+    "calibrated_excess": -0.04468361353981454,
+    "p_upper": 0.8616,
+    "p_lower": 0.1385,
+    "pass": false
+  },
+  "species_secondary": {
+    "Hipposideros armiger": {
+      "n": 8,
+      "observed": -0.029719296014709178,
+      "null_mean": -0.04901231730077227,
+      "calibrated_excess": 0.01929302128606309,
+      "p_upper": 0.3721,
+      "p_lower": 0.628
+    },
+    "Hipposideros pratti": {
+      "n": 5,
+      "observed": -0.12177258376188212,
+      "null_mean": -0.01311233539618993,
+      "calibrated_excess": -0.10866024836569219,
+      "p_upper": 0.9678,
+      "p_lower": 0.0323
+    }
+  },
+  "frozen_verdict": "FAIL",
+  "claim_boundary": "Do not rescue by alternate grid, bins, species pooling, lower thresholds, alternate altitude endpoint, or post hoc species selection."
+}

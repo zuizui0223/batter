@@ -1,0 +1,743 @@
+{
+  "dryad_file_id": 4102381,
+  "eligible_species_panels": [
+    "Hipposideros armiger",
+    "Hipposideros pratti"
+  ],
+  "estimator_evaluable_ids_by_species": {
+    "Hipposideros armiger": [
+      "D11",
+      "D12",
+      "D13",
+      "D23",
+      "D25",
+      "D31",
+      "D32",
+      "D33"
+    ],
+    "Hipposideros pratti": [
+      "H11",
+      "H12",
+      "H22",
+      "H23-1",
+      "H32"
+    ]
+  },
+  "frozen_evaluable_target_sessions_by_species": {
+    "Hipposideros armiger": {
+      "D11": [
+        {
+          "session_date": "2022-07-09",
+          "supported_events": 59,
+          "target_events": 59
+        },
+        {
+          "session_date": "2022-07-10",
+          "supported_events": 58,
+          "target_events": 58
+        },
+        {
+          "session_date": "2022-07-11",
+          "supported_events": 59,
+          "target_events": 59
+        },
+        {
+          "session_date": "2022-07-12",
+          "supported_events": 56,
+          "target_events": 56
+        },
+        {
+          "session_date": "2022-07-13",
+          "supported_events": 57,
+          "target_events": 57
+        }
+      ],
+      "D12": [
+        {
+          "session_date": "2022-07-09",
+          "supported_events": 59,
+          "target_events": 59
+        },
+        {
+          "session_date": "2022-07-10",
+          "supported_events": 59,
+          "target_events": 59
+        },
+        {
+          "session_date": "2022-07-11",
+          "supported_events": 59,
+          "target_events": 59
+        },
+        {
+          "session_date": "2022-07-12",
+          "supported_events": 59,
+          "target_events": 59
+        },
+        {
+          "session_date": "2022-07-13",
+          "supported_events": 59,
+          "target_events": 59
+        },
+        {
+          "session_date": "2022-07-14",
+          "supported_events": 59,
+          "target_events": 59
+        }
+      ],
+      "D13": [
+        {
+          "session_date": "2022-07-11",
+          "supported_events": 59,
+          "target_events": 59
+        },
+        {
+          "session_date": "2022-07-12",
+          "supported_events": 59,
+          "target_events": 59
+        },
+        {
+          "session_date": "2022-07-13",
+          "supported_events": 59,
+          "target_events": 59
+        },
+        {
+          "session_date": "2022-07-14",
+          "supported_events": 57,
+          "target_events": 57
+        }
+      ],
+      "D23": [
+        {
+          "session_date": "2022-07-31",
+          "supported_events": 58,
+          "target_events": 58
+        },
+        {
+          "session_date": "2022-08-01",
+          "supported_events": 60,
+          "target_events": 60
+        },
+        {
+          "session_date": "2022-08-02",
+          "supported_events": 59,
+          "target_events": 59
+        },
+        {
+          "session_date": "2022-08-03",
+          "supported_events": 60,
+          "target_events": 60
+        }
+      ],
+      "D25": [
+        {
+          "session_date": "2022-07-31",
+          "supported_events": 59,
+          "target_events": 59
+        },
+        {
+          "session_date": "2022-08-01",
+          "supported_events": 60,
+          "target_events": 60
+        },
+        {
+          "session_date": "2022-08-02",
+          "supported_events": 59,
+          "target_events": 59
+        },
+        {
+          "session_date": "2022-08-03",
+          "supported_events": 59,
+          "target_events": 59
+        },
+        {
+          "session_date": "2022-08-04",
+          "supported_events": 58,
+          "target_events": 58
+        },
+        {
+          "session_date": "2022-08-05",
+          "supported_events": 59,
+          "target_events": 59
+        },
+        {
+          "session_date": "2022-08-06",
+          "supported_events": 55,
+          "target_events": 55
+        }
+      ],
+      "D31": [
+        {
+          "session_date": "2022-08-13",
+          "supported_events": 55,
+          "target_events": 66
+        }
+      ],
+      "D32": [
+        {
+          "session_date": "2022-08-13",
+          "supported_events": 65,
+          "target_events": 65
+        },
+        {
+          "session_date": "2022-08-14",
+          "supported_events": 66,
+          "target_events": 66
+        },
+        {
+          "session_date": "2022-08-15",
+          "supported_events": 59,
+          "target_events": 59
+        }
+      ],
+      "D33": [
+        {
+          "session_date": "2022-08-13",
+          "supported_events": 65,
+          "target_events": 65
+        },
+        {
+          "session_date": "2022-08-14",
+          "supported_events": 65,
+          "target_events": 66
+        },
+        {
+          "session_date": "2022-08-15",
+          "supported_events": 66,
+          "target_events": 66
+        }
+      ]
+    },
+    "Hipposideros pratti": {
+      "H11": [
+        {
+          "session_date": "2022-07-09",
+          "supported_events": 60,
+          "target_events": 60
+        },
+        {
+          "session_date": "2022-07-10",
+          "supported_events": 58,
+          "target_events": 58
+        },
+        {
+          "session_date": "2022-07-11",
+          "supported_events": 59,
+          "target_events": 59
+        },
+        {
+          "session_date": "2022-07-12",
+          "supported_events": 60,
+          "target_events": 60
+        },
+        {
+          "session_date": "2022-07-13",
+          "supported_events": 59,
+          "target_events": 59
+        },
+        {
+          "session_date": "2022-07-14",
+          "supported_events": 59,
+          "target_events": 59
+        }
+      ],
+      "H12": [
+        {
+          "session_date": "2022-07-09",
+          "supported_events": 58,
+          "target_events": 58
+        },
+        {
+          "session_date": "2022-07-10",
+          "supported_events": 58,
+          "target_events": 58
+        },
+        {
+          "session_date": "2022-07-11",
+          "supported_events": 59,
+          "target_events": 59
+        },
+        {
+          "session_date": "2022-07-12",
+          "supported_events": 59,
+          "target_events": 59
+        },
+        {
+          "session_date": "2022-07-13",
+          "supported_events": 59,
+          "target_events": 59
+        }
+      ],
+      "H22": [
+        {
+          "session_date": "2022-07-31",
+          "supported_events": 59,
+          "target_events": 59
+        },
+        {
+          "session_date": "2022-08-01",
+          "supported_events": 59,
+          "target_events": 59
+        },
+        {
+          "session_date": "2022-08-02",
+          "supported_events": 59,
+          "target_events": 59
+        },
+        {
+          "session_date": "2022-08-03",
+          "supported_events": 60,
+          "target_events": 60
+        }
+      ],
+      "H23-1": [
+        {
+          "session_date": "2022-08-01",
+          "supported_events": 60,
+          "target_events": 60
+        },
+        {
+          "session_date": "2022-08-02",
+          "supported_events": 60,
+          "target_events": 60
+        },
+        {
+          "session_date": "2022-08-03",
+          "supported_events": 60,
+          "target_events": 60
+        },
+        {
+          "session_date": "2022-08-04",
+          "supported_events": 60,
+          "target_events": 60
+        }
+      ],
+      "H32": [
+        {
+          "session_date": "2022-08-25",
+          "supported_events": 65,
+          "target_events": 65
+        }
+      ]
+    }
+  },
+  "horizontal_grid_m": 5000,
+  "minimum_presence_qualified_fixes_per_session": 50,
+  "minimum_supported_target_events": 50,
+  "next_step": "Freeze this receipt unchanged in git, then and only then run the primary vertical validator.",
+  "numeric_height_values_read": false,
+  "primary_design": "post_freeze_extensions/hipposideros_external_validation/primary_design_v1.json",
+  "primary_design_sha256": "3ccf4d86997ffa4d62ed059c64dfc3c9d2fa72a97e26470eaeb92cf5aed00452",
+  "projection": "EPSG:32648",
+  "raw_sha256": "263f2a6a9416939d4b61008b91077997d1f592be0ba5d1c23355a225f2c073c7",
+  "schema_version": 2,
+  "session_rule": "timestamp_minus_12h_then_date",
+  "source_effective_ids": [
+    "D11",
+    "D12",
+    "D13",
+    "D23",
+    "D24",
+    "D25",
+    "D31",
+    "D32",
+    "D33",
+    "H11",
+    "H12",
+    "H21",
+    "H22",
+    "H23-1",
+    "H23-2",
+    "H31",
+    "H32"
+  ],
+  "source_ineffective_ids_zero_ge50_night": [
+    "D21",
+    "D22"
+  ],
+  "species_by_prefix": {
+    "D": "Hipposideros armiger",
+    "H": "Hipposideros pratti"
+  },
+  "species_mapping_contract": "post_freeze_extensions/hipposideros_external_validation/species_mapping_contract_v2.json",
+  "species_mapping_contract_sha256": "6e64752ecf1a6a73944374636800c2fb9d75e0eec28053cfde7e25bc2d80b04d",
+  "status": "HEIGHT_MAY_OPEN",
+  "study_id": "batter-hipposideros-height-opening-receipt-v1",
+  "training_universe_ge50_sessions_by_species": {
+    "Hipposideros armiger": {
+      "D11": [
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-07-09"
+        },
+        {
+          "presence_qualified_fixes": 58,
+          "session_date": "2022-07-10"
+        },
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-07-11"
+        },
+        {
+          "presence_qualified_fixes": 56,
+          "session_date": "2022-07-12"
+        },
+        {
+          "presence_qualified_fixes": 57,
+          "session_date": "2022-07-13"
+        }
+      ],
+      "D12": [
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-07-09"
+        },
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-07-10"
+        },
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-07-11"
+        },
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-07-12"
+        },
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-07-13"
+        },
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-07-14"
+        }
+      ],
+      "D13": [
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-07-09"
+        },
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-07-10"
+        },
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-07-11"
+        },
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-07-12"
+        },
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-07-13"
+        },
+        {
+          "presence_qualified_fixes": 57,
+          "session_date": "2022-07-14"
+        }
+      ],
+      "D23": [
+        {
+          "presence_qualified_fixes": 58,
+          "session_date": "2022-07-31"
+        },
+        {
+          "presence_qualified_fixes": 60,
+          "session_date": "2022-08-01"
+        },
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-08-02"
+        },
+        {
+          "presence_qualified_fixes": 60,
+          "session_date": "2022-08-03"
+        }
+      ],
+      "D24": [
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-08-01"
+        },
+        {
+          "presence_qualified_fixes": 60,
+          "session_date": "2022-08-02"
+        },
+        {
+          "presence_qualified_fixes": 60,
+          "session_date": "2022-08-03"
+        },
+        {
+          "presence_qualified_fixes": 60,
+          "session_date": "2022-08-04"
+        },
+        {
+          "presence_qualified_fixes": 60,
+          "session_date": "2022-08-05"
+        },
+        {
+          "presence_qualified_fixes": 60,
+          "session_date": "2022-08-06"
+        },
+        {
+          "presence_qualified_fixes": 60,
+          "session_date": "2022-08-07"
+        },
+        {
+          "presence_qualified_fixes": 55,
+          "session_date": "2022-08-08"
+        }
+      ],
+      "D25": [
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-07-31"
+        },
+        {
+          "presence_qualified_fixes": 60,
+          "session_date": "2022-08-01"
+        },
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-08-02"
+        },
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-08-03"
+        },
+        {
+          "presence_qualified_fixes": 58,
+          "session_date": "2022-08-04"
+        },
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-08-05"
+        },
+        {
+          "presence_qualified_fixes": 55,
+          "session_date": "2022-08-06"
+        }
+      ],
+      "D31": [
+        {
+          "presence_qualified_fixes": 66,
+          "session_date": "2022-08-13"
+        },
+        {
+          "presence_qualified_fixes": 66,
+          "session_date": "2022-08-14"
+        },
+        {
+          "presence_qualified_fixes": 66,
+          "session_date": "2022-08-15"
+        },
+        {
+          "presence_qualified_fixes": 65,
+          "session_date": "2022-08-16"
+        },
+        {
+          "presence_qualified_fixes": 65,
+          "session_date": "2022-08-17"
+        },
+        {
+          "presence_qualified_fixes": 65,
+          "session_date": "2022-08-18"
+        },
+        {
+          "presence_qualified_fixes": 64,
+          "session_date": "2022-08-19"
+        }
+      ],
+      "D32": [
+        {
+          "presence_qualified_fixes": 65,
+          "session_date": "2022-08-13"
+        },
+        {
+          "presence_qualified_fixes": 66,
+          "session_date": "2022-08-14"
+        },
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-08-15"
+        }
+      ],
+      "D33": [
+        {
+          "presence_qualified_fixes": 65,
+          "session_date": "2022-08-13"
+        },
+        {
+          "presence_qualified_fixes": 66,
+          "session_date": "2022-08-14"
+        },
+        {
+          "presence_qualified_fixes": 66,
+          "session_date": "2022-08-15"
+        }
+      ]
+    },
+    "Hipposideros pratti": {
+      "H11": [
+        {
+          "presence_qualified_fixes": 60,
+          "session_date": "2022-07-09"
+        },
+        {
+          "presence_qualified_fixes": 58,
+          "session_date": "2022-07-10"
+        },
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-07-11"
+        },
+        {
+          "presence_qualified_fixes": 60,
+          "session_date": "2022-07-12"
+        },
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-07-13"
+        },
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-07-14"
+        }
+      ],
+      "H12": [
+        {
+          "presence_qualified_fixes": 58,
+          "session_date": "2022-07-09"
+        },
+        {
+          "presence_qualified_fixes": 58,
+          "session_date": "2022-07-10"
+        },
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-07-11"
+        },
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-07-12"
+        },
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-07-13"
+        }
+      ],
+      "H22": [
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-07-31"
+        },
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-08-01"
+        },
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-08-02"
+        },
+        {
+          "presence_qualified_fixes": 60,
+          "session_date": "2022-08-03"
+        }
+      ],
+      "H23-1": [
+        {
+          "presence_qualified_fixes": 60,
+          "session_date": "2022-08-01"
+        },
+        {
+          "presence_qualified_fixes": 60,
+          "session_date": "2022-08-02"
+        },
+        {
+          "presence_qualified_fixes": 60,
+          "session_date": "2022-08-03"
+        },
+        {
+          "presence_qualified_fixes": 60,
+          "session_date": "2022-08-04"
+        }
+      ],
+      "H23-2": [
+        {
+          "presence_qualified_fixes": 60,
+          "session_date": "2022-08-05"
+        },
+        {
+          "presence_qualified_fixes": 60,
+          "session_date": "2022-08-06"
+        },
+        {
+          "presence_qualified_fixes": 59,
+          "session_date": "2022-08-07"
+        }
+      ],
+      "H31": [
+        {
+          "presence_qualified_fixes": 66,
+          "session_date": "2022-08-19"
+        },
+        {
+          "presence_qualified_fixes": 66,
+          "session_date": "2022-08-20"
+        },
+        {
+          "presence_qualified_fixes": 66,
+          "session_date": "2022-08-21"
+        },
+        {
+          "presence_qualified_fixes": 66,
+          "session_date": "2022-08-22"
+        },
+        {
+          "presence_qualified_fixes": 66,
+          "session_date": "2022-08-23"
+        },
+        {
+          "presence_qualified_fixes": 65,
+          "session_date": "2022-08-24"
+        },
+        {
+          "presence_qualified_fixes": 62,
+          "session_date": "2022-08-25"
+        }
+      ],
+      "H32": [
+        {
+          "presence_qualified_fixes": 65,
+          "session_date": "2022-08-19"
+        },
+        {
+          "presence_qualified_fixes": 65,
+          "session_date": "2022-08-20"
+        },
+        {
+          "presence_qualified_fixes": 65,
+          "session_date": "2022-08-21"
+        },
+        {
+          "presence_qualified_fixes": 65,
+          "session_date": "2022-08-22"
+        },
+        {
+          "presence_qualified_fixes": 66,
+          "session_date": "2022-08-23"
+        },
+        {
+          "presence_qualified_fixes": 64,
+          "session_date": "2022-08-24"
+        },
+        {
+          "presence_qualified_fixes": 65,
+          "session_date": "2022-08-25"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "schema_version": 2,
+  "study_id": "batter-hipposideros-species-mapping-v2",
+  "frozen_date": "2026-09-30",
+  "status": "revised outcome-blind species mapping after v1 prefix-count failure, still before any numeric height value is opened",
+  "history": {
+    "v1_result": "FAIL: all raw GPS ID strings partitioned as D=11 and H=8, not the published 9 and 8 tracked individuals",
+    "tracking_structure_audit_run": 36716990960,
+    "tracking_structure_audit_vertical_values_read": false
+  },
+  "source_evidence": {
+    "paper_doi": "10.1111/1365-2435.70088",
+    "published_tracking_counts": {
+      "Hipposideros armiger": 9,
+      "Hipposideros pratti": 8
+    },
+    "paper_statement": "We tracked nine H. armiger individuals and eight H. pratti individuals.",
+    "gps_raw_prefix_counts": {"D": 11, "H": 8},
+    "tracking_audit": {
+      "D21_dates_ge50": 0,
+      "D22_dates_ge50": 0,
+      "all_other_D_ids_have_at_least_one_ge50_date": true,
+      "all_H_ids_have_at_least_one_ge50_date": true,
+      "effective_ids_with_at_least_one_ge50_date": {"D": 9, "H": 8}
+    }
+  },
+  "mapping_algorithm": [
+    "Using presence-qualified rows only, count ID x nocturnal-session rows without parsing numeric height.",
+    "Apply the already-frozen >=50-fixes-per-session threshold; no new threshold is introduced for mapping.",
+    "Define source-effective tracked IDs as IDs with at least one >=50-fix session.",
+    "Proceed only if source-effective IDs total exactly 17 and split into exactly two leading-prefix groups with counts 9 and 8.",
+    "Map the 9-ID prefix to Hipposideros armiger and the 8-ID prefix to Hipposideros pratti, matching the paper's explicit tracked counts.",
+    "Raw IDs with zero >=50-fix sessions are retained in provenance as structurally unusable and cannot enter the later repeat-individual validation gate anyway.",
+    "If any of these exact conditions fail, declare MAPPING_UNRESOLVED and do not open numeric height."
+  ],
+  "why_not_outcome_guided": [
+    "The >=50 session threshold was frozen before raw access as the primary structural eligibility rule.",
+    "Only ID strings, timestamps, coordinates needed for row qualification, and height presence/nonblank status are used; height magnitude is never parsed.",
+    "The paper's 9/8 species counts are public source metadata and predate this analysis.",
+    "No vertical statistic has been opened in the Hipposideros family."
+  ],
+  "claim_boundary": [
+    "This mapping identifies species only for source-effective IDs under the pre-existing structural threshold.",
+    "D21 and D22 remain in raw-file provenance but are not used to manufacture the 9/8 split; they fail the pre-frozen full-session threshold.",
+    "The subsequent primary validation still requires >=2 qualifying nights plus >=50 common-support target events."
+  ]
+}

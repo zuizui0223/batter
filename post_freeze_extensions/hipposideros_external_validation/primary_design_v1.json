@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-hipposideros-primary-design-v1",
+  "frozen_date": "2026-09-30",
+  "status": "prospective primary external-validation design frozen before any numeric GPS height value is opened",
+  "source": {
+    "dataset_doi": "10.5061/dryad.j0zpc86r1",
+    "paper_doi": "10.1111/1365-2435.70088",
+    "file": "GPS_data.csv",
+    "vertical_field": "height",
+    "vertical_reference": "source-provided metres above ground level"
+  },
+  "prerequisites_before_height_opening": [
+    "raw file obtained through an authorized Dryad route and checksum recorded",
+    "species mapping resolved under species_mapping_contract_v2.json or the programme stops",
+    "structural gate including exact 5-km common-support/evaluability executed without numeric height and not altered after output",
+    "exact eligible species, individual ids, target nights, training-night universe and supported-event counts frozen in a preflight receipt"
+  ],
+  "species_mapping": {
+    "contract": "post_freeze_extensions/hipposideros_external_validation/species_mapping_contract_v2.json",
+    "v1_history": "species_mapping_contract_v1.json failed because all raw IDs were D=11/H=8; v2 uses the already-frozen >=50-fix session threshold to identify the source paper's 17 effective tracked individuals before mapping 9/8 species counts",
+    "exchangeability": "identity labels are never permuted across mapped species"
+  },
+  "session_definition": {
+    "if_timestamp_has_time": "timestamp shifted backward by 12 hours then calendar date",
+    "if_timestamp_date_only": "raw calendar date",
+    "unit": "individual x nocturnal date"
+  },
+  "structural_eligibility": {
+    "presence_qualified_row": "nonblank id, timestamp, longitude, latitude and height presence only; height magnitude remains unopened",
+    "minimum_presence_qualified_fixes_per_session": 50,
+    "repeat_individual": "at least two >=50-fix sessions",
+    "target_common_support": "for each candidate target night, count target rows whose frozen 5-km cell is present in at least one other >=50-fix night of the same individual and at least one >=50-fix night of another individual of the same species",
+    "minimum_supported_target_events": 50,
+    "estimator_evaluable_individual": "at least one target night with >=50 target common-support events",
+    "source_gate": "at least 5 estimator-evaluable individuals total",
+    "species_panel_gate": "a species contributes to the source-level primary statistic only if at least 3 estimator-evaluable individuals from that species remain",
+    "exact_preflight_freeze": "freeze exact eligible species, individual IDs, target nights, training-night universe and supported-event counts before numeric height is opened",
+    "no_rescue": "do not lower fix/session, supported-event, species-panel or source gates after structural output"
+  },
+  "horizontal_processing": {
+    "input": "source longitude/latitude",
+    "projection": "WGS84 / UTM zone 48N (EPSG:32648)",
+    "primary_grid_m": 5000,
+    "cell_definition": "floor(easting/5000), floor(northing/5000)",
+    "grid_origin": "native EPSG:32648 origin; no data-dependent translation"
+  },
+  "vertical_processing": {
+    "parse_rule": "every structurally retained nonblank height must parse to finite numeric; any failure aborts rather than silently dropping rows",
+    "session_centering": "subtract the median source AGL height of the full retained nightly session before vertical binning",
+    "centered_height_edges_m": [
+      "-inf",
+      -400,
+      -200,
+      -100,
+      -50,
+      0,
+      50,
+      100,
+      200,
+      400,
+      "inf"
+    ],
+    "absolute_height_endpoint": false
+  },
+  "estimator": {
+    "alpha": 0.5,
+    "minimum_scored_target_events": 50,
+    "self_profile": "equal-weight other eligible nights of the same individual within species",
+    "other_profile": "pool eligible nights within each other individual, then equal-weight other individuals within the same species",
+    "common_cell_weighting": "on target-supported cells available in both predictors, derive equal-night self training cell weights and apply the identical cell weights to self and other vertical profiles",
+    "session_score": "mean over supported target events of log P_self(centered z) - log P_other(centered z)",
+    "individual_aggregation": "equal target night within individual",
+    "species_aggregation": "equal individual within species",
+    "source_aggregation": "equal eligible species panel; if only one species passes the species-panel gate, the source-level statistic equals that eligible species statistic"
+  },
+  "primary_null": {
+    "unit": "whole nightly session",
+    "scope": "within species",
+    "action": "permute individual identity labels across eligible nightly sessions while preserving the exact number of sessions assigned to each identity; keep x-y, date, centered height outcomes and session membership fixed",
+    "pipeline": "recompute evaluability, target support, self/other profiles, common-cell weights and source-level statistic for every permutation"
+  },
+  "calibration": {
+    "B": 9999,
+    "seed": 2026093007,
+    "tail": "upper",
+    "p_value": "(1 + count(null >= observed)) / (B_valid + 1)"
+  },
+  "primary_pass_rule": {
+    "exact_preflight_structure_met": true,
+    "observed_minus_null_mean_gt_0": true,
+    "p_upper_le_0_05": true,
+    "all_required": true
+  },
+  "reporting": {
+    "primary": [
+      "source-level observed centered identity",
+      "source-level permutation-null mean and SD",
+      "calibrated excess",
+      "one-sided p",
+      "eligible species panels and individual counts"
+    ],
+    "secondary_descriptive_only": [
+      "species-specific observed and calibrated effects",
+      "per-individual scores",
+      "number of eligible target nights"
+    ],
+    "species_specific_p_values": "may be reported as descriptive diagnostics but do not replace the frozen source-level primary verdict"
+  },
+  "interpretation_matrix": {
+    "PASS": "A genuinely response-unopened external Hipposideros source supports centered individual vertical-distribution identity under species-stratified exchangeability.",
+    "FAIL": "The external Hipposideros source does not meet the frozen replication criterion. Do not rescue with alternate grid size, vertical bins, species pooling, lower session thresholds or alternate altitude endpoints."
+  },
+  "prohibited_after_height_opening": [
+    "change 5-km grid",
+    "change projection or grid origin",
+    "change centered-height bins",
+    "open raw absolute-height primary endpoint",
+    "pool identities across species",
+    "lower >=50-fix session rule",
+    "lower >=50 supported-target-event rule",
+    "lower species-panel or source gates",
+    "switch to another session definition",
+    "change preflight-frozen target-night or training-night universe",
+    "select a species as primary based on its vertical result",
+    "open temperature, speed, competition or other mechanism extensions as a rescue if the primary source-level test fails"
+  ],
+  "future_mechanism_boundary": "The source temperature, speed and other ecological fields are not part of the primary external validation. Any mechanism extension requires a new frozen contract and cannot alter the primary verdict."
+}
