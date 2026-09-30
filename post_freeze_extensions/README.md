@@ -4,50 +4,28 @@ The frozen v0.3.8 JAE submission on `main` is unchanged.
 
 ## Read first
 
-- `MECHANISM_SYNTHESIS_V10.md` — current external-boundary / multidimensional-spatial-individuality synthesis;
+- `MECHANISM_SYNTHESIS_V10.md` — current synthesis after the prospective Hipposideros boundary test;
 - `mechanism_status_v10.json` — machine-readable current status;
-- `MECHANISM_CLAIM_LEDGER_V10.md` — claim ceiling after both prospective external programmes;
-- `MECHANISM_CAUSE_TREE_V9.md` — current cause/generalization tree;
+- `MECHANISM_CLAIM_LEDGER_V10.md` — strongest defensible claims and claim ceilings;
+- `SPATIAL_INDIVIDUALITY_AXES_V1.md` — horizontal fidelity, absolute vertical level and centered vertical shape as separable axes;
+- `HIPPOSIDEROS_PRIMARY_CLOSEOUT_V1.md` — prospective Hipposideros primary FAIL and no-rescue closeout;
 - `NYCTALUS_VALIDATION_HISTORY_V1.md` — complete Nyctalus inferential chronology;
-- `NYCTALUS_ELIGIBILITY_ROBUSTNESS_RESULT_V1.md` — fixed 0–100-fix sensitivity;
-- `NYCTALUS_HMM_STATE_ATTRIBUTION_RESULT_V1.md` — support-matched HMM-state attribution;
-- `NYCTALUS_CENTRAL_PLACE_ATTRIBUTION_RESULT_V1.md` — central-place / radial-stage attribution;
+- `NYCTALUS_ELIGIBILITY_ROBUSTNESS_RESULT_V1.md` — 0–100-fix sensitivity;
+- `NYCTALUS_HMM_STATE_ATTRIBUTION_RESULT_V1.md` — support-matched HMM-state test;
+- `NYCTALUS_CENTRAL_PLACE_ATTRIBUTION_RESULT_V1.md` — central-place / flight-stage attribution;
 - `NYCTALUS_RESOURCE_CONTEXT_ATTRIBUTION_RESULT_V1.md` — final potential-roost × land-cover attribution;
-- `HIPPOSIDEROS_PRIMARY_CLOSEOUT_V1.md` — genuinely response-unopened Hipposideros prospective FAIL;
-- `NEXT_DECISIVE_MECHANISM_EXPERIMENT_V2.md` — original within-context field-design requirement.
+- `NYCTALUS_SAME_SOURCE_STOP_RULE_V1.md` — closure of same-source Nyctalus mechanism search;
+- `NEXT_DECISIVE_MECHANISM_EXPERIMENT_V2.md` — field design needed to identify remaining positive-system mechanisms.
 
-`MECHANISM_SYNTHESIS_V7.md` is historical and superseded by the integrity-corrected v8/v9/v10 hierarchy.
+`MECHANISM_SYNTHESIS_V7.md`, v8 and v9 are historical stages. v10 is the current post-freeze interpretation.
 
 ## Submission-confirmed result
 
-The frozen submission establishes that multiple original bat systems contain repeatable vertical individual information beyond coarse horizontal occupancy.
+The frozen submission establishes repeatable individual vertical organization beyond coarse horizontal occupancy. Five comparative panels retain centered vertical-distribution shape identity after session-median centering; focal `Tadarida` is the boundary case.
 
-After session-median centering, five comparative panels retain individual information in centered vertical-distribution shape. Focal `Tadarida` is the boundary case: absolute vertical identity remains, centered-shape identity does not.
+No post-freeze result changes the frozen submission.
 
-## Post-freeze mechanism localization
-
-Where centered vertical individuality is present, it survives increasingly rich context matching.
-
-Original comparative archive:
-- speed conditioning: **5/5** retain identity;
-- speed × turning: **5/5**;
-- 2-km place × state: **4/4**;
-- 500-m place × state: **4/4**;
-- 250-m place × state: **3/3**;
-- >=1-day self-history: **4/4**;
-- >=3-day: **3/3**;
-- >=7-day: **2/2**.
-
-Nyctalus support-matched localization:
-- HMM movement state: **no attenuation**, p_lower=0.5431;
-- track-start / central-place distance: **no attenuation**, p_lower=0.6886;
-- potential-roost distance × local 50-m land cover: **no attenuation**, p_lower=0.8204.
-
-This supports **context-residual individuality where a centered vertical signal exists**.
-
-It does not establish a universal mechanism.
-
-## Prospective external generality
+## Prospective external evidence
 
 ### Nyctalus
 
@@ -55,55 +33,61 @@ First frozen primary:
 - n=27;
 - calibrated excess **+0.05175**;
 - p=**0.1224**;
-- verdict **FAIL**.
+- verdict: **FAIL**.
 
-Later same-source sensitivity is directionally robust but post-outcome and does not restore prospective status.
+Later same-source sensitivity remains directionally positive across 7/7 frozen eligibility thresholds, but cannot restore prospective status.
 
 ### Hipposideros
 
-Genuinely response-unopened source-level primary:
-- *H. armiger* n=8;
-- *H. pratti* n=5;
-- source observed centered identity **-0.07575**;
-- null mean **-0.03106**;
-- calibrated excess **-0.04468**;
-- p(null >= observed) **0.8616**;
-- verdict **FAIL**.
+Genuinely response-unopened primary:
+- *H. armiger*: 8 estimator-evaluable individuals;
+- *H. pratti*: 5 estimator-evaluable individuals;
+- source calibrated excess **-0.04468**;
+- p=**0.8616**;
+- verdict: **FAIL**.
 
-Predeclared species diagnostics:
-- *H. armiger*: excess +0.01929, p=0.3721;
-- *H. pratti*: excess -0.10866, p_upper=0.9678.
+The Hipposideros programme is closed without rescue.
 
-Species diagnostics are secondary and do not replace the source-level verdict.
+Therefore successful prospective external replication of centered vertical individuality is **not established**.
 
-## Current general interpretation
+## Current ecological synthesis
 
-Successful prospective external replication of centered vertical-shape identity is **not established**.
+The broadest current result is **multidimensional / axis-specific spatial individuality**.
 
-The strongest current ecological synthesis is:
+At minimum, three properties can dissociate:
+1. horizontal location fidelity;
+2. absolute vertical level;
+3. centered vertical-distribution shape.
 
-> **Individual spatial specialization is multidimensional / axis-specific. Horizontal site fidelity, absolute vertical level and centered vertical-distribution shape can dissociate across bat systems.**
+Boundary evidence:
+- `Tadarida`: absolute vertical identity without centered-shape identity;
+- `Hipposideros`: strong source-reported horizontal site fidelity without successful centered-shape replication;
+- five original comparative panels: centered-shape identity remains after coarse horizontal occupancy is standardized.
 
-The key boundaries are:
-- `Tadarida`: absolute vertical individuality without centered-shape individuality;
-- `Hipposideros`: strong horizontal foraging-site fidelity without source-level centered vertical individuality;
-- original positive systems: centered vertical identity persists after coarse horizontal context is standardized.
+Thus:
 
-Therefore strong horizontal routine is **not sufficient** to generate repeatable centered vertical organization.
+> **Different dimensions of individual spatial specialization can vary independently across bat systems.**
 
-## Current questions
+“Independent” here is ecological shorthand for separable dimensions that can dissociate, not a claim of exact zero statistical covariance.
 
-Two questions now replace the earlier universal-mechanism framing:
+## Mechanistic localization where centered shape exists
 
-1. **What generates within-context vertical individuality where it occurs?**
-2. **What ecological or biological conditions determine whether centered vertical individuality occurs at all?**
+Original comparative archive:
+- speed conditioning: 5/5 retain identity;
+- speed × turning: 5/5;
+- 2-km place × state: 4/4;
+- 500-m: 4/4;
+- 250-m: 3/3;
+- >=1-day self-history: 4/4;
+- >=3-day: 3/3;
+- >=7-day: 2/2.
 
-Live candidate predictors for future independent systems:
-- exact sub-50-m resource/route geometry;
-- verified occupied-roost use;
-- fine local atmosphere and individual reaction norms;
-- wing loading / aspect ratio / detailed morphology;
-- memory, experience and learned routines.
+Nyctalus support-matched localization:
+- HMM-state attribution: no attenuation, p_lower=0.5431;
+- distance-from-track-start attribution: no attenuation, p_lower=0.6886;
+- potential-roost-distance × local 50-m land-cover attribution: no attenuation, p_lower=0.8204.
+
+This supports **context-residual individuality where the centered signal exists**, not a universal bat mechanism.
 
 ## Programme status
 
@@ -114,12 +98,19 @@ Closed:
 - Hipposideros prospective primary.
 
 Prohibited:
-- Nyctalus same-source rescue variants;
-- Hipposideros alternate grids/bins/thresholds/species pooling;
-- *H. armiger*-only promotion;
-- H32 exclusion;
-- Hipposideros temperature/speed/competition rescue analyses.
+- Hipposideros species-only rescue;
+- dropping H32;
+- alternate grids/bins/thresholds;
+- absolute-height rescue;
+- temperature/speed/competition rescue;
+- automatic continuation to another external source merely because Hipposideros failed.
 
-Further progress requires **new independent systems or new field data**, not reinterpretation of either frozen external FAIL.
+`Leptonycteris` remains an outcome-unopened archived candidate, but is **PAUSED**. Opening it now would require a separately frozen continuation objective, preferably to estimate cross-system heterogeneity rather than to search serially for a positive replication.
 
-No post-freeze result modifies the frozen v0.3.8 submission.
+## Next scientific questions
+
+1. What generates within-context vertical individuality where it occurs?
+2. What ecological or biological conditions determine whether centered vertical individuality emerges at all?
+3. What predicts covariance or dissociation among horizontal fidelity, absolute altitude level and centered vertical shape?
+
+Further progress should use new independent systems under a heterogeneity-oriented design or new field data with exact resource/route × behaviour × local-environment overlap.
