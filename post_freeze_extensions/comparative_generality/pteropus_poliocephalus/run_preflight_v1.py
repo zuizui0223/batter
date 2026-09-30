@@ -111,15 +111,7 @@ def main():
 
     # Pre-existing frozen Movebank session rule: split at gap >4h.
     d=d.sort_values(["iid","t"]).copy()
-    session_id=[]
-    for iid,g in d.groupby("iid",sort=False):
-        prev=None; k=0
-        for t in g["t"]:
-            if prev is not None and (t-prev)>pd.Timedelta(hours=4): k+=1
-            session_id.append((g.index[len(session_id)-sum(len(x) for _,x in [])] if False else None))
-            prev=t
-    # Assign safely by group indices.
-    d["session_num"]=-1
+    # Assign sessions by the frozen >4-hour gap rule.\n    d["session_num"]=-1
     for iid,g in d.groupby("iid",sort=True):
         prev=None;k=0
         vals=[]
