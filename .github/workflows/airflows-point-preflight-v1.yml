@@ -1,0 +1,42 @@
+name: airflows-point-preflight-v1
+on:
+  push:
+    branches: [prospective/airflows-point-preflight-v1]
+    paths:
+      - "post_freeze_extensions/comparative_generality/airflows/point_preflight_contract_v1.json"
+      - "post_freeze_extensions/comparative_generality/airflows/run_point_preflight_v1.py"
+      - ".github/workflows/airflows-point-preflight-v1.yml"
+  workflow_dispatch:
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install pandas numpy requests remotezip pyreadr pyproj
+      - name: Run sealed nonvertical point-level preflight
+        run: python post_freeze_extensions/comparative_generality/airflows/run_point_preflight_v1.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: batter-airflows-point-preflight-v1
+          path: |
+            post_freeze_extensions/comparative_generality/airflows/point_preflight_result_v1.json
+            post_freeze_extensions/comparative_generality/airflows/POINT_PREFLIGHT_RESULT_V1.md
+            post_freeze_extensions/comparative_generality/airflows/height_opening_receipt_v1.json
+          if-no-files-found: error
+      - name: Pin point preflight receipt
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add             post_freeze_extensions/comparative_generality/airflows/point_preflight_result_v1.json             post_freeze_extensions/comparative_generality/airflows/POINT_PREFLIGHT_RESULT_V1.md             post_freeze_extensions/comparative_generality/airflows/height_opening_receipt_v1.json
+          if git diff --cached --quiet; then
+            echo "No point-preflight changes"
+          else
+            git commit -m "Record sealed Airflows point-level preflight receipt"
+            git push origin HEAD:prospective/airflows-point-preflight-v1
+          fi
