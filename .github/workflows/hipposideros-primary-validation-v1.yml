@@ -1,6 +1,10 @@
 name: hipposideros-primary-validation-v1
 on:
   workflow_dispatch:
+  push:
+    branches: [prospective/hipposideros-primary-design-v1]
+    paths:
+      - ".github/workflows/hipposideros-primary-validation-v1.yml"
 jobs:
   primary:
     runs-on: ubuntu-latest
