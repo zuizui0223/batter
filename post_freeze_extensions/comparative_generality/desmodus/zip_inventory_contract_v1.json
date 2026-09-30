@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-desmodus-zip-inventory-v1",
+  "frozen_date": "2026-09-30",
+  "status": "metadata-only remote ZIP inventory before any GPS table value is read",
+  "programme": "batter-comparative-generality-program-v1",
+  "source": {
+    "repository": "Dryad",
+    "doi": "10.5061/dryad.7wm37pw53",
+    "landing_url": "https://datadryad.org/dataset/doi:10.5061/dryad.7wm37pw53",
+    "taxon": "Desmodus rotundus",
+    "archive_name": "Data_and_scripts.zip"
+  },
+  "allowed": [
+    "resolve the Dryad file id for Data_and_scripts.zip from repository metadata",
+    "read ZIP central-directory metadata by HTTP Range requests",
+    "list inner file paths, uncompressed sizes, compressed sizes and compression methods",
+    "identify exact paths whose basename equals total22_23_0s.xlsx or Final_GPS_2025.rds"
+  ],
+  "prohibited": [
+    "download the full archive",
+    "open any inner file contents",
+    "read GPS coordinates or altitude",
+    "rank individual bats or sessions",
+    "choose a different GPS inner file based on vertical values"
+  ],
+  "decision_rule": {
+    "preferred_raw_file": "total22_23_0s.xlsx",
+    "preferred_cleaned_file": "Final_GPS_2025.rds",
+    "next_step": "If the raw XLSX exists as an individually addressable ZIP member and its compressed size is operationally tractable, freeze its exact inner path and run a separate nonvertical schema/structural preflight. Otherwise retain the source as PENDING_ACCESS_SIZE."
+  },
+  "claim_boundary": [
+    "ZIP inventory establishes access structure only.",
+    "No GPS or altitude data value is opened."
+  ]
+}
