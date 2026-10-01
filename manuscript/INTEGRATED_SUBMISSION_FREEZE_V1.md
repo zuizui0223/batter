@@ -11,11 +11,11 @@ The integrated manuscript supersedes v0.3.8 as the intended submission route. Th
 
 ## Final automated audit at freeze
 
-- reviewer-facing main manuscript: **7,725 words**
+- reviewer-facing main manuscript: **7,839 words**
 - current title-page template: **151 words**
-- combined repository estimate: **7,876 words**
-- remaining buffer to the 8,500-word Research Article ceiling: **624 words**
-- numbered Abstract: **333 words**
+- combined repository estimate: **7,990 words**
+- remaining buffer to the 8,500-word Research Article ceiling: **510 words**
+- numbered Abstract: **331 words**
 - anonymous cover letter: **410 words**
 - Supporting Information: **2,435 words**, outside the journal word count
 - public tracking dataset persistent identifiers present: **10/10**
@@ -61,3 +61,5 @@ Any scientific change after this freeze requires an explicit documented unfreeze
 
 - Figures 2 and 4 now show panel/source-specific central 95% permutation-null intervals after recentering each null on its own mean; circles/crosses retain the pre-specified one-sided decision classification.
 - Figure 2 and Figure 4 scientific names are italicized, external labels use full scientific names consistently, and both figures contain an in-panel symbol/interval legend.
+
+- Ecological opportunity is defined as the **repeated availability of alternative solutions to the same task**. In the future test, resource anchoring operationalizes recurrence of the task and vertical opportunity operationalizes the number of reusable vertical solutions.
