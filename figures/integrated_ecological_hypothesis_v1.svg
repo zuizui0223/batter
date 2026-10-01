@@ -1,1 +1,60 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="550" viewBox="0 0 1200 550"><style>text{font-family:Arial,Helvetica,sans-serif;fill:#111} .axis{stroke:#111;stroke-width:1.2} .box{fill:#fff;stroke:#111;stroke-width:1.4} .muted{fill:#555} .thin{stroke:#777;stroke-width:1} .pt{fill:#fff;stroke:#111;stroke-width:2}</style><rect width="100%" height="100%" fill="white"/><text x="600" y="32" font-size="21" text-anchor="middle" class="">Post-hoc hypothesis generation: resource anchoring × vertical opportunity</text><rect x="60" y="75" width="230" height="85" rx="4" class="box"/><text x="175" y="105" font-size="14" text-anchor="middle" class=""><tspan x="175" dy="0">Persistent spatial</tspan><tspan x="175" dy="20">resource anchoring</tspan></text><rect x="60" y="205" width="230" height="85" rx="4" class="box"/><text x="175" y="235" font-size="14" text-anchor="middle" class=""><tspan x="175" dy="0">Repeated vertical</tspan><tspan x="175" dy="20">opportunity</tspan></text><rect x="365" y="140" width="255" height="95" rx="4" class="box"/><text x="492.5" y="170" font-size="14" text-anchor="middle" class=""><tspan x="492.5" dy="0">Stable alternative spatial</tspan><tspan x="492.5" dy="20">solutions repeatedly available</tspan></text><rect x="720" y="140" width="300" height="95" rx="4" class="box"/><text x="870" y="170" font-size="14" text-anchor="middle" class=""><tspan x="870" dy="0">Stronger expected expression</tspan><tspan x="870" dy="20">of centered vertical individuality</tspan></text><rect x="60" y="350" width="250" height="90" rx="4" class="box"/><text x="185" y="380" font-size="14" text-anchor="middle" class=""><tspan x="185" dy="0">Mobile / ephemeral prey</tspan><tspan x="185" dy="20">or surface-constrained feeding</tspan></text><rect x="385" y="350" width="230" height="90" rx="4" class="box"/><text x="500" y="380" font-size="14" text-anchor="middle" class=""><tspan x="500" dy="0">Fewer repeatable</tspan><tspan x="500" dy="20">vertical choices</tspan></text><rect x="720" y="350" width="300" height="90" rx="4" class="box"/><text x="870" y="380" font-size="14" text-anchor="middle" class=""><tspan x="870" dy="0">Weaker expected expression</tspan><tspan x="870" dy="20">of centered vertical individuality</tspan></text><line x1="290" y1="118" x2="357" y2="155" class="axis"/><polygon points="365,155 355,150 355,160" fill="#111"/><line x1="290" y1="248" x2="357" y2="180" class="axis"/><polygon points="365,180 355,175 355,185" fill="#111"/><line x1="620" y1="187" x2="712" y2="187" class="axis"/><polygon points="720,187 710,182 710,192" fill="#111"/><line x1="310" y1="395" x2="377" y2="395" class="axis"/><polygon points="385,395 375,390 375,400" fill="#111"/><line x1="615" y1="395" x2="712" y2="395" class="axis"/><polygon points="720,395 710,390 710,400" fill="#111"/><text x="1060" y="165" font-size="12" text-anchor="middle" class=""><tspan x="1060" dy="0">Competing predictors:</tspan><tspan x="1060" dy="18">wing morphology</tspan><tspan x="1060" dy="18">phylogeny / sensory ecology</tspan><tspan x="1060" dy="18">habitat structure</tspan><tspan x="1060" dy="18">atmospheric forcing</tspan><tspan x="1060" dy="18">tracking technology</tspan></text><text x="600" y="500" font-size="12" text-anchor="middle" class=""><tspan x="600" dy="0">Current systems generated this hypothesis; they are not fitted or scored as predictor observations.</tspan><tspan x="600" dy="18">Future confirmation uses only new sources coded before vertical outcomes are examined.</tspan></text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650">
+<rect width="100%" height="100%" fill="white"/>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;fill:#111}
+.box{fill:white;stroke:#111;stroke-width:1.4}
+.axis{stroke:#111;stroke-width:1.4}
+.muted{fill:#555}
+</style>
+<text x="600" y="36" font-size="22" text-anchor="middle">Post-hoc hypothesis generation: when can vertical individuality be expressed?</text>
+
+<rect x="45" y="105" width="210" height="90" rx="5" class="box"/>
+<text x="150" y="137" text-anchor="middle" font-size="15"><tspan x="150">Persistent resource</tspan><tspan x="150" dy="20">or feeding area</tspan></text>
+
+<rect x="315" y="105" width="220" height="90" rx="5" class="box"/>
+<text x="425" y="137" text-anchor="middle" font-size="15"><tspan x="425">Same ecological task</tspan><tspan x="425" dy="20">recurs across visits</tspan></text>
+
+<rect x="595" y="105" width="225" height="90" rx="5" class="box"/>
+<text x="707" y="137" text-anchor="middle" font-size="15"><tspan x="707">Several repeatable</tspan><tspan x="707" dy="20">vertical solutions exist</tspan></text>
+
+<rect x="880" y="105" width="250" height="90" rx="5" class="box"/>
+<text x="1005" y="137" text-anchor="middle" font-size="15"><tspan x="1005">Individuals can repeatedly</tspan><tspan x="1005" dy="20">use different solutions</tspan></text>
+
+<line x1="255" y1="150" x2="305" y2="150" class="axis"/><polygon points="315,150 305,145 305,155" fill="#111"/>
+<line x1="535" y1="150" x2="585" y2="150" class="axis"/><polygon points="595,150 585,145 585,155" fill="#111"/>
+<line x1="820" y1="150" x2="870" y2="150" class="axis"/><polygon points="880,150 870,145 870,155" fill="#111"/>
+
+<text x="710" y="232" text-anchor="middle" font-size="13" class="muted">Alternative solutions: approach height • canopy layer • route geometry</text>
+
+<line x1="1005" y1="195" x2="1005" y2="265" class="axis"/><polygon points="1005,275 1000,265 1010,265" fill="#111"/>
+<rect x="860" y="275" width="290" height="85" rx="5" class="box"/>
+<text x="1005" y="307" text-anchor="middle" font-size="15"><tspan x="1005">Stronger repeatable centered</tspan><tspan x="1005" dy="20">vertical individuality</tspan></text>
+
+<rect x="65" y="405" width="230" height="82" rx="5" class="box"/>
+<text x="180" y="440" text-anchor="middle" font-size="15"><tspan x="180">Mobile / ephemeral prey</tspan></text>
+
+<rect x="345" y="405" width="245" height="82" rx="5" class="box"/>
+<text x="467" y="432" text-anchor="middle" font-size="15"><tspan x="467">The spatial problem changes</tspan><tspan x="467" dy="20">from visit to visit</tspan></text>
+
+<rect x="650" y="405" width="220" height="82" rx="5" class="box"/>
+<text x="760" y="432" text-anchor="middle" font-size="15"><tspan x="760">Fewer reusable</tspan><tspan x="760" dy="20">vertical solutions</tspan></text>
+
+<line x1="295" y1="446" x2="335" y2="446" class="axis"/><polygon points="345,446 335,441 335,451" fill="#111"/>
+<line x1="590" y1="446" x2="640" y2="446" class="axis"/><polygon points="650,446 640,441 640,451" fill="#111"/>
+
+<rect x="65" y="520" width="230" height="82" rx="5" class="box"/>
+<text x="180" y="555" text-anchor="middle" font-size="15">Surface-constrained feeding</text>
+
+<rect x="345" y="520" width="245" height="82" rx="5" class="box"/>
+<text x="467" y="547" text-anchor="middle" font-size="15"><tspan x="467">The task permits little</tspan><tspan x="467" dy="20">vertical freedom</tspan></text>
+
+<line x1="295" y1="561" x2="335" y2="561" class="axis"/><polygon points="345,561 335,556 335,566" fill="#111"/>
+
+<rect x="905" y="455" width="245" height="88" rx="5" class="box"/>
+<text x="1027" y="487" text-anchor="middle" font-size="15"><tspan x="1027">Weaker expected centered</tspan><tspan x="1027" dy="20">vertical individuality</tspan></text>
+
+<line x1="870" y1="446" x2="895" y2="475" class="axis"/><polygon points="905,487 894,481 902,473" fill="#111"/>
+<line x1="590" y1="561" x2="895" y2="515" class="axis"/><polygon points="905,514 894,510 896,520" fill="#111"/>
+
+<text x="610" y="620" text-anchor="middle" font-size="12" class="muted">Current systems generated this hypothesis; future confirmation uses only new sources coded before vertical outcomes are examined.</text>
+</svg>
