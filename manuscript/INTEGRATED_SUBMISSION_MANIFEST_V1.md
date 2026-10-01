@@ -56,3 +56,6 @@ All ten public tracking datasets used in the integrated analysis now have full d
 
 - Rendered Figure 1–5 SVG files are committed under `figures/integrated_*.svg`; figure source tables and generation scripts remain versioned alongside them.
 - Reviewer-facing main manuscript and cover letter contain zero occurrences of the internal decision terms `frozen`, `PASS`, or `FAIL`; the translation policy is documented in `manuscript/JAE_TERMINOLOGY_MAP_V1.md`.
+
+- Figures 2 and 4 now show panel/source-specific central 95% permutation-null intervals after recentering each null on its own mean; circles/crosses retain the pre-specified one-sided decision classification.
+- Figure 2 and Figure 4 scientific names are italicized, external labels use full scientific names consistently, and both figures contain an in-panel symbol/interval legend.
