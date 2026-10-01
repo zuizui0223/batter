@@ -56,5 +56,7 @@ text{font-family:Arial,Helvetica,sans-serif;fill:#111}
 <line x1="870" y1="446" x2="895" y2="475" class="axis"/><polygon points="905,487 894,481 902,473" fill="#111"/>
 <line x1="590" y1="561" x2="895" y2="515" class="axis"/><polygon points="905,514 894,510 896,520" fill="#111"/>
 
+<text x="88" y="340" text-anchor="middle" font-size="11" class="muted"><tspan x="88">Generated from current systems;</tspan><tspan x="88" dy="16">not fitted to them</tspan></text>
+<text x="1165" y="375" text-anchor="end" font-size="10" class="muted"><tspan x="1165">Competing predictors:</tspan><tspan x="1165" dy="15">wing morphology</tspan><tspan x="1165" dy="15">phylogeny / sensory ecology</tspan><tspan x="1165" dy="15">habitat structure</tspan><tspan x="1165" dy="15">atmospheric forcing</tspan><tspan x="1165" dy="15">tracking technology</tspan></text>
 <text x="610" y="620" text-anchor="middle" font-size="12" class="muted">Current systems generated this hypothesis; future confirmation uses only new sources coded before vertical outcomes are examined.</text>
 </svg>
