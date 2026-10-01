@@ -11,13 +11,13 @@ The integrated manuscript supersedes v0.3.8 as the intended submission route. Th
 
 ## Final automated audit at freeze
 
-- reviewer-facing main manuscript: **7,821 words**
+- reviewer-facing main manuscript: **7,912 words**
 - current title-page template: **151 words**
-- combined repository estimate: **7,972 words**
-- remaining buffer to the 8,500-word Research Article ceiling: **528 words**
-- numbered Abstract: **313 words**
-- anonymous cover letter: **399 words**
-- Supporting Information: **2,437 words**, outside the journal word count
+- combined repository estimate: **8,063 words**
+- remaining buffer to the 8,500-word Research Article ceiling: **437 words**
+- numbered Abstract: **333 words**
+- anonymous cover letter: **410 words**
+- Supporting Information: **2,435 words**, outside the journal word count
 - public tracking dataset persistent identifiers present: **10/10**
 - full dataset citations: **10/10** in `Data sources`
 - Figure 1–5 cross-references: complete
@@ -55,3 +55,6 @@ Do not:
 Any scientific change after this freeze requires an explicit documented unfreeze and must not be silently folded into the submission.
 
 - Methods and Data availability both point to the **Data sources** section; ten archived tracking datasets have full persistent-identifier citations.
+
+- Rendered Figure 1–5 SVG files are committed under `figures/integrated_*.svg`; figure source tables and generation scripts remain versioned alongside them.
+- Reviewer-facing main manuscript and cover letter contain zero occurrences of the internal decision terms `frozen`, `PASS`, or `FAIL`; the translation policy is documented in `manuscript/JAE_TERMINOLOGY_MAP_V1.md`.
