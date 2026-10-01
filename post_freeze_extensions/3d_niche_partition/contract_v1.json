@@ -27,7 +27,8 @@
       "inf"
     ],
     "alpha": 0.5,
-    "pair_common_support_min_fixes_each": 50
+    "pair_common_support_min_fixes_each": 50,
+    "session_universe": "exact evaluable target-session set from completed centered-shape audit"
   },
   "primary_metric": "common-horizontal conditional vertical overlap O_Z_given_XY",
   "target_statistic": "equal-individual mean of session contrast self O_Z_given_XY minus equal-other-individual O_Z_given_XY",
