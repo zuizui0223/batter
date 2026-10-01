@@ -251,9 +251,9 @@ def descriptive_identity_matrices(sessions_by_cohort, caches):
                     if si["individual"] != a:
                         continue
                     for j, sj in enumerate(sessions):
-                        if j <= i:
-                            continue
                         if sj["individual"] != b:
+                            continue
+                        if a == b and j <= i:
                             continue
                         pm = get_pair(caches[cohort], i, j)
                         if pm is None:
