@@ -11,7 +11,7 @@
 
 ## Main-text status
 
-Numbered English Abstract: **333 words** (JAE limit: 350).
+Numbered English Abstract: **331 words** (JAE limit: 350).
 
 Repository word count after SI split: **7,752 words** for the current Markdown main document, including references and figure legends but before a separate title page is added.
 
@@ -59,3 +59,5 @@ All ten public tracking datasets used in the integrated analysis now have full d
 
 - Figures 2 and 4 now show panel/source-specific central 95% permutation-null intervals after recentering each null on its own mean; circles/crosses retain the pre-specified one-sided decision classification.
 - Figure 2 and Figure 4 scientific names are italicized, external labels use full scientific names consistently, and both figures contain an in-panel symbol/interval legend.
+
+- Ecological opportunity is defined as the **repeated availability of alternative solutions to the same task**. In the future test, resource anchoring operationalizes recurrence of the task and vertical opportunity operationalizes the number of reusable vertical solutions.
