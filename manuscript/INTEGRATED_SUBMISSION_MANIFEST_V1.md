@@ -61,3 +61,7 @@ All ten public tracking datasets used in the integrated analysis now have full d
 - Figure 2 and Figure 4 scientific names are italicized, external labels use full scientific names consistently, and both figures contain an in-panel symbol/interval legend.
 
 - Ecological opportunity is defined as the **repeated availability of alternative solutions to the same task**. In the future test, resource anchoring operationalizes recurrence of the task and vertical opportunity operationalizes the number of reusable vertical solutions.
+
+- The manuscript now anchors ecological opportunity to Araújo et al. (2011) and explicitly defines the generated movement-specific mechanism as **task-level ecological opportunity**: repeated availability of multiple reusable vertical solutions to the same recurring ecological task.
+- The Results now state that the *Phyllostomus hastatus* 2016 panel has a much wider permutation null and provides weaker support than the other four positive comparative panels despite meeting the pre-specified criterion.
+- Figures 2 and 4 use separate SVG text elements for scientific names and sample sizes; legends occupy dedicated space below the x-axis title, and Figure 4 uses full scientific names consistently.
