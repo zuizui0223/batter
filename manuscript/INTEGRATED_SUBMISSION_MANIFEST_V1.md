@@ -11,7 +11,7 @@
 
 ## Main-text status
 
-Numbered English Abstract: **313 words** (JAE limit: 350).
+Numbered English Abstract: **333 words** (JAE limit: 350).
 
 Repository word count after SI split: **7,752 words** for the current Markdown main document, including references and figure legends but before a separate title page is added.
 
@@ -53,3 +53,6 @@ This manifest supersedes v0.3.8 as the intended JAE submission route while prese
 All ten public tracking datasets used in the integrated analysis now have full dataset citations in the manuscript's **Data sources** section, in addition to the Data and code availability statement. This satisfies the journal requirement to cite archived datasets with persistent identifiers rather than listing DOIs only.
 
 - Methods and Data availability both point to the **Data sources** section; ten archived tracking datasets have full persistent-identifier citations.
+
+- Rendered Figure 1–5 SVG files are committed under `figures/integrated_*.svg`; figure source tables and generation scripts remain versioned alongside them.
+- Reviewer-facing main manuscript and cover letter contain zero occurrences of the internal decision terms `frozen`, `PASS`, or `FAIL`; the translation policy is documented in `manuscript/JAE_TERMINOLOGY_MAP_V1.md`.
