@@ -1,0 +1,10 @@
+system,status,H,V,S,geometry_class,note
+Hypsignathus monstrosus,inferential,0.2971822141719527,0.17069880834534373,0.10294924187835525,nested_3d,"original archive; primary 3D geometry supported"
+Phyllostomus hastatus 2022,inferential,0.2157813650073594,0.06595540399759724,-0.016597233954251095,nested_solution_fidelity,"original archive; primary 3D geometry supported"
+Phyllostomus hastatus 2023,inferential,0.3442565836173706,0.05416503692987814,-0.003922999202991638,nested_solution_fidelity,"original archive; primary 3D geometry supported"
+Phyllostomus hastatus 2016,inferential,0.3021435751463378,0.1452314707903748,0.1304000459741923,nested_3d,"original archive; primary 3D geometry supported"
+Myotis vivesi,inferential,-0.002935644695175382,0.03567682656878024,0.02170534557097472,weak_surface_constrained,"external; primary 3D geometry not supported, p=0.055"
+Pteropus poliocephalus MSL,inferential,0.22065671042936277,0.2815499391237034,0.2802428370109595,realized_nested_3d,"external native-MSL; primary 3D geometry supported"
+Pteropus poliocephalus MSL-DEM,diagnostic,0.22065671042936272,-0.040108107607114925,-0.04187970443126396,terrain_relative_weak,"secondary terrain-relative diagnostic; not supported"
+Tadarida teniotis,structural,0.1190870030973411,-0.10998410678857795,-0.09291278757648139,structural_only,"500-m primary gate not met; n=4"
+Nyctalus noctula,structural,0.23354194460626349,0.06444674036338524,,structural_only,"500-m primary gate not met; n=2"
