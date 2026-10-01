@@ -58,7 +58,7 @@ Prediction:
 - Delta_R may be positive, but this is secondary because terrain can generate apparent vertical structure.
 
 Pteropus terrain diagnostic:
-A separate secondary analysis may repeat D using centered MSL-minus-DEM height. This is not a second primary test. Based on the already known terrain audit, attenuation relative to native MSL is expected; persistence after DEM subtraction would support terrain-relative solution fidelity.
+A separate secondary analysis repeats the identical 500-m geometry using centered MSL-minus-DEM height with B=9,999 and seed 20261002025. This is not a second primary test and cannot overwrite the native-MSL geometry result. Based on the already known terrain audit, attenuation relative to native MSL is expected; persistence after DEM subtraction would support terrain-relative solution fidelity.
 
 ### Nyctalus noctula
 
