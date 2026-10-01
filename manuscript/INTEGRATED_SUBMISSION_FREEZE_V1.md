@@ -11,10 +11,10 @@ The integrated manuscript supersedes v0.3.8 as the intended submission route. Th
 
 ## Final automated audit at freeze
 
-- reviewer-facing main manuscript: **7,839 words**
+- reviewer-facing main manuscript: **7,958 words**
 - current title-page template: **151 words**
-- combined repository estimate: **7,990 words**
-- remaining buffer to the 8,500-word Research Article ceiling: **510 words**
+- combined repository estimate: **8,109 words**
+- remaining buffer to the 8,500-word Research Article ceiling: **391 words**
 - numbered Abstract: **331 words**
 - anonymous cover letter: **410 words**
 - Supporting Information: **2,435 words**, outside the journal word count
@@ -63,3 +63,7 @@ Any scientific change after this freeze requires an explicit documented unfreeze
 - Figure 2 and Figure 4 scientific names are italicized, external labels use full scientific names consistently, and both figures contain an in-panel symbol/interval legend.
 
 - Ecological opportunity is defined as the **repeated availability of alternative solutions to the same task**. In the future test, resource anchoring operationalizes recurrence of the task and vertical opportunity operationalizes the number of reusable vertical solutions.
+
+- The manuscript now anchors ecological opportunity to Araújo et al. (2011) and explicitly defines the generated movement-specific mechanism as **task-level ecological opportunity**: repeated availability of multiple reusable vertical solutions to the same recurring ecological task.
+- The Results now state that the *Phyllostomus hastatus* 2016 panel has a much wider permutation null and provides weaker support than the other four positive comparative panels despite meeting the pre-specified criterion.
+- Figures 2 and 4 use separate SVG text elements for scientific names and sample sizes; legends occupy dedicated space below the x-axis title, and Figure 4 uses full scientific names consistently.
