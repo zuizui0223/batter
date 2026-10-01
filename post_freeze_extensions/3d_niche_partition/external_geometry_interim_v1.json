@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-external-3d-geometry-interim-v1",
+  "myotis_vivesi": {
+    "evaluable_individuals": 4,
+    "self_oxy": 0.1423882611863159,
+    "other_oxy": 0.1453239058814913,
+    "H": -0.002935644695175382,
+    "self_ozxy": 0.8270013253261344,
+    "other_ozxy": 0.791324498757354,
+    "V": 0.03567682656878024,
+    "calibrated_excess": 0.03545953808482486,
+    "p_upper": 0.055,
+    "self_r3d": 0.05691255046986535,
+    "other_r3d": 0.07861789604084007,
+    "S": 0.02170534557097472,
+    "supported": false,
+    "prediction_status": "aligned_narrowly"
+  },
+  "nyctalus_noctula": {
+    "target_sessions": 47,
+    "evaluable_individuals_500m": 2,
+    "structural_gate": 5,
+    "self_oxy": 0.46564187466086204,
+    "other_oxy": 0.23209993005459856,
+    "H": 0.23354194460626349,
+    "self_ozxy": 0.748856252254777,
+    "other_ozxy": 0.6844095118913918,
+    "V": 0.06444674036338524,
+    "structurally_evaluable": false,
+    "prediction_status": "not_evaluable"
+  },
+  "pteropus_poliocephalus": {
+    "evaluable_individuals": 4,
+    "self_oxy": 0.4474757486403036,
+    "other_oxy": 0.22681903821094082,
+    "H": 0.22065671042936277,
+    "self_ozxy": 0.7371559920039616,
+    "other_ozxy": 0.4556060528802582,
+    "V": 0.2815499391237034,
+    "calibrated_excess": 0.2790788371385094,
+    "p_upper": 0.0001278118609406953,
+    "valid_permutations": 7823,
+    "self_r3d": 0.1386488464914487,
+    "other_r3d": 0.4188916835024082,
+    "S": 0.2802428370109595,
+    "supported": true,
+    "prediction_status": "aligned"
+  },
+  "hipposideros": {
+    "status": "raw retrieval blocked by HTTP 401; no 3D outcome opened",
+    "prediction_status": "unopened"
+  },
+  "implementation_equivalence": {
+    "source": "myotis_vivesi",
+    "exact_match": [
+      "observed",
+      "null_mean",
+      "q025",
+      "q50",
+      "q975",
+      "p_upper"
+    ],
+    "fast_runner_artifact": 11175155109,
+    "original_runner_artifact": 11173958732,
+    "pteropus_fast_artifact": 11174263024
+  }
+}
