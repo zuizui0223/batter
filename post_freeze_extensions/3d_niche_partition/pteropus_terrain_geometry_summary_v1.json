@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-pteropus-terrain-relative-3d-geometry-v1",
+  "workflow": {
+    "run_id": 36887389097,
+    "head_sha": "4c3a5fa45a064c8499de45364c7de8724be499a8",
+    "artifact_id": 11174578625,
+    "artifact_digest": "sha256:dc90328249af396355222d46ad95ec7156fe0a4cfef636c87a406ee5259dd145"
+  },
+  "native_msl": {
+    "H": 0.22065671042936277,
+    "V": 0.2815499391237034,
+    "S": 0.2802428370109595,
+    "calibrated_excess": 0.2790788371385094,
+    "p_upper": 0.0001278118609406953,
+    "supported": true
+  },
+  "terrain_relative": {
+    "H": 0.22065671042936272,
+    "V": -0.040108107607114925,
+    "S": -0.04187970443126396,
+    "calibrated_excess": -0.04030388316196988,
+    "p_upper": 0.9619992271029242,
+    "null_mean": 0.00019577555485495913,
+    "q025": -0.04422750375913954,
+    "q50": -0.0006778889205160162,
+    "q975": 0.04762977288279923,
+    "valid_permutations": 7762,
+    "invalid_permutations": 2237,
+    "supported": false
+  },
+  "interpretation": "native-MSL 3D niche geometry is strongly terrain-sensitive; realized 3D segregation reflects fine-scale landscape/topographic fidelity, while stable terrain-relative overlap geometry is not supported",
+  "claim_boundary": [
+    "secondary diagnostic; native-MSL geometry remains primary realized-space description",
+    "MSL-minus-DEM is a terrain-relative proxy, not measured AGL",
+    "does not establish competition or resource partitioning"
+  ]
+}
