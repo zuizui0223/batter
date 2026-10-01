@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-3d-niche-partition-v1",
+  "inferential_class": "post-outcome generated analysis specified before any 3D-overlap output",
+  "source_universe": [
+    "tadarida",
+    "eidolon",
+    "hypsignathus",
+    "phyllostomus_2022",
+    "phyllostomus_2023",
+    "phyllostomus_2016"
+  ],
+  "preprocessing": {
+    "horizontal_grid_m": 500,
+    "session_center": "median native height",
+    "centered_height_edges_m": [
+      "-inf",
+      -400,
+      -200,
+      -100,
+      -50,
+      0,
+      50,
+      100,
+      200,
+      400,
+      "inf"
+    ],
+    "alpha": 0.5,
+    "pair_common_support_min_fixes_each": 50
+  },
+  "primary_metric": "common-horizontal conditional vertical overlap O_Z_given_XY",
+  "target_statistic": "equal-individual mean of session contrast self O_Z_given_XY minus equal-other-individual O_Z_given_XY",
+  "structural_gate": {
+    "individual": "at least one evaluable self-session comparison and comparisons to at least two other individuals",
+    "panel_min_evaluable_individuals": 5
+  },
+  "permutation": {
+    "B": 9999,
+    "unit": "whole session identity label",
+    "scope": "within cohort",
+    "preserve": "exact session-count multiset per identity",
+    "seeds": {
+      "tadarida": 2026100201,
+      "eidolon": 2026100202,
+      "hypsignathus": 2026100203,
+      "phyllostomus_2022": 2026100204,
+      "phyllostomus_2023": 2026100205,
+      "phyllostomus_2016": 2026100206
+    }
+  },
+  "support_rule": "observed-minus-null-mean > 0 and one-sided p(null>=observed)<=0.05",
+  "secondary": [
+    "O_XY",
+    "O_XYZ",
+    "L_3D=O_XY-O_XYZ",
+    "R_3D=1-O_XYZ/O_XY",
+    "individual overlap matrices"
+  ],
+  "claim_ceiling": [
+    "repeatable individual-specific 3D niche geometry within shared horizontal landscapes",
+    "not intentional avoidance, competition causation, diet partitioning or adaptation"
+  ]
+}
