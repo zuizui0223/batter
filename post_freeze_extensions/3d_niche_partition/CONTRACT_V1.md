@@ -20,7 +20,7 @@ Use all six original archive panels with no outcome-based source selection: Tada
 
 ## Fixed preprocessing
 
-- Same raw source files, parsers and retained sessions as the centered-shape audit.
+- Same raw source files and parsers as the centered-shape audit. The session universe is the exact set of sessions that appeared as evaluable target sessions in the completed centered-shape audit; no additional session is admitted.
 - Subtract each retained session's median native height before vertical binning.
 - Same source-specific projected coordinate systems.
 - Primary horizontal grain: 500 m.
