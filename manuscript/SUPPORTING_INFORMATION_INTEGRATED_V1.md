@@ -76,7 +76,7 @@ For those panels, individual-by-cohort offsets were estimated relative to the me
 
 ### Descriptive profiles illustrate variation in central concentration and tail use
 
-The centered-shape result was not only an abstract prediction score. We reconstructed, for each evaluable individual in the five comparative panels, the exact leave-one-session-out identity-matched self profiles used by the frozen common-cell estimator and averaged them equally over that individual's evaluable target sessions (Figure 6). No new inferential test was applied, and the component summaries below were not separately calibrated.
+The centered-shape result was not only an abstract prediction score. We reconstructed, for each evaluable individual in the five comparative panels, the exact leave-one-session-out identity-matched self profiles used by the frozen common-cell estimator and averaged them equally over that individual's evaluable target sessions. No new inferential test was applied, and the component summaries below were not separately calibrated.
 
 After every session's median altitude had been removed, the displayed profile estimates varied visibly in how tightly probability was concentrated near zero and how much probability extended into the upper and lower tails. Central mass within -50 to +50 m ranged from 0.123 to 0.926 in *E. helvum*, 0.458 to 0.910 in *H. monstrosus*, 0.438 to 0.850 in *P. hastatus* 2022, 0.333 to 0.863 in the 2023 panel, and 0.548 to 0.994 in the 2016 panel. Upper-tail mass at >=100 m ranged from 0.022 to 0.215, 0.012 to 0.151, 0.037 to 0.157, 0.038 to 0.250, and 0.0009 to 0.0686 across those panels, respectively.
 
