@@ -8,12 +8,14 @@ This contract does not convert the current post-hoc ecological split into confir
 
 ## Generated hypothesis
 
-Stable centered vertical individuality should be stronger when animals repeatedly solve a foraging problem that combines:
+Stable centered vertical individuality should be stronger when animals repeatedly face the **same ecological task** and that task permits **multiple reusable vertical solutions**.
 
-1. **persistent spatial resource anchoring**, and
-2. **repeated vertical opportunity** to use alternative heights, layers, approach geometries or routes.
+The two coding dimensions operationalize those requirements:
 
-The hypothesis is allowed to fail.
+1. **persistent spatial resource anchoring** increases the chance that the same foraging problem recurs across visits;
+2. **repeated vertical opportunity** increases the number of alternative heights, layers, approach geometries or routes through which that recurring problem can be solved.
+
+Thus, in this contract, **ecological opportunity means the repeated availability of alternative solutions to the same task**. The hypothesis is allowed to fail.
 
 ## Confirmatory universe
 
@@ -33,15 +35,19 @@ Coding must use natural-history information independent of the tracking outcome.
 
 ### Resource anchoring score A
 
-- **0 — mobile/ephemeral:** the foraging target itself moves or appears transiently at the spatial scale of nightly foraging, with no persistent point/patch resource expected to be revisited.
-- **1 — mixed/intermediate:** both persistent and mobile resources are important, or resources persist as patches but not as stable point targets.
+A measures how strongly the ecological task is expected to **recur in a comparable spatial context**.
+
+- **0 — mobile/ephemeral:** the foraging target itself moves or appears transiently at the spatial scale of nightly foraging, so the spatial problem is likely to change from visit to visit.
+- **1 — mixed/intermediate:** both persistent and mobile resources are important, or resources persist as patches without creating a strongly repeated local task.
 - **2 — strongly anchored:** foraging is organized around persistent point or patch resources that can be revisited across nights, such as repeatedly used feeding trees, flowers, fixed feeding areas or equivalent stable resources.
 
 ### Vertical opportunity score V
 
-- **0 — strongly constrained:** effective foraging is restricted close to one physical surface or narrow layer.
-- **1 — intermediate:** vertical freedom exists but the resource/task is only weakly vertically structured.
-- **2 — strongly structured:** animals repeatedly choose among vertically separated resource layers, approach heights, routes or habitat strata.
+V measures how many **reusable vertical solutions** the recurring task plausibly permits.
+
+- **0 — strongly constrained:** effective foraging is restricted close to one physical surface or narrow layer, leaving little scope for alternative vertical solutions.
+- **1 — intermediate:** vertical freedom exists, but the task offers only limited or weakly structured alternatives.
+- **2 — strongly structured:** the same task can repeatedly be solved using distinct resource layers, approach heights, routes or habitat strata.
 
 ### Primary hypothesis score
 
