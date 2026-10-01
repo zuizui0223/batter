@@ -22,14 +22,14 @@ The frozen v0.3.8 manuscript on `main` remains provenance only and is no longer 
 Checked against the Journal of Animal Ecology author guidelines on 2026-10-01.
 
 - Research Article word limit: 8,500 words including title page, abstract, references, tables and figure legends; Supporting Information excluded.
-- Current reviewer-facing main manuscript repository count: **7,839 words**; current title-page template: **151 words**; combined repository estimate: **7,990 words**, leaving approximately 510 words before the 8,500-word ceiling.
+- Current reviewer-facing main manuscript repository count: **7,958 words**; current title-page template: **151 words**; combined repository estimate: **8,109 words**, leaving approximately 391 words before the 8,500-word ceiling.
 - Numbered English Abstract: **331 words**; limit 350.
 - Keywords: **7**, alphabetically ordered; limit 8.
 - Main manuscript has the required Introduction, Materials and Methods, Results, Discussion and References structure.
 - Data/archive statement is present.
 - Reviewer-facing manuscript scan finds no explicit project-owner name/repository identifier.
 - anonymous cover letter: **410 words**; journal limit 500.
-- Supporting Information is separated from the journal word count (**2,510 words** in the current repository file).
+- Supporting Information is separated from the journal word count (**2,391 words** in the current repository file).
 
 A final journal-platform word count must be rechecked after author names, affiliations and other title-page metadata are inserted.
 
@@ -136,3 +136,7 @@ All ten public tracking datasets used in the integrated analysis now have full d
 - Figure 2 and Figure 4 scientific names are italicized, external labels use full scientific names consistently, and both figures contain an in-panel symbol/interval legend.
 
 - Ecological opportunity is defined as the **repeated availability of alternative solutions to the same task**. In the future test, resource anchoring operationalizes recurrence of the task and vertical opportunity operationalizes the number of reusable vertical solutions.
+
+- The manuscript now anchors ecological opportunity to Araújo et al. (2011) and explicitly defines the generated movement-specific mechanism as **task-level ecological opportunity**: repeated availability of multiple reusable vertical solutions to the same recurring ecological task.
+- The Results now state that the *Phyllostomus hastatus* 2016 panel has a much wider permutation null and provides weaker support than the other four positive comparative panels despite meeting the pre-specified criterion.
+- Figures 2 and 4 use separate SVG text elements for scientific names and sample sizes; legends occupy dedicated space below the x-axis title, and Figure 4 uses full scientific names consistently.
