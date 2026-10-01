@@ -34,7 +34,13 @@
       "expected_D": "positive_supported",
       "expected_delta_R": "possibly_positive_secondary",
       "seed": 20261002022,
-      "secondary": "terrain-relative MSL-minus-DEM diagnostic allowed; attenuation expected from known terrain audit"
+      "secondary": "terrain-relative MSL-minus-DEM diagnostic allowed; attenuation expected from known terrain audit",
+      "terrain_secondary": {
+        "endpoint": "centered MSL-minus-DEM height",
+        "B": 9999,
+        "seed": 20261002025,
+        "role": "secondary terrain-relative geometry diagnostic; cannot overwrite native-MSL primary"
+      }
     },
     "nyctalus_noctula": {
       "prediction_class": "WEAK_CONTEXT_DEPENDENT",
