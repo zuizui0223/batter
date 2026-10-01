@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-external-ecology-to-geometry-v1",
+  "status": "fixed before any external 3D-overlap output; previous vertical outcomes known",
+  "primary_grid_m": 500,
+  "pair_shared_fix_min_each": 50,
+  "vertical_edges_m": [
+    "-inf",
+    -400,
+    -200,
+    -100,
+    -50,
+    0,
+    50,
+    100,
+    200,
+    400,
+    "inf"
+  ],
+  "alpha": 0.5,
+  "B": 9999,
+  "sources": {
+    "myotis_vivesi": {
+      "prediction_class": "WEAK_SURFACE_CONSTRAINED",
+      "primary_gate_n": 4,
+      "expected_D": "small_not_supported",
+      "expected_delta_R": "near_zero",
+      "seed": 20261002021
+    },
+    "pteropus_poliocephalus": {
+      "prediction_class": "NESTED_3D",
+      "primary_gate_n": 4,
+      "expected_horizontal": "self_gt_other",
+      "expected_D": "positive_supported",
+      "expected_delta_R": "possibly_positive_secondary",
+      "seed": 20261002022,
+      "secondary": "terrain-relative MSL-minus-DEM diagnostic allowed; attenuation expected from known terrain audit"
+    },
+    "nyctalus_noctula": {
+      "prediction_class": "WEAK_CONTEXT_DEPENDENT",
+      "primary_gate_n": 5,
+      "universe": "first prospective n=27 programme only",
+      "expected_D": "small_not_supported",
+      "state_rescue": false,
+      "seed": 20261002023
+    },
+    "hipposideros": {
+      "prediction_class": "HORIZONTAL_DOMINANT_OR_WEAK_VERTICAL",
+      "primary_gate_n": 5,
+      "species_stratified": true,
+      "expected_horizontal": "self_gt_other",
+      "expected_D": "not_strongly_positive",
+      "expected_delta_R": "small_near_zero",
+      "seed": 20261002024
+    }
+  },
+  "primary_metric": "D = self O_Z_given_XY - other O_Z_given_XY",
+  "secondary_metric": "Delta_R = other R3D - self R3D",
+  "stop_rule": [
+    "no recoding after output",
+    "no grid rescue",
+    "no threshold rescue",
+    "no Nyctalus n36 substitution",
+    "no state-conditioned rescue"
+  ]
+}
