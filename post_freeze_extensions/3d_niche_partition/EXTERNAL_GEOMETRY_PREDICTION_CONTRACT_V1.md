@@ -88,6 +88,7 @@ Prediction:
 - D is not expected to be strongly positive;
 - Delta_R is expected to be small or near zero;
 - species are analysed separately for identity exchangeability and then summarized source-wise.
+- Hipposideros source aggregation is fixed as: target sessions equally within individual, individuals equally within species, then structurally evaluable species equally at source level. A species contributes only with at least 3 evaluable individuals; the source primary gate additionally requires at least 5 evaluable individuals in total. Permutations never cross species.
 
 Interpretation if contradicted:
 A strong D or positive Delta_R would reveal an unmeasured vertical niche dimension within a system already known to coordinate competition across space, time and diet.
