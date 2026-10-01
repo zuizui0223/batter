@@ -1,0 +1,36 @@
+name: external-3d-geometry-fast-equivalence-v1
+
+on:
+  push:
+    branches:
+      - post-freeze/3d-niche-partition-v1
+    paths:
+      - "post_freeze_extensions/3d_niche_partition/run_external_geometry_fast_equivalence_v1.py"
+      - ".github/workflows/external-3d-geometry-fast-equivalence-v1.yml"
+  workflow_dispatch:
+
+jobs:
+  fast:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    permissions:
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        source:
+          - myotis_vivesi
+          - pteropus_poliocephalus
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -e . pandas requests
+      - name: Run exact vectorized 3D geometry estimator
+        run: python post_freeze_extensions/3d_niche_partition/run_external_geometry_fast_equivalence_v1.py --source "${{ matrix.source }}"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: external-3d-geometry-fast-${{ matrix.source }}-v1
+          path: post_freeze_extensions/3d_niche_partition/external_results_fast_equivalence/${{ matrix.source }}_fast_result_v1.json
+          if-no-files-found: error
