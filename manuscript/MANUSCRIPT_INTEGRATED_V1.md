@@ -14,7 +14,7 @@
 
 4. In *Pteropus*, subtracting DEM terrain reduced the calibrated excess to +0.032, but the terrain-adjusted endpoint remained above its pre-specified permutation null (p=0.0023); terrain use itself was individually repeatable (+0.379, p=0.0034). Thus the MSL-scale result was strongly terrain-sensitive, yet sampled terrain did not fully account for the retained terrain-relative signal. The external sources are not a prevalence sample.
 
-5. The opened systems generate, rather than confirm, a falsifiable ecological hypothesis: stable centered vertical individuality should be strongest where the same foraging problem recurs at persistent spatial resources and can be solved through multiple vertical routes or layers. It should be weaker where prey moves unpredictably or the task itself restricts height, as in surface-associated feeding. More generally, repeatable individual strategies may emerge most clearly where environments repeatedly offer alternative ways to solve the same task.
+5. The opened systems generate, rather than confirm, a falsifiable hypothesis: stable centered vertical individuality should be strongest where the same foraging task recurs at persistent resources and permits multiple vertical solutions, and weaker where prey moves unpredictably or feeding is surface-constrained. More generally, repeatable individual strategies may emerge where environments repeatedly offer alternative solutions to the same task.
 
 **Keywords:** bats; ecological opportunity; individual specialization; movement ecology; non-exchangeability; three-dimensional movement; vertical space use
 
