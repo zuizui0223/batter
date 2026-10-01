@@ -51,7 +51,10 @@
       "expected_horizontal": "self_gt_other",
       "expected_D": "not_strongly_positive",
       "expected_delta_R": "small_near_zero",
-      "seed": 20261002024
+      "seed": 20261002024,
+      "aggregation": "equal target sessions within individual; equal individuals within species; equal structurally evaluable species at source level",
+      "species_panel_min_evaluable_individuals": 3,
+      "source_total_min_evaluable_individuals": 5
     }
   },
   "primary_metric": "D = self O_Z_given_XY - other O_Z_given_XY",
