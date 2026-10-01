@@ -22,13 +22,13 @@ The frozen v0.3.8 manuscript on `main` remains provenance only and is no longer 
 Checked against the Journal of Animal Ecology author guidelines on 2026-10-01.
 
 - Research Article word limit: 8,500 words including title page, abstract, references, tables and figure legends; Supporting Information excluded.
-- Current reviewer-facing main manuscript repository count: **7,821 words**; current title-page template: **151 words**; combined repository estimate: **7,972 words**, leaving approximately 528 words before the 8,500-word ceiling.
-- Numbered English Abstract: **313 words**; limit 350.
+- Current reviewer-facing main manuscript repository count: **7,912 words**; current title-page template: **151 words**; combined repository estimate: **8,063 words**, leaving approximately 437 words before the 8,500-word ceiling.
+- Numbered English Abstract: **333 words**; limit 350.
 - Keywords: **7**, alphabetically ordered; limit 8.
 - Main manuscript has the required Introduction, Materials and Methods, Results, Discussion and References structure.
 - Data/archive statement is present.
 - Reviewer-facing manuscript scan finds no explicit project-owner name/repository identifier.
-- Anonymous cover letter: **399 words**; journal limit 500.
+- anonymous cover letter: **410 words**; journal limit 500.
 - Supporting Information is separated from the journal word count (**2,437 words** in the current repository file).
 
 A final journal-platform word count must be rechecked after author names, affiliations and other title-page metadata are inserted.
@@ -128,3 +128,6 @@ The integrated paper is now shorter, more falsifiable and more ecologically info
 All ten public tracking datasets used in the integrated analysis now have full dataset citations in the manuscript's **Data sources** section, in addition to the Data and code availability statement. This satisfies the journal requirement to cite archived datasets with persistent identifiers rather than listing DOIs only.
 
 - Methods and Data availability both point to the **Data sources** section; ten archived tracking datasets have full persistent-identifier citations.
+
+- Rendered Figure 1–5 SVG files are committed under `figures/integrated_*.svg`; figure source tables and generation scripts remain versioned alongside them.
+- Reviewer-facing main manuscript and cover letter contain zero occurrences of the internal decision terms `frozen`, `PASS`, or `FAIL`; the translation policy is documented in `manuscript/JAE_TERMINOLOGY_MAP_V1.md`.
