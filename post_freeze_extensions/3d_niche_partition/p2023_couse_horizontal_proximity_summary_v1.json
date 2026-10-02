@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-p2023-couse-horizontal-proximity-result-v1",
+  "workflow": {
+    "run_id": 36955928991,
+    "artifact_id": 11206131538,
+    "artifact_digest": "sha256:55251246f67cf435630ec2b4e1111303d15b8ae54e51d7377fac9d34dfce05ea"
+  },
+  "encounter_sha256": "d4250eafeb7b602e47f7b9449bb76d4a71af0f0bfaa3bc3b801b260e69f2f6bb",
+  "observed_mean_slope_m_per_100m": 20.932757073896706,
+  "null_mean_m_per_100m": 17.94459021750912,
+  "excess_slope": 2.9881668563875863,
+  "q025": 13.131961428233673,
+  "q50": 17.862079251057885,
+  "q975": 23.351800935575344,
+  "p_lower": 0.8889,
+  "p_upper": 0.1112,
+  "supported": false,
+  "descriptive": {
+    "within_100m": {
+      "observed_m": 19.952816000037895,
+      "null_mean_m": 30.747022786818334,
+      "p_upper": 0.8899
+    },
+    "within_250m": {
+      "observed_m": 25.172797714265776,
+      "null_mean_m": 24.29059295089111,
+      "p_upper": 0.3374
+    },
+    "over_250m": {
+      "observed_m": 40.08059333330919,
+      "null_mean_m": 28.764954368628576,
+      "p_upper": 0.0161
+    }
+  },
+  "interpretation": "no negative horizontal-proximity gradient; fine-scale within-cell spatial structure remains plausible"
+}
