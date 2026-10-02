@@ -88,7 +88,8 @@ def build_primary_encounters(records,tol_s,cfg,scope,centers,radius):
     }
     final_dyads={k:n for k,n in usable.items() if (k[0],k[1]) in inds and (k[0],k[2]) in inds}
     final=[m for m in scoped if (m["cohort"],m["a"],m["b"]) in final_dyads]
-    return final,final_dyads,inds
+    final_inds={(c,i) for c,a,b in final_dyads for i in (a,b)}
+    return final,final_dyads,final_inds
 
 
 def canonical_encounter(m):
