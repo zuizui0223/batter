@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-p2023-couse-microplace-preservation-v1",
+  "classification": "post-outcome mechanism-localization diagnostic",
+  "known_before_contract": {
+    "couse_primary_excess_m": 3.5737278739273783,
+    "couse_primary_p_upper": 0.0231,
+    "temporal_gradient_supported": false,
+    "temporal_gradient_p_lower": 0.095,
+    "horizontal_proximity_supported": false,
+    "horizontal_proximity_direction": "opposite predicted"
+  },
+  "frozen_primary": {
+    "encounter_sha256": "d4250eafeb7b602e47f7b9449bb76d4a71af0f0bfaa3bc3b801b260e69f2f6bb",
+    "encounters": 679,
+    "endpoints": 1358,
+    "dyads": 8,
+    "individuals": 6,
+    "observed_equal_dyad_median_separation_m": 26.56567049998826
+  },
+  "candidate_microplace_m": [
+    50,
+    100,
+    250
+  ],
+  "preflight": {
+    "endpoint_shiftable_fraction_min": 0.9,
+    "per_dyad_endpoint_shiftable_fraction_min": 0.7,
+    "dyads_with_both_endpoints_shiftable_min": 7,
+    "dyad_min_fully_shiftable_encounters": 5,
+    "selection_rule": "finest candidate scale passing every gate"
+  },
+  "null": {
+    "grouping": "individual x target session x original 500m cell x selected micro-subcell",
+    "action": "circular nonzero z_rel phase shift within group",
+    "B": 9999,
+    "primary_seed": 20261002116,
+    "secondary_seed_by_scale_m": {
+      "100": 20261002117,
+      "250": 20261002118
+    }
+  },
+  "support_rule": "observed-minus-null-mean > 0 and p(null>=observed)<=0.05"
+}
