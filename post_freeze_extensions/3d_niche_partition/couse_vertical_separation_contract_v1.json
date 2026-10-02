@@ -47,5 +47,12 @@
       "min_encounters": 50
     }
   },
-  "support_rule": "observed-minus-null-mean > 0 and one-sided p(null>=observed)<=0.05"
+  "support_rule": "observed-minus-null-mean > 0 and one-sided p(null>=observed)<=0.05",
+  "endpoint_exclusion": {
+    "proxy": "first five + last five fixes per target session; individual x cohort medoid endpoint",
+    "radius_m": 1000,
+    "encounter_keep_rule": "both participating fixes >= radius from their own proxy",
+    "primary_scope_rule": "use endpoint-excluded encounters if same structural gate still passes; otherwise retain all-space primary with generic co-presence interpretation",
+    "sensitivity_rescue": false
+  }
 }
