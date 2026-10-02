@@ -13,7 +13,7 @@ Keep the post-freeze 3D programme from collapsing distinct biological claims int
 | 3. terrain-relative solution fidelity | Does individual-specific vertical geometry remain after subtracting local terrain? | supported in Hypsignathus and all three Phyllostomus panels; absent under pairwise-overlap geometry in Pteropus | personal substrate-relative vertical strategy fidelity | mutually exclusive vertical niches |
 | 4. vertical segregation | Does adding z make different individuals less overlapping than repeated sessions of one individual? | strong in native coordinates for some systems, but S_rel near zero after terrain correction in original four panels | terrain can embed horizontal specialization into realized 3D separation | general vertical niche partitioning |
 | 5. synchronous co-use separation | During actual local co-use, is vertical separation larger than expected after preserving personal site-specific z distributions? | supported only in P. hastatus 2023; not supported in Hypsignathus, 2022 or 2016 | a context-dependent co-presence layer in 2023 | general competition-driven partitioning |
-| 6. proximity localization | Is the 2023 excess stronger at smaller temporal and/or horizontal separation? | temporal and horizontal-proximity diagnostics predeclared; outcome not yet used in this ledger | if supported, stronger interaction-proximity localization | competition as unique cause |
+| 6. proximity localization | Is the 2023 excess stronger at smaller temporal and/or horizontal separation? | temporal slope predicted direction but unsupported (p=0.095); horizontal slope opposite prediction (p_lower=0.889) | 2023 remains a coarse shared-site co-presence pattern; near-contact mechanism not established | competition / active avoidance |
 | 7. resource/competition mechanism | Is separation tied to identified resources or competitor density? | not tested | none yet | food partitioning, adaptive competition response |
 
 ## Central distinction
@@ -28,7 +28,7 @@ These are not synonyms.
 
 Current strongest recurrent result is level 3: **personal terrain-relative vertical strategy fidelity**.
 
-Current interaction-dependent evidence is limited to one 2023 Phyllostomus panel and remains post-outcome/localized.
+Current interaction-dependent evidence is limited to one 2023 Phyllostomus panel. Its positive co-use primary survives dyad and endpoint diagnostics but does not localize to the predeclared temporal or horizontal proximity gradients, favouring a shared-site/sub-cell spatial-structure interpretation over simple near-contact avoidance.
 
 ## Current ecological interpretation
 
