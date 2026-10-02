@@ -1,0 +1,41 @@
+name: couse-behavioural-context-v1
+
+on:
+  push:
+    branches:
+      - post-freeze/3d-niche-partition-v1
+    paths:
+      - "post_freeze_extensions/3d_niche_partition/run_couse_behavioural_context_v1.py"
+      - "post_freeze_extensions/3d_niche_partition/COUSE_BEHAVIOURAL_CONTEXT_AUDIT_V1.md"
+      - "post_freeze_extensions/3d_niche_partition/couse_primary_encounter_receipt_v1.json"
+      - ".github/workflows/couse-behavioural-context-v1.yml"
+      - "pyproject.toml"
+  workflow_dispatch:
+
+jobs:
+  context:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    permissions:
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        panel:
+          - hypsignathus
+          - phyllostomus_2022
+          - phyllostomus_2023
+          - phyllostomus_2016
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -e . pandas requests pyproj
+      - name: Describe movement context of frozen co-use encounters
+        run: python post_freeze_extensions/3d_niche_partition/run_couse_behavioural_context_v1.py --panel "${{ matrix.panel }}"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: couse-context-${{ matrix.panel }}-v1
+          path: post_freeze_extensions/3d_niche_partition/couse_context_results/${{ matrix.panel }}_context_v1.json
+          if-no-files-found: error
