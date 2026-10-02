@@ -13,6 +13,17 @@ The integration stop rule is now closed. The following are not promoted into the
 - a separate ecology-to-geometry framework;
 - additional mechanism searches prompted by these results.
 
-Current manuscript word count after integration: 8,147 whitespace-delimited words, below the 8,500-word working ceiling.
+Current manuscript word count after integration and methods completion: 8,384 whitespace-delimited words, below the 8,500-word working ceiling.
 
 The frozen pre-integration manuscript remains recoverable on the earlier release/mechanism branches.
+
+## Final integration audit
+
+- branch is 4 commits ahead and 0 behind the pre-integration mechanism-synthesis v9 final branch;
+- manuscript, claim ledger and reopening record are the only files changed on the manuscript integration branch;
+- 3D diagnostic Methods are present alongside Results;
+- wording does not claim absence of competition, equivalence to zero, or absence of resource partitioning;
+- the P. hastatus 2023 exception retains its 600-s/all-space limitation and wide dyad-level interval;
+- no additional exploratory result is promoted after this audit.
+
+Status: READY TO REFREEZE AS POST-FREEZE INTEGRATION CANDIDATE.
