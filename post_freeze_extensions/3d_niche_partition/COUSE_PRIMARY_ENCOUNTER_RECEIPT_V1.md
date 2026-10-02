@@ -8,7 +8,7 @@ No terrain-relative pair separation was used to define these encounter sets.
 
 Final definition:
 - selected synchronization tolerance from the x-y-time preflight;
-- endpoint-near fixes removed before matching in endpoint-excluded panels;
+- mutual-nearest matching constructed from the full shiftable x-y-time universe, followed by endpoint encounter filtering in endpoint-excluded panels;
 - mutual-nearest temporal matching within the same 500-m cell;
 - exact dyad/individual support gates fixed before vertical opening.
 
