@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-strategy-maintenance-preflight-v1",
+  "classification": "post-outcome mechanism preflight",
+  "panels": [
+    "hypsignathus",
+    "phyllostomus_2022",
+    "phyllostomus_2023",
+    "phyllostomus_2016"
+  ],
+  "candidate_environment_priority": [
+    "wind",
+    "vertical_motion_or_boundary_layer_proxy",
+    "temperature",
+    "precipitation",
+    "radiation_or_cloud"
+  ],
+  "minimum_panels_for_cross_panel_claim": 3,
+  "identifiability": {
+    "repeat_individuals_min": 5,
+    "sessions_per_individual_min": 2,
+    "individuals_with_span_min": 5,
+    "individual_span_fraction_of_panel_central90_min": 0.4,
+    "matched_target_fraction_min": 0.5,
+    "other_individual_donors_min": 2,
+    "max_single_night_fraction": 0.5
+  },
+  "primary_contrast": "same-individual reaction norm vs same-individual history without individual-by-environment slope",
+  "secondary_contrast": "same-individual history vs population environment model"
+}
