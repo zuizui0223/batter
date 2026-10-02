@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-noctule-independent-validation-v1",
+  "authoritative_workflow": {
+    "run_id": 36650800992,
+    "head_sha": "a352ee1560db8c6aea9ef99e61971b08e7ce2da5",
+    "artifact_id": 11069749646,
+    "artifact_digest": "sha256:43185dc20118ae483f47b53ab5ddf89afcfc896b832cbb7c3a1b52300306bf31"
+  },
+  "numeric_vertical_values_read": false,
+  "source_sha256": "2f373d47706c5b56313de70b623bb5446f5925c69af30f1b145993419e382aa9",
+  "cohorts": {
+    "19::one": {
+      "tracks_ge50": 15,
+      "repeat_individuals": 7,
+      "evaluable_individual_units": 6,
+      "evaluable_target_sessions": 10
+    },
+    "19::two": {
+      "tracks_ge50": 16,
+      "repeat_individuals": 4,
+      "evaluable_individual_units": 3,
+      "evaluable_target_sessions": 4
+    },
+    "20::one": {
+      "tracks_ge50": 20,
+      "repeat_individuals": 8,
+      "evaluable_individual_units": 7,
+      "evaluable_target_sessions": 13
+    },
+    "20::two": {
+      "tracks_ge50": 25,
+      "repeat_individuals": 11,
+      "evaluable_individual_units": 11,
+      "evaluable_target_sessions": 20
+    }
+  },
+  "tracks_ge50_total": 76,
+  "evaluable_individual_cohort_units_total": 27,
+  "evaluable_target_sessions_total": 47,
+  "preflight_pass": true,
+  "primary_validation_may_open": true
+}
