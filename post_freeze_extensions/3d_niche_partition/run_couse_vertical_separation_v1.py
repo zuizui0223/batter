@@ -34,7 +34,7 @@ ep=load_module("couse_endpoint_v1",ROOT/"post_freeze_extensions/3d_niche_partiti
 terr=load_module("orig_terrain_v1",ROOT/"post_freeze_extensions/3d_niche_partition/run_original_terrain_geometry_v1.py")
 
 CFG=ROOT/"post_freeze_extensions/3d_niche_partition/couse_vertical_separation_contract_v1.json"
-RECEIPT=ROOT/"post_freeze_extensions/3d_niche_partition/couse_primary_encounter_receipt_v1.json"
+RECEIPT=ROOT/"post_freeze_extensions/3d_niche_partition/couse_shiftability_receipt_v1.json"
 DEM_RECEIPT=ROOT/"post_freeze_extensions/3d_niche_partition/original_terrain_dem_preflight_receipt_v1.json"
 OUTDIR=ROOT/"post_freeze_extensions/3d_niche_partition/couse_vertical_results"
 
@@ -169,26 +169,26 @@ def reconstruct_primary(panel,records,cfg,receipt):
     centers,_=ep.endpoint_centers(records)
     radius=float(cfg["endpoint_exclusion"]["radius_m"])
 
-    # Authoritative frozen encounter ordering:
-    # full shiftable x-y-time universe -> mutual-nearest matching ->
-    # endpoint encounter filter (when applicable) -> support gates.
     rr_full,_,_=shift.shiftable_records(records,tol)
     encounters,dyads,inds=shift.build_primary_encounters(
         rr_full,tol,cfg,scope,centers,radius
     )
     desc=sorted(shift.canonical_encounter(m) for m in encounters)
     sha=hashlib.sha256(("\n".join(desc)+"\n").encode()).hexdigest()
-    if sha!=p["primary_encounter_set_sha256"]:
-        raise RuntimeError(f"{panel}: encounter SHA {sha} != frozen {p['primary_encounter_set_sha256']}")
-    if len(encounters)!=int(p["encounters"]) or len(dyads)!=int(p["usable_dyads"]):
-        raise RuntimeError(f"{panel}: encounter/dyad count mismatch")
+    if sha!=p["encounter_sha256"]:
+        raise RuntimeError(f"{panel}: encounter SHA {sha} != frozen {p['encounter_sha256']}")
+    if (
+        len(encounters)!=int(p["primary_encounters"]) or
+        len(dyads)!=int(p["usable_dyads"]) or
+        len(inds)!=int(p["usable_individuals"])
+    ):
+        raise RuntimeError(f"{panel}: encounter/dyad/individual count mismatch")
 
-    # The z-phase null uses only the primary-scope fix universe.
     phase_rr=(
         [r for r in rr_full if ep.is_away(r,centers,radius)]
         if scope=="endpoint_excluded" else rr_full
     )
-    return phase_rr,encounters,dyads,inds,sha
+    return phase_rr,encounters,dyads,inds,sha,centers
 
 
 def encounter_endpoint_key(m,side):
@@ -252,32 +252,48 @@ def panel_stat(sep,di,n_dyads):
     return float(np.mean(meds)),meds
 
 
-def permuted_endpoint_values(group_data,g,p,rng):
+def draw_group_shifts(group_data,rng):
+    shifts={}
+    for gid,gd in group_data.items():
+        n=int(gd["n"])
+        shifts[int(gid)]=int(rng.integers(1,n)) if n>=2 else 0
+    return shifts
+
+
+def permuted_endpoint_values(group_data,g,p,shifts):
     out=np.empty(len(g),dtype=float)
     for gid in np.unique(g):
         mask=(g==gid)
         gd=group_data[int(gid)]
         n=int(gd["n"])
-        if n>=2:
-            sh=int(rng.integers(1,n))
-            out[mask]=gd["z"][(p[mask]+sh)%n]
-        else:
-            out[mask]=gd["z"][p[mask]]
+        sh=int(shifts[int(gid)])
+        out[mask]=gd["z"][(p[mask]+sh)%n]
     return out
 
 
 def run(panel):
     cfg=json.loads(CFG.read_text(encoding="utf-8"))
     receipt=json.loads(RECEIPT.read_text(encoding="utf-8"))
-    if receipt.get("status")!="PRIMARY_ENCOUNTER_SET_MAY_OPEN_VERTICAL":
-        raise RuntimeError("primary encounter receipt does not permit vertical opening")
+    if receipt.get("status")!="VERTICAL_SEPARATION_MAY_OPEN":
+        raise RuntimeError("shiftability receipt does not permit vertical opening")
 
+    # Verify the frozen encounter set using x-y-time only before opening z.
+    xy_records=shift.pre.load_xy_time(panel)
+    _,encounters,dyads,inds,esha,_=reconstruct_primary(
+        panel,xy_records,cfg,receipt
+    )
+
+    # Only after the encounter SHA/counts match do we load native height and DEM.
     records,contract=load_panel_records(panel)
     terrain_summary=add_terrain_relative_z(panel,records,contract)
-    rr,encounters,dyads,inds,esha=reconstruct_primary(panel,records,cfg,receipt)
+    rr,_,_,_,esha_z,_=reconstruct_primary(panel,records,cfg,receipt)
+    if esha_z!=esha:
+        raise RuntimeError(f"{panel}: x-y-time encounter SHA changed after z load")
 
     lookup=make_record_lookup(rr)
-    group_data,ga,pa,gb,pb,di,dyad_list=build_phase_groups(rr,lookup,encounters)
+    group_data,ga,pa,gb,pb,di,dyad_list=build_phase_groups(
+        rr,lookup,encounters
+    )
 
     za=observed_endpoint_values(group_data,ga,pa)
     zb=observed_endpoint_values(group_data,gb,pb)
@@ -289,8 +305,9 @@ def run(panel):
     rng=np.random.default_rng(seed)
     null=np.empty(B,dtype=float)
     for b in range(B):
-        za_p=permuted_endpoint_values(group_data,ga,pa,rng)
-        zb_p=permuted_endpoint_values(group_data,gb,pb,rng)
+        shifts=draw_group_shifts(group_data,rng)
+        za_p=permuted_endpoint_values(group_data,ga,pa,shifts)
+        zb_p=permuted_endpoint_values(group_data,gb,pb,shifts)
         null[b]=panel_stat(np.abs(za_p-zb_p),di,len(dyad_list))[0]
 
     calibration=cal.tail_summary(null.tolist(),obs)
