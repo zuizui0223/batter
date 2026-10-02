@@ -3,7 +3,7 @@
   "study_id": "batter-couse-primary-encounter-receipt-v1",
   "status": "PRIMARY_ENCOUNTER_SET_MAY_OPEN_VERTICAL",
   "vertical_values_used": false,
-  "definition": "endpoint exclusion applied before mutual-nearest matching in endpoint-excluded panels; fixed all-space matching for 2023",
+  "definition": "mutual-nearest encounters built on full shiftable x-y-time universe; endpoint-excluded panels then filter encounters by both fixes >=1000 m from own endpoint proxy, then apply support gates; 2023 remains all-space",
   "panels": {
     "hypsignathus": {
       "primary_scope": "endpoint_excluded",
