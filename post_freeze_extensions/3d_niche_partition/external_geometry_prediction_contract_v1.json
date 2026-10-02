@@ -40,7 +40,10 @@
         "B": 9999,
         "seed": 20261002025,
         "role": "secondary terrain-relative geometry diagnostic; cannot overwrite native-MSL primary"
-      }
+      },
+      "terrain_secondary_seed": 20261002025,
+      "terrain_secondary_B": 9999,
+      "terrain_secondary_status": "seed and B fixed after native-MSL geometry output but before any terrain-adjusted 3D geometry output; secondary endpoint was predeclared"
     },
     "nyctalus_noctula": {
       "prediction_class": "WEAK_CONTEXT_DEPENDENT",
