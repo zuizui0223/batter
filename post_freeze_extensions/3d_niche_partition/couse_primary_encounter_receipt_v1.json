@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-couse-primary-encounter-receipt-v1",
+  "status": "PRIMARY_ENCOUNTER_SET_MAY_OPEN_VERTICAL",
+  "vertical_values_used": false,
+  "definition": "endpoint exclusion applied before mutual-nearest matching in endpoint-excluded panels; fixed all-space matching for 2023",
+  "panels": {
+    "hypsignathus": {
+      "primary_scope": "endpoint_excluded",
+      "tolerance_s": 60,
+      "encounters": 883,
+      "usable_dyads": 22,
+      "usable_individuals": 11,
+      "shiftable_endpoint_fraction": 0.9920724801812004,
+      "primary_encounter_set_sha256": "fdafe2a5c07acec790196617dc011dae97cb435a061a10c62893479eddc7139c",
+      "artifact_id": 11204538536,
+      "artifact_digest": "sha256:72433d65911300f4075013382868a4070a2075a53a57d3196870983a035c7146"
+    },
+    "phyllostomus_2022": {
+      "primary_scope": "endpoint_excluded",
+      "tolerance_s": 60,
+      "encounters": 347,
+      "usable_dyads": 10,
+      "usable_individuals": 7,
+      "shiftable_endpoint_fraction": 0.9942363112391931,
+      "primary_encounter_set_sha256": "f5395250f476e22eab441bd9c2b52297277f282e71d66c0a4eebc531f612158a",
+      "artifact_id": 11204364635,
+      "artifact_digest": "sha256:3f8b66f163e8077cd001da4feb5c674873c58c4be649525b10210bd16f0e7009"
+    },
+    "phyllostomus_2023": {
+      "primary_scope": "all_space",
+      "tolerance_s": 600,
+      "encounters": 679,
+      "usable_dyads": 8,
+      "usable_individuals": 7,
+      "shiftable_endpoint_fraction": 0.9410898379970545,
+      "primary_encounter_set_sha256": "d4250eafeb7b602e47f7b9449bb76d4a71af0f0bfaa3bc3b801b260e69f2f6bb",
+      "artifact_id": 11204622812,
+      "artifact_digest": "sha256:66226a58eac48b062e468b15a482860db3a1c2314e969db67e67a2700cc1072a"
+    },
+    "phyllostomus_2016": {
+      "primary_scope": "endpoint_excluded",
+      "tolerance_s": 600,
+      "encounters": 16096,
+      "usable_dyads": 8,
+      "usable_individuals": 5,
+      "shiftable_endpoint_fraction": 1,
+      "primary_encounter_set_sha256": "65efc47708c6e4b85d4012421cb3d84e3983c46acf46bbe64a7305a8f5546402",
+      "artifact_id": 11203878881,
+      "artifact_digest": "sha256:382d87079d1d96d6c885ac354bb46ea0b21984e90474a7a2a4004da6f942bb28"
+    }
+  },
+  "gate": "all four panels exceed 90% phase-shiftable encounter endpoints",
+  "next_step": "vertical terrain-relative encounter separation may be computed only if reconstructed x-y-time encounter SHA matches this receipt exactly"
+}
