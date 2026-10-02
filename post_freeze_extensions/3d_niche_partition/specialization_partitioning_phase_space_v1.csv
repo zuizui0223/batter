@@ -1,0 +1,5 @@
+panel,V_rel,couse_excess_m,couse_p,scope,tolerance_s,couse_supported
+Hypsignathus monstrosus,0.041862873401873585,-1.9962184510494225,0.9077,endpoint_excluded,60,false
+Phyllostomus hastatus 2022,0.09955973281399592,-0.9309024161391575,0.9057,endpoint_excluded,60,false
+Phyllostomus hastatus 2023,0.07688679184597079,3.6052583011202266,0.0214,all_space,600,true
+Phyllostomus hastatus 2016,0.07865008741736887,-0.8542448099707176,0.8595,endpoint_excluded,600,false
