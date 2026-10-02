@@ -1,190 +1,211 @@
 # Ecology-to-geometry synthesis v4
 
-## Why v4 is needed
+## Central result
 
-The terrain-relative 3D audit showed that repeatable personal vertical strategy and persistent between-individual niche segregation are different quantities.
+The post-freeze 3D programme now separates four biological layers that are often collapsed under "individual specialization" or "niche partitioning":
 
-The synchronous co-use test now adds a fourth distinction:
+1. **landscape fidelity** — an individual repeatedly returns to particular x-y portions of the landscape;
+2. **personal vertical-strategy fidelity** — within shared horizontal space, an individual repeatedly reuses a characteristic vertical configuration;
+3. **static niche segregation** — different individuals occupy substantially non-overlapping vertical configurations;
+4. **dynamic co-presence response** — individuals become additionally separated when they locally co-occur.
 
-> **stable personal specialization is also different from interaction-dependent separation during co-presence.**
+The data show that these layers are empirically distinct.
 
-Thus individual spatial specialization cannot be summarized by one overlap score.
+> **Stable individual strategies do not imply niche partitioning, and niche geometry does not imply active avoidance.**
 
-## Four geometric components
+## Layer 1 — landscape fidelity
 
-### H — landscape fidelity
-
+Metric:
 H = self O_XY - other O_XY.
 
-Question:
-Does the same individual repeatedly reuse the same horizontal landscape elements more than conspecifics do?
+Strong positive H occurs in the structurally evaluable original panels and in Pteropus.
 
-### V — personal vertical-strategy fidelity
+This says individuals repeatedly reuse different parts of the landscape.
 
+## Layer 2 — personal vertical-strategy fidelity
+
+Metric:
 V_rel = self O_Z|XY - other O_Z|XY after DEM terrain subtraction.
 
-Question:
-Within shared horizontal space, does an individual repeatedly reuse its own terrain-relative vertical configuration?
+Supported in all four original panels structurally evaluable at 500 m:
 
-### S — persistent niche segregation
+- Hypsignathus +0.042
+- P. hastatus 2022 +0.100
+- P. hastatus 2023 +0.077
+- P. hastatus 2016 +0.079
 
-S_rel = other R_3D - self R_3D after terrain subtraction.
+Thus individuals repeatedly reuse personal vertical configurations relative to the local terrain.
 
-Question:
-Does adding terrain-relative height make different individuals' realized niches less overlapping than repeated sessions of the same individual?
+This is the strongest recurrent post-freeze ecological result.
 
-A positive V does not require positive S.
+## Layer 3 — static vertical niche segregation
 
-### I — interaction-dependent vertical separation
+Metric:
+S_rel = other R_3D - self R_3D after terrain correction.
 
-I = observed synchronous terrain-relative separation - phase-shift null mean.
+Current values:
 
-The phase null preserves:
-- the fixed observed co-use encounters;
-- each individual's site-specific vertical distribution;
-- stable personal strategy;
-- horizontal location and timing of co-use;
+- Hypsignathus -0.016
+- 2022 -0.009
+- 2023 +0.016
+- 2016 +0.029
 
-but breaks momentary cross-individual vertical alignment.
+None shows strong terrain-relative added segregation.
 
-Question:
-During actual co-presence, do individuals separate vertically more than expected from their stable personal strategies alone?
+Therefore personal vertical strategies remain substantially overlapping among individuals.
 
-## Current empirical decomposition
+The current archive supports **specialization without strong static vertical partitioning**.
 
-| panel | H | V_rel | S_rel | I | I p | interpretation |
-|---|---:|---:|---:|---:|---:|---|
-| *Hypsignathus monstrosus* | +0.297 | +0.042 | -0.016 | -1.98 m | 0.9045 | personal strategy; no extra co-presence separation |
-| *P. hastatus* 2022 | +0.216 | +0.100 | -0.009 | -0.95 m | 0.9186 | personal strategy; no extra co-presence separation |
-| *P. hastatus* 2023 | +0.344 | +0.077 | +0.016 | **+3.57 m** | **0.0231** | personal strategy plus context-dependent co-presence separation |
-| *P. hastatus* 2016 | +0.302 | +0.079 | +0.029 | -0.85 m | 0.8611 | personal strategy; no extra co-presence separation |
+## Layer 4 — dynamic co-presence-dependent separation
 
-The striking result is not that all positive-V systems partition vertically during interaction.
+The fixed encounter-phase null preserves each individual's site-specific vertical distribution and asks whether actual synchronous local co-use adds separation.
 
-It is the opposite:
+Results:
 
-> **terrain-relative personal vertical strategies recur across all four panels, while additional co-presence-dependent separation is exceptional rather than general.**
+- Hypsignathus: excess -1.98 m, p_upper=0.9045
+- P. hastatus 2022: -0.95 m, p_upper=0.9186
+- P. hastatus 2023: +3.57 m, p_upper=0.0231
+- P. hastatus 2016: -0.85 m, p_upper=0.8611
 
-## Specialization without partitioning
+Thus only the 2023 panel contains evidence for an additional co-presence layer.
 
-The dominant geometry is therefore:
+Three panels with clear personal vertical-strategy fidelity show **no extra separation during co-use**.
 
-1. individuals repeatedly use different horizontal landscape portions;
-2. within shared space they also retain repeatable personal terrain-relative vertical configurations;
-3. those personal configurations still overlap strongly among individuals;
-4. actual local co-presence usually does not increase vertical separation further.
+This directly demonstrates that repeatable individual strategy and dynamic partitioning are different phenomena.
 
-This is **specialization without strong partitioning**.
+## Localization of the 2023 exception
 
-It means a population can contain stable individual "ways of using space" without being decomposed into mutually exclusive individual niches.
+The 2023 co-use result survives:
+- equal-dyad weighting;
+- leave-one-dyad-out diagnostics (positive excess in 8/8; p<0.05 in 6/8);
+- a descriptive endpoint-excluded universe (+3.81 m; four individuals, therefore non-inferential).
 
-## The 2023 exception
+But the proximity predictions do not succeed.
 
-The 2023 *P. hastatus* panel adds a possible interaction-responsive layer.
+### Temporal proximity
 
-Under its frozen all-space, 600-s co-use definition:
-- observed equal-dyad median separation = 26.57 m;
-- phase-null mean = 22.99 m;
-- I = +3.57 m;
-- p = 0.0231.
+Most encounters are already near-synchronous:
+- median |Delta t| = 3 s;
+- 599/679 are <=60 s.
 
-This is consistent with momentary or short-timescale vertical separation during local co-use beyond stable personal strategy.
+The predeclared equal-dyad temporal slope is in the predicted direction:
+- observed -13.56 m per additional minute;
+- null mean -9.57;
+- p_lower=0.095.
 
-But this cannot yet be called competition:
-- 600 s is coarse synchrony;
-- endpoint-excluded support failed the individual gate;
-- encounters are highly localized;
-- social coordination, resource depletion, central-place behavior or other synchronous processes remain alternatives.
+The fixed criterion is not met.
 
-Thus 2023 is a **context-dependent interaction signal**, not evidence for a universal avoidance rule.
+### Horizontal proximity
 
-## Revised ecological predictions
+The predeclared interaction prediction is the opposite of the observed direction:
+- predicted: vertical separation should increase as horizontal distance decreases;
+- observed slope: +20.93 m per additional 100 m;
+- null mean +17.94;
+- p_lower=0.889.
 
-### Persistent resource use can generate H without V
+Descriptively:
+- <=100 m encounters do not show positive excess;
+- <=250 m are near null;
+- >250 m show the largest separation.
 
-Individuals specialize on different landscape elements. If those elements differ in terrain elevation, raw 3D separation can emerge without residual vertical strategy.
+Therefore the 2023 excess does not localize to near-contact geometry.
 
-Current example:
-*Pteropus poliocephalus*.
+## Revised interpretation of 2023
 
-### Recurrent task with reusable personal solutions can generate V without S or I
+The corrected primary remains real under its frozen 500-m co-use endpoint:
 
-Individuals repeatedly solve the same task in personally consistent ways, but those strategies remain overlapping and need not change when conspecifics are present.
+> actual local co-use in 2023 contains more vertical separation than the fixed phase null.
 
-Current dominant examples:
-*Hypsignathus*, *P. hastatus* 2022 and 2016.
+But the new localization results argue against a simple "individuals get close and move vertically apart" mechanism.
 
-### Interaction-dependent partitioning specifically predicts I > 0
+The more defensible interpretation is:
 
-If competition or another synchronous interaction actively pushes individuals apart in height, observed co-presence should add separation beyond each individual's stable site-specific vertical distribution.
+> **a context-specific shared-site spatial organization, potentially involving sub-cell route, canopy, resource or microhabitat geometry.**
 
-Current evidence:
-one 2023 panel only.
+Competition remains possible but is not the leading inference from the current geometry.
 
-### Surface-constrained feeding predicts weak V
+## Pteropus: a separate geometry class
 
-If the ecological task physically restricts distance from a surface, there is little residual vertical freedom available for stable personal solutions.
+Pteropus shows another way that 3D individuality can be generated.
 
-Current consistent but weak example:
-*Myotis vivesi*.
+Native MSL:
+- H +0.221
+- V_abs +0.282
+- S_abs +0.280
 
-## A stronger general principle
+Terrain-relative:
+- V_rel -0.040
+- S_rel -0.042
 
-The current general hypothesis is:
+Thus strong realized 3D separation can be inherited from repeated selection of different topographic landscape elements without a stable terrain-relative vertical overlap geometry.
 
-> **Ecological strategy may determine where individual information is encoded in spatial behavior: landscape choice, personal vertical strategy, persistent niche segregation, or interaction-dependent displacement.**
+This is **landscape-embedded 3D specialization**, distinct from both personal vertical-strategy fidelity and interaction-driven partitioning.
 
-These are not interchangeable forms of "individuality".
+## The non-trivial ecological hypothesis
 
-Two populations can have equally repeatable individuals but differ fundamentally in mechanism:
-- one because individuals return to different hills or feeding patches;
-- one because individuals use personally repeatable heights relative to the same terrain;
-- one because individuals occupy persistently segregated vertical niches;
-- one because individuals dynamically separate only when they encounter one another.
+The earlier statement "ecological opportunity allows individual differences" is too weak.
+
+The stronger hypothesis is:
+
+> **Ecological strategy predicts where individual-specific information is encoded in spatial geometry.**
+
+Possible outcomes include:
+
+### A. Landscape-embedded specialization
+H positive; V_abs/S_abs positive; V_rel/S_rel collapse after substrate correction.
+
+### B. Personal vertical-strategy specialization
+V_rel positive; S_rel near zero; co-presence excess absent.
+
+Individuals repeatedly use different strategies but do not exclude one another.
+
+### C. Static vertical partitioning
+V_rel positive and S_rel strongly positive.
+
+Different personal strategies become genuinely segregated vertical niches.
+
+Not established in the current terrain-corrected panels.
+
+### D. Dynamic interaction-dependent partitioning
+co-presence separation positive **and** localized toward greater spatiotemporal proximity.
+
+The current 2023 primary co-use signal does not satisfy the proximity-localization prediction, so this class is not established.
+
+### E. Weak or constrained geometry
+H and V weak or structurally unavailable.
+
+Current Myotis result is consistent with this under a surface-constrained task.
+
+## General principle
+
+The current programme supports:
+
+> **Individual specialization is a statement about repeatability; niche partitioning is a statement about separation; interaction is a statement about context-dependent change.**
+
+These should be measured separately.
+
+This distinction is biologically important because populations can contain stable individual strategies even when:
+- individuals share the same resources;
+- their realized niches strongly overlap;
+- they do not move farther apart during co-presence.
 
 ## Consequence for the original "food partitioning" idea
 
-The current evidence does not support a broad claim that bats deliberately divide food or airspace among individuals.
+The current tracking archive does not establish food partitioning.
 
-The stronger supported statement is:
-
-> **individuals repeatedly reuse personal spatial solutions, while active co-presence-dependent vertical partitioning is at most context-specific.**
-
-To establish competition-mediated food partitioning, future data must link I or S to:
-- identified shared resources;
-- direct simultaneous resource use;
+To test true resource partitioning, the next decisive data are not another movement threshold. They are:
+- identified feeding trees/patches or prey resources;
+- simultaneous resource use by tagged individuals;
+- diet/resource identity;
 - competitor density;
-- resource depletion;
-- diet identity;
-- experimental resource manipulation.
+- resource depletion/manipulation.
 
-## Methodological implication
-
-A 3D niche study should distinguish at least four questions:
-
-1. Are individuals horizontally faithful? H
-2. Do they have repeatable substrate-relative vertical strategies? V
-3. Are their niches persistently segregated? S
-4. Do they dynamically separate during actual co-presence? I
-
-Collapsing these into one 3D overlap measure can confuse landscape fidelity, personality-like strategy, niche partitioning and interaction response.
-
-## Claim ceiling
-
-Current evidence supports:
-- recurrent H and V in several bat panels;
-- weak S after terrain correction;
-- I in one 2023 panel but not three other evaluable panels;
-- the empirical separability of fidelity, segregation and interaction response.
-
-Current evidence does not establish:
-- competition as the driver of I;
-- intentional avoidance;
-- general food partitioning;
-- a universal cross-species ecology-to-geometry law.
+Movement geometry has now reached its inferential ceiling.
 
 ## Submission boundary
 
-This entire H-V-S-I synthesis is post-outcome exploratory work on the extension branch.
+All analyses in this synthesis are post-freeze extensions.
 
-It should not be inserted into the frozen JAE submission without an explicit unfreeze and full chronology disclosure.
+The frozen JAE submission should remain unchanged unless explicitly reopened.
+
+The post-freeze programme is strong enough to motivate a separate geometry/resource-partitioning paper or a deliberate later revision, but its chronology must remain explicit.
