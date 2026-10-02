@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-noctule-independent-validation-v1",
+  "frozen_date": "2026-09-30",
+  "status": "independent external-validation programme frozen before numeric Height outcomes",
+  "role": "prospective validation using a source selected outcome-blind after closure of the original Movebank/archive programme; cannot alter frozen v0.3.8 unless separately reopened after validation",
+  "source": {
+    "taxon": "Nyctalus noctula",
+    "repository": "Zenodo",
+    "doi": "10.5281/zenodo.7535030",
+    "study_title": "Wind energy production in forests conflicts with tree-roosting bats",
+    "file": "Observed_GPS_locations.csv",
+    "download_url": "https://zenodo.org/api/records/7535030/files/Observed_GPS_locations.csv/content",
+    "sha256": "2f373d47706c5b56313de70b623bb5446f5925c69af30f1b145993419e382aa9",
+    "row_count_expected": 8129,
+    "fields": {
+      "individual": "bat_id",
+      "session": "trackid",
+      "timestamp": "utc",
+      "x": "x",
+      "y": "y",
+      "native_vertical": "Height",
+      "year": "Year",
+      "field_period": "field_period"
+    },
+    "vertical_reference": "GPS-estimated height above geoid / mean sea level"
+  },
+  "cohort_definition": {
+    "rule": "year × field_period",
+    "rationale": "The source sampled 2019/2020 and early/late-summer field periods; identity exchangeability is restricted within these documented temporal sampling strata.",
+    "outcome_blind": true
+  },
+  "preflight": {
+    "numeric_vertical_values_allowed": false,
+    "allowed_vertical_operation": "nonblank/non-NA presence only",
+    "minimum_presence_qualified_fixes_per_session": 50,
+    "minimum_repeat_individuals_total": 5,
+    "repeat_definition": "at least two >=50-fix sessions within the same frozen cohort",
+    "common_cell_grid_m": 5000,
+    "target_support": "A target fix is structurally supported when its 5-km cell occurs in at least one other eligible session of the same individual and in at least one eligible session from another individual in the same cohort.",
+    "minimum_supported_target_fixes": 50,
+    "individual_evaluable": "at least one target session with >=50 supported target fixes",
+    "gate": "At least 5 evaluable repeat individuals across admitted cohorts. Freeze exact cohort/session/individual eligibility before numeric Height is read."
+  },
+  "primary_validation_if_preflight_passes": {
+    "ecological_question": "Does repeatable individual centered vertical-distribution identity replicate in an independent common-noctule dataset selected without using vertical outcomes?",
+    "vertical_preprocessing": "Within each retained session, convert native Height to numeric only after the preflight is frozen, then subtract that session's median Height.",
+    "vertical_edges_m": [
+      "-inf",
+      -400,
+      -200,
+      -100,
+      -50,
+      0,
+      50,
+      100,
+      200,
+      400,
+      "inf"
+    ],
+    "horizontal_cell_m": 5000,
+    "predictor": "P(centered residual height | 5-km cell)",
+    "self_weighting": "equal eligible training session of the target individual",
+    "other_weighting": "equal other individual within the same cohort",
+    "common_weighting": "On 5-km cells supported by both predictors, compute equal-session self cell weights and apply the identical weights to self and other centered vertical profiles.",
+    "target_scoring": "held-out target-session fixes in common supported cells; minimum 50 fixes",
+    "individual_aggregation": "equal target session within individual",
+    "panel_aggregation": "equal evaluable individual across admitted cohorts",
+    "calibration": {
+      "permutation_unit": "whole session identity labels",
+      "scope": "within frozen cohort",
+      "preserve": "all within-session x-y-time-centered-z data and exact original session-count multiset per identity label",
+      "B": 9999,
+      "seed": 2026093001
+    },
+    "pass_rule": "exact preflight-frozen evaluable n; observed-minus-null-mean common-cell centered identity > 0; one-sided p(null >= observed) <= 0.05"
+  },
+  "staged_mechanism_extension": {
+    "rule": "Do not open mechanism replication unless the independent centered-shape primary validation passes.",
+    "possible_next_tests": [
+      "speed×turn kinematic-state conditioning using source x-y-time only",
+      "500-m fine-place × kinematic matching if an outcome-blind support preflight passes",
+      ">=1-day temporal-persistence replication if an outcome-blind lag-support preflight passes",
+      "source-provided move_state as a secondary externally defined behavioural proxy, only under a separately frozen contract"
+    ]
+  },
+  "claim_boundary": [
+    "The source was selected because it passed a frozen structural gate, not because of its vertical behavior.",
+    "The primary validation tests centered full-distribution identity, not any single tail/concentration component.",
+    "A PASS is independent evidence for repeatable organization of vertical space use in another taxon and tracking programme; it does not identify mechanism.",
+    "A FAIL does not invalidate the original five-panel result; it limits generality.",
+    "The original v0.3.8 manuscript remains frozen during this validation."
+  ],
+  "stop_rule": [
+    "Do not change cohort definition, 5-km grid, >=50-fix session/target thresholds, vertical bins, weighting, permutation unit, B, seed or pass rule after preflight or vertical output.",
+    "Do not pool across year×field_period cohorts to rescue a failed primary test.",
+    "Do not open kinematic/fine-place/persistence mechanism extensions if the independent primary centered-shape test fails.",
+    "Do not substitute another external source after seeing this source's vertical outcome."
+  ]
+}
