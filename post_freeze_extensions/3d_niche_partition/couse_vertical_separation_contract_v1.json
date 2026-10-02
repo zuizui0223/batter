@@ -49,7 +49,8 @@
       "phyllostomus_2022": 20261002102,
       "phyllostomus_2023": 20261002103,
       "phyllostomus_2016": 20261002104
-    }
+    },
+    "group_fix_universe": "same frozen primary scope as encounter analysis: endpoint-excluded fixes for endpoint-excluded panels; all retained fixes for all-space panels"
   },
   "support_rule": "observed-minus-null-mean > 0 and one-sided p(null>=observed)<=0.05",
   "endpoint_exclusion": {
