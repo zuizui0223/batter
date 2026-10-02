@@ -31,6 +31,8 @@ The observed x-y-time encounter set is fixed exactly as determined by:
 - mutual-nearest temporal matching;
 - the frozen endpoint/all-space primary scope.
 
+The vertical phase-shift groups use the **same primary-scope fix universe** as the encounter analysis: endpoint-excluded fixes only in panels whose frozen primary scope is endpoint-excluded, and all retained fixes in the 2023 all-space panel. Thus endpoint-associated heights removed from the primary co-use question are not reintroduced through the null.
+
 For each biological individual × target session × 500-m cell:
 
 1. order all fixes in that group by timestamp;
