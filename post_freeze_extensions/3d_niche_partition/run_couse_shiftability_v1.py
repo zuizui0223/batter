@@ -127,7 +127,7 @@ def run(panel):
                 unshiftable_groups[key]+=1
 
     frac=endpoint_shiftable/endpoint_total if endpoint_total else 0.0
-    gate=frac>=float(cfg["null"]["pre_vertical_shiftability_gate"])
+    gate=frac>=float(cfg["null"]["pre_vertical_shiftability_fraction_min"])
 
     desc=sorted(canonical_encounter(m) for m in encounters)
     encounter_sha=hashlib.sha256(("\n".join(desc)+"\n").encode()).hexdigest()
@@ -147,7 +147,7 @@ def run(panel):
         "encounter_endpoint_count":endpoint_total,
         "shiftable_endpoint_count":endpoint_shiftable,
         "shiftable_endpoint_fraction":frac,
-        "required_fraction":float(cfg["null"]["pre_vertical_shiftability_gate"]),
+        "required_fraction":float(cfg["null"]["pre_vertical_shiftability_fraction_min"]),
         "phase_shiftability_gate_met":bool(gate),
         "unshiftable_endpoint_group_count":len(unshiftable_groups),
         "primary_encounter_set_sha256":encounter_sha,
