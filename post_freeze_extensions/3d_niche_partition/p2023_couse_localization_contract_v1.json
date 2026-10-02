@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-p2023-couse-localization-diagnostic-v1",
+  "classification": "post-outcome robustness diagnostic",
+  "primary_reference": {
+    "run_id": 36953712597,
+    "panel": "phyllostomus_2023",
+    "primary_p": 0.0231
+  },
+  "leave_one_dyad_out": {
+    "B": 9999,
+    "seed": 20261002103,
+    "dyads": 8,
+    "reselect_support": false
+  },
+  "endpoint_excluded": {
+    "B": 9999,
+    "seed": 20261002113,
+    "individuals": 4,
+    "dyads": 6,
+    "encounters": 629,
+    "inferential": false
+  }
+}
