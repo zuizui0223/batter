@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# Requires final x-y-time encounter receipt and shiftability implementation.
 from __future__ import annotations
 
 import argparse
