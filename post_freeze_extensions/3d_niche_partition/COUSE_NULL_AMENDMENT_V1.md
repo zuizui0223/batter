@@ -44,6 +44,8 @@ For each biological individual × target session × 500-m cell:
 
 Groups with fewer than two fixes cannot be phase-shifted. Before the vertical outcome is opened, an x-y-time-only support check records how many primary encounter endpoints belong to groups of size >=2. A panel may proceed only if at least 90% of primary encounter endpoints are shiftable; otherwise it stops structurally.
 
+Groups with one primary-scope fix remain in the fixed encounter set, but their z_rel value is left unchanged in every null replicate. They are not dropped or imputed. This makes the null conservative for the small unshiftable fraction and prevents a z-dependent change in the encounter universe.
+
 ## What this null preserves
 
 Exactly preserves:
