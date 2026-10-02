@@ -1,0 +1,22 @@
+name: strategy-maintenance-source-schema-preflight-v1
+on:
+  push:
+    branches: [post-freeze/strategy-maintenance-preflight-v1]
+    paths:
+      - "post_freeze_extensions/strategy_maintenance/source_schema_preflight_v1.py"
+      - ".github/workflows/strategy-maintenance-source-schema-preflight-v1.yml"
+  workflow_dispatch:
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: python post_freeze_extensions/strategy_maintenance/source_schema_preflight_v1.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: strategy-maintenance-source-schema-preflight-v1
+          path: post_freeze_extensions/strategy_maintenance/source_schema_preflight_v1.json
