@@ -32,19 +32,23 @@
     "panel_aggregation": "equal mean of usable dyad medians"
   },
   "null": {
-    "type": "independent within-session circular timestamp shifts preserving x-y-z trajectory",
-    "minimum_phase_offset": "2 * selected tolerance from zero modulo session span",
+    "type": "fixed observed encounter set; circular z_rel phase shift within individual x session x 500-m cell",
     "B": 9999,
+    "shift": "random nonzero circular index within each group; groups with <2 fixes unshiftable",
+    "pre_vertical_shiftability_gate": "at least 90% of primary encounter endpoints belong to groups with >=2 fixes",
+    "preserves": [
+      "observed encounter identities/cells/times",
+      "horizontal trajectories",
+      "each individual-session-cell vertical distribution",
+      "stable site-specific personal vertical strategy",
+      "encounter and dyad counts"
+    ],
+    "destroys": "momentary cross-individual vertical alignment",
     "seeds": {
       "hypsignathus": 20261002101,
       "phyllostomus_2022": 20261002102,
       "phyllostomus_2023": 20261002103,
       "phyllostomus_2016": 20261002104
-    },
-    "valid_replicate_gate": {
-      "min_individuals": 5,
-      "min_dyads": 5,
-      "min_encounters": 50
     }
   },
   "support_rule": "observed-minus-null-mean > 0 and one-sided p(null>=observed)<=0.05",
@@ -54,5 +58,6 @@
     "encounter_keep_rule": "both participating fixes >= radius from their own proxy",
     "primary_scope_rule": "use endpoint-excluded encounters if same structural gate still passes; otherwise retain all-space primary with generic co-presence interpretation",
     "sensitivity_rescue": false
-  }
+  },
+  "null_amendment": "COUSE_NULL_AMENDMENT_V1.md; amended after x-y-time preflight and before any vertical-separation outcome"
 }
