@@ -1,197 +1,190 @@
 # Ecology-to-geometry synthesis v4
 
-## Core result
+## Why v4 is needed
 
-The spatial analyses now separate three phenomena that are often conflated:
+The terrain-relative 3D audit showed that repeatable personal vertical strategy and persistent between-individual niche segregation are different quantities.
 
-1. **individual specialization** — the same individual repeatedly reuses a characteristic spatial solution;
-2. **niche segregation** — different individuals occupy less-overlapping parts of niche space;
-3. **interaction-dependent partitioning** — individuals increase their separation specifically when they are locally co-present.
+The synchronous co-use test now adds a fourth distinction:
 
-The data show that these are not equivalent.
+> **stable personal specialization is also different from interaction-dependent separation during co-presence.**
 
-## Evidence ladder
+Thus individual spatial specialization cannot be summarized by one overlap score.
 
-### 1. Landscape fidelity
+## Four geometric components
 
-Repeated sessions of the same individual overlap more in x-y than sessions of different individuals in the structurally evaluable panels.
+### H — landscape fidelity
 
-This establishes a horizontal layer of individual spatial specialization.
+H = self O_XY - other O_XY.
 
-### 2. Terrain-relative vertical-strategy fidelity
+Question:
+Does the same individual repeatedly reuse the same horizontal landscape elements more than conspecifics do?
 
-After subtracting DEM terrain, all four structurally evaluable original panels retain a positive, permutation-supported within-individual vertical-overlap advantage:
+### V — personal vertical-strategy fidelity
 
-- *Hypsignathus monstrosus*: V_rel +0.042, p=0.0001
-- *Phyllostomus hastatus* 2022: +0.100, p=0.0001
-- *P. hastatus* 2023: +0.077, p≈0.00010
-- *P. hastatus* 2016: +0.079, p≈0.0345
+V_rel = self O_Z|XY - other O_Z|XY after DEM terrain subtraction.
 
-Thus each individual tends to reuse a personal vertical configuration within shared horizontal space.
+Question:
+Within shared horizontal space, does an individual repeatedly reuse its own terrain-relative vertical configuration?
 
-### 3. Terrain-relative mutual segregation
+### S — persistent niche segregation
 
-After terrain correction, the descriptive added-segregation quantity S_rel is near zero in all four panels:
+S_rel = other R_3D - self R_3D after terrain subtraction.
 
-- Hypsignathus -0.016
-- 2022 -0.009
-- 2023 +0.016
-- 2016 +0.029
+Question:
+Does adding terrain-relative height make different individuals' realized niches less overlapping than repeated sessions of the same individual?
 
-Personal strategies therefore remain substantially overlapping among individuals.
+A positive V does not require positive S.
 
-### 4. Synchronous co-presence-dependent separation
+### I — interaction-dependent vertical separation
 
-The strongest test preserves each individual's site-specific vertical distribution and the exact observed shared-site encounter set, while circularly phase-shifting z within individual × session × cell groups.
+I = observed synchronous terrain-relative separation - phase-shift null mean.
 
-Results:
+The phase null preserves:
+- the fixed observed co-use encounters;
+- each individual's site-specific vertical distribution;
+- stable personal strategy;
+- horizontal location and timing of co-use;
 
-- Hypsignathus: observed 21.99 m vs null 23.98 m; excess -2.00 m; p_upper=0.9077
-- P. hastatus 2022: 6.78 vs 7.71 m; excess -0.93 m; p=0.9057
-- P. hastatus 2016: 11.36 vs 12.22 m; excess -0.85 m; p=0.8595
-- P. hastatus 2023: 26.57 vs 22.96 m; excess +3.61 m; p=0.0214
+but breaks momentary cross-individual vertical alignment.
 
-Thus synchronous local co-use does **not generally increase vertical separation** beyond stable site-specific personal strategies.
+Question:
+During actual co-presence, do individuals separate vertically more than expected from their stable personal strategies alone?
 
-Only the 2023 panel shows the predicted upper-tail effect, and it is the least interaction-specific design among the four because it requires a 600-s synchronization window and retains the all-space encounter universe.
+## Current empirical decomposition
 
-## Main ecological inference
+| panel | H | V_rel | S_rel | I | I p | interpretation |
+|---|---:|---:|---:|---:|---:|---|
+| *Hypsignathus monstrosus* | +0.297 | +0.042 | -0.016 | -1.98 m | 0.9045 | personal strategy; no extra co-presence separation |
+| *P. hastatus* 2022 | +0.216 | +0.100 | -0.009 | -0.95 m | 0.9186 | personal strategy; no extra co-presence separation |
+| *P. hastatus* 2023 | +0.344 | +0.077 | +0.016 | **+3.57 m** | **0.0231** | personal strategy plus context-dependent co-presence separation |
+| *P. hastatus* 2016 | +0.302 | +0.079 | +0.029 | -0.85 m | 0.8611 | personal strategy; no extra co-presence separation |
 
-The strongest current interpretation is:
+The striking result is not that all positive-V systems partition vertically during interaction.
 
-> **Individual specialization can arise as stable personal solutions to recurring ecological tasks without requiring mutual niche partitioning among individuals.**
+It is the opposite:
 
-This is more specific than the earlier ecological-opportunity statement.
-
-A recurring task can have several reusable solutions. Individuals may repeatedly settle on different solutions because of learning, path dependence, morphology, experience, resource familiarity or other individual histories. Those solutions can remain strongly overlapping across individuals.
-
-Competition is therefore not required to generate repeatable individuality.
-
-This is a generated mechanistic hypothesis, not a demonstrated cause.
+> **terrain-relative personal vertical strategies recur across all four panels, while additional co-presence-dependent separation is exceptional rather than general.**
 
 ## Specialization without partitioning
 
-The current results support a state that is easy to miss if individuality is summarized only by niche overlap or repeatability:
+The dominant geometry is therefore:
 
-- within-individual similarity is high;
-- between-individual strategies differ enough for identity to be predictable;
-- but between-individual niche overlap remains substantial;
-- and simultaneous co-use usually does not induce extra separation.
+1. individuals repeatedly use different horizontal landscape portions;
+2. within shared space they also retain repeatable personal terrain-relative vertical configurations;
+3. those personal configurations still overlap strongly among individuals;
+4. actual local co-presence usually does not increase vertical separation further.
 
 This is **specialization without strong partitioning**.
 
-Two individuals can be predictably different without occupying mutually exclusive niches.
+It means a population can contain stable individual "ways of using space" without being decomposed into mutually exclusive individual niches.
 
-## Why this matters for ecological theory
+## The 2023 exception
 
-Classic resource-partitioning logic often links individual specialization to reduced overlap under competition.
+The 2023 *P. hastatus* panel adds a possible interaction-responsive layer.
 
-The present geometry suggests an additional route:
+Under its frozen all-space, 600-s co-use definition:
+- observed equal-dyad median separation = 26.57 m;
+- phase-null mean = 22.99 m;
+- I = +3.57 m;
+- p = 0.0231.
 
-same recurring task
-→ multiple approximately reusable solutions
-→ individual history selects or reinforces one solution
-→ stable individual strategy
-→ population becomes a mixture of non-exchangeable individuals
+This is consistent with momentary or short-timescale vertical separation during local co-use beyond stable personal strategy.
 
-without requiring:
+But this cannot yet be called competition:
+- 600 s is coarse synchrony;
+- endpoint-excluded support failed the individual gate;
+- encounters are highly localized;
+- social coordination, resource depletion, central-place behavior or other synchronous processes remain alternatives.
 
-competitor present
-→ active spatial displacement
-→ reduced niche overlap.
+Thus 2023 is a **context-dependent interaction signal**, not evidence for a universal avoidance rule.
 
-The ecological cause of individuality may therefore lie in **solution repeatability**, while competition determines only whether those personal solutions become mutually segregated.
+## Revised ecological predictions
 
-## Geometry classes after the new test
+### Persistent resource use can generate H without V
 
-### Landscape-embedded specialization
+Individuals specialize on different landscape elements. If those elements differ in terrain elevation, raw 3D separation can emerge without residual vertical strategy.
 
-Current example: *Pteropus poliocephalus*.
+Current example:
+*Pteropus poliocephalus*.
 
-Individuals repeatedly use different topographic settings, generating strong realized x-y-z separation. Terrain subtraction collapses pairwise vertical geometry.
+### Recurrent task with reusable personal solutions can generate V without S or I
 
-### Personal vertical-strategy specialization without partitioning
+Individuals repeatedly solve the same task in personally consistent ways, but those strategies remain overlapping and need not change when conspecifics are present.
 
-Current strongest examples: *Hypsignathus* and *P. hastatus* 2022/2016.
+Current dominant examples:
+*Hypsignathus*, *P. hastatus* 2022 and 2016.
 
-Terrain-relative personal vertical fidelity is supported, but:
-- S_rel is near zero;
-- synchronous co-use separation is not above the phase null.
+### Interaction-dependent partitioning specifically predicts I > 0
 
-### Potential interaction-dependent partitioning
+If competition or another synchronous interaction actively pushes individuals apart in height, observed co-presence should add separation beyond each individual's stable site-specific vertical distribution.
 
-Current candidate: *P. hastatus* 2023.
+Current evidence:
+one 2023 panel only.
 
-Terrain-relative strategy fidelity is supported and synchronous all-space co-use shows +3.61 m excess separation.
+### Surface-constrained feeding predicts weak V
 
-But the panel requires:
-- a 600-s co-use window;
-- all-space rather than endpoint-excluded scope;
-- only eight usable dyads;
-- highly localized encounter geometry.
+If the ecological task physically restricts distance from a surface, there is little residual vertical freedom available for stable personal solutions.
 
-Therefore it is a candidate interaction-dependent pattern, not evidence that competition generally structures the species.
+Current consistent but weak example:
+*Myotis vivesi*.
 
-### Weak / surface-constrained specialization
+## A stronger general principle
 
-Current candidate: *Myotis vivesi*.
+The current general hypothesis is:
 
-The fixed 3D geometry endpoint narrowly fails support (p=0.055), consistent with limited vertical degrees of freedom around an ocean surface.
+> **Ecological strategy may determine where individual information is encoded in spatial behavior: landscape choice, personal vertical strategy, persistent niche segregation, or interaction-dependent displacement.**
 
-## Revised ecology-to-geometry prediction
+These are not interchangeable forms of "individuality".
 
-A more informative future framework predicts two independent outcomes.
+Two populations can have equally repeatable individuals but differ fundamentally in mechanism:
+- one because individuals return to different hills or feeding patches;
+- one because individuals use personally repeatable heights relative to the same terrain;
+- one because individuals occupy persistently segregated vertical niches;
+- one because individuals dynamically separate only when they encounter one another.
 
-### Axis A — strategy fidelity
+## Consequence for the original "food partitioning" idea
 
-Does the ecological task permit a personal solution to be learned or repeatedly reused?
+The current evidence does not support a broad claim that bats deliberately divide food or airspace among individuals.
 
-Prediction target:
-V_rel or another substrate/resource-relative within-individual fidelity metric.
+The stronger supported statement is:
 
-### Axis B — partitioning pressure
+> **individuals repeatedly reuse personal spatial solutions, while active co-presence-dependent vertical partitioning is at most context-specific.**
 
-Does co-use by competitors make simultaneous use costly enough to force solutions apart?
+To establish competition-mediated food partitioning, future data must link I or S to:
+- identified shared resources;
+- direct simultaneous resource use;
+- competitor density;
+- resource depletion;
+- diet identity;
+- experimental resource manipulation.
 
-Prediction target:
-interaction-dependent separation under a fixed-encounter phase/randomization null, or lower-than-null overlap at identified shared resources.
+## Methodological implication
 
-This creates four possible systems:
+A 3D niche study should distinguish at least four questions:
 
-1. low fidelity / low partitioning — exchangeable or highly context-dependent use;
-2. high fidelity / low partitioning — stable personal routines with overlap;
-3. low fidelity / high partitioning — flexible but competitor-responsive separation;
-4. high fidelity / high partitioning — stable segregated individual niches.
+1. Are individuals horizontally faithful? H
+2. Do they have repeatable substrate-relative vertical strategies? V
+3. Are their niches persistently segregated? S
+4. Do they dynamically separate during actual co-presence? I
 
-The current original panels mostly occupy category 2.
+Collapsing these into one 3D overlap measure can confuse landscape fidelity, personality-like strategy, niche partitioning and interaction response.
 
-## Stronger general principle
+## Claim ceiling
 
-> **Ecological strategy may determine both whether personal spatial solutions become repeatable and whether those solutions must become mutually segregated. These are separate processes.**
+Current evidence supports:
+- recurrent H and V in several bat panels;
+- weak S after terrain correction;
+- I in one 2023 panel but not three other evaluable panels;
+- the empirical separability of fidelity, segregation and interaction response.
 
-This is less tautological than “more ecological opportunity allows more individuality.”
-
-It makes distinct predictions about:
-- within-individual repeatability;
-- between-individual overlap;
-- terrain/substrate dependence;
-- synchronous competitor response.
-
-## What remains unresolved
-
-The current co-use analysis observes conspecific co-presence, not confirmed competition.
-
-A positive co-use effect can also arise from:
-- shared resource depletion;
-- social spacing;
-- disturbance;
-- coordinated approach/departure;
-- unmeasured behavioural-state changes.
-
-A direct competition test needs identified resources and/or experimental or density variation.
+Current evidence does not establish:
+- competition as the driver of I;
+- intentional avoidance;
+- general food partitioning;
+- a universal cross-species ecology-to-geometry law.
 
 ## Submission boundary
 
-This entire v4 synthesis is post-outcome exploratory work on the extension branch.
+This entire H-V-S-I synthesis is post-outcome exploratory work on the extension branch.
 
-The frozen integrated JAE manuscript remains unchanged. Promoting this framework into the submission requires an explicit unfreeze and transparent chronology.
+It should not be inserted into the frozen JAE submission without an explicit unfreeze and full chronology disclosure.
