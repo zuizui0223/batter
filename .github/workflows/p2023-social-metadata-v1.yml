@@ -1,0 +1,30 @@
+name: p2023-social-metadata-v1
+
+on:
+  push:
+    branches:
+      - post-freeze/3d-niche-partition-v1
+    paths:
+      - "post_freeze_extensions/3d_niche_partition/run_p2023_social_metadata_v1.py"
+      - ".github/workflows/p2023-social-metadata-v1.yml"
+      - "contract/phyllostomus_2023_replication_v1.json"
+  workflow_dispatch:
+
+jobs:
+  metadata:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Extract frozen co-use individual social metadata
+        run: python post_freeze_extensions/3d_niche_partition/run_p2023_social_metadata_v1.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: p2023-social-metadata-v1
+          path: post_freeze_extensions/3d_niche_partition/p2023_social_metadata_v1.json
+          if-no-files-found: error
