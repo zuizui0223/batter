@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "study_id": "batter_partitioning_calibration_v1",
+  "classification": "post-outcome diagnostic calibration",
+  "panels": [
+    "hypsignathus",
+    "phyllostomus_2022",
+    "phyllostomus_2023",
+    "phyllostomus_2016"
+  ],
+  "s_calibration": {
+    "B": 9999,
+    "null": "inherited within-cohort individual-label permutation from terrain-relative geometry",
+    "statistic": "S_rel = other_r3d - self_r3d",
+    "two_sided_center": "null_mean"
+  },
+  "i_compatibility": {
+    "B": 9999,
+    "resampling_unit": "frozen usable dyad",
+    "interval": 0.95,
+    "seeds": {
+      "hypsignathus": 20261002201,
+      "phyllostomus_2022": 20261002202,
+      "phyllostomus_2023": 20261002203,
+      "phyllostomus_2016": 20261002204
+    },
+    "null_mean": "hold completed phase-shift null mean fixed"
+  }
+}
