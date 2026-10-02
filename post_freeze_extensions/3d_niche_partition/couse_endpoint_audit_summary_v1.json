@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-couse-endpoint-audit-v1",
+  "workflow": {
+    "run_id": 36951929208,
+    "head_sha": "6569d599a9c5687bb9014cf1a914a528fc329a9c",
+    "conclusion": "success"
+  },
+  "vertical_values_used": false,
+  "panels": {
+    "hypsignathus": {
+      "tolerance_s": 60,
+      "primary_scope": "endpoint_excluded",
+      "all_space": {
+        "individuals": 17,
+        "dyads": 56,
+        "encounters": 4410,
+        "top_cell_fraction": 0.5700680272108843
+      },
+      "endpoint_excluded": {
+        "individuals": 11,
+        "dyads": 22,
+        "encounters": 883,
+        "top_cell_fraction": 0.7508493771234428
+      },
+      "artifact_id": 11204093949,
+      "artifact_digest": "sha256:beb2a192ab3464acf98bf98555bd07c8618858076e26c7fc6b6fb60ce32eaf6a"
+    },
+    "phyllostomus_2022": {
+      "tolerance_s": 60,
+      "primary_scope": "endpoint_excluded",
+      "all_space": {
+        "individuals": 8,
+        "dyads": 11,
+        "encounters": 352,
+        "top_cell_fraction": 0.9659090909090909
+      },
+      "endpoint_excluded": {
+        "individuals": 6,
+        "dyads": 10,
+        "encounters": 347,
+        "top_cell_fraction": 0.9798270893371758
+      },
+      "artifact_id": 11204507763,
+      "artifact_digest": "sha256:6a1f9c18302cc2970bd911a1cedd21dbc61ec0098346651140f669353d6549b8"
+    },
+    "phyllostomus_2023": {
+      "tolerance_s": 600,
+      "primary_scope": "all_space",
+      "all_space": {
+        "individuals": 6,
+        "dyads": 8,
+        "encounters": 679,
+        "top_cell_fraction": 0.7879234167893961
+      },
+      "endpoint_excluded": {
+        "individuals": 4,
+        "dyads": 6,
+        "encounters": 629,
+        "top_cell_fraction": 0.8505564387917329
+      },
+      "artifact_id": 11204885119,
+      "artifact_digest": "sha256:47df31805a6716524dcd6e6b2926859d43c35e7cb54f178aa7eb9e406920b1b9"
+    },
+    "phyllostomus_2016": {
+      "tolerance_s": 600,
+      "primary_scope": "endpoint_excluded",
+      "all_space": {
+        "individuals": 5,
+        "dyads": 8,
+        "encounters": 16097,
+        "top_cell_fraction": 0.9961483506243399
+      },
+      "endpoint_excluded": {
+        "individuals": 5,
+        "dyads": 8,
+        "encounters": 16096,
+        "top_cell_fraction": 0.9962102385685885
+      },
+      "artifact_id": 11204318624,
+      "artifact_digest": "sha256:d9909df54170525c9aae5aa1cb655e7eac0b23e6823151645d1bf31e6017b39d"
+    }
+  },
+  "interpretation": "The test is a local shared-site co-presence analysis, not a landscape-wide competition assay. Endpoint exclusion is primary where it retains the frozen support gate."
+}
