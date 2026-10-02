@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-simultaneous-couse-preflight-v1",
+  "workflow": {
+    "run_id": 36951544701,
+    "head_sha": "b505b0fd302678bf51a532ba987a34ab02dc0215",
+    "conclusion": "success"
+  },
+  "vertical_values_used_for_preflight": false,
+  "panels": {
+    "hypsignathus": {
+      "selected_tolerance_s": 60,
+      "usable_individuals": 17,
+      "usable_dyads": 56,
+      "encounters": 4410,
+      "artifact_id": 11204472072,
+      "artifact_digest": "sha256:2c044d5aa9d5b1d36fd7aa9dd3c86ce23a4c673e32b34e1aff753aa80ebceafb"
+    },
+    "phyllostomus_2022": {
+      "selected_tolerance_s": 60,
+      "usable_individuals": 8,
+      "usable_dyads": 11,
+      "encounters": 352,
+      "artifact_id": 11204322756,
+      "artifact_digest": "sha256:e21d91c8052bc8356660bc31bcd5e880bb75cc7c13c138219363092a1a415264"
+    },
+    "phyllostomus_2023": {
+      "selected_tolerance_s": 600,
+      "usable_individuals": 6,
+      "usable_dyads": 8,
+      "encounters": 679,
+      "artifact_id": 11204561097,
+      "artifact_digest": "sha256:e2f41c9d2a3ea98e1f420b6b5afbc104944366aaad3ba1303a2710b9c4d2b3bc"
+    },
+    "phyllostomus_2016": {
+      "selected_tolerance_s": 600,
+      "usable_individuals": 5,
+      "usable_dyads": 8,
+      "encounters": 16097,
+      "artifact_id": 11204412479,
+      "artifact_digest": "sha256:c8883933519a8f97bb0a824add12887362a4ad986be207029ff4960fddd6d471"
+    }
+  },
+  "note": "2016 encounter count is orders of magnitude larger than recent panels; endpoint/central-place concentration is audited before vertical outcome."
+}
