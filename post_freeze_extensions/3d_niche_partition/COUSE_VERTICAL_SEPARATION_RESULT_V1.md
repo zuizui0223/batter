@@ -1,110 +1,112 @@
-# Simultaneous co-use vertical-separation result v1
+# Synchronous co-use vertical-separation result v1
 
 ## Status
 
-POST-OUTCOME MECHANISM TEST. The synchronization tolerances, x-y-time encounter sets, endpoint/all-space scopes, terrain source, primary statistic, z-phase null, seeds and pass rule were fixed before a successful vertical-separation output was obtained.
+POST-OUTCOME MECHANISM TEST.
 
-Authoritative workflow:
-- run: `36953505648`
-- head: `e57022ae12eac8de81e6f37c3982e42f710875f4`
+The x-y-time encounter definition, panel-specific synchronization tolerance, endpoint/all-space primary scope, fixed encounter set, terrain-relative endpoint, equal-dyad statistic, phase-shift null, B and seeds were fixed before the corrected analysis reported here.
+
+Authoritative corrected workflow:
+- run: `36953712597`
+- head: `7d5f310b0ec5337b47202ced4378a78edc3daa66`
 - conclusion: success
-- all four matrix jobs completed successfully.
 
-Earlier failed workflow attempts did not reach the vertical outcome because of stale-branch/import mismatches.
+A historical first-output workflow existed before the final implementation correction. Its comparison with the corrected workflow is documented separately in `COUSE_RUN_CORRECTION_AUDIT_V1.md`.
 
-## Question
+## Primary question
 
-Conditional on actual local co-use, do co-present individuals separate vertically more than expected after preserving each individual's site-specific vertical distribution and stable personal strategy?
+During actual local co-use, are different individuals farther apart vertically than expected after preserving each individual's site-specific terrain-relative vertical distribution but breaking momentary cross-individual vertical alignment?
 
-The fixed-encounter phase null circularly shifts terrain-relative, session-centered z within individual × session × 500-m-cell groups while keeping the observed encounter identities, sites and times fixed.
+Primary statistic:
+- terrain-relative, session-centered absolute height difference at fixed observed encounters;
+- median within each frozen dyad;
+- equal mean across frozen dyads.
 
-## Primary results
+## Results
 
-| panel | scope | tolerance | individuals | dyads | encounters | observed separation | null mean | excess | p(null >= obs) | decision |
+| panel | scope | time window | individuals | dyads | encounters | observed separation | null mean | excess | p(null >= obs) | result |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| *Hypsignathus monstrosus* | endpoint-excluded | 60 s | 11 | 22 | 883 | 21.99 m | 23.98 m | **-2.00 m** | 0.9077 | not supported |
-| *Phyllostomus hastatus* 2022 | endpoint-excluded | 60 s | 6 | 10 | 347 | 6.78 m | 7.71 m | **-0.93 m** | 0.9057 | not supported |
-| *P. hastatus* 2023 | all-space | 600 s | 6 | 8 | 679 | 26.57 m | 22.96 m | **+3.61 m** | **0.0214** | supported |
-| *P. hastatus* 2016 | endpoint-excluded | 600 s | 5 | 8 | 16,096 | 11.36 m | 12.22 m | **-0.85 m** | 0.8595 | not supported |
+| *Hypsignathus monstrosus* | endpoint-excluded | 60 s | 11 | 22 | 883 | 21.99 m | 23.97 m | -1.98 m | 0.9045 | not supported |
+| *Phyllostomus hastatus* 2022 | endpoint-excluded | 60 s | 6 | 10 | 347 | 6.78 m | 7.73 m | -0.95 m | 0.9186 | not supported |
+| *P. hastatus* 2023 | all-space | 600 s | 6 | 8 | 679 | **26.57 m** | **22.99 m** | **+3.57 m** | **0.0231** | **supported** |
+| *P. hastatus* 2016 | endpoint-excluded | 600 s | 5 | 8 | 16,096 | 11.36 m | 12.22 m | -0.85 m | 0.8611 | not supported |
 
 Null central 95% intervals:
-- *Hypsignathus*: 21.10–27.10 m
-- 2022: 6.37–9.19 m
-- 2023: 19.80–26.44 m
-- 2016: 10.72–13.77 m
+- *Hypsignathus*: 21.09–27.22 m
+- 2022: 6.44–9.20 m
+- 2023: 19.81–26.49 m
+- 2016: 10.69–13.78 m
 
-The non-supporting panels are not close positive misses: their observed separation is below the phase-null mean. However, lower-tail probabilities are ~0.09–0.14 rather than <=0.05, so these results do not establish synchronous attraction or vertical convergence either.
+## Main inference
 
-## Interpretation
+Three of four panels show no evidence that synchronous local co-use adds vertical separation beyond each individual's stable site-specific terrain-relative vertical strategy.
 
-### Personal specialization is not generally interaction-driven partitioning
+This is important because all four of these panels previously showed supported terrain-relative vertical strategy fidelity.
 
-All four panels had previously retained terrain-relative individual vertical-strategy fidelity under the 500-m overlap analysis.
+Therefore:
 
-Yet three panels show no extra vertical separation during synchronous local co-use after stable individual × site vertical distributions are preserved in the null.
+> **repeatable individual vertical strategies are generally not equivalent to active vertical partitioning during co-presence.**
 
-Thus:
+The dominant pattern is stable personal strategy reuse rather than systematic co-presence-dependent separation.
 
-> **repeatable individual vertical strategies are not, in general, generated by moment-to-moment separation from tracked conspecifics.**
+## The 2023 exception
 
-This strengthens the distinction between:
-- individual specialization: different individuals repeatedly use different personal spatial solutions;
-and
-- interaction-dependent niche partitioning: individuals move farther apart in niche space specifically when co-present.
+The 2023 *P. hastatus* panel is the only panel in which observed synchronous separation exceeds the fixed phase-shift null.
 
-The former is supported broadly in the structurally evaluable original panels; the latter is not.
+Observed equal-dyad median separation is 26.57 m, about 3.57 m above the null mean.
 
-### The 2023 exception
+The signal is not produced by one high-count dyad because the panel statistic weights dyads equally. Dyad-specific observed median separations span approximately 9.7–42.2 m; the dyad contributing 586 of 679 encounters has a median separation of 31.6 m.
 
-The 2023 panel alone meets the pre-specified upper-tail criterion:
-- observed equal-dyad median separation 26.57 m;
-- phase-null mean 22.96 m;
-- excess +3.61 m;
-- p=0.0214.
+However the interpretation ceiling is low:
+- the structural preflight required the maximum 600-s synchronization window;
+- the endpoint-excluded universe failed its biological-individual gate, so the frozen primary is all-space;
+- approximately 79% of encounters occur in the largest 500-m cell;
+- co-presence-dependent separation is not unique evidence for competition.
 
-This is consistent with synchronous local co-use being associated with additional vertical separation.
+Thus 2023 supports a **context-dependent interaction/co-presence layer** superimposed on personal strategies, not a general competition-driven vertical-partitioning law.
 
-But its interpretation is limited because:
-- the panel required the coarsest predeclared synchronization tolerance, 600 s;
-- endpoint exclusion failed the biological-individual support gate, so the primary test is all-space rather than endpoint-excluded;
-- encounter use is highly concentrated spatially (~79% in the most-used 500-m cell);
-- only eight usable dyads contribute to the equal-dyad statistic.
+## Negative-direction results
 
-Therefore this is evidence for a **co-presence-dependent vertical-separation pattern in this panel**, not a general competition effect.
+In *Hypsignathus*, 2022 and 2016, observed synchronous separation is actually below the null mean.
 
-Observed dyad median separations in 2023 range from about 9.7 to 42.2 m; the largest dyad by encounter count (586 encounters) is not allowed to dominate because dyads are equally weighted in the panel statistic.
+These are not lower-tail tests and should not be relabelled as attraction or convergence. They simply provide no evidence for the predeclared directional hypothesis of additional vertical separation.
 
-## Relation to the 3D geometry results
+## Relation to terrain-relative 3D geometry
 
-The sequence of results now separates three levels:
+Completed terrain-relative geometry showed supported personal vertical strategy fidelity in all four panels:
 
-1. **Landscape fidelity** — individuals repeatedly use different horizontal space.
-2. **Personal vertical-strategy fidelity** — even within shared horizontal space and after DEM correction, an individual repeatedly reuses a characteristic vertical distribution.
-3. **Interaction-dependent separation** — additional vertical separation specifically during synchronous local co-use.
+- *Hypsignathus*: V_rel +0.042
+- 2022: +0.100
+- 2023: +0.077
+- 2016: +0.079
 
-Level 2 is supported in all four structurally evaluable original panels.
+Yet only 2023 shows additional synchronous separation.
 
-Level 3 is not supported in *Hypsignathus*, 2022 or 2016, and is supported only in the more weakly resolved 2023 co-use test.
+This empirically separates two dimensions:
 
-This means that stable individual spatial strategies do not require active spatial repulsion among conspecifics.
+1. **strategy fidelity** — an individual repeatedly reuses its own vertical configuration;
+2. **interaction-dependent separation** — individuals alter momentary relative height during local co-use.
+
+The first is recurrent here; the second is not.
+
+## Artifact receipts
+
+Corrected workflow `36953712597`:
+- *Hypsignathus*: artifact `11205510244`, digest `sha256:3cae11ab2ee37b966d7d3798f8dc8a370e10ae1e7f449aa896869a0570e3e753`
+- 2022: artifact `11204898247`, digest `sha256:9d096a7189d122ae0191a3060d82c5a83c9ef51bc122b6b0d2bda56c3aeb6bc6`
+- 2023: artifact `11205525158`, digest `sha256:4e0ecee59e8c4269b1b93fd062cddb0fe87a8b4d0b0c4b18edf186d75a4df80a`
+- 2016: artifact `11205780190`, digest `sha256:124bc1c7ee5042f745bd7925b115c4e9a344a16736d91442c4dc0ca9b57796ce`
 
 ## Claim ceiling
 
 Supported:
-- stable personal terrain-relative vertical strategies can exist without detectable extra vertical separation during synchronous co-use;
-- in the 2023 panel, synchronous all-space co-use is associated with additional terrain-relative vertical separation under the fixed phase null;
-- individual specialization and interaction-dependent niche partitioning are empirically separable.
+- personal terrain-relative vertical strategies can persist without extra vertical separation during co-presence;
+- one 2023 panel shows a co-presence-dependent separation signal under its frozen coarse synchronization design;
+- strategy fidelity and interaction-dependent partitioning are distinct axes of individual specialization.
 
 Not established:
-- competition as the cause of the 2023 result;
+- competition as the cause of the 2023 signal;
 - intentional avoidance;
-- resource or diet partitioning;
-- landscape-wide vertical repulsion;
-- a general co-presence effect across bat systems.
-
-## Artifact receipts
-
-- *Hypsignathus*: artifact `11204986734`, digest `sha256:b6cef235abb426f57ef781bcbccedb8bdcae7280bd51bc323163231901006d42`
-- *P. hastatus* 2022: artifact `11205076414`, digest `sha256:45766baa02926927f09be583d7a6da0e905dd0cbe65ddc02d967678444d1a5dc`
-- *P. hastatus* 2023: artifact `11205086261`, digest `sha256:49724fb65693f491a5f39934874b639d92da271b1a53efea11bc9f6f7d1b0088`
-- *P. hastatus* 2016: artifact `11205001827`, digest `sha256:a27a0cb998a14e67429894ccb84cfebcd7fdb251c5519b5aa0b23d1c5fa0140a`
+- food or resource partitioning;
+- instantaneous interaction in the 600-s panels;
+- a general bat-wide interaction rule.
