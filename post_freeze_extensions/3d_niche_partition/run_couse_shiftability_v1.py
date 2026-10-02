@@ -24,16 +24,18 @@ EPSUM=ROOT/"post_freeze_extensions/3d_niche_partition/couse_endpoint_audit_summa
 OUTDIR=ROOT/"post_freeze_extensions/3d_niche_partition/couse_shiftability"
 
 
-def primary_records(records,scope,centers,radius,tol_s):
+def shiftable_records(records,tol_s):
     durations=pre.session_durations(records)
     shiftable={k for k,span in durations.items() if span>=4.0*tol_s}
     rr=[r for r in records if (r["cohort"],r["session"]) in shiftable]
-    if scope=="endpoint_excluded":
-        rr=[r for r in rr if ep.is_away(r,centers,radius)]
     return rr,shiftable,len(durations)-len(shiftable)
 
 
-def build_primary_encounters(records,tol_s,cfg):
+def build_primary_encounters(records,tol_s,cfg,scope,centers,radius):
+    # Reproduce the authoritative endpoint-audit ordering exactly:
+    # 1) build mutual-nearest matches from the full shiftable x-y-time universe;
+    # 2) if endpoint-excluded is primary, filter already-formed matches;
+    # 3) apply dyad/individual support gates.
     by_ind=defaultdict(list)
     for r in records:
         by_ind[(r["cohort"],r["iid"])].append(r)
@@ -59,11 +61,18 @@ def build_primary_encounters(records,tol_s,cfg):
                         "dt_s":float(m["dt_s"]),
                         "a_session":ra["session"],"b_session":rb["session"],
                         "a_t":ra["t"],"b_t":rb["t"],
+                        "away_a":ep.is_away(ra,centers,radius),
+                        "away_b":ep.is_away(rb,centers,radius),
                     })
+
+    scoped=(
+        [m for m in all_matches if m["away_a"] and m["away_b"]]
+        if scope=="endpoint_excluded" else all_matches
+    )
 
     g=cfg["structural_gate"]
     counts=defaultdict(int)
-    for m in all_matches:
+    for m in scoped:
         counts[(m["cohort"],m["a"],m["b"])]+=1
     usable={k:n for k,n in counts.items() if n>=int(g["dyad_min_encounters"])}
 
@@ -78,7 +87,7 @@ def build_primary_encounters(records,tol_s,cfg):
            len(partners[k])>=int(g["individual_min_partners"])
     }
     final_dyads={k:n for k,n in usable.items() if (k[0],k[1]) in inds and (k[0],k[2]) in inds}
-    final=[m for m in all_matches if (m["cohort"],m["a"],m["b"]) in final_dyads]
+    final=[m for m in scoped if (m["cohort"],m["a"],m["b"]) in final_dyads]
     return final,final_dyads,inds
 
 
@@ -101,16 +110,21 @@ def run(panel):
     records=pre.load_xy_time(panel)
     centers,_=ep.endpoint_centers(records)
     radius=float(cfg["endpoint_exclusion"]["radius_m"])
-    rr,shiftable,excluded_short=primary_records(records,scope,centers,radius,tol)
+    rr,shiftable,excluded_short=shiftable_records(records,tol)
 
-    encounters,dyads,inds=build_primary_encounters(rr,tol,cfg)
+    encounters,dyads,inds=build_primary_encounters(rr,tol,cfg,scope,centers,radius)
     expected=int(info["endpoint_excluded"]["encounters"] if scope=="endpoint_excluded" else info["all_space"]["encounters"])
     if len(encounters)!=expected:
         raise RuntimeError(f"{panel}: reconstructed primary encounter count {len(encounters)} != frozen {expected}")
 
-    # Count fixes in the exact primary-scope phase groups.
+    # Count fixes in the exact primary-scope phase groups. Encounter matching
+    # remains defined on the authoritative all-fix universe above.
+    phase_rr=(
+        [r for r in rr if ep.is_away(r,centers,radius)]
+        if scope=="endpoint_excluded" else rr
+    )
     group_n=defaultdict(int)
-    for r in rr:
+    for r in phase_rr:
         cell=(math.floor(r["x"]/500.0),math.floor(r["y"]/500.0))
         group_n[(r["cohort"],r["iid"],r["session"],cell)]+=1
 
