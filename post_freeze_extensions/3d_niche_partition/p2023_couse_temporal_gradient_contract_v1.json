@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-p2023-couse-temporal-gradient-v1",
+  "classification": "post-outcome localization diagnostic",
+  "frozen_primary": {
+    "panel": "phyllostomus_2023",
+    "encounter_sha256": "d4250eafeb7b602e47f7b9449bb76d4a71af0f0bfaa3bc3b801b260e69f2f6bb",
+    "encounters": 679,
+    "dyads": 8,
+    "individuals": 6,
+    "tolerance_s": 600,
+    "scope": "all_space"
+  },
+  "slope_preflight": {
+    "min_encounters_per_dyad": 5,
+    "min_distinct_rounded_dt_s": 3,
+    "min_dt_sd_s_exclusive": 0,
+    "panel_min_slope_evaluable_dyads": 5
+  },
+  "primary": {
+    "predictor": "absolute encounter dt seconds / 60",
+    "response": "absolute terrain-relative session-centered vertical separation metres",
+    "dyad_statistic": "OLS slope",
+    "panel_aggregation": "equal mean across frozen slope-evaluable dyads",
+    "direction": "negative"
+  },
+  "null": {
+    "type": "same fixed-encounter individual-session-cell vertical phase null as corrected primary co-use analysis",
+    "B": 9999,
+    "seed": 20261002114,
+    "support_rule": "observed-minus-null-mean < 0 and p(null<=observed)<=0.05"
+  },
+  "descriptive_bands_s": [
+    [
+      0,
+      60
+    ],
+    [
+      60,
+      120
+    ],
+    [
+      120,
+      300
+    ],
+    [
+      300,
+      600
+    ]
+  ],
+  "descriptive_cumulative_upper_s": [
+    60,
+    120,
+    300
+  ]
+}
