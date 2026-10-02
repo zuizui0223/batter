@@ -1,10 +1,15 @@
 {
   "schema_version": 1,
-  "study_id": "batter-simultaneous-couse-vertical-separation-result-v1",
-  "workflow": {
+  "study_id": "batter-couse-vertical-separation-result-v1",
+  "authoritative_workflow": {
+    "run_id": 36953712597,
+    "head_sha": "7d5f310b0ec5337b47202ced4378a78edc3daa66",
+    "conclusion": "success"
+  },
+  "historical_first_output": {
     "run_id": 36953505648,
     "head_sha": "e57022ae12eac8de81e6f37c3982e42f710875f4",
-    "conclusion": "success"
+    "correction": "one phase shift per group per replicate"
   },
   "panels": {
     "hypsignathus": {
@@ -14,15 +19,12 @@
       "dyads": 22,
       "encounters": 883,
       "observed_m": 21.985044741306808,
-      "null_mean_m": 23.98126319235623,
-      "excess_m": -1.9962184510494225,
-      "q025": 21.096578262221076,
-      "q975": 27.097555855342808,
-      "p_upper": 0.9077,
-      "p_lower": 0.0924,
-      "supported": false,
-      "artifact_id": 11204986734,
-      "artifact_digest": "sha256:b6cef235abb426f57ef781bcbccedb8bdcae7280bd51bc323163231901006d42"
+      "null_mean_m": 23.96778453391173,
+      "q025": 21.094014482778828,
+      "q975": 27.22075290186507,
+      "excess_m": -1.9827397926049208,
+      "p_upper": 0.9045,
+      "supported": false
     },
     "phyllostomus_2022": {
       "scope": "endpoint_excluded",
@@ -31,15 +33,12 @@
       "dyads": 10,
       "encounters": 347,
       "observed_m": 6.78230386000064,
-      "null_mean_m": 7.713206276139798,
-      "excess_m": -0.9309024161391575,
-      "q025": 6.367710242386514,
-      "q975": 9.185712901013213,
-      "p_upper": 0.9057,
-      "p_lower": 0.0944,
-      "supported": false,
-      "artifact_id": 11205076414,
-      "artifact_digest": "sha256:45766baa02926927f09be583d7a6da0e905dd0cbe65ddc02d967678444d1a5dc"
+      "null_mean_m": 7.729698412244561,
+      "q025": 6.440199838410468,
+      "q975": 9.197072587801523,
+      "excess_m": -0.9473945522439209,
+      "p_upper": 0.9186,
+      "supported": false
     },
     "phyllostomus_2023": {
       "scope": "all_space",
@@ -48,15 +47,12 @@
       "dyads": 8,
       "encounters": 679,
       "observed_m": 26.56567049998826,
-      "null_mean_m": 22.960412198868035,
-      "excess_m": 3.6052583011202266,
-      "q025": 19.803460475017967,
-      "q975": 26.44123017498789,
-      "p_upper": 0.0214,
-      "p_lower": 0.9787,
-      "supported": true,
-      "artifact_id": 11205086261,
-      "artifact_digest": "sha256:49724fb65693f491a5f39934874b639d92da271b1a53efea11bc9f6f7d1b0088"
+      "null_mean_m": 22.991942626060883,
+      "q025": 19.808381624995036,
+      "q975": 26.48501585000197,
+      "excess_m": 3.5737278739273783,
+      "p_upper": 0.0231,
+      "supported": true
     },
     "phyllostomus_2016": {
       "scope": "endpoint_excluded",
@@ -65,23 +61,13 @@
       "dyads": 8,
       "encounters": 16096,
       "observed_m": 11.363499019979411,
-      "null_mean_m": 12.217743829950129,
-      "excess_m": -0.8542448099707176,
-      "q025": 10.720070537467763,
-      "q975": 13.769778382470838,
-      "p_upper": 0.8595,
-      "p_lower": 0.1406,
-      "supported": false,
-      "artifact_id": 11205001827,
-      "artifact_digest": "sha256:a27a0cb998a14e67429894ccb84cfebcd7fdb251c5519b5aa0b23d1c5fa0140a"
+      "null_mean_m": 12.217646580265017,
+      "q025": 10.687156692494392,
+      "q975": 13.784813628463631,
+      "excess_m": -0.8541475602856057,
+      "p_upper": 0.8611,
+      "supported": false
     }
   },
-  "synthesis": {
-    "general_interaction_driven_vertical_partitioning": "not_supported",
-    "personal_vertical_strategy_fidelity": "previously supported in all four structurally evaluable original panels",
-    "supported_couse_panels": [
-      "phyllostomus_2023"
-    ],
-    "interpretation": "individual specialization is broadly repeatable, but extra synchronous co-use separation is not general; 2023 is a limited coarse-window all-space exception"
-  }
+  "synthesis": "terrain-relative personal vertical strategy fidelity is supported in all four panels, while additional synchronous co-presence separation is supported only in P. hastatus 2023"
 }
