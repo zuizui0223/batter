@@ -7,6 +7,7 @@ on:
     paths:
       - "post_freeze_extensions/3d_niche_partition/run_couse_shiftability_v1.py"
       - "post_freeze_extensions/3d_niche_partition/COUSE_NULL_AMENDMENT_V1.md"
+      - "post_freeze_extensions/3d_niche_partition/couse_vertical_separation_contract_v1.json"
       - "post_freeze_extensions/3d_niche_partition/couse_endpoint_audit_summary_v1.json"
       - ".github/workflows/couse-shiftability-v1.yml"
       - "pyproject.toml"
@@ -32,7 +33,7 @@ jobs:
         with:
           python-version: "3.12"
       - run: python -m pip install -e . pandas requests pyproj
-      - name: Check z-phase null shiftability without vertical values
+      - name: Run pre-vertical phase-shiftability audit
         run: python post_freeze_extensions/3d_niche_partition/run_couse_shiftability_v1.py --panel "${{ matrix.panel }}"
       - uses: actions/upload-artifact@v4
         with:
