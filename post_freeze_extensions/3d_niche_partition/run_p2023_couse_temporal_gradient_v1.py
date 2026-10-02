@@ -214,7 +214,7 @@ def main():
             "p_null_ge_observed":p_upper,
             "supported":supported,
         },
-        "dt_descriptive":pf["dt_overall"],
+        "dt_descriptive":pf["dt_overall_s"],
         "bands":band_results,
         "cumulative":cumulative_results,
         "interpretation":(
