@@ -77,6 +77,29 @@ If no candidate tolerance passes, the panel stops as structurally non-evaluable.
 
 This window-selection rule is based only on x-y-time support and is fixed before vertical separation is computed.
 
+
+## Endpoint / central-place exclusion before vertical opening
+
+Because synchronous same-cell encounters can be dominated by colony/roost departure and arrival, the already-established x-y-only night-endpoint proxy is applied before any vertical-separation outcome is opened.
+
+Proxy definition:
+- within each target session, take the first five and last five finite projected fixes;
+- pool these endpoint fixes within biological individual and admitted cohort;
+- select the observed endpoint minimizing summed Euclidean distance to all other pooled endpoint fixes as that individual's proxy centre;
+- the proxy is not asserted to be the true biological roost, lek or colony centre.
+
+An encounter is **endpoint-excluded** only when both participating fixes are at least 1,000 m from their own individual's proxy centre.
+
+The 1,000-m radius is inherited from the existing endpoint-neighbourhood audit and is not chosen from the new vertical outcome.
+
+### Pre-outcome primary-scope rule
+
+After the selected synchronization tolerance is frozen, x-y-time support is recomputed on endpoint-excluded encounters.
+
+- If the endpoint-excluded encounter set still satisfies the exact same panel gate (>=5 usable individuals, >=5 usable dyads, >=50 encounters; individual and dyad gates unchanged), the endpoint-excluded set becomes the primary vertical-separation universe.
+- If it fails, the all-space encounter set remains primary, but the interpretation is limited to generic synchronous co-presence; no foraging-competition or away-from-central-place language is allowed.
+- No radius sensitivity analysis is opened as rescue.
+
 ## Vertical outcome
 
 For each retained GPS fix:
