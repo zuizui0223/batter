@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-p2023-couse-horizontal-proximity-v1",
+  "classification": "post-outcome localization diagnostic fixed before temporal-gradient outcome",
+  "frozen_primary": {
+    "encounter_sha256": "d4250eafeb7b602e47f7b9449bb76d4a71af0f0bfaa3bc3b801b260e69f2f6bb",
+    "encounters": 679,
+    "dyads": 8,
+    "individuals": 6,
+    "grid_m": 500
+  },
+  "preflight": {
+    "min_encounters_per_dyad": 5,
+    "min_distinct_rounded_distance_m": 3,
+    "min_distance_sd_m_exclusive": 0,
+    "panel_min_evaluable_dyads": 5
+  },
+  "primary": {
+    "predictor": "horizontal endpoint distance metres / 100",
+    "response": "absolute terrain-relative session-centered vertical separation metres",
+    "dyad_statistic": "OLS slope",
+    "panel_aggregation": "equal dyad",
+    "direction": "negative"
+  },
+  "null": {
+    "type": "same fixed-encounter vertical phase null as corrected co-use primary",
+    "B": 9999,
+    "seed": 20261002115,
+    "support_rule": "observed-minus-null-mean < 0 and p(null<=observed)<=0.05"
+  },
+  "descriptive_bands_m": [
+    [
+      0,
+      50
+    ],
+    [
+      50,
+      100
+    ],
+    [
+      100,
+      250
+    ],
+    [
+      250,
+      1000
+    ]
+  ],
+  "descriptive_cumulative_upper_m": [
+    50,
+    100,
+    250
+  ]
+}
