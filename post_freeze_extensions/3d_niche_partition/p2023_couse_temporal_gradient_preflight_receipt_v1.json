@@ -53,5 +53,6 @@
       "dyads_ge3": 6
     }
   },
-  "next_step": "compute frozen terrain-relative temporal-gradient endpoint on these eight dyads without changing encounter universe"
+  "next_step": "compute frozen terrain-relative temporal-gradient endpoint on these eight dyads without changing encounter universe",
+  "temporal_gradient_may_open": true
 }
