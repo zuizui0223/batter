@@ -1,0 +1,40 @@
+name: original-terrain-geometry-v1
+
+on:
+  push:
+    branches:
+      - post-freeze/3d-niche-partition-v1
+    paths:
+      - "post_freeze_extensions/3d_niche_partition/run_original_terrain_geometry_v1.py"
+      - "post_freeze_extensions/3d_niche_partition/original_terrain_dem_preflight_receipt_v1.json"
+      - ".github/workflows/original-terrain-geometry-v1.yml"
+      - "pyproject.toml"
+  workflow_dispatch:
+
+jobs:
+  terrain:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    permissions:
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        panel:
+          - hypsignathus
+          - phyllostomus_2022
+          - phyllostomus_2023
+          - phyllostomus_2016
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -e . pandas requests pyproj
+      - name: Run terrain-relative 3D geometry diagnostic
+        run: python post_freeze_extensions/3d_niche_partition/run_original_terrain_geometry_v1.py --panel "${{ matrix.panel }}"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: original-terrain-geometry-${{ matrix.panel }}-v1
+          path: post_freeze_extensions/3d_niche_partition/original_terrain_results/${{ matrix.panel }}_terrain_geometry_result_v1.json
+          if-no-files-found: error
