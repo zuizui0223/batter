@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-simultaneous-couse-vertical-separation-v1",
+  "inferential_class": "post-outcome mechanism test",
+  "panels": [
+    "hypsignathus",
+    "phyllostomus_2022",
+    "phyllostomus_2023",
+    "phyllostomus_2016"
+  ],
+  "grid_m": 500,
+  "candidate_tolerances_s": [
+    60,
+    120,
+    300,
+    600
+  ],
+  "encounter_matching": "mutual nearest temporal neighbour within same 500-m cell and dyad; one-to-one",
+  "structural_gate": {
+    "dyad_min_encounters": 5,
+    "individual_min_encounters": 10,
+    "individual_min_partners": 2,
+    "panel_min_individuals": 5,
+    "panel_min_dyads": 5,
+    "panel_min_encounters": 50,
+    "tolerance_rule": "smallest candidate tolerance passing all gates"
+  },
+  "session_shiftability": "duration >= 4 * selected tolerance",
+  "vertical": {
+    "endpoint": "absolute pair difference in DEM-terrain-relative, session-median-centered height",
+    "dyad_aggregation": "median encounter separation",
+    "panel_aggregation": "equal mean of usable dyad medians"
+  },
+  "null": {
+    "type": "independent within-session circular timestamp shifts preserving x-y-z trajectory",
+    "minimum_phase_offset": "2 * selected tolerance from zero modulo session span",
+    "B": 9999,
+    "seeds": {
+      "hypsignathus": 20261002101,
+      "phyllostomus_2022": 20261002102,
+      "phyllostomus_2023": 20261002103,
+      "phyllostomus_2016": 20261002104
+    },
+    "valid_replicate_gate": {
+      "min_individuals": 5,
+      "min_dyads": 5,
+      "min_encounters": 50
+    }
+  },
+  "support_rule": "observed-minus-null-mean > 0 and one-sided p(null>=observed)<=0.05"
+}
