@@ -88,9 +88,11 @@ Proxy definition:
 - select the observed endpoint minimizing summed Euclidean distance to all other pooled endpoint fixes as that individual's proxy centre;
 - the proxy is not asserted to be the true biological roost, lek or colony centre.
 
-An encounter is **endpoint-excluded** only when both participating fixes are at least 1,000 m from their own individual's proxy centre.
+For endpoint-excluded panels, fixes within 1,000 m of their own individual's proxy centre are removed **before mutual-nearest encounter matching**. The observed encounter set and the vertical phase-shift null therefore use the same reduced fix universe.
 
 The 1,000-m radius is inherited from the existing endpoint-neighbourhood audit and is not chosen from the new vertical outcome.
+
+This pre-matching exclusion supersedes the earlier match-then-filter bookkeeping and is fixed before any vertical-separation outcome is computed.
 
 ### Pre-outcome primary-scope rule
 
