@@ -57,9 +57,10 @@
   "endpoint_exclusion": {
     "proxy": "first five + last five fixes per target session; individual x cohort medoid endpoint",
     "radius_m": 1000,
-    "encounter_keep_rule": "both participating fixes >= radius from their own proxy",
+    "encounter_keep_rule": "for endpoint-excluded panels, remove fixes <1000 m from their own individual x cohort endpoint proxy before mutual-nearest matching; both observed encounters and z-phase null use this same reduced fix universe",
     "primary_scope_rule": "use endpoint-excluded encounters if same structural gate still passes; otherwise retain all-space primary with generic co-presence interpretation",
-    "sensitivity_rescue": false
+    "sensitivity_rescue": false,
+    "final_fix_universe_amendment": "fixed before any vertical-separation outcome; supersedes earlier match-then-filter bookkeeping"
   },
   "null_amendment": "COUSE_NULL_AMENDMENT_V1.md; amended after x-y-time preflight and before any vertical-separation outcome"
 }
