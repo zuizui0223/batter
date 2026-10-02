@@ -5,6 +5,8 @@ on:
     paths:
       - "post_freeze_extensions/strategy_maintenance/source_schema_preflight_v1.py"
       - ".github/workflows/strategy-maintenance-source-schema-preflight-v1.yml"
+  pull_request:
+    branches: [post-freeze/mechanism-synthesis-v9-final]
   workflow_dispatch:
 jobs:
   preflight:
