@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-p2023-couse-horizontal-proximity-preflight-receipt-v1",
+  "status": "HORIZONTAL_PROXIMITY_MAY_OPEN",
+  "authoritative_workflow": {
+    "run_id": 36955651155,
+    "head_sha": "2e55913aaa215c6b8082a08f1734ec1b7fcedb3e",
+    "artifact_id": 11205667660,
+    "artifact_digest": "sha256:4c8a9d3843b22f054c9a74fd500d00da592e0a243fcd8e24440c26180c776002"
+  },
+  "vertical_values_used": false,
+  "horizontal_proximity_may_open": true,
+  "encounter_sha256": "d4250eafeb7b602e47f7b9449bb76d4a71af0f0bfaa3bc3b801b260e69f2f6bb",
+  "frozen_encounters": 679,
+  "frozen_dyads": 8,
+  "frozen_individuals": 6,
+  "slope_evaluable_dyad_count": 8,
+  "slope_evaluable_dyads": [
+    "Aj-cave (Colony 2)::2023|||989001041827562|||989001041827592",
+    "Aj-cave (Colony 2)::2023|||989001041827563|||989001041827573",
+    "Aj-cave (Colony 2)::2023|||989001041827563|||989001041827588",
+    "Aj-cave (Colony 2)::2023|||989001041827563|||989001041827637",
+    "Aj-cave (Colony 2)::2023|||989001041827573|||989001041827588",
+    "Aj-cave (Colony 2)::2023|||989001041827573|||989001041827637",
+    "Aj-cave (Colony 2)::2023|||989001041827588|||989001041827592",
+    "Aj-cave (Colony 2)::2023|||989001041827588|||989001041827637"
+  ],
+  "distance_overall_m": {
+    "min": 11.471107070480485,
+    "median": 120.5145616806606,
+    "mean": 150.177662100947,
+    "max": 553.5698583575115,
+    "sd": 85.95819528461013
+  },
+  "support": {
+    "within_50_m": {
+      "encounters": 15,
+      "represented_dyads": 2,
+      "dyads_ge3": 1
+    },
+    "within_100_m": {
+      "encounters": 166,
+      "represented_dyads": 7,
+      "dyads_ge3": 3
+    },
+    "within_250_m": {
+      "encounters": 589,
+      "represented_dyads": 8,
+      "dyads_ge3": 7
+    },
+    "over_250_m": {
+      "encounters": 90,
+      "represented_dyads": 8,
+      "dyads_ge3": 6
+    }
+  },
+  "next_step": "compute frozen terrain-relative horizontal-proximity slope on all eight dyads"
+}
