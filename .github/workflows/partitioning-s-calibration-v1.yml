@@ -8,6 +8,9 @@ on:
       - "post_freeze_extensions/3d_niche_partition/run_partitioning_s_calibration_v1.py"
       - "post_freeze_extensions/3d_niche_partition/partitioning_calibration_contract_v1.json"
       - ".github/workflows/partitioning-s-calibration-v1.yml"
+  pull_request:
+    branches:
+      - post-freeze/3d-niche-partition-v1
   workflow_dispatch:
 
 jobs:
