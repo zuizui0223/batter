@@ -1,0 +1,33 @@
+name: p2023-couse-microplace-preflight-v1
+
+on:
+  push:
+    branches:
+      - post-freeze/3d-niche-partition-v1
+    paths:
+      - "post_freeze_extensions/3d_niche_partition/P2023_COUSE_MICROPLACE_CONTRACT_V1.md"
+      - "post_freeze_extensions/3d_niche_partition/p2023_couse_microplace_contract_v1.json"
+      - "post_freeze_extensions/3d_niche_partition/run_p2023_couse_microplace_preflight_v1.py"
+      - ".github/workflows/p2023-couse-microplace-preflight-v1.yml"
+      - "pyproject.toml"
+  workflow_dispatch:
+
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -e . pandas requests pyproj
+      - name: Run x-y-only 2023 micro-place preflight
+        run: python post_freeze_extensions/3d_niche_partition/run_p2023_couse_microplace_preflight_v1.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: p2023-couse-microplace-preflight-v1
+          path: post_freeze_extensions/3d_niche_partition/p2023_couse_microplace_preflight_v1.json
+          if-no-files-found: error
