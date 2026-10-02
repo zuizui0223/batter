@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="650" viewBox="0 0 1000 650">
+<rect width="100%" height="100%" fill="white"/>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;fill:#111}
+.axis{stroke:#111;stroke-width:1.3}
+.zero{stroke:#777;stroke-width:1;stroke-dasharray:5 4}
+.pt{fill:white;stroke:#111;stroke-width:2}
+.support{fill:#111;stroke:#111;stroke-width:2}
+</style>
+<text x="500" y="38" text-anchor="middle" font-size="22">Personal specialization versus interaction-dependent vertical separation</text>
+<line x1="120" y1="535" x2="940" y2="535" class="axis"/>
+<line x1="120" y1="80" x2="120" y2="535" class="axis"/>
+<line x1="120" y1="346" x2="940" y2="346" class="zero"/>
+<line x1="195" y1="80" x2="195" y2="535" class="zero"/>
+<text x="530" y="600" text-anchor="middle" font-size="15">Terrain-relative personal vertical-strategy fidelity (V_rel)</text>
+<text x="32" y="308" transform="rotate(-90 32 308)" text-anchor="middle" font-size="15">Extra synchronous co-use vertical separation (m)</text>
+<text x="925" y="105" text-anchor="end" font-size="13">specialization + co-use separation</text>
+<text x="925" y="515" text-anchor="end" font-size="13">specialization without co-use separation</text>
+<text x="130" y="330" font-size="11">0</text>
+
+<!-- x scale: -0.01 to 0.11; y scale: -3 to 5 -->
+<circle cx="549" cy="459" r="8" class="pt"/>
+<text x="560" y="452" font-size="13"><tspan font-style="italic">H. monstrosus</tspan></text>
+<text x="560" y="469" font-size="11">60 s, endpoint-excluded</text>
+
+<circle cx="835" cy="399" r="8" class="pt"/>
+<text x="846" y="392" font-size="13"><tspan font-style="italic">P. hastatus</tspan> 2022</text>
+<text x="846" y="409" font-size="11">60 s, endpoint-excluded</text>
+
+<circle cx="680" cy="141" r="9" class="support"/>
+<text x="691" y="134" font-size="13"><tspan font-style="italic">P. hastatus</tspan> 2023</text>
+<text x="691" y="151" font-size="11">600 s, all-space; co-use criterion met</text>
+
+<circle cx="692" cy="395" r="8" class="pt"/>
+<text x="703" y="431" font-size="13"><tspan font-style="italic">P. hastatus</tspan> 2016</text>
+<text x="703" y="448" font-size="11">600 s, endpoint-excluded</text>
+
+<text x="130" y="625" font-size="11">All x-axis effects are terrain-relative strategy-fidelity estimates. Filled point = co-use separation criterion met.</text>
+</svg>
