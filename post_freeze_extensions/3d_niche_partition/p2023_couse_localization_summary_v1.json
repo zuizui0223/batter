@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-p2023-couse-localization-result-v1",
+  "workflow": {
+    "run_id": 36954565174,
+    "head_sha": "c9bdb11f88f1bc9964e62de986a217f2e93cdfb8",
+    "artifact_id": 11205431379,
+    "artifact_digest": "sha256:f76edfc16c8030f3e96397c50c76050144c8cc38d14d6cb01eab27e3316470b6"
+  },
+  "primary": {
+    "observed_m": 26.56567049998826,
+    "null_mean_m": 22.991942626060883,
+    "excess_m": 3.5737278739273783,
+    "p_upper": 0.0231
+  },
+  "loo": {
+    "p_min": 0.0055,
+    "p_max": 0.2332,
+    "variants_p_lt_0_05": 6,
+    "total_variants": 8,
+    "interpretation": "not single-dyad artifact but dyad-heterogeneous"
+  },
+  "endpoint_excluded": {
+    "individuals": 4,
+    "dyads": 6,
+    "encounters": 629,
+    "observed_m": 23.63996866665082,
+    "null_mean_m": 19.831340346491395,
+    "excess_m": 3.808628320159425,
+    "tail_location": 0.011,
+    "inferential": false
+  },
+  "claim": "context-dependent, dyad-heterogeneous co-presence separation signal"
+}
