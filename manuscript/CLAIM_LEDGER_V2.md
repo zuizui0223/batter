@@ -48,3 +48,28 @@ Avoid as demonstrated mechanisms:
 - learned flight route;
 - adaptive specialization;
 - causal resource partitioning.
+
+
+## Post-freeze 3D diagnostic claims (v2 reopening)
+
+These analyses were added after the manuscript outcomes were known and are explicitly diagnostic rather than independent confirmation.
+
+| Claim | Status | Evidence |
+|---|---|---|
+| Fruit-bat vertical individuality is explained solely by repeated use of different terrain elevations. | not supported as a general explanation | Terrain-relative V_rel remains positive and permutation-supported in 4/4 structurally evaluable panels: +0.042, +0.100, +0.077, +0.079; p<=0.0345. |
+| Repeatable terrain-relative strategies imply mutually separated vertical layers. | not supported | S_rel = -0.0158, -0.0090, +0.0163, +0.0289; no panel has permutation-supported positive added segregation. |
+| Local synchronous co-use generally induces extra vertical separation. | not supported as a general pattern | Upper-tail phase-shift test unsupported in 3/4 panels; positive dyad-bootstrap 95% upper endpoints +0.98, +1.92, +1.13 m. |
+| P. hastatus 2023 shows co-use-dependent separation. | supported within the frozen coarse design, heterogeneous | +3.57 m; phase-shift p=0.0231; 600-s/all-space design; dyad-bootstrap compatibility -4.63 to +11.73 m. |
+| Individual specialization and contemporaneous spatial partitioning are empirically distinguishable. | supported in these panels | Terrain-relative fidelity occurs in 4/4 while positive S_rel occurs in 0/4 and positive synchronous co-use separation in 1/4. |
+| Competition is absent or irrelevant. | not established | Geometry cannot exclude historical competition, resource differentiation or other causes of stable strategies. |
+
+### Preferred post-freeze synthesis
+
+> **Repeatable personal vertical strategies can persist relative to local terrain without requiring mutually exclusive vertical layers or systematic contemporaneous vertical avoidance. Individual specialization and strong spatial partitioning are therefore distinct empirical dimensions in these data.**
+
+### Provenance
+
+- terrain-relative geometry and co-use analyses: post-outcome diagnostics;
+- S calibration: post-outcome diagnostic frozen before S-null outputs were opened;
+- I dyad-bootstrap bounds: post-outcome compatibility diagnostic, not a post-hoc power or formal equivalence test;
+- manuscript reopening must be recorded as v2/post-freeze rather than represented as preregistered confirmation.
