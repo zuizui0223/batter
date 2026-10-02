@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-p2023-couse-temporal-gradient-result-v1",
+  "workflow": {
+    "run_id": 36955693799,
+    "artifact_id": 11206360320,
+    "artifact_digest": "sha256:c7e71b901f82dcb506b1cb83dfcd0e21b70bb00a360a04f9b1268e3e50cf2382"
+  },
+  "encounter_sha256": "d4250eafeb7b602e47f7b9449bb76d4a71af0f0bfaa3bc3b801b260e69f2f6bb",
+  "observed_mean_slope_m_per_min": -13.560392048659676,
+  "null_mean_m_per_min": -9.574815602043827,
+  "excess_slope": -3.9855764466158483,
+  "q025": -17.106996531460112,
+  "q50": -9.173404708147693,
+  "q975": -4.653040117756665,
+  "p_lower": 0.095,
+  "p_upper": 0.9051,
+  "supported": false,
+  "temporal_structure": {
+    "median_dt_s": 3,
+    "within_60_s_encounters": 599,
+    "total_encounters": 679
+  },
+  "interpretation": "predicted direction but fixed temporal-proximity criterion not met"
+}
