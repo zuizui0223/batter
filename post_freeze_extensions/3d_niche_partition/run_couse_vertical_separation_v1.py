@@ -168,15 +168,27 @@ def reconstruct_primary(panel,records,cfg,receipt):
     scope=str(p["primary_scope"])
     centers,_=ep.endpoint_centers(records)
     radius=float(cfg["endpoint_exclusion"]["radius_m"])
-    rr,_,_=shift.primary_records(records,scope,centers,radius,tol)
-    encounters,dyads,inds=shift.build_primary_encounters(rr,tol,cfg)
+
+    # Authoritative frozen encounter ordering:
+    # full shiftable x-y-time universe -> mutual-nearest matching ->
+    # endpoint encounter filter (when applicable) -> support gates.
+    rr_full,_,_=shift.shiftable_records(records,tol)
+    encounters,dyads,inds=shift.build_primary_encounters(
+        rr_full,tol,cfg,scope,centers,radius
+    )
     desc=sorted(shift.canonical_encounter(m) for m in encounters)
     sha=hashlib.sha256(("\n".join(desc)+"\n").encode()).hexdigest()
     if sha!=p["primary_encounter_set_sha256"]:
         raise RuntimeError(f"{panel}: encounter SHA {sha} != frozen {p['primary_encounter_set_sha256']}")
     if len(encounters)!=int(p["encounters"]) or len(dyads)!=int(p["usable_dyads"]):
         raise RuntimeError(f"{panel}: encounter/dyad count mismatch")
-    return rr,encounters,dyads,inds,sha
+
+    # The z-phase null uses only the primary-scope fix universe.
+    phase_rr=(
+        [r for r in rr_full if ep.is_away(r,centers,radius)]
+        if scope=="endpoint_excluded" else rr_full
+    )
+    return phase_rr,encounters,dyads,inds,sha
 
 
 def encounter_endpoint_key(m,side):
