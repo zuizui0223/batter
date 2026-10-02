@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-couse-behavioural-context-result-v1",
+  "workflow": {
+    "run_id": 36954177173,
+    "head_sha": "a15692c5458daca64317c76612e7c9080d25c024"
+  },
+  "descriptive_only": true,
+  "panels": {
+    "hypsignathus": {
+      "encounters": 883,
+      "both_stationary_like": 0.5662514156285391,
+      "one_stationary_like": 0.38165345413363533,
+      "neither_stationary_like": 0.052095130237825596,
+      "both_middle_session": 0.4337485843714609,
+      "median_local_speed_m_s": 0.07405456085798817,
+      "artifact_id": 11205850432,
+      "artifact_digest": "sha256:79e7653149515400e3af075e798fd48016b1bd831a4879dc7b64aaa90a13edad"
+    },
+    "phyllostomus_2022": {
+      "encounters": 347,
+      "both_stationary_like": 0.4322766570605187,
+      "one_stationary_like": 0.4034582132564842,
+      "neither_stationary_like": 0.1642651296829971,
+      "both_middle_session": 0.8270893371757925,
+      "median_local_speed_m_s": 0.3076389490824299,
+      "artifact_id": 11205231965,
+      "artifact_digest": "sha256:9753312a752cc3b144d4dd349f229277dbd9ad6b02607503b14b4cc54cace4a9"
+    },
+    "phyllostomus_2023": {
+      "encounters": 679,
+      "both_stationary_like": 0.2268041237113402,
+      "one_stationary_like": 0.44329896907216493,
+      "neither_stationary_like": 0.32989690721649484,
+      "both_middle_session": 0.7128129602356407,
+      "median_local_speed_m_s": 0.42323056303823153,
+      "artifact_id": 11205516470,
+      "artifact_digest": "sha256:6535dc49270e6a3f2747337092e3a2e24b45eeac30e4bcd0870464df6bc49e4c"
+    },
+    "phyllostomus_2016": {
+      "encounters": 16096,
+      "both_stationary_like": 0.018886679920477135,
+      "one_stationary_like": 0.21048707753479126,
+      "neither_stationary_like": 0.7706262425447317,
+      "both_middle_session": 0.9939736580516899,
+      "median_local_speed_m_s": 1.0550030131440709,
+      "artifact_id": 11204824529,
+      "artifact_digest": "sha256:db491d03b0a98a555f099e017aa47bfc5f61bb3187cc3ed253a933ab7f32167f"
+    }
+  }
+}
