@@ -126,6 +126,12 @@ The focal annotated source provided height above ground, calculated in the origi
 
 The primary AGL test used 5-km cells and 9,999 permutations. Fixed grain robustness tests used 2.5- and 10-km cells with 4,999 permutations each. The predeclared scale statement required both sensitivity scales to pass if the manuscript were to claim robustness across 2.5–10 km.
 
+### Post-outcome terrain-relative geometry and synchronous co-use diagnostics
+
+After the centered-shape outcomes were known, we reopened the analysis for two explicitly diagnostic 3-D tests in the four original fruit-bat panels with sufficient structure. These analyses were not independent confirmation. First, at 500-m resolution we subtracted bilinearly interpolated DEM elevation from each fix and recomputed same- versus different-individual vertical configuration within pairwise-shared horizontal cells. The terrain-relative fidelity statistic V_rel used the already-established individual-label permutation null (9,999 permutations per panel). We separately recorded added 3-D segregation, S_rel = other-individual 3-D overlap distance minus same-individual 3-D overlap distance, and calibrated S_rel under the identical inherited label permutations.
+
+Second, a frozen synchronous co-use analysis matched distinct individuals occupying the same 500-m cell using the smallest predeclared temporal tolerance that passed x-y-time support gates (60, 120, 300 or 600 s). Terrain-relative, session-centered absolute height separation was summarized as the median within each usable dyad and then averaged equally across dyads. A circular session phase-shift null preserved each individual's route and vertical distribution while breaking cross-individual synchrony. The primary directional test asked whether observed separation exceeded this null. After those outcomes were known, a diagnostic 9,999-replicate dyad bootstrap quantified the 95% compatibility interval for the observed-minus-null-mean excess; it was not treated as post-hoc power or as a formal equivalence test. These diagnostics can distinguish persistent individual strategy from strong contemporaneous spatial separation, but cannot identify competition, intentional avoidance or resource partitioning as causes.
+
 ### Night-endpoint neighbourhood exclusion
 
 To assess whether departure/arrival or central-place structure could dominate the focal AGL result, we froze an x-y-only endpoint proxy before opening results. This proxy is not claimed to identify the biological roost.
