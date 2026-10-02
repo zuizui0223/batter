@@ -256,7 +256,14 @@ def standardize_hipposideros():
         "Authorization": f"Bearer {token}",
         "User-Agent": "batter-external-3d-geometry-v1/1.0",
     }
-    r = requests.get(f"https://datadryad.org/api/v2/files/{file_id}/download", headers=headers, timeout=180, allow_redirects=True)
+    api_url = f"https://datadryad.org/api/v2/files/{file_id}/download"
+    r = requests.get(api_url, headers=headers, timeout=180, allow_redirects=True)
+    if r.status_code != 200:
+        # Access-route fallback only: the published Dryad landing page exposes the
+        # same file through /downloads/file_stream/<file_id>. Scientific identity
+        # remains guarded by the pre-existing frozen SHA256 below.
+        public_url = f"https://datadryad.org/downloads/file_stream/{file_id}"
+        r = requests.get(public_url, headers=UA, timeout=180, allow_redirects=True)
     r.raise_for_status()
     raw = r.content
     sha = hashlib.sha256(raw).hexdigest()
