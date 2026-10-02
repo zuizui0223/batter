@@ -1,0 +1,42 @@
+name: couse-endpoint-audit-v1
+
+on:
+  push:
+    branches:
+      - post-freeze/3d-niche-partition-v1
+    paths:
+      - "post_freeze_extensions/3d_niche_partition/run_couse_endpoint_audit_v1.py"
+      - "post_freeze_extensions/3d_niche_partition/COUSE_VERTICAL_SEPARATION_CONTRACT_V1.md"
+      - "post_freeze_extensions/3d_niche_partition/couse_vertical_separation_contract_v1.json"
+      - "post_freeze_extensions/3d_niche_partition/couse_preflight_summary_v1.json"
+      - ".github/workflows/couse-endpoint-audit-v1.yml"
+      - "pyproject.toml"
+  workflow_dispatch:
+
+jobs:
+  endpoint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    permissions:
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        panel:
+          - hypsignathus
+          - phyllostomus_2022
+          - phyllostomus_2023
+          - phyllostomus_2016
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -e . pandas requests pyproj
+      - name: Audit endpoint concentration without vertical values
+        run: python post_freeze_extensions/3d_niche_partition/run_couse_endpoint_audit_v1.py --panel "${{ matrix.panel }}"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: couse-endpoint-audit-${{ matrix.panel }}-v1
+          path: post_freeze_extensions/3d_niche_partition/couse_endpoint_audit/${{ matrix.panel }}_endpoint_audit_v1.json
+          if-no-files-found: error
