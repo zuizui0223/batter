@@ -5,7 +5,9 @@ on:
     branches:
       - post-freeze/3d-niche-partition-v1
     paths:
-      - "post_freeze_extensions/3d_niche_partition/**"
+      - "post_freeze_extensions/3d_niche_partition/CONTRACT_V1.md"
+      - "post_freeze_extensions/3d_niche_partition/contract_v1.json"
+      - "post_freeze_extensions/3d_niche_partition/run_v1.py"
       - ".github/workflows/3d-niche-partition-v1.yml"
       - "scripts/run_tag_altitude_bias_shape.py"
       - "scripts/run_cross_panel_estimator_calibration.py"
