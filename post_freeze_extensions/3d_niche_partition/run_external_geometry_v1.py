@@ -518,6 +518,76 @@ def evaluate_hippo(sessions_by_cohort, mats_by_cohort, labels_by_cohort, species
     return out, species, all_rows
 
 
+def eval_cohort_primary(sessions, ozxy_matrix, labels):
+    rows = []
+    uniq = sorted(set(labels))
+    idx = np.arange(len(sessions))
+    for t in range(len(sessions)):
+        lab = labels[t]
+        row = ozxy_matrix[t]
+        valid = np.isfinite(row) & (idx != t)
+        self_mask = valid & (labels == lab)
+        if not np.any(self_mask):
+            continue
+        other_means = []
+        for olab in uniq:
+            if olab == lab:
+                continue
+            mask = valid & (labels == olab)
+            if np.any(mask):
+                other_means.append(float(np.nanmean(row[mask])))
+        if len(other_means) < 2:
+            continue
+        rows.append({
+            "cohort": sessions[t]["cohort"],
+            "session": sessions[t]["session"],
+            "individual": str(lab),
+            "d_ozxy": float(np.nanmean(row[self_mask])) - float(np.mean(other_means)),
+        })
+    return rows
+
+
+def aggregate_primary_generic(rows):
+    vals = []
+    for iid in sorted({r["individual"] for r in rows}):
+        rs = [r for r in rows if r["individual"] == iid]
+        vals.append(float(np.mean([r["d_ozxy"] for r in rs])))
+    return {
+        "eligible_individuals": len(vals),
+        "d_panel": float(np.mean(vals)) if vals else None,
+    }
+
+
+def aggregate_primary_hippo(rows, species_min=3, total_min=5):
+    species_vals = []
+    total = 0
+    included = []
+    for sp in sorted({r["cohort"] for r in rows}):
+        sr = [r for r in rows if r["cohort"] == sp]
+        ivals = []
+        for iid in sorted({r["individual"] for r in sr}):
+            rs = [r for r in sr if r["individual"] == iid]
+            ivals.append(float(np.mean([r["d_ozxy"] for r in rs])))
+        if len(ivals) >= species_min:
+            included.append(sp)
+            total += len(ivals)
+            species_vals.append(float(np.mean(ivals)))
+    return {
+        "eligible_individuals": total,
+        "eligible_species": included,
+        "d_panel": float(np.mean(species_vals)) if total >= total_min and species_vals else None,
+    }
+
+
+def evaluate_primary_fast(sessions_by_cohort, mats_by_cohort, labels_by_cohort, source):
+    rows = []
+    for cohort, sessions in sessions_by_cohort.items():
+        rows.extend(eval_cohort_primary(sessions, mats_by_cohort[cohort]["ozxy"], labels_by_cohort[cohort]))
+    if source == "hipposideros":
+        return aggregate_primary_hippo(rows)
+    return aggregate_primary_generic(rows)
+
+
 def run(source):
     cfg = load_cfg()
     source_cfg = cfg["sources"][source]
@@ -556,21 +626,20 @@ def run(source):
     if structural:
         for _ in range(B):
             plabels = {c: rng.permutation(v) for c, v in labels.items()}
+            ps = evaluate_primary_fast(sessions, mats, plabels, source)
             if source == "hipposideros":
-                s, _, _ = evaluate_hippo(sessions, mats, plabels)
                 ok = (
-                    s["eligible_individuals"] >= int(source_cfg["source_total_min_evaluable_individuals"])
-                    and len(s["eligible_species"]) >= 1
-                    and s["d_panel"] is not None
+                    ps["eligible_individuals"] >= int(source_cfg["source_total_min_evaluable_individuals"])
+                    and len(ps.get("eligible_species", [])) >= 1
+                    and ps["d_panel"] is not None
                 )
             else:
-                s, _, _ = evaluate_generic(sessions, mats, plabels)
-                ok = s["eligible_individuals"] >= int(source_cfg["primary_gate_n"]) and s["d_panel"] is not None
+                ok = ps["eligible_individuals"] >= int(source_cfg["primary_gate_n"]) and ps["d_panel"] is not None
             if not ok:
                 invalid += 1
                 continue
-            null.append(float(s["d_panel"]))
-            null_n.append(int(s["eligible_individuals"]))
+            null.append(float(ps["d_panel"]))
+            null_n.append(int(ps["eligible_individuals"]))
 
     calibration = cal.tail_summary(null, float(observed["d_panel"])) if structural and null else None
     supported = bool(
