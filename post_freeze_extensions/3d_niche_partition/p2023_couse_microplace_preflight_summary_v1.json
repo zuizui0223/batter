@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-p2023-couse-microplace-preflight-result-v1",
+  "workflow": {
+    "run_id": 36971639069,
+    "head_sha": "06b775e6b39ae12b3692823358e1964ffd8b5d7f",
+    "artifact_id": 11211922653,
+    "artifact_digest": "sha256:5e7cd678b689c4cfc11d332e8344b9b8eafbbaee582d5bdc31959b088dfaad9c"
+  },
+  "encounter_sha256": "d4250eafeb7b602e47f7b9449bb76d4a71af0f0bfaa3bc3b801b260e69f2f6bb",
+  "vertical_outcome_opened": false,
+  "selected_microplace_m": null,
+  "structural_stop": true,
+  "candidates": {
+    "50": {
+      "endpoint_shiftable_fraction": 0.8475699558173785,
+      "all_dyads_fraction_gate": false,
+      "dyads_ge5": 2,
+      "passed": false
+    },
+    "100": {
+      "endpoint_shiftable_fraction": 0.8939617083946981,
+      "all_dyads_fraction_gate": false,
+      "dyads_ge5": 2,
+      "passed": false
+    },
+    "250": {
+      "endpoint_shiftable_fraction": 0.9094256259204713,
+      "all_dyads_fraction_gate": false,
+      "dyads_ge5": 3,
+      "passed": false
+    }
+  },
+  "interpretation": "micro-place-conditioned phase null is structurally unavailable without dropping frozen dyads; sub-cell route/microhabitat explanation remains unresolved"
+}
