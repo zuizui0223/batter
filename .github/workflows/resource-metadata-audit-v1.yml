@@ -1,0 +1,33 @@
+name: resource-metadata-audit-v1
+
+on:
+  push:
+    branches:
+      - post-freeze/3d-niche-partition-v1
+    paths:
+      - "post_freeze_extensions/3d_niche_partition/run_resource_metadata_audit_v1.py"
+      - ".github/workflows/resource-metadata-audit-v1.yml"
+      - "contract/hypsignathus_replication_v1.json"
+      - "contract/phyllostomus_replication_v1.json"
+      - "contract/phyllostomus_2023_replication_v1.json"
+      - "contract/phyllostomus_2016_dry_architecture_v1.json"
+  workflow_dispatch:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Audit source metadata fields
+        run: python post_freeze_extensions/3d_niche_partition/run_resource_metadata_audit_v1.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: resource-metadata-audit-v1
+          path: post_freeze_extensions/3d_niche_partition/resource_metadata_audit_v1.json
+          if-no-files-found: error
