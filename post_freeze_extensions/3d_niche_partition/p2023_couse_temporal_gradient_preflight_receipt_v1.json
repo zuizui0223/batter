@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-p2023-couse-temporal-gradient-preflight-receipt-v1",
+  "status": "TEMPORAL_GRADIENT_MAY_OPEN",
+  "authoritative_workflow": {
+    "run_id": 36955076366,
+    "head_sha": "13b2b54f54e6eb13da98f080856d27716f4b99f2",
+    "artifact_id": 11205451978,
+    "artifact_digest": "sha256:ceec167ad0514d1bbb25a717ae60eb47f7d9b9c02fe10eb40e61c0bc7f7f8c70"
+  },
+  "vertical_values_used": false,
+  "encounter_sha256": "d4250eafeb7b602e47f7b9449bb76d4a71af0f0bfaa3bc3b801b260e69f2f6bb",
+  "frozen_encounters": 679,
+  "frozen_dyads": 8,
+  "frozen_individuals": 6,
+  "slope_evaluable_dyads": [
+    "Aj-cave (Colony 2)::2023|||989001041827562|||989001041827592",
+    "Aj-cave (Colony 2)::2023|||989001041827563|||989001041827573",
+    "Aj-cave (Colony 2)::2023|||989001041827563|||989001041827588",
+    "Aj-cave (Colony 2)::2023|||989001041827563|||989001041827637",
+    "Aj-cave (Colony 2)::2023|||989001041827573|||989001041827588",
+    "Aj-cave (Colony 2)::2023|||989001041827573|||989001041827637",
+    "Aj-cave (Colony 2)::2023|||989001041827588|||989001041827592",
+    "Aj-cave (Colony 2)::2023|||989001041827588|||989001041827637"
+  ],
+  "slope_evaluable_dyad_count": 8,
+  "dt_overall_s": {
+    "min": 0,
+    "median": 3,
+    "mean": 46.45066273932253,
+    "max": 552,
+    "sd": 124.00533325745012
+  },
+  "fixed_support": {
+    "within_60_s": {
+      "encounters": 599,
+      "represented_dyads": 7,
+      "dyads_ge3": 5
+    },
+    "within_120_s": {
+      "encounters": 609,
+      "represented_dyads": 7,
+      "dyads_ge3": 6
+    },
+    "within_300_s": {
+      "encounters": 621,
+      "represented_dyads": 7,
+      "dyads_ge3": 7
+    },
+    "band_300_600_s": {
+      "encounters": 58,
+      "represented_dyads": 7,
+      "dyads_ge3": 6
+    }
+  },
+  "next_step": "compute frozen terrain-relative temporal-gradient endpoint on these eight dyads without changing encounter universe"
+}
