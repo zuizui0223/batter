@@ -8,7 +8,7 @@ Date: 2026-10-03
 
 Title:
 
-**Persistent individual vertical strategies need not partition three-dimensional space in bats**
+**Persistent individual vertical strategies need not partition three-dimensional space in two tropical bat species**
 
 Internal header: v0.4.0 candidate — post-freeze maintenance synthesis.
 
@@ -80,7 +80,7 @@ Prediction-based individuality statistics require calibration against the finite
 
 ## Packaging status
 
-**VALIDATED CANDIDATE: READY TO FREEZE AS `release/jae-v0.4.0-rc1`.**
+**VALIDATED CANDIDATE: READY TO FREEZE AS `release/jae-v0.4.0-rc2`.**
 
 The v0.3.8 validation receipts are historical and must not be reused as validation of the modified v0.4.0 candidate.
 
