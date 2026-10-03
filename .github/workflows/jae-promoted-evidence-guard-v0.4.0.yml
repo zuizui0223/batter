@@ -3,7 +3,7 @@ name: jae-promoted-evidence-guard-v0.4.0
 on:
   push:
     branches:
-      - release/jae-v0.4.0-rc1
+      - release/jae-v0.4.0-rc2
     paths:
       - "post_freeze_extensions/3d_niche_partition/**"
       - "post_freeze_extensions/strategy_maintenance/**"
