@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-strategy-maintenance-preflight-v1",
+  "classification": "post-outcome mechanism preflight",
+  "panels": [
+    "hypsignathus",
+    "phyllostomus_2022",
+    "phyllostomus_2023",
+    "phyllostomus_2016"
+  ],
+  "candidate_environment_priority": [
+    "wind",
+    "vertical_motion_or_boundary_layer_proxy",
+    "temperature",
+    "precipitation",
+    "radiation_or_cloud"
+  ],
+  "minimum_panels_for_cross_panel_claim": 3,
+  "identifiability": {
+    "repeat_individuals_min": 5,
+    "sessions_per_individual_min": 2,
+    "individuals_with_span_min": 5,
+    "individual_span_fraction_of_panel_central90_min": 0.4,
+    "matched_target_fraction_min": 0.5,
+    "other_individual_donors_min": 2,
+    "max_single_night_fraction": 0.5
+  },
+  "primary_contrast": "same-individual reaction norm vs same-individual history without individual-by-environment slope",
+  "secondary_contrast": "same-individual history vs population environment model",
+  "environment_source": {
+    "dataset": "ERA5",
+    "provider": "Earthmover Icechunk ERA5 public AWS",
+    "bucket": "earthmover-icechunk-era5",
+    "prefix": "icechunkV2",
+    "group": "single/temporal",
+    "variables": [
+      "u10",
+      "v10"
+    ],
+    "frequency": "hourly",
+    "grid_degrees": 0.25,
+    "matching": "nearest grid point and nearest hour"
+  },
+  "xy_time_universe": {
+    "grid_m": 500,
+    "kinematic_state": "speed2_turn2",
+    "maximum_step_interval_seconds": 1800,
+    "minimum_supported_target_events": 50,
+    "expected_evaluable_individuals": {
+      "hypsignathus": 19,
+      "phyllostomus_2022": 23,
+      "phyllostomus_2023": 11,
+      "phyllostomus_2016": 9
+    }
+  },
+  "environment_support": {
+    "range_quantiles": [
+      0.05,
+      0.95
+    ],
+    "individual_span_fraction_min": 0.4,
+    "other_individual_donors_min": 2,
+    "equal_individual_matched_target_fraction_min": 0.5,
+    "max_single_night_fraction": 0.5
+  }
+}

@@ -1,0 +1,31 @@
+name: strategy-maintenance-reaction-norm-v1
+on:
+  push:
+    branches: [post-freeze/strategy-maintenance-preflight-v1]
+    paths:
+      - "post_freeze_extensions/strategy_maintenance/run_reaction_norm_v1.py"
+      - "post_freeze_extensions/strategy_maintenance/reaction_norm_contract_v1.json"
+      - "post_freeze_extensions/strategy_maintenance/inherited_terrain_dem_receipt_v1.json"
+      - ".github/workflows/strategy-maintenance-reaction-norm-v1.yml"
+  workflow_dispatch:
+jobs:
+  reaction:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    permissions:
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        panel: [hypsignathus, phyllostomus_2022, phyllostomus_2023]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: python -m pip install -e . pandas pyproj requests "xarray[io]" icechunk pcodec
+      - run: python post_freeze_extensions/strategy_maintenance/run_reaction_norm_v1.py --panel "${{ matrix.panel }}"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: strategy-maintenance-reaction-norm-${{ matrix.panel }}-v1
+          path: post_freeze_extensions/strategy_maintenance/reaction_norm_results/${{ matrix.panel }}_reaction_norm_result_v1.json
+          if-no-files-found: error

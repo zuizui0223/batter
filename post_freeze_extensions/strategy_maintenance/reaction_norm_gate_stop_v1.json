@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-strategy-maintenance-reaction-norm-v1",
+  "status": "STOPPED_STRUCTURAL_GATE",
+  "cross_panel_inference_admissible": false,
+  "failed_panel": "phyllostomus_2023",
+  "observed_evaluable_n": 7,
+  "frozen_required_n": 8,
+  "reason": "exact inherited centered-session/terrain universe reduced evaluable support below frozen threshold",
+  "prohibitions": [
+    "do not lower threshold",
+    "do not rescue with two-panel claim",
+    "do not substitute another environment variable",
+    "do not use numerical reaction-norm outputs from invalid run"
+  ],
+  "interpretation": "identifiability failure, not evidence of absent reaction norm"
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "workflow_run": 37090400148,
+  "artifact_id": 11261404231,
+  "vertical_numeric_opened": false,
+  "all_three_pass": true,
+  "vertical_outcome_may_open": true,
+  "panels": {
+    "hypsignathus": {
+      "baseline_n": 19,
+      "required_n": 14,
+      "evaluable_n": 18,
+      "pass": true
+    },
+    "phyllostomus_2022": {
+      "baseline_n": 23,
+      "required_n": 17,
+      "evaluable_n": 22,
+      "pass": true
+    },
+    "phyllostomus_2023": {
+      "baseline_n": 11,
+      "required_n": 8,
+      "evaluable_n": 8,
+      "pass": true
+    }
+  }
+}

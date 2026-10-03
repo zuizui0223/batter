@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-strategy-maintenance-reaction-norm-v1",
+  "classification": "post-outcome mechanism test; vertical unopened at freeze",
+  "panels": [
+    "hypsignathus",
+    "phyllostomus_2022",
+    "phyllostomus_2023"
+  ],
+  "stopped_panel": "phyllostomus_2016",
+  "wind_state": {
+    "variable": "sqrt(u10^2+v10^2)",
+    "bins": 2,
+    "threshold": "cohort median in x-y-time-supported 500m place x speed2_turn2 endpoint universe"
+  },
+  "structural_gate": {
+    "minimum_supported_target_events": 50,
+    "required_evaluable_individuals": {
+      "hypsignathus": 14,
+      "phyllostomus_2022": 17,
+      "phyllostomus_2023": 8
+    },
+    "all_panels_must_pass": true
+  },
+  "vertical": {
+    "terrain_relative": true,
+    "dem": "inherit completed original terrain geometry pinned SRTM tiles and bilinear interpolation",
+    "session_center": "median",
+    "edges_m": [
+      "-inf",
+      -400,
+      -200,
+      -100,
+      -50,
+      0,
+      50,
+      100,
+      200,
+      400,
+      "inf"
+    ],
+    "alpha": 0.5
+  },
+  "primary": "G_RN = log score same-individual wind-conditioned minus same-individual unconditioned",
+  "secondary": "G_SELF = log score same-individual unconditioned minus other-individual wind-conditioned",
+  "permutation": {
+    "B": 4999,
+    "unit": "whole session labels within cohort",
+    "seeds": {
+      "hypsignathus": 2026100301,
+      "phyllostomus_2022": 2026100302,
+      "phyllostomus_2023": 2026100303
+    },
+    "valid_min_evaluable_labels": 5
+  },
+  "support_rule": "observed-minus-null-mean > 0 and one-sided p <= 0.05"
+}
