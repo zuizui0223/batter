@@ -1,0 +1,41 @@
+{
+  "claim_boundary": [
+    "This receipt pins only DEM source bitstreams and coordinate coverage.",
+    "No DEM elevation value is decoded and no terrain-adjusted outcome is computed here.",
+    "Terrain audit may proceed only if status is DEM_MAY_OPEN and the contract SHA matches."
+  ],
+  "contract_sha256": "2d5c970b77a175c289158f27fab967fcb0a43bb7fc1fbfcd81a214b23ea454eb",
+  "dem_elevation_values_decoded_by_this_script": false,
+  "dem_tiles": [
+    {
+      "decoded_elevation_values": false,
+      "grid_n": 3601,
+      "gzip_bytes": 6620879,
+      "gzip_sha256": "4f1dae591712bf94859f8eac75b68227b8685b6a6d544a8feeaa3b816315f1b6",
+      "tile": "S35E138",
+      "uncompressed_bytes": 25934402,
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/skadi/S35/S35E138.hgt.gz"
+    }
+  ],
+  "frozen_event_universe": {
+    "individuals": [
+      "403",
+      "588",
+      "657",
+      "684"
+    ],
+    "lat_max": -34.83926773,
+    "lat_min": -34.99999619,
+    "lon_max": 138.7038422,
+    "lon_min": 138.4430084,
+    "retained_rows": 145063,
+    "session_count": 158
+  },
+  "schema_version": 1,
+  "source_bytes": 30732701,
+  "source_numeric_vertical_opened_by_this_script": false,
+  "source_raw_sha256": "13829a97110f3eff191c9066fd5bf7d20f5d1c7e26e152e6c733079fb4e179dc",
+  "status": "DEM_MAY_OPEN",
+  "study_id": "batter-pteropus-terrain-dem-preflight-v1",
+  "tile_count": 1
+}
