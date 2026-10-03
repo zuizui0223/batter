@@ -2,7 +2,7 @@
 """Prepare anonymous JAE v0.4.0 review Markdown."""
 from pathlib import Path
 
-SRC=Path("manuscript/MANUSCRIPT_DRAFT_V0_3_8.md")
+SRC=Path("manuscript/MANUSCRIPT_DRAFT_V0_4_0.md")
 OUT=Path("manuscript/generated/JAE_REVIEW_V0_4_0.md")
 TITLE="Persistent individual vertical strategies need not partition three-dimensional space in bats"
 
