@@ -118,3 +118,22 @@ Authoritative synthetic self-test:
 - final JAE upload gate: READY.
 
 These synthetic values validate the pipeline only. Real author, licence and DOI metadata remain required and are not inferred.
+
+
+## Active-reference and release-preflight integrity
+
+v0.4.0 active-reference guard:
+- workflow run **37094415632**;
+- conclusion: **success**;
+- README, CURRENT_STATUS, manifests, readiness, metadata guide and release notes all resolve to the v0.4.0 RC rather than the superseded v0.3.8 package.
+
+GitHub/Zenodo release-preflight self-test:
+- workflow run **37094468063**;
+- conclusion: **success**;
+- synthetic pre-release metadata assembly: PASS;
+- Zenodo readiness logic: PASS;
+- candidate-integrity logic against `release/jae-v0.4.0-rc1`: PASS;
+- real target tag `jae-v0.4.0`: absent at test time;
+- real GitHub release with that tag: absent at test time.
+
+The real release-preflight remains intentionally blocked until explicit human metadata and exactly one chosen repository licence are committed.
