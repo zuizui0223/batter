@@ -9,18 +9,18 @@
     "title": "Persistent individual vertical strategies need not partition three-dimensional space in two tropical bat species",
     "whitespace_word_estimate": 7810,
     "abstract_words": 313,
-    "introduction_words": 679,
-    "methods_words": 2789,
-    "results_words": 1521,
-    "discussion_words": 1369,
-    "conclusion_words": 320,
+    "introduction_words": 682,
+    "methods_words": 2440,
+    "results_words": 1457,
+    "discussion_words": 1224,
+    "conclusion_words": 359,
     "main_figures": 6,
     "supporting_figures": 3,
     "ci_word_estimate": 7995,
     "ci_headroom_before_title_page": 505,
     "results_words_ci": 1457,
     "discussion_words_ci": 1224,
-    "blob_sha": "2a4b2a3aafc8a4a8b4f495f4148e888f1a9c789c"
+    "blob_sha": "c4ef51a7f3f291a6f203d303dbf73f5b54fb7683"
   },
   "scientific_status": {
     "comparative_centered_shape_panels_pass": 5,
@@ -105,7 +105,7 @@
     "status": "validated_candidate_ready_for_rc2",
     "inherited_v0_3_8_validation_is_current": false,
     "submission_gate": {
-      "run_id": 37124283127,
+      "run_id": 37123936286,
       "conclusion": "success",
       "ci_manuscript_words": 7995,
       "abstract_words": 313,
@@ -116,12 +116,12 @@
       "supporting_figures": 3
     },
     "main_figures": {
-      "artifact_id": 11273959703,
-      "sha256": "53256485b64fbc8ac38235d7682df96b6c254b8b805f86c094de7dfab5ab3bd5"
+      "artifact_id": 11273753416,
+      "sha256": "c07e2cc7bce7341debc930f05ce8e193c77e649401b4535d92b9ec9e94cf0bbf"
     },
     "supporting_figures": {
-      "artifact_id": 11274034482,
-      "sha256": "b681df7b1dac2c5e11a886e1ee3f859f99a6d0bc525620208757200262f6624c"
+      "artifact_id": 11273793396,
+      "sha256": "e2e8e97dcc5ad37b639e53bccd7a27dcf194ab2fed254d5abd7482f820289261"
     },
     "anonymous_review": {
       "run_id": 37123738669,
@@ -133,6 +133,7 @@
     },
     "visual_qa": {
       "figure1": "passed",
+      "supporting_figure_S3": "passed_after_legend_clipping_fix",
       "review_pdf_representative_pages": "passed"
     },
     "release_candidate": "release/jae-v0.4.0-rc2",
@@ -144,7 +145,7 @@
       "final_combined_count"
     ],
     "synthetic_metadata_self_test": {
-      "run_id": 37124229089,
+      "run_id": 37124460765,
       "conclusion": "success",
       "pre_release_combined_words": 8175,
       "pre_release_headroom": 325,
@@ -178,7 +179,8 @@
         "verdict": "FAIL",
         "excess": 0.051747374510001,
         "p": 0.1224,
-        "n": 27
+        "n": 27,
+        "authoritative": "first frozen primary"
       },
       "hipposideros": {
         "verdict": "FAIL",
@@ -203,7 +205,16 @@
         "excess": 0.03231183908942928,
         "p": 0.0023,
         "n": 4
-      }
+      },
+      "interpretation": "boundary evidence, not a prevalence sample"
+    },
+    "scope": {
+      "partitioning_claim_species": [
+        "Hypsignathus monstrosus",
+        "Phyllostomus hastatus"
+      ],
+      "partitioning_claim_panel_count": 4,
+      "title_scope": "two tropical bat species"
     }
   },
   "stop_rule": "no further same-data mechanism fishing for v0.4.0"
