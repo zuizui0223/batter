@@ -58,6 +58,16 @@ REQUIRED=[
     "post_freeze_extensions/strategy_maintenance/source_schema_preflight_v1.py",
     "post_freeze_extensions/strategy_maintenance/wind_support_preflight_v1.py",
     "post_freeze_extensions/strategy_maintenance/reaction_norm_structural_preflight_v1.py",
+
+    "post_freeze_extensions/NYCTALUS_VALIDATION_HISTORY_V1.md",
+    "post_freeze_extensions/HIPPOSIDEROS_PRIMARY_CLOSEOUT_V1.md",
+    "post_freeze_extensions/small_panel_generality/PRIMARY_RESULT_V1.md",
+    "post_freeze_extensions/small_panel_generality/primary_result_v1.json",
+    "post_freeze_extensions/small_panel_generality/contract_v1.json",
+    "post_freeze_extensions/pteropus_terrain_audit/TERRAIN_AUDIT_RESULT_V1.md",
+    "post_freeze_extensions/pteropus_terrain_audit/terrain_audit_result_v1.json",
+    "post_freeze_extensions/pteropus_terrain_audit/contract_v1.json",
+    "results/external_boundary_v0_4_0.csv",
 ]
 
 REQUIRED_WORKFLOWS=[
@@ -130,6 +140,40 @@ def main()->int:
     couse=(ROOT/"post_freeze_extensions/3d_niche_partition/COUSE_VERTICAL_SEPARATION_RESULT_V1.md")
     if couse.is_file() and "36953712597" not in couse.read_text(encoding="utf-8"):
         failures.append("co-use result missing authoritative corrected workflow 36953712597")
+    ny=(ROOT/"post_freeze_extensions/NYCTALUS_VALIDATION_HISTORY_V1.md")
+    if ny.is_file():
+        t=ny.read_text(encoding="utf-8")
+        if "p = **0.1224**" not in t or "frozen verdict = **FAIL**" not in t:
+            failures.append("Nyctalus first prospective FAIL is not preserved")
+        if "authoritative prospective external-validation result" not in t:
+            failures.append("Nyctalus history does not identify first result as authoritative")
+
+    hip=(ROOT/"post_freeze_extensions/HIPPOSIDEROS_PRIMARY_CLOSEOUT_V1.md")
+    if hip.is_file():
+        t=hip.read_text(encoding="utf-8")
+        if "p(null >= observed): **0.8616**" not in t or "frozen verdict: **FAIL**" not in t:
+            failures.append("Hipposideros prospective FAIL drifted")
+
+    small=(ROOT/"post_freeze_extensions/small_panel_generality/primary_result_v1.json")
+    if small.is_file():
+        x=json.loads(small.read_text(encoding="utf-8"))
+        txt=json.dumps(x)
+        if "0.4419" not in txt or "0.0001" not in txt:
+            failures.append("small-panel Myotis/Pteropus primary results drifted")
+
+    pter=(ROOT/"post_freeze_extensions/pteropus_terrain_audit/terrain_audit_result_v1.json")
+    if pter.is_file():
+        txt=pter.read_text(encoding="utf-8")
+        if "0.03231" not in txt or "0.0023" not in txt:
+            failures.append("Pteropus terrain-adjusted diagnostic drifted")
+
+    ext=(ROOT/"results/external_boundary_v0_4_0.csv")
+    if ext.is_file():
+        t=ext.read_text(encoding="utf-8")
+        for phrase in ("0.1224","0.8616","0.4419","0.0001","0.0023"):
+            if phrase not in t:
+                failures.append(f"external boundary CSV missing frozen value {phrase}")
+
     part=(ROOT/"post_freeze_extensions/3d_niche_partition/PARTITIONING_CALIBRATION_RESULT_V1.md")
     if part.is_file() and "36992380946" not in part.read_text(encoding="utf-8"):
         failures.append("partitioning result missing authoritative workflow 36992380946")
@@ -144,6 +188,7 @@ def main()->int:
     print(f"Required workflows: {len(REQUIRED_WORKFLOWS)}")
     print("Excluded exploratory 3-D families: absent")
     print("Reaction-norm numeric vertical outcome: unopened / absent")
+    print("External boundary sequence retained: Nyctalus/Hipposideros/Myotis FAIL; Pteropus PASS + terrain diagnostic")
     return 0
 
 if __name__=="__main__":
