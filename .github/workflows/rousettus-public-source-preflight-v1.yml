@@ -1,0 +1,26 @@
+name: rousettus-public-source-preflight-v1
+on:
+  push:
+    branches: [prospective/rousettus-social-seeding-route-reuse-v1]
+    paths:
+      - "prospective/rousettus_social_seeding/public_source_preflight_v1.py"
+      - "prospective/rousettus_social_seeding/EXTERNAL_SOURCE_RECEIPT_V1.md"
+      - "prospective/rousettus_social_seeding/ROUTE_REUSE_CONTRACT_V1.md"
+      - ".github/workflows/rousettus-public-source-preflight-v1.yml"
+  workflow_dispatch:
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    permissions: {contents: read}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: python prospective/rousettus_social_seeding/public_source_preflight_v1.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rousettus-public-source-preflight-v1
+          path: |
+            prospective/rousettus_social_seeding/public_source_preflight_v1.json
+            prospective/rousettus_social_seeding/PUBLIC_SOURCE_PREFLIGHT_RESULT_V1.md
+          if-no-files-found: error
