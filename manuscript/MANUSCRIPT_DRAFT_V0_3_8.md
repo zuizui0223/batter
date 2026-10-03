@@ -1,4 +1,4 @@
-# Manuscript draft v0.3.8
+# Manuscript draft v0.4.0 candidate — post-freeze maintenance synthesis
 
 ## Working title
 
