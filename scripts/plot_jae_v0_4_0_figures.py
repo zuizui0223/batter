@@ -38,35 +38,33 @@ def save(fig,stem,outdir=MAIN_OUT):
     plt.close(fig)
 
 def fig1():
-    fig,ax=plt.subplots(figsize=(9.0,6.2))
+    fig,ax=plt.subplots(figsize=(9.0,6.0))
     ax.set_xlim(0,12); ax.set_ylim(0,8); ax.axis("off")
 
     boxes=[
-        (0.3,5.8,2.3,1.2,"Apparent individual\nvertical differences"),
-        (3.1,5.8,2.5,1.2,"Remove simple alternatives\ncommon horizontal weights\n+ session centering"),
-        (6.2,5.8,2.4,1.2,"Persistent individual\nvertical organization"),
-        (9.2,5.8,2.4,1.2,"Terrain-relative fidelity\nwithin shared 500-m cells"),
-        (1.1,2.5,2.8,1.35,"Maintenance stress tests\nmulti-day self-history\n+ 500-m place × state"),
-        (4.6,2.5,2.8,1.35,"Partitioning diagnostics\npositive S_rel: 0/4\nco-use separation: 1/4"),
-        (8.2,2.3,3.0,1.7,"Ecological synthesis\npersistent personal solutions\ncan overlap in 3-D space"),
+        (0.4,5.7,2.5,1.25,"Apparent individual\nvertical differences"),
+        (3.5,5.7,2.7,1.25,"Remove simple alternatives\ncommon horizontal weights\n+ session centering"),
+        (6.9,5.7,2.7,1.25,"Persistent individual\nvertical organization"),
+        (0.9,2.4,3.0,1.55,"Persistence diagnostics\nterrain-relative: 4/4\nmulti-day + 500-m place × state"),
+        (4.6,2.4,3.0,1.55,"Partitioning diagnostics\npositive S_rel: 0/4\nco-use separation: 1/4"),
+        (8.3,2.2,3.1,1.95,"Ecological synthesis\npersonal solutions persist\nwithout exclusive\nvertical niches"),
     ]
     for x,y,w,h,label in boxes:
         ax.add_patch(FancyBboxPatch((x,y),w,h,boxstyle="round,pad=0.06",fill=False,linewidth=1.2))
         ax.text(x+w/2,y+h/2,label,ha="center",va="center",fontsize=9.5)
 
     arrows=[
-        ((2.6,6.4),(3.1,6.4)),
-        ((5.6,6.4),(6.2,6.4)),
-        ((8.6,6.4),(9.2,6.4)),
-        ((7.4,5.8),(2.5,3.85)),
-        ((10.4,5.8),(6.0,3.85)),
-        ((3.9,3.15),(4.6,3.15)),
-        ((7.4,3.15),(8.2,3.15)),
+        ((2.9,6.32),(3.5,6.32)),
+        ((6.2,6.32),(6.9,6.32)),
+        ((8.25,5.7),(2.4,3.95)),
+        ((8.25,5.7),(6.1,3.95)),
+        ((3.9,3.18),(8.3,3.18)),
+        ((7.6,3.18),(8.3,3.18)),
     ]
     for start,end in arrows:
         ax.annotate("",xy=end,xytext=start,arrowprops={"arrowstyle":"->","linewidth":1.0})
 
-    ax.text(0.45,0.75,
+    ax.text(0.55,0.72,
             "Origin and maintenance are distinct: processes may generate individual specialization without\n"
             "requiring ongoing vertical exclusion to keep personal strategies predictive across bouts.",
             fontsize=9.5)
