@@ -63,3 +63,30 @@ No failed result was rescued by changing radii, grids, bins, sample-size gates, 
 **Supporting Figure S1. Motivating *Tadarida teniotis* repeatable identity and mechanistic ceiling.** Early individual conditional maps contain strongly repeatable identity information (exact assignment p=0.000174), whereas a stronger residual cell-by-height stability test after marginal-altitude adjustment is not supported (p=0.160).
 
 **Supporting Figure S2. Why the original architecture classification was superseded.** Original conditional advantage and common-cell conditional increment are shown for each panel. In *P. hastatus* 2022, the apparent marginal-dominant value changes from -0.120 to +0.0066 after common horizontal weighting, demonstrating that raw conditional-minus-marginal signs cannot be interpreted as biological architecture classes.
+
+
+## 6. Previously frozen external boundary tests
+
+The external validation sequence predates the v0.4.0 maintenance/partitioning synthesis and is retained to prevent selective reporting of only the original positive panels. These sources arose from chronologically distinct frozen programmes and a structurally filtered public-source search; they are therefore **not** a random or prevalence sample of bats.
+
+The authoritative *Nyctalus noctula* result is the **first frozen prospective primary** (minimum 50 presence-qualified fixes per source track). A later analysis of the same source under revised eligibility produced a stronger positive result, but it was opened after the first vertical outcome and is therefore not reclassified as a fresh prospective replication.
+
+**Supporting Table S1. Previously frozen external centered-shape boundary tests and the post-outcome *Pteropus* terrain diagnostic.**
+
+| source / endpoint | programme | n | calibrated excess (nats/fix) | p(null >= observed) | verdict | inferential class |
+|---|---|---:|---:|---:|---|---|
+| *Nyctalus noctula* | first pre-specified external primary | 27 | +0.05175 | 0.1224 | FAIL | prospective |
+| *Hipposideros armiger/pratti* | pre-specified source-level programme | 13 | -0.04468 | 0.8616 | FAIL | prospective |
+| *Myotis vivesi* | separate four-individual programme | 4 | +0.00470 | 0.4419 | FAIL | prospective |
+| *Pteropus poliocephalus* (centered MSL) | separate four-individual programme | 4 | +0.16873 | 0.0001 | PASS | prospective |
+| *P. poliocephalus* (centered MSL - DEM) | frozen terrain audit after MSL result | 4 | +0.03231 | 0.0023 | PASS | post-outcome diagnostic |
+
+The first four rows comprise the external primary sequence referred to in the manuscript: one of four met its own frozen criterion. This **must not** be interpreted as a 25% prevalence estimate because source discovery, structural admission and the four-individual programme were not a prevalence-sampling design.
+
+For *Pteropus*, session-centered DEM terrain itself was individually repeatable (calibrated excess +0.37887, p=0.0034). DEM subtraction reduced the centered-MSL calibrated excess from +0.16873 to +0.03231. The ratio is descriptive and is not a mediation fraction. The terrain-adjusted response is a DEM-derived proxy rather than source-measured AGL.
+
+The three prospective failures are therefore part of the claim boundary: centered vertical individuality is independently reproducible in at least one external system but is not universal across the systems tested.
+
+## Supporting figure legend added for v0.4.0
+
+**Supporting Figure S3. Previously frozen external boundary tests and the *Pteropus* terrain diagnostic.** Points show observed-minus-null-mean calibrated centered identity for each source or diagnostic endpoint. Horizontal bars show the central 95% interval (2.5th–97.5th percentiles) of each source-specific whole-session permutation null after subtracting its own null mean. Crosses denote prospective results that did not meet their pre-specified one-sided criteria and circles denote supported endpoints; the bars display the null width rather than the exact one-sided decision threshold. The *Pteropus poliocephalus* centered-MSL result met its criterion under a separate four-individual design frozen before either admitted vertical outcome was opened. The MSL-minus-DEM row is a post-outcome terrain diagnostic and retains a smaller supported effect. Terrain-only individuality (+0.37887, p=0.0034) is reported in Supporting Table S1 but is not plotted because terrain elevation is a different response.
