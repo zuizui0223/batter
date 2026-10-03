@@ -4,7 +4,7 @@ Date: 2026-10-03
 
 ## Current manuscript
 
-`manuscript/MANUSCRIPT_DRAFT_V0_3_8.md`
+`manuscript/MANUSCRIPT_DRAFT_V0_4_0.md`
 
 Title:
 
