@@ -1,0 +1,2073 @@
+{
+  "claim_boundary": [
+    "The design change is based only on nonvertical sample structure, not on vertical effects.",
+    "A source that fails the four-individual common-support gate stops before vertical opening.",
+    "A vertical FAIL remains a prospective result under this small-panel programme.",
+    "This programme tests two specific structurally available sources and does not estimate prevalence across bats."
+  ],
+  "programme_summary": {
+    "horizontal_vertical_points": {
+      "myotis_vivesi_kk3bg2f4": {
+        "horizontal_calibrated_excess": -0.12377792158562373,
+        "horizontal_p_upper": 0.5846,
+        "vertical_calibrated_excess": 0.004702579344628057,
+        "vertical_p_upper": 0.4419,
+        "vertical_pass": false
+      },
+      "pteropus_poliocephalus_5bd6pq55": {
+        "horizontal_calibrated_excess": 3.4865883002101237,
+        "horizontal_p_upper": 0.0001,
+        "vertical_calibrated_excess": 0.16872869060124038,
+        "vertical_p_upper": 0.0001,
+        "vertical_pass": true
+      }
+    },
+    "source_count": 2,
+    "vertical_pass_count": 1
+  },
+  "receipt_commit_boundary": "vertical opened only after frozen receipt existed on branch",
+  "schema_version": 1,
+  "sources": {
+    "myotis_vivesi_kk3bg2f4": {
+      "doi": "10.5441/001/1.kk3bg2f4",
+      "horizontal_individuality": {
+        "B": 9999,
+        "calibration": {
+          "mean": -0.7576519985005729,
+          "n": 9999,
+          "null_standardized_deviation": -0.3541233595011118,
+          "observed": -0.8814299200861966,
+          "observed_minus_null_mean": -0.12377792158562373,
+          "p_null_ge_observed": 0.5846,
+          "p_null_le_observed": 0.4225,
+          "q025": -1.296388402325614,
+          "q50": -0.8288662393579049,
+          "q975": 0.1780348391981927,
+          "sd": 0.3495333427311934
+        },
+        "eligible_individuals": 4,
+        "individual_scores": {
+          "Viv12": -0.7868087495547598,
+          "Viv14": -1.0867580377583812,
+          "Viv6": -0.4711480691574512,
+          "Viv8": -1.1810048238741946
+        },
+        "invalid_null_replicates": 0,
+        "observed": -0.8814299200861966,
+        "seed": 20260930151,
+        "status": "EVALUATED",
+        "valid_null_replicates": 9999
+      },
+      "observed": {
+        "advantage": -0.1485727213081316,
+        "common_cell_advantage": -0.1295737357910106,
+        "common_cell_marginal": -0.022338365335734904,
+        "conditional": -0.1519121011267455,
+        "eligible_individuals": 4,
+        "individual_results": {
+          "Viv12": {
+            "advantage": -0.0941911649010305,
+            "cohorts": [
+              "myotis_vivesi_kk3bg2f4"
+            ],
+            "common_cell_advantage": -0.1405557980491605,
+            "common_cell_marginal": 0.042394796191420656,
+            "conditional": -0.09816100185773985,
+            "evaluable_sessions": 2,
+            "marginal": -0.003969836956709342
+          },
+          "Viv14": {
+            "advantage": -0.4412373093244908,
+            "cohorts": [
+              "myotis_vivesi_kk3bg2f4"
+            ],
+            "common_cell_advantage": -0.2870117251895882,
+            "common_cell_marginal": -0.16080081463529838,
+            "conditional": -0.44781253982488656,
+            "evaluable_sessions": 2,
+            "marginal": -0.006575230500395726
+          },
+          "Viv6": {
+            "advantage": -0.20099897594571908,
+            "cohorts": [
+              "myotis_vivesi_kk3bg2f4"
+            ],
+            "common_cell_advantage": -0.23815747936143455,
+            "common_cell_marginal": 0.03577017300630279,
+            "conditional": -0.20238730635513175,
+            "evaluable_sessions": 2,
+            "marginal": -0.0013883304094126506
+          },
+          "Viv8": {
+            "advantage": 0.14213656493871402,
+            "cohorts": [
+              "myotis_vivesi_kk3bg2f4"
+            ],
+            "common_cell_advantage": 0.14743005943614082,
+            "common_cell_marginal": -0.006717615905364675,
+            "conditional": 0.14071244353077614,
+            "evaluable_sessions": 2,
+            "marginal": -0.0014241214079378838
+          }
+        },
+        "marginal": -0.0033393798186139,
+        "positive_common_cell_advantage_fraction": 0.25,
+        "session_results": [
+          {
+            "advantage": -0.025851349485318427,
+            "cohort": "myotis_vivesi_kk3bg2f4",
+            "common_cell_advantage": -0.08565493735022553,
+            "common_cell_marginal": 0.058682792522427765,
+            "conditional": -0.02697214482779777,
+            "individual": "Viv12",
+            "marginal": -0.0011207953424793434,
+            "scored_fixes": 473,
+            "session": "Viv12::0"
+          },
+          {
+            "advantage": -0.16253098031674257,
+            "cohort": "myotis_vivesi_kk3bg2f4",
+            "common_cell_advantage": -0.19545665874809545,
+            "common_cell_marginal": 0.026106799860413542,
+            "conditional": -0.16934985888768192,
+            "individual": "Viv12",
+            "marginal": -0.0068188785709393405,
+            "scored_fixes": 581,
+            "session": "Viv12::1"
+          },
+          {
+            "advantage": -0.9039905150286942,
+            "cohort": "myotis_vivesi_kk3bg2f4",
+            "common_cell_advantage": -0.7599216291529002,
+            "common_cell_marginal": -0.15517821201158677,
+            "conditional": -0.915099841164487,
+            "individual": "Viv14",
+            "marginal": -0.011109326135792713,
+            "scored_fixes": 270,
+            "session": "Viv14::0"
+          },
+          {
+            "advantage": 0.02151589637971263,
+            "cohort": "myotis_vivesi_kk3bg2f4",
+            "common_cell_advantage": 0.1858981787737239,
+            "common_cell_marginal": -0.16642341725901,
+            "conditional": 0.01947476151471389,
+            "individual": "Viv14",
+            "marginal": -0.0020411348649987384,
+            "scored_fixes": 361,
+            "session": "Viv14::1"
+          },
+          {
+            "advantage": -0.18596301582533695,
+            "cohort": "myotis_vivesi_kk3bg2f4",
+            "common_cell_advantage": -0.20250879610264347,
+            "common_cell_marginal": 0.014912023552218611,
+            "conditional": -0.18759677255042487,
+            "individual": "Viv6",
+            "marginal": -0.0016337567250879134,
+            "scored_fixes": 433,
+            "session": "Viv6::0"
+          },
+          {
+            "advantage": -0.21603493606610125,
+            "cohort": "myotis_vivesi_kk3bg2f4",
+            "common_cell_advantage": -0.2738061626202256,
+            "common_cell_marginal": 0.056628322460386966,
+            "conditional": -0.21717784015983863,
+            "individual": "Viv6",
+            "marginal": -0.0011429040937373876,
+            "scored_fixes": 1056,
+            "session": "Viv6::1"
+          },
+          {
+            "advantage": 0.20683068131437898,
+            "cohort": "myotis_vivesi_kk3bg2f4",
+            "common_cell_advantage": 0.3322730289220376,
+            "common_cell_marginal": -0.12579854909867288,
+            "conditional": 0.20647447982336467,
+            "individual": "Viv8",
+            "marginal": -0.0003562014910143239,
+            "scored_fixes": 820,
+            "session": "Viv8::0"
+          },
+          {
+            "advantage": 0.07744244856304905,
+            "cohort": "myotis_vivesi_kk3bg2f4",
+            "common_cell_advantage": -0.03741291004975593,
+            "common_cell_marginal": 0.11236331728794353,
+            "conditional": 0.0749504072381876,
+            "individual": "Viv8",
+            "marginal": -0.0024920413248614437,
+            "scored_fixes": 450,
+            "session": "Viv8::1"
+          }
+        ]
+      },
+      "permutation": {
+        "B": 9999,
+        "calibration": {
+          "mean": -0.02704094468036296,
+          "n": 9999,
+          "null_standardized_deviation": 0.13994844267715764,
+          "observed": -0.022338365335734904,
+          "observed_minus_null_mean": 0.004702579344628057,
+          "p_null_ge_observed": 0.4419,
+          "p_null_le_observed": 0.5616,
+          "q025": -0.08191926264890209,
+          "q50": -0.028675173457110126,
+          "q975": 0.04791733904848389,
+          "sd": 0.0336022270392553
+        },
+        "eligible_individual_count": {
+          "max": 4,
+          "mean": 4.0,
+          "min": 4,
+          "observed": 4
+        },
+        "invalid_replicates": 0,
+        "seed": 20260930161,
+        "valid_replicates": 9999
+      },
+      "primary_metric": "common_cell_marginal",
+      "primary_pass": false,
+      "raw_sha256": "38fdeda4a588f86f6f3f4d83dabed71c7e74dcbed1fe055a0aa9d8216be3ddcc",
+      "taxon": "Myotis vivesi",
+      "vertical_field": "height-above-ellipsoid"
+    },
+    "pteropus_poliocephalus_5bd6pq55": {
+      "doi": "10.5441/001/1.5bd6pq55",
+      "horizontal_individuality": {
+        "B": 9999,
+        "calibration": {
+          "mean": -0.07133314266278945,
+          "n": 9999,
+          "null_standardized_deviation": 22.98124136162762,
+          "observed": 3.415255157547334,
+          "observed_minus_null_mean": 3.4865883002101237,
+          "p_null_ge_observed": 0.0001,
+          "p_null_le_observed": 1.0,
+          "q025": -0.38120999654678994,
+          "q50": -0.06714828334779646,
+          "q975": 0.21086763864755367,
+          "sd": 0.15171453296825693
+        },
+        "eligible_individuals": 4,
+        "individual_scores": {
+          "403": 2.4512420593213005,
+          "588": 1.8052773229830716,
+          "657": 2.488279512404318,
+          "684": 6.9162217354806454
+        },
+        "invalid_null_replicates": 0,
+        "observed": 3.415255157547334,
+        "seed": 20260930152,
+        "status": "EVALUATED",
+        "valid_null_replicates": 9999
+      },
+      "observed": {
+        "advantage": 0.2600994377745536,
+        "common_cell_advantage": 0.1949641911260819,
+        "common_cell_marginal": 0.11002521969895077,
+        "conditional": 0.3049894108250326,
+        "eligible_individuals": 4,
+        "individual_results": {
+          "403": {
+            "advantage": 0.1990087886091955,
+            "cohorts": [
+              "pteropus_poliocephalus_5bd6pq55"
+            ],
+            "common_cell_advantage": 0.11240392466757017,
+            "common_cell_marginal": 0.11831310986271694,
+            "conditional": 0.23071703453028714,
+            "evaluable_sessions": 48,
+            "marginal": 0.03170824592109166
+          },
+          "588": {
+            "advantage": 0.19955908812444528,
+            "cohorts": [
+              "pteropus_poliocephalus_5bd6pq55"
+            ],
+            "common_cell_advantage": 0.2467842284803264,
+            "common_cell_marginal": -0.04517825643489451,
+            "conditional": 0.20160597204543185,
+            "evaluable_sessions": 54,
+            "marginal": 0.0020468839209865897
+          },
+          "657": {
+            "advantage": 0.5485174612485015,
+            "cohorts": [
+              "pteropus_poliocephalus_5bd6pq55"
+            ],
+            "common_cell_advantage": 0.420668611356431,
+            "common_cell_marginal": 0.13368352460772964,
+            "conditional": 0.5543521359641606,
+            "evaluable_sessions": 52,
+            "marginal": 0.005834674715659006
+          },
+          "684": {
+            "advantage": 0.09331241311607207,
+            "cohorts": [
+              "pteropus_poliocephalus_5bd6pq55"
+            ],
+            "common_cell_advantage": 0.0,
+            "common_cell_marginal": 0.233282500760251,
+            "conditional": 0.233282500760251,
+            "evaluable_sessions": 2,
+            "marginal": 0.13997008764417895
+          }
+        },
+        "marginal": 0.04488997305047905,
+        "positive_common_cell_advantage_fraction": 0.75,
+        "session_results": [
+          {
+            "advantage": 0.2400587275062284,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.16644584577094415,
+            "common_cell_marginal": 0.12397529236873053,
+            "conditional": 0.2904211381396747,
+            "individual": "403",
+            "marginal": 0.050362410633446285,
+            "scored_fixes": 823,
+            "session": "403::0"
+          },
+          {
+            "advantage": 0.27411192753762875,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.17730281829495084,
+            "common_cell_marginal": 0.14491423783041854,
+            "conditional": 0.3222170561253694,
+            "individual": "403",
+            "marginal": 0.048105128587740624,
+            "scored_fixes": 151,
+            "session": "403::1"
+          },
+          {
+            "advantage": 0.29400553182424344,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.2068624175585259,
+            "common_cell_marginal": 0.10722544770201885,
+            "conditional": 0.3140878652605448,
+            "individual": "403",
+            "marginal": 0.020082333436301354,
+            "scored_fixes": 146,
+            "session": "403::10"
+          },
+          {
+            "advantage": 0.29835752512352687,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.13052166814818764,
+            "common_cell_marginal": 0.2088733779179829,
+            "conditional": 0.33939504606617055,
+            "individual": "403",
+            "marginal": 0.04103752094264367,
+            "scored_fixes": 164,
+            "session": "403::11"
+          },
+          {
+            "advantage": 0.3118763773261961,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.18341517954370345,
+            "common_cell_marginal": 0.1333161139141098,
+            "conditional": 0.31673129345781326,
+            "individual": "403",
+            "marginal": 0.004854916131617148,
+            "scored_fixes": 2670,
+            "session": "403::12"
+          },
+          {
+            "advantage": 0.20507572468882473,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.1639999650033246,
+            "common_cell_marginal": 0.10830174971624941,
+            "conditional": 0.272301714719574,
+            "individual": "403",
+            "marginal": 0.06722599003074924,
+            "scored_fixes": 714,
+            "session": "403::13"
+          },
+          {
+            "advantage": -0.01351339363747417,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": -0.07246886140362505,
+            "common_cell_marginal": 0.1096436016087899,
+            "conditional": 0.037174740205164855,
+            "individual": "403",
+            "marginal": 0.050688133842639024,
+            "scored_fixes": 1766,
+            "session": "403::14"
+          },
+          {
+            "advantage": 0.3403674129236534,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.17360182979206346,
+            "common_cell_marginal": 0.17952262711413086,
+            "conditional": 0.3531244569061943,
+            "individual": "403",
+            "marginal": 0.0127570439825409,
+            "scored_fixes": 139,
+            "session": "403::15"
+          },
+          {
+            "advantage": 0.22219355426890602,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.09539044422845869,
+            "common_cell_marginal": 0.14956163867014002,
+            "conditional": 0.2449520828985987,
+            "individual": "403",
+            "marginal": 0.02275852862969269,
+            "scored_fixes": 2625,
+            "session": "403::16"
+          },
+          {
+            "advantage": 0.15570471966354346,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.10637628358466888,
+            "common_cell_marginal": 0.1025300785013866,
+            "conditional": 0.20890636208605548,
+            "individual": "403",
+            "marginal": 0.053201642422512026,
+            "scored_fixes": 1793,
+            "session": "403::17"
+          },
+          {
+            "advantage": 0.011128031536082855,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": -0.004133315671653676,
+            "common_cell_marginal": 0.08660179957955234,
+            "conditional": 0.08246848390789867,
+            "individual": "403",
+            "marginal": 0.07134045237181581,
+            "scored_fixes": 2037,
+            "session": "403::18"
+          },
+          {
+            "advantage": 0.14779072559485965,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": -0.024879419378623896,
+            "common_cell_marginal": 0.1980581140780837,
+            "conditional": 0.17317869469945982,
+            "individual": "403",
+            "marginal": 0.025387969104600165,
+            "scored_fixes": 170,
+            "session": "403::19"
+          },
+          {
+            "advantage": 0.2527837648838899,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.14037387593392597,
+            "common_cell_marginal": 0.17626976565894042,
+            "conditional": 0.3166436415928664,
+            "individual": "403",
+            "marginal": 0.06385987670897646,
+            "scored_fixes": 150,
+            "session": "403::2"
+          },
+          {
+            "advantage": 0.18195914687476833,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.1722689655467857,
+            "common_cell_marginal": 0.0855045918653162,
+            "conditional": 0.2577735574121019,
+            "individual": "403",
+            "marginal": 0.07581441053733357,
+            "scored_fixes": 160,
+            "session": "403::20"
+          },
+          {
+            "advantage": 0.11540768160192441,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": -0.03245314815164335,
+            "common_cell_marginal": 0.16040670305253432,
+            "conditional": 0.12795355490089097,
+            "individual": "403",
+            "marginal": 0.012545873298966559,
+            "scored_fixes": 3312,
+            "session": "403::21"
+          },
+          {
+            "advantage": 0.22151584812145947,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.17532202174602518,
+            "common_cell_marginal": 0.11267841579669528,
+            "conditional": 0.2880004375427205,
+            "individual": "403",
+            "marginal": 0.06648458942126101,
+            "scored_fixes": 158,
+            "session": "403::22"
+          },
+          {
+            "advantage": 0.493346581764088,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.1038318520366569,
+            "common_cell_marginal": 0.31075253422864757,
+            "conditional": 0.41458438626530447,
+            "individual": "403",
+            "marginal": -0.07876219549878354,
+            "scored_fixes": 3883,
+            "session": "403::23"
+          },
+          {
+            "advantage": 0.25389447776650675,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.11440974557966543,
+            "common_cell_marginal": 0.1767366953986459,
+            "conditional": 0.2911464409783113,
+            "individual": "403",
+            "marginal": 0.03725196321180456,
+            "scored_fixes": 168,
+            "session": "403::24"
+          },
+          {
+            "advantage": 0.2708712735407637,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.13799127566430486,
+            "common_cell_marginal": 0.19027396197520158,
+            "conditional": 0.32826523763950644,
+            "individual": "403",
+            "marginal": 0.05739396409874278,
+            "scored_fixes": 169,
+            "session": "403::25"
+          },
+          {
+            "advantage": 0.12531731150938896,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.05202584369972789,
+            "common_cell_marginal": 0.12223087740491016,
+            "conditional": 0.17425672110463805,
+            "individual": "403",
+            "marginal": 0.048939409595249075,
+            "scored_fixes": 2969,
+            "session": "403::26"
+          },
+          {
+            "advantage": 0.07771908425074103,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.030098113592760253,
+            "common_cell_marginal": 0.10809274706126008,
+            "conditional": 0.13819086065402034,
+            "individual": "403",
+            "marginal": 0.0604717764032793,
+            "scored_fixes": 3863,
+            "session": "403::28"
+          },
+          {
+            "advantage": -0.1464962717926831,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": -0.18472271064510115,
+            "common_cell_marginal": 0.0976601538060596,
+            "conditional": -0.08706255683904156,
+            "individual": "403",
+            "marginal": 0.05943371495364153,
+            "scored_fixes": 2975,
+            "session": "403::29"
+          },
+          {
+            "advantage": 0.20489157582783968,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.14298006033346553,
+            "common_cell_marginal": 0.12529408486001156,
+            "conditional": 0.2682741451934771,
+            "individual": "403",
+            "marginal": 0.0633825693656374,
+            "scored_fixes": 145,
+            "session": "403::3"
+          },
+          {
+            "advantage": 0.07121762497567014,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.03045459206775704,
+            "common_cell_marginal": 0.10469265745916474,
+            "conditional": 0.13514724952692178,
+            "individual": "403",
+            "marginal": 0.06392962455125165,
+            "scored_fixes": 3383,
+            "session": "403::30"
+          },
+          {
+            "advantage": 0.3028598653085005,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.2085005486525363,
+            "common_cell_marginal": 0.0971959572478107,
+            "conditional": 0.305696505900347,
+            "individual": "403",
+            "marginal": 0.0028366405918464964,
+            "scored_fixes": 166,
+            "session": "403::31"
+          },
+          {
+            "advantage": 0.1693257650767824,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.09780027798049604,
+            "common_cell_marginal": 0.13086366094250876,
+            "conditional": 0.2286639389230048,
+            "individual": "403",
+            "marginal": 0.0593381738462224,
+            "scored_fixes": 168,
+            "session": "403::32"
+          },
+          {
+            "advantage": -0.26987317479810513,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.11048542846853027,
+            "common_cell_marginal": -0.31975568082918643,
+            "conditional": -0.20927025236065616,
+            "individual": "403",
+            "marginal": 0.060602922437448956,
+            "scored_fixes": 1411,
+            "session": "403::33"
+          },
+          {
+            "advantage": 0.12135994706536476,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.1082704332544283,
+            "common_cell_marginal": 0.08882155533191109,
+            "conditional": 0.1970919885863394,
+            "individual": "403",
+            "marginal": 0.07573204152097462,
+            "scored_fixes": 169,
+            "session": "403::34"
+          },
+          {
+            "advantage": 0.11685442211735482,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": -0.0069103719835352795,
+            "common_cell_marginal": 0.14892501506089115,
+            "conditional": 0.14201464307735587,
+            "individual": "403",
+            "marginal": 0.025160220960001048,
+            "scored_fixes": 2964,
+            "session": "403::35"
+          },
+          {
+            "advantage": 0.21637056611253566,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.17371837015337013,
+            "common_cell_marginal": 0.09098080209177054,
+            "conditional": 0.26469917224514067,
+            "individual": "403",
+            "marginal": 0.048328606132605006,
+            "scored_fixes": 154,
+            "session": "403::36"
+          },
+          {
+            "advantage": 0.11009538810324056,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.024989130824608408,
+            "common_cell_marginal": 0.15419373955960888,
+            "conditional": 0.1791828703842173,
+            "individual": "403",
+            "marginal": 0.06908748228097673,
+            "scored_fixes": 154,
+            "session": "403::37"
+          },
+          {
+            "advantage": 0.05228188225623352,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.028412737359284637,
+            "common_cell_marginal": 0.09627602654915227,
+            "conditional": 0.1246887639084369,
+            "individual": "403",
+            "marginal": 0.07240688165220338,
+            "scored_fixes": 168,
+            "session": "403::38"
+          },
+          {
+            "advantage": -0.793066092823963,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": -0.2852514151838817,
+            "common_cell_marginal": -0.48977507840418516,
+            "conditional": -0.7750264935880669,
+            "individual": "403",
+            "marginal": 0.018039599235896143,
+            "scored_fixes": 1531,
+            "session": "403::39"
+          },
+          {
+            "advantage": 0.5378010458828542,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.3455928636100594,
+            "common_cell_marginal": 0.15968535316201843,
+            "conditional": 0.5052782167720778,
+            "individual": "403",
+            "marginal": -0.03252282911077625,
+            "scored_fixes": 132,
+            "session": "403::4"
+          },
+          {
+            "advantage": 0.35601482163314263,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.23652096545542312,
+            "common_cell_marginal": 0.15615710611493272,
+            "conditional": 0.39267807157035584,
+            "individual": "403",
+            "marginal": 0.03666324993721322,
+            "scored_fixes": 164,
+            "session": "403::40"
+          },
+          {
+            "advantage": 1.0975803424662889,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.5544260688914939,
+            "common_cell_marginal": 0.24663944870781956,
+            "conditional": 0.8010655175993135,
+            "individual": "403",
+            "marginal": -0.2965148248669753,
+            "scored_fixes": 2717,
+            "session": "403::41"
+          },
+          {
+            "advantage": -0.028050887940456008,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": -0.0891033056192298,
+            "common_cell_marginal": 0.10327367489661164,
+            "conditional": 0.014170369277381847,
+            "individual": "403",
+            "marginal": 0.04222125721783786,
+            "scored_fixes": 1029,
+            "session": "403::42"
+          },
+          {
+            "advantage": 0.2745439805894256,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.24476672933684446,
+            "common_cell_marginal": 0.1055711929149492,
+            "conditional": 0.35033792225179367,
+            "individual": "403",
+            "marginal": 0.0757939416623681,
+            "scored_fixes": 149,
+            "session": "403::43"
+          },
+          {
+            "advantage": 0.22723299678921008,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.13051227050519126,
+            "common_cell_marginal": 0.16705337835965256,
+            "conditional": 0.2975656488648438,
+            "individual": "403",
+            "marginal": 0.07033265207563374,
+            "scored_fixes": 159,
+            "session": "403::44"
+          },
+          {
+            "advantage": 0.23724645020154997,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.18634072839788435,
+            "common_cell_marginal": 0.09851613477731329,
+            "conditional": 0.28485686317519765,
+            "individual": "403",
+            "marginal": 0.04761041297364769,
+            "scored_fixes": 160,
+            "session": "403::45"
+          },
+          {
+            "advantage": 0.4490572458240085,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.24941305255334395,
+            "common_cell_marginal": 0.1935216062252919,
+            "conditional": 0.44293465877863586,
+            "individual": "403",
+            "marginal": -0.006122587045372673,
+            "scored_fixes": 158,
+            "session": "403::46"
+          },
+          {
+            "advantage": 0.20619910239731212,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.11581003747655838,
+            "common_cell_marginal": 0.14507275215233595,
+            "conditional": 0.26088278962889433,
+            "individual": "403",
+            "marginal": 0.0546836872315822,
+            "scored_fixes": 149,
+            "session": "403::47"
+          },
+          {
+            "advantage": 0.09226547218388002,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": -0.10319670272686364,
+            "common_cell_marginal": 0.08952427159208631,
+            "conditional": -0.013672431134777323,
+            "individual": "403",
+            "marginal": -0.10593790331865735,
+            "scored_fixes": 158,
+            "session": "403::48"
+          },
+          {
+            "advantage": 0.33925316201943106,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.20167113709068496,
+            "common_cell_marginal": 0.16841280741188536,
+            "conditional": 0.3700839445025703,
+            "individual": "403",
+            "marginal": 0.030830782483139245,
+            "scored_fixes": 138,
+            "session": "403::5"
+          },
+          {
+            "advantage": 0.30126825038650257,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.2080465059708202,
+            "common_cell_marginal": 0.14692703653115907,
+            "conditional": 0.35497354250197927,
+            "individual": "403",
+            "marginal": 0.053705292115476685,
+            "scored_fixes": 143,
+            "session": "403::6"
+          },
+          {
+            "advantage": 0.23320512289027898,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.12681667826280174,
+            "common_cell_marginal": 0.17365238722138243,
+            "conditional": 0.3004690654841842,
+            "individual": "403",
+            "marginal": 0.0672639425939052,
+            "scored_fixes": 137,
+            "session": "403::7"
+          },
+          {
+            "advantage": 0.3845943778564189,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.23238758889585623,
+            "common_cell_marginal": 0.15526662331212296,
+            "conditional": 0.3876542122079792,
+            "individual": "403",
+            "marginal": 0.003059834351560261,
+            "scored_fixes": 562,
+            "session": "403::8"
+          },
+          {
+            "advantage": 0.20841683796301397,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.11035328354140783,
+            "common_cell_marginal": 0.14891223491158878,
+            "conditional": 0.2592655184529966,
+            "individual": "403",
+            "marginal": 0.05084868048998264,
+            "scored_fixes": 128,
+            "session": "403::9"
+          },
+          {
+            "advantage": -0.23548926551783084,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.0,
+            "common_cell_marginal": -0.22004106661682934,
+            "conditional": -0.22004106661682934,
+            "individual": "588",
+            "marginal": 0.015448198901001483,
+            "scored_fixes": 376,
+            "session": "588::0"
+          },
+          {
+            "advantage": -0.2778139232674055,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.0,
+            "common_cell_marginal": -0.2718829852355825,
+            "conditional": -0.2718829852355825,
+            "individual": "588",
+            "marginal": 0.005930938031822996,
+            "scored_fixes": 451,
+            "session": "588::1"
+          },
+          {
+            "advantage": 0.01643048217377555,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.04157099419348198,
+            "common_cell_marginal": -0.008734950564121071,
+            "conditional": 0.03283604362936091,
+            "individual": "588",
+            "marginal": 0.016405561455585364,
+            "scored_fixes": 131,
+            "session": "588::14"
+          },
+          {
+            "advantage": 0.30269500680324096,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.32952849632873005,
+            "common_cell_marginal": -0.045702211427416047,
+            "conditional": 0.283826284901314,
+            "individual": "588",
+            "marginal": -0.018868721901926958,
+            "scored_fixes": 135,
+            "session": "588::15"
+          },
+          {
+            "advantage": 0.1317617550948417,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.1900553409558726,
+            "common_cell_marginal": -0.04107858281762009,
+            "conditional": 0.1489767581382525,
+            "individual": "588",
+            "marginal": 0.01721500304341082,
+            "scored_fixes": 155,
+            "session": "588::16"
+          },
+          {
+            "advantage": 0.3205111589983594,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.33828585895827984,
+            "common_cell_marginal": 0.0031189258671152314,
+            "conditional": 0.34140478482539505,
+            "individual": "588",
+            "marginal": 0.02089362582703561,
+            "scored_fixes": 112,
+            "session": "588::17"
+          },
+          {
+            "advantage": 0.2336325150366902,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.16932655724836196,
+            "common_cell_marginal": 0.07789915759229701,
+            "conditional": 0.24722571484065897,
+            "individual": "588",
+            "marginal": 0.01359319980396878,
+            "scored_fixes": 80,
+            "session": "588::18"
+          },
+          {
+            "advantage": -0.014690393576728751,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.010586367139398188,
+            "common_cell_marginal": -0.007880519752424922,
+            "conditional": 0.002705847386973267,
+            "individual": "588",
+            "marginal": 0.017396240963702018,
+            "scored_fixes": 118,
+            "session": "588::19"
+          },
+          {
+            "advantage": 0.11912550971845055,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.11743529522654982,
+            "common_cell_marginal": -0.0001372573959170954,
+            "conditional": 0.11729803783063272,
+            "individual": "588",
+            "marginal": -0.0018274718878178253,
+            "scored_fixes": 106,
+            "session": "588::2"
+          },
+          {
+            "advantage": 0.1192534411301847,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.14722729377237598,
+            "common_cell_marginal": -0.007221423703698146,
+            "conditional": 0.14000587006867785,
+            "individual": "588",
+            "marginal": 0.02075242893849315,
+            "scored_fixes": 135,
+            "session": "588::20"
+          },
+          {
+            "advantage": 0.34978276342137593,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.36224412665150146,
+            "common_cell_marginal": 0.010961404611877763,
+            "conditional": 0.37320553126337924,
+            "individual": "588",
+            "marginal": 0.023422767842003284,
+            "scored_fixes": 87,
+            "session": "588::21"
+          },
+          {
+            "advantage": 1.5878851397931875,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 1.5428757284794044,
+            "common_cell_marginal": -0.05493677062867547,
+            "conditional": 1.487938957850729,
+            "individual": "588",
+            "marginal": -0.09994618194245843,
+            "scored_fixes": 129,
+            "session": "588::22"
+          },
+          {
+            "advantage": 0.15278115427035893,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.18097022961188575,
+            "common_cell_marginal": -0.02386388984846249,
+            "conditional": 0.15710633976342325,
+            "individual": "588",
+            "marginal": 0.004325185493064318,
+            "scored_fixes": 3012,
+            "session": "588::23"
+          },
+          {
+            "advantage": 0.08295984129936604,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.1519023727176429,
+            "common_cell_marginal": -0.05505352635597995,
+            "conditional": 0.09684884636166295,
+            "individual": "588",
+            "marginal": 0.013889005062296907,
+            "scored_fixes": 1111,
+            "session": "588::24"
+          },
+          {
+            "advantage": 0.32130439143062167,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.34469240841117343,
+            "common_cell_marginal": -0.00494265799876775,
+            "conditional": 0.3397497504124057,
+            "individual": "588",
+            "marginal": 0.018445358981783996,
+            "scored_fixes": 141,
+            "session": "588::25"
+          },
+          {
+            "advantage": 0.14488478088590015,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.2246033251260699,
+            "common_cell_marginal": -0.06178134169092014,
+            "conditional": 0.16282198343514975,
+            "individual": "588",
+            "marginal": 0.017937202549249603,
+            "scored_fixes": 150,
+            "session": "588::26"
+          },
+          {
+            "advantage": 0.24998719666713154,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.2854308461713474,
+            "common_cell_marginal": -0.020627925859970104,
+            "conditional": 0.2648029203113773,
+            "individual": "588",
+            "marginal": 0.014815723644245766,
+            "scored_fixes": 1342,
+            "session": "588::27"
+          },
+          {
+            "advantage": 0.35091531039354446,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.39337197907025834,
+            "common_cell_marginal": -0.034843567376720994,
+            "conditional": 0.35852841169353733,
+            "individual": "588",
+            "marginal": 0.007613101299992861,
+            "scored_fixes": 1930,
+            "session": "588::28"
+          },
+          {
+            "advantage": -0.1336636425676076,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": -0.12447353268080326,
+            "common_cell_marginal": 0.007479380735451236,
+            "conditional": -0.11699415194535202,
+            "individual": "588",
+            "marginal": 0.016669490622255582,
+            "scored_fixes": 1155,
+            "session": "588::29"
+          },
+          {
+            "advantage": 0.3509951530977601,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.39851514094522866,
+            "common_cell_marginal": -0.04041342357456324,
+            "conditional": 0.35810171737066543,
+            "individual": "588",
+            "marginal": 0.0071065642729053425,
+            "scored_fixes": 111,
+            "session": "588::3"
+          },
+          {
+            "advantage": 0.09043704921819831,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.11598837417798669,
+            "common_cell_marginal": -0.01811897974445914,
+            "conditional": 0.09786939443352755,
+            "individual": "588",
+            "marginal": 0.007432345215329236,
+            "scored_fixes": 1836,
+            "session": "588::30"
+          },
+          {
+            "advantage": 0.4548461052782402,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.4747445623035342,
+            "common_cell_marginal": -0.09292123714844486,
+            "conditional": 0.3818233251550893,
+            "individual": "588",
+            "marginal": -0.0730227801231509,
+            "scored_fixes": 2312,
+            "session": "588::31"
+          },
+          {
+            "advantage": 0.2754337303295939,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.3098493076167147,
+            "common_cell_marginal": -0.03406931870745876,
+            "conditional": 0.2757799889092559,
+            "individual": "588",
+            "marginal": 0.0003462585796620481,
+            "scored_fixes": 1422,
+            "session": "588::32"
+          },
+          {
+            "advantage": 0.24648391156659807,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.30983939572289204,
+            "common_cell_marginal": -0.06815524492369975,
+            "conditional": 0.2416841507991923,
+            "individual": "588",
+            "marginal": -0.004799760767405768,
+            "scored_fixes": 1764,
+            "session": "588::33"
+          },
+          {
+            "advantage": 0.1527753933878169,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.24749449833632547,
+            "common_cell_marginal": -0.08025015505090195,
+            "conditional": 0.1672443432854235,
+            "individual": "588",
+            "marginal": 0.01446894989760661,
+            "scored_fixes": 732,
+            "session": "588::35"
+          },
+          {
+            "advantage": 0.15479152147033526,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.25538837379325163,
+            "common_cell_marginal": -0.08786712894470808,
+            "conditional": 0.16752124484854355,
+            "individual": "588",
+            "marginal": 0.012729723378208288,
+            "scored_fixes": 1021,
+            "session": "588::36"
+          },
+          {
+            "advantage": 0.14422176013112933,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.23367214785223117,
+            "common_cell_marginal": -0.07227254394917357,
+            "conditional": 0.1613996039030576,
+            "individual": "588",
+            "marginal": 0.017177843771928266,
+            "scored_fixes": 1425,
+            "session": "588::37"
+          },
+          {
+            "advantage": 0.24341632045785289,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.3301040569479229,
+            "common_cell_marginal": -0.07078164294816523,
+            "conditional": 0.25932241399975764,
+            "individual": "588",
+            "marginal": 0.01590609354190474,
+            "scored_fixes": 1916,
+            "session": "588::38"
+          },
+          {
+            "advantage": 0.1050327144002158,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.1986095110780201,
+            "common_cell_marginal": -0.07781528528297357,
+            "conditional": 0.12079422579504652,
+            "individual": "588",
+            "marginal": 0.015761511394830716,
+            "scored_fixes": 799,
+            "session": "588::39"
+          },
+          {
+            "advantage": -0.04983820821106901,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": -0.07506354566458467,
+            "common_cell_marginal": 0.04566568535927765,
+            "conditional": -0.02939786030530702,
+            "individual": "588",
+            "marginal": 0.02044034790576199,
+            "scored_fixes": 90,
+            "session": "588::4"
+          },
+          {
+            "advantage": 0.06475416288334283,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.15470050739903962,
+            "common_cell_marginal": -0.07235593313378819,
+            "conditional": 0.08234457426525145,
+            "individual": "588",
+            "marginal": 0.01759041138190862,
+            "scored_fixes": 1449,
+            "session": "588::40"
+          },
+          {
+            "advantage": 0.050153243342055315,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.1385882935339277,
+            "common_cell_marginal": -0.07032181062751214,
+            "conditional": 0.06826648290641558,
+            "individual": "588",
+            "marginal": 0.018113239564360267,
+            "scored_fixes": 1312,
+            "session": "588::41"
+          },
+          {
+            "advantage": 0.049548774433612504,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.1470170766492057,
+            "common_cell_marginal": -0.0830421728148124,
+            "conditional": 0.06397490383439333,
+            "individual": "588",
+            "marginal": 0.014426129400780828,
+            "scored_fixes": 1079,
+            "session": "588::42"
+          },
+          {
+            "advantage": 0.12316644370602853,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.23134960502393004,
+            "common_cell_marginal": -0.09864780933584096,
+            "conditional": 0.1327017956880891,
+            "individual": "588",
+            "marginal": 0.009535351982060571,
+            "scored_fixes": 1131,
+            "session": "588::43"
+          },
+          {
+            "advantage": 0.13543337560463098,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.22249006288068696,
+            "common_cell_marginal": -0.06872398062601424,
+            "conditional": 0.1537660822546727,
+            "individual": "588",
+            "marginal": 0.01833270665004172,
+            "scored_fixes": 1588,
+            "session": "588::44"
+          },
+          {
+            "advantage": -0.09364010852961265,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.004201412870202925,
+            "common_cell_marginal": -0.08091304656070719,
+            "conditional": -0.07671163369050427,
+            "individual": "588",
+            "marginal": 0.01692847483910838,
+            "scored_fixes": 2118,
+            "session": "588::45"
+          },
+          {
+            "advantage": 0.17960864573376006,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.265344022395702,
+            "common_cell_marginal": -0.06694558018027216,
+            "conditional": 0.19839844221542985,
+            "individual": "588",
+            "marginal": 0.018789796481669785,
+            "scored_fixes": 158,
+            "session": "588::46"
+          },
+          {
+            "advantage": 0.1042460554842847,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.13165117286313263,
+            "common_cell_marginal": -0.007673427540568525,
+            "conditional": 0.12397774532256411,
+            "individual": "588",
+            "marginal": 0.01973168983827941,
+            "scored_fixes": 147,
+            "session": "588::47"
+          },
+          {
+            "advantage": 0.08156213491715514,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.2291631683288522,
+            "common_cell_marginal": -0.13781031417089012,
+            "conditional": 0.09135285415796206,
+            "individual": "588",
+            "marginal": 0.009790719240806914,
+            "scored_fixes": 1059,
+            "session": "588::48"
+          },
+          {
+            "advantage": 0.16969857491631046,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.21647444620408232,
+            "common_cell_marginal": -0.03232545216969774,
+            "conditional": 0.1841489940343846,
+            "individual": "588",
+            "marginal": 0.01445041911807414,
+            "scored_fixes": 2055,
+            "session": "588::49"
+          },
+          {
+            "advantage": 0.08975600302091977,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.1328513304342379,
+            "common_cell_marginal": -0.03709104167819435,
+            "conditional": 0.09576028875604355,
+            "individual": "588",
+            "marginal": 0.006004285735123781,
+            "scored_fixes": 130,
+            "session": "588::5"
+          },
+          {
+            "advantage": -0.07461637671172892,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": -0.07143034086618572,
+            "common_cell_marginal": 0.019732958189114098,
+            "conditional": -0.05169738267707162,
+            "individual": "588",
+            "marginal": 0.022918994034657306,
+            "scored_fixes": 1042,
+            "session": "588::50"
+          },
+          {
+            "advantage": 0.3140328818995596,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.3076873196475051,
+            "common_cell_marginal": -0.05634194822476779,
+            "conditional": 0.25134537142273733,
+            "individual": "588",
+            "marginal": -0.06268751047682225,
+            "scored_fixes": 108,
+            "session": "588::51"
+          },
+          {
+            "advantage": 0.5594756499970976,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.5801745820284908,
+            "common_cell_marginal": -0.015817052674361978,
+            "conditional": 0.5643575293541289,
+            "individual": "588",
+            "marginal": 0.004881879357031202,
+            "scored_fixes": 128,
+            "session": "588::52"
+          },
+          {
+            "advantage": -0.23199658051220146,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.0,
+            "common_cell_marginal": -0.21220764465185066,
+            "conditional": -0.21220764465185066,
+            "individual": "588",
+            "marginal": 0.019788935860350798,
+            "scored_fixes": 50,
+            "session": "588::56"
+          },
+          {
+            "advantage": 0.26868420314922214,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.3117940110697198,
+            "common_cell_marginal": -0.02466341369668212,
+            "conditional": 0.2871305973730377,
+            "individual": "588",
+            "marginal": 0.01844639422381558,
+            "scored_fixes": 137,
+            "session": "588::57"
+          },
+          {
+            "advantage": 0.2802173677334937,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.2692468288157754,
+            "common_cell_marginal": 0.03392135130930137,
+            "conditional": 0.30316818012507674,
+            "individual": "588",
+            "marginal": 0.02295081239158306,
+            "scored_fixes": 119,
+            "session": "588::58"
+          },
+          {
+            "advantage": 0.08509855451669529,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.06530426319458414,
+            "common_cell_marginal": 0.027077297135431406,
+            "conditional": 0.09238156033001554,
+            "individual": "588",
+            "marginal": 0.007283005813320255,
+            "scored_fixes": 70,
+            "session": "588::59"
+          },
+          {
+            "advantage": 0.3208450689471024,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.3548088341366483,
+            "common_cell_marginal": -0.013457817199551846,
+            "conditional": 0.34135101693709646,
+            "individual": "588",
+            "marginal": 0.020505947989994076,
+            "scored_fixes": 78,
+            "session": "588::6"
+          },
+          {
+            "advantage": 0.19986207479132728,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.2815914063486619,
+            "common_cell_marginal": -0.06680508541272466,
+            "conditional": 0.21478632093593725,
+            "individual": "588",
+            "marginal": 0.014924246144609962,
+            "scored_fixes": 104,
+            "session": "588::60"
+          },
+          {
+            "advantage": 0.6527597075026021,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.5202573819762037,
+            "common_cell_marginal": 0.03254199278548655,
+            "conditional": 0.5527993747616903,
+            "individual": "588",
+            "marginal": -0.0999603327409119,
+            "scored_fixes": 136,
+            "session": "588::61"
+          },
+          {
+            "advantage": 0.5506857888604189,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.5103276695346088,
+            "common_cell_marginal": 0.018577301360492664,
+            "conditional": 0.5289049708951015,
+            "individual": "588",
+            "marginal": -0.021780817965317417,
+            "scored_fixes": 95,
+            "session": "588::62"
+          },
+          {
+            "advantage": 0.5934705880259921,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.4677204336174814,
+            "common_cell_marginal": -0.052778859743525426,
+            "conditional": 0.41494157387395597,
+            "individual": "588",
+            "marginal": -0.1785290141520361,
+            "scored_fixes": 9014,
+            "session": "588::63"
+          },
+          {
+            "advantage": 0.3125358516938486,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.35025933936007725,
+            "common_cell_marginal": -0.017285274440731718,
+            "conditional": 0.3329740649193455,
+            "individual": "588",
+            "marginal": 0.02043821322549688,
+            "scored_fixes": 97,
+            "session": "588::7"
+          },
+          {
+            "advantage": -0.16589827178386712,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.0,
+            "common_cell_marginal": -0.2429480330721246,
+            "conditional": -0.2429480330721246,
+            "individual": "657",
+            "marginal": -0.07704976128825745,
+            "scored_fixes": 747,
+            "session": "657::0"
+          },
+          {
+            "advantage": 0.42013400912979365,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.16394655283901086,
+            "common_cell_marginal": 0.22560595358097849,
+            "conditional": 0.38955250641998934,
+            "individual": "657",
+            "marginal": -0.03058150270980429,
+            "scored_fixes": 135,
+            "session": "657::1"
+          },
+          {
+            "advantage": 0.6036708495125124,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.28450471329281757,
+            "common_cell_marginal": 0.22064006216527957,
+            "conditional": 0.5051447754580971,
+            "individual": "657",
+            "marginal": -0.09852607405441528,
+            "scored_fixes": 159,
+            "session": "657::10"
+          },
+          {
+            "advantage": 0.9119453418674519,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.595624769709656,
+            "common_cell_marginal": 0.207122896381862,
+            "conditional": 0.802747666091518,
+            "individual": "657",
+            "marginal": -0.10919767577593384,
+            "scored_fixes": 167,
+            "session": "657::11"
+          },
+          {
+            "advantage": 0.9079134834659068,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.5873177741810014,
+            "common_cell_marginal": 0.25339111776229994,
+            "conditional": 0.8407088919433013,
+            "individual": "657",
+            "marginal": -0.06720459152260554,
+            "scored_fixes": 168,
+            "session": "657::12"
+          },
+          {
+            "advantage": 0.8360447295055558,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.5102561819571981,
+            "common_cell_marginal": 0.2683873163666969,
+            "conditional": 0.778643498323895,
+            "individual": "657",
+            "marginal": -0.05740123118166069,
+            "scored_fixes": 159,
+            "session": "657::13"
+          },
+          {
+            "advantage": 0.25896835952049924,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.06313348425938656,
+            "common_cell_marginal": 0.15231681507170136,
+            "conditional": 0.21545029933108792,
+            "individual": "657",
+            "marginal": -0.043518060189411296,
+            "scored_fixes": 1023,
+            "session": "657::14"
+          },
+          {
+            "advantage": 0.5724008836499034,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.42886176945859233,
+            "common_cell_marginal": 0.13265259437612,
+            "conditional": 0.5615143638347123,
+            "individual": "657",
+            "marginal": -0.010886519815191047,
+            "scored_fixes": 1316,
+            "session": "657::15"
+          },
+          {
+            "advantage": 1.1186617997629158,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.9408840569158261,
+            "common_cell_marginal": 0.14921653382541236,
+            "conditional": 1.0901005907412384,
+            "individual": "657",
+            "marginal": -0.028561209021677286,
+            "scored_fixes": 636,
+            "session": "657::16"
+          },
+          {
+            "advantage": 1.076026945894136,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.8827926140188438,
+            "common_cell_marginal": 0.17112916146849627,
+            "conditional": 1.05392177548734,
+            "individual": "657",
+            "marginal": -0.02210517040679594,
+            "scored_fixes": 1695,
+            "session": "657::17"
+          },
+          {
+            "advantage": 1.7912019462774869,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 1.5098219373306092,
+            "common_cell_marginal": 0.26457230375876517,
+            "conditional": 1.7743942410893745,
+            "individual": "657",
+            "marginal": -0.016807705188112334,
+            "scored_fixes": 1289,
+            "session": "657::18"
+          },
+          {
+            "advantage": 0.5193352173176017,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.22759009227260815,
+            "common_cell_marginal": 0.20469011557465547,
+            "conditional": 0.4322802078472636,
+            "individual": "657",
+            "marginal": -0.0870550094703381,
+            "scored_fixes": 621,
+            "session": "657::19"
+          },
+          {
+            "advantage": 0.6372488229024081,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.3400506918002374,
+            "common_cell_marginal": 0.19944092255491727,
+            "conditional": 0.5394916143551547,
+            "individual": "657",
+            "marginal": -0.09775720854725345,
+            "scored_fixes": 139,
+            "session": "657::2"
+          },
+          {
+            "advantage": 0.833694598919661,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.5147522403108888,
+            "common_cell_marginal": 0.21000147842259884,
+            "conditional": 0.7247537187334877,
+            "individual": "657",
+            "marginal": -0.10894088018617328,
+            "scored_fixes": 154,
+            "session": "657::20"
+          },
+          {
+            "advantage": 1.1354911214197239,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.8206457492104072,
+            "common_cell_marginal": 0.20566460402060574,
+            "conditional": 1.026310353231013,
+            "individual": "657",
+            "marginal": -0.10918076818871099,
+            "scored_fixes": 159,
+            "session": "657::21"
+          },
+          {
+            "advantage": 0.2851497831782114,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.12644508955067443,
+            "common_cell_marginal": 0.15195664654381127,
+            "conditional": 0.2784017360944857,
+            "individual": "657",
+            "marginal": -0.006748047083725648,
+            "scored_fixes": 1357,
+            "session": "657::22"
+          },
+          {
+            "advantage": 0.3104863320628102,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.5980217728222617,
+            "common_cell_marginal": -0.044767448643324645,
+            "conditional": 0.553254324178937,
+            "individual": "657",
+            "marginal": 0.2427679921161269,
+            "scored_fixes": 2513,
+            "session": "657::23"
+          },
+          {
+            "advantage": 0.07491615245464983,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.6655322738461997,
+            "common_cell_marginal": -0.3176382128423596,
+            "conditional": 0.3478940610038401,
+            "individual": "657",
+            "marginal": 0.2729779085491903,
+            "scored_fixes": 2696,
+            "session": "657::24"
+          },
+          {
+            "advantage": 1.0208551711221858,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.7019614101507898,
+            "common_cell_marginal": 0.2099034798676916,
+            "conditional": 0.9118648900184814,
+            "individual": "657",
+            "marginal": -0.10899028110370444,
+            "scored_fixes": 168,
+            "session": "657::25"
+          },
+          {
+            "advantage": 1.35471115282925,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 1.0379709960628067,
+            "common_cell_marginal": 0.20774987566273873,
+            "conditional": 1.2457208717255455,
+            "individual": "657",
+            "marginal": -0.10899028110370444,
+            "scored_fixes": 168,
+            "session": "657::26"
+          },
+          {
+            "advantage": 1.098882601210643,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.7808217665588209,
+            "common_cell_marginal": 0.20907711571576942,
+            "conditional": 0.9898988822745902,
+            "individual": "657",
+            "marginal": -0.10898371893605278,
+            "scored_fixes": 166,
+            "session": "657::27"
+          },
+          {
+            "advantage": 0.9928401075122848,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.7012134400751869,
+            "common_cell_marginal": 0.23140536700939873,
+            "conditional": 0.9326188070845857,
+            "individual": "657",
+            "marginal": -0.06022130042769912,
+            "scored_fixes": 2020,
+            "session": "657::28"
+          },
+          {
+            "advantage": 1.20432694251672,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 1.1067901134632006,
+            "common_cell_marginal": 0.2014157501221557,
+            "conditional": 1.3082058635853562,
+            "individual": "657",
+            "marginal": 0.10387892106863625,
+            "scored_fixes": 3684,
+            "session": "657::29"
+          },
+          {
+            "advantage": 0.6289789193261658,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.31038217092515774,
+            "common_cell_marginal": 0.20944460107769416,
+            "conditional": 0.5198267720028519,
+            "individual": "657",
+            "marginal": -0.10915214732331392,
+            "scored_fixes": 147,
+            "session": "657::3"
+          },
+          {
+            "advantage": 0.4757155499373986,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.1534026296190132,
+            "common_cell_marginal": 0.2887475116766877,
+            "conditional": 0.4421501412957009,
+            "individual": "657",
+            "marginal": -0.033565408641697714,
+            "scored_fixes": 2759,
+            "session": "657::30"
+          },
+          {
+            "advantage": 0.06891934446623207,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.3470769810235591,
+            "common_cell_marginal": -0.11399053453106724,
+            "conditional": 0.23308644649249188,
+            "individual": "657",
+            "marginal": 0.1641671020262598,
+            "scored_fixes": 2505,
+            "session": "657::31"
+          },
+          {
+            "advantage": 0.8823659315313969,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.6548380578808255,
+            "common_cell_marginal": 0.16706967208539864,
+            "conditional": 0.8219077299662241,
+            "individual": "657",
+            "marginal": -0.06045820156517279,
+            "scored_fixes": 160,
+            "session": "657::32"
+          },
+          {
+            "advantage": 0.7450491548759001,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.5131616298686579,
+            "common_cell_marginal": 0.1979871068881416,
+            "conditional": 0.7111487367567995,
+            "individual": "657",
+            "marginal": -0.03390041811910061,
+            "scored_fixes": 169,
+            "session": "657::33"
+          },
+          {
+            "advantage": 0.34448113172411604,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.2111815417851956,
+            "common_cell_marginal": 0.15528679434273995,
+            "conditional": 0.36646833612793556,
+            "individual": "657",
+            "marginal": 0.021987204403819495,
+            "scored_fixes": 157,
+            "session": "657::34"
+          },
+          {
+            "advantage": 0.8623786477195663,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.6080475381494144,
+            "common_cell_marginal": 0.20184860509985197,
+            "conditional": 0.8098961432492663,
+            "individual": "657",
+            "marginal": -0.05248250447029999,
+            "scored_fixes": 156,
+            "session": "657::35"
+          },
+          {
+            "advantage": 0.9672517546480901,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.6516260004375694,
+            "common_cell_marginal": 0.2064363351656142,
+            "conditional": 0.8580623356031836,
+            "individual": "657",
+            "marginal": -0.10918941904490652,
+            "scored_fixes": 163,
+            "session": "657::36"
+          },
+          {
+            "advantage": 0.3383928968836165,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.14192325974060635,
+            "common_cell_marginal": 0.15187529285481302,
+            "conditional": 0.29379855259541937,
+            "individual": "657",
+            "marginal": -0.04459434428819715,
+            "scored_fixes": 155,
+            "session": "657::37"
+          },
+          {
+            "advantage": 0.260593874755947,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": -0.060743229081478334,
+            "common_cell_marginal": 0.21216081778820647,
+            "conditional": 0.15141758870672814,
+            "individual": "657",
+            "marginal": -0.10917628604921886,
+            "scored_fixes": 157,
+            "session": "657::38"
+          },
+          {
+            "advantage": 0.05051445538938888,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": -0.19022302556600781,
+            "common_cell_marginal": 0.17746251739975383,
+            "conditional": -0.012760508166253997,
+            "individual": "657",
+            "marginal": -0.06327496355564288,
+            "scored_fixes": 170,
+            "session": "657::39"
+          },
+          {
+            "advantage": 0.5970961527840903,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.5244288062166491,
+            "common_cell_marginal": 0.09598912694637707,
+            "conditional": 0.6204179331630262,
+            "individual": "657",
+            "marginal": 0.02332178037893589,
+            "scored_fixes": 140,
+            "session": "657::4"
+          },
+          {
+            "advantage": 0.055228881565450846,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": -0.26927639040980134,
+            "common_cell_marginal": 0.21533357764202038,
+            "conditional": -0.05394281276778096,
+            "individual": "657",
+            "marginal": -0.1091716943332318,
+            "scored_fixes": 155,
+            "session": "657::40"
+          },
+          {
+            "advantage": 0.05886438728115834,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.0006159141319623807,
+            "common_cell_marginal": 0.1299036314860024,
+            "conditional": 0.13051954561796478,
+            "individual": "657",
+            "marginal": 0.07165515833680644,
+            "scored_fixes": 159,
+            "session": "657::41"
+          },
+          {
+            "advantage": 0.48200550610483617,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.13875263790512626,
+            "common_cell_marginal": 0.4527334762385974,
+            "conditional": 0.5914861141437237,
+            "individual": "657",
+            "marginal": 0.10948060803888746,
+            "scored_fixes": 130,
+            "session": "657::42"
+          },
+          {
+            "advantage": -0.12315105112173949,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.1542608481906738,
+            "common_cell_marginal": -0.031943935206642356,
+            "conditional": 0.12231691298403144,
+            "individual": "657",
+            "marginal": 0.24546796410577093,
+            "scored_fixes": 145,
+            "session": "657::43"
+          },
+          {
+            "advantage": 0.14586004820966136,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.20592191399929544,
+            "common_cell_marginal": 0.10144542272617674,
+            "conditional": 0.3073673367254722,
+            "individual": "657",
+            "marginal": 0.1615072885158108,
+            "scored_fixes": 148,
+            "session": "657::44"
+          },
+          {
+            "advantage": 0.1279395159950869,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.6878064847833648,
+            "common_cell_marginal": -0.3081727256514945,
+            "conditional": 0.3796337591318703,
+            "individual": "657",
+            "marginal": 0.2516942431367834,
+            "scored_fixes": 162,
+            "session": "657::45"
+          },
+          {
+            "advantage": -0.06336726937086831,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.14777161868570546,
+            "common_cell_marginal": 0.09836244599582489,
+            "conditional": 0.24613406468153035,
+            "individual": "657",
+            "marginal": 0.30950133405239866,
+            "scored_fixes": 157,
+            "session": "657::46"
+          },
+          {
+            "advantage": 0.5192219484561926,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.3092309338440694,
+            "common_cell_marginal": 0.18902645397348264,
+            "conditional": 0.4982573878175521,
+            "individual": "657",
+            "marginal": -0.0209645606386406,
+            "scored_fixes": 138,
+            "session": "657::47"
+          },
+          {
+            "advantage": -0.08750025947604209,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.311414277310583,
+            "common_cell_marginal": -0.13016092017192643,
+            "conditional": 0.18125335713865656,
+            "individual": "657",
+            "marginal": 0.26875361661469865,
+            "scored_fixes": 136,
+            "session": "657::48"
+          },
+          {
+            "advantage": 0.26384490166925945,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.5965279622835878,
+            "common_cell_marginal": -0.1581327304739309,
+            "conditional": 0.43839523180965695,
+            "individual": "657",
+            "marginal": 0.17455033014039747,
+            "scored_fixes": 125,
+            "session": "657::49"
+          },
+          {
+            "advantage": 0.4026558899985982,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.0820174135259053,
+            "common_cell_marginal": 0.21150236086251545,
+            "conditional": 0.29351977438842075,
+            "individual": "657",
+            "marginal": -0.10913611561017744,
+            "scored_fixes": 141,
+            "session": "657::5"
+          },
+          {
+            "advantage": -0.28067616276353546,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": -0.010790105865482624,
+            "common_cell_marginal": -0.143302512565049,
+            "conditional": -0.15409261843053162,
+            "individual": "657",
+            "marginal": 0.1265835443330038,
+            "scored_fixes": 93,
+            "session": "657::50"
+          },
+          {
+            "advantage": 0.16095794323352097,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.41305073386945573,
+            "common_cell_marginal": 0.06050822868610382,
+            "conditional": 0.47355896255555957,
+            "individual": "657",
+            "marginal": 0.3126010193220386,
+            "scored_fixes": 159,
+            "session": "657::51"
+          },
+          {
+            "advantage": 0.8871607341324564,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.5699029273862936,
+            "common_cell_marginal": 0.20810058667652032,
+            "conditional": 0.7780035140628139,
+            "individual": "657",
+            "marginal": -0.10915722006964261,
+            "scored_fixes": 149,
+            "session": "657::6"
+          },
+          {
+            "advantage": 0.6329181614626703,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.40182637584682207,
+            "common_cell_marginal": 0.16886291169154538,
+            "conditional": 0.5706892875383675,
+            "individual": "657",
+            "marginal": -0.06222887392430284,
+            "scored_fixes": 149,
+            "session": "657::7"
+          },
+          {
+            "advantage": 0.7376439417084594,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.41876488526572253,
+            "common_cell_marginal": 0.21722615081469857,
+            "conditional": 0.6359910360804211,
+            "individual": "657",
+            "marginal": -0.10165290562803826,
+            "scored_fixes": 151,
+            "session": "657::8"
+          },
+          {
+            "advantage": 0.5825549735465607,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.26292750869493675,
+            "common_cell_marginal": 0.2489465943891387,
+            "conditional": 0.5118741030840754,
+            "individual": "657",
+            "marginal": -0.07068087046248527,
+            "scored_fixes": 169,
+            "session": "657::9"
+          },
+          {
+            "advantage": 0.14383671136068804,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.0,
+            "common_cell_marginal": 0.2811605059543211,
+            "conditional": 0.2811605059543211,
+            "individual": "684",
+            "marginal": 0.1373237945936331,
+            "scored_fixes": 60,
+            "session": "684::0"
+          },
+          {
+            "advantage": 0.04278811487145609,
+            "cohort": "pteropus_poliocephalus_5bd6pq55",
+            "common_cell_advantage": 0.0,
+            "common_cell_marginal": 0.18540449556618088,
+            "conditional": 0.18540449556618088,
+            "individual": "684",
+            "marginal": 0.1426163806947248,
+            "scored_fixes": 55,
+            "session": "684::1"
+          }
+        ]
+      },
+      "permutation": {
+        "B": 9999,
+        "calibration": {
+          "mean": -0.05870347090228961,
+          "n": 9999,
+          "null_standardized_deviation": 3.852919160792448,
+          "observed": 0.11002521969895077,
+          "observed_minus_null_mean": 0.16872869060124038,
+          "p_null_ge_observed": 0.0001,
+          "p_null_le_observed": 1.0,
+          "q025": -0.16462307358600525,
+          "q50": -0.05131278934713612,
+          "q975": 0.012252890109512972,
+          "sd": 0.04379242946964326
+        },
+        "eligible_individual_count": {
+          "max": 4,
+          "mean": 4.0,
+          "min": 4,
+          "observed": 4
+        },
+        "invalid_replicates": 0,
+        "seed": 20260930162,
+        "valid_replicates": 9999
+      },
+      "primary_metric": "common_cell_marginal",
+      "primary_pass": true,
+      "raw_sha256": "13829a97110f3eff191c9066fd5bf7d20f5d1c7e26e152e6c733079fb4e179dc",
+      "taxon": "Pteropus poliocephalus",
+      "vertical_field": "height-above-msl"
+    }
+  },
+  "study_id": "batter-small-panel-generality-primary-v1"
+}
