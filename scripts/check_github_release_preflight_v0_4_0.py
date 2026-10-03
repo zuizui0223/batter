@@ -14,7 +14,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 EXPECTED_VERSION="v0.4.0"
 EXPECTED_TAG="jae-v0.4.0"
-EXPECTED_CANDIDATE="release/jae-v0.4.0-rc1"
+EXPECTED_CANDIDATE="release/jae-v0.4.0-rc2"
 METADATA=ROOT/"submission"/"jae_v0_4_0_metadata.json"
 CFF=ROOT/"CITATION.cff"
 NOTES=ROOT/"RELEASE_NOTES_JAE_V0_4_0.md"
@@ -52,7 +52,7 @@ def main()->int:
 
     if metadata.get("package_version")!=EXPECTED_VERSION:
         failures.append(f"metadata package_version must be {EXPECTED_VERSION}")
-    if metadata.get("manuscript_title")!="Persistent individual vertical strategies need not partition three-dimensional space in bats":
+    if metadata.get("manuscript_title")!="Persistent individual vertical strategies need not partition three-dimensional space in two tropical bat species":
         failures.append("metadata manuscript_title does not match v0.4.0 title")
     if str(metadata.get("archive_doi","")).strip():
         failures.append("archive_doi must still be empty before the Zenodo-minting GitHub release")
