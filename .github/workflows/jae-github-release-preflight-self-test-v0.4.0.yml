@@ -3,7 +3,7 @@ name: jae-github-release-preflight-self-test-v0.4.0
 on:
   push:
     branches:
-      - release/jae-v0.4.0-rc1
+      - release/jae-v0.4.0-rc2
     paths:
       - "scripts/check_github_release_preflight_v0_4_0.py"
       - "RELEASE_NOTES_JAE_V0_4_0.md"
@@ -65,9 +65,9 @@ jobs:
           git add LICENSE CITATION.cff manuscript/TITLE_PAGE_V0_4_0.md submission/jae_v0_4_0_metadata.json submission/jae_v0_4_0_metadata_summary.json
           git commit -m "Synthetic local v0.4.0 release-candidate state"
       - name: Simulate checked-out candidate equality
-        run: git update-ref refs/remotes/origin/release/jae-v0.4.0-rc1 HEAD
+        run: git update-ref refs/remotes/origin/release/jae-v0.4.0-rc2 HEAD
       - name: Run GitHub release preflight logic
-        run: python scripts/check_github_release_preflight_v0_4_0.py --candidate-ref release/jae-v0.4.0-rc1 --no-fetch
+        run: python scripts/check_github_release_preflight_v0_4_0.py --candidate-ref release/jae-v0.4.0-rc2 --no-fetch
       - name: Verify real target tag/release are absent
         env:
           GH_TOKEN: ${{ github.token }}
