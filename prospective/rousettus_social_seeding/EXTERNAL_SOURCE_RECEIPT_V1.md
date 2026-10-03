@@ -151,3 +151,29 @@ It cannot by itself establish:
 - active route copying;
 - ontogenetic route formation;
 - fitness optimality.
+
+
+## Documented raw schema and archive topology
+
+Dryad's public README defines the raw ATLAS track fields as:
+`TAG, TIME, X, Y, FREQ, NBS, VARX, VARY, COVXY, dateTime, date, date_global, Night, distance, dT, spd, stdVarXY, Lon, Lat`.
+
+`X` and `Y` are Israel Transverse Mercator coordinates in metres.
+
+The target-tree file `manipulations_trees_locations.csv` is documented to contain:
+`X_ITM, Y_ITM, Lat_WGS84, Long_WGS84`.
+
+Article-cited Zenodo record **10.5281/zenodo.10993486** contains a 16.8-MB archive of the public analysis repository, not the raw ATLAS SQLite tracks. Thus:
+- raw route bytes: Dryad DOI `10.5061/dryad.51c59zwgp`;
+- main-analysis code/tables: GitHub + Zenodo record 10993486.
+
+No alternate raw-track mirror is currently identified.
+
+## Retrieval status in this environment
+
+Workflow `37112482932` attempted retrieval without opening route geometry:
+- Dryad file_stream endpoints returned the interactive security challenge instead of file bytes;
+- Dryad API v2 download endpoints returned HTTP 401;
+- a live browser independently encountered the same BotStopper barrier for the small target-tree CSV.
+
+Therefore the external route-reuse test is currently **pending-data**, not failed biologically.
