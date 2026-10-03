@@ -1,7 +1,7 @@
-name: strategy-maintenance-reaction-norm-structural-preflight-v1
+name: strategy-maintenance-continuous-reaction-norm-structural-preflight-v2
 on:
   push:
-    branches: [post-freeze/strategy-maintenance-preflight-v1]
+    branches: [post-freeze/strategy-maintenance-outcome-v1]
     paths:
       - "post_freeze_extensions/strategy_maintenance/reaction_norm_structural_preflight_v1.py"
       - "post_freeze_extensions/strategy_maintenance/reaction_norm_contract_v1.json"
@@ -23,6 +23,6 @@ jobs:
         with:
           name: strategy-maintenance-reaction-norm-structural-preflight-v1
           path: |
-            post_freeze_extensions/strategy_maintenance/reaction_norm_structural_preflight_v1.json
-            post_freeze_extensions/strategy_maintenance/REACTION_NORM_STRUCTURAL_PREFLIGHT_V1.md
+            post_freeze_extensions/strategy_maintenance/reaction_norm_structural_preflight_v2.json
+            post_freeze_extensions/strategy_maintenance/REACTION_NORM_STRUCTURAL_PREFLIGHT_V2.md
           if-no-files-found: error
