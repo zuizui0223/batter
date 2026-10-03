@@ -22,7 +22,7 @@ Canonical files:
 Authoritative workflow: **36946126004**.
 
 Promoted claim:
-- terrain-relative vertical-strategy fidelity is supported in 4/4 structurally evaluable fruit-bat panels.
+- terrain-relative vertical-strategy fidelity is supported in 4/4 structurally evaluable panels from *H. monstrosus* and *P. hastatus*.
 
 ### 2. Synchronous co-use vertical separation
 
@@ -107,6 +107,26 @@ Promoted claim:
 - the continuous structural gate failed because 2023 retained 7 evaluable individuals versus 8 required;
 - **no numeric vertical reaction-norm outcome was opened**.
 
+### 7. Previously frozen external boundary tests
+
+Canonical files:
+- `post_freeze_extensions/NYCTALUS_VALIDATION_HISTORY_V1.md`
+- `post_freeze_extensions/HIPPOSIDEROS_PRIMARY_CLOSEOUT_V1.md`
+- `post_freeze_extensions/small_panel_generality/PRIMARY_RESULT_V1.md`
+- `post_freeze_extensions/small_panel_generality/primary_result_v1.json`
+- `post_freeze_extensions/pteropus_terrain_audit/TERRAIN_AUDIT_RESULT_V1.md`
+- `post_freeze_extensions/pteropus_terrain_audit/terrain_audit_result_v1.json`
+- `results/external_boundary_v0_4_0.csv`
+
+Promoted boundary evidence:
+- first frozen *N. noctula* primary: FAIL, calibrated excess +0.05175, p=0.1224;
+- *Hipposideros armiger/pratti* source-level primary: FAIL, -0.04468, p=0.8616;
+- *Myotis vivesi* four-individual primary: FAIL, +0.00470, p=0.4419;
+- *Pteropus poliocephalus* four-individual centered-MSL primary: PASS, +0.16873, p=0.0001;
+- post-outcome *Pteropus* MSL-minus-DEM diagnostic: +0.03231, p=0.0023, with terrain-only individuality +0.37887, p=0.0034.
+
+These programmes are not a prevalence sample. Their role in v0.4.0 is to constrain generality and prevent selective reporting of only the original positive panels. The later revised-eligibility *Nyctalus* positive result is post-outcome with respect to the same opened source and does not replace the authoritative first-primary FAIL.
+
 ## Explicitly not promoted into the RC
 
 The following exploratory families are intentionally excluded from the release candidate because they are not needed for the manuscript claim:
@@ -114,7 +134,6 @@ The following exploratory families are intentionally excluded from the release c
 - P2023 co-use localization refinements;
 - P2023 microplace / temporal-gradient follow-ups;
 - external geometry candidate panels;
-- Pteropus terrain-geometry contrast;
 - ecology-to-geometry synthesis drafts;
 - spatial phase-space exploratory figures;
 - resource/social-metadata follow-up searches.
@@ -125,8 +144,8 @@ Their absence is deliberate and prevents the submission package from silently br
 
 The RC contains all files necessary to audit the promoted post-freeze evidence, but it does not convert those diagnostics into independent preregistered confirmation.
 
-The final synthesis remains:
+The final scoped synthesis remains:
 
-> **Persistent individual vertical strategies can remain predictive without requiring mutually exclusive vertical niches.**
+> **Persistent individual vertical strategies need not partition three-dimensional space in two tropical bat species.**
 
 Personal solution reuse is a bounded explanatory framework, not a directly identified proximate mechanism.
