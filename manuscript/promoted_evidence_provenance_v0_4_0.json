@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "package": "batter-jae-v0.4.0-rc1",
+  "promoted_families": {
+    "terrain_relative": {
+      "run_id": 36946126004,
+      "claim": "4/4 terrain-relative vertical-strategy fidelity"
+    },
+    "synchronous_couse": {
+      "run_id": 36953712597,
+      "claim": "1/4 supported additional separation; 2023 exception"
+    },
+    "partitioning_calibration": {
+      "run_id": 36992380946,
+      "claim": "0/4 supported positive S_rel"
+    },
+    "temporal_persistence": {
+      "day1_run": 36539006089,
+      "day3_run": 36539572278,
+      "day7_run": 36562703089,
+      "claim": "4/4, 3/3, 2/2 at >=1, >=3, >=7 days"
+    },
+    "fine_place_kinematic": {
+      "run_id": 36519747717,
+      "claim": "4/4 at 500-m place x speed x turning"
+    },
+    "same_night": {
+      "run_id": 36518735021,
+      "claim": "3/4 self-history exceeds same-night other; 2016 unresolved"
+    },
+    "movement_state": {
+      "run_id": 36509985627,
+      "claim": "5/5 persists within broad movement-intensity states"
+    },
+    "patch_fidelity": {
+      "run_id": 36508617613,
+      "claim": "simple patch-fidelity strength not supported as general driver"
+    },
+    "wind_support": {
+      "run_id": 37090059505,
+      "claim": "3/4 environmental identifiability"
+    },
+    "continuous_reaction_norm_structural": {
+      "run_id": 37090689460,
+      "claim": "STOP before vertical opening; 2023 7/8"
+    }
+  },
+  "numeric_vertical_reaction_norm_opened": false,
+  "excluded_families": [
+    "P2023 co-use localization refinements",
+    "P2023 microplace and temporal-gradient follow-ups",
+    "external geometry candidate panels",
+    "Pteropus terrain contrast",
+    "ecology-to-geometry synthesis drafts",
+    "exploratory phase-space figures",
+    "resource/social metadata follow-up searches"
+  ]
+}
