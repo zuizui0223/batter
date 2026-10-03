@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "package": "batter-jae-v0.4.0-rc1",
+  "package": "batter-jae-v0.4.0-rc2",
   "promoted_families": {
     "terrain_relative": {
       "run_id": 36946126004,
@@ -43,6 +43,39 @@
     "continuous_reaction_norm_structural": {
       "run_id": 37090689460,
       "claim": "STOP before vertical opening; 2023 7/8"
+    },
+    "external_boundary": {
+      "nyctalus_first_primary": {
+        "excess": 0.051747374510001,
+        "p": 0.1224,
+        "verdict": "FAIL",
+        "n": 27
+      },
+      "hipposideros_primary": {
+        "excess": -0.04468361353981454,
+        "p": 0.8616,
+        "verdict": "FAIL",
+        "n": 13
+      },
+      "myotis_vivesi_primary": {
+        "excess": 0.004702579344628057,
+        "p": 0.4419,
+        "verdict": "FAIL",
+        "n": 4
+      },
+      "pteropus_msl_primary": {
+        "excess": 0.16872869060124038,
+        "p": 0.0001,
+        "verdict": "PASS",
+        "n": 4
+      },
+      "pteropus_msl_minus_dem": {
+        "excess": 0.03231183908942928,
+        "p": 0.0023,
+        "classification": "post-outcome diagnostic",
+        "n": 4
+      },
+      "interpretation": "boundary evidence, not prevalence sample"
     }
   },
   "numeric_vertical_reaction_norm_opened": false,
@@ -50,7 +83,6 @@
     "P2023 co-use localization refinements",
     "P2023 microplace and temporal-gradient follow-ups",
     "external geometry candidate panels",
-    "Pteropus terrain contrast",
     "ecology-to-geometry synthesis drafts",
     "exploratory phase-space figures",
     "resource/social metadata follow-up searches"
