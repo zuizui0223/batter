@@ -178,7 +178,7 @@ Post-outcome stress tests localized the persistence of the individual signal. Wi
 
 ### Descriptive profiles illustrate variation in central concentration and tail use
 
-For Figure 6 we reconstructed each evaluable individual's leave-one-session-out identity-matched self profiles and averaged them across target sessions. After session medians were removed, profiles visibly differed in central concentration and upper/lower-tail use; for example, central mass within -50 to +50 m ranged from 0.123–0.926 across individuals in *E. helvum* and 0.548–0.994 in *P. hastatus* 2016. These component summaries were descriptive only and were not separately exchangeability-calibrated, so the inferential result applies to the full centered distribution shape rather than to any single tail or concentration measure.
+Figure 6 reconstructs each evaluable individual's leave-one-session-out self profile after session centering. Profiles visibly differed in concentration and tail use, but these components were descriptive and not separately exchangeability-calibrated; inference therefore applies to the full centered distribution shape.
 
 ### Coarse-horizontal standardized identity exceeds exchangeability expectations in all six panels
 
@@ -220,9 +220,7 @@ The estimator audit showed that intuitive zeros were not universal exchangeabili
 
 ### Comparative populations contain repeatable individual shapes of vertical space use
 
-All five non-*Tadarida* panels retained calibrated identity in vertical-distribution shape after self and other profiles were standardized to the same coarse horizontal occupancy and every session was translated to zero median. Thus the comparative result is not simply that some individuals fly higher: identity persists in how probability is distributed around each session's typical altitude.
-
-At the population level, a broad vertical distribution can therefore be a mixture of repeatable individual distributions rather than one common strategy. Figure 6 illustrates possible variation in concentration and tail use, but those components were not separately calibrated. Stationary-height correction provided narrower concordant evidence in the two comparative panels that passed its support gate, while the remaining panels lacked sufficient shared stationary support.
+All five non-*Tadarida* panels retained calibrated vertical-distribution shape identity after common horizontal weighting and session-median centering. Thus the result is not simply that some individuals fly higher: population-level vertical use can be a mixture of repeatable individual distributions. Figure 6 illustrates possible concentration and tail differences without assigning inference to those components; stationary-height correction provided narrower concordant evidence in the two panels that passed its support gate.
 
 ### Generality is bounded by independent external failures
 
@@ -250,11 +248,7 @@ Prediction-based individuality statistics did not share universal intuitive null
 
 ### Horizontal and central-place structure are reduced, not eliminated
 
-Common-cell weighting removes differences in occupancy among the tested 5-km cells, but it does not force individuals to share identical continuous x-y positions. Fine-scale fidelity within a cell can therefore still translate into vertical differences through resources or central-place routes. However, a post-outcome 500-m diagnostic substantially narrows terrain as a general explanation: all four structurally evaluable *H. monstrosus*/*P. hastatus* panels retained positive, permutation-supported vertical identity after local DEM elevation was subtracted.
-
-The endpoint-neighbourhood audit narrows this concern. Four comparative panels retain calibrated identity after the same fixed 1-km exclusion, and *Eidolon* retains a strong signal but fails the frozen post-exclusion sample-size gate. Endpoint-associated structure is therefore not a sufficient general explanation for the comparative result. At the same time, the failure in *Tadarida* and the lack of verified roost, colony or lek coordinates prevent a universal claim of central-place independence.
-
-We therefore describe the result as vertical individuality beyond **coarse-grained horizontal occupancy at the tested 5-km scale**, not as complete removal of horizontal fidelity.
+Common-cell weighting removes differences among tested 5-km cells but not fine-scale x-y fidelity within them. The 500-m terrain diagnostic narrows this limitation because all four evaluable *H. monstrosus*/*P. hastatus* panels retain identity after local DEM subtraction. Four comparative panels also retain identity after the fixed 1-km endpoint exclusion, while *Eidolon* fails only the frozen post-exclusion sample-size gate. Nevertheless, *Tadarida* fails its endpoint test and verified roost/lek coordinates are unavailable. We therefore claim individuality beyond **coarse-grained horizontal occupancy**, not complete removal of horizontal or central-place structure.
 
 ### Additive tag offsets are not a general explanation, but other device error remains possible
 
