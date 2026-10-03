@@ -6,7 +6,7 @@ on:
     branches:
       - release/jae-v0.4.0-rc1
     paths:
-      - "manuscript/MANUSCRIPT_DRAFT_V0_3_8.md"
+      - "manuscript/MANUSCRIPT_DRAFT_V0_4_0.md"
       - "scripts/apply_jae_v0_4_0_metadata.py"
       - "scripts/check_jae_upload_ready_v0_4_0.py"
       - "scripts/check_zenodo_release_ready_v0_4_0.py"
