@@ -29,6 +29,16 @@ A bounded mechanistic synthesis is **personal solution reuse**: an individual's 
 
 The motivating *Tadarida* panel remains the explicit boundary case: it retains repeatable absolute vertical-location identity but not centered-shape identity.
 
+## External boundary tests
+
+Previously frozen external tests are retained in rc2 rather than omitted:
+- *Nyctalus noctula*: first frozen primary FAIL (+0.05175, p=0.1224);
+- *Hipposideros armiger/pratti*: FAIL (-0.04468, p=0.8616);
+- *Myotis vivesi*: FAIL (+0.00470, p=0.4419);
+- *Pteropus poliocephalus*: PASS under a separate n=4 programme (+0.16873, p=0.0001), strongly attenuated after DEM subtraction (+0.03231, p=0.0023).
+
+These are boundary tests, not a prevalence sample. They constrain the centered-shape phenomenon to be non-universal across the systems tested. The stronger terrain/partitioning claim is based on four panels from **two species**, *H. monstrosus* and *P. hastatus*.
+
 ## What the shape individuality looks like
 
 The final descriptive Figure 6 is frozen as a visualization-only layer. It reconstructs the exact
