@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "submission_id": "batter-jae-v0.4.0-rc1",
+  "submission_id": "batter-jae-v0.4.0-rc2",
   "date": "2026-10-03",
   "journal_target": "Journal of Animal Ecology",
   "manuscript": {
     "path": "manuscript/MANUSCRIPT_DRAFT_V0_4_0.md",
     "internal_version": "v0.4.0 candidate — post-freeze maintenance synthesis",
-    "title": "Persistent individual vertical strategies need not partition three-dimensional space in bats",
+    "title": "Persistent individual vertical strategies need not partition three-dimensional space in two tropical bat species",
     "whitespace_word_estimate": 7873,
     "abstract_words": 287,
     "introduction_words": 679,
@@ -64,7 +64,7 @@
   },
   "inference_class": "post-freeze diagnostic synthesis; each added diagnostic frozen before its own outcome",
   "packaging": {
-    "status": "validated_candidate_ready_for_rc1",
+    "status": "validated_candidate_pending_rc2_revalidation",
     "inherited_v0_3_8_validation_is_current": false,
     "submission_gate": {
       "run_id": 37099994789,
@@ -97,7 +97,7 @@
       "figure1": "passed",
       "review_pdf_representative_pages": "passed"
     },
-    "release_candidate": "release/jae-v0.4.0-rc1",
+    "release_candidate": "release/jae-v0.4.0-rc2",
     "expected_tag": "jae-v0.4.0",
     "remaining": [
       "human_metadata",
