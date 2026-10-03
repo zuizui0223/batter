@@ -134,11 +134,38 @@ def overlap_geometry(K=5,a=0.5,n_ind=5000):
       "interpretation":"Strong route-mixture individuality can map to weak spatial/vertical segregation when latent route geometries overlap."
     }
 
-def main():
+
+def lag_signature(K=5,a=1.0,lags=(1,2,3,5,7,14,30)):
+    # Match the one-step same-route probability of a Markov-inertia model
+    # to the Pólya same-individual route-match probability.
+    polya_same=(a+1.0)/(K*a+1.0)
+    baseline=1.0/K
+    p_stay=polya_same
+    lam=(K*p_stay-1.0)/(K-1.0)
+    rows=[]
+    for L in lags:
+        markov_same=baseline+(1.0-baseline)*(lam**L)
+        rows.append({
+          "lag":int(L),
+          "markov_same_route_probability":float(markov_same),
+          "markov_excess_over_baseline":float(markov_same-baseline),
+          "persistent_propensity_same_route_probability":float(polya_same),
+          "persistent_propensity_excess_over_baseline":float(polya_same-baseline),
+        })
+    return {
+      "K":K,"a":a,
+      "matched_one_step_stay_probability":float(p_stay),
+      "markov_nontrivial_eigenvalue":float(lam),
+      "between_individual_baseline":float(baseline),
+      "rows":rows,
+      "interpretation":"The two models are matched at lag 1 but diverge rapidly: Markov inertia decays to the population baseline while persistent individual propensities retain a non-zero plateau."
+    }
+\ndef main():
     exact=exact_grid()
     maxerr=max(max(r["abs_error_self"],r["abs_error_other"],r["abs_error_delta"]) for r in exact)
     er=explore_refine()
     geom=overlap_geometry()
+    lag=lag_signature()
 
     payload={
       "schema_version":1,
@@ -148,6 +175,7 @@ def main():
       "exact_polya_validation":{"rows":exact,"max_absolute_error":maxerr,"pass":maxerr<0.01},
       "exploration_refinement":er,
       "overlapping_geometry":geom,
+      "lag_signature":lag,
       "claim_boundary":"demonstrates sufficiency of a mechanism class, not empirical identification"
     }
     OUT.parent.mkdir(parents=True,exist_ok=True)
@@ -170,6 +198,14 @@ def main():
       "Population route fractions:",
       ", ".join(f"{x:.3f}" for x in er["population_route_fractions"]),
       "",
+      "## Lag discriminator: short-memory inertia vs persistent propensity","",
+      f"- matched one-step stay probability: **{lag['matched_one_step_stay_probability']:.3f}**",
+      f"- Markov eigenvalue: **{lag['markov_nontrivial_eigenvalue']:.3f}**",
+      "",
+      "| lag | Markov same-route | persistent-propensity same-route |",
+      "|---:|---:|---:|",
+      *[f"| {x['lag']} | {x['markov_same_route_probability']:.3f} | {x['persistent_propensity_same_route_probability']:.3f} |" for x in lag["rows"]],
+      "",
       "## Overlapping geometry","",
       f"- latent route-mixture TV: **{geom['mean_pairwise_latent_route_TV']:.3f}**",
       f"- realized vertical-distribution TV: **{geom['mean_pairwise_realized_vertical_TV']:.3f}**",
@@ -187,6 +223,8 @@ def main():
       "late_self_advantage":er["late_self_advantage"],
       "dominant_persistence":er["first20_to_last20_dominant_route_persistence"],
       "vertical_over_latent_TV":geom["attenuation_ratio_vertical_over_latent"],
+      "markov_lag7_same_route":lag["rows"][4]["markov_same_route_probability"],
+      "persistent_lag7_same_route":lag["rows"][4]["persistent_propensity_same_route_probability"],
     },sort_keys=True))
 
 if __name__=="__main__":
