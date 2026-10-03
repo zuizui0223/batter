@@ -134,84 +134,29 @@ To avoid ambiguity before any ERA5 wind values are inspected:
 
 ## Frozen reaction-norm outcome architecture after wind identifiability PASS
 
-The wind identifiability gate passed in exactly three panels (Hypsignathus, P. hastatus 2022, P. hastatus 2023). P. hastatus 2016 is stopped and cannot be rescued.
+The wind identifiability gate passed in exactly three panels (*Hypsignathus*, *P. hastatus* 2022, *P. hastatus* 2023). *P. hastatus* 2016 is stopped and cannot be rescued.
 
-Before any numeric vertical outcome is opened, the predictive comparison is fixed as follows.
+The normative outcome specification is `REACTION_NORM_CONTRACT_V1.md`. Before any numeric vertical response is opened, the comparison is fixed to a **continuous within-stratum wind slope**, not a post-hoc wind-state classification.
 
-### Wind state
+For each held-out target session, condition on the completed 500-m place × speed2_turn2 universe and score only target endpoints whose wind lies within the focal individual's other-session q05–q95 range and within the q05–q95 range of at least two other individuals in the same cohort.
 
-Within each admitted cohort, classify ERA5 wind speed into exactly two states using the cohort median calculated from the x-y-time-supported 500-m place x speed2_turn2 endpoint universe. No alternative threshold or additional wind bins are opened.
+The three fixed predictors are:
+- **A population wind model:** other-individual stratum means plus a common within-stratum continuous wind slope;
+- **B stable self-history:** same-individual other-session stratum mean;
+- **C personal reaction norm:** B plus the focal individual's within-stratum continuous wind slope estimated from its other sessions.
 
-### Structural support gate
+The response is terrain-relative height using the exact pinned Mapzen/AWS Skadi HGT tiles and bilinear interpolation from the completed terrain diagnostic, then median-centered within the complete retained session.
 
-For a target event, all three predictors must be structurally available:
-- A: other-individual wind-conditioned profile at the same 500-m cell x kinematic state x wind state;
-- B: same-individual unconditioned profile at the same 500-m cell x kinematic state, learned from other sessions;
-- C: same-individual wind-conditioned profile at the same 500-m cell x kinematic state x wind state, learned from other sessions.
+Primary held-out statistic:
+- `D_CB = MAE_B - MAE_C`.
 
-A target session requires >=50 events with all three predictors available. A panel must retain at least max(5, ceil(0.70 x completed 500-m baseline n)):
-- Hypsignathus >=14 of 19;
-- P. hastatus 2022 >=17 of 23;
-- P. hastatus 2023 >=8 of 11.
+Secondary:
+- `D_BA = MAE_A - MAE_B`.
 
-All three panels must pass this x-y-time + wind structural gate before any numeric vertical response is opened. Failure stops the reaction-norm outcome family.
+Sessions are weighted equally within biological individual and individuals equally within panel. The complete statistics are calibrated by 4,999 whole-session individual-label permutations within cohort using the fixed seeds in the machine-readable contract.
 
-### Vertical representation
+A panel supports the personal wind-reaction mechanism only when observed-minus-null-mean > 0 and one-sided p <= 0.05 for D_CB. No nonlinear wind term, wind direction, threshold, alternative weather variable, grid, state definition or loss function may rescue a failed result.
 
-If the gate passes:
-- use the same pinned SRTM/DEM source and bilinear interpolation as the completed terrain-relative 3-D diagnostic;
-- terrain-relative height = native source height - DEM elevation;
-- center terrain-relative height by subtracting the median of its complete retained session;
-- fixed residual-height bins: -inf, -400, -200, -100, -50, 0, 50, 100, 200, 400, +inf m;
-- Jeffreys alpha = 0.5.
+### Specification-amendment note
 
-### Predictors and scoring
-
-For every held-out target session:
-- A = P_other(z | 500-m cell, kinematic state, wind state), equal-weighted across other individuals;
-- B = P_self(z | 500-m cell, kinematic state), equal-weighted across the focal individual's other sessions;
-- C = P_self(z | 500-m cell, kinematic state, wind state), equal-weighted across the focal individual's other sessions.
-
-All models are scored on the identical target events admitted by the structural gate.
-
-Primary statistic:
-- G_RN = mean log P_C(z) - log P_B(z), averaged events -> target session -> individual equally.
-
-Secondary statistic:
-- G_SELF = mean log P_B(z) - log P_A(z), with the same averaging.
-
-### Calibration
-
-Whole retained session blocks are permuted among individual labels within cohort, preserving:
-- x-y-time trajectory;
-- ERA5 wind values and wind state;
-- terrain-relative centered vertical observations;
-- exact session sizes;
-- the original multiset of session counts assigned to individual labels.
-
-B = 4,999 per panel.
-Seeds:
-- Hypsignathus: 2026100301
-- P. hastatus 2022: 2026100302
-- P. hastatus 2023: 2026100303
-
-Support for repeatable individual wind response requires:
-- G_RN - mean(null_RN) > 0; and
-- one-sided p(null_RN >= observed G_RN) <= 0.05.
-
-Support for stable self-history beyond population wind response requires the analogous rule for G_SELF.
-
-### Interpretation matrix
-
-- RN supported: repeatable individual-specific wind response contributes to maintenance.
-- RN not supported, SELF supported: current data favor stable self-history/solution reuse over a measurable individual wind reaction norm; do not call this proof of memory.
-- both supported: stable individual history and individual-specific wind response both contribute.
-- neither supported: maintenance mechanism remains unresolved at the tested atmospheric scale.
-
-Cross-panel wording:
-- RN in 3/3 = replicated wind reaction-norm maintenance;
-- RN in 2/3 = recurrent but context-dependent wind reaction norms;
-- RN in 1/3 = panel-specific wind response only;
-- RN in 0/3 with SELF in >=2/3 = evidence favors stable solution reuse over the tested broad wind reaction norm.
-
-No other environmental variable may replace wind in this family after the outcome is opened.
+An earlier machine-readable draft and x-y-time preflight operationalized wind as a median split. Before any numeric vertical response was opened, an audit found that this conflicted with the stated biological hypothesis and the later normative contract, which specified an individual environmental **slope**. The binary wind-state implementation is therefore withdrawn and cannot be used as an alternative analysis. A new continuous-slope structural preflight must pass before vertical opening.
