@@ -296,6 +296,8 @@ Araújo, M.S., Bolnick, D.I. & Layman, C.A. (2011). The ecological causes of ind
 
 Barchi, J.R., Knowles, J.M. & Simmons, J.A. (2013). Spatial memory and stereotypy of flight paths by big brown bats in cluttered surroundings. *Journal of Experimental Biology*, **216**, 1053–1063. https://doi.org/10.1242/jeb.073197
 
+Boardman, W.S.J., Roshier, D., Reardon, T., Burbidge, K., McKeown, A., Westcott, D.A., Caraguel, C.G.B. & Prowse, T.A.A. (2021). Spring foraging movements of an urban population of grey-headed flying foxes (*Pteropus poliocephalus*). *Journal of Urban Ecology*, **7**, juaa034. https://doi.org/10.1093/jue/juaa034
+
 Bolnick, D.I., Svanbäck, R., Fordyce, J.A., Yang, L.H., Davis, J.M., Hulsey, C.D. & Forister, M.L. (2003). The ecology of individuals: Incidence and implications of individual specialization. *The American Naturalist*, **161**, 1–28. https://doi.org/10.1086/343878
 
 Calderón-Capote, M.C., Dechmann, D.K.N., Fahr, J., Wikelski, M., Kays, R. & O'Mara, M.T. (2020). Foraging movements are density-independent among straw-coloured fruit bats. *Royal Society Open Science*, **7**, 200274. https://doi.org/10.1098/rsos.200274
@@ -308,13 +310,7 @@ Fahr, J., Abedi-Lartey, M., Esch, T., Machwitz, M., Suu-Ire, R., Wikelski, M. & 
 
 Gámez, S. & Harris, N.C. (2022). Conceptualizing the 3D niche and vertical space use. *Trends in Ecology & Evolution*, **37**, 953–962. https://doi.org/10.1016/j.tree.2022.06.012
 
-Boardman, W.S.J., Roshier, D., Reardon, T., Burbidge, K., McKeown, A., Westcott, D.A., Caraguel, C.G.B. & Prowse, T.A.A. (2021). Spring foraging movements of an urban population of grey-headed flying foxes (*Pteropus poliocephalus*). *Journal of Urban Ecology*, **7**, juaa034. https://doi.org/10.1093/jue/juaa034
-
 Hurme, E., Gurarie, E., Greif, S., Herrera M., L.G., Flores-Martínez, J.J., Wilkinson, G.S. & Yovel, Y. (2019). Acoustic evaluation of behavioral states predicted from GPS tracking: a case study of a marine fishing bat. *Movement Ecology*, **7**, 21. https://doi.org/10.1186/s40462-019-0163-7
-
-Reusch, C., Paul, A.A., Fritze, M., Kramer-Schadt, S. & Voigt, C.C. (2023). Wind energy production in forests conflicts with tree-roosting bats. *Current Biology*, **33**, 737–743.e3. https://doi.org/10.1016/j.cub.2022.12.050
-
-Si, M., Wang, Z., Liu, Y., Song, Y., Gong, L., Zhu, D., Huang, Z., Feng, J. & Jiang, T. (2025). Individual asymmetric competition responses across multidimensional niches may enable coexistence of closely related species. *Functional Ecology*, **39**, 1957–1971. https://doi.org/10.1111/1365-2435.70088
 
 Kerches-Rogeri, P., Niebuhr, B.B., Muylaert, R.L. & Mello, M.A.R. (2020). Individual specialization in the use of space by frugivorous bats. *Journal of Animal Ecology*, **89**, 2584–2595. https://doi.org/10.1111/1365-2656.13339
 
@@ -328,7 +324,11 @@ O'Mara, M.T., Scharf, A.K., Fahr, J., Abedi-Lartey, M., Wikelski, M., Dechmann, 
 
 Ratcliffe, N., Takahashi, A., O'Sullivan, C., Adlard, S., Trathan, P.N., Harris, M.P. & Wanless, S. (2013). The roles of sex, mass and individual specialisation in partitioning foraging-depth niches of a pursuit-diving predator. *PLOS ONE*, **8**, e79107. https://doi.org/10.1371/journal.pone.0079107
 
+Reusch, C., Paul, A.A., Fritze, M., Kramer-Schadt, S. & Voigt, C.C. (2023). Wind energy production in forests conflicts with tree-roosting bats. *Current Biology*, **33**, 737–743.e3. https://doi.org/10.1016/j.cub.2022.12.050
+
 Schloesing, E., Caron, A., Chambon, R., Courbin, N., Labadie, M., Nina, R., Mouiti Mbadinga, F., Ngoubili, W., Sandiala, D., N'Kaya Tobi, Bourgarel, M., De Nys, H.M. & Cappelle, J. (2023). Foraging and mating behaviors of *Hypsignathus monstrosus* at the bat-human interface in a central African rainforest. *Ecology and Evolution*, **13**, e10240. https://doi.org/10.1002/ece3.10240
+
+Si, M., Wang, Z., Liu, Y., Song, Y., Gong, L., Zhu, D., Huang, Z., Feng, J. & Jiang, T. (2025). Individual asymmetric competition responses across multidimensional niches may enable coexistence of closely related species. *Functional Ecology*, **39**, 1957–1971. https://doi.org/10.1111/1365-2435.70088
 
 Toledo, S., Shohami, D., Schiffner, I., Lourie, E., Orchan, Y., Bartan, Y. & Nathan, R. (2020). Cognitive map-based navigation in wild bats revealed by a new high-throughput tracking system. *Science*, **369**, 188–193. https://doi.org/10.1126/science.aax6904
 
