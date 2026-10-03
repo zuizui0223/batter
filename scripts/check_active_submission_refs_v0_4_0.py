@@ -18,7 +18,7 @@ METADATA_TEMPLATE=ROOT/"submission"/"jae_v0_4_0_metadata.template.json"
 
 EXPECTED_RC="release/jae-v0.4.0-rc1"
 EXPECTED_SUBMISSION_ID="batter-jae-v0.4.0-rc1"
-EXPECTED_MANUSCRIPT="manuscript/MANUSCRIPT_DRAFT_V0_3_8.md"
+EXPECTED_MANUSCRIPT="manuscript/MANUSCRIPT_DRAFT_V0_4_0.md"
 EXPECTED_FINAL_TITLE_PAGE="manuscript/TITLE_PAGE_V0_4_0.md"
 EXPECTED_METADATA="submission/jae_v0_4_0_metadata.json"
 EXPECTED_TEMPLATE="submission/jae_v0_4_0_metadata.template.json"
@@ -83,7 +83,7 @@ def main():
 
     stale_current=[
         "Current release packaging target: `release/jae-v0.3.8-rc1`",
-        "The current manuscript is `manuscript/MANUSCRIPT_DRAFT_V0_3_8.md`, titled **“Repeatable individual shapes",
+        "The current manuscript is `manuscript/MANUSCRIPT_DRAFT_V0_4_0.md`, titled **“Repeatable individual shapes",
     ]
     for phrase in stale_current:
         if phrase in readme:
