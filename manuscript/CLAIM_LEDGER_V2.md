@@ -1,4 +1,4 @@
-# Final claim ledger v3
+# Claim ledger v4 — post-freeze maintenance synthesis
 
 ## Focal *Tadarida* claims
 
