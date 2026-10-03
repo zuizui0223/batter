@@ -210,9 +210,7 @@ Observed-minus-null common-cell identity was +0.602 nats/fix in *T. teniotis* (p
 
 ### Stationary-height correction corroborates the two structurally eligible comparative panels
 
-The x-y/time-only preflight permitted empirical stationary-height correction only in *H. monstrosus* and *P. hastatus* 2016. In *H. monstrosus*, offsets were estimated for 12 individuals, 10 remained evaluable after correction, and the median absolute offset was 4.64 m; corrected identity retained calibrated excess +0.0671 (p=0.0002). In *P. hastatus* 2016, 11 offsets were estimated, seven remained evaluable, and the median absolute offset was 2.00 m; calibrated excess was +0.3808 (p=0.0002).
-
-Thus both structurally eligible comparative panels retained identity after empirical offset correction. Shared stationary 100-m cells are calibration locations rather than verified equal-height roost or perch references, so this analysis is corroborative rather than a universal device calibration.
+Only *H. monstrosus* and *P. hastatus* 2016 passed the x-y/time support gate for stationary-height correction; both retained calibrated identity after correction (p=0.0002 in each). Because shared stationary 100-m cells are calibration locations rather than verified equal-height references, this is corroborative rather than a universal device calibration.
 
 ### Endpoint-neighbourhood exclusion is robust in four comparative panels but not universal
 
@@ -222,13 +220,11 @@ Four of five comparative panels passed the predeclared 1-km endpoint-neighbourho
 
 ### Pairwise self-identification exceeds its pipeline-specific null in five panels
 
-Direct same-individual versus specific-alternative comparisons gave an intuitive translation of the common-cell result (Figure 3). The same individual's profile won 0.794 of comparisons in *T. teniotis* versus a null mean of 0.508 (calibrated excess +0.286; p=0.0189), 0.858 in *E. helvum* versus 0.583 (+0.275; p=0.0002), 0.767 in *H. monstrosus* versus 0.541 (+0.226; p=0.0002), 0.842 in *P. hastatus* 2022 versus 0.532 (+0.310; p=0.0002), and 0.782 in the 2023 panel versus 0.535 (+0.247; p=0.0002).
-
-The 2016 *P. hastatus* panel did not retain independent pairwise support: observed self-win was 0.594 versus a null mean of 0.498 (calibrated excess +0.096; p=0.1168). Across panels, pairwise null means ranged from 0.498 to 0.583, showing that 0.5 is an intuitive reference rather than a universal exchangeability null.
+Direct self-versus-specific-alternative comparisons supported pairwise identity in five panels (Figure 3); *P. hastatus* 2016 was the exception (p=0.1168). Panel-specific null means ranged from 0.498 to 0.583, confirming that 0.5 is only an intuitive reference rather than a universal exchangeability null.
 
 ### Tracking windows overlap strongly in five panels but less in the 2016 panel
 
-Positive overlap among repeat-individual tracking windows was 71.4% in *Tadarida*, 86.0% in *Eidolon*, 91.7% in *Hypsignathus*, 76.6% in *P. hastatus* 2022, 100% in 2023 and 31.1% in 2016. The 2016 panel also had a median start-date difference of 4.0 d, leaving the strongest residual individual-versus-time limitation in that dataset.
+Repeat-individual tracking-window overlap was high in five panels (71.4–100%) but only 31.1% in *P. hastatus* 2016, leaving the strongest individual-versus-time limitation there.
 
 ### *Tadarida* is a motivating boundary case rather than the comparative template
 
@@ -240,9 +236,7 @@ The raw common-cell AGL separation averaged 256.459 m, compared with a session-l
 
 ### Pipeline calibration changed the inferential baseline
 
-The estimator audit altered interpretation rather than merely changing p-values. The original conditional-minus-marginal contrast had a negative panel-specific exchangeability expectation, and the ordinary marginal score inherited horizontal occupancy differences. Most visibly, *P. hastatus* 2022 changed from an apparent marginal-dominant value of G_adv = -0.120 to a common-cell conditional increment of approximately +0.0066 after horizontal standardization (Supporting Figure S2).
-
-The same principle appeared in the biological translations: pairwise null means ranged from 0.498 to 0.583 rather than being fixed at 0.5, and the focal absolute AGL separation had a positive null mean rather than zero. These results motivate pipeline-specific exchangeability calibration as a general methodological conclusion.
+The estimator audit showed that intuitive zeros were not universal exchangeability baselines. The original conditional-minus-marginal contrast had a negative panel-specific null and ordinary marginal scores inherited horizontal occupancy; after standardization, the apparent 2022 architecture contrast disappeared (Supporting Figure S2). Pairwise null means also ranged from 0.498 to 0.583, and absolute separation had a positive null mean.
 
 ## Discussion
 
@@ -266,11 +260,7 @@ The current data do not identify what carries that solution across bouts. Sub-50
 
 ### Pipeline-specific nulls are part of the biological inference
 
-The second major result is methodological. Prediction-based individuality statistics did not share universal intuitive nulls. The original conditional-minus-marginal contrast had a negative panel-specific expectation, pairwise self-identification nulls ranged from about 0.50 to 0.58, and an absolute height-separation statistic had a positive null mean rather than zero.
-
-These shifts arise from finite training structure, smoothing, eligibility rules, repeated-session geometry and transformations such as absolute differences. Consequently, a raw score of zero, a pairwise rate of 0.5 or an absolute separation of zero should not automatically be treated as the inferential baseline. Recomputing the complete statistic under biologically appropriate label exchangeability changed one qualitative architecture interpretation and removed one weak pairwise translation without requiring post hoc retuning. The detailed amendment sequence is retained in Supporting Information.
-
-This is more than a technical correction. The baseline determines which apparent ecological differences can be attributed to individual identity rather than to the geometry of the estimator itself.
+Prediction-based individuality statistics did not share universal intuitive nulls: conditional-minus-marginal contrasts could have negative expectations, pairwise nulls ranged around 0.50–0.58, and absolute separation had a positive null mean. Finite training structure, smoothing and eligibility rules therefore make pipeline-specific label exchangeability part of the biological inference. Recalibrating the complete statistic changed one architecture interpretation and removed one weak pairwise translation; the amendment sequence is retained in Supporting Information.
 
 ### Horizontal and central-place structure are reduced, not eliminated
 
@@ -282,9 +272,7 @@ We therefore describe the result as vertical individuality beyond **coarse-grain
 
 ### Additive tag offsets are not a general explanation, but other device error remains possible
 
-Session centering removes every additive altitude zero-point difference without requiring knowledge of the device-specific error. The persistence of calibrated shape identity in all five comparative panels therefore rules out a constant tag offset as a general explanation for those results.
-
-The audit is not a proof against every form of measurement error. Tag-specific differences in altitude-error variance, antenna orientation, reception quality or other state-dependent error could in principle broaden or narrow an individual's apparent vertical distribution. Tracking windows overlap strongly in most panels, so many animals shared broad atmospheric and satellite contexts, but heteroscedastic device error remains unresolved. Future prospective work should therefore include repeated device calibration or tag-swapping designs where feasible.
+Session centering removes additive altitude zero-point differences exactly, so constant tag offsets cannot explain centered-shape identity in the five comparative panels. Heteroscedastic or state-dependent device error remains unresolved, however, and prospective work should include repeated device calibration or tag swapping.
 
 ### *Tadarida* defines the boundary of the current evidence
 
