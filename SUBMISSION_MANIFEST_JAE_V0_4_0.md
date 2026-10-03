@@ -80,19 +80,19 @@ Prediction-based individuality statistics require calibration against the finite
 
 ## Packaging status
 
-**SCIENTIFIC TEXT CANDIDATE: READY FOR PACKAGE REBUILD.**
+**VALIDATED CANDIDATE: READY TO FREEZE AS `release/jae-v0.4.0-rc1`.**
 
 The v0.3.8 validation receipts are historical and must not be reused as validation of the modified v0.4.0 candidate.
 
-Required before submission:
-- rerun manuscript/figure build;
-- rerun anonymous review build and anonymity guard;
-- rerun reference/figure/table citation checks;
-- rerun journal word-count gate;
-- inspect all main and supporting figures in the rebuilt PDF;
-- create a v0.4.0 release candidate only after those checks pass.
+Validation receipts:
+- submission workflow run 37092713865 — PASS;
+- main figures artifact 11263066200, SHA256 369b2219a75cd71fbf3ae66f18d2ea7efd930a78dac96ed79196c9c4f5edc687;
+- supporting figures artifact 11262871439, SHA256 8cdce552c09ef606694ad7275e25aeeaac184b571b027fdaa1e26b0c61159e90;
+- anonymous review workflow run 37092621932 — PASS;
+- 27-page review artifact 11263790889, SHA256 23faa3a6a0d6f309dd3612f4cc46d78a02dbf7d024925c0dff2d645654917026;
+- representative rendered review pages and final Figure 1 visually inspected without clipping or overlap.
 
-No human identity, authorship, funding, conflict declaration, ORCID, postal address, licence or archive DOI is inferred.
+Remaining work is human metadata / licence / archive DOI / final combined-count assembly. No human identity, authorship, funding, conflict declaration, ORCID, postal address, licence or archive DOI is inferred.
 
 ## Stop rule
 
