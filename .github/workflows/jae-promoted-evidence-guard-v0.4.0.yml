@@ -7,6 +7,11 @@ on:
     paths:
       - "post_freeze_extensions/3d_niche_partition/**"
       - "post_freeze_extensions/strategy_maintenance/**"
+      - "post_freeze_extensions/NYCTALUS_VALIDATION_HISTORY_V1.md"
+      - "post_freeze_extensions/HIPPOSIDEROS_PRIMARY_CLOSEOUT_V1.md"
+      - "post_freeze_extensions/small_panel_generality/**"
+      - "post_freeze_extensions/pteropus_terrain_audit/**"
+      - "results/external_boundary_v0_4_0.csv"
       - "post_freeze_extensions/temporal_persistence_1d_four_panel/**"
       - "post_freeze_extensions/temporal_persistence_3d_three_panel/**"
       - "post_freeze_extensions/temporal_persistence_7d_two_panel/**"
