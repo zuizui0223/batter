@@ -14,7 +14,7 @@ from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-MANUSCRIPT = ROOT / "manuscript" / "MANUSCRIPT_DRAFT_V0_3_8.md"
+MANUSCRIPT = ROOT / "manuscript" / "MANUSCRIPT_DRAFT_V0_4_0.md"
 TITLE_OUT = ROOT / "manuscript" / "TITLE_PAGE_V0_4_0.md"
 CFF_OUT = ROOT / "CITATION.cff"
 SUMMARY_OUT = ROOT / "submission" / "jae_v0_4_0_metadata_summary.json"
