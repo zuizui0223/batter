@@ -14,11 +14,11 @@ Across six tracking panels from four bat taxa, same-individual vertical profiles
 
 The post-freeze maintenance synthesis adds a second layer:
 
-- terrain-relative vertical-strategy fidelity persists in **4/4** structurally evaluable fruit-bat panels at 500 m;
+- terrain-relative vertical-strategy fidelity persists in **4/4** structurally evaluable *H. monstrosus*/*P. hastatus* panels at 500 m;
 - **0/4** supports positive terrain-relative added segregation;
 - synchronous local co-use adds vertical separation in only **1/4** panels;
 - self-history remains predictive at >=1 day in **4/4**, >=3 days in **3/3**, and >=7 days in **2/2** structurally evaluable panels;
-- individuality survives **500-m place × speed × turning** matching in **4/4** evaluable fruit-bat panels;
+- individuality survives **500-m place × speed × turning** matching in **4/4** evaluable *H. monstrosus*/*P. hastatus* panels;
 - under 2-km place × kinematic matching, self-history outpredicts same-night conspecifics in **3/4** panels, with 2016 unresolved at its frozen threshold.
 
 Therefore the current ecological conclusion is:
@@ -151,10 +151,10 @@ Current scientific manuscript:
 
 Current title:
 
-> **Persistent individual vertical strategies need not partition three-dimensional space in bats**
+> **Persistent individual vertical strategies need not partition three-dimensional space in two tropical bat species**
 
 Frozen release candidate:
-`release/jae-v0.4.0-rc1`
+`release/jae-v0.4.0-rc2`
 
 Authoritative validation:
 - JAE submission gate run **37092713865** — PASS;
@@ -175,7 +175,7 @@ No final tag or GitHub Release has been created. Remaining work is explicit huma
 
 Supported:
 - repeatable centered vertical-distribution identity in the five comparative panels;
-- terrain-relative personal vertical-strategy fidelity in 4/4 structurally evaluable fruit-bat panels;
+- terrain-relative personal vertical-strategy fidelity in 4/4 structurally evaluable *H. monstrosus*/*P. hastatus* panels;
 - persistence across the longest structurally evaluable temporal lags;
 - persistence after fine place × broad kinematic matching;
 - empirical separation of persistent individual specialization from strong contemporaneous spatial partitioning.
