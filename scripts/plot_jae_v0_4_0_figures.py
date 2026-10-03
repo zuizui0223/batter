@@ -38,36 +38,36 @@ def save(fig,stem,outdir=MAIN_OUT):
     plt.close(fig)
 
 def fig1():
-    fig,ax=plt.subplots(figsize=(9.0,6.0))
-    ax.set_xlim(0,12); ax.set_ylim(0,8); ax.axis("off")
+    fig,ax=plt.subplots(figsize=(9.0,6.4))
+    ax.set_xlim(0,12); ax.set_ylim(0,9); ax.axis("off")
 
     boxes=[
-        (0.4,5.7,2.5,1.25,"Apparent individual\nvertical differences"),
-        (3.5,5.7,2.7,1.25,"Remove simple alternatives\ncommon horizontal weights\n+ session centering"),
-        (6.9,5.7,2.7,1.25,"Persistent individual\nvertical organization"),
-        (0.9,2.4,3.0,1.55,"Persistence diagnostics\nterrain-relative: 4/4\nmulti-day + 500-m place × state"),
-        (4.6,2.4,3.0,1.55,"Partitioning diagnostics\npositive S_rel: 0/4\nco-use separation: 1/4"),
-        (8.3,2.2,3.1,1.95,"Ecological synthesis\npersonal solutions persist\nwithout exclusive\nvertical niches"),
+        (0.4,6.7,2.5,1.2,"Apparent individual\nvertical differences"),
+        (3.5,6.7,2.7,1.2,"Remove simple alternatives\ncommon horizontal weights\n+ session centering"),
+        (6.9,6.7,2.7,1.2,"Persistent individual\nvertical organization"),
+        (1.0,3.7,3.2,1.55,"Persistence diagnostics\nterrain-relative: 4/4\nmulti-day + 500-m place × state"),
+        (7.0,3.7,3.2,1.55,"Partitioning diagnostics\npositive S_rel: 0/4\nco-use separation: 1/4"),
+        (4.25,1.0,3.5,1.65,"Ecological synthesis\npersonal solutions persist\nwithout exclusive vertical niches"),
     ]
     for x,y,w,h,label in boxes:
         ax.add_patch(FancyBboxPatch((x,y),w,h,boxstyle="round,pad=0.06",fill=False,linewidth=1.2))
         ax.text(x+w/2,y+h/2,label,ha="center",va="center",fontsize=9.5)
 
     arrows=[
-        ((2.9,6.32),(3.5,6.32)),
-        ((6.2,6.32),(6.9,6.32)),
-        ((8.25,5.7),(2.4,3.95)),
-        ((8.25,5.7),(6.1,3.95)),
-        ((3.9,3.18),(8.3,3.18)),
-        ((7.6,3.18),(8.3,3.18)),
+        ((2.9,7.3),(3.5,7.3)),
+        ((6.2,7.3),(6.9,7.3)),
+        ((8.25,6.7),(2.6,5.25)),
+        ((8.25,6.7),(8.6,5.25)),
+        ((2.6,3.7),(5.55,2.65)),
+        ((8.6,3.7),(6.45,2.65)),
     ]
     for start,end in arrows:
         ax.annotate("",xy=end,xytext=start,arrowprops={"arrowstyle":"->","linewidth":1.0})
 
-    ax.text(0.55,0.72,
+    ax.text(0.55,0.18,
             "Origin and maintenance are distinct: processes may generate individual specialization without\n"
             "requiring ongoing vertical exclusion to keep personal strategies predictive across bouts.",
-            fontsize=9.5)
+            fontsize=9.2)
     ax.set_title("From vertical individuality to maintenance without exclusive spatial partitioning")
     save(fig,"figure1_horizontal_standardization")
 
