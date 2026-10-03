@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-pteropus-terrain-confound-audit-v1",
+  "frozen_date": "2026-10-01",
+  "status": "post-outcome confound diagnostic; frozen before any DEM value is decoded or any terrain-adjusted vertical result is computed",
+  "source": {
+    "source_id": "pteropus_poliocephalus_5bd6pq55",
+    "taxon": "Pteropus poliocephalus",
+    "doi": "10.5441/001/1.5bd6pq55",
+    "event_url": "https://datarepository.movebank.org/server/api/core/bitstreams/792122ca-c534-4607-81d4-1154cb7a5196/content",
+    "raw_sha256": "13829a97110f3eff191c9066fd5bf7d20f5d1c7e26e152e6c733079fb4e179dc",
+    "native_vertical_field": "height-above-msl",
+    "projection_epsg": 32754
+  },
+  "relationship_to_previous_result": {
+    "known_before_freeze": {
+      "centered_msl_excess": 0.16873,
+      "centered_msl_p_upper": 0.0001,
+      "horizontal_excess": 3.48659,
+      "horizontal_p_upper": 0.0001
+    },
+    "classification": "diagnostic, not independent confirmation",
+    "purpose": "test whether fine-scale terrain use can mediate the Pteropus centered-MSL identity signal despite 5-km common-cell standardization"
+  },
+  "dem_preflight": {
+    "provider": "Mapzen/AWS Terrain Tiles Skadi HGT",
+    "url_template": "https://s3.amazonaws.com/elevation-tiles-prod/skadi/{lat_dir}{lat_abs2}/{tile}.hgt.gz",
+    "format": "SRTM-style HGT, big-endian signed int16, WGS84 geographic 1-degree tile",
+    "elevation_reference": "EGM96 geoid / metres",
+    "allowed_before_receipt": [
+      "source ID, timestamp, longitude, latitude, vertical-field presence/nonblank, explicit source visibility/outlier flags",
+      "frozen session identities and event counts from the existing small-panel receipt",
+      "DEM tile names, byte sizes and SHA256 checksums"
+    ],
+    "prohibited_before_receipt": [
+      "numeric height-above-msl values",
+      "decoded DEM elevation values",
+      "terrain-adjusted height",
+      "terrain-individuality scores"
+    ],
+    "fail_closed": "all retained frozen-session event coordinates must be covered by successfully downloaded HGT tiles; otherwise STOP"
+  },
+  "event_universe": {
+    "receipt": "post_freeze_extensions/small_panel_generality/height_opening_receipt_v1.json",
+    "session_rule": "unchanged frozen >4 h gap split",
+    "minimum_session_events": 50,
+    "repeat_individuals": ["403", "588", "657", "684"],
+    "grid_m": 5000,
+    "minimum_common_support_target_events": 50,
+    "no_new_sessions": true,
+    "no_dropped_individuals": true
+  },
+  "terrain_sampling": {
+    "method": "bilinear interpolation on native HGT grid",
+    "void_value": -32768,
+    "void_policy": "fail closed if any event required by a frozen retained session samples a void/nonfinite terrain value",
+    "agl_proxy_m": "native height-above-msl minus DEM terrain elevation",
+    "caveat": "DEM subtraction is a terrain-relative proxy, not source-measured barometric/laser AGL"
+  },
+  "primary_audit": {
+    "response": "session-median-centered terrain-adjusted height (MSL minus DEM)",
+    "centered_edges_m": ["-inf", -400, -200, -100, -50, 0, 50, 100, 200, 400, "inf"],
+    "estimator": "same common-cell centered-shape estimator as small-panel vertical primary",
+    "null": "same whole-session identity permutation preserving the exact session-count multiset",
+    "B": 9999,
+    "seed": 20261001011,
+    "terrain_robust_pass_rule": "calibrated excess > 0 and p(null>=observed) <= 0.05"
+  },
+  "terrain_pathway_diagnostic": {
+    "response": "session-median-centered DEM terrain elevation sampled at each event coordinate",
+    "centered_edges_m": ["-inf", -400, -200, -100, -50, 0, 50, 100, 200, 400, "inf"],
+    "estimator": "same common-cell centered-shape estimator",
+    "null": "same whole-session identity permutation preserving the exact session-count multiset",
+    "B": 9999,
+    "seed": 20261001012,
+    "pathway_supported_rule": "calibrated excess > 0 and p(null>=observed) <= 0.05",
+    "role": "diagnose whether repeatable fine-scale terrain use itself carries individual identity"
+  },
+  "interpretation_matrix": {
+    "agl_PASS__terrain_FAIL": "strongest evidence that Pteropus centered vertical individuality persists beyond sampled terrain structure",
+    "agl_PASS__terrain_PASS": "centered vertical individuality persists after terrain subtraction, while repeatable terrain use also exists; terrain contributes context but does not eliminate the vertical signal",
+    "agl_FAIL__terrain_PASS": "Pteropus MSL PASS is terrain-sensitive and is consistent with fine-scale horizontal-topographic leakage",
+    "agl_FAIL__terrain_FAIL": "Pteropus MSL PASS is not robust to DEM subtraction, but this audit does not positively identify terrain individuality as the cause"
+  },
+  "reporting": {
+    "always_report": [
+      "original pinned MSL result",
+      "terrain-adjusted result",
+      "terrain-only result",
+      "DEM source/checksums",
+      "all four individuals"
+    ],
+    "descriptive_only": [
+      "terrain-adjusted/original calibrated-excess ratio"
+    ],
+    "prohibited": [
+      "retune DEM source, interpolation, bins, grid or session eligibility after results",
+      "drop individual 684 or any other individual based on outcome",
+      "call the terrain audit prospective replication",
+      "use the audit to erase the historical Pteropus primary PASS",
+      "promote the post-hoc resource-guild pattern to a confirmed causal predictor"
+    ]
+  }
+}
