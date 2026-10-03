@@ -5,7 +5,7 @@ on:
     branches:
       - post-freeze/manuscript-maintenance-synthesis-v1
     paths:
-      - "manuscript/MANUSCRIPT_DRAFT_V0_3_8.md"
+      - "manuscript/MANUSCRIPT_DRAFT_V0_4_0.md"
       - "manuscript/jae_review_header.tex"
       - "scripts/prepare_jae_review_markdown_v0_4_0.py"
       - "scripts/check_jae_review_anonymity_v0_4_0.py"
