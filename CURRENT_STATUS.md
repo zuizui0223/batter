@@ -31,13 +31,13 @@ This separates the **origin of individual specialization** from the **maintenanc
 The continuous ERA5-wind reaction-norm family was stopped **before numeric vertical opening** when the all-three structural gate failed (*P. hastatus* 2023: 7 evaluable vs 8 required). No threshold relaxation, reduced-panel rescue or alternate weather-variable rescue is authorized.
 
 Validation:
-- submission workflow **37092713865** — PASS;
-- CI manuscript count **8,039 / 8,500**;
-- anonymous review workflow **37092621932** — PASS;
+- submission workflow **37123936286** — PASS;
+- CI manuscript count **7,995 / 8,500**;
+- anonymous review workflow **37123738669** — PASS;
 - review PDF **27 pages**;
-- synthetic metadata pipeline **37093159799** — PASS;
-- synthetic pre-release combined count **8,216 / 8,500**;
-- synthetic post-DOI combined count **8,211 / 8,500**.
+- synthetic metadata pipeline **37123738694** — PASS;
+- synthetic pre-release combined count **8,175 / 8,500**;
+- synthetic post-DOI combined count **8,170 / 8,500**.
 
 Remaining blockers are non-scientific: explicit human author/declaration metadata, software licence, release date, Zenodo version DOI and journal upload.
 
