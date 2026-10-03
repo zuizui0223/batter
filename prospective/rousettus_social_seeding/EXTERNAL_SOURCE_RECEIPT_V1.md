@@ -58,6 +58,15 @@ Raw ATLAS SQLite files:
   - displayed size: 47.51 MB
   - Dryad file_stream ID: **3182076**
 
+Tree-location source:
+- `manipulations_trees_locations.csv`
+  - displayed size: 151 B
+  - Dryad file_stream ID: **3182081**
+
+Small experiment tables:
+- `Field_Manipulation_Table.csv` — file_stream ID **3182079**
+- `Tags_manipulated_and_visiting.csv` — file_stream ID **3182080**
+
 The raw SQLite files are the only allowed route-geometry source. If they cannot be retrieved and schema-validated, the route-reuse outcome remains unopened.
 
 ## Public analysis/source repository
