@@ -58,7 +58,7 @@ def main()->int:
         failures.append("archive_doi must still be empty before the Zenodo-minting GitHub release")
     if manifest.get("submission_id")!="batter-jae-v0.4.0-rc1":
         failures.append("machine manifest is not the v0.4.0 rc1 submission package")
-    if manifest.get("manuscript",{}).get("path")!="manuscript/MANUSCRIPT_DRAFT_V0_3_8.md":
+    if manifest.get("manuscript",{}).get("path")!="manuscript/MANUSCRIPT_DRAFT_V0_4_0.md":
         failures.append("machine manifest does not point to the frozen v0.4.0-candidate manuscript path")
 
     for label,text in (("metadata JSON",json.dumps(metadata)),("CITATION.cff",cff),("release notes",notes)):
