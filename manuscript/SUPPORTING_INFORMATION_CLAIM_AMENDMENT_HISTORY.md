@@ -89,4 +89,6 @@ The three prospective failures are therefore part of the claim boundary: centere
 
 ## Supporting figure legend added for v0.4.0
 
+The external-boundary graphic that appeared as **Figure 4 in the integrated manuscript** is restored here as Supporting Figure S3 so that the current main-figure numbering is not displaced.
+
 **Supporting Figure S3. Previously frozen external boundary tests and the *Pteropus* terrain diagnostic.** Points show observed-minus-null-mean calibrated centered identity for each source or diagnostic endpoint. Horizontal bars show the central 95% interval (2.5th–97.5th percentiles) of each source-specific whole-session permutation null after subtracting its own null mean. Crosses denote prospective results that did not meet their pre-specified one-sided criteria and circles denote supported endpoints; the bars display the null width rather than the exact one-sided decision threshold. The *Pteropus poliocephalus* centered-MSL result met its criterion under a separate four-individual design frozen before either admitted vertical outcome was opened. The MSL-minus-DEM row is a post-outcome terrain diagnostic and retains a smaller supported effect. Terrain-only individuality (+0.37887, p=0.0034) is reported in Supporting Table S1 but is not plotted because terrain elevation is a different response.
