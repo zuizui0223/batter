@@ -167,16 +167,16 @@ Frozen release candidate:
 `release/jae-v0.4.0-rc2`
 
 Authoritative validation:
-- JAE submission gate run **37092713865** — PASS;
-- CI manuscript count **8,039 / 8,500** before title-page metadata;
-- anonymous review run **37092621932** — PASS;
+- JAE submission gate run **37123936286** — PASS;
+- CI manuscript count **7,995 / 8,500** before title-page metadata;
+- anonymous review run **37123738669** — PASS;
 - anonymity guard PASS;
 - review PDF **27 pages**;
 - final Figure 1 and representative PDF pages visually inspected.
 
 Synthetic metadata pipeline run **37093159799** also passes end-to-end:
-- pre-release combined manuscript + generated title page **8,216 / 8,500**;
-- post-DOI combined count **8,211 / 8,500**;
+- pre-release combined manuscript + generated title page **8,175 / 8,500**;
+- post-DOI combined count **8,170 / 8,500**;
 - final synthetic upload gate READY.
 
 No final tag or GitHub Release has been created. Remaining work is explicit human metadata, software licence, release date, Zenodo version DOI and final upload.
