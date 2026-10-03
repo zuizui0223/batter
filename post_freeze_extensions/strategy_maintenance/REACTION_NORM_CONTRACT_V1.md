@@ -63,7 +63,13 @@ If the slope denominator is numerically zero for a target's self-history, that t
 
 ### A — population wind model, secondary
 
-Using other individuals in the same cohort only, fit the analogous stratum-demeaned common wind slope and stratum means. This model is a secondary comparator for whether stable self-history itself remains informative beyond a population-level wind response.
+Using other individuals in the same cohort only:
+- calculate each donor individual's stratum-specific mean z_rel and mean wind;
+- calculate each donor individual's own pooled within-stratum wind slope by the same formula used for beta_i;
+- for a target stratum, average donor-specific stratum means equally across donor individuals supporting that stratum;
+- average defined donor slopes equally across donor individuals to obtain the population wind slope.
+
+Thus no high-frequency donor individual dominates the population comparator. This model is a secondary comparator for whether stable self-history itself remains informative beyond a population-level wind response.
 
 ## Scoring and biological weighting
 
