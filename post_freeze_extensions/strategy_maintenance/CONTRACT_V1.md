@@ -215,3 +215,8 @@ Cross-panel wording:
 - RN in 0/3 with SELF in >=2/3 = evidence favors stable solution reuse over the tested broad wind reaction norm.
 
 No other environmental variable may replace wind in this family after the outcome is opened.
+
+
+### Permutation validity detail
+
+A permutation replicate is valid only when the complete rescored pipeline retains at least five evaluable permuted individual labels in the panel. Invalid replicates are reported and excluded from the empirical null. No minimum beyond the already-frozen 50 supported target events per session is introduced after vertical opening.
