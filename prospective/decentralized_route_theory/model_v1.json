@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "model_id": "decentralized-airway-polya-v1",
+  "classification": "prospective theoretical generative model",
+  "core_rule": "P_i(k|n)=(a+N_ik)/(K*a+n)",
+  "limiting_distribution": "theta_i ~ Dirichlet(a,...,a)",
+  "exact_results": {
+    "same_individual_route_match": "(a+1)/(K*a+1)",
+    "between_individual_route_match": "1/K",
+    "self_advantage": "(K-1)/(K*(K*a+1))",
+    "expected_individual_entropy": "digamma(K*a+1)-digamma(a+1)",
+    "population_entropy": "log(K)"
+  },
+  "central_controller_required": false,
+  "competition_required": false,
+  "initial_individual_differences_required": false,
+  "interaction_extension": "P_i(k,t) proportional to (a+N_ik)^rho * exp(-gamma*C_k(t))",
+  "social_hierarchy": "P(destination=d)=pi_d; conditional personal route weights theta_i,d",
+  "claim_boundary": "sufficient generative mechanism; not empirical identification"
+}
