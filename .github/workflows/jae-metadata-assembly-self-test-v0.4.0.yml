@@ -4,7 +4,7 @@ name: jae-metadata-assembly-self-test-v0.4.0
 on:
   push:
     branches:
-      - release/jae-v0.4.0-rc1
+      - release/jae-v0.4.0-rc2
     paths:
       - "manuscript/MANUSCRIPT_DRAFT_V0_4_0.md"
       - "scripts/apply_jae_v0_4_0_metadata.py"
