@@ -1,6 +1,47 @@
 # Current scientific status
 
-Date: 2026-09-29
+Date: 2026-10-03
+
+## Current v0.4.0 submission state
+
+The active candidate is **v0.4.0**, titled:
+
+> **Persistent individual vertical strategies need not partition three-dimensional space in bats**
+
+Frozen release candidate:
+`release/jae-v0.4.0-rc1`
+
+Current synthesis:
+- centered vertical-distribution identity persists in all five comparative panels;
+- terrain-relative personal strategy fidelity persists in 4/4 evaluable fruit-bat panels;
+- positive terrain-relative added segregation is supported in 0/4;
+- synchronous local co-use separation is supported in 1/4;
+- self-history remains predictive across the longest structurally evaluable multi-day lags;
+- individuality survives 500-m place × speed × turning matching in 4/4 evaluable fruit-bat panels;
+- same-individual history generally outpredicts same-night conspecifics after 2-km place × kinematic matching.
+
+Preferred ecological interpretation:
+
+> **Persistent personal movement solutions can remain predictive without requiring mutually exclusive vertical niches.**
+
+This separates the **origin of individual specialization** from the **maintenance of specialization**. Personal solution reuse is a bounded synthesis, not direct evidence that memory or learning is the cause.
+
+The continuous ERA5-wind reaction-norm family was stopped **before numeric vertical opening** when the all-three structural gate failed (*P. hastatus* 2023: 7 evaluable vs 8 required). No threshold relaxation, reduced-panel rescue or alternate weather-variable rescue is authorized.
+
+Validation:
+- submission workflow **37092713865** — PASS;
+- CI manuscript count **8,039 / 8,500**;
+- anonymous review workflow **37092621932** — PASS;
+- review PDF **27 pages**;
+- synthetic metadata pipeline **37093159799** — PASS;
+- synthetic pre-release combined count **8,216 / 8,500**;
+- synthetic post-DOI combined count **8,211 / 8,500**.
+
+Remaining blockers are non-scientific: explicit human author/declaration metadata, software licence, release date, Zenodo version DOI and journal upload.
+
+**Scientific stop rule:** no further same-data mechanism fishing is authorized for v0.4.0.
+
+The sections below are retained as historical provenance and may describe superseded v0.3.x states.
 
 ## Empirical programme
 
