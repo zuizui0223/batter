@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "study_id": "rousettus-public-source-preflight-v1",
+  "workflow_run": 37112262092,
+  "artifact_id": 11270600021,
+  "pass": true,
+  "route_geometry_opened": false,
+  "external_repo": "EmmLourie/Information-transfer-analysis",
+  "commit": "1d7edbdbb87d9df048ab42a0b425a1966d491e86",
+  "smeared_visitor_ids": [
+    "6485",
+    "6637",
+    "6639",
+    "6654"
+  ],
+  "naive_visitor_ids": [
+    "6399",
+    "6411",
+    "6414",
+    "6428",
+    "6635",
+    "6640",
+    "6641",
+    "6824",
+    "6991",
+    "6993"
+  ],
+  "explicit_pup_exclusion": [
+    "6641"
+  ],
+  "independent_naive_candidate_ids": [
+    "6399",
+    "6411",
+    "6414",
+    "6428",
+    "6635",
+    "6640",
+    "6824",
+    "6991",
+    "6993"
+  ],
+  "missing_age_metadata": [
+    "6399",
+    "6411",
+    "6414"
+  ],
+  "field_table_inconsistency": {
+    "date": "19/07/2020",
+    "roost": "Gershom",
+    "manipulated": 4,
+    "naive": 19,
+    "total": 22
+  }
+}
