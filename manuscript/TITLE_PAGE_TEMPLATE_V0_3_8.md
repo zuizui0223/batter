@@ -48,4 +48,4 @@ archive DOI: [INSERT PERMANENT ARCHIVE DOI].
 
 ## Word count
 
-Current post-freeze manuscript estimate: **8,225 words** under the repository whitespace-delimited counting rule. Reconfirm the combined journal word count after final title-page metadata are inserted.
+Current post-freeze manuscript estimate: **8,246 words** under the repository whitespace-delimited counting rule. Reconfirm the combined journal word count after final title-page metadata are inserted.
