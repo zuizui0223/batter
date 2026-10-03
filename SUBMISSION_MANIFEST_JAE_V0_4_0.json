@@ -112,6 +112,17 @@
       "post_doi_combined_words": 8211,
       "post_doi_headroom": 289,
       "final_upload_gate": "ready"
+    },
+    "active_reference_guard": {
+      "run_id": 37094415632,
+      "conclusion": "success"
+    },
+    "release_preflight_self_test": {
+      "run_id": 37094468063,
+      "conclusion": "success",
+      "candidate_integrity": "pass",
+      "tag_absent_at_test": true,
+      "github_release_absent_at_test": true
     }
   },
   "stop_rule": "no further same-data mechanism fishing for v0.4.0"
