@@ -5,6 +5,7 @@ This script validates the prepared release candidate but never creates a tag or 
 """
 from __future__ import annotations
 
+import argparse
 import json
 import re
 import subprocess
@@ -26,6 +27,11 @@ def git(*args:str)->str:
     return subprocess.check_output(["git",*args],cwd=ROOT,text=True).strip()
 
 def main()->int:
+    ap=argparse.ArgumentParser()
+    ap.add_argument("--candidate-ref",default=EXPECTED_CANDIDATE)
+    ap.add_argument("--no-fetch",action="store_true")
+    args=ap.parse_args()
+    candidate_ref=str(args.candidate_ref)
     failures=[]
     for path in (METADATA,CFF,NOTES,MANIFEST,TITLE_PAGE):
         if not path.is_file():
@@ -64,11 +70,12 @@ def main()->int:
         failures.append("pre-release title page does not state that the Zenodo DOI is pending")
 
     try:
-        git("fetch","origin",EXPECTED_CANDIDATE,"--no-tags")
+        if not args.no_fetch:
+            git("fetch","origin",candidate_ref,"--no-tags")
         head=git("rev-parse","HEAD")
-        candidate=git("rev-parse",f"origin/{EXPECTED_CANDIDATE}")
+        candidate=git("rev-parse",f"origin/{candidate_ref}")
         if head!=candidate:
-            failures.append(f"checked-out HEAD {head} does not match origin/{EXPECTED_CANDIDATE} {candidate}")
+            failures.append(f"checked-out HEAD {head} does not match origin/{candidate_ref} {candidate}")
     except Exception as exc:
         failures.append(f"could not verify release candidate identity: {exc}")
 
@@ -86,7 +93,7 @@ def main()->int:
     print("GitHub/Zenodo v0.4.0 release preflight: READY")
     print(f"Release version: {EXPECTED_VERSION}")
     print(f"Recommended Git tag: {EXPECTED_TAG}")
-    print(f"Candidate: {EXPECTED_CANDIDATE}")
+    print(f"Candidate: {candidate_ref}")
     print("This script does not create or publish the release.")
     return 0
 
