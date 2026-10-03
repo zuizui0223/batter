@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "study_id": "rousettus-social-seeding-personal-route-reuse-v1",
+  "classification": "prospective external mechanism test; route geometry unopened",
+  "source": {
+    "article_doi": "10.1098/rstb.2024.0060",
+    "dryad_doi": "10.5061/dryad.51c59zwgp",
+    "external_github": {
+      "repo": "EmmLourie/Information-transfer-analysis",
+      "commit": "1d7edbdbb87d9df048ab42a0b425a1966d491e86"
+    },
+    "raw_files": {
+      "june": {
+        "file_stream_id": 3182077,
+        "size_display": "121.79 MB"
+      },
+      "july": {
+        "file_stream_id": 3182078,
+        "size_display": "115.77 MB"
+      },
+      "december": {
+        "file_stream_id": 3182076,
+        "size_display": "47.51 MB"
+      }
+    }
+  },
+  "canonical_counts": {
+    "manipulated": 16,
+    "naive": 56,
+    "total": 72,
+    "naive_visitors": 10,
+    "manipulated_visitors": 4
+  },
+  "naive_visitor_ids": [
+    "6399",
+    "6411",
+    "6414",
+    "6635",
+    "6428",
+    "6641",
+    "6640",
+    "6991",
+    "6824",
+    "6993"
+  ],
+  "explicit_pup_exclusion": [
+    "6641"
+  ],
+  "maximum_independent_naive_candidates": 9,
+  "route": {
+    "outer_radius_m": 2000,
+    "inner_exclusion_m": 500,
+    "downsample_seconds": 30,
+    "endpoint": "first inbound approach to first focal-tree visit 1-6 nights post manipulation"
+  },
+  "support_gate": {
+    "minimum_target_fixes": 10,
+    "minimum_self_history_nights": 3,
+    "minimum_self_night_fixes": 5,
+    "minimum_other_donors": 3,
+    "minimum_other_donor_night_fixes": 5,
+    "minimum_evaluable_visitors": 5
+  },
+  "primary_statistic": "R = equal-individual mean over target routes of mean_q(d_other(q)-d_self(q))",
+  "permutation": {
+    "B": 9999,
+    "seed": 20261003071,
+    "unit": "complete pre-manipulation history library among naive non-pup identities within roost x campaign"
+  },
+  "outcome_opened": false,
+  "pending_raw_data": true,
+  "jae_firewall": true
+}
