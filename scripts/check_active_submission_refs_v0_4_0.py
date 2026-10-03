@@ -16,13 +16,13 @@ METADATA_GUIDE=ROOT/"FINAL_METADATA_INTAKE_JAE_V0_4_0.md"
 RELEASE_NOTES=ROOT/"RELEASE_NOTES_JAE_V0_4_0.md"
 METADATA_TEMPLATE=ROOT/"submission"/"jae_v0_4_0_metadata.template.json"
 
-EXPECTED_RC="release/jae-v0.4.0-rc1"
+EXPECTED_RC="release/jae-v0.4.0-rc2"
 EXPECTED_SUBMISSION_ID="batter-jae-v0.4.0-rc1"
 EXPECTED_MANUSCRIPT="manuscript/MANUSCRIPT_DRAFT_V0_4_0.md"
 EXPECTED_FINAL_TITLE_PAGE="manuscript/TITLE_PAGE_V0_4_0.md"
 EXPECTED_METADATA="submission/jae_v0_4_0_metadata.json"
 EXPECTED_TEMPLATE="submission/jae_v0_4_0_metadata.template.json"
-EXPECTED_TITLE="Persistent individual vertical strategies need not partition three-dimensional space in bats"
+EXPECTED_TITLE="Persistent individual vertical strategies need not partition three-dimensional space in two tropical bat species"
 EXPECTED_TAG="jae-v0.4.0"
 
 def need(text,phrase,label,failures):
