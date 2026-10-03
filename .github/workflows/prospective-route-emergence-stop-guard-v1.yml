@@ -1,0 +1,23 @@
+name: prospective-route-emergence-stop-guard-v1
+
+on:
+  push:
+    branches:
+      - prospective/route-emergence-preflight-v1
+    paths:
+      - "prospective/route_emergence/**"
+      - "scripts/check_route_emergence_stop_v1.py"
+      - ".github/workflows/prospective-route-emergence-stop-guard-v1.yml"
+  workflow_dispatch:
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python scripts/check_route_emergence_stop_v1.py
