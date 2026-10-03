@@ -103,7 +103,16 @@
       "software_license",
       "archive_doi",
       "final_combined_count"
-    ]
+    ],
+    "synthetic_metadata_self_test": {
+      "run_id": 37093159799,
+      "conclusion": "success",
+      "pre_release_combined_words": 8216,
+      "pre_release_headroom": 284,
+      "post_doi_combined_words": 8211,
+      "post_doi_headroom": 289,
+      "final_upload_gate": "ready"
+    }
   },
   "stop_rule": "no further same-data mechanism fishing for v0.4.0"
 }
