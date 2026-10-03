@@ -1,0 +1,6 @@
+order,label,taxon,programme,endpoint,observed,null_mean,q025,q975,calibrated_excess,p_upper,verdict,n,inferential_class
+1,Nyctalus noctula,Nyctalus noctula,first pre-specified external primary,centered native height,-0.01870526932771202,-0.07045264383771302,-0.16470675410364033,0.009531163293519655,0.051747374510001,0.1224,FAIL,27,prospective
+2,Hipposideros armiger / Hipposideros pratti,Hipposideros armiger / Hipposideros pratti,pre-specified >=5 source programme,centered native height,-0.07574593988829564,-0.031062326348481103,-0.1149322653081796,0.04982256832972883,-0.04468361353981454,0.8616,FAIL,13,prospective
+3,Myotis vivesi,Myotis vivesi,separate n=4 programme,centered native height,-0.022338365335734904,-0.02704094468036296,-0.08191926264890209,0.04791733904848389,0.004702579344628057,0.4419,FAIL,4,prospective
+4,Pteropus poliocephalus (MSL),Pteropus poliocephalus,separate n=4 programme,centered MSL,0.11002521969895077,-0.05870347090228961,-0.16462307358600525,0.012252890109512972,0.16872869060124038,0.0001,PASS,4,prospective
+5,Pteropus poliocephalus (MSL-DEM),Pteropus poliocephalus,post-outcome pre-specified terrain audit,centered terrain-relative proxy,0.00727914766192571,-0.025032691427503567,-0.04702115957177484,-0.009467446228563946,0.03231183908942928,0.0023,PASS,4,diagnostic
