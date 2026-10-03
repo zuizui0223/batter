@@ -96,3 +96,21 @@ Avoid:
 - wind reaction norms are absent;
 - morphology causes the strategies;
 - resource specialization has been excluded.
+
+
+## External-generality and scope amendment — rc2
+
+| Claim | Status | Evidence / boundary |
+|---|---|---|
+| Centered vertical-distribution individuality is universal across bats. | **not established / contradicted as a universal claim** | first frozen *N. noctula* primary FAIL (+0.05175, p=0.1224); *Hipposideros* source primary FAIL (-0.04468, p=0.8616); *M. vivesi* four-individual primary FAIL (+0.00470, p=0.4419); *P. poliocephalus* four-individual primary PASS (+0.16873, p=0.0001) |
+| The external sequence implies 25% prevalence across bats. | **forbidden** | four tests arose from distinct programmes and structurally filtered public sources; they are boundary tests, not a prevalence sample |
+| The first frozen *Nyctalus* prospective primary succeeded. | **false** | authoritative first-primary verdict is FAIL, p=0.1224; later revised-eligibility positive result is post-outcome convergent evidence only |
+| *Pteropus* centered individuality is insensitive to terrain. | **false** | DEM subtraction attenuated calibrated excess from +0.16873 to +0.03231; terrain-only individuality +0.37887, p=0.0034 |
+| The `need not partition` result is demonstrated across bats generally. | **too broad** | terrain-relative fidelity / segregation / co-use tests are structurally supported in four panels from **two species**, *H. monstrosus* and *P. hastatus* |
+| Task-level ecological opportunity explains cross-species heterogeneity. | **generated hypothesis only** | external positive/negative pattern is post hoc; morphology, phylogeny, habitat, atmosphere and tracking technology remain competing explanations |
+
+Preferred scope wording:
+
+> **Persistent individual vertical strategies need not partition three-dimensional space in two tropical bat species.**
+
+External failures must remain visible in the main manuscript and Supporting Information.
