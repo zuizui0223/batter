@@ -20,7 +20,7 @@ CFF_OUT = ROOT / "CITATION.cff"
 SUMMARY_OUT = ROOT / "submission" / "jae_v0_4_0_metadata_summary.json"
 
 EXPECTED_VERSION = "v0.4.0"
-EXPECTED_TITLE = "Persistent individual vertical strategies need not partition three-dimensional space in bats"
+EXPECTED_TITLE = "Persistent individual vertical strategies need not partition three-dimensional space in two tropical bat species"
 WORD_LIMIT = 8500
 ORCID_RE = re.compile(r"^\d{4}-\d{4}-\d{4}-\d{3}[\dX]$", re.IGNORECASE)
 EMAIL_RE = re.compile(r"^[^\s@]+@[^\s@]+\.[^\s@]+$")
