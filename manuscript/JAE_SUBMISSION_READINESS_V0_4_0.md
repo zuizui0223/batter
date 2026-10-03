@@ -137,3 +137,35 @@ GitHub/Zenodo release-preflight self-test:
 - real GitHub release with that tag: absent at test time.
 
 The real release-preflight remains intentionally blocked until explicit human metadata and exactly one chosen repository licence are committed.
+
+
+## Canonical v0.4.0 path validation
+
+Versioned-file cleanup was completed without changing scientific content:
+
+- canonical manuscript: `manuscript/MANUSCRIPT_DRAFT_V0_4_0.md`;
+- canonical title-page template: `manuscript/TITLE_PAGE_TEMPLATE_V0_4_0.md`;
+- canonical cover letter: `manuscript/COVER_LETTER_JAE_V0_4_0.md`;
+- canonical claim ledger: `manuscript/CLAIM_LEDGER_V4.md`.
+
+The canonical v0.4.0 manuscript blob SHA is:
+`2a4b2a3aafc8a4a8b4f495f4148e888f1a9c789c`,
+identical to the previously validated maintenance-synthesis scientific manuscript.
+
+The legacy `manuscript/MANUSCRIPT_DRAFT_V0_3_8.md` in the RC was restored to the exact main-branch v0.3.8 blob SHA:
+`016b1981524fa8d0c82553ad009fb0b35cc792a0`.
+
+Canonical-path submission validation:
+- run **37099994789** — success;
+- CI manuscript count **8,039 / 8,500**;
+- main-figure artifact **11266175026**, SHA256 `ae4015dbcb1f3b6d178422da7b2976ab353d6ed910edb9c93a65937adab34a3f`;
+- supporting-figure artifact **11265438953**, SHA256 `2291a7d42af1fd0d977e8a00be355c0b4b3d0b5b796fcb75ae7ddb1f7f0e71eb`.
+
+Canonical-path anonymous review validation:
+- run **37099999137** — success;
+- anonymity guard PASS;
+- PDF **27 pages**;
+- artifact **11265204413**, SHA256 `cad3f17c3e79b2f05e894863691fa68138a67b40653e85a0101cc95197cb4091`;
+- first page, maintenance Discussion pages 18–19, and final page 27 visually inspected; no clipping, overlap or broken glyphs.
+
+Canonical Figure 1 was re-inspected from the new artifact and retains the final three-layer detection -> persistence/partitioning diagnostics -> ecological synthesis layout without text/arrow collisions.
