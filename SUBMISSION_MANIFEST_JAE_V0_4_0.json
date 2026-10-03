@@ -105,7 +105,7 @@
     "status": "validated_candidate_ready_for_rc2",
     "inherited_v0_3_8_validation_is_current": false,
     "submission_gate": {
-      "run_id": 37123936286,
+      "run_id": 37124283127,
       "conclusion": "success",
       "ci_manuscript_words": 7995,
       "abstract_words": 313,
@@ -116,12 +116,12 @@
       "supporting_figures": 3
     },
     "main_figures": {
-      "artifact_id": 11273753416,
-      "sha256": "c07e2cc7bce7341debc930f05ce8e193c77e649401b4535d92b9ec9e94cf0bbf"
+      "artifact_id": 11273959703,
+      "sha256": "53256485b64fbc8ac38235d7682df96b6c254b8b805f86c094de7dfab5ab3bd5"
     },
     "supporting_figures": {
-      "artifact_id": 11273793396,
-      "sha256": "e2e8e97dcc5ad37b639e53bccd7a27dcf194ab2fed254d5abd7482f820289261"
+      "artifact_id": 11274034482,
+      "sha256": "b681df7b1dac2c5e11a886e1ee3f859f99a6d0bc525620208757200262f6624c"
     },
     "anonymous_review": {
       "run_id": 37123738669,
@@ -144,7 +144,7 @@
       "final_combined_count"
     ],
     "synthetic_metadata_self_test": {
-      "run_id": 37123738694,
+      "run_id": 37124229089,
       "conclusion": "success",
       "pre_release_combined_words": 8175,
       "pre_release_headroom": 325,
@@ -153,15 +153,13 @@
       "final_upload_gate": "ready"
     },
     "active_reference_guard": {
-      "run_id": 37094415632,
+      "run_id": 37124310368,
       "conclusion": "success"
     },
     "release_preflight_self_test": {
-      "run_id": 37094468063,
+      "run_id": 37124229038,
       "conclusion": "success",
-      "candidate_integrity": "pass",
-      "tag_absent_at_test": true,
-      "github_release_absent_at_test": true
+      "candidate_integrity": "pass"
     },
     "promoted_evidence_guard": {
       "run_id": 37121914865,
