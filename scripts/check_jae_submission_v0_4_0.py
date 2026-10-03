@@ -4,7 +4,7 @@ from __future__ import annotations
 import re
 from pathlib import Path
 
-PATH=Path("manuscript/MANUSCRIPT_DRAFT_V0_3_8.md")
+PATH=Path("manuscript/MANUSCRIPT_DRAFT_V0_4_0.md")
 SI_PATH=Path("manuscript/SUPPORTING_INFORMATION_CLAIM_AMENDMENT_HISTORY.md")
 TEXT=PATH.read_text(encoding="utf-8")
 SI_TEXT=SI_PATH.read_text(encoding="utf-8")
