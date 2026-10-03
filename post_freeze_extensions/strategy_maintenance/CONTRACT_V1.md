@@ -130,3 +130,88 @@ To avoid ambiguity before any ERA5 wind values are inspected:
 - matched_target_fraction = matched endpoints / x-y-time-supported target endpoints, pooled with sessions equally weighted within individual and individuals equally weighted for the panel gate.
 - calendar-night concentration is calculated on environmentally matched target endpoints; no single shifted calendar night may contribute >50% of the panel's matched endpoints.
 - The expected x-y-time evaluable individual counts before ERA5 opening are inherited from the completed 500-m stress test: Hypsignathus 19, P. hastatus 2022 23, 2023 11, and 2016 9. Any mismatch invalidates the preflight rather than triggering retuning.
+
+
+## Frozen reaction-norm outcome architecture after wind identifiability PASS
+
+The wind identifiability gate passed in exactly three panels (Hypsignathus, P. hastatus 2022, P. hastatus 2023). P. hastatus 2016 is stopped and cannot be rescued.
+
+Before any numeric vertical outcome is opened, the predictive comparison is fixed as follows.
+
+### Wind state
+
+Within each admitted cohort, classify ERA5 wind speed into exactly two states using the cohort median calculated from the x-y-time-supported 500-m place x speed2_turn2 endpoint universe. No alternative threshold or additional wind bins are opened.
+
+### Structural support gate
+
+For a target event, all three predictors must be structurally available:
+- A: other-individual wind-conditioned profile at the same 500-m cell x kinematic state x wind state;
+- B: same-individual unconditioned profile at the same 500-m cell x kinematic state, learned from other sessions;
+- C: same-individual wind-conditioned profile at the same 500-m cell x kinematic state x wind state, learned from other sessions.
+
+A target session requires >=50 events with all three predictors available. A panel must retain at least max(5, ceil(0.70 x completed 500-m baseline n)):
+- Hypsignathus >=14 of 19;
+- P. hastatus 2022 >=17 of 23;
+- P. hastatus 2023 >=8 of 11.
+
+All three panels must pass this x-y-time + wind structural gate before any numeric vertical response is opened. Failure stops the reaction-norm outcome family.
+
+### Vertical representation
+
+If the gate passes:
+- use the same pinned SRTM/DEM source and bilinear interpolation as the completed terrain-relative 3-D diagnostic;
+- terrain-relative height = native source height - DEM elevation;
+- center terrain-relative height by subtracting the median of its complete retained session;
+- fixed residual-height bins: -inf, -400, -200, -100, -50, 0, 50, 100, 200, 400, +inf m;
+- Jeffreys alpha = 0.5.
+
+### Predictors and scoring
+
+For every held-out target session:
+- A = P_other(z | 500-m cell, kinematic state, wind state), equal-weighted across other individuals;
+- B = P_self(z | 500-m cell, kinematic state), equal-weighted across the focal individual's other sessions;
+- C = P_self(z | 500-m cell, kinematic state, wind state), equal-weighted across the focal individual's other sessions.
+
+All models are scored on the identical target events admitted by the structural gate.
+
+Primary statistic:
+- G_RN = mean log P_C(z) - log P_B(z), averaged events -> target session -> individual equally.
+
+Secondary statistic:
+- G_SELF = mean log P_B(z) - log P_A(z), with the same averaging.
+
+### Calibration
+
+Whole retained session blocks are permuted among individual labels within cohort, preserving:
+- x-y-time trajectory;
+- ERA5 wind values and wind state;
+- terrain-relative centered vertical observations;
+- exact session sizes;
+- the original multiset of session counts assigned to individual labels.
+
+B = 4,999 per panel.
+Seeds:
+- Hypsignathus: 2026100301
+- P. hastatus 2022: 2026100302
+- P. hastatus 2023: 2026100303
+
+Support for repeatable individual wind response requires:
+- G_RN - mean(null_RN) > 0; and
+- one-sided p(null_RN >= observed G_RN) <= 0.05.
+
+Support for stable self-history beyond population wind response requires the analogous rule for G_SELF.
+
+### Interpretation matrix
+
+- RN supported: repeatable individual-specific wind response contributes to maintenance.
+- RN not supported, SELF supported: current data favor stable self-history/solution reuse over a measurable individual wind reaction norm; do not call this proof of memory.
+- both supported: stable individual history and individual-specific wind response both contribute.
+- neither supported: maintenance mechanism remains unresolved at the tested atmospheric scale.
+
+Cross-panel wording:
+- RN in 3/3 = replicated wind reaction-norm maintenance;
+- RN in 2/3 = recurrent but context-dependent wind reaction norms;
+- RN in 1/3 = panel-specific wind response only;
+- RN in 0/3 with SELF in >=2/3 = evidence favors stable solution reuse over the tested broad wind reaction norm.
+
+No other environmental variable may replace wind in this family after the outcome is opened.
