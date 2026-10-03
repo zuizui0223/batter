@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-personal-3d-route-emergence-preflight-v1",
+  "classification": "prospective follow-up outside JAE v0.4.0",
+  "source_gate_only": true,
+  "outcome_opened": false,
+  "evidence_tiers": {
+    "A": "independently known naive/novel-environment route formation",
+    "B": "independently known environmental reset route re-formation",
+    "C": "experienced/familiar repeated use only"
+  },
+  "structural_gate": {
+    "minimum_individuals": 5,
+    "minimum_sessions_per_individual": 6,
+    "minimum_first_last_span_days": 7
+  },
+  "allowed_source_fields": [
+    "reference metadata",
+    "deployment/site metadata",
+    "age/life stage",
+    "reproductive status",
+    "timestamps",
+    "individual/session identifiers",
+    "x-y only for structural counts"
+  ],
+  "forbidden_before_gate": [
+    "route overlap",
+    "trajectory entropy",
+    "corridor width",
+    "route self-similarity",
+    "vertical outcomes",
+    "terrain-relative height",
+    "early-late convergence"
+  ],
+  "tier_c_stop": "Do not interpret deployment onset as route formation or learning.",
+  "jae_firewall": "No result from this branch may alter JAE v0.4.0."
+}
