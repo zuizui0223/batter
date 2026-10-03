@@ -99,7 +99,7 @@ Validation receipts:
 - main figures artifact 11273753416, SHA256 c07e2cc7bce7341debc930f05ce8e193c77e649401b4535d92b9ec9e94cf0bbf;
 - supporting figures artifact 11273793396, SHA256 e2e8e97dcc5ad37b639e53bccd7a27dcf194ab2fed254d5abd7482f820289261;
 - anonymous review workflow run 37123738669 — PASS;
-- 27-page review artifact 11263790889, SHA256 23faa3a6a0d6f309dd3612f4cc46d78a02dbf7d024925c0dff2d645654917026;
+- 27-page review artifact 11274153477, SHA256 2197b76028adfbe1375c08bf3c613755b235f634cbe23532adab3aa948c6f380;
 - representative rendered review pages and final Figure 1 visually inspected without clipping or overlap.
 
 Remaining work is human metadata / licence / archive DOI / final combined-count assembly. No human identity, authorship, funding, conflict declaration, ORCID, postal address, licence or archive DOI is inferred.
