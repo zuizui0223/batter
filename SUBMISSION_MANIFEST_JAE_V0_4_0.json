@@ -19,7 +19,8 @@
     "ci_word_estimate": 8039,
     "ci_headroom_before_title_page": 461,
     "results_words_ci": 1348,
-    "discussion_words_ci": 1205
+    "discussion_words_ci": 1205,
+    "blob_sha": "2a4b2a3aafc8a4a8b4f495f4148e888f1a9c789c"
   },
   "scientific_status": {
     "comparative_centered_shape_panels_pass": 5,
@@ -66,7 +67,7 @@
     "status": "validated_candidate_ready_for_rc1",
     "inherited_v0_3_8_validation_is_current": false,
     "submission_gate": {
-      "run_id": 37092713865,
+      "run_id": 37099994789,
       "conclusion": "success",
       "ci_manuscript_words": 8039,
       "abstract_words": 282,
@@ -77,20 +78,20 @@
       "supporting_figures": 2
     },
     "main_figures": {
-      "artifact_id": 11263066200,
-      "sha256": "369b2219a75cd71fbf3ae66f18d2ea7efd930a78dac96ed79196c9c4f5edc687"
+      "artifact_id": 11266175026,
+      "sha256": "ae4015dbcb1f3b6d178422da7b2976ab353d6ed910edb9c93a65937adab34a3f"
     },
     "supporting_figures": {
-      "artifact_id": 11262871439,
-      "sha256": "8cdce552c09ef606694ad7275e25aeeaac184b571b027fdaa1e26b0c61159e90"
+      "artifact_id": 11265438953,
+      "sha256": "2291a7d42af1fd0d977e8a00be355c0b4b3d0b5b796fcb75ae7ddb1f7f0e71eb"
     },
     "anonymous_review": {
-      "run_id": 37092621932,
+      "run_id": 37099999137,
       "conclusion": "success",
       "anonymity_guard": "pass",
       "pages": 27,
-      "artifact_id": 11263790889,
-      "sha256": "23faa3a6a0d6f309dd3612f4cc46d78a02dbf7d024925c0dff2d645654917026"
+      "artifact_id": 11265204413,
+      "sha256": "cad3f17c3e79b2f05e894863691fa68138a67b40653e85a0101cc95197cb4091"
     },
     "visual_qa": {
       "figure1": "passed",
@@ -123,6 +124,17 @@
       "candidate_integrity": "pass",
       "tag_absent_at_test": true,
       "github_release_absent_at_test": true
+    },
+    "promoted_evidence_guard": {
+      "run_id": 37099698648,
+      "conclusion": "success"
+    },
+    "canonical_paths": {
+      "manuscript": "manuscript/MANUSCRIPT_DRAFT_V0_4_0.md",
+      "title_page_template": "manuscript/TITLE_PAGE_TEMPLATE_V0_4_0.md",
+      "cover_letter": "manuscript/COVER_LETTER_JAE_V0_4_0.md",
+      "claim_ledger": "manuscript/CLAIM_LEDGER_V4.md",
+      "legacy_v0_3_8_restored_to_main": true
     }
   },
   "stop_rule": "no further same-data mechanism fishing for v0.4.0"
