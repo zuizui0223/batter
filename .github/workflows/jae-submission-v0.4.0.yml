@@ -4,14 +4,15 @@ on:
   push:
     branches:
       - post-freeze/manuscript-maintenance-synthesis-v1
-      - release/jae-v0.4.0-rc1
+      - release/jae-v0.4.0-rc2
     paths:
       - "manuscript/MANUSCRIPT_DRAFT_V0_4_0.md"
-      - "manuscript/TITLE_PAGE_TEMPLATE_V0_3_8.md"
+      - "manuscript/TITLE_PAGE_TEMPLATE_V0_4_0.md"
       - "manuscript/SUPPORTING_INFORMATION_CLAIM_AMENDMENT_HISTORY.md"
       - "results/calibrated_vertical_identity_v0_3_8.csv"
       - "results/endpoint_exclusion_v0_3_8.csv"
       - "results/tag_altitude_bias_shape_v1.csv"
+      - "results/external_boundary_v0_4_0.csv"
       - "results/tag_altitude_bias_audit_v1_summary.json"
       - "results/individual_vertical_strategy_result_v1.json"
       - "results/spatial_interaction_refinement_result_v2.json"
