@@ -92,3 +92,22 @@ Do not:
 - search many weather variables for the best interaction;
 - rescue failed panels by changing 500-m place or kinematic definitions;
 - interpret a failed reaction norm as proof of learned memory.
+
+
+## External environment source decision
+
+The source-schema audit found no environmental field common to the four target GPS tables. Hypsignathus alone contains `eobs:temperature`; it is not eligible as a cross-panel primary predictor.
+
+Therefore the external source is fixed before environmental numeric support is inspected:
+
+- dataset: Copernicus/ECMWF ERA5 hourly single-level reanalysis;
+- primary environmental family: horizontal wind;
+- variables: 10-m u and v wind components, combined as wind speed and direction relative to movement where movement bearing is available;
+- temporal resolution: hourly;
+- horizontal resolution: 0.25 degree;
+- join: nearest ERA5 grid point and nearest hour to each GPS timestamp;
+- secondary preflight-only covariates retained for possible later contracts, not substitutes for failed wind: 2-m temperature and boundary-layer height.
+
+ERA5 pressure-level vertical velocity is not promoted ahead of horizontal wind because the currently available time-series product is 6-hourly and coarse relative to the movement records. It may not rescue a failed wind primary.
+
+The external join is intended to represent broad atmospheric context, not tree-scale or canopy-scale microclimate.
