@@ -3,7 +3,8 @@ on:
   push:
     branches: [prospective/decentralized-route-theory-v1]
     paths:
-      - "prospective/decentralized_route_theory/**"
+      - "prospective/decentralized_route_theory/simulate_v1.py"
+      - "prospective/decentralized_route_theory/model_v1.json"
       - ".github/workflows/decentralized-airway-theory-simulation-v1.yml"
   workflow_dispatch:
 jobs:
