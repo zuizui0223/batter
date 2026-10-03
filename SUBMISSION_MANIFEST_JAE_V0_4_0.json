@@ -7,7 +7,7 @@
     "path": "manuscript/MANUSCRIPT_DRAFT_V0_3_8.md",
     "internal_version": "v0.4.0 candidate — post-freeze maintenance synthesis",
     "title": "Persistent individual vertical strategies need not partition three-dimensional space in bats",
-    "whitespace_word_estimate": 8246,
+    "whitespace_word_estimate": 7873,
     "abstract_words": 287,
     "introduction_words": 679,
     "methods_words": 2789,
@@ -15,7 +15,11 @@
     "discussion_words": 1369,
     "conclusion_words": 320,
     "main_figures": 6,
-    "supporting_figures": 2
+    "supporting_figures": 2,
+    "ci_word_estimate": 8039,
+    "ci_headroom_before_title_page": 461,
+    "results_words_ci": 1348,
+    "discussion_words_ci": 1205
   },
   "scientific_status": {
     "comparative_centered_shape_panels_pass": 5,
