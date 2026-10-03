@@ -203,17 +203,13 @@ def fig8():
         r["null_high_centered"]=r["q975"]-r["null_mean"]
 
     def row_label(label):
-        if label=="Nyctalus noctula":
-            return r"$\\it{Nyctalus\\ noctula}$"
-        if label.startswith("Hipposideros"):
-            return r"$\\it{Hipposideros\\ armiger}$ / $\\it{Hipposideros\\ pratti}$"
-        if label=="Myotis vivesi":
-            return r"$\\it{Myotis\\ vivesi}$"
-        if label=="Pteropus poliocephalus (MSL)":
-            return r"$\\it{Pteropus\\ poliocephalus}$ (MSL)"
-        if label=="Pteropus poliocephalus (MSL-DEM)":
-            return r"$\\it{Pteropus\\ poliocephalus}$ (MSL−DEM)"
-        return label
+        return {
+            "Nyctalus noctula":"N. noctula",
+            "Hipposideros armiger / Hipposideros pratti":"H. armiger / H. pratti",
+            "Myotis vivesi":"M. vivesi",
+            "Pteropus poliocephalus (MSL)":"P. poliocephalus (MSL)",
+            "Pteropus poliocephalus (MSL-DEM)":"P. poliocephalus (MSL - DEM)",
+        }.get(label,label)
 
     ys=list(range(len(rows),0,-1))
     fig,ax=plt.subplots(figsize=(9.0,5.7))
