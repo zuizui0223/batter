@@ -38,39 +38,29 @@ def save(fig,stem,outdir=MAIN_OUT):
     plt.close(fig)
 
 def fig1():
-    fig,ax=plt.subplots(figsize=(9.0,6.2))
-    ax.set_xlim(0,12); ax.set_ylim(0,8); ax.axis("off")
-
+    fig,ax=plt.subplots(figsize=(8.4,5.4))
+    ax.set_xlim(0,10); ax.set_ylim(0,7); ax.axis("off")
     boxes=[
-        (0.3,5.8,2.3,1.2,"Apparent individual\nvertical differences"),
-        (3.1,5.8,2.5,1.2,"Remove simple alternatives\ncommon horizontal weights\n+ session centering"),
-        (6.2,5.8,2.4,1.2,"Persistent individual\nvertical organization"),
-        (9.2,5.8,2.4,1.2,"Terrain-relative fidelity\nwithin shared 500-m cells"),
-        (1.1,2.5,2.8,1.35,"Maintenance stress tests\nmulti-day self-history\n+ 500-m place × state"),
-        (4.6,2.5,2.8,1.35,"Partitioning diagnostics\npositive S_rel: 0/4\nco-use separation: 1/4"),
-        (8.2,2.3,3.0,1.7,"Ecological synthesis\npersistent personal solutions\ncan overlap in 3-D space"),
+        (0.4,4.8,2.2,1.1,"Repeated 3-D movement\n(x, y, z)"),
+        (3.1,5.1,2.3,1.0,"Horizontal occupancy\nwhere the bat flies"),
+        (3.1,3.5,2.3,1.0,"Vertical profile\nwhich z states it uses"),
+        (6.1,4.2,3.2,1.5,"Common-cell counterfactual\napply the same horizontal weights\nto self and other vertical profiles"),
+        (6.5,1.6,2.4,1.1,"Held-out vertical identity\nbeyond cell occupancy"),
     ]
     for x,y,w,h,label in boxes:
-        ax.add_patch(FancyBboxPatch((x,y),w,h,boxstyle="round,pad=0.06",fill=False,linewidth=1.2))
-        ax.text(x+w/2,y+h/2,label,ha="center",va="center",fontsize=9.5)
-
-    arrows=[
-        ((2.6,6.4),(3.1,6.4)),
-        ((5.6,6.4),(6.2,6.4)),
-        ((8.6,6.4),(9.2,6.4)),
-        ((7.4,5.8),(2.5,3.85)),
-        ((10.4,5.8),(6.0,3.85)),
-        ((3.9,3.15),(4.6,3.15)),
-        ((7.4,3.15),(8.2,3.15)),
-    ]
-    for start,end in arrows:
-        ax.annotate("",xy=end,xytext=start,arrowprops={"arrowstyle":"->","linewidth":1.0})
-
-    ax.text(0.45,0.75,
-            "Origin and maintenance are distinct: processes may generate individual specialization without\n"
-            "requiring ongoing vertical exclusion to keep personal strategies predictive across bouts.",
-            fontsize=9.5)
-    ax.set_title("From vertical individuality to maintenance without exclusive spatial partitioning")
+        ax.add_patch(FancyBboxPatch((x,y),w,h,boxstyle="round,pad=0.05",fill=False,linewidth=1.2))
+        ax.text(x+w/2,y+h/2,label,ha="center",va="center",fontsize=10)
+    for a,b in [
+        ((2.6,5.35),(3.1,5.55)),((2.6,5.05),(3.1,4.0)),
+        ((5.4,5.55),(6.1,4.9)),((5.4,4.0),(6.1,4.6)),
+        ((7.7,4.2),(7.7,2.7)),
+    ]:
+        ax.annotate("",xy=b,xytext=a,arrowprops={"arrowstyle":"->","linewidth":1.0})
+    ax.text(0.4,1.0,
+            "Key alternative: apparent vertical individuality can arise when individuals repeatedly use\n"
+            "different horizontal patches with different terrain or vertical opportunity.",
+            fontsize=9)
+    ax.set_title("Testing vertical individuality after coarse horizontal occupancy standardization")
     save(fig,"figure1_horizontal_standardization")
 
 def fig2():
