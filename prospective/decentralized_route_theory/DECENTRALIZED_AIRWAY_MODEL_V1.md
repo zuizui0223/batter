@@ -232,6 +232,93 @@ That is the theoretical counterpart of the empirical distinction between vertica
 
 ---
 
+## 5b. Exact bridge to centered distribution-shape individuality
+
+The model can generate **shape identity with zero mean-position partitioning**.
+
+Let each latent route profile `g_k` be a probability distribution over terrain-relative vertical states z.
+
+Suppose every route has the same mean:
+
+[
+\sum_z z\,g_k(z)=\mu
+\quad\text{for every }k,
+]
+
+but the profiles differ in variance, concentration, skewness or tail allocation.
+
+Because
+
+[
+f_i=\sum_k\theta_{ik}g_k,
+]
+
+every individual has the same mean vertical position:
+
+[
+E_{f_i}[z]=\mu.
+]
+
+So a mean-height or centroid-based comparison can show **no individual separation at all**.
+
+Yet if at least two `g_k` differ in shape and individuals have different persistent theta_i, then:
+
+[
+f_i \neq f_j
+]
+
+as full distributions.
+
+Thus the same mechanism produces:
+
+- session-centered distribution-shape individuality;
+- individual differences in concentration / tail use;
+- zero required difference in mean height;
+- no requirement for mutually exclusive vertical layers.
+
+### General similarity result
+
+Let `G` contain the latent route profiles as columns and define
+
+[
+Q=G^T G.
+]
+
+Using ordinary distribution inner product as a similarity measure,
+
+[
+\mathrm{sim}(f_i,f_j)=f_i^T f_j
+=\theta_i^TQ\theta_j.
+]
+
+Then the expected same-individual excess over a different individual is
+
+[
+E[f_i^T f_i]-E[f_i^T f_j]
+=
+\mathrm{tr}\left(Q\,\mathrm{Cov}(\theta)\right)
+=
+\mathrm{tr}\left(G\,\mathrm{Cov}(\theta)G^T\right)
+\ge 0.
+]
+
+It is strictly positive whenever:
+- individual route weights vary; and
+- that variation projects onto genuinely different route profiles.
+
+So distribution-level self-predictability is an automatic consequence of persistent individual route mixtures.
+
+At the same time, spatial segregation can remain weak when the columns of G overlap strongly.
+
+This gives an exact theoretical separation between:
+
+1. **identity / fidelity** — persistent theta_i makes self-history predictive;
+2. **partitioning / segregation** — determined by how far apart the route geometries g_k actually are.
+
+The two quantities are not mathematically equivalent.
+
+---
+
 ## 6. Why contemporaneous avoidance is unnecessary
 
 The minimal model contains no term involving another animal's current location.
