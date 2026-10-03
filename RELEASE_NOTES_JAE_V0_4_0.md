@@ -17,7 +17,7 @@ to:
 ## Main ecological additions
 
 1. **Terrain-relative persistence.**  
-   Four structurally evaluable fruit-bat panels retain individual vertical-strategy fidelity after local DEM elevation is removed within shared 500-m cells.
+   Four structurally evaluable *H. monstrosus*/*P. hastatus* panels retain individual vertical-strategy fidelity after local DEM elevation is removed within shared 500-m cells.
 
 2. **Specialization is not equivalent to vertical segregation.**  
    Positive terrain-relative added segregation is supported in 0/4 panels.
@@ -29,10 +29,21 @@ to:
    Identity persists at >=1-day lag in 4/4 evaluable panels, >=3 days in 3/3, and >=7 days in 2/2.
 
 5. **Persistence survives finer context matching.**  
-   All four evaluable fruit-bat panels retain individuality under 500-m place x speed x turning matching.
+   All four evaluable *H. monstrosus*/*P. hastatus* panels retain individuality under 500-m place x speed x turning matching.
 
 6. **Broad same-night context is insufficient as a general explanation.**  
    Under 2-km place x kinematic matching, same-individual history outpredicts contemporaneous other bats in 3/4 panels; 2016 remains unresolved at its frozen threshold.
+
+## External boundary evidence
+
+Previously frozen external tests are restored in rc2 and retained as claim-limiting evidence:
+
+- first frozen *Nyctalus noctula* primary: FAIL (+0.05175, p=0.1224);
+- *Hipposideros armiger/pratti*: FAIL (-0.04468, p=0.8616);
+- *Myotis vivesi*: FAIL (+0.00470, p=0.4419);
+- *Pteropus poliocephalus*: PASS under a separate n=4 design (+0.16873, p=0.0001).
+
+The *Pteropus* signal is strongly terrain-sensitive: DEM subtraction reduces calibrated excess to +0.03231 while retaining support (p=0.0023). These tests are boundary evidence, not a prevalence sample. The integrated manuscript's external Figure 4 is restored as Supporting Figure S3.
 
 ## Preferred synthesis
 
