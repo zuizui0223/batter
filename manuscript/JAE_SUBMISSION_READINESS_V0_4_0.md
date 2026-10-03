@@ -100,3 +100,21 @@ No such metadata is inferred here.
 ## Stop rule
 
 No further same-data mechanism fishing is authorized for v0.4.0.
+
+
+## Synthetic human-metadata pipeline self-test
+
+Authoritative synthetic self-test:
+- workflow run: **37093159799**
+- conclusion: **success**
+- synthetic identity/licence existed only inside the Actions workspace and was not committed;
+- pre-release metadata assembly: READY;
+- pre-release combined manuscript + generated title-page count: **8,216 / 8,500**;
+- pre-release headroom: **284 words**;
+- post-DOI metadata assembly: READY;
+- post-DOI combined count: **8,211 / 8,500**;
+- post-DOI headroom: **289 words**;
+- Zenodo metadata consistency: PASS;
+- final JAE upload gate: READY.
+
+These synthetic values validate the pipeline only. Real author, licence and DOI metadata remain required and are not inferred.
