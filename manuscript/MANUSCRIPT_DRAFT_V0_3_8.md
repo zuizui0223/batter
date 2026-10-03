@@ -360,7 +360,7 @@ Xing, S., Leahy, L., Ashton, L.A., Kitching, R.L., Bonebrake, T.C. & Scheffers, 
 
 ## Figure legends
 
-**Figure 1. Separating vertical individuality from horizontal occupancy.** Conceptual workflow showing that repeated differences in horizontal occupancy can generate apparent vertical specialization when terrain or vertical opportunity varies across space. Self and other conditional vertical profiles are therefore integrated under identical self-derived horizontal-cell weights before vertical identity is evaluated.
+**Figure 1. From vertical individuality to maintenance without exclusive spatial partitioning.** Conceptual workflow separating detection, persistence and maintenance. Coarse horizontal occupancy and additive altitude level are first controlled; terrain-relative fidelity and multi-day/fine-context stress tests then ask whether individual organization persists, while added-segregation and synchronous co-use diagnostics ask whether persistence requires mutually exclusive vertical layers. The resulting synthesis allows persistent personal solutions to overlap in three-dimensional space.
 
 **Figure 2. Horizontally standardized vertical identity across six bat tracking panels.** Points show observed common-cell vertical identity with individual-bootstrap intervals; crosses show panel-specific whole-session permutation-null means. Identity-matched scores exceed exchangeability expectation in all six panels.
 
