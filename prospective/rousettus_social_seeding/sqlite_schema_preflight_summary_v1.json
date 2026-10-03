@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "study_id": "rousettus-social-seeding-sqlite-schema-preflight-v1",
+  "workflow_run": 37118290793,
+  "artifact_id": 11272178349,
+  "decision": "STOP_BEFORE_COORDINATE_OPENING",
+  "schema_preflight_pass": false,
+  "route_geometry_opened": false,
+  "coordinate_numeric_values_opened": false,
+  "campaigns": {
+    "june": {
+      "file_stream_id": 3182077,
+      "retrieval": "HTTP 403",
+      "candidate_seen": 0,
+      "candidate_expected": 5
+    },
+    "july": {
+      "file_stream_id": 3182078,
+      "retrieval": "HTTP 403",
+      "candidate_seen": 0,
+      "candidate_expected": 1
+    },
+    "december": {
+      "file_stream_id": 3182076,
+      "retrieval": "HTTP 403",
+      "candidate_seen": 0,
+      "candidate_expected": 3
+    }
+  },
+  "interpretation": "data-access structural stop, not negative route-reuse evidence"
+}

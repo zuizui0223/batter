@@ -1,0 +1,18 @@
+name: rousettus-prospective-stop-guard-v1
+on:
+  push:
+    branches: [prospective/rousettus-social-seeding-route-reuse-v1]
+    paths:
+      - "prospective/rousettus_social_seeding/**"
+      - "scripts/check_rousettus_stop_v1.py"
+      - ".github/workflows/rousettus-prospective-stop-guard-v1.yml"
+  workflow_dispatch:
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    permissions: {contents: read}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: python scripts/check_rousettus_stop_v1.py

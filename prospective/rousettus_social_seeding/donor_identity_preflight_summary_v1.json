@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "study_id": "rousettus-social-seeding-donor-identity-preflight-v1",
+  "waypoint_similarity_opened": false,
+  "route_geometry_opened": false,
+  "strata": {
+    "2020-06-22_Gershom": {
+      "known_independent_naive_targets": [
+        "6399",
+        "6411",
+        "6414",
+        "6635"
+      ],
+      "n": 4,
+      "max_other_known_naive_donors_per_target": 3
+    },
+    "2020-06-22_Zemer": {
+      "known_independent_naive_targets": [
+        "6428"
+      ],
+      "excluded_pups": [
+        "6641"
+      ],
+      "n": 1,
+      "max_other_known_naive_donors_per_target": 0
+    },
+    "2020-07-19_UK_cave": {
+      "known_independent_naive_targets": [
+        "6640"
+      ],
+      "n": 1,
+      "max_other_known_naive_donors_per_target": 0
+    },
+    "2020-12-07_Gershom": {
+      "known_independent_naive_targets": [
+        "6824",
+        "6991"
+      ],
+      "n": 2,
+      "max_other_known_naive_donors_per_target": 1
+    },
+    "2020-12-07_Zemer": {
+      "known_independent_naive_targets": [
+        "6993"
+      ],
+      "n": 1,
+      "max_other_known_naive_donors_per_target": 0
+    }
+  },
+  "frozen_other_donor_min": 3,
+  "frozen_evaluable_target_min": 5,
+  "known_status_max_evaluable_targets": 4,
+  "decision": "STOP_PUBLIC_SOURCE_DONOR_IDENTITY",
+  "reopen_only_if": "independent immutable source identifies full naive/manipulated membership"
+}

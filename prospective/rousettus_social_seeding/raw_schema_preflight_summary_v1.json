@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "study_id": "rousettus-social-seeding-raw-schema-preflight-v1",
+  "workflow_run": 37112482932,
+  "artifact_id": 11269939441,
+  "route_geometry_opened": false,
+  "all_three_sqlite_retrieved": false,
+  "tree_location_file_retrieved": false,
+  "may_open_xy_support_preflight": false,
+  "retrieval": {
+    "june": {
+      "id": 3182077,
+      "file_stream": "security_challenge",
+      "api": "401_unauthorized"
+    },
+    "july": {
+      "id": 3182078,
+      "file_stream": "security_challenge",
+      "api": "401_unauthorized"
+    },
+    "december": {
+      "id": 3182076,
+      "file_stream": "security_challenge",
+      "api": "401_unauthorized"
+    },
+    "trees": {
+      "id": 3182081,
+      "file_stream": "security_challenge",
+      "api": "401_unauthorized"
+    }
+  },
+  "documented_schema": {
+    "track": [
+      "TAG",
+      "TIME",
+      "X",
+      "Y",
+      "FREQ",
+      "NBS",
+      "VARX",
+      "VARY",
+      "COVXY",
+      "dateTime",
+      "date",
+      "date_global",
+      "Night",
+      "distance",
+      "dT",
+      "spd",
+      "stdVarXY",
+      "Lon",
+      "Lat"
+    ],
+    "coordinate_semantics": "X/Y are Israel Transverse Mercator metres",
+    "tree_locations": [
+      "X_ITM",
+      "Y_ITM",
+      "Lat_WGS84",
+      "Long_WGS84"
+    ]
+  },
+  "decision": "PENDING_DATA_STOP"
+}
