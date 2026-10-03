@@ -4,7 +4,7 @@
 
 This branch is a post-freeze v0.4.0 candidate built on the completed 3-D integration. It reframes the ecological contribution around maintenance of persistent personal vertical strategies rather than only detection of vertical individuality.
 
-Current whitespace-delimited manuscript count: 8,225 words (working ceiling 8,500).
+Current whitespace-delimited manuscript count: 8,246 words (working ceiling 8,500).
 
 ## Evidence promoted into the maintenance synthesis
 
