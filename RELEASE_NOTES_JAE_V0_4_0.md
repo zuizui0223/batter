@@ -2,7 +2,7 @@
 
 ## Working title
 
-**Persistent individual vertical strategies need not partition three-dimensional space in bats**
+**Persistent individual vertical strategies need not partition three-dimensional space in two tropical bat species**
 
 ## Why v0.4.0
 
@@ -88,7 +88,7 @@ Not established:
 ## Release state
 
 This commit line is suitable for:
-`release/jae-v0.4.0-rc1`
+`release/jae-v0.4.0-rc2`
 
 Do **not** mint the final tag/release yet.
 
