@@ -1,109 +1,103 @@
-# JAE submission manifest v0.4.0 candidate
+# JAE submission manifest v0.4.0 — rc2
 
 Date: 2026-10-03
 
-## Current manuscript
+## Active candidate
 
+Branch:
+`release/jae-v0.4.0-rc2`
+
+Manuscript:
 `manuscript/MANUSCRIPT_DRAFT_V0_4_0.md`
 
 Title:
 
 **Persistent individual vertical strategies need not partition three-dimensional space in two tropical bat species**
 
-Internal header: v0.4.0 candidate — post-freeze maintenance synthesis.
+Current manuscript blob SHA:
+`c4ef51a7f3f291a6f203d303dbf73f5b54fb7683`
 
-## Current manuscript counts
+## Current scientific scope
 
-- whitespace-delimited manuscript estimate: **7,810 words**
-- Abstract: **287 words**
-- Introduction: **679 words**
-- Materials and Methods: **2,789 words**
-- Results: **1,521 words**
-- Discussion: **1,369 words**
-- Conclusion: **320 words**
-- main figures referenced: **6**
-- Supporting Figures: **3**
+Original centered-shape individuality:
+- five original comparative panels supported;
+- *Tadarida teniotis* remains the original boundary case.
 
-The working manuscript ceiling is 8,500 words. Journal-specific combined counting must be rerun after title-page metadata are finalized.
+Stronger terrain/partitioning inference:
+- four evaluable panels from **two species**, *Hypsignathus monstrosus* and *Phyllostomus hastatus*;
+- terrain-relative strategy fidelity supported in 4/4;
+- supported positive added segregation in 0/4;
+- synchronous extra co-use separation in 1/4;
+- positive 95% upper compatibility endpoints in the three non-supporting co-use panels: approximately 0.98, 1.92 and 1.13 m.
 
-- submission-gate CI manuscript count: **7,995 words**
-- submission-gate headroom before title-page metadata: **505 words**
+External boundary evidence:
+- *N. noctula*: FAIL, +0.05175, p=0.1224, n=27;
+- *H. armiger/pratti*: FAIL, -0.04468, p=0.8616, n=13;
+- *M. vivesi*: FAIL, +0.00470, p=0.4419, n=4;
+- *P. poliocephalus*: PASS under separate n=4 design, +0.16873, p=0.0001;
+- *Pteropus* terrain-adjusted diagnostic: +0.03231, p=0.0023.
 
-## Scientific status
+The external sequence is boundary evidence, not a prevalence sample.
 
-The central ecological result is no longer framed only as detection of vertical individuality.
+Preferred interpretation:
 
-Supported comparative structure:
-- all five comparative panels retain calibrated centered vertical-distribution identity;
-- four structurally evaluable panels from *H. monstrosus* and *P. hastatus* retain terrain-relative vertical-strategy fidelity at 500 m;
-- no one of those four shows permutation-supported **positive** terrain-relative added segregation;
-- synchronous local co-use adds vertical separation in one of four panels, with the 2023 exception retaining its coarse 600-s/all-space limitation;
-- self-history remains predictive with >=1-day separation in 4/4 evaluable panels, >=3 days in 3/3, and >=7 days in 2/2;
-- centered individuality remains after 500-m place x speed x turning matching in 4/4 evaluable *H. monstrosus*/*P. hastatus* panels;
-- under 2-km place x kinematic matching, same-individual history outpredicts contemporaneous other bats in 3/4 panels; 2016 is unresolved at p=0.0544;
-- simple patch-fidelity magnitude is not supported as a general cross-panel driver.
+> Persistent personal movement solutions can remain predictive without requiring mutually exclusive vertical niches.
 
-Preferred synthesis:
+Task-level ecological opportunity remains a post-hoc generated hypothesis, not a confirmed mechanism.
 
-> Persistent personal vertical strategies can be maintained without forming mutually exclusive vertical niches. The evidence is compatible with reuse of personal movement solutions, while the proximate carrier of persistence remains unresolved.
+## Current validation
 
-This does **not** establish memory, learning, adaptation, optimality, personality, morphology as the cause, or resource specialization as the cause.
+Submission build:
+- run **37123936286** — PASS;
+- manuscript CI count **7,995 / 8,500**;
+- main figures **6**;
+- Supporting Figures **3**.
 
-## External boundary evidence
+Artifacts:
+- main figures **11273753416**, SHA256 `c07e2cc7bce7341debc930f05ce8e193c77e649401b4535d92b9ec9e94cf0bbf`;
+- supporting figures **11273793396**, SHA256 `e2e8e97dcc5ad37b639e53bccd7a27dcf194ab2fed254d5abd7482f820289261`.
 
-Previously frozen external programmes constrain the generality of centered vertical individuality:
-- first frozen *N. noctula* primary: FAIL (+0.05175, p=0.1224; n=27);
-- *H. armiger/pratti*: FAIL (-0.04468, p=0.8616; n=13);
-- *M. vivesi*: FAIL (+0.00470, p=0.4419; n=4);
-- *P. poliocephalus*: PASS under a separate n=4 design (+0.16873, p=0.0001), attenuated after DEM subtraction to +0.03231 (p=0.0023).
+Anonymous review build:
+- run **37123738669** — PASS;
+- anonymity guard PASS;
+- 27 pages;
+- artifact **11274153477**, SHA256 `2197b76028adfbe1375c08bf3c613755b235f634cbe23532adab3aa948c6f380`.
 
-These are boundary tests, not a prevalence sample. The `need not partition` claim is scoped to the four terrain/co-use panels from **two species**, *H. monstrosus* and *P. hastatus*.
+Synthetic metadata pipeline:
+- run **37124460765** — PASS;
+- pre-release combined count **8,175 / 8,500**;
+- post-DOI combined count **8,170 / 8,500**;
+- final synthetic upload gate READY.
 
-## Origin versus maintenance
+Supporting Figure S3 and representative review-PDF pages were visually inspected.
 
-The manuscript now explicitly distinguishes:
-- **origin of individual specialization** — processes that generate among-individual niche variation;
-- **maintenance of specialization** — processes that keep an individual's previous solution predictive across repeated bouts.
+## Evidence transparency
 
-The present data localize maintenance beyond immediate carryover, coarse place, broad kinematic state, common nightly context and general contemporaneous vertical avoidance.
+The rc2 package retains:
+- first frozen *Nyctalus* FAIL as authoritative;
+- *Hipposideros* FAIL;
+- *M. vivesi* FAIL;
+- *Pteropus* PASS;
+- *Pteropus* terrain attenuation;
+- all promoted terrain/co-use/maintenance diagnostics;
+- ERA5 reaction-norm STOP before numeric vertical opening.
 
-## ERA5 reaction-norm family
+No failed result is replaced by a later favourable sensitivity analysis.
 
-No numeric vertical reaction-norm outcome was opened.
+## Release status
 
-The continuous-slope structural gate retained:
-- *Hypsignathus monstrosus*: 18 evaluable, required 14;
-- *P. hastatus* 2022: 21 evaluable, required 17;
-- *P. hastatus* 2023: 7 evaluable, required 8.
+**VALIDATED SCIENTIFIC CANDIDATE.**
 
-Because the all-three gate failed, the family stopped before vertical opening. No threshold relaxation, two-panel rescue, binary-wind fallback or alternative weather variable is authorized for this manuscript.
+No final tag or GitHub Release has been created.
 
-## Post-outcome status
-
-The maintenance and 3-D mechanism analyses are explicitly post-outcome diagnostics/stress tests. Each diagnostic was frozen before its own numeric outcome was opened. They are not represented as independent preregistered confirmation.
-
-The earlier v0.3.8 and 3-D integration lines remain recoverable.
-
-## Methodological contribution
-
-Prediction-based individuality statistics require calibration against the finite-sample exchangeability distribution of the complete pipeline. The manuscript retains the non-zero/null-shift examples from the earlier frozen programme.
-
-## Packaging status
-
-**VALIDATED CANDIDATE: READY TO FREEZE AS `release/jae-v0.4.0-rc2`.**
-
-The v0.3.8 validation receipts are historical and must not be reused as validation of the modified v0.4.0 candidate.
-
-Validation receipts:
-- submission workflow run 37123936286 — PASS;
-- main figures artifact 11273753416, SHA256 c07e2cc7bce7341debc930f05ce8e193c77e649401b4535d92b9ec9e94cf0bbf;
-- supporting figures artifact 11273793396, SHA256 e2e8e97dcc5ad37b639e53bccd7a27dcf194ab2fed254d5abd7482f820289261;
-- anonymous review workflow run 37123738669 — PASS;
-- 27-page review artifact 11274153477, SHA256 2197b76028adfbe1375c08bf3c613755b235f634cbe23532adab3aa948c6f380;
-- representative rendered review pages and final Figure 1 visually inspected without clipping or overlap.
-
-Remaining work is human metadata / licence / archive DOI / final combined-count assembly. No human identity, authorship, funding, conflict declaration, ORCID, postal address, licence or archive DOI is inferred.
+Remaining:
+- human author/declaration metadata;
+- software licence;
+- release date;
+- Zenodo version DOI;
+- final combined-count confirmation with real metadata;
+- journal upload.
 
 ## Stop rule
 
-No further same-data mechanism fishing is authorized for v0.4.0. Remaining mechanism discrimination requires prospective data or independently defined external information.
+No further same-data scientific mechanism search is authorized for v0.4.0.
