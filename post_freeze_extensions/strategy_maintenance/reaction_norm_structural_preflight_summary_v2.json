@@ -1,0 +1,36 @@
+{
+  "schema_version": 2,
+  "study_id": "batter-continuous-wind-reaction-norm-structural-preflight-v2",
+  "workflow_run": 37090689460,
+  "artifact_id": 11262542535,
+  "numeric_vertical_opened": false,
+  "panels": {
+    "hypsignathus": {
+      "baseline_n": 19,
+      "required_n": 14,
+      "evaluable_n": 18,
+      "pass": true
+    },
+    "phyllostomus_2022": {
+      "baseline_n": 23,
+      "required_n": 17,
+      "evaluable_n": 21,
+      "pass": true
+    },
+    "phyllostomus_2023": {
+      "baseline_n": 11,
+      "required_n": 8,
+      "evaluable_n": 7,
+      "pass": false
+    }
+  },
+  "all_three_pass": false,
+  "vertical_outcome_may_open": false,
+  "decision": "STOP",
+  "rescue_forbidden": [
+    "lower 2023 threshold",
+    "open 2-panel subset",
+    "reuse binary wind-state analysis",
+    "switch environmental variable"
+  ]
+}
