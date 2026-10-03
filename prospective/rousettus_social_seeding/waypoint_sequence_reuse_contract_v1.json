@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "study_id": "rousettus-social-seeding-waypoint-sequence-reuse-v1",
+  "classification": "prospective external discrete-waypoint mechanism test; sequence similarity unopened",
+  "source": {
+    "repo": "EmmLourie/Information-transfer-analysis",
+    "commit": "1d7edbdbb87d9df048ab42a0b425a1966d491e86",
+    "path": "data_R/all_tree_visits_main.csv",
+    "blob_sha": "3c3cd695bd74d82c87e4c1ff77683e0248bb6971"
+  },
+  "candidates": [
+    "6399",
+    "6411",
+    "6414",
+    "6428",
+    "6635",
+    "6640",
+    "6824",
+    "6991",
+    "6993"
+  ],
+  "prehistory_days": 14,
+  "structural_gate": {
+    "target_waypoints_min": 3,
+    "self_history_nights_min": 3,
+    "self_night_waypoints_min": 3,
+    "other_donors_min": 3,
+    "other_donor_nights_min": 3,
+    "minimum_evaluable_targets": 5,
+    "roost_match_required": true
+  },
+  "primary_similarity": "LCS(target, history_night) / len(target), exact cluster_ID, consecutive duplicates collapsed",
+  "primary_statistic": "W = equal-individual mean(S_self-S_other)",
+  "permutation": {
+    "B": 9999,
+    "seed": 20261003072,
+    "unit": "complete 14-day prehistory library within campaign x target-night roost"
+  },
+  "outcome_opened": false,
+  "raw_continuous_route_test_replaced": false,
+  "jae_firewall": true
+}
