@@ -454,6 +454,64 @@ Social information, morphology and resource knowledge can modify the priors or r
 
 ---
 
+## 10b. Short-memory inertia is not the same as persistent personal strategy
+
+A simpler alternative is that an animal merely tends to repeat its **immediately previous** route.
+
+Consider a symmetric K-route Markov chain:
+
+- probability of staying on the current route = p;
+- probability of switching to each other route = `(1-p)/(K-1)`.
+
+Its stationary population distribution is uniform.
+
+The nontrivial transition eigenvalue is
+
+[
+\lambda
+=
+p-\frac{1-p}{K-1}
+=
+\frac{Kp-1}{K-1}.
+]
+
+If two trips are separated by L transitions, the probability of using the same route is
+
+[
+P_{same}(L)
+=
+\frac1K
++
+\left(1-\frac1K\right)\lambda^L.
+]
+
+Therefore the excess above the between-individual baseline `1/K` decays as
+
+[
+\Delta_{inertia}(L)
+=
+\left(1-\frac1K\right)
+\left(\frac{Kp-1}{K-1}\right)^L.
+]
+
+Unless p=1, short-memory inertia eventually disappears.
+
+This is qualitatively different from persistent individual route propensities theta_i, where distant trips remain correlated through the individual's accumulated history.
+
+### Empirical discriminator
+
+Estimate self-history advantage as a function of temporal lag.
+
+- **short-memory inertia:** approximately exponential decay toward zero;
+- **persistent personal route propensity:** non-zero long-lag plateau;
+- **forgetting / environmental turnover:** intermediate decay to a lower plateau or reset.
+
+Thus multi-day persistence is informative not only about whether individuality exists, but about the **memory architecture** capable of maintaining it.
+
+The existing bat results do not estimate a full lag-decay curve, so they cannot identify which model applies. They motivate the prospective comparison.
+
+---
+
 ## 11. Prospective discriminators
 
 ### Pure path dependence
