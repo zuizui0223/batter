@@ -21,34 +21,34 @@ v0.4.0 candidate — post-freeze maintenance synthesis.
 ## Submission gate
 
 Authoritative v0.4.0 submission workflow:
-- run: **37092713865**
+- run: **37123936286**
 - conclusion: **success**
-- CI manuscript count: **8,039 words**
+- CI manuscript count: **7,995 words**
 - JAE working limit: **8,500**
-- pre-title-page headroom: **461 words**
+- pre-title-page headroom: **505 words**
 - Abstract: **282 words**
 - Introduction: **682 words**
 - Results: **1,348 words**
 - Discussion: **1,205 words**
 - main figures: **6**
-- Supporting Figures: **2**
+- Supporting Figures: **3**
 
 Main-figure artifact:
-- id: **11263066200**
-- SHA256: `369b2219a75cd71fbf3ae66f18d2ea7efd930a78dac96ed79196c9c4f5edc687`
+- id: **11273753416**
+- SHA256: `c07e2cc7bce7341debc930f05ce8e193c77e649401b4535d92b9ec9e94cf0bbf`
 
 Supporting-figure artifact:
-- id: **11262871439**
-- SHA256: `8cdce552c09ef606694ad7275e25aeeaac184b571b027fdaa1e26b0c61159e90`
+- id: **11273793396**
+- SHA256: `e2e8e97dcc5ad37b639e53bccd7a27dcf194ab2fed254d5abd7482f820289261`
 
 ## Anonymous review manuscript
 
 Authoritative v0.4.0 review workflow:
-- run: **37092621932**
+- run: **37123738669**
 - conclusion: **success**
 - anonymity gate: **PASS**
 - PDF pages: **27**
-- artifact id: **11263790889**
+- artifact id: **11274153477**
 - SHA256: `23faa3a6a0d6f309dd3612f4cc46d78a02dbf7d024925c0dff2d645654917026`
 
 The 27-page PDF was rendered to PNG for QA. Representative first, maintenance-Discussion and final pages were inspected; no clipping, overlap or broken glyphs were observed.
@@ -182,3 +182,28 @@ Canonical-path anonymous review validation:
 - first page, maintenance Discussion pages 18–19, and final page 27 visually inspected; no clipping, overlap or broken glyphs.
 
 Canonical Figure 1 was re-inspected from the new artifact and retains the final three-layer detection -> persistence/partitioning diagnostics -> ecological synthesis layout without text/arrow collisions.
+
+
+## rc2 external-boundary revalidation
+
+The two reviewer-facing scope corrections are complete:
+
+1. Previously frozen external validation has been restored to the main Results/Discussion and Supporting Information.
+2. The `need not partition` claim and title are explicitly scoped to the four terrain/co-use panels from **two species**, *Hypsignathus monstrosus* and *Phyllostomus hastatus*.
+
+External boundary sequence:
+- first frozen *Nyctalus noctula* primary: FAIL (+0.05175, p=0.1224; n=27);
+- *Hipposideros armiger/pratti*: FAIL (-0.04468, p=0.8616; n=13);
+- *Myotis vivesi*: FAIL (+0.00470, p=0.4419; n=4);
+- *Pteropus poliocephalus*: PASS (+0.16873, p=0.0001; n=4);
+- *Pteropus* MSL-minus-DEM diagnostic: +0.03231, p=0.0023.
+
+Supporting Table S1 and Supporting Figure S3 retain these results. S3 was visually inspected after rebuild; no clipping or overlap remains.
+
+Final rc2 validation:
+- submission run **37123936286** — PASS;
+- manuscript CI count **7,995 / 8,500**;
+- anonymous review run **37123738669** — PASS, 27 pages;
+- synthetic metadata run **37123738694** — PASS;
+- combined pre-release count **8,175 / 8,500** (325-word headroom);
+- combined post-DOI count **8,170 / 8,500** (330-word headroom).
