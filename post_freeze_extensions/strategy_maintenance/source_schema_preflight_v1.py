@@ -23,8 +23,9 @@ def main():
         env=[h for h,l in zip(header,low) if any(t in l for t in TOKENS)]
         out["panels"][panel]={"columns":len(header),"environment_like_columns":env,
           "has_timestamp":any("timestamp" in l or l=="time" for l in low),
-          "has_latitude":any("location_lat" in l or "latitude" in l for l in low),
-          "has_longitude":any("location_long" in l or "longitude" in l for l in low)}
+          "coordinate_columns":[h for h,l in zip(header,low) if ("lat" in l or "lon" in l or "long" in l)],
+          "has_latitude":any(("lat" in l) for l in low),
+          "has_longitude":any(("lon" in l or "long" in l) for l in low)}
     od=ROOT/"post_freeze_extensions/strategy_maintenance"; (od/"source_schema_preflight_v1.json").write_text(json.dumps(out,indent=2,sort_keys=True)+"\n")
     print(json.dumps(out,sort_keys=True))
 if __name__=="__main__":main()
