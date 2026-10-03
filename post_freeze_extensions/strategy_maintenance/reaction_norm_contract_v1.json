@@ -1,0 +1,59 @@
+{
+  "schema_version": 2,
+  "study_id": "batter-individual-wind-reaction-norm-v1",
+  "classification": "post-outcome mechanism test; numeric vertical outcome unopened at specification freeze",
+  "normative_contract": "post_freeze_extensions/strategy_maintenance/REACTION_NORM_CONTRACT_V1.md",
+  "panels": [
+    "hypsignathus",
+    "phyllostomus_2022",
+    "phyllostomus_2023"
+  ],
+  "stopped_panel": "phyllostomus_2016",
+  "response": {
+    "terrain_relative": true,
+    "dem": "inherit completed original terrain geometry pinned Mapzen/AWS Skadi HGT tiles and bilinear interpolation",
+    "session_center": "median",
+    "units": "metres"
+  },
+  "conditioning": {
+    "horizontal_grid_m": 500,
+    "kinematic_state": "speed2_turn2",
+    "wind_variable": "sqrt(u10^2+v10^2)",
+    "wind_source": "ERA5 hourly 10-m u/v via Earthmover Icechunk",
+    "target_environment_support": "target wind within focal individual's other-session q05-q95 and within q05-q95 of at least 2 other individuals in cohort",
+    "minimum_scored_target_events": 50
+  },
+  "models": {
+    "A": "other-individual population stratum means plus common within-stratum wind slope",
+    "B": "same-individual other-session stratum mean",
+    "C": "same-individual other-session stratum mean plus individual pooled within-stratum continuous wind slope"
+  },
+  "primary": "D_CB = MAE_B - MAE_C",
+  "secondary": "D_BA = MAE_A - MAE_B",
+  "weighting": "target events -> session mean loss; sessions equal within individual; individuals equal within panel",
+  "structural_gate": {
+    "required_evaluable_individuals": {
+      "hypsignathus": 14,
+      "phyllostomus_2022": 17,
+      "phyllostomus_2023": 8
+    },
+    "slope_denominator_rule": "strictly > 1e-12 in self-history after 500-m-place x kinematic-state wind demeaning",
+    "all_panels_must_pass": true
+  },
+  "permutation": {
+    "B": 4999,
+    "unit": "whole retained session labels within cohort",
+    "seeds": {
+      "hypsignathus": 20261003101,
+      "phyllostomus_2022": 20261003102,
+      "phyllostomus_2023": 20261003103
+    },
+    "support_rule": "observed-minus-null-mean > 0 and one-sided p(null>=observed)<=0.05"
+  },
+  "synthesis": {
+    "reaction_norm_2_or_3": "repeatable individual wind responses contribute across multiple systems",
+    "reaction_norm_1": "wind-dependent maintenance is context-dependent",
+    "reaction_norm_0_and_stable_self_2plus": "current evidence favors stable self-history over this measurable wind reaction norm",
+    "otherwise": "mixed or unresolved"
+  }
+}
