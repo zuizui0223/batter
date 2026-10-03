@@ -14,7 +14,7 @@ Internal header: v0.4.0 candidate — post-freeze maintenance synthesis.
 
 ## Current manuscript counts
 
-- whitespace-delimited manuscript estimate: **8,246 words**
+- whitespace-delimited manuscript estimate: **7,873 words**
 - Abstract: **287 words**
 - Introduction: **679 words**
 - Materials and Methods: **2,789 words**
@@ -25,6 +25,9 @@ Internal header: v0.4.0 candidate — post-freeze maintenance synthesis.
 - Supporting Figures inherited: **2**
 
 The working manuscript ceiling is 8,500 words. Journal-specific combined counting must be rerun after title-page metadata are finalized.
+
+- submission-gate CI manuscript count: **8,039 words**
+- submission-gate headroom before title-page metadata: **461 words**
 
 ## Scientific status
 
