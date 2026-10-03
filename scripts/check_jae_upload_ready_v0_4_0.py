@@ -16,7 +16,7 @@ ROOT = Path(__file__).resolve().parents[1]
 TITLE_PAGE = ROOT / "manuscript" / "TITLE_PAGE_V0_4_0.md"
 METADATA = ROOT / "submission" / "jae_v0_4_0_metadata.json"
 MANIFEST = ROOT / "SUBMISSION_MANIFEST_JAE_V0_4_0.json"
-MANUSCRIPT = ROOT / "manuscript" / "MANUSCRIPT_DRAFT_V0_3_8.md"
+MANUSCRIPT = ROOT / "manuscript" / "MANUSCRIPT_DRAFT_V0_4_0.md"
 
 PLACEHOLDER_PATTERNS = (
     r"\[INSERT\b",
