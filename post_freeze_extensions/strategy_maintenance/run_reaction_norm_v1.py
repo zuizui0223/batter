@@ -15,6 +15,7 @@ if str(ROOT) not in sys.path:
 
 import scripts.run_new_species_replications as core
 import scripts.run_cross_panel_estimator_calibration as cal
+import scripts.run_tag_altitude_bias_shape as shape
 from batter.analysis import z_bin
 from post_freeze_extensions.strategy_maintenance import wind_support_preflight_v1 as ws
 
