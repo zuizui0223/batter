@@ -2,7 +2,7 @@
 
 ## Status
 
-**READY TO FREEZE AS `release/jae-v0.4.0-rc1`**
+**READY TO FREEZE AS `release/jae-v0.4.0-rc2`**
 
 Scientific same-data mechanism search is closed. Packaging and visual QA have been rerun on the maintenance-synthesis candidate.
 
@@ -10,7 +10,7 @@ Scientific same-data mechanism search is closed. Packaging and visual QA have be
 
 Title:
 
-**Persistent individual vertical strategies need not partition three-dimensional space in bats**
+**Persistent individual vertical strategies need not partition three-dimensional space in two tropical bat species**
 
 Canonical manuscript path:
 `manuscript/MANUSCRIPT_DRAFT_V0_4_0.md`
@@ -132,7 +132,7 @@ GitHub/Zenodo release-preflight self-test:
 - conclusion: **success**;
 - synthetic pre-release metadata assembly: PASS;
 - Zenodo readiness logic: PASS;
-- candidate-integrity logic against `release/jae-v0.4.0-rc1`: PASS;
+- candidate-integrity logic against `release/jae-v0.4.0-rc2`: PASS;
 - real target tag `jae-v0.4.0`: absent at test time;
 - real GitHub release with that tag: absent at test time.
 
