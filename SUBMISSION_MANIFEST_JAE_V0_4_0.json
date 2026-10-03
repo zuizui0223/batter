@@ -15,7 +15,7 @@
     "discussion_words": 1369,
     "conclusion_words": 320,
     "main_figures": 6,
-    "supporting_figures": 2,
+    "supporting_figures": 3,
     "ci_word_estimate": 8039,
     "ci_headroom_before_title_page": 461,
     "results_words_ci": 1348,
@@ -32,11 +32,49 @@
       "day3": "3/3 evaluable",
       "day7": "2/2 evaluable"
     },
-    "fine_place_kinematic_500m": "4/4 evaluable fruit-bat panels",
+    "fine_place_kinematic_500m": "4/4 evaluable panels from H. monstrosus and P. hastatus",
     "same_night_control": "3/4 support; 2016 unresolved p=0.0544",
     "patch_fidelity_general_driver": false,
     "preferred_synthesis": "persistent personal solution reuse without exclusive vertical niches",
-    "solution_reuse_directly_established": false
+    "solution_reuse_directly_established": false,
+    "partitioning_claim_species": [
+      "Hypsignathus monstrosus",
+      "Phyllostomus hastatus"
+    ],
+    "external_boundary": {
+      "nyctalus": {
+        "n": 27,
+        "excess": 0.05175,
+        "p": 0.1224,
+        "verdict": "FAIL",
+        "classification": "first frozen prospective primary"
+      },
+      "hipposideros": {
+        "n": 13,
+        "excess": -0.04468,
+        "p": 0.8616,
+        "verdict": "FAIL"
+      },
+      "myotis_vivesi": {
+        "n": 4,
+        "excess": 0.0047,
+        "p": 0.4419,
+        "verdict": "FAIL"
+      },
+      "pteropus_msl": {
+        "n": 4,
+        "excess": 0.16873,
+        "p": 0.0001,
+        "verdict": "PASS"
+      },
+      "pteropus_msl_minus_dem": {
+        "n": 4,
+        "excess": 0.03231,
+        "p": 0.0023,
+        "classification": "post-outcome diagnostic"
+      },
+      "interpretation": "boundary evidence, not prevalence sample"
+    }
   },
   "reaction_norm": {
     "numeric_vertical_opened": false,
