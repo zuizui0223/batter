@@ -5,7 +5,7 @@ on:
     branches:
       - post-freeze/manuscript-maintenance-synthesis-v1
     paths:
-      - "manuscript/MANUSCRIPT_DRAFT_V0_3_8.md"
+      - "manuscript/MANUSCRIPT_DRAFT_V0_4_0.md"
       - "manuscript/TITLE_PAGE_TEMPLATE_V0_3_8.md"
       - "manuscript/SUPPORTING_INFORMATION_CLAIM_AMENDMENT_HISTORY.md"
       - "results/calibrated_vertical_identity_v0_3_8.csv"
