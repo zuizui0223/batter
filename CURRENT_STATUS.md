@@ -6,18 +6,18 @@ Date: 2026-10-03
 
 The active candidate is **v0.4.0**, titled:
 
-> **Persistent individual vertical strategies need not partition three-dimensional space in bats**
+> **Persistent individual vertical strategies need not partition three-dimensional space in two tropical bat species**
 
 Frozen release candidate:
-`release/jae-v0.4.0-rc1`
+`release/jae-v0.4.0-rc2`
 
 Current synthesis:
 - centered vertical-distribution identity persists in all five comparative panels;
-- terrain-relative personal strategy fidelity persists in 4/4 evaluable fruit-bat panels;
+- terrain-relative personal strategy fidelity persists in 4/4 evaluable *H. monstrosus*/*P. hastatus* panels;
 - positive terrain-relative added segregation is supported in 0/4;
 - synchronous local co-use separation is supported in 1/4;
 - self-history remains predictive across the longest structurally evaluable multi-day lags;
-- individuality survives 500-m place × speed × turning matching in 4/4 evaluable fruit-bat panels;
+- individuality survives 500-m place × speed × turning matching in 4/4 evaluable *H. monstrosus*/*P. hastatus* panels;
 - same-individual history generally outpredicts same-night conspecifics after 2-km place × kinematic matching.
 
 Preferred ecological interpretation:
