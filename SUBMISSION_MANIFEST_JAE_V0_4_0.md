@@ -14,9 +14,9 @@ Internal header: v0.4.0 candidate — post-freeze maintenance synthesis.
 
 ## Current manuscript counts
 
-- whitespace-delimited manuscript estimate: **8,225 words**
+- whitespace-delimited manuscript estimate: **8,246 words**
 - Abstract: **287 words**
-- Introduction: **675 words**
+- Introduction: **679 words**
 - Materials and Methods: **2,789 words**
 - Results: **1,521 words**
 - Discussion: **1,369 words**
