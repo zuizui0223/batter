@@ -7,8 +7,8 @@
     "path": "manuscript/MANUSCRIPT_DRAFT_V0_4_0.md",
     "internal_version": "v0.4.0 candidate — post-freeze maintenance synthesis",
     "title": "Persistent individual vertical strategies need not partition three-dimensional space in two tropical bat species",
-    "whitespace_word_estimate": 7873,
-    "abstract_words": 287,
+    "whitespace_word_estimate": 7810,
+    "abstract_words": 313,
     "introduction_words": 679,
     "methods_words": 2789,
     "results_words": 1521,
@@ -16,10 +16,10 @@
     "conclusion_words": 320,
     "main_figures": 6,
     "supporting_figures": 3,
-    "ci_word_estimate": 8039,
-    "ci_headroom_before_title_page": 461,
-    "results_words_ci": 1348,
-    "discussion_words_ci": 1205,
+    "ci_word_estimate": 7995,
+    "ci_headroom_before_title_page": 505,
+    "results_words_ci": 1457,
+    "discussion_words_ci": 1224,
     "blob_sha": "2a4b2a3aafc8a4a8b4f495f4148e888f1a9c789c"
   },
   "scientific_status": {
@@ -102,34 +102,34 @@
   },
   "inference_class": "post-freeze diagnostic synthesis; each added diagnostic frozen before its own outcome",
   "packaging": {
-    "status": "validated_candidate_pending_rc2_revalidation",
+    "status": "validated_candidate_ready_for_rc2",
     "inherited_v0_3_8_validation_is_current": false,
     "submission_gate": {
-      "run_id": 37099994789,
+      "run_id": 37123936286,
       "conclusion": "success",
-      "ci_manuscript_words": 8039,
-      "abstract_words": 282,
+      "ci_manuscript_words": 7995,
+      "abstract_words": 313,
       "introduction_words": 682,
-      "results_words": 1348,
-      "discussion_words": 1205,
+      "results_words": 1457,
+      "discussion_words": 1224,
       "main_figures": 6,
-      "supporting_figures": 2
+      "supporting_figures": 3
     },
     "main_figures": {
-      "artifact_id": 11266175026,
-      "sha256": "ae4015dbcb1f3b6d178422da7b2976ab353d6ed910edb9c93a65937adab34a3f"
+      "artifact_id": 11273753416,
+      "sha256": "c07e2cc7bce7341debc930f05ce8e193c77e649401b4535d92b9ec9e94cf0bbf"
     },
     "supporting_figures": {
-      "artifact_id": 11265438953,
-      "sha256": "2291a7d42af1fd0d977e8a00be355c0b4b3d0b5b796fcb75ae7ddb1f7f0e71eb"
+      "artifact_id": 11273793396,
+      "sha256": "e2e8e97dcc5ad37b639e53bccd7a27dcf194ab2fed254d5abd7482f820289261"
     },
     "anonymous_review": {
-      "run_id": 37099999137,
+      "run_id": 37123738669,
       "conclusion": "success",
       "anonymity_guard": "pass",
       "pages": 27,
-      "artifact_id": 11265204413,
-      "sha256": "cad3f17c3e79b2f05e894863691fa68138a67b40653e85a0101cc95197cb4091"
+      "artifact_id": 11274153477,
+      "sha256": "2197b76028adfbe1375c08bf3c613755b235f634cbe23532adab3aa948c6f380"
     },
     "visual_qa": {
       "figure1": "passed",
@@ -144,12 +144,12 @@
       "final_combined_count"
     ],
     "synthetic_metadata_self_test": {
-      "run_id": 37093159799,
+      "run_id": 37123738694,
       "conclusion": "success",
-      "pre_release_combined_words": 8216,
-      "pre_release_headroom": 284,
-      "post_doi_combined_words": 8211,
-      "post_doi_headroom": 289,
+      "pre_release_combined_words": 8175,
+      "pre_release_headroom": 325,
+      "post_doi_combined_words": 8170,
+      "post_doi_headroom": 330,
       "final_upload_gate": "ready"
     },
     "active_reference_guard": {
@@ -164,7 +164,7 @@
       "github_release_absent_at_test": true
     },
     "promoted_evidence_guard": {
-      "run_id": 37099698648,
+      "run_id": 37121914865,
       "conclusion": "success"
     },
     "canonical_paths": {
@@ -173,6 +173,39 @@
       "cover_letter": "manuscript/COVER_LETTER_JAE_V0_4_0.md",
       "claim_ledger": "manuscript/CLAIM_LEDGER_V4.md",
       "legacy_v0_3_8_restored_to_main": true
+    },
+    "external_boundary_restored": true,
+    "external_boundary_summary": {
+      "nyctalus": {
+        "verdict": "FAIL",
+        "excess": 0.051747374510001,
+        "p": 0.1224,
+        "n": 27
+      },
+      "hipposideros": {
+        "verdict": "FAIL",
+        "excess": -0.04468361353981454,
+        "p": 0.8616,
+        "n": 13
+      },
+      "myotis_vivesi": {
+        "verdict": "FAIL",
+        "excess": 0.004702579344628057,
+        "p": 0.4419,
+        "n": 4
+      },
+      "pteropus_msl": {
+        "verdict": "PASS",
+        "excess": 0.16872869060124038,
+        "p": 0.0001,
+        "n": 4
+      },
+      "pteropus_msl_minus_dem": {
+        "classification": "post-outcome diagnostic",
+        "excess": 0.03231183908942928,
+        "p": 0.0023,
+        "n": 4
+      }
     }
   },
   "stop_rule": "no further same-data mechanism fishing for v0.4.0"
