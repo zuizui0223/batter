@@ -22,7 +22,7 @@ Internal header: v0.4.0 candidate — post-freeze maintenance synthesis.
 - Discussion: **1,369 words**
 - Conclusion: **320 words**
 - main figures referenced: **6**
-- Supporting Figures inherited: **2**
+- Supporting Figures: **3**
 
 The working manuscript ceiling is 8,500 words. Journal-specific combined counting must be rerun after title-page metadata are finalized.
 
@@ -35,11 +35,11 @@ The central ecological result is no longer framed only as detection of vertical 
 
 Supported comparative structure:
 - all five comparative panels retain calibrated centered vertical-distribution identity;
-- four structurally evaluable fruit-bat panels retain terrain-relative vertical-strategy fidelity at 500 m;
+- four structurally evaluable panels from *H. monstrosus* and *P. hastatus* retain terrain-relative vertical-strategy fidelity at 500 m;
 - no one of those four shows permutation-supported **positive** terrain-relative added segregation;
 - synchronous local co-use adds vertical separation in one of four panels, with the 2023 exception retaining its coarse 600-s/all-space limitation;
 - self-history remains predictive with >=1-day separation in 4/4 evaluable panels, >=3 days in 3/3, and >=7 days in 2/2;
-- centered individuality remains after 500-m place x speed x turning matching in 4/4 evaluable fruit-bat panels;
+- centered individuality remains after 500-m place x speed x turning matching in 4/4 evaluable *H. monstrosus*/*P. hastatus* panels;
 - under 2-km place x kinematic matching, same-individual history outpredicts contemporaneous other bats in 3/4 panels; 2016 is unresolved at p=0.0544;
 - simple patch-fidelity magnitude is not supported as a general cross-panel driver.
 
@@ -48,6 +48,16 @@ Preferred synthesis:
 > Persistent personal vertical strategies can be maintained without forming mutually exclusive vertical niches. The evidence is compatible with reuse of personal movement solutions, while the proximate carrier of persistence remains unresolved.
 
 This does **not** establish memory, learning, adaptation, optimality, personality, morphology as the cause, or resource specialization as the cause.
+
+## External boundary evidence
+
+Previously frozen external programmes constrain the generality of centered vertical individuality:
+- first frozen *N. noctula* primary: FAIL (+0.05175, p=0.1224; n=27);
+- *H. armiger/pratti*: FAIL (-0.04468, p=0.8616; n=13);
+- *M. vivesi*: FAIL (+0.00470, p=0.4419; n=4);
+- *P. poliocephalus*: PASS under a separate n=4 design (+0.16873, p=0.0001), attenuated after DEM subtraction to +0.03231 (p=0.0023).
+
+These are boundary tests, not a prevalence sample. The `need not partition` claim is scoped to the four terrain/co-use panels from **two species**, *H. monstrosus* and *P. hastatus*.
 
 ## Origin versus maintenance
 
