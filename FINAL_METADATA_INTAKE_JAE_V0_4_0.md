@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This file is the only remaining human-input checklist for `release/jae-v0.4.0-rc1`.
+This file is the only remaining human-input checklist for `release/jae-v0.4.0-rc2`.
 
 Scientific content is frozen. Do not use metadata completion as an occasion to modify analyses, claims, figures or manuscript interpretation.
 
@@ -10,10 +10,10 @@ Scientific content is frozen. Do not use metadata completion as an occasion to m
 
 Title:
 
-**Persistent individual vertical strategies need not partition three-dimensional space in bats**
+**Persistent individual vertical strategies need not partition three-dimensional space in two tropical bat species**
 
 Release candidate:
-`release/jae-v0.4.0-rc1`
+`release/jae-v0.4.0-rc2`
 
 Expected release tag after all gates pass:
 `jae-v0.4.0`
@@ -61,7 +61,7 @@ No field above should be inferred from repository history, account identity, ema
    `python scripts/check_zenodo_release_ready_v0_4_0.py`
 9. Run the manual GitHub Action:
    `jae-github-release-preflight-v0.4.0`
-   with candidate `release/jae-v0.4.0-rc1`.
+   with candidate `release/jae-v0.4.0-rc2`.
 10. Only after every pre-release gate is READY and the repository is enabled in Zenodo, publish one GitHub release with tag `jae-v0.4.0` from the RC.
 
 ## Post-DOI sequence
