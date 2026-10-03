@@ -111,3 +111,22 @@ Therefore the external source is fixed before environmental numeric support is i
 ERA5 pressure-level vertical velocity is not promoted ahead of horizontal wind because the currently available time-series product is 6-hourly and coarse relative to the movement records. It may not rescue a failed wind primary.
 
 The external join is intended to represent broad atmospheric context, not tree-scale or canopy-scale microclimate.
+
+
+## Frozen implementation details for wind-support preflight
+
+To avoid ambiguity before any ERA5 wind values are inspected:
+
+- Public ERA5 mirror: Earthmover Icechunk ERA5 on anonymous AWS S3, bucket `earthmover-icechunk-era5`, prefix `icechunkV2`, branch `main`.
+- Group: `single/temporal`, chosen because it is time-series optimized while holding values identical to the spatial layout.
+- Variables: `u10` and `v10` only for the primary support gate.
+- ERA5 coordinate matching: nearest 0.25-degree grid point and nearest hourly valid time.
+- Movement universe: the exact x-y-time-derived 500-m place x frozen speed2_turn2 kinematic endpoint universe used by the completed 500-m stress test; no numeric height is parsed for the support preflight.
+- A target session enters the environmental support calculation only if it retains >=50 endpoints whose 500-m place x kinematic stratum occurs in both (i) another session of the same individual and (ii) at least one other individual in the same cohort, matching the existing 500-m x-y-time support logic.
+- Panel and individual wind ranges use the 5th to 95th percentiles of wind speed, sqrt(u10^2 + v10^2).
+- Individual span fraction = individual q95-q05 divided by panel q95-q05.
+- For each target session, self-history environmental support is the q05-q95 wind interval from the same individual's other eligible sessions.
+- Other-individual support is counted individual-by-individual using each donor individual's q05-q95 interval. A target endpoint is environmentally matched only when its wind speed lies within self-history support and within the support interval of at least two other individuals from the same cohort.
+- matched_target_fraction = matched endpoints / x-y-time-supported target endpoints, pooled with sessions equally weighted within individual and individuals equally weighted for the panel gate.
+- calendar-night concentration is calculated on environmentally matched target endpoints; no single shifted calendar night may contribute >50% of the panel's matched endpoints.
+- The expected x-y-time evaluable individual counts before ERA5 opening are inherited from the completed 500-m stress test: Hypsignathus 19, P. hastatus 2022 23, 2023 11, and 2016 9. Any mismatch invalidates the preflight rather than triggering retuning.
