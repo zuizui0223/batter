@@ -20,6 +20,8 @@ Current synthesis:
 - individuality survives 500-m place × speed × turning matching in 4/4 evaluable *H. monstrosus*/*P. hastatus* panels;
 - same-individual history generally outpredicts same-night conspecifics after 2-km place × kinematic matching.
 
+Previously frozen external boundary tests also constrain generality: *Nyctalus*, *Hipposideros* and *M. vivesi* failed their frozen primaries, whereas *Pteropus* passed under a separate n=4 programme and was strongly terrain-sensitive. These tests are boundary evidence, not a prevalence sample. The `need not partition` inference is based on four terrain/co-use panels from **two species**, *H. monstrosus* and *P. hastatus*.
+
 Preferred ecological interpretation:
 
 > **Persistent personal movement solutions can remain predictive without requiring mutually exclusive vertical niches.**
