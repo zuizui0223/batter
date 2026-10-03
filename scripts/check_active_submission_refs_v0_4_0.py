@@ -17,7 +17,7 @@ RELEASE_NOTES=ROOT/"RELEASE_NOTES_JAE_V0_4_0.md"
 METADATA_TEMPLATE=ROOT/"submission"/"jae_v0_4_0_metadata.template.json"
 
 EXPECTED_RC="release/jae-v0.4.0-rc2"
-EXPECTED_SUBMISSION_ID="batter-jae-v0.4.0-rc1"
+EXPECTED_SUBMISSION_ID="batter-jae-v0.4.0-rc2"
 EXPECTED_MANUSCRIPT="manuscript/MANUSCRIPT_DRAFT_V0_4_0.md"
 EXPECTED_FINAL_TITLE_PAGE="manuscript/TITLE_PAGE_V0_4_0.md"
 EXPECTED_METADATA="submission/jae_v0_4_0_metadata.json"
@@ -63,7 +63,7 @@ def main():
     need(notes,EXPECTED_TAG,"release notes",failures)
 
     if manifest.get("submission_id")!=EXPECTED_SUBMISSION_ID:
-        failures.append("machine manifest submission_id is not v0.4.0 rc1")
+        failures.append("machine manifest submission_id is not v0.4.0 rc2")
     if manifest.get("manuscript",{}).get("path")!=EXPECTED_MANUSCRIPT:
         failures.append("machine manifest manuscript path is not the frozen v0.4.0 candidate path")
     if manifest.get("manuscript",{}).get("title")!=EXPECTED_TITLE:
@@ -73,8 +73,8 @@ def main():
         failures.append("machine manifest release_candidate is stale")
     if pkg.get("expected_tag")!=EXPECTED_TAG:
         failures.append("machine manifest expected_tag is stale")
-    if pkg.get("status")!="validated_candidate_ready_for_rc1":
-        failures.append("machine manifest packaging status is not validated_candidate_ready_for_rc1")
+    if pkg.get("status")!="validated_candidate_ready_for_rc2":
+        failures.append("machine manifest packaging status is not validated_candidate_ready_for_rc2")
 
     if template.get("package_version")!="v0.4.0":
         failures.append("metadata template package_version is stale")
