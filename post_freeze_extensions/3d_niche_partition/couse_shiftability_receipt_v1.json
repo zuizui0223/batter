@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-couse-phase-shiftability-receipt-v1",
+  "status": "VERTICAL_SEPARATION_MAY_OPEN",
+  "authoritative_workflow": {
+    "run_id": 36953160645,
+    "head_sha": "ee515928517b795db01432375a0b6adb4381f203",
+    "conclusion": "success"
+  },
+  "vertical_values_used": false,
+  "panels": {
+    "hypsignathus": {
+      "primary_scope": "endpoint_excluded",
+      "tolerance_s": 60,
+      "usable_individuals": 11,
+      "usable_dyads": 22,
+      "primary_encounters": 883,
+      "shiftable_endpoint_fraction": 0.9920724801812004,
+      "encounter_sha256": "fdafe2a5c07acec790196617dc011dae97cb435a061a10c62893479eddc7139c",
+      "artifact_id": 11205055819,
+      "artifact_digest": "sha256:c1f1a19c13dfdf278c4656246e3bf38dad3402f4f0c5522e6cf4e3773c244d5a"
+    },
+    "phyllostomus_2022": {
+      "primary_scope": "endpoint_excluded",
+      "tolerance_s": 60,
+      "usable_individuals": 6,
+      "usable_dyads": 10,
+      "primary_encounters": 347,
+      "shiftable_endpoint_fraction": 0.9942363112391931,
+      "encounter_sha256": "f5395250f476e22eab441bd9c2b52297277f282e71d66c0a4eebc531f612158a",
+      "artifact_id": 11203734721,
+      "artifact_digest": "sha256:3f13de90b151c4b56f60ee953e31e1eaac0459be6ff51607178dccf68977bb66"
+    },
+    "phyllostomus_2023": {
+      "primary_scope": "all_space",
+      "tolerance_s": 600,
+      "usable_individuals": 6,
+      "usable_dyads": 8,
+      "primary_encounters": 679,
+      "shiftable_endpoint_fraction": 0.9410898379970545,
+      "encounter_sha256": "d4250eafeb7b602e47f7b9449bb76d4a71af0f0bfaa3bc3b801b260e69f2f6bb",
+      "artifact_id": 11204589047,
+      "artifact_digest": "sha256:72064d9d50f01b65b9e75cfdb28443cbef4acbe57fb783fc6e00b8dad3e94fbb"
+    },
+    "phyllostomus_2016": {
+      "primary_scope": "endpoint_excluded",
+      "tolerance_s": 600,
+      "usable_individuals": 5,
+      "usable_dyads": 8,
+      "primary_encounters": 16096,
+      "shiftable_endpoint_fraction": 1,
+      "encounter_sha256": "65efc47708c6e4b85d4012421cb3d84e3983c46acf46bbe64a7305a8f5546402",
+      "artifact_id": 11204837738,
+      "artifact_digest": "sha256:a195c326e8d8133b01fdcd1644e9ae6f585c5785bc4a9e384199d037f7fd6f43"
+    }
+  },
+  "null_group_rule": "same primary-scope individual x target-session x 500-m-cell z_rel sequence; circular random nonzero index; size-1 groups unchanged",
+  "next_step": "compute terrain-relative vertical separation on exactly these frozen encounter sets"
+}

@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "workflow_run": 37090059505,
+  "artifact_id": 11261673221,
+  "vertical_numeric_opened": false,
+  "pass_count": 3,
+  "feasible_to_open_vertical_outcome": true,
+  "panels": {
+    "hypsignathus": {
+      "n": 19,
+      "repeat_n": 18,
+      "span_good_n": 19,
+      "matched_fraction": 0.7776497735138236,
+      "max_night_fraction": 0.11434272120328448,
+      "wind_q05": 0.6367215512293062,
+      "wind_q95": 3.032373751263747,
+      "pass": true
+    },
+    "phyllostomus_2022": {
+      "n": 23,
+      "repeat_n": 21,
+      "span_good_n": 19,
+      "matched_fraction": 0.7001266605504917,
+      "max_night_fraction": 0.08870043548017419,
+      "wind_q05": 0.6635733948983867,
+      "wind_q95": 2.3252508120980706,
+      "pass": true
+    },
+    "phyllostomus_2023": {
+      "n": 11,
+      "repeat_n": 9,
+      "span_good_n": 10,
+      "matched_fraction": 0.5272977076667735,
+      "max_night_fraction": 0.26205241048209643,
+      "wind_q05": 1.3759664833134226,
+      "wind_q95": 3.76165071990515,
+      "pass": true
+    },
+    "phyllostomus_2016": {
+      "n": 9,
+      "repeat_n": 9,
+      "span_good_n": 7,
+      "matched_fraction": 0.3441334804508419,
+      "max_night_fraction": 0.27315018220349935,
+      "wind_q05": 0.6601733034092546,
+      "wind_q95": 2.9999613427239495,
+      "pass": false
+    }
+  }
+}

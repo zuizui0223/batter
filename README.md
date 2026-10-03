@@ -1,39 +1,43 @@
 # batter
 
-Ecological analysis of repeatable individual shapes of vertical space use in three-dimensional bat airspace.
+Ecological analysis of how persistent individual vertical strategies are maintained in three-dimensional bat airspace without necessarily partitioning it into exclusive vertical niches.
 
 ## Biological question
 
-Do bat populations contain repeatable **individual-specific organizations of vertical space use**—
-that is, different probability distributions around their session-specific typical altitude—and do
-those differences persist after coarse horizontal occupancy and additive altitude level are controlled?
+Do bats carry persistent individual **solutions to recurring three-dimensional movement problems**, and does maintaining those solutions require ongoing spatial partitioning?
 
-The project began from an ODSP result in *Tadarida teniotis*, but the current paper is comparative:
-the strongest ecological result comes from five non-*Tadarida* panels that retain centered
-vertical-distribution shape identity.
+The paper distinguishes the **origin of individual specialization** from its **maintenance**. Processes such as competition or ecological opportunity may generate individual differences, while repeated expression can persist for other reasons—experience, stable flight performance, fine resource knowledge or environmental response rules.
 
 ## Core result
 
-Across six tracking panels from four bat taxa, same-individual vertical profiles retain more
-held-out predictive information than expected under whole-session identity exchangeability after
-self and other profiles are integrated under the **same 5-km horizontal cell-use weights**.
+Across six tracking panels from four bat taxa, same-individual vertical profiles retain more held-out predictive information than expected under whole-session identity exchangeability after coarse horizontal occupancy is standardized. Five comparative panels also retain centered vertical-distribution shape identity after session-median centering removes additive altitude level.
 
-More importantly, all five comparative panels retain vertical-distribution shape identity after
-every session is translated to zero median, removing any additive constant altitude offset.
+The post-freeze maintenance synthesis adds a second layer:
 
-The descriptive reconstruction of those already-tested profiles visually illustrates candidate
-dimensions of shape heterogeneity: estimated profiles vary in **central concentration and
-upper/lower tail use** around their session-specific median altitude. Those component-wise ranges
-were not separately null-calibrated and may include finite-session profile-estimation noise; the
-inferential result applies to the full centered distribution shape.
+- terrain-relative vertical-strategy fidelity persists in **4/4** structurally evaluable *H. monstrosus*/*P. hastatus* panels at 500 m;
+- **0/4** supports positive terrain-relative added segregation;
+- synchronous local co-use adds vertical separation in only **1/4** panels;
+- self-history remains predictive at >=1 day in **4/4**, >=3 days in **3/3**, and >=7 days in **2/2** structurally evaluable panels;
+- individuality survives **500-m place × speed × turning** matching in **4/4** evaluable *H. monstrosus*/*P. hastatus* panels;
+- under 2-km place × kinematic matching, self-history outpredicts same-night conspecifics in **3/4** panels, with 2016 unresolved at its frozen threshold.
 
-Therefore the main ecological conclusion is:
+Therefore the current ecological conclusion is:
 
-> **Bat populations can contain repeatable individual shapes of vertical space use that persist
-> beyond coarse horizontal occupancy and additive altitude zero point.**
+> **Persistent individual vertical strategies need not partition three-dimensional space into mutually exclusive niches.**
 
-The motivating *Tadarida* panel is the explicit boundary case: it retains repeatable absolute
-vertical-location identity but not centered-shape identity.
+A bounded mechanistic synthesis is **personal solution reuse**: an individual's previous movement solution can remain predictive across bouts even when conspecific strategies overlap. This is not direct evidence that memory or learning is the cause.
+
+The motivating *Tadarida* panel remains the explicit boundary case: it retains repeatable absolute vertical-location identity but not centered-shape identity.
+
+## External boundary tests
+
+Previously frozen external tests are retained in rc2 rather than omitted:
+- *Nyctalus noctula*: first frozen primary FAIL (+0.05175, p=0.1224);
+- *Hipposideros armiger/pratti*: FAIL (-0.04468, p=0.8616);
+- *Myotis vivesi*: FAIL (+0.00470, p=0.4419);
+- *Pteropus poliocephalus*: PASS under a separate n=4 programme (+0.16873, p=0.0001), strongly attenuated after DEM subtraction (+0.03231, p=0.0023).
+
+These are boundary tests, not a prevalence sample. They constrain the centered-shape phenomenon to be non-universal across the systems tested. The stronger terrain/partitioning claim is based on four panels from **two species**, *H. monstrosus* and *P. hastatus*.
 
 ## What the shape individuality looks like
 
@@ -53,20 +57,20 @@ signal. No cluster, strategy class, behavioural state or additional p-value is i
 
 See `CENTERED_SHAPE_PROFILE_DESCRIPTIVE_RESULT_V1.md`.
 
-## What could generate the repeatable shapes
+## What may maintain the persistent strategies
 
-The calibrated result is distribution-level: individual identity predicts how vertical-use probability
-is organized around the session median. Two non-exclusive mechanisms could generate that result:
+The current evidence rules out several simple general explanations: immediate carryover, coarse patch use, broad kinematic-state composition, common nightly context and ongoing vertical avoidance are each insufficient on their own.
 
-- **behavioural-mixture individuality** — individuals repeatedly allocate different fractions of a
-  night to commuting, feeding-patch use, social-site visits or other behavioural states;
-- **within-state individuality** — individuals differ in vertical movement even within the same
-  behavioural state because of morphology, route memory, experience, resource choice or atmospheric
-  response.
+The proximate carrier of persistence remains unresolved. Viable classes are:
 
-The present public datasets do not contain a harmonized behavioural-state classifier, so these are
-prospective mechanisms, not inferred causes. A decisive next test is whether identity disappears or
-persists after conditioning on independently classified behavioural state.
+- **information reuse / experience** — previously learned routes, approach geometries or search solutions;
+- **stable performance matching** — morphology, wing loading or other persistent individual constraints;
+- **sub-500-m task/resource fidelity** — trees, canopy gaps, prey layers, corridors or social destinations inside the present spatial matching scale;
+- **fine environmental reaction norms** — individual-specific responses to airflow or microclimate.
+
+A predeclared ERA5-wind reaction-norm family stopped before any numeric vertical outcome was opened because *P. hastatus* 2023 retained 7 evaluable individuals against 8 required. It is therefore **unadjudicated**, not a negative reaction-norm result.
+
+The decisive future question is: **what information must travel with an individual for its previous vertical solution to remain predictive?**
 
 ## Why the claim changed
 
@@ -152,20 +156,47 @@ See `TAG_ALTITUDE_BIAS_AUDIT_RESULT.md`.
 
 ## Submission status
 
-The v0.3.4 rc3 package is retained as the pre-audit baseline and must not be submitted as the final
-scientific version.
+Current scientific manuscript:
+`manuscript/MANUSCRIPT_DRAFT_V0_4_0.md`
 
-The current manuscript is `manuscript/MANUSCRIPT_DRAFT_V0_3_8.md`, titled **“Repeatable individual shapes of vertical space use persist beyond coarse horizontal occupancy in bats.”** The v0.3.8
-manuscript/figure and anonymous-review workflows pass with 7,887 words, a 282-word five-statement
-abstract, six main figures plus two Supporting Figures, and a 26-page anonymous review PDF.
+Current title:
 
-Current release packaging target: `release/jae-v0.3.8-rc1`.
+> **Persistent individual vertical strategies need not partition three-dimensional space in two tropical bat species**
+
+Frozen release candidate:
+`release/jae-v0.4.0-rc2`
+
+Authoritative validation:
+- JAE submission gate run **37123936286** — PASS;
+- CI manuscript count **7,995 / 8,500** before title-page metadata;
+- anonymous review run **37123738669** — PASS;
+- anonymity guard PASS;
+- review PDF **27 pages**;
+- final Figure 1 and representative PDF pages visually inspected.
+
+Synthetic metadata pipeline run **37093159799** also passes end-to-end:
+- pre-release combined manuscript + generated title page **8,175 / 8,500**;
+- post-DOI combined count **8,170 / 8,500**;
+- final synthetic upload gate READY.
+
+No final tag or GitHub Release has been created. Remaining work is explicit human metadata, software licence, release date, Zenodo version DOI and final upload.
 
 ## Claim boundary
 
-The analyses concern vertical space use and repeatable individual distribution shape. Common-cell
-weighting removes occupancy differences among the tested horizontal cells, not all fine-scale
-horizontal fidelity. Session centering removes additive altitude level, not tag-specific error
-variance or behavioural-state composition. The analyses do not establish which visual component of Figure 6 carries the calibrated
-whole-profile identity signal, vertical-niche strategy classes, foraging specialization,
-personality, learning, optimality, stable learned routes or a universal causal mechanism.
+Supported:
+- repeatable centered vertical-distribution identity in the five comparative panels;
+- terrain-relative personal vertical-strategy fidelity in 4/4 structurally evaluable *H. monstrosus*/*P. hastatus* panels;
+- persistence across the longest structurally evaluable temporal lags;
+- persistence after fine place × broad kinematic matching;
+- empirical separation of persistent individual specialization from strong contemporaneous spatial partitioning.
+
+Not established:
+- memory or learning as the cause;
+- adaptive benefit or optimality;
+- morphology / wing loading as the cause;
+- exact resource or task identity;
+- fine environmental reaction norms;
+- absence of historical competition;
+- complete removal of sub-500-m horizontal or central-place structure.
+
+Scientific stop rule: **no further same-data mechanism fishing is authorized for v0.4.0.**

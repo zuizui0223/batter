@@ -1,0 +1,38 @@
+name: jae-promoted-evidence-guard-v0.4.0
+
+on:
+  push:
+    branches:
+      - release/jae-v0.4.0-rc2
+    paths:
+      - "post_freeze_extensions/3d_niche_partition/**"
+      - "post_freeze_extensions/strategy_maintenance/**"
+      - "post_freeze_extensions/NYCTALUS_VALIDATION_HISTORY_V1.md"
+      - "post_freeze_extensions/HIPPOSIDEROS_PRIMARY_CLOSEOUT_V1.md"
+      - "post_freeze_extensions/small_panel_generality/**"
+      - "post_freeze_extensions/pteropus_terrain_audit/**"
+      - "results/external_boundary_v0_4_0.csv"
+      - "post_freeze_extensions/temporal_persistence_1d_four_panel/**"
+      - "post_freeze_extensions/temporal_persistence_3d_three_panel/**"
+      - "post_freeze_extensions/temporal_persistence_7d_two_panel/**"
+      - "post_freeze_extensions/fine_place_kinematic_500m/**"
+      - "post_freeze_extensions/fine_place_same_night_four_panel/**"
+      - "post_freeze_extensions/movement_state_conditioning/**"
+      - "post_freeze_extensions/resource_patch_fidelity/**"
+      - "manuscript/PROMOTED_EVIDENCE_PROVENANCE_V0_4_0.md"
+      - "manuscript/promoted_evidence_provenance_v0_4_0.json"
+      - "scripts/check_promoted_evidence_v0_4_0.py"
+      - ".github/workflows/jae-promoted-evidence-guard-v0.4.0.yml"
+  workflow_dispatch:
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python scripts/check_promoted_evidence_v0_4_0.py

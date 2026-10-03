@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "study_id": "batter_partitioning_calibration_v1",
+  "endpoint": "I compatibility bounds",
+  "B": 9999,
+  "panels": {
+    "hypsignathus": {
+      "dyads": 22,
+      "observed_excess_m": -1.9827397926049208,
+      "bootstrap_q025_m": -4.808494653044392,
+      "bootstrap_q50_m": -2.0284285546351555,
+      "bootstrap_q975_m": 0.984896108901787
+    },
+    "phyllostomus_2022": {
+      "dyads": 10,
+      "observed_excess_m": -0.9473945522439209,
+      "bootstrap_q025_m": -3.2073661722274958,
+      "bootstrap_q50_m": -1.009722564236533,
+      "bootstrap_q975_m": 1.918079463552737
+    },
+    "phyllostomus_2023": {
+      "dyads": 8,
+      "observed_excess_m": 3.5737278739273783,
+      "bootstrap_q025_m": -4.6332678760798665,
+      "bootstrap_q50_m": 3.5780968739145926,
+      "bootstrap_q975_m": 11.729235873935366
+    },
+    "phyllostomus_2016": {
+      "dyads": 8,
+      "observed_excess_m": -0.8541475602856057,
+      "bootstrap_q025_m": -3.126848400352447,
+      "bootstrap_q50_m": -0.8130681702711229,
+      "bootstrap_q975_m": 1.1283890897547604
+    }
+  }
+}

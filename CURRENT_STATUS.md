@@ -1,6 +1,49 @@
 # Current scientific status
 
-Date: 2026-09-29
+Date: 2026-10-03
+
+## Current v0.4.0 submission state
+
+The active candidate is **v0.4.0**, titled:
+
+> **Persistent individual vertical strategies need not partition three-dimensional space in two tropical bat species**
+
+Frozen release candidate:
+`release/jae-v0.4.0-rc2`
+
+Current synthesis:
+- centered vertical-distribution identity persists in all five comparative panels;
+- terrain-relative personal strategy fidelity persists in 4/4 evaluable *H. monstrosus*/*P. hastatus* panels;
+- positive terrain-relative added segregation is supported in 0/4;
+- synchronous local co-use separation is supported in 1/4;
+- self-history remains predictive across the longest structurally evaluable multi-day lags;
+- individuality survives 500-m place × speed × turning matching in 4/4 evaluable *H. monstrosus*/*P. hastatus* panels;
+- same-individual history generally outpredicts same-night conspecifics after 2-km place × kinematic matching.
+
+Previously frozen external boundary tests also constrain generality: *Nyctalus*, *Hipposideros* and *M. vivesi* failed their frozen primaries, whereas *Pteropus* passed under a separate n=4 programme and was strongly terrain-sensitive. These tests are boundary evidence, not a prevalence sample. The `need not partition` inference is based on four terrain/co-use panels from **two species**, *H. monstrosus* and *P. hastatus*.
+
+Preferred ecological interpretation:
+
+> **Persistent personal movement solutions can remain predictive without requiring mutually exclusive vertical niches.**
+
+This separates the **origin of individual specialization** from the **maintenance of specialization**. Personal solution reuse is a bounded synthesis, not direct evidence that memory or learning is the cause.
+
+The continuous ERA5-wind reaction-norm family was stopped **before numeric vertical opening** when the all-three structural gate failed (*P. hastatus* 2023: 7 evaluable vs 8 required). No threshold relaxation, reduced-panel rescue or alternate weather-variable rescue is authorized.
+
+Validation:
+- submission workflow **37123936286** — PASS;
+- CI manuscript count **7,995 / 8,500**;
+- anonymous review workflow **37123738669** — PASS;
+- review PDF **27 pages**;
+- synthetic metadata pipeline **37123738694** — PASS;
+- synthetic pre-release combined count **8,175 / 8,500**;
+- synthetic post-DOI combined count **8,170 / 8,500**.
+
+Remaining blockers are non-scientific: explicit human author/declaration metadata, software licence, release date, Zenodo version DOI and journal upload.
+
+**Scientific stop rule:** no further same-data mechanism fishing is authorized for v0.4.0.
+
+The sections below are retained as historical provenance and may describe superseded v0.3.x states.
 
 ## Empirical programme
 
@@ -293,7 +336,7 @@ further scientific analysis family is opened.
 
 **JAE v0.3.3 rc2 is scientifically superseded and must not be submitted.**
 
-Current scientific candidate: `manuscript/MANUSCRIPT_DRAFT_V0_3_8.md`.
+Current scientific candidate: `manuscript/MANUSCRIPT_DRAFT_V0_4_0.md`.
 
 The v0.3.4 rc3 package is retained as the pre-audit baseline and must not be submitted as the final scientific version.
 

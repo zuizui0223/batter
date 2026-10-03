@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-couse-vertical-separation-result-v1",
+  "authoritative_workflow": {
+    "run_id": 36953712597,
+    "head_sha": "7d5f310b0ec5337b47202ced4378a78edc3daa66",
+    "conclusion": "success"
+  },
+  "historical_first_output": {
+    "run_id": 36953505648,
+    "head_sha": "e57022ae12eac8de81e6f37c3982e42f710875f4",
+    "correction": "one phase shift per group per replicate"
+  },
+  "panels": {
+    "hypsignathus": {
+      "scope": "endpoint_excluded",
+      "tolerance_s": 60,
+      "individuals": 11,
+      "dyads": 22,
+      "encounters": 883,
+      "observed_m": 21.985044741306808,
+      "null_mean_m": 23.96778453391173,
+      "q025": 21.094014482778828,
+      "q975": 27.22075290186507,
+      "excess_m": -1.9827397926049208,
+      "p_upper": 0.9045,
+      "supported": false
+    },
+    "phyllostomus_2022": {
+      "scope": "endpoint_excluded",
+      "tolerance_s": 60,
+      "individuals": 6,
+      "dyads": 10,
+      "encounters": 347,
+      "observed_m": 6.78230386000064,
+      "null_mean_m": 7.729698412244561,
+      "q025": 6.440199838410468,
+      "q975": 9.197072587801523,
+      "excess_m": -0.9473945522439209,
+      "p_upper": 0.9186,
+      "supported": false
+    },
+    "phyllostomus_2023": {
+      "scope": "all_space",
+      "tolerance_s": 600,
+      "individuals": 6,
+      "dyads": 8,
+      "encounters": 679,
+      "observed_m": 26.56567049998826,
+      "null_mean_m": 22.991942626060883,
+      "q025": 19.808381624995036,
+      "q975": 26.48501585000197,
+      "excess_m": 3.5737278739273783,
+      "p_upper": 0.0231,
+      "supported": true
+    },
+    "phyllostomus_2016": {
+      "scope": "endpoint_excluded",
+      "tolerance_s": 600,
+      "individuals": 5,
+      "dyads": 8,
+      "encounters": 16096,
+      "observed_m": 11.363499019979411,
+      "null_mean_m": 12.217646580265017,
+      "q025": 10.687156692494392,
+      "q975": 13.784813628463631,
+      "excess_m": -0.8541475602856057,
+      "p_upper": 0.8611,
+      "supported": false
+    }
+  },
+  "synthesis": "terrain-relative personal vertical strategy fidelity is supported in all four panels, while additional synchronous co-presence separation is supported only in P. hastatus 2023"
+}
