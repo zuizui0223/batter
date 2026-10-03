@@ -1,4 +1,4 @@
-# Claim ledger v4 — post-freeze maintenance synthesis
+# Final claim ledger v3
 
 ## Focal *Tadarida* claims
 
@@ -48,51 +48,3 @@ Avoid as demonstrated mechanisms:
 - learned flight route;
 - adaptive specialization;
 - causal resource partitioning.
-
-
-## Post-freeze 3D diagnostic claims (v2 reopening)
-
-These analyses were added after the manuscript outcomes were known and are explicitly diagnostic rather than independent confirmation.
-
-| Claim | Status | Evidence |
-|---|---|---|
-| Fruit-bat vertical individuality is explained solely by repeated use of different terrain elevations. | not supported as a general explanation | Terrain-relative V_rel remains positive and permutation-supported in 4/4 structurally evaluable panels: +0.042, +0.100, +0.077, +0.079; p<=0.0345. |
-| Repeatable terrain-relative strategies imply mutually separated vertical layers. | not supported | S_rel = -0.0158, -0.0090, +0.0163, +0.0289; no panel has permutation-supported positive added segregation. |
-| Local synchronous co-use generally induces extra vertical separation. | not supported as a general pattern | Upper-tail phase-shift test unsupported in 3/4 panels; positive dyad-bootstrap 95% upper endpoints +0.98, +1.92, +1.13 m. |
-| P. hastatus 2023 shows co-use-dependent separation. | supported within the frozen coarse design, heterogeneous | +3.57 m; phase-shift p=0.0231; 600-s/all-space design; dyad-bootstrap compatibility -4.63 to +11.73 m. |
-| Individual specialization and contemporaneous spatial partitioning are empirically distinguishable. | supported in these panels | Terrain-relative fidelity occurs in 4/4 while positive S_rel occurs in 0/4 and positive synchronous co-use separation in 1/4. |
-| Competition is absent or irrelevant. | not established | Geometry cannot exclude historical competition, resource differentiation or other causes of stable strategies. |
-
-### Preferred post-freeze synthesis
-
-> **Repeatable personal vertical strategies can persist relative to local terrain without requiring mutually exclusive vertical layers or systematic contemporaneous vertical avoidance. Individual specialization and strong spatial partitioning are therefore distinct empirical dimensions in these data.**
-
-### Provenance
-
-- terrain-relative geometry and co-use analyses: post-outcome diagnostics;
-- S calibration: post-outcome diagnostic frozen before S-null outputs were opened;
-- I dyad-bootstrap bounds: post-outcome compatibility diagnostic, not a post-hoc power or formal equivalence test;
-- manuscript reopening must be recorded as v2/post-freeze rather than represented as preregistered confirmation.
-
-
-## Post-freeze strategy-maintenance claims
-
-| Claim | Status | Evidence |
-|---|---|---|
-| The individual vertical signal is only immediate night-to-night carryover. | not supported as a general explanation | Identity persists with self-history restricted to >=1 day in 4/4 evaluable panels, >=3 days in 3/3, and >=7 days in 2/2. |
-| Coarse patch use or broad movement-state mixture explains the maintained signal. | not supported as a general explanation | 500-m place x speed x turning matching retains individuality in 4/4 evaluable fruit-bat panels; broad movement-state conditioning retains it in 5/5 comparative panels. |
-| A common calendar-night response explains the maintained signal. | not supported as a general explanation | Same-individual history beats contemporaneous other bats under 2-km place x kinematic matching in 3/4 panels; 2016 unresolved at p=0.0544. |
-| Simple resource-patch fidelity strength is the general driver. | not supported | Equal-panel rho=0.176, one-sided p=0.0573; Eidolon direction negative. |
-| Broad ERA5-wind reaction norms explain maintenance. | **unadjudicated / structural stop** | Continuous-slope preflight retained 18/14 Hypsignathus, 21/17 P. 2022, but 7/8 P. 2023; all-three gate failed before any numeric vertical outcome was opened. |
-| Personal solution reuse is the proximate mechanism. | plausible synthesis, not directly established | Supported pattern is persistent self-history information across days and contexts without general positive spatial segregation or co-use avoidance; memory/learning itself was not manipulated. |
-
-### Preferred maintenance wording
-
-> **The data are consistent with persistent personal solution reuse: self-history remains informative across days and matched movement contexts even though personal vertical strategies need not occupy exclusive layers. The proximate carrier of that persistence—learning, morphology, sub-500-m resource or route fidelity, or fine environmental reaction norms—remains unresolved.**
-
-Avoid:
-- memory is demonstrated;
-- learned routes are established;
-- wind reaction norms are absent;
-- morphology causes the strategies;
-- resource specialization has been excluded.
