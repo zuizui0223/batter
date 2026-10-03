@@ -63,18 +63,47 @@
   },
   "inference_class": "post-freeze diagnostic synthesis; each added diagnostic frozen before its own outcome",
   "packaging": {
-    "status": "package_rebuild_required",
+    "status": "validated_candidate_ready_for_rc1",
     "inherited_v0_3_8_validation_is_current": false,
-    "required_checks": [
-      "manuscript_figure_build",
-      "anonymous_review_build",
-      "anonymity_guard",
-      "figure_table_reference_checks",
-      "journal_word_count_gate",
-      "visual_QA"
-    ],
-    "release_candidate": "not_yet_created",
-    "expected_tag": "not_yet_created"
+    "submission_gate": {
+      "run_id": 37092713865,
+      "conclusion": "success",
+      "ci_manuscript_words": 8039,
+      "abstract_words": 282,
+      "introduction_words": 682,
+      "results_words": 1348,
+      "discussion_words": 1205,
+      "main_figures": 6,
+      "supporting_figures": 2
+    },
+    "main_figures": {
+      "artifact_id": 11263066200,
+      "sha256": "369b2219a75cd71fbf3ae66f18d2ea7efd930a78dac96ed79196c9c4f5edc687"
+    },
+    "supporting_figures": {
+      "artifact_id": 11262871439,
+      "sha256": "8cdce552c09ef606694ad7275e25aeeaac184b571b027fdaa1e26b0c61159e90"
+    },
+    "anonymous_review": {
+      "run_id": 37092621932,
+      "conclusion": "success",
+      "anonymity_guard": "pass",
+      "pages": 27,
+      "artifact_id": 11263790889,
+      "sha256": "23faa3a6a0d6f309dd3612f4cc46d78a02dbf7d024925c0dff2d645654917026"
+    },
+    "visual_qa": {
+      "figure1": "passed",
+      "review_pdf_representative_pages": "passed"
+    },
+    "release_candidate": "release/jae-v0.4.0-rc1",
+    "expected_tag": "jae-v0.4.0",
+    "remaining": [
+      "human_metadata",
+      "software_license",
+      "archive_doi",
+      "final_combined_count"
+    ]
   },
   "stop_rule": "no further same-data mechanism fishing for v0.4.0"
 }
