@@ -1,4 +1,4 @@
-# Final claim ledger v3
+# Claim ledger v4 — post-freeze maintenance synthesis
 
 ## Focal *Tadarida* claims
 
@@ -73,3 +73,26 @@ These analyses were added after the manuscript outcomes were known and are expli
 - S calibration: post-outcome diagnostic frozen before S-null outputs were opened;
 - I dyad-bootstrap bounds: post-outcome compatibility diagnostic, not a post-hoc power or formal equivalence test;
 - manuscript reopening must be recorded as v2/post-freeze rather than represented as preregistered confirmation.
+
+
+## Post-freeze strategy-maintenance claims
+
+| Claim | Status | Evidence |
+|---|---|---|
+| The individual vertical signal is only immediate night-to-night carryover. | not supported as a general explanation | Identity persists with self-history restricted to >=1 day in 4/4 evaluable panels, >=3 days in 3/3, and >=7 days in 2/2. |
+| Coarse patch use or broad movement-state mixture explains the maintained signal. | not supported as a general explanation | 500-m place x speed x turning matching retains individuality in 4/4 evaluable fruit-bat panels; broad movement-state conditioning retains it in 5/5 comparative panels. |
+| A common calendar-night response explains the maintained signal. | not supported as a general explanation | Same-individual history beats contemporaneous other bats under 2-km place x kinematic matching in 3/4 panels; 2016 unresolved at p=0.0544. |
+| Simple resource-patch fidelity strength is the general driver. | not supported | Equal-panel rho=0.176, one-sided p=0.0573; Eidolon direction negative. |
+| Broad ERA5-wind reaction norms explain maintenance. | **unadjudicated / structural stop** | Continuous-slope preflight retained 18/14 Hypsignathus, 21/17 P. 2022, but 7/8 P. 2023; all-three gate failed before any numeric vertical outcome was opened. |
+| Personal solution reuse is the proximate mechanism. | plausible synthesis, not directly established | Supported pattern is persistent self-history information across days and contexts without general positive spatial segregation or co-use avoidance; memory/learning itself was not manipulated. |
+
+### Preferred maintenance wording
+
+> **The data are consistent with persistent personal solution reuse: self-history remains informative across days and matched movement contexts even though personal vertical strategies need not occupy exclusive layers. The proximate carrier of that persistence—learning, morphology, sub-500-m resource or route fidelity, or fine environmental reaction norms—remains unresolved.**
+
+Avoid:
+- memory is demonstrated;
+- learned routes are established;
+- wind reaction norms are absent;
+- morphology causes the strategies;
+- resource specialization has been excluded.

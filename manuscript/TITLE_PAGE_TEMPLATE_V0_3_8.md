@@ -2,11 +2,11 @@
 
 ## Title
 
-Repeatable individual shapes of vertical space use persist beyond coarse horizontal occupancy in bats
+Persistent individual vertical strategies need not partition three-dimensional space in bats
 
 ## Running title
 
-Individual shapes of bat vertical space use
+Persistent bat vertical strategies
 
 ## Authors
 
@@ -48,4 +48,4 @@ archive DOI: [INSERT PERMANENT ARCHIVE DOI].
 
 ## Word count
 
-Current v0.3.8 manuscript CI estimate: **7,887 words** under the repository counting rule. Reconfirm the combined journal word count after final title-page metadata are inserted.
+Current post-freeze manuscript estimate: **7,873 words** under the repository whitespace-delimited counting rule. Reconfirm the combined journal word count after final title-page metadata are inserted.

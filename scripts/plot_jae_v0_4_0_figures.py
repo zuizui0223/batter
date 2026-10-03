@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate JAE submission figures for calibrated vertical identity v0.3.8."""
+"""Generate JAE submission figures for calibrated vertical identity v0.4.0."""
 from __future__ import annotations
 
 import csv
@@ -11,8 +11,8 @@ from matplotlib.patches import FancyBboxPatch
 
 ROOT=Path(__file__).resolve().parents[1]
 RESULTS=ROOT/"results"
-MAIN_OUT=ROOT/"figures"/"submission_v0_3_8"
-SI_OUT=ROOT/"figures"/"supporting_v0_3_8"
+MAIN_OUT=ROOT/"figures"/"submission_v0_4_0"
+SI_OUT=ROOT/"figures"/"supporting_v0_4_0"
 MAIN_OUT.mkdir(parents=True,exist_ok=True)
 SI_OUT.mkdir(parents=True,exist_ok=True)
 
@@ -38,38 +38,36 @@ def save(fig,stem,outdir=MAIN_OUT):
     plt.close(fig)
 
 def fig1():
-    fig,ax=plt.subplots(figsize=(9.0,6.2))
-    ax.set_xlim(0,12); ax.set_ylim(0,8); ax.axis("off")
+    fig,ax=plt.subplots(figsize=(9.0,6.4))
+    ax.set_xlim(0,12); ax.set_ylim(0,9); ax.axis("off")
 
     boxes=[
-        (0.3,5.8,2.3,1.2,"Apparent individual\nvertical differences"),
-        (3.1,5.8,2.5,1.2,"Remove simple alternatives\ncommon horizontal weights\n+ session centering"),
-        (6.2,5.8,2.4,1.2,"Persistent individual\nvertical organization"),
-        (9.2,5.8,2.4,1.2,"Terrain-relative fidelity\nwithin shared 500-m cells"),
-        (1.1,2.5,2.8,1.35,"Maintenance stress tests\nmulti-day self-history\n+ 500-m place × state"),
-        (4.6,2.5,2.8,1.35,"Partitioning diagnostics\npositive S_rel: 0/4\nco-use separation: 1/4"),
-        (8.2,2.3,3.0,1.7,"Ecological synthesis\npersistent personal solutions\ncan overlap in 3-D space"),
+        (0.4,6.7,2.5,1.2,"Apparent individual\nvertical differences"),
+        (3.5,6.7,2.7,1.2,"Remove simple alternatives\ncommon horizontal weights\n+ session centering"),
+        (6.9,6.7,2.7,1.2,"Persistent individual\nvertical organization"),
+        (1.0,3.7,3.2,1.55,"Persistence diagnostics\nterrain-relative: 4/4\nmulti-day + 500-m place × state"),
+        (7.0,3.7,3.2,1.55,"Partitioning diagnostics\npositive S_rel: 0/4\nco-use separation: 1/4"),
+        (4.25,1.0,3.5,1.65,"Ecological synthesis\npersonal solutions persist\nwithout exclusive vertical niches"),
     ]
     for x,y,w,h,label in boxes:
         ax.add_patch(FancyBboxPatch((x,y),w,h,boxstyle="round,pad=0.06",fill=False,linewidth=1.2))
         ax.text(x+w/2,y+h/2,label,ha="center",va="center",fontsize=9.5)
 
     arrows=[
-        ((2.6,6.4),(3.1,6.4)),
-        ((5.6,6.4),(6.2,6.4)),
-        ((8.6,6.4),(9.2,6.4)),
-        ((7.4,5.8),(2.5,3.85)),
-        ((10.4,5.8),(6.0,3.85)),
-        ((3.9,3.15),(4.6,3.15)),
-        ((7.4,3.15),(8.2,3.15)),
+        ((2.9,7.3),(3.5,7.3)),
+        ((6.2,7.3),(6.9,7.3)),
+        ((8.25,6.7),(2.6,5.25)),
+        ((8.25,6.7),(8.6,5.25)),
+        ((2.6,3.7),(5.55,2.65)),
+        ((8.6,3.7),(6.45,2.65)),
     ]
     for start,end in arrows:
         ax.annotate("",xy=end,xytext=start,arrowprops={"arrowstyle":"->","linewidth":1.0})
 
-    ax.text(0.45,0.75,
+    ax.text(0.55,0.18,
             "Origin and maintenance are distinct: processes may generate individual specialization without\n"
             "requiring ongoing vertical exclusion to keep personal strategies predictive across bouts.",
-            fontsize=9.5)
+            fontsize=9.2)
     ax.set_title("From vertical individuality to maintenance without exclusive spatial partitioning")
     save(fig,"figure1_horizontal_standardization")
 

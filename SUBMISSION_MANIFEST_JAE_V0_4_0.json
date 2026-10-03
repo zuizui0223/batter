@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "submission_id": "batter-jae-v0.4.0-candidate",
+  "date": "2026-10-03",
+  "journal_target": "Journal of Animal Ecology",
+  "manuscript": {
+    "path": "manuscript/MANUSCRIPT_DRAFT_V0_3_8.md",
+    "internal_version": "v0.4.0 candidate — post-freeze maintenance synthesis",
+    "title": "Persistent individual vertical strategies need not partition three-dimensional space in bats",
+    "whitespace_word_estimate": 7873,
+    "abstract_words": 287,
+    "introduction_words": 679,
+    "methods_words": 2789,
+    "results_words": 1521,
+    "discussion_words": 1369,
+    "conclusion_words": 320,
+    "main_figures": 6,
+    "supporting_figures": 2,
+    "ci_word_estimate": 8039,
+    "ci_headroom_before_title_page": 461,
+    "results_words_ci": 1348,
+    "discussion_words_ci": 1205
+  },
+  "scientific_status": {
+    "comparative_centered_shape_panels_pass": 5,
+    "terrain_relative_fidelity_panels_pass": 4,
+    "positive_terrain_relative_segregation_panels": 0,
+    "synchronous_couse_separation_panels": 1,
+    "temporal_persistence": {
+      "day1": "4/4 evaluable",
+      "day3": "3/3 evaluable",
+      "day7": "2/2 evaluable"
+    },
+    "fine_place_kinematic_500m": "4/4 evaluable fruit-bat panels",
+    "same_night_control": "3/4 support; 2016 unresolved p=0.0544",
+    "patch_fidelity_general_driver": false,
+    "preferred_synthesis": "persistent personal solution reuse without exclusive vertical niches",
+    "solution_reuse_directly_established": false
+  },
+  "reaction_norm": {
+    "numeric_vertical_opened": false,
+    "environment": "ERA5 hourly 10-m wind speed",
+    "architecture": "continuous within-stratum individual wind slope",
+    "structural_gate": {
+      "hypsignathus": {
+        "n": 18,
+        "required": 14,
+        "pass": true
+      },
+      "phyllostomus_2022": {
+        "n": 21,
+        "required": 17,
+        "pass": true
+      },
+      "phyllostomus_2023": {
+        "n": 7,
+        "required": 8,
+        "pass": false
+      }
+    },
+    "family_stopped": true,
+    "interpretation": "unadjudicated, not negative evidence"
+  },
+  "inference_class": "post-freeze diagnostic synthesis; each added diagnostic frozen before its own outcome",
+  "packaging": {
+    "status": "validated_candidate_ready_for_rc1",
+    "inherited_v0_3_8_validation_is_current": false,
+    "submission_gate": {
+      "run_id": 37092713865,
+      "conclusion": "success",
+      "ci_manuscript_words": 8039,
+      "abstract_words": 282,
+      "introduction_words": 682,
+      "results_words": 1348,
+      "discussion_words": 1205,
+      "main_figures": 6,
+      "supporting_figures": 2
+    },
+    "main_figures": {
+      "artifact_id": 11263066200,
+      "sha256": "369b2219a75cd71fbf3ae66f18d2ea7efd930a78dac96ed79196c9c4f5edc687"
+    },
+    "supporting_figures": {
+      "artifact_id": 11262871439,
+      "sha256": "8cdce552c09ef606694ad7275e25aeeaac184b571b027fdaa1e26b0c61159e90"
+    },
+    "anonymous_review": {
+      "run_id": 37092621932,
+      "conclusion": "success",
+      "anonymity_guard": "pass",
+      "pages": 27,
+      "artifact_id": 11263790889,
+      "sha256": "23faa3a6a0d6f309dd3612f4cc46d78a02dbf7d024925c0dff2d645654917026"
+    },
+    "visual_qa": {
+      "figure1": "passed",
+      "review_pdf_representative_pages": "passed"
+    },
+    "release_candidate": "release/jae-v0.4.0-rc1",
+    "expected_tag": "jae-v0.4.0",
+    "remaining": [
+      "human_metadata",
+      "software_license",
+      "archive_doi",
+      "final_combined_count"
+    ]
+  },
+  "stop_rule": "no further same-data mechanism fishing for v0.4.0"
+}
