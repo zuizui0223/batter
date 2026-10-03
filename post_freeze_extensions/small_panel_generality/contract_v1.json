@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-small-panel-generality-v1",
+  "frozen_date": "2026-09-30",
+  "status": "new prospective programme frozen after comparative-generality v1 structural screening and before numeric vertical values are opened in either admitted source",
+  "relationship_to_v1": {
+    "v1_minimum_repeat_individuals": 5,
+    "v1_results_preserved": true,
+    "v1_failures_not_relabelled": "Both admitted sources remain STRUCTURAL STOP under comparative-generality v1.",
+    "new_design_reason": "The closed v1 structural screen identified exactly two independent native-height sources with four repeat individuals and no vertical outcome opened. The new programme asks whether a four-individual panel can be evaluated prospectively under a separately frozen estimator.",
+    "outcome_guidance": "none; source admission uses only previously opened nonvertical structure and native-height presence"
+  },
+  "closed_source_set": [
+    {
+      "source_id": "myotis_vivesi_kk3bg2f4",
+      "taxon": "Myotis vivesi",
+      "doi": "10.5441/001/1.kk3bg2f4",
+      "event_url": "https://datarepository.movebank.org/server/api/core/bitstreams/8c34b3fd-d746-4716-bc67-8c770810d1dd/content",
+      "event_sha256": "38fdeda4a588f86f6f3f4d83dabed71c7e74dcbed1fe055a0aa9d8216be3ddcc",
+      "vertical_field": "height-above-ellipsoid",
+      "vertical_semantics": "source-native GPS height above reference ellipsoid",
+      "v1_repeat_individuals": [
+        "Viv12",
+        "Viv14",
+        "Viv6",
+        "Viv8"
+      ],
+      "v1_repeat_n": 4
+    },
+    {
+      "source_id": "pteropus_poliocephalus_5bd6pq55",
+      "taxon": "Pteropus poliocephalus",
+      "doi": "10.5441/001/1.5bd6pq55",
+      "event_url": "https://datarepository.movebank.org/server/api/core/bitstreams/792122ca-c534-4607-81d4-1154cb7a5196/content",
+      "vertical_field": "height-above-msl",
+      "vertical_semantics": "source-native GPS height above mean sea level",
+      "v1_repeat_n": 4
+    }
+  ],
+  "admission_rule": "All and only independent sources in the frozen comparative-generality v1 screen that (a) have an accepted native event-level vertical field, (b) retained exactly four repeat individuals under the unchanged >=50-event and >4-h-gap session rule, and (c) have not had numeric vertical values opened are admitted.",
+  "outcome_blind_preflight": {
+    "height_operation": "presence/nonblank only",
+    "allowed_nonvertical": [
+      "individual ID",
+      "timestamp",
+      "longitude",
+      "latitude",
+      "visible/outlier flags",
+      "native-height presence"
+    ],
+    "quality_filter": "respect explicit source visible/outlier flags where present; never filter by height magnitude",
+    "session_rule": "within individual, split consecutive retained events at gap >4 hours",
+    "minimum_presence_qualified_events_per_session": 50,
+    "repeat_individual": "at least two >=50-event sessions",
+    "required_repeat_individuals": 4,
+    "projection": "per source UTM from median nonvertical longitude/latitude",
+    "grid_m": 5000,
+    "minimum_common_support_target_events": 50,
+    "required_estimator_evaluable_individuals": 4
+  },
+  "horizontal_axis": {
+    "timing": "must be opened and frozen before vertical magnitude for each source",
+    "alpha": 0.5,
+    "response": "5-km horizontal-cell occupancy",
+    "self_profile": "equal-weight other eligible sessions of same individual",
+    "other_profile": "pool eligible sessions within each other individual then equal-weight the three other individuals",
+    "target_score": "mean event log P_self(cell)-log P_other(cell)",
+    "aggregation": "equal target session within individual then equal individual",
+    "null": "whole-session identity permutation preserving the exact session-count multiset per identity",
+    "B": 9999,
+    "seed_by_source": {
+      "myotis_vivesi_kk3bg2f4": 20260930151,
+      "pteropus_poliocephalus_5bd6pq55": 20260930152
+    }
+  },
+  "vertical_primary": {
+    "field": "source-specific native vertical field frozen above",
+    "session_centering": "subtract full frozen eligible-session median before binning",
+    "centered_edges_m": [
+      "-inf",
+      -400,
+      -200,
+      -100,
+      -50,
+      0,
+      50,
+      100,
+      200,
+      400,
+      "inf"
+    ],
+    "alpha": 0.5,
+    "self_profile": "equal-weight other frozen eligible sessions of same individual",
+    "other_profile": "pool eligible sessions within each other individual then equal-weight the three other individuals",
+    "common_cell_weighting": "derive equal-session self weights on target-supported 5-km cells and apply identical weights to self and other vertical profiles",
+    "target_score": "mean supported-event log P_self(centered z)-log P_other(centered z)",
+    "aggregation": "equal target session within individual then equal individual",
+    "null": "whole-session identity permutation over frozen source training universe preserving exact session-count multiset; replay support/profile/weighting pipeline",
+    "B": 9999,
+    "seed_by_source": {
+      "myotis_vivesi_kk3bg2f4": 20260930161,
+      "pteropus_poliocephalus_5bd6pq55": 20260930162
+    },
+    "source_pass_rule": "calibrated excess >0 and one-sided p(null>=observed)<=0.05"
+  },
+  "programme_reporting": {
+    "primary": "report both source effects regardless of sign; neither can replace the other",
+    "cross_source": "with only two sources, report bivariate horizontal-vs-vertical positions descriptively; no population-level prevalence or predictor test",
+    "v1_status": "continue to report each source as structurally ineligible under the original >=5-individual programme"
+  },
+  "prohibited": [
+    "lower >=50-event session threshold",
+    "alter >4-hour session split",
+    "change 5-km grid after preflight",
+    "change vertical bins after preflight",
+    "drop one source based on its vertical result",
+    "exclude an individual after vertical opening",
+    "switch to absolute-height endpoint",
+    "promote this new programme as satisfying the original v1 >=5-individual gate"
+  ],
+  "claim_boundary": [
+    "The design change is based only on nonvertical sample structure, not on vertical effects.",
+    "A source that fails the four-individual common-support gate stops before vertical opening.",
+    "A vertical FAIL remains a prospective result under this small-panel programme.",
+    "This programme tests two specific structurally available sources and does not estimate prevalence across bats."
+  ]
+}
