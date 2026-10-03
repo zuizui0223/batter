@@ -334,7 +334,7 @@ further scientific analysis family is opened.
 
 **JAE v0.3.3 rc2 is scientifically superseded and must not be submitted.**
 
-Current scientific candidate: `manuscript/MANUSCRIPT_DRAFT_V0_3_8.md`.
+Current scientific candidate: `manuscript/MANUSCRIPT_DRAFT_V0_4_0.md`.
 
 The v0.3.4 rc3 package is retained as the pre-audit baseline and must not be submitted as the final scientific version.
 
