@@ -11,7 +11,7 @@ SI_TEXT=SI_PATH.read_text(encoding="utf-8")
 WORD_LIMIT=8500
 ABSTRACT_LIMIT=350
 KEYWORD_LIMIT=8
-EXPECTED_TITLE="Persistent individual vertical strategies need not partition three-dimensional space in bats"
+EXPECTED_TITLE="Persistent individual vertical strategies need not partition three-dimensional space in two tropical bat species"
 
 def words(text):
     text=re.sub(r"`{1,3}.*?`{1,3}"," ",text,flags=re.S)
@@ -68,6 +68,12 @@ def main():
         "p=0.0544",
         "Figure 6",
         "not separately",
+        "Independent external tests limit generality",
+        "task-level ecological opportunity",
+        "Supporting Figure S3",
+        "p=0.1224",
+        "p=0.8616",
+        "p=0.4419",
     ]
     for phrase in required:
         assert phrase in TEXT, f"missing v0.4.0 phrase: {phrase}"
@@ -89,7 +95,7 @@ def main():
     support_legends_si=re.findall(r"(?m)^\*\*Supporting Figure (S\d+)\.",SI_TEXT)
     assert main_legends==["1","2","3","4","5","6"], main_legends
     assert support_legends_main==[], support_legends_main
-    assert support_legends_si==["S1","S2"], support_legends_si
+    assert support_legends_si==["S1","S2","S3"], support_legends_si
 
     assert "Figure 1. From vertical individuality to maintenance without exclusive spatial partitioning." in TEXT
     assert "no further same-data mechanism fishing" not in TEXT.lower(), "internal stop-rule language leaked into manuscript"
