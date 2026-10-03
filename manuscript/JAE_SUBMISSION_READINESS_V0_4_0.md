@@ -49,7 +49,7 @@ Authoritative v0.4.0 review workflow:
 - anonymity gate: **PASS**
 - PDF pages: **27**
 - artifact id: **11274153477**
-- SHA256: `23faa3a6a0d6f309dd3612f4cc46d78a02dbf7d024925c0dff2d645654917026`
+- SHA256: `2197b76028adfbe1375c08bf3c613755b235f634cbe23532adab3aa948c6f380`
 
 The 27-page PDF was rendered to PNG for QA. Representative first, maintenance-Discussion and final pages were inspected; no clipping, overlap or broken glyphs were observed.
 
