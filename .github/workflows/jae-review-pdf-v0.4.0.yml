@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - post-freeze/manuscript-maintenance-synthesis-v1
-      - release/jae-v0.4.0-rc1
+      - release/jae-v0.4.0-rc2
     paths:
       - "manuscript/MANUSCRIPT_DRAFT_V0_4_0.md"
       - "manuscript/jae_review_header.tex"
