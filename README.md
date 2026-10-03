@@ -147,7 +147,7 @@ See `TAG_ALTITUDE_BIAS_AUDIT_RESULT.md`.
 ## Submission status
 
 Current scientific manuscript:
-`manuscript/MANUSCRIPT_DRAFT_V0_3_8.md`
+`manuscript/MANUSCRIPT_DRAFT_V0_4_0.md`
 
 Current title:
 
