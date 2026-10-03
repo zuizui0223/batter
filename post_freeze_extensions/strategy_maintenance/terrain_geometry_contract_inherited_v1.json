@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-original-panel-terrain-3d-geometry-v1",
+  "inferential_class": "post-outcome diagnostic fixed before DEM elevations decoded",
+  "panels": [
+    "hypsignathus",
+    "phyllostomus_2022",
+    "phyllostomus_2023",
+    "phyllostomus_2016"
+  ],
+  "dem": {
+    "source": "Mapzen/AWS Terrain Tiles Skadi HGT",
+    "url_template": "https://s3.amazonaws.com/elevation-tiles-prod/skadi/{lat_band}/{tile}.hgt.gz",
+    "grid_n": 3601,
+    "dtype": ">i2",
+    "interpolation": "bilinear",
+    "void_value": -32768
+  },
+  "geometry": {
+    "horizontal_grid_m": 500,
+    "centered_height_edges_m": [
+      "-inf",
+      -400,
+      -200,
+      -100,
+      -50,
+      0,
+      50,
+      100,
+      200,
+      400,
+      "inf"
+    ],
+    "alpha": 0.5,
+    "pair_common_support_min_fixes_each": 50,
+    "panel_min_evaluable_individuals": 5,
+    "primary": "V_rel = self O_Z_given_XY - other O_Z_given_XY",
+    "secondary": "S_rel = other R3D - self R3D"
+  },
+  "permutation": {
+    "B": 9999,
+    "seeds": {
+      "hypsignathus": 20261002031,
+      "phyllostomus_2022": 20261002032,
+      "phyllostomus_2023": 20261002033,
+      "phyllostomus_2016": 20261002034
+    }
+  },
+  "support_rule": "observed-minus-null-mean > 0 and one-sided p(null>=observed)<=0.05",
+  "stop_rule": [
+    "no DEM change",
+    "no interpolation change",
+    "no grid rescue",
+    "no bin change",
+    "no support-threshold change",
+    "no panel/individual exclusion",
+    "no alternative terrain-relative endpoint"
+  ]
+}
