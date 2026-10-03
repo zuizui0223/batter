@@ -1,12 +1,12 @@
-# Title page template v0.3.8
+# Title page template v0.4.0
 
 ## Title
 
-Persistent individual vertical strategies need not partition three-dimensional space in bats
+Persistent individual vertical strategies need not partition three-dimensional space in two tropical bat species
 
 ## Running title
 
-Persistent bat vertical strategies
+Persistent vertical strategies in two bat species
 
 ## Authors
 
