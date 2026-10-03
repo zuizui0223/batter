@@ -13,7 +13,7 @@ Title:
 **Persistent individual vertical strategies need not partition three-dimensional space in bats**
 
 Canonical manuscript path:
-`manuscript/MANUSCRIPT_DRAFT_V0_3_8.md`
+`manuscript/MANUSCRIPT_DRAFT_V0_4_0.md`
 
 Internal version:
 v0.4.0 candidate — post-freeze maintenance synthesis.
