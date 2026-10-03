@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "study_id": "decentralized-airway-formation-signatures-v1",
+  "classification": "prospective mechanism discrimination",
+  "mechanisms": {
+    "social_seeding_personal_refinement": {
+      "signature": "group destination convergence precedes personal route convergence"
+    },
+    "stochastic_path_dependence": {
+      "signature": "early idiosyncratic choices predict later route bias without required group convergence"
+    },
+    "stable_performance_matching": {
+      "signature": "stable traits predict route from first independent flights"
+    },
+    "learned_information_reuse": {
+      "signature": "reset causes exploration spike then personal re-stabilization"
+    },
+    "active_competition": {
+      "signature": "current co-presence predicts immediate route adjustment"
+    },
+    "exact_resource_task_specialization": {
+      "signature": "identity disappears after exact resource/task conditioning"
+    }
+  },
+  "primary_future_signature": "D(t) rises before R(t); R(t)-G(t) becomes positive with independent experience",
+  "empirical_outcome_opened": false
+}

@@ -1,0 +1,26 @@
+name: decentralized-airway-theory-simulation-v1
+on:
+  push:
+    branches: [prospective/decentralized-route-theory-v1]
+    paths:
+      - "prospective/decentralized_route_theory/simulate_v1.py"
+      - "prospective/decentralized_route_theory/model_v1.json"
+      - ".github/workflows/decentralized-airway-theory-simulation-v1.yml"
+  workflow_dispatch:
+jobs:
+  simulate:
+    runs-on: ubuntu-latest
+    permissions: {contents: read}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: python -m pip install numpy
+      - run: python prospective/decentralized_route_theory/simulate_v1.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: decentralized-airway-theory-simulation-v1
+          path: |
+            prospective/decentralized_route_theory/simulation_v1.json
+            prospective/decentralized_route_theory/SIMULATION_RESULT_V1.md
+          if-no-files-found: error
