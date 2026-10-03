@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "submission_id": "batter-jae-v0.4.0-candidate",
+  "date": "2026-10-03",
+  "journal_target": "Journal of Animal Ecology",
+  "manuscript": {
+    "path": "manuscript/MANUSCRIPT_DRAFT_V0_3_8.md",
+    "internal_version": "v0.4.0 candidate — post-freeze maintenance synthesis",
+    "title": "Persistent individual vertical strategies need not partition three-dimensional space in bats",
+    "whitespace_word_estimate": 8225,
+    "abstract_words": 287,
+    "introduction_words": 675,
+    "methods_words": 2789,
+    "results_words": 1521,
+    "discussion_words": 1369,
+    "conclusion_words": 320,
+    "main_figures": 6,
+    "supporting_figures": 2
+  },
+  "scientific_status": {
+    "comparative_centered_shape_panels_pass": 5,
+    "terrain_relative_fidelity_panels_pass": 4,
+    "positive_terrain_relative_segregation_panels": 0,
+    "synchronous_couse_separation_panels": 1,
+    "temporal_persistence": {
+      "day1": "4/4 evaluable",
+      "day3": "3/3 evaluable",
+      "day7": "2/2 evaluable"
+    },
+    "fine_place_kinematic_500m": "4/4 evaluable fruit-bat panels",
+    "same_night_control": "3/4 support; 2016 unresolved p=0.0544",
+    "patch_fidelity_general_driver": false,
+    "preferred_synthesis": "persistent personal solution reuse without exclusive vertical niches",
+    "solution_reuse_directly_established": false
+  },
+  "reaction_norm": {
+    "numeric_vertical_opened": false,
+    "environment": "ERA5 hourly 10-m wind speed",
+    "architecture": "continuous within-stratum individual wind slope",
+    "structural_gate": {
+      "hypsignathus": {
+        "n": 18,
+        "required": 14,
+        "pass": true
+      },
+      "phyllostomus_2022": {
+        "n": 21,
+        "required": 17,
+        "pass": true
+      },
+      "phyllostomus_2023": {
+        "n": 7,
+        "required": 8,
+        "pass": false
+      }
+    },
+    "family_stopped": true,
+    "interpretation": "unadjudicated, not negative evidence"
+  },
+  "inference_class": "post-freeze diagnostic synthesis; each added diagnostic frozen before its own outcome",
+  "packaging": {
+    "status": "package_rebuild_required",
+    "inherited_v0_3_8_validation_is_current": false,
+    "required_checks": [
+      "manuscript_figure_build",
+      "anonymous_review_build",
+      "anonymity_guard",
+      "figure_table_reference_checks",
+      "journal_word_count_gate",
+      "visual_QA"
+    ],
+    "release_candidate": "not_yet_created",
+    "expected_tag": "not_yet_created"
+  },
+  "stop_rule": "no further same-data mechanism fishing for v0.4.0"
+}
