@@ -193,8 +193,44 @@ def fig7():
     ax.legend(frameon=False,fontsize=8)
     save(fig,"figure5_shift_invariant_shape")
 
+def fig8():
+    rr=read_csv("external_boundary_v0_4_0.csv")
+    for r in rr:
+        for k in ("observed","null_mean","q025","q975","calibrated_excess","p_upper"):
+            r[k]=float(r[k])
+        r["n"]=int(r["n"])
+        r["null_low_centered"]=r["q025"]-r["null_mean"]
+        r["null_high_centered"]=r["q975"]-r["null_mean"]
+
+    def label(x):
+        return {
+            "Nyctalus noctula": "N. noctula",
+            "Hipposideros armiger / Hipposideros pratti": "H. armiger / H. pratti",
+            "Myotis vivesi": "M. vivesi",
+            "Pteropus poliocephalus (MSL)": "P. poliocephalus (MSL)",
+            "Pteropus poliocephalus (MSL-DEM)": "P. poliocephalus (MSL - DEM)",
+        }.get(x,x)
+
+    ys=list(range(len(rr),0,-1))
+    fig,ax=plt.subplots(figsize=(8.7,5.6))
+    for y,r in zip(ys,rr):
+        ax.hlines(y,r["null_low_centered"],r["null_high_centered"],linewidth=2)
+        marker="o" if r["verdict"]=="PASS" else "x"
+        ax.scatter(r["calibrated_excess"],y,marker=marker,s=70,zorder=3)
+        ax.text(0.195,y,f"n={r['n']}",ha="right",va="center",fontsize=8)
+    ax.axvline(0,linewidth=0.8)
+    ax.set_yticks(ys,[label(r["label"]) for r in rr])
+    ax.set_xlim(-0.13,0.20)
+    ax.set_xlabel("Null-calibrated centered vertical identity excess (nats/fix)")
+    ax.set_title("Previously frozen external boundary tests and Pteropus terrain diagnostic")
+    ax.scatter([],[],marker="o",label="met frozen criterion")
+    ax.scatter([],[],marker="x",label="did not meet frozen criterion")
+    ax.plot([],[],linewidth=2,label="central 95% permutation-null interval")
+    ax.legend(loc="upper center",bbox_to_anchor=(0.5,-0.16),ncol=3,fontsize=8,frameon=False)
+    save(fig,"supporting_figure_S3_external_boundary",SI_OUT)
+
 def main():
-    fig1(); fig2(); fig3(); fig4(); fig5(); fig6(); fig7()
+    fig1(); fig2(); fig3(); fig4(); fig5(); fig6(); fig7(); fig8()
     print(MAIN_OUT)
     print(SI_OUT)
     return 0
