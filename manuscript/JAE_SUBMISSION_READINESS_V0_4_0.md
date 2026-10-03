@@ -66,7 +66,7 @@ No text/arrow overlap or clipping remains.
 
 Supported:
 - persistent centered vertical individuality in five comparative panels;
-- terrain-relative vertical-strategy fidelity in 4/4 evaluable fruit-bat panels;
+- terrain-relative vertical-strategy fidelity in 4/4 evaluable panels from *H. monstrosus* and *P. hastatus*;
 - no supported positive terrain-relative added segregation in those four panels;
 - synchronous co-use separation in 1/4, with the 2023 limitation retained;
 - temporal self-history persistence to the maximum structurally evaluable lags;
@@ -84,6 +84,19 @@ Not established:
 - adaptive or fitness benefit.
 
 The continuous ERA5-wind reaction-norm family was stopped before numeric vertical opening when the predeclared all-three structural gate failed (2023: 7/8).
+
+## External boundary evidence restored in rc2
+
+rc2 restores the previously frozen external sequence that was present in the integrated manuscript:
+- *N. noctula* first frozen primary: FAIL (+0.05175, p=0.1224);
+- *H. armiger/pratti*: FAIL (-0.04468, p=0.8616);
+- *M. vivesi*: FAIL (+0.00470, p=0.4419);
+- *P. poliocephalus*: PASS in the separate n=4 programme (+0.16873, p=0.0001);
+- *Pteropus* MSL-minus-DEM diagnostic: +0.03231, p=0.0023.
+
+The integrated manuscript's external Figure 4 is restored as **Supporting Figure S3**, with its numerical table as Supporting Table S1. These sources are boundary tests rather than a prevalence sample.
+
+The title and central partitioning claim are correspondingly narrowed to **two tropical bat species**, *H. monstrosus* and *P. hastatus*.
 
 ## Remaining submission work
 
