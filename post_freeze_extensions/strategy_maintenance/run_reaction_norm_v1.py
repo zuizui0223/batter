@@ -61,10 +61,23 @@ def load_records(panel):
         x,y=transformers[cohort].transform(lon,lat)
         rec.append({"cohort":str(cohort),"session":str(sid),"iid":str(sm["individual"]),"t":t,
                     "x":float(x),"y":float(y),"lat":float(lat),"lon":float(lon),"native_h":float(h)})
+    # Inherit the exact centered-shape session universe used by the completed
+    # 500-m terrain diagnostic before decoding DEM values.
+    shape_records=[
+        {"cohort":r["cohort"],"session":r["session"],"iid":r["iid"],"t":r["t"],
+         "x":r["x"],"y":r["y"],"h":r["native_h"]}
+        for r in rec
+    ]
+    events_by_cohort,_=shape.centered_events(shape_records)
+    arrays={co:cal.make_cohort_arrays(ev,len(shape.EDGES)-1) for co,ev in sorted(events_by_cohort.items())}
+    _,_,audit_rows=cal.observed_eval(arrays)
+    allowed={(r["cohort"],r["session"],r["individual"]) for r in audit_rows}
+    rec=[r for r in rec if (r["cohort"],r["session"],r["iid"]) in allowed]
+
     receipt=json.loads(DEM_RECEIPT.read_text())
     expected=int(receipt["panels"][panel]["coordinate_row_count"])
     if len(rec)!=expected:
-        raise RuntimeError(f"{panel}: retained record count {len(rec)} != inherited DEM receipt {expected}")
+        raise RuntimeError(f"{panel}: centered-audit record count {len(rec)} != inherited DEM receipt {expected}")
     return rec,c
 
 
