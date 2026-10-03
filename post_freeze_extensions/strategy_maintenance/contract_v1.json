@@ -26,5 +26,41 @@
     "max_single_night_fraction": 0.5
   },
   "primary_contrast": "same-individual reaction norm vs same-individual history without individual-by-environment slope",
-  "secondary_contrast": "same-individual history vs population environment model"
+  "secondary_contrast": "same-individual history vs population environment model",
+  "environment_source": {
+    "dataset": "ERA5",
+    "provider": "Earthmover Icechunk ERA5 public AWS",
+    "bucket": "earthmover-icechunk-era5",
+    "prefix": "icechunkV2",
+    "group": "single/temporal",
+    "variables": [
+      "u10",
+      "v10"
+    ],
+    "frequency": "hourly",
+    "grid_degrees": 0.25,
+    "matching": "nearest grid point and nearest hour"
+  },
+  "xy_time_universe": {
+    "grid_m": 500,
+    "kinematic_state": "speed2_turn2",
+    "maximum_step_interval_seconds": 1800,
+    "minimum_supported_target_events": 50,
+    "expected_evaluable_individuals": {
+      "hypsignathus": 19,
+      "phyllostomus_2022": 23,
+      "phyllostomus_2023": 11,
+      "phyllostomus_2016": 9
+    }
+  },
+  "environment_support": {
+    "range_quantiles": [
+      0.05,
+      0.95
+    ],
+    "individual_span_fraction_min": 0.4,
+    "other_individual_donors_min": 2,
+    "equal_individual_matched_target_fraction_min": 0.5,
+    "max_single_night_fraction": 0.5
+  }
 }
