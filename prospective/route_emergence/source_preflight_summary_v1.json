@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-personal-3d-route-emergence-source-preflight-v1",
+  "workflow_run": 37110771188,
+  "artifact_id": 11269672171,
+  "route_shape_outcome_opened": false,
+  "vertical_outcome_opened": false,
+  "panels": {
+    "hypsignathus": {
+      "session_individuals": 26,
+      "qualifying_n": 20,
+      "structural_pass": true,
+      "tier": "C",
+      "life_stage": "Adult",
+      "reproductive_condition": "Mature",
+      "sex": "male",
+      "novelty_reset": false
+    },
+    "phyllostomus_2022": {
+      "session_individuals": 42,
+      "qualifying_n": 16,
+      "structural_pass": true,
+      "tier": "C",
+      "tracked_source_population": "adults only",
+      "novelty_reset": false
+    },
+    "phyllostomus_2023": {
+      "session_individuals": 23,
+      "qualifying_n": 0,
+      "structural_pass": false,
+      "tier": "C",
+      "novelty_reset": false
+    },
+    "phyllostomus_2016": {
+      "session_individuals": 22,
+      "qualifying_n": 0,
+      "structural_pass": false,
+      "tier": "C",
+      "novelty_reset": false
+    }
+  },
+  "tier_A_or_B_exists": false,
+  "decision": "STOP_EXISTING_DATA_ROUTE_FORMATION_OUTCOME",
+  "allowed_existing_data_claim": "repeated use of established personal strategies; origin unobserved",
+  "forbidden_inference": [
+    "tracking onset equals learning onset",
+    "early-late trend equals route formation",
+    "deployment onset equals ontogeny"
+  ],
+  "next_valid_test": [
+    "newly volant juveniles",
+    "known novel site",
+    "translocation",
+    "resource relocation",
+    "roost relocation",
+    "environmental reconfiguration"
+  ]
+}
