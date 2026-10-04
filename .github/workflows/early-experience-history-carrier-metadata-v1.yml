@@ -1,0 +1,42 @@
+name: early-experience-history-carrier-metadata-v1
+
+on:
+  push:
+    branches:
+      - prospective/early-experience-history-carrier-v1
+    paths:
+      - prospective/early_experience_history_carrier/metadata_inventory_v1.py
+      - prospective/early_experience_history_carrier/METADATA_PREFLIGHT_CONTRACT_V1.md
+      - .github/workflows/early-experience-history-carrier-metadata-v1.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  metadata-only:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Guard file-content closure
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path("prospective/early_experience_history_carrier/metadata_inventory_v1.py").read_text()
+          banned=["download_url","urlopen(cd", "get_bytes", "read_csv", "loadmat"]
+          hits=[x for x in banned if x in p]
+          if hits:
+              raise SystemExit(f"file-content guard failed: {hits}")
+          print("file-content guard PASS")
+          PY
+      - name: Inventory public metadata only
+        run: |
+          python prospective/early_experience_history_carrier/metadata_inventory_v1.py | tee prospective/early_experience_history_carrier/METADATA_INVENTORY_RESULT_V1.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: early-experience-history-carrier-metadata-v1
+          path: prospective/early_experience_history_carrier/METADATA_INVENTORY_RESULT_V1.json
+          if-no-files-found: error
