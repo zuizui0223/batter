@@ -1,0 +1,44 @@
+name: source-b-all-individual-struct-metadata-v1
+
+on:
+  push:
+    branches:
+      - prospective/ontogenetic-path-dependence-v1
+    paths:
+      - prospective/ontogenetic_path_dependence/source_b_all_individual_struct_metadata_v1.py
+      - prospective/ontogenetic_path_dependence/SOURCE_B_ALL_INDIVIDUAL_STRUCT_METADATA_AMENDMENT_V1.md
+      - .github/workflows/source-b-all-individual-struct-metadata-v1.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  structural-metadata:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install MAT directory reader
+        run: python -m pip install --quiet scipy
+      - name: Guard value loading
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path("prospective/ontogenetic_path_dependence/source_b_all_individual_struct_metadata_v1.py").read_text()
+          banned=["loadmat(", "h5py.File", ".track", '["x"]', '["y"]', '["lat"]', '["lon"]']
+          hits=[x for x in banned if x in p]
+          if hits:
+              raise SystemExit(f"value-loading guard failed: {hits}")
+          print("value-loading guard PASS")
+          PY
+      - name: Run all-individual MAT metadata gate
+        run: |
+          python prospective/ontogenetic_path_dependence/source_b_all_individual_struct_metadata_v1.py | tee prospective/ontogenetic_path_dependence/SOURCE_B_ALL_INDIVIDUAL_STRUCT_METADATA_RESULT_V1.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: source-b-all-individual-struct-metadata-v1
+          path: prospective/ontogenetic_path_dependence/SOURCE_B_ALL_INDIVIDUAL_STRUCT_METADATA_RESULT_V1.json
+          if-no-files-found: error
