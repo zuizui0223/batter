@@ -1,0 +1,44 @@
+name: ontogenetic-schema-open-allowlisted-v1
+
+on:
+  push:
+    branches:
+      - prospective/ontogenetic-path-dependence-v1
+    paths:
+      - prospective/ontogenetic_path_dependence/open_schema_allowlisted_v1.py
+      - prospective/ontogenetic_path_dependence/SCHEMA_FILE_OPENING_ALLOWLIST_V1.md
+      - .github/workflows/ontogenetic-schema-open-allowlisted-v1.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  schema-only-open:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install MAT schema readers
+        run: python -m pip install --quiet scipy h5py
+      - name: Guard forbidden large GPS opening
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path("prospective/ontogenetic_path_dependence/open_schema_allowlisted_v1.py").read_text()
+          banned=["GPS data.zip","GPS data adult males.zip","FlightDistanceAngle_ImprintedColony.xlsx"]
+          for x in banned:
+              if x in p:
+                  raise SystemExit(f"Forbidden file name present in opener: {x}")
+          print("Large/outcome file guard PASS")
+          PY
+      - name: Open allowlisted schema only
+        run: python prospective/ontogenetic_path_dependence/open_schema_allowlisted_v1.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ontogenetic-schema-open-result-v1
+          path: prospective/ontogenetic_path_dependence/SCHEMA_OPEN_RESULT_V1.json
+          if-no-files-found: error
