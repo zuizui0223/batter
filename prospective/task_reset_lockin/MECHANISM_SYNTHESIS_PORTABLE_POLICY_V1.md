@@ -352,3 +352,89 @@ It is **not yet identified** as:
 - a neural control variable.
 
 Exact same-individual morphology linkage remains unavailable.
+
+
+---
+
+# 10. A transparent scalar captures a substantial fraction of the portable policy
+
+A deliberately non-fitted scalar was defined from the four features dominating the one-dimensional latent axis:
+
+`FlightIntensity = mean(z median speed, z p90 speed, z median |vertical speed|, z p90 |vertical speed|)`.
+
+No identity-fitted weights were used.
+
+Cross-configuration held-out result:
+
+- K = **+0.496556**;
+- 5/5 bats positive;
+- p = **0.0003**.
+
+This transparent scalar carries about:
+- 52% of the PCA1 K magnitude;
+- 53% of the full eight-dimensional K magnitude.
+
+Therefore the dominant individual policy is interpretable but not completely exhausted by one equal-weight vigor scalar.
+
+The best decomposition is currently:
+
+`dominant flight-intensity axis + secondary maneuver/geometry dimensions`.
+
+This is consistent with the earlier result that steering/efficiency-only identity and scale-free geometry identity remain detectable.
+
+---
+
+# 11. Individuals occupy reproducibly ordered positions on the scalar axis
+
+A separate frozen leave-one-environment rank test asked whether relative position on FlightIntensity is preserved across obstacle configurations.
+
+Result:
+
+- equal-pair order accuracy R = **0.8217**;
+- null mean ≈ 0.499;
+- 9/10 bat pairs above chance;
+- p = **0.0048**.
+
+The equal-environment descriptive scalar centers rank:
+
+`A > C > B > E > D`.
+
+Approximate centers:
+
+- A: +1.070;
+- C: +0.303;
+- B: +0.175;
+- E: -0.473;
+- D: -0.790.
+
+The only pair with strongly unstable ordering is B–C, whose global scalar separation is small (≈0.128).
+
+This suggests that the most useful mathematical object is not a perfectly fixed point `theta_i`, but an individual-specific distribution around a stable scalar center:
+
+`theta_{i,e,t} = theta_i + context deviation + within-individual noise`.
+
+For well-separated individuals, ordering is highly stable.
+For nearby individuals, secondary policy dimensions or context can reverse the scalar order.
+
+Thus the data support a low-dimensional policy state without requiring a deterministic one-number trajectory generator.
+
+---
+
+# 12. The low-dimensional policy is not currently a universal bat rule
+
+The same obstacle dataset contains *Miniopterus fuliginosus*.
+
+Under the already-opened full eight-dimensional cross-configuration Primary-B test:
+
+- K = **-0.0136**;
+- 2/4 bats positive;
+- p = **0.1687**;
+- verdict: FAIL.
+
+Thus the strong portable individual-policy result is not automatically shared by the second bat species in the same experimental framework.
+
+A post-primary cross-species diagnostic is now frozen to ask whether the simpler Rhino-derived one-dimensional axes transfer despite the failed full representation.
+
+Until that result is available, the correct scope is:
+
+> strong low-dimensional portable individual policy in *Rhinolophus nippon*, with cross-species generality unresolved and already bounded by a negative full-policy result in *Miniopterus fuliginosus*.
