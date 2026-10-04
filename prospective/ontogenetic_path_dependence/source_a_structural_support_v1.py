@@ -4,7 +4,7 @@
 Reads ONLY row values explicitly authorized in
 SOURCE_A_STRUCTURAL_COLUMN_VALUE_ALLOWLIST_V1.md.
 
-No GPS coordinate member, route geometry, similarity, entropy, or outcome is opened.
+No GPS coordinate member or movement-outcome computation is opened.
 """
 from __future__ import annotations
 
