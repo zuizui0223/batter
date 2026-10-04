@@ -22,7 +22,9 @@ def gj(url):
 def gb(url,n):
  req=urllib.request.Request(url,headers={"User-Agent":UA,"Accept":"*/*"})
  with urllib.request.urlopen(req,timeout=60) as r:b=r.read(n+1)
- if len(b)>n:\n  raise RuntimeError("budget")\n return b
+ if len(b)>n:
+  raise RuntimeError("budget")
+ return b
 def norm(v):
  if v is None:return None
  s=str(v).strip();return None if not s or s.lower() in {"na","nan","none","null","n/a"} else s
