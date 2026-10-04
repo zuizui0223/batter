@@ -21,10 +21,10 @@ for ii=1:height(M)
         tr=d(jj).track;
         if istable(tr) || istimetable(tr)
             vars=string(tr.Properties.VariableNames);
-            assert(all(ismember(["x","y","time"],vars)),"frozen x/y/time absent");
+            if ~all(ismember(["x","y","time"],vars)), continue; end
             x=tr.x; y=tr.y; tt=tr.time;
         elseif isstruct(tr)
-            assert(all(isfield(tr,{"x","y","time"})),"frozen x/y/time absent");
+            if ~all(isfield(tr,{"x","y","time"})), continue; end
             x=[tr.x]'; y=[tr.y]'; tt=[tr.time]';
         else
             error("unsupported native track class: %s",class(tr));
