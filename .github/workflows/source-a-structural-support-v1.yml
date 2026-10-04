@@ -1,0 +1,43 @@
+name: source-a-structural-support-v1
+
+on:
+  push:
+    branches:
+      - prospective/ontogenetic-path-dependence-v1
+    paths:
+      - prospective/ontogenetic_path_dependence/source_a_structural_support_v1.py
+      - prospective/ontogenetic_path_dependence/SOURCE_A_STRUCTURAL_COLUMN_VALUE_ALLOWLIST_V1.md
+      - .github/workflows/source-a-structural-support-v1.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  structural-support:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Guard route closure
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path("prospective/ontogenetic_path_dependence/source_a_structural_support_v1.py").read_text()
+          banned=["GPS data/trees_mompup.xlsx","dropOffLat","dropOffLon","allPairs_matlab.mat","/mom/data.mat","/pup/data.mat","Fréchet","DTW","route_similarity","entropy"]
+          hits=[x for x in banned if x in p]
+          # textual mentions in comments/contracts are absent by construction; fail closed if found.
+          if hits:
+              raise SystemExit(f"route-closure guard failed: {hits}")
+          print("route-closure guard PASS")
+          PY
+      - name: Run frozen structural support gate
+        run: |
+          python prospective/ontogenetic_path_dependence/source_a_structural_support_v1.py | tee prospective/ontogenetic_path_dependence/SOURCE_A_STRUCTURAL_SUPPORT_RESULT_V1.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: source-a-structural-support-v1
+          path: prospective/ontogenetic_path_dependence/SOURCE_A_STRUCTURAL_SUPPORT_RESULT_V1.json
+          if-no-files-found: error
