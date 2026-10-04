@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Prospective Yamada personal speed-state persistence primary."""
+"""Prospective Yamada personal speed-state persistence primary.\nFrozen in PERSONAL_SPEED_STATE_CONTRACT_V1.md.\n"""
 from __future__ import annotations
 import collections, hashlib, io, json, math, urllib.request, zipfile
 import xml.etree.ElementTree as ET
