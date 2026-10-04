@@ -1,0 +1,42 @@
+name: task-reset-csv-header-open-v1
+
+on:
+  push:
+    branches:
+      - prospective/task-reset-lockin-v1
+    paths:
+      - prospective/task_reset_lockin/csv_header_open_v1.py
+      - prospective/task_reset_lockin/CSV_HEADER_OPENING_ALLOWLIST_V1.md
+      - .github/workflows/task-reset-csv-header-open-v1.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  header-open:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Guard row-value closure
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path("prospective/task_reset_lockin/csv_header_open_v1.py").read_text()
+          banned=["pandas","csv.reader","read_csv","pickle","np.load"]
+          hits=[x for x in banned if x in p]
+          if hits:
+              raise SystemExit(f"row-value guard failed: {hits}")
+          print("row-value guard PASS")
+          PY
+      - name: Open headers only
+        run: |
+          python prospective/task_reset_lockin/csv_header_open_v1.py | tee prospective/task_reset_lockin/CSV_HEADER_RESULT_V1.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: task-reset-csv-header-open-v1
+          path: prospective/task_reset_lockin/CSV_HEADER_RESULT_V1.json
+          if-no-files-found: error
