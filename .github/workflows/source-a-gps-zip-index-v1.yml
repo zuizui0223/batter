@@ -7,6 +7,8 @@ on:
     paths:
       - prospective/ontogenetic_path_dependence/index_source_a_gps_zip_v1.py
       - prospective/ontogenetic_path_dependence/SOURCE_A_GPS_ARCHIVE_INDEX_AMENDMENT_V1.md
+      - prospective/ontogenetic_path_dependence/open_source_a_structural_headers_v1.py
+      - prospective/ontogenetic_path_dependence/SOURCE_A_STRUCTURAL_MEMBER_HEADER_OPENING_V1.md
       - .github/workflows/source-a-gps-zip-index-v1.yml
   workflow_dispatch:
 
@@ -34,3 +36,5 @@ jobs:
           PY
       - name: Index archive central directory only
         run: python prospective/ontogenetic_path_dependence/index_source_a_gps_zip_v1.py
+      - name: Open structural XLSX headers only
+        run: python prospective/ontogenetic_path_dependence/open_source_a_structural_headers_v1.py
