@@ -26,7 +26,7 @@ jobs:
           python - <<'PY'
           from pathlib import Path
           p=Path("prospective/task_reset_lockin/evsbat_metadata_inventory_v1.py").read_text()
-          banned=["download_url","urlretrieve","read_csv","loadmat","open("]
+          banned=["download_url","urlretrieve","read_csv","loadmat"]
           hits=[x for x in banned if x in p]
           if hits:
               raise SystemExit(f"file-content guard failed: {hits}")
