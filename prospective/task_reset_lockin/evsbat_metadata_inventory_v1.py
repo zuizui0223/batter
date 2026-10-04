@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Metadata-only inventory of evsBat Figshare article 29150924."""
+"""Metadata-only inventory of evsBat Figshare article 29150924.\nNo file content is downloaded; rerun after guard repair.\n"""
 from __future__ import annotations
 import json, urllib.request
 
