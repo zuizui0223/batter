@@ -107,6 +107,36 @@ Observed and permuted statistics use the same structurally valid trajectory set 
 
 No permutation-specific outcome filtering is allowed.
 
+
+## Primary A target and donor eligibility
+
+Within an eligible species × environment:
+
+- a bat is an evaluable **target bat** only if it has >=2 route-valid trajectories in that environment, because D_self requires at least one held-out same-bat comparator;
+- every route-valid trajectory of an evaluable target bat is used once as a target;
+- any other bat with >=1 route-valid trajectory may contribute as an other-bat donor;
+- donor distances are averaged within donor bat first and donor bats equally second.
+
+Bat-level direction consistency is calculated only for evaluable target bats.
+
+Because Primary A permutations preserve the trajectory count assigned to every bat label, the set of target-eligible labels is invariant across permutations.
+
+## Primary B contributing-environment rule
+
+Before environment residualization, an environment is usable for Primary B only if it contains:
+
+- >=2 Primary-B-valid trajectories;
+- from >=2 distinct bat identities.
+
+An environment failing this purely structural condition is excluded from Primary B for that species before any identity statistic is calculated.
+
+Candidate-bat >=3-environment support and leave-one-environment-out centroid support are then evaluated using only these usable environments.
+
+For every usable environment, sample SD is evaluated for all eight frozen features. Feature dropping follows the parent rule:
+if a feature has zero or non-finite SD in **any usable environment**, that feature is dropped for the entire species.
+
+If fewer than six features remain, STOP Primary B for that species.
+
 ## Claim boundary
 
 This clarification does not restore temporal order. The programme remains configuration-conditioned, not a relearning/reset-time analysis.
