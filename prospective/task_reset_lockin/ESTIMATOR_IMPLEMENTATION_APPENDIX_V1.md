@@ -102,6 +102,20 @@ Use:
 
 No mid-p adjustment.
 
+## Hierarchical weighting details
+
+Primary A:
+- target-route advantages are averaged equally within each bat × environment;
+- bat × environment means are averaged equally within environment for the species statistic;
+- eligible environment means are averaged equally for `A_species`;
+- the bat-level sign-consistency quantity is the equal-environment mean of that bat's bat × environment means.
+
+Primary B:
+- for a candidate bat j and held-out environment e, first average j's trajectory feature vectors within each training environment;
+- then average those environment centroids equally across all eligible training environments other than e;
+- this prevents environments with more repeat trials from dominating a bat centroid;
+- target K values are averaged equally within focal bat, then focal bats equally for `K_species`.
+
 ## Numeric precision
 
 Use float64 throughout.
