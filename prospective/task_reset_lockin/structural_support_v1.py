@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Outcome-blind line-count structural gate for task-reset CSVs."""
+"""Outcome-blind line-count structural gate for task-reset CSVs.\nScientific rules unchanged; rerun after CI guard repair.\n"""
 from __future__ import annotations
 import collections, hashlib, json, re, urllib.request
 
