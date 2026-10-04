@@ -1,0 +1,32 @@
+name: rhino-flight-intensity-rank-stability-v1
+
+on:
+  push:
+    branches:
+      - prospective/task-reset-lockin-v1
+    paths:
+      - prospective/task_reset_lockin/flight_intensity_rank_stability_v1.py
+      - prospective/task_reset_lockin/FLIGHT_INTENSITY_RANK_STABILITY_CONTRACT_V1.md
+      - .github/workflows/rhino-flight-intensity-rank-stability-v1.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  rank:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install --quiet numpy
+      - name: Run flight-intensity rank-stability diagnostic
+        run: |
+          python prospective/task_reset_lockin/flight_intensity_rank_stability_v1.py | tee prospective/task_reset_lockin/FLIGHT_INTENSITY_RANK_STABILITY_RESULT_V1.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rhino-flight-intensity-rank-stability-v1
+          path: prospective/task_reset_lockin/FLIGHT_INTENSITY_RANK_STABILITY_RESULT_V1.json
+          if-no-files-found: error
