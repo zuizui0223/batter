@@ -78,18 +78,29 @@ def main():
         if len(r1)!=1:
             errors.append({"bat_id":bat,"error":"trial1_not_unique"});continue
         r1=r1[0]
-        cand=sorted(candidates(r1.get("origin_name"))|candidates(r1.get("for_article_datasets_name")))
+        article_cand=sorted(candidates(r1.get("for_article_datasets_name")))
+        origin_cand=sorted(candidates(r1.get("origin_name")))
         available_labels=sorted(set(x["raw_label"] for x in raw if x["condition"]==cond))
-        matches=sorted(set(cand)&set(available_labels))
-        if len(matches)!=1:
-            errors.append({"bat_id":bat,"condition":cond,"candidates":cand,
-                           "available_labels":available_labels,"matches":matches,
-                           "error":"label_match_not_unique"})
+        article_matches=sorted(set(article_cand)&set(available_labels))
+        origin_matches=sorted(set(origin_cand)&set(available_labels))
+        if len(article_matches)==1:
+            matches=article_matches
+            mapping_key="for_article_datasets_name"
+        elif len(article_matches)==0 and len(origin_matches)==1:
+            matches=origin_matches
+            mapping_key="origin_name_fallback"
+        else:
+            errors.append({"bat_id":bat,"condition":cond,
+                           "article_candidates":article_cand,"origin_candidates":origin_cand,
+                           "available_labels":available_labels,
+                           "article_matches":article_matches,"origin_matches":origin_matches,
+                           "error":"priority_label_match_not_unique"})
             continue
         lab=matches[0]
         entry={"bat_id":bat,"condition":cond,"source_origin_name":r1.get("origin_name"),
                "source_article_name":r1.get("for_article_datasets_name"),
-               "candidate_labels":cand,"matched_raw_label":lab,"trials":{}}
+               "article_candidates":article_cand,"origin_candidates":origin_cand,
+               "mapping_key":mapping_key,"matched_raw_label":lab,"trials":{}}
         for trial in ["1","12"]:
             sheets=[x["sheet"] for x in raw if x["condition"]==cond and x["trial"]==trial and x["raw_label"]==lab]
             if len(sheets)!=1:
@@ -104,7 +115,7 @@ def main():
     unused=sorted(set(x["sheet"] for x in raw)-set(used))
     complete=(len(errors)==0 and len(mappings)==14 and len(used)==28 and not duplicate_used and not unused)
     out={
-      "contract":"RAW_SHEET_CROSSWALK_CONTRACT_V1.md",
+      "contract":"RAW_SHEET_CROSSWALK_CONTRACT_V1.md + RAW_SHEET_CROSSWALK_PRIORITY_AMENDMENT_V1.md",
       "kinematic_outcomes_opened":False,
       "n_raw_sheets":len(raw),
       "raw_sheet_structure":raw,
