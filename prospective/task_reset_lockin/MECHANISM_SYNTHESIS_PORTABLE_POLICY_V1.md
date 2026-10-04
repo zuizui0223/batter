@@ -257,3 +257,98 @@ Not yet supported:
 - the policy is a unique low-dimensional attractor;
 - echolocation has an independent identity component after cross-fitted movement control;
 - a particular mathematical control law is uniquely identified.
+
+
+---
+
+# 9. The portable movement policy is strongly low-dimensional
+
+The frozen post-primary latent-dimensionality programme used the same 45 *Rhinolophus nippon* trajectories and the same eight environment-standardized movement features.
+
+Both an unsupervised and an identity-targeted route reached the same conclusion.
+
+## Unsupervised training-only PCA
+
+For every target obstacle configuration:
+- PCA was fit using only the other six environments;
+- the held-out environment never contributed to the latent axis.
+
+A **single PC** was already sufficient:
+
+- K = **+0.957848**;
+- 5/5 bats positive;
+- 9,999/9,999 valid identity permutations;
+- p = **0.0006**.
+
+The full eight-dimensional Primary-B statistic was K = +0.943560.
+
+Thus the single unsupervised training-derived axis retained essentially the full cross-configuration individual signal.
+
+PC1 explained only about **46.7%** of training movement variance (fold range 45.7–50.3%), so the result is not simply a trivial consequence of retaining almost all total variance.
+
+The dominant median squared loadings were:
+
+- median speed: 0.211;
+- p90 speed: 0.231;
+- median absolute vertical speed: 0.215;
+- p90 absolute vertical speed: 0.230;
+- median turning rate: 0.005;
+- p90 turning rate: 0.074;
+- path efficiency: 0.001;
+- vertical range: 0.029.
+
+Approximately 89% of the squared loading lies on the four speed / vertical-speed variables.
+
+The dominant latent axis is therefore descriptively a **flight-intensity / vertical-performance axis**.
+
+## Training-only individual-identity subspace
+
+A separate procedure used individual labels only in the six training environments to estimate the between-individual subspace, then tested transfer to the unseen environment.
+
+Again, **one dimension was sufficient**:
+
+- K = **+0.884830**;
+- 5/5 bats positive;
+- p = **0.0021**.
+
+Its first identity axis is even more strongly concentrated on:
+- median and p90 speed;
+- median and p90 vertical speed.
+
+## Consequence
+
+The portable individual movement signature is not empirically irreducible across the eight measured features.
+
+A much better present model is:
+
+`theta_i (dominant scalar flight-intensity tendency) + secondary maneuver dimensions`
+
+interacting with:
+
+`environment/task geometry`
+
+to generate each realized trajectory.
+
+This weakens the analogy to an inscrutable or arbitrarily high-dimensional individual rule.
+
+It instead suggests a low-dimensional latent control architecture.
+
+The next frozen interpretability diagnostic asks whether PCA is even unnecessary: can the equal-weight mean of the four speed / vertical-speed z-scores carry the same cross-configuration identity signal?
+
+See:
+`FLIGHT_INTENSITY_SCALAR_CONTRACT_V1.md`.
+
+## Important ceiling
+
+The one-dimensional axis is a behavioural latent coordinate.
+
+It is **not yet identified** as:
+- body size;
+- muscle capacity;
+- metabolism;
+- motivation;
+- personality;
+- learned vigor;
+- a neural control variable.
+
+Exact same-individual morphology linkage remains unavailable.
