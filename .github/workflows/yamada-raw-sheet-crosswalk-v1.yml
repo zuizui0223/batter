@@ -1,0 +1,42 @@
+name: yamada-raw-sheet-crosswalk-v1
+
+on:
+  push:
+    branches:
+      - prospective/learning-state-theta-v1
+    paths:
+      - prospective/learning_state_theta/raw_sheet_crosswalk_v1.py
+      - prospective/learning_state_theta/RAW_SHEET_CROSSWALK_CONTRACT_V1.md
+      - .github/workflows/yamada-raw-sheet-crosswalk-v1.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  crosswalk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Guard outcome closure
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path("prospective/learning_state_theta/raw_sheet_crosswalk_v1.py").read_text()
+          banned=["velocity[m/s]","bat(X)[mm]","turn rate","max_flight_speed","meandering","pulse emission"]
+          hits=[x for x in banned if x in p]
+          if hits:
+              raise SystemExit(f"outcome guard failed: {hits}")
+          print("outcome guard PASS")
+          PY
+      - name: Resolve deterministic raw-sheet crosswalk
+        run: |
+          python prospective/learning_state_theta/raw_sheet_crosswalk_v1.py | tee prospective/learning_state_theta/RAW_SHEET_CROSSWALK_RESULT_V1.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: yamada-raw-sheet-crosswalk-v1
+          path: prospective/learning_state_theta/RAW_SHEET_CROSSWALK_RESULT_V1.json
+          if-no-files-found: error
