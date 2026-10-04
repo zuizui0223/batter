@@ -109,7 +109,7 @@ def main():
     fs=folders(); by_parent={}
     for f in fs:by_parent.setdefault(str(f.get("parent_id")),[]).append(f)
     out={"contract":"SOURCE_B_COORDINATE_STRUCTURAL_OPENING_V1.md",
-         "route_similarity_calculated":False,"between_day_distance_calculated":False,
+         "primary_spatial_outcome_opened":False,"between_day_distance_calculated":False,
          "reported_coordinate_values":False,"individuals":[]}
     for cohort,rid in ROOTS.items():
         kids=sorted(by_parent.get(rid,[]),key=lambda z:str(z.get("name")))
