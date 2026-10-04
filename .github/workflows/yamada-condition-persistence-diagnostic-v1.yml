@@ -1,0 +1,26 @@
+name: yamada-condition-persistence-diagnostic-v1
+on:
+  push:
+    branches: [prospective/learning-state-theta-v1]
+    paths:
+      - prospective/learning_state_theta/condition_persistence_diagnostic_v1.py
+      - prospective/learning_state_theta/CONDITION_PERSISTENCE_DIAGNOSTIC_CONTRACT_V1.md
+      - .github/workflows/yamada-condition-persistence-diagnostic-v1.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  diagnostic:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: python -m pip install --quiet numpy
+      - name: Run exact condition decomposition
+        run: python prospective/learning_state_theta/condition_persistence_diagnostic_v1.py | tee prospective/learning_state_theta/CONDITION_PERSISTENCE_DIAGNOSTIC_RESULT_V1.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: yamada-condition-persistence-diagnostic-v1
+          path: prospective/learning_state_theta/CONDITION_PERSISTENCE_DIAGNOSTIC_RESULT_V1.json
+          if-no-files-found: error
