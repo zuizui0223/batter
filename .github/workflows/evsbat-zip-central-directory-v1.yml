@@ -1,0 +1,42 @@
+name: evsbat-zip-central-directory-v1
+
+on:
+  push:
+    branches:
+      - prospective/task-reset-lockin-v1
+    paths:
+      - prospective/task_reset_lockin/evsbat_zip_central_directory_v1.py
+      - prospective/task_reset_lockin/EVSBAT_ZIP_CENTRAL_DIRECTORY_AMENDMENT_V1.md
+      - .github/workflows/evsbat-zip-central-directory-v1.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  central-directory:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Guard member-content closure
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path("prospective/task_reset_lockin/evsbat_zip_central_directory_v1.py").read_text()
+          banned=["zipfile.ZipFile","extract","decompress","open_member","local header"]
+          hits=[x for x in banned if x in p.lower()]
+          if hits:
+              raise SystemExit(f"member-content guard failed: {hits}")
+          print("member-content guard PASS")
+          PY
+      - name: Read ZIP central directory only
+        run: |
+          python prospective/task_reset_lockin/evsbat_zip_central_directory_v1.py | tee prospective/task_reset_lockin/EVSBAT_ZIP_CENTRAL_DIRECTORY_RESULT_V1.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: evsbat-zip-central-directory-v1
+          path: prospective/task_reset_lockin/EVSBAT_ZIP_CENTRAL_DIRECTORY_RESULT_V1.json
+          if-no-files-found: error
