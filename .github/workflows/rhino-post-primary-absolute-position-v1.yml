@@ -1,0 +1,31 @@
+name: rhino-post-primary-absolute-position-v1
+
+on:
+  push:
+    branches: [prospective/task-reset-lockin-v1]
+    paths:
+      - prospective/task_reset_lockin/post_primary_absolute_position_v1.py
+      - prospective/task_reset_lockin/POST_PRIMARY_ABSOLUTE_POSITION_CONTRACT_V1.md
+      - .github/workflows/rhino-post-primary-absolute-position-v1.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  diagnostics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install --quiet numpy
+      - name: Run frozen position diagnostics
+        run: |
+          python prospective/task_reset_lockin/post_primary_absolute_position_v1.py | tee prospective/task_reset_lockin/POST_PRIMARY_ABSOLUTE_POSITION_RESULT_V1.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rhino-post-primary-absolute-position-v1
+          path: prospective/task_reset_lockin/POST_PRIMARY_ABSOLUTE_POSITION_RESULT_V1.json
+          if-no-files-found: error
