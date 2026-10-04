@@ -69,7 +69,10 @@ def prepare(data):
         all_names=sorted(people)
         complete=sorted([n for n,d in people.items() if len(d)>=20])
         primary_names[cohort]=complete
-        if len(complete)<4:raise RuntimeError(f"{cohort}: <4 complete-history juveniles")
+        if len(complete)==0:
+            continue
+        if len(complete)<4:
+            raise RuntimeError(f"{cohort}: target cohort has <4 complete-history juveniles")
         for target_name in complete:
             for t in TARGET_ORDINALS:
                 tidx=t-1
@@ -133,6 +136,9 @@ def q(a):
 def main():
     data,manifest=load_all()
     events,primary=prepare(data)
+    n_primary=sum(len(v) for v in primary.values())
+    if n_primary<5:
+        raise RuntimeError("frozen overall >=5 primary-individual gate failed")
     Bobs,Lobs,bis,individual,curve=summarize(events,identity_map(primary))
 
     rng=np.random.default_rng(SEED)
