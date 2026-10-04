@@ -15,24 +15,30 @@ for ii=1:height(M)
     nvalid=0;
     for jj=1:nsrc
         tr=d(jj).track;
+        if isempty(tr), continue; end
         if istable(tr) || istimetable(tr)
             vars=string(tr.Properties.VariableNames);
-            assert(all(ismember(["x","y","time"],vars)),"frozen x/y/time absent");
+            if ~all(ismember(["x","y","time"],vars)), continue; end
             x=tr.x; y=tr.y; tt=tr.time;
         elseif isstruct(tr)
-            assert(all(isfield(tr,{"x","y","time"})),"frozen x/y/time absent");
+            if ~all(isfield(tr,{"x","y","time"})), continue; end
             x=[tr.x]'; y=[tr.y]'; tt=[tr.time]';
         else
-            error("unsupported native track class: %s",class(tr));
+            continue;
         end
-        x=double(x(:)); y=double(y(:));
-        if isdatetime(tt)
-            sec=seconds(tt(:)-tt(1));
-        elseif isduration(tt)
-            sec=seconds(tt(:)-tt(1));
-        else
-            tt=double(tt(:));
-            sec=(tt-tt(1))*86400;
+        if isempty(x) || isempty(y) || isempty(tt), continue; end
+        try
+            x=double(x(:)); y=double(y(:));
+            if isdatetime(tt)
+                sec=seconds(tt(:)-tt(1));
+            elseif isduration(tt)
+                sec=seconds(tt(:)-tt(1));
+            else
+                tt=double(tt(:));
+                sec=(tt-tt(1))*86400;
+            end
+        catch
+            continue;
         end
         if ~(numel(x)==numel(y) && numel(y)==numel(sec)), continue; end
         ok=isfinite(x)&isfinite(y)&isfinite(sec);
