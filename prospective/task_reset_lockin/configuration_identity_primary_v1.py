@@ -143,87 +143,89 @@ def trajectory_features(a):
         return None
     return feats
 
-def a_stat(records, labels):
-    # records contain env, bat(original), route. labels is same length current labels.
-    envs=sorted(set(r["env"] for r in records))
+def a_env_stat(dm, labs):
+    counts=collections.Counter(labs)
+    target_by_bat=collections.defaultdict(list)
+    n=len(labs)
+    for ii,lab in enumerate(labs):
+        if counts[lab] < 2:
+            continue
+        self_js=[j for j,x in enumerate(labs) if x==lab and j!=ii]
+        if not self_js:
+            continue
+        dself=float(np.mean(dm[ii,self_js]))
+        donor_means=[]
+        for other in sorted(set(labs)):
+            if other==lab: continue
+            js=[j for j,x in enumerate(labs) if x==other]
+            if js:
+                donor_means.append(float(np.mean(dm[ii,js])))
+        if not donor_means:
+            continue
+        target_by_bat[lab].append(float(np.mean(donor_means)-dself))
+    if not target_by_bat:
+        return None,{}
+    be={b:float(np.mean(v)) for b,v in target_by_bat.items()}
+    return float(np.mean(list(be.values()))),be
+
+def a_stat_prepared(envdata, label_by_env):
     env_means=[]
     bat_env_vals=collections.defaultdict(list)
-    for e in envs:
-        idx=[i for i,r in enumerate(records) if r["env"]==e]
-        if not idx:
+    for e,d in envdata.items():
+        em,be=a_env_stat(d["dm"],label_by_env[e])
+        if em is None:
             continue
-        labs=[labels[i] for i in idx]
-        arr=np.stack([records[i]["route"] for i in idx])
-        # pairwise mean pointwise 3D distance
-        n=len(idx)
-        dm=np.zeros((n,n),dtype=np.float64)
-        for ii in range(n):
-            for jj in range(ii+1,n):
-                d=float(np.mean(np.linalg.norm(arr[ii]-arr[jj],axis=1)))
-                dm[ii,jj]=dm[jj,ii]=d
-        counts=collections.Counter(labs)
-        target_by_bat=collections.defaultdict(list)
-        for ii,lab in enumerate(labs):
-            if counts[lab] < 2:
-                continue
-            self_js=[j for j,x in enumerate(labs) if x==lab and j!=ii]
-            if not self_js:
-                continue
-            dself=float(np.mean(dm[ii,self_js]))
-            donor_means=[]
-            for other in sorted(set(labs)):
-                if other==lab: continue
-                js=[j for j,x in enumerate(labs) if x==other]
-                if js:
-                    donor_means.append(float(np.mean(dm[ii,js])))
-            if not donor_means:
-                continue
-            aq=float(np.mean(donor_means)-dself)
-            target_by_bat[lab].append(aq)
-        if not target_by_bat:
-            continue
-        be={b:float(np.mean(v)) for b,v in target_by_bat.items()}
-        env_means.append(float(np.mean(list(be.values()))))
+        env_means.append(em)
         for b,v in be.items():
             bat_env_vals[b].append(v)
     if not env_means:
         return None,{}
-    bat_means={b:float(np.mean(v)) for b,v in bat_env_vals.items()}
-    return float(np.mean(env_means)),bat_means
+    return float(np.mean(env_means)),{b:float(np.mean(v)) for b,v in bat_env_vals.items()}
 
 def run_primary_a(sp, records):
     allowed=set(STRUCT_A_ENVS[sp])
     if not allowed:
         return {"status":"STOP_A_STRUCTURAL"}
     rec=[r for r in records if r["env"] in allowed and r["route"] is not None]
-    # coordinate-valid environments must still satisfy structural A rule
     eligible=[]
     for e in sorted(allowed):
         rr=[r for r in rec if r["env"]==e]
-        c=collections.Counter(r["bat"] for r in rr)
-        if sum(n>=2 for n in c.values())>=3:
+        cnt=collections.Counter(r["bat"] for r in rr)
+        if sum(n>=2 for n in cnt.values())>=3:
             eligible.append(e)
     if len(eligible)<2:
         return {"status":"STOP_A_COORDINATE_SUPPORT","eligible_envs_after_coordinates":eligible}
-    rec=[r for r in rec if r["env"] in eligible]
-    obs_labels=[r["bat"] for r in rec]
-    obs,batmeans=a_stat(rec,obs_labels)
+
+    envdata={}
+    obs_labels={}
+    for e in eligible:
+        rr=[r for r in rec if r["env"]==e]
+        arr=np.stack([r["route"] for r in rr])
+        n=len(rr)
+        dm=np.zeros((n,n),dtype=np.float64)
+        for i in range(n):
+            for j in range(i+1,n):
+                d=float(np.mean(np.linalg.norm(arr[i]-arr[j],axis=1)))
+                dm[i,j]=dm[j,i]=d
+        envdata[e]={"dm":dm}
+        obs_labels[e]=[r["bat"] for r in rr]
+
+    obs,batmeans=a_stat_prepared(envdata,obs_labels)
     if obs is None:
         return {"status":"STOP_A_STATISTIC"}
     nbat=len(batmeans)
     npos=sum(v>0 for v in batmeans.values())
     need=math.ceil(0.70*nbat)
+
     rng=np.random.default_rng(202610042201)
     null=np.empty(N_PERM,dtype=np.float64)
-    # fixed indices by env and exact observed label multiset
-    env_idx={e:[i for i,r in enumerate(rec) if r["env"]==e] for e in eligible}
     for p in range(N_PERM):
-        labs=list(obs_labels)
-        for e,idxs in env_idx.items():
-            vals=np.array([obs_labels[i] for i in idxs],dtype=object)
+        labs={}
+        for e,vals0 in obs_labels.items():
+            vals=np.array(vals0,dtype=object)
             rng.shuffle(vals)
-            for k,i in enumerate(idxs): labs[i]=str(vals[k])
-        st,_=a_stat(rec,labs)
+            labs[e]=[str(x) for x in vals]
+        st,_=a_stat_prepared(envdata,labs)
         null[p]=st if st is not None else np.nan
     valid=null[np.isfinite(null)]
     pval=(1+int(np.sum(valid>=obs)))/(1+len(valid))
@@ -231,7 +233,7 @@ def run_primary_a(sp, records):
     return {
         "status":"PASS_A_OUTCOME" if supported else "FAIL_A_OUTCOME",
         "eligible_envs":eligible,
-        "n_routes":len(rec),
+        "n_routes":sum(len(v) for v in obs_labels.values()),
         "A_species":obs,
         "individual_A":batmeans,
         "positive_individuals":npos,
@@ -266,37 +268,55 @@ def residualize_features(records, sp):
         out.append(q)
     return out,np.where(keep)[0].tolist()
 
-def b_stat(records, labels):
-    # current labels correspond one-to-one to records.
-    bats=sorted(set(labels))
-    envs_by_label=collections.defaultdict(set)
-    for r,lab in zip(records,labels):
-        envs_by_label[lab].add(r["env"])
-    candidate=[b for b in bats if len(envs_by_label[b])>=3]
-    target_vals=collections.defaultdict(list)
-    for qi,(q,qlab) in enumerate(zip(records,labels)):
-        if qlab not in candidate:
-            continue
-        e=q["env"]
-        centroids={}
+def prepare_b_structure(records, labels):
+    env_idx=collections.defaultdict(list)
+    for i,r in enumerate(records):
+        env_idx[r["env"]].append(i)
+    presence=collections.defaultdict(set)
+    for e,idxs in env_idx.items():
+        for i in idxs:
+            presence[labels[i]].add(e)
+    candidate=sorted([b for b,es in presence.items() if len(es)>=3])
+    return env_idx,presence,candidate
+
+def b_stat_fast(records, labels, env_idx, presence, candidate):
+    # Mean feature vector for each current label within each environment.
+    elm={}
+    for e,idxs in env_idx.items():
+        groups=collections.defaultdict(list)
+        for i in idxs:
+            groups[labels[i]].append(records[i]["zfeat"])
+        for b,vs in groups.items():
+            elm[(e,b)]=np.mean(np.stack(vs),axis=0)
+
+    # Environment-equal leave-one-environment-out centroids.
+    centroid_by_target_env={}
+    for e0 in env_idx:
+        cents={}
         for b in candidate:
-            # equal-environment centroid using environments != target e
-            per_env=[]
-            for ee in sorted(envs_by_label[b]):
-                if ee==e: continue
-                ix=[k for k,(r,lab) in enumerate(zip(records,labels)) if lab==b and r["env"]==ee]
-                if ix:
-                    per_env.append(np.mean(np.stack([records[k]["zfeat"] for k in ix]),axis=0))
-            if len(per_env)>=2:
-                centroids[b]=np.mean(np.stack(per_env),axis=0)
-        if qlab not in centroids or len(centroids)<3:
+            per=[]
+            for e in sorted(presence[b]):
+                if e==e0: continue
+                v=elm.get((e,b))
+                if v is not None:
+                    per.append(v)
+            if len(per)>=2:
+                cents[b]=np.mean(np.stack(per),axis=0)
+        centroid_by_target_env[e0]=cents
+
+    target_vals=collections.defaultdict(list)
+    for i,q in enumerate(records):
+        b=labels[i]
+        if b not in candidate:
             continue
-        own=float(np.linalg.norm(q["zfeat"]-centroids[qlab]))
-        others=[float(np.linalg.norm(q["zfeat"]-v)) for b,v in centroids.items() if b!=qlab]
+        cents=centroid_by_target_env[q["env"]]
+        if b not in cents or len(cents)<3:
+            continue
+        own=float(np.linalg.norm(q["zfeat"]-cents[b]))
+        others=[float(np.linalg.norm(q["zfeat"]-v)) for bb,v in cents.items() if bb!=b]
         if len(others)<2:
             continue
-        k=float(np.mean(others)-own)
-        target_vals[qlab].append(k)
+        target_vals[b].append(float(np.mean(others)-own))
     indiv={b:float(np.mean(v)) for b,v in target_vals.items() if v}
     if len(indiv)<3:
         return None,indiv
@@ -307,21 +327,22 @@ def run_primary_b(sp,records):
     if len(feat_idx)<6:
         return {"status":"STOP_B_FEATURE_SUPPORT","retained_feature_indices":feat_idx}
     obs_labels=[r["bat"] for r in rec]
-    obs,indiv=b_stat(rec,obs_labels)
+    env_idx,presence,candidate=prepare_b_structure(rec,obs_labels)
+    obs,indiv=b_stat_fast(rec,obs_labels,env_idx,presence,candidate)
     if obs is None:
         return {"status":"STOP_B_COORDINATE_SUPPORT","retained_feature_indices":feat_idx}
     n=len(indiv); npos=sum(v>0 for v in indiv.values()); need=math.ceil(0.70*n)
     rng=np.random.default_rng(202610042202)
-    env_idx=collections.defaultdict(list)
-    for i,r in enumerate(rec): env_idx[r["env"]].append(i)
     null=np.empty(N_PERM,dtype=np.float64)
+    # Label multisets within each environment are fixed; therefore presence/candidate support is fixed.
     for p in range(N_PERM):
         labs=list(obs_labels)
         for e,idxs in env_idx.items():
             vals=np.array([obs_labels[i] for i in idxs],dtype=object)
             rng.shuffle(vals)
-            for k,i in enumerate(idxs): labs[i]=str(vals[k])
-        st,_=b_stat(rec,labs)
+            for k,i in enumerate(idxs):
+                labs[i]=str(vals[k])
+        st,_=b_stat_fast(rec,labs,env_idx,presence,candidate)
         null[p]=st if st is not None else np.nan
     valid=null[np.isfinite(null)]
     pval=(1+int(np.sum(valid>=obs)))/(1+len(valid))
@@ -330,6 +351,7 @@ def run_primary_b(sp,records):
         "status":"PASS_B_OUTCOME" if supported else "FAIL_B_OUTCOME",
         "n_trajectories":len(rec),
         "retained_feature_indices":feat_idx,
+        "candidate_bats":candidate,
         "K_species":obs,
         "individual_K":indiv,
         "positive_individuals":npos,
