@@ -1,0 +1,42 @@
+name: early-experience-history-carrier-structural-support-v1
+
+on:
+  push:
+    branches:
+      - prospective/early-experience-history-carrier-v1
+    paths:
+      - prospective/early_experience_history_carrier/structural_support_v1.py
+      - prospective/early_experience_history_carrier/STRUCTURAL_ROW_VALUE_ALLOWLIST_V1.md
+      - .github/workflows/early-experience-history-carrier-structural-support-v1.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  structural-support:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Guard behavioural outcomes
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path("prospective/early_experience_history_carrier/structural_support_v1.py").read_text()
+          # Outcome names may appear only in the FORBIDDEN declaration/header audit.
+          for name in ["Time Out (Minute)","Max distance (meters)","Explored area"]:
+              if p.count(name) != 1:
+                  raise SystemExit(f"outcome guard failed for {name}: count={p.count(name)}")
+          print("behavioural-outcome guard PASS")
+          PY
+      - name: Run frozen structural gate
+        run: |
+          python prospective/early_experience_history_carrier/structural_support_v1.py | tee prospective/early_experience_history_carrier/STRUCTURAL_SUPPORT_RESULT_V1.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: early-experience-history-carrier-structural-support-v1
+          path: prospective/early_experience_history_carrier/STRUCTURAL_SUPPORT_RESULT_V1.json
+          if-no-files-found: error
