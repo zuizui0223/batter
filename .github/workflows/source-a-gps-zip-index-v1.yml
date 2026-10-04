@@ -1,0 +1,36 @@
+name: source-a-gps-zip-index-v1
+
+on:
+  push:
+    branches:
+      - prospective/ontogenetic-path-dependence-v1
+    paths:
+      - prospective/ontogenetic_path_dependence/index_source_a_gps_zip_v1.py
+      - prospective/ontogenetic_path_dependence/SOURCE_A_GPS_ARCHIVE_INDEX_AMENDMENT_V1.md
+      - .github/workflows/source-a-gps-zip-index-v1.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  central-directory-only:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Guard payload opening
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path("prospective/ontogenetic_path_dependence/index_source_a_gps_zip_v1.py").read_text()
+          banned=["zipfile.ZipFile","extract(","read(member","get_bytes(url)"]
+          hits=[x for x in banned if x in p]
+          if hits:
+              raise SystemExit(f"Archive payload guard failed: {hits}")
+          print("Central-directory-only guard PASS")
+          PY
+      - name: Index archive central directory only
+        run: python prospective/ontogenetic_path_dependence/index_source_a_gps_zip_v1.py
