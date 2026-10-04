@@ -1,0 +1,42 @@
+name: source-c-schema-metadata-preflight-v1
+
+on:
+  push:
+    branches:
+      - prospective/experience-manipulation-self-history-v1
+    paths:
+      - prospective/experience_manipulation_self_history/source_c_metadata_inventory_v1.py
+      - prospective/experience_manipulation_self_history/SCHEMA_PREFLIGHT_CONTRACT_V1.md
+      - .github/workflows/source-c-schema-metadata-preflight-v1.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Metadata-only guard
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path("prospective/experience_manipulation_self_history/source_c_metadata_inventory_v1.py").read_text()
+          banned=["download_url","urlretrieve","open("]
+          hits=[x for x in banned if x in p]
+          if hits:
+              raise SystemExit(f"content-opening guard failed: {hits}")
+          print("metadata-only guard PASS")
+          PY
+      - name: Inventory public metadata
+        run: |
+          python prospective/experience_manipulation_self_history/source_c_metadata_inventory_v1.py | tee prospective/experience_manipulation_self_history/SOURCE_C_METADATA_INVENTORY_V1.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: source-c-metadata-inventory-v1
+          path: prospective/experience_manipulation_self_history/SOURCE_C_METADATA_INVENTORY_V1.json
+          if-no-files-found: error
