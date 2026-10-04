@@ -11,15 +11,22 @@ This programme is independent of JAE v0.4.0 and of the completed Harten/Rachum p
 
 ## Source paper
 
-Teshima et al. (2025), *Flight trajectory modeling reveals species-specific obstacle avoidance policies in echolocating bats*.
+Peer-reviewed source:
 
-bioRxiv DOI:
+Teshima, Y., Genda, S., Aoki, Y., Fujisawa, M., Hiryu, S. & Fujii, K. (2026).
+*Evidence for latent regularities in echolocation-guided flight behaviour of bats*.
+Proceedings of the Royal Society B: Biological Sciences 293(2076).
+
+DOI:
+`10.1098/rspb.2026.1463`
+
+Publication date:
+2026-08-12.
+
+Preprint provenance:
 `10.1101/2025.06.13.659477`
 
-Current indexed version:
-v2 (updated July 2025).
-
-The preprint reports:
+The peer-reviewed paper reports:
 - two echolocating bat species;
 - *Rhinolophus nippon*;
 - *Miniopterus fuliginosus*;
