@@ -149,16 +149,31 @@ def api_metadata(d: dict) -> dict:
     and never followed.
     """
     snapshot_url = f"{PUBLIC_API_BASE}/datasets/{d['id']}/snapshot/{d['version']}"
-    files_url = (
-        f"{PUBLIC_API_BASE}/datasets/{d['id']}/files"
-        f"?folder_id=root&version={d['version']}&$start=0&$limit=1000"
-    )
+    folders_url = f"{PUBLIC_API_BASE}/datasets/{d['id']}/folders/{d['version']}"
     meta = get_json(snapshot_url)
-    files = get_json(files_url)
-    if isinstance(files, dict):
-        file_rows = files.get("results") or files.get("items") or files.get("files") or []
-    else:
-        file_rows = files or []
+    folders_raw = get_json(folders_url)
+    folders = folders_raw if isinstance(folders_raw, list) else (
+        folders_raw.get("results") or folders_raw.get("items") or folders_raw.get("folders") or []
+    )
+
+    file_rows = []
+    folder_keys = ["root"] + [str(x.get("id")) for x in folders if x.get("id") is not None]
+    for folder_key in folder_keys:
+        files_url = (
+            f"{PUBLIC_API_BASE}/datasets/{d['id']}/files"
+            f"?folder_id={urllib.parse.quote(folder_key)}&version={d['version']}&$start=0&$limit=1000"
+        )
+        rows = get_json(files_url)
+        if isinstance(rows, dict):
+            rows = rows.get("results") or rows.get("items") or rows.get("files") or []
+        file_rows.extend(rows or [])
+
+    # De-duplicate in case the public endpoint returns cross-folder items.
+    dedup = {}
+    for row in file_rows:
+        dedup[row.get("id") or (row.get("filename"), row.get("folder_id"))] = row
+    file_rows = list(dedup.values())
+
     slim = []
     for f in file_rows:
         cd = f.get("content_details") or {}
@@ -176,6 +191,16 @@ def api_metadata(d: dict) -> dict:
         "name": meta.get("name") if isinstance(meta, dict) else None,
         "version": meta.get("version") if isinstance(meta, dict) else d["version"],
         "metadata_endpoint": "public-frontend-anonymous",
+        "folder_count": len(folders),
+        "folders": [
+            {
+                "id": x.get("id"),
+                "name": x.get("name"),
+                "parent_id": x.get("parent_id"),
+                "description": x.get("description"),
+            }
+            for x in folders
+        ],
         "file_count": len(slim),
         "files": slim,
     }
