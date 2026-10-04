@@ -1,0 +1,30 @@
+name: naive-to-familiar-metadata-v1
+
+on:
+  push:
+    branches: [prospective/naive-to-familiar-policy-v1]
+    paths:
+      - prospective/naive_to_familiar_policy/figshare_metadata_v1.py
+      - prospective/naive_to_familiar_policy/METADATA_PREFLIGHT_CONTRACT_V1.md
+      - .github/workflows/naive-to-familiar-metadata-v1.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  metadata:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Metadata only
+        run: |
+          python prospective/naive_to_familiar_policy/figshare_metadata_v1.py | tee prospective/naive_to_familiar_policy/METADATA_RESULT_V1.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: naive-to-familiar-metadata-v1
+          path: prospective/naive_to_familiar_policy/METADATA_RESULT_V1.json
+          if-no-files-found: error
