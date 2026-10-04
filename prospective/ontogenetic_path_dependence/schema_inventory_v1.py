@@ -23,7 +23,7 @@ import urllib.request
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
-API_BASE = "https://api.data.mendeley.com"
+API_BASE = "https://api.data.mendeley.com"\nPUBLIC_API_BASE = "https://data.mendeley.com/public-api"
 OAI_BASE = "https://data.mendeley.com/oai"
 PAGE_BASE = "https://data.mendeley.com/datasets"
 DATASETS = [
@@ -142,9 +142,17 @@ def oai_formats(identifier: str) -> list[dict]:
     return out
 
 def api_metadata(d: dict) -> dict:
-    meta_url = f"{API_BASE}/datasets/{d['id']}?version={d['version']}"
-    files_url = f"{API_BASE}/datasets/{d['id']}/files?version={d['version']}&$start=0&$limit=100"
-    meta = get_json(meta_url)
+    """Use the anonymous endpoint used by the public Mendeley frontend.
+
+    This retrieves FILE METADATA only. content_details download/view URLs are discarded
+    and never followed.
+    """
+    snapshot_url = f"{PUBLIC_API_BASE}/datasets/{d['id']}/snapshot/{d['version']}"
+    files_url = (
+        f"{PUBLIC_API_BASE}/datasets/{d['id']}/files"
+        f"?folder_id=root&version={d['version']}&$start=0&$limit=1000"
+    )
+    meta = get_json(snapshot_url)
     files = get_json(files_url)
     if isinstance(files, dict):
         file_rows = files.get("results") or files.get("items") or files.get("files") or []
@@ -166,6 +174,7 @@ def api_metadata(d: dict) -> dict:
         "resolved_id": meta.get("id") if isinstance(meta, dict) else None,
         "name": meta.get("name") if isinstance(meta, dict) else None,
         "version": meta.get("version") if isinstance(meta, dict) else d["version"],
+        "metadata_endpoint": "public-frontend-anonymous",
         "file_count": len(slim),
         "files": slim,
     }
