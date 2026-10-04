@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Yamada coordinate/feature support gate; no identity outcome is computed."""
+"""Yamada coordinate/feature support gate; no identity outcome is computed.\nScientific rules frozen in COORDINATE_SUPPORT_OPENING_V1.md.\n"""
 from __future__ import annotations
 import hashlib, io, json, math, urllib.request, zipfile
 import xml.etree.ElementTree as ET
