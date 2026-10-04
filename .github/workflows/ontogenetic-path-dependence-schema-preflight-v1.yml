@@ -35,6 +35,8 @@ jobs:
           PY
       - name: Public Mendeley metadata inventory
         run: python prospective/ontogenetic_path_dependence/schema_inventory_v1.py
+      - name: Compact folder topology
+        run: python prospective/ontogenetic_path_dependence/topology_summary_v1.py
       - name: Discover anonymous file-list endpoint
         run: python prospective/ontogenetic_path_dependence/discover_mendeley_file_endpoint_v1.py
       - uses: actions/upload-artifact@v4
