@@ -136,10 +136,20 @@ Tree coordinates/identities may be opened later only if required to establish a 
 
 The public metadata show nested individual folders containing a named `<individual>.mat` and/or `data.mat`.
 
-To learn the raw schema without selecting a biologically favourable animal, authorize exactly:
+To learn the raw schema without selecting a biologically favourable animal, authorize exactly the ordinary raw hierarchy:
 
-- the **lexicographically first individual folder** inside each source-defined ordinary GPS cohort (`GPS_2016_2017`, `GPS_2017_2018`);
-- exclude any folder under a path containing `Translocations`;
+- root `Pure data`, id `10119824-3ab6-46b4-927e-1b2de8abe242`;
+- `GPS_2016_2017`, id `e92b9150-3ee7-49c7-9f1f-b34e6aba6ac9`;
+- `GPS_2017_2018`, id `d66d9326-798c-4d88-9491-85d903cf1b75`.
+
+The four sibling roots `pure data2`, `pure data50`, `pure data100`, and `pure data250` are derived/resampled copies and are excluded from schema selection. The `Translocations - GPS_2016_2017` subtree is also excluded.
+
+Within the ordinary cohorts, the lexicographically first individual folders are now fixed from metadata:
+
+- 2016–2017: `Ali`, folder id `f148a7d1-8ca7-4b99-b64d-5bf0adb6dc08`;
+- 2017–2018: `Anka`, folder id `ea9161e3-b368-4cce-8aa4-753fc6b9ffe2`.
+
+Authorize exactly those two schema probes;
 - from each selected folder, inspect the named individual MAT file and `data.mat` only by MAT variable-directory metadata (`whosmat` or HDF5 object names/shapes/classes);
 - do not load array values.
 
