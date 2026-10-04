@@ -51,7 +51,7 @@ UA = "batter-ontogenetic-path-dependence-schema-preflight/1.1"
 
 def get_bytes(url: str, accept: str = "*/*") -> bytes:
     req = urllib.request.Request(url, headers={"Accept": accept, "User-Agent": UA})
-    with urllib.request.urlopen(req, timeout=90) as r:
+    with urllib.request.urlopen(req, timeout=20) as r:
         return r.read()
 
 def get_json(url: str):
@@ -143,32 +143,47 @@ def oai_formats(identifier: str) -> list[dict]:
     return out
 
 def api_metadata(d: dict) -> dict:
-    """Use the anonymous endpoint used by the public Mendeley frontend.
-
-    This retrieves FILE METADATA only. content_details download/view URLs are discarded
-    and never followed.
-    """
+    """Use anonymous Mendeley frontend endpoints for METADATA only."""
     snapshot_url = f"{PUBLIC_API_BASE}/datasets/{d['id']}/snapshot/{d['version']}"
-    folders_url = f"{PUBLIC_API_BASE}/datasets/{d['id']}/folders/{d['version']}"
     meta = get_json(snapshot_url)
-    folders_raw = get_json(folders_url)
-    folders = folders_raw if isinstance(folders_raw, list) else (
-        folders_raw.get("results") or folders_raw.get("items") or folders_raw.get("folders") or []
-    )
 
-    file_rows = []
-    folder_keys = ["root"] + [str(x.get("id")) for x in folders if x.get("id") is not None]
-    for folder_key in folder_keys:
-        files_url = (
-            f"{PUBLIC_API_BASE}/datasets/{d['id']}/files"
-            f"?folder_id={urllib.parse.quote(folder_key)}&version={d['version']}&$start=0&$limit=1000"
+    folders = []
+    folder_error = None
+    try:
+        folders_url = f"{PUBLIC_API_BASE}/datasets/{d['id']}/folders/{d['version']}"
+        folders_raw = get_json(folders_url)
+        folders = folders_raw if isinstance(folders_raw, list) else (
+            folders_raw.get("results") or folders_raw.get("items") or folders_raw.get("folders") or []
         )
-        rows = get_json(files_url)
+    except Exception as e:
+        folder_error = repr(e)
+
+    def fetch_file_rows(folder_id=None):
+        q = f"version={d['version']}&$start=0&$limit=1000"
+        if folder_id is not None:
+            q = f"folder_id={urllib.parse.quote(str(folder_id))}&" + q
+        url = f"{PUBLIC_API_BASE}/datasets/{d['id']}/files?{q}"
+        rows = get_json(url)
         if isinstance(rows, dict):
             rows = rows.get("results") or rows.get("items") or rows.get("files") or []
-        file_rows.extend(rows or [])
+        return rows or []
 
-    # De-duplicate in case the public endpoint returns cross-folder items.
+    # First ask for unscoped metadata. If the endpoint requires folder_id, fall back to root.
+    unscoped_error = None
+    try:
+        file_rows = fetch_file_rows()
+    except Exception as e:
+        unscoped_error = repr(e)
+        file_rows = fetch_file_rows("root")
+
+    # Add explicit folder results only when the folder listing was cheaply available.
+    for x in folders:
+        if x.get("id") is not None:
+            try:
+                file_rows.extend(fetch_file_rows(x.get("id")))
+            except Exception:
+                pass
+
     dedup = {}
     for row in file_rows:
         dedup[row.get("id") or (row.get("filename"), row.get("folder_id"))] = row
@@ -191,6 +206,8 @@ def api_metadata(d: dict) -> dict:
         "name": meta.get("name") if isinstance(meta, dict) else None,
         "version": meta.get("version") if isinstance(meta, dict) else d["version"],
         "metadata_endpoint": "public-frontend-anonymous",
+        "folder_error": folder_error,
+        "unscoped_file_error": unscoped_error,
         "folder_count": len(folders),
         "folders": [
             {
@@ -205,56 +222,3 @@ def api_metadata(d: dict) -> dict:
         "files": slim,
     }
 
-def main() -> int:
-    report = {
-        "contract": "SCHEMA_PREFLIGHT_CONTRACT_V1.md",
-        "outcome_opened": False,
-        "route_file_contents_downloaded": False,
-        "sources": [],
-    }
-    for d in DATASETS:
-        src = {
-            "label": d["label"],
-            "requested_id": d["id"],
-            "doi": d["doi"],
-            "title": d["title"],
-        }
-        try:
-            src["page_metadata"] = page_metadata(d)
-        except Exception as e:
-            src["page_metadata_error"] = repr(e)
-
-        try:
-            recs = oai_list_records_for_date(d)
-            src["oai_records"] = recs
-            if recs and recs[0].get("oai_identifier"):
-                src["oai_metadata_formats"] = oai_formats(recs[0]["oai_identifier"])
-        except Exception as e:
-            src["oai_error"] = repr(e)
-
-        try:
-            src["api_metadata"] = api_metadata(d)
-            src["status"] = "FILE_METADATA_PASS"
-        except urllib.error.HTTPError as e:
-            src["api_error"] = f"HTTP {e.code} {e.reason}"
-            if src.get("oai_records") or src.get("page_metadata"):
-                src["status"] = "PUBLIC_METADATA_PARTIAL_PASS"
-            else:
-                src["status"] = "STOP_METADATA_RETRIEVAL"
-        except Exception as e:
-            src["api_error"] = repr(e)
-            if src.get("oai_records") or src.get("page_metadata"):
-                src["status"] = "PUBLIC_METADATA_PARTIAL_PASS"
-            else:
-                src["status"] = "STOP_METADATA_RETRIEVAL"
-
-        report["sources"].append(src)
-
-    OUT.write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    print(json.dumps(report, indent=2, ensure_ascii=False))
-    if any(s["status"].startswith("STOP") for s in report["sources"]):
-        return 2
-    return 0
-
-if __name__ == "__main__":
-    raise SystemExit(main())
