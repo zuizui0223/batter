@@ -1,0 +1,42 @@
+name: early-experience-history-carrier-schema-open-v1
+
+on:
+  push:
+    branches:
+      - prospective/early-experience-history-carrier-v1
+    paths:
+      - prospective/early_experience_history_carrier/schema_open_v1.py
+      - prospective/early_experience_history_carrier/SCHEMA_FILE_OPENING_ALLOWLIST_V1.md
+      - .github/workflows/early-experience-history-carrier-schema-open-v1.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  schema-open:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Guard row-value closure
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path("prospective/early_experience_history_carrier/schema_open_v1.py").read_text()
+          banned=["pandas.read_excel","openpyxl.load_workbook","iter_rows","read_csv("]
+          hits=[x for x in banned if x in p]
+          if hits:
+              raise SystemExit(f"row-value guard failed: {hits}")
+          print("row-value guard PASS")
+          PY
+      - name: Open only headers and source text
+        run: |
+          python prospective/early_experience_history_carrier/schema_open_v1.py | tee prospective/early_experience_history_carrier/SCHEMA_OPEN_RESULT_V1.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: early-experience-history-carrier-schema-open-v1
+          path: prospective/early_experience_history_carrier/SCHEMA_OPEN_RESULT_V1.json
+          if-no-files-found: error
