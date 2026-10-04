@@ -1,0 +1,37 @@
+name: early-experience-nightly-strategy-history-primary-v1
+
+on:
+  push:
+    branches:
+      - prospective/early-experience-history-carrier-v1
+    paths:
+      - prospective/early_experience_history_carrier/nightly_strategy_history_primary_v1.py
+      - prospective/early_experience_history_carrier/NIGHTLY_STRATEGY_HISTORY_ESTIMATOR_CONTRACT_V1.md
+      - .github/workflows/early-experience-nightly-strategy-history-primary-v1.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  primary:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Assert frozen contract
+        run: |
+          test -f prospective/early_experience_history_carrier/NIGHTLY_STRATEGY_HISTORY_ESTIMATOR_CONTRACT_V1.md
+          grep -q "202610041733" prospective/early_experience_history_carrier/NIGHTLY_STRATEGY_HISTORY_ESTIMATOR_CONTRACT_V1.md
+          grep -q "3 through 10" prospective/early_experience_history_carrier/NIGHTLY_STRATEGY_HISTORY_ESTIMATOR_CONTRACT_V1.md
+          grep -q "9,999" prospective/early_experience_history_carrier/NIGHTLY_STRATEGY_HISTORY_ESTIMATOR_CONTRACT_V1.md
+      - name: Run frozen primary
+        run: |
+          python prospective/early_experience_history_carrier/nightly_strategy_history_primary_v1.py | tee prospective/early_experience_history_carrier/NIGHTLY_STRATEGY_HISTORY_PRIMARY_RESULT_V1.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: early-experience-nightly-strategy-history-primary-v1
+          path: prospective/early_experience_history_carrier/NIGHTLY_STRATEGY_HISTORY_PRIMARY_RESULT_V1.json
+          if-no-files-found: error
