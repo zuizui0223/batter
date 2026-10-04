@@ -1,0 +1,36 @@
+name: source-b-coordinate-parser-diagnostic-v1
+
+on:
+  push:
+    branches:
+      - prospective/ontogenetic-path-dependence-v1
+    paths:
+      - prospective/ontogenetic_path_dependence/source_b_coordinate_parser_diagnostic_v1.py
+      - prospective/ontogenetic_path_dependence/SOURCE_B_COORDINATE_PARSER_DIAGNOSTIC_V1.md
+      - .github/workflows/source-b-coordinate-parser-diagnostic-v1.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  diagnostic:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install --disable-pip-version-check numpy scipy
+      - name: Guard values
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path("prospective/ontogenetic_path_dependence/source_b_coordinate_parser_diagnostic_v1.py").read_text()
+          banned=["np.min(","np.max(","np.mean(","cKDTree","spearman","route_similarity"]
+          hits=[x for x in banned if x in p]
+          if hits: raise SystemExit(f"value guard failed: {hits}")
+          print("field-name/shape-only guard PASS")
+          PY
+      - name: Inspect deterministic field structure
+        run: python prospective/ontogenetic_path_dependence/source_b_coordinate_parser_diagnostic_v1.py
