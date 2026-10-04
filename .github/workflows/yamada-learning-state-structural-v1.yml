@@ -1,0 +1,42 @@
+name: yamada-learning-state-structural-v1
+
+on:
+  push:
+    branches:
+      - prospective/learning-state-theta-v1
+    paths:
+      - prospective/learning_state_theta/structural_crosswalk_v1.py
+      - prospective/learning_state_theta/STRUCTURAL_ROW_VALUE_ALLOWLIST_V1.md
+      - .github/workflows/yamada-learning-state-structural-v1.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  structural:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Guard outcome columns
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path("prospective/learning_state_theta/structural_crosswalk_v1.py").read_text()
+          banned=["max_flight_speed","meandering width","velocity[m/s]","bat(X)","pulse emission","Absolute⊿"]
+          hits=[x for x in banned if x in p]
+          if hits:
+              raise SystemExit(f"outcome-column guard failed: {hits}")
+          print("outcome-column guard PASS")
+          PY
+      - name: Run structural crosswalk
+        run: |
+          python prospective/learning_state_theta/structural_crosswalk_v1.py | tee prospective/learning_state_theta/STRUCTURAL_RESULT_V1.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: yamada-learning-state-structural-v1
+          path: prospective/learning_state_theta/STRUCTURAL_RESULT_V1.json
+          if-no-files-found: error
