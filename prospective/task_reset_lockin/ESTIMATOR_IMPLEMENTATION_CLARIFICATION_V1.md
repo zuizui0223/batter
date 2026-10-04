@@ -101,6 +101,32 @@ Unchanged:
 - Primary A: 9,999; seed 202610042201.
 - Primary B: 9,999; seed 202610042202.
 
+
+## Primary B permutation support rule
+
+The observed set of B-valid trajectory objects is fixed before permutation.
+
+For each independently environment-relabelled permutation:
+
+- retain the same trajectory objects and usable environments;
+- each target trajectory receives the permuted label of its original bat × environment cluster;
+- build pseudo-self and pseudo-other cross-environment centroids under those permuted labels;
+- if a target lacks >=2 pseudo-self other environments or >=2 eligible pseudo-other donor centroids, the **entire permutation is invalid**.
+
+Requested permutations:
+9,999.
+
+Primary B calibration opens only if at least **9,500** permutations are valid.
+
+If fewer than 9,500 are valid:
+`STOP_RANDOMIZATION_SUPPORT`.
+
+For valid permutations:
+
+`p_B = (1 + # {K_null >= K_obs}) / (1 + n_valid)`.
+
+The observed target set is not filtered to improve permutation validity.
+
 ## Missing/invalid target handling
 
 Observed and permuted statistics use the same structurally valid trajectory set fixed from the coordinate-support rules.
