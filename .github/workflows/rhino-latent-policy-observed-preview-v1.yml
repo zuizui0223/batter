@@ -1,0 +1,31 @@
+name: rhino-latent-policy-observed-preview-v1
+
+on:
+  push:
+    branches:
+      - prospective/task-reset-lockin-v1
+    paths:
+      - prospective/task_reset_lockin/latent_policy_observed_preview_v1.py
+      - .github/workflows/rhino-latent-policy-observed-preview-v1.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install --quiet numpy
+      - name: Run observed-only preview
+        run: |
+          python prospective/task_reset_lockin/latent_policy_observed_preview_v1.py | tee prospective/task_reset_lockin/LATENT_POLICY_OBSERVED_PREVIEW_V1.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rhino-latent-policy-observed-preview-v1
+          path: prospective/task_reset_lockin/LATENT_POLICY_OBSERVED_PREVIEW_V1.json
+          if-no-files-found: error
