@@ -7,6 +7,8 @@ on:
     paths:
       - prospective/early_experience_history_carrier/schema_open_v1.py
       - prospective/early_experience_history_carrier/SCHEMA_FILE_OPENING_ALLOWLIST_V1.md
+      - prospective/early_experience_history_carrier/outdoor_crosswalk_v2.py
+      - prospective/early_experience_history_carrier/OUTDOOR_CROSSWALK_AMENDMENT_V2.md
       - .github/workflows/early-experience-history-carrier-schema-open-v1.yml
   workflow_dispatch:
 
@@ -35,8 +37,13 @@ jobs:
       - name: Open only headers and source text
         run: |
           python prospective/early_experience_history_carrier/schema_open_v1.py | tee prospective/early_experience_history_carrier/SCHEMA_OPEN_RESULT_V1.json
+      - name: Run frozen 19-bat crosswalk
+        run: |
+          python prospective/early_experience_history_carrier/outdoor_crosswalk_v2.py | tee prospective/early_experience_history_carrier/OUTDOOR_CROSSWALK_RESULT_V2.json
       - uses: actions/upload-artifact@v4
         with:
           name: early-experience-history-carrier-schema-open-v1
-          path: prospective/early_experience_history_carrier/SCHEMA_OPEN_RESULT_V1.json
+          path: |
+            prospective/early_experience_history_carrier/SCHEMA_OPEN_RESULT_V1.json
+            prospective/early_experience_history_carrier/OUTDOOR_CROSSWALK_RESULT_V2.json
           if-no-files-found: error
