@@ -138,10 +138,8 @@ def whosmat_summary(b):
     import scipy.io
     with tempfile.NamedTemporaryFile(suffix=".mat") as tmp:
         tmp.write(b); tmp.flush()
-        try:
-            rows=scipy.io.whosmat(tmp.name)
-            return {"format":"mat-v5-or-earlier","variables":[{"name":n,"shape":list(shape),"class":cls} for n,shape,cls in rows]}
-        except NotImplementedError:
+        # HDF5/v7.3 first when signature is present.
+        if b.startswith(b"\\x89HDF"):
             import h5py
             out=[]
             with h5py.File(tmp.name,"r") as h:
@@ -150,6 +148,45 @@ def whosmat_summary(b):
                         out.append({"name":name,"shape":list(obj.shape),"dtype":str(obj.dtype)})
                 h.visititems(visitor)
             return {"format":"mat-v7.3-hdf5","variables":out}
+        try:
+            rows=scipy.io.whosmat(tmp.name)
+            return {"format":"mat-v5-or-earlier","reader":"scipy.whosmat",
+                    "variables":[{"name":n,"shape":list(shape),"class":cls} for n,shape,cls in rows]}
+        except Exception as standard_error:
+            # Conservative SciPy-header fallback: list each matrix header and seek
+            # past its payload WITHOUT reading the array values.
+            from scipy.io.matlab._mio5 import MatFile5Reader
+            variables=[]
+            with open(tmp.name,"rb") as fh:
+                rdr=MatFile5Reader(fh)
+                rdr.initialize_read()
+                rdr.read_file_header()
+                while not rdr.end_of_stream():
+                    hdr,next_position=rdr.read_var_header()
+                    raw_name=getattr(hdr,"name",None)
+                    if raw_name is None:
+                        name="None"
+                    elif isinstance(raw_name,bytes):
+                        name=raw_name.decode("latin1",errors="replace") or "__function_workspace__"
+                    else:
+                        name=str(raw_name) or "__function_workspace__"
+                    shape=None
+                    shape_error=None
+                    try:
+                        shape=list(rdr._matrix_reader.shape_from_header(hdr))
+                    except Exception as e:
+                        shape_error=type(e).__name__
+                    variables.append({
+                        "name":name,
+                        "shape":shape,
+                        "shape_error":shape_error,
+                        "mclass":getattr(hdr,"mclass",None),
+                        "is_global":bool(getattr(hdr,"is_global",False)),
+                        "is_logical":bool(getattr(hdr,"is_logical",False)),
+                    })
+                    fh.seek(next_position)
+            return {"format":"mat-v5-or-earlier","reader":"header-only-fallback",
+                    "standard_whosmat_error":repr(standard_error),"variables":variables}
 
 def list_folder_files(dataset,version,folder_id):
     url=f"{BASE}/datasets/{dataset}/files?folder_id={urllib.parse.quote(folder_id)}&version={version}&$start=0&$limit=1000"
