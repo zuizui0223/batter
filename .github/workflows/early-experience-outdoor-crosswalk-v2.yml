@@ -1,0 +1,42 @@
+name: early-experience-outdoor-crosswalk-v2
+
+on:
+  push:
+    branches:
+      - prospective/early-experience-history-carrier-v1
+    paths:
+      - prospective/early_experience_history_carrier/outdoor_crosswalk_v2.py
+      - prospective/early_experience_history_carrier/OUTDOOR_CROSSWALK_AMENDMENT_V2.md
+      - .github/workflows/early-experience-outdoor-crosswalk-v2.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  crosswalk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Guard outcome closure
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path("prospective/early_experience_history_carrier/outdoor_crosswalk_v2.py").read_text()
+          banned=["No of squares on the grid","avg. squares per night","Boldness_B1","Explore_B1","Active_B1","Time Out (Minute)","Max distance (meters)","Explored area"]
+          hits=[x for x in banned if x in p]
+          if hits:
+              raise SystemExit(f"outcome guard failed: {hits}")
+          print("outcome guard PASS")
+          PY
+      - name: Run dedicated 19-bat crosswalk
+        run: |
+          python prospective/early_experience_history_carrier/outdoor_crosswalk_v2.py | tee prospective/early_experience_history_carrier/OUTDOOR_CROSSWALK_RESULT_V2.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: early-experience-outdoor-crosswalk-v2
+          path: prospective/early_experience_history_carrier/OUTDOOR_CROSSWALK_RESULT_V2.json
+          if-no-files-found: error
