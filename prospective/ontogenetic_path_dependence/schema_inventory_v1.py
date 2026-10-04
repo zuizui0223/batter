@@ -23,7 +23,8 @@ import urllib.request
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
-API_BASE = "https://api.data.mendeley.com"\nPUBLIC_API_BASE = "https://data.mendeley.com/public-api"
+API_BASE = "https://api.data.mendeley.com"
+PUBLIC_API_BASE = "https://data.mendeley.com/public-api"
 OAI_BASE = "https://data.mendeley.com/oai"
 PAGE_BASE = "https://data.mendeley.com/datasets"
 DATASETS = [
