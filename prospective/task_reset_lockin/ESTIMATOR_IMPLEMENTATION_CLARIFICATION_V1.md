@@ -163,6 +163,29 @@ if a feature has zero or non-finite SD in **any usable environment**, that featu
 
 If fewer than six features remain, STOP Primary B for that species.
 
+
+## Primary A arc-length duplicate handling
+
+When cumulative 3-D arc length contains repeated values because consecutive retained coordinates are identical:
+
+- retain the **first occurrence** of each cumulative-distance value;
+- then normalize cumulative distance to [0,1];
+- then linearly interpolate X, Y and Z to the frozen 101-point grid.
+
+No jitter or smoothing is added.
+
+## Primary B species-statistic weighting under permutation
+
+For both the observed and permuted Primary B statistic:
+
+1. calculate K for every fixed target trajectory;
+2. average target K equally within the target's currently assigned bat label;
+3. average those bat-label means equally to obtain K_species.
+
+Thus the observed equal-target -> equal-bat weighting is preserved under the null using pseudo-bat labels.
+
+No permutation may switch to trajectory-weighted aggregation.
+
 ## Claim boundary
 
 This clarification does not restore temporal order. The programme remains configuration-conditioned, not a relearning/reset-time analysis.
