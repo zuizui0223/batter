@@ -1,0 +1,43 @@
+name: ontogenetic-path-dependence-schema-preflight-v1
+
+on:
+  push:
+    branches:
+      - prospective/ontogenetic-path-dependence-v1
+    paths:
+      - prospective/ontogenetic_path_dependence/**
+      - .github/workflows/ontogenetic-path-dependence-schema-preflight-v1.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  metadata-only-preflight:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Assert no route outcome files are read
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path("prospective/ontogenetic_path_dependence/schema_inventory_v1.py").read_text()
+          banned=["file_downloaded","download_url","urlopen(f[", "Fréchet", "DTW", "route_similarity"]
+          hits=[x for x in banned if x in p]
+          # 'download_url' may occur only in the explicit omission comment.
+          hits=[x for x in hits if not (x=="download_url" and "Deliberately omit download_url" in p)]
+          if hits:
+              raise SystemExit(f"Outcome-opening guard failed: {hits}")
+          print("Outcome-opening guard PASS")
+          PY
+      - name: Public Mendeley metadata inventory
+        run: python prospective/ontogenetic_path_dependence/schema_inventory_v1.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ontogenetic-schema-inventory-v1
+          path: prospective/ontogenetic_path_dependence/schema_inventory_v1.json
+          if-no-files-found: warn
