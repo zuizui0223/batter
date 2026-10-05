@@ -1,0 +1,36 @@
+name: reversible-sensory-masker-strength-expression-v1
+
+on:
+  push:
+    branches:
+      - prospective/reversible-sensory-perturbation-v2
+    paths:
+      - prospective/reversible_sensory_perturbation_v2/masker_strength_expression_diagnostic_v1.py
+      - prospective/reversible_sensory_perturbation_v2/MASKER_STRENGTH_EXPRESSION_DIAGNOSTIC_V1.md
+      - .github/workflows/reversible-sensory-masker-strength-expression-v1.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install numpy
+        run: python -m pip install --quiet numpy
+      - name: Run post-primary masker-strength diagnostic
+        shell: bash
+        run: |
+          set -euo pipefail
+          python prospective/reversible_sensory_perturbation_v2/masker_strength_expression_diagnostic_v1.py | tee prospective/reversible_sensory_perturbation_v2/MASKER_STRENGTH_EXPRESSION_DIAGNOSTIC_RESULT_V1.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: reversible-sensory-masker-strength-expression-v1
+          path: prospective/reversible_sensory_perturbation_v2/MASKER_STRENGTH_EXPRESSION_DIAGNOSTIC_RESULT_V1.json
+          if-no-files-found: warn
