@@ -1,4 +1,5 @@
 name: wild-policy-to-vertical-shape-bridge-v1
+# fast carrier implementation equivalence-guarded
 
 on:
   push:
