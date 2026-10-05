@@ -1,0 +1,45 @@
+name: clutter-recall-schema-v1
+
+on:
+  push:
+    branches:
+      - prospective/clutter-recall-policy-v1
+    paths:
+      - prospective/clutter_recall_policy/schema_open_v1.py
+      - prospective/clutter_recall_policy/SCHEMA_OPENING_CONTRACT_V1.md
+      - .github/workflows/clutter-recall-schema-v1.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  schema:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Guard numeric outcome closure
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path("prospective/clutter_recall_policy/schema_open_v1.py").read_text()
+          banned=["openpyxl","pandas","read_excel","data_only=True"]
+          hits=[x for x in banned if x in p]
+          if hits:
+              raise SystemExit(f"schema guard failed: {hits}")
+          print("schema guard PASS")
+          PY
+      - name: Open XLSX schema only
+        shell: bash
+        run: |
+          set -euo pipefail
+          python prospective/clutter_recall_policy/schema_open_v1.py | tee prospective/clutter_recall_policy/SCHEMA_RESULT_V1.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: clutter-recall-schema-v1
+          path: prospective/clutter_recall_policy/SCHEMA_RESULT_V1.json
+          if-no-files-found: warn
