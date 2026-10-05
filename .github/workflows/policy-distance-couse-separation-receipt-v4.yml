@@ -1,0 +1,39 @@
+name: policy-distance-couse-separation-receipt-v4
+
+on:
+  push:
+    branches:
+      - prospective/task-reset-lockin-v1
+    paths:
+      - prospective/field_policy_bridge/policy_distance_couse_separation_receipt_v2.py
+      - prospective/field_policy_bridge/COUSE_DYAD_ENDPOINT_RECEIPT_V1.json
+      - prospective/field_policy_bridge/POLICY_DISTANCE_COUSE_SEPARATION_CONTRACT_V1.md
+      - .github/workflows/policy-distance-couse-separation-receipt-v4.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  dyad:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install package and dependencies
+        run: |
+          python -m pip install --quiet -e .
+          python -m pip install --quiet numpy pandas scipy pyproj
+      - name: Run receipt-only dyad bridge
+        shell: bash
+        run: |
+          set -euo pipefail
+          python prospective/field_policy_bridge/policy_distance_couse_separation_receipt_v2.py | tee prospective/field_policy_bridge/POLICY_DISTANCE_COUSE_SEPARATION_RECEIPT_V2_RESULT.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: policy-distance-couse-separation-receipt-v4
+          path: prospective/field_policy_bridge/POLICY_DISTANCE_COUSE_SEPARATION_RECEIPT_V2_RESULT.json
+          if-no-files-found: warn
