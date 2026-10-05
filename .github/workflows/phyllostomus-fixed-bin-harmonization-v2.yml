@@ -1,0 +1,33 @@
+name: phyllostomus-fixed-bin-harmonization-v2
+
+on:
+  push:
+    branches:
+      - prospective/task-reset-lockin-v1
+    paths:
+      - prospective/field_policy_bridge/phyllostomus_fixed_bin_harmonization_v2.py
+      - prospective/field_policy_bridge/PHYLLOSTOMUS_FIXED_BIN_HARMONIZATION_CONTRACT_V2.md
+      - .github/workflows/phyllostomus-fixed-bin-harmonization-v2.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  harmonize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: python -m pip install --quiet -e .
+      - name: Run frozen fixed-bin harmonization
+        run: |
+          python prospective/field_policy_bridge/phyllostomus_fixed_bin_harmonization_v2.py | tee prospective/field_policy_bridge/PHYLLOSTOMUS_FIXED_BIN_HARMONIZATION_RESULT_V2.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: phyllostomus-fixed-bin-harmonization-v2
+          path: prospective/field_policy_bridge/PHYLLOSTOMUS_FIXED_BIN_HARMONIZATION_RESULT_V2.json
+          if-no-files-found: error
