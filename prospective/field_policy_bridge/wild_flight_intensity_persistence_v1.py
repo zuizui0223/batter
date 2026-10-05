@@ -134,16 +134,13 @@ def prepare_raw_sessions_for_count(by):
         f,n=session_features(vals);out.append({"valid":f is not None})
     return out
 
-def stat(sessions,labels):
+def stat_reference(sessions,labels):
+    """Original direct implementation retained for equivalence checks."""
     by_label=collections.defaultdict(list)
     for s,lab in zip(sessions,labels):
         by_label[(s["cohort"],lab)].append(float(s["I"]))
     per=collections.defaultdict(list)
     for idx,(s,lab) in enumerate(zip(sessions,labels)):
-        key=(s["cohort"],lab)
-        own=[x for j,x in enumerate(by_label[key])]
-
-        # Need target-specific self exclusion. Rebuild from session indices.
         self_vals=[float(ss["I"]) for j,(ss,ll) in enumerate(zip(sessions,labels))
                    if j!=idx and ss["cohort"]==s["cohort"] and ll==lab]
         if not self_vals:continue
@@ -159,9 +156,58 @@ def stat(sessions,labels):
         q=float(s["I"])
         H=float(np.mean([abs(q-d) for d in donors])-abs(q-selfc))
         per[(s["cohort"],lab)].append(H)
-    indiv={f"{c}:{i}":float(np.mean(v)) for (c,i),v in per.items() if v}
+    indiv={f"{co}:{i}":float(np.mean(v)) for (co,i),v in per.items() if v}
     if len(indiv)<MIN_INDIVIDUALS:return None,indiv
     return float(np.mean(list(indiv.values()))),indiv
+
+
+def stat(sessions,labels):
+    """Algebraically equivalent fast implementation of stat_reference()."""
+    per=collections.defaultdict(list)
+    byco=collections.defaultdict(list)
+    for idx,s in enumerate(sessions):
+        byco[s["cohort"]].append(idx)
+    for cohort,idxs in byco.items():
+        labs=[labels[i] for i in idxs]
+        vals=np.asarray([float(sessions[i]["I"]) for i in idxs],dtype=float)
+        sums=collections.defaultdict(float)
+        counts=collections.Counter()
+        for lab,v in zip(labs,vals):
+            sums[lab]+=float(v); counts[lab]+=1
+        cents={lab:sums[lab]/counts[lab] for lab in counts if counts[lab]>0}
+        for idx,lab,q in zip(idxs,labs,vals):
+            n=counts[lab]
+            if n<2:continue
+            selfc=(sums[lab]-float(q))/(n-1)
+            donors=[cent for dl,cent in cents.items() if dl!=lab]
+            if len(donors)<2:continue
+            H=float(np.mean(np.abs(float(q)-np.asarray(donors,dtype=float)))-abs(float(q)-selfc))
+            per[(cohort,lab)].append(H)
+    indiv={f"{co}:{i}":float(np.mean(v)) for (co,i),v in per.items() if v}
+    if len(indiv)<MIN_INDIVIDUALS:return None,indiv
+    return float(np.mean(list(indiv.values()))),indiv
+
+
+def assert_stat_equivalence(sessions):
+    labs=[s["iid"] for s in sessions]
+    a,ai=stat_reference(sessions,labs)
+    b,bi=stat(sessions,labs)
+    if (a is None)!=(b is None) or (a is not None and abs(a-b)>1e-12) or ai.keys()!=bi.keys():
+        raise RuntimeError("fast-stat observed equivalence check failed")
+    for k in ai:
+        if abs(ai[k]-bi[k])>1e-12:
+            raise RuntimeError(f"fast-stat individual equivalence failed {k}")
+    rng=np.random.default_rng(202610051399)
+    for _ in range(3):
+        pl=perm_labels(sessions,rng)
+        a,ai=stat_reference(sessions,pl)
+        b,bi=stat(sessions,pl)
+        if (a is None)!=(b is None) or (a is not None and abs(a-b)>1e-12) or ai.keys()!=bi.keys():
+            raise RuntimeError("fast-stat permutation equivalence check failed")
+        for k in ai:
+            if abs(ai[k]-bi[k])>1e-12:
+                raise RuntimeError(f"fast-stat permutation individual equivalence failed {k}")
+
 
 def perm_labels(sessions,rng):
     labels=[s["iid"] for s in sessions]
