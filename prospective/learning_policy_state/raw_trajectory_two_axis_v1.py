@@ -23,11 +23,62 @@ import numpy as np
 HERE=Path(__file__).resolve().parent
 ROOT=HERE.parent.parent
 
-# Exact feature implementation from the independent task-reset programme.
-specP=importlib.util.spec_from_file_location(
-    "P",ROOT/"prospective/task_reset_lockin/configuration_identity_primary_v1.py"
-)
-P=importlib.util.module_from_spec(specP);specP.loader.exec_module(P)
+FEATURES = [
+    "median_speed",
+    "p90_speed",
+    "median_abs_vertical_speed",
+    "p90_abs_vertical_speed",
+    "median_abs_horizontal_turn_rate",
+    "p90_abs_horizontal_turn_rate",
+    "path_efficiency",
+    "vertical_range",
+]
+
+def trajectory_features(a):
+    """Exact eight-feature implementation frozen in RAW_TRAJECTORY_TWO_AXIS_CONTRACT_V1.md."""
+    if a.shape[0] < 100:
+        return None
+    t=a[:,0]
+    xyz=a[:,1:4]
+    dt=np.diff(t)
+    dxyz=np.diff(xyz,axis=0)
+    good=np.isfinite(dt) & (dt>0) & np.all(np.isfinite(dxyz),axis=1)
+    if int(np.sum(good)) < 50:
+        return None
+    dtg=dt[good]
+    dg=dxyz[good]
+    v3=np.linalg.norm(dg,axis=1)/dtg
+    vz=np.abs(dg[:,2])/dtg
+
+    horiz=np.linalg.norm(dg[:,:2],axis=1)
+    head_good=horiz>0
+    headings=np.arctan2(dg[head_good,1],dg[head_good,0])
+    turn_rates=[]
+    if len(headings)>=2:
+        base_dt=dtg[head_good]
+        dtheta=np.arctan2(np.sin(np.diff(headings)),np.cos(np.diff(headings)))
+        dtturn=(base_dt[1:]+base_dt[:-1])/2.0
+        valid=np.isfinite(dtheta)&np.isfinite(dtturn)&(dtturn>0)
+        turn_rates=np.abs(dtheta[valid])/dtturn[valid]
+    turn_rates=np.asarray(turn_rates,dtype=np.float64)
+    if len(turn_rates)<20:
+        return None
+
+    steps=np.linalg.norm(np.diff(xyz,axis=0),axis=1)
+    total=float(np.sum(steps[np.isfinite(steps)]))
+    if not math.isfinite(total) or total<=0:
+        return None
+    net=float(np.linalg.norm(xyz[-1]-xyz[0]))
+    eff=net/total
+    vrange=float(np.max(xyz[:,2])-np.min(xyz[:,2]))
+
+    feats=np.asarray([
+        np.median(v3),np.percentile(v3,90),
+        np.median(vz),np.percentile(vz,90),
+        np.median(turn_rates),np.percentile(turn_rates,90),
+        eff,vrange,
+    ],dtype=np.float64)
+    return feats if np.all(np.isfinite(feats)) else None
 
 # Frozen outcome-blind linkage implementation.
 specL=importlib.util.spec_from_file_location(
@@ -130,7 +181,7 @@ def extract_features():
         path=paths.get(lk["sheet"])
         if path is None:raise RuntimeError(f"sheet path missing {lk['sheet']}")
         a=read_time_xyz(z,path)
-        feat=P.trajectory_features(a)
+        feat=trajectory_features(a)
         valid=feat is not None and np.all(np.isfinite(feat))
         support.append({
           "bats_id":lk["bats_id"],"condition":lk["condition"],"trial":lk["trial"],
@@ -269,7 +320,7 @@ def main():
       "species":"Rhinolophus ferrumequinum nippon",
       "n_evaluable_subjects":len(bats),
       "subjects_by_condition":{str(c):sum(cond[b]==c for b in bats) for c in (1,2)},
-      "feature_names":list(P.FEATURES),
+      "feature_names":list(FEATURES),
       "trajectory_support":support,
       "R1_transparent_IM":{
         **R1,
