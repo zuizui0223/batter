@@ -14,6 +14,22 @@ Authoritative fail-closed workflow:
 Parent:
 `INDIVIDUAL_PEER_CONTEXT_REACTION_NORM_CONTRACT_V1.md`
 
+## Implementation equivalence audit
+
+The frozen estimator was executed twice with mathematically equivalent implementations:
+
+- direct row-rescanning implementation: run **37303189794**;
+- sufficient-statistics acceleration: run **37303659189**.
+
+Observed year-level statistics, individual statistics, fitted individual slopes, null means, null quantiles and permutation p-values agree to floating-point precision.
+
+Examples:
+- 2022 G_RN: -0.06340566827549064 vs -0.06340566827549049;
+- 2023 G_RN: -0.08325265280982154 vs -0.08325265280982164;
+- p-values identical: 0.1163 and 0.1595.
+
+The accelerated implementation is therefore computational only and does not change the estimator.
+
 ## Primary question
 
 Does an individual-specific scalar response to contemporaneous peer-day H/V policy improve held-out prediction beyond a common year-level response slope?
