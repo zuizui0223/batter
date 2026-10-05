@@ -1,0 +1,31 @@
+name: evsbat-external-member-metadata-v1
+
+on:
+  push:
+    branches:
+      - prospective/task-reset-lockin-v1
+    paths:
+      - prospective/task_reset_lockin/evsbat_external_member_metadata_v1.py
+      - prospective/task_reset_lockin/EVSBAT_EXTERNAL_POLICY_PREFLIGHT_V1.md
+      - .github/workflows/evsbat-external-member-metadata-v1.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  metadata:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Inventory selected ZIP members
+        run: |
+          python prospective/task_reset_lockin/evsbat_external_member_metadata_v1.py | tee prospective/task_reset_lockin/EVSBAT_EXTERNAL_MEMBER_METADATA_RESULT_V1.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: evsbat-external-member-metadata-v1
+          path: prospective/task_reset_lockin/EVSBAT_EXTERNAL_MEMBER_METADATA_RESULT_V1.json
+          if-no-files-found: error
