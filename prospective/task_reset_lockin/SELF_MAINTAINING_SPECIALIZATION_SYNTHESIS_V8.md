@@ -121,6 +121,64 @@ Thus the architecture recurs, although its exact dimensionality/orientation is n
 
 ---
 
+## 3b. The portable policy has predictive geometry, not only identity
+
+A stronger post-primary test asks whether the personal coordinate estimated from other obstacle configurations can predict the bat's coordinate in a completely held-out configuration **without refitting coefficients**.
+
+For target environment e:
+
+- estimate each bat's transparent 2-D coordinate from all other environments;
+- predict the held-out coordinate directly from that training-only personal coordinate.
+
+Observed:
+
+- 2-D no-refit held-out R² = **0.46659**;
+- one-sided permutation p = **0.0002**;
+- median cosine between predicted and observed held-out coordinates = **0.896**;
+- 25 held-out bat × environment centroids.
+
+Axis-specific:
+
+- FlightIntensity no-refit R² = **0.50222**, p = **0.0012**;
+- ManeuveringExtent no-refit R² = **0.38828**, p = **0.0041**.
+
+The geometry among individuals also transfers.
+
+For held-out bat pairs:
+
+- pair-displacement-vector R² = **0.57972**;
+- permutation p = **0.0001**;
+- median predicted-versus-observed vector cosine = **0.863**;
+- **97.1%** of pair × environment vectors have positive cosine.
+
+Therefore the portable component is not merely enough to classify identity.
+
+> **The relative arrangement of individuals in policy space predicts how they will be arranged in an unseen movement task.**
+
+This is the strongest evidence that the persistent object behaves like a genuine low-dimensional behavioral coordinate rather than a dataset-specific fingerprint.
+
+### Target-normalization boundary
+
+The result is not created solely by using held-out-environment scale information.
+
+When target SD is removed and only training-derived scaling is used:
+
+- target-centered/training-scaled 2-D K = **+0.55797**;
+- 5/5 positive;
+- p = **0.0001**.
+
+Under fully training-only global mean/SD, with no target mean or SD:
+
+- 2-D K = **+0.51604**;
+- 5/5 positive;
+- p = **0.0001**.
+
+Thus the stable individual signal survives even when the target domain contributes no scaling parameters.
+
+The strongest recurrent component is especially concentrated on FlightIntensity.
+
+---
+
 ## 4. Wild evidence: the personal center persists but realization is flexible
 
 Wild *P. hastatus* bivariate H/V carrier:
