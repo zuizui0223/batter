@@ -1,0 +1,33 @@
+name: phyllostomus-harmonized-support-matched-v1
+
+on:
+  push:
+    branches:
+      - prospective/task-reset-lockin-v1
+    paths:
+      - prospective/field_policy_bridge/phyllostomus_harmonized_support_matched_v1.py
+      - prospective/field_policy_bridge/PHYLLOSTOMUS_HARMONIZED_SUPPORT_MATCHED_CONTRACT_V1.md
+      - .github/workflows/phyllostomus-harmonized-support-matched-v1.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  matched:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install batter and dependencies
+        run: python -m pip install --quiet -e .
+      - name: Run harmonized support-matched diagnostic
+        run: |
+          python prospective/field_policy_bridge/phyllostomus_harmonized_support_matched_v1.py | tee prospective/field_policy_bridge/PHYLLOSTOMUS_HARMONIZED_SUPPORT_MATCHED_RESULT_V1.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: phyllostomus-harmonized-support-matched-v1
+          path: prospective/field_policy_bridge/PHYLLOSTOMUS_HARMONIZED_SUPPORT_MATCHED_RESULT_V1.json
+          if-no-files-found: error
