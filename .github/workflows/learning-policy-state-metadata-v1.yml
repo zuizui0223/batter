@@ -1,0 +1,42 @@
+name: learning-policy-state-metadata-v1
+
+on:
+  push:
+    branches:
+      - prospective/learning-policy-state-v1
+    paths:
+      - prospective/learning_policy_state/figshare_metadata_v1.py
+      - prospective/learning_policy_state/METADATA_PREFLIGHT_CONTRACT_V1.md
+      - .github/workflows/learning-policy-state-metadata-v1.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  metadata:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Guard file-content closure
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path("prospective/learning_policy_state/figshare_metadata_v1.py").read_text()
+          banned=["download_url","urlretrieve","read_csv","read_excel","pickle","loadmat"]
+          hits=[x for x in banned if x in p]
+          if hits:
+              raise SystemExit(f"content guard failed: {hits}")
+          print("content guard PASS")
+          PY
+      - name: Inventory Figshare metadata only
+        run: |
+          python prospective/learning_policy_state/figshare_metadata_v1.py | tee prospective/learning_policy_state/METADATA_RESULT_V1.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: learning-policy-state-metadata-v1
+          path: prospective/learning_policy_state/METADATA_RESULT_V1.json
+          if-no-files-found: error
