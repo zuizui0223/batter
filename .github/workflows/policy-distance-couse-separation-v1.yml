@@ -7,6 +7,9 @@ on:
     paths:
       - prospective/field_policy_bridge/policy_distance_couse_separation_v1.py
       - prospective/field_policy_bridge/POLICY_DISTANCE_COUSE_SEPARATION_CONTRACT_V1.md
+      - post_freeze_extensions/3d_niche_partition/run_couse_preflight_v1.py
+      - post_freeze_extensions/3d_niche_partition/run_couse_endpoint_audit_v1.py
+      - post_freeze_extensions/3d_niche_partition/run_couse_shiftability_v1.py
       - .github/workflows/policy-distance-couse-separation-v1.yml
   workflow_dispatch:
 
