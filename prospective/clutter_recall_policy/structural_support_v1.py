@@ -93,7 +93,7 @@ def excel_date(v):
     if v is None:return None
     if isinstance(v,str):
         q=v.strip()
-        for fmt in ("%Y-%m-%d","%d/%m/%Y","%m/%d/%Y","%d.%m.%Y"):
+        for fmt in ("%Y-%m-%d","%d/%m/%Y","%m/%d/%Y","%d.%m.%Y","%d.%m.%y"):
             try:return dt.datetime.strptime(q,fmt).date().isoformat()
             except Exception:pass
         try:v=float(q)
@@ -151,8 +151,14 @@ def choose_info(info):
     return out
 
 def dparse(x):
-    try:return dt.date.fromisoformat(str(x))
-    except Exception:return None
+    if x is None:return None
+    q=str(x).strip()
+    try:return dt.date.fromisoformat(q)
+    except Exception:pass
+    for fmt in ("%d.%m.%y","%d.%m.%Y","%d/%m/%y","%d/%m/%Y"):
+        try:return dt.datetime.strptime(q,fmt).date()
+        except Exception:pass
+    return None
 
 def summarize_calls(rows,first_start,first_end,second_start,second_end):
     bydate=collections.defaultdict(set)
@@ -193,9 +199,15 @@ def main():
         if ir is None:
             bats.append({"bat":bno,"status":"MISSING_BAT_INFO"});continue
         s1=dparse(ir.get("C"));e1=dparse(ir.get("E"));s4=dparse(ir.get("F"));e4=dparse(ir.get("G"))
+        date_integrity={
+          "stage2_dates_valid":bool(s1 is not None and e1 is not None and e1>=s1),
+          "stage4_dates_valid":bool(s4 is not None and e4 is not None and e4>=s4),
+        }
+        e1_use=e1 if date_integrity["stage2_dates_valid"] else None
+        e4_use=e4 if date_integrity["stage4_dates_valid"] else None
         rr=parse_call_structure(z,paths[sheets[bno]],ss)
-        sm=summarize_calls(rr,s1,e1,s4,e4)
-        bats.append({"bat":bno,"status":"STRUCTURE_OPENED",
+        sm=summarize_calls(rr,s1,e1_use,s4,e4_use)
+        bats.append({"bat":bno,"status":"STRUCTURE_OPENED","date_integrity":date_integrity,
           "bat_info_row":ir,"first_clutter_start":ir.get("C"),"first_clutter_end":ir.get("E"),
           "second_clutter_start":ir.get("F"),"second_clutter_end":ir.get("G"),
           "new_box":ir.get("H"),"call_sheet":sheets[bno],**sm})
