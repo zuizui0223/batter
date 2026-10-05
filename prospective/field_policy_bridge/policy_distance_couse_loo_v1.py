@@ -6,7 +6,7 @@ from pathlib import Path
 import numpy as np
 
 HERE=Path(__file__).resolve().parent
-spec=importlib.util.spec_from_file_location("P",HERE/"policy_distance_couse_separation_v1.py")
+spec=importlib.util.spec_from_file_location("P",HERE/"policy_distance_couse_separation_receipt_v2.py")
 P=importlib.util.module_from_spec(spec);spec.loader.exec_module(P)
 
 NPERM=9999
