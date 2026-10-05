@@ -170,6 +170,48 @@ def fetch_files():
     bbig=L.fetch(L.BIG,files)
     return bsmall,bbig
 
+def trajectory_support_metrics(a):
+    """Structural support diagnostics under the frozen trajectory thresholds.
+
+    Reports counts/reasons only; no coordinate values or derived feature values.
+    """
+    out={"n_rows":int(a.shape[0]),"n_positive_dt":0,"n_horizontal_steps":0,"n_turn_rates":0}
+    if a.shape[0] < 2:
+        out["failure_reason"]="lt_100_rows"
+        return out
+    t=a[:,0]
+    xyz=a[:,1:4]
+    dt=np.diff(t)
+    dxyz=np.diff(xyz,axis=0)
+    good=np.isfinite(dt) & (dt>0) & np.all(np.isfinite(dxyz),axis=1)
+    out["n_positive_dt"]=int(np.sum(good))
+    if int(np.sum(good)) == 0:
+        out["failure_reason"]="lt_50_positive_dt"
+        return out
+    dtg=dt[good]
+    dg=dxyz[good]
+    horiz=np.linalg.norm(dg[:,:2],axis=1)
+    head_good=horiz>0
+    out["n_horizontal_steps"]=int(np.sum(head_good))
+    headings=np.arctan2(dg[head_good,1],dg[head_good,0])
+    nturn=0
+    if len(headings)>=2:
+        base_dt=dtg[head_good]
+        dtheta=np.arctan2(np.sin(np.diff(headings)),np.cos(np.diff(headings)))
+        dtturn=(base_dt[1:]+base_dt[:-1])/2.0
+        valid=np.isfinite(dtheta)&np.isfinite(dtturn)&(dtturn>0)
+        nturn=int(np.sum(valid))
+    out["n_turn_rates"]=nturn
+    if a.shape[0] < 100:
+        out["failure_reason"]="lt_100_rows"
+    elif out["n_positive_dt"] < 50:
+        out["failure_reason"]="lt_50_positive_dt"
+    elif nturn < 20:
+        out["failure_reason"]="lt_20_turn_rates"
+    else:
+        out["failure_reason"]=None
+    return out
+
 def extract_features():
     bsmall,bbig=fetch_files()
     links,subjects=build_links(bsmall,bbig)
@@ -183,10 +225,11 @@ def extract_features():
         a=read_time_xyz(z,path)
         feat=trajectory_features(a)
         valid=feat is not None and np.all(np.isfinite(feat))
+        sm=trajectory_support_metrics(a)
         support.append({
           "bats_id":lk["bats_id"],"condition":lk["condition"],"trial":lk["trial"],
           "sheet":lk["sheet"],"n_finite_unique_time_rows":int(a.shape[0]),
-          "feature_valid":bool(valid)
+          "feature_valid":bool(valid),**sm
         })
         if valid:
             rows.append({
@@ -204,7 +247,19 @@ def extract_features():
     )
     cc=collections.Counter(cond[b] for b in bats)
     if len(bats)<12 or cc[1]<5 or cc[2]<5:
-        raise RuntimeError(f"STOP raw trajectory support bats={len(bats)} cond={dict(cc)}")
+        stop={
+          "contract":"RAW_TRAJECTORY_TWO_AXIS_CONTRACT_V1.md",
+          "status":"STOP_STRUCTURAL_SUPPORT",
+          "n_evaluable_subjects":len(bats),
+          "subjects_by_condition":{str(c):int(cc[c]) for c in (1,2)},
+          "trajectory_support":support,
+          "thresholds_unchanged":{
+            "min_rows":100,"min_positive_dt":50,"min_turn_rates":20,
+            "min_subjects_total":12,"min_subjects_per_condition":5
+          }
+        }
+        print(json.dumps(stop,ensure_ascii=False,indent=2))
+        raise SystemExit(2)
     rows=[r for r in rows if r["bat"] in set(bats)]
     return rows,bats,cond,support
 
