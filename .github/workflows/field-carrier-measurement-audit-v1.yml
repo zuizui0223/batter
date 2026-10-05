@@ -1,0 +1,33 @@
+name: field-carrier-measurement-audit-v1
+
+on:
+  push:
+    branches:
+      - prospective/task-reset-lockin-v1
+    paths:
+      - prospective/field_policy_bridge/field_carrier_measurement_audit_v1.py
+      - prospective/field_policy_bridge/FIELD_CARRIER_MEASUREMENT_AUDIT_CONTRACT_V1.md
+      - .github/workflows/field-carrier-measurement-audit-v1.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: python -m pip install --quiet -e .
+      - name: Run frozen field measurement audit
+        run: |
+          python prospective/field_policy_bridge/field_carrier_measurement_audit_v1.py | tee prospective/field_policy_bridge/FIELD_CARRIER_MEASUREMENT_AUDIT_RESULT_V1.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: field-carrier-measurement-audit-v1
+          path: prospective/field_policy_bridge/FIELD_CARRIER_MEASUREMENT_AUDIT_RESULT_V1.json
+          if-no-files-found: error
