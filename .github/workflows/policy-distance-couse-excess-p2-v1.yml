@@ -1,0 +1,37 @@
+name: policy-distance-couse-excess-p2-v1
+
+on:
+  push:
+    branches:
+      - prospective/task-reset-lockin-v1
+    paths:
+      - prospective/field_policy_bridge/policy_distance_couse_excess_p2_v1.py
+      - prospective/field_policy_bridge/POLICY_DISTANCE_COUSE_EXCESS_P2_FREEZE_V1.md
+      - .github/workflows/policy-distance-couse-excess-p2-v1.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  p2:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install package and dependencies
+        run: python -m pip install --quiet -e . pandas scipy pyproj requests
+      - name: Recover dyad nulls and run frozen P2
+        shell: bash
+        run: |
+          set -euo pipefail
+          python prospective/field_policy_bridge/policy_distance_couse_excess_p2_v1.py | tee prospective/field_policy_bridge/POLICY_DISTANCE_COUSE_EXCESS_P2_RESULT_V1.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: policy-distance-couse-excess-p2-v1
+          path: prospective/field_policy_bridge/POLICY_DISTANCE_COUSE_EXCESS_P2_RESULT_V1.json
+          if-no-files-found: warn
