@@ -1,0 +1,42 @@
+name: naive-learning-policy-metadata-v1
+
+on:
+  push:
+    branches:
+      - prospective/naive-learning-policy-decomposition-v1
+    paths:
+      - prospective/naive_learning_policy/metadata_inventory_v1.py
+      - prospective/naive_learning_policy/METADATA_PREFLIGHT_CONTRACT_V1.md
+      - .github/workflows/naive-learning-policy-metadata-v1.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  metadata:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Guard file-content closure
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path("prospective/naive_learning_policy/metadata_inventory_v1.py").read_text()
+          banned=["urlretrieve","read_csv","loadmat","pandas","openpyxl","pickle.load"]
+          hits=[x for x in banned if x in p]
+          if hits:
+              raise SystemExit(f"content-opening guard failed: {hits}")
+          print("content-opening guard PASS")
+          PY
+      - name: Inventory Figshare metadata only
+        run: |
+          python prospective/naive_learning_policy/metadata_inventory_v1.py | tee prospective/naive_learning_policy/METADATA_RESULT_V1.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: naive-learning-policy-metadata-v1
+          path: prospective/naive_learning_policy/METADATA_RESULT_V1.json
+          if-no-files-found: error
