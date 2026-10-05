@@ -72,3 +72,8 @@ If filenames are opaque but contain plausible movement files, freeze a determini
 Do not select members after inspecting numerical values.
 Do not infer condition from file size or movement phenotype.
 Do not open acoustic data merely because movement naming is ambiguous.
+
+
+## Trigger provenance
+
+This note may re-trigger the registered workflow without changing the frozen ZIP byte budget, member-content closure, structural questions, or proceed rule.
