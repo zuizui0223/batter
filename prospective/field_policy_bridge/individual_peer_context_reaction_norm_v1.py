@@ -189,23 +189,29 @@ def run(year,panel):
     obs=statistic(base,obslabels)
     if obs is None:return {"status":"STOP_STRUCTURAL_SUPPORT","n_day_units":len(base),"audit":audit}
 
-    rng=np.random.default_rng(SEEDS[year]);null=[]
+    rng=np.random.default_rng(SEEDS[year]);null_rn=[];null_shared=[]
     for _ in range(NPERM):
         q=statistic(base,permuted_labels(base,rng))
-        if q is not None and math.isfinite(q["G_RN"]):
-            null.append(q["G_RN"])
-    a=np.asarray(null,float)
+        if q is not None and math.isfinite(q["G_RN"]) and math.isfinite(q["G_shared"]):
+            null_rn.append(q["G_RN"]);null_shared.append(q["G_shared"])
+    a=np.asarray(null_rn,float);b=np.asarray(null_shared,float)
     if len(a)<MIN_VALID:
         return {"status":"STOP_RANDOMIZATION_SUPPORT","observed":obs,
                 "valid_permutations":int(len(a)),"audit":audit}
     p=float((1+np.sum(a>=obs["G_RN"]))/(1+len(a)))
+    p_shared=float((1+np.sum(b>=obs["G_shared"]))/(1+len(b)))
     supported=bool(obs["G_RN"]>0 and p<=.05 and obs["positive_fraction_RN"]>=.70)
     return {
       "status":"DONE","n_day_units":len(base),**obs,
       "requested_permutations":NPERM,"valid_permutations":int(len(a)),
-      "seed":SEEDS[year],"null_mean":float(a.mean()),
-      "null_q025":float(np.quantile(a,.025)),"null_q975":float(np.quantile(a,.975)),
-      "p_one_sided":p,
+      "seed":SEEDS[year],
+      "null_mean":float(a.mean()),"null_q025":float(np.quantile(a,.025)),
+      "null_q975":float(np.quantile(a,.975)),"p_one_sided":p,
+      "P2_shared_context_calibration":{
+        "null_mean":float(b.mean()),"null_q025":float(np.quantile(b,.025)),
+        "null_q975":float(np.quantile(b,.975)),"p_one_sided":p_shared,
+        "interpretation":"secondary calibration only; no post-hoc binary support rule"
+      },
       "diagnostic_verdict":"SUPPORTED_INDIVIDUAL_REACTION_NORM" if supported else "UNSUPPORTED_INDIVIDUAL_REACTION_NORM"
     }
 
