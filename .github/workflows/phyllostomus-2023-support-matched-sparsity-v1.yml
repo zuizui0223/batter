@@ -1,0 +1,33 @@
+name: phyllostomus-2023-support-matched-sparsity-v1
+
+on:
+  push:
+    branches:
+      - prospective/task-reset-lockin-v1
+    paths:
+      - prospective/field_policy_bridge/phyllostomus_2023_support_matched_sparsity_v1.py
+      - prospective/field_policy_bridge/PHYLLOSTOMUS_2023_SUPPORT_MATCHED_SPARSITY_CONTRACT_V1.md
+      - .github/workflows/phyllostomus-2023-support-matched-sparsity-v1.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sparsity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: python -m pip install --quiet numpy pyproj
+      - name: Run support-matched sparsity diagnostic
+        run: |
+          python prospective/field_policy_bridge/phyllostomus_2023_support_matched_sparsity_v1.py | tee prospective/field_policy_bridge/PHYLLOSTOMUS_2023_SUPPORT_MATCHED_SPARSITY_RESULT_V1.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: phyllostomus-2023-support-matched-sparsity-v1
+          path: prospective/field_policy_bridge/PHYLLOSTOMUS_2023_SUPPORT_MATCHED_SPARSITY_RESULT_V1.json
+          if-no-files-found: error
