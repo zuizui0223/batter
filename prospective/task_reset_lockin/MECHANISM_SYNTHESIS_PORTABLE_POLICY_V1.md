@@ -438,3 +438,73 @@ A post-primary cross-species diagnostic is now frozen to ask whether the simpler
 Until that result is available, the correct scope is:
 
 > strong low-dimensional portable individual policy in *Rhinolophus nippon*, with cross-species generality unresolved and already bounded by a negative full-policy result in *Miniopterus fuliginosus*.
+
+
+---
+
+# Independent learning bridge: maintenance is real, exact representation generality is bounded
+
+The independent Yamada learning-state programme now adds two distinctions.
+
+## Pooled personal-state maintenance passes
+
+Across 14 naive *Rhinolophus* subjects, after removing condition × trial means and scales from maximum speed and meandering width:
+
+- pooled personal-state advantage = **+0.67436**;
+- **11/14** subjects positive;
+- one-sided permutation **p = 0.0027**.
+
+Thus repeated experience can shift the population-level flight state while preserving relative individual position.
+
+## Condition-level support is heterogeneous
+
+Exact 7! permutation diagnostics give:
+
+- chain / acoustically permeable: K = **+0.32264**, 5/7 positive, p = **0.13274**;
+- acrylic / acoustically reflective: K = **+1.02609**, 6/7 positive, p = **0.00278**.
+
+This does not establish a causal condition effect because individuals are not crossed through both conditions and no direct condition-contrast primary was frozen.
+
+It does show that the pooled maintenance result should not be described as uniformly strong across environmental information structures.
+
+A useful future model is therefore not a context-invariant scalar alone, but:
+
+[
+\mathbf{y}_{ict}
+=
+\boldsymbol{\mu}_{ct}
++
+\mathbf{A}_c\boldsymbol{\theta}_i
++
+\boldsymbol{\ell}_{ict}
++
+\boldsymbol{\varepsilon}_{ict},
+]
+
+where:
+- `theta_i` is a persistent personal policy coordinate;
+- `A_c` is a hypothesized context-dependent expression map;
+- `mu_ct` is shared learning/update;
+- `ell_ict` is individual-specific plastic updating.
+
+Only persistence of a personal component is currently supported; context modulation is a prospective hypothesis.
+
+## Raw external two-axis replication is structurally unadjudicated
+
+The separately frozen raw-trajectory test of the exact transparent Teshima axes cannot be evaluated in Yamada:
+
+- 28/28 trajectory sheets linked correctly;
+- finite unique-time rows per flight = **43–91**;
+- frozen minimum = **100**;
+- 28/28 flights fail that minimum;
+- 0/14 subjects are evaluable.
+
+The primary remains a structural STOP. Its support threshold is not lowered.
+
+Therefore the independent Yamada experiment strengthens the claim that **personal policy state survives learning**, but it does not establish that the exact same two transparent raw-trajectory coordinates reproduce across studies.
+
+## Updated strongest mechanism statement
+
+> **Persistent individual specialization can be carried in policy space rather than exclusive physical space: a low-dimensional personal flight-control state can transfer across task geometries, while experience shifts the realized behaviour and environmental context may modulate how strongly personal state is expressed.**
+
+The exact developmental or physiological origin of the personal state remains unresolved.
