@@ -251,3 +251,72 @@ The target is:
 > **Does a controlled perturbation move the expressed behavior while leaving the identity-bearing personal policy coordinate intact?**
 
 That is the single highest-value unresolved test.
+
+
+---
+
+# Update after reversible sensory outcome
+
+The highest-priority perturbation programme is now complete.
+
+## Reversible sensory perturbation — SUPPORTED
+
+Independent public source:
+Taub & Yovel 2020, *Pipistrellus kuhlii*.
+
+Frozen source-defined 1-D movement endpoint:
+3-D angle of attack.
+
+### Baseline -> masker retention
+
+- K = **+4.941 deg**
+- 5/6 positive
+- 30-cm K = **+8.004 deg**
+- 10-cm K = **+1.878 deg**
+- exact **6! = 720** permutations
+- exact one-sided **p = 0.04028**
+- no-refit R² = **0.2855**
+
+### Foam no-masker -> foam + masker
+
+Five common 30-cm bats:
+- K = **+6.779 deg**
+- **5/5 positive**
+- exact **5! = 120** permutations
+- exact one-sided **p = 0.025**
+- no-refit R² = **0.6414**
+- Pearson r = **0.957**
+- Spearman rho = **0.900**
+
+Interpretation:
+
+> **A controlled sensory manipulation can shift movement while preserving an identity-bearing individual movement bias.**
+
+This closes the previous priority question:
+whether environmental perturbation necessarily erases the personal policy bias.
+
+It does not.
+
+## New priority 1 — origin of the persistent bias
+
+The remaining causal fork is:
+
+1. biomechanics / physiology;
+2. long-lived learned sensorimotor state;
+3. developmental history;
+4. a mixed architecture.
+
+Highest-value future evidence would combine, within the same identified animals:
+- repeated portable-policy measurement;
+- reversible biomechanical load;
+- controlled task learning/reset;
+- recovery after load removal;
+- independent morphology / wing loading / performance.
+
+Do not spend the next analysis cycle on:
+- another field basis rotation;
+- another peer-context proxy;
+- another proof that identity exists;
+- another uncontrolled external repeatability dataset.
+
+The next result must change one proposed causal carrier while holding biological identity fixed.
