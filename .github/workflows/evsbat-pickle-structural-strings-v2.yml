@@ -1,0 +1,42 @@
+name: evsbat-pickle-structural-strings-v2
+
+on:
+  push:
+    branches:
+      - prospective/task-reset-lockin-v1
+    paths:
+      - prospective/task_reset_lockin/evsbat_pickle_structural_strings_v2.py
+      - prospective/task_reset_lockin/EVSBAT_PICKLE_STRUCTURAL_STRINGS_AMENDMENT_V2.md
+      - .github/workflows/evsbat-pickle-structural-strings-v2.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  strings:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Guard unpickling
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path("prospective/task_reset_lockin/evsbat_pickle_structural_strings_v2.py").read_text()
+          banned=["pickle.load(","pickle.loads(","read_pickle","joblib.load","numpy.load","np.load"]
+          hits=[x for x in banned if x in p]
+          if hits:
+              raise SystemExit(f"unpickling guard failed: {hits}")
+          print("unpickling guard PASS")
+          PY
+      - name: Inventory structural strings only
+        run: |
+          python prospective/task_reset_lockin/evsbat_pickle_structural_strings_v2.py | tee prospective/task_reset_lockin/EVSBAT_PICKLE_STRUCTURAL_STRINGS_RESULT_V2.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: evsbat-pickle-structural-strings-v2
+          path: prospective/task_reset_lockin/EVSBAT_PICKLE_STRUCTURAL_STRINGS_RESULT_V2.json
+          if-no-files-found: error
