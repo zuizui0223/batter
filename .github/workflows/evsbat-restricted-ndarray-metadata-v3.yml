@@ -1,0 +1,33 @@
+name: evsbat-restricted-ndarray-metadata-v3
+
+on:
+  push:
+    branches:
+      - prospective/task-reset-lockin-v1
+    paths:
+      - prospective/task_reset_lockin/evsbat_restricted_ndarray_metadata_v3.py
+      - prospective/task_reset_lockin/EVSBAT_RESTRICTED_NDARRAY_METADATA_AMENDMENT_V3.md
+      - .github/workflows/evsbat-restricted-ndarray-metadata-v3.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  metadata:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install numpy
+        run: python -m pip install --quiet numpy
+      - name: Run restricted ndarray metadata load
+        run: |
+          python prospective/task_reset_lockin/evsbat_restricted_ndarray_metadata_v3.py | tee prospective/task_reset_lockin/EVSBAT_RESTRICTED_NDARRAY_METADATA_RESULT_V3.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: evsbat-restricted-ndarray-metadata-v3
+          path: prospective/task_reset_lockin/EVSBAT_RESTRICTED_NDARRAY_METADATA_RESULT_V3.json
+          if-no-files-found: error
