@@ -1,0 +1,34 @@
+name: reversible-sensory-metadata-preflight-v1
+
+on:
+  push:
+    branches:
+      - prospective/reversible-sensory-perturbation-v2
+    paths:
+      - prospective/reversible_sensory_perturbation_v2/metadata_preflight_v1.py
+      - prospective/reversible_sensory_perturbation_v2/METADATA_PREFLIGHT_CONTRACT_V1.md
+      - .github/workflows/reversible-sensory-metadata-preflight-v1.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  metadata:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run HEAD-only source preflight
+        shell: bash
+        run: |
+          set -euo pipefail
+          python prospective/reversible_sensory_perturbation_v2/metadata_preflight_v1.py | tee prospective/reversible_sensory_perturbation_v2/METADATA_PREFLIGHT_RESULT_V1.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: reversible-sensory-metadata-preflight-v1
+          path: prospective/reversible_sensory_perturbation_v2/METADATA_PREFLIGHT_RESULT_V1.json
+          if-no-files-found: warn
