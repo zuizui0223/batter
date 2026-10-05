@@ -1,0 +1,2747 @@
+{
+  "schema_version": 1,
+  "frozen_before_vertical_bridge_outcome": true,
+  "source_preflight": {
+    "workflow_run_id": 37282868486,
+    "head_sha": "c6c0ffa28ed445373cb800b8d2c004c655a41439",
+    "artifact_id": 11332608478,
+    "artifact_digest": "sha256:b7df35206698cf261e2599f079511b3aace85930683a912157bc1846943b8795"
+  },
+  "source_preflight_sha256": "sha256:b7df35206698cf261e2599f079511b3aace85930683a912157bc1846943b8795",
+  "authorized_panels": [
+    "hypsignathus",
+    "phyllostomus_2022"
+  ],
+  "stopped_panels": {
+    "phyllostomus_2023": "Both reciprocal pair counts (12, 13) are below the frozen 15-pair floor.",
+    "phyllostomus_2016": "Only one structurally eligible individual; zero eligible pairs."
+  },
+  "panels": {
+    "hypsignathus": {
+      "verdict": "PASS_TO_VERTICAL_BRIDGE",
+      "thresholds": {
+        "Lek Njoukou::2020": {
+          "speed_median": 0.06548509044300097,
+          "turn_angle_median": 2.1063829409623924
+        }
+      },
+      "counts": {
+        "eligible_individuals": 22,
+        "eligible_pairs_target_odd": 130,
+        "eligible_pairs_target_even": 127
+      },
+      "eligible_individuals": [
+        {
+          "cohort": "Lek Njoukou::2020",
+          "iid": "7240"
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "iid": "7243"
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "iid": "7247"
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "iid": "7250"
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "iid": "7252"
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "iid": "7253"
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "iid": "7254b"
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "iid": "7440"
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "iid": "7446"
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "iid": "7447"
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "iid": "7450"
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "iid": "7455b"
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "iid": "7457"
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "iid": "7463"
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "iid": "7464"
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "iid": "7467"
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "iid": "7470"
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "iid": "7472"
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "iid": "7473"
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "iid": "7475"
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "iid": "7481"
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "iid": "7483"
+        }
+      ],
+      "pair_support_odd": [
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7240",
+          "j": "7250",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7240",
+          "j": "7440",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7240",
+          "j": "7457",
+          "n_shared_strata": 5
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7240",
+          "j": "7467",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7240",
+          "j": "7481",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7240",
+          "j": "7483",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7243",
+          "j": "7247",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7243",
+          "j": "7250",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7243",
+          "j": "7252",
+          "n_shared_strata": 5
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7243",
+          "j": "7253",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7243",
+          "j": "7254b",
+          "n_shared_strata": 8
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7243",
+          "j": "7446",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7243",
+          "j": "7447",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7243",
+          "j": "7450",
+          "n_shared_strata": 7
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7243",
+          "j": "7455b",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7243",
+          "j": "7457",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7243",
+          "j": "7463",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7243",
+          "j": "7464",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7243",
+          "j": "7467",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7243",
+          "j": "7470",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7243",
+          "j": "7472",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7243",
+          "j": "7473",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7243",
+          "j": "7481",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7243",
+          "j": "7483",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7247",
+          "j": "7250",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7247",
+          "j": "7253",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7247",
+          "j": "7254b",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7247",
+          "j": "7446",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7247",
+          "j": "7450",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7247",
+          "j": "7455b",
+          "n_shared_strata": 8
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7247",
+          "j": "7457",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7247",
+          "j": "7463",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7247",
+          "j": "7464",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7247",
+          "j": "7467",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7247",
+          "j": "7473",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7247",
+          "j": "7481",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7247",
+          "j": "7483",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7250",
+          "j": "7253",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7250",
+          "j": "7254b",
+          "n_shared_strata": 5
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7250",
+          "j": "7446",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7250",
+          "j": "7450",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7250",
+          "j": "7455b",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7250",
+          "j": "7457",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7250",
+          "j": "7463",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7250",
+          "j": "7464",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7250",
+          "j": "7467",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7250",
+          "j": "7473",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7250",
+          "j": "7481",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7250",
+          "j": "7483",
+          "n_shared_strata": 7
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7253",
+          "j": "7254b",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7253",
+          "j": "7440",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7253",
+          "j": "7446",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7253",
+          "j": "7447",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7253",
+          "j": "7450",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7253",
+          "j": "7455b",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7253",
+          "j": "7457",
+          "n_shared_strata": 5
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7253",
+          "j": "7463",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7253",
+          "j": "7464",
+          "n_shared_strata": 8
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7253",
+          "j": "7467",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7253",
+          "j": "7473",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7253",
+          "j": "7481",
+          "n_shared_strata": 7
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7253",
+          "j": "7483",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7254b",
+          "j": "7446",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7254b",
+          "j": "7447",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7254b",
+          "j": "7450",
+          "n_shared_strata": 7
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7254b",
+          "j": "7455b",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7254b",
+          "j": "7457",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7254b",
+          "j": "7463",
+          "n_shared_strata": 8
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7254b",
+          "j": "7464",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7254b",
+          "j": "7467",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7254b",
+          "j": "7470",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7254b",
+          "j": "7472",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7254b",
+          "j": "7473",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7254b",
+          "j": "7481",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7254b",
+          "j": "7483",
+          "n_shared_strata": 5
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7440",
+          "j": "7464",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7440",
+          "j": "7467",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7446",
+          "j": "7450",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7446",
+          "j": "7455b",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7446",
+          "j": "7457",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7446",
+          "j": "7463",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7446",
+          "j": "7464",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7446",
+          "j": "7467",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7446",
+          "j": "7473",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7446",
+          "j": "7481",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7446",
+          "j": "7483",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7447",
+          "j": "7450",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7447",
+          "j": "7464",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7447",
+          "j": "7470",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7447",
+          "j": "7472",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7447",
+          "j": "7481",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7450",
+          "j": "7455b",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7450",
+          "j": "7457",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7450",
+          "j": "7463",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7450",
+          "j": "7464",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7450",
+          "j": "7467",
+          "n_shared_strata": 8
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7450",
+          "j": "7470",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7450",
+          "j": "7472",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7450",
+          "j": "7473",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7450",
+          "j": "7481",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7450",
+          "j": "7483",
+          "n_shared_strata": 7
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7455b",
+          "j": "7457",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7455b",
+          "j": "7463",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7455b",
+          "j": "7464",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7455b",
+          "j": "7467",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7455b",
+          "j": "7473",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7455b",
+          "j": "7481",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7455b",
+          "j": "7483",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7457",
+          "j": "7463",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7457",
+          "j": "7464",
+          "n_shared_strata": 5
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7457",
+          "j": "7467",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7457",
+          "j": "7473",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7457",
+          "j": "7481",
+          "n_shared_strata": 6
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7457",
+          "j": "7483",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7463",
+          "j": "7464",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7463",
+          "j": "7467",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7463",
+          "j": "7473",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7463",
+          "j": "7481",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7463",
+          "j": "7483",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7464",
+          "j": "7467",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7464",
+          "j": "7473",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7464",
+          "j": "7481",
+          "n_shared_strata": 7
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7464",
+          "j": "7483",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7467",
+          "j": "7473",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7467",
+          "j": "7481",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7467",
+          "j": "7483",
+          "n_shared_strata": 9
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7470",
+          "j": "7472",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7473",
+          "j": "7481",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7473",
+          "j": "7483",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7481",
+          "j": "7483",
+          "n_shared_strata": 4
+        }
+      ],
+      "pair_support_even": [
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7240",
+          "j": "7254b",
+          "n_shared_strata": 6
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7240",
+          "j": "7440",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7240",
+          "j": "7457",
+          "n_shared_strata": 5
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7240",
+          "j": "7467",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7240",
+          "j": "7481",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7243",
+          "j": "7247",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7243",
+          "j": "7250",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7243",
+          "j": "7252",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7243",
+          "j": "7253",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7243",
+          "j": "7254b",
+          "n_shared_strata": 7
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7243",
+          "j": "7446",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7243",
+          "j": "7447",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7243",
+          "j": "7450",
+          "n_shared_strata": 7
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7243",
+          "j": "7455b",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7243",
+          "j": "7457",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7243",
+          "j": "7463",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7243",
+          "j": "7464",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7243",
+          "j": "7467",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7243",
+          "j": "7470",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7243",
+          "j": "7472",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7243",
+          "j": "7473",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7243",
+          "j": "7481",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7243",
+          "j": "7483",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7247",
+          "j": "7250",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7247",
+          "j": "7253",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7247",
+          "j": "7254b",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7247",
+          "j": "7446",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7247",
+          "j": "7450",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7247",
+          "j": "7455b",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7247",
+          "j": "7457",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7247",
+          "j": "7463",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7247",
+          "j": "7464",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7247",
+          "j": "7467",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7247",
+          "j": "7473",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7247",
+          "j": "7481",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7247",
+          "j": "7483",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7250",
+          "j": "7253",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7250",
+          "j": "7254b",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7250",
+          "j": "7446",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7250",
+          "j": "7450",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7250",
+          "j": "7455b",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7250",
+          "j": "7457",
+          "n_shared_strata": 5
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7250",
+          "j": "7463",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7250",
+          "j": "7464",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7250",
+          "j": "7467",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7250",
+          "j": "7473",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7250",
+          "j": "7481",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7250",
+          "j": "7483",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7253",
+          "j": "7254b",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7253",
+          "j": "7440",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7253",
+          "j": "7446",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7253",
+          "j": "7450",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7253",
+          "j": "7455b",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7253",
+          "j": "7457",
+          "n_shared_strata": 6
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7253",
+          "j": "7463",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7253",
+          "j": "7464",
+          "n_shared_strata": 8
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7253",
+          "j": "7467",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7253",
+          "j": "7473",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7253",
+          "j": "7481",
+          "n_shared_strata": 5
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7253",
+          "j": "7483",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7254b",
+          "j": "7446",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7254b",
+          "j": "7447",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7254b",
+          "j": "7450",
+          "n_shared_strata": 6
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7254b",
+          "j": "7455b",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7254b",
+          "j": "7457",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7254b",
+          "j": "7463",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7254b",
+          "j": "7464",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7254b",
+          "j": "7467",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7254b",
+          "j": "7470",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7254b",
+          "j": "7472",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7254b",
+          "j": "7473",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7254b",
+          "j": "7481",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7254b",
+          "j": "7483",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7440",
+          "j": "7464",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7440",
+          "j": "7467",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7446",
+          "j": "7450",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7446",
+          "j": "7455b",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7446",
+          "j": "7457",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7446",
+          "j": "7463",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7446",
+          "j": "7464",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7446",
+          "j": "7467",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7446",
+          "j": "7472",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7446",
+          "j": "7473",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7446",
+          "j": "7481",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7446",
+          "j": "7483",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7447",
+          "j": "7450",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7447",
+          "j": "7470",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7447",
+          "j": "7472",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7450",
+          "j": "7455b",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7450",
+          "j": "7457",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7450",
+          "j": "7463",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7450",
+          "j": "7464",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7450",
+          "j": "7467",
+          "n_shared_strata": 6
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7450",
+          "j": "7470",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7450",
+          "j": "7472",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7450",
+          "j": "7473",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7450",
+          "j": "7481",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7450",
+          "j": "7483",
+          "n_shared_strata": 5
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7455b",
+          "j": "7457",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7455b",
+          "j": "7463",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7455b",
+          "j": "7464",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7455b",
+          "j": "7467",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7455b",
+          "j": "7473",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7455b",
+          "j": "7481",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7455b",
+          "j": "7483",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7457",
+          "j": "7463",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7457",
+          "j": "7464",
+          "n_shared_strata": 6
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7457",
+          "j": "7467",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7457",
+          "j": "7473",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7457",
+          "j": "7481",
+          "n_shared_strata": 8
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7457",
+          "j": "7483",
+          "n_shared_strata": 5
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7463",
+          "j": "7464",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7463",
+          "j": "7467",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7463",
+          "j": "7473",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7463",
+          "j": "7481",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7463",
+          "j": "7483",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7464",
+          "j": "7467",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7464",
+          "j": "7473",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7464",
+          "j": "7481",
+          "n_shared_strata": 5
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7464",
+          "j": "7483",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7467",
+          "j": "7473",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7467",
+          "j": "7481",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7467",
+          "j": "7483",
+          "n_shared_strata": 8
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7470",
+          "j": "7472",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7473",
+          "j": "7481",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7473",
+          "j": "7483",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Lek Njoukou::2020",
+          "i": "7481",
+          "j": "7483",
+          "n_shared_strata": 4
+        }
+      ]
+    },
+    "phyllostomus_2022": {
+      "verdict": "PASS_TO_VERTICAL_BRIDGE",
+      "thresholds": {
+        "Aj-cave (Colony 2)::2022": {
+          "speed_median": 0.2066464432007326,
+          "turn_angle_median": 1.820164773126835
+        },
+        "La Gruta (Colony 1)::2022": {
+          "speed_median": 2.943563376230001,
+          "turn_angle_median": 0.40553119287250083
+        }
+      },
+      "counts": {
+        "eligible_individuals": 27,
+        "eligible_pairs_target_odd": 73,
+        "eligible_pairs_target_even": 45
+      },
+      "eligible_individuals": [
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "iid": "7CDA805"
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "iid": "7CDADF6"
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "iid": "7CDD887"
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "iid": "7CDDD46"
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "iid": "7CE02AF"
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "iid": "7CE0B21"
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "iid": "7CE0C49"
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "iid": "8041CD3"
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "iid": "8042D3E"
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "iid": "8043BF1"
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "iid": "8043C3F"
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "iid": "804B8F9"
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "iid": "808EFBC"
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "iid": "7250872"
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "iid": "74DB9C0"
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "iid": "74DDA80"
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "iid": "7CCA9E6"
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "iid": "7CDB4A2"
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "iid": "7CDC7CF"
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "iid": "7CDE45C"
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "iid": "7CDF3E7"
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "iid": "7CDF57C"
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "iid": "7CDF62C"
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "iid": "7CDFB47"
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "iid": "7CE04A9"
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "iid": "7CE0EAE"
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "iid": "7CE11AF"
+        }
+      ],
+      "pair_support_odd": [
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "i": "7CDA805",
+          "j": "7CE0B21",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "i": "7CDA805",
+          "j": "8041CD3",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "i": "7CDA805",
+          "j": "8042D3E",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "i": "7CDADF6",
+          "j": "7CDD887",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "i": "7CDADF6",
+          "j": "7CDDD46",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "i": "7CDADF6",
+          "j": "8041CD3",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "i": "7CDADF6",
+          "j": "8042D3E",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "i": "7CDADF6",
+          "j": "8043BF1",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "i": "7CDADF6",
+          "j": "808EFBC",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "i": "7CDD887",
+          "j": "7CDDD46",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "i": "7CDD887",
+          "j": "8041CD3",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "i": "7CDD887",
+          "j": "8042D3E",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "i": "7CDD887",
+          "j": "8043BF1",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "i": "7CDD887",
+          "j": "808EFBC",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "i": "7CDDD46",
+          "j": "8041CD3",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "i": "7CDDD46",
+          "j": "8042D3E",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "i": "7CDDD46",
+          "j": "8043BF1",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "i": "7CDDD46",
+          "j": "808EFBC",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "i": "7CE02AF",
+          "j": "804B8F9",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "i": "7CE0B21",
+          "j": "8041CD3",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "i": "7CE0B21",
+          "j": "8042D3E",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "i": "8041CD3",
+          "j": "8042D3E",
+          "n_shared_strata": 6
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "i": "8041CD3",
+          "j": "8043BF1",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "i": "8041CD3",
+          "j": "808EFBC",
+          "n_shared_strata": 5
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "i": "8042D3E",
+          "j": "8043BF1",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "i": "8042D3E",
+          "j": "808EFBC",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "i": "8043BF1",
+          "j": "808EFBC",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "7250872",
+          "j": "74DB9C0",
+          "n_shared_strata": 12
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "7250872",
+          "j": "74DDA80",
+          "n_shared_strata": 12
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "7250872",
+          "j": "7CCA9E6",
+          "n_shared_strata": 10
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "7250872",
+          "j": "7CDC7CF",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "7250872",
+          "j": "7CDE45C",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "7250872",
+          "j": "7CDF3E7",
+          "n_shared_strata": 9
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "7250872",
+          "j": "7CDF62C",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "7250872",
+          "j": "7CE04A9",
+          "n_shared_strata": 9
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "7250872",
+          "j": "7CE0EAE",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "7250872",
+          "j": "7CE11AF",
+          "n_shared_strata": 8
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "74DB9C0",
+          "j": "74DDA80",
+          "n_shared_strata": 9
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "74DB9C0",
+          "j": "7CCA9E6",
+          "n_shared_strata": 11
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "74DB9C0",
+          "j": "7CDC7CF",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "74DB9C0",
+          "j": "7CDE45C",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "74DB9C0",
+          "j": "7CDF3E7",
+          "n_shared_strata": 10
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "74DB9C0",
+          "j": "7CDF62C",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "74DB9C0",
+          "j": "7CE04A9",
+          "n_shared_strata": 9
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "74DB9C0",
+          "j": "7CE0EAE",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "74DB9C0",
+          "j": "7CE11AF",
+          "n_shared_strata": 8
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "74DDA80",
+          "j": "7CCA9E6",
+          "n_shared_strata": 7
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "74DDA80",
+          "j": "7CDE45C",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "74DDA80",
+          "j": "7CDF3E7",
+          "n_shared_strata": 6
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "74DDA80",
+          "j": "7CDF62C",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "74DDA80",
+          "j": "7CE04A9",
+          "n_shared_strata": 7
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "74DDA80",
+          "j": "7CE11AF",
+          "n_shared_strata": 6
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "7CCA9E6",
+          "j": "7CDC7CF",
+          "n_shared_strata": 5
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "7CCA9E6",
+          "j": "7CDE45C",
+          "n_shared_strata": 6
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "7CCA9E6",
+          "j": "7CDF3E7",
+          "n_shared_strata": 8
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "7CCA9E6",
+          "j": "7CDF62C",
+          "n_shared_strata": 5
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "7CCA9E6",
+          "j": "7CE04A9",
+          "n_shared_strata": 10
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "7CCA9E6",
+          "j": "7CE0EAE",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "7CCA9E6",
+          "j": "7CE11AF",
+          "n_shared_strata": 12
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "7CDB4A2",
+          "j": "7CE04A9",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "7CDC7CF",
+          "j": "7CDF3E7",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "7CDC7CF",
+          "j": "7CE04A9",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "7CDC7CF",
+          "j": "7CE0EAE",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "7CDC7CF",
+          "j": "7CE11AF",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "7CDE45C",
+          "j": "7CDF62C",
+          "n_shared_strata": 5
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "7CDE45C",
+          "j": "7CE11AF",
+          "n_shared_strata": 7
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "7CDF3E7",
+          "j": "7CE04A9",
+          "n_shared_strata": 8
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "7CDF3E7",
+          "j": "7CE0EAE",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "7CDF3E7",
+          "j": "7CE11AF",
+          "n_shared_strata": 5
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "7CDF62C",
+          "j": "7CE04A9",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "7CDF62C",
+          "j": "7CE11AF",
+          "n_shared_strata": 8
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "7CE04A9",
+          "j": "7CE0EAE",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "7CE04A9",
+          "j": "7CE11AF",
+          "n_shared_strata": 7
+        }
+      ],
+      "pair_support_even": [
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "i": "7CDA805",
+          "j": "7CE0B21",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "i": "7CDA805",
+          "j": "8041CD3",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "i": "7CDA805",
+          "j": "8042D3E",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "i": "7CDD887",
+          "j": "7CDDD46",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "i": "7CDD887",
+          "j": "8041CD3",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "i": "7CDD887",
+          "j": "8043BF1",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "i": "7CDD887",
+          "j": "808EFBC",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "i": "7CDDD46",
+          "j": "8041CD3",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "i": "7CDDD46",
+          "j": "8043BF1",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "i": "7CDDD46",
+          "j": "808EFBC",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "i": "7CE02AF",
+          "j": "804B8F9",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "i": "7CE0B21",
+          "j": "8041CD3",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "i": "7CE0B21",
+          "j": "8042D3E",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "i": "8041CD3",
+          "j": "8042D3E",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "i": "8041CD3",
+          "j": "8043BF1",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "i": "8041CD3",
+          "j": "808EFBC",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2022",
+          "i": "8043BF1",
+          "j": "808EFBC",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "7250872",
+          "j": "74DB9C0",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "7250872",
+          "j": "74DDA80",
+          "n_shared_strata": 13
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "7250872",
+          "j": "7CCA9E6",
+          "n_shared_strata": 10
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "7250872",
+          "j": "7CDE45C",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "7250872",
+          "j": "7CDF3E7",
+          "n_shared_strata": 10
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "7250872",
+          "j": "7CE04A9",
+          "n_shared_strata": 9
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "7250872",
+          "j": "7CE11AF",
+          "n_shared_strata": 8
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "74DB9C0",
+          "j": "7CCA9E6",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "74DB9C0",
+          "j": "7CDC7CF",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "74DB9C0",
+          "j": "7CDF3E7",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "74DB9C0",
+          "j": "7CE04A9",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "74DDA80",
+          "j": "7CCA9E6",
+          "n_shared_strata": 7
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "74DDA80",
+          "j": "7CDF3E7",
+          "n_shared_strata": 7
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "74DDA80",
+          "j": "7CE04A9",
+          "n_shared_strata": 6
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "74DDA80",
+          "j": "7CE11AF",
+          "n_shared_strata": 5
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "7CCA9E6",
+          "j": "7CDE45C",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "7CCA9E6",
+          "j": "7CDF3E7",
+          "n_shared_strata": 9
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "7CCA9E6",
+          "j": "7CDF62C",
+          "n_shared_strata": 5
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "7CCA9E6",
+          "j": "7CE04A9",
+          "n_shared_strata": 11
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "7CCA9E6",
+          "j": "7CE0EAE",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "7CCA9E6",
+          "j": "7CE11AF",
+          "n_shared_strata": 10
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "7CDE45C",
+          "j": "7CDF3E7",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "7CDE45C",
+          "j": "7CE11AF",
+          "n_shared_strata": 5
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "7CDF3E7",
+          "j": "7CE04A9",
+          "n_shared_strata": 8
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "7CDF3E7",
+          "j": "7CE11AF",
+          "n_shared_strata": 5
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "7CDF62C",
+          "j": "7CE04A9",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "7CDF62C",
+          "j": "7CE11AF",
+          "n_shared_strata": 5
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "i": "7CE04A9",
+          "j": "7CE11AF",
+          "n_shared_strata": 6
+        }
+      ]
+    },
+    "phyllostomus_2023": {
+      "verdict": "STOP_STRUCTURAL_SUPPORT",
+      "thresholds": {
+        "Aj-cave (Colony 2)::2023": {
+          "speed_median": 0.633536545571564,
+          "turn_angle_median": 1.838206989160819
+        },
+        "La Gruta (Colony 1)::2023": {
+          "speed_median": 1.0017973103516304,
+          "turn_angle_median": 1.3628000824389437
+        }
+      },
+      "counts": {
+        "eligible_individuals": 10,
+        "eligible_pairs_target_odd": 12,
+        "eligible_pairs_target_even": 13
+      },
+      "eligible_individuals": [
+        {
+          "cohort": "Aj-cave (Colony 2)::2023",
+          "iid": "989001041827562"
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2023",
+          "iid": "989001041827563"
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2023",
+          "iid": "989001041827568"
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2023",
+          "iid": "989001041827573"
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2023",
+          "iid": "989001041827588"
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2023",
+          "iid": "989001041827592"
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2023",
+          "iid": "989001041827637"
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2023",
+          "iid": "989001041827544"
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2023",
+          "iid": "989001041827571"
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2023",
+          "iid": "989001041827594"
+        }
+      ],
+      "pair_support_odd": [
+        {
+          "cohort": "Aj-cave (Colony 2)::2023",
+          "i": "989001041827562",
+          "j": "989001041827568",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2023",
+          "i": "989001041827562",
+          "j": "989001041827592",
+          "n_shared_strata": 7
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2023",
+          "i": "989001041827563",
+          "j": "989001041827568",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2023",
+          "i": "989001041827563",
+          "j": "989001041827573",
+          "n_shared_strata": 15
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2023",
+          "i": "989001041827563",
+          "j": "989001041827588",
+          "n_shared_strata": 14
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2023",
+          "i": "989001041827563",
+          "j": "989001041827637",
+          "n_shared_strata": 9
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2023",
+          "i": "989001041827568",
+          "j": "989001041827573",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2023",
+          "i": "989001041827568",
+          "j": "989001041827588",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2023",
+          "i": "989001041827568",
+          "j": "989001041827637",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2023",
+          "i": "989001041827573",
+          "j": "989001041827588",
+          "n_shared_strata": 14
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2023",
+          "i": "989001041827573",
+          "j": "989001041827637",
+          "n_shared_strata": 9
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2023",
+          "i": "989001041827588",
+          "j": "989001041827637",
+          "n_shared_strata": 10
+        }
+      ],
+      "pair_support_even": [
+        {
+          "cohort": "Aj-cave (Colony 2)::2023",
+          "i": "989001041827562",
+          "j": "989001041827568",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2023",
+          "i": "989001041827562",
+          "j": "989001041827592",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2023",
+          "i": "989001041827563",
+          "j": "989001041827568",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2023",
+          "i": "989001041827563",
+          "j": "989001041827573",
+          "n_shared_strata": 12
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2023",
+          "i": "989001041827563",
+          "j": "989001041827588",
+          "n_shared_strata": 14
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2023",
+          "i": "989001041827563",
+          "j": "989001041827592",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2023",
+          "i": "989001041827563",
+          "j": "989001041827637",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2023",
+          "i": "989001041827568",
+          "j": "989001041827588",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2023",
+          "i": "989001041827568",
+          "j": "989001041827637",
+          "n_shared_strata": 3
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2023",
+          "i": "989001041827573",
+          "j": "989001041827588",
+          "n_shared_strata": 10
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2023",
+          "i": "989001041827573",
+          "j": "989001041827592",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2023",
+          "i": "989001041827588",
+          "j": "989001041827592",
+          "n_shared_strata": 4
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2023",
+          "i": "989001041827588",
+          "j": "989001041827637",
+          "n_shared_strata": 4
+        }
+      ]
+    },
+    "phyllostomus_2016": {
+      "verdict": "STOP_STRUCTURAL_SUPPORT",
+      "thresholds": {
+        "La Gruta::2016": {
+          "speed_median": 3.123942322205678,
+          "turn_angle_median": 0.32386799653035325
+        }
+      },
+      "counts": {
+        "eligible_individuals": 1,
+        "eligible_pairs_target_odd": 0,
+        "eligible_pairs_target_even": 0
+      },
+      "eligible_individuals": [
+        {
+          "cohort": "La Gruta::2016",
+          "iid": "74F9F83"
+        }
+      ],
+      "pair_support_odd": [],
+      "pair_support_even": []
+    }
+  }
+}
