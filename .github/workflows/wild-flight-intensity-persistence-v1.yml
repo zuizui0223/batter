@@ -22,7 +22,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Install dependencies
-        run: python -m pip install --quiet numpy pyproj
+        run: python -m pip install --quiet -e .
       - name: Run frozen wild FlightIntensity persistence test
         run: |
           python prospective/field_policy_bridge/wild_flight_intensity_persistence_v1.py | tee prospective/field_policy_bridge/WILD_FLIGHT_INTENSITY_PERSISTENCE_RESULT_V1.json
