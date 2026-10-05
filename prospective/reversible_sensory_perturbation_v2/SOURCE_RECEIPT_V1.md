@@ -105,3 +105,23 @@ It would not establish:
 - adaptation or fitness benefit.
 
 A positive P3 would support individual heterogeneity in response to this manipulation, but not a general reaction norm across environments.
+
+
+## Source condition-order clarification
+
+The source paper specifies the sequence:
+
+1. styrofoam target, **no masker** baseline;
+2. styrofoam target + masker at **30 cm**;
+3. styrofoam target + masker at **10 cm**;
+4. **foam target, no masker** retraining for four days;
+5. foam target + masker at **30 cm**.
+
+Thus the archive may contain two useful within-individual contrasts:
+
+- increasing sensory masking while target material is fixed (styrofoam baseline -> 30 cm -> 10 cm);
+- a second target-material-specific baseline immediately before renewed masking (foam no-masker -> foam + 30 cm).
+
+The foam no-masker block must not be treated as a pure return to the original styrofoam baseline because target reflectivity changes simultaneously.
+
+If the public archive exposes this block structurally, it can be used as a second within-individual perturbation contrast, not as proof of full ABA recovery.
