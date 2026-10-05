@@ -66,3 +66,8 @@ Do not:
 - inspect numeric rows to discover phase boundaries;
 - substitute a different outcome because IGI support is inconvenient;
 - infer missing bat/stage mappings from published effect direction.
+
+
+## Trigger provenance
+
+The schema workflow is fail-closed and may be re-triggered without changing the frozen opening rules. This note changes no authorized field, threshold or proceed rule.
