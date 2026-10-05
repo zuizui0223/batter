@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Schema-only XLSX opening for Taub & Yovel clutter-recall archive."""
 from __future__ import annotations
-import hashlib, io, json, re, urllib.parse, urllib.request, zipfile
+import hashlib, io, json, re, time, urllib.error, urllib.parse, urllib.request, zipfile
 import xml.etree.ElementTree as ET
 
 BASE="https://data.mendeley.com/public-api"
@@ -15,13 +15,28 @@ NS={
  "r":"http://schemas.openxmlformats.org/officeDocument/2006/relationships",
 }
 
+def _open_with_retry(req,timeout):
+    last=None
+    for attempt in range(5):
+        try:
+            return urllib.request.urlopen(req,timeout=timeout)
+        except urllib.error.HTTPError as e:
+            last=e
+            if e.code not in (429,500,502,503,504):
+                raise
+        except urllib.error.URLError as e:
+            last=e
+        if attempt<4:
+            time.sleep(2**attempt)
+    raise last
+
 def get_json(url,accept="application/vnd.mendeley-public-dataset.1+json"):
     req=urllib.request.Request(url,headers={"User-Agent":UA,"Accept":accept})
-    with urllib.request.urlopen(req,timeout=60) as r:return json.load(r)
+    with _open_with_retry(req,60) as r:return json.load(r)
 
 def get_bytes(url,maxn):
     req=urllib.request.Request(url,headers={"User-Agent":UA,"Accept":"application/octet-stream"})
-    with urllib.request.urlopen(req,timeout=90) as r:
+    with _open_with_retry(req,90) as r:
         b=r.read(maxn+1)
     if len(b)>maxn:raise RuntimeError("download budget exceeded")
     return b
