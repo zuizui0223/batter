@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Individual-specific peer-context reaction norm for wild P. hastatus H/V policy."""
+"""Individual-specific peer-context reaction norm for wild P. hastatus H/V policy.
+
+Exact implementation of INDIVIDUAL_PEER_CONTEXT_REACTION_NORM_CONTRACT_V1.md.
+Uses sufficient statistics only for speed; estimator and null are unchanged.
+"""
 from __future__ import annotations
 import collections, importlib.util, json, math
 from pathlib import Path
@@ -40,137 +44,131 @@ def day_records(panel):
         base.append({"cohort":co,"day":d,"iid":iid,"y":np.mean(np.vstack(vals),axis=0)})
 
     byday=collections.defaultdict(list)
-    for idx,r in enumerate(base): byday[(r["cohort"],r["day"])].append(idx)
+    for idx,r in enumerate(base):byday[(r["cohort"],r["day"])].append(idx)
 
     out=[]
-    for dk,idxs in byday.items():
+    for _,idxs in byday.items():
         if len(idxs)<3: continue
         total=np.sum(np.vstack([base[i]["y"] for i in idxs]),axis=0)
         n=len(idxs)
         for i in idxs:
             r=base[i]
-            out.append({**r,"daykey":f"{r['cohort']}::{r['day']}",
-                        "indkey":f"{r['cohort']}::{r['iid']}",
-                        "c":(total-r["y"])/(n-1),
-                        "n_peers":n-1})
+            out.append({
+              **r,
+              "daykey":f"{r['cohort']}::{r['day']}",
+              "c":(total-r["y"])/(n-1),
+              "n_peers":n-1
+            })
     return out,audit
 
-def rebuild_with_labels(base,labels):
-    rows=[]
-    byday=collections.defaultdict(list)
-    for k,r in enumerate(base):
-        z={**r,"iid":str(labels[k]),"indkey":f"{r['cohort']}::{labels[k]}"}
-        rows.append(z);byday[z["daykey"]].append(k)
-    for idxs in byday.values():
-        total=np.sum(np.vstack([rows[i]["y"] for i in idxs]),axis=0)
-        n=len(idxs)
-        for i in idxs:
-            rows[i]["c"]=(total-rows[i]["y"])/(n-1)
-            rows[i]["n_peers"]=n-1
-    return rows
+def add_stat(t,r):
+    y=r["y"];c=r["c"]
+    t["n"]+=1
+    t["sy"]+=y
+    t["sc"]+=c
+    t["scc"]+=float(c@c)
+    t["scy"]+=float(c@y)
 
-def slope_intercept(train):
-    Y=np.vstack([r["y"] for r in train])
-    C=np.vstack([r["c"] for r in train])
-    yb=Y.mean(axis=0);cb=C.mean(axis=0)
-    yc=Y-yb;cc=C-cb
-    den=float(np.sum(cc*cc))
+def sub_record(t,r):
+    return {
+      "n":t["n"]-1,
+      "sy":t["sy"]-r["y"],
+      "sc":t["sc"]-r["c"],
+      "scc":t["scc"]-float(r["c"]@r["c"]),
+      "scy":t["scy"]-float(r["c"]@r["y"]),
+    }
+
+def centered_slope(t,min_n):
+    n=t["n"]
+    if n<min_n:return None
+    sy=t["sy"];sc=t["sc"]
+    den=float(t["scc"]-(sc@sc)/n)
     if not math.isfinite(den) or den<=EPS:return None
-    b=float(np.sum(cc*yc)/den)
-    theta=yb-b*cb
-    return b,theta,yb,cb
+    num=float(t["scy"]-(sc@sy)/n)
+    b=num/den
+    ybar=sy/n;cbar=sc/n
+    return float(b),ybar,cbar
 
-def shared_slope(train):
-    by=collections.defaultdict(list)
-    for r in train:by[r["indkey"]].append(r)
-    num=0.0;den=0.0;n_groups=0
-    for vals in by.values():
-        if len(vals)<2:continue
-        Y=np.vstack([r["y"] for r in vals]);C=np.vstack([r["c"] for r in vals])
-        yb=Y.mean(axis=0);cb=C.mean(axis=0)
-        yc=Y-yb;cc=C-cb
-        d=float(np.sum(cc*cc))
-        if not math.isfinite(d) or d<=EPS:continue
-        num += float(np.sum(cc*yc));den += d;n_groups += 1
-    if n_groups<3 or not math.isfinite(den) or den<=EPS:return None
-    return float(num/den)
-
-def statistic(rows):
-    byind=collections.defaultdict(list);byday=collections.defaultdict(list)
-    for r in rows:
-        byind[r["indkey"]].append(r);byday[r["daykey"]].append(r)
+def statistic(rows,labels):
+    totals={}
+    day_rows=collections.defaultdict(dict)
+    rowmeta=[]
+    for idx,r in enumerate(rows):
+        lab=str(labels[idx]);ik=f"{r['cohort']}::{lab}"
+        if ik not in totals:
+            totals[ik]={"n":0,"sy":np.zeros(2,float),"sc":np.zeros(2,float),"scc":0.0,"scy":0.0}
+        add_stat(totals[ik],r)
+        # within a cohort-day every biological label occurs once after day collapse
+        if ik in day_rows[r["daykey"]]:
+            return None
+        day_rows[r["daykey"]][ik]=r
+        rowmeta.append((ik,r))
 
     shared_cache={}
-    indivfit_cache={}
-    per=collections.defaultdict(list)
-    slopes=collections.defaultdict(list)
-    e0=[];e1=[];e2=[];y0=[]
+    for dk,removed in day_rows.items():
+        num=0.0;den=0.0;ng=0
+        for ik,t0 in totals.items():
+            t=sub_record(t0,removed[ik]) if ik in removed else t0
+            fit=centered_slope(t,2)
+            if fit is None:continue
+            b,yb,cb=fit
+            # Recover numerator/denominator exactly from sufficient statistics.
+            n=t["n"];sc=t["sc"];sy=t["sy"]
+            d=float(t["scc"]-(sc@sc)/n)
+            q=float(t["scy"]-(sc@sy)/n)
+            if d<=EPS or not math.isfinite(d):continue
+            num+=q;den+=d;ng+=1
+        shared_cache[dk]=float(num/den) if ng>=3 and den>EPS and math.isfinite(den) else None
 
-    for target in rows:
-        ik=target["indkey"];dk=target["daykey"]
-        train_i=[r for r in byind[ik] if r["daykey"]!=dk]
-        if len(train_i)<4:continue
+    target=[]
+    per_rn=collections.defaultdict(list)
+    per_shared=collections.defaultdict(list)
+    per_b=collections.defaultdict(list)
 
-        ck=(ik,dk)
-        if ck not in indivfit_cache:
-            indivfit_cache[ck]=slope_intercept(train_i)
-        fi=indivfit_cache[ck]
-        if fi is None:continue
-        bi,thetai,ybar,cbar=fi
-
-        if dk not in shared_cache:
-            train_all=[r for r in rows if r["daykey"]!=dk]
-            shared_cache[dk]=shared_slope(train_all)
-        bs=shared_cache[dk]
-        if bs is None:continue
-
-        theta_shared=ybar-bs*cbar
+    for ik,r in rowmeta:
+        train=sub_record(totals[ik],r)
+        fi=centered_slope(train,4)
+        bs=shared_cache.get(r["daykey"])
+        if fi is None or bs is None:continue
+        bi,ybar,cbar=fi
+        theta_i=ybar-bi*cbar
+        theta_s=ybar-bs*cbar
+        y=r["y"]
         p0=ybar
-        p1=theta_shared+bs*target["c"]
-        p2=thetai+bi*target["c"]
-        y=target["y"]
+        p1=theta_s+bs*r["c"]
+        p2=theta_i+bi*r["c"]
         q0=float(np.sum((y-p0)**2))
         q1=float(np.sum((y-p1)**2))
         q2=float(np.sum((y-p2)**2))
-        per[ik].append((q1-q2,q0-q1))
-        slopes[ik].append(bi)
-        e0.append(q0);e1.append(q1);e2.append(q2);y0.append(float(np.sum(y*y)))
+        rn=q1-q2;sh=q0-q1
+        per_rn[ik].append(rn);per_shared[ik].append(sh);per_b[ik].append(bi)
+        target.append((ik,q0,q1,q2,float(y@y)))
 
-    ind_rn={k:float(np.mean([z[0] for z in v])) for k,v in per.items() if len(v)>=2}
-    ind_shared={k:float(np.mean([z[1] for z in v])) for k,v in per.items() if len(v)>=2}
-    ind_b={k:float(np.mean(slopes[k])) for k in ind_rn}
-    if len(ind_rn)<5:return None
+    keep={k for k,v in per_rn.items() if len(v)>=2}
+    if len(keep)<5:return None
+    use=[z for z in target if z[0] in keep]
+    if len(use)<15:return None
 
-    keep=set(ind_rn)
-    # Recalculate pooled R2 on targets belonging to contributing individuals only.
-    E0=[];E1=[];E2=[];Y0=[]
-    for target in rows:
-        ik=target["indkey"];dk=target["daykey"]
-        if ik not in keep:continue
-        train_i=[r for r in byind[ik] if r["daykey"]!=dk]
-        if len(train_i)<4:continue
-        fi=indivfit_cache.get((ik,dk))
-        bs=shared_cache.get(dk)
-        if fi is None or bs is None:continue
-        bi,thetai,ybar,cbar=fi
-        y=target["y"];p0=ybar;p1=(ybar-bs*cbar)+bs*target["c"];p2=thetai+bi*target["c"]
-        E0.append(float(np.sum((y-p0)**2)));E1.append(float(np.sum((y-p1)**2)))
-        E2.append(float(np.sum((y-p2)**2)));Y0.append(float(np.sum(y*y)))
-
-    if len(E2)<15 or sum(Y0)<=0:return None
+    ind_rn={k:float(np.mean(per_rn[k])) for k in sorted(keep)}
+    ind_shared={k:float(np.mean(per_shared[k])) for k in sorted(keep)}
+    ind_b={k:float(np.mean(per_b[k])) for k in sorted(keep)}
+    y0=sum(z[4] for z in use)
+    if y0<=0:return None
+    e0=sum(z[1] for z in use);e1=sum(z[2] for z in use);e2=sum(z[3] for z in use)
+    pos=sum(v>0 for v in ind_rn.values())
     return {
       "G_RN":float(np.mean(list(ind_rn.values()))),
       "G_shared":float(np.mean(list(ind_shared.values()))),
       "individual_G_RN":ind_rn,
       "individual_G_shared":ind_shared,
       "individual_mean_b":ind_b,
-      "positive_individuals_RN":int(sum(v>0 for v in ind_rn.values())),
+      "positive_individuals_RN":int(pos),
       "n_individuals":int(len(ind_rn)),
-      "positive_fraction_RN":float(sum(v>0 for v in ind_rn.values())/len(ind_rn)),
-      "n_targets":int(len(E2)),
-      "R2_M0":float(1-sum(E0)/sum(Y0)),
-      "R2_M1_shared":float(1-sum(E1)/sum(Y0)),
-      "R2_M2_individual":float(1-sum(E2)/sum(Y0)),
+      "positive_fraction_RN":float(pos/len(ind_rn)),
+      "n_targets":int(len(use)),
+      "R2_M0":float(1-e0/y0),
+      "R2_M1_shared":float(1-e1/y0),
+      "R2_M2_individual":float(1-e2/y0),
     }
 
 def permuted_labels(rows,rng):
@@ -187,13 +185,13 @@ def permuted_labels(rows,rng):
 def run(year,panel):
     base,audit=day_records(panel)
     if base is None:return {"status":"STOP_SOURCE_SUPPORT","audit":audit}
-    obs=statistic(base)
+    obslabels=[r["iid"] for r in base]
+    obs=statistic(base,obslabels)
     if obs is None:return {"status":"STOP_STRUCTURAL_SUPPORT","n_day_units":len(base),"audit":audit}
 
     rng=np.random.default_rng(SEEDS[year]);null=[]
     for _ in range(NPERM):
-        labs=permuted_labels(base,rng)
-        q=statistic(rebuild_with_labels(base,labs))
+        q=statistic(base,permuted_labels(base,rng))
         if q is not None and math.isfinite(q["G_RN"]):
             null.append(q["G_RN"])
     a=np.asarray(null,float)
@@ -215,6 +213,7 @@ def main():
     print(json.dumps({
       "contract":"INDIVIDUAL_PEER_CONTEXT_REACTION_NORM_CONTRACT_V1.md",
       "status":"POST_JAE_POST_OUTCOME_MECHANISM_DIAGNOSTIC",
+      "implementation":"exact sufficient-statistics acceleration",
       "years":{y:run(y,p) for y,p in BV.PANELS.items()}
     },indent=2))
 
