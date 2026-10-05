@@ -1,0 +1,38 @@
+name: peer-controlled-bivariate-early-late-v1
+
+on:
+  push:
+    branches:
+      - prospective/task-reset-lockin-v1
+    paths:
+      - prospective/field_policy_bridge/peer_controlled_bivariate_early_late_v1.py
+      - prospective/field_policy_bridge/PEER_CONTROLLED_BIVARIATE_EARLY_LATE_CONTRACT_V1.md
+      - .github/workflows/peer-controlled-bivariate-early-late-v1.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  bivariate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install package and dependencies
+        run: |
+          python -m pip install --quiet -e .
+          python -m pip install --quiet numpy pandas scipy pyproj
+      - name: Run peer-controlled 2-D early-late persistence
+        shell: bash
+        run: |
+          set -euo pipefail
+          python prospective/field_policy_bridge/peer_controlled_bivariate_early_late_v1.py | tee prospective/field_policy_bridge/PEER_CONTROLLED_BIVARIATE_EARLY_LATE_RESULT_V1.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: peer-controlled-bivariate-early-late-v1
+          path: prospective/field_policy_bridge/PEER_CONTROLLED_BIVARIATE_EARLY_LATE_RESULT_V1.json
+          if-no-files-found: warn
