@@ -1,0 +1,42 @@
+name: learning-policy-structural-support-v1
+
+on:
+  push:
+    branches:
+      - prospective/learning-policy-state-v1
+    paths:
+      - prospective/learning_policy_state/structural_support_v1.py
+      - prospective/learning_policy_state/STRUCTURAL_ROW_VALUE_ALLOWLIST_V1.md
+      - .github/workflows/learning-policy-structural-support-v1.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  structural:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Guard outcome columns
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path("prospective/learning_policy_state/structural_support_v1.py").read_text()
+          banned=["max_flight_speed","meandering width","total_pulse_emissions","triplets","doublets","single pulses","Absolute⊿"]
+          hits=[x for x in banned if x in p]
+          if hits:
+              raise SystemExit(f"outcome-column guard failed: {hits}")
+          print("outcome-column guard PASS")
+          PY
+      - name: Run structural support gate
+        run: |
+          python prospective/learning_policy_state/structural_support_v1.py | tee prospective/learning_policy_state/STRUCTURAL_SUPPORT_RESULT_V1.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: learning-policy-structural-support-v1
+          path: prospective/learning_policy_state/STRUCTURAL_SUPPORT_RESULT_V1.json
+          if-no-files-found: error
