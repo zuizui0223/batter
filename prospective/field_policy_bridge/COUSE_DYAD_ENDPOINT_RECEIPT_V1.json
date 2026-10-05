@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "status": "AUTHORITATIVE_FROZEN_DYAD_ENDPOINT_RECEIPT",
+  "source": "COUSE_VERTICAL_SEPARATION_RESULT_V1 authoritative workflow artifacts",
+  "panels": {
+    "phyllostomus_2022": {
+      "authoritative_run_id": 36953712597,
+      "artifact_id": 11204898247,
+      "artifact_sha256": "9d096a7189d122ae0191a3060d82c5a83c9ef51bc122b6b0d2bda56c3aeb6bc6",
+      "encounter_set_sha256": "f5395250f476e22eab441bd9c2b52297277f282e71d66c0a4eebc531f612158a",
+      "dyads": [
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "a": "7250872",
+          "b": "74DB9C0",
+          "encounters": 15,
+          "median_m": 14.949369119989289
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "a": "7250872",
+          "b": "7CDF3E7",
+          "encounters": 5,
+          "median_m": 14.593175840004966
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "a": "7250872",
+          "b": "7CE04A9",
+          "encounters": 6,
+          "median_m": 4.331775760028749
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "a": "74DB9C0",
+          "b": "7CCA9E6",
+          "encounters": 6,
+          "median_m": 3.0056400000312458
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "a": "74DB9C0",
+          "b": "7CE04A9",
+          "encounters": 21,
+          "median_m": 5.360205439970288
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "a": "7CCA9E6",
+          "b": "7CDC7CF",
+          "encounters": 5,
+          "median_m": 6.988396959987973
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "a": "7CCA9E6",
+          "b": "7CDF3E7",
+          "encounters": 166,
+          "median_m": 5.314017520030529
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "a": "7CCA9E6",
+          "b": "7CE04A9",
+          "encounters": 64,
+          "median_m": 4.558907919967522
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "a": "7CDC7CF",
+          "b": "7CDF3E7",
+          "encounters": 5,
+          "median_m": 3.5897505599604713
+        },
+        {
+          "cohort": "La Gruta (Colony 1)::2022",
+          "a": "7CDF3E7",
+          "b": "7CE04A9",
+          "encounters": 54,
+          "median_m": 5.131799480035366
+        }
+      ]
+    },
+    "phyllostomus_2023": {
+      "authoritative_run_id": 36953712597,
+      "artifact_id": 11205525158,
+      "artifact_sha256": "4e0ecee59e8c4269b1b93fd062cddb0fe87a8b4d0b0c4b18edf186d75a4df80a",
+      "encounter_set_sha256": "d4250eafeb7b602e47f7b9449bb76d4a71af0f0bfaa3bc3b801b260e69f2f6bb",
+      "dyads": [
+        {
+          "cohort": "Aj-cave (Colony 2)::2023",
+          "a": "989001041827562",
+          "b": "989001041827592",
+          "encounters": 30,
+          "median_m": 42.15391200001433
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2023",
+          "a": "989001041827563",
+          "b": "989001041827573",
+          "encounters": 586,
+          "median_m": 31.643764000021413
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2023",
+          "a": "989001041827563",
+          "b": "989001041827588",
+          "encounters": 14,
+          "median_m": 24.130023999974075
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2023",
+          "a": "989001041827563",
+          "b": "989001041827637",
+          "encounters": 8,
+          "median_m": 9.667887999993264
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2023",
+          "a": "989001041827573",
+          "b": "989001041827588",
+          "encounters": 11,
+          "median_m": 42.18886399991206
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2023",
+          "a": "989001041827573",
+          "b": "989001041827637",
+          "encounters": 7,
+          "median_m": 13.096912000002828
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2023",
+          "a": "989001041827588",
+          "b": "989001041827592",
+          "encounters": 9,
+          "median_m": 17.432575999997162
+        },
+        {
+          "cohort": "Aj-cave (Colony 2)::2023",
+          "a": "989001041827588",
+          "b": "989001041827637",
+          "encounters": 14,
+          "median_m": 32.21142399999095
+        }
+      ]
+    }
+  }
+}
