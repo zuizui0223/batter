@@ -1,0 +1,44 @@
+name: carollia-external-structural-preflight-v1
+
+on:
+  push:
+    branches:
+      - prospective/task-reset-lockin-v1
+    paths:
+      - prospective/task_reset_lockin/carollia_external_structural_preflight_v1.py
+      - prospective/task_reset_lockin/CAROLLIA_EXTERNAL_STRUCTURAL_PREFLIGHT_V1.md
+      - .github/workflows/carollia-external-structural-preflight-v1.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  structural:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install scipy
+        run: python -m pip install --quiet scipy
+      - name: Guard against value loading
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path("prospective/task_reset_lockin/carollia_external_structural_preflight_v1.py").read_text()
+          banned=["loadmat(", "h5py", "numpy"]
+          hits=[x for x in banned if x in p]
+          if hits:
+              raise SystemExit(f"value-opening guard failed: {hits}")
+          print("value-opening guard PASS")
+          PY
+      - name: Run MAT directory-only preflight
+        run: |
+          python prospective/task_reset_lockin/carollia_external_structural_preflight_v1.py | tee prospective/task_reset_lockin/CAROLLIA_EXTERNAL_STRUCTURAL_PREFLIGHT_RESULT_V1.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: carollia-external-structural-preflight-v1
+          path: prospective/task_reset_lockin/CAROLLIA_EXTERNAL_STRUCTURAL_PREFLIGHT_RESULT_V1.json
+          if-no-files-found: error
