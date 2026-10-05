@@ -1,0 +1,32 @@
+name: field-allocation-axis-fast-v1
+
+on:
+  push:
+    branches:
+      - prospective/task-reset-lockin-v1
+    paths:
+      - prospective/field_policy_bridge/field_allocation_axis_fast_v1.py
+      - .github/workflows/field-allocation-axis-fast-v1.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  allocation-fast:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install batter and dependencies
+        run: python -m pip install --quiet -e .
+      - name: Run vectorized allocation-axis diagnostic
+        run: |
+          python prospective/field_policy_bridge/field_allocation_axis_fast_v1.py | tee prospective/field_policy_bridge/FIELD_ALLOCATION_AXIS_FAST_RESULT_V1.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: field-allocation-axis-fast-v1
+          path: prospective/field_policy_bridge/FIELD_ALLOCATION_AXIS_FAST_RESULT_V1.json
+          if-no-files-found: error
