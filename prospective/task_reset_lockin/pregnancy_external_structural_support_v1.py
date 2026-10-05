@@ -70,16 +70,29 @@ def inspect(b):
 def main():
  out={"contract":"PREGNANCY_EXTERNAL_STRUCTURAL_SUPPORT_CONTRACT_V1.md","row2plus_values_opened":False,"bats":[]}
  for idx,(name,fid,size,sha) in enumerate(FILES,1):
-  m=gj(f"{BASE}/datasets/{DS}/files/{fid}");cd=m.get("content_details") or {}
-  if m.get("filename")!=name:raise RuntimeError(f"name drift {name}")
-  b=gb(cd["download_url"],size+4096)
-  if len(b)!=size or hashlib.sha256(b).hexdigest()!=sha:raise RuntimeError(f"integrity {name}")
-  sheets=inspect(b);n=sum(x["candidate_ge21_rows"] for x in sheets)
   group="pregnant" if idx<=5 else "post_lactating"
-  out["bats"].append({"bat":idx,"group":group,"n_sheets":len(sheets),"n_candidate_ge21":n,
+  m=gj(f"{BASE}/datasets/{DS}/files/{fid}");cd=m.get("content_details") or {}
+  meta_name=m.get("filename")
+  if meta_name!=name:
+   out["bats"].append({"bat":idx,"group":group,"status":"STOP_FILENAME_DRIFT",
+                       "expected_filename":name,"observed_filename":meta_name,
+                       "candidate_eligible_ge5":False})
+   continue
+  b=gb(cd["download_url"],size+4096)
+  got_size=len(b);got_sha=hashlib.sha256(b).hexdigest()
+  if got_size!=size or got_sha!=sha:
+   out["bats"].append({"bat":idx,"group":group,"status":"STOP_INTEGRITY_MISMATCH",
+                       "expected_size":size,"observed_size":got_size,
+                       "expected_sha256":sha,"observed_sha256":got_sha,
+                       "metadata_size":cd.get("size"),"metadata_sha256":cd.get("sha256_hash"),
+                       "candidate_eligible_ge5":False})
+   continue
+  sheets=inspect(b);n=sum(x["candidate_ge21_rows"] for x in sheets)
+  out["bats"].append({"bat":idx,"group":group,"status":"PASS_INTEGRITY",
+                      "n_sheets":len(sheets),"n_candidate_ge21":n,
                       "candidate_eligible_ge5":n>=5,"sheets":sheets})
  for g in ("pregnant","post_lactating"):
-  out[f"n_{g}_eligible"]=sum(x["group"]==g and x["candidate_eligible_ge5"] for x in out["bats"])
+  out[f"n_{g}_eligible"]=sum(x["group"]==g and x.get("candidate_eligible_ge5",False) for x in out["bats"])
  out["verdict"]="PASS_TO_CALL_SAMPLED_ESTIMATOR_FREEZE" if out["n_pregnant_eligible"]>=4 and out["n_post_lactating_eligible"]>=4 else "STOP_INSUFFICIENT_EXTERNAL_SUPPORT"
  print(json.dumps(out,ensure_ascii=False,indent=2))
 if __name__=="__main__":main()
