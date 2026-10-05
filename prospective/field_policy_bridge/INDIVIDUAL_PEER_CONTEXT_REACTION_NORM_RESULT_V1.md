@@ -81,7 +81,14 @@ Against a zero-policy baseline:
 
 Thus the individual-slope model predicts worse than the common-slope model and worse than the stable-center model.
 
-The shared-context term gives a modest descriptive improvement over a stable center, but this P1 result does not establish a causal peer effect.
+The shared-context term gives a modest descriptive improvement over a stable center.
+
+Under the same frozen permutation pipeline, the predeclared P2 shared-context contrast has:
+- null mean: **+0.02221**;
+- null 95% interval: **[+0.00478, +0.04226]**;
+- one-sided p: **0.1733**.
+
+Thus the observed +0.03126 shared-context improvement is not unusually large relative to the identity-randomized pipeline baseline. P2 remains a calibrated secondary diagnostic, not evidence for a causal peer effect.
 
 ## 2023
 
@@ -110,6 +117,13 @@ Held-out target individual-days:
 - individual-slope M2: (R^2 = -0.0389)
 
 Here even the common peer-context slope reduces held-out prediction relative to a stable personal center.
+
+P2 shared-context calibration:
+- null mean: **-0.08934**;
+- null 95% interval: **[-0.18646, +0.00369]**;
+- one-sided p: **0.8105**.
+
+There is no calibrated evidence that the common peer-context slope improves prediction in 2023.
 
 ## Main inference
 
