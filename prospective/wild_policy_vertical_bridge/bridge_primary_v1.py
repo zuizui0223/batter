@@ -10,8 +10,9 @@ from pathlib import Path
 import numpy as np
 
 ROOT=Path(__file__).resolve().parents[2]
-if str(ROOT) not in sys.path:
-    sys.path.insert(0,str(ROOT))
+for p in (ROOT, ROOT/"src"):
+    if str(p) not in sys.path:
+        sys.path.insert(0,str(p))
 import scripts.run_tag_altitude_bias_shape as shape
 
 HERE=ROOT/"prospective/wild_policy_vertical_bridge"
