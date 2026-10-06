@@ -113,25 +113,25 @@ d(theta_a, theta_b) = ordinary Euclidean distance in the fixed 2-D I/M plane.
 
 No Mahalanobis metric, learned metric or axis-specific weighting.
 
-## History centroid
+## P2 common-OPEN held-out identity
 
-Within an individual × family × frozen history window:
-- average I and M equally across admissible trials;
-- each trial receives equal weight;
-- no weighting by duration, number of tracking rows or apparent quality beyond the structural validity gate.
+P2 is measured entirely inside the frozen common-OPEN probe.
 
-## Target scoring
+For each individual × family:
+1. use the early half of the frozen probe to calculate an equal-trial I/M centroid;
+2. use early-probe centroids from all other eligible individuals in the same family as donors, regardless of acquisition treatment;
+3. score every late-probe target trial by Euclidean distance to own early centroid versus mean distance to donor early centroids;
+4. average target advantages equally within individual × family.
 
-Every admissible common-OPEN probe trial is scored against:
-- the focal individual's own frozen history centroid;
-- donor individual history centroids from the same family and hypothesized acquisition treatment.
+Call the resulting family-specific score A_i,f.
 
-Target advantage = mean donor distance - own-history distance.
+The randomized acquisition assignment is applied only after these family-specific scores are fixed:
 
-Aggregate:
-1. equal target trials within individual × family;
-2. equal biological individuals within acquisition treatment;
-3. Delta_A = A_OPEN - A_CONSTRAINED.
+Delta_A = mean_i [ A_i,OPEN-family - A_i,CONSTRAINED-family ].
+
+Thus P2 asks whether prior solution opportunity causes stronger reproducible I/M organization under equal current opportunity.
+
+Acquisition trajectories define scaling but are **not** the P2 prediction history.
 
 ## Leakage firewall
 
@@ -141,6 +141,6 @@ Nothing from common-OPEN probe, reopening or transformed-transfer outcomes may b
 - feature inclusion;
 - trajectory validity thresholds;
 - distance metric;
-- history-window length.
+- probe split.
 
 Any structural change before outcome opening requires a new version of this appendix and a documented reason.
