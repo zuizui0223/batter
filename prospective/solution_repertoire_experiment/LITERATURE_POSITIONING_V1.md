@@ -68,6 +68,44 @@ This is the conceptual bridge between individual-specialization ecology and moto
 
 The experiment is not intended to show merely that individuals differ. It asks whether opportunity itself causes additional stable among-individual organization.
 
+
+## Closest prior art — route individuality and multiple-solution tasks
+
+### Honeybee route-choice individuality
+
+Ong et al. (2017), *Obstacle traversal and route choice in flying honeybees: Evidence for individual handedness*, PLOS ONE, DOI 10.1371/journal.pone.0184343.
+
+When two apertures were equally wide, population-level choice was balanced, but a substantial fraction of individually marked bees showed repeatable left/right biases.
+
+This is important prior art because it already establishes:
+
+> equivalent current route opportunity can reveal stable individual route-choice bias.
+
+Therefore the present programme must **not** claim that individual route specialization under equal options is novel by itself.
+
+### Wild raccoon multi-solution problem solving
+
+A 2024 Proceedings B study, *Wild raccoons demonstrate flexibility and individuality in innovative problem-solving* (DOI 10.1098/rspb.2024.0911), used single-solution and four-solution puzzle-box paradigms and found substantial individuality in solution sequences.
+
+This is close prior art for:
+- multiple solution types;
+- repeated individual choice;
+- individual-specific problem-solving organization.
+
+The key boundary is that the current bat proposal is not simply another multi-solution assay.
+
+Its causal treatment is **solution opportunity during acquisition**, while the confirmatory outcome is measured later under the **same common multi-solution opportunity** in both matched histories.
+
+Thus the target contrast is:
+
+[
+	ext{different acquisition opportunity}
+ightarrow
+	ext{different later individual specialization}
+]
+
+with contemporaneous test opportunity held constant.
+
 ## Gap targeted here
 
 The literature used by the current programme separately supports:
@@ -76,9 +114,15 @@ The literature used by the current programme separately supports:
 - obstacle/clutter performance constraints;
 - idiosyncratic biomechanical compensation.
 
-The missing causal test is narrower:
+The remaining causal gap is narrower than "do animals become individual when several solutions exist?"
 
-> **Hold task success approximately constant, manipulate how many distinct feasible solutions are available, and ask whether personal history causes stable individual policies to emerge and reappear.**
+That phenomenon already has close precedents.
+
+The missing test for this programme is:
+
+> **Randomize whether an individual has access to multiple versus constrained solutions during acquisition, then hold current solution opportunity constant and ask whether the acquisition history itself caused stronger later individual specialization.**
+
+The suppression/reopening phase then asks whether that history-dependent organization persists when its ordinary expression is temporarily prevented.
 
 That is the role of DESIGNED_SOLUTION_REPERTOIRE_EXPERIMENT_V1.md.
 
