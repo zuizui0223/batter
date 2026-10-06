@@ -10,7 +10,7 @@
 - matched-family within-individual design defined;
 - direct ecological P1 fixed as route-choice specialization;
 - fixed-sequence P2 fixed as transparent I/M organization;
-- exact I/M feature formulas and acquisition-only scaling fixed;
+- exact I/M feature formulas and treatment-blind early-common-OPEN scaling fixed;
 - restricted four-animal block randomization fixed;
 - exact randomization assignment-space logic fixed;
 - interference/order guard fixed;
