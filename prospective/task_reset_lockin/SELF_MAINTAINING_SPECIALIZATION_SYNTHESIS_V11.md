@@ -20,17 +20,17 @@ The programme therefore separates:
 # 1. Four empirically separated stages
 
 [
-oxed{
-	ext{formation}
+\boxed{
+\text{formation}
 
-eq
-	ext{maintenance}
+\neq
+\text{maintenance}
 
-eq
-	ext{expression}
+\neq
+\text{expression}
 
-eq
-	ext{spatial consequence}
+\neq
+\text{spatial consequence}
 }
 ]
 
@@ -135,12 +135,12 @@ The current ecological data independently show that personal movement organizati
 The proposed bridge is:
 
 [
-oxed{
-	ext{multiple adequate solutions}
+\boxed{
+\text{multiple adequate solutions}
 +
-	ext{personal history}
-ightarrow
-	ext{personal policy}
+\text{personal history}
+\rightarrow
+\text{personal policy}
 }
 ]
 
@@ -159,7 +159,7 @@ Current context then determines how that bias is expressed.
 Use the symmetric reinforced-choice model:
 
 [
-P_i(k|n)=rac{a+N_{ik}(n)}{Ka+n},
+P_i(k|n)=\frac{a+N_{ik}(n)}{Ka+n},
 ]
 
 with K feasible solutions and identical initial state for all individuals.
@@ -167,16 +167,16 @@ with K feasible solutions and identical initial state for all individuals.
 Long-run personal solution weights:
 
 [
-	heta_isim Dirichlet(a,dots,a).
+\\theta_isim Dirichlet(a,dots,a).
 ]
 
 The exact same-individual matching advantage over different individuals is:
 
 [
-oxed{
-Delta(K,a)
+\boxed{
+\Delta(K,a)
 =
-rac{K-1}{K(Ka+1)}
+\frac{K-1}{K(Ka+1)}
 }
 ]
 
@@ -193,14 +193,14 @@ But the theory gives a stronger prediction.
 Under fixed **per-solution** baseline pseudo-count (a):
 
 [
-rac{partialDelta}{partial K}=0
+\frac{\partialDelta}{partial K}=0
 ]
 
 at:
 
 [
-oxed{
-K^*=1+sqrt{1+rac{1}{a}}
+\boxed{
+K^*=1+\sqrt{1+\frac{1}{a}}
 }
 ]
 
@@ -221,9 +221,9 @@ A=Ka
 is held fixed instead, then:
 
 [
-Delta(K,A)
+\Delta(K,A)
 =
-rac{K-1}{K(A+1)},
+\frac{K-1}{K(A+1)},
 ]
 
 which increases and saturates.
@@ -235,8 +235,8 @@ Therefore the general prediction is not:
 It is:
 
 [
-oxed{
-	ext{specialization depends on solution abundance relative to exploration budget}
+\boxed{
+\text{specialization depends on solution abundance relative to exploration budget}
 }
 ]
 
@@ -299,9 +299,9 @@ not as:
 A minimal dynamic representation is:
 
 [
-	heta_i(t)
+\\theta_i(t)
 =
-	heta_i^{intrinsic}
+\\theta_i^{intrinsic}
 +
 h_i(t),
 ]
@@ -313,7 +313,7 @@ where:
 Let:
 
 [
-mathcal S(E_t,M_i)
+\mathcal S(E_t,M_i)
 ]
 
 be the feasible movement-solution set under current environment and biomechanics.
@@ -321,11 +321,11 @@ be the feasible movement-solution set under current environment and biomechanics
 Then:
 
 [
-	heta_i(t+1)
+\\theta_i(t+1)
 =
 U(
-	heta_i(t),
-mathcal S(E_t,M_i),
+\\theta_i(t),
+\mathcal S(E_t,M_i),
 x_i(t),
 r_i(t)
 ),
@@ -339,8 +339,8 @@ x_i(t)
 G(
 E_t,
 M_i,
-alpha_{E_t}	heta_i(t),
-lambda_{i,k},
+\alpha_{E_t}\\theta_i(t),
+\lambda_{i,k},
 m_{i,E}
 )
 +
@@ -353,7 +353,7 @@ The current evidence constrains:
 - context-dependent expression;
 - spatial non-necessity.
 
-It does **not** identify U or directly measure (mathcal S).
+It does **not** identify U or directly measure (\mathcal S).
 
 ---
 
@@ -403,26 +403,26 @@ Those are established.
 The potential contribution is the empirical chain:
 
 [
-oxed{
-	ext{history-dependent formation}
-ightarrow
-	ext{portable control individuality}
-ightarrow
-	ext{context-gated expression}
-ightarrow
-	ext{optional spatial partition}
+\boxed{
+\text{history-dependent formation}
+\rightarrow
+\text{portable control individuality}
+\rightarrow
+\text{context-gated expression}
+\rightarrow
+\text{optional spatial partition}
 }
 ]
 
 combined with the mechanistic hypothesis:
 
 [
-oxed{
-	ext{solution abundance}
-	imes
-	ext{history}
-ightarrow
-	ext{ecological individuality}
+\boxed{
+\text{solution abundance}
+\times
+\text{history}
+\rightarrow
+\text{ecological individuality}
 }
 ]
 
