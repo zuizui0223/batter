@@ -1,0 +1,22 @@
+name: auditory-perturbation-frozen-primary-v1
+
+on:
+  workflow_dispatch:
+
+jobs:
+  compatibility-self-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install numerical readers
+        run: python -m pip install numpy scipy
+      - name: Verify compatibility statistic only
+        working-directory: prospective/auditory_perturbation_policy
+        run: python acoustic_policy_primary_self_test_v1.py
+
+# Historical compatibility workflow only.
+# The authoritative numerical primary is .github/workflows/acoustic-policy-primary-v1.yml
+# and run_acoustic_policy_primary_v1.py.

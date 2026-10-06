@@ -11,6 +11,42 @@ JAE v0.4.0 remains frozen.
 
 ---
 
+## New independent controlled perturbation — auditory midbrain silencing
+
+A second independent public perturbation programme is now complete.
+
+Source:
+Diebold, Lawlor et al. 2024, *Eptesicus fuscus*.
+
+Frozen four-feature vocal-policy identity:
+- 4 biological DREADDs bats;
+- K = **+1.004452**;
+- **4/4 positive**;
+- true same-bat Saline-to-Ligand mapping ranked **1st of 24**;
+- exact one-sided **p = 1/24 = 0.041667**.
+
+Interpretation:
+
+> **Reversible central auditory perturbation altered common vocal expression without erasing all individual-specific multivariate organization.**
+
+This is independent of:
+- the *Rhinolophus* geometry decomposition;
+- the *Pipistrellus kuhlii* masker movement endpoint;
+- the wild field H/V diagnostics.
+
+Evidence boundary:
+- n=4;
+- maximum available exact resolution;
+- no population-prevalence claim;
+- no claim that vocal and movement individuality are the same carrier.
+
+Decision:
+**SUPPORTED / SAME-SOURCE IDENTITY CEILING.**
+
+Do not open new feature axes, Baseline rescues, sham pooling, or 3-bat trajectory identity tests.
+
+---
+
 ## Current empirical object
 
 Strongly supported in the controlled / independent experimental programme:
@@ -27,6 +63,30 @@ Key evidence:
 - peer-day residual identity.
 
 These results do not constitute equally independent biological replications. In particular, the detailed *Rhinolophus* mechanism diagnostics repeatedly use the same five biological individuals and therefore localize structure within that experiment rather than increasing biological sample size.
+
+### Independent perturbation triangulation
+
+A separate controlled public-data result now establishes persistence at a different behavioral level.
+
+Diebold/Lawlor et al. 2024, *Eptesicus fuscus*:
+- reversible central auditory perturbation;
+- four DREADD behavioral bats;
+- frozen four-feature vocal organization;
+- K = **+1.004452**;
+- **4/4** individual advantages positive;
+- true same-bat Saline-to-Ligand mapping rank = **1/24**;
+- exact p = **0.0416667**.
+
+This is **not** a replication of the Rhino movement-policy coordinate.
+
+It supports the broader perturbational proposition:
+
+> **current sensory perturbation can alter expressed behavior without necessarily erasing individual-specific organization.**
+
+Together with the *Pipistrellus kuhlii* masker result, this proposition now has support in two independent bat systems with different perturbations and different behavioral endpoints.
+
+Boundary:
+the *Eptesicus* result has only four biological individuals; p=1/24 is the minimum attainable exact value. Treat it as extreme within its complete identity-permutation universe, not as high-powered population evidence.
 
 ### Field evidence boundary
 
@@ -517,3 +577,114 @@ Use this study as external biomechanical premise, not as a new confirmatory batt
 The next accepted mechanism result must alter a proposed causal carrier or independently specify the solution environment.
 
 Another same-archive demonstration of identity is no longer sufficient.
+
+
+
+---
+
+# Update after auditory-midbrain perturbation public primary
+
+Independent public source:
+Diebold/Lawlor et al. 2024, *Eptesicus fuscus*.
+
+## Frozen vocal-policy primary — SUPPORTED
+
+Four bats:
+- jane;
+- bea;
+- jason;
+- stella.
+
+After treatment × trialtype residualization without identity labels:
+
+- multivariate K = **+1.004452**;
+- **4/4** positive individual advantages;
+- observed identity mapping rank = **1/24**;
+- exact p = **0.0416667**.
+
+Descriptive component K:
+- duration +0.789331;
+- bandwidth +0.536278;
+- IPI +0.173420;
+- call rate +0.156400.
+
+No component-wise p-values are authorized.
+
+## Consequence
+
+The perturbation programme now has two independent positive systems:
+
+1. *Pipistrellus kuhlii* external sensory masker:
+   - movement bias retained across perturbation;
+
+2. *Eptesicus fuscus* reversible auditory-midbrain manipulation:
+   - multivariate vocal organization retained across perturbation.
+
+Therefore the strongest bounded cross-system principle is:
+
+[
+\boxed{
+\text{context/sensory perturbation}
+\not\Rightarrow
+\text{complete erasure of personal organization}
+}
+]
+
+The behavioural carrier need not be identical across systems.
+
+## What this changes
+
+The programme no longer needs another uncontrolled repeatability dataset to argue that personal information can survive altered current conditions.
+
+The remaining difficult question is **origin**, not persistence:
+
+> what creates the individual organization in the first place?
+
+Public-data routes can still triangulate this question, but the present archives do not directly randomize solution abundance.
+
+## Public-data priority
+
+### Priority P1 — Aharon et al. 2017 path-integration manipulation
+
+Proceed only if the public source can recover a fixed individual × condition × trial architecture without outcome-guided endpoint selection.
+
+Potential leverage:
+current navigation-cue structure is experimentally changed while individual identity is retained.
+
+This would test a navigation-control perturbation distinct from both masker and auditory-midbrain manipulation.
+
+### Priority P2 — Ma et al. 2025 noise/prey manipulation
+
+Lower priority:
+- four bats per task;
+- foraging and landing groups are different;
+- use only if a within-task individual × manipulation endpoint is structurally recoverable.
+
+## Remaining direct causal gap
+
+Directly unmeasured:
+
+[
+\text{number/structure of feasible movement solutions}
+\rightarrow
+\text{formation of individual specialization}.
+]
+
+The Teshima public archive cannot supply this because obstacle geometry is absent.
+
+A designed solution-repertoire experiment or author-provided independent geometry would be required to close that specific link.
+
+However, that missing link is now a **future formation experiment**, not a prerequisite for the current public-data mechanism synthesis.
+
+## Stop rule
+
+Do not reopen the *Eptesicus* source for:
+- feature subsets;
+- PCA;
+- n=3 trajectory identity;
+- sham pooling;
+- Baseline rescue;
+- bat deletion;
+- trial-level pseudoreplication.
+
+The frozen four-feature result is the programme record.
