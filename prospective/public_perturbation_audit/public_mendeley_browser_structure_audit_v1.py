@@ -55,14 +55,49 @@ def xlsx_structure(data,name):
         tf.write(data); tf.flush()
         wb=openpyxl.load_workbook(tf.name,read_only=True,data_only=False)
         for ws in wb.worksheets:
-            header=[]
-            try:
-                first=next(ws.iter_rows(min_row=1,max_row=1))
-                header=[None if c.value is None else str(c.value) for c in first]
-            except StopIteration:
-                pass
-            out["sheets"].append({"name":ws.title,"max_row":ws.max_row,"max_column":ws.max_column,"header":header})
+            # Structural audit only: never emit numeric/formula values.
+            string_cells=[]
+            for row in ws.iter_rows(min_row=1,max_row=min(ws.max_row or 1,5)):
+                for cell in row:
+                    if isinstance(cell.value,str) and cell.value.strip():
+                        string_cells.append({
+                            "row":cell.row,
+                            "column":cell.column,
+                            "value":cell.value[:200],
+                        })
+            out["sheets"].append({
+                "name":ws.title,
+                "max_row":ws.max_row,
+                "max_column":ws.max_column,
+                "string_cells_first5rows":string_cells[:100],
+            })
     return out
+
+
+def inspect_member_bytes(data,name,depth=0):
+    ext=pathlib.Path(name).suffix.lower()
+    rec={"name":name,"size":len(data)}
+    try:
+        if ext==".mat":
+            rec["structure"]=mat_structure(data,name)
+        elif ext==".m":
+            rec["structure"]=m_structure(data,name)
+        elif ext in {".xlsx",".xlsm"}:
+            rec["structure"]=xlsx_structure(data,name)
+        elif ext==".zip" and depth < 3:
+            rec["structure"]={"type":"nested_zip","members":[]}
+            with zipfile.ZipFile(io.BytesIO(data)) as nz:
+                for ni in nz.infolist():
+                    child={"name":ni.filename,"size":ni.file_size}
+                    child_ext=pathlib.Path(ni.filename).suffix.lower()
+                    if child_ext in {".mat",".m",".xlsx",".xlsm",".zip"} and ni.file_size <= 250_000_000:
+                        child_data=nz.read(ni)
+                        child=inspect_member_bytes(child_data,ni.filename,depth+1)
+                    rec["structure"]["members"].append(child)
+    except Exception as e:
+        rec["structure_error"]=repr(e)
+    return rec
+
 
 def inspect_archive(path):
     result={"archive_name":path.name,"members":[]}
@@ -71,17 +106,12 @@ def inspect_archive(path):
         return result
     with zipfile.ZipFile(path) as z:
         for info in z.infolist():
-            rec={"name":info.filename,"size":info.file_size}
             ext=pathlib.Path(info.filename).suffix.lower()
-            if ext in {".mat",".m",".xlsx",".xlsm"} and info.file_size <= 250_000_000:
+            if ext in {".mat",".m",".xlsx",".xlsm",".zip"} and info.file_size <= 250_000_000:
                 data=z.read(info)
-                try:
-                    if ext==".mat": rec["structure"]=mat_structure(data,info.filename)
-                    elif ext==".m": rec["structure"]=m_structure(data,info.filename)
-                    else: rec["structure"]=xlsx_structure(data,info.filename)
-                except Exception as e:
-                    rec["structure_error"]=repr(e)
-            result["members"].append(rec)
+                result["members"].append(inspect_member_bytes(data,info.filename,0))
+            else:
+                result["members"].append({"name":info.filename,"size":info.file_size})
     return result
 
 def accept_cookie(page):
@@ -140,21 +170,55 @@ def audit_source(browser,src,tmp):
 
 def derive(src):
     names=[]
+    def walk_member(m):
+        names.append(m.get("name",""))
+        st=m.get("structure") or {}
+        for v in st.get("variables",[]):
+            names.append(v.get("name",""))
+        names.extend(st.get("relevant_identifiers",[]))
+        names.extend(x.get("filename","") for x in st.get("data_file_references",[]))
+        for ch in st.get("members",[]):
+            walk_member(ch)
     if src.get("download") and src["download"].get("archive"):
         for m in src["download"]["archive"].get("members",[]):
-            names.append(m.get("name",""))
-            st=m.get("structure") or {}
-            for v in st.get("variables",[]): names.append(v.get("name",""))
-            names.extend(st.get("relevant_identifiers",[]))
-            names.extend(x.get("filename","") for x in st.get("data_file_references",[]))
+            walk_member(m)
     text=" ".join(names)
     nums=sorted(set(re.findall(r"(?<![A-Za-z])(?:bat[_-]?)?(\d{2,4})(?![A-Za-z])",text,re.I)))
     cond=sorted(set(x for x in names if re.search(r"(turn|slow|speed|wind|con|condition|noise|prey|land|flight)",x,re.I)))[:500]
     return {"numeric_bat_tokens":nums[:300],"condition_like_tokens":cond}
 
+
+def render_member(m,L,level=3):
+    prefix="#"*min(level,6)
+    L.append(f"{prefix} {m.get('name')}")
+    L.append(f"- bytes: {m.get('size')}")
+    st=m.get("structure") or {}
+    if st.get("type")=="mat":
+        L.append(f"- MAT variables: {len(st.get('variables') or [])}")
+        for v in (st.get("variables") or [])[:300]:
+            L.append(f"  - \`{v.get('name')}\` shape={v.get('shape')} class={v.get('class') or v.get('dtype')}")
+    elif st.get("type")=="matlab_script":
+        L.append("- relevant identifiers: "+", ".join(st.get("relevant_identifiers") or []))
+        for r in st.get("data_file_references") or []:
+            L.append(f"  - data reference: {r}")
+    elif st.get("type")=="xlsx":
+        for sh in st.get("sheets") or []:
+            L.append(
+                f"  - sheet \`{sh['name']}\`: rows={sh['max_row']} cols={sh['max_column']} "
+                f"string_cells_first5rows={sh['string_cells_first5rows']}"
+            )
+    elif st.get("type")=="nested_zip":
+        L.append(f"- nested members: {len(st.get('members') or [])}")
+        for child in st.get("members") or []:
+            render_member(child,L,level+1)
+    if m.get("structure_error"):
+        L.append(f"- structure error: {m['structure_error']}")
+    L.append("")
+
+
 def render(res):
     L=["# Public browser structural audit v1","","## Status","",
-       "**PUBLIC DOWNLOAD-ALL STRUCTURE ONLY; NO NUMERIC OUTCOMES REPORTED.**",""]
+       "**PUBLIC DOWNLOAD-ALL STRUCTURE ONLY; NO NUMERIC OUTCOMES REPORTED BY V2 AUDITOR.**",""]
     for s in res["sources"]:
         L += [f"## {s['key']}","",f"- page title: {s.get('title')}",f"- error: {s.get('error')}"]
         dl=s.get("download") or {}
@@ -164,23 +228,13 @@ def render(res):
         toks=s.get("tokens") or {}
         L += [f"- numeric bat-like tokens: {', '.join(toks.get('numeric_bat_tokens') or []) or 'none'}",
               f"- condition-like tokens: {len(toks.get('condition_like_tokens') or [])}",""]
-        for m in (ar.get("members") or [])[:300]:
-            L.append(f"### {m.get('name')}")
-            L.append(f"- bytes: {m.get('size')}")
-            st=m.get("structure") or {}
-            if st.get("type")=="mat":
-                L.append(f"- MAT variables: {len(st.get('variables') or [])}")
-                for v in (st.get("variables") or [])[:200]:
-                    L.append(f"  - \`{v.get('name')}\` shape={v.get('shape')} class={v.get('class') or v.get('dtype')}")
-            elif st.get("type")=="matlab_script":
-                L.append("- relevant identifiers: "+", ".join(st.get("relevant_identifiers") or []))
-                for r in st.get("data_file_references") or []: L.append(f"  - data reference: {r}")
-            elif st.get("type")=="xlsx":
-                for sh in st.get("sheets") or []:
-                    L.append(f"  - sheet \`{sh['name']}\`: rows={sh['max_row']} cols={sh['max_column']} header={sh['header']}")
-            L.append("")
-    L += ["## Boundary","","Downloaded research bytes were used only for structural metadata extraction and discarded in the CI runner.",""]
+        for m in (ar.get("members") or [])[:500]:
+            render_member(m,L,3)
+    L += ["## Boundary","",
+          "Research files were used only for structural metadata extraction and discarded in the CI runner.",
+          "For Ma 2025, the first V1 audit accidentally emitted numeric row-1 values from two amplitude spreadsheets; those endpoints are quarantined in STRUCTURAL_AUDIT_NUMERIC_OPENING_INCIDENT_V1.md.",""]
     return "\n".join(L)
+
 
 def main():
     out={"audit_version":1,"sources":[]}
