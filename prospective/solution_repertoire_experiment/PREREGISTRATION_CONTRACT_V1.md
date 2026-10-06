@@ -12,6 +12,7 @@ Parent:
 - DESIGNED_SOLUTION_REPERTOIRE_EXPERIMENT_V1.md
 - SAMPLE_SIZE_PLANNING_V1.md
 - RANDOMIZATION_AND_INTERFERENCE_GUARD_V1.md
+- PRIMARY_IM_ENDPOINT_APPENDIX_V1.md
 
 JAE v0.4.0 remains frozen.
 
@@ -141,7 +142,7 @@ Primary individual movement policy is fixed as theta = (I, M), with:
 - FlightIntensity I;
 - ManeuveringExtent M.
 
-The exact feature definitions and standardization rules must be copied verbatim into a frozen endpoint appendix before common-OPEN outcomes are opened.
+The exact feature definitions, acquisition-only family-wise standardization, fixed weights and Euclidean policy distance are frozen in PRIMARY_IM_ENDPOINT_APPENDIX_V1.md.
 
 No:
 - data-driven reweighting;
@@ -343,7 +344,7 @@ Must all be complete:
 - [ ] exact acquisition trial counts;
 - [ ] exact probe trial counts;
 - [ ] late-history window size;
-- [ ] exact I/M endpoint appendix;
+- [x] exact I/M endpoint appendix fixed as PRIMARY_IM_ENDPOINT_APPENDIX_V1.md;
 - [ ] randomization schedule generated and archived;
 - [ ] randomization seed archived;
 - [ ] missing-data rule fixed;
