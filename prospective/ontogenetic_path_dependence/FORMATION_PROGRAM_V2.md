@@ -35,9 +35,9 @@ The current evidence now discriminates these more sharply.
 Source A was designed to test:
 
 [
-	ext{maternal template}
-ightarrow
-	ext{personal independent history}.
+\text{maternal template}
+\rightarrow
+\text{personal independent history}.
 ]
 
 The outcome-blind structural gate failed:
@@ -154,19 +154,19 @@ The gain depends on the true juvenile-to-own-history linkage.
 The evidence now favors:
 
 [
-oxed{
-	ext{initial movement state}
-ightarrow
-	ext{individual-specific history updating}
-ightarrow
-	ext{strong personal movement bias}
+\boxed{
+\text{initial movement state}
+\rightarrow
+\text{individual-specific history updating}
+\rightarrow
+\text{strong personal movement bias}
 }
 ]
 
 rather than:
 
 [
-	ext{fixed adult-like bias from the first independent movements}.
+\text{fixed adult-like bias from the first independent movements}.
 ]
 
 But development is heterogeneous.
@@ -190,12 +190,12 @@ The current Source B result shows that later recent personal history becomes muc
 Together these are compatible with:
 
 [
-oxed{
-	ext{socially supplied early information}
-ightarrow
-	ext{personal independent refinement}
-ightarrow
-	ext{persistent individual organization}
+\boxed{
+\text{socially supplied early information}
+\rightarrow
+\text{personal independent refinement}
+\rightarrow
+\text{persistent individual organization}
 }
 ]
 
@@ -207,28 +207,28 @@ Do not claim that this exact maternal-to-self crossover has been estimated direc
 
 ## 10. Implication for the adult portable-policy result
 
-The adult mechanism programme identifies a portable low-dimensional policy bias (	heta_i).
+The adult mechanism programme identifies a portable low-dimensional policy bias (\\theta_i).
 
-The ontogenetic result changes how (	heta_i) should be interpreted.
+The ontogenetic result changes how (\\theta_i) should be interpreted.
 
 Do not assume:
 
 [
-	heta_i = 	ext{immutable innate constant}.
+\\theta_i = \text{immutable innate constant}.
 ]
 
 A more plausible developmental representation is:
 
 [
-	heta_i(t)
+\\theta_i(t)
 =
-	heta_i^{intrinsic}
+\\theta_i^{intrinsic}
 +
 h_i(t),
 ]
 
 where:
-- (	heta_i^{intrinsic}) includes stable biomechanics/physiology/developmental predisposition;
+- (\\theta_i^{intrinsic}) includes stable biomechanics/physiology/developmental predisposition;
 - (h_i(t)) is accumulated personal movement history / learned sensorimotor organization.
 
 The present data show that the predictive personal component changes materially with history.
