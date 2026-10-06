@@ -33,10 +33,13 @@ jobs:
           print("content-opening guard PASS")
           PY
       - name: Inventory Figshare metadata only
+        shell: bash
         run: |
+          set -euo pipefail
           python prospective/task_reset_lockin/figshare_metadata_inventory_v1.py | tee prospective/task_reset_lockin/METADATA_RESULT_V1.json
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: task-reset-lockin-metadata-v1
           path: prospective/task_reset_lockin/METADATA_RESULT_V1.json
-          if-no-files-found: error
+          if-no-files-found: warn
