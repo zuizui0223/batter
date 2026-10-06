@@ -231,6 +231,44 @@ and especially the empirical separation of the four levels:
 
 ---
 
+## 3d. 2026 individualised-niche boundary
+
+The 2026 *Biological Reviews* synthesis of individualised niches already provides a broad dynamic framework in which:
+- genotype;
+- environment;
+- life-history stage;
+- phenotypic plasticity;
+- niche choice;
+- niche conformance;
+- niche construction
+
+jointly alter individual phenotype and realized individualized niche across the lifetime.
+
+Therefore do **not** claim as new:
+
+> a stable individual trait can be expressed differently in different environments.
+
+Do **not** claim as new:
+
+> realized individualized niches are dynamic.
+
+Both are already explicit in current individualized-niche theory.
+
+The batter contribution must be empirical and mechanistically narrower:
+
+1. recover a low-dimensional individual movement state from repeated trajectories;
+2. show that its relative coordinates predict behavior in unseen tasks;
+3. show developmental personal-history refinement of individual organization;
+4. show retention through a controlled sensory perturbation;
+5. show that detailed geometry is more context dependent than coarse policy;
+6. show that policy differentiation does not require increased 3-D spatial separation.
+
+Thus the target contribution is not a replacement niche concept.
+
+It is an empirical mechanism for how a persistent individualized movement state is **formed, carried, expressed and spatially projected**.
+
+---
+
 # 4. The likely new bridge
 
 The current bat programme links four levels that are usually studied separately:
