@@ -1,0 +1,38 @@
+name: aharon-primary-structural-selection-v1
+
+on:
+  push:
+    paths:
+      - "prospective/public_perturbation_audit/PUBLIC_BROWSER_STRUCTURE_AUDIT_V1.json"
+      - "prospective/public_perturbation_audit/AHARON_CROSS_CONDITION_IDENTITY_CONTRACT_V1.md"
+      - "prospective/public_perturbation_audit/select_aharon_primary_structure_v1.py"
+      - ".github/workflows/aharon-primary-structural-selection-v1.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  select:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: prospective/public-perturbation-audit-v1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Select primary figure from structure only
+        run: python prospective/public_perturbation_audit/select_aharon_primary_structure_v1.py
+      - name: Commit structural selection receipt
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add prospective/public_perturbation_audit/AHARON_PRIMARY_STRUCTURAL_SELECTION_V1.json
+          git add prospective/public_perturbation_audit/AHARON_PRIMARY_STRUCTURAL_SELECTION_V1.md
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Select Aharon primary from structural support"
+            git push
+          fi
