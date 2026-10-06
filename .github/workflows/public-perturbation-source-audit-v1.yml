@@ -3,7 +3,9 @@ name: public-perturbation-source-audit-v1
 on:
   push:
     paths:
-      - "prospective/public_perturbation_audit/**"
+      - "prospective/public_perturbation_audit/AHARON_2017_STRUCTURE_AUDIT_CONTRACT_V1.md"
+      - "prospective/public_perturbation_audit/MA_2025_STRUCTURE_AUDIT_CONTRACT_V1.md"
+      - "prospective/public_perturbation_audit/public_perturbation_source_audit_v1.py"
       - ".github/workflows/public-perturbation-source-audit-v1.yml"
   workflow_dispatch:
 
