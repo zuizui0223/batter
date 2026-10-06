@@ -125,13 +125,13 @@ Measure:
 Without changing goal/reward, block alternatives so that:
 
 [
-K=4ightarrow K=1
+K=4\rightarrow K=1
 ]
 
 or
 
 [
-K=4ightarrow K=2.
+K=4\rightarrow K=2.
 ]
 
 Question:
@@ -195,9 +195,9 @@ For every arena and training stage compute between-individual policy divergence.
 Primary causal contrast:
 
 [
-D_{mathrm{individual}}(K=4)
+D_{\mathrm{individual}}(K=4)
 -
-D_{mathrm{individual}}(K=1).
+D_{\mathrm{individual}}(K=1).
 ]
 
 The functional-abundance model predicts:
@@ -225,7 +225,7 @@ Compare:
 Prediction:
 
 [
-K_{mathrm{self-history}}>0.
+K_{\mathrm{self-history}}>0.
 ]
 
 More strongly:
@@ -255,13 +255,13 @@ If a policy feature is still measurable under K1, same-individual prediction can
 This directly separates:
 
 [
-	ext{storage}
+\text{storage}
 ]
 
 from:
 
 [
-	ext{expression}.
+\text{expression}.
 ]
 
 ---
@@ -349,21 +349,21 @@ A learned representation may be secondary only with strict cross-validation.
 The v2 abundance model predicts:
 
 [
-Delta_K
+\Delta_K
 =
-rac{K-1}{K(A+1)}.
+\frac{K-1}{K(A+1)}.
 ]
 
 Thus:
 
 [
-Delta_1=0,
+\Delta_1=0,
 ]
 
 and:
 
 [
-Delta_2<Delta_4.
+\Delta_2<\Delta_4.
 ]
 
 Do not attempt to estimate A unless the model is predeclared as a generative fit.
@@ -398,8 +398,8 @@ Cross:
 
 [
 K
-	imes
-	ext{reversible load}.
+\times
+\text{reversible load}.
 ]
 
 For the same individuals:
@@ -452,21 +452,21 @@ If yes, it establishes a route to individual ecological specialization that does
 The causal chain becomes:
 
 [
-oxed{
-	ext{ecological opportunity in solution space}
-ightarrow
-	ext{history-dependent symmetry breaking}
-ightarrow
-	ext{persistent personal policy}
+\boxed{
+\text{ecological opportunity in solution space}
+\rightarrow
+\text{history-dependent symmetry breaking}
+\rightarrow
+\text{persistent personal policy}
 }
 ]
 
 rather than:
 
 [
-	ext{competition}
-ightarrow
-	ext{exclusive niche}.
+\text{competition}
+\rightarrow
+\text{exclusive niche}.
 ]
 
 ---
