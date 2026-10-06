@@ -11,6 +11,42 @@ JAE v0.4.0 remains frozen.
 
 ---
 
+## New independent controlled perturbation — auditory midbrain silencing
+
+A second independent public perturbation programme is now complete.
+
+Source:
+Diebold, Lawlor et al. 2024, *Eptesicus fuscus*.
+
+Frozen four-feature vocal-policy identity:
+- 4 biological DREADDs bats;
+- K = **+1.004452**;
+- **4/4 positive**;
+- true same-bat Saline-to-Ligand mapping ranked **1st of 24**;
+- exact one-sided **p = 1/24 = 0.041667**.
+
+Interpretation:
+
+> **Reversible central auditory perturbation altered common vocal expression without erasing all individual-specific multivariate organization.**
+
+This is independent of:
+- the *Rhinolophus* geometry decomposition;
+- the *Pipistrellus kuhlii* masker movement endpoint;
+- the wild field H/V diagnostics.
+
+Evidence boundary:
+- n=4;
+- maximum available exact resolution;
+- no population-prevalence claim;
+- no claim that vocal and movement individuality are the same carrier.
+
+Decision:
+**SUPPORTED / SAME-SOURCE IDENTITY CEILING.**
+
+Do not open new feature axes, Baseline rescues, sham pooling, or 3-bat trajectory identity tests.
+
+---
+
 ## Current empirical object
 
 Strongly supported in the controlled / independent experimental programme:
