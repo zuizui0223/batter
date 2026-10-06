@@ -395,3 +395,95 @@ Do not use the next analysis cycle for:
 - another uncontrolled species comparison.
 
 The next causal advance should alter a proposed carrier of the personal policy coordinate.
+
+
+---
+
+# Update after Rhino geometry ceiling
+
+The Teshima *Rhinolophus* geometry programme has reached a formal same-data mechanistic ceiling.
+
+## Final localization
+
+Supported:
+- portable I/M policy;
+- scale-free geometry identity;
+- partial held-out geometry pair-vector correspondence;
+- cross-fitted geometry identity beyond one universal I/M decoder.
+
+Not supported / not identified:
+- one universal I/M -> geometry decoder;
+- a predictively adequate peer-defined environment-specific linear decoder;
+- a third dominant residual policy axis;
+- stable geometry-distance metric across environments;
+- direct environmental solution abundance.
+
+Residual identity beyond cross-fitted I/M:
+- leading PC1 unsupported;
+- leading PC1+2 unsupported;
+- identity remains after PC1+2 removal;
+- residual family localization:
+  - global route organization unsupported;
+  - horizontal maneuver supported;
+  - vertical maneuver supported.
+
+Therefore the remaining identity is best described as:
+
+> **distributed, low-variance, fine-maneuver realization rather than one additional portable policy coordinate.**
+
+## Decision
+
+**STOP_SAME_DATA_RHINO_GEOMETRY_MECHANISM_SEARCH**
+
+Do not:
+- rotate residual features again;
+- test more PCA dimensions;
+- fit nonlinear decoders post hoc;
+- select obstacle environments;
+- define solution abundance from realized route dispersion.
+
+## New priority 1 — designed solution-repertoire manipulation
+
+The strongest missing causal test is a within-individual experiment where obstacle/affordance geometry is known and the number/structure of feasible movement solutions is experimentally controlled.
+
+Required:
+- same biological individuals;
+- repeated trials;
+- explicit environment geometry;
+- narrow / moderate / broad feasible-solution conditions;
+- reopening of a prior solution repertoire;
+- portable-policy and realized-geometry measurement.
+
+Primary causal question:
+
+> does changing the feasible solution repertoire alter formation/expression of individual policy while preserving or resetting previously learned personal organization?
+
+## New priority 2 — reversible biomechanics × policy
+
+A second decisive route is an intervention that changes physical performance constraints within identified individuals and is subsequently removed.
+
+Needed:
+- baseline;
+- reversible load / wing-performance perturbation;
+- recovery;
+- repeated movement-policy estimates;
+- preferably crossed with task learning.
+
+This can estimate how much of the persistent policy is:
+- mechanically constrained;
+- history-refined;
+- retained after constraints are restored.
+
+## Evidence boundary on existing loading literature
+
+The classic *Cynopterus brachyotis* 20% loading experiment establishes that the same physical challenge can elicit different kinematic combinations among individuals.
+
+However, accessible public supplements appear to contain summary tables rather than the raw repeated trial-level 3-D kinematic archive needed for a new individual-policy reanalysis.
+
+Use this study as external biomechanical premise, not as a new confirmatory batter endpoint.
+
+## Programme principle
+
+The next accepted mechanism result must alter a proposed causal carrier or independently specify the solution environment.
+
+Another same-archive demonstration of identity is no longer sufficient.
