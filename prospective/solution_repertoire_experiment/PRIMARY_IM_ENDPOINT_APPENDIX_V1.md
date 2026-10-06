@@ -1,4 +1,4 @@
-# Primary I/M endpoint appendix v1
+# P2 transparent I/M endpoint appendix v1
 
 ## Status
 
