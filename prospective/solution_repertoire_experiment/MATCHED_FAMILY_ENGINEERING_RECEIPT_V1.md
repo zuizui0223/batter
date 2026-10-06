@@ -2,40 +2,64 @@
 
 ## Status
 
-**TEMPLATE — MUST BE COMPLETED BEFORE CONFIRMATORY RANDOMIZATION.**
+**NORMALIZED TOPOLOGY FROZEN; PHYSICAL SCALE / TOLERANCES / PILOT CLOSEOUT REMAIN OPEN.**
+
+Authoritative normalized template:
+- `PARAMETRIC_MATCHED_FAMILY_GEOMETRY_V1.md`
+- `matched_family_geometry_v1.json`
+- `matched_family_geometry_audit_v1.py`
+
+Verified normalized geometry:
+- route classes: R1-R4 = {L/R} × {Low/High};
+- A = horizontal then vertical;
+- B = vertical then horizontal;
+- L = 1;
+- x1 = 1/3;
+- x2 = 2/3;
+- d = 0.20;
+- normalized path length for every A/B route = **1.214622820933**;
+- total absolute horizontal demand = **0.4**;
+- total absolute vertical demand = **0.4**;
+- geometric turn-angle multiset identical across all routes/families.
+
+Physical scale factor s and safe center height z0 remain to be frozen by engineering pilot.
 
 ## Family geometry
 
 ### Family A
-- room / arena dimensions:
-- start coordinate:
-- goal coordinate:
-- obstacle material:
-- route graph:
+- normalized topology: **horizontal decision -> vertical decision**
+- normalized start: **(0,0,0)**
+- normalized goal: **(1,0,0)**
+- normalized decision planes: **x=1/3, 2/3**
+- normalized decision offset: **d=0.20**
+- room / arena physical dimensions: TBD
+- obstacle material: TBD
 
 ### Family B
-- room / arena dimensions:
-- start coordinate:
-- goal coordinate:
-- obstacle material:
-- route graph:
+- normalized topology: **vertical decision -> horizontal decision**
+- normalized start: **(0,0,0)**
+- normalized goal: **(1,0,0)**
+- normalized decision planes: **x=1/3, 2/3**
+- normalized decision offset: **d=0.20**
+- room / arena physical dimensions: TBD
+- obstacle material: TBD
 
 ## Corresponding route table
 
 | route class | A shortest path | B shortest path | A min aperture | B min aperture | A vertical demand | B vertical demand | A horizontal demand | B horizontal demand |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| R1 | TBD | TBD | TBD | TBD | TBD | TBD | TBD | TBD |
-| R2 | TBD | TBD | TBD | TBD | TBD | TBD | TBD | TBD |
-| R3 | TBD | TBD | TBD | TBD | TBD | TBD | TBD | TBD |
-| R4 | TBD | TBD | TBD | TBD | TBD | TBD | TBD | TBD |
+| R1 | 1.214622821 s | 1.214622821 s | TBD | TBD | 0.4 s | 0.4 s | 0.4 s | 0.4 s |
+| R2 | 1.214622821 s | 1.214622821 s | TBD | TBD | 0.4 s | 0.4 s | 0.4 s | 0.4 s |
+| R3 | 1.214622821 s | 1.214622821 s | TBD | TBD | 0.4 s | 0.4 s | 0.4 s | 0.4 s |
+| R4 | 1.214622821 s | 1.214622821 s | TBD | TBD | 0.4 s | 0.4 s | 0.4 s | 0.4 s |
 
 ## Canonical constrained route
 
 Frozen route class:
-**TBD**
+**R1 = L × Low**
 
 Rationale:
-**TBD BEFORE RANDOMIZATION**
+fixed prospectively from the topology before individual preference outcomes. The same topological route is used in A and B.
 
 The canonical route must not be chosen using individual-preference outcomes.
 
