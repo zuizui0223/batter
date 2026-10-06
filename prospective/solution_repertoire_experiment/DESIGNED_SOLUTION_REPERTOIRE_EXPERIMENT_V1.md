@@ -5,9 +5,9 @@
 **PROSPECTIVE STRUCTURAL EXPERIMENT DESIGN. NO NEW OUTCOME DATA OPENED.**
 
 Purpose:
-test the causal formation hypothesis that multiple feasible movement solutions, combined with personal history, can generate and preserve individual-specific movement policy.
+test whether access to multiple feasible movement solutions causally promotes the formation of individual-specific movement policy, and whether the resulting personal organization persists when expression is temporarily constrained.
 
-This is the first authorized mechanism route after the same-data Rhinolophus geometry ceiling.
+This is the first authorized mechanism route after the same-data *Rhinolophus* geometry ceiling.
 
 It does not modify JAE v0.4.0 and does not reopen the failed wild field bridge.
 
@@ -15,13 +15,13 @@ It does not modify JAE v0.4.0 and does not reopen the failed wild field bridge.
 
 # 1. Biological hypothesis
 
-The mechanism programme currently supports:
+The current programme supports:
 - personal-history refinement;
 - portable individual movement information;
 - context-dependent fine-maneuver realization;
-- persistence of individual bias across a reversible sensory perturbation.
+- persistence of individual bias across reversible sensory perturbation.
 
-What remains untested is:
+What remains untested is the proposed formation mechanism:
 
 \[
 \text{multiple feasible solutions}
@@ -33,161 +33,157 @@ What remains untested is:
 
 Primary biological hypothesis:
 
-> **When several approximately equivalent flight solutions are simultaneously feasible, repeated experience will cause individuals to settle into reproducible personal policies; when the solution set is collapsed, expression will converge, and when the previous repertoire is restored, prior individual organization will reappear.**
+> **Ecological opportunity at the level of movement solutions allows personal history to crystallize into stable individual policy.**
 
-This separates:
-- existence of multiple solutions;
-- formation of individual preference/history;
-- temporary suppression of expression;
-- persistence/re-expression of the underlying personal organization.
-
----
-
-# 2. Core design
-
-Use the same identified bats across modular obstacle environments in which the number and structure of feasible routes are experimentally known.
-
-Required causal sequence:
-
-1. constrained baseline;
-2. open multi-solution acquisition;
-3. constrained suppression;
-4. exact multi-solution reopening;
-5. geometry-transformed transfer.
-
-No post-hoc choice of obstacle layouts based on observed individuality.
+The decisive experiment must distinguish this from:
+- fixed intrinsic differences that would appear regardless of opportunity;
+- trivial population-level adaptation;
+- route infeasibility;
+- simple room-side preference;
+- exact-path memory with no portable personal organization.
 
 ---
 
-# 3. Environment architecture
+# 2. Key causal improvement — matched environment families
 
-## C1 — constrained
+Use two obstacle families, **A** and **B**.
 
-One broad feasible corridor.
+Each family must be engineered to contain the same four predefined feasible route classes when fully open.
 
-Purpose:
-- shared-solution control;
-- estimate condition-level movement shift;
-- verify flight competence;
-- create a state in which route-choice individuality is structurally suppressed.
-
-## C2 — two-solution
-
-Two approximately equivalent corridors.
-
-Match before animal outcomes are opened:
-- minimum gap width;
+The two families should be matched as closely as possible in:
 - shortest-path length;
-- total turning demand;
+- gap width;
+- total obstacle density;
+- approximate turning demand;
 - vertical displacement demand;
 - obstacle material;
-- reward.
+- reward;
+- illumination/acoustic recording architecture.
 
-## C4 — four-solution
+They should differ enough in exact spatial layout that memorizing coordinates in A does not directly solve B.
 
-Four approximately equivalent corridors.
+For every biological individual, randomly assign:
 
-The additional solutions must be true route alternatives, not small perturbations of one opening.
+- one family to **OPEN acquisition**: all four feasible routes available;
+- the other family to **CONSTRAINED acquisition**: only one canonical route available.
 
-At least two dimensions of route structure should vary so the four alternatives do not reduce to one left-right choice.
+Counterbalance A/B assignment across animals.
 
-## Reopened C4
+Thus each individual serves as its own control for solution opportunity.
 
-Restore the exact physical C4 layout after a constrained block.
+The critical treatment is not "easy versus hard".
 
-Purpose:
-test whether prior personal organization reappears after its expression was temporarily restricted.
+It is:
 
-## Transformed C4
+\[
+\boxed{
+\text{multiple feasible solutions during acquisition}
+\quad \text{versus} \quad
+\text{one feasible solution during acquisition}
+}
+\]
 
-Mirror, rotate, or otherwise relabel the physical positions of the same route classes while preserving difficulty as closely as possible.
-
-Purpose:
-distinguish:
-- absolute room-location memory;
-- exact-path memory;
-- more abstract movement-policy portability.
-
-The transformation must be fixed before the first animal enters the study.
+with the same animal and matched task families.
 
 ---
 
-# 4. Required phase sequence
+# 3. Capability audit before free-choice inference
 
-## Phase A — constrained baseline
+A major confound is that an animal may avoid a route because it cannot physically negotiate it.
 
-C1.
+Before acquisition outcomes are opened:
 
-Goal:
-establish shared competence and baseline movement coordinates.
+1. isolate each of the four route classes in both families;
+2. verify that every candidate animal can traverse each route under standardized presentation;
+3. record success/failure and basic flight performance;
+4. apply a predeclared structural feasibility criterion.
 
-## Phase B — multi-solution acquisition
+No free-choice preference data are used to define feasibility.
 
-C4.
+If an animal cannot meet the route-capability rule, it is not eligible for the confirmatory solution-opportunity analysis.
 
-Goal:
-observe whether individual route/policy organization emerges with repeated experience.
+If many animals fail the same route, the obstacle family fails structurally and must be redesigned before confirmatory collection.
 
-The formation comparison is early versus late Phase B.
+This separates **can use** from **chooses to use**.
 
-## Phase C — constrained suppression
+---
 
-Return to C1.
+# 4. Experimental sequence
 
-Goal:
-remove the opportunity to express multi-route choice while retaining biological identity.
+## Phase 0 — capability audit
+
+All route classes isolated individually.
+
+No free-choice inference.
+
+## Phase 1 — randomized acquisition treatment
+
+Each animal trains in both matched families.
+
+### OPEN family
+
+All four routes simultaneously available.
+
+### CONSTRAINED family
+
+Only the canonical route available.
+
+Requirements:
+- equal planned number of trials;
+- equal reward schedule;
+- matched inter-trial rest;
+- A/B treatment assignment randomized and counterbalanced;
+- order of OPEN and CONSTRAINED training blocks randomized where carryover permits.
+
+No animal is stopped early because a preference appears stable.
+
+## Phase 2 — common OPEN probe
+
+Now open all four routes in **both** families.
+
+This is the primary causal test.
+
+Both outcomes are measured under the same four-route opportunity.
+
+The only intended difference is acquisition history:
+- one family had multi-solution experience;
+- one family had constrained experience.
+
+## Phase 3 — suppression
+
+For the formerly OPEN-trained family, collapse expression to the canonical single route for a predeclared block.
+
+Purpose:
+temporarily remove the opportunity to express the personal multi-solution policy.
 
 This phase is not assumed to erase memory.
 
-## Phase D — exact reopening
+## Phase 4 — exact reopening
 
-Restore the exact Phase-B C4 geometry.
+Restore the exact four-route OPEN geometry in that same family.
 
-Primary storage/re-expression test:
-does late Phase-B individual organization predict the earliest admissible Phase-D behavior?
+Purpose:
+test whether the previously acquired personal organization reappears.
 
-## Phase E — transformed transfer
+## Phase 5 — transformed transfer
 
-Use transformed C4.
+Mirror/rotate/relabel the OPEN geometry using a transformation fixed before the first animal enters the experiment.
 
-Goal:
-test which part of personal organization transfers when exact route coordinates change.
-
----
-
-# 5. Capability control
-
-A major confound is that an individual may avoid one route because it cannot physically negotiate it.
-
-Before free-choice inference is opened:
-- each route class must be demonstrated to be physically traversable by each individual under a standardized route-isolation or equivalent guided block;
-- route-specific collision/failure rates must be recorded;
-- an individual is not eligible for free-choice inference if structural inability makes one or more nominal alternatives infeasible.
-
-Do not redefine the solution repertoire using free-choice outcomes.
-
-If many bats cannot traverse all nominal routes, the environment fails structurally and must be redesigned before confirmatory data collection.
+Purpose:
+distinguish:
+- exact spatial memory;
+- route-class memory;
+- more abstract movement-policy portability.
 
 ---
 
-# 6. Data representation
+# 5. Primary representation
 
-Keep route identity and movement policy separate.
+Keep route choice and movement policy separate.
 
-## 6.1 Route-choice state
+## 5.1 Coarse personal movement policy — primary
 
-For every free-choice flight record:
-- route class;
-- success/failure;
-- trial index;
-- phase;
-- obstacle configuration.
-
-Route classes are defined from obstacle topology before trajectory outcomes are opened.
-
-## 6.2 Coarse portable policy
-
-Retain the interpretable movement summary:
+Retain the existing interpretable coordinate:
 
 \[
 \theta_{i,t}=(I_{i,t},M_{i,t}),
@@ -197,76 +193,110 @@ where:
 - I = FlightIntensity;
 - M = ManeuveringExtent.
 
-Feature definitions must be frozen from the existing programme or independently fixed before new data are scored.
+Feature definitions must be frozen before new outcomes are scored.
 
-Do not refit weights to maximize identity in the new experiment.
+No weights may be learned from the new identity outcome.
 
-## 6.3 Fine realized geometry
+This avoids making the primary result a trivial consequence of four route labels being available in one condition.
 
-Use a predeclared scale-free trajectory representation.
+## 5.2 Route choice — secondary
 
-This remains an expression layer, not the primary causal carrier.
+For every common-OPEN trial record:
+- selected route class;
+- success/failure;
+- family;
+- phase;
+- trial number.
+
+Route classes are defined from obstacle topology before trajectory outcomes are opened.
+
+## 5.3 Fine trajectory geometry — downstream expression
+
+Use one predeclared scale-free trajectory representation.
+
+It is a secondary realization layer, not the primary causal carrier.
 
 ---
 
-# 7. Primary confirmatory endpoint — re-expression after reopening
+# 6. Primary causal endpoint — opportunity during acquisition
 
-The primary outcome is not simply whether bats differ in C4.
+For each individual and environment family:
 
-For each individual:
-- estimate late-acquisition personal state from only late Phase-B trials;
-- predict the earliest admissible Phase-D reopening trials;
-- compare the individual's own Phase-B history against histories from other individuals.
+1. estimate its late-acquisition personal policy from a fixed late training window;
+2. score the earliest admissible trials in the common OPEN probe;
+3. compare prediction from its own acquisition history against histories from other individuals who had the same acquisition treatment.
 
-For policy vector theta:
+Define a held-out self-history advantage:
 
 \[
-A_i
+A_{i,c}
 =
 \operatorname{mean}_{j\neq i}
-d(\theta_{i,D},\theta_{j,B})
+d(\theta_{i,probe,c},\theta_{j,train,c})
 -
-d(\theta_{i,D},\theta_{i,B}).
+d(\theta_{i,probe,c},\theta_{i,train,c}),
 \]
 
-The distance metric is frozen before outcome opening.
+where c is OPEN-acquired or CONSTRAINED-acquired.
 
 Aggregate:
-- equal trials within individual;
-- equal individuals overall.
+- equal probe trials within individual;
+- equal individuals.
 
-Positive means reopening behavior is closer to that individual's prior multi-solution policy than to other bats' prior policies.
+Primary treatment contrast:
 
-### Null
+\[
+\Delta_A
+=
+A_{OPEN-acquired}
+-
+A_{CONSTRAINED-acquired}.
+\]
 
-Permute complete biological identities attached to Phase-B personal histories while preserving:
-- Phase-D outcomes;
-- condition;
-- trial counts;
-- cohort/batch;
-- route availability.
+Interpretation:
 
-The exact permutation architecture must be frozen before the outcome is opened.
+### Delta_A > 0
+
+Exposure to multiple feasible solutions during acquisition creates stronger individual-specific predictive organization when both environments are later tested under the same OPEN opportunity.
+
+### Delta_A unsupported
+
+Multiple-solution opportunity is not shown to increase personal-policy formation under this design.
+
+---
+
+# 7. Primary randomization null
+
+The cleanest null follows the randomized within-individual assignment.
+
+Within each animal:
+- preserve all trajectories and outcomes;
+- swap which matched family is labelled OPEN-acquired versus CONSTRAINED-acquired according to the original randomization scheme.
+
+Use the exact paired randomization/permutation distribution permitted by the final design.
+
+This tests the acquisition-opportunity treatment directly.
+
+It does not permute individual identities for the primary treatment effect.
 
 ### Primary support rule
 
-Support requires all of:
-1. programme-level self-history advantage > 0;
-2. permutation p <= 0.05;
-3. >=70% of eligible individuals have positive individual mean advantage.
+Support requires:
+1. observed Delta_A > 0;
+2. randomization p <= 0.05;
+3. >=70% of evaluable individuals show a positive within-individual treatment contrast.
 
 No threshold relaxation.
 
 ---
 
-# 8. Formation endpoint — history-specific refinement
+# 8. Formation endpoint — early versus late OPEN history
 
-Ask whether late multi-solution history predicts reopening better than an equally sized early history.
+Within the OPEN-acquired family only:
 
-For each individual:
-- early history = fixed first m admissible C4 trials;
-- late history = fixed last m admissible C4 acquisition trials;
-- target = early Phase-D reopening behavior.
+- early history = fixed first m admissible OPEN acquisition trials;
+- late history = fixed last m admissible OPEN acquisition trials;
+- target = common OPEN probe.
 
 Define:
 
@@ -274,209 +304,227 @@ Define:
 Q=A_{late}-A_{early}.
 \]
 
-The null must preserve general trial-order learning while breaking the true individual-history link.
+The null must preserve population-level learning/order while breaking the true individual-history link.
 
 ### Q supported
 
-Personal organization becomes more identity-informative through experience in a multi-solution environment.
+Personal organization becomes more identity-informative through experience with multiple feasible solutions.
 
 ### Q unsupported
 
-Stable individuality may predate experimental history, or acquisition may be too short.
+The individual policy may predate acquisition or may form too quickly for this design to resolve.
 
-Do not redefine early/late windows after inspection.
-
----
-
-# 9. Direct solution-repertoire effect
-
-Compare identity information across C1, C2 and C4 using a representation whose null is recalibrated separately within condition.
-
-Directional prediction:
-
-\[
-A_{C4}>A_{C2}>A_{C1}.
-\]
-
-Do not compare raw p-values across conditions.
-
-Freeze one synchronized condition-comparison statistic before data opening.
-
-For example:
-
-\[
-D=
-(A_{C4}-E_0[A_{C4}])
--
-(A_{C2}-E_0[A_{C2}]).
-\]
-
-C1 is primarily a suppression/control state. A trivial route-choice contrast against C1 must not be presented as the main evidence for solution-abundance-driven specialization.
+Do not redefine m after inspection.
 
 ---
 
-# 10. Route-choice individuality — secondary
+# 9. Storage/re-expression endpoint
 
-For C2 and C4:
-- estimate each individual's route-choice distribution from training trials;
-- score held-out trials with a proper probabilistic score;
-- compare own-history prediction against pooled/other-individual prediction.
+For the OPEN-acquired family:
 
-Because route-category count differs between C2 and C4, use within-condition null calibration before cross-condition comparison.
+- personal history = late Phase-1 OPEN acquisition;
+- target = earliest admissible Phase-4 exact-reopening trials.
 
-Raw entropy alone is not evidence for individuality.
+Compare own prior history against other individuals' prior histories using the same fixed policy distance.
 
----
+Positive calibrated self-history advantage supports:
 
-# 11. Reopening versus transformed transfer
+> personal organization persisted while its normal multi-solution expression was temporarily prevented.
 
-## Exact reopening positive
-
-Supports latent storage/re-expression of a previously learned personal organization when the old solution repertoire returns.
-
-## Transformed C4 positive
-
-Supports portability beyond exact spatial coordinates.
-
-## Reopening positive, transformed transfer negative
-
-Supports scene/path-specific memory more strongly than an abstract transferable policy.
-
-## Both positive
-
-Supports a more abstract personal movement organization that survives both temporary suppression and coordinate transformation.
+This is a separate endpoint from the Phase-2 opportunity effect.
 
 ---
 
-# 12. Prospective covariates
+# 10. Transformed transfer endpoint
+
+Use Phase-5 transformed OPEN geometry.
+
+Interpretation:
+
+### Exact reopening positive, transformed transfer negative
+
+Personal organization is retained but strongly tied to the learned scene/path coordinates.
+
+### Both positive
+
+At least part of the individual organization is more abstract than exact route coordinates.
+
+### Both negative
+
+The Phase-2 acquisition effect did not create a durable transferable state.
+
+No nonlinear rescue model is authorized after these outcomes.
+
+---
+
+# 11. Route-choice individuality — secondary
+
+Because both matched families are four-route environments during the common probe, route-choice outcomes are directly comparable there.
+
+For each family:
+- estimate held-out individual route-choice distributions;
+- score own-history versus other-individual/pool predictions with a proper probabilistic score.
+
+Do not use raw entropy as evidence for individuality.
+
+A stronger OPEN-acquired route-choice identity signal than CONSTRAINED-acquired signal is supportive secondary evidence for opportunity-driven specialization.
+
+It is not allowed to replace a failed primary I/M treatment contrast.
+
+---
+
+# 12. Geometry realization — secondary
+
+Ask whether acquisition treatment changes:
+- within-individual trajectory stereotypy;
+- fine maneuver realization;
+- policy-to-geometry mapping.
+
+These analyses are downstream and must be frozen before their outcomes are opened.
+
+Do not use them to redefine the primary policy coordinate.
+
+---
+
+# 13. Prospective covariates
 
 Measure where feasible:
 - body mass;
 - forearm length;
-- wingspan / wing area;
+- wingspan;
+- wing area;
 - sex;
-- age class if known;
+- age class;
 - baseline flight performance.
 
-These are secondary explanatory covariates.
+These are secondary explanatory variables.
 
-Do not use them to define or exclude individuals after observing the identity outcome.
+They may later test whether biomechanics constrains which personal solution is acquired.
 
-A biomechanics decomposition must be independently frozen.
+They must not be used for outcome-dependent exclusion.
 
 ---
 
-# 13. Sample-size rule
+# 14. Sample-size rule
 
-The new experiment must not repeat the n=5 mechanism ceiling.
+The experiment must not repeat the n=5 same-data ceiling.
 
-Target:
-- **>=12 evaluable biological individuals** completing Phases A-D.
+Planning target:
+- >=12 evaluable biological individuals completing Phases 0-4.
 
 Preferred:
-- 16 or more if husbandry and ethics allow.
+- 16 or more if ethics and husbandry allow.
 
 Structural minimum for opening the confirmatory primary:
-- **10 evaluable biological individuals**.
+- 10 evaluable biological individuals.
 
-If fewer than 10 complete the required phases:
-- return structural STOP for the primary;
-- report acquisition/descriptive data only;
-- do not relax the minimum post hoc.
+If fewer than 10 complete:
+- primary = STRUCTURAL STOP;
+- no threshold relaxation;
+- descriptive acquisition data may still be reported.
 
-The final planned N must be fixed before confirmatory outcome opening and justified by simulation or prospective precision analysis using the planned repeated-measures structure.
-
----
-
-# 14. Trial support
-
-Exact trial counts must be frozen before confirmatory collection.
-
-Principles:
-- enough trials per phase to estimate individual history without one-flight domination;
-- same planned trial count across individuals;
-- predefined rest and fatigue limits;
-- no stopping an individual's trials because its preference appears stable.
-
-Missing trials are handled by a predeclared support rule.
+The final N and exact trial counts must be frozen before confirmatory outcome opening using prospective simulation/precision analysis for the paired randomized design.
 
 ---
 
-# 15. Randomization and blinding
+# 15. Trial support
+
+Freeze before confirmatory collection:
+- acquisition trials per family;
+- common-probe trials;
+- suppression trials;
+- reopening trials;
+- transformed-transfer trials;
+- minimum valid 3-D trajectory support.
+
+No adaptive stopping based on apparent individual stabilization.
+
+Missing trials follow a predeclared support rule.
+
+---
+
+# 16. Randomization and blinding
 
 Predeclare:
-- animal order;
-- configuration order where order is not biologically fixed;
+- OPEN versus CONSTRAINED family assignment for each animal;
+- A/B block order;
+- canonical constrained route;
 - transformed-layout mapping;
 - route-label coding;
 - analysis seeds.
 
-Where possible:
-- trajectory preprocessing should be blind to biological identity;
-- route classification should use obstacle topology, not visually inferred preferred paths.
+Where feasible:
+- trajectory preprocessing is blind to individual identity and treatment;
+- route classification uses topology rather than visually judged preferred paths.
 
 ---
 
-# 16. Failure modes
+# 17. Critical failure modes
 
-The experiment does not support the formation hypothesis if:
+The formation hypothesis is not supported if:
 
-1. the capability audit shows that nominally equivalent routes are not genuinely feasible for most animals;
-2. C4 produces population-level route preference but little held-out individual identity;
-3. individuality appears during C4 but does not reappear after constrained suppression;
-4. early history predicts reopening as well as late history;
-5. any apparent effect depends on one route, one animal, or post-hoc geometry relabeling.
+1. the capability audit shows nominal routes are not genuinely feasible;
+2. the common OPEN probe shows no stronger personal-policy prediction after OPEN acquisition;
+3. the treatment contrast is driven by one individual;
+4. late OPEN history is no more informative than early OPEN history;
+5. acquired organization disappears completely after temporary constraint;
+6. results depend on post-hoc route relabeling or feature rotation.
 
-Each is biologically informative.
+Each failure narrows the mechanism.
 
 ---
 
-# 17. Strongest positive interpretation
+# 18. Strongest positive inference
 
 If:
-- all route classes are demonstrably feasible;
-- C4 produces calibrated held-out individuality;
-- late history predicts reopening better than early history;
-- personal organization reappears after C1 suppression;
-- at least part of policy transfers under transformed C4;
+- route feasibility is verified;
+- randomized OPEN acquisition increases held-out personal-policy identity in the common OPEN probe;
+- late history is more predictive than early history;
+- personal organization reappears after suppression;
+- some organization survives transformed transfer;
 
-then the programme may support:
+then the programme can support:
 
-> **Individual movement specialization can be generated and stored through personal history when the environment offers multiple feasible solutions; temporary removal of those alternatives suppresses expression without necessarily erasing the personal organization.**
+> **Access to multiple feasible movement solutions causally promotes the formation of stable individual movement policies through personal history; temporary restriction can suppress their expression without necessarily erasing the underlying organization.**
 
-That would directly connect functional abundance to formation and maintenance of individual specialization.
+This is substantially stronger than showing that individuals merely differ.
 
 ---
 
-# 18. Claim ceiling
+# 19. Claim ceiling
 
 Even a positive experiment would not establish:
-- universal applicability to all bats;
-- fitness advantage of specialization;
+- universal applicability across bats;
+- a fitness advantage;
 - a specific neural storage mechanism;
-- equivalence between laboratory policy and the unresolved wild vertical-individuality carrier;
-- that more environmental complexity always causes more specialization.
+- equivalence with the unresolved wild vertical-individuality carrier;
+- that environmental complexity in general causes specialization.
 
-The causal claim is specifically about experimentally manipulated feasible-solution repertoire under the tested task.
+The causal claim is specifically about **solution opportunity during acquisition** under the tested movement task.
 
 ---
 
-# 19. Why this is decisive
+# 20. Why this closes the current causal gap
 
-The current archive can show that individual information exists, transfers, and is contextually realized.
+The existing archives show:
+- individuality;
+- portability;
+- history refinement;
+- context-sensitive realization;
+- persistence under sensory perturbation.
 
-It cannot show why distinct personal policies formed.
+They do not manipulate the opportunity from which a personal solution can form.
 
-This design changes the missing causal variable itself:
+The matched-family randomized design does:
 
 \[
 \boxed{
-\text{known feasible-solution repertoire}
+\text{solution opportunity during history}
 \rightarrow
-\text{history-dependent personal organization}
+\text{later individual-specific policy}
 }
 \]
 
-and then tests whether that organization survives temporary loss of expressive opportunity.
+while holding biological identity fixed and testing both storage and transfer afterward.
 
-That is information the existing archives do not contain.
+That is the missing causal link.
