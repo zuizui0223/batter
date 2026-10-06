@@ -76,66 +76,54 @@ redesign and repeat pilot before freezing the confirmatory contract.
 
 ---
 
-## 5. Acquisition-trial planning set
+## 5. Frozen confirmatory trial burden to be feasibility-tested
 
-The confirmatory acquisition trial count per family must be selected from:
+The pilot no longer chooses among acquisition/probe trial counts.
 
-- 8;
-- 12;
-- 16 successful valid flights.
+The confirmatory design is frozen prospectively as:
 
-No other value is allowed without amending this pilot contract before confirmatory data collection.
+- acquisition: **12 valid flights per family**;
+- common-OPEN probe: **16 valid flights per family = 8 early + 8 late**.
 
-Rationale:
-published bat obstacle-learning work has detected repeated-flight change over roughly 10–12 flights, while other obstacle-course paradigms commonly support repeated blocks of approximately 10 or more successful flights.
+Reason:
+- 12 acquisition flights aligns with the scale of repeated-flight learning already used in the programme's bat obstacle-learning literature;
+- the prospective P1 stress test shows that 16 probe trials provides materially better categorical-history resolution than 12, and both dominate the rejected 8-trial design.
 
-The pilot chooses the **smallest** candidate count that provides adequate endpoint stability without evident fatigue.
+The engineering pilot asks only whether this fixed burden is:
+- safe;
+- trackable;
+- behaviorally completable without evident fatigue/refusal.
 
----
+If the fixed burden is not feasible:
 
-## 6. Probe-trial planning set
+> **REDESIGN / AMEND BEFORE RANDOMIZATION.**
 
-The common-OPEN probe requires an even number of valid flights per family.
+Do not silently select 12 probe trials or 8 acquisition trials inside the same preregistered design.
 
-Candidate totals per family:
-- 12 = 6 early + 6 late;
-- 16 = 8 early + 8 late.
+## 6. Frozen capability exposure
 
-The earlier 8-trial option is removed because the four-route P1 categorical history is too sparse at 4 early trials under the prospective stress test in ROUTE_PRIMARY_PROBE_PLANNING_V1.md.
+For every route in both A and B:
 
-Prefer 16 if welfare, fatigue and tracking reliability permit.
+- maximum 4 isolated-route attempts;
+- require at least 2 successful traversals;
+- both required successes must meet the frozen tracking/route-classification validity rule.
 
-Use 12 if the pilot shows that 16 materially compromises completion, tracking quality or welfare.
+The engineering pilot may trigger a design amendment if this rule is unsafe or structurally impossible.
 
-Do not choose between 12 and 16 using route-specialization or treatment-effect p-values.
+It may not tune the threshold to improve later individual-specialization results.
 
-The split is always exactly half/half and is never changed after outcome opening.
+## 7. Pilot endpoint-stability audit
 
----
+I/M stability may still be inspected in pilot animals as an **engineering diagnostic** for tracking reliability and session burden.
 
-## 7. Endpoint-stability rule
+It no longer selects the confirmatory acquisition or probe count.
 
-Trial count selection is based on measurement stability, not on treatment effect or individual-specialization significance.
+Do not calculate:
+- P1 Delta_R;
+- P2 Delta_A;
+- OPEN-versus-CONSTRAINED treatment contrasts.
 
-For each pilot animal × family in repeated OPEN flight blocks:
-
-1. calculate cumulative I/M centroid using the first n valid trials;
-2. use the full 16-trial pilot block as the pilot reference only;
-3. standardize I and M using a pilot-only pooled scale;
-4. compute Euclidean distance between the n-trial centroid and the 16-trial centroid.
-
-For acquisition count n in {8,12,16}, choose the smallest n such that:
-
-- median centroid error across pilot animal × family units <= 0.25 standardized policy units;
-- at least 75% of units have centroid error <= 0.50;
-- no visible monotonic degradation in flight completion across the candidate block.
-
-If no candidate count passes:
-the experiment remains structurally unready.
-
-Do not optimize n for identity p-values.
-
----
+A failure of measurement stability at the frozen 12/16 burden means the apparatus/data-acquisition design must be improved or the preregistration version amended before confirmatory randomization.
 
 ## 8. Session burden
 
@@ -161,8 +149,8 @@ Before pilot closeout, write:
 1. final A/B geometry;
 2. route topology map;
 3. final capability threshold;
-4. final acquisition valid-flight count per family;
-5. final common-OPEN probe count per family;
+4. confirm frozen acquisition count = 12 valid flights per family;
+5. confirm frozen common-OPEN probe count = 16 valid flights per family;
 6. maximum planned flights per session/day;
 7. minimum valid tracking fraction;
 8. missing-flight replacement rule;
