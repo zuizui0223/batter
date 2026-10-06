@@ -9,17 +9,17 @@ JAE v0.4.0 remains frozen and unchanged.
 V10 incorporates the new ontogenetic history-source diagnostic and revises the mechanism from a static "persistent individual bias" story into a four-stage architecture:
 
 [
-oxed{
-	ext{formation}
+\boxed{
+\text{formation}
 
-eq
-	ext{maintenance}
+\neq
+\text{maintenance}
 
-eq
-	ext{expression}
+\neq
+\text{expression}
 
-eq
-	ext{spatial consequence}
+\neq
+\text{spatial consequence}
 }
 ]
 
@@ -42,11 +42,11 @@ In wild *Phyllostomus hastatus*:
 Therefore:
 
 [
-oxed{
-	ext{persistent individual strategy}
+\boxed{
+\text{persistent individual strategy}
 
 otRightarrow
-	ext{persistent spatial partition}
+\text{persistent spatial partition}
 }
 ]
 
@@ -167,19 +167,19 @@ It depends on the true individual-to-own-history link.
 The developmental evidence favors:
 
 [
-oxed{
-	ext{initial movement state}
-ightarrow
-	ext{individual-specific history updating}
-ightarrow
-	ext{strong personal movement organization}
+\boxed{
+\text{initial movement state}
+\rightarrow
+\text{individual-specific history updating}
+\rightarrow
+\text{strong personal movement organization}
 }
 ]
 
 rather than:
 
 [
-	ext{fully fixed adult-like bias from the earliest independent movement}.
+\text{fully fixed adult-like bias from the earliest independent movement}.
 ]
 
 This does not prove a single learning algorithm.
@@ -195,9 +195,9 @@ Possible contributors remain:
 Published maternal-navigation studies in the same fruit-bat system make the broader hypothesis plausible:
 
 [
-	ext{socially supplied early information}
-ightarrow
-	ext{personal refinement}.
+\text{socially supplied early information}
+\rightarrow
+\text{personal refinement}.
 ]
 
 But the direct maternal-to-self crossover archive failed its frozen structural support gate and remains unopened.
@@ -425,7 +425,7 @@ Unsupported in both years.
 Therefore do not write:
 
 [
-x_{it}=	heta_i+B_i c_t
+x_{it}=\\theta_i+B_i c_t
 ]
 
 as an established universal field law.
@@ -433,7 +433,7 @@ as an established universal field law.
 Do not write:
 
 [
-x_{it}sim N(	heta_i,Sigma_i)
+x_{it}sim N(\\theta_i,\Sigma_i)
 ]
 
 with stable individual covariance as established.
@@ -516,8 +516,8 @@ Exact 720-permutation calibration:
 
 Linear baseline-expression gain:
 
-- alpha_30 = **0.863**
-- alpha_10 = **0.324**
+- \alpha_30 = **0.863**
+- \alpha_10 = **0.324**
 - difference = **0.540**
 - exact p = **0.0167**
 
@@ -560,7 +560,7 @@ A new individual-identity reanalysis was correctly stopped before IPI opening be
 Condition-preserving permutation space:
 
 [
-3!	imes2!=12,
+3!\times2!=12,
 ]
 
 so minimum exact p = **0.0833**.
@@ -570,11 +570,11 @@ The published experiment remains external causal triangulation, not a new confir
 Biological implication:
 
 [
-oxed{
-	ext{maintenance}
+\boxed{
+\text{maintenance}
 
-eq
-	ext{continuous expression}
+\neq
+\text{continuous expression}
 }
 ]
 
@@ -597,7 +597,7 @@ Thus a portable individual policy and a learned scene-specific route are not the
 The hierarchy needs both:
 
 [
-	heta_i
+\\theta_i
 ]
 
 portable personal policy bias,
@@ -627,7 +627,7 @@ The same wild *P. hastatus* individuals were used to test whether greater persis
 Therefore:
 
 [
-oxed{
+\boxed{
 D_{policy}
 
 otRightarrow
@@ -646,7 +646,7 @@ The mechanism is now best represented dynamically.
 Let the portable individual coordinate be:
 
 [
-	heta_i(t).
+\\theta_i(t).
 ]
 
 Formation evidence says it need not be fully fixed at the earliest independent movement.
@@ -654,27 +654,27 @@ Formation evidence says it need not be fully fixed at the earliest independent m
 A schematic developmental model is:
 
 [
-	heta_i(t)
+\\theta_i(t)
 =
-	heta_i^{intrinsic}
+\\theta_i^{intrinsic}
 +
 h_i(t),
 ]
 
 where:
-- (	heta_i^{intrinsic}) represents stable morphology, physiology and early developmental predisposition;
+- (\\theta_i^{intrinsic}) represents stable morphology, physiology and early developmental predisposition;
 - (h_i(t)) represents accumulated personal movement/history-dependent sensorimotor organization.
 
 Once formed/refined, current behavior is:
 
 [
-oxed{
+\boxed{
 x_{i,e,t}
 =
 F(
 E_e,
-alpha_{e,t}	heta_i(t),
-lambda_{i,k(e)},
+\alpha_{e,t}\\theta_i(t),
+\lambda_{i,k(e)},
 m_{i,e}
 )
 +
@@ -684,9 +684,9 @@ epsilon_{i,e,t}
 
 where:
 
-- (	heta_i(t)): portable personal policy bias;
-- (alpha_{e,t}): context-dependent expression strength;
-- (lambda_{i,k}): learned task-class policy;
+- (\\theta_i(t)): portable personal policy bias;
+- (\alpha_{e,t}): context-dependent expression strength;
+- (\lambda_{i,k}): learned task-class policy;
 - (m_{i,e}): learned scene-specific solution;
 - (E_e): current environment/task;
 - (epsilon): unresolved bout-level realization.
@@ -776,17 +776,17 @@ Current evidence:
 Thus:
 
 [
-oxed{
-	ext{formation}
+\boxed{
+\text{formation}
 
-eq
-	ext{storage}
+\neq
+\text{storage}
 
-eq
-	ext{expression}
+\neq
+\text{expression}
 
-eq
-	ext{partition}
+\neq
+\text{partition}
 }
 ]
 
@@ -801,13 +801,13 @@ The new ontogenetic result weakens a purely fixed predisposition account but doe
 The remaining origin problem is mixed:
 
 [
-	heta_i(t)
+\\theta_i(t)
 =
-	heta_i^{biomechanics}
+\\theta_i^{biomechanics}
 +
-	heta_i^{development}
+\\theta_i^{development}
 +
-	heta_i^{long-term learning/history}.
+\\theta_i^{long-term learning/history}.
 ]
 
 A decisive future experiment should manipulate these components in the same individuals.
@@ -837,14 +837,14 @@ Another uncontrolled demonstration of repeatability is no longer sufficient.
 The post-JAE programme now supports a mechanistic sequence:
 
 [
-oxed{
-	ext{personal history helps build the bias}
-ightarrow
-	ext{the bias becomes portable}
-ightarrow
-	ext{context gates its expression}
-ightarrow
-	ext{spatial partition remains optional}
+\boxed{
+\text{personal history helps build the bias}
+\rightarrow
+\text{the bias becomes portable}
+\rightarrow
+\text{context gates its expression}
+\rightarrow
+\text{spatial partition remains optional}
 }
 ]
 
