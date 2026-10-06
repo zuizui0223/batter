@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 """Reference utilities for exact restricted randomization inference.
 
-Primary endpoint inputs are treatment-blind family-specific scores:
-    A[(animal_id, "A")]
-    A[(animal_id, "B")]
+Endpoint inputs are treatment-blind family-specific scores:
+    score[(animal_id, "A")]
+    score[(animal_id, "B")]
+
+The same engine is used for P1 route specialization (R_i,f) and, only after
+P1 support, P2 transparent I/M organization (A_i,f).
 
 The randomization null reassigns which family is OPEN-acquired subject to the
 actual four-animal block design. It must NOT use unrestricted independent
@@ -66,7 +69,7 @@ def enumerate_treatment_assignments(rows):
         yield merged
 
 
-def delta_a(family_scores, open_family_map):
+def treatment_delta(family_scores, open_family_map):
     """Compute equal-individual OPEN minus CONSTRAINED score.
 
     Analysis inputs must already contain only confirmatory-complete whole blocks.
@@ -98,13 +101,17 @@ def delta_a(family_scores, open_family_map):
     return sum(diffs) / len(diffs)
 
 
+# Backward-compatible alias for earlier drafts.
+delta_a = treatment_delta
+
+
 def exact_one_sided_p(rows, family_scores, observed_open_family_map):
-    """Return observed Delta_A, exact p, and assignment count."""
-    observed = delta_a(family_scores, observed_open_family_map)
+    """Return observed OPEN-minus-CONSTRAINED contrast, exact p, assignment count."""
+    observed = treatment_delta(family_scores, observed_open_family_map)
     null = []
 
     for assignment in enumerate_treatment_assignments(rows):
-        null.append(delta_a(family_scores, assignment))
+        null.append(treatment_delta(family_scores, assignment))
 
     extreme = sum(value >= observed for value in null)
     return observed, extreme / len(null), len(null)
