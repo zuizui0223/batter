@@ -20,7 +20,7 @@ JAE v0.4.0 remains frozen.
 
 ## 1. Confirmatory question
 
-Does access to multiple feasible movement solutions during acquisition increase later individual-specific movement-policy predictability when OPEN-acquired and CONSTRAINED-acquired matched environments are subsequently tested under the same four-route OPEN opportunity?
+Does access to multiple feasible movement solutions during acquisition increase later individual-specific movement-policy organization when OPEN-acquired and CONSTRAINED-acquired matched environments are subsequently tested under the same four-route OPEN opportunity?
 
 Primary causal estimand:
 
@@ -53,9 +53,11 @@ No family may be redesigned after common-OPEN outcomes are viewed.
 
 ---
 
-## 3. Capability gate
+## 3. Capability gate and route-familiarity equalization
 
 Before free-choice acquisition inference, every candidate animal is tested with routes isolated one at a time.
+
+The same frozen number of successful isolated-route traversals is required for every route in both families before treatment assignment. This makes physical route familiarity symmetric before OPEN versus CONSTRAINED acquisition is randomized.
 
 The final numeric capability rule must be inserted here before confirmatory collection:
 
@@ -155,28 +157,42 @@ If either primary coordinate is structurally unavailable, the primary returns ST
 
 ---
 
-## 8. Individual self-history advantage
+## 8. Common-OPEN held-out individual organization
 
-For each target probe trial in family f for individual i:
+The primary self-history score is calculated entirely inside the common OPEN probe.
 
-1. build the focal history from the frozen late-acquisition window in family f;
-2. build donor histories from the corresponding acquisition window of every other eligible individual whose family f received the same acquisition treatment under the hypothesized assignment;
-3. calculate the frozen policy distance;
-4. score own-history distance versus mean donor-history distance.
+The exact probe has an even number of valid planned trials per family and is split before outcome opening into:
+- early probe window;
+- late held-out probe window.
+
+For each individual i and family f:
+
+1. calculate the focal early-probe I/M centroid;
+2. calculate early-probe centroids for all other eligible individuals in family f;
+3. for every late-probe target trial, calculate distance to:
+   - own early centroid;
+   - each donor early centroid;
+4. target advantage is mean donor distance minus own-history distance.
 
 Aggregate:
-- equal probe trials within individual × family;
+- equal late targets within individual × family;
 - equal individuals.
 
-Obtain:
-- A_OPEN;
-- A_CONSTRAINED;
+This yields A for each family under the actual treatment assignment.
+
+Then:
+
+- A_OPEN = mean A for the family that received OPEN acquisition;
+- A_CONSTRAINED = mean A for the matched family that received CONSTRAINED acquisition;
 - Delta_A = A_OPEN - A_CONSTRAINED.
 
-The late-acquisition window size is:
+This primary does **not** use acquisition centroids as its prediction target. Acquisition history defines the randomized treatment; current individual organization is measured under equal current opportunity.
+
+Exact probe trials per family:
 **TBD BEFORE OUTCOME OPENING**.
 
----
+Early/late split:
+**exactly half / half of the frozen primary probe trials**.
 
 ## 9. Exact randomization inference
 
@@ -188,8 +204,11 @@ For every allowed treatment reassignment under the frozen block design:
 
 1. keep all observed trajectories, family identities, starting-order labels and outcomes fixed;
 2. reassign which family is labelled OPEN versus CONSTRAINED only within the allowed randomization space;
-3. recompute all treatment-specific donor histories;
-4. recompute A_OPEN, A_CONSTRAINED and Delta_A.
+3. relabel which observed family-specific common-OPEN identity score belongs to OPEN-acquired versus CONSTRAINED-acquired treatment;
+4. because the common-OPEN identity score itself is computed without treatment labels, preserve those family-specific scores unchanged;
+5. recompute A_OPEN, A_CONSTRAINED and Delta_A.
+
+If later endpoint implementation introduces treatment-defined donor pools, then the full donor construction must instead be recomputed under every assignment. The frozen endpoint appendix must state which architecture applies.
 
 Condition on the observed starting-family order.
 
@@ -343,7 +362,8 @@ Must all be complete:
 - [ ] numeric capability rule;
 - [ ] exact acquisition trial counts;
 - [ ] exact probe trial counts;
-- [ ] late-history window size;
+- [ ] common-OPEN early/late probe split frozen;
+- [ ] late-history window size for secondary formation endpoint;
 - [x] exact I/M endpoint appendix fixed as PRIMARY_IM_ENDPOINT_APPENDIX_V1.md;
 - [ ] randomization schedule generated and archived;
 - [ ] randomization seed archived;
