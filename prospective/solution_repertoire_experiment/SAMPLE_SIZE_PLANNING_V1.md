@@ -33,17 +33,21 @@ One-sided alpha = 0.05.
 ## Decision
 
 Target:
-- 18-20 evaluable biological individuals.
+- 20 evaluable biological individuals / five complete four-animal blocks.
+
+Preferred if feasible:
+- 24 evaluable biological individuals / six complete blocks.
 
 Hard structural minimum:
-- 14 evaluable biological individuals.
+- 16 evaluable biological individuals / four complete blocks.
 
 Reason:
-- n=14 is approximately the first listed design reaching 80% power for d around 0.7;
-- n=18-20 gives materially better protection against a moderate paired effect;
+- n=14 is approximately the first listed design reaching 80% power for d around 0.7, but cannot satisfy the complete four-animal restricted-randomization block design;
+- n=16 gives four complete blocks and about 85% approximate power for d=0.7;
+- n=20 gives five complete blocks and about 92% approximate power for d=0.7;
 - n=10-12 would recreate the programme's current small-sample vulnerability.
 
-If fewer than 14 animals complete the required phases, the confirmatory primary returns STRUCTURAL STOP.
+If fewer than 16 animals complete the required phases, the confirmatory primary returns STRUCTURAL STOP.
 
 No post-outcome lowering of the minimum.
 
