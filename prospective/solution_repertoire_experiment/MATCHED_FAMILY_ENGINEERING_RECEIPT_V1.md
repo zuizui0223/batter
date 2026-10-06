@@ -61,9 +61,9 @@ Freeze before pilot closeout:
 
 - pilot animal IDs:
 - pilot animals permanently excluded from confirmation: YES / NO
-- final capability rule:
-- acquisition count:
-- probe count:
+- final capability rule: **>=2 successful traversals within <=4 isolated-route attempts per route; tracking-validity threshold TBD**
+- acquisition count: **12 valid flights/family (frozen)**
+- probe count: **16 valid flights/family = 8 early + 8 late (frozen)**
 - maximum flights/session:
 - missing-flight rule:
 - engineering PASS / REDESIGN:
