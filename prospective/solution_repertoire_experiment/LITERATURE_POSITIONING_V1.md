@@ -121,6 +121,44 @@ These examples do not determine the new experiment's final burden.
 
 They justify using {8,12,16} as a bounded acquisition-planning set and {8,12} for the common-OPEN probe, with the final choice made by a separate engineering pilot and facility welfare constraints.
 
+
+## Cross-field novelty boundary
+
+The experiment should **not** be sold as the first demonstration that a task has multiple motor solutions.
+
+Motor-control work has long treated redundant tasks as solution manifolds and has examined how practice changes the use of motor abundance. Human experiments have also forced participants to adopt alternative solutions for the same task.
+
+Nor should it be sold as the first animal task with multiple possible solutions.
+
+Animal-innovation paradigms, including multi-access / artificial-fruit style problems, can deliberately permit several ways to obtain the same reward.
+
+The ecological literature contributes a different established result:
+individual specialization tends to increase with ecological opportunity or environmental heterogeneity in several natural systems, including diet and habitat use.
+
+What remains unusually underconnected across these literatures is:
+
+\[
+\boxed{
+\text{opportunity in action / solution space}
+\rightarrow
+\text{formation of persistent individual specialization}
+}
+\]
+
+with the opportunity itself experimentally assigned and the resulting individual organization tested later under equal current opportunity.
+
+The designed bat experiment therefore makes a narrower claim:
+
+> **Manipulate how many adequate movement solutions an individual can choose during learning, then ask whether that history causally changes the strength, storage and transfer of later individual-specific movement policy.**
+
+This differs from:
+- ecological-opportunity studies that measure heterogeneous resource landscapes;
+- competition manipulations that alter density rather than movement-solution repertoire;
+- motor-abundance studies focused on within-person variance or performance accuracy;
+- innovation tasks focused on discovering a solution rather than persistent individual policy;
+- bat obstacle studies that change clutter geometry without randomizing solution opportunity as the formation treatment.
+
+
 ## Gap targeted here
 
 The literature used by the current programme separately supports:
