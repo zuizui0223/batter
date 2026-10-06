@@ -518,7 +518,7 @@ Where feasible:
 The formation hypothesis is not supported if:
 
 1. the capability audit shows nominal routes are not genuinely feasible;
-2. the common OPEN probe shows no stronger personal-policy prediction after OPEN acquisition;
+2. P1 shows no stronger held-out individual route specialization after OPEN acquisition;
 3. the treatment contrast is driven by one individual;
 4. late OPEN history is no more informative than early OPEN history;
 5. acquired organization disappears completely after temporary constraint;
@@ -530,16 +530,21 @@ Each failure narrows the mechanism.
 
 # 18. Strongest positive inference
 
-If:
+The strongest chain requires:
 - route feasibility is verified;
-- randomized OPEN acquisition increases held-out personal-policy identity in the common OPEN probe;
+- P1: randomized OPEN acquisition increases held-out route-choice individual specialization in the common OPEN probe;
+- P2: the same randomized treatment increases held-out organization in the fixed I/M representation;
 - late history is more predictive than early history;
 - personal organization reappears after suppression;
-- some organization survives transformed transfer;
+- some organization survives transformed transfer.
 
-then the programme can support:
+If only P1 is supported, the defensible causal claim is narrower:
 
-> **Access to multiple feasible movement solutions causally promotes the formation of stable individual movement policies through personal history; temporary restriction can suppress their expression without necessarily erasing the underlying organization.**
+> **Access to multiple feasible movement solutions during acquisition causally promotes later individual specialization in route choice under equal current opportunity.**
+
+If P1 and P2 are both supported, followed by reopening support, the programme can support:
+
+> **Access to multiple feasible movement solutions causally promotes the formation of durable individual movement policies through personal history; temporary restriction can suppress their expression without necessarily erasing the underlying organization.**
 
 This is substantially stronger than showing that individuals merely differ.
 
