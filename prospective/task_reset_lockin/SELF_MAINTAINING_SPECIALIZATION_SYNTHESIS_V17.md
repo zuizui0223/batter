@@ -111,6 +111,8 @@ Therefore the relative organization of individuals in coarse policy space transf
 
 This is stronger than ordinary within-context repeatability.
 
+**Small-sample boundary.** The adult *Rhinolophus* mechanism programme contains five biological individuals. The held-out and permutation results demonstrate strong internal structure across repeated environments, but the subsequent diagnostics repeatedly interrogate the same five identities and are not independent biological replications. Their p-values calibrate the specified tests within this archive; they do not by themselves establish population-level prevalence or broad generality. The post-primary geometry programme should therefore be interpreted as mechanism localization within a small, deeply repeated experiment.
+
 ---
 
 # 3. Portable individuality is not only speed or absolute movement scale
@@ -484,11 +486,31 @@ and no universal bat two-axis law is established.
 
 ---
 
-# 14. Wild ecology: personal policy and interaction-layer partition are distinct
+# 14. Wild ecology: the field carrier bridge remains unresolved
 
-Wild *P. hastatus* retains a persistent H/V personal carrier.
+The preregistered wild FlightIntensity carrier test did **not** establish a general field-side carrier.
 
-Yet persistent policy distance does not predict synchronous vertical separation:
+Under the frozen rule, support required at least 3 of 4 panels to pass. The observed outcome was:
+
+- *Hypsignathus monstrosus*: PASS;
+- *Phyllostomus hastatus* 2022: PASS;
+- *P. hastatus* 2023: FAIL;
+- *P. hastatus* 2016: structural STOP.
+
+Thus the frozen field carrier gate was **2/4 and FAILED**, and the preregistered policy-to-vertical-shape bridge remained closed.
+
+Subsequent analyses are post-outcome diagnostics and must not be used to reverse that decision.
+
+After common 360-s representation, the 2023 scalar FlightIntensity carrier remained unsupported (H = **+0.0068**, p = **0.273**). Only after decomposing that scalar into horizontal and vertical components did both component carriers appear supported:
+
+- horizontal component: H = **+0.2039**, p = **0.0488**;
+- vertical component: H = **+0.2064**, p = **0.0291**.
+
+These H/V results are useful for generating the hypothesis that field movement individuality may be multidimensional. However, the H/V representation was opened **after the frozen scalar carrier gate had failed**. It is therefore exploratory mechanism localization rather than confirmatory evidence for a wild analogue of the laboratory policy coordinate.
+
+The same restriction applies to analyses opened only in panels selected because they had already passed the frozen carrier test. Associations between policy coordinates and vertical shape within those selected panels may describe conditional patterns, but they cannot reopen or strengthen the failed preregistered field bridge.
+
+Separate exploratory analyses found that candidate policy distance did not predict synchronous vertical separation:
 
 ### 2022
 - rho = **+0.188**
@@ -498,27 +520,15 @@ Yet persistent policy distance does not predict synchronous vertical separation:
 - rho = **-0.190**
 - p = **0.689**.
 
-A selection-corrected leave-one-individual scan cannot rescue the positive association:
-- 2022 p = **0.2058**
+A selection-corrected leave-one-individual scan also remained unsupported:
+- 2022 p = **0.2058**;
 - 2023 p = **0.4823**.
 
-Most tellingly, in 2023:
-- panel-level extra synchronous vertical separation is supported;
-- personal policy individuality is also supported;
-- but policy distance does not identify the dyads that separate.
+The bounded field conclusion is therefore:
 
-Therefore:
+> **The frozen analysis does not establish that the portable laboratory policy coordinate extends to wild vertical individuality. Post-outcome field diagnostics suggest candidate multidimensional carriers and possible decoupling from synchronous partition, but their connection to wild vertical-distribution individuality remains unresolved.**
 
-[
-oxed{
-	ext{persistent personal-policy layer}
-
-eq
-	ext{current interaction/partition layer}
-}
-]
-
-under the observed field geometry.
+This keeps the ecological distinction between persistent individual organization and current interaction geometry as a prospective hypothesis rather than a confirmed mechanistic bridge.
 
 ---
 
@@ -610,7 +620,7 @@ Already established:
 
 The stronger contribution candidate is narrower:
 
-> **the same movement-individuality programme empirically separates the formation of personal information, its cross-task portability, its context-sensitive fine-maneuver realization, and its spatial interaction consequence.**
+> **the movement-individuality programme empirically separates the formation of personal information, its cross-task portability, and its context-sensitive fine-maneuver realization; field diagnostics then identify the mapping from personal organization to spatial interaction as a distinct unresolved layer.**
 
 The ecological payoff is the distinction:
 
@@ -620,7 +630,7 @@ The ecological payoff is the distinction:
 }
 ]
 
-so a change in observed spatial overlap need not mean creation or loss of the underlying individual state.
+so a change in observed spatial overlap need not mean creation or loss of the underlying individual state. The present field archive, however, does not yet provide a confirmatory carrier-to-spatial-niche bridge.
 
 ---
 
@@ -637,7 +647,9 @@ Directly supported:
 7. the residual beyond I/M is not a single dominant extra axis;
 8. residual model insufficiency is concentrated in fine maneuver geometry;
 9. sensory perturbation can alter movement without erasing personal bias;
-10. wild policy differentiation need not map onto physical partition.
+10. exploratory field diagnostics show that candidate policy-component differentiation can coexist with weak or absent dyad-level association with synchronous vertical separation; the preregistered field carrier-to-shape bridge itself remains unsupported.
+
+**Evidence-level boundary.** The controlled/laboratory mechanism results and the wild-field bridge do not currently have the same evidentiary status. The wild FlightIntensity gate failed its frozen 3-of-4 rule. Subsequent H/V decomposition, harmonization and carrier-positive-panel analyses are post-outcome diagnostics and cannot be counted as confirmatory replications of the portable-policy result.
 
 Not identified:
 - exact latent state dimensionality;
@@ -674,20 +686,20 @@ The next advance must use genuinely new information:
 
 The strongest current biological principle is:
 
-> **Personal movement information is more portable than the detailed movement geometry in which it is expressed. Personal history helps build that information, environments reshape its fine maneuver realization, and the resulting spatial pattern need not partition individuals into exclusive niches.**
+> **In controlled repeated-flight systems, personal movement information can be more portable than the detailed movement geometry in which it is expressed. Personal history can refine that information, and environmental perturbation can reshape its expression without necessarily erasing individual bias. Whether the same carrier explains wild vertical individuality remains unresolved.**
 
 Compactly:
 
 [
-oxed{
-	ext{history}
-ightarrow
-	ext{portable personal policy}
-ightarrow
-	ext{context-sensitive fine realization}
-ightarrow
-	ext{optional spatial partition}
+\boxed{
+\text{history}
+\rightarrow
+\text{portable personal organization}
+\rightarrow
+\text{context-sensitive realization}
 }
 ]
+
+Spatial partition is a possible downstream ecological consequence rather than a required signature of the underlying individual state. The wild carrier-to-vertical-shape connection remains an open hypothesis rather than part of the current confirmatory evidentiary chain.
 
 That is the current evidentiary ceiling.
