@@ -95,11 +95,12 @@ Before free-choice acquisition inference, every candidate animal is tested with 
 
 The same frozen number of successful isolated-route traversals is required for every route in both families before treatment assignment. This makes physical route familiarity symmetric before OPEN versus CONSTRAINED acquisition is randomized.
 
-The final numeric capability rule must be inserted here before confirmatory collection:
+Frozen capability exposure:
+- maximum **4 isolated-route attempts** per route;
+- require at least **2 successful traversals** per route;
+- the two required successes must satisfy the frozen route-classification/tracking validity rule.
 
-- required successful traversals per route: **TBD BEFORE FREE-CHOICE OUTCOME OPENING**;
-- maximum allowed collision/failure fraction: **TBD BEFORE FREE-CHOICE OUTCOME OPENING**;
-- minimum valid 3-D tracking support per isolated traversal: **TBD BEFORE FREE-CHOICE OUTCOME OPENING**.
+The exact tracking-validity threshold remains an engineering item because it depends on the final camera/3-D reconstruction system. It must be frozen before confirmatory randomization.
 
 An animal failing the frozen capability rule is excluded **before treatment randomization**.
 
@@ -155,6 +156,13 @@ The canonical route is fixed by engineering design before animal assignment.
 
 No adaptive stopping when an individual appears to have stabilized.
 
+Frozen acquisition exposure:
+- **12 valid acquisition flights per family**;
+- 12 OPEN-choice flights in the OPEN-acquired family;
+- 12 canonical-route flights in the CONSTRAINED-acquired family.
+
+Family sessions remain interleaved.
+
 ---
 
 ## 6. Common OPEN probe
@@ -167,8 +175,12 @@ After acquisition is complete:
 
 The first fixed probe window is the confirmatory target.
 
-Exact number of probe trials per family:
-**TBD BEFORE OUTCOME OPENING**.
+Exact number of common-OPEN probe trials per family:
+**16 valid flights = 8 early + 8 late.**
+
+This count is frozen prospectively from ROUTE_PRIMARY_PROBE_PLANNING_V1.md.
+
+If the engineering pilot shows that 16 valid probe flights per family cannot be collected safely/reliably, the confirmatory experiment does not silently downgrade to 12. The design must be amended and versioned before confirmatory randomization.
 
 Later probe trials are secondary and cannot replace a failed first-window primary.
 
