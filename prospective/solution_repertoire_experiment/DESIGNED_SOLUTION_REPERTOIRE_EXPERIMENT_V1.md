@@ -110,11 +110,17 @@ This separates **can use** from **chooses to use**.
 
 # 4. Experimental sequence
 
-## Phase 0 — capability audit
+## Phase 0 — capability audit and route-familiarity equalization
 
-All route classes isolated individually.
+All route classes are isolated individually.
 
-No free-choice inference.
+Every eligible animal receives the same frozen number of successful traversals of every route in both families before treatment assignment.
+
+This serves two purposes:
+- structural capability verification;
+- equal pre-randomization physical familiarity with all route alternatives.
+
+No free-choice inference is made from this phase.
 
 ## Phase 1 — randomized acquisition treatment
 
@@ -143,11 +149,17 @@ Now open all four routes in **both** families.
 
 This is the primary causal test.
 
-Both outcomes are measured under the same four-route opportunity.
+Both families are measured under the same four-route opportunity.
 
-The only intended difference is acquisition history:
-- one family had multi-solution experience;
-- one family had constrained experience.
+The probe is split prospectively into:
+- an early probe half used only to estimate each individual's current personal policy;
+- a late held-out probe half used for the confirmatory identity score.
+
+The only intended difference between matched families is acquisition history:
+- one family had simultaneous multi-solution experience;
+- one family had constrained single-solution experience.
+
+Because the primary compares early-to-late organization **within the common OPEN probe**, it does not require the constrained acquisition state itself to resemble the common-OPEN state.
 
 ## Phase 3 — suppression
 
@@ -218,30 +230,37 @@ It is a secondary realization layer, not the primary causal carrier.
 
 ---
 
-# 6. Primary causal endpoint — opportunity during acquisition
+# 6. Primary causal endpoint — common-OPEN individual organization
 
-For each individual and environment family:
+The primary endpoint is measured **entirely inside the common OPEN probe**, where both matched families have the same four-route opportunity.
 
-1. estimate its late-acquisition personal policy from a fixed late training window;
-2. score the earliest admissible trials in the common OPEN probe;
-3. compare prediction from its own acquisition history against histories from other individuals who had the same acquisition treatment.
+This avoids confounding the treatment effect with a simple acquisition-to-probe geometry change.
 
-Define a held-out self-history advantage:
+For each individual × family:
+
+1. divide the frozen common-OPEN probe into a fixed early half and late half;
+2. estimate the individual's policy centroid from the early half;
+3. score every late-half target against:
+   - its own early-half centroid;
+   - early-half centroids from other eligible individuals in the same family;
+4. compute held-out self-history advantage:
 
 \[
-A_{i,c}
+A_{i,f}
 =
 \operatorname{mean}_{j\neq i}
-d(\theta_{i,probe,c},\theta_{j,train,c})
+d(\theta_{i,late,f},\theta_{j,early,f})
 -
-d(\theta_{i,probe,c},\theta_{i,train,c}),
+d(\theta_{i,late,f},\theta_{i,early,f}).
 \]
 
-where c is OPEN-acquired or CONSTRAINED-acquired.
-
 Aggregate:
-- equal probe trials within individual;
+- equal target trials within individual × family;
 - equal individuals.
+
+For each animal, the two matched families differ only in acquisition history:
+- OPEN-acquired;
+- CONSTRAINED-acquired.
 
 Primary treatment contrast:
 
@@ -253,15 +272,15 @@ A_{OPEN-acquired}
 A_{CONSTRAINED-acquired}.
 \]
 
-Interpretation:
+### Interpretation
 
-### Delta_A > 0
+Positive Delta_A means that, under the **same current four-route opportunity**, the family in which the animal previously had multiple-solution choice now contains stronger reproducible individual-specific policy organization.
 
-Exposure to multiple feasible solutions during acquisition creates stronger individual-specific predictive organization when both environments are later tested under the same OPEN opportunity.
+The CONSTRAINED-acquired family has also been exposed to every route during the pre-randomization capability audit. Thus a positive contrast cannot be reduced simply to complete unfamiliarity with the alternative physical routes.
 
-### Delta_A unsupported
+Because both families receive an early common-OPEN probe half before the held-out late-half target is scored, immediate novelty/adaptation is further separated from the primary target.
 
-Multiple-solution opportunity is not shown to increase personal-policy formation under this design.
+This makes the primary a conservative test of **history-dependent individual specialization under equal current opportunity**.
 
 ---
 
@@ -296,13 +315,17 @@ Do not add a separate arbitrary positive-fraction gate to the primary randomized
 
 ---
 
-# 8. Formation endpoint — early versus late OPEN history
+# 8. Formation endpoint — early versus late OPEN acquisition history
+
+This is secondary to the randomized common-OPEN primary.
 
 Within the OPEN-acquired family only:
 
 - early history = fixed first m admissible OPEN acquisition trials;
 - late history = fixed last m admissible OPEN acquisition trials;
-- target = common OPEN probe.
+- target = the frozen early common-OPEN probe half.
+
+This asks whether the personal organization visible at reopening is better predicted by later than earlier multi-solution history.
 
 Define:
 
