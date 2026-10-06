@@ -14,7 +14,7 @@ spec=importlib.util.spec_from_file_location("P",HERE/"carollia_fixed_two_axis_va
 P=importlib.util.module_from_spec(spec);spec.loader.exec_module(P)
 
 spec2=importlib.util.spec_from_file_location("T",HERE/"carollia_turn_conditioned_null_v1.py")
-T=importlib.util.module_from_spec(spec2);spec.loader.exec_module(T)
+T=importlib.util.module_from_spec(spec2);spec2.loader.exec_module(T)
 
 spec3=importlib.util.spec_from_file_location("G",HERE/"geometry_only_policy_v1.py")
 G=importlib.util.module_from_spec(spec3);spec3.loader.exec_module(G)
