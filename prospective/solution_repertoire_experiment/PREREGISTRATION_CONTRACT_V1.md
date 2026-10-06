@@ -15,6 +15,7 @@ Parent:
 - RANDOMIZATION_AND_INTERFERENCE_GUARD_V1.md
 - ATTRITION_AND_MISSING_DATA_CONTRACT_V1.md
 - ENGINEERING_PILOT_CONTRACT_V1.md
+- PARAMETRIC_MATCHED_FAMILY_GEOMETRY_V1.md
 - MATCHED_FAMILY_ENGINEERING_RECEIPT_V1.md
 - SAMPLE_SIZE_PLANNING_V1.md
 - DESIGN_READINESS_V1.md
@@ -70,7 +71,15 @@ This hierarchy is fixed before common-OPEN outcome opening.
 
 ## 2. Matched environment requirement
 
-Families A and B must be constructed as geometry-matched / graph-isomorphic task families as far as physically possible.
+Families A and B must implement the frozen normalized topology in PARAMETRIC_MATCHED_FAMILY_GEOMETRY_V1.md.
+
+Family A resolves horizontal then vertical choice.
+
+Family B resolves vertical then horizontal choice.
+
+Both encode the same four route states {L/R} × {Low/High}, with equal normalized horizontal and vertical offset d=0.20L.
+
+The normalized audit fixes equal path length and geometric demand; the engineering pilot chooses only the common physical scale and construction tolerances.
 
 Before animal outcome collection, record for every corresponding route:
 - route-graph identity;
@@ -416,8 +425,8 @@ After outcome opening do not:
 
 Must all be complete:
 
-- [ ] physical A/B engineering receipt;
-- [ ] route-isomorphism mapping;
+- [ ] physical A/B engineering receipt with scale/tolerances;
+- [x] normalized route-isomorphism mapping frozen in PARAMETRIC_MATCHED_FAMILY_GEOMETRY_V1.md;
 - [ ] numeric capability rule;
 - [x] exact acquisition trial count frozen: 12 valid flights per family;
 - [x] exact probe trial count frozen: 16 valid flights per family;
