@@ -78,19 +78,21 @@ def main():
     assert abs(p - 1 / 256) < 1e-12
     assert n == 256
 
-    # Fixed-subset attrition sanity check:
-    # remove both family scores for one randomized animal, but retain all
-    # original rows and therefore all 256 legal assignments.
+    # Missing primary scores are not an inferential rescue path.
+    # Attrition is governed by ATTRITION_AND_MISSING_DATA_CONTRACT_V1.md.
+    # The reference inferencer should fail rather than silently complete-case.
     missing_id = rows[0]["animal_id"]
     attrition_scores = {
         key: value
         for key, value in strong_scores.items()
         if key[0] != missing_id
     }
-    obs_a, p_a, n_a = exact_one_sided_p(rows, attrition_scores, observed)
-    assert float(obs_a) == float(obs_a)
-    assert 0.0 < p_a <= 1.0
-    assert n_a == 256
+    try:
+        exact_one_sided_p(rows, attrition_scores, observed)
+    except KeyError:
+        pass
+    else:
+        raise AssertionError("missing family scores must not be silently accepted")
 
     # Five blocks -> 1,024 legal assignments.
     rows20 = synthetic_rows(5)
