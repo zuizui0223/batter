@@ -23,7 +23,7 @@ When files differ, use this order:
 9. `DESIGNED_SOLUTION_REPERTOIRE_EXPERIMENT_V1.md`
 10. planning / literature documents.
 
-`PRIMARY_POLICY_ENDPOINT_APPENDIX_V1.md`, `ATTRITION_AND_MISSING_DATA_RULE_V1.md`, and `MISSING_DATA_ATTRITION_RULE_V1.md` are superseded compatibility records and are not authoritative.
+`MISSING_DATA_ATTRITION_RULE_V1.md` is a superseded compatibility record and is not authoritative. Any earlier endpoint or attrition drafts not listed in the authoritative order above must not control confirmatory inference.
 
 The structural design document explains the biological logic; the preregistration contract and endpoint files control confirmatory inference.
 
