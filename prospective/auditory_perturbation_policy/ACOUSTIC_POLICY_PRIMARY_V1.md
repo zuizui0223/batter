@@ -117,3 +117,21 @@ Report all K_i and all 24 null values.
 A reversible auditory-processing perturbation changes expressed behavior while preserving a detectable individual-specific multivariate acoustic organization across the perturbation.
 
 It does not identify where that organization is stored, whether it is learned or intrinsic, or whether it is the same carrier as Rhino I/M or wild vertical individuality.
+
+
+## Structural opening receipt
+
+The outcome-blind structural audit completed before numerical opening.
+
+Frozen receipt:
+- jane: Saline 37 / Ligand 25 source-eligible trials;
+- bea: Saline 41 / Ligand 47;
+- jason: Saline 36 / Ligand 36;
+- stella: Saline 30 / Ligand 8;
+- all four required acoustic fields present.
+
+Verdict:
+
+**PASS_OPEN_NUMERIC_PRIMARY**
+
+This receipt changes no endpoint, scaling, statistic, support threshold, null, or claim boundary.
