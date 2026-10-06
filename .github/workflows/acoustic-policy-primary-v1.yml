@@ -9,6 +9,10 @@ on:
       - ".github/workflows/acoustic-policy-primary-v1.yml"
   workflow_dispatch:
 
+concurrency:
+  group: acoustic-policy-primary-v1-${{ github.ref }}
+  cancel-in-progress: true
+
 permissions:
   contents: write
 
