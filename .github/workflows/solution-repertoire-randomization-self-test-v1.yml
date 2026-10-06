@@ -1,0 +1,25 @@
+name: solution-repertoire-randomization-self-test-v1
+
+on:
+  push:
+    paths:
+      - "prospective/solution_repertoire_experiment/**"
+      - ".github/workflows/solution-repertoire-randomization-self-test-v1.yml"
+  pull_request:
+    paths:
+      - "prospective/solution_repertoire_experiment/**"
+      - ".github/workflows/solution-repertoire-randomization-self-test-v1.yml"
+
+jobs:
+  self-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run restricted-randomization reference test
+        working-directory: prospective/solution_repertoire_experiment
+        run: python randomization_reference_self_test_v1.py
+      - name: Run randomization design tests
+        run: python prospective/solution_repertoire_experiment/test_randomization_design_v1.py

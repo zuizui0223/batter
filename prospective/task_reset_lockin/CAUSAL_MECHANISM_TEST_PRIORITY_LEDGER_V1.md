@@ -474,15 +474,41 @@ Do not:
 
 ## New priority 1 — designed solution-repertoire manipulation
 
-The strongest missing causal test is a within-individual experiment where obstacle/affordance geometry is known and the number/structure of feasible movement solutions is experimentally controlled.
+**PROSPECTIVE CAUSAL ARCHITECTURE NOW FROZEN TO ENGINEERING-PILOT STAGE:**  
+`prospective/solution_repertoire_experiment/README.md`
 
-Required:
+The experiment now has:
+
+- direct ecological P1: held-out route-choice individual specialization;
+- fixed-sequence P2: transparent FlightIntensity / ManeuveringExtent organization;
+- two matched A/B obstacle families;
+- randomized OPEN-versus-CONSTRAINED acquisition history within individual;
+- equal four-route current opportunity at the confirmatory probe;
+- exact restricted four-animal block randomization;
+- fail-closed post-treatment attrition rule;
+- frozen acquisition = 12 valid flights/family;
+- frozen common-OPEN probe = 16 valid flights/family (8 early + 8 late);
+- normalized four-route geometry {L/R} × {Low/High};
+- Family A = horizontal then vertical;
+- Family B = vertical then horizontal;
+- exact normalized path/demand matching audited computationally.
+
+The remaining blockers are physical scale, construction tolerances, tracking-validity thresholds, engineering pilot closeout and new confirmatory animals.
+
+Do not reopen same-archive mechanism fishing while these experimental blockers are unresolved.
+
+The strongest missing causal test is therefore no longer a vague proposal; it is operationalized as a prospective experiment manipulating the number of feasible solutions during personal history while holding current solution opportunity equal at test.
+
+Required for the confirmatory primary:
 - same biological individuals;
 - repeated trials;
-- explicit environment geometry;
-- narrow / moderate / broad feasible-solution conditions;
-- reopening of a prior solution repertoire;
+- explicit matched environment geometry;
+- randomized **one-solution versus four-solution acquisition**;
+- a common four-solution probe in both matched environments;
+- reopening of the prior solution repertoire;
 - portable-policy and realized-geometry measurement.
+
+A two-solution condition is reserved for an independent dose-response extension after the binary causal contrast is tested. It is not required for the primary and cannot be added post hoc to rescue it.
 
 Primary causal question:
 

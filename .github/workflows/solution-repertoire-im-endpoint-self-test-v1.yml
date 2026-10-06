@@ -1,0 +1,27 @@
+name: solution-repertoire-im-endpoint-self-test-v1
+
+on:
+  push:
+    paths:
+      - "prospective/solution_repertoire_experiment/primary_im_endpoint_v1.py"
+      - "prospective/solution_repertoire_experiment/primary_im_endpoint_self_test_v1.py"
+      - ".github/workflows/solution-repertoire-im-endpoint-self-test-v1.yml"
+  pull_request:
+    paths:
+      - "prospective/solution_repertoire_experiment/primary_im_endpoint_v1.py"
+      - "prospective/solution_repertoire_experiment/primary_im_endpoint_self_test_v1.py"
+      - ".github/workflows/solution-repertoire-im-endpoint-self-test-v1.yml"
+
+jobs:
+  self-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install numpy
+        run: python -m pip install numpy
+      - name: Run P2 I/M endpoint self-test
+        working-directory: prospective/solution_repertoire_experiment
+        run: python primary_im_endpoint_self_test_v1.py
