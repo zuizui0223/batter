@@ -111,6 +111,78 @@ This weakens a pure body-size / speed-scale explanation.
 
 ---
 
+# 3b. Geometry individuality is distributed across coordinative components
+
+The scale-free geometry signal is not carried by one narrow route statistic.
+
+A frozen post-primary family ablation divided the eight geometry features into:
+
+### G — global route organization
+- path efficiency;
+- horizontal displacement ratio;
+- absolute vertical displacement ratio;
+- vertical range ratio.
+
+### H — horizontal maneuver geometry
+- median and p90 absolute horizontal turn angle.
+
+### V — vertical maneuver geometry
+- median and p90 absolute vertical slope.
+
+Family-only results:
+
+- G only:
+  - K = **+0.40777**
+  - 5/5 positive
+  - p = **0.0088**
+
+- H only:
+  - K = **+0.29605**
+  - 5/5 positive
+  - p = **0.0089**
+
+- V only:
+  - K = **-0.04844**
+  - 2/5 positive
+  - p = **0.5906**
+
+Leave-family-out results:
+
+- drop G:
+  - K = **+0.17413**
+  - 5/5 positive
+  - p = **0.0461**
+
+- drop H:
+  - K = **+0.30366**
+  - 5/5 positive
+  - p = **0.0184**
+
+- drop V:
+  - K = **+0.46622**
+  - 5/5 positive
+  - p = **0.0111**
+
+Frozen diagnostic verdict:
+
+**ROBUST_TO_ALL_FAMILY_ABLATIONS**
+
+Therefore portable scale-free geometry identity is distributed across at least:
+- global route organization;
+- horizontal maneuver organization.
+
+Vertical slope alone is not a portable carrier.
+
+The strongest bounded interpretation is:
+
+> **the personal movement state is a distributed coordinative organization rather than one scalar speed, verticality or turning trait.**
+
+This remains compatible with motor abundance / degeneracy, but does not prove it.
+
+Direct environmental solution abundance remains unmeasured.
+
+---
+
 # 4. Empirical expression
 
 Controlled *Pipistrellus kuhlii* sensory perturbation shows that the population operating state can move while personal identity remains.
