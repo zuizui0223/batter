@@ -35,7 +35,7 @@ A>0.
 Each of K initially equivalent solutions receives:
 
 [
-a_K=rac{A}{K}.
+a_K=\frac{A}{K}.
 ]
 
 Thus every environment begins with the same total prior/exploration strength A.
@@ -53,7 +53,7 @@ The next choice is:
 [
 P_i(kmid n)
 =
-rac{A/K+N_{ik}(n)}
+\frac{A/K+N_{ik}(n)}
 {A+n}.
 ]
 
@@ -68,18 +68,18 @@ There is:
 The limiting personal solution distribution is:
 
 [
-	heta_i
-sim
-mathrm{Dirichlet}
+\\theta_i
+\sim
+\mathrm{Dirichlet}
 left(
-rac{A}{K},ldots,rac{A}{K}
-ight).
+\frac{A}{K},\ldots,\frac{A}{K}
+\right).
 ]
 
 Population expectation remains uniform:
 
 [
-E[	heta_{ik}]=rac1K.
+E[\\theta_{ik}]=\frac1K.
 ]
 
 Thus persistent individual differences arise by stochastic symmetry breaking alone.
@@ -91,51 +91,51 @@ Thus persistent individual differences arise by stochastic symmetry breaking alo
 For two future choices from the same individual:
 
 [
-P_{mathrm{self}}
+P_{\mathrm{self}}
 =
-Eleft[sum_k	heta_{ik}^2ight]
+Eleft[\sum_k\\theta_{ik}^2\right]
 =
-rac{A/K+1}{A+1}
+\frac{A/K+1}{A+1}
 =
-rac{A+K}{K(A+1)}.
+\frac{A+K}{K(A+1)}.
 ]
 
 For two independent individuals:
 
 [
-P_{mathrm{other}}
+P_{\mathrm{other}}
 =
-rac1K.
+\frac1K.
 ]
 
 Therefore the exact self-history identity advantage is:
 
 [
-oxed{
-Delta_K
+\boxed{
+\Delta_K
 =
-P_{mathrm{self}}
+P_{\mathrm{self}}
 -
-P_{mathrm{other}}
+P_{\mathrm{other}}
 =
-rac{K-1}{K(A+1)}
+\frac{K-1}{K(A+1)}
 }
 ]
 
 or equivalently:
 
 [
-Delta_K
+\Delta_K
 =
-rac{1-1/K}{A+1}.
+\frac{1-1/K}{A+1}.
 ]
 
 For fixed total exploration mass A:
 
 [
-rac{partial Delta_K}{partial K}
+\frac{partial \Delta_K}{partial K}
 =
-rac{1}{K^2(A+1)}
+\frac{1}{K^2(A+1)}
 >0.
 ]
 
@@ -148,17 +148,17 @@ Boundary:
 [
 K=1
 Rightarrow
-Delta_K=0.
+\Delta_K=0.
 ]
 
 With only one feasible solution, stochastic personal specialization cannot emerge in this model.
 
-As (K	oinfty):
+As (K\to\inftyoinfty):
 
 [
-Delta_K
-	o
-rac1{A+1}.
+\Delta_K
+\to
+\frac1{A+1}.
 ]
 
 The effect saturates.
@@ -170,12 +170,12 @@ The effect saturates.
 For the symmetric Dirichlet:
 
 [
-mathrm{Cov}(	heta)
+\mathrm{Cov}(\theta)
 =
-rac{1}{A+1}
+\frac{1}{A+1}
 left[
-mathrm{diag}(mu)-mumu^T
-ight],
+\mathrm{diag}(mu)-mumu^T
+\right],
 ]
 
 where:
@@ -183,25 +183,25 @@ where:
 [
 mu=
 left(
-rac1K,ldots,rac1K
-ight).
+\frac1K,\ldots,\frac1K
+\right).
 ]
 
 For two independent individuals:
 
 [
-E|	heta_i-	heta_j|^2
+E|\\theta_i-\\theta_j|^2
 =
-2,mathrm{tr}{mathrm{Cov}(	heta)}.
+2,\mathrm{tr}{\mathrm{Cov}(\theta)}.
 ]
 
 Hence:
 
 [
-oxed{
-E|	heta_i-	heta_j|^2
+\boxed{
+E|\\theta_i-\\theta_j|^2
 =
-rac{2(K-1)}{K(A+1)}
+\frac{2(K-1)}{K(A+1)}
 }
 ]
 
@@ -216,7 +216,7 @@ Again:
 [
 K=1
 Rightarrow
-E|	heta_i-	heta_j|^2=0.
+E|\\theta_i-\\theta_j|^2=0.
 ]
 
 ---
@@ -238,16 +238,16 @@ Large A:
 Thus the model has two separable ingredients:
 
 [
-oxed{
-	ext{solution abundance }K
+\boxed{
+\text{solution abundance }K
 }
 ]
 
 and
 
 [
-oxed{
-	ext{history sensitivity }1/(A+1).
+\boxed{
+\text{history sensitivity }1/(A+1).
 }
 ]
 
@@ -264,12 +264,12 @@ Both are required.
 The model suggests an ecological formation principle:
 
 [
-oxed{
-	ext{multiple feasible solutions}
-	imes
-	ext{history sensitivity}
-ightarrow
-	ext{individual differentiation}
+\boxed{
+\text{multiple feasible solutions}
+\times
+\text{history sensitivity}
+\rightarrow
+\text{individual differentiation}
 }
 ]
 
@@ -279,7 +279,7 @@ The earliest two valid days are not a robust late template.
 
 Recent personal history becomes much more predictive.
 
-Thus the empirical process is not well described by an immutable initial (	heta_i).
+Thus the empirical process is not well described by an immutable initial (\\theta_i).
 
 A more realistic model lets the effective policy evolve while experience accumulates.
 
@@ -294,7 +294,7 @@ Now separate latent personal policy from observable movement.
 Suppose the latent state has K solutions:
 
 [
-	heta_iinDelta^{K-1}.
+\\theta_iinDelta^{K-1}.
 ]
 
 Current context maps those K latent solutions into only M distinguishable expressed outcomes.
@@ -302,7 +302,7 @@ Current context maps those K latent solutions into only M distinguishable expres
 Let:
 
 [
-p_i=C	heta_i,
+p_i=C\\theta_i,
 ]
 
 where C is a many-to-one expression map.
@@ -313,42 +313,42 @@ Because Dirichlet distributions are closed under aggregation:
 
 [
 p_i
-sim
-mathrm{Dirichlet}
+\sim
+\mathrm{Dirichlet}
 left(
-rac{A}{M},ldots,rac{A}{M}
-ight).
+\frac{A}{M},\ldots,\frac{A}{M}
+\right).
 ]
 
 Therefore observed between-individual divergence becomes:
 
 [
-oxed{
+\boxed{
 E|p_i-p_j|^2
 =
-rac{2(M-1)}{M(A+1)}
+\frac{2(M-1)}{M(A+1)}
 }
 ]
 
 while the latent divergence remains:
 
 [
-rac{2(K-1)}{K(A+1)}.
+\frac{2(K-1)}{K(A+1)}.
 ]
 
 The expression-compression ratio is:
 
 [
-oxed{
-R_{mathrm{expr}}
+\boxed{
+R_{\mathrm{expr}}
 =
-rac{
+\frac{
 E|p_i-p_j|^2
 }{
-E|	heta_i-	heta_j|^2
+E|\\theta_i-\\theta_j|^2
 }
 =
-rac{K(M-1)}
+\frac{K(M-1)}
 {M(K-1)}
 }
 ]
@@ -375,16 +375,16 @@ all individuals show the same observed state:
 p_i=p_j
 ]
 
-even though their latent (	heta_i) remain different.
+even though their latent (\\theta_i) remain different.
 
 This gives an exact distinction between:
 
 [
-oxed{
-	ext{storage}
+\boxed{
+\text{storage}
 
-eq
-	ext{expression}.
+\neq
+\text{expression}.
 }
 ]
 
@@ -399,8 +399,8 @@ If multiple latent control solutions map onto overlapping or identical physical 
 Thus:
 
 [
-	heta_i
-eq	heta_j
+\\theta_i
+eq\\theta_j
 ]
 
 can coexist with:
@@ -420,15 +420,15 @@ for all individuals even while latent policies remain individualized.
 Therefore the model reproduces:
 
 [
-oxed{
-	ext{policy individuality}
+\boxed{
+\text{policy individuality}
 
 otRightarrow
-	ext{spatial partitioning}.
+\text{spatial partitioning}.
 }
 ]
 
-This is the discrete abundance counterpart of the continuous (f_i=G	heta_i) result in v1.
+This is the discrete abundance counterpart of the continuous (f_i=G\\theta_i) result in v1.
 
 ---
 
@@ -438,11 +438,11 @@ A sensory or physical perturbation can change the expression map:
 
 [
 C_0
-ightarrow
+\rightarrow
 C_1
 ]
 
-without changing the stored personal state (	heta_i).
+without changing the stored personal state (\\theta_i).
 
 Predictions:
 
@@ -475,13 +475,13 @@ An easier task can collapse them.
 Therefore:
 
 [
-	ext{task difficulty}
+\text{task difficulty}
 
-otequiv
-	ext{solution abundance}
+\not\equiv
+\text{solution abundance}
 
-otequiv
-	ext{expression resolution}.
+\not\equiv
+\text{expression resolution}.
 ]
 
 This is why the 10-cm masker attenuation cannot be promoted into:
@@ -497,14 +497,14 @@ The foam-target result already provides a boundary.
 Suppose context narrows expression temporarily:
 
 [
-C_{mathrm{broad}}
-ightarrow
-C_{mathrm{narrow}}
-ightarrow
-C_{mathrm{broad}}.
+C_{\mathrm{broad}}
+\rightarrow
+C_{\mathrm{narrow}}
+\rightarrow
+C_{\mathrm{broad}}.
 ]
 
-If latent (	heta_i) is retained, returning to the original context immediately recovers personal ordering.
+If latent (\\theta_i) is retained, returning to the original context immediately recovers personal ordering.
 
 If the latent state itself is overwritten, recovery should require new history.
 
@@ -612,15 +612,15 @@ The exact theoretical signature is:
 [
 K=1
 Rightarrow
-Delta_K=0,
+\Delta_K=0,
 ]
 
 but for (K>1):
 
 [
-Delta_K
+\Delta_K
 =
-rac{K-1}{K(A+1)}
+\frac{K-1}{K(A+1)}
 >0.
 ]
 
