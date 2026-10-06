@@ -13,7 +13,7 @@ JAE v0.4.0 remains frozen.
 
 ## Current empirical object
 
-Strongly supported:
+Strongly supported in the controlled / independent experimental programme:
 
 > **persistent low-dimensional personal movement-policy bias / coordinate**
 
@@ -23,10 +23,28 @@ Key evidence:
 - held-out pair-geometry prediction;
 - training-only normalization robustness;
 - external *Carollia* fixed-axis validation;
-- wild *P. hastatus* H/V carrier;
+- controlled *Pipistrellus kuhlii* sensory-perturbation retention;
 - peer-day residual identity.
 
-Not established as general stable individual traits:
+These results do not constitute equally independent biological replications. In particular, the detailed *Rhinolophus* mechanism diagnostics repeatedly use the same five biological individuals and therefore localize structure within that experiment rather than increasing biological sample size.
+
+### Field evidence boundary
+
+The wild field programme has a lower evidentiary status.
+
+The preregistered scalar FlightIntensity persistence gate required >=3 of 4 panels and failed at 2/4. Under the frozen contract this closed the policy-to-vertical-shape bridge and prohibited substitution of another policy axis.
+
+Later 360-s harmonization and H/V decomposition were explicitly post-outcome diagnostics. The H/V results therefore identify a **candidate multidimensional field representation**, not a confirmed wild carrier.
+
+Likewise, analyses restricted to the two panels that had already passed the carrier screen are selection-conditioned diagnostics. They cannot provide confirmatory evidence for the previously closed bridge.
+
+Therefore:
+
+> **wild *P. hastatus* H/V carrier is exploratory / hypothesis-generating evidence and must not be listed among the strongly supported programme-level evidence.**
+
+Not established as general stable individual traits or confirmed field bridges:
+- a confirmatory wild analogue of the laboratory I/M coordinate;
+- a field carrier-to-vertical-shape bridge;
 - one fixed personal-history forecast centroid;
 - individual peer-context slope;
 - stable individual policy breadth;
@@ -34,7 +52,7 @@ Not established as general stable individual traits:
 
 The remaining causal question is:
 
-> **What part of the portable personal coordinate is intrinsic/biomechanical, learned, or context-gated?**
+> **What part of the experimentally supported portable personal coordinate is intrinsic/biomechanical, learned, or context-gated?**
 
 ---
 
@@ -206,6 +224,18 @@ Decision:
 **DEPRIORITIZED / MECHANISTIC CEILING.**
 
 Do not continue generating new basis rotations, lag breakpoints or context proxies from the same opened archive unless a genuinely new source variable or independent hypothesis is supplied.
+
+No alternate field axis, harmonized representation, or subset selected after seeing the frozen carrier outcome may be promoted into the confirmatory evidence ledger.
+
+Such analyses may:
+- diagnose measurement sensitivity;
+- suggest candidate multidimensional representations;
+- generate hypotheses for a new independent dataset.
+
+They may not:
+- reclassify the frozen 2/4 carrier outcome;
+- reopen the preregistered wild bridge;
+- count as an independent replication of laboratory policy portability.
 
 ---
 
