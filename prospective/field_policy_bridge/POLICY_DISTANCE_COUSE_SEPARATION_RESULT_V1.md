@@ -4,6 +4,8 @@
 
 **NO POSITIVE POLICY-DISTANCE / SPATIAL-SEPARATION ASSOCIATION IN EITHER YEAR.**
 
+**Evidence provenance:** the H/V coordinates used here are post-outcome diagnostics. This downstream analysis is conditional on that exploratory representation and cannot establish the general wild carrier-to-space bridge. See `FIELD_EVIDENCE_PROVENANCE_GUARD_V1.md`.
+
 Authoritative implementation:
 `policy_distance_couse_separation_receipt_v2.py`
 
