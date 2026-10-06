@@ -25,6 +25,9 @@
 - [x] engineering pilot separated permanently from confirmation;
 - [x] randomization reference self-test added;
 - [x] endpoint reference self-test added;
+- [x] inferential attrition/missing-data rule frozen;
+- [x] pilot parameter-selection contract frozen;
+- [x] matched-family engineering receipt template added;
 - [x] same-data Rhino mechanism search remains closed;
 - [x] failed wild field bridge remains closed.
 
@@ -42,7 +45,7 @@
 - [ ] welfare/fatigue stop rule synchronized with facility protocol;
 - [ ] tracking system and valid-trajectory support frozen;
 - [ ] canonical constrained route frozen before treatment assignment;
-- [ ] missing-flight / attempt-ceiling rule frozen.
+- [ ] missing-flight / attempt-ceiling rule frozen after pilot.
 
 ## Blocking items before first common-OPEN outcome
 
@@ -52,7 +55,7 @@
 - [ ] randomization schedule generated;
 - [ ] schedule hash archived;
 - [ ] raw-data schema frozen;
-- [ ] endpoint code hash archived;
+- [ ] endpoint code hash archived at final pre-outcome freeze;
 - [ ] randomization code hash archived;
 - [ ] probe early/late split fixed from final probe count;
 - [ ] no common-OPEN policy outcome inspected.
