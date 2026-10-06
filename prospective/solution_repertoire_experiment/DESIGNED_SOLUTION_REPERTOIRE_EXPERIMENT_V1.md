@@ -189,80 +189,47 @@ distinguish:
 
 ---
 
-# 5. Primary representation
+# 5. Fixed-sequence confirmatory endpoints
 
 Keep route choice and movement policy separate.
 
-## 5.1 Coarse personal movement policy — primary
+## P1 — direct ecological endpoint: route-choice individual specialization
 
-Retain the existing interpretable coordinate:
+During the common OPEN probe, both matched families contain the same four-route opportunity.
+
+Use the frozen early-half -> late-half held-out route-identity score in:
+
+PRIMARY_ROUTE_SPECIALIZATION_ENDPOINT_V1.md.
+
+Treatment statistic:
 
 \[
-\theta_{i,t}=(I_{i,t},M_{i,t}),
+\Delta_R
+=
+R_{OPEN-acquired}
+-
+R_{CONSTRAINED-acquired}.
+\]
+
+This is the direct test of whether **solution opportunity during acquisition causes stronger individual specialization**.
+
+## P2 — mechanistic endpoint: transparent I/M organization
+
+Only after P1 support, test whether the acquisition treatment also changes reproducible organization in the fixed transparent movement-policy coordinate:
+
+\[
+\theta=(I,M),
 \]
 
 where:
 - I = FlightIntensity;
 - M = ManeuveringExtent.
 
-Feature definitions must be frozen before new outcomes are scored.
+Use the exact raw features, acquisition-only family scaling, fixed weights, Euclidean metric and common-probe early/late identity architecture in:
 
-No weights may be learned from the new identity outcome.
+PRIMARY_IM_ENDPOINT_APPENDIX_V1.md.
 
-This avoids making the primary result a trivial consequence of four route labels being available in one condition.
-
-## 5.2 Route choice — secondary
-
-For every common-OPEN trial record:
-- selected route class;
-- success/failure;
-- family;
-- phase;
-- trial number.
-
-Route classes are defined from obstacle topology before trajectory outcomes are opened.
-
-## 5.3 Fine trajectory geometry — downstream expression
-
-Use one predeclared scale-free trajectory representation.
-
-It is a secondary realization layer, not the primary causal carrier.
-
----
-
-# 6. Primary causal endpoint — common-OPEN individual organization
-
-The primary endpoint is measured **entirely inside the common OPEN probe**, where both matched families have the same four-route opportunity.
-
-This avoids confounding the treatment effect with a simple acquisition-to-probe geometry change.
-
-For each individual × family:
-
-1. divide the frozen common-OPEN probe into a fixed early half and late half;
-2. estimate the individual's policy centroid from the early half;
-3. score every late-half target against:
-   - its own early-half centroid;
-   - early-half centroids from other eligible individuals in the same family;
-4. compute held-out self-history advantage:
-
-\[
-A_{i,f}
-=
-\operatorname{mean}_{j\neq i}
-d(\theta_{i,late,f},\theta_{j,early,f})
--
-d(\theta_{i,late,f},\theta_{i,early,f}).
-\]
-
-Aggregate:
-- equal target trials within individual × family;
-- equal individuals.
-
-For each animal, the two matched families differ only in acquisition history:
-- OPEN-acquired;
-- CONSTRAINED-acquired.
-
-Primary treatment contrast:
+Treatment statistic:
 
 \[
 \Delta_A
@@ -272,76 +239,110 @@ A_{OPEN-acquired}
 A_{CONSTRAINED-acquired}.
 \]
 
-### Interpretation
+No weights may be learned from the new identity outcome.
 
-Positive Delta_A means that, under the **same current four-route opportunity**, the family in which the animal previously had multiple-solution choice now contains stronger reproducible individual-specific policy organization.
+## Fixed-sequence interpretation
 
-The CONSTRAINED-acquired family has also been exposed to every route during the pre-randomization capability audit. Thus a positive contrast cannot be reduced simply to complete unfamiliarity with the alternative physical routes.
+### P1 supported, P2 supported
 
-Because both families receive an early common-OPEN probe half before the held-out late-half target is scored, immediate novelty/adaptation is further separated from the primary target.
+Solution opportunity causes individual route specialization and the effect extends into the previously identified abstract movement-policy space.
 
-This makes the primary a conservative test of **history-dependent individual specialization under equal current opportunity**.
+### P1 supported, P2 unsupported
+
+Solution opportunity causes route-choice specialization, but the experiment does not establish that the effect is carried by I/M.
+
+### P1 unsupported, P2 positive
+
+Do not rescue the main ecological hypothesis. Report P2 descriptively.
+
+## Fine trajectory geometry
+
+Use one predeclared scale-free trajectory representation only as a downstream realization layer.
+
+It cannot replace a failed P1 or P2.
 
 ---
 
-# 7. Primary randomization null
+# 6. Common-OPEN causal logic
 
-The cleanest null follows the randomized within-individual assignment.
+The confirmatory outcomes are measured **entirely inside the common OPEN probe**, where both matched families have the same four-route opportunity.
 
-Within each animal:
-- preserve all trajectories and outcomes;
-- swap which matched family is labelled OPEN-acquired versus CONSTRAINED-acquired according to the original randomization scheme.
+For both P1 and P2:
 
-Use the exact paired randomization/permutation distribution permitted by the final design.
+1. freeze an even number of probe trials per family;
+2. divide the probe into early and late halves before outcomes are opened;
+3. build individual history from the early half;
+4. score held-out late-half behavior against own versus other-individual early histories;
+5. obtain one family-specific individual-identity score per animal × family;
+6. map each family to OPEN-acquired versus CONSTRAINED-acquired only after the family-specific scores are defined.
 
-This tests the acquisition-opportunity treatment directly.
+This avoids comparing behavior expressed under one-route acquisition directly against behavior expressed under a four-route probe.
 
-It does not permute individual identities for the primary treatment effect.
+The CONSTRAINED-acquired family has also been exposed to every physical route separately during the pre-randomization capability audit, so a positive treatment contrast is not simply complete unfamiliarity with alternative corridors.
 
-### Primary support rule
+Because constrained-history animals experience an early common-OPEN half before late held-out scoring, rapid new learning in the probe can only erode the acquisition-history contrast. The design is therefore conservative for persistent history effects.
 
-Support requires:
-1. observed Delta_A > 0;
-2. paired randomization p <= 0.05.
+---
 
-Robustness must also be reported:
-- fraction of individuals with positive within-individual treatment contrast;
-- leave-one-individual-out Delta_A;
-- maximum single-individual influence.
+# 7. Exact restricted randomization null
 
-If deleting one individual reverses the sign of Delta_A, label the result **fragile / outlier-sensitive** even if the full-sample randomization p <= 0.05.
+The primary causal null follows the randomized assignment of which matched family received OPEN acquisition.
 
-Do not add a separate arbitrary positive-fraction gate to the primary randomized treatment test.
+Keep fixed:
+- biological identity;
+- family A/B;
+- all common-OPEN outcomes;
+- starting-family order;
+- family-specific P1/P2 identity scores.
+
+Within every allowed reassignment under the four-animal block design:
+- relabel which family is OPEN-acquired versus CONSTRAINED-acquired;
+- recompute Delta_R and, if P2 is in the confirmatory chain, Delta_A.
+
+Do not permute biological identities.
+
+Do not use an unrestricted independent sign flip that ignores block/order balance.
+
+Reference:
+- PREREGISTRATION_CONTRACT_V1.md;
+- RANDOMIZATION_AND_INTERFERENCE_GUARD_V1.md;
+- randomization_inference_reference_v1.py.
+
+### P1 support
+
+Requires:
+- Delta_R > 0;
+- exact p_R <= 0.05.
+
+### P2 support
+
+Tested confirmatorily only if P1 passes.
+
+Requires:
+- Delta_A > 0;
+- exact p_A <= 0.05.
+
+For both, report:
+- positive paired-individual fraction;
+- leave-one-individual-out treatment contrast;
+- family-assignment strata;
+- starting-order strata.
+
+A one-individual sign reversal is labelled fragile/outlier-sensitive.
 
 ---
 
 # 8. Formation endpoint — early versus late OPEN acquisition history
 
-This is secondary to the randomized common-OPEN primary.
+This is downstream of the randomized common-OPEN primary.
 
 Within the OPEN-acquired family only:
 
-- early history = fixed first m admissible OPEN acquisition trials;
-- late history = fixed last m admissible OPEN acquisition trials;
-- target = the frozen early common-OPEN probe half.
+- early acquisition history = fixed first m admissible OPEN trials;
+- late acquisition history = fixed last m admissible OPEN trials;
+- target = frozen early common-OPEN behavior.
 
-This asks whether the personal organization visible at reopening is better predicted by later than earlier multi-solution history.
-
-Define:
-
-\[
-Q=A_{late}-A_{early}.
-\]
-
-The null must preserve population-level learning/order while breaking the true individual-history link.
-
-### Q supported
-
-Personal organization becomes more identity-informative through experience with multiple feasible solutions.
-
-### Q unsupported
-
-The individual policy may predate acquisition or may form too quickly for this design to resolve.
+Ask whether late personal history predicts later individual organization better than equally sized early history.
 
 Do not redefine m after inspection.
 
@@ -351,54 +352,58 @@ Do not redefine m after inspection.
 
 For the OPEN-acquired family:
 
-- personal history = late Phase-1 OPEN acquisition;
-- target = earliest admissible Phase-4 exact-reopening trials.
+- personal history = frozen late OPEN acquisition;
+- target = earliest admissible exact-reopening trials after the constrained suppression phase.
 
-Compare own prior history against other individuals' prior histories using the same fixed policy distance.
+A positive calibrated own-history advantage supports persistence/re-expression while ordinary multi-solution expression was temporarily unavailable.
 
-Positive calibrated self-history advantage supports:
-
-> personal organization persisted while its normal multi-solution expression was temporarily prevented.
-
-This is a separate endpoint from the Phase-2 opportunity effect.
+This endpoint cannot rescue failed P1.
 
 ---
 
 # 10. Transformed transfer endpoint
 
-Use Phase-5 transformed OPEN geometry.
-
-Interpretation:
+Use the predeclared transformed OPEN geometry.
 
 ### Exact reopening positive, transformed transfer negative
 
-Personal organization is retained but strongly tied to the learned scene/path coordinates.
+Personal organization is retained but strongly tied to learned scene/path coordinates.
 
 ### Both positive
 
-At least part of the individual organization is more abstract than exact route coordinates.
+At least part of the individual organization transfers beyond exact route coordinates.
 
 ### Both negative
 
-The Phase-2 acquisition effect did not create a durable transferable state.
+Durable storage/transfer is not established.
 
-No nonlinear rescue model is authorized after these outcomes.
+No nonlinear rescue model is authorized.
 
 ---
 
-# 11. Route-choice individuality — secondary
+# 11. Route choice versus policy is a biological decomposition, not endpoint shopping
 
-Because both matched families are four-route environments during the common probe, route-choice outcomes are directly comparable there.
+P1 asks whether opportunity causes **individual specialization itself**.
 
-For each family:
-- estimate held-out individual route-choice distributions;
-- score own-history versus other-individual/pool predictions with a proper probabilistic score.
+P2 asks whether that specialization occupies the previously identified **portable movement-policy coordinate**.
 
-Do not use raw entropy as evidence for individuality.
+Geometry asks how the policy is realized.
 
-A stronger OPEN-acquired route-choice identity signal than CONSTRAINED-acquired signal is supportive secondary evidence for opportunity-driven specialization.
+The hierarchy is therefore:
 
-It is not allowed to replace a failed primary I/M treatment contrast.
+\[
+\boxed{
+\text{solution opportunity}
+\rightarrow
+\text{individual route specialization}
+\rightarrow
+\text{abstract personal policy?}
+\rightarrow
+\text{fine realization}
+}
+\]
+
+A downstream layer cannot retroactively rescue a failed upstream layer.
 
 ---
 
@@ -411,7 +416,7 @@ Ask whether acquisition treatment changes:
 
 These analyses are downstream and must be frozen before their outcomes are opened.
 
-Do not use them to redefine the primary policy coordinate.
+Do not use them to redefine P1 or P2.
 
 ---
 
