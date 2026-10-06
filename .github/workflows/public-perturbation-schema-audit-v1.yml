@@ -8,12 +8,16 @@ on:
       - ".github/workflows/public-perturbation-schema-audit-v1.yml"
   workflow_dispatch:
 
+concurrency:
+  group: public-perturbation-schema-${{ github.ref }}
+  cancel-in-progress: true
+
 permissions:
   contents: write
 
 jobs:
   audit:
-    runs-on: ubuntu-latest
+    runs-on: macos-15
     steps:
       - uses: actions/checkout@v4
         with:
