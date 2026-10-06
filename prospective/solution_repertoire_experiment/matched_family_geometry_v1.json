@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "coordinate_system": "normalized_start_goal",
+  "L": 1,
+  "x1": 0.3333333333333333,
+  "x2": 0.6666666666666666,
+  "d": 0.2,
+  "start": [
+    0,
+    0,
+    0
+  ],
+  "goal": [
+    1,
+    0,
+    0
+  ],
+  "canonical_constrained_route": "R1",
+  "routes": {
+    "R1": {
+      "h": -1,
+      "v": -1
+    },
+    "R2": {
+      "h": -1,
+      "v": 1
+    },
+    "R3": {
+      "h": 1,
+      "v": -1
+    },
+    "R4": {
+      "h": 1,
+      "v": 1
+    }
+  },
+  "families": {
+    "A": "horizontal_then_vertical",
+    "B": "vertical_then_horizontal"
+  }
+}
