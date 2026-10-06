@@ -16,12 +16,14 @@ When files differ, use this order:
 2. `PRIMARY_ROUTE_SPECIALIZATION_ENDPOINT_V1.md`
 3. `PRIMARY_IM_ENDPOINT_APPENDIX_V1.md`
 4. `RANDOMIZATION_AND_INTERFERENCE_GUARD_V1.md`
-5. `MISSING_DATA_ATTRITION_RULE_V1.md`
+5. `ATTRITION_AND_MISSING_DATA_CONTRACT_V1.md`
 6. `ENGINEERING_PILOT_CONTRACT_V1.md`
 7. `MATCHED_FAMILY_ENGINEERING_RECEIPT_V1.md`
 8. `DESIGN_READINESS_V1.md`
 9. `DESIGNED_SOLUTION_REPERTOIRE_EXPERIMENT_V1.md`
 10. planning / literature documents.
+
+`PRIMARY_POLICY_ENDPOINT_APPENDIX_V1.md`, `ATTRITION_AND_MISSING_DATA_RULE_V1.md`, and `MISSING_DATA_ATTRITION_RULE_V1.md` are superseded compatibility records and are not authoritative.
 
 The structural design document explains the biological logic; the preregistration contract and endpoint files control confirmatory inference.
 
@@ -38,7 +40,7 @@ Question:
 Statistic:
 `Delta_R`.
 
-P1 must pass before a confirmatory downstream mechanistic claim.
+P1 is the confirmatory ecological primary and must pass before P2 can be promoted as confirmatory mechanistic evidence.
 
 ### P2 — transparent I/M organization
 
@@ -91,8 +93,10 @@ Preferred if feasible:
 Hard minimum:
 - 16 / 4 complete blocks.
 
-Whole-block attrition rule:
-see `MISSING_DATA_ATTRITION_RULE_V1.md`.
+Fail-closed attrition rule:
+see `ATTRITION_AND_MISSING_DATA_CONTRACT_V1.md`.
+
+Any post-treatment incomplete randomized block stops the clean confirmatory claim; any residual complete-block analysis is sensitivity-only.
 
 ## Probe planning
 
