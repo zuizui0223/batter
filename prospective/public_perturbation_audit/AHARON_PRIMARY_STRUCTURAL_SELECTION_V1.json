@@ -1,0 +1,333 @@
+{
+  "status": "STRUCTURAL_FIGURE_SELECTED_NEEDS_FINITE_MASK_AUDIT",
+  "provenance": {
+    "source_workflow_run": 37467657772,
+    "source_job": 112282647975,
+    "source_step": "Run public UI structural audit",
+    "note": "Audit step succeeded; result commit failed only because of concurrent non-fast-forward branch update."
+  },
+  "turning_variables_found": 12,
+  "figure_evaluations": [
+    {
+      "figure": 1,
+      "eligible": true,
+      "conditions": [
+        "300",
+        "75",
+        "con"
+      ],
+      "common_bats": [
+        "500",
+        "503",
+        "505",
+        "510"
+      ],
+      "n_common_bats": 4,
+      "n_conditions": 3,
+      "shape_gate_ok": true,
+      "bad_shapes": [],
+      "records": [
+        {
+          "bat": "500",
+          "condition": "300",
+          "shape": [
+            16,
+            10
+          ],
+          "class": "double",
+          "container_path": "Figure 1.zip/Figure 1/500_YRLturns_together_300.mat",
+          "variable": "totalTurns"
+        },
+        {
+          "bat": "500",
+          "condition": "75",
+          "shape": [
+            12,
+            10
+          ],
+          "class": "double",
+          "container_path": "Figure 1.zip/Figure 1/500_YRLturns_together_75.mat",
+          "variable": "totalTurns"
+        },
+        {
+          "bat": "500",
+          "condition": "con",
+          "shape": [
+            12,
+            10
+          ],
+          "class": "double",
+          "container_path": "Figure 1.zip/Figure 1/500_YRLturns_together_con.mat",
+          "variable": "totalTurns"
+        },
+        {
+          "bat": "503",
+          "condition": "300",
+          "shape": [
+            10,
+            15
+          ],
+          "class": "double",
+          "container_path": "Figure 1.zip/Figure 1/503_YRLturns_together_300.mat",
+          "variable": "totalTurns"
+        },
+        {
+          "bat": "503",
+          "condition": "75",
+          "shape": [
+            10,
+            15
+          ],
+          "class": "double",
+          "container_path": "Figure 1.zip/Figure 1/503_YRLturns_together_75.mat",
+          "variable": "totalTurns"
+        },
+        {
+          "bat": "503",
+          "condition": "con",
+          "shape": [
+            10,
+            15
+          ],
+          "class": "double",
+          "container_path": "Figure 1.zip/Figure 1/503_YRLturns_together_con.mat",
+          "variable": "totalTurns"
+        },
+        {
+          "bat": "505",
+          "condition": "300",
+          "shape": [
+            14,
+            10
+          ],
+          "class": "double",
+          "container_path": "Figure 1.zip/Figure 1/505_YRLturns_together_300.mat",
+          "variable": "totalTurns"
+        },
+        {
+          "bat": "505",
+          "condition": "75",
+          "shape": [
+            10,
+            10
+          ],
+          "class": "double",
+          "container_path": "Figure 1.zip/Figure 1/505_YRLturns_together_75.mat",
+          "variable": "totalTurns"
+        },
+        {
+          "bat": "505",
+          "condition": "con",
+          "shape": [
+            14,
+            10
+          ],
+          "class": "double",
+          "container_path": "Figure 1.zip/Figure 1/505_YRLturns_together_con.mat",
+          "variable": "totalTurns"
+        },
+        {
+          "bat": "510",
+          "condition": "300",
+          "shape": [
+            14,
+            15
+          ],
+          "class": "double",
+          "container_path": "Figure 1.zip/Figure 1/510_YRLturns_together_300.mat",
+          "variable": "totalTurns"
+        },
+        {
+          "bat": "510",
+          "condition": "75",
+          "shape": [
+            14,
+            15
+          ],
+          "class": "double",
+          "container_path": "Figure 1.zip/Figure 1/510_YRLturns_together_75.mat",
+          "variable": "totalTurns"
+        },
+        {
+          "bat": "510",
+          "condition": "con",
+          "shape": [
+            12,
+            15
+          ],
+          "class": "double",
+          "container_path": "Figure 1.zip/Figure 1/510_YRLturns_together_con.mat",
+          "variable": "totalTurns"
+        }
+      ]
+    },
+    {
+      "figure": 2,
+      "eligible": false,
+      "reason": "Only three bats (503,505,510) have both moved and no conditions; <4 common bats."
+    },
+    {
+      "figure": 3,
+      "eligible": false,
+      "reason": "Turning endpoint not structurally complete across >=4 bats and >=2 conditions."
+    },
+    {
+      "figure": 4,
+      "eligible": false,
+      "reason": "Not evaluated for selection because Figure 1 already passed the frozen first-eligible rule."
+    }
+  ],
+  "selected": {
+    "figure": 1,
+    "eligible": true,
+    "conditions": [
+      "300",
+      "75",
+      "con"
+    ],
+    "common_bats": [
+      "500",
+      "503",
+      "505",
+      "510"
+    ],
+    "n_common_bats": 4,
+    "n_conditions": 3,
+    "shape_gate_ok": true,
+    "bad_shapes": [],
+    "records": [
+      {
+        "bat": "500",
+        "condition": "300",
+        "shape": [
+          16,
+          10
+        ],
+        "class": "double",
+        "container_path": "Figure 1.zip/Figure 1/500_YRLturns_together_300.mat",
+        "variable": "totalTurns"
+      },
+      {
+        "bat": "500",
+        "condition": "75",
+        "shape": [
+          12,
+          10
+        ],
+        "class": "double",
+        "container_path": "Figure 1.zip/Figure 1/500_YRLturns_together_75.mat",
+        "variable": "totalTurns"
+      },
+      {
+        "bat": "500",
+        "condition": "con",
+        "shape": [
+          12,
+          10
+        ],
+        "class": "double",
+        "container_path": "Figure 1.zip/Figure 1/500_YRLturns_together_con.mat",
+        "variable": "totalTurns"
+      },
+      {
+        "bat": "503",
+        "condition": "300",
+        "shape": [
+          10,
+          15
+        ],
+        "class": "double",
+        "container_path": "Figure 1.zip/Figure 1/503_YRLturns_together_300.mat",
+        "variable": "totalTurns"
+      },
+      {
+        "bat": "503",
+        "condition": "75",
+        "shape": [
+          10,
+          15
+        ],
+        "class": "double",
+        "container_path": "Figure 1.zip/Figure 1/503_YRLturns_together_75.mat",
+        "variable": "totalTurns"
+      },
+      {
+        "bat": "503",
+        "condition": "con",
+        "shape": [
+          10,
+          15
+        ],
+        "class": "double",
+        "container_path": "Figure 1.zip/Figure 1/503_YRLturns_together_con.mat",
+        "variable": "totalTurns"
+      },
+      {
+        "bat": "505",
+        "condition": "300",
+        "shape": [
+          14,
+          10
+        ],
+        "class": "double",
+        "container_path": "Figure 1.zip/Figure 1/505_YRLturns_together_300.mat",
+        "variable": "totalTurns"
+      },
+      {
+        "bat": "505",
+        "condition": "75",
+        "shape": [
+          10,
+          10
+        ],
+        "class": "double",
+        "container_path": "Figure 1.zip/Figure 1/505_YRLturns_together_75.mat",
+        "variable": "totalTurns"
+      },
+      {
+        "bat": "505",
+        "condition": "con",
+        "shape": [
+          14,
+          10
+        ],
+        "class": "double",
+        "container_path": "Figure 1.zip/Figure 1/505_YRLturns_together_con.mat",
+        "variable": "totalTurns"
+      },
+      {
+        "bat": "510",
+        "condition": "300",
+        "shape": [
+          14,
+          15
+        ],
+        "class": "double",
+        "container_path": "Figure 1.zip/Figure 1/510_YRLturns_together_300.mat",
+        "variable": "totalTurns"
+      },
+      {
+        "bat": "510",
+        "condition": "75",
+        "shape": [
+          14,
+          15
+        ],
+        "class": "double",
+        "container_path": "Figure 1.zip/Figure 1/510_YRLturns_together_75.mat",
+        "variable": "totalTurns"
+      },
+      {
+        "bat": "510",
+        "condition": "con",
+        "shape": [
+          12,
+          15
+        ],
+        "class": "double",
+        "container_path": "Figure 1.zip/Figure 1/510_YRLturns_together_con.mat",
+        "variable": "totalTurns"
+      }
+    ]
+  }
+}
