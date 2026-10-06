@@ -166,3 +166,37 @@ Public obstacle geometry remains unavailable.
 ## JAE firewall
 
 No change to JAE v0.4.0.
+
+
+## Paired coarse-versus-fine contrast
+
+A descriptive post-profile comparison asks whether the target-environment identity advantage is larger for the full movement policy than for scale-free detailed geometry.
+
+Environment-wise differences:
+
+- Env1: \(0.7540-0.4000=+0.3540\)
+- Env2: \(0.6938-0.2900=+0.4038\)
+- Env3: \(1.0739-0.4542=+0.6197\)
+- Env4: \(1.3033-0.9974=+0.3059\)
+- Env5: \(1.2966-(-0.2663)=+1.5630\)
+- Env6: \(1.4259-0.8708=+0.5551\)
+- Env7: \(0.2818-0.2040=+0.0777\)
+
+Thus:
+
+\[
+I_{\mathrm{movement},e}
+>
+I_{\mathrm{geometry},e}
+\]
+
+in **7/7 target environments**.
+
+This contrast was noticed after the target-profile output and is descriptive only.
+No new confirmatory p-value is attached.
+
+The importance is conceptual:
+
+> the coarse policy carrier is not merely more often above a transfer threshold; its identity advantage is larger than detailed geometry in every observed target environment.
+
+This strengthens the empirical coarse-to-fine portability hierarchy.
