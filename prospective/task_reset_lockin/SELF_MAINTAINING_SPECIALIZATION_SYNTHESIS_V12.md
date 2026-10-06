@@ -183,6 +183,47 @@ Direct environmental solution abundance remains unmeasured.
 
 ---
 
+# 3c. Geometry portability survives target-normalization removal
+
+The scale-free geometry result also survives a stronger domain-transfer test.
+
+### Target-centered, training-scaled
+
+The held-out environment contributes only its mean; feature SDs come from the other six environments.
+
+- K = **+0.42064**
+- 5/5 positive
+- p = **0.0040**
+
+### Fully training-only global normalization
+
+The held-out environment contributes neither mean nor SD.
+
+- K = **+0.23140**
+- 4/5 positive
+- p = **0.0440**
+
+Thus the geometry-level personal signature is not created by target-environment variance normalization.
+
+Even when the unseen obstacle configuration is transformed entirely with statistics learned from other configurations, portable route-organization identity remains detectable.
+
+Together with the family ablation, this supports:
+
+\[
+\boxed{
+\text{portable personal policy includes distributed, scale-free coordinative geometry}
+}
+\]
+
+rather than only:
+- speed magnitude;
+- absolute movement scale;
+- one target-normalized shape score.
+
+The fully training-only result is weaker and one bat is negative, so do not claim invariant absolute geometry across every task.
+
+---
+
 # 4. Empirical expression
 
 Controlled *Pipistrellus kuhlii* sensory perturbation shows that the population operating state can move while personal identity remains.
