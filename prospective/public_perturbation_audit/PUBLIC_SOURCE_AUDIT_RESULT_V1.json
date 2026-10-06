@@ -1,0 +1,54 @@
+{
+  "generated_utc": "2026-10-06T12:48:52.178831+00:00",
+  "audit_version": 1,
+  "sources": [
+    {
+      "source": {
+        "key": "aharon2017",
+        "dataset_id": "f6mvhj5gj9",
+        "version": 3,
+        "expected_doi": "10.17632/f6mvhj5gj9.3",
+        "expected_title_token": "path-integration"
+      },
+      "metadata": null,
+      "metadata_fetch": null,
+      "files": [],
+      "file_fetch": null,
+      "errors": [
+        {
+          "stage": "metadata",
+          "error": "<HTTPError 401: 'Unauthorized'>"
+        },
+        {
+          "stage": "files",
+          "error": "RuntimeError('file inventory failed: [{\\'mode\\': \\'publics\\', \\'url\\': \\'https://api.data.mendeley.com/datasets/publics/f6mvhj5gj9/files?version=3&%24limit=100\\', \\'error\\': \"<HTTPError 401: \\'Unauthorized\\'>\"}, {\\'mode\\': \\'datasets\\', \\'url\\': \\'https://api.data.mendeley.com/datasets/f6mvhj5gj9/files?version=3&%24limit=100\\', \\'error\\': \"<HTTPError 401: \\'Unauthorized\\'>\"}]')"
+        }
+      ],
+      "verdict": "STOP_DATASET_IDENTITY_OR_API_UNRESOLVED"
+    },
+    {
+      "source": {
+        "key": "ma2025",
+        "dataset_id": "964fv73w94",
+        "version": 1,
+        "expected_doi": "10.17632/964fv73w94.1",
+        "expected_title_token": "masking noise"
+      },
+      "metadata": null,
+      "metadata_fetch": null,
+      "files": [],
+      "file_fetch": null,
+      "errors": [
+        {
+          "stage": "metadata",
+          "error": "<HTTPError 401: 'Unauthorized'>"
+        },
+        {
+          "stage": "files",
+          "error": "RuntimeError('file inventory failed: [{\\'mode\\': \\'publics\\', \\'url\\': \\'https://api.data.mendeley.com/datasets/publics/964fv73w94/files?version=1&%24limit=100\\', \\'error\\': \"<HTTPError 401: \\'Unauthorized\\'>\"}, {\\'mode\\': \\'datasets\\', \\'url\\': \\'https://api.data.mendeley.com/datasets/964fv73w94/files?version=1&%24limit=100\\', \\'error\\': \"<HTTPError 401: \\'Unauthorized\\'>\"}]')"
+        }
+      ],
+      "verdict": "STOP_DATASET_IDENTITY_OR_API_UNRESOLVED"
+    }
+  ]
+}
