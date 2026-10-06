@@ -118,6 +118,30 @@ See:
 - `ROUTE_PRIMARY_PROBE_PLANNING_V1.md`;
 - `ENGINEERING_PILOT_CONTRACT_V1.md`.
 
+## Frozen normalized geometry
+
+Four route states are fixed as:
+- R1 = L × Low;
+- R2 = L × High;
+- R3 = R × Low;
+- R4 = R × High.
+
+Family A:
+- horizontal decision -> vertical decision.
+
+Family B:
+- vertical decision -> horizontal decision.
+
+With normalized L=1, x1=1/3, x2=2/3 and equal offset d=0.20:
+- all A/B routes have identical normalized path length = 1.214622820933;
+- all have total absolute horizontal demand = 0.4;
+- all have total absolute vertical demand = 0.4;
+- geometric turn-angle multiset is identical.
+
+The pilot chooses only physical scale / clearances / tracking-compatible construction, not topology.
+
+See `PARAMETRIC_MATCHED_FAMILY_GEOMETRY_V1.md`.
+
 ## Pilot firewall
 
 Engineering pilots may tune:
