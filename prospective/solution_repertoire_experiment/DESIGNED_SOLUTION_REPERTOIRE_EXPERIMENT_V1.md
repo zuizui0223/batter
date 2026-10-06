@@ -423,17 +423,24 @@ A one-sided paired-effect planning approximation gives, for standardized treatme
 - n=18: about 89% power;
 - n=20: about 92% power.
 
+Although n=14 crosses the approximate 80% planning threshold for d=0.7, the restricted design requires complete four-animal blocks. The confirmatory minimum is therefore n=16, not n=14.
+
 For d = 0.6, n=20 is only about 83%.
 
 Therefore:
 
 Planning target:
-- **18-20 evaluable biological individuals** completing Phases 0-4.
+- **20 evaluable biological individuals** completing Phases 0-4;
+- this yields five complete four-animal restricted-randomization blocks.
+
+Preferred if feasible:
+- 24 evaluable individuals / six complete blocks.
 
 Structural minimum for opening the confirmatory primary:
-- **14 evaluable biological individuals**.
+- **16 evaluable biological individuals**;
+- four complete randomization blocks.
 
-If fewer than 14 complete:
+If fewer than 16 complete:
 - primary = STRUCTURAL STOP;
 - no threshold relaxation;
 - descriptive acquisition data may still be reported.
