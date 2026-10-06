@@ -102,6 +102,48 @@ This boundary strengthens rather than weakens the intended positioning: the nove
 
 ---
 
+## 3c. Strategy-based individualized niche is already an explicit conception
+
+A 2025 conceptual analysis of the individualized-niche literature (Kaiser & Morrow, Biology & Philosophy, DOI 10.1007/s10539-025-09991-3) explicitly identifies a **strategy-based individualized niche conception**.
+
+Under that conception:
+- individualized niches can be spaces of alternative behavioral strategies;
+- environmental factors are separate from the niche and constrain which strategies/trait combinations work;
+- different trait combinations may work equally well in the same or different environments.
+
+Therefore do **not** claim:
+
+> the individualized niche should be understood as strategy space rather than environmental space.
+
+That conception already exists explicitly.
+
+The batter programme instead contributes an empirical decomposition of how such strategy-space individuality behaves dynamically.
+
+The evidence separates:
+
+1. **formation**
+   - recent personal history becomes more identity-informative than the earliest matched history during juvenile development;
+
+2. **maintenance**
+   - a low-dimensional personal state predicts held-out movement tasks;
+
+3. **distributed control organization**
+   - scale-free geometry identity spans multiple route-control component families and survives target-normalization removal;
+
+4. **expression**
+   - a controlled sensory perturbation shifts common behavior while preserving individual bias and can change its expression strength;
+
+5. **spatial consequence**
+   - persistent policy distance need not map onto 3-D spatial separation.
+
+Thus the proposed contribution is not a new definition of niche.
+
+It is:
+
+> **a mechanistic life cycle for strategy-based individualization: how a personal strategy is built, stored, projected into current behavior, and decoupled from physical-space partitioning.**
+
+---
+
 # 4. The likely new bridge
 
 The current bat programme links four levels that are usually studied separately:
