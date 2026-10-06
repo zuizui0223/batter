@@ -537,26 +537,41 @@ The current highest-value route is:
 
 > test whether individual organization survives experimentally imposed changes in current sensory / task context using independent public trial-level datasets.
 
-### Myotis daubentonii masking programme — ACTIVE
+### Myotis daubentonii masking programme — COMPLETE / POSITIVE SMALL-N MOVEMENT SUPPORT
 
 Frozen source:
 - Zenodo record 4946256;
-- DOI 10.5281/zenodo.4946256.
+- DOI 10.5281/zenodo.4946256;
+- Dryad DOI 10.5061/dryad.ngf1vhhv3.
 
-Two predeclared endpoints:
+Structural audit:
+- control experiment 1 acoustic endpoint: **STOP_CONTROL1_STRUCTURE** before numerical opening;
+- main landing-time endpoint: **PASS_FLIGHTTIME_STRUCTURE**;
+- complete bats across all five source masking levels: 1, 3, 4.
 
-1. **control experiment 1, n=5**
-   - no noise versus noise from target / above / side;
-   - trial-level source-level data;
-   - exact 1,728,000-assignment identity null;
-   - role: sensorimotor-control triangulation.
+Frozen landing-time primary:
+- endpoint = log flight time;
+- equal-day bat × condition summaries;
+- shared noise-level centering;
+- leave-one-noise-level-out self-history;
+- exact `(3!)^4 = 1296` null assignments.
 
-2. **main landing-time experiment**
-   - five masking levels;
-   - common-support bats defined structurally before outcome;
-   - exact full-permutation null;
-   - role: direct behavioral/movement triangulation;
-   - any support with only three common bats remains explicitly small-N.
+Result:
+- A_flighttime = **+0.377542**;
+- exact p = **0.00077160 = 1/1296**;
+- 3/3 bats positive;
+- all five condition mean advantages positive.
+
+Verdict:
+**CONTROLLED_SMALL_N_MOVEMENT_SUPPORT.**
+
+Interpretation:
+relative individual landing-performance organization remains detectable across a strong five-level masking-noise manipulation after the common noise response is removed.
+
+Do not promote this to broad Myotis population generality; biological n=3 remains the governing limitation.
+
+See:
+`prospective/myotis_masker_personal_state/PUBLIC_CONTROLLED_PERTURBATION_SYNTHESIS_V1.md`.
 
 ### Aharon et al. 2017 path-integration — HIGH PRIORITY, ACCESS PENDING
 
