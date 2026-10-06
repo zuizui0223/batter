@@ -320,3 +320,78 @@ Do not spend the next analysis cycle on:
 - another uncontrolled external repeatability dataset.
 
 The next result must change one proposed causal carrier while holding biological identity fixed.
+
+
+---
+
+# Update after ontogenetic refinement diagnostic
+
+The first-flight programme now changes the causal priority again.
+
+## Ontogenetic history result
+
+Using the same 14 primary-complete juveniles and the frozen 30-s standardized x/y bridge, late target days 11–20 were predicted from equal-depth two-day histories.
+
+### Earliest two valid days
+
+- E = **+15.19**
+- p = **0.1655**
+- 8/14 positive
+- verdict: **UNSUPPORTED_EARLY_SEED_PERSISTENCE**
+
+Thus the earliest two structurally valid independent movement days do not form a robust long-term personal template under the frozen rule.
+
+### Immediately recent two days versus earliest two days
+
+- Q = **+144.08**
+- null mean = **+0.35**
+- p = **0.0001**
+- 10/14 positive
+- verdict: **SUPPORTED_IDENTITY_SPECIFIC_REFINEMENT**
+
+The whole-history null preserves general ontogenetic spatial expansion.
+
+Therefore later personal-history information is not simply an age effect; it depends on the true juvenile-to-own-history link.
+
+## Consequence
+
+The remaining origin question is no longer well framed as:
+
+> innate/stable bias versus learning.
+
+The evidence supports a mixed developmental architecture:
+
+[
+	heta_i(t)=	heta_i^{intrinsic}+h_i(t).
+]
+
+Personal movement organization is substantially refined through individual history, while stable intrinsic constraints may still shape which solutions are learned or retained.
+
+## New priority 1
+
+**Within-individual reversible biomechanics × learning decomposition.**
+
+Highest-value evidence would manipulate a physical performance component and a learning/history component in the same individuals.
+
+Preferred architecture:
+
+1. baseline portable policy;
+2. reversible load or wing-performance perturbation;
+3. recovery after load removal;
+4. independent task learning/reset;
+5. repeated portable-policy measurement throughout.
+
+This can distinguish:
+- biomechanical contribution;
+- developmental/learned contribution;
+- context-gated expression.
+
+## Explicitly deprioritized
+
+Do not use the next analysis cycle for:
+- another proof of adult repeatability;
+- another field basis rotation;
+- another post-hoc lag breakpoint in the juvenile archive;
+- another uncontrolled species comparison.
+
+The next causal advance should alter a proposed carrier of the personal policy coordinate.
