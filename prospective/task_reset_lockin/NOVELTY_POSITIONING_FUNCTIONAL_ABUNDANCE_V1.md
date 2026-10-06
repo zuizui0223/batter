@@ -269,6 +269,47 @@ It is an empirical mechanism for how a persistent individualized movement state 
 
 ---
 
+## 3c. Reaction-norm / context-dependent covariance boundary
+
+Behavioral-ecology theory already recognizes that:
+- individual mean behavior can differ;
+- individual plasticity can differ;
+- multivariate among-individual covariance can change with environmental context;
+- behavioral syndromes can weaken, strengthen or rotate across environments.
+
+Therefore do **not** claim:
+
+> environment-dependent deformation of among-individual behavioral covariance is itself new.
+
+The relevant existing frameworks include:
+- behavioral reaction norms;
+- individual-by-environment interactions;
+- context-dependent behavioral syndromes / character-state models.
+
+The present programme contributes a more specific empirical hierarchy:
+
+1. a coarse personal movement-policy coordinate has strong held-out relational transfer;
+2. detailed route geometry retains weaker identity/vector correspondence but unstable distance magnitude;
+3. the mapping from policy to route geometry is not captured by one universal linear decoder;
+4. wild spatial partition is not coupled to persistent policy distance.
+
+Thus the intended contribution is not a replacement for reaction-norm theory.
+
+It is an empirical decomposition across **different biological levels**:
+
+[
+	ext{personal policy}
+ightarrow
+	ext{movement realization}
+ightarrow
+	ext{spatial niche}.
+]
+
+The key ecological question is whether the realized niche is the storage location of specialization.
+The current evidence says it need not be.
+
+---
+
 # 4. The likely new bridge
 
 The current bat programme links four levels that are usually studied separately:
