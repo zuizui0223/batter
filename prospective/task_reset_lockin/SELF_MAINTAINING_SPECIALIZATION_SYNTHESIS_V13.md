@@ -137,6 +137,52 @@ Do not use the positive Rhino geometry result as a universal bat claim.
 
 ---
 
+# 3c. Within Rhinolophus, coordinative geometry is not just a FlightIntensity by-product
+
+The scale-free geometry signal was residualized against the transparent FlightIntensity axis within each environment using label-free linear fits.
+
+No residual feature was re-standardized.
+
+Result:
+
+- parent geometry K = **+0.38857**
+- residual geometry K = **+0.30775**
+- retained fraction of parent K = **79.2%**
+- 5/5 bats positive
+- p = **0.0029**
+
+Thus most of the scale-free geometry identity remains after removing its linear association with movement intensity.
+
+The strongest bounded within-system architecture is therefore:
+
+\[
+\boxed{
+\text{coarse movement-intensity individuality}
++
+\text{additional coordinative-geometry individuality}
+}
+\]
+
+This second component is:
+- distributed across route-organization and horizontal-maneuver features;
+- robust to target-normalization removal;
+- linearly separable from FlightIntensity;
+- but **not externally supported as the same fixed geometry representation in Carollia**.
+
+Hence the best generality hierarchy is:
+
+\[
+\boxed{
+\text{recurrent coarse personal state}
++
+\text{system-specific coordination layer}
+}
+\]
+
+not one universal bat geometry law.
+
+---
+
 # 4. Expression — current context gates stored individuality
 
 Controlled *Pipistrellus kuhlii* sensory perturbation:
