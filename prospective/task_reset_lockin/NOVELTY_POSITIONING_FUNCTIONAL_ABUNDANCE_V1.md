@@ -75,6 +75,33 @@ It does not show the ecological persistence of those strategies outside the expe
 
 ---
 
+## 3b. Important behavioral-flexibility boundary
+
+Multi-solution tasks have already been used to study individual behavioral techniques.
+
+A particularly relevant example is the 2024 wild-raccoon multi-access puzzle-box study:
+- the same foraging goal could be solved by multiple solution types;
+- successful individuals discovered multiple techniques;
+- solving sequences differed more among than within individuals;
+- self-similarity changed with socio-ecological context.
+
+Therefore do **not** claim:
+
+> multiple available solutions can produce individual-specific techniques.
+
+That empirical idea already exists in behavioral-flexibility / innovation research.
+
+The batter contribution must be narrower and mechanistically deeper:
+- the solution space is a locomotor/sensorimotor control problem rather than discrete puzzle-box actions;
+- personal organization is observed during development;
+- the resulting bias predicts behavior in unseen physical tasks;
+- controlled sensory perturbation alters expression while retaining identity;
+- policy differentiation is explicitly separated from 3-D spatial niche partition.
+
+This boundary strengthens rather than weakens the intended positioning: the novelty is the **cross-level continuity from control-solution selection to ecological movement specialization**, not the existence of multiple behavioral techniques.
+
+---
+
 # 4. The likely new bridge
 
 The current bat programme links four levels that are usually studied separately:
