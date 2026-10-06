@@ -1,0 +1,73 @@
+{
+  "source_file": "All seasons personality data.xlsx",
+  "sha256": null,
+  "n_raw_rows": 989,
+  "design_levels": {
+    "Season": {
+      "1": 36,
+      "2": 105
+    },
+    "Origin": {
+      "City": 97,
+      "Country": 44
+    },
+    "Colony": {
+      "Beit Guvrin": 39,
+      "Herzliya": 97,
+      "Tinshemet": 5
+    },
+    "Colony type": {
+      "Enriched": 68,
+      "Impoverished": 73
+    },
+    "Trial name": {
+      "Baseline 1": 39,
+      "Baseline 2": 40,
+      "Post enrichment": 29,
+      "Post release 1": 19,
+      "Post release 2": 14
+    },
+    "Trial": {
+      "1": 39,
+      "2": 40,
+      "3": 29,
+      "4": 19,
+      "5": 14
+    }
+  },
+  "n_bat_trial_groups": 141,
+  "trait_grain": {
+    "Boldness": {
+      "n_bat_trial_units": 141,
+      "n_constant_finite_units": 141,
+      "n_inconsistent_units": 0,
+      "inconsistent_units": []
+    },
+    "ExpuNIQUE": {
+      "n_bat_trial_units": 141,
+      "n_constant_finite_units": 141,
+      "n_inconsistent_units": 0,
+      "inconsistent_units": []
+    },
+    "AllActivityNormed": {
+      "n_bat_trial_units": 141,
+      "n_constant_finite_units": 141,
+      "n_inconsistent_units": 0,
+      "inconsistent_units": []
+    }
+  },
+  "season2_n_bats": 29,
+  "season2_complete_trials_1_3_n": 29,
+  "season2_complete_treatment_counts": {
+    "Enriched": 14,
+    "Impoverished": 15
+  },
+  "season2_complete_origin_treatment_counts": {
+    "City | Enriched": 9,
+    "City | Impoverished": 10,
+    "Country | Enriched": 5,
+    "Country | Impoverished": 5
+  },
+  "metadata_conflicts": [],
+  "gate": "PASS_OPEN_FROZEN_PRIMARY"
+}
