@@ -118,10 +118,13 @@ Positive D means enriched early experience generated more among-individual diver
 
 Primary randomization test must respect the original assignment architecture as recoverable from the public data.
 
-Preferred:
+Preferred and now source-fixed for Season 2:
 - preserve season = 2;
 - preserve source-colony strata if individual origin is available;
-- preserve the observed enriched/impoverished counts within each stratum.
+- Beit Guvrin: **5 enriched / 5 impoverished**;
+- Herzliya: **9 enriched / 10 impoverished**.
+
+These stratum counts are documented in the publication before outcome opening.
 
 If source-colony membership is not recoverable at individual level:
 - use the documented season-2 group sizes 14 enriched / 15 impoverished in a complete-label randomization;
