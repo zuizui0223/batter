@@ -9,8 +9,39 @@
       "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
       "sha256": "8155be769fc3e6cf9d3cc0d59fa7c216a176999662cd8272dd99d7741acd723f",
       "schema": {
-        "type": "inspection_error",
-        "error": "PermissionError(13, 'Permission denied')"
+        "type": "xlsx",
+        "sheets": [
+          {
+            "name": "Full_Data",
+            "max_row": 990,
+            "max_column": 23,
+            "header": [
+              "Bat_no",
+              "Individual",
+              "Season",
+              "Sex",
+              "Origin",
+              "Colony",
+              "Colony type",
+              "Trial name",
+              "FaExposure",
+              "AgeExposure",
+              "DaysTillExp",
+              "Trial",
+              "TotalDays_TillTrial",
+              "DaysOut_TillTrial",
+              "time2exit",
+              "time2explore",
+              "time2action",
+              "ActiveTime_Sec",
+              "Boldness",
+              "boxes_activity",
+              "boxes_all_enter",
+              "AllActivityNormed",
+              "ExpuNIQUE"
+            ]
+          }
+        ]
       }
     },
     {
@@ -62,8 +93,39 @@
       "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
       "sha256": "0e276042876b537df07807fbc6784dfe0ec93fdd034df9f4b095bb6b25a558d0",
       "schema": {
-        "type": "inspection_error",
-        "error": "PermissionError(13, 'Permission denied')"
+        "type": "xlsx",
+        "sheets": [
+          {
+            "name": "Exploration",
+            "max_row": 20,
+            "max_column": 23,
+            "header": [
+              "Bat no.",
+              "Name",
+              "Season",
+              "Sex",
+              "Origin",
+              "Colony",
+              "No of squares on the grid",
+              "Total nights out",
+              "avg. squares per night",
+              "total in km2 ",
+              "average in km2 esch square 0.85 per night",
+              "Enrichment",
+              "Max age",
+              "Boldness_B1",
+              "Explore_B1",
+              "Active_B1",
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          }
+        ]
       }
     },
     {
@@ -73,8 +135,26 @@
       "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
       "sha256": "03a89b2c7de5db56b9776c34a1827f6063da1074909c081e1dbb942f88c9bd0f",
       "schema": {
-        "type": "inspection_error",
-        "error": "PermissionError(13, 'Permission denied')"
+        "type": "xlsx",
+        "sheets": [
+          {
+            "name": "exit_time_temp_new",
+            "max_row": 736,
+            "max_column": 10,
+            "header": [
+              "Bat_ID",
+              "Sex",
+              "Environmental condition",
+              "Origin",
+              "Date",
+              "NumberDaysOut",
+              "Time Out (Minute)",
+              "Max distance (meters)",
+              "Age (days)",
+              "Explored area"
+            ]
+          }
+        ]
       }
     }
   ]
