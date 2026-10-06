@@ -1,0 +1,298 @@
+{
+  "version": 1,
+  "bats": [
+    {
+      "bat": "jane",
+      "filename": "jane_audiopooldata.mat",
+      "bytes": 104987,
+      "fields": {
+        "treatment": {
+          "present": true,
+          "shape": [
+            77
+          ]
+        },
+        "trialtype": {
+          "present": true,
+          "shape": [
+            77
+          ]
+        },
+        "trialindex": {
+          "present": true,
+          "shape": [
+            77
+          ]
+        },
+        "trialnb": {
+          "present": true,
+          "shape": [
+            77
+          ]
+        },
+        "lengthtrialadjust": {
+          "present": true,
+          "shape": [
+            77
+          ]
+        },
+        "onsetcalltrial": {
+          "present": true,
+          "shape": [
+            77
+          ]
+        },
+        "callduration": {
+          "present": true,
+          "shape": [
+            77
+          ]
+        },
+        "callbandwidth": {
+          "present": true,
+          "shape": [
+            77
+          ]
+        },
+        "startfreq": {
+          "present": true,
+          "shape": [
+            77
+          ]
+        },
+        "endfreq": {
+          "present": true,
+          "shape": [
+            77
+          ]
+        }
+      },
+      "counts": {
+        "all_trials": 77,
+        "saline_trialtype_lt4": 37,
+        "ligand_trialtype_lt4": 25
+      },
+      "status": "PASS"
+    },
+    {
+      "bat": "bea",
+      "filename": "bea_audiopooldata.mat",
+      "bytes": 136104,
+      "fields": {
+        "treatment": {
+          "present": true,
+          "shape": [
+            121
+          ]
+        },
+        "trialtype": {
+          "present": true,
+          "shape": [
+            121
+          ]
+        },
+        "trialindex": {
+          "present": true,
+          "shape": [
+            121
+          ]
+        },
+        "trialnb": {
+          "present": true,
+          "shape": [
+            121
+          ]
+        },
+        "lengthtrialadjust": {
+          "present": true,
+          "shape": [
+            121
+          ]
+        },
+        "onsetcalltrial": {
+          "present": true,
+          "shape": [
+            121
+          ]
+        },
+        "callduration": {
+          "present": true,
+          "shape": [
+            121
+          ]
+        },
+        "callbandwidth": {
+          "present": true,
+          "shape": [
+            121
+          ]
+        },
+        "startfreq": {
+          "present": true,
+          "shape": [
+            121
+          ]
+        },
+        "endfreq": {
+          "present": true,
+          "shape": [
+            121
+          ]
+        }
+      },
+      "counts": {
+        "all_trials": 121,
+        "saline_trialtype_lt4": 41,
+        "ligand_trialtype_lt4": 47
+      },
+      "status": "PASS"
+    },
+    {
+      "bat": "jason",
+      "filename": "jason_audiopooldata.mat",
+      "bytes": 173651,
+      "fields": {
+        "treatment": {
+          "present": true,
+          "shape": [
+            99
+          ]
+        },
+        "trialtype": {
+          "present": true,
+          "shape": [
+            99
+          ]
+        },
+        "trialindex": {
+          "present": true,
+          "shape": [
+            99
+          ]
+        },
+        "trialnb": {
+          "present": true,
+          "shape": [
+            99
+          ]
+        },
+        "lengthtrialadjust": {
+          "present": true,
+          "shape": [
+            99
+          ]
+        },
+        "onsetcalltrial": {
+          "present": true,
+          "shape": [
+            99
+          ]
+        },
+        "callduration": {
+          "present": true,
+          "shape": [
+            99
+          ]
+        },
+        "callbandwidth": {
+          "present": true,
+          "shape": [
+            99
+          ]
+        },
+        "startfreq": {
+          "present": true,
+          "shape": [
+            99
+          ]
+        },
+        "endfreq": {
+          "present": true,
+          "shape": [
+            99
+          ]
+        }
+      },
+      "counts": {
+        "all_trials": 99,
+        "saline_trialtype_lt4": 36,
+        "ligand_trialtype_lt4": 36
+      },
+      "status": "PASS"
+    },
+    {
+      "bat": "stella",
+      "filename": "stella_audiopooldata.mat",
+      "bytes": 151107,
+      "fields": {
+        "treatment": {
+          "present": true,
+          "shape": [
+            52
+          ]
+        },
+        "trialtype": {
+          "present": true,
+          "shape": [
+            52
+          ]
+        },
+        "trialindex": {
+          "present": true,
+          "shape": [
+            52
+          ]
+        },
+        "trialnb": {
+          "present": true,
+          "shape": [
+            52
+          ]
+        },
+        "lengthtrialadjust": {
+          "present": true,
+          "shape": [
+            52
+          ]
+        },
+        "onsetcalltrial": {
+          "present": true,
+          "shape": [
+            52
+          ]
+        },
+        "callduration": {
+          "present": true,
+          "shape": [
+            52
+          ]
+        },
+        "callbandwidth": {
+          "present": true,
+          "shape": [
+            52
+          ]
+        },
+        "startfreq": {
+          "present": true,
+          "shape": [
+            52
+          ]
+        },
+        "endfreq": {
+          "present": true,
+          "shape": [
+            52
+          ]
+        }
+      },
+      "counts": {
+        "all_trials": 52,
+        "saline_trialtype_lt4": 30,
+        "ligand_trialtype_lt4": 8
+      },
+      "status": "PASS"
+    }
+  ],
+  "verdict": "PASS_OPEN_NUMERIC_PRIMARY"
+}
