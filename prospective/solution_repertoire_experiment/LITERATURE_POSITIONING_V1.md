@@ -6,6 +6,34 @@
 
 This note motivates the designed experiment; it is not an evidentiary result.
 
+## Stronger prior-art boundary: ecological opportunity itself is not novel
+
+The programme must not claim that it newly shows environmental opportunity can create individual specialization.
+
+Relevant prior evidence includes:
+
+- Svanbäck & Bolnick (2007), *Intraspecific competition drives increased resource use diversity within a natural population*, Proceedings of the Royal Society B, DOI 10.1098/rspb.2006.0198. Density was experimentally manipulated in stickleback enclosures; increased competition caused individuals to add different alternative prey and increased among-individual diet variation through behavioral plasticity.
+
+- An experimental feeding study in captive European mink (2017), *An experimental approach to the formation of diet preferences and individual specialisation in European mink*, DOI 10.1007/s10344-017-1091-8, showed that individual diet specialization can emerge through a mixture of preferences and learning under controlled prey-choice experience.
+
+- Balme et al. (2020), *Ecological opportunity drives individual dietary specialization in leopards*, Journal of Animal Ecology, DOI 10.1111/1365-2656.13109, showed that individuals encountering greater prey diversity were more specialized.
+
+- Trevail et al. (2021), *Environmental heterogeneity promotes individual specialisation in habitat selection in a widely distributed seabird*, Journal of Animal Ecology, DOI 10.1111/1365-2656.13588, linked environmental heterogeneity to individual habitat specialization across colonies.
+
+Thus the ecological literature already supports:
+
+[
+\text{environment / opportunity}
+\rightarrow
+\text{amount of individual specialization}.
+]
+
+The present experiment asks a narrower mechanistic question:
+
+> **Can opportunity in the space of functionally adequate movement solutions cause personal history to crystallize into different stable policies, even when current opportunity is later equalized?**
+
+That distinction is essential.
+
 ## Prior bat experiments
 
 ### Spatial memory and stereotyped routes
@@ -196,3 +224,26 @@ The narrower claim is that the bat-flight literature used in this programme does
 \]
 
 The proposed experiment is designed to close that chain.
+
+
+## Current novelty statement
+
+Do **not** write:
+
+> ecological opportunity creates individual specialization.
+
+That is established territory.
+
+The defensible contribution, if P1 succeeds, is:
+
+> **Individual specialization can be caused by opportunity in motor-solution space: when animals differ only in whether personal history was allowed to explore multiple adequate solutions, those histories can produce stronger individual-specific route organization even after current opportunity is made identical.**
+
+If reopening is also supported:
+
+> **The resulting individual organization can persist through a period in which its normal expression is structurally suppressed and can reappear when the solution repertoire returns.**
+
+If transformed transfer is additionally supported:
+
+> **At least part of that history-dependent specialization is more abstract than memory for one exact route geometry.**
+
+This sequence is substantially more specific than prior claims about resource diversity, competition, environmental heterogeneity, route stereotypy or spatial memory.
