@@ -517,3 +517,117 @@ Use this study as external biomechanical premise, not as a new confirmatory batt
 The next accepted mechanism result must alter a proposed causal carrier or independently specify the solution environment.
 
 Another same-archive demonstration of identity is no longer sufficient.
+
+
+---
+
+# Update — public-data-only operating constraint
+
+## Programme constraint
+
+New self-collected experimental data are not an operational option for the current programme.
+
+The designed solution-repertoire experiment remains the cleanest **future decisive experiment**, but it is no longer the active next-analysis priority.
+
+Do not treat failure to run that experiment as a reason to stop the public-data programme.
+
+## Active priority 1 — independent public manipulation datasets
+
+The current highest-value route is:
+
+> test whether individual organization survives experimentally imposed changes in current sensory / task context using independent public trial-level datasets.
+
+### Myotis daubentonii masking programme — COMPLETE / POSITIVE SMALL-N MOVEMENT SUPPORT
+
+Frozen source:
+- Zenodo record 4946256;
+- DOI 10.5281/zenodo.4946256;
+- Dryad DOI 10.5061/dryad.ngf1vhhv3.
+
+Structural audit:
+- control experiment 1 acoustic endpoint: **STOP_CONTROL1_STRUCTURE** before numerical opening;
+- main landing-time endpoint: **PASS_FLIGHTTIME_STRUCTURE**;
+- complete bats across all five source masking levels: 1, 3, 4.
+
+Frozen landing-time primary:
+- endpoint = log flight time;
+- equal-day bat × condition summaries;
+- shared noise-level centering;
+- leave-one-noise-level-out self-history;
+- exact `(3!)^4 = 1296` null assignments.
+
+Result:
+- A_flighttime = **+0.377542**;
+- exact p = **0.00077160 = 1/1296**;
+- 3/3 bats positive;
+- all five condition mean advantages positive.
+
+Verdict:
+**CONTROLLED_SMALL_N_MOVEMENT_SUPPORT.**
+
+Interpretation:
+relative individual landing-performance organization remains detectable across a strong five-level masking-noise manipulation after the common noise response is removed.
+
+Do not promote this to broad Myotis population generality; biological n=3 remains the governing limitation.
+
+See:
+`prospective/myotis_masker_personal_state/PUBLIC_CONTROLLED_PERTURBATION_SYNTHESIS_V1.md`.
+
+### Aharon et al. 2017 path-integration — HIGH PRIORITY, ACCESS PENDING
+
+Public Mendeley description establishes:
+- biological bat identifiers;
+- condition-coded variables;
+- trial-column turning-point matrices;
+- slowing-point matrices;
+- trial mean speed.
+
+Current blocker:
+- Mendeley API now returns authentication errors to the automated audit route.
+
+This is a technical access limitation, not a negative structural result.
+
+Do not label the dataset biologically unsuitable unless file-level access is actually resolved and fails.
+
+### Ma et al. 2025 Hipposideros pratti — SECONDARY
+
+Useful for within-task manipulation localization.
+
+Boundary:
+- foraging and landing use different four-bat groups;
+- n=4 within each task;
+- not a clean cross-task portability dataset.
+
+## Active public-data causal target
+
+The public-data programme can still test:
+
+\[
+\text{persistent personal organization}
+\rightarrow
+\text{retention under controlled current-context perturbation}
+\]
+
+and combine that with the already-supported ontogenetic/history evidence.
+
+What public data still cannot directly identify is:
+
+\[
+\text{number of feasible movement solutions}
+\rightarrow
+\text{formation of specialization}.
+\]
+
+That direct arrow remains a future experimental question rather than a current blocker.
+
+## Stop rule for public-data search
+
+Do not reopen arbitrary observational repeatability datasets.
+
+A new source must add at least one of:
+- controlled within-individual manipulation;
+- true longitudinal history / recall;
+- independent cross-context held-out transfer;
+- independent biomechanics or morphology capable of discriminating causal carriers.
+
+Another uncontrolled demonstration that individuals differ is insufficient.
