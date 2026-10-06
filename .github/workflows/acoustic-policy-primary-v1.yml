@@ -24,6 +24,9 @@ jobs:
           python-version: "3.12"
       - name: Install dependencies
         run: python -m pip install numpy scipy
+      - name: Run frozen exact-identity self-test
+        working-directory: prospective/auditory_perturbation_policy
+        run: python acoustic_policy_primary_self_test_v1.py
       - name: Run frozen acoustic-policy primary
         run: python prospective/auditory_perturbation_policy/run_acoustic_policy_primary_v1.py
       - name: Commit result
