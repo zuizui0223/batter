@@ -46,7 +46,13 @@ It does not test the formation of individualized route/policy choice from a cont
 
 ## Ecological positioning
 
-Individual-specialization theory has long argued that among-individual niche variation can depend on ecological opportunity, competition and other environmental causes.
+Bolnick et al. (2003), The ecology of individuals: incidence and implications of individual specialization, *The American Naturalist*, DOI 10.1086/343878, established individual specialization as a population-level ecological problem rather than a rare behavioral curiosity.
+
+Araújo, Bolnick & Layman (2011), The ecological causes of individual specialisation, *Ecology Letters*, DOI 10.1111/j.1461-0248.2011.01662.x, emphasized ecological opportunity, competition and predation as environmental causes of among-individual niche variation.
+
+Recent individualised-niche synthesis further stresses that stable individual differences, environment dependence and individual-by-environment realization need to be integrated rather than treated as separate topics.
+
+Thus individual-specialization theory already predicts that among-individual variation can depend on ecological opportunity and environmental context.
 
 The proposed experiment translates that ecological-opportunity idea from **which resources are available** to **how many functionally adequate movement solutions are available for the same task**.
 
