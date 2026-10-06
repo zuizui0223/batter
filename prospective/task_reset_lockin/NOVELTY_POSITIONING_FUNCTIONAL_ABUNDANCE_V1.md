@@ -144,6 +144,42 @@ It is:
 
 ---
 
+## 3c. 2026 ecological-motor-abundance boundary
+
+Recent 2026 ecological-motor-control work narrows the novelty further.
+
+Rodger (2026) explicitly frames motor abundance as supporting:
+- stability;
+- flexibility;
+- multiple strategies for the same action goal;
+- individuality in how different people/animals realize the same outcome.
+
+Wilson (2026) further argues that affordances constrain motor abundance and explicitly raises:
+- individual differences in effectivities;
+- learning-history shaping of those effectivities.
+
+Therefore do **not** claim:
+
+> motor abundance explains why individuals can develop different movement styles.
+
+That conceptual bridge is already being articulated in ecological psychology.
+
+The batter contribution must go beyond that conceptual claim and rely on its empirical chain:
+
+1. personal movement history becomes more identity-informative through ontogeny;
+2. a compact individual movement coordinate predicts unseen task configurations;
+3. controlled sensory perturbation preserves that identity-bearing state while changing expression;
+4. detailed geometry can be system specific while the coarser policy recurs;
+5. persistent personal policy is empirically separable from wild 3-D spatial partition.
+
+The strongest potential novelty is therefore not "motor abundance -> individuality" by itself.
+
+It is:
+
+> **a persistent ecological individual state can be formed/refined inside a movement solution space, then carried across tasks as an upstream control variable whose spatial niche expression is environment dependent.**
+
+---
+
 # 4. The likely new bridge
 
 The current bat programme links four levels that are usually studied separately:
