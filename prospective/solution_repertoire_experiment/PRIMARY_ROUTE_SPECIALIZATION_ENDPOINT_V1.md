@@ -6,88 +6,88 @@
 
 Biological question:
 
-> Does prior access to multiple feasible solutions cause stronger individual specialization when both acquisition histories are later tested under the same four-route opportunity?
+> Does prior access to multiple feasible solutions cause stronger individual specialization in route choice when both acquisition histories are later tested under the same four-route opportunity?
 
-This is the direct ecological-opportunity endpoint.
+This is P1, the direct ecological-opportunity endpoint.
 
-## Common-OPEN target window
+## Target probe architecture
 
-Use only the first predeclared common-OPEN probe window in each matched family.
+Use only the frozen first common-OPEN probe in each matched family.
 
-Planned number of valid probe trials per individual × family:
+The probe must contain an even predeclared number of valid trials per individual × family and is split before outcome opening into:
+- early probe half;
+- late held-out probe half.
+
+Exact trial count:
 **TBD BEFORE OUTCOME OPENING**.
 
-The route-specialization primary does not use later probe, reopening or transfer trials.
+Later probe, reopening and transfer trials cannot replace this target.
 
 ## Route states
 
-Each probe trial is assigned to one of the four route classes defined from obstacle topology before animal outcomes are opened.
+Each trial is assigned to one of four route classes defined from obstacle topology before animal outcomes are opened.
 
-Route labels are family-local; no numerical ordering is assumed.
+No clustering of observed trajectories may redefine route classes.
 
-No clustering of observed trajectories is allowed to redefine route classes.
+## Early-probe categorical history
 
-## Leave-one-trial-out own predictor
+For each individual i in family f, count route choices in the early probe half.
 
-For a target probe trial q of individual i in family f:
-
-1. remove q;
-2. count the four route classes in i's remaining primary-window probe trials in family f;
-3. form a Dirichlet-smoothed categorical distribution with fixed alpha = 0.5 per route.
+Apply fixed symmetric Dirichlet smoothing with alpha = 0.5 per route.
 
 For route r:
 
-p_i(r) = (n_i,r + 0.5) / (N_i,-q + 2).
+p_i,f(r) = (n_i,f,r + 0.5) / (N_i,f,early + 2).
 
-## Donor predictors
+## Held-out late-probe score
 
-For every other individual j belonging to the same family f and the same acquisition treatment under the hypothesized assignment:
-- use all of j's primary-window probe trials;
-- form the same alpha=0.5 smoothed route distribution.
+For each late target trial q of individual i in family f with observed route r_q:
 
-Require at least three donor individuals for a scored target.
+- own log score = log p_i,f(r_q);
+- donor log scores use early-probe route distributions from **all other eligible individuals in the same family**, regardless of acquisition treatment label;
+- target advantage:
 
-If this donor rule fails under the observed restricted assignment, the primary returns STRUCTURAL STOP.
+L_q = log p_i,f(r_q) - mean_j log p_j,f(r_q).
 
-## Target log-score advantage
+Using all same-family donors makes each individual × family route-identity score independent of treatment labels; the randomized treatment assignment is applied only afterward.
 
-For the observed route r_q:
+Require at least three donor individuals in each family.
 
-L_q = log p_i(r_q) - mean_j log p_j(r_q).
+## Family-specific individual route identity
 
-Positive means the target route is better predicted by that individual's own other probe choices than by other individuals exposed to the same acquisition treatment.
+Average L_q equally across late target trials within individual × family.
 
-Aggregate:
-1. equal target trials within individual × family;
-2. equal individuals within acquisition treatment;
-3. obtain R_OPEN and R_CONSTRAINED.
+Call this R_i,f.
+
+For each animal, treatment assignment maps one family to OPEN-acquired and the other to CONSTRAINED-acquired.
 
 Primary treatment statistic:
 
-Delta_R = R_OPEN - R_CONSTRAINED.
+Delta_R = mean_i [ R_i,OPEN-family - R_i,CONSTRAINED-family ].
+
+Positive Delta_R means prior multi-solution opportunity produces stronger held-out individual route organization under the same current four-route opportunity.
 
 ## Exact randomization null
 
-Use the same restricted assignment space as PREREGISTRATION_CONTRACT_V1.md.
+Keep all family-specific R_i,f scores fixed.
 
-For every allowed reassignment:
-- keep route outcomes, family identities and starting-family order fixed;
-- relabel which family received OPEN versus CONSTRAINED acquisition;
-- rebuild treatment-specific donor sets;
-- recompute R_OPEN, R_CONSTRAINED and Delta_R.
+Under every allowed restricted treatment reassignment:
+- preserve animal, family, route outcomes and acquisition-start order;
+- change only which family is labelled OPEN-acquired versus CONSTRAINED-acquired;
+- recompute Delta_R.
 
-Do not sign-flip precomputed individual effects.
+Condition on starting-family order and the frozen four-animal block design.
 
-One-sided confirmatory p is the exact upper-tail fraction of Delta_R under the allowed randomization assignments.
+Do not permute biological identities.
 
-## Primary support
+## Confirmatory support
 
 Support requires:
 - Delta_R > 0;
-- exact randomization p <= 0.05.
+- exact randomization p_R <= 0.05.
 
 Report robustness:
-- positive within-individual family contrast fraction;
+- positive paired individual contrast fraction;
 - leave-one-individual-out Delta_R;
 - A-open/B-open strata;
 - A-start/B-start strata.
@@ -100,20 +100,20 @@ If one-individual deletion reverses the sign, label SUPPORTED_BUT_FRAGILE.
 
 > Prior access to multiple feasible movement solutions causally increases individual specialization in route choice when all animals are later given the same solution opportunity.
 
-Because both matched families are four-route OPEN during the target probe, this is not a trivial difference in contemporaneous route count.
+Because both families are four-route OPEN during the target probe, the contrast cannot be reduced to contemporaneous route count.
 
 ### Unsupported
 
-The experiment does not establish that solution opportunity during acquisition increases route-choice individual specialization.
+The experiment does not establish opportunity-driven route-choice specialization.
 
-Do not promote I/M, geometry or reopening endpoints to replace a failed direct ecological primary.
+P2 I/M may be reported descriptively but cannot rescue P1.
 
 ## Claim ceiling
 
-This endpoint alone does not show:
+P1 alone does not establish:
+- a portable I/M carrier;
 - durable storage;
 - transfer beyond route coordinates;
-- a low-dimensional personal I/M policy;
 - a neural mechanism;
 - fitness benefit;
 - equivalence to wild vertical individuality.
