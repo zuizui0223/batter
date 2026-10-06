@@ -4,6 +4,8 @@
 
 **UNSUPPORTED IN BOTH YEARS.**
 
+**Evidence provenance:** references below to the bivariate H/V carrier describe a post-outcome component diagnostic, not a confirmatory field carrier. The preregistered scalar field gate remained 2/4 FAIL. See `FIELD_EVIDENCE_PROVENANCE_GUARD_V1.md`.
+
 Authoritative fail-closed workflow:
 - run: **37303659189**
 - job: **111742078848**

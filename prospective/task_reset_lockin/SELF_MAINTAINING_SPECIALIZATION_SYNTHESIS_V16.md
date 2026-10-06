@@ -2,7 +2,11 @@
 
 ## Status
 
-**CURRENT POST-JAE MECHANISM SYNTHESIS — supersedes V15.**
+**SUPERSEDED BY V17 — HISTORICAL RECORD ONLY.**
+
+The field H/V interpretation in this version predates the evidence-provenance correction. The frozen wild FlightIntensity gate remained 2/4 FAIL; later H/V analyses are post-outcome diagnostics and cannot be promoted as confirmatory field-carrier evidence. See `prospective/field_policy_bridge/FIELD_EVIDENCE_PROVENANCE_GUARD_V1.md` and V17 for the current synthesis.
+
+**HISTORICAL POST-JAE MECHANISM SYNTHESIS — superseded by V17.**
 
 JAE v0.4.0 remains frozen.
 

@@ -4,6 +4,8 @@
 
 **NO ONE-INDIVIDUAL DELETION RESCUES A POSITIVE POLICY–SPACE COUPLING.**
 
+**Evidence provenance:** this robustness analysis inherits the post-outcome status of the H/V policy coordinates. It strengthens only the conditional negative mapping result; it does not promote H/V into a confirmatory wild carrier. See `FIELD_EVIDENCE_PROVENANCE_GUARD_V1.md`.
+
 Parent:
 `POLICY_DISTANCE_COUSE_LOO_CONTRACT_V1.md`
 

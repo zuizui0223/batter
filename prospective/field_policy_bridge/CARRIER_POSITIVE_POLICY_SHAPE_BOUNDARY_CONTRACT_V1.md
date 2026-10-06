@@ -18,7 +18,9 @@ remains CLOSED.
 
 Within the two panels in which FlightIntensity persistence was actually demonstrated under the frozen carrier test, does the policy coordinate also organize held-out centered vertical shape?
 
-This is a **mechanism-localization diagnostic**, not a generality test.
+This is a **post-outcome, selection-conditioned mechanism-localization diagnostic**, not a generality test.
+
+Because panel inclusion is determined by the already-observed frozen carrier outcome, this analysis cannot estimate the general field policy-to-shape relationship or provide a confirmatory test of the bridge that failed its preregistered opening gate.
 
 ## Panels
 
@@ -71,18 +73,28 @@ but label this **descriptive post-outcome** rather than the frozen combined brid
 
 ## Interpretation
 
-### Both panels positive and at least one individually calibrated
+Any result from this diagnostic is exploratory and conditional on post-outcome panel selection.
 
-Evidence that, where a persistent FlightIntensity carrier is demonstrably present,
-nearby individuals on that policy coordinate also tend to have more similar held-out centered vertical-use organization.
+### Positive association in one or both selected panels
 
-### Both panels individually calibrated
+This shows that the already carrier-positive panels contain a policy-to-shape pattern worth testing prospectively in independent data.
 
-Strong localization evidence for a policy-to-shape link in carrier-positive contexts.
+It does **not** provide confirmatory localization evidence, because:
+- the general bridge failed its frozen opening rule;
+- panels were selected using the carrier outcome;
+- the analysis was opened only after that outcome was known.
+
+Within-panel permutation p-values may be reported as descriptive conditional diagnostics, but they must not be used to upgrade the evidence tier of the wild bridge.
 
 ### No relation
 
-FlightIntensity can persist within individuals yet be unrelated to the JAE vertical-shape individuality.
+This would show that even within the panels where scalar FlightIntensity persistence was demonstrated, that coordinate does not obviously organize the JAE vertical-shape signal.
+
+### Evidentiary ceiling
+
+Regardless of the result:
+
+> **This diagnostic can generate a prospective field hypothesis; it cannot establish or rescue a wild policy-to-vertical-shape bridge.**
 
 ## Hard ceiling
 
