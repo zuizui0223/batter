@@ -5,15 +5,2379 @@
       "key": "aharon2017",
       "dataset_id": "f6mvhj5gj9",
       "version": 3,
-      "files": [],
-      "error": "RuntimeError('cannot list public files')"
+      "files": [
+        {
+          "filename": "batalef.zip",
+          "id": "d3e06159-a2dc-4cd4-80b1-a7ba4498e748",
+          "extension": ".zip",
+          "inspection": {
+            "type": "zip",
+            "members": [
+              {
+                "name": "batalef/batalef.p",
+                "size": 865
+              },
+              {
+                "name": "batalef/user/",
+                "size": 0
+              },
+              {
+                "name": "batalef/code/addFiles.p",
+                "size": 568
+              },
+              {
+                "name": "batalef/code/addPois.p",
+                "size": 131
+              },
+              {
+                "name": "batalef/code/agetParam.p",
+                "size": 148
+              },
+              {
+                "name": "batalef/code/air_absorption.p",
+                "size": 797
+              },
+              {
+                "name": "batalef/code/air_absorption_old.p",
+                "size": 798
+              },
+              {
+                "name": "batalef/code/alignChannelsUsingLsb.p",
+                "size": 462
+              },
+              {
+                "name": "batalef/code/amirDetection.p",
+                "size": 629
+              },
+              {
+                "name": "batalef/code/amirDetectionDialog.p",
+                "size": 1974
+              },
+              {
+                "name": "batalef/code/appData.p",
+                "size": 142
+              },
+              {
+                "name": "batalef/code/applyMask.p",
+                "size": 324
+              },
+              {
+                "name": "batalef/code/applyWildcardFunction.p",
+                "size": 518
+              },
+              {
+                "name": "batalef/code/asetParam.p",
+                "size": 125
+              },
+              {
+                "name": "batalef/code/bAlfred.p",
+                "size": 92
+              },
+              {
+                "name": "batalef/code/bApplication.p",
+                "size": 2272
+              },
+              {
+                "name": "batalef/code/bChannel.p",
+                "size": 2862
+              },
+              {
+                "name": "batalef/code/bChannelCall.p",
+                "size": 1606
+              },
+              {
+                "name": "batalef/code/bFile.p",
+                "size": 3845
+              },
+              {
+                "name": "batalef/code/bGuiBeam.p",
+                "size": 6660
+              },
+              {
+                "name": "batalef/code/bGuiBeamGraphs.p",
+                "size": 5177
+              },
+              {
+                "name": "batalef/code/bGuiBeamRaw.p",
+                "size": 3858
+              },
+              {
+                "name": "batalef/code/bGuiCallAnalysis.p",
+                "size": 10621
+              },
+              {
+                "name": "batalef/code/bGuiCamera.p",
+                "size": 2512
+              },
+              {
+                "name": "batalef/code/bGuiDefinition.p",
+                "size": 550
+              },
+              {
+                "name": "batalef/code/bGuiFileCalls.p",
+                "size": 6730
+              },
+              {
+                "name": "batalef/code/bGuiMain.p",
+                "size": 9363
+              },
+              {
+                "name": "batalef/code/bGuiMicAdmin.p",
+                "size": 5018
+              },
+              {
+                "name": "batalef/code/bGuiParams.p",
+                "size": 1530
+              },
+              {
+                "name": "batalef/code/bGuiTop.p",
+                "size": 1284
+              },
+              {
+                "name": "batalef/code/bMainGuiContextMenu.p",
+                "size": 1487
+              },
+              {
+                "name": "batalef/code/bMainGuiGraph.p",
+                "size": 7454
+              },
+              {
+                "name": "batalef/code/bMainGuiGraphGroup.p",
+                "size": 2664
+              },
+              {
+                "name": "batalef/code/bMethod.p",
+                "size": 2203
+              },
+              {
+                "name": "batalef/code/bMethodBeam.p",
+                "size": 505
+              },
+              {
+                "name": "batalef/code/bMethodLocalization.p",
+                "size": 526
+              },
+              {
+                "name": "batalef/code/bMethodMatching.p",
+                "size": 529
+              },
+              {
+                "name": "batalef/code/bMethodSpectrum.p",
+                "size": 346
+              },
+              {
+                "name": "batalef/code/bMethods.p",
+                "size": 2357
+              },
+              {
+                "name": "batalef/code/bMics.p",
+                "size": 1394
+              },
+              {
+                "name": "batalef/code/bParameters.p",
+                "size": 1613
+              },
+              {
+                "name": "batalef/code/bRawData.p",
+                "size": 2363
+              },
+              {
+                "name": "batalef/code/bSelectionRibbon.p",
+                "size": 1716
+              },
+              {
+                "name": "batalef/code/bZoomWindow.p",
+                "size": 1557
+              },
+              {
+                "name": "batalef/code/ball2.p",
+                "size": 236
+              },
+              {
+                "name": "batalef/code/bat_calls_code.rar",
+                "size": 12780
+              },
+              {
+                "name": "batalef/code/batalefAppKill.p",
+                "size": 178
+              },
+              {
+                "name": "batalef/code/batalefGuiKill.p",
+                "size": 251
+              },
+              {
+                "name": "batalef/code/bcerr.p",
+                "size": 192
+              },
+              {
+                "name": "batalef/code/beamCoordinates.p",
+                "size": 675
+              },
+              {
+                "name": "batalef/code/bget.p",
+                "size": 307
+              },
+              {
+                "name": "batalef/code/buildMethodsParamsDialog.p",
+                "size": 1636
+              },
+              {
+                "name": "batalef/code/cameraLocations.p",
+                "size": 1763
+              },
+              {
+                "name": "batalef/code/cameraLocator.p",
+                "size": 2880
+              },
+              {
+                "name": "batalef/code/cameraLocator_old.p",
+                "size": 2278
+              },
+              {
+                "name": "batalef/code/cbd_1D_projection.p",
+                "size": 680
+              },
+              {
+                "name": "batalef/code/cbd_determineSource.p",
+                "size": 200
+              },
+              {
+                "name": "batalef/code/cbd_determineTarget.p",
+                "size": 741
+              },
+              {
+                "name": "batalef/code/cbdlg.p",
+                "size": 914
+              },
+              {
+                "name": "batalef/code/central_angle.p",
+                "size": 159
+              },
+              {
+                "name": "batalef/code/changeFieldColor.p",
+                "size": 265
+              },
+              {
+                "name": "batalef/code/channelCallAnalyze.p",
+                "size": 962
+              },
+              {
+                "name": "batalef/code/channelCallComputeRidge.p",
+                "size": 372
+              },
+              {
+                "name": "batalef/code/channelCallComputeSpectralData.p",
+                "size": 455
+              },
+              {
+                "name": "batalef/code/channelCallsAnalyze.p",
+                "size": 323
+              },
+              {
+                "name": "batalef/code/channelCallsAnalyzeCall.p",
+                "size": 593
+              },
+              {
+                "name": "batalef/code/channelCallsAnalyzeChannel.p",
+                "size": 467
+              },
+              {
+                "name": "batalef/code/channelCallsAnalyzeFile.p",
+                "size": 331
+              },
+              {
+                "name": "batalef/code/channelData.p",
+                "size": 167
+              },
+              {
+                "name": "batalef/code/comboSelected.p",
+                "size": 157
+              },
+              {
+                "name": "batalef/code/computeBeam.p",
+                "size": 342
+              },
+              {
+                "name": "batalef/code/computeBeamData.p",
+                "size": 671
+              },
+              {
+                "name": "batalef/code/computeBeam_olds.p",
+                "size": 493
+              },
+              {
+                "name": "batalef/code/createAlignedFile.p",
+                "size": 483
+              },
+              {
+                "name": "batalef/code/createBatCalls.p",
+                "size": 628
+              },
+              {
+                "name": "batalef/code/createMixFile.p",
+                "size": 481
+              },
+              {
+                "name": "batalef/code/createRawImage.p",
+                "size": 422
+              },
+              {
+                "name": "batalef/code/createRidges.p",
+                "size": 677
+              },
+              {
+                "name": "batalef/code/createSecondaryFiles.p",
+                "size": 901
+              },
+              {
+                "name": "batalef/code/deg2rad.p",
+                "size": 103
+              },
+              {
+                "name": "batalef/code/detectCalls.p",
+                "size": 478
+              },
+              {
+                "name": "batalef/code/dummy.fig",
+                "size": 22963
+              },
+              {
+                "name": "batalef/code/dummy.p",
+                "size": 661
+              },
+              {
+                "name": "batalef/code/enforceWavFile.p",
+                "size": 675
+              },
+              {
+                "name": "batalef/code/envelopeDatasetWithWorkInstruct.p",
+                "size": 172
+              },
+              {
+                "name": "batalef/code/fgetParam.p",
+                "size": 155
+              },
+              {
+                "name": "batalef/code/fields2cell.p",
+                "size": 173
+              },
+              {
+                "name": "batalef/code/fileCallGetTimes.p",
+                "size": 605
+              },
+              {
+                "name": "batalef/code/fileCallLocalize.p",
+                "size": 512
+              },
+              {
+                "name": "batalef/code/fileCallPowersMatrix.p",
+                "size": 752
+              },
+              {
+                "name": "batalef/code/fileData.p",
+                "size": 152
+              },
+              {
+                "name": "batalef/code/filterDataUsingWindows.p",
+                "size": 387
+              },
+              {
+                "name": "batalef/code/filterDatasetWithWorkInstruct.p",
+                "size": 201
+              },
+              {
+                "name": "batalef/code/filterError.p",
+                "size": 142
+              },
+              {
+                "name": "batalef/code/filterFileWithWorkInstruct.p",
+                "size": 295
+              },
+              {
+                "name": "batalef/code/findIrrelevantIdx.p",
+                "size": 209
+              },
+              {
+                "name": "batalef/code/findTracksSamplesShiftUsingLsb.p",
+                "size": 2322
+              },
+              {
+                "name": "batalef/code/flashRedField.p",
+                "size": 227
+              },
+              {
+                "name": "batalef/code/flightSimulator.p",
+                "size": 1254
+              },
+              {
+                "name": "batalef/code/forward_azimuth.p",
+                "size": 191
+              },
+              {
+                "name": "batalef/code/fsetParam.p",
+                "size": 138
+              },
+              {
+                "name": "batalef/code/getChannelCallsTable.p",
+                "size": 305
+              },
+              {
+                "name": "batalef/code/getEmptyBatCallStruct.p",
+                "size": 182
+              },
+              {
+                "name": "batalef/code/getFileLevelData.p",
+                "size": 417
+              },
+              {
+                "name": "batalef/code/getFreqRidge.p",
+                "size": 1061
+              },
+              {
+                "name": "batalef/code/getInterval.p",
+                "size": 193
+              },
+              {
+                "name": "batalef/code/getIntervalSubset.p",
+                "size": 242
+              },
+              {
+                "name": "batalef/code/getMask.p",
+                "size": 329
+              },
+              {
+                "name": "batalef/code/getNextBase.p",
+                "size": 353
+              },
+              {
+                "name": "batalef/code/getParFromVarargin.p",
+                "size": 200
+              },
+              {
+                "name": "batalef/code/getParamsFileForDir.p",
+                "size": 510
+              },
+              {
+                "name": "batalef/code/getRefSignal.p",
+                "size": 255
+              },
+              {
+                "name": "batalef/code/getSphRelMics.p",
+                "size": 270
+              },
+              {
+                "name": "batalef/code/ggetParam.p",
+                "size": 347
+              },
+              {
+                "name": "batalef/code/git.p",
+                "size": 665
+              },
+              {
+                "name": "batalef/code/graphColors.p",
+                "size": 260
+              },
+              {
+                "name": "batalef/code/gsetParam.p",
+                "size": 127
+              },
+              {
+                "name": "batalef/code/guiCallMaximalChannelDetection.p",
+                "size": 1614
+              },
+              {
+                "name": "batalef/code/importBatalefFile.p",
+                "size": 1072
+              },
+              {
+                "name": "batalef/code/int2str_compact.p",
+                "size": 418
+              },
+              {
+                "name": "batalef/code/interpShortNansSequences.p",
+                "size": 326
+              },
+              {
+                "name": "batalef/code/interpolate3DWithWorkInstruct.p",
+                "size": 232
+              },
+              {
+                "name": "batalef/code/interpolateCameraPath.p",
+                "size": 514
+              },
+              {
+                "name": "batalef/code/keepCameraData.p",
+                "size": 273
+              },
+              {
+                "name": "batalef/code/kenlo.p",
+                "size": 163
+              },
+              {
+                "name": "batalef/code/loadRawDataExplicit.p",
+                "size": 251
+              },
+              {
+                "name": "batalef/code/locDiscreteArray.p",
+                "size": 478
+              },
+              {
+                "name": "batalef/code/locDiscreteArrayForMics.p",
+                "size": 438
+              },
+              {
+                "name": "batalef/code/localizeFileCall.p",
+                "size": 767
+              },
+              {
+                "name": "batalef/code/locateCalls.p",
+                "size": 2299
+              },
+              {
+                "name": "batalef/code/lsbMergeFiles.p",
+                "size": 1684
+              },
+              {
+                "name": "batalef/code/lsbMerger.p",
+                "size": 1503
+              },
+              {
+                "name": "batalef/code/lsbMergerDynamic.p",
+                "size": 962
+              },
+              {
+                "name": "batalef/code/matchAndAddFileCall.p",
+                "size": 501
+              },
+              {
+                "name": "batalef/code/matchAndAddFileCalls.p",
+                "size": 793
+              },
+              {
+                "name": "batalef/code/maximalChannelDetection.p",
+                "size": 3207
+              },
+              {
+                "name": "batalef/code/mcart2sph.p",
+                "size": 367
+              },
+              {
+                "name": "batalef/code/minmin.p",
+                "size": 128
+              },
+              {
+                "name": "batalef/code/my_istft.p",
+                "size": 362
+              },
+              {
+                "name": "batalef/code/my_stft.p",
+                "size": 346
+              },
+              {
+                "name": "batalef/code/newBeamData.p",
+                "size": 324
+              },
+              {
+                "name": "batalef/code/nop.p",
+                "size": 71
+              },
+              {
+                "name": "batalef/code/nothing.p",
+                "size": 99
+              },
+              {
+                "name": "batalef/code/onGuiChannelCallsDetection.p",
+                "size": 1671
+              },
+              {
+                "name": "batalef/code/onGuiFilterExecution.p",
+                "size": 494
+              },
+              {
+                "name": "batalef/code/outputCameraPaths.p",
+                "size": 1483
+              },
+              {
+                "name": "batalef/code/outputChannelCallsTable.p",
+                "size": 777
+              },
+              {
+                "name": "batalef/code/outputFileCallsTable.p",
+                "size": 711
+              },
+              {
+                "name": "batalef/code/overwriteFiles.p",
+                "size": 154
+              },
+              {
+                "name": "batalef/code/plot3dRaw.p",
+                "size": 341
+              },
+              {
+                "name": "batalef/code/plotMics.p",
+                "size": 351
+              },
+              {
+                "name": "batalef/code/putCallInDataStructure.p",
+                "size": 1295
+              },
+              {
+                "name": "batalef/code/putCallsInDataStructure.p",
+                "size": 95
+              },
+              {
+                "name": "batalef/code/rad2deg.p",
+                "size": 103
+              },
+              {
+                "name": "batalef/code/rdir.p",
+                "size": 291
+              },
+              {
+                "name": "batalef/code/relativepath.p",
+                "size": 542
+              },
+              {
+                "name": "batalef/code/relocateFileCalls.p",
+                "size": 735
+              },
+              {
+                "name": "batalef/code/relocateFromStoredCameraPath.p",
+                "size": 408
+              },
+              {
+                "name": "batalef/code/removePoi.p",
+                "size": 208
+              },
+              {
+                "name": "batalef/code/richdlg.p",
+                "size": 1716
+              },
+              {
+                "name": "batalef/code/richdlgp.p",
+                "size": 252
+              },
+              {
+                "name": "batalef/code/ridgeDatasetWithWorkInstruct.p",
+                "size": 288
+              },
+              {
+                "name": "batalef/code/rotateAndTranslate.p",
+                "size": 130
+              },
+              {
+                "name": "batalef/code/selectMenuItem.p",
+                "size": 251
+              },
+              {
+                "name": "batalef/code/seq2string.p",
+                "size": 180
+              },
+              {
+                "name": "batalef/code/setMicData.p",
+                "size": 448
+              },
+              {
+                "name": "batalef/code/setWorkingDirectory.p",
+                "size": 429
+              },
+              {
+                "name": "batalef/code/simpleton.p",
+                "size": 86
+              },
+              {
+                "name": "batalef/code/spectrogramWithWorkInstruct.p",
+                "size": 250
+              },
+              {
+                "name": "batalef/code/spectrumDatasetWithWorkInstruct.p",
+                "size": 186
+              },
+              {
+                "name": "batalef/code/str2int_compact.p",
+                "size": 137
+              },
+              {
+                "name": "batalef/code/structcat.p",
+                "size": 258
+              },
+              {
+                "name": "batalef/code/toolbarIcons_old.mat",
+                "size": 5002
+              },
+              {
+                "name": "batalef/code/trcRegulator.p",
+                "size": 268
+              },
+              {
+                "name": "batalef/code/tsPlayground.p",
+                "size": 467
+              },
+              {
+                "name": "batalef/code/uiPosition.p",
+                "size": 174
+              },
+              {
+                "name": "batalef/code/updateOldExportFile.p",
+                "size": 2677
+              },
+              {
+                "name": "batalef/code/updateOldOldVersion.p",
+                "size": 766
+              },
+              {
+                "name": "batalef/code/vHas.p",
+                "size": 182
+              },
+              {
+                "name": "batalef/code/yesno.p",
+                "size": 167
+              },
+              {
+                "name": "batalef/code/zoomWindowBuilder.p",
+                "size": 861
+              },
+              {
+                "name": "batalef/common/common.bap",
+                "size": 29786
+              },
+              {
+                "name": "batalef/common/common.bfp",
+                "size": 244
+              },
+              {
+                "name": "batalef/common/common.bgp",
+                "size": 6635
+              },
+              {
+                "name": "batalef/common/toolbarIcons.mat",
+                "size": 6052
+              },
+              {
+                "name": "batalef/methods/detection/detectMaxChannel.m",
+                "size": 4525
+              },
+              {
+                "name": "batalef/methods/detection/detectPeaksFile.m",
+                "size": 1358
+              },
+              {
+                "name": "batalef/methods/detection/detectSortDescentFile.m",
+                "size": 1583
+              },
+              {
+                "name": "batalef/methods/detection/filePeaks_detection_bmd.m",
+                "size": 759
+              },
+              {
+                "name": "batalef/methods/detection/fileSortDescent_detection_bmd.m",
+                "size": 717
+              },
+              {
+                "name": "batalef/methods/detection/maxChannelPeaks_detection_bmd.m",
+                "size": 1807
+              },
+              {
+                "name": "batalef/methods/envelope/envHSG.m",
+                "size": 678
+              },
+              {
+                "name": "batalef/methods/envelope/hsg_envelope_bmd.m",
+                "size": 864
+              },
+              {
+                "name": "batalef/methods/filter/DoubleButterWindow_filter_bmd.m",
+                "size": 1466
+              },
+              {
+                "name": "batalef/methods/filter/butter_filter_bmd.m",
+                "size": 882
+              },
+              {
+                "name": "batalef/methods/filter/filterButter.m",
+                "size": 1151
+              },
+              {
+                "name": "batalef/methods/filter/filterDoubleButterWindow.m",
+                "size": 2112
+              },
+              {
+                "name": "batalef/methods/interpolation3D/linearInterp3D.m",
+                "size": 273
+              },
+              {
+                "name": "batalef/methods/interpolation3D/linear_interpolation3D_bmd.m",
+                "size": 80
+              },
+              {
+                "name": "batalef/methods/interpolation3D/pchipInterp3D.m",
+                "size": 237
+              },
+              {
+                "name": "batalef/methods/interpolation3D/pchip_interpolation3D_bmd.m",
+                "size": 76
+              },
+              {
+                "name": "batalef/methods/interpolation3D/splineInterp3D.m",
+                "size": 243
+              },
+              {
+                "name": "batalef/methods/interpolation3D/spline_interpolation3D_bmd.m",
+                "size": 80
+              },
+              {
+                "name": "batalef/methods/localization/locateBatPrecomputedArray.m",
+                "size": 389
+              },
+              {
+                "name": "batalef/methods/matching/basic_matching_bmd.m",
+                "size": 383
+              },
+              {
+                "name": "batalef/methods/matching/ccmSimple.m",
+                "size": 1863
+              },
+              {
+                "name": "batalef/methods/matching/matchingBasic.m",
+                "size": 2257
+              },
+              {
+                "name": "batalef/methods/ridge/basic_ridge_bmd.m",
+                "size": 1298
+              },
+              {
+                "name": "batalef/methods/ridge/rdgmBasic.m",
+                "size": 2947
+              },
+              {
+                "name": "batalef/methods/spectrogram/somSTFT.m",
+                "size": 631
+              },
+              {
+                "name": "batalef/methods/spectrogram/stft_spectrogram_bmd.m",
+                "size": 792
+              },
+              {
+                "name": "batalef/methods/spectrum/fft_spectrum_bmd.m",
+                "size": 69
+              },
+              {
+                "name": "batalef/methods/spectrum/sumFFT.m",
+                "size": 258
+              },
+              {
+                "name": "batalef/methods/spectrum/sumWelch.m",
+                "size": 179
+              },
+              {
+                "name": "batalef/methods/spectrum/welch_spectrum_bmd.m",
+                "size": 74
+              },
+              {
+                "name": "batalef/methods/yesNo/dummy.m",
+                "size": 131
+              },
+              {
+                "name": "batalef/methods/yesNo/no_yesNo_bmd.m",
+                "size": 64
+              },
+              {
+                "name": "batalef/methods/yesNo/yes_yesNo_bmd.m",
+                "size": 66
+              },
+              {
+                "name": "batalef/methods/beam/2dGaus/D2GaussFunction.m",
+                "size": 135
+              },
+              {
+                "name": "batalef/methods/beam/2dGaus/gaus2D.m",
+                "size": 323
+              },
+              {
+                "name": "batalef/methods/beam/2dGaus/gaus2D_b1md.m",
+                "size": 608
+              },
+              {
+                "name": "batalef/methods/beam/gen_gauss/genGauss.m",
+                "size": 3029
+              },
+              {
+                "name": "batalef/methods/beam/gen_gauss/genGauss_beam_b1md.m",
+                "size": 816
+              },
+              {
+                "name": "batalef/methods/beam/griddataSurface/beamGriddata.m",
+                "size": 2906
+              },
+              {
+                "name": "batalef/methods/beam/griddataSurface/griddata_beam_bmd.m",
+                "size": 610
+              },
+              {
+                "name": "batalef/methods/beam/inpaintSurface/beamInpaint.m",
+                "size": 2142
+              },
+              {
+                "name": "batalef/methods/beam/inpaintSurface/bmStandard.m",
+                "size": 1336
+              },
+              {
+                "name": "batalef/methods/beam/inpaintSurface/f_bitonic_filter.m",
+                "size": 434
+              },
+              {
+                "name": "batalef/methods/beam/inpaintSurface/f_create_surf_matrix.m",
+                "size": 1913
+              },
+              {
+                "name": "batalef/methods/beam/inpaintSurface/inpaint_beam_bmd.m",
+                "size": 801
+              },
+              {
+                "name": "batalef/methods/beam/inpaintSurface/inpaint_nans.m",
+                "size": 16539
+              },
+              {
+                "name": "batalef/methods/beam/sphGauss/sphGauss.m",
+                "size": 1885
+              },
+              {
+                "name": "batalef/methods/beam/sphGauss/sphGaussCreateSurface.m",
+                "size": 588
+              },
+              {
+                "name": "batalef/methods/beam/sphGauss/sphGaussEvaluate.m",
+                "size": 580
+              },
+              {
+                "name": "batalef/methods/beam/sphGauss/sphGauss_beam_bmd.m",
+                "size": 1573
+              },
+              {
+                "name": "batalef/methods/localization/array/arrayGpu_localization_bmd.m",
+                "size": 999
+              },
+              {
+                "name": "batalef/methods/localization/array/arraySlow_localization_bmd.m",
+                "size": 1008
+              },
+              {
+                "name": "batalef/methods/localization/array/array_localization_bmd.m",
+                "size": 987
+              },
+              {
+                "name": "batalef/methods/localization/array/locDiscreteArray.m",
+                "size": 1165
+              },
+              {
+                "name": "batalef/methods/localization/array/locDiscreteArrayGpu.m",
+                "size": 1167
+              },
+              {
+                "name": "batalef/methods/localization/array/locDiscreteArraySlow.m",
+                "size": 1112
+              },
+              {
+                "name": "batalef/methods/localization/gaussNewton/gaussNewton_localization_bmd_tmp.m",
+                "size": 590
+              },
+              {
+                "name": "batalef/methods/localization/gaussNewton/locGaussNewton.m",
+                "size": 1595
+              },
+              {
+                "name": "batalef/methods/localization/mlat/MLAT.m",
+                "size": 1518
+              },
+              {
+                "name": "batalef/methods/localization/mlat/locMLAT.m",
+                "size": 127
+              },
+              {
+                "name": "batalef/methods/localization/mlat/mlat_localization_bmd.m",
+                "size": 75
+              }
+            ]
+          },
+          "status": "STRUCTURE_INSPECTED"
+        },
+        {
+          "filename": "Figure 1.zip",
+          "id": "4917cba0-fdc1-4c3e-8618-ba4a94cb7b44",
+          "extension": ".zip",
+          "inspection": {
+            "type": "zip",
+            "members": [
+              {
+                "name": "Figure 1/500_YRLturns_together_300.mat",
+                "size": 819
+              },
+              {
+                "name": "Figure 1/500_YRLturns_together_75.mat",
+                "size": 822
+              },
+              {
+                "name": "Figure 1/500_YRLturns_together_con.mat",
+                "size": 858
+              },
+              {
+                "name": "Figure 1/503_YRLturns_together_300.mat",
+                "size": 913
+              },
+              {
+                "name": "Figure 1/503_YRLturns_together_75.mat",
+                "size": 995
+              },
+              {
+                "name": "Figure 1/503_YRLturns_together_con.mat",
+                "size": 920
+              },
+              {
+                "name": "Figure 1/505_YRLturns_together_300.mat",
+                "size": 936
+              },
+              {
+                "name": "Figure 1/505_YRLturns_together_75.mat",
+                "size": 815
+              },
+              {
+                "name": "Figure 1/505_YRLturns_together_con.mat",
+                "size": 793
+              },
+              {
+                "name": "Figure 1/510_YRLturns_together_300.mat",
+                "size": 1296
+              },
+              {
+                "name": "Figure 1/510_YRLturns_together_75.mat",
+                "size": 1287
+              },
+              {
+                "name": "Figure 1/510_YRLturns_together_con.mat",
+                "size": 1058
+              }
+            ]
+          },
+          "status": "STRUCTURE_INSPECTED"
+        },
+        {
+          "filename": "Figure 2.zip",
+          "id": "e6a65ea3-8bde-408f-b4ac-3d88cb951980",
+          "extension": ".zip",
+          "inspection": {
+            "type": "zip",
+            "members": [
+              {
+                "name": "Figure 2/500_YRLturns_together_moved.mat",
+                "size": 869
+              },
+              {
+                "name": "Figure 2/503_YRLturns_together_moved.mat",
+                "size": 949
+              },
+              {
+                "name": "Figure 2/503_YRLturns_together_no.mat",
+                "size": 898
+              },
+              {
+                "name": "Figure 2/505_YRLturns_together_moved.mat",
+                "size": 865
+              },
+              {
+                "name": "Figure 2/505_YRLturns_together_no.mat",
+                "size": 750
+              },
+              {
+                "name": "Figure 2/510_YRLturns_together_moved.mat",
+                "size": 1099
+              },
+              {
+                "name": "Figure 2/510_YRLturns_together_no.mat",
+                "size": 1290
+              }
+            ]
+          },
+          "status": "STRUCTURE_INSPECTED"
+        },
+        {
+          "filename": "Figure 3.zip",
+          "id": "449bd74d-9228-4fbc-9a5a-a7eb01ab21d4",
+          "extension": ".zip",
+          "inspection": {
+            "type": "zip",
+            "members": [
+              {
+                "name": "Figure 3/500_DistanceSlowCon.mat",
+                "size": 866
+              },
+              {
+                "name": "Figure 3/503_DistanceSlowCon.mat",
+                "size": 974
+              },
+              {
+                "name": "Figure 3/503_DistanceSlowWe.mat",
+                "size": 795
+              },
+              {
+                "name": "Figure 3/503_YRLturns_together_we.mat",
+                "size": 795
+              },
+              {
+                "name": "Figure 3/505_DistanceSlowCon.mat",
+                "size": 774
+              },
+              {
+                "name": "Figure 3/505_DistanceSlowWe.mat",
+                "size": 546
+              },
+              {
+                "name": "Figure 3/505_YRLturns_together_we.mat",
+                "size": 494
+              },
+              {
+                "name": "Figure 3/510_DistanceSlowCon.mat",
+                "size": 1238
+              },
+              {
+                "name": "Figure 3/510_DistanceSlowWe.mat",
+                "size": 642
+              },
+              {
+                "name": "Figure 3/510_YRLturns_together_we.mat",
+                "size": 677
+              }
+            ]
+          },
+          "status": "STRUCTURE_INSPECTED"
+        },
+        {
+          "filename": "Figure 4.zip",
+          "id": "6658be5f-a13e-4798-8255-1cca1675780c",
+          "extension": ".zip",
+          "inspection": {
+            "type": "zip",
+            "members": [
+              {
+                "name": "Figure 4/100_YRLturns_together_Con.mat",
+                "size": 836
+              },
+              {
+                "name": "Figure 4/100_YRLturns_together_wind.mat",
+                "size": 787
+              },
+              {
+                "name": "Figure 4/200_YRLturns_together_Con.mat",
+                "size": 971
+              },
+              {
+                "name": "Figure 4/200_YRLturns_together_wind.mat",
+                "size": 978
+              },
+              {
+                "name": "Figure 4/500_con_accumulated_sum12m.mat",
+                "size": 968
+              },
+              {
+                "name": "Figure 4/500_con_accumulated_sum1m.mat",
+                "size": 960
+              },
+              {
+                "name": "Figure 4/503_con_accumulated_sum12m.mat",
+                "size": 1048
+              },
+              {
+                "name": "Figure 4/503_con_accumulated_sum1m.mat",
+                "size": 1050
+              },
+              {
+                "name": "Figure 4/505_con_accumulated_sum12m.mat",
+                "size": 913
+              },
+              {
+                "name": "Figure 4/505_con_accumulated_sum1m.mat",
+                "size": 912
+              },
+              {
+                "name": "Figure 4/510_con_accumulated_sum12m.mat",
+                "size": 1282
+              },
+              {
+                "name": "Figure 4/510_con_accumulated_sum1m.mat",
+                "size": 1269
+              },
+              {
+                "name": "Figure 4/700_YRLturns_together_Con.mat",
+                "size": 754
+              },
+              {
+                "name": "Figure 4/700_YRLturns_together_wind.mat",
+                "size": 697
+              },
+              {
+                "name": "Figure 4/772_YRLturns_together_Con.mat",
+                "size": 890
+              },
+              {
+                "name": "Figure 4/772_YRLturns_together_wind.mat",
+                "size": 719
+              }
+            ]
+          },
+          "status": "STRUCTURE_INSPECTED"
+        }
+      ],
+      "tokens": {
+        "bat_tokens": [],
+        "condition_like_tokens": [
+          "Figure 1/500_YRLturns_together_300.mat",
+          "Figure 1/500_YRLturns_together_75.mat",
+          "Figure 1/500_YRLturns_together_con.mat",
+          "Figure 1/503_YRLturns_together_300.mat",
+          "Figure 1/503_YRLturns_together_75.mat",
+          "Figure 1/503_YRLturns_together_con.mat",
+          "Figure 1/505_YRLturns_together_300.mat",
+          "Figure 1/505_YRLturns_together_75.mat",
+          "Figure 1/505_YRLturns_together_con.mat",
+          "Figure 1/510_YRLturns_together_300.mat",
+          "Figure 1/510_YRLturns_together_75.mat",
+          "Figure 1/510_YRLturns_together_con.mat",
+          "Figure 2/500_YRLturns_together_moved.mat",
+          "Figure 2/503_YRLturns_together_moved.mat",
+          "Figure 2/503_YRLturns_together_no.mat",
+          "Figure 2/505_YRLturns_together_moved.mat",
+          "Figure 2/505_YRLturns_together_no.mat",
+          "Figure 2/510_YRLturns_together_moved.mat",
+          "Figure 2/510_YRLturns_together_no.mat",
+          "Figure 3/500_DistanceSlowCon.mat",
+          "Figure 3/503_DistanceSlowCon.mat",
+          "Figure 3/503_DistanceSlowWe.mat",
+          "Figure 3/503_YRLturns_together_we.mat",
+          "Figure 3/505_DistanceSlowCon.mat",
+          "Figure 3/505_DistanceSlowWe.mat",
+          "Figure 3/505_YRLturns_together_we.mat",
+          "Figure 3/510_DistanceSlowCon.mat",
+          "Figure 3/510_DistanceSlowWe.mat",
+          "Figure 3/510_YRLturns_together_we.mat",
+          "Figure 4/100_YRLturns_together_Con.mat",
+          "Figure 4/100_YRLturns_together_wind.mat",
+          "Figure 4/200_YRLturns_together_Con.mat",
+          "Figure 4/200_YRLturns_together_wind.mat",
+          "Figure 4/500_con_accumulated_sum12m.mat",
+          "Figure 4/500_con_accumulated_sum1m.mat",
+          "Figure 4/503_con_accumulated_sum12m.mat",
+          "Figure 4/503_con_accumulated_sum1m.mat",
+          "Figure 4/505_con_accumulated_sum12m.mat",
+          "Figure 4/505_con_accumulated_sum1m.mat",
+          "Figure 4/510_con_accumulated_sum12m.mat",
+          "Figure 4/510_con_accumulated_sum1m.mat",
+          "Figure 4/700_YRLturns_together_Con.mat",
+          "Figure 4/700_YRLturns_together_wind.mat",
+          "Figure 4/772_YRLturns_together_Con.mat",
+          "Figure 4/772_YRLturns_together_wind.mat",
+          "batalef/code/bMainGuiContextMenu.p",
+          "batalef/code/bZoomWindow.p",
+          "batalef/code/createSecondaryFiles.p",
+          "batalef/code/filterDataUsingWindows.p",
+          "batalef/code/toolbarIcons_old.mat",
+          "batalef/code/zoomWindowBuilder.p",
+          "batalef/common/toolbarIcons.mat",
+          "batalef/methods/filter/DoubleButterWindow_filter_bmd.m",
+          "batalef/methods/filter/filterDoubleButterWindow.m",
+          "batalef/methods/localization/array/arraySlow_localization_bmd.m",
+          "batalef/methods/localization/array/locDiscreteArraySlow.m"
+        ]
+      }
     },
     {
       "key": "ma2025",
       "dataset_id": "964fv73w94",
       "version": 1,
-      "files": [],
-      "error": "RuntimeError('cannot list public files')"
+      "files": [
+        {
+          "filename": "BuzzData.mat",
+          "id": "8b1dead3-9ec1-41a8-993e-4bcff5678e94",
+          "extension": ".mat",
+          "inspection": {
+            "type": "mat",
+            "variables": [
+              {
+                "name": "BuzzData",
+                "shape": [
+                  20,
+                  9
+                ],
+                "class": "double"
+              }
+            ],
+            "notes": []
+          },
+          "status": "STRUCTURE_INSPECTED"
+        },
+        {
+          "filename": "BuzzDutyCycleSilenceMworm.mat",
+          "id": "1d809ed7-0f04-4ed2-97d1-847449f6afe4",
+          "extension": ".mat",
+          "inspection": {
+            "type": "mat",
+            "variables": [
+              {
+                "name": "BuzzDutyCycleSilenceMworm",
+                "shape": [
+                  29,
+                  1
+                ],
+                "class": "double"
+              }
+            ],
+            "notes": []
+          },
+          "status": "STRUCTURE_INSPECTED"
+        },
+        {
+          "filename": "CallRate40.mat",
+          "id": "f05b79b0-d70d-470a-b487-4ed3c105f5d8",
+          "extension": ".mat",
+          "inspection": {
+            "type": "mat",
+            "variables": [
+              {
+                "name": "CallRate40",
+                "shape": [
+                  26,
+                  1
+                ],
+                "class": "cell"
+              }
+            ],
+            "notes": []
+          },
+          "status": "STRUCTURE_INSPECTED"
+        },
+        {
+          "filename": "CallRate60.mat",
+          "id": "d6a16afb-9759-466d-8a4f-18462793898c",
+          "extension": ".mat",
+          "inspection": {
+            "type": "mat",
+            "variables": [
+              {
+                "name": "CallRate60",
+                "shape": [
+                  24,
+                  1
+                ],
+                "class": "cell"
+              }
+            ],
+            "notes": []
+          },
+          "status": "STRUCTURE_INSPECTED"
+        },
+        {
+          "filename": "CallRate80.mat",
+          "id": "a3505cdb-abe0-405e-bf8f-573064f6ddaa",
+          "extension": ".mat",
+          "inspection": {
+            "type": "mat",
+            "variables": [
+              {
+                "name": "CallRate80",
+                "shape": [
+                  16,
+                  1
+                ],
+                "class": "cell"
+              }
+            ],
+            "notes": []
+          },
+          "status": "STRUCTURE_INSPECTED"
+        },
+        {
+          "filename": "Hp003_Cond_Noise_Trial_5_20210707T211104_cmb_cut_res.mat",
+          "id": "5163d71a-45be-46c1-b9c7-58ffc322b9a8",
+          "extension": ".mat",
+          "inspection": {
+            "type": "mat",
+            "variables": [],
+            "notes": [
+              "whosmat_failed:TypeError(\"'NoneType' object is not iterable\")"
+            ]
+          },
+          "status": "STRUCTURE_INSPECTED"
+        },
+        {
+          "filename": "Hp036_Cond_Noise_Trial_9_20210710T092842_cmb_cut.mat",
+          "id": "98137741-b388-4ca6-ae25-33eb4143fd28",
+          "extension": ".mat",
+          "inspection": {
+            "type": "mat",
+            "variables": [
+              {
+                "name": "LT",
+                "shape": [
+                  1,
+                  1
+                ],
+                "class": "double"
+              },
+              {
+                "name": "ncond",
+                "shape": [
+                  1,
+                  2
+                ],
+                "class": "double"
+              },
+              {
+                "name": "outampldb",
+                "shape": [
+                  1,
+                  1
+                ],
+                "class": "double"
+              },
+              {
+                "name": "reccutrme",
+                "shape": [
+                  480000,
+                  9
+                ],
+                "class": "double"
+              }
+            ],
+            "notes": []
+          },
+          "status": "STRUCTURE_INSPECTED"
+        },
+        {
+          "filename": "Hp094_Cond_Noise_Trial_5_20210702T184710_cmb_cut.mat",
+          "id": "fc435fd9-832c-4f2d-9a6e-41c82b297d1a",
+          "extension": ".mat",
+          "inspection": {
+            "type": "mat",
+            "variables": [
+              {
+                "name": "LT",
+                "shape": [
+                  1,
+                  1
+                ],
+                "class": "double"
+              },
+              {
+                "name": "reccutrme",
+                "shape": [
+                  480000,
+                  9
+                ],
+                "class": "double"
+              },
+              {
+                "name": "ncond",
+                "shape": [
+                  1,
+                  2
+                ],
+                "class": "double"
+              },
+              {
+                "name": "outampldb",
+                "shape": [
+                  1,
+                  1
+                ],
+                "class": "double"
+              }
+            ],
+            "notes": []
+          },
+          "status": "STRUCTURE_INSPECTED"
+        },
+        {
+          "filename": "Hp094_Cond_Noise_Trial_5_20210702T184710_cmb_cut_res.mat",
+          "id": "4a353df2-f0fa-4ac2-b1ba-c7b8dd1fe6e1",
+          "extension": ".mat",
+          "inspection": {
+            "type": "mat",
+            "variables": [],
+            "notes": [
+              "whosmat_failed:TypeError(\"'NoneType' object is not iterable\")"
+            ]
+          },
+          "status": "STRUCTURE_INSPECTED"
+        },
+        {
+          "filename": "Hp137_20230628T111049_Trial_1__Prey_type_Dalamin_Nois_status_40_rec_org.mat",
+          "id": "4182c1fb-637b-4eac-a749-b8c2fdaab819",
+          "extension": ".mat",
+          "inspection": {
+            "type": "mat",
+            "variables": [
+              {
+                "name": "batloc",
+                "shape": [
+                  1161,
+                  4
+                ],
+                "class": "double"
+              },
+              {
+                "name": "channeldelays",
+                "shape": [
+                  1161,
+                  15
+                ],
+                "class": "double"
+              },
+              {
+                "name": "pars",
+                "shape": [
+                  1,
+                  1
+                ],
+                "class": "struct"
+              },
+              {
+                "name": "recs",
+                "shape": [
+                  223104,
+                  16
+                ],
+                "class": "double"
+              }
+            ],
+            "notes": []
+          },
+          "status": "STRUCTURE_INSPECTED"
+        },
+        {
+          "filename": "Hp137_20230628T111049_Trial_1__Prey_type_Dalamin_Nois_status_40_rec_org_res.mat",
+          "id": "30ccfecb-9839-4abc-9b29-31481cddf1bc",
+          "extension": ".mat",
+          "inspection": {
+            "type": "mat",
+            "variables": [],
+            "notes": [
+              "whosmat_failed:TypeError(\"'NoneType' object is not iterable\")"
+            ]
+          },
+          "status": "STRUCTURE_INSPECTED"
+        },
+        {
+          "filename": "Hp137_20230628T112054_Trial_1__Prey_type_Dalamin_Nois_status_40_rec_org_res.mat",
+          "id": "7032ef29-b58b-4314-9732-278bea929b25",
+          "extension": ".mat",
+          "inspection": {
+            "type": "mat",
+            "variables": [],
+            "notes": [
+              "whosmat_failed:TypeError(\"'NoneType' object is not iterable\")"
+            ]
+          },
+          "status": "STRUCTURE_INSPECTED"
+        },
+        {
+          "filename": "Hp137_20231107T113419_Trial_1__Prey_type_Dalamin_Nois_status_40_rec_org_res.mat",
+          "id": "71ebd679-4002-4347-bcfe-72387089c868",
+          "extension": ".mat",
+          "inspection": {
+            "type": "mat",
+            "variables": [],
+            "notes": [
+              "whosmat_failed:TypeError(\"'NoneType' object is not iterable\")"
+            ]
+          },
+          "status": "STRUCTURE_INSPECTED"
+        },
+        {
+          "filename": "Hp142_20230518T115217_Trial_1__prey_type_mworm_prey_status_motionless_rec_org.mat",
+          "id": "22bced94-cdfe-4b04-a6c2-d6ac74314d77",
+          "extension": ".mat",
+          "inspection": {
+            "type": "mat",
+            "variables": [
+              {
+                "name": "batloc",
+                "shape": [
+                  1221,
+                  4
+                ],
+                "class": "double"
+              },
+              {
+                "name": "channeldelays",
+                "shape": [
+                  1221,
+                  15
+                ],
+                "class": "double"
+              },
+              {
+                "name": "pars",
+                "shape": [
+                  1,
+                  1
+                ],
+                "class": "struct"
+              },
+              {
+                "name": "recs",
+                "shape": [
+                  234624,
+                  16
+                ],
+                "class": "double"
+              }
+            ],
+            "notes": []
+          },
+          "status": "STRUCTURE_INSPECTED"
+        },
+        {
+          "filename": "Hp142_20230518T115217_Trial_1__prey_type_mworm_prey_status_motionless_rec_org_res.mat",
+          "id": "25c89f62-53d8-457e-8ae8-56e75c9dd5a8",
+          "extension": ".mat",
+          "inspection": {
+            "type": "mat",
+            "variables": [],
+            "notes": [
+              "whosmat_failed:TypeError(\"'NoneType' object is not iterable\")"
+            ]
+          },
+          "status": "STRUCTURE_INSPECTED"
+        },
+        {
+          "filename": "Hp142_20230627T171102_Trial_1__Prey_type_Dalamin_Prey_status_motionless_rec_org.mat",
+          "id": "915ee987-0932-4eab-add5-a79508bb294a",
+          "extension": ".mat",
+          "inspection": {
+            "type": "mat",
+            "variables": [
+              {
+                "name": "batloc",
+                "shape": [
+                  1161,
+                  4
+                ],
+                "class": "double"
+              },
+              {
+                "name": "channeldelays",
+                "shape": [
+                  1161,
+                  15
+                ],
+                "class": "double"
+              },
+              {
+                "name": "pars",
+                "shape": [
+                  1,
+                  1
+                ],
+                "class": "struct"
+              },
+              {
+                "name": "recs",
+                "shape": [
+                  223104,
+                  16
+                ],
+                "class": "double"
+              }
+            ],
+            "notes": []
+          },
+          "status": "STRUCTURE_INSPECTED"
+        },
+        {
+          "filename": "Hp158_20230301T112313_Trial_1__Prey_type_Dalamin_Prey_status_motionless_rec_org.mat",
+          "id": "13d567a5-7663-4f1d-97e6-67d0c9793c7b",
+          "extension": ".mat",
+          "inspection": {
+            "type": "mat",
+            "variables": [
+              {
+                "name": "batloc",
+                "shape": [
+                  1431,
+                  4
+                ],
+                "class": "double"
+              },
+              {
+                "name": "channeldelays",
+                "shape": [
+                  1431,
+                  15
+                ],
+                "class": "double"
+              },
+              {
+                "name": "pars",
+                "shape": [
+                  1,
+                  1
+                ],
+                "class": "struct"
+              },
+              {
+                "name": "recs",
+                "shape": [
+                  274944,
+                  16
+                ],
+                "class": "double"
+              }
+            ],
+            "notes": []
+          },
+          "status": "STRUCTURE_INSPECTED"
+        },
+        {
+          "filename": "LandingNoiseAmplitude.xlsx",
+          "id": "08a59754-cfca-4032-b0b1-86f7c2e9c33e",
+          "extension": ".xlsx",
+          "inspection": {
+            "type": "xlsx",
+            "sheets": [
+              {
+                "name": "Sheet1",
+                "max_row": 10,
+                "max_column": 12,
+                "header": [
+                  "0.0113785275579156",
+                  "0.0195177869715306",
+                  "0.0162139620951287",
+                  "0.0220475313165431",
+                  "0.00731016915085355",
+                  "0.014261567115911",
+                  "0.0159953979600615",
+                  "0.0150745872653377",
+                  "0.0120993166132792",
+                  "0.0208165771193377",
+                  "0.0284321096107166",
+                  "0.0181569225077088"
+                ]
+              },
+              {
+                "name": "Sheet2",
+                "max_row": 1,
+                "max_column": 1,
+                "header": []
+              },
+              {
+                "name": "Sheet3",
+                "max_row": 1,
+                "max_column": 1,
+                "header": []
+              }
+            ]
+          },
+          "status": "STRUCTURE_INSPECTED"
+        },
+        {
+          "filename": "LandingSileneceAmplitude.xlsx",
+          "id": "77df3547-0139-401b-b5d9-4ce2f5f194dd",
+          "extension": ".xlsx",
+          "inspection": {
+            "type": "xlsx",
+            "sheets": [
+              {
+                "name": "Sheet1",
+                "max_row": 9,
+                "max_column": 14,
+                "header": [
+                  "0.0505372426104708",
+                  "0.0100239647200191",
+                  "0.0246558112085571",
+                  "0.0191610238329147",
+                  "0.00936035371721372",
+                  "0.00975326619817662",
+                  "0.0168305953286685",
+                  "0.0106319121244958",
+                  "0.0196502793127643",
+                  "0.00603745644093758",
+                  "0.00453251646268995",
+                  "0.0273085209420184",
+                  "0.0079478171783177",
+                  "0.00649736581713752"
+                ]
+              },
+              {
+                "name": "Sheet2",
+                "max_row": 1,
+                "max_column": 1,
+                "header": []
+              },
+              {
+                "name": "Sheet3",
+                "max_row": 1,
+                "max_column": 1,
+                "header": []
+              }
+            ]
+          },
+          "status": "STRUCTURE_INSPECTED"
+        },
+        {
+          "filename": "ScriptFig1.m",
+          "id": "d7d39ac6-738e-4d8c-9c02-3e398fd313f1",
+          "extension": ".m",
+          "inspection": {
+            "type": "matlab_script",
+            "relevant_identifiers": [
+              "Flying",
+              "FlyingAllData",
+              "FlyingBuzzDuration",
+              "FlyingCallNumber",
+              "Hp137_20230628T111049_Trial_1__Prey_type_Dalamin_Nois_status_40_rec_org",
+              "Hp137_20230628T111049_Trial_1__Prey_type_Dalamin_Nois_status_40_rec_org_res",
+              "Hp142_20230518T115217_Trial_1__prey_type_mworm_prey_status_motionless_rec_org",
+              "Hp142_20230518T115217_Trial_1__prey_type_mworm_prey_status_motionless_rec_org_res",
+              "Hp142_20230627T171102_Trial_1__Prey_type_Dalamin_Prey_status_motionless_rec_org",
+              "Hp158_20230301T112313_Trial_1__Prey_type_Dalamin_Prey_status_motionless_rec_org",
+              "Hp158_20230301T112313_Trial_1__Prey_type_Dalamin_Prey_status_motionless_rec_org_res",
+              "Prey",
+              "PreyState",
+              "avg_piFlying",
+              "bats",
+              "figpath",
+              "pi_dataFlying",
+              "prey",
+              "process_trial",
+              "process_trial66",
+              "std_piFlying"
+            ],
+            "data_file_references": [
+              {
+                "function": "load",
+                "filename": "E:\\OrganizedRec\\Hp158_20230301T112313_Trial_1__Prey_type_Dalamin_Prey_status_motionless_rec_org.mat"
+              },
+              {
+                "function": "load",
+                "filename": "E:\\OrganizedRecResult\\Hp158\\Hp158_20230301T112313_Trial_1__Prey_type_Dalamin_Prey_status_motionless_rec_org_res.mat"
+              },
+              {
+                "function": "load",
+                "filename": "E:\\OrganizedRecResult\\Hp142_20230518T115217_Trial_1__prey_type_mworm_prey_status_motionless_rec_org_res.mat"
+              },
+              {
+                "function": "load",
+                "filename": "C:\\OrganizedRecResult\\Hp137_20230628T111049_Trial_1__Prey_type_Dalamin_Nois_status_40_rec_org_res.mat"
+              },
+              {
+                "function": "load",
+                "filename": "E:\\OrganizedRec\\Hp142_20230518T115217_Trial_1__prey_type_mworm_prey_status_motionless_rec_org.mat"
+              },
+              {
+                "function": "load",
+                "filename": "E:\\OrganizedRec\\Hp137_20230628T111049_Trial_1__Prey_type_Dalamin_Nois_status_40_rec_org.mat"
+              },
+              {
+                "function": "readtable",
+                "filename": "C:\\Users\\16591\\PreyState\\StationaryAllData.xlsx"
+              },
+              {
+                "function": "readtable",
+                "filename": "C:\\Users\\16591\\PreyState\\FlutterAllData.xlsx"
+              },
+              {
+                "function": "readtable",
+                "filename": "C:\\Users\\16591\\PreyState\\FlyingAllData.xlsx"
+              },
+              {
+                "function": "load",
+                "filename": "C:\\Users\\16591\\SilenceMworm\\BuzzDutyCycleSilenceMworm.mat"
+              },
+              {
+                "function": "load",
+                "filename": "E:\\BuzzLength\\DutyCycle\\BuzzData.mat"
+              },
+              {
+                "function": "load",
+                "filename": "E:\\OrganizedRec\\Hp142_20230627T171102_Trial_1__Prey_type_Dalamin_Prey_status_motionless_rec_org.mat"
+              }
+            ],
+            "relevant_strings": [
+              "All bats",
+              "C:\\OrganizedRecResult\\Hp137_20230628T111049_Trial_1__Prey_type_Dalamin_Nois_status_40_rec_org_res.mat",
+              "C:\\Users\\16591\\PreyState\\Flutter",
+              "C:\\Users\\16591\\PreyState\\FlutterAllData.xlsx",
+              "C:\\Users\\16591\\PreyState\\Flying",
+              "C:\\Users\\16591\\PreyState\\FlyingAllData.xlsx",
+              "C:\\Users\\16591\\PreyState\\Stationary",
+              "C:\\Users\\16591\\PreyState\\StationaryAllData.xlsx",
+              "C:\\Users\\16591\\SilenceMworm\\BuzzDutyCycleSilenceMworm.mat",
+              "E:\\BuzzLength\\DutyCycle\\BuzzData.mat",
+              "E:\\OrganizedRecResult\\Hp142_20230518T115217_Trial_1__prey_type_mworm_prey_status_motionless_rec_org_res.mat",
+              "E:\\OrganizedRecResult\\Hp158\\Hp158_20230301T112313_Trial_1__Prey_type_Dalamin_Prey_status_motionless_rec_org_res.mat",
+              "E:\\OrganizedRec\\Hp137_20230628T111049_Trial_1__Prey_type_Dalamin_Nois_status_40_rec_org.mat",
+              "E:\\OrganizedRec\\Hp142_20230518T115217_Trial_1__prey_type_mworm_prey_status_motionless_rec_org.mat",
+              "E:\\OrganizedRec\\Hp142_20230627T171102_Trial_1__Prey_type_Dalamin_Prey_status_motionless_rec_org.mat",
+              "E:\\OrganizedRec\\Hp158_20230301T112313_Trial_1__Prey_type_Dalamin_Prey_status_motionless_rec_org.mat",
+              "Flying",
+              "Flying Insect",
+              "Prey state",
+              "Time relative to prey capture (s)",
+              "XData",
+              "YData",
+              "params.mat"
+            ]
+          },
+          "status": "STRUCTURE_INSPECTED"
+        },
+        {
+          "filename": "ScriptFig2.m",
+          "id": "6da75cdf-0cb9-4ccd-951a-146f29612024",
+          "extension": ".m",
+          "inspection": {
+            "type": "matlab_script",
+            "relevant_identifiers": [
+              "DataTrial",
+              "Hp158_20230511T211518_Trial_1__status_mworm_trials_40_rec_org",
+              "Hp158_20230518T112917_Trial_1__prey_type_mworm_prey_status_motionless_rec_org",
+              "Hp158_20230518T112917_Trial_1__prey_type_mworm_prey_status_motionless_rec_org_res",
+              "Hp158_20230603T102754_Trial_1__status_mworm_trials_40_rec_org_res",
+              "Noise",
+              "NoiseMworm",
+              "avg_piNoiseMworm40",
+              "avg_piNoiseMworm60",
+              "avg_piNoiseMworm80",
+              "bats",
+              "pi_dataNoiseMworm40",
+              "pi_dataNoiseMworm60",
+              "pi_dataNoiseMworm80",
+              "prey",
+              "process_trial",
+              "process_trial66",
+              "std_piNoiseMworm40",
+              "std_piNoiseMworm60",
+              "std_piNoiseMworm80"
+            ],
+            "data_file_references": [
+              {
+                "function": "load",
+                "filename": "E:\\OrganizedRecResult\\Hp158\\Hp158_20230518T112917_Trial_1__prey_type_mworm_prey_status_motionless_rec_org_res.mat"
+              },
+              {
+                "function": "load",
+                "filename": "E:\\OrganizedRec\\Hp158_20230518T112917_Trial_1__prey_type_mworm_prey_status_motionless_rec_org.mat"
+              },
+              {
+                "function": "load",
+                "filename": "E:\\OrganizedRecResult\\Hp158_20230603T102754_Trial_1__status_mworm_trials_40_rec_org_res.mat"
+              },
+              {
+                "function": "load",
+                "filename": "E:\\OrganizedRec\\Hp158_20230511T211518_Trial_1__status_mworm_trials_40_rec_org.mat"
+              },
+              {
+                "function": "readtable",
+                "filename": "C:\\Users\\DataTrial\\NoiseMworm\\N40AllData.xlsx"
+              },
+              {
+                "function": "readtable",
+                "filename": "C:\\Users\\DataTrial\\NoiseMworm\\N60AllData.xlsx"
+              },
+              {
+                "function": "readtable",
+                "filename": "C:\\Users\\DataTrial\\NoiseMworm\\N80AllData.xlsx"
+              },
+              {
+                "function": "readtable",
+                "filename": "C:\\Users\\DataTrial\\NoiseMworm\\N40AllData.xlsx"
+              },
+              {
+                "function": "readtable",
+                "filename": "C:\\Users\\DataTrial\\NoiseMworm\\N60AllData.xlsx"
+              },
+              {
+                "function": "readtable",
+                "filename": "C:\\Users\\DataTrial\\NoiseMworm\\N80AllData.xlsx"
+              },
+              {
+                "function": "readtable",
+                "filename": "C:\\Users\\DataTrial\\NoiseMworm\\N40AllData.xlsx"
+              },
+              {
+                "function": "readtable",
+                "filename": "C:\\Users\\DataTrial\\NoiseMworm\\N60AllData.xlsx"
+              },
+              {
+                "function": "readtable",
+                "filename": "C:\\Users\\DataTrial\\NoiseMworm\\N80AllData.xlsx"
+              }
+            ],
+            "relevant_strings": [
+              "All bats",
+              "C:\\Users\\DataTrial\\ErrBarAllData\\NoiseMworm\\40",
+              "C:\\Users\\DataTrial\\ErrBarAllData\\NoiseMworm\\60",
+              "C:\\Users\\DataTrial\\ErrBarAllData\\NoiseMworm\\80",
+              "C:\\Users\\DataTrial\\ErrBarAllData\\SilenceMworm",
+              "C:\\Users\\DataTrial\\NoiseMworm\\N40AllData.xlsx",
+              "C:\\Users\\DataTrial\\NoiseMworm\\N60AllData.xlsx",
+              "C:\\Users\\DataTrial\\NoiseMworm\\N80AllData.xlsx",
+              "C:\\Usersz\\DataTrial\\ErrBarAllData\\NoiseMworm\\40",
+              "E:\\OrganizedRecResult\\Hp158\\Hp158_20230518T112917_Trial_1__prey_type_mworm_prey_status_motionless_rec_org_res.mat",
+              "E:\\OrganizedRecResult\\Hp158_20230603T102754_Trial_1__status_mworm_trials_40_rec_org_res.mat",
+              "E:\\OrganizedRec\\Hp158_20230511T211518_Trial_1__status_mworm_trials_40_rec_org.mat",
+              "E:\\OrganizedRec\\Hp158_20230518T112917_Trial_1__prey_type_mworm_prey_status_motionless_rec_org.mat",
+              "Noise level",
+              "Noise level: dB SPL",
+              "Noise: 60 dB",
+              "Time relative to prey capture (s)",
+              "XData",
+              "YData",
+              "params.mat"
+            ]
+          },
+          "status": "STRUCTURE_INSPECTED"
+        },
+        {
+          "filename": "ScriptFig3.m",
+          "id": "618e0817-905f-4d52-8eec-e3ebeeaac494",
+          "extension": ".m",
+          "inspection": {
+            "type": "matlab_script",
+            "relevant_identifiers": [
+              "Hp036_Cond_Noise_Trial_9_20210710T092842_cmb_cut",
+              "Hp036_Cond_Noise_Trial_9_20210710T092842_cmb_cut_res",
+              "Hp094_Cond_Noise_Trial_5_20210702T184710_cmb_cut",
+              "Hp094_Cond_Noise_Trial_5_20210702T184710_cmb_cut_res",
+              "Landing",
+              "LandingNoiseAmplitude",
+              "LandingSileneceAmplitude",
+              "Noise",
+              "Noisecolumn_mean",
+              "avg_piNoise60",
+              "avg_piNoiseMworm40",
+              "landing",
+              "noise",
+              "pi_dataNoiseMworm40",
+              "process_trial",
+              "process_trial66",
+              "std_piNoise60",
+              "std_piNoiseMworm40",
+              "x_coord",
+              "y_coord"
+            ],
+            "data_file_references": [
+              {
+                "function": "load",
+                "filename": "C:\\Users\\Landing\\noise\\Hp094_Cond_Noise_Trial_5_20210702T184710_cmb_cut_res.mat"
+              },
+              {
+                "function": "load",
+                "filename": "C:\\Users\\Landing\\noise\\Hp036\\Hp036_Cond_Noise_Trial_9_20210710T092842_cmb_cut_res.mat"
+              },
+              {
+                "function": "load",
+                "filename": "C:\\Users\\Landing\\noise\\Hp094_Cond_Noise_Trial_5_20210702T184710_cmb_cut.mat"
+              },
+              {
+                "function": "load",
+                "filename": "C:\\Users\\Landing\\noise\\Hp036_Cond_Noise_Trial_9_20210710T092842_cmb_cut.mat"
+              },
+              {
+                "function": "readtable",
+                "filename": "C:\\Users\\Landing\\noise\\choice\\LandingSileneceAmplitude.xlsx"
+              },
+              {
+                "function": "readtable",
+                "filename": "C:\\Users\\Landing\\noise\\choice\\LandingNoiseAmplitude.xlsx"
+              }
+            ],
+            "relevant_strings": [
+              "C:\\Users\\Landing\\noise\\Hp036\\Hp036_Cond_Noise_Trial_9_20210710T092842_cmb_cut_res.mat",
+              "C:\\Users\\Landing\\noise\\Hp036_Cond_Noise_Trial_9_20210710T092842_cmb_cut.mat",
+              "C:\\Users\\Landing\\noise\\Hp094_Cond_Noise_Trial_5_20210702T184710_cmb_cut.mat",
+              "C:\\Users\\Landing\\noise\\Hp094_Cond_Noise_Trial_5_20210702T184710_cmb_cut_res.mat",
+              "C:\\Users\\Landing\\noise\\choice\\LandingNoiseAmplitude.xlsx",
+              "C:\\Users\\Landing\\noise\\choice\\LandingSileneceAmplitude.xlsx",
+              "C:\\Users\\Landing\\noise\\choice\\noise",
+              "C:\\Users\\Landing\\noise\\choice\\silence",
+              "Data for group ",
+              "Noise level",
+              "Noise: 60 dB",
+              "Time relative to landing (s)",
+              "XData",
+              "YData",
+              "params.mat"
+            ]
+          },
+          "status": "STRUCTURE_INSPECTED"
+        },
+        {
+          "filename": "ScriptSI_FigS1-3.m",
+          "id": "ab2300fb-5c0b-4023-bb6a-8d991fb492be",
+          "extension": ".m",
+          "inspection": {
+            "type": "matlab_script",
+            "relevant_identifiers": [
+              "CallRateFlying",
+              "DataTrial",
+              "Fig1Prey",
+              "Flight",
+              "Fly",
+              "Flying",
+              "FlyingAllData",
+              "FlyingBuzzDuration",
+              "FlyingBuzzEnd",
+              "FlyingBuzzStart",
+              "FlyingCallNumber",
+              "FlyingCallRate",
+              "Landing",
+              "LandingSpeed",
+              "Noise",
+              "NoiseMworm",
+              "Prey",
+              "PreyState",
+              "all_speed",
+              "avg_speed",
+              "avg_speedFlutter",
+              "avg_speedFlying",
+              "avg_speedSilenceMworm",
+              "avg_speedStationary",
+              "batloc",
+              "bats",
+              "bin_speed",
+              "figpath",
+              "landing",
+              "prey",
+              "process_speed_boxdata",
+              "process_speed_trial",
+              "speed",
+              "speed_data",
+              "speed_dataFlutter",
+              "speed_dataFlying",
+              "speed_dataSilenceMworm",
+              "speed_dataStationary",
+              "std_speed",
+              "std_speedFlutter",
+              "std_speedFlying",
+              "std_speedSilenceMworm",
+              "std_speedStationary",
+              "x_coord",
+              "y_coord"
+            ],
+            "data_file_references": [
+              {
+                "function": "load",
+                "filename": "C:\\Users\\DataTrial\\PreyState\\BuzzRateData\\RepititionRate\\CallRateStationary.mat"
+              },
+              {
+                "function": "load",
+                "filename": "C:\\Users\\DataTrial\\PreyState\\BuzzRateData\\RepititionRate\\CallRateFlying.mat"
+              },
+              {
+                "function": "load",
+                "filename": "C:\\Users\\DataTrial\\PreyState\\BuzzRateData\\RepititionRate\\CallRateFlutter.mat"
+              },
+              {
+                "function": "readtable",
+                "filename": "C:\\Users\\DataTrial\\PreyState\\StationaryAllData.xlsx"
+              },
+              {
+                "function": "readtable",
+                "filename": "C:\\Users\\DataTrial\\PreyState\\FlutterAllData.xlsx"
+              },
+              {
+                "function": "readtable",
+                "filename": "C:\\Users\\DataTrial\\PreyState\\FlyingAllData.xlsx"
+              },
+              {
+                "function": "load",
+                "filename": "C:\\Users\\16591\\Desktop\\Clutter120m90Hz\\DataTrial\\NoiseMworm\\RepititionRate\\CallRate40.mat"
+              },
+              {
+                "function": "load",
+                "filename": "C:\\Users\\16591\\Desktop\\Clutter120m90Hz\\DataTrial\\NoiseMworm\\RepititionRate\\CallRate60.mat"
+              },
+              {
+                "function": "load",
+                "filename": "C:\\Users\\16591\\Desktop\\Clutter120m90Hz\\DataTrial\\NoiseMworm\\RepititionRate\\CallRate80.mat"
+              },
+              {
+                "function": "readtable",
+                "filename": "C:\\Users\\16591\\Desktop\\Clutter120m90Hz\\DataTrial\\NoiseMworm\\N40AllData.xlsx"
+              },
+              {
+                "function": "readtable",
+                "filename": "C:\\Users\\16591\\Desktop\\Clutter120m90Hz\\DataTrial\\NoiseMworm\\N60AllData.xlsx"
+              },
+              {
+                "function": "readtable",
+                "filename": "C:\\Users\\16591\\Desktop\\Clutter120m90Hz\\DataTrial\\NoiseMworm\\N80AllData.xlsx"
+              },
+              {
+                "function": "readtable",
+                "filename": "C:\\Users\\16591\\Desktop\\Clutter120m90Hz\\DataTrial\\NoiseMworm\\N40AllData.xlsx"
+              },
+              {
+                "function": "readtable",
+                "filename": "C:\\Users\\16591\\Desktop\\Clutter120m90Hz\\DataTrial\\NoiseMworm\\N60AllData.xlsx"
+              },
+              {
+                "function": "readtable",
+                "filename": "C:\\Users\\16591\\Desktop\\Clutter120m90Hz\\DataTrial\\NoiseMworm\\N80AllData.xlsx"
+              },
+              {
+                "function": "readtable",
+                "filename": "C:\\Users\\WormAllData.xlsx"
+              },
+              {
+                "function": "readtable",
+                "filename": "C:\\Users\\N40AllData.xlsx"
+              },
+              {
+                "function": "readtable",
+                "filename": "C:\\Users\\N60AllData.xlsx"
+              },
+              {
+                "function": "readtable",
+                "filename": "C:\\Users\\N40AllData.xlsx"
+              }
+            ],
+            "relevant_strings": [
+              "All bats",
+              "C:\\Users\\16591\\Desktop\\Clutter120m90Hz\\DataTrial\\NoiseMworm\\N40AllData.xlsx",
+              "C:\\Users\\16591\\Desktop\\Clutter120m90Hz\\DataTrial\\NoiseMworm\\N60AllData.xlsx",
+              "C:\\Users\\16591\\Desktop\\Clutter120m90Hz\\DataTrial\\NoiseMworm\\N80AllData.xlsx",
+              "C:\\Users\\16591\\Desktop\\Clutter120m90Hz\\DataTrial\\NoiseMworm\\RepititionRate\\CallRate40.mat",
+              "C:\\Users\\16591\\Desktop\\Clutter120m90Hz\\DataTrial\\NoiseMworm\\RepititionRate\\CallRate60.mat",
+              "C:\\Users\\16591\\Desktop\\Clutter120m90Hz\\DataTrial\\NoiseMworm\\RepititionRate\\CallRate80.mat",
+              "C:\\Users\\DataTrial\\PreyState\\BuzzRateData\\RepititionRate\\CallRateFlutter.mat",
+              "C:\\Users\\DataTrial\\PreyState\\BuzzRateData\\RepititionRate\\CallRateFlying.mat",
+              "C:\\Users\\DataTrial\\PreyState\\BuzzRateData\\RepititionRate\\CallRateStationary.mat",
+              "C:\\Users\\DataTrial\\PreyState\\FlutterAllData.xlsx",
+              "C:\\Users\\DataTrial\\PreyState\\FlyingAllData.xlsx",
+              "C:\\Users\\DataTrial\\PreyState\\StationaryAllData.xlsx",
+              "C:\\Users\\LandingSpeed\\AnalysisData",
+              "C:\\Users\\N40AllData.xlsx",
+              "C:\\Users\\N60AllData.xlsx",
+              "C:\\Users\\PreyState\\Flutter",
+              "C:\\Users\\PreyState\\Flying",
+              "C:\\Users\\PreyState\\Stationary",
+              "C:\\Users\\WormAllData.xlsx",
+              "Fig1Prey.tif",
+              "Fly.",
+              "Flying",
+              "Landing",
+              "Noise level",
+              "Prey state",
+              "Time relative to landing / prey capture (s)",
+              "XData",
+              "YData",
+              "batloc",
+              "params.mat"
+            ]
+          },
+          "status": "STRUCTURE_INSPECTED"
+        }
+      ],
+      "tokens": {
+        "bat_tokens": [
+          "40",
+          "60",
+          "80"
+        ],
+        "condition_like_tokens": [
+          "C:\\OrganizedRecResult\\Hp137_20230628T111049_Trial_1__Prey_type_Dalamin_Nois_status_40_rec_org_res.mat",
+          "C:\\Users\\16591\\Desktop\\Clutter120m90Hz\\DataTrial\\NoiseMworm\\N40AllData.xlsx",
+          "C:\\Users\\16591\\Desktop\\Clutter120m90Hz\\DataTrial\\NoiseMworm\\N60AllData.xlsx",
+          "C:\\Users\\16591\\Desktop\\Clutter120m90Hz\\DataTrial\\NoiseMworm\\N80AllData.xlsx",
+          "C:\\Users\\16591\\Desktop\\Clutter120m90Hz\\DataTrial\\NoiseMworm\\RepititionRate\\CallRate40.mat",
+          "C:\\Users\\16591\\Desktop\\Clutter120m90Hz\\DataTrial\\NoiseMworm\\RepititionRate\\CallRate60.mat",
+          "C:\\Users\\16591\\Desktop\\Clutter120m90Hz\\DataTrial\\NoiseMworm\\RepititionRate\\CallRate80.mat",
+          "C:\\Users\\16591\\PreyState\\Flutter",
+          "C:\\Users\\16591\\PreyState\\FlutterAllData.xlsx",
+          "C:\\Users\\16591\\PreyState\\Flying",
+          "C:\\Users\\16591\\PreyState\\FlyingAllData.xlsx",
+          "C:\\Users\\16591\\PreyState\\Stationary",
+          "C:\\Users\\16591\\PreyState\\StationaryAllData.xlsx",
+          "C:\\Users\\DataTrial\\ErrBarAllData\\NoiseMworm\\40",
+          "C:\\Users\\DataTrial\\ErrBarAllData\\NoiseMworm\\60",
+          "C:\\Users\\DataTrial\\ErrBarAllData\\NoiseMworm\\80",
+          "C:\\Users\\DataTrial\\NoiseMworm\\N40AllData.xlsx",
+          "C:\\Users\\DataTrial\\NoiseMworm\\N60AllData.xlsx",
+          "C:\\Users\\DataTrial\\NoiseMworm\\N80AllData.xlsx",
+          "C:\\Users\\DataTrial\\PreyState\\BuzzRateData\\RepititionRate\\CallRateFlutter.mat",
+          "C:\\Users\\DataTrial\\PreyState\\BuzzRateData\\RepititionRate\\CallRateFlying.mat",
+          "C:\\Users\\DataTrial\\PreyState\\BuzzRateData\\RepititionRate\\CallRateStationary.mat",
+          "C:\\Users\\DataTrial\\PreyState\\FlutterAllData.xlsx",
+          "C:\\Users\\DataTrial\\PreyState\\FlyingAllData.xlsx",
+          "C:\\Users\\DataTrial\\PreyState\\StationaryAllData.xlsx",
+          "C:\\Users\\LandingSpeed\\AnalysisData",
+          "C:\\Users\\Landing\\noise\\Hp036\\Hp036_Cond_Noise_Trial_9_20210710T092842_cmb_cut_res.mat",
+          "C:\\Users\\Landing\\noise\\Hp036_Cond_Noise_Trial_9_20210710T092842_cmb_cut.mat",
+          "C:\\Users\\Landing\\noise\\Hp094_Cond_Noise_Trial_5_20210702T184710_cmb_cut.mat",
+          "C:\\Users\\Landing\\noise\\Hp094_Cond_Noise_Trial_5_20210702T184710_cmb_cut_res.mat",
+          "C:\\Users\\Landing\\noise\\choice\\LandingNoiseAmplitude.xlsx",
+          "C:\\Users\\Landing\\noise\\choice\\LandingSileneceAmplitude.xlsx",
+          "C:\\Users\\Landing\\noise\\choice\\noise",
+          "C:\\Users\\Landing\\noise\\choice\\silence",
+          "C:\\Users\\PreyState\\Flutter",
+          "C:\\Users\\PreyState\\Flying",
+          "C:\\Users\\PreyState\\Stationary",
+          "C:\\Usersz\\DataTrial\\ErrBarAllData\\NoiseMworm\\40",
+          "E:\\OrganizedRecResult\\Hp142_20230518T115217_Trial_1__prey_type_mworm_prey_status_motionless_rec_org_res.mat",
+          "E:\\OrganizedRecResult\\Hp158\\Hp158_20230301T112313_Trial_1__Prey_type_Dalamin_Prey_status_motionless_rec_org_res.mat",
+          "E:\\OrganizedRecResult\\Hp158\\Hp158_20230518T112917_Trial_1__prey_type_mworm_prey_status_motionless_rec_org_res.mat",
+          "E:\\OrganizedRec\\Hp137_20230628T111049_Trial_1__Prey_type_Dalamin_Nois_status_40_rec_org.mat",
+          "E:\\OrganizedRec\\Hp142_20230518T115217_Trial_1__prey_type_mworm_prey_status_motionless_rec_org.mat",
+          "E:\\OrganizedRec\\Hp142_20230627T171102_Trial_1__Prey_type_Dalamin_Prey_status_motionless_rec_org.mat",
+          "E:\\OrganizedRec\\Hp158_20230301T112313_Trial_1__Prey_type_Dalamin_Prey_status_motionless_rec_org.mat",
+          "E:\\OrganizedRec\\Hp158_20230518T112917_Trial_1__prey_type_mworm_prey_status_motionless_rec_org.mat",
+          "Fig1Prey",
+          "Fig1Prey.tif",
+          "Hp036_Cond_Noise_Trial_9_20210710T092842_cmb_cut",
+          "Hp036_Cond_Noise_Trial_9_20210710T092842_cmb_cut_res",
+          "Hp094_Cond_Noise_Trial_5_20210702T184710_cmb_cut",
+          "Hp094_Cond_Noise_Trial_5_20210702T184710_cmb_cut_res",
+          "Hp137_20230628T111049_Trial_1__Prey_type_Dalamin_Nois_status_40_rec_org",
+          "Hp137_20230628T111049_Trial_1__Prey_type_Dalamin_Nois_status_40_rec_org_res",
+          "Hp142_20230518T115217_Trial_1__prey_type_mworm_prey_status_motionless_rec_org",
+          "Hp142_20230518T115217_Trial_1__prey_type_mworm_prey_status_motionless_rec_org_res",
+          "Hp142_20230627T171102_Trial_1__Prey_type_Dalamin_Prey_status_motionless_rec_org",
+          "Hp158_20230301T112313_Trial_1__Prey_type_Dalamin_Prey_status_motionless_rec_org",
+          "Hp158_20230301T112313_Trial_1__Prey_type_Dalamin_Prey_status_motionless_rec_org_res",
+          "Hp158_20230518T112917_Trial_1__prey_type_mworm_prey_status_motionless_rec_org",
+          "Hp158_20230518T112917_Trial_1__prey_type_mworm_prey_status_motionless_rec_org_res",
+          "Landing",
+          "LandingNoiseAmplitude",
+          "LandingSileneceAmplitude",
+          "LandingSpeed",
+          "Noise",
+          "Noise level",
+          "Noise level: dB SPL",
+          "Noise: 60 dB",
+          "NoiseMworm",
+          "Noisecolumn_mean",
+          "Prey",
+          "Prey state",
+          "PreyState",
+          "Time relative to landing (s)",
+          "Time relative to landing / prey capture (s)",
+          "Time relative to prey capture (s)",
+          "avg_piNoise60",
+          "avg_piNoiseMworm40",
+          "avg_piNoiseMworm60",
+          "avg_piNoiseMworm80",
+          "landing",
+          "ncond",
+          "noise",
+          "pi_dataNoiseMworm40",
+          "pi_dataNoiseMworm60",
+          "pi_dataNoiseMworm80",
+          "prey",
+          "std_piNoise60",
+          "std_piNoiseMworm40",
+          "std_piNoiseMworm60",
+          "std_piNoiseMworm80"
+        ]
+      }
     }
   ]
 }
