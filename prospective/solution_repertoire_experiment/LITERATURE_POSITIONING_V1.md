@@ -44,6 +44,24 @@ This provides a biomechanical route for future decomposition.
 
 It does not test the formation of individualized route/policy choice from a controlled solution repertoire.
 
+## Ecological positioning
+
+Individual-specialization theory has long argued that among-individual niche variation can depend on ecological opportunity, competition and other environmental causes.
+
+The proposed experiment translates that ecological-opportunity idea from **which resources are available** to **how many functionally adequate movement solutions are available for the same task**.
+
+This is the conceptual bridge between individual-specialization ecology and motor-abundance theory:
+
+[
+\text{ecological opportunity in solution space}
+\times
+\text{personal history}
+\rightarrow
+\text{individualized movement policy}.
+]
+
+The experiment is not intended to show merely that individuals differ. It asks whether opportunity itself causes additional stable among-individual organization.
+
 ## Gap targeted here
 
 The literature used by the current programme separately supports:
