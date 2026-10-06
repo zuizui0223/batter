@@ -1,0 +1,47 @@
+{
+  "source_url": "https://data.mendeley.com/public-api/datasets/wh7c636y3t/files?folder_id=root&version=1&%24start=0&%24limit=1000",
+  "envelope_keys": [],
+  "file_count": 4,
+  "files": [
+    {
+      "id": "97b85935-2a81-4af3-be1e-7ff8cfa1eccc",
+      "filename": "All seasons personality data.xlsx",
+      "description": null,
+      "folder_id": null,
+      "size": 44838,
+      "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "sha256": "8155be769fc3e6cf9d3cc0d59fa7c216a176999662cd8272dd99d7741acd723f",
+      "download_url_present": true
+    },
+    {
+      "id": "ebefaa74-0669-4750-8082-15fefc804468",
+      "filename": "Calculate_time_and_distance.py",
+      "description": null,
+      "folder_id": null,
+      "size": 7845,
+      "content_type": "application/octet-stream",
+      "sha256": "d62ed4c02899749a1deb8d863b0e93aa9b8d0e7e526d253518d77ab2be785d2b",
+      "download_url_present": true
+    },
+    {
+      "id": "74189289-f4ba-4db4-8b33-24be7589dc8f",
+      "filename": "Exploraion in squares.xlsx",
+      "description": null,
+      "folder_id": null,
+      "size": 13056,
+      "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "sha256": "0e276042876b537df07807fbc6784dfe0ec93fdd034df9f4b095bb6b25a558d0",
+      "download_url_present": true
+    },
+    {
+      "id": "48df4e40-8f31-4bbd-a854-4078274e8fb1",
+      "filename": "Outdoor data.xlsx",
+      "description": null,
+      "folder_id": null,
+      "size": 52518,
+      "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "sha256": "03a89b2c7de5db56b9776c34a1827f6063da1074909c081e1dbb942f88c9bd0f",
+      "download_url_present": true
+    }
+  ]
+}
