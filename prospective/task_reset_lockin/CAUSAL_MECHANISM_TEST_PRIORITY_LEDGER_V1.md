@@ -11,6 +11,41 @@ JAE v0.4.0 remains frozen.
 
 ---
 
+## Randomized early-experience formation test — unsupported individualization
+
+Independent public randomized source:
+Rachum et al. 2025, Egyptian fruit bats.
+
+Season-2 frozen cohort:
+- n = 29;
+- 14 enriched / 15 impoverished;
+- origin-stratified randomization preserved.
+
+Primary:
+residual dispersion of Trial-3 minus baseline behavioral-change vectors after removing the treatment-group mean shift.
+
+Result:
+- V_enriched = **2.656639**;
+- V_impoverished = **1.921940**;
+- D = **+0.734699**;
+- p = **0.167785**;
+- verdict = **UNSUPPORTED_INDIVIDUALIZATION**.
+
+Interpretation:
+
+> **Randomized environmental enrichment did not confirm that early experience increases the amount of multivariate laboratory personality differentiation.**
+
+This does not negate the published effect of early environment on later wild foraging.
+
+It instead establishes a boundary:
+
+> environmental calibration of behavior need not imply increased among-individual differentiation.
+
+Decision:
+**CLOSED — no same-source trait/PCA/outdoor rescue.**
+
+---
+
 ## Current empirical object
 
 Strongly supported in the controlled / independent experimental programme:
