@@ -8,6 +8,9 @@
 
 - causal treatment defined as solution opportunity during acquisition;
 - matched-family within-individual design defined;
+- normalized A/B route topology frozen;
+- all eight A/B × R1-R4 routes verified geometrically equal in normalized path length and horizontal/vertical demand;
+- canonical constrained route frozen as R1;
 - direct ecological P1 fixed as route-choice specialization;
 - fixed-sequence P2 fixed as transparent I/M organization;
 - exact I/M feature formulas and treatment-blind early-common-OPEN scaling fixed;
@@ -21,8 +24,8 @@
 
 ## Required before confirmatory common-OPEN outcome opening
 
-1. physical dimensions for A/B obstacle families;
-2. route-isomorphism / engineering receipt;
+1. physical scale factor / room placement / safe center height for the frozen normalized A/B geometry;
+2. physical engineering tolerances / receipt;
 3. numeric route-capability threshold;
 4. [FROZEN] acquisition count = 12 valid flights/family;
 5. [FROZEN] common-OPEN probe = 16 valid flights/family;
