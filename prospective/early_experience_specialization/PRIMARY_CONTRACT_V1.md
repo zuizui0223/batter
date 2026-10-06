@@ -130,7 +130,18 @@ If source-colony membership is not recoverable at individual level:
 - use the documented season-2 group sizes 14 enriched / 15 impoverished in a complete-label randomization;
 - label this as a design-approximate randomization because the paper also reports origin balancing.
 
-Enumerate all assignments if feasible; otherwise use >=99,999 Monte Carlo assignments with frozen seed.
+The stratified assignment space is too large for routine full enumeration.
+
+Freeze:
+- Monte Carlo randomizations = **199,999**;
+- RNG = NumPy PCG64;
+- seed = **202610070817**;
+- within each origin stratum, preserve the observed enriched count exactly;
+- use the +1 Monte Carlo convention:
+
+[
+p=\frac{1+\#(D_{perm}\ge D_{obs})}{1+N_{perm}}.
+]
 
 One-sided test:
 [
@@ -145,13 +156,25 @@ Support requires:
 
 No separate positive-individual threshold.
 
-## Positive control — not a co-primary
+## Baseline audit — not a co-primary
 
-Reproduce the published absence of pre-treatment group differences on Trials 1–2.
+Before interpreting the primary, report:
+- the randomized treatment counts;
+- origin × treatment counts;
+- complete-case counts;
+- treatment-blind pooled baseline scaling SDs;
+- the Euclidean distance between enriched and impoverished baseline mean vectors.
 
-This is a data/design audit only.
+No baseline significance threshold is used to decide whether the primary runs.
 
-Do not use failure of the positive-control reproduction to redefine the primary; instead return SOURCE_REPRODUCTION_STOP.
+A STOP occurs only for a design/schema mismatch:
+- treatment labels not recoverable;
+- origin strata not recoverable;
+- Trials 1–3 not recoverable;
+- frozen trait columns not structurally valid;
+- source counts incompatible with the documented Season-2 design.
+
+Do not condition the primary on an outcome-dependent baseline p-value.
 
 ## Secondary — state rewriting
 
