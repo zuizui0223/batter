@@ -1,6 +1,6 @@
 # Early-experience public schema audit v1
 
-**SCHEMA ONLY — NO RESEARCH DATA ROWS / NUMERIC OUTCOMES REPORTED.**
+**SCHEMA ONLY â€” NO RESEARCH DATA ROWS / NUMERIC OUTCOMES REPORTED.**
 
 - files: **4**
 
