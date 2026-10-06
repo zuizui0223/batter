@@ -225,7 +225,7 @@ where:
 - I = FlightIntensity;
 - M = ManeuveringExtent.
 
-Use the exact raw features, acquisition-only family scaling, fixed weights, Euclidean metric and common-probe early/late identity architecture in:
+Use the exact raw features, treatment-blind early-common-OPEN family scaling, fixed weights, Euclidean metric and common-probe early/late identity architecture in:
 
 PRIMARY_IM_ENDPOINT_APPENDIX_V1.md.
 
