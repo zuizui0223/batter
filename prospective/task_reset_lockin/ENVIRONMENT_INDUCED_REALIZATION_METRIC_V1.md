@@ -35,7 +35,7 @@ Thus relative individual arrangement in the coarse personal-policy space is subs
 
 ## Detailed route-geometry space
 
-Two new held-out diagnostics fail.
+Two distance-magnitude diagnostics are unsupported.
 
 ### Non-target policy distance -> target geometry distance
 
@@ -47,7 +47,32 @@ Two new held-out diagnostics fail.
 - Spearman rho = **+0.078**
 - p = **0.3490**
 
-Thus detailed route-space pair distances are not reliably preserved across obstacle contexts.
+Thus detailed route-space pair-distance magnitudes are not reliably preserved across obstacle contexts.
+
+## 1b. Vector correspondence survives more than distance magnitude
+
+A matched vector-level diagnostic gives a subtler result.
+
+For each bat pair and target environment, the pair's mean 8-D scale-free geometry difference vector from other shared environments was used directly to predict the target-environment difference vector.
+
+Observed:
+- pair-vector no-refit R² = **+0.10407**;
+- median cosine = **0.59748**;
+- positive cosine = **75.8%**;
+- magnitude Pearson r = **+0.1734**;
+- magnitude Spearman rho = **+0.0180**;
+- environment-wise permutation p for vector R² = **0.0027**.
+
+Thus detailed geometry is not completely context arbitrary.
+
+> **The direction of relative geometry retains partial cross-task correspondence, while the magnitude/ranking of geometric separation is strongly context dependent.**
+
+By comparison, transparent I/M policy pair vectors are much more stable:
+- pair-vector R² = **+0.5797**;
+- median cosine = **0.8631**;
+- positive cosine = **97.1%**.
+
+This supports a graded hierarchy rather than a binary invariant/non-invariant split.
 
 Yet same-individual detailed geometry remains identity-bearing overall.
 
@@ -228,6 +253,22 @@ Changing \(B_e\) changes the realized metric.
 A universal cross-environment B is empirically inadequate.
 
 A peer-estimated \(B_e\) could not be recovered predictively from the current small archive.
+
+## 5b. A simple shared environment decoder is not identified
+
+Two peer-only tests attempted to estimate an environment-specific linear I/M -> geometry map from other bats and apply it to a completely excluded focal bat.
+
+Both failed the predictive prerequisite:
+- first peer-map implementation: held-out geometry R² = **-1.419**;
+- donor-only-scaling LOBO implementation: held-out geometry R² = **-0.365**.
+
+Residual identity was unsupported after these maps, but because the maps themselves predicted geometry worse than a zero-centered baseline, that disappearance cannot be interpreted as successful identification of a shared (B_e).
+
+Therefore:
+- one universal cross-environment linear map is inadequate;
+- a peer-estimable same-environment linear map is also not established.
+
+The realization operator remains an abstract context-dependent object.
 
 ## Nonlinear realization
 
