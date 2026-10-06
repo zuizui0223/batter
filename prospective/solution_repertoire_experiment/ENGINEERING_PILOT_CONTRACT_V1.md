@@ -98,10 +98,16 @@ The pilot chooses the **smallest** candidate count that provides adequate endpoi
 The common-OPEN probe requires an even number of valid flights per family.
 
 Candidate totals per family:
-- 8 = 4 early + 4 late;
-- 12 = 6 early + 6 late.
+- 12 = 6 early + 6 late;
+- 16 = 8 early + 8 late.
 
-Prefer 12 unless pilot burden or tracking loss makes 12 impractical.
+The earlier 8-trial option is removed because the four-route P1 categorical history is too sparse at 4 early trials under the prospective stress test in ROUTE_PRIMARY_PROBE_PLANNING_V1.md.
+
+Prefer 16 if welfare, fatigue and tracking reliability permit.
+
+Use 12 if the pilot shows that 16 materially compromises completion, tracking quality or welfare.
+
+Do not choose between 12 and 16 using route-specialization or treatment-effect p-values.
 
 The split is always exactly half/half and is never changed after outcome opening.
 
