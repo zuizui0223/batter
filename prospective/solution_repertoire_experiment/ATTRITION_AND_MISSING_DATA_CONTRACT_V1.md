@@ -34,7 +34,10 @@ If a randomized animal becomes unavailable **before receiving any randomized acq
 - the affected four-animal block is void;
 - none of the four assignments in that block are used;
 - the block may be replaced only by a newly enrolled complete four-animal block;
-- the replacement block receives a new block ID and a new independently generated assignment under the same frozen script and seed-extension rule.
+- append the four new opaque IDs to the archived ID list;
+- rerun the same frozen randomization script with the same frozen seed;
+- all earlier block assignments must reproduce byte-for-byte;
+- the appended IDs form a new block with the next block ID.
 
 The original void block remains archived.
 
