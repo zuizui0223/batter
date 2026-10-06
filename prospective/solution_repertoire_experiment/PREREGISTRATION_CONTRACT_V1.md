@@ -12,6 +12,7 @@ Parent:
 - DESIGNED_SOLUTION_REPERTOIRE_EXPERIMENT_V1.md
 - SAMPLE_SIZE_PLANNING_V1.md
 - RANDOMIZATION_AND_INTERFERENCE_GUARD_V1.md
+- PRIMARY_ROUTE_SPECIALIZATION_ENDPOINT_V1.md
 - PRIMARY_IM_ENDPOINT_APPENDIX_V1.md
 
 JAE v0.4.0 remains frozen.
@@ -194,9 +195,9 @@ Exact probe trials per family:
 Early/late split:
 **exactly half / half of the frozen primary probe trials**.
 
-## 9. Exact randomization inference
+## 9. Exact randomization inference for P1 and P2
 
-The primary null follows the restricted treatment assignment.
+Both P1 and P2 use the same restricted treatment assignment null. Each endpoint must be fully recomputed under every allowed assignment.
 
 Do **not** use a simple sign-flip test on already-computed individual contrasts, because donor pools depend on treatment assignment.
 
@@ -228,11 +229,25 @@ randomization_inference_reference_v1.py.
 
 ---
 
-## 10. Primary decision rule
+## 10. Confirmatory decision rule
 
-Confirmatory support requires:
+### P1 route-specialization support
+
+Requires:
+- Delta_R > 0;
+- exact randomization p_R <= 0.05.
+
+### P2 I/M support
+
+Evaluated confirmatorily only after P1 support.
+
+Requires:
 - Delta_A > 0;
-- exact/randomization p <= 0.05.
+- exact randomization p_A <= 0.05.
+
+The strongest causal statement requires both P1 and P2.
+
+P1 alone establishes opportunity-driven route-choice individual specialization without establishing that the effect occupies the previously identified transparent I/M policy space.
 
 Report, but do not add as a second primary threshold:
 - positive-individual fraction;
@@ -323,17 +338,20 @@ A positive secondary cannot rescue a failed primary.
 
 ## 15. Claim map
 
-### Primary positive, reopening positive
-Solution opportunity during history promotes durable individual policy.
+### P1 positive, P2 positive
+Solution opportunity causes route-choice individual specialization and the effect extends into the fixed transparent movement-policy representation.
 
-### Primary positive, reopening negative
-Opportunity changes immediate organization, but durable storage is not established.
+### P1 positive, P2 negative
+Solution opportunity causes individual specialization in route choice, but the experiment does not establish that this specialization is carried by I/M.
 
-### Primary negative, reopening positive
-There may be personal memory/re-expression, but the randomized opportunity manipulation did not establish its formation.
+### P1 negative, P2 positive
+Do not rescue the main hypothesis. Report the I/M pattern descriptively; direct opportunity-driven route specialization was not established.
 
-### Primary negative, route-choice secondary positive
-Do not redefine the endpoint. Treat route-choice result as exploratory unless independently preregistered as a co-primary before outcome opening.
+### P1 and P2 positive, reopening positive
+Strongest chain: opportunity-driven specialization extends into personal policy and is re-expressed after temporary suppression.
+
+### P1/P2 positive, reopening negative
+Formation is supported, durable latent storage is not.
 
 ---
 
