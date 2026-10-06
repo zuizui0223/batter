@@ -1,4 +1,4 @@
-# P2 transparent I/M endpoint appendix v1
+# Primary I/M endpoint appendix v1
 
 ## Status
 
@@ -58,29 +58,44 @@ For the new experiment, tracking frequency and trial duration may differ. Theref
 
 Do not tune support using identity results.
 
-## Label-free acquisition scaling
+## Treatment-blind early-probe scaling
 
 The original Rhino analysis standardized features within environment.
 
-For the new experiment, probe data must not define their own scaling.
+For the new experiment, scaling must be:
+- treatment-blind;
+- target-blind.
 
-Therefore, for each matched environment family A and B separately:
+Therefore, for each physical family A and B separately:
 
-1. pool all structurally valid **Phase-1 acquisition trajectories** across all randomized animals;
-2. ignore biological identity and OPEN/CONSTRAINED labels when estimating scaling;
-3. compute the family-specific mean and sample SD for each of the eight raw features;
-4. freeze those 8 means and 8 SDs;
-5. apply the same frozen family-specific transform unchanged to:
-   - Phase-1 histories;
-   - common OPEN probe;
-   - suppression;
-   - exact reopening;
-   - transformed transfer belonging to that family.
+1. use only structurally valid **early common-OPEN probe trajectories** from all eligible animals;
+2. ignore biological identity and OPEN/CONSTRAINED acquisition labels when estimating scaling;
+3. compute the family-specific mean and sample SD (ddof = 1) for each of the eight raw features;
+4. require every SD to be finite and > 0;
+5. freeze those eight means and eight SDs;
+6. apply the same family-specific transform unchanged to:
+   - early common-OPEN probe trials;
+   - late held-out common-OPEN probe trials.
 
-If any acquisition feature SD is zero or nonfinite in either family:
+For feature k:
+
+\[
+z_{t,k}
+=
+\frac{x_{t,k}-\mu_{f,k}}{s_{f,k}}.
+\]
+
+The late held-out target trials never contribute to their own normalization.
+
+OPEN/CONSTRAINED acquisition labels never enter scaling.
+
+If any required early-probe feature SD is zero or nonfinite in either family:
+
 **PRIMARY REPRESENTATION STOP.**
 
-No probe/reopening/transfer outcome contributes to scaling.
+No feature deletion or alternate scaling.
+
+Acquisition, suppression, reopening and transformed-transfer phases may use separately frozen secondary scaling rules, but they cannot redefine the primary P2 coordinate.
 
 ## Transparent policy coordinates
 
@@ -131,11 +146,13 @@ Delta_A = mean_i [ A_i,OPEN-family - A_i,CONSTRAINED-family ].
 
 Thus P2 asks whether prior solution opportunity causes stronger reproducible I/M organization under equal current opportunity.
 
-Acquisition trajectories define scaling but are **not** the P2 prediction history.
+The early common-OPEN probe defines scaling and the early individual centroids. The late common-OPEN probe is the held-out confirmatory target.
+
+No acquisition trajectory contributes to the primary P2 scaling or primary self-history centroid.
 
 ## Leakage firewall
 
-Nothing from common-OPEN probe, reopening or transformed-transfer outcomes may be used to choose:
+Nothing from the **late common-OPEN probe**, reopening or transformed-transfer outcomes may be used to choose:
 - scaling;
 - weights;
 - feature inclusion;
