@@ -1,0 +1,1213 @@
+{
+  "audit_version": 1,
+  "sources": [
+    {
+      "key": "aharon2017",
+      "url": "https://data.mendeley.com/datasets/f6mvhj5gj9/3",
+      "title": "Bats use path-integration rather than acoustic- flow to assess flight distance along flyways - Aharon et al. - Mendeley Data",
+      "network": [
+        {
+          "url": "https://data.mendeley.com/datasets/f6mvhj5gj9/3",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://data.mendeley.com/datasets/app.css?5e5376ee3a5def54f781",
+          "status": 200,
+          "content_type": "text/css; charset=UTF-8"
+        },
+        {
+          "url": "https://data.mendeley.com/datasets/bundle.js?5e5376ee3a5def54f781",
+          "status": 200,
+          "content_type": "application/javascript; charset=UTF-8"
+        },
+        {
+          "url": "https://data.mendeley.com/datasets/locales/en/translation.json",
+          "status": 200,
+          "content_type": "application/json; charset=utf-8"
+        },
+        {
+          "url": "https://bam.nr-data.net/1/NRJS-10516b9ce6a4c633b1f?a=1487933047&v=1.323.0&to=NVQHbUpSWRFXUhVQXwweIEFIQVIRRVsSFncnZUoWXFJDA0VUFUofWFgBEWNSGhh3HDsJHVtsHggITh5NDEcES0MLXgsRYwMaW2saSA%3D%3D&rst=1480&s=26b0a1b06056d44d&ref=https://data.mendeley.com/datasets/f6mvhj5gj9/3&ptid=b8749c68eb2d3516&tt=a99a2748c98aa511&af=err,spa,xhr,stn,ins&ap=147.355751&be=372&fe=1083&dc=1031&fsh=1&perf=%7B%22timing%22:%7B%22of%22:1791291509771,%22n%22:0,%22f%22:0,%22dn%22:2,%22dne%22:78,%22c%22:78,%22s%22:81,%22ce%22:105,%22rq%22:105,%22rp%22:372,%22rpe%22:375,%22di%22:1398,%22ds%22:1403,%22de%22:1403,%22dc%22:1419,%22l%22:1419,%22le%22:1455%7D,%22navigation%22:%7B%7D%7D&fp=1132&fcp=1132",
+          "status": 200,
+          "content_type": "application/json"
+        },
+        {
+          "url": "https://data.mendeley.com/public-api/datasets/f6mvhj5gj9/versions",
+          "status": 200,
+          "content_type": "application/json; charset=utf-8"
+        },
+        {
+          "url": "https://data.mendeley.com/public-api/datasets/f6mvhj5gj9/folders/3",
+          "status": 200,
+          "content_type": "application/json; charset=utf-8"
+        },
+        {
+          "url": "https://data.mendeley.com/api/datasets-v2/datasets/f6mvhj5gj9/zip?version=3",
+          "status": 200,
+          "content_type": "application/json; charset=utf-8"
+        },
+        {
+          "url": "https://bam.nr-data.net/events/1/NRJS-10516b9ce6a4c633b1f?a=1487933047&v=1.323.0&to=NVQHbUpSWRFXUhVQXwweIEFIQVIRRVsSFncnZUoWXFJDA0VUFUofWFgBEWNSGhh3HDsJHVtsHggITh5NDEcES0MLXgsRYwMaW2saSA%3D%3D&rst=1683&s=26b0a1b06056d44d&ref=https://data.mendeley.com/datasets/f6mvhj5gj9/3&ptid=b8749c68eb2d3516",
+          "status": 200,
+          "content_type": "image/gif"
+        },
+        {
+          "url": "https://bam.nr-data.net/jserrors/1/NRJS-10516b9ce6a4c633b1f?a=1487933047&v=1.323.0&to=NVQHbUpSWRFXUhVQXwweIEFIQVIRRVsSFncnZUoWXFJDA0VUFUofWFgBEWNSGhh3HDsJHVtsHggITh5NDEcES0MLXgsRYwMaW2saSA%3D%3D&rst=1680&s=26b0a1b06056d44d&ref=https://data.mendeley.com/datasets/f6mvhj5gj9/3&ptid=b8749c68eb2d3516&pve=1",
+          "status": 200,
+          "content_type": "image/gif"
+        },
+        {
+          "url": "https://data.mendeley.com/public-api/datasets/f6mvhj5gj9/versions",
+          "status": 200,
+          "content_type": "application/json; charset=utf-8"
+        },
+        {
+          "url": "https://bam.nr-data.net/events/1/NRJS-10516b9ce6a4c633b1f?a=1487933047&v=1.323.0&to=NVQHbUpSWRFXUhVQXwweIEFIQVIRRVsSFncnZUoWXFJDA0VUFUofWFgBEWNSGhh3HDsJHVtsHggITh5NDEcES0MLXgsRYwMaW2saSA%3D%3D&rst=1681&s=26b0a1b06056d44d&ref=https://data.mendeley.com/datasets/f6mvhj5gj9/3&ptid=b8749c68eb2d3516",
+          "status": 200,
+          "content_type": "image/gif"
+        },
+        {
+          "url": "https://bam.nr-data.net/events/1/NRJS-10516b9ce6a4c633b1f?a=1487933047&v=1.323.0&to=NVQHbUpSWRFXUhVQXwweIEFIQVIRRVsSFncnZUoWXFJDA0VUFUofWFgBEWNSGhh3HDsJHVtsHggITh5NDEcES0MLXgsRYwMaW2saSA%3D%3D&rst=1678&s=26b0a1b06056d44d&ref=https://data.mendeley.com/datasets/f6mvhj5gj9/3&ptid=b8749c68eb2d3516",
+          "status": 200,
+          "content_type": "image/gif"
+        },
+        {
+          "url": "https://data.mendeley.com/public-api/datasets/f6mvhj5gj9/files?folder_id=root&version=3&$start=0&$limit=1000",
+          "status": 200,
+          "content_type": "application/json; charset=utf-8"
+        },
+        {
+          "url": "https://data.mendeley.com/api/datasets-v2/datasets/f6mvhj5gj9?fields=repository.*&version=3",
+          "status": 200,
+          "content_type": "application/json; charset=utf-8"
+        },
+        {
+          "url": "https://data.mendeley.com/api/datasets-v2/datasets/f6mvhj5gj9?fields=articles.*&version=3",
+          "status": 200,
+          "content_type": "application/json; charset=utf-8"
+        }
+      ],
+      "download": {
+        "suggested_filename": "f6mvhj5gj9-3.zip",
+        "url": "https://prod-dcd-datasets-cache-zipfiles.s3.eu-west-1.amazonaws.com/f6mvhj5gj9-3.zip?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEC0aCWV1LXdlc3QtMSJGMEQCIGvp78wuf%2BBBPxJBHV2MQ7owKnAlhavvygC88iafb2jgAiB0NTMYS0SoJ51gJ330gFyYBKJgCQnPAtPPsVoRVBkp1CqVBQj2%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAQaDDM2NzE0NzM4MzgyNSIMYwH5EX403pzzjuuXKukEEZf%2FQcnwl41Znm9F1UsG%2Bxz8EH4%2BuTx9Gmap%2BpAtc77jhCx0dFkWNR2NpZgU9v80j2HCKYoS8yrJnV%2Ftz9ylzFvpb9JCVp3h5bchFX%2BwRUXOow8Knv1FiDNeg1Uw3t7%2FmUUZKvmJLLWHliWILkDxzlxhbEYajJMJPPfHyRykP5NVZdLryucC0yDSBimwtQKjYc9MTGFsAv%2BerjX%2FniW5L9IMD45rRNjqhMFZLbhLhnleBfX1JzgzNAm6HV9x0ltH0ONzWYmmwhrh0a90UTbUDRhAFv2aJCa40dW064%2Bc1cRZKgkBlxHQx285lI70BJUu0PHHclOQcUdCre2Qzu63PtmCVQUXZSeq1EonnLMEYh20pf1fWdizyjbGqpLQ9uS0rsRkNufSR7E1StNNcljz03jJ4z6NgO2925rxtNVC%2FexJPzF%2BKhmVnk7Ef8cP%2FHfHzgsvbgvemD%2FT5GPCazeb03nz0ND7jakMFTXnGZqC7G0ICpaBAYMEoBA3XkXQiSFUtrShqaHCnImDH%2B4707MU17sOcla2xmbMrsZYEJhv21qD7a0VxBDOYU9fyZ9%2BI%2FQc%2BGUXOlIznosnW%2FAd%2BTLvgawOfvG7f2VvgUykLrhPbBZybHvb1s%2Bx3qzvwrAi4MuRifiRBxf0grMESMPyScY98ShH1nCA%2B3VJ2HYIi4cW3ivnx51FbxvutjV7NfP%2FMlmea6bOD6O%2FKIUGvEO3MWqQ%2B2gCOQnRqRNpNe%2BbtdJTeMye1emq9b%2BcJwTOY%2BYNKa85turBxN5mq8Yhv7MoMHWY6%2B7TR2q2oGsixu%2BCf19uV%2BftFSJwF5ufldkw7N%2BT1gY6mgH%2F0zxe%2BcsEDzqRRx7kmtxzyDwsjBYvjczCB4HXCeQW29exR4dOc%2FMc9RmTQt9YRWTbgpoN0Unlizg4eKvfEc0yHiQMCpOZH1ucEjmwzf5WFw3%2FyHViIYp2isA83qdYP%2FqE%2B7LeAQBdTniP8FLOWilVcOLotB8B%2FsjYx74WJG7vDvmexnxl6rEe10dUGXgjCS9F1he0h3eJqy%2BO&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20261006T125838Z&X-Amz-SignedHeaders=host&X-Amz-Credential=ASIAVK65QPQI3GRKPLDT%2F20261006%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Expires=300&X-Amz-Signature=ffd75e08f3b44718b9d654e4fcb3a69f47435c80e8c0062d438ff2b6a35052d1",
+        "size": 311765,
+        "archive": {
+          "archive_name": "aharon2017__f6mvhj5gj9-3.zip",
+          "members": [
+            {
+              "name": "batalef.zip",
+              "size": 299898
+            },
+            {
+              "name": "Figure 1.zip",
+              "size": 13318
+            },
+            {
+              "name": "Figure 3.zip",
+              "size": 9153
+            },
+            {
+              "name": "Figure 2.zip",
+              "size": 7796
+            },
+            {
+              "name": "Figure 4.zip",
+              "size": 17453
+            }
+          ]
+        }
+      },
+      "tokens": {
+        "numeric_bat_tokens": [],
+        "condition_like_tokens": []
+      }
+    },
+    {
+      "key": "ma2025",
+      "url": "https://data.mendeley.com/datasets/964fv73w94/1",
+      "title": "Prey evasiveness and masking noise jointly promote the ultrahigh call rate in echolocating bats - Mendeley Data",
+      "network": [
+        {
+          "url": "https://data.mendeley.com/datasets/964fv73w94/1",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://data.mendeley.com/datasets/app.css?5e5376ee3a5def54f781",
+          "status": 200,
+          "content_type": "text/css; charset=UTF-8"
+        },
+        {
+          "url": "https://data.mendeley.com/datasets/bundle.js?5e5376ee3a5def54f781",
+          "status": 200,
+          "content_type": "application/javascript; charset=UTF-8"
+        },
+        {
+          "url": "https://data.mendeley.com/datasets/locales/en/translation.json",
+          "status": 200,
+          "content_type": "application/json; charset=utf-8"
+        },
+        {
+          "url": "https://bam.nr-data.net/1/NRJS-10516b9ce6a4c633b1f?a=1487933047&v=1.323.0&to=NVQHbUpSWRFXUhVQXwweIEFIQVIRRVsSFncnZUoWXFJDA0VUFUofWFgBEWNSGhh3HDsJHVtsHggITh5NDEcES0MLXgsRYwMaW2saSA%3D%3D&rst=775&s=25d8cdc67146c2ba&ref=https://data.mendeley.com/datasets/964fv73w94/1&ptid=7c2261b7f415f5eb&tt=3e2aef6cd810b11f&af=err,spa,xhr,stn,ins&ap=149.479482&be=269&fe=362&dc=337&fsh=1&perf=%7B%22timing%22:%7B%22of%22:1791291519274,%22n%22:0,%22f%22:0,%22dn%22:1,%22dne%22:1,%22c%22:1,%22s%22:4,%22ce%22:11,%22rq%22:11,%22rp%22:269,%22rpe%22:280,%22di%22:603,%22ds%22:606,%22de%22:606,%22dc%22:622,%22l%22:622,%22le%22:631%7D,%22navigation%22:%7B%7D%7D&fp=460&fcp=460",
+          "status": 200,
+          "content_type": "application/json"
+        },
+        {
+          "url": "https://bam.nr-data.net/jserrors/1/NRJS-10516b9ce6a4c633b1f?a=1487933047&v=1.323.0&to=NVQHbUpSWRFXUhVQXwweIEFIQVIRRVsSFncnZUoWXFJDA0VUFUofWFgBEWNSGhh3HDsJHVtsHggITh5NDEcES0MLXgsRYwMaW2saSA%3D%3D&rst=842&s=25d8cdc67146c2ba&ref=https://data.mendeley.com/datasets/964fv73w94/1&ptid=7c2261b7f415f5eb&pve=1",
+          "status": 200,
+          "content_type": "image/gif"
+        },
+        {
+          "url": "https://bam.nr-data.net/events/1/NRJS-10516b9ce6a4c633b1f?a=1487933047&v=1.323.0&to=NVQHbUpSWRFXUhVQXwweIEFIQVIRRVsSFncnZUoWXFJDA0VUFUofWFgBEWNSGhh3HDsJHVtsHggITh5NDEcES0MLXgsRYwMaW2saSA%3D%3D&rst=841&s=25d8cdc67146c2ba&ref=https://data.mendeley.com/datasets/964fv73w94/1&ptid=7c2261b7f415f5eb",
+          "status": 200,
+          "content_type": "image/gif"
+        },
+        {
+          "url": "https://bam.nr-data.net/events/1/NRJS-10516b9ce6a4c633b1f?a=1487933047&v=1.323.0&to=NVQHbUpSWRFXUhVQXwweIEFIQVIRRVsSFncnZUoWXFJDA0VUFUofWFgBEWNSGhh3HDsJHVtsHggITh5NDEcES0MLXgsRYwMaW2saSA%3D%3D&rst=844&s=25d8cdc67146c2ba&ref=https://data.mendeley.com/datasets/964fv73w94/1&ptid=7c2261b7f415f5eb",
+          "status": 200,
+          "content_type": "image/gif"
+        },
+        {
+          "url": "https://bam.nr-data.net/events/1/NRJS-10516b9ce6a4c633b1f?a=1487933047&v=1.323.0&to=NVQHbUpSWRFXUhVQXwweIEFIQVIRRVsSFncnZUoWXFJDA0VUFUofWFgBEWNSGhh3HDsJHVtsHggITh5NDEcES0MLXgsRYwMaW2saSA%3D%3D&rst=844&s=25d8cdc67146c2ba&ref=https://data.mendeley.com/datasets/964fv73w94/1&ptid=7c2261b7f415f5eb",
+          "status": 200,
+          "content_type": "image/gif"
+        },
+        {
+          "url": "https://data.mendeley.com/public-api/datasets/964fv73w94/folders/1",
+          "status": 200,
+          "content_type": "application/json; charset=utf-8"
+        },
+        {
+          "url": "https://data.mendeley.com/api/datasets-v2/datasets/964fv73w94?fields=articles.*&version=1",
+          "status": 200,
+          "content_type": "application/json; charset=utf-8"
+        },
+        {
+          "url": "https://data.mendeley.com/public-api/datasets/964fv73w94/versions",
+          "status": 200,
+          "content_type": "application/json; charset=utf-8"
+        },
+        {
+          "url": "https://data.mendeley.com/api/datasets-v2/datasets/964fv73w94?fields=repository.*&version=1",
+          "status": 200,
+          "content_type": "application/json; charset=utf-8"
+        },
+        {
+          "url": "https://data.mendeley.com/public-api/datasets/964fv73w94/files?folder_id=root&version=1&$start=0&$limit=1000",
+          "status": 200,
+          "content_type": "application/json; charset=utf-8"
+        },
+        {
+          "url": "https://data.mendeley.com/api/datasets-v2/datasets/964fv73w94/zip?version=1",
+          "status": 200,
+          "content_type": "application/json; charset=utf-8"
+        },
+        {
+          "url": "https://data.mendeley.com/public-api/datasets/964fv73w94/versions",
+          "status": 200,
+          "content_type": "application/json; charset=utf-8"
+        }
+      ],
+      "download": {
+        "suggested_filename": "Prey evasiveness and masking noise jointly promote.zip",
+        "url": "https://prod-dcd-datasets-cache-zipfiles.s3.eu-west-1.amazonaws.com/964fv73w94-1.zip?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEC0aCWV1LXdlc3QtMSJGMEQCIDqS8epr56y4QnNFaMm5DdXxOBoKhmDQyem0azbDnhjTAiAksVzF6xKrSPsASsBvoSd1uWYYtZ%2BLqpm%2Fwtw9Om%2BuiiqVBQj1%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAQaDDM2NzE0NzM4MzgyNSIM9Zh3oVyDwJcqnX39KukEah9s9IGXMTdPZ9qlaD6Saz%2B57YoVVgemKauv2Rwf2J6FfVNbwJzHbwkh7UWbo7OGyVHKC2ipSjGb8FMkRUzlzc5e%2B4Tvgz%2FR5fxULCgAQQcKYPdXTykg4QwRImsxT%2B6CaZpnTCgHzf4qlqqDXXK1Y%2Bzl0caIt%2Fd7YOIVOkiIAOwLbKKJ%2Bsc3tMahCbjgL1WhXslKpen7B8F0pMWpsdnZ%2B2i2fctuHDPoX0ntO85Q3fMgyJ7GsngHj%2FxeJWyZXuWKBZJrhBH5l7po2mwVODC7k%2FltiAC%2BRpC8527Cu5nRzA3cR8NLQDaal9LtoX1eYk2LOYtl1fiQPOO77cl44hYsLa4rY39jwjwSCZwC1I6UvSvvSiX1ROaMDYJG3DTJyOn61gJV9EAYRILzm5ZXTC%2FSmrKeKUePGNseQsyvb3lu%2BQXLH3rLbPN0oLqlrGGOHMsFvkA3YFVOgXWuNmfU93%2BOXeYn40dEihvqs1Kfq5PdlZ4fQW0%2Bm1d1CeLMQWR6jFrMmnknbwCIBLrwY8bQzOILKsdU%2FrDpKm5THPjgzVBTfctdFMGmhdIbUzcw0wApCpraEFALwaM5GGvNfNJG8xrajxvAcdqyrSulAsT2bW5facFGgXzqNUP3k%2BP%2BBtqqwifKMeR%2FIiiOWZ5N%2BnvdWTT02fDnhq%2FjYFQlen2TGtdfeuRlk1iCyDbv8khTc%2BpM3A1YnBT9iFBTHg4gZhjKsaZbhmfUrSirxwE0kmQOvAiS7Ri8R95TjFaRpt0HtzUWmwdbv%2FSnhD3xKAkggl7BmW4S1cagA1EPjKoufg7CdiDBxS5jsO2oohj%2Fj4cwhtmT1gY6mgGnNph36nPHqy1wZCgLHhZ%2Ff6ycdI1qD%2Fv%2FET1vE08rNusfjb1xbAb4xGncxpUOYYdzQN7bgLjwttLOk1A4j8sMxgonocVr%2Blv5%2BVnf5g6UdGgpOouurfUggwzcnf8cpx1Z3mcNX6cNX%2FuYKUcikKhV068XvK3uIN%2BzAhHrVPTRNuBZh%2Fa%2FLmHRwpKEl3b%2FhaVCmUv7vk652HiH&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20261006T125847Z&X-Amz-SignedHeaders=host&X-Amz-Credential=ASIAVK65QPQI5BRMUBVW%2F20261006%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Expires=300&X-Amz-Signature=4c8621ed41b054136baa308ee220b7d63672f4b28440977c61400b332b7c469b",
+        "size": 168050155,
+        "archive": {
+          "archive_name": "ma2025__Prey evasiveness and masking noise jointly promote.zip",
+          "members": [
+            {
+              "name": "Prey evasiveness and masking noise jointly promote/ScriptFig1.m",
+              "size": 45277,
+              "structure": {
+                "type": "matlab_script",
+                "relevant_identifiers": [
+                  "Flying",
+                  "FlyingAllData",
+                  "FlyingBuzzDuration",
+                  "FlyingCallNumber",
+                  "Hp137_20230628T111049_Trial_1__Prey_type_Dalamin_Nois_status_40_rec_org",
+                  "Hp137_20230628T111049_Trial_1__Prey_type_Dalamin_Nois_status_40_rec_org_res",
+                  "Hp142_20230518T115217_Trial_1__prey_type_mworm_prey_status_motionless_rec_org",
+                  "Hp142_20230518T115217_Trial_1__prey_type_mworm_prey_status_motionless_rec_org_res",
+                  "Hp142_20230627T171102_Trial_1__Prey_type_Dalamin_Prey_status_motionless_rec_org",
+                  "Hp158_20230301T112313_Trial_1__Prey_type_Dalamin_Prey_status_motionless_rec_org",
+                  "Hp158_20230301T112313_Trial_1__Prey_type_Dalamin_Prey_status_motionless_rec_org_res",
+                  "Prey",
+                  "PreyState",
+                  "avg_piFlying",
+                  "bats",
+                  "figpath",
+                  "pi_dataFlying",
+                  "prey",
+                  "process_trial",
+                  "process_trial66",
+                  "std_piFlying"
+                ],
+                "data_file_references": [
+                  {
+                    "function": "load",
+                    "filename": "E:\\OrganizedRec\\Hp158_20230301T112313_Trial_1__Prey_type_Dalamin_Prey_status_motionless_rec_org.mat"
+                  },
+                  {
+                    "function": "load",
+                    "filename": "E:\\OrganizedRecResult\\Hp158\\Hp158_20230301T112313_Trial_1__Prey_type_Dalamin_Prey_status_motionless_rec_org_res.mat"
+                  },
+                  {
+                    "function": "load",
+                    "filename": "E:\\OrganizedRecResult\\Hp142_20230518T115217_Trial_1__prey_type_mworm_prey_status_motionless_rec_org_res.mat"
+                  },
+                  {
+                    "function": "load",
+                    "filename": "C:\\OrganizedRecResult\\Hp137_20230628T111049_Trial_1__Prey_type_Dalamin_Nois_status_40_rec_org_res.mat"
+                  },
+                  {
+                    "function": "load",
+                    "filename": "E:\\OrganizedRec\\Hp142_20230518T115217_Trial_1__prey_type_mworm_prey_status_motionless_rec_org.mat"
+                  },
+                  {
+                    "function": "load",
+                    "filename": "E:\\OrganizedRec\\Hp137_20230628T111049_Trial_1__Prey_type_Dalamin_Nois_status_40_rec_org.mat"
+                  },
+                  {
+                    "function": "readtable",
+                    "filename": "C:\\Users\\16591\\PreyState\\StationaryAllData.xlsx"
+                  },
+                  {
+                    "function": "readtable",
+                    "filename": "C:\\Users\\16591\\PreyState\\FlutterAllData.xlsx"
+                  },
+                  {
+                    "function": "readtable",
+                    "filename": "C:\\Users\\16591\\PreyState\\FlyingAllData.xlsx"
+                  },
+                  {
+                    "function": "load",
+                    "filename": "C:\\Users\\16591\\SilenceMworm\\BuzzDutyCycleSilenceMworm.mat"
+                  },
+                  {
+                    "function": "load",
+                    "filename": "E:\\BuzzLength\\DutyCycle\\BuzzData.mat"
+                  },
+                  {
+                    "function": "load",
+                    "filename": "E:\\OrganizedRec\\Hp142_20230627T171102_Trial_1__Prey_type_Dalamin_Prey_status_motionless_rec_org.mat"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "Prey evasiveness and masking noise jointly promote/ScriptFig2.m",
+              "size": 47589,
+              "structure": {
+                "type": "matlab_script",
+                "relevant_identifiers": [
+                  "DataTrial",
+                  "Hp158_20230511T211518_Trial_1__status_mworm_trials_40_rec_org",
+                  "Hp158_20230518T112917_Trial_1__prey_type_mworm_prey_status_motionless_rec_org",
+                  "Hp158_20230518T112917_Trial_1__prey_type_mworm_prey_status_motionless_rec_org_res",
+                  "Hp158_20230603T102754_Trial_1__status_mworm_trials_40_rec_org_res",
+                  "Noise",
+                  "NoiseMworm",
+                  "avg_piNoiseMworm40",
+                  "avg_piNoiseMworm60",
+                  "avg_piNoiseMworm80",
+                  "bats",
+                  "pi_dataNoiseMworm40",
+                  "pi_dataNoiseMworm60",
+                  "pi_dataNoiseMworm80",
+                  "prey",
+                  "process_trial",
+                  "process_trial66",
+                  "std_piNoiseMworm40",
+                  "std_piNoiseMworm60",
+                  "std_piNoiseMworm80"
+                ],
+                "data_file_references": [
+                  {
+                    "function": "load",
+                    "filename": "E:\\OrganizedRecResult\\Hp158\\Hp158_20230518T112917_Trial_1__prey_type_mworm_prey_status_motionless_rec_org_res.mat"
+                  },
+                  {
+                    "function": "load",
+                    "filename": "E:\\OrganizedRec\\Hp158_20230518T112917_Trial_1__prey_type_mworm_prey_status_motionless_rec_org.mat"
+                  },
+                  {
+                    "function": "load",
+                    "filename": "E:\\OrganizedRecResult\\Hp158_20230603T102754_Trial_1__status_mworm_trials_40_rec_org_res.mat"
+                  },
+                  {
+                    "function": "load",
+                    "filename": "E:\\OrganizedRec\\Hp158_20230511T211518_Trial_1__status_mworm_trials_40_rec_org.mat"
+                  },
+                  {
+                    "function": "readtable",
+                    "filename": "C:\\Users\\DataTrial\\NoiseMworm\\N40AllData.xlsx"
+                  },
+                  {
+                    "function": "readtable",
+                    "filename": "C:\\Users\\DataTrial\\NoiseMworm\\N60AllData.xlsx"
+                  },
+                  {
+                    "function": "readtable",
+                    "filename": "C:\\Users\\DataTrial\\NoiseMworm\\N80AllData.xlsx"
+                  },
+                  {
+                    "function": "readtable",
+                    "filename": "C:\\Users\\DataTrial\\NoiseMworm\\N40AllData.xlsx"
+                  },
+                  {
+                    "function": "readtable",
+                    "filename": "C:\\Users\\DataTrial\\NoiseMworm\\N60AllData.xlsx"
+                  },
+                  {
+                    "function": "readtable",
+                    "filename": "C:\\Users\\DataTrial\\NoiseMworm\\N80AllData.xlsx"
+                  },
+                  {
+                    "function": "readtable",
+                    "filename": "C:\\Users\\DataTrial\\NoiseMworm\\N40AllData.xlsx"
+                  },
+                  {
+                    "function": "readtable",
+                    "filename": "C:\\Users\\DataTrial\\NoiseMworm\\N60AllData.xlsx"
+                  },
+                  {
+                    "function": "readtable",
+                    "filename": "C:\\Users\\DataTrial\\NoiseMworm\\N80AllData.xlsx"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "Prey evasiveness and masking noise jointly promote/ScriptFig3.m",
+              "size": 20702,
+              "structure": {
+                "type": "matlab_script",
+                "relevant_identifiers": [
+                  "Hp036_Cond_Noise_Trial_9_20210710T092842_cmb_cut",
+                  "Hp036_Cond_Noise_Trial_9_20210710T092842_cmb_cut_res",
+                  "Hp094_Cond_Noise_Trial_5_20210702T184710_cmb_cut",
+                  "Hp094_Cond_Noise_Trial_5_20210702T184710_cmb_cut_res",
+                  "Landing",
+                  "LandingNoiseAmplitude",
+                  "LandingSileneceAmplitude",
+                  "Noise",
+                  "Noisecolumn_mean",
+                  "avg_piNoise60",
+                  "avg_piNoiseMworm40",
+                  "landing",
+                  "noise",
+                  "pi_dataNoiseMworm40",
+                  "process_trial",
+                  "process_trial66",
+                  "std_piNoise60",
+                  "std_piNoiseMworm40",
+                  "x_coord",
+                  "y_coord"
+                ],
+                "data_file_references": [
+                  {
+                    "function": "load",
+                    "filename": "C:\\Users\\Landing\\noise\\Hp094_Cond_Noise_Trial_5_20210702T184710_cmb_cut_res.mat"
+                  },
+                  {
+                    "function": "load",
+                    "filename": "C:\\Users\\Landing\\noise\\Hp036\\Hp036_Cond_Noise_Trial_9_20210710T092842_cmb_cut_res.mat"
+                  },
+                  {
+                    "function": "load",
+                    "filename": "C:\\Users\\Landing\\noise\\Hp094_Cond_Noise_Trial_5_20210702T184710_cmb_cut.mat"
+                  },
+                  {
+                    "function": "load",
+                    "filename": "C:\\Users\\Landing\\noise\\Hp036_Cond_Noise_Trial_9_20210710T092842_cmb_cut.mat"
+                  },
+                  {
+                    "function": "readtable",
+                    "filename": "C:\\Users\\Landing\\noise\\choice\\LandingSileneceAmplitude.xlsx"
+                  },
+                  {
+                    "function": "readtable",
+                    "filename": "C:\\Users\\Landing\\noise\\choice\\LandingNoiseAmplitude.xlsx"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "Prey evasiveness and masking noise jointly promote/ScriptSI_FigS1-3.m",
+              "size": 48111,
+              "structure": {
+                "type": "matlab_script",
+                "relevant_identifiers": [
+                  "CallRateFlying",
+                  "DataTrial",
+                  "Fig1Prey",
+                  "Flight",
+                  "Fly",
+                  "Flying",
+                  "FlyingAllData",
+                  "FlyingBuzzDuration",
+                  "FlyingBuzzEnd",
+                  "FlyingBuzzStart",
+                  "FlyingCallNumber",
+                  "FlyingCallRate",
+                  "Landing",
+                  "LandingSpeed",
+                  "Noise",
+                  "NoiseMworm",
+                  "Prey",
+                  "PreyState",
+                  "all_speed",
+                  "avg_speed",
+                  "avg_speedFlutter",
+                  "avg_speedFlying",
+                  "avg_speedSilenceMworm",
+                  "avg_speedStationary",
+                  "batloc",
+                  "bats",
+                  "bin_speed",
+                  "figpath",
+                  "landing",
+                  "prey",
+                  "process_speed_boxdata",
+                  "process_speed_trial",
+                  "speed",
+                  "speed_data",
+                  "speed_dataFlutter",
+                  "speed_dataFlying",
+                  "speed_dataSilenceMworm",
+                  "speed_dataStationary",
+                  "std_speed",
+                  "std_speedFlutter",
+                  "std_speedFlying",
+                  "std_speedSilenceMworm",
+                  "std_speedStationary",
+                  "x_coord",
+                  "y_coord"
+                ],
+                "data_file_references": [
+                  {
+                    "function": "load",
+                    "filename": "C:\\Users\\DataTrial\\PreyState\\BuzzRateData\\RepititionRate\\CallRateStationary.mat"
+                  },
+                  {
+                    "function": "load",
+                    "filename": "C:\\Users\\DataTrial\\PreyState\\BuzzRateData\\RepititionRate\\CallRateFlying.mat"
+                  },
+                  {
+                    "function": "load",
+                    "filename": "C:\\Users\\DataTrial\\PreyState\\BuzzRateData\\RepititionRate\\CallRateFlutter.mat"
+                  },
+                  {
+                    "function": "readtable",
+                    "filename": "C:\\Users\\DataTrial\\PreyState\\StationaryAllData.xlsx"
+                  },
+                  {
+                    "function": "readtable",
+                    "filename": "C:\\Users\\DataTrial\\PreyState\\FlutterAllData.xlsx"
+                  },
+                  {
+                    "function": "readtable",
+                    "filename": "C:\\Users\\DataTrial\\PreyState\\FlyingAllData.xlsx"
+                  },
+                  {
+                    "function": "load",
+                    "filename": "C:\\Users\\16591\\Desktop\\Clutter120m90Hz\\DataTrial\\NoiseMworm\\RepititionRate\\CallRate40.mat"
+                  },
+                  {
+                    "function": "load",
+                    "filename": "C:\\Users\\16591\\Desktop\\Clutter120m90Hz\\DataTrial\\NoiseMworm\\RepititionRate\\CallRate60.mat"
+                  },
+                  {
+                    "function": "load",
+                    "filename": "C:\\Users\\16591\\Desktop\\Clutter120m90Hz\\DataTrial\\NoiseMworm\\RepititionRate\\CallRate80.mat"
+                  },
+                  {
+                    "function": "readtable",
+                    "filename": "C:\\Users\\16591\\Desktop\\Clutter120m90Hz\\DataTrial\\NoiseMworm\\N40AllData.xlsx"
+                  },
+                  {
+                    "function": "readtable",
+                    "filename": "C:\\Users\\16591\\Desktop\\Clutter120m90Hz\\DataTrial\\NoiseMworm\\N60AllData.xlsx"
+                  },
+                  {
+                    "function": "readtable",
+                    "filename": "C:\\Users\\16591\\Desktop\\Clutter120m90Hz\\DataTrial\\NoiseMworm\\N80AllData.xlsx"
+                  },
+                  {
+                    "function": "readtable",
+                    "filename": "C:\\Users\\16591\\Desktop\\Clutter120m90Hz\\DataTrial\\NoiseMworm\\N40AllData.xlsx"
+                  },
+                  {
+                    "function": "readtable",
+                    "filename": "C:\\Users\\16591\\Desktop\\Clutter120m90Hz\\DataTrial\\NoiseMworm\\N60AllData.xlsx"
+                  },
+                  {
+                    "function": "readtable",
+                    "filename": "C:\\Users\\16591\\Desktop\\Clutter120m90Hz\\DataTrial\\NoiseMworm\\N80AllData.xlsx"
+                  },
+                  {
+                    "function": "readtable",
+                    "filename": "C:\\Users\\WormAllData.xlsx"
+                  },
+                  {
+                    "function": "readtable",
+                    "filename": "C:\\Users\\N40AllData.xlsx"
+                  },
+                  {
+                    "function": "readtable",
+                    "filename": "C:\\Users\\N60AllData.xlsx"
+                  },
+                  {
+                    "function": "readtable",
+                    "filename": "C:\\Users\\N40AllData.xlsx"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "Prey evasiveness and masking noise jointly promote/Data/Hp094_Cond_Noise_Trial_5_20210702T184710_cmb_cut_res.mat",
+              "size": 9608,
+              "structure": {
+                "type": "mat",
+                "variables": [],
+                "notes": [
+                  "TypeError(\"'NoneType' object is not iterable\")"
+                ]
+              }
+            },
+            {
+              "name": "Prey evasiveness and masking noise jointly promote/Data/CallRate60.mat",
+              "size": 1099,
+              "structure": {
+                "type": "mat",
+                "variables": [
+                  {
+                    "name": "CallRate60",
+                    "shape": [
+                      24,
+                      1
+                    ],
+                    "class": "cell"
+                  }
+                ],
+                "notes": []
+              }
+            },
+            {
+              "name": "Prey evasiveness and masking noise jointly promote/Data/BuzzDutyCycleSilenceMworm.mat",
+              "size": 372,
+              "structure": {
+                "type": "mat",
+                "variables": [
+                  {
+                    "name": "BuzzDutyCycleSilenceMworm",
+                    "shape": [
+                      29,
+                      1
+                    ],
+                    "class": "double"
+                  }
+                ],
+                "notes": []
+              }
+            },
+            {
+              "name": "Prey evasiveness and masking noise jointly promote/Data/BuzzData.mat",
+              "size": 1362,
+              "structure": {
+                "type": "mat",
+                "variables": [
+                  {
+                    "name": "BuzzData",
+                    "shape": [
+                      20,
+                      9
+                    ],
+                    "class": "double"
+                  }
+                ],
+                "notes": []
+              }
+            },
+            {
+              "name": "Prey evasiveness and masking noise jointly promote/Data/CallRate40.mat",
+              "size": 1220,
+              "structure": {
+                "type": "mat",
+                "variables": [
+                  {
+                    "name": "CallRate40",
+                    "shape": [
+                      26,
+                      1
+                    ],
+                    "class": "cell"
+                  }
+                ],
+                "notes": []
+              }
+            },
+            {
+              "name": "Prey evasiveness and masking noise jointly promote/Data/Hp003_Cond_Noise_Trial_5_20210707T211104_cmb_cut_res.mat",
+              "size": 8904,
+              "structure": {
+                "type": "mat",
+                "variables": [],
+                "notes": [
+                  "TypeError(\"'NoneType' object is not iterable\")"
+                ]
+              }
+            },
+            {
+              "name": "Prey evasiveness and masking noise jointly promote/Data/Hp142_20230518T115217_Trial_1__prey_type_mworm_prey_status_motionless_rec_org_res.mat",
+              "size": 36788,
+              "structure": {
+                "type": "mat",
+                "variables": [],
+                "notes": [
+                  "TypeError(\"'NoneType' object is not iterable\")"
+                ]
+              }
+            },
+            {
+              "name": "Prey evasiveness and masking noise jointly promote/Data/LandingNoiseAmplitude.xlsx",
+              "size": 11259,
+              "structure": {
+                "type": "xlsx",
+                "sheets": [
+                  {
+                    "name": "Sheet1",
+                    "max_row": 10,
+                    "max_column": 12,
+                    "header": [
+                      "0.0113785275579156",
+                      "0.0195177869715306",
+                      "0.0162139620951287",
+                      "0.0220475313165431",
+                      "0.00731016915085355",
+                      "0.014261567115911",
+                      "0.0159953979600615",
+                      "0.0150745872653377",
+                      "0.0120993166132792",
+                      "0.0208165771193377",
+                      "0.0284321096107166",
+                      "0.0181569225077088"
+                    ]
+                  },
+                  {
+                    "name": "Sheet2",
+                    "max_row": 1,
+                    "max_column": 1,
+                    "header": []
+                  },
+                  {
+                    "name": "Sheet3",
+                    "max_row": 1,
+                    "max_column": 1,
+                    "header": []
+                  }
+                ]
+              }
+            },
+            {
+              "name": "Prey evasiveness and masking noise jointly promote/Data/LandingSileneceAmplitude.xlsx",
+              "size": 11289,
+              "structure": {
+                "type": "xlsx",
+                "sheets": [
+                  {
+                    "name": "Sheet1",
+                    "max_row": 9,
+                    "max_column": 14,
+                    "header": [
+                      "0.0505372426104708",
+                      "0.0100239647200191",
+                      "0.0246558112085571",
+                      "0.0191610238329147",
+                      "0.00936035371721372",
+                      "0.00975326619817662",
+                      "0.0168305953286685",
+                      "0.0106319121244958",
+                      "0.0196502793127643",
+                      "0.00603745644093758",
+                      "0.00453251646268995",
+                      "0.0273085209420184",
+                      "0.0079478171783177",
+                      "0.00649736581713752"
+                    ]
+                  },
+                  {
+                    "name": "Sheet2",
+                    "max_row": 1,
+                    "max_column": 1,
+                    "header": []
+                  },
+                  {
+                    "name": "Sheet3",
+                    "max_row": 1,
+                    "max_column": 1,
+                    "header": []
+                  }
+                ]
+              }
+            },
+            {
+              "name": "Prey evasiveness and masking noise jointly promote/Data/Hp142_20230627T171102_Trial_1__Prey_type_Dalamin_Prey_status_motionless_rec_org.mat",
+              "size": 7150275,
+              "structure": {
+                "type": "mat",
+                "variables": [
+                  {
+                    "name": "batloc",
+                    "shape": [
+                      1161,
+                      4
+                    ],
+                    "class": "double"
+                  },
+                  {
+                    "name": "channeldelays",
+                    "shape": [
+                      1161,
+                      15
+                    ],
+                    "class": "double"
+                  },
+                  {
+                    "name": "pars",
+                    "shape": [
+                      1,
+                      1
+                    ],
+                    "class": "struct"
+                  },
+                  {
+                    "name": "recs",
+                    "shape": [
+                      223104,
+                      16
+                    ],
+                    "class": "double"
+                  }
+                ],
+                "notes": []
+              }
+            },
+            {
+              "name": "Prey evasiveness and masking noise jointly promote/Data/Hp142_20230518T115217_Trial_1__prey_type_mworm_prey_status_motionless_rec_org.mat",
+              "size": 7481565,
+              "structure": {
+                "type": "mat",
+                "variables": [
+                  {
+                    "name": "batloc",
+                    "shape": [
+                      1221,
+                      4
+                    ],
+                    "class": "double"
+                  },
+                  {
+                    "name": "channeldelays",
+                    "shape": [
+                      1221,
+                      15
+                    ],
+                    "class": "double"
+                  },
+                  {
+                    "name": "pars",
+                    "shape": [
+                      1,
+                      1
+                    ],
+                    "class": "struct"
+                  },
+                  {
+                    "name": "recs",
+                    "shape": [
+                      234624,
+                      16
+                    ],
+                    "class": "double"
+                  }
+                ],
+                "notes": []
+              }
+            },
+            {
+              "name": "Prey evasiveness and masking noise jointly promote/Data/Hp137_20230628T111049_Trial_1__Prey_type_Dalamin_Nois_status_40_rec_org_res.mat",
+              "size": 17761533,
+              "structure": {
+                "type": "mat",
+                "variables": [],
+                "notes": [
+                  "TypeError(\"'NoneType' object is not iterable\")"
+                ]
+              }
+            },
+            {
+              "name": "Prey evasiveness and masking noise jointly promote/Data/Hp137_20230628T112054_Trial_1__Prey_type_Dalamin_Nois_status_40_rec_org_res.mat",
+              "size": 17756684,
+              "structure": {
+                "type": "mat",
+                "variables": [],
+                "notes": [
+                  "TypeError(\"'NoneType' object is not iterable\")"
+                ]
+              }
+            },
+            {
+              "name": "Prey evasiveness and masking noise jointly promote/Data/Hp137_20231107T113419_Trial_1__Prey_type_Dalamin_Nois_status_40_rec_org_res.mat",
+              "size": 17872605,
+              "structure": {
+                "type": "mat",
+                "variables": [],
+                "notes": [
+                  "TypeError(\"'NoneType' object is not iterable\")"
+                ]
+              }
+            },
+            {
+              "name": "Prey evasiveness and masking noise jointly promote/Data/Hp137_20230628T111049_Trial_1__Prey_type_Dalamin_Nois_status_40_rec_org.mat",
+              "size": 25082017,
+              "structure": {
+                "type": "mat",
+                "variables": [
+                  {
+                    "name": "batloc",
+                    "shape": [
+                      1161,
+                      4
+                    ],
+                    "class": "double"
+                  },
+                  {
+                    "name": "channeldelays",
+                    "shape": [
+                      1161,
+                      15
+                    ],
+                    "class": "double"
+                  },
+                  {
+                    "name": "pars",
+                    "shape": [
+                      1,
+                      1
+                    ],
+                    "class": "struct"
+                  },
+                  {
+                    "name": "recs",
+                    "shape": [
+                      223104,
+                      16
+                    ],
+                    "class": "double"
+                  }
+                ],
+                "notes": []
+              }
+            },
+            {
+              "name": "Prey evasiveness and masking noise jointly promote/Data/Hp036_Cond_Noise_Trial_9_20210710T092842_cmb_cut.mat",
+              "size": 33305111,
+              "structure": {
+                "type": "mat",
+                "variables": [
+                  {
+                    "name": "LT",
+                    "shape": [
+                      1,
+                      1
+                    ],
+                    "class": "double"
+                  },
+                  {
+                    "name": "ncond",
+                    "shape": [
+                      1,
+                      2
+                    ],
+                    "class": "double"
+                  },
+                  {
+                    "name": "outampldb",
+                    "shape": [
+                      1,
+                      1
+                    ],
+                    "class": "double"
+                  },
+                  {
+                    "name": "reccutrme",
+                    "shape": [
+                      480000,
+                      9
+                    ],
+                    "class": "double"
+                  }
+                ],
+                "notes": []
+              }
+            },
+            {
+              "name": "Prey evasiveness and masking noise jointly promote/Data/Hp094_Cond_Noise_Trial_5_20210702T184710_cmb_cut.mat",
+              "size": 33356024,
+              "structure": {
+                "type": "mat",
+                "variables": [
+                  {
+                    "name": "LT",
+                    "shape": [
+                      1,
+                      1
+                    ],
+                    "class": "double"
+                  },
+                  {
+                    "name": "reccutrme",
+                    "shape": [
+                      480000,
+                      9
+                    ],
+                    "class": "double"
+                  },
+                  {
+                    "name": "ncond",
+                    "shape": [
+                      1,
+                      2
+                    ],
+                    "class": "double"
+                  },
+                  {
+                    "name": "outampldb",
+                    "shape": [
+                      1,
+                      1
+                    ],
+                    "class": "double"
+                  }
+                ],
+                "notes": []
+              }
+            },
+            {
+              "name": "Prey evasiveness and masking noise jointly promote/Data/CallRate80.mat",
+              "size": 885,
+              "structure": {
+                "type": "mat",
+                "variables": [
+                  {
+                    "name": "CallRate80",
+                    "shape": [
+                      16,
+                      1
+                    ],
+                    "class": "cell"
+                  }
+                ],
+                "notes": []
+              }
+            },
+            {
+              "name": "Prey evasiveness and masking noise jointly promote/Data/Hp158_20230301T112313_Trial_1__Prey_type_Dalamin_Prey_status_motionless_rec_org.mat",
+              "size": 8522771,
+              "structure": {
+                "type": "mat",
+                "variables": [
+                  {
+                    "name": "batloc",
+                    "shape": [
+                      1431,
+                      4
+                    ],
+                    "class": "double"
+                  },
+                  {
+                    "name": "channeldelays",
+                    "shape": [
+                      1431,
+                      15
+                    ],
+                    "class": "double"
+                  },
+                  {
+                    "name": "pars",
+                    "shape": [
+                      1,
+                      1
+                    ],
+                    "class": "struct"
+                  },
+                  {
+                    "name": "recs",
+                    "shape": [
+                      274944,
+                      16
+                    ],
+                    "class": "double"
+                  }
+                ],
+                "notes": []
+              }
+            }
+          ]
+        }
+      },
+      "tokens": {
+        "numeric_bat_tokens": [
+          "0275",
+          "03",
+          "030",
+          "051",
+          "060",
+          "062",
+          "070",
+          "071",
+          "110",
+          "1104",
+          "1110",
+          "1151",
+          "1205",
+          "1231",
+          "1291",
+          "1341",
+          "1521",
+          "1659",
+          "2021",
+          "2023",
+          "36",
+          "37",
+          "40",
+          "42",
+          "58",
+          "7110",
+          "8471",
+          "9284",
+          "94"
+        ],
+        "condition_like_tokens": [
+          "C:\\OrganizedRecResult\\Hp137_20230628T111049_Trial_1__Prey_type_Dalamin_Nois_status_40_rec_org_res.mat",
+          "C:\\Users\\16591\\Desktop\\Clutter120m90Hz\\DataTrial\\NoiseMworm\\N40AllData.xlsx",
+          "C:\\Users\\16591\\Desktop\\Clutter120m90Hz\\DataTrial\\NoiseMworm\\N60AllData.xlsx",
+          "C:\\Users\\16591\\Desktop\\Clutter120m90Hz\\DataTrial\\NoiseMworm\\N80AllData.xlsx",
+          "C:\\Users\\16591\\Desktop\\Clutter120m90Hz\\DataTrial\\NoiseMworm\\RepititionRate\\CallRate40.mat",
+          "C:\\Users\\16591\\Desktop\\Clutter120m90Hz\\DataTrial\\NoiseMworm\\RepititionRate\\CallRate60.mat",
+          "C:\\Users\\16591\\Desktop\\Clutter120m90Hz\\DataTrial\\NoiseMworm\\RepititionRate\\CallRate80.mat",
+          "C:\\Users\\16591\\PreyState\\FlutterAllData.xlsx",
+          "C:\\Users\\16591\\PreyState\\FlyingAllData.xlsx",
+          "C:\\Users\\16591\\PreyState\\StationaryAllData.xlsx",
+          "C:\\Users\\DataTrial\\NoiseMworm\\N40AllData.xlsx",
+          "C:\\Users\\DataTrial\\NoiseMworm\\N60AllData.xlsx",
+          "C:\\Users\\DataTrial\\NoiseMworm\\N80AllData.xlsx",
+          "C:\\Users\\DataTrial\\PreyState\\BuzzRateData\\RepititionRate\\CallRateFlutter.mat",
+          "C:\\Users\\DataTrial\\PreyState\\BuzzRateData\\RepititionRate\\CallRateFlying.mat",
+          "C:\\Users\\DataTrial\\PreyState\\BuzzRateData\\RepititionRate\\CallRateStationary.mat",
+          "C:\\Users\\DataTrial\\PreyState\\FlutterAllData.xlsx",
+          "C:\\Users\\DataTrial\\PreyState\\FlyingAllData.xlsx",
+          "C:\\Users\\DataTrial\\PreyState\\StationaryAllData.xlsx",
+          "C:\\Users\\Landing\\noise\\Hp036\\Hp036_Cond_Noise_Trial_9_20210710T092842_cmb_cut_res.mat",
+          "C:\\Users\\Landing\\noise\\Hp036_Cond_Noise_Trial_9_20210710T092842_cmb_cut.mat",
+          "C:\\Users\\Landing\\noise\\Hp094_Cond_Noise_Trial_5_20210702T184710_cmb_cut.mat",
+          "C:\\Users\\Landing\\noise\\Hp094_Cond_Noise_Trial_5_20210702T184710_cmb_cut_res.mat",
+          "C:\\Users\\Landing\\noise\\choice\\LandingNoiseAmplitude.xlsx",
+          "C:\\Users\\Landing\\noise\\choice\\LandingSileneceAmplitude.xlsx",
+          "E:\\OrganizedRecResult\\Hp142_20230518T115217_Trial_1__prey_type_mworm_prey_status_motionless_rec_org_res.mat",
+          "E:\\OrganizedRecResult\\Hp158\\Hp158_20230301T112313_Trial_1__Prey_type_Dalamin_Prey_status_motionless_rec_org_res.mat",
+          "E:\\OrganizedRecResult\\Hp158\\Hp158_20230518T112917_Trial_1__prey_type_mworm_prey_status_motionless_rec_org_res.mat",
+          "E:\\OrganizedRec\\Hp137_20230628T111049_Trial_1__Prey_type_Dalamin_Nois_status_40_rec_org.mat",
+          "E:\\OrganizedRec\\Hp142_20230518T115217_Trial_1__prey_type_mworm_prey_status_motionless_rec_org.mat",
+          "E:\\OrganizedRec\\Hp142_20230627T171102_Trial_1__Prey_type_Dalamin_Prey_status_motionless_rec_org.mat",
+          "E:\\OrganizedRec\\Hp158_20230301T112313_Trial_1__Prey_type_Dalamin_Prey_status_motionless_rec_org.mat",
+          "E:\\OrganizedRec\\Hp158_20230518T112917_Trial_1__prey_type_mworm_prey_status_motionless_rec_org.mat",
+          "Fig1Prey",
+          "Flight",
+          "Hp036_Cond_Noise_Trial_9_20210710T092842_cmb_cut",
+          "Hp036_Cond_Noise_Trial_9_20210710T092842_cmb_cut_res",
+          "Hp094_Cond_Noise_Trial_5_20210702T184710_cmb_cut",
+          "Hp094_Cond_Noise_Trial_5_20210702T184710_cmb_cut_res",
+          "Hp137_20230628T111049_Trial_1__Prey_type_Dalamin_Nois_status_40_rec_org",
+          "Hp137_20230628T111049_Trial_1__Prey_type_Dalamin_Nois_status_40_rec_org_res",
+          "Hp142_20230518T115217_Trial_1__prey_type_mworm_prey_status_motionless_rec_org",
+          "Hp142_20230518T115217_Trial_1__prey_type_mworm_prey_status_motionless_rec_org_res",
+          "Hp142_20230627T171102_Trial_1__Prey_type_Dalamin_Prey_status_motionless_rec_org",
+          "Hp158_20230301T112313_Trial_1__Prey_type_Dalamin_Prey_status_motionless_rec_org",
+          "Hp158_20230301T112313_Trial_1__Prey_type_Dalamin_Prey_status_motionless_rec_org_res",
+          "Hp158_20230518T112917_Trial_1__prey_type_mworm_prey_status_motionless_rec_org",
+          "Hp158_20230518T112917_Trial_1__prey_type_mworm_prey_status_motionless_rec_org_res",
+          "Landing",
+          "LandingNoiseAmplitude",
+          "LandingSileneceAmplitude",
+          "LandingSpeed",
+          "Noise",
+          "NoiseMworm",
+          "Noisecolumn_mean",
+          "Prey",
+          "Prey evasiveness and masking noise jointly promote/Data/BuzzData.mat",
+          "Prey evasiveness and masking noise jointly promote/Data/BuzzDutyCycleSilenceMworm.mat",
+          "Prey evasiveness and masking noise jointly promote/Data/CallRate40.mat",
+          "Prey evasiveness and masking noise jointly promote/Data/CallRate60.mat",
+          "Prey evasiveness and masking noise jointly promote/Data/CallRate80.mat",
+          "Prey evasiveness and masking noise jointly promote/Data/Hp003_Cond_Noise_Trial_5_20210707T211104_cmb_cut_res.mat",
+          "Prey evasiveness and masking noise jointly promote/Data/Hp036_Cond_Noise_Trial_9_20210710T092842_cmb_cut.mat",
+          "Prey evasiveness and masking noise jointly promote/Data/Hp094_Cond_Noise_Trial_5_20210702T184710_cmb_cut.mat",
+          "Prey evasiveness and masking noise jointly promote/Data/Hp094_Cond_Noise_Trial_5_20210702T184710_cmb_cut_res.mat",
+          "Prey evasiveness and masking noise jointly promote/Data/Hp137_20230628T111049_Trial_1__Prey_type_Dalamin_Nois_status_40_rec_org.mat",
+          "Prey evasiveness and masking noise jointly promote/Data/Hp137_20230628T111049_Trial_1__Prey_type_Dalamin_Nois_status_40_rec_org_res.mat",
+          "Prey evasiveness and masking noise jointly promote/Data/Hp137_20230628T112054_Trial_1__Prey_type_Dalamin_Nois_status_40_rec_org_res.mat",
+          "Prey evasiveness and masking noise jointly promote/Data/Hp137_20231107T113419_Trial_1__Prey_type_Dalamin_Nois_status_40_rec_org_res.mat",
+          "Prey evasiveness and masking noise jointly promote/Data/Hp142_20230518T115217_Trial_1__prey_type_mworm_prey_status_motionless_rec_org.mat",
+          "Prey evasiveness and masking noise jointly promote/Data/Hp142_20230518T115217_Trial_1__prey_type_mworm_prey_status_motionless_rec_org_res.mat",
+          "Prey evasiveness and masking noise jointly promote/Data/Hp142_20230627T171102_Trial_1__Prey_type_Dalamin_Prey_status_motionless_rec_org.mat",
+          "Prey evasiveness and masking noise jointly promote/Data/Hp158_20230301T112313_Trial_1__Prey_type_Dalamin_Prey_status_motionless_rec_org.mat",
+          "Prey evasiveness and masking noise jointly promote/Data/LandingNoiseAmplitude.xlsx",
+          "Prey evasiveness and masking noise jointly promote/Data/LandingSileneceAmplitude.xlsx",
+          "Prey evasiveness and masking noise jointly promote/ScriptFig1.m",
+          "Prey evasiveness and masking noise jointly promote/ScriptFig2.m",
+          "Prey evasiveness and masking noise jointly promote/ScriptFig3.m",
+          "Prey evasiveness and masking noise jointly promote/ScriptSI_FigS1-3.m",
+          "PreyState",
+          "all_speed",
+          "avg_piNoise60",
+          "avg_piNoiseMworm40",
+          "avg_piNoiseMworm60",
+          "avg_piNoiseMworm80",
+          "avg_speed",
+          "avg_speedFlutter",
+          "avg_speedFlying",
+          "avg_speedSilenceMworm",
+          "avg_speedStationary",
+          "bin_speed",
+          "landing",
+          "ncond",
+          "noise",
+          "pi_dataNoiseMworm40",
+          "pi_dataNoiseMworm60",
+          "pi_dataNoiseMworm80",
+          "prey",
+          "process_speed_boxdata",
+          "process_speed_trial",
+          "speed",
+          "speed_data",
+          "speed_dataFlutter",
+          "speed_dataFlying",
+          "speed_dataSilenceMworm",
+          "speed_dataStationary",
+          "std_piNoise60",
+          "std_piNoiseMworm40",
+          "std_piNoiseMworm60",
+          "std_piNoiseMworm80",
+          "std_speed",
+          "std_speedFlutter",
+          "std_speedFlying",
+          "std_speedSilenceMworm",
+          "std_speedStationary"
+        ]
+      }
+    }
+  ]
+}
