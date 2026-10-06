@@ -34,5 +34,6 @@ jobs:
             echo "No changes"
           else
             git commit -m "Select Aharon primary from structural support"
+            git pull --rebase origin prospective/public-perturbation-audit-v1
             git push
           fi
