@@ -1,105 +1,124 @@
-# Public perturbation candidate ledger v1
+# Public perturbation candidate ledger v2
 
 ## Status
 
-**CURRENT PUBLIC-DATA PRIORITY LEDGER.**
+**CURRENT PUBLIC-DATA MECHANISM PRIORITY LEDGER — supersedes V1.**
 
-This ledger uses only source/publication structure known before any new numerical re-analysis.
+No new source is promoted because it is merely available. Priority is based on causal leverage, individual support, and whether a frozen exact test is identifiable.
 
-## Candidate 1 — Aharon et al. 2017, Pipistrellus kuhlii
+## Priority 1 — Diebold et al. 2024 auditory-midbrain perturbation
 
-Priority:
-**HIGH — primary public-data mechanism candidate.**
+Study:
+*Rapid sensorimotor adaptation to auditory midbrain silencing in free-flying bats*.
 
-Verified public structure:
-- Mendeley Data: `f6mvhj5gj9`, version 3, DOI `10.17632/f6mvhj5gj9.3`;
-- variable names encode biological bat identity (e.g. 500/503/etc.);
-- suffixes encode source-defined conditions;
-- turning-point variables are trial matrices with one trial per column;
-- slowing-point variables are trial matrices with one trial per column;
-- trial-level mean-speed variables are described;
-- Figure 4 includes different tulle-wall detection distances (1 m / 12 m);
-- the source experiment manipulates acoustic flow, start position and wind while testing distance estimation.
+Public source:
+- Zenodo DOI `10.5281/zenodo.13857870`;
+- four individual DREADD audio files: jane, bea, jason, stella;
+- deposited source analysis code;
+- reversible ligand perturbation of excitatory inferior-colliculus processing;
+- Saline versus Ligand trial structure.
 
-Biological leverage:
+Why first:
+- true within-individual neural/sensory perturbation;
+- four DREADD bats in the public acoustic layer;
+- exact identity permutation space `4! = 24`, so one-sided p <= .05 is barely identifiable;
+- source-native acoustic variables and source treatment coding are already recoverable from deposited code;
+- primary endpoint and numeric implementation have been frozen before outcome opening on branch `prospective/auditory-perturbation-policy-v1`.
 
-> Does individual navigation organization remain predictive when current external cue structure is experimentally changed?
+Frozen question:
 
-Why this is valuable:
-- experimental manipulation rather than passive repeatability;
-- trial replication;
-- individual-coded source variables;
-- same species (*P. kuhlii*) as the already-supported sensory-masker perturbation programme;
-- independent biological question: path-integration / distance control rather than obstacle approach.
+> after the shared Saline-to-Ligand shift is removed, does each bat retain a distinguishable multivariate acoustic-policy organization?
 
-Current boundary:
-- exact bat × condition support still requires schema opening;
-- no numerical value opened yet;
-- no endpoint selected by outcome.
+Hard boundary:
+- trajectory layer has only three DREADD bats in deposited analysis code, so trajectory identity is not confirmatory;
+- no feature fishing or trajectory rescue.
 
-Next gate:
-**schema-only variable inventory -> frozen endpoint/support/null contract -> numerical primary.**
+Current state:
+**STRUCTURAL AUDIT QUEUED; NUMERIC PRIMARY FROZEN BUT NOT AUTHORIZED UNTIL STRUCTURAL PASS.**
 
-## Candidate 2 — Ma et al. 2025, Hipposideros pratti
+## Priority 2 — Aharon et al. 2017 path-integration cue manipulation
 
-Priority:
-**MEDIUM — manipulation-localization / external heterogeneity candidate.**
+Study:
+*Bats Use Path Integration Rather Than Acoustic Flow to Assess Flight Distance along Flyways*.
 
-Verified published structure:
-- Mendeley Data: `964fv73w94`, version 1, DOI `10.17632/964fv73w94.1`;
-- public package contains analysis data/code for figures;
-- eight adult bats total;
-- foraging: four bats (3 male, 1 female);
-- landing: four different bats (2 male, 2 female);
-- same four foraging bats entered the noise experiment;
-- noise experiment has silence plus 40/60/80 dB SPL conditions;
-- each noise condition was typically repeated about 15 times per bat;
-- foraging flight paths were reconstructed in 3-D from high-speed stereo video;
-- landing and foraging groups are distinct.
+Public dataset:
+- Mendeley `f6mvhj5gj9` v3;
+- DOI `10.17632/f6mvhj5gj9.3`.
 
-Biological leverage:
+Public description establishes:
+- variable names encode biological bat ID;
+- suffixes encode condition;
+- turning-point matrices contain trials by column;
+- slowing-point matrices contain trials by column;
+- trial-level mean-speed variables exist;
+- experiments alter cue structure including acoustic flow, start position and wind.
 
-> Within a task, does strong environmental manipulation alter group expression while leaving an individual-specific component?
+Why second:
+- strong experimental manipulation and repeated individual trials;
+- but public API currently returns 401 without authentication;
+- exact bat × condition support has not yet been recovered outcome-blind;
+- no numeric primary is opened.
 
-Why lower priority than Aharon:
-- n=4 within each task;
-- exact identity-permutation resolution is potentially too coarse for conventional p<=0.05 if the primary requires permutation of four complete identities (4! = 24; minimum exact one-sided p = 1/24 ≈ 0.0417, technically attainable but extremely discrete);
-- foraging-versus-landing cannot be used as a within-individual transfer test;
-- public package is described as analysis data/code, not yet verified raw trial-level 3-D trajectories.
+Proceed only after a source-structure route recovers the exact repeated bats/conditions without using outcome values.
 
-Best role if schema supports it:
-- one sharply frozen within-foraging noise contrast;
-- or one within-landing noise contrast;
-- preferably as external causal heterogeneity / localization, not broad generality.
+## Priority 3 — Ma et al. 2025 noise / prey-context manipulation
 
-## Priority rule
+Study:
+*Prey evasiveness and masking noise jointly promote the ultrahigh call rate in echolocating bats*.
 
-Do not run both sources merely because they are available.
+Verified dataset:
+- Mendeley `964fv73w94` v1;
+- DOI `10.17632/964fv73w94.1`.
 
-Proceed order:
+Published design:
+- eight adults total;
+- four foraging bats;
+- four different landing bats;
+- noise manipulation repeated within task;
+- roughly 15 repeats per noise condition in the foraging experiment.
 
-1. Aharon structural/schema gate.
-2. If Aharon supports >=4 repeated bats across a common manipulation with a fixed source-native endpoint, freeze and run one primary.
-3. Ma only after Aharon disposition, and only if its schema supplies a nonredundant manipulation test.
+Why third:
+- experimentally useful within-task context manipulation;
+- but only four bats per task;
+- foraging and landing cannot be used as within-individual cross-task transfer;
+- public API route currently 401;
+- best use is a narrow external heterogeneity/localization test after Priority 1/2 disposition.
 
-## Programme ceiling
+## Priority 4 — developmental / social-learning public sources
 
-Neither source can directly test:
+Examples include mother-pup navigation learning and other developmental bat datasets.
+
+Role:
+- formation/history triangulation;
+- not promoted until the adult perturbation programme is closed because many are observational or have weaker individual-level causal assignment.
+
+## Programme rule
+
+Proceed sequentially:
+
+1. close Priority 1 with its frozen PASS/STOP rule;
+2. only then spend analysis effort on Aharon;
+3. Ma only if it adds a nonredundant manipulation layer;
+4. do not reopen same-data Rhino geometry fishing or the failed wild H/V bridge.
+
+## Public-data ceiling
+
+Public perturbation data can potentially establish:
 
 [
-	ext{number of feasible movement solutions}
-ightarrow
-	ext{formation of individual specialization}.
+\text{individual organization persists}
++
+\text{current context can be causally perturbed}
++
+\text{expression changes without complete identity erasure}.
 ]
 
-But together with the already-opened public experiments they can tighten:
+They cannot, with the currently recovered sources, directly randomize:
 
 [
-	ext{persistent individual organization}
-+
-	ext{controlled current-context perturbation}
-+
-	ext{history-dependent change}.
+\text{number of feasible movement solutions}
+\rightarrow
+\text{formation of individual specialization}.
 ]
 
-That is the strongest causal triangulation currently plausible from public data alone.
+That remains the sharp boundary between public-data causal triangulation and a new designed experiment.
