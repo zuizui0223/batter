@@ -14,7 +14,7 @@ SRC=HERE/"PUBLIC_BROWSER_STRUCTURE_AUDIT_V1.json"
 OUTJ=HERE/"AHARON_PRIMARY_STRUCTURAL_SELECTION_V1.json"
 OUTM=HERE/"AHARON_PRIMARY_STRUCTURAL_SELECTION_V1.md"
 
-TURN_RE=re.compile(r"^(?P<bat>\d+)_YRLturns_together_(?P<condition>.+)$",re.I)
+TURN_FILE_RE=re.compile(r"^(?P<bat>\d+)_YRLturns_together_(?P<condition>.+)\.mat$",re.I)
 FIG_RE=re.compile(r"Figure\s*([1-4])",re.I)
 
 def walk(m,parent="",records=None):
@@ -25,18 +25,20 @@ def walk(m,parent="",records=None):
     if st.get("type")=="mat":
         figm=FIG_RE.search(path)
         fig=int(figm.group(1)) if figm else None
-        for v in st.get("variables",[]):
-            mm=TURN_RE.match(v.get("name",""))
-            if mm and fig is not None:
-                shape=v.get("shape") or []
+        mm=TURN_FILE_RE.match(pathlib.Path(name).name)
+        if mm and fig is not None:
+            variables=st.get("variables") or []
+            total=next((v for v in variables if str(v.get("name","")).lower()=="totalturns"),None)
+            if total is not None:
+                shape=total.get("shape") or []
                 records.append({
                     "figure":fig,
                     "container_path":path,
-                    "variable":v.get("name"),
+                    "variable":"totalTurns",
                     "bat":mm.group("bat"),
                     "condition":mm.group("condition"),
                     "shape":shape,
-                    "class":v.get("class") or v.get("dtype"),
+                    "class":total.get("class") or total.get("dtype"),
                 })
     for ch in st.get("members",[]):
         walk(ch,path,records)
