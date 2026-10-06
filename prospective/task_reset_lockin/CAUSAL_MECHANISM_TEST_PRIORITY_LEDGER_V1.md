@@ -474,7 +474,12 @@ Do not:
 
 ## New priority 1 — designed solution-repertoire manipulation
 
-The strongest missing causal test is a within-individual experiment where obstacle/affordance geometry is known and the number/structure of feasible movement solutions is experimentally controlled.
+**STRUCTURAL DESIGN NOW OPENED PROSPECTIVELY:**  
+`prospective/solution_repertoire_experiment/DESIGNED_SOLUTION_REPERTOIRE_EXPERIMENT_V1.md`
+
+The design uses two matched obstacle families within the same biological individuals. OPEN-versus-CONSTRAINED acquisition history is randomized/counterbalanced across the matched families, and both families are later tested under the same four-route OPEN probe. This makes solution opportunity during acquisition the causal treatment rather than merely comparing different obstacle scenes.
+
+The strongest missing causal test is therefore now operationalized as an experiment where obstacle/affordance geometry is known and the number/structure of feasible movement solutions is experimentally controlled.
 
 Required:
 - same biological individuals;
