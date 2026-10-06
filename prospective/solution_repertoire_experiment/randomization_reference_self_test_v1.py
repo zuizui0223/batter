@@ -78,9 +78,10 @@ def main():
     assert abs(p - 1 / 256) < 1e-12
     assert n == 256
 
-    # Missing primary scores are not an inferential rescue path.
-    # Attrition is governed by ATTRITION_AND_MISSING_DATA_CONTRACT_V1.md.
-    # The reference inferencer should fail rather than silently complete-case.
+    # Missing one animal inside a randomized block is not an inferential rescue path.
+    # MISSING_DATA_ATTRITION_RULE_V1.md requires whole-block fail-closed handling.
+    # Therefore the inferencer must reject a partial-block score set rather than
+    # silently complete-case the original four-block assignment space.
     missing_id = rows[0]["animal_id"]
     attrition_scores = {
         key: value
@@ -89,15 +90,40 @@ def main():
     }
     try:
         exact_one_sided_p(rows, attrition_scores, observed)
-    except KeyError:
+    except ValueError:
         pass
     else:
-        raise AssertionError("missing family scores must not be silently accepted")
+        raise AssertionError("partial-block family scores must not be silently accepted")
 
     # Five blocks -> 1,024 legal assignments.
     rows20 = synthetic_rows(5)
-    assert sum(1 for _ in enumerate_treatment_assignments(rows20)) == 1024
+    assignments20 = list(enumerate_treatment_assignments(rows20))
+    assert len(assignments20) == 1024
     assert expected_assignment_count(5) == 1024
+
+    # If one complete randomized block is lost from a five-block cohort,
+    # the confirmatory analysis is rebuilt from the four retained COMPLETE blocks.
+    # It must then have exactly 256 legal assignments and paired scores for every
+    # retained animal.
+    retained_rows = [row for row in rows20 if row["block"] <= 4]
+    retained_assignments = list(enumerate_treatment_assignments(retained_rows))
+    assert len(retained_assignments) == 256
+    retained_observed = retained_assignments[0]
+    retained_scores = {}
+    for row in retained_rows:
+        i = row["animal_id"]
+        open_family = retained_observed[i]
+        constrained = "B" if open_family == "A" else "A"
+        retained_scores[(i, open_family)] = 1.0
+        retained_scores[(i, constrained)] = 0.0
+    obs_r, p_r, n_r = exact_one_sided_p(
+        retained_rows,
+        retained_scores,
+        retained_observed,
+    )
+    assert abs(obs_r - 1.0) < 1e-12
+    assert abs(p_r - 1 / 256) < 1e-12
+    assert n_r == 256
 
     print("PASS: restricted randomization reference v1")
 
