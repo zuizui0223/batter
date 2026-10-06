@@ -17,13 +17,13 @@ Suppose a recurrent movement task admits (K) functionally adequate solutions.
 For individual (i), after (n) experiences:
 
 [
-P_i(kmid n)
+P_i(k\mid n)
 =
-rac{a+N_{ik}(n)}{Ka+n},
+\frac{a+N_{ik}(n)}{Ka+n},
 ]
 
 where:
-- (k=1,ldots,K);
+- (k=1,\ldots,K);
 - (a>0) is symmetric baseline pseudo-count per solution;
 - (N_{ik}) is the individual's accumulated use of solution (k).
 
@@ -40,7 +40,7 @@ is required.
 The limiting personal solution weights are:
 
 [
-	heta_isim Dirichlet(a,ldots,a).
+\theta_isim Dirichlet(a,\ldots,a).
 ]
 
 ---
@@ -52,7 +52,7 @@ For two independent future choices from the same individual:
 [
 P_{same}
 =
-rac{a+1}{Ka+1}.
+\frac{a+1}{Ka+1}.
 ]
 
 For two choices from different individuals:
@@ -60,23 +60,23 @@ For two choices from different individuals:
 [
 P_{between}
 =
-rac{1}{K}.
+\frac{1}{K}.
 ]
 
 Therefore the same-individual matching advantage is:
 
 [
-oxed{
-Delta(K,a)
+\boxed{
+\Delta(K,a)
 =
-rac{K-1}{K(Ka+1)}
+\frac{K-1}{K(Ka+1)}
 }
 ]
 
 with:
 
 [
-Delta>0quad	ext{for every }K>1.
+\Delta>0quad\text{for every }K>1.
 ]
 
 Thus **more than one feasible solution is sufficient for history to create persistent individuality**, even from identical starting conditions.
@@ -88,18 +88,18 @@ Thus **more than one feasible solution is sufficient for history to create persi
 Treating (K) continuously for intuition:
 
 [
-rac{partial Delta}{partial K}
+\frac{\partial \Delta}{\partial K}
 =
--rac{aK^2-2aK-1}{K^2(Ka+1)^2}.
+-\frac{aK^2-2aK-1}{K^2(Ka+1)^2}.
 ]
 
 The interior maximum occurs at:
 
 [
-oxed{
+\boxed{
 K^*
 =
-1+sqrt{1+rac{1}{a}}
+1+\sqrt{1+\frac{1}{a}}
 }
 ]
 
@@ -148,15 +148,15 @@ a=A/K.
 Then:
 
 [
-Delta(K,A)
+\Delta(K,A)
 =
-rac{K-1}{K(A+1)}.
+\frac{K-1}{K(A+1)}.
 ]
 
 This increases monotonically with K and approaches:
 
 [
-rac{1}{A+1}.
+\frac{1}{A+1}.
 ]
 
 So there are two biologically distinct regimes.
@@ -201,20 +201,20 @@ This differs from:
 
 [
 competition
-ightarrow
+\rightarrow
 spatial exclusion
-ightarrow
+\rightarrow
 individual niche.
 ]
 
 Instead:
 
 [
-oxed{
+\boxed{
 solution opportunity
-	imes
+\times
 history
-ightarrow
+\rightarrow
 personal policy
 }
 ]
@@ -361,10 +361,10 @@ Multiple feasible solutions are necessary but not sufficient to predict how much
 The exact Pólya model predicts:
 
 [
-oxed{
-Delta(K,a)
+\boxed{
+\Delta(K,a)
 =
-rac{K-1}{K(Ka+1)}
+\frac{K-1}{K(Ka+1)}
 }
 ]
 
