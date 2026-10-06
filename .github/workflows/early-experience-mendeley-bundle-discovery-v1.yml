@@ -1,0 +1,41 @@
+name: early-experience-mendeley-bundle-discovery-v1
+
+on:
+  push:
+    paths:
+      - "prospective/early_experience_specialization/mendeley_bundle_discovery_v1.py"
+      - ".github/workflows/early-experience-mendeley-bundle-discovery-v1.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: early-experience-bundle-discovery-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  discover:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: prospective/early-experience-specialization-v1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Discover frontend endpoint strings
+        run: python prospective/early_experience_specialization/mendeley_bundle_discovery_v1.py
+      - name: Commit discovery receipt
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add prospective/early_experience_specialization/MENDELEY_BUNDLE_DISCOVERY_V1.json
+          git add prospective/early_experience_specialization/MENDELEY_BUNDLE_DISCOVERY_V1.md
+          if git diff --cached --quiet; then
+            echo "No discovery changes"
+          else
+            git commit -m "Record Mendeley bundle endpoint discovery"
+            git pull --rebase origin prospective/early-experience-specialization-v1
+            git push origin HEAD:prospective/early-experience-specialization-v1
+          fi
