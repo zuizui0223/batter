@@ -81,7 +81,7 @@ Not allowed for confirmatory design tuning:
 
 ## Next operational milestone
 
-Complete and freeze ENGINEERING_RECEIPT_TEMPLATE_V1.md as ENGINEERING_RECEIPT_V1.md containing:
+Complete and freeze MATCHED_FAMILY_ENGINEERING_RECEIPT_V1.md as ENGINEERING_RECEIPT_V1.md containing:
 - scaled A/B layout;
 - route correspondence map;
 - canonical constrained route;
@@ -90,3 +90,5 @@ Complete and freeze ENGINEERING_RECEIPT_TEMPLATE_V1.md as ENGINEERING_RECEIPT_V1
 - final numeric support thresholds.
 
 After that receipt is frozen, fill the remaining TBD fields in PREREGISTRATION_CONTRACT_V1.md and generate the actual randomization schedule.
+
+Pilot engineering is governed by ENGINEERING_PILOT_CONTRACT_V1.md.
