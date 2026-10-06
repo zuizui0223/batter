@@ -419,3 +419,16 @@ Must all be complete:
 
 Until every box is complete:
 **OUTCOME OPENING NOT AUTHORIZED.**
+
+---
+
+## 18. Pilot firewall
+
+Before the confirmatory apparatus is frozen, engineering pilot work may tune safety, route feasibility, tracking quality and practical trial counts.
+
+Any animal whose free-choice behavior is inspected while those design quantities are being changed is excluded from the confirmatory randomized cohort.
+
+Pilot data may not be used to choose the obstacle geometry, route count, endpoint weights or analysis window that maximizes individual specialization.
+
+See:
+DESIGN_READINESS_V1.md.
