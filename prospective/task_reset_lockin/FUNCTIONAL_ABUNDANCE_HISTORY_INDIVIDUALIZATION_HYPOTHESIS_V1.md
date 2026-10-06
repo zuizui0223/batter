@@ -119,24 +119,24 @@ without necessarily erasing the personal bias.
 The strongest new hypothesis is:
 
 [
-oxed{
-	ext{functional abundance}
+\boxed{
+\text{functional abundance}
 +
-	ext{personal history}
-ightarrow
-	ext{history-selected personal policy}
+\text{personal history}
+\rightarrow
+\text{history-selected personal policy}
 }
 ]
 
 followed by:
 
 [
-oxed{
-	ext{personal policy}
-	imes
-	ext{current constraints}
-ightarrow
-	ext{realized movement}
+\boxed{
+\text{personal policy}
+\times
+\text{current constraints}
+\rightarrow
+\text{realized movement}
 }
 ]
 
@@ -153,7 +153,7 @@ This provides a mechanism for individual specialization that does not require co
 Let:
 
 [
-mathcal S(E,M)
+\mathcal S(E,M)
 ]
 
 be the set of feasible movement solutions under:
@@ -163,16 +163,16 @@ be the set of feasible movement solutions under:
 An individual's current personal policy is:
 
 [
-	heta_i(t).
+\\theta_i(t).
 ]
 
 Personal history updates that policy:
 
 [
-	heta_i(t+1)
+\\theta_i(t+1)
 =
 U(
-	heta_i(t),
+\\theta_i(t),
 x_i(t),
 r_i(t),
 E_t
@@ -189,7 +189,7 @@ x_i(t)
 G(
 E_t,
 M_i,
-	heta_i(t),
+\\theta_i(t),
 m_{i,E}
 )
 +
@@ -212,7 +212,7 @@ The point of the formulation is to separate:
 A fixed-personality model starts with:
 
 [
-	heta_i = constant.
+\\theta_i = constant.
 ]
 
 The ontogenetic result shows that later personal movement organization is much better predicted by recent than earliest personal history.
@@ -222,9 +222,9 @@ Therefore the adult-like coordinate need not be fully specified at the first obs
 The better model is:
 
 [
-	heta_i(t)
+\\theta_i(t)
 =
-	heta_i^{intrinsic}
+\\theta_i^{intrinsic}
 +
 h_i(t),
 ]
@@ -333,22 +333,22 @@ The present evidence does not exclude this.
 Classical specialization stories often emphasize:
 
 [
-	ext{competition}
-ightarrow
-	ext{resource/spatial partition}
-ightarrow
-	ext{persistent individual niches}.
+\text{competition}
+\rightarrow
+\text{resource/spatial partition}
+\rightarrow
+\text{persistent individual niches}.
 ]
 
 The proposed alternative regime is:
 
 [
-oxed{
-	ext{multiple feasible behavioral solutions}
-ightarrow
-	ext{history-dependent individualization}
-ightarrow
-	ext{persistent personal policy}
+\boxed{
+\text{multiple feasible behavioral solutions}
+\rightarrow
+\text{history-dependent individualization}
+\rightarrow
+\text{persistent personal policy}
 }
 ]
 
