@@ -67,29 +67,34 @@ def enumerate_treatment_assignments(rows):
 
 
 def delta_a(family_scores, open_family_map):
-    """Compute equal-individual OPEN minus CONSTRAINED identity advantage.
+    """Compute equal-individual OPEN minus CONSTRAINED score.
 
-    family_scores maps (animal_id, family) -> A_i,f.
-    open_family_map maps animal_id -> "A" or "B".
+    Analysis inputs must already contain only confirmatory-complete whole blocks.
+    Every animal in open_family_map must have paired A/B family scores.
     """
-    diffs = []
+    assignment_animals = sorted(open_family_map)
     score_animals = sorted({animal_id for animal_id, family in family_scores})
 
-    for animal_id in score_animals:
-        if animal_id not in open_family_map:
-            raise ValueError(f"missing randomized assignment for {animal_id}")
+    if score_animals != assignment_animals:
+        raise ValueError(
+            "analysis rows and family scores must contain the same animals; "
+            "apply the frozen whole-block attrition rule before inference"
+        )
+
+    diffs = []
+    for animal_id in assignment_animals:
         if (animal_id, "A") not in family_scores or (animal_id, "B") not in family_scores:
-            raise ValueError(f"endpoint-complete animal {animal_id} must have both family scores")
+            raise ValueError(f"animal {animal_id} must have paired A/B family scores")
 
         open_family = open_family_map[animal_id]
         constrained_family = "B" if open_family == "A" else "A"
-
-        a_open = family_scores[(animal_id, open_family)]
-        a_constrained = family_scores[(animal_id, constrained_family)]
-        diffs.append(a_open - a_constrained)
+        diffs.append(
+            family_scores[(animal_id, open_family)]
+            - family_scores[(animal_id, constrained_family)]
+        )
 
     if not diffs:
-        raise ValueError("no endpoint-complete animals")
+        raise ValueError("no confirmatory-complete animals")
     return sum(diffs) / len(diffs)
 
 
