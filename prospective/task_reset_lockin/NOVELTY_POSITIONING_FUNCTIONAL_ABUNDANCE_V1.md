@@ -180,6 +180,57 @@ It is:
 
 ---
 
+## 3c. 2026 affordance boundary
+
+A 2026 motor-control target article explicitly proposes:
+
+> affordances constrain motor abundance.
+
+That is highly relevant to the current formulation because it already places environmental structure upstream of the set of movement solutions available to an organism.
+
+Therefore do **not** claim as new:
+
+> environmental constraints determine the feasible motor-solution repertoire.
+
+That bridge now exists explicitly inside motor-control theory.
+
+The remaining ecological contribution must begin **after** that point:
+
+1. personal history progressively individualizes solution use;
+2. the resulting personal state becomes portable across movement tasks;
+3. environmental context changes the mapping from that state to detailed geometry;
+4. the realized spatial niche may overlap strongly with conspecifics.
+
+Thus the proposed novelty is not:
+
+\[
+E
+\rightarrow
+\mathcal S(E)
+\]
+
+but:
+
+\[
+\boxed{
+\mathcal S(E)
++
+\text{history}
+\rightarrow
+\theta_i
+\xrightarrow{G_e}
+\text{realized ecological niche}
+}
+\]
+
+and especially the empirical separation of the four levels:
+- formation;
+- storage/maintenance;
+- expression;
+- spatial partition.
+
+---
+
 # 4. The likely new bridge
 
 The current bat programme links four levels that are usually studied separately:
