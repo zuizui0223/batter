@@ -106,6 +106,21 @@ Thus the target contrast is:
 
 with contemporaneous test opportunity held constant.
 
+
+
+## Trial-burden benchmarks used for engineering planning
+
+The pilot candidate trial counts are intentionally in the range already used in bat obstacle-flight work.
+
+- Yamada et al. (2020) repeated the obstacle flight **12 times per individual** and contrasted first versus twelfth flights.
+- Chain-array obstacle studies with *Eptesicus fuscus* commonly capped sessions at about **10 successful flights per day**.
+- A two-choice clutter-maze paradigm used blocks of **20-25 flights per day**.
+- Free-flight neural recording work collected about **30 flight trials per session** after training.
+
+These examples do not determine the new experiment's final burden.
+
+They justify using {8,12,16} as a bounded acquisition-planning set and {8,12} for the common-OPEN probe, with the final choice made by a separate engineering pilot and facility welfare constraints.
+
 ## Gap targeted here
 
 The literature used by the current programme separately supports:
