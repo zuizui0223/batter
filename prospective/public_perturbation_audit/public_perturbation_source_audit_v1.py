@@ -55,30 +55,16 @@ def normalize_doi(meta):
 
 
 def list_files(dataset_id: str, version: int):
-    urls = [
-        (
-            "publics",
-            "https://api.data.mendeley.com/datasets/publics/"
-            + urllib.parse.quote(dataset_id)
-            + "/files?"
-            + urllib.parse.urlencode({"version": version, "$limit": 100}),
-        ),
-        (
-            "datasets",
-            "https://api.data.mendeley.com/datasets/"
-            + urllib.parse.quote(dataset_id)
-            + "/files?"
-            + urllib.parse.urlencode({"version": version, "$limit": 100}),
-        ),
-    ]
-    errors = []
-    for mode, url in urls:
-        try:
-            data, status, headers = fetch_json(url)
-            return data, {"mode": mode, "status": status, "url": url}, errors
-        except Exception as exc:
-            errors.append({"mode": mode, "url": url, "error": repr(exc)})
-    raise RuntimeError(f"file inventory failed: {errors}")
+    url = (
+        f"https://data.mendeley.com/api/datasets/{dataset_id}/files?"
+        + urllib.parse.urlencode({"version": version, "$start": 0, "$limit": 1000})
+    )
+    data, status, headers = fetch_json(url)
+    if isinstance(data, dict):
+        rows = data.get("items") or data.get("files") or data.get("results") or data.get("data") or []
+    else:
+        rows = data or []
+    return rows, {"mode": "anonymous_public_api", "status": status, "url": url}, []
 
 
 def compact_file(row):
@@ -97,12 +83,7 @@ def compact_file(row):
 def source_audit(source):
     dataset_id = source["dataset_id"]
     version = source["version"]
-    meta_url = (
-        "https://api.data.mendeley.com/datasets/"
-        + urllib.parse.quote(dataset_id)
-        + "?"
-        + urllib.parse.urlencode({"version": version})
-    )
+    meta_url = f"https://data.mendeley.com/api/datasets/{dataset_id}/snapshot/{version}"
 
     out = {
         "source": source,
@@ -132,15 +113,7 @@ def source_audit(source):
         files, info, errors = list_files(dataset_id, version)
         out["file_fetch"] = info
         out["errors"].extend({"stage": "files_fallback", **e} for e in errors)
-        if isinstance(files, dict):
-            rows = (
-                files.get("items")
-                or files.get("files")
-                or files.get("results")
-                or []
-            )
-        else:
-            rows = files or []
+        rows = files or []
         out["files"] = [compact_file(x) for x in rows if isinstance(x, dict)]
     except Exception as exc:
         out["errors"].append({"stage": "files", "error": repr(exc)})
