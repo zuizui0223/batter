@@ -1,0 +1,78 @@
+{
+  "version": 2,
+  "cells": {
+    "500|300": {
+      "rows": 16,
+      "columns": 10,
+      "valid_trials": 10,
+      "invalid_trials": 0
+    },
+    "500|75": {
+      "rows": 12,
+      "columns": 10,
+      "valid_trials": 10,
+      "invalid_trials": 0
+    },
+    "500|con": {
+      "rows": 12,
+      "columns": 10,
+      "valid_trials": 10,
+      "invalid_trials": 0
+    },
+    "503|300": {
+      "rows": 10,
+      "columns": 15,
+      "valid_trials": 15,
+      "invalid_trials": 0
+    },
+    "503|75": {
+      "rows": 10,
+      "columns": 15,
+      "valid_trials": 15,
+      "invalid_trials": 0
+    },
+    "503|con": {
+      "rows": 10,
+      "columns": 15,
+      "valid_trials": 15,
+      "invalid_trials": 0
+    },
+    "505|300": {
+      "rows": 14,
+      "columns": 10,
+      "valid_trials": 10,
+      "invalid_trials": 0
+    },
+    "505|75": {
+      "rows": 10,
+      "columns": 10,
+      "valid_trials": 10,
+      "invalid_trials": 0
+    },
+    "505|con": {
+      "rows": 14,
+      "columns": 10,
+      "valid_trials": 10,
+      "invalid_trials": 0
+    },
+    "510|300": {
+      "rows": 14,
+      "columns": 15,
+      "valid_trials": 15,
+      "invalid_trials": 0
+    },
+    "510|75": {
+      "rows": 14,
+      "columns": 15,
+      "valid_trials": 15,
+      "invalid_trials": 0
+    },
+    "510|con": {
+      "rows": 12,
+      "columns": 15,
+      "valid_trials": 15,
+      "invalid_trials": 0
+    }
+  },
+  "gate": "PASS_AHARON_FIGURE1_FINITE_SUPPORT"
+}

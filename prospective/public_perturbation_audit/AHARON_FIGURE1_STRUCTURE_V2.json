@@ -1,0 +1,297 @@
+{
+  "version": 2,
+  "bats": [
+    "500",
+    "503",
+    "505",
+    "510"
+  ],
+  "conditions": [
+    "con",
+    "75",
+    "300"
+  ],
+  "members": [
+    {
+      "path": "Figure 1/500_YRLturns_together_300.mat",
+      "bat": "500",
+      "condition": "300",
+      "variables": [
+        {
+          "name": "totalTurns",
+          "shape": [
+            16,
+            10
+          ],
+          "class": "double"
+        }
+      ]
+    },
+    {
+      "path": "Figure 1/500_YRLturns_together_75.mat",
+      "bat": "500",
+      "condition": "75",
+      "variables": [
+        {
+          "name": "totalTurns",
+          "shape": [
+            12,
+            10
+          ],
+          "class": "double"
+        }
+      ]
+    },
+    {
+      "path": "Figure 1/500_YRLturns_together_con.mat",
+      "bat": "500",
+      "condition": "con",
+      "variables": [
+        {
+          "name": "totalTurns",
+          "shape": [
+            12,
+            10
+          ],
+          "class": "double"
+        }
+      ]
+    },
+    {
+      "path": "Figure 1/503_YRLturns_together_300.mat",
+      "bat": "503",
+      "condition": "300",
+      "variables": [
+        {
+          "name": "totalTurns",
+          "shape": [
+            10,
+            15
+          ],
+          "class": "double"
+        }
+      ]
+    },
+    {
+      "path": "Figure 1/503_YRLturns_together_75.mat",
+      "bat": "503",
+      "condition": "75",
+      "variables": [
+        {
+          "name": "totalTurns",
+          "shape": [
+            10,
+            15
+          ],
+          "class": "double"
+        }
+      ]
+    },
+    {
+      "path": "Figure 1/503_YRLturns_together_con.mat",
+      "bat": "503",
+      "condition": "con",
+      "variables": [
+        {
+          "name": "totalTurns",
+          "shape": [
+            10,
+            15
+          ],
+          "class": "double"
+        }
+      ]
+    },
+    {
+      "path": "Figure 1/505_YRLturns_together_300.mat",
+      "bat": "505",
+      "condition": "300",
+      "variables": [
+        {
+          "name": "totalTurns",
+          "shape": [
+            14,
+            10
+          ],
+          "class": "double"
+        }
+      ]
+    },
+    {
+      "path": "Figure 1/505_YRLturns_together_75.mat",
+      "bat": "505",
+      "condition": "75",
+      "variables": [
+        {
+          "name": "totalTurns",
+          "shape": [
+            10,
+            10
+          ],
+          "class": "double"
+        }
+      ]
+    },
+    {
+      "path": "Figure 1/505_YRLturns_together_con.mat",
+      "bat": "505",
+      "condition": "con",
+      "variables": [
+        {
+          "name": "totalTurns",
+          "shape": [
+            14,
+            10
+          ],
+          "class": "double"
+        }
+      ]
+    },
+    {
+      "path": "Figure 1/510_YRLturns_together_300.mat",
+      "bat": "510",
+      "condition": "300",
+      "variables": [
+        {
+          "name": "totalTurns",
+          "shape": [
+            14,
+            15
+          ],
+          "class": "double"
+        }
+      ]
+    },
+    {
+      "path": "Figure 1/510_YRLturns_together_75.mat",
+      "bat": "510",
+      "condition": "75",
+      "variables": [
+        {
+          "name": "totalTurns",
+          "shape": [
+            14,
+            15
+          ],
+          "class": "double"
+        }
+      ]
+    },
+    {
+      "path": "Figure 1/510_YRLturns_together_con.mat",
+      "bat": "510",
+      "condition": "con",
+      "variables": [
+        {
+          "name": "totalTurns",
+          "shape": [
+            12,
+            15
+          ],
+          "class": "double"
+        }
+      ]
+    }
+  ],
+  "cells": {
+    "500|300": {
+      "shape": [
+        16,
+        10
+      ],
+      "class": "double",
+      "variable": "totalTurns"
+    },
+    "500|75": {
+      "shape": [
+        12,
+        10
+      ],
+      "class": "double",
+      "variable": "totalTurns"
+    },
+    "500|con": {
+      "shape": [
+        12,
+        10
+      ],
+      "class": "double",
+      "variable": "totalTurns"
+    },
+    "503|300": {
+      "shape": [
+        10,
+        15
+      ],
+      "class": "double",
+      "variable": "totalTurns"
+    },
+    "503|75": {
+      "shape": [
+        10,
+        15
+      ],
+      "class": "double",
+      "variable": "totalTurns"
+    },
+    "503|con": {
+      "shape": [
+        10,
+        15
+      ],
+      "class": "double",
+      "variable": "totalTurns"
+    },
+    "505|300": {
+      "shape": [
+        14,
+        10
+      ],
+      "class": "double",
+      "variable": "totalTurns"
+    },
+    "505|75": {
+      "shape": [
+        10,
+        10
+      ],
+      "class": "double",
+      "variable": "totalTurns"
+    },
+    "505|con": {
+      "shape": [
+        14,
+        10
+      ],
+      "class": "double",
+      "variable": "totalTurns"
+    },
+    "510|300": {
+      "shape": [
+        14,
+        15
+      ],
+      "class": "double",
+      "variable": "totalTurns"
+    },
+    "510|75": {
+      "shape": [
+        14,
+        15
+      ],
+      "class": "double",
+      "variable": "totalTurns"
+    },
+    "510|con": {
+      "shape": [
+        12,
+        15
+      ],
+      "class": "double",
+      "variable": "totalTurns"
+    }
+  },
+  "missing": [],
+  "bad_shape": [],
+  "gate": "PASS_AHARON_FIGURE1_STRUCTURE"
+}
