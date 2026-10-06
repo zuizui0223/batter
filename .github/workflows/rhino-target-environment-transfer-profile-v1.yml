@@ -24,10 +24,13 @@ jobs:
       - name: Install numpy
         run: python -m pip install --quiet numpy
       - name: Run target-environment transfer profiles
+        shell: bash
         run: |
+          set -euo pipefail
           python prospective/task_reset_lockin/target_environment_transfer_profile_v1.py | tee prospective/task_reset_lockin/TARGET_ENVIRONMENT_TRANSFER_PROFILE_RESULT_V1.json
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: rhino-target-environment-transfer-profile-v1
           path: prospective/task_reset_lockin/TARGET_ENVIRONMENT_TRANSFER_PROFILE_RESULT_V1.json
-          if-no-files-found: error
+          if-no-files-found: warn
