@@ -145,7 +145,7 @@ def statistic(cent, mapping):
         mapped_self=saline[mapping[i]]
         dself=float(np.linalg.norm(L-mapped_self))
         others=[saline[mapping[j]] for j in range(4) if j!=i]
-        dother=float(np.mean([np.linalg.norm(L,x) for x in others]))
+        dother=float(np.mean([np.linalg.norm(L-x) for x in others]))
         vals.append(dother-dself)
     return float(np.mean(vals)),vals
 
