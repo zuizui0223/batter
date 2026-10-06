@@ -474,12 +474,30 @@ Do not:
 
 ## New priority 1 — designed solution-repertoire manipulation
 
-**STRUCTURAL DESIGN NOW OPENED PROSPECTIVELY:**  
-`prospective/solution_repertoire_experiment/DESIGNED_SOLUTION_REPERTOIRE_EXPERIMENT_V1.md`
+**PROSPECTIVE CAUSAL ARCHITECTURE NOW FROZEN TO ENGINEERING-PILOT STAGE:**  
+`prospective/solution_repertoire_experiment/README.md`
 
-The design uses two matched obstacle families within the same biological individuals. OPEN-versus-CONSTRAINED acquisition history is randomized/counterbalanced across the matched families, and both families are later tested under the same four-route OPEN probe. This makes solution opportunity during acquisition the causal treatment rather than merely comparing different obstacle scenes.
+The experiment now has:
 
-The strongest missing causal test is therefore now operationalized as an experiment where obstacle/affordance geometry is known and the number/structure of feasible movement solutions is experimentally controlled.
+- direct ecological P1: held-out route-choice individual specialization;
+- fixed-sequence P2: transparent FlightIntensity / ManeuveringExtent organization;
+- two matched A/B obstacle families;
+- randomized OPEN-versus-CONSTRAINED acquisition history within individual;
+- equal four-route current opportunity at the confirmatory probe;
+- exact restricted four-animal block randomization;
+- fail-closed post-treatment attrition rule;
+- frozen acquisition = 12 valid flights/family;
+- frozen common-OPEN probe = 16 valid flights/family (8 early + 8 late);
+- normalized four-route geometry {L/R} × {Low/High};
+- Family A = horizontal then vertical;
+- Family B = vertical then horizontal;
+- exact normalized path/demand matching audited computationally.
+
+The remaining blockers are physical scale, construction tolerances, tracking-validity thresholds, engineering pilot closeout and new confirmatory animals.
+
+Do not reopen same-archive mechanism fishing while these experimental blockers are unresolved.
+
+The strongest missing causal test is therefore no longer a vague proposal; it is operationalized as a prospective experiment manipulating the number of feasible solutions during personal history while holding current solution opportunity equal at test.
 
 Required for the confirmatory primary:
 - same biological individuals;
