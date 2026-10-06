@@ -1,0 +1,35 @@
+name: rhino-heldout-policy-geometry-coupling-fast-v1
+
+on:
+  push:
+    branches:
+      - prospective/task-reset-lockin-v1
+    paths:
+      - prospective/task_reset_lockin/heldout_policy_geometry_coupling_fast_v1.py
+      - .github/workflows/rhino-heldout-policy-geometry-coupling-fast-v1.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  coupling:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install numpy
+        run: python -m pip install --quiet numpy
+      - name: Run fast-equivalent coupling
+        shell: bash
+        run: |
+          set -euo pipefail
+          python prospective/task_reset_lockin/heldout_policy_geometry_coupling_fast_v1.py | tee prospective/task_reset_lockin/HELDOUT_POLICY_GEOMETRY_COUPLING_FAST_RESULT_V1.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: rhino-heldout-policy-geometry-coupling-fast-v1
+          path: prospective/task_reset_lockin/HELDOUT_POLICY_GEOMETRY_COUPLING_FAST_RESULT_V1.json
+          if-no-files-found: warn
