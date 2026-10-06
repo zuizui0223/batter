@@ -8,9 +8,9 @@ JAE v0.4.0 remains frozen.
 
 V14 corrects the interpretation of the geometry programme.
 
-The geometry results do not support an additional independent high-dimensional coordination layer beyond the transparent personal policy.
+The geometry results do not support an additional independent high-dimensional identity layer beyond the transparent personal-policy representation.
 
-Instead, the evidence now points toward a **compact personal control state with multiple observable manifestations**.
+Instead, the evidence now points toward a **compact empirical personal-policy coordinate with multiple observable manifestations**.
 
 The current architecture is:
 
@@ -95,9 +95,9 @@ Held-out pair displacement vectors:
 - p = **0.0001**
 - 97.1% positive direction agreement.
 
-Therefore the persistent state predicts an animal's relative behavioral position in unseen movement tasks.
+Therefore the empirical personal-policy coordinate predicts an animal's relative behavioral position in unseen movement tasks.
 
-It is not merely a classifier embedding.
+It is not merely a classifier embedding, but this predictive coordinate is not yet identified as a causal neural/control state.
 
 ---
 
@@ -262,6 +262,34 @@ This strengthens the interpretation of \(\theta_i\) as a portable state rather t
 
 ---
 
+## 8b. Causal-status boundary
+
+The transparent I/M pair is an **empirical coordinate system**, not yet an identified internal controller.
+
+Important overlap:
+- ManeuveringExtent contains path efficiency;
+- ManeuveringExtent contains vertical range;
+- the geometry representation contains related path-efficiency and normalized vertical-range quantities.
+
+Therefore the disappearance of geometry identity after I/M residualization can mean:
+
+1. the same low-dimensional internal state generates both feature sets; **or**
+2. the two feature sets are statistically redundant descriptions of the same realized movement organization.
+
+The current archive cannot distinguish those explanations.
+
+Allowed wording:
+
+> **multiple identity-bearing movement observables collapse onto a compact empirical personal-policy representation.**
+
+Do not yet write:
+
+> **I/M is the causal upstream controller that generates route geometry.**
+
+That stronger causal statement requires intervention or independent measurement of the latent state.
+
+---
+
 # 9. Cross-species generality is hierarchical
 
 The fixed Rhino scale-free geometry representation is unsupported in independent *Carollia perspicillata*:
@@ -384,7 +412,7 @@ Individual specialization is upstream of physical niche partitioning.
 
 # 13. Observation-map formulation
 
-Let the persistent personal state be:
+Let the persistent empirical personal-policy coordinate be:
 
 \[
 \theta_i.
