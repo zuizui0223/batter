@@ -28,7 +28,7 @@ def stat(c, saline_mapping):
         target=c[(ligbat,2)]
         dself=float(np.linalg.norm(target-saline[assigned]))
         others=[saline[mapping[j]] for j in range(len(BATS)) if j!=i]
-        dother=float(np.mean([np.linalg.norm(target,x) for x in others]))
+        dother=float(np.mean([np.linalg.norm(target-x) for x in others]))
         out[ligbat]={
             "assigned_saline_bat":assigned,
             "self_distance":dself,
