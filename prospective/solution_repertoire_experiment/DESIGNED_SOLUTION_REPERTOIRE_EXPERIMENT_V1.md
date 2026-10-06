@@ -283,10 +283,16 @@ It does not permute individual identities for the primary treatment effect.
 
 Support requires:
 1. observed Delta_A > 0;
-2. randomization p <= 0.05;
-3. >=70% of evaluable individuals show a positive within-individual treatment contrast.
+2. paired randomization p <= 0.05.
 
-No threshold relaxation.
+Robustness must also be reported:
+- fraction of individuals with positive within-individual treatment contrast;
+- leave-one-individual-out Delta_A;
+- maximum single-individual influence.
+
+If deleting one individual reverses the sign of Delta_A, label the result **fragile / outlier-sensitive** even if the full-sample randomization p <= 0.05.
+
+Do not add a separate arbitrary positive-fraction gate to the primary randomized treatment test.
 
 ---
 
@@ -409,21 +415,34 @@ They must not be used for outcome-dependent exclusion.
 
 The experiment must not repeat the n=5 same-data ceiling.
 
-Planning target:
-- >=12 evaluable biological individuals completing Phases 0-4.
+Prospective planning uses the paired within-individual OPEN-versus-CONSTRAINED treatment contrast.
 
-Preferred:
-- 16 or more if ethics and husbandry allow.
+A one-sided paired-effect planning approximation gives, for standardized treatment effect d = 0.7:
+- n=14: about 80% power;
+- n=16: about 85% power;
+- n=18: about 89% power;
+- n=20: about 92% power.
+
+For d = 0.6, n=20 is only about 83%.
+
+Therefore:
+
+Planning target:
+- **18-20 evaluable biological individuals** completing Phases 0-4.
 
 Structural minimum for opening the confirmatory primary:
-- 10 evaluable biological individuals.
+- **14 evaluable biological individuals**.
 
-If fewer than 10 complete:
+If fewer than 14 complete:
 - primary = STRUCTURAL STOP;
 - no threshold relaxation;
 - descriptive acquisition data may still be reported.
 
-The final N and exact trial counts must be frozen before confirmatory outcome opening using prospective simulation/precision analysis for the paired randomized design.
+The power calculation is a planning approximation; the confirmatory analysis remains the paired randomization test.
+
+See SAMPLE_SIZE_PLANNING_V1.md and sample_size_planning_v1.py.
+
+The final planned N and exact trial counts must be frozen before confirmatory outcome opening.
 
 ---
 
