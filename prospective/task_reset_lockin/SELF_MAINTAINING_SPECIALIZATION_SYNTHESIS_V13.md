@@ -89,6 +89,54 @@ Thus personal organization includes relative route geometry and coordination.
 
 ---
 
+# 3b. Cross-species boundary: intensity generalizes better than geometry
+
+The scale-free geometry signature has a clear external boundary.
+
+A fixed eight-feature Rhino geometry representation was transferred unchanged to an independent *Carollia perspicillata* 3-D navigation dataset.
+
+The external null preserved:
+- date block;
+- source-native broad turn class;
+- trial feature vectors.
+
+Result:
+- K = **-0.0350**
+- 3/7 bats positive
+- p = **0.2144**
+- both date-block means negative.
+
+Verdict:
+**UNSUPPORTED_FIXED_GEOMETRY_EXTERNAL**
+
+No fixed geometry family gives a coherent external carrier:
+- G global route organization: K = **-0.0408**
+- H horizontal maneuver geometry: K = **-0.0729**
+- V vertical slope geometry: K = **+0.0343**
+
+By contrast, the previously frozen Carollia external validation supports:
+- fixed Rhino-derived I/M policy;
+- especially the FlightIntensity component.
+
+Therefore cross-species portability is not a universal geometry law.
+
+The stronger current hierarchy is:
+
+\[
+\boxed{
+\text{recurrent coarse movement-intensity individuality}
++
+\text{system-specific coordinative geometry}
+}
+\]
+
+This is useful for the functional-abundance hypothesis:
+the specific coordinative solution selected by history can be species/task dependent even if a broader personal movement state recurs across systems.
+
+Do not use the positive Rhino geometry result as a universal bat claim.
+
+---
+
 # 4. Expression — current context gates stored individuality
 
 Controlled *Pipistrellus kuhlii* sensory perturbation:
