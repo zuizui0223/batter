@@ -41,32 +41,14 @@ def get_json(url):
 
 
 def list_files(dataset_id, version):
-    for base in (
-        f"https://api.data.mendeley.com/datasets/publics/{dataset_id}/files",
-        f"https://api.data.mendeley.com/datasets/{dataset_id}/files",
-    ):
-        url = base + "?" + urllib.parse.urlencode({"version":version,"$limit":100})
-        try:
-            data = get_json(url)
-            if isinstance(data, dict):
-                data = data.get("items") or data.get("files") or data.get("results") or []
-            return data or []
-        except Exception:
-            continue
-    raise RuntimeError("cannot list public files")
-
-
-def file_detail(dataset_id, version, file_id):
-    for base in (
-        f"https://api.data.mendeley.com/datasets/publics/{dataset_id}/files/{file_id}",
-        f"https://api.data.mendeley.com/datasets/{dataset_id}/files/{file_id}",
-    ):
-        url = base + "?" + urllib.parse.urlencode({"version":version})
-        try:
-            return get_json(url)
-        except Exception:
-            continue
-    raise RuntimeError("cannot get public file detail")
+    url = (
+        f"https://data.mendeley.com/api/datasets/{dataset_id}/files?"
+        + urllib.parse.urlencode({"version":version,"$start":0,"$limit":1000})
+    )
+    data = get_json(url)
+    if isinstance(data, dict):
+        return data.get("items") or data.get("files") or data.get("results") or data.get("data") or []
+    return data or []
 
 
 def download_bytes(url):
@@ -76,14 +58,7 @@ def download_bytes(url):
 
 def get_download_url(dataset_id, version, row):
     details = row.get("content_details") or {}
-    url = details.get("download_url")
-    if url:
-        return url
-    fid = row.get("id")
-    if not fid:
-        return None
-    d = file_detail(dataset_id, version, fid)
-    return (d.get("content_details") or {}).get("download_url")
+    return details.get("download_url") or row.get("download_url")
 
 
 def safe_name(name):
@@ -123,20 +98,16 @@ def inspect_mat_bytes(data, name):
 def inspect_xlsx_bytes(data, name):
     import openpyxl
     out={"type":"xlsx","sheets":[]}
-    with tempfile.NamedTemporaryFile(suffix=".xlsx") as tf:
-        tf.write(data); tf.flush()
-        wb=openpyxl.load_workbook(tf.name, read_only=True, data_only=False)
-        for ws in wb.worksheets:
-            header=[]
-            for cell in next(ws.iter_rows(min_row=1,max_row=1),[]):
-                v=cell.value
-                header.append(None if v is None else str(v))
-            out["sheets"].append({
-                "name":ws.title,
-                "max_row":ws.max_row,
-                "max_column":ws.max_column,
-                "header":header,
-            })
+    wb=openpyxl.load_workbook(io.BytesIO(data),read_only=True,data_only=False)
+    for ws in wb.worksheets:
+        first=next(ws.iter_rows(min_row=1,max_row=1,values_only=True),())
+        out["sheets"].append({
+            "name":ws.title,
+            "max_row":ws.max_row,
+            "max_column":ws.max_column,
+            "header":[None if v is None else str(v) for v in first],
+        })
+    wb.close()
     return out
 
 
