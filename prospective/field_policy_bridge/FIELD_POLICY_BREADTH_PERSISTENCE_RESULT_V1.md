@@ -5,6 +5,8 @@
 - **2022: UNSUPPORTED under the frozen primary rule.**
 - **2023: STRUCTURAL STOP before a breadth-persistence statistic.**
 
+**Evidence provenance:** all H/V statements in this file are conditional on a post-outcome component representation opened after the frozen scalar field gate failed. They characterize exploratory field structure; they do not rescue or replace the 2/4 frozen carrier result. See `FIELD_EVIDENCE_PROVENANCE_GUARD_V1.md`.
+
 Authoritative workflow:
 - run: **37304532819**
 - job: **111744917325**
