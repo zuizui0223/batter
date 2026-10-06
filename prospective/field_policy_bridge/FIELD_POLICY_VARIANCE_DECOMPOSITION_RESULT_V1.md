@@ -4,6 +4,8 @@
 
 **POST-OUTCOME DESCRIPTIVE VARIANCE DECOMPOSITION.**
 
+**Evidence provenance:** this result is downstream of a frozen field carrier gate that failed at 2/4 panels. Its H/V decomposition is exploratory and cannot reclassify that gate or establish a confirmatory wild carrier. See `FIELD_EVIDENCE_PROVENANCE_GUARD_V1.md`.
+
 Authoritative fail-closed workflow:
 - run: **37301093567**
 - job: **111733725467**
