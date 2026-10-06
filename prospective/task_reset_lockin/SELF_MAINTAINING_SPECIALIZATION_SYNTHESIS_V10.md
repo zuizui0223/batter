@@ -275,6 +275,45 @@ This is the strongest quantitative evidence that the persistent object behaves l
 
 ---
 
+# 4b. Portable individuality also survives removal of performance magnitude
+
+A separate frozen post-primary diagnostic strips each trajectory of:
+- time scale;
+- speed magnitude;
+- turn rate per unit time;
+- absolute path length;
+- absolute vertical range;
+- absolute spatial offset.
+
+Each route is start-centered and divided by its own total 3-D path length.
+
+Eight dimensionless/angular route-geometry features are then used:
+- path efficiency;
+- horizontal displacement ratio;
+- absolute vertical displacement ratio;
+- vertical range ratio;
+- median/p90 horizontal turn angle;
+- median/p90 vertical slope.
+
+All eight pass support across Env1–Env7.
+
+Cross-configuration result:
+- geometry-only K = **+0.38857**;
+- **5/5 bats positive**;
+- 9,999 permutations;
+- null mean = **-0.0188**;
+- p = **0.0153**.
+
+Therefore the portable individual state is not carried only by raw performance magnitude such as speed or absolute movement scale.
+
+It also contains a **scale-free route-organization component**.
+
+This strengthens the interpretation of the adult state as a control/coordination bias.
+
+It still does not by itself establish motor abundance or a feasible-solution manifold.
+
+---
+
 # 5. The policy coordinate is not an artifact of target normalization
 
 When target-environment SD is not used:
