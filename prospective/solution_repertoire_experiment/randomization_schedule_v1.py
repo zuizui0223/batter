@@ -31,6 +31,8 @@ def main():
     ids = [x.strip() for x in Path(args.ids).read_text().splitlines() if x.strip()]
     if len(ids) % 4 != 0:
         raise SystemExit("STOP: eligible IDs must form complete blocks of four before schedule freeze")
+    if len(ids) < 16:
+        raise SystemExit("STOP: confirmatory randomization requires at least 16 eligible animals")
     if len(set(ids)) != len(ids):
         raise SystemExit("STOP: duplicate opaque animal IDs")
 
