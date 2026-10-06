@@ -325,20 +325,43 @@ def main():
         return
 
     structural = json.loads(STRUCT.read_text())
-    if structural["control1"]["verdict"] != "PASS_CONTROL1_STRUCTURE":
-        raise SystemExit("STOP: control1 structural gate failed")
-    if structural["flighttime"]["verdict"] != "PASS_FLIGHTTIME_STRUCTURE":
-        raise SystemExit("STOP: flight-time structural gate failed")
+
+    control_ok = (
+        structural["control1"]["verdict"] == "PASS_CONTROL1_STRUCTURE"
+    )
+    flight_ok = (
+        structural["flighttime"]["verdict"] == "PASS_FLIGHTTIME_STRUCTURE"
+    )
+
+    if not flight_ok:
+        raise SystemExit("STOP: frozen flight-time structural gate failed")
 
     raw = {}
-    for key, (name, expected) in FILES.items():
+
+    # The two contracts have independent structural gates.
+    # A failed control-1 acoustic gate must not block the already-passed
+    # landing-time movement primary.
+    if control_ok:
+        name, expected = FILES["control1"]
         data = download(name)
         check_md5(data, expected)
-        raw[key] = data
+        raw["control1"] = data
+
+    name, expected = FILES["flighttime"]
+    data = download(name)
+    check_md5(data, expected)
+    raw["flighttime"] = data
 
     result = {
         "source_record": 4946256,
-        "control1": analyze_control(raw["control1"]),
+        "control1": (
+            analyze_control(raw["control1"])
+            if control_ok
+            else {
+                "verdict": "STOP_CONTROL1_STRUCTURE",
+                "reason": "frozen structural gate failed before numerical opening",
+            }
+        ),
         "flighttime": analyze_flight(raw["flighttime"], structural),
     }
 
@@ -346,36 +369,42 @@ def main():
         json.dumps(result, indent=2, ensure_ascii=False) + "\n"
     )
 
-    c = result["control1"]
+    ctrl = result["control1"]
     f = result["flighttime"]
     lines = [
         "# Myotis masking personal-state result v1",
         "",
         "## Control experiment 1 — acoustic control",
         "",
-        f"- A_control1: **{c['statistic']:+.6f}**",
-        f"- exact p: **{c['p_one_sided']:.8f}**",
-        f"- exact assignments: {c['n_assignments']}",
-        (
-            f"- positive individuals: "
-            f"{c['positive_individuals']}/{len(c['animals'])}"
-        ),
-        f"- verdict: **{c['verdict']}**",
-        "",
-        "Individual mean advantages:",
     ]
-    for animal, value in c["individual_mean_advantage"].items():
-        lines.append(f"- {animal}: {value:+.6f}")
+
+    if ctrl["verdict"] == "STOP_CONTROL1_STRUCTURE":
+        lines += [
+            "- verdict: **STOP_CONTROL1_STRUCTURE**",
+            "- no acoustic-control numerical endpoint opened",
+            "",
+        ]
+    else:
+        lines += [
+            f"- A_control1: **{ctrl['statistic']:+.6f}**",
+            f"- exact p: **{ctrl['p_one_sided']:.8f}**",
+            f"- exact assignments: {ctrl['n_assignments']}",
+            (
+                f"- positive individuals: "
+                f"{ctrl['positive_individuals']}/{len(ctrl['animals'])}"
+            ),
+            f"- verdict: **{ctrl['verdict']}**",
+            "",
+            "Individual mean advantages:",
+        ]
+        for animal, value in ctrl["individual_mean_advantage"].items():
+            lines.append(f"- {animal}: {value:+.6f}")
+        lines += ["", "Condition mean advantages:"]
+        for condition, value in ctrl["condition_mean_advantage"].items():
+            lines.append(f"- {condition}: {value:+.6f}")
+        lines.append("")
 
     lines += [
-        "",
-        "Condition mean advantages:",
-    ]
-    for condition, value in c["condition_mean_advantage"].items():
-        lines.append(f"- {condition}: {value:+.6f}")
-
-    lines += [
-        "",
         "## Main experiment — landing-time behavior",
         "",
         f"- A_flighttime: **{f['statistic']:+.6f}**",
