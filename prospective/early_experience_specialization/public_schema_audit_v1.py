@@ -76,19 +76,19 @@ def csv_header(data,name):
     return {"type":"text_table","header":[x.strip() for x in row]}
 
 def xlsx_schema(data):
+    import io
     import openpyxl
     out={"type":"xlsx","sheets":[]}
-    with tempfile.NamedTemporaryFile(suffix=".xlsx") as tf:
-        tf.write(data); tf.flush()
-        wb=openpyxl.load_workbook(tf.name,read_only=True,data_only=False)
-        for ws in wb.worksheets:
-            first=next(ws.iter_rows(min_row=1,max_row=1,values_only=True),())
-            out["sheets"].append({
-                "name":ws.title,
-                "max_row":ws.max_row,
-                "max_column":ws.max_column,
-                "header":[None if v is None else str(v) for v in first],
-            })
+    wb=openpyxl.load_workbook(io.BytesIO(data),read_only=True,data_only=False)
+    for ws in wb.worksheets:
+        first=next(ws.iter_rows(min_row=1,max_row=1,values_only=True),())
+        out["sheets"].append({
+            "name":ws.title,
+            "max_row":ws.max_row,
+            "max_column":ws.max_column,
+            "header":[None if v is None else str(v) for v in first],
+        })
+    wb.close()
     return out
 
 def mat_schema(data):
