@@ -14,6 +14,8 @@ Parent:
 - RANDOMIZATION_AND_INTERFERENCE_GUARD_V1.md
 - PRIMARY_ROUTE_SPECIALIZATION_ENDPOINT_V1.md
 - PRIMARY_IM_ENDPOINT_APPENDIX_V1.md
+- MISSING_DATA_ATTRITION_RULE_V1.md
+- ENGINEERING_RECEIPT_TEMPLATE_V1.md
 
 JAE v0.4.0 remains frozen.
 
@@ -335,9 +337,7 @@ Hard confirmatory minimum:
 If fewer than 16 paired animals reach the common OPEN probe with the frozen support:
 **STRUCTURAL STOP**.
 
-Incomplete blocks and post-randomization attrition must be reported.
-
-The missing-data rule must be finalized before confirmatory collection.
+Incomplete blocks and post-randomization attrition are handled exactly as frozen in MISSING_DATA_ATTRITION_RULE_V1.md.
 
 No lowering of the minimum.
 
@@ -413,7 +413,7 @@ Must all be complete:
 - [x] exact I/M endpoint appendix fixed as PRIMARY_IM_ENDPOINT_APPENDIX_V1.md;
 - [ ] randomization schedule generated and archived;
 - [ ] randomization seed archived;
-- [ ] missing-data rule fixed;
+- [x] missing-data rule fixed as MISSING_DATA_ATTRITION_RULE_V1.md;
 - [ ] analysis code hashes archived;
 - [ ] no common-OPEN outcome inspected.
 
