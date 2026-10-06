@@ -107,14 +107,14 @@ This boundary strengthens rather than weakens the intended positioning: the nove
 The current bat programme links four levels that are usually studied separately:
 
 [
-oxed{
-	ext{solution abundance}
-ightarrow
-	ext{history-dependent individualization}
-ightarrow
-	ext{portable behavioral policy}
-ightarrow
-	ext{ecological spatial realization}
+\boxed{
+\text{solution abundance}
+\rightarrow
+\text{history-dependent individualization}
+\rightarrow
+\text{portable behavioral policy}
+\rightarrow
+\text{ecological spatial realization}
 }
 ]
 
@@ -174,13 +174,13 @@ The current programme separately observes:
 Thus it can distinguish:
 
 [
-	ext{stable personal information}
+\text{stable personal information}
 ]
 
 from:
 
 [
-	ext{how strongly that information is expressed now}.
+\text{how strongly that information is expressed now}.
 ]
 
 The result is more mechanistic than assigning a broad personality label.
