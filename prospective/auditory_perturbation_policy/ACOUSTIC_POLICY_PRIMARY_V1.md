@@ -39,14 +39,28 @@ No feature addition, deletion, PCA, or fitted weights.
 
 Each bat must have >=5 valid trials in each condition or the primary stops.
 
-## Standardization
+## Shared-context residualization and scaling
 
 For each feature separately:
-- standardize Saline trials within Saline, pooling all four bats without using identity;
-- standardize Ligand trials within Ligand, pooling all four bats without using identity;
-- sample SD uses ddof=1 and must be finite and >0.
 
-This removes the shared treatment shift and treatment-specific scale.
+1. pool all valid trials from all four bats;
+2. within each observed `treatment × trialtype` cell, calculate the pooled feature mean **without using bat identity**;
+3. subtract that shared cell mean from every trial in that cell;
+4. pool the resulting residuals across saline and ligand;
+5. calculate one common sample SD (ddof=1);
+6. require that SD to be finite and >0;
+7. divide all residuals by that one common SD.
+
+Thus the primary removes:
+- the shared saline-versus-ligand mean shift;
+- shared source trial-class mean shifts.
+
+It deliberately does **not** remove:
+- treatment-specific variance changes;
+- individual offsets;
+- individual × treatment effects.
+
+No bat label enters centering or scaling.
 
 ## Bat centroids
 
