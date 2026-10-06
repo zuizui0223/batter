@@ -19,17 +19,48 @@ JAE v0.4.0 remains frozen.
 
 ---
 
-## 1. Confirmatory question
+## 1. Confirmatory question and fixed-sequence hierarchy
 
-Does access to multiple feasible movement solutions during acquisition increase later individual-specific movement-policy organization when OPEN-acquired and CONSTRAINED-acquired matched environments are subsequently tested under the same four-route OPEN opportunity?
-
-Primary causal estimand:
-
-Delta_A = A_OPEN-acquired - A_CONSTRAINED-acquired.
+Does access to multiple feasible movement solutions during acquisition cause stronger individual specialization when OPEN-acquired and CONSTRAINED-acquired matched environments are later tested under the same four-route OPEN opportunity?
 
 The biological unit is the individual bat.
 
-The treatment is **solution opportunity during acquisition**, not obstacle identity and not route count during the common probe.
+The randomized treatment is **solution opportunity during acquisition**.
+
+### P1 — direct ecological primary
+
+Route-choice individual specialization under the common OPEN probe.
+
+Statistic:
+
+Delta_R = R_OPEN-acquired - R_CONSTRAINED-acquired.
+
+Frozen in:
+PRIMARY_ROUTE_SPECIALIZATION_ENDPOINT_V1.md.
+
+P1 is tested one-sided at alpha = 0.05.
+
+### P2 — transparent movement-policy endpoint
+
+Only if P1 is supported, test whether the same randomized acquisition treatment also increases held-out individual organization in the fixed transparent I/M representation.
+
+Statistic:
+
+Delta_A = A_OPEN-acquired - A_CONSTRAINED-acquired.
+
+Frozen in:
+PRIMARY_IM_ENDPOINT_APPENDIX_V1.md.
+
+P2 is tested one-sided at alpha = 0.05 only after P1 support.
+
+### Fixed-sequence error control
+
+If P1 fails:
+- P2 may still be calculated descriptively;
+- P2 cannot rescue the ecological-opportunity claim;
+- no confirmatory I/M claim is made.
+
+This hierarchy is fixed before common-OPEN outcome opening.
 
 ---
 
@@ -139,9 +170,9 @@ Later probe trials are secondary and cannot replace a failed first-window primar
 
 ---
 
-## 7. Primary policy representation
+## 7. P2 transparent I/M representation
 
-Primary individual movement policy is fixed as theta = (I, M), with:
+For P2, individual movement policy is fixed as theta = (I, M), with:
 - FlightIntensity I;
 - ManeuveringExtent M.
 
@@ -154,13 +185,13 @@ No:
 - nonlinear embedding;
 - outcome-selected normalization.
 
-If either primary coordinate is structurally unavailable, the primary returns STOP rather than switching axes.
+If either I/M coordinate is structurally unavailable, P2 returns STOP rather than switching axes. P1 remains defined by route choice.
 
 ---
 
-## 8. Common-OPEN held-out individual organization
+## 8. P2 common-OPEN held-out I/M organization
 
-The primary self-history score is calculated entirely inside the common OPEN probe.
+P2 is calculated entirely inside the common OPEN probe.
 
 The exact probe has an even number of valid planned trials per family and is split before outcome opening into:
 - early probe window;
@@ -187,7 +218,7 @@ Then:
 - A_CONSTRAINED = mean A for the matched family that received CONSTRAINED acquisition;
 - Delta_A = A_OPEN - A_CONSTRAINED.
 
-This primary does **not** use acquisition centroids as its prediction target. Acquisition history defines the randomized treatment; current individual organization is measured under equal current opportunity.
+P2 does **not** use acquisition centroids as its prediction target. Acquisition history defines the randomized treatment; current individual organization is measured under equal current opportunity.
 
 Exact probe trials per family:
 **TBD BEFORE OUTCOME OPENING**.
@@ -203,13 +234,12 @@ Do **not** use a simple sign-flip test on already-computed individual contrasts,
 
 For every allowed treatment reassignment under the frozen block design:
 
-1. keep all observed trajectories, family identities, starting-order labels and outcomes fixed;
+1. keep all observed trajectories, route outcomes, family identities, starting-order labels and common-OPEN family-specific identity scores fixed;
 2. reassign which family is labelled OPEN versus CONSTRAINED only within the allowed randomization space;
-3. relabel which observed family-specific common-OPEN identity score belongs to OPEN-acquired versus CONSTRAINED-acquired treatment;
-4. because the common-OPEN identity score itself is computed without treatment labels, preserve those family-specific scores unchanged;
-5. recompute A_OPEN, A_CONSTRAINED and Delta_A.
+3. for P1 recompute R_OPEN, R_CONSTRAINED and Delta_R from the fixed family-specific route-identity scores;
+4. for P2 recompute A_OPEN, A_CONSTRAINED and Delta_A from the fixed family-specific I/M identity scores.
 
-If later endpoint implementation introduces treatment-defined donor pools, then the full donor construction must instead be recomputed under every assignment. The frozen endpoint appendix must state which architecture applies.
+Both P1 and P2 are constructed without treatment-defined donor pools, so the family-specific identity scores remain fixed under treatment relabelling.
 
 Condition on the observed starting-family order.
 
@@ -222,7 +252,7 @@ Therefore:
 
 Use the exact assignment set whenever computationally feasible.
 
-One-sided p = number of permuted Delta_A values >= observed Delta_A divided by the number of allowed assignments.
+One-sided p_R and p_A are the exact upper-tail fractions of Delta_R and Delta_A, respectively, over the allowed assignment set.
 
 Reference implementation:
 randomization_inference_reference_v1.py.
@@ -249,25 +279,25 @@ The strongest causal statement requires both P1 and P2.
 
 P1 alone establishes opportunity-driven route-choice individual specialization without establishing that the effect occupies the previously identified transparent I/M policy space.
 
-Report, but do not add as a second primary threshold:
-- positive-individual fraction;
-- leave-one-individual-out Delta_A;
+For each tested endpoint report, but do not add as a second primary threshold:
+- positive paired-individual contrast fraction;
+- leave-one-individual-out treatment contrast;
 - largest individual contribution.
 
-If any single-individual deletion reverses the sign:
-label **SUPPORTED_BUT_FRAGILE** rather than a clean robust support claim.
+If any single-individual deletion reverses the sign of the corresponding treatment contrast:
+label that endpoint **SUPPORTED_BUT_FRAGILE** rather than clean robust support.
 
 ---
 
 ## 11. Randomization-stratum interpretation guard
 
-Always report Delta_A separately for:
+Always report both Delta_R and, when relevant, Delta_A separately for:
 - A-open versus B-open assignments;
 - A-start versus B-start sequences.
 
 These are descriptive/robustness strata, not additional hypothesis tests.
 
-If the treatment contrast reverses sign across either randomized factor:
+If either confirmatory treatment contrast reverses sign across either randomized factor:
 - do not claim a general solution-opportunity mechanism;
 - label the result **context/order dependent**;
 - preserve the overall randomized estimate and p-value.
@@ -326,10 +356,7 @@ Does the previously OPEN-acquired personal policy reappear after a constrained e
 ### S3 — transformed transfer
 Does the policy survive the predeclared geometry transformation?
 
-### S4 — route-choice individuality
-Held-out probabilistic route-choice identity under the common OPEN probe.
-
-### S5 — fine geometry realization
+### S4 — fine geometry realization
 Predeclared scale-free trajectory geometry.
 
 A positive secondary cannot rescue a failed primary.
@@ -366,8 +393,8 @@ After outcome opening do not:
 - select acquisition order;
 - select “responsive” animals;
 - lower N or trial support;
-- fit nonlinear decoders to rescue the primary;
-- promote a secondary after primary failure.
+- fit nonlinear decoders to rescue P1 or P2;
+- promote a downstream endpoint after an upstream fixed-sequence failure.
 
 ---
 
@@ -381,6 +408,7 @@ Must all be complete:
 - [ ] exact acquisition trial counts;
 - [ ] exact probe trial counts;
 - [ ] common-OPEN early/late probe split frozen;
+- [x] direct route-specialization primary fixed as PRIMARY_ROUTE_SPECIALIZATION_ENDPOINT_V1.md;
 - [ ] late-history window size for secondary formation endpoint;
 - [x] exact I/M endpoint appendix fixed as PRIMARY_IM_ENDPOINT_APPENDIX_V1.md;
 - [ ] randomization schedule generated and archived;
