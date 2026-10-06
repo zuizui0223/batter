@@ -13,7 +13,7 @@ Parent:
 - PRIMARY_ROUTE_SPECIALIZATION_ENDPOINT_V1.md
 - PRIMARY_IM_ENDPOINT_APPENDIX_V1.md
 - RANDOMIZATION_AND_INTERFERENCE_GUARD_V1.md
-- MISSING_DATA_ATTRITION_RULE_V1.md
+- ATTRITION_AND_MISSING_DATA_CONTRACT_V1.md
 - ENGINEERING_PILOT_CONTRACT_V1.md
 - MATCHED_FAMILY_ENGINEERING_RECEIPT_V1.md
 - SAMPLE_SIZE_PLANNING_V1.md
@@ -180,7 +180,7 @@ For P2, individual movement policy is fixed as theta = (I, M), with:
 - FlightIntensity I;
 - ManeuveringExtent M.
 
-The exact feature definitions, acquisition-only family-wise standardization, fixed weights and Euclidean policy distance are frozen in PRIMARY_IM_ENDPOINT_APPENDIX_V1.md.
+The exact feature definitions, treatment-blind early-common-OPEN family-wise standardization, fixed weights and Euclidean policy distance are frozen in PRIMARY_IM_ENDPOINT_APPENDIX_V1.md.
 
 No:
 - data-driven reweighting;
@@ -339,7 +339,7 @@ Hard confirmatory minimum:
 If fewer than 16 paired animals reach the common OPEN probe with the frozen support:
 **STRUCTURAL STOP**.
 
-Incomplete blocks and post-randomization attrition are handled exactly as frozen in MISSING_DATA_ATTRITION_RULE_V1.md.
+Incomplete blocks and post-randomization attrition are handled exactly as frozen in ATTRITION_AND_MISSING_DATA_CONTRACT_V1.md. Any post-treatment incomplete randomized block stops the clean confirmatory causal claim; any residual complete-block analysis is sensitivity-only.
 
 No lowering of the minimum.
 
@@ -415,7 +415,7 @@ Must all be complete:
 - [x] exact I/M endpoint appendix fixed as PRIMARY_IM_ENDPOINT_APPENDIX_V1.md;
 - [ ] randomization schedule generated and archived;
 - [ ] randomization seed archived;
-- [x] missing-data rule fixed as MISSING_DATA_ATTRITION_RULE_V1.md;
+- [x] missing-data rule fixed as ATTRITION_AND_MISSING_DATA_CONTRACT_V1.md;
 - [ ] analysis code hashes archived;
 - [ ] no common-OPEN outcome inspected.
 
