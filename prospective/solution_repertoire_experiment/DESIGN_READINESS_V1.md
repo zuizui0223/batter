@@ -29,12 +29,11 @@
 6. exact early/late probe split;
 7. exact late-acquisition window m for secondary formation test;
 8. exact raw tracking support threshold;
-9. missing-data / post-randomization attrition rule;
-10. opaque eligible animal IDs;
-11. frozen randomization schedule generated from those IDs;
-12. code hashes archived.
+9. opaque eligible animal IDs;
+10. frozen randomization schedule generated from those IDs;
+11. code hashes archived.
 
-Until all 12 are complete:
+Until all remaining items are complete:
 **CONFIRMATORY OUTCOME OPENING = NOT AUTHORIZED.**
 
 ## Pilot firewall
@@ -82,7 +81,7 @@ Not allowed for confirmatory design tuning:
 
 ## Next operational milestone
 
-Produce ENGINEERING_RECEIPT_V1.md containing:
+Complete and freeze ENGINEERING_RECEIPT_TEMPLATE_V1.md as ENGINEERING_RECEIPT_V1.md containing:
 - scaled A/B layout;
 - route correspondence map;
 - canonical constrained route;
