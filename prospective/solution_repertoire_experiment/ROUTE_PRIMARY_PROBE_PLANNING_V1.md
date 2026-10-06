@@ -43,18 +43,18 @@ Reason:
 - across every illustrative scenario, 8 total trials is dominated by 12 and 16;
 - the gain from 12 -> 16 remains meaningful in the strong/moderate scenarios.
 
-Pilot candidates are therefore:
+This stress test originally retained 12 and 16 as candidates.
 
-- **12 total valid common-OPEN trials per family = 6 early + 6 late**;
-- **16 total = 8 early + 8 late**.
+The programme has now prospectively frozen:
 
-Prefer 16 if welfare, fatigue and tracking reliability permit.
+- **16 total valid common-OPEN trials per family = 8 early + 8 late**.
 
-Use 12 if the engineering pilot shows that 16 materially compromises completion, tracking quality or welfare.
+Reason:
+- 16 dominates 12 in every illustrative scenario;
+- retaining a pilot-selected 12/16 fork leaves unnecessary design flexibility;
+- welfare/technical feasibility is handled by the engineering pilot as PASS/REDESIGN, not by silently changing the confirmatory probe length.
 
-Do not choose between 12 and 16 using individual-specialization p-values.
-
-The pilot selection criterion remains measurement burden / stability only.
+If 16 cannot be collected safely/reliably, amend and version the design before confirmatory randomization.
 
 ## Boundary
 
