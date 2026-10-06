@@ -24,10 +24,10 @@
 1. physical dimensions for A/B obstacle families;
 2. route-isomorphism / engineering receipt;
 3. numeric route-capability threshold;
-4. exact acquisition session/trial count;
-5. exact common-OPEN probe trial count;
-6. exact early/late probe split;
-7. exact late-acquisition window m for secondary formation test;
+4. [FROZEN] acquisition count = 12 valid flights/family;
+5. [FROZEN] common-OPEN probe = 16 valid flights/family;
+6. [FROZEN] common-OPEN split = 8 early / 8 late;
+7. [FROZEN] formation windows = first 6 versus last 6 acquisition flights;
 8. exact raw tracking support threshold;
 9. opaque eligible animal IDs;
 10. frozen randomization schedule generated from those IDs;
