@@ -4,6 +4,14 @@
 
 **FROZEN BEFORE NEW NUMERICAL OUTCOME OPENING.**
 
+## Provenance boundary
+
+The published study already reports population-level treatment effects. During source discovery, public Zenodo preview rows were also technically visible for the control-1 file.
+
+No individual × condition summary, self-history statistic, permutation distribution, p-value, or individual ranking was calculated before this contract was frozen.
+
+Therefore this is **prospective with respect to the new individual-identity analysis**, not outcome-blind with respect to the original published treatment effect.
+
 ## Biological question
 
 Does individual landing-performance organization persist across strong changes in masking-noise level?
