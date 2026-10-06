@@ -116,17 +116,24 @@ def route_features(
     return feats
 
 
-def fit_acquisition_scalers(acquisition_rows: Sequence[dict]):
-    """Fit treatment-blind family-specific scaling from Phase-1 acquisition only."""
-    families = sorted({row["family"] for row in acquisition_rows})
+def fit_early_probe_scalers(probe_rows: Sequence[dict], planned_probe_count: int):
+    """Fit treatment-blind family-specific scaling from early common-OPEN probe only."""
+    if planned_probe_count <= 0 or planned_probe_count % 2 != 0:
+        raise ValueError("planned_probe_count must be positive and even")
+
+    half = planned_probe_count // 2
+    families = sorted({row["family"] for row in probe_rows})
     if families != ["A", "B"]:
-        raise ValueError("expected acquisition rows for matched families A and B")
+        raise ValueError("expected probe rows for matched families A and B")
 
     scalers = {}
     for family in families:
-        rr = [row for row in acquisition_rows if row["family"] == family]
+        rr = [
+            row for row in probe_rows
+            if row["family"] == family and int(row["probe_order"]) <= half
+        ]
         if len(rr) < 2:
-            raise ValueError(f"family {family}: insufficient acquisition rows")
+            raise ValueError(f"family {family}: insufficient early-probe rows")
 
         mat = np.vstack([np.asarray(row["features"], dtype=float) for row in rr])
         if mat.shape[1] != 8:
@@ -136,7 +143,7 @@ def fit_acquisition_scalers(acquisition_rows: Sequence[dict]):
         sd = mat.std(axis=0, ddof=1)
 
         if np.any(~np.isfinite(sd)) or np.any(sd <= 0):
-            raise ValueError(f"family {family}: zero/nonfinite acquisition SD")
+            raise ValueError(f"family {family}: zero/nonfinite early-probe SD")
 
         scalers[family] = (mu, sd)
 
@@ -197,12 +204,11 @@ def endpoint_eligible_animals(probe_rows: Sequence[dict], planned_probe_count: i
 
 
 def family_im_identity_scores(
-    acquisition_rows: Sequence[dict],
     probe_rows: Sequence[dict],
     planned_probe_count: int,
 ) -> Dict[Tuple[str, str], float]:
-    """Return treatment-blind A_(animal,family) under acquisition-only scaling."""
-    scalers = fit_acquisition_scalers(acquisition_rows)
+    """Return treatment-blind A_(animal,family) under early-probe scaling."""
+    scalers = fit_early_probe_scalers(probe_rows, planned_probe_count)
     eligible = endpoint_eligible_animals(probe_rows, planned_probe_count)
 
     if len(eligible) < 3:
