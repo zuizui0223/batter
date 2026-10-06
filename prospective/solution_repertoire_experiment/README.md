@@ -98,20 +98,25 @@ see `ATTRITION_AND_MISSING_DATA_CONTRACT_V1.md`.
 
 Any post-treatment incomplete randomized block stops the clean confirmatory claim; any residual complete-block analysis is sensitivity-only.
 
-## Probe planning
+## Frozen trial counts
 
-P1 uses an early-half -> late-half four-route categorical history.
+Acquisition:
+- **12 valid flights per family**.
 
-Prospective stress testing removed the 8-trial probe option.
+Common-OPEN confirmatory probe:
+- **16 valid flights per family = 8 early + 8 late**.
 
-Pilot candidates:
-- 12 valid trials/family = 6 early + 6 late;
-- 16 valid trials/family = 8 early + 8 late.
+The prospective P1 stress test rejected 8 total probe trials and showed a meaningful gain from 12 to 16.
 
-Prefer 16 if welfare/tracking permit.
+The engineering pilot no longer selects between 12 and 16. It tests whether the frozen 12-acquisition / 16-probe design is safe and technically feasible.
+
+If not feasible:
+- amend/version the design before confirmatory randomization;
+- do not silently downgrade trial counts.
 
 See:
-`ROUTE_PRIMARY_PROBE_PLANNING_V1.md`.
+- `ROUTE_PRIMARY_PROBE_PLANNING_V1.md`;
+- `ENGINEERING_PILOT_CONTRACT_V1.md`.
 
 ## Pilot firewall
 
