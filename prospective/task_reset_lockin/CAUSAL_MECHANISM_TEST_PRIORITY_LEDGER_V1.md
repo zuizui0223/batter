@@ -481,13 +481,16 @@ The design uses two matched obstacle families within the same biological individ
 
 The strongest missing causal test is therefore now operationalized as an experiment where obstacle/affordance geometry is known and the number/structure of feasible movement solutions is experimentally controlled.
 
-Required:
+Required for the confirmatory primary:
 - same biological individuals;
 - repeated trials;
-- explicit environment geometry;
-- narrow / moderate / broad feasible-solution conditions;
-- reopening of a prior solution repertoire;
+- explicit matched environment geometry;
+- randomized **one-solution versus four-solution acquisition**;
+- a common four-solution probe in both matched environments;
+- reopening of the prior solution repertoire;
 - portable-policy and realized-geometry measurement.
+
+A two-solution condition is reserved for an independent dose-response extension after the binary causal contrast is tested. It is not required for the primary and cannot be added post hoc to rescue it.
 
 Primary causal question:
 
