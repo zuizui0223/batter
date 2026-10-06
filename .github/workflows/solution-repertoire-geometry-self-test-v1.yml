@@ -1,0 +1,26 @@
+name: solution-repertoire-geometry-self-test-v1
+
+on:
+  push:
+    paths:
+      - "prospective/solution_repertoire_experiment/PARAMETRIC_MATCHED_FAMILY_GEOMETRY_V1.md"
+      - "prospective/solution_repertoire_experiment/matched_family_geometry_v1.json"
+      - "prospective/solution_repertoire_experiment/matched_family_geometry_audit_v1.py"
+      - ".github/workflows/solution-repertoire-geometry-self-test-v1.yml"
+  pull_request:
+    paths:
+      - "prospective/solution_repertoire_experiment/PARAMETRIC_MATCHED_FAMILY_GEOMETRY_V1.md"
+      - "prospective/solution_repertoire_experiment/matched_family_geometry_v1.json"
+      - "prospective/solution_repertoire_experiment/matched_family_geometry_audit_v1.py"
+      - ".github/workflows/solution-repertoire-geometry-self-test-v1.yml"
+
+jobs:
+  self-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Audit normalized matched geometry
+        run: python prospective/solution_repertoire_experiment/matched_family_geometry_audit_v1.py
