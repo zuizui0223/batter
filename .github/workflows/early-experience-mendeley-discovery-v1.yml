@@ -7,12 +7,16 @@ on:
       - ".github/workflows/early-experience-mendeley-discovery-v1.yml"
   workflow_dispatch:
 
+concurrency:
+  group: early-experience-mendeley-discovery-${{ github.ref }}
+  cancel-in-progress: true
+
 permissions:
   contents: write
 
 jobs:
   discover:
-    runs-on: macos-15
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
         with:
