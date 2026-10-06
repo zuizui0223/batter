@@ -73,9 +73,14 @@ def delta_a(family_scores, open_family_map):
     open_family_map maps animal_id -> "A" or "B".
     """
     diffs = []
-    animal_ids = sorted(open_family_map)
+    score_animals = sorted({animal_id for animal_id, family in family_scores})
 
-    for animal_id in animal_ids:
+    for animal_id in score_animals:
+        if animal_id not in open_family_map:
+            raise ValueError(f"missing randomized assignment for {animal_id}")
+        if (animal_id, "A") not in family_scores or (animal_id, "B") not in family_scores:
+            raise ValueError(f"endpoint-complete animal {animal_id} must have both family scores")
+
         open_family = open_family_map[animal_id]
         constrained_family = "B" if open_family == "A" else "A"
 
@@ -83,6 +88,8 @@ def delta_a(family_scores, open_family_map):
         a_constrained = family_scores[(animal_id, constrained_family)]
         diffs.append(a_open - a_constrained)
 
+    if not diffs:
+        raise ValueError("no endpoint-complete animals")
     return sum(diffs) / len(diffs)
 
 
