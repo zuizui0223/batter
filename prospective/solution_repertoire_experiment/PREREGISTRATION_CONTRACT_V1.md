@@ -237,10 +237,10 @@ Then:
 P2 does **not** use acquisition centroids as its prediction target. Acquisition history defines the randomized treatment; current individual organization is measured under equal current opportunity.
 
 Exact probe trials per family:
-**TBD BEFORE OUTCOME OPENING**.
+**16 valid flights**.
 
 Early/late split:
-**exactly half / half of the frozen primary probe trials**.
+**8 early / 8 late**.
 
 ## 9. Exact randomization inference for P1 and P2
 
@@ -419,9 +419,9 @@ Must all be complete:
 - [ ] physical A/B engineering receipt;
 - [ ] route-isomorphism mapping;
 - [ ] numeric capability rule;
-- [ ] exact acquisition trial counts;
-- [ ] exact probe trial counts;
-- [ ] common-OPEN early/late probe split frozen;
+- [x] exact acquisition trial count frozen: 12 valid flights per family;
+- [x] exact probe trial count frozen: 16 valid flights per family;
+- [x] common-OPEN split frozen: 8 early / 8 late;
 - [x] direct route-specialization primary fixed as PRIMARY_ROUTE_SPECIALIZATION_ENDPOINT_V1.md;
 - [ ] late-history window size for secondary formation endpoint;
 - [x] exact I/M endpoint appendix fixed as PRIMARY_IM_ENDPOINT_APPENDIX_V1.md;
