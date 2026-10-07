@@ -1,4 +1,5 @@
-name: collective-terrain-persistence-v1\n# implementation retry: dependency/import fix only
+name: collective-terrain-persistence-v1
+# implementation retry: dependency/import fix only
 on:
   push:
     branches: [post-freeze/collective-terrain-persistence-v1]
