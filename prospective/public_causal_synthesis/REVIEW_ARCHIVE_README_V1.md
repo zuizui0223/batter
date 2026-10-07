@@ -24,9 +24,15 @@ See:
 
 Most source datasets already have permanent DOI-based repositories.
 
-Two source-specific permanence issues are intentionally flagged:
-1. Eveland et al. source data are published by the source authors on GitHub under CC0; the exact used files can be mirrored legally into the final DOI archive.
-2. Taub & Yovel source data are published by the source authors through Dropbox; this review archive does not redistribute those raw files because a dataset-specific redistribution license has not been independently verified.
+One source-specific permanence issue remains intentionally flagged:
+
+1. Taub & Yovel source data are published by the source authors through Dropbox; this review archive does not redistribute those raw files because a dataset-specific redistribution license has not been independently verified.
+
+The Eveland/Carollia permanence gap is closed inside this archive:
+- the source repository is CC0 1.0;
+- the exact C2-C8 trial subset used by the frozen validation is mirrored from commit `59928a71887d521fec143080b0b187736c046a0e`;
+- C1 is excluded because it was prospectively ineligible;
+- `source_data/carollia_cc0/SOURCE_RECEIPT.json` contains file-level SHA256 hashes and byte counts.
 
 ## Reproducibility scope
 
