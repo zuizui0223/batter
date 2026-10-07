@@ -109,21 +109,10 @@ This is an **expansion-like but unresolved** pattern.
 
 This is a **reallocation-like** pattern.
 
-Therefore the bat evidence does not support one generic rule:
+Therefore the bat evidence does not support either generic rule:
 
-[
-	ext{stronger / richer experience}
-ightarrow
-	ext{more individuality}.
-]
-
-Nor does it support:
-
-[
-	ext{developmental perturbation}
-ightarrow
-	ext{less individuality}.
-]
+- `stronger / richer experience → more individuality`;
+- `developmental perturbation → less individuality`.
 
 Instead developmental effects appear mechanism-specific in **where** among-individual variation is expressed.
 
