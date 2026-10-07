@@ -28,6 +28,8 @@ required = [
     "K=-0.0350",
     "2/4",
     "FAIL",
+    "not as a preregistered multi-study experiment",
+    "not as a prospectively preregistered multi-study meta-analysis",
 ]
 
 for token in required:
@@ -39,7 +41,6 @@ forbidden = [
     "held-out prediction p = 0.0002",
     "SUPPORTED, non-randomized history refinement",
     "personal organization is substantially refined through individual history",
-    "preregistered multi-study meta-analysis",
 ]
 
 for token in forbidden:
