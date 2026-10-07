@@ -1,0 +1,25 @@
+name: rhino-context-sensitivity-parameter-v1
+on:
+  push:
+    branches: [post-freeze/rhino-context-sensitivity-parameter-v1]
+    paths:
+      - "prospective/task_reset_lockin/CONTEXT_SENSITIVITY_PARAMETER_CONTRACT_V1.md"
+      - "prospective/task_reset_lockin/context_sensitivity_parameter_v1.py"
+      - ".github/workflows/rhino-context-sensitivity-parameter-v1.yml"
+  workflow_dispatch:
+jobs:
+  analysis:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions: {contents: read}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: python -m pip install -e .
+      - run: python prospective/task_reset_lockin/context_sensitivity_parameter_v1.py > context_sensitivity_parameter_result_v1.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rhino-context-sensitivity-parameter-v1
+          path: context_sensitivity_parameter_result_v1.json
+          if-no-files-found: error
