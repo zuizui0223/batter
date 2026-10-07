@@ -78,7 +78,7 @@ def load_rows():
         try: units[(b,t)]=np.array([one_num([x[z] for x in rr]) for z in TRAITS],float)
         except RuntimeError: pass
 
-    bats=sorted(b for b,t in units if all((b,k) in units for k in ("1","2","3")))
+    bats=sorted({b for b,t in units if all((b,k) in units for k in ("1","2","3"))})
     out=[]
     for b in bats:
         if len(treat[b])!=1: raise RuntimeError(f"treatment conflict {b}")
