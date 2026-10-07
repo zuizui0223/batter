@@ -177,7 +177,6 @@ Interpretation:
 
 Rhinolophus:
 - transparent I/M policy identity supported;
-- held-out environment prediction supported.
 
 Carollia:
 - fixed Rhino I/M representation supported;
