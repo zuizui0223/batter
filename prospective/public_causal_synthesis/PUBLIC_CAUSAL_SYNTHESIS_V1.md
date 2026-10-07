@@ -114,6 +114,47 @@ Therefore:
 
 The broad environment can affect behavior without necessarily increasing the amount of laboratory individuality.
 
+### Post-primary descriptive state rewriting
+
+A pre-authorized descriptive secondary compared three leave-one-out models of Trial 3:
+
+- B = own baseline only;
+- G = treatment-group post state only;
+- B+S = own baseline + shared treatment-associated shift.
+
+Overall mean squared error:
+- B = **3.137006**;
+- G = **4.189011**;
+- B+S = **2.628609**.
+
+Thus the best simple overall description is:
+
+[
+\text{later state}
+\approx
+\text{personal baseline}
++
+\text{shared environmental shift}.
+]
+
+Treatment-group decomposition is informative:
+
+### Enriched
+- B = **4.060592**;
+- G = **3.091958**;
+- B+S = **3.081073**.
+
+### Impoverished
+- B = **2.274992**;
+- G = **5.212927**;
+- B+S = **2.206309**.
+
+This secondary is descriptive only, but it suggests a more specific biological picture:
+
+> **enrichment may reposition behavioral state strongly without confirmingly increasing the amount of individuality, whereas impoverished animals retain stronger direct baseline-state predictability.**
+
+The safe synthesis is state recalibration, not confirmed convergence or erasure.
+
 ---
 
 # 2. Maintenance: controlled perturbations repeatedly fail to erase individual organization
@@ -324,9 +365,10 @@ with ecological spatial consequences as a separate downstream layer.
 
 Key asymmetry:
 
-### Formation
+### Formation / rewriting
 - personal history becomes more identity-informative;
-- broad randomized enrichment does not confirm increased differentiation.
+- broad randomized enrichment does not confirm increased differentiation;
+- descriptively, later state is best approximated by personal baseline plus a shared environmental shift.
 
 ### Maintenance
 - external sensory perturbation: retained individuality;
@@ -348,7 +390,11 @@ The strongest public-data interpretation is:
 
 > **Individual specialization behaves less like a context-specific expressed value and more like persistent personal organization whose expression is repeatedly recalculated in the current environment.**
 
-And:
+The randomized early-experience result adds:
+
+> **environmental experience can reposition the behavioral state without necessarily increasing the amount of individuality.**
+
+And therefore:
 
 > **the persistence of individuality is better established than a simple environmental mechanism for its initial formation.**
 
