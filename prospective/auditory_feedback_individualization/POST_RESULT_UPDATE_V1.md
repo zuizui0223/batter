@@ -156,3 +156,77 @@ It is a strong causal boundary showing that:
 Together with the maintenance results, this strengthens a formation/maintenance asymmetry:
 - established individual organization is robust under current perturbation;
 - environmental effects on developmental phenotype do not straightforwardly determine how much individuality exists.
+
+
+## Post-primary exact feature decomposition — descriptive only
+
+The frozen total individualization contrast is exactly additive across the 28 standardized acoustic dimensions.
+
+A post-primary descriptive decomposition was therefore run without feature-wise p-values and without changing the primary representation.
+
+Exact identity:
+
+[
+D
+=
+sum_{k=1}^{28}D_k
+=
+-1.425497.
+]
+
+Feature contributions:
+
+- positive contribution sum: **+3.746740**;
+- negative contribution sum: **−5.172237**;
+- total absolute contribution: **8.918976**;
+- positive / negative feature counts: **15 / 13**;
+- cancellation ratio: **0.840173**.
+
+Thus only about 16% of the total absolute feature-level contrast survives in the net whole-repertoire D.
+
+Largest descriptive negative contributions include:
+- Temporal entropy: **−1.212594**;
+- Mic 1st Spectral Quartile: **−0.997132**;
+- Mic 2nd Spectral Quartile: **−0.801085**;
+- Mic 3rd Spectral Quartile: **−0.668213**;
+- Fundamental mean: **−0.602536**.
+
+Largest descriptive positive contributions include:
+- Temporal kurtosis: **+0.555672**;
+- Spectral mean: **+0.524287**;
+- 3rd Spectral Quartile: **+0.412367**;
+- 2nd Spectral Quartile: **+0.395018**;
+- 1st Spectral Quartile: **+0.357930**.
+
+All 28 features were reported; no feature subset was promoted.
+
+### Safe interpretation
+
+The null whole-repertoire primary is **not** equivalent to uniform invariance across acoustic dimensions.
+
+Instead, the observed decomposition is consistent with:
+
+> **developmental auditory feedback redistributing where between-individual differentiation is expressed across acoustic dimensions, while leaving the total multivariate amount of individuality without a detectable treatment effect.**
+
+This is descriptive mechanism localization only.
+
+It does not establish a causal treatment effect for any one feature.
+
+No feature-wise p-value, reduced-feature primary, or source-significant-feature rescue is authorized.
+
+## Refined formation boundary
+
+The two randomized developmental studies now suggest a more specific alternative to simple variance-amplification models.
+
+Environmental/learning history may:
+- move the common phenotype;
+- alter which behavioral dimensions carry between-individual differences;
+- preserve a broadly similar total amount of individual differentiation.
+
+Therefore the remaining formation problem is not just:
+
+> what increases individuality?
+
+It is increasingly:
+
+> **what determines the allocation of individual-specific information across behavioral dimensions and histories?**
