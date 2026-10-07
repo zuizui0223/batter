@@ -1,0 +1,24 @@
+name: collective-personal-3d-lane-b-v1
+on:
+  push:
+    branches: [post-freeze/collective-personal-3d-decomposition-v1]
+    paths:
+      - "post_freeze_extensions/collective_personal_3d_decomposition/run_lane_b_v1.py"
+      - ".github/workflows/collective-personal-3d-lane-b-v1.yml"
+  workflow_dispatch:
+jobs:
+  lane-b:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    permissions: {contents: read}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: python -m pip install -e .
+      - run: python post_freeze_extensions/collective_personal_3d_decomposition/run_lane_b_v1.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: collective-personal-3d-lane-b-v1
+          path: post_freeze_extensions/collective_personal_3d_decomposition/lane_b_result_v1.json
+          if-no-files-found: error
