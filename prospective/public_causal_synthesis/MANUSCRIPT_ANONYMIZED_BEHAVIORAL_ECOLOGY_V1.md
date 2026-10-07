@@ -687,21 +687,7 @@ Key public sources include:
 
 Source-level analysis contracts, structural audit records, executable scripts, exact/randomization logic, result receipts, synthesis files and figure-generation code are available in an anonymized review archive: `[ANONYMIZED_REVIEW_ARCHIVE_URL]`.
 
-The authoritative manuscript-level numeric ledger is:
-
-`prospective/public_causal_synthesis/MASTER_RESULTS_TABLE_V1.md`.
-
-The authoritative evidence-tier map is:
-
-`prospective/public_causal_synthesis/EVIDENCE_MATRIX_V1.md`.
-
-Manuscript-facing figures are generated from frozen summary values by:
-
-`prospective/public_causal_synthesis/plot_synthesis_figures_v1.py`.
-
-Generated SVG files are stored under:
-
-`figures/public_causal/`.
+The anonymized review archive contains the manuscript-level numeric ledger, evidence-tier map, figure-generation code, figure source files, and provenance audits needed to verify the reported reanalyses.
 
 ## Analysis provenance
 
@@ -723,18 +709,6 @@ Such analyses are not allowed to rescue a failed frozen primary.
 ## Ethics
 
 No new animals were captured, handled or experimentally manipulated for this study. All analyses use public data from previously published studies. Ethical approvals and animal-care procedures for the original experiments are reported in the respective source publications.
-
-## Figure files
-
-- Fig. 1: `figures/public_causal/FIGURE_1_CAUSAL_LAYERS_V1.svg`
-- Fig. 2A: `figures/public_causal/FIGURE_2A_FIRST_FLIGHT_FORMATION_V1.svg`
-- Fig. 2B: `figures/public_causal/FIGURE_2B_DEVELOPMENTAL_RANDOMIZATION_V1.svg`
-- Fig. 3: `figures/public_causal/FIGURE_3_ACUTE_PERTURBATION_IDENTITY_V1.svg`
-- Fig. 4: `figures/public_causal/FIGURE_4_PORTABILITY_AND_WILD_BOUNDARY_V1.svg`
-
-Full legends are in `prospective/public_causal_synthesis/FIGURE_CAPTIONS_V1.md`.
-
----
 
 # References
 
