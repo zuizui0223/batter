@@ -7,37 +7,24 @@ No numeric acoustic outcome values are emitted.
 from __future__ import annotations
 from io import BytesIO
 from pathlib import Path
-import json, re, urllib.request
+import json, re
 import openpyxl
 
 HERE=Path(__file__).resolve().parent
 OUT=HERE/"S1_SCHEMA_AUDIT_V1.json"
 OUTMD=HERE/"S1_SCHEMA_AUDIT_V1.md"
 
-URLS=[
-    "https://pmc.ncbi.nlm.nih.gov/articles/PMC5663327/bin/pbio.2002556.s011.xlsx",
-    "https://journals.plos.org/plosbiology/article/file?id=10.1371/journal.pbio.2002556.s011&type=supplementary",
-]
-HEAD={"User-Agent":"Mozilla/5.0 batter-crowd-playback-schema/1.1"}
+LOCAL=Path(__file__).resolve().parent/"S1_Data.xlsx"
 
 KEY=re.compile(r"(pup|bat|individual|id|group|playback|sex|session|age|week|LD1|LD2|Fig.?2)",re.I)
 
 def fetch():
-    errors=[]
-    for url in URLS:
-        try:
-            req=urllib.request.Request(url,headers=HEAD)
-            with urllib.request.urlopen(req,timeout=30) as r:
-                data=r.read()
-            if data[:2] != b"PK":
-                raise RuntimeError(f"not XLSX magic: {data[:16]!r}")
-            return data,url
-        except Exception as exc:
-            errors.append({"url":url,"error":repr(exc)})
-    raise RuntimeError(f"all supplement download routes failed: {errors}")
-
-def is_id_like_header(x):
-    return isinstance(x,str) and bool(re.search(r"(pup|bat|individual|id|group|playback|sex|session|age|week)",x,re.I))
+    if not LOCAL.exists():
+        raise RuntimeError(f"local S1_Data.xlsx missing: {LOCAL}")
+    data=LOCAL.read_bytes()
+    if data[:2] != b"PK":
+        raise RuntimeError(f"not XLSX magic: {data[:16]!r}")
+    return data,"workflow-curl-local"
 
 def main():
     data,source_url=fetch()
@@ -96,6 +83,7 @@ def main():
         })
 
     wb.close()
+    LOCAL.unlink(missing_ok=True)
     result={
         "version":1,
         "source":"10.1371/journal.pbio.2002556.s011",
