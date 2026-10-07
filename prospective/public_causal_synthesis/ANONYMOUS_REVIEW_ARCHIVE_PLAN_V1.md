@@ -53,14 +53,21 @@ From `prospective/evidence-provenance-correction-v1`.
 
 ## Raw source data
 
-Not automatically copied wholesale into this analysis bundle.
+Most source data are not duplicated because they already live in DOI repositories.
 
-Reason:
-- most are already in DOI repositories;
-- some raw files are large;
-- Taub raw data are source-public on Dropbox but redistribution license is not yet verified.
+One exact source subset **is** copied into this review bundle:
 
-A final Behavioral Ecology data deposit must resolve the two permanence exceptions documented in `DATA_SOURCE_MANIFEST.csv`.
+### Carollia / Eveland et al. 2026
+- original source location: `00keveland/Tunnel_2026`;
+- pinned commit: `59928a71887d521fec143080b0b187736c046a0e`;
+- license: CC0 1.0;
+- mirrored files: 28 C2-C8 trajectory MAT files;
+- expected bytes: 5,286,659;
+- file-level SHA256 receipt generated during archive build.
+
+Taub raw data remain source-public on Dropbox but are not mirrored because dataset redistribution permission has not been independently verified.
+
+A final Behavioral Ecology data deposit therefore has only one unresolved source-permanence issue: Taub.
 
 ## Stop rule
 
