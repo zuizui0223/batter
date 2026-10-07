@@ -45,6 +45,26 @@ Current package now states:
 - human verification and scientific responsibility;
 - no creation/alteration of primary research data.
 
+### Anonymous submission bundle
+
+**PASS — SINGLE TRANSFERABLE BUNDLE BUILT**
+
+Authoritative receipt:
+`ANONYMOUS_SUBMISSION_BUNDLE_RECEIPT_V1.md`.
+
+The bundle contains:
+- complete anonymous manuscript;
+- main figures;
+- figure alt text;
+- verified Supplementary PDF;
+- full sanitized reproducibility archive;
+- checksum manifest.
+
+Deterministic bundle SHA256:
+`7d25854c64850fdb5f9c06108fda04d4c5b032fd96d2816322376813718affef`.
+
+This is ready to transfer to an external anonymous review host / journal workspace.
+
 ### Data/archive policy
 
 **STAGING ZIP PASS; PERMANENT REPOSITORY STILL REQUIRED**
@@ -352,13 +372,13 @@ PASS:
 
 **JOURNAL UPLOAD: NOT YET READY**
 
-Scientific manuscript, figures, evidence guards, anonymized manuscript, anonymized review-package builds, and the single verified Supplementary PDF are complete.
+Scientific manuscript, figures, evidence guards, anonymized manuscript, anonymized review archives, verified Supplementary PDF, and the single transferable anonymous submission bundle are complete.
 
-The remaining blockers are:
-- anonymous external placement of the clean review ZIP, if needed by the journal;
-- human author metadata;
+The remaining blockers are human/external only:
+- anonymous external placement of the clean reproducibility ZIP / submission bundle if required;
+- author/affiliation/corresponding-author metadata;
 - Funding / CRediT / conflicts;
 - final AI-disclosure confirmation;
-- final journal-style packaging.
+- final Behavioral Ecology reference-style conversion at upload/proof stage.
 
 There are no unresolved manuscript-facing numerical analyses.
