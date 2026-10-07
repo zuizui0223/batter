@@ -69,7 +69,7 @@ required_text_tokens = [
     ("plan", plan, "PRIMARY FAIL"),
     ("plan", plan, "predeclared secondary"),
     ("plan", plan, "Post-outcome H/V"),
-    ("captions", captions, "PRIMARY FAIL"),
+    ("captions", captions, "FAIL_PRIMARY_FORMATION_RULE"),
     ("captions", captions, "H/V component analyses were opened after that failure"),
     ("master", master, "**PRIMARY FAIL**"),
     ("master", master, "**SUPPORTED SECONDARY**"),
