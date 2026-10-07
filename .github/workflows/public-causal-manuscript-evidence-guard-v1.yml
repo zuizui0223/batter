@@ -1,0 +1,29 @@
+name: public-causal-manuscript-evidence-guard-v1
+
+on:
+  push:
+    branches:
+      - prospective/public-causal-synthesis-v1
+    paths:
+      - "prospective/public_causal_synthesis/MANUSCRIPT_DRAFT_V1.md"
+      - "prospective/public_causal_synthesis/MANUSCRIPT_NUMERICAL_AUDIT_V1.md"
+      - "prospective/public_causal_synthesis/manuscript_evidence_guard_v1.py"
+      - ".github/workflows/public-causal-manuscript-evidence-guard-v1.yml"
+  pull_request:
+    paths:
+      - "prospective/public_causal_synthesis/MANUSCRIPT_DRAFT_V1.md"
+      - "prospective/public_causal_synthesis/MANUSCRIPT_NUMERICAL_AUDIT_V1.md"
+      - "prospective/public_causal_synthesis/manuscript_evidence_guard_v1.py"
+      - ".github/workflows/public-causal-manuscript-evidence-guard-v1.yml"
+  workflow_dispatch:
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run manuscript evidence guard
+        run: python prospective/public_causal_synthesis/manuscript_evidence_guard_v1.py
