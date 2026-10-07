@@ -65,25 +65,29 @@ See Supplementary Material Figure S1.
 
 # Supplementary Figure S2. Developmental descriptive decompositions
 
-## Rachum
+## Rachum enrichment
 
-Display all three additive contributions to D:
-- Boldness +0.465792;
-- Exploration +0.250837;
-- Activity +0.018070.
+All three frozen trait contributions to the unsupported primary D are shown:
 
-No trait-wise p-values.
+- Boldness: +0.465792;
+- Exploration: +0.250837;
+- Activity: +0.018070.
 
-## Elie
+All three point in the enriched > impoverished direction. No trait-wise p-values are calculated.
 
-Display all 28 additive feature contributions to D, ordered by absolute magnitude.
+## Elie developmental auditory feedback
 
-Report:
-- 15 positive;
-- 13 negative;
-- cancellation ratio 0.840173.
+All 28 feature contributions to the frozen adult-vocal D are plotted in descending absolute magnitude.
 
-No feature-wise p-values.
+Summary:
+- positive contribution sum = +3.746740;
+- negative contribution sum = -5.172237;
+- 15 positive / 13 negative dimensions;
+- cancellation ratio = 0.840173.
+
+The contribution vector sums exactly to the frozen primary D=-1.425497. No feature-wise p-values or reduced-feature subset are used.
+
+See Supplementary Material Figure S2.
 
 ---
 
