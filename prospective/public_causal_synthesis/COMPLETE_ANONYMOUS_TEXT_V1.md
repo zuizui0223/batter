@@ -697,6 +697,8 @@ For each source-level analysis, the endpoint, biological support rule, aggregati
 
 The cross-study synthesis itself was iterative. Public sources were discovered and audited sequentially, and the programme-level biological framing developed as positive and negative source results accumulated. The work is therefore best described as **provenance-controlled comparative reanalysis**, not as a prospectively preregistered multi-study meta-analysis.
 
+OpenAI ChatGPT (GPT-5.6 Sol during the final synthesis; accessed during September–October 2026) was used interactively for literature triage, code review and drafting, organization of analysis/provenance records, figure-code drafting, and substantial manuscript editing. The human authors directed the work, checked generated material against source records and executable analyses, verified numerical outputs and citations, determined all evidence tiers and claim boundaries, and retain full responsibility for the scientific content. ChatGPT was not used to create or alter primary research data.
+
 Post-primary analyses are labelled explicitly as:
 - predeclared secondary;
 - post-primary diagnostic;
