@@ -1,0 +1,268 @@
+{
+  "version": 1,
+  "source": "10.17632/h5ff9vv5pc.1",
+  "primary_D": -1.4254971909043466,
+  "sum_feature_D": -1.4254971909043461,
+  "positive_sum": 3.7467395387877347,
+  "negative_sum": -5.1722367296920808,
+  "absolute_sum": 8.9189762684798168,
+  "cancellation_ratio": 0.84017255478724207,
+  "n_positive": 15,
+  "n_negative": 13,
+  "features": [
+    {
+      "feature": "Duration (ms)",
+      "V_hearing": 0.69784043695424747,
+      "V_deaf": 0.68528558606618861,
+      "D": 0.012554850888058855,
+      "abs_D": 0.012554850888058855,
+      "sign": "H>D"
+    },
+    {
+      "feature": "RMS mean",
+      "V_hearing": 0.17612095541160233,
+      "V_deaf": 0.34657523198943924,
+      "D": -0.17045427657783691,
+      "abs_D": 0.17045427657783691,
+      "sign": "H<D"
+    },
+    {
+      "feature": "Pitch Saliency (AU)",
+      "V_hearing": 0.48027405018885877,
+      "V_deaf": 0.590446069961774,
+      "D": -0.11017201977291519,
+      "abs_D": 0.11017201977291519,
+      "sign": "H<D"
+    },
+    {
+      "feature": "Fundamental mean (kHz)",
+      "V_hearing": 0.28005045091322206,
+      "V_deaf": 0.88258692685670559,
+      "D": -0.60253647594348347,
+      "abs_D": 0.60253647594348347,
+      "sign": "H<D"
+    },
+    {
+      "feature": "Fundamental CV",
+      "V_hearing": 0.9124780601728647,
+      "V_deaf": 0.57224192978153088,
+      "D": 0.34023613039133382,
+      "abs_D": 0.34023613039133382,
+      "sign": "H>D"
+    },
+    {
+      "feature": "Spectral mean (kHz)",
+      "V_hearing": 0.97106506905756407,
+      "V_deaf": 0.446777583108557,
+      "D": 0.52428748594900709,
+      "abs_D": 0.52428748594900709,
+      "sign": "H>D"
+    },
+    {
+      "feature": "Spectral std (kHz)",
+      "V_hearing": 0.58161347111293993,
+      "V_deaf": 0.40117020438954559,
+      "D": 0.18044326672339434,
+      "abs_D": 0.18044326672339434,
+      "sign": "H>D"
+    },
+    {
+      "feature": "Spectral kurtosis (Hz)",
+      "V_hearing": 0.14737687610078234,
+      "V_deaf": 0.47242548620217961,
+      "D": -0.3250486101013973,
+      "abs_D": 0.3250486101013973,
+      "sign": "H<D"
+    },
+    {
+      "feature": "Spectral skewness (Hz)",
+      "V_hearing": 0.31383665885600831,
+      "V_deaf": 0.36501599221621989,
+      "D": -0.051179333360211576,
+      "abs_D": 0.051179333360211576,
+      "sign": "H<D"
+    },
+    {
+      "feature": "Spectral entropy",
+      "V_hearing": 0.46745450328396354,
+      "V_deaf": 0.39674115955267936,
+      "D": 0.070713343731284184,
+      "abs_D": 0.070713343731284184,
+      "sign": "H>D"
+    },
+    {
+      "feature": "Temporal mean (ms)",
+      "V_hearing": 0.66281142551512462,
+      "V_deaf": 0.70779601508124945,
+      "D": -0.044984589566124833,
+      "abs_D": 0.044984589566124833,
+      "sign": "H<D"
+    },
+    {
+      "feature": "Temporal std (ms)",
+      "V_hearing": 0.7745325803926747,
+      "V_deaf": 0.62190188539791613,
+      "D": 0.15263069499475856,
+      "abs_D": 0.15263069499475856,
+      "sign": "H>D"
+    },
+    {
+      "feature": "Temporal kurtosis (ms)",
+      "V_hearing": 0.9240440186034643,
+      "V_deaf": 0.36837185273286643,
+      "D": 0.55567216587059787,
+      "abs_D": 0.55567216587059787,
+      "sign": "H>D"
+    },
+    {
+      "feature": "Temporal skewness (ms)",
+      "V_hearing": 0.606374222362933,
+      "V_deaf": 0.65934871812448337,
+      "D": -0.052974495761550333,
+      "abs_D": 0.052974495761550333,
+      "sign": "H<D"
+    },
+    {
+      "feature": "Temporal entropy",
+      "V_hearing": 0.20867269671742666,
+      "V_deaf": 1.4212669862488065,
+      "D": -1.21259428953138,
+      "abs_D": 1.21259428953138,
+      "sign": "H<D"
+    },
+    {
+      "feature": "1st Spectral Quartile (kHz)",
+      "V_hearing": 0.93882651080915891,
+      "V_deaf": 0.58089634933331047,
+      "D": 0.35793016147584844,
+      "abs_D": 0.35793016147584844,
+      "sign": "H>D"
+    },
+    {
+      "feature": "2nd Spectral Quartile (kHz)",
+      "V_hearing": 0.96003439190392026,
+      "V_deaf": 0.56501683765841881,
+      "D": 0.39501755424550145,
+      "abs_D": 0.39501755424550145,
+      "sign": "H>D"
+    },
+    {
+      "feature": "3rd Spectral Quartile (kHz)",
+      "V_hearing": 0.9648397343604852,
+      "V_deaf": 0.55247252845910855,
+      "D": 0.41236720590137665,
+      "abs_D": 0.41236720590137665,
+      "sign": "H>D"
+    },
+    {
+      "feature": "Mic Spectral mean (kHz)",
+      "V_hearing": 0.58637541140589433,
+      "V_deaf": 0.42432769498279582,
+      "D": 0.16204771642309851,
+      "abs_D": 0.16204771642309851,
+      "sign": "H>D"
+    },
+    {
+      "feature": "Mic Spectral std (kHz)",
+      "V_hearing": 0.29615649673130889,
+      "V_deaf": 0.31735602752728365,
+      "D": -0.021199530795974753,
+      "abs_D": 0.021199530795974753,
+      "sign": "H<D"
+    },
+    {
+      "feature": "Mic Spectral kurt (Hz)",
+      "V_hearing": 0.4089739555217391,
+      "V_deaf": 0.29594016455980277,
+      "D": 0.11303379096193633,
+      "abs_D": 0.11303379096193633,
+      "sign": "H>D"
+    },
+    {
+      "feature": "Mic Spectral skew (Hz)",
+      "V_hearing": 0.55431511451935267,
+      "V_deaf": 0.39796419419216966,
+      "D": 0.156350920327183,
+      "abs_D": 0.156350920327183,
+      "sign": "H>D"
+    },
+    {
+      "feature": "Mic Spectral ent",
+      "V_hearing": 0.61980296856825512,
+      "V_deaf": 0.33294426259565768,
+      "D": 0.28685870597259744,
+      "abs_D": 0.28685870597259744,
+      "sign": "H>D"
+    },
+    {
+      "feature": "Mic 1st Spectral Quartile (kHz)",
+      "V_hearing": 0.12496085447542689,
+      "V_deaf": 1.1220925778562374,
+      "D": -0.99713172338081046,
+      "abs_D": 0.99713172338081046,
+      "sign": "H<D"
+    },
+    {
+      "feature": "Mic 2nd Spectral Quartile (kHz)",
+      "V_hearing": 0.30517003878245541,
+      "V_deaf": 1.1062549946958853,
+      "D": -0.80108495591342987,
+      "abs_D": 0.80108495591342987,
+      "sign": "H<D"
+    },
+    {
+      "feature": "Mic 3rd Spectral Quartile (kHz)",
+      "V_hearing": 0.40948353695291823,
+      "V_deaf": 1.0776968028542961,
+      "D": -0.668213265901378,
+      "abs_D": 0.668213265901378,
+      "sign": "H<D"
+    },
+    {
+      "feature": "Amplitude Periodicity Frequency (log(Hz))",
+      "V_hearing": 0.73890343601175812,
+      "V_deaf": 0.7123078910799997,
+      "D": 0.026595544931758419,
+      "abs_D": 0.026595544931758419,
+      "sign": "H>D"
+    },
+    {
+      "feature": "Amplitude Periodicity Power",
+      "V_hearing": 0.65437192382228548,
+      "V_deaf": 0.7690350869078737,
+      "D": -0.11466316308558822,
+      "abs_D": 0.11466316308558822,
+      "sign": "H<D"
+    }
+  ],
+  "rank_by_abs_D": [
+    "Temporal entropy",
+    "Mic 1st Spectral Quartile (kHz)",
+    "Mic 2nd Spectral Quartile (kHz)",
+    "Mic 3rd Spectral Quartile (kHz)",
+    "Fundamental mean (kHz)",
+    "Temporal kurtosis (ms)",
+    "Spectral mean (kHz)",
+    "3rd Spectral Quartile (kHz)",
+    "2nd Spectral Quartile (kHz)",
+    "1st Spectral Quartile (kHz)",
+    "Fundamental CV",
+    "Spectral kurtosis (Hz)",
+    "Mic Spectral ent",
+    "Spectral std (kHz)",
+    "RMS mean",
+    "Mic Spectral mean (kHz)",
+    "Mic Spectral skew (Hz)",
+    "Temporal std (ms)",
+    "Amplitude Periodicity Power",
+    "Mic Spectral kurt (Hz)",
+    "Pitch Saliency (AU)",
+    "Spectral entropy",
+    "Temporal skewness (ms)",
+    "Spectral skewness (Hz)",
+    "Temporal mean (ms)",
+    "Amplitude Periodicity Frequency (log(Hz))",
+    "Mic Spectral std (kHz)",
+    "Duration (ms)"
+  ]
+}
