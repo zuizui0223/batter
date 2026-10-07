@@ -1,36 +1,21 @@
-# Aharon Figure-1 zero-sentinel gate v1
+# Aharon Figure-1 zero-sentinel result v1
 
-## Status
+**STRUCTURAL ZERO COUNTS ONLY — NONZERO MAGNITUDES NOT REPORTED.**
 
-**STRUCTURAL NUMERIC-MASK AUDIT ONLY. NONZERO TURNING MAGNITUDES FORBIDDEN.**
+- 500 | con: zeros=0; finite=90; nonzero-bilateral trials=10
+- 500 | 75: zeros=0; finite=88; nonzero-bilateral trials=10
+- 500 | 300: zeros=0; finite=85; nonzero-bilateral trials=10
+- 503 | con: zeros=0; finite=99; nonzero-bilateral trials=15
+- 503 | 75: zeros=0; finite=108; nonzero-bilateral trials=15
+- 503 | 300: zeros=0; finite=102; nonzero-bilateral trials=15
+- 505 | con: zeros=0; finite=83; nonzero-bilateral trials=10
+- 505 | 75: zeros=0; finite=84; nonzero-bilateral trials=10
+- 505 | 300: zeros=0; finite=104; nonzero-bilateral trials=10
+- 510 | con: zeros=0; finite=128; nonzero-bilateral trials=15
+- 510 | 75: zeros=0; finite=168; nonzero-bilateral trials=15
+- 510 | 300: zeros=0; finite=166; nonzero-bilateral trials=15
 
-Parent:
-- `AHARON_FINITE_MASK_AUDIT_CONTRACT_V1.md`
-- `AHARON_FIGURE1_STRUCTURE_V2.md`
-- `AHARON_FIGURE1_FINITE_MASK_V2.md`
+## Verdict
 
-The general finite-mask contract prospectively authorized exact-zero counts before numeric turning medians are calculated.
+**PASS_NO_ZERO_SENTINEL**
 
-## Authorized opening
-
-For every one of the 12 Figure-1 bat × condition matrices report only:
-
-- exact-zero cell count;
-- finite cell count;
-- finite-nonzero bilateral trial count.
-
-Do not report any nonzero magnitude.
-
-## Proceed rule
-
-If all 12 matrices contain zero exact-zero cells:
-
-> **PASS_NO_ZERO_SENTINEL**
-
-and the frozen cross-condition turning-location primary may open.
-
-If any exact zero occurs:
-
-> **STOP_ZERO_ENCODING_NEEDS_FREEZE**
-
-and no turning median may be calculated until source zero semantics are resolved prospectively.
