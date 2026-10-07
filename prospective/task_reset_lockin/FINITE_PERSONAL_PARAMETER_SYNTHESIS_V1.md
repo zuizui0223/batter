@@ -1,0 +1,257 @@
+# Finite personal-parameter synthesis v1
+
+## Status
+
+Post-primary mathematical synthesis. This file combines already-opened dimensionality, scalar calibration, and theta-convergence evidence. It is not a new confirmatory test.
+
+## 1. Minimal dimensionality
+
+Authoritative latent-policy dimensionality workflow:
+- run: 37210328207
+- artifact: 11306766790
+- species: *Rhinolophus nippon*
+- trajectories: 45
+- obstacle environments: 7
+- movement features: 8
+
+### Unsupervised training-only PCA
+
+Minimal sufficient dimension: **1**
+
+At d=1:
+- K = **+0.95785**
+- 5/5 bats positive
+- p = **0.0006**
+- median training variance explained = **46.68%**
+
+At d=8:
+- K = **+0.94356**
+- 5/5 positive
+- p = **0.0001**
+
+Thus adding dimensions 2–8 is not required to preserve cross-environment individual identity. The one-dimensional score is slightly larger than the full eight-dimensional K under the same architecture.
+
+### Training-only supervised identity subspace
+
+Minimal sufficient dimension: **1**
+
+At d=1:
+- K = **+0.88483**
+- 5/5 positive
+- p = **0.0021**
+
+Therefore one-dimensional sufficiency is not an artifact of unsupervised PCA alone.
+
+## 2. Meaning of the dominant axis
+
+Median squared PCA1 loadings:
+
+- median speed: 0.211
+- p90 speed: 0.231
+- median absolute vertical speed: 0.215
+- p90 absolute vertical speed: 0.230
+- median turn rate: 0.005
+- p90 turn rate: 0.074
+- path efficiency: 0.001
+- vertical range: 0.029
+
+Approximately 89% of PC1 squared loading lies in total-speed and vertical-speed magnitude.
+
+A transparent scalar approximation,
+
+[
+FlightIntensity=
+[z(v_{med})+z(v_{90})+z(|v_z|_{med})+z(|v_z|_{90})]/4,
+]
+
+is independently supported:
+- K = +0.49656
+- 5/5 positive
+- p = 0.0003
+
+The latent axis is therefore interpretable primarily as a movement-intensity / vigor parameter.
+
+## 3. Individual scalar coordinates
+
+Authoritative theta-summary artifact:
+- run: 37211528747
+- artifact: 11306753000
+
+Equal-environment mean FlightIntensity:
+
+[
+	heta_A=+1.0699
+]
+[
+	heta_C=+0.3028
+]
+[
+	heta_B=+0.1746
+]
+[
+	heta_E=-0.4735
+]
+[
+	heta_D=-0.7904
+]
+
+Descriptive ordering:
+
+[
+A > C approx B > E > D.
+]
+
+The close B–C pair is the principal unstable near-tie; large-separation pairs are much more stable across environments.
+
+## 4. Cross-environment calibration
+
+Previously opened one-parameter calibration:
+
+- through-origin slope: **1.0314**
+- Pearson r: **0.5548**
+- raw pair × environment sign accuracy: **0.8286**
+- equal-pair sign accuracy: **0.8217**
+- p(beta) = **0.0014**
+- p(r) = **0.0162**
+- p(sign) = **0.0065**
+
+Thus the scalar predicts not only identity/order but meaningful held-out difference magnitude.
+
+## 5. Direct convergence of theta estimation
+
+Frozen convergence contract:
+`THETA_CONVERGENCE_CONTRACT_V1.md`
+
+Deterministic reconstruction from authoritative environment centroids:
+`THETA_CONVERGENCE_RECONSTRUCTION_RESULT_V1.md`
+
+Held-out MSE as the number of independent training environments increases:
+
+- m=1: **0.5359**
+- m=2: **0.4019**
+- m=3: **0.3573**
+- all non-target environments: **0.3409**
+
+Corresponding R² relative to zero prediction:
+
+- m=1: **0.1547**
+- m=2: **0.3660**
+- m=3: **0.4364**
+- full: **0.4623**
+
+Primary convergence:
+
+[
+MSE_1-MSE_3=+0.17864
+]
+
+bat-cluster bootstrap 95% CI:
+
+[
+[+0.05266,+0.33357].
+]
+
+Fraction of finite-data improvement toward the full estimator:
+
+- m=2: **68.7%** [66.1%,73.6%]
+- m=3: **91.6%** [88.1%,98.1%]
+
+Subset-estimate spread:
+
+- m=1: 0.3823
+- m=2: 0.2145
+- m=3: 0.0985
+
+Thus estimator spread falls by about 74% from one to three environments.
+
+## 6. Mathematical interpretation
+
+The current data are compatible with
+
+[
+mathbf{x}_{i,e,t}
+=
+oldsymbol{mu}_e
++
+	heta_imathbf{v}
++
+mathbf{h}_{i,e}
++
+oldsymbol{epsilon}_{i,e,t},
+]
+
+where:
+
+- (oldsymbol{mu}_e): environment/configuration effect;
+- (	heta_i): stable one-dimensional personal policy coordinate;
+- (mathbf{v}): common movement-intensity direction;
+- (mathbf{h}_{i,e}): environment-specific personal realization;
+- (epsilon): trial-scale residual variation.
+
+The individual-specific portable component is therefore not currently behaving like an endlessly expanding coefficient list.
+
+It behaves like a **finite latent parameter whose estimate stabilizes with repeated independent environments**.
+
+## 7. Relation to exact trajectory prediction
+
+This does not mean an exact 3-D trajectory is one-dimensional.
+
+The low-dimensional parameter controls a portable component of the trajectory distribution. Exact realized paths still depend on:
+
+- obstacle/environment geometry;
+- configuration-specific lane/route realization;
+- learning/familiarity state;
+- local stochasticity/unmeasured state.
+
+Therefore:
+
+[
+	ext{low-dimensional personal law}
+
+otRightarrow
+	ext{deterministic exact trajectory}.
+]
+
+A chaotic or stochastic output can be generated by a low-dimensional personal parameter interacting with a changing environment.
+
+## 8. Relation to the “pi” analogy
+
+The current evidence argues against “individual flight is mathematically irreducible like an endless non-convergent expansion.”
+
+Pi itself is convergent and exactly defined; the closer alternative would have been a behavioural representation whose required dimension grows continuously as new conditions are observed.
+
+That is not what the *R. nippon* archive currently shows.
+
+Instead:
+
+- dimension 1 is already sufficient;
+- dimensions 2–8 are not required for held-out identity;
+- a scalar position transfers in rank and magnitude;
+- and its estimate rapidly stabilizes with repeated environments.
+
+The strongest current statement is:
+
+> **At least one bat system contains a portable individual behavioural component that is well approximated by a recoverable one-dimensional parameter.**
+
+## 9. Generality ceiling
+
+This is not yet a universal bat law.
+
+The same low-dimensional individual specialization was not recovered in the available *Miniopterus fuliginosus* system, despite substantial one-dimensional behavioural variance.
+
+Thus:
+
+[
+	ext{low-dimensional behavioural variance}
+
+eq
+	ext{low-dimensional individual identity}.
+]
+
+The next generality question is whether species differ in:
+- existence of a stable theta;
+- dimensionality of theta;
+- rate of theta convergence;
+- context dependence of theta.
+
+That is a cross-species research programme, not a conclusion from the present single positive system.
