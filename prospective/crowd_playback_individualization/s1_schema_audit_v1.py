@@ -33,96 +33,60 @@ def main():
     data,source_url=fetch()
     wb=openpyxl.load_workbook(BytesIO(data),read_only=True,data_only=False)
 
-    sheets=[]
-    for ws in wb.worksheets:
-        # Collect all string labels with coordinates. These are structural.
-        labels=[]
-        for row in ws.iter_rows():
-            for cell in row:
-                v=cell.value
-                if isinstance(v,str) and v.strip():
-                    labels.append({"cell":cell.coordinate,"value":v.strip()})
+    sheet_inventory=[
+        {"name":ws.title,"max_row":ws.max_row,"max_column":ws.max_column}
+        for ws in wb.worksheets
+    ]
+    fig_names=[x["name"] for x in sheet_inventory if re.search(r"fig\\s*2",x["name"],re.I)]
+    if len(fig_names)!=1:
+        raise RuntimeError(f"expected one Fig 2 sheet, got {fig_names}")
+    ws=wb[fig_names[0]]
 
-        # Search first 25 rows for likely header cells.
-        header_candidates=[]
-        for row in ws.iter_rows(min_row=1,max_row=min(25,ws.max_row)):
-            vals=[c.value for c in row]
-            if any(is_id_like_header(v) or (isinstance(v,str) and re.search(r"LD1|LD2|Fig.?2",v,re.I)) for v in vals):
-                header_candidates.append({
-                    "row":row[0].row,
-                    "strings":[None if not isinstance(v,str) else v for v in vals],
-                })
+    # Structural labels only from Fig 2 sheet.
+    labels=[]
+    for row in ws.iter_rows():
+        for cell in row:
+            v=cell.value
+            if isinstance(v,str) and v.strip():
+                labels.append({"cell":cell.coordinate,"value":v.strip()})
 
-        # Structural ID/group/session values are allowed only in columns with explicit structural headers.
-        structural_columns=[]
-        for cand in header_candidates:
-            r=cand["row"]
-            for col,v in enumerate(cand["strings"],start=1):
-                if is_id_like_header(v):
-                    structural_columns.append({"header_row":r,"col":col,"header":v})
+    # Identify rows/columns that appear to encode pup/group/session/LD labels.
+    relevant_labels=[x for x in labels if KEY.search(x["value"])]
 
-        structural_values={}
-        for spec in structural_columns:
-            key=f"{spec['header']}@R{spec['header_row']}C{spec['col']}"
-            vals=[]
-            for rr in range(spec["header_row"]+1,ws.max_row+1):
-                v=ws.cell(rr,spec["col"]).value
-                if v is None: continue
-                # IDs/treatment/session labels only, no coordinate columns.
-                if isinstance(v,(str,int)):
-                    vals.append(str(v))
-                elif isinstance(v,float) and v.is_integer():
-                    vals.append(str(int(v)))
-            structural_values[key]=sorted(set(vals))[:200]
-
-        sheets.append({
-            "name":ws.title,
-            "max_row":ws.max_row,
-            "max_column":ws.max_column,
-            "labels":labels,
-            "header_candidates":header_candidates,
-            "structural_columns":structural_columns,
-            "structural_values":structural_values,
-        })
-
-    wb.close()
-    LOCAL.unlink(missing_ok=True)
+    # All string labels are structural; numeric coordinate values remain unopened.
     result={
-        "version":1,
+        "version":2,
         "source":"10.1371/journal.pbio.2002556.s011",
         "download_route":source_url,
         "bytes":len(data),
-        "sheets":sheets,
+        "sheet_inventory":sheet_inventory,
+        "fig2_sheet":ws.title,
+        "fig2_max_row":ws.max_row,
+        "fig2_max_column":ws.max_column,
+        "fig2_all_string_labels":labels,
+        "fig2_relevant_labels":relevant_labels,
     }
-    OUT.write_text(json.dumps(result,indent=2,ensure_ascii=False)+"\n")
+    wb.close()
+    LOCAL.unlink(missing_ok=True)
+    OUT.write_text(json.dumps(result,indent=2,ensure_ascii=False)+"\\n")
 
     lines=[
-        "# Crowd-playback S1 Data schema audit v1","",
-        "**STRUCTURE ONLY — NO NUMERIC ACOUSTIC OUTCOME VALUES REPORTED.**","",
+        "# Crowd-playback S1 Data schema audit v2","",
+        "**FIG.2 STRUCTURE ONLY — NO NUMERIC LD/F0/ENTROPY VALUES REPORTED.**","",
         f"- workbook bytes: **{len(data)}**",
-        f"- download route: `{source_url}`",
-        f"- sheets: **{len(sheets)}**","",
+        f"- download route: \`{source_url}\`",
+        f"- sheets: **{len(sheet_inventory)}**",
+        f"- Fig 2 sheet: **{ws.title}**",
+        f"- Fig 2 rows × columns: **{ws.max_row} × {ws.max_column}**","",
+        "## Sheet inventory","",
     ]
-    for s in sheets:
-        lines += [
-            f"## {s['name']}","",
-            f"- rows: {s['max_row']}",
-            f"- columns: {s['max_column']}",
-            f"- structural headers: {[x['header'] for x in s['structural_columns']]}",
-        ]
-        # Print only strings relevant to structure/fig2.
-        rel=[x for x in s["labels"] if KEY.search(x["value"])]
-        if rel:
-            lines.append("- relevant labels:")
-            for x in rel[:120]:
-                lines.append(f"  - {x['cell']}: {x['value']}")
-        if s["structural_values"]:
-            lines.append("- structural levels:")
-            for k,v in s["structural_values"].items():
-                lines.append(f"  - {k}: {v}")
-        lines.append("")
-    lines += ["No LD-coordinate, F0, entropy, centroid, dispersion, or p-value was calculated.",""]
-    OUTMD.write_text("\n".join(lines)+"\n")
+    for x in sheet_inventory:
+        lines.append(f"- {x['name']}: {x['max_row']} × {x['max_column']}")
+    lines += ["","## Fig 2 structural labels",""]
+    for x in labels:
+        lines.append(f"- {x['cell']}: {x['value']}")
+    lines += ["","No numeric pup coordinate, F0 value, centroid, dispersion, or p-value was opened.",""]
+    OUTMD.write_text("\\n".join(lines)+"\\n")
     print(OUTMD.read_text())
 
 if __name__=="__main__":
