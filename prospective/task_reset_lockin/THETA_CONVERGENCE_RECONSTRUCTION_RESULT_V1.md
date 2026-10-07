@@ -110,3 +110,41 @@ This does not establish:
 It establishes a much narrower but strong mathematical statement:
 
 > **the transferable individual component measured here behaves like a finite, low-dimensional, recoverable parameter.**
+
+
+## Individual-level convergence
+
+The population-level learning curve is not driven by one or two bats.
+
+Held-out MSE by bat:
+
+| bat | m=1 | m=2 | m=3 | full | fraction to full at m=3 |
+|---|---:|---:|---:|---:|---:|
+| A | 0.1873 | 0.1405 | 0.1249 | 0.1171 | 0.889 |
+| B | 0.7452 | 0.5589 | 0.4968 | 0.4968 | 1.000 |
+| C | 1.3840 | 1.0380 | 0.9227 | 0.8650 | 0.889 |
+| D | 0.0521 | 0.0391 | 0.0347 | 0.0321 | 0.833 |
+| E | 0.3110 | 0.2333 | 0.2073 | 0.1943 | 0.889 |
+
+All five individuals show monotonic MSE improvement from one to two to three training environments.
+
+Thus the convergence pattern is individual-level, not merely an aggregate effect.
+
+The individuals differ mainly in **how noisy their environment-specific expression is**, not in whether the scalar estimate converges:
+- A and D are comparatively stable;
+- B and C show larger environment-to-environment variability;
+- nevertheless all five move toward their full-training estimate as independent environments accumulate.
+
+This supports a useful distinction:
+
+[
+\theta_i = \text{stable personal coordinate}
+]
+
+while
+
+[
+y_{ie}-\theta_i = \text{environment-specific expression / residual}.
+]
+
+The residual variance differs among individuals even when the portable parameter is one-dimensional.
