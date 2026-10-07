@@ -100,13 +100,7 @@ Low value:
 
 A designed solution-opportunity experiment remains the cleanest direct test of:
 
-[
-	ext{multiple feasible solutions}
-	imes
-	ext{personal history}
-ightarrow
-	ext{individualized policy}.
-]
+`multiple feasible solutions × personal history → individualized policy`
 
 Public data have already narrowed the reason for doing such an experiment:
 
