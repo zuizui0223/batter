@@ -114,7 +114,17 @@ The enriched group is more dispersed in the observed direction, but randomizatio
 
 Therefore:
 
-> **history dependence is not equivalent to simple environmental variance amplification.**
+> **history dependence is not equivalent to a confirmed simple environmental variance amplification effect.**
+
+A post-primary exact decomposition shows that the observed positive D is directionally coherent rather than cancellation-driven:
+
+- Boldness contribution = **+0.465792**;
+- Exploration = **+0.250837**;
+- Activity = **+0.018070**;
+- all **3/3** traits point enriched > impoverished;
+- cancellation ratio = **0**.
+
+Thus enrichment shows an **expansion-like tendency across the measured personality dimensions**, but the randomized evidence remains insufficient for confirmatory increased individualization.
 
 The broad environment can affect behavior without necessarily increasing the amount of laboratory individuality.
 
@@ -198,7 +208,20 @@ Thus:
 
 Sex-specific directions were opposite (female D positive; male D negative), but these are descriptive only and cannot be promoted into subgroup rescue.
 
-## Replicated developmental boundary
+A post-primary exact additive decomposition across all 28 features shows that the null total is not uniform invariance:
+
+- positive feature contribution sum = **+3.746740**;
+- negative contribution sum = **−5.172237**;
+- total absolute contribution = **8.918976**;
+- net D = **−1.425497**;
+- positive / negative features = **15 / 13**;
+- cancellation ratio = **0.840173**.
+
+This is consistent descriptively with **reallocation of individual differentiation across acoustic dimensions** rather than simple gain or loss of total individuality.
+
+No feature-wise causal p-values are authorized.
+
+## Developmental effects are not one-dimensional changes in individuality
 
 The randomized enrichment and auditory-feedback experiments manipulate very different developmental inputs:
 
@@ -207,24 +230,45 @@ The randomized enrichment and auditory-feedback experiments manipulate very diff
 
 Both affect phenotype in their source studies.
 
-Yet neither frozen re-analysis supports a treatment effect on the **total amount of multivariate individual differentiation**.
+Yet neither frozen re-analysis confirms a treatment effect on the **total amount of multivariate individual differentiation**.
 
-Therefore the strongest bounded causal statement is:
+The post-primary decompositions reveal two distinct descriptive patterns:
+
+### Enrichment — expansion-like
+
+All three frozen laboratory personality dimensions contribute in the same positive direction to the enriched-minus-impoverished dispersion contrast.
+
+The total increase is not confirmatory (p=0.167785), but it is not produced by cancellation.
+
+### Auditory feedback — reallocation-like
+
+Fifteen of 28 acoustic dimensions contribute hearing > deaf and thirteen contribute hearing < deaf.
+
+Large opposing feature-level contributions cancel by about **84%**, leaving little net whole-repertoire difference.
+
+Thus the public data suggest that developmental experience can alter the **geometry/composition of individuality** in more than one way:
+
+- coherent expansion/contraction across traits;
+- redistribution across dimensions with little net change.
+
+Therefore the strongest bounded statement is:
 
 [
 oxed{
-	ext{developmental environment can change phenotype}
+	ext{developmental environment can change phenotype and the structure of individual differences}
 
-otRightarrow
-	ext{change in total individuality}
+otequiv
+	ext{simple change in total individuality}
 }
 ]
+
+The decomposition evidence is descriptive, not feature-wise confirmatory.
 
 This does **not** mean development is irrelevant to individuality.
 
 The juvenile own-history result still shows strong identity-specific refinement.
 
-Instead it implies that formation is likely about **which dimensions / trajectories become individualized**, not simply how much total between-individual variance exists.
+Instead it implies that formation is increasingly a question of **which dimensions and trajectories become individualized**, not only how much total between-individual variance exists.
 
 
 ## Randomized developmental auditory-feedback test
