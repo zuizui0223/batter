@@ -59,17 +59,30 @@ Within each source, the biological unit was the individual bat. Trial-level, cal
 
 Source-level endpoint definitions, support requirements, scaling rules, and permutation/randomization nulls were frozen before numerical outcome opening. Sequential mechanism decompositions performed after a primary result were explicitly labelled descriptive or exploratory and were not allowed to rescue failed primaries.
 
-## Juvenile movement-history refinement
+## Juvenile first-flight history
 
-The juvenile-history analysis compared how well early versus more recent personal movement history predicted later individual organization.
+We used the public first-flight dataset associated with Harten et al. 2020 to test whether personal spatial history became progressively more informative over early independent movement.
 
-The primary developmental question was not whether young bats differed, but whether later personal movement became better predicted by recent same-individual history than by an equally sized earliest history window.
+The frozen primary was deliberately stronger than a simple test that own history predicts later movement.
 
-The frozen comparison contrasted:
-- earliest two structurally valid days;
-- most recent two days before the late target period.
+For each of 14 structurally eligible juveniles, the primary statistic was the Spearman relationship between prior valid-day count and daily own-history predictive advantage over target valid-day ordinals 3–20.
 
-A positive identity-specific improvement indicated that personal organization had become more informative through the individual's own history rather than merely following a common ontogenetic trajectory.
+The programme-level statistic was the equal-individual mean of these slopes.
+
+The frozen support rule required:
+- programme-level excess over the whole-history identity-permutation null > 0;
+- one-sided permutation P <= 0.05;
+- at least 70% of juveniles with positive individual slopes.
+
+The primary null used 9,999 whole-history identity permutations within cohort.
+
+A predeclared late-history secondary asked whether, over target ordinals 11–20, true recent personal history predicted later spatial use better than experience-matched conspecific histories.
+
+A post-primary diagnostic, explicitly excluded from rescuing the primary, compared two equally sized two-day histories:
+- the earliest two structurally valid movement days;
+- the two immediately preceding the late target.
+
+This diagnostic separated weak early seed persistence from later identity-specific updating.
 
 ## Randomized early-environment enrichment
 
@@ -280,21 +293,47 @@ The cross-study synthesis was developed iteratively as public datasets were audi
 
 # Results
 
-## Personal history became more identity-informative over development
+## Late personal history was strongly informative, but the monotonic formation primary failed
 
-The earliest two structurally valid juvenile movement days did not robustly predict late individual movement:
-- identity advantage (E = +15.19);
-- (P = 0.1655);
-- 8/14 individuals positive.
+The frozen first-flight primary showed a positive programme-level experience slope:
 
-By contrast, the frozen comparison of recent versus earliest same-individual history was strongly positive:
-- (Q = +144.08);
-- (P = 0.0001);
-- 10/14 individuals positive.
+- B_obs = **+0.16733**;
+- null mean = **-0.06936**;
+- calibrated excess = **+0.23669**;
+- one-sided permutation P = **0.0102**.
 
-Thus later personal movement became substantially more identity-informative than the earliest observed independent movement history.
+However, only **8/14 juveniles (57.1%)** had positive individual slopes, below the frozen requirement of **10/14 (70%)**.
 
-This result supports historical refinement, but not a randomized external cause of the between-individual differences.
+Therefore the primary verdict was:
+
+**FAIL_PRIMARY_FORMATION_RULE**
+
+The data do not support one common gradual increase in personal-history advantage across juveniles.
+
+The predeclared late-history secondary was strongly positive:
+
+- L_obs = **+112.5554**;
+- null mean = **-0.1814**;
+- one-sided permutation P = **0.0001**;
+- **12/14 juveniles** had positive late-history advantage.
+
+Thus, by later early ontogeny, a juvenile's own recent movement history was substantially more informative about its next spatial use than experience-matched conspecific histories.
+
+The post-primary early-seed versus recent-history diagnostic further showed:
+
+- earliest two valid days: E = **+15.19**, P = **0.1655**, 8/14 positive — unsupported;
+- recent two versus earliest two: Q = **+144.079**, P = **0.0001**, 10/14 positive.
+
+This diagnostic suggests identity-specific updating beyond a weak early seed, but it cannot rescue the failed monotonic formation primary.
+
+A separate randomized early-environment history-carrier test using nightly outdoor strategy also failed to detect a treatment effect:
+
+- enriched mean H = **1.1476**;
+- impoverished mean H = **0.4395**;
+- T = **+0.7081**;
+- randomized two-sided P = **0.3244**.
+
+Thus broad enriched versus impoverished early experience did not detectably alter the later strength of personal-history dependence in that endpoint.
 
 ## Randomized enrichment did not confirm increased total individualization
 
@@ -500,7 +539,7 @@ At the same time, the result should not be interpreted as population-wide invari
 
 The developmental results differ sharply from the acute perturbation results.
 
-The juvenile-history analysis shows that recent personal history becomes more predictive of later individual movement. This is consistent with progressive identity-specific refinement.
+The juvenile-history results are more constrained. Late personal history is strongly predictive of later spatial use, but the frozen primary does not support one common monotonic increase in that advantage across juveniles. A post-primary diagnostic suggests recent history contains more identity information than the earliest two valid days, but this cannot be promoted into primary formation support.
 
 But the two randomized developmental manipulations do not support a simple scalar rule for the amount of individuality.
 
@@ -539,7 +578,7 @@ But together they highlight a more specific formation question:
 
 This question is distinct from asking whether the total amount of among-individual variation increases or decreases.
 
-It also aligns with the juvenile-history result: the identity-bearing information in behavior can become stronger with personal history even when treatment-level environment does not explain the total dispersion.
+It also aligns with the juvenile-history boundary: personal history can carry strong individual information later, yet its ontogenetic build-up is heterogeneous and is not simply strengthened by broad enriched versus impoverished developmental treatment.
 
 ## Coarse personal organization is more portable than detailed realization
 
@@ -626,7 +665,7 @@ Cross-task analyses further show that coarse personal organization can transfer 
 
 Together, these results support a layered empirical view of behavioral individuality.
 
-The strongest remaining question is no longer whether environment matters.
+The strongest remaining question is no longer whether environment matters or whether late personal history can be informative.
 
 It is:
 
