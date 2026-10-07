@@ -12,6 +12,8 @@ import shutil
 import subprocess
 import zipfile
 
+from mirror_carollia_cc0_v1 import mirror_into as mirror_carollia_cc0
+
 ROOT = Path(__file__).resolve().parents[2]
 HERE = Path(__file__).resolve().parent
 BUILD = ROOT / "build" / "behavioral_ecology_review_archive_v1"
@@ -29,6 +31,8 @@ CURRENT_FILES = [
     "prospective/public_causal_synthesis/plot_synthesis_figures_v1.py",
     "prospective/public_causal_synthesis/DATA_SOURCE_MANIFEST_V1.csv",
     "prospective/public_causal_synthesis/REVIEW_ARCHIVE_README_V1.md",
+    "prospective/public_causal_synthesis/CAROLLIA_CC0_MIRROR_MANIFEST_V1.json",
+    "prospective/public_causal_synthesis/mirror_carollia_cc0_v1.py",
     "figures/public_causal/FIGURE_1_CAUSAL_LAYERS_V1.svg",
     "figures/public_causal/FIGURE_2A_FIRST_FLIGHT_FORMATION_V1.svg",
     "figures/public_causal/FIGURE_2B_DEVELOPMENTAL_RANDOMIZATION_V1.svg",
@@ -239,6 +243,7 @@ def main():
     BUILD.mkdir(parents=True)
     copy_current()
     copy_source_groups()
+    mirror_carollia_cc0(BUILD)
     anonymity_scan()
     checksums()
     anonymity_scan()
