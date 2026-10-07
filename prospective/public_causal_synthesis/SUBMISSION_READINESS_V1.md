@@ -202,21 +202,33 @@ Do not expose the identified development repository in reviewer-facing material.
 
 ### Supplementary material
 
-**CONTENT DRAFT COMPLETE; PDF PACKAGING REMAINS**
+**PASS — SINGLE PDF BUILT AND VERIFIED**
 
 Behavioral Ecology permits one Supplementary Material PDF if needed.
 
 Content source:
 `SUPPLEMENTARY_MATERIAL_DRAFT_V1.md`
 
-Planned single supplement:
+Verified PDF:
+- 7 pages;
+- A4 landscape;
+- SHA256 `414f40314bbba8d15d28bb5ca0505fe29a0b95ec5ce368a5249b2d7f8e40bdb8`;
+- all pages rendered and visually checked;
+- required evidence-tier text scan PASS;
+- anonymous-token scan PASS.
+
+Authoritative receipt:
+`SUPPLEMENTARY_PDF_RECEIPT_V1.md`.
+
+Contents:
 - Table S1 source/data/provenance ledger;
 - Table S2 frozen endpoints/nulls/support rules;
 - Figure S1 analysis-provenance timeline;
 - Figure S2 developmental descriptive decompositions;
-- Figure S3 exact-null resolution / small-n explanation.
+- Figure S3 exact-null resolution / small-n explanation;
+- evidence-tier methods and overlap disclosure.
 
-Do not place executable code inside the PDF; code belongs in the review archive.
+Executable code remains in the review archive rather than the PDF.
 
 ### Double-anonymized manuscript
 
@@ -326,8 +338,7 @@ PASS:
 4. **CRediT roles**
 5. **Conflict-of-interest statement**
 6. **Final AI disclosure verification**
-7. **Single Supplementary PDF packaging, if used**
-8. **Final reference-style conversion to Behavioral Ecology format**
+7. **Final reference-style conversion to Behavioral Ecology format**
 
 ### Strongly recommended
 
@@ -341,7 +352,7 @@ PASS:
 
 **JOURNAL UPLOAD: NOT YET READY**
 
-Scientific manuscript, figures, evidence guards, anonymized manuscript and anonymized review-package build are complete.
+Scientific manuscript, figures, evidence guards, anonymized manuscript, anonymized review-package builds, and the single verified Supplementary PDF are complete.
 
 The remaining blockers are:
 - anonymous external placement of the clean review ZIP, if needed by the journal;
