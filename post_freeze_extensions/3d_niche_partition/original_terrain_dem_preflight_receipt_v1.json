@@ -1,0 +1,92 @@
+{
+  "contract_sha256": "6aaaed3793d7e40ac29fefc448c2ece63c00950c32862147a6966d8b71dd61f7",
+  "next_step": "Commit this receipt unchanged before any HGT tile is decoded into elevation values.",
+  "numeric_dem_elevation_values_decoded": false,
+  "panels": {
+    "hypsignathus": {
+      "coordinate_row_count": 26945,
+      "source_gps_md5": "e2fd92d7647c745b54191def19131570",
+      "target_session_count": 209,
+      "tile_count": 1,
+      "tiles": [
+        {
+          "decoded_elevation_values": false,
+          "grid_n": 3601,
+          "gzip_bytes": 10483130,
+          "gzip_sha256": "4bae8d8620c81cc61205d3932a28ffeb7ba39b242fd65d769ed78c3700520ff2",
+          "tile": "N00E014",
+          "url": "https://s3.amazonaws.com/elevation-tiles-prod/skadi/N00/N00E014.hgt.gz"
+        }
+      ]
+    },
+    "phyllostomus_2016": {
+      "coordinate_row_count": 178042,
+      "source_gps_md5": "58d555f48e07b5e41e2c5d1983b25e80",
+      "target_session_count": 25,
+      "tile_count": 1,
+      "tiles": [
+        {
+          "decoded_elevation_values": false,
+          "grid_n": 3601,
+          "gzip_bytes": 8882185,
+          "gzip_sha256": "5a0ed5baeaf687fa8392444269dbfb8cdd198c0a383fb103b8aed85d9651c1f3",
+          "tile": "N09W083",
+          "url": "https://s3.amazonaws.com/elevation-tiles-prod/skadi/N09/N09W083.hgt.gz"
+        }
+      ]
+    },
+    "phyllostomus_2022": {
+      "coordinate_row_count": 20555,
+      "source_gps_md5": "7bae1d6d59acad98a4df7348c04d5ea6",
+      "target_session_count": 226,
+      "tile_count": 1,
+      "tiles": [
+        {
+          "decoded_elevation_values": false,
+          "grid_n": 3601,
+          "gzip_bytes": 8882185,
+          "gzip_sha256": "5a0ed5baeaf687fa8392444269dbfb8cdd198c0a383fb103b8aed85d9651c1f3",
+          "tile": "N09W083",
+          "url": "https://s3.amazonaws.com/elevation-tiles-prod/skadi/N09/N09W083.hgt.gz"
+        }
+      ]
+    },
+    "phyllostomus_2023": {
+      "coordinate_row_count": 14500,
+      "source_gps_md5": "327c31ea3e129d692bbb527ad32995f1",
+      "target_session_count": 61,
+      "tile_count": 1,
+      "tiles": [
+        {
+          "decoded_elevation_values": false,
+          "grid_n": 3601,
+          "gzip_bytes": 8882185,
+          "gzip_sha256": "5a0ed5baeaf687fa8392444269dbfb8cdd198c0a383fb103b8aed85d9651c1f3",
+          "tile": "N09W083",
+          "url": "https://s3.amazonaws.com/elevation-tiles-prod/skadi/N09/N09W083.hgt.gz"
+        }
+      ]
+    }
+  },
+  "schema_version": 1,
+  "status": "DEM_MAY_OPEN",
+  "study_id": "batter-original-panel-terrain-3d-geometry-dem-preflight-v1",
+  "unique_tiles": [
+    {
+      "decoded_elevation_values": false,
+      "grid_n": 3601,
+      "gzip_bytes": 10483130,
+      "gzip_sha256": "4bae8d8620c81cc61205d3932a28ffeb7ba39b242fd65d769ed78c3700520ff2",
+      "tile": "N00E014",
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/skadi/N00/N00E014.hgt.gz"
+    },
+    {
+      "decoded_elevation_values": false,
+      "grid_n": 3601,
+      "gzip_bytes": 8882185,
+      "gzip_sha256": "5a0ed5baeaf687fa8392444269dbfb8cdd198c0a383fb103b8aed85d9651c1f3",
+      "tile": "N09W083",
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/skadi/N09/N09W083.hgt.gz"
+    }
+  ]
+}
