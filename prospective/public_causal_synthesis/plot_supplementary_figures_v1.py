@@ -153,15 +153,12 @@ ax.bar(x,assignments)
 ax.set_yscale("log")
 ax.set_xticks(x,systems)
 ax.set_ylabel("Number of legal exact identity/null assignments (log scale)")
-ax.set_title("Exact-null resolution is not biological replication")
+ax.set_title("Exact-null resolution is not biological replication", pad=16)
+ax.set_ylim(15, 2600)
 for i in range(len(systems)):
-    ax.text(i,assignments[i]*1.08,
+    ax.text(i,assignments[i]*1.12,
             f"biological n={n_bio[i]}\nmin p={min_p[i]:.6f}",
             ha="center",va="bottom",fontsize=9)
-ax.text(0.02,0.02,
-        "A larger combinatorial null gives finer within-experiment mapping resolution,\n"
-        "but does not increase the number of biological individuals.",
-        transform=ax.transAxes,fontsize=9)
 save(fig,"FIGURE_S3_EXACT_NULL_RESOLUTION_V1.svg")
 
 print("generated",len(list(OUT.glob("FIGURE_S*_V1.svg"))),"supplementary SVG files")
