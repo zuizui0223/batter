@@ -14,21 +14,33 @@ HERE=Path(__file__).resolve().parent
 OUT=HERE/"S1_SCHEMA_AUDIT_V1.json"
 OUTMD=HERE/"S1_SCHEMA_AUDIT_V1.md"
 
-URL="https://journals.plos.org/plosbiology/article/file?id=10.1371/journal.pbio.2002556.s011&type=supplementary"
-HEAD={"User-Agent":"Mozilla/5.0 batter-crowd-playback-schema/1.0"}
+URLS=[
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC5663327/bin/pbio.2002556.s011.xlsx",
+    "https://journals.plos.org/plosbiology/article/file?id=10.1371/journal.pbio.2002556.s011&type=supplementary",
+]
+HEAD={"User-Agent":"Mozilla/5.0 batter-crowd-playback-schema/1.1"}
 
 KEY=re.compile(r"(pup|bat|individual|id|group|playback|sex|session|age|week|LD1|LD2|Fig.?2)",re.I)
 
 def fetch():
-    req=urllib.request.Request(URL,headers=HEAD)
-    with urllib.request.urlopen(req,timeout=120) as r:
-        return r.read()
+    errors=[]
+    for url in URLS:
+        try:
+            req=urllib.request.Request(url,headers=HEAD)
+            with urllib.request.urlopen(req,timeout=30) as r:
+                data=r.read()
+            if data[:2] != b"PK":
+                raise RuntimeError(f"not XLSX magic: {data[:16]!r}")
+            return data,url
+        except Exception as exc:
+            errors.append({"url":url,"error":repr(exc)})
+    raise RuntimeError(f"all supplement download routes failed: {errors}")
 
 def is_id_like_header(x):
     return isinstance(x,str) and bool(re.search(r"(pup|bat|individual|id|group|playback|sex|session|age|week)",x,re.I))
 
 def main():
-    data=fetch()
+    data,source_url=fetch()
     wb=openpyxl.load_workbook(BytesIO(data),read_only=True,data_only=False)
 
     sheets=[]
@@ -87,6 +99,7 @@ def main():
     result={
         "version":1,
         "source":"10.1371/journal.pbio.2002556.s011",
+        "download_route":source_url,
         "bytes":len(data),
         "sheets":sheets,
     }
@@ -96,6 +109,7 @@ def main():
         "# Crowd-playback S1 Data schema audit v1","",
         "**STRUCTURE ONLY — NO NUMERIC ACOUSTIC OUTCOME VALUES REPORTED.**","",
         f"- workbook bytes: **{len(data)}**",
+        f"- download route: `{source_url}`",
         f"- sheets: **{len(sheets)}**","",
     ]
     for s in sheets:
