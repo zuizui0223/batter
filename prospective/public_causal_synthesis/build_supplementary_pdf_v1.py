@@ -12,6 +12,8 @@ import fitz
 import markdown
 from weasyprint import HTML, CSS
 
+LAYOUT_REVISION = 2  # force rebuild after supplementary-figure layout correction
+
 ROOT=Path(__file__).resolve().parents[2]
 SRC=ROOT/"prospective"/"public_causal_synthesis"/"SUPPLEMENTARY_MATERIAL_DRAFT_V1.md"
 FIGDIR=ROOT/"figures"/"public_causal_supplement"
