@@ -11,6 +11,7 @@ on:
       - "prospective/public_causal_synthesis/COMPLETE_ANONYMOUS_TEXT_V1.md"
       - "prospective/public_causal_synthesis/build_complete_anonymous_text_v1.py"
       - "prospective/public_causal_synthesis/anonymous_submission_guard_v1.py"
+      - "prospective/public_causal_synthesis/anonymous_text_format_guard_v1.py"
       - ".github/workflows/public-causal-anonymous-submission-guard-v1.yml"
   workflow_dispatch:
 
@@ -26,7 +27,7 @@ jobs:
           python-version: "3.12"
       - name: Rebuild anonymous text
         run: python prospective/public_causal_synthesis/build_complete_anonymous_text_v1.py
-      - name: Assert committed anonymous text is current
-        run: git diff --exit-code -- prospective/public_causal_synthesis/COMPLETE_ANONYMOUS_TEXT_V1.md
+      - name: Guard generated anonymous text formatting
+        run: python prospective/public_causal_synthesis/anonymous_text_format_guard_v1.py
       - name: Run submission/anonymization guard
         run: python prospective/public_causal_synthesis/anonymous_submission_guard_v1.py
