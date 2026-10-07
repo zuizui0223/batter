@@ -73,11 +73,61 @@ Again, the broad principle is not new.
 
 ---
 
+## 2026 direct prior art: individuality across environmental context
+
+Mathejczyk et al. (2026),
+*Individuality across environmental context in Drosophila melanogaster*,
+eLife 13:RP98171,
+DOI: `10.7554/eLife.98171`.
+
+This study directly asks whether behavioral individuality persists across changes in:
+- temperature;
+- visual cues;
+- arena shape;
+- walking versus flying contexts.
+
+It finds that individuality is strongly context dependent, but that at least one behavioral trait retains individual-specific variation under substantial environmental change.
+
+Therefore do **not** claim novelty for:
+
+> individuality persists when environmental context changes.
+
+That principle is already directly demonstrated outside bats.
+
+The bat synthesis must instead emphasize what is added by the combination of **controlled perturbation**, **developmental manipulation**, and **fixed evidence tiers**.
+
+### Developmental origins are also an active established field
+
+de Bivort (2025),
+*The Developmental Origins of Behavioral Individuality*,
+Annual Review of Cell and Developmental Biology,
+DOI: `10.1146/annurev-cellbio-101323-025423`.
+
+This review emphasizes that individuals can differ even under similar genotype/environment and highlights stochastic, developmental, neural and multivariate mechanisms.
+
+Therefore do not claim novelty for:
+
+> development can generate individuality.
+
+The unresolved question is more specific:
+which causal histories allocate individual-specific information to which behavioral dimensions, and why broad treatment effects often fail to predict the total amount of individual divergence?
+
+---
+
 # What the batter public-data synthesis adds
 
 The contribution is narrower and empirical.
 
 ## 1. Independent bat manipulations separate formation from maintenance
+
+The novelty is **not** generic cross-context consistency.
+
+The contribution is that independent bat experiments occupy different causal layers:
+
+- acute/current-context perturbations repeatedly preserve identity mapping;
+- randomized developmental manipulations strongly alter phenotype but do not obey a simple rule for total individualization;
+- personal-history analyses show identity-specific refinement;
+- detailed realized geometry remains more context sensitive than coarser individual organization.
 
 Current-context perturbations repeatedly preserve identity mapping:
 
@@ -130,17 +180,27 @@ Thus personal organization can be refined through individual history even when g
 
 Do not write:
 
-> We show for the first time that environments alter the multivariate structure of animal personality.
+> We show for the first time that individuality persists across changing environments.
 
 That is false.
 
+Do not write:
+
+> We show for the first time that development changes individuality.
+
+That is also too broad.
+
 A defensible statement is:
 
-> **Across independent public bat experiments, developmental manipulations and current-context perturbations affect different layers of individuality: developmental history can reshape phenotype and redistribute where individual differences are expressed, whereas established individual correspondence repeatedly persists through acute sensory and navigation perturbations.**
+> **Across independent bat experiments, formation and maintenance of behavioral individuality are empirically separable: established individual correspondence repeatedly survives acute sensory/navigation perturbations, whereas randomized developmental manipulations can strongly alter phenotype without predictably changing the total amount of individual differentiation.**
 
-An even more compact framing:
+A compact framing:
 
-> **Development appears to reorganize individuality; current context mainly reorganizes its expression.**
+> **Current context readily rewrites expression; development rewrites phenotype, but neither process maps simply onto the amount of individuality.**
+
+The more specific open problem is:
+
+> **what determines where individual-specific information is allocated across behavioral dimensions and histories?**
 
 This is a synthesis claim, not a single-experiment theorem.
 
