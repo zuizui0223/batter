@@ -711,7 +711,7 @@ Such analyses are not allowed to rescue a failed frozen primary.
 No new animals were captured, handled or experimentally manipulated for this study. All analyses use public data from previously published studies. Ethical approvals and animal-care procedures for the original experiments are reported in the respective source publications.
 
 
-# References — working list
+# References
 
 - Anonymous. 2026. Reproducibility archive for: Individual organization remains detectable across acute perturbations in bats. `[ANONYMIZED_REVIEW_ARCHIVE_URL]`.
 
