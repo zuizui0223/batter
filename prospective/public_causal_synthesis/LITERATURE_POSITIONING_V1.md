@@ -114,6 +114,40 @@ which causal histories allocate individual-specific information to which behavio
 
 ---
 
+## 2026 developmental prior art: ecological stress can shift behavior without changing individuality magnitude
+
+Gallagher et al. (2026),
+*Born This Way: Individuality Is Seeded Before Birth and Robust to Ecological Stress*,
+Ecology Letters 29:e70454,
+DOI: `10.1111/ele.70454`.
+
+This is especially important prior art for the Rachum enrichment boundary.
+
+Gallagher et al. use genetically clonal Amazon mollies split across predator-cue and control developmental environments and track behavior continuously from birth.
+
+They report:
+- predation stress changes mean-level behavior;
+- the magnitude of individuality is unaffected;
+- maternal identity contributes to some behavioral dimensions;
+- individuality is already detectable from very early life and remains robust under ecological stress.
+
+Therefore do **not** claim novelty for:
+
+> environmental challenge can change mean behavior without changing the magnitude of individuality.
+
+That causal separation now has direct contemporary precedent.
+
+The bat programme still adds something narrower:
+
+- multiple **acute/current-context** manipulations preserve individual correspondence;
+- two independent **developmental** manipulations alter phenotype without a simple monotonic effect on total individualization;
+- coarse personal organization transfers more broadly than detailed realized geometry;
+- the laboratory-to-wild niche bridge is explicitly tested and remains unresolved.
+
+Thus the contribution is a **multi-layer causal decomposition within bats**, not discovery of a universal environment-versus-individuality rule.
+
+---
+
 # What the batter public-data synthesis adds
 
 The contribution is narrower and empirical.
@@ -192,7 +226,7 @@ That is also too broad.
 
 A defensible statement is:
 
-> **Across independent bat experiments, formation and maintenance of behavioral individuality are empirically separable: established individual correspondence repeatedly survives acute sensory/navigation perturbations, whereas randomized developmental manipulations can strongly alter phenotype without predictably changing the total amount of individual differentiation.**
+> **Across independent bat experiments, formation, maintenance, expression and ecological consequence occupy different empirical layers: established individual correspondence repeatedly survives acute sensory/navigation perturbations, randomized developmental manipulations alter phenotype without a simple rule for total individualization, coarse personal organization transfers more broadly than detailed geometry, and the wild niche bridge remains unresolved.**
 
 A compact framing:
 
