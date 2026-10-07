@@ -18,7 +18,7 @@ Behavioral individuality is commonly defined by consistent differences among ind
 
 - Individual-specific organization remains detectable across multiple independent controlled acute perturbations.
 - Coarse movement organization can transfer across contexts where detailed geometry does not.
-- Recent personal history can become more identity-informative than early history.
+- Late personal history strongly predicts later spatial use, while a common monotonic increase in history dependence across juveniles is not supported.
 - Developmental manipulations can change phenotype without a supported simple change in total multivariate individualization.
 - Laboratory individual organization does not automatically imply a confirmed wild spatial-niche bridge.
 
