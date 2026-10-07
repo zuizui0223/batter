@@ -159,6 +159,74 @@ This secondary is descriptive only, but it suggests a more specific biological p
 
 The safe synthesis is state recalibration, not confirmed convergence or erasure.
 
+## Randomized developmental auditory-feedback manipulation
+
+Independent public experiment:
+Elie et al. 2024, Egyptian fruit bats.
+
+Ten pups were randomly assigned shortly after birth:
+- hearing / saline control = **5**;
+- deafened / kanamycin = **5**;
+- each treatment = **3 females + 2 males**.
+
+Adult whole-repertoire vocal phenotype:
+- **28,091** good-microphone-quality calls;
+- **28** fixed acoustic features;
+- bat is the biological unit;
+- minimum finite support = **1,037 calls per bat × feature**.
+
+Frozen whole-repertoire individualization primary:
+- one 28-D centroid per bat;
+- treatment-blind scaling across the ten bat centroids;
+- shared sex × treatment centroid removed;
+- exact sex-conditioned treatment randomization:
+  (inom{6}{3}inom{4}{2}=120) assignments;
+- two-sided test fixed before acoustic values were opened.
+
+Result:
+- V_hearing = **15.766760**;
+- V_deaf = **17.192257**;
+- D = V_hearing − V_deaf = **−1.425497**;
+- exact two-sided p = **0.716667**;
+- verdict = **NO_DIFFERENCE_IN_AMOUNT**.
+
+The source study establishes that developmental auditory feedback affects learned vocal production, but the frozen re-analysis does not show a detectable effect on the **total amount of adult whole-repertoire individual differentiation**.
+
+Thus:
+
+> **developmental feedback can alter learned phenotype without necessarily altering how much individuals differ overall.**
+
+Sex-specific directions were opposite (female D positive; male D negative), but these are descriptive only and cannot be promoted into subgroup rescue.
+
+## Replicated developmental boundary
+
+The randomized enrichment and auditory-feedback experiments manipulate very different developmental inputs:
+
+1. broad environmental complexity / enrichment;
+2. access to auditory feedback required for vocal learning.
+
+Both affect phenotype in their source studies.
+
+Yet neither frozen re-analysis supports a treatment effect on the **total amount of multivariate individual differentiation**.
+
+Therefore the strongest bounded causal statement is:
+
+[
+oxed{
+	ext{developmental environment can change phenotype}
+
+otRightarrow
+	ext{change in total individuality}
+}
+]
+
+This does **not** mean development is irrelevant to individuality.
+
+The juvenile own-history result still shows strong identity-specific refinement.
+
+Instead it implies that formation is likely about **which dimensions / trajectories become individualized**, not simply how much total between-individual variance exists.
+
+
 ## Randomized developmental auditory-feedback test
 
 Independent public experiment:
@@ -529,6 +597,7 @@ Supported:
 
 Not supported:
 - broad enrichment causes increased individualization;
+- developmental auditory feedback changes the total amount of adult whole-repertoire vocal individualization;
 - developmental auditory feedback changes total adult whole-repertoire vocal individualization;
 - one universal bat policy axis;
 - one universal detailed geometry;
