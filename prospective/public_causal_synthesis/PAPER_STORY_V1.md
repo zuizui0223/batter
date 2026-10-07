@@ -64,19 +64,47 @@ That separation is the biological core.
 
 # Evidence chain
 
-## Layer A — history refinement
+## Layer A — personal history is informative, but the formation trajectory is not universal
 
-Juvenile movement history:
+First-flight history programme:
 
-- earliest two days -> later personal state: unsupported;
-- recent two versus earliest two: Q = +144.08, p = 0.0001.
+Frozen monotonic formation primary:
+- B = +0.16733;
+- permutation p = 0.0102;
+- positive experience slopes = 8/14;
+- frozen requirement = 10/14.
 
-Interpretation:
+Verdict:
 
-> personal organization becomes more identity-informative through individual history.
+**PRIMARY FORMATION RULE FAIL.**
 
-Boundary:
-not randomized causal formation.
+Thus there is a positive programme-level tendency, but not the directionally consistent ontogenetic increase required by the frozen hypothesis.
+
+Predeclared late-history secondary:
+- L = +112.5554;
+- p = 0.0001;
+- 12/14 juveniles positive.
+
+This supports:
+
+> by later early ontogeny, a juvenile's own recent movement history is substantially more informative about its next spatial use than experience-matched conspecific histories.
+
+Post-primary mechanism diagnostic:
+- earliest two valid days: E = +15.19, p = 0.1655, unsupported;
+- recent two versus earliest two: Q = +144.079, p = 0.0001, 10/14 positive.
+
+This suggests identity-specific updating/refinement after the earliest seed, but it is **post-primary diagnostic evidence** and cannot rescue the failed formation primary.
+
+Independent randomized early-environment history-carrier test:
+- enriched mean H = 1.1476;
+- impoverished mean H = 0.4395;
+- T = +0.7081;
+- randomized p = 0.3244;
+- **FAIL TREATMENT EFFECT**.
+
+Therefore the safe formation conclusion is:
+
+> **personal history is strongly informative later, but neither a universal monotonic build-up nor a broad enrichment-driven strengthening of the history carrier is established.**
 
 ## Layer B — randomized developmental manipulation
 
@@ -257,7 +285,7 @@ This is the conceptual figure.
 ## Figure 2 — formation is not scalar variance amplification
 
 Panel A:
-juvenile recent-history refinement.
+late-history support with failed monotonic formation primary.
 
 Panel B:
 Rachum randomized enrichment:
@@ -314,7 +342,7 @@ portable individual organization, detailed expression, and ecological niche are 
 
 # Results-section order
 
-1. **Personal history refines individual organization**
+1. **Personal history is informative, but its ontogenetic build-up is heterogeneous**
 2. **Randomized developmental manipulations do not obey a simple individualization rule**
 3. **Individual correspondence survives independent current-context perturbations**
 4. **Coarse individual organization transfers more broadly than detailed geometry**
