@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-personal-3d-shrinkage-prediction-v1",
+  "frozen_date": "2026-10-07",
+  "status": "post-outcome variance-control diagnostic frozen after predictive-ladder failure of unregularized shape increment and before opening shrinkage outcome",
+  "role": "tests whether cell-specific personal 3D shape contains forward predictive signal that is hidden by estimation variance",
+  "parent": {
+    "workflow_run_id": 37617952904,
+    "artifact_id": 11481385106,
+    "known_result": "unregularized self spatial increment I1-I0 unsupported in all three panels"
+  },
+  "included_panels": ["hypsignathus","phyllostomus_2022","phyllostomus_2023"],
+  "target_gate": {
+    "inherit_lane_b_target_support": true,
+    "minimum_self_history_sessions_for_internal_cv": 2,
+    "expected_after_gate": {
+      "hypsignathus": {"target_sessions": 66, "target_individuals": 17},
+      "phyllostomus_2022": {"target_sessions": 62, "target_individuals": 16},
+      "phyllostomus_2023": {"target_sessions": 5, "target_individuals": 5}
+    }
+  },
+  "history": {
+    "minimum_lag_days": 3,
+    "minimum_other_individuals": 3,
+    "minimum_scored_target_fixes": 50,
+    "horizontal_grid_m": 500,
+    "vertical_center": "session median"
+  },
+  "model": {
+    "self_marginal_I0": "equal-session mean focal-history marginal P(z)",
+    "raw_self_conditional_I1": "equal-session mean focal-history P(z|cell)",
+    "shrunk_personal_map": "P_lambda(z|cell)=w_cell*I1(z|cell)+(1-w_cell)*I0(z), with w_cell=n_cell/(n_cell+lambda)",
+    "n_cell": "total focal-history fixes in the 500-m cell over the training sessions used for that fold",
+    "lambda_grid": [0,5,20,50,100,200,500,1000],
+    "lambda_selection": "leave-one-self-history-session-out mean log score, using only focal history; choose largest lambda among exact numerical ties",
+    "unseen_validation_cell": "w_cell=0, hence prediction equals I0",
+    "target_score": "mean held-out target log P_lambda(z|cell) - log I0(z) on the exact inherited Lane-B target support"
+  },
+  "aggregation": "equal target session within biological individual, then equal biological individual",
+  "uncertainty": {
+    "method": "cluster bootstrap biological individuals",
+    "B": 4999,
+    "seeds": {
+      "hypsignathus": 2026100751,
+      "phyllostomus_2022": 2026100752,
+      "phyllostomus_2023": 2026100753
+    },
+    "support": "panel mean > 0 and percentile 95% lower bound > 0"
+  },
+  "interpretation": {
+    "supported": "regularized cell-specific personal shape adds forward predictive information beyond the focal marginal vertical state",
+    "unsupported": "within this post-outcome diagnostic, variance control does not recover positive forward predictive value for cell-specific personal shape"
+  },
+  "claim_boundary": [
+    "Lambda is selected entirely within past self-history; held-out target outcomes cannot affect lambda.",
+    "This diagnostic is motivated by a known negative unregularized result and is not independent confirmation.",
+    "A supported result would rescue predictive shape information, not establish cognitive memory as its mechanism.",
+    "An unsupported result would strengthen the distinction between descriptive repeatability and positive forward predictive value, but would not prove zero biological spatial structure.",
+    "No lambda grid, target gate, support set, lag, weighting, bootstrap rule or interpretation threshold may change after outcome opening."
+  ]
+}
