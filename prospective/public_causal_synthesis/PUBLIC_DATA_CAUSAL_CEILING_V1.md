@@ -8,7 +8,7 @@ The current public archive universe is sufficient to support:
 
 It also supports:
 
-> **Personal history can refine individual organization over development.**
+> **Personal history becomes strongly predictive later in ontogeny, but the frozen primary does not support one common monotonic build-up trajectory across juveniles.**
 
 Two independent randomized developmental manipulations now show that large environmental effects on phenotype need not alter the total amount of individual differentiation.
 
