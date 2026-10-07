@@ -143,7 +143,7 @@ Do not place executable code inside the PDF; code belongs in the review archive.
 
 ### Double-anonymized manuscript
 
-**DRAFT COMPLETE; ANONYMOUS ARCHIVE URL REMAINS**
+**DRAFT COMPLETE; ARCHIVE SANITIZATION PASS; ANONYMOUS HOSTING URL REMAINS**
 
 Anonymous file:
 `MANUSCRIPT_ANONYMIZED_BEHAVIORAL_ECOLOGY_V1.md`
@@ -156,7 +156,7 @@ Checks:
 - review archive represented as `[ANONYMIZED_REVIEW_ARCHIVE_URL]`.
 
 Remaining blocker:
-replace the placeholder with a genuinely anonymized review archive before upload.
+upload the already-sanitized deterministic review ZIP to a genuinely anonymized host and replace the placeholder URL before submission.
 
 ### Funding
 
@@ -241,7 +241,7 @@ PASS:
 
 ### Must resolve before upload
 
-1. **Anonymous analysis archive**
+1. **Anonymous hosting URL for the already-built review archive**
 2. **Author/affiliation/corresponding-author metadata**
 3. **Funding statement**
 4. **CRediT roles**
