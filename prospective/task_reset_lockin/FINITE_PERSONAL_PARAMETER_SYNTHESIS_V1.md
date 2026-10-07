@@ -255,3 +255,30 @@ The next generality question is whether species differ in:
 - context dependence of theta.
 
 That is a cross-species research programme, not a conclusion from the present single positive system.
+
+
+## Individual-level convergence caveat
+
+The authoritative convergence workflow also shows an important distinction between **parameter convergence** and **complete behavioural prediction**.
+
+All five bats show decreasing MSE as more environments are used to estimate theta, but the full-training scalar has heterogeneous predictive value:
+
+- A: R2_full = +0.904
+- B: R2_full = -0.603
+- C: R2_full = -0.340
+- D: R2_full = +0.952
+- E: R2_full = +0.442
+
+Thus B and C have large environment-specific residual expression even though their scalar estimates themselves stabilize.
+
+This sharpens the mathematical claim:
+
+> one scalar is sufficient to carry a transferable identity component, but one scalar is not sufficient to reconstruct every individual's complete cross-environment behaviour.
+
+For individual i, the more appropriate decomposition is
+
+x_ie = mu_e + alpha_e theta_i + h_ie + epsilon_ie,
+
+where the magnitude of h_ie can differ strongly among individuals.
+
+The next dimensionality question is therefore not whether theta exists, but whether the residual cross-environment reaction norm h_ie can itself be compressed into one or two additional personal coordinates.
