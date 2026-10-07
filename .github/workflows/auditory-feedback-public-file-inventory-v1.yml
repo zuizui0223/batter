@@ -1,0 +1,39 @@
+name: auditory-feedback-public-file-inventory-v1
+
+on:
+  push:
+    paths:
+      - "prospective/auditory_feedback_individualization/AUDIT_CONTRACT_V1.md"
+      - "prospective/auditory_feedback_individualization/public_file_inventory_v1.py"
+      - ".github/workflows/auditory-feedback-public-file-inventory-v1.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  inventory:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: prospective/auditory-feedback-individualization-v1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Inventory public archive
+        run: python prospective/auditory_feedback_individualization/public_file_inventory_v1.py
+      - name: Commit inventory
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add prospective/auditory_feedback_individualization/PUBLIC_FILE_INVENTORY_V1.json
+          git add prospective/auditory_feedback_individualization/PUBLIC_FILE_INVENTORY_V1.md
+          if git diff --cached --quiet; then
+            echo "No inventory changes"
+          else
+            git commit -m "Record auditory-feedback public file inventory"
+            git fetch origin prospective/auditory-feedback-individualization-v1
+            git rebase origin/prospective/auditory-feedback-individualization-v1
+            git push origin HEAD:prospective/auditory-feedback-individualization-v1
+          fi
