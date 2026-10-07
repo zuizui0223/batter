@@ -125,3 +125,69 @@ This points toward mechanisms such as:
 - fine-grained social/resource histories not captured by treatment labels.
 
 These are hypotheses, not yet identified causes.
+
+
+## Search stop rule
+
+**STOP ACCUMULATING CURRENT-CONTEXT PERTURBATION DATASETS.**
+
+Reason:
+
+The public programme already contains supported non-erasure / identity-retention results across:
+
+- external sensory masking;
+- graded masking;
+- reversible central auditory perturbation;
+- navigation-context manipulation.
+
+In addition, 2026 prior work in *Drosophila* directly establishes that behavioral individuality can persist across substantial environmental-context changes.
+
+Therefore another dataset showing:
+
+> the same individuals remain somewhat identifiable after another acute environmental manipulation
+
+has low marginal value.
+
+### A new public source is worth opening only if it adds one of:
+
+1. **formation**
+   - randomized or strongly identified developmental/learning history;
+   - individual-level repeated pre/post measurements;
+   - enough biological units for a prospectively frozen primary;
+
+2. **allocation / reorganization of individuality**
+   - multivariate repeated individual measurements;
+   - a treatment that can prospectively test orientation/reallocation rather than only total dispersion;
+
+3. **reversible biomechanics / intrinsic constraint**
+   - repeated identified individuals;
+   - manipulated physical/biomechanical state;
+   - an endpoint capable of separating personal policy from current mechanical constraint;
+
+4. **independently specified solution opportunity**
+   - feasible alternatives defined from apparatus/task structure before behavior is observed;
+   - later individual specialization measured under equal current opportunity.
+
+### Do not open for confirmatory expansion:
+
+- another ordinary repeatability panel;
+- another acute masker/noise manipulation;
+- another same-archive basis rotation;
+- another post-outcome feature subset;
+- another small-n context dataset whose only contribution is identity retention.
+
+## Current public-data endpoint
+
+The public-data programme is now sufficient to support:
+
+> **maintenance of individual organization is more robustly established than the causal origin of that organization.**
+
+It also supports a developmental boundary:
+
+> **large treatment effects on phenotype do not map monotonically onto the total amount of individuality.**
+
+The remaining formation problem is:
+
+> **what allocates individual-specific information across behavioral dimensions and personal histories?**
+
+Until a public source directly advances that question, the public-data search is closed.
