@@ -791,6 +791,3 @@ Full legends are in `prospective/public_causal_synthesis/FIGURE_CAPTIONS_V1.md`.
 
 - White SJ, Pascall DJ, Wilson AJ. 2020. Towards a comparative approach to the structure of animal personality variation. *Behavioral Ecology* 31:340–351. DOI: `10.1093/beheco/arz198`.
 
-## Disclosure note — draft
-
-Generative AI assisted with code review, repository organization, literature triage, and manuscript drafting from author-controlled analyses. Scientific decisions, source selection, analysis contracts, interpretation, and final responsibility remain with the human author(s). This wording must be reconciled with journal policy before submission.
