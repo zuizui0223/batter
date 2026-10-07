@@ -61,7 +61,7 @@ Source-level endpoint definitions, support requirements, scaling rules, and perm
 
 ## Juvenile first-flight history
 
-We used the public first-flight dataset associated with Harten et al. (2020) to test whether personal spatial history became progressively more informative over early independent movement.
+We used the public first-flight dataset associated with Harten et al. (2020a) to test whether personal spatial history became progressively more informative over early independent movement.
 
 The frozen primary was deliberately stronger than a simple test that own history predicts later movement.
 
@@ -86,7 +86,7 @@ This diagnostic separated weak early seed persistence from later identity-specif
 
 ## Randomized early-environment enrichment
 
-We reanalysed the public dataset from Rachum et al. (2025).
+We reanalysed the public dataset from Rachum et al. (2025a).
 
 The confirmatory cohort comprised Season-2 bats with complete Trials 1–3:
 - 29 bats total;
@@ -129,7 +129,7 @@ This secondary was not allowed to alter the primary verdict.
 
 ## Randomized developmental auditory-feedback manipulation
 
-We reanalysed the public adult-vocal dataset associated with Elie et al. (2024).
+We reanalysed the public adult-vocal dataset associated with Elie et al. (2024a).
 
 Ten pups had been randomly assigned shortly after birth:
 - 5 hearing / saline controls;
@@ -165,9 +165,9 @@ A post-primary descriptive decomposition allocated the total frozen (D) across a
 
 ## Pipistrellus sensory-masker perturbation
 
-We reanalysed the sensory-masker experiment of Taub and Yovel (2020).
+We reanalysed the sensory-masker experiment of Taub and Yovel (2020a).
 
-We used the public *Pipistrellus kuhlii* sensory-perturbation experiment of Taub and Yovel (2020), in which individuals experienced a masker manipulation.
+We used the public *Pipistrellus kuhlii* sensory-perturbation experiment of Taub and Yovel (2020a), in which individuals experienced a masker manipulation.
 
 The primary source-native movement endpoint was individual angle of approach / movement bias under baseline and masker conditions.
 
@@ -178,9 +178,9 @@ A second independent foam no-masker to foam+masker contrast was treated as a sep
 
 ## Myotis graded acoustic masking
 
-We reanalysed the graded masking experiment of Foskolos et al. (2022).
+We reanalysed the graded masking experiment of Foskolos et al. (2022a).
 
-We reanalysed the public *Myotis daubentonii* masking experiment of Foskolos et al. (2022).
+We reanalysed the public *Myotis daubentonii* masking experiment of Foskolos et al. (2022a).
 
 The frozen endpoint was log flight time.
 
@@ -192,7 +192,7 @@ The exact null permuted biological identity across conditions, yielding 1,296 le
 
 ## Eptesicus reversible auditory-midbrain perturbation
 
-We reanalysed the public experiment of Diebold et al. (2024).
+We reanalysed the public experiment of Diebold et al. (2024a).
 
 Four DREADD-treated bats had public audio data in both saline and ligand conditions:
 - jane;
@@ -218,7 +218,7 @@ All (4! = 24) saline-to-ligand identity mappings formed the exact null.
 
 ## Aharon navigation-context manipulation
 
-We reanalysed Figure 1 from Aharon et al. (2017).
+We reanalysed Figure 1 from Aharon et al. (2017a).
 
 The frozen first-eligible-figure rule selected Figure 1 before numerical values were opened.
 
@@ -251,7 +251,7 @@ legal identity mappings.
 
 ## Rhinolophus cross-task portability and Carollia external transfer
 
-The controlled *Rhinolophus nippon* movement archive was associated with Teshima et al. (2026). The independent *Carollia perspicillata* corridor archive was associated with Eveland et al. (2026).
+The controlled *Rhinolophus nippon* movement archive was associated with Teshima et al. (2026). The independent *Carollia perspicillata* corridor archive was associated with Eveland et al. (2026a).
 
 The controlled *Rhinolophus nippon* programme used the public obstacle-flight source of Teshima et al. (2026) and a frozen transparent two-axis movement representation:
 - FlightIntensity;
@@ -259,7 +259,7 @@ The controlled *Rhinolophus nippon* programme used the public obstacle-flight so
 
 The cross-context question was whether individual organization in this low-dimensional policy space predicted held-out obstacle contexts.
 
-A fixed representation was then transferred to an independent *Carollia perspicillata* dataset from Eveland et al. (2026).
+A fixed representation was then transferred to an independent *Carollia perspicillata* dataset from Eveland et al. (2026a).
 
 We also transferred a more detailed scale-free trajectory-geometry representation.
 
@@ -682,15 +682,15 @@ All analyses use previously published public datasets.
 
 Key public sources include:
 
-- Harten et al. first-flight data: Mendeley Data `10.17632/n9d8gbz3xr.1`;
-- Taub & Yovel sensory-masker data: source-public Dropbox archive `https://www.dropbox.com/sh/met5cvcq9nmvxdd/AAAF4saT9FZl01FwWyRgD1pqa?dl=0`;
-- Rachum et al. developmental-enrichment data: Mendeley Data `10.17632/wh7c636y3t.1`;
-- Elie et al. auditory-feedback data: Mendeley Data `10.17632/h5ff9vv5pc.1`;
-- Diebold et al. auditory-midbrain data: Zenodo `10.5281/zenodo.13857870`;
-- Aharon et al. navigation data: Mendeley Data `10.17632/f6mvhj5gj9.3`;
-- Teshima et al. Rhino/Miniopterus flight-policy data: Figshare dataset *Flight policy in obstacle space: estimation from imitation learning in two echolocating bat species*, `https://figshare.com/articles/dataset/Flight_policy_in_obstacle_space_estimation_from_imitation_learning_in_two_echolocating_bat_species/29209493` (`kiku` = *Rhinolophus nippon*; `yubi` = *Miniopterus fuliginosus*);
-- Foskolos et al. graded-masking data: Zenodo `10.5281/zenodo.4946256` and Dryad `10.5061/dryad.ngf1vhhv3`;
-- Eveland et al. corridor data and code: public repository `00keveland/Tunnel_2026`, pinned for the external validation at commit `59928a71887d521fec143080b0b187736c046a0e`.
+- Harten et al. first-flight data: Mendeley Data `10.17632/n9d8gbz3xr.1` (Harten et al. 2020b);
+- Taub & Yovel sensory-masker data: source-public Dropbox archive `https://www.dropbox.com/sh/met5cvcq9nmvxdd/AAAF4saT9FZl01FwWyRgD1pqa?dl=0` (Taub and Yovel 2020b);
+- Rachum et al. developmental-enrichment data: Mendeley Data `10.17632/wh7c636y3t.1` (Rachum et al. 2025b);
+- Elie et al. auditory-feedback data: Mendeley Data `10.17632/h5ff9vv5pc.1` (Elie et al. 2024b);
+- Diebold et al. auditory-midbrain data: Zenodo `10.5281/zenodo.13857870` (Diebold et al. 2024b);
+- Aharon et al. navigation data: Mendeley Data `10.17632/f6mvhj5gj9.3` (Aharon et al. 2017b);
+- Teshima et al. Rhino/Miniopterus flight-policy data: Figshare dataset *Flight policy in obstacle space: estimation from imitation learning in two echolocating bat species*, `https://figshare.com/articles/dataset/Flight_policy_in_obstacle_space_estimation_from_imitation_learning_in_two_echolocating_bat_species/29209493` (`kiku` = *Rhinolophus nippon*; `yubi` = *Miniopterus fuliginosus*) (Teshima 2025);
+- Foskolos et al. graded-masking data: Zenodo `10.5281/zenodo.4946256` and Dryad `10.5061/dryad.ngf1vhhv3` (Foskolos et al. 2022b);
+- Eveland et al. corridor data and code: public repository `00keveland/Tunnel_2026`, pinned for the external validation at commit `59928a71887d521fec143080b0b187736c046a0e` (Eveland et al. 2026b).
 
 Source-level analysis contracts, structural audit records, executable scripts, exact/randomization logic, result receipts, synthesis files and figure-generation code are version controlled in `zuizui0223/batter`.
 
@@ -743,40 +743,58 @@ Full legends are in `prospective/public_causal_synthesis/FIGURE_CAPTIONS_V1.md`.
 
 # References — working list
 
-- Aharon G, Sadot M, Yovel Y. 2017. Bats use path integration rather than acoustic flow to assess flight distance along flyways. *Current Biology* 27:3650–3657.e3. DOI: 10.1016/j.cub.2017.10.012.
+- Aharon G, Sadot M, Yovel Y. 2017a. Bats use path integration rather than acoustic flow to assess flight distance along flyways. *Current Biology* 27:3650–3657.e3. DOI: `10.1016/j.cub.2017.10.012`.
+
+- Aharon G, Sadot M, Yovel Y. 2017b. Data from: Bats use path integration rather than acoustic flow to assess flight distance along flyways. Mendeley Data, version 3. DOI: `10.17632/f6mvhj5gj9.3`.
 
 - Araújo MS, Bolnick DI, Layman CA. 2011. The ecological causes of individual specialisation. *Ecology Letters* 14:948–958. DOI: `10.1111/j.1461-0248.2011.01662.x`.
 
 - Bolnick DI, Svanbäck R, Fordyce JA, Yang LH, Davis JM, Hulsey CD, Forister ML. 2003. The ecology of individuals: incidence and implications of individual specialization. *The American Naturalist* 161:1–28. DOI: `10.1086/343878`.
-- de Bivort BL. 2025. The developmental origins of behavioral individuality. *Annual Review of Cell and Developmental Biology* 41:331–352. DOI: 10.1146/annurev-cellbio-101323-025423.
-- Diebold CA, Lawlor J, Allen K, Capshaw G, Humphrey MG, Cintron-De Leon D, Kuchibhotla KV, Moss CF. 2024. Rapid sensorimotor adaptation to auditory midbrain silencing in free-flying bats. *Current Biology* 34:5507–5517.e3. DOI: 10.1016/j.cub.2024.10.045.
-- Elie JE, Muroy SE, Genzel D, Na T, Beyer LA, Swiderski DL, Raphael Y, Yartsev MM. 2024. Role of auditory feedback for vocal production learning in the Egyptian fruit bat. *Current Biology* 34:4062–4070.e7. DOI: 10.1016/j.cub.2024.07.053.
-- Eveland KE, Finger NM, Jaroszewski JM, Bucio L, Moss CF. 2026. Looking ahead: echolocation and flight behaviors of two fruit bat species navigating a corridor. *Journal of Comparative Physiology A*. DOI: 10.1007/s00359-026-01818-0.
-- Foskolos I, Bjerre Pedersen M, Beedholm K, Uebel AS, Macaulay J, Stidsholt L, Brinkløv S, Madsen PT. 2022. Echolocating Daubenton's bats are resilient to broadband, ultrasonic masking noise during active target approaches. *Journal of Experimental Biology* 225:jeb242957. DOI: 10.1242/jeb.242957.
-- Gallagher JH, Perkes AD, Chang C-C, Chirila ES, Kacevas K, Laskowski KL. 2026. Born This Way: Individuality Is Seeded Before Birth and Robust to Ecological Stress. *Ecology Letters* 29:e70454. DOI: 10.1111/ele.70454.
-- Harten L, Katz A, Goldshtein A, Handel M, Yovel Y. 2020. The ontogeny of a mammalian cognitive map in the real world. *Science* 369:194–197. DOI: 10.1126/science.aay3354.
-- Houslay TM, Vierbuchen M, Grimmer AJ, Young AJ, Wilson AJ. 2018. Testing the stability of behavioural coping style across stress contexts in the Trinidadian guppy. *Functional Ecology* 32:424–438. DOI: 10.1111/1365-2435.12981.
-- Mathejczyk TF, Knief C, Haidar MA, Freitag F, McClary T, Wernet MF, Linneweber GA. 2026. Individuality across environmental context in *Drosophila melanogaster*. *eLife* 13:RP98171. DOI: 10.7554/eLife.98171.
-- Mitchell DJ, Houslay TM. 2021. Context-dependent trait covariances: how plasticity shapes behavioral syndromes. *Behavioral Ecology* 32:25–29. DOI: 10.1093/beheco/araa115.
-- Rachum A, Harten LM, Assa R, Goldshtein A, Chen X, Gonceer N, Yovel Y. 2025. Early experience affects foraging behavior of wild fruit bats more than their original behavioral predispositions. *eLife* 14:RP103220. DOI: 10.7554/eLife.103220.
-- Taub M, Yovel Y. 2020. Segregating signal from noise through movement in echolocating bats. *Scientific Reports* 10:382. DOI: 10.1038/s41598-019-57346-2.
-- Teshima Y, Genda S, Aoki Y, Fujisawa M, Hiryu S, Fujii K. 2026. Evidence for latent regularities in echolocation-guided flight behaviour of bats. *Proceedings of the Royal Society B* 293:20261463. DOI: 10.1098/rspb.2026.1463.
-- White SJ, Pascall DJ, Wilson AJ. 2020. Towards a comparative approach to the structure of animal personality variation. *Behavioral Ecology* 31:340–351. DOI: 10.1093/beheco/arz198.
 
+- de Bivort BL. 2025. The developmental origins of behavioral individuality. *Annual Review of Cell and Developmental Biology* 41:331–352. DOI: `10.1146/annurev-cellbio-101323-025423`.
 
-- Aharon G, Sadot M, Yovel Y. 2017. Data from: Bats use path integration rather than acoustic flow to assess flight distance along flyways. Mendeley Data, version 3. DOI: `10.17632/f6mvhj5gj9.3`.
+- Diebold CA, Lawlor J, Allen K, Capshaw G, Humphrey MG, Cintron-De Leon D, Kuchibhotla KV, Moss CF. 2024a. Rapid sensorimotor adaptation to auditory midbrain silencing in free-flying bats. *Current Biology* 34:5507–5517.e3. DOI: `10.1016/j.cub.2024.10.045`.
 
-- Diebold CA, Lawlor J, Allen K, Capshaw G, Humphrey MG, Cintron-De Leon D, Kuchibhotla KV, Moss CF. 2024. Data and code from: Rapid sensorimotor adaptation to auditory midbrain silencing in free-flying bats. Zenodo. DOI: `10.5281/zenodo.13857870`.
+- Diebold CA, Lawlor J, Allen K, Capshaw G, Humphrey MG, Cintron-De Leon D, Kuchibhotla KV, Moss CF. 2024b. Data and code from: Rapid sensorimotor adaptation to auditory midbrain silencing in free-flying bats. Zenodo. DOI: `10.5281/zenodo.13857870`.
 
-- Elie JE, Muroy SE, Genzel D, Na T, Beyer LA, Swiderski DL, Raphael Y, Yartsev MM. 2024. Data from: Role of auditory feedback for vocal production learning in the Egyptian fruit bat. Mendeley Data. DOI: `10.17632/h5ff9vv5pc.1`.
+- Elie JE, Muroy SE, Genzel D, Na T, Beyer LA, Swiderski DL, Raphael Y, Yartsev MM. 2024a. Role of auditory feedback for vocal production learning in the Egyptian fruit bat. *Current Biology* 34:4062–4070.e7. DOI: `10.1016/j.cub.2024.07.053`.
 
-- Foskolos I, Bjerre Pedersen M, Beedholm K, Uebel AS, Macaulay J, Stidsholt L, Brinkløv S, Madsen PT. 2022. Data from: Echolocating Daubenton's bats are resilient to broadband, ultrasonic masking noise during active target approaches. Dryad. DOI: `10.5061/dryad.ngf1vhhv3`.
+- Elie JE, Muroy SE, Genzel D, Na T, Beyer LA, Swiderski DL, Raphael Y, Yartsev MM. 2024b. Data from: Role of auditory feedback for vocal production learning in the Egyptian fruit bat. Mendeley Data. DOI: `10.17632/h5ff9vv5pc.1`.
 
-- Harten L, Katz A, Goldshtein A, Handel M, Yovel Y. 2020. Data from: The ontogeny of a mammalian cognitive map in the real world. Mendeley Data. DOI: `10.17632/n9d8gbz3xr.1`.
+- Eveland KE, Finger NM, Jaroszewski JM, Bucio L, Moss CF. 2026a. Looking ahead: echolocation and flight behaviors of two fruit bat species navigating a corridor. *Journal of Comparative Physiology A*. DOI: `10.1007/s00359-026-01818-0`.
 
-- Rachum A, Harten LM, Assa R, Goldshtein A, Chen X, Gonceer N, Yovel Y. 2025. Data from: Early experience affects foraging behavior of wild fruit bats more than their original behavioral predispositions. Mendeley Data. DOI: `10.17632/wh7c636y3t.1`.
+- Eveland KE, Finger NM, Jaroszewski JM, Bucio L, Moss CF. 2026b. Data and code from: Looking ahead: echolocation and flight behaviors of two fruit bat species navigating a corridor. GitHub repository `00keveland/Tunnel_2026`; analysis pinned at commit `59928a71887d521fec143080b0b187736c046a0e`.
 
-- Teshima Y. 2025. Flight policy in obstacle space: estimation from imitation learning in two echolocating bat species. Figshare dataset, article ID 29209493.
+- Foskolos I, Bjerre Pedersen M, Beedholm K, Uebel AS, Macaulay J, Stidsholt L, Brinkløv S, Madsen PT. 2022a. Echolocating Daubenton's bats are resilient to broadband, ultrasonic masking noise during active target approaches. *Journal of Experimental Biology* 225:jeb242957. DOI: `10.1242/jeb.242957`.
+
+- Foskolos I, Bjerre Pedersen M, Beedholm K, Uebel AS, Macaulay J, Stidsholt L, Brinkløv S, Madsen PT. 2022b. Data from: Echolocating Daubenton's bats are resilient to broadband, ultrasonic masking noise during active target approaches. Dryad. DOI: `10.5061/dryad.ngf1vhhv3`. Associated Zenodo archive: `10.5281/zenodo.4946256`.
+
+- Gallagher JH, Perkes AD, Chang C-C, Chirila ES, Kacevas K, Laskowski KL. 2026. Born This Way: Individuality Is Seeded Before Birth and Robust to Ecological Stress. *Ecology Letters* 29:e70454. DOI: `10.1111/ele.70454`.
+
+- Harten L, Katz A, Goldshtein A, Handel M, Yovel Y. 2020a. The ontogeny of a mammalian cognitive map in the real world. *Science* 369:194–197. DOI: `10.1126/science.aay3354`.
+
+- Harten L, Katz A, Goldshtein A, Handel M, Yovel Y. 2020b. Data from: The ontogeny of a mammalian cognitive map in the real world. Mendeley Data. DOI: `10.17632/n9d8gbz3xr.1`.
+
+- Houslay TM, Vierbuchen M, Grimmer AJ, Young AJ, Wilson AJ. 2018. Testing the stability of behavioural coping style across stress contexts in the Trinidadian guppy. *Functional Ecology* 32:424–438. DOI: `10.1111/1365-2435.12981`.
+
+- Mathejczyk TF, Knief C, Haidar MA, Freitag F, McClary T, Wernet MF, Linneweber GA. 2026. Individuality across environmental context in *Drosophila melanogaster*. *eLife* 13:RP98171. DOI: `10.7554/eLife.98171`.
+
+- Mitchell DJ, Houslay TM. 2021. Context-dependent trait covariances: how plasticity shapes behavioral syndromes. *Behavioral Ecology* 32:25–29. DOI: `10.1093/beheco/araa115`.
+
+- Rachum A, Harten LM, Assa R, Goldshtein A, Chen X, Gonceer N, Yovel Y. 2025a. Early experience affects foraging behavior of wild fruit bats more than their original behavioral predispositions. *eLife* 14:RP103220. DOI: `10.7554/eLife.103220`.
+
+- Rachum A, Harten LM, Assa R, Goldshtein A, Chen X, Gonceer N, Yovel Y. 2025b. Data from: Early experience affects foraging behavior of wild fruit bats more than their original behavioral predispositions. Mendeley Data. DOI: `10.17632/wh7c636y3t.1`.
+
+- Taub M, Yovel Y. 2020a. Segregating signal from noise through movement in echolocating bats. *Scientific Reports* 10:382. DOI: `10.1038/s41598-019-57346-2`.
+
+- Taub M, Yovel Y. 2020b. Data from: Segregating signal from noise through movement in echolocating bats. Public Dropbox archive: `https://www.dropbox.com/sh/met5cvcq9nmvxdd/AAAF4saT9FZl01FwWyRgD1pqa?dl=0`.
+
+- Teshima Y. 2025. Flight policy in obstacle space: estimation from imitation learning in two echolocating bat species. Figshare dataset, article ID 29209493. `https://figshare.com/articles/dataset/Flight_policy_in_obstacle_space_estimation_from_imitation_learning_in_two_echolocating_bat_species/29209493`.
+
+- Teshima Y, Genda S, Aoki Y, Fujisawa M, Hiryu S, Fujii K. 2026. Evidence for latent regularities in echolocation-guided flight behaviour of bats. *Proceedings of the Royal Society B* 293:20261463. DOI: `10.1098/rspb.2026.1463`.
+
+- White SJ, Pascall DJ, Wilson AJ. 2020. Towards a comparative approach to the structure of animal personality variation. *Behavioral Ecology* 31:340–351. DOI: `10.1093/beheco/arz198`.
+
 ## Disclosure note — draft
 
 Generative AI assisted with code review, repository organization, literature triage, and manuscript drafting from author-controlled analyses. Scientific decisions, source selection, analysis contracts, interpretation, and final responsibility remain with the human author(s). This wording must be reconciled with journal policy before submission.
