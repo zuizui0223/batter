@@ -1,0 +1,65 @@
+name: public-causal-supplementary-pdf-v1
+
+on:
+  push:
+    branches:
+      - prospective/public-causal-synthesis-v1
+    paths:
+      - "prospective/public_causal_synthesis/SUPPLEMENTARY_MATERIAL_DRAFT_V1.md"
+      - "prospective/public_causal_synthesis/build_supplementary_pdf_v1.py"
+      - "figures/public_causal_supplement/**"
+      - ".github/workflows/public-causal-supplementary-pdf-v1.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: public-causal-supplementary-pdf-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: prospective/public-causal-synthesis-v1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install PDF dependencies
+        run: python -m pip install markdown weasyprint pymupdf
+      - name: Build and verify supplementary PDF
+        run: python prospective/public_causal_synthesis/build_supplementary_pdf_v1.py
+      - name: Commit PDF, receipt and previews
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add submission/public_causal/SUPPLEMENTARY_MATERIAL_V1.pdf
+          git add submission/public_causal/SUPPLEMENTARY_MATERIAL_V1_RECEIPT.json
+          git add submission/public_causal/supplement_preview/
+          if git diff --cached --quiet; then
+            echo "No supplementary PDF changes"
+          else
+            git commit -m "Build verified public causal supplementary PDF v1"
+            for attempt in 1 2 3 4 5; do
+              git fetch origin prospective/public-causal-synthesis-v1
+              git rebase origin/prospective/public-causal-synthesis-v1
+              if git push origin HEAD:prospective/public-causal-synthesis-v1; then
+                exit 0
+              fi
+              echo "Push race on attempt $attempt; retrying"
+              sleep $((attempt * 2))
+            done
+            echo "Failed to persist supplementary PDF after retries"
+            exit 1
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: public-causal-supplementary-pdf-v1
+          path: |
+            submission/public_causal/SUPPLEMENTARY_MATERIAL_V1.pdf
+            submission/public_causal/SUPPLEMENTARY_MATERIAL_V1_RECEIPT.json
+            submission/public_causal/supplement_preview/
+          if-no-files-found: error

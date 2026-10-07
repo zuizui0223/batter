@@ -1,0 +1,33 @@
+name: public-causal-anonymous-submission-guard-v1
+
+on:
+  push:
+    branches:
+      - prospective/public-causal-synthesis-v1
+    paths:
+      - "prospective/public_causal_synthesis/MANUSCRIPT_DRAFT_V1.md"
+      - "prospective/public_causal_synthesis/LAY_SUMMARY_V1.md"
+      - "prospective/public_causal_synthesis/FIGURE_CAPTIONS_V1.md"
+      - "prospective/public_causal_synthesis/COMPLETE_ANONYMOUS_TEXT_V1.md"
+      - "prospective/public_causal_synthesis/build_complete_anonymous_text_v1.py"
+      - "prospective/public_causal_synthesis/anonymous_submission_guard_v1.py"
+      - "prospective/public_causal_synthesis/anonymous_text_format_guard_v1.py"
+      - ".github/workflows/public-causal-anonymous-submission-guard-v1.yml"
+  workflow_dispatch:
+
+jobs:
+  build-and-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: prospective/public-causal-synthesis-v1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Rebuild anonymous text
+        run: python prospective/public_causal_synthesis/build_complete_anonymous_text_v1.py
+      - name: Guard generated anonymous text formatting
+        run: python prospective/public_causal_synthesis/anonymous_text_format_guard_v1.py
+      - name: Run submission/anonymization guard
+        run: python prospective/public_causal_synthesis/anonymous_submission_guard_v1.py

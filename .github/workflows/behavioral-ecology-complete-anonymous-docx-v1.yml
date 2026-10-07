@@ -1,0 +1,76 @@
+name: behavioral-ecology-complete-anonymous-docx-v1
+
+on:
+  push:
+    branches:
+      - prospective/public-causal-synthesis-v1
+    paths:
+      - "prospective/public_causal_synthesis/MANUSCRIPT_DRAFT_V1.md"
+      - "prospective/public_causal_synthesis/LAY_SUMMARY_V1.md"
+      - "prospective/public_causal_synthesis/FIGURE_CAPTIONS_V1.md"
+      - "prospective/public_causal_synthesis/build_complete_anonymous_text_v1.py"
+      - "prospective/public_causal_synthesis/anonymous_text_format_guard_v1.py"
+      - "prospective/public_causal_synthesis/COMPLETE_ANONYMOUS_TEXT_V1.md"
+      - "prospective/public_causal_synthesis/build_complete_anonymous_docx_v1.py"
+      - "figures/public_causal/**"
+      - ".github/workflows/behavioral-ecology-complete-anonymous-docx-v1.yml"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: prospective/public-causal-synthesis-v1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install DOCX dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc libreoffice poppler-utils
+          python -m pip install python-docx cairosvg
+      - name: Rebuild complete anonymous Markdown from current sources
+        run: python prospective/public_causal_synthesis/build_complete_anonymous_text_v1.py
+      - name: Guard anonymous Markdown for Pandoc conversion
+        run: python prospective/public_causal_synthesis/anonymous_text_format_guard_v1.py
+      - name: Build Complete Anonymous Text DOCX
+        run: python prospective/public_causal_synthesis/build_complete_anonymous_docx_v1.py
+      - name: Render DOCX to PDF and page PNGs for QA
+        run: |
+          mkdir -p submission/public_causal/docx_qa
+          HOME="$RUNNER_TEMP/lohome" libreoffice --headless \
+            --convert-to pdf \
+            --outdir submission/public_causal/docx_qa \
+            submission/public_causal/COMPLETE_ANONYMOUS_TEXT_BEHAVIORAL_ECOLOGY_V1.docx
+          PDF=submission/public_causal/docx_qa/COMPLETE_ANONYMOUS_TEXT_BEHAVIORAL_ECOLOGY_V1.pdf
+          test -s "$PDF"
+          pdfinfo "$PDF" | tee submission/public_causal/docx_qa/pdfinfo.txt
+          pdftoppm -png -r 144 "$PDF" submission/public_causal/docx_qa/page
+          test "$(find submission/public_causal/docx_qa -maxdepth 1 -name 'page-*.png' | wc -l)" -gt 0
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image, ImageStat
+          pages=sorted(Path("submission/public_causal/docx_qa").glob("page-*.png"))
+          if not pages:
+              raise SystemExit("STOP: no rendered PNG pages")
+          for p in pages:
+              im=Image.open(p).convert("L")
+              if im.width < 500 or im.height < 700:
+                  raise SystemExit(f"STOP: implausible page dimensions {p}: {im.size}")
+              stat=ImageStat.Stat(im)
+              if stat.mean[0] > 254.95 and stat.rms[0] > 254.95:
+                  raise SystemExit(f"STOP: effectively blank rendered page {p}")
+          print(f"PASS rendered {len(pages)} PNG pages")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: behavioral-ecology-complete-anonymous-docx-v1
+          path: |
+            submission/public_causal/COMPLETE_ANONYMOUS_TEXT_BEHAVIORAL_ECOLOGY_V1.docx
+            submission/public_causal/COMPLETE_ANONYMOUS_TEXT_BEHAVIORAL_ECOLOGY_V1_RECEIPT.json
+            submission/public_causal/docx_qa/COMPLETE_ANONYMOUS_TEXT_BEHAVIORAL_ECOLOGY_V1.pdf
+            submission/public_causal/docx_qa/pdfinfo.txt
+            submission/public_causal/docx_qa/page-*.png
+          if-no-files-found: error

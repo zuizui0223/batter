@@ -1,0 +1,38 @@
+name: public-causal-anonymized-review-archive-v1
+
+on:
+  push:
+    branches:
+      - prospective/public-causal-synthesis-v1
+    paths:
+      - "prospective/public_causal_synthesis/MANUSCRIPT_ANONYMIZED_BEHAVIORAL_ECOLOGY_V1.md"
+      - "prospective/public_causal_synthesis/SUPPLEMENTARY_MATERIAL_DRAFT_V1.md"
+      - "prospective/public_causal_synthesis/MASTER_RESULTS_TABLE_V1.md"
+      - "prospective/public_causal_synthesis/EVIDENCE_MATRIX_V1.md"
+      - "prospective/public_causal_synthesis/MANUSCRIPT_NUMERICAL_AUDIT_V1.md"
+      - "prospective/public_causal_synthesis/build_anonymized_review_archive_v1.py"
+      - "prospective/public_causal_synthesis/REVIEW_ARCHIVE_MANIFEST_V1.md"
+      - "figures/public_causal/**"
+      - "figures/public_causal_supplement/**"
+      - ".github/workflows/public-causal-anonymized-review-archive-v1.yml"
+  workflow_dispatch:
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: prospective/public-causal-synthesis-v1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build and anonymization-scan review archive
+        run: python prospective/public_causal_synthesis/build_anonymized_review_archive_v1.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: public-causal-anonymized-review-archive-v1
+          path: |
+            review_build/PUBLIC_CAUSAL_ANONYMIZED_REVIEW_ARCHIVE_V1.zip
+            review_build/PUBLIC_CAUSAL_ANONYMIZED_REVIEW_ARCHIVE_V1.sha256
+          if-no-files-found: error
