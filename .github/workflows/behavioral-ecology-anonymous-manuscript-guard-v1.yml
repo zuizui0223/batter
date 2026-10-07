@@ -1,0 +1,26 @@
+name: behavioral-ecology-anonymous-manuscript-guard-v1
+
+on:
+  push:
+    branches:
+      - prospective/public-causal-synthesis-v1
+    paths:
+      - "prospective/public_causal_synthesis/MANUSCRIPT_ANONYMIZED_BEHAVIORAL_ECOLOGY_V1.md"
+      - "prospective/public_causal_synthesis/behavioral_ecology_anonymous_guard_v1.py"
+      - ".github/workflows/behavioral-ecology-anonymous-manuscript-guard-v1.yml"
+  pull_request:
+    paths:
+      - "prospective/public_causal_synthesis/MANUSCRIPT_ANONYMIZED_BEHAVIORAL_ECOLOGY_V1.md"
+      - "prospective/public_causal_synthesis/behavioral_ecology_anonymous_guard_v1.py"
+      - ".github/workflows/behavioral-ecology-anonymous-manuscript-guard-v1.yml"
+  workflow_dispatch:
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python prospective/public_causal_synthesis/behavioral_ecology_anonymous_guard_v1.py
