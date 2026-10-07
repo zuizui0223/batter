@@ -68,12 +68,29 @@ def safe_scalar(v):
 
 def mat_schema(data):
     import scipy.io
-    out={"whosmat":[],"loaded_type":None,"fields":[],"field_shapes":{},"label_summaries":{}}
+    out={"loaded_type":None,"fields":[],"field_shapes":{},"label_summaries":{},"container":None}
+    # MATLAB v7.3 files are HDF5; inspect structure only in that case.
+    if data[:8] == b"\\x89HDF\\r\\n\\x1a\\n":
+        import h5py
+        out["container"]="hdf5"
+        with h5py.File(io.BytesIO(data),"r") as h:
+            out["hdf5_top_keys"]=sorted(h.keys())
+            for k in h.keys():
+                obj=h[k]
+                out["field_shapes"][k]=list(getattr(obj,"shape",()))
+        return out
+
+    out["container"]="mat_v5"
     with tempfile.NamedTemporaryFile(suffix=".mat") as tf:
         tf.write(data); tf.flush()
-        for name,shape,klass in scipy.io.whosmat(tf.name):
-            out["whosmat"].append({"name":name,"shape":list(shape),"class":klass})
-        m=scipy.io.loadmat(tf.name,squeeze_me=True,struct_as_record=False,simplify_cells=True)
+        # Do not call whosmat: some MATLAB table/object headers trigger a SciPy
+        # shape-reader bug even though loadmat can still decode the object.
+        m=scipy.io.loadmat(
+            tf.name,
+            squeeze_me=True,
+            struct_as_record=False,
+            simplify_cells=True,
+        )
 
     keys=[k for k in m if not k.startswith("__")]
     if not keys: return out
