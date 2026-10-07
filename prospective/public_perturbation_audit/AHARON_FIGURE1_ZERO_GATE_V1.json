@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "cells": {
+    "500|300": {
+      "zero_cells": 0,
+      "finite_cells": 85,
+      "finite_nonzero_bilateral_trials": 10
+    },
+    "500|75": {
+      "zero_cells": 0,
+      "finite_cells": 88,
+      "finite_nonzero_bilateral_trials": 10
+    },
+    "500|con": {
+      "zero_cells": 0,
+      "finite_cells": 90,
+      "finite_nonzero_bilateral_trials": 10
+    },
+    "503|300": {
+      "zero_cells": 0,
+      "finite_cells": 102,
+      "finite_nonzero_bilateral_trials": 15
+    },
+    "503|75": {
+      "zero_cells": 0,
+      "finite_cells": 108,
+      "finite_nonzero_bilateral_trials": 15
+    },
+    "503|con": {
+      "zero_cells": 0,
+      "finite_cells": 99,
+      "finite_nonzero_bilateral_trials": 15
+    },
+    "505|300": {
+      "zero_cells": 0,
+      "finite_cells": 104,
+      "finite_nonzero_bilateral_trials": 10
+    },
+    "505|75": {
+      "zero_cells": 0,
+      "finite_cells": 84,
+      "finite_nonzero_bilateral_trials": 10
+    },
+    "505|con": {
+      "zero_cells": 0,
+      "finite_cells": 83,
+      "finite_nonzero_bilateral_trials": 10
+    },
+    "510|300": {
+      "zero_cells": 0,
+      "finite_cells": 166,
+      "finite_nonzero_bilateral_trials": 15
+    },
+    "510|75": {
+      "zero_cells": 0,
+      "finite_cells": 168,
+      "finite_nonzero_bilateral_trials": 15
+    },
+    "510|con": {
+      "zero_cells": 0,
+      "finite_cells": 128,
+      "finite_nonzero_bilateral_trials": 15
+    }
+  },
+  "gate": "PASS_NO_ZERO_SENTINEL"
+}

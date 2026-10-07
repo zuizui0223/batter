@@ -1,0 +1,318 @@
+{
+  "generated_utc": "2026-10-06T23:24:55.706682+00:00",
+  "audit_version": 1,
+  "sources": [
+    {
+      "source": {
+        "key": "aharon2017",
+        "dataset_id": "f6mvhj5gj9",
+        "version": 3,
+        "expected_doi": "10.17632/f6mvhj5gj9.3",
+        "expected_title_token": "path-integration"
+      },
+      "metadata": {
+        "id": null,
+        "name": null,
+        "description": null,
+        "version": null,
+        "doi": null,
+        "publish_date": null
+      },
+      "metadata_fetch": {
+        "status": 200,
+        "url": "https://data.mendeley.com/api/datasets/f6mvhj5gj9/snapshot/3"
+      },
+      "files": [
+        {
+          "id": "d3e06159-a2dc-4cd4-80b1-a7ba4498e748",
+          "filename": "batalef.zip",
+          "description": "",
+          "folder_id": null,
+          "size": 299898,
+          "content_type": "application/zip",
+          "sha256": "498fb22086f4e0c474fb5b3ab364ab6cea13f724d8128bda70ab87bc7dc1b509"
+        },
+        {
+          "id": "4917cba0-fdc1-4c3e-8618-ba4a94cb7b44",
+          "filename": "Figure 1.zip",
+          "description": "",
+          "folder_id": null,
+          "size": 13318,
+          "content_type": "application/zip",
+          "sha256": "c2597959c248307bfdbfb75bb720a49d219013ce724b947e0b1cf0a46f0f5f6e"
+        },
+        {
+          "id": "e6a65ea3-8bde-408f-b4ac-3d88cb951980",
+          "filename": "Figure 2.zip",
+          "description": "",
+          "folder_id": null,
+          "size": 7796,
+          "content_type": "application/zip",
+          "sha256": "1f53a0d23ee706398dbd55e0c79860e318e7586e3929a7d951473c5faa414906"
+        },
+        {
+          "id": "449bd74d-9228-4fbc-9a5a-a7eb01ab21d4",
+          "filename": "Figure 3.zip",
+          "description": "",
+          "folder_id": null,
+          "size": 9153,
+          "content_type": "application/zip",
+          "sha256": "9c02db7b030e6c7109a1160753a2870b000c9a1d8aab66dde951c6304793de0b"
+        },
+        {
+          "id": "6658be5f-a13e-4798-8255-1cca1675780c",
+          "filename": "Figure 4.zip",
+          "description": "",
+          "folder_id": null,
+          "size": 17453,
+          "content_type": "application/zip",
+          "sha256": "2c71317f990986d0a6abdac4af5f31949456f42f8ea7bad2088d150b7bf2162b"
+        }
+      ],
+      "file_fetch": {
+        "mode": "anonymous_public_api",
+        "status": 200,
+        "url": "https://data.mendeley.com/api/datasets/f6mvhj5gj9/files?version=3&%24start=0&%24limit=1000"
+      },
+      "errors": [],
+      "verdict": "STOP_DATASET_IDENTITY_OR_API_UNRESOLVED"
+    },
+    {
+      "source": {
+        "key": "ma2025",
+        "dataset_id": "964fv73w94",
+        "version": 1,
+        "expected_doi": "10.17632/964fv73w94.1",
+        "expected_title_token": "masking noise"
+      },
+      "metadata": {
+        "id": null,
+        "name": null,
+        "description": null,
+        "version": null,
+        "doi": null,
+        "publish_date": null
+      },
+      "metadata_fetch": {
+        "status": 200,
+        "url": "https://data.mendeley.com/api/datasets/964fv73w94/snapshot/1"
+      },
+      "files": [
+        {
+          "id": "8b1dead3-9ec1-41a8-993e-4bcff5678e94",
+          "filename": "BuzzData.mat",
+          "description": null,
+          "folder_id": "d2bab337-25f1-4e77-8f3c-7545388133af",
+          "size": 1362,
+          "content_type": "application/octet-stream",
+          "sha256": "4cac0fd4c1087754a8b232c723644c850d64eb9e313ee511730f4e4df0e6c430"
+        },
+        {
+          "id": "1d809ed7-0f04-4ed2-97d1-847449f6afe4",
+          "filename": "BuzzDutyCycleSilenceMworm.mat",
+          "description": null,
+          "folder_id": "d2bab337-25f1-4e77-8f3c-7545388133af",
+          "size": 372,
+          "content_type": "application/octet-stream",
+          "sha256": "fb547f85144ecdd0275987b92831e4362aa7b79400cd4b61ab5bb1c6e415f1ee"
+        },
+        {
+          "id": "f05b79b0-d70d-470a-b487-4ed3c105f5d8",
+          "filename": "CallRate40.mat",
+          "description": null,
+          "folder_id": "d2bab337-25f1-4e77-8f3c-7545388133af",
+          "size": 1220,
+          "content_type": "application/octet-stream",
+          "sha256": "8e2207094daf1976dca42a5cdd2528bfd06f9511228f75341cb3a573d8f1b325"
+        },
+        {
+          "id": "d6a16afb-9759-466d-8a4f-18462793898c",
+          "filename": "CallRate60.mat",
+          "description": null,
+          "folder_id": "d2bab337-25f1-4e77-8f3c-7545388133af",
+          "size": 1099,
+          "content_type": "application/octet-stream",
+          "sha256": "01cbaeb9adb37a717978d9b4a7ec161b23506a2a7da5f3e39196f7b89320b498"
+        },
+        {
+          "id": "a3505cdb-abe0-405e-bf8f-573064f6ddaa",
+          "filename": "CallRate80.mat",
+          "description": null,
+          "folder_id": "d2bab337-25f1-4e77-8f3c-7545388133af",
+          "size": 885,
+          "content_type": "application/octet-stream",
+          "sha256": "8faff2dd7d3005d403378c796363be26d36fed18e7cee8df674675c0023f1db6"
+        },
+        {
+          "id": "5163d71a-45be-46c1-b9c7-58ffc322b9a8",
+          "filename": "Hp003_Cond_Noise_Trial_5_20210707T211104_cmb_cut_res.mat",
+          "description": null,
+          "folder_id": "d2bab337-25f1-4e77-8f3c-7545388133af",
+          "size": 8904,
+          "content_type": "application/octet-stream",
+          "sha256": "c4a216b1e6a201f67888b8eaff35f2de5581c466a176fd6b566d2e08dba48750"
+        },
+        {
+          "id": "98137741-b388-4ca6-ae25-33eb4143fd28",
+          "filename": "Hp036_Cond_Noise_Trial_9_20210710T092842_cmb_cut.mat",
+          "description": null,
+          "folder_id": "d2bab337-25f1-4e77-8f3c-7545388133af",
+          "size": 33305111,
+          "content_type": "application/octet-stream",
+          "sha256": "aad14b99c778046cc38ad7d6d47b6ede3a9dac130fc5c0323c7db4103c699340"
+        },
+        {
+          "id": "fc435fd9-832c-4f2d-9a6e-41c82b297d1a",
+          "filename": "Hp094_Cond_Noise_Trial_5_20210702T184710_cmb_cut.mat",
+          "description": null,
+          "folder_id": "d2bab337-25f1-4e77-8f3c-7545388133af",
+          "size": 33356024,
+          "content_type": "application/octet-stream",
+          "sha256": "a1c67d2bd762549ca638bb773e171c1dff6cc6430d6570b02756f62de1f82f7b"
+        },
+        {
+          "id": "4a353df2-f0fa-4ac2-b1ba-c7b8dd1fe6e1",
+          "filename": "Hp094_Cond_Noise_Trial_5_20210702T184710_cmb_cut_res.mat",
+          "description": null,
+          "folder_id": "d2bab337-25f1-4e77-8f3c-7545388133af",
+          "size": 9608,
+          "content_type": "application/octet-stream",
+          "sha256": "199a2e79b3e1ad1914660768187e3f11c09aa7006c82d656a8e94f3d0d430687"
+        },
+        {
+          "id": "4182c1fb-637b-4eac-a749-b8c2fdaab819",
+          "filename": "Hp137_20230628T111049_Trial_1__Prey_type_Dalamin_Nois_status_40_rec_org.mat",
+          "description": null,
+          "folder_id": "d2bab337-25f1-4e77-8f3c-7545388133af",
+          "size": 25082017,
+          "content_type": "application/octet-stream",
+          "sha256": "8baced8ce5922929c2767a18ba52c2119fc6761d12e6a5df0bdd9f113bf8d3d3"
+        },
+        {
+          "id": "30ccfecb-9839-4abc-9b29-31481cddf1bc",
+          "filename": "Hp137_20230628T111049_Trial_1__Prey_type_Dalamin_Nois_status_40_rec_org_res.mat",
+          "description": null,
+          "folder_id": "d2bab337-25f1-4e77-8f3c-7545388133af",
+          "size": 17761533,
+          "content_type": "application/octet-stream",
+          "sha256": "71ead205e3152f84433d999471043dd43eb43f777e1ccb9cfa9909434c96b635"
+        },
+        {
+          "id": "7032ef29-b58b-4314-9732-278bea929b25",
+          "filename": "Hp137_20230628T112054_Trial_1__Prey_type_Dalamin_Nois_status_40_rec_org_res.mat",
+          "description": null,
+          "folder_id": "d2bab337-25f1-4e77-8f3c-7545388133af",
+          "size": 17756684,
+          "content_type": "application/octet-stream",
+          "sha256": "947cdaa486847b1c523af4c2be47d2287c2ccd8051a2a694f4048a3522e5034a"
+        },
+        {
+          "id": "71ebd679-4002-4347-bcfe-72387089c868",
+          "filename": "Hp137_20231107T113419_Trial_1__Prey_type_Dalamin_Nois_status_40_rec_org_res.mat",
+          "description": null,
+          "folder_id": "d2bab337-25f1-4e77-8f3c-7545388133af",
+          "size": 17872605,
+          "content_type": "application/octet-stream",
+          "sha256": "3ca7aa23dbb42b3baa2338bf9a7768eded6e6a697eb5890b31df7ef37e01178a"
+        },
+        {
+          "id": "22bced94-cdfe-4b04-a6c2-d6ac74314d77",
+          "filename": "Hp142_20230518T115217_Trial_1__prey_type_mworm_prey_status_motionless_rec_org.mat",
+          "description": null,
+          "folder_id": "d2bab337-25f1-4e77-8f3c-7545388133af",
+          "size": 7481565,
+          "content_type": "application/octet-stream",
+          "sha256": "020f5b908cc160706f1c2e3fa26d4c93d5d8241cd09e22627300b4ae0761d3a9"
+        },
+        {
+          "id": "25c89f62-53d8-457e-8ae8-56e75c9dd5a8",
+          "filename": "Hp142_20230518T115217_Trial_1__prey_type_mworm_prey_status_motionless_rec_org_res.mat",
+          "description": null,
+          "folder_id": "d2bab337-25f1-4e77-8f3c-7545388133af",
+          "size": 36788,
+          "content_type": "application/octet-stream",
+          "sha256": "fbda4886e37a99458f2f711c74434252056d2cea67cb83cee742410e3fe67922"
+        },
+        {
+          "id": "915ee987-0932-4eab-add5-a79508bb294a",
+          "filename": "Hp142_20230627T171102_Trial_1__Prey_type_Dalamin_Prey_status_motionless_rec_org.mat",
+          "description": null,
+          "folder_id": "d2bab337-25f1-4e77-8f3c-7545388133af",
+          "size": 7150275,
+          "content_type": "application/octet-stream",
+          "sha256": "ac2f8343d5aa888d537571d37d2c51ea13f0dcecd7496a669192ddea9ae5eeaa"
+        },
+        {
+          "id": "13d567a5-7663-4f1d-97e6-67d0c9793c7b",
+          "filename": "Hp158_20230301T112313_Trial_1__Prey_type_Dalamin_Prey_status_motionless_rec_org.mat",
+          "description": null,
+          "folder_id": "d2bab337-25f1-4e77-8f3c-7545388133af",
+          "size": 8522771,
+          "content_type": "application/octet-stream",
+          "sha256": "c0b64f3ffac046802fd547f4f3ecce3210684cb40b845235758d147d3d0ba20d"
+        },
+        {
+          "id": "08a59754-cfca-4032-b0b1-86f7c2e9c33e",
+          "filename": "LandingNoiseAmplitude.xlsx",
+          "description": null,
+          "folder_id": "d2bab337-25f1-4e77-8f3c-7545388133af",
+          "size": 11259,
+          "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "sha256": "d1193e2186452b96f514699d29132c0b96bdb0764cbd5977595c8b99086731df"
+        },
+        {
+          "id": "77df3547-0139-401b-b5d9-4ce2f5f194dd",
+          "filename": "LandingSileneceAmplitude.xlsx",
+          "description": null,
+          "folder_id": "d2bab337-25f1-4e77-8f3c-7545388133af",
+          "size": 11289,
+          "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "sha256": "0be8898a4ccc728484feeeaeb6b524d063f8ced3f1ebc2823bc74bddc7417525"
+        },
+        {
+          "id": "d7d39ac6-738e-4d8c-9c02-3e398fd313f1",
+          "filename": "ScriptFig1.m",
+          "description": null,
+          "folder_id": null,
+          "size": 45277,
+          "content_type": "text/plain",
+          "sha256": "128bc29be4cdeb685d7a44912bf8ad741361d8a7dc50bb9ad225a0f93d244252"
+        },
+        {
+          "id": "6da75cdf-0cb9-4ccd-951a-146f29612024",
+          "filename": "ScriptFig2.m",
+          "description": null,
+          "folder_id": null,
+          "size": 47589,
+          "content_type": "text/plain",
+          "sha256": "137211a489cc2fa55f6fd3bc5dd61975c26b0e2776b56a7136d0db64589555c7"
+        },
+        {
+          "id": "618e0817-905f-4d52-8eec-e3ebeeaac494",
+          "filename": "ScriptFig3.m",
+          "description": null,
+          "folder_id": null,
+          "size": 20702,
+          "content_type": "text/plain",
+          "sha256": "c7d8e3c227b73406abbf9220bcf0785e7dea01aa3b21c165f69f99e882bc5203"
+        },
+        {
+          "id": "ab2300fb-5c0b-4023-bb6a-8d991fb492be",
+          "filename": "ScriptSI_FigS1-3.m",
+          "description": null,
+          "folder_id": null,
+          "size": 48111,
+          "content_type": "text/plain",
+          "sha256": "6864400bc9c381435c78593aa8d58fd5e9d09465c316dc20b1af538be9cc0f7f"
+        }
+      ],
+      "file_fetch": {
+        "mode": "anonymous_public_api",
+        "status": 200,
+        "url": "https://data.mendeley.com/api/datasets/964fv73w94/files?version=1&%24start=0&%24limit=1000"
+      },
+      "errors": [],
+      "verdict": "STOP_DATASET_IDENTITY_OR_API_UNRESOLVED"
+    }
+  ]
+}

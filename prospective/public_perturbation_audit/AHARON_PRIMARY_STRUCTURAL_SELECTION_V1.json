@@ -1,0 +1,31 @@
+{
+  "status": "STOP_NO_STRUCTURALLY_IDENTIFIED_AHARON_PRIMARY",
+  "figure_evaluations": [
+    {
+      "figure": 1,
+      "eligible": false,
+      "reason": "<2 conditions",
+      "conditions": []
+    },
+    {
+      "figure": 2,
+      "eligible": false,
+      "reason": "<2 conditions",
+      "conditions": []
+    },
+    {
+      "figure": 3,
+      "eligible": false,
+      "reason": "<2 conditions",
+      "conditions": []
+    },
+    {
+      "figure": 4,
+      "eligible": false,
+      "reason": "<2 conditions",
+      "conditions": []
+    }
+  ],
+  "selected": null,
+  "turning_variables_found": 0
+}

@@ -1,0 +1,36 @@
+name: public-mendeley-page-metadata-audit-v1
+
+on:
+  push:
+    paths:
+      - "prospective/public_perturbation_audit/public_mendeley_page_metadata_audit_v1.py"
+      - ".github/workflows/public-mendeley-page-metadata-audit-v1.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: prospective/public-perturbation-audit-v1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Audit public landing-page metadata
+        run: python prospective/public_perturbation_audit/public_mendeley_page_metadata_audit_v1.py
+      - name: Commit audit receipt
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add prospective/public_perturbation_audit/PUBLIC_PAGE_METADATA_AUDIT_V1.json
+          git add prospective/public_perturbation_audit/PUBLIC_PAGE_METADATA_AUDIT_V1.md
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Record public Mendeley page metadata audit"
+            git push
+          fi
