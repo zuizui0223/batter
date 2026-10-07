@@ -476,9 +476,6 @@ In *Rhinolophus nippon*, the transparent I/M representation retained strong indi
 - 5/5 positive;
 - (P=0.0001).
 
-Held-out environment prediction was also supported:
-- (P=0.0002).
-
 When the fixed Rhino I/M representation was transferred to *Carollia perspicillata*:
 - (K=+0.34758);
 - (P=0.0007).
