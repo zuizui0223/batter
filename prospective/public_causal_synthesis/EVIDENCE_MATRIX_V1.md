@@ -11,7 +11,10 @@ This matrix does not replace source contracts/results. It summarizes their allow
 
 | Layer | Source / system | Frozen question | Result | Evidence status | Programme meaning |
 |---|---|---|---|---|---|
-| Formation / history | juvenile movement history | does recent own history predict later personal movement better than earliest equally sized history? | Q = +144.08, p = 0.0001 | **SUPPORTED, non-randomized history refinement** | personal organization becomes more identity-informative through individual history |
+| Formation / ontogeny | Harten et al. first-flight history | does own-history advantage increase monotonically across valid flight days 3–20? | B = +0.16733, p = 0.0102, but only 8/14 positive vs frozen requirement 10/14 | **PRIMARY FAIL** | no common monotonic build-up rule across juveniles |
+| History maintenance | Harten et al. first-flight history | by valid days 11–20, does own recent history predict future spatial use better than experience-matched conspecific history? | L = +112.5554, p = 0.0001; 12/14 positive | **PREDECLARED SECONDARY SUPPORTED** | late personal history carries strong individual spatial information |
+| History localization | Harten et al. early-seed vs recent diagnostic | does recent two-day history add identity information beyond the earliest two valid movement days? | Q = +144.0791, p = 0.0001; 10/14 positive | **POST-PRIMARY DIAGNOSTIC ONLY** | recent history is more informative than early seed, but cannot rescue the failed monotonic formation primary |
+| Formation / randomized history-carrier effect | Rachum outdoor nightly strategy | does randomized enriched vs impoverished early environment alter later personal-history dependence? | T = +0.7081, p = 0.3244 | **FAIL TREATMENT EFFECT** | broad early environment did not detectably change strength of the later history carrier |
 | Formation / development | Rachum et al. randomized enrichment | does enrichment increase residual among-individual divergence beyond the shared group shift? | D = +0.734699, p = 0.167785 | **UNSUPPORTED individualization** | broad enrichment changes phenotype in the source study but does not confirm increased total laboratory individuality |
 | Formation / development | Elie et al. randomized auditory feedback | does developmental auditory feedback change total adult whole-repertoire vocal individualization? | D = -1.425497, exact p = 0.716667 | **NO DIFFERENCE IN AMOUNT** | a key learning channel changes learned phenotype without a detectable change in total amount of individuality |
 | Formation / geometry | Rachum trait decomposition | do all three trait contributions point in the same direction? | 3/3 positive; cancellation ratio 0 | **DESCRIPTIVE ONLY** | enrichment shows a coherent expansion-like tendency, but not confirmatory increased individualization |
@@ -34,7 +37,7 @@ This matrix does not replace source contracts/results. It summarizes their allow
 1. **Persistent personal organization exists.**
 2. **It can survive multiple kinds of controlled current-context perturbation.**
 3. **Coarse personal organization can transfer across tasks where detailed geometry does not.**
-4. **Recent individual history can become more informative about later personal organization.**
+4. **Late personal history can be strongly predictive, but a common monotonic ontogenetic build-up rule is not supported.**
 
 ### Confirmatorily not established
 
