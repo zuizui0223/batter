@@ -63,6 +63,13 @@ manuscript = manuscript.replace(
     1,
 )
 
+# Remove the internal draft label from reviewer-facing manuscript.
+manuscript = manuscript.replace(
+    "# References — working list",
+    "# References",
+    1,
+)
+
 # Internal file-path authority details are not useful to reviewers.
 manuscript = re.sub(
     r"\nThe authoritative manuscript-level numeric ledger is:[\s\S]*?"
