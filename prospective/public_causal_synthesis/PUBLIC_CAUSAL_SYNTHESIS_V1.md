@@ -18,7 +18,7 @@ The public-data programme now supports an asymmetry:
 
 At the same time:
 
-> **experience can refine personal organization, but two independent randomized developmental manipulations changed phenotype without demonstrating a change in the total amount of individual differentiation.**
+> **personal history becomes strongly informative later in ontogeny, but a common monotonic formation trajectory is not supported, and randomized developmental manipulations do not obey a simple rule for total individual differentiation.**
 
 Those manipulations were:
 - broad environmental enrichment;
@@ -44,30 +44,58 @@ The current evidence constrains each part differently.
 
 ---
 
-# 1. Formation: history refines individuality, but broad enrichment does not simply amplify it
+# 1. Formation: personal history matters, but no simple common build-up rule is supported
 
-## Juvenile movement history
+## Juvenile first-flight history
 
-In the juvenile first-flight programme:
+The frozen first-flight primary tested a strong formation hypothesis:
 
-Earliest two structurally valid days predicting late movement:
-- E = **+15.19**;
-- p = **0.1655**;
-- 8/14 positive;
-- unsupported.
+> as independent experience accumulates, own-history predictive advantage should increase monotonically in a directionally consistent majority of juveniles.
 
-Recent two days versus earliest two:
-- Q = **+144.08**;
-- p = **0.0001**;
-- 10/14 positive.
+Observed:
+- B = **+0.16733**;
+- null mean = **-0.06936**;
+- calibrated excess = **+0.23669**;
+- one-sided p = **0.0102**;
+- positive individual slopes = **8/14 = 57.1%**;
+- frozen support rule required **>=10/14 = 70%**.
 
-Thus later personal movement history becomes much more identity-informative than the earliest independent movement history.
+Therefore:
 
-This supports:
+**FAIL_PRIMARY_FORMATION_RULE**
 
-> **personal organization is substantially refined through individual history.**
+The group-average experience slope is positive and permutation-supported, but the predeclared individual-consistency criterion fails. A universal gradual canalization process is not supported.
 
-It does not establish that one external environmental treatment creates the between-individual differences.
+The predeclared late-history secondary is much stronger:
+
+- L = **+112.5554**;
+- null mean = **-0.1814**;
+- one-sided p = **0.0001**;
+- **12/14** juveniles positive.
+
+Allowed conclusion:
+
+> **By later early ontogeny, a juvenile's own recent movement history is substantially more informative about its next spatial use than experience-matched conspecific histories.**
+
+A post-primary early-seed versus recent-history diagnostic then found:
+
+- earliest two valid days: E = **+15.19**, p = **0.1655**, 8/14 positive — unsupported;
+- recent two versus earliest two: Q = **+144.079**, p = **0.0001**, 10/14 positive.
+
+This diagnostic is compatible with identity-specific updating beyond an initially weak seed, but it was opened after the primary and cannot rescue the failed monotonic formation rule.
+
+An independent randomized early-environment history-carrier analysis from the Rachum outdoor dataset also failed:
+
+- enriched mean H = **1.1476**;
+- impoverished mean H = **0.4395**;
+- T = **+0.7081**;
+- two-sided p = **0.3244**.
+
+Thus broad early environmental complexity did not detectably alter the later strength of personal-history dependence in the frozen nightly-strategy endpoint.
+
+The safe formation statement is therefore:
+
+> **personal history is strongly informative later, but the causal rule by which individual history becomes identity-bearing remains unresolved and heterogeneous across individuals.**
 
 ## Randomized early-enrichment test
 
@@ -247,7 +275,7 @@ The decomposition evidence is descriptive, not feature-wise confirmatory.
 
 This does **not** mean development is irrelevant to individuality.
 
-The juvenile own-history result still shows strong identity-specific refinement.
+The juvenile programme shows strong late personal-history information, but its monotonic formation primary fails and its recent-versus-early refinement result is post-primary diagnostic only.
 
 Instead it implies that formation is increasingly a question of **which dimensions and trajectories become individualized**, not only how much total between-individual variance exists.
 
@@ -466,7 +494,7 @@ with ecological spatial consequences as a separate downstream layer.
 Key asymmetry:
 
 ### Formation / rewriting
-- personal history becomes more identity-informative;
+- late personal history is strongly informative, while a universal monotonic build-up is unsupported;
 - broad randomized enrichment does not confirm increased differentiation;
 - randomized developmental auditory-feedback loss does not change total adult vocal individualization;
 - descriptively, enrichment is best approximated by personal baseline plus a shared environmental shift.
@@ -536,7 +564,7 @@ A change in one layer need not imply a change in the others.
 # 9. Current public-data ceiling
 
 Supported:
-- history-specific refinement;
+- strong late self-history information with heterogeneous ontogenetic slopes;
 - low-dimensional cross-task portability;
 - multiple controlled perturbation non-erasure results;
 - independent navigation-context portability in Aharon Figure 1;
