@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-spatial-scale-individualization-v1",
+  "frozen_date": "2026-10-07",
+  "status": "post-outcome scale diagnostic frozen after fine-scale collective-versus-personal results and before opening this scale-transfer outcome",
+  "role": "tests where along the horizontal spatial hierarchy self-history begins to outperform conspecific history",
+  "source_result": {
+    "collective_personal_workflow_run_id": 37614056083,
+    "fine_3d_result_known": true,
+    "interpretation": "not independent confirmation; a mechanism localization analysis"
+  },
+  "panels": ["hypsignathus","phyllostomus_2022","phyllostomus_2023"],
+  "expected_structural_counts": {
+    "hypsignathus": {"target_sessions": 71, "target_individuals": 17},
+    "phyllostomus_2022": {"target_sessions": 66, "target_individuals": 18},
+    "phyllostomus_2023": {"target_sessions": 8, "target_individuals": 6}
+  },
+  "history": {
+    "minimum_lag_days": 3,
+    "minimum_other_individuals": 3,
+    "fixed_target_support": "exact target fixes lying in 500-m cells with both focal-self and other-individual vertical-history support, matching Lane B",
+    "minimum_scored_target_fixes": 50
+  },
+  "horizontal_scales_m": [10000,5000,2500,1000,500],
+  "estimator": {
+    "session_horizontal_probability": "P(cell) from all fixes in that historical session at the stated scale",
+    "self_model": "equal-session mean horizontal probability from focal-individual past",
+    "other_model": "equal-individual mean of each other individual's equal-session horizontal probability",
+    "target_score": "mean over the same fixed target fixes of log P_self(cell) - log P_other(cell)",
+    "aggregation": "equal target session within biological individual, then equal biological individual"
+  },
+  "primary_contrasts": {
+    "coarse_self_advantage": "mean horizontal self-minus-other gain at 10 km",
+    "fine_self_advantage": "mean horizontal self-minus-other gain at 500 m",
+    "scale_amplification": "500-m gain minus 10-km gain"
+  },
+  "uncertainty": {
+    "cluster": "biological individual",
+    "bootstrap_B": 4999,
+    "seeds": {
+      "hypsignathus": 2026100741,
+      "phyllostomus_2022": 2026100742,
+      "phyllostomus_2023": 2026100743
+    }
+  },
+  "classification": {
+    "personal_already_coarse": "10-km lower 95% bootstrap bound > 0",
+    "coarse_portable_fine_personal": "10-km interval includes 0 or mean <= 0, 500-m lower bound > 0, and scale-amplification lower bound > 0",
+    "no_horizontal_personalization": "500-m upper 95% bound <= 0",
+    "mixed": "all other patterns"
+  },
+  "claim_boundary": [
+    "A near-zero coarse self advantage means conspecific history is approximately as predictive as self history at that scale; it is not proof of social learning or colony memory.",
+    "A positive scale amplification localizes increasing individualization toward finer horizontal geometry.",
+    "The already-known 500-m conditional vertical personal increment is interpreted separately as an additional within-cell 3D layer.",
+    "No scale, lag, support set, weighting, bootstrap rule or classification may change after outcome opening."
+  ]
+}
