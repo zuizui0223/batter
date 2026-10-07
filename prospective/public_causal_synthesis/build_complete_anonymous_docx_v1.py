@@ -250,6 +250,17 @@ def main():
         title.paragraph_format.page_break_before=True
         intro.paragraph_format.page_break_before=True
 
+        # Keep the title/abstract/keywords block on page 2 while retaining
+        # double spacing. Behavioral Ecology specifies page-3 main-text start
+        # but does not prescribe a fixed font size for the title/abstract page.
+        pars=list(doc.paragraphs)
+        ti=pars.index(title)
+        ii=pars.index(intro)
+        for p in pars[ti:ii]:
+            p.paragraph_format.line_spacing=2.0
+            for run in p.runs:
+                set_run_font(run,size=11)
+
         # Title page formatting.
         title.alignment=WD_ALIGN_PARAGRAPH.CENTER
         for run in title.runs:
@@ -257,6 +268,8 @@ def main():
             set_run_font(run,size=14)
         running=add_after(title,f"Running title: {RUNNING}",italic=False,align=WD_ALIGN_PARAGRAPH.CENTER)
         running.paragraph_format.line_spacing=2.0
+        for run in running.runs:
+            set_run_font(run,size=11)
 
         # Lay summary heading.
         lay.alignment=WD_ALIGN_PARAGRAPH.LEFT
