@@ -1,0 +1,28 @@
+name: collective-3d-lane-a-panels-v1
+on:
+  push:
+    branches: [post-freeze/collective-personal-3d-decomposition-v1]
+    paths:
+      - "post_freeze_extensions/collective_personal_3d_decomposition/run_lane_a_panel_v1.py"
+      - ".github/workflows/collective-3d-lane-a-panels-v1.yml"
+  workflow_dispatch:
+jobs:
+  panel:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    permissions: {contents: read}
+    strategy:
+      fail-fast: false
+      matrix:
+        panel: [phyllostomus_2022, phyllostomus_2016]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: python -m pip install -e .
+      - run: python post_freeze_extensions/collective_personal_3d_decomposition/run_lane_a_panel_v1.py --panel "${{ matrix.panel }}"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: collective-3d-lane-a-${{ matrix.panel }}-v1
+          path: post_freeze_extensions/collective_personal_3d_decomposition/lane_a_panel_results/${{ matrix.panel }}_v1.json
+          if-no-files-found: error
