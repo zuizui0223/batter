@@ -358,7 +358,7 @@ PASS:
 4. **CRediT roles**
 5. **Conflict-of-interest statement**
 6. **Final AI disclosure verification**
-7. **Final reference-style conversion to Behavioral Ecology format**
+7. **Reference-style conversion is not a pre-submission blocker because Behavioral Ecology permits format-free initial submissions; convert on revision if requested.**
 
 ### Strongly recommended
 
@@ -379,6 +379,6 @@ The remaining blockers are human/external only:
 - author/affiliation/corresponding-author metadata;
 - Funding / CRediT / conflicts;
 - final AI-disclosure confirmation;
-- final Behavioral Ecology reference-style conversion at upload/proof stage.
+- journal-style reference conversion only if requested at revision/production; initial submission is format-free.
 
 There are no unresolved manuscript-facing numerical analyses.
