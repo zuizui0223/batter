@@ -23,7 +23,7 @@ First, there is a **formation** problem: how do between-individual differences a
 
 These layers need not move together.
 
-Recent work makes the point increasingly clear. Environmental context can alter the covariance structure of behavior and thereby change the apparent structure of behavioral syndromes. Multivariate personality studies distinguish total among-individual variation from the orientation and geometry of that variation. Experimental work has also shown that population-level plasticity can coexist with relatively stable among-individual organization. More recently, Mathejczyk et al. showed that some behavioral individuality persists across large environmental-context changes in *Drosophila*, while Gallagher et al. showed that developmental predation stress in clonal Amazon mollies can shift mean behavior without changing the overall magnitude of individuality. Thus neither context-resistant individuality nor mean behavioral change without a corresponding change in individuality is, by itself, a new general principle.
+Recent work makes the point increasingly clear. Environmental context can alter behavioral trait covariances and therefore the apparent structure of behavioral syndromes (Mitchell and Houslay 2021). Multivariate personality studies explicitly distinguish total among-individual variation from the orientation and geometry of that variation (White et al. 2020). Population-level plasticity can also coexist with comparatively stable among-individual multivariate organization (Houslay et al. 2018), while developmental work emphasizes that behavioral individuality can emerge through multiple stochastic, social, sensory, and intrinsic pathways (de Bivort 2025). More recently, Mathejczyk et al. (2026) showed that some behavioral individuality persists across large environmental-context changes in *Drosophila*, while Gallagher et al. (2026) showed that developmental predation stress in clonal Amazon mollies can shift mean behavior without changing the overall magnitude of individuality. Thus neither context-resistant individuality nor mean behavioral change without a corresponding change in individuality is, by itself, a new general principle.
 
 The remaining challenge is to connect these ideas across causal layers.
 
@@ -61,7 +61,7 @@ Source-level endpoint definitions, support requirements, scaling rules, and perm
 
 ## Juvenile first-flight history
 
-We used the public first-flight dataset associated with Harten et al. 2020 to test whether personal spatial history became progressively more informative over early independent movement.
+We used the public first-flight dataset associated with Harten et al. (2020) to test whether personal spatial history became progressively more informative over early independent movement.
 
 The frozen primary was deliberately stronger than a simple test that own history predicts later movement.
 
@@ -86,7 +86,7 @@ This diagnostic separated weak early seed persistence from later identity-specif
 
 ## Randomized early-environment enrichment
 
-We reanalysed the public dataset from Rachum et al. 2025.
+We reanalysed the public dataset from Rachum et al. (2025).
 
 The confirmatory cohort comprised Season-2 bats with complete Trials 1–3:
 - 29 bats total;
@@ -129,7 +129,7 @@ This secondary was not allowed to alter the primary verdict.
 
 ## Randomized developmental auditory-feedback manipulation
 
-We reanalysed the public adult-vocal dataset associated with Elie et al. 2024.
+We reanalysed the public adult-vocal dataset associated with Elie et al. (2024).
 
 Ten pups had been randomly assigned shortly after birth:
 - 5 hearing / saline controls;
@@ -165,6 +165,8 @@ A post-primary descriptive decomposition allocated the total frozen (D) across a
 
 ## Pipistrellus sensory-masker perturbation
 
+We reanalysed the sensory-masker experiment of Taub and Yovel (2020).
+
 We used a public *Pipistrellus kuhlii* sensory-perturbation experiment in which individuals experienced a masker manipulation.
 
 The primary source-native movement endpoint was individual angle of approach / movement bias under baseline and masker conditions.
@@ -175,6 +177,8 @@ after a shared treatment shift, was the manipulated state closer to that individ
 A second independent foam no-masker to foam+masker contrast was treated as a separate perturbation check.
 
 ## Myotis graded acoustic masking
+
+We reanalysed the graded masking experiment of Foskolos et al. (2022).
 
 We reanalysed the public *Myotis daubentonii* masking experiment.
 
@@ -188,7 +192,7 @@ The exact null permuted biological identity across conditions, yielding 1,296 le
 
 ## Eptesicus reversible auditory-midbrain perturbation
 
-We reanalysed Diebold, Lawlor et al. 2024.
+We reanalysed the public experiment of Diebold et al. (2024).
 
 Four DREADD-treated bats had public audio data in both saline and ligand conditions:
 - jane;
@@ -214,7 +218,7 @@ All (4! = 24) saline-to-ligand identity mappings formed the exact null.
 
 ## Aharon navigation-context manipulation
 
-We reanalysed Figure 1 from Aharon, Sadot & Yovel 2017.
+We reanalysed Figure 1 from Aharon et al. (2017).
 
 The frozen first-eligible-figure rule selected Figure 1 before numerical values were opened.
 
@@ -246,6 +250,8 @@ The exact null anchored con and independently permuted complete bat labels in th
 legal identity mappings.
 
 ## Rhinolophus cross-task portability and Carollia external transfer
+
+The controlled *Rhinolophus nippon* movement archive was associated with Teshima et al. (2026). The independent *Carollia perspicillata* corridor archive was associated with Eveland et al. (2026).
 
 The controlled *Rhinolophus nippon* programme used a frozen transparent two-axis movement representation:
 - FlightIntensity;
