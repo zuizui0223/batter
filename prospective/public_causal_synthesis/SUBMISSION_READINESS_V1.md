@@ -122,6 +122,16 @@ Current QA:
 
 ## Behavioral Ecology requirements already addressed
 
+### Initial-submission reference formatting
+
+**NOT A PRE-SUBMISSION BLOCKER**
+
+Behavioral Ecology currently permits format-free initial submissions. The manuscript must still satisfy double-anonymization, page numbering, Supplementary-file separation and online-form requirements, but full journal-specific CSE reference restyling can be deferred unless requested at revision.
+
+Current reference entries are complete enough for review and DOI-anchored. A final CSE style conversion remains a production/revision task, not a reason to delay initial submission.
+
+
+
 ### Journal fit
 
 **PASS**
