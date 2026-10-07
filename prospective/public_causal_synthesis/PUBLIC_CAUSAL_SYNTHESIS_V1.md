@@ -414,10 +414,6 @@ Cross-environment policy identity:
 - 5/5 positive;
 - p = **0.0001**.
 
-Held-out environment prediction:
-- supported;
-- p = **0.0002**.
-
 Scale-free route geometry identity:
 - K = **+0.38857**;
 - p = **0.0153**.
