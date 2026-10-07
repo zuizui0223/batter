@@ -6,12 +6,24 @@ on:
       - prospective/public-causal-synthesis-v1
     paths:
       - "prospective/public_causal_synthesis/MANUSCRIPT_DRAFT_V1.md"
+      - "prospective/public_causal_synthesis/MANUSCRIPT_ANONYMIZED_BEHAVIORAL_ECOLOGY_V1.md"
+      - "prospective/public_causal_synthesis/MASTER_RESULTS_TABLE_V1.md"
+      - "prospective/public_causal_synthesis/FIGURE_PLAN_V1.md"
+      - "prospective/public_causal_synthesis/FIGURE_CAPTIONS_V1.md"
+      - "prospective/public_causal_synthesis/SUPPLEMENTARY_MATERIAL_DRAFT_V1.md"
+      - "prospective/public_causal_synthesis/ABSTRACT_AND_CLAIMS_V1.md"
       - "prospective/public_causal_synthesis/MANUSCRIPT_NUMERICAL_AUDIT_V1.md"
       - "prospective/public_causal_synthesis/manuscript_evidence_guard_v1.py"
       - ".github/workflows/public-causal-manuscript-evidence-guard-v1.yml"
   pull_request:
     paths:
       - "prospective/public_causal_synthesis/MANUSCRIPT_DRAFT_V1.md"
+      - "prospective/public_causal_synthesis/MANUSCRIPT_ANONYMIZED_BEHAVIORAL_ECOLOGY_V1.md"
+      - "prospective/public_causal_synthesis/MASTER_RESULTS_TABLE_V1.md"
+      - "prospective/public_causal_synthesis/FIGURE_PLAN_V1.md"
+      - "prospective/public_causal_synthesis/FIGURE_CAPTIONS_V1.md"
+      - "prospective/public_causal_synthesis/SUPPLEMENTARY_MATERIAL_DRAFT_V1.md"
+      - "prospective/public_causal_synthesis/ABSTRACT_AND_CLAIMS_V1.md"
       - "prospective/public_causal_synthesis/MANUSCRIPT_NUMERICAL_AUDIT_V1.md"
       - "prospective/public_causal_synthesis/manuscript_evidence_guard_v1.py"
       - ".github/workflows/public-causal-manuscript-evidence-guard-v1.yml"
@@ -25,5 +37,5 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Run manuscript evidence guard
+      - name: Run submission-package evidence guard
         run: python prospective/public_causal_synthesis/manuscript_evidence_guard_v1.py
