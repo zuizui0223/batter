@@ -1,0 +1,24 @@
+name: mini-structural-support-inventory-v1
+on:
+  push:
+    branches: [post-freeze/mini-latent-dimensionality-scan-v1]
+    paths:
+      - "prospective/task_reset_lockin/mini_structural_support_inventory_v1.py"
+      - ".github/workflows/mini-structural-support-inventory-v1.yml"
+  workflow_dispatch:
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions: {contents: read}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: python -m pip install --quiet numpy
+      - run: python prospective/task_reset_lockin/mini_structural_support_inventory_v1.py > mini_structural_support_inventory_v1.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mini-structural-support-inventory-v1
+          path: mini_structural_support_inventory_v1.json
+          if-no-files-found: error
