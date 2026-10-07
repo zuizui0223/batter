@@ -1,0 +1,26 @@
+name: personal-3d-predictive-ladder-v1
+on:
+  push:
+    branches: [post-freeze/personal-3d-predictive-ladder-v1]
+    paths:
+      - "post_freeze_extensions/personal_3d_predictive_ladder/**"
+      - ".github/workflows/personal-3d-predictive-ladder-v1.yml"
+  workflow_dispatch:
+jobs:
+  analysis:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    permissions: {contents: read}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: python -m pip install -e .
+      - run: python post_freeze_extensions/personal_3d_predictive_ladder/run_v1.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: personal-3d-predictive-ladder-v1
+          path: |
+            post_freeze_extensions/personal_3d_predictive_ladder/result_v1.json
+            post_freeze_extensions/personal_3d_predictive_ladder/RESULT_V1.md
+          if-no-files-found: error
