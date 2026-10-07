@@ -60,6 +60,17 @@ def main():
             raise SystemExit(f"STOP supplementary figure missing: {p}")
 
     md=insert_figures(SRC.read_text(encoding="utf-8"))
+
+    # Pandoc/Markdown-style list safety: a prose line ending in ':' must be
+    # separated from a following dash-list by a blank line, otherwise some
+    # renderers flatten the list into body prose.
+    lines=md.splitlines()
+    for i in range(len(lines)-1):
+        if lines[i].strip().endswith(":") and re.match(r"^\s*-\s+\S", lines[i+1]):
+            raise SystemExit(
+                f"STOP supplement colon-list boundary at source line {i+1}: {lines[i]!r}"
+            )
+
     html_body=markdown.markdown(
         md,
         extensions=["tables","fenced_code","sane_lists"],
