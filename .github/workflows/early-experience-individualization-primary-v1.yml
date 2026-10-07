@@ -13,8 +13,8 @@ permissions:
   contents: write
 
 concurrency:
-  group: early-experience-individualization-primary-${{ github.ref }}
-  cancel-in-progress: true
+  group: early-experience-specialization-write-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   primary:
@@ -41,6 +41,15 @@ jobs:
             echo "No primary changes"
           else
             git commit -m "Record early-experience individualization primary"
-            git pull --rebase origin prospective/early-experience-specialization-v1
-            git push origin HEAD:prospective/early-experience-specialization-v1
+            for attempt in 1 2 3 4 5; do
+              git fetch origin prospective/early-experience-specialization-v1
+              git rebase origin/prospective/early-experience-specialization-v1
+              if git push origin HEAD:prospective/early-experience-specialization-v1; then
+                exit 0
+              fi
+              echo "Push race on attempt $attempt; retrying"
+              sleep $((attempt * 2))
+            done
+            echo "Failed to persist primary receipt after retries"
+            exit 1
           fi
