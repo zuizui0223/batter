@@ -47,7 +47,20 @@ manuscript = manuscript.replace(
     "Source-level analysis contracts, structural audit records, executable scripts, "
     "exact/randomization logic, result receipts, synthesis files and figure-generation "
     "code will be supplied in an anonymized review archive: "
-    "`[ANONYMIZED_REVIEW_ARCHIVE_URL]`.",
+    "`[ANONYMIZED_REVIEW_ARCHIVE_URL]` (Anonymous 2026).",
+)
+
+# Behavioral Ecology requests an anonymized data/archive citation in References
+# during double-anonymized review.
+anonymous_archive_ref = (
+    "- Anonymous. 2026. Reproducibility archive for: Individual organization remains "
+    "detectable across acute perturbations in bats. "
+    "`[ANONYMIZED_REVIEW_ARCHIVE_URL]`."
+)
+manuscript = manuscript.replace(
+    "# References — working list\n",
+    "# References — working list\n\n" + anonymous_archive_ref + "\n",
+    1,
 )
 
 # Internal file-path authority details are not useful to reviewers.
