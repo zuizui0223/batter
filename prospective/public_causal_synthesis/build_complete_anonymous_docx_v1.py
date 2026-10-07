@@ -97,6 +97,9 @@ def set_line_numbering(section):
 
 def add_page_field(paragraph):
     paragraph.alignment=WD_ALIGN_PARAGRAPH.CENTER
+    pPr=paragraph._p.get_or_add_pPr()
+    if pPr.find(qn("w:suppressLineNumbers")) is None:
+        pPr.append(OxmlElement("w:suppressLineNumbers"))
     run=paragraph.add_run()
     fldBegin=OxmlElement("w:fldChar"); fldBegin.set(qn("w:fldCharType"),"begin")
     instr=OxmlElement("w:instrText"); instr.set(qn("xml:space"),"preserve"); instr.text=" PAGE "
@@ -171,6 +174,15 @@ def main():
             check=True,
         )
         doc=Document(base)
+
+        # Remove Pandoc spacer/horizontal-rule paragraphs before submission formatting.
+        # They are visually useful in Markdown but consume vertical space in a
+        # double-spaced journal manuscript and can push Keywords onto page 3.
+        for p in list(doc.paragraphs):
+            if not p.text.strip():
+                parent=p._element.getparent()
+                if parent is not None:
+                    parent.remove(p._element)
 
         # Page geometry and line numbering.
         for section in doc.sections:
