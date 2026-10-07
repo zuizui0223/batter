@@ -174,7 +174,7 @@ Before final submission:
 
 ### Data archiving
 
-**SOURCE DATA PASS; ANALYSIS-ARCHIVE ANONYMIZATION BLOCKER**
+**SOURCE DATA PASS; ANONYMIZED REVIEW PACKAGE BUILD PASS; EXTERNAL ANONYMOUS HOSTING STILL REQUIRED**
 
 Source-data audit updates:
 - Taub source data URL verified from the published Data Availability statement;
@@ -187,12 +187,18 @@ However, the current analysis repository is identified as `zuizui0223/batter`.
 
 Behavioral Ecology uses double-anonymized review and asks authors to anonymize manuscript, supplementary materials and data archive.
 
-Required before submission:
-1. create an anonymized review archive for analysis code/contracts/result receipts;
-2. use an anonymous review URL/DOI in the manuscript;
-3. replace it with the final identified public archive after acceptance or when journal policy permits.
+Completed:
+1. anonymized review archive builder created;
+2. archive build/anonymization scan passed;
+3. authoritative artifact receipt: `ANONYMIZED_REVIEW_ARCHIVE_RECEIPT_V1.md`.
 
-Do not expose `zuizui0223` in the review manuscript.
+Remaining:
+1. download the clean review ZIP;
+2. upload it to an anonymous review-capable host or journal file mechanism;
+3. replace `[ANONYMIZED_REVIEW_ARCHIVE_URL]` if an anonymous review URL is required;
+4. replace with the final identified public archive after acceptance or when journal policy permits.
+
+Do not expose the identified development repository in reviewer-facing material.
 
 ### Supplementary material
 
@@ -335,4 +341,13 @@ PASS:
 
 **JOURNAL UPLOAD: NOT YET READY**
 
-The remaining blockers are packaging/anonymization/author metadata, not unresolved numerical analyses.
+Scientific manuscript, figures, evidence guards, anonymized manuscript and anonymized review-package build are complete.
+
+The remaining blockers are:
+- anonymous external placement of the clean review ZIP, if needed by the journal;
+- human author metadata;
+- Funding / CRediT / conflicts;
+- final AI-disclosure confirmation;
+- final journal-style packaging.
+
+There are no unresolved manuscript-facing numerical analyses.
