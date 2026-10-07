@@ -1,0 +1,41 @@
+name: early-experience-public-file-inventory-v2
+
+on:
+  push:
+    paths:
+      - "prospective/early_experience_specialization/public_file_inventory_v2.py"
+      - ".github/workflows/early-experience-public-file-inventory-v2.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: early-experience-file-inventory-v2-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  inventory:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: prospective/early-experience-specialization-v1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Inventory verified public file endpoint
+        run: python prospective/early_experience_specialization/public_file_inventory_v2.py
+      - name: Commit inventory receipt
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add prospective/early_experience_specialization/PUBLIC_FILE_INVENTORY_V2.json
+          git add prospective/early_experience_specialization/PUBLIC_FILE_INVENTORY_V2.md
+          if git diff --cached --quiet; then
+            echo "No inventory changes"
+          else
+            git commit -m "Record verified public file inventory"
+            git pull --rebase origin prospective/early-experience-specialization-v1
+            git push origin HEAD:prospective/early-experience-specialization-v1
+          fi

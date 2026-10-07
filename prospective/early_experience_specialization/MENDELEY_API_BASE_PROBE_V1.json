@@ -1,0 +1,227 @@
+{
+  "rows": [
+    {
+      "requested_url": "https://data.mendeley.com/api/datasets-v2/datasets/wh7c636y3t/snapshot/1",
+      "final_url": "https://data.mendeley.com/api/datasets-v2/datasets/wh7c636y3t/snapshot/1",
+      "status": 404,
+      "content_type": "text/html; charset=utf-8",
+      "content_length": "185"
+    },
+    {
+      "requested_url": "https://data.mendeley.com/api/datasets-v2/datasets/wh7c636y3t/files?version=1&%24start=0&%24limit=1000",
+      "final_url": "https://data.mendeley.com/api/datasets-v2/datasets/wh7c636y3t/files?version=1&%24start=0&%24limit=1000",
+      "status": 404,
+      "content_type": "text/html; charset=utf-8",
+      "content_length": "180"
+    },
+    {
+      "requested_url": "https://data.mendeley.com/api/datasets-v2/datasets/wh7c636y3t/zip?version=1",
+      "final_url": "https://data.mendeley.com/api/datasets-v2/datasets/wh7c636y3t/zip?version=1",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "content_length": "292",
+      "body_present": true
+    },
+    {
+      "requested_url": "https://data.mendeley.com/api/datasets-v2/wh7c636y3t/snapshot/1",
+      "final_url": "https://data.mendeley.com/api/datasets-v2/wh7c636y3t/snapshot/1",
+      "status": 404,
+      "content_type": "text/html; charset=utf-8",
+      "content_length": "176"
+    },
+    {
+      "requested_url": "https://data.mendeley.com/api/datasets-v2/wh7c636y3t/files?version=1&%24start=0&%24limit=1000",
+      "final_url": "https://data.mendeley.com/api/datasets-v2/wh7c636y3t/files?version=1&%24start=0&%24limit=1000",
+      "status": 404,
+      "content_type": "text/html; charset=utf-8",
+      "content_length": "171"
+    },
+    {
+      "requested_url": "https://data.mendeley.com/api/datasets-v2/wh7c636y3t/zip?version=1",
+      "final_url": "https://data.mendeley.com/api/datasets-v2/wh7c636y3t/zip?version=1",
+      "status": 404,
+      "content_type": "text/html; charset=utf-8",
+      "content_length": "169"
+    },
+    {
+      "requested_url": "https://data.mendeley.com/api/datasets/datasets/wh7c636y3t/snapshot/1",
+      "final_url": "https://data.mendeley.com/api/datasets/datasets/wh7c636y3t/snapshot/1",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "content_length": "35486",
+      "body_present": true
+    },
+    {
+      "requested_url": "https://data.mendeley.com/api/datasets/datasets/wh7c636y3t/files?version=1&%24start=0&%24limit=1000",
+      "final_url": "https://data.mendeley.com/api/datasets/datasets/wh7c636y3t/files?version=1&%24start=0&%24limit=1000",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "content_length": "35486",
+      "body_present": true
+    },
+    {
+      "requested_url": "https://data.mendeley.com/api/datasets/datasets/wh7c636y3t/zip?version=1",
+      "final_url": "https://data.mendeley.com/api/datasets/datasets/wh7c636y3t/zip?version=1",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "content_length": "35486",
+      "body_present": true
+    },
+    {
+      "requested_url": "https://data.mendeley.com/api/datasets/wh7c636y3t/snapshot/1",
+      "final_url": "https://data.mendeley.com/api/datasets/wh7c636y3t/snapshot/1",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "content_length": "35486",
+      "body_present": true
+    },
+    {
+      "requested_url": "https://data.mendeley.com/api/datasets/wh7c636y3t/files?version=1&%24start=0&%24limit=1000",
+      "final_url": "https://data.mendeley.com/api/datasets/wh7c636y3t/files?version=1&%24start=0&%24limit=1000",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "content_length": "3032",
+      "body_present": true
+    },
+    {
+      "requested_url": "https://data.mendeley.com/api/datasets/wh7c636y3t/zip?version=1",
+      "final_url": "https://data.mendeley.com/api/datasets/wh7c636y3t/zip?version=1",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "content_length": "35486",
+      "body_present": true
+    },
+    {
+      "requested_url": "https://data.mendeley.com/api/datasets/wh7c636y3t/snapshot/1",
+      "final_url": "https://data.mendeley.com/api/datasets/wh7c636y3t/snapshot/1",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "content_length": "35486",
+      "body_present": true
+    },
+    {
+      "requested_url": "https://data.mendeley.com/api/datasets/wh7c636y3t/files?version=1&%24start=0&%24limit=1000",
+      "final_url": "https://data.mendeley.com/api/datasets/wh7c636y3t/files?version=1&%24start=0&%24limit=1000",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "content_length": "3032",
+      "body_present": true
+    },
+    {
+      "requested_url": "https://data.mendeley.com/api/datasets/wh7c636y3t/zip?version=1",
+      "final_url": "https://data.mendeley.com/api/datasets/wh7c636y3t/zip?version=1",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "content_length": "35486",
+      "body_present": true
+    },
+    {
+      "requested_url": "https://data.mendeley.com/api/wh7c636y3t/snapshot/1",
+      "final_url": "https://data.mendeley.com/api/wh7c636y3t/snapshot/1",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "content_length": "107999",
+      "body_present": true
+    },
+    {
+      "requested_url": "https://data.mendeley.com/api/wh7c636y3t/files?version=1&%24start=0&%24limit=1000",
+      "final_url": "https://data.mendeley.com/api/wh7c636y3t/files?version=1&%24start=0&%24limit=1000",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "content_length": "107989",
+      "body_present": true
+    },
+    {
+      "requested_url": "https://data.mendeley.com/api/wh7c636y3t/zip?version=1",
+      "final_url": "https://data.mendeley.com/api/wh7c636y3t/zip?version=1",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "content_length": "107985",
+      "body_present": true
+    },
+    {
+      "requested_url": "https://api.data.mendeley.com/datasets/wh7c636y3t/snapshot/1",
+      "final_url": "https://api.data.mendeley.com/datasets/wh7c636y3t/snapshot/1",
+      "status": 404,
+      "content_type": "application/json; charset=utf-8",
+      "content_length": "103"
+    },
+    {
+      "requested_url": "https://api.data.mendeley.com/datasets/wh7c636y3t/files?version=1&%24start=0&%24limit=1000",
+      "final_url": "https://api.data.mendeley.com/datasets/wh7c636y3t/files?version=1&%24start=0&%24limit=1000",
+      "status": 401,
+      "content_type": "application/json; charset=utf-8",
+      "content_length": "80"
+    },
+    {
+      "requested_url": "https://api.data.mendeley.com/datasets/wh7c636y3t/zip?version=1",
+      "final_url": "https://api.data.mendeley.com/datasets/wh7c636y3t/zip?version=1",
+      "status": 401,
+      "content_type": "application/json; charset=utf-8",
+      "content_length": "80"
+    },
+    {
+      "requested_url": "https://api.data.mendeley.com/wh7c636y3t/snapshot/1",
+      "final_url": "https://api.data.mendeley.com/wh7c636y3t/snapshot/1",
+      "status": 404,
+      "content_type": "application/json; charset=utf-8",
+      "content_length": "103"
+    },
+    {
+      "requested_url": "https://api.data.mendeley.com/wh7c636y3t/files?version=1&%24start=0&%24limit=1000",
+      "final_url": "https://api.data.mendeley.com/wh7c636y3t/files?version=1&%24start=0&%24limit=1000",
+      "status": 404,
+      "content_type": "application/json; charset=utf-8",
+      "content_length": "103"
+    },
+    {
+      "requested_url": "https://api.data.mendeley.com/wh7c636y3t/zip?version=1",
+      "final_url": "https://api.data.mendeley.com/wh7c636y3t/zip?version=1",
+      "status": 404,
+      "content_type": "application/json; charset=utf-8",
+      "content_length": "103"
+    },
+    {
+      "requested_url": "https://api.data.mendeley.com/datasets-v2/datasets/wh7c636y3t/snapshot/1",
+      "final_url": "https://api.data.mendeley.com/datasets-v2/datasets/wh7c636y3t/snapshot/1",
+      "status": 404,
+      "content_type": "application/json; charset=utf-8",
+      "content_length": "103"
+    },
+    {
+      "requested_url": "https://api.data.mendeley.com/datasets-v2/datasets/wh7c636y3t/files?version=1&%24start=0&%24limit=1000",
+      "final_url": "https://api.data.mendeley.com/datasets-v2/datasets/wh7c636y3t/files?version=1&%24start=0&%24limit=1000",
+      "status": 404,
+      "content_type": "application/json; charset=utf-8",
+      "content_length": "103"
+    },
+    {
+      "requested_url": "https://api.data.mendeley.com/datasets-v2/datasets/wh7c636y3t/zip?version=1",
+      "final_url": "https://api.data.mendeley.com/datasets-v2/datasets/wh7c636y3t/zip?version=1",
+      "status": 404,
+      "content_type": "application/json; charset=utf-8",
+      "content_length": "103"
+    },
+    {
+      "requested_url": "https://api.data.mendeley.com/datasets-v2/wh7c636y3t/snapshot/1",
+      "final_url": "https://api.data.mendeley.com/datasets-v2/wh7c636y3t/snapshot/1",
+      "status": 404,
+      "content_type": "application/json; charset=utf-8",
+      "content_length": "103"
+    },
+    {
+      "requested_url": "https://api.data.mendeley.com/datasets-v2/wh7c636y3t/files?version=1&%24start=0&%24limit=1000",
+      "final_url": "https://api.data.mendeley.com/datasets-v2/wh7c636y3t/files?version=1&%24start=0&%24limit=1000",
+      "status": 404,
+      "content_type": "application/json; charset=utf-8",
+      "content_length": "103"
+    },
+    {
+      "requested_url": "https://api.data.mendeley.com/datasets-v2/wh7c636y3t/zip?version=1",
+      "final_url": "https://api.data.mendeley.com/datasets-v2/wh7c636y3t/zip?version=1",
+      "status": 404,
+      "content_type": "application/json; charset=utf-8",
+      "content_length": "103"
+    }
+  ]
+}
