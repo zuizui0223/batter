@@ -26,6 +26,9 @@ def fetch():
         raise RuntimeError(f"not XLSX magic: {data[:16]!r}")
     return data,"workflow-curl-local"
 
+def is_id_like_header(x):
+    return isinstance(x,str) and bool(re.search(r"(pup|bat|individual|id|group|playback|sex|session|age|week)",x,re.I))
+
 def main():
     data,source_url=fetch()
     wb=openpyxl.load_workbook(BytesIO(data),read_only=True,data_only=False)
