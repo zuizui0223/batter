@@ -58,12 +58,12 @@ anonymous_archive_ref = (
     "`[ANONYMIZED_REVIEW_ARCHIVE_URL]`."
 )
 manuscript = manuscript.replace(
-    "# References — working list\n",
-    "# References — working list\n\n" + anonymous_archive_ref + "\n",
+    "# References\n",
+    "# References\n\n" + anonymous_archive_ref + "\n",
     1,
 )
 
-# Remove the internal draft label from reviewer-facing manuscript.
+# Safety: remove the internal draft label if an upstream manuscript ever retains it.
 manuscript = manuscript.replace(
     "# References — working list",
     "# References",
