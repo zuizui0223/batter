@@ -10,11 +10,28 @@ It also supports:
 
 > **Personal history can refine individual organization over development.**
 
-An independent randomized early-experience manipulation additionally shows that broad environmental enrichment does **not** confirm increased among-individual laboratory personality dispersion.
+Two independent randomized developmental manipulations now show that large environmental effects on phenotype need not alter the total amount of individual differentiation.
 
-Therefore public data support a causal effect of experience on behavior, but not the simple formation rule:
+### Broad enrichment
+- n = 29;
+- D = +0.734699;
+- p = 0.167785;
+- no supported variance amplification.
 
-> **richer early environment -> more individuality.**
+### Developmental auditory feedback
+- n = 10;
+- randomized hearing vs deafening;
+- D = -1.425497;
+- exact two-sided p = 0.716667;
+- no supported change in whole-repertoire adult vocal individualization.
+
+Therefore public data support causal effects of experience on phenotype, but not either simple formation rule:
+
+> **richer early environment -> more individuality**
+
+or
+
+> **access to a key learning channel -> more individuality.**
 
 And it does not yet identify:
 
@@ -38,6 +55,12 @@ Maintenance/portability is supported across:
 - independent path-integration/navigation-context manipulation.
 
 Formation is therefore much more weakly identified than maintenance.
+
+More specifically, the unresolved formation problem is no longer simply whether environment matters. It clearly does.
+
+The unresolved issue is:
+
+> **why individuals diverge from one another even when broad developmental treatment effects do not predict the amount of divergence.**
 
 Therefore the bottleneck has shifted from:
 
@@ -81,8 +104,19 @@ Public data have already narrowed the reason for doing such an experiment:
 - not because navigation-context portability is unknown;
 - but because **formation is now the weakly identified layer**.
 
-The randomized Rachum enrichment source additionally shows that manipulating broad environmental richness is not enough, under the frozen test, to establish increased individualization.
+The randomized Rachum enrichment source shows that manipulating broad environmental richness is not enough, under the frozen test, to establish increased individualization.
 
-So the remaining formation question is more specific:
+The randomized Elie auditory-feedback source goes further: removing a sensory channel that is causally necessary for learning parts of the adult vocal phenotype still does not alter the total amount of whole-repertoire individual differentiation under the frozen test.
 
-> **what causes different individuals to take different historical trajectories, rather than merely shifting all individuals in a common direction?**
+So the remaining formation question is now more specific:
+
+> **what creates stable between-individual organization if broad environmental richness and access to a major learning channel can change phenotype without changing the total amount of individuality?**
+
+This points toward mechanisms such as:
+- identity-specific histories within the same broad environment;
+- intrinsic/biomechanical predispositions;
+- stochastic symmetry breaking followed by reuse;
+- genotype × experience interaction;
+- fine-grained social/resource histories not captured by treatment labels.
+
+These are hypotheses, not yet identified causes.
