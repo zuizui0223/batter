@@ -1,0 +1,1062 @@
+{
+  "version": 3,
+  "source": "10.1371/journal.pbio.2002556.s011",
+  "download_route": "workflow-curl-local",
+  "bytes": 3541533,
+  "sheets": [
+    {
+      "name": "Figure 1E,F",
+      "max_row": 45866,
+      "max_column": 4,
+      "first20_string_labels": [
+        {
+          "cell": "A1",
+          "value": "Mean log_2(F0) of bat calls"
+        },
+        {
+          "cell": "A2",
+          "value": "Adult bats"
+        },
+        {
+          "cell": "B2",
+          "value": "Low-F0 playback"
+        },
+        {
+          "cell": "C2",
+          "value": "High-F0 playback"
+        },
+        {
+          "cell": "D2",
+          "value": "Control playback"
+        }
+      ]
+    },
+    {
+      "name": "Figure 2",
+      "max_row": 3350,
+      "max_column": 118,
+      "first20_string_labels": [
+        {
+          "cell": "A1",
+          "value": "LDA of bat calls (LD1,LD2) in 4 recording sessions, and LDA of playbacks."
+        },
+        {
+          "cell": "A2",
+          "value": "session 1,High-F0,bat 1 (LD1)"
+        },
+        {
+          "cell": "B2",
+          "value": "session 1,High-F0,bat 1 (LD2)"
+        },
+        {
+          "cell": "C2",
+          "value": "session 1,High-F0,bat 2 (LD1)"
+        },
+        {
+          "cell": "D2",
+          "value": "session 1,High-F0,bat 2 (LD2)"
+        },
+        {
+          "cell": "E2",
+          "value": "session 1,High-F0,bat 3 (LD1)"
+        },
+        {
+          "cell": "F2",
+          "value": "session 1,High-F0,bat 3 (LD2)"
+        },
+        {
+          "cell": "G2",
+          "value": "session 1,High-F0,bat 4 (LD1)"
+        },
+        {
+          "cell": "H2",
+          "value": "session 1,High-F0,bat 4 (LD2)"
+        },
+        {
+          "cell": "I2",
+          "value": "session 1,Low-F0,bat 1 (LD1)"
+        },
+        {
+          "cell": "J2",
+          "value": "session 1,Low-F0,bat 1 (LD2)"
+        },
+        {
+          "cell": "K2",
+          "value": "session 1,Low-F0,bat 2 (LD1)"
+        },
+        {
+          "cell": "L2",
+          "value": "session 1,Low-F0,bat 2 (LD2)"
+        },
+        {
+          "cell": "M2",
+          "value": "session 1,Low-F0,bat 3 (LD1)"
+        },
+        {
+          "cell": "N2",
+          "value": "session 1,Low-F0,bat 3 (LD2)"
+        },
+        {
+          "cell": "O2",
+          "value": "session 1,Low-F0,bat 4 (LD1)"
+        },
+        {
+          "cell": "P2",
+          "value": "session 1,Low-F0,bat 4 (LD2)"
+        },
+        {
+          "cell": "Q2",
+          "value": "session 1,Low-F0,bat 5 (LD1)"
+        },
+        {
+          "cell": "R2",
+          "value": "session 1,Low-F0,bat 5 (LD2)"
+        },
+        {
+          "cell": "S2",
+          "value": "session 1,Control,bat 1 (LD1)"
+        },
+        {
+          "cell": "T2",
+          "value": "session 1,Control,bat 1 (LD2)"
+        },
+        {
+          "cell": "U2",
+          "value": "session 1,Control,bat 2 (LD1)"
+        },
+        {
+          "cell": "V2",
+          "value": "session 1,Control,bat 2 (LD2)"
+        },
+        {
+          "cell": "W2",
+          "value": "session 1,Control,bat 3 (LD1)"
+        },
+        {
+          "cell": "X2",
+          "value": "session 1,Control,bat 3 (LD2)"
+        },
+        {
+          "cell": "Y2",
+          "value": "session 1,Control,bat 4 (LD1)"
+        },
+        {
+          "cell": "Z2",
+          "value": "session 1,Control,bat 4 (LD2)"
+        },
+        {
+          "cell": "AA2",
+          "value": "session 1,Control,bat 5 (LD1)"
+        },
+        {
+          "cell": "AB2",
+          "value": "session 1,Control,bat 5 (LD2)"
+        },
+        {
+          "cell": "AC2",
+          "value": "session 2,High-F0,bat 1 (LD1)"
+        },
+        {
+          "cell": "AD2",
+          "value": "session 2,High-F0,bat 1 (LD2)"
+        },
+        {
+          "cell": "AE2",
+          "value": "session 2,High-F0,bat 2 (LD1)"
+        },
+        {
+          "cell": "AF2",
+          "value": "session 2,High-F0,bat 2 (LD2)"
+        },
+        {
+          "cell": "AG2",
+          "value": "session 2,High-F0,bat 3 (LD1)"
+        },
+        {
+          "cell": "AH2",
+          "value": "session 2,High-F0,bat 3 (LD2)"
+        },
+        {
+          "cell": "AI2",
+          "value": "session 2,High-F0,bat 4 (LD1)"
+        },
+        {
+          "cell": "AJ2",
+          "value": "session 2,High-F0,bat 4 (LD2)"
+        },
+        {
+          "cell": "AK2",
+          "value": "session 2,Low-F0,bat 1 (LD1)"
+        },
+        {
+          "cell": "AL2",
+          "value": "session 2,Low-F0,bat 1 (LD2)"
+        },
+        {
+          "cell": "AM2",
+          "value": "session 2,Low-F0,bat 2 (LD1)"
+        },
+        {
+          "cell": "AN2",
+          "value": "session 2,Low-F0,bat 2 (LD2)"
+        },
+        {
+          "cell": "AO2",
+          "value": "session 2,Low-F0,bat 3 (LD1)"
+        },
+        {
+          "cell": "AP2",
+          "value": "session 2,Low-F0,bat 3 (LD2)"
+        },
+        {
+          "cell": "AQ2",
+          "value": "session 2,Low-F0,bat 4 (LD1)"
+        },
+        {
+          "cell": "AR2",
+          "value": "session 2,Low-F0,bat 4 (LD2)"
+        },
+        {
+          "cell": "AS2",
+          "value": "session 2,Low-F0,bat 5 (LD1)"
+        },
+        {
+          "cell": "AT2",
+          "value": "session 2,Low-F0,bat 5 (LD2)"
+        },
+        {
+          "cell": "AU2",
+          "value": "session 2,Control,bat 1 (LD1)"
+        },
+        {
+          "cell": "AV2",
+          "value": "session 2,Control,bat 1 (LD2)"
+        },
+        {
+          "cell": "AW2",
+          "value": "session 2,Control,bat 2 (LD1)"
+        },
+        {
+          "cell": "AX2",
+          "value": "session 2,Control,bat 2 (LD2)"
+        },
+        {
+          "cell": "AY2",
+          "value": "session 2,Control,bat 3 (LD1)"
+        },
+        {
+          "cell": "AZ2",
+          "value": "session 2,Control,bat 3 (LD2)"
+        },
+        {
+          "cell": "BA2",
+          "value": "session 2,Control,bat 4 (LD1)"
+        },
+        {
+          "cell": "BB2",
+          "value": "session 2,Control,bat 4 (LD2)"
+        },
+        {
+          "cell": "BC2",
+          "value": "session 2,Control,bat 5 (LD1)"
+        },
+        {
+          "cell": "BD2",
+          "value": "session 2,Control,bat 5 (LD2)"
+        },
+        {
+          "cell": "BE2",
+          "value": "session 3,High-F0,bat 1 (LD1)"
+        },
+        {
+          "cell": "BF2",
+          "value": "session 3,High-F0,bat 1 (LD2)"
+        },
+        {
+          "cell": "BG2",
+          "value": "session 3,High-F0,bat 2 (LD1)"
+        },
+        {
+          "cell": "BH2",
+          "value": "session 3,High-F0,bat 2 (LD2)"
+        },
+        {
+          "cell": "BI2",
+          "value": "session 3,High-F0,bat 3 (LD1)"
+        },
+        {
+          "cell": "BJ2",
+          "value": "session 3,High-F0,bat 3 (LD2)"
+        },
+        {
+          "cell": "BK2",
+          "value": "session 3,High-F0,bat 4 (LD1)"
+        },
+        {
+          "cell": "BL2",
+          "value": "session 3,High-F0,bat 4 (LD2)"
+        },
+        {
+          "cell": "BM2",
+          "value": "session 3,Low-F0,bat 1 (LD1)"
+        },
+        {
+          "cell": "BN2",
+          "value": "session 3,Low-F0,bat 1 (LD2)"
+        },
+        {
+          "cell": "BO2",
+          "value": "session 3,Low-F0,bat 2 (LD1)"
+        },
+        {
+          "cell": "BP2",
+          "value": "session 3,Low-F0,bat 2 (LD2)"
+        },
+        {
+          "cell": "BQ2",
+          "value": "session 3,Low-F0,bat 3 (LD1)"
+        },
+        {
+          "cell": "BR2",
+          "value": "session 3,Low-F0,bat 3 (LD2)"
+        },
+        {
+          "cell": "BS2",
+          "value": "session 3,Low-F0,bat 4 (LD1)"
+        },
+        {
+          "cell": "BT2",
+          "value": "session 3,Low-F0,bat 4 (LD2)"
+        },
+        {
+          "cell": "BU2",
+          "value": "session 3,Low-F0,bat 5 (LD1)"
+        },
+        {
+          "cell": "BV2",
+          "value": "session 3,Low-F0,bat 5 (LD2)"
+        },
+        {
+          "cell": "BW2",
+          "value": "session 3,Control,bat 1 (LD1)"
+        },
+        {
+          "cell": "BX2",
+          "value": "session 3,Control,bat 1 (LD2)"
+        },
+        {
+          "cell": "BY2",
+          "value": "session 3,Control,bat 2 (LD1)"
+        },
+        {
+          "cell": "BZ2",
+          "value": "session 3,Control,bat 2 (LD2)"
+        },
+        {
+          "cell": "CA2",
+          "value": "session 3,Control,bat 3 (LD1)"
+        },
+        {
+          "cell": "CB2",
+          "value": "session 3,Control,bat 3 (LD2)"
+        },
+        {
+          "cell": "CC2",
+          "value": "session 3,Control,bat 4 (LD1)"
+        },
+        {
+          "cell": "CD2",
+          "value": "session 3,Control,bat 4 (LD2)"
+        },
+        {
+          "cell": "CE2",
+          "value": "session 3,Control,bat 5 (LD1)"
+        },
+        {
+          "cell": "CF2",
+          "value": "session 3,Control,bat 5 (LD2)"
+        },
+        {
+          "cell": "CG2",
+          "value": "session 4,High-F0,bat 1 (LD1)"
+        },
+        {
+          "cell": "CH2",
+          "value": "session 4,High-F0,bat 1 (LD2)"
+        },
+        {
+          "cell": "CI2",
+          "value": "session 4,High-F0,bat 2 (LD1)"
+        },
+        {
+          "cell": "CJ2",
+          "value": "session 4,High-F0,bat 2 (LD2)"
+        },
+        {
+          "cell": "CK2",
+          "value": "session 4,High-F0,bat 3 (LD1)"
+        },
+        {
+          "cell": "CL2",
+          "value": "session 4,High-F0,bat 3 (LD2)"
+        },
+        {
+          "cell": "CM2",
+          "value": "session 4,High-F0,bat 4 (LD1)"
+        },
+        {
+          "cell": "CN2",
+          "value": "session 4,High-F0,bat 4 (LD2)"
+        },
+        {
+          "cell": "CO2",
+          "value": "session 4,Low-F0,bat 1 (LD1)"
+        },
+        {
+          "cell": "CP2",
+          "value": "session 4,Low-F0,bat 1 (LD2)"
+        },
+        {
+          "cell": "CQ2",
+          "value": "session 4,Low-F0,bat 2 (LD1)"
+        },
+        {
+          "cell": "CR2",
+          "value": "session 4,Low-F0,bat 2 (LD2)"
+        },
+        {
+          "cell": "CS2",
+          "value": "session 4,Low-F0,bat 3 (LD1)"
+        },
+        {
+          "cell": "CT2",
+          "value": "session 4,Low-F0,bat 3 (LD2)"
+        },
+        {
+          "cell": "CU2",
+          "value": "session 4,Low-F0,bat 4 (LD1)"
+        },
+        {
+          "cell": "CV2",
+          "value": "session 4,Low-F0,bat 4 (LD2)"
+        },
+        {
+          "cell": "CW2",
+          "value": "session 4,Low-F0,bat 5 (LD1)"
+        },
+        {
+          "cell": "CX2",
+          "value": "session 4,Low-F0,bat 5 (LD2)"
+        },
+        {
+          "cell": "CY2",
+          "value": "session 4,Control,bat 1 (LD1)"
+        },
+        {
+          "cell": "CZ2",
+          "value": "session 4,Control,bat 1 (LD2)"
+        },
+        {
+          "cell": "DA2",
+          "value": "session 4,Control,bat 2 (LD1)"
+        },
+        {
+          "cell": "DB2",
+          "value": "session 4,Control,bat 2 (LD2)"
+        },
+        {
+          "cell": "DC2",
+          "value": "session 4,Control,bat 3 (LD1)"
+        },
+        {
+          "cell": "DD2",
+          "value": "session 4,Control,bat 3 (LD2)"
+        },
+        {
+          "cell": "DE2",
+          "value": "session 4,Control,bat 4 (LD1)"
+        },
+        {
+          "cell": "DF2",
+          "value": "session 4,Control,bat 4 (LD2)"
+        },
+        {
+          "cell": "DG2",
+          "value": "session 4,Control,bat 5 (LD1)"
+        },
+        {
+          "cell": "DH2",
+          "value": "session 4,Control,bat 5 (LD2)"
+        },
+        {
+          "cell": "DI2",
+          "value": "High-F0 playback (LD1)"
+        },
+        {
+          "cell": "DJ2",
+          "value": "High-F0 playback (LD2)"
+        },
+        {
+          "cell": "DK2",
+          "value": "Low-F0 playback (LD1)"
+        },
+        {
+          "cell": "DL2",
+          "value": "Low-F0 playback (LD2)"
+        },
+        {
+          "cell": "DM2",
+          "value": "Control playback (LD1)"
+        },
+        {
+          "cell": "DN2",
+          "value": "Control playback (LD2)"
+        }
+      ]
+    },
+    {
+      "name": "Figure 3,Figure S2",
+      "max_row": 1420,
+      "max_column": 56,
+      "first20_string_labels": [
+        {
+          "cell": "A1",
+          "value": "Mean log_2(F0) for each call, of each pup, in the 4 recording sessions"
+        },
+        {
+          "cell": "A2",
+          "value": "session 1,High-F0,bat 1"
+        },
+        {
+          "cell": "B2",
+          "value": "session 1,High-F0,bat 2"
+        },
+        {
+          "cell": "C2",
+          "value": "session 1,High-F0,bat 3"
+        },
+        {
+          "cell": "D2",
+          "value": "session 1,High-F0,bat 4"
+        },
+        {
+          "cell": "E2",
+          "value": "session 1,Low-F0,bat 1"
+        },
+        {
+          "cell": "F2",
+          "value": "session 1,Low-F0,bat 2"
+        },
+        {
+          "cell": "G2",
+          "value": "session 1,Low-F0,bat 3"
+        },
+        {
+          "cell": "H2",
+          "value": "session 1,Low-F0,bat 4"
+        },
+        {
+          "cell": "I2",
+          "value": "session 1,Low-F0,bat 5"
+        },
+        {
+          "cell": "J2",
+          "value": "session 1,Control,bat 1"
+        },
+        {
+          "cell": "K2",
+          "value": "session 1,Control,bat 2"
+        },
+        {
+          "cell": "L2",
+          "value": "session 1,Control,bat 3"
+        },
+        {
+          "cell": "M2",
+          "value": "session 1,Control,bat 4"
+        },
+        {
+          "cell": "N2",
+          "value": "session 1,Control,bat 5"
+        },
+        {
+          "cell": "O2",
+          "value": "session 2,High-F0,bat 1"
+        },
+        {
+          "cell": "P2",
+          "value": "session 2,High-F0,bat 2"
+        },
+        {
+          "cell": "Q2",
+          "value": "session 2,High-F0,bat 3"
+        },
+        {
+          "cell": "R2",
+          "value": "session 2,High-F0,bat 4"
+        },
+        {
+          "cell": "S2",
+          "value": "session 2,Low-F0,bat 1"
+        },
+        {
+          "cell": "T2",
+          "value": "session 2,Low-F0,bat 2"
+        },
+        {
+          "cell": "U2",
+          "value": "session 2,Low-F0,bat 3"
+        },
+        {
+          "cell": "V2",
+          "value": "session 2,Low-F0,bat 4"
+        },
+        {
+          "cell": "W2",
+          "value": "session 2,Low-F0,bat 5"
+        },
+        {
+          "cell": "X2",
+          "value": "session 2,Control,bat 1"
+        },
+        {
+          "cell": "Y2",
+          "value": "session 2,Control,bat 2"
+        },
+        {
+          "cell": "Z2",
+          "value": "session 2,Control,bat 3"
+        },
+        {
+          "cell": "AA2",
+          "value": "session 2,Control,bat 4"
+        },
+        {
+          "cell": "AB2",
+          "value": "session 2,Control,bat 5"
+        },
+        {
+          "cell": "AC2",
+          "value": "session 3,High-F0,bat 1"
+        },
+        {
+          "cell": "AD2",
+          "value": "session 3,High-F0,bat 2"
+        },
+        {
+          "cell": "AE2",
+          "value": "session 3,High-F0,bat 3"
+        },
+        {
+          "cell": "AF2",
+          "value": "session 3,High-F0,bat 4"
+        },
+        {
+          "cell": "AG2",
+          "value": "session 3,Low-F0,bat 1"
+        },
+        {
+          "cell": "AH2",
+          "value": "session 3,Low-F0,bat 2"
+        },
+        {
+          "cell": "AI2",
+          "value": "session 3,Low-F0,bat 3"
+        },
+        {
+          "cell": "AJ2",
+          "value": "session 3,Low-F0,bat 4"
+        },
+        {
+          "cell": "AK2",
+          "value": "session 3,Low-F0,bat 5"
+        },
+        {
+          "cell": "AL2",
+          "value": "session 3,Control,bat 1"
+        },
+        {
+          "cell": "AM2",
+          "value": "session 3,Control,bat 2"
+        },
+        {
+          "cell": "AN2",
+          "value": "session 3,Control,bat 3"
+        },
+        {
+          "cell": "AO2",
+          "value": "session 3,Control,bat 4"
+        },
+        {
+          "cell": "AP2",
+          "value": "session 3,Control,bat 5"
+        },
+        {
+          "cell": "AQ2",
+          "value": "session 4,High-F0,bat 1"
+        },
+        {
+          "cell": "AR2",
+          "value": "session 4,High-F0,bat 2"
+        },
+        {
+          "cell": "AS2",
+          "value": "session 4,High-F0,bat 3"
+        },
+        {
+          "cell": "AT2",
+          "value": "session 4,High-F0,bat 4"
+        },
+        {
+          "cell": "AU2",
+          "value": "session 4,Low-F0,bat 1"
+        },
+        {
+          "cell": "AV2",
+          "value": "session 4,Low-F0,bat 2"
+        },
+        {
+          "cell": "AW2",
+          "value": "session 4,Low-F0,bat 3"
+        },
+        {
+          "cell": "AX2",
+          "value": "session 4,Low-F0,bat 4"
+        },
+        {
+          "cell": "AY2",
+          "value": "session 4,Low-F0,bat 5"
+        },
+        {
+          "cell": "AZ2",
+          "value": "session 4,Control,bat 1"
+        },
+        {
+          "cell": "BA2",
+          "value": "session 4,Control,bat 2"
+        },
+        {
+          "cell": "BB2",
+          "value": "session 4,Control,bat 3"
+        },
+        {
+          "cell": "BC2",
+          "value": "session 4,Control,bat 4"
+        },
+        {
+          "cell": "BD2",
+          "value": "session 4,Control,bat 5"
+        }
+      ]
+    },
+    {
+      "name": "Figure S3,Table S3",
+      "max_row": 16,
+      "max_column": 13,
+      "first20_string_labels": [
+        {
+          "cell": "A1",
+          "value": "Proportion of low, high, and intermediate F0 calls for each pup"
+        },
+        {
+          "cell": "B2",
+          "value": "session 1,High-F0 calls"
+        },
+        {
+          "cell": "C2",
+          "value": "session 1,Intermediate calls"
+        },
+        {
+          "cell": "D2",
+          "value": "session 1,Low-F0 calls"
+        },
+        {
+          "cell": "E2",
+          "value": "session 2,High-F0 calls"
+        },
+        {
+          "cell": "F2",
+          "value": "session 2,Intermediate calls"
+        },
+        {
+          "cell": "G2",
+          "value": "session 2,Low-F0 calls"
+        },
+        {
+          "cell": "H2",
+          "value": "session 3,High-F0 calls"
+        },
+        {
+          "cell": "I2",
+          "value": "session 3,Intermediate calls"
+        },
+        {
+          "cell": "J2",
+          "value": "session 3,Low-F0 calls"
+        },
+        {
+          "cell": "K2",
+          "value": "session 4,High-F0 calls"
+        },
+        {
+          "cell": "L2",
+          "value": "session 4,Intermediate calls"
+        },
+        {
+          "cell": "M2",
+          "value": "session 4,Low-F0 calls"
+        },
+        {
+          "cell": "A3",
+          "value": "High-F0,bat 1"
+        },
+        {
+          "cell": "A4",
+          "value": "High-F0,bat 2"
+        },
+        {
+          "cell": "A5",
+          "value": "High-F0,bat 3"
+        },
+        {
+          "cell": "A6",
+          "value": "High-F0,bat 4"
+        },
+        {
+          "cell": "A7",
+          "value": "Low-F0,bat 1"
+        },
+        {
+          "cell": "A8",
+          "value": "Low-F0,bat 2"
+        },
+        {
+          "cell": "A9",
+          "value": "Low-F0,bat 3"
+        },
+        {
+          "cell": "A10",
+          "value": "Low-F0,bat 4"
+        },
+        {
+          "cell": "A11",
+          "value": "Low-F0,bat 5"
+        },
+        {
+          "cell": "A12",
+          "value": "Control,bat 1"
+        },
+        {
+          "cell": "A13",
+          "value": "Control,bat 2"
+        },
+        {
+          "cell": "A14",
+          "value": "Control,bat 3"
+        },
+        {
+          "cell": "A15",
+          "value": "Control,bat 4"
+        },
+        {
+          "cell": "A16",
+          "value": "Control,bat 5"
+        }
+      ]
+    },
+    {
+      "name": "Figure S5",
+      "max_row": 1423,
+      "max_column": 36,
+      "first20_string_labels": [
+        {
+          "cell": "A1",
+          "value": "Mean energy entropy for each call, (comparison of High-F0 vs. Control groups)"
+        },
+        {
+          "cell": "A2",
+          "value": "session 1,High-F0,bat 1"
+        },
+        {
+          "cell": "B2",
+          "value": "session 1,High-F0,bat 2"
+        },
+        {
+          "cell": "C2",
+          "value": "session 1,High-F0,bat 3"
+        },
+        {
+          "cell": "D2",
+          "value": "session 1,High-F0,bat 4"
+        },
+        {
+          "cell": "E2",
+          "value": "session 1,Control,bat 1"
+        },
+        {
+          "cell": "F2",
+          "value": "session 1,Control,bat 2"
+        },
+        {
+          "cell": "G2",
+          "value": "session 1,Control,bat 3"
+        },
+        {
+          "cell": "H2",
+          "value": "session 1,Control,bat 4"
+        },
+        {
+          "cell": "I2",
+          "value": "session 1,Control,bat 5"
+        },
+        {
+          "cell": "J2",
+          "value": "session 2,High-F0,bat 1"
+        },
+        {
+          "cell": "K2",
+          "value": "session 2,High-F0,bat 2"
+        },
+        {
+          "cell": "L2",
+          "value": "session 2,High-F0,bat 3"
+        },
+        {
+          "cell": "M2",
+          "value": "session 2,High-F0,bat 4"
+        },
+        {
+          "cell": "N2",
+          "value": "session 2,Control,bat 1"
+        },
+        {
+          "cell": "O2",
+          "value": "session 2,Control,bat 2"
+        },
+        {
+          "cell": "P2",
+          "value": "session 2,Control,bat 3"
+        },
+        {
+          "cell": "Q2",
+          "value": "session 2,Control,bat 4"
+        },
+        {
+          "cell": "R2",
+          "value": "session 2,Control,bat 5"
+        },
+        {
+          "cell": "S2",
+          "value": "session 3,High-F0,bat 1"
+        },
+        {
+          "cell": "T2",
+          "value": "session 3,High-F0,bat 2"
+        },
+        {
+          "cell": "U2",
+          "value": "session 3,High-F0,bat 3"
+        },
+        {
+          "cell": "V2",
+          "value": "session 3,High-F0,bat 4"
+        },
+        {
+          "cell": "W2",
+          "value": "session 3,Control,bat 1"
+        },
+        {
+          "cell": "X2",
+          "value": "session 3,Control,bat 2"
+        },
+        {
+          "cell": "Y2",
+          "value": "session 3,Control,bat 3"
+        },
+        {
+          "cell": "Z2",
+          "value": "session 3,Control,bat 4"
+        },
+        {
+          "cell": "AA2",
+          "value": "session 3,Control,bat 5"
+        },
+        {
+          "cell": "AB2",
+          "value": "session 4,High-F0,bat 1"
+        },
+        {
+          "cell": "AC2",
+          "value": "session 4,High-F0,bat 2"
+        },
+        {
+          "cell": "AD2",
+          "value": "session 4,High-F0,bat 3"
+        },
+        {
+          "cell": "AE2",
+          "value": "session 4,High-F0,bat 4"
+        },
+        {
+          "cell": "AF2",
+          "value": "session 4,Control,bat 1"
+        },
+        {
+          "cell": "AG2",
+          "value": "session 4,Control,bat 2"
+        },
+        {
+          "cell": "AH2",
+          "value": "session 4,Control,bat 3"
+        },
+        {
+          "cell": "AI2",
+          "value": "session 4,Control,bat 4"
+        },
+        {
+          "cell": "AJ2",
+          "value": "session 4,Control,bat 5"
+        }
+      ]
+    },
+    {
+      "name": "Figure S1",
+      "max_row": 10002,
+      "max_column": 7,
+      "first20_string_labels": [
+        {
+          "cell": "A1",
+          "value": "Acoustic features of bat calls (random sample)"
+        },
+        {
+          "cell": "A2",
+          "value": "Energy entropy (nat)"
+        },
+        {
+          "cell": "B2",
+          "value": "Peak-Frequency (kHz)"
+        },
+        {
+          "cell": "C2",
+          "value": "F0 (kHz)"
+        },
+        {
+          "cell": "D2",
+          "value": "Spectral centroid (kHz)"
+        },
+        {
+          "cell": "E2",
+          "value": "Spectral-entropy (nat)"
+        },
+        {
+          "cell": "F2",
+          "value": "Wiener-entropy"
+        },
+        {
+          "cell": "G2",
+          "value": "Duration (sec.)"
+        }
+      ]
+    }
+  ]
+}

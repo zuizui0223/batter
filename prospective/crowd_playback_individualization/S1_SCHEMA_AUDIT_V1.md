@@ -1,0 +1,292 @@
+# Crowd-playback S1 Data workbook structure v3
+
+**SHEET NAMES / FIRST-20-ROW STRING LABELS ONLY — NO NUMERIC OUTCOMES.**
+
+- workbook bytes: **3541533**
+- sheets: **6**
+
+## Figure 1E,F
+
+- rows × columns: 45866 × 4
+- first-20-row strings:
+  - A1: Mean log_2(F0) of bat calls
+  - A2: Adult bats
+  - B2: Low-F0 playback
+  - C2: High-F0 playback
+  - D2: Control playback
+
+## Figure 2
+
+- rows × columns: 3350 × 118
+- first-20-row strings:
+  - A1: LDA of bat calls (LD1,LD2) in 4 recording sessions, and LDA of playbacks.
+  - A2: session 1,High-F0,bat 1 (LD1)
+  - B2: session 1,High-F0,bat 1 (LD2)
+  - C2: session 1,High-F0,bat 2 (LD1)
+  - D2: session 1,High-F0,bat 2 (LD2)
+  - E2: session 1,High-F0,bat 3 (LD1)
+  - F2: session 1,High-F0,bat 3 (LD2)
+  - G2: session 1,High-F0,bat 4 (LD1)
+  - H2: session 1,High-F0,bat 4 (LD2)
+  - I2: session 1,Low-F0,bat 1 (LD1)
+  - J2: session 1,Low-F0,bat 1 (LD2)
+  - K2: session 1,Low-F0,bat 2 (LD1)
+  - L2: session 1,Low-F0,bat 2 (LD2)
+  - M2: session 1,Low-F0,bat 3 (LD1)
+  - N2: session 1,Low-F0,bat 3 (LD2)
+  - O2: session 1,Low-F0,bat 4 (LD1)
+  - P2: session 1,Low-F0,bat 4 (LD2)
+  - Q2: session 1,Low-F0,bat 5 (LD1)
+  - R2: session 1,Low-F0,bat 5 (LD2)
+  - S2: session 1,Control,bat 1 (LD1)
+  - T2: session 1,Control,bat 1 (LD2)
+  - U2: session 1,Control,bat 2 (LD1)
+  - V2: session 1,Control,bat 2 (LD2)
+  - W2: session 1,Control,bat 3 (LD1)
+  - X2: session 1,Control,bat 3 (LD2)
+  - Y2: session 1,Control,bat 4 (LD1)
+  - Z2: session 1,Control,bat 4 (LD2)
+  - AA2: session 1,Control,bat 5 (LD1)
+  - AB2: session 1,Control,bat 5 (LD2)
+  - AC2: session 2,High-F0,bat 1 (LD1)
+  - AD2: session 2,High-F0,bat 1 (LD2)
+  - AE2: session 2,High-F0,bat 2 (LD1)
+  - AF2: session 2,High-F0,bat 2 (LD2)
+  - AG2: session 2,High-F0,bat 3 (LD1)
+  - AH2: session 2,High-F0,bat 3 (LD2)
+  - AI2: session 2,High-F0,bat 4 (LD1)
+  - AJ2: session 2,High-F0,bat 4 (LD2)
+  - AK2: session 2,Low-F0,bat 1 (LD1)
+  - AL2: session 2,Low-F0,bat 1 (LD2)
+  - AM2: session 2,Low-F0,bat 2 (LD1)
+  - AN2: session 2,Low-F0,bat 2 (LD2)
+  - AO2: session 2,Low-F0,bat 3 (LD1)
+  - AP2: session 2,Low-F0,bat 3 (LD2)
+  - AQ2: session 2,Low-F0,bat 4 (LD1)
+  - AR2: session 2,Low-F0,bat 4 (LD2)
+  - AS2: session 2,Low-F0,bat 5 (LD1)
+  - AT2: session 2,Low-F0,bat 5 (LD2)
+  - AU2: session 2,Control,bat 1 (LD1)
+  - AV2: session 2,Control,bat 1 (LD2)
+  - AW2: session 2,Control,bat 2 (LD1)
+  - AX2: session 2,Control,bat 2 (LD2)
+  - AY2: session 2,Control,bat 3 (LD1)
+  - AZ2: session 2,Control,bat 3 (LD2)
+  - BA2: session 2,Control,bat 4 (LD1)
+  - BB2: session 2,Control,bat 4 (LD2)
+  - BC2: session 2,Control,bat 5 (LD1)
+  - BD2: session 2,Control,bat 5 (LD2)
+  - BE2: session 3,High-F0,bat 1 (LD1)
+  - BF2: session 3,High-F0,bat 1 (LD2)
+  - BG2: session 3,High-F0,bat 2 (LD1)
+  - BH2: session 3,High-F0,bat 2 (LD2)
+  - BI2: session 3,High-F0,bat 3 (LD1)
+  - BJ2: session 3,High-F0,bat 3 (LD2)
+  - BK2: session 3,High-F0,bat 4 (LD1)
+  - BL2: session 3,High-F0,bat 4 (LD2)
+  - BM2: session 3,Low-F0,bat 1 (LD1)
+  - BN2: session 3,Low-F0,bat 1 (LD2)
+  - BO2: session 3,Low-F0,bat 2 (LD1)
+  - BP2: session 3,Low-F0,bat 2 (LD2)
+  - BQ2: session 3,Low-F0,bat 3 (LD1)
+  - BR2: session 3,Low-F0,bat 3 (LD2)
+  - BS2: session 3,Low-F0,bat 4 (LD1)
+  - BT2: session 3,Low-F0,bat 4 (LD2)
+  - BU2: session 3,Low-F0,bat 5 (LD1)
+  - BV2: session 3,Low-F0,bat 5 (LD2)
+  - BW2: session 3,Control,bat 1 (LD1)
+  - BX2: session 3,Control,bat 1 (LD2)
+  - BY2: session 3,Control,bat 2 (LD1)
+  - BZ2: session 3,Control,bat 2 (LD2)
+  - CA2: session 3,Control,bat 3 (LD1)
+  - CB2: session 3,Control,bat 3 (LD2)
+  - CC2: session 3,Control,bat 4 (LD1)
+  - CD2: session 3,Control,bat 4 (LD2)
+  - CE2: session 3,Control,bat 5 (LD1)
+  - CF2: session 3,Control,bat 5 (LD2)
+  - CG2: session 4,High-F0,bat 1 (LD1)
+  - CH2: session 4,High-F0,bat 1 (LD2)
+  - CI2: session 4,High-F0,bat 2 (LD1)
+  - CJ2: session 4,High-F0,bat 2 (LD2)
+  - CK2: session 4,High-F0,bat 3 (LD1)
+  - CL2: session 4,High-F0,bat 3 (LD2)
+  - CM2: session 4,High-F0,bat 4 (LD1)
+  - CN2: session 4,High-F0,bat 4 (LD2)
+  - CO2: session 4,Low-F0,bat 1 (LD1)
+  - CP2: session 4,Low-F0,bat 1 (LD2)
+  - CQ2: session 4,Low-F0,bat 2 (LD1)
+  - CR2: session 4,Low-F0,bat 2 (LD2)
+  - CS2: session 4,Low-F0,bat 3 (LD1)
+  - CT2: session 4,Low-F0,bat 3 (LD2)
+  - CU2: session 4,Low-F0,bat 4 (LD1)
+  - CV2: session 4,Low-F0,bat 4 (LD2)
+  - CW2: session 4,Low-F0,bat 5 (LD1)
+  - CX2: session 4,Low-F0,bat 5 (LD2)
+  - CY2: session 4,Control,bat 1 (LD1)
+  - CZ2: session 4,Control,bat 1 (LD2)
+  - DA2: session 4,Control,bat 2 (LD1)
+  - DB2: session 4,Control,bat 2 (LD2)
+  - DC2: session 4,Control,bat 3 (LD1)
+  - DD2: session 4,Control,bat 3 (LD2)
+  - DE2: session 4,Control,bat 4 (LD1)
+  - DF2: session 4,Control,bat 4 (LD2)
+  - DG2: session 4,Control,bat 5 (LD1)
+  - DH2: session 4,Control,bat 5 (LD2)
+  - DI2: High-F0 playback (LD1)
+  - DJ2: High-F0 playback (LD2)
+  - DK2: Low-F0 playback (LD1)
+  - DL2: Low-F0 playback (LD2)
+  - DM2: Control playback (LD1)
+  - DN2: Control playback (LD2)
+
+## Figure 3,Figure S2
+
+- rows × columns: 1420 × 56
+- first-20-row strings:
+  - A1: Mean log_2(F0) for each call, of each pup, in the 4 recording sessions
+  - A2: session 1,High-F0,bat 1
+  - B2: session 1,High-F0,bat 2
+  - C2: session 1,High-F0,bat 3
+  - D2: session 1,High-F0,bat 4
+  - E2: session 1,Low-F0,bat 1
+  - F2: session 1,Low-F0,bat 2
+  - G2: session 1,Low-F0,bat 3
+  - H2: session 1,Low-F0,bat 4
+  - I2: session 1,Low-F0,bat 5
+  - J2: session 1,Control,bat 1
+  - K2: session 1,Control,bat 2
+  - L2: session 1,Control,bat 3
+  - M2: session 1,Control,bat 4
+  - N2: session 1,Control,bat 5
+  - O2: session 2,High-F0,bat 1
+  - P2: session 2,High-F0,bat 2
+  - Q2: session 2,High-F0,bat 3
+  - R2: session 2,High-F0,bat 4
+  - S2: session 2,Low-F0,bat 1
+  - T2: session 2,Low-F0,bat 2
+  - U2: session 2,Low-F0,bat 3
+  - V2: session 2,Low-F0,bat 4
+  - W2: session 2,Low-F0,bat 5
+  - X2: session 2,Control,bat 1
+  - Y2: session 2,Control,bat 2
+  - Z2: session 2,Control,bat 3
+  - AA2: session 2,Control,bat 4
+  - AB2: session 2,Control,bat 5
+  - AC2: session 3,High-F0,bat 1
+  - AD2: session 3,High-F0,bat 2
+  - AE2: session 3,High-F0,bat 3
+  - AF2: session 3,High-F0,bat 4
+  - AG2: session 3,Low-F0,bat 1
+  - AH2: session 3,Low-F0,bat 2
+  - AI2: session 3,Low-F0,bat 3
+  - AJ2: session 3,Low-F0,bat 4
+  - AK2: session 3,Low-F0,bat 5
+  - AL2: session 3,Control,bat 1
+  - AM2: session 3,Control,bat 2
+  - AN2: session 3,Control,bat 3
+  - AO2: session 3,Control,bat 4
+  - AP2: session 3,Control,bat 5
+  - AQ2: session 4,High-F0,bat 1
+  - AR2: session 4,High-F0,bat 2
+  - AS2: session 4,High-F0,bat 3
+  - AT2: session 4,High-F0,bat 4
+  - AU2: session 4,Low-F0,bat 1
+  - AV2: session 4,Low-F0,bat 2
+  - AW2: session 4,Low-F0,bat 3
+  - AX2: session 4,Low-F0,bat 4
+  - AY2: session 4,Low-F0,bat 5
+  - AZ2: session 4,Control,bat 1
+  - BA2: session 4,Control,bat 2
+  - BB2: session 4,Control,bat 3
+  - BC2: session 4,Control,bat 4
+  - BD2: session 4,Control,bat 5
+
+## Figure S3,Table S3
+
+- rows × columns: 16 × 13
+- first-20-row strings:
+  - A1: Proportion of low, high, and intermediate F0 calls for each pup
+  - B2: session 1,High-F0 calls
+  - C2: session 1,Intermediate calls
+  - D2: session 1,Low-F0 calls
+  - E2: session 2,High-F0 calls
+  - F2: session 2,Intermediate calls
+  - G2: session 2,Low-F0 calls
+  - H2: session 3,High-F0 calls
+  - I2: session 3,Intermediate calls
+  - J2: session 3,Low-F0 calls
+  - K2: session 4,High-F0 calls
+  - L2: session 4,Intermediate calls
+  - M2: session 4,Low-F0 calls
+  - A3: High-F0,bat 1
+  - A4: High-F0,bat 2
+  - A5: High-F0,bat 3
+  - A6: High-F0,bat 4
+  - A7: Low-F0,bat 1
+  - A8: Low-F0,bat 2
+  - A9: Low-F0,bat 3
+  - A10: Low-F0,bat 4
+  - A11: Low-F0,bat 5
+  - A12: Control,bat 1
+  - A13: Control,bat 2
+  - A14: Control,bat 3
+  - A15: Control,bat 4
+  - A16: Control,bat 5
+
+## Figure S5
+
+- rows × columns: 1423 × 36
+- first-20-row strings:
+  - A1: Mean energy entropy for each call, (comparison of High-F0 vs. Control groups)
+  - A2: session 1,High-F0,bat 1
+  - B2: session 1,High-F0,bat 2
+  - C2: session 1,High-F0,bat 3
+  - D2: session 1,High-F0,bat 4
+  - E2: session 1,Control,bat 1
+  - F2: session 1,Control,bat 2
+  - G2: session 1,Control,bat 3
+  - H2: session 1,Control,bat 4
+  - I2: session 1,Control,bat 5
+  - J2: session 2,High-F0,bat 1
+  - K2: session 2,High-F0,bat 2
+  - L2: session 2,High-F0,bat 3
+  - M2: session 2,High-F0,bat 4
+  - N2: session 2,Control,bat 1
+  - O2: session 2,Control,bat 2
+  - P2: session 2,Control,bat 3
+  - Q2: session 2,Control,bat 4
+  - R2: session 2,Control,bat 5
+  - S2: session 3,High-F0,bat 1
+  - T2: session 3,High-F0,bat 2
+  - U2: session 3,High-F0,bat 3
+  - V2: session 3,High-F0,bat 4
+  - W2: session 3,Control,bat 1
+  - X2: session 3,Control,bat 2
+  - Y2: session 3,Control,bat 3
+  - Z2: session 3,Control,bat 4
+  - AA2: session 3,Control,bat 5
+  - AB2: session 4,High-F0,bat 1
+  - AC2: session 4,High-F0,bat 2
+  - AD2: session 4,High-F0,bat 3
+  - AE2: session 4,High-F0,bat 4
+  - AF2: session 4,Control,bat 1
+  - AG2: session 4,Control,bat 2
+  - AH2: session 4,Control,bat 3
+  - AI2: session 4,Control,bat 4
+  - AJ2: session 4,Control,bat 5
+
+## Figure S1
+
+- rows × columns: 10002 × 7
+- first-20-row strings:
+  - A1: Acoustic features of bat calls (random sample)
+  - A2: Energy entropy (nat)
+  - B2: Peak-Frequency (kHz)
+  - C2: F0 (kHz)
+  - D2: Spectral centroid (kHz)
+  - E2: Spectral-entropy (nat)
+  - F2: Wiener-entropy
+  - G2: Duration (sec.)
+
+No numeric pup coordinate, F0 value, centroid, dispersion, or p-value was opened.
+
