@@ -40,7 +40,7 @@ We asked four linked questions.
 
 The resulting evidence is strongly asymmetric. Maintenance under acute perturbation is repeatedly supported. Developmental manipulations alter phenotype but do not map simply onto the total amount of individualization. Coarse individual organization can transfer where detailed realized geometry does not. And the direct laboratory-to-wild bridge fails its frozen gate.
 
-We use these contrasts to argue for a layered empirical view of behavioral individuality.
+We use these contrasts to argue for a layered empirical view of behavioral individuality (Fig. 1).
 
 ---
 
@@ -333,7 +333,7 @@ A separate randomized early-environment history-carrier test using nightly outdo
 - T = **+0.7081**;
 - randomized two-sided P = **0.3244**.
 
-Thus broad enriched versus impoverished early experience did not detectably alter the later strength of personal-history dependence in that endpoint.
+Thus broad enriched versus impoverished early experience did not detectably alter the later strength of personal-history dependence in that endpoint (Fig. 2A).
 
 ## Randomized enrichment did not confirm increased total individualization
 
@@ -397,7 +397,7 @@ The descriptive feature decomposition showed strong opposing contributions:
 - positive / negative feature counts = 15 / 13;
 - cancellation ratio = 0.840173.
 
-The null total therefore did not imply uniform invariance across acoustic dimensions.
+The null total therefore did not imply uniform invariance across acoustic dimensions (Fig. 2B).
 
 ## Individual correspondence survived external sensory masking
 
@@ -467,7 +467,7 @@ Among 576 exact cross-condition identity assignments:
 - true biological mapping rank = 2;
 - exact (P=0.00347222).
 
-Thus bilateral turning-location organization remained individually identifiable across altered navigation conditions after population-level condition shifts were removed.
+Thus bilateral turning-location organization remained individually identifiable across altered navigation conditions after population-level condition shifts were removed. Together with the three independent sensory-manipulation datasets, this yields repeated support for same-individual correspondence under acute perturbation (Fig. 3).
 
 ## Coarse movement organization transferred more broadly than detailed geometry
 
@@ -505,7 +505,7 @@ Overall:
 
 Therefore the laboratory-style carrier-to-wild-vertical-individuality bridge remains unconfirmed.
 
-Post-outcome H/V component analyses are exploratory only.
+Post-outcome H/V component analyses are exploratory only (Fig. 4).
 
 ---
 
@@ -670,6 +670,69 @@ The strongest remaining question is no longer whether environment matters or whe
 It is:
 
 > **what determines which behavioral dimensions and historical trajectories become individualized for particular animals?**
+
+---
+
+# Data and code availability
+
+All analyses use previously published public datasets.
+
+Key public sources include:
+
+- Harten et al. first-flight data: Mendeley Data `10.17632/n9d8gbz3xr.1`;
+- Rachum et al. developmental-enrichment data: Mendeley Data `10.17632/wh7c636y3t.1`;
+- Elie et al. auditory-feedback data: Mendeley Data `10.17632/h5ff9vv5pc.1`;
+- Diebold et al. auditory-midbrain data: Zenodo `10.5281/zenodo.13857870`;
+- Aharon et al. navigation data: Mendeley Data `10.17632/f6mvhj5gj9.3`;
+- Foskolos et al. graded-masking data: Zenodo `10.5281/zenodo.4946256` and Dryad `10.5061/dryad.ngf1vhhv3`;
+- Eveland et al. corridor data and code: public repository `00keveland/Tunnel_2026`, pinned for the external validation at commit `59928a71887d521fec143080b0b187736c046a0e`.
+
+Source-level analysis contracts, structural audit records, executable scripts, exact/randomization logic, result receipts, synthesis files and figure-generation code are version controlled in `zuizui0223/batter`.
+
+The authoritative manuscript-level numeric ledger is:
+
+`prospective/public_causal_synthesis/MASTER_RESULTS_TABLE_V1.md`.
+
+The authoritative evidence-tier map is:
+
+`prospective/public_causal_synthesis/EVIDENCE_MATRIX_V1.md`.
+
+Manuscript-facing figures are generated from frozen summary values by:
+
+`prospective/public_causal_synthesis/plot_synthesis_figures_v1.py`.
+
+Generated SVG files are stored under:
+
+`figures/public_causal/`.
+
+## Analysis provenance
+
+This study is a comparative secondary reanalysis of public data.
+
+For each source-level analysis, the endpoint, biological support rule, aggregation hierarchy and null/randomization procedure were fixed before the corresponding numerical outcome was opened in this programme. Structural and schema audits were used to determine whether a frozen analysis was executable without inspecting biological effect values.
+
+The cross-study synthesis itself was iterative. Public sources were discovered and audited sequentially, and the programme-level biological framing developed as positive and negative source results accumulated. The work is therefore best described as **provenance-controlled comparative reanalysis**, not as a prospectively preregistered multi-study meta-analysis.
+
+Post-primary analyses are labelled explicitly as:
+- predeclared secondary;
+- post-primary diagnostic;
+- or descriptive/exploratory.
+
+Such analyses are not allowed to rescue a failed frozen primary.
+
+## Ethics
+
+No new animals were captured, handled or experimentally manipulated for this study. All analyses use public data from previously published studies. Ethical approvals and animal-care procedures for the original experiments are reported in the respective source publications.
+
+## Figure files
+
+- Fig. 1: `figures/public_causal/FIGURE_1_CAUSAL_LAYERS_V1.svg`
+- Fig. 2A: `figures/public_causal/FIGURE_2A_FIRST_FLIGHT_FORMATION_V1.svg`
+- Fig. 2B: `figures/public_causal/FIGURE_2B_DEVELOPMENTAL_RANDOMIZATION_V1.svg`
+- Fig. 3: `figures/public_causal/FIGURE_3_ACUTE_PERTURBATION_IDENTITY_V1.svg`
+- Fig. 4: `figures/public_causal/FIGURE_4_PORTABILITY_AND_WILD_BOUNDARY_V1.svg`
+
+Full legends are in `prospective/public_causal_synthesis/FIGURE_CAPTIONS_V1.md`.
 
 ---
 
