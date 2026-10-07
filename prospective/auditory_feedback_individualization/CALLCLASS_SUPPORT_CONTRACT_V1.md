@@ -2,38 +2,38 @@
 
 ## Status
 
-**STRUCTURAL SUPPORT ONLY. ACOUSTIC FEATURE MAGNITUDES FORBIDDEN.**
+**STRUCTURAL DIAGNOSTIC ONLY. DOES NOT CONTROL THE CONFIRMATORY PRIMARY.**
 
-Parent:
-- `PAF_SCHEMA_AUDIT_CONTRACT_V1.md`
-- `PAF_SCHEMA_AUDIT_V2.md`
+The authoritative confirmatory analysis was frozen earlier in:
 
-## Authorized opening
+`PRIMARY_INDIVIDUALIZATION_CONTRACT_V1.md`
 
-Using `PAF_Tbl`, report only:
+That contract explicitly uses:
+- the whole adult repertoire;
+- all 28 source acoustic features;
+- no call-class conditioning.
 
+Therefore this later call-class audit cannot alter the primary architecture.
+
+## Purpose
+
+Describe source support by Acoustic Group for future exploratory localization only.
+
+Authorized:
 - Acoustic Group levels;
-- call counts per bat × Acoustic Group;
-- number of rows per bat × Acoustic Group with all 28 frozen acoustic features finite;
-- whether each acoustic group is represented by every one of the 10 bats.
+- call counts per bat × group;
+- number of complete 28-feature rows per bat × group.
 
-Do not report:
-- any feature mean;
-- variance;
-- centroid;
-- distance;
-- identity score;
-- treatment comparison.
+Forbidden:
+- acoustic magnitudes;
+- identity scores;
+- treatment effects;
+- using a favorable call class to replace or rescue the frozen whole-repertoire primary.
 
-## Architecture rule
+## Provenance rule
 
-If at least one Acoustic Group has:
-- all 10 bats represented;
-- >=20 complete 28-feature calls per bat;
+Regardless of the structural result:
 
-then the first numerically ordered such group is selected for a **class-conditioned individualization primary**.
+> **The confirmatory primary remains whole-repertoire 28D individualization.**
 
-If no group passes:
-use the whole repertoire under a separately frozen **Acoustic Group × Sex × Treatment residualization** architecture.
-
-No outcome magnitude may influence this choice.
+Any call-class analysis after primary opening is exploratory unless separately preregistered on independent data.
