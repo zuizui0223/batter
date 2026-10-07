@@ -1,0 +1,55 @@
+name: behavioral-ecology-anonymous-submission-bundle-v1
+
+on:
+  push:
+    branches:
+      - prospective/public-causal-synthesis-v1
+    paths:
+      - "prospective/public_causal_synthesis/MANUSCRIPT_DRAFT_V1.md"
+      - "prospective/public_causal_synthesis/COMPLETE_ANONYMOUS_TEXT_V1.md"
+      - "prospective/public_causal_synthesis/build_complete_anonymous_text_v1.py"
+      - "prospective/public_causal_synthesis/anonymous_submission_guard_v1.py"
+      - "prospective/public_causal_synthesis/SUPPLEMENTARY_MATERIAL_DRAFT_V1.md"
+      - "prospective/public_causal_synthesis/build_supplementary_pdf_v1.py"
+      - "prospective/public_causal_synthesis/build_anonymous_review_archive_v1.py"
+      - "prospective/public_causal_synthesis/build_anonymous_submission_bundle_v1.py"
+      - "prospective/public_causal_synthesis/MASTER_RESULTS_TABLE_V1.md"
+      - "prospective/public_causal_synthesis/EVIDENCE_MATRIX_V1.md"
+      - "prospective/public_causal_synthesis/MANUSCRIPT_NUMERICAL_AUDIT_V1.md"
+      - "figures/public_causal/**"
+      - "figures/public_causal_supplement/**"
+      - ".github/workflows/behavioral-ecology-anonymous-submission-bundle-v1.yml"
+  workflow_dispatch:
+
+jobs:
+  bundle:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: prospective/public-causal-synthesis-v1
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install build dependencies
+        run: python -m pip install pymupdf markdown weasyprint
+      - name: Rebuild anonymous manuscript object
+        run: |
+          python prospective/public_causal_synthesis/build_complete_anonymous_text_v1.py
+          git diff --exit-code -- prospective/public_causal_synthesis/COMPLETE_ANONYMOUS_TEXT_V1.md
+          python prospective/public_causal_synthesis/anonymous_submission_guard_v1.py
+      - name: Rebuild verified Supplementary PDF
+        run: python prospective/public_causal_synthesis/build_supplementary_pdf_v1.py
+      - name: Rebuild full sanitized reproducibility archive
+        run: python prospective/public_causal_synthesis/build_anonymous_review_archive_v1.py
+      - name: Build anonymous submission bundle
+        run: python prospective/public_causal_synthesis/build_anonymous_submission_bundle_v1.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: behavioral-ecology-anonymous-submission-bundle-v1
+          path: |
+            dist/behavioral_ecology_anonymous_submission_bundle_v1.zip
+            submission_bundle/behavioral_ecology_anonymous_v1/SHA256SUMS.txt
+            submission_bundle/behavioral_ecology_anonymous_v1/BUNDLE_MANIFEST.json
+          if-no-files-found: error
