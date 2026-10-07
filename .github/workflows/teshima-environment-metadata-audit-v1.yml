@@ -1,0 +1,24 @@
+name: teshima-environment-metadata-audit-v1
+on:
+  push:
+    branches: [post-freeze/teshima-environment-metadata-audit-v1]
+    paths:
+      - "prospective/task_reset_lockin/TESHIMA_ENVIRONMENT_METADATA_AUDIT_V1.md"
+      - "prospective/task_reset_lockin/teshima_environment_metadata_audit_v1.py"
+      - ".github/workflows/teshima-environment-metadata-audit-v1.yml"
+  workflow_dispatch:
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions: {contents: read}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: python prospective/task_reset_lockin/teshima_environment_metadata_audit_v1.py > teshima_environment_metadata_audit_result_v1.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: teshima-environment-metadata-audit-v1
+          path: teshima_environment_metadata_audit_result_v1.json
+          if-no-files-found: error
