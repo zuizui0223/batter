@@ -15,7 +15,7 @@ Behavioral individuality is commonly defined by consistent differences among ind
 
 # Introduction
 
-Individuals of the same species often differ repeatedly in how they move, forage, explore, communicate, or respond to environmental challenge. Such differences are central to research on animal personality, behavioral syndromes, individual specialization, and movement ecology. Yet "individuality" is often treated as if it were a single biological property: individuals differ, those differences are repeatable, and environmental change then either strengthens or weakens that repeatability.
+Individuals of the same species often differ repeatedly in how they move, forage, explore, communicate, or respond to environmental challenge. Such differences are central to research on animal personality, behavioral syndromes, individual specialization, and movement ecology (Bolnick et al. 2003; Araújo et al. 2011). Yet "individuality" is often treated as if it were a single biological property: individuals differ, those differences are repeatable, and environmental change then either strengthens or weakens that repeatability.
 
 That framing collapses several distinct questions.
 
@@ -167,7 +167,7 @@ A post-primary descriptive decomposition allocated the total frozen (D) across a
 
 We reanalysed the sensory-masker experiment of Taub and Yovel (2020).
 
-We used a public *Pipistrellus kuhlii* sensory-perturbation experiment in which individuals experienced a masker manipulation.
+We used the public *Pipistrellus kuhlii* sensory-perturbation experiment of Taub and Yovel (2020), in which individuals experienced a masker manipulation.
 
 The primary source-native movement endpoint was individual angle of approach / movement bias under baseline and masker conditions.
 
@@ -180,7 +180,7 @@ A second independent foam no-masker to foam+masker contrast was treated as a sep
 
 We reanalysed the graded masking experiment of Foskolos et al. (2022).
 
-We reanalysed the public *Myotis daubentonii* masking experiment.
+We reanalysed the public *Myotis daubentonii* masking experiment of Foskolos et al. (2022).
 
 The frozen endpoint was log flight time.
 
@@ -253,13 +253,13 @@ legal identity mappings.
 
 The controlled *Rhinolophus nippon* movement archive was associated with Teshima et al. (2026). The independent *Carollia perspicillata* corridor archive was associated with Eveland et al. (2026).
 
-The controlled *Rhinolophus nippon* programme used a frozen transparent two-axis movement representation:
+The controlled *Rhinolophus nippon* programme used the public obstacle-flight source of Teshima et al. (2026) and a frozen transparent two-axis movement representation:
 - FlightIntensity;
 - ManeuveringExtent.
 
 The cross-context question was whether individual organization in this low-dimensional policy space predicted held-out obstacle contexts.
 
-A fixed representation was then transferred to an independent *Carollia perspicillata* dataset.
+A fixed representation was then transferred to an independent *Carollia perspicillata* dataset from Eveland et al. (2026).
 
 We also transferred a more detailed scale-free trajectory-geometry representation.
 
@@ -563,7 +563,7 @@ A more plausible view is that development can change:
 
 without predictably changing one scalar quantity called "amount of individuality."
 
-This interpretation is consistent with recent work beyond bats. Context-dependent individuality has been demonstrated directly in *Drosophila*, while developmental ecological stress in clonal fish can alter mean behavior without changing individuality magnitude. The contribution here is therefore not the discovery of those general principles, but their placement alongside controlled bat perturbation and portability evidence within one causal hierarchy.
+This interpretation is consistent with recent work beyond bats. Context-dependent individuality has been demonstrated directly in *Drosophila*, while developmental ecological stress in clonal fish can alter mean behavior without changing individuality magnitude. The contribution here is therefore not the discovery of those general principles, but their placement alongside controlled bat perturbation and portability evidence within one causal hierarchy. More broadly, recent syntheses emphasize that behavioral individuality can arise through stochastic, developmental, neural, and environmental processes even among individuals sharing broad conditions (de Bivort 2025).
 
 ## Individuality may be better understood as allocation across dimensions than scalar variance
 
@@ -744,6 +744,10 @@ Full legends are in `prospective/public_causal_synthesis/FIGURE_CAPTIONS_V1.md`.
 # References — working list
 
 - Aharon G, Sadot M, Yovel Y. 2017. Bats use path integration rather than acoustic flow to assess flight distance along flyways. *Current Biology* 27:3650–3657.e3. DOI: 10.1016/j.cub.2017.10.012.
+
+- Araújo MS, Bolnick DI, Layman CA. 2011. The ecological causes of individual specialisation. *Ecology Letters* 14:948–958. DOI: `10.1111/j.1461-0248.2011.01662.x`.
+
+- Bolnick DI, Svanbäck R, Fordyce JA, Yang LH, Davis JM, Hulsey CD, Forister ML. 2003. The ecology of individuals: incidence and implications of individual specialization. *The American Naturalist* 161:1–28. DOI: `10.1086/343878`.
 - de Bivort BL. 2025. The developmental origins of behavioral individuality. *Annual Review of Cell and Developmental Biology* 41:331–352. DOI: 10.1146/annurev-cellbio-101323-025423.
 - Diebold CA, Lawlor J, Allen K, Capshaw G, Humphrey MG, Cintron-De Leon D, Kuchibhotla KV, Moss CF. 2024. Rapid sensorimotor adaptation to auditory midbrain silencing in free-flying bats. *Current Biology* 34:5507–5517.e3. DOI: 10.1016/j.cub.2024.10.045.
 - Elie JE, Muroy SE, Genzel D, Na T, Beyer LA, Swiderski DL, Raphael Y, Yartsev MM. 2024. Role of auditory feedback for vocal production learning in the Egyptian fruit bat. *Current Biology* 34:4062–4070.e7. DOI: 10.1016/j.cub.2024.07.053.
@@ -759,6 +763,20 @@ Full legends are in `prospective/public_causal_synthesis/FIGURE_CAPTIONS_V1.md`.
 - Teshima Y, Genda S, Aoki Y, Fujisawa M, Hiryu S, Fujii K. 2026. Evidence for latent regularities in echolocation-guided flight behaviour of bats. *Proceedings of the Royal Society B* 293:20261463. DOI: 10.1098/rspb.2026.1463.
 - White SJ, Pascall DJ, Wilson AJ. 2020. Towards a comparative approach to the structure of animal personality variation. *Behavioral Ecology* 31:340–351. DOI: 10.1093/beheco/arz198.
 
+
+- Aharon G, Sadot M, Yovel Y. 2017. Data from: Bats use path integration rather than acoustic flow to assess flight distance along flyways. Mendeley Data, version 3. DOI: `10.17632/f6mvhj5gj9.3`.
+
+- Diebold CA, Lawlor J, Allen K, Capshaw G, Humphrey MG, Cintron-De Leon D, Kuchibhotla KV, Moss CF. 2024. Data and code from: Rapid sensorimotor adaptation to auditory midbrain silencing in free-flying bats. Zenodo. DOI: `10.5281/zenodo.13857870`.
+
+- Elie JE, Muroy SE, Genzel D, Na T, Beyer LA, Swiderski DL, Raphael Y, Yartsev MM. 2024. Data from: Role of auditory feedback for vocal production learning in the Egyptian fruit bat. Mendeley Data. DOI: `10.17632/h5ff9vv5pc.1`.
+
+- Foskolos I, Bjerre Pedersen M, Beedholm K, Uebel AS, Macaulay J, Stidsholt L, Brinkløv S, Madsen PT. 2022. Data from: Echolocating Daubenton's bats are resilient to broadband, ultrasonic masking noise during active target approaches. Dryad. DOI: `10.5061/dryad.ngf1vhhv3`.
+
+- Harten L, Katz A, Goldshtein A, Handel M, Yovel Y. 2020. Data from: The ontogeny of a mammalian cognitive map in the real world. Mendeley Data. DOI: `10.17632/n9d8gbz3xr.1`.
+
+- Rachum A, Harten LM, Assa R, Goldshtein A, Chen X, Gonceer N, Yovel Y. 2025. Data from: Early experience affects foraging behavior of wild fruit bats more than their original behavioral predispositions. Mendeley Data. DOI: `10.17632/wh7c636y3t.1`.
+
+- Teshima Y. 2025. Flight policy in obstacle space: estimation from imitation learning in two echolocating bat species. Figshare dataset, article ID 29209493.
 ## Disclosure note — draft
 
 Generative AI assisted with code review, repository organization, literature triage, and manuscript drafting from author-controlled analyses. Scientific decisions, source selection, analysis contracts, interpretation, and final responsibility remain with the human author(s). This wording must be reconciled with journal policy before submission.
