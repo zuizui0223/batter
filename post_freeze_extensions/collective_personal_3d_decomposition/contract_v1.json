@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-collective-personal-3d-decomposition-v1",
+  "frozen_date": "2026-10-07",
+  "status": "post-outcome generated mechanism analysis frozen after x-y-time structural preflight and before opening the new collective/personal 3D outcomes",
+  "role": "separate post-freeze extension; cannot modify or rescue frozen JAE claims",
+  "preflight": {
+    "workflow_run_id": 37613425654,
+    "workflow_head_sha": "c4320349db7ad4722afd2f1171c633d2bcd8161f",
+    "artifact_id": 11479266174
+  },
+  "common_geometry": {
+    "horizontal_grid_m": 500,
+    "session_vertical_center": "median native height",
+    "centered_height_edges_m": ["-inf",-400,-200,-100,-50,0,50,100,200,400,"inf"],
+    "jeffreys_alpha": 0.5,
+    "minimum_session_fixes": 50,
+    "minimum_history_lag_days": 3
+  },
+  "lane_A_natural_turnover": {
+    "included_panels": ["phyllostomus_2022","phyllostomus_2016"],
+    "expected_structural_counts": {
+      "phyllostomus_2022": {"eligible_pairs": 53, "unique_nights": 19},
+      "phyllostomus_2016": {"eligible_pairs": 16, "unique_nights": 8}
+    },
+    "membership_rule": "night pairs share zero tracked individual identities",
+    "night_min_individuals": 2,
+    "pair_common_horizontal_support_min_fixes_each": 50,
+    "night_pooling": "equal biological individual; within an individual-night use its session distribution",
+    "primary_metric": "common-horizontal conditional vertical overlap O_Z_given_XY between pooled nights",
+    "null": "within every individual-night independently permute complete conditional vertical-profile vectors among that session's occupied 500-m cells; horizontal occupancy, membership, local profile collection and all pair definitions remain fixed",
+    "B": 1999,
+    "seeds": {
+      "phyllostomus_2022": 2026100711,
+      "phyllostomus_2016": 2026100712
+    },
+    "support_rule": "observed mean O_Z_given_XY minus null mean > 0 and one-sided p(null>=observed)<=0.05",
+    "claim_if_supported": "collective-level 3D configuration is spatially repeatable across naturally non-overlapping tracked membership"
+  },
+  "lane_B_cross_individual_prediction": {
+    "included_panels": ["hypsignathus","phyllostomus_2022","phyllostomus_2023"],
+    "expected_structural_counts": {
+      "hypsignathus": {"target_sessions": 71, "target_individuals": 17},
+      "phyllostomus_2022": {"target_sessions": 66, "target_individuals": 18},
+      "phyllostomus_2023": {"target_sessions": 8, "target_individuals": 6}
+    },
+    "history_rule": "strictly past sessions at least 3 days before target",
+    "minimum_other_history_individuals": 3,
+    "minimum_scored_target_fixes": 50,
+    "self_model": "equal-session mean P(z|500-m cell) from focal-individual past",
+    "group_model": "equal-individual mean of each other individual's equal-session P(z|500-m cell) past model",
+    "group_marginal_model": "equal-individual mean of each other individual's equal-session marginal P(z) past model",
+    "scores": {
+      "shared_group_gain": "mean target log P_group(z|cell) - log P_group_marginal(z)",
+      "personal_increment": "mean target log P_self(z|cell) - log P_group(z|cell)",
+      "total_personal_history_gain": "mean target log P_self(z|cell) - log P_group_marginal(z)"
+    },
+    "identity_check": "total_personal_history_gain = shared_group_gain + personal_increment on exactly the same target fixes",
+    "aggregation": "equal target session within biological individual, then equal biological individual",
+    "uncertainty": "cluster bootstrap biological individuals with replacement",
+    "bootstrap_B": 4999,
+    "bootstrap_seeds": {
+      "hypsignathus": 2026100721,
+      "phyllostomus_2022": 2026100722,
+      "phyllostomus_2023": 2026100723
+    },
+    "component_support_rule": "panel mean > 0 and percentile 95% cluster-bootstrap lower bound > 0",
+    "classification": {
+      "shared_plus_personal": "shared_group_gain and personal_increment both supported",
+      "shared_only": "shared_group_gain supported, personal_increment unsupported",
+      "personal_only": "personal_increment supported, shared_group_gain unsupported",
+      "neither": "neither component supported"
+    }
+  },
+  "claim_boundary": [
+    "Lane A support is collective spatial persistence, not proof of social or cognitive memory; stable environmental geometry is an alternative.",
+    "Lane B shared-group gain is a cross-individual predictive template, not by itself colony memory.",
+    "Lane B personal increment quantifies information uniquely carried by focal-individual history beyond other-individual history.",
+    "No thresholds, panel sets, lag, grid, bins, weighting, null, bootstrap rule or classification may change after outcome opening."
+  ]
+}
