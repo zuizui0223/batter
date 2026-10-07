@@ -216,8 +216,10 @@ Do not place executable code inside the PDF; code belongs in the review archive.
 
 **DRAFT COMPLETE; ARCHIVE SANITIZATION PASS; ANONYMOUS HOSTING URL REMAINS**
 
-Anonymous file:
-`MANUSCRIPT_ANONYMIZED_BEHAVIORAL_ECOLOGY_V1.md`
+Authoritative review file:
+`COMPLETE_ANONYMOUS_TEXT_V1.md`
+
+The older `MANUSCRIPT_ANONYMIZED_BEHAVIORAL_ECOLOGY_V1.md` is an intermediate manuscript-only file and is **not** the submission object.
 
 Checks:
 - identified GitHub username absent;
