@@ -36,13 +36,13 @@ def insert_figures(md:str)->str:
     repl={
         "See Supplementary Material Figure S1.":
             "See Supplementary Material Figure S1.\n\n"
-            f"<div class='figure'><img src='{FIGS['S1'].as_uri()}'/><p><b>Supplementary Material Figure S1.</b> Analysis-provenance timeline.</p></div>",
+            f"<div class='figure figure-s1'><img src='{FIGS['S1'].as_uri()}'/><p><b>Supplementary Material Figure S1.</b> Analysis-provenance timeline.</p></div>",
         "See Supplementary Material Figure S2.":
             "See Supplementary Material Figure S2.\n\n"
-            f"<div class='figure'><img src='{FIGS['S2'].as_uri()}'/><p><b>Supplementary Material Figure S2.</b> Developmental descriptive decompositions.</p></div>",
+            f"<div class='figure figure-s2'><img src='{FIGS['S2'].as_uri()}'/><p><b>Supplementary Material Figure S2.</b> Developmental descriptive decompositions.</p></div>",
         "See Supplementary Material Figure S3.":
             "See Supplementary Material Figure S3.\n\n"
-            f"<div class='figure'><img src='{FIGS['S3'].as_uri()}'/><p><b>Supplementary Material Figure S3.</b> Exact-null resolution and biological sample size.</p></div>",
+            f"<div class='figure figure-s3'><img src='{FIGS['S3'].as_uri()}'/><p><b>Supplementary Material Figure S3.</b> Exact-null resolution and biological sample size.</p></div>",
     }
     for a,b in repl.items():
         if a not in md:
@@ -98,14 +98,31 @@ def main():
     th { font-weight: 700; }
     tr { page-break-inside: avoid; }
     .figure {
-      page-break-before: always;
       page-break-inside: avoid;
+      break-inside: avoid;
       text-align: center;
-      margin: 6pt 0 10pt 0;
+      margin: 7pt 0 10pt 0;
     }
     .figure img {
       max-width: 96%;
-      max-height: 165mm;
+    }
+    .figure-s1 {
+      page-break-before: auto;
+    }
+    .figure-s1 img {
+      max-height: 128mm;
+    }
+    .figure-s2 {
+      page-break-before: always;
+    }
+    .figure-s2 img {
+      max-height: 158mm;
+    }
+    .figure-s3 {
+      page-break-before: auto;
+    }
+    .figure-s3 img {
+      max-height: 118mm;
     }
     .figure p {
       font-size: 8.5pt;
