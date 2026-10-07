@@ -8,6 +8,10 @@ on:
       - ".github/workflows/crowd-playback-s1-schema-audit-v1.yml"
   workflow_dispatch:
 
+concurrency:
+  group: crowd-playback-s1-schema-audit
+  cancel-in-progress: true
+
 permissions:
   contents: write
 
