@@ -165,8 +165,6 @@ A post-primary descriptive decomposition allocated the total frozen (D) across a
 
 ## Pipistrellus sensory-masker perturbation
 
-We reanalysed the sensory-masker experiment of Taub and Yovel (2020a).
-
 We used the public *Pipistrellus kuhlii* sensory-perturbation experiment of Taub and Yovel (2020a), in which individuals experienced a masker manipulation.
 
 The primary source-native movement endpoint was individual angle of approach / movement bias under baseline and masker conditions.
@@ -177,8 +175,6 @@ after a shared treatment shift, was the manipulated state closer to that individ
 A second independent foam no-masker to foam+masker contrast was treated as a separate perturbation check.
 
 ## Myotis graded acoustic masking
-
-We reanalysed the graded masking experiment of Foskolos et al. (2022a).
 
 We reanalysed the public *Myotis daubentonii* masking experiment of Foskolos et al. (2022a).
 
@@ -250,8 +246,6 @@ The exact null anchored con and independently permuted complete bat labels in th
 legal identity mappings.
 
 ## Rhinolophus cross-task portability and Carollia external transfer
-
-The controlled *Rhinolophus nippon* movement archive was associated with Teshima et al. (2026). The independent *Carollia perspicillata* corridor archive was associated with Eveland et al. (2026a).
 
 The controlled *Rhinolophus nippon* programme used the public obstacle-flight source of Teshima et al. (2026) and a frozen transparent two-axis movement representation:
 - FlightIntensity;
