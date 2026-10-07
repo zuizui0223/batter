@@ -43,18 +43,24 @@ A second independent public perturbation test is now opened prospectively from D
 - exact four-identity primary frozen;
 - numeric execution opened.
 
-### 5. Independent navigation manipulation remains available
+### 5. Independent navigation manipulation — SUPPORTED
 
-Aharon et al. 2017 provides public trial-level structure for:
-- turning location;
-- slowing location;
-- mean speed;
-- bat identity;
-- multiple manipulated navigation conditions.
+Aharon et al. 2017 now provides a completed independent cross-condition identity test.
 
-The Figure-3 navigation-policy primary is frozen before numerical access.
+Frozen Figure-1 bilateral turning-location primary:
+- 4 bats;
+- 3 source-defined navigation conditions;
+- K = **+3.695264**;
+- **4/4 bats positive**;
+- exact null = **576** mappings;
+- exact p = **0.00347222**;
+- all three condition-level mean advantages positive.
 
-Its current blocker is Mendeley file-retrieval authentication, not scientific design.
+Thus:
+
+> **individual navigation organization remains identifiable across experimentally altered current navigation conditions after common condition shifts are removed.**
+
+The same-source identity search is now closed.
 
 ## What public data can potentially establish next
 
@@ -62,9 +68,9 @@ If the auditory-midbrain primary supports identity retention:
 
 > individual-specific organization survives both peripheral/current sensory challenge and a reversible central auditory perturbation in independent bat systems.
 
-If Aharon additionally supports cross-condition identity:
+Aharon now supports cross-condition identity:
 
-> persistent individual organization also survives experimentally changed navigation cues in a path-integration task.
+> persistent individual organization also survives experimentally changed navigation conditions in a path-integration task.
 
 Together with history results, the strongest public-data-only synthesis would be:
 
@@ -82,10 +88,20 @@ with controlled perturbations showing that changes in expression do not necessar
 
 ## What public data still cannot establish directly
 
-The current public archive universe does not independently manipulate:
+The public archive universe now includes a randomized early-environment manipulation (Rachum et al. 2025), but that frozen primary did **not** confirm increased among-individual laboratory personality dispersion (D=+0.734699, p=0.167785).
+
+Therefore public data do provide a causal history manipulation, but they do **not** support the simple formation mechanism:
 
 [
-	ext{number of feasible movement solutions}
+\text{richer early environment}
+\rightarrow
+\text{more individual differentiation}.
+]
+
+The current public archive universe still does not independently manipulate:
+
+[
+\text{number of feasible movement solutions}
 ]
 
 while holding identity and task constant and then test later specialization under equal current opportunity.
@@ -121,11 +137,9 @@ It is not a direct experimental test of why individuality first forms.
 
 ## Stop rule
 
-After disposition of:
-1. the frozen four-bat auditory perturbation primary;
-2. the frozen Aharon Figure-3 navigation-policy primary if file retrieval becomes possible;
+The frozen auditory-midbrain and Aharon navigation primaries are both disposed and supported.
 
-do not continue unbounded searches for new public datasets merely to accumulate more repeatability examples.
+Do not continue unbounded searches for new public datasets merely to accumulate more repeatability examples.
 
 A new public source is worth opening only if it changes one of:
 - biological identity while holding context;
