@@ -1,0 +1,450 @@
+# Prat 2017 S1 Data structural audit v1
+
+**STRUCTURE ONLY - NO NUMERIC RESEARCH VALUES REPORTED.**
+
+- source: https://journals.plos.org/plosbiology/article/file?type=supplementary&id=info:doi/10.1371/journal.pbio.2002556.s011
+- workbook bytes: 3541533
+- sheets: 6
+
+## Figure 1E,F
+
+- rows: 45866
+- columns: 4
+- merged ranges: []
+- string labels in first 25 rows:
+  - R1C1: Mean log_2(F0) of bat calls
+  - R2C1: Adult bats
+  - R2C2: Low-F0 playback
+  - R2C3: High-F0 playback
+  - R2C4: Control playback
+- numeric cell counts by first 25 rows:
+  - row 1: 0
+  - row 2: 0
+  - row 3: 4
+  - row 4: 4
+  - row 5: 4
+  - row 6: 4
+  - row 7: 4
+  - row 8: 4
+  - row 9: 4
+  - row 10: 4
+  - row 11: 4
+  - row 12: 4
+  - row 13: 4
+  - row 14: 4
+  - row 15: 4
+  - row 16: 4
+  - row 17: 4
+  - row 18: 4
+  - row 19: 4
+  - row 20: 4
+  - row 21: 4
+  - row 22: 4
+  - row 23: 4
+  - row 24: 4
+  - row 25: 4
+
+## Figure 2
+
+- rows: 3350
+- columns: 118
+- merged ranges: []
+- string labels in first 25 rows:
+  - R1C1: LDA of bat calls (LD1,LD2) in 4 recording sessions, and LDA of playbacks.
+  - R2C1: session 1,High-F0,bat 1 (LD1)
+  - R2C2: session 1,High-F0,bat 1 (LD2)
+  - R2C3: session 1,High-F0,bat 2 (LD1)
+  - R2C4: session 1,High-F0,bat 2 (LD2)
+  - R2C5: session 1,High-F0,bat 3 (LD1)
+  - R2C6: session 1,High-F0,bat 3 (LD2)
+  - R2C7: session 1,High-F0,bat 4 (LD1)
+  - R2C8: session 1,High-F0,bat 4 (LD2)
+  - R2C9: session 1,Low-F0,bat 1 (LD1)
+  - R2C10: session 1,Low-F0,bat 1 (LD2)
+  - R2C11: session 1,Low-F0,bat 2 (LD1)
+  - R2C12: session 1,Low-F0,bat 2 (LD2)
+  - R2C13: session 1,Low-F0,bat 3 (LD1)
+  - R2C14: session 1,Low-F0,bat 3 (LD2)
+  - R2C15: session 1,Low-F0,bat 4 (LD1)
+  - R2C16: session 1,Low-F0,bat 4 (LD2)
+  - R2C17: session 1,Low-F0,bat 5 (LD1)
+  - R2C18: session 1,Low-F0,bat 5 (LD2)
+  - R2C19: session 1,Control,bat 1 (LD1)
+  - R2C20: session 1,Control,bat 1 (LD2)
+  - R2C21: session 1,Control,bat 2 (LD1)
+  - R2C22: session 1,Control,bat 2 (LD2)
+  - R2C23: session 1,Control,bat 3 (LD1)
+  - R2C24: session 1,Control,bat 3 (LD2)
+  - R2C25: session 1,Control,bat 4 (LD1)
+  - R2C26: session 1,Control,bat 4 (LD2)
+  - R2C27: session 1,Control,bat 5 (LD1)
+  - R2C28: session 1,Control,bat 5 (LD2)
+  - R2C29: session 2,High-F0,bat 1 (LD1)
+  - R2C30: session 2,High-F0,bat 1 (LD2)
+  - R2C31: session 2,High-F0,bat 2 (LD1)
+  - R2C32: session 2,High-F0,bat 2 (LD2)
+  - R2C33: session 2,High-F0,bat 3 (LD1)
+  - R2C34: session 2,High-F0,bat 3 (LD2)
+  - R2C35: session 2,High-F0,bat 4 (LD1)
+  - R2C36: session 2,High-F0,bat 4 (LD2)
+  - R2C37: session 2,Low-F0,bat 1 (LD1)
+  - R2C38: session 2,Low-F0,bat 1 (LD2)
+  - R2C39: session 2,Low-F0,bat 2 (LD1)
+  - R2C40: session 2,Low-F0,bat 2 (LD2)
+  - R2C41: session 2,Low-F0,bat 3 (LD1)
+  - R2C42: session 2,Low-F0,bat 3 (LD2)
+  - R2C43: session 2,Low-F0,bat 4 (LD1)
+  - R2C44: session 2,Low-F0,bat 4 (LD2)
+  - R2C45: session 2,Low-F0,bat 5 (LD1)
+  - R2C46: session 2,Low-F0,bat 5 (LD2)
+  - R2C47: session 2,Control,bat 1 (LD1)
+  - R2C48: session 2,Control,bat 1 (LD2)
+  - R2C49: session 2,Control,bat 2 (LD1)
+  - R2C50: session 2,Control,bat 2 (LD2)
+  - R2C51: session 2,Control,bat 3 (LD1)
+  - R2C52: session 2,Control,bat 3 (LD2)
+  - R2C53: session 2,Control,bat 4 (LD1)
+  - R2C54: session 2,Control,bat 4 (LD2)
+  - R2C55: session 2,Control,bat 5 (LD1)
+  - R2C56: session 2,Control,bat 5 (LD2)
+  - R2C57: session 3,High-F0,bat 1 (LD1)
+  - R2C58: session 3,High-F0,bat 1 (LD2)
+  - R2C59: session 3,High-F0,bat 2 (LD1)
+  - R2C60: session 3,High-F0,bat 2 (LD2)
+  - R2C61: session 3,High-F0,bat 3 (LD1)
+  - R2C62: session 3,High-F0,bat 3 (LD2)
+  - R2C63: session 3,High-F0,bat 4 (LD1)
+  - R2C64: session 3,High-F0,bat 4 (LD2)
+  - R2C65: session 3,Low-F0,bat 1 (LD1)
+  - R2C66: session 3,Low-F0,bat 1 (LD2)
+  - R2C67: session 3,Low-F0,bat 2 (LD1)
+  - R2C68: session 3,Low-F0,bat 2 (LD2)
+  - R2C69: session 3,Low-F0,bat 3 (LD1)
+  - R2C70: session 3,Low-F0,bat 3 (LD2)
+  - R2C71: session 3,Low-F0,bat 4 (LD1)
+  - R2C72: session 3,Low-F0,bat 4 (LD2)
+  - R2C73: session 3,Low-F0,bat 5 (LD1)
+  - R2C74: session 3,Low-F0,bat 5 (LD2)
+  - R2C75: session 3,Control,bat 1 (LD1)
+  - R2C76: session 3,Control,bat 1 (LD2)
+  - R2C77: session 3,Control,bat 2 (LD1)
+  - R2C78: session 3,Control,bat 2 (LD2)
+  - R2C79: session 3,Control,bat 3 (LD1)
+  - R2C80: session 3,Control,bat 3 (LD2)
+  - R2C81: session 3,Control,bat 4 (LD1)
+  - R2C82: session 3,Control,bat 4 (LD2)
+  - R2C83: session 3,Control,bat 5 (LD1)
+  - R2C84: session 3,Control,bat 5 (LD2)
+  - R2C85: session 4,High-F0,bat 1 (LD1)
+  - R2C86: session 4,High-F0,bat 1 (LD2)
+  - R2C87: session 4,High-F0,bat 2 (LD1)
+  - R2C88: session 4,High-F0,bat 2 (LD2)
+  - R2C89: session 4,High-F0,bat 3 (LD1)
+  - R2C90: session 4,High-F0,bat 3 (LD2)
+  - R2C91: session 4,High-F0,bat 4 (LD1)
+  - R2C92: session 4,High-F0,bat 4 (LD2)
+  - R2C93: session 4,Low-F0,bat 1 (LD1)
+  - R2C94: session 4,Low-F0,bat 1 (LD2)
+  - R2C95: session 4,Low-F0,bat 2 (LD1)
+  - R2C96: session 4,Low-F0,bat 2 (LD2)
+  - R2C97: session 4,Low-F0,bat 3 (LD1)
+  - R2C98: session 4,Low-F0,bat 3 (LD2)
+  - R2C99: session 4,Low-F0,bat 4 (LD1)
+  - R2C100: session 4,Low-F0,bat 4 (LD2)
+  - R2C101: session 4,Low-F0,bat 5 (LD1)
+  - R2C102: session 4,Low-F0,bat 5 (LD2)
+  - R2C103: session 4,Control,bat 1 (LD1)
+  - R2C104: session 4,Control,bat 1 (LD2)
+  - R2C105: session 4,Control,bat 2 (LD1)
+  - R2C106: session 4,Control,bat 2 (LD2)
+  - R2C107: session 4,Control,bat 3 (LD1)
+  - R2C108: session 4,Control,bat 3 (LD2)
+  - R2C109: session 4,Control,bat 4 (LD1)
+  - R2C110: session 4,Control,bat 4 (LD2)
+  - R2C111: session 4,Control,bat 5 (LD1)
+  - R2C112: session 4,Control,bat 5 (LD2)
+  - R2C113: High-F0 playback (LD1)
+  - R2C114: High-F0 playback (LD2)
+  - R2C115: Low-F0 playback (LD1)
+  - R2C116: Low-F0 playback (LD2)
+  - R2C117: Control playback (LD1)
+  - R2C118: Control playback (LD2)
+- numeric cell counts by first 25 rows:
+  - row 1: 0
+  - row 2: 0
+  - row 3: 118
+  - row 4: 118
+  - row 5: 118
+  - row 6: 118
+  - row 7: 118
+  - row 8: 118
+  - row 9: 118
+  - row 10: 118
+  - row 11: 116
+  - row 12: 116
+  - row 13: 116
+  - row 14: 116
+  - row 15: 116
+  - row 16: 116
+  - row 17: 116
+  - row 18: 114
+  - row 19: 114
+  - row 20: 114
+  - row 21: 114
+  - row 22: 114
+  - row 23: 114
+  - row 24: 114
+  - row 25: 112
+
+## Figure 3,Figure S2
+
+- rows: 1420
+- columns: 56
+- merged ranges: []
+- string labels in first 25 rows:
+  - R1C1: Mean log_2(F0) for each call, of each pup, in the 4 recording sessions
+  - R2C1: session 1,High-F0,bat 1
+  - R2C2: session 1,High-F0,bat 2
+  - R2C3: session 1,High-F0,bat 3
+  - R2C4: session 1,High-F0,bat 4
+  - R2C5: session 1,Low-F0,bat 1
+  - R2C6: session 1,Low-F0,bat 2
+  - R2C7: session 1,Low-F0,bat 3
+  - R2C8: session 1,Low-F0,bat 4
+  - R2C9: session 1,Low-F0,bat 5
+  - R2C10: session 1,Control,bat 1
+  - R2C11: session 1,Control,bat 2
+  - R2C12: session 1,Control,bat 3
+  - R2C13: session 1,Control,bat 4
+  - R2C14: session 1,Control,bat 5
+  - R2C15: session 2,High-F0,bat 1
+  - R2C16: session 2,High-F0,bat 2
+  - R2C17: session 2,High-F0,bat 3
+  - R2C18: session 2,High-F0,bat 4
+  - R2C19: session 2,Low-F0,bat 1
+  - R2C20: session 2,Low-F0,bat 2
+  - R2C21: session 2,Low-F0,bat 3
+  - R2C22: session 2,Low-F0,bat 4
+  - R2C23: session 2,Low-F0,bat 5
+  - R2C24: session 2,Control,bat 1
+  - R2C25: session 2,Control,bat 2
+  - R2C26: session 2,Control,bat 3
+  - R2C27: session 2,Control,bat 4
+  - R2C28: session 2,Control,bat 5
+  - R2C29: session 3,High-F0,bat 1
+  - R2C30: session 3,High-F0,bat 2
+  - R2C31: session 3,High-F0,bat 3
+  - R2C32: session 3,High-F0,bat 4
+  - R2C33: session 3,Low-F0,bat 1
+  - R2C34: session 3,Low-F0,bat 2
+  - R2C35: session 3,Low-F0,bat 3
+  - R2C36: session 3,Low-F0,bat 4
+  - R2C37: session 3,Low-F0,bat 5
+  - R2C38: session 3,Control,bat 1
+  - R2C39: session 3,Control,bat 2
+  - R2C40: session 3,Control,bat 3
+  - R2C41: session 3,Control,bat 4
+  - R2C42: session 3,Control,bat 5
+  - R2C43: session 4,High-F0,bat 1
+  - R2C44: session 4,High-F0,bat 2
+  - R2C45: session 4,High-F0,bat 3
+  - R2C46: session 4,High-F0,bat 4
+  - R2C47: session 4,Low-F0,bat 1
+  - R2C48: session 4,Low-F0,bat 2
+  - R2C49: session 4,Low-F0,bat 3
+  - R2C50: session 4,Low-F0,bat 4
+  - R2C51: session 4,Low-F0,bat 5
+  - R2C52: session 4,Control,bat 1
+  - R2C53: session 4,Control,bat 2
+  - R2C54: session 4,Control,bat 3
+  - R2C55: session 4,Control,bat 4
+  - R2C56: session 4,Control,bat 5
+- numeric cell counts by first 25 rows:
+  - row 1: 0
+  - row 2: 0
+  - row 3: 56
+  - row 4: 56
+  - row 5: 56
+  - row 6: 56
+  - row 7: 56
+  - row 8: 56
+  - row 9: 56
+  - row 10: 56
+  - row 11: 55
+  - row 12: 55
+  - row 13: 55
+  - row 14: 55
+  - row 15: 55
+  - row 16: 55
+  - row 17: 55
+  - row 18: 54
+  - row 19: 54
+  - row 20: 54
+  - row 21: 54
+  - row 22: 54
+  - row 23: 54
+  - row 24: 54
+  - row 25: 54
+
+## Figure S3,Table S3
+
+- rows: 16
+- columns: 13
+- merged ranges: []
+- string labels in first 25 rows:
+  - R1C1: Proportion of low, high, and intermediate F0 calls for each pup
+  - R2C2: session 1,High-F0 calls
+  - R2C3: session 1,Intermediate calls
+  - R2C4: session 1,Low-F0 calls
+  - R2C5: session 2,High-F0 calls
+  - R2C6: session 2,Intermediate calls
+  - R2C7: session 2,Low-F0 calls
+  - R2C8: session 3,High-F0 calls
+  - R2C9: session 3,Intermediate calls
+  - R2C10: session 3,Low-F0 calls
+  - R2C11: session 4,High-F0 calls
+  - R2C12: session 4,Intermediate calls
+  - R2C13: session 4,Low-F0 calls
+  - R3C1: High-F0,bat 1
+  - R4C1: High-F0,bat 2
+  - R5C1: High-F0,bat 3
+  - R6C1: High-F0,bat 4
+  - R7C1: Low-F0,bat 1
+  - R8C1: Low-F0,bat 2
+  - R9C1: Low-F0,bat 3
+  - R10C1: Low-F0,bat 4
+  - R11C1: Low-F0,bat 5
+  - R12C1: Control,bat 1
+  - R13C1: Control,bat 2
+  - R14C1: Control,bat 3
+  - R15C1: Control,bat 4
+  - R16C1: Control,bat 5
+- numeric cell counts by first 25 rows:
+  - row 1: 0
+  - row 2: 0
+  - row 3: 12
+  - row 4: 12
+  - row 5: 12
+  - row 6: 12
+  - row 7: 12
+  - row 8: 12
+  - row 9: 12
+  - row 10: 12
+  - row 11: 12
+  - row 12: 12
+  - row 13: 12
+  - row 14: 12
+  - row 15: 12
+  - row 16: 12
+
+## Figure S5
+
+- rows: 1423
+- columns: 36
+- merged ranges: []
+- string labels in first 25 rows:
+  - R1C1: Mean energy entropy for each call, (comparison of High-F0 vs. Control groups)
+  - R2C1: session 1,High-F0,bat 1
+  - R2C2: session 1,High-F0,bat 2
+  - R2C3: session 1,High-F0,bat 3
+  - R2C4: session 1,High-F0,bat 4
+  - R2C5: session 1,Control,bat 1
+  - R2C6: session 1,Control,bat 2
+  - R2C7: session 1,Control,bat 3
+  - R2C8: session 1,Control,bat 4
+  - R2C9: session 1,Control,bat 5
+  - R2C10: session 2,High-F0,bat 1
+  - R2C11: session 2,High-F0,bat 2
+  - R2C12: session 2,High-F0,bat 3
+  - R2C13: session 2,High-F0,bat 4
+  - R2C14: session 2,Control,bat 1
+  - R2C15: session 2,Control,bat 2
+  - R2C16: session 2,Control,bat 3
+  - R2C17: session 2,Control,bat 4
+  - R2C18: session 2,Control,bat 5
+  - R2C19: session 3,High-F0,bat 1
+  - R2C20: session 3,High-F0,bat 2
+  - R2C21: session 3,High-F0,bat 3
+  - R2C22: session 3,High-F0,bat 4
+  - R2C23: session 3,Control,bat 1
+  - R2C24: session 3,Control,bat 2
+  - R2C25: session 3,Control,bat 3
+  - R2C26: session 3,Control,bat 4
+  - R2C27: session 3,Control,bat 5
+  - R2C28: session 4,High-F0,bat 1
+  - R2C29: session 4,High-F0,bat 2
+  - R2C30: session 4,High-F0,bat 3
+  - R2C31: session 4,High-F0,bat 4
+  - R2C32: session 4,Control,bat 1
+  - R2C33: session 4,Control,bat 2
+  - R2C34: session 4,Control,bat 3
+  - R2C35: session 4,Control,bat 4
+  - R2C36: session 4,Control,bat 5
+- numeric cell counts by first 25 rows:
+  - row 1: 0
+  - row 2: 0
+  - row 3: 36
+  - row 4: 36
+  - row 5: 36
+  - row 6: 36
+  - row 7: 36
+  - row 8: 36
+  - row 9: 36
+  - row 10: 36
+  - row 11: 35
+  - row 12: 35
+  - row 13: 35
+  - row 14: 35
+  - row 15: 35
+  - row 16: 35
+  - row 17: 35
+  - row 18: 34
+  - row 19: 34
+  - row 20: 34
+  - row 21: 34
+  - row 22: 34
+  - row 23: 34
+  - row 24: 34
+  - row 25: 34
+
+## Figure S1
+
+- rows: 10002
+- columns: 7
+- merged ranges: []
+- string labels in first 25 rows:
+  - R1C1: Acoustic features of bat calls (random sample)
+  - R2C1: Energy entropy (nat)
+  - R2C2: Peak-Frequency (kHz)
+  - R2C3: F0 (kHz)
+  - R2C4: Spectral centroid (kHz)
+  - R2C5: Spectral-entropy (nat)
+  - R2C6: Wiener-entropy
+  - R2C7: Duration (sec.)
+- numeric cell counts by first 25 rows:
+  - row 1: 0
+  - row 2: 0
+  - row 3: 7
+  - row 4: 7
+  - row 5: 7
+  - row 6: 7
+  - row 7: 7
+  - row 8: 7
+  - row 9: 7
+  - row 10: 7
+  - row 11: 7
+  - row 12: 7
+  - row 13: 7
+  - row 14: 7
+  - row 15: 7
+  - row 16: 7
+  - row 17: 7
+  - row 18: 7
+  - row 19: 7
+  - row 20: 7
+  - row 21: 7
+  - row 22: 7
+  - row 23: 7
+  - row 24: 7
+  - row 25: 7
+
