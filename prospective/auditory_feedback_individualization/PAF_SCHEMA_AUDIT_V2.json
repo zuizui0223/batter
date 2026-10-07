@@ -1,0 +1,125 @@
+{
+  "version": 2,
+  "source": "10.17632/h5ff9vv5pc.1",
+  "variable": "PAF_Tbl",
+  "table_height": 28091,
+  "table_width": 38,
+  "structural_columns": [
+    "BatID",
+    "Acoustic Group",
+    "Sex",
+    "Hearing_Deaf"
+  ],
+  "feature_columns": [
+    "Duration (ms)",
+    "RMS mean",
+    "Pitch Saliency (AU)",
+    "Fundamental mean (kHz)",
+    "Fundamental CV",
+    "Spectral mean (kHz)",
+    "Spectral std (kHz)",
+    "Spectral kurtosis (Hz)",
+    "Spectral skewness (Hz)",
+    "Spectral entropy",
+    "Temporal mean (ms)",
+    "Temporal std (ms)",
+    "Temporal kurtosis (ms)",
+    "Temporal skewness (ms)",
+    "Temporal entropy",
+    "1st Spectral Quartile (kHz)",
+    "2nd Spectral Quartile (kHz)",
+    "3rd Spectral Quartile (kHz)",
+    "Mic Spectral mean (kHz)",
+    "Mic Spectral std (kHz)",
+    "Mic Spectral kurt (Hz)",
+    "Mic Spectral skew (Hz)",
+    "Mic Spectral ent",
+    "Mic 1st Spectral Quartile (kHz)",
+    "Mic 2nd Spectral Quartile (kHz)",
+    "Mic 3rd Spectral Quartile (kHz)",
+    "Amplitude Periodicity Frequency (log(Hz))",
+    "Amplitude Periodicity Power"
+  ],
+  "feature_count": 28,
+  "fourth_column": {
+    "name": "Hearing_Deaf",
+    "class": "categorical",
+    "n_rows": 28091,
+    "levels": [
+      "D",
+      "H"
+    ],
+    "counts": [
+      11154,
+      16937
+    ]
+  },
+  "bats": [
+    {
+      "BatID": "F3",
+      "n_calls": 1322,
+      "hearing_deaf": "D",
+      "sex": "F"
+    },
+    {
+      "BatID": "M3",
+      "n_calls": 6080,
+      "hearing_deaf": "H",
+      "sex": "M"
+    },
+    {
+      "BatID": "F1",
+      "n_calls": 3041,
+      "hearing_deaf": "D",
+      "sex": "F"
+    },
+    {
+      "BatID": "M2",
+      "n_calls": 1582,
+      "hearing_deaf": "D",
+      "sex": "M"
+    },
+    {
+      "BatID": "F5",
+      "n_calls": 2940,
+      "hearing_deaf": "H",
+      "sex": "F"
+    },
+    {
+      "BatID": "F4",
+      "n_calls": 2577,
+      "hearing_deaf": "H",
+      "sex": "F"
+    },
+    {
+      "BatID": "F6",
+      "n_calls": 2024,
+      "hearing_deaf": "H",
+      "sex": "F"
+    },
+    {
+      "BatID": "M4",
+      "n_calls": 3316,
+      "hearing_deaf": "H",
+      "sex": "M"
+    },
+    {
+      "BatID": "M1",
+      "n_calls": 3064,
+      "hearing_deaf": "D",
+      "sex": "M"
+    },
+    {
+      "BatID": "F2",
+      "n_calls": 2145,
+      "hearing_deaf": "D",
+      "sex": "F"
+    }
+  ],
+  "n_hearing": 16937,
+  "n_deaf": 11154,
+  "n_H_F": 7541,
+  "n_H_M": 9396,
+  "n_D_F": 6508,
+  "n_D_M": 4646
+}
