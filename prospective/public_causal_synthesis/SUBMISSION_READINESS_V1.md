@@ -82,7 +82,7 @@ Contains:
 
 ### Figures
 
-**PASS — generated**
+**PASS — generated; alt text drafted**
 
 Files:
 - `FIGURE_1_CAUSAL_LAYERS_V1.svg`;
@@ -94,9 +94,11 @@ Files:
 Figure captions:
 `FIGURE_CAPTIONS_V1.md`.
 
+Alt text:
+`FIGURE_ALT_TEXT_V1.md`
+
 Before final submission:
 - check journal-preferred raster/vector formats and resolution;
-- add alt text for each submitted figure;
 - decide whether Fig. 2A/2B are combined into one multipanel figure in production.
 
 ### Data archiving
@@ -118,11 +120,14 @@ Do not expose `zuizui0223` in the review manuscript.
 
 ### Supplementary material
 
-**NOT YET PACKAGED**
+**CONTENT DRAFT COMPLETE; PDF PACKAGING REMAINS**
 
 Behavioral Ecology permits one Supplementary Material PDF if needed.
 
-Recommended supplement:
+Content source:
+`SUPPLEMENTARY_MATERIAL_DRAFT_V1.md`
+
+Planned single supplement:
 - Table S1 source/data/provenance ledger;
 - Table S2 frozen endpoints/nulls/support rules;
 - Figure S1 analysis-provenance timeline;
@@ -133,16 +138,20 @@ Do not place executable code inside the PDF; code belongs in the review archive.
 
 ### Double-anonymized manuscript
 
-**BLOCKER**
+**DRAFT COMPLETE; ANONYMOUS ARCHIVE URL REMAINS**
 
-Current repo manuscript includes identified repository path in Data Availability.
+Anonymous file:
+`MANUSCRIPT_ANONYMIZED_BEHAVIORAL_ECOLOGY_V1.md`
 
-Create an anonymous submission copy with:
-- authors removed;
-- acknowledgements removed;
-- identified GitHub path replaced by anonymous archive placeholder;
-- self-identifying prose removed;
-- source-study citations retained normally.
+Checks:
+- identified GitHub username absent;
+- identified analysis-repository path absent;
+- no author/affiliation metadata;
+- source-study citations retained normally;
+- review archive represented as `[ANONYMIZED_REVIEW_ARCHIVE_URL]`.
+
+Remaining blocker:
+replace the placeholder with a genuinely anonymized review archive before upload.
 
 ### Funding
 
@@ -228,15 +237,13 @@ PASS:
 ### Must resolve before upload
 
 1. **Anonymous analysis archive**
-2. **Anonymous manuscript copy**
-3. **Author/affiliation/corresponding-author metadata**
-4. **Funding statement**
-5. **CRediT roles**
-6. **Conflict-of-interest statement**
-7. **Final AI disclosure verification**
-8. **One Supplementary PDF, if used**
-9. **Figure alt text**
-10. **Final reference-style conversion to Behavioral Ecology format**
+2. **Author/affiliation/corresponding-author metadata**
+3. **Funding statement**
+4. **CRediT roles**
+5. **Conflict-of-interest statement**
+6. **Final AI disclosure verification**
+7. **Single Supplementary PDF packaging, if used**
+8. **Final reference-style conversion to Behavioral Ecology format**
 
 ### Strongly recommended
 
