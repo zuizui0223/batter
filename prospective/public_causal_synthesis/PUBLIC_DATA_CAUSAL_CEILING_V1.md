@@ -10,9 +10,11 @@ It also supports:
 
 > **Personal history can refine individual organization over development.**
 
-But it does not support:
+An independent randomized early-experience manipulation additionally shows that broad environmental enrichment does **not** confirm increased among-individual laboratory personality dispersion.
 
-> **Broad environmental enrichment causes individual specialization by increasing among-individual behavioral variance.**
+Therefore public data support a causal effect of experience on behavior, but not the simple formation rule:
+
+> **richer early environment -> more individuality.**
 
 And it does not yet identify:
 
@@ -27,7 +29,15 @@ Further analysis of the already-opened Rhino archive cannot independently supply
 
 Further decomposition of the wild H/V archive cannot confirm the bridge because the frozen scalar field gate failed.
 
-Additional perturbation datasets can strengthen maintenance generality, but maintenance is already better constrained than formation.
+Additional current-context perturbation datasets now have sharply diminishing value.
+
+Maintenance/portability is supported across:
+- external masker;
+- graded masking;
+- reversible central auditory perturbation;
+- independent path-integration/navigation-context manipulation.
+
+Formation is therefore much more weakly identified than maintenance.
 
 Therefore the bottleneck has shifted from:
 
@@ -40,9 +50,11 @@ to:
 ## Public-data routes still worth opening
 
 Worthwhile:
-- a new randomized developmental/history manipulation;
+- a new randomized developmental/history manipulation that changes individual formation trajectories;
 - reversible biomechanics with repeated identified individuals;
-- an independent navigation-information experiment with enough biological identity support.
+- a public experiment that manipulates learning history or solution opportunity rather than current context.
+
+The independent navigation-information route is no longer an open priority because Aharon Figure 1 is supported and closed.
 
 Low value:
 - another observational repeatability panel;
@@ -62,8 +74,15 @@ A designed solution-opportunity experiment remains the cleanest direct test of:
 	ext{individualized policy}.
 ]
 
-But public data have already narrowed the reason for doing such an experiment:
+Public data have already narrowed the reason for doing such an experiment:
 
 - not because persistence is unknown;
 - not because context dependence is unknown;
+- not because navigation-context portability is unknown;
 - but because **formation is now the weakly identified layer**.
+
+The randomized Rachum enrichment source additionally shows that manipulating broad environmental richness is not enough, under the frozen test, to establish increased individualization.
+
+So the remaining formation question is more specific:
+
+> **what causes different individuals to take different historical trajectories, rather than merely shifting all individuals in a common direction?**
