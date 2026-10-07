@@ -5,6 +5,10 @@ on:
     branches:
       - prospective/public-causal-synthesis-v1
     paths:
+      - "prospective/public_causal_synthesis/MANUSCRIPT_DRAFT_V1.md"
+      - "prospective/public_causal_synthesis/LAY_SUMMARY_V1.md"
+      - "prospective/public_causal_synthesis/FIGURE_CAPTIONS_V1.md"
+      - "prospective/public_causal_synthesis/build_complete_anonymous_text_v1.py"
       - "prospective/public_causal_synthesis/COMPLETE_ANONYMOUS_TEXT_V1.md"
       - "prospective/public_causal_synthesis/build_complete_anonymous_docx_v1.py"
       - "figures/public_causal/**"
@@ -26,6 +30,8 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y pandoc libreoffice poppler-utils
           python -m pip install python-docx cairosvg
+      - name: Rebuild complete anonymous Markdown from current sources
+        run: python prospective/public_causal_synthesis/build_complete_anonymous_text_v1.py
       - name: Build Complete Anonymous Text DOCX
         run: python prospective/public_causal_synthesis/build_complete_anonymous_docx_v1.py
       - name: Render DOCX to PDF and page PNGs for QA
