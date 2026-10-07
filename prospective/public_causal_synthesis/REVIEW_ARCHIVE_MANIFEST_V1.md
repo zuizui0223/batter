@@ -70,3 +70,23 @@ The build fails if any packaged text file contains:
 - a non-anonymous manuscript path that is not intended for review.
 
 The archive is intended to be downloaded and uploaded to the journal or an anonymous review host by the authors.
+
+
+## Evidence-hierarchy synchronization
+
+The review archive must be rebuilt after any change to:
+- the Harten first-flight evidence hierarchy;
+- manuscript numerical provenance;
+- the wild 2/4 bridge boundary;
+- the Rhino/Carollia portability ledger.
+
+Current frozen hierarchy:
+1. Harten monotonic formation primary = **FAIL**;
+2. Harten late-history = **predeclared secondary supported**;
+3. recent-vs-earliest Q = **post-primary diagnostic only**;
+4. Rachum randomized history-carrier treatment effect = **FAIL**;
+5. wild scalar carrier bridge = **2/4 FAIL**;
+6. wild H/V = **exploratory only**;
+7. no standalone Rhino held-out-environment p=0.0002 is retained in the submission package.
+
+The packaged `MANUSCRIPT_NUMERICAL_AUDIT_V1.md` is the authoritative transcription map.
