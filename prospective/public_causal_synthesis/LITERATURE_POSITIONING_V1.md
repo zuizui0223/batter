@@ -203,10 +203,11 @@ Instead developmental effects appear mechanism-specific in **where** among-indiv
 ## 3. Same programme also observes history-specific refinement
 
 In the juvenile-history source:
-- earliest history is not a robust late-state template;
-- recent own history becomes strongly more predictive.
+- the frozen monotonic formation primary fails because only 8/14 juveniles have positive experience slopes, below the predeclared 10/14 requirement;
+- a predeclared late-history secondary is strongly supported (L = +112.5554, p = 0.0001; 12/14 positive);
+- a post-primary recent-versus-earliest two-day diagnostic is strongly positive (Q = +144.079, p = 0.0001; 10/14 positive) but cannot rescue the failed primary.
 
-Thus personal organization can be refined through individual history even when group-level developmental manipulations do not predict total individuality amount.
+Thus personal history carries strong individual information later in ontogeny, while the rule governing its build-up remains heterogeneous and unresolved.
 
 ---
 
