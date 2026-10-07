@@ -254,8 +254,10 @@ def main():
         # double spacing. Behavioral Ecology specifies page-3 main-text start
         # but does not prescribe a fixed font size for the title/abstract page.
         pars=list(doc.paragraphs)
-        ti=pars.index(title)
-        ii=pars.index(intro)
+        ti=next((i for i,p in enumerate(pars) if p.text.strip()==TITLE),None)
+        ii=next((i for i,p in enumerate(pars) if p.text.strip()=="Introduction"),None)
+        if ti is None or ii is None or ti >= ii:
+            raise SystemExit(f"STOP DOCX title/introduction order invalid: title={ti}, intro={ii}")
         for p in pars[ti:ii]:
             p.paragraph_format.line_spacing=2.0
             for run in p.runs:
