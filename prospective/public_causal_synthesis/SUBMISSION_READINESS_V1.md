@@ -105,6 +105,11 @@ Before final submission:
 
 **SOURCE DATA PASS; ANALYSIS-ARCHIVE ANONYMIZATION BLOCKER**
 
+Source-data audit updates:
+- Taub source data URL verified from the published Data Availability statement;
+- Teshima/Rhino flight-policy source verified as Figshare dataset ID 29209493 with species aliases documented on the dataset page;
+- both are now included in main and anonymized manuscript Data Availability sections.
+
 All source data are already public.
 
 However, the current analysis repository is identified as `zuizui0223/batter`.
