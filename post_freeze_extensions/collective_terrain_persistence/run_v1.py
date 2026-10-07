@@ -18,7 +18,7 @@ def load_module(name,path):
     spec.loader.exec_module(mod); return mod
 
 collective=load_module("collective3d",ROOT/"post_freeze_extensions/collective_personal_3d_decomposition/run_v1.py")
-terrain=load_module("terrain3d",ROOT/"post_freeze_extensions/3d_niche_partition/run_original_terrain_geometry_v1.py")
+# DEM helper implementation is the frozen copy bundled on this branch.\nterrain=load_module("terrain3d",ROOT/"post_freeze_extensions/3d_niche_partition/run_original_terrain_geometry_v1.py")
 
 CFG=ROOT/"post_freeze_extensions/collective_terrain_persistence/contract_v1.json"
 OUT=ROOT/"post_freeze_extensions/collective_terrain_persistence/result_v1.json"
