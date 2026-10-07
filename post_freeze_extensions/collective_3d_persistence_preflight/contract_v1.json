@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-collective-3d-persistence-preflight-v1",
+  "created_date": "2026-10-07",
+  "status": "post-outcome generated structural preflight frozen before any collective-level 3D outcome is calculated",
+  "role": "separate post-freeze mechanism extension; cannot modify or rescue the frozen JAE submission",
+  "biological_question": "Does the archive contain enough cross-time, cross-individual structure to distinguish personal 3D persistence from a group-level spatial template?",
+  "source_universe": [
+    "tadarida",
+    "eidolon",
+    "hypsignathus",
+    "phyllostomus_2022",
+    "phyllostomus_2023",
+    "phyllostomus_2016"
+  ],
+  "preflight_information_firewall": {
+    "allowed": [
+      "cohort label",
+      "individual identity",
+      "session identity",
+      "timestamp",
+      "x-y coordinates",
+      "fix counts"
+    ],
+    "forbidden_new_outputs": [
+      "centered-height distributions",
+      "z-bin probabilities",
+      "3D overlap",
+      "vertical overlap",
+      "collective-versus-personal predictive gain"
+    ],
+    "note": "Existing source parsers may require a finite height field to reproduce the previously frozen session universe, but this preflight does not summarize, bin, compare, score, or otherwise use height values."
+  },
+  "shared_preprocessing": {
+    "session_min_fixes": 50,
+    "horizontal_grid_m": 500,
+    "shifted_night_rule": "median session timestamp minus 12 hours, then UTC calendar date",
+    "minimum_temporal_separation_days": 3
+  },
+  "lane_A_natural_turnover": {
+    "purpose": "strict collective-persistence candidate using naturally non-overlapping tracked membership",
+    "night_min_individuals": 2,
+    "require_zero_shared_individuals_between_nights": true,
+    "pair_common_horizontal_support_min_fixes_each": 50,
+    "panel_gate": {
+      "minimum_eligible_night_pairs": 10,
+      "minimum_unique_nights_participating": 5
+    },
+    "interpretation_if_gate_passes": "A later frozen outcome may test whether pooled 3D group shape persists across nights that share no tracked individual.",
+    "interpretation_if_gate_fails": "The archive cannot directly test strict collective persistence under natural tracked-member turnover."
+  },
+  "lane_B_cross_individual_prediction": {
+    "purpose": "hierarchical predictive decomposition without claiming collective memory",
+    "target_requires_prior_self_session": true,
+    "history_must_be_strictly_past": true,
+    "minimum_prior_lag_days": 3,
+    "minimum_other_history_individuals": 3,
+    "target_common_horizontal_support_min_fixes": 50,
+    "panel_gate_minimum_evaluable_target_individuals": 5,
+    "future_estimand_if_gate_passes": [
+      "shared-group gain: other-individual past conditional 3D profile versus the same other-individual marginal vertical profile",
+      "personal increment: focal-individual past conditional 3D profile versus other-individual past conditional profile",
+      "total personal-history gain: focal-individual conditional profile versus other-individual marginal profile"
+    ],
+    "additive_identity": "total_gain = shared_group_gain + personal_increment on the same scored target fixes"
+  },
+  "claim_boundary": [
+    "Lane A can establish collective-level spatial persistence only descriptively; it cannot by itself identify social or cognitive memory because stable landscape structure is an alternative.",
+    "Lane B can establish a shared group template plus a personal residual if both predictive components are positive, but must not be relabelled colony memory.",
+    "No outcome threshold, lag, grid, support rule, panel universe, or membership rule may be changed after this preflight result is opened."
+  ]
+}
