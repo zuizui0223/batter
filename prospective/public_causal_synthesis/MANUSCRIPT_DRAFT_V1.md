@@ -738,35 +738,21 @@ Full legends are in `prospective/public_causal_synthesis/FIGURE_CAPTIONS_V1.md`.
 
 # References — working list
 
-- Aharon G, Sadot M, Yovel Y. 2017. Bats use path integration rather than acoustic flow to assess flight distance along flyways. *Current Biology* 27:3650–3657.e3. DOI: `10.1016/j.cub.2017.10.012`.
-
-- de Bivort BL. 2025. The developmental origins of behavioral individuality. *Annual Review of Cell and Developmental Biology* 41:331–352. DOI: `10.1146/annurev-cellbio-101323-025423`.
-
-- Diebold CA, Lawlor J, Allen K, Capshaw G, Humphrey MG, Cintron-De Leon D, Kuchibhotla KV, Moss CF. 2024. Rapid sensorimotor adaptation to auditory midbrain silencing in free-flying bats. *Current Biology* 34:5507–5517.e3. DOI: `10.1016/j.cub.2024.10.045`.
-
-- Elie JE, Muroy SE, Genzel D, Na T, Beyer LA, Swiderski DL, Raphael Y, Yartsev MM. 2024. Role of auditory feedback for vocal production learning in the Egyptian fruit bat. *Current Biology* 34:4062–4070.e7. DOI: `10.1016/j.cub.2024.07.053`.
-
-- Eveland KE, Finger NM, Jaroszewski JM, Bucio L, Moss CF. 2026. Looking ahead: echolocation and flight behaviors of two fruit bat species navigating a corridor. *Journal of Comparative Physiology A*. DOI: `10.1007/s00359-026-01818-0`.
-
-- Foskolos I, Bjerre Pedersen M, Beedholm K, Uebel AS, Macaulay J, Stidsholt L, Brinkløv S, Madsen PT. 2022. Echolocating Daubenton's bats are resilient to broadband, ultrasonic masking noise during active target approaches. *Journal of Experimental Biology* 225(3):jeb242957. DOI: `10.1242/jeb.242957`.
-
-- Gallagher JH et al. 2026. Born This Way: Individuality Is Seeded Before Birth and Robust to Ecological Stress. *Ecology Letters* 29:e70454. DOI: `10.1111/ele.70454`.
-
-- Harten L, Katz A, Goldshtein A, Handel M, Yovel Y. 2020. The ontogeny of a mammalian cognitive map in the real world. *Science* 369:194–197. DOI: `10.1126/science.aay3354`.
-
-- Houslay TM et al. 2018. Testing the stability of behavioural coping style across stress contexts in the Trinidadian guppy. *Functional Ecology* 32:424–438. DOI: `10.1111/1365-2435.12981`.
-
-- Mathejczyk TF et al. 2026. Individuality across environmental context in *Drosophila melanogaster*. *eLife* 13:RP98171. DOI: `10.7554/eLife.98171`.
-
-- Mitchell DJ, Houslay TM. 2021. Context-dependent trait covariances: how plasticity shapes behavioral syndromes. *Behavioral Ecology*. DOI: `10.1093/beheco/araa115`.
-
-- Rachum A, Harten LM, Assa R, Goldshtein A, Chen X, Gonceer N, Yovel Y. 2025. Early experience affects foraging behavior of wild fruit bats more than their original behavioral predispositions. *eLife* 14:RP103220. DOI: `10.7554/eLife.103220`.
-
-- Taub M, Yovel Y. 2020. Segregating signal from noise through movement in echolocating bats. *Scientific Reports* 10:382. DOI: `10.1038/s41598-019-57346-2`.
-
-- Teshima Y, Genda S, Aoki Y, Fujisawa M, Hiryu S, Fujii K. 2026. Evidence for latent regularities in echolocation-guided flight behaviour of bats. *Proceedings of the Royal Society B* 293:20261463. DOI: `10.1098/rspb.2026.1463`.
-
-- White SJ, Pascall DJ, Wilson AJ. 2020. Towards a comparative approach to the structure of animal personality variation. *Behavioral Ecology* 31:340–351. DOI: `10.1093/beheco/arz198`.
+- Aharon G, Sadot M, Yovel Y. 2017. Bats use path integration rather than acoustic flow to assess flight distance along flyways. *Current Biology* 27:3650–3657.e3. DOI: 10.1016/j.cub.2017.10.012.
+- de Bivort BL. 2025. The developmental origins of behavioral individuality. *Annual Review of Cell and Developmental Biology* 41:331–352. DOI: 10.1146/annurev-cellbio-101323-025423.
+- Diebold CA, Lawlor J, Allen K, Capshaw G, Humphrey MG, Cintron-De Leon D, Kuchibhotla KV, Moss CF. 2024. Rapid sensorimotor adaptation to auditory midbrain silencing in free-flying bats. *Current Biology* 34:5507–5517.e3. DOI: 10.1016/j.cub.2024.10.045.
+- Elie JE, Muroy SE, Genzel D, Na T, Beyer LA, Swiderski DL, Raphael Y, Yartsev MM. 2024. Role of auditory feedback for vocal production learning in the Egyptian fruit bat. *Current Biology* 34:4062–4070.e7. DOI: 10.1016/j.cub.2024.07.053.
+- Eveland KE, Finger NM, Jaroszewski JM, Bucio L, Moss CF. 2026. Looking ahead: echolocation and flight behaviors of two fruit bat species navigating a corridor. *Journal of Comparative Physiology A*. DOI: 10.1007/s00359-026-01818-0.
+- Foskolos I, Bjerre Pedersen M, Beedholm K, Uebel AS, Macaulay J, Stidsholt L, Brinkløv S, Madsen PT. 2022. Echolocating Daubenton's bats are resilient to broadband, ultrasonic masking noise during active target approaches. *Journal of Experimental Biology* 225:jeb242957. DOI: 10.1242/jeb.242957.
+- Gallagher JH, Perkes AD, Chang C-C, Chirila ES, Kacevas K, Laskowski KL. 2026. Born This Way: Individuality Is Seeded Before Birth and Robust to Ecological Stress. *Ecology Letters* 29:e70454. DOI: 10.1111/ele.70454.
+- Harten L, Katz A, Goldshtein A, Handel M, Yovel Y. 2020. The ontogeny of a mammalian cognitive map in the real world. *Science* 369:194–197. DOI: 10.1126/science.aay3354.
+- Houslay TM, Vierbuchen M, Grimmer AJ, Young AJ, Wilson AJ. 2018. Testing the stability of behavioural coping style across stress contexts in the Trinidadian guppy. *Functional Ecology* 32:424–438. DOI: 10.1111/1365-2435.12981.
+- Mathejczyk TF, Knief C, Haidar MA, Freitag F, McClary T, Wernet MF, Linneweber GA. 2026. Individuality across environmental context in *Drosophila melanogaster*. *eLife* 13:RP98171. DOI: 10.7554/eLife.98171.
+- Mitchell DJ, Houslay TM. 2021. Context-dependent trait covariances: how plasticity shapes behavioral syndromes. *Behavioral Ecology* 32:25–29. DOI: 10.1093/beheco/araa115.
+- Rachum A, Harten LM, Assa R, Goldshtein A, Chen X, Gonceer N, Yovel Y. 2025. Early experience affects foraging behavior of wild fruit bats more than their original behavioral predispositions. *eLife* 14:RP103220. DOI: 10.7554/eLife.103220.
+- Taub M, Yovel Y. 2020. Segregating signal from noise through movement in echolocating bats. *Scientific Reports* 10:382. DOI: 10.1038/s41598-019-57346-2.
+- Teshima Y, Genda S, Aoki Y, Fujisawa M, Hiryu S, Fujii K. 2026. Evidence for latent regularities in echolocation-guided flight behaviour of bats. *Proceedings of the Royal Society B* 293:20261463. DOI: 10.1098/rspb.2026.1463.
+- White SJ, Pascall DJ, Wilson AJ. 2020. Towards a comparative approach to the structure of animal personality variation. *Behavioral Ecology* 31:340–351. DOI: 10.1093/beheco/arz198.
 
 ## Disclosure note — draft
 
