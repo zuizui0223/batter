@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-collective-personal-3d-decomposition-v1",
+  "authoritative_execution": {
+    "workflow_run_id": 37614056083,
+    "head_sha": "cbd7bcfb2db6abee7107f44dbb94512493d99ccd",
+    "artifact_id": 11479333959,
+    "artifact_zip_sha256": "73b9a39cdbd1b40544556c7372f10e4dc5f82d9b0dfcf53e749ddec54567f6b0"
+  },
+  "lane_A": {
+    "phyllostomus_2022": {
+      "pairs": 53,
+      "observed_ozxy": 0.8239988389758166,
+      "null_mean": 0.8616249899894827,
+      "excess": -0.037626151013666065,
+      "p": 0.996,
+      "supported": false
+    },
+    "phyllostomus_2016": {
+      "pairs": 16,
+      "observed_ozxy": 0.7792876341264954,
+      "null_mean": 0.6315925268913226,
+      "excess": 0.14769510723517276,
+      "p": 0.0005,
+      "supported": true
+    }
+  },
+  "lane_B": {
+    "hypsignathus": {
+      "targets": 71,
+      "individuals": 17,
+      "classification": "personal_only",
+      "shared_group_gain": {
+        "mean": -0.34258302602641577,
+        "ci95": [
+          -0.4711943964777143,
+          -0.21214898601978435
+        ]
+      },
+      "personal_increment": {
+        "mean": 0.4255976247298557,
+        "ci95": [
+          0.30948037220271296,
+          0.5399695493839571
+        ]
+      },
+      "total_gain": {
+        "mean": 0.08301459870343995,
+        "ci95": [
+          0.004693600729508623,
+          0.1691944060099592
+        ]
+      }
+    },
+    "phyllostomus_2022": {
+      "targets": 66,
+      "individuals": 18,
+      "classification": "personal_only",
+      "shared_group_gain": {
+        "mean": -0.5961078989112516,
+        "ci95": [
+          -0.7490920569957704,
+          -0.4519574536383742
+        ]
+      },
+      "personal_increment": {
+        "mean": 0.24589672576323263,
+        "ci95": [
+          0.10102420011885031,
+          0.4243098784843048
+        ]
+      },
+      "total_gain": {
+        "mean": -0.350211173148019,
+        "ci95": [
+          -0.5048589211748551,
+          -0.20500362052960772
+        ]
+      }
+    },
+    "phyllostomus_2023": {
+      "targets": 8,
+      "individuals": 6,
+      "classification": "personal_only",
+      "shared_group_gain": {
+        "mean": -0.4626143858575655,
+        "ci95": [
+          -0.5552463581614857,
+          -0.3764419708672784
+        ]
+      },
+      "personal_increment": {
+        "mean": 0.36454191658783325,
+        "ci95": [
+          0.27630438085651654,
+          0.4530561127103677
+        ]
+      },
+      "total_gain": {
+        "mean": -0.09807246926973219,
+        "ci95": [
+          -0.15094717507973351,
+          -0.05040435117662569
+        ]
+      }
+    }
+  }
+}
