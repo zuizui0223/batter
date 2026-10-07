@@ -1,5 +1,76 @@
 # Behavioral Ecology submission readiness v1
 
+## Current Behavioral Ecology format audit — verified 2026-10-07
+
+Official author guidelines rechecked against the current Oxford Academic instructions.
+
+### Complete Anonymous Text
+
+**PASS**
+
+Required order:
+1. Lay Summary;
+2. title / abstract / keywords;
+3. main text;
+4. references;
+5. figure legends;
+6. figures/tables as submitted.
+
+Current assembled file:
+`COMPLETE_ANONYMOUS_TEXT_BEHAVIORAL_ECOLOGY_V1.md`.
+
+Current checks:
+- begins with Lay Summary;
+- title length = **77 characters** (<100 recommended maximum);
+- abstract = **199 words** (<250);
+- Lay Summary = **71 words** (<75);
+- first 140 Lay-Summary characters communicate the central result;
+- no author names / affiliations / identified author repository path;
+- continuous evidence-tier guard passes.
+
+### Generative-AI disclosure
+
+**PASS AFTER 2026-10-07 UPDATE**
+
+Current OUP / Behavioral Ecology policy requires disclosure:
+- in the cover letter;
+- in the manuscript Methods or Acknowledgements;
+- including tool name/version, use, and human review/accountability.
+
+Current package now states:
+- OpenAI ChatGPT;
+- GPT-5.6 Sol during final synthesis;
+- September–October 2026;
+- literature triage, code review/drafting, provenance organization, figure-code drafting, substantial editing;
+- human verification and scientific responsibility;
+- no creation/alteration of primary research data.
+
+### Data/archive policy
+
+**STAGING ZIP PASS; PERMANENT REPOSITORY STILL REQUIRED**
+
+Behavioral Ecology requires:
+- a public/review repository link at submission;
+- anonymized repository/files during double-anonymized review;
+- a permanent repository/DOI for publication;
+- GitHub alone is not accepted as the final data repository.
+
+The current GitHub Actions artifact is therefore a **sanitized staging archive**, not the final journal-compliant repository.
+
+Next required action:
+1. upload the sanitized review ZIP to an anonymizable repository such as OSF, Zenodo, Figshare, or Dataverse;
+2. obtain an anonymous review link where supported;
+3. replace `[ANONYMIZED_REVIEW_ARCHIVE_URL]` in the Complete Anonymous Text;
+4. ensure the accepted/final archive has a permanent DOI;
+5. cite that archive in the final References and Data Availability statement.
+
+Because the study reuses third-party public data, the archive should include:
+- source-data manifest and permanent source citations;
+- all author-generated contracts/code/result receipts;
+- any third-party raw data only where redistribution is permitted;
+- README instructions sufficient to reproduce retrieval/reanalysis.
+
+
 Date checked: 2026-10-07.
 
 ## Current manuscript state
@@ -241,7 +312,7 @@ PASS:
 
 ### Must resolve before upload
 
-1. **Anonymous hosting URL for the already-built review archive**
+1. **Anonymous journal-review repository link plus a path to a permanent DOI archive (GitHub artifact alone is not sufficient)**
 2. **Author/affiliation/corresponding-author metadata**
 3. **Funding statement**
 4. **CRediT roles**
