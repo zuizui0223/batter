@@ -1,0 +1,46 @@
+name: behavioral-ecology-complete-anonymous-docx-v1
+
+on:
+  push:
+    branches:
+      - prospective/public-causal-synthesis-v1
+    paths:
+      - "prospective/public_causal_synthesis/COMPLETE_ANONYMOUS_TEXT_V1.md"
+      - "prospective/public_causal_synthesis/build_complete_anonymous_docx_v1.py"
+      - "figures/public_causal/**"
+      - ".github/workflows/behavioral-ecology-complete-anonymous-docx-v1.yml"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: prospective/public-causal-synthesis-v1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install DOCX dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc libreoffice
+          python -m pip install python-docx cairosvg
+      - name: Build Complete Anonymous Text DOCX
+        run: python prospective/public_causal_synthesis/build_complete_anonymous_docx_v1.py
+      - name: Convert DOCX to PDF for workflow-level QA
+        run: |
+          mkdir -p submission/public_causal/docx_qa
+          HOME="$RUNNER_TEMP/lohome" libreoffice --headless \
+            --convert-to pdf \
+            --outdir submission/public_causal/docx_qa \
+            submission/public_causal/COMPLETE_ANONYMOUS_TEXT_BEHAVIORAL_ECOLOGY_V1.docx
+          test -s submission/public_causal/docx_qa/COMPLETE_ANONYMOUS_TEXT_BEHAVIORAL_ECOLOGY_V1.pdf
+      - uses: actions/upload-artifact@v4
+        with:
+          name: behavioral-ecology-complete-anonymous-docx-v1
+          path: |
+            submission/public_causal/COMPLETE_ANONYMOUS_TEXT_BEHAVIORAL_ECOLOGY_V1.docx
+            submission/public_causal/COMPLETE_ANONYMOUS_TEXT_BEHAVIORAL_ECOLOGY_V1_RECEIPT.json
+            submission/public_causal/docx_qa/COMPLETE_ANONYMOUS_TEXT_BEHAVIORAL_ECOLOGY_V1.pdf
+          if-no-files-found: error
