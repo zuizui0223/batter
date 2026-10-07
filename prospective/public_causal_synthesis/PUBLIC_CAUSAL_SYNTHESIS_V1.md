@@ -157,9 +157,9 @@ The safe synthesis is state recalibration, not confirmed convergence or erasure.
 
 ---
 
-# 2. Maintenance: controlled perturbations repeatedly fail to erase individual organization
+# 2. Maintenance and portability: controlled manipulations repeatedly fail to erase individual organization
 
-Three independent public experimental systems now converge.
+Four independent public experimental systems now converge.
 
 ## Pipistrellus kuhlii — external sensory masker
 
@@ -221,11 +221,39 @@ Interpretation:
 
 > reversible central auditory perturbation altered common vocal expression without erasing all individual-specific multivariate organization.
 
+## Pipistrellus kuhlii — path-integration / navigation-context manipulation
+
+Independent public source:
+Aharon, Sadot & Yovel 2017.
+
+Frozen Figure-1 bilateral turning-location endpoint:
+- 4 bats;
+- 3 source-defined navigation conditions;
+- 10–15 valid trials per bat × condition;
+- no zero-sentinel ambiguity.
+
+After condition-level mean removal and leave-one-condition-out identity testing:
+
+- K = **+3.695264**;
+- **4/4 bats positive**;
+- all 3 condition-level mean advantages positive;
+- exact cross-condition null = **576** mappings;
+- exact p = **0.00347222**;
+- observed biological mapping rank = **2/576**.
+
+Leave-one-bat-out K remains positive regardless of the deleted bat.
+
+Interpretation:
+
+> **individual turning-location organization remains identifiable across experimentally altered navigation conditions after common condition shifts are removed.**
+
+This adds a nonredundant path-integration / navigation-context manipulation to the perturbation evidence.
+
 ---
 
 # 3. What the perturbation convergence means
 
-The three systems differ in:
+The four systems differ in:
 
 - species;
 - laboratories;
@@ -370,10 +398,11 @@ Key asymmetry:
 - broad randomized enrichment does not confirm increased differentiation;
 - descriptively, later state is best approximated by personal baseline plus a shared environmental shift.
 
-### Maintenance
+### Maintenance / portability under manipulated current context
 - external sensory perturbation: retained individuality;
 - graded masking: retained individuality;
-- central auditory perturbation: retained individuality.
+- central auditory perturbation: retained individuality;
+- navigation-context manipulation: retained bilateral turning organization.
 
 ### Expression
 - current conditions alter movement/vocal behavior strongly;
@@ -435,6 +464,7 @@ Supported:
 - history-specific refinement;
 - low-dimensional cross-task portability;
 - multiple controlled perturbation non-erasure results;
+- independent navigation-context portability in Aharon Figure 1;
 - cross-species generality for a coarse policy component;
 - context specificity of detailed realization.
 
@@ -456,15 +486,19 @@ Simple environmental richness alone is not enough under the tested randomized en
 
 # 10. Next public-data priority
 
-Do not prioritize another repeatability dataset.
+Do not prioritize another repeatability or current-context perturbation dataset.
 
-A new public source is valuable only if it adds one of:
+Aharon has now supplied the independent navigation-information manipulation and is closed for new confirmatory identity searches.
 
-1. randomized/controlled formation history;
+The remaining public-data priority is specifically **formation**.
+
+A new source is worth opening only if it adds one of:
+
+1. randomized/controlled developmental or learning history with individual-level pre/post data;
 2. reversible biomechanics within identified individuals;
-3. independent prospective navigation-information manipulation;
-4. untreated response layer not previously opened.
+3. a treatment that changes the history available for policy formation rather than merely changing current expression;
+4. an independently specified solution-opportunity manipulation.
 
-Aharon et al. 2017 remains useful if its public matrices permit a genuinely nonredundant navigation-information test.
+The 2024 fruit-bat auditory-feedback manipulation is worth considering only if it adds a distinct learning/formation axis.
 
-The 2024 fruit-bat auditory-feedback manipulation is another possible formation/learning source, but it should be used only if it addresses a distinct mechanism rather than adding another generic perturbation result.
+Another current-context perturbation showing non-erasure would add little to the main bottleneck.
