@@ -78,6 +78,63 @@ manuscript = re.sub(
     manuscript,
 )
 
+def normalize_submission_markdown(text: str) -> str:
+    """Normalize Markdown for stable Pandoc -> DOCX conversion.
+
+    This changes presentation only:
+    - simple equation blocks become plain submission-safe text;
+    - common ASCII/placeholder math symbols become readable Unicode;
+    - list blocks get explicit blank-line boundaries;
+    - reference entries become hanging-indent-ready paragraphs rather than bullets.
+    """
+    # Simple manuscript equation blocks use [ / ] delimiters rather than full LaTeX.
+    text = re.sub(
+        r"\n\[\n([^\n]+)\n\]\n",
+        lambda m: "\n\n" + m.group(1).strip() + "\n\n",
+        text,
+    )
+
+    # Submission-safe plain mathematical notation.
+    text = re.sub(r"([A-Za-z])_\{([^}]+)\}", r"\1(\2)", text)
+    text = text.replace("^circ", "°")
+    text = text.replace("<=", "≤").replace(">=", "≥")
+    text = re.sub(r"\bP\s+le\s+", "P ≤ ", text)
+    text = text.replace("(4!)^2", "(4!)²")
+    text = re.sub(r"\bD>0\b", "D > 0", text)
+
+    lines = text.splitlines()
+    out_lines = []
+    in_references = False
+
+    def is_list_item(line: str) -> bool:
+        return bool(re.match(r"^\s*-\s+\S", line))
+
+    for line in lines:
+        stripped=line.strip()
+
+        if stripped == "# References":
+            in_references=True
+        elif in_references and stripped.startswith("# ") and stripped != "# References":
+            in_references=False
+
+        # References are styled as hanging paragraphs in the DOCX builder.
+        if in_references and is_list_item(line):
+            line=re.sub(r"^\s*-\s+", "", line, count=1)
+            stripped=line.strip()
+
+        current_list=is_list_item(line) and not in_references
+        previous_list=bool(out_lines and is_list_item(out_lines[-1]))
+
+        if current_list and out_lines and out_lines[-1].strip() and not previous_list:
+            out_lines.append("")
+        elif (not current_list) and previous_list and stripped:
+            out_lines.append("")
+
+        out_lines.append(line)
+
+    return "\n".join(out_lines).strip() + "\n"
+
+
 captions = re.sub(r"^# Figure captions v1\s*", "", captions).strip()
 
 out = (
@@ -90,5 +147,6 @@ out = (
     + "\n"
 )
 
+out = normalize_submission_markdown(out)
 OUT.write_text(out, encoding="utf-8")
 print(f"wrote {OUT} ({len(out)} chars)")
