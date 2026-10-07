@@ -1,8 +1,9 @@
+# Lay Summary
+
+Animals can keep recognizable individual behavioral patterns even when their surroundings change. Across several public bat experiments, sensory and navigation disturbances changed behavior without erasing who was who. Developmental treatments also changed behavior, but did not simply make individuals more or less different from one another. These results suggest that how individuality is maintained, expressed, and formed are distinct biological questions rather than one property that changes uniformly with the environment.
+
 # Individual organization remains detectable across acute perturbations in bats
 
-**Article type:** Research / comparative public-data reanalysis  
-**Working target:** Behavioral Ecology / Proceedings of the Royal Society B  
-**Status:** full manuscript draft v1  
 ## Abstract
 
 Behavioral individuality is commonly defined by consistent differences among individuals, but consistency alone does not distinguish persistent individual organization from the context-specific behavior through which it is expressed. We reanalysed independent public bat experiments using source-level endpoints and null models frozen before numerical outcome opening. Across four controlled current-context manipulations—external sensory masking, graded acoustic masking, reversible auditory-midbrain perturbation, and altered navigation conditions—the true same-individual correspondence remained supported after shared condition shifts were removed. Cross-task analyses further showed that coarse individual movement organization could transfer where detailed realized trajectory geometry did not. Developmental evidence showed a different pattern. In two randomized bat experiments, environmental enrichment and access to auditory feedback altered behavioral phenotype in the source studies but did not produce a supported change in the total amount of multivariate individual differentiation under frozen reanalyses. A frozen laboratory-to-wild carrier bridge also failed, showing that persistent individual organization cannot be assumed to imply wild spatial niche differentiation. Together, these results support a layered view of behavioral individuality in which maintenance, developmental allocation, context-specific expression, and ecological consequence are empirically distinct. The strongest remaining uncertainty is formation: what determines which behavioral dimensions and historical trajectories become individualized for particular animals?
@@ -735,7 +736,7 @@ Full legends are in `prospective/public_causal_synthesis/FIGURE_CAPTIONS_V1.md`.
 
 ---
 
-# References — working list
+# References
 
 - Aharon G, Sadot M, Yovel Y. 2017a. Bats use path integration rather than acoustic flow to assess flight distance along flyways. *Current Biology* 27:3650–3657.e3. DOI: `10.1016/j.cub.2017.10.012`.
 
@@ -788,3 +789,25 @@ Full legends are in `prospective/public_causal_synthesis/FIGURE_CAPTIONS_V1.md`.
 - Teshima Y, Genda S, Aoki Y, Fujisawa M, Hiryu S, Fujii K. 2026. Evidence for latent regularities in echolocation-guided flight behaviour of bats. *Proceedings of the Royal Society B* 293:20261463. DOI: `10.1098/rspb.2026.1463`.
 
 - White SJ, Pascall DJ, Wilson AJ. 2020. Towards a comparative approach to the structure of animal personality variation. *Behavioral Ecology* 31:340–351. DOI: `10.1093/beheco/arz198`.
+
+# Figure legends
+
+## Figure 1. Four empirical layers of behavioral individuality
+
+The public-data programme separates four questions that are often collapsed into one concept of behavioral individuality: formation/history, maintenance under acute perturbation, context-specific expression/portability, and wild ecological consequence. Formation/history contains a failed monotonic first-flight primary, a supported predeclared late-history secondary, and two randomized developmental manipulations that did not support simple changes in total individualization. Acute-maintenance evidence is positive across four independent controlled bat systems. Portability analyses show that a coarse movement representation transfers more broadly than detailed realized geometry. The frozen wild scalar carrier gate fails at 2/4 panels, and subsequent H/V field analyses remain exploratory. Dashed arrows indicate a conceptual hierarchy only; the datasets do not identify one universal latent state across species or behavioral domains.
+
+## Figure 2A. A common monotonic build-up of personal-history advantage was not supported
+
+Individual Spearman slopes B_i relating prior valid-day count to own-history predictive advantage across target days 3–20 in 14 juvenile Egyptian fruit bats from the structurally eligible Harten et al. first-flight cohort. Eight of 14 slopes were positive, below the frozen support requirement of at least 10/14. Although the equal-individual programme statistic was positive (B=+0.16733) and exceeded its whole-history identity-permutation null (P=0.0102), the predeclared consistency gate failed; the primary verdict was FAIL_PRIMARY_FORMATION_RULE. A separate predeclared late-history secondary was strongly supported (L=+112.5554, P=0.0001, 12/14 positive), but it does not alter the primary verdict.
+
+## Figure 2B. Randomized developmental manipulations did not show a simple effect on total individualization
+
+Summary of two independent randomized developmental experiments. In Rachum et al., residual three-trait behavioral-change dispersion was larger under enrichment (V_enriched=2.656639) than impoverishment (V_impoverished=1.921940), but the frozen origin-stratified randomization test did not support increased individualization (D=+0.734699, P=0.167785). In Elie et al., whole-repertoire adult vocal individualization did not differ between hearing and deafened developmental treatments (V_hearing=15.766760, V_deaf=17.192257, D=-1.425497, exact P=0.716667). The two D values derive from different frozen representations and are not on a common effect-size scale.
+
+## Figure 3. Same-individual correspondence across controlled acute perturbations
+
+Positive-individual fraction for four independent current-context perturbation experiments. Marker size represents biological sample size, not statistical weight. Pipistrellus kuhlii retained movement-bias identity across external sensory masking (5/6 positive; exact P=0.04028). Myotis daubentonii retained flight-time organization across a five-level masking gradient (3/3 positive; true mapping uniquely most extreme among 1,296 assignments). Eptesicus fuscus retained four-dimensional vocal organization across reversible auditory-midbrain perturbation (4/4 positive; true mapping rank 1/24). In the Aharon et al. P. kuhlii navigation experiment, bilateral turning-location organization remained identifiable across three source-defined conditions (4/4 positive; true mapping rank 2/576). Raw programme statistics are deliberately not plotted on a shared axis because the endpoints and null architectures differ. Exact permutation results quantify within-experiment identity correspondence and should not be interpreted as precise population-prevalence estimates.
+
+## Figure 4. Coarse personal organization, detailed realization, and wild ecological consequence are distinct empirical objects
+
+Status summary across the portability-to-ecology chain. In Rhinolophus nippon, the fixed transparent FlightIntensity/ManeuveringExtent (I/M) representation retained cross-context individual identity (K=+0.55428, 5/5 positive, P=0.0001). The same fixed I/M representation recovered persistent organization in an independent Carollia perspicillata cohort (K=+0.34758, P=0.0007), whereas a fixed detailed scale-free route-geometry representation did not (K=-0.0350, P=0.2144). In the wild field programme, the frozen scalar carrier gate achieved only 2/4 supporting panels, below the prespecified 3/4 threshold. H/V component analyses were opened after that failure and are shown only as exploratory localization. The figure therefore separates portable coarse organization from context-specific detailed realization and from unconfirmed wild spatial-niche consequences.
