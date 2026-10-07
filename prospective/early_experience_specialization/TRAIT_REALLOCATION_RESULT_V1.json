@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "primary_D": 0.7346990962559017,
+  "sum_trait_D": 0.7346990962559018,
+  "positive_sum": 0.7346990962559018,
+  "negative_sum": 0.0,
+  "absolute_sum": 0.7346990962559018,
+  "cancellation_ratio": 0.0,
+  "traits": [
+    {
+      "trait": "Boldness",
+      "V_enriched": 1.1368031700649008,
+      "V_impoverished": 0.6710107735680266,
+      "D": 0.4657923964968742,
+      "sign": "E>I"
+    },
+    {
+      "trait": "Exploration",
+      "V_enriched": 0.544039679133152,
+      "V_impoverished": 0.29320281129576065,
+      "D": 0.25083686783739134,
+      "sign": "E>I"
+    },
+    {
+      "trait": "Activity",
+      "V_enriched": 0.9757963187694157,
+      "V_impoverished": 0.9577264868477795,
+      "D": 0.018069831921636248,
+      "sign": "E>I"
+    }
+  ],
+  "inferential_status": "DESCRIPTIVE_ONLY_POST_PRIMARY"
+}
