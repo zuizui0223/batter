@@ -28,29 +28,17 @@ Therefore formation and maintenance should not be treated as the same process.
 
 A useful biological architecture is:
 
-[
-	heta_i(t)
-=
-	heta_i^{0}
-+
-h_i(t)
-]
+`personal state at time t = predispositional contribution + identity-specific history`
 
 and
 
-[
-x_{i,e,t}
-=
-mathcal{R}_e!left[	heta_i(t)ight]
-+
-epsilon_{i,e,t},
-]
+`observed behavior = context-specific expression of that personal state + bout-level realization`
 
 where:
-- (	heta_i^0) = persistent intrinsic/predispositional contribution;
-- (h_i(t)) = identity-specific historical refinement;
-- (mathcal{R}_e) = context-dependent expression map;
-- (epsilon) = unresolved bout-level realization.
+- predisposition is the persistent intrinsic component not yet mechanistically identified;
+- identity-specific history is the part refined through an individual's own experience;
+- context-specific expression maps the persistent state into the current task/environment;
+- bout-level realization captures unresolved short-timescale variation.
 
 The current evidence constrains each part differently.
 
@@ -190,7 +178,7 @@ Frozen whole-repertoire individualization primary:
 - treatment-blind scaling across the ten bat centroids;
 - shared sex × treatment centroid removed;
 - exact sex-conditioned treatment randomization:
-  (inom{6}{3}inom{4}{2}=120) assignments;
+  (C(6,3) × C(4,2) = 120) assignments;
 - two-sided test fixed before acoustic values were opened.
 
 Result:
@@ -253,14 +241,7 @@ Thus the public data suggest that developmental experience can alter the **geome
 
 Therefore the strongest bounded statement is:
 
-[
-oxed{
-	ext{developmental environment can change phenotype and the structure of individual differences}
-
-otequiv
-	ext{simple change in total individuality}
-}
-]
+> **Developmental environment can change phenotype and the structure of individual differences without implying a simple change in the total amount of individuality.**
 
 The decomposition evidence is descriptive, not feature-wise confirmatory.
 
@@ -270,60 +251,6 @@ The juvenile own-history result still shows strong identity-specific refinement.
 
 Instead it implies that formation is increasingly a question of **which dimensions and trajectories become individualized**, not only how much total between-individual variance exists.
 
-
-## Randomized developmental auditory-feedback test
-
-Independent public experiment:
-Elie et al. 2024, Egyptian fruit bats.
-
-Design:
-- 10 pups randomly assigned shortly after birth;
-- hearing/saline = 5;
-- deafened/kanamycin = 5;
-- each treatment = 3 females + 2 males;
-- adult phenotype recorded 3–4 years later.
-
-Frozen whole-repertoire representation:
-- 28,091 adult vocalizations;
-- 28 source acoustic features;
-- all 10 bats;
-- bat is the biological unit;
-- smallest finite support = 1,037 calls per bat × feature.
-
-After treatment-blind feature scaling and removal of sex × treatment common state:
-
-- V_hearing = **15.766760**;
-- V_deaf = **17.192257**;
-- D = **-1.425497**;
-- exact sex-conditioned randomization space = **120**;
-- extreme |D| assignments = **86**;
-- exact two-sided p = **0.716667**.
-
-Verdict:
-
-**NO_DIFFERENCE_IN_AMOUNT**
-
-The source experiment causally establishes that auditory feedback is needed for normal learning of subsets of the vocal repertoire.
-
-Yet the frozen individualization analysis does not show that feedback changed the **total amount of adult between-individual vocal differentiation**.
-
-Thus a second independent randomized developmental experiment supports:
-
-> **developmental environment can change phenotype without necessarily changing how different individuals are from one another.**
-
-The two formation experiments now converge on a causal boundary:
-
-[
-\boxed{
-\text{developmental environmental effect}
-\not\Rightarrow
-\text{change in total individualization}
-}
-]
-
-This does not mean development is irrelevant to individuality. The juvenile-history analysis shows that personal history becomes more identity-informative. It means that the amount of individuality is not a simple monotonic output of broad enrichment or access to auditory feedback.
-
----
 
 # 2. Maintenance and portability: controlled manipulations repeatedly fail to erase individual organization
 
@@ -434,14 +361,7 @@ They do **not** identify one universal latent variable.
 
 But jointly they support the bounded cross-system principle:
 
-[
-oxed{
-	ext{strong current perturbation}
-
-otRightarrow
-	ext{erasure of all individual organization}
-}
-]
+> **Strong current perturbation does not imply erasure of all individual organization.**
 
 This is stronger than ordinary repeatability.
 
@@ -533,29 +453,13 @@ Do not collapse:
 
 The old simple picture would be:
 
-[
-	ext{different environment}
-ightarrow
-	ext{different individuals}
-ightarrow
-	ext{different spatial niches}.
-]
+`different environment → different individuals → different spatial niches`
 
 The public-data evidence does not support that simple chain.
 
 A better picture is:
 
-[
-oxed{
-	ext{predisposition}
-+
-	ext{identity-specific history}
-ightarrow
-	ext{persistent personal organization}
-ightarrow
-	ext{context-specific expression}
-}
-]
+`predisposition + identity-specific history → persistent personal organization → context-specific expression`
 
 with ecological spatial consequences as a separate downstream layer.
 
