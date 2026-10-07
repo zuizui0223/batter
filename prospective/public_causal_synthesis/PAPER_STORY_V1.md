@@ -1,12 +1,12 @@
-# Paper story v1 — formation and maintenance of behavioral individuality are separable
+# Paper story v1 — behavioral individuality occupies separable causal layers
 
 ## Core biological question
 
-> **Are the processes that create behavioral individuality the same processes that maintain it when the environment changes?**
+> **Can behavioral individuality be treated as one biological quantity, or do formation, maintenance, expression and ecological consequence respond differently to environmental change?**
 
-The public-data programme now gives a clear answer:
+The public-data programme gives a clear answer:
 
-> **No. Established individual organization is repeatedly retained across strong changes in current context, while developmental manipulations can substantially alter phenotype without producing a simple, predictable change in the total amount of individuality.**
+> **They are empirically separable. Established individual correspondence repeatedly survives strong current-context perturbations; developmental manipulations alter phenotype without a simple rule for total individuality; coarse personal organization transfers more broadly than detailed realized geometry; and the laboratory-to-wild niche bridge remains unresolved.**
 
 This is the paper.
 
@@ -20,7 +20,7 @@ It is not:
 
 # One-sentence result
 
-> **Across independent bat experiments, acute sensory/navigation perturbations repeatedly preserve individual correspondence, whereas randomized developmental manipulations alter behavioral phenotype without obeying a simple rule for how much individuals differ.**
+> **Across independent bat experiments, different causal layers of individuality respond differently to perturbation: identity-bearing organization is repeatedly retained under acute context change, developmental treatment does not map simply onto total individualization, realized geometry is more labile than coarse organization, and ecological niche consequences remain a separate unresolved layer.**
 
 ---
 
@@ -202,31 +202,41 @@ Not new:
 - animal personality exists;
 - behavior is context dependent;
 - individuality can persist across contexts;
+- environmental challenge can shift mean behavior without changing individuality magnitude;
 - developmental environment can alter behavior;
 - multivariate personality covariance can change with environment.
 
-The contribution is narrower:
+Recent direct prior art includes:
+- Mathejczyk et al. 2026: individuality across environmental contexts in Drosophila;
+- Gallagher et al. 2026: ecological stress shifts behavior without changing individuality magnitude in clonal fish.
 
-> **Within one comparative bat programme, controlled experiments separate maintenance from formation: acute perturbations repeatedly preserve individual correspondence, whereas randomized developmental manipulations do not map monotonically onto the total amount of individuality.**
+The contribution is therefore narrower:
 
-A second contribution:
+> **Within one comparative bat programme, four layers that are often discussed together are empirically separated: formation, maintenance, behavioral expression and ecological consequence.**
 
-> **The biologically stable object is not necessarily the detailed expressed behavior; coarse individual organization can persist while fine realization changes.**
+The strongest bat-specific synthesis is:
+
+1. acute/current-context perturbations repeatedly preserve same-individual correspondence;
+2. randomized developmental manipulations alter phenotype without a simple effect on total individualization;
+3. coarse personal organization transfers more broadly than detailed realized geometry;
+4. the laboratory-to-wild niche bridge fails its frozen confirmatory gate.
+
+This is a comparative causal decomposition, not a universal theory of personality.
 
 ---
 
 # Strongest title candidates
 
-1. **Formation and maintenance of behavioral individuality are separable in bats**
-2. **Behavioral individuality persists through perturbation without a simple developmental variance rule**
-3. **Environmental change rewrites behavioral expression more readily than individual organization**
-4. **Persistent individual organization survives sensory and navigational perturbation in bats**
-5. **Development rewrites phenotype while current perturbation spares individual organization**
+1. **Behavioral individuality occupies separable causal layers in bats**
+2. **Formation, maintenance and expression of behavioral individuality are separable in bats**
+3. **Persistent individual organization and context-specific expression are distinct in bats**
+4. **Acute perturbation preserves identity while development rewrites phenotype in bats**
+5. **From personal organization to ecological expression: separable layers of bat individuality**
 
 Default:
-**Formation and maintenance of behavioral individuality are separable in bats**
+**Behavioral individuality occupies separable causal layers in bats**
 
-It states the causal distinction without overclaiming universality.
+It is narrower than claiming a new universal principle and better matches the actual evidence architecture.
 
 ---
 
@@ -387,20 +397,28 @@ It may not claim:
 
 # Current journal-level assessment
 
-The story is biologically coherent enough for a standalone synthesis/reanalysis paper.
+The story is biologically coherent enough for a standalone synthesis/reanalysis paper, but the 2026 prior art lowers the ceiling for a broad "new principle" claim.
 
-Its strength:
-- multiple independent controlled datasets;
+Strengths:
+- multiple independent controlled bat datasets;
 - prospective/frozen re-analysis contracts;
 - positive and negative results retained;
+- randomized developmental manipulations included;
 - explicit failed wild bridge;
-- causal-layer separation.
+- clear separation of causal layers.
 
-Its weakness:
-- heterogeneous species/endpoints;
+Weaknesses:
+- heterogeneous species and endpoints;
 - several small biological-n experiments;
-- much of the novelty is synthesis rather than one decisive large experiment;
-- cross-context persistence itself is not novel.
+- much of the novelty is comparative synthesis rather than one decisive experiment;
+- cross-context persistence is already directly demonstrated elsewhere;
+- mean-shift-without-individuality-change is also now established elsewhere.
 
 Therefore the paper should be sold on:
-**causal separation of layers**, not universality or first discovery of personality persistence.
+
+> **a bat-specific multi-layer causal decomposition with unusually strict evidence provenance**
+
+rather than:
+- a universal behavioral law;
+- first demonstration of context-resistant individuality;
+- first demonstration that environmental effects need not change individuality amount.
