@@ -1,8 +1,8 @@
-# Supplementary Material v1
+# Supplementary Material
 
-This file is the complete content source for the single Supplementary Material PDF intended for Behavioral Ecology.
+**Individual organization remains detectable across acute perturbations in bats**
 
-Do not include executable code here. Code and result receipts belong in the anonymized analysis archive.
+This supplement contains source/provenance tables, frozen inference definitions, descriptive developmental decompositions, exact-null resolution context, and the evidence-tier rules used for the comparative synthesis.
 
 ---
 
