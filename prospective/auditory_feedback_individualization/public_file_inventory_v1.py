@@ -61,7 +61,7 @@ def main():
             try:
                 url,data,items=fetch_endpoint(base,folder)
                 attempts.append({"url":url,"ok":True,"count":len(items)})
-                if items and selected is None:
+                if items and (selected is None or len(items)>len(selected["items"])):
                     selected={"url":url,"items":items,"envelope_keys":sorted(data.keys()) if isinstance(data,dict) else []}
             except Exception as e:
                 attempts.append({"url":base,"folder":folder,"ok":False,"error":repr(e)})
