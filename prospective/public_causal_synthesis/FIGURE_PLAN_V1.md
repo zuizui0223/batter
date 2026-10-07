@@ -135,9 +135,6 @@ Coarse I/M identity:
 - 5/5 positive
 - p=0.0001
 
-Held-out environment:
-- p=0.0002
-
 ### Panel B — Carollia external transfer
 
 Use two side-by-side status blocks:
