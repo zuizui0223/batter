@@ -56,6 +56,14 @@ Maintenance/portability is supported across:
 
 Formation is therefore much more weakly identified than maintenance.
 
+But the bottleneck is now narrower than "does development matter?"
+
+Development clearly changes phenotype.
+
+The unresolved issue is:
+
+> **how developmental history reorganizes the structure of individuality without a simple predictable change in its total amount.**
+
 More specifically, the unresolved formation problem is no longer simply whether environment matters. It clearly does.
 
 The unresolved issue is:
@@ -73,9 +81,12 @@ to:
 ## Public-data routes still worth opening
 
 Worthwhile:
-- a new randomized developmental/history manipulation that changes individual formation trajectories;
+- a developmental/history dataset that can test **identity redistribution across traits / call classes / strategies** under a frozen multivariate architecture;
 - reversible biomechanics with repeated identified individuals;
 - a public experiment that manipulates learning history or solution opportunity rather than current context.
+
+Low value now:
+- another treatment-versus-total-dispersion test without a new structural hypothesis.
 
 The independent navigation-information route is no longer an open priority because Aharon Figure 1 is supported and closed.
 
