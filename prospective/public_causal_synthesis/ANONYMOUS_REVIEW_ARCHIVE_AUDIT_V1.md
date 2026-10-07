@@ -6,16 +6,16 @@
 
 Workflow:
 - `public-causal-anonymous-review-archive-v1`
-- run: `37568870331`
-- artifact ID: `11460245697`
+- run: `37572360059`
+- artifact ID: `11461691263`
 
 Artifact wrapper:
-- GitHub artifact digest: `sha256:6acaef0d0c6d805938aa2964582d01709aec0cf03334936a8379efc09c512100`.
+- GitHub artifact digest: `sha256:de238f8f117634cfd0907a95ac9bf73d1889969180e02aeb97787cfdff541876`.
 
 Inner deterministic review ZIP:
 - filename: `behavioral_ecology_anonymous_review_archive_v1.zip`;
-- bytes: **2,486,086**;
-- builder SHA256: `66030317a2fbe7726eb955950040544582f7a19b39e6c8bc2d8e6d8937cf4a86`;
+- bytes: **2,486,339**;
+- builder SHA256: `00a1554fd3ea88d69b6d4ef4071157b5e76eb49683cfc5711708e13d698ea643`;
 - independently re-hashed after artifact download: **same SHA256**.
 
 ## Content audit
@@ -49,6 +49,12 @@ Scanned all text-like files and paths for:
 Result:
 
 **0 identifying hits.**
+
+The current Complete Anonymous Text inside the archive also contains the journal-required AI disclosure tokens:
+- `OpenAI ChatGPT`;
+- `GPT-5.6 Sol`;
+- human direction/review;
+- full author responsibility.
 
 The only GitHub source URL retained is:
 - `00keveland/Tunnel_2026`
