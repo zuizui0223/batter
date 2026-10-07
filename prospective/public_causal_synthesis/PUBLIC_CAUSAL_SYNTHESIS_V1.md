@@ -18,7 +18,11 @@ The public-data programme now supports an asymmetry:
 
 At the same time:
 
-> **experience can refine personal organization, but a broad randomized enrichment treatment did not confirm that richer early experience simply amplifies among-individual behavioral differentiation.**
+> **experience can refine personal organization, but two independent randomized developmental manipulations changed phenotype without demonstrating a change in the total amount of individual differentiation.**
+
+Those manipulations were:
+- broad environmental enrichment;
+- developmental access to auditory feedback required for normal vocal learning.
 
 Therefore formation and maintenance should not be treated as the same process.
 
@@ -154,6 +158,58 @@ This secondary is descriptive only, but it suggests a more specific biological p
 > **enrichment may reposition behavioral state strongly without confirmingly increasing the amount of individuality, whereas impoverished animals retain stronger direct baseline-state predictability.**
 
 The safe synthesis is state recalibration, not confirmed convergence or erasure.
+
+## Randomized developmental auditory-feedback test
+
+Independent public experiment:
+Elie et al. 2024, Egyptian fruit bats.
+
+Design:
+- 10 pups randomly assigned shortly after birth;
+- hearing/saline = 5;
+- deafened/kanamycin = 5;
+- each treatment = 3 females + 2 males;
+- adult phenotype recorded 3–4 years later.
+
+Frozen whole-repertoire representation:
+- 28,091 adult vocalizations;
+- 28 source acoustic features;
+- all 10 bats;
+- bat is the biological unit;
+- smallest finite support = 1,037 calls per bat × feature.
+
+After treatment-blind feature scaling and removal of sex × treatment common state:
+
+- V_hearing = **15.766760**;
+- V_deaf = **17.192257**;
+- D = **-1.425497**;
+- exact sex-conditioned randomization space = **120**;
+- extreme |D| assignments = **86**;
+- exact two-sided p = **0.716667**.
+
+Verdict:
+
+**NO_DIFFERENCE_IN_AMOUNT**
+
+The source experiment causally establishes that auditory feedback is needed for normal learning of subsets of the vocal repertoire.
+
+Yet the frozen individualization analysis does not show that feedback changed the **total amount of adult between-individual vocal differentiation**.
+
+Thus a second independent randomized developmental experiment supports:
+
+> **developmental environment can change phenotype without necessarily changing how different individuals are from one another.**
+
+The two formation experiments now converge on a causal boundary:
+
+[
+\boxed{
+\text{developmental environmental effect}
+\not\Rightarrow
+\text{change in total individualization}
+}
+]
+
+This does not mean development is irrelevant to individuality. The juvenile-history analysis shows that personal history becomes more identity-informative. It means that the amount of individuality is not a simple monotonic output of broad enrichment or access to auditory feedback.
 
 ---
 
@@ -396,7 +452,10 @@ Key asymmetry:
 ### Formation / rewriting
 - personal history becomes more identity-informative;
 - broad randomized enrichment does not confirm increased differentiation;
-- descriptively, later state is best approximated by personal baseline plus a shared environmental shift.
+- randomized developmental auditory-feedback loss does not change total adult vocal individualization;
+- descriptively, enrichment is best approximated by personal baseline plus a shared environmental shift.
+
+Therefore environmental effects on phenotype and environmental effects on **amount of individuality** are empirically separable.
 
 ### Maintenance / portability under manipulated current context
 - external sensory perturbation: retained individuality;
@@ -419,9 +478,9 @@ The strongest public-data interpretation is:
 
 > **Individual specialization behaves less like a context-specific expressed value and more like persistent personal organization whose expression is repeatedly recalculated in the current environment.**
 
-The randomized early-experience result adds:
+The two randomized developmental experiments add:
 
-> **environmental experience can reposition the behavioral state without necessarily increasing the amount of individuality.**
+> **environmental experience can strongly alter behavioral phenotype without necessarily changing the amount of individuality.**
 
 And therefore:
 
@@ -470,6 +529,7 @@ Supported:
 
 Not supported:
 - broad enrichment causes increased individualization;
+- developmental auditory feedback changes total adult whole-repertoire vocal individualization;
 - one universal bat policy axis;
 - one universal detailed geometry;
 - confirmed wild policy-to-vertical-niche bridge;
@@ -480,7 +540,7 @@ Therefore the remaining formation question is narrower than before:
 
 > **What causes individuals exposed to broadly similar environments to take different historical trajectories through behavioral state space?**
 
-Simple environmental richness alone is not enough under the tested randomized enrichment contrast.
+Neither broad environmental richness nor developmental access to auditory feedback is sufficient, under the frozen tests, to explain the total amount of individual differentiation.
 
 ---
 
@@ -499,6 +559,6 @@ A new source is worth opening only if it adds one of:
 3. a treatment that changes the history available for policy formation rather than merely changing current expression;
 4. an independently specified solution-opportunity manipulation.
 
-The 2024 fruit-bat auditory-feedback manipulation is worth considering only if it adds a distinct learning/formation axis.
+The 2024 fruit-bat auditory-feedback manipulation has now been tested and closed: it changes learned vocal phenotype but not the total amount of adult vocal individualization under the frozen whole-repertoire test.
 
 Another current-context perturbation showing non-erasure would add little to the main bottleneck.
