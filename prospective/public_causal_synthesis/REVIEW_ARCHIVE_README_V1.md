@@ -70,3 +70,18 @@ The final permanent record must include:
 - analysis scripts/result receipts used for reported analyses.
 
 Do not use GitHub alone as the final journal data archive.
+
+
+## Current evidence-tier boundary
+
+The package intentionally preserves negative and lower-tier results.
+
+In particular:
+- the first-flight monotonic formation primary failed its frozen individual-consistency rule;
+- the later-history result is a predeclared secondary, not a rescued primary;
+- the recent-versus-earliest history contrast is post-primary diagnostic only;
+- the randomized enrichment history-carrier contrast failed;
+- the wild scalar carrier-to-vertical-niche gate failed at 2/4;
+- post-outcome wild H/V results remain exploratory.
+
+These distinctions are checked by the manuscript/provenance guard before packaging.
