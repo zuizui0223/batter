@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "source": "10.17632/wh7c636y3t.1",
+  "traits": [
+    "Boldness",
+    "ExpuNIQUE",
+    "AllActivityNormed"
+  ],
+  "n": 29,
+  "treatment_counts": {
+    "enriched": 14,
+    "impoverished": 15
+  },
+  "origin_treatment_counts": {
+    "City | enriched": 9,
+    "City | impoverished": 10,
+    "Country | enriched": 5,
+    "Country | impoverished": 5
+  },
+  "baseline_scaling_sd": [
+    0.15744916968677763,
+    0.2587450127917945,
+    0.0008666828612989415
+  ],
+  "baseline_mean_distance": 0.3921860262646156,
+  "V_enriched": 2.6566391679674686,
+  "V_impoverished": 1.9219400717115669,
+  "D": 0.7346990962559017,
+  "n_permutations": 199999,
+  "seed": 202610070817,
+  "null_mean": -0.008979921563104981,
+  "null_sd": 0.7544791210541072,
+  "extreme_count": 33556,
+  "p_one_sided": 0.167785,
+  "verdict": "UNSUPPORTED_INDIVIDUALIZATION"
+}
