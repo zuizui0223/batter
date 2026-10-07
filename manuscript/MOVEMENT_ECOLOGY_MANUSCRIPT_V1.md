@@ -1,5 +1,9 @@
 # Repeatable individual signatures limit exchangeability of vertical movement-state maps in European free-tailed bats
 
+**PUBLICATION STATUS: RETIRED AS A SEPARATE SUBMISSION.**
+
+The central Tadarida V1/V2 early-to-late identity analyses in this draft are the same frozen analyses now incorporated into the JAE v0.4.0 comparative manuscript as the motivating/boundary case. Submitting both manuscripts as independent research articles would duplicate the same numerical result. This file is retained as an analytical precursor/provenance record only. See `prospective/public_causal_synthesis/PUBLICATION_OVERLAP_AUDIT_V1.md` on the public-causal-synthesis branch.
+
 **Article type:** Research  
 **Target:** Movement Ecology  
 **Status:** submission-facing draft v1  
