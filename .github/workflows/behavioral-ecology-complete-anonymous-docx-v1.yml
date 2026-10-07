@@ -24,18 +24,37 @@ jobs:
       - name: Install DOCX dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y pandoc libreoffice
+          sudo apt-get install -y pandoc libreoffice poppler-utils
           python -m pip install python-docx cairosvg
       - name: Build Complete Anonymous Text DOCX
         run: python prospective/public_causal_synthesis/build_complete_anonymous_docx_v1.py
-      - name: Convert DOCX to PDF for workflow-level QA
+      - name: Render DOCX to PDF and page PNGs for QA
         run: |
           mkdir -p submission/public_causal/docx_qa
           HOME="$RUNNER_TEMP/lohome" libreoffice --headless \
             --convert-to pdf \
             --outdir submission/public_causal/docx_qa \
             submission/public_causal/COMPLETE_ANONYMOUS_TEXT_BEHAVIORAL_ECOLOGY_V1.docx
-          test -s submission/public_causal/docx_qa/COMPLETE_ANONYMOUS_TEXT_BEHAVIORAL_ECOLOGY_V1.pdf
+          PDF=submission/public_causal/docx_qa/COMPLETE_ANONYMOUS_TEXT_BEHAVIORAL_ECOLOGY_V1.pdf
+          test -s "$PDF"
+          pdfinfo "$PDF" | tee submission/public_causal/docx_qa/pdfinfo.txt
+          pdftoppm -png -r 144 "$PDF" submission/public_causal/docx_qa/page
+          test "$(find submission/public_causal/docx_qa -maxdepth 1 -name 'page-*.png' | wc -l)" -gt 0
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image, ImageStat
+          pages=sorted(Path("submission/public_causal/docx_qa").glob("page-*.png"))
+          if not pages:
+              raise SystemExit("STOP: no rendered PNG pages")
+          for p in pages:
+              im=Image.open(p).convert("L")
+              if im.width < 500 or im.height < 700:
+                  raise SystemExit(f"STOP: implausible page dimensions {p}: {im.size}")
+              stat=ImageStat.Stat(im)
+              if stat.mean[0] > 254.95 and stat.rms[0] > 254.95:
+                  raise SystemExit(f"STOP: effectively blank rendered page {p}")
+          print(f"PASS rendered {len(pages)} PNG pages")
+          PY
       - uses: actions/upload-artifact@v4
         with:
           name: behavioral-ecology-complete-anonymous-docx-v1
@@ -43,4 +62,6 @@ jobs:
             submission/public_causal/COMPLETE_ANONYMOUS_TEXT_BEHAVIORAL_ECOLOGY_V1.docx
             submission/public_causal/COMPLETE_ANONYMOUS_TEXT_BEHAVIORAL_ECOLOGY_V1_RECEIPT.json
             submission/public_causal/docx_qa/COMPLETE_ANONYMOUS_TEXT_BEHAVIORAL_ECOLOGY_V1.pdf
+            submission/public_causal/docx_qa/pdfinfo.txt
+            submission/public_causal/docx_qa/page-*.png
           if-no-files-found: error
