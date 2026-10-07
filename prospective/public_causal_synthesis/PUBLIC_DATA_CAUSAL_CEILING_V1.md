@@ -62,7 +62,7 @@ Development clearly changes phenotype.
 
 The unresolved issue is:
 
-> **how developmental history reorganizes the structure of individuality without a simple predictable change in its total amount.**
+> **how developmental history reorganizes the geometry/allocation of individuality across traits, strategies and behavioral dimensions, and which parts of that reorganization are causally repeatable.**
 
 More specifically, the unresolved formation problem is no longer simply whether environment matters. It clearly does.
 
@@ -81,7 +81,7 @@ to:
 ## Public-data routes still worth opening
 
 Worthwhile:
-- a developmental/history dataset that can test **identity redistribution across traits / call classes / strategies** under a frozen multivariate architecture;
+- a developmental/history dataset that can test **identity redistribution across traits / call classes / strategies** under a prospectively frozen multivariate architecture, with reallocation itself as the primary;
 - reversible biomechanics with repeated identified individuals;
 - a public experiment that manipulates learning history or solution opportunity rather than current context.
 
