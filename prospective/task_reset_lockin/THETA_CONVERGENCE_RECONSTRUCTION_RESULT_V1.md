@@ -123,7 +123,7 @@ Held-out MSE by bat:
 | A | 0.1873 | 0.1405 | 0.1249 | 0.1171 | 0.889 |
 | B | 0.7452 | 0.5589 | 0.4968 | 0.4968 | 1.000 |
 | C | 1.3840 | 1.0380 | 0.9227 | 0.8650 | 0.889 |
-| D | 0.0521 | 0.0391 | 0.0347 | 0.0321 | 0.833 |
+| D | 0.0521 | 0.0391 | 0.0347 | 0.0312 | 0.833 |
 | E | 0.3110 | 0.2333 | 0.2073 | 0.1943 | 0.889 |
 
 All five individuals show monotonic MSE improvement from one to two to three training environments.
