@@ -1,0 +1,24 @@
+name: collective-terrain-persistence-v1
+on:
+  push:
+    branches: [post-freeze/collective-terrain-persistence-v1]
+    paths:
+      - "post_freeze_extensions/collective_terrain_persistence/**"
+      - ".github/workflows/collective-terrain-persistence-v1.yml"
+  workflow_dispatch:
+jobs:
+  terrain:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    permissions: {contents: read}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: python -m pip install -e . pandas requests pyproj
+      - run: python post_freeze_extensions/collective_terrain_persistence/run_v1.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: collective-terrain-persistence-v1
+          path: post_freeze_extensions/collective_terrain_persistence/result_v1.json
+          if-no-files-found: error
