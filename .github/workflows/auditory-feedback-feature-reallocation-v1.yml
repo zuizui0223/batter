@@ -1,0 +1,67 @@
+name: auditory-feedback-feature-reallocation-v1
+
+on:
+  push:
+    paths:
+      - "prospective/auditory_feedback_individualization/FEATURE_REALLOCATION_DECOMPOSITION_V1.md"
+      - "prospective/auditory_feedback_individualization/run_feature_reallocation_v1.m"
+      - ".github/workflows/auditory-feedback-feature-reallocation-v1.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: auditory-feedback-feature-reallocation-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  decomposition:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: prospective/auditory-feedback-individualization-v1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Verify frozen primary exists
+        run: |
+          python - <<'PY'
+          import json
+          p="prospective/auditory_feedback_individualization/PRIMARY_RESULT_V1.json"
+          x=json.load(open(p))
+          assert x["verdict"]=="NO_DIFFERENCE_IN_AMOUNT"
+          assert x["n_features"]==28
+          print("PASS frozen primary receipt")
+          PY
+
+      - name: Download frozen PAF source
+        run: python prospective/auditory_feedback_individualization/download_paf_for_schema_v2.py
+
+      - uses: matlab-actions/setup-matlab@v2
+
+      - name: Run exact descriptive decomposition
+        uses: matlab-actions/run-command@v2
+        with:
+          command: addpath('prospective/auditory_feedback_individualization'); run_feature_reallocation_v1
+
+      - name: Delete downloaded MAT
+        if: always()
+        run: rm -f prospective/auditory_feedback_individualization/PAF_AllBatsData.mat
+
+      - name: Commit descriptive receipt
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add prospective/auditory_feedback_individualization/FEATURE_REALLOCATION_RESULT_V1.json
+          git add prospective/auditory_feedback_individualization/FEATURE_REALLOCATION_RESULT_V1.md
+          if git diff --cached --quiet; then
+            echo "No result changes"
+          else
+            git commit -m "Record auditory-feedback feature reallocation decomposition"
+            git fetch origin prospective/auditory-feedback-individualization-v1
+            git rebase origin/prospective/auditory-feedback-individualization-v1
+            git push origin HEAD:prospective/auditory-feedback-individualization-v1
+          fi

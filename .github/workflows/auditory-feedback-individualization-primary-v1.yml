@@ -1,0 +1,80 @@
+name: auditory-feedback-individualization-primary-v1
+
+on:
+  push:
+    paths:
+      - "prospective/auditory_feedback_individualization/PRIMARY_INDIVIDUALIZATION_CONTRACT_V1.md"
+      - "prospective/auditory_feedback_individualization/INTERPRETATION_LEDGER_V1.md"
+      - "prospective/auditory_feedback_individualization/run_individualization_primary_v1.m"
+      - "prospective/auditory_feedback_individualization/PAF_SCHEMA_AUDIT_V2.json"
+      - ".github/workflows/auditory-feedback-individualization-primary-v1.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: auditory-feedback-individualization-primary-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  primary:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: prospective/auditory-feedback-individualization-v1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Verify frozen schema gate
+        run: |
+          python - <<'PY'
+          import json
+          p="prospective/auditory_feedback_individualization/PAF_SCHEMA_AUDIT_V2.json"
+          x=json.load(open(p))
+          assert x["table_height"]==28091
+          assert x["feature_count"]==28
+          assert len(x["bats"])==10
+          assert sum(1 for b in x["bats"] if b["hearing_deaf"]=="H")==5
+          assert sum(1 for b in x["bats"] if b["hearing_deaf"]=="D")==5
+          print("PASS frozen schema gate")
+          PY
+
+      - name: Download frozen PAF source
+        run: python prospective/auditory_feedback_individualization/download_paf_for_schema_v2.py
+
+      - uses: matlab-actions/setup-matlab@v2
+
+      - name: Run frozen 120-assignment primary
+        uses: matlab-actions/run-command@v2
+        with:
+          command: addpath('prospective/auditory_feedback_individualization'); run_individualization_primary_v1
+
+      - name: Delete downloaded MAT
+        if: always()
+        run: rm -f prospective/auditory_feedback_individualization/PAF_AllBatsData.mat
+
+      - name: Commit result receipt
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add prospective/auditory_feedback_individualization/PRIMARY_RESULT_V1.json
+          git add prospective/auditory_feedback_individualization/PRIMARY_RESULT_V1.md
+          if git diff --cached --quiet; then
+            echo "No result changes"
+          else
+            git commit -m "Record randomized auditory-feedback individualization result"
+            for attempt in 1 2 3 4 5; do
+              git fetch origin prospective/auditory-feedback-individualization-v1
+              git rebase origin/prospective/auditory-feedback-individualization-v1
+              if git push origin HEAD:prospective/auditory-feedback-individualization-v1; then
+                exit 0
+              fi
+              echo "Push race on attempt $attempt; retrying"
+              sleep $((attempt * 2))
+            done
+            exit 1
+          fi

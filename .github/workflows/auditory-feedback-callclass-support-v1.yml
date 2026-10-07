@@ -1,0 +1,42 @@
+name: auditory-feedback-callclass-support-v1
+
+on:
+  push:
+    paths:
+      - "prospective/auditory_feedback_individualization/CALLCLASS_SUPPORT_CONTRACT_V1.md"
+      - "prospective/auditory_feedback_individualization/paf_callclass_support_v1.m"
+      - ".github/workflows/auditory-feedback-callclass-support-v1.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: prospective/auditory-feedback-individualization-v1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Download PAF source
+        run: python prospective/auditory_feedback_individualization/download_paf_for_schema_v2.py
+      - name: Run MATLAB structural support audit
+        uses: matlab-actions/run-command@v2
+        with:
+          command: addpath('prospective/auditory_feedback_individualization'); paf_callclass_support_v1
+      - name: Delete downloaded MAT
+        if: always()
+        run: rm -f prospective/auditory_feedback_individualization/PAF_AllBatsData.mat
+      - name: Commit support receipt
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add prospective/auditory_feedback_individualization/PAF_CALLCLASS_SUPPORT_V1.json
+          git add prospective/auditory_feedback_individualization/PAF_CALLCLASS_SUPPORT_V1.md
+          git commit -m "Record auditory-feedback call-class support" || exit 0
+          git fetch origin prospective/auditory-feedback-individualization-v1
+          git rebase origin/prospective/auditory-feedback-individualization-v1
+          git push origin HEAD:prospective/auditory-feedback-individualization-v1

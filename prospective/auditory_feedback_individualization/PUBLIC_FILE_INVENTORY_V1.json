@@ -1,0 +1,1520 @@
+{
+  "dataset": "h5ff9vv5pc",
+  "version": 1,
+  "selected_url": "https://data.mendeley.com/api/datasets/h5ff9vv5pc/files?version=1&%24start=0&%24limit=1000",
+  "envelope_keys": [],
+  "item_count": 80,
+  "items": [
+    {
+      "id": "4ea9022f-4937-4861-a0c4-33e76a848f74",
+      "filename": "ABR_AllBatsDataAdult.mat",
+      "description": null,
+      "folder_id": "2eb6086f-9be0-479b-b6bb-e9dc8b2874bb",
+      "size": 75520,
+      "content_type": "application/octet-stream",
+      "sha256": "524370c95b5565698ab4da9090ac5520c738325a3ac1d7f5e244447716ec84cf",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "folder_id",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "6bd56ac3-685a-4828-95db-b4609b0aa831",
+      "filename": "ABR_AllBatsDataPup.mat",
+      "description": null,
+      "folder_id": "2eb6086f-9be0-479b-b6bb-e9dc8b2874bb",
+      "size": 28753,
+      "content_type": "application/octet-stream",
+      "sha256": "8337b03da7a37b886877d2f772d7bb68e940133cdbc2359db44467c2d07ba8dc",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "folder_id",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "8f4225da-e54f-430a-8758-0f5d1ac72562",
+      "filename": "Data4_Figure3_FemaleGroup1.mat",
+      "description": null,
+      "folder_id": "2eb6086f-9be0-479b-b6bb-e9dc8b2874bb",
+      "size": 24606161,
+      "content_type": "application/octet-stream",
+      "sha256": "3071ee7fa0c978aa42f605d0a194411137a543c47737aa44587ad53e363fdb42",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "folder_id",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "7bd13ece-7f17-49e8-8b0d-b7bfed647af2",
+      "filename": "Data4_Figure3_MaleGroup4.mat",
+      "description": null,
+      "folder_id": "2eb6086f-9be0-479b-b6bb-e9dc8b2874bb",
+      "size": 10824413,
+      "content_type": "application/octet-stream",
+      "sha256": "4691a6e9ffe39813dd620ed55ba30bfd527314ef817d472c16a3fe257d3735da",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "folder_id",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "33e53f19-1f35-491d-943e-08b50cd7b9ed",
+      "filename": "DeafBats10_FigureS4K_examples.mlx",
+      "description": null,
+      "folder_id": null,
+      "size": 528261,
+      "content_type": "application/octet-stream",
+      "sha256": "fd31a1d37b920e8aedc442b94478b74cd7b2efab4887639f31b0b870c793f792",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "cf61741d-32dd-4745-bddf-b87ae5db5c80",
+      "filename": "DeafBats10_FigureS4K_examples.pdf",
+      "description": null,
+      "folder_id": null,
+      "size": 605687,
+      "content_type": "application/pdf",
+      "sha256": "7cb886ff4b636e9b68a9443600b246da2f1244654b52c06b26f08d3a7ced134a",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "1bf3f814-dc8a-4fad-ba6d-7ecbf6194e87",
+      "filename": "DeafBats11_PCARegularizedPermutationDFA.m",
+      "description": null,
+      "folder_id": null,
+      "size": 71923,
+      "content_type": "application/octet-stream",
+      "sha256": "9c2ded464e5861f0e64537d213433ea70546e25263e898b7ea602a5aa83f9236",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "cddd7086-bf96-4172-9f12-2f709fca93e8",
+      "filename": "DeafBats12_FigureS3_RPDFA_results.mlx",
+      "description": null,
+      "folder_id": null,
+      "size": 457748,
+      "content_type": "application/octet-stream",
+      "sha256": "f1ca4cf8ed19a2038b1ecfa1692d9c716817b0dbd92da668b2c48cfa535d2a52",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "07515b14-ae6b-439b-a1ce-ba204400f141",
+      "filename": "DeafBats12_FigureS3_RPDFA_results.pdf",
+      "description": null,
+      "folder_id": null,
+      "size": 573851,
+      "content_type": "application/pdf",
+      "sha256": "1d55477c567cf33adaa7a727c09a66f9cd199258ff9d3c6a46a9f3f09f9cb467",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "4ad1bec9-425e-4d5f-bb98-23424ce16757",
+      "filename": "DeafBats13_Figure3_MaleCallsGroup4.mlx",
+      "description": null,
+      "folder_id": null,
+      "size": 225803,
+      "content_type": "application/octet-stream",
+      "sha256": "d236ecce53ff4c916f3e15bd0fc383291eb6a14fdd24e8f829c04fdd7256e987",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "7440f775-b3d2-4948-a521-0c0dc2f28b37",
+      "filename": "DeafBats13_Figure3_MaleCallsGroup4.pdf",
+      "description": null,
+      "folder_id": null,
+      "size": 316615,
+      "content_type": "application/pdf",
+      "sha256": "4b19518571edb6ad4ae24e9ec8f2d3874d432fafcb071292185639afeb046e45",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "ab429239-2cee-40af-9591-fc1681009b81",
+      "filename": "DeafBats14_Figure3_FemaleCallsGroup1.mlx",
+      "description": null,
+      "folder_id": null,
+      "size": 277765,
+      "content_type": "application/octet-stream",
+      "sha256": "19b4c997392cb5b6c60aeb552a0a48ffd0979daebfd8650737965faf08f8c9ee",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "ec2db334-00f0-47ca-bd29-7d1c1f6818f7",
+      "filename": "DeafBats14_Figure3_FemaleCallsGroup1.pdf",
+      "description": null,
+      "folder_id": null,
+      "size": 369108,
+      "content_type": "application/pdf",
+      "sha256": "ddb8939fb951fdb3d1e3201cc954cbe771d6679f9a0c4e177934652d1da046f4",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "61ffe20a-8c38-4205-90b0-ca7e7b3c9e26",
+      "filename": "DeafBats15_VideoAnalysis_LED_allDates.mlx",
+      "description": null,
+      "folder_id": null,
+      "size": 486222,
+      "content_type": "application/octet-stream",
+      "sha256": "812afde446ff5b450631b3de61c406b435150a1c45c7df5eb6fb4f51650ef08c",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "148203cf-17a0-4278-9070-71ff77928d3b",
+      "filename": "DeafBats15_VideoAnalysis_LED_allDates.pdf",
+      "description": null,
+      "folder_id": null,
+      "size": 834663,
+      "content_type": "application/pdf",
+      "sha256": "16cd75fd4f7b5c4eb6c23d9d00597847860bf6910aaca0014cb49c9c1de1a746",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "1773dcea-9fd8-4611-bddc-595d9ee96e9c",
+      "filename": "DeafBats1_ABR_AllBats_Figures.mlx",
+      "description": null,
+      "folder_id": null,
+      "size": 595012,
+      "content_type": "application/octet-stream",
+      "sha256": "f54aa28eab13a5e51e1290774b4411304f8bf05c5901cbdcc774ad5e315180fd",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "87162c15-f0d6-4034-9e56-03a576c4dbef",
+      "filename": "DeafBats1_ABR_AllBats_Figures.pdf",
+      "description": null,
+      "folder_id": null,
+      "size": 423446,
+      "content_type": "application/pdf",
+      "sha256": "1b1b258c162d50a958332a0e31464b7f392811a2bcb00bd3e95ff54bf582b0c2",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "e4a44419-03e1-4626-b1df-965376add194",
+      "filename": "DeafBats2_LoadExploreAcousticData.mlx",
+      "description": null,
+      "folder_id": null,
+      "size": 452375,
+      "content_type": "application/octet-stream",
+      "sha256": "8c2fdecc7adced34c9face2619e0b3243d0fa904eae21771c7ebbc53cce7fde8",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "786a8cd8-4371-45a0-be8e-028a9a1c7c1f",
+      "filename": "DeafBats2_LoadExploreAcousticData.pdf",
+      "description": null,
+      "folder_id": null,
+      "size": 579386,
+      "content_type": "application/pdf",
+      "sha256": "385b7bdc4924b33714ee7164ed8952b1fdc8ee0634b9f93588040a408b55f528",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "da0c08a5-acc5-474a-b551-a7b80f499d60",
+      "filename": "DeafBats3_AcousticMeasurements.m",
+      "description": null,
+      "folder_id": null,
+      "size": 14018,
+      "content_type": "application/octet-stream",
+      "sha256": "db188e825145d4f5645caa6947f92e7820a576d9f41cc4195f3b5c789b8bc0a6",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "217c70b4-0d3f-4d27-a089-f6a213f9bebf",
+      "filename": "DeafBats4_FigureS2_AveragePAF.mlx",
+      "description": null,
+      "folder_id": null,
+      "size": 457350,
+      "content_type": "application/octet-stream",
+      "sha256": "7b9aaa436230447c634ee7eac605b5b2c88c07a75cb7dcd8c0c0c50e0a75cb53",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "9d73e71c-1288-48df-b1d3-2035c3954fc2",
+      "filename": "DeafBats4_FigureS2_AveragePAF.pdf",
+      "description": null,
+      "folder_id": null,
+      "size": 520175,
+      "content_type": "application/pdf",
+      "sha256": "cfa5b6eef3e111b200ce6ef3469177c1cf31e993a700a65da675ce277e46b0ac",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "62de28ef-cf25-43e9-a433-61b8f2109129",
+      "filename": "DeafBats5_FigureS2_AveragePAF_FemaleG1.mlx",
+      "description": null,
+      "folder_id": null,
+      "size": 618732,
+      "content_type": "application/octet-stream",
+      "sha256": "f4f29f05feb4516f2c8622e0a9bdfc62326c2ba667aa840cfb217ce741c1b6bd",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "be0f8eb9-d68a-483d-875f-b1e38c520dec",
+      "filename": "DeafBats5_FigureS2_AveragePAF_FemaleG1.pdf",
+      "description": null,
+      "folder_id": null,
+      "size": 726575,
+      "content_type": "application/pdf",
+      "sha256": "4eab793dcdfc7716a313a9ea649e15d54a37918e20f21016a9d13a82a6510d4c",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "d4aa9e75-5c85-44ab-9925-fc2488e7df34",
+      "filename": "DeafBats6_FigureS2_AveragePAF_MaleG4.mlx",
+      "description": null,
+      "folder_id": null,
+      "size": 2142862,
+      "content_type": "application/octet-stream",
+      "sha256": "adc58c83a8dc066cbfd306878495b763ad661b779f56d8ec00b3f4a1a6390250",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "38598d8d-18c6-4faa-9fc6-b2d64f7152ff",
+      "filename": "DeafBats6_FigureS2_AveragePAF_MaleG4.pdf",
+      "description": null,
+      "folder_id": null,
+      "size": 2259063,
+      "content_type": "application/pdf",
+      "sha256": "354db535707a27fe9f2f0d27dba19c0ed09116bc9664d8bfcafec443845b199b",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "35970e52-9d39-43ed-b59a-06d389499971",
+      "filename": "DeafBats7_Dissimilarity_Figure2ABD.mlx",
+      "description": null,
+      "folder_id": null,
+      "size": 430407,
+      "content_type": "application/octet-stream",
+      "sha256": "8d05b446fa839d86155eb20270228748a5596f59edbb4b2d437355684e9568b0",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "ee060d92-f6bd-4d6e-8e6a-c6cb7d73058d",
+      "filename": "DeafBats7_Dissimilarity_Figure2ABD.pdf",
+      "description": null,
+      "folder_id": null,
+      "size": 602576,
+      "content_type": "application/pdf",
+      "sha256": "b971479c5972b393b85bd4491bf146677dcd9314d921eb53b23f4a52226ea145",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "0da7cd48-01da-4372-b88b-ccc4c15fd8b4",
+      "filename": "DeafBats8_ParsingVocalSpace.m",
+      "description": null,
+      "folder_id": null,
+      "size": 3708,
+      "content_type": "application/octet-stream",
+      "sha256": "63784d5d24ec3869610227c5835190d60fbf562d49b6565cc64b4285c17b5e53",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "d9eac786-6691-4082-81ee-421c330455c2",
+      "filename": "DeafBats9_FigureS4C_to_S4J_UMAPProjections.mlx",
+      "description": null,
+      "folder_id": null,
+      "size": 1200308,
+      "content_type": "application/octet-stream",
+      "sha256": "46c9fa7bb9265b428c9a8dd8384bf44dd07d5e3347bcf0f02af5340c2a269355",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "9740b974-ffce-4c40-b290-f331f164b5ff",
+      "filename": "DeafBats9_FigureS4C_to_S4J_UMAPProjections.pdf",
+      "description": null,
+      "folder_id": null,
+      "size": 882508,
+      "content_type": "application/pdf",
+      "sha256": "c6c8775f775d0c5f42d644174cfff799958fc246dbb7e9e472fefb563a2e7bb6",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "d1b8834d-7aaf-4f15-bc3b-a305fc1c67d9",
+      "filename": "DeafBats_PCA_AcGroup1.mat",
+      "description": null,
+      "folder_id": "2eb6086f-9be0-479b-b6bb-e9dc8b2874bb",
+      "size": 256465428,
+      "content_type": "application/octet-stream",
+      "sha256": "812027b0d0e59520dc9fced765a983750e848b404e61f6d2920da559cb352b79",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "folder_id",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "91f055b1-14b4-4289-9306-1765c4a84c3e",
+      "filename": "DeafBats_PCA_AcGroup2.mat",
+      "description": null,
+      "folder_id": "2eb6086f-9be0-479b-b6bb-e9dc8b2874bb",
+      "size": 643439405,
+      "content_type": "application/octet-stream",
+      "sha256": "a1f989048d058b09539b45ea021be57da0718e46f07614b7670839da24dc5acd",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "folder_id",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "7dacc900-adfd-4d65-8fca-8b23a1c3fd3f",
+      "filename": "DeafBats_PCA_AcGroup3.mat",
+      "description": null,
+      "folder_id": "2eb6086f-9be0-479b-b6bb-e9dc8b2874bb",
+      "size": 643411148,
+      "content_type": "application/octet-stream",
+      "sha256": "c1cd155594d84fc0f295f74f2cee9f59e06b302eda83e8c0a19a52a97a6a73e4",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "folder_id",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "90f9caf2-5cc0-42b2-9698-8996d6013687",
+      "filename": "DeafBats_PCA_AcGroup4.mat",
+      "description": null,
+      "folder_id": "2eb6086f-9be0-479b-b6bb-e9dc8b2874bb",
+      "size": 237477383,
+      "content_type": "application/octet-stream",
+      "sha256": "f770cdc06b061a7c16fcae62ad967e6f6c8cb04fcb5de8dd0d25bfe6cfe66e76",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "folder_id",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "b6e66178-a3b3-41af-b420-cb28f007c8b8",
+      "filename": "DeafBats_PCA_AllCalls.mat",
+      "description": null,
+      "folder_id": "2eb6086f-9be0-479b-b6bb-e9dc8b2874bb",
+      "size": 2621001281,
+      "content_type": "application/octet-stream",
+      "sha256": "16a3e724ab881b98e1043aecd0e3789496c05c72bbcdc5aebe60f5d0c2b44141",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "folder_id",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "e50b6b92-3fed-4e0f-b9ae-a96d99bcb409",
+      "filename": "DeafBats_PCA_FemaleAcGroup1.mat",
+      "description": null,
+      "folder_id": "2eb6086f-9be0-479b-b6bb-e9dc8b2874bb",
+      "size": 227520543,
+      "content_type": "application/octet-stream",
+      "sha256": "ac33505410f9b1dffea00e8d06873088310de25ab7b427310454de3ae2c7adbc",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "folder_id",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "139776e7-7d93-49ca-b715-a925356eeef6",
+      "filename": "DeafBats_PCA_FemaleAcGroup4.mat",
+      "description": null,
+      "folder_id": "2eb6086f-9be0-479b-b6bb-e9dc8b2874bb",
+      "size": 22501514,
+      "content_type": "application/octet-stream",
+      "sha256": "9bc92a7d8ef9644677ebba0c0de435e3a8541a0f2b5121cda127c99360b6a0cf",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "folder_id",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "ba1b0bf8-a60b-4979-8164-1f818c05ddf5",
+      "filename": "DeafBats_PCA_FemaleCalls.mat",
+      "description": null,
+      "folder_id": "2eb6086f-9be0-479b-b6bb-e9dc8b2874bb",
+      "size": 643449207,
+      "content_type": "application/octet-stream",
+      "sha256": "c4f83e4ebb712dd9fab82df59dde0e3d96f54341bf5955a3bab98dc1260070c4",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "folder_id",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "ff24f405-4cfe-43be-8b31-cfc5460e47f5",
+      "filename": "DeafBats_PCA_MaleAcGroup1.mat",
+      "description": null,
+      "folder_id": "2eb6086f-9be0-479b-b6bb-e9dc8b2874bb",
+      "size": 78263648,
+      "content_type": "application/octet-stream",
+      "sha256": "4bd9770161be5ae34c5a674ec6895695bb08e3e86511800cc92889cd5c4aa3c2",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "folder_id",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "7f192792-1422-4e86-a14a-77017668100b",
+      "filename": "DeafBats_PCA_MaleAcGroup2.mat",
+      "description": null,
+      "folder_id": "2eb6086f-9be0-479b-b6bb-e9dc8b2874bb",
+      "size": 508631229,
+      "content_type": "application/octet-stream",
+      "sha256": "0f20f8339a9490627a0c0f7df5e2a815a79d518c2138cb6bac33dd0b8c377438",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "folder_id",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "a500cad3-cb73-4e63-8dee-fae15e8e41e9",
+      "filename": "DeafBats_PCA_MaleAcGroup3.mat",
+      "description": null,
+      "folder_id": "2eb6086f-9be0-479b-b6bb-e9dc8b2874bb",
+      "size": 359850556,
+      "content_type": "application/octet-stream",
+      "sha256": "3621dc3cf8c82e3acf1967a520420062b2e556198191575e01243c26eba699a2",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "folder_id",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "0ea3572f-1d9c-4ea0-8c9b-adfbede64eb6",
+      "filename": "DeafBats_PCA_MaleAcGroup4.mat",
+      "description": null,
+      "folder_id": "2eb6086f-9be0-479b-b6bb-e9dc8b2874bb",
+      "size": 286882014,
+      "content_type": "application/octet-stream",
+      "sha256": "e7e67d7838ccbf2b235a29547e2e77fc959e56dd841a2e4cee62b122006d58fd",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "folder_id",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "1ae09b24-afc6-4349-adff-e157fd73f6df",
+      "filename": "DeafBats_PCA_MaleCalls.mat",
+      "description": null,
+      "folder_id": "2eb6086f-9be0-479b-b6bb-e9dc8b2874bb",
+      "size": 643388542,
+      "content_type": "application/octet-stream",
+      "sha256": "fd7390497a14bb83158100db998e6bfbc5642c9777fdb5eeff9284bff2e1ec3f",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "folder_id",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "2c57a855-c5be-4819-84eb-d696ae6d4cc6",
+      "filename": "DeafBats_RegularizedPermDFA_AcGroup1.mat",
+      "description": null,
+      "folder_id": "2eb6086f-9be0-479b-b6bb-e9dc8b2874bb",
+      "size": 153664,
+      "content_type": "application/octet-stream",
+      "sha256": "75eb56957f25f3f3f18223b2b16ce238b0f4d623acc0264438c8377bb73812ed",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "folder_id",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "9b5b5dc6-47ec-4664-83af-e0d6aab18863",
+      "filename": "DeafBats_RegularizedPermDFA_AcGroup2.mat",
+      "description": null,
+      "folder_id": "2eb6086f-9be0-479b-b6bb-e9dc8b2874bb",
+      "size": 148181,
+      "content_type": "application/octet-stream",
+      "sha256": "3b38739a6fe0681cf6b7718e276072e5ad41d1c3db38cf11ad36f5fcd2a0179a",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "folder_id",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "5a8239f2-e6c0-46f5-b9f9-0d0480f5d08e",
+      "filename": "DeafBats_RegularizedPermDFA_AcGroup3.mat",
+      "description": null,
+      "folder_id": "2eb6086f-9be0-479b-b6bb-e9dc8b2874bb",
+      "size": 151594,
+      "content_type": "application/octet-stream",
+      "sha256": "a42af3f629be67417ee3a4aff01ac3862412c4d6b1799d65d143cea877b486d1",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "folder_id",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "edadd67f-8304-4ee7-bf2b-54bb4fe87814",
+      "filename": "DeafBats_RegularizedPermDFA_AcGroup4.mat",
+      "description": null,
+      "folder_id": "2eb6086f-9be0-479b-b6bb-e9dc8b2874bb",
+      "size": 150571,
+      "content_type": "application/octet-stream",
+      "sha256": "e5005a73df67560409075df8e1be2c664df8c07114a71e4c96af3db70ef36c88",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "folder_id",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "a5bbb147-a770-44e6-84da-c0d035b69666",
+      "filename": "DeafBats_RegularizedPermDFA_AllCalls.mat",
+      "description": null,
+      "folder_id": "2eb6086f-9be0-479b-b6bb-e9dc8b2874bb",
+      "size": 171769,
+      "content_type": "application/octet-stream",
+      "sha256": "0e65511a6a9551979070fc4834eed51b1ecc158ddb48d9f287ac44a7d8682cde",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "folder_id",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "432c35ad-ce16-47ad-97d8-a7c486cbf939",
+      "filename": "DeafBats_RegularizedPermDFA_FemaleAcGroup1.mat",
+      "description": null,
+      "folder_id": "2eb6086f-9be0-479b-b6bb-e9dc8b2874bb",
+      "size": 108982,
+      "content_type": "application/octet-stream",
+      "sha256": "14f9e95406ce99b935e13acd85a319181b895066b87bb39775567849f19cfb85",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "folder_id",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "ebd855a5-a877-4f80-84c9-6e2cbc4d595c",
+      "filename": "DeafBats_RegularizedPermDFA_FemaleAcGroup2.mat",
+      "description": null,
+      "folder_id": "2eb6086f-9be0-479b-b6bb-e9dc8b2874bb",
+      "size": 107138,
+      "content_type": "application/octet-stream",
+      "sha256": "ae49ac49c5b25df1cf08b6f4ef7dcba7153c5eec1e0ecbbe9f2dfa3f10aaea2b",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "folder_id",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "4e1cdf42-876e-4ac1-8760-b8b5add1b420",
+      "filename": "DeafBats_RegularizedPermDFA_FemaleAcGroup3.mat",
+      "description": null,
+      "folder_id": "2eb6086f-9be0-479b-b6bb-e9dc8b2874bb",
+      "size": 112808,
+      "content_type": "application/octet-stream",
+      "sha256": "add1f3cd61465f00421a519647c4cfacc91b7b805b2df7fee501966ea925fc9f",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "folder_id",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "2b290257-a218-46df-b35f-85c1150e5cd5",
+      "filename": "DeafBats_RegularizedPermDFA_FemaleAcGroup4.mat",
+      "description": null,
+      "folder_id": "2eb6086f-9be0-479b-b6bb-e9dc8b2874bb",
+      "size": 85446,
+      "content_type": "application/octet-stream",
+      "sha256": "63dcc2ba266bf0e7dd7bbef4d9ede4dc10eee458b57b4c83f5ecd25a54590de9",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "folder_id",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "d80065f6-0f5a-4baa-8100-8a9366ab4f74",
+      "filename": "DeafBats_RegularizedPermDFA_FemaleCalls.mat",
+      "description": null,
+      "folder_id": "2eb6086f-9be0-479b-b6bb-e9dc8b2874bb",
+      "size": 117448,
+      "content_type": "application/octet-stream",
+      "sha256": "9824fadc42442827cf8c18afd7505dcc2c496687ff97778ba7b6a7ccf3fffd9c",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "folder_id",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "f66fba2f-a128-4b7b-8bea-0f80bc8e5534",
+      "filename": "DeafBats_RegularizedPermDFA_MaleAcGroup1.mat",
+      "description": null,
+      "folder_id": "2eb6086f-9be0-479b-b6bb-e9dc8b2874bb",
+      "size": 97752,
+      "content_type": "application/octet-stream",
+      "sha256": "b5c7a2cf749619c4ce4b888f455efc39b9d32d1d498f6e83c83643a31d57bcea",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "folder_id",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "f1994ef2-7d8e-4af0-ae10-7d8f4ae5bc20",
+      "filename": "DeafBats_RegularizedPermDFA_MaleAcGroup2.mat",
+      "description": null,
+      "folder_id": "2eb6086f-9be0-479b-b6bb-e9dc8b2874bb",
+      "size": 108594,
+      "content_type": "application/octet-stream",
+      "sha256": "1414d22b14915e1041484e130997b5b7d20a98af7f5e647d22e0ac350706346f",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "folder_id",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "6f0afb1f-f52f-4714-8581-41641e8cbdb0",
+      "filename": "DeafBats_RegularizedPermDFA_MaleAcGroup3.mat",
+      "description": null,
+      "folder_id": "2eb6086f-9be0-479b-b6bb-e9dc8b2874bb",
+      "size": 110201,
+      "content_type": "application/octet-stream",
+      "sha256": "67e423c5a564f6c2bbbb077e96d659db402256c28fc08bf22ff7c612a0d73aa8",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "folder_id",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "e8d86d2e-688a-478b-b4e0-afa14ae35786",
+      "filename": "DeafBats_RegularizedPermDFA_MaleAcGroup4.mat",
+      "description": null,
+      "folder_id": "2eb6086f-9be0-479b-b6bb-e9dc8b2874bb",
+      "size": 108885,
+      "content_type": "application/octet-stream",
+      "sha256": "213d16e7b2265e3ab7fecb4f1357c90017cc653c948d4fb7c99b14f352ecb340",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "folder_id",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "6d63559b-bcf4-4239-9644-a3cdb9aef85b",
+      "filename": "DeafBats_RegularizedPermDFA_MaleCalls.mat",
+      "description": null,
+      "folder_id": "2eb6086f-9be0-479b-b6bb-e9dc8b2874bb",
+      "size": 129420,
+      "content_type": "application/octet-stream",
+      "sha256": "3c92f9b34d84a137edff9d43d500a64fc14feec12802f587d4ee3faecd818e6f",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "folder_id",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "939acb32-afc1-4cda-b351-dfea5f7d7b01",
+      "filename": "Dissmilarity.mat",
+      "description": null,
+      "folder_id": "2eb6086f-9be0-479b-b6bb-e9dc8b2874bb",
+      "size": 861805,
+      "content_type": "application/octet-stream",
+      "sha256": "55f871eb7aac98cf8fc3e8af4f1fb562953ded20b27d4912e6c1ea52ceea7dc3",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "folder_id",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "441814ae-6371-48fa-be5a-b583ed5527f9",
+      "filename": "ExampleVoc_perAcGroup.mat",
+      "description": null,
+      "folder_id": "2eb6086f-9be0-479b-b6bb-e9dc8b2874bb",
+      "size": 17404108,
+      "content_type": "application/octet-stream",
+      "sha256": "3308a9d2e09e54d7e29c474e5927ce14ef41133c3ee2c7d99e73ec7cd9008394",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "folder_id",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "2d385479-1b68-429b-aaf3-198ac9a2a76d",
+      "filename": "FigureS2_PAF_AllCalls.pdf",
+      "description": null,
+      "folder_id": null,
+      "size": 132782,
+      "content_type": "application/pdf",
+      "sha256": "72468da93477702804a4275974bc8002bc723df55d29fd26f251c93224fd8581",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "0808374b-571a-47f0-bc37-4a18efcaf946",
+      "filename": "FigureS2_PAF_FemalesAcGroup1.pdf",
+      "description": null,
+      "folder_id": null,
+      "size": 110315,
+      "content_type": "application/pdf",
+      "sha256": "cd066e20b7e54837ca4b7347c3c283c157424dc9c516f3919213660329530126",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "55d60d05-b62d-482d-a1c4-a53405e0bc62",
+      "filename": "FigureS2_PAF_MalesAcGroup4.pdf",
+      "description": null,
+      "folder_id": null,
+      "size": 94170,
+      "content_type": "application/pdf",
+      "sha256": "88b318f23c8ac7a4861dec8e89c156c1a2a3f866e7084020c6816987e8e91a68",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "f0309234-5b39-4fbd-8adb-12cd8a08b8eb",
+      "filename": "MPS_AllBatsData.mat",
+      "description": null,
+      "folder_id": "2eb6086f-9be0-479b-b6bb-e9dc8b2874bb",
+      "size": 3201066285,
+      "content_type": "application/octet-stream",
+      "sha256": "ff5ef79f68602b4e57336636396f5090e5e2d9c343999e79ea72b1401b7f4bb2",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "folder_id",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "920c8a67-9f0f-4a5e-bc48-c038ae47e44f",
+      "filename": "PAF_AllBatsData.mat",
+      "description": null,
+      "folder_id": "2eb6086f-9be0-479b-b6bb-e9dc8b2874bb",
+      "size": 6448652,
+      "content_type": "application/octet-stream",
+      "sha256": "0b069bcdab31eb750a4cc2b9ec30ac40859fd8366a1c7a1f7bf2e6a25a75e230",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "folder_id",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "812a29db-5868-4700-95f8-f1943dc8a82f",
+      "filename": "ReadMe.rtf",
+      "description": null,
+      "folder_id": null,
+      "size": 5597,
+      "content_type": "text/rtf",
+      "sha256": "440616e736cc9b3a98a43e5eef58bfd8cbfae4f63b93b0fd89673270f4d7212a",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "8daed2a2-e793-4f05-84af-22dede13d25a",
+      "filename": "VideoAnalysis16.mat",
+      "description": null,
+      "folder_id": "2eb6086f-9be0-479b-b6bb-e9dc8b2874bb",
+      "size": 281116,
+      "content_type": "application/octet-stream",
+      "sha256": "ce1f89a4cdb74153b83573f75b418002e4fd87e9e4e60ddda6e1c76e338d0b97",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "folder_id",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "64eeed4d-573e-4a1f-8bc1-4e7fca472177",
+      "filename": "VideoAnalysis19.mat",
+      "description": null,
+      "folder_id": "2eb6086f-9be0-479b-b6bb-e9dc8b2874bb",
+      "size": 371572,
+      "content_type": "application/octet-stream",
+      "sha256": "067062f4a8c23ee34b569b33875709a1c7955c273f2bb858015bc77cf1385b45",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "folder_id",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "bbc3f091-ed0c-4054-a516-b3b6c792b112",
+      "filename": "VideoAnalysis22.mat",
+      "description": null,
+      "folder_id": "2eb6086f-9be0-479b-b6bb-e9dc8b2874bb",
+      "size": 380323,
+      "content_type": "application/octet-stream",
+      "sha256": "2c1ae408b4c9a4a5e400e5bfed916863c058539c54d5db62ecc546f99b27a527",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "folder_id",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "2dc8c890-d1f5-4fca-9b6a-8023fc24066c",
+      "filename": "VideoAnalysis2.mat",
+      "description": null,
+      "folder_id": "2eb6086f-9be0-479b-b6bb-e9dc8b2874bb",
+      "size": 263018,
+      "content_type": "application/octet-stream",
+      "sha256": "c25baabe40ec65f38995ee63fad00a0ca2ccc8ece0166dafa1d1af1ecbc69616",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "folder_id",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "9354a53b-3de1-4175-8fcc-70631734391a",
+      "filename": "VideoAnalysis30.mat",
+      "description": null,
+      "folder_id": "2eb6086f-9be0-479b-b6bb-e9dc8b2874bb",
+      "size": 309265,
+      "content_type": "application/octet-stream",
+      "sha256": "fada09e141b34fcc7a7b181cf3fdc104c6a7cfea4f293300d9f867e02414dcc9",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "folder_id",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "894203d3-8de1-45c0-8849-d432eb551d59",
+      "filename": "VideoAnalysis34.mat",
+      "description": null,
+      "folder_id": "2eb6086f-9be0-479b-b6bb-e9dc8b2874bb",
+      "size": 286007,
+      "content_type": "application/octet-stream",
+      "sha256": "f8f2a0ebe3160d68c1949d42ac73fb6d3fe17c9fc75000ce81c481c3b8cf5827",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "folder_id",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "bc156df9-f4ec-494d-81d8-08ec9eaa22eb",
+      "filename": "VideoAnalysis43.mat",
+      "description": null,
+      "folder_id": "2eb6086f-9be0-479b-b6bb-e9dc8b2874bb",
+      "size": 198047,
+      "content_type": "application/octet-stream",
+      "sha256": "dfa2ed420484be2fc6cbc8263913438dc1a3fe9dc28957ced7090b4eac562b10",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "folder_id",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "79f71416-ef2c-4a7f-be55-d07911ebac52",
+      "filename": "VideoAnalysis49.mat",
+      "description": null,
+      "folder_id": "2eb6086f-9be0-479b-b6bb-e9dc8b2874bb",
+      "size": 352703,
+      "content_type": "application/octet-stream",
+      "sha256": "e8d9372cd74f47575b546e9f3e343bb99359db2cb05a001bd11067c2f500504d",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "folder_id",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "e3015a50-061b-44ab-9703-76710762dc9d",
+      "filename": "VideoAnalysis5.mat",
+      "description": null,
+      "folder_id": "2eb6086f-9be0-479b-b6bb-e9dc8b2874bb",
+      "size": 214731,
+      "content_type": "application/octet-stream",
+      "sha256": "8fcb1a09c04a924dc8f7a2e1d03da82be88bb8cbbfe6633bb4e9b92041afd7c4",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "folder_id",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "81948c59-1921-4902-9af9-bdfd1882b378",
+      "filename": "VideoAnalysis6.mat",
+      "description": null,
+      "folder_id": "2eb6086f-9be0-479b-b6bb-e9dc8b2874bb",
+      "size": 166250,
+      "content_type": "application/octet-stream",
+      "sha256": "bab6fc706d1c6a77fd7a2358f8f6a64f80bed8277fae750bd11fb974f7fbd191",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "folder_id",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "b14f4bb4-a404-45fc-9068-b2ae68184c81",
+      "filename": "VideoAnalysis7.mat",
+      "description": null,
+      "folder_id": "2eb6086f-9be0-479b-b6bb-e9dc8b2874bb",
+      "size": 136853,
+      "content_type": "application/octet-stream",
+      "sha256": "bd716d9e4fc83c75e69bea8015cfb5c56a7fd1e82383eb2898b0a9b2f5855a52",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "folder_id",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "be5accc1-0c7c-4352-8019-82f62b15c683",
+      "filename": "VideoAnalysis8.mat",
+      "description": null,
+      "folder_id": "2eb6086f-9be0-479b-b6bb-e9dc8b2874bb",
+      "size": 222699,
+      "content_type": "application/octet-stream",
+      "sha256": "d7463b7fe852b81235dd353be9a63a5440e40a4e9457f478283329295d1702be",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "folder_id",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    },
+    {
+      "id": "01e3bdfc-469c-44f3-84ae-e6abe6132409",
+      "filename": "VideoAnalysis9.mat",
+      "description": null,
+      "folder_id": "2eb6086f-9be0-479b-b6bb-e9dc8b2874bb",
+      "size": 185520,
+      "content_type": "application/octet-stream",
+      "sha256": "2c245e825b428a62295f35c6f35a9192225013945b120eaad5a6f755a9d4e8e9",
+      "download_url_present": true,
+      "raw_keys": [
+        "content_details",
+        "filename",
+        "folder_id",
+        "id",
+        "last_modified_date",
+        "size",
+        "status"
+      ]
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://data.mendeley.com/public-api/datasets/h5ff9vv5pc/files?version=1&%24start=0&%24limit=1000&folder_id=root",
+      "ok": true,
+      "count": 31
+    },
+    {
+      "url": "https://data.mendeley.com/public-api/datasets/h5ff9vv5pc/files?version=1&%24start=0&%24limit=1000",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "url": "https://data.mendeley.com/api/datasets/h5ff9vv5pc/files?version=1&%24start=0&%24limit=1000&folder_id=root",
+      "ok": true,
+      "count": 31
+    },
+    {
+      "url": "https://data.mendeley.com/api/datasets/h5ff9vv5pc/files?version=1&%24start=0&%24limit=1000",
+      "ok": true,
+      "count": 80
+    }
+  ]
+}
