@@ -261,7 +261,7 @@ The contrast between coarse policy transfer and detailed-geometry transfer was t
 
 ## Wild field bridge
 
-The preregistered wild FlightIntensity carrier programme required support in at least 3 of 4 panels.
+The frozen wild FlightIntensity carrier programme required support in at least 3 of 4 panels.
 
 The frozen outcome was:
 - PASS;
@@ -491,7 +491,7 @@ Thus coarse individual organization generalized where detailed realized trajecto
 
 ## The laboratory-to-wild carrier bridge failed its frozen gate
 
-The preregistered wild FlightIntensity carrier gate required support in at least three of four panels.
+The frozen wild FlightIntensity carrier gate required support in at least three of four panels.
 
 Observed:
 - PASS;
