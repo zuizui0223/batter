@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "pdf": "submission/public_causal/SUPPLEMENTARY_MATERIAL_V1.pdf",
+  "sha256": "aaa6f2e7df4e67ea4cbadcb8dc08d260f5cbfc45a50aa067e85b97fad44dd4b9",
+  "bytes": 112181,
+  "pages": 9,
+  "preview_files": [
+    "PAGE_001.png",
+    "PAGE_005.png",
+    "PAGE_009.png"
+  ],
+  "forbidden_token_scan": "PASS",
+  "required_content_scan": "PASS"
+}
