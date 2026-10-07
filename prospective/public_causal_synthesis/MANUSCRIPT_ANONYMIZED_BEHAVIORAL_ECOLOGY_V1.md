@@ -675,10 +675,12 @@ All analyses use previously published public datasets.
 Key public sources include:
 
 - Harten et al. first-flight data: Mendeley Data `10.17632/n9d8gbz3xr.1`;
+- Taub & Yovel sensory-masker data: source-public Dropbox archive `https://www.dropbox.com/sh/met5cvcq9nmvxdd/AAAF4saT9FZl01FwWyRgD1pqa?dl=0`;
 - Rachum et al. developmental-enrichment data: Mendeley Data `10.17632/wh7c636y3t.1`;
 - Elie et al. auditory-feedback data: Mendeley Data `10.17632/h5ff9vv5pc.1`;
 - Diebold et al. auditory-midbrain data: Zenodo `10.5281/zenodo.13857870`;
 - Aharon et al. navigation data: Mendeley Data `10.17632/f6mvhj5gj9.3`;
+- Teshima et al. Rhino/Miniopterus flight-policy data: Figshare dataset *Flight policy in obstacle space: estimation from imitation learning in two echolocating bat species*, `https://figshare.com/articles/dataset/Flight_policy_in_obstacle_space_estimation_from_imitation_learning_in_two_echolocating_bat_species/29209493` (`kiku` = *Rhinolophus nippon*; `yubi` = *Miniopterus fuliginosus*);
 - Foskolos et al. graded-masking data: Zenodo `10.5281/zenodo.4946256` and Dryad `10.5061/dryad.ngf1vhhv3`;
 - Eveland et al. corridor data and code: public repository `00keveland/Tunnel_2026`, pinned for the external validation at commit `59928a71887d521fec143080b0b187736c046a0e`.
 
