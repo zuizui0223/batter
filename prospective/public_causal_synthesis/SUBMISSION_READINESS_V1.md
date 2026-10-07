@@ -248,7 +248,7 @@ PASS:
 ### Strongly recommended
 
 11. one external/internal human read focused on biological coherence rather than code;
-12. one final cross-check that every manuscript number matches `MASTER_RESULTS_TABLE_V1.md`;
+12. **DONE:** manuscript numerical transcription cross-checked in `MANUSCRIPT_NUMERICAL_AUDIT_V1.md`; ongoing drift guarded by CI;
 13. one cover-letter check against the submission status of the JAE manuscript.
 
 ## Current readiness verdict
