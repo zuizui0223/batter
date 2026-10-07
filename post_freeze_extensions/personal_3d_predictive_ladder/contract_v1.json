@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-personal-3d-predictive-ladder-v1",
+  "frozen_date": "2026-10-07",
+  "status": "post-outcome diagnostic frozen after collective-personal lane-B result and before opening the model-ladder scores",
+  "role": "separates marginal individual state from spatially resolved personal 3D shape in strictly future prediction",
+  "parent_result": {
+    "workflow_run_id": 37614056083,
+    "artifact_id": 11479333959,
+    "known_before_freeze": "personal conditional profiles beat other-individual conditional profiles in all three lane-B panels, but total self-conditional versus other-marginal gain is positive only in Hypsignathus"
+  },
+  "included_panels": ["hypsignathus","phyllostomus_2022","phyllostomus_2023"],
+  "expected_target_counts": {
+    "hypsignathus": {"sessions": 71, "individuals": 17},
+    "phyllostomus_2022": {"sessions": 66, "individuals": 18},
+    "phyllostomus_2023": {"sessions": 8, "individuals": 6}
+  },
+  "target_and_history_rules": {
+    "inherit_exactly": "lane B of batter-collective-personal-3d-decomposition-v1",
+    "minimum_history_lag_days": 3,
+    "minimum_other_history_individuals": 3,
+    "minimum_scored_target_fixes": 50,
+    "horizontal_grid_m": 500,
+    "vertical_center": "session median",
+    "same_target_support": "all model scores use exactly the same target fixes supported by both self-conditional and other-conditional histories"
+  },
+  "models": {
+    "G0_group_marginal": "equal-individual mean of other-individual equal-session marginal P(z)",
+    "I0_self_marginal": "equal-session mean of focal-individual marginal P(z)",
+    "G1_group_conditional": "equal-individual mean of other-individual equal-session P(z|cell)",
+    "I1_self_conditional": "equal-session mean of focal-individual P(z|cell)"
+  },
+  "contrasts": {
+    "marginal_identity_gain": "I0 - G0",
+    "shared_spatial_gain": "G1 - G0",
+    "self_spatial_increment": "I1 - I0",
+    "personal_conditional_advantage": "I1 - G1",
+    "total_personal_history_gain": "I1 - G0"
+  },
+  "identities": [
+    "total_personal_history_gain = marginal_identity_gain + self_spatial_increment",
+    "total_personal_history_gain = shared_spatial_gain + personal_conditional_advantage"
+  ],
+  "aggregation": "equal target session within biological individual, then equal biological individual",
+  "uncertainty": {
+    "method": "cluster bootstrap biological individuals with replacement",
+    "B": 4999,
+    "seeds": {
+      "hypsignathus": 2026100741,
+      "phyllostomus_2022": 2026100742,
+      "phyllostomus_2023": 2026100743
+    },
+    "support": "mean > 0 and percentile 95% lower bound > 0"
+  },
+  "primary_interpretive_rule": {
+    "shape_predictive": "self_spatial_increment supported",
+    "state_only_predictive": "marginal_identity_gain supported but self_spatial_increment unsupported",
+    "relative_personalization_only": "personal_conditional_advantage supported but total_personal_history_gain unsupported",
+    "full_personal_prediction": "total_personal_history_gain supported"
+  },
+  "claim_boundary": [
+    "This diagnostic was motivated by known lane-B results and is not independent confirmation.",
+    "A positive personal_conditional_advantage alone means the focal map is less wrong than other maps; it does not imply positive absolute predictive value over a marginal baseline.",
+    "A positive self_spatial_increment is the required evidence that spatially resolved personal 3D shape adds forward predictive information beyond the focal animal's own marginal vertical state.",
+    "No target set, lag, grid, support rule, weighting, contrast or bootstrap criterion may change after output."
+  ]
+}
