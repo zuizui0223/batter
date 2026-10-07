@@ -686,7 +686,7 @@ Key public sources include:
 - Foskolos et al. graded-masking data: Zenodo `10.5281/zenodo.4946256` and Dryad `10.5061/dryad.ngf1vhhv3` (Foskolos et al. 2022b);
 - Eveland et al. corridor data and code: public repository `00keveland/Tunnel_2026`, pinned for the external validation at commit `59928a71887d521fec143080b0b187736c046a0e` (Eveland et al. 2026b).
 
-Source-level analysis contracts, structural audit records, executable scripts, exact/randomization logic, result receipts, synthesis files and figure-generation code will be supplied in an anonymized review archive: `[ANONYMIZED_REVIEW_ARCHIVE_URL]`.
+Source-level analysis contracts, structural audit records, executable scripts, exact/randomization logic, result receipts, synthesis files and figure-generation code will be supplied in an anonymized review archive: `[ANONYMIZED_REVIEW_ARCHIVE_URL]` (Anonymous 2026).
 
 
 ## Analysis provenance
@@ -711,7 +711,9 @@ Such analyses are not allowed to rescue a failed frozen primary.
 No new animals were captured, handled or experimentally manipulated for this study. All analyses use public data from previously published studies. Ethical approvals and animal-care procedures for the original experiments are reported in the respective source publications.
 
 
-# References
+# References — working list
+
+- Anonymous. 2026. Reproducibility archive for: Individual organization remains detectable across acute perturbations in bats. `[ANONYMIZED_REVIEW_ARCHIVE_URL]`.
 
 - Aharon G, Sadot M, Yovel Y. 2017a. Bats use path integration rather than acoustic flow to assess flight distance along flyways. *Current Biology* 27:3650–3657.e3. DOI: `10.1016/j.cub.2017.10.012`.
 
