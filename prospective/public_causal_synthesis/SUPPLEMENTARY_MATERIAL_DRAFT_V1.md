@@ -53,6 +53,7 @@ The provenance timeline summarizes the sequence:
 5. implementation-only correction, when one occurred.
 
 Special cases shown explicitly:
+
 - Eptesicus: a Euclidean-distance syntax error was corrected without changing the frozen endpoint, statistic or null before the successful rerun;
 - Aharon: an initial API-access failure was resolved through the anonymous public file route before the frozen Figure-1 primary opened;
 - Rachum: the primary calculation completed reproducibly while an output-receipt push race affected persistence only, not the numerical result.
@@ -80,6 +81,7 @@ All three point in the enriched > impoverished direction. No trait-wise p-values
 All 28 feature contributions to the frozen adult-vocal D are plotted in descending absolute magnitude.
 
 Summary:
+
 - positive contribution sum = +3.746740;
 - negative contribution sum = -5.172237;
 - 15 positive / 13 negative dimensions;
@@ -108,6 +110,7 @@ See Supplementary Material Figure S3.
 # Supplementary Methods S1. Evidence-tier rules
 
 Define:
+
 - frozen primary;
 - predeclared secondary;
 - post-primary diagnostic;
@@ -122,6 +125,7 @@ State explicitly that a lower evidence tier cannot rescue a failed higher-tier g
 # Supplementary Methods S2. Cross-study synthesis boundary
 
 State:
+
 - no pooled quantitative meta-analysis;
 - no shared effect-size scale across endpoints;
 - common inferential object for acute perturbation = same-individual correspondence after shared context effects are removed;
