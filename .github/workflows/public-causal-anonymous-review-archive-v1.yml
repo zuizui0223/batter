@@ -1,0 +1,36 @@
+name: public-causal-anonymous-review-archive-v1
+
+on:
+  push:
+    branches:
+      - prospective/public-causal-synthesis-v1
+    paths:
+      - "prospective/public_causal_synthesis/DATA_SOURCE_MANIFEST_V1.csv"
+      - "prospective/public_causal_synthesis/REVIEW_ARCHIVE_README_V1.md"
+      - "prospective/public_causal_synthesis/ANONYMOUS_REVIEW_ARCHIVE_PLAN_V1.md"
+      - "prospective/public_causal_synthesis/build_anonymous_review_archive_v1.py"
+      - "prospective/public_causal_synthesis/COMPLETE_ANONYMOUS_TEXT_V1.md"
+      - "prospective/public_causal_synthesis/EVIDENCE_MATRIX_V1.md"
+      - "prospective/public_causal_synthesis/MASTER_RESULTS_TABLE_V1.md"
+      - "prospective/public_causal_synthesis/MANUSCRIPT_NUMERICAL_AUDIT_V1.md"
+      - ".github/workflows/public-causal-anonymous-review-archive-v1.yml"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: prospective/public-causal-synthesis-v1
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build sanitized review archive
+        run: python prospective/public_causal_synthesis/build_anonymous_review_archive_v1.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: behavioral-ecology-anonymous-review-archive-v1
+          path: dist/behavioral_ecology_anonymous_review_archive_v1.zip
+          if-no-files-found: error
