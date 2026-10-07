@@ -154,3 +154,71 @@ Therefore the strongest current public-data synthesis is not:
 It is:
 
 > **persistent individual organization can be history-refined and can survive substantial context perturbation, while the causal process that first creates the between-individual differences remains only partly identified.**
+
+
+## Post-primary state-rewriting secondary
+
+Status:
+
+**DESCRIPTIVE ONLY — NO P-VALUES; CANNOT RESCUE THE PRIMARY.**
+
+The pre-authorized secondary compared three leave-one-out predictions of Trial 3:
+
+- B: own baseline only;
+- G: treatment-group post state only;
+- B+S: own baseline plus peer-estimated shared treatment shift.
+
+Overall squared prediction error:
+
+- B: mean **3.137006**, median **2.331455**;
+- G: mean **4.189011**, median **2.744294**;
+- B+S: mean **2.628609**, median **1.741336**.
+
+Thus the lowest overall error is obtained by:
+
+> **personal baseline + shared treatment-associated shift.**
+
+Pairwise bat fractions:
+- B+S better than B: **0.655**;
+- B+S better than G: **0.586**;
+- B better than G: **0.483**.
+
+### Enriched group
+
+Mean error:
+- B: **4.060592**;
+- G: **3.091958**;
+- B+S: **3.081073**.
+
+Thus in enriched bats, the group-state-only and baseline-plus-shift descriptions are nearly tied, while baseline-only prediction is substantially worse.
+
+### Impoverished group
+
+Mean error:
+- B: **2.274992**;
+- G: **5.212927**;
+- B+S: **2.206309**.
+
+Thus in impoverished bats, retaining the animal's baseline state is much more informative than predicting from the group state alone.
+
+### Descriptive biological interpretation
+
+The secondary does not support a confirmatory new claim, but it sharpens the primary boundary.
+
+The pattern is more compatible with:
+
+> **environmental enrichment strongly repositions the behavioral state, while impoverished animals retain more direct baseline-state predictability.**
+
+Across all bats, the best simple description is not complete overwrite but:
+
+[
+\text{later state}
+\approx
+\text{personal baseline}
++
+\text{shared environmental shift}.
+]
+
+This is consistent with a **state-rewriting / calibration** effect rather than simple amplification of individuality.
+
+Do not promote this secondary into evidence that enrichment erases individuality or causes convergence; the enriched G versus B+S difference is descriptive and very small.
