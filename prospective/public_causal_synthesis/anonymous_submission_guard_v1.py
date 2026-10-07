@@ -73,6 +73,17 @@ for token in [
 if "[ANONYMIZED_REVIEW_ARCHIVE_URL]" not in text:
     raise SystemExit("STOP: anonymized review archive placeholder missing")
 
+required_ai = [
+    "OpenAI ChatGPT",
+    "GPT-5.6 Sol",
+    "literature triage",
+    "human authors",
+    "full responsibility",
+]
+for token in required_ai:
+    if token not in text:
+        raise SystemExit(f"STOP: required AI disclosure token missing: {token!r}")
+
 # Internal-only labels should not appear.
 for token in [
     "**Working target:**",
