@@ -401,7 +401,7 @@ The wild bridge failed its frozen gate.
 
 The paper may claim:
 
-> **formation and maintenance are empirically separable in the analysed bat systems.**
+> **formation/history, acute maintenance, context-specific expression and ecological consequence show distinct empirical signatures across the analysed bat systems.**
 
 It may claim:
 
