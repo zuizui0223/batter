@@ -1,0 +1,41 @@
+name: pinna-flight-zenodo2026-source-schema-v1
+on:
+  push:
+    branches:
+      - prospective/zenodo-pinna-flight-identity-gate-v1
+    paths:
+      - "prospective/external_pinna_2026/preflight_pinna_zenodo_v1.py"
+      - ".github/workflows/pinna-flight-zenodo2026-source-schema-v1.yml"
+  workflow_dispatch:
+
+jobs:
+  original-author-compiled-data-gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    permissions: {contents: read}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.13"}
+      - run: python -m pip install 'requests==2.32.5'
+      - name: Check exact source-only script
+        run: |
+          python -m py_compile prospective/external_pinna_2026/preflight_pinna_zenodo_v1.py
+          python prospective/external_pinna_2026/preflight_pinna_zenodo_v1.py --help
+      - name: Probe exact Zenodo v1 metadata and first header line only
+        run: |
+          python prospective/external_pinna_2026/preflight_pinna_zenodo_v1.py --out PINNA_FLIGHT_ZENODO_STRUCTURAL_RECEIPT_V1.json
+          python - <<'PY'
+          import json
+          x=json.load(open("PINNA_FLIGHT_ZENODO_STRUCTURAL_RECEIPT_V1.json"))
+          assert x["record_id"]=="20927789"
+          assert x["doi"]=="10.5281/zenodo.20927789"
+          assert x["numeric_kinematic_ear_or_bat_measurements_opened"] is False
+          assert x["categorical_support_counted"] is False
+          print("metadata-structural-only gate:",x["status"])
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pinna-flight-zenodo2026-source-receipt
+          path: PINNA_FLIGHT_ZENODO_STRUCTURAL_RECEIPT_V1.json
+          if-no-files-found: error
