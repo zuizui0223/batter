@@ -49,7 +49,7 @@ def text_header(first):
 def self_test_header():
     # Regression for the original false-positive: compressed bytes are NOT CSV.
     import gzip
-    plain=b"BatID,FlightID,ear_angle,velocity\\n1,2,3,4\\n"
+    plain=b"BatID,FlightID,ear_angle,velocity\n1,2,3,4\n"
     gz=gzip.compress(plain)
     bad=text_header(gz)
     assert bad["gate"]=="STOP_COMPRESSED_HEADER_NOT_DECODED",bad
