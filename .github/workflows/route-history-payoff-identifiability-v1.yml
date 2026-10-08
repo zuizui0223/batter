@@ -1,0 +1,38 @@
+name: route-history-payoff-identifiability-v1
+on:
+  push:
+    branches:
+      - prospective/route-history-payoff-revaluation-v1
+    paths:
+      - "prospective/solution_repertoire_experiment/route_payoff_stress_v1.py"
+      - "prospective/solution_repertoire_experiment/ROUTE_HISTORY_PAYOFF_IDENTIFIABILITY_CONTRACT_V1.md"
+      - ".github/workflows/route-history-payoff-identifiability-v1.yml"
+  workflow_dispatch:
+jobs:
+  paired-history-payoff:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.13"}
+      - run: python -m pip install 'numpy==2.3.5'
+      - name: Verify frozen source bytes
+        run: |
+          printf '%s\n' 'fd4c60215482bb31a2c4bffc9bb60ac263e8ac58c2023d7c4245559e78de80de  prospective/solution_repertoire_experiment/route_payoff_stress_v1.py' | sha256sum -c -
+      - name: Check constrained randomization and coupled worlds
+        run: python prospective/solution_repertoire_experiment/route_payoff_stress_v1.py --self-test
+      - name: Reproduce 1,000 synthetic paired experiments
+        run: |
+          python prospective/solution_repertoire_experiment/route_payoff_stress_v1.py --out ROUTE_HISTORY_PAYOFF_SIMULATION_RESULT_V1.json > synthetic_stdout.json
+          printf '%s\n' 'c99fcd90858d8555df4a002c4033fe7373efc49355c362589d5bde16938c1d4f  ROUTE_HISTORY_PAYOFF_SIMULATION_RESULT_V1.json' | sha256sum -c -
+      - uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: route-history-payoff-v1
+          path: |
+            ROUTE_HISTORY_PAYOFF_SIMULATION_RESULT_V1.json
+            synthetic_stdout.json
+          if-no-files-found: error
