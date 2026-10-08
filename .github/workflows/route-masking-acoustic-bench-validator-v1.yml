@@ -1,0 +1,31 @@
+name: route-masking-acoustic-bench-validator-v1
+on:
+  push:
+    branches:
+      - prospective/route-masking-acoustic-bench-gate-v1
+    paths:
+      - "prospective/colony_acoustic_identity/validate_route_masker_acoustic_bench_v1.py"
+      - ".github/workflows/route-masking-acoustic-bench-validator-v1.yml"
+  workflow_dispatch:
+jobs:
+  physical-apparatus-fail-closed-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    permissions: {contents: read}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.13"}
+      - name: Compile physical bench source validator
+        run: python -m py_compile prospective/colony_acoustic_identity/validate_route_masker_acoustic_bench_v1.py
+      - name: Verify all mechanical and acoustic guards with openly marked dummy inputs
+        run: python prospective/colony_acoustic_identity/validate_route_masker_acoustic_bench_v1.py --self-test
+      - name: Verify no real source is silently fabricated
+        run: |
+          set +e
+          python prospective/colony_acoustic_identity/validate_route_masker_acoustic_bench_v1.py > /tmp/bench_missing_source.log 2>&1
+          ec=$?
+          set -e
+          if [ "$ec" -eq 0 ]; then echo "ERROR: accepted absent physical measurements"; exit 1; fi
+          grep -q "must supply actual source" /tmp/bench_missing_source.log
+          echo "NO_REAL_BENCH_SOURCE_STOP: PASS"
