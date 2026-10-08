@@ -1,0 +1,39 @@
+name: synthetic-cross-night-reaction-norm-gate-v1
+on:
+  push:
+    branches:
+      - prospective/repeated-context-personal-response-gate-v1
+    paths:
+      - "prospective/reaction_norm_gate/**"
+      - ".github/workflows/repeated-context-synthetic-gate-v1.yml"
+  workflow_dispatch:
+jobs:
+  synthetic-proof-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    permissions: {contents: read}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.13"}
+      - name: Compile
+        run: python -m py_compile prospective/reaction_norm_gate/replicated_contrast_synthetic_v1.py
+      - name: Prove synthetic invariances and display synthetic nulls
+        run: python prospective/reaction_norm_gate/replicated_contrast_synthetic_v1.py --self-test
+      - name: Compile four-feature synthetic archive-null audit
+        run: python -m py_compile prospective/reaction_norm_gate/rhino_four_feature_synthetic_null_v1.py
+      - name: Stress-test four-feature target-blind null without empirical data
+        run: python prospective/reaction_norm_gate/rhino_four_feature_synthetic_null_v1.py --self-test
+      - name: Compile variance-preserving whole-cell sign-flip simulation
+        run: python -m py_compile prospective/reaction_norm_gate/whole_cell_signflip_synthetic_v1.py
+      - name: Calibrate whole-cell sign null with fabricated four-feature data
+        run: python prospective/reaction_norm_gate/whole_cell_signflip_synthetic_v1.py --self-test
+      - name: Fail closed when no real source is supplied
+        run: |
+          set +e
+          python prospective/reaction_norm_gate/replicated_contrast_synthetic_v1.py >/tmp/reaction_missing_flag.log 2>&1
+          status=$?
+          set -e
+          test "$status" -ne 0
+          grep -q "synthetic-only gate" /tmp/reaction_missing_flag.log
+          echo "NO_REAL_BAT_INPUT_AVAILABLE: PASS"
