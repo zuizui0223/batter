@@ -1,0 +1,40 @@
+name: dryad-2015-pipistrellus-xlsx-source-schema-v1
+on:
+  push:
+    branches:
+      - prospective/pipistrellus-jamming-xlsx-source-v1
+    paths:
+      - "prospective/public_jamming2015/preflight_dryad_2015_xlsx_v1.py"
+      - ".github/workflows/dryad-2015-pipistrellus-xlsx-source-schema-v1.yml"
+  workflow_dispatch:
+
+jobs:
+  source-header-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    permissions: {contents: read}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.13"}
+      - name: Install official-download HTTP client only
+        run: python -m pip install 'requests==2.32.5'
+      - name: Compile first-row schema reader
+        run: |
+          python -m py_compile prospective/public_jamming2015/preflight_dryad_2015_xlsx_v1.py
+          python prospective/public_jamming2015/preflight_dryad_2015_xlsx_v1.py --help
+      - name: Inspect publisher file URL and native XLSX headers only
+        run: |
+          python prospective/public_jamming2015/preflight_dryad_2015_xlsx_v1.py --out PIPISTRELLUS_DRYAD_2015_SCHEMA_RECEIPT_V1.json
+          python - <<'PY'
+          import json
+          x=json.load(open("PIPISTRELLUS_DRYAD_2015_SCHEMA_RECEIPT_V1.json"))
+          assert x["doi"]=="10.5061/dryad.8f0v4"
+          assert x["outcome_values_opened"] is False
+          print("Gate result:",x["status"])
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pipistrellus-dryad-2015-schema-only-v1
+          path: PIPISTRELLUS_DRYAD_2015_SCHEMA_RECEIPT_V1.json
+          if-no-files-found: error
