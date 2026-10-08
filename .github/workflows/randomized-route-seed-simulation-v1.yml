@@ -1,0 +1,33 @@
+name: randomized-route-seed-simulation-v1
+on:
+  push:
+    branches:
+      - prospective/randomized-route-seed-history-v1
+    paths:
+      - "prospective/solution_repertoire_experiment/randomized_route_seed_simulation_v1.py"
+      - ".github/workflows/randomized-route-seed-simulation-v1.yml"
+  workflow_dispatch:
+
+jobs:
+  synthetic-identifiability-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    permissions: {contents: read}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Pin same numerical runtime as local independent reimplementation
+        run: python -m pip install 'numpy==2.3.5'
+      - name: Check exact 24^5 blocked null against 576 exhaustive assignments
+        run: python prospective/solution_repertoire_experiment/randomized_route_seed_simulation_v1.py --self-test
+      - name: Run seven locked hypothetical mechanisms
+        run: >
+          python prospective/solution_repertoire_experiment/randomized_route_seed_simulation_v1.py
+          --out RANDOMIZED_ROUTE_SEED_SIMULATION_RESULT_V1.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: randomized-route-seed-simulation-v1
+          path: RANDOMIZED_ROUTE_SEED_SIMULATION_RESULT_V1.json
+          if-no-files-found: error
