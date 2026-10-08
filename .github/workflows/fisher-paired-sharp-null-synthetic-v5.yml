@@ -1,0 +1,31 @@
+name: fisher-paired-sharp-null-synthetic-v5
+on:
+  push:
+    branches:
+      - prospective/repeated-context-personal-response-gate-v1
+    paths:
+      - "prospective/reaction_norm_gate/paired_assignment_randomization_synthetic_v5.py"
+      - ".github/workflows/fisher-paired-sharp-null-synthetic-v5.yml"
+  workflow_dispatch:
+jobs:
+  design-based-null-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    permissions: {contents: read}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.13"}
+      - name: Compile standalone synthetic test
+        run: python -m py_compile prospective/reaction_norm_gate/paired_assignment_randomization_synthetic_v5.py
+      - name: Enumerate 32768 assignments and verify exact sharp-null calibration
+        run: python prospective/reaction_norm_gate/paired_assignment_randomization_synthetic_v5.py --self-test
+      - name: Verify absent real source fails closed
+        run: |
+          set +e
+          python prospective/reaction_norm_gate/paired_assignment_randomization_synthetic_v5.py >/tmp/missing.log 2>&1
+          status=$?
+          set -e
+          test "$status" -ne 0
+          grep -q "synthetic-only" /tmp/missing.log
+          echo "NO_EMPIRICAL_DATA: PASS"
