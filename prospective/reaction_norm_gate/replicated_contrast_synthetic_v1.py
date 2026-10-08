@@ -91,6 +91,30 @@ def make_four_sessions(scale: float = 1.0) -> list[list[float]]:
             for shared in (11.0, 18.0, 13.0, 21.0)]
 
 
+def independent_sigma_gaussian_p(s1: list[float], s2: list[float],
+                                 sigma: list[float]) -> float:
+    """One-sided Gaussian correspondence null with KNOWN independent S2 SDs.
+
+    Theory: after centering s1, sum_i (s1_i-mean1)*s2_i has variance
+    sum_i ((s1_i-mean1)^2 * sigma_i^2) conditional on s1.
+    Centering s2 changes nothing because centered s1 sums to zero.
+    Valid ONLY if held-out S2 residuals are independent zero-mean Gaussian
+    with sigma_i fixed from independent, non-outcome data; permanent bat
+    effects and device biases violate this null. Not a biological test.
+    """
+    from math import erfc, sqrt
+    if len(s1) != len(s2) or len(s1) != len(sigma):
+        raise ValueError("Unmatched bat/SD arrays")
+    x = centered(s1)
+    if any((not isfinite(s)) or s <= 0 for s in sigma):
+        raise ValueError("Known independent sigma must be finite and positive")
+    stat = sum(a*b for a, b in zip(x, s2))
+    v = sum(a*a*s*s for a, s in zip(x, sigma))
+    if v <= 1e-18:
+        raise ValueError("Degenerate training contrast")
+    return 0.5 * erfc((stat / sqrt(v)) / sqrt(2))
+
+
 def simulate_null_calibration(nrep: int = 1200, seed: int = 20261008) -> dict:
     """Synthetic empirical size of the exact permutation p under two nulls.
 
@@ -105,8 +129,8 @@ def simulate_null_calibration(nrep: int = 1200, seed: int = 20261008) -> dict:
     all_perms = list(perm_fn(range(n)))
     rng = random.Random(seed)
 
-    def trial(sigmas: list[float]) -> float:
-        positive = 0
+    def trial(sigmas: list[float]) -> tuple[float, float]:
+        positive_perm, positive_known_sigma = 0, 0
         for _ in range(nrep):
             x = centered([rng.gauss(0.0, sigma) for sigma in sigmas])
             y = centered([rng.gauss(0.0, sigma) for sigma in sigmas])
@@ -116,16 +140,23 @@ def simulate_null_calibration(nrep: int = 1200, seed: int = 20261008) -> dict:
                 for p in all_perms
             )
             if extreme / len(all_perms) <= .05:
-                positive += 1
-        return positive / nrep
+                positive_perm += 1
+            # Oracle comparison: true individual SD is presumed from
+            # independent evidence and is not estimated from x or y.
+            if independent_sigma_gaussian_p(x, y, sigmas) <= .05:
+                positive_known_sigma += 1
+        return positive_perm / nrep, positive_known_sigma / nrep
 
-    equal = trial([1.0] * n)
-    unequal = trial([0.3, 0.6, 1.2, 2.5, 5.0])
+    equal, equal_known_sigma = trial([1.0] * n)
+    unequal, unequal_known_sigma = trial([0.3, 0.6, 1.2, 2.5, 5.0])
     return {
         "synthetic_bats": n,
         "synthetic_replicates_per_scenario": nrep,
         "synthetic_uniform_sd_null_reject_at_p005": equal,
         "synthetic_heterogeneous_sd_null_reject_at_p005": unequal,
+        "synthetic_known_independent_sigma_null_reject_equal": equal_known_sigma,
+        "synthetic_known_independent_sigma_null_reject_unequal": unequal_known_sigma,
+        "known_sigma_null_scope": "oracle independently known Gaussian bat-level noise SD; cannot be estimated from these two held-out tests",
         "nominal_rate": 0.05,
         "warning": "individual-label permutation is not calibrated under heteroscedastic individual errors",
     }
@@ -180,6 +211,11 @@ def self_test() -> dict:
     assert calibration["synthetic_heterogeneous_sd_null_reject_at_p005"] > (
         calibration["synthetic_uniform_sd_null_reject_at_p005"] + .025
     )
+    assert 0.015 < calibration["synthetic_known_independent_sigma_null_reject_equal"] < 0.085
+    assert 0.015 < calibration["synthetic_known_independent_sigma_null_reject_unequal"] < 0.085
+    assert calibration["synthetic_heterogeneous_sd_null_reject_at_p005"] > (
+        calibration["synthetic_known_independent_sigma_null_reject_unequal"] + .025
+    )
 
     return {
         "synthetic_four_occasion_holdout": "PASS",
@@ -187,6 +223,7 @@ def self_test() -> dict:
         "synthetic_permanent_device_bias_nonidentification": "PASS",
         "synthetic_sensor_rotation_exposes_device_artifact": "PASS",
         "synthetic_heteroscedastic_false_positive_warning": "PASS",
+        "synthetic_independently_known_sigma_oracle_calibration": "PASS",
         "synthetic_null_calibration": calibration,
         "synthetic_heldout_reliable_response": perfect,
         "synthetic_heldout_no_personal_response": no_personal,
