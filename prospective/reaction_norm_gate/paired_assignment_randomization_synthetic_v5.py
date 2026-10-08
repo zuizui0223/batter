@@ -99,13 +99,24 @@ def check():
     assert all(abs(a-b)<1e-9 for a,b in zip(weights,weights2))
     assert abs(treatment_stat(weights2,fixed_assignment)-observed)<1e-9
 
-    # Crucial COUNTEREXAMPLE: identical positive effect tau for every bat
-    # makes the sharp-null test reject; that is NOT heterogeneous policy.
+    # Crucial COUNTEREXAMPLE: identical positive treatment effect tau for
+    # every bat, every block, every potential outcome. Construct ACTUAL
+    # observed slot outcomes under randomized treatment, then under the
+    # hypothesized sharp NULL impute both missing slot outcomes as equal to
+    # their observed values. The Fisher null distribution MUST therefore
+    # be recomputed from the observed outcome differences, not incorrectly
+    # re-used from the unobserved all-control slot differences.
     tau=100.0
-    shared_D=[tau + (2*z-1)*w for z,w in zip(fixed_assignment,weights)]
-    shared_T=sum(shared_D)/len(shared_D)
-    shared_null_p=exact_one_sided_p(distribution,shared_T)
-    assert shared_null_p <= 1/N_ASSIGN
+    treated_observed=[]
+    for (_bat,_s,y0,y1),z in zip(records,fixed_assignment):
+        treated_observed.append((y0+tau if z else y0,
+                                 y1 if z else y1+tau))
+    treated_weights=[y0-y1 for y0,y1 in treated_observed]
+    shared_T=treatment_stat(treated_weights,fixed_assignment)
+    shared_null_dist=null_distribution(treated_weights)
+    shared_null_p=exact_one_sided_p(shared_null_dist,shared_T)
+    assert 0.0 < shared_null_p <= 1/N_ASSIGN
+    assert abs(shared_T-(tau+observed)) < 1e-9
     assert len(set(BATS))==5
 
     rates={}
