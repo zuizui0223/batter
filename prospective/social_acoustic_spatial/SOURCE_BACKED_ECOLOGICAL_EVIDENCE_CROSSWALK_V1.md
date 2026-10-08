@@ -18,6 +18,17 @@
 | Pradhan et al., Commun Biol (2026), DOI 10.1038/s42003-026-10966-7 | *Mormoops megalophylla* dyadic lead/follow switches, 3-D tracking + echolocation | Followers begin turns earlier and can speed up to assume lead | Individual route adjustment may be socially role-conditional | Public Mendeley v4 DOI 10.17632/mrnvkzrdsd.4 lists raw MAT arrays, but source-pinned public API tested Oct 8 2026 returned 403. Stable across-bout individual IDs and emitters unverified: STOP |
 | Original `batter` lab *Rhinolophus* and field analyses | 5 lab animals, plus distinct wild panels | Same-lab context-relative personal 1D/2D movement signatures exist. Original wild carrier gate 2/4 FAIL; external lab source identity is not a confirmed wild vertical-niche cause. | Motivates separation of personal movement policy and route realization | Original authoritative 45 trajectory CSVs DO contain a timestamped binary `pulse` emission-event field alongside X/Y/Z; a post-primary frozen pulse-timing identity contract exists. They DO NOT contain verified rich emitted spectral frequency, sonar beam direction or individually received echo waveforms. Pulse-timing identity is not evidence for acoustic niche substitution, and same-data post-primary analysis is not independent confirmation |
 
+## Additional already-published 2026 multimodal sensorimotor mechanism — temporal redundancy
+
+Mazar & Yovel (2026), *Agent-based modeling reveals how bats navigate dense group emergences*, eLife 14:RP105571, DOI `10.7554/eLife.105571`, https://elifesciences.org/articles/105571 .
+
+- This is a **2-D agent-based simulation**, NOT measured single-bat sensorimotor memory windows or an independently tagged 3-D experimental dataset. Source code/data publicly accessible: https://github.com/omermazar/Colony-Exit-Bat-Simulation and Zenodo `10.5281/zenodo.16992617`.
+- Published model mechanistically separates acoustic masking and spatial collision avoidance; simulated exit success with 100 bats drops from 100% (no interaction) to ~87% when spatial interference occurs, then ~63% with additional acoustic masking. The outcomes are simulated, not wild sample rates.
+- Temporal accumulation of acoustic evidence is **already a published sufficient mechanism**: increasing the number of stored recent calls from 1 to 10 improved simulated exit success from ~20% to ~87%, even under masking; short inter-pulse intervals help supply redundant evidence.
+- This refutes any novelty claim that `batter` is the first to model bats navigating noisy groups by integrating echoes over time or spatial steering/signal interference simultaneously.
+- A genuinely new, testable individual-level question would be whether **focal-bat-specific, cross-context temporal evidence integration rules** predict held-out changes in spatial and acoustic control after accounting for call rate, task and social geometry. The present five-bat `pulse` field marks emissions, **not received echo evidence**, so estimating true integration horizons from its binary event train is not identified.
+- Do not use simulated short-term call integration as proof of a bat's long-term personal learned-route memory. Those are different temporal states.
+
 ## Critical same-source 2026 published prior art — mandatory positioning
 
 **Teshima, Genda, Aoki, Fujisawa, Hiryu & Fujii (2026), "Evidence for latent regularities in echolocation-guided flight behaviour of bats", Proceedings of the Royal Society B 293(2076):20261463, DOI 10.1098/rspb.2026.1463.**
