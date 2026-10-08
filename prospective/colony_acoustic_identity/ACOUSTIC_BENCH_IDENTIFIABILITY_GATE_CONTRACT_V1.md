@@ -21,11 +21,11 @@ No supplied real records exist in this branch. A future technician must make two
 `bench_manifest.json`:
 - `source_id` nonempty, `acoustic_band_hz` two *facility-provided* ordered Hz values, `mic_calibrated` true, `transmitter_calibrated` true;
 - `source_dataset_sha256` exactly 64 lowercase hex chars for the raw measurement package (not computed from the manifest itself);
-- `anchor_points`: 2–25 canonical R1 physical points, with unique `point_id`, 3D coordinates `x_m, y_m, z_m`, and fixed receiving/probe orientation.
-- `alternative_points`: an array of mapped physical R2–R4 positions for an open-gate ecological opportunity map; site-recorded geometry for each, no invented locations;
+- `anchor_points`: 2–25 canonical R1 physical points, with unique `point_id`, 3D coordinates `x_m, y_m, z_m`, and fixed receiving/probe orientation, plus canonical `station_id`.
+- `alternative_points`: an array of mapped physical R2–R4 positions for an open-gate ecological opportunity map; site-recorded geometry plus `route_id` R2/R3/R4 and matched `station_id`, no invented locations;
 - `bench_repeat_floor`: must be >=3 **independent bench repeated setups** (distinct day/setup IDs); repeated waveform FFT bins or time frames are not independent bench setups;
 - `max_allowed_fixed_point_snr_gate_bias_db` and `max_allowed_fixed_point_snr_gate_x_masker_interaction_db`: positive tolerances chosen by pilot engineers/acousticians **before reading these measurements**, with a calibration/behavioral rationale. No arbitrary default numerical acceptance tolerance is implemented.
-- `min_clearance_m` and `max_acceptable_target_loss_db`: pilot-validated limits, positive. This is NOT a bat welfare threshold selected by this model.
+- `min_clearance_m` and `max_acceptable_target_loss_db`: pilot-validated limits, positive; `max_safe_peak_db_spl`: independently approved physical exposure limit chosen before measurement. This is NOT a bat welfare threshold selected by this model.
 
 `bench_acoustics.csv` one calibrated summary per physically independent setup×fixed probe point×configuration:
 - `point_id`, `repeat_id`, `route_open` (0/1), `masker_on` (0/1), `target_echo_db_spl`, `background_db_spl`, `max_peak_db_spl`, `measured_clearance_m`;
@@ -46,7 +46,7 @@ Also compute **target echo** and **background level** absolute gate differences 
 Distinctly for accessible alternatives with R=1/M=1, report the measured range of acoustic SNR relative to the canonical R1 point at matched path stations. This is a **possibility map**, not evidence of bat pathway choice or ecological advantage; mechanical and sensory effects need separate endpoints.
 
 ## Stop/fail-closed rules before analyzing animals
-- Missing manifest, no real bench measurements, uncalibrated equipment, source-file hash absent, missing predeclared tolerances, insufficient independent repeated setups, missing an R1×M cell, duplicated probe×repeat×condition, invalid units, nonfinite values, or implausible positive clearance => `STOP_BENCH_SOURCE_OR_STRUCTURE`.
+- Missing manifest, no real bench measurements, uncalibrated equipment, source-file hash missing or mismatched, missing predeclared tolerances, insufficient independent repeated setups, missing an R1×M cell, duplicated probe×repeat×condition, invalid units, nonfinite values, or implausible positive clearance => `STOP_BENCH_SOURCE_OR_STRUCTURE`.
 - If physical measured R1 gate response exceeds either predeclared limit, => `STOP_ROUTE_GATE_ACOUSTIC_CONFOUND` (cannot interpret a pure route-availability×masking bat test as designed, though an alternative joint-route-and-echo manipulation could be newly preregistered).
 - If physical clearance falls below predeclared min or max peak exposure exceeds independently approved facility safe limits, => `STOP_PHYSICAL_SAFETY_OR_REWARD`.
 - `PASS_PHYSICS_BENCH_ONLY` means calibrated apparatus constraints met; **not** animal study authorization and not evidence of masking-buffering benefit. Behavior/intake and received actual bat-ear soundscape remain distinct.
