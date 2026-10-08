@@ -9,7 +9,7 @@ When a bat encounters a novel obstacle configuration, is the expression of its p
 ## Sources
 Use the same 25 bat×configuration FlightIntensity centroids from the frozen authoritative Teshima programme. No new outcomes.
 - bats A–E, contexts Env1–Env7;
-- exactly 22 eligible targets in contexts with at least **three distinct bats** (Env1–Env6).
+- exactly 23 eligible targets in contexts with at least **three distinct bats** (Env1–Env6).
 - Env7 with only A and B excluded **before opening results**, since one peer cannot robustly determine a shared gain.
 
 ## Baseline M0 — personal scalar only
