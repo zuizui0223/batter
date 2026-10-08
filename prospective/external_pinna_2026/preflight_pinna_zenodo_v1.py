@@ -25,12 +25,12 @@ TIMEOUT = (10, 30)
 
 def text_header(first):
     # Never interpret binary gzip payload or content-encoding as a CSV header.
-    if first[:2] == b"\\x1f\\x8b" or first[:2] == bytes((0x1f, 0x8b)):
+    if first[:2] == bytes((0x1f, 0x8b)):
         return {"gate": "STOP_COMPRESSED_HEADER_NOT_DECODED"}
     text = first.decode("utf-8-sig", errors="strict").lstrip("\ufeff")
     if len(first) >= MAX_HEADER:
         return {"gate": "STOP_HEADER_EXCEEDS_16K"}
-    if any(ord(c) < 32 and c not in "\\t\\r\\n" for c in text):
+    if any(ord(c) < 32 and ord(c) not in (9,10,13) for c in text):
         return {"gate": "STOP_NON_TEXT_HEADER"}
     text = text.splitlines()[0] if text.splitlines() else ""
     delimiter = "\t" if text.count("\t") > text.count(",") else ","
@@ -42,9 +42,22 @@ def text_header(first):
             "n_columns": len(cols), "column_names": [str(c)[:100] for c in cols[:300]],
             "row_values_opened": False,
             "candidate_stable_id_columns": [c for c in cols
-                if re.search(r"(?i)(bat.?id|individual|animal.?id|subject.?id|\\bid\\b)", c)],
+                if re.search(r"(?i)(bat.?id|individual|animal.?id|subject.?id|^id$)", c)],
             "candidate_independent_bout_columns": [c for c in cols
                 if re.search(r"(?i)(recording|session|trial|bout|flight|date|timestamp)", c)]}
+
+def self_test_header():
+    # Regression for the original false-positive: compressed bytes are NOT CSV.
+    import gzip
+    plain=b"BatID,FlightID,ear_angle,velocity\\n1,2,3,4\\n"
+    gz=gzip.compress(plain)
+    bad=text_header(gz)
+    assert bad["gate"]=="STOP_COMPRESSED_HEADER_NOT_DECODED",bad
+    good=text_header(gzip.decompress(gz).splitlines()[0])
+    assert good["gate"]=="HEADER_ONLY" and good["n_columns"]==4,good
+    assert "BatID" in good["candidate_stable_id_columns"],good
+    assert "FlightID" in good["candidate_independent_bout_columns"],good
+    return {"gzip_binary_rejected":True, "decoded_first_line_accepted":True}
 
 def do_probe():
     result = {
@@ -143,7 +156,12 @@ def do_probe():
 def main():
     p=argparse.ArgumentParser()
     p.add_argument("--out",default="PINNA_FLIGHT_ZENODO_STRUCTURAL_RECEIPT_V1.json")
+    p.add_argument("--self-test", action="store_true")
     args=p.parse_args()
+    if args.self_test:
+        print(json.dumps(self_test_header()))
+        return
+    self_test_header()
     output=do_probe()
     with open(args.out, "w", encoding="utf-8") as fd:
         json.dump(output, fd, ensure_ascii=False, indent=2)
