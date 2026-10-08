@@ -44,3 +44,16 @@ The authors' public source [Nishiumi et al. 2024](https://github.com/Nozomi-Nish
 - Synthetic false-positive control using **unadjusted label permutation: FAIL** under heteroscedastic individual noise.
 - Proposed experimental eligibility and future inference: **HOLD** pending independent bat×challenge×occasion data and a separately validated heteroscedastic reference.
 - Bat ecological mechanism, plasticity, learning, adaptive payoff, or field 3D-niche mediation: **NOT ESTABLISHED**.
+
+## V3 independent-variance oracle execution (separate code run)
+
+- [Official GitHub Actions run 37782318423](https://github.com/zuizui0223/batter/actions/runs/37782318423): **completed/success**; job `113328227439`; code commit `46bb83d4665adb90194ebd936e96d409c6a22b21`.
+- Added known-pilot-`sigma_i` Gaussian one-sided conditional reference (mathematical derivation in `KNOWN_SIGMA_GAUSSIAN_NULL_ORACLE_V3.md`).
+- Each case is still entirely **synthetic**, with 1,200 null replications, 5 fictional bats, Gaussian independent errors and truly known per-bat test-error SDs.
+
+| Null data generation | Unadjusted bat-label permutation rejection | Known independent-sigma Gaussian oracle rejection |
+|---|---:|---:|
+| Equal SD `[1,1,1,1,1]` | **4.33%** | **4.67%** |
+| Unequal SD `[0.3,0.6,1.2,2.5,5]` | **13.08%** | **4.83%** |
+
+**Result:** a Gaussian conditional reference with truly independently known individual variances restores nominal null calibration in this particular construction. It **does not** supply those variances for real bats, account for non-Gaussian distributions, or remove persistent device/context confounds, and it is **not** a calibrated replacement null for the 45-trajectory, four-feature #79 leave-one-configuration-out estimator. `STOP_REAL_DATA_TEST` remains in force.
