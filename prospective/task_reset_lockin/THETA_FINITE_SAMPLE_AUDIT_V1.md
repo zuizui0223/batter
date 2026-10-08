@@ -124,3 +124,35 @@ A self-contained Python identity checker accompanies this audit:
 The code enumerates all training subsets on arbitrary synthetic vectors and verifies the finite-population MSE formula independently of the actual bat outcomes, including the exact A–E structural fractions.
 
 Earlier numeric results are preserved. All language promoting the finite-subset recovery fraction to independent confirmation of biological parameter convergence is superseded by this audit.
+
+
+## A second, independent mathematical issue: parameter non-identifiability
+
+Even if cross-environment scalar prediction is genuinely positive, the decomposition
+
+y_(i,e) = mu_e + theta_i + h_(i,e)
+
+does not uniquely identify theta_i **without extra restrictions on h**.
+
+For any per-bat constant delta_i, the transformation
+
+theta_i' = theta_i + delta_i,
+h_(i,e)' = h_(i,e) - delta_i
+
+leaves every observed y_(i,e) unchanged.
+
+This is an exact reparameterization symmetry (a "gauge freedom"), not evidence for infinite-dimensional movement. To give theta_i a unique operational meaning one must specify a constraint such as
+
+mean_e h_(i,e) = 0
+
+on a declared environmental sampling distribution, or fit a model in which h has a prespecified zero-mean random-effects law independent of theta and is estimated across sufficient independent configurations.
+
+The current equal-environment mean is therefore an **operational personal coordinate defined by the sampled environments**, not an identified neural/physical constant.
+
+A separate dynamic model for the full trajectory requires measured state and environment covariates, transition rules and independently held-out trajectory predictions. A one-dimensional discriminative identity axis cannot substitute for these elements.
+
+### Legitimate next claim tiers
+
+- **Established within the source:** identity-associated scalar information transfers across the sampled Rhino obstacle configurations under an explicit label-permutation null.
+- **Hypothesis, not proven:** the scalar is a stable control prior theta_i independent of task context.
+- **Not established:** a unique one-parameter law generating individual three-dimensional flight trajectories, or a universal species-independent personal policy.
