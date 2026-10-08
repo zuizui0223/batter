@@ -1,0 +1,37 @@
+name: dryad-group-acoustic-spatial-source-preflight-v1
+on:
+  push:
+    branches:
+      - prospective/social-acoustic-spatial-strategies-v1
+    paths:
+      - "prospective/social_acoustic_spatial/inspect_public_dryad_metadata_v1.py"
+      - ".github/workflows/dryad-group-acoustic-spatial-source-preflight-v1.yml"
+  workflow_dispatch:
+jobs:
+  public-files-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    permissions: {contents: read}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.13"}
+      - run: python -m pip install 'requests==2.32.5'
+      - name: Validate code syntax
+        run: python -m py_compile prospective/social_acoustic_spatial/inspect_public_dryad_metadata_v1.py
+      - name: Inspect only publisher metadata for the exact two DOIs
+        run: |
+          python prospective/social_acoustic_spatial/inspect_public_dryad_metadata_v1.py --out DRYAD_GROUP_ACOUSTIC_3D_SOURCE_RECEIPT_V1.json
+          python - <<'PY'
+          import json
+          r=json.load(open("DRYAD_GROUP_ACOUSTIC_3D_SOURCE_RECEIPT_V1.json"))
+          assert r["numeric_values_opened"] is False
+          assert {x["doi"] for x in r["datasets"]} == {"10.5061/dryad.v9s4mw6wn","10.5061/dryad.4f99c46"}
+          assert all(x["audio_or_binary_downloaded"] is False for x in r["datasets"])
+          print("source-only statuses:", [(x["doi"],x["eligibility"]) for x in r["datasets"]])
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dryad-group-acoustic-spatial-source-only-v1
+          path: DRYAD_GROUP_ACOUSTIC_3D_SOURCE_RECEIPT_V1.json
+          if-no-files-found: error

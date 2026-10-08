@@ -1,0 +1,61 @@
+{
+  "study": "Dryad 2018/2022 group sonar+3D structural access",
+  "status": "PUBLIC_FILE_METADATA_ONLY",
+  "numeric_values_opened": false,
+  "datasets": [
+    {
+      "doi": "10.5061/dryad.v9s4mw6wn",
+      "checked_at_utc": "2026-10-08T08:38:46.872425+00:00",
+      "numeric_bat_outcomes_opened": false,
+      "audio_or_binary_downloaded": false,
+      "http_attempts": [
+        {
+          "url": "https://datadryad.org/api/v2/datasets/doi%3A10.5061%2Fdryad.v9s4mw6wn",
+          "status": 404
+        }
+      ],
+      "files": [],
+      "eligibility": "STOP_PUBLIC_SOURCE_INACCESSIBLE",
+      "notes": [
+        "No readable DOI-specific public metadata. No alternative data mirrors tried."
+      ]
+    },
+    {
+      "doi": "10.5061/dryad.4f99c46",
+      "checked_at_utc": "2026-10-08T08:38:47.129836+00:00",
+      "numeric_bat_outcomes_opened": false,
+      "audio_or_binary_downloaded": false,
+      "http_attempts": [
+        {
+          "url": "https://datadryad.org/api/v2/datasets/doi%3A10.5061%2Fdryad.4f99c46",
+          "status": 200
+        },
+        {
+          "url": "https://datadryad.org/api/v2/datasets/doi%3A10.5061%2Fdryad.4f99c46/versions",
+          "status": 200
+        },
+        {
+          "url": "https://datadryad.org/api/v2/versions/376",
+          "status": 200
+        },
+        {
+          "url": "https://datadryad.org/api/v2/versions/376/files",
+          "status": 200
+        }
+      ],
+      "files": [
+        {
+          "name": "SoundFile.zip",
+          "size": 614454096,
+          "mime": "application/zip",
+          "file_id": null
+        }
+      ],
+      "eligibility": "STOP_NO_JOINT_3D_AUDIO",
+      "notes": [
+        "Listed acoustic files but no identified 3D file; cannot test acoustic/spatial joint response."
+      ]
+    }
+  ],
+  "contract": "DRYAD_GROUP_AUDIO_3D_SOURCE_GATE_CONTRACT_V1.md"
+}
