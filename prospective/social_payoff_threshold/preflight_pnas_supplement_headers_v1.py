@@ -63,7 +63,7 @@ def get(url):
         return None,{"status":"DOWNLOAD_ERROR","error_type":type(e).__name__,"source_url":url}
     if len(body)>MAX_BYTES or not allowed(final):
         return None,{"status":"OVERSIZE_OR_BAD_REDIRECT","source_url":url}
-    if not body.startswith(b"PK\\x03\\x04".replace(b"\\\\",b"\\")):
+    if not body.startswith(b"PK"):
         return None,{"status":"NOT_XLSX_ZIP","http":status,"source_url":url,
                      "content_type":ct[:100]}
     return body,{"status":"FETCHED","http":status,"size_bytes":len(body),
