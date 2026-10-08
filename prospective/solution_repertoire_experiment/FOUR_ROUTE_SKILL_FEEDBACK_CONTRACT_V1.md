@@ -75,6 +75,12 @@ The model-declared measurement sensitivity for numerical demonstration: route-sp
 - Run 1,000 independently seeded synthetic experiments per model (W/M/G), root numpy seed 202610081747; 20 individuals, 4 routes. For each experiment compute C and D and nominal t-based intervals as **descriptive design calibration only**, and the fraction of experiments in which 95% t CI for C excludes zero on positive side. No p-value from these simulations is an animal study outcome.
 - For every simulated dataset, also independently permute the route assigned to shareNeither/route labels under the exact blocked route assignment, if meaningful: BUT because the data generator explicitly attaches benefit to assigned route, treatment-specific signatures are analytically known. Therefore avoid claiming label permutation independently estimates motor-module causality; report only model-planning properties without constructing a misleading randomization test.
 
+
+## Frozen seed-basin diagnostic (deterministic, not extra biological data)
+At A=3.5 for W, starting all route skills at zero, force exactly m initial choices of L-low, with m in [0,1,2,3,6,12], then iterate the original deterministic conditional-mean update for exactly 4,000 steps, with equal current rewards. Report resulting probability of choosing the initially practiced route, its skill-difference (lead versus mean other 3) and whether it falls in the known locally stable uniform or dominant basin. Do NOT vary m, A, δ, η or iterations in this version to find a "pretty" switch. Initial skill 0 is not the same as the uniform fixed point .5 in all four routes; the common state component relaxes and does not affect relative softmax choice.
+
+For M under the declared g_module=2, test algebraic separability numerically on a predeclared fixed score vector h=[+.30,-.10], v=[+.20,-.25] and verify joint softmax probabilities equal outer product of separate binary softmax probabilities to 1e-14.
+
 ## Synthetic invariants
 1. Analytic stationary equation residual <1e-10 for roots in prescribed grid.
 2. A_coex=3*log3 equality of Phi values <1e-10, dominant fixed p=(.75,1/12,1/12,1/12).
