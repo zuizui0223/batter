@@ -7,6 +7,7 @@ NO new bat sensorimotor effect/estimate. See frozen categorical gate document.
 """
 from __future__ import annotations
 import argparse, collections, datetime as dt, hashlib, json, re
+from urllib.parse import urlsplit
 
 import requests
 
@@ -61,7 +62,10 @@ def categorical_probe(session,source_key,desc):
         entry["status"]="STOP_FILE_SIZE_OR_UNKNOWN";return entry
     links=desc.get("links") or {}
     uri=links.get("content") or links.get("self")
-    if not uri or not uri.startswith(PREFIX):
+    # Only the public record's advertised link; no inferred opaque URLs.
+    entry["publisher_link_keys"]=sorted(links.keys())
+    entry["publisher_link_host"]=urlsplit(uri).hostname if isinstance(uri,str) else None
+    if not isinstance(uri,str) or urlsplit(uri).scheme!="https" or urlsplit(uri).hostname not in ("zenodo.org","www.zenodo.org"):
         entry["status"]="STOP_OFFICIAL_ZENODO_URL_UNAVAILABLE";return entry
     anon=collections.defaultdict(set)
     file_counts=collections.Counter()
@@ -152,7 +156,13 @@ def main():
         for key,name in SOURCE_FILES.items():
             source=fl.get(name)
             rec["results"][key]=categorical_probe(s,key,source) if source else {"status":"STOP_FILE_NOT_LISTED"}
-        rec["status"]="STOP_NO_INDEPENDENT_INDIVIDUAL_BOUTS"
+        statuses=[v.get("status","") for v in rec["results"].values()]
+        if any(z=="PASS_CATEGORICAL_COUNTS_SUBJECT_TO_AUTHORED_ID_DOCUMENTATION" for z in statuses):
+            rec["status"]="PASS_CATEGORICAL_COUNTS_SUBJECT_TO_AUTHORED_ID_DOCUMENTATION"
+        elif statuses and all(z=="STOP_NO_INDEPENDENT_INDIVIDUAL_BOUTS" for z in statuses):
+            rec["status"]="STOP_NO_INDEPENDENT_INDIVIDUAL_BOUTS"
+        else:
+            rec["status"]="STOP_SOURCE_INACCESSIBLE"
     except Exception as ex:
         rec["error"]=type(ex).__name__+":"+str(ex)[:160]
         rec["status"]="STOP_SOURCE_INACCESSIBLE"
