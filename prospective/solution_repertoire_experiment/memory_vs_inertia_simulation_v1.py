@@ -150,7 +150,7 @@ def mc_summary(rows, scenario):
     def rate(a):
         v = float(np.mean(a))
         return {'count': int(np.sum(a)), 'frequency': v, 'mc_se': float(np.sqrt(v * (1 - v) / n))}
-    return {'mechanism': scenario[1], 'parameters': {'open': scenario[2], 'constrained': scenario[3]}, 'n_synthetic_experiments': n, 'P1_mean_Delta': float(np.mean(q('P1_Delta'))), 'P1_median_Delta': float(np.median(q('P1_Delta'))), 'P1_rejection': rate(p), 'proposed_S2_mean_advantage': float(np.mean(q('S2_adv'))), 'proposed_S2_rejection': rate(s), 'both_P1_and_S2_rejection': rate(both), 'S2_given_P1_count': int(np.sum(both)), 'S2_given_P1_fraction': float(np.sum(both) / np.sum(p)) if np.any(p) else None, 'P1_p_median': float(np.median(q('P1_p'))), 'S2_p_median': float(np.median(q('S2_p'))}
+    return {'mechanism': scenario[1], 'parameters': {'open': scenario[2], 'constrained': scenario[3]}, 'n_synthetic_experiments': n, 'P1_mean_Delta': float(np.mean(q('P1_Delta'))), 'P1_median_Delta': float(np.median(q('P1_Delta'))), 'P1_rejection': rate(p), 'proposed_S2_mean_advantage': float(np.mean(q('S2_adv'))), 'proposed_S2_rejection': rate(s), 'both_P1_and_S2_rejection': rate(both), 'S2_given_P1_count': int(np.sum(both)), 'S2_given_P1_fraction': float(np.sum(both) / np.sum(p)) if np.any(p) else None, 'P1_p_median': float(np.median(q('P1_p'))), 'S2_p_median': float(np.median(q('S2_p')))}
 
 def main():
     parser = argparse.ArgumentParser()
