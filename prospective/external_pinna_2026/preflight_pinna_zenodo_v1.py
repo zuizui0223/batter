@@ -33,7 +33,11 @@ def text_header(first):
     if any(ord(c) < 32 and ord(c) not in (9,10,13) for c in text):
         return {"gate": "STOP_NON_TEXT_HEADER"}
     text = text.splitlines()[0] if text.splitlines() else ""
-    delimiter = "\t" if text.count("\t") > text.count(",") else ","
+    # Zenodo has multiple pipe-delimited per-frame exports alongside comma CSVs.
+    scores={",":text.count(","), "\t":text.count("\t"), "|":text.count("|"), ";":text.count(";")}
+    delimiter=max(scores, key=scores.get)
+    if scores[delimiter] == 0:
+        return {"gate": "STOP_NO_RECOGNIZED_DELIMITER", "n_columns": 0, "row_values_opened": False}
     try:
         cols = next(csv.reader([text], delimiter=delimiter))
     except Exception:
@@ -44,7 +48,7 @@ def text_header(first):
             "candidate_stable_id_columns": [c for c in cols
                 if re.search(r"(?i)(bat.?id|individual|animal.?id|subject.?id|^id$)", c)],
             "candidate_independent_bout_columns": [c for c in cols
-                if re.search(r"(?i)(recording|session|trial|bout|flight|date|timestamp)", c)]}
+                if re.search(r"(?i)(recording|session|trial|bout|flight|date|timestamp|filename|dataStructNr|recTimePosix)", c)]}
 
 def self_test_header():
     # Regression for the original false-positive: compressed bytes are NOT CSV.
@@ -57,7 +61,13 @@ def self_test_header():
     assert good["gate"]=="HEADER_ONLY" and good["n_columns"]==4,good
     assert "BatID" in good["candidate_stable_id_columns"],good
     assert "FlightID" in good["candidate_independent_bout_columns"],good
-    return {"gzip_binary_rejected":True, "decoded_first_line_accepted":True}
+    pipe=text_header(b"earTipSep|dist2target|batID|filename|recTimePosix")
+    assert pipe["gate"]=="HEADER_ONLY" and pipe["n_columns"]==5,pipe
+    assert "batID" in pipe["candidate_stable_id_columns"],pipe
+    assert "filename" in pipe["candidate_independent_bout_columns"],pipe
+    assert text_header(b"garbage")["gate"]=="STOP_NO_RECOGNIZED_DELIMITER"
+    return {"gzip_binary_rejected":True, "decoded_first_line_accepted":True,
+            "pipe_delimited":True, "unrecognized_delimiter_rejected":True}
 
 def do_probe():
     result = {
