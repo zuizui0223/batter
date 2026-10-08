@@ -1,0 +1,44 @@
+name: cf-colony-v1-public-structural-gate
+on:
+  push:
+    branches:
+      - prospective/colony-acoustic-identity-retention-v1
+    paths:
+      - "prospective/colony_acoustic_identity/preflight_cf_colony_v1.py"
+      - ".github/workflows/cf-colony-v1-public-structural-gate.yml"
+  workflow_dispatch:
+
+jobs:
+  source-schema-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Install source-only readers
+        run: python -m pip install 'requests==2.32.5' 'scipy==1.17.0'
+      - name: Compile frozen Gate-0 Gate-1 implementation
+        run: |
+          python -m py_compile prospective/colony_acoustic_identity/preflight_cf_colony_v1.py
+          python prospective/colony_acoustic_identity/preflight_cf_colony_v1.py --help
+      - name: Query only documented official Mendeley v1 API and inspect tabular headers
+        run: |
+          python prospective/colony_acoustic_identity/preflight_cf_colony_v1.py --out CF_COLONY_V1_SOURCE_SCHEMA_RECEIPT.json
+          python - <<'PY'
+          import json
+          x=json.load(open("CF_COLONY_V1_SOURCE_SCHEMA_RECEIPT.json"))
+          assert x["source_DOI"]=="10.17632/4y98p5y8fc.1"
+          assert x["source_version"]==1
+          assert x["evidence_status"]=="STRUCTURAL_ONLY_NO_CF2_NUMERIC_VALUES_OPENED"
+          assert x["gate_2_categorical_counts"]=="NOT_OPENED"
+          print("structural gate:",x["status"])
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cf-colony-v1-source-schema-only
+          path: CF_COLONY_V1_SOURCE_SCHEMA_RECEIPT.json
+          if-no-files-found: error
