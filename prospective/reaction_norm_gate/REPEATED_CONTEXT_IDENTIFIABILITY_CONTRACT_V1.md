@@ -1,5 +1,7 @@
 # Repeated context response: biological identifiability and prospective gate v1
 
+> **2026-10-08 V2 safety amendment:** The two-occasion calculation below is a **mathematical demonstration only**, **NOT a valid standalone confirmatory analysis**. We verified by synthetic calibration that exact inter-bat label permutation can have inflated false positives under persistent bat-specific heteroscedastic noise (Python 13.08% versus 4.33% at nominal 5% in one illustrative null). For any real inference, read `HETEROSCEDASTICITY_AND_FOUR_OCCASION_AMENDMENT_V2.md`: >=4 independent bat×challenge occasions for a train/held-out split, explicit heteroscedastic null, device crossing and adequate independent bats are mandatory prospective gates. No new bat data has been analyzed.
+
 **Status:** PRE-OUTCOME DESIGN AND SYNTHETIC CHECK ONLY. No animal data, no new public dataset and no new ecological result. This branch is a child of the already-closed Rhino target-blind audit (#79), not an amendment of JAE or its results.
 
 ## Why this new discriminator is necessary
