@@ -27,7 +27,7 @@ A cost-gain endpoint is frozen descriptively: before and after practice, record 
 
 ## Synthetic counterexample parameters
 - R=1,000 independent synthetic experiments per condition, 20 animals, eight choice trials per bat.
-- Root numpy SeedSequence seed 202610081616; independent condition and replicate streams; NumPy 2.3.5.
+- Root numpy SeedSequence seed 202610081616; independent replicate streams within each scenario. The two rival SKILL_CAUSES_CHOICE/FAMILIARITY_CAUSES_CHOICE worlds share the **same** scenario and replicate streams by design; other scenario streams are independent. NumPy 2.3.5.
 - Each animal has pre-existing (unseeded) route preference u[i,r] ~ Normal(0,0.45); independently assigned route seed S confers direct preference bias h_S=1.2, equal across models.
 - Practice effect if enabled: eta=1.8 choice-utility units on assigned practice route P; practice-associated physical saving gamma=0.3 synthetic cost units. Set inverse cost sensitivity a=eta/gamma=6. Thus choice utility contribution eta I(r=P) is numerically identical to a*gamma I(r=P).
 - Base physical costs c0[i,r]=1+individual_offset_i+route_offset[i,r], with normal SD 0.07 and 0.025 respectively.
