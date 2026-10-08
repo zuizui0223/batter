@@ -59,7 +59,8 @@ def categorical_probe(session,source_key,desc):
            "unsupported_individual_claims":True}
     if announced<=0 or announced>LIMIT:
         entry["status"]="STOP_FILE_SIZE_OR_UNKNOWN";return entry
-    uri=(desc.get("links") or {}).get("content")
+    links=desc.get("links") or {}
+    uri=links.get("content") or links.get("self")
     if not uri or not uri.startswith(PREFIX):
         entry["status"]="STOP_OFFICIAL_ZENODO_URL_UNAVAILABLE";return entry
     anon=collections.defaultdict(set)
