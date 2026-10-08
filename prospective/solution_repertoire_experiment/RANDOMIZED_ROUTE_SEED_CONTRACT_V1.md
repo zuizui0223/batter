@@ -28,7 +28,7 @@ Do not claim seed-induced delayed preference is necessarily memory storage: atte
 - Route seed S_i is orthogonal to b_i by restricted randomization; a physical route may still have common attractiveness.
 
 ## Frozen synthetic mechanisms
-Exactly 1000 independent simulated experiments per scenario, six total, with root NumPy PCG64 seed 202610081401. Independent per-scenario and per-replicate SeedSequence substreams. Report per-scenario mean observed statistic, test-rejection fraction, binomial Monte Carlo SE, and full integer-count distribution summary.
+Exactly 1000 independent simulated experiments per scenario, seven total, with root NumPy PCG64 seed 202610081401. Independent per-scenario and per-replicate SeedSequence substreams. Report per-scenario mean observed statistic, test-rejection fraction, binomial Monte Carlo SE, and full integer-count distribution summary.
 
 1. TRAIT_ONLY: route choices across opening and reopening independently follow pre-existing b_i. No influence of random seed.
 2. TRAIT_WITH_ROUTE_ASYMMETRY: b_i drawn from a Dirichlet concentration vector [1.6,0.6,0.5,0.3] (nonuniform physical attractiveness), but no seed effect. Exact randomized inference must remain valid under asymmetric baseline routes.
