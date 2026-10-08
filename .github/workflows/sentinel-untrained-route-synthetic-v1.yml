@@ -1,0 +1,36 @@
+name: sentinel-untrained-route-synthetic-v1
+on:
+  push:
+    branches:
+      - prospective/sentinel-untrained-route-v1
+    paths:
+      - "prospective/solution_repertoire_experiment/sentinel_transfer_simulation_v1.py"
+      - ".github/workflows/sentinel-untrained-route-synthetic-v1.yml"
+  workflow_dispatch:
+
+jobs:
+  sentinel-sharp-null-stress:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions: {contents: read}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Pin numerical dependency
+        run: python -m pip install 'numpy==2.3.5'
+      - name: Verify frozen implementation SHA256
+        run: |
+          printf '%s\n' '634e30343cac45913b580f403f3821d323e2c8e034eb540248e14d494f2498b8  prospective/solution_repertoire_experiment/sentinel_transfer_simulation_v1.py' | sha256sum -c -
+      - name: Exact 36-allocation and paired-model self tests
+        run: python prospective/solution_repertoire_experiment/sentinel_transfer_simulation_v1.py --self-test
+      - name: Rerun six exact-randomization synthetic scenarios
+        run: |
+          python prospective/solution_repertoire_experiment/sentinel_transfer_simulation_v1.py --out SENTINEL_UNTRAINED_ROUTE_RESULT_V1.json
+          printf '%s\n' '36cf6adcad471e1cc1aba6ffee63e5e0ff2c6fd9d1ef3af2c397d95a4f43ecb7  SENTINEL_UNTRAINED_ROUTE_RESULT_V1.json' | sha256sum -c -
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sentinel-untrained-route-v1
+          path: SENTINEL_UNTRAINED_ROUTE_RESULT_V1.json
+          if-no-files-found: error
