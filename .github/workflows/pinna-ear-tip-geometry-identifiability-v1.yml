@@ -1,0 +1,36 @@
+name: pinna-ear-tip-geometry-identifiability-v1
+on:
+  push:
+    branches:
+      - prospective/zenodo-pinna-flight-identity-gate-v1
+    paths:
+      - "prospective/external_pinna_2026/ear_tip_geometry_identifiability_v1.py"
+      - ".github/workflows/pinna-ear-tip-geometry-identifiability-v1.yml"
+  workflow_dispatch:
+jobs:
+  analytic-counterexample:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    permissions: {contents: read}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.13"}
+      - name: Verify source compiles
+        run: python -m py_compile prospective/external_pinna_2026/ear_tip_geometry_identifiability_v1.py
+      - name: Exact distance-preservation and distinct-gaze check
+        run: |
+          python prospective/external_pinna_2026/ear_tip_geometry_identifiability_v1.py --self-test > ear_tip_geometry_identifiability_result_v1.json
+          python - <<'PY'
+          import json
+          x=json.load(open("ear_tip_geometry_identifiability_result_v1.json"))
+          assert x["max_abs_distance_deviation"] < 1e-12
+          assert x["gaze_cosine_span"] > 0.8
+          assert x["identical_ear_directions_forward_up_backward_same_separation"] is True
+          print("GEOMETRIC_NONIDENTIFIABILITY_CERTIFICATE_PASS")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ear-tip-geometry-proof-v1
+          path: ear_tip_geometry_identifiability_result_v1.json
+          if-no-files-found: error
