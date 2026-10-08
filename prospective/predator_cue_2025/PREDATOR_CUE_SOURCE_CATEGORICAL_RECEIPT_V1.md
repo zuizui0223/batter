@@ -23,6 +23,14 @@
 - Playback categories: carnivorous 114, control 42, frugivorous 36, insectivorous 36.
 - No `trial`, `bout`, `session`, `date`, or independently verifiable repeated-exposure field in the CSV.
 
+## Critical published-cohort selection condition (checked against original 2025 article)
+
+The source paper tested **117 physical bats from 33 social groups** in 5.5-minute single-bat playback protocols. Only **38 individuals produced any social response** and these 38 were the individuals represented in the CSV. Therefore, the 38-bat CSV is a **responder-selected sample**, not a random cohort of 38 out of 117. Unobserved/nonresponding animals cannot be assigned individual temporal response profiles from this released 228-row analytic table. This selection limits generalization of any "individual strategy" to all roosting bats, and comparisons of response rates should not be treated as 117-bat conditional coverage.
+
+**The original article already reports that predator suppression often persists into AFTER (below BEFORE), while nonpredator response generally rebounds, plus order-dependent frugivore reactions.** Do not frame these as independent new discoveries or retrospectively invent a prospective novel order/carryover result from this already-analyzed source.
+
+Source: https://pmc.ncbi.nlm.nih.gov/articles/PMC12074794/ (Materials and methods + Results); dataset DOI https://doi.org/10.5061/dryad.6djh9w1d3.
+
 ## Frozen criterion and verdict
 
 The precommitted `PREDATOR_CUE_STRUCTURAL_GATE_V1.md` requires ≥12 stable bats with ≥2 INDEPENDENT predator exposure bouts per bat (plus distinct stimulus/date support, baseline/after rows), and ≥24 independent bouts. In the actual source, **each of 38 bats has a single predator presentation in the source's one experimental sequence**. Therefore
