@@ -24,6 +24,10 @@ jobs:
         run: python -m py_compile prospective/reaction_norm_gate/rhino_four_feature_synthetic_null_v1.py
       - name: Stress-test four-feature target-blind null without empirical data
         run: python prospective/reaction_norm_gate/rhino_four_feature_synthetic_null_v1.py --self-test
+      - name: Compile variance-preserving whole-cell sign-flip simulation
+        run: python -m py_compile prospective/reaction_norm_gate/whole_cell_signflip_synthetic_v1.py
+      - name: Calibrate whole-cell sign null with fabricated four-feature data
+        run: python prospective/reaction_norm_gate/whole_cell_signflip_synthetic_v1.py --self-test
       - name: Fail closed when no real source is supplied
         run: |
           set +e
