@@ -18,6 +18,18 @@
 | Pradhan et al., Commun Biol (2026), DOI 10.1038/s42003-026-10966-7 | *Mormoops megalophylla* dyadic lead/follow switches, 3-D tracking + echolocation | Followers begin turns earlier and can speed up to assume lead | Individual route adjustment may be socially role-conditional | Public Mendeley v4 DOI 10.17632/mrnvkzrdsd.4 lists raw MAT arrays, but source-pinned public API tested Oct 8 2026 returned 403. Stable across-bout individual IDs and emitters unverified: STOP |
 | Original `batter` lab *Rhinolophus* and field analyses | 5 lab animals, plus distinct wild panels | Same-lab context-relative personal 1D/2D movement signatures exist. Original wild carrier gate 2/4 FAIL; external lab source identity is not a confirmed wild vertical-niche cause. | Motivates separation of personal movement policy and route realization | No synchronized sonar emitted/received signals for those 45 lab tracks. Do not retrofit acoustic cause from different subjects/studies |
 
+## Critical same-source 2026 published prior art — mandatory positioning
+
+**Teshima, Genda, Aoki, Fujisawa, Hiryu & Fujii (2026), "Evidence for latent regularities in echolocation-guided flight behaviour of bats", Proceedings of the Royal Society B 293(2076):20261463, DOI 10.1098/rspb.2026.1463.**
+
+- The associated previously open Figshare dataset is `https://figshare.com/articles/dataset/Flight_policy_in_obstacle_space_estimation_from_imitation_learning_in_two_echolocating_bat_species/29209493` (Teshima 2025, posted June 2, 2025). It maps `kiku` to *Rhinolophus nippon* and `yubi` to *Miniopterus fuliginosus*.
+- THIS IS THE EXACT PARENT ARCHIVE used in the subsequent five-bat `batter` laboratory kinematic identity and 1D/2D policy diagnostics, not an independent new experiment.
+- The **published 2026 Proc B study already reports** VRNN evidence of latent regularities in flight paths across seven arenas and the two sonar guilds, with predicted partial-trajectory continuation, turning, obstacle avoidance and velocities.
+- The newly proposed `batter` target must **not** claim novelty for the existence of general/latent bat flight rules, network-based route forecasting or species-specific trajectory regularities. In the same archive the `batter` narrower scientific object is **focal biological identity** after training/held-out configuration controls, honest target-blind forecast transport, and absence/presence of actual 3D spatial segregation—not a new source replicate.
+- Neither study establishes a unique bat differential equation, the *causal reason* for between-individual strategy, a portable individual sonar–flight coupling coefficient, or adaptation in the wild. There is no direct synchronized acoustic identity carrier measured in the five-bat feature-only analysis.
+- The existing `batter` 2026 same-data ceiling and wild 2/4 failure stay unchanged. A genuinely new individually tagged sonar+3D experimental source is required for the ecological cross-modal mechanism claim.
+- Direct authoritative links: https://pubmed.ncbi.nlm.nih.gov/42580728/ and https://figshare.com/articles/dataset/Flight_policy_in_obstacle_space_estimation_from_imitation_learning_in_two_echolocating_bat_species/29209493 .
+
 ## Important negative evidence / paradoxes
 
 1. The idea **"crowding always makes bats separate their call frequencies" is empirically false**: 2012 CF-FM pair comparisons and 2026 colony-mixing longitudinal observations include convergence.
