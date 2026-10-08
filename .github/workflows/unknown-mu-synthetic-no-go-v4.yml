@@ -1,0 +1,31 @@
+name: unknown-mu-synthetic-no-go-v4
+on:
+  push:
+    branches:
+      - prospective/repeated-context-personal-response-gate-v1
+    paths:
+      - "prospective/reaction_norm_gate/unknown_context_mean_plugin_synthetic_v4.py"
+      - ".github/workflows/unknown-mu-synthetic-no-go-v4.yml"
+  workflow_dispatch:
+jobs:
+  no-real-data:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    permissions: {contents: read}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.13"}
+      - name: Check source-free simulation
+        run: |
+          python -m py_compile prospective/reaction_norm_gate/unknown_context_mean_plugin_synthetic_v4.py
+          python prospective/reaction_norm_gate/unknown_context_mean_plugin_synthetic_v4.py --self-test
+      - name: Fail closed without synthetic flag
+        run: |
+          set +e
+          python prospective/reaction_norm_gate/unknown_context_mean_plugin_synthetic_v4.py >/tmp/no_data.log 2>&1
+          code=$?
+          set -e
+          test "$code" -ne 0
+          grep -q "synthetic-only" /tmp/no_data.log
+          echo "NO_EMPIRICAL_DATA_ENTRY_POINT: PASS"
