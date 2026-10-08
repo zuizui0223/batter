@@ -1,0 +1,127 @@
+{
+  "before_and_after_technical_observations_per_bat": 2,
+  "contract": "SENTINEL_UNTRAINED_ROUTE_CONTRACT_V1.md",
+  "limits": [
+    "A rejection is exact against the sharp null that sentinel potential outcomes are invariant to training-route allocation; not automatically against a weak zero-average-transfer null.",
+    "The primary transfer contrast cannot separately establish horizontal AND vertical transfer, nor motor rather than sensory reuse.",
+    "All effect sizes, measurement errors, practice doses, bat counts and reported detection frequencies are hypothetical. No animal trial is authorized."
+  ],
+  "n_exact_legal_assignments": 46656,
+  "n_new_artificial_animals": 18,
+  "n_perfectly_paired_motor_versus_sensory_datasets": 1000,
+  "n_repetitions_per_scenario": 1000,
+  "n_unique_primary_statistics": 729,
+  "number_blocks": 6,
+  "preflight": {
+    "distinct_primary_statistics_with_multiplicity": 729,
+    "legal_randomizations": 46656,
+    "local_paired_label_multiplicity": 64,
+    "motors_vs_cues_paired_identical_raw_observations": "PASS",
+    "no_target_route_is_ever_trained": "PASS",
+    "sharp_null_mean_zero": "PASS",
+    "three_animal_blocks": 6,
+    "two_block_all_36_allocations_match_reduced_orbit": "PASS"
+  },
+  "scenarios": {
+    "GLOBAL_FAMILIARITY": {
+      "arm_means_N_V_H": [
+        0.12211138424453447,
+        0.12215555288639944,
+        0.1222212944565876
+      ],
+      "both_H_and_V_means_exceed_N_fraction": 0.335,
+      "detected_count": 49,
+      "detected_fraction": 0.049,
+      "mean_H_minus_V": 6.574157018827998e-05,
+      "mean_primary_T": 7.703942695883831e-05,
+      "median_exact_p": 0.4993141289437586,
+      "monte_carlo_standard_error": 0.006826346021115542,
+      "n_synthetic_experiments": 1000,
+      "sd_primary_T": 0.05797352661398796
+    },
+    "HORIZONTAL_ONLY_TRANSFER": {
+      "arm_means_N_V_H": [
+        0.0002875849541877537,
+        0.0019305760019345073,
+        0.2386557015197115
+      ],
+      "both_H_and_V_means_exceed_N_fraction": 0.508,
+      "detected_count": 381,
+      "detected_fraction": 0.381,
+      "mean_H_minus_V": 0.236725125517777,
+      "mean_primary_T": 0.12000555380663526,
+      "median_exact_p": 0.08093278463648834,
+      "monte_carlo_standard_error": 0.015357050498061143,
+      "n_synthetic_experiments": 1000,
+      "sd_primary_T": 0.059714868917717386
+    },
+    "SHARED_MOTOR_MODULE": {
+      "arm_means_N_V_H": [
+        0.0004521353316798728,
+        0.1191026162449403,
+        0.12057517410236082
+      ],
+      "both_H_and_V_means_exceed_N_fraction": 0.954,
+      "detected_count": 633,
+      "detected_fraction": 0.633,
+      "mean_H_minus_V": 0.0014725578574205742,
+      "mean_primary_T": 0.11938675984197053,
+      "median_exact_p": 0.02880658436213992,
+      "monte_carlo_standard_error": 0.015241751867813621,
+      "n_synthetic_experiments": 1000,
+      "sd_primary_T": 0.05562506195969139
+    },
+    "SHARED_SENSORY_CUE": {
+      "arm_means_N_V_H": [
+        0.0004521353316798728,
+        0.1191026162449403,
+        0.12057517410236082
+      ],
+      "both_H_and_V_means_exceed_N_fraction": 0.954,
+      "detected_count": 633,
+      "detected_fraction": 0.633,
+      "mean_H_minus_V": 0.0014725578574205742,
+      "mean_primary_T": 0.11938675984197053,
+      "median_exact_p": 0.02880658436213992,
+      "monte_carlo_standard_error": 0.015241751867813621,
+      "n_synthetic_experiments": 1000,
+      "sd_primary_T": 0.05562506195969139
+    },
+    "WEAK_SHARED_MODULE": {
+      "arm_means_N_V_H": [
+        0.0001710869062824074,
+        0.0604552471140824,
+        0.062489940875815365
+      ],
+      "both_H_and_V_means_exceed_N_fraction": 0.735,
+      "detected_count": 279,
+      "detected_fraction": 0.279,
+      "mean_H_minus_V": 0.0020346937617329646,
+      "mean_primary_T": 0.06130150708866646,
+      "median_exact_p": 0.14746227709190673,
+      "monte_carlo_standard_error": 0.014183053267896867,
+      "n_synthetic_experiments": 1000,
+      "sd_primary_T": 0.05636178843127673
+    },
+    "WHOLE_ROUTE_ONLY": {
+      "arm_means_N_V_H": [
+        0.0015466418188466776,
+        0.0009361666203212941,
+        1.8623207034944995e-06
+      ],
+      "both_H_and_V_means_exceed_N_fraction": 0.332,
+      "detected_count": 55,
+      "detected_fraction": 0.055,
+      "mean_H_minus_V": -0.0009343042996177953,
+      "mean_primary_T": -0.0010776273483342827,
+      "median_exact_p": 0.5006858710562414,
+      "monte_carlo_standard_error": 0.00720936890441875,
+      "n_synthetic_experiments": 1000,
+      "sd_primary_T": 0.05591663163303404
+    }
+  },
+  "seed": 202610081858,
+  "sentinel_target": "B-R4, never additionally trained",
+  "status": "SYNTHETIC_DESIGN_STRESS_NOT_BAT_DATA",
+  "training_assignment": "A-R1/R2/R3 (balanced within 3-animal blocks)"
+}
