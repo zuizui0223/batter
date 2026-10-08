@@ -1,0 +1,105 @@
+# Finite-sample audit of the bat theta convergence claim (v1)
+
+Status: **mathematical identity audit, not an additional biological outcome test**.
+
+## Important correction
+
+The earlier `THETA_CONVERGENCE_RESULT_V1.md` and synthesis describe a ~91.6% approach to a full-training theta estimate after observing three independent obstacle environments as "rapid convergence". That number is a mathematical consequence of complete subset averaging, not independent empirical evidence that a true invariant personal parameter exists.
+
+This audit does **not** alter those frozen outputs. It changes their scientific interpretation and explicitly marks this claim as superseded.
+
+### Exact theorem
+
+Fix one target bat/environment with an observed target response y. Let the N other environments' scalar centroids be x_1,...,x_N, with population mean mu and population variance
+
+V = (1/N) sum_j (x_j-mu)^2.
+
+For every training subset S of exactly m distinct environments, estimate
+
+theta_hat(S) = mean(x_j for j in S).
+
+The earlier implementation averages squared held-out errors over **all** combinations of size m:
+
+MSE_m(y) = (1 / choose(N,m)) sum_{S:|S|=m} (y-theta_hat(S))^2.
+
+Finite-population sampling variance gives the exact decomposition
+
+MSE_m(y) = (y-mu)^2 + V*(N-m)/(m*(N-1)).
+
+No assumption of stable theta, Gaussian noise, similar behaviour, or even a sensible outcome y is needed.
+
+For the full-training mean m=N,
+
+MSE_full(y) = (y-mu)^2.
+
+Consequently, whenever V>0,
+
+F(m) = 1 - (MSE_m-MSE_full)/(MSE_1-MSE_full)
+     = N*(m-1)/(m*(N-1)).
+
+This fraction depends only on N and m and does **not** depend on the biology or y.
+
+In particular,
+- N=3 and m=3: F=1.000000;
+- N=4 and m=3: F=8/9=0.888889;
+- N=5 and m=3: F=5/6=0.833333.
+
+These are exactly the previously reported bat-level convergence fractions:
+- A,C,E: 0.889 (N=4);
+- B: 1.000 (N=3);
+- D: 0.833 (N=5).
+
+The pooled ~0.916 depends on weighting the structurally predetermined fractions by each target's reducible subset-estimation variance. It is not a separately learned biological property.
+
+### Implication for the bootstrap
+
+For every target with V>0, MSE_1 - MSE_3 is **automatically nonnegative** by the same identity. A bat-cluster bootstrap confidence interval excluding zero thus measures positive dispersion across the available training environments. It does **not** test whether the scalar is stationary or converges to a true invariant bat-specific control parameter.
+
+The decreasing subset-estimate SD is similarly guaranteed by finite-sample averaging.
+
+### Evidence that remains legitimate
+
+The following previous analyses have a different estimand and are not invalidated by this identity:
+
+1. *Rhinolophus nippon* 1-D training-only PCA identifies individuals in held-out configurations under a frozen label-permutation null (K~+0.958, p=0.0006; 5/5 bats positive).
+2. Transparent FlightIntensity transfers across configurations (K~+0.497; p=0.0003).
+3. Training-environment scalar differences predict held-out pairwise magnitudes (beta~1.031, r~0.555, corresponding label-permutation p values 0.0014 and 0.0162).
+4. A strict shared-target predictive decomposition found positive group-level portable-theta gain (+0.173, bat-bootstrap CI [+0.033,+0.415]).
+
+These support a **predictively portable one-dimensional summary of measured flight-intensity variation** across the sampled obstacle configurations, not a uniquely identified dynamical law.
+
+The within-environment standardization of the flight features uses the complete environment's unlabeled data (including target-environment distributional information). Leave-one-environment-out transfer is therefore **transductive / environment-normalized**: not a cold-start deployment prediction with only one new bat trajectory.
+
+The d=1 and d=8 Euclidean identity advantage K values use different geometries. Similar K magnitudes do not prove dimensional equality or that 1-D outperforms 8-D; what is valid is that the frozen d=1 adequacy criterion was satisfied.
+
+### Second personal parameter and trajectory link
+
+Later post-primary diagnostics place a clear ceiling on the proposed two-parameter model:
+- Individual-specific predictive variance sigma_i did not improve held-out log score over common residual variance: G=-0.0782, 95% bat-cluster CI [-0.3944,+0.2379], 2/5 positive.
+- The magnitude-margin versus correct held-out rank ordering had rho=+0.248 but p=0.0963, unsupported.
+- Transferable theta did not predict held-out individual's 3-D route-lane centroid: gain=-0.0878, exact p=0.2917, 2/4 positive.
+
+Therefore, neither a predictively stable second noise parameter nor a common theta-to-lane equation has been established.
+
+### Miniopterus structural limitation
+
+The Miniopterus all-dimension scan found no positive cross-configuration linear identity, but its available 19 trajectories are severely unbalanced:
+
+- four individuals: A,B,C,D;
+- each bat occurs in only three environments;
+- of seven environments, **five have only one biological individual**;
+- only Env2 (three bats) and Env3 (four bats) compare multiple individual identities.
+
+The Mini normalization subtracts within-environment feature means. In a singleton-bat environment, that bat's entire environment-average feature vector is therefore exactly zero by construction. It cannot supply cross-bat mean separation there.
+
+This is a structural weakness for between-individual transfer, **not** evidence that Miniopterus requires higher or infinite-dimensional laws. Without a balanced multi-individual cross-environment panel, absence of transfer cannot be compared directly with Rhinolophus as a species-level mechanism difference.
+
+## Revised scientific statement
+
+> In the available horseshoe-bat system, a one-dimensional movement-intensity summary preserves cross-configuration individual information under the frozen label null. The previous "91.6% parameter convergence" is a finite-subset averaging identity and cannot independently establish parameter identifiability. The source of the persistent individual component remains unidentified, as do any additional stable context-sensitivity or trajectory-generating parameters.
+
+## Next legitimate discriminator
+
+A new, independently sampled set of obstacle configurations (or ordered same-individual task reconfigurations) is needed to test stability, learning and physical meaning without mechanically guaranteed subset-convergence metrics.
+
+Do not relabel the existing post-outcome results as prospective proof.
