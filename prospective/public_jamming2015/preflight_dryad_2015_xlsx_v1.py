@@ -42,28 +42,39 @@ def probe():
     }
     session = requests.Session()
     try:
-        with session.get(URL, stream=True, allow_redirects=True,
-                         headers={"User-Agent":"batter-research-structural-audit/1.0",
-                                  "Accept":"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"},
-                         timeout=TIMEOUT) as resp:
-            x["http_status"] = resp.status_code
-            x["final_host"] = requests.utils.urlparse(resp.url).hostname
-            if resp.status_code != 200:
-                raise RuntimeError("HTTP_%s" % resp.status_code)
-            h = hashlib.sha256()
-            chunks = []
-            size = 0
-            for chunk in resp.iter_content(65536):
-                if not chunk: continue
-                size += len(chunk)
-                if size > CAP:
-                    raise RuntimeError("STOP_GT_8_MIB")
-                h.update(chunk)
-                chunks.append(chunk)
-            binary = b"".join(chunks)
-            x["size"],x["sha256"]=size,h.hexdigest()
-            if not zipfile.is_zipfile(io.BytesIO(binary)):
-                raise RuntimeError("NOT_XLSX_ZIP")
+        urls = [URL, "https://datadryad.org/api/v2/files/68296/download"]
+        x["source_api_attempts"] = []
+        binary = None
+        for candidate in urls:
+            with session.get(candidate, stream=True, allow_redirects=True,
+                             headers={"User-Agent": "batter-research-structural-audit/1.0",
+                                      "Accept": "application/octet-stream, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"},
+                             timeout=TIMEOUT) as resp:
+                x["source_api_attempts"].append(
+                    {"official_endpoint": candidate, "http_status": resp.status_code,
+                     "final_host": requests.utils.urlparse(resp.url).hostname}
+                )
+                x["http_status"] = resp.status_code
+                x["final_host"] = requests.utils.urlparse(resp.url).hostname
+                if resp.status_code != 200:
+                    continue
+                h=hashlib.sha256()
+                chunks=[]
+                size=0
+                for chunk in resp.iter_content(65536):
+                    if not chunk: continue
+                    size+=len(chunk)
+                    if size>CAP: raise RuntimeError("STOP_GT_8_MIB")
+                    h.update(chunk)
+                    chunks.append(chunk)
+                binary=b"".join(chunks)
+                x["size"],x["sha256"]=size,h.hexdigest()
+                x["successful_official_endpoint"]=candidate
+                if not zipfile.is_zipfile(io.BytesIO(binary)):
+                    raise RuntimeError("NOT_XLSX_ZIP")
+                break
+        if binary is None:
+            raise RuntimeError("ALL_OFFICIAL_PUBLIC_ENDPOINTS_BLOCKED")
         with zipfile.ZipFile(io.BytesIO(binary)) as z:
             names=set(z.namelist())
             required={"xl/workbook.xml","xl/_rels/workbook.xml.rels"}
