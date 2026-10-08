@@ -1,0 +1,19 @@
+name: theta-finite-sample-audit-v1
+on:
+  push:
+    branches: [post-freeze/theta-finite-sample-audit-v1]
+    paths:
+      - "prospective/task_reset_lockin/THETA_FINITE_SAMPLE_AUDIT_V1.md"
+      - "prospective/task_reset_lockin/verify_theta_finite_sample_identity_v1.py"
+      - ".github/workflows/theta-finite-sample-audit-v1.yml"
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions: {contents: read}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: python prospective/task_reset_lockin/verify_theta_finite_sample_identity_v1.py
