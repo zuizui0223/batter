@@ -1,0 +1,33 @@
+name: memory-vs-inertia-simulation-v1
+on:
+  push:
+    branches:
+      - diagnostic/solution-repertoire-memory-vs-inertia-v1
+    paths:
+      - "prospective/solution_repertoire_experiment/memory_vs_inertia_simulation_v1.py"
+      - ".github/workflows/memory-vs-inertia-simulation-v1.yml"
+  workflow_dispatch:
+
+jobs:
+  synthetic-mechanism-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install numerical dependency
+        run: python -m pip install numpy>=1.26
+      - name: Synthetic invariant tests
+        run: python prospective/solution_repertoire_experiment/memory_vs_inertia_simulation_v1.py --self-test
+      - name: Reproduce all six fixed scenarios
+        run: |
+          python prospective/solution_repertoire_experiment/memory_vs_inertia_simulation_v1.py --out MEMORY_VS_INERTIA_SIMULATION_RESULT_V1.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: memory-vs-inertia-simulation-v1
+          path: MEMORY_VS_INERTIA_SIMULATION_RESULT_V1.json
+          if-no-files-found: error
