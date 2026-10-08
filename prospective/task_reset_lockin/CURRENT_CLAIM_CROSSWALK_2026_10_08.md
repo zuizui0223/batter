@@ -39,12 +39,17 @@ Working-branch synthesis only. Resolves contradictory interpretations across pre
 - Randomized environmental enrichment and developmental auditory feedback have **not** shown a common treatment effect on the total amount of differentiation. Post-hoc feature reallocations are descriptive, not confirmatory.
 - Neither result identifies genetic versus learned versus social origin of the 3D field pattern.
 
-## G. Latest transport audit — distinct prediction semantics
-- Original FlightIntensity standardization includes *focal target-environment observations* in both its mean and SD. It is an admissible retrospective conditioned-identity statistic, not a completely target-configuration-blind forecast.
-- New contract and two-endpoint script: `TARGET_BLIND_FORECAST_AUDIT_CONTRACT_V1.md` and `target_blind_forecast_audit_v1.py`.
-- **Primary** excludes the entire target configuration from training reference and self-history estimation.
-- **Secondary** allows target peers for normalization but excludes the focal from its own reference; this is peer-conditioned only.
-- Numerical outcome must be read from CI run 37726588937, **not guessed**. This is a post-outcome audit, not new confirmation.
+## G. Latest transport audit — executed and reported (same-source, post-outcome)
+- The original FlightIntensity standardization includes the *focal test-configuration observations* in the configuration-level mean/SD. It remains a valid retrospective, conditioned correspondence test, **not** a truly configuration-blind prediction.
+- The subsequently frozen target-configuration-blind primary excludes **every trajectory in the target configuration** from the feature-scaling reference and self-history prediction. [Successful CI run 37726588937](https://github.com/zuizui0223/batter/actions/runs/37726588937) has now been read and transcribed, not guessed; see `TARGET_BLIND_FORECAST_AUDIT_RESULT_V1.md`.
+- **Blind primary:** `G=+0.443714`, `MSE_zero=0.932749`, `MSE_self=0.489035`, `R²=+0.475706`; identity-label conditional permutation `p=.0003`, but bat-cluster 95% CI for gain `[-0.148938,+1.130310]` includes zero. Only 3/5 bats improve; B/C get worse. This is a same-five-bats, post-outcome predictive-semantics audit; not an independent confirmatory source.
+- **Peer-conditioned secondary:** `G=+0.748123`, `R²=+0.540700`, conditional permutation `p=.0005`, cluster CI `[-0.224858,+1.794212]`; cannot be advertised as target-configuration-blind because it uses contemporaneous target-environment peer data.
+- These are *scalar flight-intensity* forecasts; NOT 3-D shape transfer, route geometry, sensorimotor causal laws, long-term learning, population-wide prediction, or fitness effects.
+
+## H. Why B/C lose absolute predictive gain (do NOT invent ecological classes)
+- For the **older fixed within-configuration-standardized** scalar, the per-bat leave-one-environment squared-error gain has exact finite-sample identity `G_i=theta_i²-[(2n_i-1)/(n_i(n_i-1))]*s_i²`. Using already-reported four-decimal theta/s values reproduces all five old gains to <0.000031; B/C are negative because their squared personal displacement is small versus their contextual variance penalty.
+- This is an **algebraic decomposition**, not a newly identified biological effect of flexibility or a different learned flight rule; it does **not** numerically govern the new held-out-configuration scaling of section G.
+- A variance partition from one bat×environment series cannot identify repeatable context-specific reaction norms versus noise, history, or sensor measurement error. See `LOSS_SIGN_IDENTIFIABILITY_AND_EXTERNAL_FALSIFICATION_V1.md` for exact derivation, counter-hypotheses, and a future independent crossed bat×configuration×night falsification design.
 
 ## Current ecological / mathematical interpretation
 Observed field distributions support repeatable **individual vertical-use organization without established exclusive partitioning**. The lab demonstrates some **compressible, portable movement-policy identity** and controlled perturbation persistence. But no causal link between the two and no generally transportable detailed 3D flight-trajectory rule has been identified.
