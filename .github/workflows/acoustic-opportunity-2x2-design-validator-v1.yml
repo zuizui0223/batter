@@ -1,0 +1,24 @@
+name: acoustic-opportunity-2x2-design-validator-v1
+on:
+  push:
+    branches:
+      - prospective/colony-acoustic-identity-retention-v1
+    paths:
+      - "prospective/colony_acoustic_identity/validate_future_factorial_bat_level_v1.py"
+      - ".github/workflows/acoustic-opportunity-2x2-design-validator-v1.yml"
+  workflow_dispatch:
+
+jobs:
+  structural-guard-no-bat-values:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions: {contents: read}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Syntax check
+        run: python -m py_compile prospective/colony_acoustic_identity/validate_future_factorial_bat_level_v1.py
+      - name: Deterministic toy-design structural invariants
+        run: python prospective/colony_acoustic_identity/validate_future_factorial_bat_level_v1.py --self-test
