@@ -1,0 +1,488 @@
+{
+  "boundary": "The intersection-union pair-specific sharp-null exact tests do not identify motor versus sonar/visual generalization; only a newly randomized cue/physics experiment could do that.",
+  "contract": "SENTINEL_TWO_COMPONENT_GATE_CONTRACT_V2.md",
+  "n_bats": [
+    18,
+    24
+  ],
+  "n_exact_raw_motor_sensory_pairs": 2000,
+  "preflight": {
+    "all_18_or_24_complete_blocks": "PASS",
+    "conditional_two_block_4_signs": "PASS",
+    "exact_primary_36_equals_9_orbits_with_4_repetitions": "PASS",
+    "motor_and_sensory_twin_raw_arrays": "PASS",
+    "p_pair_min_N18": 0.015625,
+    "p_pair_min_N24": 0.00390625
+  },
+  "root_seed": 202610082015,
+  "scenarios": {
+    "18": {
+      "BOTH_MOTOR_COMPONENTS": {
+        "H_one_sided_p_le_0_05": {
+          "count": 448,
+          "mc_se": 0.01572564784039119,
+          "rate": 0.448
+        },
+        "V_one_sided_p_le_0_05": {
+          "count": 478,
+          "mc_se": 0.015796075461962062,
+          "rate": 0.478
+        },
+        "both_H_and_V_joint_gate": {
+          "count": 280,
+          "mc_se": 0.014198591479439079,
+          "rate": 0.28
+        },
+        "both_arm_contrasts_positive_without_inference": {
+          "count": 929,
+          "mc_se": 0.008121514637061239,
+          "rate": 0.929
+        },
+        "mean_D_H": 0.1175138699311499,
+        "mean_D_V": 0.119041587285362,
+        "mean_T": 0.11827772860825596,
+        "n_synthetic_experiments": 1000,
+        "p_H_median": 0.0625,
+        "p_V_median": 0.0625,
+        "primary_T_supported": {
+          "count": 624,
+          "mc_se": 0.015317441039547044,
+          "rate": 0.624
+        }
+      },
+      "BOTH_SENSORY_CUE_GENERALIZATION": {
+        "H_one_sided_p_le_0_05": {
+          "count": 448,
+          "mc_se": 0.01572564784039119,
+          "rate": 0.448
+        },
+        "V_one_sided_p_le_0_05": {
+          "count": 478,
+          "mc_se": 0.015796075461962062,
+          "rate": 0.478
+        },
+        "both_H_and_V_joint_gate": {
+          "count": 280,
+          "mc_se": 0.014198591479439079,
+          "rate": 0.28
+        },
+        "both_arm_contrasts_positive_without_inference": {
+          "count": 929,
+          "mc_se": 0.008121514637061239,
+          "rate": 0.929
+        },
+        "mean_D_H": 0.1175138699311499,
+        "mean_D_V": 0.119041587285362,
+        "mean_T": 0.11827772860825596,
+        "n_synthetic_experiments": 1000,
+        "p_H_median": 0.0625,
+        "p_V_median": 0.0625,
+        "primary_T_supported": {
+          "count": 624,
+          "mc_se": 0.015317441039547044,
+          "rate": 0.624
+        }
+      },
+      "GLOBAL_FAMILIARITY": {
+        "H_one_sided_p_le_0_05": {
+          "count": 44,
+          "mc_se": 0.006485676526007136,
+          "rate": 0.044
+        },
+        "V_one_sided_p_le_0_05": {
+          "count": 41,
+          "mc_se": 0.006270486424512854,
+          "rate": 0.041
+        },
+        "both_H_and_V_joint_gate": {
+          "count": 3,
+          "mc_se": 0.001729450779872038,
+          "rate": 0.003
+        },
+        "both_arm_contrasts_positive_without_inference": {
+          "count": 343,
+          "mc_se": 0.015011695440555674,
+          "rate": 0.343
+        },
+        "mean_D_H": 0.001069463466053515,
+        "mean_D_V": 0.0015095860095627111,
+        "mean_T": 0.0012895247378081132,
+        "n_synthetic_experiments": 1000,
+        "p_H_median": 0.5,
+        "p_V_median": 0.5,
+        "primary_T_supported": {
+          "count": 54,
+          "mc_se": 0.007147307185227175,
+          "rate": 0.054
+        }
+      },
+      "HORIZONTAL_ONLY": {
+        "H_one_sided_p_le_0_05": {
+          "count": 916,
+          "mc_se": 0.008771772910877251,
+          "rate": 0.916
+        },
+        "V_one_sided_p_le_0_05": {
+          "count": 51,
+          "mc_se": 0.00695693898205238,
+          "rate": 0.051
+        },
+        "both_H_and_V_joint_gate": {
+          "count": 51,
+          "mc_se": 0.00695693898205238,
+          "rate": 0.051
+        },
+        "both_arm_contrasts_positive_without_inference": {
+          "count": 487,
+          "mc_se": 0.015806043148112688,
+          "rate": 0.487
+        },
+        "mean_D_H": 0.2402273805820971,
+        "mean_D_V": -0.002465028424203859,
+        "mean_T": 0.11888117607894662,
+        "n_synthetic_experiments": 1000,
+        "p_H_median": 0.015625,
+        "p_V_median": 0.515625,
+        "primary_T_supported": {
+          "count": 342,
+          "mc_se": 0.01500119995200384,
+          "rate": 0.342
+        }
+      },
+      "VERTICAL_ONLY": {
+        "H_one_sided_p_le_0_05": {
+          "count": 49,
+          "mc_se": 0.006826346021115542,
+          "rate": 0.049
+        },
+        "V_one_sided_p_le_0_05": {
+          "count": 914,
+          "mc_se": 0.008865889690267975,
+          "rate": 0.914
+        },
+        "both_H_and_V_joint_gate": {
+          "count": 48,
+          "mc_se": 0.006759881655768835,
+          "rate": 0.048
+        },
+        "both_arm_contrasts_positive_without_inference": {
+          "count": 497,
+          "mc_se": 0.01581110369329099,
+          "rate": 0.497
+        },
+        "mean_D_H": -0.0016493932813486047,
+        "mean_D_V": 0.23581515419840196,
+        "mean_T": 0.11708288045852668,
+        "n_synthetic_experiments": 1000,
+        "p_H_median": 0.515625,
+        "p_V_median": 0.015625,
+        "primary_T_supported": {
+          "count": 351,
+          "mc_se": 0.015093011627902497,
+          "rate": 0.351
+        }
+      },
+      "WEAK_BOTH": {
+        "H_one_sided_p_le_0_05": {
+          "count": 199,
+          "mc_se": 0.012625331678811452,
+          "rate": 0.199
+        },
+        "V_one_sided_p_le_0_05": {
+          "count": 185,
+          "mc_se": 0.012279047194306243,
+          "rate": 0.185
+        },
+        "both_H_and_V_joint_gate": {
+          "count": 70,
+          "mc_se": 0.008068457101577725,
+          "rate": 0.07
+        },
+        "both_arm_contrasts_positive_without_inference": {
+          "count": 733,
+          "mc_se": 0.013989674763910703,
+          "rate": 0.733
+        },
+        "mean_D_H": 0.06178181074817974,
+        "mean_D_V": 0.06124999675023824,
+        "mean_T": 0.06151590374920899,
+        "n_synthetic_experiments": 1000,
+        "p_H_median": 0.1875,
+        "p_V_median": 0.1875,
+        "primary_T_supported": {
+          "count": 259,
+          "mc_se": 0.013853483316480371,
+          "rate": 0.259
+        }
+      },
+      "WHOLE_ROUTE_ONLY": {
+        "H_one_sided_p_le_0_05": {
+          "count": 52,
+          "mc_se": 0.007021111023192838,
+          "rate": 0.052
+        },
+        "V_one_sided_p_le_0_05": {
+          "count": 48,
+          "mc_se": 0.006759881655768835,
+          "rate": 0.048
+        },
+        "both_H_and_V_joint_gate": {
+          "count": 13,
+          "mc_se": 0.003582038525755969,
+          "rate": 0.013
+        },
+        "both_arm_contrasts_positive_without_inference": {
+          "count": 341,
+          "mc_se": 0.01499063040702425,
+          "rate": 0.341
+        },
+        "mean_D_H": 0.00027868398663034145,
+        "mean_D_V": 0.0015990168188633682,
+        "mean_T": 0.0009388504027468543,
+        "n_synthetic_experiments": 1000,
+        "p_H_median": 0.5,
+        "p_V_median": 0.5,
+        "primary_T_supported": {
+          "count": 50,
+          "mc_se": 0.006892024376045111,
+          "rate": 0.05
+        }
+      }
+    },
+    "24": {
+      "BOTH_MOTOR_COMPONENTS": {
+        "H_one_sided_p_le_0_05": {
+          "count": 581,
+          "mc_se": 0.015602531845825537,
+          "rate": 0.581
+        },
+        "V_one_sided_p_le_0_05": {
+          "count": 592,
+          "mc_se": 0.015541428505771277,
+          "rate": 0.592
+        },
+        "both_H_and_V_joint_gate": {
+          "count": 408,
+          "mc_se": 0.015541428505771277,
+          "rate": 0.408
+        },
+        "both_arm_contrasts_positive_without_inference": {
+          "count": 971,
+          "mc_se": 0.005306505441436956,
+          "rate": 0.971
+        },
+        "mean_D_H": 0.12102635803208148,
+        "mean_D_V": 0.11917169673382891,
+        "mean_T": 0.1200990273829552,
+        "n_synthetic_experiments": 1000,
+        "p_H_median": 0.03515625,
+        "p_V_median": 0.03125,
+        "primary_T_supported": {
+          "count": 759,
+          "mc_se": 0.013524755080961725,
+          "rate": 0.759
+        }
+      },
+      "BOTH_SENSORY_CUE_GENERALIZATION": {
+        "H_one_sided_p_le_0_05": {
+          "count": 581,
+          "mc_se": 0.015602531845825537,
+          "rate": 0.581
+        },
+        "V_one_sided_p_le_0_05": {
+          "count": 592,
+          "mc_se": 0.015541428505771277,
+          "rate": 0.592
+        },
+        "both_H_and_V_joint_gate": {
+          "count": 408,
+          "mc_se": 0.015541428505771277,
+          "rate": 0.408
+        },
+        "both_arm_contrasts_positive_without_inference": {
+          "count": 971,
+          "mc_se": 0.005306505441436956,
+          "rate": 0.971
+        },
+        "mean_D_H": 0.12102635803208148,
+        "mean_D_V": 0.11917169673382891,
+        "mean_T": 0.1200990273829552,
+        "n_synthetic_experiments": 1000,
+        "p_H_median": 0.03515625,
+        "p_V_median": 0.03125,
+        "primary_T_supported": {
+          "count": 759,
+          "mc_se": 0.013524755080961725,
+          "rate": 0.759
+        }
+      },
+      "GLOBAL_FAMILIARITY": {
+        "H_one_sided_p_le_0_05": {
+          "count": 61,
+          "mc_se": 0.0075682891065286355,
+          "rate": 0.061
+        },
+        "V_one_sided_p_le_0_05": {
+          "count": 61,
+          "mc_se": 0.0075682891065286355,
+          "rate": 0.061
+        },
+        "both_H_and_V_joint_gate": {
+          "count": 20,
+          "mc_se": 0.004427188724235731,
+          "rate": 0.02
+        },
+        "both_arm_contrasts_positive_without_inference": {
+          "count": 344,
+          "mc_se": 0.015022117027902558,
+          "rate": 0.344
+        },
+        "mean_D_H": 0.0023699556568203494,
+        "mean_D_V": 0.002461739421338888,
+        "mean_T": 0.0024158475390796182,
+        "n_synthetic_experiments": 1000,
+        "p_H_median": 0.494140625,
+        "p_V_median": 0.484375,
+        "primary_T_supported": {
+          "count": 69,
+          "mc_se": 0.008014923580421713,
+          "rate": 0.069
+        }
+      },
+      "HORIZONTAL_ONLY": {
+        "H_one_sided_p_le_0_05": {
+          "count": 992,
+          "mc_se": 0.0028170906978654425,
+          "rate": 0.992
+        },
+        "V_one_sided_p_le_0_05": {
+          "count": 64,
+          "mc_se": 0.007739767438366608,
+          "rate": 0.064
+        },
+        "both_H_and_V_joint_gate": {
+          "count": 64,
+          "mc_se": 0.007739767438366608,
+          "rate": 0.064
+        },
+        "both_arm_contrasts_positive_without_inference": {
+          "count": 530,
+          "mc_se": 0.015782902141241326,
+          "rate": 0.53
+        },
+        "mean_D_H": 0.2403414302257914,
+        "mean_D_V": 0.003964610712904078,
+        "mean_T": 0.12215302046934776,
+        "n_synthetic_experiments": 1000,
+        "p_H_median": 0.00390625,
+        "p_V_median": 0.478515625,
+        "primary_T_supported": {
+          "count": 517,
+          "mc_se": 0.01580224667571039,
+          "rate": 0.517
+        }
+      },
+      "VERTICAL_ONLY": {
+        "H_one_sided_p_le_0_05": {
+          "count": 58,
+          "mc_se": 0.007391616873188166,
+          "rate": 0.058
+        },
+        "V_one_sided_p_le_0_05": {
+          "count": 979,
+          "mc_se": 0.00453420334788814,
+          "rate": 0.979
+        },
+        "both_H_and_V_joint_gate": {
+          "count": 58,
+          "mc_se": 0.007391616873188166,
+          "rate": 0.058
+        },
+        "both_arm_contrasts_positive_without_inference": {
+          "count": 501,
+          "mc_se": 0.015811356678033673,
+          "rate": 0.501
+        },
+        "mean_D_H": 1.55597993953398e-05,
+        "mean_D_V": 0.23969489278532893,
+        "mean_T": 0.11985522629236214,
+        "n_synthetic_experiments": 1000,
+        "p_H_median": 0.5,
+        "p_V_median": 0.00390625,
+        "primary_T_supported": {
+          "count": 471,
+          "mc_se": 0.01578477114183161,
+          "rate": 0.471
+        }
+      },
+      "WEAK_BOTH": {
+        "H_one_sided_p_le_0_05": {
+          "count": 251,
+          "mc_se": 0.013711272734505722,
+          "rate": 0.251
+        },
+        "V_one_sided_p_le_0_05": {
+          "count": 233,
+          "mc_se": 0.013368283360252356,
+          "rate": 0.233
+        },
+        "both_H_and_V_joint_gate": {
+          "count": 112,
+          "mc_se": 0.00997276290703835,
+          "rate": 0.112
+        },
+        "both_arm_contrasts_positive_without_inference": {
+          "count": 780,
+          "mc_se": 0.01309961831505025,
+          "rate": 0.78
+        },
+        "mean_D_H": 0.06262953455149717,
+        "mean_D_V": 0.060359885782699595,
+        "mean_T": 0.061494710167098385,
+        "n_synthetic_experiments": 1000,
+        "p_H_median": 0.1484375,
+        "p_V_median": 0.1640625,
+        "primary_T_supported": {
+          "count": 322,
+          "mc_se": 0.014775520295407536,
+          "rate": 0.322
+        }
+      },
+      "WHOLE_ROUTE_ONLY": {
+        "H_one_sided_p_le_0_05": {
+          "count": 48,
+          "mc_se": 0.006759881655768835,
+          "rate": 0.048
+        },
+        "V_one_sided_p_le_0_05": {
+          "count": 51,
+          "mc_se": 0.00695693898205238,
+          "rate": 0.051
+        },
+        "both_H_and_V_joint_gate": {
+          "count": 10,
+          "mc_se": 0.003146426544510455,
+          "rate": 0.01
+        },
+        "both_arm_contrasts_positive_without_inference": {
+          "count": 338,
+          "mc_se": 0.014958475858188226,
+          "rate": 0.338
+        },
+        "mean_D_H": 0.0009245449841600883,
+        "mean_D_V": 0.0018402343215240568,
+        "mean_T": 0.0013823896528420726,
+        "n_synthetic_experiments": 1000,
+        "p_H_median": 0.49609375,
+        "p_V_median": 0.4921875,
+        "primary_T_supported": {
+          "count": 55,
+          "mc_se": 0.00720936890441875,
+          "rate": 0.055
+        }
+      }
+    }
+  },
+  "simulation_count_each": 1000,
+  "status": "SYNTHETIC_PLANNING_ONLY_NO_BAT_DATA"
+}
