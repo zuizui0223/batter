@@ -1,0 +1,31 @@
+name: orthogonal-route-practice-identifiability-v1
+on:
+  push:
+    branches:
+      - prospective/orthogonal-route-practice-v1
+    paths:
+      - "prospective/solution_repertoire_experiment/orthogonal_route_practice_v1.py"
+      - "prospective/solution_repertoire_experiment/ORTHOGONAL_ROUTE_PRACTICE_CONTRACT_V1.md"
+      - ".github/workflows/orthogonal-route-practice-identifiability-v1.yml"
+  workflow_dispatch:
+jobs:
+  simulated-practice:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions: {contents: read}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.13"}
+      - run: python -m pip install 'numpy==2.3.5'
+      - name: Exact constrained assignment invariants
+        run: python prospective/solution_repertoire_experiment/orthogonal_route_practice_v1.py --self-test
+      - name: Simulate five locked causal generators
+        run: >
+          python prospective/solution_repertoire_experiment/orthogonal_route_practice_v1.py
+          --out ORTHOGONAL_ROUTE_PRACTICE_RESULT_V1.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: orthogonal-route-practice-v1
+          path: ORTHOGONAL_ROUTE_PRACTICE_RESULT_V1.json
+          if-no-files-found: error
