@@ -24,7 +24,7 @@ No supplied real records exist in this branch. A future technician must make two
 - `anchor_points`: 2–25 canonical R1 physical points, with unique `point_id`, 3D coordinates `x_m, y_m, z_m`, and fixed receiving/probe orientation, plus canonical `station_id`.
 - `alternative_points`: an array of mapped physical R2–R4 positions for an open-gate ecological opportunity map; site-recorded geometry plus `route_id` R2/R3/R4 and matched `station_id`, no invented locations;
 - `bench_repeat_floor`: must be >=3 **independent bench repeated setups** (distinct day/setup IDs); repeated waveform FFT bins or time frames are not independent bench setups;
-- `max_allowed_fixed_point_snr_gate_bias_db` and `max_allowed_fixed_point_snr_gate_x_masker_interaction_db`: positive tolerances chosen by pilot engineers/acousticians **before reading these measurements**, with a calibration/behavioral rationale. No arbitrary default numerical acceptance tolerance is implemented.
+- `max_allowed_fixed_point_snr_gate_bias_db` and `max_allowed_fixed_point_snr_gate_x_masker_interaction_db`, `max_allowed_fixed_point_echo_change_db`, `max_allowed_fixed_point_background_change_db`: positive tolerances chosen by pilot engineers/acousticians **before reading these measurements**, with a calibration/behavioral rationale. No arbitrary default numerical acceptance tolerance is implemented.
 - `min_clearance_m` and `max_acceptable_target_loss_db`: pilot-validated limits, positive; `max_safe_peak_db_spl`: independently approved physical exposure limit chosen before measurement. This is NOT a bat welfare threshold selected by this model.
 
 `bench_acoustics.csv` one calibrated summary per physically independent setup×fixed probe point×configuration:
@@ -41,7 +41,7 @@ For each canonical anchor point and repeat, define acoustic SNR (S=E-N) in dB as
 - `gate_bias_masker = S(R=1,M=1) - S(R=0,M=1)`
 - `gate_x_masker = gate_bias_masker - gate_bias_sham`.
 
-Also compute **target echo** and **background level** absolute gate differences separately: a zero net SNR change can hide equally large changes in both signals. The two acoustic tolerances in manifest are required and checked against the **maximum absolute of all anchor×repeat contrasts** (engineering conservative worst-case; may be too strict in real room). Report individual point summaries, not just mean. Do not call small mean a proof of no acoustic contamination.
+Also **test** the absolute gate changes in both **target echo** and **background level** separately against their own pilot-declared positive tolerances: a zero net SNR change can hide equally large changes in both signals. This requirement is part of the initial physics audit, not a post-hoc outcome rescue. All four acoustic tolerances in manifest (SNR gate bias, SNR interaction, target-echo absolute gate change, background-noise absolute gate change) are required and checked against the **maximum absolute of all anchor×repeat contrasts** (engineering conservative worst-case; may be too strict in real room). Report individual point summaries, not just mean. Do not call small mean a proof of no acoustic contamination.
 
 Distinctly for accessible alternatives with R=1/M=1, report the measured range of acoustic SNR relative to the canonical R1 point at matched path stations. This is a **possibility map**, not evidence of bat pathway choice or ecological advantage; mechanical and sensory effects need separate endpoints.
 
@@ -57,3 +57,6 @@ The future bat 2x2 success interaction uses one bat per R×M block and **BAT** a
 
 ## Implementation boundary
 A dependency-free validator must accept EXACT file paths, assert all predeclarations, compute conservative anchor contrasts and physics flags, print JSON; never generate substitute measurements, p-values, synthetic biological effect sizes or declare causal masking buffer success. Only self-test may use explicitly labeled tiny **dummy** values to exercise arithmetic and fail-closed guards.
+
+### Pre-execution software correction to the frozen engineering description
+Before any real bench outcome or completed CI test, the initial implementation review recognized that matching SNR alone plus a one-sided echo-loss limit would allow target echo and noise level to both shift by equal large amounts. The explicit absolute echo-change AND absolute background-change tolerances above repair this observational blind spot. No physical observations were opened or scientific acceptance values chosen in making this correction.
