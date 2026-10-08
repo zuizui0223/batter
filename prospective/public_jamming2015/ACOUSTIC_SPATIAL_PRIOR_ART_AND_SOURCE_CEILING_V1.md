@@ -37,6 +37,13 @@ Source: https://www.nature.com/articles/srep18556
 
 These statements apply only to **these six checked studies**, not a universal search result about all bats.
 
+
+## Direct incompatibility with the 45-flight controlled obstacle result
+
+The pre-existing five-bat *Rhinolophus* movement-policy analyses use **separate individual flights through obstacle configurations**, not a randomized multi-bat acoustic crowding intervention. Therefore the successful per-individual 3D movement-policy identity in that source cannot be mechanistically *explained* by contemporaneous conspecific sonar signal divergence/convergence on the basis of that source alone. Even a perfect individual route-identity result would be compatible with intrinsic biomechanics, single-animal sensorimotor preferences, prior learning outside the experimental sequence, or repeated task constraints.
+
+Likewise, the 2025 collective-emergence 96-bat movement study does not independently replicate the five-bat 3D personal movement-policy tests: its ecological task, tracking frequency, social environment, and contrast are different. The properly formulated general claim is **possible coexistence across scales**, not an already established shared physiological mechanism.
+
 ## What would prove acoustic-spatial functional substitution rather than correlated response?
 
 In SAME stable physical bats, prospectively and ethically manipulate **acoustic interference** independently of **safe spatial avoidance opportunity**, holding bat reward/geometry/sound intensity controls, and measure:
