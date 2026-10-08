@@ -72,22 +72,21 @@ def get(url):
 
 
 def first_row_xml(blob):
-    # Never collect the <sheetData> rows after the first row.
-    parser=ET.iterparse(io.BytesIO(blob),events=("end",))
+    # Parse the worksheet XML but ACCESS cell contents in row 1 ONLY.
+    # Never iterate through or materialize cell values in later rows.
+    root=ET.fromstring(blob)
+    sheetdata=root.find(SS+"sheetData")
+    if sheetdata is None:return []
+    row=next((r for r in sheetdata.findall(SS+"row") if r.get("r")=="1"),None)
+    if row is None:return []
     cells=[]
-    for _ev,element in parser:
-        if element.tag==SS+"row" and element.get("r")=="1":
-            for c in element.findall(SS+"c"):
-                value=c.find(SS+"v")
-                istr=c.find(SS+"is")
-                inline="".join(t.text or "" for t in (istr.iter(SS+"t") if istr is not None else []))
-                cells.append((c.get("r"),c.get("t"),value.text if value is not None else None,inline))
-            element.clear()
-            break
-        if element.tag==SS+"row":
-            element.clear()
-            break
-        element.clear()
+    for c in row.findall(SS+"c"):
+        value=c.find(SS+"v")
+        istr=c.find(SS+"is")
+        inline="".join(t.text or "" for t in (
+            istr.iter(SS+"t") if istr is not None else []))
+        cells.append((c.get("r"),c.get("t"),
+                      value.text if value is not None else None,inline))
     return cells
 
 
