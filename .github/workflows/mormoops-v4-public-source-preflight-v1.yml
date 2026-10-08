@@ -1,0 +1,40 @@
+name: mormoops-v4-public-source-preflight-v1
+on:
+  push:
+    branches:
+      - prospective/mormoops-social-role-source-gate-v1
+    paths:
+      - "prospective/external_social_role_2026/preflight_mormoops_v4_source_v1.py"
+      - ".github/workflows/mormoops-v4-public-source-preflight-v1.yml"
+  workflow_dispatch:
+
+jobs:
+  inspect-public-structural-metadata:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions: {contents: read}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.13"}
+      - name: Install metadata readers (not an outcome analysis)
+        run: python -m pip install 'requests==2.32.5' 'scipy==1.16.2' 'h5py==3.15.1'
+      - name: Syntax and CLI self-check
+        run: |
+          python -m py_compile prospective/external_social_role_2026/preflight_mormoops_v4_source_v1.py
+          python prospective/external_social_role_2026/preflight_mormoops_v4_source_v1.py --help
+      - name: Fetch v4 public metadata and .mat headers ONLY
+        run: |
+          python prospective/external_social_role_2026/preflight_mormoops_v4_source_v1.py --out MORMOOPS_V4_STRUCTURAL_RECEIPT_V1.json
+          python - <<'PY'
+          import json
+          x=json.load(open("MORMOOPS_V4_STRUCTURAL_RECEIPT_V1.json"))
+          assert x["evidence_tier"]=="SOURCE_ONLY_NO_NUMERIC_BAT_OUTCOMES_OPENED"
+          assert x["version"]==4
+          print("structural status:",x["status"])
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mormoops-v4-public-source-structural-only-v1
+          path: MORMOOPS_V4_STRUCTURAL_RECEIPT_V1.json
+          if-no-files-found: error
