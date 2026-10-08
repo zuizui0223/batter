@@ -63,7 +63,6 @@ def fabricate(rng: random.Random, sigmas: dict[str,float],
 def folds_from_raw(raw,cellvec):
     folds={}
     for held in ENVS:
-        train=[v for e,_b,vec in raw if e != held for v in []]
         # Fit four training-only means and unbiased SD, as in #79.
         prior=[vec for e,b,vec in raw if e!=held]
         n=len(prior)
