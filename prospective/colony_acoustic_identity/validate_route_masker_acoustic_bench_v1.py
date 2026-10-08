@@ -92,6 +92,8 @@ def load_manifest(info):
     tol = {}
     for key in ("max_allowed_fixed_point_snr_gate_bias_db",
                 "max_allowed_fixed_point_snr_gate_x_masker_interaction_db",
+                "max_allowed_fixed_point_echo_change_db",
+                "max_allowed_fixed_point_background_change_db",
                 "max_acceptable_target_loss_db", "min_clearance_m"):
         tol[key] = numeric(info.get(key), key, lower=0, strict_lower=True)
     tol["max_safe_peak_db_spl"] = numeric(info.get("max_safe_peak_db_spl"),
@@ -171,22 +173,32 @@ def calculate(anchors, alts, seen, repeats, tol):
             interaction = bias1 - bias0
             target_loss = max(0., co["target_echo_db_spl"] - oo["target_echo_db_spl"],
                              cm["target_echo_db_spl"] - om["target_echo_db_spl"])
-            triples.append((bias0, bias1, interaction, target_loss))
-            checks.append((point,rep,bias0,bias1,interaction,target_loss))
+            maxecho=max(abs(oo["target_echo_db_spl"]-co["target_echo_db_spl"]),
+                        abs(om["target_echo_db_spl"]-cm["target_echo_db_spl"]))
+            maxbackground=max(abs(oo["background_db_spl"]-co["background_db_spl"]),
+                              abs(om["background_db_spl"]-cm["background_db_spl"]))
+            triples.append((bias0, bias1, interaction, target_loss, maxecho, maxbackground))
+            checks.append((point,rep,bias0,bias1,interaction,target_loss,maxecho,maxbackground))
         out[point] = {
             "max_abs_gate_bias_sham_db": max(abs(v[0]) for v in triples),
             "max_abs_gate_bias_masker_db": max(abs(v[1]) for v in triples),
             "max_abs_gate_x_masker_db": max(abs(v[2]) for v in triples),
             "max_target_echo_loss_open_gate_db": max(v[3] for v in triples),
+            "max_absolute_echo_gate_change_db": max(v[4] for v in triples),
+            "max_absolute_background_gate_change_db": max(v[5] for v in triples),
         }
     maxbias=max(max(abs(v[2]),abs(v[3])) for v in checks)
     maxinter=max(abs(v[4]) for v in checks)
     maxloss=max(v[5] for v in checks)
+    maxecho=max(v[6] for v in checks)
+    maxbackground=max(v[7] for v in checks)
     allvals=list(seen.values())
     minclearance=min(x["measured_clearance_m"] for x in allvals)
     maxpeak=max(x["max_peak_db_spl"] for x in allvals)
     contam=(maxbias>tol["max_allowed_fixed_point_snr_gate_bias_db"]
             or maxinter>tol["max_allowed_fixed_point_snr_gate_x_masker_interaction_db"]
+            or maxecho>tol["max_allowed_fixed_point_echo_change_db"]
+            or maxbackground>tol["max_allowed_fixed_point_background_change_db"]
             or maxloss>tol["max_acceptable_target_loss_db"])
     safety=(minclearance<tol["min_clearance_m"]
             or maxpeak>tol["max_safe_peak_db_spl"])
@@ -217,6 +229,8 @@ def calculate(anchors, alts, seen, repeats, tol):
         "canonical_gate_interaction_db":maxinter,
         "canonical_max_abs_snr_gate_bias_db":maxbias,
         "canonical_max_target_echo_loss_db":maxloss,
+        "canonical_max_absolute_echo_gate_change_db":maxecho,
+        "canonical_max_absolute_background_gate_change_db":maxbackground,
         "min_observed_physical_clearance_m":minclearance,
         "max_observed_peak_db_spl":maxpeak,
         "canonical_point_receipts":out,
@@ -265,6 +279,8 @@ def self_test():
             "bench_repeat_floor":3,
             "max_allowed_fixed_point_snr_gate_bias_db":0.5,
             "max_allowed_fixed_point_snr_gate_x_masker_interaction_db":0.5,
+            "max_allowed_fixed_point_echo_change_db":0.5,
+            "max_allowed_fixed_point_background_change_db":0.5,
             "max_acceptable_target_loss_db":0.5,
             "min_clearance_m":0.1,
             "max_safe_peak_db_spl":110,
@@ -307,9 +323,21 @@ def self_test():
         manifest_path.write_text(json.dumps(manifest))
         b=main_job(manifest_path,csv_path)
         assert b["status"]==STOP_ACOUSTICS,b
+        # Equal target echo and noise shifts must not hide under unchanged SNR.
+        balanced=[r.copy() for r in rows]
+        for v in balanced:
+            if v[0]=="R1_1" and v[2]=="1" and v[3]=="1":
+                v[4]="60"  # +2dB target echo, SNR unchanged when masker also +2dB
+                v[5]="44"
+        with csv_path.open("w",newline="") as h:
+            writer=csv.writer(h);writer.writerow(FIELDS);writer.writerows(balanced)
+        manifest["source_dataset_sha256"]=hashlib.sha256(csv_path.read_bytes()).hexdigest()
+        manifest_path.write_text(json.dumps(manifest))
+        equal_shift=main_job(manifest_path,csv_path)
+        assert equal_shift["status"]==STOP_ACOUSTICS,equal_shift
         # Same row cannot masquerade as two independent measurements.
         with csv_path.open("a",newline="") as h:
-            writer=csv.writer(h);writer.writerow(contaminated[0])
+            writer=csv.writer(h);writer.writerow(balanced[0])
         manifest["source_dataset_sha256"]=hashlib.sha256(csv_path.read_bytes()).hexdigest()
         manifest_path.write_text(json.dumps(manifest))
         c=main_job(manifest_path,csv_path)
@@ -323,6 +351,7 @@ def self_test():
             "4_arm_x_3_setup_per_physical_anchor":"PASS",
             "valid_calibration_and_alternative_path_snr_map":"PASS",
             "device_interaction_confound_detected":"PASS",
+            "equal_target_and_noise_gain_confound_detected":"PASS",
             "duplicate_bench_repeat_guard":"PASS",
             "raw_csv_hash_mismatch_guard":"PASS",
             "no_bat_p_value_generated":"PASS",
