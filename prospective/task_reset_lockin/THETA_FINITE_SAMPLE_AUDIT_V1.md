@@ -103,3 +103,24 @@ This is a structural weakness for between-individual transfer, **not** evidence 
 A new, independently sampled set of obstacle configurations (or ordered same-individual task reconfigurations) is needed to test stability, learning and physical meaning without mechanically guaranteed subset-convergence metrics.
 
 Do not relabel the existing post-outcome results as prospective proof.
+
+
+## Source-native structural gate: direct Rhino/Mini contrast is asymmetric
+
+The original outcome-blind structural adjudication (`STRUCTURAL_SUPPORT_ADJUDICATION_V2.md`) explicitly recorded:
+
+- Rhino: all seven Env1–Env7 had >=2 different bat identities, and five bats occurred in >=3 such environments; `PASS_B_TO_COORDINATE_SUPPORT`.
+- Mini: only Env2 (B,C,D) and Env3 (A,B,C,D) had >=2 identities. Five of seven environments were single-bat; the original gate required >=3 usable multi-bat environments per bat; `STOP_B`.
+
+The later Mini 1–8-dimensional and supervised 1–3-dimensional scans were **post-primary exploratory** extensions on the previously stopped data geometry. Their negative outcomes are properly described as *non-detection under an unsuitable sparse comparison design*, not as a calibrated species-level absence of stable individual policy.
+
+This asymmetry matters because per-environment feature centering forces a bat's mean standardized feature vector to **zero** when it is the only individual in that environment. Thus a one-bat environment cannot contribute a cross-individual mean contrast, regardless of latent dimensions.
+
+## Reproducibility and action
+
+A self-contained Python identity checker accompanies this audit:
+`verify_theta_finite_sample_identity_v1.py`.
+
+The code enumerates all training subsets on arbitrary synthetic vectors and verifies the finite-population MSE formula independently of the actual bat outcomes, including the exact A–E structural fractions.
+
+Earlier numeric results are preserved. All language promoting the finite-subset recovery fraction to independent confirmation of biological parameter convergence is superseded by this audit.
