@@ -24,9 +24,14 @@ MAX_HEADER = 16 * 1024
 TIMEOUT = (10, 30)
 
 def text_header(first):
-    text = first.decode("utf-8-sig", errors="replace").lstrip("\ufeff")
-    if "\n" not in text and len(first) >= MAX_HEADER:
+    # Never interpret binary gzip payload or content-encoding as a CSV header.
+    if first[:2] == b"\\x1f\\x8b" or first[:2] == bytes((0x1f, 0x8b)):
+        return {"gate": "STOP_COMPRESSED_HEADER_NOT_DECODED"}
+    text = first.decode("utf-8-sig", errors="strict").lstrip("\ufeff")
+    if len(first) >= MAX_HEADER:
         return {"gate": "STOP_HEADER_EXCEEDS_16K"}
+    if any(ord(c) < 32 and c not in "\\t\\r\\n" for c in text):
+        return {"gate": "STOP_NON_TEXT_HEADER"}
     text = text.splitlines()[0] if text.splitlines() else ""
     delimiter = "\t" if text.count("\t") > text.count(",") else ","
     try:
@@ -115,8 +120,11 @@ def do_probe():
                     if stream.status_code!=200:
                         entry["status"]="DOWNLOAD_HTTP_"+str(stream.status_code)
                     else:
-                        # Only retrieve the FIRST csv header line from response stream.
-                        line=stream.raw.readline(MAX_HEADER)
+                        # requests.iter_lines transparently decodes transfer gzip/deflate.
+                        # Do NOT use stream.raw.readline: that returns compressed bytes.
+                        # Read at most the first 1 KiB network chunk beyond the header.
+                        line=next(stream.iter_lines(chunk_size=1024, decode_unicode=False), b"")
+                        entry["transfer_encoding"]=stream.headers.get("Content-Encoding")
                         entry.update(text_header(line))
                         entry["status"]=entry["gate"]
             except Exception as exc:
