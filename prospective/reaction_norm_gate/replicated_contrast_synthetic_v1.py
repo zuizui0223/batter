@@ -60,6 +60,77 @@ def make_synthetic(scale: float = 1.0) -> tuple[list[float], list[float]]:
     return first, second
 
 
+
+def heldout_session_score(four_sessions: list[list[float]]) -> dict:
+    """Freeze first two occasions as training and latter two as testing.
+
+    Center each occasion's bat contrasts first to remove a common response.
+    This illustrates generalization, NOT independent-bat population inference.
+    """
+    if len(four_sessions) != 4:
+        raise ValueError("Need four separate synthetic session vectors")
+    sessions = [centered(list(s)) for s in four_sessions]
+    n = len(sessions[0])
+    if any(len(v) != n for v in sessions):
+        raise ValueError("Mismatch in complete bat IDs")
+    train = [(sessions[0][i] + sessions[1][i]) / 2 for i in range(n)]
+    test = [(sessions[2][i] + sessions[3][i]) / 2 for i in range(n)]
+    mse_zero = sum(v * v for v in test) / n
+    mse_personal = sum((test[i] - train[i]) ** 2 for i in range(n)) / n
+    return {"synthetic_n_bats": n,
+            "synthetic_train_test_cov": sum(train[i] * test[i] for i in range(n)) / (n-1),
+            "synthetic_mse_zero": mse_zero,
+            "synthetic_mse_personal": mse_personal,
+            "synthetic_gain": mse_zero - mse_personal}
+
+
+def make_four_sessions(scale: float = 1.0) -> list[list[float]]:
+    """Four fictitious nights. Shared context effect varies across nights."""
+    b = [-3.0, -2.0, -1.0, 1.0, 2.0, 3.0]
+    return [[shared + scale * bi for bi in b]
+            for shared in (11.0, 18.0, 13.0, 21.0)]
+
+
+def simulate_null_calibration(nrep: int = 1200, seed: int = 20261008) -> dict:
+    """Synthetic empirical size of the exact permutation p under two nulls.
+
+    The HETEROSCEDASTIC null has ZERO stable individual response and errors
+    independent between occasions, but individual-specific observation SD.
+    Under unequal SD, cross-individual labels are NOT exchangeable.
+    """
+    from itertools import permutations as perm_fn
+    import random
+
+    n = 5
+    all_perms = list(perm_fn(range(n)))
+    rng = random.Random(seed)
+
+    def trial(sigmas: list[float]) -> float:
+        positive = 0
+        for _ in range(nrep):
+            x = centered([rng.gauss(0.0, sigma) for sigma in sigmas])
+            y = centered([rng.gauss(0.0, sigma) for sigma in sigmas])
+            observed = sum(x[i]*y[i] for i in range(n))
+            extreme = sum(
+                sum(x[i]*y[p[i]] for i in range(n)) >= observed - 1e-12
+                for p in all_perms
+            )
+            if extreme / len(all_perms) <= .05:
+                positive += 1
+        return positive / nrep
+
+    equal = trial([1.0] * n)
+    unequal = trial([0.3, 0.6, 1.2, 2.5, 5.0])
+    return {
+        "synthetic_bats": n,
+        "synthetic_replicates_per_scenario": nrep,
+        "synthetic_uniform_sd_null_reject_at_p005": equal,
+        "synthetic_heterogeneous_sd_null_reject_at_p005": unequal,
+        "nominal_rate": 0.05,
+        "warning": "individual-label permutation is not calibrated under heteroscedastic individual errors",
+    }
+
+
 def self_test() -> dict:
     x, y = make_synthetic()
     positive = exact_label_correspondence(x, y)
@@ -85,7 +156,41 @@ def self_test() -> dict:
     device_bias_data = (x[:], y[:])
     assert isclose(cross_occasion_covariance(*device_bias_data),
                    positive["synthetic_observed_cov"], abs_tol=1e-12)
+    four = make_four_sessions(scale=1.0)
+    perfect = heldout_session_score(four)
+    assert perfect["synthetic_gain"] > 0
+    no_personal = heldout_session_score(make_four_sessions(scale=0.0))
+    assert abs(no_personal["synthetic_gain"]) < 1e-12
+
+    # Stable sensor bias permanently assigned to a bat perfectly mimics
+    # genuine personal response, even with all four nights observed.
+    sensor_only = heldout_session_score(four)
+    assert sensor_only == perfect
+
+    # A deliberately switched sensor sign on independent evaluation nights
+    # exposes that a sensor-specific response is not a bat-fixed response.
+    swapped_sensors = four[:2] + [[shared - b for b in [-3., -2., -1., 1., 2., 3.]]
+                                  for shared in (13., 21.)]
+    swapped = heldout_session_score(swapped_sensors)
+    assert swapped["synthetic_train_test_cov"] < 0
+    assert swapped["synthetic_gain"] < 0
+
+    calibration = simulate_null_calibration()
+    assert 0.015 < calibration["synthetic_uniform_sd_null_reject_at_p005"] < 0.085
+    assert calibration["synthetic_heterogeneous_sd_null_reject_at_p005"] > (
+        calibration["synthetic_uniform_sd_null_reject_at_p005"] + .025
+    )
+
     return {
+        "synthetic_four_occasion_holdout": "PASS",
+        "synthetic_personal_response_vs_noise": "PASS",
+        "synthetic_permanent_device_bias_nonidentification": "PASS",
+        "synthetic_sensor_rotation_exposes_device_artifact": "PASS",
+        "synthetic_heteroscedastic_false_positive_warning": "PASS",
+        "synthetic_null_calibration": calibration,
+        "synthetic_heldout_reliable_response": perfect,
+        "synthetic_heldout_no_personal_response": no_personal,
+        "synthetic_heldout_swapped_sensor": swapped,
         "synthetic_positive_exact_test": "PASS",
         "synthetic_common_session_shift_invariance": "PASS",
         "synthetic_constant_response_no_false_identity": "PASS",
