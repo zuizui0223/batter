@@ -63,8 +63,8 @@ def evaluate(t):
                 "error_fixed":float(err0),"error_peer_gain":float(err1),
                 "gain":float(err0-err1)
             })
-    if len(rows)!=22:
-        raise RuntimeError(f"expected 22 eligible bat-env targets, got {len(rows)}")
+    if len(rows)!=23:
+        raise RuntimeError(f"expected 23 eligible bat-env targets, got {len(rows)}")
     d={}
     for bat in sorted(t):
         rs=[r for r in rows if r["bat"]==bat]
