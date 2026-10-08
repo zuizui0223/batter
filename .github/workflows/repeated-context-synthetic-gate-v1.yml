@@ -20,6 +20,10 @@ jobs:
         run: python -m py_compile prospective/reaction_norm_gate/replicated_contrast_synthetic_v1.py
       - name: Prove synthetic invariances and display synthetic nulls
         run: python prospective/reaction_norm_gate/replicated_contrast_synthetic_v1.py --self-test
+      - name: Compile four-feature synthetic archive-null audit
+        run: python -m py_compile prospective/reaction_norm_gate/rhino_four_feature_synthetic_null_v1.py
+      - name: Stress-test four-feature target-blind null without empirical data
+        run: python prospective/reaction_norm_gate/rhino_four_feature_synthetic_null_v1.py --self-test
       - name: Fail closed when no real source is supplied
         run: |
           set +e
