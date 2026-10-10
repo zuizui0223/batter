@@ -213,6 +213,7 @@ def main():
                "count_page1":folder.get("listed_resource_count_page1"),
                "more_pages":folder.get("pagination_next_present"),
                "resources":[{"filename":x.get("filename"),"kind":x.get("kind"),
+                    "resource_id":x.get("resource_id"),
                     "size":x.get("declared_size_bytes")} for x in
                     folder.get("safe_file_metadata",[])[:25]]}
           for day,folder in datesamples.items()
