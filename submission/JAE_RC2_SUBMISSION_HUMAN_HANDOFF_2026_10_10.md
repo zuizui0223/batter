@@ -75,6 +75,18 @@ A separate [six-objection referee-response matrix](JAE_RC2_REFEREE_RISK_RESPONSE
 
 The optional short cover-letter proposal was edited to say that three panels **did not provide statistical support** for extra co-use separation, rather than implying that a non-significant test proves exactly zero separation. **No canonical manuscript, figure, title, result, license or DOI was changed.**
 
+## New critical 2026 JAE policy requirements — author review required
+
+The 2026-10-10 live [Journal of Animal Ecology initial-submission instructions](https://besjournals.onlinelibrary.wiley.com/hub/journal/13652656/author-guidelines) and [British Ecological Society editorial policies](https://besjournals.onlinelibrary.wiley.com/hub/editorial-policies) add distinct human tasks not fully covered by the legacy v0.4.0 author metadata JSON:
+
+- **Statement on inclusion:** the submission portal requires an account of what the study team actually did to engage or include scientists/stakeholders in the regions represented by the original bat tracking studies. This secondary-data analysis involved no new fieldwork, but must not misrepresent the original collectors, identities, collaboration or local engagement. Human approval is essential.
+- **Generative AI disclosure:** substantive ChatGPT/LLM assistance to manuscript drafting or analytical code/interpretation must be transparently described in Methods or Acknowledgements, consistent with actual usage and independently verified human responsibility. Merely language-only editing has different status. No AI can be listed as author; do not claim only language edits if research development use was substantive. Human authors must review factual claims and outputs.
+- **Original data reuse permissions:** Movebank/Dryad/Zenodo sources may be public, but public visibility alone does not prove unrestricted reuse or permission to republish sensitive wildlife telemetry. Check the licence and citations/permissions for every source; resolve restrictions with data owners and keep any correspondence outside public GitHub.
+- **Human accountability:** authorship contribution, conflicts, institutional and source collection ethics, original human approvals and manuscript signoff cannot be inferred from repository history or synthesized.
+- **Separate from the canonical metadata pipeline:** the new public signoff template `submission/jae_v0_4_0_policy_signoff.template.json` has deliberately *unapproved* fields, backed by [policy guidance](JAE_V0_4_0_AI_INCLUSION_AND_DATA_RIGHTS_POLICY_GATE_2026_10_10.md) and [an additional fail-closed checker](../scripts/audit_jae_v0_4_0_policy_signoff.py). A human may create the *approved* `submission/jae_v0_4_0_policy_signoff.json` without personal signatures or restricted information. Until then, the status is `HOLD_HUMAN_POLICY_SIGNOFF`, even when the separate source-hash/metadata gate passes.
+
+**Important:** a checked signoff JSON does not itself insert disclosure into the frozen manuscript, or prove the journal requirement has been met. If substantive-AI disclosure is needed in the anonymous Methods/Acknowledgements or if the inclusion statement is placed in the submission portal, the human editor must review its placement, rebuild any changed anonymous PDF and generate a separately versioned submission candidate. Never append unapproved language silently to RC2.
+
 ## Release vs manuscript safety
 
 This handoff is stored in a separate proposed PR **based on rc2**. Do not merge automatically into the frozen scientific branch until author approval. No `manuscript/MANUSCRIPT_DRAFT_V0_4_0.md`, figures, original tests, JAE release candidate, `main` or original release tags have been altered.
