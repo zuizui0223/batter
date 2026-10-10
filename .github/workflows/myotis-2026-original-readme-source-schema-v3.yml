@@ -1,0 +1,41 @@
+name: myotis-2026-original-readme-source-schema-v3
+on:
+  push:
+    branches:
+      - prospective/social-payoff-threshold-source-gate-v1
+    paths:
+      - "prospective/social_payoff_threshold/preflight_myotis2026_readme_only_v3.py"
+      - ".github/workflows/myotis-2026-original-readme-source-schema-v3.yml"
+  workflow_dispatch:
+jobs:
+  readme-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    permissions: {contents: read}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.13"}
+      - name: Compile and test fixed source filter
+        run: |
+          python -m py_compile prospective/social_payoff_threshold/preflight_myotis2026_readme_only_v3.py
+          python prospective/social_payoff_threshold/preflight_myotis2026_readme_only_v3.py --self-test
+      - name: Read only original OSF root README text, no event tables
+        run: |
+          python prospective/social_payoff_threshold/preflight_myotis2026_readme_only_v3.py --out MYOTIS_2026_README_SCHEMA_ONLY_V3.json
+          python - <<'PY'
+          import json
+          x=json.load(open("MYOTIS_2026_README_SCHEMA_ONLY_V3.json"))
+          assert x["no_event_rows_opened"] is True
+          assert x["no_bat_detection_records_opened"] is True
+          assert x["status"] in (
+            "HOLD_SEMANTICS_ONLY_NEEDS_BAT_NIGHT_GATE",
+            "STOP_README_SOURCE_INACCESSIBLE",
+          )
+          print("OSF_README_NO_BAT_EVENT_DATA: PASS")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: myotis-2026-osf-readme-schema-only-v3
+          path: MYOTIS_2026_README_SCHEMA_ONLY_V3.json
+          if-no-files-found: error
