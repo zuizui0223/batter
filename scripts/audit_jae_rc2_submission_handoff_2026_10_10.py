@@ -25,6 +25,8 @@ TITLE_PAGE=ROOT/"manuscript/TITLE_PAGE_V0_4_0.md"
 COVER=ROOT/"submission/JAE_V0_4_0_EDITORIAL_SHORT_COVER_LETTER_PROPOSAL_2026_10_10.md"
 LICENSE=ROOT/"LICENSE"
 CITATION=ROOT/"CITATION.cff"
+POLICY_SIGNOFF=ROOT/"submission/jae_v0_4_0_policy_signoff.json"
+SOURCE_RIGHTS_SIGNOFF=ROOT/"submission/jae_v0_4_0_original_source_rights.json"
 MAX_ARTICLE_WORDS=8500
 MAX_ABSTRACT_WORDS=350
 MAX_COVER_WORDS=500
@@ -100,6 +102,10 @@ def check()->dict:
         blocked.append("generated final CITATION.cff not yet present")
     if not TITLE_PAGE.exists():
         blocked.append("generated final human-approved title page not yet present")
+    if not POLICY_SIGNOFF.exists():
+        blocked.append("BES inclusion/generative-AI and source-reuse human policy signoff not yet present")
+    if not SOURCE_RIGHTS_SIGNOFF.exists():
+        blocked.append("individual original source rights review for all ten cited datasets not yet present")
 
     return {
       "status":"STOP_FROZEN_ASSET_OR_EDITORIAL_MISMATCH" if problems
