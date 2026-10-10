@@ -1,0 +1,46 @@
+name: myotis-2026-categorical-tag-date-correction-v5
+on:
+  push:
+    branches:
+      - prospective/social-payoff-threshold-source-gate-v1
+    paths:
+      - "prospective/social_payoff_threshold/preflight_myotis_tag_date_boundary_v5.py"
+      - ".github/workflows/myotis-2026-categorical-tag-date-correction-v5.yml"
+  workflow_dispatch:
+jobs:
+  fixed-source-categorical-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    permissions: {contents: read}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.13"}
+      - name: Compile and synthetic ID/date boundary checks
+        run: |
+          python -m py_compile prospective/social_payoff_threshold/preflight_myotis_tag_date_boundary_v5.py
+          python prospective/social_payoff_threshold/preflight_myotis_tag_date_boundary_v5.py --self-test
+      - name: Compare only original categorical ID/date fields from two source-pinned files
+        run: |
+          python prospective/social_payoff_threshold/preflight_myotis_tag_date_boundary_v5.py --out MYOTIS_TWO_DAY_ID_DATE_AMENDMENT_V5.json
+          python - <<'PY'
+          import json
+          x=json.load(open("MYOTIS_TWO_DAY_ID_DATE_AMENDMENT_V5.json"))
+          assert x["contract"]=="MYOTIS_2026_TAG_DATE_BOUNDARY_AMENDMENT_V5.md"
+          assert x["timestamp_or_location_or_rssi_or_dyad_values_accessed"] is False
+          assert x["behavioral_outcomes_computed"]==0
+          assert x["independently_repeated_dyad_verified"] is False
+          assert x["status"] in (
+             "PASS_CATEGORICAL_CROSS_FILE_RFID_TX_STABILITY_ONLY",
+             "STOP_CATEGORICAL_SOURCE_INACCESSIBLE",
+             "STOP_INTRA_FILE_ID_HETEROGENEITY",
+             "STOP_CROSS_FILE_ID_MISMATCH",
+             "HOLD_SOURCE_DATE_CONSISTENCY",
+          )
+          print("NO_BEHAVIOR_OR_RAW_ID_DISCLOSURE: PASS")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: myotis-2026-tag-date-boundary-categorical-v5
+          path: MYOTIS_TWO_DAY_ID_DATE_AMENDMENT_V5.json
+          if-no-files-found: error
