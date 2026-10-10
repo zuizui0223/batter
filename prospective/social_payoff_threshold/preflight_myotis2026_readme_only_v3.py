@@ -21,19 +21,19 @@ def sanitized_definitions(raw):
     text=raw.decode("utf-8-sig",errors="strict")
     lines=[]
     for line in text.splitlines():
-        if not re.search(r"(?i)\\b(?:rx|tx|rfid|dyad|sn_prox|receiver|sender|bat|date)\\b",line):
+        if not re.search(r"(?i)\b(?:rx|tx|rfid|dyad|sn_prox|receiver|sender|bat|date)\b",line):
             continue
         if "https://" in line or "http://" in line:
-            line=re.sub(r"https?://\\S+","[original source link redacted]",line)
+            line=re.sub(r"https?://\S+","[original source link redacted]",line)
         # Strip numeric coordinates, arbitrary large identifiers and tokenlike strings.
-        line=re.sub(r"[-+]?\\d+(?:\\.\\d+)?","[#]",line)
+        line=re.sub(r"[-+]?\d+(?:\.\d+)?","[#]",line)
         line=re.sub(r"[A-Fa-f0-9]{18,}","[identifier redacted]",line)
         lines.append(line.strip()[:200])
     return lines[:25]
 
 
 def self_test():
-    s=b"These are the rx receiver, tx sender and rfid bat identifiers.\\nNext example 51.123 latitude 7.012.\\n"
+    s=b"These are the rx receiver, tx sender and rfid bat identifiers.\nNext example 51.123 latitude 7.012.\n"
     a=sanitized_definitions(s)
     assert "receiver" in a[0]
     assert "51.123" not in json.dumps(a)
@@ -67,7 +67,7 @@ def main():
             with opener().open(req,timeout=18) as response:
                 raw=response.read(MAX+1)
                 response_code=response.status
-            if len(raw)>MAX or b"\\x00" in raw:
+            if len(raw)>MAX or b"\x00" in raw:
                 raise ValueError("README_BINARY_OR_TOO_LONG")
             receipt.update({"status":"HOLD_SEMANTICS_ONLY_NEEDS_BAT_NIGHT_GATE",
                 "http_status":response_code,
@@ -77,7 +77,7 @@ def main():
         except Exception as e:
             receipt["status"]="STOP_README_SOURCE_INACCESSIBLE"
             receipt["error_kind"]=type(e).__name__
-    Path(a.out).write_text(json.dumps(receipt,indent=2,sort_keys=True)+"\\n")
+    Path(a.out).write_text(json.dumps(receipt,indent=2,sort_keys=True)+"\n")
     print(json.dumps({"status":receipt["status"],
         "schema_description_lines":receipt.get("schema_description_lines",[]),
         "original_readme_identity_ok":meta["ok"],
