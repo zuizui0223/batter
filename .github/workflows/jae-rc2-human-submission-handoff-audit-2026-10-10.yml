@@ -9,6 +9,8 @@ on:
       - "submission/JAE_V0_4_0_AI_INCLUSION_AND_DATA_RIGHTS_POLICY_GATE_2026_10_10.md"
       - "submission/jae_v0_4_0_policy_signoff.template.json"
       - "scripts/audit_jae_v0_4_0_policy_signoff.py"
+      - "scripts/audit_jae_v0_4_0_journal_facing_ai_disclosure.py"
+      - "submission/JAE_V0_4_0_AI_DISCLOSURE_MANUSCRIPT_INTEGRATION_GATE_2026_10_10.md"
       - "submission/jae_v0_4_0_original_source_rights.template.json"
       - "submission/JAE_RC2_EXECUTED_TEN_SOURCE_DATACITE_RIGHTS_RESULT_2026_10_10.md"
       - "scripts/audit_jae_v0_4_0_source_rights_signoff.py"
@@ -103,6 +105,25 @@ jobs:
             "SOURCE_RIGHTS_APPROVED_BY_HUMANS_NEEDS_JOURNAL_CONTENT_REVIEW")
           print("FROZEN_ALL_TEN_SOURCE_RIGHTS_METADATA_NOT_AUTOMATIC_PERMISSION: PASS")
           PY
+      - name: Check actual journal-facing Methods/Acknowledgements AI disclosure beyond JSON signoff
+        run: |
+          python -m py_compile scripts/audit_jae_v0_4_0_journal_facing_ai_disclosure.py
+          python scripts/audit_jae_v0_4_0_journal_facing_ai_disclosure.py --self-test
+          python scripts/audit_jae_v0_4_0_journal_facing_ai_disclosure.py --out JAE_RC2_JOURNAL_FACING_AI_DISCLOSURE_GATE.json
+          python - <<'PY'
+          import json
+          x=json.load(open("JAE_RC2_JOURNAL_FACING_AI_DISCLOSURE_GATE.json"))
+          assert x["original_journal_manuscript_blob"]=="c4ef51a7f3f291a6f203d303dbf73f5b54fb7683"
+          assert x["frozen_journal_manuscript_intact"] is True
+          assert x["journal_ready_claimed"] is False
+          assert x["AI_disclosure_text_inserted_or_generated"] is False
+          assert x["scientific_data_or_results_changed"] is False
+          assert x["status"] in (
+             "HOLD_HUMAN_POLICY_AND_JOURNAL_DISCLOSURE",
+             "HOLD_DISCLOSURE_CONTENT_OR_POLICY",
+             "MATCHED_DISCLOSURE_STILL_REQUIRES_HUMAN_JOURNAL_REVIEW")
+          print("AUTHOR_SIGNOFF_MUST_MATCH_ACTUAL_MANUSCRIPT_SECTION: PASS")
+          PY
       - uses: actions/upload-artifact@v4
         with:
           name: jae-rc2-human-authorship-and-release-blocker-receipt
@@ -110,4 +131,5 @@ jobs:
             JAE_V0_4_0_RC2_HANDOFF_PREFLIGHT_2026_10_10.json
             JAE_V0_4_0_AUTHOR_POLICY_COMPLIANCE_RECEIPT.json
             JAE_RC2_TEN_SOURCE_RIGHTS_HUMAN_GATE.json
+            JAE_RC2_JOURNAL_FACING_AI_DISCLOSURE_GATE.json
           if-no-files-found: error
