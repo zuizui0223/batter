@@ -159,10 +159,15 @@ def main():
       "metadata_results":records
     }
     Path(args.out).write_text(json.dumps(out,indent=2,sort_keys=True)+"\n")
+    osfroot=next((x for x in root.values() if x.get("json_ok")), {})
     print(json.dumps({
       "status":status,
       "project_metadata_verified":project_pass,
       "osfstorage_metadata_accessible":root_access,
+      "osfstorage_root_resource_count":osfroot.get("listed_resource_count_page1"),
+      "osfstorage_root_filenames":[x.get("filename") for x in osfroot.get("safe_file_metadata",[])],
+      "osfstorage_root_kinds":[x.get("kind") for x in osfroot.get("safe_file_metadata",[])],
+      "osfstorage_root_has_more_pages":osfroot.get("pagination_next_present"),
       "numeric_bat_events_opened":False,
       "receipt":args.out
     },sort_keys=True))
