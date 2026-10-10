@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "package_version": "v0.4.0",
+  "frozen_manuscript_git_blob": "c4ef51a7f3f291a6f203d303dbf73f5b54fb7683",
+  "inclusion_statement": {
+    "reviewed_and_factually_approved_by_authors": false,
+    "statement_for_submission": ""
+  },
+  "generative_ai": {
+    "human_approved_use_classification": "UNREVIEWED",
+    "allowed_values": [
+      "SUBSTANTIVE",
+      "LANGUAGE_ONLY",
+      "NOT_USED"
+    ],
+    "actual_tasks_and_tools_verified_by_authors": false,
+    "usage_and_human_validation_summary": "",
+    "disclosure_placement": "UNDECIDED",
+    "allowed_disclosure_placements": [
+      "METHODS",
+      "ACKNOWLEDGEMENTS",
+      "NOT_REQUIRED_LANGUAGE_ONLY_OR_NO_USE"
+    ],
+    "author_approved_disclosure_text": "",
+    "factual_claims_and_code_checked_by_responsible_authors": false
+  },
+  "third_party_data_reuse": {
+    "source_permissions_and_licenses_reviewed_by_humans": false,
+    "original_datasets_attributed_and_necessary_permissions_confirmed": false,
+    "restricted_reuse_problems_resolved_or_documented": false
+  },
+  "author_approval": {
+    "all_authors_approved_final_manuscript": false,
+    "contributors_credit_and_conflicts_reviewed": false
+  },
+  "private_evidence_note": "DO NOT PUT PERSONAL SIGNATURES, EMAIL ADDRESSES, UNPUBLISHED DATA OR RAW TRACKING LOCATIONS HERE; retain private evidence outside public git."
+}
