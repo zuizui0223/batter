@@ -28,3 +28,12 @@ This is a source integrity gate, not a new animal behavior hypothesis, not a tes
 New independently frozen contract must specify each bat's matched night support, receiver clock quality, detection range, pseudoreplication controls and predeclared time-overlap null **before** inspecting any co-detection times. At least two real bat IDs in the same dates are needed for a dyad, and stable tag identities do not guarantee same-site/same-time exposure.
 
 **Biological claim ceiling:** The source can potentially test receiver-footprint temporal co-use, not 3D fine-altitude policy, actual prey capture or adaptive acoustic buffering.
+
+
+## V4a nighttime date-crossing correction after categorical STOP (no outcome read)
+
+[Original GitHub Actions 38011826140](https://github.com/zuizui0223/batter/actions/runs/38011826140) completed source access and categorical counting: both files had **one nonblank RFID value and one nonblank TX value**, with no missing IDs. Source `0A62_20240515.csv` had **two different date values** among 1,368 technical rows, while `0A62_20240516.csv` had one date value among 350 technical rows. The initial `STOP_NOT_STABLE_BIOLOGICAL_TAG` was produced by an overly strict **single civil date per nocturnal file** criterion, not by a demonstrated cross-file RFID mismatch; the code intentionally withheld identity comparison whenever its date gate failed.
+
+This source explicitly runs receiver sessions **21:00–05:00**, so one *sampling night* naturally spans two civil dates. Before any behavioral response outcome is read, replace `date == YYYYMMDD` with `date ∈ {filename start date, next civil calendar date}` (date parsed strictly, timezone not inferred), requiring at least one recognized declared date per file and no dates outside that set. This is **a source-schema amendment only**, based on the published sampling schedule, and does not select any movement or social interaction effect. Keep the first false-STOP receipt in the chronology.
+
+RFID/TX stability is to be re-evaluated **separately** from the corrected overnight-date criterion, with only booleans/cardinalities and no raw identifiers logged. Even if it passes, independent same-dyad receiver co-detection remains unverified.
