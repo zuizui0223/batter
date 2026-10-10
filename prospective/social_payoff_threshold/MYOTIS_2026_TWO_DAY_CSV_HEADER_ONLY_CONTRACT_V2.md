@@ -29,3 +29,9 @@ No bat tags, numeric timestamps, visit counts, receiver coordinates, RSSI values
 **This does not verify** that a mobile sender key is one biological individual across separate days; physical-bat↔tag mapping and independent same-dyad night coverage require a separate pre-frozen categorical source gate. Repeated receiver filenames are NOT a multi-bat repeated identity proof.
 
 Status only: `HOLD_EVENT_SCHEMA_ONLY_REQUIRES_BAT_ID_CROSSWALK` on successful compatible headers, `STOP_CSV_HEADER_ACCESS` on unreachable, `STOP_UNEXPECTED_CSV_HEADER_SCHEMA` on invalid/discordant structure. No empirical effect, social synchrony or JAE 3D claim is authorized.
+
+
+## V2a redirect-host-only diagnostic after source access STOP
+[GitHub Actions 38011224732](https://github.com/zuizui0223/batter/actions/runs/38011224732) and [38011271159](https://github.com/zuizui0223/batter/actions/runs/38011271159) completed **SUCCESS** as fail-closed header tests: official OSF file identity metadata HTTP 200 and correct filenames for both 2024-05-15 and 2024-05-16, but **both** download routes stopped at `DISALLOWED_REDIRECT_HOST`. No CSV header or biological value was read.
+
+Before relaxing any domain restriction, authorize a **metadata-only redirect diagnosis**: record only the HTTPS destination **hostname** at the first blocked OSF download redirect, and do not follow it, print signed query strings, URLs, authentication tokens, geographic values, CSV headers or rows. A non-OSF hostname is not automatically malicious or authorized; determine if it is a documented original OSF object-storage delivery host before creating a separate source access amendment. Source identity/file resource IDs unchanged.
