@@ -126,7 +126,7 @@ jobs:
              "MATCHED_DISCLOSURE_STILL_REQUIRES_HUMAN_JOURNAL_REVIEW")
           print("AUTHOR_SIGNOFF_MUST_MATCH_ACTUAL_MANUSCRIPT_SECTION: PASS")
           PY
-      - name: Composite editorial gate: no false READY when declaration/rights/DOI missing
+      - name: "Composite editorial gate - fail closed on missing declaration, rights or DOI"
         run: |
           python -m py_compile scripts/check_jae_v0_4_0_integrated_final_editorial_gate.py
           python scripts/check_jae_v0_4_0_integrated_final_editorial_gate.py --self-test
