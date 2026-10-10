@@ -74,3 +74,13 @@ Freeze the next **single exact metadata-only URL**: `https://api.osf.io/v2/nodes
 [CI run 38010935844](https://github.com/zuizui0223/batter/actions/runs/38010935844) **SUCCESS**, original OSF `proximity_UD/data/` lists only four folders: `bg_maps`, `box_coords`, `sn_coords`, and **`sn_prox`**. No bat event values or station coordinates read. The `sn_prox` metadata resource ID is **698dad08eb682af8bcc73651**; its directory name alone is not proof of original independent animal-level longitudinal records.
 
 Authorize only the next exact *file metadata* endpoint `https://api.osf.io/v2/nodes/sg6dz/files/osfstorage/698dad08eb682af8bcc73651/` (with optional published view-only query). Do not traverse `sn_coords` or `box_coords`, print sensitive site coordinates, or open any individual event values. If the station proximity folder contains child metadata-only directories, a separately frozen endpoint is required for further traversal. Repeat-night dyad crossing remains unverified.
+
+
+## V1d dated original station-proximity metadata gate (2026-10-10)
+[CI 38010983448](https://github.com/zuizui0223/batter/actions/runs/38010983448) **SUCCESS**, original `data/sn_prox/` first metadata page contains dated child folders `20240514`, `20240515`, `20240516`, `20240517`, `20240812`–`20240817`, with further pages not traversed. Those dated directories are **not** proof of same-physical-bat repeat coverage.
+
+Freeze just two exact consecutive 2024 station-proximity directory **metadata** endpoints, before opening any biological event values:
+- `https://api.osf.io/v2/nodes/sg6dz/files/osfstorage/698dad6fab12904856dfcacd/` — public `20240515` folder
+- `https://api.osf.io/v2/nodes/sg6dz/files/osfstorage/698dada20d35ac498ec72cef/` — public `20240516` folder
+
+Allowed: child file names/extensions, file types, declared sizes, resource IDs, whether next metadata page exists. Do not fetch file content, time-of-day, RSSI, bat tag IDs from event rows, or coordinates. Do not claim dyadic repeats merely because analogous filenames occur on two dates. If the listed files cannot establish event schema, report `HOLD_DYAD_NIGHT_CROSSING_NOT_VERIFIED` pending an explicitly frozen README/schema reader.
