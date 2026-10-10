@@ -20,7 +20,7 @@ FILES=(
  ("0A62_20240515.csv","698dad850d35ac498ec72cd3"),
  ("0A62_20240516.csv","698dadb876b09fd62fe255fe"),
 )
-ALLOWED_HOSTS=("api.osf.io","osf.io","files.osf.io")
+ALLOWED_HOSTS=("api.osf.io","osf.io","files.osf.io","files.de-1.osf.io","storage.googleapis.com")
 UA="batter-myotis-2026-two-day-CSV-header-v2/1.0"
 
 
