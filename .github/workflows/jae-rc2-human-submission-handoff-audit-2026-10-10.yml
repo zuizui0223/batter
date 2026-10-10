@@ -10,6 +10,8 @@ on:
       - "submission/jae_v0_4_0_policy_signoff.template.json"
       - "scripts/audit_jae_v0_4_0_policy_signoff.py"
       - "scripts/audit_jae_v0_4_0_journal_facing_ai_disclosure.py"
+      - "scripts/check_jae_v0_4_0_integrated_final_editorial_gate.py"
+      - "submission/JAE_V0_4_0_SUBSTANTIVE_AI_DISCLOSURE_UNAPPROVED_AUTHOR_DRAFT.md"
       - "submission/JAE_V0_4_0_AI_DISCLOSURE_MANUSCRIPT_INTEGRATION_GATE_2026_10_10.md"
       - "submission/jae_v0_4_0_original_source_rights.template.json"
       - "submission/JAE_RC2_EXECUTED_TEN_SOURCE_DATACITE_RIGHTS_RESULT_2026_10_10.md"
@@ -124,6 +126,28 @@ jobs:
              "MATCHED_DISCLOSURE_STILL_REQUIRES_HUMAN_JOURNAL_REVIEW")
           print("AUTHOR_SIGNOFF_MUST_MATCH_ACTUAL_MANUSCRIPT_SECTION: PASS")
           PY
+      - name: Composite editorial gate: no false READY when declaration/rights/DOI missing
+        run: |
+          python -m py_compile scripts/check_jae_v0_4_0_integrated_final_editorial_gate.py
+          python scripts/check_jae_v0_4_0_integrated_final_editorial_gate.py --self-test
+          python scripts/check_jae_v0_4_0_integrated_final_editorial_gate.py --out JAE_V0_4_0_INTEGRATED_HUMAN_JOURNAL_READY_AUDIT.json
+          set +e
+          python scripts/check_jae_v0_4_0_integrated_final_editorial_gate.py --strict --out JAE_V0_4_0_INTEGRATED_STRICT_HOLD_AUDIT.json
+          strict_code=$?
+          set -e
+          test "$strict_code" -eq 1
+          python - <<'PY'
+          import json
+          x=json.load(open("JAE_V0_4_0_INTEGRATED_HUMAN_JOURNAL_READY_AUDIT.json"))
+          assert x["status"]=="HOLD_EDITORIAL_OR_RELEASE_GATES"
+          assert x["BES_policy_author_signoff_present"] is False
+          assert x["ten_source_rights_signoff_present"] is False
+          assert x["AI_document_disclosure_status"]=="HOLD_HUMAN_POLICY_AND_JOURNAL_DISCLOSURE"
+          assert x["frozen_science_sha_verified"] is True
+          assert x["journal_submitted"] is False
+          assert x["DOI_minted"] is False
+          print("COMPOSITE_ALL_APPROVALS_AND_REAL_DISCLOSURE_REQUIRED; STRICT_BLOCKS: PASS")
+          PY
       - uses: actions/upload-artifact@v4
         with:
           name: jae-rc2-human-authorship-and-release-blocker-receipt
@@ -132,4 +156,6 @@ jobs:
             JAE_V0_4_0_AUTHOR_POLICY_COMPLIANCE_RECEIPT.json
             JAE_RC2_TEN_SOURCE_RIGHTS_HUMAN_GATE.json
             JAE_RC2_JOURNAL_FACING_AI_DISCLOSURE_GATE.json
+            JAE_V0_4_0_INTEGRATED_HUMAN_JOURNAL_READY_AUDIT.json
+            JAE_V0_4_0_INTEGRATED_STRICT_HOLD_AUDIT.json
           if-no-files-found: error
