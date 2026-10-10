@@ -28,7 +28,7 @@ class RestrictedRedirect(urllib.request.HTTPRedirectHandler):
     def redirect_request(self,request,fp,code,msg,headers,newurl):
         p=urllib.parse.urlsplit(newurl)
         if p.scheme!="https" or p.hostname not in ALLOWED_HOSTS:
-            raise ValueError("DISALLOWED_REDIRECT_HOST")
+            raise ValueError("DISALLOWED_REDIRECT_HOST:"+str(p.hostname or "UNKNOWN"))
         return super().redirect_request(request,fp,code,msg,headers,newurl)
 
 
@@ -101,6 +101,13 @@ def read_one_header(url):
         safe=("DISALLOWED_REDIRECT_HOST","NO_COMPLETE_HEADER_LINE","INVALID_HEADER",
               "INVALID_FIELD_COUNT","UNEXPECTED_FIELD_LENGTH","NUMERIC_ROW_AS_HEADER",
               "NON_OSF_HOST")
+        if code.startswith("DISALLOWED_REDIRECT_HOST:"):
+            host=code.split(":",1)[1].lower()
+            # Print ONLY one hostname (no signed URLs, query strings or tokens).
+            if len(host)>150 or not re.fullmatch(r"[a-z0-9.-]+",host):
+                host="INVALID_HOSTNAME"
+            return {"ok":False,"http_status":None,
+                    "error":"DISALLOWED_REDIRECT_HOST","redirect_host_only":host}
         return {"ok":False,"http_status":None,
                 "error":code if code in safe else "OTHER_VALUE_ERROR"}
     except Exception as e:
@@ -153,7 +160,8 @@ def main():
                    "path_type":"osf_download" if "osf.io/download" in url else "osf_resource",
                    "http_status":attempt["http_status"],
                    "header_ok":attempt["ok"],
-                   "error":attempt.get("error")})
+                   "error":attempt.get("error"),
+                   "redirect_host_only":attempt.get("redirect_host_only")})
                 if attempt["ok"]:
                     row["header_opened"]=True
                     row["column_names"]=attempt["fields"][:35]
