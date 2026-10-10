@@ -131,7 +131,7 @@ def main():
     args=ap.parse_args()
     if args.self_test:
         assert git_blob_sha(b"hello")==hashlib.sha1(b"blob 5\x00hello").hexdigest()
-        assert len("Dear Editors,\nThank you.".split())==3
+        assert len("Dear Editors,\nThank you.".split())==4
         print(json.dumps({"synthetic_git_blob_and_word_check":"PASS","human_metadata_generated":False}))
         return 0
     result=check()
