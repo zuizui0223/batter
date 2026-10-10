@@ -65,6 +65,16 @@ Follow [`FINAL_METADATA_INTAKE_JAE_V0_4_0.md`](../FINAL_METADATA_INTAKE_JAE_V0_4
 
 **The publisher may allow initial submission without the repository's extra release-readiness order; the sequence above is the repository's deliberately stricter reproducibility gate**, not a claim of an external rule requiring a pre-submission GitHub Release.
 
+## Scientific referee risk sign-off before clicking Submit
+
+A separate [six-objection referee-response matrix](JAE_RC2_REFEREE_RISK_RESPONSE_MATRIX_2026_10_10.md) was prepared for coauthor/editorial review. Its source-verifiable arguments distinguish:
+- the existing horizontal spatial-specialization/overlap literature (Kerches-Rogeri et al. 2020 and Wang et al. 2023) from the present **horizontally matched, centered, terrain-relative vertical-shape** prediction;
+- the three nonsupporting local co-use panels from the coarser *P. hastatus* 2023 supported exception; **lack of significance is not an equivalence test**;
+- *Tadarida* and the first-frozen external nonreplications from the four panels underlying the two-species claim;
+- temporal persistence as evidence of retained individual *information*, **not** causally established skill, memory, learning or fitness benefit.
+
+The optional short cover-letter proposal was edited to say that three panels **did not provide statistical support** for extra co-use separation, rather than implying that a non-significant test proves exactly zero separation. **No canonical manuscript, figure, title, result, license or DOI was changed.**
+
 ## Release vs manuscript safety
 
 This handoff is stored in a separate proposed PR **based on rc2**. Do not merge automatically into the frozen scientific branch until author approval. No `manuscript/MANUSCRIPT_DRAFT_V0_4_0.md`, figures, original tests, JAE release candidate, `main` or original release tags have been altered.
