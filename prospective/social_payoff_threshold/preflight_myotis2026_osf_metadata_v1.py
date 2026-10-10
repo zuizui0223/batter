@@ -167,6 +167,11 @@ def main():
       "osfstorage_root_resource_count":osfroot.get("listed_resource_count_page1"),
       "osfstorage_root_filenames":[x.get("filename") for x in osfroot.get("safe_file_metadata",[])],
       "osfstorage_root_kinds":[x.get("kind") for x in osfroot.get("safe_file_metadata",[])],
+      "osfstorage_root_metadata":[
+          {"filename":x.get("filename"),"kind":x.get("kind"),
+           "resource_id":x.get("resource_id"),"declared_size_bytes":x.get("declared_size_bytes")}
+          for x in osfroot.get("safe_file_metadata",[])
+      ],
       "osfstorage_root_has_more_pages":osfroot.get("pagination_next_present"),
       "numeric_bat_events_opened":False,
       "receipt":args.out
