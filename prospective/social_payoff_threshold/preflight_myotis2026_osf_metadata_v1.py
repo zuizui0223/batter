@@ -22,6 +22,7 @@ TARGETS=(
     ("project",BASE),
     ("providers",BASE+"files/"),
     ("osfstorage_root",BASE+"files/osfstorage/"),
+    ("proximity_UD_folder",BASE+"files/osfstorage/698dbd04bb73abf03bdfc98c/"),
 )
 MAX_RESPONSE=1_200_000
 UA="batter-2026-myotis-source-metadata-v1/1.0"
@@ -160,6 +161,7 @@ def main():
     }
     Path(args.out).write_text(json.dumps(out,indent=2,sort_keys=True)+"\n")
     osfroot=next((x for x in root.values() if x.get("json_ok")), {})
+    folder=next((x for x in records["proximity_UD_folder"].values() if x.get("json_ok")), {})
     print(json.dumps({
       "status":status,
       "project_metadata_verified":project_pass,
@@ -173,6 +175,14 @@ def main():
           for x in osfroot.get("safe_file_metadata",[])
       ],
       "osfstorage_root_has_more_pages":osfroot.get("pagination_next_present"),
+      "proximity_UD_folder_metadata_accessible":bool(folder),
+      "proximity_UD_folder_resource_count":folder.get("listed_resource_count_page1"),
+      "proximity_UD_folder_resources":[
+          {"filename":x.get("filename"),"kind":x.get("kind"),
+           "resource_id":x.get("resource_id"),"size":x.get("declared_size_bytes")}
+          for x in folder.get("safe_file_metadata",[])
+      ],
+      "proximity_UD_folder_more_pages":folder.get("pagination_next_present"),
       "numeric_bat_events_opened":False,
       "receipt":args.out
     },sort_keys=True))
