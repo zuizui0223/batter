@@ -96,6 +96,13 @@ def read_one_header(url):
         return {"ok":True,"http_status":status,"fields":parse_first_header_line(first)}
     except urllib.error.HTTPError as e:
         return {"ok":False,"http_status":e.code,"error":"HTTP_ERROR"}
+    except ValueError as e:
+        code=str(e)
+        safe=("DISALLOWED_REDIRECT_HOST","NO_COMPLETE_HEADER_LINE","INVALID_HEADER",
+              "INVALID_FIELD_COUNT","UNEXPECTED_FIELD_LENGTH","NUMERIC_ROW_AS_HEADER",
+              "NON_OSF_HOST")
+        return {"ok":False,"http_status":None,
+                "error":code if code in safe else "OTHER_VALUE_ERROR"}
     except Exception as e:
         return {"ok":False,"http_status":None,"error":type(e).__name__}
 
