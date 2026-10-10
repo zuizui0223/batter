@@ -117,11 +117,12 @@ def read_one_header(url):
 def flags(fields):
     text=" | ".join(s.lower() for s in fields)
     return {
-     "receiver_key_header_possible":bool(re.search(r"receiver|station|sn.?id|stationary",text)),
-     "mobile_sender_key_header_possible":bool(re.search(r"sender|mobile|tag|ml.?id",text)),
+     "receiver_key_header_possible":bool(re.search(r"\\brx\\b|receiver|station|sn.?id|stationary",text)),
+     "mobile_sender_key_header_possible":bool(re.search(r"\\btx\\b|sender|mobile|tag|ml.?id",text)),
      "timestamp_header_possible":bool(re.search(r"time|date|timestamp|utc|posix",text)),
      "signal_strength_header_possible":bool(re.search(r"rssi|strength|signal",text)),
-     "distinct_biological_bat_id_header_possible":bool(re.search(r"animal.?id|bat.?id|individual.?id",text)),
+     "distinct_biological_bat_id_header_possible":bool(re.search(r"\\brfid\\b|animal.?id|bat.?id|individual.?id",text)),
+     "dyad_label_field_possible":bool(re.search(r"\\bdyad\\b",text)),
     }
 
 
@@ -130,6 +131,11 @@ def self_test():
     assert h==["receiver_id","sender_id","timestamp","rssi"]
     assert flags(h)["mobile_sender_key_header_possible"]
     assert flags(h)["timestamp_header_possible"]
+    observed=flags(["timestamp","date","rx","tx","rfid","dyad","rssi"])
+    assert observed["receiver_key_header_possible"]
+    assert observed["mobile_sender_key_header_possible"]
+    assert observed["distinct_biological_bat_id_header_possible"]
+    assert observed["dyad_label_field_possible"]
     try:
         parse_first_header_line(b"2,123,4,555\n")
         raise AssertionError("Numeric value line was not rejected")
