@@ -53,3 +53,12 @@ The preflight script may request only:
 Use strict JSON size caps, file names/sizes/extensions only, and no receiver coordinates/roost localization.
 
 **Final aim:** an *independent temporal co-use boundary* for the existing JAE conditional vertical-use idea; not new 3D mechanistic proof, not prey payoff, and no amendment to JAE's frozen empirical results.
+
+
+## V1a source metadata receipt and fixed next path (2026-10-10, before any animal rows)
+- [Official OSF CI 38010699176](https://github.com/zuizui0223/batter/actions/runs/38010699176): **SUCCESS**, original node identity and osfstorage directory metadata verified without numeric events.
+- [Official OSF CI 38010744981](https://github.com/zuizui0223/batter/actions/runs/38010744981): **SUCCESS**, root contains exactly `proximity_UD/` folder and `README.md` file.
+- [Official OSF CI 38010792711](https://github.com/zuizui0223/batter/actions/runs/38010792711): **SUCCESS**, original OSF root folder metadata has declared directory ID **698dbd04bb73abf03bdfc98c** (`proximity_UD`), original README resource ID **698dc7add062fca4f5dfc63d** (1517 bytes). These are source *identifiers*, not biological observations.
+- Consequently the **single next preauthorized exact metadata URL** is `https://api.osf.io/v2/nodes/sg6dz/files/osfstorage/698dbd04bb73abf03bdfc98c/` (optionally the published view-only token). This will enumerate only direct child file/folder *names/types/sizes*. Do not follow download links or open any timestamp/detection values.
+- The README file must not be automatically downloaded as part of this folder-listing step; any future README-only text inspection requires a separate source contract and outcome-free extraction.
+- Expected result remains `HOLD_DYAD_NIGHT_CROSSING_NOT_VERIFIED` regardless of filename counts; no bat×receiver×night data values authorized.
