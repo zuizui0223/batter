@@ -62,3 +62,9 @@ Use strict JSON size caps, file names/sizes/extensions only, and no receiver coo
 - Consequently the **single next preauthorized exact metadata URL** is `https://api.osf.io/v2/nodes/sg6dz/files/osfstorage/698dbd04bb73abf03bdfc98c/` (optionally the published view-only token). This will enumerate only direct child file/folder *names/types/sizes*. Do not follow download links or open any timestamp/detection values.
 - The README file must not be automatically downloaded as part of this folder-listing step; any future README-only text inspection requires a separate source contract and outcome-free extraction.
 - Expected result remains `HOLD_DYAD_NIGHT_CROSSING_NOT_VERIFIED` regardless of filename counts; no bat×receiver×night data values authorized.
+
+
+## V1b exact child folder gate (2026-10-10)
+[Official GitHub Actions 38010881468](https://github.com/zuizui0223/batter/actions/runs/38010881468) completed **SUCCESS**. `proximity_UD/` has four child *folders*, not bat values: `scripts/` (OSF ID 698daaafa731d64729dfc7aa), `data/` (ID **698dac7afa739fb04ee258a4**), `output/` (698dbcb1892397af47e24fba), and `analysis/` (698dbe01fae4711f5ac72f78). No event rows opened.
+
+Freeze the next **single exact metadata-only URL**: `https://api.osf.io/v2/nodes/sg6dz/files/osfstorage/698dac7afa739fb04ee258a4/` (plus the publicly published view-only parameter only if needed). This lists direct child names, IDs, declared sizes and file/folder type **only**, not downloadable contents. Do not recursively traverse unspecified children, do not open signal data, and do not infer that a file in `data/` is an independently replicated bat file solely from its filename. `HOLD_DYAD_NIGHT_CROSSING_NOT_VERIFIED` remains the science status until categorical schema and same-dyad repeat nights are confirmed.
