@@ -9,6 +9,9 @@ on:
       - "submission/JAE_V0_4_0_AI_INCLUSION_AND_DATA_RIGHTS_POLICY_GATE_2026_10_10.md"
       - "submission/jae_v0_4_0_policy_signoff.template.json"
       - "scripts/audit_jae_v0_4_0_policy_signoff.py"
+      - "submission/jae_v0_4_0_original_source_rights.template.json"
+      - "submission/JAE_RC2_EXECUTED_TEN_SOURCE_DATACITE_RIGHTS_RESULT_2026_10_10.md"
+      - "scripts/audit_jae_v0_4_0_source_rights_signoff.py"
       - "submission/JAE_V0_4_0_EDITORIAL_SHORT_COVER_LETTER_PROPOSAL_2026_10_10.md"
       - "scripts/audit_jae_rc2_submission_handoff_2026_10_10.py"
       - ".github/workflows/jae-rc2-human-submission-handoff-audit-2026-10-10.yml"
@@ -83,10 +86,28 @@ jobs:
              "AUTHOR_RECORDED_APPROVAL_NEEDS_JOURNAL_CONTENT_REVIEW")
           print("BES_TRANSPARENT_AI_AND_INCLUSION_GATES: PASS_WITH_HUMAN_HOLD_IF_NEEDED")
           PY
+      - name: Require itemized author rights clearance for every cited third-party dataset
+        run: |
+          python -m py_compile scripts/audit_jae_v0_4_0_source_rights_signoff.py
+          python scripts/audit_jae_v0_4_0_source_rights_signoff.py --self-test
+          python scripts/audit_jae_v0_4_0_source_rights_signoff.py --out JAE_RC2_TEN_SOURCE_RIGHTS_HUMAN_GATE.json
+          python - <<'PY'
+          import json
+          x=json.load(open("JAE_RC2_TEN_SOURCE_RIGHTS_HUMAN_GATE.json"))
+          assert x["total_cited_dataset_DOIs"]==10
+          assert x["frozen_manuscript_blob"]=="c4ef51a7f3f291a6f203d303dbf73f5b54fb7683"
+          assert x["data_metadata_candidates_are_not_permissions"] is True
+          assert x["no_rights_status_manufactured"] is True
+          assert x["status"] in (
+            "HOLD_TEN_SOURCE_RIGHTS_HUMAN_SIGNOFF",
+            "SOURCE_RIGHTS_APPROVED_BY_HUMANS_NEEDS_JOURNAL_CONTENT_REVIEW")
+          print("FROZEN_ALL_TEN_SOURCE_RIGHTS_METADATA_NOT_AUTOMATIC_PERMISSION: PASS")
+          PY
       - uses: actions/upload-artifact@v4
         with:
           name: jae-rc2-human-authorship-and-release-blocker-receipt
           path: |
             JAE_V0_4_0_RC2_HANDOFF_PREFLIGHT_2026_10_10.json
             JAE_V0_4_0_AUTHOR_POLICY_COMPLIANCE_RECEIPT.json
+            JAE_RC2_TEN_SOURCE_RIGHTS_HUMAN_GATE.json
           if-no-files-found: error
