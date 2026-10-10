@@ -87,6 +87,14 @@ The 2026-10-10 live [Journal of Animal Ecology initial-submission instructions](
 
 **Important:** a checked signoff JSON does not itself insert disclosure into the frozen manuscript, or prove the journal requirement has been met. If substantive-AI disclosure is needed in the anonymous Methods/Acknowledgements or if the inclusion statement is placed in the submission portal, the human editor must review its placement, rebuild any changed anonymous PDF and generate a separately versioned submission candidate. Never append unapproved language silently to RC2.
 
+## Original tracking-source reuse: all ten public DataCite licence declarations now traced
+
+An independent, [source-frozen public metadata audit](JAE_RC2_DATACITE_SOURCE_RIGHTS_METADATA_GATE_2026_10_10.md) and [successful GitHub Actions #38057807343](https://github.com/zuizui0223/batter/actions/runs/38057807343) recovered rightsList entries from DataCite for **every one of the ten cited source DOIs**. All original six Movebank comparative/focal datasets declare **CC0 1.0 Universal**. Of the four external boundary datasets, *Nyctalus noctula* Zenodo `10.5281/zenodo.7535030` declares **CC BY 4.0 International**, and *Hipposideros* Dryad, *Myotis vivesi* Movebank and *Pteropus* Movebank declare **CC0 1.0**. This was a metadata-only query: no animal position records or original data files opened. [Full source-specific receipt](JAE_RC2_EXECUTED_TEN_SOURCE_DATACITE_RIGHTS_RESULT_2026_10_10.md).
+
+[Movebank General Terms](https://www.movebank.org/cms/movebank-content/general-movebank-terms-of-use) generally exempt licensed publicly downloadable CC0/CC BY/CC BY-NC dataset use from separate owner permission when licence conditions are honored, while encouraging citation and reasonable owner contact for new research. This is **not a blanket owner permission** or a substitute for the actual dataset landing page/restricted wild animal location terms.
+
+The exact ten-DOI public [rights-review template](jae_v0_4_0_original_source_rights.template.json) remains **all UNVERIFIED**, and the separate [fail-closed source-rights checker](../scripts/audit_jae_v0_4_0_source_rights_signoff.py) requires human approval of actual licence, evidence URL, source citation, permission applicability, contact/credit assessment and any sensitive-location restrictions **for every individual original DOI**, not a single global boolean. This source-rights review is independent of the future root software LICENSE selection by copyright holders and the substantive AI/inclusion policy signoff.
+
 ## Release vs manuscript safety
 
 This handoff is stored in a separate proposed PR **based on rc2**. Do not merge automatically into the frozen scientific branch until author approval. No `manuscript/MANUSCRIPT_DRAFT_V0_4_0.md`, figures, original tests, JAE release candidate, `main` or original release tags have been altered.
