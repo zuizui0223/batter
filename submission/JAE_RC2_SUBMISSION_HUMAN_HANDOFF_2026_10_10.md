@@ -95,6 +95,22 @@ An independent, [source-frozen public metadata audit](JAE_RC2_DATACITE_SOURCE_RI
 
 The exact ten-DOI public [rights-review template](jae_v0_4_0_original_source_rights.template.json) remains **all UNVERIFIED**, and the separate [fail-closed source-rights checker](../scripts/audit_jae_v0_4_0_source_rights_signoff.py) requires human approval of actual licence, evidence URL, source citation, permission applicability, contact/credit assessment and any sensitive-location restrictions **for every individual original DOI**, not a single global boolean. This source-rights review is independent of the future root software LICENSE selection by copyright holders and the substantive AI/inclusion policy signoff.
 
+## Integrated final journal-document compliance gate — after all author approvals
+
+New explicit safeguard: a completed `submission/jae_v0_4_0_policy_signoff.json` is **NOT SUFFICIENT** if substantive generative AI was involved and the approved text has not actually been placed in the **submitted Methods or Acknowledgements**. The frozen current rc2 main manuscript contains **zero explicit ChatGPT/OpenAI/generative-AI disclosure markers**. [Code-level match contract](JAE_V0_4_0_AI_DISCLOSURE_MANUSCRIPT_INTEGRATION_GATE_2026_10_10.md); [author-editable but UNAPPROVED example paragraph](JAE_V0_4_0_SUBSTANTIVE_AI_DISCLOSURE_UNAPPROVED_AUTHOR_DRAFT.md). Neither modifies the submitted version.
+
+After (and only after) human approval and verified data rights, use the *composite* guard rather than relying only on the legacy native upload validator:
+
+```bash
+python scripts/check_jae_v0_4_0_integrated_final_editorial_gate.py --strict
+```
+
+`--strict` is deliberately **nonzero while** any real human author/AI/inclusion signoff, per-source rights confirmation, approved document-level AI disclosure, matching final title page, software licence, Zenodo version DOI or native final-upload/release check is missing. For reviewable diagnostic output that does not break exploratory CI, omit `--strict`: it prints `HOLD_EDITORIAL_OR_RELEASE_GATES` with exactly which condition remains unmet and does **not** imply journal submission has happened.
+
+If any substantive AI disclosure changes the frozen manuscript, the original rc2 Git blob SHA necessarily changes and the immutable-source checks must STOP; this requires author review and a **new versioned release candidate** with new manuscript blob/manifest, approved source content, rebuilt anonymous PDF, final word count, new provenance QA and the appropriate replacement freeze. Do not turn off the SHA check just to obtain green CI.
+
+The *mandatory Statement on inclusion* is a separately approved submission-portal field, not something this package can upload automatically. Green automated checks NEVER supersede authors' own final proofread and submit action.
+
 ## Release vs manuscript safety
 
 This handoff is stored in a separate proposed PR **based on rc2**. Do not merge automatically into the frozen scientific branch until author approval. No `manuscript/MANUSCRIPT_DRAFT_V0_4_0.md`, figures, original tests, JAE release candidate, `main` or original release tags have been altered.
