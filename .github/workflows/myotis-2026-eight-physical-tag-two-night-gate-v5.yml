@@ -1,0 +1,46 @@
+name: myotis-2026-eight-physical-tag-two-night-gate-v5
+on:
+  push:
+    branches:
+      - prospective/social-payoff-threshold-source-gate-v1
+    paths:
+      - "prospective/social_payoff_threshold/preflight_myotis_eight_tag_two_day_v5.py"
+      - ".github/workflows/myotis-2026-eight-physical-tag-two-night-gate-v5.yml"
+  workflow_dispatch:
+jobs:
+  eight-id-categorical-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 9
+    permissions: {contents: read}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.13"}
+      - name: Compile and check fixed OSF source allowlist
+        run: |
+          python -m py_compile prospective/social_payoff_threshold/preflight_myotis_eight_tag_two_day_v5.py
+          python prospective/social_payoff_threshold/preflight_myotis_eight_tag_two_day_v5.py --self-test
+      - name: Check eight tagged bat source series, categorical only
+        run: |
+          python prospective/social_payoff_threshold/preflight_myotis_eight_tag_two_day_v5.py --out MYOTIS_2026_EIGHT_BATS_CATEGORICAL_V5.json
+          python - <<'PY'
+          import json
+          x=json.load(open("MYOTIS_2026_EIGHT_BATS_CATEGORICAL_V5.json"))
+          assert x["fixed_original_tag_series_count"]==8
+          assert x["same_dyad_multinight_co_detection_verified"] is False
+          assert x["raw_rfid_or_transmitter_values_logged"] is False
+          assert x["RSSI_coordinates_or_timestamps_inspected"] is False
+          assert x["prey_capture_or_3d_outcomes_computed"] is False
+          assert x["status"] in (
+            "PASS_EIGHT_DISTINCT_CROSS_NIGHT_TAGS_CATEGORICAL_ONLY",
+            "STOP_INCONSISTENT_BAT_TAG_IDENTITY",
+            "HOLD_PARTIAL_STABLE_BAT_SUPPORT",
+            "STOP_SOURCE_FILE_INACCESSIBLE",
+          )
+          print("NO_EVENT_OR_FITNESS_ENDPOINT_OPENED: PASS")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: myotis-2026-eight-tag-two-night-categorical-receipt-v5
+          path: MYOTIS_2026_EIGHT_BATS_CATEGORICAL_V5.json
+          if-no-files-found: error
