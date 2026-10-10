@@ -35,3 +35,11 @@ Status only: `HOLD_EVENT_SCHEMA_ONLY_REQUIRES_BAT_ID_CROSSWALK` on successful co
 [GitHub Actions 38011224732](https://github.com/zuizui0223/batter/actions/runs/38011224732) and [38011271159](https://github.com/zuizui0223/batter/actions/runs/38011271159) completed **SUCCESS** as fail-closed header tests: official OSF file identity metadata HTTP 200 and correct filenames for both 2024-05-15 and 2024-05-16, but **both** download routes stopped at `DISALLOWED_REDIRECT_HOST`. No CSV header or biological value was read.
 
 Before relaxing any domain restriction, authorize a **metadata-only redirect diagnosis**: record only the HTTPS destination **hostname** at the first blocked OSF download redirect, and do not follow it, print signed query strings, URLs, authentication tokens, geographic values, CSV headers or rows. A non-OSF hostname is not automatically malicious or authorized; determine if it is a documented original OSF object-storage delivery host before creating a separate source access amendment. Source identity/file resource IDs unchanged.
+
+
+## V2b source-host resolution (2026-10-10; still pre-header)
+[CI 38011401820](https://github.com/zuizui0223/batter/actions/runs/38011401820) **SUCCESS as a diagnostic**, original OSF file API IDs and names verified, two dates likewise. The *only* blocked redirect hostnames, collected without following contents or logging signed URLs, were:
+- `files.de-1.osf.io` (from canonical `osf.io/download/{id}/`);
+- `storage.googleapis.com` (from exact `files.osf.io/v1/resources/sg6dz/providers/osfstorage/{id}?action=download`).
+
+These are standard OSF regional/object-storage delivery domains. **Before accessing any file bytes**, expand the allowlist to these **two exact HTTPS hostname strings only** for the two frozen OSF IDs above. Never follow any other redirect destination, and never log canonical signed URLs/tokens or retrieve past the first CSV header line. This change is an official source-delivery access-path repair, not an adaptive test of a bat behavior endpoint. The previous `STOP_CSV_HEADER_ACCESS` is the accurate result for the more restrictive host gate; do not erase it.
