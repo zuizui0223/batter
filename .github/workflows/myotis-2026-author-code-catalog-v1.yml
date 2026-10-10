@@ -1,0 +1,39 @@
+name: myotis-2026-author-code-catalog-v1
+on:
+  push:
+    branches:
+      - prospective/social-payoff-threshold-source-gate-v1
+    paths:
+      - "prospective/social_payoff_threshold/preflight_myotis_author_code_catalog_v1.py"
+      - ".github/workflows/myotis-2026-author-code-catalog-v1.yml"
+  workflow_dispatch:
+jobs:
+  original-code-metadata:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    permissions: {contents: read}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.13"}
+      - name: Compile and verify source-only path
+        run: |
+          python -m py_compile prospective/social_payoff_threshold/preflight_myotis_author_code_catalog_v1.py
+          python prospective/social_payoff_threshold/preflight_myotis_author_code_catalog_v1.py --self-test
+      - name: Retrieve only exact original script-folder metadata
+        run: |
+          python prospective/social_payoff_threshold/preflight_myotis_author_code_catalog_v1.py --out MYOTIS_AUTHOR_CODE_CATALOG_V1.json
+          python - <<'PY'
+          import json
+          x=json.load(open("MYOTIS_AUTHOR_CODE_CATALOG_V1.json"))
+          assert x["bat_detection_values_opened"] is False
+          assert x["clock_content_interpreted"] is False
+          assert x["individual_time_records_opened"] is False
+          assert x["status"] in ("HOLD_CODE_CATALOG_ONLY","STOP_CODE_CATALOG_INACCESSIBLE")
+          print("NO_BAT_VALUES: PASS")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: myotis-author-code-metadata-only-v1
+          path: MYOTIS_AUTHOR_CODE_CATALOG_V1.json
+          if-no-files-found: error
