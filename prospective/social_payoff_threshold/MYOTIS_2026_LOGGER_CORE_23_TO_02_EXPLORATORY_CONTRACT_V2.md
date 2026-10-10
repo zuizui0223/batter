@@ -18,7 +18,7 @@ Use the original `myotis_2026_one_minute_same_receiver_descriptive_v1a.py` uncha
 - Require all 16 original file source QA checks PASS, and exact V1a all-night margins remain 17/28 and 14/28 (source integrity guard). No bat, night, station, or pair selection after outcomes.
 - For each source-night, report only count of 8 bat files with at least one RSSI-qualified record in the fixed core, number of eligible bat×minute keys (not unique flight events), number of 28 possible bat pairs positive within window, pair×minute co-receiver total, median of 28 counts.
 - At pair level, report only the *count* positive in **both** core-window nights, core only-May15, core only-May16, neither (sum 28), and optionally overlap with the already-opened all-night 13 repeated pairs **as a descriptive paired subset count**. These are not p-values and not biologically independent pairs.
-- Report aggregated source technical event fraction in central window **without raw clocks, coordinates, RFID, exact station IDs or per-pair identities**. No source-event table in output.
+- Report the **fraction of RSSI-qualified bat×minute presence keys** falling inside the central window, using already-aggregated V1a outputs. This is a time-bin support fraction, NOT a fraction of technical source rows or a detection probability. No further raw file parsing for this descriptive check. No source-event table in output, raw clocks, coordinates, RFID, exact station IDs or per-pair identities.
 
 ## Fixed deterministic expectations
 
