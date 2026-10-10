@@ -1,0 +1,46 @@
+name: myotis-2026-core-logger-window-v2
+on:
+  push:
+    branches:
+      - prospective/social-payoff-threshold-source-gate-v1
+    paths:
+      - "prospective/social_payoff_threshold/myotis_2026_source_clock_core_window_v2.py"
+      - ".github/workflows/myotis-2026-core-logger-window-v2.yml"
+  workflow_dispatch:
+jobs:
+  exploratory-one-window-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    permissions: {contents: read}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.13"}
+      - name: Preflight syntax and deterministic source-window guard
+        run: |
+          python -m py_compile prospective/social_payoff_threshold/myotis_2026_source_clock_core_window_v2.py
+          python prospective/social_payoff_threshold/myotis_2026_source_clock_core_window_v2.py --self-test
+      - name: Run exactly one frozen post-outcome time-window sensitivity
+        run: |
+          python prospective/social_payoff_threshold/myotis_2026_source_clock_core_window_v2.py --out MYOTIS_2026_CORE_LOGGER_WINDOW_V2.json
+          python - <<'PY'
+          import json
+          x=json.load(open("MYOTIS_2026_CORE_LOGGER_WINDOW_V2.json"))
+          assert x["analysis_tier"]=="POST_OUTCOME_EXPLORATORY_SENSITIVITY_ONLY"
+          assert x["n_original_source_files"]==16
+          assert x["raw_bat_or_receiver_ID_or_datetime_or_RSSI_output"] is False
+          assert x["no_p_values_or_social_causal_conclusion"] is True
+          assert x["status"] in (
+             "EXPLORATORY_CORE_LOGGER_WINDOW_DESCRIPTIVE_ONLY",
+             "STOP_SOURCE_QA_OR_MARGINS")
+          if x["descriptive_aggregates"]:
+              z=x["descriptive_aggregates"]
+              assert z["known_full_night_positives"]=={"20240515":17,"20240516":14}
+              assert z["known_full_night_binary_both"]==13
+          print("NO_PVALUE_OR_BAT_ID_OR_GEOLOCATION_DISCLOSURE: PASS")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: myotis-2026-core-logger-window-v2
+          path: MYOTIS_2026_CORE_LOGGER_WINDOW_V2.json
+          if-no-files-found: error

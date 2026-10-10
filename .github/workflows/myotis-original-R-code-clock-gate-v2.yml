@@ -1,0 +1,41 @@
+name: myotis-original-R-code-clock-gate-v2
+on:
+  push:
+    branches:
+      - prospective/social-payoff-threshold-source-gate-v1
+    paths:
+      - "prospective/social_payoff_threshold/preflight_myotis_author_r_clock_v2.py"
+      - ".github/workflows/myotis-original-R-code-clock-gate-v2.yml"
+  workflow_dispatch:
+jobs:
+  source-code-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    permissions: {contents: read}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.13"}
+      - name: Compile/sanitize test
+        run: |
+          python -m py_compile prospective/social_payoff_threshold/preflight_myotis_author_r_clock_v2.py
+          python prospective/social_payoff_threshold/preflight_myotis_author_r_clock_v2.py --self-test
+      - name: Author's exact R source code clock keywords only
+        run: |
+          python prospective/social_payoff_threshold/preflight_myotis_author_r_clock_v2.py --out MYOTIS_2026_AUTHOR_R_CLOCK_V2.json
+          python - <<'PY'
+          import json
+          x=json.load(open("MYOTIS_2026_AUTHOR_R_CLOCK_V2.json"))
+          assert x["bat_event_values_opened"] is False
+          assert x["location_or_individual_record_opened"] is False
+          assert x["status"] in (
+             "STOP_AUTHOR_CODE_SOURCE_INACCESSIBLE",
+             "HOLD_AUTHOR_SCRIPT_DOES_NOT_RESOLVE_TIMEZONE",
+          )
+          print("SOURCE_CODE_ONLY_NO_BAT_BEHAVIOR: PASS")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: myotis-original-author-code-clock-text-v2
+          path: MYOTIS_2026_AUTHOR_R_CLOCK_V2.json
+          if-no-files-found: error

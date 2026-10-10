@@ -1,0 +1,44 @@
+name: myotis-2026-two-day-categorical-rfid-gate-v4
+on:
+  push:
+    branches:
+      - prospective/social-payoff-threshold-source-gate-v1
+    paths:
+      - "prospective/social_payoff_threshold/preflight_myotis_two_day_categorical_v4.py"
+      - ".github/workflows/myotis-2026-two-day-categorical-rfid-gate-v4.yml"
+  workflow_dispatch:
+jobs:
+  categorical-stability-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    permissions: {contents: read}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.13"}
+      - name: Compile and synthetic key-only parser test
+        run: |
+          python -m py_compile prospective/social_payoff_threshold/preflight_myotis_two_day_categorical_v4.py
+          python prospective/social_payoff_threshold/preflight_myotis_two_day_categorical_v4.py --self-test
+      - name: Check original two OSF files categorical RFID/TX across dates
+        run: |
+          python prospective/social_payoff_threshold/preflight_myotis_two_day_categorical_v4.py --out MYOTIS_TWO_DAY_CATEGORICAL_GATE_V4.json
+          python - <<'PY'
+          import json
+          x=json.load(open("MYOTIS_TWO_DAY_CATEGORICAL_GATE_V4.json"))
+          assert x["same_dyad_across_nights_verified"] is False
+          assert x["temporal_co_detection_estimated"] is False
+          assert x["rssi_or_location_or_event_time_values_inspected"] is False
+          assert x["distinct_bat_rfid_values_printed"] is False
+          assert x["status"] in (
+              "PASS_CATEGORICAL_SAME_TAG_TWO_DAYS_ONLY",
+              "STOP_NOT_STABLE_BIOLOGICAL_TAG",
+              "STOP_CATEGORICAL_SOURCE_INACCESSIBLE",
+          )
+          print("CAT_ONLY_NO_BEHAVIOR_OUTCOME_TEST: PASS")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: myotis-2026-two-day-categorical-rfid-only-v4
+          path: MYOTIS_TWO_DAY_CATEGORICAL_GATE_V4.json
+          if-no-files-found: error

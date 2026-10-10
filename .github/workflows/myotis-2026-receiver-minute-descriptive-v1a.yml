@@ -1,0 +1,43 @@
+name: myotis-2026-receiver-minute-descriptive-v1a
+on:
+  push:
+    branches:
+      - prospective/social-payoff-threshold-source-gate-v1
+    paths:
+      - "prospective/social_payoff_threshold/myotis_2026_one_minute_same_receiver_descriptive_v1a.py"
+      - ".github/workflows/myotis-2026-receiver-minute-descriptive-v1a.yml"
+  workflow_dispatch:
+jobs:
+  descriptive-aggregate-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    permissions: {contents: read}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.13"}
+      - name: Compile and synthetic safeguard
+        run: |
+          python -m py_compile prospective/social_payoff_threshold/myotis_2026_one_minute_same_receiver_descriptive_v1a.py
+          python prospective/social_payoff_threshold/myotis_2026_one_minute_same_receiver_descriptive_v1a.py --self-test
+      - name: Predeclared descriptive shared-receiver minute counts only
+        run: |
+          python prospective/social_payoff_threshold/myotis_2026_one_minute_same_receiver_descriptive_v1a.py --out MYOTIS_2026_RECEIVER_MINUTE_COUSE_DESCRIPTIVE_V1A.json
+          python - <<'PY'
+          import json
+          x=json.load(open("MYOTIS_2026_RECEIVER_MINUTE_COUSE_DESCRIPTIVE_V1A.json"))
+          assert len(x["file_QA"])==16
+          assert x["original_bat_ID_or_receiver_ID_or_clock_values_emitted"] is False
+          assert x["lat_lon_or_dyad_column_inspected"] is False
+          assert x["no_p_values_or_causal_effects_calculated"] is True
+          assert x["status"] in (
+             "DESCRIPTIVE_RECEIVER_MINUTE_COUSE_ONLY_NO_INFERENCE",
+             "STOP_SOURCE_CLOCK_OR_SIGNAL_QA",
+          )
+          print("NO_RAW_ID_OR_COORDINATES_OR_INFERENTIAL_PVALUES: PASS")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: myotis-2026-preregistered-descriptive-receiver-minute-v1a
+          path: MYOTIS_2026_RECEIVER_MINUTE_COUSE_DESCRIPTIVE_V1A.json
+          if-no-files-found: error

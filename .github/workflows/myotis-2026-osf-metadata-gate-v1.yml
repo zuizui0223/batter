@@ -1,0 +1,43 @@
+name: myotis-2026-osf-metadata-gate-v1
+on:
+  push:
+    branches:
+      - prospective/social-payoff-threshold-source-gate-v1
+    paths:
+      - "prospective/social_payoff_threshold/preflight_myotis2026_osf_metadata_v1.py"
+      - ".github/workflows/myotis-2026-osf-metadata-gate-v1.yml"
+  workflow_dispatch:
+jobs:
+  osf-metadata-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    permissions: {contents: read}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.13"}
+      - name: Compile and run metadata redaction test
+        run: |
+          python -m py_compile prospective/social_payoff_threshold/preflight_myotis2026_osf_metadata_v1.py
+          python prospective/social_payoff_threshold/preflight_myotis2026_osf_metadata_v1.py --self-test
+      - name: Source project and file-name metadata only
+        run: |
+          python prospective/social_payoff_threshold/preflight_myotis2026_osf_metadata_v1.py --out MYOTIS_2026_OSF_SOURCE_METADATA_RECEIPT_V1.json
+          python - <<'PY'
+          import json
+          x=json.load(open("MYOTIS_2026_OSF_SOURCE_METADATA_RECEIPT_V1.json"))
+          assert x["osf_node_id"]=="sg6dz"
+          assert x["quantitative_bat_events_opened"] is False
+          assert x["source_file_download_links_followed"] is False
+          assert x["same_dyad_multiple_nights_verified"] is False
+          assert x["status"] in (
+            "STOP_OSF_METADATA_INACCESSIBLE",
+            "HOLD_DYAD_NIGHT_CROSSING_NOT_VERIFIED",
+          )
+          print("NO_BAT_EVENT_VALUES_OPENED: PASS")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: myotis-2026-osf-source-metadata-receipt-v1
+          path: MYOTIS_2026_OSF_SOURCE_METADATA_RECEIPT_V1.json
+          if-no-files-found: error

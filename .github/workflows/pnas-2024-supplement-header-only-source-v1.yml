@@ -1,0 +1,45 @@
+name: pnas-2024-supplement-header-only-source-v1
+on:
+  push:
+    branches:
+      - prospective/social-payoff-threshold-source-gate-v1
+    paths:
+      - "prospective/social_payoff_threshold/preflight_pnas_supplement_headers_v1.py"
+      - ".github/workflows/pnas-2024-supplement-header-only-source-v1.yml"
+  workflow_dispatch:
+jobs:
+  categorical-source-gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    permissions: {contents: read}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.13"}
+      - name: Compile and synthetic test header-only reader
+        run: |
+          python -m py_compile prospective/social_payoff_threshold/preflight_pnas_supplement_headers_v1.py
+          python prospective/social_payoff_threshold/preflight_pnas_supplement_headers_v1.py --self-test
+      - name: Probe exact PNAS/PMC candidate URLs, structural only
+        run: |
+          python prospective/social_payoff_threshold/preflight_pnas_supplement_headers_v1.py --out PNAS_2024_SUPPLEMENT_HEADER_RECEIPT_V1.json
+          python - <<'PY'
+          import json
+          x=json.load(open("PNAS_2024_SUPPLEMENT_HEADER_RECEIPT_V1.json"))
+          assert x["contract"]=="PNAS_2024_SUPPLEMENT_HEADER_ONLY_GATE_CONTRACT_V1.md"
+          assert x["biological_numeric_values_or_bat_outcomes_opened"] is False
+          assert x["independent_bat_bouts_confirmed"] is False
+          assert x["eligible_for_biological_analysis"] is False
+          assert x["status"] in (
+             "STOP_ALTERNATE_SUPPLEMENT_INACCESSIBLE",
+             "STOP_UNEXPECTED_SOURCE_SCHEMA_OR_SIZE",
+             "STOP_NO_BAT_BOUT_STRUCTURE_IN_SUPPLEMENT",
+             "HOLD_HEADERS_ONLY_INDEPENDENT_BOUTS_NOT_YET_VERIFIED",
+          )
+          print("NO_BAT_OUTCOME_OPENING: PASS")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pnas-2024-supplement-headers-only-v1
+          path: PNAS_2024_SUPPLEMENT_HEADER_RECEIPT_V1.json
+          if-no-files-found: error

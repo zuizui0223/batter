@@ -1,0 +1,46 @@
+name: molossus-social-payoff-source-metadata-v1
+on:
+  push:
+    branches:
+      - prospective/social-payoff-threshold-source-gate-v1
+    paths:
+      - "prospective/social_payoff_threshold/preflight_molossus_mendeley_metadata_v1.py"
+      - ".github/workflows/molossus-payoff-source-metadata-v1.yml"
+  workflow_dispatch:
+jobs:
+  official-source-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    permissions: {contents: read}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.13"}
+      - name: Compile metadata-only reader and verify data-link redaction
+        run: |
+          python -m py_compile prospective/social_payoff_threshold/preflight_molossus_mendeley_metadata_v1.py
+          python prospective/social_payoff_threshold/preflight_molossus_mendeley_metadata_v1.py --self-test
+      - name: Read only two exact original-public-Mendeley metadata URLs
+        run: |
+          python prospective/social_payoff_threshold/preflight_molossus_mendeley_metadata_v1.py --out MOLOSSUS_2024_SOURCE_METADATA_RECEIPT_V1.json
+          python - <<'PY'
+          import json
+          x=json.load(open("MOLOSSUS_2024_SOURCE_METADATA_RECEIPT_V1.json"))
+          assert x["dataset_id"]=="h7krh54zxc"
+          assert x["version"]=="1"
+          assert x["biological_outcomes_opened"] is False
+          assert x["file_downloads_or_views_followed"] is False
+          assert x["individual_bout_support_verified"] is False
+          assert x["endpoints_executed"]==0
+          assert x["status"] in (
+             "STOP_API_OR_SOURCE_INACCESSIBLE",
+             "STOP_INCORRECT_SOURCE_IDENTITY",
+             "HOLD_METADATA_ONLY_NEEDS_ORIGINAL_STRUCTURAL_FILES",
+          )
+          print("NO_BIOLOGICAL_OUTCOME_OPENING: PASS")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: molossus-2024-mendeley-public-source-metadata-only-v1
+          path: MOLOSSUS_2024_SOURCE_METADATA_RECEIPT_V1.json
+          if-no-files-found: error

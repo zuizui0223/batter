@@ -1,0 +1,47 @@
+name: myotis-2026-receiver-pair-structural-v6
+on:
+  push:
+    branches:
+      - prospective/social-payoff-threshold-source-gate-v1
+    paths:
+      - "prospective/social_payoff_threshold/preflight_myotis_shared_rx_pairs_v6.py"
+      - ".github/workflows/myotis-2026-receiver-pair-structural-v6.yml"
+  workflow_dispatch:
+jobs:
+  categorical-receiver-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    permissions: {contents: read}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.13"}
+      - name: Compile and verify hypothetical pair-overlap calculator
+        run: |
+          python -m py_compile prospective/social_payoff_threshold/preflight_myotis_shared_rx_pairs_v6.py
+          python prospective/social_payoff_threshold/preflight_myotis_shared_rx_pairs_v6.py --self-test
+      - name: Count receiver-ID overlaps across the 16 frozen source CSVs
+        run: |
+          python prospective/social_payoff_threshold/preflight_myotis_shared_rx_pairs_v6.py --out MYOTIS_2026_SHARED_RECEIVER_PAIR_V6.json
+          python - <<'PY'
+          import json
+          x=json.load(open("MYOTIS_2026_SHARED_RECEIVER_PAIR_V6.json"))
+          assert x["source_files_attempted"]==16
+          assert x["fixed_bat_series"]==8
+          assert x["individual_receiver_ids_logged"] is False
+          assert x["timestamp_rssi_latitude_longitude_dyad_or_fitness_read"] is False
+          assert x["actual_simultaneous_encounters_verified"] is False
+          assert x["co_detection_p_values"]==0
+          assert x["status"] in (
+            "STOP_RECEIVER_SOURCE_OR_SCHEMA_INCOMPLETE",
+            "HOLD_INCOMPLETE_RECEIVER_COVERAGE",
+            "HOLD_NO_CROSS_NIGHT_SHARED_RECEIVER_PAIR",
+            "PASS_SHARED_RECEIVER_STRUCTURE_BOTH_NIGHTS_ONLY"
+          )
+          print("CATEGORICAL_ONLY_NO_SOCIAL_OUTCOME: PASS")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: myotis-2026-shared-receiver-structural-v6
+          path: MYOTIS_2026_SHARED_RECEIVER_PAIR_V6.json
+          if-no-files-found: error

@@ -1,0 +1,43 @@
+name: myotis-2026-original-quarto-method-gate-v2
+on:
+  push:
+    branches:
+      - prospective/social-payoff-threshold-source-gate-v1
+    paths:
+      - "prospective/social_payoff_threshold/myotis_2026_author_quarto_clock_method_gate_v2.py"
+      - ".github/workflows/myotis-2026-original-quarto-method-gate-v2.yml"
+  workflow_dispatch:
+jobs:
+  author-method-code-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    permissions: {contents: read}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.13"}
+      - name: Compile and test code-text redaction
+        run: |
+          python -m py_compile prospective/social_payoff_threshold/myotis_2026_author_quarto_clock_method_gate_v2.py
+          python prospective/social_payoff_threshold/myotis_2026_author_quarto_clock_method_gate_v2.py --self-test
+      - name: Inspect exact two original author Quarto code texts only
+        run: |
+          python prospective/social_payoff_threshold/myotis_2026_author_quarto_clock_method_gate_v2.py --out MYOTIS_2026_QUARTO_METHOD_KEYWORDS_V2.json
+          python - <<'PY'
+          import json
+          x=json.load(open("MYOTIS_2026_QUARTO_METHOD_KEYWORDS_V2.json"))
+          assert len(x["files"])==2
+          assert x["original_animal_CSV_files_opened"]==0
+          assert x["social_detection_outcome_estimates"]==0
+          assert x["station_coords_roost_sites_or_tag_values_disclosed"] is False
+          assert x["source_code_executed"] is False
+          assert x["status"] in (
+             "HOLD_SUN_CLOCK_AVAILABILITY_NOT_ESTABLISHED",
+             "STOP_AUTHOR_QUARTO_SOURCE_ACCESS_OR_SCHEMA")
+          print("NO_ORIGINAL_ANIMAL_RECORD_OPENED: PASS")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: myotis-2026-two-original-quarto-method-keyword-v2
+          path: MYOTIS_2026_QUARTO_METHOD_KEYWORDS_V2.json
+          if-no-files-found: error

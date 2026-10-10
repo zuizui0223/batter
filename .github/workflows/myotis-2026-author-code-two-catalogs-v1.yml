@@ -1,0 +1,45 @@
+name: myotis-2026-author-code-two-catalogs-v1
+on:
+  push:
+    branches:
+      - prospective/social-payoff-threshold-source-gate-v1
+    paths:
+      - "prospective/social_payoff_threshold/myotis_2026_author_code_two_catalogs_v1.py"
+      - ".github/workflows/myotis-2026-author-code-two-catalogs-v1.yml"
+  workflow_dispatch:
+jobs:
+  author-source-names-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    permissions: {contents: read}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.13"}
+      - name: Compile and verify immutable source allowlist
+        run: |
+          python -m py_compile prospective/social_payoff_threshold/myotis_2026_author_code_two_catalogs_v1.py
+          python prospective/social_payoff_threshold/myotis_2026_author_code_two_catalogs_v1.py --self-test
+      - name: List two original OSF analytical-code folders only
+        run: |
+          python prospective/social_payoff_threshold/myotis_2026_author_code_two_catalogs_v1.py --out MYOTIS_2026_AUTHOR_CODE_CATALOG_V1.json
+          python - <<'PY'
+          import json
+          x=json.load(open("MYOTIS_2026_AUTHOR_CODE_CATALOG_V1.json"))
+          assert x["osf_original_id"]=="sg6dz"
+          assert len(x["metadata_catalogs"])==2
+          assert x["raw_animal_times_or_positions_read"] is False
+          assert x["original_site_coordinates_or_receiver_ids_read"] is False
+          assert x["data_file_downloads"]==0
+          assert x["source_file_code_contents_opened"] is False
+          assert x["bat_statistical_tests"]==0
+          assert x["status"] in (
+             "HOLD_AUTHOR_CODE_FILE_NAMES_ONLY",
+             "HOLD_NO_SOURCE_CALIBRATION")
+          print("PASS_NO_ANIMAL_DATA_OPENED")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: myotis-2026-two-code-folder-catalog-v1
+          path: MYOTIS_2026_AUTHOR_CODE_CATALOG_V1.json
+          if-no-files-found: error

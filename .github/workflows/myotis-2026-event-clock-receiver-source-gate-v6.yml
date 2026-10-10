@@ -1,0 +1,45 @@
+name: myotis-2026-event-clock-receiver-source-gate-v6
+on:
+  push:
+    branches:
+      - prospective/social-payoff-threshold-source-gate-v1
+    paths:
+      - "prospective/social_payoff_threshold/preflight_myotis_receiver_clock_qa_v6.py"
+      - ".github/workflows/myotis-2026-event-clock-receiver-source-gate-v6.yml"
+  workflow_dispatch:
+jobs:
+  structural-qa-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    permissions: {contents: read}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.13"}
+      - name: Compile and fixed synthetic parser invariants
+        run: |
+          python -m py_compile prospective/social_payoff_threshold/preflight_myotis_receiver_clock_qa_v6.py
+          python prospective/social_payoff_threshold/preflight_myotis_receiver_clock_qa_v6.py --self-test
+      - name: Verify 16 OSF source timestamps/receiver keys only
+        run: |
+          python prospective/social_payoff_threshold/preflight_myotis_receiver_clock_qa_v6.py --out MYOTIS_2026_EVENT_TIME_RECEIVER_QA_V6.json
+          python - <<'PY'
+          import json
+          x=json.load(open("MYOTIS_2026_EVENT_TIME_RECEIVER_QA_V6.json"))
+          assert x["source_files_inspected"]==16
+          assert x["co_detection_or_station_sharing_calculated"] is False
+          assert x["rssi_or_coordinates_or_dyad_column_accessed"] is False
+          assert x["bat_behavioral_p_values_computed"]==0
+          assert x["status"] in (
+              "PASS_EVENT_TIME_RECEIVER_SCHEMA_ONLY",
+              "HOLD_TIMEZONE_AMBIGUITY",
+              "STOP_UNUSABLE_TIMESTAMP_OR_RECEIVER_SCHEMA",
+              "STOP_ORIGINAL_SOURCE_ACCESS",
+          )
+          print("NO_CO_USE_AND_NO_BEHAVIOR_OUTCOMES: PASS")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: myotis-2026-16-source-clock-rx-qa-v6
+          path: MYOTIS_2026_EVENT_TIME_RECEIVER_QA_V6.json
+          if-no-files-found: error

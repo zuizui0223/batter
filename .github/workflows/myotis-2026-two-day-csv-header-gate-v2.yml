@@ -1,0 +1,43 @@
+name: myotis-2026-two-day-csv-header-gate-v2
+on:
+  push:
+    branches:
+      - prospective/social-payoff-threshold-source-gate-v1
+    paths:
+      - "prospective/social_payoff_threshold/preflight_myotis_two_day_csv_headers_v2.py"
+      - ".github/workflows/myotis-2026-two-day-csv-header-gate-v2.yml"
+  workflow_dispatch:
+jobs:
+  headers-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    permissions: {contents: read}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.13"}
+      - name: Compile/verify strict parser
+        run: |
+          python -m py_compile prospective/social_payoff_threshold/preflight_myotis_two_day_csv_headers_v2.py
+          python prospective/social_payoff_threshold/preflight_myotis_two_day_csv_headers_v2.py --self-test
+      - name: Inspect exact two OSF first CSV lines and nothing else
+        run: |
+          python prospective/social_payoff_threshold/preflight_myotis_two_day_csv_headers_v2.py --out MYOTIS_TWO_DAY_CSV_HEADERS_V2.json
+          python - <<'PY'
+          import json
+          x=json.load(open("MYOTIS_TWO_DAY_CSV_HEADERS_V2.json"))
+          assert len(x["source_files"]) == 2
+          assert x["data_cells_below_header_parsed"] is False
+          assert x["biological_effects_computed"] == 0
+          assert x["same_biological_bat_across_nights_verified"] is False
+          assert x["status"] in (
+            "STOP_CSV_HEADER_ACCESS","STOP_UNEXPECTED_CSV_HEADER_SCHEMA",
+            "HOLD_EVENT_SCHEMA_ONLY_REQUIRES_BAT_ID_CROSSWALK",
+          )
+          print("HEADER_ONLY_BIOLOGICAL_PROVENANCE_GUARD: PASS")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: myotis-2026-two-day-csv-header-only-v2
+          path: MYOTIS_TWO_DAY_CSV_HEADERS_V2.json
+          if-no-files-found: error

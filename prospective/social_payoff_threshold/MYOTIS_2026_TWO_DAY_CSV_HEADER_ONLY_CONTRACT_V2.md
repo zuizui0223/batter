@@ -1,0 +1,45 @@
+# Myotis 2026: two-source file CSV header-only gate V2 (source-frozen)
+
+**2026-10-10 — BEFORE any CSV content opening.** This is solely a source-schema eligibility check. The root OSF identity, data folders, date folder names and resource IDs were established by successful GitHub Actions metadata-only runs 38010699176, 38010744981, 38010792711, 38010881468, 38010935844, 38010983448, 38011050723 and 38011119952. No real bat detection rows have been read in these jobs.
+
+## Precisely frozen allowlist
+
+Only inspect the **first CSV header line** of the same named original receiver station file from two independent dated directories:
+- `0A62_20240515.csv`, official OSF file resource **698dad850d35ac498ec72cd3**, metadata-declared 150,481 bytes;
+- `0A62_20240516.csv`, official OSF file resource **698dadb876b09fd62fe255fe**, metadata-declared 38,503 bytes.
+
+Allowed OSF routes (same frozen file IDs only):
+- `https://api.osf.io/v2/files/{resource-id}/` — original JSON file metadata and OSF download link identity;
+- `https://osf.io/download/{resource-id}/` — original file URL;
+- `https://files.osf.io/v1/resources/sg6dz/providers/osfstorage/{resource-id}?action=download` — original resource provider link, if canonical identity and HTTPS host verified.
+
+Only read up to one first line from each resource, capped at 2048 bytes and containing a newline. Use HTTP Range when possible; if the remote server streams more data, do not parse, print or iterate any subsequent rows. Verify source name/resource ID through official JSON metadata first, and require a CSV/comma header, not a numerical event row. No S3 or third-party URL redirect allowed in this phase. If the exact host/identity is inaccessible, `STOP_CSV_HEADER_ACCESS`.
+
+## Authorized output
+
+For each of the two files: source ID, declared original filename, HTTP status, whether header successfully read, and up to 25 field names. Detect field *presence* for:
+- stationary receiver key;
+- mobile sender key;
+- timestamp/date/time;
+- RSSI/signal;
+- any separately declared **physical bat identifier** field distinct from a sensor's physical MAC/tag address.
+
+No bat tags, numeric timestamps, visit counts, receiver coordinates, RSSI values, movement, or biological co-detection numbers may be opened/printed.
+
+**This does not verify** that a mobile sender key is one biological individual across separate days; physical-bat↔tag mapping and independent same-dyad night coverage require a separate pre-frozen categorical source gate. Repeated receiver filenames are NOT a multi-bat repeated identity proof.
+
+Status only: `HOLD_EVENT_SCHEMA_ONLY_REQUIRES_BAT_ID_CROSSWALK` on successful compatible headers, `STOP_CSV_HEADER_ACCESS` on unreachable, `STOP_UNEXPECTED_CSV_HEADER_SCHEMA` on invalid/discordant structure. No empirical effect, social synchrony or JAE 3D claim is authorized.
+
+
+## V2a redirect-host-only diagnostic after source access STOP
+[GitHub Actions 38011224732](https://github.com/zuizui0223/batter/actions/runs/38011224732) and [38011271159](https://github.com/zuizui0223/batter/actions/runs/38011271159) completed **SUCCESS** as fail-closed header tests: official OSF file identity metadata HTTP 200 and correct filenames for both 2024-05-15 and 2024-05-16, but **both** download routes stopped at `DISALLOWED_REDIRECT_HOST`. No CSV header or biological value was read.
+
+Before relaxing any domain restriction, authorize a **metadata-only redirect diagnosis**: record only the HTTPS destination **hostname** at the first blocked OSF download redirect, and do not follow it, print signed query strings, URLs, authentication tokens, geographic values, CSV headers or rows. A non-OSF hostname is not automatically malicious or authorized; determine if it is a documented original OSF object-storage delivery host before creating a separate source access amendment. Source identity/file resource IDs unchanged.
+
+
+## V2b source-host resolution (2026-10-10; still pre-header)
+[CI 38011401820](https://github.com/zuizui0223/batter/actions/runs/38011401820) **SUCCESS as a diagnostic**, original OSF file API IDs and names verified, two dates likewise. The *only* blocked redirect hostnames, collected without following contents or logging signed URLs, were:
+- `files.de-1.osf.io` (from canonical `osf.io/download/{id}/`);
+- `storage.googleapis.com` (from exact `files.osf.io/v1/resources/sg6dz/providers/osfstorage/{id}?action=download`).
+
+These are standard OSF regional/object-storage delivery domains. **Before accessing any file bytes**, expand the allowlist to these **two exact HTTPS hostname strings only** for the two frozen OSF IDs above. Never follow any other redirect destination, and never log canonical signed URLs/tokens or retrieve past the first CSV header line. This change is an official source-delivery access-path repair, not an adaptive test of a bat behavior endpoint. The previous `STOP_CSV_HEADER_ACCESS` is the accurate result for the more restrictive host gate; do not erase it.
