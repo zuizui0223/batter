@@ -1,0 +1,44 @@
+name: myotis-2026-original-clock-constants-v3
+on:
+  push:
+    branches:
+      - prospective/social-payoff-threshold-source-gate-v1
+    paths:
+      - "prospective/social_payoff_threshold/myotis_2026_original_clock_constants_v3.py"
+      - ".github/workflows/myotis-2026-original-clock-constants-v3.yml"
+  workflow_dispatch:
+jobs:
+  author-code-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    permissions: {contents: read}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.13"}
+      - name: Compile/source literal parser self-test
+        run: |
+          python -m py_compile prospective/social_payoff_threshold/myotis_2026_original_clock_constants_v3.py
+          python prospective/social_payoff_threshold/myotis_2026_original_clock_constants_v3.py --self-test
+      - name: Read only original author clock literal values
+        run: |
+          python prospective/social_payoff_threshold/myotis_2026_original_clock_constants_v3.py --out MYOTIS_2026_AUTHOR_HHMM_CLOCK_CONSTANTS_V3.json
+          python - <<'PY'
+          import json
+          x=json.load(open("MYOTIS_2026_AUTHOR_HHMM_CLOCK_CONSTANTS_V3.json"))
+          assert x["bat_events_read"]==0
+          assert x["source_observational_pair_stats_calculated"]==0
+          assert x["GPS_coordinates_or_roost_location_read"] is False
+          assert x["true_timezone_verified"] is False
+          assert x["station_uptime_verified"] is False
+          assert x["status"] in (
+              "AUTHOR_CLOCK_CONSTANTS_FOUND_METHOD_ONLY",
+              "HOLD_AUTHOR_TIME_BOUNDARIES_AMBIGUOUS",
+              "STOP_ORIGINAL_CODE_INACCESSIBLE")
+          print("NO_BAT_EVENT_VALUES_OR_RESULT_TEST: PASS")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: myotis-2026-original-author-clock-HHMM-v3
+          path: MYOTIS_2026_AUTHOR_HHMM_CLOCK_CONSTANTS_V3.json
+          if-no-files-found: error
