@@ -25,6 +25,8 @@ TARGETS=(
     ("proximity_UD_folder",BASE+"files/osfstorage/698dbd04bb73abf03bdfc98c/"),
     ("data_folder",BASE+"files/osfstorage/698dac7afa739fb04ee258a4/"),
     ("sn_prox_folder",BASE+"files/osfstorage/698dad08eb682af8bcc73651/"),
+    ("day_20240515",BASE+"files/osfstorage/698dad6fab12904856dfcacd/"),
+    ("day_20240516",BASE+"files/osfstorage/698dada20d35ac498ec72cef/"),
 )
 MAX_RESPONSE=1_200_000
 UA="batter-2026-myotis-source-metadata-v1/1.0"
@@ -166,6 +168,10 @@ def main():
     folder=next((x for x in records["proximity_UD_folder"].values() if x.get("json_ok")), {})
     datafolder=next((x for x in records["data_folder"].values() if x.get("json_ok")), {})
     snprox=next((x for x in records["sn_prox_folder"].values() if x.get("json_ok")), {})
+    datesamples={
+       day:next((x for x in records[day].values() if x.get("json_ok")), {})
+       for day in ("day_20240515","day_20240516")
+    }
     print(json.dumps({
       "status":status,
       "project_metadata_verified":project_pass,
@@ -202,6 +208,15 @@ def main():
           for x in snprox.get("safe_file_metadata",[])[:40]
       ],
       "sn_prox_folder_more_pages":snprox.get("pagination_next_present"),
+      "dated_folder_samples":{
+          day:{"metadata_accessible":bool(folder),
+               "count_page1":folder.get("listed_resource_count_page1"),
+               "more_pages":folder.get("pagination_next_present"),
+               "resources":[{"filename":x.get("filename"),"kind":x.get("kind"),
+                    "size":x.get("declared_size_bytes")} for x in
+                    folder.get("safe_file_metadata",[])[:25]]}
+          for day,folder in datesamples.items()
+      },
       "numeric_bat_events_opened":False,
       "receipt":args.out
     },sort_keys=True))
