@@ -1,0 +1,44 @@
+name: myotis-2026-exploratory-dyad-repetition-v1b
+on:
+  push:
+    branches:
+      - prospective/social-payoff-threshold-source-gate-v1
+    paths:
+      - "prospective/social_payoff_threshold/myotis_2026_cross_night_dyad_persistence_v1b.py"
+      - ".github/workflows/myotis-2026-exploratory-dyad-repetition-v1b.yml"
+  workflow_dispatch:
+jobs:
+  exploratory-two-night-binary-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    permissions: {contents: read}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.13"}
+      - name: Compile and fake-data invariants
+        run: |
+          python -m py_compile prospective/social_payoff_threshold/myotis_2026_cross_night_dyad_persistence_v1b.py
+          python prospective/social_payoff_threshold/myotis_2026_cross_night_dyad_persistence_v1b.py --self-test
+      - name: Exact original two-night source and one frozen descriptive overlap
+        run: |
+          python prospective/social_payoff_threshold/myotis_2026_cross_night_dyad_persistence_v1b.py --out MYOTIS_2026_CROSS_NIGHT_DYAD_BINARY_V1B.json
+          python - <<'PY'
+          import json
+          x=json.load(open("MYOTIS_2026_CROSS_NIGHT_DYAD_BINARY_V1B.json"))
+          assert x["analysis_tier"]=="POST_OUTCOME_EXPLORATORY_NOT_CONFIRMATORY"
+          assert x["raw_individual_or_receiver_ids_emitted"] is False
+          assert x["exact_source_times_or_RSSI_or_coordinates_emitted"] is False
+          assert x["p_values_or_social_null_simulated"] is False
+          assert x["original_V1a_processing_reused"] is True
+          if x["categorical_dyad_repetition"] is not None:
+              z=x["categorical_dyad_repetition"]
+              assert z["total_possible_dyads"]==28
+              assert sum(z[k] for k in ("positive_both_nights","positive_only_20240515","positive_only_20240516","positive_neither_night"))==28
+          print("NO_PVALUES_NO_IDS_AND_FROZEN_MARGINS: PASS")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: myotis-2026-exploratory-cross-night-dyads-v1b
+          path: MYOTIS_2026_CROSS_NIGHT_DYAD_BINARY_V1B.json
+          if-no-files-found: error
