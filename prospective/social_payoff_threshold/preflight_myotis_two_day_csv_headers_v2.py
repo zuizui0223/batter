@@ -180,7 +180,10 @@ def main():
            "header_opened":x["header_opened"],
            "column_names":x["column_names"],
            "header_flags":x["header_flags"],
-           "metadata_http":x["metadata"]["http_status"]}
+           "metadata_http":x["metadata"]["http_status"],
+           "metadata_identity_ok":x["metadata"]["ok"],
+           "metadata_error":x["metadata"].get("error"),
+           "path_attempts":x.get("paths_attempted",[])}
            for x in sources],
        "read_bat_values":False
     },sort_keys=True))
