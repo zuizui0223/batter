@@ -55,7 +55,11 @@ def main():
 
     result=None
     status="STOP_SOURCE_QA_OR_MARGINS"
-    if all(r.get("status")=="SOURCE_STRUCTURAL_QA_ONLY" for r in reports):
+    diagnostic_flags={"all_16_source_QA_pass":False,"old_margins_match":None,
+        "old_both_night_pair_total_match":None,"core_nested_in_allnight":None,
+        "core_incidence_not_larger_than_allnight":None,"core_both_subset":None}
+    diagnostic_flags["all_16_source_QA_pass"]=all(r.get("status")=="SOURCE_STRUCTURAL_QA_ONLY" for r in reports)
+    if diagnostic_flags["all_16_source_QA_pass"]:
         fullbinary={}
         corebinary={}
         nightstats=[]
@@ -96,11 +100,20 @@ def main():
                       for k in corebinary[DAYS[0]])
         subset=all(not corebinary[d][k] or fullbinary[d][k]
                    for d in DAYS for k in corebinary[d])
-        valid=(n_full==FROZEN_NIGHT_MARGINS and full_both==FROZEN_BOTH_NIGHTS
-               and subset and len(fullbinary[DAYS[0]])==28
-               and all(s["sum_pair_by_minute_core_incidences"]<=x
-                       for s,x in zip(nightstats,(347,516)))
-               and core_both<=13)
+        diagnostic_flags.update({
+          "old_margins_match":n_full==FROZEN_NIGHT_MARGINS,
+          "old_both_night_pair_total_match":full_both==FROZEN_BOTH_NIGHTS,
+          "core_nested_in_allnight":subset,
+          "core_incidence_not_larger_than_allnight":all(
+              s["sum_pair_by_minute_core_incidences"]<=x
+              for s,x in zip(nightstats,(347,516))),
+          "core_both_subset":core_both<=13,
+          "has_exactly_28_fixed_pairs":len(fullbinary[DAYS[0]])==28
+        })
+        valid=all(diagnostic_flags[k] for k in (
+            "old_margins_match","old_both_night_pair_total_match",
+            "core_nested_in_allnight","core_incidence_not_larger_than_allnight",
+            "core_both_subset","has_exactly_28_fixed_pairs"))
         if valid:
             status="EXPLORATORY_CORE_LOGGER_WINDOW_DESCRIPTIVE_ONLY"
             first=nightstats[0]["pairs_with_core_shared_receiver_minute"]
@@ -128,6 +141,7 @@ def main():
       "core_hours_preselected":[0,1,23],
       "n_original_source_files":len(reports),
       "descriptive_aggregates":result,
+      "QA_boolean_diagnostic_flags":diagnostic_flags,
       "raw_bat_or_receiver_ID_or_datetime_or_RSSI_output":False,
       "source_station_coordinates_or_prey_results_accessed":False,
       "no_p_values_or_social_causal_conclusion":True,
@@ -139,6 +153,7 @@ def main():
     print(json.dumps({
       "status":status,
       "core_aggregates":result,
+      "QA_boolean_diagnostic_flags":diagnostic_flags,
       "no_social_p_values_or_raw_identifiers":True,
       "not_equivalent_to_original_sunset_sunrise_exclusion":True
     },sort_keys=True))
