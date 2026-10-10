@@ -14,6 +14,7 @@ import json
 import re
 import urllib.request
 from pathlib import Path
+from datetime import datetime, timedelta
 
 from preflight_myotis_two_day_csv_headers_v2 import metadata, opener, UA
 
@@ -66,6 +67,9 @@ def categorical_file(name,rid,expected_date):
             if len(dt_digits)==8 and dt_digits.isdecimal():
                 valid_dates.add(dt_digits)
             else:bad_date+=1
+        start=datetime.strptime(expected_date,"%Y%m%d").date()
+        after=(start+timedelta(days=1)).strftime("%Y%m%d")
+        allowed_dates={expected_date,after}
         row.update({"status":"CATEGORICAL_PARSED_ONLY",
             "http_data":code,
             "n_technical_rows":technical_events,
@@ -74,7 +78,8 @@ def categorical_file(name,rid,expected_date):
             "n_distinct_tx_values":len(senders),
             "n_missing_rfid":missing_rfid,
             "n_missing_tx":missing_sender,
-            "all_dates_match_filename":bad_date==0 and valid_dates=={expected_date},
+            "all_civil_dates_within_sampling_night":bad_date==0 and
+                  bool(valid_dates) and valid_dates.issubset(allowed_dates),
             "n_distinct_declared_date_values":len(valid_dates),
             "observations_or_geography_analyzed":False})
         # NOTE: actual identifying strings are returned ONLY into transient
@@ -92,6 +97,8 @@ def self_test():
     h=[v.lower() for v in next(r)]
     assert all(x in h for x in REQUIRED)
     assert re.sub(r"[-/]","","2024-05-15")=="20240515"
+    start=datetime.strptime("20240515","%Y%m%d").date()
+    assert (start+timedelta(days=1)).strftime("%Y%m%d")=="20240516"
     return "PASS_SELECT_ONLY_CATEGORICAL_COLUMNS"
 
 
@@ -115,7 +122,7 @@ def main():
                       and d.get("n_distinct_tx_values")==1
                       and d.get("n_missing_rfid")==0
                       and d.get("n_missing_tx")==0
-                      and d.get("all_dates_match_filename")
+                      and d.get("all_civil_dates_within_sampling_night")
                       and d.get("n_technical_rows",0)>0 for d in detail))
     same_id=bool(source_consistent and id_sets[0]==id_sets[1])
     same_tx=bool(source_consistent and tx_sets[0]==tx_sets[1])
