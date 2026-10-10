@@ -5,6 +5,7 @@ on:
       - post-freeze/jae-rc2-submission-human-handoff-2026-10-10
     paths:
       - "submission/JAE_RC2_SUBMISSION_HUMAN_HANDOFF_2026_10_10.md"
+      - "submission/JAE_RC2_REFEREE_RISK_RESPONSE_MATRIX_2026_10_10.md"
       - "submission/JAE_V0_4_0_EDITORIAL_SHORT_COVER_LETTER_PROPOSAL_2026_10_10.md"
       - "scripts/audit_jae_rc2_submission_handoff_2026_10_10.py"
       - ".github/workflows/jae-rc2-human-submission-handoff-audit-2026-10-10.yml"
@@ -39,6 +40,26 @@ jobs:
           assert x["journal_submission_performed"] is False
           assert x["status"] in ("HOLD_HUMAN_METADATA_LICENSE_DOI","HOLD_REQUIRES_FINAL_RELEASE_GATES")
           print("IMMUTABLE_JAE_RC2_GUARD_PASS; HUMAN_RELEASE_INPUTS_STILL_REQUIRED")
+          PY
+      - name: Ensure six reviewer risk classes and evidence boundaries are present
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          p=Path("submission/JAE_RC2_REFEREE_RISK_RESPONSE_MATRIX_2026_10_10.md")
+          body=p.read_text(encoding="utf-8")
+          for x in "ABCDEF":
+              assert re.search(r"^## Objection "+x+r":",body,re.M),f"missing risk class {x}"
+          for marker in ("10.1111/1365-2656.13339",
+                         "10.1186/s40462-023-00394-1",
+                         "10.1111/eth.12123",
+                         "not an equivalence test",
+                         "p=0.5121",
+                         "0/4",
+                         "1/4",
+                         "not proof"):
+              assert marker.lower() in body.lower(),f"missing source/claim guard {marker}"
+          print("SIX_REVIEWER_RISK_CLASSES_AND_CAUSAL_BOUNDS: PASS")
           PY
       - uses: actions/upload-artifact@v4
         with:
