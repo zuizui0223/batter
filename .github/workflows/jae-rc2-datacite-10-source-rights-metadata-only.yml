@@ -1,0 +1,43 @@
+name: jae-rc2-datacite-10-source-rights-metadata-only
+on:
+  push:
+    branches:
+      - post-freeze/jae-rc2-submission-human-handoff-2026-10-10
+    paths:
+      - "submission/jae_v0_4_0_original_source_rights.template.json"
+      - "submission/JAE_RC2_DATACITE_SOURCE_RIGHTS_METADATA_GATE_2026_10_10.md"
+      - "scripts/inspect_jae_v0_4_0_original_doi_rights_metadata.py"
+      - ".github/workflows/jae-rc2-datacite-10-source-rights-metadata-only.yml"
+  workflow_dispatch:
+jobs:
+  exactly-ten-public-dois-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    permissions: {contents: read}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.13"}
+      - name: Compile and ensure every source licence remains unverified in public template
+        run: |
+          python -m py_compile scripts/inspect_jae_v0_4_0_original_doi_rights_metadata.py
+          python scripts/inspect_jae_v0_4_0_original_doi_rights_metadata.py --self-test
+      - name: Query only DataCite public rights metadata for the exact 10 DOI IDs
+        run: |
+          python scripts/inspect_jae_v0_4_0_original_doi_rights_metadata.py --out JAE_RC2_DATACITE_SOURCE_RIGHTS_ONLY_2026_10_10.json
+          python - <<'PY'
+          import json
+          x=json.load(open("JAE_RC2_DATACITE_SOURCE_RIGHTS_ONLY_2026_10_10.json"))
+          assert x["sources_checked"]==10
+          assert len(x["doi_metadata_results"])==10
+          assert x["status"]=="HOLD_TEN_DATASET_RIGHTS_HUMAN_REVIEW"
+          assert x["datafiles_tracking_locations_or_bat_timepoints_opened"] is False
+          assert x["licence_or_owner_permission_finalized"] is False
+          assert x["license_claims_added_to_research_manuscript"] is False
+          print("DATASET_RIGHTS_NOT_INVENTED_OR_APPROVED: PASS")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: jae-rc2-ten-original-source-doi-metadata-only
+          path: JAE_RC2_DATACITE_SOURCE_RIGHTS_ONLY_2026_10_10.json
+          if-no-files-found: error

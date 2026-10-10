@@ -1,0 +1,161 @@
+name: jae-rc2-human-submission-handoff-audit-2026-10-10
+on:
+  push:
+    branches:
+      - post-freeze/jae-rc2-submission-human-handoff-2026-10-10
+    paths:
+      - "submission/JAE_RC2_SUBMISSION_HUMAN_HANDOFF_2026_10_10.md"
+      - "submission/JAE_RC2_REFEREE_RISK_RESPONSE_MATRIX_2026_10_10.md"
+      - "submission/JAE_V0_4_0_AI_INCLUSION_AND_DATA_RIGHTS_POLICY_GATE_2026_10_10.md"
+      - "submission/jae_v0_4_0_policy_signoff.template.json"
+      - "scripts/audit_jae_v0_4_0_policy_signoff.py"
+      - "scripts/audit_jae_v0_4_0_journal_facing_ai_disclosure.py"
+      - "scripts/check_jae_v0_4_0_integrated_final_editorial_gate.py"
+      - "submission/JAE_V0_4_0_SUBSTANTIVE_AI_DISCLOSURE_UNAPPROVED_AUTHOR_DRAFT.md"
+      - "submission/JAE_V0_4_0_AI_DISCLOSURE_MANUSCRIPT_INTEGRATION_GATE_2026_10_10.md"
+      - "submission/jae_v0_4_0_original_source_rights.template.json"
+      - "submission/JAE_RC2_EXECUTED_TEN_SOURCE_DATACITE_RIGHTS_RESULT_2026_10_10.md"
+      - "scripts/audit_jae_v0_4_0_source_rights_signoff.py"
+      - "submission/JAE_V0_4_0_EDITORIAL_SHORT_COVER_LETTER_PROPOSAL_2026_10_10.md"
+      - "scripts/audit_jae_rc2_submission_handoff_2026_10_10.py"
+      - ".github/workflows/jae-rc2-human-submission-handoff-audit-2026-10-10.yml"
+  workflow_dispatch:
+jobs:
+  immutable-rc2-editorial-readiness:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    permissions: {contents: read}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.13"}
+      - name: Compile and test frozen-manuscript blob hashing
+        run: |
+          python -m py_compile scripts/audit_jae_rc2_submission_handoff_2026_10_10.py
+          python scripts/audit_jae_rc2_submission_handoff_2026_10_10.py --self-test
+      - name: Check frozen JAE rc2 science integrity and optional letter; report human blockers
+        run: |
+          python scripts/audit_jae_rc2_submission_handoff_2026_10_10.py --out JAE_V0_4_0_RC2_HANDOFF_PREFLIGHT_2026_10_10.json
+          python - <<'PY'
+          import json
+          x=json.load(open("JAE_V0_4_0_RC2_HANDOFF_PREFLIGHT_2026_10_10.json"))
+          assert x["repo_manifest_submission_id"]=="batter-jae-v0.4.0-rc2"
+          assert x["frozen_manuscript_identity_verified"] is True
+          assert x["immutable_manuscript_blob_sha"]=="c4ef51a7f3f291a6f203d303dbf73f5b54fb7683"
+          assert x["repo_abstract_words_from_existing_manifest"]<=350
+          assert x["optional_short_letter_whitespace_words"]<=500
+          assert x["errors"]==[]
+          assert x["human_author_metadata_filled_or_generated"] is False
+          assert x["release_tag_or_DOI_minted"] is False
+          assert x["journal_submission_performed"] is False
+          assert x["status"] in ("HOLD_HUMAN_METADATA_LICENSE_DOI","HOLD_REQUIRES_FINAL_RELEASE_GATES")
+          print("IMMUTABLE_JAE_RC2_GUARD_PASS; HUMAN_RELEASE_INPUTS_STILL_REQUIRED")
+          PY
+      - name: Ensure six reviewer risk classes and evidence boundaries are present
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          p=Path("submission/JAE_RC2_REFEREE_RISK_RESPONSE_MATRIX_2026_10_10.md")
+          body=p.read_text(encoding="utf-8")
+          for x in "ABCDEF":
+              assert re.search(r"^## Objection "+x+r":",body,re.M),f"missing risk class {x}"
+          for marker in ("10.1111/1365-2656.13339",
+                         "10.1186/s40462-023-00394-1",
+                         "10.1111/eth.12123",
+                         "not an equivalence test",
+                         "p=0.5121",
+                         "0/4",
+                         "1/4",
+                         "not proof"):
+              assert marker.lower() in body.lower(),f"missing source/claim guard {marker}"
+          print("SIX_REVIEWER_RISK_CLASSES_AND_CAUSAL_BOUNDS: PASS")
+          PY
+      - name: Require honest BES inclusion, generative AI and third-party source rights signoff
+        run: |
+          python -m py_compile scripts/audit_jae_v0_4_0_policy_signoff.py
+          python scripts/audit_jae_v0_4_0_policy_signoff.py --self-test
+          python scripts/audit_jae_v0_4_0_policy_signoff.py --out JAE_V0_4_0_AUTHOR_POLICY_COMPLIANCE_RECEIPT.json
+          python - <<'PY'
+          import json
+          x=json.load(open("JAE_V0_4_0_AUTHOR_POLICY_COMPLIANCE_RECEIPT.json"))
+          assert x["frozen_manuscript_blob"]=="c4ef51a7f3f291a6f203d303dbf73f5b54fb7683"
+          assert x["BES_inclusion_statement_required"] is True
+          assert x["BES_substantive_generative_AI_disclosure_required_if_used"] is True
+          assert x["BES_third_party_data_reuse_rights_review_required"] is True
+          assert x["author_factual_declaration_generated"] is False
+          assert x["journal_submission_performed"] is False
+          assert x["status"] in (
+             "HOLD_HUMAN_POLICY_SIGNOFF",
+             "AUTHOR_RECORDED_APPROVAL_NEEDS_JOURNAL_CONTENT_REVIEW")
+          print("BES_TRANSPARENT_AI_AND_INCLUSION_GATES: PASS_WITH_HUMAN_HOLD_IF_NEEDED")
+          PY
+      - name: Require itemized author rights clearance for every cited third-party dataset
+        run: |
+          python -m py_compile scripts/audit_jae_v0_4_0_source_rights_signoff.py
+          python scripts/audit_jae_v0_4_0_source_rights_signoff.py --self-test
+          python scripts/audit_jae_v0_4_0_source_rights_signoff.py --out JAE_RC2_TEN_SOURCE_RIGHTS_HUMAN_GATE.json
+          python - <<'PY'
+          import json
+          x=json.load(open("JAE_RC2_TEN_SOURCE_RIGHTS_HUMAN_GATE.json"))
+          assert x["total_cited_dataset_DOIs"]==10
+          assert x["frozen_manuscript_blob"]=="c4ef51a7f3f291a6f203d303dbf73f5b54fb7683"
+          assert x["data_metadata_candidates_are_not_permissions"] is True
+          assert x["no_rights_status_manufactured"] is True
+          assert x["status"] in (
+            "HOLD_TEN_SOURCE_RIGHTS_HUMAN_SIGNOFF",
+            "SOURCE_RIGHTS_APPROVED_BY_HUMANS_NEEDS_JOURNAL_CONTENT_REVIEW")
+          print("FROZEN_ALL_TEN_SOURCE_RIGHTS_METADATA_NOT_AUTOMATIC_PERMISSION: PASS")
+          PY
+      - name: Check actual journal-facing Methods/Acknowledgements AI disclosure beyond JSON signoff
+        run: |
+          python -m py_compile scripts/audit_jae_v0_4_0_journal_facing_ai_disclosure.py
+          python scripts/audit_jae_v0_4_0_journal_facing_ai_disclosure.py --self-test
+          python scripts/audit_jae_v0_4_0_journal_facing_ai_disclosure.py --out JAE_RC2_JOURNAL_FACING_AI_DISCLOSURE_GATE.json
+          python - <<'PY'
+          import json
+          x=json.load(open("JAE_RC2_JOURNAL_FACING_AI_DISCLOSURE_GATE.json"))
+          assert x["original_journal_manuscript_blob"]=="c4ef51a7f3f291a6f203d303dbf73f5b54fb7683"
+          assert x["frozen_journal_manuscript_intact"] is True
+          assert x["journal_ready_claimed"] is False
+          assert x["AI_disclosure_text_inserted_or_generated"] is False
+          assert x["scientific_data_or_results_changed"] is False
+          assert x["status"] in (
+             "HOLD_HUMAN_POLICY_AND_JOURNAL_DISCLOSURE",
+             "HOLD_DISCLOSURE_CONTENT_OR_POLICY",
+             "MATCHED_DISCLOSURE_STILL_REQUIRES_HUMAN_JOURNAL_REVIEW")
+          print("AUTHOR_SIGNOFF_MUST_MATCH_ACTUAL_MANUSCRIPT_SECTION: PASS")
+          PY
+      - name: "Composite editorial gate - fail closed on missing declaration, rights or DOI"
+        run: |
+          python -m py_compile scripts/check_jae_v0_4_0_integrated_final_editorial_gate.py
+          python scripts/check_jae_v0_4_0_integrated_final_editorial_gate.py --self-test
+          python scripts/check_jae_v0_4_0_integrated_final_editorial_gate.py --out JAE_V0_4_0_INTEGRATED_HUMAN_JOURNAL_READY_AUDIT.json
+          set +e
+          python scripts/check_jae_v0_4_0_integrated_final_editorial_gate.py --strict --out JAE_V0_4_0_INTEGRATED_STRICT_HOLD_AUDIT.json
+          strict_code=$?
+          set -e
+          test "$strict_code" -eq 1
+          python - <<'PY'
+          import json
+          x=json.load(open("JAE_V0_4_0_INTEGRATED_HUMAN_JOURNAL_READY_AUDIT.json"))
+          assert x["status"]=="HOLD_EDITORIAL_OR_RELEASE_GATES"
+          assert x["BES_policy_author_signoff_present"] is False
+          assert x["ten_source_rights_signoff_present"] is False
+          assert x["AI_document_disclosure_status"]=="HOLD_HUMAN_POLICY_AND_JOURNAL_DISCLOSURE"
+          assert x["frozen_science_sha_verified"] is True
+          assert x["journal_submitted"] is False
+          assert x["DOI_minted"] is False
+          print("COMPOSITE_ALL_APPROVALS_AND_REAL_DISCLOSURE_REQUIRED; STRICT_BLOCKS: PASS")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: jae-rc2-human-authorship-and-release-blocker-receipt
+          path: |
+            JAE_V0_4_0_RC2_HANDOFF_PREFLIGHT_2026_10_10.json
+            JAE_V0_4_0_AUTHOR_POLICY_COMPLIANCE_RECEIPT.json
+            JAE_RC2_TEN_SOURCE_RIGHTS_HUMAN_GATE.json
+            JAE_RC2_JOURNAL_FACING_AI_DISCLOSURE_GATE.json
+            JAE_V0_4_0_INTEGRATED_HUMAN_JOURNAL_READY_AUDIT.json
+            JAE_V0_4_0_INTEGRATED_STRICT_HOLD_AUDIT.json
+          if-no-files-found: error
