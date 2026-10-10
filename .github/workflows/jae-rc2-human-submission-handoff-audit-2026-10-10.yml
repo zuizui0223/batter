@@ -1,0 +1,47 @@
+name: jae-rc2-human-submission-handoff-audit-2026-10-10
+on:
+  push:
+    branches:
+      - post-freeze/jae-rc2-submission-human-handoff-2026-10-10
+    paths:
+      - "submission/JAE_RC2_SUBMISSION_HUMAN_HANDOFF_2026_10_10.md"
+      - "submission/JAE_V0_4_0_EDITORIAL_SHORT_COVER_LETTER_PROPOSAL_2026_10_10.md"
+      - "scripts/audit_jae_rc2_submission_handoff_2026_10_10.py"
+      - ".github/workflows/jae-rc2-human-submission-handoff-audit-2026-10-10.yml"
+  workflow_dispatch:
+jobs:
+  immutable-rc2-editorial-readiness:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    permissions: {contents: read}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.13"}
+      - name: Compile and test frozen-manuscript blob hashing
+        run: |
+          python -m py_compile scripts/audit_jae_rc2_submission_handoff_2026_10_10.py
+          python scripts/audit_jae_rc2_submission_handoff_2026_10_10.py --self-test
+      - name: Check frozen JAE rc2 science integrity and optional letter; report human blockers
+        run: |
+          python scripts/audit_jae_rc2_submission_handoff_2026_10_10.py --out JAE_V0_4_0_RC2_HANDOFF_PREFLIGHT_2026_10_10.json
+          python - <<'PY'
+          import json
+          x=json.load(open("JAE_V0_4_0_RC2_HANDOFF_PREFLIGHT_2026_10_10.json"))
+          assert x["repo_manifest_submission_id"]=="batter-jae-v0.4.0-rc2"
+          assert x["frozen_manuscript_identity_verified"] is True
+          assert x["immutable_manuscript_blob_sha"]=="c4ef51a7f3f291a6f203d303dbf73f5b54fb7683"
+          assert x["repo_abstract_words_from_existing_manifest"]<=350
+          assert x["optional_short_letter_whitespace_words"]<=500
+          assert x["errors"]==[]
+          assert x["human_author_metadata_filled_or_generated"] is False
+          assert x["release_tag_or_DOI_minted"] is False
+          assert x["journal_submission_performed"] is False
+          assert x["status"] in ("HOLD_HUMAN_METADATA_LICENSE_DOI","HOLD_REQUIRES_FINAL_RELEASE_GATES")
+          print("IMMUTABLE_JAE_RC2_GUARD_PASS; HUMAN_RELEASE_INPUTS_STILL_REQUIRED")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: jae-rc2-human-authorship-and-release-blocker-receipt
+          path: JAE_V0_4_0_RC2_HANDOFF_PREFLIGHT_2026_10_10.json
+          if-no-files-found: error
