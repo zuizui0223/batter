@@ -47,6 +47,7 @@ Original author source declaration: **https://osf.io/sg6dz/overview?view_only=46
 The preflight script may request only:
 - `https://api.osf.io/v2/nodes/sg6dz/` (OSF project metadata);
 - `https://api.osf.io/v2/nodes/sg6dz/files/` (provider-level file metadata);
+- `https://api.osf.io/v2/nodes/sg6dz/files/osfstorage/` (only the root provider's *metadata listing*, not any download);
 - optionally the exact read-only token as a query string for those endpoints when documented, without fetching binary files or following any file download/view URLs.
 
 Use strict JSON size caps, file names/sizes/extensions only, and no receiver coordinates/roost localization.
