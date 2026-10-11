@@ -19,6 +19,8 @@ on:
       - "scripts/audit_jae_v0_4_0_journal_facing_ai_disclosure.py"
       - "scripts/check_jae_v0_4_0_integrated_final_editorial_gate.py"
       - "scripts/check_jae_v0_4_0_AI_disclosure_candidate_transition.py"
+      - "tests/test_jae_rc2_synthetic_editorial_approval_transitions.py"
+      - "submission/JAE_RC2_SYNTHETIC_APPROVAL_STATE_MACHINE_CONTRACT_2026_10_11.md"
       - "submission/JAE_RC2_TO_VERSIONED_AI_DISCLOSURE_CANDIDATE_CONTRACT_V1.md"
       - "submission/JAE_V0_4_0_SUBSTANTIVE_AI_DISCLOSURE_UNAPPROVED_AUTHOR_DRAFT.md"
       - "submission/JAE_V0_4_0_AI_DISCLOSURE_MANUSCRIPT_INTEGRATION_GATE_2026_10_10.md"
@@ -132,7 +134,8 @@ jobs:
           assert x["status"] in (
              "HOLD_HUMAN_POLICY_AND_JOURNAL_DISCLOSURE",
              "HOLD_DISCLOSURE_CONTENT_OR_POLICY",
-             "MATCHED_DISCLOSURE_STILL_REQUIRES_HUMAN_JOURNAL_REVIEW")
+             "MATCHED_DISCLOSURE_STILL_REQUIRES_HUMAN_JOURNAL_REVIEW",
+             "HUMAN_SIGNED_NON_SUBSTANTIVE_EXEMPTION_REQUIRES_JOURNAL_REVIEW")
           print("AUTHOR_SIGNOFF_MUST_MATCH_ACTUAL_MANUSCRIPT_SECTION: PASS")
           PY
       - name: "Composite editorial gate - fail closed on missing declaration, rights or DOI"
@@ -157,6 +160,13 @@ jobs:
           assert x["DOI_minted"] is False
           print("COMPOSITE_ALL_APPROVALS_AND_REAL_DISCLOSURE_REQUIRED; STRICT_BLOCKS: PASS")
           PY
+      - name: "Test fictional approval success and all meaningful blocker paths without modifying any real signoff"
+        run: |
+          python -m unittest discover -s tests -p 'test_jae_rc2_synthetic_editorial_approval_transitions.py' -v
+          test ! -f submission/jae_v0_4_0_policy_signoff.json
+          test ! -f submission/jae_v0_4_0_original_source_rights.json
+          test ! -f manuscript/MANUSCRIPT_DRAFT_V0_4_0_AI_DISCLOSURE_CANDIDATE.md
+          echo "FICTIONAL_ONLY_POSITIVE_NEGATIVE_STATE_TESTS: PASS"
       - name: "Verify future AI disclosure revision has exactly one authorized editorial insertion"
         run: |
           python -m py_compile scripts/check_jae_v0_4_0_AI_disclosure_candidate_transition.py
