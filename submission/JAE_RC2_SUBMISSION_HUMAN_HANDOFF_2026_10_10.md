@@ -111,6 +111,16 @@ If any substantive AI disclosure changes the frozen manuscript, the original rc2
 
 The *mandatory Statement on inclusion* is a separately approved submission-portal field, not something this package can upload automatically. Green automated checks NEVER supersede authors' own final proofread and submit action.
 
+## Non-destructive approval path for an AI disclosure revision
+
+A new [RC2-to-versioned-manuscript transition contract](JAE_RC2_TO_VERSIONED_AI_DISCLOSURE_CANDIDATE_CONTRACT_V1.md) and [exact-diff guard](../scripts/check_jae_v0_4_0_AI_disclosure_candidate_transition.py) distinguish author-approved journal transparency from impermissibly editing an evidence-frozen paper. Until actual author approval, both `submission/jae_v0_4_0_policy_signoff.json` and `manuscript/MANUSCRIPT_DRAFT_V0_4_0_AI_DISCLOSURE_CANDIDATE.md` are **absent and must remain unmanufactured**.
+
+If **substantive** AI use is verified by responsible authors, they may prepare a separate candidate file at the exact new path. The guard validates that its **only** textual change is one human-approved disclosure paragraph inserted into the approved Methods/Acknowledgements section. Any numerical or scientific-text alteration, unapproved paragraph or unresolved `[SPECIFY]`/`[INSERT]` placeholders will STOP the candidate comparison. Passing this narrow diff guard is NOT publication approval: the new file will have a new Git SHA and requires an explicit new release candidate, an updated provenance/manifest record, full reviewer PDF rebuild, real word count and final author review.
+
+If, contrary to the apparent research-support history, the humans can factually substantiate a `LANGUAGE_ONLY` or `NOT_USED` classification, the revised author signoff reader now admits a **signed, fully approved exemption pathway** without requiring a spurious manuscript insertion. This is not an invitation to classify substantive ChatGPT drafting and code support as grammar-only; the responsible authors' checked factual history is decisive.
+
+The integrated final-gate script still does **not** accept a modified RC2 scientific SHA as valid without a versioned transition; new candidate preparation and final journal release are separate phases. A human/editor must reconcile both phases rather than disable source-integrity validation.
+
 ## Release vs manuscript safety
 
 This handoff is stored in a separate proposed PR **based on rc2**. Do not merge automatically into the frozen scientific branch until author approval. No `manuscript/MANUSCRIPT_DRAFT_V0_4_0.md`, figures, original tests, JAE release candidate, `main` or original release tags have been altered.
