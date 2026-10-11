@@ -147,26 +147,37 @@ jobs:
           python scripts/check_jae_v0_4_0_integrated_final_editorial_gate.py --strict --out JAE_V0_4_0_INTEGRATED_STRICT_HOLD_AUDIT.json
           strict_code=$?
           set -e
-          test "$strict_code" -eq 1
-          python - <<'PY'
-          import json
+          python - "$strict_code" <<'PY'
+          import json,sys
           x=json.load(open("JAE_V0_4_0_INTEGRATED_HUMAN_JOURNAL_READY_AUDIT.json"))
-          assert x["status"]=="HOLD_EDITORIAL_OR_RELEASE_GATES"
-          assert x["BES_policy_author_signoff_present"] is False
-          assert x["ten_source_rights_signoff_present"] is False
-          assert x["AI_document_disclosure_status"]=="HOLD_HUMAN_POLICY_AND_JOURNAL_DISCLOSURE"
+          strict_rc=int(sys.argv[1])
           assert x["frozen_science_sha_verified"] is True
           assert x["journal_submitted"] is False
           assert x["DOI_minted"] is False
-          print("COMPOSITE_ALL_APPROVALS_AND_REAL_DISCLOSURE_REQUIRED; STRICT_BLOCKS: PASS")
+          assert x["artifact_uploaded"] is False
+          if x["status"]=="HOLD_EDITORIAL_OR_RELEASE_GATES":
+              assert strict_rc==1, "strict must reject incomplete real approval"
+              assert x["missing_blocker_classes"]
+              print("COMPOSITE_EXPECTED_HOLD_REJECTED_BY_STRICT: PASS")
+          else:
+              assert x["status"]=="ALL_AUTOMATED_GATES_PASS_FINAL_HUMAN_JOURNAL_REVIEW_REQUIRED"
+              assert strict_rc==0, "valid actual author approvals must be allowed"
+              assert not x["missing_blocker_classes"]
+              assert len(x["native_zenodo_and_upload_gates"])==2
+              assert all(y["check_result"]=="PASS" for y in x["native_zenodo_and_upload_gates"].values())
+              print("COMPOSITE_ALL_GATES_PASS_STILL_HUMAN_JOURNAL_REVIEW_REQUIRED: PASS")
           PY
       - name: "Test fictional approval success and all meaningful blocker paths without modifying any real signoff"
         run: |
           python -m unittest discover -s tests -p 'test_jae_rc2_synthetic_editorial_approval_transitions.py' -v
-          test ! -f submission/jae_v0_4_0_policy_signoff.json
-          test ! -f submission/jae_v0_4_0_original_source_rights.json
-          test ! -f manuscript/MANUSCRIPT_DRAFT_V0_4_0_AI_DISCLOSURE_CANDIDATE.md
-          echo "FICTIONAL_ONLY_POSITIVE_NEGATIVE_STATE_TESTS: PASS"
+          python - <<'PY'
+          from pathlib import Path
+          # The unit test uses tempfile exclusively. Genuine, future author-
+          # approved files are NOT forbidden from this branch by the test.
+          assert not any(Path("submission").glob("*FICTIONAL*"))
+          assert not any(Path("manuscript").glob("*FICTIONAL*"))
+          print("FICTIONAL_ONLY_POSITIVE_NEGATIVE_STATE_TESTS: PASS")
+          PY
       - name: "Verify future AI disclosure revision has exactly one authorized editorial insertion"
         run: |
           python -m py_compile scripts/check_jae_v0_4_0_AI_disclosure_candidate_transition.py
