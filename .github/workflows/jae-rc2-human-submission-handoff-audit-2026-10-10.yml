@@ -11,6 +11,8 @@ on:
       - "scripts/audit_jae_v0_4_0_policy_signoff.py"
       - "scripts/audit_jae_v0_4_0_journal_facing_ai_disclosure.py"
       - "scripts/check_jae_v0_4_0_integrated_final_editorial_gate.py"
+      - "scripts/check_jae_v0_4_0_AI_disclosure_candidate_transition.py"
+      - "submission/JAE_RC2_TO_VERSIONED_AI_DISCLOSURE_CANDIDATE_CONTRACT_V1.md"
       - "submission/JAE_V0_4_0_SUBSTANTIVE_AI_DISCLOSURE_UNAPPROVED_AUTHOR_DRAFT.md"
       - "submission/JAE_V0_4_0_AI_DISCLOSURE_MANUSCRIPT_INTEGRATION_GATE_2026_10_10.md"
       - "submission/jae_v0_4_0_original_source_rights.template.json"
@@ -148,6 +150,24 @@ jobs:
           assert x["DOI_minted"] is False
           print("COMPOSITE_ALL_APPROVALS_AND_REAL_DISCLOSURE_REQUIRED; STRICT_BLOCKS: PASS")
           PY
+      - name: "Verify future AI disclosure revision has exactly one authorized editorial insertion"
+        run: |
+          python -m py_compile scripts/check_jae_v0_4_0_AI_disclosure_candidate_transition.py
+          python scripts/check_jae_v0_4_0_AI_disclosure_candidate_transition.py --self-test
+          python scripts/check_jae_v0_4_0_AI_disclosure_candidate_transition.py --out JAE_RC2_AI_DISCLOSURE_REVISION_CANDIDATE_GATE.json
+          python - <<'PY'
+          import json
+          x=json.load(open("JAE_RC2_AI_DISCLOSURE_REVISION_CANDIDATE_GATE.json"))
+          assert x["frozen_rc2_scientific_SHA_valid"] is True
+          assert x["manuscript_or_journal_files_written"] is False
+          assert x["journal_submitted"] is False
+          assert x["status"] in (
+             "HOLD_HUMAN_AI_USE_AND_VERSIONED_CANDIDATE",
+             "AUTHOR_APPROVED_EXACT_DISCLOSURE_INSERTION_CANDIDATE_ONLY",
+             "HUMAN_APPROVED_NON_SUBSTANTIVE_USAGE_CANDIDATE_NOT_NEEDED",
+             "STOP_UNAUTHORIZED_CANDIDATE_CONTENT_DIFF")
+          print("FROZEN_SCIENCE_IMMUTABLE_EDITS_REQUIRE_VERSIONED_CANDIDATE: PASS")
+          PY
       - uses: actions/upload-artifact@v4
         with:
           name: jae-rc2-human-authorship-and-release-blocker-receipt
@@ -158,4 +178,5 @@ jobs:
             JAE_RC2_JOURNAL_FACING_AI_DISCLOSURE_GATE.json
             JAE_V0_4_0_INTEGRATED_HUMAN_JOURNAL_READY_AUDIT.json
             JAE_V0_4_0_INTEGRATED_STRICT_HOLD_AUDIT.json
+            JAE_RC2_AI_DISCLOSURE_REVISION_CANDIDATE_GATE.json
           if-no-files-found: error
