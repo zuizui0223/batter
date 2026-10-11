@@ -25,6 +25,8 @@ on:
       - "submission/JAE_V0_4_0_SUBSTANTIVE_AI_DISCLOSURE_UNAPPROVED_AUTHOR_DRAFT.md"
       - "submission/JAE_V0_4_0_AI_DISCLOSURE_MANUSCRIPT_INTEGRATION_GATE_2026_10_10.md"
       - "submission/jae_v0_4_0_original_source_rights.template.json"
+      - "scripts/audit_jae_rc2_ten_original_source_doi_citations.py"
+      - "submission/JAE_RC2_TEN_DATASET_CITATION_ATTRIBUTION_INTEGRITY_CONTRACT_2026_10_11.md"
       - "submission/JAE_RC2_EXECUTED_TEN_SOURCE_DATACITE_RIGHTS_RESULT_2026_10_10.md"
       - "scripts/audit_jae_v0_4_0_source_rights_signoff.py"
       - "submission/JAE_V0_4_0_EDITORIAL_SHORT_COVER_LETTER_PROPOSAL_2026_10_10.md"
@@ -196,6 +198,22 @@ jobs:
              "STOP_UNAUTHORIZED_CANDIDATE_CONTENT_DIFF")
           print("FROZEN_SCIENCE_IMMUTABLE_EDITS_REQUIRE_VERSIONED_CANDIDATE: PASS")
           PY
+      - name: "Match ten original source DOI citations and CC BY Nyctalus first primary"
+        run: |
+          python -m py_compile scripts/audit_jae_rc2_ten_original_source_doi_citations.py
+          python scripts/audit_jae_rc2_ten_original_source_doi_citations.py --self-test
+          python scripts/audit_jae_rc2_ten_original_source_doi_citations.py --out JAE_RC2_TEN_DATASET_CITATION_INTEGRITY_RESULT.json
+          python - <<'PY'
+          import json
+          x=json.load(open("JAE_RC2_TEN_DATASET_CITATION_INTEGRITY_RESULT.json"))
+          assert x["status"]=="PASS_TEN_SOURCE_CITATION_COMPLETENESS_ONLY"
+          assert len(x["doi_presence"])==10
+          assert all(v["in_main_manuscript"] and v["in_separate_title_page_template"] for v in x["doi_presence"])
+          assert x["specific_nyctalus_CC_BY_first_primary_boundary_retained"] is True
+          assert x["bat_data_files_opened"]==0
+          assert x["any_owner_permission_or_software_licence_granted"] is False
+          print("TEN_DATASET_CITATIONS_AND_FIRST_PRIMARY_EXTERNAL_BOUNDARY: PASS")
+          PY
       - uses: actions/upload-artifact@v4
         with:
           name: jae-rc2-human-authorship-and-release-blocker-receipt
@@ -207,4 +225,5 @@ jobs:
             JAE_V0_4_0_INTEGRATED_HUMAN_JOURNAL_READY_AUDIT.json
             JAE_V0_4_0_INTEGRATED_STRICT_HOLD_AUDIT.json
             JAE_RC2_AI_DISCLOSURE_REVISION_CANDIDATE_GATE.json
+            JAE_RC2_TEN_DATASET_CITATION_INTEGRITY_RESULT.json
           if-no-files-found: error
