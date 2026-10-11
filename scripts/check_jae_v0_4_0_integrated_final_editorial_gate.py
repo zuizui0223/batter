@@ -37,7 +37,9 @@ def evaluate():
         missing.append("BES_INCLUSION_GENERATIVE_AI_AND_AUTHORS_HUMAN_SIGNOFF_MISSING")
     if not rights_actual or missing_rights:
         missing.append("DATA_REUSE_RIGHTS_BY_DOI_HUMAN_SIGNOFF_MISSING")
-    if ai_doc["blockers"] or ai_doc["status"]!="MATCHED_DISCLOSURE_STILL_REQUIRES_HUMAN_JOURNAL_REVIEW":
+    if ai_doc["blockers"] or ai_doc["status"] not in (
+        "MATCHED_DISCLOSURE_STILL_REQUIRES_HUMAN_JOURNAL_REVIEW",
+        "HUMAN_SIGNED_NON_SUBSTANTIVE_EXEMPTION_REQUIRES_JOURNAL_REVIEW"):
         missing.append("AI_USAGE_CLASSIFICATION_OR_ACTUAL_JOURNAL_DISCLOSURE_UNRESOLVED")
     if not ai_doc["frozen_journal_manuscript_intact"]:
         missing.append("FROZEN_SCIENCE_HAS_UNAPPROVED_SHA_CHANGE")
