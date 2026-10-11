@@ -60,6 +60,7 @@ def self_test():
     assert disclosure_present("We used ChatGPT for coding and writing.","ACKNOWLEDGEMENTS",x,title)[0]
     assert not disclosure_present("We used ChatGPT for coding and writing.","METHODS",title)[0]
     assert sha_of_git_blob(b"hello")==hashlib.sha1(b"blob 5\x00hello").hexdigest()
+    assert disclosure_present("A factual disclosure.","METHODS","## Materials and Methods\nA factual disclosure.\n## Results")[0]
     return "PASS_SECTION_MATCH_AND_FALSE_GREEN_PREVENTION"
 
 def check():
@@ -88,13 +89,20 @@ def check():
         if not valid_doc:
             problems.append("SUBSTANTIVE_AI_DISCLOSURE_MISSING_FROM_METHODS_OR_ACKNOWLEDGEMENTS")
     elif klass in ("LANGUAGE_ONLY","NOT_USED"):
-        # A human must actually verify the true usage history.
-        problems.append("NONSUBSTANTIVE_AI_CLASSIFICATION_NEEDS_FACTUAL_HISTORY_REVIEW")
+        # This path is allowed ONLY with signed complete human policy and
+        # verified tasks/code responsibility. The software cannot itself
+        # establish whether this factual declaration is truthful.
+        if not actual or validation:
+            problems.append("NONSUBSTANTIVE_AI_CLASSIFICATION_NEEDS_COMPLETE_HUMAN_SIGNOFF")
+        else:
+            where="HUMAN_SIGNED_NON_SUBSTANTIVE_OR_NO_USE_EXEMPTION"
     else:
         problems.append("AI_INVOLVEMENT_CLASSIFICATION_AWAITING_HUMAN_REVIEW")
     status=("HOLD_HUMAN_POLICY_AND_JOURNAL_DISCLOSURE" if not actual
             else "STOP_CHANGED_FROZEN_RC2_REQUIRES_VERSIONED_CANDIDATE" if sha!=EXPECTED_SHA
             else "HOLD_DISCLOSURE_CONTENT_OR_POLICY" if problems
+            else "HUMAN_SIGNED_NON_SUBSTANTIVE_EXEMPTION_REQUIRES_JOURNAL_REVIEW"
+                 if klass in ("LANGUAGE_ONLY","NOT_USED")
             else "MATCHED_DISCLOSURE_STILL_REQUIRES_HUMAN_JOURNAL_REVIEW")
     return {
         "status":status,
