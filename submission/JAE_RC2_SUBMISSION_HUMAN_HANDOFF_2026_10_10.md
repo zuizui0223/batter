@@ -38,6 +38,12 @@ Official source checked 2026-10-10: https://besjournals.onlinelibrary.wiley.com/
 
 The existing frozen `manuscript/COVER_LETTER_JAE_V0_4_0.md` is **~491 whitespace words excluding its heading, approximately at the journal limit**. An optional shorter and more cautious [~300-word editorial replacement proposal](JAE_V0_4_0_EDITORIAL_SHORT_COVER_LETTER_PROPOSAL_2026_10_10.md) has been created **in this handoff branch only**; its adoption requires author review. Neither draft should contain author-identifying metadata under this review procedure.
 
+## 共著者へ実際に共有する最小パケット
+
+公開しても個人情報を漏らさないように設計した [日本語の最終確認6項目](JAE_RC2_COAUTHOR_FINAL_DECISION_PACKET_JA_2026_10_11.md) を準備しました。著者の名前、所属先の非公開住所、署名、非公開の動物GPS原票、データ所有者からの許可メール等は公開GitHubに掲載しないでください。文書は承認を得たと主張するものではなく、承認に必要な事実と担当者の判断対象を明示するものです。
+
+また、現在の凍結原稿と別添タイトルページ雛形について、**主解析6件＋外部検証4件、全10件の元データDOIが漏れなく記載されていること**を確認しました。将来改訂するときも、CC BYの*Nyctalus*の原著DOIと最初に凍結した不支持結果を落とさないように、[DOI帰属・引用の検査コード](../scripts/audit_jae_rc2_ten_original_source_doi_citations.py) で検証します。データ引用の完全性は人間の再利用許諾確認とは別のゲートです。
+
 ## Human author / PI input packet — NO VALUES INFERRED
 
 The exact machine-readable template already exists:
