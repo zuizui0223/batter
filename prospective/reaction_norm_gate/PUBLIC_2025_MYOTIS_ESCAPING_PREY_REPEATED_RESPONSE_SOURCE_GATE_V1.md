@@ -19,15 +19,37 @@ The Mendeley landing page reports a deposited dataset with MATLAB figure data an
 
 **No downloaded 3-D XYZ trajectories have been identified.** High-resolution audio biologgers and synchronized infrared video in the publication **do not by themselves establish open reconstructable individual 3-D flight coordinates**. A moving prey target is also a sensory/foraging challenge, not the randomized obstacle-clearance intervention envisioned in the existing #95 3-D reaction-norm gate.
 
+## Original Methods and endpoint denominator audit (2026-10-13)
+
+A direct reread of the version-of-record HTML (https://link.springer.com/article/10.1186/s12915-024-02106-6) confirms the following **published figures**, which are NOT new individual outcomes:
+
+| Data grain | Published figure/source count | Consequence |
+|---|---:|---|
+| Total laboratory attempts | 631 trials / 4 bats | Source exposure count, **not** any specific analytic endpoint denominator |
+| Figure 2b pursuit/chase status | 606 trials / 4 bats | Invalid/ambiguous chase trials do not automatically have binary 0 |
+| Figure 2c buzz I duration | 474 buzzes / 4 bats | Conditional on usable buzz I; must audit absence/selection |
+| Figure 2d buzz II duration | 479 buzzes / 4 bats | Conditional on usable buzz II; distinct eligibility from chase |
+| Figure 3 call-interval timing | 391 trials / 4 bats | A selected subset; 59/123 stationary trials sampled to balance figure conditions; **not** all 631 trials |
+
+Do not use these denominators as if the counts were independent observations from different animals. Do not infer independent test replication just because recordings occur on successive days.
+
+**Timing origin is not equivalent across conditions.** The paper's moving-target trials use visually verified physical onset `t0`; **stationary** controls instead assign a **mock t0** using a randomly sampled call-interval threshold derived from moving trials. Since the control t0 depends on the outcome process, a moving-minus-stationary difference of aligned call-interval curves **does not isolate a personal motion-triggered gain**. Additionally, the paper fits an exponential decay curve to the combined normalized CI and subtracts it for its figure. That pooled empirical fit is not an independently measured causal baseline; do not use it as a held-out baseline unless it is trained wholly within training-day data.
+
+**Pursuit outcome meaning:** the publication's 'chase' refers to pursuing/intercepting the moved target in a laboratory trial, whereas a stationary target has no movement to follow; Fig. 2b includes stationary trials as a comparison group. Restrict any primary *motion-response* chase contrast to the **six moving treatments** (easy versus difficult) and report stationary approach/interception separately, rather than interpreting stationary/chase difference as motion-feedback strength. Real prey capture, hunting energetic return and field fitness were not measured for these four laboratory bats.
+
+**Apparatus/batch:** tags were reattached across daily sessions, target onset was triggered when a bat crossed an approach line, and the motor generated noise. Each must be recorded/controlled when possible. The original single-day *motor-without-target-movement* sham trials (108 published) were a different control session, not six independent additional baseline days. These can bound acoustic apparatus artifacts, but cannot by themselves resolve individual-day response persistence.
+
+**Access outcome:** The public dataset landing page explicitly says data+code are deposited under CC BY 4.0; nevertheless, the machine-readable list and zip routes are documented as OAuth2 endpoints, and this session's API requests were inaccessible (401 or retrieval errors). HTML text does not expose file names or trial columns. This is an **access/schema HOLD**, not evidence that the dataset lacks the fields.
+
 ## Pre-analysis source-column gate — required BEFORE computing new animal endpoint
 
 1. Confirm physical bat identifier, recording session/date, trial ID, treatment distance/speed, stationary reference, actual temporal order, and recording/calibration batch.
-2. Confirm one measured phenotype in **all** outcomes (e.g. chased target yes/no), plus explicit eligibility/missingness for acoustic buzz II duration and/or call-interval response; do not code missing acoustic responses as zero.
+2. Confirm moving-trial chase status with original validity coding (Fig. 2b: 606 valid chase records), and separate buzz I, buzz II and call-timing eligibility; do not code invalid/absent acoustic responses as zero. No assumption of one fully observed 631-trial table.
 3. Confirm each of the four bats has within-day challenge + stationary controls on **at least four distinct dates**. If labels have been aggregated to stationary/easy/difficult and day ID lost, independent-re-exposure test is unidentifiable.
 4. Confirm replicated trials per bat×day×challenge, and inspect any session dropout, different number of stationary trials, censoring by chase attempt, order/fatigue/learning confounding and daily reattachment of recording tags.
 5. Confirm the data license at **file** level, immutable dataset version and digital provenance.
 
-If 1–5 cannot be verified, no bat-level outcome opening or retrospective `PASS`.
+If 1–5 cannot be verified, no bat-level outcome opening or retrospective `PASS`. For time-resolved CI, verify original physically observed stimulus onset for moving trials and do not treat stationary mock `t0` as the same exposure time. For any held-out forecast, recompute all pooled normalization and smoothing using only training days.
 
 ## Fixed analysis proposal (exploratory, because published outcomes already read)
 
