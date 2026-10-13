@@ -68,9 +68,15 @@ class SourceGateTests(unittest.TestCase):
         self.assertEqual([x['train_beta'] for x in before['by_bat']], [x['train_beta'] for x in after['by_bat']])
 
     def test_missing_buzz_not_zero_filled(self):
-        out = analyse_canonical(self.write_csv(make_rows(invalid=True)))
+        rows = make_rows()
+        extra_valid = rows[0].copy()
+        extra_valid['trial_id'] += '-third-replicate'
+        rows.append(extra_valid)
+        rows[0]['buzz_ii_valid'] = '0'
+        rows[0]['buzz_ii_ms'] = ''
+        out = analyse_canonical(self.write_csv(rows))
         self.assertEqual(out['n_invalid_buzz'], 1)
-        self.assertEqual(out['n_valid_buzz'], len(make_rows())-1)
+        self.assertEqual(out['n_valid_buzz'], len(rows)-1)
 
     def test_missing_bat_challenge_day_fails_closed(self):
         rows=[r for r in make_rows() if not (r['bat_id']=='bat1' and r['session_date']=='2025-01-04' and r['distance_m']==0.24)]
@@ -128,6 +134,36 @@ class SourceGateTests(unittest.TestCase):
         rows = [r for r in make_rows() if r["bat_id"] != "bat4"]
         with self.assertRaises(SourceGateError):
             analyse_canonical(self.write_csv(rows))
+
+    def test_missing_all_valid_buzz_for_one_treatment_fails_closed(self):
+        rows = make_rows()
+        for r in rows:
+            if r['bat_id'] == 'bat1' and r['session_date'] == '2025-01-01' and r['distance_m'] == 0.08 and r['speed_m_s'] == 0.5:
+                r['buzz_ii_valid'] = '0'
+                r['buzz_ii_ms'] = ''
+        # Treatment exposure is recorded, but usable buzzes are absent.
+        with self.assertRaises(SourceGateError):
+            analyse_canonical(self.write_csv(rows))
+
+    def test_unequal_trial_count_does_not_reweight_physical_treatments(self):
+        rows = make_rows()
+        for r in rows:
+            if r['distance_m'] == 0.08 and r['speed_m_s'] == 0.5:
+                r['buzz_ii_ms'] = str(float(r['buzz_ii_ms']) * 3.0)
+        baseline = analyse_canonical(self.write_csv(rows))
+        more = [r.copy() for r in rows]
+        for r in rows:
+            if r['distance_m'] == 0.08 and r['speed_m_s'] == 0.5:
+                for j in range(9):
+                    duplicate_measure = r.copy()
+                    duplicate_measure['trial_id'] += f'-extra-{j}'
+                    more.append(duplicate_measure)
+        changed = analyse_canonical(self.write_csv(more))
+        # Replicating observations of one published treatment must not alter
+        # its fixed equal-treatment contribution to the challenge contrast.
+        self.assertAlmostEqual(baseline['train_group_beta'], changed['train_group_beta'], places=12)
+        for old, new in zip(baseline['by_bat'], changed['by_bat']):
+            self.assertAlmostEqual(old['train_beta'], new['train_beta'], places=12)
 
 
 if __name__ == '__main__':
