@@ -7,6 +7,7 @@ import zipfile
 from pathlib import Path
 
 from myotis_source_gate_v1 import audit_archive, analyse_canonical, SourceGateError
+import myotis_source_gate_v1 as model
 
 
 FIELDS = ['bat_id', 'session_date', 'trial_id', 'distance_m', 'speed_m_s', 'buzz_ii_valid', 'buzz_ii_ms']
@@ -164,6 +165,47 @@ class SourceGateTests(unittest.TestCase):
         self.assertAlmostEqual(baseline['train_group_beta'], changed['train_group_beta'], places=12)
         for old, new in zip(baseline['by_bat'], changed['by_bat']):
             self.assertAlmostEqual(old['train_beta'], new['train_beta'], places=12)
+
+
+
+    def test_factorial_four_cells_exactly_recover_separate_response_axes(self):
+        # Exact orthogonal 2x2 with physical distance x speed stimuli.
+        # A=(.08,.5), B=(.08,1), C=(.24,.5), D=(.24,1).
+        function = getattr(model, 'factorial_2x2_coefficients', None)
+        self.assertIsNotNone(function, "No factorial sensory-response decomposition")
+        four = {(0.08, 0.5): 2.4, (0.08, 1.0): 2.0,
+                (0.24, 0.5): 1.0, (0.24, 1.0): 2.6}
+        out = function(four)
+        self.assertAlmostEqual(out['mean'], 2.0)
+        self.assertAlmostEqual(out['speed'], 0.3)
+        self.assertAlmostEqual(out['distance'], -0.2)
+        self.assertAlmostEqual(out['speed_x_distance'], 0.5)
+
+    def test_factorial_secondary_is_fixed_and_held_out_on_days_3_and_4(self):
+        out = analyse_canonical(self.write_csv(make_rows(personal=True)))
+        self.assertIn('factorial_2x2_secondary', out)
+        secondary = out['factorial_2x2_secondary']
+        self.assertEqual(secondary['n_test_bat_days'], 8)
+        self.assertEqual(secondary['dimensions'], ['speed', 'distance', 'speed_x_distance'])
+        self.assertLess(secondary['equal_bat_mse_personal'], secondary['equal_bat_mse_group'])
+        self.assertEqual({r['date'] for r in secondary['held_out']}, {'2025-01-03','2025-01-04'})
+
+    def test_factorial_secondary_never_learns_from_future_test_values(self):
+        original = make_rows()
+        before = analyse_canonical(self.write_csv(original))
+        for r in original:
+            if r['session_date'] >= '2025-01-03':
+                r['buzz_ii_ms'] = str(float(r['buzz_ii_ms']) * (2.0 if r['speed_m_s'] == 1.0 else 0.7))
+        after = analyse_canonical(self.write_csv(original))
+        b=before['factorial_2x2_secondary'];a=after['factorial_2x2_secondary']
+        self.assertEqual(b['train_group_coefficients'], a['train_group_coefficients'])
+        self.assertEqual([q['train_coefficients'] for q in b['by_bat']],
+                         [q['train_coefficients'] for q in a['by_bat']])
+
+    def test_factorial_shared_only_synthetic_does_not_fake_personal_advantage(self):
+        out = analyse_canonical(self.write_csv(make_rows(personal=False)))
+        s=out['factorial_2x2_secondary']
+        self.assertAlmostEqual(s['equal_bat_mse_personal'], s['equal_bat_mse_group'], places=12)
 
 
 if __name__ == '__main__':
