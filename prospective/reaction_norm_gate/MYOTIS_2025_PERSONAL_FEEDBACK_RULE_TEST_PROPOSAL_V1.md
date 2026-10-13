@@ -10,7 +10,7 @@ Published Foskolos et al. (2025) reports all four bat subjects prolonging buzz d
 
 ## Nested, interpretable, pre-data-access candidate laws
 
-Let `c` be one of the six published moving-target conditions or the interspersed stationary reference; `i` a **physical bat**, `d` a distinct dated session, and `r` a trial. Treat trials and call frames as nested, not as independent bats. Each candidate is conditional on future file-column verification.
+Let `c` be one of the six published moving-target conditions for actual **motion-triggered** comparisons; for ordinary buzz-duration-level comparisons, the stationary condition can serve as a separate baseline, but is not a physically aligned motion-onset trial. `i` is a **physical bat**, `d` a distinct dated session and `r` a trial. Treat trials and call frames as nested, not as independent bats. Each candidate is conditional on future file-column verification.
 
 **Scalar baseline (already a standard model, not a new law)**
 
@@ -21,15 +21,15 @@ Y_i,d,c,r = alpha_i + day_d + mu_c + b_i,c + epsilon_i,d,c,r
 - `alpha_i`: stable individual baseline/intercept.
 - `day_d`: calendar/session history; must not be estimated using held-out outcomes when evaluating future prediction.
 - `mu_c`: group-shared treatment response.
-- `b_i,c`: bat-specific deviation in **the same challenge** relative to stationary; constrain centered across bats for identifiability, or use hierarchical shrinkage.
+- `b_i,c`: bat-specific deviation from the shared response, **relative to a fixed, recorded reference condition**. For scalar buzz durations, a stationary reference may be legitimate after eligibility and missingness audits; for pulse-aligned time series, do **not** use the response-dependent stationary pseudo-onset as a matched real-time treatment reference. Constrain centered across bats for identifiability, or use hierarchical shrinkage.
 - `Y`: a declared one-outcome phenotype (e.g. log(1+buzz-II-duration in ms) **conditional on valid measured buzzes**, with eligibility transparently stated). This model does **not** identify a continuous physical flight-control equation.
 
 **A possible time-resolved sensor-feedback law (requires actual trial-level pulse timestamps and target-motion onset)**
 
 ```text
 D_i,d,c,r(t) = f_c(t) + g_i * h_c(t - tau_i) + eps_i,d,c,r(t)
-D(t)          = call_interval(t) - pre_target_motion_call_interval
-h_c(t)        = known target-motion input/convolution kernel, fixed before scoring
+D(t)          = call_interval(t0+tau) - train_defined_pre_movement_CI_baseline
+h_c(t)        = measured stimulus-motion time course at verified physical onset t0, with convolution kernel fixed before scoring
 ```
 
 - `f_c(t)`: population-shared, condition-dependent call-interval trajectory;
@@ -37,22 +37,38 @@ h_c(t)        = known target-motion input/convolution kernel, fixed before scori
 - `tau_i`: individual reaction latency, estimable **only if** gains and sampling support are sufficient;
 - `eps`: autocorrelated trial/session measurement variation.
 
-A group-common control law fixes `g_i=0`; a personal-gain alternative permits `g_i≠0`; an expanded alternative adds `tau_i` only if lag can be identified **without choosing the lag after viewing held-out outcomes**. Pre-establish filter/interpolation, time window, call quality, time origin and any movement kernel. The paper's published one-responder and 242 ms latency must never be rebranded as a new independently verified result.
+A group-common descriptive response model fixes `g_i=0`; a personal-gain alternative permits `g_i≠0`; an expanded alternative adds `tau_i` only if lag can be identified **without choosing the lag after viewing held-out outcomes**. **Only physically motion-onset-aligned moving-target trials enter this time-resolved contrast.** Pre-establish filter/interpolation, time window, call quality, time origin and any movement kernel; train normalization and shared time-course entirely on days 1–2. The paper's published one-responder and 242 ms latency must never be rebranded as a new independently verified result.
 
 ## Independent-day forecast gate (not statistical confirmation with N=4)
 
-1. **Verify source schema first:** physical bat, session date, trial, exact motion stimulus, stationary controls, timestamped call intervals or declared scalar, validity flags, audio device/tag ID, and all-trial chase indicator. Without time-resolved pulses, **do not fit `g_i,tau_i`**.
+1. **Verify source schema first:** physical bat, session date, trial, exact motion stimulus, stationary controls, timestamped call intervals or declared scalar, validity flags, audio device/tag ID, and separately coded **moving-trial pursuit**. Published denominators differ materially: 631 total trials, 606 Fig. 2b chase cases, 474/479 Fig. 2 buzz-I/II cases, 391 Fig. 3 timing trials (with only 59/123 stationary controls selected). Without original pulse timestamps and independently measured physical motion onset, **do not fit `g_i,tau_i`**.
 2. Use **days 1–2 for training** and days **3–4 as an unopened test set** across **all four** bats. Later two days belong only to bat #4; sensitivity analysis only. Chronology is real but adjacent dates do not guarantee independence from carryover learning or fatigue.
 3. Predefine group-common-only M0 versus personal-gain M1 (and conditional lag model M2 **only with supported timing resolution**). Personal baseline intercept must be present in **both** where needed, so gain is not rewarded for explaining mean flight intensity.
 4. Score whole held-out **trials/days**, with bat as biological sampling unit. For normalized interval time series, never treat its 1-ms interpolation or hundreds of pulses as new independent subjects. Report per-bat and equal-bat loss deltas; include negative results. With four bats, uncertainty is necessarily wide.
 5. Estimate individual observation variance separately from mean/gain, and expose sensitivity to temporal dependence, device reattachment, baseline condition quality, and dropout; do not apply naive identity-label permutation as a valid `mean gain=0` test under heteroscedasticity.
-6. Separately compare **all-trial chase probability** and acoustics *conditional on valid buzz*. Only a reliable bat-specific gain on held-out days supports a **personal acoustic response**; the original experiment does not establish that the gain **causes** better real capture or 3-D route choice.
+6. Separately compare **chase probability across the six moving-target treatments** and acoustics *conditional on valid buzz*. A stationary-target 'chase' is not the same kind of decision as pursuit of a moving target. The original single-day motor-noise sham (108 trials) is not a balanced longitudinal control. Only a reproducible bat-specific gain on held-out days supports a **within-study personal acoustic-response predictor**; neither gain nor pursuit association establishes that the gain **causes** better actual prey capture or 3-D route choice.
+
+## Pre-response methodological pitfall: stationary mock onset
+
+The original Methods (Foskolos et al. 2025) align **moving** trials at a manually verified target movement start `t0`, but **stationary** control trials at a synthetic `t0` selected when the bat reaches a call-interval value sampled from the moving-trial distribution. The clock origin of the latter is selected using the acoustic response itself.
+
+It follows that
+
+```text
+CI_moving(t - physical_t0) - CI_stationary(t - CI_selected_mock_t0)
+```
+
+is not an unbiased causal estimate of a prey-motion-triggered feedback kernel and might generate differences under nonstationary buzz time-courses *without a true stimulus response*. The original study's pooled exponential normalization also used outcomes across treatments and must not be transferred unchanged into a train/test protocol.
+
+**Gate:** a personal `g_i` or `tau_i` dynamic law is only attempted on moving-target trials where the stimulus onset can be verified independently of call interval, with pre-exposure call baselines and control for approach-stage/time-to-interception (selection/censoring). The stationary group may inform scalar buzz duration and descriptive background but cannot function as a matched physical `t0` for the dynamic response. If only the article's processed normalized Fig. 3 curve is available, **STOP_DYNAMIC_FEEDBACK_LAW_UNIDENTIFIABLE**.
+
+This is a source-structure and measurement warning, not a claim that the paper's published findings were invalid; its question and pooled descriptive estimands are distinct.
 
 ## Outcomes and stop decisions
 
 | Source property / held-out result | Interpretation |
 |---|---|
-| No trial-level audio timestamps or day labels | **STOP** personal time-delay law; possibly descriptive scalar contrast if bat×day present |
+| No trial-level audio timestamps or day labels, or only stationarily mock-aligned Fig. 3 curves | **STOP** personal time-delay law; possibly descriptive scalar contrast if bat×day present |
 | 4×4 crossed sensory challenge/reference, but no xyz | **SENSORY-ONLY** law, not 3-D flight strategy or spatial niche mechanism |
 | M0 ≥ M1 on held-out days | Stable personal feedback-gain forecast **unsupported** |
 | M1 improves in only one bat | **Case-level repeatable response candidate**, not general bat individuality |
