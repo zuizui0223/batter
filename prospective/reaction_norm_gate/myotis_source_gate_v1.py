@@ -130,6 +130,38 @@ def _classify(distance: str, speed: str) -> tuple[str, tuple[float, float]]:
     return MOVING[ds], ds
 
 
+
+# Exact 2x2 factorial subset of the six published moving-target regimes.
+# This decomposes a four-cell response surface; it is *not* a bat flight law.
+FACTORIAL_2X2_CELLS = (
+    (0.08, 0.5), (0.08, 1.0), (0.24, 0.5), (0.24, 1.0),
+)
+FACTORIAL_AXES = ("speed", "distance", "speed_x_distance")
+
+
+def factorial_2x2_coefficients(four_cells: dict) -> dict:
+    """Effect-coded coefficients from fixed displacement × speed support.
+
+    Let A=(.08,.5), B=(.08,1.0), C=(.24,.5), D=(.24,1.0).
+    With speed x and displacement z both coded -1/+1, cell means obey
+    mean + b_speed*x + b_distance*z + b_interaction*x*z.
+    The four coefficients are just an invertible descriptive re-expression.
+    """
+    missing = set(FACTORIAL_2X2_CELLS) - set(four_cells)
+    if missing:
+        raise SourceGateError(f"Factorial stimulus cell(s) not observed: {sorted(missing)}")
+    a, b, c, d = (four_cells[key] for key in FACTORIAL_2X2_CELLS)
+    if not all(isinstance(v, (float, int)) and math.isfinite(v)
+               for v in (a, b, c, d)):
+        raise SourceGateError("Four factorial cell means must be finite")
+    return {
+        "mean": (a + b + c + d) / 4,
+        "speed": (-a + b - c + d) / 4,
+        "distance": (-a - b + c + d) / 4,
+        "speed_x_distance": (a - b - c + d) / 4,
+    }
+
+
 def analyse_canonical(csv_path: Path | str) -> dict:
     """Deterministic contrast forecasting. Distinct bats, not trials, are biological n.
 
@@ -242,6 +274,78 @@ def analyse_canonical(csv_path: Path | str) -> dict:
                        "mse_shared": mean(t["mse_shared"] for t in tmp),
                        "mse_personal": mean(t["mse_personal"] for t in tmp),
                        "forecast_gain": mean(t["mse_shared"]-t["mse_personal"] for t in tmp)})
+    # A pre-original-outcome *secondary* readout: isolate speed and distance
+    # contrasts with a physical 2x2 subset rather than conflate them in a
+    # broad four-easy versus two-difficult summary. Main endpoint unchanged.
+    def four_cell_coeff(bat, date):
+        return factorial_2x2_coefficients({
+            cell: mean(data[bat][date][cell]) for cell in FACTORIAL_2X2_CELLS
+        })
+
+    secondary_train = {
+        bat: {axis: mean(four_cell_coeff(bat, day)[axis]
+                         for day in dates[bat][:2])
+              for axis in FACTORIAL_AXES}
+        for bat in sorted(bats)
+    }
+    secondary_group = {
+        axis: mean(secondary_train[bat][axis] for bat in sorted(bats))
+        for axis in FACTORIAL_AXES
+    }
+    secondary_bats = []
+    secondary_heldout = []
+    for bat in sorted(bats):
+        personal = {
+            axis: secondary_group[axis] + SHRINK * (
+                secondary_train[bat][axis] - secondary_group[axis])
+            for axis in FACTORIAL_AXES
+        }
+        bat_days = []
+        for day in dates[bat][2:4]:
+            observed = four_cell_coeff(bat, day)
+            mse_group = mean((observed[axis] - secondary_group[axis])**2
+                             for axis in FACTORIAL_AXES)
+            mse_personal = mean((observed[axis] - personal[axis])**2
+                                for axis in FACTORIAL_AXES)
+            row = {
+                "bat_id": bat, "date": day.isoformat(),
+                "observed_coefficients": {axis: observed[axis] for axis in FACTORIAL_AXES},
+                "shared_prediction": dict(secondary_group),
+                "personal_prediction": personal,
+                "mse_group": mse_group, "mse_personal": mse_personal,
+            }
+            bat_days.append(row)
+            secondary_heldout.append(row)
+        secondary_bats.append({
+            "bat_id": bat, "train_coefficients": secondary_train[bat],
+            "n_test_days": len(bat_days),
+            "mse_group": mean(r["mse_group"] for r in bat_days),
+            "mse_personal": mean(r["mse_personal"] for r in bat_days),
+            "forecast_gain": mean(r["mse_group"]-r["mse_personal"] for r in bat_days),
+        })
+    secondary_result = {
+        "scope": "SECONDARY_EXPLORATORY_PHYSICAL_2X2_NO_NEW_P_VALUES",
+        "physical_cells": [list(v) for v in FACTORIAL_2X2_CELLS],
+        "effect_coding": "distance_m .08=-1,.24=+1; speed_m_s .5=-1,1.0=+1",
+        "dimensions": list(FACTORIAL_AXES),
+        "n_bats": len(bats), "n_test_bat_days": 2*len(bats),
+        "training_days": "first two dated sessions per bat",
+        "held_out_days": "third and fourth dated sessions per bat",
+        "train_group_coefficients": secondary_group,
+        "equal_bat_mse_group": mean(x["mse_group"] for x in secondary_bats),
+        "equal_bat_mse_personal": mean(x["mse_personal"] for x in secondary_bats),
+        "improved_bats": sum(x["forecast_gain"] > 0 for x in secondary_bats),
+        "by_bat": secondary_bats,
+        "held_out": secondary_heldout,
+        "limitations": [
+            "Only four biological bats; correlated successive days and device effects not identified",
+            "Four cell means algebraically re-expressed, not a mechanistic or unique control law",
+            "Each outcome conditions on valid Buzz II and may reflect nonrandom selection",
+            "Limited factorial support; faster stimulus changes exposure duration as well as speed",
+            "Secondary endpoint exploratory, not confirmation and not selectable after outcomes",
+        ],
+    }
+
     return {
         "status": "EXPLORATORY_POST_PUBLICATION",
         "dataset_sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
@@ -263,6 +367,7 @@ def analyse_canonical(csv_path: Path | str) -> dict:
         "improved_bats": sum(x["forecast_gain"] > 0 for x in by_bat),
         "by_bat": by_bat,
         "held_out": forecasts,
+        "factorial_2x2_secondary": secondary_result,
         "limitations": ["Only 4 biological individuals", "Post-publication exploratory, not blind preregistration", "Consecutive days may have learning/carryover", "Conditional on valid Buzz II; missingness and selection need independent inspection", "Cannot claim 3-D trajectories, latency tau_i, acoustic-cue causation, capture success or fitness"],
     }
 
