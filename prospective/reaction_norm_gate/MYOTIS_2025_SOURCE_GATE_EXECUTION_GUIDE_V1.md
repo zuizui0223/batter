@@ -10,9 +10,9 @@
 
 Download the author's original ZIP **unchanged**. Then from the repository root run:
 
-\`\`\`bash
+```bash
 python prospective/reaction_norm_gate/myotis_source_gate_v1.py inventory /path/to/original.zip --out inventory.json
-\`\`\`
+```
 
 The inventory lists filenames, SHA256 for ZIPs <=100 MB, CSV/TSV column headers, and flags MATLAB/Excel/R binary files as **not parsed**. It never passes the source gate automatically. If original files are binary or aggregated, examine them with trusted MATLAB/R and verify that trial IDs, physical bat ID, date and the treatment inputs can be recovered. Never invent unavailable source values.
 
@@ -20,7 +20,7 @@ The inventory lists filenames, SHA256 for ZIPs <=100 MB, CSV/TSV column headers,
 
 One row per real trial (not one row per pulse/1-ms interpolation):
 - **bat_id**: independently confirmed physical individual;
-- **session_date**: ISO \`YYYY-MM-DD\`, not assumed independent due to mere separation by a calendar day;
+- **session_date**: ISO `YYYY-MM-DD`, not assumed independent due to mere separation by a calendar day;
 - **trial_id**: unique within bat and date;
 - **distance_m** and **speed_m_s**: original physical stimulus in m and m/s (stationary 0/0, moving 0.08m×0.5/1/1.3m/s and 0.24m×0.5/1/1.5m/s);
 - **buzz_ii_valid**: 0/1 from documented original eligibility, no outcome-dependent manual omissions;
@@ -30,33 +30,33 @@ Converting the original deposited files into these fields is an auditable human-
 
 ## 3. Held-out sensory-response calculation, only after the source gate passes
 
-\`\`\`bash
+```bash
 python prospective/reaction_norm_gate/myotis_source_gate_v1.py analyse /path/to/verified_trials.csv --out forecast_exploratory.json
-\`\`\`
+```
 
-Requires exactly four physical bats; at least four dated occasions per bat; all six moving conditions attempted on every bat's first four dates; >=2 valid buzz-II observations in each day's easy/difficult class; no duplicate trial IDs or guessed units. If any fail, script exits **2** with \`HOLD_SOURCE_GATE\`.
+Requires exactly four physical bats; at least four dated occasions per bat; all six moving conditions attempted on every bat's first four dates; >=2 valid buzz-II observations in each day's easy/difficult class; no duplicate trial IDs or guessed units. If any fail, script exits **2** with `HOLD_SOURCE_GATE`.
 
-For each bat i, day d, treatment class c, define \`L_i,d,c\` as the mean of \`log(1 + measured buzz-II-duration-ms)\` **among valid recorded buzzes**. Primary scalar contrast:
+For each bat i, day d, treatment class c, define `L_i,d,c` as the mean of `log(1 + measured buzz-II-duration-ms)` **among valid recorded buzzes**. Primary scalar contrast:
 
-\`\`\`text
+```text
 Delta_i,d  = L_i,d,difficult - L_i,d,easy
 beta_i     = mean(Delta_i,day1, Delta_i,day2)
 beta_group = mean_i(beta_i)              # equal physical-bat weights
 pred_M0    = beta_group
 pred_M1_i  = beta_group + 0.5 * (beta_i - beta_group)
-\`\`\`
+```
 
-The fixed shrink factor **0.5** is set before viewing new outcomes; no tuning on test days. Score both predictors on dates 3-4, **equally across days and bats**, using MSE. Always publish individual signs and losses, including deterioration. This estimates a **scalar conditional acoustic response**, not the dynamic gain/latency \`g_i,tau_i\`, and not spatial 3-D flight. No p-value is generated: n=4, correlated repeated days, non-random missing buzz selection, possible heteroscedasticity and device effects.
+The fixed shrink factor **0.5** is set before viewing new outcomes; no tuning on test days. Score both predictors on dates 3-4, **equally across days and bats**, using MSE. Always publish individual signs and losses, including deterioration. This estimates a **scalar conditional acoustic response**, not the dynamic gain/latency `g_i,tau_i`, and not spatial 3-D flight. No p-value is generated: n=4, correlated repeated days, non-random missing buzz selection, possible heteroscedasticity and device effects.
 
 The original stationary trials assign response-derived **mock t0**, not an observed stimulus motion onset. Therefore stationary aligned CI cannot serve as a causal time-resolved control. This implementation **ignores that time-series endpoint** and uses easy versus difficult **moving** conditions only. The author's motor-only sham does not supply independently repeated stationary baselines.
 
 ## 4. Tests and reporting limits
 
-\`\`\`bash
+```bash
 cd prospective/reaction_norm_gate
 python -m unittest -v test_myotis_source_gate_v1.py
 python -m py_compile myotis_source_gate_v1.py
-\`\`\`
+```
 
 All tests use **fabricated synthetic values only**, including deliberately missing buzz, misleading units, source ZIP file header and strict train/test leakage checks. Passing tests is not evidence that any real bat has a personal feedback rule.
 
