@@ -86,6 +86,21 @@ Even when the scalar grouped difficulty slope predicts, the speed/length/interac
 
 As of 2026-10-13, **original Mendeley v3 ZIP/file columns are still inaccessible from this tool environment**, including attempts through its official OAuth2-marked API and the HTML landing page. This runbook and four supplementary regression tests were completed **without** opening new trial measurements; all example effects and test outputs are fabricated.
 
+## 3c. Nominal-duration paired-regime falsification diagnostic
+
+There is one physically instructive coincidence in the six original regimes:
+
+```text
+easy:      distance=0.08 m, speed=0.5 m/s → nominal D/V = 0.160 s
+difficult: distance=0.24 m, speed=1.5 m/s → nominal D/V = 0.160 s
+```
+
+This **does not establish equal real motion durations** because acceleration/deceleration, motor onset lag, target interception and acoustic apparatus signals were not checked. Therefore the extra JSON `nominal_duration_pair_diagnostic` is strictly `NOMINAL_ONLY` with `actual_duration_verified=false`; it must NEVER be described as a confirmed time-matched biological contrast.
+
+For each eligible bat×day, the script computes the second regime's mean log-Buzz-II minus the first regime's mean log-Buzz-II and evaluates the bat's first two dated sessions against held-out sessions three and four. It reports equal-bat MSE of shared versus fixed-shrink personal forecasts and individual signed gains; it makes **no** p-value or claim of distinct physiological controllers. This diagnostic is added alongside the unchanged original six-regime primary contrast and 2×2 secondary; no endpoint is to be selected later as 'the true test' based on the numerical outcomes.
+
+A true inference about a duration-only response requires verified target-onset/offset, actual motion profile and motor sound control; if unavailable, do not infer equal exposure or acoustic sensitivity to velocity versus displacement. See [the complete physical identifiability audit](MYOTIS_NOMINAL_DURATION_MATCHED_PHYSICAL_CHALLENGE_V1.md).
+
 ## 4. Tests and reporting limits
 
 ```bash
@@ -94,7 +109,7 @@ python -m unittest -v test_myotis_source_gate_v1.py
 python -m py_compile myotis_source_gate_v1.py
 ```
 
-All **18** tests use **fabricated synthetic values only**, including deliberately missing buzz, misleading units, source ZIP file header and strict train/test leakage checks. Passing tests is not evidence that any real bat has a personal feedback rule.
+All **21** tests use **fabricated synthetic values only**, including deliberately missing buzz, misleading units, source ZIP file header and strict train/test leakage checks. Passing tests is not evidence that any real bat has a personal feedback rule.
 
 **Scientific next step:** obtain and audit v3 source; then if eligible, report **exploratory** person-specific held-out contrast. If raw data lacks day or a comparable physical stimulus, stop, do not silently relax source restrictions. Independently identified 3-D free-flight control laws and functional hunting payoffs remain untested.
 
