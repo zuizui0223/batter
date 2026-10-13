@@ -57,6 +57,35 @@ The earlier code pooled all valid Buzz-II trials into broad `easy` and `difficul
 
 The amended estimator gives every physical regime fixed equal weight within its published class and refuses to calculate a day if any of the six moving regimes has fewer than 2 valid Buzz-II trials. The endpoint is **a grouped difficulty contrast involving changes in BOTH displacement and target speed**; it does not independently isolate either physical dimension. All these decisions remain post-publication exploratory, despite being made before our access to new individual outcome values.
 
+## 3b. Independent physical factors: fixed 2×2 supplementary response-surface test
+
+The published six moving-target treatments include a complete **2×2 factorial subset** with target displacement `0.08 m / 0.24 m` and movement speed `0.5 m/s / 1.0 m/s`. The other two treatments remain in the original six-treatment source-eligibility gate and the prespecified main easy-versus-difficult contrast. The secondary calculations do **not** replace or choose among the original main outcomes.
+
+Let `A=mean(log1p(BuzzII_ms)|0.08m,0.5m/s)`, `B=...(0.08m,1.0m/s)`, `C=...(0.24m,0.5m/s)` and `D=...(0.24m,1.0m/s)` within each physically identified bat×day. Each average is based on >=2 actually valid Buzz II trials. The exact effect-coded reparameterization is
+
+```text
+mean                 = ( A + B + C + D )/4
+b_speed              = (-A + B - C + D )/4
+b_displacement       = (-A - B + C + D )/4
+b_speed_x_distance   = ( A - B - C + D )/4
+```
+
+The four means therefore define exactly four numbers; this is **not** a discovered control equation, physiological latent dimension or causal effect. Relative to speed, only the two matched `0.5m/s` and `1.0m/s` levels are contrasted at two fixed displacements. The faster treatment necessarily has shorter travel duration for the same displacement; the design does not isolate speed from stimulation time.
+
+The additional `factorial_2x2_secondary` block in the JSON output:
+
+- learns each bat's three effect-coded non-intercept coefficients from **days 1–2 only**;
+- compares the trained cross-bat group mean coefficients with `group + 0.5*(personal - group)` held-out personal estimates;
+- evaluates all **three coefficients together** by equal-axis MSE on **days 3–4**, equal day and equal physical bat;
+- returns per-bat and bat-day forecasts and their positive/negative gains; produces **no p-value**;
+- never selects the best axis after seeing actual bat outcomes, and never adds real field 3-D route, direct target capture, or fitness evidence.
+
+Even when the scalar grouped difficulty slope predicts, the speed/length/interaction coefficients may fail to transfer; the joint test is a stricter examination of whether *how a bat maps opportunity into response* is genuinely personal. With N=4 and conditional Buzz-II observation this remains a highly imprecise **secondary, exploratory, post-publication** test. Individual gains measured under stable recording or nonrandom buzz selection cannot be attributed uniquely to behavior. If the original dataset lacks full bat×day×six-regime observed support, both the primary and secondary source gates remain on HOLD.
+
+### Numeric access status
+
+As of 2026-10-13, **original Mendeley v3 ZIP/file columns are still inaccessible from this tool environment**, including attempts through its official OAuth2-marked API and the HTML landing page. This runbook and four supplementary regression tests were completed **without** opening new trial measurements; all example effects and test outputs are fabricated.
+
 ## 4. Tests and reporting limits
 
 ```bash
@@ -65,7 +94,7 @@ python -m unittest -v test_myotis_source_gate_v1.py
 python -m py_compile myotis_source_gate_v1.py
 ```
 
-All **14** tests use **fabricated synthetic values only**, including deliberately missing buzz, misleading units, source ZIP file header and strict train/test leakage checks. Passing tests is not evidence that any real bat has a personal feedback rule.
+All **18** tests use **fabricated synthetic values only**, including deliberately missing buzz, misleading units, source ZIP file header and strict train/test leakage checks. Passing tests is not evidence that any real bat has a personal feedback rule.
 
 **Scientific next step:** obtain and audit v3 source; then if eligible, report **exploratory** person-specific held-out contrast. If raw data lacks day or a comparable physical stimulus, stop, do not silently relax source restrictions. Independently identified 3-D free-flight control laws and functional hunting payoffs remain untested.
 
