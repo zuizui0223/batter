@@ -34,12 +34,13 @@ Converting the original deposited files into these fields is an auditable human-
 python prospective/reaction_norm_gate/myotis_source_gate_v1.py analyse /path/to/verified_trials.csv --out forecast_exploratory.json
 ```
 
-Requires exactly four physical bats; at least four dated occasions per bat; all six moving conditions attempted on every bat's first four dates; >=2 valid buzz-II observations in each day's easy/difficult class; no duplicate trial IDs or guessed units. If any fail, script exits **2** with `HOLD_SOURCE_GATE`.
+Requires exactly four physical bats; at least four dated occasions per bat; all six moving conditions attempted on every bat's first four dates; **at least two valid Buzz-II observations separately in each of the six regimes per bat×day**, not merely two per pooled easy/difficult group; no duplicate trial IDs or guessed units. If any fail, script exits **2** with `HOLD_SOURCE_GATE`.
 
-For each bat i, day d, treatment class c, define `L_i,d,c` as the mean of `log(1 + measured buzz-II-duration-ms)` **among valid recorded buzzes**. Primary scalar contrast:
+For each bat i, day d and **individual physical stimulus regime** c, define `L_i,d,c` as the mean of `log(1 + measured buzz-II-duration-ms)` **among valid recorded buzzes in that exact regime**. The easy group contains four physically distinct distance/speed regimes; the difficult group contains two. All regimes receive equal weight within their respective groups, regardless of differential buzz eligibility. Primary scalar contrast:
 
 ```text
-Delta_i,d  = L_i,d,difficult - L_i,d,easy
+Delta_i,d  = (1/2) * sum_c_in_difficult L_i,d,c
+             - (1/4) * sum_c_in_easy L_i,d,c
 beta_i     = mean(Delta_i,day1, Delta_i,day2)
 beta_group = mean_i(beta_i)              # equal physical-bat weights
 pred_M0    = beta_group
@@ -50,6 +51,12 @@ The fixed shrink factor **0.5** is set before viewing new outcomes; no tuning on
 
 The original stationary trials assign response-derived **mock t0**, not an observed stimulus motion onset. Therefore stationary aligned CI cannot serve as a causal time-resolved control. This implementation **ignores that time-series endpoint** and uses easy versus difficult **moving** conditions only. The author's motor-only sham does not supply independently repeated stationary baselines.
 
+### Method repair / pre-outcome regression audit (2026-10-13)
+
+The earlier code pooled all valid Buzz-II trials into broad `easy` and `difficult` categories, weighting each physical treatment by its number of eligible buzzes. This was a **methodological defect**: unequal trial eligibility can change a bat's contrast even if its per-treatment responses are fixed. Before this external dataset was acquired, we added red-green synthetic tests confirming the bug: for one fabricated dataset, simply replicating one easy treatment's trial records changed the pooled training group contrast from **+0.081740 to −0.475416**, despite no change to treatment-level means. **These are synthetic failure demonstrations, not measured bat effects.**
+
+The amended estimator gives every physical regime fixed equal weight within its published class and refuses to calculate a day if any of the six moving regimes has fewer than 2 valid Buzz-II trials. The endpoint is **a grouped difficulty contrast involving changes in BOTH displacement and target speed**; it does not independently isolate either physical dimension. All these decisions remain post-publication exploratory, despite being made before our access to new individual outcome values.
+
 ## 4. Tests and reporting limits
 
 ```bash
@@ -58,7 +65,7 @@ python -m unittest -v test_myotis_source_gate_v1.py
 python -m py_compile myotis_source_gate_v1.py
 ```
 
-All tests use **fabricated synthetic values only**, including deliberately missing buzz, misleading units, source ZIP file header and strict train/test leakage checks. Passing tests is not evidence that any real bat has a personal feedback rule.
+All **14** tests use **fabricated synthetic values only**, including deliberately missing buzz, misleading units, source ZIP file header and strict train/test leakage checks. Passing tests is not evidence that any real bat has a personal feedback rule.
 
 **Scientific next step:** obtain and audit v3 source; then if eligible, report **exploratory** person-specific held-out contrast. If raw data lacks day or a comparable physical stimulus, stop, do not silently relax source restrictions. Independently identified 3-D free-flight control laws and functional hunting payoffs remain untested.
 
