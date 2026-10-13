@@ -19,6 +19,33 @@ The endpoints **0.08 m / 0.5 m/s** and **0.24 m / 1.5 m/s** share `D/V=0.160 s`,
 
 **This is a nominal kinematic coincidence, NOT a verified physical time match.** The rig is a step-motor linear-motion system. The actual displacement–time curve includes unknown initiation delay, acceleration, deceleration, and potentially nonconstant speed; only the original synchronized video/rig measurements can establish actual movement start, end, time profiles, motor sounds, and trial-by-trial exposure. Especially with a bat approaching and intercepting the target, exposure available before interception can be shorter than full programmed target motion.
 
+## New physical calculation: finite acceleration removes nominal duration equality
+
+This is an **assumption-dependent analytical counterexample**, not a reconstruction of the apparatus. Suppose each condition starts at rest, accelerates at the **same** constant magnitude `a>0` until the programmed speed `v` or half the route is reached, then decelerates symmetrically at `a` and finishes at rest. Its **minimum idealized mechanical travel time** is:
+
+```text
+                  { D/v + v/a      if D >= v²/a (trapezoid)
+T(D,v,a) =         {
+                  { 2 sqrt(D/a)    if D <  v²/a (triangle)
+```
+
+This is continuous at `D=v²/a`. The two published conditions are related by the same scale factor in speed and displacement: `(D_B,v_B)=(3 D_A,3 v_A)`. Under the same finite acceleration `a`, **T_B > T_A for every a>0**, even though `D_B/v_B=D_A/v_A=160 ms`:
+
+- In the trapezoidal regime, `T(kD,kv,a)=D/v + kv/a`, strictly increasing in scale `k` for fixed `a`.
+- After the regime changes to triangular, `T(kD,kv,a)=2 sqrt(kD/a)`, also strictly increasing with `k`.
+- Hence the joint scale-up from k=1 to k=3 cannot have identical actual durations **under this model**.
+
+| Identical assumed acceleration, m/s² | 8 cm at 0.5 m/s actual modeled time | 24 cm at 1.5 m/s actual modeled time | Difference |
+|---:|---:|---:|---:|
+| 5 | 260 ms | 438 ms | 178 ms |
+| 10 | 210 ms | 310 ms | 100 ms |
+| 20 | 185 ms | 235 ms | 50 ms |
+| 50 | 170 ms | 190 ms | 20 ms |
+
+**No assumed acceleration here is measured from the paper.** The real apparatus could use different acceleration profiles, never reach the setpoint speed, overshoot, or stop early; those alternatives can change sign/magnitude and cannot be settled by arithmetic. The experiment records video at 90 frames/s, so raw synchronized target trajectories *could in principle* check differences at roughly 11.1 ms temporal resolution, but the published Mendeley download has not been accessed and raw time series availability is unconfirmed.
+
+**Consequence:** Even a reproducible personal A–B Buzz-II difference is compatible with a simple **actual-duration response**, given the as-yet-unverified duration mismatch. The A–B predictor in code must remain `nominal_duration_pair_diagnostic` / `actual_duration_verified=false`. Do not cite A–B difference as a falsification of a duration-only model or as evidence for personal velocity/displacement sensing until physical timing, interception censoring, motor noise and valid-buzz selection are independently controlled.
+
 ## Ecological/behavioral falsification, not a discovery claim
 
 The interesting rival mechanisms are:
