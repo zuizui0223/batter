@@ -138,6 +138,10 @@ FACTORIAL_2X2_CELLS = (
 )
 FACTORIAL_AXES = ("speed", "distance", "speed_x_distance")
 
+# These two conditions have equal **nominal** d/v = 160 ms, but the original
+# apparatus may accelerate and decelerate. No actual matching is asserted.
+NOMINAL_DURATION_MATCH_PAIR = ((0.08, 0.5), (0.24, 1.5))
+
 
 def factorial_2x2_coefficients(four_cells: dict) -> dict:
     """Effect-coded coefficients from fixed displacement × speed support.
@@ -346,6 +350,72 @@ def analyse_canonical(csv_path: Path | str) -> dict:
         ],
     }
 
+    # Additional, explicitly exploratory physical-diagnostic contrast.
+    # The two motion regimes have equal NOMINAL displacement/speed times.
+    # We have NOT measured actual start/stop times or motor acceleration.
+    a_cell, b_cell = NOMINAL_DURATION_MATCH_PAIR
+
+    def paired_duration_nominal_contrast(bat, day):
+        return (mean(data[bat][day][b_cell])
+                - mean(data[bat][day][a_cell]))
+
+    paired_train = {
+        bat: mean(paired_duration_nominal_contrast(bat, day)
+                  for day in dates[bat][:2])
+        for bat in sorted(bats)
+    }
+    paired_group = mean(paired_train.values())
+    paired_by_bat = []
+    paired_test_rows = []
+    for bat in sorted(bats):
+        personal = paired_group + SHRINK * (paired_train[bat] - paired_group)
+        bat_days = []
+        for day in dates[bat][2:4]:
+            actual = paired_duration_nominal_contrast(bat, day)
+            item = {
+                "bat_id": bat,
+                "date": day.isoformat(),
+                "observed_log_duration_difference": actual,
+                "pred_group": paired_group,
+                "pred_personal": personal,
+                "mse_group": (actual - paired_group)**2,
+                "mse_personal": (actual - personal)**2,
+            }
+            bat_days.append(item)
+            paired_test_rows.append(item)
+        paired_by_bat.append({
+            "bat_id": bat,
+            "training_contrast": paired_train[bat],
+            "mse_group": mean(v["mse_group"] for v in bat_days),
+            "mse_personal": mean(v["mse_personal"] for v in bat_days),
+            "forecast_gain": mean(
+                v["mse_group"] - v["mse_personal"] for v in bat_days),
+        })
+    paired_duration_diagnostic = {
+        "scope": "SECONDARY_DIAGNOSTIC_NOMINAL_DURATION_NOT_CAUSAL",
+        "nominal_pair": [list(a_cell), list(b_cell)],
+        "nominal_travel_seconds": [round(a_cell[0]/a_cell[1], 6),
+                                   round(b_cell[0]/b_cell[1], 6)],
+        "actual_duration_verified": False,
+        "actual_video_or_motor_metadata_required_for_matched_duration_claim": True,
+        "interpretation": "Fixed contrast of two original treatment means; not a proof of equal actual exposure times or a speed-vs-distance causal mechanism",
+        "n_bats": len(bats),
+        "n_test_bat_days": 2*len(bats),
+        "group_mean_train_contrast": paired_group,
+        "equal_bat_mse_group": mean(x["mse_group"] for x in paired_by_bat),
+        "equal_bat_mse_personal": mean(x["mse_personal"] for x in paired_by_bat),
+        "improved_bats": sum(x["forecast_gain"]>0 for x in paired_by_bat),
+        "by_bat": paired_by_bat,
+        "held_out": paired_test_rows,
+        "limitations": [
+            "Predicted stimulus duration D/V uses nominal motor speeds, not verified motion onset/offset",
+            "Speed and displacement differ together; subject-visible cues and motor noises may differ",
+            "Response is conditional on valid Buzz II observations",
+            "Four bats, no p-value, independent biological effect or 3D route inference",
+            "Cannot identify a pure-duration mechanism unless actual motion durations are matched and sensor controls are validated",
+        ],
+    }
+
     return {
         "status": "EXPLORATORY_POST_PUBLICATION",
         "dataset_sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
@@ -368,6 +438,7 @@ def analyse_canonical(csv_path: Path | str) -> dict:
         "by_bat": by_bat,
         "held_out": forecasts,
         "factorial_2x2_secondary": secondary_result,
+        "nominal_duration_pair_diagnostic": paired_duration_diagnostic,
         "limitations": ["Only 4 biological individuals", "Post-publication exploratory, not blind preregistration", "Consecutive days may have learning/carryover", "Conditional on valid Buzz II; missingness and selection need independent inspection", "Cannot claim 3-D trajectories, latency tau_i, acoustic-cue causation, capture success or fitness"],
     }
 
