@@ -208,5 +208,43 @@ class SourceGateTests(unittest.TestCase):
         self.assertAlmostEqual(s['equal_bat_mse_personal'], s['equal_bat_mse_group'], places=12)
 
 
+
+    def test_nominal_equal_motion_time_pair_exists_but_is_not_measured(self):
+        # Values are NOMINAL distance/speed, not camera-confirmed time.
+        pair = getattr(model, "NOMINAL_DURATION_MATCH_PAIR", None)
+        self.assertIsNotNone(pair, "Missing physically identified nominal duration pair")
+        a, b = pair
+        self.assertEqual(a, (0.08, 0.5))
+        self.assertEqual(b, (0.24, 1.5))
+        self.assertAlmostEqual(a[0]/a[1], b[0]/b[1], places=12)
+        self.assertAlmostEqual(a[0]/a[1], 0.160, places=12)
+
+    def test_nominal_duration_pair_diagnostic_is_exploratory_only(self):
+        obj = analyse_canonical(self.write_csv(make_rows(personal=True)))
+        self.assertIn("nominal_duration_pair_diagnostic", obj)
+        diag = obj["nominal_duration_pair_diagnostic"]
+        self.assertEqual(diag["n_bats"], 4)
+        self.assertEqual(diag["n_test_bat_days"], 8)
+        self.assertFalse(diag["actual_duration_verified"])
+        self.assertEqual(diag["nominal_travel_seconds"], [0.16, 0.16])
+        self.assertEqual(diag["scope"], "SECONDARY_DIAGNOSTIC_NOMINAL_DURATION_NOT_CAUSAL")
+        self.assertLess(diag["equal_bat_mse_personal"], diag["equal_bat_mse_group"])
+        self.assertNotIn("p_value", diag)
+        self.assertEqual({v["date"] for v in diag["held_out"]},
+                         {"2025-01-03", "2025-01-04"})
+
+    def test_nominal_pair_diagnostic_training_frozen_to_days_one_two(self):
+        rows = make_rows(personal=True)
+        original = analyse_canonical(self.write_csv(rows))["nominal_duration_pair_diagnostic"]
+        for row in rows:
+            if row["session_date"] >= "2025-01-03":
+                row["buzz_ii_ms"] = str(float(row["buzz_ii_ms"])*1.7)
+        changed = analyse_canonical(self.write_csv(rows))["nominal_duration_pair_diagnostic"]
+        self.assertEqual(original["group_mean_train_contrast"],
+                         changed["group_mean_train_contrast"])
+        self.assertEqual([r["training_contrast"] for r in original["by_bat"]],
+                         [r["training_contrast"] for r in changed["by_bat"])
+
+
 if __name__ == '__main__':
     unittest.main()
