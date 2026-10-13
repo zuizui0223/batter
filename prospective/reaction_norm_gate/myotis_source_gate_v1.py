@@ -181,7 +181,7 @@ def analyse_canonical(csv_path: Path | str) -> dict:
                 raise SourceGateError("Measured buzz II duration must be positive, not filled zero")
             valid_count += 1
             if category != "stationary":
-                data[bat][date][category].append(math.log1p(duration))
+                data[bat][date][condition].append(math.log1p(duration))
     if len(bats) != 4:
         raise SourceGateError(f"Need exactly four matched physical bats; got {len(bats)}")
 
@@ -196,13 +196,28 @@ def analyse_canonical(csv_path: Path | str) -> dict:
             missing = full - exposure[(bat, day)]
             if missing:
                 raise SourceGateError(f"{bat} {day}: missing original treatment(s) {sorted(missing)}")
-            for level in ("easy", "difficult"):
-                n = len(data[bat][day][level])
+            # Each physical treatment must have enough actual valid buzzes.
+            # Pooling all "easy" or "difficult" rows can reweight treatments
+            # after differential trial dropout, distorting personal effects.
+            for regime in MOVING:
+                n = len(data[bat][day][regime])
                 if n < 2:
-                    raise SourceGateError(f"{bat} {day}: <2 valid Buzz II trials in {level} ({n})")
+                    raise SourceGateError(
+                        f"{bat} {day}: <2 valid Buzz II trials in physical regime "
+                        f"{regime} ({n})")
 
     def delta(bat, date):
-        return mean(data[bat][date]["difficult"]) - mean(data[bat][date]["easy"])
+        # Two-stage equal-treatment estimand: first average each published
+        # regime's valid trials, then weight the 4 easy and 2 difficult
+        # regimes equally WITHIN their fixed classes.
+        by_treatment = {
+            condition: mean(data[bat][date][condition]) for condition in MOVING
+        }
+        difficult = mean(by_treatment[c] for c, level in MOVING.items()
+                         if level == "difficult")
+        easy = mean(by_treatment[c] for c, level in MOVING.items()
+                    if level == "easy")
+        return difficult - easy
 
     train = {b: mean(delta(b, d) for d in dates[b][:2]) for b in sorted(bats)}
     pooled = mean(train.values())  # equal-bat training, no future data
@@ -231,10 +246,10 @@ def analyse_canonical(csv_path: Path | str) -> dict:
         "status": "EXPLORATORY_POST_PUBLICATION",
         "dataset_sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
         "source_schema_note": "Canonical CSV must be mapped and independently validated against deposited original; no claim of verified source schema solely from this script",
-        "endpoint": "log1p(Buzz II duration in ms): within-bat/day difficult minus easy treatment contrast; conditional on recorded valid buzz II",
+        "endpoint": "log1p(Buzz II duration in ms): equal-physical-regime-weight mean of two difficult moving regimes minus mean of four easy moving regimes, conditional on recorded valid buzz II",
         "time_zero_note": "NOT dynamic CI onset model: static burst-duration contrast. Stationary mock onset ignored.",
         "treatment_groups": {str(k): v for k,v in MOVING.items()},
-        "method": "days 1-2 train, days 3-4 held out for each bat; shrink 0.5 fixed; equal bat + equal day; no inferential p-value",
+        "method": "days 1-2 train, days 3-4 held out for each bat; shrink 0.5 fixed; >=2 valid buzzes per each of six moving regimes per bat-day, equal regime weights within treatment class, equal bat + equal day; no inferential p-value",
         "n_rows_including_invalid": all_rows,
         "n_valid_buzz": valid_count,
         "n_invalid_buzz": invalid_count,
