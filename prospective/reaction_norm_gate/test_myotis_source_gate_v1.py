@@ -243,7 +243,7 @@ class SourceGateTests(unittest.TestCase):
         self.assertEqual(original["group_mean_train_contrast"],
                          changed["group_mean_train_contrast"])
         self.assertEqual([r["training_contrast"] for r in original["by_bat"]],
-                         [r["training_contrast"] for r in changed["by_bat"])
+                         [r["training_contrast"] for r in changed["by_bat"]])
 
 
 if __name__ == '__main__':
