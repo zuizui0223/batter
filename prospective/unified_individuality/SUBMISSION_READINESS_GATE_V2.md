@@ -56,6 +56,10 @@ Figure S1 and Table S8 quantify the descriptive intersection of 103 archived ind
 
 This visualization adds a **human figure review gate**: ensure the 10–90th percentile bars are never called uncertainty bands or dyad counts independent biological sample size, and confirm the journal accepts a purely descriptive supplemental figure beyond the six main figures.
 
+## New Figure S1 cohort weighting / sample-size caveat
+
+Original 684 overlap pairs are **nonindependent** and multiple pairs come from each source individual. Panel-pooling is heavily cohort-size-weighted: largest source cohorts represent 68.3% of *Eidolon* pairs, 65.3% of *Phyllostomus* 2022 and 75.0% of 2023. Equal cohort median-of-medians values are only descriptive; in *Eidolon* three eligible cohorts have one pair each. The 12-stratum Supplementary Table S9 and Methods S14 are now the main reference for cohort-specific shape similarity. Coauthor review must not label pair-weighted source-panel values as representative species-level 3D ecological overlap, confidence intervals, competition absence, or independent biological n. Source byte integrity and original JAE test outcomes remain frozen.
+
 ## Additional source-independence / ecological-priority review gate
 
 The new Figure 5/S1 original profile exports total **103 within-panel individual-profile records** but only **101 literal animal labels**; two matching strings are shared by original 2016 and 2022 La Gruta *P. hastatus* sources. Confirm against original PIT-tag metadata whether they are true longitudinal recaptures or archive-specific identifier reuse. Until then do not claim 103 independent globally distinct living bats or a verified 6-year stable individual route. The S_rel/couse/individual-prediction original panel-level tests remain unchanged and cannot be pooled as independent species replications.
