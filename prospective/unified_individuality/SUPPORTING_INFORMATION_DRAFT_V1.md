@@ -72,7 +72,7 @@ The original JAE source screen considered 23 Movebank parent datasets, admitted 
 | P. hastatus 2023 | 16 | 0.0454 | -0.0726 | 0.1181 | 0.0002 | PASS |
 | P. hastatus 2016 | 10 | -0.0084 | -0.5824 | 0.5740 | 0.0076 | PASS |
 
-These are full-pipeline whole-session individual-label permutation nulls, not a test against a naive zero baseline. Each evaluated session was shifted to its own zero median before fixed vertical binning. Centering removes an additive constant altitude offset; it does not remove non-additive device error. The original JAE full individual-profile figure is descriptive only and has not been recreated from individual-level source profiles in the integrated SVG suite.
+These are full-pipeline whole-session individual-label permutation nulls, not a test against a naive zero baseline. Each evaluated session was shifted to its own zero median before fixed vertical binning. Centering removes an additive constant altitude offset; it does not remove non-additive device error. The original JAE full individual-profile heatmap (103 individuals across five comparative panels) has now been **restored unchanged** from archived workflow artifact 10950667566 as [Figure 5B](figures/original_jae/figure6_individual_centered_shape_profiles.png); its exact source CSV and JSON are alongside the image, with original hashes and reconstruction details in [ORIGINAL_PROFILE_RECOVERY_RECEIPT_V1.md](ORIGINAL_PROFILE_RECOVERY_RECEIPT_V1.md). This figure is descriptive only: observed component ranges and heatmap heterogeneity are not separately exchangeability-calibrated; finite-session estimation noise and state-dependent altitude error remain possible.
 
 ## Supplementary Table U5. Terrain-relative individual fidelity and added segregation
 
