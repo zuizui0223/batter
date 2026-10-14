@@ -182,7 +182,7 @@ Independent bat experiments repeatedly retain measurable individual behavioral c
 
 ## Figure legends (rendered source-backed SVGs)
 
-The six new manuscript figures are embedded for review in the [figure atlas](FIGURE_ATLAS_AND_CAPTIONS_V1.md). The self-contained SVGs are regenerated from the source-pinned summary snapshot using the checked-in Node figure builder. The figures are visualizations of existing results and are not a new inferential analysis.
+The six main manuscript figures are supplied as separate review assets. They visualize previously reported source-level results and do not add a new inferential test. The original 103-individual probability profiles have been retained without alteration.
 
 **Figure 1. Individuality as four distinct empirical questions.** History/formation, maintained correspondence under experimental perturbation, representation and behavioral expression, and wild ecological consequences are displayed as distinct evidence domains. Dashed connections are conceptual rather than identified causal links. The separately frozen laboratory-style carrier-to-wild bridge failed its required 3/4 criterion (two passes, one failure, one structural stop). [Open SVG](figures/FIGURE_1_INFERENTIAL_LAYERS_V1.svg).
 
