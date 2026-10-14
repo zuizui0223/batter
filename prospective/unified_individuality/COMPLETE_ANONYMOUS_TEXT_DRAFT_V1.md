@@ -67,7 +67,7 @@ The BE programme separately froze a scalar FlightIntensity carrier bridge to wil
 
 ### Evidence hierarchy
 
-We use the words **supported**, **unsupported/failed**, **unadjudicated structural stop**, and **descriptive/post-outcome diagnostic** according to the two original ledgers. A numerically small p-value cannot override a failed prespecified sign or sample-size gate; a nonsignificant test cannot establish exact absence of an effect. Across heterogeneous sources we compare designs and directional inferential statuses, not pooled effect sizes, pooled p-values, or an implied common latent trait. Detailed technical methods, source provenance, source-specific null architectures and the four-panel co-use design are retained in the original frozen packages and the Supplementary Material.
+We use the words **supported**, **unsupported/failed**, **unadjudicated structural stop**, and **descriptive/post-outcome diagnostic** according to the two original ledgers. A numerically small p-value cannot override a failed prespecified sign or sample-size gate; a nonsignificant test cannot establish exact absence of an effect. Across heterogeneous sources we compare designs and directional inferential statuses, not pooled effect sizes, pooled p-values, or an implied common latent trait. Detailed technical methods, source provenance, source-specific null architectures and the four-panel co-use design are retained in the original frozen packages and Supplementary Material.
 
 ## Results
 
@@ -177,15 +177,15 @@ Independent bat experiments repeatedly retain measurable individual behavioral c
 
 ## Data availability
 
-All study data were originally collected and publicly released by the cited source studies. This is a secondary analysis and involved no new handling of animals. Source DOI identifiers, frozen analysis protocols, reproducibility code, and exact data-access instructions are listed in the separately submitted Supplementary Material and anonymized analysis archive. The intended archive review link is [ANONYMIZED_REVIEW_ARCHIVE_URL] (pending placement). Redistribution of source files will respect the original licence and permissions.
+All primary datasets were originally collected and publicly shared by the cited source studies. This study is a secondary reanalysis with no new animal manipulation. Exact original source DOIs and frozen analysis protocols are described in the independently submitted Supplementary Material. Analysis code and legally distributable derived products will be provided through [ANONYMIZED_REVIEW_ARCHIVE_URL] after placement on a double-anonymized research archive.
 
 ## Ethics
 
-The original animal experiments and wild tracking programmes were conducted by their source-study investigators under the ethics and permits described in the original publications. The present comparative reanalysis involved no new animal manipulation.
+The original experiments and wild tracking programmes were conducted by their source-study investigators under the ethics and permits reported in those publications. The present reanalysis required no new bat handling or experimental manipulation.
 
 ## Automated-assistance disclosure (author verification pending)
 
-Automated tools assisted with portions of literature triage, code review and drafting, figure production, and manuscript editing. Human authors must review, verify, and finalize the specific tool/version/date and accountability disclosure for the journal submission. These tools did not create or alter the original source measurements.
+Automated assistance was used for parts of literature triage, source-code/figure drafting, provenance organization and scientific text editing. Exact model/version/date details and human accountability statements are subject to final author verification before submission; original source observations were not created or altered by these tools.
 
 ## References
 
@@ -259,7 +259,7 @@ Xing, S., Leahy, L., Ashton, L.A., Kitching, R.L., Bonebrake, T.C. & Scheffers, 
 
 ## Figure legends
 
-The six new manuscript figures are embedded for review in the figures. The self-contained SVGs are regenerated from the source-pinned summary snapshot using the checked-in Node figure builder. The figures are visualizations of existing results and are not a new inferential analysis.
+The six new manuscript figures are embedded for review in the figure atlas. The self-contained SVGs are regenerated from the source-pinned summary snapshot using the checked-in Node figure builder. The figures are visualizations of existing results and are not a new inferential analysis.
 
 **Figure 1. Individuality as four distinct empirical questions.** History/formation, maintained correspondence under experimental perturbation, representation and behavioral expression, and wild ecological consequences are displayed as distinct evidence domains. Dashed connections are conceptual rather than identified causal links. The separately frozen laboratory-style carrier-to-wild bridge failed its required 3/4 criterion (two passes, one failure, one structural stop). Open SVG.
 
@@ -269,6 +269,6 @@ The six new manuscript figures are embedded for review in the figures. The self-
 
 **Figure 4. Coarse movement representation, detailed trajectory geometry and field-transfer boundary.** The frozen coarse I/M representation retains supported cross-task or external identity information in *Rhinolophus* and *Carollia*; fixed detailed Rhino trajectory geometry is not supported in its *Carollia* transfer test. The separate wild scalar carrier gate fails overall. The source-specific K values are not treated as a common numerical effect scale. Open SVG.
 
-**Figure 5. Original wild session-centered vertical identity.** Per-panel calibrated excess, defined as the observed held-out individual shape score minus its complete-pipeline whole-session permutation-null mean, is shown in nats per fix. Five comparative panels retain centered-shape identity; *Tadarida teniotis* fails (p = 0.5121). **Figure 5A** shows the inferential centered-shape comparison. **Figure 5B** shows 103 original publicly archived individual self-profile probability vectors from five comparative panels, arranged within panel by upper-tail use. We redrew the exact original binned probability values without interpolation in a single 177 × 238 mm print-layout composite; the original source PNG, CSV and JSON are retained unchanged as archival evidence. Variation in central concentration and the two tails is **descriptive**, not separately null-calibrated, and may contain finite-session estimation noise. Figure 5 A+B journal-size composite · unchanged archival source PNG. The original individual-profile source and checksum receipts are identified in the anonymized analysis archive.
+**Figure 5. Original wild session-centered vertical identity.** Per-panel calibrated excess, defined as the observed held-out individual shape score minus its complete-pipeline whole-session permutation-null mean, is shown in nats per fix. Five comparative panels retain centered-shape identity; *Tadarida teniotis* fails (p = 0.5121). **Figure 5A** shows the inferential centered-shape comparison. **Figure 5B** shows 103 original publicly archived individual self-profile probability vectors from five comparative panels, arranged within panel by upper-tail use. We redrew the exact original binned probability values without interpolation in a single 177 × 238 mm print-layout composite; the original source PNG, CSV and JSON are retained unchanged as archival evidence. Variation in central concentration and the two tails is **descriptive**, not separately null-calibrated, and may contain finite-session estimation noise. Figure 5 A+B journal-size composite · unchanged archival source PNG. The source-profile archive and checksum receipts are included in the anonymized supplementary analysis package.
 
 **Figure 6. Persistent terrain-relative individuality without general added vertical separation.** Among the four eligible *H. monstrosus*/*P. hastatus* panels (two species), raw V_rel fidelity is supported in 4/4, positive S_rel segregation in 0/4 and extra contemporaneous co-use separation in 1/4. Panel B grey intervals show the central 95% **permutation-null** S_rel range; panel C grey intervals show 95% **dyad-bootstrap compatibility** bounds around excess co-use separation, neither equivalence tests nor formal evidence of zero. *H. monstrosus* S_rel has a negative-direction two-sided p = 0.0362; *P. hastatus* 2023 has a positive co-use result (+3.57 m, p = 0.0231) under an all-space 600-s definition. The 2016 co-use panel also uses 600 s but endpoint exclusion, whereas the first two panels use 60 s. These terrain and co-use results were developed post-outcome and retain that inferential status. Open SVG.
