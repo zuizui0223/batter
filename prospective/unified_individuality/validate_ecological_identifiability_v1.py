@@ -97,6 +97,14 @@ def text_bounds():
     for token in ["500-m horizontal cells","+0.384","p = 0.0006","identifiability problem",
                   "different task proportions", "not a formal equivalence proof"]:
         assert token.lower() in manuscript.lower(),("Manuscript mechanism boundary missing",token)
+    # Historical priority is limited: overlapping persistent niches were already
+    # demonstrated outside this bat analysis.
+    assert "Carlson et al. 2021" in manuscript and "Carlson et al. 2021" in anon
+    for token in ["10.1038/s41467-021-24826-x","Nature Communications",
+                  "36 scholarly entries"]:
+        assert token in manuscript,("Earlier ecology reference/priority missing",token)
+    assert "10.1038/s41467-021-24826-x" in anon
+    assert "The novelty is **not**" in manuscript
     assert "Supplementary Methods S12" in anon
     assert "An observed individual vertical-use distribution" in anon
     for secret in ["zuizui0223","release/jae","prospective/public-causal-synthesis"]:
