@@ -51,7 +51,7 @@ This audit detects transcription-level omissions/mismatches of selected numbers;
 5. Combined SI **working draft** assembled, but full method/provenance archival appendices, anonymized reviewer archive, source redistribution licences, journal rule verification, final PDF/figure conversion QA and DOI remain pending.
 6. Authorship, institutional approvals, funding, CRediT, conflict and AI-methods disclosures approved by the human authors.
 
-**Assessment:** The integrated draft is a coherent evidence-bounded scientific candidate. This QA supports text-level numerical alignment and boundary discipline only; it does not declare the new manuscript submission-ready.
+**Assessment:** The integrated draft is a coherent evidence-bounded scientific candidate. The field-study source attribution check corrected the three Phyllostomus year-to-DOI assignments and the Eidolon source publication, without changing numerical outcomes. The supplementary Methods now include eleven source-specific sections. This QA supports text-level numerical alignment and boundary discipline only; it does not declare the new manuscript submission-ready.
 
 ## Rendered figure amendment (2026-10-14)
 
