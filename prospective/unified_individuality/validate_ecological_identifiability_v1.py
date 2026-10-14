@@ -101,9 +101,11 @@ def text_bounds():
     # demonstrated outside this bat analysis.
     assert "Carlson et al. 2021" in manuscript and "Carlson et al. 2021" in anon
     for token in ["10.1038/s41467-021-24826-x","Nature Communications",
-                  "36 scholarly entries"]:
+                  "37 scholarly entries"]:
         assert token in manuscript,("Earlier ecology reference/priority missing",token)
     assert "10.1038/s41467-021-24826-x" in anon
+    assert "10.1371/journal.pone.0313782" in manuscript and "10.1371/journal.pone.0313782" in anon
+    assert "not opposing estimates of the same ecological quantity" in manuscript
     assert "The novelty is **not**" in manuscript
     assert "Supplementary Methods S12" in anon
     assert "An observed individual vertical-use distribution" in anon
