@@ -26,6 +26,7 @@ IMAGES = [
     "FIGURE_4_PORTABILITY_AND_BRIDGE_V1.svg",
     "FIGURE_5_CENTERED_VERTICAL_IDENTITY_V1.svg",
     "FIGURE_6_FIDELITY_VS_PARTITIONING_V1.svg",
+    "FIGURE_5_COMPOSITE_177x238MM_V2.svg",
 ]
 SVG_NS = "{http://www.w3.org/2000/svg}"
 
@@ -145,6 +146,12 @@ def svg_gate() -> None:
     f5 = (HERE / IMAGES[4]).read_text(encoding="utf-8")
     for tok in ["E. helvum", "H. monstrosus", "P. hastatus 2022", "P. hastatus 2023", "P. hastatus 2016", "T. teniotis", "0.5121", "+0.574"]:
         assert tok in f5, f"centered-shape figure missing {tok}"
+    comp = HERE / IMAGES[6]
+    cmp_text = comp.read_text(encoding="utf-8")
+    assert 'width="177mm" height="238mm"' in cmp_text
+    assert cmp_text.count('<rect ') >= 1030, "Original profile bins missing"
+    assert "B: no component-wise significance test" in cmp_text
+    assert "103 individual" in cmp_text
     f6 = (HERE / IMAGES[5]).read_text(encoding="utf-8")
     for tok in ["4 / 4 supported", "0 / 4 positive supported", "1 / 4 supported", "p2=0.036", "p+ = 0.0231", "+3.57 m", "2016 also uses 600s"]:
         assert tok in f6, f"field figure missing {tok}"
