@@ -27,6 +27,7 @@ IMAGES = [
     "FIGURE_5_CENTERED_VERTICAL_IDENTITY_V1.svg",
     "FIGURE_6_FIDELITY_VS_PARTITIONING_V1.svg",
     "FIGURE_5_COMPOSITE_177x238MM_V2.svg",
+    "FIGURE_S1_WITHIN_COHORT_VERTICAL_SHAPE_OVERLAP_V1.svg",
 ]
 SVG_NS = "{http://www.w3.org/2000/svg}"
 
@@ -100,6 +101,44 @@ def manuscript_format_gate() -> None:
         assert secret not in anonymous, f"Review text leaks author/provenance identifier: {secret}"
     assert "[Figure 5 A+B journal-size composite]" not in anonymous, "Internal link in anonymous figure caption"
     print("Journal-order working draft PASS: title, lay summary, abstract, source-anonymity checks")
+
+def centered_overlap_gate() -> None:
+    """Post-outcome DESCRIPTIVE 1D profile-pair overlap, not empirical 3D co-use."""
+    data = json.loads((HERE / "FROZEN_PROFILE_OVERLAP_DESCRIPTIVE_V1.json").read_text(encoding="utf-8"))
+    assert data["schema_version"] == 1
+    assert data["original_source_sha256"] == "9efd5d2914ad012905a004aee1114d715deaaf94e3f54689deb4f1208a188cb2"
+    assert "post-outcome descriptive" in data["analysis_tier"]
+    assert data["n_original_individuals"] == 103
+    assert data["total_within_cohort_pairs"] == 684
+    panel_keys=["eidolon","hypsignathus","phyllostomus_2022","phyllostomus_2023","phyllostomus_2016"]
+    expected_pair_counts=[41,276,262,60,45]
+    expected_individuals=[20,24,33,16,10]
+    expected_medians=[0.8170361282855076,0.8006084547450463,0.9187372524371071,0.8985925207686409,0.8020579928943863]
+    assert [r["panel"] for r in data["panel_summary"]] == panel_keys
+    for row,ind,pairs,median in zip(data["panel_summary"],expected_individuals,expected_pair_counts,expected_medians):
+        assert row["n_individuals"] == ind
+        assert row["n_pairs"] == pairs
+        assert math.isclose(row["median"],median,rel_tol=0,abs_tol=1e-10)
+        assert 0 <= row["min"] <= row["p10"] <= row["median"] <= row["p90"] <= row["max"] <= 1
+    assert len(data["cohort_summary"]) == 12
+    assert sum(x["n_pairs"] for x in data["cohort_summary"]) == 684
+    assert sum(x["n_pairs"] == 0 for x in data["cohort_summary"]) == 1
+    with (HERE / "ORIGINAL_PROFILE_WITHIN_COHORT_OVERLAP_PAIRS_V1.csv").open(newline="",encoding="utf-8") as f:
+        pairs = list(csv.DictReader(f))
+    assert len(pairs) == 684
+    counts = Counter(x["panel"] for x in pairs)
+    assert [counts[k] for k in panel_keys] == expected_pair_counts
+    assert all(x["source_row_order_i"].isdigit() and x["source_row_order_j"].isdigit() and
+               int(x["source_row_order_i"]) < int(x["source_row_order_j"]) and
+               0 <= float(x["overlap"]) <= 1 for x in pairs)
+    assert len({(r["panel"],r["cohort"],r["source_row_order_i"],r["source_row_order_j"]) for r in pairs}) == 684
+    for x in data["panel_summary"]:
+        assert "p_value" not in x and "p" not in x, "No inferential statistic belongs in overlap summary"
+    assert "not geographic 3D habitat overlap" in data["scientific_limits"]
+    si=(HERE.parent / "SUPPORTING_INFORMATION_DRAFT_V1.md").read_text(encoding="utf-8")
+    assert "Supplementary Table U8." in si and "Supplementary Methods U13." in si
+    print("PASS post-outcome descriptive 1D overlap: 103 individuals, 12 cohorts, 684 dependent within-cohort dyads")
+
 
 def original_jae_profile_gate() -> None:
     """Check restored exact original descriptive artifact, not new inference."""
@@ -185,5 +224,6 @@ if __name__ == "__main__":
     science_gate()
     manuscript_format_gate()
     original_jae_profile_gate()
+    centered_overlap_gate()
     svg_gate()
     print("PASS — immutable-source summary semantics and SVG/XML structural gates")
