@@ -9,6 +9,7 @@ from reportlab.lib.styles import ParagraphStyle
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, LongTable, TableStyle, KeepTogether, CondPageBreak
+from svglib.svglib import svg2rlg
 
 ROOT=Path(__file__).resolve().parent
 ANONYMOUS="--anonymous" in sys.argv
@@ -86,8 +87,8 @@ def decorate(c,doc):
     c.restoreState()
 def build():
     source=SOURCE.read_text(encoding="utf-8")
-    markers=(["Supplementary Table S6","Supplementary Methods S2","post-outcome"] if ANONYMOUS
-             else ["Supplementary Table U6","Supplementary Methods U2","post-outcome"])
+    markers=(["Supplementary Table S6","Supplementary Table S8","Supplementary Methods S13","Supplementary Figure S1","post-outcome"] if ANONYMOUS
+             else ["Supplementary Table U6","Supplementary Table U8","Supplementary Methods U13","Supplementary Figure S1","post-outcome"])
     for x in markers:
         assert x.lower() in source.lower(),f"Missing mandatory SI section: {x}"
     blocks=[]
@@ -103,6 +104,23 @@ def build():
         line=lines[i].strip()
         if not line:
             flush();i+=1;continue
+        if line.startswith("!["):
+            flush()
+            found=re.fullmatch(r"!\\[([^\\]]+)\\]\\((figures/[a-zA-Z0-9_./-]+\\.svg)\\)",line)
+            assert found is not None,f"Unexpected SI figure link: {line}"
+            relative=found.group(2)
+            assert relative=="figures/FIGURE_S1_WITHIN_COHORT_VERTICAL_SHAPE_OVERLAP_V1.svg"
+            svgfile=ROOT/relative
+            assert svgfile.is_file(),f"Missing supplement image: {svgfile}"
+            drawing=svg2rlg(str(svgfile))
+            assert drawing is not None and drawing.width>100 and drawing.height>100
+            assert drawing.width<=usable, "Supplementary vector exceeds PDF content width"
+            drawing.hAlign="CENTER"
+            blocks.append(CondPageBreak(drawing.height+18))
+            blocks.append(drawing)
+            blocks.append(Spacer(1,10))
+            i+=1
+            continue
         if iscell(line):
             flush();group=[]
             while i<len(lines) and iscell(lines[i]):
