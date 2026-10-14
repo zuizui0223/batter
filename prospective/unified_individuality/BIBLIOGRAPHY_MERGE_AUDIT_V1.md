@@ -7,7 +7,7 @@
 - BE original reference entries with DOI: **23**, including associated data archives.
 - Unique DOIs across the two source manuscripts: **45** (two overlaps: Bolnick 2003 and Araújo 2011).
 - Scholarly article/review entries: **39**; source-only dataset archive records: **6**.
-- Selected working integrated main scholarly references: **35**, including 12 newly restored literature/background references that were omitted from the short v1 integrated draft. Later external publisher/PubMed review confirmed key 2026 paper metadata, with the published eLife version DOI distinguished below.
+- Selected working integrated main scholarly references: **36** (35 drawn from the historical source union, plus Carlson et al. 2021 added during external ecological novelty review), including 12 newly restored literature/background references that were omitted from the short v1 integrated draft. Later external publisher/PubMed review confirmed key 2026 paper metadata, with the published eLife version DOI distinguished below.
 - Others retained here as source-prior-art candidates, not silently lost; authors must decide final cited subset and complete bibliographic format before submission.
 
 **Important:** This audit only reconciles DOIs and bibliographic strings *as recorded in the source manuscripts*. It does not verify whether each DOI resolves today, author/year spelling, online-first pagination, institutional reuse rights or whether a citation is appropriate for each claim. Primary-data archive permissions and source metadata are tracked separately in the unified SI.
@@ -70,3 +70,9 @@
 - **Source-study duplicate policy:** 2022/2023/2016 *Phyllostomus hastatus* tracking panels are different panel datasets of one biological species, not three independent taxa.
 - **Journal submission:** remove uncited secondary background records or cite them with an appropriate factual claim; do not introduce unverified papers to pad the bibliography.
 - Reference style (year suffix, author separators, capitalization, publisher requirements) remains provisional until target-journal verification and human coauthor review.
+
+## External priority review amendment, 2026-10-14
+
+The 45 unique DOI records above describe **only the historical union of the original JAE and BE source manuscript bibliographies** (39 scholarly + six source-dataset-only records). They do not exhaust the literature. Targeted external ecological novelty review added Carlson BS, Rotics S, Nathan R, Wikelski M & Jetz W (2021), *Individual environmental niches in mobile organisms*, *Nature Communications* 12:4572, DOI **10.1038/s41467-021-24826-x**, to the main unified bibliography. Thus the final main bibliography now has **36 scholarly items**, with Carlson counted once as a new **outside-union** reference; historical source-union 45 remains unchanged.
+
+This direct prior shows individually consistent environmental niches need not be modular/disjoint. The integrated bat paper must therefore not claim historical priority for the general phenomenon. Its narrower distinct contribution concerns null-calibrated **3D vertical flight probabilities**, 500-m place × coarse speed-turn stress tests, and separate terrain/co-use segregation nulls, without a validated laboratory-to-wild carrier. See `ECOLOGICAL_PRIOR_ART_POSITIONING_V1.md`.
