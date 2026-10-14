@@ -33,53 +33,53 @@ The four field rows are **four study panels from two taxa**. Differences in elig
 
 ## The unobserved-state identifiability problem
 
-Write an individual's conditional vertical-use distribution at horizontal location h and observed context c as
+Write an individual's conditional vertical-use distribution at horizontal location \(h\) and observed context \(c\) as
 
-[
-p_i(zmid h,c)=sum_{k=1}^{K}pi_i(kmid h,c),q_i(zmid k,h,c).
-]
+\[
+p_i(z\mid h,c)=\sum_{k=1}^{K}\pi_i(k\mid h,c)\,q_i(z\mid k,h,c).
+\]
 
-Here k is an **unobserved true behavioral task/state** (commuting, feeding, social use, etc.), (pi_i) is the fraction of within-context time allocated to that state, and (q_i) is the within-state vertical-use rule.
+Here \(k\) is an **unobserved true behavioral task/state** (commuting, feeding, social use, etc.), \(\pi_i\) is the fraction of within-context time allocated to that state, and \(q_i\) is the within-state vertical-use rule.
 
 Two nonexclusive mechanisms generate the same observation:
 
-- **Task allocation:** (q_i=q) across bats, but the (pi_i) differ.
-- **Within-task solutions:** (pi_i=pi) across bats, but their (q_i) differ (morphology, learned approach, fine-scale resource choice, micro-weather response).
+- **Task allocation:** \(q_i=q\) across bats, but the \(\pi_i\) differ.
+- **Within-task solutions:** \(\pi_i=\pi\) across bats, but their \(q_i\) differ (morphology, learned approach, fine-scale resource choice, micro-weather response).
 
-Absent independent labels for k, a stable and individually predictive marginal (p_i) **cannot identify which mechanism carries it**.
+Absent independent labels for \(k\), a stable and individually predictive marginal \(p_i\) **cannot identify which mechanism carries it**.
 
 ### Exact logical counterexample — completely synthetic, not bat data
 
 Consider two vertical bins. Both individuals use both bins; their *marginal* probabilities are
 
-[
-p_A=(0.6,0.4), qquad p_B=(0.4,0.6).
-]
+\[
+p_A=(0.6,0.4),\qquad p_B=(0.4,0.6).
+\]
 
 A purely **task-allocation** construction assigns shared within-task profiles
 
-[
-q_1=(0.8,0.2),quad q_2=(0.2,0.8)
-]
+\[
+q_1=(0.8,0.2),\quad q_2=(0.2,0.8)
+\]
 
-and personal task proportions (pi_A=(2/3,1/3)) versus (pi_B=(1/3,2/3)). These produce (p_A,p_B) exactly.
+and personal task proportions \(\pi_A=(2/3,1/3)\) versus \(\pi_B=(1/3,2/3)\). These produce \(p_A,p_B\) exactly.
 
-An equally valid **within-task** construction assigns shared proportions (pi_A=pi_B=(1/2,1/2)), but sets
+An equally valid **within-task** construction assigns shared proportions \(\pi_A=\pi_B=(1/2,1/2)\), but sets
 
-[
-q_{A1}=(0.7,0.3),;q_{A2}=(0.5,0.5),qquad
-q_{B1}=(0.5,0.5),;q_{B2}=(0.3,0.7).
-]
+\[
+q_{A1}=(0.7,0.3),\;q_{A2}=(0.5,0.5),\qquad
+q_{B1}=(0.5,0.5),\;q_{B2}=(0.3,0.7).
+\]
 
-These **also** produce the identical marginals (p_A,p_B). Hence even with infinite precision in a full marginal vertical-use distribution, the two underlying task mechanisms are observationally indistinguishable *without task labels or interventions*.
+These **also** produce the identical marginals \(p_A,p_B\). Hence even with infinite precision in a full marginal vertical-use distribution, the two underlying task mechanisms are observationally indistinguishable *without task labels or interventions*.
 
 The toy **overlap coefficient** for the marginal distributions is
 
-[
-O(A,B)=sum_zmin{p_A(z),p_B(z)}=0.8.
-]
+\[
+O(A,B)=\sum_z\min\{p_A(z),p_B(z)\}=0.8.
+\]
 
-Their true-pair log-prediction advantage over each other in the corresponding idealized known-distribution toy is (D_{mathrm{KL}}(p_AVert p_B)= 0.081093) nats per independent draw (symmetric here). **These are not empirical effect sizes or source S_rel values.** The example only demonstrates that marginal overlap can be high at the same time as individual probability profiles carry positive identity information. It does **not** imply the empirical S_rel would equal zero.
+Their true-pair log-prediction advantage over each other in the corresponding idealized known-distribution toy is \(D_{\mathrm{KL}}(p_A\Vert p_B)=0.081093\) nats per independent draw (symmetric here). **These are not empirical effect sizes or source S_rel values.** The example only demonstrates that marginal overlap can be high at the same time as individual probability profiles carry positive identity information. It does **not** imply the empirical S_rel would equal zero.
 
 The real 500-m × coarse speed-turn result narrows one possible task-mixture account, because broad categories have been conditionally matched. But within each broad class several unobserved true tasks or microhabitats can remain; these data **do not** identify a latent behavioral policy.
 
