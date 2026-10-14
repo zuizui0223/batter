@@ -42,6 +42,12 @@ The final journal data repository URL and author/coauthor approvals are **not** 
 - Per-panel 10-bin **median overlap of estimated session-centered probability SHAPES** = 0.817 / 0.801 / 0.919 / 0.899 / 0.802 for Eidolon / Hypsignathus / P. hastatus 2022 / 2023 / 2016. **Not full 3D habitat overlap, synchronized co-use, diet or independent dyad replication.**
 - [SI internal and anonymous source](SUPPORTING_INFORMATION_DRAFT_V1.md) now contain Table U8/S8 and Methods U13/S13, with the vector Figure S1 embedded in the anonymous SI PDF. This is a post-outcome descriptive secondary display and does not upgrade the previously frozen S_rel 0/4 positive or I 1/4 results.
 
+## Source-ID and earlier horizontal overlap safeguards
+
+- [Source study-year/individual-ID audit](PROFILE_PANEL_IDENTITY_SCOPE_AUDIT_V1.md) and [independent verifier](validate_profile_panel_identity_scope_v1.py): the archived JAE heatmap contains **103 individual-by-panel records**, but only **101 different literal ID strings**; two are shared across the 2016 and 2022 P. hastatus La Gruta panels. Published PIT tagging and low recapture make continuity possible but actual 6-year same-animal identity has **not** been independently verified.
+- Calderón-Capote et al. (2025; [source](https://doi.org/10.1371/journal.pone.0313782)) had already evaluated **horizontal foraging-area overlap** from these same 2016/2022 archives (~0.20 Bhattacharyya overlap). The new Figure S1 coefficient ~0.80–0.92 measures **one-dimensional session-centered altitude-shape similarity** and is **not** a competing estimate of horizontal or three-dimensional co-use.
+- Global cross-panel biological independence, competition mechanisms and longitudinal memory remain **unproven**. The original JAE/BE frozen results were not changed.
+
 ## One biological question
 
 **What persists when behavior remains individually predictable, and when does that persistence require ecological spatial partitioning?**
