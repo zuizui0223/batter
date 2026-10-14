@@ -1,10 +1,16 @@
 # Myotis 2025 external-data gate: runbook (v1, 2026-10-13)
 
-**Status: HOLD_SOURCE_ZIP_NOT_ACQUIRED.** No raw v3 dataset files accessed; no observed individual bat parameters, novel biological p-values, 3-D XYZ coordinates or flight rule have been recovered. This is an executable **post-publication exploratory** gate, not a new preregistration, and does not alter the JAE release.
+**Current scientific status (2026-10-14): SOURCE_ORIGINAL_FILES_VERIFIED / STOP_SIX_REGIME_AND_FOUR_BAT_BUZZ_GATE.** The anonymous frontend enabled seven original v3 files to be retrieved and SHA256 verified (GitHub Actions 38493203267, artifact 11863245061). The author's laboratory `lData.csv` has 606 rows, four bat labels, 18 tag-deployment labels and only THREE grouped treatment codes; the six physical distance×speed regimes are missing from that CSV. Additionally only 2/4 bats have >=2 valid Buzz II trials in BOTH groups 2/3 across first four tag-deployments. **DO NOT run `analyse` on the original grouped lData or invent a distance/speed lookup.** The rest of this guide is a conditional workflow if finer-grained original files become independently verified; it is NOT approved for this source as currently deposited. No new observed individual response parameters, biological p-values, 3-D XYZ coordinates or flight rules have been recovered. This is an executable **post-publication exploratory** gate, not a new preregistration, and does not alter the JAE release.
 
 **Original article:** Foskolos et al., BMC Biology 23:21 (2025), https://doi.org/10.1186/s12915-024-02106-6
 
 **Dataset:** Mendeley Data *v3*, https://doi.org/10.17632/8b57pz6bpj.3 (landing page advertises Download All; API file listings returned 401 in this environment). The dataset page lists CC BY 4.0; verify any individual file licensing.
+
+## New executed real-source support result (supersedes original ZIP-access blocker)
+
+Original author files have been directly downloaded and checked via the public `/api/datasets/8b57pz6bpj/files?version=3` endpoint. Full details: [original file support and strict STOP result](MYOTIS_2025_V3_ORIGINAL_CATEGORICAL_ELIGIBILITY_RESULT_2026_10_14.md). **Dataset acquisition is no longer the bottleneck; the source's aggregation and informative Buzz-II missingness are.**
+
+The trial-level `lData.csv` is a *different table structure* from this code's required canonical 6-regime input. The original grouped `treat_code` **must not** be converted into fictitious individual physical speed/displacement values. A separate post-outcome exploratory chase-probability contrast is possible in principle but is **not** an authorized rescue of the originally locked four-bat acoustic coefficient test.
 
 ## 1. Inventory original data before opening numerical outcomes
 
