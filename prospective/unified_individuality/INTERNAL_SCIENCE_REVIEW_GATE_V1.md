@@ -43,7 +43,7 @@ Field-bridge interpretation: original scalar FlightIntensity carrier results PAS
 - Exact frozen original JAE 103-individual Figure 6 PNG, CSV and JSON recovered from workflow run 36375056204; source SHA256 for each member pinned, source row sums and panel n verified.
 - Figure 5 now has **A** calibrated score and **B** genuine original 103-individual distribution-profile heatmap. No invented individual curves or calibrated tail components.
 - Combined SI preliminary draft with source nulls, archive DOIs, wild terrain/co-use tables and boundary tests.
-- Reference/DOI reconciliation: 45 unique DOIs in source manuscripts, 39 scholarly entries and six original data-archive records; 34 selected scholarly references currently in main bibliography. No external publisher/Crossref accuracy audit has been claimed.
+- Reference/DOI reconciliation: 45 unique DOIs in source manuscripts, 39 scholarly entries and six original data-archive records; 35 selected scholarly references currently in main bibliography. No external publisher/Crossref accuracy audit has been claimed.
 - Existing original JAE rc2 and BE v1 source branches remain unchanged.
 
 ## Mandatory remaining gates before submission
