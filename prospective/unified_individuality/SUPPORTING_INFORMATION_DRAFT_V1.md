@@ -130,6 +130,37 @@ This **post-outcome descriptive** calculation uses the same 103 original Figure 
 
 ![Figure S1 descriptive within-cohort relative-height probability overlap; dependent dyads and no confidence intervals](figures/FIGURE_S1_WITHIN_COHORT_VERTICAL_SHAPE_OVERLAP_V1.svg)
 
+## Supplementary Table U9. Cohort dependence of the exploratory vertical-profile overlap
+
+The pair-pooled Figure S1 medians are **not estimates of species-wide niche overlap**. The original 103 panel-indexed profiles occur in source site/colony/year cohorts, with n(n−1)/2 different-individual pairs from a cohort containing n eligible profiles. Thus large cohorts dominate a pooled **dependent-dyad** median. This post-outcome audit summarizes the original **same-cohort 1D session-centered shape** values; there is no new hypothesis test, statistical uncertainty interval or biological animal-level replication.
+
+| Original panel | Panel profile records | Dependent pairs | Pooled pair median O | Median of pair-eligible cohort medians | Largest cohort's fraction of pairs | Median after removing largest cohort |
+|---|---:|---:|---:|---:|---:|---:|
+| *E. helvum* | 20 | 41 | 0.817 | 0.855 | **68.3%** (28/41) | 0.887 (13 pairs) |
+| *H. monstrosus* | 24 | 276 | 0.801 | 0.801 | 100% (276/276) | Not estimable: one cohort |
+| *P. hastatus* 2022 | 33 | 262 | 0.919 | 0.917 | **65.3%** (171/262) | 0.912 (91 pairs) |
+| *P. hastatus* 2023 | 16 | 60 | 0.899 | 0.865 | **75.0%** (45/60) | 0.831 (15 pairs) |
+| *P. hastatus* 2016 | 10 | 45 | 0.802 | 0.802 | 100% (45/45) | Not estimable: one cohort |
+
+The *median of eligible cohort medians* assigns equal weight to each cohort with at least one observed pair, but is **not confidence** in a species-level parameter. In *Eidolon*, three of the five pair-eligible cohorts contain just two panel-records and hence **a single pair each**. Equal cohort weighting can therefore overemphasize tiny groups. Removing the largest cohort is also only a descriptive recalculation, **not a robustness test with a valid confidence interval**, and is undefined for a single-cohort panel.
+
+| Original panel | Exact source cohort | Source panel records | Nonindependent pairs | Cohort median O |
+|---|---|---:|---:|---:|
+| *E. helvum* | Burkina Faso, Ouagadougou::2013 | 2 | 1 | 0.855 |
+| *E. helvum* | Burkina Faso, Ouagadougou::2014 | 5 | 10 | 0.902 |
+| *E. helvum* | Ghana, Accra::2009 | 1 | 0 | Not defined |
+| *E. helvum* | Ghana, Accra::2011 | 2 | 1 | 0.902 |
+| *E. helvum* | Ghana, Kibi (Old Tafo)::2013 | 2 | 1 | 0.817 |
+| *E. helvum* | Zambia, Kasanka::2014 | 8 | 28 | **0.728** |
+| *H. monstrosus* | Lek Njoukou::2020 | 24 | 276 | 0.801 |
+| *P. hastatus* 2022 | Aj-cave (Colony 2)::2022 | 14 | 91 | 0.912 |
+| *P. hastatus* 2022 | La Gruta (Colony 1)::2022 | 19 | 171 | 0.922 |
+| *P. hastatus* 2023 | Aj-cave (Colony 2)::2023 | 10 | 45 | 0.900 |
+| *P. hastatus* 2023 | La Gruta (Colony 1)::2023 | 6 | 15 | **0.831** |
+| *P. hastatus* 2016 | La Gruta::2016 | 10 | 45 | 0.802 |
+
+The 2016 and 2022 archives reuse **two literal source identifiers**; whether they indicate recaptured bats is unresolved. They were not cross-compared in the present same-panel-and-cohort pair universe. These collections have different spatial supports, seasons and sampling opportunities; panel aggregation, colony median differences and cross-year changes are not formal tests of adaptive strategy differences or competition.
+
 ## Supplementary Methods U1. Boundaries of the three integrated inference axes
 
 **Identity correspondence:** correct animal–behavior mapping after source-specific shared-condition adjustment. Each experimental study uses its own fixed representation, biological support and assignment null; raw K, A or B values cannot be combined into a single pooled metric.
@@ -294,6 +325,18 @@ Within each cohort and descriptive panel pool, the minimum, 10th, 50th and 90th 
 **Direct same-source 2D prior-art boundary.** Calderón-Capote et al. (2025; *PLOS ONE* 20:e0313782; DOI 10.1371/journal.pone.0313782) previously analysed horizontal foraging-area overlap and social structure using the original La Gruta *P. hastatus* 2016 and 2022 source archives. They report an average horizontal foraging-area overlap near 0.20 (Bhattacharyya coefficient), without a clear difference between within- and between-social-group comparisons. The **present** 0.80–0.92 values summarize the total-variation intersection of *marginal, session-centered relative-height shapes* computed with different spatial supports/weights. These are different dimensions, underlying subjects/subsets, estimators and statistical targets. **Do not equate a 1D altitude-shape overlap of 0.90 with bats sharing 90% of their feeding habitat, nor regard the earlier 0.20 horizontal overlap and current 0.90 relative-height similarity as contradictory estimates of one quantity.** Both source-derived calculations are independent of source terrain-relative S_rel and synchronous encounter I tests.
 
 **Crucial interpretation ceiling.** This is one-dimensional overlap of **session-centered vertical probability SHAPES**, not overlap of full 3D habitat volume. In particular, individual source profiles can be estimated from *different jointly supported horizontal cell sets and different self-derived cell weights*, even among animals from the same source cohort. Thus the coefficient does not establish true simultaneous geographic co-use, identical tasks, competition, shared prey or within-task movement policy. Session-median centering, broad height bins and probability pseudocount smoothing can all increase the observed shape similarity. The large resulting descriptive profile-overlap coefficients are compatible with the original full-pipeline identity results, but neither the overlap medians nor their descriptive percentiles are additional evidence of a formally nonsegregated ecological niche. The **source-frozen terrain-relative S_rel and phase-shift co-use I tests** remain the proper, separate ecological segregation comparisons.
+
+## Supplementary Methods U14. Dependent-dyad and source-cohort weighting audit
+
+**Post-outcome descriptive sensitivity only:** After the first pair-overlap summary had been opened, we examined how assigning more weight to larger collection cohorts affected its interpretation. The 103 source panel-indexed profiles were not re-estimated. The original fixed ten-bin probabilities and original `panel` × `cohorts` strings define the entire analysis. Under exact source cohort c containing n_c original profile records, the number of unordered within-cohort distinct-individual pairs is n_c(n_c−1)/2. The pooled descriptive panel median is calculated from all such pair coefficient values; every pair carries equal display weight, and larger cohorts contribute quadratically more pair values.
+
+Three alternative **descriptive, noninferential** summaries are produced: (i) the cohort-specific median O for every eligible original source collection cohort; (ii) the median across **eligible cohort medians**, giving each cohort one displayed value regardless of pair count; and (iii) the pooled pair median after completely excluding the single cohort with the largest eligible pair count. The last metric is undefined (stored as `null`) when no other pair-eligible cohort remains, and is not an uncertainty estimate or independent leave-one-out inferential validation. Cohorts with only one source profile have no pair and a null median rather than an invented overlap value. Cohorts with **two** profiles contribute a **single pair**, which receives equal cohort weight in alternative (ii) despite lacking meaningful replication.
+
+The independent CSV-based audit uses the byte-immutable original Figure 5B source CSV (SHA256 `91cae4c22588db0976dfe3e273eabebaa89dc2844e996f42d01ef617672dc3f8`) rather than the original JSON-based Figure S1 generator. It recomputes all 684 same-cohort overlap coefficients, each 1 minus total variation distance, cohort and panel medians, pair shares, the equal-cohort median-of-medians and leave-largest-cohort descriptive quantities. Exact numeric outputs and the list of all 12 original cohort strata are preserved in `figures/COHORT_WEIGHT_SENSITIVITY_V1.json` and reviewed in `COHORT_WEIGHT_SENSITIVITY_AUDIT_V1.md`; the independent `validate_cohort_weight_sensitivity_v1.py` reproduces them under on-PR CI.
+
+The result shows why a single panel-pooled 1D shape coefficient should not be interpreted as an individual- or species-independent ecological constant. The *Eidolon* panel has 28/41 (68.3%) of pairs in one Zambian collection cohort with O median 0.728, whereas the *P. hastatus* 2023 panel has 45/60 (75.0%) of pairs in Aj-cave with median 0.900 versus La Gruta median 0.831. The equal-cohort medians become 0.855 and 0.865, respectively; the cohort size inequalities and several one-pair source cohorts restrict ecological extrapolation. Neither site/colony contrasts nor their apparent relative-height distributions were subjected to new source-null or repeated-measures calibration.
+
+**Units and causal boundary:** Original source profile counts are panel-indexed animals, not 103 verified globally distinct bats across years. The pair O is a session-centered 1D probability-shape overlap, not habitat co-use, synchronized interaction, resource overlap, or evidence of absent competition. The original whole-session label calibration and terrain-relative S_rel/co-use I nulls remain unchanged.
 
 ## Supplementary publication and data-provenance boundary
 
