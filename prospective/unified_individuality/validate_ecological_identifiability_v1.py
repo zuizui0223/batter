@@ -113,7 +113,7 @@ def text_bounds():
     for table,section in [("SUPPORTING_INFORMATION_DRAFT_V1.md","U13"),("SUPPORTING_INFORMATION_ANONYMOUS_DRAFT_V1.md","S13")]:
         content=(HERE/table).read_text()
         assert "Projection inequality" in content and "Supplementary Methods "+section in content
-        assert "their reported O" in content.lower() or "their reported o" in content.lower()
+        assert "reported source O values" in content and "O_3D = 0" in content
     for doc in [manuscript,anon]:
         assert "marginal-height overlap 1 and joint spatial overlap 0" in doc
     for token in ["500-m horizontal cells","+0.384","p = 0.0006","identifiability problem",
