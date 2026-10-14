@@ -64,6 +64,17 @@ This audit detects transcription-level omissions/mismatches of selected numbers;
 
 These additions strengthen interpretive clarity, not the evidence tier. No new source outcomes, causal task/learning results or preregistration are introduced.
 
+## Exploratory descriptive original-profile overlap QA (2026-10-14)
+
+This **post-outcome descriptive transformation is new**, unlike the frozen primary results. The design rule was committed before computing overlap values, but the underlying profiles/individuality outcomes had already been inspected; do not describe it as independent validation or prospective registration.
+
+- Immutable original profile JSON SHA256: `9efd5d2914ad012905a004aee1114d715deaaf94e3f54689deb4f1208a188cb2` (the source remains unchanged).
+- All 103 original individual profiles used and exactly the 5 original comparative panels included. Strata defined by the exact original collection site/colony/year cohort, never between cohorts. Original individuals 20/24/33/16/10 and within-cohort unordered pairs 41/276/262/60/45 = **684 dependent dyads**, in 12 source cohorts with one singleton cohort.
+- Metric: 10-bin centered residual-height probability intersection O = sum(min(p_i,p_j)) = 1 - total-variation distance. In the five panels, descriptive dyad median O: **0.817036 / 0.800608 / 0.918737 / 0.898593 / 0.802058**. The corresponding 10th/90th percentiles are empirical across-dependent-dyad ranges, not confidence intervals.
+- Reproduction from original byte-verified JSON via pure Node script plus regular PR figure CI verifies all derived pair rows and medians, source original n, 1D metric algebra, and supplementary Figure S1 SVG/XML layout. The underlying full-pipeline identity/terrain S_rel/co-use analyses remain unchanged.
+- Caution: original profiles were estimated on **individual-specific supported horizontal cells/weights**, and height was median-centered and smoothed. This plot does **not** estimate actual 3D geographic/behavioral overlap, true instantaneous contact, common prey or equivalent absence of competition.
+- The anonymous and internal SI PDF pipeline embeds the same vector Figure S1; its final printed appearance still needs human coauthor sign-off.
+
 ## Rendered figure amendment (2026-10-14)
 
 - Six draft SVG figures, the frozen source-summary data snapshot, a zero-dependency Node figure builder, a Python SVG/XML-and-biological-claim guard, and an on-PR workflow were added to the same draft PR.
