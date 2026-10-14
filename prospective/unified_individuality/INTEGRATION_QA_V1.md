@@ -12,11 +12,11 @@
 
 ## Textual numerical audit performed
 
-The committed unified draft was retrieved again from GitHub after creation. Its values were compared with the canonical JAE manuscript and the BE authoritative numeric ledger (normalizing optional leading plus signs only).
+The committed unified draft was retrieved again from GitHub after creation and after rendered figure legend integration. Its values were compared with the canonical JAE manuscript and the BE authoritative numeric ledger (normalizing optional leading plus signs only).
 
 - **Wild numeric keys checked: 21/21 found in both wild source and unified manuscript.** Keys: 0.443, 0.177, 0.111, 0.118, 0.574, -0.022, 0.5121, 0.042, 0.100, 0.077, 0.079, -0.0158, -0.0090, 0.0163, 0.0289, 3.57, 0.98, 1.92, 1.13, 0.0544, 0.0345.
 - **BE numeric keys checked: 14/14 found in both BE ledger and unified manuscript.** Keys: 0.16733, 112.5554, 144.0791, 0.7081, 0.734699, -1.425497, 4.941, 6.779, 0.377542, 1.004452, 3.695264, 0.55428, 0.34758, -0.0350.
-- **Manuscript provisional length:** 5,694 whitespace-delimited words including selected references and metadata. Introduction ~566; Methods ~1,083; Results ~1,388; Discussion ~1,310. This is a drafting metric rather than the journal's official word counter.
+- **Manuscript provisional length:** 6122 whitespace-delimited words including selected references and metadata (count updated after six figure legends). Introduction ~566; Methods ~1,083; Results ~1,388; Discussion ~1,310. This is a drafting metric rather than the journal's official word counter.
 
 This audit detects transcription-level omissions/mismatches of selected numbers; it does **not** verify code execution, calculation reproducibility, assignment semantics or all results. Full original source tables and receipts are authoritative in any discrepancy.
 
@@ -47,8 +47,15 @@ This audit detects transcription-level omissions/mismatches of selected numbers;
 1. A second human statistical review of each key panel including frozen support denominators and population-level limitations.
 2. Full manuscript references and source DOIs merged, checked for year suffixes and required citation coverage.
 3. Original numerical pipelines independently re-executed if coauthors or the target journal require it. This integration did not rerun them.
-4. Figures 1–6 generated and checked against original receipt tables. They are proposed, not yet rendered.
+4. Figures 1–6 now generated as source-backed SVGs and regenerated in the figure workflow. Human-readable journal-size, grayscale and full source-profile artifact visual QA are not yet complete.
 5. SI assembly, anonymized reviewer archive, original-data redistribution licence review, final journal rule verification, manuscript PDF/figure QA and DOI creation.
 6. Authorship, institutional approvals, funding, CRediT, conflict and AI-methods disclosures approved by the human authors.
 
 **Assessment:** The integrated draft is a coherent evidence-bounded scientific candidate. This QA supports text-level numerical alignment and boundary discipline only; it does not declare the new manuscript submission-ready.
+
+## Rendered figure amendment (2026-10-14)
+
+- Six draft SVG figures, the frozen source-summary data snapshot, a zero-dependency Node figure builder, a Python SVG/XML-and-biological-claim guard, and an on-PR workflow were added to the same draft PR.
+- A source-specific encounter distinction was corrected in text/legends: the 2016 co-use panel also used a 600-s window, but endpoint exclusion; only 2023 used 600-s **all-space** scope, while H and 2022 used 60-s endpoint-excluded scope.
+- Fig. 5 is an original-result-centered-score figure and does **not** falsely recreate individual raw probability profiles; the source JAE heatmap remains an original artifact to retrieve before final production.
+- The figure validator cannot substitute for visual QA, and the underlying source calculations have not been independently recomputed in this integrated PR.
