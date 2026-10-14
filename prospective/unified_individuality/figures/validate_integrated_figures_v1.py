@@ -12,6 +12,9 @@ from pathlib import Path
 import json
 import math
 import sys
+import csv
+import hashlib
+from collections import Counter
 import xml.etree.ElementTree as ET
 
 HERE = Path(__file__).resolve().parent
@@ -73,6 +76,51 @@ def science_gate() -> None:
     assert DATA["lab"]["bridge"]["criterion"] == 3
 
 
+def original_jae_profile_gate() -> None:
+    """Check restored exact original descriptive artifact, not new inference."""
+    folder = HERE / "original_jae"
+    expected = {
+        "centered_shape_individual_profiles_v1.csv":
+            "91cae4c22588db0976dfe3e273eabebaa89dc2844e996f42d01ef617672dc3f8",
+        "centered_shape_individual_profiles_v1.json":
+            "9efd5d2914ad012905a004aee1114d715deaaf94e3f54689deb4f1208a188cb2",
+        "figure6_individual_centered_shape_profiles.png":
+            "654350e40124f0b3e9430c594adc71ae4e4688c31ac78f633c5797b3b3297009",
+    }
+    for filename, digest in expected.items():
+        file = folder / filename
+        assert file.is_file(), f"Archived source profile missing: {filename}"
+        assert hashlib.sha256(file.read_bytes()).hexdigest() == digest, \
+            f"Original archival SHA256 changed: {filename}"
+    with (folder / "centered_shape_individual_profiles_v1.csv").open(newline="", encoding="utf-8") as file:
+        rows = list(csv.DictReader(file))
+    panel_n = Counter(row["panel"] for row in rows)
+    assert panel_n == {
+        "eidolon": 20,
+        "hypsignathus": 24,
+        "phyllostomus_2022": 33,
+        "phyllostomus_2023": 16,
+        "phyllostomus_2016": 10,
+    }, panel_n
+    assert len(rows) == 103
+    for row in rows:
+        names = [name for name in row if name.startswith("bin_")]
+        assert len(names) == 10
+        bins = [float(row[name]) for name in names]
+        assert all(0 <= x <= 1 for x in bins)
+        assert abs(sum(bins) - 1) < 1e-9
+        assert abs(sum(bins[7:]) - float(row["upper_tail_mass_ge_100m"])) < 1e-9
+        assert abs(sum(bins[:3]) - float(row["lower_tail_mass_le_minus100m"])) < 1e-9
+        assert abs(sum(bins[4:6]) - float(row["central_mass_minus50_to_50m"])) < 1e-9
+    payload = json.loads((folder / "centered_shape_individual_profiles_v1.json").read_text(encoding="utf-8"))
+    assert len(payload["individual_profiles"]) == 103
+    assert payload["claim_boundary"]["new_hypothesis_test"] is False
+    assert (folder / "figure6_individual_centered_shape_profiles.png").read_bytes().startswith(
+        b"\x89PNG\r\n\x1a\n"
+    )
+    print("Original JAE Figure 6 archive PASS: exact hashes, 103 individuals, five panels, ten bins")
+
+
 def svg_gate() -> None:
     for name in IMAGES:
         file = HERE / name
@@ -104,5 +152,6 @@ def svg_gate() -> None:
 
 if __name__ == "__main__":
     science_gate()
+    original_jae_profile_gate()
     svg_gate()
     print("PASS — immutable-source summary semantics and SVG/XML structural gates")
