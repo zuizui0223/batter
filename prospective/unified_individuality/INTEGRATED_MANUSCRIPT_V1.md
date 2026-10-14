@@ -14,9 +14,9 @@ Individual specialization is often inferred from repeatable differences among an
 
 ## Introduction
 
-Populations can be composed of individuals that use resources or space in non-exchangeable ways even when their aggregate niche appears broad (Bolnick et al. 2003; Araújo et al. 2011). Such differences are common in movement studies, but the observation that identity predicts a future behavioral measurement is not by itself an explanation of how the difference arose, why it persists, or whether it produces ecological separation. These distinctions matter especially in three-dimensional movement systems: animals may repeatedly use different altitude distributions while still sharing the same horizontal places and vertical layers (Gámez and Harris 2022).
+Populations can be composed of individuals that use resources or space in non-exchangeable ways even when their aggregate niche appears broad (Bolnick et al. 2003; Araújo et al. 2011). Such differences are common in movement studies, but the observation that identity predicts a future behavioral measurement is not by itself an explanation of how the difference arose, why it persists, or whether it produces ecological separation. These distinctions matter especially in three-dimensional movement systems: different foraging depths, flight heights and spatial histories are established phenomena, but the stability of a full individual vertical probability distribution cannot be inferred from horizontal occupancy alone (Ratcliffe et al. 2013; McIntyre et al. 2017; Gámez and Harris 2022; Xing et al. 2023).
 
-Four logically different questions are often gathered under the label of behavioral individuality (Fig. 1). **Formation** asks how history, development and predispositions produce between-individual differences. **Maintenance** asks whether identifiable individual organization persists after a change in current conditions. **Expression** asks how that organization is realized as observable movements, vocalizations or task solutions. **Ecological consequence** asks whether the resulting differences generate resource or spatial partitioning. A context manipulation can change mean behavioral expression while preserving the ordering of individuals. A developmental treatment can alter phenotype without yielding a supported change in overall among-individual dispersion. A population may exhibit repeatable individual space-use probability distributions without individuals occupying mutually exclusive subspaces. None of these statements requires one shared latent policy measured identically in different species.
+Four logically different questions are often gathered under the label of behavioral individuality (Fig. 1). **Formation** asks how history, development and predispositions produce between-individual differences. **Maintenance** asks whether identifiable individual organization persists after a change in current conditions. **Expression** asks how that organization is realized as observable movements, vocalizations or task solutions. **Ecological consequence** asks whether the resulting differences generate resource or spatial partitioning. A context manipulation can change mean behavioral expression while preserving the ordering of individuals; individual-specific covariance structure also depends on context (Houslay et al. 2018; Mitchell and Houslay 2021). A developmental treatment can alter phenotype without yielding a supported change in overall among-individual dispersion (for related prior art, see Gallagher et al. 2026). A population may exhibit repeatable individual space-use probability distributions without individuals occupying mutually exclusive subspaces. None of these statements requires one shared latent policy measured identically in different species.
 
 The relevant ecological question is therefore not simply whether bats possess repeatable personalities or fly at different heights. It is **when persistent individual-specific behavioral information yields ecological differentiation and when it does not require ongoing spatial exclusion**. We use "individuality" operationally to mean predictive information associated with a biological individual under a declared within-study comparison. We reserve "additional partitioning" for spatial separation exceeding an explicit within-study exchangeability expectation, rather than treating any statistical difference between individuals as segregation.
 
@@ -24,7 +24,7 @@ Public bat datasets make it possible to examine these questions at several infer
 
 The evidence is deliberately heterogeneous. A within-experiment assignment permutation does not have the same estimand or sampling precision as a between-session vertical-distribution prediction, and separate species cannot establish an uninterrupted causal chain from developmental state to wild niche use. We therefore do not pool incompatible numerical scores or claim an experiment that directly connects a laboratory behavioral carrier to individual field niches. Instead, we organize the source-level tests around three central propositions: (1) current perturbations need not erase identity-bearing behavioral organization; (2) persistent organization need not retain the same detailed expression across tasks; and (3) persistent individual vertical-space use need not entail positive additional vertical segregation. Developmental and early-history tests delimit what is known about formation, while a separately frozen field bridge assesses whether laboratory-style carrier evidence generalizes to wild individuality.
 
-Our contribution is an integrated, evidence-ranked account of these propositions. The novelty is not the general existence of animal individuality, context-dependent behavior, or mean phenotype shifts without changes in scalar individuality. It is the joint evaluation of identity maintenance, representational portability, three-dimensional ecological overlap, and the limits of transferring causal interpretations between those levels.
+Our contribution is an integrated, evidence-ranked account of these propositions. The novelty is not the general existence of animal individuality, context-dependent behavior (also documented outside bats by Mathejczyk et al. 2026), or mean phenotype shifts without changes in scalar individuality. It is the joint evaluation of identity maintenance, representational portability, three-dimensional ecological overlap, and the limits of transferring causal interpretations between those levels.
 
 ## Materials and methods
 
@@ -58,7 +58,7 @@ For *Rhinolophus nippon*, a pre-specified coarse I/M movement representation was
 
 ### Repeated wild three-dimensional tracking
 
-The outcome-blind wild-data screen considered 23 Movebank bat parent datasets and admitted six tracking panels from four taxa: *Tadarida teniotis*, *Eidolon helvum*, *Hypsignathus monstrosus* and three *Phyllostomus hastatus* panels. Held-out same-individual and other-individual vertical predictors were compared under identical weights over mutually supported 5-km horizontal cells. Whole-session individual-label permutations calibrated each complete prediction pipeline. Each retained session was also median-centered before vertical binning to remove additive constant height offsets; this does not remove all state-dependent or variance-related device error.
+The outcome-blind wild-data screen considered 23 Movebank bat parent datasets and admitted six tracking panels from four taxa, building on established individual space-use and seasonal movement ecology (Kerches-Rogeri et al. 2020; Wang et al. 2023; O'Mara and Dechmann 2023): *Tadarida teniotis*, *Eidolon helvum*, *Hypsignathus monstrosus* and three *Phyllostomus hastatus* panels. Held-out same-individual and other-individual vertical predictors were compared under identical weights over mutually supported 5-km horizontal cells. Whole-session individual-label permutations calibrated each complete prediction pipeline. Each retained session was also median-centered before vertical binning to remove additive constant height offsets; this does not remove all state-dependent or variance-related device error.
 
 A later, explicitly **post-outcome**, ecological geometry and maintenance family evaluated four structurally eligible panels from *H. monstrosus* and *P. hastatus*. Terrain-relative height was calculated after local digital-elevation-model subtraction at 500-m spatial resolution. The family separately tested the repeatability of terrain-relative vertical configuration (V_rel), added vertical segregation (S_rel), and excess separation during local synchronous co-use. An inherited individual-label null calibrated S_rel, while phase-shift controls and dyad resampling were used for co-use; the latter yielded compatibility intervals, not formal equivalence tests. Persistence was further checked across nonadjacent days, common fine spatial and kinematic contexts, and same-night conspecific comparison.
 
@@ -158,7 +158,7 @@ The legitimate integration is at the level of **distinguishable empirical propos
 
 ### Which ecological mechanisms remain viable?
 
-A simple account consistent with the wild evidence is **reuse of a personal movement solution**: previous individual history remains predictive when the same general task is encountered again, even in shared space. This is a hypothesis about reuse of measurable structure, not a demonstration of memory or learned optimality. At least two nonexclusive pathways remain: individuals may spend different fractions of their time in behaviorally distinct states (commuting, feeding-site approach, social travel), or they may differ within the same state through biomechanics, micro-resource choice, fine route familiarity or responses to local atmospheric conditions.
+A simple account consistent with the wild evidence is **reuse of a personal movement solution**, for which stereotyped learned bat flight paths and site fidelity in other flying taxa provide biological plausibility but not direct evidence for the current animals (Barchi et al. 2013; Votier et al. 2017): previous individual history remains predictive when the same general task is encountered again, even in shared space. This is a hypothesis about reuse of measurable structure, not a demonstration of memory or learned optimality. At least two nonexclusive pathways remain: individuals may spend different fractions of their time in behaviorally distinct states (commuting, feeding-site approach, social travel), or they may differ within the same state through biomechanics, micro-resource choice, fine route familiarity or responses to local atmospheric conditions.
 
 Place × speed × turning matching and multi-day restrictions weaken the simplest versions of state-mixture and recent-carryover explanations, but unobserved state identities and sub-500-m environmental contrasts remain. A predeclared ERA5 continuous wind-reaction-norm family stopped before numerical vertical analysis when the *P. hastatus* 2023 panel retained seven evaluable individuals against eight required; it cannot be reported as a negative wind-mechanism test. Individual morphology, energetic costs, fine environmental response and exact resource use were not independently identified as causes. The existing public-data tests locate the mechanism question without settling it.
 
@@ -194,15 +194,17 @@ The six new manuscript figures are embedded for review in the [figure atlas](FIG
 
 **Figure 6. Persistent terrain-relative individuality without general added vertical separation.** Among the four eligible *H. monstrosus*/*P. hastatus* panels (two species), raw V_rel fidelity is supported in 4/4, positive S_rel segregation in 0/4 and extra contemporaneous co-use separation in 1/4. Panel B grey intervals show the central 95% **permutation-null** S_rel range; panel C grey intervals show 95% **dyad-bootstrap compatibility** bounds around excess co-use separation, neither equivalence tests nor formal evidence of zero. *H. monstrosus* S_rel has a negative-direction two-sided p = 0.0362; *P. hastatus* 2023 has a positive co-use result (+3.57 m, p = 0.0231) under an all-space 600-s definition. The 2016 co-use panel also uses 600 s but endpoint exclusion, whereas the first two panels use 60 s. These terrain and co-use results were developed post-outcome and retain that inferential status. [Open SVG](figures/FIGURE_6_FIDELITY_VS_PARTITIONING_V1.svg).
 
-## Selected working references
+## Consolidated working references
 
 Aharon G, Sadot M, Yovel Y. 2017. Bats use path integration rather than acoustic flow to assess flight distance along flyways. *Current Biology* 27:3650–3657.e3. doi:10.1016/j.cub.2017.10.012.
 
 Araújo MS, Bolnick DI, Layman CA. 2011. The ecological causes of individual specialisation. *Ecology Letters* 14:948–958. doi:10.1111/j.1461-0248.2011.01662.x.
 
-Bolnick DI, Svanbäck R, Fordyce JA, Yang LH, Davis JM, Hulsey CD, Forister ML. 2003. The ecology of individuals: incidence and implications of individual specialization. *American Naturalist* 161:1–28. doi:10.1086/343878.
+Barchi, J.R., Knowles, J.M. & Simmons, J.A. (2013). Spatial memory and stereotypy of flight paths by big brown bats in cluttered surroundings. *Journal of Experimental Biology*, 216, 1053–1063. doi:10.1242/jeb.073197.
 
 Boardman WSJ, et al. 2021. Spring foraging movements of an urban population of grey-headed flying foxes. *Journal of Urban Ecology* 7:juaa034. doi:10.1093/jue/juaa034.
+
+Bolnick DI, Svanbäck R, Fordyce JA, Yang LH, Davis JM, Hulsey CD, Forister ML. 2003. The ecology of individuals: incidence and implications of individual specialization. *American Naturalist* 161:1–28. doi:10.1086/343878.
 
 de Bivort BL. 2025. The developmental origins of behavioral individuality. *Annual Review of Cell and Developmental Biology* 41:331–352. doi:10.1146/annurev-cellbio-101323-025423.
 
@@ -212,19 +214,35 @@ Elie JE, et al. 2024. Role of auditory feedback for vocal production learning in
 
 Eveland KE, et al. 2026. Looking ahead: echolocation and flight behaviors of two fruit bat species navigating a corridor. *Journal of Comparative Physiology A*. doi:10.1007/s00359-026-01818-0.
 
+Fahr J, et al. 2015. Pronounced seasonal changes in the movement ecology of a highly gregarious central-place forager, the African straw-coloured fruit bat. *PLOS ONE* 10:e0138985. doi:10.1371/journal.pone.0138985.
+
 Foskolos I, et al. 2022. Echolocating Daubenton's bats are resilient to broadband, ultrasonic masking noise during active target approaches. *Journal of Experimental Biology* 225:jeb242957. doi:10.1242/jeb.242957.
 
-Fahr J, et al. 2015. Pronounced seasonal changes in the movement ecology of a highly gregarious central-place forager, the African straw-coloured fruit bat. *PLOS ONE* 10:e0138985. doi:10.1371/journal.pone.0138985.
+Gallagher JH, Perkes AD, Chang C-C, Chirila ES, Kacevas K, Laskowski KL. 2026. Born This Way: Individuality Is Seeded Before Birth and Robust to Ecological Stress. *Ecology Letters* 29:e70454. doi:10.1111/ele.70454.
 
 Gámez S, Harris NC. 2022. Conceptualizing the 3D niche and vertical space use. *Trends in Ecology & Evolution* 37:953–962. doi:10.1016/j.tree.2022.06.012.
 
 Harten L, Katz A, Goldshtein A, Handel M, Yovel Y. 2020. The ontogeny of a mammalian cognitive map in the real world. *Science* 369:194–197. doi:10.1126/science.aay3354.
 
+Houslay TM, Vierbuchen M, Grimmer AJ, Young AJ, Wilson AJ. 2018. Testing the stability of behavioural coping style across stress contexts in the Trinidadian guppy. *Functional Ecology* 32:424–438. doi:10.1111/1365-2435.12981.
+
 Hurme E, et al. 2019. Acoustic evaluation of behavioral states predicted from GPS tracking: a case study of a marine fishing bat. *Movement Ecology* 7:21. doi:10.1186/s40462-019-0163-7.
+
+Kerches-Rogeri, P., Niebuhr, B.B., Muylaert, R.L. & Mello, M.A.R. (2020). Individual specialization in the use of space by frugivorous bats. *Journal of Animal Ecology*, 89, 2584–2595. doi:10.1111/1365-2656.13339.
+
+Mathejczyk TF, Knief C, Haidar MA, Freitag F, McClary T, Wernet MF, Linneweber GA. 2026. Individuality across environmental context in *Drosophila melanogaster*. *eLife* 13:RP98171. doi:10.7554/eLife.98171.
+
+McIntyre, T., Bester, M.N., Bornemann, H., Tosh, C.A. & de Bruyn, P.J.N. (2017). Slow to change? Individual fidelity to three-dimensional foraging habitats in southern elephant seals, *Mirounga leonina*. *Animal Behaviour*, 127, 91–99. doi:10.1016/j.anbehav.2017.03.006.
+
+Mitchell DJ, Houslay TM. 2021. Context-dependent trait covariances: how plasticity shapes behavioral syndromes. *Behavioral Ecology* 32:25–29. doi:10.1093/beheco/araa115.
+
+O'Mara, M.T. & Dechmann, D.K.N. (2023). Greater spear-nosed bats commute long distances alone, rest together, but forage apart. *Animal Behaviour*, 204, 37–48. doi:10.1016/j.anbehav.2023.08.001.
 
 O'Mara MT, et al. 2021. Bats use topography and nocturnal updrafts to fly high and fast. *Current Biology* 31:1311–1316.e4. doi:10.1016/j.cub.2020.12.042.
 
 Rachum A, et al. 2025. Early experience affects foraging behavior of wild fruit bats more than their original behavioral predispositions. *eLife* 14:RP103220. doi:10.7554/eLife.103220.
+
+Ratcliffe, N., Takahashi, A., O'Sullivan, C., Adlard, S., Trathan, P.N., Harris, M.P. & Wanless, S. (2013). The roles of sex, mass and individual specialisation in partitioning foraging-depth niches of a pursuit-diving predator. *PLOS ONE*, 8, e79107. doi:10.1371/journal.pone.0079107.
 
 Reusch C, et al. 2023. Wind energy production in forests conflicts with tree-roosting bats. *Current Biology* 33:737–743.e3. doi:10.1016/j.cub.2022.12.050.
 
@@ -238,9 +256,15 @@ Teshima Y, et al. 2026. Evidence for latent regularities in echolocation-guided 
 
 Toledo S, et al. 2020. Cognitive map-based navigation in wild bats revealed by a new high-throughput tracking system. *Science* 369:188–193. doi:10.1126/science.aax6904.
 
+Votier, S.C., Fayet, A.L., Bearhop, S., Bodey, T.W., Clark, B.L., Grecian, J., Guilford, T., Hamer, K.C., Jeglinski, J.W.E., Morgan, G., Wakefield, E. & Patrick, S.C. (2017). Effects of age and reproductive status on individual foraging site fidelity in a long-lived marine predator. *Proceedings of the Royal Society B*, 284, 20171068. doi:10.1098/rspb.2017.1068.
+
+Wang, Z., Gong, L., Huang, Z., Geng, Y., Zhang, W., Si, M., Wu, H., Feng, J. & Jiang, T. (2023). Linking changes in individual specialization and population niche of space use across seasons in the great evening bat (*Ia io*). *Movement Ecology*, 11, 32. doi:10.1186/s40462-023-00394-1.
+
 White SJ, Pascall DJ, Wilson AJ. 2020. Towards a comparative approach to the structure of animal personality variation. *Behavioral Ecology* 31:340–351. doi:10.1093/beheco/arz198.
 
-**References are working entries carried from the two source manuscripts; completeness, year suffixes, source-data citations and target-journal formatting require a final bibliographic audit.**
+Xing, S., Leahy, L., Ashton, L.A., Kitching, R.L., Bonebrake, T.C. & Scheffers, B.R. (2023). Ecological patterns and processes in the vertical dimension of terrestrial ecosystems. *Journal of Animal Ecology*, 92, 538–551. doi:10.1111/1365-2656.13881.
+
+**These 34 scholarly entries reconcile the source manuscripts and restore key omitted prior art. DOI existence, page metadata, exact author-year styling and manuscript-specific citation completeness still require final human/target-journal verification; the 6 dataset-only DOI records and other source references remain tracked in [BIBLIOGRAPHY_MERGE_AUDIT_V1.md](BIBLIOGRAPHY_MERGE_AUDIT_V1.md).**
 
 ## Data, ethics and disclosure boundary
 
