@@ -38,7 +38,7 @@ function derive(original){
     {key:"phyllostomus_2016",label:"P. hastatus 2016",n:10,expected:45}
   ];
   const individuals=original.individual_profiles;
-  assertTrue(individuals.length===103,"Need 103 individuals");
+  assertTrue(individuals.length===103,"Need 103 panel-indexed profiles");
   assertTrue(new Set(individuals.map(r=>r.panel)).size===5,"Exactly 5 panels");
   for(const row of individuals){
     const p=row.bin_probabilities;
@@ -78,7 +78,7 @@ function derive(original){
   assertTrue(pair_rows.length===684,"Wrong pair count "+pair_rows.length);
   assertTrue(cohort_summary.length===12,"Wrong source cohort count "+cohort_summary.length);
   return {
-    schema_version:1,
+    schema_version:2,
     analysis_tier:"post-outcome descriptive vertical profile similarity; no new null, permutation, hypothesis test or biological evidence family",
     original_study_id:original.study_id,
     original_source_sha256:"9efd5d2914ad012905a004aee1114d715deaaf94e3f54689deb4f1208a188cb2",
@@ -86,7 +86,7 @@ function derive(original){
     definition:"Overlap=sum(min(p_i[b],p_j[b]))=1-0.5*sum(abs(p_i[b]-p_j[b]))",
     quantiles:"linear interpolation on sorted unordered within-cohort dyads at index (n-1)*q",
     scientific_limits:"One-dimensional centered vertical-profile SHAPE overlap, not geographic 3D habitat overlap, same horizontal support, co-use, foraging or independent biological replication; dyads are nonindependent and distributions arise from self-derived common-cell weights",
-    n_original_individuals:103,total_within_cohort_pairs:pair_rows.length,
+    n_source_panel_profile_records:103,n_distinct_literal_source_identifiers:101,global_animal_identity_verified:false,total_within_cohort_pairs:pair_rows.length,
     panel_summary,cohort_summary,pair_rows
   };
 }
@@ -112,7 +112,7 @@ function renderSvg(derived){
   function circle(x,y,r,color=accent){v.push('<circle cx="'+x+'" cy="'+y+'" r="'+r+'" fill="'+color+'" stroke="#FFFFFF" stroke-width="3"/>')}
   const X0=430,X1=1380,map=p=>X0+(X1-X0)*p;
   tx(60,75,"FIGURE S1  |  WITHIN-COHORT VERTICAL PROFILE OVERLAP",46,true);
-  tx(60,115,"Source-frozen self-predictor profiles, 10 session-centered height bins; original 103 bats",26,false,muted);
+  tx(60,115,"Source-frozen self-predictor profiles, 10 height bins; 103 panel-indexed records",26,false,muted);
   line(60,141,1710,141);
   tx(61,210,"Original tracking panel",29,true);
   tx(890,210,"Centered 1D overlap coefficient  O = sum(min(p_i, p_j))",28,true,ink,"middle");
@@ -156,7 +156,7 @@ function saveFiles(){
   fs.writeFileSync(path.join(dir,"FROZEN_PROFILE_OVERLAP_DESCRIPTIVE_V1.json"),output.summary,"utf8");
   fs.writeFileSync(path.join(dir,"ORIGINAL_PROFILE_WITHIN_COHORT_OVERLAP_PAIRS_V1.csv"),output.csv,"utf8");
   fs.writeFileSync(path.join(dir,"FIGURE_S1_WITHIN_COHORT_VERTICAL_SHAPE_OVERLAP_V1.svg"),output.figure,"utf8");
-  console.log("PASS original profile SHA",digest,"individuals",result.n_original_individuals,"dyads",result.total_within_cohort_pairs);
+  console.log("PASS original profile SHA",digest,"individuals",result.n_source_panel_profile_records,"dyads",result.total_within_cohort_pairs);
   for(const r of result.panel_summary)console.log(r.panel,"individuals",r.n_individuals,"dyads",r.n_pairs,"median",r.median.toFixed(6),"q10",r.p10.toFixed(6),"q90",r.p90.toFixed(6));
 }
 
