@@ -1,0 +1,685 @@
+panel,cohort,source_row_order_i,source_row_order_j,overlap
+eidolon,"Burkina Faso, Ouagadougou::2013",6,15,0.855309052693234
+eidolon,"Burkina Faso, Ouagadougou::2014",2,7,0.8867830165123465
+eidolon,"Burkina Faso, Ouagadougou::2014",2,11,0.8392463445542908
+eidolon,"Burkina Faso, Ouagadougou::2014",2,12,0.7672497876751124
+eidolon,"Burkina Faso, Ouagadougou::2014",2,13,0.8137592922022747
+eidolon,"Burkina Faso, Ouagadougou::2014",7,11,0.9412934127391287
+eidolon,"Burkina Faso, Ouagadougou::2014",7,12,0.8616684059981238
+eidolon,"Burkina Faso, Ouagadougou::2014",7,13,0.9231006280703112
+eidolon,"Burkina Faso, Ouagadougou::2014",11,12,0.9175694812156729
+eidolon,"Burkina Faso, Ouagadougou::2014",11,13,0.9682297520102263
+eidolon,"Burkina Faso, Ouagadougou::2014",12,13,0.9163254615372882
+eidolon,"Ghana, Accra::2011",18,20,0.902356646445254
+eidolon,"Ghana, Kibi (Old Tafo)::2013",5,9,0.8170361282855076
+eidolon,"Zambia, Kasanka::2014",1,4,0.8492834627668591
+eidolon,"Zambia, Kasanka::2014",1,8,0.8042680467336243
+eidolon,"Zambia, Kasanka::2014",1,10,0.6820247719410855
+eidolon,"Zambia, Kasanka::2014",1,14,0.6964003236161953
+eidolon,"Zambia, Kasanka::2014",1,16,0.19674575865151
+eidolon,"Zambia, Kasanka::2014",1,17,0.6083671636356129
+eidolon,"Zambia, Kasanka::2014",1,19,0.5405549450962572
+eidolon,"Zambia, Kasanka::2014",4,8,0.9549845839667653
+eidolon,"Zambia, Kasanka::2014",4,10,0.8121887506055381
+eidolon,"Zambia, Kasanka::2014",4,14,0.8353534364167983
+eidolon,"Zambia, Kasanka::2014",4,16,0.34746229588465094
+eidolon,"Zambia, Kasanka::2014",4,17,0.7238727874226282
+eidolon,"Zambia, Kasanka::2014",4,19,0.6885064462652674
+eidolon,"Zambia, Kasanka::2014",8,10,0.8524013571783162
+eidolon,"Zambia, Kasanka::2014",8,14,0.8771369283100308
+eidolon,"Zambia, Kasanka::2014",8,16,0.39247771191788566
+eidolon,"Zambia, Kasanka::2014",8,17,0.7499096996629507
+eidolon,"Zambia, Kasanka::2014",8,19,0.7302899381584999
+eidolon,"Zambia, Kasanka::2014",10,14,0.8461120719522933
+eidolon,"Zambia, Kasanka::2014",10,16,0.5147209867104244
+eidolon,"Zambia, Kasanka::2014",10,17,0.7266656951052718
+eidolon,"Zambia, Kasanka::2014",10,19,0.8254708475109364
+eidolon,"Zambia, Kasanka::2014",14,16,0.47561807528533373
+eidolon,"Zambia, Kasanka::2014",14,17,0.8628582336331186
+eidolon,"Zambia, Kasanka::2014",14,19,0.8441546214800619
+eidolon,"Zambia, Kasanka::2014",16,17,0.5121007505878917
+eidolon,"Zambia, Kasanka::2014",16,19,0.5623276644516441
+eidolon,"Zambia, Kasanka::2014",17,19,0.8295409051029128
+hypsignathus,Lek Njoukou::2020,1,2,0.956286467976081
+hypsignathus,Lek Njoukou::2020,1,3,0.9411951760627428
+hypsignathus,Lek Njoukou::2020,1,4,0.9639827098359144
+hypsignathus,Lek Njoukou::2020,1,5,0.7183196590427814
+hypsignathus,Lek Njoukou::2020,1,6,0.9547604246684418
+hypsignathus,Lek Njoukou::2020,1,7,0.7894212830496263
+hypsignathus,Lek Njoukou::2020,1,8,0.9340851516455289
+hypsignathus,Lek Njoukou::2020,1,9,0.632459256781843
+hypsignathus,Lek Njoukou::2020,1,10,0.9181777625725291
+hypsignathus,Lek Njoukou::2020,1,11,0.937832433843846
+hypsignathus,Lek Njoukou::2020,1,12,0.8741259061793105
+hypsignathus,Lek Njoukou::2020,1,13,0.7471712243156299
+hypsignathus,Lek Njoukou::2020,1,14,0.8491536726379634
+hypsignathus,Lek Njoukou::2020,1,15,0.6751234436553495
+hypsignathus,Lek Njoukou::2020,1,16,0.7748253452792748
+hypsignathus,Lek Njoukou::2020,1,17,0.829271498766017
+hypsignathus,Lek Njoukou::2020,1,18,0.741171301879008
+hypsignathus,Lek Njoukou::2020,1,19,0.7295295983133883
+hypsignathus,Lek Njoukou::2020,1,20,0.744077800242517
+hypsignathus,Lek Njoukou::2020,1,21,0.5479999225934538
+hypsignathus,Lek Njoukou::2020,1,22,0.6316892147326738
+hypsignathus,Lek Njoukou::2020,1,23,0.6490878041670562
+hypsignathus,Lek Njoukou::2020,1,24,0.6177953757977763
+hypsignathus,Lek Njoukou::2020,2,3,0.9334894372201269
+hypsignathus,Lek Njoukou::2020,2,4,0.9649999449551607
+hypsignathus,Lek Njoukou::2020,2,5,0.7436116474548052
+hypsignathus,Lek Njoukou::2020,2,6,0.9760933244513601
+hypsignathus,Lek Njoukou::2020,2,7,0.8145814516831307
+hypsignathus,Lek Njoukou::2020,2,8,0.9643713609111852
+hypsignathus,Lek Njoukou::2020,2,9,0.6576194254153475
+hypsignathus,Lek Njoukou::2020,2,10,0.939934733158154
+hypsignathus,Lek Njoukou::2020,2,11,0.9510979233098112
+hypsignathus,Lek Njoukou::2020,2,12,0.899286074812815
+hypsignathus,Lek Njoukou::2020,2,13,0.7723313929491343
+hypsignathus,Lek Njoukou::2020,2,14,0.8600953968403806
+hypsignathus,Lek Njoukou::2020,2,15,0.7002836122888538
+hypsignathus,Lek Njoukou::2020,2,16,0.7999855139127791
+hypsignathus,Lek Njoukou::2020,2,17,0.8140341119687708
+hypsignathus,Lek Njoukou::2020,2,18,0.7663314705125125
+hypsignathus,Lek Njoukou::2020,2,19,0.7546897669468927
+hypsignathus,Lek Njoukou::2020,2,20,0.7692379688760215
+hypsignathus,Lek Njoukou::2020,2,21,0.5731600912269582
+hypsignathus,Lek Njoukou::2020,2,22,0.6568493833661783
+hypsignathus,Lek Njoukou::2020,2,23,0.6742479728005607
+hypsignathus,Lek Njoukou::2020,2,24,0.6429555444312806
+hypsignathus,Lek Njoukou::2020,3,4,0.9373325998955356
+hypsignathus,Lek Njoukou::2020,3,5,0.7329016401527322
+hypsignathus,Lek Njoukou::2020,3,6,0.9194092536811019
+hypsignathus,Lek Njoukou::2020,3,7,0.8025706407844071
+hypsignathus,Lek Njoukou::2020,3,8,0.9050901238269414
+hypsignathus,Lek Njoukou::2020,3,9,0.6456086145166238
+hypsignathus,Lek Njoukou::2020,3,10,0.9283318980030181
+hypsignathus,Lek Njoukou::2020,3,11,0.916775170166975
+hypsignathus,Lek Njoukou::2020,3,12,0.8872752639140914
+hypsignathus,Lek Njoukou::2020,3,13,0.7603205820504108
+hypsignathus,Lek Njoukou::2020,3,14,0.8484925616852448
+hypsignathus,Lek Njoukou::2020,3,15,0.6882728013901303
+hypsignathus,Lek Njoukou::2020,3,16,0.7650503737144001
+hypsignathus,Lek Njoukou::2020,3,17,0.8717708664712515
+hypsignathus,Lek Njoukou::2020,3,18,0.7543206596137888
+hypsignathus,Lek Njoukou::2020,3,19,0.7426789560481691
+hypsignathus,Lek Njoukou::2020,3,20,0.7572271579772978
+hypsignathus,Lek Njoukou::2020,3,21,0.5611492803282346
+hypsignathus,Lek Njoukou::2020,3,22,0.6448385724674546
+hypsignathus,Lek Njoukou::2020,3,23,0.662237161901837
+hypsignathus,Lek Njoukou::2020,3,24,0.6309447335325571
+hypsignathus,Lek Njoukou::2020,4,5,0.7192798952888708
+hypsignathus,Lek Njoukou::2020,4,6,0.9743803230041979
+hypsignathus,Lek Njoukou::2020,4,7,0.787117109384763
+hypsignathus,Lek Njoukou::2020,4,8,0.957036872225889
+hypsignathus,Lek Njoukou::2020,4,9,0.6324807167100224
+hypsignathus,Lek Njoukou::2020,4,10,0.9181992225007085
+hypsignathus,Lek Njoukou::2020,4,11,0.9378538937720253
+hypsignathus,Lek Njoukou::2020,4,12,0.8741473661074899
+hypsignathus,Lek Njoukou::2020,4,13,0.7471926842438092
+hypsignathus,Lek Njoukou::2020,4,14,0.8491751325661427
+hypsignathus,Lek Njoukou::2020,4,15,0.6751449035835289
+hypsignathus,Lek Njoukou::2020,4,16,0.7748468052074541
+hypsignathus,Lek Njoukou::2020,4,17,0.8207306317759058
+hypsignathus,Lek Njoukou::2020,4,18,0.7411927618071874
+hypsignathus,Lek Njoukou::2020,4,19,0.7295510582415676
+hypsignathus,Lek Njoukou::2020,4,20,0.7440992601706964
+hypsignathus,Lek Njoukou::2020,4,21,0.5480213825216331
+hypsignathus,Lek Njoukou::2020,4,22,0.6317106746608532
+hypsignathus,Lek Njoukou::2020,4,23,0.6491092640952356
+hypsignathus,Lek Njoukou::2020,4,24,0.6178168357259556
+hypsignathus,Lek Njoukou::2020,5,6,0.7407506765385268
+hypsignathus,Lek Njoukou::2020,5,7,0.9115007200515907
+hypsignathus,Lek Njoukou::2020,5,8,0.7477643941595641
+hypsignathus,Lek Njoukou::2020,5,9,0.8868726675427816
+hypsignathus,Lek Njoukou::2020,5,10,0.774771308162209
+hypsignathus,Lek Njoukou::2020,5,11,0.7517478874341302
+hypsignathus,Lek Njoukou::2020,5,12,0.8126817346347416
+hypsignathus,Lek Njoukou::2020,5,13,0.7921241748481411
+hypsignathus,Lek Njoukou::2020,5,14,0.7859770918204698
+hypsignathus,Lek Njoukou::2020,5,15,0.8278277681716077
+hypsignathus,Lek Njoukou::2020,5,16,0.7015929789312392
+hypsignathus,Lek Njoukou::2020,5,17,0.7521313000142817
+hypsignathus,Lek Njoukou::2020,5,18,0.8140534478365511
+hypsignathus,Lek Njoukou::2020,5,19,0.672648502213878
+hypsignathus,Lek Njoukou::2020,5,20,0.8174419788053221
+hypsignathus,Lek Njoukou::2020,5,21,0.7818246792291458
+hypsignathus,Lek Njoukou::2020,5,22,0.6854299531904825
+hypsignathus,Lek Njoukou::2020,5,23,0.7421543705618716
+hypsignathus,Lek Njoukou::2020,5,24,0.6101629750448391
+hypsignathus,Lek Njoukou::2020,6,7,0.8114358861874738
+hypsignathus,Lek Njoukou::2020,6,8,0.9755907028561541
+hypsignathus,Lek Njoukou::2020,6,9,0.6569943625374992
+hypsignathus,Lek Njoukou::2020,6,10,0.9346673387508313
+hypsignathus,Lek Njoukou::2020,6,11,0.9623675395995023
+hypsignathus,Lek Njoukou::2020,6,12,0.8986610119349668
+hypsignathus,Lek Njoukou::2020,6,13,0.7717063300712862
+hypsignathus,Lek Njoukou::2020,6,14,0.872348861043101
+hypsignathus,Lek Njoukou::2020,6,15,0.6996585494110057
+hypsignathus,Lek Njoukou::2020,6,16,0.7993604510349309
+hypsignathus,Lek Njoukou::2020,6,17,0.8118467724184747
+hypsignathus,Lek Njoukou::2020,6,18,0.7657064076346644
+hypsignathus,Lek Njoukou::2020,6,19,0.7540647040690446
+hypsignathus,Lek Njoukou::2020,6,20,0.7686129059981733
+hypsignathus,Lek Njoukou::2020,6,21,0.5725350283491101
+hypsignathus,Lek Njoukou::2020,6,22,0.6562243204883301
+hypsignathus,Lek Njoukou::2020,6,23,0.6736229099227126
+hypsignathus,Lek Njoukou::2020,6,24,0.6423304815534324
+hypsignathus,Lek Njoukou::2020,7,8,0.8156016082554562
+hypsignathus,Lek Njoukou::2020,7,9,0.842604520340534
+hypsignathus,Lek Njoukou::2020,7,10,0.853503261886649
+hypsignathus,Lek Njoukou::2020,7,11,0.8304798411585703
+hypsignathus,Lek Njoukou::2020,7,12,0.8914136883591818
+hypsignathus,Lek Njoukou::2020,7,13,0.8792768275679462
+hypsignathus,Lek Njoukou::2020,7,14,0.8654841218137369
+hypsignathus,Lek Njoukou::2020,7,15,0.8857021606057233
+hypsignathus,Lek Njoukou::2020,7,16,0.7878238926041538
+hypsignathus,Lek Njoukou::2020,7,17,0.809193667133013
+hypsignathus,Lek Njoukou::2020,7,18,0.9006612645823489
+hypsignathus,Lek Njoukou::2020,7,19,0.759801154933683
+hypsignathus,Lek Njoukou::2020,7,20,0.8792466727749164
+hypsignathus,Lek Njoukou::2020,7,21,0.7585786395438278
+hypsignathus,Lek Njoukou::2020,7,22,0.7677290968474005
+hypsignathus,Lek Njoukou::2020,7,23,0.8244535142187898
+hypsignathus,Lek Njoukou::2020,7,24,0.6969465688925877
+hypsignathus,Lek Njoukou::2020,8,9,0.6679940448909746
+hypsignathus,Lek Njoukou::2020,8,10,0.92588009779762
+hypsignathus,Lek Njoukou::2020,8,11,0.9488810422503315
+hypsignathus,Lek Njoukou::2020,8,12,0.9096606942884421
+hypsignathus,Lek Njoukou::2020,8,13,0.7827060124247615
+hypsignathus,Lek Njoukou::2020,8,14,0.8772317677444296
+hypsignathus,Lek Njoukou::2020,8,15,0.7106582317644811
+hypsignathus,Lek Njoukou::2020,8,16,0.8103601333884063
+hypsignathus,Lek Njoukou::2020,8,17,0.8003882112122686
+hypsignathus,Lek Njoukou::2020,8,18,0.7767060899881396
+hypsignathus,Lek Njoukou::2020,8,19,0.7650643864225198
+hypsignathus,Lek Njoukou::2020,8,20,0.7796125883516486
+hypsignathus,Lek Njoukou::2020,8,21,0.5835347107025854
+hypsignathus,Lek Njoukou::2020,8,22,0.6672240028418054
+hypsignathus,Lek Njoukou::2020,8,23,0.6846225922761878
+hypsignathus,Lek Njoukou::2020,8,24,0.6512352625010677
+hypsignathus,Lek Njoukou::2020,9,10,0.7059954944523
+hypsignathus,Lek Njoukou::2020,9,11,0.6797871021688882
+hypsignathus,Lek Njoukou::2020,9,12,0.7480869431417281
+hypsignathus,Lek Njoukou::2020,9,13,0.8403261150322504
+hypsignathus,Lek Njoukou::2020,9,14,0.7453979878590212
+hypsignathus,Lek Njoukou::2020,9,15,0.8970687455278259
+hypsignathus,Lek Njoukou::2020,9,16,0.7842889981502947
+hypsignathus,Lek Njoukou::2020,9,17,0.6875365085212682
+hypsignathus,Lek Njoukou::2020,9,18,0.8230084500451209
+hypsignathus,Lek Njoukou::2020,9,19,0.7585940116853777
+hypsignathus,Lek Njoukou::2020,9,20,0.7873903326780975
+hypsignathus,Lek Njoukou::2020,9,21,0.8510719717029042
+hypsignathus,Lek Njoukou::2020,9,22,0.7815406988445236
+hypsignathus,Lek Njoukou::2020,9,23,0.8297250510927093
+hypsignathus,Lek Njoukou::2020,9,24,0.6937160973845379
+hypsignathus,Lek Njoukou::2020,10,11,0.9620509196532565
+hypsignathus,Lek Njoukou::2020,10,12,0.9554698677760849
+hypsignathus,Lek Njoukou::2020,10,13,0.8285553695170554
+hypsignathus,Lek Njoukou::2020,10,14,0.9201606636822267
+hypsignathus,Lek Njoukou::2020,10,15,0.7569456810828202
+hypsignathus,Lek Njoukou::2020,10,16,0.8143006233752845
+hypsignathus,Lek Njoukou::2020,10,17,0.8554946351594385
+hypsignathus,Lek Njoukou::2020,10,18,0.8229935393064788
+hypsignathus,Lek Njoukou::2020,10,19,0.8012098073006967
+hypsignathus,Lek Njoukou::2020,10,20,0.8259000376699878
+hypsignathus,Lek Njoukou::2020,10,21,0.6298221600209247
+hypsignathus,Lek Njoukou::2020,10,22,0.7135114521601446
+hypsignathus,Lek Njoukou::2020,10,23,0.730910041594527
+hypsignathus,Lek Njoukou::2020,10,24,0.6749330483230628
+hypsignathus,Lek Njoukou::2020,11,12,0.9292578024026706
+hypsignathus,Lek Njoukou::2020,11,13,0.8054525855260722
+hypsignathus,Lek Njoukou::2020,11,14,0.9089974735305695
+hypsignathus,Lek Njoukou::2020,11,15,0.7372910098115035
+hypsignathus,Lek Njoukou::2020,11,16,0.8194110748390345
+hypsignathus,Lek Njoukou::2020,11,17,0.8389561505204445
+hypsignathus,Lek Njoukou::2020,11,18,0.8033388680351622
+hypsignathus,Lek Njoukou::2020,11,19,0.7916971644695424
+hypsignathus,Lek Njoukou::2020,11,20,0.8062453663986712
+hypsignathus,Lek Njoukou::2020,11,21,0.6101674887496079
+hypsignathus,Lek Njoukou::2020,11,22,0.693856780888828
+hypsignathus,Lek Njoukou::2020,11,23,0.7112553703232104
+hypsignathus,Lek Njoukou::2020,11,24,0.6646584068419922
+hypsignathus,Lek Njoukou::2020,12,13,0.8730453181363195
+hypsignathus,Lek Njoukou::2020,12,14,0.9267513659431221
+hypsignathus,Lek Njoukou::2020,12,15,0.800997537476039
+hypsignathus,Lek Njoukou::2020,12,16,0.8455733070315178
+hypsignathus,Lek Njoukou::2020,12,17,0.833679681407897
+hypsignathus,Lek Njoukou::2020,12,18,0.8670453956996975
+hypsignathus,Lek Njoukou::2020,12,19,0.8363336609743491
+hypsignathus,Lek Njoukou::2020,12,20,0.8387997451980451
+hypsignathus,Lek Njoukou::2020,12,21,0.6738740164141434
+hypsignathus,Lek Njoukou::2020,12,22,0.7575633085533633
+hypsignathus,Lek Njoukou::2020,12,23,0.7749618979877458
+hypsignathus,Lek Njoukou::2020,12,24,0.7162301642943721
+hypsignathus,Lek Njoukou::2020,13,14,0.8750321263537968
+hypsignathus,Lek Njoukou::2020,13,15,0.9149862093047763
+hypsignathus,Lek Njoukou::2020,13,16,0.8858526028586405
+hypsignathus,Lek Njoukou::2020,13,17,0.7697251074528073
+hypsignathus,Lek Njoukou::2020,13,18,0.9361810203253143
+hypsignathus,Lek Njoukou::2020,13,19,0.8805243273657368
+hypsignathus,Lek Njoukou::2020,13,20,0.8523836924517258
+hypsignathus,Lek Njoukou::2020,13,21,0.8008286982778239
+hypsignathus,Lek Njoukou::2020,13,22,0.8759208913858301
+hypsignathus,Lek Njoukou::2020,13,23,0.8628348339143418
+hypsignathus,Lek Njoukou::2020,13,24,0.7993422507679098
+hypsignathus,Lek Njoukou::2020,14,15,0.8259697710173861
+hypsignathus,Lek Njoukou::2020,14,16,0.8189594656694131
+hypsignathus,Lek Njoukou::2020,14,17,0.828273645615335
+hypsignathus,Lek Njoukou::2020,14,18,0.8912113745846114
+hypsignathus,Lek Njoukou::2020,14,19,0.825604014042618
+hypsignathus,Lek Njoukou::2020,14,20,0.8949241276045536
+hypsignathus,Lek Njoukou::2020,14,21,0.6988462499554905
+hypsignathus,Lek Njoukou::2020,14,22,0.7674776116223816
+hypsignathus,Lek Njoukou::2020,14,23,0.7916618071576765
+hypsignathus,Lek Njoukou::2020,14,24,0.6743743771217066
+hypsignathus,Lek Njoukou::2020,15,16,0.8242886238725963
+hypsignathus,Lek Njoukou::2020,15,17,0.7799767017648886
+hypsignathus,Lek Njoukou::2020,15,18,0.9190535194808599
+hypsignathus,Lek Njoukou::2020,15,19,0.8317508539557547
+hypsignathus,Lek Njoukou::2020,15,20,0.8834354021138366
+hypsignathus,Lek Njoukou::2020,15,21,0.866158191236529
+hypsignathus,Lek Njoukou::2020,15,22,0.8453748297218806
+hypsignathus,Lek Njoukou::2020,15,23,0.871661889904489
+hypsignathus,Lek Njoukou::2020,15,24,0.7386390827395323
+hypsignathus,Lek Njoukou::2020,16,17,0.6860994139829112
+hypsignathus,Lek Njoukou::2020,16,18,0.8400289214357796
+hypsignathus,Lek Njoukou::2020,16,19,0.9317791692151265
+hypsignathus,Lek Njoukou::2020,16,20,0.7618463562240009
+hypsignathus,Lek Njoukou::2020,16,21,0.7731745773141794
+hypsignathus,Lek Njoukou::2020,16,22,0.8568638694533993
+hypsignathus,Lek Njoukou::2020,16,23,0.8426410767236027
+hypsignathus,Lek Njoukou::2020,16,24,0.8077117544247083
+hypsignathus,Lek Njoukou::2020,17,18,0.810014635880939
+hypsignathus,Lek Njoukou::2020,17,19,0.7155353873680796
+hypsignathus,Lek Njoukou::2020,17,20,0.8495073857030092
+hypsignathus,Lek Njoukou::2020,17,21,0.6550107123070564
+hypsignathus,Lek Njoukou::2020,17,22,0.6728631453971556
+hypsignathus,Lek Njoukou::2020,17,23,0.7143222374157413
+hypsignathus,Lek Njoukou::2020,17,24,0.6299030063575303
+hypsignathus,Lek Njoukou::2020,18,19,0.847491151518938
+hypsignathus,Lek Njoukou::2020,18,20,0.9162026721264116
+hypsignathus,Lek Njoukou::2020,18,21,0.8059025403108011
+hypsignathus,Lek Njoukou::2020,18,22,0.8418732858855906
+hypsignathus,Lek Njoukou::2020,18,23,0.8808125457499526
+hypsignathus,Lek Njoukou::2020,18,24,0.7543793803027156
+hypsignathus,Lek Njoukou::2020,19,20,0.7693085863071593
+hypsignathus,Lek Njoukou::2020,19,21,0.8148267229348963
+hypsignathus,Lek Njoukou::2020,19,22,0.8969498494822208
+hypsignathus,Lek Njoukou::2020,19,23,0.8570318711071198
+hypsignathus,Lek Njoukou::2020,19,24,0.841768090621752
+hypsignathus,Lek Njoukou::2020,20,21,0.7731281434681399
+hypsignathus,Lek Njoukou::2020,20,22,0.779156386088089
+hypsignathus,Lek Njoukou::2020,20,23,0.8328392579816927
+hypsignathus,Lek Njoukou::2020,20,24,0.6761968150909369
+hypsignathus,Lek Njoukou::2020,21,22,0.8848446710732503
+hypsignathus,Lek Njoukou::2020,21,23,0.822028334514411
+hypsignathus,Lek Njoukou::2020,21,24,0.7875342293137656
+hypsignathus,Lek Njoukou::2020,22,23,0.8897397506497597
+hypsignathus,Lek Njoukou::2020,22,24,0.8824036739650233
+hypsignathus,Lek Njoukou::2020,23,24,0.7971168042427905
+phyllostomus_2022,Aj-cave (Colony 2)::2022,1,3,0.9472291280080757
+phyllostomus_2022,Aj-cave (Colony 2)::2022,1,4,0.9622159021859386
+phyllostomus_2022,Aj-cave (Colony 2)::2022,1,6,0.8880744878628528
+phyllostomus_2022,Aj-cave (Colony 2)::2022,1,9,0.9054051102178895
+phyllostomus_2022,Aj-cave (Colony 2)::2022,1,10,0.9045642239686499
+phyllostomus_2022,Aj-cave (Colony 2)::2022,1,11,0.9111542037113649
+phyllostomus_2022,Aj-cave (Colony 2)::2022,1,13,0.8667052027182398
+phyllostomus_2022,Aj-cave (Colony 2)::2022,1,15,0.8333525056967371
+phyllostomus_2022,Aj-cave (Colony 2)::2022,1,17,0.906417790187442
+phyllostomus_2022,Aj-cave (Colony 2)::2022,1,21,0.8443666398728762
+phyllostomus_2022,Aj-cave (Colony 2)::2022,1,24,0.8283984846553064
+phyllostomus_2022,Aj-cave (Colony 2)::2022,1,27,0.6753728547698133
+phyllostomus_2022,Aj-cave (Colony 2)::2022,1,32,0.695490696455265
+phyllostomus_2022,Aj-cave (Colony 2)::2022,3,4,0.9593519026135567
+phyllostomus_2022,Aj-cave (Colony 2)::2022,3,6,0.9335549214436887
+phyllostomus_2022,Aj-cave (Colony 2)::2022,3,9,0.9507664789023871
+phyllostomus_2022,Aj-cave (Colony 2)::2022,3,10,0.9510573982160124
+phyllostomus_2022,Aj-cave (Colony 2)::2022,3,11,0.9597450539723411
+phyllostomus_2022,Aj-cave (Colony 2)::2022,3,13,0.915296052979216
+phyllostomus_2022,Aj-cave (Colony 2)::2022,3,15,0.8820158218476608
+phyllostomus_2022,Aj-cave (Colony 2)::2022,3,17,0.9439151794939307
+phyllostomus_2022,Aj-cave (Colony 2)::2022,3,21,0.8929574901338524
+phyllostomus_2022,Aj-cave (Colony 2)::2022,3,24,0.8728927381591318
+phyllostomus_2022,Aj-cave (Colony 2)::2022,3,27,0.7239637050307894
+phyllostomus_2022,Aj-cave (Colony 2)::2022,3,32,0.7440815467162412
+phyllostomus_2022,Aj-cave (Colony 2)::2022,4,6,0.9239056327064934
+phyllostomus_2022,Aj-cave (Colony 2)::2022,4,9,0.9412362550615301
+phyllostomus_2022,Aj-cave (Colony 2)::2022,4,10,0.9396859474662933
+phyllostomus_2022,Aj-cave (Colony 2)::2022,4,11,0.9426277666281376
+phyllostomus_2022,Aj-cave (Colony 2)::2022,4,13,0.9025363475618804
+phyllostomus_2022,Aj-cave (Colony 2)::2022,4,15,0.8604011687161186
+phyllostomus_2022,Aj-cave (Colony 2)::2022,4,17,0.9380880152418491
+phyllostomus_2022,Aj-cave (Colony 2)::2022,4,21,0.8801977847165168
+phyllostomus_2022,Aj-cave (Colony 2)::2022,4,24,0.8642296294989471
+phyllostomus_2022,Aj-cave (Colony 2)::2022,4,27,0.7112039996134538
+phyllostomus_2022,Aj-cave (Colony 2)::2022,4,32,0.7313218412989055
+phyllostomus_2022,Aj-cave (Colony 2)::2022,6,9,0.9617645084133406
+phyllostomus_2022,Aj-cave (Colony 2)::2022,6,10,0.9668135149229816
+phyllostomus_2022,Aj-cave (Colony 2)::2022,6,11,0.9629403111803995
+phyllostomus_2022,Aj-cave (Colony 2)::2022,6,13,0.9700054210325451
+phyllostomus_2022,Aj-cave (Colony 2)::2022,6,15,0.9326983662604496
+phyllostomus_2022,Aj-cave (Colony 2)::2022,6,17,0.9483138171108344
+phyllostomus_2022,Aj-cave (Colony 2)::2022,6,21,0.9425526783012956
+phyllostomus_2022,Aj-cave (Colony 2)::2022,6,24,0.9187299070224733
+phyllostomus_2022,Aj-cave (Colony 2)::2022,6,27,0.7869306572310378
+phyllostomus_2022,Aj-cave (Colony 2)::2022,6,32,0.8074162085924123
+phyllostomus_2022,Aj-cave (Colony 2)::2022,9,10,0.9724289130491567
+phyllostomus_2022,Aj-cave (Colony 2)::2022,9,11,0.9753784277833594
+phyllostomus_2022,Aj-cave (Colony 2)::2022,9,13,0.960801011204937
+phyllostomus_2022,Aj-cave (Colony 2)::2022,9,15,0.9167057556477194
+phyllostomus_2022,Aj-cave (Colony 2)::2022,9,17,0.9517477604790671
+phyllostomus_2022,Aj-cave (Colony 2)::2022,9,21,0.9389615296549866
+phyllostomus_2022,Aj-cave (Colony 2)::2022,9,24,0.911857798578327
+phyllostomus_2022,Aj-cave (Colony 2)::2022,9,27,0.7699677445519236
+phyllostomus_2022,Aj-cave (Colony 2)::2022,9,32,0.7900855862373753
+phyllostomus_2022,Aj-cave (Colony 2)::2022,10,11,0.9740744178325189
+phyllostomus_2022,Aj-cave (Colony 2)::2022,10,13,0.9568628061515786
+phyllostomus_2022,Aj-cave (Colony 2)::2022,10,15,0.9200492671245772
+phyllostomus_2022,Aj-cave (Colony 2)::2022,10,17,0.9389183073755679
+phyllostomus_2022,Aj-cave (Colony 2)::2022,10,21,0.9398024159042262
+phyllostomus_2022,Aj-cave (Colony 2)::2022,10,24,0.9152364357034326
+phyllostomus_2022,Aj-cave (Colony 2)::2022,10,27,0.7708086308011635
+phyllostomus_2022,Aj-cave (Colony 2)::2022,10,32,0.790926472486615
+phyllostomus_2022,Aj-cave (Colony 2)::2022,11,13,0.9555509990068747
+phyllostomus_2022,Aj-cave (Colony 2)::2022,11,15,0.9177734020879807
+phyllostomus_2022,Aj-cave (Colony 2)::2022,11,17,0.9605297748369301
+phyllostomus_2022,Aj-cave (Colony 2)::2022,11,21,0.932391680402995
+phyllostomus_2022,Aj-cave (Colony 2)::2022,11,24,0.9025137626536184
+phyllostomus_2022,Aj-cave (Colony 2)::2022,11,27,0.7642186510584481
+phyllostomus_2022,Aj-cave (Colony 2)::2022,11,32,0.7843364927438998
+phyllostomus_2022,Aj-cave (Colony 2)::2022,13,15,0.9542444137525374
+phyllostomus_2022,Aj-cave (Colony 2)::2022,13,17,0.9419171732299559
+phyllostomus_2022,Aj-cave (Colony 2)::2022,13,21,0.9518799171276822
+phyllostomus_2022,Aj-cave (Colony 2)::2022,13,24,0.9275408651615431
+phyllostomus_2022,Aj-cave (Colony 2)::2022,13,27,0.8086676520515736
+phyllostomus_2022,Aj-cave (Colony 2)::2022,13,32,0.8287854937370251
+phyllostomus_2022,Aj-cave (Colony 2)::2022,15,17,0.9056493432694545
+phyllostomus_2022,Aj-cave (Colony 2)::2022,15,21,0.9474540859537177
+phyllostomus_2022,Aj-cave (Colony 2)::2022,15,24,0.9194973732778413
+phyllostomus_2022,Aj-cave (Colony 2)::2022,15,27,0.836936633796682
+phyllostomus_2022,Aj-cave (Colony 2)::2022,15,32,0.8597176195874099
+phyllostomus_2022,Aj-cave (Colony 2)::2022,17,21,0.9279897817771489
+phyllostomus_2022,Aj-cave (Colony 2)::2022,17,24,0.8820153246200192
+phyllostomus_2022,Aj-cave (Colony 2)::2022,17,27,0.7689550645823713
+phyllostomus_2022,Aj-cave (Colony 2)::2022,17,32,0.789072906267823
+phyllostomus_2022,Aj-cave (Colony 2)::2022,21,24,0.9005267562896164
+phyllostomus_2022,Aj-cave (Colony 2)::2022,21,27,0.827298066426942
+phyllostomus_2022,Aj-cave (Colony 2)::2022,21,32,0.8511240565823888
+phyllostomus_2022,Aj-cave (Colony 2)::2022,24,27,0.8457007920169153
+phyllostomus_2022,Aj-cave (Colony 2)::2022,24,32,0.8587646936291796
+phyllostomus_2022,Aj-cave (Colony 2)::2022,27,32,0.8316473365054321
+phyllostomus_2022,La Gruta (Colony 1)::2022,2,5,0.9184238393345647
+phyllostomus_2022,La Gruta (Colony 1)::2022,2,7,0.9404571087450871
+phyllostomus_2022,La Gruta (Colony 1)::2022,2,8,0.9418467406199773
+phyllostomus_2022,La Gruta (Colony 1)::2022,2,12,0.9370080437031625
+phyllostomus_2022,La Gruta (Colony 1)::2022,2,14,0.8999115845434372
+phyllostomus_2022,La Gruta (Colony 1)::2022,2,16,0.9436114366980932
+phyllostomus_2022,La Gruta (Colony 1)::2022,2,18,0.9282395979353976
+phyllostomus_2022,La Gruta (Colony 1)::2022,2,19,0.9391422065375302
+phyllostomus_2022,La Gruta (Colony 1)::2022,2,20,0.9368415606703356
+phyllostomus_2022,La Gruta (Colony 1)::2022,2,22,0.9178675021467942
+phyllostomus_2022,La Gruta (Colony 1)::2022,2,23,0.9177737955196725
+phyllostomus_2022,La Gruta (Colony 1)::2022,2,25,0.9029531373871469
+phyllostomus_2022,La Gruta (Colony 1)::2022,2,26,0.9041072883334518
+phyllostomus_2022,La Gruta (Colony 1)::2022,2,28,0.8643244437784539
+phyllostomus_2022,La Gruta (Colony 1)::2022,2,29,0.889695405775983
+phyllostomus_2022,La Gruta (Colony 1)::2022,2,30,0.878494126183565
+phyllostomus_2022,La Gruta (Colony 1)::2022,2,31,0.8260568283155982
+phyllostomus_2022,La Gruta (Colony 1)::2022,2,33,0.626016596862468
+phyllostomus_2022,La Gruta (Colony 1)::2022,5,7,0.9723970570419618
+phyllostomus_2022,La Gruta (Colony 1)::2022,5,8,0.9455505253846235
+phyllostomus_2022,La Gruta (Colony 1)::2022,5,12,0.9352908955511119
+phyllostomus_2022,La Gruta (Colony 1)::2022,5,14,0.8958399496596734
+phyllostomus_2022,La Gruta (Colony 1)::2022,5,16,0.9494786737565373
+phyllostomus_2022,La Gruta (Colony 1)::2022,5,18,0.9518182254551674
+phyllostomus_2022,La Gruta (Colony 1)::2022,5,19,0.9424351876570336
+phyllostomus_2022,La Gruta (Colony 1)::2022,5,20,0.9287412099702613
+phyllostomus_2022,La Gruta (Colony 1)::2022,5,22,0.9219360822228613
+phyllostomus_2022,La Gruta (Colony 1)::2022,5,23,0.9053976672622414
+phyllostomus_2022,La Gruta (Colony 1)::2022,5,25,0.9086037897928709
+phyllostomus_2022,La Gruta (Colony 1)::2022,5,26,0.9035891304717381
+phyllostomus_2022,La Gruta (Colony 1)::2022,5,28,0.8369990451308464
+phyllostomus_2022,La Gruta (Colony 1)::2022,5,29,0.8843732870617798
+phyllostomus_2022,La Gruta (Colony 1)::2022,5,30,0.8694382476052225
+phyllostomus_2022,La Gruta (Colony 1)::2022,5,31,0.78838865477121
+phyllostomus_2022,La Gruta (Colony 1)::2022,5,33,0.5883484233180798
+phyllostomus_2022,La Gruta (Colony 1)::2022,7,8,0.9731534683426617
+phyllostomus_2022,La Gruta (Colony 1)::2022,7,12,0.9628938385091501
+phyllostomus_2022,La Gruta (Colony 1)::2022,7,14,0.9234428926177116
+phyllostomus_2022,La Gruta (Colony 1)::2022,7,16,0.9727499589185866
+phyllostomus_2022,La Gruta (Colony 1)::2022,7,18,0.9603151754792926
+phyllostomus_2022,La Gruta (Colony 1)::2022,7,19,0.9587993047679678
+phyllostomus_2022,La Gruta (Colony 1)::2022,7,20,0.9563441529282996
+phyllostomus_2022,La Gruta (Colony 1)::2022,7,22,0.9304330322469865
+phyllostomus_2022,La Gruta (Colony 1)::2022,7,23,0.9303080900774908
+phyllostomus_2022,La Gruta (Colony 1)::2022,7,25,0.9171007398169961
+phyllostomus_2022,La Gruta (Colony 1)::2022,7,26,0.9120860804958633
+phyllostomus_2022,La Gruta (Colony 1)::2022,7,28,0.8612993772053819
+phyllostomus_2022,La Gruta (Colony 1)::2022,7,29,0.892870237085905
+phyllostomus_2022,La Gruta (Colony 1)::2022,7,30,0.8779351976293477
+phyllostomus_2022,La Gruta (Colony 1)::2022,7,31,0.7968856047953352
+phyllostomus_2022,La Gruta (Colony 1)::2022,7,33,0.5968453733422051
+phyllostomus_2022,La Gruta (Colony 1)::2022,8,12,0.9865787166551615
+phyllostomus_2022,La Gruta (Colony 1)::2022,8,14,0.95028942427505
+phyllostomus_2022,La Gruta (Colony 1)::2022,8,16,0.972722755261417
+phyllostomus_2022,La Gruta (Colony 1)::2022,8,18,0.954242220638898
+phyllostomus_2022,La Gruta (Colony 1)::2022,8,19,0.9627002494827122
+phyllostomus_2022,La Gruta (Colony 1)::2022,8,20,0.9610459064630668
+phyllostomus_2022,La Gruta (Colony 1)::2022,8,22,0.9343339769617309
+phyllostomus_2022,La Gruta (Colony 1)::2022,8,23,0.9342090347922352
+phyllostomus_2022,La Gruta (Colony 1)::2022,8,25,0.9181521511750732
+phyllostomus_2022,La Gruta (Colony 1)::2022,8,26,0.9159870252106077
+phyllostomus_2022,La Gruta (Colony 1)::2022,8,28,0.8652003219201262
+phyllostomus_2022,La Gruta (Colony 1)::2022,8,29,0.8967711818006494
+phyllostomus_2022,La Gruta (Colony 1)::2022,8,30,0.8818361423440921
+phyllostomus_2022,La Gruta (Colony 1)::2022,8,31,0.8007865495100795
+phyllostomus_2022,La Gruta (Colony 1)::2022,8,33,0.6007463180569494
+phyllostomus_2022,La Gruta (Colony 1)::2022,12,14,0.9605490541085613
+phyllostomus_2022,La Gruta (Colony 1)::2022,12,16,0.9758844087727441
+phyllostomus_2022,La Gruta (Colony 1)::2022,12,18,0.957403874150225
+phyllostomus_2022,La Gruta (Colony 1)::2022,12,19,0.968977240721629
+phyllostomus_2022,La Gruta (Colony 1)::2022,12,20,0.9744671898079053
+phyllostomus_2022,La Gruta (Colony 1)::2022,12,22,0.9477552603065694
+phyllostomus_2022,La Gruta (Colony 1)::2022,12,23,0.9476303181370738
+phyllostomus_2022,La Gruta (Colony 1)::2022,12,25,0.9213138046864002
+phyllostomus_2022,La Gruta (Colony 1)::2022,12,26,0.9294083085554462
+phyllostomus_2022,La Gruta (Colony 1)::2022,12,28,0.8786216052649647
+phyllostomus_2022,La Gruta (Colony 1)::2022,12,29,0.9101924651454878
+phyllostomus_2022,La Gruta (Colony 1)::2022,12,30,0.8926609198280588
+phyllostomus_2022,La Gruta (Colony 1)::2022,12,31,0.814207832854918
+phyllostomus_2022,La Gruta (Colony 1)::2022,12,33,0.6141676014017879
+phyllostomus_2022,La Gruta (Colony 1)::2022,14,16,0.9458514098081587
+phyllostomus_2022,La Gruta (Colony 1)::2022,14,18,0.9273708751856397
+phyllostomus_2022,La Gruta (Colony 1)::2022,14,19,0.9389442417570437
+phyllostomus_2022,La Gruta (Colony 1)::2022,14,20,0.9509838764241705
+phyllostomus_2022,La Gruta (Colony 1)::2022,14,22,0.9277647353740353
+phyllostomus_2022,La Gruta (Colony 1)::2022,14,23,0.947490547461359
+phyllostomus_2022,La Gruta (Colony 1)::2022,14,25,0.8912808057218149
+phyllostomus_2022,La Gruta (Colony 1)::2022,14,26,0.9128489851577729
+phyllostomus_2022,La Gruta (Colony 1)::2022,14,28,0.888039552191818
+phyllostomus_2022,La Gruta (Colony 1)::2022,14,29,0.903162505535843
+phyllostomus_2022,La Gruta (Colony 1)::2022,14,30,0.8626279208634735
+phyllostomus_2022,La Gruta (Colony 1)::2022,14,31,0.8236257797817713
+phyllostomus_2022,La Gruta (Colony 1)::2022,14,33,0.6235855483286412
+phyllostomus_2022,La Gruta (Colony 1)::2022,16,18,0.9815194653774808
+phyllostomus_2022,La Gruta (Colony 1)::2022,16,19,0.9860493458493812
+phyllostomus_2022,La Gruta (Colony 1)::2022,16,20,0.979262536213724
+phyllostomus_2022,La Gruta (Colony 1)::2022,16,22,0.9576830733283999
+phyllostomus_2022,La Gruta (Colony 1)::2022,16,23,0.9559189935057041
+phyllostomus_2022,La Gruta (Colony 1)::2022,16,25,0.9443507808984095
+phyllostomus_2022,La Gruta (Colony 1)::2022,16,26,0.9393361215772766
+phyllostomus_2022,La Gruta (Colony 1)::2022,16,28,0.8875203713743092
+phyllostomus_2022,La Gruta (Colony 1)::2022,16,29,0.9201202781673183
+phyllostomus_2022,La Gruta (Colony 1)::2022,16,30,0.9051852387107611
+phyllostomus_2022,La Gruta (Colony 1)::2022,16,31,0.8241356458767486
+phyllostomus_2022,La Gruta (Colony 1)::2022,16,33,0.6240954144236185
+phyllostomus_2022,La Gruta (Colony 1)::2022,18,19,0.9869107627172711
+phyllostomus_2022,La Gruta (Colony 1)::2022,18,20,0.9732167850304988
+phyllostomus_2022,La Gruta (Colony 1)::2022,18,22,0.9697239965792983
+phyllostomus_2022,La Gruta (Colony 1)::2022,18,23,0.9498732423224788
+phyllostomus_2022,La Gruta (Colony 1)::2022,18,25,0.9567855643377035
+phyllostomus_2022,La Gruta (Colony 1)::2022,18,26,0.9517709050165706
+phyllostomus_2022,La Gruta (Colony 1)::2022,18,28,0.8814746201910839
+phyllostomus_2022,La Gruta (Colony 1)::2022,18,29,0.9325550616066123
+phyllostomus_2022,La Gruta (Colony 1)::2022,18,30,0.917620022150055
+phyllostomus_2022,La Gruta (Colony 1)::2022,18,31,0.8365704293160425
+phyllostomus_2022,La Gruta (Colony 1)::2022,18,33,0.6365301978629123
+phyllostomus_2022,La Gruta (Colony 1)::2022,19,20,0.9863060223132276
+phyllostomus_2022,La Gruta (Colony 1)::2022,19,22,0.9716337274790185
+phyllostomus_2022,La Gruta (Colony 1)::2022,19,23,0.9629624796052076
+phyllostomus_2022,La Gruta (Colony 1)::2022,19,25,0.952336563964771
+phyllostomus_2022,La Gruta (Colony 1)::2022,19,26,0.9532867757278953
+phyllostomus_2022,La Gruta (Colony 1)::2022,19,28,0.8945638574738128
+phyllostomus_2022,La Gruta (Colony 1)::2022,19,29,0.934070932317937
+phyllostomus_2022,La Gruta (Colony 1)::2022,19,30,0.9191358928613798
+phyllostomus_2022,La Gruta (Colony 1)::2022,19,31,0.8380863000273673
+phyllostomus_2022,La Gruta (Colony 1)::2022,19,33,0.6380460685742371
+phyllostomus_2022,La Gruta (Colony 1)::2022,20,22,0.9732880704986642
+phyllostomus_2022,La Gruta (Colony 1)::2022,20,23,0.9731631283291685
+phyllostomus_2022,La Gruta (Colony 1)::2022,20,25,0.9402969292976444
+phyllostomus_2022,La Gruta (Colony 1)::2022,20,26,0.954941118747541
+phyllostomus_2022,La Gruta (Colony 1)::2022,20,28,0.9041544154570595
+phyllostomus_2022,La Gruta (Colony 1)::2022,20,29,0.9357252753375827
+phyllostomus_2022,La Gruta (Colony 1)::2022,20,30,0.911644044439303
+phyllostomus_2022,La Gruta (Colony 1)::2022,20,31,0.8397406430470129
+phyllostomus_2022,La Gruta (Colony 1)::2022,20,33,0.6397004115938827
+phyllostomus_2022,La Gruta (Colony 1)::2022,22,23,0.9801492457431809
+phyllostomus_2022,La Gruta (Colony 1)::2022,22,25,0.9635160703477799
+phyllostomus_2022,La Gruta (Colony 1)::2022,22,26,0.981653048248877
+phyllostomus_2022,La Gruta (Colony 1)::2022,22,28,0.9117506236117859
+phyllostomus_2022,La Gruta (Colony 1)::2022,22,29,0.9624372048389187
+phyllostomus_2022,La Gruta (Colony 1)::2022,22,30,0.9348631854894385
+phyllostomus_2022,La Gruta (Colony 1)::2022,22,31,0.8645000075611204
+phyllostomus_2022,La Gruta (Colony 1)::2022,22,33,0.6664123410952187
+phyllostomus_2022,La Gruta (Colony 1)::2022,23,25,0.943790258260456
+phyllostomus_2022,La Gruta (Colony 1)::2022,23,26,0.9653584376964142
+phyllostomus_2022,La Gruta (Colony 1)::2022,23,28,0.9309912871278911
+phyllostomus_2022,La Gruta (Colony 1)::2022,23,29,0.9556719580744842
+phyllostomus_2022,La Gruta (Colony 1)::2022,23,30,0.9151373734021149
+phyllostomus_2022,La Gruta (Colony 1)::2022,23,31,0.8645835625213736
+phyllostomus_2022,La Gruta (Colony 1)::2022,23,33,0.6665372832647145
+phyllostomus_2022,La Gruta (Colony 1)::2022,25,26,0.9734171612429094
+phyllostomus_2022,La Gruta (Colony 1)::2022,25,28,0.888598986389556
+phyllostomus_2022,La Gruta (Colony 1)::2022,25,29,0.963887797454881
+phyllostomus_2022,La Gruta (Colony 1)::2022,25,30,0.9608344578123518
+phyllostomus_2022,La Gruta (Colony 1)::2022,25,31,0.8719204933644047
+phyllostomus_2022,La Gruta (Colony 1)::2022,25,33,0.6797446335252091
+phyllostomus_2022,La Gruta (Colony 1)::2022,26,28,0.9151818251466465
+phyllostomus_2022,La Gruta (Colony 1)::2022,26,29,0.9807841565900415
+phyllostomus_2022,La Gruta (Colony 1)::2022,26,30,0.9497789357057005
+phyllostomus_2022,La Gruta (Colony 1)::2022,26,31,0.874427823024971
+phyllostomus_2022,La Gruta (Colony 1)::2022,26,33,0.6847592928463416
+phyllostomus_2022,La Gruta (Colony 1)::2022,28,29,0.9187445978517409
+phyllostomus_2022,La Gruta (Colony 1)::2022,28,30,0.8800768931114411
+phyllostomus_2022,La Gruta (Colony 1)::2022,28,31,0.9190160852292931
+phyllostomus_2022,La Gruta (Colony 1)::2022,28,33,0.7355459961368234
+phyllostomus_2022,La Gruta (Colony 1)::2022,29,30,0.9594654153276306
+phyllostomus_2022,La Gruta (Colony 1)::2022,29,31,0.8840357447299503
+phyllostomus_2022,La Gruta (Colony 1)::2022,29,33,0.7039751362563001
+phyllostomus_2022,La Gruta (Colony 1)::2022,30,31,0.8644478203833135
+phyllostomus_2022,La Gruta (Colony 1)::2022,30,33,0.7189101757128575
+phyllostomus_2022,La Gruta (Colony 1)::2022,31,33,0.79995976854687
+phyllostomus_2023,Aj-cave (Colony 2)::2023,1,2,0.9711397510975811
+phyllostomus_2023,Aj-cave (Colony 2)::2023,1,3,0.9696720563922836
+phyllostomus_2023,Aj-cave (Colony 2)::2023,1,4,0.9699424674489353
+phyllostomus_2023,Aj-cave (Colony 2)::2023,1,5,0.9329425025458824
+phyllostomus_2023,Aj-cave (Colony 2)::2023,1,6,0.9226818563754317
+phyllostomus_2023,Aj-cave (Colony 2)::2023,1,8,0.899807107533654
+phyllostomus_2023,Aj-cave (Colony 2)::2023,1,9,0.8710409145209141
+phyllostomus_2023,Aj-cave (Colony 2)::2023,1,12,0.8621754138240427
+phyllostomus_2023,Aj-cave (Colony 2)::2023,1,14,0.7917865906157932
+phyllostomus_2023,Aj-cave (Colony 2)::2023,2,3,0.9747869483954458
+phyllostomus_2023,Aj-cave (Colony 2)::2023,2,4,0.9844420685009511
+phyllostomus_2023,Aj-cave (Colony 2)::2023,2,5,0.9044442642837878
+phyllostomus_2023,Aj-cave (Colony 2)::2023,2,6,0.9431664709104158
+phyllostomus_2023,Aj-cave (Colony 2)::2023,2,8,0.8933431578819481
+phyllostomus_2023,Aj-cave (Colony 2)::2023,2,9,0.8933017225771037
+phyllostomus_2023,Aj-cave (Colony 2)::2023,2,12,0.8866634921561414
+phyllostomus_2023,Aj-cave (Colony 2)::2023,2,14,0.8162746689478918
+phyllostomus_2023,Aj-cave (Colony 2)::2023,3,4,0.9856880374328433
+phyllostomus_2023,Aj-cave (Colony 2)::2023,3,5,0.904667337266353
+phyllostomus_2023,Aj-cave (Colony 2)::2023,3,6,0.949678052076427
+phyllostomus_2023,Aj-cave (Colony 2)::2023,3,8,0.9045455083576938
+phyllostomus_2023,Aj-cave (Colony 2)::2023,3,9,0.8991809789294378
+phyllostomus_2023,Aj-cave (Colony 2)::2023,3,12,0.8902781517514554
+phyllostomus_2023,Aj-cave (Colony 2)::2023,3,14,0.8198893285432058
+phyllostomus_2023,Aj-cave (Colony 2)::2023,4,5,0.9067954508421564
+phyllostomus_2023,Aj-cave (Colony 2)::2023,4,6,0.9404805588293091
+phyllostomus_2023,Aj-cave (Colony 2)::2023,4,8,0.9023822591013596
+phyllostomus_2023,Aj-cave (Colony 2)::2023,4,9,0.8999332700091215
+phyllostomus_2023,Aj-cave (Colony 2)::2023,4,12,0.8922329463751074
+phyllostomus_2023,Aj-cave (Colony 2)::2023,4,14,0.8205215044515175
+phyllostomus_2023,Aj-cave (Colony 2)::2023,5,6,0.8588340216900021
+phyllostomus_2023,Aj-cave (Colony 2)::2023,5,8,0.85910551552814
+phyllostomus_2023,Aj-cave (Colony 2)::2023,5,9,0.8089299104699798
+phyllostomus_2023,Aj-cave (Colony 2)::2023,5,12,0.8103132456014686
+phyllostomus_2023,Aj-cave (Colony 2)::2023,5,14,0.7288925788725399
+phyllostomus_2023,Aj-cave (Colony 2)::2023,6,8,0.8980040626078439
+phyllostomus_2023,Aj-cave (Colony 2)::2023,6,9,0.9094748284681161
+phyllostomus_2023,Aj-cave (Colony 2)::2023,6,12,0.9010076517944569
+phyllostomus_2023,Aj-cave (Colony 2)::2023,6,14,0.852674177208801
+phyllostomus_2023,Aj-cave (Colony 2)::2023,8,9,0.9444226309463806
+phyllostomus_2023,Aj-cave (Colony 2)::2023,8,12,0.9087481390215187
+phyllostomus_2023,Aj-cave (Colony 2)::2023,8,14,0.8635197707533586
+phyllostomus_2023,Aj-cave (Colony 2)::2023,9,12,0.9405970287085788
+phyllostomus_2023,Aj-cave (Colony 2)::2023,9,14,0.8974510344822326
+phyllostomus_2023,Aj-cave (Colony 2)::2023,12,14,0.8925107398163151
+phyllostomus_2023,La Gruta (Colony 1)::2023,7,10,0.9554266910746205
+phyllostomus_2023,La Gruta (Colony 1)::2023,7,11,0.9709798103876208
+phyllostomus_2023,La Gruta (Colony 1)::2023,7,13,0.9169562824839004
+phyllostomus_2023,La Gruta (Colony 1)::2023,7,15,0.7918692912656183
+phyllostomus_2023,La Gruta (Colony 1)::2023,7,16,0.5901153799797102
+phyllostomus_2023,La Gruta (Colony 1)::2023,10,11,0.9713504598610125
+phyllostomus_2023,La Gruta (Colony 1)::2023,10,13,0.9552768867826696
+phyllostomus_2023,La Gruta (Colony 1)::2023,10,15,0.830538606660384
+phyllostomus_2023,La Gruta (Colony 1)::2023,10,16,0.6155593161649354
+phyllostomus_2023,La Gruta (Colony 1)::2023,11,13,0.9407965774343384
+phyllostomus_2023,La Gruta (Colony 1)::2023,11,15,0.8193923879692759
+phyllostomus_2023,La Gruta (Colony 1)::2023,11,16,0.6176384766833678
+phyllostomus_2023,La Gruta (Colony 1)::2023,13,15,0.8749130087817176
+phyllostomus_2023,La Gruta (Colony 1)::2023,13,16,0.6600237440634372
+phyllostomus_2023,La Gruta (Colony 1)::2023,15,16,0.7400179535322147
+phyllostomus_2016,La Gruta::2016,1,2,0.9793520409304117
+phyllostomus_2016,La Gruta::2016,1,3,0.9725186508660856
+phyllostomus_2016,La Gruta::2016,1,4,0.8954883891381294
+phyllostomus_2016,La Gruta::2016,1,5,0.9483185558318822
+phyllostomus_2016,La Gruta::2016,1,6,0.8412925376664844
+phyllostomus_2016,La Gruta::2016,1,7,0.8582770958249741
+phyllostomus_2016,La Gruta::2016,1,8,0.5804749852253923
+phyllostomus_2016,La Gruta::2016,1,9,0.7999062176729015
+phyllostomus_2016,La Gruta::2016,1,10,0.8141553778399439
+phyllostomus_2016,La Gruta::2016,2,3,0.9776868596027389
+phyllostomus_2016,La Gruta::2016,2,4,0.9103263313379367
+phyllostomus_2016,La Gruta::2016,2,5,0.9277738991070763
+phyllostomus_2016,La Gruta::2016,2,6,0.8619404967360726
+phyllostomus_2016,La Gruta::2016,2,7,0.8377324391001683
+phyllostomus_2016,La Gruta::2016,2,8,0.5661218339367944
+phyllostomus_2016,La Gruta::2016,2,9,0.7855530663843036
+phyllostomus_2016,La Gruta::2016,2,10,0.811288984828788
+phyllostomus_2016,La Gruta::2016,3,4,0.888619076032519
+phyllostomus_2016,La Gruta::2016,3,5,0.9327682256343953
+phyllostomus_2016,La Gruta::2016,3,6,0.8521282973261906
+phyllostomus_2016,La Gruta::2016,3,7,0.8470206839968952
+phyllostomus_2016,La Gruta::2016,3,8,0.5537028235281037
+phyllostomus_2016,La Gruta::2016,3,9,0.7731340559756129
+phyllostomus_2016,La Gruta::2016,3,10,0.7986396279707343
+phyllostomus_2016,La Gruta::2016,4,5,0.8478571385005368
+phyllostomus_2016,La Gruta::2016,4,6,0.9395309967537661
+phyllostomus_2016,La Gruta::2016,4,7,0.7557934833924399
+phyllostomus_2016,La Gruta::2016,4,8,0.5843569980838219
+phyllostomus_2016,La Gruta::2016,4,9,0.7770768208669644
+phyllostomus_2016,La Gruta::2016,4,10,0.8182748105079323
+phyllostomus_2016,La Gruta::2016,5,6,0.7944679377089245
+phyllostomus_2016,La Gruta::2016,5,7,0.8769620429497643
+phyllostomus_2016,La Gruta::2016,5,8,0.6207998805780605
+phyllostomus_2016,La Gruta::2016,5,9,0.8402311130255696
+phyllostomus_2016,La Gruta::2016,5,10,0.7995833130302009
+phyllostomus_2016,La Gruta::2016,6,7,0.706437536000992
+phyllostomus_2016,La Gruta::2016,6,8,0.5619920749039821
+phyllostomus_2016,La Gruta::2016,6,9,0.7214477217009275
+phyllostomus_2016,La Gruta::2016,6,10,0.8020579928943863
+phyllostomus_2016,La Gruta::2016,7,8,0.5890376284272403
+phyllostomus_2016,La Gruta::2016,7,9,0.8014176010609607
+phyllostomus_2016,La Gruta::2016,7,10,0.6801380227887194
+phyllostomus_2016,La Gruta::2016,8,9,0.7275605067395784
+phyllostomus_2016,La Gruta::2016,8,10,0.7046320883169015
+phyllostomus_2016,La Gruta::2016,9,10,0.802014076385512
