@@ -16,7 +16,7 @@ The committed unified draft was retrieved again from GitHub after creation and a
 
 - **Wild numeric keys checked: 21/21 found in both wild source and unified manuscript.** Keys: 0.443, 0.177, 0.111, 0.118, 0.574, -0.022, 0.5121, 0.042, 0.100, 0.077, 0.079, -0.0158, -0.0090, 0.0163, 0.0289, 3.57, 0.98, 1.92, 1.13, 0.0544, 0.0345.
 - **BE numeric keys checked: 14/14 found in both BE ledger and unified manuscript.** Keys: 0.16733, 112.5554, 144.0791, 0.7081, 0.734699, -1.425497, 4.941, 6.779, 0.377542, 1.004452, 3.695264, 0.55428, 0.34758, -0.0350.
-- **Manuscript provisional length:** approximately approximately 6900 whitespace-delimited words including 35 reconciled scholarly reference entries and figure legends. The manuscript is a working Markdown document and this is not the target journal's official word count; the initial section counts are superseded by the subsequent bibliography and figure amendments. This is a drafting metric rather than the journal's official word counter.
+- **Manuscript provisional length:** approximately 7400 whitespace-delimited words including 36 scholarly reference entries and figure legends. The manuscript is a working Markdown document and this is not the target journal's official word count; the initial section counts are superseded by the subsequent bibliography and figure amendments. This is a drafting metric rather than the journal's official word counter.
 
 This audit detects transcription-level omissions/mismatches of selected numbers; it does **not** verify code execution, calculation reproducibility, assignment semantics or all results. Full original source tables and receipts are authoritative in any discrepancy.
 
@@ -45,7 +45,7 @@ This audit detects transcription-level omissions/mismatches of selected numbers;
 ## Remaining review/production gates — not passed
 
 1. A second human statistical review of each key panel including frozen support denominators and population-level limitations.
-2. Textual bibliography merge complete (45 source DOIs; 35 selected scholarly references in main). **Publisher-level DOI resolution, author names/year suffixes, in-text citation coverage and final journal style remain unverified**.
+2. Textual bibliography merge complete (45 original-source DOIs plus a newly verified Carlson 2021 prior (36 scholarly references in main)). **Publisher-level DOI resolution, author names/year suffixes, in-text citation coverage and final journal style remain unverified**.
 3. Original numerical pipelines independently re-executed if coauthors or the target journal require it. This integration did not rerun them.
 4. Figures 1–6 pass source-backed SVG reproduction and original JAE source-profile hashes. Assistant preview of six figures and original source heatmap recorded (FIGURE_RENDER_VISUAL_QA_V1.md); **journal-size human-coauthor/grayscale approval is still pending**.
 5. Combined SI **working draft** assembled, but full method/provenance archival appendices, anonymized reviewer archive, source redistribution licences, journal rule verification, final PDF/figure conversion QA and DOI remain pending.
