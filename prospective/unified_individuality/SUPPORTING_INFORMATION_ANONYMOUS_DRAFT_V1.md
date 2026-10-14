@@ -126,6 +126,11 @@ This **post-outcome descriptive** calculation uses the same 103 original Figure 
 
 **Figure S1.** Within-cohort overlap of the original session-centered, 10-bin probability **shapes**, plotting per-panel median and descriptive 10th–90th dyad percentiles on the [0,1] overlap axis (source vector `FIGURE_S1_WITHIN_COHORT_VERTICAL_SHAPE_OVERLAP_V1.svg`). A value close to one describes similar *estimated relative-height shape*, not co-use of the same flight volume or overlap of the same prey resources. This figure has no inferential uncertainty band and must not be substituted for the original Figure 6 S_rel / co-use tests.
 
+
+### Supplementary Figure S1. Within-cohort relative-height shape overlap (post-outcome descriptive only)
+
+![Figure S1 descriptive within-cohort relative-height probability overlap; dependent dyads and no confidence intervals](figures/FIGURE_S1_WITHIN_COHORT_VERTICAL_SHAPE_OVERLAP_V1.svg)
+
 ## Supplementary Methods S1. Boundaries of the three integrated inference axes
 
 **Identity correspondence:** correct animal–behavior mapping after source-specific shared-condition adjustment. Each experimental study uses its own fixed representation, biological support and assignment null; raw K, A or B values cannot be combined into a single pooled metric.
