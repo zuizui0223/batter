@@ -19,14 +19,14 @@ function anon(s){
   // Preserve the empirical claim but remove internal repository paths and private source-provenance links.
   let figure=stripLinks(figureLegends)
     .replace(/Original-file checksums and biological provenance are recorded in source recovery receipt\./g,"Original profile source data and reconstruction rules are provided in the anonymized supplementary analysis archive.")
-    .replace(/See source recovery receipt\./g,"The original individual-profile source and checksum receipts are identified in the anonymized analysis archive.");
+    .replace(/See source recovery receipt\./g,"The source-profile archive and checksum receipts are included in the anonymized supplementary analysis package.");
   figure=figure.replace(/figure atlas/gi,"figures");
   let main=stripLinks(body);
-  main=main.replace(/\bcombined Supporting Information draft\b/g,"Supplementary Material");
-  main=main.replace(/the \[?combined Supporting Information draft\]?/g,"Supplementary Material");
-  const note="All study data were originally collected and publicly released by the cited source studies. This is a secondary analysis and involved no new handling of animals. Source DOI identifiers, frozen analysis protocols, reproducibility code, and exact data-access instructions are listed in the separately submitted Supplementary Material and anonymized analysis archive. The intended archive review link is [ANONYMIZED_REVIEW_ARCHIVE_URL] (pending placement). Redistribution of source files will respect the original licence and permissions.";
-  const ethics="The original animal experiments and wild tracking programmes were conducted by their source-study investigators under the ethics and permits described in the original publications. The present comparative reanalysis involved no new animal manipulation.";
-  const ai="Automated tools assisted with portions of literature triage, code review and drafting, figure production, and manuscript editing. Human authors must review, verify, and finalize the specific tool/version/date and accountability disclosure for the journal submission. These tools did not create or alter the original source measurements.";
+  main=main.replace(/the combined Supporting Information draft/g,"Supplementary Material");
+  main=main.replace(/the \[combined Supporting Information draft\]/g,"Supplementary Material");
+  const note="All primary datasets were originally collected and publicly shared by the cited source studies. This study is a secondary reanalysis with no new animal manipulation. Exact original source DOIs and frozen analysis protocols are described in the independently submitted Supplementary Material. Analysis code and legally distributable derived products will be provided through [ANONYMIZED_REVIEW_ARCHIVE_URL] after placement on a double-anonymized research archive.";
+  const ethics="The original experiments and wild tracking programmes were conducted by their source-study investigators under the ethics and permits reported in those publications. The present reanalysis required no new bat handling or experimental manipulation.";
+  const ai="Automated assistance was used for parts of literature triage, source-code/figure drafting, provenance organization and scientific text editing. Exact model/version/date details and human accountability statements are subject to final author verification before submission; original source observations were not created or altered by these tools.";
   const output=`## Lay Summary\n\n${lay}\n\n# ${title}\n\n## Abstract\n\n${abstract}\n\n**Keywords:** ${keywordList}\n\n${main.trim()}\n\n## Data availability\n\n${note}\n\n## Ethics\n\n${ethics}\n\n## Automated-assistance disclosure (author verification pending)\n\n${ai}\n\n## References\n\n${refs.trim()}\n\n## Figure legends\n\n${figure.trim()}\n`;
   const bad=["zuizui0223","release/jae","prospective/public-causal-synthesis","github.com/zuizui","manuscript blob SHA","JAE v0.4.0 rc2","BE v1 manuscript"];
   for(const x of bad)if(output.includes(x))throw Error("Anonymous text contains source identifier: "+x);
