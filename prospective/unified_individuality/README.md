@@ -12,7 +12,7 @@ This directory develops a **single manuscript** by integrating the existing *Jou
 6. [SUPPORTING_INFORMATION_DRAFT_V1.md](SUPPORTING_INFORMATION_DRAFT_V1.md) — integrated source-level experimental and wild supplementary tables, null architectures, uncertainty and source-permission caveats.
 7. [figures/FROZEN_FIGURE_DATA_V1.json](figures/FROZEN_FIGURE_DATA_V1.json) + [figure builder](figures/generate_integrated_figures_v1.cjs) + [validator](figures/validate_integrated_figures_v1.py) — pinned summary inputs, reproducible rendering, exact original-profile hash checks and scientific/XML gates.
 8. [ORIGINAL_PROFILE_RECOVERY_RECEIPT_V1.md](ORIGINAL_PROFILE_RECOVERY_RECEIPT_V1.md) — unaltered 103-individual JAE figure/data provenance and SHA256.
-9. [BIBLIOGRAPHY_MERGE_AUDIT_V1.md](BIBLIOGRAPHY_MERGE_AUDIT_V1.md) — 45 unique original-source DOIs with a 34-reference consolidated main bibliography.
+9. [BIBLIOGRAPHY_MERGE_AUDIT_V1.md](BIBLIOGRAPHY_MERGE_AUDIT_V1.md) — 45 unique original-source DOIs with a 35-reference consolidated main bibliography.
 10. [FIGURE_RENDER_VISUAL_QA_V1.md](FIGURE_RENDER_VISUAL_QA_V1.md) — preliminary SVG render and original-image preview QA.
 11. [INTERNAL_SCIENCE_REVIEW_GATE_V1.md](INTERNAL_SCIENCE_REVIEW_GATE_V1.md) — reviewer-level limits and final submission blockers.
 12. [BE_LAY_ABSTRACT_V2.md](BE_LAY_ABSTRACT_V2.md) — shortened 215-word abstract, 73-word Lay Summary and 69-character title for Behavioral Ecology.
