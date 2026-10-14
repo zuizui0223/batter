@@ -38,6 +38,10 @@ def main():
     meta=json.loads(DERIVED.read_text(encoding="utf8"))
     panels=meta["panel_summary"]
     assert len(panels)==5 and meta["total_within_cohort_pairs"]==684
+    assert meta["schema_version"] == 2
+    assert meta["n_source_panel_profile_records"] == 103
+    assert meta["n_distinct_literal_source_identifiers"] == 101
+    assert meta["global_animal_identity_verified"] is False
     count=0
     for item in panels:
         panel=item["panel"]
@@ -74,7 +78,7 @@ def main():
               "biological_n",len(subset),"dependent_dyads",len(scores),
               "median_overlap",f"{statistics.median(scores):.12f}")
     assert count==684
-    print("PASS two independent code paths, original CSV vs original JSON: 103 individual profiles, 684 nonindependent same-cohort dyads")
+    print("PASS two independent code paths, original CSV vs original JSON: 103 source-panel profile rows (global biological identity unresolved), 684 nonindependent same-cohort dyads")
 
 if __name__=="__main__":
     main()
