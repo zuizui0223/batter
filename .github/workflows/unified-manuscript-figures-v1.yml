@@ -29,6 +29,8 @@ jobs:
         run: python3 prospective/unified_individuality/validate_overlap_independent_csv_v1.py
       - name: Audit panel-indexed source profiles and repeated 2016/2022 literal labels
         run: python3 prospective/unified_individuality/validate_profile_panel_identity_scope_v1.py
+      - name: Independently validate cohort-size sensitivity from immutable 103-record source CSV
+        run: python3 prospective/unified_individuality/validate_cohort_weight_sensitivity_v1.py
       - name: Rebuild anonymous journal-order complete text
         run: node prospective/unified_individuality/build_complete_anonymous_text_v1.cjs
       - name: Guard against stale or hand-edited figures and anonymous text
