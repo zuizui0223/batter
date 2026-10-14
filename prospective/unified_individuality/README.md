@@ -12,7 +12,7 @@ This directory develops a **single manuscript** by integrating the existing *Jou
 6. [SUPPORTING_INFORMATION_DRAFT_V1.md](SUPPORTING_INFORMATION_DRAFT_V1.md) — integrated source-level experimental and wild supplementary tables, null architectures, uncertainty and source-permission caveats.
 7. [figures/FROZEN_FIGURE_DATA_V1.json](figures/FROZEN_FIGURE_DATA_V1.json) + [figure builder](figures/generate_integrated_figures_v1.cjs) + [validator](figures/validate_integrated_figures_v1.py) — pinned summary inputs, reproducible rendering, exact original-profile hash checks and scientific/XML gates.
 8. [ORIGINAL_PROFILE_RECOVERY_RECEIPT_V1.md](ORIGINAL_PROFILE_RECOVERY_RECEIPT_V1.md) — unaltered 103-individual JAE figure/data provenance and SHA256.
-9. [BIBLIOGRAPHY_MERGE_AUDIT_V1.md](BIBLIOGRAPHY_MERGE_AUDIT_V1.md) — 45 unique original-source DOIs with a 35-reference consolidated main bibliography.
+9. [BIBLIOGRAPHY_MERGE_AUDIT_V1.md](BIBLIOGRAPHY_MERGE_AUDIT_V1.md) — 45 original-source DOIs plus one newly added Carlson et al. 2021 paper (36 references now in the main bibliography).
 10. [FIGURE_RENDER_VISUAL_QA_V1.md](FIGURE_RENDER_VISUAL_QA_V1.md) — preliminary SVG render and original-image preview QA.
 11. [INTERNAL_SCIENCE_REVIEW_GATE_V1.md](INTERNAL_SCIENCE_REVIEW_GATE_V1.md) — reviewer-level limits and final submission blockers.
 12. [BE_LAY_ABSTRACT_V2.md](BE_LAY_ABSTRACT_V2.md) — shortened 215-word abstract, 73-word Lay Summary and 69-character title for Behavioral Ecology.
@@ -23,11 +23,14 @@ This directory develops a **single manuscript** by integrating the existing *Jou
 17. [SOURCE_DOI_AND_METADATA_AUDIT_V2.md](SOURCE_DOI_AND_METADATA_AUDIT_V2.md) — corrected original Phyllostomus study-year DOI mapping, and targeted publisher/index verification of 2026 citations.
 18. [COVER_LETTER_BEHAVIORAL_ECOLOGY_UNIFIED_DRAFT_V1.md](COVER_LETTER_BEHAVIORAL_ECOLOGY_UNIFIED_DRAFT_V1.md) — editor-facing scientific cover letter template, with required publication-overlap and AI disclosure placeholders.
 19. [validate_source_attribution_v2.py](validate_source_attribution_v2.py) — CI regression test for wild source DOI/year identities and verified citations.
+20. [ECOLOGICAL_PRIOR_ART_POSITIONING_V1.md](ECOLOGICAL_PRIOR_ART_POSITIONING_V1.md) — prior white-stork and bat research demonstrates overlapping persistent individual niches; no false conceptual first claim.
+21. [ECOLOGICAL_IDENTIFIABILITY_AND_DECISIVE_TESTS_V1.md](ECOLOGICAL_IDENTIFIABILITY_AND_DECISIVE_TESTS_V1.md) — formal distinction between latent task allocation, within-task use and actual co-use, with prospective discriminators.
+22. [figures/FROZEN_MAINTENANCE_BOUNDARY_INPUTS_V1.json](figures/FROZEN_MAINTENANCE_BOUNDARY_INPUTS_V1.json) and [validate_ecological_identifiability_v1.py](validate_ecological_identifiability_v1.py) — seven source-SHA-pinned maintenance/conditioning and wind-STOP receipts plus executable exact mixture-identity counterexample.
 
 ### Review PDF CI outputs
 
 - [Anonymous complete manuscript review PDF workflow](https://github.com/zuizui0223/batter/actions/workflows/unified-anonymous-main-v1.yml) — continuous line and page numbers; manuscript copy is a **draft**, not a final journal upload.
-- [Anonymous and internal SI PDF workflow](https://github.com/zuizui0223/batter/actions/workflows/unified-si-draft-v1.yml) — two separate single-file proof variants; anonymous SI now contains Methods S1–S11 and seven source/result tables.
+- [Anonymous and internal SI PDF workflow](https://github.com/zuizui0223/batter/actions/workflows/unified-si-draft-v1.yml) — two separate single-file proof variants; anonymous SI now contains Methods S1–S12 and seven source/result tables.
 - [Figure source guard](https://github.com/zuizui0223/batter/actions/workflows/unified-manuscript-figures-v1.yml) — six main results plus the Figure 5 A+B 177 × 238 mm exact-source composite.
 
 The final journal data repository URL and author/coauthor approvals are **not** available yet; do not label these proof files submission-ready.
