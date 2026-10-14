@@ -29,6 +29,8 @@ jobs:
         run: git diff --exit-code -- prospective/unified_individuality/figures/ prospective/unified_individuality/COMPLETE_ANONYMOUS_TEXT_DRAFT_V1.md
       - name: Check scientific gates, labels, and SVG XML
         run: python3 prospective/unified_individuality/figures/validate_integrated_figures_v1.py
+      - name: Audit source-bounded ecological mechanism and mathematical counterexample
+        run: python3 prospective/unified_individuality/validate_ecological_identifiability_v1.py
       - name: Upload six main manuscript figures including Figure 5 composite for QA
         uses: actions/upload-artifact@v4
         with:
