@@ -1,0 +1,451 @@
+{
+  "meta": {
+    "date": "2026-10-14",
+    "scientific_status": "No new numerical inference. Post-outcome ecological geometry.",
+    "wild_branch": "release/jae-v0.4.0-rc2",
+    "be_branch": "prospective/public-causal-synthesis-v1",
+    "source_files": [
+      {
+        "key": "centered",
+        "path": "results/tag_altitude_bias_audit_v1_summary.json",
+        "ref": "release/jae-v0.4.0-rc2",
+        "blob_sha": "39e9f856cff3090203f53c42e3e01211d7c1f7dc"
+      },
+      {
+        "key": "terrain",
+        "path": "post_freeze_extensions/3d_niche_partition/original_terrain_geometry_summary_v1.json",
+        "ref": "release/jae-v0.4.0-rc2",
+        "blob_sha": "08631a0dce61cc47e12b2d32642c46b5759fe872"
+      },
+      {
+        "key": "segregation",
+        "path": "post_freeze_extensions/3d_niche_partition/partitioning_calibration_summary_v1.json",
+        "ref": "release/jae-v0.4.0-rc2",
+        "blob_sha": "e969698e2a594d2eeca2631d7473e598a8a8f371"
+      },
+      {
+        "key": "couse",
+        "path": "post_freeze_extensions/3d_niche_partition/couse_vertical_separation_summary_v1.json",
+        "ref": "release/jae-v0.4.0-rc2",
+        "blob_sha": "b7b2ab8f162ea578098e74b63cb788d24744271d"
+      },
+      {
+        "key": "compatibility",
+        "path": "post_freeze_extensions/3d_niche_partition/partitioning_i_compatibility_summary_v1.json",
+        "ref": "release/jae-v0.4.0-rc2",
+        "blob_sha": "13870226199d6c8388dcb053b74cf2bb01c1e225"
+      },
+      {
+        "key": "descriptive",
+        "path": "CENTERED_SHAPE_PROFILE_DESCRIPTIVE_RESULT_V1.md",
+        "ref": "release/jae-v0.4.0-rc2",
+        "blob_sha": "2a6c6bbb8524df870b1e3cb8b9d197525ea12443"
+      },
+      {
+        "key": "be_script",
+        "path": "prospective/public_causal_synthesis/plot_synthesis_figures_v1.py",
+        "ref": "prospective/public-causal-synthesis-v1",
+        "blob_sha": "b400a155a30a18175254bb1f32bdcfbf90ed6c14"
+      },
+      {
+        "key": "master",
+        "path": "prospective/public_causal_synthesis/MASTER_RESULTS_TABLE_V1.md",
+        "ref": "prospective/public-causal-synthesis-v1",
+        "blob_sha": "0702117efdc89432eba63205647a8c23d7e3c841"
+      }
+    ],
+    "caption_warning": "Positive co-use compatibility intervals are NOT equivalence tests; individual and panel numbers are not independent biological replications."
+  },
+  "centered": [
+    {
+      "panel": "tadarida",
+      "label": "T. teniotis",
+      "n": 6,
+      "observed": -0.2629362601335861,
+      "null_mean": -0.24077065548637494,
+      "calibrated_excess": -0.02216560464721118,
+      "p_upper": 0.5121,
+      "supported": false
+    },
+    {
+      "panel": "eidolon",
+      "label": "E. helvum",
+      "n": 20,
+      "observed": 0.3719193340623328,
+      "null_mean": -0.07099783433884925,
+      "calibrated_excess": 0.44291716840118206,
+      "p_upper": 0.0002,
+      "supported": true
+    },
+    {
+      "panel": "hypsignathus",
+      "label": "H. monstrosus",
+      "n": 24,
+      "observed": 0.07362979912287582,
+      "null_mean": -0.1031550113137133,
+      "calibrated_excess": 0.1767848104365891,
+      "p_upper": 0.0002,
+      "supported": true
+    },
+    {
+      "panel": "phyllostomus_2022",
+      "label": "P. hastatus 2022",
+      "n": 33,
+      "observed": -0.03938733846604477,
+      "null_mean": -0.15083216594070384,
+      "calibrated_excess": 0.11144482747465906,
+      "p_upper": 0.0002,
+      "supported": true
+    },
+    {
+      "panel": "phyllostomus_2023",
+      "label": "P. hastatus 2023",
+      "n": 16,
+      "observed": 0.0454271303053492,
+      "null_mean": -0.07262765031065291,
+      "calibrated_excess": 0.11805478061600211,
+      "p_upper": 0.0002,
+      "supported": true
+    },
+    {
+      "panel": "phyllostomus_2016",
+      "label": "P. hastatus 2016",
+      "n": 10,
+      "observed": -0.008440772417901093,
+      "null_mean": -0.5824275968718731,
+      "calibrated_excess": 0.573986824453972,
+      "p_upper": 0.0076,
+      "supported": true
+    }
+  ],
+  "terrain": [
+    {
+      "panel": "hypsignathus",
+      "label": "H. monstrosus",
+      "v_rel": 0.041862873401873585,
+      "v_excess": 0.04141602507202413,
+      "v_p_upper": 0.0001,
+      "v_supported": true,
+      "s_rel": -0.015806072455978037,
+      "s_null_mean": 0.00007550096231680664,
+      "s_q025": -0.015673662289706635,
+      "s_q975": 0.013801620811979798,
+      "s_p_two_sided": 0.0362,
+      "couse_excess_m": -1.9827397926049208,
+      "couse_p_upper": 0.9045,
+      "couse_supported": false,
+      "couse_n_bats": 11,
+      "couse_n_dyads": 22,
+      "couse_encounters": 883,
+      "couse_scope": "endpoint_excluded",
+      "couse_tolerance_s": 60,
+      "couse_boot_q025_m": -4.808494653044392,
+      "couse_boot_q975_m": 0.984896108901787
+    },
+    {
+      "panel": "phyllostomus_2022",
+      "label": "P. hastatus 2022",
+      "v_rel": 0.09955973281399592,
+      "v_excess": 0.09914008761620022,
+      "v_p_upper": 0.0001,
+      "v_supported": true,
+      "s_rel": -0.00896,
+      "s_null_mean": -0.00037,
+      "s_q025": -0.02081,
+      "s_q975": 0.01755,
+      "s_p_two_sided": 0.3639,
+      "couse_excess_m": -0.9473945522439209,
+      "couse_p_upper": 0.9186,
+      "couse_supported": false,
+      "couse_n_bats": 6,
+      "couse_n_dyads": 10,
+      "couse_encounters": 347,
+      "couse_scope": "endpoint_excluded",
+      "couse_tolerance_s": 60,
+      "couse_boot_q025_m": -3.2073661722274958,
+      "couse_boot_q975_m": 1.918079463552737
+    },
+    {
+      "panel": "phyllostomus_2023",
+      "label": "P. hastatus 2023",
+      "v_rel": 0.07688679184597079,
+      "v_excess": 0.07652608157615234,
+      "v_p_upper": 0.0001015950421619425,
+      "v_supported": true,
+      "s_rel": 0.01626,
+      "s_null_mean": 0.00069,
+      "s_q025": -0.0332,
+      "s_q975": 0.02602,
+      "s_p_two_sided": 0.2704460022350909,
+      "couse_excess_m": 3.5737278739273783,
+      "couse_p_upper": 0.0231,
+      "couse_supported": true,
+      "couse_n_bats": 6,
+      "couse_n_dyads": 8,
+      "couse_encounters": 679,
+      "couse_scope": "all_space",
+      "couse_tolerance_s": 600,
+      "couse_boot_q025_m": -4.6332678760798665,
+      "couse_boot_q975_m": 11.729235873935366
+    },
+    {
+      "panel": "phyllostomus_2016",
+      "label": "P. hastatus 2016",
+      "v_rel": 0.07865008741736887,
+      "v_excess": 0.07775718646877244,
+      "v_p_upper": 0.034527622097678144,
+      "v_supported": true,
+      "s_rel": 0.0289,
+      "s_null_mean": 0.00018,
+      "s_q025": -0.09129,
+      "s_q975": 0.06912,
+      "s_p_two_sided": 0.4795836669335468,
+      "couse_excess_m": -0.8541475602856057,
+      "couse_p_upper": 0.8611,
+      "couse_supported": false,
+      "couse_n_bats": 5,
+      "couse_n_dyads": 8,
+      "couse_encounters": 16096,
+      "couse_scope": "endpoint_excluded",
+      "couse_tolerance_s": 600,
+      "couse_boot_q025_m": -3.126848400352447,
+      "couse_boot_q975_m": 1.1283890897547604
+    }
+  ],
+  "descriptive_ranges": [
+    {
+      "panel": "eidolon",
+      "label": "E. helvum",
+      "central": [
+        0.123,
+        0.926
+      ],
+      "upper": [
+        0.022,
+        0.215
+      ],
+      "lower": [
+        0.022,
+        0.566
+      ]
+    },
+    {
+      "panel": "hypsignathus",
+      "label": "H. monstrosus",
+      "central": [
+        0.458,
+        0.91
+      ],
+      "upper": [
+        0.012,
+        0.151
+      ],
+      "lower": [
+        0.014,
+        0.121
+      ]
+    },
+    {
+      "panel": "phyllostomus_2022",
+      "label": "P. hastatus 2022",
+      "central": [
+        0.438,
+        0.85
+      ],
+      "upper": [
+        0.037,
+        0.157
+      ],
+      "lower": [
+        0.039,
+        0.165
+      ]
+    },
+    {
+      "panel": "phyllostomus_2023",
+      "label": "P. hastatus 2023",
+      "central": [
+        0.333,
+        0.863
+      ],
+      "upper": [
+        0.038,
+        0.25
+      ],
+      "lower": [
+        0.032,
+        0.25
+      ]
+    },
+    {
+      "panel": "phyllostomus_2016",
+      "label": "P. hastatus 2016",
+      "central": [
+        0.548,
+        0.994
+      ],
+      "upper": [
+        0.0009,
+        0.0686
+      ],
+      "lower": [
+        0.0009,
+        0.0408
+      ]
+    }
+  ],
+  "lab": {
+    "juvenile": {
+      "names": [
+        "Anka",
+        "Eli",
+        "Eva",
+        "Fima",
+        "K",
+        "Mazi",
+        "Nadav",
+        "Nature",
+        "Nazir",
+        "Odelia",
+        "Shem_Tov",
+        "Tishray",
+        "Tzedi",
+        "V"
+      ],
+      "slopes_rounded": [
+        0.166,
+        0.29,
+        0.259,
+        -0.309,
+        -0.383,
+        -0.121,
+        0.913,
+        -0.486,
+        -0.071,
+        0.245,
+        0.647,
+        0.676,
+        0.564,
+        -0.049
+      ],
+      "mean_B": 0.16733,
+      "mean_p": 0.0102,
+      "sign_positive": 8,
+      "sign_gate": 10,
+      "late_L": 112.5554,
+      "late_p": 0.0001,
+      "late_positive": 12,
+      "metadata": "Individual slopes rounded as authored in frozen BE Figure 2A generation script."
+    },
+    "developmental": [
+      {
+        "id": "rachum",
+        "name": "Early-environment enrichment",
+        "species": "R. aegyptiacus",
+        "n": 29,
+        "D": 0.734699,
+        "p": 0.167785,
+        "delta_status": "Unsupported increase",
+        "treatment_groups": "14 enriched / 15 impoverished",
+        "direction": "one-sided positive contrast"
+      },
+      {
+        "id": "elie",
+        "name": "Developmental auditory feedback",
+        "species": "R. aegyptiacus",
+        "n": 10,
+        "D": -1.425497,
+        "p": 0.716667,
+        "delta_status": "Unsupported difference",
+        "treatment_groups": "5 hearing / 5 deafened",
+        "direction": "two-sided contrast"
+      }
+    ],
+    "acute": [
+      {
+        "id": "pip",
+        "name": "External sensory masking",
+        "species": "P. kuhlii",
+        "n": 6,
+        "positive": 5,
+        "p": 0.04028,
+        "status": "SUPPORTED",
+        "null_label": "exact assignment",
+        "detail": "foam 5/5; p=0.025"
+      },
+      {
+        "id": "myo",
+        "name": "Graded acoustic masking",
+        "species": "M. daubentonii",
+        "n": 3,
+        "positive": 3,
+        "p": 0.0007716049382716049,
+        "status": "SUPPORTED",
+        "null_label": "true mapping 1 / 1,296",
+        "detail": "five graded contexts"
+      },
+      {
+        "id": "ept",
+        "name": "Reversible auditory-midbrain perturbation",
+        "species": "E. fuscus",
+        "n": 4,
+        "positive": 4,
+        "p": 0.041666666666666664,
+        "status": "SUPPORTED",
+        "null_label": "true mapping 1 / 24",
+        "detail": "source-specific vocal representation"
+      },
+      {
+        "id": "nav",
+        "name": "Navigation-context manipulation",
+        "species": "P. kuhlii",
+        "n": 4,
+        "positive": 4,
+        "p": 0.003472222222222222,
+        "status": "SUPPORTED",
+        "null_label": "true mapping 2 / 576",
+        "detail": "three navigation conditions"
+      }
+    ],
+    "portability": [
+      {
+        "id": "rhino",
+        "name": "R. nippon",
+        "representation": "Coarse I/M",
+        "n": 5,
+        "K": 0.55428,
+        "p": 0.0001,
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "car_coarse",
+        "name": "C. perspicillata",
+        "representation": "Rhino-fixed coarse I/M",
+        "n": 7,
+        "K": 0.34758,
+        "p": 0.0007,
+        "status": "SUPPORTED"
+      },
+      {
+        "id": "car_geom",
+        "name": "C. perspicillata",
+        "representation": "Rhino-fixed detailed geometry",
+        "n": 7,
+        "K": -0.035,
+        "p": 0.2144,
+        "status": "UNSUPPORTED"
+      }
+    ],
+    "bridge": {
+      "criterion": 3,
+      "total": 4,
+      "outcomes": [
+        "PASS",
+        "PASS",
+        "FAIL",
+        "STRUCTURAL STOP"
+      ],
+      "overall": "FAIL"
+    }
+  }
+}
