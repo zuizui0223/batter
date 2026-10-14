@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "analysis_tier": "post-outcome descriptive vertical profile similarity; no new null, permutation, hypothesis test or biological evidence family",
   "original_study_id": "batter-centered-shape-profile-descriptive-v1",
   "original_source_sha256": "9efd5d2914ad012905a004aee1114d715deaaf94e3f54689deb4f1208a188cb2",
@@ -7,7 +7,9 @@
   "definition": "Overlap=sum(min(p_i[b],p_j[b]))=1-0.5*sum(abs(p_i[b]-p_j[b]))",
   "quantiles": "linear interpolation on sorted unordered within-cohort dyads at index (n-1)*q",
   "scientific_limits": "One-dimensional centered vertical-profile SHAPE overlap, not geographic 3D habitat overlap, same horizontal support, co-use, foraging or independent biological replication; dyads are nonindependent and distributions arise from self-derived common-cell weights",
-  "n_original_individuals": 103,
+  "n_source_panel_profile_records": 103,
+  "n_distinct_literal_source_identifiers": 101,
+  "global_animal_identity_verified": false,
   "total_within_cohort_pairs": 684,
   "panel_summary": [
     {
