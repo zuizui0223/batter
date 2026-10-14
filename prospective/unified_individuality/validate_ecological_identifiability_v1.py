@@ -86,6 +86,22 @@ def pure_mathematical_counterexample():
     close(kl,0.08109302162163282,"synthetic KL")
     print("PASS two distinct latent decompositions with identical marginal probabilities; overlap=.8, KL=.081093")
 
+def projection_nonidentifiability_counterexample():
+    """Mathematical example only, never the GPS source outcome."""
+    # Each list is p(z) at one horizontal cell. Both bats fly only at z=0,
+    # but in different cells, yielding identical height marginals and
+    # mutually exclusive true joint x/y/z support.
+    a=[[1.0,0.0],[0.0,0.0]]
+    b=[[0.0,0.0],[1.0,0.0]]
+    overlap_3d=sum(min(x,y) for row_a,row_b in zip(a,b) for x,y in zip(row_a,row_b))
+    z_a=[sum(row[z] for row in a) for z in range(2)]
+    z_b=[sum(row[z] for row in b) for z in range(2)]
+    overlap_vertical=sum(min(x,y) for x,y in zip(z_a,z_b))
+    close(overlap_3d,0.0,"synthetic true joint overlap")
+    close(overlap_vertical,1.0,"synthetic shared vertical-marginal overlap")
+    assert overlap_3d<=overlap_vertical
+    print("PASS pure math: identical vertical marginals (O=1) with disjoint joint 3D cells (O=0)")
+
 def text_bounds():
     manuscript=(HERE/"INTEGRATED_MANUSCRIPT_V1.md").read_text()
     anon=(HERE/"COMPLETE_ANONYMOUS_TEXT_DRAFT_V1.md").read_text()
@@ -94,6 +110,12 @@ def text_bounds():
         for token in ["Supplementary Methods "+name,"0.3840","0.0868","0.1015","0.4514",
                       "0.0544","0.081093","0.8","not data from any animal","post-outcome"]:
             assert token.lower() in si.lower(),(source,token)
+    for table,section in [("SUPPORTING_INFORMATION_DRAFT_V1.md","U13"),("SUPPORTING_INFORMATION_ANONYMOUS_DRAFT_V1.md","S13")]:
+        content=(HERE/table).read_text()
+        assert "Projection inequality" in content and "Supplementary Methods "+section in content
+        assert "their reported O" in content.lower() or "their reported o" in content.lower()
+    for doc in [manuscript,anon]:
+        assert "marginal-height overlap 1 and joint spatial overlap 0" in doc
     for token in ["500-m horizontal cells","+0.384","p = 0.0006","identifiability problem",
                   "different task proportions", "not a formal equivalence proof"]:
         assert token.lower() in manuscript.lower(),("Manuscript mechanism boundary missing",token)
@@ -116,4 +138,5 @@ def text_bounds():
 if __name__=="__main__":
     source_checks()
     pure_mathematical_counterexample()
+    projection_nonidentifiability_counterexample()
     text_bounds()
