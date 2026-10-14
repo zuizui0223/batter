@@ -214,7 +214,7 @@ Diebold CA, et al. 2024. Rapid sensorimotor adaptation to auditory midbrain sile
 
 Elie JE, et al. 2024. Role of auditory feedback for vocal production learning in the Egyptian fruit bat. *Current Biology* 34:4062–4070.e7. doi:10.1016/j.cub.2024.07.053.
 
-Eveland KE, et al. 2026. Looking ahead: echolocation and flight behaviors of two fruit bat species navigating a corridor. *Journal of Comparative Physiology A*. doi:10.1007/s00359-026-01818-0.
+Eveland KE, Finger NM, Jaroszewski JM, Bucio L, Moss CF. 2026. Looking ahead: echolocation and flight behaviors of two fruit bat species navigating a corridor. *Journal of Comparative Physiology A* 212:995–1008. doi:10.1007/s00359-026-01818-0.
 
 Fahr J, et al. 2015. Pronounced seasonal changes in the movement ecology of a highly gregarious central-place forager, the African straw-coloured fruit bat. *PLOS ONE* 10:e0138985. doi:10.1371/journal.pone.0138985.
 
@@ -232,7 +232,7 @@ Hurme E, et al. 2019. Acoustic evaluation of behavioral states predicted from GP
 
 Kerches-Rogeri, P., Niebuhr, B.B., Muylaert, R.L. & Mello, M.A.R. (2020). Individual specialization in the use of space by frugivorous bats. *Journal of Animal Ecology*, 89, 2584–2595. doi:10.1111/1365-2656.13339.
 
-Mathejczyk TF, Knief C, Haidar MA, Freitag F, McClary T, Wernet MF, Linneweber GA. 2026. Individuality across environmental context in *Drosophila melanogaster*. *eLife* 13:RP98171. doi:10.7554/eLife.98171.
+Mathejczyk TF, Knief C, Haidar MA, Freitag F, McClary T, Wernet MF, Linneweber GA. 2026. Individuality across environmental context in *Drosophila melanogaster*. *eLife* 13:RP98171. doi:10.7554/eLife.98171.5.
 
 McIntyre, T., Bester, M.N., Bornemann, H., Tosh, C.A. & de Bruyn, P.J.N. (2017). Slow to change? Individual fidelity to three-dimensional foraging habitats in southern elephant seals, *Mirounga leonina*. *Animal Behaviour*, 127, 91–99. doi:10.1016/j.anbehav.2017.03.006.
 
@@ -254,7 +254,7 @@ Si M, et al. 2025. Individual asymmetric competition responses across multidimen
 
 Taub M, Yovel Y. 2020. Segregating signal from noise through movement in echolocating bats. *Scientific Reports* 10:382. doi:10.1038/s41598-019-57346-2.
 
-Teshima Y, et al. 2026. Evidence for latent regularities in echolocation-guided flight behaviour of bats. *Proceedings of the Royal Society B* 293:20261463. doi:10.1098/rspb.2026.1463.
+Teshima Y, Genda S, Aoki Y, Fujisawa M, Hiryu S, Fujii K. 2026. Evidence for latent regularities in echolocation-guided flight behaviour of bats. *Proceedings of the Royal Society B* 293(2076):20261463. doi:10.1098/rspb.2026.1463.
 
 Toledo S, et al. 2020. Cognitive map-based navigation in wild bats revealed by a new high-throughput tracking system. *Science* 369:188–193. doi:10.1126/science.aax6904.
 
