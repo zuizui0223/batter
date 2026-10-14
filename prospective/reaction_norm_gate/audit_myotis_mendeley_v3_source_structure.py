@@ -117,9 +117,31 @@ def mat_structure(data: bytes, name: str) -> dict:
             {"name":str(n), "shape":list(d), "class":str(cl)} for n,d,cl in pairs],
             "opened_numeric_biological_values":False}
     except Exception as e:
-        return {"filename":name, "format":"UNKNOWN_OR_HDF5", "error_type":type(e).__name__,
-                "error_message":str(e)[:150],
-                "opened_numeric_biological_values":False}
+        # Original fig2/fig3 are MATLAB v7.3/HDF5; scipy.whosmat
+        # deliberately rejects this format. Read structure only via h5py.
+        try:
+            import h5py
+            objects=[]
+            with h5py.File(io.BytesIO(data), "r") as h:
+                root_names=list(h.keys())
+                def visit(path, obj):
+                    # Datasets' .shape/.dtype is metadata, not values.
+                    if len(objects)<250:
+                        if isinstance(obj,h5py.Dataset):
+                            objects.append({"name":path,"kind":"dataset",
+                                            "shape":list(obj.shape),"dtype":str(obj.dtype)})
+                        elif isinstance(obj,h5py.Group):
+                            objects.append({"name":path,"kind":"group"})
+                h.visititems(visit)
+            return {"filename":name,"format":"MAT_v7_3_HDF5",
+                    "root_names":root_names,"objects_first250":objects,
+                    "objects_truncated":len(objects)>=250,
+                    "opened_numeric_biological_values":False}
+        except Exception as e2:
+            return {"filename":name, "format":"UNRESOLVED_MAT_FORMAT",
+                    "prior_error":type(e).__name__, "reader_error_type":type(e2).__name__,
+                    "error_message":str(e2)[:150],
+                    "opened_numeric_biological_values":False}
 
 
 def r_structure(data: bytes, name: str) -> dict:
@@ -127,8 +149,14 @@ def r_structure(data: bytes, name: str) -> dict:
     fields=["treat_code","bat_num","tag_depl_num","buzz2_dur_ms","lData.csv","wData.csv","fig2"]
     line_matches={token:[i for i,line in enumerate(src.splitlines(),1) if token in line]
                   for token in fields}
-    # Emit field locations only; no R code or numeric outcome expression used.
+    # Script fragments are methodological metadata: no observed numeric
+    # bat responses are opened or reported. These aid code→stimulus mapping.
+    anchors=("treat_code", "tag_depl_num", "bat_num")
+    interesting=[{"line":i, "source":line[:240]}
+                 for i,line in enumerate(src.splitlines(),1)
+                 if any(tok in line for tok in anchors)]
     return {"filename":name, "lines":len(src.splitlines()), "matching_code_line_numbers":line_matches,
+            "methodological_lines":interesting[:80],
             "opened_numeric_biological_values":False}
 
 
