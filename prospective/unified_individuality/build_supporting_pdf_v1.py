@@ -8,7 +8,7 @@ from reportlab.lib import colors
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
-from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, LongTable, TableStyle
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, LongTable, TableStyle, KeepTogether
 
 ROOT=Path(__file__).resolve().parent
 SOURCE=ROOT / "SUPPORTING_INFORMATION_DRAFT_V1.md"
@@ -70,7 +70,10 @@ def draw_table(lines):
     for row in range(2,len(data),2):
         commands.append(("BACKGROUND",(0,row),(-1,row),colors.HexColor("#FAFBFC")))
     tab.setStyle(TableStyle(commands))
-    return [Spacer(1,5),tab,Spacer(1,9)]
+    tab.spaceBefore=5
+    tab.spaceAfter=9
+    # Keep short source tables intact. Long tables may split with a repeated header.
+    return [KeepTogether([tab])] if len(data)<=8 else [tab]
 def decorate(c,doc):
     c.saveState()
     c.setStrokeColor(rule)
