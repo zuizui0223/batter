@@ -1,0 +1,27 @@
+name: Unified manuscript figures (source-summary guard)
+
+on:
+  pull_request:
+    paths:
+      - 'prospective/unified_individuality/**'
+      - '.github/workflows/unified-manuscript-figures-v1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-unified-figures:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Regenerate six vector figures from pinned source summaries
+        run: node prospective/unified_individuality/figures/generate_integrated_figures_v1.cjs
+      - name: Guard against stale or hand-edited rendered figures
+        run: git diff --exit-code -- prospective/unified_individuality/figures/
+      - name: Check scientific gates, labels, and SVG XML
+        run: python3 prospective/unified_individuality/figures/validate_integrated_figures_v1.py
