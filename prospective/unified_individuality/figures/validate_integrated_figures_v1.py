@@ -85,13 +85,13 @@ def manuscript_format_gate() -> None:
         a=text.index(start)+len(start)
         b=text.index(stop,a)
         return text[a:b].strip()
-    lay=section(manuscript,"## Lay Summary\\n","## Abstract\\n")
-    abstract=section(manuscript,"## Abstract\\n","## Introduction\\n")
+    lay=section(manuscript,"## Lay Summary\n","## Abstract\n")
+    abstract=section(manuscript,"## Abstract\n","## Introduction\n")
     title=manuscript.splitlines()[0].removeprefix("# ").strip()
     assert len(lay.split()) <= 75, f"Lay Summary too long: {len(lay.split())}"
     assert len(abstract.split()) <= 250, f"Abstract too long: {len(abstract.split())}"
     assert len(title) <= 100, f"Title exceeds recommended 100 characters: {len(title)}"
-    assert anonymous.startswith("## Lay Summary\\n"), "Anonymous text must open with Lay Summary"
+    assert anonymous.startswith("## Lay Summary\n"), "Anonymous text must open with Lay Summary"
     assert anonymous.index("## References") < anonymous.index("## Figure legends"), "Reference/figure order wrong"
     assert anonymous.count("**Figure 5.") == 1, "Composite Figure 5 legend missing"
     assert "FIGURE_5_COMPOSITE_177x238MM_V2.svg" not in anonymous, "Anonymized content leaked internal asset path"
