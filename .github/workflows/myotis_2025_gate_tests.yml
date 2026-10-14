@@ -1,0 +1,27 @@
+name: Myotis 2025 source gate synthetic checks
+on:
+  push:
+    branches:
+      - prospective/myotis-prey-escape-2025-source-gate-v1
+    paths:
+      - 'prospective/reaction_norm_gate/myotis_source_gate_v1.py'
+      - 'prospective/reaction_norm_gate/test_myotis_source_gate_v1.py'
+      - '.github/workflows/myotis_2025_gate_tests.yml'
+  pull_request:
+    paths:
+      - 'prospective/reaction_norm_gate/myotis_source_gate_v1.py'
+      - 'prospective/reaction_norm_gate/test_myotis_source_gate_v1.py'
+      - '.github/workflows/myotis_2025_gate_tests.yml'
+jobs:
+  synthetic-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate source gate without opening original bat outcomes
+        run: |
+          cd prospective/reaction_norm_gate
+          python -m unittest -v test_myotis_source_gate_v1.py
+          python -m py_compile myotis_source_gate_v1.py
