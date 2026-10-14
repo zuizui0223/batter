@@ -57,5 +57,5 @@ This audit detects transcription-level omissions/mismatches of selected numbers;
 
 - Six draft SVG figures, the frozen source-summary data snapshot, a zero-dependency Node figure builder, a Python SVG/XML-and-biological-claim guard, and an on-PR workflow were added to the same draft PR.
 - A source-specific encounter distinction was corrected in text/legends: the 2016 co-use panel also used a 600-s window, but endpoint exclusion; only 2023 used 600-s **all-space** scope, while H and 2022 used 60-s endpoint-excluded scope.
-- Fig. 5 is an original-result-centered-score figure and does **not** falsely recreate individual raw probability profiles; the source JAE heatmap remains an original artifact to retrieve before final production.
+- Figure 5A shows calibrated original-result centered-shape scores and Figure 5B now links the exact original JAE heatmap, with 103 individual profiles preserved as original CSV, JSON and PNG. SHA256 for all three original artifact members and the 103 × 10 probability structure were verified in restore workflow 38507348011; graphical details remain descriptive, not independent inferential tests.
 - The figure validator cannot substitute for visual QA, and the underlying source calculations have not been independently recomputed in this integrated PR.
