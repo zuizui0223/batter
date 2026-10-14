@@ -50,6 +50,12 @@ OUP AI policy: https://academic.oup.com/pages/for-authors/journals/preparing-and
 | Laboratory-to-field bridge | Two PASS / one FAIL / one structural STOP; threshold not met | RETAINED NEGATIVE |
 | Field original external tests | Nyctalus, Hipposideros and M. vivesi original failures alongside small-n Pteropus positive | RETAINED BOUNDARY |
 
+## New conditional-descriptive supplement (NOT additional inferential test)
+
+Figure S1 and Table S8 quantify the descriptive intersection of 103 archived original bats' **relative-height self-prediction shapes** after limiting dyads to original collection cohorts, with 684 **nonindependent** pairs. All source probabilities remain unchanged and the original JAE profile SHA256 is guarded. The main text and SI clearly distinguish this 1D centered-profile coefficient from true 3D niche habitat overlap and the original S_rel and co-use I null tests. Methods S13 supplies reproducibility rules. The vector chart has been embedded in the single anonymous SI PDF. As a new post-outcome display, it is not independent replication, a significance test or a new ecological niche-overlap endpoint.
+
+This visualization adds a **human figure review gate**: ensure the 10–90th percentile bars are never called uncertainty bands or dyad counts independent biological sample size, and confirm the journal accepts a purely descriptive supplemental figure beyond the six main figures.
+
 ## Human approval required — HARD STOP
 
 - [ ] **Scientific coauthor approval:** One central question, valid endpoint distinctions, small-n inference, JAE post-outcome geometry, source heterogeneity, negative tests and figure conclusions.
