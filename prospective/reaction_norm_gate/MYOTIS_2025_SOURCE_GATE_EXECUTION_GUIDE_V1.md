@@ -12,6 +12,10 @@ Original author files have been directly downloaded and checked via the public `
 
 The trial-level `lData.csv` is a *different table structure* from this code's required canonical 6-regime input. The original grouped `treat_code` **must not** be converted into fictitious individual physical speed/displacement values. A separate post-outcome exploratory chase-probability contrast is possible in principle but is **not** an authorized rescue of the originally locked four-bat acoustic coefficient test.
 
+### Latest source closure: Figure 3 does not restore individual dates (2026-10-14)
+
+A further SHA-verified original MAT/HDF5 audit recovered **only four** Figure-3 table field names: `treat_code`, `trial_id`, `time_t0_ms`, `norm_ci`. The separate laboratory `lData.csv` has bat/deployment categories but **no matching trial ID**. There is no verified trialwise individual/date bridge between the available original data products. The six-regime coefficients are additionally non-identifiable from the 3-group treatment aggregation. Read [the original Figure-3 schema gate](MYOTIS_FIG3_INDIVIDUAL_JOIN_GATE_VERIFIED_2026_10_14.md) and [exact algebra certificate](MYOTIS_GROUPED_CONDITIONS_EXACT_NONIDENTIFIABILITY_CERTIFICATE_V1.md). **Do not promote the conditional forecast code in this guide to an observed bat-policy result.**
+
 ## 1. Inventory original data before opening numerical outcomes
 
 Download the author's original ZIP **unchanged**. Then from the repository root run:
