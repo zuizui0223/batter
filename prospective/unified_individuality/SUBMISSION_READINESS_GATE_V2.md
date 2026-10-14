@@ -36,17 +36,17 @@ OUP AI policy: https://academic.oup.com/pages/for-authors/journals/preparing-and
 | Single title | "Persistent individuality need not entail spatial partitioning in bats" | PASS, 69 characters |
 | Abstract | Original two-paper structure rewritten into one evidence-ranked paper | PASS, 215 words |
 | Lay Summary | Nontechnical opening before title in Complete Anonymous Text | PASS, 73 words |
-| Main manuscript | Integrated draft includes Methods, Results, Discussion and 35 reconciled scholarly references | WORKING DRAFT |
+| Main manuscript | Integrated draft includes Methods, Results, Discussion and 36 reconciled scholarly references | WORKING DRAFT |
 | Main anonymous review text | Page/line numbered coauthor proof generated; 22 A4 pages, 654 continuous numbered rendered lines | MACHINE PASS (human typography/claims review pending) |
 | Main figures | Six main figure claims: Figures 1,2,3,4,5,6; Figure 5 has one A+B plate | SVG reproduction PASS |
 | Composite Figure 5 | Original 103-individual, 10-bin archived profile data + calibrated six-panel identity; 177x238mm PDF local proof generated | DATA INTEGRITY PASS; final lettering/author review pending |
 | Original JAE profile | Unchanged source PNG, CSV, JSON with original SHA256; 20+24+33+16+10 individuals | PASS |
 | Figure alternative text | Six figure alt-text descriptions source-claim bounded | DRAFT |
-| Combined SI | Seven source data/analysis tables and expanded Methods S1–S11, including primary inclusion criteria, null calibrations, post-outcome terrain/co-use and all experimental endpoints | DRAFT (enhanced source reproducibility) |
+| Combined SI | Seven source data/analysis tables and expanded Methods S1–S12, including primary inclusion criteria, null calibrations, post-outcome terrain/co-use and all experimental endpoints | DRAFT (enhanced source reproducibility) |
 | Internal SI proof | Nine-page A4 landscape PDF after source-specific methods expansion | MACHINE PASS |
-| Anonymous SI proof | Nine-page A4 landscape PDF with source branch names removed and S1–S11 technical methods preserved | MACHINE PASS |
+| Anonymous SI proof | Nine-page A4 landscape PDF with source branch names removed and S1–S12 technical methods preserved | MACHINE PASS |
 | Figure and document reproducibility CI | GitHub Actions recreate source-compliant SVG, source hashes, anonymous text, SI PDFs and main PDF without primary data changes | PASS on current reviewed runs |
-| Reference DOI union | 45 unique source DOI entries (39 scholarly; 6 source-only datasets), 35 selected scholarly main citations | TEXTUAL RECONCILIATION ONLY |
+| Reference DOI union | 45 unique source DOI entries (39 scholarly; 6 source-only datasets), 36 selected scholarly main citations | TEXTUAL RECONCILIATION ONLY |
 | Laboratory-to-field bridge | Two PASS / one FAIL / one structural STOP; threshold not met | RETAINED NEGATIVE |
 | Field original external tests | Nyctalus, Hipposideros and M. vivesi original failures alongside small-n Pteropus positive | RETAINED BOUNDARY |
 
