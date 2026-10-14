@@ -126,19 +126,49 @@ def mat_structure(data: bytes, name: str) -> dict:
         try:
             import h5py
             objects=[]
+            table_column_label_candidates=[]
+            root_attributes={}
+            label_words=("bat","tag","date","day","trial","time","treat",
+                         "speed","dist","motion","ci","buzz","chase",
+                         "norm","session","pos","flight","cue")
+            def convert_attr(x):
+                if isinstance(x,bytes):
+                    return x.decode("utf-8","replace")[:150]
+                if isinstance(x,str):
+                    return x[:150]
+                if hasattr(x,"shape") and hasattr(x,"tolist"):
+                    lst=x.tolist()
+                    if isinstance(lst,(list,tuple)) and len(lst)<=30:
+                        return [convert_attr(v) for v in lst]
+                return str(x)[:150]
             with h5py.File(io.BytesIO(data), "r") as h:
                 root_names=list(h.keys())
+                for name0 in root_names:
+                    if not name0.startswith("#"):
+                        root_attributes[name0]={str(k):convert_attr(v)
+                            for k,v in h[name0].attrs.items()
+                            if str(k).startswith("MATLAB")}
                 def visit(path, obj):
-                    # Datasets' .shape/.dtype is metadata, not values.
+                    # ONLY size/type/class and short datasets explicitly
+                    # labelled MATLAB character strings are inspected;
+                    # float/int animal outcome values are never opened.
                     if len(objects)<250:
                         if isinstance(obj,h5py.Dataset):
                             objects.append({"name":path,"kind":"dataset",
                                             "shape":list(obj.shape),"dtype":str(obj.dtype)})
+                            cls=convert_attr(obj.attrs.get("MATLAB_class",""))
+                            if cls=="char" and obj.size<=200 and obj.dtype.kind in "ui":
+                                arr=obj[()].reshape(-1)
+                                word="".join(chr(int(v)) for v in arr if int(v)>0)
+                                if word.isprintable() and any(tok in word.lower() for tok in label_words):
+                                    table_column_label_candidates.append({"path":path,"text":word[:200]})
                         elif isinstance(obj,h5py.Group):
                             objects.append({"name":path,"kind":"group"})
                 h.visititems(visit)
             return {"filename":name,"format":"MAT_v7_3_HDF5",
-                    "root_names":root_names,"objects_first250":objects,
+                    "root_names":root_names,"root_MATLAB_attributes":root_attributes,
+                    "schema_string_candidates":table_column_label_candidates[:100],
+                    "objects_first250":objects,
                     "objects_truncated":len(objects)>=250,
                     "opened_numeric_biological_values":False}
         except Exception as e2:
