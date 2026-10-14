@@ -75,6 +75,13 @@ This **post-outcome descriptive transformation is new**, unlike the frozen prima
 - Caution: original profiles were estimated on **individual-specific supported horizontal cells/weights**, and height was median-centered and smoothed. This plot does **not** estimate actual 3D geographic/behavioral overlap, true instantaneous contact, common prey or equivalent absence of competition.
 - The anonymous and internal SI PDF pipeline embeds the same vector Figure S1; its final printed appearance still needs human coauthor sign-off.
 
+## Direct same-source 2D prior art and animal-ID integrity amendment — 2026-10-14
+
+- Targeted literature validation found Calderón-Capote et al. (2025; *PLOS ONE*, DOI 10.1371/journal.pone.0313782), which analysed the very same La Gruta P. hastatus 2016 and 2022 source archives for **horizontal foraging-area overlap**, averaging near 0.20 with a Bhattacharyya coefficient. This is not mathematically comparable to the new 1D centered height-shape overlap median 0.80–0.92; no “80–92% shared 3D habitat” statement is admissible.
+- Independent **byte-verified source CSV identity-scope QA**: 103 panel-indexed profile rows across five source panels, **101 distinct literal animal-ID strings**, two repeated strings in the 2016 and 2022 P. hastatus La Gruta cohorts. The 684 descriptive profile pairs are entirely within each panel and exact collection cohort; none cross these two years.
+- The 2025 paper states PIT tagging and low recaptures over 2016–2022, but the exact PIT registry crosswalk for the two identical archived strings was not independently confirmed. Hence manuscript, anonymous manuscript and new figure labels now use **103 panel-profile records**, not “103 confirmed independent bats”, and the cover letter no longer asserts all programmes are biologically independent.
+- The original JAE per-panel calibration, positive/nonsupporting original verdicts, 500-m conditional stress tests, full source profile data and original graphic remain unchanged; no added cross-year individual memory test has been performed.
+
 ## Rendered figure amendment (2026-10-14)
 
 - Six draft SVG figures, the frozen source-summary data snapshot, a zero-dependency Node figure builder, a Python SVG/XML-and-biological-claim guard, and an on-PR workflow were added to the same draft PR.
