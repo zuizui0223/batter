@@ -32,6 +32,10 @@ SELECTED_FILES = {
     "fig2_wData.mat": "873a2ec8b9a9e83afe0fe1f35b09977718dcc27e048f980f947a6caca52fb75b",
     "fig3_lData.mat": "24a47604ffe2a034162f7b64d6fa0a49ae96e0086e8a00c6bf84fcd0561fe75c",
     "fig3_wData.mat": "5ebaf71c89d877047c5fb8ac18ed585027ba5b28ee875be5fe718123dce4829b",
+    "fig1_lData.mat": "97f8451667ab98f0bc353b9240cb9af487a013378063ef0233fabe0a885081bd",
+    "fig1.m": "876af3f00ddfe42d7e36caf51febed97cdfa7d869aa714e779b692aed090376c",
+    "fig2.m": "95ac2a17453eefe3c5ff5375b0bb4dca5ee65e2529b49c87b6269d014274e81e",
+    "fig3.m": "ebcb1d2e767a80554dc0b10a65441695a30de78a4304d733efc8c00801a1763e",
 }
 MAX_FILE_BYTES = 5_000_000
 
@@ -144,6 +148,29 @@ def mat_structure(data: bytes, name: str) -> dict:
                     "opened_numeric_biological_values":False}
 
 
+def matlab_source_structure(data: bytes, name: str) -> dict:
+    """Read original-author CODE text for schema/stimulus relationships only.
+
+    Numeric individual observations in MAT/CSV files are never read here.
+    Variable assignments in published source code are methods/metadata.
+    """
+    src = data.decode("utf-8-sig", errors="replace")
+    patterns = (
+        "treat", "condition", "speed", "veloc", "distance", "displac",
+        "tag", "bat", "date", "day", "trial", "load(", "readtable",
+        "writetable", "group", "move", "motion", "lData", "buzz", "onset",
+        "motor", "chase", "time", "fig",
+    )
+    matches = []
+    for n, line in enumerate(src.splitlines(), 1):
+        lo = line.lower()
+        if any(p.lower() in lo for p in patterns):
+            matches.append({"line": n, "source": line.strip()[:400]})
+    return {"filename":name, "code_lines":len(src.splitlines()),
+            "method_lines":matches[:140], "matching_lines_total":len(matches),
+            "opened_numeric_biological_values":False}
+
+
 def r_structure(data: bytes, name: str) -> dict:
     src=data.decode("utf-8-sig", errors="replace")
     fields=["treat_code","bat_num","tag_depl_num","buzz2_dur_ms","lData.csv","wData.csv","fig2"]
@@ -195,6 +222,8 @@ def run() -> dict:
             st=csv_structure(content,name)
         elif name.endswith(".mat"):
             st=mat_structure(content,name)
+        elif name.endswith(".m"):
+            st=matlab_source_structure(content,name)
         else:
             st=r_structure(content,name)
         out["files"].append({**st,"sha256":digest,"size_bytes":len(content)})
@@ -226,7 +255,8 @@ def main() -> int:
     print(json.dumps({
         "status":out["status"],"original_file_count":out.get("original_file_count"),
         "selected_files":[{"name":x["filename"],"columns":x.get("columns"),
-           "variables":x.get("variables"),"row_count":x.get("row_count")}
+           "variables":x.get("variables"),"root_names":x.get("root_names"),
+           "row_count":x.get("row_count"),"method_lines":x.get("method_lines")}
            for x in out.get("files",[])],
         "error":out.get("error"),
         "outcome_magnitudes_opened":False,
