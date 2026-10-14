@@ -70,7 +70,7 @@ The BE programme separately froze a scalar FlightIntensity carrier bridge to wil
 
 ### Evidence hierarchy
 
-We use the words **supported**, **unsupported/failed**, **unadjudicated structural stop**, and **descriptive/post-outcome diagnostic** according to the two original ledgers. A numerically small p-value cannot override a failed prespecified sign or sample-size gate; a nonsignificant test cannot establish exact absence of an effect. Across heterogeneous sources we compare designs and directional inferential statuses, not pooled effect sizes, pooled p-values, or an implied common latent trait. Detailed technical methods, source provenance and null architectures are retained in the original frozen packages and proposed unified Supporting Information.
+We use the words **supported**, **unsupported/failed**, **unadjudicated structural stop**, and **descriptive/post-outcome diagnostic** according to the two original ledgers. A numerically small p-value cannot override a failed prespecified sign or sample-size gate; a nonsignificant test cannot establish exact absence of an effect. Across heterogeneous sources we compare designs and directional inferential statuses, not pooled effect sizes, pooled p-values, or an implied common latent trait. Detailed technical methods, source provenance, source-specific null architectures and the four-panel co-use design are retained in the original frozen packages and the [combined Supporting Information draft](SUPPORTING_INFORMATION_DRAFT_V1.md).
 
 ## Results
 
