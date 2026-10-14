@@ -56,11 +56,11 @@ The detailed reproducibility contracts and legally redistributable data-derived 
 | *Tadarida teniotis* | 10.5441/001/1.52nn82r9 | Motivating boundary; centering fails |
 | *Eidolon helvum* | 10.5441/001/1.k8n02jn8 | Comparative centered-shape PASS |
 | *Hypsignathus monstrosus* | 10.5441/001/1.278 | Centered shape and terrain/co-use eligible |
-| *Phyllostomus hastatus 2022* | 10.5441/001/1.282 | Centered shape and terrain/co-use eligible |
-| *Phyllostomus hastatus 2023* | 10.5441/001/1.321 | Centered shape and terrain/co-use eligible |
-| *Phyllostomus hastatus 2016* | 10.5441/001/1.322 | Centered shape and terrain/co-use eligible |
+| *Phyllostomus hastatus 2022* | 10.5441/001/1.321 | Centered shape and terrain/co-use eligible |
+| *Phyllostomus hastatus 2023* | 10.5441/001/1.322 | Centered shape and terrain/co-use eligible |
+| *Phyllostomus hastatus 2016* | 10.5441/001/1.282 | Centered shape and terrain/co-use eligible |
 
-The original tracking source screen considered 23 Movebank parent datasets, admitted six same-event x-y-height repeated-tracking panels and then closed its source universe. The 2016 *P. hastatus* panel has weaker overlap of individual tracking windows (31.1%) than the five others, so identity/time confounding has a stronger residual limitation. The motivating *T. teniotis* panel is not a positive example of session-centered shape identity. All wild panel-level inclusion, source checksums and height-datum processing remain available in the original tracking source receipts and manuscript Methods.
+The panel-specific DOIs are mapped by **study year**, not by the unordered group of three source DOIs: the 2016 archive is 10.5441/001/1.282, the 2021–2022 archive (2022 analysis panel) is 10.5441/001/1.321, and the 2023 archive is 10.5441/001/1.322. This mapping follows the original frozen data-ingestion script and original tracking Methods; it is distinct from a mere enumeration of source DOIs. The original tracking source screen considered 23 Movebank parent datasets, admitted six same-event x-y-height repeated-tracking panels and then closed its source universe. The 2016 *P. hastatus* panel has weaker overlap of individual tracking windows (31.1%) than the five others, so identity/time confounding has a stronger residual limitation. The motivating *T. teniotis* panel is not a positive example of session-centered shape identity. All wild panel-level inclusion, source checksums and height-datum processing remain available in the original tracking source receipts and manuscript Methods.
 
 ## Supplementary Table S4. Session-centered vertical identity (original calibrated results)
 
