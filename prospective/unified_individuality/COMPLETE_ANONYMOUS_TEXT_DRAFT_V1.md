@@ -51,7 +51,7 @@ Four independent source-specific experimental contrasts were evaluated: *Pipistr
 
 ### Task portability and representation
 
-For *Rhinolophus nippon*, a pre-specified coarse I/M movement representation was tested across obstacle contexts using the Teshima et al. (2026) public flight-policy source. The fixed representation was then transferred to an independent *Carollia perspicillata* corridor system (Eveland et al. 2026). A fixed detailed, scale-free trajectory-geometry representation provided the comparison. Transfer of predictive organization is not interpreted as evidence that the same latent parameter or policy exists in the two species.
+For *Rhinolophus nippon*, a pre-specified two-coordinate movement representation—FlightIntensity and ManeuveringExtent (I/M)—was tested across obstacle contexts using the Teshima et al. (2026) public flight-policy source. The fixed representation was then transferred to an independent *Carollia perspicillata* corridor system (Eveland et al. 2026). A fixed detailed, scale-free trajectory-geometry representation provided the comparison. Transfer of predictive organization is not interpreted as evidence that the same latent parameter or policy exists in the two species.
 
 ### Repeated wild three-dimensional tracking
 
