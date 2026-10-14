@@ -35,6 +35,13 @@ This directory develops a **single manuscript** by integrating the existing *Jou
 
 The final journal data repository URL and author/coauthor approvals are **not** available yet; do not label these proof files submission-ready.
 
+## New exploratory descriptive output: within-cohort 1D vertical shape overlap
+
+- [Design fixed before overlap calculation](DESCRIPTIVE_VERTICAL_PROFILE_OVERLAP_CONTRACT_V1.md): 103 original individual profiles, pairs restricted to the **same frozen panel and source cohort**; no cross-country/colony/year dyads, no randomization/null/claim of new confirmation.
+- [Figure S1 SVG](figures/FIGURE_S1_WITHIN_COHORT_VERTICAL_SHAPE_OVERLAP_V1.svg), [cohort/panel summary](figures/FROZEN_PROFILE_OVERLAP_DESCRIPTIVE_V1.json), [all 684 dependent within-cohort pairs](figures/ORIGINAL_PROFILE_WITHIN_COHORT_OVERLAP_PAIRS_V1.csv) and [deterministic pure Node generator](figures/derive_centered_vertical_overlap_v1.cjs). Original frozen 103-profile JSON checksum is required to regenerate all three derived outputs.
+- Per-panel 10-bin **median overlap of estimated session-centered probability SHAPES** = 0.817 / 0.801 / 0.919 / 0.899 / 0.802 for Eidolon / Hypsignathus / P. hastatus 2022 / 2023 / 2016. **Not full 3D habitat overlap, synchronized co-use, diet or independent dyad replication.**
+- [SI internal and anonymous source](SUPPORTING_INFORMATION_DRAFT_V1.md) now contain Table U8/S8 and Methods U13/S13, with the vector Figure S1 embedded in the anonymous SI PDF. This is a post-outcome descriptive secondary display and does not upgrade the previously frozen S_rel 0/4 positive or I 1/4 results.
+
 ## One biological question
 
 **What persists when behavior remains individually predictable, and when does that persistence require ecological spatial partitioning?**
