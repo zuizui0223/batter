@@ -29,9 +29,13 @@ Four independent current-context experimental programmes retain individual corre
 
 The fixed coarse I/M representation retains *Rhinolophus nippon* cross-task identity (n = 5, K = +0.55428; p = 0.0001) and transfers to independent *Carollia perspicillata* data (n = 7, K = +0.34758; p = 0.0007), while fixed detailed scale-free Rhino geometry does not pass that Carollia test (K = -0.0350; p = 0.2144). Card areas encode no effect-size magnitude. The separate scalar FlightIntensity wild carrier programme has two panel passes, one failure and one structural stop; it fails the required 3/4 total. No universal cross-species neural or behavioral latent state has been identified.
 
-## Figure 5. Calibrated centered-shape identity in wild 3D tracking
+## Figure 5. Calibrated centered-shape identity and individual profile heterogeneity
 
-![Fig. 5 — Individual-specific vertical-distribution shape after session centering](figures/FIGURE_5_CENTERED_VERTICAL_IDENTITY_V1.svg)
+The single 177 × 238 mm composited plate (Figure 5A+B) redraws the original JAE full probability vectors from the checksum-verified archive; panel B is **descriptive only**.
+
+![Figure 5 A+B — print-size original-source data composite](figures/FIGURE_5_COMPOSITE_177x238MM_V2.svg)
+
+A separately maintained Figure 5A-only source-summary SVG is available for reproducibility: [centered-shape identity SVG](figures/FIGURE_5_CENTERED_VERTICAL_IDENTITY_V1.svg).
 
 Observed-minus-null-centered shape identity is shown in nats per fix under each original panel's own whole-session permutation expectation. After common-cell horizontal weighting and session-median centering, the five non-*Tadarida* comparative panels meet their frozen shape-identity criterion; the motivating *Tadarida teniotis* panel does not (calibrated excess -0.022; p = 0.5121). The plotted quantities are neither absolute metres nor a claim about one specific vertical-distribution component. This SVG is **Figure 5A**, retaining the calibrated original whole-profile identity inference. **Figure 5B** below is the **actual original JAE PNG** restored from the archived run 36375056204, not generated from panel-level summaries. It displays 103 individual probability profiles across the five comparative panels, with ten predeclared height bins. Differences in central mass and upper/lower tails are descriptive only, are subject to finite-session estimation noise, and do not identify the individually calibrated carrier of the whole-profile test. The source CSV, JSON and checksum receipt are [archived alongside the manuscript](ORIGINAL_PROFILE_RECOVERY_RECEIPT_V1.md).
 
