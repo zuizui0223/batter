@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="177mm" height="108mm" viewBox="0 0 1770 1080" role="img" aria-label="Within-cohort centered vertical-profile overlap: descriptive nonindependent dyads">
+<title>Figure S1. Within-cohort similarity of original centered vertical-use probability profiles</title>
+<desc>Five groups of previously estimated individual relative-height probability profiles; points are descriptive within-cohort unordered-dyad medians and horizontal lines are 10th to 90th descriptive percentiles, not confidence intervals. No source-based ecological spatial overlap or new statistical test is represented.</desc>
+<rect width="1770" height="1080" fill="#FFFFFF"/>
+<text x="60" y="75" font-family="Arial,Helvetica,sans-serif" font-size="46" font-weight="700" fill="#233947" text-anchor="start">FIGURE S1  |  WITHIN-COHORT VERTICAL PROFILE OVERLAP</text>
+<text x="60" y="115" font-family="Arial,Helvetica,sans-serif" font-size="26" font-weight="400" fill="#667888" text-anchor="start">Source-frozen self-predictor profiles, 10 session-centered height bins; original 103 bats</text>
+<line x1="60" y1="141" x2="1710" y2="141" stroke="#D7E2E8" stroke-width="2"/>
+<text x="61" y="210" font-family="Arial,Helvetica,sans-serif" font-size="29" font-weight="700" fill="#233947" text-anchor="start">Original tracking panel</text>
+<text x="890" y="210" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="700" fill="#233947" text-anchor="middle">Centered 1D overlap coefficient  O = sum(min(p_i, p_j))</text>
+<text x="1675" y="210" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="700" fill="#233947" text-anchor="end">Dyads</text>
+<line x1="430" y1="252" x2="430" y2="823" stroke="#D7E2E8" stroke-width="1"/>
+<text x="430" y="869" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="400" fill="#667888" text-anchor="middle">0.0</text>
+<line x1="620" y1="252" x2="620" y2="823" stroke="#D7E2E8" stroke-width="1"/>
+<text x="620" y="869" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="400" fill="#667888" text-anchor="middle">0.2</text>
+<line x1="810" y1="252" x2="810" y2="823" stroke="#D7E2E8" stroke-width="1"/>
+<text x="810" y="869" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="400" fill="#667888" text-anchor="middle">0.4</text>
+<line x1="1000" y1="252" x2="1000" y2="823" stroke="#D7E2E8" stroke-width="1"/>
+<text x="1000" y="869" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="400" fill="#667888" text-anchor="middle">0.6</text>
+<line x1="1190" y1="252" x2="1190" y2="823" stroke="#D7E2E8" stroke-width="1"/>
+<text x="1190" y="869" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="400" fill="#667888" text-anchor="middle">0.8</text>
+<line x1="1380" y1="252" x2="1380" y2="823" stroke="#D7E2E8" stroke-width="1"/>
+<text x="1380" y="869" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="400" fill="#667888" text-anchor="middle">1.0</text>
+<rect x="53" y="254" width="1661" height="101" fill="#F3F7F9"/>
+<line x1="430" y1="255" x2="430" y2="355" stroke="#D7E2E8" stroke-width="1"/>
+<line x1="620" y1="255" x2="620" y2="355" stroke="#D7E2E8" stroke-width="1"/>
+<line x1="810" y1="255" x2="810" y2="355" stroke="#D7E2E8" stroke-width="1"/>
+<line x1="1000" y1="255" x2="1000" y2="355" stroke="#D7E2E8" stroke-width="1"/>
+<line x1="1190" y1="255" x2="1190" y2="355" stroke="#D7E2E8" stroke-width="1"/>
+<line x1="1380" y1="255" x2="1380" y2="355" stroke="#D7E2E8" stroke-width="1"/>
+<text x="64" y="317" font-family="Arial,Helvetica,sans-serif" font-size="29" font-weight="400" fill="#233947" text-anchor="start">E. helvum</text>
+<line x1="616.9084707189345" y1="306" x2="1349.818264409715" y2="306" stroke="#98B6BE" stroke-width="3"/>
+<line x1="916.4957130584971" y1="306" x2="1301.6910071548893" y2="306" stroke="#286F7A" stroke-width="10"/>
+<circle cx="1206.1843218712322" cy="306" r="11" fill="#286F7A" stroke="#FFFFFF" stroke-width="3"/>
+<text x="1550" y="314" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="400" fill="#233947" text-anchor="end">median 0.817</text>
+<text x="1694" y="314" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="700" fill="#233947" text-anchor="end">41</text>
+<line x1="430" y1="369" x2="430" y2="469" stroke="#D7E2E8" stroke-width="1"/>
+<line x1="620" y1="369" x2="620" y2="469" stroke="#D7E2E8" stroke-width="1"/>
+<line x1="810" y1="369" x2="810" y2="469" stroke="#D7E2E8" stroke-width="1"/>
+<line x1="1000" y1="369" x2="1000" y2="469" stroke="#D7E2E8" stroke-width="1"/>
+<line x1="1190" y1="369" x2="1190" y2="469" stroke="#D7E2E8" stroke-width="1"/>
+<line x1="1380" y1="369" x2="1380" y2="469" stroke="#D7E2E8" stroke-width="1"/>
+<text x="64" y="431" font-family="Arial,Helvetica,sans-serif" font-size="29" font-weight="400" fill="#233947" text-anchor="start">H. monstrosus</text>
+<line x1="950.5999264637811" y1="420" x2="1357.288658228792" y2="420" stroke="#98B6BE" stroke-width="3"/>
+<line x1="1054.441549277602" y1="420" x2="1306.869361702927" y2="420" stroke="#286F7A" stroke-width="10"/>
+<circle cx="1190.5780320077938" cy="420" r="11" fill="#286F7A" stroke="#FFFFFF" stroke-width="3"/>
+<text x="1550" y="428" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="400" fill="#233947" text-anchor="end">median 0.801</text>
+<text x="1694" y="428" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="700" fill="#233947" text-anchor="end">276</text>
+<rect x="53" y="482" width="1661" height="101" fill="#F3F7F9"/>
+<line x1="430" y1="483" x2="430" y2="583" stroke="#D7E2E8" stroke-width="1"/>
+<line x1="620" y1="483" x2="620" y2="583" stroke="#D7E2E8" stroke-width="1"/>
+<line x1="810" y1="483" x2="810" y2="583" stroke="#D7E2E8" stroke-width="1"/>
+<line x1="1000" y1="483" x2="1000" y2="583" stroke="#D7E2E8" stroke-width="1"/>
+<line x1="1190" y1="483" x2="1190" y2="583" stroke="#D7E2E8" stroke-width="1"/>
+<line x1="1380" y1="483" x2="1380" y2="583" stroke="#D7E2E8" stroke-width="1"/>
+<text x="64" y="545" font-family="Arial,Helvetica,sans-serif" font-size="29" font-weight="400" fill="#233947" text-anchor="start">P. hastatus 2022</text>
+<line x1="988.9310021521758" y1="534" x2="1367.5652245814076" y2="534" stroke="#98B6BE" stroke-width="3"/>
+<line x1="1163.5533461456653" y1="534" x2="1348.3346068403089" y2="534" stroke="#286F7A" stroke-width="10"/>
+<circle cx="1302.8003898152517" cy="534" r="11" fill="#286F7A" stroke="#FFFFFF" stroke-width="3"/>
+<text x="1550" y="542" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="400" fill="#233947" text-anchor="end">median 0.919</text>
+<text x="1694" y="542" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="700" fill="#233947" text-anchor="end">262</text>
+<line x1="430" y1="597" x2="430" y2="697" stroke="#D7E2E8" stroke-width="1"/>
+<line x1="620" y1="597" x2="620" y2="697" stroke="#D7E2E8" stroke-width="1"/>
+<line x1="810" y1="597" x2="810" y2="697" stroke="#D7E2E8" stroke-width="1"/>
+<line x1="1000" y1="597" x2="1000" y2="697" stroke="#D7E2E8" stroke-width="1"/>
+<line x1="1190" y1="597" x2="1190" y2="697" stroke="#D7E2E8" stroke-width="1"/>
+<line x1="1380" y1="597" x2="1380" y2="697" stroke="#D7E2E8" stroke-width="1"/>
+<text x="64" y="659" font-family="Arial,Helvetica,sans-serif" font-size="29" font-weight="400" fill="#233947" text-anchor="start">P. hastatus 2023</text>
+<line x1="990.6096109807247" y1="648" x2="1366.403635561201" y2="648" stroke="#98B6BE" stroke-width="3"/>
+<line x1="1177.2792405620635" y1="648" x2="1351.5438916556636" y2="648" stroke="#286F7A" stroke-width="10"/>
+<circle cx="1283.6628947302088" cy="648" r="11" fill="#286F7A" stroke="#FFFFFF" stroke-width="3"/>
+<text x="1550" y="656" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="400" fill="#233947" text-anchor="end">median 0.899</text>
+<text x="1694" y="656" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="700" fill="#233947" text-anchor="end">60</text>
+<rect x="53" y="710" width="1661" height="101" fill="#F3F7F9"/>
+<line x1="430" y1="711" x2="430" y2="811" stroke="#D7E2E8" stroke-width="1"/>
+<line x1="620" y1="711" x2="620" y2="811" stroke="#D7E2E8" stroke-width="1"/>
+<line x1="810" y1="711" x2="810" y2="811" stroke="#D7E2E8" stroke-width="1"/>
+<line x1="1000" y1="711" x2="1000" y2="811" stroke="#D7E2E8" stroke-width="1"/>
+<line x1="1190" y1="711" x2="1190" y2="811" stroke="#D7E2E8" stroke-width="1"/>
+<line x1="1380" y1="711" x2="1380" y2="811" stroke="#D7E2E8" stroke-width="1"/>
+<text x="64" y="773" font-family="Arial,Helvetica,sans-serif" font-size="29" font-weight="400" fill="#233947" text-anchor="start">P. hastatus 2016</text>
+<line x1="956.0176823516986" y1="762" x2="1360.384438883891" y2="762" stroke="#98B6BE" stroke-width="3"/>
+<line x1="986.9177877101298" y1="762" x2="1319.984593890717" y2="762" stroke="#286F7A" stroke-width="10"/>
+<circle cx="1191.955093249667" cy="762" r="11" fill="#286F7A" stroke="#FFFFFF" stroke-width="3"/>
+<text x="1550" y="770" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="400" fill="#233947" text-anchor="end">median 0.802</text>
+<text x="1694" y="770" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="700" fill="#233947" text-anchor="end">45</text>
+<line x1="430" y1="823" x2="1380" y2="823" stroke="#233947" stroke-width="3"/>
+<text x="905" y="940" font-family="Arial,Helvetica,sans-serif" font-size="27" font-weight="400" fill="#667888" text-anchor="middle">0 = no shared probability mass; 1 = identical normalized shape</text>
+<text x="61" y="1001" font-family="Arial,Helvetica,sans-serif" font-size="26" font-weight="400" fill="#667888" text-anchor="start">Ranges = empirical 10th–90th dyad percentiles, NOT confidence intervals.</text>
+<text x="61" y="1042" font-family="Arial,Helvetica,sans-serif" font-size="26" font-weight="400" fill="#667888" text-anchor="start">Pairs are nonindependent; profiles use different horizontal supports; NOT 3D co-use.</text>
+</svg>
