@@ -35,7 +35,9 @@ The integrated article must not read as a BE paper followed by an unrelated JAE 
 - Mark evidence tier in every figure caption: original frozen, predeclared secondary, post-outcome diagnostic, descriptive, or structural STOP.
 - No new inferential endpoint is computed in this integration; all plotted values are derived directly from source-pinned frozen/original result receipts. Figures 1–6 have been rendered as SVG and must pass automated reproducibility checks and human visual review before journal production.
 
-## Supporting Information plan
+## Supporting Information plan and assembled first draft
+
+A first combined supplementary source-text manuscript now exists as [SUPPORTING_INFORMATION_DRAFT_V1.md](SUPPORTING_INFORMATION_DRAFT_V1.md). Tables U1–U7 include existing BE source/nulls, original JAE six-panel inference, terrain/segregation, dyad compatibility and external boundary tests. The plan below tracks what still needs full original-method archival detail and figure restoration.
 
 | Unit | Transfer content | Source ownership | Why SI instead of main |
 |---|---|---|---|
