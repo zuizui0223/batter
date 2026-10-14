@@ -42,6 +42,12 @@ The final journal data repository URL and author/coauthor approvals are **not** 
 - Per-panel 10-bin **median overlap of estimated session-centered probability SHAPES** = 0.817 / 0.801 / 0.919 / 0.899 / 0.802 for Eidolon / Hypsignathus / P. hastatus 2022 / 2023 / 2016. **Not full 3D habitat overlap, synchronized co-use, diet or independent dyad replication.**
 - [SI internal and anonymous source](SUPPORTING_INFORMATION_DRAFT_V1.md) now contain Table U8/S8 and Methods U13/S13, with the vector Figure S1 embedded in the anonymous SI PDF. This is a post-outcome descriptive secondary display and does not upgrade the previously frozen S_rel 0/4 positive or I 1/4 results.
 
+## Source-cohort weighting sensitivity for Figure S1 (post-outcome descriptive)
+
+- [Full cohort/weighting audit](COHORT_WEIGHT_SENSITIVITY_AUDIT_V1.md), [frozen results JSON](figures/COHORT_WEIGHT_SENSITIVITY_V1.json) and [independent original-CSV validator](validate_cohort_weight_sensitivity_v1.py) describe all 12 source strata and the dependence of dyad-pooled medians on cohort sizes. The source files, 684 within-cohort pair values and original JAE scientific test verdicts were not changed.
+- The largest *Eidolon* source cohort supplies **28/41 = 68.3%** of all the within-panel dyads; the largest *P. hastatus* 2023 source cohort supplies **45/60 = 75.0%**. Their original dyad-pooled medians 0.817 and 0.899 become 0.855 and 0.865 when taking the median of equally weighted eligible cohort medians. The latter **does not** correct statistical non-independence; three pair-eligible *Eidolon* cohorts have only one pair each.
+- Supporting Information Table **U9/S9** lists the 12 source strata; Methods **U14/S14** documents calculations and excludes species-wide estimates, confidence intervals, or an inference of actual 3D spatial co-use. Figure S1's axis and footer now state that large cohorts dominate the displayed pair-pooling.
+
 ## Source-ID and earlier horizontal overlap safeguards
 
 - [Source study-year/individual-ID audit](PROFILE_PANEL_IDENTITY_SCOPE_AUDIT_V1.md) and [independent verifier](validate_profile_panel_identity_scope_v1.py): the archived JAE heatmap contains **103 individual-by-panel records**, but only **101 different literal ID strings**; two are shared across the 2016 and 2022 P. hastatus La Gruta panels. Published PIT tagging and low recapture make continuity possible but actual 6-year same-animal identity has **not** been independently verified.
