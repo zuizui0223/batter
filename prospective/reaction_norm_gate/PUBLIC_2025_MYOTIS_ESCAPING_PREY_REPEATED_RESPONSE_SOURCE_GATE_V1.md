@@ -2,6 +2,14 @@
 
 **Recorded:** 2026-10-13. **Status:** SOURCE-METADATA AND PUBLISHED-RESULT AUDIT ONLY. No unpublished trial outcomes, raw sensor data, Mendeley files, numeric bat×day responses, statistical contrasts, or new p-values accessed. **Post-publication candidate, not prospective evidence.** No JAE release or bat 3-D results changed.
 
+## Current 2026-10-14 source-gate update — supersedes earlier access HOLD
+
+**Public individual original files ARE NOW ACCESSIBLE.** The previously missed anonymous Mendeley frontend endpoint `https://data.mendeley.com/api/datasets/8b57pz6bpj/files?version=3` returns 18 original file records. Original deposited `lData.csv`, `wData.csv`, `statistical_analysis.R`, and four figure MATs were downloaded from listed `public-files` links in GitHub Actions; **seven SHA256/manifest checks match exactly**. This access correction does **not** mean the biological source passes the gate.
+
+The author's **laboratory `lData.csv` has only three grouped `treat_code` levels, not six specific speed×displacement treatment IDs**, no explicit calendar date and no original physical trial ID. Its 606 rows have 4 source bat labels and 18 `tag_depl_num` identifiers. Only 2/4 source bats satisfy even the relaxed grouped-code 2-vs-3 condition of >=2 valid Buzz-II measurements across each of their first four tag deployments. Source R code confirms `tag_depl_num` as a repeated-measure grouping. The HDF5 MATs' top-level metadata have been inspected, but not approved as unaggregated six-regime raw records.
+
+**Current verdict: STOP_SOURCE_FOR_SIX_REGIME_PERSONAL_BuzzII_REACTION_NORM.** The planned individual speed, displacement, speed×displacement and 160-ms nominal-pair coefficients cannot be estimated from the published `lData.csv` without inventing trial-level physical exposure labels. No physiological numbers or new nominal p were computed in the source audit. The earlier source-access statements and conditional forecasts below document the **historical 2026-10-13 state** and are no longer the operative decision. See [the exact file receipt and STOP ledger](MYOTIS_2025_V3_ORIGINAL_CATEGORICAL_ELIGIBILITY_RESULT_2026_10_14.md) and GitHub Actions [38493203267](https://github.com/zuizui0223/batter/actions/runs/38493203267) (artifact 11863245061). Any later numerical analysis would be post-outcome exploratory, not prospective, because a previous public-text retrieval exposed some numerical outcome values.
+
 ## Published independent source
 
 Foskolos, I., Hubancheva, A., Skalshøi, M. R., Beedholm, K., Madsen, P. T. & Stidsholt, L. (2025). *Fast vocal-motor tracking of escaping prey in echolocating bats*. **BMC Biology 23:21**, doi: https://doi.org/10.1186/s12915-024-02106-6
