@@ -109,6 +109,22 @@ The fixed co-use primary scores median terrain-relative vertical differences wit
 
 External results are scope/boundary probes, not a statistically sampled estimate of bat-wide prevalence. The original JAE V1/V2 *Tadarida* residual cell × height map did not support a stable individual-specific residual route map (p=0.160), even though its more basic absolute-height identity score was positive.
 
+## Supplementary Table U8. Exploratory, cohort-restricted overlap of original individual relative-height probability shapes
+
+This **post-outcome descriptive** calculation uses the same 103 original Figure 5B individual leave-one-session-out self-prediction profiles and exactly their original ten session-median-centered altitude bins. It was not a primary endpoint, adds no hypothesis test and is not the source S_rel measure of 3D segregation. Only unordered pairs of different animals within the exact original study panel **and** collection cohort (site/colony/year) are allowed; different geographic sites, years or colonies are never directly compared.
+
+| Original panel | Biological individuals | Source cohorts | Eligible within-cohort pairs* | Overlap 10th percentile | Overlap median | Overlap 90th percentile |
+|---|---:|---:|---:|---:|---:|---:|
+| *Eidolon helvum* | 20 | 6 | 41 | 0.512 | **0.817** | 0.918 |
+| *Hypsignathus monstrosus* | 24 | 1 | 276 | 0.657 | **0.801** | 0.923 |
+| *Phyllostomus hastatus* 2022 | 33 | 2 | 262 | 0.772 | **0.919** | 0.967 |
+| *P. hastatus* 2023 | 16 | 2 | 60 | 0.787 | **0.899** | 0.970 |
+| *P. hastatus* 2016 | 10 | 1 | 45 | 0.586 | **0.802** | 0.937 |
+
+*The **684 pairs are highly dependent descriptions**, not 684 biological replicates, not confidence-interval sample sizes and not a new permutation test. The 10th/90th percentiles show the spread of observed dyad values, **not statistical uncertainty**. For *Eidolon*, six collection cohorts span countries/years; one has only one individual and therefore generates no pair. More dyads arise in larger cohorts, so the pooled within-panel median is not an equally weighted independent-cohort mean. The full cohort breakdown is retained in the reproducibility JSON.
+
+**Figure S1.** Within-cohort overlap of the original session-centered, 10-bin probability **shapes**, plotting per-panel median and descriptive 10th–90th dyad percentiles on the [0,1] overlap axis (source vector `FIGURE_S1_WITHIN_COHORT_VERTICAL_SHAPE_OVERLAP_V1.svg`). A value close to one describes similar *estimated relative-height shape*, not co-use of the same flight volume or overlap of the same prey resources. This figure has no inferential uncertainty band and must not be substituted for the original Figure 6 S_rel / co-use tests.
+
 ## Supplementary Methods U1. Boundaries of the three integrated inference axes
 
 **Identity correspondence:** correct animal–behavior mapping after source-specific shared-condition adjustment. Each experimental study uses its own fixed representation, biological support and assignment null; raw K, A or B values cannot be combined into a single pooled metric.
@@ -257,6 +273,18 @@ To distinguish contemporaneous avoidance, obtain high-rate truly synchronized tr
 
 The current data allow the narrower biological inference: **individually predictive, temporally recurring vertical-use probability survives coarse patch and movement-state controls in eligible systems, without consistent positive added spatial separation under source-specific tests. The carrier mechanism remains unidentified.**
 
+
+## Supplementary Methods U13. Cohort-restricted original-profile overlap: exploratory descriptive metric only
+
+**Timing and status.** The transformation rule was recorded in a separate contract after the original source vertical-shape identities and the 103 individual profiles had already been inspected. Its numerical values are therefore **post-outcome, descriptive and hypothesis-generating**. There is no new permutation null, equivalence test, bootstrap confidence interval, rank clustering, inferential animal-state classification or species-wide effect estimation.
+
+The source is the byte-preserved original Figure 5B individual profile JSON, whose SHA256 is `9efd5d2914ad012905a004aee1114d715deaaf94e3f54689deb4f1208a188cb2`. Its five comparative panels contain 20 *Eidolon*, 24 *Hypsignathus*, and 33, 16 and 10 *Phyllostomus* individuals in 2022, 2023 and 2016. The motivating *Tadarida* primary centered-shape FAIL is excluded by the *original descriptive display contract*, not selected out of the new overlap comparison. Each archived individual is represented by exactly ten probabilities that sum to one across the fixed session-median-centered residual-height bins. These are **estimated identity-matched self-predictor** probability shapes integrated with self-derived common-cell horizontal weights and averaged across evaluable target sessions, not independent raw GPS histogram counts.
+
+Individuals were stratified by the exact original `panel` and `cohorts` strings. Within each original source cohort containing at least two animals, every unordered distinct-individual pair was included once. For the two ten-bin vectors `p_i` and `p_j`, define the overlap coefficient as `O_ij=sum_b min(p_ib,p_jb)=1-(1/2)*sum_b |p_ib-p_jb|`. The algebraic total-variation identity was verified for each source dyad. Distinct source collection cohorts are never cross-compared, because a common broad species or original panel does not ensure animals shared sites, time, flight cells or source-derived weighting support.
+
+Within each cohort and descriptive panel pool, the minimum, 10th, 50th and 90th percentile, and maximum of pair O were computed from *all* dyads, with sorted-sample linear interpolation at index `(n_pairs-1)*q`. The original source cohort sizes imply 41+276+262+60+45 = **684 non-independent within-cohort pairs**; only **103 original biological animals** contribute. One of six *Eidolon* site/year cohorts contains a singleton and contributes no dyad. Per-cohort and per-panel summaries, all 684 exact numeric pairs (anonymized by panel source row-order, without original animal identifier), a no-dependency reconstruction script and the supplementary SVG are archived with the integration. The original source files remain unchanged, and deterministic build/biological claim guards check the derived figures.
+
+**Crucial interpretation ceiling.** This is one-dimensional overlap of **session-centered vertical probability SHAPES**, not overlap of full 3D habitat volume. In particular, individual source profiles can be estimated from *different jointly supported horizontal cell sets and different self-derived cell weights*, even among animals from the same source cohort. Thus the coefficient does not establish true simultaneous geographic co-use, identical tasks, competition, shared prey or within-task movement policy. Session-median centering, broad height bins and probability pseudocount smoothing can all increase the observed shape similarity. The large resulting descriptive profile-overlap coefficients are compatible with the original full-pipeline identity results, but neither the overlap medians nor their descriptive percentiles are additional evidence of a formally nonsegregated ecological niche. The **source-frozen terrain-relative S_rel and phase-shift co-use I tests** remain the proper, separate ecological segregation comparisons.
 
 ## Supplementary publication and data-provenance boundary
 
