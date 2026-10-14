@@ -8,7 +8,7 @@ This directory develops a **single manuscript** by integrating the existing *Jou
 2. [EVIDENCE_CROSSWALK_V1.md](EVIDENCE_CROSSWALK_V1.md) — audited source-to-claim table, with experimental and wild evidence hierarchies and claims this integration does **not** establish.
 3. [FIGURES_AND_SI_PLAN_V1.md](FIGURES_AND_SI_PLAN_V1.md) — six rendered main figure designs, SI transfer, word budget and release safeguards.
 4. [INTEGRATION_QA_V1.md](INTEGRATION_QA_V1.md) — 35 selected numeric keys reconciled at source-text level, plus epistemic and submission gate checklist.
-5. [FIGURE_ATLAS_AND_CAPTIONS_V1.md](FIGURE_ATLAS_AND_CAPTIONS_V1.md) — six rendered SVG main figures with source-conscious figure legends and encounter-design caveats.
+5. [FIGURE_ATLAS_AND_CAPTIONS_V1.md](FIGURE_ATLAS_AND_CAPTIONS_V1.md) — six manuscript figures, including [Figure 5 A+B at 177 × 238 mm](figures/FIGURE_5_COMPOSITE_177x238MM_V2.svg), with source-aware captions.
 6. [SUPPORTING_INFORMATION_DRAFT_V1.md](SUPPORTING_INFORMATION_DRAFT_V1.md) — integrated source-level experimental and wild supplementary tables, null architectures, uncertainty and source-permission caveats.
 7. [figures/FROZEN_FIGURE_DATA_V1.json](figures/FROZEN_FIGURE_DATA_V1.json) + [figure builder](figures/generate_integrated_figures_v1.cjs) + [validator](figures/validate_integrated_figures_v1.py) — pinned summary inputs, reproducible rendering, exact original-profile hash checks and scientific/XML gates.
 8. [ORIGINAL_PROFILE_RECOVERY_RECEIPT_V1.md](ORIGINAL_PROFILE_RECOVERY_RECEIPT_V1.md) — unaltered 103-individual JAE figure/data provenance and SHA256.
