@@ -23,6 +23,8 @@ jobs:
         run: node prospective/unified_individuality/figures/generate_integrated_figures_v1.cjs
       - name: Regenerate exact original 103-individual Figure 5A/B composite
         run: node prospective/unified_individuality/figures/build_figure5_composite_v2.cjs
+      - name: Rebuild cohort-restricted 1D vertical profile overlap (post-outcome descriptive only)
+        run: node prospective/unified_individuality/figures/derive_centered_vertical_overlap_v1.cjs
       - name: Rebuild anonymous journal-order complete text
         run: node prospective/unified_individuality/build_complete_anonymous_text_v1.cjs
       - name: Guard against stale or hand-edited figures and anonymous text
