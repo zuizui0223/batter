@@ -205,6 +205,59 @@ The Teshima obstacle-flight representation used the two predeclared movement axe
 
 Separately, a scalar FlightIntensity field-bridge programme froze a support criterion requiring at least three of four eligible wild panels to support a laboratory-style carrier-to-vertical-individuality link. The observed sequence was PASS / PASS / FAIL / **structural STOP**, hence overall 2/4 and a failed frozen gate. Later decomposition of wild horizontal and vertical components was explicitly exploratory after that result and does not rescue or replace it. Importantly, the laboratory experiments and field tracked animals were not the same biological individuals: the bridge does not causally show experimental memory or movement policy producing any animal's observed wild altitude distribution.
 
+## Supplementary Methods U12. Conditional individuality, unobserved-state non-identifiability and future causal discriminators
+
+### Empirical constraints on a pure coarse-place or coarse-state explanation
+
+The within-source results in this section were all **previously completed post-outcome analyses**, not a new confirmatory family or an independent replication. Biological sample sizes change across matching, lag and synchronous encounter eligibility gates; these are not effects measured on one fixed panel of individuals. The records were copied from the originally completed JAE tracking-workflow result summaries without opening, optimizing or recomputing the original data.
+
+In the fixed 500-m horizontal-cell × coarse 2-bin speed × 2-bin turning estimator, all four eligible panels retained a positive calibrated held-out centered-height identity score against their own full-pipeline label-permutation null:
+
+| Field panel | Evaluable biological n | Calibrated excess, nats/fix | Upper-tail permutation p | Status |
+|---|---:|---:|---:|---|
+| *H. monstrosus* | 19 | +0.3840 | 0.0002 | supported |
+| *P. hastatus* 2022 | 23 | +0.0868 | 0.0002 | supported |
+| *P. hastatus* 2023 | 11 | +0.1015 | 0.0006 | supported |
+| *P. hastatus* 2016 | 9 | +0.4514 | 0.0286 | supported |
+
+This outcome limits the hypothesis that all individuality can be generated solely by allocation among separately used **500-m or larger cells** and the four broad measured speed–turn categories. It does not test any verified foraging task, specific tree/prey patch, microclimate or route geometry below 500 m. The same estimator was **not** structurally transferable to *Eidolon helvum* because of insufficient eligible fine-grain overlap.
+
+A distinct 2-km matched place × speed × turning comparison used same-night conspecifics as the reference:
+
+| Field panel | Evaluable biological n | Calibrated excess, nats/fix | Upper-tail permutation p | Status |
+|---|---:|---:|---:|---|
+| *H. monstrosus* | 19 | +0.3025 | 0.0002 | supported |
+| *P. hastatus* 2022 | 26 | +0.1694 | 0.0002 | supported |
+| *P. hastatus* 2023 | 14 | +0.0822 | 0.0286 | supported |
+| *P. hastatus* 2016 | 9 | +0.5639 | 0.0544 | unsupported at frozen gate |
+
+The 2016 same-night result must **not** be called a fourth success on the basis of its positive point estimate; its source upper-tail p exceeded 0.05. The same-night comparison controls broad shared nightly timing, not instantaneous wind, canopy airflow, local thermal lift or independent verified resource state.
+
+Under minimum self-history lag restrictions, supported panel counts were 4/4 at at least one day, 3/3 at at least three days, and 2/2 at at least seven days. The evaluable panel set and n changed with the lag; these summaries do not identify a decay coefficient, show lifelong stability or support a numerical between-lag effect comparison.
+
+### Non-identifiability of marginal vertical-use probability
+
+Let i index a bat, h denote an observed horizontal location, c denote an observed context, k denote a potentially unobserved **true movement/foraging task**, and z denote residual altitude. The marginal conditional probability may be represented by the latent mixture
+
+p_i(z | h,c) = SUM_k [ pi_i(k | h,c) * q_i(z | k,h,c) ].
+
+Here pi_i is the within-context task-allocation probability and q_i is the conditional within-task vertical-use probability. A difference between bats in p_i is compatible with individual differences in task proportions pi_i, in within-task rules q_i, or both. Without independently measured k, the decomposition cannot be uniquely recovered from marginal altitude use alone, even with arbitrarily precise marginal probability estimates.
+
+An exact **synthetic logical illustration, not data from any animal**, uses two altitude bins and two latent tasks. The two individuals have marginal distributions p_A = (0.6,0.4) and p_B = (0.4,0.6). Task allocation alone can produce them using shared conditional task profiles q_1=(0.8,0.2), q_2=(0.2,0.8) but different task proportions pi_A=(2/3,1/3), pi_B=(1/3,2/3). Equally, fixed equal task proportions pi_A=pi_B=(1/2,1/2) with individual conditional profiles q_A1=(0.7,0.3), q_A2=(0.5,0.5), q_B1=(0.5,0.5), q_B2=(0.3,0.7) produce exactly the **same** two marginal distributions. Both latent mechanisms therefore fit the same pair of observed p_i values. Their synthetic marginal probability overlap is min(0.6,0.4)+min(0.4,0.6)=0.8, and the idealized KL information of one marginal distribution relative to the other is 0.081093 nats per independent draw. Neither quantity is the empirical JAE statistic S_rel or the full-pipeline calibrated prediction score.
+
+Matching coarse speed/turning makes one simple movement-composition explanation less plausible; it does **not** identify k or prove that only within-task sensorimotor policies matter. Latent tasks, morphology, familiarity, small resource patches and microclimate may be confounded within coarse observed categories.
+
+### Distinguishing prospective predictions
+
+A future study should preregister task labels and outcome-independent eligibility **before opening vertical responses**. Fine actual task/resource labels derived independently from acoustic prey-capture evidence, accelerometry, verified navigation/commuting bouts and localized feeding/canopy observations would allow a direct comparison of (1) differences in task-allocation probabilities and (2) remaining within-task individual altitude-use identity. Persistent identity conditional on objectively validated task labels and precise resource locations would argue against a purely task-mixture mechanism. Disappearance of conditional identity together with supported differences in task fractions would favor allocation at the newly measured task resolution. Neither outcome automatically proves learning.
+
+To distinguish atmospheric personal reaction norms, independently record fine in-situ wind/updraft exposure with repeated cross-individual support along the same weather range; freeze individual-by-weather interactions and assignment controls. The earlier three-panel continuous ERA5 design stopped **structurally** when the 2023 *P. hastatus* panel retained only seven against eight required subjects; no numeric vertical reaction-norm result was opened and no negative biological claim follows.
+
+To distinguish contemporaneous avoidance, obtain high-rate truly synchronized tracking with externally calibrated vertical-error bounds and validated close encounters. Freeze a co-use contrast to a phase-shift reference while retaining independent task/weather context, individual-level replication and an ecologically meaningful equivalence margin. The earlier observed 2023 excess at 600 seconds/all-space cannot establish instantaneous avoidance; the other three nonsupporting co-use results are neither demonstrated attraction nor formal absence of interaction.
+
+The current data allow the narrower biological inference: **individually predictive, temporally recurring vertical-use probability survives coarse patch and movement-state controls in eligible systems, without consistent positive added spatial separation under source-specific tests. The carrier mechanism remains unidentified.**
+
+
 ## Supplementary publication and data-provenance boundary
 
 Data originally collected by other bat laboratories remain governed by the original repository permissions and licences. In particular, the Taub & Yovel linked Dropbox source has no independently verified redistribution license in the BE audit. Do not mirror the raw archive into the unified review deposit without permission or journal-approved handling. Source metadata, copyright, author contributions and ethical approvals must be confirmed before any external submission. The unified manuscript is the **one-paper alternative**, not a third independent publication alongside both primary JAE and BE result articles. Source overlap and post-outcome diagnostic status must be disclosed in the final cover letter.
