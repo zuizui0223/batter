@@ -10,6 +10,8 @@ on:
       - 'prospective/unified_individuality/figures/FIGURE_S1_WITHIN_COHORT_VERTICAL_SHAPE_OVERLAP_V1.svg'
       - 'prospective/unified_individuality/validate_source_attribution_v2.py'
       - 'prospective/unified_individuality/validate_ecological_identifiability_v1.py'
+      - 'prospective/unified_individuality/validate_cohort_weight_sensitivity_v1.py'
+      - 'prospective/unified_individuality/figures/COHORT_WEIGHT_SENSITIVITY_V1.json'
       - 'prospective/unified_individuality/figures/FROZEN_MAINTENANCE_BOUNDARY_INPUTS_V1.json'
       - 'prospective/unified_individuality/INTEGRATED_MANUSCRIPT_V1.md'
       - 'prospective/unified_individuality/COMPLETE_ANONYMOUS_TEXT_DRAFT_V1.md'
@@ -43,6 +45,8 @@ jobs:
         run: python3 prospective/unified_individuality/validate_source_attribution_v2.py
       - name: Audit source-bounded ecological mechanism and mathematical counterexample
         run: python3 prospective/unified_individuality/validate_ecological_identifiability_v1.py
+      - name: Validate cohort-sensitive, dependent-dyad shape overlap from original CSV
+        run: python3 prospective/unified_individuality/validate_cohort_weight_sensitivity_v1.py
       - name: Build one internal and one anonymous SI proof PDF
         run: |
           python prospective/unified_individuality/build_supporting_pdf_v1.py
@@ -54,8 +58,8 @@ jobs:
           from pypdf import PdfReader
           d=Path('prospective/unified_individuality/build')
           for name,markers in [
-              ('SUPPLEMENTARY_MATERIAL_INTERNAL_DRAFT_V1.pdf',['Supplementary Table U6','Supplementary Table U8','Supplementary Methods U13','Supplementary Figure S1','INTERNAL SUPPORTING INFORMATION DRAFT']),
-              ('SUPPLEMENTARY_MATERIAL_ANONYMOUS_DRAFT_V1.pdf',['Supplementary Table S6','Supplementary Table S8','Supplementary Methods S13','Supplementary Figure S1','ANONYMOUS SI DRAFT'])
+              ('SUPPLEMENTARY_MATERIAL_INTERNAL_DRAFT_V1.pdf',['Supplementary Table U6','Supplementary Table U8','Supplementary Table U9','Supplementary Methods U13','Supplementary Methods U14','Supplementary Figure S1','INTERNAL SUPPORTING INFORMATION DRAFT']),
+              ('SUPPLEMENTARY_MATERIAL_ANONYMOUS_DRAFT_V1.pdf',['Supplementary Table S6','Supplementary Table S8','Supplementary Table S9','Supplementary Methods S13','Supplementary Methods S14','Supplementary Figure S1','ANONYMOUS SI DRAFT'])
           ]:
               p=d/name
               pdf=PdfReader(str(p))
