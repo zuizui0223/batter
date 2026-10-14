@@ -42,9 +42,9 @@ OUP AI policy: https://academic.oup.com/pages/for-authors/journals/preparing-and
 | Composite Figure 5 | Original 103-individual, 10-bin archived profile data + calibrated six-panel identity; 177x238mm PDF local proof generated | DATA INTEGRITY PASS; final lettering/author review pending |
 | Original JAE profile | Unchanged source PNG, CSV, JSON with original SHA256; 20+24+33+16+10 individuals | PASS |
 | Figure alternative text | Six figure alt-text descriptions source-claim bounded | DRAFT |
-| Combined SI | Seven source data/analysis tables, methods and boundary statements | DRAFT |
-| Internal SI proof | Five-page A4 landscape PDF | MACHINE PASS |
-| Anonymous SI proof | Five-page A4 landscape PDF with source branch names removed, source nulls retained | MACHINE PASS |
+| Combined SI | Seven source data/analysis tables and expanded Methods S1–S11, including primary inclusion criteria, null calibrations, post-outcome terrain/co-use and all experimental endpoints | DRAFT (enhanced source reproducibility) |
+| Internal SI proof | Nine-page A4 landscape PDF after source-specific methods expansion | MACHINE PASS |
+| Anonymous SI proof | Nine-page A4 landscape PDF with source branch names removed and S1–S11 technical methods preserved | MACHINE PASS |
 | Figure and document reproducibility CI | GitHub Actions recreate source-compliant SVG, source hashes, anonymous text, SI PDFs and main PDF without primary data changes | PASS on current reviewed runs |
 | Reference DOI union | 45 unique source DOI entries (39 scholarly; 6 source-only datasets), 35 selected scholarly main citations | TEXTUAL RECONCILIATION ONLY |
 | Laboratory-to-field bridge | Two PASS / one FAIL / one structural STOP; threshold not met | RETAINED NEGATIVE |
