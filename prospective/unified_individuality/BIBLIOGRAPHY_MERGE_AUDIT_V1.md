@@ -7,7 +7,7 @@
 - BE original reference entries with DOI: **23**, including associated data archives.
 - Unique DOIs across the two source manuscripts: **45** (two overlaps: Bolnick 2003 and Araújo 2011).
 - Scholarly article/review entries: **39**; source-only dataset archive records: **6**.
-- Selected working integrated main scholarly references: **34**, including 12 newly restored literature/background references that were omitted from the short v1 integrated draft.
+- Selected working integrated main scholarly references: **34**, including 12 newly restored literature/background references that were omitted from the short v1 integrated draft. Later external publisher/PubMed review confirmed key 2026 paper metadata, with the published eLife version DOI distinguished below.
 - Others retained here as source-prior-art candidates, not silently lost; authors must decide final cited subset and complete bibliographic format before submission.
 
 **Important:** This audit only reconciles DOIs and bibliographic strings *as recorded in the source manuscripts*. It does not verify whether each DOI resolves today, author/year spelling, online-first pagination, institutional reuse rights or whether a citation is appropriate for each claim. Primary-data archive permissions and source metadata are tracked separately in the unified SI.
