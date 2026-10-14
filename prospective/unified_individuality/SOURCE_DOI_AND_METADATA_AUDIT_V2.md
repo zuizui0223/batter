@@ -1,7 +1,7 @@
 # Source-DOI and high-risk 2026 bibliography audit v2
 
 **Date:** 2026-10-14  
-**Scope:** Source-provenance and targeted public publisher/index verification; **not** an all-35-reference Crossref audit.
+**Scope:** Source-provenance and targeted public publisher/index verification; **not** an all-37-reference Crossref audit.
 
 ## Critical corrected source-to-panel mapping
 
@@ -32,7 +32,7 @@ The following publisher/index sources were inspected, independently of the text 
 
 ## Work remaining
 
-- Verification covers a targeted high-risk subset, **not** all 35 main references or source-archive DOIs.
+- Verification covers a targeted high-risk subset, **not** all 37 main references or source-archive DOIs.
 - Remaining paper metadata should be resolved against publishers and citation records, including author lists, capitalization, issue/pages and author/year matching.
 - Source data permissions do not follow from DOI resolution; the unverified Taub & Yovel Dropbox licence remains a hard stop for bundling that raw archive.
 - The bibliography union has 45 source-listed DOI entries; citing the eLife version-of-record DOI does not create a new publication or change historical source records.
