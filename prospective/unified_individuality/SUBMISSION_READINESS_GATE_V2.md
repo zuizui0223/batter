@@ -56,6 +56,12 @@ Figure S1 and Table S8 quantify the descriptive intersection of 103 archived ind
 
 This visualization adds a **human figure review gate**: ensure the 10–90th percentile bars are never called uncertainty bands or dyad counts independent biological sample size, and confirm the journal accepts a purely descriptive supplemental figure beyond the six main figures.
 
+## Additional source-independence / ecological-priority review gate
+
+The new Figure 5/S1 original profile exports total **103 within-panel individual-profile records** but only **101 literal animal labels**; two matching strings are shared by original 2016 and 2022 La Gruta *P. hastatus* sources. Confirm against original PIT-tag metadata whether they are true longitudinal recaptures or archive-specific identifier reuse. Until then do not claim 103 independent globally distinct living bats or a verified 6-year stable individual route. The S_rel/couse/individual-prediction original panel-level tests remain unchanged and cannot be pooled as independent species replications.
+
+Calderón-Capote et al. 2025 already quantified horizontal foraging-area overlap in the 2016/2022 original La Gruta study populations (~0.20 Bhattacharyya coefficient). It must be cited, and the supplemental 1D relative-altitude shape overlap ~0.80–0.92 must **not** be confused with true 3D habitat sharing.
+
 ## Human approval required — HARD STOP
 
 - [ ] **Scientific coauthor approval:** One central question, valid endpoint distinctions, small-n inference, JAE post-outcome geometry, source heterogeneity, negative tests and figure conclusions.
