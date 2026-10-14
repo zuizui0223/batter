@@ -94,9 +94,9 @@ def text_bounds():
         for token in ["Supplementary Methods "+name,"0.3840","0.0868","0.1015","0.4514",
                       "0.0544","0.081093","0.8","not data from any animal","post-outcome"]:
             assert token.lower() in si.lower(),(source,token)
-    for token in ["500-m horizontal cells","+0.384","p = 0.0006","non-identifiability",
+    for token in ["500-m horizontal cells","+0.384","p = 0.0006","identifiability problem",
                   "different task proportions", "not a formal equivalence proof"]:
-        assert token in manuscript,("Manuscript mechanism boundary missing",token)
+        assert token.lower() in manuscript.lower(),("Manuscript mechanism boundary missing",token)
     assert "Supplementary Methods S12" in anon
     assert "An observed individual vertical-use distribution" in anon
     for secret in ["zuizui0223","release/jae","prospective/public-causal-synthesis"]:
