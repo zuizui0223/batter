@@ -20,11 +20,14 @@ This directory develops a **single manuscript** by integrating the existing *Jou
 14. [SUPPORTING_INFORMATION_ANONYMOUS_DRAFT_V1.md](SUPPORTING_INFORMATION_ANONYMOUS_DRAFT_V1.md) — reviewer-facing source/analysis tables with S1–S7 labels, also rendered to a single anonymous draft SI PDF.
 15. [FIGURE_ALT_TEXT_V1.md](FIGURE_ALT_TEXT_V1.md) — evidence-aware accessible text descriptions of all six main figures.
 16. [SUBMISSION_READINESS_GATE_V2.md](SUBMISSION_READINESS_GATE_V2.md) — official journal requirements, passed machine checks and mandatory human archive/ethics/AI approvals.
+17. [SOURCE_DOI_AND_METADATA_AUDIT_V2.md](SOURCE_DOI_AND_METADATA_AUDIT_V2.md) — corrected original Phyllostomus study-year DOI mapping, and targeted publisher/index verification of 2026 citations.
+18. [COVER_LETTER_BEHAVIORAL_ECOLOGY_UNIFIED_DRAFT_V1.md](COVER_LETTER_BEHAVIORAL_ECOLOGY_UNIFIED_DRAFT_V1.md) — editor-facing scientific cover letter template, with required publication-overlap and AI disclosure placeholders.
+19. [validate_source_attribution_v2.py](validate_source_attribution_v2.py) — CI regression test for wild source DOI/year identities and verified citations.
 
 ### Review PDF CI outputs
 
 - [Anonymous complete manuscript review PDF workflow](https://github.com/zuizui0223/batter/actions/workflows/unified-anonymous-main-v1.yml) — continuous line and page numbers; manuscript copy is a **draft**, not a final journal upload.
-- [Anonymous and internal SI PDF workflow](https://github.com/zuizui0223/batter/actions/workflows/unified-si-draft-v1.yml) — two separate single-file proof variants; the anonymous SI draft retains the source methodological evidence.
+- [Anonymous and internal SI PDF workflow](https://github.com/zuizui0223/batter/actions/workflows/unified-si-draft-v1.yml) — two separate single-file proof variants; anonymous SI now contains Methods S1–S11 and seven source/result tables.
 - [Figure source guard](https://github.com/zuizui0223/batter/actions/workflows/unified-manuscript-figures-v1.yml) — six main results plus the Figure 5 A+B 177 × 238 mm exact-source composite.
 
 The final journal data repository URL and author/coauthor approvals are **not** available yet; do not label these proof files submission-ready.
