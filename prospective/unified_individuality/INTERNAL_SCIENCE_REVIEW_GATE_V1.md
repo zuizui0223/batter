@@ -21,6 +21,10 @@ Developmental interpretation: an individually positive mean B first-flight slope
 
 Field-bridge interpretation: original scalar FlightIntensity carrier results PASS/PASS/FAIL/structural STOP = overall FAIL, with no direct matched laboratory and field individual cohort. The bridge cannot be rescued by post-outcome H/V components.
 
+## Critical external priority/identifiability risk added 2026-10-14
+
+**DO NOT PRESENT THE GENERAL OBSERVATION THAT INDIVIDUAL NICHES CAN OVERLAP AS NEW.** Carlson et al. (2021, DOI 10.1038/s41467-021-24826-x) directly established repeatable, highly overlapping/nested white-stork environmental niches; Wang et al. (2023, DOI 10.1186/s40462-023-00394-1) documented seasonal bat spatial specialization with overlap. The manuscript now cites both and positions its narrower value in exact 3D vertical probability prediction after common horizontal and 500-m coarse kinematic controls alongside independently calibrated additional separation and dyad co-use tests. The task-mixture versus within-task solution decomposition is **not causally identifiable** from the existing altitude records; an explicit mathematical counterexample and prospective discriminators are in `ECOLOGICAL_IDENTIFIABILITY_AND_DECISIVE_TESTS_V1.md`, and the previously completed 500-m, same-night and multi-day source summaries are pinned in `figures/FROZEN_MAINTENANCE_BOUNDARY_INPUTS_V1.json`.
+
 ## Reviewer questions to answer in the manuscript
 
 | Anticipated concern | Current answer | Remaining editorial work |
