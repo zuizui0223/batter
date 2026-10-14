@@ -53,6 +53,14 @@ All four original bats have source code 2/3 events, but only **two of four** cle
 
 The data contain the **chase** binary variable across grouped treatments. It could support a distinct, **post-data exploratory** group-contrast analysis if physical cohort, deployment-to-day mapping and missingness were separately validated, but this does **not** rescue the pre-specified four-bat individual Buzz-II motor-law test. Cherry-picking a surviving endpoint or two positive bats as a confirmatory replacement is prohibited.
 
+## Subsequent verified Figure-3 identity schema and exact inversion certificate (2026-10-14)
+
+**Additional independent original-file gate PASSED and resolved an open possibility in the first version of this ledger.** The author's original `fig3_lData.mat` (SHA256 `24a47604ffe2...`, 179,865 bytes) was downloaded and HDF5/MATLAB **character-schema labels** were read with no numerical vocal values accessed. Exactly the following table variable names were recovered: **`treat_code`, `trial_id`, `time_t0_ms`, `norm_ci`**. Neither `bat_num` nor `tag_depl_num` nor `session_date` is available among the recovered Figure-3 table columns. The author's Figure-3 MATLAB source iterates `trial_id` separately within three treatment groups and does not join to bat/date IDs. The 606-row original `lData.csv` conversely includes bat/deployment labels but no `trial_id`: no verified common join key connects the two distributed products. This does **not** establish that no separate, unavailable private source mapping ever existed.
+
+- Original-source HDF5 schema CI: [run 38499671754](https://github.com/zuizui0223/batter/actions/runs/38499671754), [structured receipt artifact 11865356966](https://github.com/zuizui0223/batter/actions/runs/38499671754/artifacts/11865356966); [source-specific conclusion](MYOTIS_FIG3_INDIVIDUAL_JOIN_GATE_VERIFIED_2026_10_14.md).
+- [Exact two-group rank-2 / four-dimensional nullspace certificate](MYOTIS_GROUPED_CONDITIONS_EXACT_NONIDENTIFIABILITY_CERTIFICATE_V1.md): mathematically demonstrates the grouped responses cannot uniquely identify the six original motor-specific coefficients without extra assumptions.
+- Hence **the earlier remaining possibility that the deposited Figure-3 file alone might restore four-bat independent-day gain/latency is closed: STOP_SOURCE_FIG3_NO_INDIVIDUAL_DAY_JOIN**. Do not reinterpret Figure-3 `trial_id` as an `lData.csv` row number without independent source proof.
+
 ## Source verdict
 
 - **SOURCE ACQUISITION:** SUCCESS — public original file list and seven original deposited files accessed using the anonymous frontend; exact SHA256 verified.
