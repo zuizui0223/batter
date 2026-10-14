@@ -86,7 +86,9 @@ def decorate(c,doc):
     c.restoreState()
 def build():
     source=SOURCE.read_text(encoding="utf-8")
-    for x in ["Supplementary Table U6","Supplementary Methods U2","post-outcome"]:
+    markers=(["Supplementary Table S6","Supplementary Methods S2","post-outcome"] if ANONYMOUS
+             else ["Supplementary Table U6","Supplementary Methods U2","post-outcome"])
+    for x in markers:
         assert x.lower() in source.lower(),f"Missing mandatory SI section: {x}"
     blocks=[]
     lines=source.splitlines()
