@@ -43,7 +43,7 @@ Field-bridge interpretation: original scalar FlightIntensity carrier results PAS
 - Exact frozen original JAE 103-individual Figure 6 PNG, CSV and JSON recovered from workflow run 36375056204; source SHA256 for each member pinned, source row sums and panel n verified.
 - Figure 5 now has **A** calibrated score and **B** genuine original 103-individual distribution-profile heatmap. No invented individual curves or calibrated tail components.
 - Combined SI preliminary draft with source nulls, archive DOIs, wild terrain/co-use tables and boundary tests.
-- Reference/DOI reconciliation: 45 unique DOIs in source manuscripts, 39 scholarly entries and six original data-archive records; 35 selected scholarly references currently in main bibliography. No external publisher/Crossref accuracy audit has been claimed.
+- Reference/DOI reconciliation: 45 unique DOIs in source manuscripts, 39 scholarly entries and six original data-archive records; 36 scholarly references currently in main bibliography (including Carlson et al. 2021, an external prior-art addition). No external publisher/Crossref accuracy audit has been claimed.
 - Existing original JAE rc2 and BE v1 source branches remain unchanged.
 
 ## Mandatory remaining gates before submission
@@ -53,7 +53,7 @@ Field-bridge interpretation: original scalar FlightIntensity carrier results PAS
 - [ ] Check every numerical table/statement against original source result receipt with full source-specific context, not just the 35 initial textual numeric keys.
 - [ ] Confirm the 2016 temporal-overlap limitation, *Tadarida* centered-shape FAIL and external boundary tests remain visible.
 - [ ] Independently review source data handling and reference metadata (DOI resolution, authors, online-first year, article numbers).
-- [ ] Ensure 34-paper bibliography has no uncited references and source-data records are cited according to target journal.
+- [ ] Ensure 36-paper bibliography has no uncited references and source-data records are cited according to target journal.
 - [ ] Confirm that coauthor approval covers the post-outcome terrain/co-use analyses and final narrative.
 - [ ] Decide the unique journal and a single ethically nonredundant publication plan (JAE and BE source manuscripts are retained as historical precursors unless distinct results remain and editors approve).
 
