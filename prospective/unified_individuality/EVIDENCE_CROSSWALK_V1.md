@@ -96,6 +96,12 @@ These are **observed-minus-pipeline-null means**, not simple physical separation
 9. Treating the 2023 co-use positive result as identical in design to the other three co-use tests.
 10. Publishing the same JAE wild primary claims once in this integrated manuscript and again as an independently claimed JAE research article.
 
+## D.1. Same-source horizontal 2D prior-art and cross-year ID scope
+
+Calderón-Capote et al. (2025; DOI 10.1371/journal.pone.0313782) analysed *P. hastatus* foraging and social structure using the original 2016 and 2022 La Gruta source archives. They reported horizontal foraging-area overlap near 0.20 (Bhattacharyya coefficient), without a clear social-group distinction. The new Figure S1 instead summarizes **source-person-specific ten-bin relative-height probability shapes** using the 1D total-variation overlap identity; its median 0.80–0.92 must not be called 80–92% of the same physical 3D foraging volume. Both measures differ from the post-outcome terrain S_rel and synchronous phase-shift co-use I tests.
+
+The original Figure 5B has **103 panel-indexed profiles but only 101 distinct literal ID strings** across panels; two recur in P. hastatus 2016 and 2022 at La Gruta. Given PIT-tag/low-recapture source reporting, biological continuity is possible but is **not independently verified** by the current archive. No untested six-year retained within-individual altitude strategy is claimed, and no global 103-independent-animal count or pooled inferential effective n is used.
+
 ## E. Integration and publication-provenance safeguards
 
 - The combined manuscript is **one candidate paper**, not a third paper to submit in addition to JAE and BE with duplicated primary results.
