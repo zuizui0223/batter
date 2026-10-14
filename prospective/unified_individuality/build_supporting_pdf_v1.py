@@ -8,7 +8,7 @@ from reportlab.lib import colors
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
-from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, LongTable, TableStyle, KeepTogether
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, LongTable, TableStyle, KeepTogether, CondPageBreak
 
 ROOT=Path(__file__).resolve().parent
 ANONYMOUS="--anonymous" in sys.argv
@@ -110,6 +110,9 @@ def build():
             blocks.extend(draw_table(group));continue
         if line.startswith("#"):
             flush();level=len(line)-len(line.lstrip("#"))
+            # Move table headings together with their next table header/first rows.
+            if line[level:].strip().startswith("Supplementary Table "):
+                blocks.append(CondPageBreak(160))
             blocks.append(Paragraph(fmt(line[level:].strip()),styles["h1" if level==1 else "h2" if level==2 else "h3"]))
             i+=1;continue
         if line=="---":
