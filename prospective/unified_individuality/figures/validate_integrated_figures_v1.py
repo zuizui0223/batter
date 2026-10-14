@@ -217,6 +217,23 @@ def svg_gate() -> None:
     assert cmp_text.count('<rect ') >= 1030, "Original profile bins missing"
     assert "B: no component-wise significance test" in cmp_text
     assert "103 individual" in cmp_text
+    # Figure S1 v2 shows the twelve source collection cohorts rather than five
+    # dependent-dyad pooled source panels; 1D descriptive, never a 3D null test.
+    s1_file=HERE / "FIGURE_S1_WITHIN_COHORT_VERTICAL_SHAPE_OVERLAP_V1.svg"
+    s1_svg=s1_file.read_text(encoding="utf-8")
+    assert 'width="177mm" height="155mm"' in s1_svg, "Cohort Figure S1 geometry changed"
+    for term in ["COHORT-RESOLVED","Burkina Faso / Ouagadougou 2013",
+                 "Ghana / Accra 2009","Zambia / Kasanka 2014",
+                 "Lek Njoukou 2020","Aj-cave (Colony 2) 2022",
+                 "La Gruta (Colony 1) 2023","La Gruta 2016",
+                 "no pair","NOT a confidence interval","NOT real 3D co-use"]:
+        assert term in s1_svg, f"Missing cohort-resolved Figure S1: {term}"
+    s1_root=ET.fromstring(s1_svg)
+    circles=s1_root.findall(".//"+SVG_NS+"circle")
+    assert len(circles)==11, "Eleven original cohorts should have one pair median each"
+    assert sum(1 for x in circles if x.attrib.get("fill")=="#fff")==3, "Three two-profile / one-pair source cohorts must be hollow markers"
+    assert sum(1 for x in circles if x.attrib.get("fill")=="#286e7c")==8, "Eight multi-pair source cohorts need filled markers"
+    assert s1_svg.count("Ghana / Accra 2009")==1, "Singleton original cohort duplicated"
     f6 = (HERE / IMAGES[5]).read_text(encoding="utf-8")
     for tok in ["4 / 4 supported", "0 / 4 positive supported", "1 / 4 supported", "p2=0.036", "p+ = 0.0231", "+3.57 m", "2016 also uses 600s"]:
         assert tok in f6, f"field figure missing {tok}"
