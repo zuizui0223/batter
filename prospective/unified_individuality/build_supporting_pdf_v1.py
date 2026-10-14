@@ -129,7 +129,10 @@ def build():
         if line.startswith("#"):
             flush();level=len(line)-len(line.lstrip("#"))
             # Move table headings together with their next table header/first rows.
-            if line[level:].strip().startswith("Supplementary Table "):
+            if line[level:].strip().startswith(("Supplementary Table U9.", "Supplementary Table S9.")):
+                # Keep the cohort-imbalance heading and its first numerical table together.
+                blocks.append(CondPageBreak(385))
+            elif line[level:].strip().startswith("Supplementary Table "):
                 blocks.append(CondPageBreak(160))
             if line[level:].strip().startswith("Supplementary Figure S1."):
                 # Reserve space for title and complete 177-mm-wide source SVG.
