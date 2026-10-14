@@ -100,43 +100,6 @@ function pairCsv(derived){
   return [keys.join(","),...derived.pair_rows.map(r=>keys.map(k=>csvQuote(r[k])).join(","))].join("\n")+"\n";
 }
 
-function renderSvg(derived){
-  const esc=x=>String(x).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
-  const ink="#233947",accent="#286F7A",muted="#667888",rule="#D7E2E8",bg="#F3F7F9";
-  const v=['<svg xmlns="http://www.w3.org/2000/svg" width="177mm" height="108mm" viewBox="0 0 1770 1080" role="img" aria-label="Within-cohort centered vertical-profile overlap: descriptive nonindependent dyads">',
-   '<title>Figure S1. Within-cohort similarity of original centered vertical-use probability profiles</title>',
-   '<desc>Five groups of previously estimated individual relative-height probability profiles; points are descriptive within-cohort unordered-dyad medians and horizontal lines are 10th to 90th descriptive percentiles, not confidence intervals. No source-based ecological spatial overlap or new statistical test is represented.</desc>',
-   '<rect width="1770" height="1080" fill="#FFFFFF"/>'];
-  function tx(x,y,text,size=30,bold=false,color=ink,anchor="start"){v.push('<text x="'+x+'" y="'+y+'" font-family="Arial,Helvetica,sans-serif" font-size="'+size+'" font-weight="'+(bold?"700":"400")+'" fill="'+color+'" text-anchor="'+anchor+'">'+esc(text)+'</text>')}
-  function line(x,y,x2,y2,color=rule,w=2){v.push('<line x1="'+x+'" y1="'+y+'" x2="'+x2+'" y2="'+y2+'" stroke="'+color+'" stroke-width="'+w+'"/>')}
-  function circle(x,y,r,color=accent){v.push('<circle cx="'+x+'" cy="'+y+'" r="'+r+'" fill="'+color+'" stroke="#FFFFFF" stroke-width="3"/>')}
-  const X0=430,X1=1380,map=p=>X0+(X1-X0)*p;
-  tx(60,75,"FIGURE S1  |  WITHIN-COHORT VERTICAL PROFILE OVERLAP",46,true);
-  tx(60,115,"Source-frozen self-predictor profiles, 10 height bins; 103 panel-indexed records",26,false,muted);
-  line(60,141,1710,141);
-  tx(61,210,"Original tracking panel",29,true);
-  tx(890,210,"Centered 1D overlap coefficient  O = sum(min(p_i, p_j))",28,true,ink,"middle");
-  tx(1675,210,"Dyads",28,true,ink,"end");
-  for(let k=0;k<=5;k++){const p=k/5,x=map(p);line(x,252,x,823,rule,1);tx(x,869,p.toFixed(1),28,false,muted,"middle")}
-  derived.panel_summary.forEach((r,i)=>{
-    const y=306+i*114;
-    if(i%2===0)v.push('<rect x="53" y="'+(y-52)+'" width="1661" height="101" fill="'+bg+'"/>');
-    for(let k=0;k<=5;k++){const x=map(k/5);line(x,y-51,x,y+49,rule,1)}
-    tx(64,y+11,r.label,29,false,ink);
-    line(map(r.min),y,map(r.max),y,"#98B6BE",3);
-    line(map(r.p10),y,map(r.p90),y,accent,10);
-    circle(map(r.median),y,11,accent);
-    tx(1550,y+8,"median "+r.median.toFixed(3),25,false,ink,"end");
-    tx(1694,y+8,String(r.n_pairs),28,true,ink,"end");
-  });
-  line(X0,823,X1,823,ink,3);
-  tx(905,940,"0 = no shared probability mass; 1 = identical normalized shape",27,false,muted,"middle");
-  tx(61,1001,"Bars: 10th–90th dependent-pair percentiles, NOT confidence intervals.",26,false,muted);
-  tx(61,1042,"Larger cohorts dominate pooled medians; different supports; NOT 3D co-use.",26,false,muted);
-  v.push("</svg>");
-  return v.join("\n")+"\n";
-}
-
 function saveFiles(){
   const fs=require("node:fs"),path=require("node:path"),crypto=require("node:crypto");
   const dir=__dirname,source=fs.readFileSync(path.join(dir,"original_jae/centered_shape_individual_profiles_v1.json"));
@@ -150,12 +113,10 @@ function saveFiles(){
   const result=derive(data);
   const output={
     summary:JSON.stringify({...result,pair_rows:undefined},null,2)+"\n",
-    csv:pairCsv(result),
-    figure:renderSvg(result)
+    csv:pairCsv(result)
   };
   fs.writeFileSync(path.join(dir,"FROZEN_PROFILE_OVERLAP_DESCRIPTIVE_V1.json"),output.summary,"utf8");
   fs.writeFileSync(path.join(dir,"ORIGINAL_PROFILE_WITHIN_COHORT_OVERLAP_PAIRS_V1.csv"),output.csv,"utf8");
-  fs.writeFileSync(path.join(dir,"FIGURE_S1_WITHIN_COHORT_VERTICAL_SHAPE_OVERLAP_V1.svg"),output.figure,"utf8");
   console.log("PASS original profile SHA",digest,"individuals",result.n_source_panel_profile_records,"dyads",result.total_within_cohort_pairs);
   for(const r of result.panel_summary)console.log(r.panel,"individuals",r.n_individuals,"dyads",r.n_pairs,"median",r.median.toFixed(6),"q10",r.p10.toFixed(6),"q90",r.p90.toFixed(6));
 }
