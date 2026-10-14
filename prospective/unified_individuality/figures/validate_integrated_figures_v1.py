@@ -77,6 +77,30 @@ def science_gate() -> None:
     assert DATA["lab"]["bridge"]["criterion"] == 3
 
 
+
+def manuscript_format_gate() -> None:
+    manuscript=(HERE.parent / "INTEGRATED_MANUSCRIPT_V1.md").read_text(encoding="utf-8")
+    anonymous=(HERE.parent / "COMPLETE_ANONYMOUS_TEXT_DRAFT_V1.md").read_text(encoding="utf-8")
+    def section(text: str, start: str, stop: str) -> str:
+        a=text.index(start)+len(start)
+        b=text.index(stop,a)
+        return text[a:b].strip()
+    lay=section(manuscript,"## Lay Summary\\n","## Abstract\\n")
+    abstract=section(manuscript,"## Abstract\\n","## Introduction\\n")
+    title=manuscript.splitlines()[0].removeprefix("# ").strip()
+    assert len(lay.split()) <= 75, f"Lay Summary too long: {len(lay.split())}"
+    assert len(abstract.split()) <= 250, f"Abstract too long: {len(abstract.split())}"
+    assert len(title) <= 100, f"Title exceeds recommended 100 characters: {len(title)}"
+    assert anonymous.startswith("## Lay Summary\\n"), "Anonymous text must open with Lay Summary"
+    assert anonymous.index("## References") < anonymous.index("## Figure legends"), "Reference/figure order wrong"
+    assert anonymous.count("**Figure 5.") == 1, "Composite Figure 5 legend missing"
+    assert "FIGURE_5_COMPOSITE_177x238MM_V2.svg" not in anonymous, "Anonymized content leaked internal asset path"
+    assert "[ANONYMIZED_REVIEW_ARCHIVE_URL]" in anonymous, "Missing explicit pending archive gate"
+    for secret in ["zuizui0223","prospective/public-causal-synthesis","release/jae","manuscript blob SHA"]:
+        assert secret not in anonymous, f"Review text leaks author/provenance identifier: {secret}"
+    assert "[Figure 5 A+B journal-size composite]" not in anonymous, "Internal link in anonymous figure caption"
+    print("Journal-order working draft PASS: title, lay summary, abstract, source-anonymity checks")
+
 def original_jae_profile_gate() -> None:
     """Check restored exact original descriptive artifact, not new inference."""
     folder = HERE / "original_jae"
@@ -159,6 +183,7 @@ def svg_gate() -> None:
 
 if __name__ == "__main__":
     science_gate()
+    manuscript_format_gate()
     original_jae_profile_gate()
     svg_gate()
     print("PASS — immutable-source summary semantics and SVG/XML structural gates")
