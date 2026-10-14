@@ -1,0 +1,213 @@
+{
+  "schema_version": 1,
+  "analysis_tier": "post-outcome descriptive vertical profile similarity; no new null, permutation, hypothesis test or biological evidence family",
+  "original_study_id": "batter-centered-shape-profile-descriptive-v1",
+  "original_source_sha256": "9efd5d2914ad012905a004aee1114d715deaaf94e3f54689deb4f1208a188cb2",
+  "target": "10-bin equal-session, source-person-specific, session-median-centered altitude self-profiles; same exact panel and cohort only",
+  "definition": "Overlap=sum(min(p_i[b],p_j[b]))=1-0.5*sum(abs(p_i[b]-p_j[b]))",
+  "quantiles": "linear interpolation on sorted unordered within-cohort dyads at index (n-1)*q",
+  "scientific_limits": "One-dimensional centered vertical-profile SHAPE overlap, not geographic 3D habitat overlap, same horizontal support, co-use, foraging or independent biological replication; dyads are nonindependent and distributions arise from self-derived common-cell weights",
+  "n_original_individuals": 103,
+  "total_within_cohort_pairs": 684,
+  "panel_summary": [
+    {
+      "panel": "eidolon",
+      "label": "E. helvum",
+      "n_individuals": 20,
+      "n_source_cohorts": 6,
+      "n_cohorts_with_pairs": 5,
+      "n_pairs": 41,
+      "min": 0.19674575865151,
+      "p10": 0.5121007505878917,
+      "median": 0.8170361282855076,
+      "p90": 0.9175694812156729,
+      "max": 0.9682297520102263
+    },
+    {
+      "panel": "hypsignathus",
+      "label": "H. monstrosus",
+      "n_individuals": 24,
+      "n_source_cohorts": 1,
+      "n_cohorts_with_pairs": 1,
+      "n_pairs": 276,
+      "min": 0.5479999225934538,
+      "p10": 0.6573068939764233,
+      "median": 0.8006084547450463,
+      "p90": 0.9230203807399233,
+      "max": 0.9760933244513601
+    },
+    {
+      "panel": "phyllostomus_2022",
+      "label": "P. hastatus 2022",
+      "n_individuals": 33,
+      "n_source_cohorts": 2,
+      "n_cohorts_with_pairs": 2,
+      "n_pairs": 262,
+      "min": 0.5883484233180798,
+      "p10": 0.7721614169954372,
+      "median": 0.9187372524371071,
+      "p90": 0.966668007200325,
+      "max": 0.9869107627172711
+    },
+    {
+      "panel": "phyllostomus_2023",
+      "label": "P. hastatus 2023",
+      "n_individuals": 16,
+      "n_source_cohorts": 2,
+      "n_cohorts_with_pairs": 2,
+      "n_pairs": 60,
+      "min": 0.5901153799797102,
+      "p10": 0.7866097269074352,
+      "median": 0.8985925207686409,
+      "p90": 0.9700462017428039,
+      "max": 0.9856880374328433
+    },
+    {
+      "panel": "phyllostomus_2016",
+      "label": "P. hastatus 2016",
+      "n_individuals": 10,
+      "n_source_cohorts": 1,
+      "n_cohorts_with_pairs": 1,
+      "n_pairs": 45,
+      "min": 0.5537028235281037,
+      "p10": 0.5862292502211892,
+      "median": 0.8020579928943863,
+      "p90": 0.9368258883060179,
+      "max": 0.9793520409304117
+    }
+  ],
+  "cohort_summary": [
+    {
+      "panel": "eidolon",
+      "cohort": "Burkina Faso, Ouagadougou::2013",
+      "n_individuals": 2,
+      "n_pairs": 1,
+      "min": 0.855309052693234,
+      "p10": 0.855309052693234,
+      "median": 0.855309052693234,
+      "p90": 0.855309052693234,
+      "max": 0.855309052693234
+    },
+    {
+      "panel": "eidolon",
+      "cohort": "Burkina Faso, Ouagadougou::2014",
+      "n_individuals": 5,
+      "n_pairs": 10,
+      "min": 0.7672497876751124,
+      "p10": 0.8091083417495586,
+      "median": 0.9015542390248173,
+      "p90": 0.9439870466662386,
+      "max": 0.9682297520102263
+    },
+    {
+      "panel": "eidolon",
+      "cohort": "Ghana, Accra::2009",
+      "n_individuals": 1,
+      "n_pairs": 0,
+      "min": null,
+      "p10": null,
+      "median": null,
+      "p90": null,
+      "max": null
+    },
+    {
+      "panel": "eidolon",
+      "cohort": "Ghana, Accra::2011",
+      "n_individuals": 2,
+      "n_pairs": 1,
+      "min": 0.902356646445254,
+      "p10": 0.902356646445254,
+      "median": 0.902356646445254,
+      "p90": 0.902356646445254,
+      "max": 0.902356646445254
+    },
+    {
+      "panel": "eidolon",
+      "cohort": "Ghana, Kibi (Old Tafo)::2013",
+      "n_individuals": 2,
+      "n_pairs": 1,
+      "min": 0.8170361282855076,
+      "p10": 0.8170361282855076,
+      "median": 0.8170361282855076,
+      "p90": 0.8170361282855076,
+      "max": 0.8170361282855076
+    },
+    {
+      "panel": "eidolon",
+      "cohort": "Zambia, Kasanka::2014",
+      "n_individuals": 8,
+      "n_pairs": 28,
+      "min": 0.19674575865151,
+      "p10": 0.4506759662750993,
+      "median": 0.7284778166318858,
+      "p90": 0.855538420114757,
+      "max": 0.9549845839667653
+    },
+    {
+      "panel": "hypsignathus",
+      "cohort": "Lek Njoukou::2020",
+      "n_individuals": 24,
+      "n_pairs": 276,
+      "min": 0.5479999225934538,
+      "p10": 0.6573068939764233,
+      "median": 0.8006084547450463,
+      "p90": 0.9230203807399233,
+      "max": 0.9760933244513601
+    },
+    {
+      "panel": "phyllostomus_2022",
+      "cohort": "Aj-cave (Colony 2)::2022",
+      "n_individuals": 14,
+      "n_pairs": 91,
+      "min": 0.6753728547698133,
+      "p10": 0.7708086308011635,
+      "median": 0.911857798578327,
+      "p90": 0.9605297748369301,
+      "max": 0.9753784277833594
+    },
+    {
+      "panel": "phyllostomus_2022",
+      "cohort": "La Gruta (Colony 1)::2022",
+      "n_individuals": 19,
+      "n_pairs": 171,
+      "min": 0.5883484233180798,
+      "p10": 0.78838865477121,
+      "median": 0.9219360822228613,
+      "p90": 0.972722755261417,
+      "max": 0.9869107627172711
+    },
+    {
+      "panel": "phyllostomus_2023",
+      "cohort": "Aj-cave (Colony 2)::2023",
+      "n_individuals": 10,
+      "n_pairs": 45,
+      "min": 0.7288925788725399,
+      "p10": 0.8177205327860174,
+      "median": 0.899807107533654,
+      "p90": 0.9698343030262746,
+      "max": 0.9856880374328433
+    },
+    {
+      "panel": "phyllostomus_2023",
+      "cohort": "La Gruta (Colony 1)::2023",
+      "n_individuals": 6,
+      "n_pairs": 15,
+      "min": 0.5901153799797102,
+      "p10": 0.6163909803723084,
+      "median": 0.830538606660384,
+      "p90": 0.9647585626624207,
+      "max": 0.9713504598610125
+    },
+    {
+      "panel": "phyllostomus_2016",
+      "cohort": "La Gruta::2016",
+      "n_individuals": 10,
+      "n_pairs": 45,
+      "min": 0.5537028235281037,
+      "p10": 0.5862292502211892,
+      "median": 0.8020579928943863,
+      "p90": 0.9368258883060179,
+      "max": 0.9793520409304117
+    }
+  ]
+}
