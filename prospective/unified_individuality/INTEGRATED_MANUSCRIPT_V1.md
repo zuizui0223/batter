@@ -60,7 +60,7 @@ For *Rhinolophus nippon*, a pre-specified two-coordinate movement representation
 
 ### Repeated wild three-dimensional tracking
 
-The outcome-blind wild-data screen considered 23 Movebank bat parent datasets and admitted six tracking panels from four taxa, building on established individual space-use and seasonal movement ecology (Kerches-Rogeri et al. 2020; Wang et al. 2023; O'Mara and Dechmann 2023): *Tadarida teniotis* (O'Mara et al. 2021), *Eidolon helvum* (Fahr et al. 2015), *Hypsignathus monstrosus* (Schloesing et al. 2023) and three *Phyllostomus hastatus* panels. These data sources contribute independent panels, not one phylogenetically balanced sample of bat species. Held-out same-individual and other-individual vertical predictors were compared under identical weights over mutually supported 5-km horizontal cells. Whole-session individual-label permutations calibrated each complete prediction pipeline. Each retained session was also median-centered before vertical binning to remove additive constant height offsets; this does not remove all state-dependent or variance-related device error.
+The outcome-blind wild-data screen considered 23 Movebank parent bat datasets and admitted six tracking panels from four taxa, building on established work on individually differentiated space use and seasonal movement (Kerches-Rogeri et al. 2020; Wang et al. 2023). The sources comprised *Tadarida teniotis* (O'Mara et al. 2021), *Eidolon helvum* (O'Mara et al. 2019), *Hypsignathus monstrosus* (Schloesing et al. 2023), and three *Phyllostomus hastatus* panels. The 2016 *P. hastatus* source corresponded to O'Mara and Dechmann (2023; Movebank DOI 10.5441/001/1.282), while the 2021–2022 and 2023 longitudinal sources corresponded to Calderón-Capote et al. (2024; Movebank DOIs 10.5441/001/1.321 and 10.5441/001/1.322, respectively). These are independent study panels, not six independent species or a phylogenetically balanced sample. Held-out same-individual and other-individual vertical predictors were compared under identical weights over mutually supported 5-km horizontal cells. Whole-session individual-label permutations calibrated each complete prediction pipeline. Each retained session was also median-centered before vertical binning to remove additive constant height offsets; this does not remove all state-dependent or variance-related device error.
 
 A later, explicitly **post-outcome**, ecological geometry and maintenance family evaluated four structurally eligible panels from *H. monstrosus* and *P. hastatus*. Terrain-relative height was calculated after local digital-elevation-model subtraction at 500-m spatial resolution. The family separately tested the repeatability of terrain-relative vertical configuration (V_rel), added vertical segregation (S_rel), and excess separation during local synchronous co-use. An inherited individual-label null calibrated S_rel, while phase-shift controls and dyad resampling were used for co-use; the latter yielded compatibility intervals, not formal equivalence tests. Persistence was further checked across nonadjacent days, common fine spatial and kinematic contexts, and same-night conspecific comparison.
 
@@ -208,6 +208,8 @@ Boardman WSJ, et al. 2021. Spring foraging movements of an urban population of g
 
 Bolnick DI, Svanbäck R, Fordyce JA, Yang LH, Davis JM, Hulsey CD, Forister ML. 2003. The ecology of individuals: incidence and implications of individual specialization. *American Naturalist* 161:1–28. doi:10.1086/343878.
 
+Calderón-Capote MC, van Toor ML, O'Mara MT, Bayer TD, Crofoot MC, Dechmann DKN. 2024. Consistent long-distance foraging flights across years and seasons at colony level in a neotropical bat. *Biology Letters* 20:20240424. doi:10.1098/rsbl.2024.0424.
+
 de Bivort BL. 2025. The developmental origins of behavioral individuality. *Annual Review of Cell and Developmental Biology* 41:331–352. doi:10.1146/annurev-cellbio-101323-025423.
 
 Diebold CA, et al. 2024. Rapid sensorimotor adaptation to auditory midbrain silencing in free-flying bats. *Current Biology* 34:5507–5517.e3. doi:10.1016/j.cub.2024.10.045.
@@ -215,8 +217,6 @@ Diebold CA, et al. 2024. Rapid sensorimotor adaptation to auditory midbrain sile
 Elie JE, et al. 2024. Role of auditory feedback for vocal production learning in the Egyptian fruit bat. *Current Biology* 34:4062–4070.e7. doi:10.1016/j.cub.2024.07.053.
 
 Eveland KE, Finger NM, Jaroszewski JM, Bucio L, Moss CF. 2026. Looking ahead: echolocation and flight behaviors of two fruit bat species navigating a corridor. *Journal of Comparative Physiology A* 212:995–1008. doi:10.1007/s00359-026-01818-0.
-
-Fahr J, et al. 2015. Pronounced seasonal changes in the movement ecology of a highly gregarious central-place forager, the African straw-coloured fruit bat. *PLOS ONE* 10:e0138985. doi:10.1371/journal.pone.0138985.
 
 Foskolos I, et al. 2022. Echolocating Daubenton's bats are resilient to broadband, ultrasonic masking noise during active target approaches. *Journal of Experimental Biology* 225:jeb242957. doi:10.1242/jeb.242957.
 
@@ -239,6 +239,8 @@ McIntyre, T., Bester, M.N., Bornemann, H., Tosh, C.A. & de Bruyn, P.J.N. (2017).
 Mitchell DJ, Houslay TM. 2021. Context-dependent trait covariances: how plasticity shapes behavioral syndromes. *Behavioral Ecology* 32:25–29. doi:10.1093/beheco/araa115.
 
 O'Mara, M.T. & Dechmann, D.K.N. (2023). Greater spear-nosed bats commute long distances alone, rest together, but forage apart. *Animal Behaviour*, 204, 37–48. doi:10.1016/j.anbehav.2023.08.001.
+
+O'Mara MT, Scharf AK, Fahr J, Abedi-Lartey M, Wikelski M, Dechmann DKN, Safi K. 2019. Overall dynamic body acceleration in straw-colored fruit bats increases in headwinds but not with airspeed. *Frontiers in Ecology and Evolution* 7:200. doi:10.3389/fevo.2019.00200.
 
 O'Mara MT, et al. 2021. Bats use topography and nocturnal updrafts to fly high and fast. *Current Biology* 31:1311–1316.e4. doi:10.1016/j.cub.2020.12.042.
 
@@ -266,7 +268,7 @@ White SJ, Pascall DJ, Wilson AJ. 2020. Towards a comparative approach to the str
 
 Xing, S., Leahy, L., Ashton, L.A., Kitching, R.L., Bonebrake, T.C. & Scheffers, B.R. (2023). Ecological patterns and processes in the vertical dimension of terrestrial ecosystems. *Journal of Animal Ecology*, 92, 538–551. doi:10.1111/1365-2656.13881.
 
-**These 34 scholarly entries reconcile the source manuscripts and restore key omitted prior art. DOI existence, page metadata, exact author-year styling and manuscript-specific citation completeness still require final human/target-journal verification; the 6 dataset-only DOI records and other source references remain tracked in [BIBLIOGRAPHY_MERGE_AUDIT_V1.md](BIBLIOGRAPHY_MERGE_AUDIT_V1.md).**
+**These 35 scholarly entries reconcile the source manuscripts and restore key omitted prior art. DOI existence, page metadata, exact author-year styling and manuscript-specific citation completeness still require final human/target-journal verification; the 6 dataset-only DOI records and other source references remain tracked in [BIBLIOGRAPHY_MERGE_AUDIT_V1.md](BIBLIOGRAPHY_MERGE_AUDIT_V1.md).**
 
 ## Data, ethics and disclosure boundary
 
