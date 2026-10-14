@@ -131,6 +131,10 @@ def build():
             # Move table headings together with their next table header/first rows.
             if line[level:].strip().startswith("Supplementary Table "):
                 blocks.append(CondPageBreak(160))
+            if line[level:].strip().startswith("Supplementary Figure S1."):
+                # Reserve space for title and complete 177-mm-wide source SVG.
+                # Without this, the title can be orphaned on the preceding page.
+                blocks.append(CondPageBreak(385))
             blocks.append(Paragraph(fmt(line[level:].strip()),styles["h1" if level==1 else "h2" if level==2 else "h3"]))
             i+=1;continue
         if line=="---":
