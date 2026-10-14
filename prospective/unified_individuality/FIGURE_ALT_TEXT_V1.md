@@ -1,0 +1,27 @@
+# Accessible alternative text for unified manuscript Figures 1–6 (draft)
+
+**Status:** scientific accessibility drafts for Behavioral Ecology; coauthor review required before submission. Descriptions summarize visually encoded evidence; they do not replace the complete figure legends.
+
+## Figure 1 — Conceptual separation of individuality layers
+
+Four boxes represent distinct questions: how individual behavior develops, whether correct-individual identity survives sensory or navigational intervention, whether a coarse behavioral representation transfers across tasks, and whether wild 3D movement results in exclusive spatial partitioning. Dashed links between boxes are conceptual. A separate strip records two passes, one failure and one structural stop in a frozen laboratory-style to wild-field carrier test, insufficient to meet its required three-of-four gate. The graphic does not claim a single mechanism connecting the experiments and field tracking.
+
+## Figure 2 — History and developmental individualization
+
+A dot plot shows fourteen juvenile individual experience slopes, eight positive and six negative; the predeclared primary required at least ten positives and therefore failed, although the mean permutation statistic had p=0.0102. A neighboring panel records a positive late personal-history secondary in twelve of fourteen juveniles. Separate boxed developmental contrasts show enrichment D=+0.735 with p=0.168 and auditory-feedback D=−1.425 with p=0.717. These differ in representation and are not compared on a common effect scale or described as equivalent treatments.
+
+## Figure 3 — Individual correspondence under acute manipulations
+
+Four horizontal rows display the within-source fraction of biological individuals with positive identity correspondence. External sensory masking in Pipistrellus is five of six; graded noise in Myotis, three of three; reversible auditory-midbrain manipulation in Eptesicus, four of four; and a navigation-context manipulation in Pipistrellus, four of four. Each row includes the biological sample size and source-specific exact assignment p-value; marker locations represent fractions of individuals, not a common behavioral effect size.
+
+## Figure 4 — Transfer of a representation and limits of laboratory-to-field interpretation
+
+Three cards show source-specific identity tests. The coarse I/M movement representation is supported across Rhinolophus obstacle contexts and transfers to independent Carollia flight records; a fixed detailed-geometry representation does not pass its Carollia transfer test. A separate four-cell diagram marks pass, pass, fail and structural stop for the scalar laboratory-style to wild field test, resulting in an overall fail at the predeclared three-of-four requirement.
+
+## Figure 5 — Centered-shape fidelity and profiles of 103 individual bats
+
+Panel A is a six-row dot plot of calibrated original, held-out vertical-distribution identity. Five comparative panels have positive above-null values; the motivating Tadarida panel has a negative calibrated excess and does not pass. Panel B uses exactly the original 103 individual probability vectors (20 Eidolon, 24 Hypsignathus, 33 Phyllostomus 2022, 16 Phyllostomus 2023 and 10 Phyllostomus 2016), each displayed as ten rectangular colored bins of session-centered height. Most mass occurs near the median, but the concentration and tail widths visibly vary across individuals. A shared scale indicates probability; panel B is descriptive only. The original source PNG/CSV/JSON are unchanged, while the 177-by-238-mm combined vector plate redraws the original probability cells without interpolation.
+
+## Figure 6 — Persisting terrain-relative identity versus added separation
+
+Four rows represent one Hypsignathus study and three Phyllostomus hastatus study-years, hence two biological species. Panel A shows positive terrain-relative identity supported in all four. Panel B shows observed additional segregation with gray ranges from each source's permutation null; none supports positive added segregation, while the Hypsignathus statistic is negative with two-sided p=0.036. Panel C shows contemporaneous co-use excess in metres with gray dyad-bootstrap compatibility ranges, not equivalence intervals. Only Phyllostomus 2023 supports a positive extra-separation test, with +3.57 metres and p=0.023, under a 600-second all-space rule. Co-use definitions differ across datasets: 60 seconds with endpoint exclusion in Hypsignathus and 2022, 600 seconds all-space in 2023, and 600 seconds with endpoint exclusion in 2016. These field geometry tests are post-outcome diagnostics.
