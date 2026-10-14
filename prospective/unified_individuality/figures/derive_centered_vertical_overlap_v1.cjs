@@ -131,8 +131,8 @@ function renderSvg(derived){
   });
   line(X0,823,X1,823,ink,3);
   tx(905,940,"0 = no shared probability mass; 1 = identical normalized shape",27,false,muted,"middle");
-  tx(61,1001,"Ranges = empirical 10th–90th dyad percentiles, NOT confidence intervals.",26,false,muted);
-  tx(61,1042,"Pairs are nonindependent; profiles use different horizontal supports; NOT 3D co-use.",26,false,muted);
+  tx(61,1001,"Bars: 10th–90th dependent-pair percentiles, NOT confidence intervals.",26,false,muted);
+  tx(61,1042,"Larger cohorts dominate pooled medians; different supports; NOT 3D co-use.",26,false,muted);
   v.push("</svg>");
   return v.join("\n")+"\n";
 }
