@@ -94,7 +94,7 @@ def main() -> None:
     anonymous=(HERE/"COMPLETE_ANONYMOUS_TEXT_DRAFT_V1.md").read_text(encoding="utf8")
     for name,text in [("manuscript",manuscript),("anonymous",anonymous)]:
         assert "103 individual-by-panel profiles" in text,(name,"panel-indexing qualification absent")
-        assert "two source identifiers" in text,(name,"cross-year label repeats not acknowledged")
+        assert "two source identifiers" in text.lower(),(name,"cross-year label repeats not acknowledged")
         for forbidden in ["103 globally distinct bats","103 independent biological individuals",
                           "all 103 bats are different individuals"]:
             assert forbidden not in text,(name,forbidden)
