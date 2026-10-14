@@ -25,6 +25,8 @@ jobs:
         run: node prospective/unified_individuality/figures/build_figure5_composite_v2.cjs
       - name: Rebuild cohort-restricted 1D vertical profile overlap (post-outcome descriptive only)
         run: node prospective/unified_individuality/figures/derive_centered_vertical_overlap_v1.cjs
+      - name: Draw cohort-resolved Figure S1 from exact 12-cohort descriptive summaries
+        run: node prospective/unified_individuality/figures/render_cohort_resolved_s1_v2.cjs
       - name: Independently reproduce same-cohort profile overlap using original CSV, Python
         run: python3 prospective/unified_individuality/validate_overlap_independent_csv_v1.py
       - name: Audit panel-indexed source profiles and repeated 2016/2022 literal labels
