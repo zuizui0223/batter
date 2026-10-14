@@ -21,6 +21,8 @@ jobs:
           node-version: '20'
       - name: Regenerate six vector figures from pinned source summaries
         run: node prospective/unified_individuality/figures/generate_integrated_figures_v1.cjs
+      - name: Regenerate exact original 103-individual Figure 5A/B composite
+        run: node prospective/unified_individuality/figures/build_figure5_composite_v2.cjs
       - name: Guard against stale or hand-edited rendered figures
         run: git diff --exit-code -- prospective/unified_individuality/figures/
       - name: Check scientific gates, labels, and SVG XML
