@@ -43,6 +43,14 @@ The underlying 103 original individual source profiles (Figure 5B) are **weighte
 - This implies exactly **41, 276, 262, 60, 45** unordered within-cohort pairs by panel, **684 pair records in total**, plus the one singleton Eidolon cohort with no pair. This is purely a combinatorial calculation from original cohort labels, not an overlap outcome. These **684 are NOT independent biological observations** and must never replace source individual n.
 - Cohort names and original row_order are retained internally for audit, not as geographic claims or as independent replication of the original 4-panel terrain/interaction tests.
 
+## Source-panel animal identity QA amendment (AFTER this descriptive outcome)
+
+After the original source profiles and all 684 dyad overlaps were already processed, the archived original CSV and JSON were checked for **cross-panel literal animal-identifier reuse**. There are **103 individual-by-panel records** but **101 distinct identifier strings**, with two strings recurring in the 2016 and 2022 La Gruta *P. hastatus* panels. Calderón-Capote et al. (2025; DOI 10.1371/journal.pone.0313782) published a separate analysis of these 2016/2022 source populations with PIT-tag marking and **low recaptures**. Although actual recapture is plausible, literal ID reuse has **not** been independently crosswalked to the original long-term PIT registry; global unique living bat n is unresolved.
+
+**Original descriptive sampling rule is unchanged**: no pair compares across source panels or cohorts and every within-panel biological identifier is unique. The source-based 684 dyad overlap values, figures and descriptive percentile rules remain exactly the original outputs. This amendment protects the language "103 source-panel profiles" from being misreported as 103 proved different bats. No six-year within-animal movement persistence is inferred from two identifier matches.
+
+For further context, the same-source 2025 publication reported about **0.20 horizontal foraging-area overlap** using a Bhattacharyya coefficient, fundamentally different from the current **0.80–0.92 one-dimensional centered relative-height shape** overlap. Those coefficients are not estimates of the same volume of physical habitat.
+
 ## Claim and publication boundary
 
 Even a high (O_{ij}^{centered}) may arise partly by **constructive session centering, ten broad bins, regularizing pseudo-counts and/or common structural flight demands**. It cannot demonstrate co-location, same resources or interindividual competition; direct 3D/source terrain-co-use null results already test separate things and remain authoritative. Conversely moderate or low 1D overlap does not imply active avoidance.
