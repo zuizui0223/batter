@@ -1,90 +1,118 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="177mm" height="108mm" viewBox="0 0 1770 1080" role="img" aria-label="Within-cohort centered vertical-profile overlap: descriptive nonindependent dyads">
-<title>Figure S1. Within-cohort similarity of original centered vertical-use probability profiles</title>
-<desc>Five groups of previously estimated individual relative-height probability profiles; points are descriptive within-cohort unordered-dyad medians and horizontal lines are 10th to 90th descriptive percentiles, not confidence intervals. No source-based ecological spatial overlap or new statistical test is represented.</desc>
-<rect width="1770" height="1080" fill="#FFFFFF"/>
-<text x="60" y="75" font-family="Arial,Helvetica,sans-serif" font-size="46" font-weight="700" fill="#233947" text-anchor="start">FIGURE S1  |  WITHIN-COHORT VERTICAL PROFILE OVERLAP</text>
-<text x="60" y="115" font-family="Arial,Helvetica,sans-serif" font-size="26" font-weight="400" fill="#667888" text-anchor="start">Source-frozen self-predictor profiles, 10 height bins; 103 panel-indexed records</text>
-<line x1="60" y1="141" x2="1710" y2="141" stroke="#D7E2E8" stroke-width="2"/>
-<text x="61" y="210" font-family="Arial,Helvetica,sans-serif" font-size="29" font-weight="700" fill="#233947" text-anchor="start">Original tracking panel</text>
-<text x="890" y="210" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="700" fill="#233947" text-anchor="middle">Centered 1D overlap coefficient  O = sum(min(p_i, p_j))</text>
-<text x="1675" y="210" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="700" fill="#233947" text-anchor="end">Dyads</text>
-<line x1="430" y1="252" x2="430" y2="823" stroke="#D7E2E8" stroke-width="1"/>
-<text x="430" y="869" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="400" fill="#667888" text-anchor="middle">0.0</text>
-<line x1="620" y1="252" x2="620" y2="823" stroke="#D7E2E8" stroke-width="1"/>
-<text x="620" y="869" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="400" fill="#667888" text-anchor="middle">0.2</text>
-<line x1="810" y1="252" x2="810" y2="823" stroke="#D7E2E8" stroke-width="1"/>
-<text x="810" y="869" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="400" fill="#667888" text-anchor="middle">0.4</text>
-<line x1="1000" y1="252" x2="1000" y2="823" stroke="#D7E2E8" stroke-width="1"/>
-<text x="1000" y="869" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="400" fill="#667888" text-anchor="middle">0.6</text>
-<line x1="1190" y1="252" x2="1190" y2="823" stroke="#D7E2E8" stroke-width="1"/>
-<text x="1190" y="869" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="400" fill="#667888" text-anchor="middle">0.8</text>
-<line x1="1380" y1="252" x2="1380" y2="823" stroke="#D7E2E8" stroke-width="1"/>
-<text x="1380" y="869" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="400" fill="#667888" text-anchor="middle">1.0</text>
-<rect x="53" y="254" width="1661" height="101" fill="#F3F7F9"/>
-<line x1="430" y1="255" x2="430" y2="355" stroke="#D7E2E8" stroke-width="1"/>
-<line x1="620" y1="255" x2="620" y2="355" stroke="#D7E2E8" stroke-width="1"/>
-<line x1="810" y1="255" x2="810" y2="355" stroke="#D7E2E8" stroke-width="1"/>
-<line x1="1000" y1="255" x2="1000" y2="355" stroke="#D7E2E8" stroke-width="1"/>
-<line x1="1190" y1="255" x2="1190" y2="355" stroke="#D7E2E8" stroke-width="1"/>
-<line x1="1380" y1="255" x2="1380" y2="355" stroke="#D7E2E8" stroke-width="1"/>
-<text x="64" y="317" font-family="Arial,Helvetica,sans-serif" font-size="29" font-weight="400" fill="#233947" text-anchor="start">E. helvum</text>
-<line x1="616.9084707189345" y1="306" x2="1349.818264409715" y2="306" stroke="#98B6BE" stroke-width="3"/>
-<line x1="916.4957130584971" y1="306" x2="1301.6910071548893" y2="306" stroke="#286F7A" stroke-width="10"/>
-<circle cx="1206.1843218712322" cy="306" r="11" fill="#286F7A" stroke="#FFFFFF" stroke-width="3"/>
-<text x="1550" y="314" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="400" fill="#233947" text-anchor="end">median 0.817</text>
-<text x="1694" y="314" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="700" fill="#233947" text-anchor="end">41</text>
-<line x1="430" y1="369" x2="430" y2="469" stroke="#D7E2E8" stroke-width="1"/>
-<line x1="620" y1="369" x2="620" y2="469" stroke="#D7E2E8" stroke-width="1"/>
-<line x1="810" y1="369" x2="810" y2="469" stroke="#D7E2E8" stroke-width="1"/>
-<line x1="1000" y1="369" x2="1000" y2="469" stroke="#D7E2E8" stroke-width="1"/>
-<line x1="1190" y1="369" x2="1190" y2="469" stroke="#D7E2E8" stroke-width="1"/>
-<line x1="1380" y1="369" x2="1380" y2="469" stroke="#D7E2E8" stroke-width="1"/>
-<text x="64" y="431" font-family="Arial,Helvetica,sans-serif" font-size="29" font-weight="400" fill="#233947" text-anchor="start">H. monstrosus</text>
-<line x1="950.5999264637811" y1="420" x2="1357.288658228792" y2="420" stroke="#98B6BE" stroke-width="3"/>
-<line x1="1054.441549277602" y1="420" x2="1306.869361702927" y2="420" stroke="#286F7A" stroke-width="10"/>
-<circle cx="1190.5780320077938" cy="420" r="11" fill="#286F7A" stroke="#FFFFFF" stroke-width="3"/>
-<text x="1550" y="428" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="400" fill="#233947" text-anchor="end">median 0.801</text>
-<text x="1694" y="428" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="700" fill="#233947" text-anchor="end">276</text>
-<rect x="53" y="482" width="1661" height="101" fill="#F3F7F9"/>
-<line x1="430" y1="483" x2="430" y2="583" stroke="#D7E2E8" stroke-width="1"/>
-<line x1="620" y1="483" x2="620" y2="583" stroke="#D7E2E8" stroke-width="1"/>
-<line x1="810" y1="483" x2="810" y2="583" stroke="#D7E2E8" stroke-width="1"/>
-<line x1="1000" y1="483" x2="1000" y2="583" stroke="#D7E2E8" stroke-width="1"/>
-<line x1="1190" y1="483" x2="1190" y2="583" stroke="#D7E2E8" stroke-width="1"/>
-<line x1="1380" y1="483" x2="1380" y2="583" stroke="#D7E2E8" stroke-width="1"/>
-<text x="64" y="545" font-family="Arial,Helvetica,sans-serif" font-size="29" font-weight="400" fill="#233947" text-anchor="start">P. hastatus 2022</text>
-<line x1="988.9310021521758" y1="534" x2="1367.5652245814076" y2="534" stroke="#98B6BE" stroke-width="3"/>
-<line x1="1163.5533461456653" y1="534" x2="1348.3346068403089" y2="534" stroke="#286F7A" stroke-width="10"/>
-<circle cx="1302.8003898152517" cy="534" r="11" fill="#286F7A" stroke="#FFFFFF" stroke-width="3"/>
-<text x="1550" y="542" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="400" fill="#233947" text-anchor="end">median 0.919</text>
-<text x="1694" y="542" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="700" fill="#233947" text-anchor="end">262</text>
-<line x1="430" y1="597" x2="430" y2="697" stroke="#D7E2E8" stroke-width="1"/>
-<line x1="620" y1="597" x2="620" y2="697" stroke="#D7E2E8" stroke-width="1"/>
-<line x1="810" y1="597" x2="810" y2="697" stroke="#D7E2E8" stroke-width="1"/>
-<line x1="1000" y1="597" x2="1000" y2="697" stroke="#D7E2E8" stroke-width="1"/>
-<line x1="1190" y1="597" x2="1190" y2="697" stroke="#D7E2E8" stroke-width="1"/>
-<line x1="1380" y1="597" x2="1380" y2="697" stroke="#D7E2E8" stroke-width="1"/>
-<text x="64" y="659" font-family="Arial,Helvetica,sans-serif" font-size="29" font-weight="400" fill="#233947" text-anchor="start">P. hastatus 2023</text>
-<line x1="990.6096109807247" y1="648" x2="1366.403635561201" y2="648" stroke="#98B6BE" stroke-width="3"/>
-<line x1="1177.2792405620635" y1="648" x2="1351.5438916556636" y2="648" stroke="#286F7A" stroke-width="10"/>
-<circle cx="1283.6628947302088" cy="648" r="11" fill="#286F7A" stroke="#FFFFFF" stroke-width="3"/>
-<text x="1550" y="656" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="400" fill="#233947" text-anchor="end">median 0.899</text>
-<text x="1694" y="656" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="700" fill="#233947" text-anchor="end">60</text>
-<rect x="53" y="710" width="1661" height="101" fill="#F3F7F9"/>
-<line x1="430" y1="711" x2="430" y2="811" stroke="#D7E2E8" stroke-width="1"/>
-<line x1="620" y1="711" x2="620" y2="811" stroke="#D7E2E8" stroke-width="1"/>
-<line x1="810" y1="711" x2="810" y2="811" stroke="#D7E2E8" stroke-width="1"/>
-<line x1="1000" y1="711" x2="1000" y2="811" stroke="#D7E2E8" stroke-width="1"/>
-<line x1="1190" y1="711" x2="1190" y2="811" stroke="#D7E2E8" stroke-width="1"/>
-<line x1="1380" y1="711" x2="1380" y2="811" stroke="#D7E2E8" stroke-width="1"/>
-<text x="64" y="773" font-family="Arial,Helvetica,sans-serif" font-size="29" font-weight="400" fill="#233947" text-anchor="start">P. hastatus 2016</text>
-<line x1="956.0176823516986" y1="762" x2="1360.384438883891" y2="762" stroke="#98B6BE" stroke-width="3"/>
-<line x1="986.9177877101298" y1="762" x2="1319.984593890717" y2="762" stroke="#286F7A" stroke-width="10"/>
-<circle cx="1191.955093249667" cy="762" r="11" fill="#286F7A" stroke="#FFFFFF" stroke-width="3"/>
-<text x="1550" y="770" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="400" fill="#233947" text-anchor="end">median 0.802</text>
-<text x="1694" y="770" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="700" fill="#233947" text-anchor="end">45</text>
-<line x1="430" y1="823" x2="1380" y2="823" stroke="#233947" stroke-width="3"/>
-<text x="905" y="940" font-family="Arial,Helvetica,sans-serif" font-size="27" font-weight="400" fill="#667888" text-anchor="middle">0 = no shared probability mass; 1 = identical normalized shape</text>
-<text x="61" y="1001" font-family="Arial,Helvetica,sans-serif" font-size="26" font-weight="400" fill="#667888" text-anchor="start">Bars: 10th–90th dependent-pair percentiles, NOT confidence intervals.</text>
-<text x="61" y="1042" font-family="Arial,Helvetica,sans-serif" font-size="26" font-weight="400" fill="#667888" text-anchor="start">Larger cohorts dominate pooled medians; different supports; NOT 3D co-use.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="177mm" height="155mm" viewBox="0 0 1770 1550" role="img" aria-label="Figure S1: cohort-specific descriptive 1D centered-height profile overlap for 103 panel-indexed profiles; no confidence intervals">
+<title>Figure S1. Within-cohort relative-height probability shape similarity</title>
+<desc>Eleven within-cohort pair medians in five original tracking panels, plus one source cohort with a single profile and no eligible pair. Ten-to-ninety percentile bars depict dependent-dyad variation, not confidence intervals. Small hollow circles represent single-pair cohorts. All metrics are one-dimensional, session-centered, and not geographic 3D overlap.</desc>
+<rect x="0" y="0" width="1770" height="1550" fill="#fff"/>
+<text x="56" y="63" font-family="Arial,Helvetica,sans-serif" font-size="40" font-weight="700" text-anchor="start" fill="#293640">FIGURE S1  |  COHORT-RESOLVED VERTICAL PROFILE SIMILARITY</text>
+<text x="56" y="104" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="400" text-anchor="start" fill="#586b78">Ten original session-centered height bins; 103 individual-by-panel records</text>
+<line x1="56" y1="131" x2="1713" y2="131" stroke="#dce5ea" stroke-width="3"/>
+<text x="56" y="193" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="700" text-anchor="start" fill="#293640">Panel</text>
+<text x="260" y="193" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="700" text-anchor="start" fill="#293640">Original collection cohort</text>
+<text x="1060" y="193" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="700" text-anchor="middle" fill="#293640">1D overlap O</text>
+<text x="1479" y="193" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" text-anchor="middle" fill="#293640">Median</text>
+<text x="1608" y="193" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" text-anchor="middle" fill="#293640">Profiles</text>
+<text x="1724" y="193" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" text-anchor="end" fill="#293640">Pairs</text>
+<line x1="767" y1="229" x2="767" y2="1312" stroke="#dce5ea" stroke-width="1"/>
+<text x="767" y="1345" font-family="Arial,Helvetica,sans-serif" font-size="23" font-weight="400" text-anchor="middle" fill="#586b78">0.0</text>
+<line x1="890.6" y1="229" x2="890.6" y2="1312" stroke="#dce5ea" stroke-width="1"/>
+<text x="890.6" y="1345" font-family="Arial,Helvetica,sans-serif" font-size="23" font-weight="400" text-anchor="middle" fill="#586b78">0.2</text>
+<line x1="1014.2" y1="229" x2="1014.2" y2="1312" stroke="#dce5ea" stroke-width="1"/>
+<text x="1014.2" y="1345" font-family="Arial,Helvetica,sans-serif" font-size="23" font-weight="400" text-anchor="middle" fill="#586b78">0.4</text>
+<line x1="1137.8" y1="229" x2="1137.8" y2="1312" stroke="#dce5ea" stroke-width="1"/>
+<text x="1137.8" y="1345" font-family="Arial,Helvetica,sans-serif" font-size="23" font-weight="400" text-anchor="middle" fill="#586b78">0.6</text>
+<line x1="1261.4" y1="229" x2="1261.4" y2="1312" stroke="#dce5ea" stroke-width="1"/>
+<text x="1261.4" y="1345" font-family="Arial,Helvetica,sans-serif" font-size="23" font-weight="400" text-anchor="middle" fill="#586b78">0.8</text>
+<line x1="1385" y1="229" x2="1385" y2="1312" stroke="#dce5ea" stroke-width="1"/>
+<text x="1385" y="1345" font-family="Arial,Helvetica,sans-serif" font-size="23" font-weight="400" text-anchor="middle" fill="#586b78">1.0</text>
+<text x="57" y="277" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="700" text-anchor="start" fill="#293640">E. helvum</text>
+<text x="260" y="277" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="400" text-anchor="start" fill="#293640">Burkina Faso / Ouagadougou 2013</text>
+<circle cx="1295.5809945644187" cy="268" r="10" fill="#fff" stroke="#286e7c" stroke-width="3"/>
+<text x="1479" y="277" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" text-anchor="middle" fill="#293640">0.855</text>
+<text x="1608" y="277" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="400" text-anchor="middle" fill="#293640">2</text>
+<text x="1724" y="277" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="400" text-anchor="end" fill="#293640">1</text>
+<text x="57" y="365" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="400" text-anchor="start" fill="#293640"></text>
+<text x="260" y="365" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="400" text-anchor="start" fill="#293640">Burkina Faso / Ouagadougou 2014</text>
+<line x1="1267.0289552012273" y1="356" x2="1350.3839948397354" y2="356" stroke="#286e7c" stroke-width="9"/>
+<circle cx="1324.1605197173371" cy="356" r="12" fill="#286e7c" stroke="#286e7c" stroke-width="3"/>
+<text x="1479" y="365" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" text-anchor="middle" fill="#293640">0.902</text>
+<text x="1608" y="365" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="400" text-anchor="middle" fill="#293640">5</text>
+<text x="1724" y="365" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="400" text-anchor="end" fill="#293640">10</text>
+<rect x="55" y="407" width="1657" height="69" fill="#f7f9fa"/>
+<text x="57" y="453" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="400" text-anchor="start" fill="#293640"></text>
+<text x="260" y="453" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="400" text-anchor="start" fill="#293640">Ghana / Accra 2009</text>
+<text x="1085" y="453" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="400" text-anchor="middle" fill="#586b78">no pair</text>
+<text x="1479" y="453" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="400" text-anchor="middle" fill="#586b78">—</text>
+<text x="1608" y="453" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="400" text-anchor="middle" fill="#293640">1</text>
+<text x="1724" y="453" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="400" text-anchor="end" fill="#293640">0</text>
+<text x="57" y="541" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="400" text-anchor="start" fill="#293640"></text>
+<text x="260" y="541" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="400" text-anchor="start" fill="#293640">Ghana / Accra 2011</text>
+<circle cx="1324.656407503167" cy="532" r="10" fill="#fff" stroke="#286e7c" stroke-width="3"/>
+<text x="1479" y="541" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" text-anchor="middle" fill="#293640">0.902</text>
+<text x="1608" y="541" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="400" text-anchor="middle" fill="#293640">2</text>
+<text x="1724" y="541" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="400" text-anchor="end" fill="#293640">1</text>
+<rect x="55" y="583" width="1657" height="69" fill="#f7f9fa"/>
+<text x="57" y="629" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="400" text-anchor="start" fill="#293640"></text>
+<text x="260" y="629" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="400" text-anchor="start" fill="#293640">Ghana / Kibi (Old Tafo) 2013</text>
+<circle cx="1271.9283272804437" cy="620" r="10" fill="#fff" stroke="#286e7c" stroke-width="3"/>
+<text x="1479" y="629" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" text-anchor="middle" fill="#293640">0.817</text>
+<text x="1608" y="629" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="400" text-anchor="middle" fill="#293640">2</text>
+<text x="1724" y="629" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="400" text-anchor="end" fill="#293640">1</text>
+<text x="57" y="717" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="400" text-anchor="start" fill="#293640"></text>
+<text x="260" y="717" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="400" text-anchor="start" fill="#293640">Zambia / Kasanka 2014</text>
+<line x1="1045.5177471580114" y1="708" x2="1295.72274363092" y2="708" stroke="#286e7c" stroke-width="9"/>
+<circle cx="1217.1992906785053" cy="708" r="12" fill="#286e7c" stroke="#286e7c" stroke-width="3"/>
+<text x="1479" y="717" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" text-anchor="middle" fill="#293640">0.728</text>
+<text x="1608" y="717" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="400" text-anchor="middle" fill="#293640">8</text>
+<text x="1724" y="717" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="400" text-anchor="end" fill="#293640">28</text>
+<line x1="54" y1="749" x2="1713" y2="749" stroke="#b8c9d2" stroke-width="2"/>
+<text x="57" y="805" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="700" text-anchor="start" fill="#293640">H. monstrosus</text>
+<text x="260" y="805" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="400" text-anchor="start" fill="#293640">Lek Njoukou 2020</text>
+<line x1="1173.2156604774295" y1="796" x2="1337.4265952972726" y2="796" stroke="#286e7c" stroke-width="9"/>
+<circle cx="1261.7760250324386" cy="796" r="12" fill="#286e7c" stroke="#286e7c" stroke-width="3"/>
+<text x="1479" y="805" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" text-anchor="middle" fill="#293640">0.801</text>
+<text x="1608" y="805" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="400" text-anchor="middle" fill="#293640">24</text>
+<text x="1724" y="805" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="400" text-anchor="end" fill="#293640">276</text>
+<line x1="54" y1="837" x2="1713" y2="837" stroke="#b8c9d2" stroke-width="2"/>
+<text x="57" y="893" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="700" text-anchor="start" fill="#293640">P. hastatus 2022</text>
+<text x="260" y="893" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="400" text-anchor="start" fill="#293640">Aj-cave (Colony 2) 2022</text>
+<line x1="1243.359733835119" y1="884" x2="1360.6074008492228" y2="884" stroke="#286e7c" stroke-width="9"/>
+<circle cx="1330.528119521406" cy="884" r="12" fill="#286e7c" stroke="#286e7c" stroke-width="3"/>
+<text x="1479" y="893" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" text-anchor="middle" fill="#293640">0.912</text>
+<text x="1608" y="893" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="400" text-anchor="middle" fill="#293640">14</text>
+<text x="1724" y="893" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="400" text-anchor="end" fill="#293640">91</text>
+<rect x="55" y="935" width="1657" height="69" fill="#f7f9fa"/>
+<text x="57" y="981" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="400" text-anchor="start" fill="#293640"></text>
+<text x="260" y="981" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="400" text-anchor="start" fill="#293640">La Gruta (Colony 1) 2022</text>
+<line x1="1254.2241886486077" y1="972" x2="1368.1426627515557" y2="972" stroke="#286e7c" stroke-width="9"/>
+<circle cx="1336.7564988137283" cy="972" r="12" fill="#286e7c" stroke="#286e7c" stroke-width="3"/>
+<text x="1479" y="981" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" text-anchor="middle" fill="#293640">0.922</text>
+<text x="1608" y="981" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="400" text-anchor="middle" fill="#293640">19</text>
+<text x="1724" y="981" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="400" text-anchor="end" fill="#293640">171</text>
+<line x1="54" y1="1013" x2="1713" y2="1013" stroke="#b8c9d2" stroke-width="2"/>
+<text x="57" y="1069" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="700" text-anchor="start" fill="#293640">P. hastatus 2023</text>
+<text x="260" y="1069" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="400" text-anchor="start" fill="#293640">Aj-cave (Colony 2) 2023</text>
+<line x1="1272.3512892617587" y1="1060" x2="1366.3575992702376" y2="1060" stroke="#286e7c" stroke-width="9"/>
+<circle cx="1323.080792455798" cy="1060" r="12" fill="#286e7c" stroke="#286e7c" stroke-width="3"/>
+<text x="1479" y="1069" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" text-anchor="middle" fill="#293640">0.900</text>
+<text x="1608" y="1069" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="400" text-anchor="middle" fill="#293640">10</text>
+<text x="1724" y="1069" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="400" text-anchor="end" fill="#293640">45</text>
+<rect x="55" y="1111" width="1657" height="69" fill="#f7f9fa"/>
+<text x="57" y="1157" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="400" text-anchor="start" fill="#293640"></text>
+<text x="260" y="1157" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="400" text-anchor="start" fill="#293640">La Gruta (Colony 1) 2023</text>
+<line x1="1147.9296258700865" y1="1148" x2="1363.2207917253759" y2="1148" stroke="#286e7c" stroke-width="9"/>
+<circle cx="1280.2728589161175" cy="1148" r="12" fill="#286e7c" stroke="#286e7c" stroke-width="3"/>
+<text x="1479" y="1157" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" text-anchor="middle" fill="#293640">0.831</text>
+<text x="1608" y="1157" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="400" text-anchor="middle" fill="#293640">6</text>
+<text x="1724" y="1157" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="400" text-anchor="end" fill="#293640">15</text>
+<line x1="54" y1="1189" x2="1713" y2="1189" stroke="#b8c9d2" stroke-width="2"/>
+<text x="57" y="1245" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="700" text-anchor="start" fill="#293640">P. hastatus 2016</text>
+<text x="260" y="1245" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="400" text-anchor="start" fill="#293640">La Gruta 2016</text>
+<line x1="1129.2896766366948" y1="1236" x2="1345.958398973119" y2="1236" stroke="#286e7c" stroke-width="9"/>
+<circle cx="1262.6718396087308" cy="1236" r="12" fill="#286e7c" stroke="#286e7c" stroke-width="3"/>
+<text x="1479" y="1245" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" text-anchor="middle" fill="#293640">0.802</text>
+<text x="1608" y="1245" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="400" text-anchor="middle" fill="#293640">10</text>
+<text x="1724" y="1245" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="400" text-anchor="end" fill="#293640">45</text>
+<line x1="767" y1="1317" x2="1385" y2="1317" stroke="#293640" stroke-width="2"/>
+<text x="55" y="1415" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="400" text-anchor="start" fill="#586b78">Bar = dependent-pair 10th–90th percentiles (NOT a confidence interval); hollow dot = one pair.</text>
+<text x="55" y="1454" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="400" text-anchor="start" fill="#586b78">One original cohort has n = 1 and cannot yield pair overlap; different panels/year are not pooled.</text>
+<text x="55" y="1493" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="400" text-anchor="start" fill="#586b78">Session-centered relative-height SHAPE only: NOT real 3D co-use, prey sharing, or competition.</text>
 </svg>
