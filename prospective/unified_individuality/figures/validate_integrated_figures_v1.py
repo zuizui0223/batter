@@ -105,10 +105,12 @@ def manuscript_format_gate() -> None:
 def centered_overlap_gate() -> None:
     """Post-outcome DESCRIPTIVE 1D profile-pair overlap, not empirical 3D co-use."""
     data = json.loads((HERE / "FROZEN_PROFILE_OVERLAP_DESCRIPTIVE_V1.json").read_text(encoding="utf-8"))
-    assert data["schema_version"] == 1
+    assert data["schema_version"] == 2
     assert data["original_source_sha256"] == "9efd5d2914ad012905a004aee1114d715deaaf94e3f54689deb4f1208a188cb2"
     assert "post-outcome descriptive" in data["analysis_tier"]
-    assert data["n_original_individuals"] == 103
+    assert data["n_source_panel_profile_records"] == 103
+    assert data["n_distinct_literal_source_identifiers"] == 101
+    assert data["global_animal_identity_verified"] is False
     assert data["total_within_cohort_pairs"] == 684
     panel_keys=["eidolon","hypsignathus","phyllostomus_2022","phyllostomus_2023","phyllostomus_2016"]
     expected_pair_counts=[41,276,262,60,45]
@@ -137,7 +139,7 @@ def centered_overlap_gate() -> None:
     assert "not geographic 3D habitat overlap" in data["scientific_limits"]
     si=(HERE.parent / "SUPPORTING_INFORMATION_DRAFT_V1.md").read_text(encoding="utf-8")
     assert "Supplementary Table U8." in si and "Supplementary Methods U13." in si
-    print("PASS post-outcome descriptive 1D overlap: 103 individuals, 12 cohorts, 684 dependent within-cohort dyads")
+    print("PASS post-outcome 1D overlap: 103 panel profiles / 101 literal labels, 12 cohorts, 684 dependent dyads")
 
 
 def original_jae_profile_gate() -> None:
@@ -182,7 +184,7 @@ def original_jae_profile_gate() -> None:
     assert (folder / "figure6_individual_centered_shape_profiles.png").read_bytes().startswith(
         b"\x89PNG\r\n\x1a\n"
     )
-    print("Original JAE Figure 6 archive PASS: exact hashes, 103 individuals, five panels, ten bins")
+    print("Original JAE Figure 6 archive PASS: exact hashes, 103 panel profiles, five panels, ten bins")
 
 
 def svg_gate() -> None:
