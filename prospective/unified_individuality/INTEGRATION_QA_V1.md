@@ -53,6 +53,17 @@ This audit detects transcription-level omissions/mismatches of selected numbers;
 
 **Assessment:** The integrated draft is a coherent evidence-bounded scientific candidate. The field-study source attribution check corrected the three Phyllostomus year-to-DOI assignments and the Eidolon source publication, without changing numerical outcomes. The supplementary Methods now include eleven source-specific sections. This QA supports text-level numerical alignment and boundary discipline only; it does not declare the new manuscript submission-ready.
 
+## Ecological identifiability and priority amendment — 2026-10-14
+
+- **Verified previously completed post-outcome conditional tracking**: 500-m place × speed × turning individuality supported 4/4 eligible panels (n=19,23,11,9; calibrated excess +0.3840,+0.0868,+0.1015,+0.4514; p=0.0002,0.0002,0.0006,0.0286). This is a sensitivity/maintenance analysis, not independent biological replication.
+- Same-night shifted-night conspecific comparator supported 3/4; original P2016 p=0.0544 fails its frozen gate despite a positive calibrated excess. Lag checks ≥1/≥3/≥7 days have changing denominators of 4/3/2 structurally eligible panels and do not support a common temporal decay model.
+- Frozen continuous wind reaction norm remained **structural STOP**: P2023 7 vs 8 required and no numeric vertical response opened. This cannot support a wind null-effect conclusion.
+- **Model non-identifiability**: an explicit two-task/two-height-bin mathematical illustration produces exactly the same marginal p_A=(0.6,0.4), p_B=(0.4,0.6) either through personal task proportions or through within-task differences. Toy probability overlap=0.8 and KL=0.081093 nats are mathematical, not source effect sizes, and do not stand in for empirical S_rel.
+- **Historical novelty correction**: Carlson et al. (2021; DOI 10.1038/s41467-021-24826-x) had already shown stable strongly overlapping/nested individual environmental niches in white storks. Wang et al. (2023) documented spatial specialization/overlap variation in bats. The novel candidate is the limited 3D source-specific vertical-shape/conditioning/co-use test architecture, **not** the first demonstration that overlapping individual niches are possible.
+- Frozen source receipts are pinned with original branch/path/blob SHA and full result summaries in `figures/FROZEN_MAINTENANCE_BOUNDARY_INPUTS_V1.json`; mathematical and numerical assertions run in `validate_ecological_identifiability_v1.py` under the main-figure and SI CI. Original source branches were not modified.
+
+These additions strengthen interpretive clarity, not the evidence tier. No new source outcomes, causal task/learning results or preregistration are introduced.
+
 ## Rendered figure amendment (2026-10-14)
 
 - Six draft SVG figures, the frozen source-summary data snapshot, a zero-dependency Node figure builder, a Python SVG/XML-and-biological-claim guard, and an on-PR workflow were added to the same draft PR.
