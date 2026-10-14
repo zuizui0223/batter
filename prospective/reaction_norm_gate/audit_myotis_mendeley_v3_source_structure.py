@@ -105,6 +105,8 @@ def csv_structure(data: bytes, name: str) -> dict:
             result["six_physical_treatment_regimes_recoverable_from_CSV_alone"] = False
             result["reason"] = "treat_code is a 3-level grouping, not original six movement displacement×speed regimes; date and physical trial ID are absent"
         return result
+    except (csv.Error, UnicodeDecodeError, ValueError, KeyError) as e:
+        raise ValueError(f"Invalid CSV source structure in {name}: {e}") from e
 
 
 def mat_structure(data: bytes, name: str) -> dict:
