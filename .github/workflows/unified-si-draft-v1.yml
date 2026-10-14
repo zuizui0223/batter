@@ -8,6 +8,8 @@ on:
       - 'prospective/unified_individuality/SUPPORTING_INFORMATION_ANONYMOUS_DRAFT_V1.md'
       - 'prospective/unified_individuality/build_anonymous_si_v1.cjs'
       - 'prospective/unified_individuality/validate_source_attribution_v2.py'
+      - 'prospective/unified_individuality/validate_ecological_identifiability_v1.py'
+      - 'prospective/unified_individuality/figures/FROZEN_MAINTENANCE_BOUNDARY_INPUTS_V1.json'
       - 'prospective/unified_individuality/INTEGRATED_MANUSCRIPT_V1.md'
       - 'prospective/unified_individuality/COMPLETE_ANONYMOUS_TEXT_DRAFT_V1.md'
       - '.github/workflows/unified-si-draft-v1.yml'
@@ -36,6 +38,8 @@ jobs:
         run: git diff --exit-code -- prospective/unified_individuality/SUPPORTING_INFORMATION_ANONYMOUS_DRAFT_V1.md
       - name: Validate exact wild study-year DOI mapping and verified 2026 citations
         run: python3 prospective/unified_individuality/validate_source_attribution_v2.py
+      - name: Audit source-bounded ecological mechanism and mathematical counterexample
+        run: python3 prospective/unified_individuality/validate_ecological_identifiability_v1.py
       - name: Build one internal and one anonymous SI proof PDF
         run: |
           python prospective/unified_individuality/build_supporting_pdf_v1.py
