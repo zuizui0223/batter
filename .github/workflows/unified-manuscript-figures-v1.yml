@@ -25,3 +25,10 @@ jobs:
         run: git diff --exit-code -- prospective/unified_individuality/figures/
       - name: Check scientific gates, labels, and SVG XML
         run: python3 prospective/unified_individuality/figures/validate_integrated_figures_v1.py
+      - name: Upload six manuscript SVGs for scientific visual QA
+        uses: actions/upload-artifact@v4
+        with:
+          name: unified-manuscript-figures-svg-v1
+          path: prospective/unified_individuality/figures/FIGURE_*.svg
+          if-no-files-found: error
+          retention-days: 30
