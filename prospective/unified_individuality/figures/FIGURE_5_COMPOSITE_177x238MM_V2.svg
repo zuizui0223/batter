@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="177mm" height="238mm" viewBox="0 0 1770 2380" role="img" aria-label="Figure 5. Centered-shape identity and 103 original bat individual vertical probability distributions">
+<svg xmlns="http://www.w3.org/2000/svg" width="177mm" height="238mm" viewBox="0 0 1770 2380" role="img" aria-label="Figure 5. Centered-shape identity and 103 original individual-by-panel vertical probability profiles">
 <title>Figure 5. Identity tests and descriptive probability profiles for vertical space use</title>
-<desc>Panel A shows calibrated whole-profile tests, including the non-supporting Tadarida case. Panel B contains the unmodified underlying probability vectors for 103 original individuals across five comparative panels, with ten height bins; the profiles are descriptive only.</desc>
+<desc>Panel A shows calibrated whole-profile tests, including the non-supporting Tadarida case. Panel B contains the unmodified underlying probability vectors for 103 original individual-by-panel records across five comparative panels, with ten height bins; the profiles are descriptive only.</desc>
 <rect x="0.00" y="0.00" width="1770.00" height="2380.00" fill="#FFFFFF" stroke="none" stroke-width="0"/>
 <text x="55.00" y="76.00" font-family="Arial, Helvetica, sans-serif" font-size="45" font-weight="700" fill="#1D303E" text-anchor="start" >FIGURE 5  |  VERTICAL-USE PROBABILITY SHAPES</text>
 <text x="55.00" y="118.00" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="400" fill="#5C7180" text-anchor="start" >Inferential whole-profile results (A) and descriptive individual profiles (B)</text>
@@ -54,7 +54,7 @@
 <text x="935.00" y="680.00" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="500" fill="#A16C60" text-anchor="middle" >Five comparative panels PASS; focal Tadarida FAIL (p = 0.5121)</text>
 <line x1="55.00" y1="713.00" x2="1710.00" y2="713.00" stroke="#D6E0E7" stroke-width="3"/>
 <text x="55.00" y="761.00" font-family="Arial, Helvetica, sans-serif" font-size="37" font-weight="700" fill="#1D303E" text-anchor="start" >B   Individual-specific probability profiles</text>
-<text x="55.00" y="801.00" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="400" fill="#5C7180" text-anchor="start" >Original leave-one-session-out, common-cell standardized profiles (103 individuals)</text>
+<text x="55.00" y="801.00" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="400" fill="#5C7180" text-anchor="start" >Original self-predictor profiles (103 individual-by-panel records)</text>
 <text x="332.00" y="954.73" font-family="Arial, Helvetica, sans-serif" font-size="29" font-weight="400" fill="#1D303E" text-anchor="end" >E. helvum</text>
 <text x="332.00" y="989.73" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="400" fill="#5C7180" text-anchor="end" >(n = 20)</text>
 <rect x="350.00" y="850.00" width="112.32" height="11.59" fill="#440557" stroke="none" stroke-width="0"/>
