@@ -23,11 +23,13 @@ jobs:
         run: node prospective/unified_individuality/figures/generate_integrated_figures_v1.cjs
       - name: Regenerate exact original 103-individual Figure 5A/B composite
         run: node prospective/unified_individuality/figures/build_figure5_composite_v2.cjs
-      - name: Guard against stale or hand-edited rendered figures
-        run: git diff --exit-code -- prospective/unified_individuality/figures/
+      - name: Rebuild anonymous journal-order complete text
+        run: node prospective/unified_individuality/build_complete_anonymous_text_v1.cjs
+      - name: Guard against stale or hand-edited figures and anonymous text
+        run: git diff --exit-code -- prospective/unified_individuality/figures/ prospective/unified_individuality/COMPLETE_ANONYMOUS_TEXT_DRAFT_V1.md
       - name: Check scientific gates, labels, and SVG XML
         run: python3 prospective/unified_individuality/figures/validate_integrated_figures_v1.py
-      - name: Upload six manuscript SVGs for scientific visual QA
+      - name: Upload six main manuscript figures including Figure 5 composite for QA
         uses: actions/upload-artifact@v4
         with:
           name: unified-manuscript-figures-svg-v1
