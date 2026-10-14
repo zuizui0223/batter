@@ -15,6 +15,19 @@ This directory develops a **single manuscript** by integrating the existing *Jou
 9. [BIBLIOGRAPHY_MERGE_AUDIT_V1.md](BIBLIOGRAPHY_MERGE_AUDIT_V1.md) — 45 unique original-source DOIs with a 34-reference consolidated main bibliography.
 10. [FIGURE_RENDER_VISUAL_QA_V1.md](FIGURE_RENDER_VISUAL_QA_V1.md) — preliminary SVG render and original-image preview QA.
 11. [INTERNAL_SCIENCE_REVIEW_GATE_V1.md](INTERNAL_SCIENCE_REVIEW_GATE_V1.md) — reviewer-level limits and final submission blockers.
+12. [BE_LAY_ABSTRACT_V2.md](BE_LAY_ABSTRACT_V2.md) — shortened 215-word abstract, 73-word Lay Summary and 69-character title for Behavioral Ecology.
+13. [COMPLETE_ANONYMOUS_TEXT_DRAFT_V1.md](COMPLETE_ANONYMOUS_TEXT_DRAFT_V1.md) — reproducible anonymous manuscript with the journal-ordered sections, also built as a 22-page line-numbered review PDF in GitHub Actions.
+14. [SUPPORTING_INFORMATION_ANONYMOUS_DRAFT_V1.md](SUPPORTING_INFORMATION_ANONYMOUS_DRAFT_V1.md) — reviewer-facing source/analysis tables with S1–S7 labels, also rendered to a single anonymous draft SI PDF.
+15. [FIGURE_ALT_TEXT_V1.md](FIGURE_ALT_TEXT_V1.md) — evidence-aware accessible text descriptions of all six main figures.
+16. [SUBMISSION_READINESS_GATE_V2.md](SUBMISSION_READINESS_GATE_V2.md) — official journal requirements, passed machine checks and mandatory human archive/ethics/AI approvals.
+
+### Review PDF CI outputs
+
+- [Anonymous complete manuscript review PDF workflow](https://github.com/zuizui0223/batter/actions/workflows/unified-anonymous-main-v1.yml) — continuous line and page numbers; manuscript copy is a **draft**, not a final journal upload.
+- [Anonymous and internal SI PDF workflow](https://github.com/zuizui0223/batter/actions/workflows/unified-si-draft-v1.yml) — two separate single-file proof variants; the anonymous SI draft retains the source methodological evidence.
+- [Figure source guard](https://github.com/zuizui0223/batter/actions/workflows/unified-manuscript-figures-v1.yml) — six main results plus the Figure 5 A+B 177 × 238 mm exact-source composite.
+
+The final journal data repository URL and author/coauthor approvals are **not** available yet; do not label these proof files submission-ready.
 
 ## One biological question
 
