@@ -26,6 +26,7 @@ The detailed reproducibility contracts and legally redistributable data-derived 
   // Treat this as the SI for one manuscript, rather than names of earlier working papers.
   s=s.replace(/Supplementary Table U([1-9])/g,"Supplementary Table S$1")
      .replace(/Supplementary Methods U([1-9][0-9]*)/g,"Supplementary Methods S$1")
+     .replace(/\bTable U([1-9])\b/g,"Table S$1")
      .replace(/original JAE/g,"original tracking")
      .replace(/JAE original/g,"original tracking")
      .replace(/the JAE original/g,"the original tracking")
