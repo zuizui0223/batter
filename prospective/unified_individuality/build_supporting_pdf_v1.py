@@ -106,7 +106,7 @@ def build():
             flush();i+=1;continue
         if line.startswith("!["):
             flush()
-            found=re.fullmatch(r"!\\[([^\\]]+)\\]\\((figures/[a-zA-Z0-9_./-]+\\.svg)\\)",line)
+            found=re.fullmatch(r"!\[([^\]]+)\]\((figures/[a-zA-Z0-9_./-]+\.svg)\)",line)
             assert found is not None,f"Unexpected SI figure link: {line}"
             relative=found.group(2)
             assert relative=="figures/FIGURE_S1_WITHIN_COHORT_VERTICAL_SHAPE_OVERLAP_V1.svg"
