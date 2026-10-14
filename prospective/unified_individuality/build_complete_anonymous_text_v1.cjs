@@ -10,7 +10,7 @@ function anon(s){
   let abstract=between("## Abstract\n","## Introduction\n");
   const keywordList="bats; behavioral individuality; individual specialization; development; three-dimensional space use; context dependence; spatial partitioning";
   const body=("## Introduction\n"+between("## Introduction\n","## Figure legends (rendered source-backed SVGs)"));
-  const refs=between("## Consolidated working references\n","**These 35 scholarly entries");
+  const refs=between("## Consolidated working references\n","**These 36 scholarly entries");
   const figureLegends=between("## Figure legends (rendered source-backed SVGs)\n","## Consolidated working references\n");
   const w=x=>x.trim().split(/\s+/).length;
   if(w(abstract)>250||w(lay)>75||title.length>100)throw Error("Journal length check failed");
