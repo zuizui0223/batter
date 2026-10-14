@@ -75,6 +75,13 @@ This **post-outcome descriptive transformation is new**, unlike the frozen prima
 - Caution: original profiles were estimated on **individual-specific supported horizontal cells/weights**, and height was median-centered and smoothed. This plot does **not** estimate actual 3D geographic/behavioral overlap, true instantaneous contact, common prey or equivalent absence of competition.
 - The anonymous and internal SI PDF pipeline embeds the same vector Figure S1; its final printed appearance still needs human coauthor sign-off.
 
+## Source-cohort imbalance and count-independent QA — 2026-10-14
+
+- Added a **post-outcome descriptive sensitivity** of the already-opened 684 *dependent* dyad overlap coefficients, restricted to 12 exact original source collection cohorts. The original five panel profile counts are 20/24/33/16/10 **individual-by-panel records**, with 101 distinct literal source identifier strings due to two repeated 2016/2022 labels.
+- Dominant source cohorts contribute 28/41 pairs (**68.3%**) in *Eidolon*, 171/262 (65.3%) in *P. hastatus* 2022, and 45/60 (**75.0%**) in 2023. Original pooled pair medians (0.817/0.919/0.899) differ from equally weighted medians of cohort medians (0.855/0.917/0.865). The *Eidolon* equal-cohort value includes **three cohorts with exactly one dyad each**; it is not an unbiased estimator or formal confidence adjustment.
+- After leaving out the largest cohort, remaining descriptive dyad medians are 0.887 (13 remaining pairs), 0.912 (91) and 0.831 (15), respectively. This is not a leave-one-independent-unit-out test. The one-cohort *Hypsignathus* and 2016 *Phyllostomus* panels have no meaningful leave-largest-cohort value.
+- Independent original byte-verified CSV Python computation (`validate_cohort_weight_sensitivity_v1.py`) checks all 12 cohort medians and panel aggregation against `figures/COHORT_WEIGHT_SENSITIVITY_V1.json`; the original descriptive JSON, original 103 profile source and main JAE/BE test results are unchanged. This note and Table S9 are **not a new inferential ecological result**.
+
 ## Direct same-source 2D prior art and animal-ID integrity amendment — 2026-10-14
 
 - Targeted literature validation found Calderón-Capote et al. (2025; *PLOS ONE*, DOI 10.1371/journal.pone.0313782), which analysed the very same La Gruta P. hastatus 2016 and 2022 source archives for **horizontal foraging-area overlap**, averaging near 0.20 with a Bhattacharyya coefficient. This is not mathematically comparable to the new 1D centered height-shape overlap median 0.80–0.92; no “80–92% shared 3D habitat” statement is admissible.
