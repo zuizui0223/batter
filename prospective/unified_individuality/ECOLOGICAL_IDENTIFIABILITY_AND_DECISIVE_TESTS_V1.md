@@ -10,6 +10,10 @@ The useful ecological question is not merely whether individually held-out verti
 
 The available source outcomes **constrain** these hypotheses but do not identify a unique mechanism. They reveal individualized conditional use of vertical space, not which cognitive, trophic, anatomical or social state causes it.
 
+## Existing ecological priority boundary
+
+Previous ecological studies had **already demonstrated** persistent individual environmental niche differentiation without disjoint or modular niches (white storks; Carlson et al. 2021, DOI 10.1038/s41467-021-24826-x). In bats, spatial individual specialization and horizontal home-range overlap vary together between seasons (*Ia io*; Wang et al. 2023, DOI 10.1186/s40462-023-00394-1). The ecological novelty here therefore **cannot** be that individual niches ever overlap. The narrower possible increment is source-calibrated individual *vertical probability shape* after common horizontal and conditional movement controls, tested alongside separate terrain-relative segregation and contemporaneous co-use nulls. See [prior-art comparison](ECOLOGICAL_PRIOR_ART_POSITIONING_V1.md).
+
 ## Three distinct measured objects
 
 1. **Predictive individuality:** whether a same-individual predictor of the held-out vertical-use probability distribution beats an eligible other-individual predictor under the original weighted common-cell support, evaluated against each full-pipeline whole-session permutation null. The observed-minus-null score is calibrated in **nats per fix**; it is **not** a metre separation or exclusive-niche overlap index.
