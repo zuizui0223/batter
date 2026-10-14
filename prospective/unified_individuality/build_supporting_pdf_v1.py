@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Produce one INTERNAL review-only PDF from the integrated SI draft."""
 from __future__ import annotations
-import html, re
+import html, re, sys
 from pathlib import Path
 from reportlab.lib.pagesizes import A4, landscape
 from reportlab.lib import colors
@@ -11,8 +11,9 @@ from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, LongTable, TableStyle, KeepTogether
 
 ROOT=Path(__file__).resolve().parent
-SOURCE=ROOT / "SUPPORTING_INFORMATION_DRAFT_V1.md"
-OUT=ROOT / "build" / "SUPPLEMENTARY_MATERIAL_INTERNAL_DRAFT_V1.pdf"
+ANONYMOUS="--anonymous" in sys.argv
+SOURCE=ROOT / ("SUPPORTING_INFORMATION_ANONYMOUS_DRAFT_V1.md" if ANONYMOUS else "SUPPORTING_INFORMATION_DRAFT_V1.md")
+OUT=ROOT / "build" / ("SUPPLEMENTARY_MATERIAL_ANONYMOUS_DRAFT_V1.pdf" if ANONYMOUS else "SUPPLEMENTARY_MATERIAL_INTERNAL_DRAFT_V1.pdf")
 OUT.parent.mkdir(parents=True,exist_ok=True)
 FONT=Path("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf")
 BOLD=Path("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf")
@@ -80,7 +81,7 @@ def decorate(c,doc):
     c.line(margin,pageH-26,pageW-margin,pageH-26)
     c.setFillColor(colors.HexColor("#667786"))
     c.setFont(normal,6.5)
-    c.drawString(margin,pageH-20,"UNIFIED BAT INDIVIDUALITY | INTERNAL SUPPORTING INFORMATION DRAFT")
+    c.drawString(margin,pageH-20,"UNIFIED BAT INDIVIDUALITY | "+("ANONYMOUS SI DRAFT" if ANONYMOUS else "INTERNAL SUPPORTING INFORMATION DRAFT"))
     c.drawRightString(pageW-margin,17,f"Page {doc.page}")
     c.restoreState()
 def build():
@@ -119,8 +120,8 @@ def build():
     flush()
     doc=SimpleDocTemplate(str(OUT),pagesize=landscape(A4),leftMargin=margin,
       rightMargin=margin,topMargin=38,bottomMargin=35,
-      title="Supplementary Material - Internal Review Draft",
-      author="Anonymous internal working draft")
+      title="Supplementary Material - Anonymous Draft" if ANONYMOUS else "Supplementary Material - Internal Review Draft",
+      author="Anonymous manuscript")
     doc.build(blocks,onFirstPage=decorate,onLaterPages=decorate)
     assert OUT.is_file() and OUT.stat().st_size>5000
     print(f"CREATED {OUT} bytes={OUT.stat().st_size} original_source_words={len(source.split())}")
