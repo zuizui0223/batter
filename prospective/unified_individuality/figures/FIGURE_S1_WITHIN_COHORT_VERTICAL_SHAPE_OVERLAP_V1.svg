@@ -3,7 +3,7 @@
 <desc>Five groups of previously estimated individual relative-height probability profiles; points are descriptive within-cohort unordered-dyad medians and horizontal lines are 10th to 90th descriptive percentiles, not confidence intervals. No source-based ecological spatial overlap or new statistical test is represented.</desc>
 <rect width="1770" height="1080" fill="#FFFFFF"/>
 <text x="60" y="75" font-family="Arial,Helvetica,sans-serif" font-size="46" font-weight="700" fill="#233947" text-anchor="start">FIGURE S1  |  WITHIN-COHORT VERTICAL PROFILE OVERLAP</text>
-<text x="60" y="115" font-family="Arial,Helvetica,sans-serif" font-size="26" font-weight="400" fill="#667888" text-anchor="start">Source-frozen self-predictor profiles, 10 session-centered height bins; original 103 bats</text>
+<text x="60" y="115" font-family="Arial,Helvetica,sans-serif" font-size="26" font-weight="400" fill="#667888" text-anchor="start">Source-frozen self-predictor profiles, 10 height bins; 103 panel-indexed records</text>
 <line x1="60" y1="141" x2="1710" y2="141" stroke="#D7E2E8" stroke-width="2"/>
 <text x="61" y="210" font-family="Arial,Helvetica,sans-serif" font-size="29" font-weight="700" fill="#233947" text-anchor="start">Original tracking panel</text>
 <text x="890" y="210" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="700" fill="#233947" text-anchor="middle">Centered 1D overlap coefficient  O = sum(min(p_i, p_j))</text>
