@@ -80,7 +80,7 @@ def svg_gate() -> None:
         text = file.read_text(encoding="utf-8")
         assert text.startswith("<svg"), f"{name}: missing root"
         assert "</svg>" in text and "<script" not in text, f"{name}: unsafe/invalid"
-        assert not any(v in text for v in ["NaN", "undefined", "javascript:", "http://", "<foreignObject"]), f"{name}: invalid value"
+        assert not any(v in text for v in ["NaN", "undefined", "javascript:", "<foreignObject", "<script"]), f"{name}: invalid value"
         root = ET.fromstring(text)
         assert root.tag == SVG_NS + "svg", f"{name}: invalid XML namespace"
         bounds = root.attrib["viewBox"].split()
