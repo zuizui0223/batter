@@ -12,7 +12,7 @@ The integrated article must not read as a BE paper followed by an unrelated JAE 
 
 **Synthesis level:** A decomposition of independently tested empirical propositions. Not a verified laboratory-to-wild causal sequence.
 
-## Proposed main figure architecture
+## Rendered main figure architecture (SVG draft; captions in FIGURE_ATLAS_AND_CAPTIONS_V1.md)
 
 | Figure | Design | Build from / retain | Main-text point | Prevent misreading |
 |---|---|---|---|---|
@@ -20,7 +20,7 @@ The integrated article must not read as a BE paper followed by an unrelated JAE 
 | 2. History and development | a) 14 juvenile B_i slopes + 10/14 gate, b) late L secondary, c) Rachum D vs randomized null, d) Elie D vs exact null | BE Figure 2A/2B; use frozen arrays | Late history predictive; monotonic formation FAIL; developmental total-dispersion tests unsupported | Keep B primary FAIL despite p=0.0102; label decompositions only in SI |
 | 3. Acute perturbation | Four rows/independent experimental systems, n and correct identity-map rank/null/status | BE Figure 3, plus foam secondary comparison | Identifiable individual organization remains under manipulations | Never place K, A or angle on shared effect-size axis; small biological n visible |
 | 4. Coarse organization vs detailed realization | Rhino coarse I/M PASS, Carollia fixed coarse I/M PASS, Carollia fixed detailed geometry FAIL; field scalar carrier as separate broken link | BE Figure 4 | Transfer of a representation is narrower than shared mechanism | Draw field bridge as 2 PASS/1 FAIL/1 STOP, NOT all-negative |
-| 5. Repeatable individual vertical distributions | Original JAE five centered-shape PASS panels + focal Tadarida FAIL; representative full-probability profiles and calibrated null means | JAE original Figure 5 and selected Figure 6 cells | Persistence is distribution-shape identity, not just different mean heights | Descriptive tail/central concentration profiles have NO componentwise calibrated tests |
+| 5. Repeatable individual vertical distributions | Rendered calibrated centered-shape excess in six original panels, with Tadarida FAIL; original JAE full-profile heatmap still to be retrieved for final production | JAE tag-altitude audit, original JAE Figure 5/6 receipts | Persistence is whole-distribution shape identity, not just a different mean height | Do not invent individual full-probability profiles; component ranges are descriptive, not recalibrated |
 | 6. Fidelity without additional segregation | Across the same four eligible field panels, paired identity (V_rel), added segregation (S_rel), and co-use excess/upper compatibility endpoints | JAE post-outcome ecological result tables | Persistence 4/4 versus supported positive S_rel 0/4 and co-use 1/4 | Two species, three Phyllostomus time panels; H negative S; 2023 co-use exception; post-outcome tier |
 
 **If journal permits only five figures:** Move original Fig. 2's developmental null graphics to a comprehensive SI figure, preserve one short developmental Results paragraph and never cut Fig. 6 (the actual ecological contribution).
@@ -30,10 +30,10 @@ The integrated article must not read as a BE paper followed by an unrelated JAE 
 - Label each spatial group with biological species plus study/year, not six independent species names.
 - Plot V_rel and S_rel in adjacent but separate scales (their values are different estimands); use statuses and calibrated null information, not unitless overlay.
 - Show H, P2022, P2023 and P2016 in exactly the same order across all field panels.
-- Mark co-use diagnostic 2023 encounter rule as 600 seconds/all-space versus other panels' finer local coincidence rules.
+- Label all four actual co-use designs: H. monstrosus and P. hastatus 2022 = 60 s/endpoint-excluded; P. hastatus 2023 = 600 s/all-space; P. hastatus 2016 = 600 s/endpoint-excluded. Do not imply that 2023 is the only 600-s panel.
 - Three positive 95% upper endpoints are **compatibility bounds** from dyad resampling, not equivalence or post hoc power tests.
 - Mark evidence tier in every figure caption: original frozen, predeclared secondary, post-outcome diagnostic, descriptive, or structural STOP.
-- No metric computed in this integration; all plotted values must be read from frozen/original source result receipts.
+- No new inferential endpoint is computed in this integration; all plotted values are derived directly from source-pinned frozen/original result receipts. Figures 1–6 have been rendered as SVG and must pass automated reproducibility checks and human visual review before journal production.
 
 ## Supporting Information plan
 
