@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "created": "2026-10-14",
+  "analysis_tier": "post-outcome descriptive cohort-imbalance audit of already-opened 1D session-centered vertical profile shapes, not a hypothesis test",
+  "source_json_sha256": "9efd5d2914ad012905a004aee1114d715deaaf94e3f54689deb4f1208a188cb2",
+  "source_csv_sha256": "91cae4c22588db0976dfe3e273eabebaa89dc2844e996f42d01ef617672dc3f8",
+  "source_profile_records": 103,
+  "distinct_literal_identifier_strings": 101,
+  "source_ids_repeated_across_panels": 2,
+  "total_within_cohort_nonindependent_pairs": 684,
+  "unit_notice": "per-panel source individual profile record; study-year panels cannot be assumed globally independent animal identity",
+  "metadata_notice": "equal cohort median is median of eligible within-cohort dyad medians, including three Eidolon two-record cohorts with just one pair each; no confidence intervals or independent cohort-level inference",
+  "by_panel": [
+    {
+      "panel": "eidolon",
+      "n_panel_profile_records": 20,
+      "n_cohorts": 6,
+      "n_pair_eligible_cohorts": 5,
+      "n_two_record_cohorts": 3,
+      "n_unordered_pairs": 41,
+      "pair_pooled_median": 0.8170361282855076,
+      "equal_cohort_median_of_medians": 0.855309052693234,
+      "min_cohort_median": 0.7284778166318858,
+      "max_cohort_median": 0.902356646445254,
+      "dominant_cohort": "Zambia, Kasanka::2014",
+      "dominant_cohort_n_profiles": 8,
+      "dominant_cohort_pairs": 28,
+      "dominant_cohort_pair_share": 0.6829268292682927,
+      "leave_dominant_out_pairs": 13,
+      "leave_dominant_out_median": 0.8867830165123465
+    },
+    {
+      "panel": "hypsignathus",
+      "n_panel_profile_records": 24,
+      "n_cohorts": 1,
+      "n_pair_eligible_cohorts": 1,
+      "n_two_record_cohorts": 0,
+      "n_unordered_pairs": 276,
+      "pair_pooled_median": 0.8006084547450463,
+      "equal_cohort_median_of_medians": 0.8006084547450463,
+      "min_cohort_median": 0.8006084547450463,
+      "max_cohort_median": 0.8006084547450463,
+      "dominant_cohort": "Lek Njoukou::2020",
+      "dominant_cohort_n_profiles": 24,
+      "dominant_cohort_pairs": 276,
+      "dominant_cohort_pair_share": 1,
+      "leave_dominant_out_pairs": 0,
+      "leave_dominant_out_median": null
+    },
+    {
+      "panel": "phyllostomus_2022",
+      "n_panel_profile_records": 33,
+      "n_cohorts": 2,
+      "n_pair_eligible_cohorts": 2,
+      "n_two_record_cohorts": 0,
+      "n_unordered_pairs": 262,
+      "pair_pooled_median": 0.9187372524371071,
+      "equal_cohort_median_of_medians": 0.9168969404005942,
+      "min_cohort_median": 0.911857798578327,
+      "max_cohort_median": 0.9219360822228613,
+      "dominant_cohort": "La Gruta (Colony 1)::2022",
+      "dominant_cohort_n_profiles": 19,
+      "dominant_cohort_pairs": 171,
+      "dominant_cohort_pair_share": 0.6526717557251909,
+      "leave_dominant_out_pairs": 91,
+      "leave_dominant_out_median": 0.911857798578327
+    },
+    {
+      "panel": "phyllostomus_2023",
+      "n_panel_profile_records": 16,
+      "n_cohorts": 2,
+      "n_pair_eligible_cohorts": 2,
+      "n_two_record_cohorts": 0,
+      "n_unordered_pairs": 60,
+      "pair_pooled_median": 0.8985925207686409,
+      "equal_cohort_median_of_medians": 0.865172857097019,
+      "min_cohort_median": 0.830538606660384,
+      "max_cohort_median": 0.899807107533654,
+      "dominant_cohort": "Aj-cave (Colony 2)::2023",
+      "dominant_cohort_n_profiles": 10,
+      "dominant_cohort_pairs": 45,
+      "dominant_cohort_pair_share": 0.75,
+      "leave_dominant_out_pairs": 15,
+      "leave_dominant_out_median": 0.830538606660384
+    },
+    {
+      "panel": "phyllostomus_2016",
+      "n_panel_profile_records": 10,
+      "n_cohorts": 1,
+      "n_pair_eligible_cohorts": 1,
+      "n_two_record_cohorts": 0,
+      "n_unordered_pairs": 45,
+      "pair_pooled_median": 0.8020579928943863,
+      "equal_cohort_median_of_medians": 0.8020579928943863,
+      "min_cohort_median": 0.8020579928943863,
+      "max_cohort_median": 0.8020579928943863,
+      "dominant_cohort": "La Gruta::2016",
+      "dominant_cohort_n_profiles": 10,
+      "dominant_cohort_pairs": 45,
+      "dominant_cohort_pair_share": 1,
+      "leave_dominant_out_pairs": 0,
+      "leave_dominant_out_median": null
+    }
+  ],
+  "by_cohort": [
+    {
+      "panel": "eidolon",
+      "cohort": "Burkina Faso, Ouagadougou::2013",
+      "n_source_panel_records": 2,
+      "n_unordered_pairs": 1,
+      "dyad_median": 0.855309052693234
+    },
+    {
+      "panel": "eidolon",
+      "cohort": "Burkina Faso, Ouagadougou::2014",
+      "n_source_panel_records": 5,
+      "n_unordered_pairs": 10,
+      "dyad_median": 0.9015542390248173
+    },
+    {
+      "panel": "eidolon",
+      "cohort": "Ghana, Accra::2009",
+      "n_source_panel_records": 1,
+      "n_unordered_pairs": 0,
+      "dyad_median": null
+    },
+    {
+      "panel": "eidolon",
+      "cohort": "Ghana, Accra::2011",
+      "n_source_panel_records": 2,
+      "n_unordered_pairs": 1,
+      "dyad_median": 0.902356646445254
+    },
+    {
+      "panel": "eidolon",
+      "cohort": "Ghana, Kibi (Old Tafo)::2013",
+      "n_source_panel_records": 2,
+      "n_unordered_pairs": 1,
+      "dyad_median": 0.8170361282855076
+    },
+    {
+      "panel": "eidolon",
+      "cohort": "Zambia, Kasanka::2014",
+      "n_source_panel_records": 8,
+      "n_unordered_pairs": 28,
+      "dyad_median": 0.7284778166318858
+    },
+    {
+      "panel": "hypsignathus",
+      "cohort": "Lek Njoukou::2020",
+      "n_source_panel_records": 24,
+      "n_unordered_pairs": 276,
+      "dyad_median": 0.8006084547450463
+    },
+    {
+      "panel": "phyllostomus_2022",
+      "cohort": "Aj-cave (Colony 2)::2022",
+      "n_source_panel_records": 14,
+      "n_unordered_pairs": 91,
+      "dyad_median": 0.911857798578327
+    },
+    {
+      "panel": "phyllostomus_2022",
+      "cohort": "La Gruta (Colony 1)::2022",
+      "n_source_panel_records": 19,
+      "n_unordered_pairs": 171,
+      "dyad_median": 0.9219360822228613
+    },
+    {
+      "panel": "phyllostomus_2023",
+      "cohort": "Aj-cave (Colony 2)::2023",
+      "n_source_panel_records": 10,
+      "n_unordered_pairs": 45,
+      "dyad_median": 0.899807107533654
+    },
+    {
+      "panel": "phyllostomus_2023",
+      "cohort": "La Gruta (Colony 1)::2023",
+      "n_source_panel_records": 6,
+      "n_unordered_pairs": 15,
+      "dyad_median": 0.830538606660384
+    },
+    {
+      "panel": "phyllostomus_2016",
+      "cohort": "La Gruta::2016",
+      "n_source_panel_records": 10,
+      "n_unordered_pairs": 45,
+      "dyad_median": 0.8020579928943863
+    }
+  ]
+}
