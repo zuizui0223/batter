@@ -24,13 +24,18 @@ The detailed reproducibility contracts and legally redistributable data-derived 
 `;
   s=intro+s.slice(first);
   // Treat this as the SI for one manuscript, rather than names of earlier working papers.
-  s=s.replace(/Supplementary Table U([1-9])/g,"Supplementary Table S$1")
+  s=s.replace(/Supplementary Table U([1-9][0-9]*)/g,"Supplementary Table S$1")
      .replace(/Supplementary Methods U([1-9][0-9]*)/g,"Supplementary Methods S$1")
-     .replace(/\bTable U([1-9])\b/g,"Table S$1")
+     .replace(/\bTable U([1-9][0-9]*)\b/g,"Table S$1")
      .replace(/original JAE/g,"original tracking")
      .replace(/JAE original/g,"original tracking")
      .replace(/the JAE original/g,"the original tracking")
      .replace(/in the JAE original source receipts/g,"in the original tracking source receipts")
+     .replace(/JAE rc2 branch/g,"later frozen tracking source")
+     .replace(/workflow run \*\*36881187913\*\*/g,"original archived execution")
+     .replace(/commit 676ae76aec952a38410766577d51c5eca438a6c1/g,"its frozen source-control state")
+     .replace(/commit 819acc829d615485b57033f1ddcbebf64b4b49a0/g,"the later original terrain-source state")
+     .replace(/original Git blob SHA \*\*c1d37e42f72f59e5aba364daec9aef68b47778b6\*\*/g,"original source digest kept in the blinded audit receipt")
      .replace(/BE audit/g,"original source audit")
      .replace(/\bBE\b/g,"experimental")
      .replace(/the \[Figure 5B\]\(figures\/original_jae\/figure6_individual_centered_shape_profiles.png\)/g,"Figure 5B")
