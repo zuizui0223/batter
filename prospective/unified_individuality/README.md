@@ -8,6 +8,7 @@ This directory develops a **single manuscript** by integrating the existing *Jou
 
 1. [INTEGRATED_MANUSCRIPT_V1.md](INTEGRATED_MANUSCRIPT_V1.md) — full new draft, including rewritten Abstract, Introduction, Methods, Results, Discussion, Conclusion and selected working references.
    - [Original replay-input manifest](source_recovery/terrain_replay_input_manifest_v1.json) and [offline checksum verifier](source_recovery/verify_terrain_replay_input_manifest_v1.py) enumerate 4 GPS, 4 reference and 2 DEM inputs and provide optional **authorized local-file checksum** checks; no raw data are redistributed or independently rerun.
+   - [Separate S_rel permutation-source manifest](source_recovery/partitioning_s_calibration_provenance_v1.json) and [validator](source_recovery/verify_partitioning_s_provenance_v1.py) pin the second original successful null-calibration workflow and prevent incorrectly attributing S_rel p-values to the earlier terrain-geometry source run.
 2. [EVIDENCE_CROSSWALK_V1.md](EVIDENCE_CROSSWALK_V1.md) — audited source-to-claim table, with experimental and wild evidence hierarchies and claims this integration does **not** establish.
 3. [FIGURES_AND_SI_PLAN_V1.md](FIGURES_AND_SI_PLAN_V1.md) — six rendered main figure designs, SI transfer, word budget and release safeguards.
 4. [INTEGRATION_QA_V1.md](INTEGRATION_QA_V1.md) — 35 selected numeric keys reconciled at source-text level, plus epistemic and submission gate checklist.
