@@ -16,7 +16,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 SRC = ROOT / "source_recovery" / "native_3d_history"
 SHA = {
-    "run_v1.py": "c08b442f97940eac3e90c1dac6e2d26010a7a",
+    "run_v1.py": "c08b442f97940eac3e90c1dac6e2de6d26010a7a",
     "run_external_geometry_v1.py": "c869a25c062b4bf5dc6b22e9f3e7fe03b69aeb30",
     "contract_v1.json": "5c76d0432e53ea7733216245f229d68ae0df1f77",
 }
