@@ -86,6 +86,12 @@ Calderón-Capote et al. 2025 already quantified horizontal foraging-area overlap
 
 The original four eligible panels show **same-individual horizontal O_XY 0.511–0.619 versus other-individual O_XY 0.202–0.334** (descriptive source-weighted means). No horizontal partitioning equivalence or absence test was passed or conducted. Moreover, O_XYZ cannot exceed O_XY for probability intersections on the same pairwise grid, so descriptive 2D-to-3D overlap reductions alone cannot prove **additional individual vertical segregation**. The valid negative-scope claim is **no consistently supported positive terrain-relative S_rel in these four source panels**, not a demonstrated absence of horizontal partitioning or trophic differentiation. See `HORIZONTAL_VS_ADDED_VERTICAL_SEGREGATION_CLAIM_AUDIT_V1.md`.
 
+## Separate source closure for S_rel permutation inference
+
+- [x] Original geometry/V_rel historical success commit `819acc82`, workflow 36946126004, **does not itself produce the original S_rel permutation p-values**; its 21-file source closure must not be reported as full S null reproduction.
+- [x] Original second-phase S_rel source success commit `d0193c1a`, workflow 36992380946, runner Git blob `9aba94c6` and contract `1dfc8625` have been identified. Original phase-B helpers are byte-identical to those recovered at the first phase. The independent source validator is attached to both figure/provenance CI workflows.
+- [ ] **Still open:** even if both stages' code identities are verified, the full chain requires authorized GPS/reference/DEM input bytes, historical environment and independent 9,999-permutation result replay for **both V_rel and S_rel**, not merely compilation or smoke tests. Results remain historic, original-source computations.
+
 ## Recovered original GPS/reference/DEM input inventory — 2026-10-15
 
 - [x] The *historical contracts* declare 4 GPS event bitstreams, 4 reference/tag files and 2 unique gzipped terrain tiles with exact source size/hash checks; the preflight receipt records 240,042 coordinate rows and 521 sessions. All four contract Git blobs match the original source-only closure manifest.
