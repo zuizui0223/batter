@@ -27,6 +27,8 @@ jobs:
         run: node prospective/unified_individuality/figures/derive_centered_vertical_overlap_v1.cjs
       - name: Draw cohort-resolved Figure S1 from exact 12-cohort descriptive summaries
         run: node prospective/unified_individuality/figures/render_cohort_resolved_s1_v2.cjs
+      - name: Rebuild original historical native XY vs joint 3D source Figure S2
+        run: node prospective/unified_individuality/figures/render_original_native_3d_overlap_s2_v1.cjs
       - name: Independently reproduce same-cohort profile overlap using original CSV, Python
         run: python3 prospective/unified_individuality/validate_overlap_independent_csv_v1.py
       - name: Audit panel-indexed source profiles and repeated 2016/2022 literal labels
@@ -41,6 +43,8 @@ jobs:
         run: python3 prospective/unified_individuality/figures/validate_integrated_figures_v1.py
       - name: Audit source-bounded ecological mechanism and mathematical counterexample
         run: python3 prospective/unified_individuality/validate_ecological_identifiability_v1.py
+      - name: Verify original native/terrain 3D result source, byte-identical historic code and Figure S2
+        run: python3 prospective/unified_individuality/validate_native_3d_source_recovery_v1.py
       - name: Upload six main manuscript figures including Figure 5 composite for QA
         uses: actions/upload-artifact@v4
         with:
