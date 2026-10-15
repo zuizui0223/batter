@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="177mm" height="140mm" viewBox="0 0 1770 1400" role="img" aria-label="Figure S2: original 500-m horizontal versus joint native 3D overlap, same animal versus other animal session pairs. Source descriptive values, not co-use or terrain-corrected metrics.">
+<svg xmlns="http://www.w3.org/2000/svg" width="177mm" height="140mm" viewBox="0 0 1770 1400" role="img" aria-label="Figure S2: original 500-m horizontal versus joint native 3D overlap, same animal versus other animal session pairs. Smoothed source-estimated values, not direct observed 3D co-use or terrain-corrected metrics.">
 <title>Figure S2. Original horizontal versus three-dimensional probability overlap</title>
-<desc>Four original eligible bat panels, each with same-animal and other-animal session comparisons. Hollow markers show O_XY and filled markers show O_XYZ, both source pair-and-individual averaged. The reduction when native session-centered altitude is added is shown by the connecting line. Raw source result, not calibrated partitioning inference or real-time encounter.</desc>
+<desc>Four original eligible bat panels, each with same-animal and other-animal session comparisons. Hollow markers show O_XY and filled markers show O_XYZ, both source pair-and-individual averaged. The reduction when native session-centered altitude is added is shown by the connecting line. Alpha=0.5 per-cell pseudocount smoothing in 10 height bins; estimated overlap, not physical XY-height co-occupancy or partitioning inference.</desc>
 <rect width="1770" height="1400" fill="#fff"/>
 <text x="62" y="72" font-family="Arial,Helvetica,sans-serif" font-size="40" font-weight="700" text-anchor="start" fill="#263a46">FIGURE S2  |  HORIZONTAL vs. JOINT 3D OVERLAP</text>
-<text x="62" y="117" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="400" text-anchor="start" fill="#657785">Original 500-m cell analysis; native heights, session-median centered; NOT terrain corrected</text>
+<text x="62" y="117" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="400" text-anchor="start" fill="#657785">Original 500-m cells; native centered heights; 10 bins smoothed (alpha=0.5); NOT terrain corrected</text>
 <line x1="62" y1="142" x2="1708" y2="142" stroke="#d5dfe5" stroke-width="3"/>
 <text x="62" y="206" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="700" text-anchor="start" fill="#263a46">Study / n</text>
 <text x="346" y="206" font-family="Arial,Helvetica,sans-serif" font-size="26" font-weight="700" text-anchor="start" fill="#263a46">Session pairing</text>
@@ -76,6 +76,6 @@
 <text x="96" y="1271" font-family="Arial,Helvetica,sans-serif" font-size="26" font-weight="400" text-anchor="start" fill="#263a46">Open = horizontal O_XY</text>
 <circle cx="552" cy="1261" r="11" fill="#236879" stroke="#fff" stroke-width="2"/>
 <text x="575" y="1271" font-family="Arial,Helvetica,sans-serif" font-size="26" font-weight="400" text-anchor="start" fill="#263a46">Filled = joint 3D O_XYZ</text>
-<text x="65" y="1330" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="400" text-anchor="start" fill="#657785">Source-evaluable session comparisons; 4 panels, only 2 species. Values are descriptive, not CIs or p-values.</text>
+<text x="65" y="1330" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="400" text-anchor="start" fill="#657785">Joint O_XYZ is alpha=0.5 smoothed; NOT observed 3D co-use, CIs or p-values. Four panels, only two species.</text>
 <text x="65" y="1371" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="400" text-anchor="start" fill="#657785">Vertical effect must be tested separately: terrain-relative S_rel (0/4 positive) and co-use I (1/4 positive).</text>
 </svg>
