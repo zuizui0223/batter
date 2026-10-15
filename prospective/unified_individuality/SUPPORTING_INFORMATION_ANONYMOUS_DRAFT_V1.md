@@ -181,6 +181,17 @@ Numbers are rounded from the exact existing Git-blob-pinned source summary. **Sa
 
 Figure S2 illustrates **these historical source statistics**, not a new exploratory animal-data analysis. Unfilled markers denote O_XY and filled markers denote O_XYZ, so the linked difference is a descriptive within-source consequence of incorporating height. The figure does not report p-values, confidence intervals, formal support for added segregation, or instantaneous same-site co-use. Figure S1's earlier 0.80–0.92 values refer to **one-dimensional centered-height profile SHAPE intersection over a larger, different individual sample**, so these two figures cannot be interpreted as competing estimates of one biological 3D overlap quantity.
 
+## Supplementary Table S11. Retrospective within-endpoint Holm p-value sensitivity
+
+| Eligible panel | V_rel: raw / Holm | S_rel (two-sided): raw / Holm | Co-use I (upper-tail): raw / Holm |
+|---|---:|---:|---:|
+| *H. monstrosus* | 0.0001 / 0.0004 | 0.0362 / 0.1448 | 0.9045 / 1.0000 |
+| *P. hastatus* 2022 | 0.0001 / 0.0004 | 0.3639 / 0.8113 | 0.9186 / 1.0000 |
+| *P. hastatus* 2023 | 0.0001016 / 0.0004 | 0.2704 / 0.8113 | 0.0231 / 0.0924 |
+| *P. hastatus* 2016 | 0.03453 / 0.03453 | 0.4796 / 0.8113 | 0.8611 / 1.0000 |
+
+Raw p-values are original, source-frozen per-panel values; corrected values are an **exploratory, post-outcome arithmetic sensitivity**, calculated for four panels **separately inside each endpoint family**. At p<=0.05, V_rel is 4/4 both nominally and after Holm, two-sided S_rel 1/4 nominally (negative H direction) and 0/4 after Holm, and co-use I 1/4 nominally and 0/4 after Holm. No positive S_rel result was nominally supported. The original source per-panel null procedures and decisions remain intact. These three sets of four p-values are **not jointly multiplicity-corrected**, and none is a test of global absence or equivalence. The underlying studies represent two species, and three annual *P. hastatus* panels are not independent taxonomic replication.
+
 ## Supplementary Methods S1. Boundaries of the three integrated inference axes
 
 **Identity correspondence:** correct animal–behavior mapping after source-specific shared-condition adjustment. Each experimental study uses its own fixed representation, biological support and assignment null; raw K, A or B values cannot be combined into a single pooled metric.
@@ -373,6 +384,12 @@ The original normalized native spatial-overlap loss is R_3D(pair) = 1 − O_XYZ(
 A source-closure audit found that the later later frozen tracking source lacks some earlier direct Python module/contract dependencies referenced by its retained terrain and permutation runners (historical run_v1.py, run_external_geometry_v1.py, contract_v1.json and summary_v1.json). All existed in original successful GitHub Actions execution commits; byte-identical snapshots of relevant historical runner/contract files were preserved under the integration's source-recovery archive. This ensures a provenance chain, **not a completed independent GPS/DEM rerun**. Publication code should use pinned historical execution commits with independently validated source bitstreams, dependency versions and redistribution permissions. The original result provenance and reproducibility limitations are described in the source-closure audit.
 
 **Critical contrast with the new descriptive Figure S1:** the 684 nonindependent Figure S1 pair comparisons use 103 *panel-indexed* self-prediction profile records on the **one-dimensional session-centered altitude axis**, sometimes from *different horizontal cell supports/weights*. The original native 3D geometry here uses 500-m **joint spatial probability grids** from only 8/5/6/9 structurally eligible animals. The O numbers cannot be numerically subtracted or pooled across Figure S1 versus S2 to infer ecological space use, diet or fitness. Equivalence of space use and independence across *Phyllostomus* study years were never established.
+
+## Supplementary Methods S16. Retrospective four-panel multiplicity check
+
+For each originally eligible four-panel family separately — one-sided terrain-relative individual vertical fidelity (V_rel), two-sided S_rel deviation from its individual-label permutation null mean, and one-sided upper-tail co-use I phase-shift p-values — we sorted the four **existing, already frozen** p-values from smallest to largest. For ordered p_(j) at rank j of m=4, Holm-adjusted p_(j) = min(1, max_{k<=j}[(m-k+1)p_(k)]), restored to its source-study panel. The procedure operates only on archived p-values and source Git checksums; it does not access bat GPS fixes, regenerate permutation nulls, change panel supports or define any new ecological contrast.
+
+We report this as **post-outcome descriptive inference sensitivity**, not as evidence that the multisystem sampling frame or all families were prospectively specified. The arithmetic considers four panels **within each family**, but not the multiplicity across the three families or prior model-selection pathways. Original phase-shift encounter windows remain unequal (60 versus 600 seconds; endpoint-excluded versus all-space), and V_rel remains bounded by its original height-datum and device constraints. Holm-adjusted nonsignificance for S_rel or I is not statistical equivalence or evidence of no competition. The full machine-readable four-family-panel check is tracked in the unblinded analysis archive, with an independent source-hash-guarded verifier; nominal original panels and post-outcome interpretation remain separate.
 
 ## Supplementary data access, redistribution and ethics
 
