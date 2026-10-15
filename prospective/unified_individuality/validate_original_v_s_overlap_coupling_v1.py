@@ -98,20 +98,26 @@ def pair(A,B):
     return oxy,oxyz,ozxy,slack
 
 def synthetic_gate():
-    v=lambda x,y:[x,y]+[0]*8
-    A={0:v(80,10),1:v(10,0)}
-    B={0:v(0,10),1:v(10,80)}
+    # Height observations can be −1 and +1 metres: 50 of each per
+    # invented session, so its actual median equals zero and the data
+    # occupy the source's adjacent centered bins 4 and 5.
+    v=lambda neg,pos:[0]*4+[neg,pos]+[0]*4
+    A={0:v(40,50),1:v(10,0)}
+    B={0:v(10,0),1:v(40,50)}
+    for sess in (A,B):
+        assert sum(row[4] for row in sess.values())==50
+        assert sum(row[5] for row in sess.values())==50
     _,_,own,_=pair(A,A)
     oxy,oxyz,other,slack=pair(A,B)
     eq(own,1,"same identity source estimator")
     eq(oxy,.2,"other XY")
     eq(oxyz,.2,"other XYZ")
-    eq(other,.18596491228070167,"other conditional Z")
-    eq(slack,.8140350877192983,"overlap slack")
+    eq(other,.5017543859649123,"other conditional Z")
+    eq(slack,.4982456140350877,"overlap slack")
     V=own-other
     S=1-oxyz/oxy
-    assert V>.8 and abs(S)<1e-12
-    print("SYNTHETIC ONLY: source-like conditional V≈0.814 while normalized added S≈0.")
+    assert V>.49 and abs(S)<1e-12
+    print("SYNTHETIC ONLY, median-consistent: source-like conditional V≈0.498 while normalized added S≈0.")
     print("This two-animal toy is not an original n>=5 bat-panel analysis or evidence of no physical segregation.")
 
 if __name__=="__main__":
