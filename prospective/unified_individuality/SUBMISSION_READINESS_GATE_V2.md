@@ -42,7 +42,7 @@ OUP AI policy: https://academic.oup.com/pages/for-authors/journals/preparing-and
 | Composite Figure 5 | Original 103-individual, 10-bin archived profile data + calibrated six-panel identity; 177x238mm PDF local proof generated | DATA INTEGRITY PASS; final lettering/author review pending |
 | Original JAE profile | Unchanged source PNG, CSV, JSON with original SHA256; 20+24+33+16+10 individuals | PASS |
 | Figure alternative text | Six figure alt-text descriptions source-claim bounded | DRAFT |
-| Combined SI | Twelve source/derivation tables and Methods S1–S16, including original experiments, wild geometry, cohort-dependent overlap, four-test and twelve-test retrospective Holm sensitivity | DRAFT (source reproduction boundaries retained) |
+| Combined SI | Thirteen source/derivation tables and Methods S1–S16, including original experiments, joint wild geometry, native-to-DEM terrain contrast, cohort dependence and two retrospective Holm sensitivities | DRAFT (source reproduction boundaries retained) |
 | Internal SI proof | Single A4 landscape PDF with source-specific Methods, Table U8 and vector Figure S1 | MACHINE PASS |
 | Anonymous SI proof | Single anonymous A4 landscape PDF with source branch names removed, S1–S13 methods and embedded vector Figure S1 | MACHINE PASS |
 | Figure and document reproducibility CI | GitHub Actions recreate source-compliant SVG, source hashes, anonymous text, SI PDFs and main PDF without primary data changes | PASS on current reviewed runs |
@@ -81,6 +81,13 @@ Calderón-Capote et al. 2025 already quantified horizontal foraging-area overlap
 - [ ] **Final figure production:** Check each figure at 177/129/85 mm as relevant; font/readability and grayscale; Figure 6 is a dense full-width plate. Check the new Figure 5 A+B vector and original unchanged heatmap source.
 - [ ] **Reviewer PDF & cover metadata:** Generate journal-compliant anonymous manuscript PDF after final metadata, continuous line/page numbering, cover page plus acknowledgements marked not for review, and final portal proof.
 - [ ] **Journal rules at upload:** Recheck current rules on formats, source accessibility, figure alt text, and disclosures.
+
+## Terrain-reference and altitude-datum interpretation gate — 2026-10-15
+
+- [x] Matched original 500-m native-versus-DEM-relative source values for V and S and their **descriptive** differences recorded in `figures/FROZEN_TERRAIN_DATUM_CONTRAST_V1.json`, independently checked against the original native, terrain and second-stage S null Git blobs.
+- [x] Source GPS heights were ellipsoid-referenced for H and P2023 but MSL-referenced for P2022/P2016. The source runner interpolated original DEM elevations **at each fix** before assigning 500-m horizontal cells; do not call 500 m the DEM pixel size or the derived proxy measured canopy/ground clearance.
+- [x] Larger original positive native S reduced from +0.1029 to −0.0158 (H) and +0.1304 to +0.0289 (P2016), while V and S changes across all four panels had mixed directions. The processing contrast is not a new null-calibrated topographic effect.
+- [ ] **Still open:** vertically harmonized reference/calibration, GPS sensor errors, actual resource height/canopy and physical above-ground flight rules. These cannot be resolved by an archival metadata or statistical package-only audit.
 
 ## Multiplicity-sensitivity review gate — 2026-10-15
 
