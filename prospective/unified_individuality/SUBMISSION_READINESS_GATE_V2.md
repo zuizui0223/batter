@@ -42,7 +42,7 @@ OUP AI policy: https://academic.oup.com/pages/for-authors/journals/preparing-and
 | Composite Figure 5 | Original 103-individual, 10-bin archived profile data + calibrated six-panel identity; 177x238mm PDF local proof generated | DATA INTEGRITY PASS; final lettering/author review pending |
 | Original JAE profile | Unchanged source PNG, CSV, JSON with original SHA256; 20+24+33+16+10 individuals | PASS |
 | Figure alternative text | Six figure alt-text descriptions source-claim bounded | DRAFT |
-| Combined SI | Eleven source/derivation tables and Methods S1–S16, including original experiments, wild geometry, cohort-dependent overlap and retrospective four-panel multiplicity sensitivity | DRAFT (source reproduction boundaries retained) |
+| Combined SI | Twelve source/derivation tables and Methods S1–S16, including original experiments, wild geometry, cohort-dependent overlap, four-test and twelve-test retrospective Holm sensitivity | DRAFT (source reproduction boundaries retained) |
 | Internal SI proof | Single A4 landscape PDF with source-specific Methods, Table U8 and vector Figure S1 | MACHINE PASS |
 | Anonymous SI proof | Single anonymous A4 landscape PDF with source branch names removed, S1–S13 methods and embedded vector Figure S1 | MACHINE PASS |
 | Figure and document reproducibility CI | GitHub Actions recreate source-compliant SVG, source hashes, anonymous text, SI PDFs and main PDF without primary data changes | PASS on current reviewed runs |
@@ -85,9 +85,9 @@ Calderón-Capote et al. 2025 already quantified horizontal foraging-area overlap
 ## Multiplicity-sensitivity review gate — 2026-10-15
 
 - [x] Existing source-frozen V_rel, S_rel and synchronous co-use p-values were independently recomputed **arithmetically only** under separate within-endpoint four-panel Holm procedures; this is a **post-outcome** sensitivity, not prospective familywise registration.
-- [x] Terrain-relative individual fidelity remains below p_Holm = 0.05 in 4/4 eligible panels (max p_Holm = 0.03453). The nominal negative H S_rel p = 0.0362 becomes 0.1448, and nominal 2023 P co-use p = 0.0231 becomes 0.0924. Figure 6 and text must retain original per-panel nominal p-values and describe these adjusted figures separately.
+- [x] Under one **within-endpoint four-test** Holm sensitivity, terrain-relative V_rel is below p = 0.05 in 4/4 panels (max adjusted p = 0.03453). Under a separate **twelve-test displayed-family** sensitivity it is below 0.05 in only **3/4** (P2016 raw p = 0.03453 becomes adjusted p = 0.27622; the other three adjusted p = 0.0012). Nominal negative H S_rel p = 0.0362 and nominal positive 2023 P co-use p = 0.0231 are not below 0.05 in either adjusted family. Figure 6 and text must retain the original per-panel nominal values and clearly state the **family-dependent** inferential status.
 - [ ] Across-family multiplicity, selection of source programmes, causal mechanism, field 3D horizontal-resource overlap and species-level generality **remain unresolved**. No equivalence or absence-of-competition claim is licensed.
-- [x] Derived frozen-p arithmetic, historical Git blob identity and source-family count verified through `figures/FROZEN_FOUR_PANEL_MULTIPLICITY_V1.json`, `validate_four_panel_multiplicity_v1.py` and the narrative audit.
+- [x] Both derived frozen-p families, historical Git blob identity and endpoint counts are guarded by `figures/FROZEN_FOUR_PANEL_MULTIPLICITY_V1.json`, `figures/FROZEN_TWELVE_TEST_MULTIPLICITY_V1.json`, `validate_four_panel_multiplicity_v1.py` and the separate interpretive audits. **Do not call these comprehensive familywise or equivalent/no-competition tests.**
 
 ## Horizontal-versus-vertical claim boundary — 2026-10-15
 
