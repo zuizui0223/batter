@@ -28,6 +28,7 @@ IMAGES = [
     "FIGURE_6_FIDELITY_VS_PARTITIONING_V1.svg",
     "FIGURE_5_COMPOSITE_177x238MM_V2.svg",
     "FIGURE_S1_WITHIN_COHORT_VERTICAL_SHAPE_OVERLAP_V1.svg",
+    "FIGURE_S2_NATIVE_HORIZONTAL_AND_JOINT_3D_OVERLAP_V1.svg",
 ]
 SVG_NS = "{http://www.w3.org/2000/svg}"
 
@@ -234,6 +235,11 @@ def svg_gate() -> None:
     assert sum(1 for x in circles if x.attrib.get("fill")=="#fff")==3, "Three two-profile / one-pair source cohorts must be hollow markers"
     assert sum(1 for x in circles if x.attrib.get("fill")=="#286e7c")==8, "Eight multi-pair source cohorts need filled markers"
     assert s1_svg.count("Ghana / Accra 2009")==1, "Singleton original cohort duplicated"
+    s2=(HERE/"FIGURE_S2_NATIVE_HORIZONTAL_AND_JOINT_3D_OVERLAP_V1.svg").read_text(encoding="utf-8")
+    assert 'width="177mm" height="140mm"' in s2
+    for term in ["O_XY","O_XYZ","0.322 / 0.240","0.334 / 0.309",
+                 "0.202 / 0.190","0.208 / 0.181","NOT terrain corrected"]:
+        assert term in s2,("Original source Figure S2 content missing",term)
     f6 = (HERE / IMAGES[5]).read_text(encoding="utf-8")
     for tok in ["4 / 4 supported", "0 / 4 positive supported", "1 / 4 supported", "p2=0.036", "p+ = 0.0231", "+3.57 m", "2016 also uses 600s"]:
         assert tok in f6, f"field figure missing {tok}"
