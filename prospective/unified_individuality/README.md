@@ -2,6 +2,8 @@
 
 This directory develops a **single manuscript** by integrating the existing *Journal of Animal Ecology* wild 3D ecology candidate and the *Behavioral Ecology* controlled/developmental synthesis, without changing or superseding either frozen source in place.
 
+**2026-10-15 claim calibration:** The working title now explicitly concerns **consistent evidence for additional vertical segregation**, *not* absence of all spatial partitioning. Source-native 500-m horizontal O_XY was descriptively higher within than between animals, and the O_XY-to-O_XYZ reduction is not itself a test of added segregation. The probability-intersection proof, per-panel values and exact wording boundary are in [the horizontal-versus-added-vertical audit](HORIZONTAL_VS_ADDED_VERTICAL_SEGREGATION_CLAIM_AUDIT_V1.md). Original field outcomes and frozen branches remain unchanged.
+
 ## Start here
 
 1. [INTEGRATED_MANUSCRIPT_V1.md](INTEGRATED_MANUSCRIPT_V1.md) — full new draft, including rewritten Abstract, Introduction, Methods, Results, Discussion, Conclusion and selected working references.
