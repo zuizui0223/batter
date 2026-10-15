@@ -31,7 +31,7 @@
 <text x="1213" y="202" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="700" fill="#1F2D3B" text-anchor="start" >04  FIELD CONSEQUENCE</text>
 <text x="1213" y="249" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="600" fill="#1F2D3B" text-anchor="start" >Terrain-relative fidelity: 4/4</text>
 <text x="1213" y="280" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="400" fill="#1F2D3B" text-anchor="start" >Positive added segregation: 0/4</text>
-<text x="1213" y="311" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="400" fill="#1F2D3B" text-anchor="start" >Extra co-use separation: 1/4</text>
+<text x="1213" y="311" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="400" fill="#1F2D3B" text-anchor="start" >Co-use deviation: 1/4 nominal</text>
 <text x="1213" y="395" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#526679" text-anchor="start" >JAE, 2 species / 4 field panels</text>
 <line x1="397" y1="283" x2="430" y2="283" stroke="#A0B3BE" stroke-width="3" stroke-dasharray="5,7"/>
 <line x1="780" y1="283" x2="813" y2="283" stroke="#A0B3BE" stroke-width="3" stroke-dasharray="5,7"/>
