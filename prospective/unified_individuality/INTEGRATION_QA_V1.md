@@ -89,6 +89,13 @@ This **post-outcome descriptive transformation is new**, unlike the frozen prima
 - The 2025 paper states PIT tagging and low recaptures over 2016–2022, but the exact PIT registry crosswalk for the two identical archived strings was not independently confirmed. Hence manuscript, anonymous manuscript and new figure labels now use **103 panel-profile records**, not “103 confirmed independent bats”, and the cover letter no longer asserts all programmes are biologically independent.
 - The original JAE per-panel calibration, positive/nonsupporting original verdicts, 500-m conditional stress tests, full source profile data and original graphic remain unchanged; no added cross-year individual memory test has been performed.
 
+## Original native 3D source closure and visual QA — 2026-10-15
+
+- Original native 500-m JAE result recovered exactly from successful workflow 36881187913, historic summary blob c1d37e42f72f59e5aba364daec9aef68b47778b6.
+- Native within-study source biological n = 8/5/6/9 in four structurally eligible panels. Original source native S = +0.10295/−0.01660/−0.00392/+0.13040; DEM-adjusted original S_rel = −0.01581/−0.00896/+0.01626/+0.02890. Terrain V_rel 4/4 supported; positive S_rel 0/4 supported.
+- Original native XY-versus-XYZ overlap measures actual gridded joint distributions for source-eligible session pairs; do not confuse with S1's 1D centered-profile self-predictor shape similarity in different animals and cell supports. Pair-based R_3D is computed before biological averaging; ratio of group means would be incorrect.
+- Original JAE rc2 is missing historical direct Python imports and native contract/summary. Source-dependent runner/config files were archived byte-identically from the original successful commits in the integration-only source-recovery folder, but this is NOT a full GPS/DEM rerun.
+- Figure S2 now exists with original-source deterministic vector renderer; Table U10/S10 and Methods U15/S15 are in both SI copies. Automated original-blob/provenance/figure tests passed, and the crowded S2 header was corrected after visual inspection.
 ## Rendered figure amendment (2026-10-14)
 
 - Six draft SVG figures, the frozen source-summary data snapshot, a zero-dependency Node figure builder, a Python SVG/XML-and-biological-claim guard, and an on-PR workflow were added to the same draft PR.
