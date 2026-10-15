@@ -9,7 +9,7 @@
 
 ## A. What is actually tested
 
-The unifying question is: **What aspects of behavioral individuality persist, and when do such persistent differences require ecological partitioning?**
+The unifying question is: **Which individually predictive vertical-use properties persist after coarse place/context matching, and do those properties yield added terrain-relative segregation beyond the observed horizontal baseline?**
 
 Four outcomes must NEVER be made interchangeable.
 
@@ -118,3 +118,7 @@ The original Figure 5B has **103 panel-indexed profiles but only 101 distinct li
 Four original tropical bat field panels retained centered height identity after matching 500-m horizontal place × coarse speed × turning (n=19/23/11/9; calibrated excess +0.3840/+0.0868/+0.1015/+0.4514, upper-tail p=0.0002/0.0002/0.0006/0.0286). The 2016 same-night comparator separately failed its frozen p gate at 0.0544, while other same-night panels passed 3/4. Lag supports are 4/4, 3/3 and 2/2 across *different eligible subsets*, not one time-decay curve. These analyses **constrain** broad place and kinematic composition explanations but cannot identify unobserved foraging-task allocation versus stable within-task execution. Those two mechanisms can generate exactly the same observed p_i(z|h,c) under a latent state mixture, demonstrated in [ECOLOGICAL_IDENTIFIABILITY_AND_DECISIVE_TESTS_V1.md](ECOLOGICAL_IDENTIFIABILITY_AND_DECISIVE_TESTS_V1.md). This logical toy is not a new biological analysis and is not a source S_rel effect.
 
 Do not claim: within-task flight policy directly estimated, memory identified, competition absent, stable overlapping *dietary* niches demonstrated, or formal equivalence to zero co-use separation.
+
+### Additional post-outcome four-panel Holm check (2026-10-15)
+
+Using only the **original, frozen** four-panel endpoint p-values, the separate within-endpoint Holm step-down sensitivity yields V_rel 4/4 below 0.05 (largest adjusted p = 0.03453), two-sided S_rel 0/4 below 0.05 (nominal H negative raw p = 0.0362, adjusted 0.1448) and co-use I 0/4 below 0.05 (nominal P2023 positive raw p = 0.0231, adjusted 0.0924). Original source-level verdicts remain **V 4/4 supported, positive S 0/4 supported, nominal co-use I 1/4** under their own original gates. The additional comparison was constructed after inspecting outcomes and is **not** correction across V/S/I families or source discovery. It provides no equivalence inference. Sources, original Git hashes, computations and explicit limitations: [FOUR_PANEL_MULTIPLICITY_SENSITIVITY_V1.md](FOUR_PANEL_MULTIPLICITY_SENSITIVITY_V1.md) and [machine values](figures/FROZEN_FOUR_PANEL_MULTIPLICITY_V1.json).
