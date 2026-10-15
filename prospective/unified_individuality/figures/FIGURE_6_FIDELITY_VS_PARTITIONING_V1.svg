@@ -137,6 +137,6 @@
 <text x="962" y="751" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="500" fill="#526679" text-anchor="middle" >S_rel (added segregation)</text>
 <text x="1468" y="751" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="500" fill="#526679" text-anchor="middle" >Excess centered-height deviation (m)</text>
 <line x1="58" y1="778" x2="1714" y2="778" stroke="#D9E2E8" stroke-width="1.5" />
-<text x="59" y="812" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="500" fill="#1F2D3B" text-anchor="start" >B: grey intervals = central 95% of label-permutation S null; C: grey intervals = dyad-bootstrap 95% compatibility intervals.</text>
+<text x="59" y="812" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="500" fill="#1F2D3B" text-anchor="start" >A/B overlap metrics algebraically coupled; B grey = 95% S permutation null; C grey = 95% dyad-bootstrap compatibility.</text>
 <text x="59" y="841" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="400" fill="#526679" text-anchor="start" >Panel C: deviation mismatch, NOT physical gap. 2016 also uses 600s; 2023 all-space. Nulls/intervals differ.</text>
 </svg>
