@@ -5,7 +5,7 @@
 
 ## Central biological question and editorial claim
 
-**When does maintained individual behavioral organization translate into ecological differentiation, and must such differentiation require additional spatial partitioning?**
+**When does maintained individual behavioral organization yield predictive use of flight height within shared horizontal supports, and does that individuality entail added terrain-relative vertical segregation?**
 
 The integrated paper is viable only if it is read as a **source-provenanced demonstration that maintenance, realization and partitioning are different testable properties**, NOT as direct causal proof that one experimentally manipulated behavioral state produces the wild observed 3D distribution shape.
 
@@ -83,3 +83,7 @@ Field-bridge interpretation: original scalar FlightIntensity carrier results PAS
 The integrated route should remain preferred **only if** external human reviewers judge the combined argument stronger than either isolated paper and accept that the laboratory-to-field mechanism is still unidentified. Failure at that gate is a good reason to submit the distinct original JAE and BE papers separately with clear data overlap disclosures, rather than increasing narrative confidence beyond the evidence.
 
 **Current status:** Reviewable unified research draft with provenance-recovered figures and consolidated preliminary bibliography. It is **not** a verified final journal-submission package.
+
+## Original input replay status update — 2026-10-15
+
+The success-commit source-only recovery now includes a machine-readable inventory of **4 original GPS + 4 original reference bitstreams + 2 DEM tiles** and their original checksums/byte counts. An offline cross-check of the restored 21 Git source blobs and input declarations is configured in CI. This is a data-provenance advance, **not source GPS/DEM access or a numerical rerun**. The original scientific and ethics hard stops remain in force.
