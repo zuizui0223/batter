@@ -51,7 +51,7 @@ The paper should **name smoothing and aggregate 50-fix support explicitly** and 
 
 ## Exact source evidence
 
-The original 3D contract (Git blob 5c76d0432e53ea7733216245f229d68ae0df1f77) pins α=0.5, ten bins and the aggregate shared-fix 50 gate. Original native runner (blob c08b442f97940eac3e90c1dac6e2d26010a7a) constructs smoothed per-cell p_z, joint p_XY×p_z and eligible paired O_XY/O_XYZ/O_Z_given_XY/R_3D. Original terrain runner helper (blob c869a25c062b4bf5dc6b22e9f3e7fe03b69aeb30) uses the same bin smoothing. Those exact bytes are available under the integration's native_3d_history source-recovery directory and verified by the [synthetic-only source-hash validator](validate_smoothing_support_boundary_v1.py).
+The original 3D contract (Git blob 5c76d0432e53ea7733216245f229d68ae0df1f77) pins α=0.5, ten bins and the aggregate shared-fix 50 gate. Original native runner (blob c08b442f97940eac3e90c1dac6e2de6d26010a7a) constructs smoothed per-cell p_z, joint p_XY×p_z and eligible paired O_XY/O_XYZ/O_Z_given_XY/R_3D. Original terrain runner helper (blob c869a25c062b4bf5dc6b22e9f3e7fe03b69aeb30) uses the same bin smoothing. Those exact bytes are available under the integration's native_3d_history source-recovery directory and verified by the [synthetic-only source-hash validator](validate_smoothing_support_boundary_v1.py).
 
 Original 3D source commit: https://github.com/zuizui0223/batter/tree/819acc829d615485b57033f1ddcbebf64b4b49a0
 
