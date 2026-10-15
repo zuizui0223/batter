@@ -42,7 +42,7 @@ OUP AI policy: https://academic.oup.com/pages/for-authors/journals/preparing-and
 | Composite Figure 5 | Original 103-individual, 10-bin archived profile data + calibrated six-panel identity; 177x238mm PDF local proof generated | DATA INTEGRITY PASS; final lettering/author review pending |
 | Original JAE profile | Unchanged source PNG, CSV, JSON with original SHA256; 20+24+33+16+10 individuals | PASS |
 | Figure alternative text | Six figure alt-text descriptions source-claim bounded | DRAFT |
-| Combined SI | Fourteen source/derivation tables and Methods S1–S16, including exact native V–S overlap-slack derivation, wild geometry, original experiments, native-to-DEM processing, cohort dependence and retrospective Holm sensitivities | DRAFT (source reproduction boundaries retained) |
+| Combined SI | Fifteen source/derivation tables and Methods S1–S16, including the n eligibility crosswalk of fine 500-m prediction, V/S geometry and co-use I, plus original experiments, native 3D algebra and retrospective Holm sensitivities | DRAFT (source reproduction boundaries retained) |
 | Internal SI proof | Single A4 landscape PDF with source-specific Methods, Table U8 and vector Figure S1 | MACHINE PASS |
 | Anonymous SI proof | Single anonymous A4 landscape PDF with source branch names removed, S1–S13 methods and embedded vector Figure S1 | MACHINE PASS |
 | Figure and document reproducibility CI | GitHub Actions recreate source-compliant SVG, source hashes, anonymous text, SI PDFs and main PDF without primary data changes | PASS on current reviewed runs |
@@ -95,6 +95,14 @@ Calderón-Capote et al. 2025 already quantified horizontal foraging-area overlap
 - [x] A median-center-valid, α=0.5, ten-bin original-estimator **synthetic** example with 100 invented fixes/session demonstrates **V≈0.498, S≈0**. The two-example source test is NOT an eligible n≥5 field panel, new tracking analysis, physical co-use observation or ecological causation.
 - [x] Title and 65-word Lay Summary have been narrowed to focus on measurable behavioral individuality and **limits of 3D niche inference** rather than absence of actual physical vertical segregation. Main/SI Table S14/Figure 6 source claims must clearly show **different but algebraically coupled estimands**, not independent discoveries.
 - [ ] Journal peer-review gate: coauthors must judge whether a synthesis of separate experiment families and wild statistical estimands is sufficiently **one biological contribution** when the prospective laboratory-to-field carrier is not identified. If not, preserve distinct manuscript/publication routes with source overlap disclosure.
+
+## Three distinct biological sample frames — field inference stop 2026-10-16
+
+- [x] Original fine 500-m place×speed×turn test eligible bat n: **19/23/11/9**; 500-m native/terrain joint V/S n: **8/5/6/9**; fixed-event co-use I n: **11/6/6/5**, in H/P2022/P2023/P2016 order. The original source result tables are checked byte-for-byte in an offline validator.
+- [x] **Three of four** panel geometry n differ from co-use n; **three of four** fine/geometry n differ; **four of four** fine/co-use n differ. Equal n in one panel (P2023) does not prove common bat identities. Original aggregate result receipts do not provide an ID crosswalk or an individual-level V/I joint association.
+- [x] Manuscript, SI Table S15, Figure 6 labels/legend, cover letter and alt text explicitly report **different eligibility and biological n**. The four study-year labels are not proof of a matched same-bat progression from height-use persistence to encounter response.
+- [ ] **Still open:** verified individual-ID intersections and any source-appropriate within-animal causal relation among the three field assays. Do not claim this existing integrated comparison establishes that a given animal with strong height fidelity avoids or does not avoid conspecifics.
+- [x] Evidence audit: CROSS_ESTIMAND_ELIGIBILITY_SCOPE_AUDIT_V1.md; source-pinned exact table FROZEN_CROSS_ESTIMAND_ELIGIBILITY_V1.json; independent original-blob validator validate_cross_estimand_eligibility_v1.py.
 
 ## Original estimator physical-space interpretation stop — 2026-10-16
 
