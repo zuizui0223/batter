@@ -42,7 +42,7 @@ OUP AI policy: https://academic.oup.com/pages/for-authors/journals/preparing-and
 | Composite Figure 5 | Original 103-individual, 10-bin archived profile data + calibrated six-panel identity; 177x238mm PDF local proof generated | DATA INTEGRITY PASS; final lettering/author review pending |
 | Original JAE profile | Unchanged source PNG, CSV, JSON with original SHA256; 20+24+33+16+10 individuals | PASS |
 | Figure alternative text | Six figure alt-text descriptions source-claim bounded | DRAFT |
-| Combined SI | Thirteen source/derivation tables and Methods S1–S16, including original experiments, joint wild geometry, native-to-DEM terrain contrast, cohort dependence and two retrospective Holm sensitivities | DRAFT (source reproduction boundaries retained) |
+| Combined SI | Fourteen source/derivation tables and Methods S1–S16, including exact native V–S overlap-slack derivation, wild geometry, original experiments, native-to-DEM processing, cohort dependence and retrospective Holm sensitivities | DRAFT (source reproduction boundaries retained) |
 | Internal SI proof | Single A4 landscape PDF with source-specific Methods, Table U8 and vector Figure S1 | MACHINE PASS |
 | Anonymous SI proof | Single anonymous A4 landscape PDF with source branch names removed, S1–S13 methods and embedded vector Figure S1 | MACHINE PASS |
 | Figure and document reproducibility CI | GitHub Actions recreate source-compliant SVG, source hashes, anonymous text, SI PDFs and main PDF without primary data changes | PASS on current reviewed runs |
@@ -88,6 +88,13 @@ Calderón-Capote et al. 2025 already quantified horizontal foraging-area overlap
 - [x] Source GPS heights were ellipsoid-referenced for H and P2023 but MSL-referenced for P2022/P2016. The source runner interpolated original DEM elevations **at each fix** before assigning 500-m horizontal cells; do not call 500 m the DEM pixel size or the derived proxy measured canopy/ground clearance.
 - [x] Larger original positive native S reduced from +0.1029 to −0.0158 (H) and +0.1304 to +0.0289 (P2016), while V and S changes across all four panels had mixed directions. The processing contrast is not a new null-calibrated topographic effect.
 - [ ] **Still open:** vertically harmonized reference/calibration, GPS sensor errors, actual resource height/canopy and physical above-ground flight rules. These cannot be resolved by an archival metadata or statistical package-only audit.
+
+## Native 3D estimator-coupling editorial gate — 2026-10-16
+
+- [x] From exact source native pair metrics, define epsilon = O_XYZ/O_XY − O_Z|XY >= 0. Original per-session and equal-animal averaging then gives **S_native = V_native − (mean epsilon_other − mean epsilon_self)**. The native other-minus-self epsilon gaps were +0.06775/+0.08255/+0.05809/+0.01483 for H/P2022/P2023/P2016, explaining precisely why the V and S point statistics differ. No separate epsilon null was run.
+- [x] A median-center-valid, α=0.5, ten-bin original-estimator **synthetic** example with 100 invented fixes/session demonstrates **V≈0.498, S≈0**. The two-example source test is NOT an eligible n≥5 field panel, new tracking analysis, physical co-use observation or ecological causation.
+- [x] Title and 65-word Lay Summary have been narrowed to focus on measurable behavioral individuality and **limits of 3D niche inference** rather than absence of actual physical vertical segregation. Main/SI Table S14/Figure 6 source claims must clearly show **different but algebraically coupled estimands**, not independent discoveries.
+- [ ] Journal peer-review gate: coauthors must judge whether a synthesis of separate experiment families and wild statistical estimands is sufficiently **one biological contribution** when the prospective laboratory-to-field carrier is not identified. If not, preserve distinct manuscript/publication routes with source overlap disclosure.
 
 ## Original estimator physical-space interpretation stop — 2026-10-16
 
