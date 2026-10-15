@@ -42,7 +42,7 @@ def original_md_rows() -> dict:
     for line in source.splitlines():
         if not line.startswith("| *"):
             continue
-        v=[x.strip().strip("*") for x in line.strip().split("|")[1:-1]]
+        v=[x.strip().replace("*","") for x in line.strip().split("|")[1:-1]]
         if not v or v[0] not in SOURCE_LABELS:
             continue
         assert len(v)==11,(v,"Original 11-column co-use result row drift")
