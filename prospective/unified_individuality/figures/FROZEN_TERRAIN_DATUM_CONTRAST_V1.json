@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "claim_status": "Descriptive sensitivity derived from unchanged original source summaries; no fresh GPS/DEM calculation, outcome opening, permutation, inferential test or physical-altitude validation",
+  "data_sources": [
+    {
+      "path": "figures/ORIGINAL_TERRAIN_RELATIVE_3D_SOURCE_V1.json",
+      "original_git_blob_sha1": "08631a0dce61cc47e12b2d32642c46b5759fe872"
+    },
+    {
+      "path": "figures/ORIGINAL_NATIVE_3D_OVERLAP_SUMMARY_V1.json",
+      "original_git_blob_sha1": "c1d37e42f72f59e5aba364daec9aef68b47778b6"
+    },
+    {
+      "path": "figures/ORIGINAL_TERRAIN_PARTITIONING_CALIBRATION_V1.json",
+      "original_git_blob_sha1": "e969698e2a594d2eeca2631d7473e598a8a8f371"
+    }
+  ],
+  "historical_phase1": {
+    "commit": "819acc829d615485b57033f1ddcbebf64b4b49a0",
+    "workflow_run": 36946126004
+  },
+  "historical_phase2_S_rel_calibration": {
+    "commit": "d0193c1a0da93cda2d1e711039d0eb3b93eafce7",
+    "workflow_run": 36992380946
+  },
+  "panel_order": [
+    "hypsignathus",
+    "phyllostomus_2022",
+    "phyllostomus_2023",
+    "phyllostomus_2016"
+  ],
+  "geometry": {
+    "XY_grid_m": 500,
+    "terrain_correction": "original GPS-native height minus Skadi HGT interpolated local DEM; terrain-relative proxy, not measured above-ground-level altitude"
+  },
+  "panels": [
+    {
+      "panel": "hypsignathus",
+      "source_contract_blob_sha1": "1861a0a8ec625d9093919fbcf02b7ec45d3b4a92",
+      "source_vertical_field": "height_above_ellipsoid",
+      "structurally_evaluable_animals": 8,
+      "native": {
+        "horizontal_self_minus_other": 0.29718221417195256,
+        "conditional_vertical_self_minus_other": 0.17069880834534373,
+        "normalized_added_segregation_other_minus_self": 0.10294924187835525
+      },
+      "terrain_relative": {
+        "conditional_vertical_self_minus_other": 0.041862873401873585,
+        "normalized_added_segregation_other_minus_self": -0.015806072455978037,
+        "fidelity_p_source": 0.0001,
+        "segregation_two_sided_p_source": 0.0362
+      },
+      "arithmetic_change_terrain_minus_native": {
+        "conditional_vertical_fidelity": -0.12883593494347015,
+        "added_segregation": -0.11875531433433328
+      }
+    },
+    {
+      "panel": "phyllostomus_2022",
+      "source_contract_blob_sha1": "32e4772b1bb2d4c294c8324ca08ee8783adc12e2",
+      "source_vertical_field": "height_above_msl",
+      "structurally_evaluable_animals": 5,
+      "native": {
+        "horizontal_self_minus_other": 0.2157813650073594,
+        "conditional_vertical_self_minus_other": 0.06595540399759724,
+        "normalized_added_segregation_other_minus_self": -0.01659723395425109
+      },
+      "terrain_relative": {
+        "conditional_vertical_self_minus_other": 0.09955973281399592,
+        "normalized_added_segregation_other_minus_self": -0.008957479208159966,
+        "fidelity_p_source": 0.0001,
+        "segregation_two_sided_p_source": 0.3639
+      },
+      "arithmetic_change_terrain_minus_native": {
+        "conditional_vertical_fidelity": 0.03360432881639869,
+        "added_segregation": 0.007639754746091125
+      }
+    },
+    {
+      "panel": "phyllostomus_2023",
+      "source_contract_blob_sha1": "0e666bc2fdd0856fd0fb55b4fbda781bc1f70852",
+      "source_vertical_field": "height_above_ellipsoid",
+      "structurally_evaluable_animals": 6,
+      "native": {
+        "horizontal_self_minus_other": 0.34425658361737055,
+        "conditional_vertical_self_minus_other": 0.05416503692987814,
+        "normalized_added_segregation_other_minus_self": -0.003922999202991634
+      },
+      "terrain_relative": {
+        "conditional_vertical_self_minus_other": 0.07688679184597079,
+        "normalized_added_segregation_other_minus_self": 0.016261860368360782,
+        "fidelity_p_source": 0.0001015950421619425,
+        "segregation_two_sided_p_source": 0.2704460022350909
+      },
+      "arithmetic_change_terrain_minus_native": {
+        "conditional_vertical_fidelity": 0.02272175491609265,
+        "added_segregation": 0.020184859571352416
+      }
+    },
+    {
+      "panel": "phyllostomus_2016",
+      "source_contract_blob_sha1": "a4dff03a800dec98f612e0873c120756a012cf4e",
+      "source_vertical_field": "height_above_msl",
+      "structurally_evaluable_animals": 9,
+      "native": {
+        "horizontal_self_minus_other": 0.3021435751463378,
+        "conditional_vertical_self_minus_other": 0.1452314707903748,
+        "normalized_added_segregation_other_minus_self": 0.1304000459741923
+      },
+      "terrain_relative": {
+        "conditional_vertical_self_minus_other": 0.07865008741736887,
+        "normalized_added_segregation_other_minus_self": 0.028895449115765665,
+        "fidelity_p_source": 0.034527622097678144,
+        "segregation_two_sided_p_source": 0.4795836669335468
+      },
+      "arithmetic_change_terrain_minus_native": {
+        "conditional_vertical_fidelity": -0.06658138337300593,
+        "added_segregation": -0.10150459685842664
+      }
+    }
+  ],
+  "summary": {
+    "vertical_fidelity_increases_after_terrain": 2,
+    "vertical_fidelity_decreases_after_terrain": 2,
+    "segregation_increases_after_terrain": 2,
+    "segregation_decreases_after_terrain": 2,
+    "largest_native_positive_S_panels": [
+      "hypsignathus",
+      "phyllostomus_2016"
+    ],
+    "source_S_rel_positive_supported_panels": 0,
+    "source_V_rel_supported_panels": 4,
+    "original_field_species": 2
+  },
+  "boundaries": [
+    "Pairs and estimands are original native-versus-terrain matched source analyses; displayed arithmetic differences are NOT themselves null-calibrated and have no confidence intervals.",
+    "The terrain-relative variable uses raster DEM correction; H and P2023 GPS source heights are ellipsoid-based, P2022 and P2016 use MSL-based fields. Do NOT call the resulting proxy measured height above canopy or true AGL.",
+    "The GPS/DEM correction modifies numerical values but does not demonstrate causality by topography, habitat choice, optimality, or individual competition.",
+    "H is not null-tested horizontal segregation in this table; conservation of its exact source value checks consistent horizontal support.",
+    "These are four panels from only two species, with 500-m structural eligibility n=8/5/6/9; not independent replication in four taxa.",
+    "Post-outcome result provenance cannot be elevated to preregistration or a new direct GPS/DEM rerun."
+  ]
+}
