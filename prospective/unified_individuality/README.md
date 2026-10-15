@@ -16,8 +16,8 @@ This directory develops a **single manuscript** by integrating the existing *Jou
 10. [FIGURE_RENDER_VISUAL_QA_V1.md](FIGURE_RENDER_VISUAL_QA_V1.md) — preliminary SVG render and original-image preview QA.
 11. [INTERNAL_SCIENCE_REVIEW_GATE_V1.md](INTERNAL_SCIENCE_REVIEW_GATE_V1.md) — reviewer-level limits and final submission blockers.
 12. [BE_LAY_ABSTRACT_V2.md](BE_LAY_ABSTRACT_V2.md) — shortened 215-word abstract, 73-word Lay Summary and 69-character title for Behavioral Ecology.
-13. [COMPLETE_ANONYMOUS_TEXT_DRAFT_V1.md](COMPLETE_ANONYMOUS_TEXT_DRAFT_V1.md) — reproducible anonymous manuscript with the journal-ordered sections, also built as a 22-page line-numbered review PDF in GitHub Actions.
-14. [SUPPORTING_INFORMATION_ANONYMOUS_DRAFT_V1.md](SUPPORTING_INFORMATION_ANONYMOUS_DRAFT_V1.md) — reviewer-facing source/analysis tables with S1–S7 labels, also rendered to a single anonymous draft SI PDF.
+13. [COMPLETE_ANONYMOUS_TEXT_DRAFT_V1.md](COMPLETE_ANONYMOUS_TEXT_DRAFT_V1.md) — reproducible anonymous manuscript with the journal-ordered sections, also built as a line-numbered review PDF (27 A4 pages in the current proof) in GitHub Actions.
+14. [SUPPORTING_INFORMATION_ANONYMOUS_DRAFT_V1.md](SUPPORTING_INFORMATION_ANONYMOUS_DRAFT_V1.md) — reviewer-facing source/analysis tables S1–S10, methods S1–S15 and vector Figures S1/S2, also rendered to a single anonymous draft SI PDF.
 15. [FIGURE_ALT_TEXT_V1.md](FIGURE_ALT_TEXT_V1.md) — evidence-aware accessible text descriptions of all six main figures.
 16. [SUBMISSION_READINESS_GATE_V2.md](SUBMISSION_READINESS_GATE_V2.md) — official journal requirements, passed machine checks and mandatory human archive/ethics/AI approvals.
 17. [SOURCE_DOI_AND_METADATA_AUDIT_V2.md](SOURCE_DOI_AND_METADATA_AUDIT_V2.md) — corrected original Phyllostomus study-year DOI mapping, and targeted publisher/index verification of 2026 citations.
@@ -53,6 +53,20 @@ The final journal data repository URL and author/coauthor approvals are **not** 
 - [Source study-year/individual-ID audit](PROFILE_PANEL_IDENTITY_SCOPE_AUDIT_V1.md) and [independent verifier](validate_profile_panel_identity_scope_v1.py): the archived JAE heatmap contains **103 individual-by-panel records**, but only **101 different literal ID strings**; two are shared across the 2016 and 2022 P. hastatus La Gruta panels. Published PIT tagging and low recapture make continuity possible but actual 6-year same-animal identity has **not** been independently verified.
 - Calderón-Capote et al. (2025; [source](https://doi.org/10.1371/journal.pone.0313782)) had already evaluated **horizontal foraging-area overlap** from these same 2016/2022 archives (~0.20 Bhattacharyya overlap). The new Figure S1 coefficient ~0.80–0.92 measures **one-dimensional session-centered altitude-shape similarity** and is **not** a competing estimate of horizontal or three-dimensional co-use.
 - Global cross-panel biological independence, competition mechanisms and longitudinal memory remain **unproven**. The original JAE/BE frozen results were not changed.
+
+## Original gridded 3D overlap and historical code recovery (2026-10-15)
+
+The previous supplementary Figure S1 quantifies **1D session-centered vertical shape similarity** in 103 individual-by-study-panel profile rows (101 distinct literal source ID strings, two unverified cross-study repetitions) and **684 nonindependent same-cohort dyads**. These are **not** true joint 3D habitat overlaps or 103 globally verified independent animals. Cohort-specific medians and Table S9 reveal substantial cohort-size bias.
+
+A distinct **original, already completed native-height 500-m 3D analysis** has now been recovered *byte-identically* from the original successful GitHub workflow and incorporated into the working one-paper manuscript:
+
+- [Original native O_XY, O_XYZ, O_Z|XY and R_3D numerical source result](figures/ORIGINAL_NATIVE_3D_OVERLAP_SUMMARY_V1.json) — exact upstream historical Git blob `c1d37e42f72f59e5aba364daec9aef68b47778b6`, workflow **36881187913**.
+- [Supplementary Figure S2](figures/FIGURE_S2_NATIVE_HORIZONTAL_AND_JOINT_3D_OVERLAP_V1.svg), [deterministic original-source SVG renderer](figures/render_original_native_3d_overlap_s2_v1.cjs), and [source-inference/closure audit](NATIVE_3D_GEOMETRY_AND_SOURCE_CLOSURE_AUDIT_V1.md).
+- [Original terrain-corrected result](figures/ORIGINAL_TERRAIN_RELATIVE_3D_SOURCE_V1.json) and [S_rel permutation/compatibility source](figures/ORIGINAL_TERRAIN_PARTITIONING_CALIBRATION_V1.json) preserve exact historical values. Adding native-height vertical information reduced joint spatial overlap, but **native extra-segregation S_native is not the post-terrain permutation-tested S_rel**.
+- The original JAE rc2 frozen branch alone is **not a complete rerunnable checkout** of its historical terrain pipeline: several direct imported modules, an original native contract, and its 500-m original summary are missing. Four byte-identical historical code/config snapshots were therefore [recovered to a separate, integration-only folder](source_recovery/native_3d_history/). [Static source/provenance and scientific guard](validate_native_3d_source_recovery_v1.py) plus CI verify their exact Git blobs; **no primary tracking or DEM rerun was executed**. Use the historical successful execution commits for any eventual fully reproducible environment.
+- The scientific source universe remains closed: **original native conditional vertical fidelity 4/4 eligible panels**, **terrain-relative V_rel 4/4**, **positive S_rel 0/4** and separately defined co-use **1/4**, across **two field species**. No causal resource, competition, memory or laboratory-to-wild mechanism is established.
+
+The SI now includes native-gridded Table U10/S10, Figure S2 and full native/source-closure Methods U15/S15. The compiled anonymous review proofs currently contain **27 main pages** and **18 SI pages**, reproduced in CI; these are review proofs and may change again during human editing.
 
 ## One biological question
 
