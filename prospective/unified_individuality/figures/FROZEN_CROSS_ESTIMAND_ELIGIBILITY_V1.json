@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "audit_date": "2026-10-16",
+  "classification": "Original frozen source tally comparison only, not a new field analysis",
+  "source": [
+    {
+      "path": "figures/FROZEN_FIGURE_DATA_V1.json",
+      "git_blob_sha1": "b3f7b20136d028021a3c33a43c256e40ce91f677"
+    },
+    {
+      "path": "figures/ORIGINAL_NATIVE_3D_OVERLAP_SUMMARY_V1.json",
+      "git_blob_sha1": "c1d37e42f72f59e5aba364daec9aef68b47778b6"
+    },
+    {
+      "path": "historical_release/post_freeze_extensions/3d_niche_partition/COUSE_VERTICAL_SEPARATION_RESULT_V1.md",
+      "git_blob_sha1": "d7b6054d95e7a6c27baf8e35a2f7377f628fe818",
+      "ref": "release/jae-v0.4.0-rc2"
+    }
+  ],
+  "panels": [
+    {
+      "panel": "hypsignathus",
+      "panel_label": "H. monstrosus",
+      "native_or_terrain_V_S_evaluable_n": 8,
+      "fixed_event_couse_I_usable_n": 11,
+      "reported_I_dyads": 22,
+      "reported_I_matched_encounter_pairs": 883,
+      "primary_time_tolerance_s": 60,
+      "primary_scope": "endpoint_excluded",
+      "same_individual_id_set_verified": false,
+      "individual_level_joint_V_S_I_analysis_reported": false,
+      "n_co_use_minus_n_geometry": 3
+    },
+    {
+      "panel": "phyllostomus_2022",
+      "panel_label": "P. hastatus 2022",
+      "native_or_terrain_V_S_evaluable_n": 5,
+      "fixed_event_couse_I_usable_n": 6,
+      "reported_I_dyads": 10,
+      "reported_I_matched_encounter_pairs": 347,
+      "primary_time_tolerance_s": 60,
+      "primary_scope": "endpoint_excluded",
+      "same_individual_id_set_verified": false,
+      "individual_level_joint_V_S_I_analysis_reported": false,
+      "n_co_use_minus_n_geometry": 1
+    },
+    {
+      "panel": "phyllostomus_2023",
+      "panel_label": "P. hastatus 2023",
+      "native_or_terrain_V_S_evaluable_n": 6,
+      "fixed_event_couse_I_usable_n": 6,
+      "reported_I_dyads": 8,
+      "reported_I_matched_encounter_pairs": 679,
+      "primary_time_tolerance_s": 600,
+      "primary_scope": "all_space",
+      "same_individual_id_set_verified": false,
+      "individual_level_joint_V_S_I_analysis_reported": false,
+      "n_co_use_minus_n_geometry": 0
+    },
+    {
+      "panel": "phyllostomus_2016",
+      "panel_label": "P. hastatus 2016",
+      "native_or_terrain_V_S_evaluable_n": 9,
+      "fixed_event_couse_I_usable_n": 5,
+      "reported_I_dyads": 8,
+      "reported_I_matched_encounter_pairs": 16096,
+      "primary_time_tolerance_s": 600,
+      "primary_scope": "endpoint_excluded",
+      "same_individual_id_set_verified": false,
+      "individual_level_joint_V_S_I_analysis_reported": false,
+      "n_co_use_minus_n_geometry": -4
+    }
+  ],
+  "summary": {
+    "all_four_panel_eligible_n_identical": false,
+    "count_panels_with_different_n": 3,
+    "count_panels_with_same_n_but_unverified_identity": 1,
+    "geometry_bat_n_vector": [
+      8,
+      5,
+      6,
+      9
+    ],
+    "co_use_bat_n_vector": [
+      11,
+      6,
+      6,
+      5
+    ],
+    "source_study_panels": 4,
+    "species": 2
+  },
+  "claim_boundary": [
+    "V and S share a source 500-m geometry-eligible animal population per panel; I has a distinct x-y-time/dyad/scope eligibility rule and different sample sizes in three of four panels.",
+    "Matching source panel and study year is NOT proof that the V/S eligible animal identity set equals, or is a subset of, the co-use I eligible set.",
+    "Matching n in P2023 (6 vs 6) is NOT proof of matching exact animal IDs; original numerical summary does not supply the cross-estimand individual intersection.",
+    "Neither the count discrepancy nor source p-values supports a within-animal association between high V_rel and I, same-animal spatial response, temporal causal effect, avoidance or absence thereof.",
+    "Co-use I measures session-median-centered residual-height deviations, not actual physical altitude gap; S and V use smoothed estimated distributions and are algebraically coupled.",
+    "The original underlying GPS and tag-level identifiers were not reopened; do not assert the actual size of intersection of V/S and I sample IDs."
+  ]
+}
