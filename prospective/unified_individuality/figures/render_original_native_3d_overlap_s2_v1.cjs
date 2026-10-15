@@ -53,7 +53,7 @@ function renderNative3D(d){
   line(plot0,1139,plot1,1139,ink,3);
   circle(73,1261,11,"#ffffff",sea,4); text(96,1271,"Open = horizontal O_XY",26);
   circle(552,1261,11,sea,"#fff",2);text(575,1271,"Filled = joint 3D O_XYZ",26);
-  text(65,1330,"Joint O_XYZ is alpha=0.5 smoothed; NOT observed 3D co-use, CIs or p-values. Four panels, only two species.",22,false,muted);
+  text(65,1330,"Joint O_XYZ: alpha=0.5 smoothed, not observed 3D co-use; not CIs or p-values (2 species).",22,false,muted);
   text(65,1371,"Vertical effect must be tested separately: terrain-relative S_rel (0/4 positive) and co-use I (1/4 positive).",22,false,muted);
   out.push("</svg>");
   return out.join("\n")+"\n";
