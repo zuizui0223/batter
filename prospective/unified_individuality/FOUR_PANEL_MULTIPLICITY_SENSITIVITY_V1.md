@@ -44,3 +44,8 @@ The 2016 V_rel adjusted p = 0.03453 is close to the threshold, and source covera
 - Machine-derived per-panel unrounded arithmetic, original source p-values and explicit analysis-class limits: `figures/FROZEN_FOUR_PANEL_MULTIPLICITY_V1.json`.
 - Independently recomputing and hash-guarding the arithmetic: `validate_four_panel_multiplicity_v1.py`.
 - Original positive co-use at the **nominal per-panel** level remains in Fig. 6 and source Results without relabeling original success gates. Corrected sensitivity is clearly kept separate.
+
+
+## Scope clarification after a broader 12-test comparison (2026-10-15)
+
+**This file reports Holm *within each endpoint's four panels only*.** A further, still post-outcome illustrative choice combines all twelve displayed V_rel/S_rel/co-use tests into one Holm family. Under that broader choice, terrain-relative fidelity remains below .05 in **3/4** rather than 4/4 original panels (P2016 adjusted p = .27622, other three .0012), with S_rel and co-use remaining 0/4. The two arithmetic comparisons are separately documented in [the 12-test audit](TWELVE_TEST_MULTIPLICITY_SENSITIVITY_V1.md), and **neither is a prospective or exhaustive project-wide familywise analysis**. Original per-panel source tests remain unchanged.
