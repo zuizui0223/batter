@@ -29,6 +29,10 @@ jobs:
         run: |
           python3 prospective/unified_individuality/source_recovery/recover_terrain_source_closure_v1.py \
             --offline --out "${{ runner.temp }}/terrain_history/historical_commit_819acc82"
+      - name: Cross-validate original contracts, DEM receipt and replay-input bill of materials
+        run: |
+          python3 prospective/unified_individuality/source_recovery/verify_terrain_replay_input_manifest_v1.py \
+            --source-root "${{ runner.temp }}/terrain_history/historical_commit_819acc82"
       - name: Install modern compatible Python runtime for source-only import smoke
         run: python3 -m pip install --quiet numpy==2.2.6 pandas==2.2.3 pyproj==3.7.2 requests==2.32.5
       - name: Smoke-import historical terrain driver and validate synthetic geometry only
