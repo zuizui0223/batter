@@ -27,6 +27,7 @@ The detailed reproducibility contracts and legally redistributable data-derived 
   s=s.replace(/Supplementary Table U([1-9][0-9]*)/g,"Supplementary Table S$1")
      .replace(/Supplementary Methods U([1-9][0-9]*)/g,"Supplementary Methods S$1")
      .replace(/\bTable U([1-9][0-9]*)\b/g,"Table S$1")
+     .replace(/\bU([1-9][0-9]*)\b/g,"S$1") // Catch plural/table-range references, not only singular headings
      .replace(/original JAE/g,"original tracking")
      .replace(/JAE original/g,"original tracking")
      .replace(/the JAE original/g,"the original tracking")
