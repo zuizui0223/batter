@@ -45,6 +45,8 @@ jobs:
         run: python3 prospective/unified_individuality/validate_ecological_identifiability_v1.py
       - name: Verify original native/terrain 3D result source, byte-identical historic code and Figure S2
         run: python3 prospective/unified_individuality/validate_native_3d_source_recovery_v1.py
+      - name: Audit alpha-smoothed 3D overlap and aggregate shared-fix support with synthetic-only examples
+        run: python3 prospective/unified_individuality/validate_smoothing_support_boundary_v1.py
       - name: Guard terrain replay input manifests and source-only checksums (no downloads)
         run: python3 prospective/unified_individuality/source_recovery/verify_terrain_replay_input_manifest_v1.py
       - name: Verify second-stage S_rel permutation source/result provenance without raw data
