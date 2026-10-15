@@ -33,6 +33,10 @@ jobs:
         run: |
           python3 prospective/unified_individuality/source_recovery/verify_terrain_replay_input_manifest_v1.py \
             --source-root "${{ runner.temp }}/terrain_history/historical_commit_819acc82"
+      - name: Verify exact ORIGINAL second-stage S_rel calibration code and contract only
+        run: |
+          python3 prospective/unified_individuality/source_recovery/verify_partitioning_s_provenance_v1.py \
+            --verify-source-bytes
       - name: Install modern compatible Python runtime for source-only import smoke
         run: python3 -m pip install --quiet numpy==2.2.6 pandas==2.2.3 pyproj==3.7.2 requests==2.32.5
       - name: Smoke-import historical terrain driver and validate synthetic geometry only
