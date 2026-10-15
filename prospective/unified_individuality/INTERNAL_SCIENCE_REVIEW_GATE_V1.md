@@ -12,7 +12,7 @@ The integrated paper is viable only if it is read as a **source-provenanced demo
 Strongest within-domain ecological contrast:
 - JAE post-outcome 500-m local-terrain analyses: individual V_rel supported **4/4** eligible panels across **two species**.
 - JAE post-outcome positive S_rel added-segregation test: **0/4** supported. The *H. monstrosus* negative-tail two-sided p=0.0362 must not be relabeled a no-effect or attraction result.
-- Synchronous extra co-use separation: **1/4** supported, *P. hastatus* 2023 (+3.57 m, phase-shift upper-tail p=0.0231, 600 s all-space with eight dyads).
+- Synchronous extra co-use separation: **1/4 nominal per original source gate**, *P. hastatus* 2023 (+3.57 m, phase-shift upper-tail raw p=0.0231, 600 s all-space with eight dyads). A retrospective **within-co-use-family** four-panel Holm check instead gives p=0.0924 and 0/4. The original nominal source verdict is preserved but not promoted to multiplicity-robust evidence.
 - Other co-use conditions: H (60 s endpoint-excluded, 22 dyads), P2022 (60 s endpoint-excluded, 10 dyads), P2016 (600 s endpoint-excluded, eight dyads). Positive dyad-bootstrap 95% upper compatibility endpoints +0.985/+1.918/+1.128 m in the three nonsupporting panels are not formal equivalence bounds.
 
 Strongest perturbation interpretation: correct-individual correspondence persists after four independently controlled acute source-level perturbations, but because behavior, nulls and species differ and biological n=3–6, this does not identify a common bat-wide mechanism or a common effect-size scale.
@@ -87,3 +87,7 @@ The integrated route should remain preferred **only if** external human reviewer
 ## Original input replay status update — 2026-10-15
 
 The success-commit source-only recovery now includes a machine-readable inventory of **4 original GPS + 4 original reference bitstreams + 2 DEM tiles** and their original checksums/byte counts. An offline cross-check of the restored 21 Git source blobs and input declarations is configured in CI. This is a data-provenance advance, **not source GPS/DEM access or a numerical rerun**. The original scientific and ethics hard stops remain in force.
+
+## Multiplicity asymmetry review — 2026-10-15
+
+Existing source-frozen four-panel p-values were arithmetically Holm-adjusted separately for V_rel, two-sided S_rel and upper-tail co-use I (no fresh raw-data analysis). V_rel retains all 4/4 below adjusted 0.05 (largest p=0.03453). The nominal *H. monstrosus* negative S_rel p=0.0362 becomes p=0.1448, and *P. hastatus* 2023 nominal positive co-use p=0.0231 becomes p=0.0924; neither survives its own retrospective four-panel endpoint-family correction. Cross-family multiplicity and selected original study universe remain uncontrolled. The manuscript should emphasize **robust within-panel predictability rather than a proven absence of segregation**, and should not treat the co-use nominal result as a validated universal social-avoidance mechanism. Source-supported decisions and biological n are unchanged.
