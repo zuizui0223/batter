@@ -76,6 +76,6 @@
 <text x="96" y="1271" font-family="Arial,Helvetica,sans-serif" font-size="26" font-weight="400" text-anchor="start" fill="#263a46">Open = horizontal O_XY</text>
 <circle cx="552" cy="1261" r="11" fill="#236879" stroke="#fff" stroke-width="2"/>
 <text x="575" y="1271" font-family="Arial,Helvetica,sans-serif" font-size="26" font-weight="400" text-anchor="start" fill="#263a46">Filled = joint 3D O_XYZ</text>
-<text x="65" y="1330" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="400" text-anchor="start" fill="#657785">Joint O_XYZ is alpha=0.5 smoothed; NOT observed 3D co-use, CIs or p-values. Four panels, only two species.</text>
+<text x="65" y="1330" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="400" text-anchor="start" fill="#657785">Joint O_XYZ: alpha=0.5 smoothed, not observed 3D co-use; not CIs or p-values (2 species).</text>
 <text x="65" y="1371" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="400" text-anchor="start" fill="#657785">Vertical effect must be tested separately: terrain-relative S_rel (0/4 positive) and co-use I (1/4 positive).</text>
 </svg>
