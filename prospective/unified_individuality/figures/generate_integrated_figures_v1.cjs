@@ -34,7 +34,7 @@ function plotAll(d) {
       {x:47,title:"01  FORMATION / HISTORY",lines:["Late personal history informative","Monotonic formation gate: FAIL","Developmental total-dispersion rule:","not supported"],foot:"BE juvenile and randomized experiments",accent:C.amber},
       {x:430,title:"02  MAINTENANCE",lines:["Identity correspondence retained","across four controlled sensory","and navigation programmes"],foot:"BE, biological n = 3–6 per programme",accent:C.teal},
       {x:813,title:"03  EXPRESSION / TRANSFER",lines:["Coarse movement representation:","transfers across tasks/systems","Fixed detailed geometry: unsupported"],foot:"Rhinolophus and Carollia",accent:C.navy},
-      {x:1196,title:"04  FIELD CONSEQUENCE",lines:["Terrain-relative fidelity: 4/4","Positive added segregation: 0/4","Extra co-use separation: 1/4"],foot:"JAE, 2 species / 4 field panels",accent:C.teal}
+      {x:1196,title:"04  FIELD CONSEQUENCE",lines:["Terrain-relative fidelity: 4/4","Positive added segregation: 0/4","Co-use deviation: 1/4 nominal"],foot:"JAE, 2 species / 4 field panels",accent:C.teal}
     ];
     groups.forEach(g=>{f.rect(g.x,155,350,265,C.light,C.rule,1.5,11);f.rect(g.x,155,350,7,g.accent);f.txt(g.x+17,202,g.title,19,700,C.ink);g.lines.forEach((l,i)=>f.txt(g.x+17,249+i*31,l,18,i===0?600:400,C.ink));f.txt(g.x+17,395,g.foot,13,400,C.muted);});
     for(let i=0;i<3;i++){f.line(groups[i].x+350,283,groups[i+1].x,283,C.soft,3,"5,7");}
@@ -131,12 +131,12 @@ function plotAll(d) {
   }
   // Fig 6: ecologically decisive side-by-side separate estimands.
   {
-    const f=fig("Repeatable strategies without obligatory vertical separation","Two tropical bat species · four eligible tracking panels · post-outcome diagnostic family",1780,866,"Terrain-relative individual fidelity is supported 4/4, positive added segregation 0/4, synchronous extra co-use separation 1/4. Null envelopes and dyad intervals distinguished.");
+    const f=fig("Repeatable centered-height use vs added segregation","Two tropical bat species · four eligible tracking panels · post-outcome diagnostic family",1780,866,"Centered relative-height fidelity: original 4/4; positive added S_rel: 0/4; co-use residual-deviation dissimilarity: 1/4 nominal. Not physical between-bat height separation.");
     const rows=d.terrain, yv=[231,352,473,594], labelsX=57;
     const xa0=320,xa1=695,xb0=780,xb1=1145,xc0=1250,xc1=1680;
     f.rect(294,126,422,64,"#EEF6F5",C.rule,1,8);f.txt(318,153,"A   Individual fidelity",22,700,C.teal);f.txt(318,179,"V_rel · 4 / 4 supported",17,500,C.ink);
     f.rect(761,126,401,64,C.light,C.rule,1,8);f.txt(781,153,"B   Added segregation",22,700,C.navy);f.txt(781,179,"S_rel · 0 / 4 positive supported",17,500,C.ink);
-    f.rect(1231,126,473,64,C.light,C.rule,1,8);f.txt(1250,153,"C   Synchronous co-use",22,700,C.ink);f.txt(1250,179,"Excess metres · 1 / 4 supported",17,500,C.ink);
+    f.rect(1231,126,473,64,C.light,C.rule,1,8);f.txt(1250,153,"C   Co-use deviations",22,700,C.ink);f.txt(1250,179,"Centered residuals · 1 / 4 nominal",17,500,C.ink);
     const map=(v,a,b,l,h)=>a+(v-l)/(h-l)*(b-a);
     for (const v of [0,.05,.1,.15]){const x=map(v,xa0,xa1,0,.15);f.line(x,209,x,675,v===0?C.soft:C.rule,v===0?2:1,"3,5");}
     for (const v of [-.1,-.05,0,.05,.1]){const x=map(v,xb0,xb1,-.10,.10);f.line(x,209,x,675,v===0?C.soft:C.rule,v===0?2:1,"3,5");}
@@ -163,10 +163,10 @@ function plotAll(d) {
     axis(f,xc0,xc1,694,-6,12,[-6,0,6,12],v=>`${v} m`);
     f.txt(505,751,"V_rel (terrain-relative fidelity)",16,500,C.muted,"middle");
     f.txt(962,751,"S_rel (added segregation)",16,500,C.muted,"middle");
-    f.txt(1468,751,"Co-use excess above time-shift null (m)",16,500,C.muted,"middle");
+    f.txt(1468,751,"Excess centered-height deviation (m)",16,500,C.muted,"middle");
     f.line(58,778,1714,778,C.rule,1.5);
     f.txt(59,812,"B: grey intervals = central 95% of label-permutation S null; C: grey intervals = dyad-bootstrap 95% compatibility intervals.",16,500,C.ink);
-    f.txt(59,841,"Neither interval is a formal equivalence test. Co-use windows differ; 2023 is all-space, while 2016 also uses 600s but excludes endpoints.",15,400,C.muted);
+    f.txt(59,841,"Panel C: deviation mismatch, NOT physical gap. 2016 also uses 600s; 2023 all-space. Nulls/intervals differ.",15,400,C.muted);
     out["FIGURE_6_FIDELITY_VS_PARTITIONING_V1.svg"]=f.end();
   }
   return out;
