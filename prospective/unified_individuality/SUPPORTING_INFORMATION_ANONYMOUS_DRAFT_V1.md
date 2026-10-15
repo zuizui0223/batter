@@ -1,6 +1,6 @@
 # Supplementary Material — anonymous review draft
 
-**Associated manuscript:** Persistent individuality without consistent additional vertical segregation in bats (anonymous draft).
+**Associated manuscript:** Persistent behavioral individuality and the limits of 3D niche inference in bats (anonymous draft).
 
 **Contents:** experimental source metadata and frozen source-specific nulls, original six-panel wild vertical identity, terrain-relative fidelity and segregation tests, contemporaneous co-use uncertainty, external boundary cases, and evidence-tier rules.
 
