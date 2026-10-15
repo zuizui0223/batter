@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-simultaneous-couse-vertical-separation-v1",
+  "inferential_class": "post-outcome mechanism test",
+  "panels": [
+    "hypsignathus",
+    "phyllostomus_2022",
+    "phyllostomus_2023",
+    "phyllostomus_2016"
+  ],
+  "grid_m": 500,
+  "candidate_tolerances_s": [
+    60,
+    120,
+    300,
+    600
+  ],
+  "encounter_matching": "mutual nearest temporal neighbour within same 500-m cell and dyad; one-to-one",
+  "structural_gate": {
+    "dyad_min_encounters": 5,
+    "individual_min_encounters": 10,
+    "individual_min_partners": 2,
+    "panel_min_individuals": 5,
+    "panel_min_dyads": 5,
+    "panel_min_encounters": 50,
+    "tolerance_rule": "smallest candidate tolerance passing all gates"
+  },
+  "session_shiftability": "duration >= 4 * selected tolerance",
+  "vertical": {
+    "endpoint": "absolute pair difference in DEM-terrain-relative, session-median-centered height",
+    "dyad_aggregation": "median encounter separation",
+    "panel_aggregation": "equal mean of usable dyad medians"
+  },
+  "null": {
+    "type": "fixed observed encounter set; circular z_rel phase shift within individual x session x 500-m cell",
+    "B": 9999,
+    "shift": "random nonzero circular index within each group; groups with <2 fixes unshiftable",
+    "pre_vertical_shiftability_gate": "at least 90% of primary encounter endpoints belong to groups with >=2 fixes",
+    "preserves": [
+      "observed encounter identities/cells/times",
+      "horizontal trajectories",
+      "each individual-session-cell vertical distribution",
+      "stable site-specific personal vertical strategy",
+      "encounter and dyad counts"
+    ],
+    "destroys": "momentary cross-individual vertical alignment",
+    "seeds": {
+      "hypsignathus": 20261002101,
+      "phyllostomus_2022": 20261002102,
+      "phyllostomus_2023": 20261002103,
+      "phyllostomus_2016": 20261002104
+    },
+    "group_fix_universe": "same frozen primary scope as encounter analysis: endpoint-excluded fixes for endpoint-excluded panels; all retained fixes for all-space panels",
+    "pre_vertical_shiftability_fraction_min": 0.9,
+    "unshiftable_group_action": "retain encounter and leave observed z_rel unchanged in every null replicate"
+  },
+  "support_rule": "observed-minus-null-mean > 0 and one-sided p(null>=observed)<=0.05",
+  "endpoint_exclusion": {
+    "proxy": "first five + last five fixes per target session; individual x cohort medoid endpoint",
+    "radius_m": 1000,
+    "encounter_keep_rule": "build mutual-nearest encounters from the full shiftable x-y-time universe; for endpoint-excluded panels then retain only encounters whose two fixes are each >=1000 m from their own individual x cohort endpoint proxy; apply dyad/individual support gates after this filter",
+    "primary_scope_rule": "use endpoint-excluded encounters if same structural gate still passes; otherwise retain all-space primary with generic co-presence interpretation",
+    "sensitivity_rescue": false,
+    "final_fix_universe_amendment": "authoritative encounter ordering matches the completed endpoint audit and frozen encounter SHA receipts; vertical phase-shift groups use endpoint-excluded fixes only in endpoint-excluded panels"
+  },
+  "null_amendment": "COUSE_NULL_AMENDMENT_V1.md; amended after x-y-time preflight and before any vertical-separation outcome"
+}
