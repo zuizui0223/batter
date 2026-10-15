@@ -118,8 +118,8 @@ def figure_and_text_gate()->None:
                   "joint-gridded **O_XYZ**","not yet corrected for terrain"]:
             assert k.lower() in msg.lower(),(t,k)
     # Editorial guard on the exact ecological scope; no new biological tests.
-    expected_title = "# Persistent individuality without consistent additional vertical segregation in bats"
-    assert main.splitlines()[0] == expected_title, "Broad spatial-partitioning headline reintroduced"
+    expected_title = "# Persistent behavioral individuality and the limits of 3D niche inference in bats"
+    assert main.splitlines()[0] == expected_title, "Source-scope-limited 3D niche inference title has drifted"
     assert expected_title in anon, "Anonymous manuscript title drift"
     scoped_text = "No source-calibrated test here establishes either the presence or the absence of **horizontal** partitioning."
     assert scoped_text in main and scoped_text in anon, "Horizontal baseline boundary missing"
