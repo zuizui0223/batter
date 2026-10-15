@@ -42,7 +42,7 @@ OUP AI policy: https://academic.oup.com/pages/for-authors/journals/preparing-and
 | Composite Figure 5 | Original 103-individual, 10-bin archived profile data + calibrated six-panel identity; 177x238mm PDF local proof generated | DATA INTEGRITY PASS; final lettering/author review pending |
 | Original JAE profile | Unchanged source PNG, CSV, JSON with original SHA256; 20+24+33+16+10 individuals | PASS |
 | Figure alternative text | Six figure alt-text descriptions source-claim bounded | DRAFT |
-| Combined SI | Eight source data/analysis tables and expanded Methods S1–S13, including primary inclusion criteria, null calibrations, post-outcome terrain/co-use and all experimental endpoints | DRAFT (enhanced source reproducibility) |
+| Combined SI | Eleven source/derivation tables and Methods S1–S16, including original experiments, wild geometry, cohort-dependent overlap and retrospective four-panel multiplicity sensitivity | DRAFT (source reproduction boundaries retained) |
 | Internal SI proof | Single A4 landscape PDF with source-specific Methods, Table U8 and vector Figure S1 | MACHINE PASS |
 | Anonymous SI proof | Single anonymous A4 landscape PDF with source branch names removed, S1–S13 methods and embedded vector Figure S1 | MACHINE PASS |
 | Figure and document reproducibility CI | GitHub Actions recreate source-compliant SVG, source hashes, anonymous text, SI PDFs and main PDF without primary data changes | PASS on current reviewed runs |
@@ -81,6 +81,13 @@ Calderón-Capote et al. 2025 already quantified horizontal foraging-area overlap
 - [ ] **Final figure production:** Check each figure at 177/129/85 mm as relevant; font/readability and grayscale; Figure 6 is a dense full-width plate. Check the new Figure 5 A+B vector and original unchanged heatmap source.
 - [ ] **Reviewer PDF & cover metadata:** Generate journal-compliant anonymous manuscript PDF after final metadata, continuous line/page numbering, cover page plus acknowledgements marked not for review, and final portal proof.
 - [ ] **Journal rules at upload:** Recheck current rules on formats, source accessibility, figure alt text, and disclosures.
+
+## Multiplicity-sensitivity review gate — 2026-10-15
+
+- [x] Existing source-frozen V_rel, S_rel and synchronous co-use p-values were independently recomputed **arithmetically only** under separate within-endpoint four-panel Holm procedures; this is a **post-outcome** sensitivity, not prospective familywise registration.
+- [x] Terrain-relative individual fidelity remains below p_Holm = 0.05 in 4/4 eligible panels (max p_Holm = 0.03453). The nominal negative H S_rel p = 0.0362 becomes 0.1448, and nominal 2023 P co-use p = 0.0231 becomes 0.0924. Figure 6 and text must retain original per-panel nominal p-values and describe these adjusted figures separately.
+- [ ] Across-family multiplicity, selection of source programmes, causal mechanism, field 3D horizontal-resource overlap and species-level generality **remain unresolved**. No equivalence or absence-of-competition claim is licensed.
+- [x] Derived frozen-p arithmetic, historical Git blob identity and source-family count verified through `figures/FROZEN_FOUR_PANEL_MULTIPLICITY_V1.json`, `validate_four_panel_multiplicity_v1.py` and the narrative audit.
 
 ## Horizontal-versus-vertical claim boundary — 2026-10-15
 
