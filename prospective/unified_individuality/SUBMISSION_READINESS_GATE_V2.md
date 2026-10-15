@@ -82,6 +82,16 @@ Calderón-Capote et al. 2025 already quantified horizontal foraging-area overlap
 - [ ] **Reviewer PDF & cover metadata:** Generate journal-compliant anonymous manuscript PDF after final metadata, continuous line/page numbering, cover page plus acknowledgements marked not for review, and final portal proof.
 - [ ] **Journal rules at upload:** Recheck current rules on formats, source accessibility, figure alt text, and disclosures.
 
+## Historical 500-m native 3D results and reproducibility closure — 2026-10-15
+
+The original source-run native-height 500-m spatial-overlap summary was recovered by exact historical Git blob identity. The source XY-versus-joint-XYZ values (Table S10, Figure S2) differ from 1D profile-shape S1, terrain-relative segregation S_rel, and synchronous co-use I. Native added S was +0.103 in Hypsignathus and +0.130 in P. hastatus 2016 but terrain-adjusted S_rel was −0.0158 and +0.0289; neither supports the original positive-S_rel permutation test. Original field fidelity V_rel remained supported 4/4.
+
+- [x] Byte-identical original native and terrain summaries, four historical source-code/config snapshots, and deterministic Figure S2 + PDF layout verification.
+- [x] Current anonymous main review PDF 27 pages; single anonymous supplementary PDF 18 pages with vector Figure S2.
+- [ ] HARD STOP: full original raw-data rerun. Frozen rc2 omits modules/contracts needed by the original terrain runner. Historical successful-run files are recovered as provenance, but the exact GPS/DEM dependency environment is not reconstructed and full numerical rerun has not been independently completed.
+- [ ] Verify original source animal IDs with field/tag metadata: 103 individual-by-panel profile rows include 101 distinct literal ID strings and two repeated across study years; those labels do not prove recapture.
+
+The review archive requires licences, human approval and stable versioned data/code deposition before journal upload.
 ## Editorial stop and restart rule
 
 No new significance-driven reanalysis of the same open field archive is authorized by this packaging PR. Formatting failures may be corrected without opening new biological outcome families. If the strongest unified claim begins to depend on identifying a laboratory-to-field causal carrier, **stop**: that carrier is not identified by the available frozen results. The paper should then be reframed as a conditional synthesis or the original genuinely distinct JAE and BE articles submitted with proper overlap disclosure.
