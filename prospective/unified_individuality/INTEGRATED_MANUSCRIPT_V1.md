@@ -1,4 +1,4 @@
-# Persistent individuality without consistent additional vertical segregation in bats
+# Persistent behavioral individuality and the limits of 3D niche inference in bats
 
 **Article type:** Integrated comparative reanalysis — working scientific draft v1 (14 October 2026)  
 **Status:** Integration draft for scientific/coauthor review; NOT a frozen submission manuscript. Abstract and Lay Summary follow the 2026 Behavioral Ecology word limits.  
@@ -8,7 +8,7 @@
 
 ## Lay Summary
 
-Bats can retain individual flight-height patterns without consistently separating into different height layers. Across published experiments, bats remained recognizable by their behavior after changes to sensory and navigation conditions. Wild tracking likewise showed individually predictive height use, yet two tropical species showed no consistent support for added vertical segregation after accounting for terrain. Horizontal differences, prey use and the mechanisms maintaining personal patterns remain unresolved.
+A bat's flight-height pattern can be recognizable without revealing whether bats divide up airspace. Across published experiments, individual behavior remained identifiable after changes to sensory and navigation conditions. Wild tracking likewise showed predictable session-centered relative-height use. Yet smoothed probability overlap and time-matched, individually centered height differences did not directly measure physical separation. Why these personal signatures persist—and whether they affect food use or competition—remains unresolved.
 
 ## Abstract
 
