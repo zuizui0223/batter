@@ -4,9 +4,9 @@
 
 The integrated article must not read as a BE paper followed by an unrelated JAE appendix, or as a JAE paper with anecdotal controlled experiments attached.
 
-**One question:** What persists when individuals remain predictable, and when does that persistent information require ecological spatial partitioning?
+**One question:** What part of individual flight-height use remains predictable after coarse place/context and terrain-reference controls, and does it generate *additional terrain-relative vertical segregation*?
 
-**Positive core:** Retained individual information under acute perturbation; retained wild terrain-relative vertical configuration.
+**Positive core:** Retained individual information under acute perturbation; retained wild terrain-relative vertical configuration. Matched original native-versus-DEM-relative 3D geometry reveals that apparent additional segregation is height-reference sensitive, without identifying a causal topographic mechanism.
 
 **Boundary core:** Detailed realized geometry need not transfer; total developmental dispersion is not simply treatment-determined; positive additional vertical segregation is not supported in four eligible wild panels; the proposed laboratory-to-field scalar carrier gate failed.
 
