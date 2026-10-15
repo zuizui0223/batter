@@ -33,7 +33,7 @@ OUP AI policy: https://academic.oup.com/pages/for-authors/journals/preparing-and
 
 | Requirement | Current evidence | Status |
 |---|---|---|
-| Single title | "Persistent individuality need not entail spatial partitioning in bats" | PASS, 69 characters |
+| Single title | "Persistent individuality without consistent additional vertical segregation in bats" | PASS, 83 characters |
 | Abstract | Original two-paper structure rewritten into one evidence-ranked paper | PASS, 215 words |
 | Lay Summary | Nontechnical opening before title in Complete Anonymous Text | PASS, 73 words |
 | Main manuscript | Integrated draft includes Methods, Results, Discussion and 37 reconciled scholarly references | WORKING DRAFT |
@@ -81,6 +81,10 @@ Calderón-Capote et al. 2025 already quantified horizontal foraging-area overlap
 - [ ] **Final figure production:** Check each figure at 177/129/85 mm as relevant; font/readability and grayscale; Figure 6 is a dense full-width plate. Check the new Figure 5 A+B vector and original unchanged heatmap source.
 - [ ] **Reviewer PDF & cover metadata:** Generate journal-compliant anonymous manuscript PDF after final metadata, continuous line/page numbering, cover page plus acknowledgements marked not for review, and final portal proof.
 - [ ] **Journal rules at upload:** Recheck current rules on formats, source accessibility, figure alt text, and disclosures.
+
+## Horizontal-versus-vertical claim boundary — 2026-10-15
+
+The original four eligible panels show **same-individual horizontal O_XY 0.511–0.619 versus other-individual O_XY 0.202–0.334** (descriptive source-weighted means). No horizontal partitioning equivalence or absence test was passed or conducted. Moreover, O_XYZ cannot exceed O_XY for probability intersections on the same pairwise grid, so descriptive 2D-to-3D overlap reductions alone cannot prove **additional individual vertical segregation**. The valid negative-scope claim is **no consistently supported positive terrain-relative S_rel in these four source panels**, not a demonstrated absence of horizontal partitioning or trophic differentiation. See `HORIZONTAL_VS_ADDED_VERTICAL_SEGREGATION_CLAIM_AUDIT_V1.md`.
 
 ## Historical 500-m native 3D results and reproducibility closure — 2026-10-15
 
