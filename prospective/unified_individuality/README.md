@@ -2,6 +2,8 @@
 
 This directory develops a **single manuscript** by integrating the existing *Journal of Animal Ecology* wild 3D ecology candidate and the *Behavioral Ecology* controlled/developmental synthesis, without changing or superseding either frozen source in place.
 
+**2026-10-15 multiplicity update:** A source-hash-guarded [four-panel Holm sensitivity](FOUR_PANEL_MULTIPLICITY_SENSITIVITY_V1.md) separately corrects V_rel, two-sided S_rel and upper-tail co-use within each originally evaluable four-panel family. Fidelity remains 4/4 below 0.05 (max adjusted p = 0.03453), but the isolated nominal negative S_rel (p = 0.0362) adjusts to 0.1448 and nominal positive co-use (p = 0.0231) adjusts to 0.0924. This is post-outcome arithmetic only, not a new field outcome or a preregistered three-family correction. [Machine table](figures/FROZEN_FOUR_PANEL_MULTIPLICITY_V1.json) · [independent verifier](validate_four_panel_multiplicity_v1.py).
+
 **2026-10-15 claim calibration:** The working title now explicitly concerns **consistent evidence for additional vertical segregation**, *not* absence of all spatial partitioning. Source-native 500-m horizontal O_XY was descriptively higher within than between animals, and the O_XY-to-O_XYZ reduction is not itself a test of added segregation. The probability-intersection proof, per-panel values and exact wording boundary are in [the horizontal-versus-added-vertical audit](HORIZONTAL_VS_ADDED_VERTICAL_SEGREGATION_CLAIM_AUDIT_V1.md). Original field outcomes and frozen branches remain unchanged.
 
 ## Start here
@@ -75,7 +77,7 @@ The SI now includes native-gridded Table U10/S10, Figure S2 and full native/sour
 
 ## One biological question
 
-**What persists when behavior remains individually predictable, and when does that persistence require ecological spatial partitioning?**
+**When individual height-use patterns remain predictable within shared coarse horizontal support, do they also show added terrain-relative vertical segregation?**
 
 Three distinguishable empirical axes:
 
