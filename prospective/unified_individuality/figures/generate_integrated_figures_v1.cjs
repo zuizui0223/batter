@@ -4,7 +4,8 @@
 "use strict";
 const fs = require("node:fs");
 const path = require("node:path");
-function plotAll(d) {
+const crypto = require("node:crypto");
+function plotAll(d, nativeSource) {
   const C={ink:"#1F2D3B",navy:"#245473",teal:"#287E86",amber:"#B17D35",rust:"#9A6252",light:"#F4F7F9",pale:"#E7EFF3",rule:"#D9E2E8",muted:"#526679",soft:"#A0B3BE",white:"#FFFFFF",gray:"#78909C"};
   const escape=(s)=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
   const fmt=(x,n=3)=>Number(x).toFixed(n).replace("-0.000","0.000");
@@ -133,6 +134,7 @@ function plotAll(d) {
   {
     const f=fig("Repeatable centered-height use vs added segregation","Two tropical bat species · four eligible tracking panels · post-outcome diagnostic family",1780,866,"Centered relative-height fidelity: original 4/4; positive added S_rel: 0/4; co-use residual-deviation dissimilarity: 1/4 nominal. Not physical between-bat height separation.");
     const rows=d.terrain, yv=[231,352,473,594], labelsX=57;
+    if(nativeSource.workflow?.run_id!==36881187913)throw Error("Original geometry source mismatch");
     const xa0=320,xa1=695,xb0=780,xb1=1145,xc0=1250,xc1=1680;
     f.rect(294,126,422,64,"#EEF6F5",C.rule,1,8);f.txt(318,153,"A   Individual fidelity",22,700,C.teal);f.txt(318,179,"V_rel · 4 / 4 supported",17,500,C.ink);
     f.rect(761,126,401,64,C.light,C.rule,1,8);f.txt(781,153,"B   Added segregation",22,700,C.navy);f.txt(781,179,"S_rel · 0 / 4 positive supported",17,500,C.ink);
@@ -143,7 +145,12 @@ function plotAll(d) {
     for (const v of [-6,0,6,12]){const x=map(v,xc0,xc1,-6,12);f.line(x,209,x,675,v===0?C.soft:C.rule,v===0?2:1,"3,5");}
     rows.forEach((o,i)=>{
       const y=yv[i],bg=i%2===0?C.light:C.white;f.rect(50,y-43,1660,93,bg,"none",0,8);
-      f.txt(labelsX,y-7,o.label,19,700,C.ink);f.txt(labelsX,y+21,`${o.couse_tolerance_s}s · ${o.couse_scope==="all_space"?"all space":"endpoint excluded"}`,15,400,C.muted);
+      const geometry_n=nativeSource.panels[o.panel]?.eligible_individuals;
+      const couse_n=o.couse_n_bats;
+      if(!Number.isInteger(geometry_n)||!Number.isInteger(couse_n)||geometry_n<5||couse_n<5)throw Error("Cross-estimand eligible bat n missing "+o.panel);
+      f.txt(labelsX,y-7,o.label,19,700,C.ink);
+      f.txt(labelsX,y+16,`V/S n=${geometry_n} · I n=${couse_n}`,14,500,C.muted);
+      f.txt(labelsX,y+38,`${o.couse_tolerance_s}s · ${o.couse_scope==="all_space"?"all space":"endpoint excl."}`,13,400,C.muted);
       // V_rel: raw retained configuration, not a standardized common effect.
       const xv=map(o.v_rel,xa0,xa1,0,.15);f.line(xa0,y,xv,y,C.teal,4);f.circ(xv,y,8,C.teal,C.white,2);f.txt(xv+13,y-12,sign(o.v_rel,3),16,700,C.teal);
       f.txt(692,y+29,`p=${fmt(o.v_p_upper,4)}`,13,400,C.muted,"end");
@@ -165,7 +172,7 @@ function plotAll(d) {
     f.txt(962,751,"S_rel (added segregation)",16,500,C.muted,"middle");
     f.txt(1468,751,"Excess centered-height deviation (m)",16,500,C.muted,"middle");
     f.line(58,778,1714,778,C.rule,1.5);
-    f.txt(59,812,"A/B overlap metrics algebraically coupled; B grey = 95% S permutation null; C grey = 95% dyad-bootstrap compatibility.",16,500,C.ink);
+    f.txt(59,812,"A/B n and C n differ in 3/4 panels; IDs are not cross-matched. B grey = S permutation null; C grey = dyad bootstrap.",16,500,C.ink);
     f.txt(59,841,"Panel C: deviation mismatch, NOT physical gap. 2016 also uses 600s; 2023 all-space. Nulls/intervals differ.",15,400,C.muted);
     out["FIGURE_6_FIDELITY_VS_PARTITIONING_V1.svg"]=f.end();
   }
@@ -173,7 +180,11 @@ function plotAll(d) {
 }
 const figureDir = __dirname;
 const data = JSON.parse(fs.readFileSync(path.join(figureDir, "FROZEN_FIGURE_DATA_V1.json"), "utf8"));
-const figures = plotAll(data);
+const nativeBytes=fs.readFileSync(path.join(figureDir,"ORIGINAL_NATIVE_3D_OVERLAP_SUMMARY_V1.json"));
+const blobSha=crypto.createHash("sha1").update(Buffer.concat([Buffer.from("blob "+nativeBytes.length+"\0"),nativeBytes])).digest("hex");
+if(blobSha!=="c1d37e42f72f59e5aba364daec9aef68b47778b6")throw Error("Native 3D source hash drift");
+const nativeSource=JSON.parse(nativeBytes.toString("utf8"));
+const figures = plotAll(data,nativeSource);
 for (const [name, svg] of Object.entries(figures)) {
   if (!/^FIGURE_[1-6]_.*_V1\.svg$/.test(name) || !svg.startsWith("<svg")) throw new Error("Unexpected SVG figure: "+name);
   fs.writeFileSync(path.join(figureDir, name),svg,"utf8");
