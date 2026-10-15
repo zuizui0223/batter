@@ -5,8 +5,8 @@
 <text x="62" y="72" font-family="Arial,Helvetica,sans-serif" font-size="40" font-weight="700" text-anchor="start" fill="#263a46">FIGURE S2  |  HORIZONTAL vs. JOINT 3D OVERLAP</text>
 <text x="62" y="117" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="400" text-anchor="start" fill="#657785">Original 500-m cell analysis; native heights, session-median centered; NOT terrain corrected</text>
 <line x1="62" y1="142" x2="1708" y2="142" stroke="#d5dfe5" stroke-width="3"/>
-<text x="62" y="206" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="700" text-anchor="start" fill="#263a46">Source study / evaluable n</text>
-<text x="346" y="206" font-family="Arial,Helvetica,sans-serif" font-size="26" font-weight="700" text-anchor="start" fill="#263a46">Session comparison</text>
+<text x="62" y="206" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="700" text-anchor="start" fill="#263a46">Study / n</text>
+<text x="346" y="206" font-family="Arial,Helvetica,sans-serif" font-size="26" font-weight="700" text-anchor="start" fill="#263a46">Session pairing</text>
 <text x="950" y="206" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="700" text-anchor="middle" fill="#263a46">Probability overlap coefficient</text>
 <text x="1685" y="206" font-family="Arial,Helvetica,sans-serif" font-size="26" font-weight="700" text-anchor="end" fill="#263a46">O_XY  /  O_XYZ</text>
 <line x1="540" y1="244" x2="540" y2="1139" stroke="#d5dfe5" stroke-width="2"/>
