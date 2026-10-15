@@ -58,6 +58,19 @@ These historical snapshots are **not** themselves an asserted full successful re
 
 Official Movebank documentation (https://github.com/movebank/movebank-api-doc) states that animal and tag identifiers are unique only within a study, *not necessarily across separate studies*. Hence the exact two 2016/2022 repeated literal Phyllostomus labels in the Figure 5B profile archive do not prove two bats were re-identified across six years. Within-panel identity tests and same-original-cohort Figure S1 dyads are unaffected by this caution.
 
+## One-commit historical source closure, audited 2026-10-15
+
+The earlier four-file rescue has now been expanded to **21 exact historical source-code, configuration, panel-contract and checksum receipt files from one Git commit**, `819acc829d615485b57033f1ddcbebf64b4b49a0`, which generated the successful original terrain workflow 36946126004. No mixing of successive workflow versions is required for this new recovered source bundle.
+
+The original JAE rc2 branch still holds byte-identical historical original driver `run_original_terrain_geometry_v1.py`, its terrain contract, DEM receipt, and core calibration/tag-source modules. Exactly the three required native-3D same-directory files `run_v1.py`, `run_external_geometry_v1.py` and `contract_v1.json` are absent from the frozen rc2 tree but present in the original success commit and this verified recovery package. The standalone historical recovery Python script reconstructs the full original relative file paths and checks all 21 original Git blob SHA-1 values. It also statically checks Python/JSON syntax and local script import closure, not the biological outcome.
+
+- [Source closure manifest](source_recovery/terrain_source_closure_manifest_v1.json) and [recoverable source-only script](source_recovery/recover_terrain_source_closure_v1.py).
+- [Full source closure and limitations](HISTORICAL_TERRAIN_SOURCE_CLOSURE_V1.md).
+- [Successful code-only recovery CI 38685340549](https://github.com/zuizui0223/batter/actions/runs/38685340549).
+- Independently checked source-only ZIP: 21 original files + manifest, SHA256 `27e1f7cd44e3aa367f150aef8f608a7cec35a73a8ef922c0f2950d0059f13ce1`, with no Movebank raw observations or DEM tiles.
+
+**Inference limit unchanged:** this resolves a **Git/source-code packaging gap** only. There is **no claim** that an independent full GPS/DEM and 9,999-permutation rerun has passed, that raw third-party data may be redistributed, or that the original inference changed. Such a rerun requires original source data and DEM checksum access and a historically comparable Python environment.
+
 ## Scope of new presentation
 
 [Figure S2](figures/FIGURE_S2_NATIVE_HORIZONTAL_AND_JOINT_3D_OVERLAP_V1.svg) illustrates the recovered original native O_XY and O_XYZ source comparisons only. Its reproducible [source renderer](figures/render_original_native_3d_overlap_s2_v1.cjs) rejects a change in the pinned original source blob. It has **no new inferential p-values, confidence intervals, independent samples or ecological mechanism assignments**.
