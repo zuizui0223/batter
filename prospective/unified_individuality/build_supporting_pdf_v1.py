@@ -87,8 +87,8 @@ def decorate(c,doc):
     c.restoreState()
 def build():
     source=SOURCE.read_text(encoding="utf-8")
-    markers=(["Supplementary Table S6","Supplementary Table S8","Supplementary Methods S13","Supplementary Figure S1","post-outcome"] if ANONYMOUS
-             else ["Supplementary Table U6","Supplementary Table U8","Supplementary Methods U13","Supplementary Figure S1","post-outcome"])
+    markers=(["Supplementary Table S6","Supplementary Table S8","Supplementary Table S10","Supplementary Methods S13","Supplementary Methods S15","Supplementary Figure S1","Supplementary Figure S2","post-outcome"] if ANONYMOUS
+             else ["Supplementary Table U6","Supplementary Table U8","Supplementary Table U10","Supplementary Methods U13","Supplementary Methods U15","Supplementary Figure S1","Supplementary Figure S2","post-outcome"])
     for x in markers:
         assert x.lower() in source.lower(),f"Missing mandatory SI section: {x}"
     blocks=[]
@@ -109,7 +109,7 @@ def build():
             found=re.fullmatch(r"!\[([^\]]+)\]\((figures/[a-zA-Z0-9_./-]+\.svg)\)",line)
             assert found is not None,f"Unexpected SI figure link: {line}"
             relative=found.group(2)
-            assert relative=="figures/FIGURE_S1_WITHIN_COHORT_VERTICAL_SHAPE_OVERLAP_V1.svg"
+            assert relative in {"figures/FIGURE_S1_WITHIN_COHORT_VERTICAL_SHAPE_OVERLAP_V1.svg","figures/FIGURE_S2_NATIVE_HORIZONTAL_AND_JOINT_3D_OVERLAP_V1.svg"},f"Unapproved SVG: {relative}"
             svgfile=ROOT/relative
             assert svgfile.is_file(),f"Missing supplement image: {svgfile}"
             drawing=svg2rlg(str(svgfile))
@@ -134,7 +134,7 @@ def build():
                 blocks.append(CondPageBreak(385))
             elif line[level:].strip().startswith("Supplementary Table "):
                 blocks.append(CondPageBreak(160))
-            if line[level:].strip().startswith("Supplementary Figure S1."):
+            if line[level:].strip().startswith(("Supplementary Figure S1.","Supplementary Figure S2.")):
                 # Reserve space for title and complete 177-mm-wide source SVG.
                 # Without this, the title can be orphaned on the preceding page.
                 blocks.append(CondPageBreak(485))
