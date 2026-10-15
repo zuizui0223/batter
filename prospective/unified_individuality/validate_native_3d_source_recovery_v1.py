@@ -93,7 +93,7 @@ def source_gate()->None:
     terrain=frozen["terrain"]
     assert [x["panel"] for x in terrain]==PANELS
     for row,value in zip(terrain,EXPECTED_TERRAIN):
-        assert abs(row["s_rel"]-value)<.0001,(row["panel"],row["s_rel"],value), "Figure summary intentionally rounded"
+        assert abs(row["s_rel"]-value)<.0001, (row["panel"],row["s_rel"],value,"Figure summary intentionally rounded")
         assert row["v_supported"] is True
     assert not any(r["s_rel"]>0 and r["s_p_two_sided"]<=.05 for r in terrain)
     assert sum(bool(r["couse_supported"]) for r in terrain)==1
