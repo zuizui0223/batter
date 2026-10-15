@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "description": "Second phase S_rel inherited-null calibration source provenance; distinct from 819 terrain fidelity/geometric source run",
+  "stage_a": {
+    "source_commit": "819acc829d615485b57033f1ddcbebf64b4b49a0",
+    "workflow_run": 36946126004,
+    "role": "terrain geometry and source V_rel; original native S_rel point estimates, 9,999 requested label permutations for V_rel"
+  },
+  "stage_b": {
+    "source_commit": "d0193c1a0da93cda2d1e711039d0eb3b93eafce7",
+    "workflow_run": 36992380946,
+    "workflow_name": "partitioning-s-calibration-v1",
+    "status": "historical workflow success (not an independent replay)",
+    "new_source_files": [
+      {
+        "path": "post_freeze_extensions/3d_niche_partition/run_partitioning_s_calibration_v1.py",
+        "git_blob_sha1": "9aba94c6a08a289db50f21d553da866f7641feb2",
+        "bytes": 13459
+      },
+      {
+        "path": "post_freeze_extensions/3d_niche_partition/partitioning_calibration_contract_v1.json",
+        "git_blob_sha1": "1dfc8625de021f5a7bc02167fba59650b0e29b19",
+        "bytes": 823
+      }
+    ],
+    "source_dependencies_reused_unchanged_from_stage_a": [
+      {
+        "path": "post_freeze_extensions/3d_niche_partition/run_v1.py",
+        "git_blob_sha1": "c08b442f97940eac3e90c1dac6e2de6d26010a7a",
+        "bytes": 13565
+      },
+      {
+        "path": "post_freeze_extensions/3d_niche_partition/run_external_geometry_v1.py",
+        "git_blob_sha1": "c869a25c062b4bf5dc6b22e9f3e7fe03b69aeb30",
+        "bytes": 27979
+      },
+      {
+        "path": "post_freeze_extensions/3d_niche_partition/original_terrain_geometry_contract_v1.json",
+        "git_blob_sha1": "765dc1d31b8e55f285ac8c69af6b12f0c71ea273",
+        "bytes": 1526
+      },
+      {
+        "path": "post_freeze_extensions/3d_niche_partition/original_terrain_dem_preflight_receipt_v1.json",
+        "git_blob_sha1": "c71c832203bcbbceaf05bab9439d119e689c374e",
+        "bytes": 3218
+      },
+      {
+        "path": "post_freeze_extensions/3d_niche_partition/summary_v1.json",
+        "git_blob_sha1": "c1d37e42f72f59e5aba364daec9aef68b47778b6",
+        "bytes": 4007
+      }
+    ],
+    "s_null_definition": "within-cohort individual-label permutation; recompute per-permutation S_rel = mean(other R3D)-mean(self R3D)",
+    "s_test": "two-sided deviation from the permutation null mean",
+    "permutations_requested_per_panel": 9999,
+    "resulting_frozen_calibration_blob_sha1": "e969698e2a594d2eeca2631d7473e598a8a8f371"
+  },
+  "current_evidence": {
+    "original_results_copied_in_integration": "figures/ORIGINAL_TERRAIN_PARTITIONING_CALIBRATION_V1.json",
+    "original_frozen_release": "release/jae-v0.4.0-rc2",
+    "source_code_byte_identity_checked_using_connected_GitHub_fetch_file": true,
+    "historical_rerun_not_performed": true,
+    "original_GPS_DEM_inputs_not_retrieved": true
+  },
+  "limitations": [
+    "First-stage 21-file portable source ZIP is accurate only for the historical 819 terrain geometry stage; second-stage S calibration runner/contract were introduced later.",
+    "This manifest references separate original successful phases without pretending their files were from one single commit.",
+    "Stage B's original run was successful; new download-free source verification does not recompute 9,999 permutations or validate current raw input accessibility.",
+    "Historical GitHub source hashes and results preserve provenance, not prospective independent biological replication."
+  ]
+}
