@@ -102,6 +102,24 @@ def run() -> None:
     assert summary["source_S_rel_positive_supported_panels"] == 0
     assert summary["source_V_rel_supported_panels"] == 4
     assert summary["original_field_species"] == 2
+    # Manuscript and anonymous Supporting Information should not mislabel the
+    # DEM's native resolution as the original 500-m XY aggregation resolution.
+    main = (ROOT / "INTEGRATED_MANUSCRIPT_V1.md").read_text("utf-8")
+    anonymous_main = (ROOT / "COMPLETE_ANONYMOUS_TEXT_DRAFT_V1.md").read_text("utf-8")
+    for manuscript in (main, anonymous_main):
+        for phrase in ("bilinearly interpolated local terrain elevation",
+                       "not a verified above-ground-level",
+                       "Supplementary Table S13",
+                       "processing differences were not separately permutation-tested"):
+            assert phrase.lower() in manuscript.lower(), ("Manuscript ecological claim drift", phrase)
+        assert "DEM subtraction at 500-m spatial resolution" not in manuscript
+    for name, prefix in (("SUPPORTING_INFORMATION_DRAFT_V1.md", "U"),
+                         ("SUPPORTING_INFORMATION_ANONYMOUS_DRAFT_V1.md", "S")):
+        document = (ROOT / name).read_text("utf-8")
+        assert f"Supplementary Table {prefix}13." in document
+        assert f"Supplementary Table {prefix}13" in document
+        assert "bilinearly interpolated at that event's coordinates" in document
+        assert "not verified height above actual ground or canopy" in document
     # No raw tracking-data event, height or terrain raster access.
     print("PASS source Git blobs, matched horizontal support and four original native/terrain V and S contrasts")
     print("PASS two increases / two decreases in V and S; altitude datum caveats identified")
