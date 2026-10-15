@@ -34,7 +34,7 @@ whereas actual terrain-relative physical altitude separation would instead be |h
 
 ## Science and editorial decision
 
-**Strong supported contribution:** original experimental individual mapping information across conditions, plus field identification of individually predictable *estimated* height-use shapes after coarse XY/session-context controls; the field information remains in three of four eligible native tropical panels under the broader illustrative twelve-test Holm sensitivity.
+**Strong supported contribution:** original experimental individual mapping information across conditions, plus field identification of individually predictable *estimated* height-use shapes after coarse XY/session-context controls; the field information remains in three of four eligible terrain-relative field panels under the broader illustrative twelve-test Holm sensitivity.
 
 **Narrower contribution than formerly written:** additional vertical segregation, co-occurrence and topographic effects are about the source's statistical estimators and preprocessing. We have **not** demonstrated an adaptive cognitive flight solution, physical shared airspace, physical avoidance/nonavoidance or resource partitioning.
 
