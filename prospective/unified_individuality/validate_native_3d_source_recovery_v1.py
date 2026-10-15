@@ -117,6 +117,13 @@ def figure_and_text_gate()->None:
         for k in ["between-individual **O_XY** values were 0.322","0.309","0.190","0.181",
                   "joint-gridded **O_XYZ**","not yet corrected for terrain"]:
             assert k.lower() in msg.lower(),(t,k)
+    # Editorial guard on the exact ecological scope; no new biological tests.
+    expected_title = "# Persistent individuality without consistent additional vertical segregation in bats"
+    assert main.startswith(expected_title + "\\n"), "Broad spatial-partitioning headline reintroduced"
+    assert expected_title in anon, "Anonymous manuscript title drift"
+    scoped_text = "No source-calibrated test here establishes either the presence or the absence of **horizontal** partitioning."
+    assert scoped_text in main and scoped_text in anon, "Horizontal baseline boundary missing"
+    assert "O_XYZ cannot exceed O_XY" in main and "O_XYZ cannot exceed O_XY" in si and "O_XYZ cannot exceed O_XY" in asi
     assert "source-closure" in si.lower()
     assert "source-closure" in main.lower() or "source-recovered" in main.lower()
     for secret in ["zuizui0223","release/jae","prospective/public-causal-synthesis"]:
