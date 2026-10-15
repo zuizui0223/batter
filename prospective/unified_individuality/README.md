@@ -6,6 +6,8 @@ This directory develops a **single manuscript** by integrating the existing *Jou
 
 **2026-10-15 claim calibration:** The working title now explicitly concerns **consistent evidence for additional vertical segregation**, *not* absence of all spatial partitioning. Source-native 500-m horizontal O_XY was descriptively higher within than between animals, and the O_XY-to-O_XYZ reduction is not itself a test of added segregation. The probability-intersection proof, per-panel values and exact wording boundary are in [the horizontal-versus-added-vertical audit](HORIZONTAL_VS_ADDED_VERTICAL_SEGREGATION_CLAIM_AUDIT_V1.md). Original field outcomes and frozen branches remain unchanged.
 
+**2026-10-15 spatial ecology/measurement audit:** [Matched native-versus-terrain 3D sensitivity](TERRAIN_DATUM_AND_GEOMETRY_SENSITIVITY_V1.md) now separates the GPS-reference dependence of apparent added segregation from retained terrain-relative individual fidelity. H and P2016 native S contrasts are materially attenuated after DEM subtraction, while the four-panel response is not uniform. The historical runner bilinearly interpolates DEM elevation **for each GPS fix**, then computes space use over **500-m XY cells**; original GPS heights include different ellipsoid/MSL datums, and derived terrain-relative heights are **not measured AGL**. These are original-source descriptive differences, not new animal-data tests. [Exact source-locked numbers](figures/FROZEN_TERRAIN_DATUM_CONTRAST_V1.json) · [Independent validator](validate_terrain_datum_contrast_v1.py).
+
 ## Start here
 
 1. [INTEGRATED_MANUSCRIPT_V1.md](INTEGRATED_MANUSCRIPT_V1.md) — full new draft, including rewritten Abstract, Introduction, Methods, Results, Discussion, Conclusion and selected working references.
