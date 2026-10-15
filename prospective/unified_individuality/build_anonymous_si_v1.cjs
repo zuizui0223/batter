@@ -9,7 +9,7 @@ function anonSI(source) {
   if(first<0||s.indexOf("## Scientific scope and dual-source provenance")<0)throw Error("Wrong SI source document");
   const intro=`# Supplementary Material — anonymous review draft
 
-**Associated manuscript:** Persistent individuality need not entail spatial partitioning in bats (anonymous draft).
+**Associated manuscript:** Persistent individuality without consistent additional vertical segregation in bats (anonymous draft).
 
 **Contents:** experimental source metadata and frozen source-specific nulls, original six-panel wild vertical identity, terrain-relative fidelity and segregation tests, contemporaneous co-use uncertainty, external boundary cases, and evidence-tier rules.
 
