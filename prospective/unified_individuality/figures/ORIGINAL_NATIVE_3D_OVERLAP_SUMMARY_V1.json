@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-3d-niche-partition-v1",
+  "workflow": {
+    "run_id": 36881187913,
+    "head_sha": "676ae76aec952a38410766577d51c5eca438a6c1",
+    "conclusion": "success"
+  },
+  "primary_definition": "D = equal-individual mean(self common-horizontal conditional vertical overlap - equal-other-individual overlap)",
+  "panels": {
+    "tadarida": {
+      "eligible_individuals": 4,
+      "self_ozxy": 0.5130938554740616,
+      "other_ozxy": 0.6230779622626397,
+      "d_panel": -0.10998410678857795,
+      "structural_gate": false,
+      "supported": false,
+      "self_oxy": 0.2025273055397334,
+      "other_oxy": 0.0834403024423923,
+      "self_oxyz": 0.1317599571684832,
+      "other_oxyz": 0.06725136177490788,
+      "self_r3d": 0.29289229426142005,
+      "other_r3d": 0.19997950668493866
+    },
+    "eidolon": {
+      "eligible_individuals": 0,
+      "structural_gate": false,
+      "supported": false
+    },
+    "hypsignathus": {
+      "eligible_individuals": 8,
+      "self_ozxy": 0.7266080474628369,
+      "other_ozxy": 0.5559092391174931,
+      "d_panel": 0.17069880834534373,
+      "null_mean": 0.00060405986816511,
+      "calibrated_excess": 0.17009474847717862,
+      "p_upper": 0.0001,
+      "self_oxy": 0.6187422837390575,
+      "other_oxy": 0.3215600695671048,
+      "self_oxyz": 0.5232789358742741,
+      "other_oxyz": 0.24046372261209492,
+      "self_r3d": 0.1560933080727539,
+      "other_r3d": 0.25904254995110915,
+      "valid_permutations": 9999,
+      "supported": true
+    },
+    "phyllostomus_2022": {
+      "eligible_individuals": 5,
+      "self_ozxy": 0.8321179575444899,
+      "other_ozxy": 0.7661625535468929,
+      "d_panel": 0.06595540399759724,
+      "null_mean": 0.00023373888528261283,
+      "calibrated_excess": 0.06572166511231463,
+      "p_upper": 0.0001,
+      "self_oxy": 0.5493468569237422,
+      "other_oxy": 0.3335654919163828,
+      "self_oxyz": 0.5069866079258492,
+      "other_oxyz": 0.3088975402419429,
+      "self_r3d": 0.07470716022317964,
+      "other_r3d": 0.058109926268928545,
+      "valid_permutations": 9999,
+      "supported": true
+    },
+    "phyllostomus_2023": {
+      "eligible_individuals": 6,
+      "self_ozxy": 0.8335247642533273,
+      "other_ozxy": 0.779359727323449,
+      "d_panel": 0.05416503692987814,
+      "null_mean": -0.0009219802993371163,
+      "calibrated_excess": 0.05508701722921525,
+      "p_upper": 0.0018264840182648401,
+      "self_oxy": 0.5465753800608059,
+      "other_oxy": 0.2023187964434353,
+      "self_oxyz": 0.5082630726980524,
+      "other_oxyz": 0.18964588802509272,
+      "self_r3d": 0.06700827814499118,
+      "other_r3d": 0.06308527894199954,
+      "valid_permutations": 9854,
+      "supported": true
+    },
+    "phyllostomus_2016": {
+      "eligible_individuals": 9,
+      "self_ozxy": 0.703109796696623,
+      "other_ozxy": 0.5578783259062482,
+      "d_panel": 0.1452314707903748,
+      "null_mean": 0.0014493397377844837,
+      "calibrated_excess": 0.1437821310525903,
+      "p_upper": 0.02512009607686149,
+      "self_oxy": 0.5105938420819637,
+      "other_oxy": 0.20845026693562593,
+      "self_oxyz": 0.42474161023256096,
+      "other_oxyz": 0.1806775859842606,
+      "self_r3d": 0.18485963098938085,
+      "other_r3d": 0.31525967696357315,
+      "valid_permutations": 9991,
+      "supported": true
+    }
+  },
+  "interpretation": {
+    "primary": "all four structurally evaluable panels show repeatable individual-specific vertical configurations within pairwise-shared 500-m cells",
+    "stronger_partitioning": "descriptive normalized 3D-overlap loss is greater between than within individuals most clearly in Hypsignathus and Phyllostomus 2016",
+    "limitations": [
+      "Tadarida and Eidolon structurally non-evaluable at 500 m",
+      "2022 and 2023 retain only 5 and 6 evaluable individuals under the fixed gate",
+      "pair-specific shared-cell sets differ across self and other comparisons",
+      "does not establish competition or intentional avoidance"
+    ]
+  }
+}
