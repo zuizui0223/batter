@@ -1,7 +1,7 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "audit_date": "2026-10-16",
-  "classification": "Original frozen source tally comparison only, not a new field analysis",
+  "classification": "Exact historical/source-tally reconciliation across three distinct per-panel statistical eligibility gates; no access to raw individual IDs",
   "source": [
     {
       "path": "figures/FROZEN_FIGURE_DATA_V1.json",
@@ -14,6 +14,11 @@
     {
       "path": "historical_release/post_freeze_extensions/3d_niche_partition/COUSE_VERTICAL_SEPARATION_RESULT_V1.md",
       "git_blob_sha1": "d7b6054d95e7a6c27baf8e35a2f7377f628fe818",
+      "ref": "release/jae-v0.4.0-rc2"
+    },
+    {
+      "path": "historical_release/post_freeze_extensions/fine_place_kinematic_500m/result_summary_v1.json",
+      "git_blob_sha1": "a2960b45a1a7ea1e0e3beebe6eb799a47f114bed",
       "ref": "release/jae-v0.4.0-rc2"
     }
   ],
@@ -29,7 +34,9 @@
       "primary_scope": "endpoint_excluded",
       "same_individual_id_set_verified": false,
       "individual_level_joint_V_S_I_analysis_reported": false,
-      "n_co_use_minus_n_geometry": 3
+      "n_co_use_minus_n_geometry": 3,
+      "fine500_place_speed_turn_usable_n": 19,
+      "same_individual_id_set_verified_across_fine500_vs_geometry_vs_I": false
     },
     {
       "panel": "phyllostomus_2022",
@@ -42,7 +49,9 @@
       "primary_scope": "endpoint_excluded",
       "same_individual_id_set_verified": false,
       "individual_level_joint_V_S_I_analysis_reported": false,
-      "n_co_use_minus_n_geometry": 1
+      "n_co_use_minus_n_geometry": 1,
+      "fine500_place_speed_turn_usable_n": 23,
+      "same_individual_id_set_verified_across_fine500_vs_geometry_vs_I": false
     },
     {
       "panel": "phyllostomus_2023",
@@ -55,7 +64,9 @@
       "primary_scope": "all_space",
       "same_individual_id_set_verified": false,
       "individual_level_joint_V_S_I_analysis_reported": false,
-      "n_co_use_minus_n_geometry": 0
+      "n_co_use_minus_n_geometry": 0,
+      "fine500_place_speed_turn_usable_n": 11,
+      "same_individual_id_set_verified_across_fine500_vs_geometry_vs_I": false
     },
     {
       "panel": "phyllostomus_2016",
@@ -68,7 +79,9 @@
       "primary_scope": "endpoint_excluded",
       "same_individual_id_set_verified": false,
       "individual_level_joint_V_S_I_analysis_reported": false,
-      "n_co_use_minus_n_geometry": -4
+      "n_co_use_minus_n_geometry": -4,
+      "fine500_place_speed_turn_usable_n": 9,
+      "same_individual_id_set_verified_across_fine500_vs_geometry_vs_I": false
     }
   ],
   "summary": {
@@ -88,7 +101,15 @@
       5
     ],
     "source_study_panels": 4,
-    "species": 2
+    "species": 2,
+    "fine500_bat_n_vector": [
+      19,
+      23,
+      11,
+      9
+    ],
+    "fine500_vs_geometry_n_different_panel_count": 3,
+    "fine500_vs_couse_n_different_panel_count": 4
   },
   "claim_boundary": [
     "V and S share a source 500-m geometry-eligible animal population per panel; I has a distinct x-y-time/dyad/scope eligibility rule and different sample sizes in three of four panels.",
@@ -96,6 +117,8 @@
     "Matching n in P2023 (6 vs 6) is NOT proof of matching exact animal IDs; original numerical summary does not supply the cross-estimand individual intersection.",
     "Neither the count discrepancy nor source p-values supports a within-animal association between high V_rel and I, same-animal spatial response, temporal causal effect, avoidance or absence thereof.",
     "Co-use I measures session-median-centered residual-height deviations, not actual physical altitude gap; S and V use smoothed estimated distributions and are algebraically coupled.",
-    "The original underlying GPS and tag-level identifiers were not reopened; do not assert the actual size of intersection of V/S and I sample IDs."
+    "The original underlying GPS and tag-level identifiers were not reopened; do not assert the actual size of intersection of V/S and I sample IDs.",
+    "A third post-outcome 500-m place×speed×turning matching test also uses a distinct set of biologically eligible animals (19/23/11/9), not the 500-m 3D V/S eligible set (8/5/6/9).",
+    "The full eligible animal identity overlap across fine500, V/S and I is unverified; equal n in P2016 fine/V-S (9/9) does not establish identical bats."
   ]
 }
