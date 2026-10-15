@@ -240,8 +240,11 @@ def svg_gate() -> None:
     for term in ["O_XY","O_XYZ","0.322 / 0.240","0.334 / 0.309",
                  "0.202 / 0.190","0.208 / 0.181","NOT terrain corrected"]:
         assert term in s2,("Original source Figure S2 content missing",term)
+    assert "alpha=0.5 smoothed" in s2, "Source 3D overlap smoothing label missing"
+    f1 = (HERE / IMAGES[0]).read_text(encoding="utf-8")
+    assert "Co-use deviation: 1/4 nominal" in f1, "Figure 1 source inference qualifier missing"
     f6 = (HERE / IMAGES[5]).read_text(encoding="utf-8")
-    for tok in ["4 / 4 supported", "0 / 4 positive supported", "1 / 4 supported", "p2=0.036", "p+ = 0.0231", "+3.57 m", "2016 also uses 600s"]:
+    for tok in ["4 / 4 supported", "0 / 4 positive supported", "1 / 4 nominal", "Co-use deviations", "Centered residuals", "NOT physical gaps", "p2=0.036", "p+ = 0.0231", "+3.57 m", "2016 also uses 600s"]:
         assert tok in f6, f"field figure missing {tok}"
 
 
