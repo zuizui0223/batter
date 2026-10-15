@@ -34,7 +34,7 @@ OUP AI policy: https://academic.oup.com/pages/for-authors/journals/preparing-and
 | Requirement | Current evidence | Status |
 |---|---|---|
 | Single title | "Persistent behavioral individuality and the limits of 3D niche inference in bats" | PASS, 80 characters |
-| Abstract | Evidence-ranked joint experimental/wild synthesis, explicit estimator boundaries | PASS, 245 words (draft) |
+| Abstract | Evidence-ranked joint experimental/wild synthesis, explicit estimator boundaries | PASS, 244 words (draft) |
 | Lay Summary | Nontechnical opening before title in Complete Anonymous Text | PASS, 65 words |
 | Main manuscript | Integrated draft includes Methods, Results, Discussion and 37 reconciled scholarly references | WORKING DRAFT |
 | Main anonymous review text | Page/line numbered coauthor proof generated; 22 A4 pages, 654 continuous numbered rendered lines | MACHINE PASS (human typography/claims review pending) |
