@@ -33,7 +33,7 @@ OUP AI policy: https://academic.oup.com/pages/for-authors/journals/preparing-and
 
 | Requirement | Current evidence | Status |
 |---|---|---|
-| Single title | "Persistent individuality without consistent additional vertical segregation in bats" | PASS, 83 characters |
+| Single title | "Persistent behavioral individuality and the limits of 3D niche inference in bats" | PASS, 80 characters |
 | Abstract | Evidence-ranked joint experimental/wild synthesis, explicit estimator boundaries | PASS, 245 words (draft) |
 | Lay Summary | Nontechnical opening before title in Complete Anonymous Text | PASS, 65 words |
 | Main manuscript | Integrated draft includes Methods, Results, Discussion and 37 reconciled scholarly references | WORKING DRAFT |
