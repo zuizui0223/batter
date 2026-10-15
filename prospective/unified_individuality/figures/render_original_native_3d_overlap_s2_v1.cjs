@@ -27,8 +27,8 @@ function renderNative3D(d){
   text(62,72,"FIGURE S2  |  HORIZONTAL vs. JOINT 3D OVERLAP",40,true);
   text(62,117,"Original 500-m cell analysis; native heights, session-median centered; NOT terrain corrected",24,false,muted);
   line(62,142,1708,142,rule,3);
-  text(62,206,"Source study / evaluable n",28,true);
-  text(346,206,"Session comparison",26,true);
+  text(62,206,"Study / n",28,true);
+  text(346,206,"Session pairing",26,true);
   text(950,206,"Probability overlap coefficient",28,true,ink,"middle");
   text(1685,206,"O_XY  /  O_XYZ",26,true,ink,"end");
   for(let k=0;k<=4;k++){const p=k*.2;const xx=x(p);line(xx,244,xx,1139,rule,2);text(xx,1189,p.toFixed(1),25,false,muted,"middle")}
