@@ -28,7 +28,8 @@
 <line x1="1680" y1="209" x2="1680" y2="675" stroke="#D9E2E8" stroke-width="1" stroke-dasharray="3,5"/>
 <rect x="50" y="188" width="1660" height="93" rx="8" fill="#F4F7F9" stroke="none" stroke-width="0"/>
 <text x="57" y="224" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="700" fill="#1F2D3B" text-anchor="start" >H. monstrosus</text>
-<text x="57" y="252" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="400" fill="#526679" text-anchor="start" >60s · endpoint excluded</text>
+<text x="57" y="247" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="500" fill="#526679" text-anchor="start" >V/S n=8 · I n=11</text>
+<text x="57" y="269" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#526679" text-anchor="start" >60s · endpoint excl.</text>
 <line x1="320" y1="231" x2="424.657183504684" y2="231" stroke="#287E86" stroke-width="4" />
 <circle cx="424.657183504684" cy="231" r="8" fill="#287E86" stroke="#FFFFFF" stroke-width="2"/>
 <text x="437.657183504684" y="219" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" fill="#287E86" text-anchor="start" >+0.042</text>
@@ -47,7 +48,8 @@
 <text x="1681" y="260" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#526679" text-anchor="end" >p+ = 0.9045</text>
 <rect x="50" y="309" width="1660" height="93" rx="8" fill="#FFFFFF" stroke="none" stroke-width="0"/>
 <text x="57" y="345" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="700" fill="#1F2D3B" text-anchor="start" >P. hastatus 2022</text>
-<text x="57" y="373" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="400" fill="#526679" text-anchor="start" >60s · endpoint excluded</text>
+<text x="57" y="368" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="500" fill="#526679" text-anchor="start" >V/S n=5 · I n=6</text>
+<text x="57" y="390" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#526679" text-anchor="start" >60s · endpoint excl.</text>
 <line x1="320" y1="352" x2="568.8993320349898" y2="352" stroke="#287E86" stroke-width="4" />
 <circle cx="568.8993320349898" cy="352" r="8" fill="#287E86" stroke="#FFFFFF" stroke-width="2"/>
 <text x="581.8993320349898" y="340" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" fill="#287E86" text-anchor="start" >+0.100</text>
@@ -66,7 +68,8 @@
 <text x="1681" y="381" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#526679" text-anchor="end" >p+ = 0.9186</text>
 <rect x="50" y="430" width="1660" height="93" rx="8" fill="#F4F7F9" stroke="none" stroke-width="0"/>
 <text x="57" y="466" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="700" fill="#1F2D3B" text-anchor="start" >P. hastatus 2023</text>
-<text x="57" y="494" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="400" fill="#526679" text-anchor="start" >600s · all space</text>
+<text x="57" y="489" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="500" fill="#526679" text-anchor="start" >V/S n=6 · I n=6</text>
+<text x="57" y="511" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#526679" text-anchor="start" >600s · all space</text>
 <line x1="320" y1="473" x2="512.2169796149269" y2="473" stroke="#287E86" stroke-width="4" />
 <circle cx="512.2169796149269" cy="473" r="8" fill="#287E86" stroke="#FFFFFF" stroke-width="2"/>
 <text x="525.2169796149269" y="461" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" fill="#287E86" text-anchor="start" >+0.077</text>
@@ -85,7 +88,8 @@
 <text x="1681" y="502" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#526679" text-anchor="end" >p+ = 0.0231</text>
 <rect x="50" y="551" width="1660" height="93" rx="8" fill="#FFFFFF" stroke="none" stroke-width="0"/>
 <text x="57" y="587" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="700" fill="#1F2D3B" text-anchor="start" >P. hastatus 2016</text>
-<text x="57" y="615" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="400" fill="#526679" text-anchor="start" >600s · endpoint excluded</text>
+<text x="57" y="610" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="500" fill="#526679" text-anchor="start" >V/S n=9 · I n=5</text>
+<text x="57" y="632" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#526679" text-anchor="start" >600s · endpoint excl.</text>
 <line x1="320" y1="594" x2="516.6252185434222" y2="594" stroke="#287E86" stroke-width="4" />
 <circle cx="516.6252185434222" cy="594" r="8" fill="#287E86" stroke="#FFFFFF" stroke-width="2"/>
 <text x="529.6252185434222" y="582" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" fill="#287E86" text-anchor="start" >+0.079</text>
@@ -137,6 +141,6 @@
 <text x="962" y="751" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="500" fill="#526679" text-anchor="middle" >S_rel (added segregation)</text>
 <text x="1468" y="751" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="500" fill="#526679" text-anchor="middle" >Excess centered-height deviation (m)</text>
 <line x1="58" y1="778" x2="1714" y2="778" stroke="#D9E2E8" stroke-width="1.5" />
-<text x="59" y="812" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="500" fill="#1F2D3B" text-anchor="start" >A/B overlap metrics algebraically coupled; B grey = 95% S permutation null; C grey = 95% dyad-bootstrap compatibility.</text>
+<text x="59" y="812" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="500" fill="#1F2D3B" text-anchor="start" >A/B n and C n differ in 3/4 panels; IDs are not cross-matched. B grey = S permutation null; C grey = dyad bootstrap.</text>
 <text x="59" y="841" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="400" fill="#526679" text-anchor="start" >Panel C: deviation mismatch, NOT physical gap. 2016 also uses 600s; 2023 all-space. Nulls/intervals differ.</text>
 </svg>
