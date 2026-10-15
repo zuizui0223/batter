@@ -14,12 +14,14 @@ from pathlib import Path
 HERE=Path(__file__).resolve().parent
 FIG=HERE/"figures"
 HIST=HERE/"source_recovery"/"co_use_centered_history"
+FINE=HERE/"source_recovery"/"fine500_history"/"result_summary_v1.json"
 ORIGINAL_MD=HIST/"COUSE_VERTICAL_SEPARATION_RESULT_V1.md"
 LEDGER=FIG/"FROZEN_CROSS_ESTIMAND_ELIGIBILITY_V1.json"
 SOURCE={
     FIG/"FROZEN_FIGURE_DATA_V1.json":"b3f7b20136d028021a3c33a43c256e40ce91f677",
     FIG/"ORIGINAL_NATIVE_3D_OVERLAP_SUMMARY_V1.json":"c1d37e42f72f59e5aba364daec9aef68b47778b6",
     ORIGINAL_MD:"d7b6054d95e7a6c27baf8e35a2f7377f628fe818",
+    FINE:"a2960b45a1a7ea1e0e3beebe6eb799a47f114bed",
 }
 IDS=("hypsignathus","phyllostomus_2022","phyllostomus_2023","phyllostomus_2016")
 SOURCE_LABELS=("Hypsignathus monstrosus","Phyllostomus hastatus 2022","P. hastatus 2023","P. hastatus 2016")
@@ -60,15 +62,17 @@ def original_md_rows() -> dict:
 def check():
     ledger=read_json(LEDGER)
     native=read_json(FIG/"ORIGINAL_NATIVE_3D_OVERLAP_SUMMARY_V1.json")["panels"]
+    fine=read_json(FINE)["panels"]
     figs=read_json(FIG/"FROZEN_FIGURE_DATA_V1.json")["terrain"]
     orig=original_md_rows()
-    assert ledger["schema_version"]==1
-    assert len(ledger["source"])==3
+    assert ledger["schema_version"]==2
+    assert len(ledger["source"])==4
     expected={x["path"]:x["git_blob_sha1"] for x in ledger["source"]}
     assert expected=={
       "figures/FROZEN_FIGURE_DATA_V1.json":SOURCE[FIG/"FROZEN_FIGURE_DATA_V1.json"],
       "figures/ORIGINAL_NATIVE_3D_OVERLAP_SUMMARY_V1.json":SOURCE[FIG/"ORIGINAL_NATIVE_3D_OVERLAP_SUMMARY_V1.json"],
       "historical_release/post_freeze_extensions/3d_niche_partition/COUSE_VERTICAL_SEPARATION_RESULT_V1.md":SOURCE[ORIGINAL_MD],
+      "historical_release/post_freeze_extensions/fine_place_kinematic_500m/result_summary_v1.json":SOURCE[FINE],
     }
     for f,originalsha in SOURCE.items():
         assert sha(f)==originalsha,(str(f),"source original Git blob drift")
@@ -79,9 +83,12 @@ def check():
         row=ledger["panels"][k]
         data=figs[k]
         n_geom=native[panel]["eligible_individuals"]
+        n_fine=fine[panel]["n"]
         n_i=data["couse_n_bats"]
         raw=orig[SOURCE_LABELS[k]]
         assert n_geom==row["native_or_terrain_V_S_evaluable_n"]
+        assert n_fine==row["fine500_place_speed_turn_usable_n"]
+        assert row["same_individual_id_set_verified_across_fine500_vs_geometry_vs_I"] is False
         assert n_i==row["fixed_event_couse_I_usable_n"]==raw["n"]
         assert data["couse_n_dyads"]==row["reported_I_dyads"]==raw["dyads"]
         assert data["couse_encounters"]==row["reported_I_matched_encounter_pairs"]==raw["encounters"]
@@ -96,8 +103,12 @@ def check():
     assert ledger["summary"]["geometry_bat_n_vector"]==[8,5,6,9]
     assert ledger["summary"]["co_use_bat_n_vector"]==[11,6,6,5]
     assert ledger["summary"]["species"]==2
+    assert ledger["summary"]["fine500_bat_n_vector"]==[19,23,11,9]
+    assert ledger["summary"]["fine500_vs_geometry_n_different_panel_count"]==3
+    assert ledger["summary"]["fine500_vs_couse_n_different_panel_count"]==4
     print("PASS exact original V/S vs corrected I numerical sources, 4 panels: 8/5/6/9 vs 11/6/6/5")
-    print("PASS 3/4 differing n and 1/4 equal but unverified identity; not matched biological units")
+    print("PASS 3 original sample frames: matched-place speed×turn n=19/23/11/9, native V/S n=8/5/6/9, co-use I n=11/6/6/5")
+    print("PASS 3/4 differing geometry/I n, 3/4 differing fine/geometry n, 4/4 differing fine/I n; no ID intersections reported")
     print("NOT ID-level linkage, per-bat V/I correlation, independent GPS/DEM rerun, or evidence of no physical avoidance")
 
 
