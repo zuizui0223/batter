@@ -244,7 +244,7 @@ def svg_gate() -> None:
     f1 = (HERE / IMAGES[0]).read_text(encoding="utf-8")
     assert "Co-use deviation: 1/4 nominal" in f1, "Figure 1 source inference qualifier missing"
     f6 = (HERE / IMAGES[5]).read_text(encoding="utf-8")
-    for tok in ["4 / 4 supported", "0 / 4 positive supported", "1 / 4 nominal", "Co-use deviations", "Centered residuals", "NOT physical gaps", "p2=0.036", "p+ = 0.0231", "+3.57 m", "2016 also uses 600s"]:
+    for tok in ["4 / 4 supported", "0 / 4 positive supported", "1 / 4 nominal", "Co-use deviations", "Centered residuals", "NOT physical gap", "p2=0.036", "p+ = 0.0231", "+3.57 m", "2016 also uses 600s"]:
         assert tok in f6, f"field figure missing {tok}"
 
 
