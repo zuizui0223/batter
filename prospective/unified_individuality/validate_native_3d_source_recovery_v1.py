@@ -80,11 +80,20 @@ def source_gate()->None:
         assert 0<=r["self_r3d"]<=1 and 0<=r["other_r3d"]<=1
         assert r["self_oxy"]>r["other_oxy"]
         assert r["self_ozxy"]>r["other_ozxy"]
+    assert git_blob((FIG/"ORIGINAL_TERRAIN_RELATIVE_3D_SOURCE_V1.json").read_bytes())=="08631a0dce61cc47e12b2d32642c46b5759fe872"
+    assert git_blob((FIG/"ORIGINAL_TERRAIN_PARTITIONING_CALIBRATION_V1.json").read_bytes())=="e969698e2a594d2eeca2631d7473e598a8a8f371"
+    terrain_source=json.loads((FIG/"ORIGINAL_TERRAIN_RELATIVE_3D_SOURCE_V1.json").read_text("utf8"))
+    terrain_cal=json.loads((FIG/"ORIGINAL_TERRAIN_PARTITIONING_CALIBRATION_V1.json").read_text("utf8"))
+    assert terrain_source["workflow"]["run_id"]==36946126004
+    for idx,key in enumerate(PANELS):
+        close(terrain_source["panels"][key]["S_rel"],EXPECTED_TERRAIN[idx],key+" exact source terrain")
+        assert terrain_source["panels"][key]["supported"] is True
+        assert abs(terrain_cal["panels"][key]["S_rel"]-EXPECTED_TERRAIN[idx])<.0001
     frozen=json.loads((FIG/"FROZEN_FIGURE_DATA_V1.json").read_text("utf8"))
     terrain=frozen["terrain"]
     assert [x["panel"] for x in terrain]==PANELS
     for row,value in zip(terrain,EXPECTED_TERRAIN):
-        close(row["s_rel"],value,row["panel"]+" S_rel")
+        assert abs(row["s_rel"]-value)<.0001,(row["panel"],row["s_rel"],value), "Figure summary intentionally rounded"
         assert row["v_supported"] is True
     assert not any(r["s_rel"]>0 and r["s_p_two_sided"]<=.05 for r in terrain)
     assert sum(bool(r["couse_supported"]) for r in terrain)==1
@@ -105,7 +114,7 @@ def figure_and_text_gate()->None:
         for anchor in ["Supplementary Table "+chapter+"10.","Supplementary Methods "+chapter+"15.","Supplementary Figure S2"]:
             assert anchor in item,(txt,anchor)
     for msg,t in [(main,"main"),(anon,"anonymous")]:
-        for k in ["Other-animal **O_XY** values were 0.322","0.309","0.190","0.181",
+        for k in ["between-individual **O_XY** values were 0.322","0.309","0.190","0.181",
                   "joint-gridded **O_XYZ**","not yet corrected for terrain"]:
             assert k.lower() in msg.lower(),(t,k)
     assert "source-closure" in si.lower()
