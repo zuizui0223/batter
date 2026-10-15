@@ -16,16 +16,16 @@ function renderNative3D(d){
   const W=1770,H=1400,plot0=540,plot1=1380;
   const x=v=>plot0+v/.8*(plot1-plot0);
   const esc=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
-  const out=['<svg xmlns="http://www.w3.org/2000/svg" width="177mm" height="140mm" viewBox="0 0 1770 1400" role="img" aria-label="Figure S2: original 500-m horizontal versus joint native 3D overlap, same animal versus other animal session pairs. Source descriptive values, not co-use or terrain-corrected metrics.">',
+  const out=['<svg xmlns="http://www.w3.org/2000/svg" width="177mm" height="140mm" viewBox="0 0 1770 1400" role="img" aria-label="Figure S2: original 500-m horizontal versus joint native 3D overlap, same animal versus other animal session pairs. Smoothed source-estimated values, not direct observed 3D co-use or terrain-corrected metrics.">',
     '<title>Figure S2. Original horizontal versus three-dimensional probability overlap</title>',
-    '<desc>Four original eligible bat panels, each with same-animal and other-animal session comparisons. Hollow markers show O_XY and filled markers show O_XYZ, both source pair-and-individual averaged. The reduction when native session-centered altitude is added is shown by the connecting line. Raw source result, not calibrated partitioning inference or real-time encounter.</desc>',
+    '<desc>Four original eligible bat panels, each with same-animal and other-animal session comparisons. Hollow markers show O_XY and filled markers show O_XYZ, both source pair-and-individual averaged. The reduction when native session-centered altitude is added is shown by the connecting line. Alpha=0.5 per-cell pseudocount smoothing in 10 height bins; estimated overlap, not physical XY-height co-occupancy or partitioning inference.</desc>',
     '<rect width="1770" height="1400" fill="#fff"/>'];
   const ink="#263a46",muted="#657785",sea="#236879",rule="#d5dfe5",bg="#f3f7f9";
   const text=(xx,yy,value,size=25,strong=false,color=ink,anchor="start")=>out.push(`<text x="${xx}" y="${yy}" font-family="Arial,Helvetica,sans-serif" font-size="${size}" font-weight="${strong?700:400}" text-anchor="${anchor}" fill="${color}">${esc(value)}</text>`);
   const line=(x1,y1,x2,y2,color=rule,width=2)=>out.push(`<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${color}" stroke-width="${width}"/>`);
   const circle=(xx,yy,r,fill,stroke=sea,w=3)=>out.push(`<circle cx="${xx}" cy="${yy}" r="${r}" fill="${fill}" stroke="${stroke}" stroke-width="${w}"/>`);
   text(62,72,"FIGURE S2  |  HORIZONTAL vs. JOINT 3D OVERLAP",40,true);
-  text(62,117,"Original 500-m cell analysis; native heights, session-median centered; NOT terrain corrected",24,false,muted);
+  text(62,117,"Original 500-m cells; native centered heights; 10 bins smoothed (alpha=0.5); NOT terrain corrected",24,false,muted);
   line(62,142,1708,142,rule,3);
   text(62,206,"Study / n",28,true);
   text(346,206,"Session pairing",26,true);
@@ -53,7 +53,7 @@ function renderNative3D(d){
   line(plot0,1139,plot1,1139,ink,3);
   circle(73,1261,11,"#ffffff",sea,4); text(96,1271,"Open = horizontal O_XY",26);
   circle(552,1261,11,sea,"#fff",2);text(575,1271,"Filled = joint 3D O_XYZ",26);
-  text(65,1330,"Source-evaluable session comparisons; 4 panels, only 2 species. Values are descriptive, not CIs or p-values.",22,false,muted);
+  text(65,1330,"Joint O_XYZ is alpha=0.5 smoothed; NOT observed 3D co-use, CIs or p-values. Four panels, only two species.",22,false,muted);
   text(65,1371,"Vertical effect must be tested separately: terrain-relative S_rel (0/4 positive) and co-use I (1/4 positive).",22,false,muted);
   out.push("</svg>");
   return out.join("\n")+"\n";
