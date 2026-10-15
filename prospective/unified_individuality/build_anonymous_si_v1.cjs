@@ -40,6 +40,12 @@ The detailed reproducibility contracts and legally redistributable data-derived 
      .replace(/\bBE\b/g,"experimental")
      .replace(/the \[Figure 5B\]\(figures\/original_jae\/figure6_individual_centered_shape_profiles.png\)/g,"Figure 5B")
      .replace(/\[ORIGINAL_PROFILE_RECOVERY_RECEIPT_V1.md\]\(ORIGINAL_PROFILE_RECOVERY_RECEIPT_V1.md\)/g,"the source-profile archive receipt");
+  // Repair grammatical collisions caused by metadata anonymization; leave scientific values untouched.
+  s=s.replace(/original tracking 500-m native-height tracking original archived execution/g,
+              "original archived 500-m native-height tracking execution")
+     .replace(/historical subsequent terrain workflow the later original terrain-source state/g,
+              "the subsequent historical terrain source-control state")
+     .replace(/the later later frozen tracking source/g,"the later frozen tracking source");
   const header="## Supplementary publication and data-provenance boundary";
   const position=s.indexOf(header);
   if(position<0)throw Error("No licensing section");
@@ -58,7 +64,7 @@ The present study involved no new handling or manipulation of animals. Ethical o
   for(const key of ["zuizui0223","release/jae","prospective/public-causal-synthesis","JAE v0.4.0 rc2","manuscript SHA"]){
      if(s.includes(key))throw Error("Source identity leak: "+key);
   }
-  for(const key of ["Supplementary Table S1","Supplementary Table S7","Supplementary Methods S2","0.0362","0.0231","post-outcome","[ANONYMIZED_REVIEW_ARCHIVE_URL]"]){
+  for(const key of ["Supplementary Table S1","Supplementary Table S7","Supplementary Table S13","Supplementary Methods S2","0.0362","0.0231","post-outcome","terrain-relative proxy","[ANONYMIZED_REVIEW_ARCHIVE_URL]"]){
     if(!s.includes(key))throw Error("Missing mandatory source/claim: "+key);
   }
   return s;
