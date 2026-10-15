@@ -16,6 +16,15 @@ Rather than silently rebuilding lost scripts from memory, the unified-manuscript
 
 The recovered tree includes four source-specific *Phyllostomus*/*Hypsignathus* contracts, original terrain DEM preflight checksums, run-driver, both dynamically imported 3D geometry modules, calibration/tag-offset/source preprocessing scripts, the `batter.analysis` package and historical `pyproject.toml`.
 
+## Recovery outcome and exact frozen-branch comparison (verified)
+
+The original historical code-only closure workflow [run **38685340549**](https://github.com/zuizui0223/batter/actions/runs/38685340549) **passed** source retrieval, 21 original Git blob SHA checks, static Python/JSON/contract checks, ZIP production and independent network-free ZIP/source revalidation. The actual artifact was independently unpacked and its 21 archived files checked again against all original Git blob SHAs.
+
+- **Verified portable source-only ZIP:** `terrain_original_3d_source_closure_v1.zip`, **61,398 bytes**, SHA256 `27e1f7cd44e3aa367f150aef8f608a7cec35a73a8ef922c0f2950d0059f13ce1`. The GitHub Actions artifact wraps this ZIP in an outer transport archive.
+- **Later JAE rc2 tree retains identical Git blobs** for the terrain driver `run_original_terrain_geometry_v1.py`, the terrain contract, the DEM-preflight receipt and five source-loading/estimator scripts (verified file by file).
+- The same rc2 tree **lacks exactly three required same-directory original code/contract files** checked here: `run_v1.py`, `run_external_geometry_v1.py`, and `contract_v1.json`. All three exist at the terrain source success commit, and their identical bytes are included in the recovered ZIP.
+- This demonstrates **historical source-code packaging closure**. It does **not** demonstrate that the full GPS/DEM numerical analysis reruns to the same point estimates: original source bitstreams, geospatial environmental tiles, redistribution permissions, runtime dependency versions and the original workflow's generated outputs are separate requirements.
+
 ## What was (and was not) independently checked
 
 **Now checkable from original version-controlled historical bytes:**
