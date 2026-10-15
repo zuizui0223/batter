@@ -2,11 +2,11 @@
 
 **NOT FOR JOURNAL SUBMISSION UNTIL HUMAN AUTHORS COMPLETE ALL BRACKETED APPROVAL FIELDS**  
 **Date:** 14 October 2026  
-**Target manuscript:** Persistent individuality without consistent additional vertical segregation in bats
+**Target manuscript:** Persistent behavioral individuality and the limits of 3D niche inference in bats
 
 Dear Editor,
 
-We would like to submit our manuscript, **“Persistent individuality without consistent additional vertical segregation in bats,”** for consideration as an original research article in *Behavioral Ecology*.
+We would like to submit our manuscript, **“Persistent behavioral individuality and the limits of 3D niche inference in bats,”** for consideration as an original research article in *Behavioral Ecology*.
 
 The paper asks a biological question that studies of repeatability and individual specialization sometimes leave implicit: **when does persistent individual flight-height organization accompany added vertical segregation, beyond differences already present in horizontal use?** We integrate source-specific reanalyses of publicly archived sensory and navigation experiments, developmental and task-transfer recordings, and repeated three-dimensional field tracking. These are separately analysed source programmes with distinct source-specific null models; **we do not assume all source panels contain different animals**. In particular, two literal tracking-animal identifiers recur across the 2016/2022 *P. hastatus* panels from La Gruta, and a verified cross-year PIT-tag identity match is still outstanding. We do not pool their effect sizes, treat all panel-indexed profiles as independent animal replication, or claim one experimentally measured neural state directly generated wild altitude use.
 
