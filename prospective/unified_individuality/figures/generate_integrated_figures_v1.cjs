@@ -165,7 +165,7 @@ function plotAll(d) {
     f.txt(962,751,"S_rel (added segregation)",16,500,C.muted,"middle");
     f.txt(1468,751,"Excess centered-height deviation (m)",16,500,C.muted,"middle");
     f.line(58,778,1714,778,C.rule,1.5);
-    f.txt(59,812,"B: grey intervals = central 95% of label-permutation S null; C: grey intervals = dyad-bootstrap 95% compatibility intervals.",16,500,C.ink);
+    f.txt(59,812,"A/B overlap metrics algebraically coupled; B grey = 95% S permutation null; C grey = 95% dyad-bootstrap compatibility.",16,500,C.ink);
     f.txt(59,841,"Panel C: deviation mismatch, NOT physical gap. 2016 also uses 600s; 2023 all-space. Nulls/intervals differ.",15,400,C.muted);
     out["FIGURE_6_FIDELITY_VS_PARTITIONING_V1.svg"]=f.end();
   }
