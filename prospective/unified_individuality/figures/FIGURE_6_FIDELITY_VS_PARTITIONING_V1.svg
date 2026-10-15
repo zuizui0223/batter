@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1780" height="866" viewBox="0 0 1780 866" role="img" aria-label="Repeatable strategies without obligatory vertical separation">
-<title>Repeatable strategies without obligatory vertical separation</title><desc>Terrain-relative individual fidelity is supported 4/4, positive added segregation 0/4, synchronous extra co-use separation 1/4. Null envelopes and dyad intervals distinguished.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1780" height="866" viewBox="0 0 1780 866" role="img" aria-label="Repeatable centered-height use vs added segregation">
+<title>Repeatable centered-height use vs added segregation</title><desc>Centered relative-height fidelity: original 4/4; positive added S_rel: 0/4; co-use residual-deviation dissimilarity: 1/4 nominal. Not physical between-bat height separation.</desc>
 <rect width="1780" height="866" fill="#FFFFFF"/>
-<text x="46" y="61" font-family="Arial,Helvetica,sans-serif" font-size="32" font-weight="700" fill="#1F2D3B" text-anchor="start" >Repeatable strategies without obligatory vertical separation</text>
+<text x="46" y="61" font-family="Arial,Helvetica,sans-serif" font-size="32" font-weight="700" fill="#1F2D3B" text-anchor="start" >Repeatable centered-height use vs added segregation</text>
 <text x="47" y="93" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#526679" text-anchor="start" >Two tropical bat species · four eligible tracking panels · post-outcome diagnostic family</text>
 <line x1="46" y1="110" x2="1734" y2="110" stroke="#D9E2E8" stroke-width="2" />
 <rect x="294" y="126" width="422" height="64" rx="8" fill="#EEF6F5" stroke="#D9E2E8" stroke-width="1"/>
@@ -11,8 +11,8 @@
 <text x="781" y="153" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="700" fill="#245473" text-anchor="start" >B   Added segregation</text>
 <text x="781" y="179" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="500" fill="#1F2D3B" text-anchor="start" >S_rel · 0 / 4 positive supported</text>
 <rect x="1231" y="126" width="473" height="64" rx="8" fill="#F4F7F9" stroke="#D9E2E8" stroke-width="1"/>
-<text x="1250" y="153" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="700" fill="#1F2D3B" text-anchor="start" >C   Synchronous co-use</text>
-<text x="1250" y="179" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="500" fill="#1F2D3B" text-anchor="start" >Excess metres · 1 / 4 supported</text>
+<text x="1250" y="153" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="700" fill="#1F2D3B" text-anchor="start" >C   Co-use deviations</text>
+<text x="1250" y="179" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="500" fill="#1F2D3B" text-anchor="start" >Centered residuals · 1 / 4 nominal</text>
 <line x1="320" y1="209" x2="320" y2="675" stroke="#A0B3BE" stroke-width="2" stroke-dasharray="3,5"/>
 <line x1="445" y1="209" x2="445" y2="675" stroke="#D9E2E8" stroke-width="1" stroke-dasharray="3,5"/>
 <line x1="570" y1="209" x2="570" y2="675" stroke="#D9E2E8" stroke-width="1" stroke-dasharray="3,5"/>
@@ -135,8 +135,8 @@
 <line x1="1393.3333333333333" y1="681" x2="1393.3333333333333" y2="634" stroke="#D9E2E8" stroke-width="1" stroke-dasharray="3,5"/>
 <text x="505" y="751" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="500" fill="#526679" text-anchor="middle" >V_rel (terrain-relative fidelity)</text>
 <text x="962" y="751" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="500" fill="#526679" text-anchor="middle" >S_rel (added segregation)</text>
-<text x="1468" y="751" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="500" fill="#526679" text-anchor="middle" >Co-use excess above time-shift null (m)</text>
+<text x="1468" y="751" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="500" fill="#526679" text-anchor="middle" >Excess centered-height deviation (m)</text>
 <line x1="58" y1="778" x2="1714" y2="778" stroke="#D9E2E8" stroke-width="1.5" />
 <text x="59" y="812" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="500" fill="#1F2D3B" text-anchor="start" >B: grey intervals = central 95% of label-permutation S null; C: grey intervals = dyad-bootstrap 95% compatibility intervals.</text>
-<text x="59" y="841" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="400" fill="#526679" text-anchor="start" >Neither interval is a formal equivalence test. Co-use windows differ; 2023 is all-space, while 2016 also uses 600s but excludes endpoints.</text>
+<text x="59" y="841" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="400" fill="#526679" text-anchor="start" >Panel C: deviation mismatch, NOT physical gap. 2016 also uses 600s; 2023 all-space. Nulls/intervals differ.</text>
 </svg>
