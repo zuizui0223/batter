@@ -86,6 +86,13 @@ Calderón-Capote et al. 2025 already quantified horizontal foraging-area overlap
 
 The original four eligible panels show **same-individual horizontal O_XY 0.511–0.619 versus other-individual O_XY 0.202–0.334** (descriptive source-weighted means). No horizontal partitioning equivalence or absence test was passed or conducted. Moreover, O_XYZ cannot exceed O_XY for probability intersections on the same pairwise grid, so descriptive 2D-to-3D overlap reductions alone cannot prove **additional individual vertical segregation**. The valid negative-scope claim is **no consistently supported positive terrain-relative S_rel in these four source panels**, not a demonstrated absence of horizontal partitioning or trophic differentiation. See `HORIZONTAL_VS_ADDED_VERTICAL_SEGREGATION_CLAIM_AUDIT_V1.md`.
 
+## Recovered original GPS/reference/DEM input inventory — 2026-10-15
+
+- [x] The *historical contracts* declare 4 GPS event bitstreams, 4 reference/tag files and 2 unique gzipped terrain tiles with exact source size/hash checks; the preflight receipt records 240,042 coordinate rows and 521 sessions. All four contract Git blobs match the original source-only closure manifest.
+- [x] A deterministic offline replay-input verifier is in CI; it can additionally check all 21 restored Git source blobs or stream/check input files **only when supplied by an authorized human operator**.
+- [ ] **Hard stop still open:** original GPS/DEM binary inputs have **not** been independently retrieved/checksum verified in this integration, source-specific access/redistribution rights are unconfirmed, historical environment versions are not fully reproduced, and end-to-end numerical output replay has not passed. No current journal submission can claim independent raw-data reproducibility.
+- The derived manifest is `source_recovery/terrain_replay_input_manifest_v1.json` and verifier is `source_recovery/verify_terrain_replay_input_manifest_v1.py`, both strictly separated from actual raw input storage.
+
 ## Historical 500-m native 3D results and reproducibility closure — 2026-10-15
 
 The original source-run native-height 500-m spatial-overlap summary was recovered by exact historical Git blob identity. The source XY-versus-joint-XYZ values (Table S10, Figure S2) differ from 1D profile-shape S1, terrain-relative segregation S_rel, and synchronous co-use I. Native added S was +0.103 in Hypsignathus and +0.130 in P. hastatus 2016 but terrain-adjusted S_rel was −0.0158 and +0.0289; neither supports the original positive-S_rel permutation test. Original field fidelity V_rel remained supported 4/4.
