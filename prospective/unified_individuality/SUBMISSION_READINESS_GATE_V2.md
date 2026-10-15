@@ -7,9 +7,9 @@ This is the alternative **one-paper** route. It is **not** a third article that 
 
 ## Central inference to preserve
 
-Behavioral individuality, the realized trajectory, and ecological partitioning are separate questions. Multiple acute laboratory contexts retain correct-individual correspondence; a fixed coarse movement representation transfers where detailed geometry is unsupported. In post-outcome wild analyses of four structurally evaluable tracking panels (two species), terrain-relative vertical fidelity is supported 4/4, positive added segregation 0/4 and synchronous co-use excess 1/4. This combination is not evidence of a shared laboratory-to-field cause; the frozen scalar carrier-to-field bridge is PASS/PASS/FAIL/structural STOP, overall FAIL 2/4 against >=3/4 required.
+Behavioral individuality, the realized trajectory, and ecological partitioning are separate questions. Multiple acute laboratory contexts retain correct-individual correspondence; a fixed coarse movement representation transfers where detailed geometry is unsupported. In post-outcome wild analyses of four structurally evaluable tracking panels (two species), terrain-relative centered-distribution fidelity is source-supported 4/4, positive added centered-shape segregation 0/4 and a co-use *centered-height-deviation difference* is nominally positive 1/4 (not a physical altitude gap). This combination is not evidence of a shared laboratory-to-field cause; the frozen scalar carrier-to-field bridge is PASS/PASS/FAIL/structural STOP, overall FAIL 2/4 against >=3/4 required.
 
-**Primary ecological caveat:** three *Phyllostomus hastatus* study years are not three species; the 2023 co-use positive result uses 600 seconds/all-space, while 2016 uses 600 seconds/endpoint-excluded and the first two panels use 60 seconds/endpoint-excluded. The 95% positive dyad-bootstrap upper bounds in the three non-supporting panels are compatibility diagnostics, **not** equivalence tests.
+**Primary ecological caveat:** three *Phyllostomus hastatus* study years are not three species; the 2023 co-use positive result uses 600 seconds/all-space, while 2016 uses 600 seconds/endpoint-excluded and the first two panels use 60 seconds/endpoint-excluded. The 95% positive dyad-bootstrap upper bounds in the three non-supporting panels concern only **session-centered deviation dissimilarity**, not the physical metre gap between bats or formal equivalence margins.
 
 ## Official Behavioral Ecology requirements, verified against 2026 journal information
 
@@ -34,8 +34,8 @@ OUP AI policy: https://academic.oup.com/pages/for-authors/journals/preparing-and
 | Requirement | Current evidence | Status |
 |---|---|---|
 | Single title | "Persistent individuality without consistent additional vertical segregation in bats" | PASS, 83 characters |
-| Abstract | Original two-paper structure rewritten into one evidence-ranked paper | PASS, 215 words |
-| Lay Summary | Nontechnical opening before title in Complete Anonymous Text | PASS, 73 words |
+| Abstract | Evidence-ranked joint experimental/wild synthesis, explicit estimator boundaries | PASS, 245 words (draft) |
+| Lay Summary | Nontechnical opening before title in Complete Anonymous Text | PASS, 65 words |
 | Main manuscript | Integrated draft includes Methods, Results, Discussion and 37 reconciled scholarly references | WORKING DRAFT |
 | Main anonymous review text | Page/line numbered coauthor proof generated; 22 A4 pages, 654 continuous numbered rendered lines | MACHINE PASS (human typography/claims review pending) |
 | Main figures | Six main figure claims: Figures 1,2,3,4,5,6; Figure 5 has one A+B plate | SVG reproduction PASS |
@@ -88,6 +88,13 @@ Calderón-Capote et al. 2025 already quantified horizontal foraging-area overlap
 - [x] Source GPS heights were ellipsoid-referenced for H and P2023 but MSL-referenced for P2022/P2016. The source runner interpolated original DEM elevations **at each fix** before assigning 500-m horizontal cells; do not call 500 m the DEM pixel size or the derived proxy measured canopy/ground clearance.
 - [x] Larger original positive native S reduced from +0.1029 to −0.0158 (H) and +0.1304 to +0.0289 (P2016), while V and S changes across all four panels had mixed directions. The processing contrast is not a new null-calibrated topographic effect.
 - [ ] **Still open:** vertically harmonized reference/calibration, GPS sensor errors, actual resource height/canopy and physical above-ground flight rules. These cannot be resolved by an archival metadata or statistical package-only audit.
+
+## Original estimator physical-space interpretation stop — 2026-10-16
+
+- [x] Historical native/terrain 500-m O_XYZ and O_Z_given_XY derive from **α=0.5-smoothed conditional probabilities across ten session-centered vertical bins in each occupied XY cell**. The original pair gate requires 50 fixes per session **summed over all shared XY cells**, not 50 fixes per cell. Original source byte identity and synthetic-only support counterexamples are verified in `SMOOTHED_3D_OVERLAP_SUPPORT_AUDIT_V1.md` and `validate_smoothing_support_boundary_v1.py`.
+- [x] The corrected original co-use runner and contract from original successful workflow 36953712597 are archived byte-identically, showing `z_rel = (GPS − DEM) − session_median(GPS − DEM)` and encounter metric `abs(z_rel_a − z_rel_b)`. The source 2023 **+3.57 m** is *excess session-centered residual difference over the phase-shift null*, **not a physical inter-bat altitude distance**; the positive 95% compatibility endpoints likewise apply only to that estimand.
+- [x] Original source inference remains recorded exactly (V_rel 4/4 nominal, S_rel 0/4 positive, I 1/4 nominal, 12-test Holm V_rel 3/4 and I 0/4). No source p-value or bat observation changed. Figure 1, Figure 6, Figure S2 and both SI copies now distinguish inferred relative-height organization from actual physical co-occupation or avoidance.
+- [ ] **Hard stop:** physical absolute-altitude segregation, true shared 3D habitat volume, synchronised avoidance and sensitivity of the original source outcomes to changing α, per-cell sampling density or absolute/session-centered altitude reference have **not** been independently tested with licensed GPS/DEM records. Do not claim them in the title, abstract, figures, editor letter or reviewers' PDF.
 
 ## Multiplicity-sensitivity review gate — 2026-10-15
 
