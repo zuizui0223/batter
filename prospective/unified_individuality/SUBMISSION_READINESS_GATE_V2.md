@@ -96,13 +96,15 @@ Calderón-Capote et al. 2025 already quantified horizontal foraging-area overlap
 - [x] Title and 65-word Lay Summary have been narrowed to focus on measurable behavioral individuality and **limits of 3D niche inference** rather than absence of actual physical vertical segregation. Main/SI Table S14/Figure 6 source claims must clearly show **different but algebraically coupled estimands**, not independent discoveries.
 - [ ] Journal peer-review gate: coauthors must judge whether a synthesis of separate experiment families and wild statistical estimands is sufficiently **one biological contribution** when the prospective laboratory-to-field carrier is not identified. If not, preserve distinct manuscript/publication routes with source overlap disclosure.
 
-## Three distinct biological sample frames — field inference stop 2026-10-16
+## Cross-assay bat-ID overlap recovered; biological linkage still untested — 2026-10-16
 
-- [x] Original fine 500-m place×speed×turn test eligible bat n: **19/23/11/9**; 500-m native/terrain joint V/S n: **8/5/6/9**; fixed-event co-use I n: **11/6/6/5**, in H/P2022/P2023/P2016 order. The original source result tables are checked byte-for-byte in an offline validator.
-- [x] **Three of four** panel geometry n differ from co-use n; **three of four** fine/geometry n differ; **four of four** fine/co-use n differ. Equal n in one panel (P2023) does not prove common bat identities. Original aggregate result receipts do not provide an ID crosswalk or an individual-level V/I joint association.
-- [x] Manuscript, SI Table S15, Figure 6 labels/legend, cover letter and alt text explicitly report **different eligibility and biological n**. The four study-year labels are not proof of a matched same-bat progression from height-use persistence to encounter response.
-- [ ] **Still open:** verified individual-ID intersections and any source-appropriate within-animal causal relation among the three field assays. Do not claim this existing integrated comparison establishes that a given animal with strong height fidelity avoids or does not avoid conspecifics.
-- [x] Evidence audit: CROSS_ESTIMAND_ELIGIBILITY_SCOPE_AUDIT_V1.md; source-pinned exact table FROZEN_CROSS_ESTIMAND_ELIGIBILITY_V1.json; independent original-blob validator validate_cross_estimand_eligibility_v1.py.
+- [x] Three original eligible bat frames remain fine500 19/23/11/9, 500-m V/S 8/5/6/9, and co-use I 11/6/6/5 for H/P2022/P2023/P2016.
+- [x] **16/16 original successful GitHub Actions result artifact ZIP digests verified.** Direct cohort-qualified source IDs show all V/S bats belong to the fine500 set, while original V/S and I overlap in **5/3/5/5 individual records**. Native/terrain V/S ID sets match exactly; even P2023 V/S n6 and I n6 share only five members.
+- [x] Figure 6 now labels both n and verified shared bat-ID counts. SI Table S15, the main text, alt text and cover letter have been updated. No bat identifiers, source tracking files or DEM are republished.
+- [ ] No original individual-level V-score-to-I-response association was fitted: overlap of IDs does **not** demonstrate physical separation, avoidance or its absence.
+- [ ] Original artifact ZIPs currently expire in December 2026. The aggregate-only public manifest preserves hashes/counts but not the individual membership lists. Permanent retention of ID-bearing outputs requires appropriate source permissions.
+
+Audit: CROSS_ESTIMAND_ELIGIBILITY_SCOPE_AUDIT_V1.md, figures/FROZEN_CROSS_ESTIMAND_ELIGIBILITY_V1.json (schema 3), and validate_cross_estimand_eligibility_v1.py (CI metadata gate plus optional authorized-original-ZIP recheck).
 
 ## Original estimator physical-space interpretation stop — 2026-10-16
 
