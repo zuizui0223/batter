@@ -32,11 +32,9 @@
       "reported_I_matched_encounter_pairs": 883,
       "primary_time_tolerance_s": 60,
       "primary_scope": "endpoint_excluded",
-      "same_individual_id_set_verified": false,
       "individual_level_joint_V_S_I_analysis_reported": false,
       "n_co_use_minus_n_geometry": 3,
       "fine500_place_speed_turn_usable_n": 19,
-      "same_individual_id_set_verified_across_fine500_vs_geometry_vs_I": false,
       "cohort_qualified_ID_sets_crosschecked_in_original_artifacts": true,
       "native_and_terrain_geometry_identical_ID_sets": true,
       "actual_ID_sets_equal_geometry_and_I": false,
@@ -84,7 +82,8 @@
           "artifact_zip_sha256": "3cae11ab2ee37b966d7d3798f8dc8a370e10ae1e7f449aa896869a0570e3e753",
           "expires_at": "2026-12-31T02:01:52Z"
         }
-      ]
+      ],
+      "full_eligible_animal_sets_are_identical_across_three_assays": false
     },
     {
       "panel": "phyllostomus_2022",
@@ -95,11 +94,9 @@
       "reported_I_matched_encounter_pairs": 347,
       "primary_time_tolerance_s": 60,
       "primary_scope": "endpoint_excluded",
-      "same_individual_id_set_verified": false,
       "individual_level_joint_V_S_I_analysis_reported": false,
       "n_co_use_minus_n_geometry": 1,
       "fine500_place_speed_turn_usable_n": 23,
-      "same_individual_id_set_verified_across_fine500_vs_geometry_vs_I": false,
       "cohort_qualified_ID_sets_crosschecked_in_original_artifacts": true,
       "native_and_terrain_geometry_identical_ID_sets": true,
       "actual_ID_sets_equal_geometry_and_I": false,
@@ -147,7 +144,8 @@
           "artifact_zip_sha256": "9d096a7189d122ae0191a3060d82c5a83c9ef51bc122b6b0d2bda56c3aeb6bc6",
           "expires_at": "2026-12-31T02:01:52Z"
         }
-      ]
+      ],
+      "full_eligible_animal_sets_are_identical_across_three_assays": false
     },
     {
       "panel": "phyllostomus_2023",
@@ -158,11 +156,9 @@
       "reported_I_matched_encounter_pairs": 679,
       "primary_time_tolerance_s": 600,
       "primary_scope": "all_space",
-      "same_individual_id_set_verified": false,
       "individual_level_joint_V_S_I_analysis_reported": false,
       "n_co_use_minus_n_geometry": 0,
       "fine500_place_speed_turn_usable_n": 11,
-      "same_individual_id_set_verified_across_fine500_vs_geometry_vs_I": false,
       "cohort_qualified_ID_sets_crosschecked_in_original_artifacts": true,
       "native_and_terrain_geometry_identical_ID_sets": true,
       "actual_ID_sets_equal_geometry_and_I": false,
@@ -210,7 +206,8 @@
           "artifact_zip_sha256": "4e0ecee59e8c4269b1b93fd062cddb0fe87a8b4d0b0c4b18edf186d75a4df80a",
           "expires_at": "2026-12-31T02:01:52Z"
         }
-      ]
+      ],
+      "full_eligible_animal_sets_are_identical_across_three_assays": false
     },
     {
       "panel": "phyllostomus_2016",
@@ -221,11 +218,9 @@
       "reported_I_matched_encounter_pairs": 16096,
       "primary_time_tolerance_s": 600,
       "primary_scope": "endpoint_excluded",
-      "same_individual_id_set_verified": false,
       "individual_level_joint_V_S_I_analysis_reported": false,
       "n_co_use_minus_n_geometry": -4,
       "fine500_place_speed_turn_usable_n": 9,
-      "same_individual_id_set_verified_across_fine500_vs_geometry_vs_I": false,
       "cohort_qualified_ID_sets_crosschecked_in_original_artifacts": true,
       "native_and_terrain_geometry_identical_ID_sets": true,
       "actual_ID_sets_equal_geometry_and_I": false,
@@ -273,13 +268,13 @@
           "artifact_zip_sha256": "124bc1c7ee5042f745bd7925b115c4e9a344a16736d91442c4dc0ca9b57796ce",
           "expires_at": "2026-12-31T02:01:52Z"
         }
-      ]
+      ],
+      "full_eligible_animal_sets_are_identical_across_three_assays": false
     }
   ],
   "summary": {
     "all_four_panel_eligible_n_identical": false,
     "count_panels_with_different_n": 3,
-    "count_panels_with_same_n_but_unverified_identity": 1,
     "geometry_bat_n_vector": [
       8,
       5,
@@ -331,7 +326,8 @@
     ],
     "geometry_and_co_use_panel_indexed_overlap_total": 18,
     "all_three_panel_indexed_overlap_total": 18,
-    "ID_level_effect_linkage_or_association_tested": false
+    "ID_level_effect_linkage_or_association_tested": false,
+    "count_panels_equal_VS_and_I_n_but_different_ID_sets": 1
   },
   "claim_boundary": [
     "The originally successful per-individual and dyad-result artifact ZIPs, unlike the aggregate summaries, do permit verified within-panel source-cohort-qualified ID intersections.",
