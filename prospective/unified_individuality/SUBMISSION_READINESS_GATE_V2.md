@@ -96,6 +96,13 @@ Calderón-Capote et al. 2025 already quantified horizontal foraging-area overlap
 - [x] Title and 65-word Lay Summary have been narrowed to focus on measurable behavioral individuality and **limits of 3D niche inference** rather than absence of actual physical vertical segregation. Main/SI Table S14/Figure 6 source claims must clearly show **different but algebraically coupled estimands**, not independent discoveries.
 - [ ] Journal peer-review gate: coauthors must judge whether a synthesis of separate experiment families and wild statistical estimands is sufficiently **one biological contribution** when the prospective laboratory-to-field carrier is not identified. If not, preserve distinct manuscript/publication routes with source overlap disclosure.
 
+## Cross-assay dyad support and original artifact retention — 2026-10-17
+
+- [x] From the original corrected co-use dyad lists and geometry-eligible IDs, the number of co-use **dyads with both partners V/S-eligible** is **9/22, 3/10, 5/8 and 8/8** for H/P2022/P2023/P2016 (total **25 of 48 original dyads**). Exactly one V/S-eligible bat occurred in 20 further dyads and neither in three. Matched event counts from the both-eligible dyads were **592/883, 284/347, 650/679 and 16,096/16,096**; these are **repeated observations**, not independent biological n.
+- [x] A public aggregate-only table (figures/FROZEN_SHARED_GEOMETRY_COUSE_DYAD_SUPPORT_V1.json) and original-source SHA-audited verifier preserve the support arithmetic. The same validator has an optional authorized-local-original-ZIP mode; no source animal IDs, dyad-identifying rows or original source archives are included in the PR.
+- [ ] **Still open:** any original phase-shift-null or dyad-bootstrap test **restricted to those dyads**, and any individual-level V-versus-I association. Source full-panel co-use p-values and 95% compatibility intervals **must not be attributed to the subset of 25 dyads** or used as a physical altitude-gap test.
+- [ ] **Time-sensitive reproducibility governance:** original 16 ID-bearing GitHub ZIPs expire beginning **2026-12-28** (source workflow metadata); rights-first retention requires per-Movebank-DOI license review, author/collaboration decisions and authorized access-controlled stewardship before source artifacts expire. See SOURCE_ARTIFACT_RETENTION_AND_RIGHTS_GATE_V1.md. GitHub changing retention settings does not retroactively extend existing ZIPs.
+
 ## Cross-assay bat-ID overlap recovered; biological linkage still untested — 2026-10-16
 
 - [x] Three original eligible bat frames remain fine500 19/23/11/9, 500-m V/S 8/5/6/9, and co-use I 11/6/6/5 for H/P2022/P2023/P2016.
