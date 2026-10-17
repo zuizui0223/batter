@@ -27,6 +27,7 @@ HIST = HERE / "source_recovery" / "co_use_centered_history"
 FINE = HERE / "source_recovery" / "fine500_history" / "result_summary_v1.json"
 COUSE = HIST / "COUSE_VERTICAL_SEPARATION_RESULT_V1.md"
 LEDGER = FIG / "FROZEN_CROSS_ESTIMAND_ELIGIBILITY_V1.json"
+DYAD_LEDGER = FIG / "FROZEN_SHARED_GEOMETRY_COUSE_DYAD_SUPPORT_V1.json"
 ORIG = {
     FIG / "FROZEN_FIGURE_DATA_V1.json":
         "b3f7b20136d028021a3c33a43c256e40ce91f677",
@@ -166,6 +167,57 @@ def metadata_gate() -> dict:
     return ledger
 
 
+def dyad_support_gate(ledger: dict) -> None:
+    """Validate public counts without reading original identifiable source ZIPs."""
+    d = read_json(DYAD_LEDGER)
+    assert d["schema_version"] == 1
+    assert d["source_crosswalk"] == "figures/FROZEN_CROSS_ESTIMAND_ELIGIBILITY_V1.json"
+    assert d["original_crosswalk_git_blob_sha1"] == git_blob_sha1(LEDGER)
+    assert d["panel_order"] == list(PANEL_ORDER)
+    assert [r["panel"] for r in d["panels"]] == list(PANEL_ORDER)
+    totals = {"both": 0, "one": 0, "neither": 0,
+              "dyads": 0, "events": 0, "both_events": 0}
+    fixed = ((9,11,2,592,211,80), (3,6,1,284,48,15),
+             (5,3,0,650,29,0), (8,0,0,16096,0,0))
+    for i, row in enumerate(d["panels"]):
+        src = ledger["panels"][i]
+        di, ev = row["source_couse_dyads"], row["source_couse_encounter_events"]
+        assert row["eligible_geometry_bats"] == src["native_or_terrain_V_S_evaluable_n"]
+        assert row["eligible_couse_bats"] == src["fixed_event_couse_I_usable_n"]
+        assert row["verified_shared_geometry_and_couse_bats"] == src["ID_membership_overlap_counts"]["geometry_I"]
+        assert row["within_bat_effect_model_fitted"] is False
+        assert (di["both_geometry_bats"], di["exactly_one_geometry_bat"],
+                di["no_geometry_bat"], ev["both_geometry_bats"],
+                ev["exactly_one_geometry_bat"], ev["no_geometry_bat"]) == fixed[i]
+        assert di["total"] == src["reported_I_dyads"] == (
+            di["both_geometry_bats"]+di["exactly_one_geometry_bat"]+di["no_geometry_bat"]
+        )
+        assert ev["total"] == src["reported_I_matched_encounter_pairs"] == (
+            ev["both_geometry_bats"]+ev["exactly_one_geometry_bat"]+ev["no_geometry_bat"]
+        )
+        expected = {a["analysis_role"]: a["artifact_id"]
+                    for a in src["original_result_artifact_sources"]
+                    if a["analysis_role"] in ("terrain3d","co_use")}
+        assert row["source_original_artifact_ids"] == expected
+        totals["both"] += di["both_geometry_bats"]
+        totals["one"] += di["exactly_one_geometry_bat"]
+        totals["neither"] += di["no_geometry_bat"]
+        totals["dyads"] += di["total"]
+        totals["events"] += ev["total"]
+        totals["both_events"] += ev["both_geometry_bats"]
+    assert totals == {"both":25,"one":20,"neither":3,
+                      "dyads":48,"events":18005,"both_events":17622}
+    assert d["summary"]["original_couse_dyads"] == totals["dyads"]
+    assert d["summary"]["dyads_both_geometry_bats"] == totals["both"]
+    assert d["summary"]["dyads_one_geometry_bat"] == totals["one"]
+    assert d["summary"]["dyads_no_geometry_bat"] == totals["neither"]
+    assert d["summary"]["source_couse_encounter_events"] == totals["events"]
+    assert d["summary"]["events_in_both_geometry_bat_dyads"] == totals["both_events"]
+    assert d["summary"]["panels_all_source_couse_dyads_both_geometry_eligible"] == ["phyllostomus_2016"]
+    print("PASS original dyad support aggregate (both/one/neither 3D eligible bats): 25/20/3 of 48 dyads")
+    print("PASS 17,622/18,005 repeated matched events involve dyads with two geometry-eligible bats; NOT independent observations")
+
+
 def identity_from_individual_rows(individual_results: dict) -> set[tuple[str, str]]:
     result = set()
     for source_id, row in individual_results.items():
@@ -227,6 +279,24 @@ def source_zip_gate(folder: Path, ledger: dict) -> None:
             "I_subset_of_fine500": I <= fine,
             "I_subset_of_geometry": I <= terrain,
         }
+        # This is support composition of ORIGINAL selected dyads, not a
+        # sensitivity test of co-use effect or recalculated phase-shift null.
+        support = read_json(DYAD_LEDGER)["panels"][i]
+        hist = {"both":0,"one":0,"neither":0,
+                "both_events":0,"one_events":0,"neither_events":0}
+        for a,b,dyad in (( (str(d["cohort"]),str(d["individual_a"])),
+                           (str(d["cohort"]),str(d["individual_b"])), d)
+                         for d in pairs):
+            hits = int(a in terrain) + int(b in terrain)
+            bucket = ("neither", "one", "both")[hits]
+            hist[bucket] += 1
+            hist[bucket+"_events"] += int(dyad["encounters"])
+        ds = support["source_couse_dyads"]
+        es = support["source_couse_encounter_events"]
+        assert (hist["both"],hist["one"],hist["neither"]) == (
+            ds["both_geometry_bats"],ds["exactly_one_geometry_bat"],ds["no_geometry_bat"])
+        assert (hist["both_events"],hist["one_events"],hist["neither_events"]) == (
+            es["both_geometry_bats"],es["exactly_one_geometry_bat"],es["no_geometry_bat"])
         matched += len(terrain & I)
     assert matched == 18
     print("PASS ALL 16 exact original ZIP digests + source cohort-qualified individual-ID intersections [5,3,5,5]")
@@ -239,5 +309,6 @@ if __name__ == "__main__":
                         help="Optional, authorized folder of 16 original ZIPs bat_source_<artifact_id>.zip; never redistributed")
     args = parser.parse_args()
     ledger = metadata_gate()
+    dyad_support_gate(ledger)
     if args.artifact_dir:
         source_zip_gate(args.artifact_dir, ledger)
