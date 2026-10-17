@@ -63,6 +63,12 @@ Further exploratory alpha/grid/time-window sensitivity on the already-opened tra
 
 **Source artifacts:** [exact V–S coupling](V_S_ALGEBRAIC_COUPLING_AND_INDEPENDENCE_AUDIT_V1.md), [physical-versus-modeled geometry review](REVIEWER_EMPIRICAL_VS_PHYSICAL_GEOMETRY_V1.md), [co-use centered-gap clarification](COUSE_CENTERING_PHYSICAL_GAP_SCOPE_AUDIT_V1.md), [multitest sensitivity](TWELVE_TEST_MULTIPLICITY_SENSITIVITY_V1.md), and [publication approval gate](SUBMISSION_READINESS_GATE_V2.md). All animal experiments, original data and original source statistical outputs remain unchanged.
 
+## Source dyad-support ceiling (not a linked mechanism) — 2026-10-17
+
+Of 48 original matched co-use dyads across four distinct source designs, only **25 dyads** have **two** geometry V/S-eligible bats, distributed very unevenly: **H 9/22; P2022 3/10; P2023 5/8; P2016 8/8**. Those source dyads account for repeated x-y-time matching events (592/883, 284/347, 650/679 and 16,096/16,096), overwhelmingly contributed by one P2016 600-second endpoint-excluded design. This is **eligibility and data-support evidence**, not a within-bat co-use I effect, independence of encounter events, or a null-adjusted individual correlation. The original p-values are based on each panel's **entire** originally admitted dyad population; they must **not** be repurposed for a post-outcome overlap-restricted subset.
+
+The unified article is still a comparison of *measured individual-information properties* and *separate, mathematically/biologically nonidentical ecological outcomes*, not a demonstration that predictable bats physically avoid or do not avoid each other. The coauthors should assess the mechanistic/novelty threshold independently of the improved artifact provenance. Source artifact archive access becomes time-sensitive before **28 December 2026** and requires per-DOI licensing/steward decisions, not public mirroring by default.
+
 ## Source-panel bat-ID overlap established, linked behavior not — 2026-10-16
 
 Original successful per-individual and dyad result ZIPs now resolve the previous aggregate-only missing-ID issue. In all four source panels, the V/S geometry bats are also eligible in fine500. The V/S-to-co-use ID intersection is **5/3/5/5** bat records, and the complete V/S and I sets remain nonidentical. Six versus six in P2023 conceals only five common cohort-qualified source IDs. All 16 original ZIP SHA256 digests matched.
