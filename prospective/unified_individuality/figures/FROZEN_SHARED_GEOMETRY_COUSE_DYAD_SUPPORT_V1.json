@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "created_date": "2026-10-17",
+  "title": "Original co-use dyad composition by 500-m geometry-eligible individual membership",
+  "evidence_tier": "Archival source-derived dyad/encounter bookkeeping from the exact corrected co-use output and terrain V/S eligibility lists, not original raw GPS/DEM or a new animal-behavior inference",
+  "source_crosswalk": "figures/FROZEN_CROSS_ESTIMAND_ELIGIBILITY_V1.json",
+  "original_crosswalk_git_blob_sha1": "83061f4a57bc184248204074e2cf5c738346b51d",
+  "source_data_membership_key": "(exact source collection cohort, source animal ID) within one original named study panel; no IDs shared or stored",
+  "panel_order": [
+    "hypsignathus",
+    "phyllostomus_2022",
+    "phyllostomus_2023",
+    "phyllostomus_2016"
+  ],
+  "panels": [
+    {
+      "panel": "hypsignathus",
+      "eligible_geometry_bats": 8,
+      "eligible_couse_bats": 11,
+      "verified_shared_geometry_and_couse_bats": 5,
+      "source_couse_dyads": {
+        "both_geometry_bats": 9,
+        "exactly_one_geometry_bat": 11,
+        "no_geometry_bat": 2,
+        "total": 22
+      },
+      "source_couse_encounter_events": {
+        "both_geometry_bats": 592,
+        "exactly_one_geometry_bat": 211,
+        "no_geometry_bat": 80,
+        "total": 883
+      },
+      "same_animal_IDs_shared_yes": true,
+      "within_bat_effect_model_fitted": false,
+      "source_original_artifact_ids": {
+        "terrain3d": 11202650639,
+        "co_use": 11205510244
+      }
+    },
+    {
+      "panel": "phyllostomus_2022",
+      "eligible_geometry_bats": 5,
+      "eligible_couse_bats": 6,
+      "verified_shared_geometry_and_couse_bats": 3,
+      "source_couse_dyads": {
+        "both_geometry_bats": 3,
+        "exactly_one_geometry_bat": 6,
+        "no_geometry_bat": 1,
+        "total": 10
+      },
+      "source_couse_encounter_events": {
+        "both_geometry_bats": 284,
+        "exactly_one_geometry_bat": 48,
+        "no_geometry_bat": 15,
+        "total": 347
+      },
+      "same_animal_IDs_shared_yes": true,
+      "within_bat_effect_model_fitted": false,
+      "source_original_artifact_ids": {
+        "terrain3d": 11201349879,
+        "co_use": 11204898247
+      }
+    },
+    {
+      "panel": "phyllostomus_2023",
+      "eligible_geometry_bats": 6,
+      "eligible_couse_bats": 6,
+      "verified_shared_geometry_and_couse_bats": 5,
+      "source_couse_dyads": {
+        "both_geometry_bats": 5,
+        "exactly_one_geometry_bat": 3,
+        "no_geometry_bat": 0,
+        "total": 8
+      },
+      "source_couse_encounter_events": {
+        "both_geometry_bats": 650,
+        "exactly_one_geometry_bat": 29,
+        "no_geometry_bat": 0,
+        "total": 679
+      },
+      "same_animal_IDs_shared_yes": true,
+      "within_bat_effect_model_fitted": false,
+      "source_original_artifact_ids": {
+        "terrain3d": 11202795182,
+        "co_use": 11205525158
+      }
+    },
+    {
+      "panel": "phyllostomus_2016",
+      "eligible_geometry_bats": 9,
+      "eligible_couse_bats": 5,
+      "verified_shared_geometry_and_couse_bats": 5,
+      "source_couse_dyads": {
+        "both_geometry_bats": 8,
+        "exactly_one_geometry_bat": 0,
+        "no_geometry_bat": 0,
+        "total": 8
+      },
+      "source_couse_encounter_events": {
+        "both_geometry_bats": 16096,
+        "exactly_one_geometry_bat": 0,
+        "no_geometry_bat": 0,
+        "total": 16096
+      },
+      "same_animal_IDs_shared_yes": true,
+      "within_bat_effect_model_fitted": false,
+      "source_original_artifact_ids": {
+        "terrain3d": 11201903101,
+        "co_use": 11205780190
+      }
+    }
+  ],
+  "summary": {
+    "original_couse_dyads": 48,
+    "dyads_both_geometry_bats": 25,
+    "dyads_one_geometry_bat": 20,
+    "dyads_no_geometry_bat": 3,
+    "source_couse_encounter_events": 18005,
+    "events_in_both_geometry_bat_dyads": 17622,
+    "panels_all_source_couse_dyads_both_geometry_eligible": [
+      "phyllostomus_2016"
+    ]
+  },
+  "limitations": [
+    "Dyads can reuse the same animals and an individual animal can contribute multiple dyads. Event counts are repeated time/space matches, not biological n.",
+    "Source dyad event-count distribution is strongly unequal among panels and between dyads; does not establish power or extrapolate effect size.",
+    "Source V/S-per-bat identity difference and co-use I panel-level phase-shift null are different statistical objects; the original I phase-shift null and dyad-bootstrap compatibility interval cannot be selectively reused for a both-geometry-eligible dyad subset.",
+    "Exact ID membership within a panel is verified but there is no per-animal V score versus per-animal I effect or mediation test; no physical altitude-gap metric.",
+    "No third-party animal IDs, GPS/DEM, individual dyad table, locations or source ZIP contents are redistributed. Archive ZIPs expire December 2026."
+  ]
+}

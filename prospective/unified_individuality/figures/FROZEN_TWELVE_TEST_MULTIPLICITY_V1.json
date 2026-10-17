@@ -1,0 +1,170 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-15",
+  "analysis_tier": "Post-outcome sensitivity on existing original/frozen p-values only; no raw GPS/DEM input, no rerun, no new null/permutation inference, no prospective omnibus family",
+  "purpose": "Show sensitivity of the previously reported 4/4 V_rel within-family Holm result to combining three displayed four-panel endpoint families into an illustrative 12-test family",
+  "source": {
+    "figure_source": "figures/FROZEN_FIGURE_DATA_V1.json",
+    "figure_original_git_blob_sha1": "b3f7b20136d028021a3c33a43c256e40ce91f677",
+    "independent_within_family_sensitivity": "figures/FROZEN_FOUR_PANEL_MULTIPLICITY_V1.json",
+    "independent_within_family_git_blob_sha1": "c87feb7507ac9ae6ac938cea71ee6c31c152a534",
+    "original_p_value_source_files": {
+      "figure_source_path": "figures/FROZEN_FIGURE_DATA_V1.json",
+      "figure_git_blob_sha1": "b3f7b20136d028021a3c33a43c256e40ce91f677",
+      "V_source_path": "figures/ORIGINAL_TERRAIN_RELATIVE_3D_SOURCE_V1.json",
+      "V_git_blob_sha1": "08631a0dce61cc47e12b2d32642c46b5759fe872",
+      "S_source_path": "figures/ORIGINAL_TERRAIN_PARTITIONING_CALIBRATION_V1.json",
+      "S_git_blob_sha1": "e969698e2a594d2eeca2631d7473e598a8a8f371"
+    }
+  },
+  "family_order": [
+    "V_rel_one_sided",
+    "S_rel_two_sided",
+    "co_use_one_sided"
+  ],
+  "panel_order": [
+    "hypsignathus",
+    "phyllostomus_2022",
+    "phyllostomus_2023",
+    "phyllostomus_2016"
+  ],
+  "omnibus_scope": "12 displayed p-values (4 V_rel one-sided, 4 S_rel two-sided, 4 co-use I one-sided), treated as ONE illustrative retrospective family",
+  "correction": "Standard step-down Holm, sorted increasing raw p with previous-step monotonic max, m=12; valid for dependent valid p-values under a prespecified family but retrospective exploratory here",
+  "tests": [
+    {
+      "family": "V_rel_one_sided",
+      "panel": "hypsignathus",
+      "source_p": 0.0001,
+      "within_family_four_panel_holm_p": 0.0004,
+      "across_twelve_holm_p": 0.0012000000000000001,
+      "across_twelve_p_le_0_05": true
+    },
+    {
+      "family": "V_rel_one_sided",
+      "panel": "phyllostomus_2022",
+      "source_p": 0.0001,
+      "within_family_four_panel_holm_p": 0.0004,
+      "across_twelve_holm_p": 0.0012000000000000001,
+      "across_twelve_p_le_0_05": true
+    },
+    {
+      "family": "V_rel_one_sided",
+      "panel": "phyllostomus_2023",
+      "source_p": 0.0001015950421619425,
+      "within_family_four_panel_holm_p": 0.0004,
+      "across_twelve_holm_p": 0.0012000000000000001,
+      "across_twelve_p_le_0_05": true
+    },
+    {
+      "family": "V_rel_one_sided",
+      "panel": "phyllostomus_2016",
+      "source_p": 0.034527622097678144,
+      "within_family_four_panel_holm_p": 0.034527622097678144,
+      "across_twelve_holm_p": 0.27622097678142515,
+      "across_twelve_p_le_0_05": false
+    },
+    {
+      "family": "S_rel_two_sided",
+      "panel": "hypsignathus",
+      "source_p": 0.0362,
+      "within_family_four_panel_holm_p": 0.1448,
+      "across_twelve_holm_p": 0.27622097678142515,
+      "across_twelve_p_le_0_05": false
+    },
+    {
+      "family": "S_rel_two_sided",
+      "panel": "phyllostomus_2022",
+      "source_p": 0.3639,
+      "within_family_four_panel_holm_p": 0.8113380067052727,
+      "across_twelve_holm_p": 1,
+      "across_twelve_p_le_0_05": false
+    },
+    {
+      "family": "S_rel_two_sided",
+      "panel": "phyllostomus_2023",
+      "source_p": 0.2704460022350909,
+      "within_family_four_panel_holm_p": 0.8113380067052727,
+      "across_twelve_holm_p": 1,
+      "across_twelve_p_le_0_05": false
+    },
+    {
+      "family": "S_rel_two_sided",
+      "panel": "phyllostomus_2016",
+      "source_p": 0.4795836669335468,
+      "within_family_four_panel_holm_p": 0.8113380067052727,
+      "across_twelve_holm_p": 1,
+      "across_twelve_p_le_0_05": false
+    },
+    {
+      "family": "co_use_one_sided",
+      "panel": "hypsignathus",
+      "source_p": 0.9045,
+      "within_family_four_panel_holm_p": 1,
+      "across_twelve_holm_p": 1,
+      "across_twelve_p_le_0_05": false
+    },
+    {
+      "family": "co_use_one_sided",
+      "panel": "phyllostomus_2022",
+      "source_p": 0.9186,
+      "within_family_four_panel_holm_p": 1,
+      "across_twelve_holm_p": 1,
+      "across_twelve_p_le_0_05": false
+    },
+    {
+      "family": "co_use_one_sided",
+      "panel": "phyllostomus_2023",
+      "source_p": 0.0231,
+      "within_family_four_panel_holm_p": 0.0924,
+      "across_twelve_holm_p": 0.2079,
+      "across_twelve_p_le_0_05": false
+    },
+    {
+      "family": "co_use_one_sided",
+      "panel": "phyllostomus_2016",
+      "source_p": 0.8611,
+      "within_family_four_panel_holm_p": 1,
+      "across_twelve_holm_p": 1,
+      "across_twelve_p_le_0_05": false
+    }
+  ],
+  "summary": {
+    "by_family": {
+      "V_rel_one_sided": {
+        "nominal_p_le_0_05": 4,
+        "within_family_four_holm_p_le_0_05": 4,
+        "across_twelve_holm_p_le_0_05": 3
+      },
+      "S_rel_two_sided": {
+        "nominal_p_le_0_05": 1,
+        "within_family_four_holm_p_le_0_05": 0,
+        "across_twelve_holm_p_le_0_05": 0
+      },
+      "co_use_one_sided": {
+        "nominal_p_le_0_05": 1,
+        "within_family_four_holm_p_le_0_05": 0,
+        "across_twelve_holm_p_le_0_05": 0
+      }
+    },
+    "P2016_V_rel": {
+      "raw_p": 0.034527622097678144,
+      "within_family_four_holm_p": 0.034527622097678144,
+      "across_twelve_holm_p": 0.27622097678142515
+    },
+    "P2023_co_use": {
+      "raw_p": 0.0231,
+      "across_twelve_holm_p": 0.2079
+    },
+    "H_S_rel": {
+      "raw_p": 0.0362,
+      "across_twelve_holm_p": 0.27622097678142515
+    }
+  },
+  "boundary": [
+    "This 12-test family was chosen after outcomes, and does not cover all screens, candidate endpoints, source programmes, post-outcome sensitivities or earlier model choices; it is not fully corrected study-wide inference.",
+    "The existing within-endpoint Holm and original source p-values remain historically correct for their own definitions; no outcome is overturned by arithmetically changing the sensitivity family.",
+    "The four panels represent only two species; temporal/source and tag differences as well as measurement error remain unresolved.",
+    "S_rel 0/4 or I 0/4 adjusted positive support is not equivalence, proof of no ecological segregation or no competition.",
+    "No biological causation, latent foraging-task assignments, trophic/fitness strategy or independent lab-to-field carrier is identified."
+  ]
+}

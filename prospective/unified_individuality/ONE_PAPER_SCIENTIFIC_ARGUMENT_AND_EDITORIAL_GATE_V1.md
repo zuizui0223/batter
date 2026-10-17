@@ -1,0 +1,77 @@
+# One-paper scientific argument and editorial decision gate — 2026-10-16
+
+**Status:** reviewer/editorial synthesis using **already archived evidence and exact source-derived algebra**. Not a new animal experiment, preregistration, reanalysis of third-party GPS/DEM, statistical significance claim, journal submission, or human coauthor sign-off.
+
+## One question, not one alleged cross-species mechanism
+
+**Working title:** *Persistent behavioral individuality and the limits of 3D niche inference in bats.*
+
+**Best defensible unifying question:** What information about individual behavior remains predictive across altered conditions, and **how far can that repeatable signature be translated into claims about ecological space-use separation**?
+
+This is an **inferential hierarchy**, not one continuous causal history of an animal. The experimental programmes and wild tracking datasets concern different animals, species, interventions and measurements; no laboratory behavioral carrier has been validated as the cause of wild height-use probability signatures.
+
+The former title stressed the non-detection of extra vertical segregation. The new title foregrounds the *positive* source-specific result — repeatable behavioral or relative-height information — and the *limits* of using statistical geometry to infer real three-dimensional physical niche partitioning.
+
+## What each empirical block contributes — and what it does not
+
+| Argument stage | Empirical source observation | Role in one-paper story | Do not infer |
+|---|---|---|---|
+| Origin/history | First-flight mean positive, but primary 10/14 individual sign gate failed (8/14); later own-history result passed; two developmental scalar treatment contrasts unsupported | Individuality cannot be summarized by one simple universal developmental increase rule | One shared causal developmental mechanism, phenotype invariance or treatment equivalence |
+| Maintenance across current contexts | Correct-individual correspondence after four distinct laboratory sensory/navigation perturbation programmes, biological n typically 3–6 | An individual's identity-bearing behavioral information can be identifiable despite changed immediate environment | Stability of the same *absolute* movement geometry or transfer to wild identity |
+| Representation and expression | Coarse movement I/M representation transferred across one task/external bat source; detailed frozen trajectory geometry failed external transfer | What is individually predictable can differ from the detailed path realized in each task | A universal bat equation or task-invariant flight trajectory |
+| Repeated wild conditional vertical use | 5 comparative original centered-shape panels supported; focal *Tadarida* failed shape criterion. Four tropical 500-m conditional/terrain-relative panels originally supported; 3/4 remain below the threshold under an illustrative 12-test Holm sensitivity | The key field observation is individually predictive **estimated within-session-centered height-use probability structure** under coarse XY/context control | A shared physically exclusive altitude band, memory, prey use, fitness or universally representative bat populations |
+| Joint XY×relative-height geometry | Original smoothed α=0.5 ten-bin 3D overlaps, pair-support threshold 50 across shared cells; four panels from two species | Explicitly separate horizontal weighting, conditional vertical probability and joint modeled overlap | Real observed shared 3D volume, physically overlapping flight tracks or percentage habitat sharing |
+| Added segregation S_rel | Source-positive S_rel 0/4, but source V_rel and S_rel are **algebraically coupled**, not two independent ecological replications | The inference of spatial differentiation depends on the *estimand and null*, and absence of positive S support cannot resolve ecological exclusivity | A distinct causally observed absence of 3D segregation, proof of identical resource strategies or all-scale equivalence |
+| Co-use I | One original nominal P2023 +3.57-m source result under a 600-s all-space definition; adjusted p>0.05 | An encounter-timed statistic probes one additional, narrower association | +3.57 m of actual physical between-bat flight-height separation or demonstrated avoidance; I is a difference in **session-centered relative-height deviations** |
+| Laboratory-to-field bridge | Frozen scalar carrier 2 PASS, 1 FAIL, 1 structural STOP; overall FAIL against ≥3/4 | A visible stopping rule against mechanistic storytelling | A proven common latent behavioral policy connecting independent data programmes |
+
+### Why the V/S finding changes the paper's inferential emphasis
+
+Original source paired overlap calculations satisfy an exact identity:
+
+[
+S=V-(overline{epsilon}_{mathrm{other}}-overline{epsilon}_{mathrm{self}}),qquad
+epsilon=O_{XYZ}/O_{XY}-O_{Z|XY}ge0.
+]
+
+The original source's four native panel means obey it exactly. This means a "4 panels significant for V, 0 for positive S" contrast is **not two independent discoveries** about an individual-level ecological process, and the relative source p-values have different architectures/uncertainty. There is no independent ε significance test or physical-space equivalence claim. The field result should be presented as **a demonstrated source-specific prediction coupled with a restrained interpretation of modeled niche geometry**, rather than as proven behavioral individuality that never generates ecological partitioning.
+
+The α=0.5 pseudocount smoothing and session-centering issues further distinguish estimated 3D distributions from physically observed shared spaces. The source co-use endpoint's subtraction of **different session medians** prevents translating its metre-valued excess to a physical altitude gap.
+
+## A coherent manuscript argument in four moves
+
+1. **Define the distinction:** maintainable individual information is not the same as fixed movement trajectories or ecological segregation; use explicit source-specific estimands and no solid lab-to-wild causal arrows.
+2. **Demonstrate individual information exists in different experimental contexts:** identity correspondence persists in narrow controlled conditions; developmental scalar results and detailed-geometry transfer failures delimit rather than unify mechanisms.
+3. **Show the strongest ecological observation in the wild:** source-specific held-out, centered conditional height-use identity persists; the measured 3D joint geometry is affected by XY weighting, pseudocount smoothing, terrain height reference and the original panel gates. The original V/S algebra explains why two statistics cannot be presented as independent tests of a behavioral law.
+4. **Separate consequences from interpretation:** original source S_rel positive support 0/4, nominal co-use exception is a centered-deviation metric, no evidence of physical absence/presence of 3D niche partitioning or learned optimal flight solutions. Prospective next test requires matched real vertical datums, physical co-use, prey/task labels, and same animals across controlled and wild contexts.
+
+This structure remains viable as a **comparative synthesis/reanalysis** where different source experiments address different pieces of a shared inference problem. It does *not* become a newly unified causal test by narrative assembly.
+
+## Concrete editor/coauthor criteria
+
+The unified route should proceed to submission **only if** reviewers/coauthors can answer *yes* to each of the following:
+- Is the central source-supported finding — predictive individual information in behavior and modeled relative-height use — sufficiently specific and interesting **without implying discovered shared mechanism or absence of physical 3D partitioning**?
+- Does the manuscript explain why controlled sensory/developmental studies are necessary comparison *cases*, rather than a second paper attached to the wild results? Are the small biological n and distinct nulls visible?
+- Are **V and S marked as mathematically coupled** and the source co-use I marked as a **session-centered deviation-difference** rather than an actual vertical separation? Do figure legends and cover letter match?
+- Is the editorial audience appropriate for the methodological/conceptual boundaries of independent cross-source reanalyses? Do we have clear contribution and legitimate source reuse permissions and coauthor authorship/priority agreement?
+
+If the answers are not collectively affirmative, **do not force unity**. A field-focused paper on wild conditional relative-height predictability and estimator boundaries plus a separate controlled-behavior paper, with overlap disclosure and distinct causal questions, may be easier to defend. That is a future coauthor/editorial judgement, not an authorization to post duplicate outcomes.
+
+## What does not need more source mining
+
+Further exploratory alpha/grid/time-window sensitivity on the already-opened tracking archives is **not a substitute for biological resource/task labels or new prospective data**. Repeating p-value adjustments for every plausible selected family is not a path to causal inference. The current PR should prioritize accuracy, proper presentation and external scientific review after recording the exact estimator/mathematical boundaries.
+
+**Source artifacts:** [exact V–S coupling](V_S_ALGEBRAIC_COUPLING_AND_INDEPENDENCE_AUDIT_V1.md), [physical-versus-modeled geometry review](REVIEWER_EMPIRICAL_VS_PHYSICAL_GEOMETRY_V1.md), [co-use centered-gap clarification](COUSE_CENTERING_PHYSICAL_GAP_SCOPE_AUDIT_V1.md), [multitest sensitivity](TWELVE_TEST_MULTIPLICITY_SENSITIVITY_V1.md), and [publication approval gate](SUBMISSION_READINESS_GATE_V2.md). All animal experiments, original data and original source statistical outputs remain unchanged.
+
+## Source dyad-support ceiling (not a linked mechanism) — 2026-10-17
+
+Of 48 original matched co-use dyads across four distinct source designs, only **25 dyads** have **two** geometry V/S-eligible bats, distributed very unevenly: **H 9/22; P2022 3/10; P2023 5/8; P2016 8/8**. Those source dyads account for repeated x-y-time matching events (592/883, 284/347, 650/679 and 16,096/16,096), overwhelmingly contributed by one P2016 600-second endpoint-excluded design. This is **eligibility and data-support evidence**, not a within-bat co-use I effect, independence of encounter events, or a null-adjusted individual correlation. The original p-values are based on each panel's **entire** originally admitted dyad population; they must **not** be repurposed for a post-outcome overlap-restricted subset.
+
+The unified article is still a comparison of *measured individual-information properties* and *separate, mathematically/biologically nonidentical ecological outcomes*, not a demonstration that predictable bats physically avoid or do not avoid each other. The coauthors should assess the mechanistic/novelty threshold independently of the improved artifact provenance. Source artifact archive access becomes time-sensitive before **28 December 2026** and requires per-DOI licensing/steward decisions, not public mirroring by default.
+
+## Source-panel bat-ID overlap established, linked behavior not — 2026-10-16
+
+Original successful per-individual and dyad result ZIPs now resolve the previous aggregate-only missing-ID issue. In all four source panels, the V/S geometry bats are also eligible in fine500. The V/S-to-co-use ID intersection is **5/3/5/5** bat records, and the complete V/S and I sets remain nonidentical. Six versus six in P2023 conceals only five common cohort-qualified source IDs. All 16 original ZIP SHA256 digests matched.
+
+This membership result supports more precise source comparison, **not** a demonstrated within-bat effect. The original V and I estimands retain incompatible denominators/dependence and no per-bat predictive-fidelity versus encounter-response association was tested. The one-paper scientific thesis must remain a synthesis of independently defined source propositions, without a validated laboratory-to-wild behavioral carrier.
+

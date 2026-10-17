@@ -1,0 +1,52 @@
+name: Unified historical terrain source closure (no third-party data)
+
+on:
+  pull_request:
+    paths:
+      - 'prospective/unified_individuality/source_recovery/**'
+      - '.github/workflows/unified-historical-terrain-source-closure-v1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  recover-historical-code-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate pinned one-commit source inventory without internet
+        run: python3 prospective/unified_individuality/source_recovery/recover_terrain_source_closure_v1.py --inventory-only
+      - name: Retrieve Git source ONLY (21 original files); verify blobs, parse code, seal ZIP
+        run: |
+          python3 prospective/unified_individuality/source_recovery/recover_terrain_source_closure_v1.py \
+            --out "${{ runner.temp }}/terrain_history/historical_commit_819acc82"
+      - name: Independently reverify archive's own source tree without network
+        run: |
+          python3 prospective/unified_individuality/source_recovery/recover_terrain_source_closure_v1.py \
+            --offline --out "${{ runner.temp }}/terrain_history/historical_commit_819acc82"
+      - name: Cross-validate original contracts, DEM receipt and replay-input bill of materials
+        run: |
+          python3 prospective/unified_individuality/source_recovery/verify_terrain_replay_input_manifest_v1.py \
+            --source-root "${{ runner.temp }}/terrain_history/historical_commit_819acc82"
+      - name: Verify exact ORIGINAL second-stage S_rel calibration code and contract only
+        run: |
+          python3 prospective/unified_individuality/source_recovery/verify_partitioning_s_provenance_v1.py \
+            --verify-source-bytes
+      - name: Install modern compatible Python runtime for source-only import smoke
+        run: python3 -m pip install --quiet numpy==2.2.6 pandas==2.2.3 pyproj==3.7.2 requests==2.32.5
+      - name: Smoke-import historical terrain driver and validate synthetic geometry only
+        run: |
+          python3 prospective/unified_individuality/source_recovery/smoke_import_historical_terrain_v1.py \
+            --source-root "${{ runner.temp }}/terrain_history/historical_commit_819acc82"
+      - name: Upload historical source-only recovery package for coauthor audit
+        uses: actions/upload-artifact@v4
+        with:
+          name: unified-historical-terrain-3d-source-only-v1
+          path: ${{ runner.temp }}/terrain_history/terrain_original_3d_source_closure_v1.zip
+          if-no-files-found: error
+          retention-days: 30

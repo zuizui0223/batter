@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "original_repository": "zuizui0223/batter",
+  "historical_success_commit": "819acc829d615485b57033f1ddcbebf64b4b49a0",
+  "historical_terrain_workflow_run_id": 36946126004,
+  "role": "source-only snapshot; reproducible audited code/contract closure for previously successful terrain-relative 3D bat analysis, NOT raw GPS/DEM availability or rerun",
+  "status": "integrated PR recovered source inputs only; no source-frozen manuscript branch modified",
+  "files": [
+    {
+      "path": "post_freeze_extensions/3d_niche_partition/run_original_terrain_geometry_v1.py",
+      "git_blob_sha1": "b07d8615c8bb4509b221d10c1883bfbcfe4a251d"
+    },
+    {
+      "path": "post_freeze_extensions/3d_niche_partition/run_v1.py",
+      "git_blob_sha1": "c08b442f97940eac3e90c1dac6e2de6d26010a7a"
+    },
+    {
+      "path": "post_freeze_extensions/3d_niche_partition/run_external_geometry_v1.py",
+      "git_blob_sha1": "c869a25c062b4bf5dc6b22e9f3e7fe03b69aeb30"
+    },
+    {
+      "path": "post_freeze_extensions/3d_niche_partition/run_original_terrain_dem_preflight_v1.py",
+      "git_blob_sha1": "f0d68aeb0040b0f069cf494f23fcab0cdea1b145"
+    },
+    {
+      "path": "post_freeze_extensions/3d_niche_partition/contract_v1.json",
+      "git_blob_sha1": "5c76d0432e53ea7733216245f229d68ae0df1f77"
+    },
+    {
+      "path": "post_freeze_extensions/3d_niche_partition/external_geometry_prediction_contract_v1.json",
+      "git_blob_sha1": "e1047891ab37cd0b46cdd180cc7ed8d815abce4b"
+    },
+    {
+      "path": "post_freeze_extensions/3d_niche_partition/original_terrain_geometry_contract_v1.json",
+      "git_blob_sha1": "765dc1d31b8e55f285ac8c69af6b12f0c71ea273"
+    },
+    {
+      "path": "post_freeze_extensions/3d_niche_partition/original_terrain_dem_preflight_receipt_v1.json",
+      "git_blob_sha1": "c71c832203bcbbceaf05bab9439d119e689c374e"
+    },
+    {
+      "path": "post_freeze_extensions/3d_niche_partition/summary_v1.json",
+      "git_blob_sha1": "c1d37e42f72f59e5aba364daec9aef68b47778b6"
+    },
+    {
+      "path": "scripts/run_new_species_replications.py",
+      "git_blob_sha1": "537df8d639169a28c9ab2a030ea689a7d672fbe2"
+    },
+    {
+      "path": "scripts/run_cross_panel_estimator_calibration.py",
+      "git_blob_sha1": "8af9650e013fa3592606ba222090ffa45bd0d72a"
+    },
+    {
+      "path": "scripts/run_tag_altitude_bias_shape.py",
+      "git_blob_sha1": "2a8bf12566d6a12683ba64b59de3b6eea2477ca5"
+    },
+    {
+      "path": "scripts/run_eidolon_independent_replication.py",
+      "git_blob_sha1": "03cc46d8b13fdcbf908cd9dbec3b90e009f5acb6"
+    },
+    {
+      "path": "scripts/run_biological_effect_translation.py",
+      "git_blob_sha1": "73458833d742ebffd0df6bafb34f4ecd7c137290"
+    },
+    {
+      "path": "src/batter/analysis.py",
+      "git_blob_sha1": "99f28a869727f02855cab729eab7d19fe8ccaed6"
+    },
+    {
+      "path": "src/batter/__init__.py",
+      "git_blob_sha1": "741d8ad2e7250fbb1e933ac39faedacc295ee520"
+    },
+    {
+      "path": "contract/hypsignathus_replication_v1.json",
+      "git_blob_sha1": "1861a0a8ec625d9093919fbcf02b7ec45d3b4a92"
+    },
+    {
+      "path": "contract/phyllostomus_replication_v1.json",
+      "git_blob_sha1": "32e4772b1bb2d4c294c8324ca08ee8783adc12e2"
+    },
+    {
+      "path": "contract/phyllostomus_2023_replication_v1.json",
+      "git_blob_sha1": "0e666bc2fdd0856fd0fb55b4fbda781bc1f70852"
+    },
+    {
+      "path": "contract/phyllostomus_2016_dry_architecture_v1.json",
+      "git_blob_sha1": "a4dff03a800dec98f612e0873c120756a012cf4e"
+    },
+    {
+      "path": "pyproject.toml",
+      "git_blob_sha1": "11806ded943aa7c064589f1417b1bd0e6efc6226"
+    }
+  ],
+  "raw_input_boundary": "Do not include or mirror Movebank GPS/event bitstreams or DEM raster tiles; each file must be obtained separately with original source rights and checksum verification. A fully equivalent historical environment and source outcome rerun is not claimed.",
+  "deps_boundary": "Some historically used runner imports pandas and requests in addition to pyproject-declared numpy and pyproj. Exact original package versions are not established by this source-code recovery."
+}

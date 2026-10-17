@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "title": "Offline replay input bill of materials for original source bat terrain geometry",
+  "provenance": {
+    "repository": "zuizui0223/batter",
+    "source_commit": "819acc829d615485b57033f1ddcbebf64b4b49a0",
+    "source_workflow": 36946126004,
+    "native_workflow": 36881187913,
+    "contract_git_blob_sha1": "765dc1d31b8e55f285ac8c69af6b12f0c71ea273",
+    "dem_preflight_receipt_git_blob_sha1": "c71c832203bcbbceaf05bab9439d119e689c374e",
+    "source_closure_manifest": "source_recovery/terrain_source_closure_manifest_v1.json"
+  },
+  "status": {
+    "source_metadata_copied_from_exact_git_blobs": true,
+    "source_contracts_checksum_matched": true,
+    "downloaded_input_bytes_verified_in_this_audit": false,
+    "download_permissions_verified": false,
+    "historical_runtime_recreated": false,
+    "full_empirical_replay_completed": false
+  },
+  "geometry": {
+    "horizontal_grid_m": 500,
+    "height_bin_edges_m": [
+      "-inf",
+      -400,
+      -200,
+      -100,
+      -50,
+      0,
+      50,
+      100,
+      200,
+      400,
+      "inf"
+    ],
+    "dem_source": "Mapzen/AWS Terrain Tiles Skadi HGT",
+    "dem_grid_n": 3601,
+    "dem_interpolation": "bilinear",
+    "dem_void_value": -32768,
+    "pair_common_support_min_fixes_each": 50,
+    "panel_min_evaluable_individuals": 5,
+    "permutation_B": 9999
+  },
+  "panel_order": [
+    "hypsignathus",
+    "phyllostomus_2022",
+    "phyllostomus_2023",
+    "phyllostomus_2016"
+  ],
+  "panels": {
+    "hypsignathus": {
+      "contract_path": "contract/hypsignathus_replication_v1.json",
+      "contract_git_blob_sha1": "1861a0a8ec625d9093919fbcf02b7ec45d3b4a92",
+      "gps": {
+        "url": "https://datarepository.movebank.org/server/api/core/bitstreams/7cc2bd3f-a9d3-4529-bd6d-7fc1fc47e000/content",
+        "bitstream_id": "7cc2bd3f-a9d3-4529-bd6d-7fc1fc47e000",
+        "size_bytes": 9383514,
+        "md5": "e2fd92d7647c745b54191def19131570",
+        "expected_local_name": "hypsignathus_gps.csv"
+      },
+      "reference": {
+        "url": "https://datarepository.movebank.org/server/api/core/bitstreams/90da2331-91a0-48da-9c6d-8b80cbc12480/content",
+        "bitstream_id": "90da2331-91a0-48da-9c6d-8b80cbc12480",
+        "size_bytes": 12509,
+        "md5": "313cb130df9c69a82526640ad318e24f",
+        "expected_local_name": "hypsignathus_reference.csv"
+      },
+      "source_vertical_field": "height_above_ellipsoid",
+      "original_coordinate_row_count": 26945,
+      "original_target_session_count": 209,
+      "dem_tiles": [
+        "N00E014"
+      ]
+    },
+    "phyllostomus_2022": {
+      "contract_path": "contract/phyllostomus_replication_v1.json",
+      "contract_git_blob_sha1": "32e4772b1bb2d4c294c8324ca08ee8783adc12e2",
+      "gps": {
+        "url": "https://datarepository.movebank.org/server/api/core/bitstreams/fa2e42c9-275a-4833-b74f-3e2715c8794d/content",
+        "bitstream_id": "fa2e42c9-275a-4833-b74f-3e2715c8794d",
+        "size_bytes": 5846425,
+        "md5": "7bae1d6d59acad98a4df7348c04d5ea6",
+        "expected_local_name": "phyllostomus_2022_gps.csv"
+      },
+      "reference": {
+        "url": "https://datarepository.movebank.org/server/api/core/bitstreams/baae11b3-e466-4f51-b7ee-3119fc51810a/content",
+        "bitstream_id": "baae11b3-e466-4f51-b7ee-3119fc51810a",
+        "size_bytes": 15626,
+        "md5": "008c0513007d291884d128b7c7af9629",
+        "expected_local_name": "phyllostomus_2022_reference.csv"
+      },
+      "source_vertical_field": "height_above_msl",
+      "original_coordinate_row_count": 20555,
+      "original_target_session_count": 226,
+      "dem_tiles": [
+        "N09W083"
+      ]
+    },
+    "phyllostomus_2023": {
+      "contract_path": "contract/phyllostomus_2023_replication_v1.json",
+      "contract_git_blob_sha1": "0e666bc2fdd0856fd0fb55b4fbda781bc1f70852",
+      "gps": {
+        "url": "https://datarepository.movebank.org/server/api/core/bitstreams/a842b308-d4a1-4c31-81db-acf699e5cadb/content",
+        "bitstream_id": "a842b308-d4a1-4c31-81db-acf699e5cadb",
+        "size_bytes": 3355955,
+        "md5": "327c31ea3e129d692bbb527ad32995f1",
+        "expected_local_name": "phyllostomus_2023_gps.csv"
+      },
+      "reference": {
+        "url": "https://datarepository.movebank.org/server/api/core/bitstreams/31403d15-5784-4b01-80bd-9ef9c0a7f4cd/content",
+        "bitstream_id": "31403d15-5784-4b01-80bd-9ef9c0a7f4cd",
+        "size_bytes": 8384,
+        "md5": "9880d2b155237d61ce6e6391296df1da",
+        "expected_local_name": "phyllostomus_2023_reference.csv"
+      },
+      "source_vertical_field": "height_above_ellipsoid",
+      "original_coordinate_row_count": 14500,
+      "original_target_session_count": 61,
+      "dem_tiles": [
+        "N09W083"
+      ]
+    },
+    "phyllostomus_2016": {
+      "contract_path": "contract/phyllostomus_2016_dry_architecture_v1.json",
+      "contract_git_blob_sha1": "a4dff03a800dec98f612e0873c120756a012cf4e",
+      "gps": {
+        "url": "https://datarepository.movebank.org/server/api/core/bitstreams/40623d69-2787-4aec-8237-4d2264bd665f/content",
+        "bitstream_id": "40623d69-2787-4aec-8237-4d2264bd665f",
+        "size_bytes": 50919501,
+        "md5": "58d555f48e07b5e41e2c5d1983b25e80",
+        "expected_local_name": "phyllostomus_2016_gps.csv"
+      },
+      "reference": {
+        "url": "https://datarepository.movebank.org/server/api/core/bitstreams/35cd7452-fe48-4423-81fb-4ff8e0717da8/content",
+        "bitstream_id": "35cd7452-fe48-4423-81fb-4ff8e0717da8",
+        "size_bytes": 7299,
+        "md5": "17bf1ab59daeb37b5ee1f8f1c127d0b4",
+        "expected_local_name": "phyllostomus_2016_reference.csv"
+      },
+      "source_vertical_field": "height_above_msl",
+      "original_coordinate_row_count": 178042,
+      "original_target_session_count": 25,
+      "dem_tiles": [
+        "N09W083"
+      ]
+    }
+  },
+  "dem_tiles": [
+    {
+      "tile": "N00E014",
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/skadi/N00/N00E014.hgt.gz",
+      "gzip_bytes": 10483130,
+      "gzip_sha256": "4bae8d8620c81cc61205d3932a28ffeb7ba39b242fd65d769ed78c3700520ff2",
+      "grid_n": 3601,
+      "expected_local_name": "N00E014.hgt.gz"
+    },
+    {
+      "tile": "N09W083",
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/skadi/N09/N09W083.hgt.gz",
+      "gzip_bytes": 8882185,
+      "gzip_sha256": "5a0ed5baeaf687fa8392444269dbfb8cdd198c0a383fb103b8aed85d9651c1f3",
+      "grid_n": 3601,
+      "expected_local_name": "N09W083.hgt.gz"
+    }
+  ],
+  "expected_totals": {
+    "gps_file_count": 4,
+    "reference_file_count": 4,
+    "dem_file_count": 2,
+    "gps_bytes": 69505395,
+    "reference_bytes": 43818,
+    "dem_gzip_bytes": 19365315,
+    "coordinate_rows": 240042,
+    "target_sessions": 521
+  },
+  "boundaries": [
+    "Source metadata are exact historical file declarations but original GPS/DEM binary bytes have NOT been independently downloaded or re-hashed for this ledger.",
+    "The original historical success is not an independent replay in the current integration.",
+    "Access and redistribution rights are source-specific and must be checked before obtaining or mirroring bat tracking bitstreams.",
+    "Original runtime versions of requests/pandas/numpy/pyproj and system environment are not fully pinned.",
+    "An offline verification of local files alone is not an empirical numerical rerun or a new significance test."
+  ]
+}

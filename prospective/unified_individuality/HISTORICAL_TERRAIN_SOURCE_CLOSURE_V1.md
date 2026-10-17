@@ -1,0 +1,76 @@
+# One-commit recovery of the source code for the original bat terrain-relative 3D result
+
+**Recovery audit:** 2026-10-15. **Reproducibility tier:** source-code/contract/checksum closure, **not** a full rerun of GPS/DEM observations or a new scientific outcome.
+
+## Why this matters
+
+The original 500-m terrain-relative wild bat result was obtained from a successful 2026 workflow. However, the final JAE frozen branch `release/jae-v0.4.0-rc2` retains the original terrain driver but **omits files it dynamically imports**, including the original joint-3D `run_v1.py`, external geometry helper, and its native source contract. Therefore the frozen branch alone cannot honestly be called fully re-executable at that stage.
+
+Rather than silently rebuilding lost scripts from memory, the unified-manuscript PR now provides a recoverable **single historical execution-source tree** taken from the *exact historical terrain workflow source commit*:
+
+- **Original terrain workflow:** [36946126004](https://github.com/zuizui0223/batter/actions/runs/36946126004).
+- **Source Git commit:** [`819acc829d615485b57033f1ddcbebf64b4b49a0`](https://github.com/zuizui0223/batter/tree/819acc829d615485b57033f1ddcbebf64b4b49a0).
+- **Native 3D ancestor workflow:** [36881187913](https://github.com/zuizui0223/batter/actions/runs/36881187913), with original native result `summary_v1.json` stored **unchanged** under both the native-recovery evidence and this exact historical source tree.
+- **Source manifest:** [`source_recovery/terrain_source_closure_manifest_v1.json`](source_recovery/terrain_source_closure_manifest_v1.json) pins **21 historical source files by original Git blob SHA-1**.
+- **Source recovery program:** [`source_recovery/recover_terrain_source_closure_v1.py`](source_recovery/recover_terrain_source_closure_v1.py) fetches only the exact source files from GitHub at that commit, validates the original Git blob identity of each, parses the Python/JSON structures, checks the direct intra-repository imports, and generates one deterministic source-only ZIP.
+
+The recovered tree includes four source-specific *Phyllostomus*/*Hypsignathus* contracts, original terrain DEM preflight checksums, run-driver, both dynamically imported 3D geometry modules, calibration/tag-offset/source preprocessing scripts, the `batter.analysis` package and historical `pyproject.toml`.
+
+## Recovery outcome and exact frozen-branch comparison (verified)
+
+The original historical code-only closure workflow [run **38685340549**](https://github.com/zuizui0223/batter/actions/runs/38685340549) **passed** source retrieval, 21 original Git blob SHA checks, static Python/JSON/contract checks, ZIP production and independent network-free ZIP/source revalidation. The actual artifact was independently unpacked and its 21 archived files checked again against all original Git blob SHAs.
+
+- **Verified portable source-only ZIP:** `terrain_original_3d_source_closure_v1.zip`, **61,398 bytes**, SHA256 `27e1f7cd44e3aa367f150aef8f608a7cec35a73a8ef922c0f2950d0059f13ce1`. The GitHub Actions artifact wraps this ZIP in an outer transport archive.
+- **Later JAE rc2 tree retains identical Git blobs** for the terrain driver `run_original_terrain_geometry_v1.py`, the terrain contract, the DEM-preflight receipt and five source-loading/estimator scripts (verified file by file).
+- The same rc2 tree **lacks exactly three required same-directory original code/contract files** checked here: `run_v1.py`, `run_external_geometry_v1.py`, and `contract_v1.json`. All three exist at the terrain source success commit, and their identical bytes are included in the recovered ZIP.
+- This demonstrates **historical source-code packaging closure**. The extended [CI run **38685805292**](https://github.com/zuizui0223/batter/actions/runs/38685805292) also passed a **true Python module import** of the recovered original terrain driver and its dependent modules using an explicitly modern pinned compatibility environment, and checked the original O_XY/O_XYZ/R_3D function on an artificial **single-cell two-height-bin synthetic input** (1.0/0.7/0.3). This establishes import/elementary formula compatibility, not original environmental-version equivalence or the correctness of real-data outcomes. The source closure does **not** demonstrate that the full GPS/DEM numerical analysis reruns to the same point estimates: original source bitstreams, geospatial environmental tiles, redistribution permissions, runtime dependency versions and the original workflow's generated outputs are separate requirements.
+
+## What was (and was not) independently checked
+
+**Now checkable from original version-controlled historical bytes:**
+
+- Exact single-commit source identity of each runner, loader, analysis helper, preflight receipt and panel contract.
+- That the dynamic runner's relative import paths exist in the recovered historical source tree, even when those imports are missing from the later frozen JAE branch.
+- Native 3D result provenance `run_id=36881187913` and historical source contract `batter-original-panel-terrain-3d-geometry-v1`.
+- Source-definition distinction between normalized per-session (R_{3D}=1-O_{XYZ}/O_{XY}) and panel summaries: averaging per-pair ratios is **not** a ratio of already pooled mean overlaps.
+- No raw Movebank GPS fixes, tag files, private source archives, large DEM tiles, or reanalysis-generated inferential statistics are written into the output archive.
+
+**Not established by source closure alone:**
+
+- End-to-end numerical reproduction of the terrain geometry original results or its 9,999 label-permutation nulls.
+- Availability and redistribution rights of the original Movebank GPS/event files, DEM tiles or other third-party bitstreams.
+- Exact package versions and full computational operating system from the historical success run. In particular, the historical Python runners import `pandas` and `requests` as well as the declared `numpy` and `pyproj`; the original `pyproject.toml` alone does not freeze those versions.
+- Correctness of original source authors' animal-ID cross-study mappings, ecological causal mechanisms or any unreported sensitivity family.
+
+## Reviewer procedure
+
+1. Check out this unified PR branch. Run the Python 3.12 script with `--inventory-only` to validate its fixed 21-file manifest without networking.
+2. Invoke the script with an output directory; it retrieves each GitHub historical source file and checks its expected Git blob SHA before writing anything. It creates `terrain_original_3d_source_closure_v1.zip` containing the original relative directory structure and a frozen manifest. `--offline` revalidates a previously retrieved tree without any networking.
+3. Use GitHub Actions workflow [`unified-historical-terrain-source-closure-v1.yml`](../../.github/workflows/unified-historical-terrain-source-closure-v1.yml) to obtain the same source-only ZIP as a PR artifact. No original raw bat tracking or DEM has been duplicated into this package.
+4. A subsequent **separate permissions-checked reproducibility project** may use the exact historical source and the original source-specified data/DEM checksums to try a complete rerun. Such a rerun is explicitly **not claimed in the present paper integration** and must not be described as a confirmed raw-data replication without an actual completed results audit.
+
+## Ecological inference unchanged
+
+The previous original results retain their separate test/evidence tiers: terrain-relative individual vertical fidelity supported in 4/4 original structural panels (two species), **positive** added segregation S_rel not supported in any of those 4, and synchronous extra co-use separation supported only in one heterogeneous 2023 *P. hastatus* design. Recovered code cannot retroactively elevate post-outcome diagnostics to independent prospective confirmation. The new original native 3D overlaps also remain distinct from the one-dimensional Figure S1 shape-overlap coefficients calculated from different, nonidentical original panel records and supports.
+
+**Publication status:** historical code-provenance recovery for reviewer transparency; no journal submission, new animal study, scientific outcome claim or amendment of original frozen JAE/BE branches.
+
+## Distinct second-stage S_rel null source — verified historical provenance 2026-10-15
+
+**Critical separation:** the 21-file, single-commit source recovery above documents the originally successful *terrain-geometry and V_rel* runner at commit `819acc829d615485b57033f1ddcbebf64b4b49a0`, workflow [36946126004](https://github.com/zuizui0223/batter/actions/runs/36946126004). In that script, the original 9,999 requested label permutations calibrated **V_rel**, while **S_rel was a descriptive point estimate**. The 21-file ZIP **alone does not replay the S_rel permutation p-values** quoted in the unified paper.
+
+The **second-stage S_rel calibration** has a distinct original successful GitHub workflow [36992380946](https://github.com/zuizui0223/batter/actions/runs/36992380946), executed from commit `d0193c1a0da93cda2d1e711039d0eb3b93eafce7` on 2026-10-02. The exact original runner `run_partitioning_s_calibration_v1.py` (Git blob `9aba94c6a08a289db50f21d553da866f7641feb2`) and its frozen contract `partitioning_calibration_contract_v1.json` (Git blob `1dfc8625de021f5a7bc02167fba59650b0e29b19`) appear at this successful commit **and** in the later frozen JAE rc2 checkout. The phase-B runner reuses the phase-A native 3D/terrain helper and source contracts *byte-identically* (verified Git blobs) and, under its own historical execution, recomputes both **V_rel** and **S_rel** for label permutations, comparing `S_rel` two-sided around its null mean. Its original 4-panel summary is preserved in the integration at `figures/ORIGINAL_TERRAIN_PARTITIONING_CALIBRATION_V1.json` (Git blob `e969698e2a594d2eeca2631d7473e598a8a8f371`), with nominal two-sided S p-values 0.0362, 0.3639, 0.2704 and 0.4796 (source order: Hypsignathus, P. 2022, 2023 and 2016). No positive S_rel inference passed its source test.
+
+A new [phase-B provenance manifest](source_recovery/partitioning_s_calibration_provenance_v1.json) and [two-tier provenance validator](source_recovery/verify_partitioning_s_provenance_v1.py) distinguish the two historical commits rather than pretending all source files were from the same original execution. The default validator checks manifest/result identity without networking; an optional CI path fetches only the **two original stage-B source-code files** and verifies Git blobs and original S permutation definitions. **Neither stage has been independently rerun from raw GPS/DEM in this PR**, and the actual source GPS/DEM inputs and original software environment remain access/replay gates.
+
+## Offline original input replay ledger — 2026-10-15
+
+The original historical source contracts and DEM preflight receipt now have a separately versioned, derived [source-only replay-input inventory](source_recovery/terrain_replay_input_manifest_v1.json), generated from their **exact historical Git blobs** rather than from a reconstructed memory of the code. It contains four GPS/track-event bitstream identifiers, four associated reference/tag bitstreams, two unique Mapzen/AWS Skadi DEM gzipped tiles, the original field names, MD5 (GPS/reference) or SHA256 (DEM), original byte lengths, 500-m geometry settings and source 9,999-permutation setting. Original preflight receipt records **240,042 coordinate rows and 521 sessions** across the four panel sources. Total declared raw input sizes are **69,505,395 GPS bytes**, **43,818 reference bytes**, and **19,365,315 gzipped DEM bytes**. These are **historical input declarations**, not current independently re-fetched binary data. GPS and DEM are not bundled in the PR.
+
+A network-free [replay-input verifier](source_recovery/verify_terrain_replay_input_manifest_v1.py) now has three levels:
+
+1. Default (`python3 prospective/unified_individuality/source_recovery/verify_terrain_replay_input_manifest_v1.py`): check 21-file closure manifest, original success-commit labels, panel and input counts, declared bytes/checksum formats and the preserved result summary's workflow identity. **This does not check source bytes.**
+2. Original-tree (`--source-root /path/to/historical_commit_819acc82`): recompute SHA-1 Git blob identity of all 21 original code/contract/receipt files; independently compare each GPS/reference MD5/size/URL declaration and original DEM receipt to the input inventory. The source-only GitHub workflow invokes this path after exact historical recovery. **This checks historical source metadata, not actual GPS or DEM bytes.**
+3. Opt-in protected data (`--input-dir /path/to/authorized_inputs`): an authorized operator can supply their own four `<panel>_gps.csv`, four `<panel>_reference.csv` and two `<tile>.hgt.gz` files. The script streams bytes and checks their original stated sizes and checksums; it does not download, copy, parse GPS coordinates, decode DEM, run a permutation, or create redistributed datasets. No such inputs have been verified in this integration.
+
+**Access and scientific boundaries:** source-author permissions and redistribution constraints still need confirmation, especially for re-hosting raw tracking data. Original historic runtime versions (including pandas, requests, numpy, pyproj and operating system) are not closed by a modern import smoke test. Even successful local input-byte checks would precede, not constitute, a full original GPS/DEM and 9,999-permutation numerical replay. Until then the source archive is **replay-ready at the documented input-contract level only**.

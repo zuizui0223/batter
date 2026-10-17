@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "title": "Exploratory per-family four-panel Holm p-value sensitivity using published/frozen original source tests",
+  "generated_from_exact_source": {
+    "figure_source_path": "figures/FROZEN_FIGURE_DATA_V1.json",
+    "figure_git_blob_sha1": "b3f7b20136d028021a3c33a43c256e40ce91f677",
+    "V_source_path": "figures/ORIGINAL_TERRAIN_RELATIVE_3D_SOURCE_V1.json",
+    "V_git_blob_sha1": "08631a0dce61cc47e12b2d32642c46b5759fe872",
+    "S_source_path": "figures/ORIGINAL_TERRAIN_PARTITIONING_CALIBRATION_V1.json",
+    "S_git_blob_sha1": "e969698e2a594d2eeca2631d7473e598a8a8f371"
+  },
+  "study_panels": [
+    "hypsignathus",
+    "phyllostomus_2022",
+    "phyllostomus_2023",
+    "phyllostomus_2016"
+  ],
+  "family_size": 4,
+  "adjustment": "Holm step-down procedure, separately for V, S, I families; adjusted values monotonic in sorted raw p; no across-family correction",
+  "families": {
+    "V_rel_one_sided": {
+      "hypsignathus": {
+        "source_p": 0.0001,
+        "holm_p": 0.0004,
+        "nominal_p_le_0_05": true,
+        "holm_p_le_0_05": true
+      },
+      "phyllostomus_2022": {
+        "source_p": 0.0001,
+        "holm_p": 0.0004,
+        "nominal_p_le_0_05": true,
+        "holm_p_le_0_05": true
+      },
+      "phyllostomus_2023": {
+        "source_p": 0.0001015950421619425,
+        "holm_p": 0.0004,
+        "nominal_p_le_0_05": true,
+        "holm_p_le_0_05": true
+      },
+      "phyllostomus_2016": {
+        "source_p": 0.034527622097678144,
+        "holm_p": 0.034527622097678144,
+        "nominal_p_le_0_05": true,
+        "holm_p_le_0_05": true
+      }
+    },
+    "S_rel_two_sided": {
+      "hypsignathus": {
+        "source_p": 0.0362,
+        "holm_p": 0.1448,
+        "nominal_p_le_0_05": true,
+        "holm_p_le_0_05": false
+      },
+      "phyllostomus_2022": {
+        "source_p": 0.3639,
+        "holm_p": 0.8113380067052727,
+        "nominal_p_le_0_05": false,
+        "holm_p_le_0_05": false
+      },
+      "phyllostomus_2023": {
+        "source_p": 0.2704460022350909,
+        "holm_p": 0.8113380067052727,
+        "nominal_p_le_0_05": false,
+        "holm_p_le_0_05": false
+      },
+      "phyllostomus_2016": {
+        "source_p": 0.4795836669335468,
+        "holm_p": 0.8113380067052727,
+        "nominal_p_le_0_05": false,
+        "holm_p_le_0_05": false
+      }
+    },
+    "co_use_one_sided": {
+      "hypsignathus": {
+        "source_p": 0.9045,
+        "holm_p": 1,
+        "nominal_p_le_0_05": false,
+        "holm_p_le_0_05": false
+      },
+      "phyllostomus_2022": {
+        "source_p": 0.9186,
+        "holm_p": 1,
+        "nominal_p_le_0_05": false,
+        "holm_p_le_0_05": false
+      },
+      "phyllostomus_2023": {
+        "source_p": 0.0231,
+        "holm_p": 0.0924,
+        "nominal_p_le_0_05": true,
+        "holm_p_le_0_05": false
+      },
+      "phyllostomus_2016": {
+        "source_p": 0.8611,
+        "holm_p": 1,
+        "nominal_p_le_0_05": false,
+        "holm_p_le_0_05": false
+      }
+    }
+  },
+  "summary": {
+    "V_rel_nominal_p_le_0_05": 4,
+    "V_rel_holm_p_le_0_05": 4,
+    "S_rel_two_sided_nominal_p_le_0_05": 1,
+    "S_rel_two_sided_holm_p_le_0_05": 0,
+    "S_rel_positive_direction_nominal_support": 0,
+    "co_use_nominal_p_le_0_05": 1,
+    "co_use_holm_p_le_0_05": 0,
+    "notable_S_negative_direction_hypsignathus": {
+      "raw_p": 0.0362,
+      "holm_p": 0.1448
+    },
+    "notable_co_use_positive_phyllostomus_2023": {
+      "raw_p": 0.0231,
+      "holm_p": 0.0924
+    }
+  },
+  "constraints": [
+    "Derived post-outcome sensitivity from already public frozen p-values; NOT a new raw-data analysis, prospective family registration, or newly valid confirmatory claim.",
+    "Holm applied independently within each four-study-panel endpoint family, NOT over all source analyses or across V, S and I families.",
+    "The four panels belong to two bat species; the three P. hastatus year/study panels are not independent taxonomic replication.",
+    "Within-source null/permutation validity and original partial observational biases are inherited, not established by arithmetic adjustment.",
+    "Nonsignificance after adjustment does not prove equivalence, zero interaction or an absence of competition."
+  ]
+}
