@@ -136,6 +136,12 @@ Archived original per-bat/dyad source ZIPs were independently verified byte-for-
 
 New source-aggregate-only frozen dyad/event JSON and extended cross-estimand validator are in the same draft PR; default CI checks original aggregate/hash consistency, optional --artifact-dir checks genuine original ZIP bytes and rederives all subset partitions privately. Original individual IDs and source archives are **not** redistributed. The original artifact expiry date **2026-12-28 earliest** and per-source Movebank rights-first preservation plan are documented separately. No empirical effect or hypothesis test was introduced.
 
+## Published-source license verification and ecological context — 2026-10-18
+
+All four independently checked original bat tracking Movebank DOI **data-package** DSpace Full item pages report `dc.rights=CC0 1.0 Universal` and the corresponding publicdomain/zero/1.0 URI. The four exact DOI/UUID metadata URLs, source study titles and static license fields have been retained in an aggregate-only source rights receipt and a no-network CI validator. **This is an original published input-data license finding**, not a recorded downstream distribution/retention decision for original ID-bearing Actions result ZIPs, nor human coauthor/overlap approval.
+
+The source abstracts now ground explicit alternative ecological task mechanisms in the actual original study organisms and behaviors: lekking vs foraging in `H. monstrosus`, seasonally changing balsa patch/resource tasks and colony-linked commutes in 2022/2023 `P. hastatus`, and independently commuting/resting/group foraging in 2016. They are **source-study prior findings**, not present reanalysis' independently validated task labels. A prospective same-animal verified-task experiment distinguishes task allocation from residual within-task flight policy. No new biological fit or causal result was added.
+
 ## Original artifact bat-ID intersections independently recovered — 2026-10-16
 
 The original fine500, native3D, terrain3D and corrected co-use successful workflows retain 16 per-panel result ZIP artifacts. Their **16 SHA256 digests exactly match GitHub Actions published artifact digests**. Cohort-qualified original per-individual/dyad records establish fine500-versus-geometry overlaps **8/5/6/9**, fine500-versus-I **10/6/6/5**, and geometry-versus-I **5/3/5/5**. All native and terrain geometry bat-ID sets match exactly; all V/S bats occur in fine500. Original aggregate-only statements about unverifiable intersections are superseded.
