@@ -23,6 +23,10 @@ jobs:
         run: python3 prospective/multitaxon_individuality/validate_metadata_census_v1.py
       - name: Verify movement identity and habitat overlap are distinct in synthetic-only examples
         run: python3 prospective/multitaxon_individuality/validate_distinct_identity_partition_estimands_v1.py
+      - name: Verify original 437-package GPS metadata screening, rights and nonbat pilot queue
+        run: python3 prospective/multitaxon_individuality/validate_movebank_metadata_triage_v1.py
+      - name: Test privacy-safe streaming GPS CSV/GZIP preflight on invented animal-day records
+        run: python3 -m unittest discover -s prospective/multitaxon_individuality/tests -p 'test_*.py' -v
       - name: Confirm this is metadata/design only, never a claimed biological result
         run: |
           python3 - <<'PY'
