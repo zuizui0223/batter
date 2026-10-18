@@ -1,0 +1,72 @@
+name: Unified manuscript figures (source-summary guard)
+
+on:
+  pull_request:
+    paths:
+      - 'prospective/unified_individuality/**'
+      - '.github/workflows/unified-manuscript-figures-v1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-unified-figures:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Regenerate six vector figures from pinned source summaries
+        run: node prospective/unified_individuality/figures/generate_integrated_figures_v1.cjs
+      - name: Regenerate exact original 103-individual Figure 5A/B composite
+        run: node prospective/unified_individuality/figures/build_figure5_composite_v2.cjs
+      - name: Rebuild cohort-restricted 1D vertical profile overlap (post-outcome descriptive only)
+        run: node prospective/unified_individuality/figures/derive_centered_vertical_overlap_v1.cjs
+      - name: Draw cohort-resolved Figure S1 from exact 12-cohort descriptive summaries
+        run: node prospective/unified_individuality/figures/render_cohort_resolved_s1_v2.cjs
+      - name: Rebuild original historical native XY vs joint 3D source Figure S2
+        run: node prospective/unified_individuality/figures/render_original_native_3d_overlap_s2_v1.cjs
+      - name: Independently reproduce same-cohort profile overlap using original CSV, Python
+        run: python3 prospective/unified_individuality/validate_overlap_independent_csv_v1.py
+      - name: Audit panel-indexed source profiles and repeated 2016/2022 literal labels
+        run: python3 prospective/unified_individuality/validate_profile_panel_identity_scope_v1.py
+      - name: Independently validate cohort-size sensitivity from immutable 103-record source CSV
+        run: python3 prospective/unified_individuality/validate_cohort_weight_sensitivity_v1.py
+      - name: Rebuild anonymous journal-order complete text
+        run: node prospective/unified_individuality/build_complete_anonymous_text_v1.cjs
+      - name: Guard against stale or hand-edited figures and anonymous text
+        run: git diff --exit-code -- prospective/unified_individuality/figures/ prospective/unified_individuality/COMPLETE_ANONYMOUS_TEXT_DRAFT_V1.md
+      - name: Check scientific gates, labels, and SVG XML
+        run: python3 prospective/unified_individuality/figures/validate_integrated_figures_v1.py
+      - name: Audit source-bounded ecological mechanism and mathematical counterexample
+        run: python3 prospective/unified_individuality/validate_ecological_identifiability_v1.py
+      - name: Verify original native/terrain 3D result source, byte-identical historic code and Figure S2
+        run: python3 prospective/unified_individuality/validate_native_3d_source_recovery_v1.py
+      - name: Audit alpha-smoothed 3D overlap and aggregate shared-fix support with synthetic-only examples
+        run: python3 prospective/unified_individuality/validate_smoothing_support_boundary_v1.py
+      - name: Verify exact original native V-S overlap-slack identity and synthetic coupling
+        run: python3 prospective/unified_individuality/validate_original_v_s_overlap_coupling_v1.py
+      - name: Verify nonmatched animal n in 500m fine, 3D geometry and co-use source panels
+        run: python3 prospective/unified_individuality/validate_cross_estimand_eligibility_v1.py
+      - name: Check official bat Movebank DOI CC0 metadata receipts while retaining derived-output rights limits
+        run: python3 prospective/unified_individuality/validate_original_doi_rights_v1.py
+      - name: Audit historical co-use session-centering and nonphysical height-gap semantics
+        run: python3 prospective/unified_individuality/validate_couse_centering_boundary_v1.py
+      - name: Guard terrain replay input manifests and source-only checksums (no downloads)
+        run: python3 prospective/unified_individuality/source_recovery/verify_terrain_replay_input_manifest_v1.py
+      - name: Verify second-stage S_rel permutation source/result provenance without raw data
+        run: python3 prospective/unified_individuality/source_recovery/verify_partitioning_s_provenance_v1.py
+      - name: Source-hash audit of native-to-DEM 3D geometry and mixed vertical datums
+        run: python3 prospective/unified_individuality/validate_terrain_datum_contrast_v1.py
+      - name: Recompute four-panel Holm post-outcome sensitivity from pinned original p-values
+        run: python3 prospective/unified_individuality/validate_four_panel_multiplicity_v1.py
+      - name: Upload six main manuscript figures including Figure 5 composite for QA
+        uses: actions/upload-artifact@v4
+        with:
+          name: unified-manuscript-figures-svg-v1
+          path: prospective/unified_individuality/figures/FIGURE_*.svg
+          if-no-files-found: error
+          retention-days: 30

@@ -1,0 +1,361 @@
+{
+  "schema_version": 3,
+  "audit_date": "2026-10-16",
+  "classification": "Cohort-qualified original-result artifact ID-set intersection verified from 16 exact SHA256-matched historical successful GitHub Actions ZIPs; aggregates only",
+  "source": [
+    {
+      "path": "figures/FROZEN_FIGURE_DATA_V1.json",
+      "git_blob_sha1": "b3f7b20136d028021a3c33a43c256e40ce91f677"
+    },
+    {
+      "path": "figures/ORIGINAL_NATIVE_3D_OVERLAP_SUMMARY_V1.json",
+      "git_blob_sha1": "c1d37e42f72f59e5aba364daec9aef68b47778b6"
+    },
+    {
+      "path": "historical_release/post_freeze_extensions/3d_niche_partition/COUSE_VERTICAL_SEPARATION_RESULT_V1.md",
+      "git_blob_sha1": "d7b6054d95e7a6c27baf8e35a2f7377f628fe818",
+      "ref": "release/jae-v0.4.0-rc2"
+    },
+    {
+      "path": "historical_release/post_freeze_extensions/fine_place_kinematic_500m/result_summary_v1.json",
+      "git_blob_sha1": "a2960b45a1a7ea1e0e3beebe6eb799a47f114bed",
+      "ref": "release/jae-v0.4.0-rc2"
+    }
+  ],
+  "panels": [
+    {
+      "panel": "hypsignathus",
+      "panel_label": "H. monstrosus",
+      "native_or_terrain_V_S_evaluable_n": 8,
+      "fixed_event_couse_I_usable_n": 11,
+      "reported_I_dyads": 22,
+      "reported_I_matched_encounter_pairs": 883,
+      "primary_time_tolerance_s": 60,
+      "primary_scope": "endpoint_excluded",
+      "individual_level_joint_V_S_I_analysis_reported": false,
+      "n_co_use_minus_n_geometry": 3,
+      "fine500_place_speed_turn_usable_n": 19,
+      "cohort_qualified_ID_sets_crosschecked_in_original_artifacts": true,
+      "native_and_terrain_geometry_identical_ID_sets": true,
+      "actual_ID_sets_equal_geometry_and_I": false,
+      "ID_membership_overlap_counts": {
+        "fine500_geometry": 8,
+        "fine500_I": 10,
+        "geometry_I": 5,
+        "all_three": 5
+      },
+      "set_inclusions": {
+        "geometry_subset_of_fine500": true,
+        "I_subset_of_fine500": false,
+        "I_subset_of_geometry": false
+      },
+      "original_result_artifact_sources": [
+        {
+          "analysis_role": "fine500",
+          "run_id": 36519747717,
+          "artifact_id": 11012467434,
+          "artifact_name": "fine-place-kinematic-500m-hypsignathus-v1",
+          "artifact_zip_sha256": "9ba19bd1900f92e51f813c3e80f4d4e30c221c80ff2a775924cd3e331502a1f1",
+          "expires_at": "2026-12-28T04:01:37Z"
+        },
+        {
+          "analysis_role": "native3d",
+          "run_id": 36881187913,
+          "artifact_id": 11171378681,
+          "artifact_name": "3d-niche-partition-hypsignathus-v1",
+          "artifact_zip_sha256": "5574b295ecfd187e320f8d2446d78e0709033d0680b5f461967f5d199ffa901e",
+          "expires_at": "2026-12-30T15:02:49Z"
+        },
+        {
+          "analysis_role": "terrain3d",
+          "run_id": 36946126004,
+          "artifact_id": 11202650639,
+          "artifact_name": "original-terrain-geometry-hypsignathus-v1",
+          "artifact_zip_sha256": "6a42b8fb8890c3bf288639adc1f068d3e76dce0aaad9bf240690fce477b4c764",
+          "expires_at": "2026-12-31T00:28:01Z"
+        },
+        {
+          "analysis_role": "co_use",
+          "run_id": 36953712597,
+          "artifact_id": 11205510244,
+          "artifact_name": "couse-vertical-separation-hypsignathus-v1",
+          "artifact_zip_sha256": "3cae11ab2ee37b966d7d3798f8dc8a370e10ae1e7f449aa896869a0570e3e753",
+          "expires_at": "2026-12-31T02:01:52Z"
+        }
+      ],
+      "full_eligible_animal_sets_are_identical_across_three_assays": false
+    },
+    {
+      "panel": "phyllostomus_2022",
+      "panel_label": "P. hastatus 2022",
+      "native_or_terrain_V_S_evaluable_n": 5,
+      "fixed_event_couse_I_usable_n": 6,
+      "reported_I_dyads": 10,
+      "reported_I_matched_encounter_pairs": 347,
+      "primary_time_tolerance_s": 60,
+      "primary_scope": "endpoint_excluded",
+      "individual_level_joint_V_S_I_analysis_reported": false,
+      "n_co_use_minus_n_geometry": 1,
+      "fine500_place_speed_turn_usable_n": 23,
+      "cohort_qualified_ID_sets_crosschecked_in_original_artifacts": true,
+      "native_and_terrain_geometry_identical_ID_sets": true,
+      "actual_ID_sets_equal_geometry_and_I": false,
+      "ID_membership_overlap_counts": {
+        "fine500_geometry": 5,
+        "fine500_I": 6,
+        "geometry_I": 3,
+        "all_three": 3
+      },
+      "set_inclusions": {
+        "geometry_subset_of_fine500": true,
+        "I_subset_of_fine500": true,
+        "I_subset_of_geometry": false
+      },
+      "original_result_artifact_sources": [
+        {
+          "analysis_role": "fine500",
+          "run_id": 36519747717,
+          "artifact_id": 11013235792,
+          "artifact_name": "fine-place-kinematic-500m-phyllostomus_2022-v1",
+          "artifact_zip_sha256": "c73e0a4ce29b2ae1af2c8051554fe1c5644c8670351dda1312d43df98b951dc5",
+          "expires_at": "2026-12-28T04:01:37Z"
+        },
+        {
+          "analysis_role": "native3d",
+          "run_id": 36881187913,
+          "artifact_id": 11171412894,
+          "artifact_name": "3d-niche-partition-phyllostomus_2022-v1",
+          "artifact_zip_sha256": "a53300e84bd01802e5f093f95e4e38bb4a531a3ae72638e65968ef2293acc4a2",
+          "expires_at": "2026-12-30T15:02:49Z"
+        },
+        {
+          "analysis_role": "terrain3d",
+          "run_id": 36946126004,
+          "artifact_id": 11201349879,
+          "artifact_name": "original-terrain-geometry-phyllostomus_2022-v1",
+          "artifact_zip_sha256": "5a868fbdacc71841896534f96b5c3d9db3529e5d610320381a2b0d4364be2e37",
+          "expires_at": "2026-12-31T00:28:01Z"
+        },
+        {
+          "analysis_role": "co_use",
+          "run_id": 36953712597,
+          "artifact_id": 11204898247,
+          "artifact_name": "couse-vertical-separation-phyllostomus_2022-v1",
+          "artifact_zip_sha256": "9d096a7189d122ae0191a3060d82c5a83c9ef51bc122b6b0d2bda56c3aeb6bc6",
+          "expires_at": "2026-12-31T02:01:52Z"
+        }
+      ],
+      "full_eligible_animal_sets_are_identical_across_three_assays": false
+    },
+    {
+      "panel": "phyllostomus_2023",
+      "panel_label": "P. hastatus 2023",
+      "native_or_terrain_V_S_evaluable_n": 6,
+      "fixed_event_couse_I_usable_n": 6,
+      "reported_I_dyads": 8,
+      "reported_I_matched_encounter_pairs": 679,
+      "primary_time_tolerance_s": 600,
+      "primary_scope": "all_space",
+      "individual_level_joint_V_S_I_analysis_reported": false,
+      "n_co_use_minus_n_geometry": 0,
+      "fine500_place_speed_turn_usable_n": 11,
+      "cohort_qualified_ID_sets_crosschecked_in_original_artifacts": true,
+      "native_and_terrain_geometry_identical_ID_sets": true,
+      "actual_ID_sets_equal_geometry_and_I": false,
+      "ID_membership_overlap_counts": {
+        "fine500_geometry": 6,
+        "fine500_I": 6,
+        "geometry_I": 5,
+        "all_three": 5
+      },
+      "set_inclusions": {
+        "geometry_subset_of_fine500": true,
+        "I_subset_of_fine500": true,
+        "I_subset_of_geometry": false
+      },
+      "original_result_artifact_sources": [
+        {
+          "analysis_role": "fine500",
+          "run_id": 36519747717,
+          "artifact_id": 11012915210,
+          "artifact_name": "fine-place-kinematic-500m-phyllostomus_2023-v1",
+          "artifact_zip_sha256": "bac2a8b22bf28fb7d780da68d60ab9da71dc60ff525ef34ac574749e1d3e93ff",
+          "expires_at": "2026-12-28T04:01:37Z"
+        },
+        {
+          "analysis_role": "native3d",
+          "run_id": 36881187913,
+          "artifact_id": 11171482385,
+          "artifact_name": "3d-niche-partition-phyllostomus_2023-v1",
+          "artifact_zip_sha256": "a21dee1d503fac249e93333ee6bf064cdef068b70939c19f012ac8346da5f447",
+          "expires_at": "2026-12-30T15:02:49Z"
+        },
+        {
+          "analysis_role": "terrain3d",
+          "run_id": 36946126004,
+          "artifact_id": 11202795182,
+          "artifact_name": "original-terrain-geometry-phyllostomus_2023-v1",
+          "artifact_zip_sha256": "e4e47b7f30597ba71c07f06fe317fed98d20286e08b92fe803d1b15251a9a57b",
+          "expires_at": "2026-12-31T00:28:01Z"
+        },
+        {
+          "analysis_role": "co_use",
+          "run_id": 36953712597,
+          "artifact_id": 11205525158,
+          "artifact_name": "couse-vertical-separation-phyllostomus_2023-v1",
+          "artifact_zip_sha256": "4e0ecee59e8c4269b1b93fd062cddb0fe87a8b4d0b0c4b18edf186d75a4df80a",
+          "expires_at": "2026-12-31T02:01:52Z"
+        }
+      ],
+      "full_eligible_animal_sets_are_identical_across_three_assays": false
+    },
+    {
+      "panel": "phyllostomus_2016",
+      "panel_label": "P. hastatus 2016",
+      "native_or_terrain_V_S_evaluable_n": 9,
+      "fixed_event_couse_I_usable_n": 5,
+      "reported_I_dyads": 8,
+      "reported_I_matched_encounter_pairs": 16096,
+      "primary_time_tolerance_s": 600,
+      "primary_scope": "endpoint_excluded",
+      "individual_level_joint_V_S_I_analysis_reported": false,
+      "n_co_use_minus_n_geometry": -4,
+      "fine500_place_speed_turn_usable_n": 9,
+      "cohort_qualified_ID_sets_crosschecked_in_original_artifacts": true,
+      "native_and_terrain_geometry_identical_ID_sets": true,
+      "actual_ID_sets_equal_geometry_and_I": false,
+      "ID_membership_overlap_counts": {
+        "fine500_geometry": 9,
+        "fine500_I": 5,
+        "geometry_I": 5,
+        "all_three": 5
+      },
+      "set_inclusions": {
+        "geometry_subset_of_fine500": true,
+        "I_subset_of_fine500": true,
+        "I_subset_of_geometry": true
+      },
+      "original_result_artifact_sources": [
+        {
+          "analysis_role": "fine500",
+          "run_id": 36519747717,
+          "artifact_id": 11012159069,
+          "artifact_name": "fine-place-kinematic-500m-phyllostomus_2016-v1",
+          "artifact_zip_sha256": "dd8e67d3702cd157c55296a23dc6dd0cae140e8ea74da8aac9f6f64f0b5ee114",
+          "expires_at": "2026-12-28T04:01:37Z"
+        },
+        {
+          "analysis_role": "native3d",
+          "run_id": 36881187913,
+          "artifact_id": 11170783704,
+          "artifact_name": "3d-niche-partition-phyllostomus_2016-v1",
+          "artifact_zip_sha256": "d57aec0fb76959a5ecfb8b5910b8932f55c0936d943604941f6f780f233a01c3",
+          "expires_at": "2026-12-30T15:02:49Z"
+        },
+        {
+          "analysis_role": "terrain3d",
+          "run_id": 36946126004,
+          "artifact_id": 11201903101,
+          "artifact_name": "original-terrain-geometry-phyllostomus_2016-v1",
+          "artifact_zip_sha256": "b8a3c99848dd9c37dfcf6f264e49e3918c8ba3aab6dd41830bed7fb30b711009",
+          "expires_at": "2026-12-31T00:28:01Z"
+        },
+        {
+          "analysis_role": "co_use",
+          "run_id": 36953712597,
+          "artifact_id": 11205780190,
+          "artifact_name": "couse-vertical-separation-phyllostomus_2016-v1",
+          "artifact_zip_sha256": "124bc1c7ee5042f745bd7925b115c4e9a344a16736d91442c4dc0ca9b57796ce",
+          "expires_at": "2026-12-31T02:01:52Z"
+        }
+      ],
+      "full_eligible_animal_sets_are_identical_across_three_assays": false
+    }
+  ],
+  "summary": {
+    "all_four_panel_eligible_n_identical": false,
+    "count_panels_with_different_n": 3,
+    "geometry_bat_n_vector": [
+      8,
+      5,
+      6,
+      9
+    ],
+    "co_use_bat_n_vector": [
+      11,
+      6,
+      6,
+      5
+    ],
+    "source_study_panels": 4,
+    "species": 2,
+    "fine500_bat_n_vector": [
+      19,
+      23,
+      11,
+      9
+    ],
+    "fine500_vs_geometry_n_different_panel_count": 3,
+    "fine500_vs_couse_n_different_panel_count": 4,
+    "original_artifact_zips_integrity_matched": 16,
+    "native_and_terrain_source_ID_sets_match_in_all_four_panels": true,
+    "geometry_ID_set_is_subset_of_fine500_in_all_four_panels": true,
+    "geometry_and_co_use_ID_intersection_by_panel": [
+      5,
+      3,
+      5,
+      5
+    ],
+    "fine500_and_geometry_ID_intersection_by_panel": [
+      8,
+      5,
+      6,
+      9
+    ],
+    "fine500_and_co_use_ID_intersection_by_panel": [
+      10,
+      6,
+      6,
+      5
+    ],
+    "all_three_ID_intersection_by_panel": [
+      5,
+      3,
+      5,
+      5
+    ],
+    "geometry_and_co_use_panel_indexed_overlap_total": 18,
+    "all_three_panel_indexed_overlap_total": 18,
+    "ID_level_effect_linkage_or_association_tested": false,
+    "count_panels_equal_VS_and_I_n_but_different_ID_sets": 1
+  },
+  "claim_boundary": [
+    "The originally successful per-individual and dyad-result artifact ZIPs, unlike the aggregate summaries, do permit verified within-panel source-cohort-qualified ID intersections.",
+    "The exact four-panel geometry and co-use overlap counts are 5/3/5/5; all three endpoints overlap 5/3/5/5. Native and terrain geometry identity sets exactly agree.",
+    "All source joint-geometry bats are within the fine 500-m eligible source ID set. Co-use eligible IDs are contained in fine500 for P2022, P2023 and P2016 but not H (10 of 11 H co-use animals are fine500-eligible).",
+    "The exact FULL identity sets remain nonidentical for geometry and I in each of four panels, even though P2023 has matched sample counts (6/6), because their ID intersection is 5.",
+    "An actual overlapping cohort-qualified bat record does NOT provide matched measures of its own I co-use behavior versus source V/S identity score; a joint individual-level association has not been estimated.",
+    "These are original source-study panel-indexed bat-ID counts; duplicate names across different years could refer to re-tagged or reused identifiers; distinct animals across all panels have not been validated.",
+    "Original source result artifacts contain animal tags/IDs and were inspected privately for aggregate counts only; no source animal IDs or raw GPS/DEM were included in the public integration.",
+    "The original GitHub Actions artifact ZIPs expire on dates shown and must not be mirrored to permanent/anonymous archives without appropriate source rights.",
+    "Positive V and unsupported source S are algebraically coupled estimators; co-use I is centered relative-height deviation mismatch, not measured physical altitude gap.",
+    "Original tests, raw p-values and source nulls are unchanged; this is a source provenance and ID-membership audit, not an original-data rerun or a new inferential analysis."
+  ],
+  "artifact_crosswalk_provenance": {
+    "successful_original_workflow_run_ids": {
+      "fine500": 36519747717,
+      "native3d": 36881187913,
+      "terrain3d": 36946126004,
+      "co_use": 36953712597
+    },
+    "source_archive_sha256_matched_zips": 16,
+    "matched_zip_bytes_against_original_GitHub_artifact_digests": true,
+    "original_artifact_id_and_zip_digest_publicly_traceable": true,
+    "sample_identifier_key": "(exact source cohort string, exact original individual ID string) under one study-year panel",
+    "independent_native_vs_terrain_ID_set_match": true,
+    "original_GPS_or_DEM_downloaded": false,
+    "original_bat_ID_values_committed": false,
+    "evidence_tier": "Original archived post-outcome individual-output cohort-qualified identity inclusion crosswalk; NOT new within-bat co-use effect model",
+    "expiration_notice": "The original GitHub Actions ZIPs currently expire in late December 2026; this JSON preserves ONLY aggregate intersections and hashes; re-extraction will require retained authorized original ZIPs."
+  }
+}

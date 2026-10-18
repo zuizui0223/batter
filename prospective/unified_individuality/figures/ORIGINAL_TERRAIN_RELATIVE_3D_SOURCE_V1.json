@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "study_id": "batter-original-panel-terrain-3d-geometry-result-v1",
+  "workflow": {
+    "run_id": 36946126004,
+    "head_sha": "819acc829d615485b57033f1ddcbebf64b4b49a0",
+    "conclusion": "success"
+  },
+  "panels": {
+    "hypsignathus": {
+      "H": 0.29718221417195256,
+      "V_native": 0.17069880834534373,
+      "V_rel": 0.041862873401873585,
+      "S_native": 0.10294924187835525,
+      "S_rel": -0.015806072455978037,
+      "calibrated_excess": 0.04141602507202413,
+      "p_upper": 0.0001,
+      "supported": true,
+      "artifact_id": 11202650639,
+      "artifact_digest": "sha256:6a42b8fb8890c3bf288639adc1f068d3e76dce0aaad9bf240690fce477b4c764"
+    },
+    "phyllostomus_2022": {
+      "H": 0.2157813650073594,
+      "V_native": 0.06595540399759724,
+      "V_rel": 0.09955973281399592,
+      "S_native": -0.01659723395425109,
+      "S_rel": -0.008957479208159966,
+      "calibrated_excess": 0.09914008761620022,
+      "p_upper": 0.0001,
+      "supported": true,
+      "artifact_id": 11201349879,
+      "artifact_digest": "sha256:5a868fbdacc71841896534f96b5c3d9db3529e5d610320381a2b0d4364be2e37"
+    },
+    "phyllostomus_2023": {
+      "H": 0.34425658361737055,
+      "V_native": 0.05416503692987814,
+      "V_rel": 0.07688679184597079,
+      "S_native": -0.003922999202991634,
+      "S_rel": 0.016261860368360782,
+      "calibrated_excess": 0.07652608157615234,
+      "p_upper": 0.0001015950421619425,
+      "supported": true,
+      "artifact_id": 11202795182,
+      "artifact_digest": "sha256:e4e47b7f30597ba71c07f06fe317fed98d20286e08b92fe803d1b15251a9a57b"
+    },
+    "phyllostomus_2016": {
+      "H": 0.3021435751463378,
+      "V_native": 0.1452314707903748,
+      "V_rel": 0.07865008741736887,
+      "S_native": 0.1304000459741923,
+      "S_rel": 0.028895449115765665,
+      "calibrated_excess": 0.07775718646877244,
+      "p_upper": 0.034527622097678144,
+      "supported": true,
+      "artifact_id": 11201903101,
+      "artifact_digest": "sha256:b8a3c99848dd9c37dfcf6f264e49e3918c8ba3aab6dd41830bed7fb30b711009"
+    }
+  },
+  "synthesis": {
+    "terrain_relative_vertical_fidelity_supported_panels": 4,
+    "structurally_evaluable_panels": 4,
+    "strong_positive_S_rel_panels": 0,
+    "interpretation": "repeatable terrain-relative vertical strategy fidelity is recurrent, but strong mutual vertical segregation is not evident after terrain correction"
+  }
+}

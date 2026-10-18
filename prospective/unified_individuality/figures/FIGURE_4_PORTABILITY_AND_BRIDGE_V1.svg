@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="660" viewBox="0 0 1500 660" role="img" aria-label="A portable description is not a fixed trajectory">
+<title>A portable description is not a fixed trajectory</title><desc>Comparison of Rhino and Carollia source-specific predictive tests with unsuccessful frozen field carrier threshold.</desc>
+<rect width="1500" height="660" fill="#FFFFFF"/>
+<text x="46" y="61" font-family="Arial,Helvetica,sans-serif" font-size="32" font-weight="700" fill="#1F2D3B" text-anchor="start" >A portable description is not a fixed trajectory</text>
+<text x="47" y="93" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#526679" text-anchor="start" >Prediction under a frozen representation versus direct transfer to wild vertical individuality</text>
+<line x1="46" y1="110" x2="1454" y2="110" stroke="#D9E2E8" stroke-width="2" />
+<text x="56" y="150" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#1F2D3B" text-anchor="start" >A   Fixed representation across controlled movement contexts</text>
+<rect x="55" y="182" width="415" height="207" rx="12" fill="#EEF6F5" stroke="#D9E2E8" stroke-width="1"/>
+<rect x="55" y="182" width="415" height="6" rx="0" fill="#287E86" stroke="none" stroke-width="0"/>
+<text x="75" y="225" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" fill="#1F2D3B" text-anchor="start" >R. nippon</text>
+<text x="75" y="257" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="500" fill="#1F2D3B" text-anchor="start" >Coarse I/M</text>
+<text x="75" y="306" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="700" fill="#287E86" text-anchor="start" >SUPPORTED</text>
+<text x="75" y="339" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="500" fill="#526679" text-anchor="start" >K = +0.55428; p = 0.0001</text>
+<text x="75" y="369" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#526679" text-anchor="start" >biological n = 5</text>
+<rect x="541" y="182" width="415" height="207" rx="12" fill="#EEF6F5" stroke="#D9E2E8" stroke-width="1"/>
+<rect x="541" y="182" width="415" height="6" rx="0" fill="#287E86" stroke="none" stroke-width="0"/>
+<text x="561" y="225" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" fill="#1F2D3B" text-anchor="start" >C. perspicillata</text>
+<text x="561" y="257" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="500" fill="#1F2D3B" text-anchor="start" >Rhino-fixed coarse I/M</text>
+<text x="561" y="306" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="700" fill="#287E86" text-anchor="start" >SUPPORTED</text>
+<text x="561" y="339" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="500" fill="#526679" text-anchor="start" >K = +0.34758; p = 0.0007</text>
+<text x="561" y="369" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#526679" text-anchor="start" >biological n = 7</text>
+<rect x="1027" y="182" width="415" height="207" rx="12" fill="#F4F7F9" stroke="#D9E2E8" stroke-width="1"/>
+<rect x="1027" y="182" width="415" height="6" rx="0" fill="#9A6252" stroke="none" stroke-width="0"/>
+<text x="1047" y="225" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" fill="#1F2D3B" text-anchor="start" >C. perspicillata</text>
+<text x="1047" y="257" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="500" fill="#1F2D3B" text-anchor="start" >Rhino-fixed detailed geometry</text>
+<text x="1047" y="306" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="700" fill="#9A6252" text-anchor="start" >UNSUPPORTED</text>
+<text x="1047" y="339" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="500" fill="#526679" text-anchor="start" >K = -0.03500; p = 0.2144</text>
+<text x="1047" y="369" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#526679" text-anchor="start" >biological n = 7</text>
+<text x="58" y="451" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="700" fill="#1F2D3B" text-anchor="start" >B   Scalar laboratory-style → wild field carrier gate (separate, frozen test)</text>
+<rect x="58" y="472" width="324" height="70" rx="7" fill="#EEF6F5" stroke="#287E86" stroke-width="1.6"/>
+<text x="220" y="516" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="700" fill="#287E86" text-anchor="middle" >Panel 1:  PASS</text>
+<rect x="408" y="472" width="324" height="70" rx="7" fill="#EEF6F5" stroke="#287E86" stroke-width="1.6"/>
+<text x="570" y="516" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="700" fill="#287E86" text-anchor="middle" >Panel 2:  PASS</text>
+<rect x="758" y="472" width="324" height="70" rx="7" fill="#F4F7F9" stroke="#9A6252" stroke-width="1.6"/>
+<text x="920" y="516" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="700" fill="#9A6252" text-anchor="middle" >Panel 3:  FAIL</text>
+<rect x="1108" y="472" width="324" height="70" rx="7" fill="#F4F7F9" stroke="#78909C" stroke-width="1.6"/>
+<text x="1270" y="516" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="700" fill="#78909C" text-anchor="middle" >Panel 4:  STRUCTURAL STOP</text>
+<text x="65" y="582" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="650" fill="#9A6252" text-anchor="start" >Overall FAIL: 2/4 passed; required ≥3/4. This bridge did not test the same bats in laboratory and wild conditions.</text>
+<text x="57" y="627" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#526679" text-anchor="start" >K values refer to different source-specific estimands; card widths and spacing do not encode comparative effect magnitude.</text>
+</svg>

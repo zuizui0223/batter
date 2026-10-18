@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "created_date": "2026-10-16",
+  "classification": "Exact algebraic decomposition of source-frozen smoothed original individual/session overlap statistics; not new biological test or inferential calibration",
+  "source": {
+    "native_summary_path": "figures/ORIGINAL_NATIVE_3D_OVERLAP_SUMMARY_V1.json",
+    "native_summary_git_blob": "c1d37e42f72f59e5aba364daec9aef68b47778b6",
+    "native_source_run": 36881187913,
+    "terrain_summary_path": "figures/ORIGINAL_TERRAIN_RELATIVE_3D_SOURCE_V1.json",
+    "terrain_summary_git_blob": "08631a0dce61cc47e12b2d32642c46b5759fe872",
+    "terrain_source_run": 36946126004,
+    "native_pair_metric_source_git_blob": "c08b442f97940eac3e90c1dac6e2de6d26010a7a",
+    "terrain_pair_metric_source_git_blob": "c869a25c062b4bf5dc6b22e9f3e7fe03b69aeb30"
+  },
+  "definitions": {
+    "O_XY": "sum_c min[p_a(c),p_b(c)]",
+    "O_Z_given_XY": "sum_c [min(p_a(c),p_b(c))/O_XY]*sum_z min[q_a(z|c),q_b(z|c)]",
+    "O_XYZ": "sum_c,z min[p_a(c)*q_a(z|c),p_b(c)*q_b(z|c)]",
+    "epsilon_pair": "O_XYZ/O_XY - O_Z_given_XY >=0, where q is smoothed 10-bin within-cell height distribution and O_XY>0",
+    "R_3D_pair": "1-O_XYZ/O_XY = 1-O_Z_given_XY-epsilon_pair",
+    "V_panel": "mean_same O_Z_given_XY - mean_other O_Z_given_XY, using original equal session/animal weights",
+    "S_panel": "mean_other R_3D - mean_same R_3D = V_panel - (mean_other epsilon - mean_same epsilon), using same pair weights"
+  },
+  "source_panels": [
+    "hypsignathus",
+    "phyllostomus_2022",
+    "phyllostomus_2023",
+    "phyllostomus_2016"
+  ],
+  "panels": {
+    "hypsignathus": {
+      "biological_n": 8,
+      "source_native_means": {
+        "self_conditional_overlap": 0.7266080474628369,
+        "other_conditional_overlap": 0.5559092391174931,
+        "self_normalized_joint_overlap_loss": 0.1560933080727539,
+        "other_normalized_joint_overlap_loss": 0.25904254995110915
+      },
+      "source_native_conditional_fidelity_V": 0.17069880834534373,
+      "source_native_added_segregation_S": 0.10294924187835525,
+      "source_native_overlap_slack": {
+        "self_mean_E": 0.11729864446440919,
+        "other_mean_E": 0.18504821093139778,
+        "other_minus_self_E": 0.0677495664669886
+      },
+      "native_math_identity_check": {
+        "V_minus_S": 0.06774956646698849,
+        "S_rebuilt_as_V_minus_gap": 0.10294924187835514
+      },
+      "source_terrain_relative": {
+        "fidelity_V": 0.041862873401873585,
+        "segregation_S": -0.015806072455978037,
+        "arithmetic_V_minus_S": 0.05766894585785162
+      }
+    },
+    "phyllostomus_2022": {
+      "biological_n": 5,
+      "source_native_means": {
+        "self_conditional_overlap": 0.8321179575444899,
+        "other_conditional_overlap": 0.7661625535468929,
+        "self_normalized_joint_overlap_loss": 0.07470716022317964,
+        "other_normalized_joint_overlap_loss": 0.058109926268928545
+      },
+      "source_native_conditional_fidelity_V": 0.06595540399759724,
+      "source_native_added_segregation_S": -0.01659723395425109,
+      "source_native_overlap_slack": {
+        "self_mean_E": 0.09317488223233039,
+        "other_mean_E": 0.1757275201841786,
+        "other_minus_self_E": 0.0825526379518482
+      },
+      "native_math_identity_check": {
+        "V_minus_S": 0.08255263795184833,
+        "S_rebuilt_as_V_minus_gap": -0.01659723395425096
+      },
+      "source_terrain_relative": {
+        "fidelity_V": 0.09955973281399592,
+        "segregation_S": -0.008957479208159966,
+        "arithmetic_V_minus_S": 0.10851721202215589
+      }
+    },
+    "phyllostomus_2023": {
+      "biological_n": 6,
+      "source_native_means": {
+        "self_conditional_overlap": 0.8335247642533273,
+        "other_conditional_overlap": 0.779359727323449,
+        "self_normalized_joint_overlap_loss": 0.06700827814499118,
+        "other_normalized_joint_overlap_loss": 0.06308527894199954
+      },
+      "source_native_conditional_fidelity_V": 0.05416503692987814,
+      "source_native_added_segregation_S": -0.003922999202991634,
+      "source_native_overlap_slack": {
+        "self_mean_E": 0.09946695760168145,
+        "other_mean_E": 0.1575549937345514,
+        "other_minus_self_E": 0.05808803613286995
+      },
+      "native_math_identity_check": {
+        "V_minus_S": 0.05808803613286977,
+        "S_rebuilt_as_V_minus_gap": -0.003922999202991807
+      },
+      "source_terrain_relative": {
+        "fidelity_V": 0.07688679184597079,
+        "segregation_S": 0.016261860368360782,
+        "arithmetic_V_minus_S": 0.06062493147761001
+      }
+    },
+    "phyllostomus_2016": {
+      "biological_n": 9,
+      "source_native_means": {
+        "self_conditional_overlap": 0.703109796696623,
+        "other_conditional_overlap": 0.5578783259062482,
+        "self_normalized_joint_overlap_loss": 0.18485963098938085,
+        "other_normalized_joint_overlap_loss": 0.31525967696357315
+      },
+      "source_native_conditional_fidelity_V": 0.1452314707903748,
+      "source_native_added_segregation_S": 0.1304000459741923,
+      "source_native_overlap_slack": {
+        "self_mean_E": 0.11203057231399616,
+        "other_mean_E": 0.12686199713017865,
+        "other_minus_self_E": 0.014831424816182492
+      },
+      "native_math_identity_check": {
+        "V_minus_S": 0.014831424816182492,
+        "S_rebuilt_as_V_minus_gap": 0.1304000459741923
+      },
+      "source_terrain_relative": {
+        "fidelity_V": 0.07865008741736887,
+        "segregation_S": 0.028895449115765665,
+        "arithmetic_V_minus_S": 0.049754638301603205
+      }
+    }
+  },
+  "conclusion_boundaries": [
+    "The V and S estimands are algebraically coupled; they are different questions with separate original nulls, NOT statistically independent/ecologically orthogonal replicates.",
+    "Positive native V and missing or negative native S can arise from unequal group-average overlap slack; these source means do not identify cause, avoidance, true occupancy, or resource competition.",
+    "Pairwise epsilon is nonnegative because min(aq,bv) >= min(a,b)*min(q,v); epsilon=0 if paired horizontal cell masses are equal in every supported cell, but may also be zero in other special cases.",
+    "Native panel V-S equals the difference between original other and same mean epsilon exactly, under original common averaging weights. Original native 4/4 have other mean epsilon > same mean epsilon.",
+    "Terrain panel V_rel-S_rel can be derived from summaries, but individual self/other epsilon components are not carried in the preserved terrain summary; do not fabricate their values.",
+    "No separate permutation test was run for epsilon or its group contrast, and no statement about statistical strength of the gap follows from this deterministic decomposition.",
+    "Source relative-height bins and smoothed 0.5 prior affect overlap values; source original tests remain unchanged.",
+    "Four eligible study-year panels are only two bat species; no physical vertical-gap or external mechanism is demonstrated."
+  ]
+}

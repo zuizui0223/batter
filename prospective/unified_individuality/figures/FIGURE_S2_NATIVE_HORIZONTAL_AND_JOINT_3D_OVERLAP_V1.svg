@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="177mm" height="140mm" viewBox="0 0 1770 1400" role="img" aria-label="Figure S2: original 500-m horizontal versus joint native 3D overlap, same animal versus other animal session pairs. Smoothed source-estimated values, not direct observed 3D co-use or terrain-corrected metrics.">
+<title>Figure S2. Original horizontal versus three-dimensional probability overlap</title>
+<desc>Four original eligible bat panels, each with same-animal and other-animal session comparisons. Hollow markers show O_XY and filled markers show O_XYZ, both source pair-and-individual averaged. The reduction when native session-centered altitude is added is shown by the connecting line. Alpha=0.5 per-cell pseudocount smoothing in 10 height bins; estimated overlap, not physical XY-height co-occupancy or partitioning inference.</desc>
+<rect width="1770" height="1400" fill="#fff"/>
+<text x="62" y="72" font-family="Arial,Helvetica,sans-serif" font-size="40" font-weight="700" text-anchor="start" fill="#263a46">FIGURE S2  |  HORIZONTAL vs. JOINT 3D OVERLAP</text>
+<text x="62" y="117" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="400" text-anchor="start" fill="#657785">Original 500-m cells; native centered heights; 10 bins smoothed (alpha=0.5); NOT terrain corrected</text>
+<line x1="62" y1="142" x2="1708" y2="142" stroke="#d5dfe5" stroke-width="3"/>
+<text x="62" y="206" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="700" text-anchor="start" fill="#263a46">Study / n</text>
+<text x="346" y="206" font-family="Arial,Helvetica,sans-serif" font-size="26" font-weight="700" text-anchor="start" fill="#263a46">Session pairing</text>
+<text x="950" y="206" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="700" text-anchor="middle" fill="#263a46">Probability overlap coefficient</text>
+<text x="1685" y="206" font-family="Arial,Helvetica,sans-serif" font-size="26" font-weight="700" text-anchor="end" fill="#263a46">O_XY  /  O_XYZ</text>
+<line x1="540" y1="244" x2="540" y2="1139" stroke="#d5dfe5" stroke-width="2"/>
+<text x="540" y="1189" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="400" text-anchor="middle" fill="#657785">0.0</text>
+<line x1="750" y1="244" x2="750" y2="1139" stroke="#d5dfe5" stroke-width="2"/>
+<text x="750" y="1189" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="400" text-anchor="middle" fill="#657785">0.2</text>
+<line x1="960" y1="244" x2="960" y2="1139" stroke="#d5dfe5" stroke-width="2"/>
+<text x="960" y="1189" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="400" text-anchor="middle" fill="#657785">0.4</text>
+<line x1="1170" y1="244" x2="1170" y2="1139" stroke="#d5dfe5" stroke-width="2"/>
+<text x="1170" y="1189" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="400" text-anchor="middle" fill="#657785">0.6</text>
+<line x1="1380" y1="244" x2="1380" y2="1139" stroke="#d5dfe5" stroke-width="2"/>
+<text x="1380" y="1189" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="400" text-anchor="middle" fill="#657785">0.8</text>
+<rect x="62" y="261" width="1648" height="192" rx="8" fill="#f3f7f9"/>
+<text x="68" y="351" font-family="Arial,Helvetica,sans-serif" font-size="27" font-weight="700" text-anchor="start" fill="#263a46">H. monstrosus</text>
+<text x="68" y="390" font-family="Arial,Helvetica,sans-serif" font-size="23" font-weight="400" text-anchor="start" fill="#657785">n=8</text>
+<text x="352" y="341" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="400" text-anchor="start" fill="#263a46">Same animal</text>
+<line x1="1089.4428826679878" y1="330" x2="1189.6793979260103" y2="330" stroke="#9eb9c1" stroke-width="10"/>
+<circle cx="1189.6793979260103" cy="330" r="11" fill="#fff" stroke="#236879" stroke-width="4"/>
+<circle cx="1089.4428826679878" cy="330" r="11" fill="#236879" stroke="#fff" stroke-width="2"/>
+<text x="1685" y="339" font-family="Arial,Helvetica,sans-serif" font-size="26" font-weight="400" text-anchor="end" fill="#263a46">0.619 / 0.523</text>
+<text x="352" y="419" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="400" text-anchor="start" fill="#263a46">Other animals</text>
+<line x1="792.4869087426996" y1="408" x2="877.63807304546" y2="408" stroke="#9eb9c1" stroke-width="10"/>
+<circle cx="877.63807304546" cy="408" r="11" fill="#fff" stroke="#236879" stroke-width="4"/>
+<circle cx="792.4869087426996" cy="408" r="11" fill="#236879" stroke="#fff" stroke-width="2"/>
+<text x="1685" y="417" font-family="Arial,Helvetica,sans-serif" font-size="26" font-weight="700" text-anchor="end" fill="#263a46">0.322 / 0.240</text>
+<rect x="62" y="478" width="1648" height="192" rx="8" fill="#ffffff"/>
+<text x="68" y="568" font-family="Arial,Helvetica,sans-serif" font-size="27" font-weight="700" text-anchor="start" fill="#263a46">P. hastatus 2022</text>
+<text x="68" y="607" font-family="Arial,Helvetica,sans-serif" font-size="23" font-weight="400" text-anchor="start" fill="#657785">n=5</text>
+<text x="352" y="558" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="400" text-anchor="start" fill="#263a46">Same animal</text>
+<line x1="1072.3359383221416" y1="547" x2="1116.8141997699292" y2="547" stroke="#9eb9c1" stroke-width="10"/>
+<circle cx="1116.8141997699292" cy="547" r="11" fill="#fff" stroke="#236879" stroke-width="4"/>
+<circle cx="1072.3359383221416" cy="547" r="11" fill="#236879" stroke="#fff" stroke-width="2"/>
+<text x="1685" y="556" font-family="Arial,Helvetica,sans-serif" font-size="26" font-weight="400" text-anchor="end" fill="#263a46">0.549 / 0.507</text>
+<text x="352" y="636" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="400" text-anchor="start" fill="#263a46">Other animals</text>
+<line x1="864.34241725404" y1="625" x2="890.2437665122019" y2="625" stroke="#9eb9c1" stroke-width="10"/>
+<circle cx="890.2437665122019" cy="625" r="11" fill="#fff" stroke="#236879" stroke-width="4"/>
+<circle cx="864.34241725404" cy="625" r="11" fill="#236879" stroke="#fff" stroke-width="2"/>
+<text x="1685" y="634" font-family="Arial,Helvetica,sans-serif" font-size="26" font-weight="700" text-anchor="end" fill="#263a46">0.334 / 0.309</text>
+<rect x="62" y="695" width="1648" height="192" rx="8" fill="#f3f7f9"/>
+<text x="68" y="785" font-family="Arial,Helvetica,sans-serif" font-size="27" font-weight="700" text-anchor="start" fill="#263a46">P. hastatus 2023</text>
+<text x="68" y="824" font-family="Arial,Helvetica,sans-serif" font-size="23" font-weight="400" text-anchor="start" fill="#657785">n=6</text>
+<text x="352" y="775" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="400" text-anchor="start" fill="#263a46">Same animal</text>
+<line x1="1073.6762263329551" y1="764" x2="1113.904149063846" y2="764" stroke="#9eb9c1" stroke-width="10"/>
+<circle cx="1113.904149063846" cy="764" r="11" fill="#fff" stroke="#236879" stroke-width="4"/>
+<circle cx="1073.6762263329551" cy="764" r="11" fill="#236879" stroke="#fff" stroke-width="2"/>
+<text x="1685" y="773" font-family="Arial,Helvetica,sans-serif" font-size="26" font-weight="400" text-anchor="end" fill="#263a46">0.547 / 0.508</text>
+<text x="352" y="853" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="400" text-anchor="start" fill="#263a46">Other animals</text>
+<line x1="739.1281824263474" y1="842" x2="752.4347362656071" y2="842" stroke="#9eb9c1" stroke-width="10"/>
+<circle cx="752.4347362656071" cy="842" r="11" fill="#fff" stroke="#236879" stroke-width="4"/>
+<circle cx="739.1281824263474" cy="842" r="11" fill="#236879" stroke="#fff" stroke-width="2"/>
+<text x="1685" y="851" font-family="Arial,Helvetica,sans-serif" font-size="26" font-weight="700" text-anchor="end" fill="#263a46">0.202 / 0.190</text>
+<rect x="62" y="912" width="1648" height="192" rx="8" fill="#ffffff"/>
+<text x="68" y="1002" font-family="Arial,Helvetica,sans-serif" font-size="27" font-weight="700" text-anchor="start" fill="#263a46">P. hastatus 2016</text>
+<text x="68" y="1041" font-family="Arial,Helvetica,sans-serif" font-size="23" font-weight="400" text-anchor="start" fill="#657785">n=9</text>
+<text x="352" y="992" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="400" text-anchor="start" fill="#263a46">Same animal</text>
+<line x1="985.978690744189" y1="981" x2="1076.1235341860618" y2="981" stroke="#9eb9c1" stroke-width="10"/>
+<circle cx="1076.1235341860618" cy="981" r="11" fill="#fff" stroke="#236879" stroke-width="4"/>
+<circle cx="985.978690744189" cy="981" r="11" fill="#236879" stroke="#fff" stroke-width="2"/>
+<text x="1685" y="990" font-family="Arial,Helvetica,sans-serif" font-size="26" font-weight="400" text-anchor="end" fill="#263a46">0.511 / 0.425</text>
+<text x="352" y="1070" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="400" text-anchor="start" fill="#263a46">Other animals</text>
+<line x1="729.7114652834737" y1="1059" x2="758.8727802824072" y2="1059" stroke="#9eb9c1" stroke-width="10"/>
+<circle cx="758.8727802824072" cy="1059" r="11" fill="#fff" stroke="#236879" stroke-width="4"/>
+<circle cx="729.7114652834737" cy="1059" r="11" fill="#236879" stroke="#fff" stroke-width="2"/>
+<text x="1685" y="1068" font-family="Arial,Helvetica,sans-serif" font-size="26" font-weight="700" text-anchor="end" fill="#263a46">0.208 / 0.181</text>
+<line x1="540" y1="1139" x2="1380" y2="1139" stroke="#263a46" stroke-width="3"/>
+<circle cx="73" cy="1261" r="11" fill="#ffffff" stroke="#236879" stroke-width="4"/>
+<text x="96" y="1271" font-family="Arial,Helvetica,sans-serif" font-size="26" font-weight="400" text-anchor="start" fill="#263a46">Open = horizontal O_XY</text>
+<circle cx="552" cy="1261" r="11" fill="#236879" stroke="#fff" stroke-width="2"/>
+<text x="575" y="1271" font-family="Arial,Helvetica,sans-serif" font-size="26" font-weight="400" text-anchor="start" fill="#263a46">Filled = joint 3D O_XYZ</text>
+<text x="65" y="1330" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="400" text-anchor="start" fill="#657785">Joint O_XYZ: alpha=0.5 smoothed, not observed 3D co-use; not CIs or p-values (2 species).</text>
+<text x="65" y="1371" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="400" text-anchor="start" fill="#657785">Vertical effect must be tested separately: terrain-relative S_rel (0/4 positive) and co-use I (1/4 positive).</text>
+</svg>

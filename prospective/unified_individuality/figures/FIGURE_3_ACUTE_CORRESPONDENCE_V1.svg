@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1510" height="660" viewBox="0 0 1510 660" role="img" aria-label="Identity remains detectable under acute perturbation">
+<title>Identity remains detectable under acute perturbation</title><desc>Four bat experiments showing positive individual fractions, biological n, source-specific exact assignment p values and mapping details.</desc>
+<rect width="1510" height="660" fill="#FFFFFF"/>
+<text x="46" y="61" font-family="Arial,Helvetica,sans-serif" font-size="32" font-weight="700" fill="#1F2D3B" text-anchor="start" >Identity remains detectable under acute perturbation</text>
+<text x="47" y="93" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#526679" text-anchor="start" >Four independent source-level tests; proportions summarize within-source individual directions only</text>
+<line x1="46" y1="110" x2="1464" y2="110" stroke="#D9E2E8" stroke-width="2" />
+<text x="52" y="151" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" fill="#526679" text-anchor="start" >EXPERIMENT / SPECIES</text>
+<text x="723" y="151" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" fill="#526679" text-anchor="start" >POSITIVE INDIVIDUAL FRACTION</text>
+<text x="1085" y="151" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" fill="#526679" text-anchor="start" >BIOLOGICAL n  /  EXACT p</text>
+<rect x="47" y="177" width="1417" height="69" rx="7" fill="#F4F7F9" stroke="none" stroke-width="0"/>
+<text x="66" y="208" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="650" fill="#1F2D3B" text-anchor="start" >External sensory masking</text>
+<text x="68" y="235" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#526679" text-anchor="start" >P. kuhlii</text>
+<line x1="720" y1="212" x2="1050" y2="212" stroke="#D9E2E8" stroke-width="8" />
+<line x1="720" y1="212" x2="995" y2="212" stroke="#287E86" stroke-width="8" />
+<circle cx="995" cy="212" r="8" fill="#287E86" stroke="#FFFFFF" stroke-width="2"/>
+<text x="1061" y="218" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="650" fill="#287E86" text-anchor="start" >5/6</text>
+<text x="1162" y="208" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="600" fill="#1F2D3B" text-anchor="start" >n=6;  p=0.04028</text>
+<text x="1162" y="235" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="400" fill="#526679" text-anchor="start" >exact assignment</text>
+<rect x="47" y="268" width="1417" height="69" rx="7" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="66" y="299" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="650" fill="#1F2D3B" text-anchor="start" >Graded acoustic masking</text>
+<text x="68" y="326" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#526679" text-anchor="start" >M. daubentonii</text>
+<line x1="720" y1="303" x2="1050" y2="303" stroke="#D9E2E8" stroke-width="8" />
+<line x1="720" y1="303" x2="1050" y2="303" stroke="#287E86" stroke-width="8" />
+<circle cx="1050" cy="303" r="8" fill="#287E86" stroke="#FFFFFF" stroke-width="2"/>
+<text x="1061" y="309" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="650" fill="#287E86" text-anchor="start" >3/3</text>
+<text x="1162" y="299" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="600" fill="#1F2D3B" text-anchor="start" >n=3;  p=0.000772</text>
+<text x="1162" y="326" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="400" fill="#526679" text-anchor="start" >true mapping 1 / 1,296</text>
+<rect x="47" y="359" width="1417" height="69" rx="7" fill="#F4F7F9" stroke="none" stroke-width="0"/>
+<text x="66" y="390" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="650" fill="#1F2D3B" text-anchor="start" >Reversible auditory-midbrain perturbation</text>
+<text x="68" y="417" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#526679" text-anchor="start" >E. fuscus</text>
+<line x1="720" y1="394" x2="1050" y2="394" stroke="#D9E2E8" stroke-width="8" />
+<line x1="720" y1="394" x2="1050" y2="394" stroke="#287E86" stroke-width="8" />
+<circle cx="1050" cy="394" r="8" fill="#287E86" stroke="#FFFFFF" stroke-width="2"/>
+<text x="1061" y="400" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="650" fill="#287E86" text-anchor="start" >4/4</text>
+<text x="1162" y="390" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="600" fill="#1F2D3B" text-anchor="start" >n=4;  p=0.04167</text>
+<text x="1162" y="417" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="400" fill="#526679" text-anchor="start" >true mapping 1 / 24</text>
+<rect x="47" y="450" width="1417" height="69" rx="7" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="66" y="481" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="650" fill="#1F2D3B" text-anchor="start" >Navigation-context manipulation</text>
+<text x="68" y="508" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#526679" text-anchor="start" >P. kuhlii</text>
+<line x1="720" y1="485" x2="1050" y2="485" stroke="#D9E2E8" stroke-width="8" />
+<line x1="720" y1="485" x2="1050" y2="485" stroke="#287E86" stroke-width="8" />
+<circle cx="1050" cy="485" r="8" fill="#287E86" stroke="#FFFFFF" stroke-width="2"/>
+<text x="1061" y="491" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="650" fill="#287E86" text-anchor="start" >4/4</text>
+<text x="1162" y="481" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="600" fill="#1F2D3B" text-anchor="start" >n=4;  p=0.003472</text>
+<text x="1162" y="508" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="400" fill="#526679" text-anchor="start" >true mapping 2 / 576</text>
+<line x1="720" y1="547" x2="1050" y2="547" stroke="#D9E2E8" stroke-width="2" />
+<line x1="720" y1="541" x2="720" y2="553" stroke="#526679" stroke-width="1" />
+<text x="720" y="574" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#526679" text-anchor="middle" >0%</text>
+<line x1="802.5" y1="541" x2="802.5" y2="553" stroke="#526679" stroke-width="1" />
+<text x="802.5" y="574" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#526679" text-anchor="middle" >25%</text>
+<line x1="885" y1="541" x2="885" y2="553" stroke="#526679" stroke-width="1" />
+<text x="885" y="574" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#526679" text-anchor="middle" >50%</text>
+<line x1="967.5" y1="541" x2="967.5" y2="553" stroke="#526679" stroke-width="1" />
+<text x="967.5" y="574" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#526679" text-anchor="middle" >75%</text>
+<line x1="1050" y1="541" x2="1050" y2="553" stroke="#526679" stroke-width="1" />
+<text x="1050" y="574" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#526679" text-anchor="middle" >100%</text>
+<rect x="46" y="592" width="1418" height="50" rx="8" fill="#F4F7F9" stroke="#D9E2E8" stroke-width="1"/>
+<text x="67" y="624" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#1F2D3B" text-anchor="start" >Foam-controlled masker contrast: 5/5 positive; exact p = 0.025 (same Pipistrellus source, not a fifth independent programme).</text>
+</svg>

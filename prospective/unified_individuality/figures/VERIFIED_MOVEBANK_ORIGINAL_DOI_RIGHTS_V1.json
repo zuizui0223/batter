@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "verification_date_utc": "2026-10-18",
+  "verification_method": "Four official Movebank Data Repository DOI redirects independently resolved and the DSpace 8 full item metadata directly exposed dc.rights = CC0 1.0 Universal and dc.rights.uri",
+  "primary_source_policy": "https://www.movebank.org/cms/movebank-content/data-policy",
+  "metadata_scope": "Published DOI DATA PACKAGE metadata. Does not independently license third-party downstream per-ID GitHub Actions derived ZIP outputs or authorize novel manuscript coauthorship/publication.",
+  "source_datasets": [
+    {
+      "panel": "hypsignathus",
+      "species": "Hypsignathus monstrosus",
+      "doi": "10.5441/001/1.278",
+      "source_title": "Data from: Foraging and mating behaviors of Hypsignathus monstrosus at the bat-human interface in central African rainforest",
+      "uuid": "a51b51e0-fbf2-43e2-86ae-bc41c9f53a98",
+      "related_research_doi": "10.1002/ece3.10240",
+      "context_keywords": [
+        "lekking versus foraging allocation",
+        "use of agriculture and watercourse habitats",
+        "previous-time-spent predicts 48-hour revisit"
+      ],
+      "doi_url": "https://doi.org/10.5441/001/1.278",
+      "repository_landing_page": "https://datarepository.movebank.org/entities/datapackage/a51b51e0-fbf2-43e2-86ae-bc41c9f53a98",
+      "full_metadata_page": "https://datarepository.movebank.org/entities/datapackage/a51b51e0-fbf2-43e2-86ae-bc41c9f53a98/full",
+      "published_dataset_rights": {
+        "source_metadata_key": "dc.rights",
+        "license_name": "CC0 1.0 Universal",
+        "source_license_uri_field": "dc.rights.uri",
+        "source_license_url": "http://creativecommons.org/publicdomain/zero/1.0/",
+        "status": "verified in official per-dataset Movebank DSpace full item metadata"
+      }
+    },
+    {
+      "panel": "phyllostomus_2022",
+      "species": "Phyllostomus hastatus",
+      "doi": "10.5441/001/1.321",
+      "source_title": "Data from: Consistent long-distance foraging flights across years and seasons at colony level in a neotropical bat [2021-2022]",
+      "uuid": "9ce236cf-c0a7-41c4-bbf6-eaf802b2ae92",
+      "related_research_doi": "10.1098/rsbl.2024.0424",
+      "context_keywords": [
+        "colony-specific foraging locations",
+        "dry-season balsa nectar resources",
+        "wet-season changes in food resources"
+      ],
+      "doi_url": "https://doi.org/10.5441/001/1.321",
+      "repository_landing_page": "https://datarepository.movebank.org/entities/datapackage/9ce236cf-c0a7-41c4-bbf6-eaf802b2ae92",
+      "full_metadata_page": "https://datarepository.movebank.org/entities/datapackage/9ce236cf-c0a7-41c4-bbf6-eaf802b2ae92/full",
+      "published_dataset_rights": {
+        "source_metadata_key": "dc.rights",
+        "license_name": "CC0 1.0 Universal",
+        "source_license_uri_field": "dc.rights.uri",
+        "source_license_url": "http://creativecommons.org/publicdomain/zero/1.0/",
+        "status": "verified in official per-dataset Movebank DSpace full item metadata"
+      }
+    },
+    {
+      "panel": "phyllostomus_2023",
+      "species": "Phyllostomus hastatus",
+      "doi": "10.5441/001/1.322",
+      "source_title": "Data from: Consistent long-distance foraging flights across years and seasons at colony level in a neotropical bat [2023]",
+      "uuid": "6749e3ab-1625-445c-bd42-9feac301dedf",
+      "related_research_doi": "10.1098/rsbl.2024.0424",
+      "context_keywords": [
+        "colony-specific foraging locations",
+        "dry-season balsa nectar resources",
+        "wet-season changes in food resources"
+      ],
+      "doi_url": "https://doi.org/10.5441/001/1.322",
+      "repository_landing_page": "https://datarepository.movebank.org/entities/datapackage/6749e3ab-1625-445c-bd42-9feac301dedf",
+      "full_metadata_page": "https://datarepository.movebank.org/entities/datapackage/6749e3ab-1625-445c-bd42-9feac301dedf/full",
+      "published_dataset_rights": {
+        "source_metadata_key": "dc.rights",
+        "license_name": "CC0 1.0 Universal",
+        "source_license_uri_field": "dc.rights.uri",
+        "source_license_url": "http://creativecommons.org/publicdomain/zero/1.0/",
+        "status": "verified in official per-dataset Movebank DSpace full item metadata"
+      }
+    },
+    {
+      "panel": "phyllostomus_2016",
+      "species": "Phyllostomus hastatus",
+      "doi": "10.5441/001/1.282",
+      "source_title": "Data from: Greater spear nosed bats commute long distances alone, rest together, but forage apart",
+      "uuid": "5259147d-04a1-471d-a65c-240cd3d7071d",
+      "related_research_doi": "10.1016/j.anbehav.2023.08.001",
+      "context_keywords": [
+        "commuting independently vs communal resting",
+        "foraging at patches of flowering balsa",
+        "social proximity not necessarily feeding efficiency"
+      ],
+      "doi_url": "https://doi.org/10.5441/001/1.282",
+      "repository_landing_page": "https://datarepository.movebank.org/entities/datapackage/5259147d-04a1-471d-a65c-240cd3d7071d",
+      "full_metadata_page": "https://datarepository.movebank.org/entities/datapackage/5259147d-04a1-471d-a65c-240cd3d7071d/full",
+      "published_dataset_rights": {
+        "source_metadata_key": "dc.rights",
+        "license_name": "CC0 1.0 Universal",
+        "source_license_uri_field": "dc.rights.uri",
+        "source_license_url": "http://creativecommons.org/publicdomain/zero/1.0/",
+        "status": "verified in official per-dataset Movebank DSpace full item metadata"
+      }
+    }
+  ],
+  "summary": {
+    "number_of_original_doi_datasets": 4,
+    "number_with_verified_CC0_1_0_rights": 4,
+    "independent_rights_for_saved_source_per_individual_derived_zip_outputs_verified": false,
+    "authorized_access_controlled_permanent_original_zip_archive_established": false,
+    "raw_tracking_replay_completed": false,
+    "coauthor_paper_approval_obtained": false
+  },
+  "additional_conditions": [
+    "CC0 is the verified right for the original Movebank Data Repository data packages, not an automatic assertion about ownership/redistribution of separately generated analytical output ZIPs with original bat tags.",
+    "Movebank guidance distinguishes license from scientific attribution, original source-author communication, coauthorship customs and possible location/tag sensitivity.",
+    "The original artifacts' expiration is December 28–31, 2026; no permanent right-cleared steward-controlled ID archive has been created.",
+    "Dataset context summaries and titles are from original DOI abstracts, not newly observed task labels for any V/S/I included bat.",
+    "All ecological mechanisms and task-allocations proposed from source abstracts remain untested by current smoothed-height analysis."
+  ]
+}
