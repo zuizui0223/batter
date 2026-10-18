@@ -42,9 +42,12 @@ def verify()->None:
     assert len(c["summary"]["page_audit"])==9
     assert sum(x["count"] for x in c["summary"]["page_audit"])==437
     assert sorted(x["page"] for x in c["summary"]["page_audit"])==list(range(9))
+    url_style=sum(x["doi"].startswith("https://doi.org/10.") for x in r)
+    assert url_style==6,("Unexpected source DSpace DOI serialization",url_style)
+    print(f"PASS {url_style} newest DOI entries use full source https://doi.org URL rather than doi:10 form")
     for row in r:
         assert row["entity_type"]=="Datapackage"
-        assert row["doi"] and row["doi"].startswith("doi:10.")
+        assert row["doi"] and (row["doi"].startswith("doi:10.") or row["doi"].startswith("https://doi.org/10."))
         assert row["uuid"] and row["title"] and row["license"]
         assert row["subjects"] is not None
         assert "location_lat" not in row and "individual_local_identifier" not in row
