@@ -32,6 +32,6 @@ jobs:
           j=json.loads((root/"MOVEBANK_PUBLISHED_DATAPACKAGES_CENSUS_2026_10_18.json").read_text())
           assert j["summary"]["total_count"] == 437
           assert any("eligibility" in x.lower() for x in j["interpretation_limits"])
-          assert any("not" in x.lower() and "GPS" in x for x in j["interpretation_limits"])
+          assert any("no animal GPS positions" in x.lower() for x in j["interpretation_limits"])
           print("PASS full public 437-package census only; original animal GPS, effect sizes and inferential tests not run")
           PY
