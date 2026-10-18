@@ -4,8 +4,8 @@
   "source_catalog": "MOVEBANK_PUBLISHED_DATAPACKAGES_CENSUS_2026_10_18.json",
   "source_catalog_git_blob_sha1": "fc69fc259c641f813848a819a4eb736886acba58",
   "status": "pre-data format-coverage test cases only; cross-taxon biological eligibility unverified",
-  "pilot_count": 13,
-  "warning": "The 13 example DOIs cover different taxa and licenses to test file/format import; they must not be used as a cherry-picked science analysis or called eligible until every DOI in 437 source-frame receives identical predeclared QA. Some data may lack usable GPS or sufficient individual repeats.",
+  "pilot_count": 15,
+  "warning": "The 15 example DOIs cover different taxa and licenses to test file/format import; they must not be used as a cherry-picked science analysis or called eligible until every DOI in 437 source-frame receives identical predeclared QA. Some data may lack usable GPS or sufficient individual repeats.",
   "records": [
     {
       "pilot_label": "Galapagos_tortoise",
@@ -223,6 +223,39 @@
       "subject_taxon_strings": [
         "Anthropoides virgo",
         "Anthropoides virgo"
+      ],
+      "original_zip_inventory_examined": false,
+      "actual_GPS_sensor_confirmed": false,
+      "repeated_individual_eligible": false,
+      "original_sample_size_verified": false,
+      "ecological_contrast_supported": false,
+      "selection_purpose": "source bitstream/reference format and QA workflow testing only, NOT inclusion as cross-taxon science sample"
+    },
+    {
+      "pilot_label": "Olympic_cougar",
+      "broad_provisional_movement_system": "terrestrial_mammal",
+      "doi": "doi:10.5441/001/1.716",
+      "source_title": "Data from: Study \"Olympic Cougar Project\"",
+      "source_license": "Attribution-NonCommercial 4.0 International",
+      "subject_taxon_strings": [
+        "Puma concolor"
+      ],
+      "original_zip_inventory_examined": false,
+      "actual_GPS_sensor_confirmed": false,
+      "repeated_individual_eligible": false,
+      "original_sample_size_verified": false,
+      "ecological_contrast_supported": false,
+      "selection_purpose": "source bitstream/reference format and QA workflow testing only, NOT inclusion as cross-taxon science sample"
+    },
+    {
+      "pilot_label": "Humboldt_penguin",
+      "broad_provisional_movement_system": "diving_bird",
+      "doi": "doi:10.5441/001/1.725",
+      "source_title": "Data from: Spatio-temporal overlap between purse seine fisheries and Humboldt penguin feeding areas in northern Chile",
+      "source_license": "Attribution-NonCommercial 4.0 International",
+      "subject_taxon_strings": [
+        "Spheniscus humboldti",
+        "Humboldt penguin"
       ],
       "original_zip_inventory_examined": false,
       "actual_GPS_sensor_confirmed": false,
