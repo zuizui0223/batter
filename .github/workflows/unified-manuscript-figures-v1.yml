@@ -51,6 +51,8 @@ jobs:
         run: python3 prospective/unified_individuality/validate_original_v_s_overlap_coupling_v1.py
       - name: Verify nonmatched animal n in 500m fine, 3D geometry and co-use source panels
         run: python3 prospective/unified_individuality/validate_cross_estimand_eligibility_v1.py
+      - name: Check official bat Movebank DOI CC0 metadata receipts while retaining derived-output rights limits
+        run: python3 prospective/unified_individuality/validate_original_doi_rights_v1.py
       - name: Audit historical co-use session-centering and nonphysical height-gap semantics
         run: python3 prospective/unified_individuality/validate_couse_centering_boundary_v1.py
       - name: Guard terrain replay input manifests and source-only checksums (no downloads)
