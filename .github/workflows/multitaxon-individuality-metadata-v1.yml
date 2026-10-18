@@ -1,0 +1,35 @@
+name: Multitaxon Movebank metadata and estimand QA
+
+on:
+  push:
+    branches:
+      - prospective/multitaxon-identity-ecology-v1
+    paths:
+      - 'prospective/multitaxon_individuality/**'
+      - '.github/workflows/multitaxon-individuality-metadata-v1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check-source-census-and-synthetic-separation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out exact candidate branch
+        uses: actions/checkout@v4
+      - name: Validate original Movebank published-source metadata inventory, rights and seed coverage
+        run: python3 prospective/multitaxon_individuality/validate_metadata_census_v1.py
+      - name: Verify movement identity and habitat overlap are distinct in synthetic-only examples
+        run: python3 prospective/multitaxon_individuality/validate_distinct_identity_partition_estimands_v1.py
+      - name: Confirm this is metadata/design only, never a claimed biological result
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path("prospective/multitaxon_individuality")
+          j=json.loads((root/"MOVEBANK_PUBLISHED_DATAPACKAGES_CENSUS_2026_10_18.json").read_text())
+          assert j["summary"]["ready_for_inference"] is False
+          print("PASS full public 437-package census only; original animal GPS, effect sizes and inferential tests not run")
+          PY
