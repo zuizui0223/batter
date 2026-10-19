@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "audit_date": "2026-10-19",
+  "evidence_tier": "Original Movebank public GPS/Argos event and reference CSV source-quality audit; NO R, X, T, E source effect estimation",
+  "original_rights_census": "MOVEBANK_PUBLISHED_DATAPACKAGES_CENSUS_2026_10_18.json",
+  "source_temporal_screen": "Broad candidate: ≥8 cohort-year animal IDs each ≥4 distinct GPS timestamps on ≥10 source dates spanning ≥30 days, with ≥3 dates shared by ≥2 qualified animals. It is cadence-adjusted screening only and does not establish comparable ecological opportunity or individual-heldout inference.",
+  "datasets": [
+    {
+      "label": "Green turtle, Diego Garcia, Chagos",
+      "doi": "doi:10.5441/001/1.313",
+      "source_uuid": "df53968d-4bcc-4dd7-9bb6-8358378836ec",
+      "position_csv_url": "https://datarepository.movebank.org/bitstreams/f6a7d086-a4e3-434f-bbce-6ba9022543e3/download",
+      "reference_csv_url": "https://datarepository.movebank.org/bitstreams/5bf6e216-dfa0-4c7c-a8eb-27cb5f3a2645/download",
+      "source_position_file_bytes": 9788265,
+      "reference_file_bytes": 8174,
+      "sensor_original_row_counts": {
+        "gps": 52846
+      },
+      "reference_rows": 33,
+      "source_valid_unique_id_timestamp_positions": 52846,
+      "actual_event_animal_ids": 32,
+      "source_site_strings_count": 1,
+      "animal_taxon": "Chelonia mydas",
+      "reference_sex": "female",
+      "year_strata": [
+        {
+          "deploy_year": "2012",
+          "reference_deployments": 8,
+          "event_animals": 8,
+          "unique_gps_position_events": 13630,
+          "animals_passing_broad_source_cadence_tier": 8,
+          "shared_dates_with_at_least2_passing_animals": 440,
+          "primary_r_x_source_admission_status": "PROVISIONAL_SOURCE_REPEATED_GPSEVENT_CANDIDATE"
+        },
+        {
+          "deploy_year": "2015",
+          "reference_deployments": 9,
+          "event_animals": 8,
+          "unique_gps_position_events": 8212,
+          "animals_passing_broad_source_cadence_tier": 8,
+          "shared_dates_with_at_least2_passing_animals": 308,
+          "primary_r_x_source_admission_status": "PROVISIONAL_SOURCE_REPEATED_GPSEVENT_CANDIDATE"
+        },
+        {
+          "deploy_year": "2017",
+          "reference_deployments": 4,
+          "event_animals": 4,
+          "unique_gps_position_events": 5916,
+          "animals_passing_broad_source_cadence_tier": 4,
+          "shared_dates_with_at_least2_passing_animals": 201,
+          "primary_r_x_source_admission_status": "STOP_BELOW_8_INDEPENDENT_ANIMALS_WITHIN_DEPLOYMENT_YEAR"
+        },
+        {
+          "deploy_year": "2018",
+          "reference_deployments": 12,
+          "event_animals": 12,
+          "unique_gps_position_events": 25088,
+          "animals_passing_broad_source_cadence_tier": 12,
+          "shared_dates_with_at_least2_passing_animals": 330,
+          "primary_r_x_source_admission_status": "PROVISIONAL_SOURCE_REPEATED_GPSEVENT_CANDIDATE"
+        }
+      ],
+      "sensor_gate": "GPS source file verified with 52,846 original valid georeferenced unique animal/timestamp fixes, source GPS sensor-type for all event rows",
+      "cohort_gates_still_unverified": [
+        "same source ecological availability and site-season beyond deployment site",
+        "accuracy and tracking error appropriateness",
+        "source individual training/test heldout blocks",
+        "R and X results",
+        "external landscape/habitat layers independent for E",
+        "source license and sensitive location governance"
+      ],
+      "measurement_notes": [
+        "GPS per-animal reference n 33 vs actually observed 32; do not infer n33 active animals.",
+        "Source females and all original reference study-site labels show Diego Garcia. Release years are NOT independent source species.",
+        "The 4fix/day tier is a generic source-aware screening minimum, not proof the tag duty cycle was 2 hours."
+      ]
+    },
+    {
+      "label": "Herring gull, East Bay Island",
+      "doi": "doi:10.5441/001/1.1r1s4v8d",
+      "source_uuid": "12629618-631f-4999-be7c-80af743b246f",
+      "position_csv_url": "https://datarepository.movebank.org/bitstreams/2fca12c9-ffbe-4b43-ba9f-1377e14e21e7/download",
+      "reference_csv_url": "https://datarepository.movebank.org/bitstreams/63e50ba5-b07d-4e8a-a3bf-21ffe87d4f90/download",
+      "source_position_file_bytes": 9105424,
+      "reference_file_bytes": 7051,
+      "sensor_original_row_counts": {
+        "argos-doppler-shift": 28649
+      },
+      "reference_rows": 16,
+      "source_original_event_rows": 28649,
+      "actual_event_animal_ids": 16,
+      "source_site_strings_count": 1,
+      "animal_taxon": "Larus argentatus",
+      "animal_timestamp_collision_rows": 119,
+      "deploy_year_strata": [
+        {
+          "deploy_year": "2008",
+          "original_reference_animals": 2,
+          "source_event_animals": 2,
+          "animals_with_20days_2fixes": 2,
+          "shared_days_with_2_qualified": 153
+        },
+        {
+          "deploy_year": "2013",
+          "original_reference_animals": 7,
+          "source_event_animals": 7,
+          "animals_with_20days_2fixes": 7,
+          "shared_days_with_2_qualified": 310
+        },
+        {
+          "deploy_year": "2014",
+          "original_reference_animals": 7,
+          "source_event_animals": 7,
+          "animals_with_20days_2fixes": 6,
+          "shared_days_with_2_qualified": 211
+        }
+      ],
+      "source_gate": "HOLD_ARGOS_ONLY_AND_BELOW8_PER_DEPLOYMENT_YEAR",
+      "limitations": [
+        "This original CSV contains only Argos Doppler-shift sensors despite individual-ID source references and 28,649 event records.",
+        "No source release-year has ≥8 cohort-defined source bats, even before checking fine GPS measurement error.",
+        "Do not pool years without a preregistered individual/year/availability and sensor model, do not call event count effective n."
+      ]
+    }
+  ],
+  "summary": {
+    "first_nonbat_source_with_ge8_event_animals_in_multiple_year_strata": "Green turtle Diego Garcia",
+    "green_turtle_provisional_year_groups": [
+      "2012",
+      "2015",
+      "2018"
+    ],
+    "green_turtle_below_n8_year_groups": [
+      "2017"
+    ],
+    "green_turtle_actual_GPS_qualified_year_group_n": [
+      8,
+      8,
+      12
+    ],
+    "green_turtle_group_years_not_independent_species": true,
+    "gull_position_measurement_all_Argos": true,
+    "gull_no_year_group_with8": true,
+    "completed_real_nonbat_R_comparisons": 0,
+    "completed_real_nonbat_X_comparisons": 0,
+    "completed_real_nonbat_T_comparisons": 0,
+    "completed_real_nonbat_E_comparisons": 0
+  },
+  "privacy_and_reproducibility": [
+    "Only original public file references and aggregate source IDs/day counts; no individual IDs, precise GPS positions, exact daily dates or animal paths shared.",
+    "CSV content parsed in ephemeral analysis; no original source data copied to this PR or CI.",
+    "Per-cohort original files are CC0 per published rights metadata; appropriate citations and potential wildlife geoprivacy still apply.",
+    "Release-year groups are provisional comparable cohorts, NOT three independently replicated taxa or proven real resource-use populations.",
+    "Actual R/X/T/E studies require same individual set, matched contexts and uncertainty calibration, not evidence of source tracking only."
+  ]
+}
