@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "execution_date": "2026-10-19",
+  "dataset": "Three actual Movebank original published CC0 event CSVs, representative marine mammal, marine reptile, flightless bird",
+  "source_access": "original public bitstreams downloaded as text for aggregate QC only",
+  "methods": "Actual event row parsing handles CSV quoted fields and LF/CR/CRLF; includes individual-local-identifier, exact timestamp, latitude/longitude, exclusion of visible=false and manually-marked-outlier=true, valid coordinate bounds; no original animal or position rows persisted",
+  "results": [
+    {
+      "doi": "10.5441/001/1.44cb3946",
+      "group": "marine_mammal",
+      "species_expected": "Physeter macrocephalus",
+      "position_type": "FastLoc GPS",
+      "original_event_bitstream_id": "ff4e0556-ddd6-49c7-8bb1-d5af9107984a",
+      "source_repository_MD5": "56b58e12f0a89c04173c15ad84390cd0",
+      "source_publication_rights": "CC0 1.0 Universal",
+      "original_source_file_bytes": 1436876,
+      "retrieved_chars": 1436876,
+      "retrieval_chars_to_source_bytes_ratio": 1,
+      "complete_file_length_approximation_verified": true,
+      "raw_event_row_count": 7159,
+      "rows_with_wrong_field_count": 0,
+      "valid_geographic_fixes_after_flag_checks": 7151,
+      "invalid_or_flagged_fix_count": 8,
+      "source_unique_individuals_with_valid_fixes": 17,
+      "source_individuals_100_valid_fixes_7_unique_dates": 13,
+      "animal_valid_fix_count_min": 13,
+      "animal_valid_fix_count_median": 128,
+      "animal_valid_fix_count_max": 1525,
+      "animal_unique_dates_median": 25,
+      "observed_taxon_stats": {
+        "Physeter macrocephalus": {
+          "n_individuals_with_valid_coords": 17,
+          "n_valid_fixes": 7151,
+          "n_animals_ge100_fixes_ge7distinct_days": 13
+        }
+      },
+      "observed_sensor_values": {
+        "gps": 7151
+      },
+      "column_presence": {
+        "id": 11,
+        "sp": 9,
+        "timestamp": 2,
+        "lat": 4,
+        "lon": 3,
+        "visible": 1,
+        "outlier": 6,
+        "sensor": 8
+      },
+      "quality_tier": "event-level spatial/time/ID basic screen; not confirmed temporally independent shared-patch ecological comparison",
+      "source_ids_not_persisted": true
+    },
+    {
+      "doi": "10.5441/001/1.313",
+      "group": "marine_reptile",
+      "species_expected": "Chelonia mydas",
+      "position_type": "Argos",
+      "original_event_bitstream_id": "a7e5ec27-e1e2-4863-a864-603e9bf4b59b",
+      "source_repository_MD5": "ae8ff26015b7d826a1d9f3b45f01d5cf",
+      "source_publication_rights": "CC0 1.0 Universal",
+      "original_source_file_bytes": 520491,
+      "retrieved_chars": 520491,
+      "retrieval_chars_to_source_bytes_ratio": 1,
+      "complete_file_length_approximation_verified": true,
+      "raw_event_row_count": 2616,
+      "rows_with_wrong_field_count": 0,
+      "valid_geographic_fixes_after_flag_checks": 2565,
+      "invalid_or_flagged_fix_count": 51,
+      "source_unique_individuals_with_valid_fixes": 1,
+      "source_individuals_100_valid_fixes_7_unique_dates": 1,
+      "animal_valid_fix_count_min": 2565,
+      "animal_valid_fix_count_median": 2565,
+      "animal_valid_fix_count_max": 2565,
+      "animal_unique_dates_median": 308,
+      "observed_taxon_stats": {
+        "Chelonia mydas": {
+          "n_individuals_with_valid_coords": 1,
+          "n_valid_fixes": 2565,
+          "n_animals_ge100_fixes_ge7distinct_days": 1
+        }
+      },
+      "observed_sensor_values": {
+        "argos-doppler-shift": 2565
+      },
+      "column_presence": {
+        "id": 10,
+        "sp": 8,
+        "timestamp": 2,
+        "lat": 4,
+        "lon": 3,
+        "visible": 1,
+        "outlier": -1,
+        "sensor": 7
+      },
+      "quality_tier": "event-level spatial/time/ID basic screen; not confirmed temporally independent shared-patch ecological comparison",
+      "source_ids_not_persisted": true
+    },
+    {
+      "doi": "10.5441/001/1.sg2s0f7q",
+      "group": "flightless_bird",
+      "species_expected": "Aptenodytes forsteri",
+      "position_type": "Argos",
+      "original_event_bitstream_id": "4c1e9a5a-9f31-4f45-9ba7-d95f37e2b85b",
+      "source_repository_MD5": "dd8bf3ebd948840d9061e025c31e0604",
+      "source_publication_rights": "CC0 1.0 Universal",
+      "original_source_file_bytes": 6124879,
+      "retrieved_chars": 6124879,
+      "retrieval_chars_to_source_bytes_ratio": 1,
+      "complete_file_length_approximation_verified": true,
+      "raw_event_row_count": 18973,
+      "rows_with_wrong_field_count": 0,
+      "valid_geographic_fixes_after_flag_checks": 17856,
+      "invalid_or_flagged_fix_count": 1117,
+      "source_unique_individuals_with_valid_fixes": 8,
+      "source_individuals_100_valid_fixes_7_unique_dates": 8,
+      "animal_valid_fix_count_min": 725,
+      "animal_valid_fix_count_median": 1600,
+      "animal_valid_fix_count_max": 4194,
+      "animal_unique_dates_median": 174,
+      "observed_taxon_stats": {
+        "Aptenodytes forsteri": {
+          "n_individuals_with_valid_coords": 8,
+          "n_valid_fixes": 17856,
+          "n_animals_ge100_fixes_ge7distinct_days": 8
+        }
+      },
+      "observed_sensor_values": {
+        "argos-doppler-shift": 17856
+      },
+      "column_presence": {
+        "id": 18,
+        "sp": 16,
+        "timestamp": 2,
+        "lat": 4,
+        "lon": 3,
+        "visible": 1,
+        "outlier": 14,
+        "sensor": 15
+      },
+      "quality_tier": "event-level spatial/time/ID basic screen; not confirmed temporally independent shared-patch ecological comparison",
+      "source_ids_not_persisted": true
+    }
+  ],
+  "scope_qualifiers": [
+    "n>=100 fixes and >=7 distinct UTC dates per individual is a preliminary exposure gate; it does NOT establish same-site two-block holdouts or sufficient within-cohort independent individuals.",
+    "Argos error and GPS accuracy differ; cross-taxon fine-scale grid-size must be set relative to positional uncertainty, not a universal 500-m threshold.",
+    "Tracked marine migration does not automatically imply repeated local foraging-task observations.",
+    "Total individual IDs from different original studies must never be counted as globally unique animals.",
+    "Event record counts are not independent biological sample sizes.",
+    "No biological individuality effect, between-individual niche segregation, causal mechanism or new p-value has been estimated."
+  ]
+}
