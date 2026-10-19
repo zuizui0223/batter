@@ -36,6 +36,19 @@ ALIASES = {
                  "gps:hdop", "gps-hdop", "location-error", "location_error"),
 }
 CUTOFFS = [1, 5, 30, 60, 180, 1440]
+# Exploratory, source-duty-cycle-aware screening tiers introduced 2026-10-19
+# AFTER stage-1 feasibility screening but BEFORE opening any identity/overlap
+# outcome. These are not preregistered biological analysis thresholds.
+CADENCE_PROFILES = {
+    "dense": {"min_animals":8, "min_days":4, "min_fixes_day":50,
+              "min_span_days":7, "min_shared_dates":3},
+    "two_hourly": {"min_animals":8, "min_days":10, "min_fixes_day":4,
+                   "min_span_days":30, "min_shared_dates":3},
+    "slow_occupancy_only": {"min_animals":8, "min_days":20,
+                            "min_fixes_day":2, "min_span_days":30,
+                            "min_shared_dates":3},
+}
+
 STATUS = {
     "NO_ID": "STOP_STABLE_ANIMAL_ID_FIELD_MISSING",
     "NO_COORD": "STOP_REQUIRED_GPS_TIME_COORD_COLUMNS_MISSING",
@@ -255,9 +268,24 @@ def main() -> None:
     parser.add_argument("--json-output", type=Path)
     parser.add_argument("--assume-utc", action="store_true", help="Explicitly interpret tz-naive source time as UTC")
     parser.add_argument("--max-rows", type=int, help="Debug only, status forced undecided")
+    parser.add_argument("--cadence-profile", choices=sorted(CADENCE_PROFILES),
+                        default="dense", help="Outcome-unopened, source-duty-cycle-matched Stage-1 screening only")
+    parser.add_argument("--source-duty-cycle-reference-url",
+                        help="Public original Movebank reference-data.csv URL required for any non-dense profile")
     ns = parser.parse_args()
+    if ns.cadence_profile!="dense" and not ns.source_duty_cycle_reference_url:
+        parser.error("Non-dense cadence requires --source-duty-cycle-reference-url from original source reference data")
+    profile=CADENCE_PROFILES[ns.cadence_profile]
     result = preflight(ns.events, ns.source_doi, assume_utc=ns.assume_utc,
-                       max_rows=ns.max_rows)
+                       max_rows=ns.max_rows, **profile)
+    result["source_cadence_profile"]=ns.cadence_profile
+    result["source_duty_cycle_reference_url"]=ns.source_duty_cycle_reference_url
+    result["profile_status"]="EXPLORATORY_AFTER_FEASIBILITY_NO_OUTCOME_TESTED"
+    result["movement_mode_inferential_scope"]=(
+        "spatial_occupancy_description_only"
+        if ns.cadence_profile=="slow_occupancy_only"
+        else "conditional_movement_screen_only_not_validated"
+    )
     payload = json.dumps(result, sort_keys=True, indent=2, ensure_ascii=False)
     if ns.json_output:
         ns.json_output.write_text(payload+"\n", encoding="utf-8")
