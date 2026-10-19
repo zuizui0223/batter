@@ -11,7 +11,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from preflight_movebank_events_v1 import preflight, detect_columns, STATUS, interval_bucket
+from preflight_movebank_events_v1 import preflight, detect_columns, STATUS, interval_bucket, CADENCE_PROFILES
 
 class MovebankPreflightTests(unittest.TestCase):
     def csvfile(self, directory, animals=9, sensor="GPS",
@@ -101,6 +101,36 @@ class MovebankPreflightTests(unittest.TestCase):
             r=preflight(self.csvfile(tmp),"test-only",max_rows=600)
             self.assertEqual(r["preflight_status"],"PARTIAL_SCAN_UNDECIDED_NOT_ELIGIBLE")
             self.assertEqual(r["observations_scanned"],600)
+
+    def test_two_hourly_screen_does_not_require_impossible_fifty_fix_days(self):
+        # Nine hypothetical animals with GPS every six hours on 11
+        # different dates spanning 30 days. It is only a Stage-1
+        # structural example, never a behavioral effect.
+        with tempfile.TemporaryDirectory() as tmp:
+            path=Path(tmp)/"twohour_source_example.csv"
+            with path.open("w",newline="",encoding="utf-8") as out:
+                w=csv.writer(out)
+                w.writerow(["timestamp","location-long","location-lat",
+                            "animal-id","sensor-type"])
+                begin=datetime(2025,1,1,tzinfo=timezone.utc)
+                for animal in range(9):
+                    for day in range(11):
+                        for hh in (0,6,12,18):
+                            stamp=begin+timedelta(days=day*3,hours=hh)
+                            w.writerow([stamp.isoformat(),20.0+animal*0.001,
+                                        42.0+day*0.0001,
+                                        f"INVENTED_{animal}","GPS"])
+            dense=preflight(path,"SYNTHETIC_SOURCE",**CADENCE_PROFILES["dense"])
+            assert dense["preflight_status"]==STATUS["NOT_ENOUGH_ANIMALS"]
+            two=preflight(path,"SYNTHETIC_SOURCE",**CADENCE_PROFILES["two_hourly"])
+            assert two["preflight_status"]==STATUS["PASS"]
+            assert two["n_repeated_animals_passing_simple_day_and_span_gate"]==9
+            assert two["n_source_dates_with_2_or_more_passing_animals"]==11
+            assert not two["raw_identifiers_exported"]
+            assert "INVENTED_" not in json.dumps(two)
+            slow=preflight(path,"SYNTHETIC_SOURCE",**CADENCE_PROFILES["slow_occupancy_only"])
+            assert slow["preflight_status"]==STATUS["NOT_ENOUGH_ANIMALS"]
+            print("PASS cadence-aware source screen; no original animal effects")
 
     def test_column_aliases_and_intervals(self):
         aliases=detect_columns(["Event Timestamp","Location.Long","location_lat","animal-id","Sensor Type"])
