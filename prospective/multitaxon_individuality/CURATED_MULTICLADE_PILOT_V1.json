@@ -1,0 +1,288 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-10-19",
+  "source_census": "MOVEBANK_PUBLISHED_DATAPACKAGES_CENSUS_2026_10_18.json",
+  "source_metadata_flags": "MOVEBANK_437_METADATA_TRIAGE_V1.csv",
+  "selection": "Purposefully diverse 14-source preliminary screen. Not representative/effect-size-selected, cannot be claimed biologically eligible without independent site-cohort-temporal gates.",
+  "n_candidates": 14,
+  "curated_ecological_taxonomic_groups": [
+    "terrestrial_mammal",
+    "volant_bird",
+    "terrestrial_reptile",
+    "marine_reptile",
+    "flightless_bird",
+    "marine_mammal",
+    "volant_mammal"
+  ],
+  "data": [
+    {
+      "doi": "10.5441/001/1.708",
+      "uuid": "0e3a4577-b063-47d9-9d6b-edec949aa5fa",
+      "title": "Data from: Study \"Wyoming Sublette Mule Deer (2018-2020)\"",
+      "rights": "CC0 1.0 Universal",
+      "curated_group": "terrestrial_mammal",
+      "source_dataset_role": "mule_deer",
+      "reference_verified": true,
+      "reference_n_original_animals": 135,
+      "original_reference_taxa": [
+        "Odocoileus hemionus"
+      ],
+      "actual_event_files_quality_checked": 0,
+      "event_file_checks": [],
+      "proposed_primary_inference_eligible": false,
+      "raw_sensor_resolution_usable_for_co_use_unverified": true
+    },
+    {
+      "doi": "10.5441/001/1.719",
+      "uuid": "0a2f2a67-20fe-42c6-b864-68a1a7147c18",
+      "title": "Data from: Study \"GPS tracking of wild pigs in southern Florida (2019-2021)\"",
+      "rights": "CC0 1.0 Universal",
+      "curated_group": "terrestrial_mammal",
+      "source_dataset_role": "wild_pig",
+      "reference_verified": true,
+      "reference_n_original_animals": 10,
+      "original_reference_taxa": [
+        "Sus scrofa"
+      ],
+      "actual_event_files_quality_checked": 1,
+      "event_file_checks": [
+        {
+          "source_bitstream": "42323c7f-e101-4d2e-9544-0179d9db121c",
+          "sensor_source": "GPS",
+          "verified_valid_fixes": 79165,
+          "n_animals_100_fixes_7_days": 10
+        }
+      ],
+      "proposed_primary_inference_eligible": false,
+      "raw_sensor_resolution_usable_for_co_use_unverified": true
+    },
+    {
+      "doi": "10.5441/001/1.304",
+      "uuid": "86f58f48-90be-4241-b895-6af3e7952dde",
+      "title": "Data from: Study \"Red Fox (Vulpes vulpes) in UK wet grasslands\"",
+      "rights": "CC0 1.0 Universal",
+      "curated_group": "terrestrial_mammal",
+      "source_dataset_role": "red_fox",
+      "reference_verified": false,
+      "reference_n_original_animals": null,
+      "original_reference_taxa": [],
+      "actual_event_files_quality_checked": 0,
+      "event_file_checks": [],
+      "proposed_primary_inference_eligible": false,
+      "raw_sensor_resolution_usable_for_co_use_unverified": true
+    },
+    {
+      "doi": "10.5441/001/1.403h24q5",
+      "uuid": "b777279a-581d-43ce-b790-8e60304fb8b4",
+      "title": "Data from: Fine-scale tracking of ambient temperature and movement reveals shuttling behavior of elephants to water",
+      "rights": "CC0 1.0 Universal",
+      "curated_group": "terrestrial_mammal",
+      "source_dataset_role": "elephant",
+      "reference_verified": false,
+      "reference_n_original_animals": null,
+      "original_reference_taxa": [],
+      "actual_event_files_quality_checked": 0,
+      "event_file_checks": [],
+      "proposed_primary_inference_eligible": false,
+      "raw_sensor_resolution_usable_for_co_use_unverified": true
+    },
+    {
+      "doi": "10.5441/001/1.4192t2j4_2",
+      "uuid": "520a64ae-2047-445d-af5f-7b961caeef79",
+      "title": "Data from: Study \"LifeTrack White Stork Rheinland-Pfalz\" (2015-2023)",
+      "rights": "CC0 1.0 Universal",
+      "curated_group": "volant_bird",
+      "source_dataset_role": "white_stork",
+      "reference_verified": true,
+      "reference_n_original_animals": 108,
+      "original_reference_taxa": [
+        "Ciconia ciconia"
+      ],
+      "actual_event_files_quality_checked": 0,
+      "event_file_checks": [],
+      "proposed_primary_inference_eligible": false,
+      "raw_sensor_resolution_usable_for_co_use_unverified": true
+    },
+    {
+      "doi": "10.5441/001/1.292",
+      "uuid": "91804022-7b95-4192-a1bb-5288e1141225",
+      "title": "Data from: Study \"American Herring Gulls - GPS - Lobster Bay, Southwest Nova Scotia, Canada\"",
+      "rights": "CC0 1.0 Universal",
+      "curated_group": "volant_bird",
+      "source_dataset_role": "herring_gull",
+      "reference_verified": false,
+      "reference_n_original_animals": null,
+      "original_reference_taxa": [],
+      "actual_event_files_quality_checked": 0,
+      "event_file_checks": [],
+      "proposed_primary_inference_eligible": false,
+      "raw_sensor_resolution_usable_for_co_use_unverified": true
+    },
+    {
+      "doi": "10.5441/001/1.46ft1k05",
+      "uuid": "b6a0d056-8a98-4c33-8c29-36047af7a6f5",
+      "title": "Data from: Environmental drivers of variability in the movement ecology of turkey vultures (Cathartes aura) in North and South America",
+      "rights": "CC0 1.0 Universal",
+      "curated_group": "volant_bird",
+      "source_dataset_role": "turkey_vulture",
+      "reference_verified": false,
+      "reference_n_original_animals": null,
+      "original_reference_taxa": [],
+      "actual_event_files_quality_checked": 0,
+      "event_file_checks": [],
+      "proposed_primary_inference_eligible": false,
+      "raw_sensor_resolution_usable_for_co_use_unverified": true
+    },
+    {
+      "doi": "10.5441/001/1.245kb7r6",
+      "uuid": "5fa09bd6-afc9-4293-a39a-8458ea1da3c7",
+      "title": "Data from: Right hemisphere advantage in the development of route fidelity in homing pigeons",
+      "rights": "CC0 1.0 Universal",
+      "curated_group": "volant_bird",
+      "source_dataset_role": "homing_pigeon",
+      "reference_verified": false,
+      "reference_n_original_animals": null,
+      "original_reference_taxa": [],
+      "actual_event_files_quality_checked": 0,
+      "event_file_checks": [],
+      "proposed_primary_inference_eligible": false,
+      "raw_sensor_resolution_usable_for_co_use_unverified": true
+    },
+    {
+      "doi": "10.5441/001/1.2cp86266",
+      "uuid": "f9b4b052-8169-4ba8-9f96-9ae0ab883dd0",
+      "title": "Data from: Allometric and temporal scaling of movement characteristics in Galapagos tortoises",
+      "rights": "CC0 1.0 Universal",
+      "curated_group": "terrestrial_reptile",
+      "source_dataset_role": "galapagos_tortoise",
+      "reference_verified": true,
+      "reference_n_original_animals": 46,
+      "original_reference_taxa": [
+        "Chelonoidis donfaustoi",
+        "Chelonoidis porteri",
+        "Chelonoidis hoodensis",
+        "Chelonoidis"
+      ],
+      "actual_event_files_quality_checked": 0,
+      "event_file_checks": [],
+      "proposed_primary_inference_eligible": false,
+      "raw_sensor_resolution_usable_for_co_use_unverified": true
+    },
+    {
+      "doi": "10.5441/001/1.313",
+      "uuid": "df53968d-4bcc-4dd7-9bb6-8358378836ec",
+      "title": "Data from: Study \"Green turtles (Chelonia Mydas); Hays; Chagos Archipelago, Western Indian Ocean\"",
+      "rights": "CC0 1.0 Universal",
+      "curated_group": "marine_reptile",
+      "source_dataset_role": "green_turtle",
+      "reference_verified": true,
+      "reference_n_original_animals": 33,
+      "original_reference_taxa": [
+        "Chelonia mydas"
+      ],
+      "actual_event_files_quality_checked": 2,
+      "event_file_checks": [
+        {
+          "source_bitstream": "a7e5ec27-e1e2-4863-a864-603e9bf4b59b",
+          "sensor_source": "Argos",
+          "verified_valid_fixes": 2565,
+          "n_animals_100_fixes_7_days": 1
+        },
+        {
+          "source_bitstream": "f6a7d086-a4e3-434f-bbce-6ba9022543e3",
+          "sensor_source": "GPS",
+          "verified_valid_fixes": 52846,
+          "n_animals_100_fixes_7_days": 32
+        }
+      ],
+      "proposed_primary_inference_eligible": false,
+      "raw_sensor_resolution_usable_for_co_use_unverified": true
+    },
+    {
+      "doi": "10.5441/001/1.sg2s0f7q",
+      "uuid": "52bcbc64-38b6-4491-aca7-56df66f04a12",
+      "title": "Data from: Juvenile emperor penguin range calls for extended conservation measures in the Southern Ocean",
+      "rights": "CC0 1.0 Universal",
+      "curated_group": "flightless_bird",
+      "source_dataset_role": "emperor_penguin",
+      "reference_verified": true,
+      "reference_n_original_animals": 8,
+      "original_reference_taxa": [
+        "Aptenodytes forsteri"
+      ],
+      "actual_event_files_quality_checked": 1,
+      "event_file_checks": [
+        {
+          "source_bitstream": "4c1e9a5a-9f31-4f45-9ba7-d95f37e2b85b",
+          "sensor_source": "Argos",
+          "verified_valid_fixes": 17856,
+          "n_animals_100_fixes_7_days": 8
+        }
+      ],
+      "proposed_primary_inference_eligible": false,
+      "raw_sensor_resolution_usable_for_co_use_unverified": true
+    },
+    {
+      "doi": "10.5441/001/1.44cb3946",
+      "uuid": "a6f0c2e4-4ed5-446b-9238-48ea138e4b27",
+      "title": "Data from: Study \"Sperm whales Gulf of Mexico 2011-2013 - FastLoc GPS data\"",
+      "rights": "CC0 1.0 Universal",
+      "curated_group": "marine_mammal",
+      "source_dataset_role": "sperm_whale",
+      "reference_verified": true,
+      "reference_n_original_animals": 17,
+      "original_reference_taxa": [
+        "Physeter macrocephalus"
+      ],
+      "actual_event_files_quality_checked": 1,
+      "event_file_checks": [
+        {
+          "source_bitstream": "ff4e0556-ddd6-49c7-8bb1-d5af9107984a",
+          "sensor_source": "FastLoc GPS",
+          "verified_valid_fixes": 7151,
+          "n_animals_100_fixes_7_days": 13
+        }
+      ],
+      "proposed_primary_inference_eligible": false,
+      "raw_sensor_resolution_usable_for_co_use_unverified": true
+    },
+    {
+      "doi": "10.5441/001/1.294",
+      "uuid": "7fb8ee56-cb2d-4c4c-9456-166fc8e3ee6d",
+      "title": "Data from: Australia’s east coast humpback whales: satellite tag derived movements on breeding grounds, feeding grounds and along the northern and southern migration.",
+      "rights": "CC0 1.0 Universal",
+      "curated_group": "marine_mammal",
+      "source_dataset_role": "humpback_whale",
+      "reference_verified": false,
+      "reference_n_original_animals": null,
+      "original_reference_taxa": [],
+      "actual_event_files_quality_checked": 0,
+      "event_file_checks": [],
+      "proposed_primary_inference_eligible": false,
+      "raw_sensor_resolution_usable_for_co_use_unverified": true
+    },
+    {
+      "doi": "10.5441/001/1.282",
+      "uuid": "5259147d-04a1-471d-a65c-240cd3d7071d",
+      "title": "Data from: Greater spear nosed bats commute long distances alone, rest together, but forage apart",
+      "rights": "CC0 1.0 Universal",
+      "curated_group": "volant_mammal",
+      "source_dataset_role": "source_bat_comparator",
+      "reference_verified": false,
+      "reference_n_original_animals": null,
+      "original_reference_taxa": [],
+      "actual_event_files_quality_checked": 0,
+      "event_file_checks": [],
+      "proposed_primary_inference_eligible": false,
+      "raw_sensor_resolution_usable_for_co_use_unverified": true
+    }
+  ],
+  "n_real_event_CSV_screened": 5,
+  "n_real_event_unique_DOIs": 4,
+  "scope": [
+    "Historical bat work is hypothesis generator and comparator, not another independent ecological replication.",
+    "Species/study/animal independence unresolved for repeated Movebank deposits, partial datasets and cross-year tags.",
+    "Track sensor precision classes separately; Argos vs GPS location error can be large.",
+    "Within-environment repeatability or true biological segregation has not yet been computed."
+  ]
+}
