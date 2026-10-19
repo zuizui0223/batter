@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-19",
+  "status": "EXPLORATORY_ORIGINAL_NONBAT_SOURCE_DESCRIPTIVE_X_ONLY; no per-animal R, T or E outcome, no independent resource/diet or competition test, no source permutation, not a cross-taxon general law",
+  "original_package": {
+    "doi": "doi:10.5441/001/1.313",
+    "source_title": "Data from: Study Green turtles (Chelonia Mydas) Hays Chagos Archipelago Western Indian Ocean",
+    "source_site_from_reference": "Diego Garcia",
+    "taxon": "Chelonia mydas",
+    "source_study_reference_bitstream_id": "5bf6e216-dfa0-4c7c-a8eb-27cb5f3a2645",
+    "source_original_gps_bitstream_id": "f6a7d086-a4e3-434f-bbce-6ba9022543e3",
+    "source_original_gps_bytes": 9788265,
+    "original_study_licence": "CC0 1.0 Universal"
+  },
+  "source_cohort": {
+    "original_deployment_year_month": "2018-07",
+    "reference_animals": 12,
+    "animals_with_valid_GPS_positions_during_window": 12,
+    "source_sensor_type": "gps",
+    "window_since_each_original_animal_deployment_days": 30,
+    "unique_georeferenced_individual_timestamp_events": 2762,
+    "source_position_count_min_median_max_per_animal": [
+      154,
+      243,
+      302
+    ],
+    "source_distinct_UTC_day_count_min_median_max_per_animal": [
+      28,
+      30,
+      31
+    ],
+    "cohort_geographic_bounding_extent_km_approximate": [
+      11.030551959166587,
+      11.864253450919591
+    ],
+    "max_distance_from_first_fix_per_animal_km_min_median_max": [
+      1.2014468304225807,
+      1.8090078506939469,
+      9.900155925214984
+    ]
+  },
+  "estimand": "X: direct unsmoothed horizontal GPS cell-use distribution overlap for each pair, first 30 days post original source deployment; each animal's daily position mass normalized first, each observed animal-day has equal weight; each dyad cell intersection ∑ min(p_i(cell),p_j(cell)); 66 dependent pairs of 12 animals",
+  "projection": "Lambert cylindrical equal-area (standard parallel 0°) x=R*lambda, y=R*sin(phi), R=6371.0088km; source lon/lat in degrees; no location rows exported",
+  "grid_sensitivity": {
+    "original_primary_provisional_km": 25,
+    "scales": [
+      {
+        "km": 0.1,
+        "mean_pair_overlap": 0.3073888668932137,
+        "median_pair_overlap": 0.3758295019639558,
+        "min_pair_overlap": 0,
+        "max_pair_overlap": 0.6510397011002259,
+        "n_pairs_with_positive_overlap": 59
+      },
+      {
+        "km": 0.25,
+        "mean_pair_overlap": 0.3863036295813899,
+        "median_pair_overlap": 0.47654591595768075,
+        "min_pair_overlap": 0,
+        "max_pair_overlap": 0.8002819281093453,
+        "n_pairs_with_positive_overlap": 60
+      },
+      {
+        "km": 0.5,
+        "mean_pair_overlap": 0.4514280362867768,
+        "median_pair_overlap": 0.5104405258606939,
+        "min_pair_overlap": 0,
+        "max_pair_overlap": 0.8302512483244697,
+        "n_pairs_with_positive_overlap": 61
+      },
+      {
+        "km": 1,
+        "mean_pair_overlap": 0.5249141959286258,
+        "median_pair_overlap": 0.5643395466055564,
+        "min_pair_overlap": 0.001388888888888889,
+        "max_pair_overlap": 0.905704999048652,
+        "n_pairs_with_positive_overlap": 66
+      },
+      {
+        "km": 2,
+        "mean_pair_overlap": 0.5960258164635022,
+        "median_pair_overlap": 0.6422131098239472,
+        "min_pair_overlap": 0.006944444444444445,
+        "max_pair_overlap": 0.9901691854243369,
+        "n_pairs_with_positive_overlap": 66
+      },
+      {
+        "km": 5,
+        "mean_pair_overlap": 0.9854997182000852,
+        "median_pair_overlap": 0.9976958525345622,
+        "min_pair_overlap": 0.9471572871572866,
+        "max_pair_overlap": 1,
+        "n_pairs_with_positive_overlap": 66
+      },
+      {
+        "km": 10,
+        "mean_pair_overlap": 0.9867889260682404,
+        "median_pair_overlap": 0.9976958525345622,
+        "min_pair_overlap": 0.9471572871572866,
+        "max_pair_overlap": 1,
+        "n_pairs_with_positive_overlap": 66
+      },
+      {
+        "km": 25,
+        "mean_pair_overlap": 0.9991434815996206,
+        "median_pair_overlap": 0.999999999999998,
+        "min_pair_overlap": 0.9962962962962938,
+        "max_pair_overlap": 1,
+        "n_pairs_with_positive_overlap": 66
+      }
+    ]
+  },
+  "inference_limits": [
+    "Grid 25km source provisional was selected before the first X calculation, but it is too coarse relative to the ≈12km full cohort early-period range and returns nearly unit overlap. Finer 0.1-2km sensitivity was added after inspecting the unexpectedly near-unity coarse result, so these are explicitly exploratory, not preregistered tests.",
+    "Estimated 2D overlap of recorded GPS fixes does NOT equal actual simultaneous co-presence, trophic/dietary resource sharing, or competitive niche overlap.",
+    "66 pairs repeat the same 12 tracked animals; no CI or statistical significance is assigned. Per-animal-day balancing reduces sampling effort concentration but not animal dependence.",
+    "All release sites are reported Diego Garcia in original reference, but exact environmental and trophic resource availabilities were not validated.",
+    "Original dates are only used to align the first 30 post-deployment days; exact locations/animal IDs are not republished.",
+    "Coarse grid masking shows apparent geographic sharing is scale-sensitive in this particular source, not a universal law.",
+    "R, T, E and calibrated 3D-Z source axes are not estimated; their status is NOT ESTIMABLE or UNTESTED, not zero."
+  ],
+  "output_axes": {
+    "R": "NOT_ESTIMATED",
+    "X": "EXPLORATORY_DESCRIPTIVE_REPORTED",
+    "T": "NOT_ESTIMATED",
+    "E": "NOT_ESTIMATED",
+    "Z": "NOT_ESTIMATED"
+  },
+  "source_observation_location_rows_exported": false,
+  "original_source_animal_identifiers_exported": false
+}
