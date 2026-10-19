@@ -167,8 +167,8 @@
       "source_reference_bitstream_id": "0c46aa31-7e31-4af0-9fc3-4b1366f957a3",
       "original_repository_MD5": "6ea321da886575fb58351cc2f39d8f0c",
       "rights_original_data": "CC0 1.0 Universal",
-      "parser": "quoted CSV with escaped quote handling; no original animal IDs stored",
-      "reference_row_count": null,
+      "parser": "CR-only CSV normalized to record separators; 20 columns and all 47 records validated by row width; aggregate only; original animal IDs not stored",
+      "reference_row_count": 47,
       "reference_columns": [
         "tag-id",
         "animal-id",
@@ -191,18 +191,34 @@
         "tag-model",
         "tag-readout-method"
       ],
-      "distinct_animal_id_count": null,
-      "distinct_taxon_names": [],
-      "distinct_taxa_n": null,
+      "distinct_animal_id_count": 46,
+      "distinct_taxon_names": [
+        "Chelonoidis donfaustoi",
+        "Chelonoidis porteri",
+        "Chelonoidis hoodensis",
+        "Chelonoidis"
+      ],
+      "distinct_taxa_n": 4,
       "distinct_tag_id_count": null,
       "distinct_deployment_id_count": null,
-      "unique_duty_cycle_count": null,
-      "duty_cycle_examples": [],
+      "unique_duty_cycle_count": 1,
+      "duty_cycle_examples": [
+        "hourly from 6:00-19:00 local time"
+      ],
       "sex_column_present": true,
-      "sex_categories": [],
+      "sex_categories": [
+        "m",
+        "f"
+      ],
       "gps_eligible_fixes_verified": false,
-      "source_reference_complete": false,
-      "quality_gate": "UNRESOLVED: Original reference uses CR-only or encoded separators; initial ingestion erroneously parsed records inside header. Must validate exact row structure before any n claims."
+      "source_reference_complete": true,
+      "quality_gate": "47 valid deployment/reference rows and 46 unique source animal-ID labels, but 11 genus-only Chelonoidis records require taxonomy identification before species-resolved macro analysis",
+      "reference_species_record_rows": {
+        "Chelonoidis donfaustoi": 13,
+        "Chelonoidis porteri": 12,
+        "Chelonoidis hoodensis": 11,
+        "Chelonoidis sp. (genus-only)": 11
+      }
     },
     {
       "label": "marine_reptile_green_turtle",
@@ -352,9 +368,12 @@
   ],
   "next_required_gate": "GPS event header+actual per-animal valid location count/time span/holdout trajectories and taxon-resolved cohort grouping",
   "reference_csv_parser_fix": {
-    "status": "diagnostic_pending",
-    "problem": "Do not accept n=47: original reference was read as concatenated header including identifiers. All animal-level fields removed pending validated decoding.",
-    "safety": "The corrected branch file excludes raw animal IDs from its metadata; preserve only vetted source column names.",
-    "last_attempt_invalidated": true
+    "status": "confirmed",
+    "problem": "Tortoise original 12,851-byte CSV uses CR-only separators (47 CR, 0 LF), which the original LF-only parser erroneously treated as 1 record",
+    "applied": "Normalize CR record separators to LF before quoted CSV parsing; independently check all 47 original records contain exact 20 reference header columns, with 46 distinct source animal-ID tokens",
+    "confirmed_unique_source_animals": 46,
+    "confirmed_reference_rows": 47,
+    "source_ids_not_committed": true,
+    "genus_only_source_labels_require_taxonomic_resolution": true
   }
 }
