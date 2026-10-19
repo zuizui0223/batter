@@ -168,7 +168,7 @@
       "original_repository_MD5": "6ea321da886575fb58351cc2f39d8f0c",
       "rights_original_data": "CC0 1.0 Universal",
       "parser": "quoted CSV with escaped quote handling; no original animal IDs stored",
-      "reference_row_count": 0,
+      "reference_row_count": 47,
       "reference_columns": [
         "tag-id",
         "animal-id",
@@ -1084,15 +1084,25 @@
         "custom gps logger",
         "other-wireless"
       ],
-      "distinct_animal_id_count": 0,
-      "distinct_taxon_names": [],
-      "distinct_taxa_n": 0,
-      "distinct_tag_id_count": 0,
-      "distinct_deployment_id_count": 0,
-      "unique_duty_cycle_count": 0,
-      "duty_cycle_examples": [],
+      "distinct_animal_id_count": 46,
+      "distinct_taxon_names": [
+        "Chelonoidis donfaustoi",
+        "Chelonoidis porteri",
+        "Chelonoidis hoodensis",
+        "Chelonoidis"
+      ],
+      "distinct_taxa_n": 4,
+      "distinct_tag_id_count": 47,
+      "distinct_deployment_id_count": 47,
+      "unique_duty_cycle_count": 1,
+      "duty_cycle_examples": [
+        "hourly from 6:00-19:00 local time"
+      ],
       "sex_column_present": true,
-      "sex_categories": [],
+      "sex_categories": [
+        "m",
+        "f"
+      ],
       "gps_eligible_fixes_verified": false,
       "source_reference_complete": true
     },
@@ -1242,5 +1252,14 @@
     "Original reference CSVs were inspected but not republished, and no animal/tag/individual identifiers are stored.",
     "No held-out identity, density, site overlap, co-use, or ecological partitioning tests have been calculated."
   ],
-  "next_required_gate": "GPS event header+actual per-animal valid location count/time span/holdout trajectories and taxon-resolved cohort grouping"
+  "next_required_gate": "GPS event header+actual per-animal valid location count/time span/holdout trajectories and taxon-resolved cohort grouping",
+  "reference_csv_parser_fix": {
+    "issue": "Original Galapagos tortoise reference CSV is CR-only (Mac classic) with 1 line if parser splits only on LF; initial zero count was a parse artifact, not missing data",
+    "applied": "Read bare CR, LF and CRLF record separators only outside quoted CSV fields; count rows and distinct animal IDs by taxon",
+    "verified_valid_rows": 47,
+    "detected_original_newlines": {
+      "cr": 47,
+      "lf": 0
+    }
+  }
 }
