@@ -1,4 +1,7 @@
-# Across taxa, when does individual movement identity become an ecological niche?
+# Auxiliary conditional-identity and ecological-moderator analysis protocol
+
+**Controlling publication question:** [Pattern-first comparative ecology of behavioral individuality](PATTERN_FIRST_COMPARATIVE_ECOLOGY_V1.md). This older technical protocol supplies *secondary* conditional individuality (G) and moderator hypotheses only; it **must not replace** the primary multi-axis ecological question (R, horizontal X, temporal T, independent habitat/resource exposure E), and it must **not** impose one threshold between individuality and partitioning. Original data-processing quality gates below are supplemental diagnostics; use the canonical source-cadence-aware preflight and per-axis estimability statuses.
+
 
 **Study scope:** cross-taxon original-data database study. This is a **prospective analytical design as of 19 October 2026**, not the already-completed bat paper, not a newly discovered movement law, and not a preregistered outcome-blind analysis of every source: repository metadata and a limited nine-source feasibility probe have already been examined. No source-wide individual-identity or partitioning test has yet been fitted.
 
