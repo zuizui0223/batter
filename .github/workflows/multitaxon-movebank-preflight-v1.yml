@@ -25,6 +25,31 @@ jobs:
         run: python3 prospective/multitaxon_individuality/screen_movebank_metadata_v1.py
       - name: Privacy-safe animal/day source-event gate synthetic tests
         run: python3 -m unittest discover -s prospective/multitaxon_individuality -p 'test_multitaxon_screen_v1.py' -v
+      - name: Check source X pairwise occupancy formula without real animal data
+        run: python3 -m unittest discover -s prospective/multitaxon_individuality/tests -p 'test_reproduce_turtle_X_synthetic_v1.py' -v
+      - name: Validate first source-level green turtle and Argos-only gull cohort receipts
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          base=Path("prospective/multitaxon_individuality")
+          a=json.loads((base/"ORIGINAL_GREEN_TURTLE_AND_GULL_COHORT_SOURCE_PREFLIGHT_2026_10_19.json").read_text())
+          b=json.loads((base/"EXPLORATORY_GREEN_TURTLE_2018_SOURCE_X_SCALE_V1.json").read_text())
+          c=json.loads((base/"NONBAT_R_X_T_E_SOURCE_STATUS_MATRIX_2026_10_19.json").read_text())
+          turtle,gull=a["datasets"]
+          assert turtle["source_valid_unique_id_timestamp_positions"]==52846
+          assert turtle["actual_event_animal_ids"]==32
+          assert [r["animals_passing_broad_source_cadence_tier"] for r in turtle["year_strata"]]==[8,8,4,12]
+          assert gull["sensor_original_row_counts"]=={"argos-doppler-shift":28649}
+          assert b["source_cohort"]["unique_georeferenced_individual_timestamp_events"]==2762
+          assert b["source_cohort"]["animals_with_valid_GPS_positions_during_window"]==12
+          assert abs(b["grid_sensitivity"]["scales"][3]["mean_pair_overlap"]-0.5249141959286258)<1e-12
+          assert b["output_axes"]["R"]==b["output_axes"]["E"]=="NOT_ESTIMATED"
+          assert c["summary"]["source_groups_with_X_exploratory_source_estimate"]==1
+          assert c["summary"]["any_validated_cross_taxon_joint_R_X_T_E_conclusion"] is False
+          print("PASS green turtle original GPS same-source preflight and first nonbat X-only exploratory scale curve")
+          print("NO animal IDs, original raw positions or claimed universal R/X/T/E effects in this CI")
+          PY
       - name: Validate reference-probe and original Argos/manta negative gates
         run: |
           python3 - <<'PY'
