@@ -1,0 +1,50 @@
+name: Multitaxon Movebank preflight (no raw animal tracks)
+
+on:
+  push:
+    branches:
+      - prospective/multitaxon-identity-ecology-v1
+    paths:
+      - "prospective/multitaxon_individuality/**"
+      - ".github/workflows/multitaxon-movebank-preflight-v1.yml"
+  pull_request:
+    paths:
+      - "prospective/multitaxon_individuality/**"
+      - ".github/workflows/multitaxon-movebank-preflight-v1.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  metadata-and-synthetic-source-screen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deterministic full 437-DOI metadata screen
+        run: python3 prospective/multitaxon_individuality/screen_movebank_metadata_v1.py
+      - name: Privacy-safe animal/day source-event gate synthetic tests
+        run: python3 -m unittest discover -s prospective/multitaxon_individuality -p 'test_multitaxon_screen_v1.py' -v
+      - name: Validate reference-probe and original Argos/manta negative gates
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          d=Path("prospective/multitaxon_individuality")
+          r=json.loads((d/"PILOT_SOURCE_REFERENCE_FEASIBILITY_V1.json").read_text())
+          s=json.loads((d/"MOVEBANK_METADATA_SCREEN_V1.json").read_text())
+          e=json.loads((d/"ORIGINAL_SOURCE_EVENT_PREFLIGHT_V1.json").read_text())
+          assert r["summary"]["sources_with_reference_checked"]==9
+          assert r["summary"]["reference_n_at_least5"]==8
+          assert r["summary"]["reference_n_below5"]==1
+          assert s["summary"]["metadata_priority_count"]==227
+          assert s["summary"]["actual_biologically_eligible_packages_confirmed"]==0
+          assert e["datasets"][0]["row_sensor_counts"]=={"argos-doppler-shift":10271}
+          assert e["datasets"][0]["distinct_individual_timestamp_records"]==1258
+          assert e["datasets"][0]["individual_timestamp_collisions"]==9013
+          assert e["datasets"][0]["at_least30_unique_timestamp_positions_and3_calendar_days_individuals"]==9
+          assert e["datasets"][1]["individual_ids_with_accepted_source_coordinates"]==1
+          assert e["datasets"][1]["stage3_primary_high_precision_GPS_status"].startswith("FAIL_")
+          assert all(not row["individual_time_block_eligibility_verified"] for row in s["records"])
+          print("PASS no false biological eligibility or source-specific effects promoted from metadata/reference/Argos-only")
+          PY
