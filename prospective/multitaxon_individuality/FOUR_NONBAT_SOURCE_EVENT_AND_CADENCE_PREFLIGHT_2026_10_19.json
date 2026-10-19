@@ -1,0 +1,164 @@
+{
+  "schema_version": 2,
+  "generated_date": "2026-10-19",
+  "source_event_protocol": "preflight_movebank_events_v1.py",
+  "previous_three_gate_path": "THREE_NONBAT_EVENT_PREFLIGHT_2026_10_19.json",
+  "source_four_paths_and_license_requires_dataset_citation": true,
+  "event_rows_source_viewed_not_redistributed": true,
+  "source_animal_ids_or_coordinates_exported": false,
+  "source_rights_note": "Wolf source DOI 10.5441/001/1.7vr1k987 has CC0 metadata; Humboldt penguin CC BY-NC; Ukraine Crane CC BY; snake CC0. Original attribution/rights still apply.",
+  "datasets": [
+    {
+      "label": "Copperhead_snake",
+      "doi": "doi:10.5441/001/1.3v106n1n",
+      "event_uuid": "e0c59d01-0c3a-4bcc-b216-c7ddb9da5e4b",
+      "source_csv_size_bytes": 344056,
+      "extracted_text_length": 344056,
+      "n_source_rows": 1630,
+      "headers_count": 11,
+      "present_fields": {
+        "animal_id": true,
+        "datetime": true,
+        "lat": true,
+        "lon": true,
+        "sensor": true,
+        "tag": true
+      },
+      "sensor_counts": {
+        "radio-transmitter": 1630
+      },
+      "n_valid_GPS_like_positions": 0,
+      "n_distinct_animal_id_strings": 0,
+      "n_passing_4_days_ge50_and_ge7_days": 0,
+      "overlap_calendar_days_with_ge2_passing_animals": 0,
+      "excluded_nonGPS_sensors": 1630,
+      "invalid_source_timestamp": 0,
+      "invalid_coordinates": 0,
+      "invalid_ID_rows": 0,
+      "status": "STOP_NO_VALID_EVENTS",
+      "UTC_assumption": "README source states timestamps in UTC or GPS time; parsed timezone-naive timestamp strings as UTC for stage-1 screening only",
+      "source_animal_id_values_retained": false,
+      "source_coordinates_retained": false
+    },
+    {
+      "label": "Cranes_Ukraine",
+      "doi": "doi:10.5441/001/1.590",
+      "event_uuid": "d7165ad2-5f24-4311-bbf3-a3334de6d8f9",
+      "source_csv_size_bytes": 288902,
+      "extracted_text_length": 288902,
+      "n_source_rows": 1795,
+      "headers_count": 16,
+      "present_fields": {
+        "animal_id": true,
+        "datetime": true,
+        "lat": true,
+        "lon": true,
+        "sensor": true,
+        "tag": true
+      },
+      "sensor_counts": {
+        "gps": 1795
+      },
+      "n_valid_GPS_like_positions": 1795,
+      "n_distinct_animal_id_strings": 4,
+      "n_passing_4_days_ge50_and_ge7_days": 0,
+      "overlap_calendar_days_with_ge2_passing_animals": 0,
+      "excluded_nonGPS_sensors": 0,
+      "invalid_source_timestamp": 0,
+      "invalid_coordinates": 0,
+      "invalid_ID_rows": 0,
+      "status": "STOP_INSUFFICIENT_REPEAT_INDIVIDUALS",
+      "UTC_assumption": "README source states timestamps in UTC or GPS time; parsed timezone-naive timestamp strings as UTC for stage-1 screening only",
+      "source_animal_id_values_retained": false,
+      "source_coordinates_retained": false
+    },
+    {
+      "label": "Humboldt_penguin",
+      "doi": "doi:10.5441/001/1.725",
+      "event_uuid": "ac3dc6f1-6c8e-4077-9165-c50479964920",
+      "source_csv_size_bytes": 79162,
+      "extracted_text_length": 79162,
+      "n_source_rows": 421,
+      "headers_count": 11,
+      "present_fields": {
+        "animal_id": true,
+        "datetime": true,
+        "lat": true,
+        "lon": true,
+        "sensor": true,
+        "tag": true
+      },
+      "sensor_counts": {
+        "gps": 421
+      },
+      "n_valid_GPS_like_positions": 421,
+      "n_distinct_animal_id_strings": 21,
+      "n_passing_4_days_ge50_and_ge7_days": 0,
+      "overlap_calendar_days_with_ge2_passing_animals": 0,
+      "excluded_nonGPS_sensors": 0,
+      "invalid_source_timestamp": 0,
+      "invalid_coordinates": 0,
+      "invalid_ID_rows": 0,
+      "status": "STOP_INSUFFICIENT_REPEAT_INDIVIDUALS",
+      "UTC_assumption": "README source states timestamps in UTC or GPS time; parsed timezone-naive timestamp strings as UTC for stage-1 screening only",
+      "source_animal_id_values_retained": false,
+      "source_coordinates_retained": false
+    },
+    {
+      "label": "Wolf",
+      "doi": "doi:10.5441/001/1.7vr1k987",
+      "event_uuid": "485c621d-5177-4a88-a033-d81ed3a53d8c",
+      "source_csv_size_bytes": 1922661,
+      "extracted_text_length": 1922661,
+      "n_source_rows": 15159,
+      "headers_count": 13,
+      "present_fields": {
+        "animal_id": true,
+        "datetime": true,
+        "lat": true,
+        "lon": true,
+        "sensor": true,
+        "tag": true
+      },
+      "sensor_counts": {
+        "gps": 15159
+      },
+      "n_valid_GPS_like_positions": 15159,
+      "n_distinct_animal_id_strings": 12,
+      "n_passing_4_days_ge50_and_ge7_days": 0,
+      "overlap_calendar_days_with_ge2_passing_animals": 0,
+      "excluded_nonGPS_sensors": 0,
+      "invalid_source_timestamp": 0,
+      "invalid_coordinates": 0,
+      "invalid_ID_rows": 0,
+      "status": "STOP_INSUFFICIENT_REPEAT_INDIVIDUALS_UNDER_BAT_DENSE_PROFILE",
+      "UTC_assumption": "Source publication README defines tracking time in UTC/GPS; naive event timestamps were explicitly interpreted as UTC for screening.",
+      "source_animal_id_values_retained": false,
+      "source_coordinates_retained": false,
+      "source_reference_tag_duty_cycle": "2-hourly fixes",
+      "source_reference_deployment_rows": 16,
+      "resolution_specific_2hourly_screen": {
+        "gate_definition": "At least 8 source-tagged animals, each >=4 original GPS fixes on >=10 distinct dates spanning >=30 elapsed days, and >=3 date overlaps with >=2 qualifying animals.",
+        "original_source_event_sensor_type": "gps",
+        "passing_individuals": 10,
+        "shared_dates_with_two_qualifying_animals": 396,
+        "stage1_result": "PASS_SOURCE_EVENT_SCREEN_PENDING_COHORT_PRECISION_AND_ECOLOGICAL_CONTEXT"
+      },
+      "resolution_specific_slow_screen": {
+        "gate_definition": "At least 8 source-tagged animals, each >=2 original GPS fixes on >=20 dates spanning >=30 elapsed days and >=3 shared dates",
+        "passing_individuals": 10,
+        "shared_dates_with_two_qualifying_animals": 451,
+        "stage1_result": "DESCRIPTIVE_ONLY_NOT_COMPARABLE_MOVEMENT_KINEMATICS"
+      }
+    }
+  ],
+  "main_takeaways": [
+    "Snake tracking events are original radio-transmitter (not GPS), despite a published animal movement CSV and thousands of events.",
+    "Ukraine crane GPS source has 4 animal ID strings only, so fails min eight animals even before individual temporal checks.",
+    "Humboldt penguin hourly-averaged GPS source has 21 individuals but only 421 location events, so cannot pass dense 50-per-day four-day individualization support.",
+    "Wolf source-tag references explicitly state 2-hourly GPS fixes. Imposing 50 fixes/day would be impossible by its design and is an inappropriate bat-derived universal criterion.",
+    "Using separately specified source-cadence 2-hourly screening (4 fixes on >=10 dates across >=30 days), Wolf records contain 12 distinct tracked animal IDs and 10 satisfy preliminary repeated source-day support with 396 overlapping qualifying dates.",
+    "Even this Wolf source count PASS is not confirmed one conspecific/cohort/site population, ecological movement-choice identity, niche partitioning or a tested relation between the two. 3D altitude inference is not supported by GPS position alone.",
+    "Cadence-tier change was made after initial reference/event feasibility inspection and is explicitly exploratory before outcome measurements, not falsely preregistered."
+  ]
+}
