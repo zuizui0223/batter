@@ -25,6 +25,8 @@ jobs:
         run: python3 prospective/multitaxon_individuality/validate_distinct_identity_partition_estimands_v1.py
       - name: Verify original 437-package GPS metadata screening, rights and nonbat pilot queue
         run: python3 prospective/multitaxon_individuality/validate_movebank_metadata_triage_v1.py
+      - name: Independently audit wider GPS/GSM metadata screen and 8 real source reference metadata pilots
+        run: python3 prospective/multitaxon_individuality/validate_movebank_437_sensor_triage_v1.py
       - name: Test privacy-safe streaming GPS CSV/GZIP preflight on invented animal-day records
         run: python3 -m unittest discover -s prospective/multitaxon_individuality/tests -p 'test_*.py' -v
       - name: Confirm this is metadata/design only, never a claimed biological result
