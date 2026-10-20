@@ -1,7 +1,80 @@
 # Pattern-first cross-taxon movement individuality and ecological use (database programme)
 
 **New branch: `prospective/multitaxon-identity-ecology-v1`**  
-**Research status as of 19 October 2026:** Movebank's **437 published source packages** are fully censused and metadata-screened. Original animal-reference and positional CSV audits have begun across diverse taxa. **One exploratory source-level geographic X curve** exists for 12 2018 green turtles, but **no paired nonbat R–X population pattern, independently measured trophic E, cross-clade effect or generalized ecological result exists.** This is deliberately independent of the [original bat integration draft PR #99](https://github.com/zuizui0223/batter/pull/99), whose source records, source p-values and historical freeze remain unchanged.
+**Research status as of 20 October 2026:** Movebank's **437 published source packages** are fully censused and metadata-screened. Original animal-reference and positional CSV audits span diverse taxa. The fox pilot is now exactly reproduced, and **six source-months have paired descriptive movement-gain R and geographic-overlap X for the same 3–5 animals and heldout period**. A larger mule-deer source has now been acquired: **948,632 GPS rows from 135 animals**, with **38–99 animals per month meeting a coarse shared-context support screen across all 36 months of 2018–2020**. Deer movement effects have not been computed. There is no established cross-taxon individuality/resource-partitioning effect. Independently measured trophic E and encounter T remain unavailable. This is deliberately independent of the [original bat integration draft PR #99](https://github.com/zuizui0223/batter/pull/99), whose source records, source p-values and historical freeze remain unchanged.
+
+## 20 October 2026: larger original source acquired for the next comparison
+
+The [deer/stork original-file receipt](NEXT_SOURCE_STORK_DEER_RECEIPT_2026_10_20.json)
+and [reproduction program](next_source_stork_deer_receipt_v1.py) extend the existing
+source queue beyond the small fox example. The complete CC0 mule-deer GPS source
+([DOI 10.5441/001/1.708](https://doi.org/10.5441/001/1.708)) has **948,632 rows and
+135 source animals**, all female in the reference table. The downloaded original
+GPS and reference files match the publisher's MD5 values. All event rows have
+GPS sensor type, explicit visibility, the expected taxon, valid coordinate ranges
+and parseable times. No event animal is absent from the reference table, and no
+animal/timestamp duplicates were found.
+
+| Source year | Animals with GPS | GPS rows | Animals with ≥100 rows on ≥7 dates | Animals passing monthly shared-context support, min–max |
+|---|---:|---:|---:|---:|
+| 2018 | 106 | 338,581 | 105 | 43–99 |
+| 2019 | 107 | 330,944 | 107 | 47–99 |
+| 2020 | 93 | 278,875 | 92 | 38–85 |
+
+An additional **232 rows from 61 animals on one source-calendar date in 2021**
+are included in the original-file count but excluded from the 36-month support
+screen. Animals recur across years; the annual counts cannot be summed as
+independent animals. The main-year median sampling interval is two hours, so the
+fox's ten-minute movement classes cannot simply be transferred to this source.
+
+The support screen uses **5-km cells × 6-hour source-clock bins**. An animal must
+have ≥15 fixes on ≥2 dates in a context; a shared context needs ≥2 such animals;
+the final supported animal must have ≥15 fixes on ≥3 dates across its own
+qualifying shared contexts. All 36 months are retained. This establishes coarse
+repeated geographic/time-of-day support, not verified common biological
+populations, simultaneous encounters, environmental exposure or a movement
+effect. The source README allows **UTC or GPS time**; its absolute clock basis
+has not been resolved. The receipt separately reports same-date shared-context
+support, which can be zero for an otherwise supported animal.
+
+The next substantive comparison is deer R/X after source-specific cohort,
+cadence and temporal-support choices are fixed. The present screen does not
+establish the number of animals that will survive heldout training/evaluation
+or allow the fox identity test to be copied unchanged.
+
+For white storks ([DOI 10.5441/001/1.4192t2j4_2](https://doi.org/10.5441/001/1.4192t2j4_2)),
+the original reference file is verified: **109 deployment rows, 108 animal IDs
+and 70 tags**, with 30 tags assigned to multiple animals. The full 508-MB GPS set
+is catalogued but not downloaded in this bounded acquisition. This is reference
+availability only, not a validated GPS cohort.
+
+## 20 October 2026: completed fox matched R/X continuation
+
+- [Full result and interpretation](FOX_MATCHED_CORRESPONDENCE_RESULT_2026_10_20.md),
+  [all numerical outputs](FOX_MATCHED_CORRESPONDENCE_RESULT_2026_10_20.json),
+  [design fixed before the new outputs](FOX_MATCHED_CORRESPONDENCE_DESIGN_2026_10_20.md).
+- Original CC0 files checked against public MD5: **166,338 source rows → 145,581
+  quality-controlled fixes → 130,923 same-day steps**, with 35 source IDs and 39
+  deployments. [Legacy reproduction](FOX_LEGACY_REPRODUCTION_2026_10_20.json)
+  recovers all 60 count fields and 30 gains (maximum numerical difference 7.64e-17).
+- The shared-calendar sensitivity uses the first/second calendar-month halves for
+  every animal and a fixed evaluation mask. Alternative identity models must have
+  training support for **every** scored context. No unsupported pooled fallback
+  can manufacture self-identity evidence.
+- Primary Somerley May 2019: **4 animals, 5,783 test steps**, B=+0.001442 nats/step,
+  matched X1km=0.182089 over six dependent dyads. Only two allowed whole-identity
+  maps exist, so the reference tail fraction is 0.5 and is support-limited.
+- Britford May 2016: the true mapping ranks first of 24, but B=**−0.011198** against
+  pooling. The binary-speed and independent activity-channel diagnostics each
+  have reference tail 0.125. Do not call this a supported positive R effect.
+- Every preselected month and both grid widths are reported. Geographic overlap
+  is strongly sensitive to cell size/origin. The mapping reference is conditional
+  on an explicit observational exchangeability assumption, **not a randomized
+  biological p-value**. Broader ecological generality remains unestablished.
+
+Executable programs: [source/pilot reproduction](fox_source_pipeline_v1.py) and
+[calendar correspondence plus matched geography](fox_matched_correspondence_v1.py).
+They accept separately obtained source CSVs and publish aggregate-only outputs.
 
 ## Governing biological question — compare patterns, not invent a threshold
 
