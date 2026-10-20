@@ -1,7 +1,7 @@
 # Original-source seasonal X: aggregate-only execution record
 
 **Exploratory, not independently preregistered and not cross-taxon proof.**
-Source script SHA256: `60bac7bcdf528cc6d6eab0ed96177c75f67a451177c96cc818445676ce88d54a`
+Source script SHA256: `0021598297579f076b400dcc7c602318a7183baaf70275faf0215d42c58cff5f`
 
 All eligible dyads require observed-day opportunity and exactly the same season-pair risk set.
 No GPS tracks, coordinates, animal IDs, pseudoreplicated tests or population-level inference are included.
@@ -9,7 +9,7 @@ No GPS tracks, coordinates, animal IDs, pseudoreplicated tests or population-lev
 | Source DOI | Original status | Original GPS rows | Source-qualified comparisons |
 |---|---|---:|---:|
 | 10.5441/001/1.671 | COMPLETE_EXPLORATORY_GEOGRAPHIC_X | 796419 | 64 |
-| 10.5441/001/1.714 | COMPLETE_EXPLORATORY_GEOGRAPHIC_X | 52649 | 0 |
+| 10.5441/001/1.714 | STOP_UNPARSEABLE_SOURCE_TIMESTAMPS | 52649 | 0 |
 | 10.5441/001/1.700 | COMPLETE_EXPLORATORY_GEOGRAPHIC_X | 123399 | 32 |
 | 10.5441/001/1.706 | COMPLETE_EXPLORATORY_GEOGRAPHIC_X | 156366 | 48 |
 
@@ -21,10 +21,6 @@ No GPS tracks, coordinates, animal IDs, pseudoreplicated tests or population-lev
 | turkey | 2019 | early_late | 31 | 465 | 0.292991 | 0.153783 | 0.139207 | 177 | 167 |
 | turkey | 2020 | winter_summer | 8 | 28 | 0.496194 | 0.212201 | 0.283993 | 21 | 10 |
 | turkey | 2020 | early_late | 9 | 36 | 0.534397 | 0.291468 | 0.242929 | 28 | 28 |
-| moose | 2019 | winter_summer | — | 0 | — | — | NOT ESTIMABLE | — | — |
-| moose | 2019 | early_late | — | 0 | — | — | NOT ESTIMABLE | — | — |
-| moose | 2020 | winter_summer | — | 0 | — | — | NOT ESTIMABLE | — | — |
-| moose | 2020 | early_late | — | 0 | — | — | NOT ESTIMABLE | — | — |
 | moose_snowy_range | 2019 | winter_summer | — | 0 | — | — | NOT ESTIMABLE | — | — |
 | moose_snowy_range | 2019 | early_late | 22 | 231 | 0.029134 | 0.023696 | 0.005438 | 20 | 21 |
 | moose_snowy_range | 2020 | winter_summer | — | 0 | — | — | NOT ESTIMABLE | — | — |
