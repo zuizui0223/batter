@@ -387,6 +387,15 @@ def process_one(label,uid,doi,taxon,cache):
         ref=(cache / (references[0]['uuid']+'.bin'), references[0]['filename'])
         events, audit = _source_year_records(gp, ref, taxon)
         record['event_audit']=audit
+        if not events:
+            # Publisher bytes are valid, but the fixed-year analysis is structurally unavailable.
+            # Non-ISO source clocks need a separate, documented decoder; never claim missing biology.
+            record['status'] = ('STOP_UNPARSEABLE_SOURCE_TIMESTAMPS' if
+                                audit['filter_counts'].get('invalid_timestamp_removed', 0)
+                                else 'STOP_NO_ELIGIBLE_FIXED_YEAR_EVENTS')
+            record['comparisons'] = []
+            record['number_estimated_comparisons'] = 0
+            return record
         record['comparisons']=compute_source_comparisons(events)
         record['status']='COMPLETE_EXPLORATORY_GEOGRAPHIC_X'
         record['number_estimated_comparisons']=sum(v['status']=='OBSERVED_MATCHED_DYADS' for v in record['comparisons'])
