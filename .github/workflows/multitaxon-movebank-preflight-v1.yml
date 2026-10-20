@@ -85,3 +85,16 @@ jobs:
           assert result['n_stopped_sources']==1 and len(result['focus'])==5
           print('PASS 1280 source aggregate scenarios and 6 synthetic/source-receipt tests; no original animal tracks')
           PY
+      - name: Reconcile all source-derived GPS effort-balanced seed and grid aggregates
+        run: |
+          python3 prospective/multitaxon_individuality/validate_seasonal_effort_output_v1.py > /tmp/validated_source_effort.json
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          a=json.loads(Path('/tmp/validated_source_effort.json').read_text())
+          assert a['n_original_sources']==3
+          assert a['n_source_years']==6
+          assert a['n_full_seed_grid_draws']==960
+          assert a['all_source_receipts_pinned']
+          print('PASS three original-source receipts; five eligible source-year cohorts; 960 seed-grid evaluations, no raw tracks')
+          PY

@@ -1,5 +1,31 @@
 # Pattern-first cross-taxon movement individuality and ecological use (database programme)
 
+## 20 October 2026: GPS effort-standardized original-source seasonal X audit
+
+Three source-matched published GPS datasets (wild turkey, black bear and
+white-tailed deer) were redownloaded from their complete original Movebank
+files and verified against original MD5 plus pinned SHA256. The
+[observation-effort report](SEASONAL_EDGE_EFFORT_BALANCE_RESULT_2026_10_20.md),
+[source-locked design](SEASONAL_EDGE_OBSERVATION_BALANCE_DESIGN_2026_10_20.md),
+[reproduction code](seasonal_edge_observation_balance_v1.py) and
+[aggregate-output verifier](validate_seasonal_effort_output_v1.py) cover
+**two supported months/season, seven common dates/month, exactly one or two
+GPS fixes/animal/date, 24 deterministic sampling draws and four declared grids**.
+The original 1-fix dyad risk sets exactly reconcile to prior V2. The three
+full aggregate-only output JSONs are permanently committed.
+
+At the reference 5-km grid, turkey 2019 has positive winter incidence and
+positive conditional strength. Turkey 2020 has positive winter incidence but
+grid-sensitive strength. Black bear 2020 has **more summer-positive overlap
+dyads and stronger winter-positive overlap**, nearly cancelling mean X.
+White-tailed deer 2020 has **more winter-positive dyads but stronger
+summer-positive overlap** in every seed across all four declared grids
+at both fix rates, even though the mean X seasonal direction reverses
+with the grid. These are exploratory geography-only descriptions, **not**
+source-population membership, social association or resource partitioning.
+The bear k=2 dyad cohort falls from 104 to 69 and cannot be compared with
+k=1 as if it were the same pair set.
+
 ## 20 October 2026: source-derived overlap edge retention (post-inspection)
 
 The [edge topology audit](EDGE_TOPOLOGY_CROSS_SOURCE_2026_10_20.md) now contrasts
