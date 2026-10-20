@@ -1,7 +1,7 @@
 # Original-source seasonal X: aggregate-only execution record
 
 **Exploratory, not independently preregistered and not cross-taxon proof.**
-Source script SHA256: `f7995ac68c1432d49b4b635faea6c72a980d9c479f010a998346cd20198f2c6c`
+Source script SHA256: `60bac7bcdf528cc6d6eab0ed96177c75f67a451177c96cc818445676ce88d54a`
 
 All eligible dyads require observed-day opportunity and exactly the same season-pair risk set.
 No GPS tracks, coordinates, animal IDs, pseudoreplicated tests or population-level inference are included.
@@ -10,6 +10,7 @@ No GPS tracks, coordinates, animal IDs, pseudoreplicated tests or population-lev
 |---|---|---:|---:|
 | 10.5441/001/1.671 | COMPLETE_EXPLORATORY_GEOGRAPHIC_X | 796419 | 64 |
 | 10.5441/001/1.714 | COMPLETE_EXPLORATORY_GEOGRAPHIC_X | 52649 | 0 |
+| 10.5441/001/1.700 | COMPLETE_EXPLORATORY_GEOGRAPHIC_X | 123399 | 32 |
 | 10.5441/001/1.706 | COMPLETE_EXPLORATORY_GEOGRAPHIC_X | 156366 | 48 |
 
 ## 5 km, origin (0,0): *complete risk sets only*
@@ -24,6 +25,10 @@ No GPS tracks, coordinates, animal IDs, pseudoreplicated tests or population-lev
 | moose | 2019 | early_late | — | 0 | — | — | NOT ESTIMABLE | — | — |
 | moose | 2020 | winter_summer | — | 0 | — | — | NOT ESTIMABLE | — | — |
 | moose | 2020 | early_late | — | 0 | — | — | NOT ESTIMABLE | — | — |
+| moose_snowy_range | 2019 | winter_summer | — | 0 | — | — | NOT ESTIMABLE | — | — |
+| moose_snowy_range | 2019 | early_late | 22 | 231 | 0.029134 | 0.023696 | 0.005438 | 20 | 21 |
+| moose_snowy_range | 2020 | winter_summer | — | 0 | — | — | NOT ESTIMABLE | — | — |
+| moose_snowy_range | 2020 | early_late | 16 | 120 | 0.015043 | 0.017871 | -0.002828 | 9 | 12 |
 | black_bear | 2019 | winter_summer | 2 | 1 | 0.000000 | 0.000000 | 0.000000 | 0 | 0 |
 | black_bear | 2019 | early_late | — | 0 | — | — | NOT ESTIMABLE | — | — |
 | black_bear | 2020 | winter_summer | 17 | 118 | 0.031017 | 0.030495 | 0.000522 | 8 | 17 |

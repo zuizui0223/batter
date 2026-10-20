@@ -42,7 +42,7 @@
   ],
   "registration_status": "Post-existing exploratory selection. Script fixed before this run; NOT independent preregistration.",
   "schema_version": 1,
-  "source_registry_selection": "3 previously queued sources, not favorable-effect sampling",
+  "source_registry_selection": "Three prior metadata candidates plus Snowy Range moose added after Bighorn Mountain parse/coverage failure; post-inspection exploratory choice, not independent prospective replication",
   "sources": [
     {
       "comparisons": [
@@ -2371,7 +2371,25 @@
         "sensor_row_counts": {
           "gps": 796419
         },
+        "source_calendar_years_parsed_before_position_qc": {
+          "2019": 189617,
+          "2020": 245597,
+          "2021": 361195
+        },
         "source_clock_verified_utc": false,
+        "source_columns": [
+          "event-id",
+          "individual-local-identifier",
+          "individual-taxon-canonical-name",
+          "location-lat",
+          "location-long",
+          "manually-marked-outlier",
+          "sensor-type",
+          "study-name",
+          "tag-local-identifier",
+          "timestamp",
+          "visible"
+        ],
         "source_sites_not_harmonized": true,
         "taxon_row_counts": {
           "Meleagris gallopavo": 796419
@@ -3204,7 +3222,7 @@
         "animals_with_multiple_site_labels": 0,
         "animals_with_unambiguous_site_label": 0,
         "filter_counts": {
-          "invalid_position_or_clock_removed": 52648,
+          "invalid_timestamp_removed": 52648,
           "original_rows": 52649,
           "sensor_or_visibility_removed": 1
         },
@@ -3218,7 +3236,23 @@
         "sensor_row_counts": {
           "gps": 52649
         },
+        "source_calendar_years_parsed_before_position_qc": {},
         "source_clock_verified_utc": false,
+        "source_columns": [
+          "event-id",
+          "gps:hdop",
+          "height-above-ellipsoid",
+          "individual-local-identifier",
+          "individual-taxon-canonical-name",
+          "location-lat",
+          "location-long",
+          "manually-marked-outlier",
+          "sensor-type",
+          "study-name",
+          "tag-local-identifier",
+          "timestamp",
+          "visible"
+        ],
         "source_sites_not_harmonized": true,
         "taxon_row_counts": {
           "Alces alces": 52649
@@ -3272,6 +3306,1635 @@
           "md5_verified": true,
           "role": "reference",
           "sha256": "f81fdc386d70568efd680e20a9c6ea1b0e5ededcab2843040cc861e457f2bdc3"
+        }
+      ]
+    },
+    {
+      "comparisons": [
+        {
+          "grid_km": 1,
+          "n_matched_animals": 0,
+          "n_pairs": 0,
+          "n_season1_supported_pairs": 276,
+          "n_season2_supported_pairs": 0,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "status": "NOT_ESTIMABLE_NO_MATCHED_PAIRS",
+          "window": "winter_summer",
+          "year": 2019
+        },
+        {
+          "decomposition_residual": 2.168404344971009e-19,
+          "fraction_pairs_summer_higher": 0.030303030303030304,
+          "fraction_pairs_winter_higher": 0.030303030303030304,
+          "grid_km": 1,
+          "incidence_component": -0.0009775609236071093,
+          "n_matched_animals": 22,
+          "n_pairs": 231,
+          "n_season1_supported_pairs": 276,
+          "n_season2_supported_pairs": 253,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "pair_state_counts": {
+            "both_positive": 6,
+            "both_zero": 217,
+            "summer_only": 5,
+            "winter_only": 3
+          },
+          "status": "OBSERVED_MATCHED_DYADS",
+          "strength_component": 0.0012112988322501843,
+          "summer": {
+            "conditional_strength": 0.09891778516413151,
+            "mean_X": 0.0047103707221015,
+            "n_positive_pairs": 11,
+            "positive_fraction": 0.047619047619047616
+          },
+          "window": "early_late",
+          "winter": {
+            "conditional_strength": 0.12689878818911077,
+            "mean_X": 0.0049441086307445755,
+            "n_positive_pairs": 9,
+            "positive_fraction": 0.03896103896103896
+          },
+          "winter_minus_summer_X": 0.0002337379086430752,
+          "year": 2019
+        },
+        {
+          "grid_km": 1,
+          "n_matched_animals": 0,
+          "n_pairs": 0,
+          "n_season1_supported_pairs": 276,
+          "n_season2_supported_pairs": 0,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.0,
+          "status": "NOT_ESTIMABLE_NO_MATCHED_PAIRS",
+          "window": "winter_summer",
+          "year": 2019
+        },
+        {
+          "decomposition_residual": -2.168404344971009e-19,
+          "fraction_pairs_summer_higher": 0.025974025974025976,
+          "fraction_pairs_winter_higher": 0.025974025974025976,
+          "grid_km": 1,
+          "incidence_component": -0.0005147941078002457,
+          "n_matched_animals": 22,
+          "n_pairs": 231,
+          "n_season1_supported_pairs": 276,
+          "n_season2_supported_pairs": 253,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.0,
+          "pair_state_counts": {
+            "both_positive": 5,
+            "both_zero": 219,
+            "summer_only": 4,
+            "winter_only": 3
+          },
+          "status": "OBSERVED_MATCHED_DYADS",
+          "strength_component": 0.0012754462397705404,
+          "summer": {
+            "conditional_strength": 0.10158637529085708,
+            "mean_X": 0.003957910725617808,
+            "n_positive_pairs": 9,
+            "positive_fraction": 0.03896103896103896
+          },
+          "window": "early_late",
+          "winter": {
+            "conditional_strength": 0.13624850251285647,
+            "mean_X": 0.004718562857588103,
+            "n_positive_pairs": 8,
+            "positive_fraction": 0.03463203463203463
+          },
+          "winter_minus_summer_X": 0.0007606521319702946,
+          "year": 2019
+        },
+        {
+          "grid_km": 1,
+          "n_matched_animals": 0,
+          "n_pairs": 0,
+          "n_season1_supported_pairs": 276,
+          "n_season2_supported_pairs": 0,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.5,
+          "status": "NOT_ESTIMABLE_NO_MATCHED_PAIRS",
+          "window": "winter_summer",
+          "year": 2019
+        },
+        {
+          "decomposition_residual": -4.336808689942018e-19,
+          "fraction_pairs_summer_higher": 0.03463203463203463,
+          "fraction_pairs_winter_higher": 0.030303030303030304,
+          "grid_km": 1,
+          "incidence_component": -0.001477078534531951,
+          "n_matched_animals": 22,
+          "n_pairs": 231,
+          "n_season1_supported_pairs": 276,
+          "n_season2_supported_pairs": 253,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.5,
+          "pair_state_counts": {
+            "both_positive": 6,
+            "both_zero": 216,
+            "summer_only": 6,
+            "winter_only": 3
+          },
+          "status": "OBSERVED_MATCHED_DYADS",
+          "strength_component": 0.002892864985256289,
+          "summer": {
+            "conditional_strength": 0.081913532321141,
+            "mean_X": 0.0042552484322670656,
+            "n_positive_pairs": 12,
+            "positive_fraction": 0.05194805194805195
+          },
+          "window": "early_late",
+          "winter": {
+            "conditional_strength": 0.14555656199677935,
+            "mean_X": 0.005671034882991403,
+            "n_positive_pairs": 9,
+            "positive_fraction": 0.03896103896103896
+          },
+          "winter_minus_summer_X": 0.0014157864507243377,
+          "year": 2019
+        },
+        {
+          "grid_km": 1,
+          "n_matched_animals": 0,
+          "n_pairs": 0,
+          "n_season1_supported_pairs": 276,
+          "n_season2_supported_pairs": 0,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.5,
+          "status": "NOT_ESTIMABLE_NO_MATCHED_PAIRS",
+          "window": "winter_summer",
+          "year": 2019
+        },
+        {
+          "decomposition_residual": 0.0,
+          "fraction_pairs_summer_higher": 0.030303030303030304,
+          "fraction_pairs_winter_higher": 0.025974025974025976,
+          "grid_km": 1,
+          "incidence_component": -0.0010656580370364812,
+          "n_matched_animals": 22,
+          "n_pairs": 231,
+          "n_season1_supported_pairs": 276,
+          "n_season2_supported_pairs": 253,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.5,
+          "pair_state_counts": {
+            "both_positive": 5,
+            "both_zero": 218,
+            "summer_only": 5,
+            "winter_only": 3
+          },
+          "status": "OBSERVED_MATCHED_DYADS",
+          "strength_component": 0.002493258168848312,
+          "summer": {
+            "conditional_strength": 0.09108669011082693,
+            "mean_X": 0.003943146758044456,
+            "n_positive_pairs": 10,
+            "positive_fraction": 0.04329004329004329
+          },
+          "window": "early_late",
+          "winter": {
+            "conditional_strength": 0.15508031644460027,
+            "mean_X": 0.005370746889856287,
+            "n_positive_pairs": 8,
+            "positive_fraction": 0.03463203463203463
+          },
+          "winter_minus_summer_X": 0.0014276001318118308,
+          "year": 2019
+        },
+        {
+          "grid_km": 2,
+          "n_matched_animals": 0,
+          "n_pairs": 0,
+          "n_season1_supported_pairs": 276,
+          "n_season2_supported_pairs": 0,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "status": "NOT_ESTIMABLE_NO_MATCHED_PAIRS",
+          "window": "winter_summer",
+          "year": 2019
+        },
+        {
+          "decomposition_residual": 8.673617379884035e-19,
+          "fraction_pairs_summer_higher": 0.03896103896103896,
+          "fraction_pairs_winter_higher": 0.030303030303030304,
+          "grid_km": 2,
+          "incidence_component": -0.0006669424314567923,
+          "n_matched_animals": 22,
+          "n_pairs": 231,
+          "n_season1_supported_pairs": 276,
+          "n_season2_supported_pairs": 253,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "pair_state_counts": {
+            "both_positive": 9,
+            "both_zero": 215,
+            "summer_only": 4,
+            "winter_only": 3
+          },
+          "status": "OBSERVED_MATCHED_DYADS",
+          "strength_component": 0.0025490509777667822,
+          "summer": {
+            "conditional_strength": 0.130510470631954,
+            "mean_X": 0.007344745100499575,
+            "n_positive_pairs": 13,
+            "positive_fraction": 0.05627705627705628
+          },
+          "window": "early_late",
+          "winter": {
+            "conditional_strength": 0.17761693270108414,
+            "mean_X": 0.009226853646809566,
+            "n_positive_pairs": 12,
+            "positive_fraction": 0.05194805194805195
+          },
+          "winter_minus_summer_X": 0.0018821085463099907,
+          "year": 2019
+        },
+        {
+          "grid_km": 2,
+          "n_matched_animals": 0,
+          "n_pairs": 0,
+          "n_season1_supported_pairs": 276,
+          "n_season2_supported_pairs": 0,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.0,
+          "status": "NOT_ESTIMABLE_NO_MATCHED_PAIRS",
+          "window": "winter_summer",
+          "year": 2019
+        },
+        {
+          "decomposition_residual": 0.0,
+          "fraction_pairs_summer_higher": 0.03463203463203463,
+          "fraction_pairs_winter_higher": 0.030303030303030304,
+          "grid_km": 2,
+          "incidence_component": -0.001456340257957066,
+          "n_matched_animals": 22,
+          "n_pairs": 231,
+          "n_season1_supported_pairs": 276,
+          "n_season2_supported_pairs": 253,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.0,
+          "pair_state_counts": {
+            "both_positive": 7,
+            "both_zero": 216,
+            "summer_only": 5,
+            "winter_only": 3
+          },
+          "status": "OBSERVED_MATCHED_DYADS",
+          "strength_component": 0.0040471911356875605,
+          "summer": {
+            "conditional_strength": 0.12571179286932163,
+            "mean_X": 0.006530482746458267,
+            "n_positive_pairs": 12,
+            "positive_fraction": 0.05194805194805195
+          },
+          "window": "early_late",
+          "winter": {
+            "conditional_strength": 0.2107028067187604,
+            "mean_X": 0.009121333624188762,
+            "n_positive_pairs": 10,
+            "positive_fraction": 0.04329004329004329
+          },
+          "winter_minus_summer_X": 0.0025908508777304946,
+          "year": 2019
+        },
+        {
+          "grid_km": 2,
+          "n_matched_animals": 0,
+          "n_pairs": 0,
+          "n_season1_supported_pairs": 276,
+          "n_season2_supported_pairs": 0,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.5,
+          "status": "NOT_ESTIMABLE_NO_MATCHED_PAIRS",
+          "window": "winter_summer",
+          "year": 2019
+        },
+        {
+          "decomposition_residual": 8.673617379884035e-19,
+          "fraction_pairs_summer_higher": 0.03463203463203463,
+          "fraction_pairs_winter_higher": 0.030303030303030304,
+          "grid_km": 2,
+          "incidence_component": -0.0015338819942836348,
+          "n_matched_animals": 22,
+          "n_pairs": 231,
+          "n_season1_supported_pairs": 276,
+          "n_season2_supported_pairs": 253,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.5,
+          "pair_state_counts": {
+            "both_positive": 7,
+            "both_zero": 216,
+            "summer_only": 5,
+            "winter_only": 3
+          },
+          "status": "OBSERVED_MATCHED_DYADS",
+          "strength_component": -0.0013752927116251928,
+          "summer": {
+            "conditional_strength": 0.19160394381182422,
+            "mean_X": 0.009953451626588271,
+            "n_positive_pairs": 12,
+            "positive_fraction": 0.05194805194805195
+          },
+          "window": "early_late",
+          "winter": {
+            "conditional_strength": 0.16272279686769517,
+            "mean_X": 0.0070442769206794445,
+            "n_positive_pairs": 10,
+            "positive_fraction": 0.04329004329004329
+          },
+          "winter_minus_summer_X": -0.0029091747059088267,
+          "year": 2019
+        },
+        {
+          "grid_km": 2,
+          "n_matched_animals": 0,
+          "n_pairs": 0,
+          "n_season1_supported_pairs": 276,
+          "n_season2_supported_pairs": 0,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.5,
+          "status": "NOT_ESTIMABLE_NO_MATCHED_PAIRS",
+          "window": "winter_summer",
+          "year": 2019
+        },
+        {
+          "decomposition_residual": 8.673617379884035e-19,
+          "fraction_pairs_summer_higher": 0.04329004329004329,
+          "fraction_pairs_winter_higher": 0.025974025974025976,
+          "grid_km": 2,
+          "incidence_component": -0.0030605844859000536,
+          "n_matched_animals": 22,
+          "n_pairs": 231,
+          "n_season1_supported_pairs": 276,
+          "n_season2_supported_pairs": 253,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.5,
+          "pair_state_counts": {
+            "both_positive": 6,
+            "both_zero": 215,
+            "summer_only": 7,
+            "winter_only": 3
+          },
+          "status": "OBSERVED_MATCHED_DYADS",
+          "strength_component": 0.002439935993457331,
+          "summer": {
+            "conditional_strength": 0.1511294261294261,
+            "mean_X": 0.008505119219404932,
+            "n_positive_pairs": 13,
+            "positive_fraction": 0.05627705627705628
+          },
+          "window": "early_late",
+          "winter": {
+            "conditional_strength": 0.20236808199203005,
+            "mean_X": 0.00788447072696221,
+            "n_positive_pairs": 9,
+            "positive_fraction": 0.03896103896103896
+          },
+          "winter_minus_summer_X": -0.0006206484924427217,
+          "year": 2019
+        },
+        {
+          "grid_km": 5,
+          "n_matched_animals": 0,
+          "n_pairs": 0,
+          "n_season1_supported_pairs": 276,
+          "n_season2_supported_pairs": 0,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "status": "NOT_ESTIMABLE_NO_MATCHED_PAIRS",
+          "window": "winter_summer",
+          "year": 2019
+        },
+        {
+          "decomposition_residual": -8.673617379884035e-19,
+          "fraction_pairs_summer_higher": 0.047619047619047616,
+          "fraction_pairs_winter_higher": 0.06493506493506493,
+          "grid_km": 5,
+          "incidence_component": -0.0012925489912086383,
+          "n_matched_animals": 22,
+          "n_pairs": 231,
+          "n_season1_supported_pairs": 276,
+          "n_season2_supported_pairs": 253,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "pair_state_counts": {
+            "both_positive": 15,
+            "both_zero": 205,
+            "summer_only": 6,
+            "winter_only": 5
+          },
+          "status": "OBSERVED_MATCHED_DYADS",
+          "strength_component": 0.006730356884665687,
+          "summer": {
+            "conditional_strength": 0.26065900135071274,
+            "mean_X": 0.023696272850064797,
+            "n_positive_pairs": 21,
+            "positive_fraction": 0.09090909090909091
+          },
+          "window": "early_late",
+          "winter": {
+            "conditional_strength": 0.3364986325876773,
+            "mean_X": 0.029134080743521844,
+            "n_positive_pairs": 20,
+            "positive_fraction": 0.08658008658008658
+          },
+          "winter_minus_summer_X": 0.005437807893457047,
+          "year": 2019
+        },
+        {
+          "grid_km": 5,
+          "n_matched_animals": 0,
+          "n_pairs": 0,
+          "n_season1_supported_pairs": 276,
+          "n_season2_supported_pairs": 0,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.0,
+          "status": "NOT_ESTIMABLE_NO_MATCHED_PAIRS",
+          "window": "winter_summer",
+          "year": 2019
+        },
+        {
+          "decomposition_residual": 3.0357660829594124e-18,
+          "fraction_pairs_summer_higher": 0.047619047619047616,
+          "fraction_pairs_winter_higher": 0.047619047619047616,
+          "grid_km": 5,
+          "incidence_component": -0.0023417114649931983,
+          "n_matched_animals": 22,
+          "n_pairs": 231,
+          "n_season1_supported_pairs": 276,
+          "n_season2_supported_pairs": 253,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.0,
+          "pair_state_counts": {
+            "both_positive": 12,
+            "both_zero": 209,
+            "summer_only": 6,
+            "winter_only": 4
+          },
+          "status": "OBSERVED_MATCHED_DYADS",
+          "strength_component": 0.00245602000035774,
+          "summer": {
+            "conditional_strength": 0.25378118538075456,
+            "mean_X": 0.019775157302396457,
+            "n_positive_pairs": 18,
+            "positive_fraction": 0.07792207792207792
+          },
+          "window": "early_late",
+          "winter": {
+            "conditional_strength": 0.28715416303267444,
+            "mean_X": 0.019889465837761,
+            "n_positive_pairs": 16,
+            "positive_fraction": 0.06926406926406926
+          },
+          "winter_minus_summer_X": 0.00011430853536454483,
+          "year": 2019
+        },
+        {
+          "grid_km": 5,
+          "n_matched_animals": 0,
+          "n_pairs": 0,
+          "n_season1_supported_pairs": 276,
+          "n_season2_supported_pairs": 0,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.5,
+          "status": "NOT_ESTIMABLE_NO_MATCHED_PAIRS",
+          "window": "winter_summer",
+          "year": 2019
+        },
+        {
+          "decomposition_residual": 0.0,
+          "fraction_pairs_summer_higher": 0.047619047619047616,
+          "fraction_pairs_winter_higher": 0.03896103896103896,
+          "grid_km": 5,
+          "incidence_component": -0.0021822679757632305,
+          "n_matched_animals": 22,
+          "n_pairs": 231,
+          "n_season1_supported_pairs": 276,
+          "n_season2_supported_pairs": 253,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.5,
+          "pair_state_counts": {
+            "both_positive": 10,
+            "both_zero": 211,
+            "summer_only": 6,
+            "winter_only": 4
+          },
+          "status": "OBSERVED_MATCHED_DYADS",
+          "strength_component": 0.003601957556016824,
+          "summer": {
+            "conditional_strength": 0.22431687801932362,
+            "mean_X": 0.015537099776230207,
+            "n_positive_pairs": 16,
+            "positive_fraction": 0.06926406926406926
+          },
+          "window": "early_late",
+          "winter": {
+            "conditional_strength": 0.2797870243819827,
+            "mean_X": 0.0169567893564838,
+            "n_positive_pairs": 14,
+            "positive_fraction": 0.06060606060606061
+          },
+          "winter_minus_summer_X": 0.0014196895802535935,
+          "year": 2019
+        },
+        {
+          "grid_km": 5,
+          "n_matched_animals": 0,
+          "n_pairs": 0,
+          "n_season1_supported_pairs": 276,
+          "n_season2_supported_pairs": 0,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.5,
+          "status": "NOT_ESTIMABLE_NO_MATCHED_PAIRS",
+          "window": "winter_summer",
+          "year": 2019
+        },
+        {
+          "decomposition_residual": 8.673617379884035e-19,
+          "fraction_pairs_summer_higher": 0.05194805194805195,
+          "fraction_pairs_winter_higher": 0.025974025974025976,
+          "grid_km": 5,
+          "incidence_component": -0.004165665024043436,
+          "n_matched_animals": 22,
+          "n_pairs": 231,
+          "n_season1_supported_pairs": 276,
+          "n_season2_supported_pairs": 253,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.5,
+          "pair_state_counts": {
+            "both_positive": 8,
+            "both_zero": 213,
+            "summer_only": 7,
+            "winter_only": 3
+          },
+          "status": "OBSERVED_MATCHED_DYADS",
+          "strength_component": 0.0033789808347345204,
+          "summer": {
+            "conditional_strength": 0.21054621002990567,
+            "mean_X": 0.013671831820123744,
+            "n_positive_pairs": 15,
+            "positive_fraction": 0.06493506493506493
+          },
+          "window": "early_late",
+          "winter": {
+            "conditional_strength": 0.2705881002471114,
+            "mean_X": 0.012885147630814829,
+            "n_positive_pairs": 11,
+            "positive_fraction": 0.047619047619047616
+          },
+          "winter_minus_summer_X": -0.0007866841893089151,
+          "year": 2019
+        },
+        {
+          "grid_km": 10,
+          "n_matched_animals": 0,
+          "n_pairs": 0,
+          "n_season1_supported_pairs": 276,
+          "n_season2_supported_pairs": 0,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "status": "NOT_ESTIMABLE_NO_MATCHED_PAIRS",
+          "window": "winter_summer",
+          "year": 2019
+        },
+        {
+          "decomposition_residual": 6.071532165918825e-18,
+          "fraction_pairs_summer_higher": 0.07792207792207792,
+          "fraction_pairs_winter_higher": 0.08658008658008658,
+          "grid_km": 10,
+          "incidence_component": 0.001929515815626636,
+          "n_matched_animals": 22,
+          "n_pairs": 231,
+          "n_season1_supported_pairs": 276,
+          "n_season2_supported_pairs": 253,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "pair_state_counts": {
+            "both_positive": 25,
+            "both_zero": 193,
+            "summer_only": 6,
+            "winter_only": 7
+          },
+          "status": "OBSERVED_MATCHED_DYADS",
+          "strength_component": 0.005966150318524217,
+          "summer": {
+            "conditional_strength": 0.4238422689084983,
+            "mean_X": 0.05687926552451709,
+            "n_positive_pairs": 31,
+            "positive_fraction": 0.1341991341991342
+          },
+          "window": "early_late",
+          "winter": {
+            "conditional_strength": 0.46759403791100923,
+            "mean_X": 0.06477493165866795,
+            "n_positive_pairs": 32,
+            "positive_fraction": 0.13852813852813853
+          },
+          "winter_minus_summer_X": 0.00789566613415086,
+          "year": 2019
+        },
+        {
+          "grid_km": 10,
+          "n_matched_animals": 0,
+          "n_pairs": 0,
+          "n_season1_supported_pairs": 276,
+          "n_season2_supported_pairs": 0,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.0,
+          "status": "NOT_ESTIMABLE_NO_MATCHED_PAIRS",
+          "window": "winter_summer",
+          "year": 2019
+        },
+        {
+          "decomposition_residual": -1.734723475976807e-18,
+          "fraction_pairs_summer_higher": 0.08658008658008658,
+          "fraction_pairs_winter_higher": 0.08658008658008658,
+          "grid_km": 10,
+          "incidence_component": 0.0057088637643601964,
+          "n_matched_animals": 22,
+          "n_pairs": 231,
+          "n_season1_supported_pairs": 276,
+          "n_season2_supported_pairs": 253,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.0,
+          "pair_state_counts": {
+            "both_positive": 23,
+            "both_zero": 191,
+            "summer_only": 7,
+            "winter_only": 10
+          },
+          "status": "OBSERVED_MATCHED_DYADS",
+          "strength_component": -0.004493893429148854,
+          "summer": {
+            "conditional_strength": 0.45606011909594746,
+            "mean_X": 0.05922858689557759,
+            "n_positive_pairs": 30,
+            "positive_fraction": 0.12987012987012986
+          },
+          "window": "early_late",
+          "winter": {
+            "conditional_strength": 0.42310490061552253,
+            "mean_X": 0.06044355723078893,
+            "n_positive_pairs": 33,
+            "positive_fraction": 0.14285714285714285
+          },
+          "winter_minus_summer_X": 0.0012149703352113406,
+          "year": 2019
+        },
+        {
+          "grid_km": 10,
+          "n_matched_animals": 0,
+          "n_pairs": 0,
+          "n_season1_supported_pairs": 276,
+          "n_season2_supported_pairs": 0,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.5,
+          "status": "NOT_ESTIMABLE_NO_MATCHED_PAIRS",
+          "window": "winter_summer",
+          "year": 2019
+        },
+        {
+          "decomposition_residual": 6.938893903907228e-18,
+          "fraction_pairs_summer_higher": 0.08225108225108226,
+          "fraction_pairs_winter_higher": 0.05194805194805195,
+          "grid_km": 10,
+          "incidence_component": -0.00945255228580509,
+          "n_matched_animals": 22,
+          "n_pairs": 231,
+          "n_season1_supported_pairs": 276,
+          "n_season2_supported_pairs": 253,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.5,
+          "pair_state_counts": {
+            "both_positive": 20,
+            "both_zero": 200,
+            "summer_only": 8,
+            "winter_only": 3
+          },
+          "status": "OBSERVED_MATCHED_DYADS",
+          "strength_component": 0.01608869557605075,
+          "summer": {
+            "conditional_strength": 0.3638355885832593,
+            "mean_X": 0.04410128346463749,
+            "n_positive_pairs": 28,
+            "positive_fraction": 0.12121212121212122
+          },
+          "window": "early_late",
+          "winter": {
+            "conditional_strength": 0.5095802426251308,
+            "mean_X": 0.05073742675488316,
+            "n_positive_pairs": 23,
+            "positive_fraction": 0.09956709956709957
+          },
+          "winter_minus_summer_X": 0.006636143290245665,
+          "year": 2019
+        },
+        {
+          "grid_km": 10,
+          "n_matched_animals": 0,
+          "n_pairs": 0,
+          "n_season1_supported_pairs": 276,
+          "n_season2_supported_pairs": 0,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.5,
+          "status": "NOT_ESTIMABLE_NO_MATCHED_PAIRS",
+          "window": "winter_summer",
+          "year": 2019
+        },
+        {
+          "decomposition_residual": -5.204170427930421e-18,
+          "fraction_pairs_summer_higher": 0.06060606060606061,
+          "fraction_pairs_winter_higher": 0.06926406926406926,
+          "grid_km": 10,
+          "incidence_component": -0.0074096562656203475,
+          "n_matched_animals": 22,
+          "n_pairs": 231,
+          "n_season1_supported_pairs": 276,
+          "n_season2_supported_pairs": 253,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.5,
+          "pair_state_counts": {
+            "both_positive": 20,
+            "both_zero": 201,
+            "summer_only": 7,
+            "winter_only": 3
+          },
+          "status": "OBSERVED_MATCHED_DYADS",
+          "strength_component": 0.004153133148347879,
+          "summer": {
+            "conditional_strength": 0.4087201741942079,
+            "mean_X": 0.0477724878928295,
+            "n_positive_pairs": 27,
+            "positive_fraction": 0.11688311688311688
+          },
+          "window": "early_late",
+          "winter": {
+            "conditional_strength": 0.4470951244849423,
+            "mean_X": 0.044515964775557026,
+            "n_positive_pairs": 23,
+            "positive_fraction": 0.09956709956709957
+          },
+          "winter_minus_summer_X": -0.0032565231172724737,
+          "year": 2019
+        },
+        {
+          "grid_km": 1,
+          "n_matched_animals": 0,
+          "n_pairs": 0,
+          "n_season1_supported_pairs": 120,
+          "n_season2_supported_pairs": 0,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "status": "NOT_ESTIMABLE_NO_MATCHED_PAIRS",
+          "window": "winter_summer",
+          "year": 2020
+        },
+        {
+          "decomposition_residual": 0.0,
+          "fraction_pairs_summer_higher": 0.058333333333333334,
+          "fraction_pairs_winter_higher": 0.008333333333333333,
+          "grid_km": 1,
+          "incidence_component": -0.004156528492268101,
+          "n_matched_animals": 16,
+          "n_pairs": 120,
+          "n_season1_supported_pairs": 120,
+          "n_season2_supported_pairs": 120,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "pair_state_counts": {
+            "both_positive": 3,
+            "both_zero": 112,
+            "summer_only": 5,
+            "winter_only": 0
+          },
+          "status": "OBSERVED_MATCHED_DYADS",
+          "strength_component": 0.004109243768712642,
+          "summer": {
+            "conditional_strength": 0.054928569973932875,
+            "mean_X": 0.003661904664928858,
+            "n_positive_pairs": 8,
+            "positive_fraction": 0.06666666666666667
+          },
+          "window": "early_late",
+          "winter": {
+            "conditional_strength": 0.14458479765493598,
+            "mean_X": 0.0036146199413733997,
+            "n_positive_pairs": 3,
+            "positive_fraction": 0.025
+          },
+          "winter_minus_summer_X": -4.728472355545847e-05,
+          "year": 2020
+        },
+        {
+          "grid_km": 1,
+          "n_matched_animals": 0,
+          "n_pairs": 0,
+          "n_season1_supported_pairs": 120,
+          "n_season2_supported_pairs": 0,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.0,
+          "status": "NOT_ESTIMABLE_NO_MATCHED_PAIRS",
+          "window": "winter_summer",
+          "year": 2020
+        },
+        {
+          "decomposition_residual": -4.336808689942018e-19,
+          "fraction_pairs_summer_higher": 0.058333333333333334,
+          "fraction_pairs_winter_higher": 0.008333333333333333,
+          "grid_km": 1,
+          "incidence_component": -0.0035925288326839897,
+          "n_matched_animals": 16,
+          "n_pairs": 120,
+          "n_season1_supported_pairs": 120,
+          "n_season2_supported_pairs": 120,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.0,
+          "pair_state_counts": {
+            "both_positive": 3,
+            "both_zero": 112,
+            "summer_only": 5,
+            "winter_only": 0
+          },
+          "status": "OBSERVED_MATCHED_DYADS",
+          "strength_component": 0.0033223058835955993,
+          "summer": {
+            "conditional_strength": 0.049977355072463765,
+            "mean_X": 0.0033318236714975843,
+            "n_positive_pairs": 8,
+            "positive_fraction": 0.06666666666666667
+          },
+          "window": "early_late",
+          "winter": {
+            "conditional_strength": 0.12246402889636775,
+            "mean_X": 0.0030616007224091935,
+            "n_positive_pairs": 3,
+            "positive_fraction": 0.025
+          },
+          "winter_minus_summer_X": -0.00027022294908839086,
+          "year": 2020
+        },
+        {
+          "grid_km": 1,
+          "n_matched_animals": 0,
+          "n_pairs": 0,
+          "n_season1_supported_pairs": 120,
+          "n_season2_supported_pairs": 0,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.5,
+          "status": "NOT_ESTIMABLE_NO_MATCHED_PAIRS",
+          "window": "winter_summer",
+          "year": 2020
+        },
+        {
+          "decomposition_residual": -8.673617379884035e-19,
+          "fraction_pairs_summer_higher": 0.041666666666666664,
+          "fraction_pairs_winter_higher": 0.016666666666666666,
+          "grid_km": 1,
+          "incidence_component": -0.004228355932120984,
+          "n_matched_animals": 16,
+          "n_pairs": 120,
+          "n_season1_supported_pairs": 120,
+          "n_season2_supported_pairs": 120,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.5,
+          "pair_state_counts": {
+            "both_positive": 3,
+            "both_zero": 113,
+            "summer_only": 4,
+            "winter_only": 0
+          },
+          "status": "OBSERVED_MATCHED_DYADS",
+          "strength_component": 0.0039928688369588895,
+          "summer": {
+            "conditional_strength": 0.07893625192012288,
+            "mean_X": 0.004604614695340501,
+            "n_positive_pairs": 7,
+            "positive_fraction": 0.058333333333333334
+          },
+          "window": "early_late",
+          "winter": {
+            "conditional_strength": 0.1747651040071362,
+            "mean_X": 0.004369127600178406,
+            "n_positive_pairs": 3,
+            "positive_fraction": 0.025
+          },
+          "winter_minus_summer_X": -0.0002354870951620956,
+          "year": 2020
+        },
+        {
+          "grid_km": 1,
+          "n_matched_animals": 0,
+          "n_pairs": 0,
+          "n_season1_supported_pairs": 120,
+          "n_season2_supported_pairs": 0,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.5,
+          "status": "NOT_ESTIMABLE_NO_MATCHED_PAIRS",
+          "window": "winter_summer",
+          "year": 2020
+        },
+        {
+          "decomposition_residual": -4.336808689942018e-19,
+          "fraction_pairs_summer_higher": 0.041666666666666664,
+          "fraction_pairs_winter_higher": 0.016666666666666666,
+          "grid_km": 1,
+          "incidence_component": -0.003201462904620398,
+          "n_matched_animals": 16,
+          "n_pairs": 120,
+          "n_season1_supported_pairs": 120,
+          "n_season2_supported_pairs": 120,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.5,
+          "pair_state_counts": {
+            "both_positive": 3,
+            "both_zero": 113,
+            "summer_only": 4,
+            "winter_only": 0
+          },
+          "status": "OBSERVED_MATCHED_DYADS",
+          "strength_component": 0.003555639255065248,
+          "summer": {
+            "conditional_strength": 0.053376216077828983,
+            "mean_X": 0.003113612604540024,
+            "n_positive_pairs": 7,
+            "positive_fraction": 0.058333333333333334
+          },
+          "window": "early_late",
+          "winter": {
+            "conditional_strength": 0.13871155819939493,
+            "mean_X": 0.0034677889549848736,
+            "n_positive_pairs": 3,
+            "positive_fraction": 0.025
+          },
+          "winter_minus_summer_X": 0.00035417635044484967,
+          "year": 2020
+        },
+        {
+          "grid_km": 2,
+          "n_matched_animals": 0,
+          "n_pairs": 0,
+          "n_season1_supported_pairs": 120,
+          "n_season2_supported_pairs": 0,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "status": "NOT_ESTIMABLE_NO_MATCHED_PAIRS",
+          "window": "winter_summer",
+          "year": 2020
+        },
+        {
+          "decomposition_residual": 0.0,
+          "fraction_pairs_summer_higher": 0.05,
+          "fraction_pairs_winter_higher": 0.025,
+          "grid_km": 2,
+          "incidence_component": -0.009762414159217773,
+          "n_matched_animals": 16,
+          "n_pairs": 120,
+          "n_season1_supported_pairs": 120,
+          "n_season2_supported_pairs": 120,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "pair_state_counts": {
+            "both_positive": 3,
+            "both_zero": 111,
+            "summer_only": 6,
+            "winter_only": 0
+          },
+          "status": "OBSERVED_MATCHED_DYADS",
+          "strength_component": 0.011103976902609844,
+          "summer": {
+            "conditional_strength": 0.08420851415825702,
+            "mean_X": 0.006315638561869276,
+            "n_positive_pairs": 9,
+            "positive_fraction": 0.075
+          },
+          "window": "early_late",
+          "winter": {
+            "conditional_strength": 0.3062880522104539,
+            "mean_X": 0.007657201305261347,
+            "n_positive_pairs": 3,
+            "positive_fraction": 0.025
+          },
+          "winter_minus_summer_X": 0.0013415627433920711,
+          "year": 2020
+        },
+        {
+          "grid_km": 2,
+          "n_matched_animals": 0,
+          "n_pairs": 0,
+          "n_season1_supported_pairs": 120,
+          "n_season2_supported_pairs": 0,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.0,
+          "status": "NOT_ESTIMABLE_NO_MATCHED_PAIRS",
+          "window": "winter_summer",
+          "year": 2020
+        },
+        {
+          "decomposition_residual": -2.6020852139652106e-18,
+          "fraction_pairs_summer_higher": 0.06666666666666667,
+          "fraction_pairs_winter_higher": 0.016666666666666666,
+          "grid_km": 2,
+          "incidence_component": -0.008440101325905147,
+          "n_matched_animals": 16,
+          "n_pairs": 120,
+          "n_season1_supported_pairs": 120,
+          "n_season2_supported_pairs": 120,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.0,
+          "pair_state_counts": {
+            "both_positive": 3,
+            "both_zero": 110,
+            "summer_only": 7,
+            "winter_only": 0
+          },
+          "status": "OBSERVED_MATCHED_DYADS",
+          "strength_component": 0.006841685983844997,
+          "summer": {
+            "conditional_strength": 0.0815334268349696,
+            "mean_X": 0.006794452236247467,
+            "n_positive_pairs": 10,
+            "positive_fraction": 0.08333333333333333
+          },
+          "window": "early_late",
+          "winter": {
+            "conditional_strength": 0.2078414757674926,
+            "mean_X": 0.005196036894187315,
+            "n_positive_pairs": 3,
+            "positive_fraction": 0.025
+          },
+          "winter_minus_summer_X": -0.0015984153420601525,
+          "year": 2020
+        },
+        {
+          "grid_km": 2,
+          "n_matched_animals": 0,
+          "n_pairs": 0,
+          "n_season1_supported_pairs": 120,
+          "n_season2_supported_pairs": 0,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.5,
+          "status": "NOT_ESTIMABLE_NO_MATCHED_PAIRS",
+          "window": "winter_summer",
+          "year": 2020
+        },
+        {
+          "decomposition_residual": 8.673617379884035e-19,
+          "fraction_pairs_summer_higher": 0.058333333333333334,
+          "fraction_pairs_winter_higher": 0.025,
+          "grid_km": 2,
+          "incidence_component": -0.004028363265024074,
+          "n_matched_animals": 16,
+          "n_pairs": 120,
+          "n_season1_supported_pairs": 120,
+          "n_season2_supported_pairs": 120,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.5,
+          "pair_state_counts": {
+            "both_positive": 3,
+            "both_zero": 110,
+            "summer_only": 5,
+            "winter_only": 2
+          },
+          "status": "OBSERVED_MATCHED_DYADS",
+          "strength_component": 0.004443924693539206,
+          "summer": {
+            "conditional_strength": 0.12011368727598566,
+            "mean_X": 0.008007579151732377,
+            "n_positive_pairs": 8,
+            "positive_fraction": 0.06666666666666667
+          },
+          "window": "early_late",
+          "winter": {
+            "conditional_strength": 0.20215537392594024,
+            "mean_X": 0.00842314058024751,
+            "n_positive_pairs": 5,
+            "positive_fraction": 0.041666666666666664
+          },
+          "winter_minus_summer_X": 0.00041556142851513315,
+          "year": 2020
+        },
+        {
+          "grid_km": 2,
+          "n_matched_animals": 0,
+          "n_pairs": 0,
+          "n_season1_supported_pairs": 120,
+          "n_season2_supported_pairs": 0,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.5,
+          "status": "NOT_ESTIMABLE_NO_MATCHED_PAIRS",
+          "window": "winter_summer",
+          "year": 2020
+        },
+        {
+          "decomposition_residual": 4.336808689942018e-19,
+          "fraction_pairs_summer_higher": 0.06666666666666667,
+          "fraction_pairs_winter_higher": 0.025,
+          "grid_km": 2,
+          "incidence_component": -0.004114923454593831,
+          "n_matched_animals": 16,
+          "n_pairs": 120,
+          "n_season1_supported_pairs": 120,
+          "n_season2_supported_pairs": 120,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.5,
+          "pair_state_counts": {
+            "both_positive": 3,
+            "both_zero": 109,
+            "summer_only": 6,
+            "winter_only": 2
+          },
+          "status": "OBSERVED_MATCHED_DYADS",
+          "strength_component": 0.0011170762694472087,
+          "summer": {
+            "conditional_strength": 0.11387276418541029,
+            "mean_X": 0.00854045731390577,
+            "n_positive_pairs": 9,
+            "positive_fraction": 0.075
+          },
+          "window": "early_late",
+          "winter": {
+            "conditional_strength": 0.13302264309021958,
+            "mean_X": 0.005542610128759149,
+            "n_positive_pairs": 5,
+            "positive_fraction": 0.041666666666666664
+          },
+          "winter_minus_summer_X": -0.0029978471851466217,
+          "year": 2020
+        },
+        {
+          "grid_km": 5,
+          "n_matched_animals": 0,
+          "n_pairs": 0,
+          "n_season1_supported_pairs": 120,
+          "n_season2_supported_pairs": 0,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "status": "NOT_ESTIMABLE_NO_MATCHED_PAIRS",
+          "window": "winter_summer",
+          "year": 2020
+        },
+        {
+          "decomposition_residual": -4.336808689942018e-19,
+          "fraction_pairs_summer_higher": 0.09166666666666666,
+          "fraction_pairs_winter_higher": 0.041666666666666664,
+          "grid_km": 5,
+          "incidence_component": -0.004740997988941699,
+          "n_matched_animals": 16,
+          "n_pairs": 120,
+          "n_season1_supported_pairs": 120,
+          "n_season2_supported_pairs": 120,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "pair_state_counts": {
+            "both_positive": 5,
+            "both_zero": 104,
+            "summer_only": 7,
+            "winter_only": 4
+          },
+          "status": "OBSERVED_MATCHED_DYADS",
+          "strength_component": 0.0019130139536032635,
+          "summer": {
+            "conditional_strength": 0.17870841125136352,
+            "mean_X": 0.017870841125136355,
+            "n_positive_pairs": 12,
+            "positive_fraction": 0.1
+          },
+          "window": "early_late",
+          "winter": {
+            "conditional_strength": 0.20057142786397225,
+            "mean_X": 0.015042857089797919,
+            "n_positive_pairs": 9,
+            "positive_fraction": 0.075
+          },
+          "winter_minus_summer_X": -0.0028279840353384357,
+          "year": 2020
+        },
+        {
+          "grid_km": 5,
+          "n_matched_animals": 0,
+          "n_pairs": 0,
+          "n_season1_supported_pairs": 120,
+          "n_season2_supported_pairs": 0,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.0,
+          "status": "NOT_ESTIMABLE_NO_MATCHED_PAIRS",
+          "window": "winter_summer",
+          "year": 2020
+        },
+        {
+          "decomposition_residual": 6.071532165918825e-18,
+          "fraction_pairs_summer_higher": 0.075,
+          "fraction_pairs_winter_higher": 0.05,
+          "grid_km": 5,
+          "incidence_component": -0.006172191215262437,
+          "n_matched_animals": 16,
+          "n_pairs": 120,
+          "n_season1_supported_pairs": 120,
+          "n_season2_supported_pairs": 120,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.0,
+          "pair_state_counts": {
+            "both_positive": 8,
+            "both_zero": 105,
+            "summer_only": 5,
+            "winter_only": 2
+          },
+          "status": "OBSERVED_MATCHED_DYADS",
+          "strength_component": 0.002727048949398737,
+          "summer": {
+            "conditional_strength": 0.23265956713537353,
+            "mean_X": 0.025204786439665464,
+            "n_positive_pairs": 13,
+            "positive_fraction": 0.10833333333333334
+          },
+          "window": "early_late",
+          "winter": {
+            "conditional_strength": 0.2611157300856212,
+            "mean_X": 0.02175964417380177,
+            "n_positive_pairs": 10,
+            "positive_fraction": 0.08333333333333333
+          },
+          "winter_minus_summer_X": -0.003445142265863694,
+          "year": 2020
+        },
+        {
+          "grid_km": 5,
+          "n_matched_animals": 0,
+          "n_pairs": 0,
+          "n_season1_supported_pairs": 120,
+          "n_season2_supported_pairs": 0,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.5,
+          "status": "NOT_ESTIMABLE_NO_MATCHED_PAIRS",
+          "window": "winter_summer",
+          "year": 2020
+        },
+        {
+          "decomposition_residual": -4.119968255444917e-18,
+          "fraction_pairs_summer_higher": 0.08333333333333333,
+          "fraction_pairs_winter_higher": 0.041666666666666664,
+          "grid_km": 5,
+          "incidence_component": -0.006737707683505832,
+          "n_matched_animals": 16,
+          "n_pairs": 120,
+          "n_season1_supported_pairs": 120,
+          "n_season2_supported_pairs": 120,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.5,
+          "pair_state_counts": {
+            "both_positive": 3,
+            "both_zero": 105,
+            "summer_only": 8,
+            "winter_only": 4
+          },
+          "status": "OBSERVED_MATCHED_DYADS",
+          "strength_component": -0.001767858987486099,
+          "summer": {
+            "conditional_strength": 0.21391695708841568,
+            "mean_X": 0.01960905439977144,
+            "n_positive_pairs": 11,
+            "positive_fraction": 0.09166666666666666
+          },
+          "window": "early_late",
+          "winter": {
+            "conditional_strength": 0.19034550392193436,
+            "mean_X": 0.011103487728779504,
+            "n_positive_pairs": 7,
+            "positive_fraction": 0.058333333333333334
+          },
+          "winter_minus_summer_X": -0.008505566670991935,
+          "year": 2020
+        },
+        {
+          "grid_km": 5,
+          "n_matched_animals": 0,
+          "n_pairs": 0,
+          "n_season1_supported_pairs": 120,
+          "n_season2_supported_pairs": 0,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.5,
+          "status": "NOT_ESTIMABLE_NO_MATCHED_PAIRS",
+          "window": "winter_summer",
+          "year": 2020
+        },
+        {
+          "decomposition_residual": 0.0,
+          "fraction_pairs_summer_higher": 0.06666666666666667,
+          "fraction_pairs_winter_higher": 0.05,
+          "grid_km": 5,
+          "incidence_component": -0.006085591093412559,
+          "n_matched_animals": 16,
+          "n_pairs": 120,
+          "n_season1_supported_pairs": 120,
+          "n_season2_supported_pairs": 120,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.5,
+          "pair_state_counts": {
+            "both_positive": 5,
+            "both_zero": 106,
+            "summer_only": 6,
+            "winter_only": 3
+          },
+          "status": "OBSERVED_MATCHED_DYADS",
+          "strength_component": 0.005618716391136878,
+          "summer": {
+            "conditional_strength": 0.2079370138977432,
+            "mean_X": 0.019060892940626458,
+            "n_positive_pairs": 11,
+            "positive_fraction": 0.09166666666666666
+          },
+          "window": "early_late",
+          "winter": {
+            "conditional_strength": 0.27891027357526166,
+            "mean_X": 0.018594018238350777,
+            "n_positive_pairs": 8,
+            "positive_fraction": 0.06666666666666667
+          },
+          "winter_minus_summer_X": -0.0004668747022756811,
+          "year": 2020
+        },
+        {
+          "grid_km": 10,
+          "n_matched_animals": 0,
+          "n_pairs": 0,
+          "n_season1_supported_pairs": 120,
+          "n_season2_supported_pairs": 0,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "status": "NOT_ESTIMABLE_NO_MATCHED_PAIRS",
+          "window": "winter_summer",
+          "year": 2020
+        },
+        {
+          "decomposition_residual": -1.734723475976807e-18,
+          "fraction_pairs_summer_higher": 0.1,
+          "fraction_pairs_winter_higher": 0.05,
+          "grid_km": 10,
+          "incidence_component": -0.0039189559166269376,
+          "n_matched_animals": 16,
+          "n_pairs": 120,
+          "n_season1_supported_pairs": 120,
+          "n_season2_supported_pairs": 120,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "pair_state_counts": {
+            "both_positive": 11,
+            "both_zero": 102,
+            "summer_only": 4,
+            "winter_only": 3
+          },
+          "status": "OBSERVED_MATCHED_DYADS",
+          "strength_component": -0.005890825012800822,
+          "summer": {
+            "conditional_strength": 0.4946505376344084,
+            "mean_X": 0.06183131720430105,
+            "n_positive_pairs": 15,
+            "positive_fraction": 0.125
+          },
+          "window": "early_late",
+          "winter": {
+            "conditional_strength": 0.4458988823560568,
+            "mean_X": 0.05202153627487329,
+            "n_positive_pairs": 14,
+            "positive_fraction": 0.11666666666666667
+          },
+          "winter_minus_summer_X": -0.009809780929427761,
+          "year": 2020
+        },
+        {
+          "grid_km": 10,
+          "n_matched_animals": 0,
+          "n_pairs": 0,
+          "n_season1_supported_pairs": 120,
+          "n_season2_supported_pairs": 0,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.0,
+          "status": "NOT_ESTIMABLE_NO_MATCHED_PAIRS",
+          "window": "winter_summer",
+          "year": 2020
+        },
+        {
+          "decomposition_residual": -4.336808689942018e-19,
+          "fraction_pairs_summer_higher": 0.09166666666666666,
+          "fraction_pairs_winter_higher": 0.075,
+          "grid_km": 10,
+          "incidence_component": 0.0,
+          "n_matched_animals": 16,
+          "n_pairs": 120,
+          "n_season1_supported_pairs": 120,
+          "n_season2_supported_pairs": 120,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.0,
+          "pair_state_counts": {
+            "both_positive": 12,
+            "both_zero": 100,
+            "summer_only": 4,
+            "winter_only": 4
+          },
+          "status": "OBSERVED_MATCHED_DYADS",
+          "strength_component": -0.0036722552800923995,
+          "summer": {
+            "conditional_strength": 0.3517653912459092,
+            "mean_X": 0.04690205216612123,
+            "n_positive_pairs": 16,
+            "positive_fraction": 0.13333333333333333
+          },
+          "window": "early_late",
+          "winter": {
+            "conditional_strength": 0.3242234766452162,
+            "mean_X": 0.04322979688602883,
+            "n_positive_pairs": 16,
+            "positive_fraction": 0.13333333333333333
+          },
+          "winter_minus_summer_X": -0.0036722552800924,
+          "year": 2020
+        },
+        {
+          "grid_km": 10,
+          "n_matched_animals": 0,
+          "n_pairs": 0,
+          "n_season1_supported_pairs": 120,
+          "n_season2_supported_pairs": 0,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.5,
+          "status": "NOT_ESTIMABLE_NO_MATCHED_PAIRS",
+          "window": "winter_summer",
+          "year": 2020
+        },
+        {
+          "decomposition_residual": 3.469446951953614e-18,
+          "fraction_pairs_summer_higher": 0.08333333333333333,
+          "fraction_pairs_winter_higher": 0.05,
+          "grid_km": 10,
+          "incidence_component": -0.026795795482635016,
+          "n_matched_animals": 16,
+          "n_pairs": 120,
+          "n_season1_supported_pairs": 120,
+          "n_season2_supported_pairs": 120,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.5,
+          "pair_state_counts": {
+            "both_positive": 8,
+            "both_zero": 104,
+            "summer_only": 7,
+            "winter_only": 1
+          },
+          "status": "OBSERVED_MATCHED_DYADS",
+          "strength_component": 0.02402278766530712,
+          "summer": {
+            "conditional_strength": 0.41580197132616475,
+            "mean_X": 0.051975246415770594,
+            "n_positive_pairs": 15,
+            "positive_fraction": 0.125
+          },
+          "window": "early_late",
+          "winter": {
+            "conditional_strength": 0.6560298479792359,
+            "mean_X": 0.0492022385984427,
+            "n_positive_pairs": 9,
+            "positive_fraction": 0.075
+          },
+          "winter_minus_summer_X": -0.002773007817327894,
+          "year": 2020
+        },
+        {
+          "grid_km": 10,
+          "n_matched_animals": 0,
+          "n_pairs": 0,
+          "n_season1_supported_pairs": 120,
+          "n_season2_supported_pairs": 0,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.5,
+          "status": "NOT_ESTIMABLE_NO_MATCHED_PAIRS",
+          "window": "winter_summer",
+          "year": 2020
+        },
+        {
+          "decomposition_residual": 3.469446951953614e-18,
+          "fraction_pairs_summer_higher": 0.075,
+          "fraction_pairs_winter_higher": 0.06666666666666667,
+          "grid_km": 10,
+          "incidence_component": -0.010473914390020617,
+          "n_matched_animals": 16,
+          "n_pairs": 120,
+          "n_season1_supported_pairs": 120,
+          "n_season2_supported_pairs": 120,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.5,
+          "pair_state_counts": {
+            "both_positive": 10,
+            "both_zero": 103,
+            "summer_only": 5,
+            "winter_only": 2
+          },
+          "status": "OBSERVED_MATCHED_DYADS",
+          "strength_component": 0.01994298488652968,
+          "summer": {
+            "conditional_strength": 0.3303210872162484,
+            "mean_X": 0.04129013590203105,
+            "n_positive_pairs": 15,
+            "positive_fraction": 0.125
+          },
+          "window": "early_late",
+          "winter": {
+            "conditional_strength": 0.5075920639854011,
+            "mean_X": 0.05075920639854012,
+            "n_positive_pairs": 12,
+            "positive_fraction": 0.1
+          },
+          "winter_minus_summer_X": 0.009469070496509066,
+          "year": 2020
+        }
+      ],
+      "doi": "10.5441/001/1.700",
+      "event_audit": {
+        "animals_with_multiple_site_labels": 0,
+        "animals_with_unambiguous_site_label": 0,
+        "filter_counts": {
+          "original_rows": 123399
+        },
+        "n_source_site_labels": 0,
+        "original_rows": 123399,
+        "reference_animals": 26,
+        "reference_rows": 26,
+        "reference_sexes": {
+          "f": 26
+        },
+        "sensor_row_counts": {
+          "gps": 123399
+        },
+        "source_calendar_years_parsed_before_position_qc": {
+          "2019": 72415,
+          "2020": 50984
+        },
+        "source_clock_verified_utc": false,
+        "source_columns": [
+          "event-id",
+          "individual-local-identifier",
+          "individual-taxon-canonical-name",
+          "location-lat",
+          "location-long",
+          "sensor-type",
+          "study-name",
+          "tag-local-identifier",
+          "timestamp",
+          "visible"
+        ],
+        "source_sites_not_harmonized": true,
+        "taxon_row_counts": {
+          "Alces alces": 123399
+        },
+        "valid_fixed_year_events": 123399
+      },
+      "label": "moose_snowy_range",
+      "number_estimated_comparisons": 32,
+      "original_gps_file_count": 1,
+      "original_gps_total_bytes": 18196368,
+      "original_manifest": [
+        {
+          "bytes": 18196368,
+          "filename": "Snowy Range Moose in Wyoming (2019-2020).csv",
+          "md5": "4e8f1f7c5641e83612a629ee7c48c0fb",
+          "role": "gps"
+        },
+        {
+          "bytes": 7074,
+          "filename": "Snowy Range Moose in Wyoming (2019-2020)-reference-data.csv",
+          "md5": "e3eda4fe87168b567cc635d00b72e11f",
+          "role": "reference"
+        },
+        {
+          "bytes": 16831,
+          "filename": "README.txt",
+          "md5": "d8bbe994a94f0dc8f8ec23a2d01ebb72",
+          "role": "readme"
+        }
+      ],
+      "original_reference_file_count": 1,
+      "rights": [
+        "Attribution-NonCommercial 4.0 International"
+      ],
+      "source_clock_verified_utc": false,
+      "source_population_independence_verified": false,
+      "source_title": "Data from: Study \"Snowy Range Moose in Wyoming (2019-2020)\"",
+      "status": "COMPLETE_EXPLORATORY_GEOGRAPHIC_X",
+      "taxon": "Alces alces",
+      "validated_files": [
+        {
+          "bytes": 18196368,
+          "filename": "Snowy Range Moose in Wyoming (2019-2020).csv",
+          "md5_verified": true,
+          "role": "gps",
+          "sha256": "334a506404f8e49caaa2b0a8ef118054c0c9cff8c39e9ccb2962d14d7298647a"
+        },
+        {
+          "bytes": 7074,
+          "filename": "Snowy Range Moose in Wyoming (2019-2020)-reference-data.csv",
+          "md5_verified": true,
+          "role": "reference",
+          "sha256": "9c5feef3f43057f24f7c13a8c9d69be340491c01bac7394c1e8d0c1ef0c2c90f"
         }
       ]
     },
@@ -5232,7 +6895,24 @@
         "sensor_row_counts": {
           "gps": 156366
         },
+        "source_calendar_years_parsed_before_position_qc": {
+          "2019": 64311,
+          "2020": 84083,
+          "2021": 7972
+        },
         "source_clock_verified_utc": false,
+        "source_columns": [
+          "event-id",
+          "individual-local-identifier",
+          "individual-taxon-canonical-name",
+          "location-lat",
+          "location-long",
+          "sensor-type",
+          "study-name",
+          "tag-local-identifier",
+          "timestamp",
+          "visible"
+        ],
         "source_sites_not_harmonized": true,
         "taxon_row_counts": {
           "Ursus americanus": 156366
