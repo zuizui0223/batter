@@ -1,0 +1,3062 @@
+{
+  "as_of": "2026-10-20",
+  "grids": [
+    [
+      5.0,
+      0.0,
+      0.0
+    ],
+    [
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      10.0,
+      0.0,
+      0.0
+    ],
+    [
+      5.0,
+      0.5,
+      0.5
+    ]
+  ],
+  "hour_bin_widths": [
+    6,
+    3
+  ],
+  "limitations": [
+    "T means same geographic grid cell in same source-clock 6h/3h bin on a date, NOT true synchronous animal encounter",
+    "Within-day shuffled clock-bin reference is a descriptive expectation, not an exchangeable biological null or p-value",
+    "Tracks from multiple years and pairwise dyads are dependent",
+    "Annual centroid proximity cannot prove local social/ecological population identity",
+    "Post-inspection exploratory comparison; original-source GPS detection process/clock offset unresolved"
+  ],
+  "n_seeds": 12,
+  "n_valid_original_GPS_fixes": 148394,
+  "original_position_and_timestamp_multisets_exact": true,
+  "original_source_full_MD5_SHA256_verified": true,
+  "reference_population_label_verified": false,
+  "results": [
+    {
+      "clock_bin_hours": 6,
+      "fraction_geographic_dyads_with_clock_support": 0.0,
+      "grid_seed_aggregates": [],
+      "n_joint_clock_support_dyads": 0,
+      "n_original_geographic_support_dyads": 1,
+      "status": "NOT_ESTIMABLE_FEWER_THAN_TWO_CLOCK_SUPPORTED_DYADS",
+      "year": 2019
+    },
+    {
+      "clock_bin_hours": 3,
+      "fraction_geographic_dyads_with_clock_support": 1.0,
+      "grid_seed_aggregates": [],
+      "n_joint_clock_support_dyads": 1,
+      "n_original_geographic_support_dyads": 1,
+      "status": "NOT_ESTIMABLE_FEWER_THAN_TWO_CLOCK_SUPPORTED_DYADS",
+      "year": 2019
+    },
+    {
+      "clock_bin_hours": 6,
+      "fraction_geographic_dyads_with_clock_support": 0.5865384615384616,
+      "grid_seed_aggregates": [
+        {
+          "clock_bin_hours": 6,
+          "grid_km": 5.0,
+          "mean_shared_clock_bins_per_pair_date": 2.970725995316159,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 0,
+          "source_year": 2020,
+          "summer": {
+            "D": 0.00024395003903200624,
+            "N": 0.051668618266978925,
+            "T": 0.051912568306010924,
+            "X": 0.053864168618266976
+          },
+          "summer_positive_D_dyad_fraction": 0.08196721311475409,
+          "winter": {
+            "D": 0.0,
+            "N": 0.05884074941451991,
+            "T": 0.05884074941451991,
+            "X": 0.05884074941451991
+          },
+          "winter_minus_summer": {
+            "D": -0.00024395003903200624,
+            "N": 0.007172131147540985,
+            "T": 0.006928181108508985,
+            "X": 0.004976580796252933
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 6,
+          "grid_km": 1.0,
+          "mean_shared_clock_bins_per_pair_date": 2.970725995316159,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 0,
+          "source_year": 2020,
+          "summer": {
+            "D": 0.0006342701014832163,
+            "N": 0.0049277907884465256,
+            "T": 0.0055620608899297425,
+            "X": 0.00585480093676815
+          },
+          "summer_positive_D_dyad_fraction": 0.03278688524590164,
+          "winter": {
+            "D": 0.00043911007025761124,
+            "N": 0.019759953161592504,
+            "T": 0.02019906323185012,
+            "X": 0.02019906323185012
+          },
+          "winter_minus_summer": {
+            "D": -0.00019516003122560505,
+            "N": 0.014832162373145979,
+            "T": 0.014637002341920377,
+            "X": 0.01434426229508197
+          },
+          "winter_positive_D_dyad_fraction": 0.01639344262295082
+        },
+        {
+          "clock_bin_hours": 6,
+          "grid_km": 10.0,
+          "mean_shared_clock_bins_per_pair_date": 2.970725995316159,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 0,
+          "source_year": 2020,
+          "summer": {
+            "D": -0.001154696851418163,
+            "N": 0.12937483736664063,
+            "T": 0.12822014051522249,
+            "X": 0.132903981264637
+          },
+          "summer_positive_D_dyad_fraction": 0.03278688524590164,
+          "winter": {
+            "D": 0.0,
+            "N": 0.17388758782201405,
+            "T": 0.17388758782201405,
+            "X": 0.17388758782201405
+          },
+          "winter_minus_summer": {
+            "D": 0.001154696851418163,
+            "N": 0.04451275045537342,
+            "T": 0.045667447306791564,
+            "X": 0.04098360655737704
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 6,
+          "grid_km": 5.0,
+          "mean_shared_clock_bins_per_pair_date": 2.970725995316159,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.5,
+          "seed": 0,
+          "source_year": 2020,
+          "summer": {
+            "D": 0.0009676684881602915,
+            "N": 0.05270134009888108,
+            "T": 0.05366900858704137,
+            "X": 0.05435206869633099
+          },
+          "summer_positive_D_dyad_fraction": 0.06557377049180328,
+          "winter": {
+            "D": 0.0002927400468384075,
+            "N": 0.04810694769711163,
+            "T": 0.04839968774395004,
+            "X": 0.04839968774395004
+          },
+          "winter_minus_summer": {
+            "D": -0.000674928441321884,
+            "N": -0.004594392401769454,
+            "T": -0.005269320843091334,
+            "X": -0.005952380952380952
+          },
+          "winter_positive_D_dyad_fraction": 0.01639344262295082
+        },
+        {
+          "clock_bin_hours": 6,
+          "grid_km": 5.0,
+          "mean_shared_clock_bins_per_pair_date": 2.977751756440281,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 1,
+          "source_year": 2020,
+          "summer": {
+            "D": 0.0009351418162893573,
+            "N": 0.04863550611501431,
+            "T": 0.04957064793130367,
+            "X": 0.0508391881342701
+          },
+          "summer_positive_D_dyad_fraction": 0.04918032786885246,
+          "winter": {
+            "D": 0.0,
+            "N": 0.0664519906323185,
+            "T": 0.0664519906323185,
+            "X": 0.0664519906323185
+          },
+          "winter_minus_summer": {
+            "D": -0.0009351418162893573,
+            "N": 0.017816484517304193,
+            "T": 0.016881342701014837,
+            "X": 0.015612802498048403
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 6,
+          "grid_km": 1.0,
+          "mean_shared_clock_bins_per_pair_date": 2.977751756440281,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 1,
+          "source_year": 2020,
+          "summer": {
+            "D": -5.692167577413477e-05,
+            "N": 0.003862542284673432,
+            "T": 0.0038056206088992973,
+            "X": 0.005171740827478532
+          },
+          "summer_positive_D_dyad_fraction": 0.01639344262295082,
+          "winter": {
+            "D": 0.0,
+            "N": 0.021174863387978145,
+            "T": 0.021174863387978145,
+            "X": 0.021174863387978145
+          },
+          "winter_minus_summer": {
+            "D": 5.692167577413477e-05,
+            "N": 0.017312321103304714,
+            "T": 0.017369242779078847,
+            "X": 0.016003122560499614
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 6,
+          "grid_km": 10.0,
+          "mean_shared_clock_bins_per_pair_date": 2.977751756440281,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 1,
+          "source_year": 2020,
+          "summer": {
+            "D": 0.000959536820192558,
+            "N": 0.14755724694249284,
+            "T": 0.1485167837626854,
+            "X": 0.15115144418423107
+          },
+          "summer_positive_D_dyad_fraction": 0.04918032786885246,
+          "winter": {
+            "D": 0.0,
+            "N": 0.1921350507416081,
+            "T": 0.1921350507416081,
+            "X": 0.1921350507416081
+          },
+          "winter_minus_summer": {
+            "D": -0.000959536820192558,
+            "N": 0.04457780379911527,
+            "T": 0.04361826697892271,
+            "X": 0.04098360655737704
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 6,
+          "grid_km": 5.0,
+          "mean_shared_clock_bins_per_pair_date": 2.977751756440281,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.5,
+          "seed": 1,
+          "source_year": 2020,
+          "summer": {
+            "D": 0.002073575331772053,
+            "N": 0.04066647150663544,
+            "T": 0.04274004683840749,
+            "X": 0.045472287275565966
+          },
+          "summer_positive_D_dyad_fraction": 0.13114754098360656,
+          "winter": {
+            "D": -1.626333593546709e-05,
+            "N": 0.0558320322664585,
+            "T": 0.05581576893052303,
+            "X": 0.056108508977361436
+          },
+          "winter_minus_summer": {
+            "D": -0.00208983866770752,
+            "N": 0.01516556075982306,
+            "T": 0.013075722092115535,
+            "X": 0.01063622170179547
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 6,
+          "grid_km": 5.0,
+          "mean_shared_clock_bins_per_pair_date": 2.9326697892271665,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 2,
+          "source_year": 2020,
+          "summer": {
+            "D": -0.0009514051522248243,
+            "N": 0.05042447306791569,
+            "T": 0.049473067915690866,
+            "X": 0.05171740827478532
+          },
+          "summer_positive_D_dyad_fraction": 0.01639344262295082,
+          "winter": {
+            "D": 0.0,
+            "N": 0.060889929742388764,
+            "T": 0.060889929742388764,
+            "X": 0.060889929742388764
+          },
+          "winter_minus_summer": {
+            "D": 0.0009514051522248243,
+            "N": 0.010465456674473073,
+            "T": 0.011416861826697898,
+            "X": 0.009172521467603445
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 6,
+          "grid_km": 1.0,
+          "mean_shared_clock_bins_per_pair_date": 2.9326697892271665,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 2,
+          "source_year": 2020,
+          "summer": {
+            "D": 0.0010408534998698933,
+            "N": 0.0034478272183190214,
+            "T": 0.004488680718188915,
+            "X": 0.004488680718188915
+          },
+          "summer_positive_D_dyad_fraction": 0.03278688524590164,
+          "winter": {
+            "D": 0.0,
+            "N": 0.016100702576112413,
+            "T": 0.016100702576112413,
+            "X": 0.016100702576112413
+          },
+          "winter_minus_summer": {
+            "D": -0.0010408534998698933,
+            "N": 0.012652875357793391,
+            "T": 0.011612021857923498,
+            "X": 0.011612021857923498
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 6,
+          "grid_km": 10.0,
+          "mean_shared_clock_bins_per_pair_date": 2.9326697892271665,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 2,
+          "source_year": 2020,
+          "summer": {
+            "D": -0.0009026151444184231,
+            "N": 0.14658957845433257,
+            "T": 0.14568696330991412,
+            "X": 0.14919984387197502
+          },
+          "summer_positive_D_dyad_fraction": 0.03278688524590164,
+          "winter": {
+            "D": 0.0,
+            "N": 0.17271662763466045,
+            "T": 0.17271662763466045,
+            "X": 0.17271662763466045
+          },
+          "winter_minus_summer": {
+            "D": 0.0009026151444184231,
+            "N": 0.026127049180327877,
+            "T": 0.027029664324746322,
+            "X": 0.023516783762685428
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 6,
+          "grid_km": 5.0,
+          "mean_shared_clock_bins_per_pair_date": 2.9326697892271665,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.5,
+          "seed": 2,
+          "source_year": 2020,
+          "summer": {
+            "D": 0.001130301847514962,
+            "N": 0.045025045537340616,
+            "T": 0.04615534738485558,
+            "X": 0.04849726775956285
+          },
+          "summer_positive_D_dyad_fraction": 0.08196721311475409,
+          "winter": {
+            "D": 0.0,
+            "N": 0.054839968774395,
+            "T": 0.054839968774395,
+            "X": 0.05513270882123341
+          },
+          "winter_minus_summer": {
+            "D": -0.001130301847514962,
+            "N": 0.009814923237054386,
+            "T": 0.008684621389539425,
+            "X": 0.006635441061670563
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 6,
+          "grid_km": 5.0,
+          "mean_shared_clock_bins_per_pair_date": 2.9601873536299768,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 3,
+          "source_year": 2020,
+          "summer": {
+            "D": -0.001203486859224564,
+            "N": 0.05184751496226906,
+            "T": 0.0506440281030445,
+            "X": 0.053961748633879786
+          },
+          "summer_positive_D_dyad_fraction": 0.01639344262295082,
+          "winter": {
+            "D": 0.0,
+            "N": 0.05357142857142857,
+            "T": 0.05357142857142857,
+            "X": 0.05357142857142857
+          },
+          "winter_minus_summer": {
+            "D": 0.001203486859224564,
+            "N": 0.001723913609159508,
+            "T": 0.0029274004683840713,
+            "X": -0.00039032006245121736
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 6,
+          "grid_km": 1.0,
+          "mean_shared_clock_bins_per_pair_date": 2.9601873536299768,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 3,
+          "source_year": 2020,
+          "summer": {
+            "D": 0.00012197501951600315,
+            "N": 0.0025126854020296645,
+            "T": 0.0026346604215456673,
+            "X": 0.004195940671350507
+          },
+          "summer_positive_D_dyad_fraction": 0.01639344262295082,
+          "winter": {
+            "D": -0.00014637002341920375,
+            "N": 0.019564793130366902,
+            "T": 0.019418423106947698,
+            "X": 0.019711163153786102
+          },
+          "winter_minus_summer": {
+            "D": -0.0002683450429352069,
+            "N": 0.017052107728337238,
+            "T": 0.01678376268540203,
+            "X": 0.015515222482435595
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 6,
+          "grid_km": 10.0,
+          "mean_shared_clock_bins_per_pair_date": 2.9601873536299768,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 3,
+          "source_year": 2020,
+          "summer": {
+            "D": -0.0010245901639344263,
+            "N": 0.1318793911007026,
+            "T": 0.13085480093676816,
+            "X": 0.13466042154566743
+          },
+          "summer_positive_D_dyad_fraction": 0.06557377049180328,
+          "winter": {
+            "D": 0.0,
+            "N": 0.1610070257611241,
+            "T": 0.1610070257611241,
+            "X": 0.1610070257611241
+          },
+          "winter_minus_summer": {
+            "D": 0.0010245901639344263,
+            "N": 0.02912763466042151,
+            "T": 0.03015222482435595,
+            "X": 0.026346604215456676
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 6,
+          "grid_km": 5.0,
+          "mean_shared_clock_bins_per_pair_date": 2.9601873536299768,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.5,
+          "seed": 3,
+          "source_year": 2020,
+          "summer": {
+            "D": 0.001772703616965912,
+            "N": 0.04906648451730419,
+            "T": 0.0508391881342701,
+            "X": 0.05288836846213896
+          },
+          "summer_positive_D_dyad_fraction": 0.09836065573770492,
+          "winter": {
+            "D": 4.0658339838667694e-05,
+            "N": 0.05577511059068436,
+            "T": 0.05581576893052303,
+            "X": 0.056108508977361436
+          },
+          "winter_minus_summer": {
+            "D": -0.0017320452771272443,
+            "N": 0.006708626073380165,
+            "T": 0.004976580796252926,
+            "X": 0.003220140515222479
+          },
+          "winter_positive_D_dyad_fraction": 0.01639344262295082
+        },
+        {
+          "clock_bin_hours": 6,
+          "grid_km": 5.0,
+          "mean_shared_clock_bins_per_pair_date": 2.952576112412178,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 4,
+          "source_year": 2020,
+          "summer": {
+            "D": -0.0006180067655477492,
+            "N": 0.04706609419724174,
+            "T": 0.04644808743169399,
+            "X": 0.04898516783762685
+          },
+          "summer_positive_D_dyad_fraction": 0.03278688524590164,
+          "winter": {
+            "D": 0.0,
+            "N": 0.062256049960967993,
+            "T": 0.062256049960967993,
+            "X": 0.062256049960967993
+          },
+          "winter_minus_summer": {
+            "D": 0.0006180067655477492,
+            "N": 0.015189955763726254,
+            "T": 0.015807962529274,
+            "X": 0.01327088212334114
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 6,
+          "grid_km": 1.0,
+          "mean_shared_clock_bins_per_pair_date": 2.952576112412178,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 4,
+          "source_year": 2020,
+          "summer": {
+            "D": -0.00020329169919333854,
+            "N": 0.002447632058287796,
+            "T": 0.0022443403590944573,
+            "X": 0.0040007806401249025
+          },
+          "summer_positive_D_dyad_fraction": 0.01639344262295082,
+          "winter": {
+            "D": 0.0,
+            "N": 0.01873536299765808,
+            "T": 0.01873536299765808,
+            "X": 0.01873536299765808
+          },
+          "winter_minus_summer": {
+            "D": 0.00020329169919333854,
+            "N": 0.016287730939370283,
+            "T": 0.016491022638563623,
+            "X": 0.014734582357533176
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 6,
+          "grid_km": 10.0,
+          "mean_shared_clock_bins_per_pair_date": 2.952576112412178,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 4,
+          "source_year": 2020,
+          "summer": {
+            "D": -0.0013905152224824354,
+            "N": 0.13478239656518343,
+            "T": 0.133391881342701,
+            "X": 0.13885636221701794
+          },
+          "summer_positive_D_dyad_fraction": 0.03278688524590164,
+          "winter": {
+            "D": 0.0,
+            "N": 0.1753512880562061,
+            "T": 0.1753512880562061,
+            "X": 0.1753512880562061
+          },
+          "winter_minus_summer": {
+            "D": 0.0013905152224824354,
+            "N": 0.04056889149102266,
+            "T": 0.04195940671350509,
+            "X": 0.03649492583918815
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 6,
+          "grid_km": 5.0,
+          "mean_shared_clock_bins_per_pair_date": 2.952576112412178,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.5,
+          "seed": 4,
+          "source_year": 2020,
+          "summer": {
+            "D": 0.0018133619568045797,
+            "N": 0.0442444054124382,
+            "T": 0.046057767369242775,
+            "X": 0.04898516783762685
+          },
+          "summer_positive_D_dyad_fraction": 0.13114754098360656,
+          "winter": {
+            "D": -0.0002927400468384075,
+            "N": 0.054547228727556595,
+            "T": 0.05425448868071819,
+            "X": 0.054839968774395
+          },
+          "winter_minus_summer": {
+            "D": -0.0021061020036429873,
+            "N": 0.010302823315118392,
+            "T": 0.008196721311475412,
+            "X": 0.0058548009367681494
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 6,
+          "grid_km": 5.0,
+          "mean_shared_clock_bins_per_pair_date": 2.9759953161592505,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 5,
+          "source_year": 2020,
+          "summer": {
+            "D": 2.4395003903200624e-05,
+            "N": 0.05354703356752537,
+            "T": 0.05357142857142857,
+            "X": 0.056303669008587034
+          },
+          "summer_positive_D_dyad_fraction": 0.04918032786885246,
+          "winter": {
+            "D": 0.0,
+            "N": 0.04820452771272443,
+            "T": 0.04820452771272443,
+            "X": 0.04820452771272443
+          },
+          "winter_minus_summer": {
+            "D": -2.4395003903200624e-05,
+            "N": -0.005342505854800936,
+            "T": -0.005366900858704136,
+            "X": -0.008099141295862602
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 6,
+          "grid_km": 1.0,
+          "mean_shared_clock_bins_per_pair_date": 2.9759953161592505,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 5,
+          "source_year": 2020,
+          "summer": {
+            "D": 0.0002927400468384075,
+            "N": 0.0008782201405152225,
+            "T": 0.00117096018735363,
+            "X": 0.00117096018735363
+          },
+          "summer_positive_D_dyad_fraction": 0.01639344262295082,
+          "winter": {
+            "D": 0.0,
+            "N": 0.017369242779078843,
+            "T": 0.017369242779078843,
+            "X": 0.017369242779078843
+          },
+          "winter_minus_summer": {
+            "D": -0.0002927400468384075,
+            "N": 0.01649102263856362,
+            "T": 0.016198282591725212,
+            "X": 0.016198282591725212
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 6,
+          "grid_km": 10.0,
+          "mean_shared_clock_bins_per_pair_date": 2.9759953161592505,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 5,
+          "source_year": 2020,
+          "summer": {
+            "D": -0.00010571168358053604,
+            "N": 0.1472563752276867,
+            "T": 0.14715066354410616,
+            "X": 0.15027322404371585
+          },
+          "summer_positive_D_dyad_fraction": 0.04918032786885246,
+          "winter": {
+            "D": 0.0,
+            "N": 0.16881342701014831,
+            "T": 0.16881342701014831,
+            "X": 0.16881342701014831
+          },
+          "winter_minus_summer": {
+            "D": 0.00010571168358053604,
+            "N": 0.021557051782461617,
+            "T": 0.02166276346604215,
+            "X": 0.018540202966432467
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 6,
+          "grid_km": 5.0,
+          "mean_shared_clock_bins_per_pair_date": 2.9759953161592505,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.5,
+          "seed": 5,
+          "source_year": 2020,
+          "summer": {
+            "D": 0.00047976841009627887,
+            "N": 0.04509009888108249,
+            "T": 0.04556986729117876,
+            "X": 0.0471311475409836
+          },
+          "summer_positive_D_dyad_fraction": 0.06557377049180328,
+          "winter": {
+            "D": 0.00011384335154826955,
+            "N": 0.06877764767109029,
+            "T": 0.06889149102263857,
+            "X": 0.06918423106947696
+          },
+          "winter_minus_summer": {
+            "D": -0.00036592505854800934,
+            "N": 0.023687548790007805,
+            "T": 0.02332162373145981,
+            "X": 0.02205308352849336
+          },
+          "winter_positive_D_dyad_fraction": 0.01639344262295082
+        },
+        {
+          "clock_bin_hours": 6,
+          "grid_km": 5.0,
+          "mean_shared_clock_bins_per_pair_date": 2.9508196721311477,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 6,
+          "source_year": 2020,
+          "summer": {
+            "D": -0.0010896435076762948,
+            "N": 0.05280705178246162,
+            "T": 0.05171740827478532,
+            "X": 0.05513270882123341
+          },
+          "summer_positive_D_dyad_fraction": 0.03278688524590164,
+          "winter": {
+            "D": 0.0,
+            "N": 0.05737704918032787,
+            "T": 0.05737704918032787,
+            "X": 0.05737704918032787
+          },
+          "winter_minus_summer": {
+            "D": 0.0010896435076762948,
+            "N": 0.004569997397866253,
+            "T": 0.005659640905542551,
+            "X": 0.00224434035909446
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 6,
+          "grid_km": 1.0,
+          "mean_shared_clock_bins_per_pair_date": 2.9508196721311477,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 6,
+          "source_year": 2020,
+          "summer": {
+            "D": 0.00013010668748373666,
+            "N": 0.0010408534998698933,
+            "T": 0.00117096018735363,
+            "X": 0.00195160031225605
+          },
+          "summer_positive_D_dyad_fraction": 0.01639344262295082,
+          "winter": {
+            "D": 0.0,
+            "N": 0.018832943013270882,
+            "T": 0.018832943013270882,
+            "X": 0.018832943013270882
+          },
+          "winter_minus_summer": {
+            "D": -0.00013010668748373666,
+            "N": 0.01779208951340099,
+            "T": 0.01766198282591725,
+            "X": 0.016881342701014834
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 6,
+          "grid_km": 10.0,
+          "mean_shared_clock_bins_per_pair_date": 2.9508196721311477,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 6,
+          "source_year": 2020,
+          "summer": {
+            "D": -0.0021386286755139218,
+            "N": 0.14392239136091595,
+            "T": 0.14178376268540202,
+            "X": 0.14646760343481657
+          },
+          "summer_positive_D_dyad_fraction": 0.01639344262295082,
+          "winter": {
+            "D": 0.0,
+            "N": 0.15710382513661203,
+            "T": 0.15710382513661203,
+            "X": 0.15710382513661203
+          },
+          "winter_minus_summer": {
+            "D": 0.0021386286755139218,
+            "N": 0.013181433775696083,
+            "T": 0.01532006245121001,
+            "X": 0.010636221701795456
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 6,
+          "grid_km": 5.0,
+          "mean_shared_clock_bins_per_pair_date": 2.9508196721311477,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.5,
+          "seed": 6,
+          "source_year": 2020,
+          "summer": {
+            "D": 0.0023825787145459274,
+            "N": 0.04377276867030965,
+            "T": 0.046155347384855584,
+            "X": 0.04732630757220921
+          },
+          "summer_positive_D_dyad_fraction": 0.14754098360655737,
+          "winter": {
+            "D": 0.0,
+            "N": 0.05288836846213896,
+            "T": 0.05288836846213896,
+            "X": 0.05288836846213896
+          },
+          "winter_minus_summer": {
+            "D": -0.0023825787145459274,
+            "N": 0.009115599791829306,
+            "T": 0.006733021077283373,
+            "X": 0.0055620608899297486
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 6,
+          "grid_km": 5.0,
+          "mean_shared_clock_bins_per_pair_date": 2.968969555035129,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 7,
+          "source_year": 2020,
+          "summer": {
+            "D": -0.0005204267499349467,
+            "N": 0.05428701535258912,
+            "T": 0.053766588602654174,
+            "X": 0.057084309133489455
+          },
+          "summer_positive_D_dyad_fraction": 0.04918032786885246,
+          "winter": {
+            "D": 0.0,
+            "N": 0.047619047619047616,
+            "T": 0.047619047619047616,
+            "X": 0.047619047619047616
+          },
+          "winter_minus_summer": {
+            "D": 0.0005204267499349467,
+            "N": -0.006667967733541502,
+            "T": -0.006147540983606557,
+            "X": -0.009465261514441839
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 6,
+          "grid_km": 1.0,
+          "mean_shared_clock_bins_per_pair_date": 2.968969555035129,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 7,
+          "source_year": 2020,
+          "summer": {
+            "D": 0.0013498568826437677,
+            "N": 0.004017043976060369,
+            "T": 0.005366900858704136,
+            "X": 0.005757220921155347
+          },
+          "summer_positive_D_dyad_fraction": 0.04918032786885246,
+          "winter": {
+            "D": 0.0,
+            "N": 0.01834504293520687,
+            "T": 0.01834504293520687,
+            "X": 0.01834504293520687
+          },
+          "winter_minus_summer": {
+            "D": -0.0013498568826437677,
+            "N": 0.0143279989591465,
+            "T": 0.012978142076502733,
+            "X": 0.012587822014051522
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 6,
+          "grid_km": 10.0,
+          "mean_shared_clock_bins_per_pair_date": 2.968969555035129,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 7,
+          "source_year": 2020,
+          "summer": {
+            "D": 0.000284608378870674,
+            "N": 0.14950071558678116,
+            "T": 0.1497853239656518,
+            "X": 0.1524199843871975
+          },
+          "summer_positive_D_dyad_fraction": 0.06557377049180328,
+          "winter": {
+            "D": 0.0,
+            "N": 0.1594457455113193,
+            "T": 0.1594457455113193,
+            "X": 0.1594457455113193
+          },
+          "winter_minus_summer": {
+            "D": -0.000284608378870674,
+            "N": 0.009945029924538135,
+            "T": 0.009660421545667486,
+            "X": 0.007025761124121788
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 6,
+          "grid_km": 5.0,
+          "mean_shared_clock_bins_per_pair_date": 2.968969555035129,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.5,
+          "seed": 7,
+          "source_year": 2020,
+          "summer": {
+            "D": 0.001878415300546448,
+            "N": 0.04857045277127244,
+            "T": 0.05044886807181889,
+            "X": 0.05249804839968774
+          },
+          "summer_positive_D_dyad_fraction": 0.11475409836065574,
+          "winter": {
+            "D": 0.00026021337496747333,
+            "N": 0.07097319802237835,
+            "T": 0.07123341139734582,
+            "X": 0.07152615144418423
+          },
+          "winter_minus_summer": {
+            "D": -0.0016182019255789747,
+            "N": 0.02240274525110591,
+            "T": 0.020784543325526927,
+            "X": 0.019028103044496487
+          },
+          "winter_positive_D_dyad_fraction": 0.01639344262295082
+        },
+        {
+          "clock_bin_hours": 6,
+          "grid_km": 5.0,
+          "mean_shared_clock_bins_per_pair_date": 2.958430913348946,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 8,
+          "source_year": 2020,
+          "summer": {
+            "D": 0.000992063492063492,
+            "N": 0.054530965391621125,
+            "T": 0.05552302888368462,
+            "X": 0.05698672911787666
+          },
+          "summer_positive_D_dyad_fraction": 0.09836065573770492,
+          "winter": {
+            "D": 0.0,
+            "N": 0.05923106947697112,
+            "T": 0.05923106947697112,
+            "X": 0.05923106947697112
+          },
+          "winter_minus_summer": {
+            "D": -0.000992063492063492,
+            "N": 0.0047001040853499945,
+            "T": 0.003708040593286499,
+            "X": 0.00224434035909446
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 6,
+          "grid_km": 1.0,
+          "mean_shared_clock_bins_per_pair_date": 2.958430913348946,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 8,
+          "source_year": 2020,
+          "summer": {
+            "D": 0.00016263335935467083,
+            "N": 0.0016913869372885766,
+            "T": 0.0018540202966432474,
+            "X": 0.0022443403590944573
+          },
+          "summer_positive_D_dyad_fraction": 0.01639344262295082,
+          "winter": {
+            "D": 0.0,
+            "N": 0.02068696330991413,
+            "T": 0.02068696330991413,
+            "X": 0.02068696330991413
+          },
+          "winter_minus_summer": {
+            "D": -0.00016263335935467083,
+            "N": 0.018995576372625552,
+            "T": 0.018832943013270882,
+            "X": 0.018442622950819672
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 6,
+          "grid_km": 10.0,
+          "mean_shared_clock_bins_per_pair_date": 2.958430913348946,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 8,
+          "source_year": 2020,
+          "summer": {
+            "D": 0.0002439500390320063,
+            "N": 0.1446623731459797,
+            "T": 0.1449063231850117,
+            "X": 0.1484192037470726
+          },
+          "summer_positive_D_dyad_fraction": 0.06557377049180328,
+          "winter": {
+            "D": 0.0,
+            "N": 0.17379000780640125,
+            "T": 0.17379000780640125,
+            "X": 0.17379000780640125
+          },
+          "winter_minus_summer": {
+            "D": -0.0002439500390320063,
+            "N": 0.029127634660421536,
+            "T": 0.028883684621389544,
+            "X": 0.02537080405932865
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 6,
+          "grid_km": 5.0,
+          "mean_shared_clock_bins_per_pair_date": 2.958430913348946,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.5,
+          "seed": 8,
+          "source_year": 2020,
+          "summer": {
+            "D": -0.0002195550351288056,
+            "N": 0.05974336455893833,
+            "T": 0.05952380952380952,
+            "X": 0.0625487900078064
+          },
+          "summer_positive_D_dyad_fraction": 0.06557377049180328,
+          "winter": {
+            "D": -3.252667187093418e-05,
+            "N": 0.049408014571948995,
+            "T": 0.04937548790007806,
+            "X": 0.04996096799375488
+          },
+          "winter_minus_summer": {
+            "D": 0.00018702836325787143,
+            "N": -0.010335349986989338,
+            "T": -0.010148321623731457,
+            "X": -0.012587822014051522
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 6,
+          "grid_km": 5.0,
+          "mean_shared_clock_bins_per_pair_date": 2.962529274004684,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 9,
+          "source_year": 2020,
+          "summer": {
+            "D": -4.879000780640136e-05,
+            "N": 0.04591139734582358,
+            "T": 0.045862607338017176,
+            "X": 0.04830210772833724
+          },
+          "summer_positive_D_dyad_fraction": 0.04918032786885246,
+          "winter": {
+            "D": 0.0,
+            "N": 0.05542544886807182,
+            "T": 0.05542544886807182,
+            "X": 0.05542544886807182
+          },
+          "winter_minus_summer": {
+            "D": 4.879000780640136e-05,
+            "N": 0.00951405152224824,
+            "T": 0.009562841530054642,
+            "X": 0.007123341139734576
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 6,
+          "grid_km": 1.0,
+          "mean_shared_clock_bins_per_pair_date": 2.962529274004684,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 9,
+          "source_year": 2020,
+          "summer": {
+            "D": -0.00013010668748373666,
+            "N": 0.0036429872495446266,
+            "T": 0.00351288056206089,
+            "X": 0.00468384074941452
+          },
+          "summer_positive_D_dyad_fraction": 0.01639344262295082,
+          "winter": {
+            "D": 0.0,
+            "N": 0.021955503512880562,
+            "T": 0.021955503512880562,
+            "X": 0.021955503512880562
+          },
+          "winter_minus_summer": {
+            "D": 0.00013010668748373666,
+            "N": 0.018312516263335937,
+            "T": 0.018442622950819672,
+            "X": 0.01727166276346604
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 6,
+          "grid_km": 10.0,
+          "mean_shared_clock_bins_per_pair_date": 2.962529274004684,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 9,
+          "source_year": 2020,
+          "summer": {
+            "D": -0.0008050351288056207,
+            "N": 0.1417105776736924,
+            "T": 0.1409055425448868,
+            "X": 0.14441842310694772
+          },
+          "summer_positive_D_dyad_fraction": 0.03278688524590164,
+          "winter": {
+            "D": 0.0,
+            "N": 0.15846994535519124,
+            "T": 0.15846994535519124,
+            "X": 0.15846994535519124
+          },
+          "winter_minus_summer": {
+            "D": 0.0008050351288056207,
+            "N": 0.016759367681498827,
+            "T": 0.01756440281030444,
+            "X": 0.01405152224824352
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 6,
+          "grid_km": 5.0,
+          "mean_shared_clock_bins_per_pair_date": 2.962529274004684,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.5,
+          "seed": 9,
+          "source_year": 2020,
+          "summer": {
+            "D": 0.001528753577933906,
+            "N": 0.04901769450949779,
+            "T": 0.05054644808743169,
+            "X": 0.05279078844652615
+          },
+          "summer_positive_D_dyad_fraction": 0.14754098360655737,
+          "winter": {
+            "D": 7.318501170960187e-05,
+            "N": 0.05671838407494146,
+            "T": 0.056791569086651054,
+            "X": 0.05708430913348946
+          },
+          "winter_minus_summer": {
+            "D": -0.001455568566224304,
+            "N": 0.007700689565443668,
+            "T": 0.006245120999219367,
+            "X": 0.004293520686963315
+          },
+          "winter_positive_D_dyad_fraction": 0.01639344262295082
+        },
+        {
+          "clock_bin_hours": 6,
+          "grid_km": 5.0,
+          "mean_shared_clock_bins_per_pair_date": 2.9549180327868854,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 10,
+          "source_year": 2020,
+          "summer": {
+            "D": -0.0007155867811605517,
+            "N": 0.0495055945875618,
+            "T": 0.04879000780640124,
+            "X": 0.05152224824355972
+          },
+          "summer_positive_D_dyad_fraction": 0.03278688524590164,
+          "winter": {
+            "D": 0.0,
+            "N": 0.06381733021077284,
+            "T": 0.06381733021077284,
+            "X": 0.06381733021077284
+          },
+          "winter_minus_summer": {
+            "D": 0.0007155867811605517,
+            "N": 0.014311735623211037,
+            "T": 0.015027322404371594,
+            "X": 0.012295081967213115
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 6,
+          "grid_km": 1.0,
+          "mean_shared_clock_bins_per_pair_date": 2.9549180327868854,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 10,
+          "source_year": 2020,
+          "summer": {
+            "D": -0.00026021337496747333,
+            "N": 0.002016653655997918,
+            "T": 0.001756440281030445,
+            "X": 0.00351288056206089
+          },
+          "summer_positive_D_dyad_fraction": 0.01639344262295082,
+          "winter": {
+            "D": 0.0,
+            "N": 0.016978922716627636,
+            "T": 0.016978922716627636,
+            "X": 0.016978922716627636
+          },
+          "winter_minus_summer": {
+            "D": 0.00026021337496747333,
+            "N": 0.014962269060629719,
+            "T": 0.015222482435597191,
+            "X": 0.013466042154566746
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 6,
+          "grid_km": 10.0,
+          "mean_shared_clock_bins_per_pair_date": 2.9549180327868854,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 10,
+          "source_year": 2020,
+          "summer": {
+            "D": -0.00036592505854800934,
+            "N": 0.13863680718188917,
+            "T": 0.13827088212334115,
+            "X": 0.1410031225604996
+          },
+          "summer_positive_D_dyad_fraction": 0.06557377049180328,
+          "winter": {
+            "D": 0.0,
+            "N": 0.18540202966432476,
+            "T": 0.18540202966432476,
+            "X": 0.18540202966432476
+          },
+          "winter_minus_summer": {
+            "D": 0.00036592505854800934,
+            "N": 0.04676522248243559,
+            "T": 0.0471311475409836,
+            "X": 0.04439890710382516
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 6,
+          "grid_km": 5.0,
+          "mean_shared_clock_bins_per_pair_date": 2.9549180327868854,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.5,
+          "seed": 10,
+          "source_year": 2020,
+          "summer": {
+            "D": 8.131667967733541e-05,
+            "N": 0.04275631017434296,
+            "T": 0.042837626854020296,
+            "X": 0.04556986729117876
+          },
+          "summer_positive_D_dyad_fraction": 0.08196721311475409,
+          "winter": {
+            "D": 0.00013010668748373666,
+            "N": 0.051001821493624776,
+            "T": 0.05113192818110851,
+            "X": 0.05142466822794692
+          },
+          "winter_minus_summer": {
+            "D": 4.879000780640125e-05,
+            "N": 0.008245511319281813,
+            "T": 0.008294301327088215,
+            "X": 0.005854800936768156
+          },
+          "winter_positive_D_dyad_fraction": 0.01639344262295082
+        },
+        {
+          "clock_bin_hours": 6,
+          "grid_km": 5.0,
+          "mean_shared_clock_bins_per_pair_date": 2.960772833723653,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 11,
+          "source_year": 2020,
+          "summer": {
+            "D": 0.00014637002341920375,
+            "N": 0.05586455893832942,
+            "T": 0.056010928961748634,
+            "X": 0.05893832943013271
+          },
+          "summer_positive_D_dyad_fraction": 0.04918032786885246,
+          "winter": {
+            "D": 0.0,
+            "N": 0.06186572989851678,
+            "T": 0.06186572989851678,
+            "X": 0.06186572989851678
+          },
+          "winter_minus_summer": {
+            "D": -0.00014637002341920375,
+            "N": 0.00600117096018736,
+            "T": 0.0058548009367681494,
+            "X": 0.0029274004683840713
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 6,
+          "grid_km": 1.0,
+          "mean_shared_clock_bins_per_pair_date": 2.960772833723653,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 11,
+          "source_year": 2020,
+          "summer": {
+            "D": 0.00013010668748373666,
+            "N": 0.0025045537340619307,
+            "T": 0.0026346604215456673,
+            "X": 0.0037080405932864947
+          },
+          "summer_positive_D_dyad_fraction": 0.01639344262295082,
+          "winter": {
+            "D": 0.0,
+            "N": 0.016686182669789225,
+            "T": 0.016686182669789225,
+            "X": 0.016686182669789225
+          },
+          "winter_minus_summer": {
+            "D": -0.00013010668748373666,
+            "N": 0.014181628935727294,
+            "T": 0.014051522248243558,
+            "X": 0.01297814207650273
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 6,
+          "grid_km": 10.0,
+          "mean_shared_clock_bins_per_pair_date": 2.960772833723653,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 11,
+          "source_year": 2020,
+          "summer": {
+            "D": -8.131667967733541e-05,
+            "N": 0.15845368201925578,
+            "T": 0.15837236533957846,
+            "X": 0.16295862607338016
+          },
+          "summer_positive_D_dyad_fraction": 0.06557377049180328,
+          "winter": {
+            "D": 0.0,
+            "N": 0.16637392661982825,
+            "T": 0.16637392661982825,
+            "X": 0.16637392661982825
+          },
+          "winter_minus_summer": {
+            "D": 8.131667967733541e-05,
+            "N": 0.007920244600572474,
+            "T": 0.008001561280249786,
+            "X": 0.0034153005464480912
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 6,
+          "grid_km": 5.0,
+          "mean_shared_clock_bins_per_pair_date": 2.960772833723653,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.5,
+          "seed": 11,
+          "source_year": 2020,
+          "summer": {
+            "D": 0.0018296252927400467,
+            "N": 0.05349824355971897,
+            "T": 0.055327868852459015,
+            "X": 0.05698672911787666
+          },
+          "summer_positive_D_dyad_fraction": 0.09836065573770492,
+          "winter": {
+            "D": 0.00013010668748373666,
+            "N": 0.05412438199323445,
+            "T": 0.05425448868071819,
+            "X": 0.05425448868071819
+          },
+          "winter_minus_summer": {
+            "D": -0.00169951860525631,
+            "N": 0.0006261384335154788,
+            "T": -0.0010733801717408287,
+            "X": -0.002732240437158473
+          },
+          "winter_positive_D_dyad_fraction": 0.01639344262295082
+        }
+      ],
+      "n_joint_clock_support_dyads": 61,
+      "n_original_geographic_support_dyads": 104,
+      "status": "DESCRIPTIVE_COMMON_CLOCK_CONDITIONAL",
+      "year": 2020
+    },
+    {
+      "clock_bin_hours": 3,
+      "fraction_geographic_dyads_with_clock_support": 0.5865384615384616,
+      "grid_seed_aggregates": [
+        {
+          "clock_bin_hours": 3,
+          "grid_km": 5.0,
+          "mean_shared_clock_bins_per_pair_date": 3.8594847775175642,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 0,
+          "source_year": 2020,
+          "summer": {
+            "D": 0.0008138173302107729,
+            "N": 0.05178181108508978,
+            "T": 0.05259562841530055,
+            "X": 0.054352068696330996
+          },
+          "summer_positive_D_dyad_fraction": 0.09836065573770492,
+          "winter": {
+            "D": 0.0,
+            "N": 0.06518345042935207,
+            "T": 0.06518345042935207,
+            "X": 0.06518345042935207
+          },
+          "winter_minus_summer": {
+            "D": -0.0008138173302107729,
+            "N": 0.013401639344262292,
+            "T": 0.012587822014051522,
+            "X": 0.010831381733021075
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 3,
+          "grid_km": 1.0,
+          "mean_shared_clock_bins_per_pair_date": 3.8594847775175642,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 0,
+          "source_year": 2020,
+          "summer": {
+            "D": -0.0004124381993234452,
+            "N": 0.0012321103304709863,
+            "T": 0.000819672131147541,
+            "X": 0.0020882123341139733
+          },
+          "summer_positive_D_dyad_fraction": 0.01639344262295082,
+          "winter": {
+            "D": -0.00010977751756440281,
+            "N": 0.01875731850117096,
+            "T": 0.018647540983606558,
+            "X": 0.01879391100702576
+          },
+          "winter_minus_summer": {
+            "D": 0.0003026606817590424,
+            "N": 0.017525208170699975,
+            "T": 0.017827868852459017,
+            "X": 0.016705698672911787
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 3,
+          "grid_km": 10.0,
+          "mean_shared_clock_bins_per_pair_date": 3.8594847775175642,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 0,
+          "source_year": 2020,
+          "summer": {
+            "D": -0.0004394552512652211,
+            "N": 0.13590560892584982,
+            "T": 0.1354661536745846,
+            "X": 0.13800323408051746
+          },
+          "summer_positive_D_dyad_fraction": 0.06557377049180328,
+          "winter": {
+            "D": 0.0,
+            "N": 0.16420765027322407,
+            "T": 0.16420765027322407,
+            "X": 0.16420765027322407
+          },
+          "winter_minus_summer": {
+            "D": 0.0004394552512652211,
+            "N": 0.02830204134737424,
+            "T": 0.028741496598639477,
+            "X": 0.02620441619270661
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 3,
+          "grid_km": 5.0,
+          "mean_shared_clock_bins_per_pair_date": 3.8594847775175642,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.5,
+          "seed": 0,
+          "source_year": 2020,
+          "summer": {
+            "D": -0.0005712081866314051,
+            "N": 0.047700961727391966,
+            "T": 0.047129753540760565,
+            "X": 0.05166722426675588
+          },
+          "summer_positive_D_dyad_fraction": 0.08196721311475409,
+          "winter": {
+            "D": 0.00048204527712724434,
+            "N": 0.05605581576893052,
+            "T": 0.056537861046057764,
+            "X": 0.056537861046057764
+          },
+          "winter_minus_summer": {
+            "D": 0.0010532534637586494,
+            "N": 0.008354854041538552,
+            "T": 0.009408107505297199,
+            "X": 0.0048706367793018845
+          },
+          "winter_positive_D_dyad_fraction": 0.01639344262295082
+        },
+        {
+          "clock_bin_hours": 3,
+          "grid_km": 5.0,
+          "mean_shared_clock_bins_per_pair_date": 3.838407494145199,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 1,
+          "source_year": 2020,
+          "summer": {
+            "D": -0.0014210902940411138,
+            "N": 0.05522671090294041,
+            "T": 0.0538056206088993,
+            "X": 0.057650273224043716
+          },
+          "summer_positive_D_dyad_fraction": 0.03278688524590164,
+          "winter": {
+            "D": 0.0,
+            "N": 0.05230288836846214,
+            "T": 0.05230288836846214,
+            "X": 0.05230288836846214
+          },
+          "winter_minus_summer": {
+            "D": 0.0014210902940411138,
+            "N": -0.0029238225344782667,
+            "T": -0.001502732240437156,
+            "X": -0.0053473848555815745
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 3,
+          "grid_km": 1.0,
+          "mean_shared_clock_bins_per_pair_date": 3.838407494145199,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 1,
+          "source_year": 2020,
+          "summer": {
+            "D": 0.0,
+            "N": 0.0029274004683840747,
+            "T": 0.0029274004683840747,
+            "X": 0.0029274004683840747
+          },
+          "summer_positive_D_dyad_fraction": 0.0,
+          "winter": {
+            "D": 0.0,
+            "N": 0.015417642466822794,
+            "T": 0.015417642466822794,
+            "X": 0.015417642466822794
+          },
+          "winter_minus_summer": {
+            "D": 0.0,
+            "N": 0.01249024199843872,
+            "T": 0.01249024199843872,
+            "X": 0.01249024199843872
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 3,
+          "grid_km": 10.0,
+          "mean_shared_clock_bins_per_pair_date": 3.838407494145199,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 1,
+          "source_year": 2020,
+          "summer": {
+            "D": -0.0006404501691386937,
+            "N": 0.14013805248875505,
+            "T": 0.13949760231961636,
+            "X": 0.14178097468495593
+          },
+          "summer_positive_D_dyad_fraction": 0.06557377049180328,
+          "winter": {
+            "D": 0.0,
+            "N": 0.16129976580796251,
+            "T": 0.16129976580796251,
+            "X": 0.16129976580796251
+          },
+          "winter_minus_summer": {
+            "D": 0.0006404501691386937,
+            "N": 0.021161713319207465,
+            "T": 0.021802163488346155,
+            "X": 0.019518791123006585
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 3,
+          "grid_km": 5.0,
+          "mean_shared_clock_bins_per_pair_date": 3.838407494145199,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.5,
+          "seed": 1,
+          "source_year": 2020,
+          "summer": {
+            "D": -1.2074697170046772e-05,
+            "N": 0.05644677972672285,
+            "T": 0.056434705029552806,
+            "X": 0.059108397457343594
+          },
+          "summer_positive_D_dyad_fraction": 0.06557377049180328,
+          "winter": {
+            "D": 0.0002706219099661722,
+            "N": 0.063976060369503,
+            "T": 0.06424668227946916,
+            "X": 0.06424668227946916
+          },
+          "winter_minus_summer": {
+            "D": 0.000282696607136219,
+            "N": 0.007529280642780148,
+            "T": 0.007811977249916349,
+            "X": 0.005138284822125562
+          },
+          "winter_positive_D_dyad_fraction": 0.01639344262295082
+        },
+        {
+          "clock_bin_hours": 3,
+          "grid_km": 5.0,
+          "mean_shared_clock_bins_per_pair_date": 3.8454332552693207,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 2,
+          "source_year": 2020,
+          "summer": {
+            "D": -0.001756440281030445,
+            "N": 0.05013103602096576,
+            "T": 0.04837459573993532,
+            "X": 0.052863276458124234
+          },
+          "summer_positive_D_dyad_fraction": 0.0,
+          "winter": {
+            "D": 0.0,
+            "N": 0.05636221701795472,
+            "T": 0.05636221701795472,
+            "X": 0.05636221701795472
+          },
+          "winter_minus_summer": {
+            "D": 0.001756440281030445,
+            "N": 0.0062311809969889595,
+            "T": 0.0079876212780194,
+            "X": 0.0034989405598304865
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 3,
+          "grid_km": 1.0,
+          "mean_shared_clock_bins_per_pair_date": 3.8454332552693207,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 2,
+          "source_year": 2020,
+          "summer": {
+            "D": 0.0004069086651053864,
+            "N": 0.002657103825136612,
+            "T": 0.0030640124902419985,
+            "X": 0.004430132708821233
+          },
+          "summer_positive_D_dyad_fraction": 0.03278688524590164,
+          "winter": {
+            "D": -0.00021955503512880562,
+            "N": 0.020272248243559717,
+            "T": 0.020052693208430915,
+            "X": 0.020345433255269323
+          },
+          "winter_minus_summer": {
+            "D": -0.000626463700234192,
+            "N": 0.017615144418423104,
+            "T": 0.016988680718188917,
+            "X": 0.01591530054644809
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 3,
+          "grid_km": 10.0,
+          "mean_shared_clock_bins_per_pair_date": 3.8454332552693207,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 2,
+          "source_year": 2020,
+          "summer": {
+            "D": -0.0012522768670309656,
+            "N": 0.13474173822534477,
+            "T": 0.1334894613583138,
+            "X": 0.1365144418423107
+          },
+          "summer_positive_D_dyad_fraction": 0.01639344262295082,
+          "winter": {
+            "D": 0.0,
+            "N": 0.16651053864168616,
+            "T": 0.16651053864168616,
+            "X": 0.16651053864168616
+          },
+          "winter_minus_summer": {
+            "D": 0.0012522768670309656,
+            "N": 0.03176880041634139,
+            "T": 0.03302107728337236,
+            "X": 0.029996096799375455
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 3,
+          "grid_km": 5.0,
+          "mean_shared_clock_bins_per_pair_date": 3.8454332552693207,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.5,
+          "seed": 2,
+          "source_year": 2020,
+          "summer": {
+            "D": 0.0008398386677075203,
+            "N": 0.04956302739675105,
+            "T": 0.05040286606445857,
+            "X": 0.05366203858592617
+          },
+          "summer_positive_D_dyad_fraction": 0.08196721311475409,
+          "winter": {
+            "D": 0.00021142336716107208,
+            "N": 0.06362542284673432,
+            "T": 0.06383684621389539,
+            "X": 0.06383684621389539
+          },
+          "winter_minus_summer": {
+            "D": -0.0006284153005464482,
+            "N": 0.014062395449983271,
+            "T": 0.013433980149436822,
+            "X": 0.01017480762796922
+          },
+          "winter_positive_D_dyad_fraction": 0.01639344262295082
+        },
+        {
+          "clock_bin_hours": 3,
+          "grid_km": 5.0,
+          "mean_shared_clock_bins_per_pair_date": 3.891686182669789,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 3,
+          "source_year": 2020,
+          "summer": {
+            "D": -0.0010571168358053606,
+            "N": 0.04450949778818631,
+            "T": 0.04345238095238095,
+            "X": 0.04637978142076503
+          },
+          "summer_positive_D_dyad_fraction": 0.03278688524590164,
+          "winter": {
+            "D": 0.0,
+            "N": 0.0673190587710494,
+            "T": 0.0673190587710494,
+            "X": 0.0673190587710494
+          },
+          "winter_minus_summer": {
+            "D": 0.0010571168358053606,
+            "N": 0.022809560982863096,
+            "T": 0.023866677818668455,
+            "X": 0.020939277350284377
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 3,
+          "grid_km": 1.0,
+          "mean_shared_clock_bins_per_pair_date": 3.891686182669789,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 3,
+          "source_year": 2020,
+          "summer": {
+            "D": 0.0005067655477491544,
+            "N": 0.0024986989331251624,
+            "T": 0.0030054644808743167,
+            "X": 0.0037861046057767363
+          },
+          "summer_positive_D_dyad_fraction": 0.01639344262295082,
+          "winter": {
+            "D": 2.389714668068632e-05,
+            "N": 0.0182625977791585,
+            "T": 0.01828649492583919,
+            "X": 0.01828649492583919
+          },
+          "winter_minus_summer": {
+            "D": -0.00048286840106846805,
+            "N": 0.01576389884603334,
+            "T": 0.015281030444964873,
+            "X": 0.014500390320062454
+          },
+          "winter_positive_D_dyad_fraction": 0.01639344262295082
+        },
+        {
+          "clock_bin_hours": 3,
+          "grid_km": 10.0,
+          "mean_shared_clock_bins_per_pair_date": 3.891686182669789,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 3,
+          "source_year": 2020,
+          "summer": {
+            "D": -0.0009605325346375865,
+            "N": 0.12629369858794415,
+            "T": 0.12533316605330655,
+            "X": 0.12816298650607783
+          },
+          "summer_positive_D_dyad_fraction": 0.08196721311475409,
+          "winter": {
+            "D": 0.0,
+            "N": 0.18294301327088214,
+            "T": 0.18294301327088214,
+            "X": 0.18294301327088214
+          },
+          "winter_minus_summer": {
+            "D": 0.0009605325346375865,
+            "N": 0.05664931468293799,
+            "T": 0.05760984721757559,
+            "X": 0.05478002676480431
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 3,
+          "grid_km": 5.0,
+          "mean_shared_clock_bins_per_pair_date": 3.891686182669789,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.5,
+          "seed": 3,
+          "source_year": 2020,
+          "summer": {
+            "D": 0.0007294736786205505,
+            "N": 0.042138821180306624,
+            "T": 0.042868294858927174,
+            "X": 0.04589327534292406
+          },
+          "summer_positive_D_dyad_fraction": 0.08196721311475409,
+          "winter": {
+            "D": 0.00014637002341920375,
+            "N": 0.05754293520686963,
+            "T": 0.05768930523028883,
+            "X": 0.05768930523028883
+          },
+          "winter_minus_summer": {
+            "D": -0.0005831036552013467,
+            "N": 0.015404114026563005,
+            "T": 0.01482101037136166,
+            "X": 0.011796029887364771
+          },
+          "winter_positive_D_dyad_fraction": 0.01639344262295082
+        },
+        {
+          "clock_bin_hours": 3,
+          "grid_km": 5.0,
+          "mean_shared_clock_bins_per_pair_date": 3.8144028103044496,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 4,
+          "source_year": 2020,
+          "summer": {
+            "D": 0.00010408534998698941,
+            "N": 0.049486078584439236,
+            "T": 0.04959016393442623,
+            "X": 0.051385636221701794
+          },
+          "summer_positive_D_dyad_fraction": 0.03278688524590164,
+          "winter": {
+            "D": 0.0,
+            "N": 0.06313427010148322,
+            "T": 0.06313427010148322,
+            "X": 0.06313427010148322
+          },
+          "winter_minus_summer": {
+            "D": -0.00010408534998698941,
+            "N": 0.013648191517043981,
+            "T": 0.013544106167056987,
+            "X": 0.011748633879781423
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 3,
+          "grid_km": 1.0,
+          "mean_shared_clock_bins_per_pair_date": 3.8144028103044496,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 4,
+          "source_year": 2020,
+          "summer": {
+            "D": -7.903981264637001e-05,
+            "N": 0.0013866120218579234,
+            "T": 0.0013075722092115534,
+            "X": 0.002185792349726776
+          },
+          "summer_positive_D_dyad_fraction": 0.01639344262295082,
+          "winter": {
+            "D": 0.0,
+            "N": 0.020558715289394448,
+            "T": 0.020558715289394448,
+            "X": 0.020558715289394448
+          },
+          "winter_minus_summer": {
+            "D": 7.903981264637001e-05,
+            "N": 0.019172103267536524,
+            "T": 0.019251143080182893,
+            "X": 0.01837292293966767
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 3,
+          "grid_km": 10.0,
+          "mean_shared_clock_bins_per_pair_date": 3.8144028103044496,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 4,
+          "source_year": 2020,
+          "summer": {
+            "D": -0.0005584829560239395,
+            "N": 0.1346585164120293,
+            "T": 0.13410003345600535,
+            "X": 0.13735920597747295
+          },
+          "summer_positive_D_dyad_fraction": 0.04918032786885246,
+          "winter": {
+            "D": 0.0,
+            "N": 0.17125292740046838,
+            "T": 0.17125292740046838,
+            "X": 0.17125292740046838
+          },
+          "winter_minus_summer": {
+            "D": 0.0005584829560239395,
+            "N": 0.036594410988439074,
+            "T": 0.03715289394446303,
+            "X": 0.03389372142299543
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 3,
+          "grid_km": 5.0,
+          "mean_shared_clock_bins_per_pair_date": 3.8144028103044496,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.5,
+          "seed": 4,
+          "source_year": 2020,
+          "summer": {
+            "D": 0.0003521841992066146,
+            "N": 0.0542061965301343,
+            "T": 0.05455838072934092,
+            "X": 0.057360321177651385
+          },
+          "summer_positive_D_dyad_fraction": 0.08196721311475409,
+          "winter": {
+            "D": 0.00020556856622430396,
+            "N": 0.045383814728077024,
+            "T": 0.045589383294301324,
+            "X": 0.045589383294301324
+          },
+          "winter_minus_summer": {
+            "D": -0.00014661563298231064,
+            "N": -0.008822381802057279,
+            "T": -0.008968997435039594,
+            "X": -0.011770937883350062
+          },
+          "winter_positive_D_dyad_fraction": 0.01639344262295082
+        },
+        {
+          "clock_bin_hours": 3,
+          "grid_km": 5.0,
+          "mean_shared_clock_bins_per_pair_date": 3.8149882903981265,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 5,
+          "source_year": 2020,
+          "summer": {
+            "D": -0.0005122950819672131,
+            "N": 0.04223750975800156,
+            "T": 0.04172521467603434,
+            "X": 0.0437743950039032
+          },
+          "summer_positive_D_dyad_fraction": 0.01639344262295082,
+          "winter": {
+            "D": 0.0,
+            "N": 0.05659640905542545,
+            "T": 0.05659640905542545,
+            "X": 0.05659640905542545
+          },
+          "winter_minus_summer": {
+            "D": 0.0005122950819672131,
+            "N": 0.014358899297423892,
+            "T": 0.014871194379391106,
+            "X": 0.012822014051522251
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 3,
+          "grid_km": 1.0,
+          "mean_shared_clock_bins_per_pair_date": 3.8149882903981265,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 5,
+          "source_year": 2020,
+          "summer": {
+            "D": -2.439500390320065e-05,
+            "N": 0.0019759953161592506,
+            "T": 0.00195160031225605,
+            "X": 0.0030249804839968773
+          },
+          "summer_positive_D_dyad_fraction": 0.01639344262295082,
+          "winter": {
+            "D": 0.0,
+            "N": 0.01949648711943794,
+            "T": 0.01949648711943794,
+            "X": 0.01949648711943794
+          },
+          "winter_minus_summer": {
+            "D": 2.439500390320065e-05,
+            "N": 0.01752049180327869,
+            "T": 0.01754488680718189,
+            "X": 0.01647150663544106
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 3,
+          "grid_km": 10.0,
+          "mean_shared_clock_bins_per_pair_date": 3.8149882903981265,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 5,
+          "source_year": 2020,
+          "summer": {
+            "D": -0.0001463700234192038,
+            "N": 0.13232825917252147,
+            "T": 0.13218188914910226,
+            "X": 0.13462138953942232
+          },
+          "summer_positive_D_dyad_fraction": 0.04918032786885246,
+          "winter": {
+            "D": 0.0,
+            "N": 0.16621779859484778,
+            "T": 0.16621779859484778,
+            "X": 0.16621779859484778
+          },
+          "winter_minus_summer": {
+            "D": 0.0001463700234192038,
+            "N": 0.03388953942232631,
+            "T": 0.03403590944574553,
+            "X": 0.03159640905542546
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 3,
+          "grid_km": 5.0,
+          "mean_shared_clock_bins_per_pair_date": 3.8149882903981265,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.5,
+          "seed": 5,
+          "source_year": 2020,
+          "summer": {
+            "D": 0.0024986989331251624,
+            "N": 0.04771040110033084,
+            "T": 0.05020910003345601,
+            "X": 0.051087320173971225
+          },
+          "summer_positive_D_dyad_fraction": 0.11475409836065574,
+          "winter": {
+            "D": 0.00014637002341920375,
+            "N": 0.06593481654957065,
+            "T": 0.06608118657298985,
+            "X": 0.06627634660421546
+          },
+          "winter_minus_summer": {
+            "D": -0.0023523289097059585,
+            "N": 0.018224415449239806,
+            "T": 0.015872086539533842,
+            "X": 0.01518902643024423
+          },
+          "winter_positive_D_dyad_fraction": 0.01639344262295082
+        },
+        {
+          "clock_bin_hours": 3,
+          "grid_km": 5.0,
+          "mean_shared_clock_bins_per_pair_date": 3.8448477751756442,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 6,
+          "source_year": 2020,
+          "summer": {
+            "D": 0.00011579495186052563,
+            "N": 0.04748373666406453,
+            "T": 0.047599531615925054,
+            "X": 0.04890710382513661
+          },
+          "summer_positive_D_dyad_fraction": 0.03278688524590164,
+          "winter": {
+            "D": 0.0,
+            "N": 0.06186572989851678,
+            "T": 0.06186572989851678,
+            "X": 0.06186572989851678
+          },
+          "winter_minus_summer": {
+            "D": -0.00011579495186052563,
+            "N": 0.014381993234452252,
+            "T": 0.014266198282591729,
+            "X": 0.01295862607338017
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 3,
+          "grid_km": 1.0,
+          "mean_shared_clock_bins_per_pair_date": 3.8448477751756442,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 6,
+          "source_year": 2020,
+          "summer": {
+            "D": 0.000479768410096279,
+            "N": 0.002447632058287796,
+            "T": 0.0029274004683840747,
+            "X": 0.0032201405152224825
+          },
+          "summer_positive_D_dyad_fraction": 0.03278688524590164,
+          "winter": {
+            "D": 0.0001829625292740047,
+            "N": 0.016620316159250585,
+            "T": 0.01680327868852459,
+            "X": 0.01680327868852459
+          },
+          "winter_minus_summer": {
+            "D": -0.0002968058808222743,
+            "N": 0.014172684100962788,
+            "T": 0.013875878220140515,
+            "X": 0.013583138173302107
+          },
+          "winter_positive_D_dyad_fraction": 0.01639344262295082
+        },
+        {
+          "clock_bin_hours": 3,
+          "grid_km": 10.0,
+          "mean_shared_clock_bins_per_pair_date": 3.8448477751756442,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 6,
+          "source_year": 2020,
+          "summer": {
+            "D": 0.0011971342010652817,
+            "N": 0.13482383156228925,
+            "T": 0.1360209657633545,
+            "X": 0.13625515780082523
+          },
+          "summer_positive_D_dyad_fraction": 0.08196721311475409,
+          "winter": {
+            "D": 0.0,
+            "N": 0.1792935206869633,
+            "T": 0.1792935206869633,
+            "X": 0.1792935206869633
+          },
+          "winter_minus_summer": {
+            "D": -0.0011971342010652817,
+            "N": 0.044469689124674056,
+            "T": 0.04327255492360879,
+            "X": 0.043038362886138076
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 3,
+          "grid_km": 5.0,
+          "mean_shared_clock_bins_per_pair_date": 3.8448477751756442,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.5,
+          "seed": 6,
+          "source_year": 2020,
+          "summer": {
+            "D": 0.0002706219099661722,
+            "N": 0.05000539013419575,
+            "T": 0.050276012044161926,
+            "X": 0.05447195271551244
+          },
+          "summer_positive_D_dyad_fraction": 0.09836065573770492,
+          "winter": {
+            "D": 0.00014637002341920375,
+            "N": 0.057835675253708044,
+            "T": 0.05798204527712724,
+            "X": 0.05798204527712724
+          },
+          "winter_minus_summer": {
+            "D": -0.00012425188654696846,
+            "N": 0.007830285119512295,
+            "T": 0.007706033232965315,
+            "X": 0.0035100925616148027
+          },
+          "winter_positive_D_dyad_fraction": 0.01639344262295082
+        },
+        {
+          "clock_bin_hours": 3,
+          "grid_km": 5.0,
+          "mean_shared_clock_bins_per_pair_date": 3.889344262295082,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 7,
+          "source_year": 2020,
+          "summer": {
+            "D": -0.000571168358053604,
+            "N": 0.050875060406676324,
+            "T": 0.05030389204862273,
+            "X": 0.05268484442957511
+          },
+          "summer_positive_D_dyad_fraction": 0.03278688524590164,
+          "winter": {
+            "D": 0.0,
+            "N": 0.05503512880562061,
+            "T": 0.05503512880562061,
+            "X": 0.05503512880562061
+          },
+          "winter_minus_summer": {
+            "D": 0.000571168358053604,
+            "N": 0.004160068398944283,
+            "T": 0.004731236756997881,
+            "X": 0.0023502843760454944
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 3,
+          "grid_km": 1.0,
+          "mean_shared_clock_bins_per_pair_date": 3.889344262295082,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 7,
+          "source_year": 2020,
+          "summer": {
+            "D": -0.00026021337496747333,
+            "N": 0.002309393702836326,
+            "T": 0.0020491803278688526,
+            "X": 0.0034153005464480873
+          },
+          "summer_positive_D_dyad_fraction": 0.0,
+          "winter": {
+            "D": 7.318501170960187e-05,
+            "N": 0.01921838407494145,
+            "T": 0.019291569086651056,
+            "X": 0.019291569086651056
+          },
+          "winter_minus_summer": {
+            "D": 0.0003333983866770752,
+            "N": 0.016908990372105123,
+            "T": 0.017242388758782205,
+            "X": 0.015876268540202968
+          },
+          "winter_positive_D_dyad_fraction": 0.01639344262295082
+        },
+        {
+          "clock_bin_hours": 3,
+          "grid_km": 10.0,
+          "mean_shared_clock_bins_per_pair_date": 3.889344262295082,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 7,
+          "source_year": 2020,
+          "summer": {
+            "D": 0.00012034868592245644,
+            "N": 0.13265817255864096,
+            "T": 0.1327785212445634,
+            "X": 0.13473012155681946
+          },
+          "summer_positive_D_dyad_fraction": 0.06557377049180328,
+          "winter": {
+            "D": 0.0,
+            "N": 0.16690085870413737,
+            "T": 0.16690085870413737,
+            "X": 0.16690085870413737
+          },
+          "winter_minus_summer": {
+            "D": -0.00012034868592245644,
+            "N": 0.034242686145496415,
+            "T": 0.034122337459573965,
+            "X": 0.03217073714731791
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 3,
+          "grid_km": 5.0,
+          "mean_shared_clock_bins_per_pair_date": 3.889344262295082,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.5,
+          "seed": 7,
+          "source_year": 2020,
+          "summer": {
+            "D": 0.0005134567488197463,
+            "N": 0.03990976171889521,
+            "T": 0.040423218467714954,
+            "X": 0.042569978811196604
+          },
+          "summer_positive_D_dyad_fraction": 0.06557377049180328,
+          "winter": {
+            "D": 0.0,
+            "N": 0.06317330210772834,
+            "T": 0.06317330210772834,
+            "X": 0.06336846213895395
+          },
+          "winter_minus_summer": {
+            "D": -0.0005134567488197463,
+            "N": 0.02326354038883313,
+            "T": 0.022750083640013387,
+            "X": 0.02079848332775734
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 3,
+          "grid_km": 5.0,
+          "mean_shared_clock_bins_per_pair_date": 3.892271662763466,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 8,
+          "source_year": 2020,
+          "summer": {
+            "D": 0.00042284673432214416,
+            "N": 0.05479907810118583,
+            "T": 0.055221924835507974,
+            "X": 0.05658804505408721
+          },
+          "summer_positive_D_dyad_fraction": 0.06557377049180328,
+          "winter": {
+            "D": 0.0,
+            "N": 0.060402029664324744,
+            "T": 0.060402029664324744,
+            "X": 0.060402029664324744
+          },
+          "winter_minus_summer": {
+            "D": -0.00042284673432214416,
+            "N": 0.005602951563138912,
+            "T": 0.00518010482881677,
+            "X": 0.0038139846102375335
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 3,
+          "grid_km": 1.0,
+          "mean_shared_clock_bins_per_pair_date": 3.892271662763466,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 8,
+          "source_year": 2020,
+          "summer": {
+            "D": -0.00013010668748373666,
+            "N": 0.0011059068436117616,
+            "T": 0.000975800156128025,
+            "X": 0.001366120218579235
+          },
+          "summer_positive_D_dyad_fraction": 0.0,
+          "winter": {
+            "D": -0.00010977751756440281,
+            "N": 0.019011026541764245,
+            "T": 0.018901249024199842,
+            "X": 0.019047619047619046
+          },
+          "winter_minus_summer": {
+            "D": 2.0329169919333854e-05,
+            "N": 0.017905119698152484,
+            "T": 0.017925448868071816,
+            "X": 0.01768149882903981
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 3,
+          "grid_km": 10.0,
+          "mean_shared_clock_bins_per_pair_date": 3.892271662763466,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 8,
+          "source_year": 2020,
+          "summer": {
+            "D": 0.0005682210432963192,
+            "N": 0.1350024826480163,
+            "T": 0.1355707036913126,
+            "X": 0.13674166387866624
+          },
+          "summer_positive_D_dyad_fraction": 0.08196721311475409,
+          "winter": {
+            "D": 0.0,
+            "N": 0.16254879000780642,
+            "T": 0.16254879000780642,
+            "X": 0.16254879000780642
+          },
+          "winter_minus_summer": {
+            "D": -0.0005682210432963192,
+            "N": 0.027546307359790134,
+            "T": 0.026978086316493816,
+            "X": 0.025807126129140184
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 3,
+          "grid_km": 5.0,
+          "mean_shared_clock_bins_per_pair_date": 3.892271662763466,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.5,
+          "seed": 8,
+          "source_year": 2020,
+          "summer": {
+            "D": -0.0005471799375487901,
+            "N": 0.04431042293966767,
+            "T": 0.04376324300211888,
+            "X": 0.046680885468941676
+          },
+          "summer_positive_D_dyad_fraction": 0.03278688524590164,
+          "winter": {
+            "D": 0.0,
+            "N": 0.06067525370804059,
+            "T": 0.06067525370804059,
+            "X": 0.06067525370804059
+          },
+          "winter_minus_summer": {
+            "D": 0.0005471799375487901,
+            "N": 0.016364830768372918,
+            "T": 0.016912010705921708,
+            "X": 0.013994368239098914
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 3,
+          "grid_km": 5.0,
+          "mean_shared_clock_bins_per_pair_date": 3.86943793911007,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 9,
+          "source_year": 2020,
+          "summer": {
+            "D": -0.0007907233931824096,
+            "N": 0.0480779989591465,
+            "T": 0.04728727556596409,
+            "X": 0.05035128805620608
+          },
+          "summer_positive_D_dyad_fraction": 0.03278688524590164,
+          "winter": {
+            "D": 0.0,
+            "N": 0.05304449648711944,
+            "T": 0.05304449648711944,
+            "X": 0.05304449648711944
+          },
+          "winter_minus_summer": {
+            "D": 0.0007907233931824096,
+            "N": 0.0049664975279729365,
+            "T": 0.005757220921155347,
+            "X": 0.002693208430913356
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 3,
+          "grid_km": 1.0,
+          "mean_shared_clock_bins_per_pair_date": 3.86943793911007,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 9,
+          "source_year": 2020,
+          "summer": {
+            "D": 0.00039259692948217536,
+            "N": 0.00413511579495186,
+            "T": 0.004527712724434035,
+            "X": 0.005308352849336456
+          },
+          "summer_positive_D_dyad_fraction": 0.03278688524590164,
+          "winter": {
+            "D": 0.0,
+            "N": 0.021085647373703578,
+            "T": 0.021085647373703578,
+            "X": 0.021085647373703578
+          },
+          "winter_minus_summer": {
+            "D": -0.00039259692948217536,
+            "N": 0.016950531578751718,
+            "T": 0.016557934649269544,
+            "X": 0.015777294524367123
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 3,
+          "grid_km": 10.0,
+          "mean_shared_clock_bins_per_pair_date": 3.86943793911007,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 9,
+          "source_year": 2020,
+          "summer": {
+            "D": -0.0009266848816029145,
+            "N": 0.13577390245715773,
+            "T": 0.1348472175755548,
+            "X": 0.1376184900189584
+          },
+          "summer_positive_D_dyad_fraction": 0.03278688524590164,
+          "winter": {
+            "D": 0.0,
+            "N": 0.16900858704137395,
+            "T": 0.16900858704137395,
+            "X": 0.16900858704137395
+          },
+          "winter_minus_summer": {
+            "D": 0.0009266848816029145,
+            "N": 0.03323468458421622,
+            "T": 0.03416136946581916,
+            "X": 0.03139009702241555
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 3,
+          "grid_km": 5.0,
+          "mean_shared_clock_bins_per_pair_date": 3.86943793911007,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.5,
+          "seed": 9,
+          "source_year": 2020,
+          "summer": {
+            "D": 0.0007998839660766726,
+            "N": 0.05169537643316499,
+            "T": 0.05249526039924166,
+            "X": 0.05434928069588491
+          },
+          "summer_positive_D_dyad_fraction": 0.08196721311475409,
+          "winter": {
+            "D": 0.0003519385896435077,
+            "N": 0.061689435336976316,
+            "T": 0.062041373926619826,
+            "X": 0.062041373926619826
+          },
+          "winter_minus_summer": {
+            "D": -0.0004479453764331649,
+            "N": 0.009994058903811325,
+            "T": 0.009546113527378164,
+            "X": 0.007692093230734914
+          },
+          "winter_positive_D_dyad_fraction": 0.01639344262295082
+        },
+        {
+          "clock_bin_hours": 3,
+          "grid_km": 5.0,
+          "mean_shared_clock_bins_per_pair_date": 3.8179156908665104,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 10,
+          "source_year": 2020,
+          "summer": {
+            "D": 0.00046968514181628936,
+            "N": 0.05677075201665365,
+            "T": 0.057240437158469944,
+            "X": 0.05962138953942232
+          },
+          "summer_positive_D_dyad_fraction": 0.06557377049180328,
+          "winter": {
+            "D": 0.0,
+            "N": 0.05259562841530055,
+            "T": 0.05259562841530055,
+            "X": 0.05259562841530055
+          },
+          "winter_minus_summer": {
+            "D": -0.00046968514181628936,
+            "N": -0.004175123601353102,
+            "T": -0.004644808743169394,
+            "X": -0.007025761124121774
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 3,
+          "grid_km": 1.0,
+          "mean_shared_clock_bins_per_pair_date": 3.8179156908665104,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 10,
+          "source_year": 2020,
+          "summer": {
+            "D": 0.000585480093676815,
+            "N": 0.00351288056206089,
+            "T": 0.004098360655737705,
+            "X": 0.004098360655737705
+          },
+          "summer_positive_D_dyad_fraction": 0.03278688524590164,
+          "winter": {
+            "D": 0.0,
+            "N": 0.019457455113192818,
+            "T": 0.019457455113192818,
+            "X": 0.019457455113192818
+          },
+          "winter_minus_summer": {
+            "D": -0.000585480093676815,
+            "N": 0.015944574551131928,
+            "T": 0.015359094457455112,
+            "X": 0.015359094457455112
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 3,
+          "grid_km": 10.0,
+          "mean_shared_clock_bins_per_pair_date": 3.8179156908665104,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 10,
+          "source_year": 2020,
+          "summer": {
+            "D": 0.0013075722092115534,
+            "N": 0.1414422326307572,
+            "T": 0.14274980483996877,
+            "X": 0.1439207650273224
+          },
+          "summer_positive_D_dyad_fraction": 0.09836065573770492,
+          "winter": {
+            "D": 0.0,
+            "N": 0.16114363778298205,
+            "T": 0.16114363778298205,
+            "X": 0.16114363778298205
+          },
+          "winter_minus_summer": {
+            "D": -0.0013075722092115534,
+            "N": 0.01970140515222485,
+            "T": 0.018393832943013277,
+            "X": 0.017222872755659646
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 3,
+          "grid_km": 5.0,
+          "mean_shared_clock_bins_per_pair_date": 3.8179156908665104,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.5,
+          "seed": 10,
+          "source_year": 2020,
+          "summer": {
+            "D": 0.0015186304810761151,
+            "N": 0.05276652620454895,
+            "T": 0.05428515668562507,
+            "X": 0.056139176982268314
+          },
+          "summer_positive_D_dyad_fraction": 0.11475409836065574,
+          "winter": {
+            "D": 6.505334374186833e-05,
+            "N": 0.05315508717148061,
+            "T": 0.05322014051522248,
+            "X": 0.05361046057767369
+          },
+          "winter_minus_summer": {
+            "D": -0.0014535771373342468,
+            "N": 0.0003885609669316628,
+            "T": -0.0010650161704025898,
+            "X": -0.002528716404594622
+          },
+          "winter_positive_D_dyad_fraction": 0.01639344262295082
+        },
+        {
+          "clock_bin_hours": 3,
+          "grid_km": 5.0,
+          "mean_shared_clock_bins_per_pair_date": 3.8752927400468384,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 11,
+          "source_year": 2020,
+          "summer": {
+            "D": 0.0007406323185011709,
+            "N": 0.05858244117319059,
+            "T": 0.059323073491691754,
+            "X": 0.061177093788335
+          },
+          "summer_positive_D_dyad_fraction": 0.06557377049180328,
+          "winter": {
+            "D": 0.0,
+            "N": 0.06784599085535854,
+            "T": 0.06784599085535854,
+            "X": 0.06784599085535854
+          },
+          "winter_minus_summer": {
+            "D": -0.0007406323185011709,
+            "N": 0.00926354968216795,
+            "T": 0.008522917363666789,
+            "X": 0.0066688970670235395
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 3,
+          "grid_km": 1.0,
+          "mean_shared_clock_bins_per_pair_date": 3.8752927400468384,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 11,
+          "source_year": 2020,
+          "summer": {
+            "D": 0.0008284543325526932,
+            "N": 0.002157494145199063,
+            "T": 0.0029859484777517565,
+            "X": 0.0035714285714285713
+          },
+          "summer_positive_D_dyad_fraction": 0.03278688524590164,
+          "winter": {
+            "D": 0.00013367466424508913,
+            "N": 0.01815421426181714,
+            "T": 0.01828788892606223,
+            "X": 0.01843425894948143
+          },
+          "winter_minus_summer": {
+            "D": -0.0006947796683076041,
+            "N": 0.015996720116618075,
+            "T": 0.015301940448310472,
+            "X": 0.014862830378052859
+          },
+          "winter_positive_D_dyad_fraction": 0.01639344262295082
+        },
+        {
+          "clock_bin_hours": 3,
+          "grid_km": 10.0,
+          "mean_shared_clock_bins_per_pair_date": 3.8752927400468384,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.0,
+          "origin_y_fraction": 0.0,
+          "seed": 11,
+          "source_year": 2020,
+          "summer": {
+            "D": -0.0005848295602393963,
+            "N": 0.14955605739563585,
+            "T": 0.14897122783539643,
+            "X": 0.15238652838184452
+          },
+          "summer_positive_D_dyad_fraction": 0.03278688524590164,
+          "winter": {
+            "D": 0.0,
+            "N": 0.1816354410616706,
+            "T": 0.1816354410616706,
+            "X": 0.1816354410616706
+          },
+          "winter_minus_summer": {
+            "D": 0.0005848295602393963,
+            "N": 0.032079383666034744,
+            "T": 0.032664213226274164,
+            "X": 0.029248912679826072
+          },
+          "winter_positive_D_dyad_fraction": 0.0
+        },
+        {
+          "clock_bin_hours": 3,
+          "grid_km": 5.0,
+          "mean_shared_clock_bins_per_pair_date": 3.8752927400468384,
+          "n_pair_dates": 1708,
+          "n_supported_dyads": 61,
+          "origin_x_fraction": 0.5,
+          "origin_y_fraction": 0.5,
+          "seed": 11,
+          "source_year": 2020,
+          "summer": {
+            "D": 0.002320086016451858,
+            "N": 0.04746244994875389,
+            "T": 0.04978253596520575,
+            "X": 0.05058408609345377
+          },
+          "summer_positive_D_dyad_fraction": 0.13114754098360656,
+          "winter": {
+            "D": 0.00014637002341920375,
+            "N": 0.049892661982825916,
+            "T": 0.05003903200624512,
+            "X": 0.05003903200624512
+          },
+          "winter_minus_summer": {
+            "D": -0.002173715993032654,
+            "N": 0.002430212034072024,
+            "T": 0.00025649604103936824,
+            "X": -0.0005450540872086532
+          },
+          "winter_positive_D_dyad_fraction": 0.01639344262295082
+        }
+      ],
+      "n_joint_clock_support_dyads": 61,
+      "n_original_geographic_support_dyads": 104,
+      "status": "DESCRIPTIVE_COMMON_CLOCK_CONDITIONAL",
+      "year": 2020
+    }
+  ],
+  "schema_version": 1,
+  "source": "black_bear",
+  "source_clock_offset_UTC_verified": false,
+  "source_doi": "10.5441/001/1.706",
+  "status": "POST_INSPECTION_COARSE_CLOCK_BIN_COUSE_EXPLORATORY"
+}

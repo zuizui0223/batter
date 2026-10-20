@@ -1,0 +1,1596 @@
+{
+  "as_of": "2026-10-20",
+  "exact_independent_time_label_reference": "probability of same spatial cell under random within-day permutation of each animals clock-bin labels on identical observed common bins",
+  "n_eligible_source_year_timewidth_groups": 10,
+  "n_eligible_source_years": 5,
+  "n_grid_seed_aggregate_results": 480,
+  "n_sources": 3,
+  "n_stop_groups": 2,
+  "rows": [
+    {
+      "D_delta_seed_sign_counts": {
+        "negative": 0,
+        "positive": 12,
+        "zero": 0
+      },
+      "D_summer_positive_seed_count": 12,
+      "D_winter_positive_seed_count": 12,
+      "clock_bin_hours": 3,
+      "grid_km": 1.0,
+      "mean_shared_bins_per_pair_date": 6.910820578231292,
+      "n_seed_repetitions": 12,
+      "n_source_dyads": 112,
+      "n_timed_dyads": 112,
+      "origin_x_fraction": 0.0,
+      "origin_y_fraction": 0.0,
+      "retained_temporal_opportunity_fraction": 1.0,
+      "source": "turkey",
+      "status": "DESCRIPTIVE_ORIGINAL_SOURCE_TIMED",
+      "summer": {
+        "D": 0.009768199158915266,
+        "N": 0.04437353938173908,
+        "T": 0.054141738540654356,
+        "X": 0.05925010629251701
+      },
+      "winter": {
+        "D": 0.035006369416389,
+        "N": 0.20241441735069876,
+        "T": 0.23742078676708778,
+        "X": 0.24579322056203434
+      },
+      "winter_minus_summer": {
+        "D": 0.025238170257473738,
+        "N": 0.1580408779689597,
+        "T": 0.18327904822643346,
+        "X": 0.1865431142695173
+      },
+      "year": 2019
+    },
+    {
+      "D_delta_seed_sign_counts": {
+        "negative": 12,
+        "positive": 0,
+        "zero": 0
+      },
+      "D_summer_positive_seed_count": 12,
+      "D_winter_positive_seed_count": 12,
+      "clock_bin_hours": 3,
+      "grid_km": 5.0,
+      "mean_shared_bins_per_pair_date": 6.910820578231292,
+      "n_seed_repetitions": 12,
+      "n_source_dyads": 112,
+      "n_timed_dyads": 112,
+      "origin_x_fraction": 0.0,
+      "origin_y_fraction": 0.0,
+      "retained_temporal_opportunity_fraction": 1.0,
+      "source": "turkey",
+      "status": "DESCRIPTIVE_ORIGINAL_SOURCE_TIMED",
+      "summer": {
+        "D": 0.003899243370817715,
+        "N": 0.32355889762367535,
+        "T": 0.32745814099449305,
+        "X": 0.32962954527048915
+      },
+      "winter": {
+        "D": 0.0017046120106205748,
+        "N": 0.4714514658967328,
+        "T": 0.4731560779073534,
+        "X": 0.4740519719792679
+      },
+      "winter_minus_summer": {
+        "D": -0.0021946313601971397,
+        "N": 0.14789256827305752,
+        "T": 0.1456979369128604,
+        "X": 0.14442242670877878
+      },
+      "year": 2019
+    },
+    {
+      "D_delta_seed_sign_counts": {
+        "negative": 0,
+        "positive": 12,
+        "zero": 0
+      },
+      "D_summer_positive_seed_count": 12,
+      "D_winter_positive_seed_count": 12,
+      "clock_bin_hours": 3,
+      "grid_km": 5.0,
+      "mean_shared_bins_per_pair_date": 6.910820578231292,
+      "n_seed_repetitions": 12,
+      "n_source_dyads": 112,
+      "n_timed_dyads": 112,
+      "origin_x_fraction": 0.5,
+      "origin_y_fraction": 0.5,
+      "retained_temporal_opportunity_fraction": 1.0,
+      "source": "turkey",
+      "status": "DESCRIPTIVE_ORIGINAL_SOURCE_TIMED",
+      "summer": {
+        "D": 0.0028484526605426753,
+        "N": 0.2589984810534191,
+        "T": 0.2618469337139618,
+        "X": 0.2647472009637188
+      },
+      "winter": {
+        "D": 0.011602967079689018,
+        "N": 0.46641510770975053,
+        "T": 0.4780180747894396,
+        "X": 0.4818901593375446
+      },
+      "winter_minus_summer": {
+        "D": 0.008754514419146344,
+        "N": 0.20741662665633145,
+        "T": 0.21617114107547783,
+        "X": 0.21714295837382572
+      },
+      "year": 2019
+    },
+    {
+      "D_delta_seed_sign_counts": {
+        "negative": 3,
+        "positive": 9,
+        "zero": 0
+      },
+      "D_summer_positive_seed_count": 6,
+      "D_winter_positive_seed_count": 10,
+      "clock_bin_hours": 3,
+      "grid_km": 10.0,
+      "mean_shared_bins_per_pair_date": 6.910820578231292,
+      "n_seed_repetitions": 12,
+      "n_source_dyads": 112,
+      "n_timed_dyads": 112,
+      "origin_x_fraction": 0.0,
+      "origin_y_fraction": 0.0,
+      "retained_temporal_opportunity_fraction": 1.0,
+      "source": "turkey",
+      "status": "DESCRIPTIVE_ORIGINAL_SOURCE_TIMED",
+      "summer": {
+        "D": 4.6638553380535856e-05,
+        "N": 0.5572222511453561,
+        "T": 0.5572688896987367,
+        "X": 0.5578231292517007
+      },
+      "winter": {
+        "D": 0.0001995696237678745,
+        "N": 0.6473268516590309,
+        "T": 0.6475264212827988,
+        "X": 0.6475567905733722
+      },
+      "winter_minus_summer": {
+        "D": 0.00015293107038733867,
+        "N": 0.09010460051367485,
+        "T": 0.09025753158406213,
+        "X": 0.08973366132167149
+      },
+      "year": 2019
+    },
+    {
+      "D_delta_seed_sign_counts": {
+        "negative": 0,
+        "positive": 12,
+        "zero": 0
+      },
+      "D_summer_positive_seed_count": 12,
+      "D_winter_positive_seed_count": 12,
+      "clock_bin_hours": 6,
+      "grid_km": 1.0,
+      "mean_shared_bins_per_pair_date": 3.9523543792517004,
+      "n_seed_repetitions": 12,
+      "n_source_dyads": 112,
+      "n_timed_dyads": 112,
+      "origin_x_fraction": 0.0,
+      "origin_y_fraction": 0.0,
+      "retained_temporal_opportunity_fraction": 1.0,
+      "source": "turkey",
+      "status": "DESCRIPTIVE_ORIGINAL_SOURCE_TIMED",
+      "summer": {
+        "D": 0.0073714598686696895,
+        "N": 0.044769448578042326,
+        "T": 0.052140908446712014,
+        "X": 0.05641918225623582
+      },
+      "winter": {
+        "D": 0.024992028061224487,
+        "N": 0.20704453656462585,
+        "T": 0.23203656462585034,
+        "X": 0.23902529761904764
+      },
+      "winter_minus_summer": {
+        "D": 0.017620568192554798,
+        "N": 0.16227508798658352,
+        "T": 0.1798956561791383,
+        "X": 0.1826061153628118
+      },
+      "year": 2019
+    },
+    {
+      "D_delta_seed_sign_counts": {
+        "negative": 12,
+        "positive": 0,
+        "zero": 0
+      },
+      "D_summer_positive_seed_count": 12,
+      "D_winter_positive_seed_count": 12,
+      "clock_bin_hours": 6,
+      "grid_km": 5.0,
+      "mean_shared_bins_per_pair_date": 3.9523543792517004,
+      "n_seed_repetitions": 12,
+      "n_source_dyads": 112,
+      "n_timed_dyads": 112,
+      "origin_x_fraction": 0.0,
+      "origin_y_fraction": 0.0,
+      "retained_temporal_opportunity_fraction": 1.0,
+      "source": "turkey",
+      "status": "DESCRIPTIVE_ORIGINAL_SOURCE_TIMED",
+      "summer": {
+        "D": 0.0031725363756613754,
+        "N": 0.32342007983749055,
+        "T": 0.3265926162131519,
+        "X": 0.32792127267573695
+      },
+      "winter": {
+        "D": 0.0011991124574829931,
+        "N": 0.47313124468537415,
+        "T": 0.47433035714285715,
+        "X": 0.4749016794217687
+      },
+      "winter_minus_summer": {
+        "D": -0.0019734239181783825,
+        "N": 0.1497111648478836,
+        "T": 0.14773774092970524,
+        "X": 0.14698040674603174
+      },
+      "year": 2019
+    },
+    {
+      "D_delta_seed_sign_counts": {
+        "negative": 0,
+        "positive": 12,
+        "zero": 0
+      },
+      "D_summer_positive_seed_count": 12,
+      "D_winter_positive_seed_count": 12,
+      "clock_bin_hours": 6,
+      "grid_km": 5.0,
+      "mean_shared_bins_per_pair_date": 3.9523543792517004,
+      "n_seed_repetitions": 12,
+      "n_source_dyads": 112,
+      "n_timed_dyads": 112,
+      "origin_x_fraction": 0.5,
+      "origin_y_fraction": 0.5,
+      "retained_temporal_opportunity_fraction": 1.0,
+      "source": "turkey",
+      "status": "DESCRIPTIVE_ORIGINAL_SOURCE_TIMED",
+      "summer": {
+        "D": 0.002634430508314437,
+        "N": 0.25702490197467875,
+        "T": 0.25965933248299317,
+        "X": 0.2619047619047619
+      },
+      "winter": {
+        "D": 0.007264429209183673,
+        "N": 0.474386825042517,
+        "T": 0.4816512542517007,
+        "X": 0.4849463222789116
+      },
+      "winter_minus_summer": {
+        "D": 0.0046299987008692365,
+        "N": 0.21736192306783822,
+        "T": 0.2219919217687075,
+        "X": 0.22304156037414968
+      },
+      "year": 2019
+    },
+    {
+      "D_delta_seed_sign_counts": {
+        "negative": 3,
+        "positive": 9,
+        "zero": 0
+      },
+      "D_summer_positive_seed_count": 6,
+      "D_winter_positive_seed_count": 6,
+      "clock_bin_hours": 6,
+      "grid_km": 10.0,
+      "mean_shared_bins_per_pair_date": 3.9523543792517004,
+      "n_seed_repetitions": 12,
+      "n_source_dyads": 112,
+      "n_timed_dyads": 112,
+      "origin_x_fraction": 0.0,
+      "origin_y_fraction": 0.0,
+      "retained_temporal_opportunity_fraction": 1.0,
+      "source": "turkey",
+      "status": "DESCRIPTIVE_ORIGINAL_SOURCE_TIMED",
+      "summer": {
+        "D": 3.653805272108843e-05,
+        "N": 0.5575872927295918,
+        "T": 0.5576238307823129,
+        "X": 0.5579427083333334
+      },
+      "winter": {
+        "D": 0.00014615221088435374,
+        "N": 0.647906037414966,
+        "T": 0.6480521896258503,
+        "X": 0.6480521896258503
+      },
+      "winter_minus_summer": {
+        "D": 0.0001096141581632653,
+        "N": 0.09031874468537417,
+        "T": 0.09042835884353743,
+        "X": 0.09010948129251702
+      },
+      "year": 2019
+    },
+    {
+      "D_delta_seed_sign_counts": {
+        "negative": 0,
+        "positive": 12,
+        "zero": 0
+      },
+      "D_summer_positive_seed_count": 12,
+      "D_winter_positive_seed_count": 12,
+      "clock_bin_hours": 3,
+      "grid_km": 1.0,
+      "mean_shared_bins_per_pair_date": 6.60048185941043,
+      "n_seed_repetitions": 12,
+      "n_source_dyads": 21,
+      "n_timed_dyads": 21,
+      "origin_x_fraction": 0.0,
+      "origin_y_fraction": 0.0,
+      "retained_temporal_opportunity_fraction": 1.0,
+      "source": "turkey",
+      "status": "DESCRIPTIVE_ORIGINAL_SOURCE_TIMED",
+      "summer": {
+        "D": 0.014872596808942776,
+        "N": 0.176541667309403,
+        "T": 0.19141426411834575,
+        "X": 0.19877038116834034
+      },
+      "winter": {
+        "D": 0.055039116931731115,
+        "N": 0.4310517479856644,
+        "T": 0.48609086491739556,
+        "X": 0.49470224597775614
+      },
+      "winter_minus_summer": {
+        "D": 0.040166520122788346,
+        "N": 0.2545100806762614,
+        "T": 0.2946766007990498,
+        "X": 0.2959318648094158
+      },
+      "year": 2020
+    },
+    {
+      "D_delta_seed_sign_counts": {
+        "negative": 0,
+        "positive": 12,
+        "zero": 0
+      },
+      "D_summer_positive_seed_count": 12,
+      "D_winter_positive_seed_count": 12,
+      "clock_bin_hours": 3,
+      "grid_km": 5.0,
+      "mean_shared_bins_per_pair_date": 6.60048185941043,
+      "n_seed_repetitions": 12,
+      "n_source_dyads": 21,
+      "n_timed_dyads": 21,
+      "origin_x_fraction": 0.0,
+      "origin_y_fraction": 0.0,
+      "retained_temporal_opportunity_fraction": 1.0,
+      "source": "turkey",
+      "status": "DESCRIPTIVE_ORIGINAL_SOURCE_TIMED",
+      "summer": {
+        "D": 0.009412873236974305,
+        "N": 0.2669949120993825,
+        "T": 0.27640778533635674,
+        "X": 0.27694768383543894
+      },
+      "winter": {
+        "D": 0.026211911446362368,
+        "N": 0.6133585992976177,
+        "T": 0.6395705107439802,
+        "X": 0.64154114026563
+      },
+      "winter_minus_summer": {
+        "D": 0.016799038209388065,
+        "N": 0.34636368719823535,
+        "T": 0.36316272540762345,
+        "X": 0.36459345643019114
+      },
+      "year": 2020
+    },
+    {
+      "D_delta_seed_sign_counts": {
+        "negative": 0,
+        "positive": 12,
+        "zero": 0
+      },
+      "D_summer_positive_seed_count": 12,
+      "D_winter_positive_seed_count": 12,
+      "clock_bin_hours": 3,
+      "grid_km": 5.0,
+      "mean_shared_bins_per_pair_date": 6.60048185941043,
+      "n_seed_repetitions": 12,
+      "n_source_dyads": 21,
+      "n_timed_dyads": 21,
+      "origin_x_fraction": 0.5,
+      "origin_y_fraction": 0.5,
+      "retained_temporal_opportunity_fraction": 1.0,
+      "source": "turkey",
+      "status": "DESCRIPTIVE_ORIGINAL_SOURCE_TIMED",
+      "summer": {
+        "D": 0.02806122448979592,
+        "N": 0.2929475758557391,
+        "T": 0.32100880034553503,
+        "X": 0.3286618615700248
+      },
+      "winter": {
+        "D": 0.05418009985551287,
+        "N": 0.751712892261969,
+        "T": 0.8058929921174819,
+        "X": 0.8106980887593132
+      },
+      "winter_minus_summer": {
+        "D": 0.02611887536571696,
+        "N": 0.4587653164062299,
+        "T": 0.48488419177194686,
+        "X": 0.4820362271892884
+      },
+      "year": 2020
+    },
+    {
+      "D_delta_seed_sign_counts": {
+        "negative": 0,
+        "positive": 12,
+        "zero": 0
+      },
+      "D_summer_positive_seed_count": 12,
+      "D_winter_positive_seed_count": 12,
+      "clock_bin_hours": 3,
+      "grid_km": 10.0,
+      "mean_shared_bins_per_pair_date": 6.60048185941043,
+      "n_seed_repetitions": 12,
+      "n_source_dyads": 21,
+      "n_timed_dyads": 21,
+      "origin_x_fraction": 0.0,
+      "origin_y_fraction": 0.0,
+      "retained_temporal_opportunity_fraction": 1.0,
+      "source": "turkey",
+      "status": "DESCRIPTIVE_ORIGINAL_SOURCE_TIMED",
+      "summer": {
+        "D": 0.009412873236974305,
+        "N": 0.6659259130711997,
+        "T": 0.6753387863081741,
+        "X": 0.6758786848072562
+      },
+      "winter": {
+        "D": 0.028578305849928782,
+        "N": 0.7793055619829187,
+        "T": 0.8078838678328474,
+        "X": 0.8106373501781664
+      },
+      "winter_minus_summer": {
+        "D": 0.01916543261295448,
+        "N": 0.11337964891171892,
+        "T": 0.13254508152467334,
+        "X": 0.13475866537091027
+      },
+      "year": 2020
+    },
+    {
+      "D_delta_seed_sign_counts": {
+        "negative": 0,
+        "positive": 12,
+        "zero": 0
+      },
+      "D_summer_positive_seed_count": 12,
+      "D_winter_positive_seed_count": 12,
+      "clock_bin_hours": 6,
+      "grid_km": 1.0,
+      "mean_shared_bins_per_pair_date": 3.944019274376417,
+      "n_seed_repetitions": 12,
+      "n_source_dyads": 21,
+      "n_timed_dyads": 21,
+      "origin_x_fraction": 0.0,
+      "origin_y_fraction": 0.0,
+      "retained_temporal_opportunity_fraction": 1.0,
+      "source": "turkey",
+      "status": "DESCRIPTIVE_ORIGINAL_SOURCE_TIMED",
+      "summer": {
+        "D": 0.01099143361048123,
+        "N": 0.18085474930713027,
+        "T": 0.1918461829176115,
+        "X": 0.19808201058201058
+      },
+      "winter": {
+        "D": 0.03984197845804988,
+        "N": 0.4345769557823129,
+        "T": 0.4744189342403628,
+        "X": 0.48093820861678
+      },
+      "winter_minus_summer": {
+        "D": 0.028850544847568656,
+        "N": 0.2537222064751827,
+        "T": 0.28257275132275134,
+        "X": 0.28285619803476947
+      },
+      "year": 2020
+    },
+    {
+      "D_delta_seed_sign_counts": {
+        "negative": 0,
+        "positive": 12,
+        "zero": 0
+      },
+      "D_summer_positive_seed_count": 12,
+      "D_winter_positive_seed_count": 12,
+      "clock_bin_hours": 6,
+      "grid_km": 5.0,
+      "mean_shared_bins_per_pair_date": 3.944019274376417,
+      "n_seed_repetitions": 12,
+      "n_source_dyads": 21,
+      "n_timed_dyads": 21,
+      "origin_x_fraction": 0.0,
+      "origin_y_fraction": 0.0,
+      "retained_temporal_opportunity_fraction": 1.0,
+      "source": "turkey",
+      "status": "DESCRIPTIVE_ORIGINAL_SOURCE_TIMED",
+      "summer": {
+        "D": 0.0065547052154195,
+        "N": 0.2682468820861678,
+        "T": 0.2748015873015873,
+        "X": 0.2753684807256236
+      },
+      "winter": {
+        "D": 0.019894416099773243,
+        "N": 0.6254428854875284,
+        "T": 0.6453373015873015,
+        "X": 0.6468253968253969
+      },
+      "winter_minus_summer": {
+        "D": 0.01333971088435374,
+        "N": 0.3571960034013606,
+        "T": 0.37053571428571425,
+        "X": 0.3714569160997732
+      },
+      "year": 2020
+    },
+    {
+      "D_delta_seed_sign_counts": {
+        "negative": 5,
+        "positive": 7,
+        "zero": 0
+      },
+      "D_summer_positive_seed_count": 12,
+      "D_winter_positive_seed_count": 12,
+      "clock_bin_hours": 6,
+      "grid_km": 5.0,
+      "mean_shared_bins_per_pair_date": 3.944019274376417,
+      "n_seed_repetitions": 12,
+      "n_source_dyads": 21,
+      "n_timed_dyads": 21,
+      "origin_x_fraction": 0.5,
+      "origin_y_fraction": 0.5,
+      "retained_temporal_opportunity_fraction": 1.0,
+      "source": "turkey",
+      "status": "DESCRIPTIVE_ORIGINAL_SOURCE_TIMED",
+      "summer": {
+        "D": 0.02470710506424792,
+        "N": 0.2917847694633409,
+        "T": 0.3164918745275888,
+        "X": 0.32327097505668934
+      },
+      "winter": {
+        "D": 0.02923044217687075,
+        "N": 0.765766723356009,
+        "T": 0.7949971655328798,
+        "X": 0.8023667800453514
+      },
+      "winter_minus_summer": {
+        "D": 0.004523337112622827,
+        "N": 0.4739819538926682,
+        "T": 0.4785052910052911,
+        "X": 0.47909580498866217
+      },
+      "year": 2020
+    },
+    {
+      "D_delta_seed_sign_counts": {
+        "negative": 0,
+        "positive": 12,
+        "zero": 0
+      },
+      "D_summer_positive_seed_count": 12,
+      "D_winter_positive_seed_count": 12,
+      "clock_bin_hours": 6,
+      "grid_km": 10.0,
+      "mean_shared_bins_per_pair_date": 3.944019274376417,
+      "n_seed_repetitions": 12,
+      "n_source_dyads": 21,
+      "n_timed_dyads": 21,
+      "origin_x_fraction": 0.0,
+      "origin_y_fraction": 0.0,
+      "retained_temporal_opportunity_fraction": 1.0,
+      "source": "turkey",
+      "status": "DESCRIPTIVE_ORIGINAL_SOURCE_TIMED",
+      "summer": {
+        "D": 0.0065547052154195,
+        "N": 0.65968679138322,
+        "T": 0.6662414965986394,
+        "X": 0.6668083900226757
+      },
+      "winter": {
+        "D": 0.022711167800453513,
+        "N": 0.787875566893424,
+        "T": 0.8105867346938775,
+        "X": 0.8125708616780045
+      },
+      "winter_minus_summer": {
+        "D": 0.016156462585034014,
+        "N": 0.1281887755102041,
+        "T": 0.14434523809523814,
+        "X": 0.14576247165532885
+      },
+      "year": 2020
+    },
+    {
+      "clock_bin_hours": 3,
+      "n_source_dyads": 1,
+      "n_timed_dyads": 1,
+      "source": "black_bear",
+      "status": "NOT_ESTIMABLE_FEWER_THAN_TWO_CLOCK_SUPPORTED_DYADS",
+      "year": 2019
+    },
+    {
+      "clock_bin_hours": 6,
+      "n_source_dyads": 1,
+      "n_timed_dyads": 0,
+      "source": "black_bear",
+      "status": "NOT_ESTIMABLE_FEWER_THAN_TWO_CLOCK_SUPPORTED_DYADS",
+      "year": 2019
+    },
+    {
+      "D_delta_seed_sign_counts": {
+        "negative": 6,
+        "positive": 5,
+        "zero": 1
+      },
+      "D_summer_positive_seed_count": 6,
+      "D_winter_positive_seed_count": 4,
+      "clock_bin_hours": 3,
+      "grid_km": 1.0,
+      "mean_shared_bins_per_pair_date": 3.8544594067135054,
+      "n_seed_repetitions": 12,
+      "n_source_dyads": 104,
+      "n_timed_dyads": 61,
+      "origin_x_fraction": 0.0,
+      "origin_y_fraction": 0.0,
+      "retained_temporal_opportunity_fraction": 0.5865384615384616,
+      "source": "black_bear",
+      "status": "DESCRIPTIVE_ORIGINAL_SOURCE_TIMED",
+      "summer": {
+        "D": 0.00019114840836152312,
+        "N": 0.0023621953335068086,
+        "T": 0.002553343741868332,
+        "X": 0.003285193858964351
+      },
+      "winter": {
+        "D": -2.1158931956857684e-06,
+        "N": 0.018859337743684514,
+        "T": 0.01885722185048883,
+        "X": 0.01891820936024683
+      },
+      "winter_minus_summer": {
+        "D": -0.00019326430155720888,
+        "N": 0.016497142410177707,
+        "T": 0.0163038781086205,
+        "X": 0.01563301550128248
+      },
+      "year": 2020
+    },
+    {
+      "D_delta_seed_sign_counts": {
+        "negative": 6,
+        "positive": 6,
+        "zero": 0
+      },
+      "D_summer_positive_seed_count": 6,
+      "D_winter_positive_seed_count": 0,
+      "clock_bin_hours": 3,
+      "grid_km": 5.0,
+      "mean_shared_bins_per_pair_date": 3.8544594067135054,
+      "n_seed_repetitions": 12,
+      "n_source_dyads": 104,
+      "n_timed_dyads": 61,
+      "origin_x_fraction": 0.0,
+      "origin_y_fraction": 0.0,
+      "retained_temporal_opportunity_fraction": 0.5865384615384616,
+      "source": "black_bear",
+      "status": "DESCRIPTIVE_ORIGINAL_SOURCE_TIMED",
+      "summer": {
+        "D": -0.00028683103478185446,
+        "N": 0.050830142621711705,
+        "T": 0.05054331158692985,
+        "X": 0.05297793297646927
+      },
+      "winter": {
+        "D": 0.0,
+        "N": 0.059307274822497306,
+        "T": 0.059307274822497306,
+        "X": 0.059307274822497306
+      },
+      "winter_minus_summer": {
+        "D": 0.00028683103478185446,
+        "N": 0.0084771322007856,
+        "T": 0.008763963235567452,
+        "X": 0.00632934184602803
+      },
+      "year": 2020
+    },
+    {
+      "D_delta_seed_sign_counts": {
+        "negative": 9,
+        "positive": 3,
+        "zero": 0
+      },
+      "D_summer_positive_seed_count": 9,
+      "D_winter_positive_seed_count": 10,
+      "clock_bin_hours": 3,
+      "grid_km": 5.0,
+      "mean_shared_bins_per_pair_date": 3.8544594067135054,
+      "n_seed_repetitions": 12,
+      "n_source_dyads": 104,
+      "n_timed_dyads": 61,
+      "origin_x_fraction": 0.5,
+      "origin_y_fraction": 0.5,
+      "retained_temporal_opportunity_fraction": 0.5865384615384616,
+      "source": "black_bear",
+      "status": "DESCRIPTIVE_ORIGINAL_SOURCE_TIMED",
+      "summer": {
+        "D": 0.0007260343149750142,
+        "N": 0.04865967625340534,
+        "T": 0.04938571056838036,
+        "X": 0.05196449481431917
+      },
+      "winter": {
+        "D": 0.00018101092896174865,
+        "N": 0.05824502341920374,
+        "T": 0.05842603434816549,
+        "X": 0.05849108769190736
+      },
+      "winter_minus_summer": {
+        "D": -0.0005450233860132655,
+        "N": 0.009585347165798406,
+        "T": 0.009040323779785135,
+        "X": 0.006526592877588192
+      },
+      "year": 2020
+    },
+    {
+      "D_delta_seed_sign_counts": {
+        "negative": 4,
+        "positive": 8,
+        "zero": 0
+      },
+      "D_summer_positive_seed_count": 4,
+      "D_winter_positive_seed_count": 0,
+      "clock_bin_hours": 3,
+      "grid_km": 10.0,
+      "mean_shared_bins_per_pair_date": 3.8544594067135054,
+      "n_seed_repetitions": 12,
+      "n_source_dyads": 104,
+      "n_timed_dyads": 61,
+      "origin_x_fraction": 0.0,
+      "origin_y_fraction": 0.0,
+      "retained_temporal_opportunity_fraction": 0.5865384615384616,
+      "source": "black_bear",
+      "status": "DESCRIPTIVE_ORIGINAL_SOURCE_TIMED",
+      "summer": {
+        "D": -0.00019298384198852586,
+        "N": 0.13611021275541182,
+        "T": 0.13591722891342328,
+        "X": 0.1381745799412661
+      },
+      "winter": {
+        "D": 0.0,
+        "N": 0.16941354410616705,
+        "T": 0.16941354410616705,
+        "X": 0.16941354410616705
+      },
+      "winter_minus_summer": {
+        "D": 0.00019298384198852586,
+        "N": 0.03330333135075524,
+        "T": 0.03349631519274377,
+        "X": 0.031238964164900945
+      },
+      "year": 2020
+    },
+    {
+      "D_delta_seed_sign_counts": {
+        "negative": 8,
+        "positive": 4,
+        "zero": 0
+      },
+      "D_summer_positive_seed_count": 8,
+      "D_winter_positive_seed_count": 1,
+      "clock_bin_hours": 6,
+      "grid_km": 1.0,
+      "mean_shared_bins_per_pair_date": 2.960528883684621,
+      "n_seed_repetitions": 12,
+      "n_source_dyads": 104,
+      "n_timed_dyads": 61,
+      "origin_x_fraction": 0.0,
+      "origin_y_fraction": 0.0,
+      "retained_temporal_opportunity_fraction": 0.5865384615384616,
+      "source": "black_bear",
+      "status": "DESCRIPTIVE_ORIGINAL_SOURCE_TIMED",
+      "summer": {
+        "D": 0.00026766740393789574,
+        "N": 0.002749181412091248,
+        "T": 0.003016848816029144,
+        "X": 0.003895068956544366
+      },
+      "winter": {
+        "D": 2.4395003903200624e-05,
+        "N": 0.018849206349206348,
+        "T": 0.01887360135310955,
+        "X": 0.01889799635701275
+      },
+      "winter_minus_summer": {
+        "D": -0.00024327240003469512,
+        "N": 0.016100024937115102,
+        "T": 0.015856752537080406,
+        "X": 0.015002927400468385
+      },
+      "year": 2020
+    },
+    {
+      "D_delta_seed_sign_counts": {
+        "negative": 5,
+        "positive": 7,
+        "zero": 0
+      },
+      "D_summer_positive_seed_count": 5,
+      "D_winter_positive_seed_count": 0,
+      "clock_bin_hours": 6,
+      "grid_km": 5.0,
+      "mean_shared_bins_per_pair_date": 2.960528883684621,
+      "n_seed_repetitions": 12,
+      "n_source_dyads": 104,
+      "n_timed_dyads": 61,
+      "origin_x_fraction": 0.0,
+      "origin_y_fraction": 0.0,
+      "retained_temporal_opportunity_fraction": 0.5865384615384616,
+      "source": "black_bear",
+      "status": "DESCRIPTIVE_ORIGINAL_SOURCE_TIMED",
+      "summer": {
+        "D": -0.00023378545407233932,
+        "N": 0.051341318631277645,
+        "T": 0.05110753317720531,
+        "X": 0.05363648191517043
+      },
+      "winter": {
+        "D": 0.0,
+        "N": 0.057962529274004686,
+        "T": 0.057962529274004686,
+        "X": 0.057962529274004686
+      },
+      "winter_minus_summer": {
+        "D": 0.00023378545407233932,
+        "N": 0.006621210642727038,
+        "T": 0.006854996096799379,
+        "X": 0.004326047358834246
+      },
+      "year": 2020
+    },
+    {
+      "D_delta_seed_sign_counts": {
+        "negative": 10,
+        "positive": 2,
+        "zero": 0
+      },
+      "D_summer_positive_seed_count": 11,
+      "D_winter_positive_seed_count": 7,
+      "clock_bin_hours": 6,
+      "grid_km": 5.0,
+      "mean_shared_bins_per_pair_date": 2.960528883684621,
+      "n_seed_repetitions": 12,
+      "n_source_dyads": 104,
+      "n_timed_dyads": 61,
+      "origin_x_fraction": 0.5,
+      "origin_y_fraction": 0.5,
+      "retained_temporal_opportunity_fraction": 0.5865384615384616,
+      "source": "black_bear",
+      "status": "DESCRIPTIVE_ORIGINAL_SOURCE_TIMED",
+      "summer": {
+        "D": 0.0013098761818024112,
+        "N": 0.04784605668314685,
+        "T": 0.04915593286494926,
+        "X": 0.05125390320062451
+      },
+      "winter": {
+        "D": 5.827695376875704e-05,
+        "N": 0.056082758695463614,
+        "T": 0.05614103564923237,
+        "X": 0.056409380692167575
+      },
+      "winter_minus_summer": {
+        "D": -0.0012515992280336542,
+        "N": 0.008236702012316766,
+        "T": 0.006985102784283114,
+        "X": 0.005155477491543065
+      },
+      "year": 2020
+    },
+    {
+      "D_delta_seed_sign_counts": {
+        "negative": 3,
+        "positive": 9,
+        "zero": 0
+      },
+      "D_summer_positive_seed_count": 3,
+      "D_winter_positive_seed_count": 0,
+      "clock_bin_hours": 6,
+      "grid_km": 10.0,
+      "mean_shared_bins_per_pair_date": 2.960528883684621,
+      "n_seed_repetitions": 12,
+      "n_source_dyads": 104,
+      "n_timed_dyads": 61,
+      "origin_x_fraction": 0.0,
+      "origin_y_fraction": 0.0,
+      "retained_temporal_opportunity_fraction": 0.5865384615384616,
+      "source": "black_bear",
+      "status": "DESCRIPTIVE_ORIGINAL_SOURCE_TIMED",
+      "summer": {
+        "D": -0.0005400782808569693,
+        "N": 0.1428605310521294,
+        "T": 0.14232045277127245,
+        "X": 0.14606102003642987
+      },
+      "winter": {
+        "D": 0.0,
+        "N": 0.17037470725995316,
+        "T": 0.17037470725995316,
+        "X": 0.17037470725995316
+      },
+      "winter_minus_summer": {
+        "D": 0.0005400782808569693,
+        "N": 0.02751417620782375,
+        "T": 0.02805425448868072,
+        "X": 0.024313687223523287
+      },
+      "year": 2020
+    },
+    {
+      "D_delta_seed_sign_counts": {
+        "negative": 0,
+        "positive": 12,
+        "zero": 0
+      },
+      "D_summer_positive_seed_count": 7,
+      "D_winter_positive_seed_count": 12,
+      "clock_bin_hours": 3,
+      "grid_km": 1.0,
+      "mean_shared_bins_per_pair_date": 7.979599567099567,
+      "n_seed_repetitions": 12,
+      "n_source_dyads": 55,
+      "n_timed_dyads": 55,
+      "origin_x_fraction": 0.0,
+      "origin_y_fraction": 0.0,
+      "retained_temporal_opportunity_fraction": 1.0,
+      "source": "white_tailed_deer",
+      "status": "DESCRIPTIVE_ORIGINAL_SOURCE_TIMED",
+      "summer": {
+        "D": 0.00012006222943722946,
+        "N": 0.044022253787878794,
+        "T": 0.04414231601731602,
+        "X": 0.046739718614718616
+      },
+      "winter": {
+        "D": 0.005335125121477162,
+        "N": 0.024652248615896575,
+        "T": 0.02998737373737374,
+        "X": 0.032853406514120796
+      },
+      "winter_minus_summer": {
+        "D": 0.005215062892039932,
+        "N": -0.019370005171982212,
+        "T": -0.014154942279942281,
+        "X": -0.013886312100597814
+      },
+      "year": 2019
+    },
+    {
+      "D_delta_seed_sign_counts": {
+        "negative": 6,
+        "positive": 6,
+        "zero": 0
+      },
+      "D_summer_positive_seed_count": 4,
+      "D_winter_positive_seed_count": 4,
+      "clock_bin_hours": 3,
+      "grid_km": 5.0,
+      "mean_shared_bins_per_pair_date": 7.979599567099567,
+      "n_seed_repetitions": 12,
+      "n_source_dyads": 55,
+      "n_timed_dyads": 55,
+      "origin_x_fraction": 0.0,
+      "origin_y_fraction": 0.0,
+      "retained_temporal_opportunity_fraction": 1.0,
+      "source": "white_tailed_deer",
+      "status": "DESCRIPTIVE_ORIGINAL_SOURCE_TIMED",
+      "summer": {
+        "D": -4.05844155844156e-05,
+        "N": 0.09339826839826841,
+        "T": 0.09335768398268397,
+        "X": 0.09384469696969698
+      },
+      "winter": {
+        "D": -0.0001589556277056277,
+        "N": 0.09056557282003709,
+        "T": 0.09040661719233146,
+        "X": 0.09373453927025355
+      },
+      "winter_minus_summer": {
+        "D": -0.00011837121212121211,
+        "N": -0.0028326955782312937,
+        "T": -0.0029510667903525066,
+        "X": -0.00011015769944341368
+      },
+      "year": 2019
+    },
+    {
+      "D_delta_seed_sign_counts": {
+        "negative": 4,
+        "positive": 5,
+        "zero": 3
+      },
+      "D_summer_positive_seed_count": 1,
+      "D_winter_positive_seed_count": 2,
+      "clock_bin_hours": 3,
+      "grid_km": 5.0,
+      "mean_shared_bins_per_pair_date": 7.979599567099567,
+      "n_seed_repetitions": 12,
+      "n_source_dyads": 55,
+      "n_timed_dyads": 55,
+      "origin_x_fraction": 0.5,
+      "origin_y_fraction": 0.5,
+      "retained_temporal_opportunity_fraction": 1.0,
+      "source": "white_tailed_deer",
+      "status": "DESCRIPTIVE_ORIGINAL_SOURCE_TIMED",
+      "summer": {
+        "D": -1.3528138528138528e-05,
+        "N": 0.27719155844155846,
+        "T": 0.2771780303030303,
+        "X": 0.2772186147186147
+      },
+      "winter": {
+        "D": -3.3820346320346308e-06,
+        "N": 0.2349253053494125,
+        "T": 0.23492192331478046,
+        "X": 0.23500309214594928
+      },
+      "winter_minus_summer": {
+        "D": 1.0146103896103898e-05,
+        "N": -0.04226625309214594,
+        "T": -0.04225610698824985,
+        "X": -0.04221552257266542
+      },
+      "year": 2019
+    },
+    {
+      "D_delta_seed_sign_counts": {
+        "negative": 0,
+        "positive": 2,
+        "zero": 10
+      },
+      "D_summer_positive_seed_count": 0,
+      "D_winter_positive_seed_count": 2,
+      "clock_bin_hours": 3,
+      "grid_km": 10.0,
+      "mean_shared_bins_per_pair_date": 7.979599567099567,
+      "n_seed_repetitions": 12,
+      "n_source_dyads": 55,
+      "n_timed_dyads": 55,
+      "origin_x_fraction": 0.0,
+      "origin_y_fraction": 0.0,
+      "retained_temporal_opportunity_fraction": 1.0,
+      "source": "white_tailed_deer",
+      "status": "DESCRIPTIVE_ORIGINAL_SOURCE_TIMED",
+      "summer": {
+        "D": 0.0,
+        "N": 0.22843614718614721,
+        "T": 0.22843614718614721,
+        "X": 0.22843614718614721
+      },
+      "winter": {
+        "D": 9.131493506493505e-05,
+        "N": 0.23544710497835497,
+        "T": 0.23553841991341992,
+        "X": 0.23553841991341992
+      },
+      "winter_minus_summer": {
+        "D": 9.131493506493505e-05,
+        "N": 0.007010957792207798,
+        "T": 0.0071022727272727305,
+        "X": 0.0071022727272727305
+      },
+      "year": 2019
+    },
+    {
+      "D_delta_seed_sign_counts": {
+        "negative": 0,
+        "positive": 12,
+        "zero": 0
+      },
+      "D_summer_positive_seed_count": 6,
+      "D_winter_positive_seed_count": 12,
+      "clock_bin_hours": 6,
+      "grid_km": 1.0,
+      "mean_shared_bins_per_pair_date": 3.9891774891774894,
+      "n_seed_repetitions": 12,
+      "n_source_dyads": 55,
+      "n_timed_dyads": 55,
+      "origin_x_fraction": 0.0,
+      "origin_y_fraction": 0.0,
+      "retained_temporal_opportunity_fraction": 1.0,
+      "source": "white_tailed_deer",
+      "status": "DESCRIPTIVE_ORIGINAL_SOURCE_TIMED",
+      "summer": {
+        "D": -4.734848484848481e-05,
+        "N": 0.04339150432900433,
+        "T": 0.043344155844155845,
+        "X": 0.045752164502164495
+      },
+      "winter": {
+        "D": 0.005154220779220779,
+        "N": 0.02490530303030303,
+        "T": 0.03005952380952381,
+        "X": 0.03252164502164502
+      },
+      "winter_minus_summer": {
+        "D": 0.0052015692640692635,
+        "N": -0.018486201298701297,
+        "T": -0.013284632034632033,
+        "X": -0.013230519480519481
+      },
+      "year": 2019
+    },
+    {
+      "D_delta_seed_sign_counts": {
+        "negative": 4,
+        "positive": 7,
+        "zero": 1
+      },
+      "D_summer_positive_seed_count": 2,
+      "D_winter_positive_seed_count": 6,
+      "clock_bin_hours": 6,
+      "grid_km": 5.0,
+      "mean_shared_bins_per_pair_date": 3.9891774891774894,
+      "n_seed_repetitions": 12,
+      "n_source_dyads": 55,
+      "n_timed_dyads": 55,
+      "origin_x_fraction": 0.0,
+      "origin_y_fraction": 0.0,
+      "retained_temporal_opportunity_fraction": 1.0,
+      "source": "white_tailed_deer",
+      "status": "DESCRIPTIVE_ORIGINAL_SOURCE_TIMED",
+      "summer": {
+        "D": -0.00010146103896103895,
+        "N": 0.09312094155844157,
+        "T": 0.09301948051948052,
+        "X": 0.09342532467532468
+      },
+      "winter": {
+        "D": 0.00021645021645021645,
+        "N": 0.09280303030303032,
+        "T": 0.09301948051948052,
+        "X": 0.09558982683982685
+      },
+      "winter_minus_summer": {
+        "D": 0.0003179112554112554,
+        "N": -0.00031791125541125523,
+        "T": 0.0,
+        "X": 0.0021645021645021662
+      },
+      "year": 2019
+    },
+    {
+      "D_delta_seed_sign_counts": {
+        "negative": 2,
+        "positive": 5,
+        "zero": 5
+      },
+      "D_summer_positive_seed_count": 0,
+      "D_winter_positive_seed_count": 4,
+      "clock_bin_hours": 6,
+      "grid_km": 5.0,
+      "mean_shared_bins_per_pair_date": 3.9891774891774894,
+      "n_seed_repetitions": 12,
+      "n_source_dyads": 55,
+      "n_timed_dyads": 55,
+      "origin_x_fraction": 0.5,
+      "origin_y_fraction": 0.5,
+      "retained_temporal_opportunity_fraction": 1.0,
+      "source": "white_tailed_deer",
+      "status": "DESCRIPTIVE_ORIGINAL_SOURCE_TIMED",
+      "summer": {
+        "D": -1.3528138528138528e-05,
+        "N": 0.27652867965367967,
+        "T": 0.27651515151515155,
+        "X": 0.2765422077922078
+      },
+      "winter": {
+        "D": 0.00010822510822510823,
+        "N": 0.23758116883116884,
+        "T": 0.23768939393939392,
+        "X": 0.23779761904761906
+      },
+      "winter_minus_summer": {
+        "D": 0.00012175324675324675,
+        "N": -0.03894751082251082,
+        "T": -0.03882575757575757,
+        "X": -0.03874458874458875
+      },
+      "year": 2019
+    },
+    {
+      "D_delta_seed_sign_counts": {
+        "negative": 0,
+        "positive": 3,
+        "zero": 9
+      },
+      "D_summer_positive_seed_count": 0,
+      "D_winter_positive_seed_count": 3,
+      "clock_bin_hours": 6,
+      "grid_km": 10.0,
+      "mean_shared_bins_per_pair_date": 3.9891774891774894,
+      "n_seed_repetitions": 12,
+      "n_source_dyads": 55,
+      "n_timed_dyads": 55,
+      "origin_x_fraction": 0.0,
+      "origin_y_fraction": 0.0,
+      "retained_temporal_opportunity_fraction": 1.0,
+      "source": "white_tailed_deer",
+      "status": "DESCRIPTIVE_ORIGINAL_SOURCE_TIMED",
+      "summer": {
+        "D": 0.0,
+        "N": 0.2264339826839827,
+        "T": 0.2264339826839827,
+        "X": 0.2264339826839827
+      },
+      "winter": {
+        "D": 0.00010822510822510823,
+        "N": 0.23557900432900433,
+        "T": 0.23568722943722945,
+        "X": 0.23568722943722945
+      },
+      "winter_minus_summer": {
+        "D": 0.00010822510822510823,
+        "N": 0.009145021645021642,
+        "T": 0.009253246753246751,
+        "X": 0.009253246753246751
+      },
+      "year": 2019
+    },
+    {
+      "D_delta_seed_sign_counts": {
+        "negative": 0,
+        "positive": 12,
+        "zero": 0
+      },
+      "D_summer_positive_seed_count": 12,
+      "D_winter_positive_seed_count": 12,
+      "clock_bin_hours": 3,
+      "grid_km": 1.0,
+      "mean_shared_bins_per_pair_date": 7.915592334494774,
+      "n_seed_repetitions": 12,
+      "n_source_dyads": 205,
+      "n_timed_dyads": 205,
+      "origin_x_fraction": 0.0,
+      "origin_y_fraction": 0.0,
+      "retained_temporal_opportunity_fraction": 1.0,
+      "source": "white_tailed_deer",
+      "status": "DESCRIPTIVE_ORIGINAL_SOURCE_TIMED",
+      "summer": {
+        "D": 0.0009677650144455769,
+        "N": 0.04258278528697581,
+        "T": 0.04355055030142138,
+        "X": 0.04576309385542835
+      },
+      "winter": {
+        "D": 0.004755200267776487,
+        "N": 0.02281085664279262,
+        "T": 0.027566056910569108,
+        "X": 0.0320811556329849
+      },
+      "winter_minus_summer": {
+        "D": 0.0037874352533309105,
+        "N": -0.019771928644183184,
+        "T": -0.015984493390852273,
+        "X": -0.013681938222443448
+      },
+      "year": 2020
+    },
+    {
+      "D_delta_seed_sign_counts": {
+        "negative": 4,
+        "positive": 8,
+        "zero": 0
+      },
+      "D_summer_positive_seed_count": 5,
+      "D_winter_positive_seed_count": 7,
+      "clock_bin_hours": 3,
+      "grid_km": 5.0,
+      "mean_shared_bins_per_pair_date": 7.915592334494774,
+      "n_seed_repetitions": 12,
+      "n_source_dyads": 205,
+      "n_timed_dyads": 205,
+      "origin_x_fraction": 0.0,
+      "origin_y_fraction": 0.0,
+      "retained_temporal_opportunity_fraction": 1.0,
+      "source": "white_tailed_deer",
+      "status": "DESCRIPTIVE_ORIGINAL_SOURCE_TIMED",
+      "summer": {
+        "D": 1.8147502903600446e-06,
+        "N": 0.09187536295005806,
+        "T": 0.09187717770034844,
+        "X": 0.09197154471544715
+      },
+      "winter": {
+        "D": 0.00022240773002968125,
+        "N": 0.09354936927345464,
+        "T": 0.09377177700348432,
+        "X": 0.09548006194347658
+      },
+      "winter_minus_summer": {
+        "D": 0.0002205929797393212,
+        "N": 0.0016740063233965652,
+        "T": 0.0018945993031358858,
+        "X": 0.003508517228029428
+      },
+      "year": 2020
+    },
+    {
+      "D_delta_seed_sign_counts": {
+        "negative": 3,
+        "positive": 9,
+        "zero": 0
+      },
+      "D_summer_positive_seed_count": 6,
+      "D_winter_positive_seed_count": 9,
+      "clock_bin_hours": 3,
+      "grid_km": 5.0,
+      "mean_shared_bins_per_pair_date": 7.915592334494774,
+      "n_seed_repetitions": 12,
+      "n_source_dyads": 205,
+      "n_timed_dyads": 205,
+      "origin_x_fraction": 0.5,
+      "origin_y_fraction": 0.5,
+      "retained_temporal_opportunity_fraction": 1.0,
+      "source": "white_tailed_deer",
+      "status": "DESCRIPTIVE_ORIGINAL_SOURCE_TIMED",
+      "summer": {
+        "D": -1.1850319396051103e-05,
+        "N": 0.22578693881007686,
+        "T": 0.22577508849068084,
+        "X": 0.22612206874619767
+      },
+      "winter": {
+        "D": 8.937645180023228e-05,
+        "N": 0.1991411694250871,
+        "T": 0.19923054587688735,
+        "X": 0.19996007549361208
+      },
+      "winter_minus_summer": {
+        "D": 0.00010122677119628341,
+        "N": -0.026645769384989765,
+        "T": -0.026544542613793482,
+        "X": -0.026161993252585586
+      },
+      "year": 2020
+    },
+    {
+      "D_delta_seed_sign_counts": {
+        "negative": 0,
+        "positive": 2,
+        "zero": 10
+      },
+      "D_summer_positive_seed_count": 0,
+      "D_winter_positive_seed_count": 2,
+      "clock_bin_hours": 3,
+      "grid_km": 10.0,
+      "mean_shared_bins_per_pair_date": 7.915592334494774,
+      "n_seed_repetitions": 12,
+      "n_source_dyads": 205,
+      "n_timed_dyads": 205,
+      "origin_x_fraction": 0.0,
+      "origin_y_fraction": 0.0,
+      "retained_temporal_opportunity_fraction": 1.0,
+      "source": "white_tailed_deer",
+      "status": "DESCRIPTIVE_ORIGINAL_SOURCE_TIMED",
+      "summer": {
+        "D": 0.0,
+        "N": 0.26339285714285715,
+        "T": 0.26339285714285715,
+        "X": 0.26339285714285715
+      },
+      "winter": {
+        "D": 5.444250871080139e-06,
+        "N": 0.25804962737127374,
+        "T": 0.2580550716221448,
+        "X": 0.2580550716221448
+      },
+      "winter_minus_summer": {
+        "D": 5.444250871080139e-06,
+        "N": -0.005343229771583431,
+        "T": -0.005337785520712346,
+        "X": -0.005337785520712346
+      },
+      "year": 2020
+    },
+    {
+      "D_delta_seed_sign_counts": {
+        "negative": 0,
+        "positive": 12,
+        "zero": 0
+      },
+      "D_summer_positive_seed_count": 11,
+      "D_winter_positive_seed_count": 12,
+      "clock_bin_hours": 6,
+      "grid_km": 1.0,
+      "mean_shared_bins_per_pair_date": 3.9779907084785133,
+      "n_seed_repetitions": 12,
+      "n_source_dyads": 205,
+      "n_timed_dyads": 205,
+      "origin_x_fraction": 0.0,
+      "origin_y_fraction": 0.0,
+      "retained_temporal_opportunity_fraction": 1.0,
+      "source": "white_tailed_deer",
+      "status": "DESCRIPTIVE_ORIGINAL_SOURCE_TIMED",
+      "summer": {
+        "D": 0.0003893647567428055,
+        "N": 0.04299768518518518,
+        "T": 0.04338704994192799,
+        "X": 0.045823654665118084
+      },
+      "winter": {
+        "D": 0.004724198283649503,
+        "N": 0.022547869079881277,
+        "T": 0.027272067363530775,
+        "X": 0.031068524970963993
+      },
+      "winter_minus_summer": {
+        "D": 0.004334833526906698,
+        "N": -0.02044981610530391,
+        "T": -0.016114982578397215,
+        "X": -0.014755129694154085
+      },
+      "year": 2020
+    },
+    {
+      "D_delta_seed_sign_counts": {
+        "negative": 4,
+        "positive": 8,
+        "zero": 0
+      },
+      "D_summer_positive_seed_count": 4,
+      "D_winter_positive_seed_count": 8,
+      "clock_bin_hours": 6,
+      "grid_km": 5.0,
+      "mean_shared_bins_per_pair_date": 3.9779907084785133,
+      "n_seed_repetitions": 12,
+      "n_source_dyads": 205,
+      "n_timed_dyads": 205,
+      "origin_x_fraction": 0.0,
+      "origin_y_fraction": 0.0,
+      "retained_temporal_opportunity_fraction": 1.0,
+      "source": "white_tailed_deer",
+      "status": "DESCRIPTIVE_ORIGINAL_SOURCE_TIMED",
+      "summer": {
+        "D": -9.073751451800232e-06,
+        "N": 0.09136360336817655,
+        "T": 0.09135452961672474,
+        "X": 0.09144889663182347
+      },
+      "winter": {
+        "D": 0.00019800942057039618,
+        "N": 0.0937310459414118,
+        "T": 0.09392905536198219,
+        "X": 0.09548974061169184
+      },
+      "winter_minus_summer": {
+        "D": 0.00020708317202219642,
+        "N": 0.0023674425732352553,
+        "T": 0.0025745257452574506,
+        "X": 0.004040843979868373
+      },
+      "year": 2020
+    },
+    {
+      "D_delta_seed_sign_counts": {
+        "negative": 2,
+        "positive": 9,
+        "zero": 1
+      },
+      "D_summer_positive_seed_count": 6,
+      "D_winter_positive_seed_count": 9,
+      "clock_bin_hours": 6,
+      "grid_km": 5.0,
+      "mean_shared_bins_per_pair_date": 3.9779907084785133,
+      "n_seed_repetitions": 12,
+      "n_source_dyads": 205,
+      "n_timed_dyads": 205,
+      "origin_x_fraction": 0.5,
+      "origin_y_fraction": 0.5,
+      "retained_temporal_opportunity_fraction": 1.0,
+      "source": "white_tailed_deer",
+      "status": "DESCRIPTIVE_ORIGINAL_SOURCE_TIMED",
+      "summer": {
+        "D": 1.996225319396051e-05,
+        "N": 0.2256067315137437,
+        "T": 0.22562669376693767,
+        "X": 0.2258517228029423
+      },
+      "winter": {
+        "D": 0.000156068524970964,
+        "N": 0.19962616144018583,
+        "T": 0.1997822299651568,
+        "X": 0.2003266550522648
+      },
+      "winter_minus_summer": {
+        "D": 0.00013610627177700348,
+        "N": -0.025980570073557873,
+        "T": -0.025844463801780876,
+        "X": -0.025525067750677494
+      },
+      "year": 2020
+    },
+    {
+      "D_delta_seed_sign_counts": {
+        "negative": 0,
+        "positive": 0,
+        "zero": 12
+      },
+      "D_summer_positive_seed_count": 0,
+      "D_winter_positive_seed_count": 0,
+      "clock_bin_hours": 6,
+      "grid_km": 10.0,
+      "mean_shared_bins_per_pair_date": 3.9779907084785133,
+      "n_seed_repetitions": 12,
+      "n_source_dyads": 205,
+      "n_timed_dyads": 205,
+      "origin_x_fraction": 0.0,
+      "origin_y_fraction": 0.0,
+      "retained_temporal_opportunity_fraction": 1.0,
+      "source": "white_tailed_deer",
+      "status": "DESCRIPTIVE_ORIGINAL_SOURCE_TIMED",
+      "summer": {
+        "D": 0.0,
+        "N": 0.2633710801393728,
+        "T": 0.2633710801393728,
+        "X": 0.2633710801393728
+      },
+      "winter": {
+        "D": 0.0,
+        "N": 0.2581978319783198,
+        "T": 0.2581978319783198,
+        "X": 0.2581978319783198
+      },
+      "winter_minus_summer": {
+        "D": 0.0,
+        "N": -0.005173248161053028,
+        "T": -0.005173248161053028,
+        "X": -0.005173248161053028
+      },
+      "year": 2020
+    }
+  ],
+  "schema_version": 1,
+  "scope": "post-inspection source-derived geography/timing only; no E, true encounters or biological p-values",
+  "source_aggregate_sha256": {
+    "black_bear": "a7876dddbca670235bc310f4b0bc2577070ae0abd592245b4508e90bcd3ec931",
+    "turkey": "422d52a1665ede8c31bd35b9828aa0122dc0307c92c935919f475f65e952e1bf",
+    "white_tailed_deer": "fecfed6bc684bddc3feea88e83cfa413ee66ecc646503c4652a5bef8207a8875"
+  },
+  "source_run": "https://github.com/zuizui0223/batter/actions/runs/39414865136",
+  "time_alignment_definition": "one original GPS position per animal-date-common-clock-bin; same-cell match in same coarse source-clock bin, not a physical encounter"
+}
