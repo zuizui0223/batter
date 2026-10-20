@@ -1,9 +1,59 @@
 # Pattern-first cross-taxon movement individuality and ecological use (database programme)
 
 **New branch: `prospective/multitaxon-identity-ecology-v1`**  
-**Research status as of 20 October 2026:** Movebank's **437 published source packages** are fully censused and metadata-screened. Original animal-reference and positional CSV audits span diverse taxa. The fox pilot is now exactly reproduced, and **six source-months have paired descriptive movement-gain R and geographic-overlap X for the same 3–5 animals and heldout period**. A larger mule-deer source has now been acquired: **948,632 GPS rows from 135 animals**, with **38–99 animals per month meeting a coarse shared-context support screen across all 36 months of 2018–2020**. Deer movement effects have not been computed. There is no established cross-taxon individuality/resource-partitioning effect. Independently measured trophic E and encounter T remain unavailable. This is deliberately independent of the [original bat integration draft PR #99](https://github.com/zuizui0223/batter/pull/99), whose source records, source p-values and historical freeze remain unchanged.
+**Research status as of 20 October 2026:** Movebank's **437 published source packages** are fully censused and metadata-screened. Original animal-reference and positional CSV audits span diverse taxa. The fox pilot is exactly reproduced, with **six source-months of paired descriptive movement-gain R and geographic-overlap X for the same 3–5 animals and heldout period**. The larger mule-deer analysis is now complete for **all 36 months of 2018–2020**, using **836,636 cadence-matched steps** and 9–88 evaluated animals per month. Annual constant-cohort geographic overlap is higher in winter than summer in all 48 declared year/scale/origin settings. The personal movement model has a small positive same-record weighting gain in 27/36 months; this is descriptive model evidence, not a calibrated biological identity effect. Cross-taxon generality, independently measured environmental/resource exposure E and encounter T remain unestablished. This work is independent of the [original bat integration draft PR #99](https://github.com/zuizui0223/batter/pull/99).
 
-## 20 October 2026: larger original source acquired for the next comparison
+## 20 October 2026: completed mule-deer seasonal R/X analysis
+
+- [Full findings, all 36 months and reproduction commands](DEER_SEASONAL_RX_RESULT_2026_10_20.md),
+  [figure](DEER_SEASONAL_RX_FIGURE_2026_10_20.png),
+  [monthly CSV](DEER_SEASONAL_RX_MONTHLY_2026_10_20.csv),
+  [primary numerical outputs](DEER_SEASONAL_RX_RESULT_2026_10_20.json),
+  [144 additional R sensitivity scenarios](DEER_SEASONAL_RX_SENSITIVITY_2026_10_20.json),
+  [same-record comparator audit](DEER_EQUAL_DATA_AUDIT_2026_10_20.json).
+- Source: one source-labeled Sublette herd, **135 adult females**. Original GPS
+  and reference files match published MD5 and pinned SHA-256 receipts. Of 948,632
+  original GPS rows, 948,400 fall in 2018–2020. No individual migration labels,
+  quantitative GPS error or verified absolute UTC offset are available.
+- **836,636** same-animal/tag/date/month steps have 108–132-minute duration.
+  Every month is retained. Primary conditional net-displacement prediction uses
+  two calendar-half cross-fitting folds and **343,879 heldout steps**; each
+  monthly X result uses exactly those final R animals, with pair-shared-date
+  geographic occupancy weights.
+- Holding the X cohort constant within each year leaves **66/64/42 animals**.
+  At the unshifted 5-km grid, winter/summer mean overlap is **0.1692/0.0097**,
+  **0.0833/0.0279** and **0.0879/0.0265** in 2018/2019/2020. The winter-minus-summer
+  mean is positive at all four scales and four origins in all three years.
+  These are dependent sensitivity settings, and pair medians are zero in 2019
+  and 2020; the average does not imply every pair converges.
+- The original personal model beats a peer-only model in **35/36 months**
+  (mean CRPS gain +0.010343). That contrast adds focal training data. A transparent
+  **post-primary-inspection** audit compares the unchanged model with an
+  anonymous pool using the **same records**: **27/36 months**, mean +0.001093.
+  Paired seasonal personal-weighting gains are slightly negative in winter and
+  positive in summer in each year. Changing training precision, peer references
+  and unmeasured context remain possible explanations. The same-record audit
+  covers the 36 primary 5-km/origin-zero settings only.
+- The [design](DEER_SEASONAL_RX_DESIGN_2026_10_20.md) was recorded locally before
+  primary R/X inspection and uploaded with the results; it is not an external
+  preregistration. Independent weighted-CRPS and original-source geographic
+  reconstructions agree with stored results. No raw animal/tag identifiers,
+  exact tracking dates, coordinates or grid cells are published.
+
+Executable programs: [source preparation](deer_source_pipeline_v1.py),
+[geographic occupancy](deer_geography_v1.py),
+[primary and sensitivity analysis](deer_seasonal_rx_v1.py),
+[same-record audit](deer_equal_data_audit_v1.py) and
+[figure generation](plot_deer_seasonal_rx_v1.py).
+
+The [next acquisition batch](NEXT_COMPARATIVE_SOURCE_BATCH_2026_10_20.json)
+contains 19 packages selected by an exact archived abstract-prefix match,
+including the completed deer source. Of the **18 new metadata candidates**,
+**nine have CC0 and three CC BY metadata**, with six CC BY-NC. They are not yet
+eligible cohorts or independent source replications; full source support and
+independence remain to be checked.
+
+## Earlier 20 October 2026: original-file acquisition and coarse support screen
 
 The [deer/stork original-file receipt](NEXT_SOURCE_STORK_DEER_RECEIPT_2026_10_20.json)
 and [reproduction program](next_source_stork_deer_receipt_v1.py) extend the existing
@@ -37,10 +87,9 @@ effect. The source README allows **UTC or GPS time**; its absolute clock basis
 has not been resolved. The receipt separately reports same-date shared-context
 support, which can be zero for an otherwise supported animal.
 
-The next substantive comparison is deer R/X after source-specific cohort,
-cadence and temporal-support choices are fixed. The present screen does not
-establish the number of animals that will survive heldout training/evaluation
-or allow the fox identity test to be copied unchanged.
+This acquisition-stage screen preceded the completed deer R/X analysis above.
+Its coarse support counts differ from the final heldout analysis cohorts and
+did not justify transferring the fox identity test unchanged.
 
 For white storks ([DOI 10.5441/001/1.4192t2j4_2](https://doi.org/10.5441/001/1.4192t2j4_2)),
 the original reference file is verified: **109 deployment rows, 108 animal IDs
@@ -130,10 +179,10 @@ The [cross-taxon hypothesis and matched-sample statistical plan](CROSS_TAXON_HYP
 
 ## Analysis and publication boundary
 
-1. **Next:** audit all 437 original source package bitstream/reference records for real GPS events, repeated animals, deployments, UTC, locations, outlier flags, independent site/study/sampling-year populations, source permissions. Publish every DOI's eligibility or reason for rejection. DO NOT claim a biological effect.
-2. Freeze **identity information G** from individual-trained but held-out conditional step choices, using the same covariates and effort as a pooled conspecific model, and an appropriate block-permuted null.
-3. Independently measure **environmental/resource use** or **physically opportunity-corrected simultaneous co-use** in the source datasets where those ecological quantities are actually identifiable, with disjoint heldout time blocks and dyad dependence.
-4. Only if adequate **independent source populations across ≥3 taxonomic groups** and adequate D3 ecological endpoints survive, fit a multilevel source/clade/habitat model testing moderators of individuality-to-segregation. Report negative and nonidentifiable populations openly.
+1. **Next:** continue actual source analysis through the reproducible comparative acquisition queue. Verify real sensors, repeated animals, cadence, deployments, clock basis and source-population independence before estimating each cohort. Retain the full 437-package census and report exclusions without treating metadata counts as biological replication.
+2. Compare source-specific heldout **R** with the same training records and comparable context support, and report **X** at declared scales and origins. The deer same-record comparator is a descriptive model contrast; calibrated biological identity evidence requires additional defensible exchangeability or model assumptions. Do not numerically pool CRPS with the fox log-score endpoint.
+3. Measure **environmental/resource exposure E** and **simultaneous co-use T** separately where the source supports them, accounting for opportunity and dyad dependence. Missing E or T does not erase an estimable R/X pattern and must not be substituted with geographic overlap.
+4. A cross-taxon pattern requires independent eligible populations beyond this single deer source and the small fox pilot. The earlier protocol's ≥3-taxonomic-group and D3-endpoint conditions apply to its secondary individuality-to-resource-segregation model. Report negative and nonidentifiable populations alongside positive descriptions.
 5. A vertically measured **3D tier** applies only to properly calibrated flight height or dive depth; never pretend terrestrial 2D GPS provides an additional altitude niche axis.
 
-**No cross-taxon biology result or journal-ready universal law is claimed at this stage.** The source metadata census and mathematical protocol are completed research infrastructure for the first data-eligibility screen.
+**No cross-taxon generality or universal law is established at this stage.** The programme now includes source-derived fox and deer R/X descriptions and a turtle X-only result, with explicit limits on their comparability and ecological meaning.
