@@ -116,6 +116,37 @@ at 5 km without origin shift and negative at 1 km, shifted 5 km
 and 10 km**. This is a concrete case of grid-dependent average
 overlap coexisting with opposed, stable component signs.
 
+### A further boundary: apparent pair persistence changes with observation effort
+
+The exact *same original eligible pairs* are carried into k=1 sampling,
+but the number of evaluated months, common dates and fixes per day is
+standardized. The Jaccard index of active spatial-overlap dyads
+(positive in both seasons / positive in either season) changes:
+
+| Source/year | Original V2 geographic edge Jaccard | Equal-effort k=1 average across 24 draws |
+|---|---:|---:|
+| Turkey 2019 | 0.895 | 0.821 |
+| Turkey 2020 | 0.476 | 0.313 |
+| Black bear 2020 | 0.389 | 0.540 |
+| White-tailed deer 2019 | 0.467 | 0.675 |
+| White-tailed deer 2020 | 0.667 | 0.670 |
+
+This is evidence that an estimated *edge-retention value* is itself
+observation-protocol dependent even if key signs of the incidence/strength
+decomposition persist. It is **not** an isolated causal effect of fix
+frequency: the standardization changes months and pair-shared dates in
+addition to fixes per day. No Jaccard persistence constant should be
+compared across species without matching observation support. This
+restriction is consistent with previously established general concerns
+about tracking sampling and space-use estimation, e.g.
+[Terayama et al. 2023](https://doi.org/10.1155/2023/1384365) and
+[He et al. 2023](https://doi.org/10.1111/2041-210X.13999).
+Seasonally different overlap *number and strength* are also not
+conceptually unprecedented (e.g.
+[wild-pig GPS study, 2022](https://doi.org/10.1038/s41598-022-07297-y)).
+Our independent addition is the transparent, cross-source,
+observation-matched numerical configuration comparison.
+
 ## 4. What observation balancing does NOT solve
 
 A positive edge simply means overlap of sampled 2D GPS cell-usage
