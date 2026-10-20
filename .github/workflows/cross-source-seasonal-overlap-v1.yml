@@ -1,0 +1,40 @@
+name: Exploratory source-verified cross-species seasonal X (aggregate only)
+
+on:
+  push:
+    branches:
+      - prospective/multitaxon-identity-ecology-v1
+    paths:
+      - 'prospective/multitaxon_individuality/cross_source_seasonal_overlap_v1.py'
+      - 'prospective/multitaxon_individuality/tests/test_cross_source_seasonal_overlap_v1.py'
+      - '.github/workflows/cross-source-seasonal-overlap-v1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  source-verification:
+    runs-on: ubuntu-latest
+    timeout-minutes: 17
+    env:
+      PYTHONPATH: prospective/multitaxon_individuality
+    steps:
+      - name: Checkout the exact source-analysis branch
+        uses: actions/checkout@v4
+      - name: Verify all synthetic equality and exclusion contracts
+        run: |
+          python3 -m py_compile prospective/multitaxon_individuality/cross_source_seasonal_overlap_v1.py
+          python3 -m unittest discover -s prospective/multitaxon_individuality/tests -p 'test_cross_source_seasonal_overlap_v1.py' -v
+      - name: Retrieve WHOLE originals, check source MD5 and run bounded seasonal X
+        run: |
+          python3 prospective/multitaxon_individuality/cross_source_seasonal_overlap_v1.py \
+            --out prospective/multitaxon_individuality/CROSS_SOURCE_SEASONAL_X_EXPLORATORY_ACTION.json
+      - name: Upload aggregate-only stage report without GPS tracks or animal identifiers
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: seasonal-x-original-source-audit
+          path: prospective/multitaxon_individuality/CROSS_SOURCE_SEASONAL_X_EXPLORATORY_ACTION.json
+          if-no-files-found: warn
+          retention-days: 7
