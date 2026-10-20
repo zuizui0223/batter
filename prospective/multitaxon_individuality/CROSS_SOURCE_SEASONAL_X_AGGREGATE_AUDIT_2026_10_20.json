@@ -1,0 +1,438 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-10-20",
+  "audit_type": "INDEPENDENT_AGGREGATE_ARITHMETIC_AND_SUPPORT_AUDIT_NOT_RAW_GPS_REANALYSIS",
+  "source_file": "prospective/multitaxon_individuality/CROSS_SOURCE_SEASONAL_X_EXPLORATORY_ACTION.json",
+  "source_git_blob_sha": "ad029188e4878ad8812ab72ea383bf93bc3e6e68",
+  "source_commit_sha": "c1c8d1116f814c2bb4b8adcb07f4b05cfd040a79",
+  "source_action_success_url": "https://github.com/zuizui0223/batter/actions/runs/39382193098",
+  "n_sources": 4,
+  "n_available_comparisons": 9,
+  "n_arithmetic_or_support_violations": 0,
+  "guarantees": [
+    "All reported observed rows have a matched dyad count and exact four-state sum",
+    "All conditional positive-overlap means reconcile with incidence times strength",
+    "Symmetric incidence/strength decomposition reconciles within 1e-10 whenever identifiable",
+    "Undefined conditional positive strength is not imputed when all pairs have zero overlap",
+    "No source animal IDs or GPS locations added"
+  ],
+  "interpretation_limits": [
+    "Source-wide dyads not proven same local ecological population; all reference site-label counts are zero",
+    "No diet E, true encounters T, or other-taxon conditional movement R",
+    "Grid dependence and sampling cadence not fully controlled",
+    "Year/scenario/dyad not independent replication; no p-values"
+  ],
+  "source_status": [
+    {
+      "label": "turkey",
+      "doi": "10.5441/001/1.671",
+      "status": "COMPLETE_EXPLORATORY_GEOGRAPHIC_X",
+      "original_rows": 796419,
+      "source_fixed_year_positions": 435214,
+      "reference_site_labels": 0,
+      "fully_md5_checked_originals": 2,
+      "verified_md5_all": true
+    },
+    {
+      "label": "moose",
+      "doi": "10.5441/001/1.714",
+      "status": "STOP_UNPARSEABLE_SOURCE_TIMESTAMPS",
+      "original_rows": 52649,
+      "source_fixed_year_positions": 0,
+      "reference_site_labels": 0,
+      "fully_md5_checked_originals": 2,
+      "verified_md5_all": true
+    },
+    {
+      "label": "moose_snowy_range",
+      "doi": "10.5441/001/1.700",
+      "status": "COMPLETE_EXPLORATORY_GEOGRAPHIC_X",
+      "original_rows": 123399,
+      "source_fixed_year_positions": 123399,
+      "reference_site_labels": 0,
+      "fully_md5_checked_originals": 2,
+      "verified_md5_all": true
+    },
+    {
+      "label": "black_bear",
+      "doi": "10.5441/001/1.706",
+      "status": "COMPLETE_EXPLORATORY_GEOGRAPHIC_X",
+      "original_rows": 156366,
+      "source_fixed_year_positions": 148394,
+      "reference_site_labels": 0,
+      "fully_md5_checked_originals": 2,
+      "verified_md5_all": true
+    }
+  ],
+  "scenarios": [
+    {
+      "source": "turkey",
+      "doi": "10.5441/001/1.671",
+      "year": 2019,
+      "window": "winter_summer",
+      "n_animals": 19,
+      "n_dyads": 171,
+      "positive_first": 76,
+      "positive_second": 68,
+      "states": {
+        "both_positive": 68,
+        "both_zero": 95,
+        "summer_only": 0,
+        "winter_only": 8
+      },
+      "mean_first": 0.316919332710342,
+      "mean_second": 0.2243281427377744,
+      "difference": 0.0925911899725676,
+      "incidence": 0.02987573798171371,
+      "conditional_strength": 0.0627154519908539
+    },
+    {
+      "source": "turkey",
+      "doi": "10.5441/001/1.671",
+      "year": 2019,
+      "window": "early_late",
+      "n_animals": 31,
+      "n_dyads": 465,
+      "positive_first": 177,
+      "positive_second": 167,
+      "states": {
+        "both_positive": 165,
+        "both_zero": 286,
+        "summer_only": 2,
+        "winter_only": 12
+      },
+      "mean_first": 0.29299077456550116,
+      "mean_second": 0.15378328378382655,
+      "difference": 0.1392074907816746,
+      "incidence": 0.012880865486345264,
+      "conditional_strength": 0.12632662529532931
+    },
+    {
+      "source": "turkey",
+      "doi": "10.5441/001/1.671",
+      "year": 2020,
+      "window": "winter_summer",
+      "n_animals": 8,
+      "n_dyads": 28,
+      "positive_first": 21,
+      "positive_second": 10,
+      "states": {
+        "both_positive": 10,
+        "both_zero": 7,
+        "summer_only": 0,
+        "winter_only": 11
+      },
+      "mean_first": 0.49619360028494147,
+      "mean_second": 0.2122008876441395,
+      "difference": 0.28399271264080195,
+      "incidence": 0.2466659549455709,
+      "conditional_strength": 0.037326757695231
+    },
+    {
+      "source": "turkey",
+      "doi": "10.5441/001/1.671",
+      "year": 2020,
+      "window": "early_late",
+      "n_animals": 9,
+      "n_dyads": 36,
+      "positive_first": 28,
+      "positive_second": 28,
+      "states": {
+        "both_positive": 28,
+        "both_zero": 8,
+        "summer_only": 0,
+        "winter_only": 0
+      },
+      "mean_first": 0.53439726776726,
+      "mean_second": 0.2914684490134165,
+      "difference": 0.24292881875384353,
+      "incidence": 0,
+      "conditional_strength": 0.2429288187538435
+    },
+    {
+      "source": "turkey",
+      "year": 2019,
+      "window": "winter_summer",
+      "sensitivity_summary": {
+        "year": 2019,
+        "window": "winter_summer",
+        "n_scenarios": 16,
+        "positive": 15,
+        "negative": 1,
+        "zero": 0,
+        "min": -0.036471226487356456,
+        "max": 0.17458010007315128
+      }
+    },
+    {
+      "source": "turkey",
+      "year": 2019,
+      "window": "early_late",
+      "sensitivity_summary": {
+        "year": 2019,
+        "window": "early_late",
+        "n_scenarios": 16,
+        "positive": 16,
+        "negative": 0,
+        "zero": 0,
+        "min": 0.058992133568105065,
+        "max": 0.1392074907816746
+      }
+    },
+    {
+      "source": "turkey",
+      "year": 2020,
+      "window": "winter_summer",
+      "sensitivity_summary": {
+        "year": 2020,
+        "window": "winter_summer",
+        "n_scenarios": 16,
+        "positive": 16,
+        "negative": 0,
+        "zero": 0,
+        "min": 0.11770088506759757,
+        "max": 0.39285714285714285
+      }
+    },
+    {
+      "source": "turkey",
+      "year": 2020,
+      "window": "early_late",
+      "sensitivity_summary": {
+        "year": 2020,
+        "window": "early_late",
+        "n_scenarios": 16,
+        "positive": 16,
+        "negative": 0,
+        "zero": 0,
+        "min": 0.16752631094206155,
+        "max": 0.38112463155062903
+      }
+    },
+    {
+      "source": "moose_snowy_range",
+      "doi": "10.5441/001/1.700",
+      "year": 2019,
+      "window": "early_late",
+      "n_animals": 22,
+      "n_dyads": 231,
+      "positive_first": 20,
+      "positive_second": 21,
+      "states": {
+        "both_positive": 15,
+        "both_zero": 205,
+        "summer_only": 6,
+        "winter_only": 5
+      },
+      "mean_first": 0.029134080743521844,
+      "mean_second": 0.023696272850064797,
+      "difference": 0.005437807893457047,
+      "incidence": -0.0012925489912086383,
+      "conditional_strength": 0.006730356884665687
+    },
+    {
+      "source": "moose_snowy_range",
+      "doi": "10.5441/001/1.700",
+      "year": 2020,
+      "window": "early_late",
+      "n_animals": 16,
+      "n_dyads": 120,
+      "positive_first": 9,
+      "positive_second": 12,
+      "states": {
+        "both_positive": 5,
+        "both_zero": 104,
+        "summer_only": 7,
+        "winter_only": 4
+      },
+      "mean_first": 0.015042857089797919,
+      "mean_second": 0.017870841125136355,
+      "difference": -0.0028279840353384357,
+      "incidence": -0.004740997988941699,
+      "conditional_strength": 0.0019130139536032635
+    },
+    {
+      "source": "moose_snowy_range",
+      "year": 2019,
+      "window": "winter_summer",
+      "sensitivity_summary": {
+        "year": 2019,
+        "window": "winter_summer",
+        "n_scenarios": 0,
+        "positive": 0,
+        "negative": 0,
+        "zero": 0,
+        "min": null,
+        "max": null
+      }
+    },
+    {
+      "source": "moose_snowy_range",
+      "year": 2019,
+      "window": "early_late",
+      "sensitivity_summary": {
+        "year": 2019,
+        "window": "early_late",
+        "n_scenarios": 16,
+        "positive": 12,
+        "negative": 4,
+        "zero": 0,
+        "min": -0.0032565231172724737,
+        "max": 0.00789566613415086
+      }
+    },
+    {
+      "source": "moose_snowy_range",
+      "year": 2020,
+      "window": "winter_summer",
+      "sensitivity_summary": {
+        "year": 2020,
+        "window": "winter_summer",
+        "n_scenarios": 0,
+        "positive": 0,
+        "negative": 0,
+        "zero": 0,
+        "min": null,
+        "max": null
+      }
+    },
+    {
+      "source": "moose_snowy_range",
+      "year": 2020,
+      "window": "early_late",
+      "sensitivity_summary": {
+        "year": 2020,
+        "window": "early_late",
+        "n_scenarios": 16,
+        "positive": 4,
+        "negative": 12,
+        "zero": 0,
+        "min": -0.009809780929427761,
+        "max": 0.009469070496509066
+      }
+    },
+    {
+      "source": "black_bear",
+      "doi": "10.5441/001/1.706",
+      "year": 2019,
+      "window": "winter_summer",
+      "n_animals": 2,
+      "n_dyads": 1,
+      "positive_first": 0,
+      "positive_second": 0,
+      "states": {
+        "both_positive": 0,
+        "both_zero": 1,
+        "summer_only": 0,
+        "winter_only": 0
+      },
+      "mean_first": 0,
+      "mean_second": 0,
+      "difference": 0,
+      "incidence": null,
+      "conditional_strength": null
+    },
+    {
+      "source": "black_bear",
+      "doi": "10.5441/001/1.706",
+      "year": 2020,
+      "window": "winter_summer",
+      "n_animals": 17,
+      "n_dyads": 118,
+      "positive_first": 8,
+      "positive_second": 17,
+      "states": {
+        "both_positive": 7,
+        "both_zero": 100,
+        "summer_only": 10,
+        "winter_only": 1
+      },
+      "mean_first": 0.031016761502578174,
+      "mean_second": 0.030494826739500967,
+      "difference": 0.0005219347630772073,
+      "incidence": -0.025519088364479893,
+      "conditional_strength": 0.026041023127557097
+    },
+    {
+      "source": "black_bear",
+      "doi": "10.5441/001/1.706",
+      "year": 2020,
+      "window": "early_late",
+      "n_animals": 13,
+      "n_dyads": 78,
+      "positive_first": 4,
+      "positive_second": 7,
+      "states": {
+        "both_positive": 4,
+        "both_zero": 71,
+        "summer_only": 3,
+        "winter_only": 0
+      },
+      "mean_first": 0.035355047868952195,
+      "mean_second": 0.036729275801856434,
+      "difference": -0.0013742279329042387,
+      "incidence": -0.02112870205125488,
+      "conditional_strength": 0.01975447411835064
+    },
+    {
+      "source": "black_bear",
+      "year": 2019,
+      "window": "winter_summer",
+      "sensitivity_summary": {
+        "year": 2019,
+        "window": "winter_summer",
+        "n_scenarios": 16,
+        "positive": 0,
+        "negative": 1,
+        "zero": 15,
+        "min": -0.032400700077553496,
+        "max": 0
+      }
+    },
+    {
+      "source": "black_bear",
+      "year": 2019,
+      "window": "early_late",
+      "sensitivity_summary": {
+        "year": 2019,
+        "window": "early_late",
+        "n_scenarios": 0,
+        "positive": 0,
+        "negative": 0,
+        "zero": 0,
+        "min": null,
+        "max": null
+      }
+    },
+    {
+      "source": "black_bear",
+      "year": 2020,
+      "window": "winter_summer",
+      "sensitivity_summary": {
+        "year": 2020,
+        "window": "winter_summer",
+        "n_scenarios": 16,
+        "positive": 9,
+        "negative": 7,
+        "zero": 0,
+        "min": -0.016841342894501878,
+        "max": 0.0342825075881272
+      }
+    },
+    {
+      "source": "black_bear",
+      "year": 2020,
+      "window": "early_late",
+      "sensitivity_summary": {
+        "year": 2020,
+        "window": "early_late",
+        "n_scenarios": 16,
+        "positive": 8,
+        "negative": 8,
+        "zero": 0,
+        "min": -0.010537333168320414,
+        "max": 0.03994245884156239
+      }
+    }
+  ]
+}
