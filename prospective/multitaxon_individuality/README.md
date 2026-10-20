@@ -1,5 +1,24 @@
 # Pattern-first cross-taxon movement individuality and ecological use (database programme)
 
+## 20 October 2026: source-clock-matched temporal sharing versus 2D space
+
+An [original GPS source-clock analysis](SAME_CLOCK_BIN_COUSE_RESULT_2026_10_20.md)
+now independently measures X (the same dates' pooled geographic overlap),
+T6/T3 (overlap in identical 6-hour/3-hour source-clock bins) and D = T−N,
+where N is the exact within-day time-bin-relabeling expectation. All 3
+original published Movebank GPS/reference archives passed publisher MD5,
+previously pinned SHA256 and an independent exact source-time/position QC
+reconstruction. Five source/year cohorts have 480 source/year/clock/grid/seed
+aggregate outcomes; black bear 2019 remains STOP for inadequate supported
+dyads. At 1 km, turkey 2019/2020 and white-tailed deer 2019/2020 have higher
+winter D in all 12 observation draws under both 6-hour and 3-hour binning.
+In white-tailed deer, **winter geographic X is actually lower than summer
+at 1 km**, so the temporal ordering cannot be inferred from X's direction.
+At primary 5 km spatial resolution this pattern is not stable across all
+cohorts; no taxon-general winter time-coincidence law or actual encounters
+are claimed. Verified aggregate outputs, source-native code, fixed
+post-inspection design, CI and synthetic controls are linked in the report.
+
 ## 20 October 2026: GPS effort-standardized original-source seasonal X audit
 
 Three source-matched published GPS datasets (wild turkey, black bear and

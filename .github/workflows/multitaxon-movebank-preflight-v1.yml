@@ -98,3 +98,18 @@ jobs:
           assert a['all_source_receipts_pinned']
           print('PASS three original-source receipts; five eligible source-year cohorts; 960 seed-grid evaluations, no raw tracks')
           PY
+      - name: Validate checksum-pinned 480 source-clock coincidence scenarios (aggregate only)
+        run: |
+          python3 prospective/multitaxon_individuality/validate_same_clock_bin_results_v1.py \
+            --input-dir prospective/multitaxon_individuality \
+            --output /tmp/validated_clock_source_summary.json
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          a=json.loads(Path('/tmp/validated_clock_source_summary.json').read_text())
+          b=json.loads(Path('prospective/multitaxon_individuality/SAME_CLOCK_BIN_COUSE_SUMMARY_2026_10_20.json').read_text())
+          assert a==b
+          assert a['n_sources']==3 and a['n_grid_seed_aggregate_results']==480
+          print('PASS original GPS receipts and exact X/T/N/D across 480 dependent sensitivity scenarios')
+          PY
+
