@@ -1,5 +1,21 @@
 # Pattern-first cross-taxon movement individuality and ecological use (database programme)
 
+## 20 October 2026: source-derived overlap edge retention (post-inspection)
+
+The [edge topology audit](EDGE_TOPOLOGY_CROSS_SOURCE_2026_10_20.md) now contrasts
+*which matched individual pairs share geographic space* separately from the
+mean overlap X. The [aggregate-only reference ledger](EDGE_TOPOLOGY_REFERENCE_2026_10_20.json),
+[pinned-archive verifier](validate_edge_topology_v1.py), and
+[synthetic and receipt tests](tests/test_edge_topology_v1.py) check 80 source/year/window/risk-set
+strata and 1,280 spatial-grid scenarios. Turkey 2019/2020 seasonal differences
+are configured differently; bear 2020 has more summer-overlapping dyads but
+weaker positive-overlap strength; white-tailed deer 2019 replaces some pairs
+without changing edge density, whereas 2020's incidence and strength move
+in opposite directions across all 16 settings. These are *exploratory
+source-specific geographic X descriptions only*. No social encounters, food
+segregation, population-independent cross-taxon generality, or other-taxon R
+has been inferred.
+
 ## 20 October 2026: source-verified turkey, bear and moose seasonal X comparison
 
 The [independent-source seasonal sharing synthesis](CROSS_SPECIES_SEASONAL_NETWORK_SYNTHESIS_2026_10_20.md) now covers original-file-MD5-verified published GPS archives from wild turkey, black bear and two moose sources. Full source-level output and all 16 grid-width/origin sensitivities are archived in [aggregate JSON](CROSS_SOURCE_SEASONAL_X_EXPLORATORY_ACTION.json) and [comparison table](CROSS_SOURCE_SEASONAL_X_EXPLORATORY_ACTION.md). For turkey 2019 and 2020 the mean geographic X is higher in winter on the reference 5-km grid, but the change primarily involves conditional-positive strength in 2019 and dyad incidence in 2020. For black bear 2020, an increase in the proportion of sharing pairs is offset by weaker conditional sharing strength, nearly eliminating the mean seasonal X difference. These are source-level descriptive contrasts, **not** independent populations or niche-partitioning mechanisms. Snowy Range moose supports only a separate Jan–Feb vs Mar–Apr contrast with opposite signs in 2019 and 2020; the Bighorn archive remains timestamp-format STOP. Other-taxon R, resource E and encounters T are not measured, and numeric pooling with bat/deer R is prohibited.

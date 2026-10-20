@@ -73,3 +73,15 @@ jobs:
           assert all(not row["individual_time_block_eligibility_verified"] for row in s["records"])
           print("PASS no false biological eligibility or source-specific effects promoted from metadata/reference/Argos-only")
           PY
+      - name: Check seasonal overlap edge topology from pinned source aggregates
+        run: |
+          PYTHONPATH=prospective/multitaxon_individuality python3 -m unittest discover -s prospective/multitaxon_individuality/tests -p 'test_edge_topology_v1.py' -v
+          python3 prospective/multitaxon_individuality/validate_edge_topology_v1.py --json-out /tmp/verified_edge_topology.json
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          result=json.loads(Path('/tmp/verified_edge_topology.json').read_text())
+          assert result['n_groups']==80 and result['n_settings']==1280
+          assert result['n_stopped_sources']==1 and len(result['focus'])==5
+          print('PASS 1280 source aggregate scenarios and 6 synthetic/source-receipt tests; no original animal tracks')
+          PY
