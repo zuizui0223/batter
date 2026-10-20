@@ -166,7 +166,11 @@ def _validate_source(path,source):
 def validate(directory):
     aggregate=[]
     for source in SOURCES:
-        path=Path(directory)/(source+'_clock_couse_20261020.json')
+        staging=Path(directory)/(source+'_clock_couse_20261020.json')
+        published=Path(directory)/('SAME_CLOCK_BIN_COUSE_'+source.upper()+'_2026_10_20.json')
+        if staging.exists() and published.exists() and staging.read_bytes()!=published.read_bytes():
+            raise AssertionError('Staged versus published source aggregates differ')
+        path=published if published.exists() else staging
         aggregate.extend(_validate_source(path,source))
     if len([r for r in aggregate if r['status']=='DESCRIPTIVE_ORIGINAL_SOURCE_TIMED'])!=40:
         raise AssertionError('Expected 5 eligible source-years × 2 time widths × 4 grids')
