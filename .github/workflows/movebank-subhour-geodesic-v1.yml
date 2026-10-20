@@ -1,0 +1,54 @@
+name: Original GPS subhour grid-free geodesic proximity proxy (source-only)
+
+on:
+  push:
+    branches:
+      - prospective/multitaxon-identity-ecology-v1
+    paths:
+      - "prospective/multitaxon_individuality/subhour_geodesic_proximity_v1.py"
+      - "prospective/multitaxon_individuality/tests/test_subhour_geodesic_proximity_v1.py"
+      - "prospective/multitaxon_individuality/SUBHOUR_GEODESIC_PROXIMITY_DESIGN_2026_10_20.md"
+      - ".github/workflows/movebank-subhour-geodesic-v1.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify_geodesic_and_pairing_contracts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run matching, null and biological STOP synthetic tests
+        run: |
+          PYTHONPATH=prospective/multitaxon_individuality python3 -m unittest discover \
+            -s prospective/multitaxon_individuality/tests \
+            -p 'test_subhour_geodesic_proximity_v1.py' -v
+
+  complete_original_source_subhour_proximity:
+    needs: verify_geodesic_and_pairing_contracts
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    strategy:
+      fail-fast: false
+      matrix:
+        source: [turkey, black_bear, white_tailed_deer]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify full original MD5/SHA256 and exact native source-GPS pairing
+        env:
+          SOURCE: ${{ matrix.source }}
+        run: |
+          mkdir -p /tmp/verified-geodesic
+          python3 prospective/multitaxon_individuality/subhour_geodesic_proximity_v1.py \
+            --source "$SOURCE" \
+            --output "/tmp/verified-geodesic/${SOURCE}_subhour_geodesic.json"
+      - name: Upload only year/season/radius/seed aggregates (never tracks)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: verified-geodesic-${{ matrix.source }}
+          path: /tmp/verified-geodesic/*.json
+          if-no-files-found: warn
+          retention-days: 15
