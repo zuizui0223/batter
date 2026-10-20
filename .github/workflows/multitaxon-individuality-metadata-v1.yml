@@ -28,7 +28,7 @@ jobs:
       - name: Independently audit wider GPS/GSM metadata screen and 8 real source reference metadata pilots
         run: python3 prospective/multitaxon_individuality/validate_movebank_437_sensor_triage_v1.py
       - name: Test privacy-safe streaming GPS CSV/GZIP preflight on invented animal-day records
-        run: python3 -m unittest discover -s prospective/multitaxon_individuality/tests -p 'test_*.py' -v
+        run: PYTHONPATH=prospective/multitaxon_individuality python3 -m unittest discover -s prospective/multitaxon_individuality/tests -p 'test_*.py' -v
       - name: Test exploratory 2D GPS cohort overlap on synthetic invented tracks only
         run: python3 prospective/multitaxon_individuality/source_2d_overlap_cli_v1.py --self-test
       - name: Confirm the complete source census still reflects source metadata, not independently eligible biology
@@ -48,3 +48,4 @@ jobs:
           assert not result["source_positions_exported"] and not result["individual_identifiers_exported"]
           print("PASS: 437 published package metadata; public raw GPS are never committed or fetched in CI; empirical X aggregates are explicitly exploratory, not universal ecological partitioning")
           PY
+
