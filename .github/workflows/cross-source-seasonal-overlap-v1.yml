@@ -39,8 +39,8 @@ jobs:
           path=root/"CROSS_SOURCE_SEASONAL_X_EXPLORATORY_ACTION.json"
           data=json.loads(path.read_text())
           assert data["schema_version"]==1
-          assert len(data["sources"])==3
-          assert [s["label"] for s in data["sources"]]==["turkey","moose","black_bear"]
+          assert len(data["sources"])==4
+          assert [s["label"] for s in data["sources"]]==["turkey","moose","moose_snowy_range","black_bear"]
           assert not any("individual-local-identifier" in k for k in data)
           sha=hashlib.sha256((root/"cross_source_seasonal_overlap_v1.py").read_bytes()).hexdigest()
           lines=["# Original-source seasonal X: aggregate-only execution record", "",
@@ -93,4 +93,5 @@ jobs:
           path: prospective/multitaxon_individuality/CROSS_SOURCE_SEASONAL_X_EXPLORATORY_ACTION.json
           if-no-files-found: warn
           retention-days: 7
+
 

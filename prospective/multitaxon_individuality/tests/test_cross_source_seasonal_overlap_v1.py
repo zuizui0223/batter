@@ -124,6 +124,8 @@ class TestSourceGeography(unittest.TestCase):
             self.assertEqual(audit['filter_counts']['identical_duplicate_removed'],1)
             self.assertEqual(audit['reference_animals'],1)
             self.assertEqual(audit['source_clock_verified_utc'],False)
+            self.assertEqual(audit['source_calendar_years_parsed_before_position_qc'], {'2019':2})
+            self.assertIn('timestamp', audit['source_columns'])
 
     def test_zip_ignores_macos_metadata_but_requires_real_csv(self):
         with tempfile.TemporaryDirectory() as temp:

@@ -30,6 +30,7 @@ API = 'https://datarepository.movebank.org/server/api/core/'
 SOURCES = [
     ('turkey', 'dd064947-25b7-46a2-8976-adfc488750bc', '10.5441/001/1.671', 'Meleagris gallopavo'),
     ('moose', '26a9d940-906d-490b-a87d-02be51e5e21f', '10.5441/001/1.714', 'Alces alces'),
+    ('moose_snowy_range', '6857a715-9703-40fe-b306-43464f65a35c', '10.5441/001/1.700', 'Alces alces'),
     ('black_bear', '89b8132d-fc88-498f-9040-39643b387dd4', '10.5441/001/1.706', 'Ursus americanus'),
 ]
 YEARS = (2019, 2020)
@@ -168,8 +169,11 @@ def _source_year_records(gps_paths, reference_path, taxon):
     by_animal_timestamp = {}
     sensor_counts = Counter()
     all_taxa = Counter()
+    source_calendar_years = Counter()
+    observed_columns = set()
     for path, filename in gps_paths:
         for row in _read_csv(path, filename):
+            observed_columns.update(row.keys())
             observation_counts['original_rows'] += 1
             animal = (row.get('individual-local-identifier') or '').strip()
             tag = (row.get('tag-local-identifier') or '').strip()
@@ -192,11 +196,16 @@ def _source_year_records(gps_paths, reference_path, taxon):
                 continue
             try:
                 dt = _parse_time(row['timestamp'])
+                source_calendar_years[str(dt.year)] += 1
+            except (ValueError, KeyError, TypeError):
+                observation_counts['invalid_timestamp_removed'] += 1
+                continue
+            try:
                 lat, lon = float(row['location-lat']), float(row['location-long'])
                 if not all(map(math.isfinite, (lat, lon))) or not -90 <= lat <= 90 or not -180 <= lon <= 180:
                     raise ValueError
             except (ValueError, KeyError, TypeError):
-                observation_counts['invalid_position_or_clock_removed'] += 1
+                observation_counts['invalid_position_removed'] += 1
                 continue
             if dt.year not in YEARS:
                 observation_counts['outside_fixed_years_removed'] += 1
@@ -224,6 +233,8 @@ def _source_year_records(gps_paths, reference_path, taxon):
                'reference_sexes':dict(ref_sexes),
                'sensor_row_counts':dict(sensor_counts),
                'taxon_row_counts':dict(all_taxa),
+               'source_calendar_years_parsed_before_position_qc':dict(sorted(source_calendar_years.items())),
+               'source_columns':sorted(observed_columns),
                'filter_counts':dict(observation_counts),
                'source_clock_verified_utc':False,
                'source_sites_not_harmonized':True}
@@ -396,7 +407,7 @@ def main():
     selected=[s for s in SOURCES if args.only is None or s[0] in args.only]
     summary={'schema_version':1,'analysis_date':'2026-10-20',
              'registration_status':'Post-existing exploratory selection. Script fixed before this run; NOT independent preregistration.',
-             'source_registry_selection':'3 previously queued sources, not favorable-effect sampling',
+             'source_registry_selection':'Three prior metadata candidates plus Snowy Range moose added after Bighorn Mountain parse/coverage failure; post-inspection exploratory choice, not independent prospective replication',
              'years':YEARS,'windows':{k:{'season1':w,'season2':s} for k,(w,s) in WINDOWS.items()},
              'grids_km':GRIDS_KM,'origins':ORIGINS,
              'controls':{'month_pair_same_source_calendar_dates':MIN_SHARED_DATES_PER_MONTH,
