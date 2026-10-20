@@ -79,5 +79,48 @@ class TestEdgeTopology(unittest.TestCase):
         self.assertEqual(by[('turkey',2020)]['reference']['second_already_in_first'],1)
 
 
+    def test_published_reference_json_exactly_matches_all_five_source_comparisons(self):
+        import json
+        root=Path(__file__).resolve().parents[1]
+        source=verify_zip(root/'CROSS_SOURCE_NEARBY_DYAD_V2_FULL_AGGREGATES_2026_10_20.zip')
+        saved=json.loads((root/'EDGE_TOPOLOGY_REFERENCE_2026_10_20.json').read_text())
+        self.assertEqual(saved['coverage']['all_grid_settings_checked'],source['n_settings'])
+        self.assertEqual(saved['coverage']['focused_winter_summer_cohorts'],len(source['focus']))
+        indexed={(r['source'],r['year']):r for r in source['focus']}
+        self.assertEqual(len(saved['results']),len(indexed))
+        for row in saved['results']:
+            key=(row['source'],row['year'])
+            expected=indexed.pop(key)
+            ref=expected['reference']
+            self.assertEqual(row['n_dyads'],ref['n_pairs'])
+            for stored,derived in (
+                (row['overlap_mean_winter'],ref['mean_first']),
+                (row['overlap_mean_summer'],ref['mean_second']),
+                (row['delta_X_winter_minus_summer'],ref['delta']),
+                (row['decomposition']['incidence_component'],ref['incidence']),
+                (row['decomposition']['conditional_strength_component'],ref['strength']),
+                (row['edge_persistence']['jaccard'],ref['jaccard']),
+                (row['edge_persistence']['turnover'],ref['turnover'])):
+                self.assertAlmostEqual(stored,derived,places=10)
+            for saved_name,old_name in (
+                ('both','both'),('winter_only','only_first'),
+                ('summer_only','only_second'),('neither','neither')):
+                self.assertEqual(row['edge_states'][saved_name],ref[old_name])
+            for target,reference in (
+                ('X','delta'),('incidence','incidence'),
+                ('conditional_strength','strength')):
+                self.assertEqual(
+                    row['grid_sensitivity_16'][target],
+                    {label:expected['signs16'][reference][sign]
+                     for label,sign in (('positive','1'),('negative','-1'),('zero','0'))})
+            self.assertAlmostEqual(
+                row['grid_sensitivity_16']['jaccard_range']['min'],
+                expected['jaccard_range']['min'],places=10)
+            self.assertAlmostEqual(
+                row['grid_sensitivity_16']['jaccard_range']['max'],
+                expected['jaccard_range']['max'],places=10)
+        self.assertFalse(indexed)
+
+
 if __name__=='__main__':
     unittest.main()
