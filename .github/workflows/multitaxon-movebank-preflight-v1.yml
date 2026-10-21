@@ -112,4 +112,35 @@ jobs:
           assert a['n_sources']==3 and a['n_grid_seed_aggregate_results']==480
           print('PASS original GPS receipts and exact X/T/N/D across 480 dependent sensitivity scenarios')
           PY
+      - name: Validate all four disjoint source-GPS near-distance bands and archived seed summaries
+        run: |
+          PYTHONPATH=prospective/multitaxon_individuality python3 -m unittest discover \
+            -s prospective/multitaxon_individuality/tests \
+            -p 'test_distance_band_from_subhour_v1.py' -q
+          python3 prospective/multitaxon_individuality/distance_band_from_subhour_v1.py \
+            --input-dir prospective/multitaxon_individuality \
+            --verify-published prospective/multitaxon_individuality/SUBHOUR_DISTANCE_BANDS_2026_10_21.json
+          python3 - <<'PY'
+          import csv,json
+          from pathlib import Path
+          base=Path('prospective/multitaxon_individuality')
+          obj=json.loads((base/'SUBHOUR_DISTANCE_BANDS_2026_10_21.json').read_text())
+          with (base/'SUBHOUR_DISTANCE_BANDS_SUMMARY_2026_10_21.csv').open(newline='') as f:
+              rows=list(csv.DictReader(f))
+          assert len(rows)==obj['n_summary_band_records']==40
+          assert obj['n_seed_band_records']==480
+          assert obj['n_stopped_source_year_tolerance_groups']==2
+          mapped={(g['source'],g['year'],g['max_abs_timestamp_gap_seconds'],b['band']):b
+                  for g in obj['source_years'] for b in g['band_summary']}
+          assert len(mapped)==40
+          for row in rows:
+              key=(row['source'],int(row['year']),int(float(row['max_gap_minutes'])*60),
+                   row['distance_band'])
+              b=mapped.pop(key)
+              assert abs(float(row['winter_minus_summer_D'])-b['winter_minus_summer_D'])<1e-12
+              assert int(row['positive_seeds'])==b['delta_D_seed_signs']['positive']
+              assert int(row['negative_seeds'])==b['delta_D_seed_signs']['negative']
+          assert not mapped
+          print('PASS exact pinned source-GPS SHA256, four-band distribution mass, 480 dependent seed rows and independently checked 40-row CSV')
+          PY
 

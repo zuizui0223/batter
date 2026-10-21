@@ -1,5 +1,40 @@
 # Pattern-first cross-taxon movement individuality and ecological use (database programme)
 
+## 21 October 2026: fine-distance source-GPS time alignment, 500 m to >2 km
+
+The [source-verifiable four-band report](SUBHOUR_DISTANCE_BANDS_RESULT_2026_10_21.md)
+now separates original-GPS matched-time distance observations
+into [0,500m], (500m,1km], (1,2km], and >2km bins. It distinguishes
+actual observed pair-fix distance frequency O, exact same-date
+time-assignment reference N, and conditional surplus D=O−N,
+without claiming physical encounters. The
+[fixed, explicitly post-inspection design](DISTANCE_BAND_CLOCK_ALIGNMENT_DESIGN_2026_10_21.md),
+[reproduction and receipt validator](distance_band_from_subhour_v1.py),
+[10 synthesis/receipt tests](tests/test_distance_band_from_subhour_v1.py),
+[full 480 seed×band rows](SUBHOUR_DISTANCE_BANDS_2026_10_21.json)
+and [40-row independent-check CSV](SUBHOUR_DISTANCE_BANDS_SUMMARY_2026_10_21.csv)
+are committed; original source GPS files were verified in the
+preceding source-geodesic analysis, not newly downloaded here.
+
+**White-tailed deer 2019 and 2020:** in these particular sources,
+absolute observed GPS proximity within 500 m is higher in summer,
+but conditional source-clock pairing surplus within 500 m is
+higher in winter, while the surplus in the 1–2 km distance band
+is lower in winter. At ±15 min, both seasonal band contrasts
+hold their direction in 12/12 finite-source GPS subsamples;
+at ±30 min, deer 2019's 1–2 km seasonal contrast is negative
+in **11/12**, not 12/12. Turkey has higher *absolute* winter
+500-m GPS proximity and more positive conditional winter
+near-band surplus, while black bear is inconsistent when the
+time tolerance and eligible dyad set change (38 vs 47).
+These are time-matched *geographic* patterns, NOT biological
+synchronization, avoidance, social-network links, resource
+sharing, or general taxon-level laws. Four band D values
+necessarily sum to zero, a mathematical identity, not a
+mechanism. Independent population labels, source clock
+calibration, GPS error and autocorrelation-preserving null
+comparisons remain unresolved.
+
 ## 20 October 2026: source-clock-matched temporal sharing versus 2D space
 
 An [original GPS source-clock analysis](SAME_CLOCK_BIN_COUSE_RESULT_2026_10_20.md)
