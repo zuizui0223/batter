@@ -143,4 +143,25 @@ jobs:
           assert not mapped
           print('PASS exact pinned source-GPS SHA256, four-band distribution mass, 480 dependent seed rows and independently checked 40-row CSV')
           PY
+      - name: Independently verify all original-source A/B dual-anchor GPS trajectories
+        run: |
+          root=prospective/multitaxon_individuality
+          python3 "$root/validate_original_anchor_symmetry_v1.py" \
+            --old-dir "$root" --reverse-dir "$root" \
+            --output /tmp/original_source_anchor_audit_20261021.json
+          cmp /tmp/original_source_anchor_audit_20261021.json \
+              "$root/DAY_SHIFT_DUAL_ANCHOR_SUMMARY_2026_10_21.json"
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('/tmp/original_source_anchor_audit_20261021.json').read_text())
+          assert d['n_source_documents']==3
+          assert d['n_orientation_seed_radius_rows']==576
+          assert d['n_STOP_groups']==4 and d['n_estimable_groups']==8
+          assert all(x['passes_both_orientations_500m_and_1km']
+                     for x in d['stability_gates'] if x['source']=='turkey')
+          assert not any(x['passes_both_orientations_500m_and_1km']
+                         for x in d['stability_gates'] if x['source']=='white_tailed_deer')
+          print('PASS source original-publisher MD5/SHA256 receipts, exact forward replays, independent dual-orientation time controls')
+          PY
 

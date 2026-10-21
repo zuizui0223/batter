@@ -1,5 +1,42 @@
 # Pattern-first cross-taxon movement individuality and ecological use (database programme)
 
+## 21 October 2026: original-GPS within-day versus adjacent-day motion / dual-anchor test
+
+The [new original-source seasonal trajectory result](DAY_SHIFT_DUAL_ANCHOR_RESULT_2026_10_21.md)
+tests whether the same-day GPS geodesic nearness of two source animals
+exceeds the nearness obtained by pairing the **identical original focal
+GPS fixes** to the other animal's unaltered previous and next calendar-day
+GPS trajectories at the same time of day. All full published GPS and
+reference files passed original publisher MD5, pinned SHA256 and
+independent complete source time/position multiset checks.
+
+At 500 m and ±15 min, the turkey source 2019/2020 shows
+winter-minus-summer *same-day over adjacent-day track*
+contrasts of +0.050799 and +0.026644 with the original focal
+tag assignment, versus +0.052473 and +0.027211 with the
+**reversed focal animal**. The direction is positive in
+12/12 dependent subsamples in both directions, and at the
+1-km radius. The fixed dual-direction and 500m/1km stability
+gate also passes both years at ±30 min. White-tailed deer
+has a weaker 500-m winter surplus but **fails the same joint
+500m/1km reverse-anchor criterion** in both years and time
+tolerances. The black-bear source STOPs when neighboring-day
+sampling support leaves only 5–6 eligible pairs (vs >=8
+prespecified), not a null ecological effect.
+
+This is an *exploratory day-specific source-GPS geographic
+pattern*, not direct animal encounters, social grouping,
+competition, habitat sharing or active synchrony. Shifting
+source B by a full day preserves the original within-day path
+sequence but changes weather, resource opportunities and
+between-day position dynamics. Biological population
+membership, tag-specific GPS uncertainty and native time
+offset are unverified. [Full aggregate archive](DAY_SHIFT_DUAL_ANCHOR_SUMMARY_2026_10_21.json),
+[24-row review CSV](DAY_SHIFT_DUAL_ANCHOR_COMPARISON_2026_10_21.csv),
+[fixed post-inspection protocol](DAY_SHIFT_ANCHOR_SYMMETRY_DESIGN_2026_10_21.md),
+and [receipt/denominator/seed verifier](validate_original_anchor_symmetry_v1.py)
+are published separately from the unchanged bat paper in PR #99.
+
 ## 21 October 2026: fine-distance source-GPS time alignment, 500 m to >2 km
 
 The [source-verifiable four-band report](SUBHOUR_DISTANCE_BANDS_RESULT_2026_10_21.md)
