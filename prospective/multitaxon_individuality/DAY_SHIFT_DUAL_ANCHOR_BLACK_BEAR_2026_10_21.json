@@ -1,0 +1,89 @@
+{
+  "GPS_position_accuracy_quantified": false,
+  "as_of": "2026-10-21",
+  "biological_local_population_membership_verified": false,
+  "caveats": [
+    "Same individual pair identities, not identical source GPS recording times across orientations",
+    "Original animal lexicographic label selected the direction; source-year pairs and seeds are dependent",
+    "One-day shifts preserve original within-day path order, not full ecological or between-day autocorrelation",
+    "Predeclared two-anchor stability gate is descriptive only; no biological p-values or encounter proof",
+    "No verified source clock UTC offset, GPS accuracy, source population membership or resource exposure"
+  ],
+  "complete_original_publisher_MD5_pinned_SHA256_verified": true,
+  "independent_native_original_GPS_time_position_multiset_verified": true,
+  "n_original_source_GPS_fixes": 148394,
+  "n_seeds": 12,
+  "native_clock_offset_UTC_verified": false,
+  "radii_km": [
+    0.5,
+    1.0,
+    2.0
+  ],
+  "reverse_focal_animals_evaluated": true,
+  "schema_version": 1,
+  "source": "black_bear",
+  "source_doi": "10.5441/001/1.706",
+  "source_year_results": [
+    {
+      "n_source_geographic_dyads": 1,
+      "time_tolerance_results": [
+        {
+          "fraction_forward_pairs_remaining": null,
+          "max_abs_original_GPS_time_gap_seconds": 900,
+          "n_both_orientation_supported_dyads": 0,
+          "n_distinct_animals_in_shared_pair_set": 0,
+          "n_forward_day_shift_dyads": 0,
+          "n_original_same_day_GPS_dyads": 0,
+          "n_reversed_day_shift_dyads": 0,
+          "orientation_seed_radius_aggregates": [],
+          "status": "STOP_SMALL_DUAL_ANCHOR_COMMON_GPS_SUPPORT"
+        },
+        {
+          "fraction_forward_pairs_remaining": null,
+          "max_abs_original_GPS_time_gap_seconds": 1800,
+          "n_both_orientation_supported_dyads": 0,
+          "n_distinct_animals_in_shared_pair_set": 0,
+          "n_forward_day_shift_dyads": 0,
+          "n_original_same_day_GPS_dyads": 0,
+          "n_reversed_day_shift_dyads": 0,
+          "orientation_seed_radius_aggregates": [],
+          "status": "STOP_SMALL_DUAL_ANCHOR_COMMON_GPS_SUPPORT"
+        }
+      ],
+      "year": 2019
+    },
+    {
+      "n_source_geographic_dyads": 104,
+      "time_tolerance_results": [
+        {
+          "fraction_forward_pairs_remaining": 0.8333333333333334,
+          "max_abs_original_GPS_time_gap_seconds": 900,
+          "n_both_orientation_supported_dyads": 5,
+          "n_distinct_animals_in_shared_pair_set": 4,
+          "n_forward_day_shift_dyads": 6,
+          "n_original_same_day_GPS_dyads": 38,
+          "n_reversed_day_shift_dyads": 5,
+          "orientation_seed_radius_aggregates": [],
+          "status": "STOP_SMALL_DUAL_ANCHOR_COMMON_GPS_SUPPORT"
+        },
+        {
+          "fraction_forward_pairs_remaining": 1.0,
+          "max_abs_original_GPS_time_gap_seconds": 1800,
+          "n_both_orientation_supported_dyads": 6,
+          "n_distinct_animals_in_shared_pair_set": 4,
+          "n_forward_day_shift_dyads": 6,
+          "n_original_same_day_GPS_dyads": 47,
+          "n_reversed_day_shift_dyads": 8,
+          "orientation_seed_radius_aggregates": [],
+          "status": "STOP_SMALL_DUAL_ANCHOR_COMMON_GPS_SUPPORT"
+        }
+      ],
+      "year": 2020
+    }
+  ],
+  "status": "POST_INSPECTION_DUAL_ANCHOR_ORIGINAL_GPS_TRAJECTORY_CONTROL",
+  "time_tolerances_seconds": [
+    900,
+    1800
+  ]
+}
