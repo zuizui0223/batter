@@ -130,7 +130,12 @@ class TestDistanceBandArithmetic(unittest.TestCase):
                 self.assertGreater(near["winter"]["D"], 0)
                 self.assertLess(intermediate["winter"]["D"], 0)
                 self.assertEqual(near["delta_D_seed_signs"]["positive"], 12)
-                self.assertEqual(intermediate["delta_D_seed_signs"]["negative"], 12)
+                # Source check: deer 2019 at 30 minutes has 11 negative
+                # sampling contrasts and one positive. Do not overstate
+                # the 15-minute 12/12 reference as a universal result.
+                expected_negative = 11 if (year, gap) == (2019, 1800) else 12
+                self.assertEqual(intermediate["delta_D_seed_signs"]["negative"],
+                                 expected_negative)
 
     def test_same_observed_mean_and_different_temporal_null_differ_by_band(self):
         # Equal observed winter/summer locations do not entail equal
