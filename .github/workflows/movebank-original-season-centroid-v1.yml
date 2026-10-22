@@ -1,0 +1,55 @@
+name: Original Movebank seasonal centroid and disconnected spatial components
+
+on:
+  push:
+    branches:
+      - prospective/multitaxon-identity-ecology-v1
+    paths:
+      - "prospective/multitaxon_individuality/seasonal_gps_centroid_components_v1.py"
+      - "prospective/multitaxon_individuality/tests/test_seasonal_gps_centroid_components_v1.py"
+      - "prospective/multitaxon_individuality/SEASONAL_GPS_CENTROID_COMPONENT_DESIGN_2026_10_22.md"
+      - ".github/workflows/movebank-original-season-centroid-v1.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  geographic-season-centroid-synthetic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test original date weighting, longitude wrap, source STOP and geographic component partition
+        run: |
+          PYTHONPATH=prospective/multitaxon_individuality python3 -m unittest discover \
+            -s prospective/multitaxon_individuality/tests \
+            -p "test_seasonal_gps_centroid_components_v1.py" -v
+
+  complete-original-GPS-seasonal-geography:
+    needs: geographic-season-centroid-synthetic
+    runs-on: ubuntu-latest
+    timeout-minutes: 65
+    strategy:
+      fail-fast: false
+      matrix:
+        source: [turkey, black_bear, white_tailed_deer]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify original Movebank complete source MD5/SHA256 and estimate component L1 and source-season centroids
+        env:
+          SOURCE: ${{ matrix.source }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/source-seasonal-geography
+          python3 prospective/multitaxon_individuality/seasonal_gps_centroid_components_v1.py \
+            --source "$SOURCE" \
+            --output "/tmp/source-seasonal-geography/${SOURCE}_seasonal_centroid_components_20261022.json"
+      - name: Upload original-source privacy-safe seasonal GPS geographical summaries
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: source-seasonal-centroids-${{ matrix.source }}
+          path: /tmp/source-seasonal-geography/*.json
+          if-no-files-found: warn
+          retention-days: 20
