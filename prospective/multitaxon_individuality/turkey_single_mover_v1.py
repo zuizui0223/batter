@@ -37,11 +37,11 @@ EARTH=6371.0
 def _distance(a,b):
     return geo.centroid_distance_km(a,b)
 
-def _distances_stats(values):
+def _distances_stats(values, *, signed=False):
     if not values:
         return {'n':0,'mean':None,'median':None,'min':None,'max':None}
     values=sorted(values)
-    if not all(0<=x<=math.pi*EARTH+1e-6 for x in values):
+    if not all((abs(x)<=math.pi*EARTH+1e-6 if signed else 0<=x<=math.pi*EARTH+1e-6) for x in values):
         raise AssertionError('Source seasonal centroid great-circle distance outside globe')
     return {'n':len(values),'mean':statistics.fmean(values),
             'median':statistics.median(values),
@@ -69,7 +69,7 @@ def _pair_annual_season_stats(pairs,annual,early,summer,year):
             'annual_centroid_separation_km':_distances_stats(vals['annual']),
             'jan_feb_centroid_separation_km':_distances_stats(vals['jan_feb']),
             'summer_centroid_separation_km':_distances_stats(vals['summer']),
-            'jan_feb_minus_summer_distance_km':_distances_stats(vals['jan_feb_minus_summer']),
+            'jan_feb_minus_summer_distance_km':_distances_stats(vals['jan_feb_minus_summer'],signed=True),
             'n_source_pairs_closer_in_jan_feb':
                 sum(v<0 for v in vals['jan_feb_minus_summer']),
             'n_source_pairs_farther_in_jan_feb':
