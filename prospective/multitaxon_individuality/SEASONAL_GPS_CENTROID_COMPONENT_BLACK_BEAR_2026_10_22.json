@@ -1,0 +1,84 @@
+{
+  "accepted_complete_original_GPS_fix_count": 148394,
+  "as_of": "2026-10-22",
+  "fixed_geo_pair_distance_thresholds_km": [
+    5.0,
+    10.0,
+    25.0
+  ],
+  "independent_full_source_time_position_multiset_verified": true,
+  "limitations": [
+    "Disconnected original annual GPS-use-centroid graphs are not verified distinct populations",
+    "Seasonal centers average original days equally and use nonconsecutive Jan/Feb/Dec calendar-year winter months",
+    "Original GPS location error and source UTC-vs-GPS clock basis not independently resolved",
+    "Previously inspected source proximity drives this exploratory grouping; not a preregistration or causal test",
+    "All within-source dyads may share animals and all seed draws reuse GPS records",
+    "No source animal identity, exact original GPS date, timestamp or position is published"
+  ],
+  "local_biological_population_membership_verified": false,
+  "n_source_sampling_seeds": 12,
+  "native_GPS_source_clock_absolute_UTC_verified": false,
+  "near_position_radii_km": [
+    0.5,
+    1.0,
+    2.0
+  ],
+  "original_clock_tolerances_seconds": [
+    900,
+    1800
+  ],
+  "original_dual_anchor_replay_for_all_scored_component_dyads": true,
+  "prior_original_source_geo_summary_SHA256_verified": true,
+  "publisher_original_MD5_and_prior_source_SHA256_verified": true,
+  "schema_version": 1,
+  "source": "black_bear",
+  "source_doi": "10.5441/001/1.706",
+  "status": "POST_INSPECTION_ORIGINAL_SOURCE_SEASON_CENTROID_AND_SPATIAL_COMPONENT",
+  "tag_specific_GPS_location_error_verified": false,
+  "year_groups": [
+    {
+      "original_25km_source_dyads": 1,
+      "tolerance_groups": [
+        {
+          "annual_center_bands": [],
+          "components_by_annual_center_threshold": [],
+          "n_original_matched_source_dyads": 0,
+          "source_year": 2019,
+          "status": "STOP_INSUFFICIENT_MATCHED_ORIGINAL_GPS",
+          "tolerance_seconds": 900
+        },
+        {
+          "annual_center_bands": [],
+          "components_by_annual_center_threshold": [],
+          "n_original_matched_source_dyads": 0,
+          "source_year": 2019,
+          "status": "STOP_INSUFFICIENT_MATCHED_ORIGINAL_GPS",
+          "tolerance_seconds": 1800
+        }
+      ],
+      "year": 2019
+    },
+    {
+      "original_25km_source_dyads": 104,
+      "tolerance_groups": [
+        {
+          "annual_center_bands": [],
+          "components_by_annual_center_threshold": [],
+          "n_original_matched_source_dyads": 5,
+          "source_year": 2020,
+          "status": "STOP_INSUFFICIENT_MATCHED_ORIGINAL_GPS",
+          "tolerance_seconds": 900
+        },
+        {
+          "annual_center_bands": [],
+          "components_by_annual_center_threshold": [],
+          "n_original_matched_source_dyads": 6,
+          "source_year": 2020,
+          "status": "STOP_INSUFFICIENT_MATCHED_ORIGINAL_GPS",
+          "tolerance_seconds": 1800
+        }
+      ],
+      "year": 2020
+    }
+  ]
+}
