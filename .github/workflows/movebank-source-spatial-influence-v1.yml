@@ -1,0 +1,55 @@
+name: Original Movebank GPS source geography and individual-influence audit
+
+on:
+  push:
+    branches:
+      - prospective/multitaxon-identity-ecology-v1
+    paths:
+      - "prospective/multitaxon_individuality/source_spatial_influence_v1.py"
+      - "prospective/multitaxon_individuality/tests/test_source_spatial_influence_v1.py"
+      - "prospective/multitaxon_individuality/SOURCE_SPATIAL_INFLUENCE_DESIGN_2026_10_22.md"
+      - ".github/workflows/movebank-source-spatial-influence-v1.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  synthetic-per-dyad-and-influence-contracts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test paired estimator exact replay, original animal deletion and geographic grouping
+        run: |
+          PYTHONPATH=prospective/multitaxon_individuality python3 -m unittest discover \
+            -s prospective/multitaxon_individuality/tests \
+            -p "test_source_spatial_influence_v1.py" -v
+
+  complete-original-source-geo-influence:
+    needs: synthetic-per-dyad-and-influence-contracts
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        source: [turkey, black_bear, white_tailed_deer]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify all publisher original GPS source bytes, exact old dual-anchor score replay and source-year cohort continuity
+        env:
+          SOURCE: ${{ matrix.source }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/source-spatial-influence-only
+          python3 prospective/multitaxon_individuality/source_spatial_influence_v1.py \
+            --source "$SOURCE" \
+            --output "/tmp/source-spatial-influence-only/${SOURCE}_spatial_influence_20261022.json"
+      - name: Upload only species/year/threshold/aggregate-no-raw-tracks outcomes
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: original-source-spatial-influence-${{ matrix.source }}
+          path: /tmp/source-spatial-influence-only/*.json
+          if-no-files-found: warn
+          retention-days: 20
