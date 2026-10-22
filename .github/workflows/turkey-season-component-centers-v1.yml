@@ -1,0 +1,47 @@
+name: Turkey 2019 GPS components and 2020 seasonal-centre geography
+
+on:
+  push:
+    branches: [prospective/multitaxon-identity-ecology-v1]
+    paths:
+      - "prospective/multitaxon_individuality/turkey_component_season_centers_v1.py"
+      - "prospective/multitaxon_individuality/tests/test_turkey_component_season_centers_v1.py"
+      - "prospective/multitaxon_individuality/TURKEY_COMPONENT_SEASON_CENTERS_DESIGN_2026_10_22.md"
+      - ".github/workflows/turkey-season-component-centers-v1.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  original-source-contracts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test spherical source centres, disjoint components and original temporal sample
+        run: |
+          PYTHONPATH=prospective/multitaxon_individuality python3 -m unittest discover \
+            -s prospective/multitaxon_individuality/tests \
+            -p 'test_turkey_component_season_centers_v1.py' -v
+
+  reproduce-wild-turkey-source:
+    needs: original-source-contracts
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@v4
+      - name: Re-download full wild turkey public Movebank original and verify MD5/SHA256/QC
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/turkey-season-centre
+          python3 prospective/multitaxon_individuality/turkey_component_season_centers_v1.py \
+            --output /tmp/turkey-season-centre/TURKEY_COMPONENT_SEASON_CENTERS_SOURCE_2026_10_22.json
+      - name: Upload only predeclared source-year aggregate scores and anonymous centre distances
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: source-turkey-component-centres-20261022
+          path: /tmp/turkey-season-centre/*.json
+          if-no-files-found: warn
+          retention-days: 20
