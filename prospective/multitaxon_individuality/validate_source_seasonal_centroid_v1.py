@@ -53,6 +53,10 @@ def _source_json(source,root):
 
 def _prior_source(source,root):
     path=Path(root)/('SOURCE_SPATIAL_INFLUENCE_'+source.upper()+'_2026_10_22.json')
+    if not path.exists():
+        # Staged new source outputs reside under /tmp, while the independently
+        # pinned historical baseline resides in the checked-out repository.
+        path=ROOT/('SOURCE_SPATIAL_INFLUENCE_'+source.upper()+'_2026_10_22.json')
     raw=path.read_bytes()
     if hashlib.sha256(raw).hexdigest()!=PRIOR_SHA256[source]:
         raise AssertionError('Previous verified complete-source original-GPS spatial audit changed')

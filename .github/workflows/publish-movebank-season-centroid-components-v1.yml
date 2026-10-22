@@ -5,6 +5,7 @@ on:
     branches:
       - prospective/multitaxon-identity-ecology-v1
     paths:
+      - "prospective/multitaxon_individuality/validate_source_seasonal_centroid_v1.py"
       - ".github/workflows/publish-movebank-season-centroid-components-v1.yml"
 
 permissions:
