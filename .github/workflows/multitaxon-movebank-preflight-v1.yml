@@ -164,4 +164,32 @@ jobs:
                          for x in d['stability_gates'] if x['source']=='white_tailed_deer')
           print('PASS source original-publisher MD5/SHA256 receipts, exact forward replays, independent dual-orientation time controls')
           PY
+      - name: Verify pinned original-source geographic pair structure and animal-year reuse
+        run: |
+          root=prospective/multitaxon_individuality
+          python3 "$root/validate_source_spatial_influence_v1.py" \
+             --input-dir "$root" \
+             --output /tmp/spatial_influence_ci_check.json
+          cmp /tmp/spatial_influence_ci_check.json "$root/SOURCE_SPATIAL_INFLUENCE_SUMMARY_2026_10_22.json"
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('/tmp/spatial_influence_ci_check.json').read_text())
+          assert d['n_replayed_original_source_seed_radius_scores']==576
+          assert d['n_valid_original_dyad_groups']==8
+          assert d['n_stopped_source_year_tolerance_rows']==4
+          reps={x['source']:x for x in d['year_reuse_audits'] if x['tolerance_seconds']==900}
+          assert reps['turkey']['n_both_years_matched_animals']==0
+          assert reps['white_tailed_deer']['n_both_years_matched_animals']==11
+          def delta(src,year,limit,direction):
+            q=next(x for x in d['summaries']
+                   if (x['source'],x['year'],x['tolerance_seconds'],x['centroid_pair_distance_max_km'])==
+                   (src,year,900,limit))
+            return next(z['mean_winter_minus_summer_L'] for z in q['radii']
+                        if z['radius_km']==.5 and z['orientation']==direction)
+          assert delta('turkey',2019,5,'original_A_to_B')>0
+          assert delta('turkey',2020,5,'original_A_to_B')<0
+          assert delta('turkey',2020,25,'original_A_to_B')>0
+          print('PASS source-original GPS SHA256, 576 replayed prior scores, source year-overlap and sign reversal at 5km')
+          PY
 

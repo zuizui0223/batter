@@ -1,5 +1,51 @@
 # Pattern-first cross-taxon movement individuality and ecological use (database programme)
 
+## 22 October 2026: crucial within-source biological boundary — geographic pair distance and repeated animals
+
+The [original-GPS source-geography and single-animal influence audit](SOURCE_SPATIAL_INFLUENCE_RESULT_2026_10_22.md)
+**qualifies** the earlier strong 25km turkeys in both years conclusion.
+Complete source GPS publisher MD5/pinned SHA256 verification and private
+dyad-level resampling exactly replayed **all 576 earlier dual-anchor
+original-source scores**. The [pre-outcome-locked (but post-inspection)
+design](SOURCE_SPATIAL_INFLUENCE_DESIGN_2026_10_22.md), [original-data
+script](source_spatial_influence_v1.py), [reference-result
+validator](validate_source_spatial_influence_v1.py) and [144-row
+comparison CSV](SOURCE_SPATIAL_INFLUENCE_REVIEW_2026_10_22.csv) are
+retained on the draft comparative research branch.
+
+**Wild turkey original animal identities in 2019 (n19) and 2020
+(n7) do not overlap (0 shared IDs), while all 11 original white-tailed
+deer subjects from 2019 recur in 2020, retaining 55 shared dyads.**
+Different turkey tracking individuals are NOT proof of two independent
+ecological populations. Neither source offers an original individual
+study-site group or quantitative tag GPS accuracy field in the
+verified public reference/event data; the median observed source
+within-day inter-fix period is one hour, not independently confirmed
+device duty-cycle programming.
+
+At ±15min/500m, the original turkey 2019 winter-minus-summer
+same-day-over-adjacent-day trajectory surplus remains positive
+under 5, 10 and 25km animal annual-usage-centroid pair constraints,
+in both A/B anchor directions, in all 12 source subsamples, and
+under **19/19 leave-one-animal omissions**. Turkey 2020 is
+**NOT robust to the closer 5km pair restriction**: at 5km the
+original/reversed mean contrasts are **−0.01665/−0.00043**
+(14 pairs), versus **+0.02664/+0.02721** at 25km
+(21 pairs). At 500m, **1/7 omitted animals reverses the
+mean sign**, in either original anchor direction. The
+1km-radius turkey 2020 source outcome is more robust to these
+particular checks.
+
+The year-specific mechanisms **cannot be inferred to be the same**;
+the comparatively distant annual-usage-center pairs contribute
+the turkey 2020 500m mean. The 2019 <=5km source pair graph has
+two geographically disconnected components of 11 and 7 animals
+(53/20 dyads); these are not independently documented
+biological populations, and their own separate GPS effects are not
+yet estimated. [Full aggregate evidence](SOURCE_SPATIAL_INFLUENCE_SUMMARY_2026_10_22.json).
+No causal flocking/social/group or cross-taxon law follows from
+matched source GPS nearness.
+
 ## 21 October 2026: original-GPS within-day versus adjacent-day motion / dual-anchor test
 
 The [new original-source seasonal trajectory result](DAY_SHIFT_DUAL_ANCHOR_RESULT_2026_10_21.md)
