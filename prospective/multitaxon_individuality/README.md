@@ -1,5 +1,45 @@
 # Pattern-first cross-taxon movement individuality and ecological use (database programme)
 
+## 22 October 2026: different seasonal geographic configurations in original wild-turkey source-year GPS cohorts
+
+**New empirical source-GPS result:** the [2019/2020 spatial-component and
+winter/summer GPS-centroid comparison](SEASONAL_GPS_CENTROID_COMPONENT_RESULT_2026_10_22.md)
+shows two different seasonal configurations, **not a universal turkey winter
+near-position timing rule**. For the wild-turkey published original
+GPS source, 2019 has two disconnected <=5-km annual-GPS-center
+graph components (11/7 animals, 53/20 pairs). Both have
+positive original and reverse-anchor winter-minus-summer
+<=500m GPS day-specific L1 in **all 12 finite-source draws**:
++0.084475/+0.089585 for the first component and
++0.058482/+0.055655 for the second.
+
+In the separate **2020 tracked original animal set**, five dyads
+with 10–25-km separation of ANNUAL GPS-usage centers have
+**median winter pair seasonal-center distance 0.172 km versus
+14.671 km in summer; all 5/5 show winter geographic
+convergence**. Yet the **14 pairs with annual centers <=5 km**
+have a non-positive 500-m winter day-specific L1.
+Thus **seasonal spatial convergence and the conditional
+day-specific timing of nearby GPS use are distinct empirical
+dimensions**. Disconnected GPS graph components are NOT
+biological population units; the five far annual-center
+dyads are NOT independent source populations. The
+mechanisms and true encounters are unmeasured.
+
+The original three source GPS packages, 8 estimable
+source/year/time cohorts, four source STOPs, 28 supported
+anonymous components and 32 seasonal-centroid distance
+groups were independently SHA256 and original graph
+receipt verified. Full aggregate-only
+[JSON](SEASONAL_GPS_CENTROID_COMPONENT_SUMMARY_2026_10_22.json),
+[32-row seasonal center CSV](SEASONAL_GPS_CENTER_PAIR_DISTANCE_REVIEW_2026_10_22.csv),
+[168-row component L1 CSV](SEASONAL_GPS_COMPONENT_DAY_SHIFT_L1_REVIEW_2026_10_22.csv),
+[reproducible original source code](seasonal_gps_centroid_components_v1.py)
+and [source verifier](validate_source_seasonal_centroid_v1.py)
+are in the draft PR. Absolute original GPS recording clock and
+tag-specific location precision, winter group/sex affiliation
+and independent local study populations have not been verified.
+
 ## 22 October 2026: crucial within-source biological boundary — geographic pair distance and repeated animals
 
 The [original-GPS source-geography and single-animal influence audit](SOURCE_SPATIAL_INFLUENCE_RESULT_2026_10_22.md)

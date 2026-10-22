@@ -192,4 +192,35 @@ jobs:
           assert delta('turkey',2020,25,'original_A_to_B')>0
           print('PASS source-original GPS SHA256, 576 replayed prior scores, source year-overlap and sign reversal at 5km')
           PY
+      - name: Verify all published original-source seasonal GPS distance and graph-component data
+        run: |
+          root=prospective/multitaxon_individuality
+          python3 "$root/validate_source_seasonal_centroid_v1.py" \
+            --input-dir "$root" \
+            --output /tmp/verified_original_source_season_centroids.json
+          cmp /tmp/verified_original_source_season_centroids.json \
+              "$root/SEASONAL_GPS_CENTROID_COMPONENT_SUMMARY_2026_10_22.json"
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('/tmp/verified_original_source_season_centroids.json').read_text())
+          assert d['n_original_GPS_source_archives']==3
+          assert d['n_valid_source_year_time_tolerance_groups']==8
+          assert d['n_STOP_groups']==4
+          assert d['n_source_component_estimates']==28
+          assert d['n_source_season_centroid_distance_groups']==32
+          a=next(g for g in d['groups'] if g['source']=='turkey' and g['year']==2019 and g['time_gap_seconds']==900)
+          components=next(c for c in a['anonymous_spatial_components'] if c['cutoff_km']==5)['components']
+          assert len(components)==2
+          assert [c['n_component_original_dyads'] for c in components]==[53,20]
+          assert all(all(v['seed_signs']['positive']==12 for v in
+              c['original_source_component_L1_by_radius_direction']['radii']
+              if v['radius_km']==.5) for c in components)
+          b=next(g for g in d['groups'] if g['source']=='turkey' and g['year']==2020 and g['time_gap_seconds']==900)
+          far=next(z for z in b['seasonal_GPS_center_distance_by_ANNUAL_center_band']
+                   if z['annual_centroid_pair_separation_band']=='(10,25] km')
+          assert far['n_pairs_winter_centers_closer']==5
+          assert far['winter_km']['median']<far['summer_km']['median']
+          print('PASS source-original GPS 2019 disconnected component patterns and 2020 5/5 winter seasonal centroid convergence')
+          PY
 
