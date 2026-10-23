@@ -71,7 +71,7 @@ class TestSourceTurkeySignedAccounting(unittest.TestCase):
             mod.band_decompose({5:(14,.01),10:(16,.02),25:(21,20)},
                                {5:14,10:16,25:21})
 
-    def test_blobs_and_source SHA_are_git_content_addressed(self):
+    def test_blobs_and_source_sha_are_git_content_addressed(self):
         src=mod.BASE/mod.INFLUENCE_NAME
         raw=src.read_bytes()
         self.assertEqual(mod.blob_sha(raw),mod.INFLUENCE_GIT_BLOB)
