@@ -1,0 +1,1070 @@
+{
+  "as_of": "2026-10-20",
+  "geodesic_source_run": "https://github.com/zuizui0223/batter/actions/runs/39418452060",
+  "limits": [
+    "Each dyad same source/year; no biology-based population verification",
+    "Greedy maximal source-time matching controls observation support, not location accuracy",
+    "One-to-one <=15/30 min GPS proxy is not a physical interaction",
+    "Within-day spatial rematching reference does not preserve biological autocorrelation",
+    "Multiple source-years, dyads and seeds dependent; no p-values or population confidence intervals"
+  ],
+  "n_geodesic_scenarios": 360,
+  "n_source_studies": 3,
+  "n_source_year_tolerance_stop_rows": 2,
+  "n_summary_rows": 32,
+  "original_source_receipts_sha256": {
+    "black_bear": {
+      "geodesic": "867c9941b472a0781708e71c084ff595cd62f3c78c9d2d404ee48d4d63dd7bc7",
+      "opportunity": "abeb50d7cfcb6e08509e668156ce0862498428040da9439d21d4dd0c065a1b32"
+    },
+    "turkey": {
+      "geodesic": "13008932046ad79cdde16e3cbd8b7aacb253668953ac2de34580abc71c99d938",
+      "opportunity": "eee1fadcffdbcbca0a15f6698244abd5088a3d6626816c025ae8681448951b62"
+    },
+    "white_tailed_deer": {
+      "geodesic": "919d0786370d0b298d904d13510571e7dfb67c0ffdd6bc32b54bdaddc847bae6",
+      "opportunity": "e64d753c0b632ba5d053555b3588e8276bd0821f6535da1d265a16f3768641a0"
+    }
+  },
+  "records": [
+    {
+      "D_delta_signs": {
+        "near_zero": 0,
+        "negative": 0,
+        "positive": 12
+      },
+      "mean_abs_source_fix_gap_seconds": {
+        "summer": 41.63477891156463,
+        "winter": 25.645195578231295
+      },
+      "n_original_dyads": 112,
+      "n_seeds": 12,
+      "n_time_supported_dyads": 112,
+      "radius_km": 1.0,
+      "source": "turkey",
+      "status": "DESCRIPTIVE_NEAR_SYNCHRONOUS_GPS_NEARBY_PROXY",
+      "summer": {
+        "D": 0.0011396919879062735,
+        "N": 0.09122850529100529,
+        "O": 0.09236819727891156
+      },
+      "tolerance_seconds": 900,
+      "winter": {
+        "D": 0.003708427815570672,
+        "N": 0.3258160903250189,
+        "O": 0.32952451814058953
+      },
+      "winter_minus_summer": {
+        "D": 0.002568735827664399,
+        "N": 0.23458758503401358,
+        "O": 0.237156320861678
+      },
+      "year": 2019
+    },
+    {
+      "D_delta_signs": {
+        "near_zero": 0,
+        "negative": 0,
+        "positive": 12
+      },
+      "mean_abs_source_fix_gap_seconds": {
+        "summer": 41.63477891156463,
+        "winter": 25.645195578231295
+      },
+      "n_original_dyads": 112,
+      "n_seeds": 12,
+      "n_time_supported_dyads": 112,
+      "radius_km": 0.5,
+      "source": "turkey",
+      "status": "DESCRIPTIVE_NEAR_SYNCHRONOUS_GPS_NEARBY_PROXY",
+      "summer": {
+        "D": 0.006123630007558579,
+        "N": 0.04836900037792894,
+        "O": 0.054492630385487524
+      },
+      "tolerance_seconds": 900,
+      "winter": {
+        "D": 0.020378637566137565,
+        "N": 0.2291784769463341,
+        "O": 0.24955711451247165
+      },
+      "winter_minus_summer": {
+        "D": 0.014255007558578987,
+        "N": 0.18080947656840515,
+        "O": 0.1950644841269841
+      },
+      "year": 2019
+    },
+    {
+      "D_delta_signs": {
+        "near_zero": 0,
+        "negative": 1,
+        "positive": 11
+      },
+      "mean_abs_source_fix_gap_seconds": {
+        "summer": 41.63477891156463,
+        "winter": 25.645195578231295
+      },
+      "n_original_dyads": 112,
+      "n_seeds": 12,
+      "n_time_supported_dyads": 112,
+      "radius_km": 2.0,
+      "source": "turkey",
+      "status": "DESCRIPTIVE_NEAR_SYNCHRONOUS_GPS_NEARBY_PROXY",
+      "summer": {
+        "D": -5.905139833711307e-05,
+        "N": 0.2149648053665911,
+        "O": 0.21490575396825395
+      },
+      "tolerance_seconds": 900,
+      "winter": {
+        "D": 0.0009271069538926681,
+        "N": 0.47908989984882844,
+        "O": 0.48001700680272114
+      },
+      "winter_minus_summer": {
+        "D": 0.0009861583522297811,
+        "N": 0.26412509448223737,
+        "O": 0.2651112528344671
+      },
+      "year": 2019
+    },
+    {
+      "D_delta_signs": {
+        "near_zero": 1,
+        "negative": 1,
+        "positive": 10
+      },
+      "mean_abs_source_fix_gap_seconds": {
+        "summer": 41.64859693877551,
+        "winter": 25.703656462585034
+      },
+      "n_original_dyads": 112,
+      "n_seeds": 12,
+      "n_time_supported_dyads": 112,
+      "radius_km": 1.0,
+      "source": "turkey",
+      "status": "DESCRIPTIVE_NEAR_SYNCHRONOUS_GPS_NEARBY_PROXY",
+      "summer": {
+        "D": 0.0016711545729402868,
+        "N": 0.09186626039304611,
+        "O": 0.09353741496598639
+      },
+      "tolerance_seconds": 1800,
+      "winter": {
+        "D": 0.0037556689342403624,
+        "N": 0.3230406746031746,
+        "O": 0.326796343537415
+      },
+      "winter_minus_summer": {
+        "D": 0.0020845143613000753,
+        "N": 0.2311744142101285,
+        "O": 0.23325892857142858
+      },
+      "year": 2019
+    },
+    {
+      "D_delta_signs": {
+        "near_zero": 0,
+        "negative": 0,
+        "positive": 12
+      },
+      "mean_abs_source_fix_gap_seconds": {
+        "summer": 41.64859693877551,
+        "winter": 25.703656462585034
+      },
+      "n_original_dyads": 112,
+      "n_seeds": 12,
+      "n_time_supported_dyads": 112,
+      "radius_km": 0.5,
+      "source": "turkey",
+      "status": "DESCRIPTIVE_NEAR_SYNCHRONOUS_GPS_NEARBY_PROXY",
+      "summer": {
+        "D": 0.006625566893424036,
+        "N": 0.05061295351473923,
+        "O": 0.05723852040816327
+      },
+      "tolerance_seconds": 1800,
+      "winter": {
+        "D": 0.02059122260015117,
+        "N": 0.22722978080120937,
+        "O": 0.2478210034013605
+      },
+      "winter_minus_summer": {
+        "D": 0.013965655706727136,
+        "N": 0.17661682728647013,
+        "O": 0.19058248299319727
+      },
+      "year": 2019
+    },
+    {
+      "D_delta_signs": {
+        "near_zero": 0,
+        "negative": 1,
+        "positive": 11
+      },
+      "mean_abs_source_fix_gap_seconds": {
+        "summer": 41.64859693877551,
+        "winter": 25.703656462585034
+      },
+      "n_original_dyads": 112,
+      "n_seeds": 12,
+      "n_time_supported_dyads": 112,
+      "radius_km": 2.0,
+      "source": "turkey",
+      "status": "DESCRIPTIVE_NEAR_SYNCHRONOUS_GPS_NEARBY_PROXY",
+      "summer": {
+        "D": -0.0002007747543461833,
+        "N": 0.2173741024187453,
+        "O": 0.2171733276643991
+      },
+      "tolerance_seconds": 1800,
+      "winter": {
+        "D": 0.001151502267573696,
+        "N": 0.4777494331065759,
+        "O": 0.47890093537414963
+      },
+      "winter_minus_summer": {
+        "D": 0.0013522770219198791,
+        "N": 0.26037533068783064,
+        "O": 0.2617276077097506
+      },
+      "year": 2019
+    },
+    {
+      "D_delta_signs": {
+        "near_zero": 0,
+        "negative": 0,
+        "positive": 12
+      },
+      "mean_abs_source_fix_gap_seconds": {
+        "summer": 27.103174603174605,
+        "winter": 19.841269841269842
+      },
+      "n_original_dyads": 21,
+      "n_seeds": 12,
+      "n_time_supported_dyads": 21,
+      "radius_km": 1.0,
+      "source": "turkey",
+      "status": "DESCRIPTIVE_NEAR_SYNCHRONOUS_GPS_NEARBY_PROXY",
+      "summer": {
+        "D": 3.149407911312639e-05,
+        "N": 0.22956034265558076,
+        "O": 0.22959183673469385
+      },
+      "tolerance_seconds": 900,
+      "winter": {
+        "D": 0.010267069790879315,
+        "N": 0.6386369362559838,
+        "O": 0.6489040060468632
+      },
+      "winter_minus_summer": {
+        "D": 0.010235575711766188,
+        "N": 0.4090765936004031,
+        "O": 0.4193121693121693
+      },
+      "year": 2020
+    },
+    {
+      "D_delta_signs": {
+        "near_zero": 0,
+        "negative": 0,
+        "positive": 12
+      },
+      "mean_abs_source_fix_gap_seconds": {
+        "summer": 27.103174603174605,
+        "winter": 19.841269841269842
+      },
+      "n_original_dyads": 21,
+      "n_seeds": 12,
+      "n_time_supported_dyads": 21,
+      "radius_km": 0.5,
+      "source": "turkey",
+      "status": "DESCRIPTIVE_NEAR_SYNCHRONOUS_GPS_NEARBY_PROXY",
+      "summer": {
+        "D": 0.011558327034517509,
+        "N": 0.17598891408415218,
+        "O": 0.1875472411186697
+      },
+      "tolerance_seconds": 900,
+      "winter": {
+        "D": 0.040123456790123455,
+        "N": 0.5195893172083649,
+        "O": 0.5597127739984883
+      },
+      "winter_minus_summer": {
+        "D": 0.028565129755605947,
+        "N": 0.34360040312421264,
+        "O": 0.3721655328798186
+      },
+      "year": 2020
+    },
+    {
+      "D_delta_signs": {
+        "near_zero": 0,
+        "negative": 2,
+        "positive": 10
+      },
+      "mean_abs_source_fix_gap_seconds": {
+        "summer": 27.103174603174605,
+        "winter": 19.841269841269842
+      },
+      "n_original_dyads": 21,
+      "n_seeds": 12,
+      "n_time_supported_dyads": 21,
+      "radius_km": 2.0,
+      "source": "turkey",
+      "status": "DESCRIPTIVE_NEAR_SYNCHRONOUS_GPS_NEARBY_PROXY",
+      "summer": {
+        "D": -2.710505431213761e-20,
+        "N": 0.28609221466364326,
+        "O": 0.28609221466364326
+      },
+      "tolerance_seconds": 900,
+      "winter": {
+        "D": 0.0017951625094482235,
+        "N": 0.769652305366591,
+        "O": 0.7714474678760394
+      },
+      "winter_minus_summer": {
+        "D": 0.0017951625094482235,
+        "N": 0.48356009070294786,
+        "O": 0.4853552532123961
+      },
+      "year": 2020
+    },
+    {
+      "D_delta_signs": {
+        "near_zero": 0,
+        "negative": 0,
+        "positive": 12
+      },
+      "mean_abs_source_fix_gap_seconds": {
+        "summer": 27.267573696145124,
+        "winter": 20.20408163265306
+      },
+      "n_original_dyads": 21,
+      "n_seeds": 12,
+      "n_time_supported_dyads": 21,
+      "radius_km": 1.0,
+      "source": "turkey",
+      "status": "DESCRIPTIVE_NEAR_SYNCHRONOUS_GPS_NEARBY_PROXY",
+      "summer": {
+        "D": -3.149407911312689e-05,
+        "N": 0.2329302091206853,
+        "O": 0.2328987150415722
+      },
+      "tolerance_seconds": 1800,
+      "winter": {
+        "D": 0.010582010582010581,
+        "N": 0.6406840513983371,
+        "O": 0.6512660619803478
+      },
+      "winter_minus_summer": {
+        "D": 0.010613504661123709,
+        "N": 0.4077538422776518,
+        "O": 0.4183673469387755
+      },
+      "year": 2020
+    },
+    {
+      "D_delta_signs": {
+        "near_zero": 0,
+        "negative": 0,
+        "positive": 12
+      },
+      "mean_abs_source_fix_gap_seconds": {
+        "summer": 27.267573696145124,
+        "winter": 20.20408163265306
+      },
+      "n_original_dyads": 21,
+      "n_seeds": 12,
+      "n_time_supported_dyads": 21,
+      "radius_km": 0.5,
+      "source": "turkey",
+      "status": "DESCRIPTIVE_NEAR_SYNCHRONOUS_GPS_NEARBY_PROXY",
+      "summer": {
+        "D": 0.014676240866717058,
+        "N": 0.18033509700176367,
+        "O": 0.1950113378684807
+      },
+      "tolerance_seconds": 1800,
+      "winter": {
+        "D": 0.04188712522045856,
+        "N": 0.5188649533887629,
+        "O": 0.5607520786092215
+      },
+      "winter_minus_summer": {
+        "D": 0.027210884353741496,
+        "N": 0.33852985638699923,
+        "O": 0.36574074074074076
+      },
+      "year": 2020
+    },
+    {
+      "D_delta_signs": {
+        "near_zero": 1,
+        "negative": 3,
+        "positive": 8
+      },
+      "mean_abs_source_fix_gap_seconds": {
+        "summer": 27.267573696145124,
+        "winter": 20.20408163265306
+      },
+      "n_original_dyads": 21,
+      "n_seeds": 12,
+      "n_time_supported_dyads": 21,
+      "radius_km": 2.0,
+      "source": "turkey",
+      "status": "DESCRIPTIVE_NEAR_SYNCHRONOUS_GPS_NEARBY_PROXY",
+      "summer": {
+        "D": -0.00022045855379188714,
+        "N": 0.286029226505417,
+        "O": 0.2858087679516251
+      },
+      "tolerance_seconds": 1800,
+      "winter": {
+        "D": 0.0012282690854119422,
+        "N": 0.7729591836734694,
+        "O": 0.7741874527588813
+      },
+      "winter_minus_summer": {
+        "D": 0.0014487276392038293,
+        "N": 0.4869299571680524,
+        "O": 0.4883786848072562
+      },
+      "year": 2020
+    },
+    {
+      "n_original_dyads": 1,
+      "n_time_supported_dyads": 0,
+      "source": "black_bear",
+      "status": "STOP_SMALL_TIMESTAMP_MATCHED_OPPORTUNITY",
+      "tolerance_seconds": 900,
+      "year": 2019
+    },
+    {
+      "n_original_dyads": 1,
+      "n_time_supported_dyads": 0,
+      "source": "black_bear",
+      "status": "STOP_SMALL_TIMESTAMP_MATCHED_OPPORTUNITY",
+      "tolerance_seconds": 1800,
+      "year": 2019
+    },
+    {
+      "D_delta_signs": {
+        "near_zero": 1,
+        "negative": 10,
+        "positive": 1
+      },
+      "mean_abs_source_fix_gap_seconds": {
+        "summer": 62.308897243107765,
+        "winter": 44.50187969924812
+      },
+      "n_original_dyads": 104,
+      "n_seeds": 12,
+      "n_time_supported_dyads": 38,
+      "radius_km": 1.0,
+      "source": "black_bear",
+      "status": "DESCRIPTIVE_NEAR_SYNCHRONOUS_GPS_NEARBY_PROXY",
+      "summer": {
+        "D": 0.000591757170704539,
+        "N": 0.010373155109997216,
+        "O": 0.010964912280701754
+      },
+      "tolerance_seconds": 900,
+      "winter": {
+        "D": 0.00012183235867446393,
+        "N": 0.04640072403230298,
+        "O": 0.046522556390977444
+      },
+      "winter_minus_summer": {
+        "D": -0.0004699248120300751,
+        "N": 0.03602756892230576,
+        "O": 0.03555764411027569
+      },
+      "year": 2020
+    },
+    {
+      "D_delta_signs": {
+        "near_zero": 0,
+        "negative": 11,
+        "positive": 1
+      },
+      "mean_abs_source_fix_gap_seconds": {
+        "summer": 62.308897243107765,
+        "winter": 44.50187969924812
+      },
+      "n_original_dyads": 104,
+      "n_seeds": 12,
+      "n_time_supported_dyads": 38,
+      "radius_km": 0.5,
+      "source": "black_bear",
+      "status": "DESCRIPTIVE_NEAR_SYNCHRONOUS_GPS_NEARBY_PROXY",
+      "summer": {
+        "D": 0.0010964912280701754,
+        "N": 0.003916040100250626,
+        "O": 0.005012531328320802
+      },
+      "tolerance_seconds": 900,
+      "winter": {
+        "D": -3.480924533556112e-05,
+        "N": 0.02541074909495962,
+        "O": 0.025375939849624062
+      },
+      "winter_minus_summer": {
+        "D": -0.0011313004734057365,
+        "N": 0.021494708994708997,
+        "O": 0.020363408521303257
+      },
+      "year": 2020
+    },
+    {
+      "D_delta_signs": {
+        "near_zero": 1,
+        "negative": 9,
+        "positive": 2
+      },
+      "mean_abs_source_fix_gap_seconds": {
+        "summer": 62.308897243107765,
+        "winter": 44.50187969924812
+      },
+      "n_original_dyads": 104,
+      "n_seeds": 12,
+      "n_time_supported_dyads": 38,
+      "radius_km": 2.0,
+      "source": "black_bear",
+      "status": "DESCRIPTIVE_NEAR_SYNCHRONOUS_GPS_NEARBY_PROXY",
+      "summer": {
+        "D": 0.0006787802840434419,
+        "N": 0.027673350041771096,
+        "O": 0.028352130325814535
+      },
+      "tolerance_seconds": 900,
+      "winter": {
+        "D": 0.0,
+        "N": 0.0571219715956558,
+        "O": 0.0571219715956558
+      },
+      "winter_minus_summer": {
+        "D": -0.0006787802840434419,
+        "N": 0.029448621553884714,
+        "O": 0.028769841269841268
+      },
+      "year": 2020
+    },
+    {
+      "D_delta_signs": {
+        "near_zero": 3,
+        "negative": 7,
+        "positive": 2
+      },
+      "mean_abs_source_fix_gap_seconds": {
+        "summer": 341.9756838905775,
+        "winter": 95.17223910840933
+      },
+      "n_original_dyads": 104,
+      "n_seeds": 12,
+      "n_time_supported_dyads": 47,
+      "radius_km": 1.0,
+      "source": "black_bear",
+      "status": "DESCRIPTIVE_NEAR_SYNCHRONOUS_GPS_NEARBY_PROXY",
+      "summer": {
+        "D": 0.00016886187098953055,
+        "N": 0.009709557581898008,
+        "O": 0.009878419452887538
+      },
+      "tolerance_seconds": 1800,
+      "winter": {
+        "D": -7.035911291230439e-05,
+        "N": 0.03954182145671507,
+        "O": 0.03947146234380277
+      },
+      "winter_minus_summer": {
+        "D": -0.00023922098390183495,
+        "N": 0.029832263874817067,
+        "O": 0.02959304289091523
+      },
+      "year": 2020
+    },
+    {
+      "D_delta_signs": {
+        "near_zero": 4,
+        "negative": 1,
+        "positive": 7
+      },
+      "mean_abs_source_fix_gap_seconds": {
+        "summer": 341.9756838905775,
+        "winter": 95.17223910840933
+      },
+      "n_original_dyads": 104,
+      "n_seeds": 12,
+      "n_time_supported_dyads": 47,
+      "radius_km": 0.5,
+      "source": "black_bear",
+      "status": "DESCRIPTIVE_NEAR_SYNCHRONOUS_GPS_NEARBY_PROXY",
+      "summer": {
+        "D": 0.00023922098390183493,
+        "N": 0.003475740177867837,
+        "O": 0.003714961161769672
+      },
+      "tolerance_seconds": 1800,
+      "winter": {
+        "D": 0.0004080828548913655,
+        "N": 0.019897557131599682,
+        "O": 0.020305639986491052
+      },
+      "winter_minus_summer": {
+        "D": 0.00016886187098953058,
+        "N": 0.016421816953731846,
+        "O": 0.016590678824721376
+      },
+      "year": 2020
+    },
+    {
+      "D_delta_signs": {
+        "near_zero": 0,
+        "negative": 12,
+        "positive": 0
+      },
+      "mean_abs_source_fix_gap_seconds": {
+        "summer": 341.9756838905775,
+        "winter": 95.17223910840933
+      },
+      "n_original_dyads": 104,
+      "n_seeds": 12,
+      "n_time_supported_dyads": 47,
+      "radius_km": 2.0,
+      "source": "black_bear",
+      "status": "DESCRIPTIVE_NEAR_SYNCHRONOUS_GPS_NEARBY_PROXY",
+      "summer": {
+        "D": 0.0019278396937971404,
+        "N": 0.03256219745581448,
+        "O": 0.034490037149611616
+      },
+      "tolerance_seconds": 1800,
+      "winter": {
+        "D": 0.0,
+        "N": 0.0591016548463357,
+        "O": 0.0591016548463357
+      },
+      "winter_minus_summer": {
+        "D": -0.0019278396937971404,
+        "N": 0.02653945739052122,
+        "O": 0.02461161769672408
+      },
+      "year": 2020
+    },
+    {
+      "D_delta_signs": {
+        "near_zero": 0,
+        "negative": 0,
+        "positive": 12
+      },
+      "mean_abs_source_fix_gap_seconds": {
+        "summer": 2.8679653679653683,
+        "winter": 1.9372294372294372
+      },
+      "n_original_dyads": 55,
+      "n_seeds": 12,
+      "n_time_supported_dyads": 55,
+      "radius_km": 1.0,
+      "source": "white_tailed_deer",
+      "status": "DESCRIPTIVE_NEAR_SYNCHRONOUS_GPS_NEARBY_PROXY",
+      "summer": {
+        "D": 0.0004449254449254447,
+        "N": 0.09313371813371814,
+        "O": 0.09357864357864358
+      },
+      "tolerance_seconds": 900,
+      "winter": {
+        "D": 0.003499278499278499,
+        "N": 0.06432178932178932,
+        "O": 0.06782106782106782
+      },
+      "winter_minus_summer": {
+        "D": 0.0030543530543530543,
+        "N": -0.028811928811928813,
+        "O": -0.025757575757575757
+      },
+      "year": 2019
+    },
+    {
+      "D_delta_signs": {
+        "near_zero": 0,
+        "negative": 0,
+        "positive": 12
+      },
+      "mean_abs_source_fix_gap_seconds": {
+        "summer": 2.8679653679653683,
+        "winter": 1.9372294372294372
+      },
+      "n_original_dyads": 55,
+      "n_seeds": 12,
+      "n_time_supported_dyads": 55,
+      "radius_km": 0.5,
+      "source": "white_tailed_deer",
+      "status": "DESCRIPTIVE_NEAR_SYNCHRONOUS_GPS_NEARBY_PROXY",
+      "summer": {
+        "D": -0.0010461760461760465,
+        "N": 0.042027417027417024,
+        "O": 0.04098124098124098
+      },
+      "tolerance_seconds": 900,
+      "winter": {
+        "D": 0.004148629148629149,
+        "N": 0.02860750360750361,
+        "O": 0.032756132756132754
+      },
+      "winter_minus_summer": {
+        "D": 0.005194805194805195,
+        "N": -0.01341991341991342,
+        "O": -0.008225108225108224
+      },
+      "year": 2019
+    },
+    {
+      "D_delta_signs": {
+        "near_zero": 0,
+        "negative": 12,
+        "positive": 0
+      },
+      "mean_abs_source_fix_gap_seconds": {
+        "summer": 2.8679653679653683,
+        "winter": 1.9372294372294372
+      },
+      "n_original_dyads": 55,
+      "n_seeds": 12,
+      "n_time_supported_dyads": 55,
+      "radius_km": 2.0,
+      "source": "white_tailed_deer",
+      "status": "DESCRIPTIVE_NEAR_SYNCHRONOUS_GPS_NEARBY_PROXY",
+      "summer": {
+        "D": -4.0657581468206416e-20,
+        "N": 0.13647186147186147,
+        "O": 0.13647186147186147
+      },
+      "tolerance_seconds": 900,
+      "winter": {
+        "D": -0.004641654641654642,
+        "N": 0.12754930254930255,
+        "O": 0.12290764790764791
+      },
+      "winter_minus_summer": {
+        "D": -0.004641654641654642,
+        "N": -0.008922558922558919,
+        "O": -0.013564213564213569
+      },
+      "year": 2019
+    },
+    {
+      "D_delta_signs": {
+        "near_zero": 0,
+        "negative": 1,
+        "positive": 11
+      },
+      "mean_abs_source_fix_gap_seconds": {
+        "summer": 2.906926406926407,
+        "winter": 1.857142857142857
+      },
+      "n_original_dyads": 55,
+      "n_seeds": 12,
+      "n_time_supported_dyads": 55,
+      "radius_km": 1.0,
+      "source": "white_tailed_deer",
+      "status": "DESCRIPTIVE_NEAR_SYNCHRONOUS_GPS_NEARBY_PROXY",
+      "summer": {
+        "D": 0.0002525252525252523,
+        "N": 0.09246031746031746,
+        "O": 0.0927128427128427
+      },
+      "tolerance_seconds": 1800,
+      "winter": {
+        "D": 0.0032347282347282348,
+        "N": 0.06274651274651274,
+        "O": 0.06598124098124099
+      },
+      "winter_minus_summer": {
+        "D": 0.0029822029822029823,
+        "N": -0.029713804713804717,
+        "O": -0.02673160173160173
+      },
+      "year": 2019
+    },
+    {
+      "D_delta_signs": {
+        "near_zero": 0,
+        "negative": 0,
+        "positive": 12
+      },
+      "mean_abs_source_fix_gap_seconds": {
+        "summer": 2.906926406926407,
+        "winter": 1.857142857142857
+      },
+      "n_original_dyads": 55,
+      "n_seeds": 12,
+      "n_time_supported_dyads": 55,
+      "radius_km": 0.5,
+      "source": "white_tailed_deer",
+      "status": "DESCRIPTIVE_NEAR_SYNCHRONOUS_GPS_NEARBY_PROXY",
+      "summer": {
+        "D": -0.0007335257335257337,
+        "N": 0.04157046657046657,
+        "O": 0.04083694083694084
+      },
+      "tolerance_seconds": 1800,
+      "winter": {
+        "D": 0.004341029341029341,
+        "N": 0.02772967772967773,
+        "O": 0.03207070707070707
+      },
+      "winter_minus_summer": {
+        "D": 0.0050745550745550745,
+        "N": -0.013840788840788841,
+        "O": -0.008766233766233767
+      },
+      "year": 2019
+    },
+    {
+      "D_delta_signs": {
+        "near_zero": 0,
+        "negative": 11,
+        "positive": 1
+      },
+      "mean_abs_source_fix_gap_seconds": {
+        "summer": 2.906926406926407,
+        "winter": 1.857142857142857
+      },
+      "n_original_dyads": 55,
+      "n_seeds": 12,
+      "n_time_supported_dyads": 55,
+      "radius_km": 2.0,
+      "source": "white_tailed_deer",
+      "status": "DESCRIPTIVE_NEAR_SYNCHRONOUS_GPS_NEARBY_PROXY",
+      "summer": {
+        "D": -3.6075036075036075e-05,
+        "N": 0.1364718614718615,
+        "O": 0.13643578643578644
+      },
+      "tolerance_seconds": 1800,
+      "winter": {
+        "D": -0.0035473785473785478,
+        "N": 0.1262746512746513,
+        "O": 0.12272727272727273
+      },
+      "winter_minus_summer": {
+        "D": -0.003511303511303512,
+        "N": -0.010197210197210201,
+        "O": -0.013708513708513703
+      },
+      "year": 2019
+    },
+    {
+      "D_delta_signs": {
+        "near_zero": 0,
+        "negative": 0,
+        "positive": 12
+      },
+      "mean_abs_source_fix_gap_seconds": {
+        "summer": 3.533101045296167,
+        "winter": 1.623693379790941
+      },
+      "n_original_dyads": 205,
+      "n_seeds": 12,
+      "n_time_supported_dyads": 205,
+      "radius_km": 1.0,
+      "source": "white_tailed_deer",
+      "status": "DESCRIPTIVE_NEAR_SYNCHRONOUS_GPS_NEARBY_PROXY",
+      "summer": {
+        "D": 0.00022583559168925016,
+        "N": 0.09255387791973158,
+        "O": 0.09277971351142084
+      },
+      "tolerance_seconds": 900,
+      "winter": {
+        "D": 0.0025971093044263776,
+        "N": 0.06341140792360304,
+        "O": 0.06600851722802942
+      },
+      "winter_minus_summer": {
+        "D": 0.0023712737127371273,
+        "N": -0.02914246999612853,
+        "O": -0.026771196283391408
+      },
+      "year": 2020
+    },
+    {
+      "D_delta_signs": {
+        "near_zero": 0,
+        "negative": 0,
+        "positive": 12
+      },
+      "mean_abs_source_fix_gap_seconds": {
+        "summer": 3.533101045296167,
+        "winter": 1.623693379790941
+      },
+      "n_original_dyads": 205,
+      "n_seeds": 12,
+      "n_time_supported_dyads": 205,
+      "radius_km": 0.5,
+      "source": "white_tailed_deer",
+      "status": "DESCRIPTIVE_NEAR_SYNCHRONOUS_GPS_NEARBY_PROXY",
+      "summer": {
+        "D": 0.00015163246870563928,
+        "N": 0.034556071751193705,
+        "O": 0.03470770421989934
+      },
+      "tolerance_seconds": 900,
+      "winter": {
+        "D": 0.0034456058846302744,
+        "N": 0.022590011614401856,
+        "O": 0.026035617499032132
+      },
+      "winter_minus_summer": {
+        "D": 0.0032939734159246354,
+        "N": -0.011966060136791844,
+        "O": -0.00867208672086721
+      },
+      "year": 2020
+    },
+    {
+      "D_delta_signs": {
+        "near_zero": 0,
+        "negative": 12,
+        "positive": 0
+      },
+      "mean_abs_source_fix_gap_seconds": {
+        "summer": 3.533101045296167,
+        "winter": 1.623693379790941
+      },
+      "n_original_dyads": 205,
+      "n_seeds": 12,
+      "n_time_supported_dyads": 205,
+      "radius_km": 2.0,
+      "source": "white_tailed_deer",
+      "status": "DESCRIPTIVE_NEAR_SYNCHRONOUS_GPS_NEARBY_PROXY",
+      "summer": {
+        "D": 3.87146728610143e-05,
+        "N": 0.14773519163763066,
+        "O": 0.14777390631049167
+      },
+      "tolerance_seconds": 900,
+      "winter": {
+        "D": -0.0017873273970834948,
+        "N": 0.13190734288295264,
+        "O": 0.13012001548586913
+      },
+      "winter_minus_summer": {
+        "D": -0.0018260420699445093,
+        "N": -0.015827848754678023,
+        "O": -0.01765389082462253
+      },
+      "year": 2020
+    },
+    {
+      "D_delta_signs": {
+        "near_zero": 0,
+        "negative": 0,
+        "positive": 12
+      },
+      "mean_abs_source_fix_gap_seconds": {
+        "summer": 3.4802555168408826,
+        "winter": 1.7328687572590011
+      },
+      "n_original_dyads": 205,
+      "n_seeds": 12,
+      "n_time_supported_dyads": 205,
+      "radius_km": 1.0,
+      "source": "white_tailed_deer",
+      "status": "DESCRIPTIVE_NEAR_SYNCHRONOUS_GPS_NEARBY_PROXY",
+      "summer": {
+        "D": -2.2583559168925125e-05,
+        "N": 0.09349916118208801,
+        "O": 0.0934765776229191
+      },
+      "tolerance_seconds": 1800,
+      "winter": {
+        "D": 0.0029068266873144917,
+        "N": 0.06243386243386243,
+        "O": 0.06534068912117692
+      },
+      "winter_minus_summer": {
+        "D": 0.0029294102464834174,
+        "N": -0.031065298748225573,
+        "O": -0.02813588850174216
+      },
+      "year": 2020
+    },
+    {
+      "D_delta_signs": {
+        "near_zero": 0,
+        "negative": 0,
+        "positive": 12
+      },
+      "mean_abs_source_fix_gap_seconds": {
+        "summer": 3.4802555168408826,
+        "winter": 1.7328687572590011
+      },
+      "n_original_dyads": 205,
+      "n_seeds": 12,
+      "n_time_supported_dyads": 205,
+      "radius_km": 0.5,
+      "source": "white_tailed_deer",
+      "status": "DESCRIPTIVE_NEAR_SYNCHRONOUS_GPS_NEARBY_PROXY",
+      "summer": {
+        "D": 0.00029036004645760727,
+        "N": 0.035036778939217965,
+        "O": 0.03532713898567557
+      },
+      "tolerance_seconds": 1800,
+      "winter": {
+        "D": 0.003416569879984514,
+        "N": 0.02246418892760356,
+        "O": 0.025880758807588073
+      },
+      "winter_minus_summer": {
+        "D": 0.003126209833526907,
+        "N": -0.012572590011614404,
+        "O": -0.009446380178087495
+      },
+      "year": 2020
+    },
+    {
+      "D_delta_signs": {
+        "near_zero": 0,
+        "negative": 12,
+        "positive": 0
+      },
+      "mean_abs_source_fix_gap_seconds": {
+        "summer": 3.4802555168408826,
+        "winter": 1.7328687572590011
+      },
+      "n_original_dyads": 205,
+      "n_seeds": 12,
+      "n_time_supported_dyads": 205,
+      "radius_km": 2.0,
+      "source": "white_tailed_deer",
+      "status": "DESCRIPTIVE_NEAR_SYNCHRONOUS_GPS_NEARBY_PROXY",
+      "summer": {
+        "D": -8.065556846044651e-05,
+        "N": 0.1476900245192928,
+        "O": 0.14760936895083235
+      },
+      "tolerance_seconds": 1800,
+      "winter": {
+        "D": -0.0017357078332688094,
+        "N": 0.13202026067879727,
+        "O": 0.13028455284552845
+      },
+      "winter_minus_summer": {
+        "D": -0.0016550522648083627,
+        "N": -0.01566976384049555,
+        "O": -0.017324816105303915
+      },
+      "year": 2020
+    }
+  ],
+  "schema_version": 1,
+  "scope": "Post-inspection source-native GPS positions within <=15/30min and 0.5/1/2km geodesic radii; no verified animal encounters/social/resource use",
+  "timestamp_source_run": "https://github.com/zuizui0223/batter/actions/runs/39417475863"
+}

@@ -1,0 +1,374 @@
+{
+  "historical_comparison": [
+    {
+      "month": "2019-05",
+      "reconstruction_minus_pilot": {
+        "B_1km_with_6h_nats_per_step_equal_animal_day": 1.3877787807814457e-17,
+        "B_1km_without_hour_control_nats_per_step_equal_animal_day": -2.7755575615628914e-17,
+        "B_2km_with_6h_nats_per_step_equal_animal_day": 1.0408340855860843e-17,
+        "heldout_animal_days": 0,
+        "heldout_step_count": 0,
+        "individuals_source_month_with_sufficient_day_records": 0,
+        "n_common_training_contexts": 0,
+        "n_evaluable_holdout_animals": 0,
+        "n_individuals_with_positive_personal_vs_pooled_gain": 0
+      },
+      "source_reference_deploy_year": 2019,
+      "source_site": "Somerley"
+    },
+    {
+      "month": "2016-05",
+      "reconstruction_minus_pilot": {
+        "B_1km_with_6h_nats_per_step_equal_animal_day": -1.973247953923618e-17,
+        "B_1km_without_hour_control_nats_per_step_equal_animal_day": 0.0,
+        "B_2km_with_6h_nats_per_step_equal_animal_day": 1.734723475976807e-18,
+        "heldout_animal_days": 0,
+        "heldout_step_count": 0,
+        "individuals_source_month_with_sufficient_day_records": 0,
+        "n_common_training_contexts": 0,
+        "n_evaluable_holdout_animals": 0,
+        "n_individuals_with_positive_personal_vs_pooled_gain": 0
+      },
+      "source_reference_deploy_year": 2016,
+      "source_site": "Britford"
+    },
+    {
+      "month": "2017-03",
+      "reconstruction_minus_pilot": {
+        "B_1km_with_6h_nats_per_step_equal_animal_day": 0.0,
+        "B_1km_without_hour_control_nats_per_step_equal_animal_day": -5.551115123125783e-17,
+        "B_2km_with_6h_nats_per_step_equal_animal_day": 5.551115123125783e-17,
+        "heldout_animal_days": 0,
+        "heldout_step_count": 0,
+        "individuals_source_month_with_sufficient_day_records": 0,
+        "n_common_training_contexts": 0,
+        "n_evaluable_holdout_animals": 0,
+        "n_individuals_with_positive_personal_vs_pooled_gain": 0
+      },
+      "source_reference_deploy_year": 2017,
+      "source_site": "Britford"
+    },
+    {
+      "month": "2017-04",
+      "reconstruction_minus_pilot": {
+        "B_1km_with_6h_nats_per_step_equal_animal_day": -1.3877787807814457e-17,
+        "B_1km_without_hour_control_nats_per_step_equal_animal_day": 7.632783294297951e-17,
+        "B_2km_with_6h_nats_per_step_equal_animal_day": 0.0,
+        "heldout_animal_days": 0,
+        "heldout_step_count": 0,
+        "individuals_source_month_with_sufficient_day_records": 0,
+        "n_common_training_contexts": 0,
+        "n_evaluable_holdout_animals": 0,
+        "n_individuals_with_positive_personal_vs_pooled_gain": 0
+      },
+      "source_reference_deploy_year": 2017,
+      "source_site": "Britford"
+    },
+    {
+      "month": "2019-06",
+      "reconstruction_minus_pilot": {
+        "B_1km_with_6h_nats_per_step_equal_animal_day": 7.806255641895632e-18,
+        "B_1km_without_hour_control_nats_per_step_equal_animal_day": 4.336808689942018e-18,
+        "B_2km_with_6h_nats_per_step_equal_animal_day": -2.6020852139652106e-18,
+        "heldout_animal_days": 0,
+        "heldout_step_count": 0,
+        "individuals_source_month_with_sufficient_day_records": 0,
+        "n_common_training_contexts": 0,
+        "n_evaluable_holdout_animals": 0,
+        "n_individuals_with_positive_personal_vs_pooled_gain": 0
+      },
+      "source_reference_deploy_year": 2019,
+      "source_site": "Somerley"
+    },
+    {
+      "month": "2016-06",
+      "reconstruction_minus_pilot": {
+        "B_1km_with_6h_nats_per_step_equal_animal_day": -1.3877787807814457e-17,
+        "B_1km_without_hour_control_nats_per_step_equal_animal_day": 0.0,
+        "B_2km_with_6h_nats_per_step_equal_animal_day": 1.3877787807814457e-17,
+        "heldout_animal_days": 0,
+        "heldout_step_count": 0,
+        "individuals_source_month_with_sufficient_day_records": 0,
+        "n_common_training_contexts": 0,
+        "n_evaluable_holdout_animals": 0,
+        "n_individuals_with_positive_personal_vs_pooled_gain": 0
+      },
+      "source_reference_deploy_year": 2016,
+      "source_site": "Britford"
+    },
+    {
+      "month": "2016-04",
+      "reconstruction_minus_pilot": {
+        "B_1km_with_6h_nats_per_step_equal_animal_day": 1.1275702593849246e-17,
+        "B_1km_without_hour_control_nats_per_step_equal_animal_day": 2.883977778811442e-17,
+        "B_2km_with_6h_nats_per_step_equal_animal_day": 1.9081958235744878e-17,
+        "heldout_animal_days": 0,
+        "heldout_step_count": 0,
+        "individuals_source_month_with_sufficient_day_records": 0,
+        "n_common_training_contexts": 0,
+        "n_evaluable_holdout_animals": 0,
+        "n_individuals_with_positive_personal_vs_pooled_gain": 0
+      },
+      "source_reference_deploy_year": 2016,
+      "source_site": "Britford"
+    },
+    {
+      "month": "2017-05",
+      "reconstruction_minus_pilot": {
+        "B_1km_with_6h_nats_per_step_equal_animal_day": -1.5178830414797062e-17,
+        "B_1km_without_hour_control_nats_per_step_equal_animal_day": -4.85722573273506e-17,
+        "B_2km_with_6h_nats_per_step_equal_animal_day": 3.469446951953614e-18,
+        "heldout_animal_days": 0,
+        "heldout_step_count": 0,
+        "individuals_source_month_with_sufficient_day_records": 0,
+        "n_common_training_contexts": 0,
+        "n_evaluable_holdout_animals": 0,
+        "n_individuals_with_positive_personal_vs_pooled_gain": 0
+      },
+      "source_reference_deploy_year": 2017,
+      "source_site": "Britford"
+    },
+    {
+      "month": "2018-05",
+      "reconstruction_minus_pilot": {
+        "B_1km_with_6h_nats_per_step_equal_animal_day": -6.938893903907228e-18,
+        "B_1km_without_hour_control_nats_per_step_equal_animal_day": 2.0816681711721685e-17,
+        "B_2km_with_6h_nats_per_step_equal_animal_day": -1.2576745200831851e-17,
+        "heldout_animal_days": 0,
+        "heldout_step_count": 0,
+        "individuals_source_month_with_sufficient_day_records": 0,
+        "n_common_training_contexts": 0,
+        "n_evaluable_holdout_animals": 0,
+        "n_individuals_with_positive_personal_vs_pooled_gain": 0
+      },
+      "source_reference_deploy_year": 2018,
+      "source_site": "Somerley"
+    },
+    {
+      "month": "2019-04",
+      "reconstruction_minus_pilot": {
+        "B_1km_with_6h_nats_per_step_equal_animal_day": -1.3877787807814457e-17,
+        "B_1km_without_hour_control_nats_per_step_equal_animal_day": -2.7755575615628914e-17,
+        "B_2km_with_6h_nats_per_step_equal_animal_day": -6.938893903907228e-18,
+        "heldout_animal_days": 0,
+        "heldout_step_count": 0,
+        "individuals_source_month_with_sufficient_day_records": 0,
+        "n_common_training_contexts": 0,
+        "n_evaluable_holdout_animals": 0,
+        "n_individuals_with_positive_personal_vs_pooled_gain": 0
+      },
+      "source_reference_deploy_year": 2019,
+      "source_site": "Somerley"
+    }
+  ],
+  "historical_count_fields_identical": true,
+  "historical_pilot_receipt": {
+    "bytes": 9521,
+    "md5": "73ee1e62a23108afc85fad19113cdeb7",
+    "sha256": "eaf090ca3b8009da05c2dd370476f6318d9b0cf1f328967f8047e76f678134a7"
+  },
+  "limitations": [
+    "Observed-date splits can place animals' training and testing dates on different calendar dates.",
+    "This reproduction is descriptive and provides no exchangeability null or causal interpretation.",
+    "Original identities, coordinates, cells, dates, tags, and per-animal results are not exported."
+  ],
+  "maximum_absolute_gain_difference_from_historical": 7.632783294297951e-17,
+  "method": {
+    "ambiguity": "Historical JSON does not fix origin versus endpoint, projection constants, rounding of odd date counts, or inclusion of below-threshold animals in the pooled model. No variants were searched to match historical outcomes.",
+    "common_pool": "only animals with >=15 training steps over >=2 dates in context",
+    "eligibility": ">=80 steps and >=6 observed dates per source animal-month",
+    "models": "3 speed modes; pooled Jeffreys 0.5/class; individual lambda15 shrinkage",
+    "projection": "fixed geographic origin; 111.32 km/degree both axes; longitude multiplied by cosine of mean quality-retained event latitude",
+    "selection": "the same ten cohort keys already listed in the historical pilot",
+    "split": "first floor(n_observed_dates/2) dates separately within eligible animal-month",
+    "step_anchor": "origin location, UTC timestamp, and activity",
+    "test_eligibility": ">=15 common-support heldout steps and >=3 heldout dates",
+    "weight": "equal within animal-day, then equal days, then equal animals"
+  },
+  "observation_audit": {
+    "additional_hdop_gt5_sat_below4_or_missing_removed": 491,
+    "after_gps_visible": 145581,
+    "after_quality": 145581,
+    "candidate_adjacent_pairs": 145546,
+    "cross_utc_date_removed": 1522,
+    "invalid_position_time_or_id_removed": 0,
+    "invisible_or_missing_visibility_after_quality_removed": 0,
+    "missing_activity_x": 0,
+    "missing_activity_y": 0,
+    "n_original_individuals": 35,
+    "non_gps_after_quality_removed": 0,
+    "nonpositive_duration_removed": 0,
+    "original_rows": 166338,
+    "outside_9to15minute_cadence_removed": 13097,
+    "outside_reference_deployment_interval": 0,
+    "reference_individuals": 35,
+    "reference_rows": 39,
+    "reference_tags": 14,
+    "retained_after_source_outlier": 146072,
+    "retained_source_site_year_cohorts": 4,
+    "retained_valid_events": 145581,
+    "same_day_9to15minute_pairs_before_speed": 130923,
+    "source_9to15minute_same_day_steps": 130923,
+    "source_manual_outlier_removed": 20266,
+    "source_order_nonincreasing_within_animal": 1,
+    "speed_gt10_kmh_removed": 0,
+    "tag_or_deployment_boundary_removed": 4
+  },
+  "results": [
+    {
+      "B_1km_with_6h_nats_per_step_equal_animal_day": 0.023361386699448095,
+      "B_1km_without_hour_control_nats_per_step_equal_animal_day": 0.03995608095493259,
+      "B_2km_with_6h_nats_per_step_equal_animal_day": 0.012080925801042926,
+      "heldout_animal_days": 88,
+      "heldout_step_count": 8562,
+      "individuals_source_month_with_sufficient_day_records": 10,
+      "month": "2019-05",
+      "n_common_training_contexts": 22,
+      "n_evaluable_holdout_animals": 9,
+      "n_individuals_with_positive_personal_vs_pooled_gain": 6,
+      "source_reference_deploy_year": 2019,
+      "source_site": "Somerley"
+    },
+    {
+      "B_1km_with_6h_nats_per_step_equal_animal_day": 0.0019107533866089554,
+      "B_1km_without_hour_control_nats_per_step_equal_animal_day": 0.03310509006325831,
+      "B_2km_with_6h_nats_per_step_equal_animal_day": 0.01022932672168241,
+      "heldout_animal_days": 62,
+      "heldout_step_count": 5089,
+      "individuals_source_month_with_sufficient_day_records": 7,
+      "month": "2016-05",
+      "n_common_training_contexts": 9,
+      "n_evaluable_holdout_animals": 7,
+      "n_individuals_with_positive_personal_vs_pooled_gain": 3,
+      "source_reference_deploy_year": 2016,
+      "source_site": "Britford"
+    },
+    {
+      "B_1km_with_6h_nats_per_step_equal_animal_day": 0.07203520910873117,
+      "B_1km_without_hour_control_nats_per_step_equal_animal_day": 0.1252607601802189,
+      "B_2km_with_6h_nats_per_step_equal_animal_day": 0.07018725923116674,
+      "heldout_animal_days": 39,
+      "heldout_step_count": 3426,
+      "individuals_source_month_with_sufficient_day_records": 6,
+      "month": "2017-03",
+      "n_common_training_contexts": 8,
+      "n_evaluable_holdout_animals": 6,
+      "n_individuals_with_positive_personal_vs_pooled_gain": 4,
+      "source_reference_deploy_year": 2017,
+      "source_site": "Britford"
+    },
+    {
+      "B_1km_with_6h_nats_per_step_equal_animal_day": 0.033003815624246834,
+      "B_1km_without_hour_control_nats_per_step_equal_animal_day": 0.03174510709056753,
+      "B_2km_with_6h_nats_per_step_equal_animal_day": 0.026152010964738348,
+      "heldout_animal_days": 36,
+      "heldout_step_count": 3327,
+      "individuals_source_month_with_sufficient_day_records": 8,
+      "month": "2017-04",
+      "n_common_training_contexts": 9,
+      "n_evaluable_holdout_animals": 6,
+      "n_individuals_with_positive_personal_vs_pooled_gain": 4,
+      "source_reference_deploy_year": 2017,
+      "source_site": "Britford"
+    },
+    {
+      "B_1km_with_6h_nats_per_step_equal_animal_day": 0.0026785333949841243,
+      "B_1km_without_hour_control_nats_per_step_equal_animal_day": 0.005702533742640932,
+      "B_2km_with_6h_nats_per_step_equal_animal_day": 0.005208676163691997,
+      "heldout_animal_days": 71,
+      "heldout_step_count": 7948,
+      "individuals_source_month_with_sufficient_day_records": 7,
+      "month": "2019-06",
+      "n_common_training_contexts": 20,
+      "n_evaluable_holdout_animals": 6,
+      "n_individuals_with_positive_personal_vs_pooled_gain": 3,
+      "source_reference_deploy_year": 2019,
+      "source_site": "Somerley"
+    },
+    {
+      "B_1km_with_6h_nats_per_step_equal_animal_day": 0.08080740653844523,
+      "B_1km_without_hour_control_nats_per_step_equal_animal_day": 0.06770186329093697,
+      "B_2km_with_6h_nats_per_step_equal_animal_day": 0.10875987623993774,
+      "heldout_animal_days": 38,
+      "heldout_step_count": 3263,
+      "individuals_source_month_with_sufficient_day_records": 5,
+      "month": "2016-06",
+      "n_common_training_contexts": 6,
+      "n_evaluable_holdout_animals": 5,
+      "n_individuals_with_positive_personal_vs_pooled_gain": 3,
+      "source_reference_deploy_year": 2016,
+      "source_site": "Britford"
+    },
+    {
+      "B_1km_with_6h_nats_per_step_equal_animal_day": 0.0009980919420385787,
+      "B_1km_without_hour_control_nats_per_step_equal_animal_day": -0.00142483628155403,
+      "B_2km_with_6h_nats_per_step_equal_animal_day": 0.0015936427886141056,
+      "heldout_animal_days": 17,
+      "heldout_step_count": 1560,
+      "individuals_source_month_with_sufficient_day_records": 4,
+      "month": "2016-04",
+      "n_common_training_contexts": 10,
+      "n_evaluable_holdout_animals": 4,
+      "n_individuals_with_positive_personal_vs_pooled_gain": 1,
+      "source_reference_deploy_year": 2016,
+      "source_site": "Britford"
+    },
+    {
+      "B_1km_with_6h_nats_per_step_equal_animal_day": 0.00011591479329275305,
+      "B_1km_without_hour_control_nats_per_step_equal_animal_day": 0.04864829221800034,
+      "B_2km_with_6h_nats_per_step_equal_animal_day": 0.022757000766686058,
+      "heldout_animal_days": 32,
+      "heldout_step_count": 2845,
+      "individuals_source_month_with_sufficient_day_records": 6,
+      "month": "2017-05",
+      "n_common_training_contexts": 9,
+      "n_evaluable_holdout_animals": 4,
+      "n_individuals_with_positive_personal_vs_pooled_gain": 2,
+      "source_reference_deploy_year": 2017,
+      "source_site": "Britford"
+    },
+    {
+      "B_1km_with_6h_nats_per_step_equal_animal_day": -0.034378163162915164,
+      "B_1km_without_hour_control_nats_per_step_equal_animal_day": 0.01645272460208451,
+      "B_2km_with_6h_nats_per_step_equal_animal_day": 0.003618485466144842,
+      "heldout_animal_days": 46,
+      "heldout_step_count": 2173,
+      "individuals_source_month_with_sufficient_day_records": 5,
+      "month": "2018-05",
+      "n_common_training_contexts": 10,
+      "n_evaluable_holdout_animals": 4,
+      "n_individuals_with_positive_personal_vs_pooled_gain": 2,
+      "source_reference_deploy_year": 2018,
+      "source_site": "Somerley"
+    },
+    {
+      "B_1km_with_6h_nats_per_step_equal_animal_day": 0.047217877960582584,
+      "B_1km_without_hour_control_nats_per_step_equal_animal_day": 0.12961751894473386,
+      "B_2km_with_6h_nats_per_step_equal_animal_day": 0.05503585860422442,
+      "heldout_animal_days": 34,
+      "heldout_step_count": 1765,
+      "individuals_source_month_with_sufficient_day_records": 6,
+      "month": "2019-04",
+      "n_common_training_contexts": 6,
+      "n_evaluable_holdout_animals": 4,
+      "n_individuals_with_positive_personal_vs_pooled_gain": 3,
+      "source_reference_deploy_year": 2019,
+      "source_site": "Somerley"
+    }
+  ],
+  "schema_version": 1,
+  "source_doi": "10.5441/001/1.304",
+  "source_receipts": {
+    "events": {
+      "bytes": 31767499,
+      "md5": "5a997cd23c18f8cc9435636b5376b3ec",
+      "sha256": "e670f9238477118833794b832b076e503350015f2fc5f05b0f700c151b38d717"
+    },
+    "reference": {
+      "bytes": 23611,
+      "md5": "c2cc154a65ab0bdba1834532398ebd6c",
+      "sha256": "01061eca717d73777dbc62e0d6f80c738538920f9aeb1bae15b8fb5f3fa4fcd8"
+    }
+  },
+  "status": "RETROSPECTIVE_PILOT_RECONSTRUCTION_NOT_NULL_CALIBRATED"
+}

@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "generated_utc_date": "2026-10-19",
+  "status": "ORIGINAL_SOURCE_X_PREFLIGHT_ONLY_NOT_INDIVIDUAL_PREDICTION_OR_RESOURCE_PARTITION",
+  "no_raw_positions_or_animal_ids_exported": true,
+  "source": {
+    "dataset_title": "Red Fox (Vulpes vulpes) in UK wet grasslands",
+    "doi": "10.5441/001/1.304",
+    "license": "CC0 1.0 Universal",
+    "event_uuid": "47d876a1-a81a-4cd7-8c5e-809ccd56195a",
+    "reference_uuid": "b40c60e4-ce7f-4bd0-a88a-5ff2112cca4a"
+  },
+  "input_audit": {
+    "original_source_GPS_rows": 166338,
+    "n_original_individuals": 35,
+    "n_reference_deployments": 39,
+    "reference_sites": [
+      "Britford",
+      "Somerley"
+    ],
+    "study_deploy_years": [
+      2016,
+      2017,
+      2018,
+      2019
+    ],
+    "manually_marked_outlier_rows_excluded": 20266,
+    "retained_GPS_rows": 146072,
+    "nonGPS_rows": 0,
+    "unknown_reference_individual_rows": 0,
+    "animals_crossing_reference_site": 0,
+    "animals_crossing_deployment_year": 0
+  },
+  "estimand": "Day-balanced observed 2D geographic utilization-distribution overlap O_ij=sum_c min(p_i(c),p_j(c)); per site × reference deployment year × original GPS calendar month; each animal-day has equal weight, each fix within day equal weight. Individual >=40 fixes on >=5 tracking days per month, dyad >=3 shared tracked dates. Fixed source-mean-latitude equirectangular grid. This is X not R or independently observed E/T. Paired month units reuse animals and cannot be interpreted as independent replicates.",
+  "site_year_results": [
+    {
+      "site": "Britford",
+      "reference_year": 2016,
+      "source_reference_animal_n": 9,
+      "months_with_pair_support": 4,
+      "max_month_eligible_n": 7,
+      "pair_month_units": 38,
+      "mean_X_overlap_1km": 0.3763862345693647,
+      "mean_X_overlap_2km": 0.5806539508778409,
+      "zero_overlap_1km_pair_month_units": 0
+    },
+    {
+      "site": "Britford",
+      "reference_year": 2017,
+      "source_reference_animal_n": 10,
+      "months_with_pair_support": 3,
+      "max_month_eligible_n": 8,
+      "pair_month_units": 62,
+      "mean_X_overlap_1km": 0.3214302759275411,
+      "mean_X_overlap_2km": 0.5515107931103319,
+      "zero_overlap_1km_pair_month_units": 9
+    },
+    {
+      "site": "Somerley",
+      "reference_year": 2018,
+      "source_reference_animal_n": 6,
+      "months_with_pair_support": 4,
+      "max_month_eligible_n": 5,
+      "pair_month_units": 17,
+      "mean_X_overlap_1km": 0.13776642260549177,
+      "mean_X_overlap_2km": 0.1757134852731862,
+      "zero_overlap_1km_pair_month_units": 7
+    },
+    {
+      "site": "Somerley",
+      "reference_year": 2019,
+      "source_reference_animal_n": 10,
+      "months_with_pair_support": 3,
+      "max_month_eligible_n": 10,
+      "pair_month_units": 70,
+      "mean_X_overlap_1km": 0.16440236912886566,
+      "mean_X_overlap_2km": 0.1974428648790332,
+      "zero_overlap_1km_pair_month_units": 20
+    }
+  ],
+  "representative_months": [
+    {
+      "site": "Britford",
+      "month": "2017-04",
+      "animals_with_temporal_support": 8,
+      "source_dyads_with_ge3_common_dates": 26,
+      "mean_O_0_5km": 0.20971846807554584,
+      "mean_O_1km": 0.3295991316279205,
+      "mean_O_2km": 0.6038407674670456,
+      "mean_O_5km": 0.817034331337349,
+      "zero_O1km_dyads": 0
+    },
+    {
+      "site": "Somerley",
+      "month": "2019-05",
+      "animals_with_temporal_support": 10,
+      "source_dyads_with_ge3_common_dates": 34,
+      "mean_O_0_5km": 0.11449378027857339,
+      "mean_O_1km": 0.16331645230282232,
+      "mean_O_2km": 0.20609626226659256,
+      "mean_O_5km": 0.2896243916493996,
+      "zero_O1km_dyads": 14
+    }
+  ],
+  "known_confounders": [
+    "Site and original sampling years are completely confounded (Britford 2016–17, Somerley 2018–19); this is not a causal site contrast",
+    "Source published study already documents site differences in population density, management, food subsidies and home-range scales; this X contrast is an original quantitative pilot, not by itself new ecology",
+    "Individuals in source are adults; individual IDs reused across multiple deployments but not across study years/sites, and animal-day records cannot be treated as independent pairs",
+    "GPS accuracy/horizontal-dilution/sampling-gap spatial cell support needs robust sensitivity checks",
+    "1-km cell overlap is not simultaneous physical encounters or measured dietary resource use",
+    "R conditional movement signatures, independently measured ecological resources E and temporal sharing T were not estimated"
+  ],
+  "intended_next": "Within-source site-year same-month common 1km/2km location and time-gap opportunity gate before leave-day-out movement-mode identity R. If common cells/effort insufficient, structural stop not negative identity."
+}

@@ -1,0 +1,42 @@
+{
+  "independent_sourcewide_reproduction": [
+    {
+      "exact_same_dyads_and_states": true,
+      "max_absolute_model_difference": 1.6653345369377348e-16,
+      "source": "turkey",
+      "source_rows": 796419,
+      "sourcewide_scenarios_reconciled": 64,
+      "v2_MD5_files": 2
+    },
+    {
+      "exact_same_dyads_and_states": true,
+      "max_absolute_model_difference": 8.326672684688674e-17,
+      "source": "black_bear",
+      "source_rows": 156366,
+      "sourcewide_scenarios_reconciled": 64,
+      "v2_MD5_files": 2
+    },
+    {
+      "exact_same_dyads_and_states": true,
+      "max_absolute_model_difference": 2.0816681711721685e-17,
+      "source": "moose_snowy_range",
+      "source_rows": 123399,
+      "sourcewide_scenarios_reconciled": 64,
+      "v2_MD5_files": 2
+    },
+    {
+      "original_rows": 52649,
+      "outcome": "MATCHED_STOP_NOT_BIOLOGICAL_ZERO",
+      "source": "moose",
+      "v1_status": "STOP_UNPARSEABLE_SOURCE_TIMESTAMPS",
+      "v2_status": "STOP_NO_VALID_SOURCE_TIMESTAMPS_OR_COORDINATES"
+    }
+  ],
+  "v1_artifact_sha256": "443d74ff914d175c4ba4df130601864c4b4c1a58157a1969a58c9eb60d83192f",
+  "v2_artifact_sha256": {
+    "black_bear_nearby_v2": "c20a2411072d2dd1c843af9d723f9bff1a721c91dedd2a01aab9ae7420247682",
+    "moose_snowy_range_nearby_v2": "f741baf75704e59d429a0bc3b5f4f711b9be058b05fb529da4bb503dd44bb041",
+    "turkey_nearby_v2": "f751b54dcf8295041a1ecb02f52a619e5546c01a2de7ed71bead0cd2b9a05163",
+    "white_tailed_deer_nearby_v2": "b03d0953911bb254ac26d79ea3b4714d13204af313c53d5b88d9e5107dc9f9cc"
+  }
+}

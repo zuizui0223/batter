@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "analysis_date_utc": "2026-10-19",
+  "mode": "Three original Movebank published small event CSVs parsed in memory; only aggregate source-animal/day counts, file UUID and rights source retained; never redistribute raw tracking rows",
+  "criteria": {
+    "minimum_animals": 8,
+    "minimum_days_with_50_valid_fixes_per_animal": 4,
+    "minimum_calendar_span_days": 7,
+    "minimum_days_with_two_or_more_eligible_animals": 3,
+    "require_nonnull_true_GPS_event_columns": true,
+    "temporal_assumption": "naive source timestamps interpreted explicitly as UTC under original README UTC/GPS time conventions"
+  },
+  "source_registry": "MOVEBANK_PUBLISHED_DATAPACKAGES_CENSUS_2026_10_18.json",
+  "datasets": [
+    {
+      "label": "Copperhead_snake",
+      "doi": "doi:10.5441/001/1.3v106n1n",
+      "event_uuid": "e0c59d01-0c3a-4bcc-b216-c7ddb9da5e4b",
+      "source_csv_size_bytes": 344056,
+      "extracted_text_length": 344056,
+      "n_source_rows": 1630,
+      "headers_count": 11,
+      "present_fields": {
+        "animal_id": true,
+        "datetime": true,
+        "lat": true,
+        "lon": true,
+        "sensor": true,
+        "tag": true
+      },
+      "sensor_counts": {
+        "radio-transmitter": 1630
+      },
+      "n_valid_GPS_like_positions": 0,
+      "n_distinct_animal_id_strings": 0,
+      "n_passing_4_days_ge50_and_ge7_days": 0,
+      "overlap_calendar_days_with_ge2_passing_animals": 0,
+      "excluded_nonGPS_sensors": 1630,
+      "invalid_source_timestamp": 0,
+      "invalid_coordinates": 0,
+      "invalid_ID_rows": 0,
+      "status": "STOP_NO_VALID_EVENTS",
+      "UTC_assumption": "README source states timestamps in UTC or GPS time; parsed timezone-naive timestamp strings as UTC for stage-1 screening only",
+      "source_animal_id_values_retained": false,
+      "source_coordinates_retained": false
+    },
+    {
+      "label": "Cranes_Ukraine",
+      "doi": "doi:10.5441/001/1.590",
+      "event_uuid": "d7165ad2-5f24-4311-bbf3-a3334de6d8f9",
+      "source_csv_size_bytes": 288902,
+      "extracted_text_length": 288902,
+      "n_source_rows": 1795,
+      "headers_count": 16,
+      "present_fields": {
+        "animal_id": true,
+        "datetime": true,
+        "lat": true,
+        "lon": true,
+        "sensor": true,
+        "tag": true
+      },
+      "sensor_counts": {
+        "gps": 1795
+      },
+      "n_valid_GPS_like_positions": 1795,
+      "n_distinct_animal_id_strings": 4,
+      "n_passing_4_days_ge50_and_ge7_days": 0,
+      "overlap_calendar_days_with_ge2_passing_animals": 0,
+      "excluded_nonGPS_sensors": 0,
+      "invalid_source_timestamp": 0,
+      "invalid_coordinates": 0,
+      "invalid_ID_rows": 0,
+      "status": "STOP_INSUFFICIENT_REPEAT_INDIVIDUALS",
+      "UTC_assumption": "README source states timestamps in UTC or GPS time; parsed timezone-naive timestamp strings as UTC for stage-1 screening only",
+      "source_animal_id_values_retained": false,
+      "source_coordinates_retained": false
+    },
+    {
+      "label": "Humboldt_penguin",
+      "doi": "doi:10.5441/001/1.725",
+      "event_uuid": "ac3dc6f1-6c8e-4077-9165-c50479964920",
+      "source_csv_size_bytes": 79162,
+      "extracted_text_length": 79162,
+      "n_source_rows": 421,
+      "headers_count": 11,
+      "present_fields": {
+        "animal_id": true,
+        "datetime": true,
+        "lat": true,
+        "lon": true,
+        "sensor": true,
+        "tag": true
+      },
+      "sensor_counts": {
+        "gps": 421
+      },
+      "n_valid_GPS_like_positions": 421,
+      "n_distinct_animal_id_strings": 21,
+      "n_passing_4_days_ge50_and_ge7_days": 0,
+      "overlap_calendar_days_with_ge2_passing_animals": 0,
+      "excluded_nonGPS_sensors": 0,
+      "invalid_source_timestamp": 0,
+      "invalid_coordinates": 0,
+      "invalid_ID_rows": 0,
+      "status": "STOP_INSUFFICIENT_REPEAT_INDIVIDUALS",
+      "UTC_assumption": "README source states timestamps in UTC or GPS time; parsed timezone-naive timestamp strings as UTC for stage-1 screening only",
+      "source_animal_id_values_retained": false,
+      "source_coordinates_retained": false
+    }
+  ],
+  "limits": [
+    "Stage 1 tests are not a valid ecological comparison population; taxon/site/season/availability and individual redeployments are not screened.",
+    "No conditional individual movement identity G or resource/physical co-use P has been estimated.",
+    "Sensor term GPS is derived from individual event rows when sensor-type present; otherwise needs separate original sensor validation.",
+    "Source coordinates, tag/animal IDs and animal-day records were not stored in this public result.",
+    "Any status PASS is provisional only and cannot be called biologically eligible until population-level and precision gates pass."
+  ]
+}

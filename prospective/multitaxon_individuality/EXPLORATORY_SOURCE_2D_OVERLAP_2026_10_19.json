@@ -1,0 +1,243 @@
+{
+  "schema_version": 1,
+  "generated_date_utc": "2026-10-19",
+  "evidence_status": "REAL_SOURCE_GPS_EXPLORATORY_DESCRIPTIVE_SPACE_OVERLAP_ONLY_NOT_CONFIRMED_INDEPENDENT_ECOLOGICAL_PARTITION",
+  "raw_data_redistributed": false,
+  "individual_identifiers_exported": false,
+  "source_positions_exported": false,
+  "generic_method": {
+    "input": "Original public Movebank released event-level CSV, not a review of authors' summary results",
+    "sensor": "row sensor-type gps; visible=true, georeferenced, valid animal/time",
+    "season_window": "same UTC calendar month",
+    "animal_min_days": 5,
+    "pair_min_shared_dates": 3,
+    "animal_day_weights": "Each unique UTC date has equal total weight per animal; original fixes on same date weighted equally",
+    "estimator": "O_XY=sum_over_common_2D_grid_cells[min(day_balanced_individual_mass_i,day_balanced_individual_mass_j)]",
+    "grid_width_km": [
+      5,
+      10,
+      20
+    ],
+    "projection": "equirectangular x=lon*111.32*cos(mean valid source latitude), y=lat*111.32; all grid coordinates aggregate only",
+    "grid_shift_sensitivity": "zero and half-width offsets in 2D for source-specific verified turtle cohort",
+    "dependency": "pair_month observations heavily reuse same animals; no treating dyads, months or records as independent"
+  },
+  "results": [
+    {
+      "label": "wolf",
+      "taxon": "Canis lupus",
+      "source_doi": "10.5441/001/1.7vr1k987",
+      "bitstream_uuid": "485c621d-5177-4a88-a033-d81ed3a53d8c",
+      "license": "CC0 1.0 Universal",
+      "reference_bitstream_uuid": "a563c585-88fa-4989-8d2a-dd96a5cefc8d",
+      "animal_min_month_fixes": 10,
+      "n_original_rows": 15159,
+      "n_valid_GPS_positions": 15159,
+      "n_GPS_individuals": 12,
+      "source_reference_deployments": 16,
+      "n_months_with_pair_support": 18,
+      "per_year": [
+        {
+          "year": 2006,
+          "pair_month_units": 41,
+          "mean_O10": 0.004593361365240849,
+          "mean_O20": 0.01782466882113323,
+          "zero_O10": 37
+        },
+        {
+          "year": 2007,
+          "pair_month_units": 61,
+          "mean_O10": 0.004475053855011547,
+          "mean_O20": 0.01300867790452453,
+          "zero_O10": 58
+        }
+      ],
+      "example_month": {
+        "month": "2007-03",
+        "n_animals": 7,
+        "n_pairs": 21,
+        "median_pair_shared_days": 25,
+        "mean_O5": 0.008632301731380068,
+        "mean_O10": 0.012857242603786376,
+        "mean_O20": 0.021362893805290106,
+        "zero_O10": 19
+      },
+      "interpretation": "Most pairs in this source have negligible direct estimated monthly 5–20 km XY utilization overlap. Pack/cohort access and territorial resource opportunity not yet authenticated; cannot claim within-population competition or individual behavior partitions."
+    },
+    {
+      "label": "elephant",
+      "taxon": "Loxodonta africana",
+      "source_doi": "10.5441/001/1.403h24q5",
+      "bitstream_uuid": "10240da1-0a99-42bf-a34f-eff15883bbfb",
+      "license": "CC0 1.0 Universal",
+      "reference_bitstream_uuid": "715e38b3-1339-4f8c-a997-c27c219de4c9",
+      "animal_min_month_fixes": 40,
+      "n_original_rows": 283688,
+      "n_valid_GPS_positions": 283688,
+      "n_GPS_individuals": 14,
+      "source_reference_deployments": 14,
+      "reference_population": "Fourteen female elephants from 14 separate herds in Kruger National Park per source paper; shared park not a shared accessible foraging territory",
+      "n_months_with_pair_support": 25,
+      "per_year": [
+        {
+          "year": 2007,
+          "n_months": 5,
+          "pair_month_units": 265,
+          "mean_O10": 0.10943979776544686,
+          "mean_O20": 0.1791205973441742,
+          "zero_O10": 163
+        },
+        {
+          "year": 2008,
+          "n_months": 12,
+          "pair_month_units": 890,
+          "mean_O10": 0.0704769490246994,
+          "mean_O20": 0.11163174599989209,
+          "zero_O10": 642
+        },
+        {
+          "year": 2009,
+          "n_months": 8,
+          "pair_month_units": 326,
+          "mean_O10": 0.08098825127013404,
+          "mean_O20": 0.10910285150387646,
+          "zero_O10": 257
+        }
+      ],
+      "example_month": {
+        "month": "2008-03",
+        "n_animals": 14,
+        "n_pairs": 91,
+        "mean_O5": 0.05277045050239547,
+        "mean_O10": 0.06331734299086345,
+        "mean_O20": 0.11409201956948721,
+        "zero_O10": 70
+      },
+      "interpretation": "Estimated landscape-level shared 2D utilization varies among herd representatives. Separate herds and source access/history create primary confounds. Paper already demonstrated water/temperature movement strategies; those prior findings are not novel products of this analysis."
+    },
+    {
+      "label": "green_turtle",
+      "taxon": "Chelonia mydas",
+      "source_doi": "10.5441/001/1.313",
+      "bitstream_uuid": "f6a7d086-a4e3-434f-bbce-6ba9022543e3",
+      "license": "CC0 1.0 Universal",
+      "reference_bitstream_uuid": "5bf6e216-dfa0-4c7c-a8eb-27cb5f3a2645",
+      "animal_min_month_fixes": 10,
+      "n_original_rows": 52846,
+      "n_valid_original_GPS_positions": 52846,
+      "n_GPS_individuals": 32,
+      "quality_min_GPS_satellites": 5,
+      "quality_max_wc_residual_exclusive": 35,
+      "quality_retained_GPS_positions": 46892,
+      "quality_excluded_positions": 5954,
+      "duplicate_animal_timestamps_removed": 0,
+      "extra_displacement_over_10km_per_hour_removed": 0,
+      "source_population": "Diego Garcia nesting female green turtles tracked in 2012, 2015, 2017 and 2018; split tagging cohorts and biological movement stages",
+      "same_2018_July_Nov_n_individuals": 12,
+      "n_2018_pair_dyads": 66,
+      "source_note": "2018 comparison retains same 12 adults in Jul and Nov, so 66 pair contrasts are not independent",
+      "monthly_2018": [
+        {
+          "month": "2018-07",
+          "mean_O10": 0.9999999999999993,
+          "grid_shift_range_O10": [
+            0.7564091335481704,
+            0.9999999999999993
+          ],
+          "median_individual_daybalanced_distance_to_first_fix_km": 0.4163161556907515
+        },
+        {
+          "month": "2018-08",
+          "mean_O10": 0.6885655556215435,
+          "grid_shift_range_O10": [
+            0.4923292705115897,
+            0.6885655556215435
+          ],
+          "median_individual_daybalanced_distance_to_first_fix_km": 1.132489314573381
+        },
+        {
+          "month": "2018-09",
+          "mean_O10": 0.14466515923412468,
+          "grid_shift_range_O10": [
+            0.12641940868149454,
+            0.14466515923412468
+          ],
+          "median_individual_daybalanced_distance_to_first_fix_km": 869.447383727588
+        },
+        {
+          "month": "2018-10",
+          "mean_O10": 0.0006944444444444444,
+          "grid_shift_range_O10": [
+            0.0006944444444444444,
+            0.0007665945165945166
+          ],
+          "median_individual_daybalanced_distance_to_first_fix_km": 1702.8046122326614
+        },
+        {
+          "month": "2018-11",
+          "mean_O10": 0,
+          "grid_shift_range_O10": [
+            0,
+            0
+          ],
+          "median_individual_daybalanced_distance_to_first_fix_km": 1778.134419735059
+        },
+        {
+          "month": "2018-12",
+          "mean_O10": 0,
+          "grid_shift_range_O10": [
+            0,
+            0
+          ],
+          "median_individual_daybalanced_distance_to_first_fix_km": 1778.2570645330113
+        }
+      ],
+      "independent_year_source_rechecks": [
+        {
+          "cohort_year": 2012,
+          "initial_month": "2012-10",
+          "initial_month_n_animals": 8,
+          "initial_O10": 0.5655273971450441,
+          "later_month": "2013-01",
+          "later_O10": 0.016892717497556203
+        },
+        {
+          "cohort_year": 2015,
+          "initial_analyzed_month": "2015-08",
+          "initial_month_n_animals": 8,
+          "initial_O10": 0.28613051111047466,
+          "later_month": "2015-11",
+          "later_O10": 0.0047789115646258516
+        }
+      ],
+      "interpretation": "Within SAME tracking adults from a shared nesting area, monthly XY use converges early then diverges while turtles move to different foraging regions. This is stage/calendar-driven, NOT evidence of persistent individual movement policy or diet separation; postnesting dispersal and different home ranges were published by original authors."
+    }
+  ],
+  "sensor_exclusions": [
+    {
+      "label": "Canadian herring gull",
+      "doi": "10.5441/001/1.1r1s4v8d",
+      "raw_n": 28649,
+      "source_individuals": 16,
+      "row_sensor_counts": {
+        "argos-doppler-shift": 28649
+      },
+      "reason": "Not true original GPS; leave out of high precision XY identity primary tier (Argos measurement-model stratum only)"
+    },
+    {
+      "label": "Galapagos tortoise monthly supplementary",
+      "doi": "10.5441/001/1.2cp86266",
+      "supplementary_filename": "Movement data.csv",
+      "rows": 2980,
+      "reason": "This released table holds original-paper monthly movement metrics, not time-stamped raw GPS fixes; refrain from treating its rows as independent tracks"
+    }
+  ],
+  "limits": [
+    "These are retrospective exploratory source comparisons not prospective tests or a new universal ecological finding",
+    "Fixed-grid/finite sampling and broad common-park or shared-nesting-site opportunity must not be equated to resources or realized encounters",
+    "Strong turtle onset-versus-distribution contrast recapitulates well documented nest→foraging dispersal, and cannot establish repeated individual specialization without re-exposure",
+    "Wolf and elephant mostly unshared sampled places: conditional same-place behavioral identity R needs a separate common-place gate; it is NOT measured here",
+    "No independently measured prey/food/resource overlap, synchronized physical encounters, causal mechanism, or multilevel 3-clade meta-regression has been calculated",
+    "Source original location data never copied into this repository; download authorized public data under source rights for a reproducibility rerun"
+  ]
+}

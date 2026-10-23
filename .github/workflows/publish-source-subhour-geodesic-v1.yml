@@ -1,0 +1,66 @@
+name: Publish exact source-verified subhour geodesic aggregates (no tracking data)
+
+on:
+  push:
+    branches:
+      - prospective/multitaxon-identity-ecology-v1
+    paths:
+      - ".github/workflows/publish-source-subhour-geodesic-v1.yml"
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  verify-and-commit-only-derived-aggregates:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download fixed completed ORIGINAL-source timestamp opportunity and proximity aggregates
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/source-opportunity /tmp/source-geodesic
+          for source in turkey black_bear white_tailed_deer; do
+            mkdir -p "/tmp/source-artefact-${source}"
+            gh run download 39417475863 --repo "$GITHUB_REPOSITORY" \
+              -n "original-time-opportunity-${source}" -D "/tmp/source-artefact-${source}"
+            mv "/tmp/source-artefact-${source}/${source}_subhour_opportunity.json" \
+               "/tmp/source-opportunity/${source}_subhour_opportunity.json"
+            gh run download 39418452060 --repo "$GITHUB_REPOSITORY" \
+              -n "verified-geodesic-${source}" -D "/tmp/source-artefact-${source}"
+            mv "/tmp/source-artefact-${source}/${source}_subhour_geodesic.json" \
+               "/tmp/source-geodesic/${source}_subhour_geodesic.json"
+          done
+      - name: Validate six SHA256 receipts, paired source/time masks and 360 O-N=D scenarios
+        run: |
+          python3 prospective/multitaxon_individuality/validate_subhour_geodesic_aggregates_v1.py \
+            --opportunity-dir /tmp/source-opportunity \
+            --geodesic-dir /tmp/source-geodesic \
+            --output /tmp/source-geodesic/SUBHOUR_GEODESIC_SUMMARY_2026_10_20.json
+      - name: Commit only source/year/season aggregated data plus exact checked summary
+        run: |
+          set -euo pipefail
+          root=prospective/multitaxon_individuality
+          for source in turkey black_bear white_tailed_deer; do
+            name="$(echo "$source" | tr '[:lower:]' '[:upper:]')"
+            cp "/tmp/source-opportunity/${source}_subhour_opportunity.json" \
+              "$root/SUBHOUR_TIMESTAMP_OPPORTUNITY_${name}_2026_10_20.json"
+            cp "/tmp/source-geodesic/${source}_subhour_geodesic.json" \
+              "$root/SUBHOUR_GEODESIC_${name}_2026_10_20.json"
+          done
+          cp /tmp/source-geodesic/SUBHOUR_GEODESIC_SUMMARY_2026_10_20.json \
+             "$root/SUBHOUR_GEODESIC_SUMMARY_2026_10_20.json"
+          python3 "$root/validate_subhour_geodesic_aggregates_v1.py" \
+             --opportunity-dir "$root" --geodesic-dir "$root" \
+             --output /tmp/geodesic-published-recheck.json
+          cmp /tmp/geodesic-published-recheck.json "$root/SUBHOUR_GEODESIC_SUMMARY_2026_10_20.json"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$root"/SUBHOUR_TIMESTAMP_OPPORTUNITY_*_2026_10_20.json
+          git add "$root"/SUBHOUR_GEODESIC_*_2026_10_20.json
+          git diff --cached --stat
+          git commit -m "data: pin original-source 15/30min timestamp and geodesic proximity aggregates"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

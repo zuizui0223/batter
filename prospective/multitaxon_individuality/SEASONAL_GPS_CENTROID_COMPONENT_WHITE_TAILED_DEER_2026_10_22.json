@@ -1,0 +1,1790 @@
+{
+  "accepted_complete_original_GPS_fix_count": 371080,
+  "as_of": "2026-10-22",
+  "fixed_geo_pair_distance_thresholds_km": [
+    5.0,
+    10.0,
+    25.0
+  ],
+  "independent_full_source_time_position_multiset_verified": true,
+  "limitations": [
+    "Disconnected original annual GPS-use-centroid graphs are not verified distinct populations",
+    "Seasonal centers average original days equally and use nonconsecutive Jan/Feb/Dec calendar-year winter months",
+    "Original GPS location error and source UTC-vs-GPS clock basis not independently resolved",
+    "Previously inspected source proximity drives this exploratory grouping; not a preregistration or causal test",
+    "All within-source dyads may share animals and all seed draws reuse GPS records",
+    "No source animal identity, exact original GPS date, timestamp or position is published"
+  ],
+  "local_biological_population_membership_verified": false,
+  "n_source_sampling_seeds": 12,
+  "native_GPS_source_clock_absolute_UTC_verified": false,
+  "near_position_radii_km": [
+    0.5,
+    1.0,
+    2.0
+  ],
+  "original_clock_tolerances_seconds": [
+    900,
+    1800
+  ],
+  "original_dual_anchor_replay_for_all_scored_component_dyads": true,
+  "prior_original_source_geo_summary_SHA256_verified": true,
+  "publisher_original_MD5_and_prior_source_SHA256_verified": true,
+  "schema_version": 1,
+  "source": "white_tailed_deer",
+  "source_doi": "10.5441/001/1.718",
+  "status": "POST_INSPECTION_ORIGINAL_SOURCE_SEASON_CENTROID_AND_SPATIAL_COMPONENT",
+  "tag_specific_GPS_location_error_verified": false,
+  "year_groups": [
+    {
+      "original_25km_source_dyads": 55,
+      "tolerance_groups": [
+        {
+          "annual_center_bands": [
+            {
+              "annual_centroid_pair_separation_band": "[0,5] km",
+              "fraction_pairs_winter_centers_closer": 0.5925925925925926,
+              "n_pairs_summer_centers_closer": 11,
+              "n_pairs_winter_centers_closer": 16,
+              "n_qualified_source_dyads": 27,
+              "n_source_pairs_requested": 27,
+              "n_source_pairs_with_both_season_centers": 27,
+              "n_unavailable_source_pair_season_centers": 0,
+              "season_center_comparison_is_not_real_time_encounter": true,
+              "status": "DESCRIPTIVE_SOURCE_SEASON_CENTROID_DISTANCE",
+              "summer_km": {
+                "mean": 3.230433117553041,
+                "median": 2.76074390307302,
+                "q10": 0.6611956155975355,
+                "q90": 6.333621706971395
+              },
+              "winter_km": {
+                "mean": 2.6943081229350563,
+                "median": 2.6470360535262514,
+                "q10": 0.9679174509878145,
+                "q90": 4.216944212068646
+              },
+              "winter_minus_summer_km": {
+                "mean": -0.5361249946179846,
+                "median": -0.10253652679999004,
+                "q10": -2.726644171127823,
+                "q90": 0.6922964082350161
+              }
+            },
+            {
+              "annual_centroid_pair_separation_band": "(5,10] km",
+              "fraction_pairs_winter_centers_closer": 0.2,
+              "n_pairs_summer_centers_closer": 4,
+              "n_pairs_winter_centers_closer": 1,
+              "n_qualified_source_dyads": 5,
+              "n_source_pairs_requested": 5,
+              "n_source_pairs_with_both_season_centers": 5,
+              "n_unavailable_source_pair_season_centers": 0,
+              "season_center_comparison_is_not_real_time_encounter": true,
+              "status": "DESCRIPTIVE_SOURCE_SEASON_CENTROID_DISTANCE",
+              "summer_km": {
+                "mean": 8.20717683562573,
+                "median": 9.374361354149004,
+                "q10": 6.337554915103612,
+                "q90": 9.486257098452482
+              },
+              "winter_km": {
+                "mean": 8.239088129925422,
+                "median": 9.220006859171269,
+                "q10": 6.424258523805782,
+                "q90": 9.561509551312833
+              },
+              "winter_minus_summer_km": {
+                "mean": 0.031911294299691126,
+                "median": 0.06567441391857542,
+                "q10": -0.08713062069127417,
+                "q90": 0.11746202490319124
+              }
+            },
+            {
+              "annual_centroid_pair_separation_band": "(10,25] km",
+              "fraction_pairs_winter_centers_closer": 0.5217391304347826,
+              "n_pairs_summer_centers_closer": 11,
+              "n_pairs_winter_centers_closer": 12,
+              "n_qualified_source_dyads": 23,
+              "n_source_pairs_requested": 23,
+              "n_source_pairs_with_both_season_centers": 23,
+              "n_unavailable_source_pair_season_centers": 0,
+              "season_center_comparison_is_not_real_time_encounter": true,
+              "status": "DESCRIPTIVE_SOURCE_SEASON_CENTROID_DISTANCE",
+              "summer_km": {
+                "mean": 13.836496682688235,
+                "median": 13.341033889012897,
+                "q10": 10.953707819697586,
+                "q90": 17.668058920082004
+              },
+              "winter_km": {
+                "mean": 13.588134009901516,
+                "median": 13.2892833110946,
+                "q10": 11.005221605319434,
+                "q90": 16.804375237204926
+              },
+              "winter_minus_summer_km": {
+                "mean": -0.2483626727867192,
+                "median": -0.026114105184186442,
+                "q10": -1.648659684012293,
+                "q90": 0.40416992142592045
+              }
+            },
+            {
+              "annual_centroid_pair_separation_band": "[0,25] km",
+              "fraction_pairs_winter_centers_closer": 0.5272727272727272,
+              "n_pairs_summer_centers_closer": 26,
+              "n_pairs_winter_centers_closer": 29,
+              "n_qualified_source_dyads": 55,
+              "n_source_pairs_requested": 55,
+              "n_source_pairs_with_both_season_centers": 55,
+              "n_unavailable_source_pair_season_centers": 0,
+              "season_center_comparison_is_not_real_time_encounter": true,
+              "status": "DESCRIPTIVE_SOURCE_SEASON_CENTROID_DISTANCE",
+              "summer_km": {
+                "mean": 8.118127310070731,
+                "median": 8.058544922627167,
+                "q10": 1.2511231885738041,
+                "q90": 14.912906496978025
+              },
+              "winter_km": {
+                "mean": 7.7539789490292454,
+                "median": 6.367739138251932,
+                "q10": 1.421425214184594,
+                "q90": 14.756604735999328
+              },
+              "winter_minus_summer_km": {
+                "mean": -0.3641483610414849,
+                "median": -0.03819419123745327,
+                "q10": -2.6194942530317022,
+                "q90": 0.4459304580423937
+              }
+            }
+          ],
+          "components_by_annual_center_threshold": [
+            {
+              "centroid_pair_distance_cutoff_km": 5.0,
+              "component_support": [
+                {
+                  "anonymous_geographic_component_rank_by_animals": 1,
+                  "n_component_original_animals": 8,
+                  "n_component_original_dyads": 26,
+                  "original_source_component_L1_by_radius_direction": {
+                    "n_animals": 8,
+                    "n_pairs": 26,
+                    "radii": [
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "original_A_to_B",
+                        "radius_km": 0.5,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 1,
+                          "positive": 11
+                        },
+                        "winter_minus_summer_L_mean": 0.008623321123321122,
+                        "winter_minus_summer_L_seed_max": 0.028388278388278385,
+                        "winter_minus_summer_L_seed_min": -0.010531135531135528
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "reversed_B_to_A",
+                        "radius_km": 0.5,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 4,
+                          "positive": 8
+                        },
+                        "winter_minus_summer_L_mean": 0.0045405982905982935,
+                        "winter_minus_summer_L_seed_max": 0.018315018315018316,
+                        "winter_minus_summer_L_seed_min": -0.003663003663003671
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "original_A_to_B",
+                        "radius_km": 1.0,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 5,
+                          "positive": 7
+                        },
+                        "winter_minus_summer_L_mean": 0.002136752136752139,
+                        "winter_minus_summer_L_seed_max": 0.012820512820512827,
+                        "winter_minus_summer_L_seed_min": -0.010073260073260072
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "reversed_B_to_A",
+                        "radius_km": 1.0,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 3,
+                          "positive": 9
+                        },
+                        "winter_minus_summer_L_mean": 0.004540598290598288,
+                        "winter_minus_summer_L_seed_max": 0.011904761904761899,
+                        "winter_minus_summer_L_seed_min": -0.0009157509157509317
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "original_A_to_B",
+                        "radius_km": 2.0,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 9,
+                          "positive": 3
+                        },
+                        "winter_minus_summer_L_mean": -0.004464285714285715,
+                        "winter_minus_summer_L_seed_max": 0.006868131868131866,
+                        "winter_minus_summer_L_seed_min": -0.012820512820512822
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "reversed_B_to_A",
+                        "radius_km": 2.0,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 7,
+                          "positive": 5
+                        },
+                        "winter_minus_summer_L_mean": -0.0037011599511599515,
+                        "winter_minus_summer_L_seed_max": 0.01694139194139194,
+                        "winter_minus_summer_L_seed_min": -0.020604395604395608
+                      }
+                    ],
+                    "status": "DESCRIPTIVE_SOURCE_GPS_EDGE_SET_ONLY"
+                  }
+                },
+                {
+                  "anonymous_geographic_component_rank_by_animals": 2,
+                  "n_component_original_animals": 2,
+                  "n_component_original_dyads": 1,
+                  "original_source_component_L1_by_radius_direction": {
+                    "n_animals": 2,
+                    "n_pairs": 1,
+                    "radii": [],
+                    "status": "NOT_ESTIMABLE_INSUFFICIENT_WITHIN_SOURCE_PAIR_SUPPORT"
+                  }
+                }
+              ],
+              "n_source_centroid_components_with_edges": 2
+            },
+            {
+              "centroid_pair_distance_cutoff_km": 10.0,
+              "component_support": [
+                {
+                  "anonymous_geographic_component_rank_by_animals": 1,
+                  "n_component_original_animals": 11,
+                  "n_component_original_dyads": 32,
+                  "original_source_component_L1_by_radius_direction": {
+                    "n_animals": 11,
+                    "n_pairs": 32,
+                    "radii": [
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "original_A_to_B",
+                        "radius_km": 0.5,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 1,
+                          "positive": 11
+                        },
+                        "winter_minus_summer_L_mean": 0.006975446428571428,
+                        "winter_minus_summer_L_seed_max": 0.02306547619047619,
+                        "winter_minus_summer_L_seed_min": -0.008556547619047616
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "reversed_B_to_A",
+                        "radius_km": 0.5,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 4,
+                          "positive": 8
+                        },
+                        "winter_minus_summer_L_mean": 0.0036892361111111136,
+                        "winter_minus_summer_L_seed_max": 0.014880952380952382,
+                        "winter_minus_summer_L_seed_min": -0.0029761904761904825
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "original_A_to_B",
+                        "radius_km": 1.0,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 5,
+                          "positive": 7
+                        },
+                        "winter_minus_summer_L_mean": 0.001736111111111113,
+                        "winter_minus_summer_L_seed_max": 0.010416666666666671,
+                        "winter_minus_summer_L_seed_min": -0.008184523809523808
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "reversed_B_to_A",
+                        "radius_km": 1.0,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 3,
+                          "positive": 9
+                        },
+                        "winter_minus_summer_L_mean": 0.003596230158730157,
+                        "winter_minus_summer_L_seed_max": 0.009300595238095233,
+                        "winter_minus_summer_L_seed_min": -0.000744047619047632
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "original_A_to_B",
+                        "radius_km": 2.0,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 9,
+                          "positive": 3
+                        },
+                        "winter_minus_summer_L_mean": -0.003782242063492064,
+                        "winter_minus_summer_L_seed_max": 0.005580357142857141,
+                        "winter_minus_summer_L_seed_min": -0.010416666666666668
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "reversed_B_to_A",
+                        "radius_km": 2.0,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 8,
+                          "positive": 4
+                        },
+                        "winter_minus_summer_L_mean": -0.0035032242063492065,
+                        "winter_minus_summer_L_seed_max": 0.013764880952380952,
+                        "winter_minus_summer_L_seed_min": -0.017113095238095243
+                      }
+                    ],
+                    "status": "DESCRIPTIVE_SOURCE_GPS_EDGE_SET_ONLY"
+                  }
+                }
+              ],
+              "n_source_centroid_components_with_edges": 1
+            },
+            {
+              "centroid_pair_distance_cutoff_km": 25.0,
+              "component_support": [
+                {
+                  "anonymous_geographic_component_rank_by_animals": 1,
+                  "n_component_original_animals": 11,
+                  "n_component_original_dyads": 55,
+                  "original_source_component_L1_by_radius_direction": {
+                    "n_animals": 11,
+                    "n_pairs": 55,
+                    "radii": [
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "original_A_to_B",
+                        "radius_km": 0.5,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 1,
+                          "positive": 11
+                        },
+                        "winter_minus_summer_L_mean": 0.004473304473304473,
+                        "winter_minus_summer_L_seed_max": 0.013636363636363634,
+                        "winter_minus_summer_L_seed_min": -0.00541125541125541
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "reversed_B_to_A",
+                        "radius_km": 0.5,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 3,
+                          "positive": 9
+                        },
+                        "winter_minus_summer_L_mean": 0.0022546897546897554,
+                        "winter_minus_summer_L_seed_max": 0.008874458874458873,
+                        "winter_minus_summer_L_seed_min": -0.0030303030303030355
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "original_A_to_B",
+                        "radius_km": 1.0,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 5,
+                          "positive": 7
+                        },
+                        "winter_minus_summer_L_mean": 0.0013888888888888902,
+                        "winter_minus_summer_L_seed_max": 0.0064935064935064965,
+                        "winter_minus_summer_L_seed_min": -0.0036796536796536773
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "reversed_B_to_A",
+                        "radius_km": 1.0,
+                        "seed_signs": {
+                          "near_zero": 1,
+                          "negative": 2,
+                          "positive": 9
+                        },
+                        "winter_minus_summer_L_mean": 0.0020923520923520913,
+                        "winter_minus_summer_L_seed_max": 0.005194805194805191,
+                        "winter_minus_summer_L_seed_min": -0.0006493506493506501
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "original_A_to_B",
+                        "radius_km": 2.0,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 9,
+                          "positive": 3
+                        },
+                        "winter_minus_summer_L_mean": -0.002092352092352093,
+                        "winter_minus_summer_L_seed_max": 0.0032467532467532457,
+                        "winter_minus_summer_L_seed_min": -0.0060606060606060615
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "reversed_B_to_A",
+                        "radius_km": 2.0,
+                        "seed_signs": {
+                          "near_zero": 1,
+                          "negative": 7,
+                          "positive": 4
+                        },
+                        "winter_minus_summer_L_mean": -0.001984126984126984,
+                        "winter_minus_summer_L_seed_max": 0.008008658008658008,
+                        "winter_minus_summer_L_seed_min": -0.009956709956709959
+                      }
+                    ],
+                    "status": "DESCRIPTIVE_SOURCE_GPS_EDGE_SET_ONLY"
+                  }
+                }
+              ],
+              "n_source_centroid_components_with_edges": 1
+            }
+          ],
+          "n_original_matched_source_dyads": 55,
+          "source_year": 2019,
+          "status": "DESCRIPTIVE_GPS_GEOMETRIC_COMPONENTS_AND_SEASON_CENTERS",
+          "tolerance_seconds": 900
+        },
+        {
+          "annual_center_bands": [
+            {
+              "annual_centroid_pair_separation_band": "[0,5] km",
+              "fraction_pairs_winter_centers_closer": 0.5925925925925926,
+              "n_pairs_summer_centers_closer": 11,
+              "n_pairs_winter_centers_closer": 16,
+              "n_qualified_source_dyads": 27,
+              "n_source_pairs_requested": 27,
+              "n_source_pairs_with_both_season_centers": 27,
+              "n_unavailable_source_pair_season_centers": 0,
+              "season_center_comparison_is_not_real_time_encounter": true,
+              "status": "DESCRIPTIVE_SOURCE_SEASON_CENTROID_DISTANCE",
+              "summer_km": {
+                "mean": 3.230433117553041,
+                "median": 2.76074390307302,
+                "q10": 0.6611956155975355,
+                "q90": 6.333621706971395
+              },
+              "winter_km": {
+                "mean": 2.6943081229350563,
+                "median": 2.6470360535262514,
+                "q10": 0.9679174509878145,
+                "q90": 4.216944212068646
+              },
+              "winter_minus_summer_km": {
+                "mean": -0.5361249946179846,
+                "median": -0.10253652679999004,
+                "q10": -2.726644171127823,
+                "q90": 0.6922964082350161
+              }
+            },
+            {
+              "annual_centroid_pair_separation_band": "(5,10] km",
+              "fraction_pairs_winter_centers_closer": 0.2,
+              "n_pairs_summer_centers_closer": 4,
+              "n_pairs_winter_centers_closer": 1,
+              "n_qualified_source_dyads": 5,
+              "n_source_pairs_requested": 5,
+              "n_source_pairs_with_both_season_centers": 5,
+              "n_unavailable_source_pair_season_centers": 0,
+              "season_center_comparison_is_not_real_time_encounter": true,
+              "status": "DESCRIPTIVE_SOURCE_SEASON_CENTROID_DISTANCE",
+              "summer_km": {
+                "mean": 8.20717683562573,
+                "median": 9.374361354149004,
+                "q10": 6.337554915103612,
+                "q90": 9.486257098452482
+              },
+              "winter_km": {
+                "mean": 8.239088129925422,
+                "median": 9.220006859171269,
+                "q10": 6.424258523805782,
+                "q90": 9.561509551312833
+              },
+              "winter_minus_summer_km": {
+                "mean": 0.031911294299691126,
+                "median": 0.06567441391857542,
+                "q10": -0.08713062069127417,
+                "q90": 0.11746202490319124
+              }
+            },
+            {
+              "annual_centroid_pair_separation_band": "(10,25] km",
+              "fraction_pairs_winter_centers_closer": 0.5217391304347826,
+              "n_pairs_summer_centers_closer": 11,
+              "n_pairs_winter_centers_closer": 12,
+              "n_qualified_source_dyads": 23,
+              "n_source_pairs_requested": 23,
+              "n_source_pairs_with_both_season_centers": 23,
+              "n_unavailable_source_pair_season_centers": 0,
+              "season_center_comparison_is_not_real_time_encounter": true,
+              "status": "DESCRIPTIVE_SOURCE_SEASON_CENTROID_DISTANCE",
+              "summer_km": {
+                "mean": 13.836496682688235,
+                "median": 13.341033889012897,
+                "q10": 10.953707819697586,
+                "q90": 17.668058920082004
+              },
+              "winter_km": {
+                "mean": 13.588134009901516,
+                "median": 13.2892833110946,
+                "q10": 11.005221605319434,
+                "q90": 16.804375237204926
+              },
+              "winter_minus_summer_km": {
+                "mean": -0.2483626727867192,
+                "median": -0.026114105184186442,
+                "q10": -1.648659684012293,
+                "q90": 0.40416992142592045
+              }
+            },
+            {
+              "annual_centroid_pair_separation_band": "[0,25] km",
+              "fraction_pairs_winter_centers_closer": 0.5272727272727272,
+              "n_pairs_summer_centers_closer": 26,
+              "n_pairs_winter_centers_closer": 29,
+              "n_qualified_source_dyads": 55,
+              "n_source_pairs_requested": 55,
+              "n_source_pairs_with_both_season_centers": 55,
+              "n_unavailable_source_pair_season_centers": 0,
+              "season_center_comparison_is_not_real_time_encounter": true,
+              "status": "DESCRIPTIVE_SOURCE_SEASON_CENTROID_DISTANCE",
+              "summer_km": {
+                "mean": 8.118127310070731,
+                "median": 8.058544922627167,
+                "q10": 1.2511231885738041,
+                "q90": 14.912906496978025
+              },
+              "winter_km": {
+                "mean": 7.7539789490292454,
+                "median": 6.367739138251932,
+                "q10": 1.421425214184594,
+                "q90": 14.756604735999328
+              },
+              "winter_minus_summer_km": {
+                "mean": -0.3641483610414849,
+                "median": -0.03819419123745327,
+                "q10": -2.6194942530317022,
+                "q90": 0.4459304580423937
+              }
+            }
+          ],
+          "components_by_annual_center_threshold": [
+            {
+              "centroid_pair_distance_cutoff_km": 5.0,
+              "component_support": [
+                {
+                  "anonymous_geographic_component_rank_by_animals": 1,
+                  "n_component_original_animals": 8,
+                  "n_component_original_dyads": 26,
+                  "original_source_component_L1_by_radius_direction": {
+                    "n_animals": 8,
+                    "n_pairs": 26,
+                    "radii": [
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "original_A_to_B",
+                        "radius_km": 0.5,
+                        "seed_signs": {
+                          "near_zero": 1,
+                          "negative": 1,
+                          "positive": 10
+                        },
+                        "winter_minus_summer_L_mean": 0.005761599511599512,
+                        "winter_minus_summer_L_seed_max": 0.012820512820512822,
+                        "winter_minus_summer_L_seed_min": -0.0027472527472527475
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "reversed_B_to_A",
+                        "radius_km": 0.5,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 1,
+                          "positive": 11
+                        },
+                        "winter_minus_summer_L_mean": 0.009768009768009768,
+                        "winter_minus_summer_L_seed_max": 0.02289377289377289,
+                        "winter_minus_summer_L_seed_min": -0.0036630036630036643
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "original_A_to_B",
+                        "radius_km": 1.0,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 8,
+                          "positive": 4
+                        },
+                        "winter_minus_summer_L_mean": 0.0012591575091575118,
+                        "winter_minus_summer_L_seed_max": 0.01831501831501831,
+                        "winter_minus_summer_L_seed_min": -0.009157509157509156
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "reversed_B_to_A",
+                        "radius_km": 1.0,
+                        "seed_signs": {
+                          "near_zero": 1,
+                          "negative": 6,
+                          "positive": 5
+                        },
+                        "winter_minus_summer_L_mean": 7.631257631257824e-05,
+                        "winter_minus_summer_L_seed_max": 0.012362637362637372,
+                        "winter_minus_summer_L_seed_min": -0.010989010989010986
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "original_A_to_B",
+                        "radius_km": 2.0,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 9,
+                          "positive": 3
+                        },
+                        "winter_minus_summer_L_mean": -0.005418192918192919,
+                        "winter_minus_summer_L_seed_max": 0.003663003663003661,
+                        "winter_minus_summer_L_seed_min": -0.01602564102564102
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "reversed_B_to_A",
+                        "radius_km": 2.0,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 6,
+                          "positive": 6
+                        },
+                        "winter_minus_summer_L_mean": -0.0020222832722832738,
+                        "winter_minus_summer_L_seed_max": 0.008699633699633698,
+                        "winter_minus_summer_L_seed_min": -0.01144688644688645
+                      }
+                    ],
+                    "status": "DESCRIPTIVE_SOURCE_GPS_EDGE_SET_ONLY"
+                  }
+                },
+                {
+                  "anonymous_geographic_component_rank_by_animals": 2,
+                  "n_component_original_animals": 2,
+                  "n_component_original_dyads": 1,
+                  "original_source_component_L1_by_radius_direction": {
+                    "n_animals": 2,
+                    "n_pairs": 1,
+                    "radii": [],
+                    "status": "NOT_ESTIMABLE_INSUFFICIENT_WITHIN_SOURCE_PAIR_SUPPORT"
+                  }
+                }
+              ],
+              "n_source_centroid_components_with_edges": 2
+            },
+            {
+              "centroid_pair_distance_cutoff_km": 10.0,
+              "component_support": [
+                {
+                  "anonymous_geographic_component_rank_by_animals": 1,
+                  "n_component_original_animals": 11,
+                  "n_component_original_dyads": 32,
+                  "original_source_component_L1_by_radius_direction": {
+                    "n_animals": 11,
+                    "n_pairs": 32,
+                    "radii": [
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "original_A_to_B",
+                        "radius_km": 0.5,
+                        "seed_signs": {
+                          "near_zero": 1,
+                          "negative": 1,
+                          "positive": 10
+                        },
+                        "winter_minus_summer_L_mean": 0.004681299603174603,
+                        "winter_minus_summer_L_seed_max": 0.010416666666666668,
+                        "winter_minus_summer_L_seed_min": -0.0022321428571428575
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "reversed_B_to_A",
+                        "radius_km": 0.5,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 1,
+                          "positive": 11
+                        },
+                        "winter_minus_summer_L_mean": 0.007936507936507936,
+                        "winter_minus_summer_L_seed_max": 0.018601190476190473,
+                        "winter_minus_summer_L_seed_min": -0.0029761904761904773
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "original_A_to_B",
+                        "radius_km": 1.0,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 8,
+                          "positive": 4
+                        },
+                        "winter_minus_summer_L_mean": 0.0010230654761904784,
+                        "winter_minus_summer_L_seed_max": 0.014880952380952377,
+                        "winter_minus_summer_L_seed_min": -0.007440476190476189
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "reversed_B_to_A",
+                        "radius_km": 1.0,
+                        "seed_signs": {
+                          "near_zero": 1,
+                          "negative": 6,
+                          "positive": 5
+                        },
+                        "winter_minus_summer_L_mean": 6.200396825396981e-05,
+                        "winter_minus_summer_L_seed_max": 0.010044642857142865,
+                        "winter_minus_summer_L_seed_min": -0.008928571428571426
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "original_A_to_B",
+                        "radius_km": 2.0,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 9,
+                          "positive": 3
+                        },
+                        "winter_minus_summer_L_mean": -0.00443328373015873,
+                        "winter_minus_summer_L_seed_max": 0.002604166666666665,
+                        "winter_minus_summer_L_seed_min": -0.01302083333333333
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "reversed_B_to_A",
+                        "radius_km": 2.0,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 6,
+                          "positive": 6
+                        },
+                        "winter_minus_summer_L_mean": -0.0017671130952380961,
+                        "winter_minus_summer_L_seed_max": 0.00706845238095238,
+                        "winter_minus_summer_L_seed_min": -0.00930059523809524
+                      }
+                    ],
+                    "status": "DESCRIPTIVE_SOURCE_GPS_EDGE_SET_ONLY"
+                  }
+                }
+              ],
+              "n_source_centroid_components_with_edges": 1
+            },
+            {
+              "centroid_pair_distance_cutoff_km": 25.0,
+              "component_support": [
+                {
+                  "anonymous_geographic_component_rank_by_animals": 1,
+                  "n_component_original_animals": 11,
+                  "n_component_original_dyads": 55,
+                  "original_source_component_L1_by_radius_direction": {
+                    "n_animals": 11,
+                    "n_pairs": 55,
+                    "radii": [
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "original_A_to_B",
+                        "radius_km": 0.5,
+                        "seed_signs": {
+                          "near_zero": 1,
+                          "negative": 3,
+                          "positive": 8
+                        },
+                        "winter_minus_summer_L_mean": 0.0021825396825396826,
+                        "winter_minus_summer_L_seed_max": 0.007792207792207792,
+                        "winter_minus_summer_L_seed_min": -0.0023809523809523825
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "reversed_B_to_A",
+                        "radius_km": 0.5,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 0,
+                          "positive": 12
+                        },
+                        "winter_minus_summer_L_mean": 0.004978354978354979,
+                        "winter_minus_summer_L_seed_max": 0.009956709956709954,
+                        "winter_minus_summer_L_seed_min": 0.0004329004329004389
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "original_A_to_B",
+                        "radius_km": 1.0,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 7,
+                          "positive": 5
+                        },
+                        "winter_minus_summer_L_mean": 0.0009018759018759033,
+                        "winter_minus_summer_L_seed_max": 0.008658008658008661,
+                        "winter_minus_summer_L_seed_min": -0.004112554112554112
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "reversed_B_to_A",
+                        "radius_km": 1.0,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 7,
+                          "positive": 5
+                        },
+                        "winter_minus_summer_L_mean": 0.00039682539682539764,
+                        "winter_minus_summer_L_seed_max": 0.006493506493506497,
+                        "winter_minus_summer_L_seed_min": -0.004545454545454544
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "original_A_to_B",
+                        "radius_km": 2.0,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 8,
+                          "positive": 4
+                        },
+                        "winter_minus_summer_L_mean": -0.002471139971139971,
+                        "winter_minus_summer_L_seed_max": 0.001515151515151514,
+                        "winter_minus_summer_L_seed_min": -0.007575757575757574
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "reversed_B_to_A",
+                        "radius_km": 2.0,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 6,
+                          "positive": 6
+                        },
+                        "winter_minus_summer_L_mean": -0.0011183261183261187,
+                        "winter_minus_summer_L_seed_max": 0.004329004329004329,
+                        "winter_minus_summer_L_seed_min": -0.005844155844155844
+                      }
+                    ],
+                    "status": "DESCRIPTIVE_SOURCE_GPS_EDGE_SET_ONLY"
+                  }
+                }
+              ],
+              "n_source_centroid_components_with_edges": 1
+            }
+          ],
+          "n_original_matched_source_dyads": 55,
+          "source_year": 2019,
+          "status": "DESCRIPTIVE_GPS_GEOMETRIC_COMPONENTS_AND_SEASON_CENTERS",
+          "tolerance_seconds": 1800
+        }
+      ],
+      "year": 2019
+    },
+    {
+      "original_25km_source_dyads": 205,
+      "tolerance_groups": [
+        {
+          "annual_center_bands": [
+            {
+              "annual_centroid_pair_separation_band": "[0,5] km",
+              "fraction_pairs_winter_centers_closer": 0.2833333333333333,
+              "n_pairs_summer_centers_closer": 43,
+              "n_pairs_winter_centers_closer": 17,
+              "n_qualified_source_dyads": 60,
+              "n_source_pairs_requested": 60,
+              "n_source_pairs_with_both_season_centers": 60,
+              "n_unavailable_source_pair_season_centers": 0,
+              "season_center_comparison_is_not_real_time_encounter": true,
+              "status": "DESCRIPTIVE_SOURCE_SEASON_CENTROID_DISTANCE",
+              "summer_km": {
+                "mean": 1.982730248586956,
+                "median": 1.8713015545765792,
+                "q10": 0.43787771941483233,
+                "q90": 4.074230441379155
+              },
+              "winter_km": {
+                "mean": 2.1740022194344735,
+                "median": 2.113534743171276,
+                "q10": 0.6393668010441772,
+                "q90": 4.147082622443822
+              },
+              "winter_minus_summer_km": {
+                "mean": 0.19127197084751751,
+                "median": 0.13998166770761022,
+                "q10": -0.368644794535304,
+                "q90": 0.7131135440481671
+              }
+            },
+            {
+              "annual_centroid_pair_separation_band": "(5,10] km",
+              "fraction_pairs_winter_centers_closer": 0.5675675675675675,
+              "n_pairs_summer_centers_closer": 16,
+              "n_pairs_winter_centers_closer": 21,
+              "n_qualified_source_dyads": 37,
+              "n_source_pairs_requested": 37,
+              "n_source_pairs_with_both_season_centers": 37,
+              "n_unavailable_source_pair_season_centers": 0,
+              "season_center_comparison_is_not_real_time_encounter": true,
+              "status": "DESCRIPTIVE_SOURCE_SEASON_CENTROID_DISTANCE",
+              "summer_km": {
+                "mean": 8.01143606930615,
+                "median": 8.397533682489577,
+                "q10": 6.151208857034272,
+                "q90": 9.83791964180442
+              },
+              "winter_km": {
+                "mean": 7.947306204232314,
+                "median": 8.119426859265223,
+                "q10": 6.294145071263582,
+                "q90": 9.639750169446627
+              },
+              "winter_minus_summer_km": {
+                "mean": -0.0641298650738356,
+                "median": -0.12284702695177785,
+                "q10": -0.5623352359615683,
+                "q90": 0.3524336768126126
+              }
+            },
+            {
+              "annual_centroid_pair_separation_band": "(10,25] km",
+              "fraction_pairs_winter_centers_closer": 0.5370370370370371,
+              "n_pairs_summer_centers_closer": 50,
+              "n_pairs_winter_centers_closer": 58,
+              "n_qualified_source_dyads": 108,
+              "n_source_pairs_requested": 108,
+              "n_source_pairs_with_both_season_centers": 108,
+              "n_unavailable_source_pair_season_centers": 0,
+              "season_center_comparison_is_not_real_time_encounter": true,
+              "status": "DESCRIPTIVE_SOURCE_SEASON_CENTROID_DISTANCE",
+              "summer_km": {
+                "mean": 13.77362868593722,
+                "median": 12.743920599320504,
+                "q10": 10.336194716242423,
+                "q90": 18.12602976878969
+              },
+              "winter_km": {
+                "mean": 13.744942586353941,
+                "median": 12.689824016569208,
+                "q10": 10.404179500570768,
+                "q90": 18.703909866167894
+              },
+              "winter_minus_summer_km": {
+                "mean": -0.028686099583278207,
+                "median": -0.020328136627800752,
+                "q10": -0.4025289392681003,
+                "q90": 0.3256159940364529
+              }
+            },
+            {
+              "annual_centroid_pair_separation_band": "[0,25] km",
+              "fraction_pairs_winter_centers_closer": 0.4682926829268293,
+              "n_pairs_summer_centers_closer": 109,
+              "n_pairs_winter_centers_closer": 96,
+              "n_qualified_source_dyads": 205,
+              "n_source_pairs_requested": 205,
+              "n_source_pairs_with_both_season_centers": 205,
+              "n_unavailable_source_pair_season_centers": 0,
+              "season_center_comparison_is_not_real_time_encounter": true,
+              "status": "DESCRIPTIVE_SOURCE_SEASON_CENTROID_DISTANCE",
+              "summer_km": {
+                "mean": 9.282628524686658,
+                "median": 10.203902850336942,
+                "q10": 1.0993115715519082,
+                "q90": 17.24047271857188
+              },
+              "winter_km": {
+                "mean": 9.31192322950678,
+                "median": 10.17909852994857,
+                "q10": 1.6478748158704979,
+                "q90": 16.964298753639568
+              },
+              "winter_minus_summer_km": {
+                "mean": 0.02929470482012238,
+                "median": 0.014689993131502987,
+                "q10": -0.4328930349920771,
+                "q90": 0.41885390832932723
+              }
+            }
+          ],
+          "components_by_annual_center_threshold": [
+            {
+              "centroid_pair_distance_cutoff_km": 5.0,
+              "component_support": [
+                {
+                  "anonymous_geographic_component_rank_by_animals": 1,
+                  "n_component_original_animals": 12,
+                  "n_component_original_dyads": 51,
+                  "original_source_component_L1_by_radius_direction": {
+                    "n_animals": 12,
+                    "n_pairs": 51,
+                    "radii": [
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "original_A_to_B",
+                        "radius_km": 0.5,
+                        "seed_signs": {
+                          "near_zero": 1,
+                          "negative": 2,
+                          "positive": 9
+                        },
+                        "winter_minus_summer_L_mean": 0.0033457827575474656,
+                        "winter_minus_summer_L_seed_max": 0.010504201680672266,
+                        "winter_minus_summer_L_seed_min": -0.004435107376283844
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "reversed_B_to_A",
+                        "radius_km": 0.5,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 2,
+                          "positive": 10
+                        },
+                        "winter_minus_summer_L_mean": 0.004376750700280115,
+                        "winter_minus_summer_L_seed_max": 0.013538748832866489,
+                        "winter_minus_summer_L_seed_min": -0.00560224089635854
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "original_A_to_B",
+                        "radius_km": 1.0,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 2,
+                          "positive": 10
+                        },
+                        "winter_minus_summer_L_mean": 0.0053688141923436,
+                        "winter_minus_summer_L_seed_max": 0.018907563025210065,
+                        "winter_minus_summer_L_seed_min": -0.00606909430438842
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "reversed_B_to_A",
+                        "radius_km": 1.0,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 1,
+                          "positive": 11
+                        },
+                        "winter_minus_summer_L_mean": 0.0036764705882352954,
+                        "winter_minus_summer_L_seed_max": 0.011904761904761897,
+                        "winter_minus_summer_L_seed_min": -0.005602240896358531
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "original_A_to_B",
+                        "radius_km": 2.0,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 4,
+                          "positive": 8
+                        },
+                        "winter_minus_summer_L_mean": 0.0023342670401493904,
+                        "winter_minus_summer_L_seed_max": 0.017273576097105496,
+                        "winter_minus_summer_L_seed_min": -0.005835667600373486
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "reversed_B_to_A",
+                        "radius_km": 2.0,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 2,
+                          "positive": 10
+                        },
+                        "winter_minus_summer_L_mean": 0.005038126361655773,
+                        "winter_minus_summer_L_seed_max": 0.012138188608776846,
+                        "winter_minus_summer_L_seed_min": -0.009337068160597565
+                      }
+                    ],
+                    "status": "DESCRIPTIVE_SOURCE_GPS_EDGE_SET_ONLY"
+                  }
+                },
+                {
+                  "anonymous_geographic_component_rank_by_animals": 2,
+                  "n_component_original_animals": 4,
+                  "n_component_original_dyads": 6,
+                  "original_source_component_L1_by_radius_direction": {
+                    "n_animals": 4,
+                    "n_pairs": 6,
+                    "radii": [],
+                    "status": "NOT_ESTIMABLE_INSUFFICIENT_WITHIN_SOURCE_PAIR_SUPPORT"
+                  }
+                },
+                {
+                  "anonymous_geographic_component_rank_by_animals": 3,
+                  "n_component_original_animals": 4,
+                  "n_component_original_dyads": 3,
+                  "original_source_component_L1_by_radius_direction": {
+                    "n_animals": 4,
+                    "n_pairs": 3,
+                    "radii": [],
+                    "status": "NOT_ESTIMABLE_INSUFFICIENT_WITHIN_SOURCE_PAIR_SUPPORT"
+                  }
+                }
+              ],
+              "n_source_centroid_components_with_edges": 3
+            },
+            {
+              "centroid_pair_distance_cutoff_km": 10.0,
+              "component_support": [
+                {
+                  "anonymous_geographic_component_rank_by_animals": 1,
+                  "n_component_original_animals": 21,
+                  "n_component_original_dyads": 97,
+                  "original_source_component_L1_by_radius_direction": {
+                    "n_animals": 21,
+                    "n_pairs": 97,
+                    "radii": [
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "original_A_to_B",
+                        "radius_km": 0.5,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 1,
+                          "positive": 11
+                        },
+                        "winter_minus_summer_L_mean": 0.002925053182785143,
+                        "winter_minus_summer_L_seed_max": 0.007118311242022581,
+                        "winter_minus_summer_L_seed_min": -0.0009818360333824227
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "reversed_B_to_A",
+                        "radius_km": 0.5,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 2,
+                          "positive": 10
+                        },
+                        "winter_minus_summer_L_mean": 0.0020761741122565878,
+                        "winter_minus_summer_L_seed_max": 0.008959253804614627,
+                        "winter_minus_summer_L_seed_min": -0.004540991654393714
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "original_A_to_B",
+                        "radius_km": 1.0,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 2,
+                          "positive": 10
+                        },
+                        "winter_minus_summer_L_mean": 0.0026080019636720657,
+                        "winter_minus_summer_L_seed_max": 0.010800196367206668,
+                        "winter_minus_summer_L_seed_min": -0.0027000490918016665
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "reversed_B_to_A",
+                        "radius_km": 1.0,
+                        "seed_signs": {
+                          "near_zero": 1,
+                          "negative": 5,
+                          "positive": 6
+                        },
+                        "winter_minus_summer_L_mean": 0.0009613811160202918,
+                        "winter_minus_summer_L_seed_max": 0.007118311242022581,
+                        "winter_minus_summer_L_seed_min": -0.00454099165439371
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "original_A_to_B",
+                        "radius_km": 2.0,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 1,
+                          "positive": 11
+                        },
+                        "winter_minus_summer_L_mean": 0.0018409425625920464,
+                        "winter_minus_summer_L_seed_max": 0.009327442317133032,
+                        "winter_minus_summer_L_seed_min": -0.0031909671084928816
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "reversed_B_to_A",
+                        "radius_km": 2.0,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 2,
+                          "positive": 10
+                        },
+                        "winter_minus_summer_L_mean": 0.003150057273768613,
+                        "winter_minus_summer_L_seed_max": 0.006627393225331364,
+                        "winter_minus_summer_L_seed_min": -0.004295532646048106
+                      }
+                    ],
+                    "status": "DESCRIPTIVE_SOURCE_GPS_EDGE_SET_ONLY"
+                  }
+                }
+              ],
+              "n_source_centroid_components_with_edges": 1
+            },
+            {
+              "centroid_pair_distance_cutoff_km": 25.0,
+              "component_support": [
+                {
+                  "anonymous_geographic_component_rank_by_animals": 1,
+                  "n_component_original_animals": 21,
+                  "n_component_original_dyads": 205,
+                  "original_source_component_L1_by_radius_direction": {
+                    "n_animals": 21,
+                    "n_pairs": 205,
+                    "radii": [
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "original_A_to_B",
+                        "radius_km": 0.5,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 1,
+                          "positive": 11
+                        },
+                        "winter_minus_summer_L_mean": 0.0013840495547812626,
+                        "winter_minus_summer_L_seed_max": 0.003368176538908246,
+                        "winter_minus_summer_L_seed_min": -0.0004645760743321708
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "reversed_B_to_A",
+                        "radius_km": 0.5,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 2,
+                          "positive": 10
+                        },
+                        "winter_minus_summer_L_mean": 0.0009823848238482392,
+                        "winter_minus_summer_L_seed_max": 0.004239256678281068,
+                        "winter_minus_summer_L_seed_min": -0.002148664343786294
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "original_A_to_B",
+                        "radius_km": 1.0,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 2,
+                          "positive": 10
+                        },
+                        "winter_minus_summer_L_mean": 0.001234030197444831,
+                        "winter_minus_summer_L_seed_max": 0.0051103368176538865,
+                        "winter_minus_summer_L_seed_min": -0.0012775842044134714
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "reversed_B_to_A",
+                        "radius_km": 1.0,
+                        "seed_signs": {
+                          "near_zero": 1,
+                          "negative": 5,
+                          "positive": 6
+                        },
+                        "winter_minus_summer_L_mean": 0.0004548974061169185,
+                        "winter_minus_summer_L_seed_max": 0.003368176538908246,
+                        "winter_minus_summer_L_seed_min": -0.0021486643437862918
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "original_A_to_B",
+                        "radius_km": 2.0,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 1,
+                          "positive": 11
+                        },
+                        "winter_minus_summer_L_mean": 0.000871080139372822,
+                        "winter_minus_summer_L_seed_max": 0.0044134727061556295,
+                        "winter_minus_summer_L_seed_min": -0.0015098722415795587
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "reversed_B_to_A",
+                        "radius_km": 2.0,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 2,
+                          "positive": 10
+                        },
+                        "winter_minus_summer_L_mean": 0.0014905149051490513,
+                        "winter_minus_summer_L_seed_max": 0.0031358885017421577,
+                        "winter_minus_summer_L_seed_min": -0.00203252032520325
+                      }
+                    ],
+                    "status": "DESCRIPTIVE_SOURCE_GPS_EDGE_SET_ONLY"
+                  }
+                }
+              ],
+              "n_source_centroid_components_with_edges": 1
+            }
+          ],
+          "n_original_matched_source_dyads": 205,
+          "source_year": 2020,
+          "status": "DESCRIPTIVE_GPS_GEOMETRIC_COMPONENTS_AND_SEASON_CENTERS",
+          "tolerance_seconds": 900
+        },
+        {
+          "annual_center_bands": [
+            {
+              "annual_centroid_pair_separation_band": "[0,5] km",
+              "fraction_pairs_winter_centers_closer": 0.2833333333333333,
+              "n_pairs_summer_centers_closer": 43,
+              "n_pairs_winter_centers_closer": 17,
+              "n_qualified_source_dyads": 60,
+              "n_source_pairs_requested": 60,
+              "n_source_pairs_with_both_season_centers": 60,
+              "n_unavailable_source_pair_season_centers": 0,
+              "season_center_comparison_is_not_real_time_encounter": true,
+              "status": "DESCRIPTIVE_SOURCE_SEASON_CENTROID_DISTANCE",
+              "summer_km": {
+                "mean": 1.982730248586956,
+                "median": 1.8713015545765792,
+                "q10": 0.43787771941483233,
+                "q90": 4.074230441379155
+              },
+              "winter_km": {
+                "mean": 2.1740022194344735,
+                "median": 2.113534743171276,
+                "q10": 0.6393668010441772,
+                "q90": 4.147082622443822
+              },
+              "winter_minus_summer_km": {
+                "mean": 0.19127197084751751,
+                "median": 0.13998166770761022,
+                "q10": -0.368644794535304,
+                "q90": 0.7131135440481671
+              }
+            },
+            {
+              "annual_centroid_pair_separation_band": "(5,10] km",
+              "fraction_pairs_winter_centers_closer": 0.5675675675675675,
+              "n_pairs_summer_centers_closer": 16,
+              "n_pairs_winter_centers_closer": 21,
+              "n_qualified_source_dyads": 37,
+              "n_source_pairs_requested": 37,
+              "n_source_pairs_with_both_season_centers": 37,
+              "n_unavailable_source_pair_season_centers": 0,
+              "season_center_comparison_is_not_real_time_encounter": true,
+              "status": "DESCRIPTIVE_SOURCE_SEASON_CENTROID_DISTANCE",
+              "summer_km": {
+                "mean": 8.01143606930615,
+                "median": 8.397533682489577,
+                "q10": 6.151208857034272,
+                "q90": 9.83791964180442
+              },
+              "winter_km": {
+                "mean": 7.947306204232314,
+                "median": 8.119426859265223,
+                "q10": 6.294145071263582,
+                "q90": 9.639750169446627
+              },
+              "winter_minus_summer_km": {
+                "mean": -0.0641298650738356,
+                "median": -0.12284702695177785,
+                "q10": -0.5623352359615683,
+                "q90": 0.3524336768126126
+              }
+            },
+            {
+              "annual_centroid_pair_separation_band": "(10,25] km",
+              "fraction_pairs_winter_centers_closer": 0.5370370370370371,
+              "n_pairs_summer_centers_closer": 50,
+              "n_pairs_winter_centers_closer": 58,
+              "n_qualified_source_dyads": 108,
+              "n_source_pairs_requested": 108,
+              "n_source_pairs_with_both_season_centers": 108,
+              "n_unavailable_source_pair_season_centers": 0,
+              "season_center_comparison_is_not_real_time_encounter": true,
+              "status": "DESCRIPTIVE_SOURCE_SEASON_CENTROID_DISTANCE",
+              "summer_km": {
+                "mean": 13.77362868593722,
+                "median": 12.743920599320504,
+                "q10": 10.336194716242423,
+                "q90": 18.12602976878969
+              },
+              "winter_km": {
+                "mean": 13.744942586353941,
+                "median": 12.689824016569208,
+                "q10": 10.404179500570768,
+                "q90": 18.703909866167894
+              },
+              "winter_minus_summer_km": {
+                "mean": -0.028686099583278207,
+                "median": -0.020328136627800752,
+                "q10": -0.4025289392681003,
+                "q90": 0.3256159940364529
+              }
+            },
+            {
+              "annual_centroid_pair_separation_band": "[0,25] km",
+              "fraction_pairs_winter_centers_closer": 0.4682926829268293,
+              "n_pairs_summer_centers_closer": 109,
+              "n_pairs_winter_centers_closer": 96,
+              "n_qualified_source_dyads": 205,
+              "n_source_pairs_requested": 205,
+              "n_source_pairs_with_both_season_centers": 205,
+              "n_unavailable_source_pair_season_centers": 0,
+              "season_center_comparison_is_not_real_time_encounter": true,
+              "status": "DESCRIPTIVE_SOURCE_SEASON_CENTROID_DISTANCE",
+              "summer_km": {
+                "mean": 9.282628524686658,
+                "median": 10.203902850336942,
+                "q10": 1.0993115715519082,
+                "q90": 17.24047271857188
+              },
+              "winter_km": {
+                "mean": 9.31192322950678,
+                "median": 10.17909852994857,
+                "q10": 1.6478748158704979,
+                "q90": 16.964298753639568
+              },
+              "winter_minus_summer_km": {
+                "mean": 0.02929470482012238,
+                "median": 0.014689993131502987,
+                "q10": -0.4328930349920771,
+                "q90": 0.41885390832932723
+              }
+            }
+          ],
+          "components_by_annual_center_threshold": [
+            {
+              "centroid_pair_distance_cutoff_km": 5.0,
+              "component_support": [
+                {
+                  "anonymous_geographic_component_rank_by_animals": 1,
+                  "n_component_original_animals": 12,
+                  "n_component_original_dyads": 51,
+                  "original_source_component_L1_by_radius_direction": {
+                    "n_animals": 12,
+                    "n_pairs": 51,
+                    "radii": [
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "original_A_to_B",
+                        "radius_km": 0.5,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 1,
+                          "positive": 11
+                        },
+                        "winter_minus_summer_L_mean": 0.005816215375038905,
+                        "winter_minus_summer_L_seed_max": 0.019607843137254898,
+                        "winter_minus_summer_L_seed_min": -0.0077030812324929985
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "reversed_B_to_A",
+                        "radius_km": 0.5,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 1,
+                          "positive": 11
+                        },
+                        "winter_minus_summer_L_mean": 0.0076836290071584205,
+                        "winter_minus_summer_L_seed_max": 0.01844070961718021,
+                        "winter_minus_summer_L_seed_min": -0.00910364145658263
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "original_A_to_B",
+                        "radius_km": 1.0,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 2,
+                          "positive": 10
+                        },
+                        "winter_minus_summer_L_mean": 0.005115935262994085,
+                        "winter_minus_summer_L_seed_max": 0.012605042016806709,
+                        "winter_minus_summer_L_seed_min": -0.011904761904761902
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "reversed_B_to_A",
+                        "radius_km": 1.0,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 5,
+                          "positive": 7
+                        },
+                        "winter_minus_summer_L_mean": 0.0030539993775287894,
+                        "winter_minus_summer_L_seed_max": 0.015406162464986,
+                        "winter_minus_summer_L_seed_min": -0.004435107376283849
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "original_A_to_B",
+                        "radius_km": 2.0,
+                        "seed_signs": {
+                          "near_zero": 1,
+                          "negative": 1,
+                          "positive": 10
+                        },
+                        "winter_minus_summer_L_mean": 0.0048630563336445705,
+                        "winter_minus_summer_L_seed_max": 0.012838468720821658,
+                        "winter_minus_summer_L_seed_min": -0.009803921568627444
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "reversed_B_to_A",
+                        "radius_km": 2.0,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 6,
+                          "positive": 6
+                        },
+                        "winter_minus_summer_L_mean": -0.0009920634920634927,
+                        "winter_minus_summer_L_seed_max": 0.006769374416433236,
+                        "winter_minus_summer_L_seed_min": -0.016806722689075633
+                      }
+                    ],
+                    "status": "DESCRIPTIVE_SOURCE_GPS_EDGE_SET_ONLY"
+                  }
+                },
+                {
+                  "anonymous_geographic_component_rank_by_animals": 2,
+                  "n_component_original_animals": 4,
+                  "n_component_original_dyads": 6,
+                  "original_source_component_L1_by_radius_direction": {
+                    "n_animals": 4,
+                    "n_pairs": 6,
+                    "radii": [],
+                    "status": "NOT_ESTIMABLE_INSUFFICIENT_WITHIN_SOURCE_PAIR_SUPPORT"
+                  }
+                },
+                {
+                  "anonymous_geographic_component_rank_by_animals": 3,
+                  "n_component_original_animals": 4,
+                  "n_component_original_dyads": 3,
+                  "original_source_component_L1_by_radius_direction": {
+                    "n_animals": 4,
+                    "n_pairs": 3,
+                    "radii": [],
+                    "status": "NOT_ESTIMABLE_INSUFFICIENT_WITHIN_SOURCE_PAIR_SUPPORT"
+                  }
+                }
+              ],
+              "n_source_centroid_components_with_edges": 3
+            },
+            {
+              "centroid_pair_distance_cutoff_km": 10.0,
+              "component_support": [
+                {
+                  "anonymous_geographic_component_rank_by_animals": 1,
+                  "n_component_original_animals": 21,
+                  "n_component_original_dyads": 97,
+                  "original_source_component_L1_by_radius_direction": {
+                    "n_animals": 21,
+                    "n_pairs": 97,
+                    "radii": [
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "original_A_to_B",
+                        "radius_km": 0.5,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 4,
+                          "positive": 8
+                        },
+                        "winter_minus_summer_L_mean": 0.003190967108492882,
+                        "winter_minus_summer_L_seed_max": 0.011168384879725083,
+                        "winter_minus_summer_L_seed_min": -0.005031909671084929
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "reversed_B_to_A",
+                        "radius_km": 0.5,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 1,
+                          "positive": 11
+                        },
+                        "winter_minus_summer_L_mean": 0.004612583865161186,
+                        "winter_minus_summer_L_seed_max": 0.010432007854688268,
+                        "winter_minus_summer_L_seed_min": -0.003559155621011289
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "original_A_to_B",
+                        "radius_km": 1.0,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 2,
+                          "positive": 10
+                        },
+                        "winter_minus_summer_L_mean": 0.0027920962199312707,
+                        "winter_minus_summer_L_seed_max": 0.005645557191948949,
+                        "winter_minus_summer_L_seed_min": -0.006627393225331371
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "reversed_B_to_A",
+                        "radius_km": 1.0,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 4,
+                          "positive": 8
+                        },
+                        "winter_minus_summer_L_mean": 0.0009306987399770908,
+                        "winter_minus_summer_L_seed_max": 0.0078546882670594,
+                        "winter_minus_summer_L_seed_min": -0.006627393225331369
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "original_A_to_B",
+                        "radius_km": 2.0,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 2,
+                          "positive": 10
+                        },
+                        "winter_minus_summer_L_mean": 0.0031500572737686145,
+                        "winter_minus_summer_L_seed_max": 0.00699558173784978,
+                        "winter_minus_summer_L_seed_min": -0.002331860579283257
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "reversed_B_to_A",
+                        "radius_km": 2.0,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 4,
+                          "positive": 8
+                        },
+                        "winter_minus_summer_L_mean": -0.0001636393388970716,
+                        "winter_minus_summer_L_seed_max": 0.0035591556210112897,
+                        "winter_minus_summer_L_seed_min": -0.008222876779577813
+                      }
+                    ],
+                    "status": "DESCRIPTIVE_SOURCE_GPS_EDGE_SET_ONLY"
+                  }
+                }
+              ],
+              "n_source_centroid_components_with_edges": 1
+            },
+            {
+              "centroid_pair_distance_cutoff_km": 25.0,
+              "component_support": [
+                {
+                  "anonymous_geographic_component_rank_by_animals": 1,
+                  "n_component_original_animals": 21,
+                  "n_component_original_dyads": 205,
+                  "original_source_component_L1_by_radius_direction": {
+                    "n_animals": 21,
+                    "n_pairs": 205,
+                    "radii": [
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "original_A_to_B",
+                        "radius_km": 0.5,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 4,
+                          "positive": 8
+                        },
+                        "winter_minus_summer_L_mean": 0.0015098722415795589,
+                        "winter_minus_summer_L_seed_max": 0.005284552845528454,
+                        "winter_minus_summer_L_seed_min": -0.002380952380952381
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "reversed_B_to_A",
+                        "radius_km": 0.5,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 1,
+                          "positive": 11
+                        },
+                        "winter_minus_summer_L_mean": 0.002182539682539683,
+                        "winter_minus_summer_L_seed_max": 0.0049361207897793274,
+                        "winter_minus_summer_L_seed_min": -0.001684088269454122
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "original_A_to_B",
+                        "radius_km": 1.0,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 2,
+                          "positive": 10
+                        },
+                        "winter_minus_summer_L_mean": 0.0013211382113821135,
+                        "winter_minus_summer_L_seed_max": 0.00267131242740999,
+                        "winter_minus_summer_L_seed_min": -0.003135888501742161
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "reversed_B_to_A",
+                        "radius_km": 1.0,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 4,
+                          "positive": 8
+                        },
+                        "winter_minus_summer_L_mean": 0.00044037940379403805,
+                        "winter_minus_summer_L_seed_max": 0.003716608594657374,
+                        "winter_minus_summer_L_seed_min": -0.00313588850174216
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "original_A_to_B",
+                        "radius_km": 2.0,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 2,
+                          "positive": 10
+                        },
+                        "winter_minus_summer_L_mean": 0.001490514905149052,
+                        "winter_minus_summer_L_seed_max": 0.0033101045296167254,
+                        "winter_minus_summer_L_seed_min": -0.001103368176538907
+                      },
+                      {
+                        "n_seed_draws": 12,
+                        "orientation": "reversed_B_to_A",
+                        "radius_km": 2.0,
+                        "seed_signs": {
+                          "near_zero": 0,
+                          "negative": 4,
+                          "positive": 8
+                        },
+                        "winter_minus_summer_L_mean": -7.742934572202899e-05,
+                        "winter_minus_summer_L_seed_max": 0.0016840882694541225,
+                        "winter_minus_summer_L_seed_min": -0.0038908246225319403
+                      }
+                    ],
+                    "status": "DESCRIPTIVE_SOURCE_GPS_EDGE_SET_ONLY"
+                  }
+                }
+              ],
+              "n_source_centroid_components_with_edges": 1
+            }
+          ],
+          "n_original_matched_source_dyads": 205,
+          "source_year": 2020,
+          "status": "DESCRIPTIVE_GPS_GEOMETRIC_COMPONENTS_AND_SEASON_CENTERS",
+          "tolerance_seconds": 1800
+        }
+      ],
+      "year": 2020
+    }
+  ]
+}

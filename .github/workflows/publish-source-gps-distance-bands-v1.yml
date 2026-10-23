@@ -1,0 +1,109 @@
+name: Derive four disjoint original-GPS distance bands (verified aggregates)
+
+on:
+  push:
+    branches:
+      - prospective/multitaxon-identity-ecology-v1
+    paths:
+      - "prospective/multitaxon_individuality/distance_band_from_subhour_v1.py"
+      - "prospective/multitaxon_individuality/tests/test_distance_band_from_subhour_v1.py"
+      - "prospective/multitaxon_individuality/DISTANCE_BAND_CLOCK_ALIGNMENT_DESIGN_2026_10_21.md"
+      - ".github/workflows/publish-source-gps-distance-bands-v1.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  derive-and-publish-source-only-aggregates:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - name: Synthetic algebra and pinned ORIGINAL-GPS source aggregate tests
+        run: |
+          PYTHONPATH=prospective/multitaxon_individuality python3 -m unittest discover \
+            -s prospective/multitaxon_individuality/tests \
+            -p 'test_distance_band_from_subhour_v1.py' -v
+      - name: Derive 480 seed/band rows without opening original animal tracks
+        run: |
+          set -euo pipefail
+          root=prospective/multitaxon_individuality
+          python3 "$root/distance_band_from_subhour_v1.py" \
+            --input-dir "$root" \
+            --output "$root/SUBHOUR_DISTANCE_BANDS_2026_10_21.json"
+          python3 "$root/distance_band_from_subhour_v1.py" \
+            --input-dir "$root" \
+            --verify-published "$root/SUBHOUR_DISTANCE_BANDS_2026_10_21.json"
+      - name: Independently reconcile every original-source/radius/seed cumulative D and write review CSV
+        run: |
+          python3 - <<'PY'
+          import csv, json, math
+          from pathlib import Path
+          root=Path('prospective/multitaxon_individuality')
+          published=json.loads((root/'SUBHOUR_DISTANCE_BANDS_2026_10_21.json').read_text())
+          assert published['n_valid_source_year_tolerance_groups']==10
+          assert published['n_stopped_source_year_tolerance_groups']==2
+          assert published['n_seed_band_records']==480
+          assert published['n_summary_band_records']==40
+          columns=('source','year','max_gap_minutes','n_matched_dyads','distance_band',
+                   'winter_observed','summer_observed','winter_relabel_reference',
+                   'summer_relabel_reference','winter_D','summer_D','winter_minus_summer_D',
+                   'positive_seeds','negative_seeds','zero_seeds','seed_delta_min','seed_delta_max')
+          rows=[]
+          for source in ('turkey','black_bear','white_tailed_deer'):
+            raw=json.loads((root/('SUBHOUR_GEODESIC_'+source.upper()+'_2026_10_20.json')).read_text())
+            years={y['year']:y for y in raw['year_results']}
+            groups=[g for g in published['source_years'] if g['source']==source]
+            assert len(groups)==4
+            for group in groups:
+              orig=years[group['year']]
+              tol=group['max_abs_timestamp_gap_seconds']
+              original=next(v for v in orig['time_tolerance_results'] if v['max_abs_timestamp_gap_seconds']==tol)
+              assert group['n_matched_dyads']==original['n_clock_matched_dyads']
+              if group['n_matched_dyads']<8:
+                assert not group['seed_band_records'] and not group['band_summary']
+                continue
+              index={(v['seed'],v['radius_km']):v for v in original['grid_free_geodesic_seed_results']}
+              for b in group['seed_band_records']:
+                seed=b['seed']; band=b['band']
+                for season in ('winter','summer'):
+                  def cum(radius,key):
+                    if radius is None: return 1.0 if key!='D' else 0.0
+                    return index[(seed,radius)][season][key]
+                  spec={'[0,0.5] km':(None,.5),'(0.5,1] km':(.5,1.),'(1,2] km':(1.,2.),'(2,infinity) km':(2.,None)}
+                  lo,hi=spec[band]
+                  for key in ('O','N'):
+                    baseline=0.0 if lo is None else cum(lo,key)
+                    expected=cum(hi,key)-baseline
+                    assert math.isclose(b[season][key],expected,abs_tol=2e-10)
+                  assert math.isclose(b[season]['D'],b[season]['O']-b[season]['N'],abs_tol=2e-10)
+              for s in group['band_summary']:
+                n=s['delta_D_seed_signs']
+                rows.append({
+                 'source':source,'year':group['year'],'max_gap_minutes':tol/60,
+                 'n_matched_dyads':group['n_matched_dyads'],'distance_band':s['band'],
+                 'winter_observed':s['winter']['O'],'summer_observed':s['summer']['O'],
+                 'winter_relabel_reference':s['winter']['N'],'summer_relabel_reference':s['summer']['N'],
+                 'winter_D':s['winter']['D'],'summer_D':s['summer']['D'],
+                 'winter_minus_summer_D':s['winter_minus_summer_D'],
+                 'positive_seeds':n['positive'],'negative_seeds':n['negative'],
+                 'zero_seeds':n['near_zero'],'seed_delta_min':s['delta_D_min_max'][0],
+                 'seed_delta_max':s['delta_D_min_max'][1]})
+          assert len(rows)==40
+          with (root/'SUBHOUR_DISTANCE_BANDS_SUMMARY_2026_10_21.csv').open('w',newline='',encoding='utf-8') as file:
+             writer=csv.DictWriter(file,fieldnames=columns)
+             writer.writeheader()
+             writer.writerows(rows)
+          print('PASS: independent 480 seed-band source/radius calculations, 40 review CSV rows, 2 explicit missing/STOP cohorts')
+          PY
+      - name: Commit only source-year aggregate results, no animal identities or GPS positions
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add prospective/multitaxon_individuality/SUBHOUR_DISTANCE_BANDS_2026_10_21.json
+          git add prospective/multitaxon_individuality/SUBHOUR_DISTANCE_BANDS_SUMMARY_2026_10_21.csv
+          git diff --cached --stat
+          git commit -m "data: publish verified 480 seed-band source GPS timing aggregates"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

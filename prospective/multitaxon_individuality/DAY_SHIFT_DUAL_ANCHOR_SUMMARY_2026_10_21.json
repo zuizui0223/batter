@@ -1,0 +1,1082 @@
+{
+  "as_of": "2026-10-21",
+  "n_STOP_groups": 4,
+  "n_estimable_groups": 8,
+  "n_orientation_seed_radius_rows": 576,
+  "n_source_documents": 3,
+  "n_year_gap_groups": 12,
+  "nonclaims": [
+    "Original-ID lexicographic source direction is arbitrary",
+    "GPS recording <=15/30min within distance radius is NOT a physical encounter",
+    "GPS source clock basis, location uncertainty and true local populations are unverified",
+    "Source dates, tracking days and dyads are dependent, not randomized population repetitions",
+    "Same pair IDs in both anchors do not imply identical A/B fix/date observations",
+    "One-day original B path shifts preserve daily path ordering, not all ecological autocorrelation"
+  ],
+  "rows": [
+    {
+      "both_positive_at_least_10_of_12": true,
+      "directions": [
+        {
+          "delta_L": 0.05079896541950114,
+          "delta_L_range": [
+            0.04315476190476195,
+            0.05952380952380952
+          ],
+          "delta_L_signs": {
+            "near_zero": 0,
+            "negative": 0,
+            "positive": 12
+          },
+          "orientation": "original_A_to_B",
+          "summer_L": 0.01750283446712018,
+          "winter_L": 0.06830179988662133
+        },
+        {
+          "delta_L": 0.05247307256235828,
+          "delta_L_range": [
+            0.045493197278911615,
+            0.058248299319727866
+          ],
+          "delta_L_signs": {
+            "near_zero": 0,
+            "negative": 0,
+            "positive": 12
+          },
+          "orientation": "reversed_B_to_A",
+          "summer_L": 0.016076743197278913,
+          "winter_L": 0.06854981575963719
+        }
+      ],
+      "n_shared_original_dyads": 112,
+      "radius_km": 0.5,
+      "source": "turkey",
+      "time_gap_seconds": 900,
+      "year": 2019
+    },
+    {
+      "both_positive_at_least_10_of_12": true,
+      "directions": [
+        {
+          "delta_L": 0.01513782596371882,
+          "delta_L_range": [
+            0.008184523809523878,
+            0.02232142857142856
+          ],
+          "delta_L_signs": {
+            "near_zero": 0,
+            "negative": 0,
+            "positive": 12
+          },
+          "orientation": "original_A_to_B",
+          "summer_L": 0.006696428571428568,
+          "winter_L": 0.021834254535147386
+        },
+        {
+          "delta_L": 0.014207766439909281,
+          "delta_L_range": [
+            0.006909013605442146,
+            0.021045918367346914
+          ],
+          "delta_L_signs": {
+            "near_zero": 0,
+            "negative": 0,
+            "positive": 12
+          },
+          "orientation": "reversed_B_to_A",
+          "summer_L": 0.006297831632653065,
+          "winter_L": 0.020505598072562345
+        }
+      ],
+      "n_shared_original_dyads": 112,
+      "radius_km": 1.0,
+      "source": "turkey",
+      "time_gap_seconds": 900,
+      "year": 2019
+    },
+    {
+      "both_positive_at_least_10_of_12": true,
+      "directions": [
+        {
+          "delta_L": 0.006129535147392287,
+          "delta_L_range": [
+            -0.0027636054421769363,
+            0.012967687074829898
+          ],
+          "delta_L_signs": {
+            "near_zero": 0,
+            "negative": 1,
+            "positive": 11
+          },
+          "orientation": "original_A_to_B",
+          "summer_L": -0.00012400793650793376,
+          "winter_L": 0.006005527210884353
+        },
+        {
+          "delta_L": 0.00527919501133785,
+          "delta_L_range": [
+            0.0015943877551020391,
+            0.009885204081632626
+          ],
+          "delta_L_signs": {
+            "near_zero": 0,
+            "negative": 0,
+            "positive": 12
+          },
+          "orientation": "reversed_B_to_A",
+          "summer_L": 9.743480725624375e-05,
+          "winter_L": 0.0053766298185940935
+        }
+      ],
+      "n_shared_original_dyads": 112,
+      "radius_km": 2.0,
+      "source": "turkey",
+      "time_gap_seconds": 900,
+      "year": 2019
+    },
+    {
+      "both_positive_at_least_10_of_12": true,
+      "directions": [
+        {
+          "delta_L": 0.04979804421768708,
+          "delta_L_range": [
+            0.036458333333333356,
+            0.057823129251700696
+          ],
+          "delta_L_signs": {
+            "near_zero": 0,
+            "negative": 0,
+            "positive": 12
+          },
+          "orientation": "original_A_to_B",
+          "summer_L": 0.016386763038548753,
+          "winter_L": 0.06618480725623584
+        },
+        {
+          "delta_L": 0.05098497732426305,
+          "delta_L_range": [
+            0.039328231292517016,
+            0.06388180272108843
+          ],
+          "delta_L_signs": {
+            "near_zero": 0,
+            "negative": 0,
+            "positive": 12
+          },
+          "orientation": "reversed_B_to_A",
+          "summer_L": 0.017520549886621314,
+          "winter_L": 0.06850552721088436
+        }
+      ],
+      "n_shared_original_dyads": 112,
+      "radius_km": 0.5,
+      "source": "turkey",
+      "time_gap_seconds": 1800,
+      "year": 2019
+    },
+    {
+      "both_positive_at_least_10_of_12": true,
+      "directions": [
+        {
+          "delta_L": 0.013915462018140595,
+          "delta_L_range": [
+            0.0058460884353741666,
+            0.02030187074829934
+          ],
+          "delta_L_signs": {
+            "near_zero": 0,
+            "negative": 0,
+            "positive": 12
+          },
+          "orientation": "original_A_to_B",
+          "summer_L": 0.005314625850340134,
+          "winter_L": 0.019230087868480728
+        },
+        {
+          "delta_L": 0.01105442176870748,
+          "delta_L_range": [
+            0.0022321428571428353,
+            0.016794217687074856
+          ],
+          "delta_L_signs": {
+            "near_zero": 0,
+            "negative": 0,
+            "positive": 12
+          },
+          "orientation": "reversed_B_to_A",
+          "summer_L": 0.006572420634920637,
+          "winter_L": 0.017626842403628117
+        }
+      ],
+      "n_shared_original_dyads": 112,
+      "radius_km": 1.0,
+      "source": "turkey",
+      "time_gap_seconds": 1800,
+      "year": 2019
+    },
+    {
+      "both_positive_at_least_10_of_12": true,
+      "directions": [
+        {
+          "delta_L": 0.006988732993197279,
+          "delta_L_range": [
+            0.0027636054421769085,
+            0.011160714285714218
+          ],
+          "delta_L_signs": {
+            "near_zero": 0,
+            "negative": 0,
+            "positive": 12
+          },
+          "orientation": "original_A_to_B",
+          "summer_L": -0.0015058106575963788,
+          "winter_L": 0.0054829223356009
+        },
+        {
+          "delta_L": 0.007192460317460313,
+          "delta_L_range": [
+            0.001488095238095205,
+            0.014030612244897989
+          ],
+          "delta_L_signs": {
+            "near_zero": 0,
+            "negative": 0,
+            "positive": 12
+          },
+          "orientation": "reversed_B_to_A",
+          "summer_L": -0.001727253401360547,
+          "winter_L": 0.005465206916099766
+        }
+      ],
+      "n_shared_original_dyads": 112,
+      "radius_km": 2.0,
+      "source": "turkey",
+      "time_gap_seconds": 1800,
+      "year": 2019
+    },
+    {
+      "both_positive_at_least_10_of_12": true,
+      "directions": [
+        {
+          "delta_L": 0.026643990929705225,
+          "delta_L_range": [
+            0.008503401360544283,
+            0.04535147392290248
+          ],
+          "delta_L_signs": {
+            "near_zero": 0,
+            "negative": 0,
+            "positive": 12
+          },
+          "orientation": "original_A_to_B",
+          "summer_L": 0.04464285714285713,
+          "winter_L": 0.07128684807256236
+        },
+        {
+          "delta_L": 0.027210884353741485,
+          "delta_L_range": [
+            0.011337868480725682,
+            0.045351473922902494
+          ],
+          "delta_L_signs": {
+            "near_zero": 0,
+            "negative": 0,
+            "positive": 12
+          },
+          "orientation": "reversed_B_to_A",
+          "summer_L": 0.047713529856387,
+          "winter_L": 0.07492441421012848
+        }
+      ],
+      "n_shared_original_dyads": 21,
+      "radius_km": 0.5,
+      "source": "turkey",
+      "time_gap_seconds": 900,
+      "year": 2020
+    },
+    {
+      "both_positive_at_least_10_of_12": true,
+      "directions": [
+        {
+          "delta_L": 0.029289493575207853,
+          "delta_L_range": [
+            0.011904761904761973,
+            0.04478458049886633
+          ],
+          "delta_L_signs": {
+            "near_zero": 0,
+            "negative": 0,
+            "positive": 12
+          },
+          "orientation": "original_A_to_B",
+          "summer_L": 0.006566515495086927,
+          "winter_L": 0.035856009070294785
+        },
+        {
+          "delta_L": 0.03089569160997731,
+          "delta_L_range": [
+            0.019841269841269854,
+            0.04818594104308388
+          ],
+          "delta_L_signs": {
+            "near_zero": 0,
+            "negative": 0,
+            "positive": 12
+          },
+          "orientation": "reversed_B_to_A",
+          "summer_L": 0.004724111866969018,
+          "winter_L": 0.03561980347694633
+        }
+      ],
+      "n_shared_original_dyads": 21,
+      "radius_km": 1.0,
+      "source": "turkey",
+      "time_gap_seconds": 900,
+      "year": 2020
+    },
+    {
+      "both_positive_at_least_10_of_12": true,
+      "directions": [
+        {
+          "delta_L": 0.004913076341647754,
+          "delta_L_range": [
+            -0.0022675736961451087,
+            0.011904761904761862
+          ],
+          "delta_L_signs": {
+            "near_zero": 0,
+            "negative": 1,
+            "positive": 11
+          },
+          "orientation": "original_A_to_B",
+          "summer_L": 0.00033068783068783875,
+          "winter_L": 0.0052437641723355926
+        },
+        {
+          "delta_L": 0.0072751322751322955,
+          "delta_L_range": [
+            -0.0022675736961451642,
+            0.013605442176870819
+          ],
+          "delta_L_signs": {
+            "near_zero": 0,
+            "negative": 2,
+            "positive": 10
+          },
+          "orientation": "reversed_B_to_A",
+          "summer_L": -0.00037792894935750887,
+          "winter_L": 0.006897203325774787
+        }
+      ],
+      "n_shared_original_dyads": 21,
+      "radius_km": 2.0,
+      "source": "turkey",
+      "time_gap_seconds": 900,
+      "year": 2020
+    },
+    {
+      "both_positive_at_least_10_of_12": true,
+      "directions": [
+        {
+          "delta_L": 0.028297430083144375,
+          "delta_L_range": [
+            0.0028344671201814,
+            0.05102040816326525
+          ],
+          "delta_L_signs": {
+            "near_zero": 0,
+            "negative": 0,
+            "positive": 12
+          },
+          "orientation": "original_A_to_B",
+          "summer_L": 0.045068027210884355,
+          "winter_L": 0.07336545729402873
+        },
+        {
+          "delta_L": 0.031934996220710506,
+          "delta_L_range": [
+            0.017573696145124662,
+            0.04308390022675729
+          ],
+          "delta_L_signs": {
+            "near_zero": 0,
+            "negative": 0,
+            "positive": 12
+          },
+          "orientation": "reversed_B_to_A",
+          "summer_L": 0.04955593348450491,
+          "winter_L": 0.08149092970521542
+        }
+      ],
+      "n_shared_original_dyads": 21,
+      "radius_km": 0.5,
+      "source": "turkey",
+      "time_gap_seconds": 1800,
+      "year": 2020
+    },
+    {
+      "both_positive_at_least_10_of_12": true,
+      "directions": [
+        {
+          "delta_L": 0.028297430083144365,
+          "delta_L_range": [
+            0.01643990929705219,
+            0.03798185941043075
+          ],
+          "delta_L_signs": {
+            "near_zero": 0,
+            "negative": 0,
+            "positive": 12
+          },
+          "orientation": "original_A_to_B",
+          "summer_L": 0.007180650037792893,
+          "winter_L": 0.035478080120937255
+        },
+        {
+          "delta_L": 0.031509826152683273,
+          "delta_L_range": [
+            0.019274376417233535,
+            0.039682539682539764
+          ],
+          "delta_L_signs": {
+            "near_zero": 0,
+            "negative": 0,
+            "positive": 12
+          },
+          "orientation": "reversed_B_to_A",
+          "summer_L": 0.006849962207105061,
+          "winter_L": 0.03835978835978834
+        }
+      ],
+      "n_shared_original_dyads": 21,
+      "radius_km": 1.0,
+      "source": "turkey",
+      "time_gap_seconds": 1800,
+      "year": 2020
+    },
+    {
+      "both_positive_at_least_10_of_12": false,
+      "directions": [
+        {
+          "delta_L": 0.0031179138321995544,
+          "delta_L_range": [
+            -0.006802721088435271,
+            0.014172335600907027
+          ],
+          "delta_L_signs": {
+            "near_zero": 0,
+            "negative": 3,
+            "positive": 9
+          },
+          "orientation": "original_A_to_B",
+          "summer_L": 0.00028344671201813626,
+          "winter_L": 0.003401360544217691
+        },
+        {
+          "delta_L": 0.0051965230536659,
+          "delta_L_range": [
+            -0.0034013605442177464,
+            0.01587301587301604
+          ],
+          "delta_L_signs": {
+            "near_zero": 0,
+            "negative": 2,
+            "positive": 10
+          },
+          "orientation": "reversed_B_to_A",
+          "summer_L": -0.0001417233560090612,
+          "winter_L": 0.005054799697656838
+        }
+      ],
+      "n_shared_original_dyads": 21,
+      "radius_km": 2.0,
+      "source": "turkey",
+      "time_gap_seconds": 1800,
+      "year": 2020
+    },
+    {
+      "both_positive_at_least_10_of_12": false,
+      "directions": [
+        {
+          "delta_L": 0.004473304473304473,
+          "delta_L_range": [
+            -0.005411255411255405,
+            0.013636363636363627
+          ],
+          "delta_L_signs": {
+            "near_zero": 0,
+            "negative": 1,
+            "positive": 11
+          },
+          "orientation": "original_A_to_B",
+          "summer_L": 0.00019841269841269714,
+          "winter_L": 0.00467171717171717
+        },
+        {
+          "delta_L": 0.0022546897546897537,
+          "delta_L_range": [
+            -0.0030303030303030325,
+            0.008874458874458875
+          ],
+          "delta_L_signs": {
+            "near_zero": 0,
+            "negative": 3,
+            "positive": 9
+          },
+          "orientation": "reversed_B_to_A",
+          "summer_L": 0.0005411255411255422,
+          "winter_L": 0.002795815295815296
+        }
+      ],
+      "n_shared_original_dyads": 55,
+      "radius_km": 0.5,
+      "source": "white_tailed_deer",
+      "time_gap_seconds": 900,
+      "year": 2019
+    },
+    {
+      "both_positive_at_least_10_of_12": false,
+      "directions": [
+        {
+          "delta_L": 0.001388888888888891,
+          "delta_L_range": [
+            -0.0036796536796536716,
+            0.006493506493506482
+          ],
+          "delta_L_signs": {
+            "near_zero": 0,
+            "negative": 5,
+            "positive": 7
+          },
+          "orientation": "original_A_to_B",
+          "summer_L": 5.411255411255413e-05,
+          "winter_L": 0.001443001443001445
+        },
+        {
+          "delta_L": 0.002092352092352088,
+          "delta_L_range": [
+            -0.0006493506493506634,
+            0.0051948051948051965
+          ],
+          "delta_L_signs": {
+            "near_zero": 1,
+            "negative": 2,
+            "positive": 9
+          },
+          "orientation": "reversed_B_to_A",
+          "summer_L": -0.0012445887445887403,
+          "winter_L": 0.0008477633477633473
+        }
+      ],
+      "n_shared_original_dyads": 55,
+      "radius_km": 1.0,
+      "source": "white_tailed_deer",
+      "time_gap_seconds": 900,
+      "year": 2019
+    },
+    {
+      "both_positive_at_least_10_of_12": false,
+      "directions": [
+        {
+          "delta_L": -0.0020923520923521004,
+          "delta_L_range": [
+            -0.0060606060606061,
+            0.00324675324675322
+          ],
+          "delta_L_signs": {
+            "near_zero": 0,
+            "negative": 9,
+            "positive": 3
+          },
+          "orientation": "original_A_to_B",
+          "summer_L": 0.00016233766233766933,
+          "winter_L": -0.001930014430014431
+        },
+        {
+          "delta_L": -0.001984126984126989,
+          "delta_L_range": [
+            -0.009956709956709955,
+            0.008008658008658034
+          ],
+          "delta_L_signs": {
+            "near_zero": 1,
+            "negative": 7,
+            "positive": 4
+          },
+          "orientation": "reversed_B_to_A",
+          "summer_L": -0.0004148629148629096,
+          "winter_L": -0.0023989898989898984
+        }
+      ],
+      "n_shared_original_dyads": 55,
+      "radius_km": 2.0,
+      "source": "white_tailed_deer",
+      "time_gap_seconds": 900,
+      "year": 2019
+    },
+    {
+      "both_positive_at_least_10_of_12": false,
+      "directions": [
+        {
+          "delta_L": 0.002182539682539682,
+          "delta_L_range": [
+            -0.0023809523809523864,
+            0.007792207792207788
+          ],
+          "delta_L_signs": {
+            "near_zero": 1,
+            "negative": 3,
+            "positive": 8
+          },
+          "orientation": "original_A_to_B",
+          "summer_L": 0.0013167388167388174,
+          "winter_L": 0.0034992784992785
+        },
+        {
+          "delta_L": 0.004978354978354978,
+          "delta_L_range": [
+            0.00043290043290043767,
+            0.009956709956709959
+          ],
+          "delta_L_signs": {
+            "near_zero": 0,
+            "negative": 0,
+            "positive": 12
+          },
+          "orientation": "reversed_B_to_A",
+          "summer_L": -0.0008477633477633473,
+          "winter_L": 0.00413059163059163
+        }
+      ],
+      "n_shared_original_dyads": 55,
+      "radius_km": 0.5,
+      "source": "white_tailed_deer",
+      "time_gap_seconds": 1800,
+      "year": 2019
+    },
+    {
+      "both_positive_at_least_10_of_12": false,
+      "directions": [
+        {
+          "delta_L": 0.0009018759018759025,
+          "delta_L_range": [
+            -0.004112554112554109,
+            0.008658008658008656
+          ],
+          "delta_L_signs": {
+            "near_zero": 0,
+            "negative": 7,
+            "positive": 5
+          },
+          "orientation": "original_A_to_B",
+          "summer_L": 0.00021645021645021537,
+          "winter_L": 0.001118326118326118
+        },
+        {
+          "delta_L": 0.0003968253968254035,
+          "delta_L_range": [
+            -0.004545454545454533,
+            0.0064935064935065095
+          ],
+          "delta_L_signs": {
+            "near_zero": 0,
+            "negative": 7,
+            "positive": 5
+          },
+          "orientation": "reversed_B_to_A",
+          "summer_L": 0.0007575757575757543,
+          "winter_L": 0.0011544011544011579
+        }
+      ],
+      "n_shared_original_dyads": 55,
+      "radius_km": 1.0,
+      "source": "white_tailed_deer",
+      "time_gap_seconds": 1800,
+      "year": 2019
+    },
+    {
+      "both_positive_at_least_10_of_12": false,
+      "directions": [
+        {
+          "delta_L": -0.0024711399711399656,
+          "delta_L_range": [
+            -0.007575757575757569,
+            0.0015151515151514972
+          ],
+          "delta_L_signs": {
+            "near_zero": 0,
+            "negative": 8,
+            "positive": 4
+          },
+          "orientation": "original_A_to_B",
+          "summer_L": 9.01875901875825e-05,
+          "winter_L": -0.002380952380952383
+        },
+        {
+          "delta_L": -0.0011183261183261226,
+          "delta_L_range": [
+            -0.005844155844155846,
+            0.004329004329004321
+          ],
+          "delta_L_signs": {
+            "near_zero": 0,
+            "negative": 6,
+            "positive": 6
+          },
+          "orientation": "reversed_B_to_A",
+          "summer_L": -0.0003246753246753248,
+          "winter_L": -0.0014430014430014473
+        }
+      ],
+      "n_shared_original_dyads": 55,
+      "radius_km": 2.0,
+      "source": "white_tailed_deer",
+      "time_gap_seconds": 1800,
+      "year": 2019
+    },
+    {
+      "both_positive_at_least_10_of_12": true,
+      "directions": [
+        {
+          "delta_L": 0.001384049554781265,
+          "delta_L_range": [
+            -0.0004645760743321667,
+            0.003368176538908252
+          ],
+          "delta_L_signs": {
+            "near_zero": 0,
+            "negative": 1,
+            "positive": 11
+          },
+          "orientation": "original_A_to_B",
+          "summer_L": 0.0003387533875338731,
+          "winter_L": 0.001722802942315138
+        },
+        {
+          "delta_L": 0.0009823848238482396,
+          "delta_L_range": [
+            -0.0021486643437862996,
+            0.0042392566782810705
+          ],
+          "delta_L_signs": {
+            "near_zero": 0,
+            "negative": 2,
+            "positive": 10
+          },
+          "orientation": "reversed_B_to_A",
+          "summer_L": 0.00019841269841269828,
+          "winter_L": 0.0011807975222609378
+        }
+      ],
+      "n_shared_original_dyads": 205,
+      "radius_km": 0.5,
+      "source": "white_tailed_deer",
+      "time_gap_seconds": 900,
+      "year": 2020
+    },
+    {
+      "both_positive_at_least_10_of_12": false,
+      "directions": [
+        {
+          "delta_L": 0.001234030197444833,
+          "delta_L_range": [
+            -0.0012775842044134705,
+            0.005110336817653882
+          ],
+          "delta_L_signs": {
+            "near_zero": 0,
+            "negative": 2,
+            "positive": 10
+          },
+          "orientation": "original_A_to_B",
+          "summer_L": -0.0002903600464576062,
+          "winter_L": 0.0009436701509872268
+        },
+        {
+          "delta_L": 0.00045489740611691826,
+          "delta_L_range": [
+            -0.0021486643437862857,
+            0.003368176538908252
+          ],
+          "delta_L_signs": {
+            "near_zero": 1,
+            "negative": 5,
+            "positive": 6
+          },
+          "orientation": "reversed_B_to_A",
+          "summer_L": 0.0001984126984126977,
+          "winter_L": 0.000653310104529616
+        }
+      ],
+      "n_shared_original_dyads": 205,
+      "radius_km": 1.0,
+      "source": "white_tailed_deer",
+      "time_gap_seconds": 900,
+      "year": 2020
+    },
+    {
+      "both_positive_at_least_10_of_12": true,
+      "directions": [
+        {
+          "delta_L": 0.0008710801393728198,
+          "delta_L_range": [
+            -0.0015098722415795574,
+            0.004413472706155636
+          ],
+          "delta_L_signs": {
+            "near_zero": 0,
+            "negative": 1,
+            "positive": 11
+          },
+          "orientation": "original_A_to_B",
+          "summer_L": -0.00019357336430507002,
+          "winter_L": 0.0006775067750677497
+        },
+        {
+          "delta_L": 0.001490514905149042,
+          "delta_L_range": [
+            -0.002032520325203263,
+            0.003135888501742151
+          ],
+          "delta_L_signs": {
+            "near_zero": 0,
+            "negative": 2,
+            "positive": 10
+          },
+          "orientation": "reversed_B_to_A",
+          "summer_L": -0.0001645373596593109,
+          "winter_L": 0.0013259775454897312
+        }
+      ],
+      "n_shared_original_dyads": 205,
+      "radius_km": 2.0,
+      "source": "white_tailed_deer",
+      "time_gap_seconds": 900,
+      "year": 2020
+    },
+    {
+      "both_positive_at_least_10_of_12": false,
+      "directions": [
+        {
+          "delta_L": 0.0015098722415795565,
+          "delta_L_range": [
+            -0.00238095238095239,
+            0.005284552845528454
+          ],
+          "delta_L_signs": {
+            "near_zero": 0,
+            "negative": 4,
+            "positive": 8
+          },
+          "orientation": "original_A_to_B",
+          "summer_L": 0.00022260936895083377,
+          "winter_L": 0.0017324816105303903
+        },
+        {
+          "delta_L": 0.0021825396825396813,
+          "delta_L_range": [
+            -0.0016840882694541225,
+            0.004936120789779314
+          ],
+          "delta_L_signs": {
+            "near_zero": 0,
+            "negative": 1,
+            "positive": 11
+          },
+          "orientation": "reversed_B_to_A",
+          "summer_L": -0.0002710027100271001,
+          "winter_L": 0.001911536972512581
+        }
+      ],
+      "n_shared_original_dyads": 205,
+      "radius_km": 0.5,
+      "source": "white_tailed_deer",
+      "time_gap_seconds": 1800,
+      "year": 2020
+    },
+    {
+      "both_positive_at_least_10_of_12": false,
+      "directions": [
+        {
+          "delta_L": 0.001321138211382112,
+          "delta_L_range": [
+            -0.003135888501742193,
+            0.0026713124274100053
+          ],
+          "delta_L_signs": {
+            "near_zero": 0,
+            "negative": 2,
+            "positive": 10
+          },
+          "orientation": "original_A_to_B",
+          "summer_L": -0.0003290747193186253,
+          "winter_L": 0.0009920634920634868
+        },
+        {
+          "delta_L": 0.0004403794037940283,
+          "delta_L_range": [
+            -0.003135888501742165,
+            0.003716608594657375
+          ],
+          "delta_L_signs": {
+            "near_zero": 0,
+            "negative": 4,
+            "positive": 8
+          },
+          "orientation": "reversed_B_to_A",
+          "summer_L": 0.00027100271002710824,
+          "winter_L": 0.0007113821138211365
+        }
+      ],
+      "n_shared_original_dyads": 205,
+      "radius_km": 1.0,
+      "source": "white_tailed_deer",
+      "time_gap_seconds": 1800,
+      "year": 2020
+    },
+    {
+      "both_positive_at_least_10_of_12": false,
+      "directions": [
+        {
+          "delta_L": 0.0014905149051490489,
+          "delta_L_range": [
+            -0.0011033681765389158,
+            0.0033101045296167475
+          ],
+          "delta_L_signs": {
+            "near_zero": 0,
+            "negative": 2,
+            "positive": 10
+          },
+          "orientation": "original_A_to_B",
+          "summer_L": -8.22686798296543e-05,
+          "winter_L": 0.0014082462253193946
+        },
+        {
+          "delta_L": -7.742934572202431e-05,
+          "delta_L_range": [
+            -0.00389082462253193,
+            0.0016840882694541537
+          ],
+          "delta_L_signs": {
+            "near_zero": 0,
+            "negative": 4,
+            "positive": 8
+          },
+          "orientation": "reversed_B_to_A",
+          "summer_L": 9.678668215253271e-05,
+          "winter_L": 1.9357336430508392e-05
+        }
+      ],
+      "n_shared_original_dyads": 205,
+      "radius_km": 2.0,
+      "source": "white_tailed_deer",
+      "time_gap_seconds": 1800,
+      "year": 2020
+    }
+  ],
+  "schema_version": 1,
+  "source_sha256": {
+    "black_bear": {
+      "dual_anchor": "d7fae22468baf408265d1fe39da31c3688ae1c9ff06c7947ce3a568b4e4a5a37",
+      "original": "f13129ab5927ec7085b9b148a14a45f31ed394f829d3bdc06932a49006f415ab"
+    },
+    "turkey": {
+      "dual_anchor": "a5f61ffd8d34b2ac267fdf3f7d49eea508adafc690a306c9c8adbb2a1f985b5e",
+      "original": "c3a4c74160f79f58ed44ef0a81fda6a2c23b39a272aa522812d115729fc9aedb"
+    },
+    "white_tailed_deer": {
+      "dual_anchor": "d7066327a4329cae149ae85b3f57013e72fc81a6b6e65b8a47af4d0c932fe7d6",
+      "original": "84d4fd9a9c03663b7fecdd733e1d826d78ab7f66260d33230bbf1bcc7d7752f6"
+    }
+  },
+  "stability_gates": [
+    {
+      "passes_both_orientations_500m_and_1km": true,
+      "source": "turkey",
+      "time_gap_seconds": 900,
+      "year": 2019
+    },
+    {
+      "passes_both_orientations_500m_and_1km": true,
+      "source": "turkey",
+      "time_gap_seconds": 1800,
+      "year": 2019
+    },
+    {
+      "passes_both_orientations_500m_and_1km": true,
+      "source": "turkey",
+      "time_gap_seconds": 900,
+      "year": 2020
+    },
+    {
+      "passes_both_orientations_500m_and_1km": true,
+      "source": "turkey",
+      "time_gap_seconds": 1800,
+      "year": 2020
+    },
+    {
+      "passes_both_orientations_500m_and_1km": false,
+      "source": "white_tailed_deer",
+      "time_gap_seconds": 900,
+      "year": 2019
+    },
+    {
+      "passes_both_orientations_500m_and_1km": false,
+      "source": "white_tailed_deer",
+      "time_gap_seconds": 1800,
+      "year": 2019
+    },
+    {
+      "passes_both_orientations_500m_and_1km": false,
+      "source": "white_tailed_deer",
+      "time_gap_seconds": 900,
+      "year": 2020
+    },
+    {
+      "passes_both_orientations_500m_and_1km": false,
+      "source": "white_tailed_deer",
+      "time_gap_seconds": 1800,
+      "year": 2020
+    }
+  ],
+  "status": "POST_INSPECTION_ORIGINAL_MOVE_BANK_DUAL_ANCHOR_SENSITIVITY",
+  "stops": [
+    {
+      "forward_dyads": 0,
+      "intersection_dyads": 0,
+      "reverse_dyads": 0,
+      "source": "black_bear",
+      "status": "STOP_SMALL_DUAL_ANCHOR_COMMON_GPS_SUPPORT",
+      "time_gap_seconds": 900,
+      "year": 2019
+    },
+    {
+      "forward_dyads": 0,
+      "intersection_dyads": 0,
+      "reverse_dyads": 0,
+      "source": "black_bear",
+      "status": "STOP_SMALL_DUAL_ANCHOR_COMMON_GPS_SUPPORT",
+      "time_gap_seconds": 1800,
+      "year": 2019
+    },
+    {
+      "forward_dyads": 6,
+      "intersection_dyads": 5,
+      "reverse_dyads": 5,
+      "source": "black_bear",
+      "status": "STOP_SMALL_DUAL_ANCHOR_COMMON_GPS_SUPPORT",
+      "time_gap_seconds": 900,
+      "year": 2020
+    },
+    {
+      "forward_dyads": 6,
+      "intersection_dyads": 6,
+      "reverse_dyads": 8,
+      "source": "black_bear",
+      "status": "STOP_SMALL_DUAL_ANCHOR_COMMON_GPS_SUPPORT",
+      "time_gap_seconds": 1800,
+      "year": 2020
+    }
+  ]
+}

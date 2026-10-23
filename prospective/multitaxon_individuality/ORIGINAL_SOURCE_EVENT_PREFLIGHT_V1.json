@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-10-19",
+  "classification": "Source original public tracking CSV event-sensor and temporal support audit only; not a biological hypothesis test or fitted individual effect",
+  "predefined_temporal_probe": "potential repeated coverage: >=30 unique (individual-local-identifier,timestamp) georeferenced positions on >=3 distinct UTC calendar days. This is a screening diagnostic, not final ecological model eligibility.",
+  "sensor_primary_rule": "Fine-grain 2D common-cell comparison requires GPS/verified equivalent positional precision. ARGOS-only is flagged separate low-precision/measurement-error sensitivity; not treated as high-accuracy GPS.",
+  "datasets": [
+    {
+      "dataset": "Mediterranean loggerhead turtles",
+      "doi": "10.5441/001/1.1f1h87r8",
+      "track_source_public_file": "https://datarepository.movebank.org/bitstreams/cd8fe255-d496-4a55-b6c6-e6953562386d/download",
+      "original_source_name": "Satellite Tracking of Oceanic Loggerhead Turtles in the Mediterranean.csv",
+      "track_file_bytes": 3134141,
+      "source_reference_bat_n": 11,
+      "number_raw_source_position_rows": 10271,
+      "row_sensor_counts": {
+        "argos-doppler-shift": 10271
+      },
+      "individual_ids_with_accepted_source_coordinates": 11,
+      "distinct_individual_timestamp_records": 1258,
+      "individual_timestamp_collisions": 9013,
+      "outlier_invisible_rows_filtered": 0,
+      "missing_or_invalid_position_id_timestamp_rows": 0,
+      "at_least30_unique_timestamp_positions_and3_calendar_days_individuals": 9,
+      "individual_unique_timestamp_count_min_median_max": [
+        7,
+        117,
+        249
+      ],
+      "individual_distinct_UTC_day_count_min_median_max": [
+        7,
+        117,
+        249
+      ],
+      "stage3_primary_high_precision_GPS_status": "NO_GPS_ARGOS_ONLY_SEPARATE_LOW_PRECISION_STRATUM",
+      "limitations": [
+        "Same individual and timestamp repeat in source with potentially distinct location/quality data; collision count does not assert duplicate event IDs or identical coordinates.",
+        "Source location precision/Argos location classes may have much larger uncertainty than fine 500-m shared cells. No spatial/individual effect is estimated.",
+        "Potential 9 repeated animals are not an actual GPS-eligible cohort or a confirmed same site/year overlap sample."
+      ]
+    },
+    {
+      "dataset": "Reef manta Komodo",
+      "doi": "10.5441/001/1.3gj67c2k",
+      "track_source_public_file": "https://datarepository.movebank.org/bitstreams/e69b50a1-7ab3-405c-8791-66f2997a2f78/download",
+      "original_source_name": "Reef manta Komodo Indonesia.csv",
+      "track_file_bytes": 9620,
+      "number_raw_source_position_rows": 75,
+      "row_sensor_counts": {
+        "gps": 75
+      },
+      "individual_ids_with_accepted_source_coordinates": 1,
+      "source_reference_n": 1,
+      "stage3_primary_high_precision_GPS_status": "FAIL_SINGLE_INDIVIDUAL_NO_BETWEEN_INDIVIDUAL_TEST",
+      "limitations": [
+        "GPS type alone cannot establish within-species individuality; this source has exactly one tracked animal in original public reference and track CSV.",
+        "No aggregate cross-individual statistic or resampling null can be estimated from one animal."
+      ]
+    }
+  ],
+  "source_data_privacy": "Only aggregate source GPS/Argos row counts, sensor types and temporal coverage; original individual IDs, coordinate rows and timestamps not copied into GitHub.",
+  "no_individual_statistic_estimated": true,
+  "no_repeated_animal_counts_taken_as_independent": true
+}
