@@ -1,0 +1,1463 @@
+{
+  "as_of": "2026-10-28",
+  "complete_original_source_MD5_and_pinned_SHA256_verified": true,
+  "independent_local_populations_verified": false,
+  "independent_original_time_position_multiset_verified": true,
+  "known_source_GPS_2020_isolate_janfeb_summer_shift_km": 14.52355751362658,
+  "known_source_GPS_2020_six_core_median_shift_km": 0.4550351589540801,
+  "limits": [
+    "Monthly SOURCE GEO centroid separation summarizes observed GPS habitat geometry, not social encounters",
+    "One original tag generates all five far annual-center source pairs, not five biological replication events",
+    "No original bird ID, calendar date/time, exact GPS or individual-level monthly trajectory is published",
+    "Original source month coverage and GPS schedule/accuracy may affect observed seasonal geography",
+    "Original animal group / capture-site membership not certified by published reference fields",
+    "Change-point bracket identifies observed month categories only; do not infer actual movement dates or causes",
+    "2019 two annual5 GPS components are not verified independent ecological populations",
+    "No inferential p-value, true animal encounter, resource niche or taxon-general seasonal law"
+  ],
+  "month_results": [
+    {
+      "months": [
+        {
+          "group_centroid_pair_distances": [
+            {
+              "distance_km": {
+                "max": 25.989012451833208,
+                "mean": 7.134850765677596,
+                "median": 1.8964392458264916,
+                "min": 0.0523086599894085
+              },
+              "eligible_pair_fraction": 1.0,
+              "group_label": "all_25km_source_pairs",
+              "n_animals_in_valid_monthly_pairs": 19,
+              "n_original_pairs": 112,
+              "n_valid_monthly_pairs": 112,
+              "original_graph_n_animals": 19,
+              "status": "DESCRIPTIVE_SOURCE_MONTH_CENTROID_DISTANCE"
+            },
+            {
+              "distance_km": {
+                "max": 2.7834480415152676,
+                "mean": 0.9871391809792855,
+                "median": 0.9563279341948641,
+                "min": 0.0523086599894085
+              },
+              "eligible_pair_fraction": 1.0,
+              "group_label": "2019_larger_annual5_component",
+              "n_animals_in_valid_monthly_pairs": 11,
+              "n_original_pairs": 53,
+              "n_valid_monthly_pairs": 53,
+              "original_graph_n_animals": 11,
+              "status": "DESCRIPTIVE_SOURCE_MONTH_CENTROID_DISTANCE"
+            },
+            {
+              "distance_km": {
+                "max": 5.712849901268655,
+                "mean": 2.0615247024973824,
+                "median": 0.9952687457257106,
+                "min": 0.1102869939092588
+              },
+              "eligible_pair_fraction": 1.0,
+              "group_label": "2019_smaller_annual5_component",
+              "n_animals_in_valid_monthly_pairs": 7,
+              "n_original_pairs": 20,
+              "n_valid_monthly_pairs": 20,
+              "original_graph_n_animals": 7,
+              "status": "DESCRIPTIVE_SOURCE_MONTH_CENTROID_DISTANCE"
+            }
+          ],
+          "month": 1,
+          "n_eligible_animal_calendar_dates": 260,
+          "n_eligible_animals_with_7_observed_days": 19,
+          "n_eligible_animals_with_any_fix": 19,
+          "n_eligible_original_GPS_fixes": 4255,
+          "n_source_animals_7day_centroid_supported": 19
+        },
+        {
+          "group_centroid_pair_distances": [
+            {
+              "distance_km": {
+                "max": 25.444715679961842,
+                "mean": 7.086735151716327,
+                "median": 1.6017282324021442,
+                "min": 0.0004650860771915803
+              },
+              "eligible_pair_fraction": 1.0,
+              "group_label": "all_25km_source_pairs",
+              "n_animals_in_valid_monthly_pairs": 19,
+              "n_original_pairs": 112,
+              "n_valid_monthly_pairs": 112,
+              "original_graph_n_animals": 19,
+              "status": "DESCRIPTIVE_SOURCE_MONTH_CENTROID_DISTANCE"
+            },
+            {
+              "distance_km": {
+                "max": 6.817829125807595,
+                "mean": 1.9232685066127007,
+                "median": 0.4398890521635746,
+                "min": 0.033882060712701424
+              },
+              "eligible_pair_fraction": 1.0,
+              "group_label": "2019_larger_annual5_component",
+              "n_animals_in_valid_monthly_pairs": 11,
+              "n_original_pairs": 53,
+              "n_valid_monthly_pairs": 53,
+              "original_graph_n_animals": 11,
+              "status": "DESCRIPTIVE_SOURCE_MONTH_CENTROID_DISTANCE"
+            },
+            {
+              "distance_km": {
+                "max": 1.6029555420104604,
+                "mean": 0.8678734563570011,
+                "median": 1.0260206668030905,
+                "min": 0.0007770789043545636
+              },
+              "eligible_pair_fraction": 1.0,
+              "group_label": "2019_smaller_annual5_component",
+              "n_animals_in_valid_monthly_pairs": 7,
+              "n_original_pairs": 20,
+              "n_valid_monthly_pairs": 20,
+              "original_graph_n_animals": 7,
+              "status": "DESCRIPTIVE_SOURCE_MONTH_CENTROID_DISTANCE"
+            }
+          ],
+          "month": 2,
+          "n_eligible_animal_calendar_dates": 532,
+          "n_eligible_animals_with_7_observed_days": 19,
+          "n_eligible_animals_with_any_fix": 19,
+          "n_eligible_original_GPS_fixes": 8978,
+          "n_source_animals_7day_centroid_supported": 19
+        },
+        {
+          "group_centroid_pair_distances": [
+            {
+              "distance_km": {
+                "max": 25.68010003243853,
+                "mean": 7.3421151352833585,
+                "median": 2.8641115846092005,
+                "min": 0.03311010576197479
+              },
+              "eligible_pair_fraction": 1.0,
+              "group_label": "all_25km_source_pairs",
+              "n_animals_in_valid_monthly_pairs": 19,
+              "n_original_pairs": 112,
+              "n_valid_monthly_pairs": 112,
+              "original_graph_n_animals": 19,
+              "status": "DESCRIPTIVE_SOURCE_MONTH_CENTROID_DISTANCE"
+            },
+            {
+              "distance_km": {
+                "max": 6.102268135389341,
+                "mean": 2.3371259242904574,
+                "median": 1.9187515375395918,
+                "min": 0.03311010576197479
+              },
+              "eligible_pair_fraction": 1.0,
+              "group_label": "2019_larger_annual5_component",
+              "n_animals_in_valid_monthly_pairs": 11,
+              "n_original_pairs": 53,
+              "n_valid_monthly_pairs": 53,
+              "original_graph_n_animals": 11,
+              "status": "DESCRIPTIVE_SOURCE_MONTH_CENTROID_DISTANCE"
+            },
+            {
+              "distance_km": {
+                "max": 1.8370739171618065,
+                "mean": 0.8255089072337677,
+                "median": 0.6397174036376074,
+                "min": 0.07232973256309591
+              },
+              "eligible_pair_fraction": 1.0,
+              "group_label": "2019_smaller_annual5_component",
+              "n_animals_in_valid_monthly_pairs": 7,
+              "n_original_pairs": 20,
+              "n_valid_monthly_pairs": 20,
+              "original_graph_n_animals": 7,
+              "status": "DESCRIPTIVE_SOURCE_MONTH_CENTROID_DISTANCE"
+            }
+          ],
+          "month": 3,
+          "n_eligible_animal_calendar_dates": 589,
+          "n_eligible_animals_with_7_observed_days": 19,
+          "n_eligible_animals_with_any_fix": 19,
+          "n_eligible_original_GPS_fixes": 9856,
+          "n_source_animals_7day_centroid_supported": 19
+        },
+        {
+          "group_centroid_pair_distances": [
+            {
+              "distance_km": {
+                "max": 25.991173654619168,
+                "mean": 8.086834005075053,
+                "median": 3.7255808052759507,
+                "min": 0.0019432770839886814
+              },
+              "eligible_pair_fraction": 1.0,
+              "group_label": "all_25km_source_pairs",
+              "n_animals_in_valid_monthly_pairs": 19,
+              "n_original_pairs": 112,
+              "n_valid_monthly_pairs": 112,
+              "original_graph_n_animals": 19,
+              "status": "DESCRIPTIVE_SOURCE_MONTH_CENTROID_DISTANCE"
+            },
+            {
+              "distance_km": {
+                "max": 6.33502038737029,
+                "mean": 2.3385945906683565,
+                "median": 2.197771639939244,
+                "min": 0.0019432770839886814
+              },
+              "eligible_pair_fraction": 1.0,
+              "group_label": "2019_larger_annual5_component",
+              "n_animals_in_valid_monthly_pairs": 11,
+              "n_original_pairs": 53,
+              "n_valid_monthly_pairs": 53,
+              "original_graph_n_animals": 11,
+              "status": "DESCRIPTIVE_SOURCE_MONTH_CENTROID_DISTANCE"
+            },
+            {
+              "distance_km": {
+                "max": 8.246464874243117,
+                "mean": 3.4770503279581746,
+                "median": 3.34053532283431,
+                "min": 0.556002292490905
+              },
+              "eligible_pair_fraction": 1.0,
+              "group_label": "2019_smaller_annual5_component",
+              "n_animals_in_valid_monthly_pairs": 7,
+              "n_original_pairs": 20,
+              "n_valid_monthly_pairs": 20,
+              "original_graph_n_animals": 7,
+              "status": "DESCRIPTIVE_SOURCE_MONTH_CENTROID_DISTANCE"
+            }
+          ],
+          "month": 4,
+          "n_eligible_animal_calendar_dates": 570,
+          "n_eligible_animals_with_7_observed_days": 19,
+          "n_eligible_animals_with_any_fix": 19,
+          "n_eligible_original_GPS_fixes": 9522,
+          "n_source_animals_7day_centroid_supported": 19
+        },
+        {
+          "group_centroid_pair_distances": [
+            {
+              "distance_km": {
+                "max": 24.74799754771734,
+                "mean": 8.256194341240114,
+                "median": 4.193929917986763,
+                "min": 0.002728460943593006
+              },
+              "eligible_pair_fraction": 1.0,
+              "group_label": "all_25km_source_pairs",
+              "n_animals_in_valid_monthly_pairs": 19,
+              "n_original_pairs": 112,
+              "n_valid_monthly_pairs": 112,
+              "original_graph_n_animals": 19,
+              "status": "DESCRIPTIVE_SOURCE_MONTH_CENTROID_DISTANCE"
+            },
+            {
+              "distance_km": {
+                "max": 6.6005030039371055,
+                "mean": 2.7104179140716544,
+                "median": 2.681582645289854,
+                "min": 0.002728460943593006
+              },
+              "eligible_pair_fraction": 1.0,
+              "group_label": "2019_larger_annual5_component",
+              "n_animals_in_valid_monthly_pairs": 11,
+              "n_original_pairs": 53,
+              "n_valid_monthly_pairs": 53,
+              "original_graph_n_animals": 11,
+              "status": "DESCRIPTIVE_SOURCE_MONTH_CENTROID_DISTANCE"
+            },
+            {
+              "distance_km": {
+                "max": 7.000217809101947,
+                "mean": 3.6653626832107564,
+                "median": 3.6356497252587348,
+                "min": 0.2549642039100556
+              },
+              "eligible_pair_fraction": 1.0,
+              "group_label": "2019_smaller_annual5_component",
+              "n_animals_in_valid_monthly_pairs": 7,
+              "n_original_pairs": 20,
+              "n_valid_monthly_pairs": 20,
+              "original_graph_n_animals": 7,
+              "status": "DESCRIPTIVE_SOURCE_MONTH_CENTROID_DISTANCE"
+            }
+          ],
+          "month": 5,
+          "n_eligible_animal_calendar_dates": 589,
+          "n_eligible_animals_with_7_observed_days": 19,
+          "n_eligible_animals_with_any_fix": 19,
+          "n_eligible_original_GPS_fixes": 9894,
+          "n_source_animals_7day_centroid_supported": 19
+        },
+        {
+          "group_centroid_pair_distances": [
+            {
+              "distance_km": {
+                "max": 28.66047883996818,
+                "mean": 8.395808241899237,
+                "median": 4.381796159008803,
+                "min": 0.0022040533389967756
+              },
+              "eligible_pair_fraction": 1.0,
+              "group_label": "all_25km_source_pairs",
+              "n_animals_in_valid_monthly_pairs": 19,
+              "n_original_pairs": 112,
+              "n_valid_monthly_pairs": 112,
+              "original_graph_n_animals": 19,
+              "status": "DESCRIPTIVE_SOURCE_MONTH_CENTROID_DISTANCE"
+            },
+            {
+              "distance_km": {
+                "max": 5.189408116644728,
+                "mean": 2.6088165893023936,
+                "median": 2.6399500597598884,
+                "min": 0.0022040533389967756
+              },
+              "eligible_pair_fraction": 1.0,
+              "group_label": "2019_larger_annual5_component",
+              "n_animals_in_valid_monthly_pairs": 11,
+              "n_original_pairs": 53,
+              "n_valid_monthly_pairs": 53,
+              "original_graph_n_animals": 11,
+              "status": "DESCRIPTIVE_SOURCE_MONTH_CENTROID_DISTANCE"
+            },
+            {
+              "distance_km": {
+                "max": 6.873986993840679,
+                "mean": 3.6234899367268776,
+                "median": 3.4063795192314448,
+                "min": 0.41039347825189265
+              },
+              "eligible_pair_fraction": 1.0,
+              "group_label": "2019_smaller_annual5_component",
+              "n_animals_in_valid_monthly_pairs": 7,
+              "n_original_pairs": 20,
+              "n_valid_monthly_pairs": 20,
+              "original_graph_n_animals": 7,
+              "status": "DESCRIPTIVE_SOURCE_MONTH_CENTROID_DISTANCE"
+            }
+          ],
+          "month": 6,
+          "n_eligible_animal_calendar_dates": 570,
+          "n_eligible_animals_with_7_observed_days": 19,
+          "n_eligible_animals_with_any_fix": 19,
+          "n_eligible_original_GPS_fixes": 9488,
+          "n_source_animals_7day_centroid_supported": 19
+        },
+        {
+          "group_centroid_pair_distances": [
+            {
+              "distance_km": {
+                "max": 29.154637205030664,
+                "mean": 8.229063140134471,
+                "median": 3.930010545182781,
+                "min": 0.007799730629918645
+              },
+              "eligible_pair_fraction": 1.0,
+              "group_label": "all_25km_source_pairs",
+              "n_animals_in_valid_monthly_pairs": 19,
+              "n_original_pairs": 112,
+              "n_valid_monthly_pairs": 112,
+              "original_graph_n_animals": 19,
+              "status": "DESCRIPTIVE_SOURCE_MONTH_CENTROID_DISTANCE"
+            },
+            {
+              "distance_km": {
+                "max": 5.007051432298264,
+                "mean": 2.601187256494922,
+                "median": 2.5479015081280787,
+                "min": 0.007799730629918645
+              },
+              "eligible_pair_fraction": 1.0,
+              "group_label": "2019_larger_annual5_component",
+              "n_animals_in_valid_monthly_pairs": 11,
+              "n_original_pairs": 53,
+              "n_valid_monthly_pairs": 53,
+              "original_graph_n_animals": 11,
+              "status": "DESCRIPTIVE_SOURCE_MONTH_CENTROID_DISTANCE"
+            },
+            {
+              "distance_km": {
+                "max": 6.804853086666719,
+                "mean": 2.8723173713781334,
+                "median": 2.1979854429382804,
+                "min": 0.05867485287875367
+              },
+              "eligible_pair_fraction": 1.0,
+              "group_label": "2019_smaller_annual5_component",
+              "n_animals_in_valid_monthly_pairs": 7,
+              "n_original_pairs": 20,
+              "n_valid_monthly_pairs": 20,
+              "original_graph_n_animals": 7,
+              "status": "DESCRIPTIVE_SOURCE_MONTH_CENTROID_DISTANCE"
+            }
+          ],
+          "month": 7,
+          "n_eligible_animal_calendar_dates": 589,
+          "n_eligible_animals_with_7_observed_days": 19,
+          "n_eligible_animals_with_any_fix": 19,
+          "n_eligible_original_GPS_fixes": 9860,
+          "n_source_animals_7day_centroid_supported": 19
+        },
+        {
+          "group_centroid_pair_distances": [
+            {
+              "distance_km": {
+                "max": 26.476332037001132,
+                "mean": 9.709396784610432,
+                "median": 4.399150871514378,
+                "min": 0.02804482542957982
+              },
+              "eligible_pair_fraction": 0.26785714285714285,
+              "group_label": "all_25km_source_pairs",
+              "n_animals_in_valid_monthly_pairs": 10,
+              "n_original_pairs": 112,
+              "n_valid_monthly_pairs": 30,
+              "original_graph_n_animals": 19,
+              "status": "DESCRIPTIVE_SOURCE_MONTH_CENTROID_DISTANCE"
+            },
+            {
+              "distance_km": {
+                "max": 4.868438775927763,
+                "mean": 2.961708124566251,
+                "median": 3.2245927211233356,
+                "min": 0.02804482542957982
+              },
+              "eligible_pair_fraction": 0.24528301886792453,
+              "group_label": "2019_larger_annual5_component",
+              "n_animals_in_valid_monthly_pairs": 6,
+              "n_original_pairs": 53,
+              "n_valid_monthly_pairs": 13,
+              "original_graph_n_animals": 11,
+              "status": "DESCRIPTIVE_SOURCE_MONTH_CENTROID_DISTANCE"
+            },
+            {
+              "distance_km": {
+                "max": 4.73809286887026,
+                "mean": 2.1797285453343713,
+                "median": 0.8635558097895328,
+                "min": 0.15854325509405287
+              },
+              "eligible_pair_fraction": 0.25,
+              "group_label": "2019_smaller_annual5_component",
+              "n_animals_in_valid_monthly_pairs": 4,
+              "n_original_pairs": 20,
+              "n_valid_monthly_pairs": 5,
+              "original_graph_n_animals": 7,
+              "status": "DESCRIPTIVE_SOURCE_MONTH_CENTROID_DISTANCE"
+            }
+          ],
+          "month": 8,
+          "n_eligible_animal_calendar_dates": 138,
+          "n_eligible_animals_with_7_observed_days": 10,
+          "n_eligible_animals_with_any_fix": 18,
+          "n_eligible_original_GPS_fixes": 2179,
+          "n_source_animals_7day_centroid_supported": 10
+        },
+        {
+          "group_centroid_pair_distances": [
+            {
+              "distance_km": null,
+              "eligible_pair_fraction": 0.0,
+              "group_label": "all_25km_source_pairs",
+              "n_animals_in_valid_monthly_pairs": 0,
+              "n_original_pairs": 112,
+              "n_valid_monthly_pairs": 0,
+              "original_graph_n_animals": 19,
+              "status": "NOT_ESTIMABLE_MONTHLY_SOURCE_SUPPORT"
+            },
+            {
+              "distance_km": null,
+              "eligible_pair_fraction": 0.0,
+              "group_label": "2019_larger_annual5_component",
+              "n_animals_in_valid_monthly_pairs": 0,
+              "n_original_pairs": 53,
+              "n_valid_monthly_pairs": 0,
+              "original_graph_n_animals": 11,
+              "status": "NOT_ESTIMABLE_MONTHLY_SOURCE_SUPPORT"
+            },
+            {
+              "distance_km": null,
+              "eligible_pair_fraction": 0.0,
+              "group_label": "2019_smaller_annual5_component",
+              "n_animals_in_valid_monthly_pairs": 0,
+              "n_original_pairs": 20,
+              "n_valid_monthly_pairs": 0,
+              "original_graph_n_animals": 7,
+              "status": "NOT_ESTIMABLE_MONTHLY_SOURCE_SUPPORT"
+            }
+          ],
+          "month": 9,
+          "n_eligible_animal_calendar_dates": 0,
+          "n_eligible_animals_with_7_observed_days": 0,
+          "n_eligible_animals_with_any_fix": 0,
+          "n_eligible_original_GPS_fixes": 0,
+          "n_source_animals_7day_centroid_supported": 0
+        },
+        {
+          "group_centroid_pair_distances": [
+            {
+              "distance_km": null,
+              "eligible_pair_fraction": 0.0,
+              "group_label": "all_25km_source_pairs",
+              "n_animals_in_valid_monthly_pairs": 0,
+              "n_original_pairs": 112,
+              "n_valid_monthly_pairs": 0,
+              "original_graph_n_animals": 19,
+              "status": "NOT_ESTIMABLE_MONTHLY_SOURCE_SUPPORT"
+            },
+            {
+              "distance_km": null,
+              "eligible_pair_fraction": 0.0,
+              "group_label": "2019_larger_annual5_component",
+              "n_animals_in_valid_monthly_pairs": 0,
+              "n_original_pairs": 53,
+              "n_valid_monthly_pairs": 0,
+              "original_graph_n_animals": 11,
+              "status": "NOT_ESTIMABLE_MONTHLY_SOURCE_SUPPORT"
+            },
+            {
+              "distance_km": null,
+              "eligible_pair_fraction": 0.0,
+              "group_label": "2019_smaller_annual5_component",
+              "n_animals_in_valid_monthly_pairs": 0,
+              "n_original_pairs": 20,
+              "n_valid_monthly_pairs": 0,
+              "original_graph_n_animals": 7,
+              "status": "NOT_ESTIMABLE_MONTHLY_SOURCE_SUPPORT"
+            }
+          ],
+          "month": 10,
+          "n_eligible_animal_calendar_dates": 0,
+          "n_eligible_animals_with_7_observed_days": 0,
+          "n_eligible_animals_with_any_fix": 0,
+          "n_eligible_original_GPS_fixes": 0,
+          "n_source_animals_7day_centroid_supported": 0
+        },
+        {
+          "group_centroid_pair_distances": [
+            {
+              "distance_km": null,
+              "eligible_pair_fraction": 0.0,
+              "group_label": "all_25km_source_pairs",
+              "n_animals_in_valid_monthly_pairs": 0,
+              "n_original_pairs": 112,
+              "n_valid_monthly_pairs": 0,
+              "original_graph_n_animals": 19,
+              "status": "NOT_ESTIMABLE_MONTHLY_SOURCE_SUPPORT"
+            },
+            {
+              "distance_km": null,
+              "eligible_pair_fraction": 0.0,
+              "group_label": "2019_larger_annual5_component",
+              "n_animals_in_valid_monthly_pairs": 0,
+              "n_original_pairs": 53,
+              "n_valid_monthly_pairs": 0,
+              "original_graph_n_animals": 11,
+              "status": "NOT_ESTIMABLE_MONTHLY_SOURCE_SUPPORT"
+            },
+            {
+              "distance_km": null,
+              "eligible_pair_fraction": 0.0,
+              "group_label": "2019_smaller_annual5_component",
+              "n_animals_in_valid_monthly_pairs": 0,
+              "n_original_pairs": 20,
+              "n_valid_monthly_pairs": 0,
+              "original_graph_n_animals": 7,
+              "status": "NOT_ESTIMABLE_MONTHLY_SOURCE_SUPPORT"
+            }
+          ],
+          "month": 11,
+          "n_eligible_animal_calendar_dates": 0,
+          "n_eligible_animals_with_7_observed_days": 0,
+          "n_eligible_animals_with_any_fix": 0,
+          "n_eligible_original_GPS_fixes": 0,
+          "n_source_animals_7day_centroid_supported": 0
+        },
+        {
+          "group_centroid_pair_distances": [
+            {
+              "distance_km": null,
+              "eligible_pair_fraction": 0.0,
+              "group_label": "all_25km_source_pairs",
+              "n_animals_in_valid_monthly_pairs": 0,
+              "n_original_pairs": 112,
+              "n_valid_monthly_pairs": 0,
+              "original_graph_n_animals": 19,
+              "status": "NOT_ESTIMABLE_MONTHLY_SOURCE_SUPPORT"
+            },
+            {
+              "distance_km": null,
+              "eligible_pair_fraction": 0.0,
+              "group_label": "2019_larger_annual5_component",
+              "n_animals_in_valid_monthly_pairs": 0,
+              "n_original_pairs": 53,
+              "n_valid_monthly_pairs": 0,
+              "original_graph_n_animals": 11,
+              "status": "NOT_ESTIMABLE_MONTHLY_SOURCE_SUPPORT"
+            },
+            {
+              "distance_km": null,
+              "eligible_pair_fraction": 0.0,
+              "group_label": "2019_smaller_annual5_component",
+              "n_animals_in_valid_monthly_pairs": 0,
+              "n_original_pairs": 20,
+              "n_valid_monthly_pairs": 0,
+              "original_graph_n_animals": 7,
+              "status": "NOT_ESTIMABLE_MONTHLY_SOURCE_SUPPORT"
+            }
+          ],
+          "month": 12,
+          "n_eligible_animal_calendar_dates": 0,
+          "n_eligible_animals_with_7_observed_days": 0,
+          "n_eligible_animals_with_any_fix": 0,
+          "n_eligible_original_GPS_fixes": 0,
+          "n_source_animals_7day_centroid_supported": 0
+        }
+      ],
+      "n_source_eligible_animals": 19,
+      "n_source_eligible_dyads": 112,
+      "original_annual5_component_animal_sizes": [
+        11,
+        7
+      ],
+      "original_annual5_component_edge_sizes": [
+        53,
+        20
+      ],
+      "year": 2019
+    },
+    {
+      "months": [
+        {
+          "annual5_isolated_animal_7day_supported": true,
+          "group_centroid_pair_distances": [
+            {
+              "distance_km": {
+                "max": 1.6128195677182597,
+                "mean": 0.79917055990668,
+                "median": 0.7501627280362594,
+                "min": 0.03968250031137838
+              },
+              "eligible_pair_fraction": 1.0,
+              "group_label": "all_25km_source_pairs",
+              "n_animals_in_valid_monthly_pairs": 7,
+              "n_original_pairs": 21,
+              "n_valid_monthly_pairs": 21,
+              "original_graph_n_animals": 7,
+              "status": "DESCRIPTIVE_SOURCE_MONTH_CENTROID_DISTANCE"
+            },
+            {
+              "distance_km": {
+                "max": 1.6128195677182597,
+                "mean": 0.8854815931054105,
+                "median": 0.9727698409254346,
+                "min": 0.03968250031137838
+              },
+              "eligible_pair_fraction": 1.0,
+              "group_label": "2020_six_member_annual5_core",
+              "n_animals_in_valid_monthly_pairs": 6,
+              "n_original_pairs": 15,
+              "n_valid_monthly_pairs": 15,
+              "original_graph_n_animals": 6,
+              "status": "DESCRIPTIVE_SOURCE_MONTH_CENTROID_DISTANCE"
+            },
+            {
+              "distance_km": {
+                "max": 1.5905740319805,
+                "mean": 0.5833929769098535,
+                "median": 0.3783513550145312,
+                "min": 0.050476214988738215
+              },
+              "eligible_pair_fraction": 1.0,
+              "group_label": "2020_annual5_isolate_vs_core",
+              "n_animals_in_valid_monthly_pairs": 7,
+              "n_original_pairs": 6,
+              "n_valid_monthly_pairs": 6,
+              "original_graph_n_animals": 7,
+              "status": "DESCRIPTIVE_SOURCE_MONTH_CENTROID_DISTANCE"
+            },
+            {
+              "distance_km": {
+                "max": 1.5905740319805,
+                "mean": 0.6799269642053118,
+                "median": 0.6559796695965009,
+                "min": 0.050476214988738215
+              },
+              "eligible_pair_fraction": 1.0,
+              "group_label": "2020_annual10_to25_isolate_pairs",
+              "n_animals_in_valid_monthly_pairs": 6,
+              "n_original_pairs": 5,
+              "n_valid_monthly_pairs": 5,
+              "original_graph_n_animals": 7,
+              "status": "DESCRIPTIVE_SOURCE_MONTH_CENTROID_DISTANCE"
+            }
+          ],
+          "isolate_vs_core_monthly_state": "CLOSE",
+          "month": 1,
+          "n_annual5_core_animals_7day_supported": 6,
+          "n_eligible_animal_calendar_dates": 70,
+          "n_eligible_animals_with_7_observed_days": 7,
+          "n_eligible_animals_with_any_fix": 7,
+          "n_eligible_original_GPS_fixes": 1116,
+          "n_source_animals_7day_centroid_supported": 7,
+          "source_tracking_completeness": "FULLY_TRACKED_7_OF_7_MONTHLY_CENTRES"
+        },
+        {
+          "annual5_isolated_animal_7day_supported": true,
+          "group_centroid_pair_distances": [
+            {
+              "distance_km": {
+                "max": 2.970711126502694,
+                "mean": 0.9256856610651999,
+                "median": 0.34044674128480323,
+                "min": 0.003137177105852375
+              },
+              "eligible_pair_fraction": 1.0,
+              "group_label": "all_25km_source_pairs",
+              "n_animals_in_valid_monthly_pairs": 7,
+              "n_original_pairs": 21,
+              "n_valid_monthly_pairs": 21,
+              "original_graph_n_animals": 7,
+              "status": "DESCRIPTIVE_SOURCE_MONTH_CENTROID_DISTANCE"
+            },
+            {
+              "distance_km": {
+                "max": 2.970711126502694,
+                "mean": 1.0716971793722867,
+                "median": 0.341666057181387,
+                "min": 0.003137177105852375
+              },
+              "eligible_pair_fraction": 1.0,
+              "group_label": "2020_six_member_annual5_core",
+              "n_animals_in_valid_monthly_pairs": 6,
+              "n_original_pairs": 15,
+              "n_valid_monthly_pairs": 15,
+              "original_graph_n_animals": 6,
+              "status": "DESCRIPTIVE_SOURCE_MONTH_CENTROID_DISTANCE"
+            },
+            {
+              "distance_km": {
+                "max": 2.9700737525883216,
+                "mean": 0.5606568652974829,
+                "median": 0.018528074058429128,
+                "min": 0.004759090484549995
+              },
+              "eligible_pair_fraction": 1.0,
+              "group_label": "2020_annual5_isolate_vs_core",
+              "n_animals_in_valid_monthly_pairs": 7,
+              "n_original_pairs": 6,
+              "n_valid_monthly_pairs": 6,
+              "original_graph_n_animals": 7,
+              "status": "DESCRIPTIVE_SOURCE_MONTH_CENTROID_DISTANCE"
+            },
+            {
+              "distance_km": {
+                "max": 2.9700737525883216,
+                "mean": 0.6711583344839315,
+                "median": 0.01898349918571448,
+                "min": 0.004759090484549995
+              },
+              "eligible_pair_fraction": 1.0,
+              "group_label": "2020_annual10_to25_isolate_pairs",
+              "n_animals_in_valid_monthly_pairs": 6,
+              "n_original_pairs": 5,
+              "n_valid_monthly_pairs": 5,
+              "original_graph_n_animals": 7,
+              "status": "DESCRIPTIVE_SOURCE_MONTH_CENTROID_DISTANCE"
+            }
+          ],
+          "isolate_vs_core_monthly_state": "CLOSE",
+          "month": 2,
+          "n_annual5_core_animals_7day_supported": 6,
+          "n_eligible_animal_calendar_dates": 203,
+          "n_eligible_animals_with_7_observed_days": 7,
+          "n_eligible_animals_with_any_fix": 7,
+          "n_eligible_original_GPS_fixes": 3402,
+          "n_source_animals_7day_centroid_supported": 7,
+          "source_tracking_completeness": "FULLY_TRACKED_7_OF_7_MONTHLY_CENTRES"
+        },
+        {
+          "annual5_isolated_animal_7day_supported": true,
+          "group_centroid_pair_distances": [
+            {
+              "distance_km": {
+                "max": 7.61894164354063,
+                "mean": 2.8064275222927506,
+                "median": 2.5072729025286318,
+                "min": 0.15891647124198796
+              },
+              "eligible_pair_fraction": 1.0,
+              "group_label": "all_25km_source_pairs",
+              "n_animals_in_valid_monthly_pairs": 7,
+              "n_original_pairs": 21,
+              "n_valid_monthly_pairs": 21,
+              "original_graph_n_animals": 7,
+              "status": "DESCRIPTIVE_SOURCE_MONTH_CENTROID_DISTANCE"
+            },
+            {
+              "distance_km": {
+                "max": 4.619533679844873,
+                "mean": 1.7977621737912415,
+                "median": 1.9340060741982141,
+                "min": 0.15891647124198796
+              },
+              "eligible_pair_fraction": 1.0,
+              "group_label": "2020_six_member_annual5_core",
+              "n_animals_in_valid_monthly_pairs": 6,
+              "n_original_pairs": 15,
+              "n_valid_monthly_pairs": 15,
+              "original_graph_n_animals": 6,
+              "status": "DESCRIPTIVE_SOURCE_MONTH_CENTROID_DISTANCE"
+            },
+            {
+              "distance_km": {
+                "max": 7.61894164354063,
+                "mean": 5.328090893546523,
+                "median": 5.151156252606963,
+                "min": 3.207403599020589
+              },
+              "eligible_pair_fraction": 1.0,
+              "group_label": "2020_annual5_isolate_vs_core",
+              "n_animals_in_valid_monthly_pairs": 7,
+              "n_original_pairs": 6,
+              "n_valid_monthly_pairs": 6,
+              "original_graph_n_animals": 7,
+              "status": "DESCRIPTIVE_SOURCE_MONTH_CENTROID_DISTANCE"
+            },
+            {
+              "distance_km": {
+                "max": 7.61894164354063,
+                "mean": 5.75222835245171,
+                "median": 5.205054982084275,
+                "min": 4.95341709359763
+              },
+              "eligible_pair_fraction": 1.0,
+              "group_label": "2020_annual10_to25_isolate_pairs",
+              "n_animals_in_valid_monthly_pairs": 6,
+              "n_original_pairs": 5,
+              "n_valid_monthly_pairs": 5,
+              "original_graph_n_animals": 7,
+              "status": "DESCRIPTIVE_SOURCE_MONTH_CENTROID_DISTANCE"
+            }
+          ],
+          "isolate_vs_core_monthly_state": "SEPARATED",
+          "month": 3,
+          "n_annual5_core_animals_7day_supported": 6,
+          "n_eligible_animal_calendar_dates": 217,
+          "n_eligible_animals_with_7_observed_days": 7,
+          "n_eligible_animals_with_any_fix": 7,
+          "n_eligible_original_GPS_fixes": 3562,
+          "n_source_animals_7day_centroid_supported": 7,
+          "source_tracking_completeness": "FULLY_TRACKED_7_OF_7_MONTHLY_CENTRES"
+        },
+        {
+          "annual5_isolated_animal_7day_supported": true,
+          "group_centroid_pair_distances": [
+            {
+              "distance_km": {
+                "max": 21.6328902584912,
+                "mean": 7.877399650142682,
+                "median": 6.31563498059708,
+                "min": 0.6833188064182059
+              },
+              "eligible_pair_fraction": 1.0,
+              "group_label": "all_25km_source_pairs",
+              "n_animals_in_valid_monthly_pairs": 7,
+              "n_original_pairs": 21,
+              "n_valid_monthly_pairs": 21,
+              "original_graph_n_animals": 7,
+              "status": "DESCRIPTIVE_SOURCE_MONTH_CENTROID_DISTANCE"
+            },
+            {
+              "distance_km": {
+                "max": 9.657409108843337,
+                "mean": 4.42837562791752,
+                "median": 5.087594201557442,
+                "min": 0.6833188064182059
+              },
+              "eligible_pair_fraction": 1.0,
+              "group_label": "2020_six_member_annual5_core",
+              "n_animals_in_valid_monthly_pairs": 6,
+              "n_original_pairs": 15,
+              "n_valid_monthly_pairs": 15,
+              "original_graph_n_animals": 6,
+              "status": "DESCRIPTIVE_SOURCE_MONTH_CENTROID_DISTANCE"
+            },
+            {
+              "distance_km": {
+                "max": 21.6328902584912,
+                "mean": 16.49995970570559,
+                "median": 16.508334254345456,
+                "min": 11.975786399276544
+              },
+              "eligible_pair_fraction": 1.0,
+              "group_label": "2020_annual5_isolate_vs_core",
+              "n_animals_in_valid_monthly_pairs": 7,
+              "n_original_pairs": 6,
+              "n_valid_monthly_pairs": 6,
+              "original_graph_n_animals": 7,
+              "status": "DESCRIPTIVE_SOURCE_MONTH_CENTROID_DISTANCE"
+            },
+            {
+              "distance_km": {
+                "max": 21.6328902584912,
+                "mean": 17.404794366991396,
+                "median": 16.568874191556763,
+                "min": 15.002243080492565
+              },
+              "eligible_pair_fraction": 1.0,
+              "group_label": "2020_annual10_to25_isolate_pairs",
+              "n_animals_in_valid_monthly_pairs": 6,
+              "n_original_pairs": 5,
+              "n_valid_monthly_pairs": 5,
+              "original_graph_n_animals": 7,
+              "status": "DESCRIPTIVE_SOURCE_MONTH_CENTROID_DISTANCE"
+            }
+          ],
+          "isolate_vs_core_monthly_state": "SEPARATED",
+          "month": 4,
+          "n_annual5_core_animals_7day_supported": 6,
+          "n_eligible_animal_calendar_dates": 210,
+          "n_eligible_animals_with_7_observed_days": 7,
+          "n_eligible_animals_with_any_fix": 7,
+          "n_eligible_original_GPS_fixes": 3464,
+          "n_source_animals_7day_centroid_supported": 7,
+          "source_tracking_completeness": "FULLY_TRACKED_7_OF_7_MONTHLY_CENTRES"
+        },
+        {
+          "annual5_isolated_animal_7day_supported": true,
+          "group_centroid_pair_distances": [
+            {
+              "distance_km": {
+                "max": 21.576656609369213,
+                "mean": 7.466999239184482,
+                "median": 6.172720924768044,
+                "min": 0.5573791135066801
+              },
+              "eligible_pair_fraction": 1.0,
+              "group_label": "all_25km_source_pairs",
+              "n_animals_in_valid_monthly_pairs": 7,
+              "n_original_pairs": 21,
+              "n_valid_monthly_pairs": 21,
+              "original_graph_n_animals": 7,
+              "status": "DESCRIPTIVE_SOURCE_MONTH_CENTROID_DISTANCE"
+            },
+            {
+              "distance_km": {
+                "max": 7.820318214853905,
+                "mean": 3.721283405544311,
+                "median": 2.64502985959125,
+                "min": 0.5573791135066801
+              },
+              "eligible_pair_fraction": 1.0,
+              "group_label": "2020_six_member_annual5_core",
+              "n_animals_in_valid_monthly_pairs": 6,
+              "n_original_pairs": 15,
+              "n_valid_monthly_pairs": 15,
+              "original_graph_n_animals": 6,
+              "status": "DESCRIPTIVE_SOURCE_MONTH_CENTROID_DISTANCE"
+            },
+            {
+              "distance_km": {
+                "max": 21.576656609369213,
+                "mean": 16.831288823284915,
+                "median": 16.183737441789752,
+                "min": 13.95090193153326
+              },
+              "eligible_pair_fraction": 1.0,
+              "group_label": "2020_annual5_isolate_vs_core",
+              "n_animals_in_valid_monthly_pairs": 7,
+              "n_original_pairs": 6,
+              "n_valid_monthly_pairs": 6,
+              "original_graph_n_animals": 7,
+              "status": "DESCRIPTIVE_SOURCE_MONTH_CENTROID_DISTANCE"
+            },
+            {
+              "distance_km": {
+                "max": 21.576656609369213,
+                "mean": 17.407366201635245,
+                "median": 16.223973552604367,
+                "min": 15.234548863930842
+              },
+              "eligible_pair_fraction": 1.0,
+              "group_label": "2020_annual10_to25_isolate_pairs",
+              "n_animals_in_valid_monthly_pairs": 6,
+              "n_original_pairs": 5,
+              "n_valid_monthly_pairs": 5,
+              "original_graph_n_animals": 7,
+              "status": "DESCRIPTIVE_SOURCE_MONTH_CENTROID_DISTANCE"
+            }
+          ],
+          "isolate_vs_core_monthly_state": "SEPARATED",
+          "month": 5,
+          "n_annual5_core_animals_7day_supported": 6,
+          "n_eligible_animal_calendar_dates": 217,
+          "n_eligible_animals_with_7_observed_days": 7,
+          "n_eligible_animals_with_any_fix": 7,
+          "n_eligible_original_GPS_fixes": 3637,
+          "n_source_animals_7day_centroid_supported": 7,
+          "source_tracking_completeness": "FULLY_TRACKED_7_OF_7_MONTHLY_CENTRES"
+        },
+        {
+          "annual5_isolated_animal_7day_supported": true,
+          "group_centroid_pair_distances": [
+            {
+              "distance_km": {
+                "max": 19.491305620266168,
+                "mean": 6.8317767570997425,
+                "median": 6.3316413909696125,
+                "min": 0.2046368830202442
+              },
+              "eligible_pair_fraction": 1.0,
+              "group_label": "all_25km_source_pairs",
+              "n_animals_in_valid_monthly_pairs": 7,
+              "n_original_pairs": 21,
+              "n_valid_monthly_pairs": 21,
+              "original_graph_n_animals": 7,
+              "status": "DESCRIPTIVE_SOURCE_MONTH_CENTROID_DISTANCE"
+            },
+            {
+              "distance_km": {
+                "max": 6.800243179437438,
+                "mean": 3.1031361361341823,
+                "median": 3.031155618052497,
+                "min": 0.2046368830202442
+              },
+              "eligible_pair_fraction": 1.0,
+              "group_label": "2020_six_member_annual5_core",
+              "n_animals_in_valid_monthly_pairs": 6,
+              "n_original_pairs": 15,
+              "n_valid_monthly_pairs": 15,
+              "original_graph_n_animals": 6,
+              "status": "DESCRIPTIVE_SOURCE_MONTH_CENTROID_DISTANCE"
+            },
+            {
+              "distance_km": {
+                "max": 19.491305620266168,
+                "mean": 16.153378309513645,
+                "median": 14.979004746623403,
+                "min": 14.822414144559623
+              },
+              "eligible_pair_fraction": 1.0,
+              "group_label": "2020_annual5_isolate_vs_core",
+              "n_animals_in_valid_monthly_pairs": 7,
+              "n_original_pairs": 6,
+              "n_valid_monthly_pairs": 6,
+              "original_graph_n_animals": 7,
+              "status": "DESCRIPTIVE_SOURCE_MONTH_CENTROID_DISTANCE"
+            },
+            {
+              "distance_km": {
+                "max": 19.491305620266168,
+                "mean": 16.419571142504445,
+                "median": 15.044895689527655,
+                "min": 14.855457467025065
+              },
+              "eligible_pair_fraction": 1.0,
+              "group_label": "2020_annual10_to25_isolate_pairs",
+              "n_animals_in_valid_monthly_pairs": 6,
+              "n_original_pairs": 5,
+              "n_valid_monthly_pairs": 5,
+              "original_graph_n_animals": 7,
+              "status": "DESCRIPTIVE_SOURCE_MONTH_CENTROID_DISTANCE"
+            }
+          ],
+          "isolate_vs_core_monthly_state": "SEPARATED",
+          "month": 6,
+          "n_annual5_core_animals_7day_supported": 6,
+          "n_eligible_animal_calendar_dates": 210,
+          "n_eligible_animals_with_7_observed_days": 7,
+          "n_eligible_animals_with_any_fix": 7,
+          "n_eligible_original_GPS_fixes": 3444,
+          "n_source_animals_7day_centroid_supported": 7,
+          "source_tracking_completeness": "FULLY_TRACKED_7_OF_7_MONTHLY_CENTRES"
+        },
+        {
+          "annual5_isolated_animal_7day_supported": true,
+          "group_centroid_pair_distances": [
+            {
+              "distance_km": {
+                "max": 19.24155400667485,
+                "mean": 6.685801577795213,
+                "median": 6.273089076925062,
+                "min": 0.000484076936857397
+              },
+              "eligible_pair_fraction": 1.0,
+              "group_label": "all_25km_source_pairs",
+              "n_animals_in_valid_monthly_pairs": 7,
+              "n_original_pairs": 21,
+              "n_valid_monthly_pairs": 21,
+              "original_graph_n_animals": 7,
+              "status": "DESCRIPTIVE_SOURCE_MONTH_CENTROID_DISTANCE"
+            },
+            {
+              "distance_km": {
+                "max": 7.029155573635845,
+                "mean": 3.11523815569366,
+                "median": 2.94176082571043,
+                "min": 0.000484076936857397
+              },
+              "eligible_pair_fraction": 1.0,
+              "group_label": "2020_six_member_annual5_core",
+              "n_animals_in_valid_monthly_pairs": 6,
+              "n_original_pairs": 15,
+              "n_valid_monthly_pairs": 15,
+              "original_graph_n_animals": 6,
+              "status": "DESCRIPTIVE_SOURCE_MONTH_CENTROID_DISTANCE"
+            },
+            {
+              "distance_km": {
+                "max": 19.24155400667485,
+                "mean": 15.612210133049098,
+                "median": 14.393941057819774,
+                "min": 14.244050510048874
+              },
+              "eligible_pair_fraction": 1.0,
+              "group_label": "2020_annual5_isolate_vs_core",
+              "n_animals_in_valid_monthly_pairs": 7,
+              "n_original_pairs": 6,
+              "n_valid_monthly_pairs": 6,
+              "original_graph_n_animals": 7,
+              "status": "DESCRIPTIVE_SOURCE_MONTH_CENTROID_DISTANCE"
+            },
+            {
+              "distance_km": {
+                "max": 19.24155400667485,
+                "mean": 15.885842057649143,
+                "median": 14.542707856387036,
+                "min": 14.244169774521682
+              },
+              "eligible_pair_fraction": 1.0,
+              "group_label": "2020_annual10_to25_isolate_pairs",
+              "n_animals_in_valid_monthly_pairs": 6,
+              "n_original_pairs": 5,
+              "n_valid_monthly_pairs": 5,
+              "original_graph_n_animals": 7,
+              "status": "DESCRIPTIVE_SOURCE_MONTH_CENTROID_DISTANCE"
+            }
+          ],
+          "isolate_vs_core_monthly_state": "SEPARATED",
+          "month": 7,
+          "n_annual5_core_animals_7day_supported": 6,
+          "n_eligible_animal_calendar_dates": 217,
+          "n_eligible_animals_with_7_observed_days": 7,
+          "n_eligible_animals_with_any_fix": 7,
+          "n_eligible_original_GPS_fixes": 3555,
+          "n_source_animals_7day_centroid_supported": 7,
+          "source_tracking_completeness": "FULLY_TRACKED_7_OF_7_MONTHLY_CENTRES"
+        },
+        {
+          "annual5_isolated_animal_7day_supported": false,
+          "group_centroid_pair_distances": [
+            {
+              "distance_km": null,
+              "eligible_pair_fraction": 0.0,
+              "group_label": "all_25km_source_pairs",
+              "n_animals_in_valid_monthly_pairs": 0,
+              "n_original_pairs": 21,
+              "n_valid_monthly_pairs": 0,
+              "original_graph_n_animals": 7,
+              "status": "NOT_ESTIMABLE_MONTHLY_SOURCE_SUPPORT"
+            },
+            {
+              "distance_km": null,
+              "eligible_pair_fraction": 0.0,
+              "group_label": "2020_six_member_annual5_core",
+              "n_animals_in_valid_monthly_pairs": 0,
+              "n_original_pairs": 15,
+              "n_valid_monthly_pairs": 0,
+              "original_graph_n_animals": 6,
+              "status": "NOT_ESTIMABLE_MONTHLY_SOURCE_SUPPORT"
+            },
+            {
+              "distance_km": null,
+              "eligible_pair_fraction": 0.0,
+              "group_label": "2020_annual5_isolate_vs_core",
+              "n_animals_in_valid_monthly_pairs": 0,
+              "n_original_pairs": 6,
+              "n_valid_monthly_pairs": 0,
+              "original_graph_n_animals": 7,
+              "status": "NOT_ESTIMABLE_MONTHLY_SOURCE_SUPPORT"
+            },
+            {
+              "distance_km": null,
+              "eligible_pair_fraction": 0.0,
+              "group_label": "2020_annual10_to25_isolate_pairs",
+              "n_animals_in_valid_monthly_pairs": 0,
+              "n_original_pairs": 5,
+              "n_valid_monthly_pairs": 0,
+              "original_graph_n_animals": 7,
+              "status": "NOT_ESTIMABLE_MONTHLY_SOURCE_SUPPORT"
+            }
+          ],
+          "isolate_vs_core_monthly_state": "UNOBSERVED",
+          "month": 8,
+          "n_annual5_core_animals_7day_supported": 0,
+          "n_eligible_animal_calendar_dates": 0,
+          "n_eligible_animals_with_7_observed_days": 0,
+          "n_eligible_animals_with_any_fix": 0,
+          "n_eligible_original_GPS_fixes": 0,
+          "n_source_animals_7day_centroid_supported": 0,
+          "source_tracking_completeness": "PARTIAL_OR_NO_MONTHLY_CENTRE_SUPPORT"
+        },
+        {
+          "annual5_isolated_animal_7day_supported": false,
+          "group_centroid_pair_distances": [
+            {
+              "distance_km": null,
+              "eligible_pair_fraction": 0.0,
+              "group_label": "all_25km_source_pairs",
+              "n_animals_in_valid_monthly_pairs": 0,
+              "n_original_pairs": 21,
+              "n_valid_monthly_pairs": 0,
+              "original_graph_n_animals": 7,
+              "status": "NOT_ESTIMABLE_MONTHLY_SOURCE_SUPPORT"
+            },
+            {
+              "distance_km": null,
+              "eligible_pair_fraction": 0.0,
+              "group_label": "2020_six_member_annual5_core",
+              "n_animals_in_valid_monthly_pairs": 0,
+              "n_original_pairs": 15,
+              "n_valid_monthly_pairs": 0,
+              "original_graph_n_animals": 6,
+              "status": "NOT_ESTIMABLE_MONTHLY_SOURCE_SUPPORT"
+            },
+            {
+              "distance_km": null,
+              "eligible_pair_fraction": 0.0,
+              "group_label": "2020_annual5_isolate_vs_core",
+              "n_animals_in_valid_monthly_pairs": 0,
+              "n_original_pairs": 6,
+              "n_valid_monthly_pairs": 0,
+              "original_graph_n_animals": 7,
+              "status": "NOT_ESTIMABLE_MONTHLY_SOURCE_SUPPORT"
+            },
+            {
+              "distance_km": null,
+              "eligible_pair_fraction": 0.0,
+              "group_label": "2020_annual10_to25_isolate_pairs",
+              "n_animals_in_valid_monthly_pairs": 0,
+              "n_original_pairs": 5,
+              "n_valid_monthly_pairs": 0,
+              "original_graph_n_animals": 7,
+              "status": "NOT_ESTIMABLE_MONTHLY_SOURCE_SUPPORT"
+            }
+          ],
+          "isolate_vs_core_monthly_state": "UNOBSERVED",
+          "month": 9,
+          "n_annual5_core_animals_7day_supported": 0,
+          "n_eligible_animal_calendar_dates": 0,
+          "n_eligible_animals_with_7_observed_days": 0,
+          "n_eligible_animals_with_any_fix": 0,
+          "n_eligible_original_GPS_fixes": 0,
+          "n_source_animals_7day_centroid_supported": 0,
+          "source_tracking_completeness": "PARTIAL_OR_NO_MONTHLY_CENTRE_SUPPORT"
+        },
+        {
+          "annual5_isolated_animal_7day_supported": false,
+          "group_centroid_pair_distances": [
+            {
+              "distance_km": null,
+              "eligible_pair_fraction": 0.0,
+              "group_label": "all_25km_source_pairs",
+              "n_animals_in_valid_monthly_pairs": 0,
+              "n_original_pairs": 21,
+              "n_valid_monthly_pairs": 0,
+              "original_graph_n_animals": 7,
+              "status": "NOT_ESTIMABLE_MONTHLY_SOURCE_SUPPORT"
+            },
+            {
+              "distance_km": null,
+              "eligible_pair_fraction": 0.0,
+              "group_label": "2020_six_member_annual5_core",
+              "n_animals_in_valid_monthly_pairs": 0,
+              "n_original_pairs": 15,
+              "n_valid_monthly_pairs": 0,
+              "original_graph_n_animals": 6,
+              "status": "NOT_ESTIMABLE_MONTHLY_SOURCE_SUPPORT"
+            },
+            {
+              "distance_km": null,
+              "eligible_pair_fraction": 0.0,
+              "group_label": "2020_annual5_isolate_vs_core",
+              "n_animals_in_valid_monthly_pairs": 0,
+              "n_original_pairs": 6,
+              "n_valid_monthly_pairs": 0,
+              "original_graph_n_animals": 7,
+              "status": "NOT_ESTIMABLE_MONTHLY_SOURCE_SUPPORT"
+            },
+            {
+              "distance_km": null,
+              "eligible_pair_fraction": 0.0,
+              "group_label": "2020_annual10_to25_isolate_pairs",
+              "n_animals_in_valid_monthly_pairs": 0,
+              "n_original_pairs": 5,
+              "n_valid_monthly_pairs": 0,
+              "original_graph_n_animals": 7,
+              "status": "NOT_ESTIMABLE_MONTHLY_SOURCE_SUPPORT"
+            }
+          ],
+          "isolate_vs_core_monthly_state": "UNOBSERVED",
+          "month": 10,
+          "n_annual5_core_animals_7day_supported": 0,
+          "n_eligible_animal_calendar_dates": 0,
+          "n_eligible_animals_with_7_observed_days": 0,
+          "n_eligible_animals_with_any_fix": 0,
+          "n_eligible_original_GPS_fixes": 0,
+          "n_source_animals_7day_centroid_supported": 0,
+          "source_tracking_completeness": "PARTIAL_OR_NO_MONTHLY_CENTRE_SUPPORT"
+        },
+        {
+          "annual5_isolated_animal_7day_supported": false,
+          "group_centroid_pair_distances": [
+            {
+              "distance_km": null,
+              "eligible_pair_fraction": 0.0,
+              "group_label": "all_25km_source_pairs",
+              "n_animals_in_valid_monthly_pairs": 0,
+              "n_original_pairs": 21,
+              "n_valid_monthly_pairs": 0,
+              "original_graph_n_animals": 7,
+              "status": "NOT_ESTIMABLE_MONTHLY_SOURCE_SUPPORT"
+            },
+            {
+              "distance_km": null,
+              "eligible_pair_fraction": 0.0,
+              "group_label": "2020_six_member_annual5_core",
+              "n_animals_in_valid_monthly_pairs": 0,
+              "n_original_pairs": 15,
+              "n_valid_monthly_pairs": 0,
+              "original_graph_n_animals": 6,
+              "status": "NOT_ESTIMABLE_MONTHLY_SOURCE_SUPPORT"
+            },
+            {
+              "distance_km": null,
+              "eligible_pair_fraction": 0.0,
+              "group_label": "2020_annual5_isolate_vs_core",
+              "n_animals_in_valid_monthly_pairs": 0,
+              "n_original_pairs": 6,
+              "n_valid_monthly_pairs": 0,
+              "original_graph_n_animals": 7,
+              "status": "NOT_ESTIMABLE_MONTHLY_SOURCE_SUPPORT"
+            },
+            {
+              "distance_km": null,
+              "eligible_pair_fraction": 0.0,
+              "group_label": "2020_annual10_to25_isolate_pairs",
+              "n_animals_in_valid_monthly_pairs": 0,
+              "n_original_pairs": 5,
+              "n_valid_monthly_pairs": 0,
+              "original_graph_n_animals": 7,
+              "status": "NOT_ESTIMABLE_MONTHLY_SOURCE_SUPPORT"
+            }
+          ],
+          "isolate_vs_core_monthly_state": "UNOBSERVED",
+          "month": 11,
+          "n_annual5_core_animals_7day_supported": 0,
+          "n_eligible_animal_calendar_dates": 0,
+          "n_eligible_animals_with_7_observed_days": 0,
+          "n_eligible_animals_with_any_fix": 0,
+          "n_eligible_original_GPS_fixes": 0,
+          "n_source_animals_7day_centroid_supported": 0,
+          "source_tracking_completeness": "PARTIAL_OR_NO_MONTHLY_CENTRE_SUPPORT"
+        },
+        {
+          "annual5_isolated_animal_7day_supported": false,
+          "group_centroid_pair_distances": [
+            {
+              "distance_km": null,
+              "eligible_pair_fraction": 0.0,
+              "group_label": "all_25km_source_pairs",
+              "n_animals_in_valid_monthly_pairs": 0,
+              "n_original_pairs": 21,
+              "n_valid_monthly_pairs": 0,
+              "original_graph_n_animals": 7,
+              "status": "NOT_ESTIMABLE_MONTHLY_SOURCE_SUPPORT"
+            },
+            {
+              "distance_km": null,
+              "eligible_pair_fraction": 0.0,
+              "group_label": "2020_six_member_annual5_core",
+              "n_animals_in_valid_monthly_pairs": 0,
+              "n_original_pairs": 15,
+              "n_valid_monthly_pairs": 0,
+              "original_graph_n_animals": 6,
+              "status": "NOT_ESTIMABLE_MONTHLY_SOURCE_SUPPORT"
+            },
+            {
+              "distance_km": null,
+              "eligible_pair_fraction": 0.0,
+              "group_label": "2020_annual5_isolate_vs_core",
+              "n_animals_in_valid_monthly_pairs": 0,
+              "n_original_pairs": 6,
+              "n_valid_monthly_pairs": 0,
+              "original_graph_n_animals": 7,
+              "status": "NOT_ESTIMABLE_MONTHLY_SOURCE_SUPPORT"
+            },
+            {
+              "distance_km": null,
+              "eligible_pair_fraction": 0.0,
+              "group_label": "2020_annual10_to25_isolate_pairs",
+              "n_animals_in_valid_monthly_pairs": 0,
+              "n_original_pairs": 5,
+              "n_valid_monthly_pairs": 0,
+              "original_graph_n_animals": 7,
+              "status": "NOT_ESTIMABLE_MONTHLY_SOURCE_SUPPORT"
+            }
+          ],
+          "isolate_vs_core_monthly_state": "UNOBSERVED",
+          "month": 12,
+          "n_annual5_core_animals_7day_supported": 0,
+          "n_eligible_animal_calendar_dates": 0,
+          "n_eligible_animals_with_7_observed_days": 0,
+          "n_eligible_animals_with_any_fix": 0,
+          "n_eligible_original_GPS_fixes": 0,
+          "n_source_animals_7day_centroid_supported": 0,
+          "source_tracking_completeness": "PARTIAL_OR_NO_MONTHLY_CENTRE_SUPPORT"
+        }
+      ],
+      "n_source_eligible_animals": 7,
+      "n_source_eligible_dyads": 21,
+      "original_annual5_component_animal_sizes": [
+        6
+      ],
+      "original_annual5_component_edge_sizes": [
+        14
+      ],
+      "year": 2020
+    }
+  ],
+  "monthly_original_date_support_threshold": 7,
+  "n_2020_months_full_seven_animal_support": 7,
+  "n_2020_months_isolate_vs_core_observed": 7,
+  "original_2019_2020_GPS_fixes": 435214,
+  "original_source_clock_UTC_basis_calibrated": false,
+  "original_tag_GPS_error_calibrated": false,
+  "same_original_animal_IDs_in_2019_and_2020": 0,
+  "schema_version": 1,
+  "source": "turkey",
+  "source_doi": "10.5441/001/1.671",
+  "source_year_eligible_animals": {
+    "2019": 19,
+    "2020": 7
+  },
+  "source_year_eligible_pairs": {
+    "2019": 112,
+    "2020": 21
+  },
+  "status": "POST_INSPECTION_ORIGINAL_GPS_ANONYMOUS_MONTHLY_CORE_GEOGRAPHY",
+  "transition_bracket_2020": {
+    "first_later_observed_separated_month": 3,
+    "last_observed_close_month": 2,
+    "months_strictly_between": 0,
+    "observed_intermediate_months_in_bracket": 0,
+    "status": "OBSERVATION_BRACKET_NOT_TRACKED_TRANSITION_TIME",
+    "unobserved_months_in_bracket": 0
+  }
+}

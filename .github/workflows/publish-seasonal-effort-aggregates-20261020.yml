@@ -1,0 +1,85 @@
+name: Publish verified effort-balance aggregates (no tracking records)
+
+on:
+  push:
+    branches: [prospective/multitaxon-identity-ecology-v1]
+    paths:
+      - ".github/workflows/publish-seasonal-effort-aggregates-20261020.yml"
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  publish-pinned-results:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch only original completed source/seed JSON artifacts from fixed run
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/verified_effort/{turkey,black_bear,white_tailed_deer}
+          for source in turkey black_bear white_tailed_deer; do
+            gh run download 39407212721 \
+              --repo "$GITHUB_REPOSITORY" \
+              -n "source-balanced-${source}" \
+              -D "/tmp/verified_effort/${source}"
+          done
+      - name: Verify pinned JSON byte hashes and enforce aggregate-only schema
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib, json, shutil
+          spec={
+            'turkey':('40dc3c3efa5d08bc45a37fa08aa09822f53e73753225e581881cb892b6116c2c',435214,{2019:112,2020:21}),
+            'black_bear':('8c192c5f762c0d5d1e0b72e866cd4befdf96720bd87aad81684bb728a27277ad',148394,{2019:1,2020:104}),
+            'white_tailed_deer':('926c3f512e743fd2e0a51010df313652460f8ff8216b6633b5f6ff8dbb75b7d5',371080,{2019:55,2020:205}),
+          }
+          allowed_top=set('baseline_aggregate_zip_sha256 centroid_group_labels_verified design grids groups limitations n_animal_calendar_dates n_seeds n_source_animals n_source_fixes original_fix_per_animal_day source source_doi source_files_sha256_pinned source_original_event_qc_verified status'.split())
+          allowed_seed=set('status n_pairs winter_mean_X summer_mean_X delta_mean_X winter_edge_fraction summer_edge_fraction delta_incidence delta_conditional_strength jaccard_positive_edges winter_positive_pairs summer_positive_pairs both_edges winter_only_edges summer_only_edges neither_edges'.split())
+          base=Path('prospective/multitaxon_individuality')
+          zip_sha='857e4157606ca1a4bf87d2f7e76fa379ab7bbf77c2bfc491ffec8196f543ee48'
+          for src,(expected,fixes,counts) in spec.items():
+            path=Path('/tmp/verified_effort')/src/(src+'_observation_balance.json')
+            payload=path.read_bytes()
+            assert hashlib.sha256(payload).hexdigest()==expected, 'Pinned source-result SHA256 mismatch'
+            obj=json.loads(payload)
+            assert set(obj)==allowed_top, 'Unexpected top-level keys; potential raw tracking leak'
+            assert obj['source']==src and obj['n_source_fixes']==fixes
+            assert obj['n_seeds']==24 and obj['source_original_event_qc_verified']
+            assert obj['baseline_aggregate_zip_sha256']==zip_sha
+            assert obj['centroid_group_labels_verified'] is False
+            assert obj['grids']==[[1.0,0.0,0.0],[5.0,0.0,0.0],[5.0,0.5,0.5],[10.0,0.0,0.0]]
+            assert len(obj['groups'])==2
+            assert {g['year']:g['n_original_eligible_pairs'] for g in obj['groups']}==counts
+            for g in obj['groups']:
+              assert set(g).issubset({'year','status','n_original_eligible_pairs','n_k2_supported_pairs','k2_retention_fraction','by_fix_count'})
+              for k in g.get('by_fix_count',[]):
+                assert set(k)=={'k_fixes_per_animal_day','n_pairs','grids'}
+                assert len(k['grids'])==4
+                for grid in k['grids']:
+                  assert set(grid)=={'grid_km','origin_x_fraction','origin_y_fraction','summary','seed_aggregate_results','status'}
+                  for row in grid['seed_aggregate_results']:
+                    assert set(row).issubset(allowed_seed)
+                    assert row['n_pairs']==k['n_pairs']
+                  if k['n_pairs']:
+                    assert len(grid['seed_aggregate_results'])==24
+            destination=base/('SEASONAL_EDGE_EFFORT_BALANCED_'+src.upper()+'_2026_10_20.json')
+            destination.write_bytes(payload)
+            print('Verified aggregate only:',src,fixes,counts,'sha256',expected)
+          PY
+      - name: Run synthetic and pinned-archive tests and publish result-only commit
+        run: |
+          set -euo pipefail
+          PYTHONPATH=prospective/multitaxon_individuality python3 -m unittest discover \
+            -s prospective/multitaxon_individuality/tests \
+            -p "test_seasonal_edge_observation_balance_v1.py" -v
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add prospective/multitaxon_individuality/SEASONAL_EDGE_EFFORT_BALANCED_*_2026_10_20.json
+          git diff --cached --stat
+          git commit -m "data: pin source-verified 24-seed GPS observation-balance aggregates"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

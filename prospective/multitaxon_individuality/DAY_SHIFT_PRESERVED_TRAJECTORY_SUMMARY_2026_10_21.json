@@ -1,0 +1,1227 @@
+{
+  "as_of": "2026-10-21",
+  "limitations": [
+    "Controls preserve original previous/next-day GPS path ordering but not all environmental or between-day movement autocorrelation",
+    "Focal A animal was chosen by lexicographic original ID; reversing A/B is an outstanding sensitivity",
+    "Native GPS source clock basis, location error, same-population membership unresolved",
+    "Tracks/dyads/years and 12 seeded selections are dependent and not biological replications",
+    "A within-15/30min GPS nearby match is not a physical encounter; no social, resource or causal inference",
+    "This is a post-inspection sensitivity using a control fixed after viewing original GPS O/N/D outcomes"
+  ],
+  "n_estimable_source_year_tolerance_groups": 8,
+  "n_scenario_seed_radius_rows": 288,
+  "n_seeds": 12,
+  "n_source_documents": 3,
+  "n_source_year_tolerance_groups": 12,
+  "n_stop_source_year_tolerance_groups": 4,
+  "radii_km": [
+    0.5,
+    1.0,
+    2.0
+  ],
+  "rows": [
+    {
+      "delta_day_reference_seed_max": 0.05952380952380952,
+      "delta_day_reference_seed_min": 0.04315476190476195,
+      "delta_day_reference_sign_counts": {
+        "near_zero": 0,
+        "negative": 0,
+        "positive": 12
+      },
+      "radius_km": 0.5,
+      "sampled_mean_abs_clock_gap_seconds": {
+        "summer": {
+          "next_day": 42.5031887755102,
+          "previous_day": 42.31186224489796,
+          "same": 41.586947278911566
+        },
+        "winter": {
+          "next_day": 26.500850340136054,
+          "previous_day": 27.63392857142857,
+          "same": 25.71003401360544
+        }
+      },
+      "seed_count": 12,
+      "source": "turkey",
+      "source_dyads": 112,
+      "summer": {
+        "adjacent_day_reference": 0.03479308390022676,
+        "next_day": 0.03560799319727891,
+        "previous_day": 0.0339781746031746,
+        "same": 0.052295918367346934,
+        "same_minus_adjacent": 0.01750283446712018
+      },
+      "time_gap_seconds": 900,
+      "winter": {
+        "adjacent_day_reference": 0.18385948129251697,
+        "next_day": 0.17563066893424037,
+        "previous_day": 0.19208829365079363,
+        "same": 0.25216128117913833,
+        "same_minus_adjacent": 0.06830179988662133
+      },
+      "winter_minus_summer": {
+        "adjacent_day_reference": 0.14906639739229022,
+        "next_day": 0.14002267573696145,
+        "previous_day": 0.15811011904761904,
+        "same": 0.1998653628117914,
+        "same_minus_adjacent": 0.050798965419501144
+      },
+      "year": 2019
+    },
+    {
+      "delta_day_reference_seed_max": 0.02232142857142856,
+      "delta_day_reference_seed_min": 0.008184523809523878,
+      "delta_day_reference_sign_counts": {
+        "near_zero": 0,
+        "negative": 0,
+        "positive": 12
+      },
+      "radius_km": 1.0,
+      "sampled_mean_abs_clock_gap_seconds": {
+        "summer": {
+          "next_day": 42.5031887755102,
+          "previous_day": 42.31186224489796,
+          "same": 41.586947278911566
+        },
+        "winter": {
+          "next_day": 26.500850340136054,
+          "previous_day": 27.63392857142857,
+          "same": 25.71003401360544
+        }
+      },
+      "seed_count": 12,
+      "source": "turkey",
+      "source_dyads": 112,
+      "summer": {
+        "adjacent_day_reference": 0.08046343537414967,
+        "next_day": 0.08118976757369614,
+        "previous_day": 0.07973710317460318,
+        "same": 0.08715986394557823,
+        "same_minus_adjacent": 0.006696428571428568
+      },
+      "time_gap_seconds": 900,
+      "winter": {
+        "adjacent_day_reference": 0.30776112528344673,
+        "next_day": 0.2974241780045352,
+        "previous_day": 0.3180980725623583,
+        "same": 0.3295953798185941,
+        "same_minus_adjacent": 0.021834254535147386
+      },
+      "winter_minus_summer": {
+        "adjacent_day_reference": 0.22729768990929705,
+        "next_day": 0.21623441043083905,
+        "previous_day": 0.23836096938775508,
+        "same": 0.24243551587301587,
+        "same_minus_adjacent": 0.015137825963718817
+      },
+      "year": 2019
+    },
+    {
+      "delta_day_reference_seed_max": 0.012967687074829898,
+      "delta_day_reference_seed_min": -0.0027636054421769363,
+      "delta_day_reference_sign_counts": {
+        "near_zero": 0,
+        "negative": 1,
+        "positive": 11
+      },
+      "radius_km": 2.0,
+      "sampled_mean_abs_clock_gap_seconds": {
+        "summer": {
+          "next_day": 42.5031887755102,
+          "previous_day": 42.31186224489796,
+          "same": 41.586947278911566
+        },
+        "winter": {
+          "next_day": 26.500850340136054,
+          "previous_day": 27.63392857142857,
+          "same": 25.71003401360544
+        }
+      },
+      "seed_count": 12,
+      "source": "turkey",
+      "source_dyads": 112,
+      "summer": {
+        "adjacent_day_reference": 0.2123547335600907,
+        "next_day": 0.2121598639455782,
+        "previous_day": 0.21254960317460317,
+        "same": 0.21223072562358278,
+        "same_minus_adjacent": -0.00012400793650793376
+      },
+      "time_gap_seconds": 900,
+      "winter": {
+        "adjacent_day_reference": 0.4743657879818594,
+        "next_day": 0.4660926870748299,
+        "previous_day": 0.4826388888888889,
+        "same": 0.4803713151927438,
+        "same_minus_adjacent": 0.006005527210884353
+      },
+      "winter_minus_summer": {
+        "adjacent_day_reference": 0.2620110544217687,
+        "next_day": 0.2539328231292517,
+        "previous_day": 0.2700892857142857,
+        "same": 0.268140589569161,
+        "same_minus_adjacent": 0.006129535147392286
+      },
+      "year": 2019
+    },
+    {
+      "delta_day_reference_seed_max": 0.057823129251700696,
+      "delta_day_reference_seed_min": 0.036458333333333356,
+      "delta_day_reference_sign_counts": {
+        "near_zero": 0,
+        "negative": 0,
+        "positive": 12
+      },
+      "radius_km": 0.5,
+      "sampled_mean_abs_clock_gap_seconds": {
+        "summer": {
+          "next_day": 42.232142857142854,
+          "previous_day": 42.0344387755102,
+          "same": 41.79634353741496
+        },
+        "winter": {
+          "next_day": 26.388180272108844,
+          "previous_day": 27.4702380952381,
+          "same": 25.682397959183675
+        }
+      },
+      "seed_count": 12,
+      "source": "turkey",
+      "source_dyads": 112,
+      "summer": {
+        "adjacent_day_reference": 0.035058815192743766,
+        "next_day": 0.03535997732426304,
+        "previous_day": 0.03475765306122449,
+        "same": 0.05144557823129251,
+        "same_minus_adjacent": 0.016386763038548753
+      },
+      "time_gap_seconds": 1800,
+      "winter": {
+        "adjacent_day_reference": 0.18245110544217688,
+        "next_day": 0.1762861394557823,
+        "previous_day": 0.18861607142857142,
+        "same": 0.2486359126984127,
+        "same_minus_adjacent": 0.06618480725623584
+      },
+      "winter_minus_summer": {
+        "adjacent_day_reference": 0.14739229024943312,
+        "next_day": 0.14092616213151926,
+        "previous_day": 0.15385841836734693,
+        "same": 0.1971903344671202,
+        "same_minus_adjacent": 0.04979804421768708
+      },
+      "year": 2019
+    },
+    {
+      "delta_day_reference_seed_max": 0.02030187074829934,
+      "delta_day_reference_seed_min": 0.0058460884353741666,
+      "delta_day_reference_sign_counts": {
+        "near_zero": 0,
+        "negative": 0,
+        "positive": 12
+      },
+      "radius_km": 1.0,
+      "sampled_mean_abs_clock_gap_seconds": {
+        "summer": {
+          "next_day": 42.232142857142854,
+          "previous_day": 42.0344387755102,
+          "same": 41.79634353741496
+        },
+        "winter": {
+          "next_day": 26.388180272108844,
+          "previous_day": 27.4702380952381,
+          "same": 25.682397959183675
+        }
+      },
+      "seed_count": 12,
+      "source": "turkey",
+      "source_dyads": 112,
+      "summer": {
+        "adjacent_day_reference": 0.08095946712018141,
+        "next_day": 0.0821109693877551,
+        "previous_day": 0.0798079648526077,
+        "same": 0.08627409297052153,
+        "same_minus_adjacent": 0.005314625850340134
+      },
+      "time_gap_seconds": 1800,
+      "winter": {
+        "adjacent_day_reference": 0.3065919075963719,
+        "next_day": 0.29857568027210885,
+        "previous_day": 0.31460813492063494,
+        "same": 0.32582199546485263,
+        "same_minus_adjacent": 0.019230087868480728
+      },
+      "winter_minus_summer": {
+        "adjacent_day_reference": 0.22563244047619047,
+        "next_day": 0.21646471088435376,
+        "previous_day": 0.23480017006802723,
+        "same": 0.2395479024943311,
+        "same_minus_adjacent": 0.013915462018140593
+      },
+      "year": 2019
+    },
+    {
+      "delta_day_reference_seed_max": 0.011160714285714218,
+      "delta_day_reference_seed_min": 0.0027636054421769085,
+      "delta_day_reference_sign_counts": {
+        "near_zero": 0,
+        "negative": 0,
+        "positive": 12
+      },
+      "radius_km": 2.0,
+      "sampled_mean_abs_clock_gap_seconds": {
+        "summer": {
+          "next_day": 42.232142857142854,
+          "previous_day": 42.0344387755102,
+          "same": 41.79634353741496
+        },
+        "winter": {
+          "next_day": 26.388180272108844,
+          "previous_day": 27.4702380952381,
+          "same": 25.682397959183675
+        }
+      },
+      "seed_count": 12,
+      "source": "turkey",
+      "source_dyads": 112,
+      "summer": {
+        "adjacent_day_reference": 0.21239016439909297,
+        "next_day": 0.21428571428571427,
+        "previous_day": 0.21049461451247165,
+        "same": 0.2108843537414966,
+        "same_minus_adjacent": -0.0015058106575963788
+      },
+      "time_gap_seconds": 1800,
+      "winter": {
+        "adjacent_day_reference": 0.47405576814058953,
+        "next_day": 0.466624149659864,
+        "previous_day": 0.4814873866213152,
+        "same": 0.47953869047619047,
+        "same_minus_adjacent": 0.0054829223356009
+      },
+      "winter_minus_summer": {
+        "adjacent_day_reference": 0.26166560374149656,
+        "next_day": 0.2523384353741497,
+        "previous_day": 0.27099277210884354,
+        "same": 0.26865433673469385,
+        "same_minus_adjacent": 0.006988732993197279
+      },
+      "year": 2019
+    },
+    {
+      "delta_day_reference_seed_max": 0.04535147392290248,
+      "delta_day_reference_seed_min": 0.008503401360544283,
+      "delta_day_reference_sign_counts": {
+        "near_zero": 0,
+        "negative": 0,
+        "positive": 12
+      },
+      "radius_km": 0.5,
+      "sampled_mean_abs_clock_gap_seconds": {
+        "summer": {
+          "next_day": 27.65873015873016,
+          "previous_day": 27.959183673469386,
+          "same": 27.11451247165533
+        },
+        "winter": {
+          "next_day": 21.439909297052154,
+          "previous_day": 21.16780045351474,
+          "same": 20.58390022675737
+        }
+      },
+      "seed_count": 12,
+      "source": "turkey",
+      "source_dyads": 21,
+      "summer": {
+        "adjacent_day_reference": 0.1503684807256236,
+        "next_day": 0.15570672713529857,
+        "previous_day": 0.1450302343159486,
+        "same": 0.1950113378684807,
+        "same_minus_adjacent": 0.04464285714285713
+      },
+      "time_gap_seconds": 900,
+      "winter": {
+        "adjacent_day_reference": 0.4630102040816326,
+        "next_day": 0.4493575207860922,
+        "previous_day": 0.47666288737717305,
+        "same": 0.534297052154195,
+        "same_minus_adjacent": 0.07128684807256236
+      },
+      "winter_minus_summer": {
+        "adjacent_day_reference": 0.31264172335600904,
+        "next_day": 0.2936507936507936,
+        "previous_day": 0.33163265306122447,
+        "same": 0.3392857142857143,
+        "same_minus_adjacent": 0.02664399092970523
+      },
+      "year": 2020
+    },
+    {
+      "delta_day_reference_seed_max": 0.04478458049886633,
+      "delta_day_reference_seed_min": 0.011904761904761973,
+      "delta_day_reference_sign_counts": {
+        "near_zero": 0,
+        "negative": 0,
+        "positive": 12
+      },
+      "radius_km": 1.0,
+      "sampled_mean_abs_clock_gap_seconds": {
+        "summer": {
+          "next_day": 27.65873015873016,
+          "previous_day": 27.959183673469386,
+          "same": 27.11451247165533
+        },
+        "winter": {
+          "next_day": 21.439909297052154,
+          "previous_day": 21.16780045351474,
+          "same": 20.58390022675737
+        }
+      },
+      "seed_count": 12,
+      "source": "turkey",
+      "source_dyads": 21,
+      "summer": {
+        "adjacent_day_reference": 0.22595427059712772,
+        "next_day": 0.22864701436130008,
+        "previous_day": 0.22326152683295541,
+        "same": 0.23252078609221463,
+        "same_minus_adjacent": 0.006566515495086927
+      },
+      "time_gap_seconds": 900,
+      "winter": {
+        "adjacent_day_reference": 0.6111583522297808,
+        "next_day": 0.5935374149659864,
+        "previous_day": 0.6287792894935752,
+        "same": 0.6470143613000756,
+        "same_minus_adjacent": 0.035856009070294785
+      },
+      "winter_minus_summer": {
+        "adjacent_day_reference": 0.3852040816326531,
+        "next_day": 0.36489040060468636,
+        "previous_day": 0.4055177626606198,
+        "same": 0.414493575207861,
+        "same_minus_adjacent": 0.029289493575207857
+      },
+      "year": 2020
+    },
+    {
+      "delta_day_reference_seed_max": 0.011904761904761862,
+      "delta_day_reference_seed_min": -0.0022675736961451087,
+      "delta_day_reference_sign_counts": {
+        "near_zero": 0,
+        "negative": 1,
+        "positive": 11
+      },
+      "radius_km": 2.0,
+      "sampled_mean_abs_clock_gap_seconds": {
+        "summer": {
+          "next_day": 27.65873015873016,
+          "previous_day": 27.959183673469386,
+          "same": 27.11451247165533
+        },
+        "winter": {
+          "next_day": 21.439909297052154,
+          "previous_day": 21.16780045351474,
+          "same": 20.58390022675737
+        }
+      },
+      "seed_count": 12,
+      "source": "turkey",
+      "source_dyads": 21,
+      "summer": {
+        "adjacent_day_reference": 0.28566704459561604,
+        "next_day": 0.2856198034769463,
+        "previous_day": 0.2857142857142857,
+        "same": 0.28599773242630383,
+        "same_minus_adjacent": 0.00033068783068783875
+      },
+      "time_gap_seconds": 900,
+      "winter": {
+        "adjacent_day_reference": 0.763558201058201,
+        "next_day": 0.7542517006802721,
+        "previous_day": 0.77286470143613,
+        "same": 0.7688019652305367,
+        "same_minus_adjacent": 0.0052437641723355926
+      },
+      "winter_minus_summer": {
+        "adjacent_day_reference": 0.477891156462585,
+        "next_day": 0.4686318972033258,
+        "previous_day": 0.48715041572184425,
+        "same": 0.48280423280423285,
+        "same_minus_adjacent": 0.004913076341647754
+      },
+      "year": 2020
+    },
+    {
+      "delta_day_reference_seed_max": 0.05102040816326525,
+      "delta_day_reference_seed_min": 0.0028344671201814,
+      "delta_day_reference_sign_counts": {
+        "near_zero": 0,
+        "negative": 0,
+        "positive": 12
+      },
+      "radius_km": 0.5,
+      "sampled_mean_abs_clock_gap_seconds": {
+        "summer": {
+          "next_day": 28.554421768707485,
+          "previous_day": 28.112244897959183,
+          "same": 27.630385487528343
+        },
+        "winter": {
+          "next_day": 21.037414965986397,
+          "previous_day": 21.802721088435373,
+          "same": 19.99433106575964
+        }
+      },
+      "seed_count": 12,
+      "source": "turkey",
+      "source_dyads": 21,
+      "summer": {
+        "adjacent_day_reference": 0.1469198790627362,
+        "next_day": 0.14994331065759636,
+        "previous_day": 0.14389644746787603,
+        "same": 0.19198790627362058,
+        "same_minus_adjacent": 0.045068027210884355
+      },
+      "time_gap_seconds": 1800,
+      "winter": {
+        "adjacent_day_reference": 0.4607426303854875,
+        "next_day": 0.44538926681783825,
+        "previous_day": 0.4760959939531368,
+        "same": 0.5341080876795162,
+        "same_minus_adjacent": 0.07336545729402873
+      },
+      "winter_minus_summer": {
+        "adjacent_day_reference": 0.3138227513227513,
+        "next_day": 0.2954459561602419,
+        "previous_day": 0.33219954648526073,
+        "same": 0.3421201814058956,
+        "same_minus_adjacent": 0.028297430083144372
+      },
+      "year": 2020
+    },
+    {
+      "delta_day_reference_seed_max": 0.03798185941043075,
+      "delta_day_reference_seed_min": 0.01643990929705219,
+      "delta_day_reference_sign_counts": {
+        "near_zero": 0,
+        "negative": 0,
+        "positive": 12
+      },
+      "radius_km": 1.0,
+      "sampled_mean_abs_clock_gap_seconds": {
+        "summer": {
+          "next_day": 28.554421768707485,
+          "previous_day": 28.112244897959183,
+          "same": 27.630385487528343
+        },
+        "winter": {
+          "next_day": 21.037414965986397,
+          "previous_day": 21.802721088435373,
+          "same": 19.99433106575964
+        }
+      },
+      "seed_count": 12,
+      "source": "turkey",
+      "source_dyads": 21,
+      "summer": {
+        "adjacent_day_reference": 0.22307256235827666,
+        "next_day": 0.22486772486772488,
+        "previous_day": 0.22127739984882844,
+        "same": 0.23025321239606955,
+        "same_minus_adjacent": 0.007180650037792893
+      },
+      "time_gap_seconds": 1800,
+      "winter": {
+        "adjacent_day_reference": 0.6079459561602419,
+        "next_day": 0.5865457294028723,
+        "previous_day": 0.6293461829176115,
+        "same": 0.6434240362811792,
+        "same_minus_adjacent": 0.035478080120937255
+      },
+      "winter_minus_summer": {
+        "adjacent_day_reference": 0.3848733938019653,
+        "next_day": 0.3616780045351474,
+        "previous_day": 0.408068783068783,
+        "same": 0.4131708238851096,
+        "same_minus_adjacent": 0.02829743008314436
+      },
+      "year": 2020
+    },
+    {
+      "delta_day_reference_seed_max": 0.014172335600907027,
+      "delta_day_reference_seed_min": -0.006802721088435271,
+      "delta_day_reference_sign_counts": {
+        "near_zero": 0,
+        "negative": 3,
+        "positive": 9
+      },
+      "radius_km": 2.0,
+      "sampled_mean_abs_clock_gap_seconds": {
+        "summer": {
+          "next_day": 28.554421768707485,
+          "previous_day": 28.112244897959183,
+          "same": 27.630385487528343
+        },
+        "winter": {
+          "next_day": 21.037414965986397,
+          "previous_day": 21.802721088435373,
+          "same": 19.99433106575964
+        }
+      },
+      "seed_count": 12,
+      "source": "turkey",
+      "source_dyads": 21,
+      "summer": {
+        "adjacent_day_reference": 0.2856198034769463,
+        "next_day": 0.2853363567649282,
+        "previous_day": 0.2859032501889645,
+        "same": 0.2859032501889645,
+        "same_minus_adjacent": 0.00028344671201813626
+      },
+      "time_gap_seconds": 1800,
+      "winter": {
+        "adjacent_day_reference": 0.7643613000755858,
+        "next_day": 0.7556689342403629,
+        "previous_day": 0.7730536659108088,
+        "same": 0.7677626606198035,
+        "same_minus_adjacent": 0.003401360544217691
+      },
+      "winter_minus_summer": {
+        "adjacent_day_reference": 0.47874149659863946,
+        "next_day": 0.47033257747543467,
+        "previous_day": 0.4871504157218443,
+        "same": 0.48185941043083896,
+        "same_minus_adjacent": 0.0031179138321995544
+      },
+      "year": 2020
+    },
+    {
+      "delta_day_reference_seed_max": 0.013636363636363627,
+      "delta_day_reference_seed_min": -0.005411255411255405,
+      "delta_day_reference_sign_counts": {
+        "near_zero": 0,
+        "negative": 1,
+        "positive": 11
+      },
+      "radius_km": 0.5,
+      "sampled_mean_abs_clock_gap_seconds": {
+        "summer": {
+          "next_day": 2.9696969696969693,
+          "previous_day": 2.930735930735931,
+          "same": 2.9653679653679657
+        },
+        "winter": {
+          "next_day": 1.538961038961039,
+          "previous_day": 1.9393939393939394,
+          "same": 1.4935064935064934
+        }
+      },
+      "seed_count": 12,
+      "source": "white_tailed_deer",
+      "source_dyads": 55,
+      "summer": {
+        "adjacent_day_reference": 0.04114357864357864,
+        "next_day": 0.0420995670995671,
+        "previous_day": 0.04018759018759019,
+        "same": 0.04134199134199134,
+        "same_minus_adjacent": 0.00019841269841269714
+      },
+      "time_gap_seconds": 900,
+      "winter": {
+        "adjacent_day_reference": 0.03068181818181818,
+        "next_day": 0.031313131313131314,
+        "previous_day": 0.03005050505050505,
+        "same": 0.03535353535353535,
+        "same_minus_adjacent": 0.00467171717171717
+      },
+      "winter_minus_summer": {
+        "adjacent_day_reference": -0.01046176046176046,
+        "next_day": -0.010786435786435788,
+        "previous_day": -0.010137085137085139,
+        "same": -0.005988455988455987,
+        "same_minus_adjacent": 0.004473304473304473
+      },
+      "year": 2019
+    },
+    {
+      "delta_day_reference_seed_max": 0.006493506493506482,
+      "delta_day_reference_seed_min": -0.0036796536796536716,
+      "delta_day_reference_sign_counts": {
+        "near_zero": 0,
+        "negative": 5,
+        "positive": 7
+      },
+      "radius_km": 1.0,
+      "sampled_mean_abs_clock_gap_seconds": {
+        "summer": {
+          "next_day": 2.9696969696969693,
+          "previous_day": 2.930735930735931,
+          "same": 2.9653679653679657
+        },
+        "winter": {
+          "next_day": 1.538961038961039,
+          "previous_day": 1.9393939393939394,
+          "same": 1.4935064935064934
+        }
+      },
+      "seed_count": 12,
+      "source": "white_tailed_deer",
+      "source_dyads": 55,
+      "summer": {
+        "adjacent_day_reference": 0.09374098124098124,
+        "next_day": 0.0936868686868687,
+        "previous_day": 0.0937950937950938,
+        "same": 0.0937950937950938,
+        "same_minus_adjacent": 5.411255411255413e-05
+      },
+      "time_gap_seconds": 900,
+      "winter": {
+        "adjacent_day_reference": 0.06735209235209234,
+        "next_day": 0.06814574314574315,
+        "previous_day": 0.06655844155844155,
+        "same": 0.0687950937950938,
+        "same_minus_adjacent": 0.001443001443001445
+      },
+      "winter_minus_summer": {
+        "adjacent_day_reference": -0.026388888888888892,
+        "next_day": -0.025541125541125545,
+        "previous_day": -0.027236652236652253,
+        "same": -0.02500000000000001,
+        "same_minus_adjacent": 0.001388888888888891
+      },
+      "year": 2019
+    },
+    {
+      "delta_day_reference_seed_max": 0.00324675324675322,
+      "delta_day_reference_seed_min": -0.0060606060606061,
+      "delta_day_reference_sign_counts": {
+        "near_zero": 0,
+        "negative": 9,
+        "positive": 3
+      },
+      "radius_km": 2.0,
+      "sampled_mean_abs_clock_gap_seconds": {
+        "summer": {
+          "next_day": 2.9696969696969693,
+          "previous_day": 2.930735930735931,
+          "same": 2.9653679653679657
+        },
+        "winter": {
+          "next_day": 1.538961038961039,
+          "previous_day": 1.9393939393939394,
+          "same": 1.4935064935064934
+        }
+      },
+      "seed_count": 12,
+      "source": "white_tailed_deer",
+      "source_dyads": 55,
+      "summer": {
+        "adjacent_day_reference": 0.1354076479076479,
+        "next_day": 0.1352092352092352,
+        "previous_day": 0.1356060606060606,
+        "same": 0.1355699855699856,
+        "same_minus_adjacent": 0.00016233766233766933
+      },
+      "time_gap_seconds": 900,
+      "winter": {
+        "adjacent_day_reference": 0.1259920634920635,
+        "next_day": 0.12604617604617604,
+        "previous_day": 0.12593795093795093,
+        "same": 0.12406204906204905,
+        "same_minus_adjacent": -0.001930014430014431
+      },
+      "winter_minus_summer": {
+        "adjacent_day_reference": -0.009415584415584405,
+        "next_day": -0.00916305916305915,
+        "previous_day": -0.009668109668109659,
+        "same": -0.011507936507936536,
+        "same_minus_adjacent": -0.0020923520923521004
+      },
+      "year": 2019
+    },
+    {
+      "delta_day_reference_seed_max": 0.007792207792207788,
+      "delta_day_reference_seed_min": -0.0023809523809523864,
+      "delta_day_reference_sign_counts": {
+        "near_zero": 1,
+        "negative": 3,
+        "positive": 8
+      },
+      "radius_km": 0.5,
+      "sampled_mean_abs_clock_gap_seconds": {
+        "summer": {
+          "next_day": 3.0173160173160176,
+          "previous_day": 2.857142857142857,
+          "same": 2.8311688311688314
+        },
+        "winter": {
+          "next_day": 1.4285714285714286,
+          "previous_day": 1.9285714285714286,
+          "same": 1.4502164502164503
+        }
+      },
+      "seed_count": 12,
+      "source": "white_tailed_deer",
+      "source_dyads": 55,
+      "summer": {
+        "adjacent_day_reference": 0.0409992784992785,
+        "next_day": 0.04235209235209234,
+        "previous_day": 0.039646464646464645,
+        "same": 0.042316017316017314,
+        "same_minus_adjacent": 0.0013167388167388174
+      },
+      "time_gap_seconds": 1800,
+      "winter": {
+        "adjacent_day_reference": 0.03156565656565657,
+        "next_day": 0.031204906204906204,
+        "previous_day": 0.03192640692640693,
+        "same": 0.03506493506493506,
+        "same_minus_adjacent": 0.0034992784992785
+      },
+      "winter_minus_summer": {
+        "adjacent_day_reference": -0.009433621933621933,
+        "next_day": -0.011147186147186138,
+        "previous_day": -0.007720057720057717,
+        "same": -0.007251082251082251,
+        "same_minus_adjacent": 0.0021825396825396826
+      },
+      "year": 2019
+    },
+    {
+      "delta_day_reference_seed_max": 0.008658008658008656,
+      "delta_day_reference_seed_min": -0.004112554112554109,
+      "delta_day_reference_sign_counts": {
+        "near_zero": 0,
+        "negative": 7,
+        "positive": 5
+      },
+      "radius_km": 1.0,
+      "sampled_mean_abs_clock_gap_seconds": {
+        "summer": {
+          "next_day": 3.0173160173160176,
+          "previous_day": 2.857142857142857,
+          "same": 2.8311688311688314
+        },
+        "winter": {
+          "next_day": 1.4285714285714286,
+          "previous_day": 1.9285714285714286,
+          "same": 1.4502164502164503
+        }
+      },
+      "seed_count": 12,
+      "source": "white_tailed_deer",
+      "source_dyads": 55,
+      "summer": {
+        "adjacent_day_reference": 0.09444444444444444,
+        "next_day": 0.09430014430014429,
+        "previous_day": 0.0945887445887446,
+        "same": 0.09466089466089465,
+        "same_minus_adjacent": 0.00021645021645021537
+      },
+      "time_gap_seconds": 1800,
+      "winter": {
+        "adjacent_day_reference": 0.06839826839826839,
+        "next_day": 0.06865079365079364,
+        "previous_day": 0.06814574314574315,
+        "same": 0.06951659451659452,
+        "same_minus_adjacent": 0.001118326118326118
+      },
+      "winter_minus_summer": {
+        "adjacent_day_reference": -0.026046176046176053,
+        "next_day": -0.025649350649350644,
+        "previous_day": -0.02644300144300145,
+        "same": -0.025144300144300136,
+        "same_minus_adjacent": 0.0009018759018759026
+      },
+      "year": 2019
+    },
+    {
+      "delta_day_reference_seed_max": 0.0015151515151514972,
+      "delta_day_reference_seed_min": -0.007575757575757569,
+      "delta_day_reference_sign_counts": {
+        "near_zero": 0,
+        "negative": 8,
+        "positive": 4
+      },
+      "radius_km": 2.0,
+      "sampled_mean_abs_clock_gap_seconds": {
+        "summer": {
+          "next_day": 3.0173160173160176,
+          "previous_day": 2.857142857142857,
+          "same": 2.8311688311688314
+        },
+        "winter": {
+          "next_day": 1.4285714285714286,
+          "previous_day": 1.9285714285714286,
+          "same": 1.4502164502164503
+        }
+      },
+      "seed_count": 12,
+      "source": "white_tailed_deer",
+      "source_dyads": 55,
+      "summer": {
+        "adjacent_day_reference": 0.13692279942279942,
+        "next_day": 0.1363997113997114,
+        "previous_day": 0.13744588744588745,
+        "same": 0.137012987012987,
+        "same_minus_adjacent": 9.01875901875825e-05
+      },
+      "time_gap_seconds": 1800,
+      "winter": {
+        "adjacent_day_reference": 0.1285714285714286,
+        "next_day": 0.12824675324675325,
+        "previous_day": 0.1288961038961039,
+        "same": 0.1261904761904762,
+        "same_minus_adjacent": -0.002380952380952383
+      },
+      "winter_minus_summer": {
+        "adjacent_day_reference": -0.008351370851370832,
+        "next_day": -0.008152958152958162,
+        "previous_day": -0.008549783549783557,
+        "same": -0.010822510822510817,
+        "same_minus_adjacent": -0.0024711399711399656
+      },
+      "year": 2019
+    },
+    {
+      "delta_day_reference_seed_max": 0.003368176538908252,
+      "delta_day_reference_seed_min": -0.0004645760743321667,
+      "delta_day_reference_sign_counts": {
+        "near_zero": 0,
+        "negative": 1,
+        "positive": 11
+      },
+      "radius_km": 0.5,
+      "sampled_mean_abs_clock_gap_seconds": {
+        "summer": {
+          "next_day": 3.4866434378629503,
+          "previous_day": 3.4692218350754938,
+          "same": 3.4854819976771196
+        },
+        "winter": {
+          "next_day": 1.5696864111498259,
+          "previous_day": 1.753774680603949,
+          "same": 1.6155632984901278
+        }
+      },
+      "seed_count": 12,
+      "source": "white_tailed_deer",
+      "source_dyads": 205,
+      "summer": {
+        "adjacent_day_reference": 0.03512388695315525,
+        "next_day": 0.03489159891598916,
+        "previous_day": 0.035356174990321336,
+        "same": 0.03546264034068912,
+        "same_minus_adjacent": 0.0003387533875338731
+      },
+      "time_gap_seconds": 900,
+      "winter": {
+        "adjacent_day_reference": 0.02379984514130855,
+        "next_day": 0.023664343786295006,
+        "previous_day": 0.023935346496322105,
+        "same": 0.02552264808362369,
+        "same_minus_adjacent": 0.001722802942315138
+      },
+      "winter_minus_summer": {
+        "adjacent_day_reference": -0.011324041811846697,
+        "next_day": -0.011227255129694157,
+        "previous_day": -0.011420828493999231,
+        "same": -0.00993999225706543,
+        "same_minus_adjacent": 0.001384049554781265
+      },
+      "year": 2020
+    },
+    {
+      "delta_day_reference_seed_max": 0.005110336817653882,
+      "delta_day_reference_seed_min": -0.0012775842044134705,
+      "delta_day_reference_sign_counts": {
+        "near_zero": 0,
+        "negative": 2,
+        "positive": 10
+      },
+      "radius_km": 1.0,
+      "sampled_mean_abs_clock_gap_seconds": {
+        "summer": {
+          "next_day": 3.4866434378629503,
+          "previous_day": 3.4692218350754938,
+          "same": 3.4854819976771196
+        },
+        "winter": {
+          "next_day": 1.5696864111498259,
+          "previous_day": 1.753774680603949,
+          "same": 1.6155632984901278
+        }
+      },
+      "seed_count": 12,
+      "source": "white_tailed_deer",
+      "source_dyads": 205,
+      "summer": {
+        "adjacent_day_reference": 0.09332171893147502,
+        "next_day": 0.09335075493612079,
+        "previous_day": 0.09329268292682928,
+        "same": 0.09303135888501742,
+        "same_minus_adjacent": -0.0002903600464576062
+      },
+      "time_gap_seconds": 900,
+      "winter": {
+        "adjacent_day_reference": 0.06402922957801006,
+        "next_day": 0.06385017421602787,
+        "previous_day": 0.06420828493999226,
+        "same": 0.0649728997289973,
+        "same_minus_adjacent": 0.0009436701509872268
+      },
+      "winter_minus_summer": {
+        "adjacent_day_reference": -0.029292489353464957,
+        "next_day": -0.029500580720092914,
+        "previous_day": -0.029084397986837027,
+        "same": -0.02805845915602012,
+        "same_minus_adjacent": 0.001234030197444833
+      },
+      "year": 2020
+    },
+    {
+      "delta_day_reference_seed_max": 0.004413472706155636,
+      "delta_day_reference_seed_min": -0.0015098722415795574,
+      "delta_day_reference_sign_counts": {
+        "near_zero": 0,
+        "negative": 1,
+        "positive": 11
+      },
+      "radius_km": 2.0,
+      "sampled_mean_abs_clock_gap_seconds": {
+        "summer": {
+          "next_day": 3.4866434378629503,
+          "previous_day": 3.4692218350754938,
+          "same": 3.4854819976771196
+        },
+        "winter": {
+          "next_day": 1.5696864111498259,
+          "previous_day": 1.753774680603949,
+          "same": 1.6155632984901278
+        }
+      },
+      "seed_count": 12,
+      "source": "white_tailed_deer",
+      "source_dyads": 205,
+      "summer": {
+        "adjacent_day_reference": 0.14753193960511032,
+        "next_day": 0.14742547425474253,
+        "previous_day": 0.14763840495547811,
+        "same": 0.14733836624080526,
+        "same_minus_adjacent": -0.00019357336430507002
+      },
+      "time_gap_seconds": 900,
+      "winter": {
+        "adjacent_day_reference": 0.12953929539295392,
+        "next_day": 0.12908439798683702,
+        "previous_day": 0.12999419279907085,
+        "same": 0.13021680216802167,
+        "same_minus_adjacent": 0.0006775067750677497
+      },
+      "winter_minus_summer": {
+        "adjacent_day_reference": -0.017992644212156406,
+        "next_day": -0.018341076267905515,
+        "previous_day": -0.01764421215640727,
+        "same": -0.01712156407278359,
+        "same_minus_adjacent": 0.0008710801393728197
+      },
+      "year": 2020
+    },
+    {
+      "delta_day_reference_seed_max": 0.005284552845528454,
+      "delta_day_reference_seed_min": -0.00238095238095239,
+      "delta_day_reference_sign_counts": {
+        "near_zero": 0,
+        "negative": 4,
+        "positive": 8
+      },
+      "radius_km": 0.5,
+      "sampled_mean_abs_clock_gap_seconds": {
+        "summer": {
+          "next_day": 3.416957026713124,
+          "previous_day": 3.4146341463414633,
+          "same": 3.3763066202090593
+        },
+        "winter": {
+          "next_day": 1.527293844367015,
+          "previous_day": 1.681184668989547,
+          "same": 1.556910569105691
+        }
+      },
+      "seed_count": 12,
+      "source": "white_tailed_deer",
+      "source_dyads": 205,
+      "summer": {
+        "adjacent_day_reference": 0.03478513356562137,
+        "next_day": 0.0348819202477739,
+        "previous_day": 0.034688346883468835,
+        "same": 0.0350077429345722,
+        "same_minus_adjacent": 0.00022260936895083377
+      },
+      "time_gap_seconds": 1800,
+      "winter": {
+        "adjacent_day_reference": 0.025038714672861017,
+        "next_day": 0.02459349593495935,
+        "previous_day": 0.025483933410762678,
+        "same": 0.026771196283391405,
+        "same_minus_adjacent": 0.0017324816105303903
+      },
+      "winter_minus_summer": {
+        "adjacent_day_reference": -0.009746418892760355,
+        "next_day": -0.010288424312814553,
+        "previous_day": -0.009204413472706157,
+        "same": -0.008236546651180794,
+        "same_minus_adjacent": 0.0015098722415795565
+      },
+      "year": 2020
+    },
+    {
+      "delta_day_reference_seed_max": 0.0026713124274100053,
+      "delta_day_reference_seed_min": -0.003135888501742193,
+      "delta_day_reference_sign_counts": {
+        "near_zero": 0,
+        "negative": 2,
+        "positive": 10
+      },
+      "radius_km": 1.0,
+      "sampled_mean_abs_clock_gap_seconds": {
+        "summer": {
+          "next_day": 3.416957026713124,
+          "previous_day": 3.4146341463414633,
+          "same": 3.3763066202090593
+        },
+        "winter": {
+          "next_day": 1.527293844367015,
+          "previous_day": 1.681184668989547,
+          "same": 1.556910569105691
+        }
+      },
+      "seed_count": 12,
+      "source": "white_tailed_deer",
+      "source_dyads": 205,
+      "summer": {
+        "adjacent_day_reference": 0.09332171893147502,
+        "next_day": 0.0934765776229191,
+        "previous_day": 0.09316686024003097,
+        "same": 0.0929926442121564,
+        "same_minus_adjacent": -0.0003290747193186253
+      },
+      "time_gap_seconds": 1800,
+      "winter": {
+        "adjacent_day_reference": 0.0654810298102981,
+        "next_day": 0.06578590785907859,
+        "previous_day": 0.06517615176151761,
+        "same": 0.06647309330236159,
+        "same_minus_adjacent": 0.0009920634920634868
+      },
+      "winter_minus_summer": {
+        "adjacent_day_reference": -0.027840689121176918,
+        "next_day": -0.027690669763840506,
+        "previous_day": -0.027990708478513357,
+        "same": -0.026519550909794812,
+        "same_minus_adjacent": 0.001321138211382112
+      },
+      "year": 2020
+    },
+    {
+      "delta_day_reference_seed_max": 0.0033101045296167475,
+      "delta_day_reference_seed_min": -0.0011033681765389158,
+      "delta_day_reference_sign_counts": {
+        "near_zero": 0,
+        "negative": 2,
+        "positive": 10
+      },
+      "radius_km": 2.0,
+      "sampled_mean_abs_clock_gap_seconds": {
+        "summer": {
+          "next_day": 3.416957026713124,
+          "previous_day": 3.4146341463414633,
+          "same": 3.3763066202090593
+        },
+        "winter": {
+          "next_day": 1.527293844367015,
+          "previous_day": 1.681184668989547,
+          "same": 1.556910569105691
+        }
+      },
+      "seed_count": 12,
+      "source": "white_tailed_deer",
+      "source_dyads": 205,
+      "summer": {
+        "adjacent_day_reference": 0.14768195896244676,
+        "next_day": 0.14766744096012388,
+        "previous_day": 0.14769647696476965,
+        "same": 0.1475996902826171,
+        "same_minus_adjacent": -8.22686798296543e-05
+      },
+      "time_gap_seconds": 1800,
+      "winter": {
+        "adjacent_day_reference": 0.129369918699187,
+        "next_day": 0.12874564459930313,
+        "previous_day": 0.12999419279907085,
+        "same": 0.1307781649245064,
+        "same_minus_adjacent": 0.0014082462253193946
+      },
+      "winter_minus_summer": {
+        "adjacent_day_reference": -0.018312040263259777,
+        "next_day": -0.018921796360820753,
+        "previous_day": -0.0177022841656988,
+        "same": -0.01682152535811071,
+        "same_minus_adjacent": 0.0014905149051490489
+      },
+      "year": 2020
+    }
+  ],
+  "schema_version": 1,
+  "source_date_lags": [
+    -1,
+    0,
+    1
+  ],
+  "source_git_run": "https://github.com/zuizui0223/batter/actions/runs/39595138997",
+  "source_pinned_SHA256": {
+    "black_bear": "f13129ab5927ec7085b9b148a14a45f31ed394f829d3bdc06932a49006f415ab",
+    "turkey": "c3a4c74160f79f58ed44ef0a81fda6a2c23b39a272aa522812d115729fc9aedb",
+    "white_tailed_deer": "84d4fd9a9c03663b7fecdd733e1d826d78ab7f66260d33230bbf1bcc7d7752f6"
+  },
+  "status": "POST_INSPECTION_SOURCE_DAY_SHIFT_AGGREGATE_AUDIT",
+  "stop_groups": [
+    {
+      "n_adjacent_day_supported_dyads": 0,
+      "n_original_same_day_supported_dyads": 0,
+      "source": "black_bear",
+      "status": "STOP_INSUFFICIENT_DAY_SHIFT_TEMPORAL_OPPORTUNITY",
+      "time_gap_seconds": 900,
+      "year": 2019
+    },
+    {
+      "n_adjacent_day_supported_dyads": 0,
+      "n_original_same_day_supported_dyads": 0,
+      "source": "black_bear",
+      "status": "STOP_INSUFFICIENT_DAY_SHIFT_TEMPORAL_OPPORTUNITY",
+      "time_gap_seconds": 1800,
+      "year": 2019
+    },
+    {
+      "n_adjacent_day_supported_dyads": 6,
+      "n_original_same_day_supported_dyads": 38,
+      "source": "black_bear",
+      "status": "STOP_INSUFFICIENT_DAY_SHIFT_TEMPORAL_OPPORTUNITY",
+      "time_gap_seconds": 900,
+      "year": 2020
+    },
+    {
+      "n_adjacent_day_supported_dyads": 6,
+      "n_original_same_day_supported_dyads": 47,
+      "source": "black_bear",
+      "status": "STOP_INSUFFICIENT_DAY_SHIFT_TEMPORAL_OPPORTUNITY",
+      "time_gap_seconds": 1800,
+      "year": 2020
+    }
+  ],
+  "timestamp_tolerances_seconds": [
+    900,
+    1800
+  ]
+}

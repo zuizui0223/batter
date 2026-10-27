@@ -1,0 +1,247 @@
+name: Multitaxon Movebank preflight (no raw animal tracks)
+
+on:
+  push:
+    branches:
+      - prospective/multitaxon-identity-ecology-v1
+    paths:
+      - "prospective/multitaxon_individuality/**"
+      - ".github/workflows/multitaxon-movebank-preflight-v1.yml"
+  pull_request:
+    paths:
+      - "prospective/multitaxon_individuality/**"
+      - ".github/workflows/multitaxon-movebank-preflight-v1.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  metadata-and-synthetic-source-screen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deterministic full 437-DOI metadata screen
+        run: python3 prospective/multitaxon_individuality/screen_movebank_metadata_v1.py
+      - name: Privacy-safe animal/day source-event gate synthetic tests
+        run: python3 -m unittest discover -s prospective/multitaxon_individuality -p 'test_multitaxon_screen_v1.py' -v
+      - name: Check source X pairwise occupancy formula without real animal data
+        run: python3 -m unittest discover -s prospective/multitaxon_individuality/tests -p 'test_reproduce_turtle_X_synthetic_v1.py' -v
+      - name: Validate first source-level green turtle and Argos-only gull cohort receipts
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          base=Path("prospective/multitaxon_individuality")
+          a=json.loads((base/"ORIGINAL_GREEN_TURTLE_AND_GULL_COHORT_SOURCE_PREFLIGHT_2026_10_19.json").read_text())
+          b=json.loads((base/"EXPLORATORY_GREEN_TURTLE_2018_SOURCE_X_SCALE_V1.json").read_text())
+          c=json.loads((base/"NONBAT_R_X_T_E_SOURCE_STATUS_MATRIX_2026_10_19.json").read_text())
+          turtle,gull=a["datasets"]
+          assert turtle["source_valid_unique_id_timestamp_positions"]==52846
+          assert turtle["actual_event_animal_ids"]==32
+          assert [r["animals_passing_broad_source_cadence_tier"] for r in turtle["year_strata"]]==[8,8,4,12]
+          assert gull["sensor_original_row_counts"]=={"argos-doppler-shift":28649}
+          assert b["source_cohort"]["unique_georeferenced_individual_timestamp_events"]==2762
+          assert b["source_cohort"]["animals_with_valid_GPS_positions_during_window"]==12
+          assert abs(b["grid_sensitivity"]["scales"][3]["mean_pair_overlap"]-0.5249141959286258)<1e-12
+          assert b["output_axes"]["R"]==b["output_axes"]["E"]=="NOT_ESTIMATED"
+          assert c["summary"]["source_groups_with_X_exploratory_source_estimate"]==1
+          assert c["summary"]["any_validated_cross_taxon_joint_R_X_T_E_conclusion"] is False
+          print("PASS green turtle original GPS same-source preflight and first nonbat X-only exploratory scale curve")
+          print("NO animal IDs, original raw positions or claimed universal R/X/T/E effects in this CI")
+          PY
+      - name: Validate reference-probe and original Argos/manta negative gates
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          d=Path("prospective/multitaxon_individuality")
+          r=json.loads((d/"PILOT_SOURCE_REFERENCE_FEASIBILITY_V1.json").read_text())
+          s=json.loads((d/"MOVEBANK_METADATA_SCREEN_V1.json").read_text())
+          e=json.loads((d/"ORIGINAL_SOURCE_EVENT_PREFLIGHT_V1.json").read_text())
+          assert r["summary"]["sources_with_reference_checked"]==9
+          assert r["summary"]["reference_n_at_least5"]==8
+          assert r["summary"]["reference_n_below5"]==1
+          assert s["summary"]["metadata_priority_count"]==227
+          assert s["summary"]["actual_biologically_eligible_packages_confirmed"]==0
+          assert e["datasets"][0]["row_sensor_counts"]=={"argos-doppler-shift":10271}
+          assert e["datasets"][0]["distinct_individual_timestamp_records"]==1258
+          assert e["datasets"][0]["individual_timestamp_collisions"]==9013
+          assert e["datasets"][0]["at_least30_unique_timestamp_positions_and3_calendar_days_individuals"]==9
+          assert e["datasets"][1]["individual_ids_with_accepted_source_coordinates"]==1
+          assert e["datasets"][1]["stage3_primary_high_precision_GPS_status"].startswith("FAIL_")
+          assert all(not row["individual_time_block_eligibility_verified"] for row in s["records"])
+          print("PASS no false biological eligibility or source-specific effects promoted from metadata/reference/Argos-only")
+          PY
+      - name: Check seasonal overlap edge topology from pinned source aggregates
+        run: |
+          PYTHONPATH=prospective/multitaxon_individuality python3 -m unittest discover -s prospective/multitaxon_individuality/tests -p 'test_edge_topology_v1.py' -v
+          python3 prospective/multitaxon_individuality/validate_edge_topology_v1.py --json-out /tmp/verified_edge_topology.json
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          result=json.loads(Path('/tmp/verified_edge_topology.json').read_text())
+          assert result['n_groups']==80 and result['n_settings']==1280
+          assert result['n_stopped_sources']==1 and len(result['focus'])==5
+          print('PASS 1280 source aggregate scenarios and 6 synthetic/source-receipt tests; no original animal tracks')
+          PY
+      - name: Reconcile all source-derived GPS effort-balanced seed and grid aggregates
+        run: |
+          python3 prospective/multitaxon_individuality/validate_seasonal_effort_output_v1.py > /tmp/validated_source_effort.json
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          a=json.loads(Path('/tmp/validated_source_effort.json').read_text())
+          assert a['n_original_sources']==3
+          assert a['n_source_years']==6
+          assert a['n_full_seed_grid_draws']==960
+          assert a['all_source_receipts_pinned']
+          print('PASS three original-source receipts; five eligible source-year cohorts; 960 seed-grid evaluations, no raw tracks')
+          PY
+      - name: Validate checksum-pinned 480 source-clock coincidence scenarios (aggregate only)
+        run: |
+          python3 prospective/multitaxon_individuality/validate_same_clock_bin_results_v1.py \
+            --input-dir prospective/multitaxon_individuality \
+            --output /tmp/validated_clock_source_summary.json
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          a=json.loads(Path('/tmp/validated_clock_source_summary.json').read_text())
+          b=json.loads(Path('prospective/multitaxon_individuality/SAME_CLOCK_BIN_COUSE_SUMMARY_2026_10_20.json').read_text())
+          assert a==b
+          assert a['n_sources']==3 and a['n_grid_seed_aggregate_results']==480
+          print('PASS original GPS receipts and exact X/T/N/D across 480 dependent sensitivity scenarios')
+          PY
+      - name: Validate all four disjoint source-GPS near-distance bands and archived seed summaries
+        run: |
+          PYTHONPATH=prospective/multitaxon_individuality python3 -m unittest discover \
+            -s prospective/multitaxon_individuality/tests \
+            -p 'test_distance_band_from_subhour_v1.py' -q
+          python3 prospective/multitaxon_individuality/distance_band_from_subhour_v1.py \
+            --input-dir prospective/multitaxon_individuality \
+            --verify-published prospective/multitaxon_individuality/SUBHOUR_DISTANCE_BANDS_2026_10_21.json
+          python3 - <<'PY'
+          import csv,json
+          from pathlib import Path
+          base=Path('prospective/multitaxon_individuality')
+          obj=json.loads((base/'SUBHOUR_DISTANCE_BANDS_2026_10_21.json').read_text())
+          with (base/'SUBHOUR_DISTANCE_BANDS_SUMMARY_2026_10_21.csv').open(newline='') as f:
+              rows=list(csv.DictReader(f))
+          assert len(rows)==obj['n_summary_band_records']==40
+          assert obj['n_seed_band_records']==480
+          assert obj['n_stopped_source_year_tolerance_groups']==2
+          mapped={(g['source'],g['year'],g['max_abs_timestamp_gap_seconds'],b['band']):b
+                  for g in obj['source_years'] for b in g['band_summary']}
+          assert len(mapped)==40
+          for row in rows:
+              key=(row['source'],int(row['year']),int(float(row['max_gap_minutes'])*60),
+                   row['distance_band'])
+              b=mapped.pop(key)
+              assert abs(float(row['winter_minus_summer_D'])-b['winter_minus_summer_D'])<1e-12
+              assert int(row['positive_seeds'])==b['delta_D_seed_signs']['positive']
+              assert int(row['negative_seeds'])==b['delta_D_seed_signs']['negative']
+          assert not mapped
+          print('PASS exact pinned source-GPS SHA256, four-band distribution mass, 480 dependent seed rows and independently checked 40-row CSV')
+          PY
+      - name: Independently verify all original-source A/B dual-anchor GPS trajectories
+        run: |
+          root=prospective/multitaxon_individuality
+          python3 "$root/validate_original_anchor_symmetry_v1.py" \
+            --old-dir "$root" --reverse-dir "$root" \
+            --output /tmp/original_source_anchor_audit_20261021.json
+          cmp /tmp/original_source_anchor_audit_20261021.json \
+              "$root/DAY_SHIFT_DUAL_ANCHOR_SUMMARY_2026_10_21.json"
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('/tmp/original_source_anchor_audit_20261021.json').read_text())
+          assert d['n_source_documents']==3
+          assert d['n_orientation_seed_radius_rows']==576
+          assert d['n_STOP_groups']==4 and d['n_estimable_groups']==8
+          assert all(x['passes_both_orientations_500m_and_1km']
+                     for x in d['stability_gates'] if x['source']=='turkey')
+          assert not any(x['passes_both_orientations_500m_and_1km']
+                         for x in d['stability_gates'] if x['source']=='white_tailed_deer')
+          print('PASS source original-publisher MD5/SHA256 receipts, exact forward replays, independent dual-orientation time controls')
+          PY
+      - name: Verify pinned original-source geographic pair structure and animal-year reuse
+        run: |
+          root=prospective/multitaxon_individuality
+          python3 "$root/validate_source_spatial_influence_v1.py" \
+             --input-dir "$root" \
+             --output /tmp/spatial_influence_ci_check.json
+          cmp /tmp/spatial_influence_ci_check.json "$root/SOURCE_SPATIAL_INFLUENCE_SUMMARY_2026_10_22.json"
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('/tmp/spatial_influence_ci_check.json').read_text())
+          assert d['n_replayed_original_source_seed_radius_scores']==576
+          assert d['n_valid_original_dyad_groups']==8
+          assert d['n_stopped_source_year_tolerance_rows']==4
+          reps={x['source']:x for x in d['year_reuse_audits'] if x['tolerance_seconds']==900}
+          assert reps['turkey']['n_both_years_matched_animals']==0
+          assert reps['white_tailed_deer']['n_both_years_matched_animals']==11
+          def delta(src,year,limit,direction):
+            q=next(x for x in d['summaries']
+                   if (x['source'],x['year'],x['tolerance_seconds'],x['centroid_pair_distance_max_km'])==
+                   (src,year,900,limit))
+            return next(z['mean_winter_minus_summer_L'] for z in q['radii']
+                        if z['radius_km']==.5 and z['orientation']==direction)
+          assert delta('turkey',2019,5,'original_A_to_B')>0
+          assert delta('turkey',2020,5,'original_A_to_B')<0
+          assert delta('turkey',2020,25,'original_A_to_B')>0
+          print('PASS source-original GPS SHA256, 576 replayed prior scores, source year-overlap and sign reversal at 5km')
+          PY
+      - name: Verify all published original-source seasonal GPS distance and graph-component data
+        run: |
+          root=prospective/multitaxon_individuality
+          python3 "$root/validate_source_seasonal_centroid_v1.py" \
+            --input-dir "$root" \
+            --output /tmp/verified_original_source_season_centroids.json
+          cmp /tmp/verified_original_source_season_centroids.json \
+              "$root/SEASONAL_GPS_CENTROID_COMPONENT_SUMMARY_2026_10_22.json"
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('/tmp/verified_original_source_season_centroids.json').read_text())
+          assert d['n_original_GPS_source_archives']==3
+          assert d['n_valid_source_year_time_tolerance_groups']==8
+          assert d['n_STOP_groups']==4
+          assert d['n_source_component_estimates']==28
+          assert d['n_source_season_centroid_distance_groups']==32
+          a=next(g for g in d['groups'] if g['source']=='turkey' and g['year']==2019 and g['time_gap_seconds']==900)
+          components=next(c for c in a['anonymous_spatial_components'] if c['cutoff_km']==5)['components']
+          assert len(components)==2
+          assert [c['n_component_original_dyads'] for c in components]==[53,20]
+          assert all(all(v['seed_signs']['positive']==12 for v in
+              c['original_source_component_L1_by_radius_direction']['radii']
+              if v['radius_km']==.5) for c in components)
+          b=next(g for g in d['groups'] if g['source']=='turkey' and g['year']==2020 and g['time_gap_seconds']==900)
+          far=next(z for z in b['seasonal_GPS_center_distance_by_ANNUAL_center_band']
+                   if z['annual_centroid_pair_separation_band']=='(10,25] km')
+          assert far['n_pairs_winter_centers_closer']==5
+          assert far['winter_km']['median']<far['summer_km']['median']
+          print('PASS source-original GPS 2019 disconnected component patterns and 2020 5/5 winter seasonal centroid convergence')
+          PY
+
+      - name: Verify original-source turkey calendar-month centroids and close-to-separated support
+        run: |
+          root=prospective/multitaxon_individuality
+          python3 "$root/validate_turkey_monthly_core_v1.py" \
+            --source "$root/TURKEY_MONTHLY_CORE_SEPARATION_SOURCE_2026_10_28.json" \
+            --output /tmp/verified_turkey_monthly_20261028.json
+          cmp /tmp/verified_turkey_monthly_20261028.json \
+              "$root/TURKEY_MONTHLY_CORE_SEPARATION_AUDIT_2026_10_28.json"
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('/tmp/verified_turkey_monthly_20261028.json')
+          d=json.loads(p.read_text())
+          assert d['year_month_rows']==24 and d['group_months']==84
+          assert d['fully_2020']==7 and d['observed_2020']==7
+          assert d['transition_bracket']['last_observed_close_month']==2
+          assert d['transition_bracket']['first_later_observed_separated_month']==3
+          assert d['transition_bracket']['unobserved_months_in_bracket']==0
+          print('PASS pinned 435214 original turkey GPS fixes: Feb–Mar observed monthly change, complete Jan–Jul 2020')
+          PY
+

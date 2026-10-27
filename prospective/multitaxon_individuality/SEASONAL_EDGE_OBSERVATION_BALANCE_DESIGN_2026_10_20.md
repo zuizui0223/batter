@@ -1,0 +1,30 @@
+# GPS effort-standardized seasonal geographic edge audit — analysis design
+
+**Status: post-inspection exploratory sensitivity, fixed before reviewing its new outcomes.** Original seasonal edge and incidence/strength results were inspected before designing this control. This is NOT preregistered or a randomized biological test.
+
+## Research question
+In the 2019–2020 turkey, bear, and white-tailed deer published Movebank sources, do the previously observed seasonal changes in the *number* and *conditional intensity* of overlapping dyads persist when fix counts within a calendar day, shared observed dates within a month, and usable months within each season are exactly equalized?
+
+Reference public source archives: turkey DOI 10.5441/001/1.671, black bear 10.5441/001/1.706, white-tailed deer 10.5441/001/1.718. The primary V2 aggregate ZIP SHA256 is `857e4157606ca1a4bf87d2f7e76fa379ab7bbf77c2bfc491ffec8196f543ee48`, Git blob `0da5fe5f429e08194525c59b70d0840735d958ac`. No original GPS rows, animal IDs, dates, projected cells or positions are committed.
+
+## Data and risk sets
+Fetch the *complete original GPS files* and unique reference file via their published DSpace ORIGINAL bundle. Verify published MD5 and **the existing pinned SHA256 receipt**, then use the existing `cross_source_seasonal_x_v2.read_originals` QC, source/taxon/reference pairing and clock policy unchanged. Include both 2019 and 2020 and do not select years after reading new results. A reference label is used only if independently present; original archived counts for these three sources show **zero usable individual-group labels**. Source-wide study identity and a centroid-distance constraint are *not* proof of a local biological population.
+
+Reconstruct the V2 calendar-window risk set before sampling: 7 shared GPS-observed dates in at least two separate months per season; winter is Jan/Feb/Dec *within a calendar year*, summer is Jun/Jul/Aug. Each evaluated pair must have a computable annual-day-balanced utilization centroid for both animals, separated by ≤25 km. Compare reconstructed k=1 pair counts against the pinned V2 5-km/origin-zero **near_centroid_25km** counts, with a hard failure on disagreement. Seasonal windows are month categories, not consecutive weather events.
+
+## Sampling-control policy
+For each fixed dyad and each pseudo-replicate, choose **exactly two supported months per season**, then **exactly seven common dates per selected month**. Both partners use those same dates. On every selected date, draw **exactly k original GPS fixes from each partner**, with k independently evaluated at 1 and 2 fixes per animal-date. At k=2, a date is eligible only if *both* animals have ≥2 retained fixes; a pair drops only if the same two-month, seven-day support cannot be met in either season. Report the k=2 pair count as attrition from k=1 and DO NOT code ineligible pairs as zero overlap.
+
+Use SHA-256-seeded deterministic pseudo-random draws for reproducibility, with seeds 0–23. Fix draws are shared for an animal-date across its pairs; month and date selections are pair-specific. All sampled points come from an original GPS measurement: no spatial jitter, interpolation or replacement. Sort original coordinates within each animal-date before drawing, so source file row order cannot alter results. This is an **observation-effort sensitivity**, not a model of GPS detection, temporal autocorrelation or habitat sampling.
+
+Within each selected month, give all seven shared dates equal weight and the k fixes within each date equal weight; compute the overlap of the two empirical 2D cell distributions as the sum of minimum cell masses. Give the two months equal weight within a season, and all dyads equal weight within a cohort. Never impute missing shared dates or year/months.
+
+## Fixed spatial sensitivities, reporting and STOP rules
+The reference uses 5-km grid cells and (0,0) origin. Predefine secondary grid settings 1 km (0,0), 10 km (0,0), and 5 km (0.5,0.5), all using the original all-event average-latitude cosine projection. These sensitivity grids do not establish statistically independent replications.
+
+For each (source, year, k, grid), summarize all 24 seed draws: supported pairs, mean seasonal overlap, positive-edge incidence p, mean intensity conditional on X>0 (undefined if no positive pairs), positive-edge Jaccard (undefined if no positive edges), binary dyad-state counts, and the exact symmetric incidence/intensity decomposition whenever defined. Report the fraction of seeds with positive/negative/zero incidence and strength contrasts and zero-overlap prevalence. Preserve individual seed outcomes only as **aggregated cohort numbers** (never pairs or animal IDs), making the observation-process variability inspectable. The k=1 and k=2 series may have different risk sets; never claim a within-pair causal comparison without accounting for attrition.
+
+Hard-stop if any source checksum differs, the reference/GPS source pairing is ambiguous, source calendar time cannot be parsed, any baseline risk-set count is different, time windows/scales do not match the declared design, or insufficient supported pairs remain. A source/year without support is NOT ESTIMABLE, never a zero biological effect. This analysis makes no biological p-values or population confidence intervals. Sources/animals, dyads sharing an animal and multiple grid/seed settings are dependent.
+
+## Interpretive hierarchy
+If a direction persists for every seed at 5 km and at other declared scales, it is *robust to these finite within-source sampling controls*, not evidence of causality. If k=1 results are frequently zero but k=2 are not, the alleged edge gain/loss is strongly limited by detection opportunity. If direction reverses, explicitly weaken or withdraw the original positive-edge seasonal claim. Independent environmental/resource exposure E, simultaneous encounters T and conditional decision repeatability R remain unmeasured here. The next scientific gate requires real local population metadata and source/season observation-detection processes, not another posthoc threshold.

@@ -1,0 +1,97 @@
+name: Exploratory source-verified cross-species seasonal X (aggregate only)
+
+on:
+  push:
+    branches:
+      - prospective/multitaxon-identity-ecology-v1
+    paths:
+      - 'prospective/multitaxon_individuality/cross_source_seasonal_overlap_v1.py'
+      - 'prospective/multitaxon_individuality/tests/test_cross_source_seasonal_overlap_v1.py'
+      - '.github/workflows/cross-source-seasonal-overlap-v1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  source-verification:
+    runs-on: ubuntu-latest
+    timeout-minutes: 17
+    env:
+      PYTHONPATH: prospective/multitaxon_individuality
+    steps:
+      - name: Checkout the exact source-analysis branch
+        uses: actions/checkout@v4
+      - name: Verify all synthetic equality and exclusion contracts
+        run: |
+          python3 -m py_compile prospective/multitaxon_individuality/cross_source_seasonal_overlap_v1.py
+          python3 -m unittest discover -s prospective/multitaxon_individuality/tests -p 'test_cross_source_seasonal_overlap_v1.py' -v
+      - name: Retrieve WHOLE originals, check source MD5 and run bounded seasonal X
+        run: |
+          python3 prospective/multitaxon_individuality/cross_source_seasonal_overlap_v1.py \
+            --out prospective/multitaxon_individuality/CROSS_SOURCE_SEASONAL_X_EXPLORATORY_ACTION.json
+      - name: Validate aggregate-only outputs and build citable bounded result table
+        run: |
+          python3 - <<'PY'
+          import json, hashlib
+          from pathlib import Path
+          root=Path("prospective/multitaxon_individuality")
+          path=root/"CROSS_SOURCE_SEASONAL_X_EXPLORATORY_ACTION.json"
+          data=json.loads(path.read_text())
+          assert data["schema_version"]==1
+          assert len(data["sources"])==4
+          assert [s["label"] for s in data["sources"]]==["turkey","moose","moose_snowy_range","black_bear"]
+          assert not any("individual-local-identifier" in k for k in data)
+          sha=hashlib.sha256((root/"cross_source_seasonal_overlap_v1.py").read_bytes()).hexdigest()
+          lines=["# Original-source seasonal X: aggregate-only execution record", "",
+                 "**Exploratory, not independently preregistered and not cross-taxon proof.**",
+                 "Source script SHA256: `"+sha+"`", "",
+                 "All eligible dyads require observed-day opportunity and exactly the same season-pair risk set.",
+                 "No GPS tracks, coordinates, animal IDs, pseudoreplicated tests or population-level inference are included.",
+                 "",
+                 "| Source DOI | Original status | Original GPS rows | Source-qualified comparisons |",
+                 "|---|---|---:|---:|"]
+          for s in data["sources"]:
+              lines.append("| "+s["doi"]+" | "+s["status"]+" | "+str(s.get("event_audit",{}).get("original_rows","—"))+
+                           " | "+str(s.get("number_estimated_comparisons","—"))+" |")
+          lines.extend(["","## 5 km, origin (0,0): *complete risk sets only*","",
+                 "| Source | Year | Window | Matched animals | Dyads | First mean X | Second mean X | Δ first−second | First positive dyads | Second positive dyads |",
+                 "|---|---:|---|---:|---:|---:|---:|---:|---:|---:|"])
+          for s in data["sources"]:
+              for z in s.get("comparisons",[]):
+                  if z["grid_km"]!=5 or z["origin_x_fraction"] or z["origin_y_fraction"]: continue
+                  if z["status"]!="OBSERVED_MATCHED_DYADS":
+                      lines.append("| "+s["label"]+" | "+str(z["year"])+" | "+z["window"]+" | — | 0 | — | — | NOT ESTIMABLE | — | — |")
+                      continue
+                  f=lambda a: f"{a:.6f}"
+                  lines.append("| "+" | ".join([
+                      s["label"],str(z["year"]),z["window"],str(z["n_matched_animals"]),str(z["n_pairs"]),
+                      f(z["winter"]["mean_X"]),f(z["summer"]["mean_X"]),f(z["winter_minus_summer_X"]),
+                      str(z["winter"]["n_positive_pairs"]),str(z["summer"]["n_positive_pairs"])
+                  ])+" |")
+          lines.extend(["","Other 1/2/10 km widths and shifted origins, source receipts, STOP reasons, and all dyad-state summaries are in the accompanying JSON.",
+                       "If a source has several biologically separate sites, these source-wide geometrical scores are NOT within-population niche partitioning.",
+                       "Comparison of behavioral repeatability R remains unverified for these new sources."])
+          (root/"CROSS_SOURCE_SEASONAL_X_EXPLORATORY_ACTION.md").write_text("\n".join(lines)+"\n")
+          print("\n".join(lines[:15]))
+          PY
+      - name: Commit inspected aggregate artifacts to the same draft research branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f prospective/multitaxon_individuality/CROSS_SOURCE_SEASONAL_X_EXPLORATORY_ACTION.json
+          git add -f prospective/multitaxon_individuality/CROSS_SOURCE_SEASONAL_X_EXPLORATORY_ACTION.md
+          if ! git diff --cached --quiet; then
+            git commit -m "data: record original-source cross-species seasonal X aggregates and STOP reasons"
+            git push origin HEAD:refs/heads/prospective/multitaxon-identity-ecology-v1
+          fi
+      - name: Upload aggregate-only stage report without GPS tracks or animal identifiers
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: seasonal-x-original-source-audit
+          path: prospective/multitaxon_individuality/CROSS_SOURCE_SEASONAL_X_EXPLORATORY_ACTION.json
+          if-no-files-found: warn
+          retention-days: 7
+
+

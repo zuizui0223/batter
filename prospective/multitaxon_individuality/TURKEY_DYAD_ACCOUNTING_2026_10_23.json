@@ -1,0 +1,910 @@
+{
+  "as_of": "2026-10-23",
+  "n_year_gap_orientation_radius_comparisons": 24,
+  "nonclaims": [
+    "Distinct original dyads sharing one animal are not independent biological interaction replications",
+    "Signed sum fraction can exceed 100 percent and is not a causal effect share",
+    "The >10km five-dyad annulus is below the declared minimum eight independent-pair descriptive gate",
+    "Original published study may mix demographic populations; source tag GPS fix error/clock unknown",
+    "Seasonal center movement is source geography not an observed encounter, flock membership, food-resource use or migration mechanism"
+  ],
+  "original_DOI": "10.5441/001/1.671",
+  "original_GPS_fixes_2019_2020": 435214,
+  "results": [
+    {
+      "animal_anchor_orientation": "original_A_to_B",
+      "annuli": [
+        {
+          "annual_centroid_separation_band": "<=5 km",
+          "below_minimum_eight_pair_standalone_biological_gate": false,
+          "n_original_dyads": 73,
+          "signed_sum_over_dyads": 5.646825396825397,
+          "winter_minus_summer_L_mean": 0.07735377255925202
+        },
+        {
+          "annual_centroid_separation_band": "(5,10] km",
+          "below_minimum_eight_pair_standalone_biological_gate": true,
+          "n_original_dyads": 5,
+          "signed_sum_over_dyads": 0.04265873015873023,
+          "winter_minus_summer_L_mean": 0.008531746031746047
+        },
+        {
+          "annual_centroid_separation_band": "(10,25] km",
+          "below_minimum_eight_pair_standalone_biological_gate": false,
+          "n_original_dyads": 34,
+          "signed_sum_over_dyads": 0.0,
+          "winter_minus_summer_L_mean": 0.0
+        }
+      ],
+      "far10to25_fraction_of_signed_whole_source_sum": 0.0,
+      "geodesic_GPS_near_radius_km": 0.5,
+      "note": "The share is an arithmetic ratio, may exceed 1 or be negative if source contributions offset. Not causal fraction explained or independent pair effects",
+      "source": "turkey",
+      "time_tolerance_seconds": 900,
+      "whole_source": {
+        "n_original_dyads": 112,
+        "signed_sum_over_dyads": 5.689484126984127,
+        "winter_minus_summer_L_mean": 0.05079896541950114
+      },
+      "year": 2019
+    },
+    {
+      "animal_anchor_orientation": "original_A_to_B",
+      "annuli": [
+        {
+          "annual_centroid_separation_band": "<=5 km",
+          "below_minimum_eight_pair_standalone_biological_gate": false,
+          "n_original_dyads": 73,
+          "signed_sum_over_dyads": 1.6894841269841272,
+          "winter_minus_summer_L_mean": 0.023143618177864755
+        },
+        {
+          "annual_centroid_separation_band": "(5,10] km",
+          "below_minimum_eight_pair_standalone_biological_gate": true,
+          "n_original_dyads": 5,
+          "signed_sum_over_dyads": 0.005952380952380709,
+          "winter_minus_summer_L_mean": 0.0011904761904761418
+        },
+        {
+          "annual_centroid_separation_band": "(10,25] km",
+          "below_minimum_eight_pair_standalone_biological_gate": false,
+          "n_original_dyads": 34,
+          "signed_sum_over_dyads": 0.0,
+          "winter_minus_summer_L_mean": 0.0
+        }
+      ],
+      "far10to25_fraction_of_signed_whole_source_sum": 0.0,
+      "geodesic_GPS_near_radius_km": 1.0,
+      "note": "The share is an arithmetic ratio, may exceed 1 or be negative if source contributions offset. Not causal fraction explained or independent pair effects",
+      "source": "turkey",
+      "time_tolerance_seconds": 900,
+      "whole_source": {
+        "n_original_dyads": 112,
+        "signed_sum_over_dyads": 1.695436507936508,
+        "winter_minus_summer_L_mean": 0.01513782596371882
+      },
+      "year": 2019
+    },
+    {
+      "animal_anchor_orientation": "original_A_to_B",
+      "annuli": [
+        {
+          "annual_centroid_separation_band": "<=5 km",
+          "below_minimum_eight_pair_standalone_biological_gate": false,
+          "n_original_dyads": 73,
+          "signed_sum_over_dyads": 0.6785714285714287,
+          "winter_minus_summer_L_mean": 0.00929549902152642
+        },
+        {
+          "annual_centroid_separation_band": "(5,10] km",
+          "below_minimum_eight_pair_standalone_biological_gate": true,
+          "n_original_dyads": 5,
+          "signed_sum_over_dyads": 0.007936507936507797,
+          "winter_minus_summer_L_mean": 0.0015873015873015595
+        },
+        {
+          "annual_centroid_separation_band": "(10,25] km",
+          "below_minimum_eight_pair_standalone_biological_gate": false,
+          "n_original_dyads": 34,
+          "signed_sum_over_dyads": 0.0,
+          "winter_minus_summer_L_mean": 0.0
+        }
+      ],
+      "far10to25_fraction_of_signed_whole_source_sum": 0.0,
+      "geodesic_GPS_near_radius_km": 2.0,
+      "note": "The share is an arithmetic ratio, may exceed 1 or be negative if source contributions offset. Not causal fraction explained or independent pair effects",
+      "source": "turkey",
+      "time_tolerance_seconds": 900,
+      "whole_source": {
+        "n_original_dyads": 112,
+        "signed_sum_over_dyads": 0.6865079365079365,
+        "winter_minus_summer_L_mean": 0.00612953514739229
+      },
+      "year": 2019
+    },
+    {
+      "animal_anchor_orientation": "reversed_B_to_A",
+      "annuli": [
+        {
+          "annual_centroid_separation_band": "<=5 km",
+          "below_minimum_eight_pair_standalone_biological_gate": false,
+          "n_original_dyads": 73,
+          "signed_sum_over_dyads": 5.861111111111111,
+          "winter_minus_summer_L_mean": 0.08028919330289193
+        },
+        {
+          "annual_centroid_separation_band": "(5,10] km",
+          "below_minimum_eight_pair_standalone_biological_gate": true,
+          "n_original_dyads": 5,
+          "signed_sum_over_dyads": 0.015873015873017593,
+          "winter_minus_summer_L_mean": 0.0031746031746035185
+        },
+        {
+          "annual_centroid_separation_band": "(10,25] km",
+          "below_minimum_eight_pair_standalone_biological_gate": false,
+          "n_original_dyads": 34,
+          "signed_sum_over_dyads": -8.881784197001252e-16,
+          "winter_minus_summer_L_mean": -2.6122894697062506e-17
+        }
+      ],
+      "far10to25_fraction_of_signed_whole_source_sum": -1.5112826587740144e-16,
+      "geodesic_GPS_near_radius_km": 0.5,
+      "note": "The share is an arithmetic ratio, may exceed 1 or be negative if source contributions offset. Not causal fraction explained or independent pair effects",
+      "source": "turkey",
+      "time_tolerance_seconds": 900,
+      "whole_source": {
+        "n_original_dyads": 112,
+        "signed_sum_over_dyads": 5.876984126984127,
+        "winter_minus_summer_L_mean": 0.05247307256235828
+      },
+      "year": 2019
+    },
+    {
+      "animal_anchor_orientation": "reversed_B_to_A",
+      "annuli": [
+        {
+          "annual_centroid_separation_band": "<=5 km",
+          "below_minimum_eight_pair_standalone_biological_gate": false,
+          "n_original_dyads": 73,
+          "signed_sum_over_dyads": 1.5555555555555554,
+          "winter_minus_summer_L_mean": 0.0213089802130898
+        },
+        {
+          "annual_centroid_separation_band": "(5,10] km",
+          "below_minimum_eight_pair_standalone_biological_gate": true,
+          "n_original_dyads": 5,
+          "signed_sum_over_dyads": 0.03571428571428603,
+          "winter_minus_summer_L_mean": 0.007142857142857206
+        },
+        {
+          "annual_centroid_separation_band": "(10,25] km",
+          "below_minimum_eight_pair_standalone_biological_gate": false,
+          "n_original_dyads": 34,
+          "signed_sum_over_dyads": 0.0,
+          "winter_minus_summer_L_mean": 0.0
+        }
+      ],
+      "far10to25_fraction_of_signed_whole_source_sum": 0.0,
+      "geodesic_GPS_near_radius_km": 1.0,
+      "note": "The share is an arithmetic ratio, may exceed 1 or be negative if source contributions offset. Not causal fraction explained or independent pair effects",
+      "source": "turkey",
+      "time_tolerance_seconds": 900,
+      "whole_source": {
+        "n_original_dyads": 112,
+        "signed_sum_over_dyads": 1.5912698412698414,
+        "winter_minus_summer_L_mean": 0.014207766439909298
+      },
+      "year": 2019
+    },
+    {
+      "animal_anchor_orientation": "reversed_B_to_A",
+      "annuli": [
+        {
+          "annual_centroid_separation_band": "<=5 km",
+          "below_minimum_eight_pair_standalone_biological_gate": false,
+          "n_original_dyads": 73,
+          "signed_sum_over_dyads": 0.5565476190476192,
+          "winter_minus_summer_L_mean": 0.007623939986953688
+        },
+        {
+          "annual_centroid_separation_band": "(5,10] km",
+          "below_minimum_eight_pair_standalone_biological_gate": true,
+          "n_original_dyads": 5,
+          "signed_sum_over_dyads": 0.03472222222222221,
+          "winter_minus_summer_L_mean": 0.006944444444444442
+        },
+        {
+          "annual_centroid_separation_band": "(10,25] km",
+          "below_minimum_eight_pair_standalone_biological_gate": false,
+          "n_original_dyads": 34,
+          "signed_sum_over_dyads": 0.0,
+          "winter_minus_summer_L_mean": 0.0
+        }
+      ],
+      "far10to25_fraction_of_signed_whole_source_sum": 0.0,
+      "geodesic_GPS_near_radius_km": 2.0,
+      "note": "The share is an arithmetic ratio, may exceed 1 or be negative if source contributions offset. Not causal fraction explained or independent pair effects",
+      "source": "turkey",
+      "time_tolerance_seconds": 900,
+      "whole_source": {
+        "n_original_dyads": 112,
+        "signed_sum_over_dyads": 0.5912698412698414,
+        "winter_minus_summer_L_mean": 0.005279195011337869
+      },
+      "year": 2019
+    },
+    {
+      "animal_anchor_orientation": "original_A_to_B",
+      "annuli": [
+        {
+          "annual_centroid_separation_band": "<=5 km",
+          "below_minimum_eight_pair_standalone_biological_gate": false,
+          "n_original_dyads": 73,
+          "signed_sum_over_dyads": 5.561507936507937,
+          "winter_minus_summer_L_mean": 0.07618504022613612
+        },
+        {
+          "annual_centroid_separation_band": "(5,10] km",
+          "below_minimum_eight_pair_standalone_biological_gate": true,
+          "n_original_dyads": 5,
+          "signed_sum_over_dyads": 0.015873015873016705,
+          "winter_minus_summer_L_mean": 0.003174603174603341
+        },
+        {
+          "annual_centroid_separation_band": "(10,25] km",
+          "below_minimum_eight_pair_standalone_biological_gate": false,
+          "n_original_dyads": 34,
+          "signed_sum_over_dyads": -8.881784197001252e-16,
+          "winter_minus_summer_L_mean": -2.6122894697062506e-17
+        }
+      ],
+      "far10to25_fraction_of_signed_whole_source_sum": -1.5924650427921134e-16,
+      "geodesic_GPS_near_radius_km": 0.5,
+      "note": "The share is an arithmetic ratio, may exceed 1 or be negative if source contributions offset. Not causal fraction explained or independent pair effects",
+      "source": "turkey",
+      "time_tolerance_seconds": 1800,
+      "whole_source": {
+        "n_original_dyads": 112,
+        "signed_sum_over_dyads": 5.5773809523809526,
+        "winter_minus_summer_L_mean": 0.049798044217687076
+      },
+      "year": 2019
+    },
+    {
+      "animal_anchor_orientation": "original_A_to_B",
+      "annuli": [
+        {
+          "annual_centroid_separation_band": "<=5 km",
+          "below_minimum_eight_pair_standalone_biological_gate": false,
+          "n_original_dyads": 73,
+          "signed_sum_over_dyads": 1.5942460317460319,
+          "winter_minus_summer_L_mean": 0.021838986736247012
+        },
+        {
+          "annual_centroid_separation_band": "(5,10] km",
+          "below_minimum_eight_pair_standalone_biological_gate": true,
+          "n_original_dyads": 5,
+          "signed_sum_over_dyads": -0.03571428571428581,
+          "winter_minus_summer_L_mean": -0.007142857142857162
+        },
+        {
+          "annual_centroid_separation_band": "(10,25] km",
+          "below_minimum_eight_pair_standalone_biological_gate": false,
+          "n_original_dyads": 34,
+          "signed_sum_over_dyads": 0.0,
+          "winter_minus_summer_L_mean": 0.0
+        }
+      ],
+      "far10to25_fraction_of_signed_whole_source_sum": 0.0,
+      "geodesic_GPS_near_radius_km": 1.0,
+      "note": "The share is an arithmetic ratio, may exceed 1 or be negative if source contributions offset. Not causal fraction explained or independent pair effects",
+      "source": "turkey",
+      "time_tolerance_seconds": 1800,
+      "whole_source": {
+        "n_original_dyads": 112,
+        "signed_sum_over_dyads": 1.558531746031746,
+        "winter_minus_summer_L_mean": 0.01391546201814059
+      },
+      "year": 2019
+    },
+    {
+      "animal_anchor_orientation": "original_A_to_B",
+      "annuli": [
+        {
+          "annual_centroid_separation_band": "<=5 km",
+          "below_minimum_eight_pair_standalone_biological_gate": false,
+          "n_original_dyads": 73,
+          "signed_sum_over_dyads": 0.7499999999999998,
+          "winter_minus_summer_L_mean": 0.010273972602739724
+        },
+        {
+          "annual_centroid_separation_band": "(5,10] km",
+          "below_minimum_eight_pair_standalone_biological_gate": true,
+          "n_original_dyads": 5,
+          "signed_sum_over_dyads": 0.032738095238095344,
+          "winter_minus_summer_L_mean": 0.006547619047619069
+        },
+        {
+          "annual_centroid_separation_band": "(10,25] km",
+          "below_minimum_eight_pair_standalone_biological_gate": false,
+          "n_original_dyads": 34,
+          "signed_sum_over_dyads": 1.1102230246251565e-16,
+          "winter_minus_summer_L_mean": 3.2653618371328133e-18
+        }
+      ],
+      "far10to25_fraction_of_signed_whole_source_sum": 1.4183837881142685e-16,
+      "geodesic_GPS_near_radius_km": 2.0,
+      "note": "The share is an arithmetic ratio, may exceed 1 or be negative if source contributions offset. Not causal fraction explained or independent pair effects",
+      "source": "turkey",
+      "time_tolerance_seconds": 1800,
+      "whole_source": {
+        "n_original_dyads": 112,
+        "signed_sum_over_dyads": 0.7827380952380952,
+        "winter_minus_summer_L_mean": 0.006988732993197279
+      },
+      "year": 2019
+    },
+    {
+      "animal_anchor_orientation": "reversed_B_to_A",
+      "annuli": [
+        {
+          "annual_centroid_separation_band": "<=5 km",
+          "below_minimum_eight_pair_standalone_biological_gate": false,
+          "n_original_dyads": 73,
+          "signed_sum_over_dyads": 5.691468253968255,
+          "winter_minus_summer_L_mean": 0.07796531854751033
+        },
+        {
+          "annual_centroid_separation_band": "(5,10] km",
+          "below_minimum_eight_pair_standalone_biological_gate": true,
+          "n_original_dyads": 5,
+          "signed_sum_over_dyads": 0.018849206349204728,
+          "winter_minus_summer_L_mean": 0.0037698412698409455
+        },
+        {
+          "annual_centroid_separation_band": "(10,25] km",
+          "below_minimum_eight_pair_standalone_biological_gate": false,
+          "n_original_dyads": 34,
+          "signed_sum_over_dyads": 8.881784197001252e-16,
+          "winter_minus_summer_L_mean": 2.6122894697062506e-17
+        }
+      ],
+      "far10to25_fraction_of_signed_whole_source_sum": 1.5553923680641525e-16,
+      "geodesic_GPS_near_radius_km": 0.5,
+      "note": "The share is an arithmetic ratio, may exceed 1 or be negative if source contributions offset. Not causal fraction explained or independent pair effects",
+      "source": "turkey",
+      "time_tolerance_seconds": 1800,
+      "whole_source": {
+        "n_original_dyads": 112,
+        "signed_sum_over_dyads": 5.7103174603174605,
+        "winter_minus_summer_L_mean": 0.05098497732426304
+      },
+      "year": 2019
+    },
+    {
+      "animal_anchor_orientation": "reversed_B_to_A",
+      "annuli": [
+        {
+          "annual_centroid_separation_band": "<=5 km",
+          "below_minimum_eight_pair_standalone_biological_gate": false,
+          "n_original_dyads": 73,
+          "signed_sum_over_dyads": 1.2202380952380953,
+          "winter_minus_summer_L_mean": 0.016715590345727335
+        },
+        {
+          "annual_centroid_separation_band": "(5,10] km",
+          "below_minimum_eight_pair_standalone_biological_gate": true,
+          "n_original_dyads": 5,
+          "signed_sum_over_dyads": 0.017857142857143016,
+          "winter_minus_summer_L_mean": 0.003571428571428603
+        },
+        {
+          "annual_centroid_separation_band": "(10,25] km",
+          "below_minimum_eight_pair_standalone_biological_gate": false,
+          "n_original_dyads": 34,
+          "signed_sum_over_dyads": -2.220446049250313e-16,
+          "winter_minus_summer_L_mean": -6.530723674265627e-18
+        }
+      ],
+      "far10to25_fraction_of_signed_whole_source_sum": -1.793437193625253e-16,
+      "geodesic_GPS_near_radius_km": 1.0,
+      "note": "The share is an arithmetic ratio, may exceed 1 or be negative if source contributions offset. Not causal fraction explained or independent pair effects",
+      "source": "turkey",
+      "time_tolerance_seconds": 1800,
+      "whole_source": {
+        "n_original_dyads": 112,
+        "signed_sum_over_dyads": 1.2380952380952381,
+        "winter_minus_summer_L_mean": 0.011054421768707483
+      },
+      "year": 2019
+    },
+    {
+      "animal_anchor_orientation": "reversed_B_to_A",
+      "annuli": [
+        {
+          "annual_centroid_separation_band": "<=5 km",
+          "below_minimum_eight_pair_standalone_biological_gate": false,
+          "n_original_dyads": 73,
+          "signed_sum_over_dyads": 0.7876984126984127,
+          "winter_minus_summer_L_mean": 0.010790389215046749
+        },
+        {
+          "annual_centroid_separation_band": "(5,10] km",
+          "below_minimum_eight_pair_standalone_biological_gate": true,
+          "n_original_dyads": 5,
+          "signed_sum_over_dyads": 0.017857142857142794,
+          "winter_minus_summer_L_mean": 0.0035714285714285587
+        },
+        {
+          "annual_centroid_separation_band": "(10,25] km",
+          "below_minimum_eight_pair_standalone_biological_gate": false,
+          "n_original_dyads": 34,
+          "signed_sum_over_dyads": 0.0,
+          "winter_minus_summer_L_mean": 0.0
+        }
+      ],
+      "far10to25_fraction_of_signed_whole_source_sum": 0.0,
+      "geodesic_GPS_near_radius_km": 2.0,
+      "note": "The share is an arithmetic ratio, may exceed 1 or be negative if source contributions offset. Not causal fraction explained or independent pair effects",
+      "source": "turkey",
+      "time_tolerance_seconds": 1800,
+      "whole_source": {
+        "n_original_dyads": 112,
+        "signed_sum_over_dyads": 0.8055555555555555,
+        "winter_minus_summer_L_mean": 0.007192460317460317
+      },
+      "year": 2019
+    },
+    {
+      "animal_anchor_orientation": "original_A_to_B",
+      "annuli": [
+        {
+          "annual_centroid_separation_band": "<=5 km",
+          "below_minimum_eight_pair_standalone_biological_gate": false,
+          "n_original_dyads": 14,
+          "signed_sum_over_dyads": -0.23313492063492072,
+          "winter_minus_summer_L_mean": -0.016652494331065765
+        },
+        {
+          "annual_centroid_separation_band": "(5,10] km",
+          "below_minimum_eight_pair_standalone_biological_gate": true,
+          "n_original_dyads": 2,
+          "signed_sum_over_dyads": 0.2172619047619048,
+          "winter_minus_summer_L_mean": 0.1086309523809524
+        },
+        {
+          "annual_centroid_separation_band": "(10,25] km",
+          "below_minimum_eight_pair_standalone_biological_gate": true,
+          "n_original_dyads": 5,
+          "signed_sum_over_dyads": 0.5753968253968254,
+          "winter_minus_summer_L_mean": 0.11507936507936507
+        }
+      ],
+      "far10to25_fraction_of_signed_whole_source_sum": 1.0283687943262412,
+      "geodesic_GPS_near_radius_km": 0.5,
+      "note": "The share is an arithmetic ratio, may exceed 1 or be negative if source contributions offset. Not causal fraction explained or independent pair effects",
+      "source": "turkey",
+      "time_tolerance_seconds": 900,
+      "whole_source": {
+        "n_original_dyads": 21,
+        "signed_sum_over_dyads": 0.5595238095238094,
+        "winter_minus_summer_L_mean": 0.02664399092970521
+      },
+      "year": 2020
+    },
+    {
+      "animal_anchor_orientation": "original_A_to_B",
+      "annuli": [
+        {
+          "annual_centroid_separation_band": "<=5 km",
+          "below_minimum_eight_pair_standalone_biological_gate": false,
+          "n_original_dyads": 14,
+          "signed_sum_over_dyads": 0.1954365079365079,
+          "winter_minus_summer_L_mean": 0.013959750566893423
+        },
+        {
+          "annual_centroid_separation_band": "(5,10] km",
+          "below_minimum_eight_pair_standalone_biological_gate": true,
+          "n_original_dyads": 2,
+          "signed_sum_over_dyads": 0.10119047619047616,
+          "winter_minus_summer_L_mean": 0.05059523809523808
+        },
+        {
+          "annual_centroid_separation_band": "(10,25] km",
+          "below_minimum_eight_pair_standalone_biological_gate": true,
+          "n_original_dyads": 5,
+          "signed_sum_over_dyads": 0.31845238095238093,
+          "winter_minus_summer_L_mean": 0.06369047619047619
+        }
+      ],
+      "far10to25_fraction_of_signed_whole_source_sum": 0.517741935483871,
+      "geodesic_GPS_near_radius_km": 1.0,
+      "note": "The share is an arithmetic ratio, may exceed 1 or be negative if source contributions offset. Not causal fraction explained or independent pair effects",
+      "source": "turkey",
+      "time_tolerance_seconds": 900,
+      "whole_source": {
+        "n_original_dyads": 21,
+        "signed_sum_over_dyads": 0.615079365079365,
+        "winter_minus_summer_L_mean": 0.029289493575207857
+      },
+      "year": 2020
+    },
+    {
+      "animal_anchor_orientation": "original_A_to_B",
+      "annuli": [
+        {
+          "annual_centroid_separation_band": "<=5 km",
+          "below_minimum_eight_pair_standalone_biological_gate": false,
+          "n_original_dyads": 14,
+          "signed_sum_over_dyads": 0.04067460317460321,
+          "winter_minus_summer_L_mean": 0.0029053287981859435
+        },
+        {
+          "annual_centroid_separation_band": "(5,10] km",
+          "below_minimum_eight_pair_standalone_biological_gate": true,
+          "n_original_dyads": 2,
+          "signed_sum_over_dyads": -6.938893903907228e-18,
+          "winter_minus_summer_L_mean": -3.469446951953614e-18
+        },
+        {
+          "annual_centroid_separation_band": "(10,25] km",
+          "below_minimum_eight_pair_standalone_biological_gate": true,
+          "n_original_dyads": 5,
+          "signed_sum_over_dyads": 0.06250000000000003,
+          "winter_minus_summer_L_mean": 0.012500000000000006
+        }
+      ],
+      "far10to25_fraction_of_signed_whole_source_sum": 0.6057692307692307,
+      "geodesic_GPS_near_radius_km": 2.0,
+      "note": "The share is an arithmetic ratio, may exceed 1 or be negative if source contributions offset. Not causal fraction explained or independent pair effects",
+      "source": "turkey",
+      "time_tolerance_seconds": 900,
+      "whole_source": {
+        "n_original_dyads": 21,
+        "signed_sum_over_dyads": 0.10317460317460322,
+        "winter_minus_summer_L_mean": 0.004913076341647772
+      },
+      "year": 2020
+    },
+    {
+      "animal_anchor_orientation": "reversed_B_to_A",
+      "annuli": [
+        {
+          "annual_centroid_separation_band": "<=5 km",
+          "below_minimum_eight_pair_standalone_biological_gate": false,
+          "n_original_dyads": 14,
+          "signed_sum_over_dyads": -0.005952380952380959,
+          "winter_minus_summer_L_mean": -0.00042517006802721136
+        },
+        {
+          "annual_centroid_separation_band": "(5,10] km",
+          "below_minimum_eight_pair_standalone_biological_gate": true,
+          "n_original_dyads": 2,
+          "signed_sum_over_dyads": 0.16170634920634921,
+          "winter_minus_summer_L_mean": 0.08085317460317461
+        },
+        {
+          "annual_centroid_separation_band": "(10,25] km",
+          "below_minimum_eight_pair_standalone_biological_gate": true,
+          "n_original_dyads": 5,
+          "signed_sum_over_dyads": 0.41567460317460314,
+          "winter_minus_summer_L_mean": 0.08313492063492063
+        }
+      ],
+      "far10to25_fraction_of_signed_whole_source_sum": 0.7274305555555556,
+      "geodesic_GPS_near_radius_km": 0.5,
+      "note": "The share is an arithmetic ratio, may exceed 1 or be negative if source contributions offset. Not causal fraction explained or independent pair effects",
+      "source": "turkey",
+      "time_tolerance_seconds": 900,
+      "whole_source": {
+        "n_original_dyads": 21,
+        "signed_sum_over_dyads": 0.5714285714285714,
+        "winter_minus_summer_L_mean": 0.027210884353741496
+      },
+      "year": 2020
+    },
+    {
+      "animal_anchor_orientation": "reversed_B_to_A",
+      "annuli": [
+        {
+          "annual_centroid_separation_band": "<=5 km",
+          "below_minimum_eight_pair_standalone_biological_gate": false,
+          "n_original_dyads": 14,
+          "signed_sum_over_dyads": 0.3720238095238094,
+          "winter_minus_summer_L_mean": 0.02657312925170067
+        },
+        {
+          "annual_centroid_separation_band": "(5,10] km",
+          "below_minimum_eight_pair_standalone_biological_gate": true,
+          "n_original_dyads": 2,
+          "signed_sum_over_dyads": 0.08333333333333337,
+          "winter_minus_summer_L_mean": 0.041666666666666685
+        },
+        {
+          "annual_centroid_separation_band": "(10,25] km",
+          "below_minimum_eight_pair_standalone_biological_gate": true,
+          "n_original_dyads": 5,
+          "signed_sum_over_dyads": 0.19345238095238093,
+          "winter_minus_summer_L_mean": 0.038690476190476185
+        }
+      ],
+      "far10to25_fraction_of_signed_whole_source_sum": 0.2981651376146789,
+      "geodesic_GPS_near_radius_km": 1.0,
+      "note": "The share is an arithmetic ratio, may exceed 1 or be negative if source contributions offset. Not causal fraction explained or independent pair effects",
+      "source": "turkey",
+      "time_tolerance_seconds": 900,
+      "whole_source": {
+        "n_original_dyads": 21,
+        "signed_sum_over_dyads": 0.6488095238095237,
+        "winter_minus_summer_L_mean": 0.03089569160997732
+      },
+      "year": 2020
+    },
+    {
+      "animal_anchor_orientation": "reversed_B_to_A",
+      "annuli": [
+        {
+          "annual_centroid_separation_band": "<=5 km",
+          "below_minimum_eight_pair_standalone_biological_gate": false,
+          "n_original_dyads": 14,
+          "signed_sum_over_dyads": 0.13492063492063502,
+          "winter_minus_summer_L_mean": 0.009637188208616787
+        },
+        {
+          "annual_centroid_separation_band": "(5,10] km",
+          "below_minimum_eight_pair_standalone_biological_gate": true,
+          "n_original_dyads": 2,
+          "signed_sum_over_dyads": -0.003968253968253954,
+          "winter_minus_summer_L_mean": -0.001984126984126977
+        },
+        {
+          "annual_centroid_separation_band": "(10,25] km",
+          "below_minimum_eight_pair_standalone_biological_gate": true,
+          "n_original_dyads": 5,
+          "signed_sum_over_dyads": 0.021825396825396887,
+          "winter_minus_summer_L_mean": 0.004365079365079377
+        }
+      ],
+      "far10to25_fraction_of_signed_whole_source_sum": 0.1428571428571431,
+      "geodesic_GPS_near_radius_km": 2.0,
+      "note": "The share is an arithmetic ratio, may exceed 1 or be negative if source contributions offset. Not causal fraction explained or independent pair effects",
+      "source": "turkey",
+      "time_tolerance_seconds": 900,
+      "whole_source": {
+        "n_original_dyads": 21,
+        "signed_sum_over_dyads": 0.15277777777777796,
+        "winter_minus_summer_L_mean": 0.007275132275132284
+      },
+      "year": 2020
+    },
+    {
+      "animal_anchor_orientation": "original_A_to_B",
+      "annuli": [
+        {
+          "annual_centroid_separation_band": "<=5 km",
+          "below_minimum_eight_pair_standalone_biological_gate": false,
+          "n_original_dyads": 14,
+          "signed_sum_over_dyads": -0.12301587301587297,
+          "winter_minus_summer_L_mean": -0.008786848072562355
+        },
+        {
+          "annual_centroid_separation_band": "(5,10] km",
+          "below_minimum_eight_pair_standalone_biological_gate": true,
+          "n_original_dyads": 2,
+          "signed_sum_over_dyads": 0.19841269841269843,
+          "winter_minus_summer_L_mean": 0.09920634920634921
+        },
+        {
+          "annual_centroid_separation_band": "(10,25] km",
+          "below_minimum_eight_pair_standalone_biological_gate": true,
+          "n_original_dyads": 5,
+          "signed_sum_over_dyads": 0.5188492063492064,
+          "winter_minus_summer_L_mean": 0.10376984126984128
+        }
+      ],
+      "far10to25_fraction_of_signed_whole_source_sum": 0.8731218697829716,
+      "geodesic_GPS_near_radius_km": 0.5,
+      "note": "The share is an arithmetic ratio, may exceed 1 or be negative if source contributions offset. Not causal fraction explained or independent pair effects",
+      "source": "turkey",
+      "time_tolerance_seconds": 1800,
+      "whole_source": {
+        "n_original_dyads": 21,
+        "signed_sum_over_dyads": 0.5942460317460319,
+        "winter_minus_summer_L_mean": 0.028297430083144375
+      },
+      "year": 2020
+    },
+    {
+      "animal_anchor_orientation": "original_A_to_B",
+      "annuli": [
+        {
+          "annual_centroid_separation_band": "<=5 km",
+          "below_minimum_eight_pair_standalone_biological_gate": false,
+          "n_original_dyads": 14,
+          "signed_sum_over_dyads": 0.22519841269841273,
+          "winter_minus_summer_L_mean": 0.01608560090702948
+        },
+        {
+          "annual_centroid_separation_band": "(5,10] km",
+          "below_minimum_eight_pair_standalone_biological_gate": true,
+          "n_original_dyads": 2,
+          "signed_sum_over_dyads": 0.09325396825396826,
+          "winter_minus_summer_L_mean": 0.04662698412698413
+        },
+        {
+          "annual_centroid_separation_band": "(10,25] km",
+          "below_minimum_eight_pair_standalone_biological_gate": true,
+          "n_original_dyads": 5,
+          "signed_sum_over_dyads": 0.27579365079365076,
+          "winter_minus_summer_L_mean": 0.05515873015873015
+        }
+      ],
+      "far10to25_fraction_of_signed_whole_source_sum": 0.4641068447412353,
+      "geodesic_GPS_near_radius_km": 1.0,
+      "note": "The share is an arithmetic ratio, may exceed 1 or be negative if source contributions offset. Not causal fraction explained or independent pair effects",
+      "source": "turkey",
+      "time_tolerance_seconds": 1800,
+      "whole_source": {
+        "n_original_dyads": 21,
+        "signed_sum_over_dyads": 0.5942460317460317,
+        "winter_minus_summer_L_mean": 0.02829743008314437
+      },
+      "year": 2020
+    },
+    {
+      "animal_anchor_orientation": "original_A_to_B",
+      "annuli": [
+        {
+          "annual_centroid_separation_band": "<=5 km",
+          "below_minimum_eight_pair_standalone_biological_gate": false,
+          "n_original_dyads": 14,
+          "signed_sum_over_dyads": 0.019841269841269916,
+          "winter_minus_summer_L_mean": 0.0014172335600907084
+        },
+        {
+          "annual_centroid_separation_band": "(5,10] km",
+          "below_minimum_eight_pair_standalone_biological_gate": true,
+          "n_original_dyads": 2,
+          "signed_sum_over_dyads": 0.000992063492063499,
+          "winter_minus_summer_L_mean": 0.0004960317460317495
+        },
+        {
+          "annual_centroid_separation_band": "(10,25] km",
+          "below_minimum_eight_pair_standalone_biological_gate": true,
+          "n_original_dyads": 5,
+          "signed_sum_over_dyads": 0.04464285714285715,
+          "winter_minus_summer_L_mean": 0.00892857142857143
+        }
+      ],
+      "far10to25_fraction_of_signed_whole_source_sum": 0.681818181818181,
+      "geodesic_GPS_near_radius_km": 2.0,
+      "note": "The share is an arithmetic ratio, may exceed 1 or be negative if source contributions offset. Not causal fraction explained or independent pair effects",
+      "source": "turkey",
+      "time_tolerance_seconds": 1800,
+      "whole_source": {
+        "n_original_dyads": 21,
+        "signed_sum_over_dyads": 0.06547619047619056,
+        "winter_minus_summer_L_mean": 0.0031179138321995505
+      },
+      "year": 2020
+    },
+    {
+      "animal_anchor_orientation": "reversed_B_to_A",
+      "annuli": [
+        {
+          "annual_centroid_separation_band": "<=5 km",
+          "below_minimum_eight_pair_standalone_biological_gate": false,
+          "n_original_dyads": 14,
+          "signed_sum_over_dyads": -0.06051587301587311,
+          "winter_minus_summer_L_mean": -0.004322562358276651
+        },
+        {
+          "annual_centroid_separation_band": "(5,10] km",
+          "below_minimum_eight_pair_standalone_biological_gate": true,
+          "n_original_dyads": 2,
+          "signed_sum_over_dyads": 0.2043650793650794,
+          "winter_minus_summer_L_mean": 0.1021825396825397
+        },
+        {
+          "annual_centroid_separation_band": "(10,25] km",
+          "below_minimum_eight_pair_standalone_biological_gate": true,
+          "n_original_dyads": 5,
+          "signed_sum_over_dyads": 0.5267857142857143,
+          "winter_minus_summer_L_mean": 0.10535714285714286
+        }
+      ],
+      "far10to25_fraction_of_signed_whole_source_sum": 0.7855029585798817,
+      "geodesic_GPS_near_radius_km": 0.5,
+      "note": "The share is an arithmetic ratio, may exceed 1 or be negative if source contributions offset. Not causal fraction explained or independent pair effects",
+      "source": "turkey",
+      "time_tolerance_seconds": 1800,
+      "whole_source": {
+        "n_original_dyads": 21,
+        "signed_sum_over_dyads": 0.6706349206349206,
+        "winter_minus_summer_L_mean": 0.031934996220710506
+      },
+      "year": 2020
+    },
+    {
+      "animal_anchor_orientation": "reversed_B_to_A",
+      "annuli": [
+        {
+          "annual_centroid_separation_band": "<=5 km",
+          "below_minimum_eight_pair_standalone_biological_gate": false,
+          "n_original_dyads": 14,
+          "signed_sum_over_dyads": 0.314484126984127,
+          "winter_minus_summer_L_mean": 0.02246315192743764
+        },
+        {
+          "annual_centroid_separation_band": "(5,10] km",
+          "below_minimum_eight_pair_standalone_biological_gate": true,
+          "n_original_dyads": 2,
+          "signed_sum_over_dyads": 0.1121031746031746,
+          "winter_minus_summer_L_mean": 0.0560515873015873
+        },
+        {
+          "annual_centroid_separation_band": "(10,25] km",
+          "below_minimum_eight_pair_standalone_biological_gate": true,
+          "n_original_dyads": 5,
+          "signed_sum_over_dyads": 0.23511904761904762,
+          "winter_minus_summer_L_mean": 0.04702380952380952
+        }
+      ],
+      "far10to25_fraction_of_signed_whole_source_sum": 0.3553223388305847,
+      "geodesic_GPS_near_radius_km": 1.0,
+      "note": "The share is an arithmetic ratio, may exceed 1 or be negative if source contributions offset. Not causal fraction explained or independent pair effects",
+      "source": "turkey",
+      "time_tolerance_seconds": 1800,
+      "whole_source": {
+        "n_original_dyads": 21,
+        "signed_sum_over_dyads": 0.6617063492063492,
+        "winter_minus_summer_L_mean": 0.031509826152683294
+      },
+      "year": 2020
+    },
+    {
+      "animal_anchor_orientation": "reversed_B_to_A",
+      "annuli": [
+        {
+          "annual_centroid_separation_band": "<=5 km",
+          "below_minimum_eight_pair_standalone_biological_gate": false,
+          "n_original_dyads": 14,
+          "signed_sum_over_dyads": 0.09126984126984145,
+          "winter_minus_summer_L_mean": 0.006519274376417246
+        },
+        {
+          "annual_centroid_separation_band": "(5,10] km",
+          "below_minimum_eight_pair_standalone_biological_gate": true,
+          "n_original_dyads": 2,
+          "signed_sum_over_dyads": 0.009920634920634927,
+          "winter_minus_summer_L_mean": 0.0049603174603174635
+        },
+        {
+          "annual_centroid_separation_band": "(10,25] km",
+          "below_minimum_eight_pair_standalone_biological_gate": true,
+          "n_original_dyads": 5,
+          "signed_sum_over_dyads": 0.00793650793650795,
+          "winter_minus_summer_L_mean": 0.00158730158730159
+        }
+      ],
+      "far10to25_fraction_of_signed_whole_source_sum": 0.07272727272727272,
+      "geodesic_GPS_near_radius_km": 2.0,
+      "note": "The share is an arithmetic ratio, may exceed 1 or be negative if source contributions offset. Not causal fraction explained or independent pair effects",
+      "source": "turkey",
+      "time_tolerance_seconds": 1800,
+      "whole_source": {
+        "n_original_dyads": 21,
+        "signed_sum_over_dyads": 0.10912698412698432,
+        "winter_minus_summer_L_mean": 0.00519652305366592
+      },
+      "year": 2020
+    }
+  ],
+  "schema_version": 1,
+  "source_calendar_scope": "Jan/Feb/Dec of source year versus Jun/Jul/Aug, not contiguous winter; no verified December 2020 support",
+  "source_git_blob_original_spatial_influence": "12b1551acbf6cdfe2467449d221294e786b60292",
+  "source_sha256_original_single_mover": "7b84c27d0b05449e0a53dc465964c7fd0c8c3aed81478556387cb706598f4225",
+  "status": "POST_INSPECTION_SOURCE_WEIGHTED_PAIR_DUPLICATION_ACCOUNTING",
+  "year2020_one_animal_in_all_five_far10_to25km_dyads": true,
+  "year2020_one_animal_janfeb_to_summer_source_center_shift_km": 14.52355751362658
+}

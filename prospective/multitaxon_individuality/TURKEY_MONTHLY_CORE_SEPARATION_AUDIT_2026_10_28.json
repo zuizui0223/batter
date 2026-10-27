@@ -1,0 +1,28 @@
+{
+  "fully_2020": 7,
+  "group_months": 84,
+  "observed_2020": 7,
+  "original_source_sha256": "2e2ec358078475c7a45a2fdb8f332ae35497cd351048ac333c904325df6d7cd2",
+  "status": "SOURCE_GPS_MONTHLY_CENTROID_AGGREGATE_VERIFIED",
+  "transition_bracket": {
+    "first_later_observed_separated_month": 3,
+    "last_observed_close_month": 2,
+    "months_strictly_between": 0,
+    "observed_intermediate_months_in_bracket": 0,
+    "status": "OBSERVATION_BRACKET_NOT_TRACKED_TRANSITION_TIME",
+    "unobserved_months_in_bracket": 0
+  },
+  "year_month_rows": 24,
+  "year_support": [
+    {
+      "months_no_valid_animal_centers": 4,
+      "months_with_at_least_3_animals": 8,
+      "year": 2019
+    },
+    {
+      "months_no_valid_animal_centers": 5,
+      "months_with_at_least_3_animals": 7,
+      "year": 2020
+    }
+  ]
+}

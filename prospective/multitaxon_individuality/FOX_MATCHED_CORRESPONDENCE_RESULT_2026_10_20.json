@@ -1,0 +1,1937 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-20",
+  "source_doi": "10.5441/001/1.304",
+  "design": "FOX_MATCHED_CORRESPONDENCE_DESIGN_2026_10_20.md",
+  "evidence_status": "EXPLORATORY_SOURCE_TEMPORAL_CORRESPONDENCE_AND_MATCHED_GEOGRAPHIC_X",
+  "source_receipts": {
+    "events": {
+      "sha256": "e670f9238477118833794b832b076e503350015f2fc5f05b0f700c151b38d717",
+      "md5": "5a997cd23c18f8cc9435636b5376b3ec",
+      "bytes": 31767499
+    },
+    "reference": {
+      "sha256": "01061eca717d73777dbc62e0d6f80c738538920f9aeb1bae15b8fb5f3fa4fcd8",
+      "md5": "c2cc154a65ab0bdba1834532398ebd6c",
+      "bytes": 23611
+    }
+  },
+  "observation_audit": {
+    "original_rows": 166338,
+    "source_manual_outlier_removed": 20266,
+    "retained_after_source_outlier": 146072,
+    "additional_hdop_gt5_sat_below4_or_missing_removed": 491,
+    "after_quality": 145581,
+    "non_gps_after_quality_removed": 0,
+    "invisible_or_missing_visibility_after_quality_removed": 0,
+    "after_gps_visible": 145581,
+    "invalid_position_time_or_id_removed": 0,
+    "source_order_nonincreasing_within_animal": 1,
+    "outside_reference_deployment_interval": 0,
+    "retained_valid_events": 145581,
+    "n_original_individuals": 35,
+    "reference_rows": 39,
+    "reference_individuals": 35,
+    "reference_tags": 14,
+    "retained_source_site_year_cohorts": 4,
+    "missing_activity_x": 0,
+    "missing_activity_y": 0
+  },
+  "step_audit": {
+    "candidate_adjacent_pairs": 145546,
+    "tag_or_deployment_boundary_removed": 4,
+    "nonpositive_duration_removed": 0,
+    "cross_utc_date_removed": 1522,
+    "outside_9to15minute_cadence_removed": 13097,
+    "same_day_9to15minute_pairs_before_speed": 130923,
+    "speed_gt10_kmh_removed": 0,
+    "source_9to15minute_same_day_steps": 130923
+  },
+  "n_preselected_cohort_months": 10,
+  "n_spatial_scenarios": 2,
+  "source_positions_exported": false,
+  "individual_identifiers_exported": false,
+  "biological_randomization_p_values_reported": false,
+  "results": [
+    {
+      "site": "Somerley",
+      "reference_deployment_year": 2019,
+      "month": "2019-05",
+      "grid_km": 1.0,
+      "clock_bin_hours": 6,
+      "n_source_month_animals": 10,
+      "n_source_month_eligible_animals": 10,
+      "training_steps": 7084,
+      "all_eligible_heldout_steps": 11652,
+      "n_common_training_contexts": 12,
+      "n_evaluated_animals": 4,
+      "heldout_shared_context_steps": 5783,
+      "heldout_animal_days": 59,
+      "no_train_test_calendar_date_overlap": true,
+      "status": "EXPLORATORY_MATCHED_R_X",
+      "assays": {
+        "speed_three": {
+          "status": "DESCRIPTIVE_LOW_MAPPING_RESOLUTION",
+          "n_evaluated_animals": 4,
+          "n_movable_animals": 2,
+          "n_admissible_maps": 2,
+          "minimum_attainable_tail_fraction": 0.5,
+          "observed_gain": 0.0014417606669891593,
+          "reference_mean_gain": -0.00431576658925239,
+          "excess_over_reference": 0.00575752725624155,
+          "reference_q025": -0.009785417482681864,
+          "reference_q975": 0.001153884304177082,
+          "tail_fraction": 0.5,
+          "n_positive_personal_vs_pooled_animals": 1,
+          "individual_gain_range": [
+            -0.01361659338867171,
+            0.03333434550361459
+          ],
+          "biological_randomization_p_value": null,
+          "heldout_class_fraction_equal_animal_day": [
+            0.27936574630797306,
+            0.44864428343775636,
+            0.2719899702542706
+          ],
+          "heldout_last_class_fraction_individual_range": [
+            0.1303449945422078,
+            0.3872173643635956
+          ]
+        },
+        "speed_binary": {
+          "status": "DESCRIPTIVE_LOW_MAPPING_RESOLUTION",
+          "n_evaluated_animals": 4,
+          "n_movable_animals": 2,
+          "n_admissible_maps": 2,
+          "minimum_attainable_tail_fraction": 0.5,
+          "observed_gain": 0.003754103423745908,
+          "reference_mean_gain": 0.0034609257268915904,
+          "excess_over_reference": 0.0002931776968543177,
+          "reference_q025": 0.0031824069148799873,
+          "reference_q975": 0.003739444538903193,
+          "tail_fraction": 0.5,
+          "n_positive_personal_vs_pooled_animals": 1,
+          "individual_gain_range": [
+            -0.01881123939327314,
+            0.03887884661901621
+          ],
+          "biological_randomization_p_value": null,
+          "heldout_class_fraction_equal_animal_day": [
+            0.7280100297457294,
+            0.2719899702542706
+          ],
+          "heldout_last_class_fraction_individual_range": [
+            0.1303449945422078,
+            0.3872173643635956
+          ]
+        },
+        "activity": {
+          "status": "DESCRIPTIVE_LOW_MAPPING_RESOLUTION",
+          "n_evaluated_animals": 4,
+          "n_movable_animals": 2,
+          "n_admissible_maps": 2,
+          "minimum_attainable_tail_fraction": 0.5,
+          "observed_gain": -0.0038486898175613365,
+          "reference_mean_gain": -0.0027455708112812246,
+          "excess_over_reference": -0.001103119006280112,
+          "reference_q025": -0.0037935338672473303,
+          "reference_q975": -0.0016976077553151193,
+          "tail_fraction": 1.0,
+          "n_positive_personal_vs_pooled_animals": 0,
+          "individual_gain_range": [
+            -0.005664224724067505,
+            -0.0008018625522838995
+          ],
+          "biological_randomization_p_value": null,
+          "heldout_class_fraction_equal_animal_day": [
+            0.44458416244939225,
+            0.5554158375506077
+          ],
+          "heldout_last_class_fraction_individual_range": [
+            0.43709606853275074,
+            0.7288812134051501
+          ]
+        }
+      },
+      "allowed_matrix_sha256": "20b0058b6dd7542a64491a058cfc7f4f49a84511cbe4145f1ddf95f451f3179d",
+      "n_supported_target_donor_entries": 6,
+      "n_targets_with_some_allowed_other_donor": 2,
+      "matched_X": {
+        "n_animals": 4,
+        "heldout_qc_fixes": 6738,
+        "n_supported_dependent_dyads": 6,
+        "n_dyads_missing_shared_date_support": 0,
+        "axis": "X_2D_GEOGRAPHIC_OVERLAP_NOT_RESOURCE_OR_SYNCHRONOUS_ENCOUNTERS",
+        "uses_full_qc_geography_not_selected_R_contexts": true,
+        "scales": [
+          {
+            "grid_km": 0.5,
+            "mean_overlap": 0.14871898627620236,
+            "median_overlap": 0.02493155525333298,
+            "n_zero_overlap_dyads": 3,
+            "origin_shift_mean_range": [
+              0.1417966226868318,
+              0.16279486920467848
+            ]
+          },
+          {
+            "grid_km": 1.0,
+            "mean_overlap": 0.18208935227586412,
+            "median_overlap": 0.025844314369217095,
+            "n_zero_overlap_dyads": 3,
+            "origin_shift_mean_range": [
+              0.17318073832896355,
+              0.2540243718969795
+            ]
+          },
+          {
+            "grid_km": 2.0,
+            "mean_overlap": 0.18389620957947805,
+            "median_overlap": 0.025844314369217095,
+            "n_zero_overlap_dyads": 3,
+            "origin_shift_mean_range": [
+              0.18389620957947805,
+              0.4913028563418182
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "site": "Somerley",
+      "reference_deployment_year": 2019,
+      "month": "2019-05",
+      "grid_km": 2.0,
+      "clock_bin_hours": 6,
+      "n_source_month_animals": 10,
+      "n_source_month_eligible_animals": 10,
+      "training_steps": 7084,
+      "all_eligible_heldout_steps": 11652,
+      "n_common_training_contexts": 10,
+      "n_evaluated_animals": 4,
+      "heldout_shared_context_steps": 6181,
+      "heldout_animal_days": 59,
+      "no_train_test_calendar_date_overlap": true,
+      "status": "EXPLORATORY_MATCHED_R_X",
+      "assays": {
+        "speed_three": {
+          "status": "DESCRIPTIVE_LOW_MAPPING_RESOLUTION",
+          "n_evaluated_animals": 4,
+          "n_movable_animals": 2,
+          "n_admissible_maps": 2,
+          "minimum_attainable_tail_fraction": 0.5,
+          "observed_gain": 0.006282165377666792,
+          "reference_mean_gain": -0.005135507547570526,
+          "excess_over_reference": 0.011417672925237318,
+          "reference_q025": -0.01598229682654598,
+          "reference_q975": 0.005711281731404925,
+          "tail_fraction": 0.5,
+          "n_positive_personal_vs_pooled_animals": 2,
+          "individual_gain_range": [
+            -0.009042616998950757,
+            0.027018780266052582
+          ],
+          "biological_randomization_p_value": null,
+          "heldout_class_fraction_equal_animal_day": [
+            0.281307652476024,
+            0.4459154890695406,
+            0.2727768584544354
+          ],
+          "heldout_last_class_fraction_individual_range": [
+            0.12221357653281553,
+            0.39156032088435466
+          ]
+        },
+        "speed_binary": {
+          "status": "DESCRIPTIVE_LOW_MAPPING_RESOLUTION",
+          "n_evaluated_animals": 4,
+          "n_movable_animals": 2,
+          "n_admissible_maps": 2,
+          "minimum_attainable_tail_fraction": 0.5,
+          "observed_gain": 0.003335465631102476,
+          "reference_mean_gain": 0.0004889473867555924,
+          "excess_over_reference": 0.0028465182443468836,
+          "reference_q025": -0.002215244945373947,
+          "reference_q975": 0.0031931397188851313,
+          "tail_fraction": 0.5,
+          "n_positive_personal_vs_pooled_animals": 2,
+          "individual_gain_range": [
+            -0.01159202975625425,
+            0.02481708647122404
+          ],
+          "biological_randomization_p_value": null,
+          "heldout_class_fraction_equal_animal_day": [
+            0.7272231415455646,
+            0.2727768584544354
+          ],
+          "heldout_last_class_fraction_individual_range": [
+            0.12221357653281553,
+            0.39156032088435466
+          ]
+        },
+        "activity": {
+          "status": "DESCRIPTIVE_LOW_MAPPING_RESOLUTION",
+          "n_evaluated_animals": 4,
+          "n_movable_animals": 2,
+          "n_admissible_maps": 2,
+          "minimum_attainable_tail_fraction": 0.5,
+          "observed_gain": -0.005412668251945368,
+          "reference_mean_gain": -0.00697549541979111,
+          "excess_over_reference": 0.0015628271678457418,
+          "reference_q025": -0.008460181229244563,
+          "reference_q975": -0.005490809610337656,
+          "tail_fraction": 0.5,
+          "n_positive_personal_vs_pooled_animals": 1,
+          "individual_gain_range": [
+            -0.014746482016323854,
+            0.001065553376783897
+          ],
+          "biological_randomization_p_value": null,
+          "heldout_class_fraction_equal_animal_day": [
+            0.4506323643372977,
+            0.5493676356627023
+          ],
+          "heldout_last_class_fraction_individual_range": [
+            0.41011762227220544,
+            0.7325977322250793
+          ]
+        }
+      },
+      "allowed_matrix_sha256": "20b0058b6dd7542a64491a058cfc7f4f49a84511cbe4145f1ddf95f451f3179d",
+      "n_supported_target_donor_entries": 6,
+      "n_targets_with_some_allowed_other_donor": 2,
+      "matched_X": {
+        "n_animals": 4,
+        "heldout_qc_fixes": 6738,
+        "n_supported_dependent_dyads": 6,
+        "n_dyads_missing_shared_date_support": 0,
+        "axis": "X_2D_GEOGRAPHIC_OVERLAP_NOT_RESOURCE_OR_SYNCHRONOUS_ENCOUNTERS",
+        "uses_full_qc_geography_not_selected_R_contexts": true,
+        "scales": [
+          {
+            "grid_km": 0.5,
+            "mean_overlap": 0.14871898627620236,
+            "median_overlap": 0.02493155525333298,
+            "n_zero_overlap_dyads": 3,
+            "origin_shift_mean_range": [
+              0.1417966226868318,
+              0.16279486920467848
+            ]
+          },
+          {
+            "grid_km": 1.0,
+            "mean_overlap": 0.18208935227586412,
+            "median_overlap": 0.025844314369217095,
+            "n_zero_overlap_dyads": 3,
+            "origin_shift_mean_range": [
+              0.17318073832896355,
+              0.2540243718969795
+            ]
+          },
+          {
+            "grid_km": 2.0,
+            "mean_overlap": 0.18389620957947805,
+            "median_overlap": 0.025844314369217095,
+            "n_zero_overlap_dyads": 3,
+            "origin_shift_mean_range": [
+              0.18389620957947805,
+              0.4913028563418182
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "site": "Britford",
+      "reference_deployment_year": 2016,
+      "month": "2016-05",
+      "grid_km": 1.0,
+      "clock_bin_hours": 6,
+      "n_source_month_animals": 7,
+      "n_source_month_eligible_animals": 7,
+      "training_steps": 3677,
+      "all_eligible_heldout_steps": 9357,
+      "n_common_training_contexts": 4,
+      "n_evaluated_animals": 4,
+      "heldout_shared_context_steps": 5521,
+      "heldout_animal_days": 56,
+      "no_train_test_calendar_date_overlap": true,
+      "status": "EXPLORATORY_MATCHED_R_X",
+      "assays": {
+        "speed_three": {
+          "status": "CONDITIONAL_MAPPING_REFERENCE_ASSUMPTION_REQUIRED",
+          "n_evaluated_animals": 4,
+          "n_movable_animals": 4,
+          "n_admissible_maps": 24,
+          "minimum_attainable_tail_fraction": 0.041666666666666664,
+          "observed_gain": -0.011198157055393622,
+          "reference_mean_gain": -0.06438057535135215,
+          "excess_over_reference": 0.05318241829595853,
+          "reference_q025": -0.12100265444647436,
+          "reference_q975": -0.019393057792078595,
+          "tail_fraction": 0.041666666666666664,
+          "n_positive_personal_vs_pooled_animals": 2,
+          "individual_gain_range": [
+            -0.09795174637923994,
+            0.05395274428006372
+          ],
+          "biological_randomization_p_value": null,
+          "heldout_class_fraction_equal_animal_day": [
+            0.2988902366117085,
+            0.5671427775761194,
+            0.13396698581217206
+          ],
+          "heldout_last_class_fraction_individual_range": [
+            0.08192603509791595,
+            0.2588795465224649
+          ]
+        },
+        "speed_binary": {
+          "status": "CONDITIONAL_MAPPING_REFERENCE_ASSUMPTION_REQUIRED",
+          "n_evaluated_animals": 4,
+          "n_movable_animals": 4,
+          "n_admissible_maps": 24,
+          "minimum_attainable_tail_fraction": 0.041666666666666664,
+          "observed_gain": 0.0016791495914670628,
+          "reference_mean_gain": -0.025782631826554322,
+          "excess_over_reference": 0.027461781418021386,
+          "reference_q025": -0.057664744254599894,
+          "reference_q975": 0.0039416713776869675,
+          "tail_fraction": 0.125,
+          "n_positive_personal_vs_pooled_animals": 3,
+          "individual_gain_range": [
+            -0.04776509206364195,
+            0.029695397213418424
+          ],
+          "biological_randomization_p_value": null,
+          "heldout_class_fraction_equal_animal_day": [
+            0.866033014187828,
+            0.13396698581217206
+          ],
+          "heldout_last_class_fraction_individual_range": [
+            0.08192603509791595,
+            0.2588795465224649
+          ]
+        },
+        "activity": {
+          "status": "CONDITIONAL_MAPPING_REFERENCE_ASSUMPTION_REQUIRED",
+          "n_evaluated_animals": 4,
+          "n_movable_animals": 4,
+          "n_admissible_maps": 24,
+          "minimum_attainable_tail_fraction": 0.041666666666666664,
+          "observed_gain": -0.011015417212854952,
+          "reference_mean_gain": -0.035018024156800075,
+          "excess_over_reference": 0.024002606943945123,
+          "reference_q025": -0.05352341479705512,
+          "reference_q975": -0.008801491666824613,
+          "tail_fraction": 0.125,
+          "n_positive_personal_vs_pooled_animals": 2,
+          "individual_gain_range": [
+            -0.05758513633787132,
+            0.031076474960368392
+          ],
+          "biological_randomization_p_value": null,
+          "heldout_class_fraction_equal_animal_day": [
+            0.5356497702567353,
+            0.46435022974326473
+          ],
+          "heldout_last_class_fraction_individual_range": [
+            0.373252383096942,
+            0.5873517548090562
+          ]
+        }
+      },
+      "allowed_matrix_sha256": "ff07b903018af8775c28c8474dbd9c3f375ee468bfb62fcc58cb0726d0e38423",
+      "n_supported_target_donor_entries": 16,
+      "n_targets_with_some_allowed_other_donor": 4,
+      "matched_X": {
+        "n_animals": 4,
+        "heldout_qc_fixes": 7105,
+        "n_supported_dependent_dyads": 6,
+        "n_dyads_missing_shared_date_support": 0,
+        "axis": "X_2D_GEOGRAPHIC_OVERLAP_NOT_RESOURCE_OR_SYNCHRONOUS_ENCOUNTERS",
+        "uses_full_qc_geography_not_selected_R_contexts": true,
+        "scales": [
+          {
+            "grid_km": 0.5,
+            "mean_overlap": 0.282123809352994,
+            "median_overlap": 0.25779400263855323,
+            "n_zero_overlap_dyads": 0,
+            "origin_shift_mean_range": [
+              0.19282646660555394,
+              0.30166748963504525
+            ]
+          },
+          {
+            "grid_km": 1.0,
+            "mean_overlap": 0.7594721081774938,
+            "median_overlap": 0.7645783815481415,
+            "n_zero_overlap_dyads": 0,
+            "origin_shift_mean_range": [
+              0.3361243829859019,
+              0.7594721081774938
+            ]
+          },
+          {
+            "grid_km": 2.0,
+            "mean_overlap": 0.9591291677777085,
+            "median_overlap": 0.9591291677777081,
+            "n_zero_overlap_dyads": 0,
+            "origin_shift_mean_range": [
+              0.7793380550541867,
+              0.9591291677777085
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "site": "Britford",
+      "reference_deployment_year": 2016,
+      "month": "2016-05",
+      "grid_km": 2.0,
+      "clock_bin_hours": 6,
+      "n_source_month_animals": 7,
+      "n_source_month_eligible_animals": 7,
+      "training_steps": 3677,
+      "all_eligible_heldout_steps": 9357,
+      "n_common_training_contexts": 4,
+      "n_evaluated_animals": 4,
+      "heldout_shared_context_steps": 6479,
+      "heldout_animal_days": 56,
+      "no_train_test_calendar_date_overlap": true,
+      "status": "EXPLORATORY_MATCHED_R_X",
+      "assays": {
+        "speed_three": {
+          "status": "CONDITIONAL_MAPPING_REFERENCE_ASSUMPTION_REQUIRED",
+          "n_evaluated_animals": 4,
+          "n_movable_animals": 4,
+          "n_admissible_maps": 24,
+          "minimum_attainable_tail_fraction": 0.041666666666666664,
+          "observed_gain": 0.006745375905365343,
+          "reference_mean_gain": -0.043296812121468714,
+          "excess_over_reference": 0.05004218802683406,
+          "reference_q025": -0.09437946485510962,
+          "reference_q975": 0.003931207343074327,
+          "tail_fraction": 0.041666666666666664,
+          "n_positive_personal_vs_pooled_animals": 2,
+          "individual_gain_range": [
+            -0.019954575068996585,
+            0.0467209528978316
+          ],
+          "biological_randomization_p_value": null,
+          "heldout_class_fraction_equal_animal_day": [
+            0.28951763539593717,
+            0.5671653452741532,
+            0.14331701932990965
+          ],
+          "heldout_last_class_fraction_individual_range": [
+            0.06109270857461033,
+            0.27637151110268227
+          ]
+        },
+        "speed_binary": {
+          "status": "CONDITIONAL_MAPPING_REFERENCE_ASSUMPTION_REQUIRED",
+          "n_evaluated_animals": 4,
+          "n_movable_animals": 4,
+          "n_admissible_maps": 24,
+          "minimum_attainable_tail_fraction": 0.041666666666666664,
+          "observed_gain": 0.01161929829512509,
+          "reference_mean_gain": -0.015300270479800072,
+          "excess_over_reference": 0.026919568774925164,
+          "reference_q025": -0.04580572991475454,
+          "reference_q975": 0.022058557287186847,
+          "tail_fraction": 0.16666666666666666,
+          "n_positive_personal_vs_pooled_animals": 3,
+          "individual_gain_range": [
+            -0.006252705053838178,
+            0.0273660868317814
+          ],
+          "biological_randomization_p_value": null,
+          "heldout_class_fraction_equal_animal_day": [
+            0.8566829806700904,
+            0.14331701932990965
+          ],
+          "heldout_last_class_fraction_individual_range": [
+            0.06109270857461033,
+            0.27637151110268227
+          ]
+        },
+        "activity": {
+          "status": "CONDITIONAL_MAPPING_REFERENCE_ASSUMPTION_REQUIRED",
+          "n_evaluated_animals": 4,
+          "n_movable_animals": 4,
+          "n_admissible_maps": 24,
+          "minimum_attainable_tail_fraction": 0.041666666666666664,
+          "observed_gain": 0.004256940784346869,
+          "reference_mean_gain": -0.029360140210367498,
+          "excess_over_reference": 0.03361708099471437,
+          "reference_q025": -0.055019841277085896,
+          "reference_q975": 0.001934957823516011,
+          "tail_fraction": 0.041666666666666664,
+          "n_positive_personal_vs_pooled_animals": 2,
+          "individual_gain_range": [
+            -0.024077966472601367,
+            0.038922786338182865
+          ],
+          "biological_randomization_p_value": null,
+          "heldout_class_fraction_equal_animal_day": [
+            0.5342906423118383,
+            0.46570935768816174
+          ],
+          "heldout_last_class_fraction_individual_range": [
+            0.37469280740604727,
+            0.5991459968541502
+          ]
+        }
+      },
+      "allowed_matrix_sha256": "ff07b903018af8775c28c8474dbd9c3f375ee468bfb62fcc58cb0726d0e38423",
+      "n_supported_target_donor_entries": 16,
+      "n_targets_with_some_allowed_other_donor": 4,
+      "matched_X": {
+        "n_animals": 4,
+        "heldout_qc_fixes": 7105,
+        "n_supported_dependent_dyads": 6,
+        "n_dyads_missing_shared_date_support": 0,
+        "axis": "X_2D_GEOGRAPHIC_OVERLAP_NOT_RESOURCE_OR_SYNCHRONOUS_ENCOUNTERS",
+        "uses_full_qc_geography_not_selected_R_contexts": true,
+        "scales": [
+          {
+            "grid_km": 0.5,
+            "mean_overlap": 0.282123809352994,
+            "median_overlap": 0.25779400263855323,
+            "n_zero_overlap_dyads": 0,
+            "origin_shift_mean_range": [
+              0.19282646660555394,
+              0.30166748963504525
+            ]
+          },
+          {
+            "grid_km": 1.0,
+            "mean_overlap": 0.7594721081774938,
+            "median_overlap": 0.7645783815481415,
+            "n_zero_overlap_dyads": 0,
+            "origin_shift_mean_range": [
+              0.3361243829859019,
+              0.7594721081774938
+            ]
+          },
+          {
+            "grid_km": 2.0,
+            "mean_overlap": 0.9591291677777085,
+            "median_overlap": 0.9591291677777081,
+            "n_zero_overlap_dyads": 0,
+            "origin_shift_mean_range": [
+              0.7793380550541867,
+              0.9591291677777085
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "site": "Britford",
+      "reference_deployment_year": 2017,
+      "month": "2017-03",
+      "grid_km": 1.0,
+      "clock_bin_hours": 6,
+      "n_source_month_animals": 7,
+      "n_source_month_eligible_animals": 6,
+      "training_steps": 1215,
+      "all_eligible_heldout_steps": 6024,
+      "n_common_training_contexts": 0,
+      "n_evaluated_animals": 0,
+      "heldout_shared_context_steps": 0,
+      "heldout_animal_days": 0,
+      "no_train_test_calendar_date_overlap": true,
+      "status": "NOT_ESTIMABLE_SHARED_HOLDOUT_SUPPORT",
+      "assays": {}
+    },
+    {
+      "site": "Britford",
+      "reference_deployment_year": 2017,
+      "month": "2017-03",
+      "grid_km": 2.0,
+      "clock_bin_hours": 6,
+      "n_source_month_animals": 7,
+      "n_source_month_eligible_animals": 6,
+      "training_steps": 1215,
+      "all_eligible_heldout_steps": 6024,
+      "n_common_training_contexts": 0,
+      "n_evaluated_animals": 0,
+      "heldout_shared_context_steps": 0,
+      "heldout_animal_days": 0,
+      "no_train_test_calendar_date_overlap": true,
+      "status": "NOT_ESTIMABLE_SHARED_HOLDOUT_SUPPORT",
+      "assays": {}
+    },
+    {
+      "site": "Britford",
+      "reference_deployment_year": 2017,
+      "month": "2017-04",
+      "grid_km": 1.0,
+      "clock_bin_hours": 6,
+      "n_source_month_animals": 9,
+      "n_source_month_eligible_animals": 8,
+      "training_steps": 4978,
+      "all_eligible_heldout_steps": 8402,
+      "n_common_training_contexts": 9,
+      "n_evaluated_animals": 3,
+      "heldout_shared_context_steps": 1990,
+      "heldout_animal_days": 22,
+      "no_train_test_calendar_date_overlap": true,
+      "status": "EXPLORATORY_MATCHED_R_X",
+      "assays": {
+        "speed_three": {
+          "status": "NOT_CALIBRATABLE_IDENTITY_ONLY",
+          "n_evaluated_animals": 3,
+          "n_movable_animals": 0,
+          "n_admissible_maps": 1,
+          "minimum_attainable_tail_fraction": null,
+          "observed_gain": 0.04885389631596767,
+          "reference_mean_gain": 0.04885389631596767,
+          "excess_over_reference": 0.0,
+          "reference_q025": 0.04885389631596767,
+          "reference_q975": 0.04885389631596767,
+          "tail_fraction": null,
+          "n_positive_personal_vs_pooled_animals": 2,
+          "individual_gain_range": [
+            -0.03396587431453005,
+            0.15243038670460488
+          ],
+          "biological_randomization_p_value": null,
+          "heldout_class_fraction_equal_animal_day": [
+            0.36944166155608665,
+            0.45538009489836645,
+            0.17517824354554692
+          ],
+          "heldout_last_class_fraction_individual_range": [
+            0.028423727196516632,
+            0.28762518500450973
+          ]
+        },
+        "speed_binary": {
+          "status": "NOT_CALIBRATABLE_IDENTITY_ONLY",
+          "n_evaluated_animals": 3,
+          "n_movable_animals": 0,
+          "n_admissible_maps": 1,
+          "minimum_attainable_tail_fraction": null,
+          "observed_gain": 0.05249816669267756,
+          "reference_mean_gain": 0.05249816669267756,
+          "excess_over_reference": 0.0,
+          "reference_q025": 0.05249816669267756,
+          "reference_q975": 0.05249816669267756,
+          "tail_fraction": null,
+          "n_positive_personal_vs_pooled_animals": 2,
+          "individual_gain_range": [
+            -0.0021031623328146044,
+            0.13362456555752644
+          ],
+          "biological_randomization_p_value": null,
+          "heldout_class_fraction_equal_animal_day": [
+            0.8248217564544532,
+            0.17517824354554692
+          ],
+          "heldout_last_class_fraction_individual_range": [
+            0.028423727196516632,
+            0.28762518500450973
+          ]
+        },
+        "activity": {
+          "status": "NOT_CALIBRATABLE_IDENTITY_ONLY",
+          "n_evaluated_animals": 3,
+          "n_movable_animals": 0,
+          "n_admissible_maps": 1,
+          "minimum_attainable_tail_fraction": null,
+          "observed_gain": 0.034131466640837,
+          "reference_mean_gain": 0.034131466640837,
+          "excess_over_reference": 0.0,
+          "reference_q025": 0.034131466640837,
+          "reference_q975": 0.034131466640837,
+          "tail_fraction": null,
+          "n_positive_personal_vs_pooled_animals": 2,
+          "individual_gain_range": [
+            -0.032954672620759705,
+            0.11460456645324049
+          ],
+          "biological_randomization_p_value": null,
+          "heldout_class_fraction_equal_animal_day": [
+            0.5406994060279707,
+            0.4593005939720293
+          ],
+          "heldout_last_class_fraction_individual_range": [
+            0.3425818776631653,
+            0.5282095839201547
+          ]
+        }
+      },
+      "allowed_matrix_sha256": "4978a421c71d42a4e4cd0c5f7ac3824142d286f8a61fc0be62a9935970abe3fb",
+      "n_supported_target_donor_entries": 4,
+      "n_targets_with_some_allowed_other_donor": 1,
+      "matched_X": {
+        "n_animals": 3,
+        "heldout_qc_fixes": 3824,
+        "n_supported_dependent_dyads": 3,
+        "n_dyads_missing_shared_date_support": 0,
+        "axis": "X_2D_GEOGRAPHIC_OVERLAP_NOT_RESOURCE_OR_SYNCHRONOUS_ENCOUNTERS",
+        "uses_full_qc_geography_not_selected_R_contexts": true,
+        "scales": [
+          {
+            "grid_km": 0.5,
+            "mean_overlap": 0.23599283376890892,
+            "median_overlap": 0.010384440230851423,
+            "n_zero_overlap_dyads": 0,
+            "origin_shift_mean_range": [
+              0.23467856162130343,
+              0.2567463437494707
+            ]
+          },
+          {
+            "grid_km": 1.0,
+            "mean_overlap": 0.27772509810554397,
+            "median_overlap": 0.010384440230851423,
+            "n_zero_overlap_dyads": 0,
+            "origin_shift_mean_range": [
+              0.24278667632130102,
+              0.39442944324741064
+            ]
+          },
+          {
+            "grid_km": 2.0,
+            "mean_overlap": 0.542772651242117,
+            "median_overlap": 0.4591016548463319,
+            "n_zero_overlap_dyads": 0,
+            "origin_shift_mean_range": [
+              0.32327315251274075,
+              0.542772651242117
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "site": "Britford",
+      "reference_deployment_year": 2017,
+      "month": "2017-04",
+      "grid_km": 2.0,
+      "clock_bin_hours": 6,
+      "n_source_month_animals": 9,
+      "n_source_month_eligible_animals": 8,
+      "training_steps": 4978,
+      "all_eligible_heldout_steps": 8402,
+      "n_common_training_contexts": 5,
+      "n_evaluated_animals": 3,
+      "heldout_shared_context_steps": 2027,
+      "heldout_animal_days": 22,
+      "no_train_test_calendar_date_overlap": true,
+      "status": "EXPLORATORY_MATCHED_R_X",
+      "assays": {
+        "speed_three": {
+          "status": "NOT_CALIBRATABLE_IDENTITY_ONLY",
+          "n_evaluated_animals": 3,
+          "n_movable_animals": 0,
+          "n_admissible_maps": 1,
+          "minimum_attainable_tail_fraction": null,
+          "observed_gain": 0.05236762398833205,
+          "reference_mean_gain": 0.05236762398833205,
+          "excess_over_reference": 0.0,
+          "reference_q025": 0.05236762398833205,
+          "reference_q975": 0.05236762398833205,
+          "tail_fraction": null,
+          "n_positive_personal_vs_pooled_animals": 1,
+          "individual_gain_range": [
+            -0.024283358945279495,
+            0.20420610230556213
+          ],
+          "biological_randomization_p_value": null,
+          "heldout_class_fraction_equal_animal_day": [
+            0.3610131446735416,
+            0.45600957625109184,
+            0.18297727907536654
+          ],
+          "heldout_last_class_fraction_individual_range": [
+            0.028423727196516632,
+            0.3103015915582524
+          ]
+        },
+        "speed_binary": {
+          "status": "NOT_CALIBRATABLE_IDENTITY_ONLY",
+          "n_evaluated_animals": 3,
+          "n_movable_animals": 0,
+          "n_admissible_maps": 1,
+          "minimum_attainable_tail_fraction": null,
+          "observed_gain": 0.07501651779301295,
+          "reference_mean_gain": 0.07501651779301295,
+          "excess_over_reference": 0.0,
+          "reference_q025": 0.07501651779301295,
+          "reference_q975": 0.07501651779301295,
+          "tail_fraction": null,
+          "n_positive_personal_vs_pooled_animals": 2,
+          "individual_gain_range": [
+            -0.0009230000376596473,
+            0.17706114430322817
+          ],
+          "biological_randomization_p_value": null,
+          "heldout_class_fraction_equal_animal_day": [
+            0.8170227209246335,
+            0.18297727907536654
+          ],
+          "heldout_last_class_fraction_individual_range": [
+            0.028423727196516632,
+            0.3103015915582524
+          ]
+        },
+        "activity": {
+          "status": "NOT_CALIBRATABLE_IDENTITY_ONLY",
+          "n_evaluated_animals": 3,
+          "n_movable_animals": 0,
+          "n_admissible_maps": 1,
+          "minimum_attainable_tail_fraction": null,
+          "observed_gain": 0.045229810641985814,
+          "reference_mean_gain": 0.045229810641985814,
+          "excess_over_reference": 0.0,
+          "reference_q025": 0.045229810641985814,
+          "reference_q975": 0.045229810641985814,
+          "tail_fraction": null,
+          "n_positive_personal_vs_pooled_animals": 2,
+          "individual_gain_range": [
+            -0.030080254741304224,
+            0.14813891520433106
+          ],
+          "biological_randomization_p_value": null,
+          "heldout_class_fraction_equal_animal_day": [
+            0.5301527201876608,
+            0.4698472798123392
+          ],
+          "heldout_last_class_fraction_individual_range": [
+            0.3425818776631653,
+            0.5586888679322319
+          ]
+        }
+      },
+      "allowed_matrix_sha256": "33b42d19bda95386057de0a1dd483649bc83a3852c20a34dacb2baff1146743d",
+      "n_supported_target_donor_entries": 5,
+      "n_targets_with_some_allowed_other_donor": 2,
+      "matched_X": {
+        "n_animals": 3,
+        "heldout_qc_fixes": 3824,
+        "n_supported_dependent_dyads": 3,
+        "n_dyads_missing_shared_date_support": 0,
+        "axis": "X_2D_GEOGRAPHIC_OVERLAP_NOT_RESOURCE_OR_SYNCHRONOUS_ENCOUNTERS",
+        "uses_full_qc_geography_not_selected_R_contexts": true,
+        "scales": [
+          {
+            "grid_km": 0.5,
+            "mean_overlap": 0.23599283376890892,
+            "median_overlap": 0.010384440230851423,
+            "n_zero_overlap_dyads": 0,
+            "origin_shift_mean_range": [
+              0.23467856162130343,
+              0.2567463437494707
+            ]
+          },
+          {
+            "grid_km": 1.0,
+            "mean_overlap": 0.27772509810554397,
+            "median_overlap": 0.010384440230851423,
+            "n_zero_overlap_dyads": 0,
+            "origin_shift_mean_range": [
+              0.24278667632130102,
+              0.39442944324741064
+            ]
+          },
+          {
+            "grid_km": 2.0,
+            "mean_overlap": 0.542772651242117,
+            "median_overlap": 0.4591016548463319,
+            "n_zero_overlap_dyads": 0,
+            "origin_shift_mean_range": [
+              0.32327315251274075,
+              0.542772651242117
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "site": "Somerley",
+      "reference_deployment_year": 2019,
+      "month": "2019-06",
+      "grid_km": 1.0,
+      "clock_bin_hours": 6,
+      "n_source_month_animals": 7,
+      "n_source_month_eligible_animals": 7,
+      "training_steps": 12113,
+      "all_eligible_heldout_steps": 6242,
+      "n_common_training_contexts": 21,
+      "n_evaluated_animals": 5,
+      "heldout_shared_context_steps": 5874,
+      "heldout_animal_days": 52,
+      "no_train_test_calendar_date_overlap": true,
+      "status": "EXPLORATORY_MATCHED_R_X",
+      "assays": {
+        "speed_three": {
+          "status": "NOT_CALIBRATABLE_IDENTITY_ONLY",
+          "n_evaluated_animals": 5,
+          "n_movable_animals": 0,
+          "n_admissible_maps": 1,
+          "minimum_attainable_tail_fraction": null,
+          "observed_gain": 2.8986628986166218e-05,
+          "reference_mean_gain": 2.8986628986166218e-05,
+          "excess_over_reference": 0.0,
+          "reference_q025": 2.8986628986166218e-05,
+          "reference_q975": 2.8986628986166218e-05,
+          "tail_fraction": null,
+          "n_positive_personal_vs_pooled_animals": 3,
+          "individual_gain_range": [
+            -0.027315030478252896,
+            0.01968066321502031
+          ],
+          "biological_randomization_p_value": null,
+          "heldout_class_fraction_equal_animal_day": [
+            0.35620036866813465,
+            0.417720824207309,
+            0.22607880712455639
+          ],
+          "heldout_last_class_fraction_individual_range": [
+            0.11821976481230212,
+            0.31665640774151355
+          ]
+        },
+        "speed_binary": {
+          "status": "NOT_CALIBRATABLE_IDENTITY_ONLY",
+          "n_evaluated_animals": 5,
+          "n_movable_animals": 0,
+          "n_admissible_maps": 1,
+          "minimum_attainable_tail_fraction": null,
+          "observed_gain": 0.001388203296972772,
+          "reference_mean_gain": 0.0013882032969727725,
+          "excess_over_reference": -4.336808689942018e-19,
+          "reference_q025": 0.0013882032969727725,
+          "reference_q975": 0.0013882032969727725,
+          "tail_fraction": null,
+          "n_positive_personal_vs_pooled_animals": 3,
+          "individual_gain_range": [
+            -0.016228211766119823,
+            0.01833897407977616
+          ],
+          "biological_randomization_p_value": null,
+          "heldout_class_fraction_equal_animal_day": [
+            0.7739211928754436,
+            0.22607880712455639
+          ],
+          "heldout_last_class_fraction_individual_range": [
+            0.11821976481230212,
+            0.31665640774151355
+          ]
+        },
+        "activity": {
+          "status": "NOT_CALIBRATABLE_IDENTITY_ONLY",
+          "n_evaluated_animals": 5,
+          "n_movable_animals": 0,
+          "n_admissible_maps": 1,
+          "minimum_attainable_tail_fraction": null,
+          "observed_gain": 0.0019846891506315714,
+          "reference_mean_gain": 0.001984689150631571,
+          "excess_over_reference": 4.336808689942018e-19,
+          "reference_q025": 0.001984689150631571,
+          "reference_q975": 0.001984689150631571,
+          "tail_fraction": null,
+          "n_positive_personal_vs_pooled_animals": 3,
+          "individual_gain_range": [
+            -0.012416538776557013,
+            0.01699215979238807
+          ],
+          "biological_randomization_p_value": null,
+          "heldout_class_fraction_equal_animal_day": [
+            0.5075755268223892,
+            0.4924244731776108
+          ],
+          "heldout_last_class_fraction_individual_range": [
+            0.42762601062541883,
+            0.5515524649844719
+          ]
+        }
+      },
+      "allowed_matrix_sha256": "76b8225589f0e4e3e91b6870362857a43d3c32a40be03133b9658a0c1afb8d48",
+      "n_supported_target_donor_entries": 8,
+      "n_targets_with_some_allowed_other_donor": 3,
+      "matched_X": {
+        "n_animals": 5,
+        "heldout_qc_fixes": 6619,
+        "n_supported_dependent_dyads": 10,
+        "n_dyads_missing_shared_date_support": 0,
+        "axis": "X_2D_GEOGRAPHIC_OVERLAP_NOT_RESOURCE_OR_SYNCHRONOUS_ENCOUNTERS",
+        "uses_full_qc_geography_not_selected_R_contexts": true,
+        "scales": [
+          {
+            "grid_km": 0.5,
+            "mean_overlap": 0.2643346061369279,
+            "median_overlap": 0.0,
+            "n_zero_overlap_dyads": 6,
+            "origin_shift_mean_range": [
+              0.23662830747531113,
+              0.2643346061369279
+            ]
+          },
+          {
+            "grid_km": 1.0,
+            "mean_overlap": 0.2848939684097106,
+            "median_overlap": 0.003472222222222222,
+            "n_zero_overlap_dyads": 3,
+            "origin_shift_mean_range": [
+              0.2848939684097106,
+              0.34582504354920995
+            ]
+          },
+          {
+            "grid_km": 2.0,
+            "mean_overlap": 0.3183794394072051,
+            "median_overlap": 0.003472222222222222,
+            "n_zero_overlap_dyads": 3,
+            "origin_shift_mean_range": [
+              0.31651233280419394,
+              0.5756116040415427
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "site": "Somerley",
+      "reference_deployment_year": 2019,
+      "month": "2019-06",
+      "grid_km": 2.0,
+      "clock_bin_hours": 6,
+      "n_source_month_animals": 7,
+      "n_source_month_eligible_animals": 7,
+      "training_steps": 12113,
+      "all_eligible_heldout_steps": 6242,
+      "n_common_training_contexts": 12,
+      "n_evaluated_animals": 5,
+      "heldout_shared_context_steps": 6204,
+      "heldout_animal_days": 52,
+      "no_train_test_calendar_date_overlap": true,
+      "status": "EXPLORATORY_MATCHED_R_X",
+      "assays": {
+        "speed_three": {
+          "status": "DESCRIPTIVE_LOW_MAPPING_RESOLUTION",
+          "n_evaluated_animals": 5,
+          "n_movable_animals": 3,
+          "n_admissible_maps": 6,
+          "minimum_attainable_tail_fraction": 0.16666666666666666,
+          "observed_gain": 0.006253171450120764,
+          "reference_mean_gain": -0.004665102904011464,
+          "excess_over_reference": 0.010918274354132227,
+          "reference_q025": -0.013355646820543954,
+          "reference_q975": 0.008759466078144366,
+          "tail_fraction": 0.3333333333333333,
+          "n_positive_personal_vs_pooled_animals": 3,
+          "individual_gain_range": [
+            -0.014782259921289,
+            0.024937266771724437
+          ],
+          "biological_randomization_p_value": null,
+          "heldout_class_fraction_equal_animal_day": [
+            0.36681355218312517,
+            0.41305122088107404,
+            0.2201352269358008
+          ],
+          "heldout_last_class_fraction_individual_range": [
+            0.11821976481230212,
+            0.3112647787756741
+          ]
+        },
+        "speed_binary": {
+          "status": "DESCRIPTIVE_LOW_MAPPING_RESOLUTION",
+          "n_evaluated_animals": 5,
+          "n_movable_animals": 3,
+          "n_admissible_maps": 6,
+          "minimum_attainable_tail_fraction": 0.16666666666666666,
+          "observed_gain": 0.0038015951250010933,
+          "reference_mean_gain": 0.0001697812794218129,
+          "excess_over_reference": 0.0036318138455792804,
+          "reference_q025": -0.00440890939021824,
+          "reference_q975": 0.007634859993293183,
+          "tail_fraction": 0.3333333333333333,
+          "n_positive_personal_vs_pooled_animals": 4,
+          "individual_gain_range": [
+            -0.012971973035699887,
+            0.019953043672545273
+          ],
+          "biological_randomization_p_value": null,
+          "heldout_class_fraction_equal_animal_day": [
+            0.7798647730641992,
+            0.2201352269358008
+          ],
+          "heldout_last_class_fraction_individual_range": [
+            0.11821976481230212,
+            0.3112647787756741
+          ]
+        },
+        "activity": {
+          "status": "DESCRIPTIVE_LOW_MAPPING_RESOLUTION",
+          "n_evaluated_animals": 5,
+          "n_movable_animals": 3,
+          "n_admissible_maps": 6,
+          "minimum_attainable_tail_fraction": 0.16666666666666666,
+          "observed_gain": 0.005528716422660146,
+          "reference_mean_gain": -0.0022325301204356193,
+          "excess_over_reference": 0.007761246543095766,
+          "reference_q025": -0.009564775620052673,
+          "reference_q975": 0.006041430934934069,
+          "tail_fraction": 0.3333333333333333,
+          "n_positive_personal_vs_pooled_animals": 4,
+          "individual_gain_range": [
+            -0.0004568262332932057,
+            0.01773748673228496
+          ],
+          "biological_randomization_p_value": null,
+          "heldout_class_fraction_equal_animal_day": [
+            0.5160391135706291,
+            0.48396088642937085
+          ],
+          "heldout_last_class_fraction_individual_range": [
+            0.43500875280674184,
+            0.5389409186989625
+          ]
+        }
+      },
+      "allowed_matrix_sha256": "be8bae6ba8761fc75729104b95e6cfcea05fe0082eec2215ac0bae48421a51d2",
+      "n_supported_target_donor_entries": 12,
+      "n_targets_with_some_allowed_other_donor": 4,
+      "matched_X": {
+        "n_animals": 5,
+        "heldout_qc_fixes": 6619,
+        "n_supported_dependent_dyads": 10,
+        "n_dyads_missing_shared_date_support": 0,
+        "axis": "X_2D_GEOGRAPHIC_OVERLAP_NOT_RESOURCE_OR_SYNCHRONOUS_ENCOUNTERS",
+        "uses_full_qc_geography_not_selected_R_contexts": true,
+        "scales": [
+          {
+            "grid_km": 0.5,
+            "mean_overlap": 0.2643346061369279,
+            "median_overlap": 0.0,
+            "n_zero_overlap_dyads": 6,
+            "origin_shift_mean_range": [
+              0.23662830747531113,
+              0.2643346061369279
+            ]
+          },
+          {
+            "grid_km": 1.0,
+            "mean_overlap": 0.2848939684097106,
+            "median_overlap": 0.003472222222222222,
+            "n_zero_overlap_dyads": 3,
+            "origin_shift_mean_range": [
+              0.2848939684097106,
+              0.34582504354920995
+            ]
+          },
+          {
+            "grid_km": 2.0,
+            "mean_overlap": 0.3183794394072051,
+            "median_overlap": 0.003472222222222222,
+            "n_zero_overlap_dyads": 3,
+            "origin_shift_mean_range": [
+              0.31651233280419394,
+              0.5756116040415427
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "site": "Britford",
+      "reference_deployment_year": 2016,
+      "month": "2016-06",
+      "grid_km": 1.0,
+      "clock_bin_hours": 6,
+      "n_source_month_animals": 5,
+      "n_source_month_eligible_animals": 5,
+      "training_steps": 8489,
+      "all_eligible_heldout_steps": 436,
+      "n_common_training_contexts": 7,
+      "n_evaluated_animals": 1,
+      "heldout_shared_context_steps": 171,
+      "heldout_animal_days": 4,
+      "no_train_test_calendar_date_overlap": true,
+      "status": "NOT_ESTIMABLE_SHARED_HOLDOUT_SUPPORT",
+      "assays": {}
+    },
+    {
+      "site": "Britford",
+      "reference_deployment_year": 2016,
+      "month": "2016-06",
+      "grid_km": 2.0,
+      "clock_bin_hours": 6,
+      "n_source_month_animals": 5,
+      "n_source_month_eligible_animals": 5,
+      "training_steps": 8489,
+      "all_eligible_heldout_steps": 436,
+      "n_common_training_contexts": 4,
+      "n_evaluated_animals": 1,
+      "heldout_shared_context_steps": 171,
+      "heldout_animal_days": 4,
+      "no_train_test_calendar_date_overlap": true,
+      "status": "NOT_ESTIMABLE_SHARED_HOLDOUT_SUPPORT",
+      "assays": {}
+    },
+    {
+      "site": "Britford",
+      "reference_deployment_year": 2016,
+      "month": "2016-04",
+      "grid_km": 1.0,
+      "clock_bin_hours": 6,
+      "n_source_month_animals": 6,
+      "n_source_month_eligible_animals": 4,
+      "training_steps": 1073,
+      "all_eligible_heldout_steps": 3064,
+      "n_common_training_contexts": 0,
+      "n_evaluated_animals": 0,
+      "heldout_shared_context_steps": 0,
+      "heldout_animal_days": 0,
+      "no_train_test_calendar_date_overlap": true,
+      "status": "NOT_ESTIMABLE_SHARED_HOLDOUT_SUPPORT",
+      "assays": {}
+    },
+    {
+      "site": "Britford",
+      "reference_deployment_year": 2016,
+      "month": "2016-04",
+      "grid_km": 2.0,
+      "clock_bin_hours": 6,
+      "n_source_month_animals": 6,
+      "n_source_month_eligible_animals": 4,
+      "training_steps": 1073,
+      "all_eligible_heldout_steps": 3064,
+      "n_common_training_contexts": 0,
+      "n_evaluated_animals": 0,
+      "heldout_shared_context_steps": 0,
+      "heldout_animal_days": 0,
+      "no_train_test_calendar_date_overlap": true,
+      "status": "NOT_ESTIMABLE_SHARED_HOLDOUT_SUPPORT",
+      "assays": {}
+    },
+    {
+      "site": "Britford",
+      "reference_deployment_year": 2017,
+      "month": "2017-05",
+      "grid_km": 1.0,
+      "clock_bin_hours": 6,
+      "n_source_month_animals": 7,
+      "n_source_month_eligible_animals": 6,
+      "training_steps": 5934,
+      "all_eligible_heldout_steps": 3529,
+      "n_common_training_contexts": 9,
+      "n_evaluated_animals": 4,
+      "heldout_shared_context_steps": 2878,
+      "heldout_animal_days": 31,
+      "no_train_test_calendar_date_overlap": true,
+      "status": "EXPLORATORY_MATCHED_R_X",
+      "assays": {
+        "speed_three": {
+          "status": "NOT_CALIBRATABLE_IDENTITY_ONLY",
+          "n_evaluated_animals": 4,
+          "n_movable_animals": 0,
+          "n_admissible_maps": 1,
+          "minimum_attainable_tail_fraction": null,
+          "observed_gain": -0.007804356052829918,
+          "reference_mean_gain": -0.007804356052829918,
+          "excess_over_reference": 0.0,
+          "reference_q025": -0.007804356052829918,
+          "reference_q975": -0.007804356052829918,
+          "tail_fraction": null,
+          "n_positive_personal_vs_pooled_animals": 2,
+          "individual_gain_range": [
+            -0.06937220165409405,
+            0.05008592622089664
+          ],
+          "biological_randomization_p_value": null,
+          "heldout_class_fraction_equal_animal_day": [
+            0.26493524499245125,
+            0.5470348114209239,
+            0.1880299435866248
+          ],
+          "heldout_last_class_fraction_individual_range": [
+            0.0759508637210028,
+            0.24209078246134674
+          ]
+        },
+        "speed_binary": {
+          "status": "NOT_CALIBRATABLE_IDENTITY_ONLY",
+          "n_evaluated_animals": 4,
+          "n_movable_animals": 0,
+          "n_admissible_maps": 1,
+          "minimum_attainable_tail_fraction": null,
+          "observed_gain": -0.012505817597645928,
+          "reference_mean_gain": -0.012505817597645928,
+          "excess_over_reference": 0.0,
+          "reference_q025": -0.012505817597645928,
+          "reference_q975": -0.012505817597645928,
+          "tail_fraction": null,
+          "n_positive_personal_vs_pooled_animals": 2,
+          "individual_gain_range": [
+            -0.08312897926565722,
+            0.039176288845303955
+          ],
+          "biological_randomization_p_value": null,
+          "heldout_class_fraction_equal_animal_day": [
+            0.8119700564133752,
+            0.1880299435866248
+          ],
+          "heldout_last_class_fraction_individual_range": [
+            0.0759508637210028,
+            0.24209078246134674
+          ]
+        },
+        "activity": {
+          "status": "NOT_CALIBRATABLE_IDENTITY_ONLY",
+          "n_evaluated_animals": 4,
+          "n_movable_animals": 0,
+          "n_admissible_maps": 1,
+          "minimum_attainable_tail_fraction": null,
+          "observed_gain": 0.02625114199385057,
+          "reference_mean_gain": 0.02625114199385057,
+          "excess_over_reference": 0.0,
+          "reference_q025": 0.02625114199385057,
+          "reference_q975": 0.02625114199385057,
+          "tail_fraction": null,
+          "n_positive_personal_vs_pooled_animals": 3,
+          "individual_gain_range": [
+            -0.03352945338444856,
+            0.05607213738192763
+          ],
+          "biological_randomization_p_value": null,
+          "heldout_class_fraction_equal_animal_day": [
+            0.4615344730285944,
+            0.5384655269714056
+          ],
+          "heldout_last_class_fraction_individual_range": [
+            0.3846576330803451,
+            0.6976687191740956
+          ]
+        }
+      },
+      "allowed_matrix_sha256": "d1ca43da98104523af2ee852a5f94479e92d2705edb1168f0784bf6926d277a3",
+      "n_supported_target_donor_entries": 8,
+      "n_targets_with_some_allowed_other_donor": 3,
+      "matched_X": {
+        "n_animals": 4,
+        "heldout_qc_fixes": 3837,
+        "n_supported_dependent_dyads": 6,
+        "n_dyads_missing_shared_date_support": 0,
+        "axis": "X_2D_GEOGRAPHIC_OVERLAP_NOT_RESOURCE_OR_SYNCHRONOUS_ENCOUNTERS",
+        "uses_full_qc_geography_not_selected_R_contexts": true,
+        "scales": [
+          {
+            "grid_km": 0.5,
+            "mean_overlap": 0.19527864494165723,
+            "median_overlap": 0.14779842157166356,
+            "n_zero_overlap_dyads": 0,
+            "origin_shift_mean_range": [
+              0.19527864494165723,
+              0.2718353057309633
+            ]
+          },
+          {
+            "grid_km": 1.0,
+            "mean_overlap": 0.4310109335719632,
+            "median_overlap": 0.36676169813237824,
+            "n_zero_overlap_dyads": 0,
+            "origin_shift_mean_range": [
+              0.2313743396573548,
+              0.45871918809782813
+            ]
+          },
+          {
+            "grid_km": 2.0,
+            "mean_overlap": 0.6386724512140001,
+            "median_overlap": 0.6280411530304385,
+            "n_zero_overlap_dyads": 0,
+            "origin_shift_mean_range": [
+              0.5999194256350107,
+              0.6386724512140001
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "site": "Britford",
+      "reference_deployment_year": 2017,
+      "month": "2017-05",
+      "grid_km": 2.0,
+      "clock_bin_hours": 6,
+      "n_source_month_animals": 7,
+      "n_source_month_eligible_animals": 6,
+      "training_steps": 5934,
+      "all_eligible_heldout_steps": 3529,
+      "n_common_training_contexts": 8,
+      "n_evaluated_animals": 4,
+      "heldout_shared_context_steps": 3498,
+      "heldout_animal_days": 32,
+      "no_train_test_calendar_date_overlap": true,
+      "status": "EXPLORATORY_MATCHED_R_X",
+      "assays": {
+        "speed_three": {
+          "status": "DESCRIPTIVE_LOW_MAPPING_RESOLUTION",
+          "n_evaluated_animals": 4,
+          "n_movable_animals": 2,
+          "n_admissible_maps": 2,
+          "minimum_attainable_tail_fraction": 0.5,
+          "observed_gain": 0.019842212297889118,
+          "reference_mean_gain": 0.007035924443453136,
+          "excess_over_reference": 0.012806287854435982,
+          "reference_q025": -0.0051300490182610466,
+          "reference_q975": 0.01920189790516732,
+          "tail_fraction": 0.5,
+          "n_positive_personal_vs_pooled_animals": 3,
+          "individual_gain_range": [
+            -0.02080979405917723,
+            0.07426834215557365
+          ],
+          "biological_randomization_p_value": null,
+          "heldout_class_fraction_equal_animal_day": [
+            0.2946554917651329,
+            0.5553727007758262,
+            0.1499718074590409
+          ],
+          "heldout_last_class_fraction_individual_range": [
+            0.0877329321723565,
+            0.2000227053554251
+          ]
+        },
+        "speed_binary": {
+          "status": "DESCRIPTIVE_LOW_MAPPING_RESOLUTION",
+          "n_evaluated_animals": 4,
+          "n_movable_animals": 2,
+          "n_admissible_maps": 2,
+          "minimum_attainable_tail_fraction": 0.5,
+          "observed_gain": 0.018877230926525455,
+          "reference_mean_gain": 0.010142374536988569,
+          "excess_over_reference": 0.008734856389536886,
+          "reference_q025": 0.0018442609669285285,
+          "reference_q975": 0.01844048810704861,
+          "tail_fraction": 0.5,
+          "n_positive_personal_vs_pooled_animals": 2,
+          "individual_gain_range": [
+            -0.005823175339160936,
+            0.057059223379302755
+          ],
+          "biological_randomization_p_value": null,
+          "heldout_class_fraction_equal_animal_day": [
+            0.8500281925409591,
+            0.1499718074590409
+          ],
+          "heldout_last_class_fraction_individual_range": [
+            0.0877329321723565,
+            0.2000227053554251
+          ]
+        },
+        "activity": {
+          "status": "DESCRIPTIVE_LOW_MAPPING_RESOLUTION",
+          "n_evaluated_animals": 4,
+          "n_movable_animals": 2,
+          "n_admissible_maps": 2,
+          "minimum_attainable_tail_fraction": 0.5,
+          "observed_gain": 0.020023114460566753,
+          "reference_mean_gain": 0.011103590600548352,
+          "excess_over_reference": 0.0089195238600184,
+          "reference_q025": 0.002630042933530871,
+          "reference_q975": 0.01957713826756583,
+          "tail_fraction": 0.5,
+          "n_positive_personal_vs_pooled_animals": 3,
+          "individual_gain_range": [
+            -0.006628069081162445,
+            0.06290445625288026
+          ],
+          "biological_randomization_p_value": null,
+          "heldout_class_fraction_equal_animal_day": [
+            0.5201928486866874,
+            0.4798071513133126
+          ],
+          "heldout_last_class_fraction_individual_range": [
+            0.40272105078596204,
+            0.5107758017764027
+          ]
+        }
+      },
+      "allowed_matrix_sha256": "ed6acc92936703b29b30842ab8ad01ecafd4130804f121199f702ace523de7d8",
+      "n_supported_target_donor_entries": 9,
+      "n_targets_with_some_allowed_other_donor": 3,
+      "matched_X": {
+        "n_animals": 4,
+        "heldout_qc_fixes": 3837,
+        "n_supported_dependent_dyads": 6,
+        "n_dyads_missing_shared_date_support": 0,
+        "axis": "X_2D_GEOGRAPHIC_OVERLAP_NOT_RESOURCE_OR_SYNCHRONOUS_ENCOUNTERS",
+        "uses_full_qc_geography_not_selected_R_contexts": true,
+        "scales": [
+          {
+            "grid_km": 0.5,
+            "mean_overlap": 0.19527864494165723,
+            "median_overlap": 0.14779842157166356,
+            "n_zero_overlap_dyads": 0,
+            "origin_shift_mean_range": [
+              0.19527864494165723,
+              0.2718353057309633
+            ]
+          },
+          {
+            "grid_km": 1.0,
+            "mean_overlap": 0.4310109335719632,
+            "median_overlap": 0.36676169813237824,
+            "n_zero_overlap_dyads": 0,
+            "origin_shift_mean_range": [
+              0.2313743396573548,
+              0.45871918809782813
+            ]
+          },
+          {
+            "grid_km": 2.0,
+            "mean_overlap": 0.6386724512140001,
+            "median_overlap": 0.6280411530304385,
+            "n_zero_overlap_dyads": 0,
+            "origin_shift_mean_range": [
+              0.5999194256350107,
+              0.6386724512140001
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "site": "Somerley",
+      "reference_deployment_year": 2018,
+      "month": "2018-05",
+      "grid_km": 1.0,
+      "clock_bin_hours": 6,
+      "n_source_month_animals": 6,
+      "n_source_month_eligible_animals": 5,
+      "training_steps": 7326,
+      "all_eligible_heldout_steps": 5454,
+      "n_common_training_contexts": 12,
+      "n_evaluated_animals": 4,
+      "heldout_shared_context_steps": 2652,
+      "heldout_animal_days": 46,
+      "no_train_test_calendar_date_overlap": true,
+      "status": "EXPLORATORY_MATCHED_R_X",
+      "assays": {
+        "speed_three": {
+          "status": "NOT_CALIBRATABLE_IDENTITY_ONLY",
+          "n_evaluated_animals": 4,
+          "n_movable_animals": 0,
+          "n_admissible_maps": 1,
+          "minimum_attainable_tail_fraction": null,
+          "observed_gain": -0.0379956596566403,
+          "reference_mean_gain": -0.0379956596566403,
+          "excess_over_reference": 0.0,
+          "reference_q025": -0.0379956596566403,
+          "reference_q975": -0.0379956596566403,
+          "tail_fraction": null,
+          "n_positive_personal_vs_pooled_animals": 1,
+          "individual_gain_range": [
+            -0.13351693577169893,
+            0.007070472056259759
+          ],
+          "biological_randomization_p_value": null,
+          "heldout_class_fraction_equal_animal_day": [
+            0.2010287611893367,
+            0.273418887912849,
+            0.5255523508978144
+          ],
+          "heldout_last_class_fraction_individual_range": [
+            0.36785583492900564,
+            0.9366666666666668
+          ]
+        },
+        "speed_binary": {
+          "status": "NOT_CALIBRATABLE_IDENTITY_ONLY",
+          "n_evaluated_animals": 4,
+          "n_movable_animals": 0,
+          "n_admissible_maps": 1,
+          "minimum_attainable_tail_fraction": null,
+          "observed_gain": -0.04360540521148297,
+          "reference_mean_gain": -0.04360540521148297,
+          "excess_over_reference": 0.0,
+          "reference_q025": -0.04360540521148297,
+          "reference_q975": -0.04360540521148297,
+          "tail_fraction": null,
+          "n_positive_personal_vs_pooled_animals": 0,
+          "individual_gain_range": [
+            -0.13029829637717905,
+            -0.004640610686900237
+          ],
+          "biological_randomization_p_value": null,
+          "heldout_class_fraction_equal_animal_day": [
+            0.4744476491021857,
+            0.5255523508978144
+          ],
+          "heldout_last_class_fraction_individual_range": [
+            0.36785583492900564,
+            0.9366666666666668
+          ]
+        },
+        "activity": {
+          "status": "NOT_CALIBRATABLE_IDENTITY_ONLY",
+          "n_evaluated_animals": 4,
+          "n_movable_animals": 0,
+          "n_admissible_maps": 1,
+          "minimum_attainable_tail_fraction": null,
+          "observed_gain": -0.011789679140673704,
+          "reference_mean_gain": -0.011789679140673704,
+          "excess_over_reference": 0.0,
+          "reference_q025": -0.011789679140673704,
+          "reference_q975": -0.011789679140673704,
+          "tail_fraction": null,
+          "n_positive_personal_vs_pooled_animals": 2,
+          "individual_gain_range": [
+            -0.04650347102961979,
+            0.011444032550785476
+          ],
+          "biological_randomization_p_value": null,
+          "heldout_class_fraction_equal_animal_day": [
+            0.24869657100156403,
+            0.7513034289984359
+          ],
+          "heldout_last_class_fraction_individual_range": [
+            0.6248757459198994,
+            0.9933333333333334
+          ]
+        }
+      },
+      "allowed_matrix_sha256": "049494c8cd07a7ab2c73644eb55fe8ca83d64b01b0e5ba72c141133bf498bc4c",
+      "n_supported_target_donor_entries": 6,
+      "n_targets_with_some_allowed_other_donor": 2,
+      "matched_X": {
+        "n_animals": 4,
+        "heldout_qc_fixes": 5440,
+        "n_supported_dependent_dyads": 6,
+        "n_dyads_missing_shared_date_support": 0,
+        "axis": "X_2D_GEOGRAPHIC_OVERLAP_NOT_RESOURCE_OR_SYNCHRONOUS_ENCOUNTERS",
+        "uses_full_qc_geography_not_selected_R_contexts": true,
+        "scales": [
+          {
+            "grid_km": 0.5,
+            "mean_overlap": 0.14980815358867575,
+            "median_overlap": 0.03336274418476611,
+            "n_zero_overlap_dyads": 0,
+            "origin_shift_mean_range": [
+              0.14298569738518954,
+              0.16377529182927067
+            ]
+          },
+          {
+            "grid_km": 1.0,
+            "mean_overlap": 0.18825365745977288,
+            "median_overlap": 0.058955371777682695,
+            "n_zero_overlap_dyads": 0,
+            "origin_shift_mean_range": [
+              0.18825365745977288,
+              0.25829075500977183
+            ]
+          },
+          {
+            "grid_km": 2.0,
+            "mean_overlap": 0.23712718484117723,
+            "median_overlap": 0.12730707042934636,
+            "n_zero_overlap_dyads": 0,
+            "origin_shift_mean_range": [
+              0.20433289398957258,
+              0.4943359607271409
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "site": "Somerley",
+      "reference_deployment_year": 2018,
+      "month": "2018-05",
+      "grid_km": 2.0,
+      "clock_bin_hours": 6,
+      "n_source_month_animals": 6,
+      "n_source_month_eligible_animals": 5,
+      "training_steps": 7326,
+      "all_eligible_heldout_steps": 5454,
+      "n_common_training_contexts": 8,
+      "n_evaluated_animals": 4,
+      "heldout_shared_context_steps": 3559,
+      "heldout_animal_days": 52,
+      "no_train_test_calendar_date_overlap": true,
+      "status": "EXPLORATORY_MATCHED_R_X",
+      "assays": {
+        "speed_three": {
+          "status": "NOT_CALIBRATABLE_IDENTITY_ONLY",
+          "n_evaluated_animals": 4,
+          "n_movable_animals": 0,
+          "n_admissible_maps": 1,
+          "minimum_attainable_tail_fraction": null,
+          "observed_gain": -0.014036633596001765,
+          "reference_mean_gain": -0.014036633596001767,
+          "excess_over_reference": 1.734723475976807e-18,
+          "reference_q025": -0.014036633596001767,
+          "reference_q975": -0.014036633596001767,
+          "tail_fraction": null,
+          "n_positive_personal_vs_pooled_animals": 3,
+          "individual_gain_range": [
+            -0.08136732427345235,
+            0.019117087502217044
+          ],
+          "biological_randomization_p_value": null,
+          "heldout_class_fraction_equal_animal_day": [
+            0.28700964029718484,
+            0.3359094962182986,
+            0.37708086348451664
+          ],
+          "heldout_last_class_fraction_individual_range": [
+            0.33527354366064044,
+            0.41179139336254317
+          ]
+        },
+        "speed_binary": {
+          "status": "NOT_CALIBRATABLE_IDENTITY_ONLY",
+          "n_evaluated_animals": 4,
+          "n_movable_animals": 0,
+          "n_admissible_maps": 1,
+          "minimum_attainable_tail_fraction": null,
+          "observed_gain": -0.01591874557295708,
+          "reference_mean_gain": -0.015918745572957076,
+          "excess_over_reference": -3.469446951953614e-18,
+          "reference_q025": -0.015918745572957076,
+          "reference_q975": -0.015918745572957076,
+          "tail_fraction": null,
+          "n_positive_personal_vs_pooled_animals": 3,
+          "individual_gain_range": [
+            -0.07931513058635277,
+            0.009604805701425835
+          ],
+          "biological_randomization_p_value": null,
+          "heldout_class_fraction_equal_animal_day": [
+            0.6229191365154834,
+            0.37708086348451664
+          ],
+          "heldout_last_class_fraction_individual_range": [
+            0.33527354366064044,
+            0.41179139336254317
+          ]
+        },
+        "activity": {
+          "status": "NOT_CALIBRATABLE_IDENTITY_ONLY",
+          "n_evaluated_animals": 4,
+          "n_movable_animals": 0,
+          "n_admissible_maps": 1,
+          "minimum_attainable_tail_fraction": null,
+          "observed_gain": -0.008712017810079,
+          "reference_mean_gain": -0.008712017810079,
+          "excess_over_reference": 0.0,
+          "reference_q025": -0.008712017810079,
+          "reference_q975": -0.008712017810079,
+          "tail_fraction": null,
+          "n_positive_personal_vs_pooled_animals": 2,
+          "individual_gain_range": [
+            -0.043346452169979295,
+            0.015739851785327174
+          ],
+          "biological_randomization_p_value": null,
+          "heldout_class_fraction_equal_animal_day": [
+            0.3635583801395801,
+            0.6364416198604199
+          ],
+          "heldout_last_class_fraction_individual_range": [
+            0.5834257886041373,
+            0.6888426090038994
+          ]
+        }
+      },
+      "allowed_matrix_sha256": "049494c8cd07a7ab2c73644eb55fe8ca83d64b01b0e5ba72c141133bf498bc4c",
+      "n_supported_target_donor_entries": 6,
+      "n_targets_with_some_allowed_other_donor": 2,
+      "matched_X": {
+        "n_animals": 4,
+        "heldout_qc_fixes": 5440,
+        "n_supported_dependent_dyads": 6,
+        "n_dyads_missing_shared_date_support": 0,
+        "axis": "X_2D_GEOGRAPHIC_OVERLAP_NOT_RESOURCE_OR_SYNCHRONOUS_ENCOUNTERS",
+        "uses_full_qc_geography_not_selected_R_contexts": true,
+        "scales": [
+          {
+            "grid_km": 0.5,
+            "mean_overlap": 0.14980815358867575,
+            "median_overlap": 0.03336274418476611,
+            "n_zero_overlap_dyads": 0,
+            "origin_shift_mean_range": [
+              0.14298569738518954,
+              0.16377529182927067
+            ]
+          },
+          {
+            "grid_km": 1.0,
+            "mean_overlap": 0.18825365745977288,
+            "median_overlap": 0.058955371777682695,
+            "n_zero_overlap_dyads": 0,
+            "origin_shift_mean_range": [
+              0.18825365745977288,
+              0.25829075500977183
+            ]
+          },
+          {
+            "grid_km": 2.0,
+            "mean_overlap": 0.23712718484117723,
+            "median_overlap": 0.12730707042934636,
+            "n_zero_overlap_dyads": 0,
+            "origin_shift_mean_range": [
+              0.20433289398957258,
+              0.4943359607271409
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "site": "Somerley",
+      "reference_deployment_year": 2019,
+      "month": "2019-04",
+      "grid_km": 1.0,
+      "clock_bin_hours": 6,
+      "n_source_month_animals": 6,
+      "n_source_month_eligible_animals": 6,
+      "training_steps": 1213,
+      "all_eligible_heldout_steps": 8604,
+      "n_common_training_contexts": 0,
+      "n_evaluated_animals": 0,
+      "heldout_shared_context_steps": 0,
+      "heldout_animal_days": 0,
+      "no_train_test_calendar_date_overlap": true,
+      "status": "NOT_ESTIMABLE_SHARED_HOLDOUT_SUPPORT",
+      "assays": {}
+    },
+    {
+      "site": "Somerley",
+      "reference_deployment_year": 2019,
+      "month": "2019-04",
+      "grid_km": 2.0,
+      "clock_bin_hours": 6,
+      "n_source_month_animals": 6,
+      "n_source_month_eligible_animals": 6,
+      "training_steps": 1213,
+      "all_eligible_heldout_steps": 8604,
+      "n_common_training_contexts": 0,
+      "n_evaluated_animals": 0,
+      "heldout_shared_context_steps": 0,
+      "heldout_animal_days": 0,
+      "no_train_test_calendar_date_overlap": true,
+      "status": "NOT_ESTIMABLE_SHARED_HOLDOUT_SUPPORT",
+      "assays": {}
+    }
+  ],
+  "limitations": [
+    "Uniform support-compatible identity correspondence is an explicit observational reference assumption, not an established randomized biological null.",
+    "The three assays use the same instruments and dates and are not independent replications.",
+    "Ten source-months reuse animals within four deployment cohorts at two sites; animals were not permanently marked between years.",
+    "GPS error, collar fit, duty cycle, sex, reproductive state and fine-scale geography remain possible identity carriers.",
+    "Shared 1-km/6-hour contexts do not establish identical microhabitat or realized encounters.",
+    "X is geographic overlap and is scale-sensitive. Resource exposure, diet, competition and cross-taxon mechanisms remain unmeasured."
+  ]
+}
