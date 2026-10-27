@@ -1,5 +1,57 @@
 # Pattern-first cross-taxon movement individuality and ecological use (database programme)
 
+## 28 October 2026: ORIGINAL turkey GPS reveals February–March monthly range separation
+
+The [month-resolved original Movebank turkey result](TURKEY_MONTHLY_CORE_SEPARATION_RESULT_2026_10_28.md)
+refines the previous 2020 one-mover finding (a 14.524-km
+Jan–Feb-to-summer GPS center shift across one original bird,
+not five independent far-dyad animal events). Source complete
+original MD5/pinned-SHA256/reference time-position QC was
+replayed for **435,214 wild-turkey GPS fixes**. In 2020 the
+seven eligible original birds each have >=7 source dates
+in **January–July**, and have NO source positions August–December.
+The six isolate–core dyad monthly GPS-use-center distance
+median changes from **0.019 km in February**, to
+**5.151 km in March** and **16.508 km in April**.
+Their six-animal core also widens (15 core-core pair medians
+**0.342, 1.934, 5.088 km** in Feb/Mar/Apr), so spatial
+reconfiguration is not purely one animal and a perfectly
+stationary core. The month classification changes from
+CLOSE in February to SEPARATED in March with no
+unsupported month in between. This locates the change
+only at monthly observation resolution, not an
+actual animal relocation/encounter date.
+
+In 2019, the two disconnected original <=5-km annual-center
+GPS sample components (11/7 birds and 53/20 source dyads)
+have February vs April monthly pair-center medians
+**0.440→2.198 km** and **1.026→3.341 km**,
+respectively, with all 19 originally qualified birds
+supported throughout Jan–Jul. The original two
+components do **not** establish independent
+demographic populations.
+
+**Important temporal coverage correction:** prior
+winter=(Jan,Feb,Dec within one calendar year) source
+contrasts have **NO December source GPS observations**
+in either 2019 or 2020. The observed winter side is
+in fact **Jan–Feb**; the available summer side is
+Jun–Jul plus incomplete August 2019, versus Jun–Jul
+2020. No continuous overwintering season or winter
+flock formation can be inferred. Individual GPS
+position accuracy, source UTC/GPS clock basis,
+actual capture population and resource choices remain
+unverified. Month-wise GPS-use-center proximity is NOT
+simultaneous animal contact.
+
+Reproduction and evidence: [locked post-inspection design](TURKEY_MONTHLY_CORE_SEPARATION_DESIGN_2026_10_28.md),
+[source-original code](turkey_monthly_core_separation_v1.py),
+[ten synthetic and missingness tests](tests/test_turkey_monthly_core_separation_v1.py),
+[SHA256-pinned monthly output](TURKEY_MONTHLY_CORE_SEPARATION_SOURCE_2026_10_28.json),
+[complete 84-row monthly-group table](TURKEY_MONTHLY_CORE_SEPARATION_REVIEW_2026_10_28.csv),
+[independent receipt verifier](validate_turkey_monthly_core_v1.py).
+Original full-GPS and synthetic [GitHub Actions succeeded](https://github.com/zuizui0223/batter/actions/runs/40541516756).
+
 ## 22 October 2026: different seasonal geographic configurations in original wild-turkey source-year GPS cohorts
 
 **New empirical source-GPS result:** the [2019/2020 spatial-component and

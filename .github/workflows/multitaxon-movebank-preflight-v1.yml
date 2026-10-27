@@ -224,3 +224,24 @@ jobs:
           print('PASS source-original GPS 2019 disconnected component patterns and 2020 5/5 winter seasonal centroid convergence')
           PY
 
+      - name: Verify original-source turkey calendar-month centroids and close-to-separated support
+        run: |
+          root=prospective/multitaxon_individuality
+          python3 "$root/validate_turkey_monthly_core_v1.py" \
+            --source "$root/TURKEY_MONTHLY_CORE_SEPARATION_SOURCE_2026_10_28.json" \
+            --output /tmp/verified_turkey_monthly_20261028.json
+          cmp /tmp/verified_turkey_monthly_20261028.json \
+              "$root/TURKEY_MONTHLY_CORE_SEPARATION_AUDIT_2026_10_28.json"
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('/tmp/verified_turkey_monthly_20261028.json')
+          d=json.loads(p.read_text())
+          assert d['year_month_rows']==24 and d['group_months']==84
+          assert d['fully_2020']==7 and d['observed_2020']==7
+          assert d['transition_bracket']['last_observed_close_month']==2
+          assert d['transition_bracket']['first_later_observed_separated_month']==3
+          assert d['transition_bracket']['unobserved_months_in_bracket']==0
+          print('PASS pinned 435214 original turkey GPS fixes: Feb–Mar observed monthly change, complete Jan–Jul 2020')
+          PY
+
