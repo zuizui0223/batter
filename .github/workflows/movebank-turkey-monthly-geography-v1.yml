@@ -1,0 +1,48 @@
+name: Movebank original wild turkey monthly core/isolate GPS geography
+
+on:
+  push:
+    branches:
+      - prospective/multitaxon-identity-ecology-v1
+    paths:
+      - "prospective/multitaxon_individuality/turkey_monthly_core_separation_v1.py"
+      - "prospective/multitaxon_individuality/tests/test_turkey_monthly_core_separation_v1.py"
+      - "prospective/multitaxon_individuality/TURKEY_MONTHLY_CORE_SEPARATION_DESIGN_2026_10_28.md"
+      - ".github/workflows/movebank-turkey-monthly-geography-v1.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  synthetic-month-and-geometry-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Source-date equal weights, longitude wrapping, missing-month and transitions
+        run: |
+          PYTHONPATH=prospective/multitaxon_individuality python3 -m unittest discover \
+            -s prospective/multitaxon_individuality/tests \
+            -p "test_turkey_monthly_core_separation_v1.py" -v
+
+  complete-publisher-original-gps-monthly:
+    needs: synthetic-month-and-geometry-tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - name: Recheck full original wild-turkey GPS and references, infer monthly anonymous group geometry
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/source-monthly-aggregate-only
+          python3 prospective/multitaxon_individuality/turkey_monthly_core_separation_v1.py \
+            --output /tmp/source-monthly-aggregate-only/TURKEY_MONTHLY_CORE_SEPARATION_SOURCE_2026_10_28.json
+      - name: Upload only monthly SOURCE GROUP GPS centroid-distance aggregates
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: turkey-monthly-core-geography-original-source
+          path: /tmp/source-monthly-aggregate-only/TURKEY_MONTHLY_CORE_SEPARATION_SOURCE_2026_10_28.json
+          if-no-files-found: warn
+          retention-days: 20
