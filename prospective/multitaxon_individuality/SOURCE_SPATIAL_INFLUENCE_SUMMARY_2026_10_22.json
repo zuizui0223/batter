@@ -1,0 +1,2766 @@
+{
+  "as_of": "2026-10-22",
+  "fixed_design": "SOURCE_SPATIAL_INFLUENCE_DESIGN_2026_10_22.md",
+  "limits": [
+    "Annual-centroid spatial clusters do not certify local ecological or social populations",
+    "No original animal IDs, GPS source coordinates or precise time/location records are published",
+    "Yearly source cohorts can contain the same original animals; year overlap audited rather than assumed independent",
+    "Component/geography cutoff and single-animal omission are exploratory sensitivity conditions, not calibrated null tests",
+    "The only causal control is none: adjacent-day records can differ in weather, habitats and day-to-day animal mobility",
+    "Near-time GPS distance <=500m/1km is not verified physical encounter, synchronized behavior or trophic niche separation",
+    "Individual GPS accuracy, clock time basis, source tag duty cycles and verified populations remain unmeasured"
+  ],
+  "n_original_source_studies": 3,
+  "n_replayed_original_source_seed_radius_scores": 576,
+  "n_source_year_tolerance_rows": 12,
+  "n_stopped_source_year_tolerance_rows": 4,
+  "n_valid_original_dyad_groups": 8,
+  "schema_version": 1,
+  "source_pinned_SHA256": {
+    "black_bear": "2252cc771c8f8337d452cadc5c2abd5bd9d7ca5a2350e6893f9a98f547540bac",
+    "turkey": "8182bf56b2d8e25d3f5ead3ffc89cd74d5d57c78bc171c954438a585ee8f63e2",
+    "white_tailed_deer": "19e035aa578ff4954a425201c9eb8074b89ed0a8753f71a1610a6db272d671b9"
+  },
+  "source_reference_metadata_audits": [
+    {
+      "animals_with_nonempty_explicit_site_field": 0,
+      "explicit_site_or_group_metadata_fields": [],
+      "local_population_membership_verified": false,
+      "location_accuracy_or_GPS_quality_fields": [],
+      "median_observed_fixes_per_animal_day": 17,
+      "median_observed_within_day_interfix_seconds": 3600.0,
+      "n_source_animal_calendar_dates": 26851,
+      "note": "Nonempty generic site labels alone would not prove local population membership; no animal IDs or locations released.",
+      "original_GPS_columns_present_but_no_values_shared": 11,
+      "reference_columns_present_but_no_values_shared": 16,
+      "reference_table_n_rows": 339,
+      "source": "turkey",
+      "source_clock_basis_verified": false,
+      "tag_schedule_fields": [],
+      "tag_specific_GPS_location_error_calibrated": false
+    },
+    {
+      "animals_with_nonempty_explicit_site_field": 0,
+      "explicit_site_or_group_metadata_fields": [],
+      "local_population_membership_verified": false,
+      "location_accuracy_or_GPS_quality_fields": [],
+      "median_observed_fixes_per_animal_day": 9.0,
+      "median_observed_within_day_interfix_seconds": 3600.0,
+      "n_source_animal_calendar_dates": 12024,
+      "note": "Nonempty generic site labels alone would not prove local population membership; no animal IDs or locations released.",
+      "original_GPS_columns_present_but_no_values_shared": 10,
+      "reference_columns_present_but_no_values_shared": 21,
+      "reference_table_n_rows": 21,
+      "source": "black_bear",
+      "source_clock_basis_verified": false,
+      "tag_schedule_fields": [],
+      "tag_specific_GPS_location_error_calibrated": false
+    },
+    {
+      "animals_with_nonempty_explicit_site_field": 0,
+      "explicit_site_or_group_metadata_fields": [],
+      "local_population_membership_verified": false,
+      "location_accuracy_or_GPS_quality_fields": [],
+      "median_observed_fixes_per_animal_day": 24.0,
+      "median_observed_within_day_interfix_seconds": 3600.0,
+      "n_source_animal_calendar_dates": 15648,
+      "note": "Nonempty generic site labels alone would not prove local population membership; no animal IDs or locations released.",
+      "original_GPS_columns_present_but_no_values_shared": 11,
+      "reference_columns_present_but_no_values_shared": 14,
+      "reference_table_n_rows": 34,
+      "source": "white_tailed_deer",
+      "source_clock_basis_verified": false,
+      "tag_schedule_fields": [],
+      "tag_specific_GPS_location_error_calibrated": false
+    }
+  ],
+  "status": "POST_INSPECTION_SOURCE_GPS_YEAR_REUSE_AND_SPATIAL_INFLUENCE_VALIDATED",
+  "stop_groups": [
+    {
+      "source": "black_bear",
+      "status": "STOP_PREVIOUS_SOURCE_TIME_OPPORTUNITY",
+      "supported_dyads": 0,
+      "tol_seconds": 900,
+      "year": 2019
+    },
+    {
+      "source": "black_bear",
+      "status": "STOP_PREVIOUS_SOURCE_TIME_OPPORTUNITY",
+      "supported_dyads": 0,
+      "tol_seconds": 1800,
+      "year": 2019
+    },
+    {
+      "source": "black_bear",
+      "status": "STOP_PREVIOUS_SOURCE_TIME_OPPORTUNITY",
+      "supported_dyads": 5,
+      "tol_seconds": 900,
+      "year": 2020
+    },
+    {
+      "source": "black_bear",
+      "status": "STOP_PREVIOUS_SOURCE_TIME_OPPORTUNITY",
+      "supported_dyads": 6,
+      "tol_seconds": 1800,
+      "year": 2020
+    }
+  ],
+  "summaries": [
+    {
+      "centroid_pair_distance_max_km": 5.0,
+      "component_animal_counts": [
+        11,
+        7
+      ],
+      "component_dyad_counts": [
+        53,
+        20
+      ],
+      "n_animals": 18,
+      "n_distinct_source_geographic_components": 2,
+      "n_dyads": 73,
+      "n_large_source_geographic_components": 2,
+      "radii": [
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.07735377255925202,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 0,
+          "n_positive_source_subsampling_seeds": 12,
+          "orientation": "original_A_to_B",
+          "radius_km": 0.5
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.08028919330289193,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 0,
+          "n_positive_source_subsampling_seeds": 12,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 0.5
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.023143618177864755,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 0,
+          "n_positive_source_subsampling_seeds": 12,
+          "orientation": "original_A_to_B",
+          "radius_km": 1.0
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.0213089802130898,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 0,
+          "n_positive_source_subsampling_seeds": 12,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 1.0
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.00929549902152642,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 1,
+          "n_positive_source_subsampling_seeds": 11,
+          "orientation": "original_A_to_B",
+          "radius_km": 2.0
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.007623939986953688,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 0,
+          "n_positive_source_subsampling_seeds": 12,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 2.0
+        }
+      ],
+      "source": "turkey",
+      "status": "DESCRIPTIVE_SOURCE_GPS_EDGE_SET_ONLY",
+      "tolerance_seconds": 900,
+      "year": 2019
+    },
+    {
+      "centroid_pair_distance_max_km": 10.0,
+      "component_animal_counts": [
+        11,
+        8
+      ],
+      "component_dyad_counts": [
+        55,
+        23
+      ],
+      "n_animals": 19,
+      "n_distinct_source_geographic_components": 2,
+      "n_dyads": 78,
+      "n_large_source_geographic_components": 2,
+      "radii": [
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.0729421041921042,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 0,
+          "n_positive_source_subsampling_seeds": 12,
+          "orientation": "original_A_to_B",
+          "radius_km": 0.5
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.07534595034595036,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 0,
+          "n_positive_source_subsampling_seeds": 12,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 0.5
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.021736365486365487,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 0,
+          "n_positive_source_subsampling_seeds": 12,
+          "orientation": "original_A_to_B",
+          "radius_km": 1.0
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.020400895400895402,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 0,
+          "n_positive_source_subsampling_seeds": 12,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 1.0
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.0088013838013838,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 1,
+          "n_positive_source_subsampling_seeds": 11,
+          "orientation": "original_A_to_B",
+          "radius_km": 2.0
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.007580382580382582,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 0,
+          "n_positive_source_subsampling_seeds": 12,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 2.0
+        }
+      ],
+      "source": "turkey",
+      "status": "DESCRIPTIVE_SOURCE_GPS_EDGE_SET_ONLY",
+      "tolerance_seconds": 900,
+      "year": 2019
+    },
+    {
+      "centroid_pair_distance_max_km": 25.0,
+      "component_animal_counts": [
+        19
+      ],
+      "component_dyad_counts": [
+        112
+      ],
+      "n_animals": 19,
+      "n_distinct_source_geographic_components": 1,
+      "n_dyads": 112,
+      "n_large_source_geographic_components": 1,
+      "radii": [
+        {
+          "animal_deletion_mean_min_max": [
+            0.037953795379537955,
+            0.065097774504991
+          ],
+          "conditional_annulus_means_exploratory": {
+            "0_5km_mean": 0.07735377255925202,
+            "10_25km_mean": 0.0,
+            "5_10km_mean": 0.008531746031746047,
+            "n_0_5km_pairs": 73,
+            "n_10_25km_pairs": 34,
+            "n_5_10km_pairs": 5,
+            "note": "Algebraic pair-weighted means only. Annulus 12-seed sign frequencies cannot be inferred from group summaries."
+          },
+          "mean_winter_minus_summer_L": 0.05079896541950114,
+          "n_animal_omissions_with_positive_10_of_12": 19,
+          "n_eligible_animal_deletions": 19,
+          "n_negative_source_subsampling_seeds": 0,
+          "n_positive_source_subsampling_seeds": 12,
+          "orientation": "original_A_to_B",
+          "radius_km": 0.5
+        },
+        {
+          "animal_deletion_mean_min_max": [
+            0.03911283985541412,
+            0.06598756341024382
+          ],
+          "conditional_annulus_means_exploratory": {
+            "0_5km_mean": 0.08028919330289193,
+            "10_25km_mean": -2.6122894697062506e-17,
+            "5_10km_mean": 0.0031746031746035185,
+            "n_0_5km_pairs": 73,
+            "n_10_25km_pairs": 34,
+            "n_5_10km_pairs": 5,
+            "note": "Algebraic pair-weighted means only. Annulus 12-seed sign frequencies cannot be inferred from group summaries."
+          },
+          "mean_winter_minus_summer_L": 0.05247307256235828,
+          "n_animal_omissions_with_positive_10_of_12": 19,
+          "n_eligible_animal_deletions": 19,
+          "n_negative_source_subsampling_seeds": 0,
+          "n_positive_source_subsampling_seeds": 12,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 0.5
+        },
+        {
+          "animal_deletion_mean_min_max": [
+            0.012012808423699513,
+            0.0220810832924235
+          ],
+          "conditional_annulus_means_exploratory": {
+            "0_5km_mean": 0.023143618177864755,
+            "10_25km_mean": 0.0,
+            "5_10km_mean": 0.0011904761904761418,
+            "n_0_5km_pairs": 73,
+            "n_10_25km_pairs": 34,
+            "n_5_10km_pairs": 5,
+            "note": "Algebraic pair-weighted means only. Annulus 12-seed sign frequencies cannot be inferred from group summaries."
+          },
+          "mean_winter_minus_summer_L": 0.01513782596371882,
+          "n_animal_omissions_with_positive_10_of_12": 19,
+          "n_eligible_animal_deletions": 19,
+          "n_negative_source_subsampling_seeds": 0,
+          "n_positive_source_subsampling_seeds": 12,
+          "orientation": "original_A_to_B",
+          "radius_km": 1.0
+        },
+        {
+          "animal_deletion_mean_min_max": [
+            0.009714364293572215,
+            0.020915153002781867
+          ],
+          "conditional_annulus_means_exploratory": {
+            "0_5km_mean": 0.0213089802130898,
+            "10_25km_mean": 0.0,
+            "5_10km_mean": 0.007142857142857206,
+            "n_0_5km_pairs": 73,
+            "n_10_25km_pairs": 34,
+            "n_5_10km_pairs": 5,
+            "note": "Algebraic pair-weighted means only. Annulus 12-seed sign frequencies cannot be inferred from group summaries."
+          },
+          "mean_winter_minus_summer_L": 0.014207766439909298,
+          "n_animal_omissions_with_positive_10_of_12": 19,
+          "n_eligible_animal_deletions": 19,
+          "n_negative_source_subsampling_seeds": 0,
+          "n_positive_source_subsampling_seeds": 12,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 1.0
+        },
+        {
+          "animal_deletion_mean_min_max": [
+            0.004529421196087863,
+            0.007303275920297197
+          ],
+          "conditional_annulus_means_exploratory": {
+            "0_5km_mean": 0.00929549902152642,
+            "10_25km_mean": 0.0,
+            "5_10km_mean": 0.0015873015873015595,
+            "n_0_5km_pairs": 73,
+            "n_10_25km_pairs": 34,
+            "n_5_10km_pairs": 5,
+            "note": "Algebraic pair-weighted means only. Annulus 12-seed sign frequencies cannot be inferred from group summaries."
+          },
+          "mean_winter_minus_summer_L": 0.00612953514739229,
+          "n_animal_omissions_with_positive_10_of_12": 18,
+          "n_eligible_animal_deletions": 19,
+          "n_negative_source_subsampling_seeds": 1,
+          "n_positive_source_subsampling_seeds": 11,
+          "orientation": "original_A_to_B",
+          "radius_km": 2.0
+        },
+        {
+          "animal_deletion_mean_min_max": [
+            0.004327286470143615,
+            0.006290104694360015
+          ],
+          "conditional_annulus_means_exploratory": {
+            "0_5km_mean": 0.007623939986953688,
+            "10_25km_mean": 0.0,
+            "5_10km_mean": 0.006944444444444442,
+            "n_0_5km_pairs": 73,
+            "n_10_25km_pairs": 34,
+            "n_5_10km_pairs": 5,
+            "note": "Algebraic pair-weighted means only. Annulus 12-seed sign frequencies cannot be inferred from group summaries."
+          },
+          "mean_winter_minus_summer_L": 0.005279195011337869,
+          "n_animal_omissions_with_positive_10_of_12": 19,
+          "n_eligible_animal_deletions": 19,
+          "n_negative_source_subsampling_seeds": 0,
+          "n_positive_source_subsampling_seeds": 12,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 2.0
+        }
+      ],
+      "source": "turkey",
+      "status": "DESCRIPTIVE_SOURCE_GPS_EDGE_SET_ONLY",
+      "tolerance_seconds": 900,
+      "year": 2019
+    },
+    {
+      "centroid_pair_distance_max_km": 5.0,
+      "component_animal_counts": [
+        11,
+        7
+      ],
+      "component_dyad_counts": [
+        53,
+        20
+      ],
+      "n_animals": 18,
+      "n_distinct_source_geographic_components": 2,
+      "n_dyads": 73,
+      "n_large_source_geographic_components": 2,
+      "radii": [
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.07618504022613612,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 0,
+          "n_positive_source_subsampling_seeds": 12,
+          "orientation": "original_A_to_B",
+          "radius_km": 0.5
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.07796531854751033,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 0,
+          "n_positive_source_subsampling_seeds": 12,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 0.5
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.021838986736247012,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 0,
+          "n_positive_source_subsampling_seeds": 12,
+          "orientation": "original_A_to_B",
+          "radius_km": 1.0
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.016715590345727335,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 0,
+          "n_positive_source_subsampling_seeds": 12,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 1.0
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.010273972602739724,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 0,
+          "n_positive_source_subsampling_seeds": 12,
+          "orientation": "original_A_to_B",
+          "radius_km": 2.0
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.010790389215046749,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 0,
+          "n_positive_source_subsampling_seeds": 12,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 2.0
+        }
+      ],
+      "source": "turkey",
+      "status": "DESCRIPTIVE_SOURCE_GPS_EDGE_SET_ONLY",
+      "tolerance_seconds": 1800,
+      "year": 2019
+    },
+    {
+      "centroid_pair_distance_max_km": 10.0,
+      "component_animal_counts": [
+        11,
+        8
+      ],
+      "component_dyad_counts": [
+        55,
+        23
+      ],
+      "n_animals": 19,
+      "n_distinct_source_geographic_components": 2,
+      "n_dyads": 78,
+      "n_large_source_geographic_components": 2,
+      "radii": [
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.07150488400488401,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 0,
+          "n_positive_source_subsampling_seeds": 12,
+          "orientation": "original_A_to_B",
+          "radius_km": 0.5
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.0732091982091982,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 0,
+          "n_positive_source_subsampling_seeds": 12,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 0.5
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.01998117623117623,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 0,
+          "n_positive_source_subsampling_seeds": 12,
+          "orientation": "original_A_to_B",
+          "radius_km": 1.0
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.015873015873015876,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 0,
+          "n_positive_source_subsampling_seeds": 12,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 1.0
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.010035103785103784,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 0,
+          "n_positive_source_subsampling_seeds": 12,
+          "orientation": "original_A_to_B",
+          "radius_km": 2.0
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.010327635327635327,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 0,
+          "n_positive_source_subsampling_seeds": 12,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 2.0
+        }
+      ],
+      "source": "turkey",
+      "status": "DESCRIPTIVE_SOURCE_GPS_EDGE_SET_ONLY",
+      "tolerance_seconds": 1800,
+      "year": 2019
+    },
+    {
+      "centroid_pair_distance_max_km": 25.0,
+      "component_animal_counts": [
+        19
+      ],
+      "component_dyad_counts": [
+        112
+      ],
+      "n_animals": 19,
+      "n_distinct_source_geographic_components": 1,
+      "n_dyads": 112,
+      "n_large_source_geographic_components": 1,
+      "radii": [
+        {
+          "animal_deletion_mean_min_max": [
+            0.037796636806537796,
+            0.06393184421534938
+          ],
+          "conditional_annulus_means_exploratory": {
+            "0_5km_mean": 0.07618504022613612,
+            "10_25km_mean": -2.6122894697062506e-17,
+            "5_10km_mean": 0.003174603174603341,
+            "n_0_5km_pairs": 73,
+            "n_10_25km_pairs": 34,
+            "n_5_10km_pairs": 5,
+            "note": "Algebraic pair-weighted means only. Annulus 12-seed sign frequencies cannot be inferred from group summaries."
+          },
+          "mean_winter_minus_summer_L": 0.049798044217687076,
+          "n_animal_omissions_with_positive_10_of_12": 19,
+          "n_eligible_animal_deletions": 19,
+          "n_negative_source_subsampling_seeds": 0,
+          "n_positive_source_subsampling_seeds": 12,
+          "orientation": "original_A_to_B",
+          "radius_km": 0.5
+        },
+        {
+          "animal_deletion_mean_min_max": [
+            0.03840562627691341,
+            0.06424889543446245
+          ],
+          "conditional_annulus_means_exploratory": {
+            "0_5km_mean": 0.07796531854751033,
+            "10_25km_mean": 2.6122894697062506e-17,
+            "5_10km_mean": 0.0037698412698409455,
+            "n_0_5km_pairs": 73,
+            "n_10_25km_pairs": 34,
+            "n_5_10km_pairs": 5,
+            "note": "Algebraic pair-weighted means only. Annulus 12-seed sign frequencies cannot be inferred from group summaries."
+          },
+          "mean_winter_minus_summer_L": 0.05098497732426304,
+          "n_animal_omissions_with_positive_10_of_12": 19,
+          "n_eligible_animal_deletions": 19,
+          "n_negative_source_subsampling_seeds": 0,
+          "n_positive_source_subsampling_seeds": 12,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 0.5
+        },
+        {
+          "animal_deletion_mean_min_max": [
+            0.011587301587301585,
+            0.021375388643429877
+          ],
+          "conditional_annulus_means_exploratory": {
+            "0_5km_mean": 0.021838986736247012,
+            "10_25km_mean": 0.0,
+            "5_10km_mean": -0.007142857142857162,
+            "n_0_5km_pairs": 73,
+            "n_10_25km_pairs": 34,
+            "n_5_10km_pairs": 5,
+            "note": "Algebraic pair-weighted means only. Annulus 12-seed sign frequencies cannot be inferred from group summaries."
+          },
+          "mean_winter_minus_summer_L": 0.01391546201814059,
+          "n_animal_omissions_with_positive_10_of_12": 19,
+          "n_eligible_animal_deletions": 19,
+          "n_negative_source_subsampling_seeds": 0,
+          "n_positive_source_subsampling_seeds": 12,
+          "orientation": "original_A_to_B",
+          "radius_km": 1.0
+        },
+        {
+          "animal_deletion_mean_min_max": [
+            0.006757818639006757,
+            0.01765259368352152
+          ],
+          "conditional_annulus_means_exploratory": {
+            "0_5km_mean": 0.016715590345727335,
+            "10_25km_mean": -6.530723674265627e-18,
+            "5_10km_mean": 0.003571428571428603,
+            "n_0_5km_pairs": 73,
+            "n_10_25km_pairs": 34,
+            "n_5_10km_pairs": 5,
+            "note": "Algebraic pair-weighted means only. Annulus 12-seed sign frequencies cannot be inferred from group summaries."
+          },
+          "mean_winter_minus_summer_L": 0.011054421768707483,
+          "n_animal_omissions_with_positive_10_of_12": 19,
+          "n_eligible_animal_deletions": 19,
+          "n_negative_source_subsampling_seeds": 0,
+          "n_positive_source_subsampling_seeds": 12,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 1.0
+        },
+        {
+          "animal_deletion_mean_min_max": [
+            0.004970338303671637,
+            0.008567821067821066
+          ],
+          "conditional_annulus_means_exploratory": {
+            "0_5km_mean": 0.010273972602739724,
+            "10_25km_mean": 3.2653618371328133e-18,
+            "5_10km_mean": 0.006547619047619069,
+            "n_0_5km_pairs": 73,
+            "n_10_25km_pairs": 34,
+            "n_5_10km_pairs": 5,
+            "note": "Algebraic pair-weighted means only. Annulus 12-seed sign frequencies cannot be inferred from group summaries."
+          },
+          "mean_winter_minus_summer_L": 0.006988732993197279,
+          "n_animal_omissions_with_positive_10_of_12": 19,
+          "n_eligible_animal_deletions": 19,
+          "n_negative_source_subsampling_seeds": 0,
+          "n_positive_source_subsampling_seeds": 12,
+          "orientation": "original_A_to_B",
+          "radius_km": 2.0
+        },
+        {
+          "animal_deletion_mean_min_max": [
+            0.0052569137620684,
+            0.008569739952718676
+          ],
+          "conditional_annulus_means_exploratory": {
+            "0_5km_mean": 0.010790389215046749,
+            "10_25km_mean": 0.0,
+            "5_10km_mean": 0.0035714285714285587,
+            "n_0_5km_pairs": 73,
+            "n_10_25km_pairs": 34,
+            "n_5_10km_pairs": 5,
+            "note": "Algebraic pair-weighted means only. Annulus 12-seed sign frequencies cannot be inferred from group summaries."
+          },
+          "mean_winter_minus_summer_L": 0.007192460317460317,
+          "n_animal_omissions_with_positive_10_of_12": 19,
+          "n_eligible_animal_deletions": 19,
+          "n_negative_source_subsampling_seeds": 0,
+          "n_positive_source_subsampling_seeds": 12,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 2.0
+        }
+      ],
+      "source": "turkey",
+      "status": "DESCRIPTIVE_SOURCE_GPS_EDGE_SET_ONLY",
+      "tolerance_seconds": 1800,
+      "year": 2019
+    },
+    {
+      "centroid_pair_distance_max_km": 5.0,
+      "component_animal_counts": [
+        6
+      ],
+      "component_dyad_counts": [
+        14
+      ],
+      "n_animals": 6,
+      "n_distinct_source_geographic_components": 1,
+      "n_dyads": 14,
+      "n_large_source_geographic_components": 1,
+      "radii": [
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": -0.016652494331065765,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 9,
+          "n_positive_source_subsampling_seeds": 3,
+          "orientation": "original_A_to_B",
+          "radius_km": 0.5
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": -0.00042517006802721136,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 6,
+          "n_positive_source_subsampling_seeds": 6,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 0.5
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.013959750566893423,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 1,
+          "n_positive_source_subsampling_seeds": 11,
+          "orientation": "original_A_to_B",
+          "radius_km": 1.0
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.026573129251700675,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 0,
+          "n_positive_source_subsampling_seeds": 12,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 1.0
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.0029053287981859435,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 3,
+          "n_positive_source_subsampling_seeds": 7,
+          "orientation": "original_A_to_B",
+          "radius_km": 2.0
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.009637188208616787,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 1,
+          "n_positive_source_subsampling_seeds": 11,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 2.0
+        }
+      ],
+      "source": "turkey",
+      "status": "DESCRIPTIVE_SOURCE_GPS_EDGE_SET_ONLY",
+      "tolerance_seconds": 900,
+      "year": 2020
+    },
+    {
+      "centroid_pair_distance_max_km": 10.0,
+      "component_animal_counts": [
+        7
+      ],
+      "component_dyad_counts": [
+        16
+      ],
+      "n_animals": 7,
+      "n_distinct_source_geographic_components": 1,
+      "n_dyads": 16,
+      "n_large_source_geographic_components": 1,
+      "radii": [
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": -0.0009920634920634953,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 7,
+          "n_positive_source_subsampling_seeds": 5,
+          "orientation": "original_A_to_B",
+          "radius_km": 0.5
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.009734623015873016,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 3,
+          "n_positive_source_subsampling_seeds": 9,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 0.5
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.018539186507936505,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 1,
+          "n_positive_source_subsampling_seeds": 11,
+          "orientation": "original_A_to_B",
+          "radius_km": 1.0
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.028459821428571425,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 0,
+          "n_positive_source_subsampling_seeds": 12,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 1.0
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.0025421626984127002,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 4,
+          "n_positive_source_subsampling_seeds": 7,
+          "orientation": "original_A_to_B",
+          "radius_km": 2.0
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.008184523809523817,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 2,
+          "n_positive_source_subsampling_seeds": 10,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 2.0
+        }
+      ],
+      "source": "turkey",
+      "status": "DESCRIPTIVE_SOURCE_GPS_EDGE_SET_ONLY",
+      "tolerance_seconds": 900,
+      "year": 2020
+    },
+    {
+      "centroid_pair_distance_max_km": 25.0,
+      "component_animal_counts": [
+        7
+      ],
+      "component_dyad_counts": [
+        21
+      ],
+      "n_animals": 7,
+      "n_distinct_source_geographic_components": 1,
+      "n_dyads": 21,
+      "n_large_source_geographic_components": 1,
+      "radii": [
+        {
+          "animal_deletion_mean_min_max": [
+            -0.015079365079365083,
+            0.048214285714285716
+          ],
+          "conditional_annulus_means_exploratory": {
+            "0_5km_mean": -0.016652494331065765,
+            "10_25km_mean": 0.11507936507936507,
+            "5_10km_mean": 0.1086309523809524,
+            "n_0_5km_pairs": 14,
+            "n_10_25km_pairs": 5,
+            "n_5_10km_pairs": 2,
+            "note": "Algebraic pair-weighted means only. Annulus 12-seed sign frequencies cannot be inferred from group summaries."
+          },
+          "mean_winter_minus_summer_L": 0.02664399092970521,
+          "n_animal_omissions_with_positive_10_of_12": 6,
+          "n_eligible_animal_deletions": 7,
+          "n_negative_source_subsampling_seeds": 0,
+          "n_positive_source_subsampling_seeds": 12,
+          "orientation": "original_A_to_B",
+          "radius_km": 0.5
+        },
+        {
+          "animal_deletion_mean_min_max": [
+            -0.0018518518518518521,
+            0.04484126984126984
+          ],
+          "conditional_annulus_means_exploratory": {
+            "0_5km_mean": -0.00042517006802721136,
+            "10_25km_mean": 0.08313492063492063,
+            "5_10km_mean": 0.08085317460317461,
+            "n_0_5km_pairs": 14,
+            "n_10_25km_pairs": 5,
+            "n_5_10km_pairs": 2,
+            "note": "Algebraic pair-weighted means only. Annulus 12-seed sign frequencies cannot be inferred from group summaries."
+          },
+          "mean_winter_minus_summer_L": 0.027210884353741496,
+          "n_animal_omissions_with_positive_10_of_12": 6,
+          "n_eligible_animal_deletions": 7,
+          "n_negative_source_subsampling_seeds": 0,
+          "n_positive_source_subsampling_seeds": 12,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 0.5
+        },
+        {
+          "animal_deletion_mean_min_max": [
+            0.012301587301587298,
+            0.052314814814814814
+          ],
+          "conditional_annulus_means_exploratory": {
+            "0_5km_mean": 0.013959750566893423,
+            "10_25km_mean": 0.06369047619047619,
+            "5_10km_mean": 0.05059523809523808,
+            "n_0_5km_pairs": 14,
+            "n_10_25km_pairs": 5,
+            "n_5_10km_pairs": 2,
+            "note": "Algebraic pair-weighted means only. Annulus 12-seed sign frequencies cannot be inferred from group summaries."
+          },
+          "mean_winter_minus_summer_L": 0.029289493575207857,
+          "n_animal_omissions_with_positive_10_of_12": 7,
+          "n_eligible_animal_deletions": 7,
+          "n_negative_source_subsampling_seeds": 0,
+          "n_positive_source_subsampling_seeds": 12,
+          "orientation": "original_A_to_B",
+          "radius_km": 1.0
+        },
+        {
+          "animal_deletion_mean_min_max": [
+            0.020833333333333325,
+            0.049867724867724866
+          ],
+          "conditional_annulus_means_exploratory": {
+            "0_5km_mean": 0.026573129251700675,
+            "10_25km_mean": 0.038690476190476185,
+            "5_10km_mean": 0.041666666666666685,
+            "n_0_5km_pairs": 14,
+            "n_10_25km_pairs": 5,
+            "n_5_10km_pairs": 2,
+            "note": "Algebraic pair-weighted means only. Annulus 12-seed sign frequencies cannot be inferred from group summaries."
+          },
+          "mean_winter_minus_summer_L": 0.03089569160997732,
+          "n_animal_omissions_with_positive_10_of_12": 7,
+          "n_eligible_animal_deletions": 7,
+          "n_negative_source_subsampling_seeds": 0,
+          "n_positive_source_subsampling_seeds": 12,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 1.0
+        },
+        {
+          "animal_deletion_mean_min_max": [
+            0.0010582010582010596,
+            0.007738095238095243
+          ],
+          "conditional_annulus_means_exploratory": {
+            "0_5km_mean": 0.0029053287981859435,
+            "10_25km_mean": 0.012500000000000006,
+            "5_10km_mean": -3.469446951953614e-18,
+            "n_0_5km_pairs": 14,
+            "n_10_25km_pairs": 5,
+            "n_5_10km_pairs": 2,
+            "note": "Algebraic pair-weighted means only. Annulus 12-seed sign frequencies cannot be inferred from group summaries."
+          },
+          "mean_winter_minus_summer_L": 0.004913076341647772,
+          "n_animal_omissions_with_positive_10_of_12": 5,
+          "n_eligible_animal_deletions": 7,
+          "n_negative_source_subsampling_seeds": 1,
+          "n_positive_source_subsampling_seeds": 11,
+          "orientation": "original_A_to_B",
+          "radius_km": 2.0
+        },
+        {
+          "animal_deletion_mean_min_max": [
+            0.002513227513227521,
+            0.01144179894179895
+          ],
+          "conditional_annulus_means_exploratory": {
+            "0_5km_mean": 0.009637188208616787,
+            "10_25km_mean": 0.004365079365079377,
+            "5_10km_mean": -0.001984126984126977,
+            "n_0_5km_pairs": 14,
+            "n_10_25km_pairs": 5,
+            "n_5_10km_pairs": 2,
+            "note": "Algebraic pair-weighted means only. Annulus 12-seed sign frequencies cannot be inferred from group summaries."
+          },
+          "mean_winter_minus_summer_L": 0.007275132275132284,
+          "n_animal_omissions_with_positive_10_of_12": 4,
+          "n_eligible_animal_deletions": 7,
+          "n_negative_source_subsampling_seeds": 2,
+          "n_positive_source_subsampling_seeds": 10,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 2.0
+        }
+      ],
+      "source": "turkey",
+      "status": "DESCRIPTIVE_SOURCE_GPS_EDGE_SET_ONLY",
+      "tolerance_seconds": 900,
+      "year": 2020
+    },
+    {
+      "centroid_pair_distance_max_km": 5.0,
+      "component_animal_counts": [
+        6
+      ],
+      "component_dyad_counts": [
+        14
+      ],
+      "n_animals": 6,
+      "n_distinct_source_geographic_components": 1,
+      "n_dyads": 14,
+      "n_large_source_geographic_components": 1,
+      "radii": [
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": -0.008786848072562355,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 8,
+          "n_positive_source_subsampling_seeds": 4,
+          "orientation": "original_A_to_B",
+          "radius_km": 0.5
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": -0.004322562358276651,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 5,
+          "n_positive_source_subsampling_seeds": 6,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 0.5
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.01608560090702948,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 1,
+          "n_positive_source_subsampling_seeds": 11,
+          "orientation": "original_A_to_B",
+          "radius_km": 1.0
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.02246315192743764,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 1,
+          "n_positive_source_subsampling_seeds": 11,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 1.0
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.0014172335600907084,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 4,
+          "n_positive_source_subsampling_seeds": 8,
+          "orientation": "original_A_to_B",
+          "radius_km": 2.0
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.006519274376417246,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 1,
+          "n_positive_source_subsampling_seeds": 10,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 2.0
+        }
+      ],
+      "source": "turkey",
+      "status": "DESCRIPTIVE_SOURCE_GPS_EDGE_SET_ONLY",
+      "tolerance_seconds": 1800,
+      "year": 2020
+    },
+    {
+      "centroid_pair_distance_max_km": 10.0,
+      "component_animal_counts": [
+        7
+      ],
+      "component_dyad_counts": [
+        16
+      ],
+      "n_animals": 7,
+      "n_distinct_source_geographic_components": 1,
+      "n_dyads": 16,
+      "n_large_source_geographic_components": 1,
+      "radii": [
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.0047123015873015905,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 7,
+          "n_positive_source_subsampling_seeds": 5,
+          "orientation": "original_A_to_B",
+          "radius_km": 0.5
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.008990575396825393,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 3,
+          "n_positive_source_subsampling_seeds": 9,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 0.5
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.01990327380952381,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 0,
+          "n_positive_source_subsampling_seeds": 12,
+          "orientation": "original_A_to_B",
+          "radius_km": 1.0
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.026661706349206348,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 0,
+          "n_positive_source_subsampling_seeds": 12,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 1.0
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.0013020833333333385,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 3,
+          "n_positive_source_subsampling_seeds": 8,
+          "orientation": "original_A_to_B",
+          "radius_km": 2.0
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.006324404761904773,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 2,
+          "n_positive_source_subsampling_seeds": 10,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 2.0
+        }
+      ],
+      "source": "turkey",
+      "status": "DESCRIPTIVE_SOURCE_GPS_EDGE_SET_ONLY",
+      "tolerance_seconds": 1800,
+      "year": 2020
+    },
+    {
+      "centroid_pair_distance_max_km": 25.0,
+      "component_animal_counts": [
+        7
+      ],
+      "component_dyad_counts": [
+        21
+      ],
+      "n_animals": 7,
+      "n_distinct_source_geographic_components": 1,
+      "n_dyads": 21,
+      "n_large_source_geographic_components": 1,
+      "radii": [
+        {
+          "animal_deletion_mean_min_max": [
+            -0.009325396825396822,
+            0.04120370370370371
+          ],
+          "conditional_annulus_means_exploratory": {
+            "0_5km_mean": -0.008786848072562355,
+            "10_25km_mean": 0.10376984126984128,
+            "5_10km_mean": 0.09920634920634921,
+            "n_0_5km_pairs": 14,
+            "n_10_25km_pairs": 5,
+            "n_5_10km_pairs": 2,
+            "note": "Algebraic pair-weighted means only. Annulus 12-seed sign frequencies cannot be inferred from group summaries."
+          },
+          "mean_winter_minus_summer_L": 0.028297430083144375,
+          "n_animal_omissions_with_positive_10_of_12": 6,
+          "n_eligible_animal_deletions": 7,
+          "n_negative_source_subsampling_seeds": 0,
+          "n_positive_source_subsampling_seeds": 12,
+          "orientation": "original_A_to_B",
+          "radius_km": 0.5
+        },
+        {
+          "animal_deletion_mean_min_max": [
+            -0.004497354497354504,
+            0.053505291005291
+          ],
+          "conditional_annulus_means_exploratory": {
+            "0_5km_mean": -0.004322562358276651,
+            "10_25km_mean": 0.10535714285714286,
+            "5_10km_mean": 0.1021825396825397,
+            "n_0_5km_pairs": 14,
+            "n_10_25km_pairs": 5,
+            "n_5_10km_pairs": 2,
+            "note": "Algebraic pair-weighted means only. Annulus 12-seed sign frequencies cannot be inferred from group summaries."
+          },
+          "mean_winter_minus_summer_L": 0.031934996220710506,
+          "n_animal_omissions_with_positive_10_of_12": 6,
+          "n_eligible_animal_deletions": 7,
+          "n_negative_source_subsampling_seeds": 0,
+          "n_positive_source_subsampling_seeds": 12,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 0.5
+        },
+        {
+          "animal_deletion_mean_min_max": [
+            0.0126984126984127,
+            0.05211640211640212
+          ],
+          "conditional_annulus_means_exploratory": {
+            "0_5km_mean": 0.01608560090702948,
+            "10_25km_mean": 0.05515873015873015,
+            "5_10km_mean": 0.04662698412698413,
+            "n_0_5km_pairs": 14,
+            "n_10_25km_pairs": 5,
+            "n_5_10km_pairs": 2,
+            "note": "Algebraic pair-weighted means only. Annulus 12-seed sign frequencies cannot be inferred from group summaries."
+          },
+          "mean_winter_minus_summer_L": 0.02829743008314437,
+          "n_animal_omissions_with_positive_10_of_12": 7,
+          "n_eligible_animal_deletions": 7,
+          "n_negative_source_subsampling_seeds": 0,
+          "n_positive_source_subsampling_seeds": 12,
+          "orientation": "original_A_to_B",
+          "radius_km": 1.0
+        },
+        {
+          "animal_deletion_mean_min_max": [
+            0.020171957671957667,
+            0.0498015873015873
+          ],
+          "conditional_annulus_means_exploratory": {
+            "0_5km_mean": 0.02246315192743764,
+            "10_25km_mean": 0.04702380952380952,
+            "5_10km_mean": 0.0560515873015873,
+            "n_0_5km_pairs": 14,
+            "n_10_25km_pairs": 5,
+            "n_5_10km_pairs": 2,
+            "note": "Algebraic pair-weighted means only. Annulus 12-seed sign frequencies cannot be inferred from group summaries."
+          },
+          "mean_winter_minus_summer_L": 0.031509826152683294,
+          "n_animal_omissions_with_positive_10_of_12": 7,
+          "n_eligible_animal_deletions": 7,
+          "n_negative_source_subsampling_seeds": 0,
+          "n_positive_source_subsampling_seeds": 12,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 1.0
+        },
+        {
+          "animal_deletion_mean_min_max": [
+            0.00019841269841270256,
+            0.006084656084656088
+          ],
+          "conditional_annulus_means_exploratory": {
+            "0_5km_mean": 0.0014172335600907084,
+            "10_25km_mean": 0.00892857142857143,
+            "5_10km_mean": 0.0004960317460317495,
+            "n_0_5km_pairs": 14,
+            "n_10_25km_pairs": 5,
+            "n_5_10km_pairs": 2,
+            "note": "Algebraic pair-weighted means only. Annulus 12-seed sign frequencies cannot be inferred from group summaries."
+          },
+          "mean_winter_minus_summer_L": 0.0031179138321995505,
+          "n_animal_omissions_with_positive_10_of_12": 1,
+          "n_eligible_animal_deletions": 7,
+          "n_negative_source_subsampling_seeds": 3,
+          "n_positive_source_subsampling_seeds": 9,
+          "orientation": "original_A_to_B",
+          "radius_km": 2.0
+        },
+        {
+          "animal_deletion_mean_min_max": [
+            0.0011904761904761969,
+            0.009656084656084666
+          ],
+          "conditional_annulus_means_exploratory": {
+            "0_5km_mean": 0.006519274376417246,
+            "10_25km_mean": 0.00158730158730159,
+            "5_10km_mean": 0.0049603174603174635,
+            "n_0_5km_pairs": 14,
+            "n_10_25km_pairs": 5,
+            "n_5_10km_pairs": 2,
+            "note": "Algebraic pair-weighted means only. Annulus 12-seed sign frequencies cannot be inferred from group summaries."
+          },
+          "mean_winter_minus_summer_L": 0.00519652305366592,
+          "n_animal_omissions_with_positive_10_of_12": 3,
+          "n_eligible_animal_deletions": 7,
+          "n_negative_source_subsampling_seeds": 2,
+          "n_positive_source_subsampling_seeds": 10,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 2.0
+        }
+      ],
+      "source": "turkey",
+      "status": "DESCRIPTIVE_SOURCE_GPS_EDGE_SET_ONLY",
+      "tolerance_seconds": 1800,
+      "year": 2020
+    },
+    {
+      "centroid_pair_distance_max_km": 5.0,
+      "component_animal_counts": [
+        8,
+        2
+      ],
+      "component_dyad_counts": [
+        26,
+        1
+      ],
+      "n_animals": 10,
+      "n_distinct_source_geographic_components": 2,
+      "n_dyads": 27,
+      "n_large_source_geographic_components": 1,
+      "radii": [
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.008267195767195767,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 1,
+          "n_positive_source_subsampling_seeds": 11,
+          "orientation": "original_A_to_B",
+          "radius_km": 0.5
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.004372427983539097,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 4,
+          "n_positive_source_subsampling_seeds": 8,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 0.5
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.002057613168724282,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 5,
+          "n_positive_source_subsampling_seeds": 7,
+          "orientation": "original_A_to_B",
+          "radius_km": 1.0
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.0042621987066431485,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 3,
+          "n_positive_source_subsampling_seeds": 9,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 1.0
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": -0.004482657260435038,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 9,
+          "n_positive_source_subsampling_seeds": 3,
+          "orientation": "original_A_to_B",
+          "radius_km": 2.0
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": -0.004151969429747208,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 8,
+          "n_positive_source_subsampling_seeds": 4,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 2.0
+        }
+      ],
+      "source": "white_tailed_deer",
+      "status": "DESCRIPTIVE_SOURCE_GPS_EDGE_SET_ONLY",
+      "tolerance_seconds": 900,
+      "year": 2019
+    },
+    {
+      "centroid_pair_distance_max_km": 10.0,
+      "component_animal_counts": [
+        11
+      ],
+      "component_dyad_counts": [
+        32
+      ],
+      "n_animals": 11,
+      "n_distinct_source_geographic_components": 1,
+      "n_dyads": 32,
+      "n_large_source_geographic_components": 1,
+      "radii": [
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.006975446428571428,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 1,
+          "n_positive_source_subsampling_seeds": 11,
+          "orientation": "original_A_to_B",
+          "radius_km": 0.5
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.0036892361111111136,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 4,
+          "n_positive_source_subsampling_seeds": 8,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 0.5
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.001736111111111113,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 5,
+          "n_positive_source_subsampling_seeds": 7,
+          "orientation": "original_A_to_B",
+          "radius_km": 1.0
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.003596230158730157,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 3,
+          "n_positive_source_subsampling_seeds": 9,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 1.0
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": -0.003782242063492064,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 9,
+          "n_positive_source_subsampling_seeds": 3,
+          "orientation": "original_A_to_B",
+          "radius_km": 2.0
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": -0.0035032242063492065,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 8,
+          "n_positive_source_subsampling_seeds": 4,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 2.0
+        }
+      ],
+      "source": "white_tailed_deer",
+      "status": "DESCRIPTIVE_SOURCE_GPS_EDGE_SET_ONLY",
+      "tolerance_seconds": 900,
+      "year": 2019
+    },
+    {
+      "centroid_pair_distance_max_km": 25.0,
+      "component_animal_counts": [
+        11
+      ],
+      "component_dyad_counts": [
+        55
+      ],
+      "n_animals": 11,
+      "n_distinct_source_geographic_components": 1,
+      "n_dyads": 55,
+      "n_large_source_geographic_components": 1,
+      "radii": [
+        {
+          "animal_deletion_mean_min_max": [
+            0.002645502645502644,
+            0.0058421516754850085
+          ],
+          "conditional_annulus_means_exploratory": {
+            "0_5km_mean": 0.008267195767195767,
+            "10_25km_mean": 0.0009920634920634922,
+            "5_10km_mean": 0.0,
+            "n_0_5km_pairs": 27,
+            "n_10_25km_pairs": 23,
+            "n_5_10km_pairs": 5,
+            "note": "Algebraic pair-weighted means only. Annulus 12-seed sign frequencies cannot be inferred from group summaries."
+          },
+          "mean_winter_minus_summer_L": 0.004473304473304473,
+          "n_animal_omissions_with_positive_10_of_12": 11,
+          "n_eligible_animal_deletions": 11,
+          "n_negative_source_subsampling_seeds": 1,
+          "n_positive_source_subsampling_seeds": 11,
+          "orientation": "original_A_to_B",
+          "radius_km": 0.5
+        },
+        {
+          "animal_deletion_mean_min_max": [
+            0.0014550264550264554,
+            0.00275573192239859
+          ],
+          "conditional_annulus_means_exploratory": {
+            "0_5km_mean": 0.004372427983539097,
+            "10_25km_mean": 0.0002587991718426486,
+            "5_10km_mean": 2.7755575615628915e-18,
+            "n_0_5km_pairs": 27,
+            "n_10_25km_pairs": 23,
+            "n_5_10km_pairs": 5,
+            "note": "Algebraic pair-weighted means only. Annulus 12-seed sign frequencies cannot be inferred from group summaries."
+          },
+          "mean_winter_minus_summer_L": 0.0022546897546897554,
+          "n_animal_omissions_with_positive_10_of_12": 0,
+          "n_eligible_animal_deletions": 11,
+          "n_negative_source_subsampling_seeds": 3,
+          "n_positive_source_subsampling_seeds": 9,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 0.5
+        },
+        {
+          "animal_deletion_mean_min_max": [
+            0.0001322751322751337,
+            0.002799823633156968
+          ],
+          "conditional_annulus_means_exploratory": {
+            "0_5km_mean": 0.002057613168724282,
+            "10_25km_mean": 0.000905797101449276,
+            "5_10km_mean": -1.3877787807814458e-18,
+            "n_0_5km_pairs": 27,
+            "n_10_25km_pairs": 23,
+            "n_5_10km_pairs": 5,
+            "note": "Algebraic pair-weighted means only. Annulus 12-seed sign frequencies cannot be inferred from group summaries."
+          },
+          "mean_winter_minus_summer_L": 0.0013888888888888902,
+          "n_animal_omissions_with_positive_10_of_12": 1,
+          "n_eligible_animal_deletions": 11,
+          "n_negative_source_subsampling_seeds": 5,
+          "n_positive_source_subsampling_seeds": 7,
+          "orientation": "original_A_to_B",
+          "radius_km": 1.0
+        },
+        {
+          "animal_deletion_mean_min_max": [
+            0.0009038800705467358,
+            0.002667548500881833
+          ],
+          "conditional_annulus_means_exploratory": {
+            "0_5km_mean": 0.0042621987066431485,
+            "10_25km_mean": 0.0,
+            "5_10km_mean": 2.7755575615628915e-18,
+            "n_0_5km_pairs": 27,
+            "n_10_25km_pairs": 23,
+            "n_5_10km_pairs": 5,
+            "note": "Algebraic pair-weighted means only. Annulus 12-seed sign frequencies cannot be inferred from group summaries."
+          },
+          "mean_winter_minus_summer_L": 0.0020923520923520913,
+          "n_animal_omissions_with_positive_10_of_12": 3,
+          "n_eligible_animal_deletions": 11,
+          "n_negative_source_subsampling_seeds": 2,
+          "n_positive_source_subsampling_seeds": 9,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 1.0
+        },
+        {
+          "animal_deletion_mean_min_max": [
+            -0.0026014109347442687,
+            -0.0007495590828924172
+          ],
+          "conditional_annulus_means_exploratory": {
+            "0_5km_mean": -0.004482657260435038,
+            "10_25km_mean": 0.0002587991718426492,
+            "5_10km_mean": -2.7755575615628915e-18,
+            "n_0_5km_pairs": 27,
+            "n_10_25km_pairs": 23,
+            "n_5_10km_pairs": 5,
+            "note": "Algebraic pair-weighted means only. Annulus 12-seed sign frequencies cannot be inferred from group summaries."
+          },
+          "mean_winter_minus_summer_L": -0.002092352092352093,
+          "n_animal_omissions_with_positive_10_of_12": 0,
+          "n_eligible_animal_deletions": 11,
+          "n_negative_source_subsampling_seeds": 9,
+          "n_positive_source_subsampling_seeds": 3,
+          "orientation": "original_A_to_B",
+          "radius_km": 2.0
+        },
+        {
+          "animal_deletion_mean_min_max": [
+            -0.002447089947089947,
+            -0.0007716049382716062
+          ],
+          "conditional_annulus_means_exploratory": {
+            "0_5km_mean": -0.004151969429747208,
+            "10_25km_mean": 0.0001293995859213252,
+            "5_10km_mean": 0.0,
+            "n_0_5km_pairs": 27,
+            "n_10_25km_pairs": 23,
+            "n_5_10km_pairs": 5,
+            "note": "Algebraic pair-weighted means only. Annulus 12-seed sign frequencies cannot be inferred from group summaries."
+          },
+          "mean_winter_minus_summer_L": -0.001984126984126984,
+          "n_animal_omissions_with_positive_10_of_12": 0,
+          "n_eligible_animal_deletions": 11,
+          "n_negative_source_subsampling_seeds": 7,
+          "n_positive_source_subsampling_seeds": 4,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 2.0
+        }
+      ],
+      "source": "white_tailed_deer",
+      "status": "DESCRIPTIVE_SOURCE_GPS_EDGE_SET_ONLY",
+      "tolerance_seconds": 900,
+      "year": 2019
+    },
+    {
+      "centroid_pair_distance_max_km": 5.0,
+      "component_animal_counts": [
+        8,
+        2
+      ],
+      "component_dyad_counts": [
+        26,
+        1
+      ],
+      "n_animals": 10,
+      "n_distinct_source_geographic_components": 2,
+      "n_dyads": 27,
+      "n_large_source_geographic_components": 1,
+      "radii": [
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.005548206937095825,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 1,
+          "n_positive_source_subsampling_seeds": 10,
+          "orientation": "original_A_to_B",
+          "radius_km": 0.5
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.00940623162845385,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 1,
+          "n_positive_source_subsampling_seeds": 11,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 0.5
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.001212522045855382,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 8,
+          "n_positive_source_subsampling_seeds": 4,
+          "orientation": "original_A_to_B",
+          "radius_km": 1.0
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 7.348618459729762e-05,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 6,
+          "n_positive_source_subsampling_seeds": 5,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 1.0
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": -0.005254262198706643,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 9,
+          "n_positive_source_subsampling_seeds": 3,
+          "orientation": "original_A_to_B",
+          "radius_km": 2.0
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": -0.002094356261022929,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 6,
+          "n_positive_source_subsampling_seeds": 6,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 2.0
+        }
+      ],
+      "source": "white_tailed_deer",
+      "status": "DESCRIPTIVE_SOURCE_GPS_EDGE_SET_ONLY",
+      "tolerance_seconds": 1800,
+      "year": 2019
+    },
+    {
+      "centroid_pair_distance_max_km": 10.0,
+      "component_animal_counts": [
+        11
+      ],
+      "component_dyad_counts": [
+        32
+      ],
+      "n_animals": 11,
+      "n_distinct_source_geographic_components": 1,
+      "n_dyads": 32,
+      "n_large_source_geographic_components": 1,
+      "radii": [
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.004681299603174603,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 1,
+          "n_positive_source_subsampling_seeds": 10,
+          "orientation": "original_A_to_B",
+          "radius_km": 0.5
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.007936507936507936,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 1,
+          "n_positive_source_subsampling_seeds": 11,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 0.5
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.0010230654761904784,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 8,
+          "n_positive_source_subsampling_seeds": 4,
+          "orientation": "original_A_to_B",
+          "radius_km": 1.0
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 6.200396825396981e-05,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 6,
+          "n_positive_source_subsampling_seeds": 5,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 1.0
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": -0.00443328373015873,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 9,
+          "n_positive_source_subsampling_seeds": 3,
+          "orientation": "original_A_to_B",
+          "radius_km": 2.0
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": -0.0017671130952380961,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 6,
+          "n_positive_source_subsampling_seeds": 6,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 2.0
+        }
+      ],
+      "source": "white_tailed_deer",
+      "status": "DESCRIPTIVE_SOURCE_GPS_EDGE_SET_ONLY",
+      "tolerance_seconds": 1800,
+      "year": 2019
+    },
+    {
+      "centroid_pair_distance_max_km": 25.0,
+      "component_animal_counts": [
+        11
+      ],
+      "component_dyad_counts": [
+        55
+      ],
+      "n_animals": 11,
+      "n_distinct_source_geographic_components": 1,
+      "n_dyads": 55,
+      "n_large_source_geographic_components": 1,
+      "radii": [
+        {
+          "animal_deletion_mean_min_max": [
+            0.000418871252204585,
+            0.0033289241622574957
+          ],
+          "conditional_annulus_means_exploratory": {
+            "0_5km_mean": 0.005548206937095825,
+            "10_25km_mean": -0.00129399585921325,
+            "5_10km_mean": 0.0,
+            "n_0_5km_pairs": 27,
+            "n_10_25km_pairs": 23,
+            "n_5_10km_pairs": 5,
+            "note": "Algebraic pair-weighted means only. Annulus 12-seed sign frequencies cannot be inferred from group summaries."
+          },
+          "mean_winter_minus_summer_L": 0.0021825396825396826,
+          "n_animal_omissions_with_positive_10_of_12": 3,
+          "n_eligible_animal_deletions": 11,
+          "n_negative_source_subsampling_seeds": 3,
+          "n_positive_source_subsampling_seeds": 8,
+          "orientation": "original_A_to_B",
+          "radius_km": 0.5
+        },
+        {
+          "animal_deletion_mean_min_max": [
+            0.002954144620811288,
+            0.006084656084656085
+          ],
+          "conditional_annulus_means_exploratory": {
+            "0_5km_mean": 0.00940623162845385,
+            "10_25km_mean": 0.0008626639061421687,
+            "5_10km_mean": 0.0,
+            "n_0_5km_pairs": 27,
+            "n_10_25km_pairs": 23,
+            "n_5_10km_pairs": 5,
+            "note": "Algebraic pair-weighted means only. Annulus 12-seed sign frequencies cannot be inferred from group summaries."
+          },
+          "mean_winter_minus_summer_L": 0.004978354978354979,
+          "n_animal_omissions_with_positive_10_of_12": 10,
+          "n_eligible_animal_deletions": 11,
+          "n_negative_source_subsampling_seeds": 0,
+          "n_positive_source_subsampling_seeds": 12,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 0.5
+        },
+        {
+          "animal_deletion_mean_min_max": [
+            0.00017636684303351147,
+            0.0016313932980599648
+          ],
+          "conditional_annulus_means_exploratory": {
+            "0_5km_mean": 0.001212522045855382,
+            "10_25km_mean": 0.0007332643202208423,
+            "5_10km_mean": 0.0,
+            "n_0_5km_pairs": 27,
+            "n_10_25km_pairs": 23,
+            "n_5_10km_pairs": 5,
+            "note": "Algebraic pair-weighted means only. Annulus 12-seed sign frequencies cannot be inferred from group summaries."
+          },
+          "mean_winter_minus_summer_L": 0.0009018759018759033,
+          "n_animal_omissions_with_positive_10_of_12": 0,
+          "n_eligible_animal_deletions": 11,
+          "n_negative_source_subsampling_seeds": 7,
+          "n_positive_source_subsampling_seeds": 5,
+          "orientation": "original_A_to_B",
+          "radius_km": 1.0
+        },
+        {
+          "animal_deletion_mean_min_max": [
+            -0.0004409171075837744,
+            0.001146384479717814
+          ],
+          "conditional_annulus_means_exploratory": {
+            "0_5km_mean": 7.348618459729762e-05,
+            "10_25km_mean": 0.0008626639061421668,
+            "5_10km_mean": -3.4694469519536144e-19,
+            "n_0_5km_pairs": 27,
+            "n_10_25km_pairs": 23,
+            "n_5_10km_pairs": 5,
+            "note": "Algebraic pair-weighted means only. Annulus 12-seed sign frequencies cannot be inferred from group summaries."
+          },
+          "mean_winter_minus_summer_L": 0.00039682539682539764,
+          "n_animal_omissions_with_positive_10_of_12": 0,
+          "n_eligible_animal_deletions": 11,
+          "n_negative_source_subsampling_seeds": 7,
+          "n_positive_source_subsampling_seeds": 5,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 1.0
+        },
+        {
+          "animal_deletion_mean_min_max": [
+            -0.003813932980599647,
+            -0.0007495590828924162
+          ],
+          "conditional_annulus_means_exploratory": {
+            "0_5km_mean": -0.005254262198706643,
+            "10_25km_mean": 0.0002587991718426492,
+            "5_10km_mean": 0.0,
+            "n_0_5km_pairs": 27,
+            "n_10_25km_pairs": 23,
+            "n_5_10km_pairs": 5,
+            "note": "Algebraic pair-weighted means only. Annulus 12-seed sign frequencies cannot be inferred from group summaries."
+          },
+          "mean_winter_minus_summer_L": -0.002471139971139971,
+          "n_animal_omissions_with_positive_10_of_12": 0,
+          "n_eligible_animal_deletions": 11,
+          "n_negative_source_subsampling_seeds": 8,
+          "n_positive_source_subsampling_seeds": 4,
+          "orientation": "original_A_to_B",
+          "radius_km": 2.0
+        },
+        {
+          "animal_deletion_mean_min_max": [
+            -0.0018077601410934748,
+            -0.0003968253968253973
+          ],
+          "conditional_annulus_means_exploratory": {
+            "0_5km_mean": -0.002094356261022929,
+            "10_25km_mean": -0.0002156659765355413,
+            "5_10km_mean": 1.3877787807814458e-18,
+            "n_0_5km_pairs": 27,
+            "n_10_25km_pairs": 23,
+            "n_5_10km_pairs": 5,
+            "note": "Algebraic pair-weighted means only. Annulus 12-seed sign frequencies cannot be inferred from group summaries."
+          },
+          "mean_winter_minus_summer_L": -0.0011183261183261187,
+          "n_animal_omissions_with_positive_10_of_12": 0,
+          "n_eligible_animal_deletions": 11,
+          "n_negative_source_subsampling_seeds": 6,
+          "n_positive_source_subsampling_seeds": 6,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 2.0
+        }
+      ],
+      "source": "white_tailed_deer",
+      "status": "DESCRIPTIVE_SOURCE_GPS_EDGE_SET_ONLY",
+      "tolerance_seconds": 1800,
+      "year": 2019
+    },
+    {
+      "centroid_pair_distance_max_km": 5.0,
+      "component_animal_counts": [
+        12,
+        4,
+        4
+      ],
+      "component_dyad_counts": [
+        51,
+        6,
+        3
+      ],
+      "n_animals": 20,
+      "n_distinct_source_geographic_components": 3,
+      "n_dyads": 60,
+      "n_large_source_geographic_components": 1,
+      "radii": [
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.004728835978835981,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 1,
+          "n_positive_source_subsampling_seeds": 11,
+          "orientation": "original_A_to_B",
+          "radius_km": 0.5
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.0033564814814814833,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 2,
+          "n_positive_source_subsampling_seeds": 10,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 0.5
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.004216269841269839,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 2,
+          "n_positive_source_subsampling_seeds": 10,
+          "orientation": "original_A_to_B",
+          "radius_km": 1.0
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.0015542328042328051,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 5,
+          "n_positive_source_subsampling_seeds": 6,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 1.0
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.0029761904761904747,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 1,
+          "n_positive_source_subsampling_seeds": 11,
+          "orientation": "original_A_to_B",
+          "radius_km": 2.0
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.005092592592592592,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 2,
+          "n_positive_source_subsampling_seeds": 10,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 2.0
+        }
+      ],
+      "source": "white_tailed_deer",
+      "status": "DESCRIPTIVE_SOURCE_GPS_EDGE_SET_ONLY",
+      "tolerance_seconds": 900,
+      "year": 2020
+    },
+    {
+      "centroid_pair_distance_max_km": 10.0,
+      "component_animal_counts": [
+        21
+      ],
+      "component_dyad_counts": [
+        97
+      ],
+      "n_animals": 21,
+      "n_distinct_source_geographic_components": 1,
+      "n_dyads": 97,
+      "n_large_source_geographic_components": 1,
+      "radii": [
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.002925053182785143,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 1,
+          "n_positive_source_subsampling_seeds": 11,
+          "orientation": "original_A_to_B",
+          "radius_km": 0.5
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.0020761741122565878,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 2,
+          "n_positive_source_subsampling_seeds": 10,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 0.5
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.0026080019636720657,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 2,
+          "n_positive_source_subsampling_seeds": 10,
+          "orientation": "original_A_to_B",
+          "radius_km": 1.0
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.0009613811160202918,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 5,
+          "n_positive_source_subsampling_seeds": 6,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 1.0
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.0018409425625920464,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 1,
+          "n_positive_source_subsampling_seeds": 11,
+          "orientation": "original_A_to_B",
+          "radius_km": 2.0
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.003150057273768613,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 2,
+          "n_positive_source_subsampling_seeds": 10,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 2.0
+        }
+      ],
+      "source": "white_tailed_deer",
+      "status": "DESCRIPTIVE_SOURCE_GPS_EDGE_SET_ONLY",
+      "tolerance_seconds": 900,
+      "year": 2020
+    },
+    {
+      "centroid_pair_distance_max_km": 25.0,
+      "component_animal_counts": [
+        21
+      ],
+      "component_dyad_counts": [
+        205
+      ],
+      "n_animals": 21,
+      "n_distinct_source_geographic_components": 1,
+      "n_dyads": 205,
+      "n_large_source_geographic_components": 1,
+      "radii": [
+        {
+          "animal_deletion_mean_min_max": [
+            0.00102960102960103,
+            0.001914414414414415
+          ],
+          "conditional_annulus_means_exploratory": {
+            "0_5km_mean": 0.004728835978835981,
+            "10_25km_mean": 0.0,
+            "5_10km_mean": 0.0,
+            "n_0_5km_pairs": 60,
+            "n_10_25km_pairs": 108,
+            "n_5_10km_pairs": 37,
+            "note": "Algebraic pair-weighted means only. Annulus 12-seed sign frequencies cannot be inferred from group summaries."
+          },
+          "mean_winter_minus_summer_L": 0.0013840495547812626,
+          "n_animal_omissions_with_positive_10_of_12": 19,
+          "n_eligible_animal_deletions": 21,
+          "n_negative_source_subsampling_seeds": 1,
+          "n_positive_source_subsampling_seeds": 11,
+          "orientation": "original_A_to_B",
+          "radius_km": 0.5
+        },
+        {
+          "animal_deletion_mean_min_max": [
+            0.00047190047190047224,
+            0.0013542454018644502
+          ],
+          "conditional_annulus_means_exploratory": {
+            "0_5km_mean": 0.0033564814814814833,
+            "10_25km_mean": 2.569960705150825e-19,
+            "5_10km_mean": 0.0,
+            "n_0_5km_pairs": 60,
+            "n_10_25km_pairs": 108,
+            "n_5_10km_pairs": 37,
+            "note": "Algebraic pair-weighted means only. Annulus 12-seed sign frequencies cannot be inferred from group summaries."
+          },
+          "mean_winter_minus_summer_L": 0.0009823848238482392,
+          "n_animal_omissions_with_positive_10_of_12": 10,
+          "n_eligible_animal_deletions": 21,
+          "n_negative_source_subsampling_seeds": 2,
+          "n_positive_source_subsampling_seeds": 10,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 0.5
+        },
+        {
+          "animal_deletion_mean_min_max": [
+            0.0005094380094380087,
+            0.0014961389961389952
+          ],
+          "conditional_annulus_means_exploratory": {
+            "0_5km_mean": 0.004216269841269839,
+            "10_25km_mean": 0.0,
+            "5_10km_mean": 0.0,
+            "n_0_5km_pairs": 60,
+            "n_10_25km_pairs": 108,
+            "n_5_10km_pairs": 37,
+            "note": "Algebraic pair-weighted means only. Annulus 12-seed sign frequencies cannot be inferred from group summaries."
+          },
+          "mean_winter_minus_summer_L": 0.001234030197444831,
+          "n_animal_omissions_with_positive_10_of_12": 14,
+          "n_eligible_animal_deletions": 21,
+          "n_negative_source_subsampling_seeds": 2,
+          "n_positive_source_subsampling_seeds": 10,
+          "orientation": "original_A_to_B",
+          "radius_km": 1.0
+        },
+        {
+          "animal_deletion_mean_min_max": [
+            -0.00014934289127837487,
+            0.0010135135135135138
+          ],
+          "conditional_annulus_means_exploratory": {
+            "0_5km_mean": 0.0015542328042328051,
+            "10_25km_mean": -1.2849803525754126e-19,
+            "5_10km_mean": -3.750753461571475e-19,
+            "n_0_5km_pairs": 60,
+            "n_10_25km_pairs": 108,
+            "n_5_10km_pairs": 37,
+            "note": "Algebraic pair-weighted means only. Annulus 12-seed sign frequencies cannot be inferred from group summaries."
+          },
+          "mean_winter_minus_summer_L": 0.0004548974061169185,
+          "n_animal_omissions_with_positive_10_of_12": 1,
+          "n_eligible_animal_deletions": 21,
+          "n_negative_source_subsampling_seeds": 5,
+          "n_positive_source_subsampling_seeds": 6,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 1.0
+        },
+        {
+          "animal_deletion_mean_min_max": [
+            0.0005898755898755894,
+            0.0011307390339648405
+          ],
+          "conditional_annulus_means_exploratory": {
+            "0_5km_mean": 0.0029761904761904747,
+            "10_25km_mean": 0.0,
+            "5_10km_mean": 0.0,
+            "n_0_5km_pairs": 60,
+            "n_10_25km_pairs": 108,
+            "n_5_10km_pairs": 37,
+            "note": "Algebraic pair-weighted means only. Annulus 12-seed sign frequencies cannot be inferred from group summaries."
+          },
+          "mean_winter_minus_summer_L": 0.000871080139372822,
+          "n_animal_omissions_with_positive_10_of_12": 14,
+          "n_eligible_animal_deletions": 21,
+          "n_negative_source_subsampling_seeds": 1,
+          "n_positive_source_subsampling_seeds": 11,
+          "orientation": "original_A_to_B",
+          "radius_km": 2.0
+        },
+        {
+          "animal_deletion_mean_min_max": [
+            0.000954727769243898,
+            0.0017281105990783407
+          ],
+          "conditional_annulus_means_exploratory": {
+            "0_5km_mean": 0.005092592592592592,
+            "10_25km_mean": 5.13992141030165e-19,
+            "5_10km_mean": -1.50030138462859e-18,
+            "n_0_5km_pairs": 60,
+            "n_10_25km_pairs": 108,
+            "n_5_10km_pairs": 37,
+            "note": "Algebraic pair-weighted means only. Annulus 12-seed sign frequencies cannot be inferred from group summaries."
+          },
+          "mean_winter_minus_summer_L": 0.0014905149051490513,
+          "n_animal_omissions_with_positive_10_of_12": 20,
+          "n_eligible_animal_deletions": 21,
+          "n_negative_source_subsampling_seeds": 2,
+          "n_positive_source_subsampling_seeds": 10,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 2.0
+        }
+      ],
+      "source": "white_tailed_deer",
+      "status": "DESCRIPTIVE_SOURCE_GPS_EDGE_SET_ONLY",
+      "tolerance_seconds": 900,
+      "year": 2020
+    },
+    {
+      "centroid_pair_distance_max_km": 5.0,
+      "component_animal_counts": [
+        12,
+        4,
+        4
+      ],
+      "component_dyad_counts": [
+        51,
+        6,
+        3
+      ],
+      "n_animals": 20,
+      "n_distinct_source_geographic_components": 3,
+      "n_dyads": 60,
+      "n_large_source_geographic_components": 1,
+      "radii": [
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.005158730158730159,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 4,
+          "n_positive_source_subsampling_seeds": 8,
+          "orientation": "original_A_to_B",
+          "radius_km": 0.5
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.007457010582010583,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 1,
+          "n_positive_source_subsampling_seeds": 11,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 0.5
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.0045138888888888885,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 2,
+          "n_positive_source_subsampling_seeds": 10,
+          "orientation": "original_A_to_B",
+          "radius_km": 1.0
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.00150462962962963,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 4,
+          "n_positive_source_subsampling_seeds": 8,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 1.0
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.005092592592592594,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 2,
+          "n_positive_source_subsampling_seeds": 10,
+          "orientation": "original_A_to_B",
+          "radius_km": 2.0
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": -0.0002645502645502657,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 4,
+          "n_positive_source_subsampling_seeds": 8,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 2.0
+        }
+      ],
+      "source": "white_tailed_deer",
+      "status": "DESCRIPTIVE_SOURCE_GPS_EDGE_SET_ONLY",
+      "tolerance_seconds": 1800,
+      "year": 2020
+    },
+    {
+      "centroid_pair_distance_max_km": 10.0,
+      "component_animal_counts": [
+        21
+      ],
+      "component_dyad_counts": [
+        97
+      ],
+      "n_animals": 21,
+      "n_distinct_source_geographic_components": 1,
+      "n_dyads": 97,
+      "n_large_source_geographic_components": 1,
+      "radii": [
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.003190967108492882,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 4,
+          "n_positive_source_subsampling_seeds": 8,
+          "orientation": "original_A_to_B",
+          "radius_km": 0.5
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.004612583865161186,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 1,
+          "n_positive_source_subsampling_seeds": 11,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 0.5
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.0027920962199312707,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 2,
+          "n_positive_source_subsampling_seeds": 10,
+          "orientation": "original_A_to_B",
+          "radius_km": 1.0
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.0009306987399770908,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 4,
+          "n_positive_source_subsampling_seeds": 8,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 1.0
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": 0.0031500572737686145,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 2,
+          "n_positive_source_subsampling_seeds": 10,
+          "orientation": "original_A_to_B",
+          "radius_km": 2.0
+        },
+        {
+          "animal_deletion_mean_min_max": null,
+          "conditional_annulus_means_exploratory": null,
+          "mean_winter_minus_summer_L": -0.0001636393388970716,
+          "n_animal_omissions_with_positive_10_of_12": null,
+          "n_eligible_animal_deletions": null,
+          "n_negative_source_subsampling_seeds": 4,
+          "n_positive_source_subsampling_seeds": 8,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 2.0
+        }
+      ],
+      "source": "white_tailed_deer",
+      "status": "DESCRIPTIVE_SOURCE_GPS_EDGE_SET_ONLY",
+      "tolerance_seconds": 1800,
+      "year": 2020
+    },
+    {
+      "centroid_pair_distance_max_km": 25.0,
+      "component_animal_counts": [
+        21
+      ],
+      "component_dyad_counts": [
+        205
+      ],
+      "n_animals": 21,
+      "n_distinct_source_geographic_components": 1,
+      "n_dyads": 205,
+      "n_large_source_geographic_components": 1,
+      "radii": [
+        {
+          "animal_deletion_mean_min_max": [
+            0.0010778635778635776,
+            0.0016784641784641785
+          ],
+          "conditional_annulus_means_exploratory": {
+            "0_5km_mean": 0.005158730158730159,
+            "10_25km_mean": 5.13992141030165e-19,
+            "5_10km_mean": 0.0,
+            "n_0_5km_pairs": 60,
+            "n_10_25km_pairs": 108,
+            "n_5_10km_pairs": 37,
+            "note": "Algebraic pair-weighted means only. Annulus 12-seed sign frequencies cannot be inferred from group summaries."
+          },
+          "mean_winter_minus_summer_L": 0.0015098722415795589,
+          "n_animal_omissions_with_positive_10_of_12": 3,
+          "n_eligible_animal_deletions": 21,
+          "n_negative_source_subsampling_seeds": 4,
+          "n_positive_source_subsampling_seeds": 8,
+          "orientation": "original_A_to_B",
+          "radius_km": 0.5
+        },
+        {
+          "animal_deletion_mean_min_max": [
+            0.0016001024065540202,
+            0.002461389961389962
+          ],
+          "conditional_annulus_means_exploratory": {
+            "0_5km_mean": 0.007457010582010583,
+            "10_25km_mean": 0.0,
+            "5_10km_mean": 0.0,
+            "n_0_5km_pairs": 60,
+            "n_10_25km_pairs": 108,
+            "n_5_10km_pairs": 37,
+            "note": "Algebraic pair-weighted means only. Annulus 12-seed sign frequencies cannot be inferred from group summaries."
+          },
+          "mean_winter_minus_summer_L": 0.002182539682539683,
+          "n_animal_omissions_with_positive_10_of_12": 21,
+          "n_eligible_animal_deletions": 21,
+          "n_negative_source_subsampling_seeds": 1,
+          "n_positive_source_subsampling_seeds": 11,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 0.5
+        },
+        {
+          "animal_deletion_mean_min_max": [
+            0.000471900471900472,
+            0.0015604890604890601
+          ],
+          "conditional_annulus_means_exploratory": {
+            "0_5km_mean": 0.0045138888888888885,
+            "10_25km_mean": 0.0,
+            "5_10km_mean": -1.50030138462859e-18,
+            "n_0_5km_pairs": 60,
+            "n_10_25km_pairs": 108,
+            "n_5_10km_pairs": 37,
+            "note": "Algebraic pair-weighted means only. Annulus 12-seed sign frequencies cannot be inferred from group summaries."
+          },
+          "mean_winter_minus_summer_L": 0.0013211382113821135,
+          "n_animal_omissions_with_positive_10_of_12": 19,
+          "n_eligible_animal_deletions": 21,
+          "n_negative_source_subsampling_seeds": 2,
+          "n_positive_source_subsampling_seeds": 10,
+          "orientation": "original_A_to_B",
+          "radius_km": 1.0
+        },
+        {
+          "animal_deletion_mean_min_max": [
+            -0.00014478764478764445,
+            0.0008258258258258261
+          ],
+          "conditional_annulus_means_exploratory": {
+            "0_5km_mean": 0.00150462962962963,
+            "10_25km_mean": 0.0,
+            "5_10km_mean": 0.0,
+            "n_0_5km_pairs": 60,
+            "n_10_25km_pairs": 108,
+            "n_5_10km_pairs": 37,
+            "note": "Algebraic pair-weighted means only. Annulus 12-seed sign frequencies cannot be inferred from group summaries."
+          },
+          "mean_winter_minus_summer_L": 0.00044037940379403805,
+          "n_animal_omissions_with_positive_10_of_12": 0,
+          "n_eligible_animal_deletions": 21,
+          "n_negative_source_subsampling_seeds": 4,
+          "n_positive_source_subsampling_seeds": 8,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 1.0
+        },
+        {
+          "animal_deletion_mean_min_max": [
+            0.0009920634920634927,
+            0.0017320892320892324
+          ],
+          "conditional_annulus_means_exploratory": {
+            "0_5km_mean": 0.005092592592592594,
+            "10_25km_mean": 5.13992141030165e-19,
+            "5_10km_mean": -1.50030138462859e-18,
+            "n_0_5km_pairs": 60,
+            "n_10_25km_pairs": 108,
+            "n_5_10km_pairs": 37,
+            "note": "Algebraic pair-weighted means only. Annulus 12-seed sign frequencies cannot be inferred from group summaries."
+          },
+          "mean_winter_minus_summer_L": 0.001490514905149052,
+          "n_animal_omissions_with_positive_10_of_12": 17,
+          "n_eligible_animal_deletions": 21,
+          "n_negative_source_subsampling_seeds": 2,
+          "n_positive_source_subsampling_seeds": 10,
+          "orientation": "original_A_to_B",
+          "radius_km": 2.0
+        },
+        {
+          "animal_deletion_mean_min_max": [
+            -0.00027885027885027905,
+            0.00035928785928785915
+          ],
+          "conditional_annulus_means_exploratory": {
+            "0_5km_mean": -0.0002645502645502657,
+            "10_25km_mean": 3.2124508814385315e-20,
+            "5_10km_mean": -9.376883653928688e-20,
+            "n_0_5km_pairs": 60,
+            "n_10_25km_pairs": 108,
+            "n_5_10km_pairs": 37,
+            "note": "Algebraic pair-weighted means only. Annulus 12-seed sign frequencies cannot be inferred from group summaries."
+          },
+          "mean_winter_minus_summer_L": -7.742934572202899e-05,
+          "n_animal_omissions_with_positive_10_of_12": 0,
+          "n_eligible_animal_deletions": 21,
+          "n_negative_source_subsampling_seeds": 4,
+          "n_positive_source_subsampling_seeds": 8,
+          "orientation": "reversed_B_to_A",
+          "radius_km": 2.0
+        }
+      ],
+      "source": "white_tailed_deer",
+      "status": "DESCRIPTIVE_SOURCE_GPS_EDGE_SET_ONLY",
+      "tolerance_seconds": 1800,
+      "year": 2020
+    }
+  ],
+  "year_reuse_audits": [
+    {
+      "independent_source_populations_established": false,
+      "n_2019_matched_animals": 19,
+      "n_2019_matched_pairs": 112,
+      "n_2020_matched_animals": 7,
+      "n_2020_matched_pairs": 21,
+      "n_both_years_matched_animals": 0,
+      "n_both_years_matched_pair_identities": 0,
+      "source": "turkey",
+      "tolerance_seconds": 900
+    },
+    {
+      "independent_source_populations_established": false,
+      "n_2019_matched_animals": 19,
+      "n_2019_matched_pairs": 112,
+      "n_2020_matched_animals": 7,
+      "n_2020_matched_pairs": 21,
+      "n_both_years_matched_animals": 0,
+      "n_both_years_matched_pair_identities": 0,
+      "source": "turkey",
+      "tolerance_seconds": 1800
+    },
+    {
+      "independent_source_populations_established": false,
+      "n_2019_matched_animals": 0,
+      "n_2019_matched_pairs": 0,
+      "n_2020_matched_animals": 4,
+      "n_2020_matched_pairs": 5,
+      "n_both_years_matched_animals": 0,
+      "n_both_years_matched_pair_identities": 0,
+      "source": "black_bear",
+      "tolerance_seconds": 900
+    },
+    {
+      "independent_source_populations_established": false,
+      "n_2019_matched_animals": 0,
+      "n_2019_matched_pairs": 0,
+      "n_2020_matched_animals": 4,
+      "n_2020_matched_pairs": 6,
+      "n_both_years_matched_animals": 0,
+      "n_both_years_matched_pair_identities": 0,
+      "source": "black_bear",
+      "tolerance_seconds": 1800
+    },
+    {
+      "independent_source_populations_established": false,
+      "n_2019_matched_animals": 11,
+      "n_2019_matched_pairs": 55,
+      "n_2020_matched_animals": 21,
+      "n_2020_matched_pairs": 205,
+      "n_both_years_matched_animals": 11,
+      "n_both_years_matched_pair_identities": 55,
+      "source": "white_tailed_deer",
+      "tolerance_seconds": 900
+    },
+    {
+      "independent_source_populations_established": false,
+      "n_2019_matched_animals": 11,
+      "n_2019_matched_pairs": 55,
+      "n_2020_matched_animals": 21,
+      "n_2020_matched_pairs": 205,
+      "n_both_years_matched_animals": 11,
+      "n_both_years_matched_pair_identities": 55,
+      "source": "white_tailed_deer",
+      "tolerance_seconds": 1800
+    }
+  ]
+}

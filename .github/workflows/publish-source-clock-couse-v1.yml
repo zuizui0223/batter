@@ -1,0 +1,63 @@
+name: Publish pinned original-source time-matched X/T aggregates
+
+on:
+  push:
+    branches:
+      - prospective/multitaxon-identity-ecology-v1
+    paths:
+      - ".github/workflows/publish-source-clock-couse-v1.yml"
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  publish-only-verified-aggregates:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download fixed completed ORIGINAL GPS aggregate outputs
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/clock-verified
+          for source in turkey black_bear white_tailed_deer; do
+            mkdir -p "/tmp/clock-verified/${source}"
+            gh run download 39414865136 \
+              --repo "$GITHUB_REPOSITORY" \
+              -n "source-clock-${source}" \
+              -D "/tmp/clock-verified/${source}"
+            mv "/tmp/clock-verified/${source}/${source}_clock_couse_20261020.json" \
+               "/tmp/clock-verified/${source}_clock_couse_20261020.json"
+          done
+      - name: Verify fixed result SHA256, original MD5/SHA checks and 480 exact statistical identities
+        run: |
+          python3 prospective/multitaxon_individuality/validate_same_clock_bin_results_v1.py \
+            --input-dir /tmp/clock-verified \
+            --output /tmp/clock-verified/SAME_CLOCK_BIN_COUSE_SUMMARY_2026_10_20.json
+      - name: Commit only validated source-year aggregates, NEVER original tracking fixes
+        run: |
+          set -euo pipefail
+          root=prospective/multitaxon_individuality
+          for source in turkey black_bear white_tailed_deer; do
+            dest="$root/SAME_CLOCK_BIN_COUSE_$(echo "$source" | tr '[:lower:]' '[:upper:]')_2026_10_20.json"
+            cp "/tmp/clock-verified/${source}_clock_couse_20261020.json" "$dest"
+          done
+          cp /tmp/clock-verified/SAME_CLOCK_BIN_COUSE_SUMMARY_2026_10_20.json \
+             "$root/SAME_CLOCK_BIN_COUSE_SUMMARY_2026_10_20.json"
+          # One further pass on the exact bytes to be published.
+          for source in turkey black_bear white_tailed_deer; do
+            cp "$root/SAME_CLOCK_BIN_COUSE_$(echo "$source" | tr '[:lower:]' '[:upper:]')_2026_10_20.json" \
+               "/tmp/clock-verified/${source}_clock_couse_20261020.json"
+          done
+          python3 prospective/multitaxon_individuality/validate_same_clock_bin_results_v1.py \
+             --input-dir /tmp/clock-verified \
+             --output /tmp/clock-verified/recheck.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$root"/SAME_CLOCK_BIN_COUSE_*_2026_10_20.json
+          git diff --cached --stat
+          git commit -m "data: preserve verified original-GPS coarse clock-bin X T null aggregates"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

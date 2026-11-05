@@ -1,0 +1,55 @@
+name: Movebank original-GPS preserved-day trajectory co-use control
+
+on:
+  push:
+    branches:
+      - prospective/multitaxon-identity-ecology-v1
+    paths:
+      - "prospective/multitaxon_individuality/day_shift_preserved_trajectory_v1.py"
+      - "prospective/multitaxon_individuality/tests/test_day_shift_preserved_trajectory_v1.py"
+      - "prospective/multitaxon_individuality/DAY_SHIFT_PRESERVED_TRAJECTORY_DESIGN_2026_10_21.md"
+      - ".github/workflows/movebank-preserved-day-null-v1.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test_original-day-control:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate fixed dyad/day support, same-A sampling and distance monotonicity
+        run: |
+          PYTHONPATH=prospective/multitaxon_individuality python3 -m unittest discover \
+            -s prospective/multitaxon_individuality/tests \
+            -p "test_day_shift_preserved_trajectory_v1.py" -v
+
+  complete-original-public-GPS-day-shift:
+    needs: test_original-day-control
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    strategy:
+      fail-fast: false
+      matrix:
+        source: [turkey, black_bear, white_tailed_deer]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Recheck source publisher MD5/pinned SHA256 and original accepted GPS times
+        env:
+          SOURCE: ${{ matrix.source }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/day-shift-only-aggregates
+          python3 prospective/multitaxon_individuality/day_shift_preserved_trajectory_v1.py \
+            --source "$SOURCE" \
+            --output "/tmp/day-shift-only-aggregates/${SOURCE}_day_shift_control_20261021.json"
+      - name: Upload only source-year/tolerance/radius/seed aggregate JSON
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: original-source-day-shift-${{ matrix.source }}
+          path: /tmp/day-shift-only-aggregates/*.json
+          if-no-files-found: warn
+          retention-days: 20

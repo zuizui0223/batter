@@ -1,0 +1,387 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-10-20",
+  "scope": "local metadata batch definition only, no download or event eligibility inference",
+  "science_paper_doi": "10.1126/science.adq3396",
+  "anchor_dataset_doi": "10.5441/001/1.708",
+  "match_rule": "raw abstract_prefix exact string equality to deer anchor in 437-package census (240 characters)",
+  "abstract_prefix_sha256": "93291fa4ad3341410a242851a84b23c029c08a8936533b5981e213bbff9975a1",
+  "input_files": {
+    "MOVEBANK_PUBLISHED_DATAPACKAGES_CENSUS_2026_10_18.json": "99fbaa6c2512609265962dd85c6a92cb01afdc422a6fbfe211f13d93861772ce",
+    "MOVEBANK_METADATA_TRIAGE_V1.json": "4df57c290ad2dec4dbefe1659586d747647aad6998384437d3b5bd17ea35092f",
+    "MOVEBANK_437_METADATA_SENSOR_TRIAGE_V1.json": "050b325d75bba53998c4d30b64acb46a67d20b176ad121969f31ec59f5273187"
+  },
+  "n_census_packages": 437,
+  "n_matching_packages": 19,
+  "n_new_packages_excluding_deer": 18,
+  "n_distinct_binomial_subject_labels": 18,
+  "licenses": {
+    "Attribution 4.0 International": 3,
+    "Attribution-NonCommercial 4.0 International": 6,
+    "CC0 1.0 Universal": 10
+  },
+  "taxon_to_source_dois": {
+    "Alces alces": [
+      "10.5441/001/1.700",
+      "10.5441/001/1.714"
+    ],
+    "Antilocapra americana": [
+      "10.5441/001/1.711"
+    ],
+    "Aquila chrysaetos": [
+      "10.5441/001/1.693"
+    ],
+    "Astur atricapillus": [
+      "10.5441/001/1.665"
+    ],
+    "Canis latrans": [
+      "10.5441/001/1.649"
+    ],
+    "Canis lupus": [
+      "10.5441/001/1.717"
+    ],
+    "Cervus elaphus": [
+      "10.5441/001/1.711"
+    ],
+    "Corvus corax": [
+      "10.5441/001/1.653"
+    ],
+    "Haliaeetus leucocephalus": [
+      "10.5441/001/1.642",
+      "10.5441/001/1.702",
+      "10.5441/001/1.704"
+    ],
+    "Lynx rufus": [
+      "10.5441/001/1.649"
+    ],
+    "Meleagris gallopavo": [
+      "10.5441/001/1.671"
+    ],
+    "Odocoileus hemionus": [
+      "10.5441/001/1.703",
+      "10.5441/001/1.708",
+      "10.5441/001/1.711"
+    ],
+    "Odocoileus virginianus": [
+      "10.5441/001/1.649",
+      "10.5441/001/1.718"
+    ],
+    "Ovis canadensis": [
+      "10.5441/001/1.703",
+      "10.5441/001/1.711"
+    ],
+    "Procyon lotor": [
+      "10.5441/001/1.709"
+    ],
+    "Puma concolor": [
+      "10.5441/001/1.712"
+    ],
+    "Sus scrofa": [
+      "10.5441/001/1.672"
+    ],
+    "Ursus americanus": [
+      "10.5441/001/1.706"
+    ]
+  },
+  "limitations": [
+    "Science paper DOI is present in cached original deer item, not in census fields; other packages are candidates by exact shared abstract prefix, not individually verified paper-link records.",
+    "18 unique binomial subject labels are unnormalized metadata, not validated source-event taxa or independent populations.",
+    "Sensor class is a keyword metadata signal; it does not establish GPS-only files, two-hour cadence, eligible individual counts, concurrent deployment, or seasonal/constant-cohort support.",
+    "All 19 main-GPS animal-count and event-row-count fields in the triage are null. Existing pilot provides deer reference count 135; other matches have no known reference counts there.",
+    "Packages may overlap animals, populations, projects, or versions; a joint reference and deployment audit must precede pooled inference.",
+    "Do not assume the North American species labels or mixed sensor metadata permit the same unmodified cleaning or timing policy."
+  ],
+  "records": [
+    {
+      "doi": "10.5441/001/1.642",
+      "doi_url": "https://doi.org/10.5441/001/1.642",
+      "uuid": "389a1279-0dda-488a-9bca-f78e5039e54c",
+      "title": "Data from: Study \"LifeTrack Bald Eagle\"",
+      "license": "Attribution 4.0 International",
+      "license_uri": "http://creativecommons.org/licenses/by/4.0/",
+      "taxon_labels": [
+        "Haliaeetus leucocephalus"
+      ],
+      "sensor_metadata_class": "mixed_gps_other",
+      "source_event_animal_count_in_census_triage": null,
+      "reference_animal_count_if_in_existing_pilot": null,
+      "two_hour_pipeline_eligibility_established_from_this_batch_metadata": false
+    },
+    {
+      "doi": "10.5441/001/1.649",
+      "doi_url": "https://doi.org/10.5441/001/1.649",
+      "uuid": "7d38dd27-3bd3-4f2d-a5f6-06cafe4b043e",
+      "title": "Data from: Study \"Illinois white-tailed deer and predators\"",
+      "license": "Attribution-NonCommercial 4.0 International",
+      "license_uri": "http://creativecommons.org/licenses/by-nc/4.0/",
+      "taxon_labels": [
+        "Canis latrans",
+        "Lynx rufus",
+        "Odocoileus virginianus"
+      ],
+      "sensor_metadata_class": "gps_only",
+      "source_event_animal_count_in_census_triage": null,
+      "reference_animal_count_if_in_existing_pilot": null,
+      "two_hour_pipeline_eligibility_established_from_this_batch_metadata": false
+    },
+    {
+      "doi": "10.5441/001/1.653",
+      "doi_url": "https://doi.org/10.5441/001/1.653",
+      "uuid": "949bd0c7-87d5-445a-abed-10fca1989995",
+      "title": "Data from: Study \"Common Ravens - Yellowstone\"",
+      "license": "Attribution-NonCommercial 4.0 International",
+      "license_uri": "http://creativecommons.org/licenses/by-nc/4.0/",
+      "taxon_labels": [
+        "Corvus corax"
+      ],
+      "sensor_metadata_class": "gps_only",
+      "source_event_animal_count_in_census_triage": null,
+      "reference_animal_count_if_in_existing_pilot": null,
+      "two_hour_pipeline_eligibility_established_from_this_batch_metadata": false
+    },
+    {
+      "doi": "10.5441/001/1.665",
+      "doi_url": "https://doi.org/10.5441/001/1.665",
+      "uuid": "1646aea0-f9e0-4326-a58a-1bc8c57769a3",
+      "title": "Data from: Study \"GPS tracking of American Goshawks--Nevada Department of Wildlife\"",
+      "license": "CC0 1.0 Universal",
+      "license_uri": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "taxon_labels": [
+        "Astur atricapillus"
+      ],
+      "sensor_metadata_class": "gps_only",
+      "source_event_animal_count_in_census_triage": null,
+      "reference_animal_count_if_in_existing_pilot": null,
+      "two_hour_pipeline_eligibility_established_from_this_batch_metadata": false
+    },
+    {
+      "doi": "10.5441/001/1.671",
+      "doi_url": "https://doi.org/10.5441/001/1.671",
+      "uuid": "dd064947-25b7-46a2-8976-adfc488750bc",
+      "title": "Data from: Study \"GPS tracking of wild turkeys in the southeastern US\"",
+      "license": "CC0 1.0 Universal",
+      "license_uri": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "taxon_labels": [
+        "Meleagris gallopavo"
+      ],
+      "sensor_metadata_class": "gps_only",
+      "source_event_animal_count_in_census_triage": null,
+      "reference_animal_count_if_in_existing_pilot": null,
+      "two_hour_pipeline_eligibility_established_from_this_batch_metadata": false
+    },
+    {
+      "doi": "10.5441/001/1.672",
+      "doi_url": "https://doi.org/10.5441/001/1.672",
+      "uuid": "b7341994-42fa-4599-9858-086ffaa145f6",
+      "title": "Data from: Study \"Wild Pig/Boar GPS Study on Rangeland-Sus scrofa-Oklahoma\" [part]",
+      "license": "CC0 1.0 Universal",
+      "license_uri": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "taxon_labels": [
+        "Sus scrofa"
+      ],
+      "sensor_metadata_class": "gps_only",
+      "source_event_animal_count_in_census_triage": null,
+      "reference_animal_count_if_in_existing_pilot": null,
+      "two_hour_pipeline_eligibility_established_from_this_batch_metadata": false
+    },
+    {
+      "doi": "10.5441/001/1.693",
+      "doi_url": "https://doi.org/10.5441/001/1.693",
+      "uuid": "6b24c770-8ab5-4f63-bef2-2fc4dec13b7f",
+      "title": "Data from: Study \"Golden Eagle Nevada\"",
+      "license": "CC0 1.0 Universal",
+      "license_uri": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "taxon_labels": [
+        "Aquila chrysaetos"
+      ],
+      "sensor_metadata_class": "gps_only",
+      "source_event_animal_count_in_census_triage": null,
+      "reference_animal_count_if_in_existing_pilot": null,
+      "two_hour_pipeline_eligibility_established_from_this_batch_metadata": false
+    },
+    {
+      "doi": "10.5441/001/1.700",
+      "doi_url": "https://doi.org/10.5441/001/1.700",
+      "uuid": "6857a715-9703-40fe-b306-43464f65a35c",
+      "title": "Data from: Study \"Snowy Range Moose in Wyoming (2019-2020)\"",
+      "license": "Attribution-NonCommercial 4.0 International",
+      "license_uri": "http://creativecommons.org/licenses/by-nc/4.0/",
+      "taxon_labels": [
+        "Alces alces"
+      ],
+      "sensor_metadata_class": "mixed_gps_other",
+      "source_event_animal_count_in_census_triage": null,
+      "reference_animal_count_if_in_existing_pilot": null,
+      "two_hour_pipeline_eligibility_established_from_this_batch_metadata": false
+    },
+    {
+      "doi": "10.5441/001/1.702",
+      "doi_url": "https://doi.org/10.5441/001/1.702",
+      "uuid": "7ee85303-d762-4922-bdc2-1f89e0fa004b",
+      "title": "Data from: Study \"Bald Eagle (Haliaeetus leucocephalus) in the Pacific Northwest\"",
+      "license": "Attribution-NonCommercial 4.0 International",
+      "license_uri": "http://creativecommons.org/licenses/by-nc/4.0/",
+      "taxon_labels": [
+        "Haliaeetus leucocephalus"
+      ],
+      "sensor_metadata_class": "gps_only",
+      "source_event_animal_count_in_census_triage": null,
+      "reference_animal_count_if_in_existing_pilot": null,
+      "two_hour_pipeline_eligibility_established_from_this_batch_metadata": false
+    },
+    {
+      "doi": "10.5441/001/1.703",
+      "doi_url": "https://doi.org/10.5441/001/1.703",
+      "uuid": "9c588e12-a0e6-40bf-8dd7-d7ad57dfbf22",
+      "title": "Data from: Study \"Bighorn sheep and mule deer in Wyoming (2019-2020)\"",
+      "license": "Attribution-NonCommercial 4.0 International",
+      "license_uri": "http://creativecommons.org/licenses/by-nc/4.0/",
+      "taxon_labels": [
+        "Odocoileus hemionus",
+        "Ovis canadensis"
+      ],
+      "sensor_metadata_class": "gps_only",
+      "source_event_animal_count_in_census_triage": null,
+      "reference_animal_count_if_in_existing_pilot": null,
+      "two_hour_pipeline_eligibility_established_from_this_batch_metadata": false
+    },
+    {
+      "doi": "10.5441/001/1.704",
+      "doi_url": "https://doi.org/10.5441/001/1.704",
+      "uuid": "307799b8-c92f-4556-8c70-8220266cf76d",
+      "title": "Data from: Study \"Bald Eagle - Haliaeetus leucocephalus - Biodiversity Research Institute\" [part]",
+      "license": "Attribution-NonCommercial 4.0 International",
+      "license_uri": "http://creativecommons.org/licenses/by-nc/4.0/",
+      "taxon_labels": [
+        "Haliaeetus leucocephalus"
+      ],
+      "sensor_metadata_class": "gps_only",
+      "source_event_animal_count_in_census_triage": null,
+      "reference_animal_count_if_in_existing_pilot": null,
+      "two_hour_pipeline_eligibility_established_from_this_batch_metadata": false
+    },
+    {
+      "doi": "10.5441/001/1.706",
+      "doi_url": "https://doi.org/10.5441/001/1.706",
+      "uuid": "89b8132d-fc88-498f-9040-39643b387dd4",
+      "title": "Data from: Study \"American black bear movement ecology in Connecticut\"",
+      "license": "Attribution 4.0 International",
+      "license_uri": "http://creativecommons.org/licenses/by/4.0/",
+      "taxon_labels": [
+        "Ursus americanus"
+      ],
+      "sensor_metadata_class": "gps_only",
+      "source_event_animal_count_in_census_triage": null,
+      "reference_animal_count_if_in_existing_pilot": null,
+      "two_hour_pipeline_eligibility_established_from_this_batch_metadata": false
+    },
+    {
+      "doi": "10.5441/001/1.708",
+      "doi_url": "https://doi.org/10.5441/001/1.708",
+      "uuid": "0e3a4577-b063-47d9-9d6b-edec949aa5fa",
+      "title": "Data from: Study \"Wyoming Sublette Mule Deer (2018-2020)\"",
+      "license": "CC0 1.0 Universal",
+      "license_uri": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "taxon_labels": [
+        "Odocoileus hemionus"
+      ],
+      "sensor_metadata_class": "gps_only",
+      "source_event_animal_count_in_census_triage": null,
+      "reference_animal_count_if_in_existing_pilot": 135,
+      "two_hour_pipeline_eligibility_established_from_this_batch_metadata": false
+    },
+    {
+      "doi": "10.5441/001/1.709",
+      "doi_url": "https://doi.org/10.5441/001/1.709",
+      "uuid": "35c83272-210b-44c3-a7fc-7d0658137540",
+      "title": "Data from: Study \"UCSB Urban Raccoon Project\" [part]",
+      "license": "Attribution 4.0 International",
+      "license_uri": "http://creativecommons.org/licenses/by/4.0/",
+      "taxon_labels": [
+        "Procyon lotor"
+      ],
+      "sensor_metadata_class": "gps_only",
+      "source_event_animal_count_in_census_triage": null,
+      "reference_animal_count_if_in_existing_pilot": null,
+      "two_hour_pipeline_eligibility_established_from_this_batch_metadata": false
+    },
+    {
+      "doi": "10.5441/001/1.711",
+      "doi_url": "https://doi.org/10.5441/001/1.711",
+      "uuid": "0043246e-e68c-4b76-84cc-31e7558d08e0",
+      "title": "Data from: Study \"GPS tracking of ungulates in Utah by UDWR (2019-2020)\"",
+      "license": "CC0 1.0 Universal",
+      "license_uri": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "taxon_labels": [
+        "Antilocapra americana",
+        "Cervus elaphus",
+        "Odocoileus hemionus",
+        "Ovis canadensis"
+      ],
+      "sensor_metadata_class": "gps_only",
+      "source_event_animal_count_in_census_triage": null,
+      "reference_animal_count_if_in_existing_pilot": null,
+      "two_hour_pipeline_eligibility_established_from_this_batch_metadata": false
+    },
+    {
+      "doi": "10.5441/001/1.712",
+      "doi_url": "https://doi.org/10.5441/001/1.712",
+      "uuid": "80b3da4f-5e2d-4fb0-998f-121231d2ed71",
+      "title": "Study \"GPS tracking of cougars in Utah by UDWR (2019-2020)\"",
+      "license": "CC0 1.0 Universal",
+      "license_uri": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "taxon_labels": [
+        "Puma concolor"
+      ],
+      "sensor_metadata_class": "gps_only",
+      "source_event_animal_count_in_census_triage": null,
+      "reference_animal_count_if_in_existing_pilot": null,
+      "two_hour_pipeline_eligibility_established_from_this_batch_metadata": false
+    },
+    {
+      "doi": "10.5441/001/1.714",
+      "doi_url": "https://doi.org/10.5441/001/1.714",
+      "uuid": "26a9d940-906d-490b-a87d-02be51e5e21f",
+      "title": "Data from: Study \"Wyoming Bighorn Mountain Moose\" [part]",
+      "license": "CC0 1.0 Universal",
+      "license_uri": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "taxon_labels": [
+        "Alces alces"
+      ],
+      "sensor_metadata_class": "gps_only",
+      "source_event_animal_count_in_census_triage": null,
+      "reference_animal_count_if_in_existing_pilot": null,
+      "two_hour_pipeline_eligibility_established_from_this_batch_metadata": false
+    },
+    {
+      "doi": "10.5441/001/1.717",
+      "doi_url": "https://doi.org/10.5441/001/1.717",
+      "uuid": "8c6ffeba-2067-48d9-beba-9ca068111b8e",
+      "title": "Data from: Study \"Wolves, Stahler, Yellowstone National Park\" [part]",
+      "license": "CC0 1.0 Universal",
+      "license_uri": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "taxon_labels": [
+        "Canis lupus"
+      ],
+      "sensor_metadata_class": "gps_only",
+      "source_event_animal_count_in_census_triage": null,
+      "reference_animal_count_if_in_existing_pilot": null,
+      "two_hour_pipeline_eligibility_established_from_this_batch_metadata": false
+    },
+    {
+      "doi": "10.5441/001/1.718",
+      "doi_url": "https://doi.org/10.5441/001/1.718",
+      "uuid": "e6102c38-8e96-4e36-9ff8-f40a0c03fe5f",
+      "title": "Data from: Study \"GPS tracking of white-tailed deer in western Virginia\"",
+      "license": "CC0 1.0 Universal",
+      "license_uri": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "taxon_labels": [
+        "Odocoileus virginianus"
+      ],
+      "sensor_metadata_class": "gps_only",
+      "source_event_animal_count_in_census_triage": null,
+      "reference_animal_count_if_in_existing_pilot": null,
+      "two_hour_pipeline_eligibility_established_from_this_batch_metadata": false
+    }
+  ]
+}

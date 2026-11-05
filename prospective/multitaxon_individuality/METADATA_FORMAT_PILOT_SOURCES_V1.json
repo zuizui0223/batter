@@ -1,0 +1,268 @@
+{
+  "schema_version": 1,
+  "created_date": "2026-10-18",
+  "source_catalog": "MOVEBANK_PUBLISHED_DATAPACKAGES_CENSUS_2026_10_18.json",
+  "source_catalog_git_blob_sha1": "fc69fc259c641f813848a819a4eb736886acba58",
+  "status": "pre-data format-coverage test cases only; cross-taxon biological eligibility unverified",
+  "pilot_count": 15,
+  "warning": "The 15 example DOIs cover different taxa and licenses to test file/format import; they must not be used as a cherry-picked science analysis or called eligible until every DOI in 437 source-frame receives identical predeclared QA. Some data may lack usable GPS or sufficient individual repeats.",
+  "records": [
+    {
+      "pilot_label": "Galapagos_tortoise",
+      "broad_provisional_movement_system": "terrestrial_reptile",
+      "doi": "doi:10.5441/001/1.2cp86266",
+      "source_title": "Data from: Allometric and temporal scaling of movement characteristics in Galapagos tortoises",
+      "source_license": "CC0 1.0 Universal",
+      "subject_taxon_strings": [
+        "Chelonoidis donfaustoi",
+        "Chelonoidis hoodensis",
+        "Chelonoidis porteri",
+        "Chelonoidis donfaustoi",
+        "Chelonoidis hoodensis",
+        "Chelonoidis porteri"
+      ],
+      "original_zip_inventory_examined": false,
+      "actual_GPS_sensor_confirmed": false,
+      "repeated_individual_eligible": false,
+      "original_sample_size_verified": false,
+      "ecological_contrast_supported": false,
+      "selection_purpose": "source bitstream/reference format and QA workflow testing only, NOT inclusion as cross-taxon science sample"
+    },
+    {
+      "pilot_label": "Copperhead_snake",
+      "broad_provisional_movement_system": "terrestrial_reptile",
+      "doi": "doi:10.5441/001/1.3v106n1n",
+      "source_title": "Data from: Spatial ecology of copperhead snakes (Agkistrodon contortrix) in response to urban park trails",
+      "source_license": "CC0 1.0 Universal",
+      "subject_taxon_strings": [
+        "Agkistrodon contortrix",
+        "Agkistrodon contortrix"
+      ],
+      "original_zip_inventory_examined": false,
+      "actual_GPS_sensor_confirmed": false,
+      "repeated_individual_eligible": false,
+      "original_sample_size_verified": false,
+      "ecological_contrast_supported": false,
+      "selection_purpose": "source bitstream/reference format and QA workflow testing only, NOT inclusion as cross-taxon science sample"
+    },
+    {
+      "pilot_label": "Lowland_tapir",
+      "broad_provisional_movement_system": "terrestrial_mammal",
+      "doi": "doi:10.5441/001/1.03ck4s52",
+      "source_title": "Data from: Study \"Lowland tapirs, Tapirus terrestris, in Southern Brazil\"",
+      "source_license": "CC0 1.0 Universal",
+      "subject_taxon_strings": [
+        "Tapirus terrestris",
+        "Tapirus terrestris"
+      ],
+      "original_zip_inventory_examined": false,
+      "actual_GPS_sensor_confirmed": false,
+      "repeated_individual_eligible": false,
+      "original_sample_size_verified": false,
+      "ecological_contrast_supported": false,
+      "selection_purpose": "source bitstream/reference format and QA workflow testing only, NOT inclusion as cross-taxon science sample"
+    },
+    {
+      "pilot_label": "Wolf",
+      "broad_provisional_movement_system": "terrestrial_mammal",
+      "doi": "doi:10.5441/001/1.7vr1k987",
+      "source_title": "Data from: Wolf ecology and caribou-primary prey-wolf spatial relationships in low productivity peatland complexes in northeastern Alberta",
+      "source_license": "CC0 1.0 Universal",
+      "subject_taxon_strings": [
+        "Canis lupus",
+        "Canis lupus"
+      ],
+      "original_zip_inventory_examined": false,
+      "actual_GPS_sensor_confirmed": false,
+      "repeated_individual_eligible": false,
+      "original_sample_size_verified": false,
+      "ecological_contrast_supported": false,
+      "selection_purpose": "source bitstream/reference format and QA workflow testing only, NOT inclusion as cross-taxon science sample"
+    },
+    {
+      "pilot_label": "African_elephant",
+      "broad_provisional_movement_system": "terrestrial_mammal",
+      "doi": "doi:10.5441/001/1.403h24q5",
+      "source_title": "Data from: Fine-scale tracking of ambient temperature and movement reveals shuttling behavior of elephants to water",
+      "source_license": "CC0 1.0 Universal",
+      "subject_taxon_strings": [
+        "Loxodonta africana",
+        "African savanna elephant",
+        "Loxodonta africana"
+      ],
+      "original_zip_inventory_examined": false,
+      "actual_GPS_sensor_confirmed": false,
+      "repeated_individual_eligible": false,
+      "original_sample_size_verified": false,
+      "ecological_contrast_supported": false,
+      "selection_purpose": "source bitstream/reference format and QA workflow testing only, NOT inclusion as cross-taxon science sample"
+    },
+    {
+      "pilot_label": "Cougar",
+      "broad_provisional_movement_system": "terrestrial_mammal",
+      "doi": "doi:10.5441/001/1.712",
+      "source_title": "Study \"GPS tracking of cougars in Utah by UDWR (2019-2020)\"",
+      "source_license": "CC0 1.0 Universal",
+      "subject_taxon_strings": [
+        "Puma concolor"
+      ],
+      "original_zip_inventory_examined": false,
+      "actual_GPS_sensor_confirmed": false,
+      "repeated_individual_eligible": false,
+      "original_sample_size_verified": false,
+      "ecological_contrast_supported": false,
+      "selection_purpose": "source bitstream/reference format and QA workflow testing only, NOT inclusion as cross-taxon science sample"
+    },
+    {
+      "pilot_label": "White_stork",
+      "broad_provisional_movement_system": "flying_bird",
+      "doi": "doi:10.5441/001/1.4192t2j4_2",
+      "source_title": "Data from: Study \"LifeTrack White Stork Rheinland-Pfalz\" (2015-2023)",
+      "source_license": "CC0 1.0 Universal",
+      "subject_taxon_strings": [
+        "Ciconia ciconia",
+        "Ciconia ciconia"
+      ],
+      "original_zip_inventory_examined": false,
+      "actual_GPS_sensor_confirmed": false,
+      "repeated_individual_eligible": false,
+      "original_sample_size_verified": false,
+      "ecological_contrast_supported": false,
+      "selection_purpose": "source bitstream/reference format and QA workflow testing only, NOT inclusion as cross-taxon science sample"
+    },
+    {
+      "pilot_label": "Tropicbird",
+      "broad_provisional_movement_system": "flying_seabird",
+      "doi": "doi:10.5441/001/1.251",
+      "source_title": "Data from: Thermal soaring in tropicbirds suggests that diverse seabirds may use this strategy to reduce flight costs",
+      "source_license": "CC0 1.0 Universal",
+      "subject_taxon_strings": [
+        "Phaethon rubricauda"
+      ],
+      "original_zip_inventory_examined": false,
+      "actual_GPS_sensor_confirmed": false,
+      "repeated_individual_eligible": false,
+      "original_sample_size_verified": false,
+      "ecological_contrast_supported": false,
+      "selection_purpose": "source bitstream/reference format and QA workflow testing only, NOT inclusion as cross-taxon science sample"
+    },
+    {
+      "pilot_label": "Egyptian_vulture",
+      "broad_provisional_movement_system": "flying_bird",
+      "doi": "doi:10.5441/001/1.318",
+      "source_title": "Data from: The spatiotemporal properties of artificial feeding schemes influence the post-fledging movement of Egyptian Vultures",
+      "source_license": "CC0 1.0 Universal",
+      "subject_taxon_strings": [
+        "Neophron percnopterus",
+        "Egyptian vulture"
+      ],
+      "original_zip_inventory_examined": false,
+      "actual_GPS_sensor_confirmed": false,
+      "repeated_individual_eligible": false,
+      "original_sample_size_verified": false,
+      "ecological_contrast_supported": false,
+      "selection_purpose": "source bitstream/reference format and QA workflow testing only, NOT inclusion as cross-taxon science sample"
+    },
+    {
+      "pilot_label": "Emperor_penguin",
+      "broad_provisional_movement_system": "diving_bird",
+      "doi": "doi:10.5441/001/1.sg2s0f7q",
+      "source_title": "Data from: Juvenile emperor penguin range calls for extended conservation measures in the Southern Ocean",
+      "source_license": "CC0 1.0 Universal",
+      "subject_taxon_strings": [
+        "Aptenodytes forsteri",
+        "Aptenodytes forsteri"
+      ],
+      "original_zip_inventory_examined": false,
+      "actual_GPS_sensor_confirmed": false,
+      "repeated_individual_eligible": false,
+      "original_sample_size_verified": false,
+      "ecological_contrast_supported": false,
+      "selection_purpose": "source bitstream/reference format and QA workflow testing only, NOT inclusion as cross-taxon science sample"
+    },
+    {
+      "pilot_label": "Grey_seal",
+      "broad_provisional_movement_system": "marine_mammal",
+      "doi": "doi:10.5441/001/1.910p0c20",
+      "source_title": "Data from: A novel approach to quantifying the spatiotemporal behavior of instrumented grey seals used to sample the environment",
+      "source_license": "CC0 1.0 Universal",
+      "subject_taxon_strings": [
+        "Halichoerus grypus",
+        "Halichoerus grypus"
+      ],
+      "original_zip_inventory_examined": false,
+      "actual_GPS_sensor_confirmed": false,
+      "repeated_individual_eligible": false,
+      "original_sample_size_verified": false,
+      "ecological_contrast_supported": false,
+      "selection_purpose": "source bitstream/reference format and QA workflow testing only, NOT inclusion as cross-taxon science sample"
+    },
+    {
+      "pilot_label": "Bobcat",
+      "broad_provisional_movement_system": "terrestrial_mammal",
+      "doi": "doi:10.5441/001/1.323",
+      "source_title": "Data from: Study \"Bobcat habitat connectivity study in central California\"",
+      "source_license": "CC0 1.0 Universal",
+      "subject_taxon_strings": [
+        "Lynx rufus",
+        "Lynx rufus"
+      ],
+      "original_zip_inventory_examined": false,
+      "actual_GPS_sensor_confirmed": false,
+      "repeated_individual_eligible": false,
+      "original_sample_size_verified": false,
+      "ecological_contrast_supported": false,
+      "selection_purpose": "source bitstream/reference format and QA workflow testing only, NOT inclusion as cross-taxon science sample"
+    },
+    {
+      "pilot_label": "Cranes_Ukraine",
+      "broad_provisional_movement_system": "flying_bird",
+      "doi": "doi:10.5441/001/1.590",
+      "source_title": "Data from: Study \"1000 Cranes. Ukraine.\"",
+      "source_license": "Attribution 4.0 International",
+      "subject_taxon_strings": [
+        "Anthropoides virgo",
+        "Anthropoides virgo"
+      ],
+      "original_zip_inventory_examined": false,
+      "actual_GPS_sensor_confirmed": false,
+      "repeated_individual_eligible": false,
+      "original_sample_size_verified": false,
+      "ecological_contrast_supported": false,
+      "selection_purpose": "source bitstream/reference format and QA workflow testing only, NOT inclusion as cross-taxon science sample"
+    },
+    {
+      "pilot_label": "Olympic_cougar",
+      "broad_provisional_movement_system": "terrestrial_mammal",
+      "doi": "doi:10.5441/001/1.716",
+      "source_title": "Data from: Study \"Olympic Cougar Project\"",
+      "source_license": "Attribution-NonCommercial 4.0 International",
+      "subject_taxon_strings": [
+        "Puma concolor"
+      ],
+      "original_zip_inventory_examined": false,
+      "actual_GPS_sensor_confirmed": false,
+      "repeated_individual_eligible": false,
+      "original_sample_size_verified": false,
+      "ecological_contrast_supported": false,
+      "selection_purpose": "source bitstream/reference format and QA workflow testing only, NOT inclusion as cross-taxon science sample"
+    },
+    {
+      "pilot_label": "Humboldt_penguin",
+      "broad_provisional_movement_system": "diving_bird",
+      "doi": "doi:10.5441/001/1.725",
+      "source_title": "Data from: Spatio-temporal overlap between purse seine fisheries and Humboldt penguin feeding areas in northern Chile",
+      "source_license": "Attribution-NonCommercial 4.0 International",
+      "subject_taxon_strings": [
+        "Spheniscus humboldti",
+        "Humboldt penguin"
+      ],
+      "original_zip_inventory_examined": false,
+      "actual_GPS_sensor_confirmed": false,
+      "repeated_individual_eligible": false,
+      "original_sample_size_verified": false,
+      "ecological_contrast_supported": false,
+      "selection_purpose": "source bitstream/reference format and QA workflow testing only, NOT inclusion as cross-taxon science sample"
+    }
+  ]
+}

@@ -1,0 +1,319 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-19",
+  "input": "MOVEBANK_PUBLISHED_DATAPACKAGES_CENSUS_2026_10_18.json",
+  "input_original_census_git_blob_sha1": "fc69fc259c641f813848a819a4eb736886acba58",
+  "methodology": "Original Movebank DSpace bundle file listings plus 9 original small per-study source reference-data CSVs, parsed directly. Only aggregate biological ID and deployment counts stored; no animal identifiers or GPS locations.",
+  "source_verification_limits": [
+    "Source reference CSV n are not counts of independent animals with repeated GPS records. Each source must pass raw GPS coordinate/time/accuracy and ≥3 temporal block conditions separately.",
+    "DOI rights differ: original 437-census rights preserved from public metadata; original source authors and more detailed downstream rights still require attribution and any noncommercial restrictions.",
+    "The tapir source reference contains 8 calibration-tag lines not real Tapirus; only the remaining 74 rows carry Tapirus terrestris.",
+    "Pigeon original release trials may not measure natural resource niches; require explicit separate context/experimental stratum.",
+    "Green turtle GPS and Argos have different error distributions; no mixing without measurement model.",
+    "White stork n is adult 2017 reference ONLY, not all original multi-year/age files.",
+    "The original manta result n=1 is NOT valid as a standalone individual-identity test, even if many locations exist."
+  ],
+  "criteria_reference_only": {
+    "min_ID_to_continue_source_file_check": 5,
+    "biological_n_threshold_for_final_inference": "not_yet_applied",
+    "require_multiple_independent_tracking_days": "not_yet_applied",
+    "require_within_cohort_other_bats": "not_yet_applied"
+  },
+  "summary": {
+    "sources_with_reference_checked": 9,
+    "reference_n_at_least5": 8,
+    "reference_n_below5": 1,
+    "taxa_identification_tentative": true,
+    "complete_track_based_eligibility_confirmed": 0,
+    "status_counts": {
+      "PASS_REFERENCE_N_ONLY": 8,
+      "FAIL_INSUFFICIENT_INDIVIDUAL_N": 1
+    }
+  },
+  "sources": [
+    {
+      "group": "terrestrial_large_herbivore",
+      "label": "Lowland tapir",
+      "uuid": "e2fe5582-a707-4954-8329-ba107736fed8",
+      "ref": "996de5fc-952f-4be0-87d3-d488550673d6",
+      "ref_bytes": 11764,
+      "reference_rows": 82,
+      "source_individual_IDs_total": 82,
+      "biological_IDs_after_taxon_check": 74,
+      "exclude_non_biological_calibration_rows": 8,
+      "reference_deployments": 82,
+      "source_coordinate_files": [
+        {
+          "sensor": "GPS",
+          "name": "Lowland tapirs Tapirus terrestris in Southern Brazil-gps.csv",
+          "bytes": 52189597
+        }
+      ],
+      "median_deploy_days": null,
+      "n_deploy_duration_valid": 0,
+      "notes": "8 calibration records must be excluded; no deployment-off dates available to compute duration.",
+      "doi": "doi:10.5441/001/1.03ck4s52",
+      "source_license": "CC0 1.0 Universal",
+      "source_title": "Data from: Study \"Lowland tapirs, Tapirus terrestris, in Southern Brazil\"",
+      "reference_file_uri": "https://datarepository.movebank.org/bitstreams/996de5fc-952f-4be0-87d3-d488550673d6/download",
+      "source_package_uuid": "e2fe5582-a707-4954-8329-ba107736fed8",
+      "actual_GPS_rows_verified": false,
+      "repeated_days_per_bat_verified": false,
+      "all_individuals_same_comparable_cohort_verified": false,
+      "stage2_reference_ID_status": "PASS_REFERENCE_N_ONLY"
+    },
+    {
+      "group": "terrestrial_large_herbivore",
+      "label": "Elk",
+      "uuid": "dce434f5-0cae-45be-8847-e45b61833bf0",
+      "ref": "0de1eb11-68a0-4558-9b8f-9b8c95bd11c2",
+      "ref_bytes": 22310,
+      "reference_rows": 175,
+      "source_individual_IDs_total": 175,
+      "biological_IDs_after_taxon_check": 175,
+      "exclude_non_biological_calibration_rows": 0,
+      "reference_deployments": 175,
+      "source_coordinate_files": [
+        {
+          "sensor": "mixed_tracking_CSV_needs_readme",
+          "name": "Ya Ha Tinda elk project Banff National Park 2001-2020 (females).csv",
+          "bytes": 289955534
+        }
+      ],
+      "median_deploy_days": null,
+      "n_deploy_duration_valid": 0,
+      "notes": "Long multi-year source; elapsed tracking days and observation counts still unknown.",
+      "doi": "doi:10.5441/001/1.5g4h5t6c",
+      "source_license": "CC0 1.0 Universal",
+      "source_title": "Data from: Study \"Ya Ha Tinda elk project, Banff National Park, 2001-2020 (females)\"",
+      "reference_file_uri": "https://datarepository.movebank.org/bitstreams/0de1eb11-68a0-4558-9b8f-9b8c95bd11c2/download",
+      "source_package_uuid": "dce434f5-0cae-45be-8847-e45b61833bf0",
+      "actual_GPS_rows_verified": false,
+      "repeated_days_per_bat_verified": false,
+      "all_individuals_same_comparable_cohort_verified": false,
+      "stage2_reference_ID_status": "PASS_REFERENCE_N_ONLY"
+    },
+    {
+      "group": "terrestrial_carnivore",
+      "label": "Red fox",
+      "uuid": "86f58f48-90be-4241-b895-6af3e7952dde",
+      "ref": "b40c60e4-ce7f-4bd0-a88a-5ff2112cca4a",
+      "ref_bytes": 23611,
+      "reference_rows": 39,
+      "source_individual_IDs_total": 35,
+      "biological_IDs_after_taxon_check": 35,
+      "exclude_non_biological_calibration_rows": 0,
+      "reference_deployments": 39,
+      "source_coordinate_files": [
+        {
+          "sensor": "GPS_in_source_keywords",
+          "name": "Red Fox (Vulpes vulpes) in UK wet grasslands.csv",
+          "bytes": 31767499
+        }
+      ],
+      "median_deploy_days": 37.12638888888889,
+      "n_deploy_duration_valid": 39,
+      "notes": "35 individual IDs in 39 deployments; repeated individual/deployments must be nested.",
+      "doi": "doi:10.5441/001/1.304",
+      "source_license": "CC0 1.0 Universal",
+      "source_title": "Data from: Study \"Red Fox (Vulpes vulpes) in UK wet grasslands\"",
+      "reference_file_uri": "https://datarepository.movebank.org/bitstreams/b40c60e4-ce7f-4bd0-a88a-5ff2112cca4a/download",
+      "source_package_uuid": "86f58f48-90be-4241-b895-6af3e7952dde",
+      "actual_GPS_rows_verified": false,
+      "repeated_days_per_bat_verified": false,
+      "all_individuals_same_comparable_cohort_verified": false,
+      "stage2_reference_ID_status": "PASS_REFERENCE_N_ONLY"
+    },
+    {
+      "group": "aerial_seabird",
+      "label": "Herring gull",
+      "uuid": "12629618-631f-4999-be7c-80af743b246f",
+      "ref": "63e50ba5-b07d-4e8a-a3bf-21ffe87d4f90",
+      "ref_bytes": 7051,
+      "reference_rows": 16,
+      "source_individual_IDs_total": 16,
+      "biological_IDs_after_taxon_check": 16,
+      "exclude_non_biological_calibration_rows": 0,
+      "reference_deployments": 16,
+      "source_coordinate_files": [
+        {
+          "sensor": "GPS_in_source_keywords",
+          "name": "Herring Gulls (Larus Argentatus); Gilchrist; East Bay Island Canada.csv",
+          "bytes": 9105424
+        }
+      ],
+      "median_deploy_days": 208.17320601851853,
+      "n_deploy_duration_valid": 10,
+      "notes": "Some deployment spans unreported; original observation time coverage must be validated.",
+      "doi": "doi:10.5441/001/1.1r1s4v8d",
+      "source_license": "CC0 1.0 Universal",
+      "source_title": "Data from: Study \"Herring Gulls (Larus Argentatus); Gilchrist; East Bay Island, Canada\"",
+      "reference_file_uri": "https://datarepository.movebank.org/bitstreams/63e50ba5-b07d-4e8a-a3bf-21ffe87d4f90/download",
+      "source_package_uuid": "12629618-631f-4999-be7c-80af743b246f",
+      "actual_GPS_rows_verified": false,
+      "repeated_days_per_bat_verified": false,
+      "all_individuals_same_comparable_cohort_verified": false,
+      "stage2_reference_ID_status": "PASS_REFERENCE_N_ONLY"
+    },
+    {
+      "group": "aerial_navigation_experiment",
+      "label": "Homing pigeon",
+      "uuid": "5fa09bd6-afc9-4293-a39a-8458ea1da3c7",
+      "ref": "4bafd0f2-e566-4329-9d33-c3838eab7f3d",
+      "ref_bytes": 10992,
+      "reference_rows": 35,
+      "source_individual_IDs_total": 35,
+      "biological_IDs_after_taxon_check": 35,
+      "exclude_non_biological_calibration_rows": 0,
+      "reference_deployments": null,
+      "source_coordinate_files": [
+        {
+          "sensor": "GPS_in_source_keywords",
+          "name": "Original source flight file (name must be reopened)",
+          "bytes": 58199804
+        }
+      ],
+      "median_deploy_days": null,
+      "n_deploy_duration_valid": 0,
+      "notes": "Repeated homing releases / experimental manipulation may confound ecological space use. No deployment dates in reference table.",
+      "doi": "doi:10.5441/001/1.245kb7r6",
+      "source_license": "CC0 1.0 Universal",
+      "source_title": "Data from: Right hemisphere advantage in the development of route fidelity in homing pigeons",
+      "reference_file_uri": "https://datarepository.movebank.org/bitstreams/4bafd0f2-e566-4329-9d33-c3838eab7f3d/download",
+      "source_package_uuid": "5fa09bd6-afc9-4293-a39a-8458ea1da3c7",
+      "actual_GPS_rows_verified": false,
+      "repeated_days_per_bat_verified": false,
+      "all_individuals_same_comparable_cohort_verified": false,
+      "stage2_reference_ID_status": "PASS_REFERENCE_N_ONLY"
+    },
+    {
+      "group": "marine_reptile",
+      "label": "Loggerhead turtle",
+      "uuid": "9500806c-2712-4906-99d3-64a46c1f877b",
+      "ref": "955baa76-7eb0-4e08-8d3c-f8a424d72c0b",
+      "ref_bytes": 5332,
+      "reference_rows": 11,
+      "source_individual_IDs_total": 11,
+      "biological_IDs_after_taxon_check": 11,
+      "exclude_non_biological_calibration_rows": 0,
+      "reference_deployments": 11,
+      "source_coordinate_files": [
+        {
+          "sensor": "satellite_telemetry",
+          "name": "Satellite Tracking of Oceanic Loggerhead Turtles in the Mediterranean.csv",
+          "bytes": 3134141
+        }
+      ],
+      "median_deploy_days": 116.82266643518518,
+      "n_deploy_duration_valid": 11,
+      "notes": "Source includes 703,997-byte dive file, but time-matched depth/position quality is unverified.",
+      "doi": "doi:10.5441/001/1.1f1h87r8",
+      "source_license": "CC0 1.0 Universal",
+      "source_title": "Data from: Study \"Satellite Tracking of Oceanic Loggerhead Turtles in the Mediterranean\"",
+      "reference_file_uri": "https://datarepository.movebank.org/bitstreams/955baa76-7eb0-4e08-8d3c-f8a424d72c0b/download",
+      "source_package_uuid": "9500806c-2712-4906-99d3-64a46c1f877b",
+      "actual_GPS_rows_verified": false,
+      "repeated_days_per_bat_verified": false,
+      "all_individuals_same_comparable_cohort_verified": false,
+      "stage2_reference_ID_status": "PASS_REFERENCE_N_ONLY"
+    },
+    {
+      "group": "marine_reptile",
+      "label": "Green turtle",
+      "uuid": "df53968d-4bcc-4dd7-9bb6-8358378836ec",
+      "ref": "5bf6e216-dfa0-4c7c-a8eb-27cb5f3a2645",
+      "ref_bytes": 8174,
+      "reference_rows": 33,
+      "source_individual_IDs_total": 33,
+      "biological_IDs_after_taxon_check": 33,
+      "exclude_non_biological_calibration_rows": 0,
+      "reference_deployments": 33,
+      "source_coordinate_files": [
+        {
+          "sensor": "GPS",
+          "name": "Green turtles (Chelonia Mydas) Hays Chagos Archipelago Western Indian Ocean-gps.csv",
+          "bytes": 9788265
+        },
+        {
+          "sensor": "Argos",
+          "name": "Green turtles (Chelonia Mydas) Hays Chagos Archipelago Western Indian Ocean-argos.csv",
+          "bytes": 520491
+        }
+      ],
+      "median_deploy_days": 235.32847222222222,
+      "n_deploy_duration_valid": 33,
+      "notes": "Original reference declares both GPS and Argos; accuracy protocols must be kept separate.",
+      "doi": "doi:10.5441/001/1.313",
+      "source_license": "CC0 1.0 Universal",
+      "source_title": "Data from: Study \"Green turtles (Chelonia Mydas); Hays; Chagos Archipelago, Western Indian Ocean\"",
+      "reference_file_uri": "https://datarepository.movebank.org/bitstreams/5bf6e216-dfa0-4c7c-a8eb-27cb5f3a2645/download",
+      "source_package_uuid": "df53968d-4bcc-4dd7-9bb6-8358378836ec",
+      "actual_GPS_rows_verified": false,
+      "repeated_days_per_bat_verified": false,
+      "all_individuals_same_comparable_cohort_verified": false,
+      "stage2_reference_ID_status": "PASS_REFERENCE_N_ONLY"
+    },
+    {
+      "group": "aerial_wading_bird",
+      "label": "White stork, adults 2017 only",
+      "uuid": "967b7813-220e-4f60-8415-166d118ac8fa",
+      "ref": "4d71de14-8d2a-45dc-8399-76d739e2f8dd",
+      "ref_bytes": 2897,
+      "reference_rows": 6,
+      "source_individual_IDs_total": 5,
+      "biological_IDs_after_taxon_check": 5,
+      "exclude_non_biological_calibration_rows": 0,
+      "reference_deployments": 5,
+      "source_coordinate_files": [
+        {
+          "sensor": "GPS_in_source_keywords",
+          "name": "White Stork Adults 2017_part.csv",
+          "bytes": 38247967
+        }
+      ],
+      "median_deploy_days": 502.5451388888889,
+      "n_deploy_duration_valid": 2,
+      "notes": "This is only one reference/year file from a package containing 19 originals (2016–2020 adult/juvenile parts); cannot count the full package's unique animals yet.",
+      "doi": "doi:10.5441/001/1.137cn005",
+      "source_license": "CC0 1.0 Universal",
+      "source_title": "Data from: Timing is critical: consequences of asynchronous migration for the performance and destination of a long-distance migrant",
+      "reference_file_uri": "https://datarepository.movebank.org/bitstreams/4d71de14-8d2a-45dc-8399-76d739e2f8dd/download",
+      "source_package_uuid": "967b7813-220e-4f60-8415-166d118ac8fa",
+      "actual_GPS_rows_verified": false,
+      "repeated_days_per_bat_verified": false,
+      "all_individuals_same_comparable_cohort_verified": false,
+      "stage2_reference_ID_status": "PASS_REFERENCE_N_ONLY"
+    },
+    {
+      "group": "marine_fish_negative_control",
+      "label": "Reef manta, Komodo",
+      "uuid": "f8c74489-c4ff-46fb-8771-5eebc5b4e8b6",
+      "ref": "ab9c3a57-4ec8-46fe-9a26-f0b4ae460e18",
+      "ref_bytes": 624,
+      "reference_rows": 1,
+      "source_individual_IDs_total": 1,
+      "biological_IDs_after_taxon_check": 1,
+      "exclude_non_biological_calibration_rows": 0,
+      "reference_deployments": 1,
+      "source_coordinate_files": [
+        {
+          "sensor": "satellite",
+          "name": "Reef manta Komodo Indonesia.csv",
+          "bytes": 9620
+        }
+      ],
+      "median_deploy_days": 67.99930555555555,
+      "n_deploy_duration_valid": 1,
+      "notes": "Direct source-proven n=1; insufficient for among-animal identity contrast; reject as standalone core test.",
+      "doi": "doi:10.5441/001/1.3gj67c2k",
+      "source_license": "CC0 1.0 Universal",
+      "source_title": "Data from: Correcting for missing and irregular data in home-range estimation",
+      "reference_file_uri": "https://datarepository.movebank.org/bitstreams/ab9c3a57-4ec8-46fe-9a26-f0b4ae460e18/download",
+      "source_package_uuid": "f8c74489-c4ff-46fb-8771-5eebc5b4e8b6",
+      "actual_GPS_rows_verified": false,
+      "repeated_days_per_bat_verified": false,
+      "all_individuals_same_comparable_cohort_verified": false,
+      "stage2_reference_ID_status": "FAIL_INSUFFICIENT_INDIVIDUAL_N"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+name: Publish source original-GPS anchor direction comparison (aggregate only)
+
+on:
+  push:
+    branches:
+      - prospective/multitaxon-identity-ecology-v1
+    paths:
+      - ".github/workflows/publish-movebank-anchor-symmetry-v1.yml"
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  independent-pinned-source-directional-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Recover source-verified public GPS dual-anchor aggregates by fixed CI run
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/source-dual-anchor
+          for source in turkey black_bear white_tailed_deer; do
+            mkdir -p "/tmp/movebank-original-${source}"
+            gh run download 39596916860 --repo "$GITHUB_REPOSITORY" \
+              -n "original-dual-anchor-${source}" \
+              -D "/tmp/movebank-original-${source}"
+            mv "/tmp/movebank-original-${source}/${source}_day_shift_two_anchors_20261021.json" \
+              "/tmp/source-dual-anchor/${source}_day_shift_two_anchors_20261021.json"
+          done
+      - name: Validate all three exact original-source SHA receipts and 576 reversal rows
+        run: |
+          set -euo pipefail
+          root=prospective/multitaxon_individuality
+          python3 "$root/validate_original_anchor_symmetry_v1.py" \
+            --old-dir "$root" --reverse-dir /tmp/source-dual-anchor \
+            --output /tmp/source-dual-anchor/DAY_SHIFT_DUAL_ANCHOR_SUMMARY_2026_10_21.json
+      - name: Write audit table, preserve all source outputs, check published bytes
+        run: |
+          set -euo pipefail
+          root=prospective/multitaxon_individuality
+          for source in turkey black_bear white_tailed_deer; do
+            uppercase="$(echo "$source" | tr '[:lower:]' '[:upper:]')"
+            cp "/tmp/source-dual-anchor/${source}_day_shift_two_anchors_20261021.json" \
+              "$root/DAY_SHIFT_DUAL_ANCHOR_${uppercase}_2026_10_21.json"
+          done
+          cp /tmp/source-dual-anchor/DAY_SHIFT_DUAL_ANCHOR_SUMMARY_2026_10_21.json \
+             "$root/DAY_SHIFT_DUAL_ANCHOR_SUMMARY_2026_10_21.json"
+          python3 "$root/validate_original_anchor_symmetry_v1.py" \
+            --old-dir "$root" --reverse-dir "$root" \
+            --output /tmp/source-dual-anchor/reverified.json
+          cmp /tmp/source-dual-anchor/reverified.json "$root/DAY_SHIFT_DUAL_ANCHOR_SUMMARY_2026_10_21.json"
+          python3 - <<'PY'
+          import csv,json
+          from pathlib import Path
+          root=Path('prospective/multitaxon_individuality')
+          d=json.loads((root/'DAY_SHIFT_DUAL_ANCHOR_SUMMARY_2026_10_21.json').read_text())
+          keys=('source','year','time_tolerance_min','radius_km','n_shared_pairs',
+                'forward_winter_L','forward_summer_L','forward_delta_L','forward_positive_seeds',
+                'reverse_winter_L','reverse_summer_L','reverse_delta_L','reverse_positive_seeds',
+                'both_orientations_10_of_12')
+          rows=[]
+          for x in d['rows']:
+            a,b=x['directions']
+            rows.append({'source':x['source'],'year':x['year'],
+                         'time_tolerance_min':x['time_gap_seconds']/60,
+                         'radius_km':x['radius_km'],'n_shared_pairs':x['n_shared_original_dyads'],
+                         'forward_winter_L':a['winter_L'],
+                         'forward_summer_L':a['summer_L'],
+                         'forward_delta_L':a['delta_L'],
+                         'forward_positive_seeds':a['delta_L_signs']['positive'],
+                         'reverse_winter_L':b['winter_L'],
+                         'reverse_summer_L':b['summer_L'],
+                         'reverse_delta_L':b['delta_L'],
+                         'reverse_positive_seeds':b['delta_L_signs']['positive'],
+                         'both_orientations_10_of_12':x['both_positive_at_least_10_of_12']})
+          assert len(rows)==24 and len(d['stops'])==4
+          with (root/'DAY_SHIFT_DUAL_ANCHOR_COMPARISON_2026_10_21.csv').open('w',newline='',encoding='utf-8') as f:
+            writer=csv.DictWriter(f,fieldnames=keys)
+            writer.writeheader();writer.writerows(rows)
+          print('PASS 24 complete paired-orientation comparison CSV rows, 4 STOP, exact original forward replay')
+          PY
+      - name: Publish only source/year aggregate evidence, no individual tracks
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add prospective/multitaxon_individuality/DAY_SHIFT_DUAL_ANCHOR_*_2026_10_21.json
+          git add prospective/multitaxon_individuality/DAY_SHIFT_DUAL_ANCHOR_COMPARISON_2026_10_21.csv
+          git diff --cached --stat
+          git commit -m "data: pin two-anchor preserved source-day GPS path comparison and receipt audit"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

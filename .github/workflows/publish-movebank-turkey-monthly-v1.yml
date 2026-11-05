@@ -1,0 +1,98 @@
+name: Publish source-verified turkey monthly centroid-distance results (aggregate only)
+
+on:
+  push:
+    branches:
+      - prospective/multitaxon-identity-ecology-v1
+    paths:
+      - ".github/workflows/publish-movebank-turkey-monthly-v1.yml"
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  publish-verified-original-monthly-source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download only exact completed original-source wild-turkey monthly aggregate
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/monthly-source
+          gh run download 40541516756 \
+            --repo "$GITHUB_REPOSITORY" \
+            -n turkey-monthly-core-geography-original-source \
+            -D /tmp/monthly-source
+      - name: Verify immutable source SHA256 and all monthly pair/date/transition checks
+        run: |
+          set -euo pipefail
+          python3 prospective/multitaxon_individuality/validate_turkey_monthly_core_v1.py \
+            --source /tmp/monthly-source/TURKEY_MONTHLY_CORE_SEPARATION_SOURCE_2026_10_28.json \
+            --output /tmp/monthly-source/TURKEY_MONTHLY_CORE_SEPARATION_AUDIT_2026_10_28.json
+      - name: Export complete source-year calendar-month anonymized comparison table
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import csv,json
+          from pathlib import Path
+          root=Path('prospective/multitaxon_individuality')
+          inp=Path('/tmp/monthly-source/TURKEY_MONTHLY_CORE_SEPARATION_SOURCE_2026_10_28.json')
+          obj=json.loads(inp.read_text())
+          headings=['year','month','anonymous_source_group','n_original_group_animals',
+                    'n_original_group_pairs','n_source_eligible_animals_with_7_days',
+                    'n_monthly_valid_pairs','n_anonymous_animals_in_valid_pairs',
+                    'median_gps_pair_centroid_km','min_km','mean_km','max_km',
+                    'source_support_status','source_month_fix_count','source_animal_day_count',
+                    'source_2020_isolate_core_state']
+          rows=[]
+          for yr in obj['month_results']:
+             year=yr['year']
+             for m in yr['months']:
+                for grp in m['group_centroid_pair_distances']:
+                   stats=grp['distance_km'] or {}
+                   rows.append({'year':year,'month':m['month'],
+                    'anonymous_source_group':grp['group_label'],
+                    'n_original_group_animals':grp['original_graph_n_animals'],
+                    'n_original_group_pairs':grp['n_original_pairs'],
+                    'n_source_eligible_animals_with_7_days':m['n_eligible_animals_with_7_observed_days'],
+                    'n_monthly_valid_pairs':grp['n_valid_monthly_pairs'],
+                    'n_anonymous_animals_in_valid_pairs':grp['n_animals_in_valid_monthly_pairs'],
+                    'median_gps_pair_centroid_km':stats.get('median'),
+                    'min_km':stats.get('min'),
+                    'mean_km':stats.get('mean'),
+                    'max_km':stats.get('max'),
+                    'source_support_status':grp['status'],
+                    'source_month_fix_count':m['n_eligible_original_GPS_fixes'],
+                    'source_animal_day_count':m['n_eligible_animal_calendar_dates'],
+                    'source_2020_isolate_core_state':m.get('isolate_vs_core_monthly_state')})
+          assert len(rows)==84
+          out=root/'TURKEY_MONTHLY_CORE_SEPARATION_REVIEW_2026_10_28.csv'
+          with out.open('w',encoding='utf-8',newline='') as f:
+             writer=csv.DictWriter(f,fieldnames=headings)
+             writer.writeheader();writer.writerows(rows)
+          print('PASS complete 24 calendar months / 84 anonymous source-geography groups')
+          PY
+      - name: Verify published bytes, then commit aggregates WITHOUT original GPS positions
+        run: |
+          set -euo pipefail
+          root=prospective/multitaxon_individuality
+          cp /tmp/monthly-source/TURKEY_MONTHLY_CORE_SEPARATION_SOURCE_2026_10_28.json \
+             "$root/TURKEY_MONTHLY_CORE_SEPARATION_SOURCE_2026_10_28.json"
+          cp /tmp/monthly-source/TURKEY_MONTHLY_CORE_SEPARATION_AUDIT_2026_10_28.json \
+             "$root/TURKEY_MONTHLY_CORE_SEPARATION_AUDIT_2026_10_28.json"
+          python3 "$root/validate_turkey_monthly_core_v1.py" \
+            --source "$root/TURKEY_MONTHLY_CORE_SEPARATION_SOURCE_2026_10_28.json" \
+            --output /tmp/monthly-source/verify-after-copy.json
+          cmp /tmp/monthly-source/verify-after-copy.json \
+              "$root/TURKEY_MONTHLY_CORE_SEPARATION_AUDIT_2026_10_28.json"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$root"/TURKEY_MONTHLY_CORE_SEPARATION_*_2026_10_28.json
+          git add "$root"/TURKEY_MONTHLY_CORE_SEPARATION_REVIEW_2026_10_28.csv
+          git diff --cached --stat
+          git commit -m "data: publish original Movebank turkey monthly anonymous core/isolate centroid geometry"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

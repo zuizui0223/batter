@@ -1,0 +1,1714 @@
+{
+  "as_of": "2026-10-20",
+  "gps_bytes_downloaded": 134497843,
+  "gps_download_budget_bytes": 150000000,
+  "identity_or_partitioning_effect_computed": false,
+  "interpretation_limits": [
+    "Calendar-year animals can recur across years and are not independent animals when year counts are summed.",
+    "The 100-row/7-day count describes temporal coverage only; it is not a replacement admission threshold for any frozen analysis.",
+    "Simultaneous-day source participation does not verify shared locations, a common resource pool, social association, or ecological partitioning.",
+    "Source visible and valid coordinate ranges do not establish location error, behavioral comparability, or biological independence.",
+    "Reference sex/site/deployment coverage and tag reuse must inform any later cohort design before movement effects are inspected."
+  ],
+  "methods": {
+    "cadence": "Sorted adjacent timestamps within animal and year; positive gaps only, duplicate timestamps separately counted; row-weighted and animal-median summaries both reported.",
+    "calendar_basis": "Native source timestamps. README defines timestamp units as UTC or GPS time; naive timestamps are not silently asserted to be verified UTC. No GPS/UTC leap-second correction.",
+    "concurrency": "Same recorded calendar day anywhere in the source, not simultaneous fixes or shared habitat/site.",
+    "event_filter": "Source GPS sensor, explicit visible TRUE/1, nonempty animal ID, source expected taxon, finite in-range coordinates and parseable timestamp; no movement or effect filter.",
+    "gps_selection": "Complete source GPS sets only, under a total 150 MB budget; deer before stork. File size is the only source acquisition criterion.",
+    "privacy": "No animal IDs, tag IDs, positions, exact dates, or per-animal rows emitted.",
+    "quantiles": "Linear interpolation at (n-1)*q."
+  },
+  "primary_inference_eligible": false,
+  "same_site_common_space_verified": false,
+  "schema_version": 1,
+  "scope": "Two pre-existing candidates; original source acquisition and aggregate temporal availability only",
+  "script_sha256": "85021d79ca36d8af4b8710b5efd6868abee2b4260538a3ee54b63979083d9f5f",
+  "sources": [
+    {
+      "common_place_support": {
+        "biological_gate_pass_claimed": false,
+        "monthly": [
+          {
+            "calendar_month": 1,
+            "calendar_year": 2018,
+            "cotagged_dates_per_supported_animal": {
+              "max": 31,
+              "min": 7,
+              "n": 65,
+              "p05": 22.4,
+              "p25": 29.0,
+              "p50": 31.0,
+              "p75": 31.0,
+              "p95": 31.0
+            },
+            "n_common_contexts": 48,
+            "n_raw_animals": 72,
+            "n_shared_place_supported_animals": 65,
+            "shared_context_observed_dates_per_supported_animal": {
+              "max": 31,
+              "min": 14,
+              "n": 65,
+              "p05": 24.0,
+              "p25": 30.0,
+              "p50": 31.0,
+              "p75": 31.0,
+              "p95": 31.0
+            }
+          },
+          {
+            "calendar_month": 2,
+            "calendar_year": 2018,
+            "cotagged_dates_per_supported_animal": {
+              "max": 28,
+              "min": 4,
+              "n": 65,
+              "p05": 12.4,
+              "p25": 27.0,
+              "p50": 28.0,
+              "p75": 28.0,
+              "p95": 28.0
+            },
+            "n_common_contexts": 46,
+            "n_raw_animals": 72,
+            "n_shared_place_supported_animals": 65,
+            "shared_context_observed_dates_per_supported_animal": {
+              "max": 28,
+              "min": 7,
+              "n": 65,
+              "p05": 17.200000000000003,
+              "p25": 27.0,
+              "p50": 28.0,
+              "p75": 28.0,
+              "p95": 28.0
+            }
+          },
+          {
+            "calendar_month": 3,
+            "calendar_year": 2018,
+            "cotagged_dates_per_supported_animal": {
+              "max": 31,
+              "min": 4,
+              "n": 73,
+              "p05": 14.0,
+              "p25": 23.0,
+              "p50": 28.0,
+              "p75": 31.0,
+              "p95": 31.0
+            },
+            "n_common_contexts": 67,
+            "n_raw_animals": 77,
+            "n_shared_place_supported_animals": 73,
+            "shared_context_observed_dates_per_supported_animal": {
+              "max": 31,
+              "min": 5,
+              "n": 73,
+              "p05": 15.6,
+              "p25": 26.0,
+              "p50": 30.0,
+              "p75": 31.0,
+              "p95": 31.0
+            }
+          },
+          {
+            "calendar_month": 4,
+            "calendar_year": 2018,
+            "cotagged_dates_per_supported_animal": {
+              "max": 30,
+              "min": 0,
+              "n": 66,
+              "p05": 2.0,
+              "p25": 16.25,
+              "p50": 23.5,
+              "p75": 27.75,
+              "p95": 30.0
+            },
+            "n_common_contexts": 91,
+            "n_raw_animals": 77,
+            "n_shared_place_supported_animals": 66,
+            "shared_context_observed_dates_per_supported_animal": {
+              "max": 30,
+              "min": 6,
+              "n": 66,
+              "p05": 8.25,
+              "p25": 18.25,
+              "p50": 26.0,
+              "p75": 29.0,
+              "p95": 30.0
+            }
+          },
+          {
+            "calendar_month": 5,
+            "calendar_year": 2018,
+            "cotagged_dates_per_supported_animal": {
+              "max": 31,
+              "min": 1,
+              "n": 57,
+              "p05": 3.0,
+              "p25": 9.0,
+              "p50": 14.0,
+              "p75": 22.0,
+              "p95": 27.199999999999996
+            },
+            "n_common_contexts": 101,
+            "n_raw_animals": 77,
+            "n_shared_place_supported_animals": 57,
+            "shared_context_observed_dates_per_supported_animal": {
+              "max": 31,
+              "min": 5,
+              "n": 57,
+              "p05": 7.800000000000001,
+              "p25": 16.0,
+              "p50": 21.0,
+              "p75": 26.0,
+              "p95": 30.199999999999996
+            }
+          },
+          {
+            "calendar_month": 6,
+            "calendar_year": 2018,
+            "cotagged_dates_per_supported_animal": {
+              "max": 30,
+              "min": 7,
+              "n": 49,
+              "p05": 12.0,
+              "p25": 21.0,
+              "p50": 27.0,
+              "p75": 30.0,
+              "p95": 30.0
+            },
+            "n_common_contexts": 95,
+            "n_raw_animals": 77,
+            "n_shared_place_supported_animals": 49,
+            "shared_context_observed_dates_per_supported_animal": {
+              "max": 30,
+              "min": 7,
+              "n": 49,
+              "p05": 16.4,
+              "p25": 27.0,
+              "p50": 30.0,
+              "p75": 30.0,
+              "p95": 30.0
+            }
+          },
+          {
+            "calendar_month": 7,
+            "calendar_year": 2018,
+            "cotagged_dates_per_supported_animal": {
+              "max": 31,
+              "min": 8,
+              "n": 43,
+              "p05": 11.0,
+              "p25": 22.0,
+              "p50": 30.0,
+              "p75": 31.0,
+              "p95": 31.0
+            },
+            "n_common_contexts": 77,
+            "n_raw_animals": 77,
+            "n_shared_place_supported_animals": 43,
+            "shared_context_observed_dates_per_supported_animal": {
+              "max": 31,
+              "min": 11,
+              "n": 43,
+              "p05": 20.1,
+              "p25": 28.0,
+              "p50": 31.0,
+              "p75": 31.0,
+              "p95": 31.0
+            }
+          },
+          {
+            "calendar_month": 8,
+            "calendar_year": 2018,
+            "cotagged_dates_per_supported_animal": {
+              "max": 31,
+              "min": 7,
+              "n": 45,
+              "p05": 8.2,
+              "p25": 23.0,
+              "p50": 30.0,
+              "p75": 31.0,
+              "p95": 31.0
+            },
+            "n_common_contexts": 84,
+            "n_raw_animals": 77,
+            "n_shared_place_supported_animals": 45,
+            "shared_context_observed_dates_per_supported_animal": {
+              "max": 31,
+              "min": 7,
+              "n": 45,
+              "p05": 14.600000000000001,
+              "p25": 30.0,
+              "p50": 31.0,
+              "p75": 31.0,
+              "p95": 31.0
+            }
+          },
+          {
+            "calendar_month": 9,
+            "calendar_year": 2018,
+            "cotagged_dates_per_supported_animal": {
+              "max": 30,
+              "min": 2,
+              "n": 43,
+              "p05": 5.0,
+              "p25": 26.0,
+              "p50": 28.0,
+              "p75": 30.0,
+              "p95": 30.0
+            },
+            "n_common_contexts": 75,
+            "n_raw_animals": 103,
+            "n_shared_place_supported_animals": 43,
+            "shared_context_observed_dates_per_supported_animal": {
+              "max": 30,
+              "min": 5,
+              "n": 43,
+              "p05": 6.100000000000001,
+              "p25": 26.0,
+              "p50": 30.0,
+              "p75": 30.0,
+              "p95": 30.0
+            }
+          },
+          {
+            "calendar_month": 10,
+            "calendar_year": 2018,
+            "cotagged_dates_per_supported_animal": {
+              "max": 31,
+              "min": 2,
+              "n": 85,
+              "p05": 7.0,
+              "p25": 11.0,
+              "p50": 20.0,
+              "p75": 26.0,
+              "p95": 31.0
+            },
+            "n_common_contexts": 116,
+            "n_raw_animals": 103,
+            "n_shared_place_supported_animals": 85,
+            "shared_context_observed_dates_per_supported_animal": {
+              "max": 31,
+              "min": 5,
+              "n": 85,
+              "p05": 8.0,
+              "p25": 16.0,
+              "p50": 23.0,
+              "p75": 30.0,
+              "p95": 31.0
+            }
+          },
+          {
+            "calendar_month": 11,
+            "calendar_year": 2018,
+            "cotagged_dates_per_supported_animal": {
+              "max": 30,
+              "min": 4,
+              "n": 94,
+              "p05": 7.0,
+              "p25": 20.25,
+              "p50": 27.5,
+              "p75": 30.0,
+              "p95": 30.0
+            },
+            "n_common_contexts": 100,
+            "n_raw_animals": 103,
+            "n_shared_place_supported_animals": 94,
+            "shared_context_observed_dates_per_supported_animal": {
+              "max": 30,
+              "min": 5,
+              "n": 94,
+              "p05": 9.65,
+              "p25": 23.25,
+              "p50": 29.0,
+              "p75": 30.0,
+              "p95": 30.0
+            }
+          },
+          {
+            "calendar_month": 12,
+            "calendar_year": 2018,
+            "cotagged_dates_per_supported_animal": {
+              "max": 31,
+              "min": 6,
+              "n": 99,
+              "p05": 18.8,
+              "p25": 28.0,
+              "p50": 31.0,
+              "p75": 31.0,
+              "p95": 31.0
+            },
+            "n_common_contexts": 91,
+            "n_raw_animals": 106,
+            "n_shared_place_supported_animals": 99,
+            "shared_context_observed_dates_per_supported_animal": {
+              "max": 31,
+              "min": 15,
+              "n": 99,
+              "p05": 21.0,
+              "p25": 29.0,
+              "p50": 31.0,
+              "p75": 31.0,
+              "p95": 31.0
+            }
+          },
+          {
+            "calendar_month": 1,
+            "calendar_year": 2019,
+            "cotagged_dates_per_supported_animal": {
+              "max": 31,
+              "min": 10,
+              "n": 99,
+              "p05": 13.9,
+              "p25": 29.0,
+              "p50": 31.0,
+              "p75": 31.0,
+              "p95": 31.0
+            },
+            "n_common_contexts": 87,
+            "n_raw_animals": 105,
+            "n_shared_place_supported_animals": 99,
+            "shared_context_observed_dates_per_supported_animal": {
+              "max": 31,
+              "min": 12,
+              "n": 99,
+              "p05": 17.9,
+              "p25": 29.0,
+              "p50": 31.0,
+              "p75": 31.0,
+              "p95": 31.0
+            }
+          },
+          {
+            "calendar_month": 2,
+            "calendar_year": 2019,
+            "cotagged_dates_per_supported_animal": {
+              "max": 28,
+              "min": 6,
+              "n": 95,
+              "p05": 17.0,
+              "p25": 25.0,
+              "p50": 27.0,
+              "p75": 28.0,
+              "p95": 28.0
+            },
+            "n_common_contexts": 82,
+            "n_raw_animals": 99,
+            "n_shared_place_supported_animals": 95,
+            "shared_context_observed_dates_per_supported_animal": {
+              "max": 28,
+              "min": 6,
+              "n": 95,
+              "p05": 20.4,
+              "p25": 26.0,
+              "p50": 27.0,
+              "p75": 28.0,
+              "p95": 28.0
+            }
+          },
+          {
+            "calendar_month": 3,
+            "calendar_year": 2019,
+            "cotagged_dates_per_supported_animal": {
+              "max": 31,
+              "min": 5,
+              "n": 95,
+              "p05": 13.100000000000001,
+              "p25": 27.0,
+              "p50": 29.0,
+              "p75": 31.0,
+              "p95": 31.0
+            },
+            "n_common_contexts": 98,
+            "n_raw_animals": 99,
+            "n_shared_place_supported_animals": 95,
+            "shared_context_observed_dates_per_supported_animal": {
+              "max": 31,
+              "min": 6,
+              "n": 95,
+              "p05": 14.7,
+              "p25": 28.0,
+              "p50": 30.0,
+              "p75": 31.0,
+              "p95": 31.0
+            }
+          },
+          {
+            "calendar_month": 4,
+            "calendar_year": 2019,
+            "cotagged_dates_per_supported_animal": {
+              "max": 30,
+              "min": 1,
+              "n": 87,
+              "p05": 15.3,
+              "p25": 24.0,
+              "p50": 29.0,
+              "p75": 30.0,
+              "p95": 30.0
+            },
+            "n_common_contexts": 95,
+            "n_raw_animals": 91,
+            "n_shared_place_supported_animals": 87,
+            "shared_context_observed_dates_per_supported_animal": {
+              "max": 30,
+              "min": 5,
+              "n": 87,
+              "p05": 17.3,
+              "p25": 25.0,
+              "p50": 29.0,
+              "p75": 30.0,
+              "p95": 30.0
+            }
+          },
+          {
+            "calendar_month": 5,
+            "calendar_year": 2019,
+            "cotagged_dates_per_supported_animal": {
+              "max": 31,
+              "min": 0,
+              "n": 66,
+              "p05": 5.25,
+              "p25": 13.0,
+              "p50": 19.0,
+              "p75": 25.0,
+              "p95": 30.0
+            },
+            "n_common_contexts": 108,
+            "n_raw_animals": 86,
+            "n_shared_place_supported_animals": 66,
+            "shared_context_observed_dates_per_supported_animal": {
+              "max": 31,
+              "min": 5,
+              "n": 66,
+              "p05": 7.0,
+              "p25": 18.25,
+              "p50": 24.0,
+              "p75": 27.0,
+              "p95": 31.0
+            }
+          },
+          {
+            "calendar_month": 6,
+            "calendar_year": 2019,
+            "cotagged_dates_per_supported_animal": {
+              "max": 30,
+              "min": 2,
+              "n": 62,
+              "p05": 6.1000000000000005,
+              "p25": 13.25,
+              "p50": 21.0,
+              "p75": 28.0,
+              "p95": 30.0
+            },
+            "n_common_contexts": 102,
+            "n_raw_animals": 79,
+            "n_shared_place_supported_animals": 62,
+            "shared_context_observed_dates_per_supported_animal": {
+              "max": 30,
+              "min": 8,
+              "n": 62,
+              "p05": 11.05,
+              "p25": 24.0,
+              "p50": 27.5,
+              "p75": 30.0,
+              "p95": 30.0
+            }
+          },
+          {
+            "calendar_month": 7,
+            "calendar_year": 2019,
+            "cotagged_dates_per_supported_animal": {
+              "max": 31,
+              "min": 7,
+              "n": 47,
+              "p05": 9.200000000000001,
+              "p25": 23.0,
+              "p50": 30.0,
+              "p75": 31.0,
+              "p95": 31.0
+            },
+            "n_common_contexts": 69,
+            "n_raw_animals": 73,
+            "n_shared_place_supported_animals": 47,
+            "shared_context_observed_dates_per_supported_animal": {
+              "max": 31,
+              "min": 8,
+              "n": 47,
+              "p05": 14.600000000000001,
+              "p25": 30.0,
+              "p50": 31.0,
+              "p75": 31.0,
+              "p95": 31.0
+            }
+          },
+          {
+            "calendar_month": 8,
+            "calendar_year": 2019,
+            "cotagged_dates_per_supported_animal": {
+              "max": 31,
+              "min": 12,
+              "n": 48,
+              "p05": 14.0,
+              "p25": 22.0,
+              "p50": 30.5,
+              "p75": 31.0,
+              "p95": 31.0
+            },
+            "n_common_contexts": 69,
+            "n_raw_animals": 73,
+            "n_shared_place_supported_animals": 48,
+            "shared_context_observed_dates_per_supported_animal": {
+              "max": 31,
+              "min": 14,
+              "n": 48,
+              "p05": 17.0,
+              "p25": 28.0,
+              "p50": 31.0,
+              "p75": 31.0,
+              "p95": 31.0
+            }
+          },
+          {
+            "calendar_month": 9,
+            "calendar_year": 2019,
+            "cotagged_dates_per_supported_animal": {
+              "max": 30,
+              "min": 1,
+              "n": 50,
+              "p05": 5.9,
+              "p25": 20.0,
+              "p50": 27.0,
+              "p75": 30.0,
+              "p95": 30.0
+            },
+            "n_common_contexts": 73,
+            "n_raw_animals": 73,
+            "n_shared_place_supported_animals": 50,
+            "shared_context_observed_dates_per_supported_animal": {
+              "max": 30,
+              "min": 5,
+              "n": 50,
+              "p05": 7.45,
+              "p25": 23.0,
+              "p50": 30.0,
+              "p75": 30.0,
+              "p95": 30.0
+            }
+          },
+          {
+            "calendar_month": 10,
+            "calendar_year": 2019,
+            "cotagged_dates_per_supported_animal": {
+              "max": 31,
+              "min": 0,
+              "n": 54,
+              "p05": 4.300000000000001,
+              "p25": 10.25,
+              "p50": 18.0,
+              "p75": 26.0,
+              "p95": 31.0
+            },
+            "n_common_contexts": 86,
+            "n_raw_animals": 71,
+            "n_shared_place_supported_animals": 54,
+            "shared_context_observed_dates_per_supported_animal": {
+              "max": 31,
+              "min": 6,
+              "n": 54,
+              "p05": 7.65,
+              "p25": 13.25,
+              "p50": 21.0,
+              "p75": 28.0,
+              "p95": 31.0
+            }
+          },
+          {
+            "calendar_month": 11,
+            "calendar_year": 2019,
+            "cotagged_dates_per_supported_animal": {
+              "max": 30,
+              "min": 4,
+              "n": 60,
+              "p05": 13.95,
+              "p25": 24.75,
+              "p50": 29.0,
+              "p75": 30.0,
+              "p95": 30.0
+            },
+            "n_common_contexts": 92,
+            "n_raw_animals": 70,
+            "n_shared_place_supported_animals": 60,
+            "shared_context_observed_dates_per_supported_animal": {
+              "max": 30,
+              "min": 10,
+              "n": 60,
+              "p05": 15.95,
+              "p25": 26.75,
+              "p50": 30.0,
+              "p75": 30.0,
+              "p95": 30.0
+            }
+          },
+          {
+            "calendar_month": 12,
+            "calendar_year": 2019,
+            "cotagged_dates_per_supported_animal": {
+              "max": 31,
+              "min": 5,
+              "n": 63,
+              "p05": 6.1,
+              "p25": 22.0,
+              "p50": 29.0,
+              "p75": 30.5,
+              "p95": 31.0
+            },
+            "n_common_contexts": 84,
+            "n_raw_animals": 69,
+            "n_shared_place_supported_animals": 63,
+            "shared_context_observed_dates_per_supported_animal": {
+              "max": 31,
+              "min": 6,
+              "n": 63,
+              "p05": 9.4,
+              "p25": 26.0,
+              "p50": 30.0,
+              "p75": 31.0,
+              "p95": 31.0
+            }
+          },
+          {
+            "calendar_month": 1,
+            "calendar_year": 2020,
+            "cotagged_dates_per_supported_animal": {
+              "max": 31,
+              "min": 7,
+              "n": 62,
+              "p05": 11.05,
+              "p25": 24.0,
+              "p50": 30.0,
+              "p75": 31.0,
+              "p95": 31.0
+            },
+            "n_common_contexts": 86,
+            "n_raw_animals": 64,
+            "n_shared_place_supported_animals": 62,
+            "shared_context_observed_dates_per_supported_animal": {
+              "max": 31,
+              "min": 9,
+              "n": 62,
+              "p05": 16.0,
+              "p25": 28.0,
+              "p50": 31.0,
+              "p75": 31.0,
+              "p95": 31.0
+            }
+          },
+          {
+            "calendar_month": 2,
+            "calendar_year": 2020,
+            "cotagged_dates_per_supported_animal": {
+              "max": 29,
+              "min": 6,
+              "n": 56,
+              "p05": 12.25,
+              "p25": 27.0,
+              "p50": 29.0,
+              "p75": 29.0,
+              "p95": 29.0
+            },
+            "n_common_contexts": 82,
+            "n_raw_animals": 61,
+            "n_shared_place_supported_animals": 56,
+            "shared_context_observed_dates_per_supported_animal": {
+              "max": 29,
+              "min": 7,
+              "n": 56,
+              "p05": 19.5,
+              "p25": 28.0,
+              "p50": 29.0,
+              "p75": 29.0,
+              "p95": 29.0
+            }
+          },
+          {
+            "calendar_month": 3,
+            "calendar_year": 2020,
+            "cotagged_dates_per_supported_animal": {
+              "max": 31,
+              "min": 5,
+              "n": 85,
+              "p05": 10.2,
+              "p25": 23.0,
+              "p50": 26.0,
+              "p75": 31.0,
+              "p95": 31.0
+            },
+            "n_common_contexts": 93,
+            "n_raw_animals": 90,
+            "n_shared_place_supported_animals": 85,
+            "shared_context_observed_dates_per_supported_animal": {
+              "max": 31,
+              "min": 5,
+              "n": 85,
+              "p05": 11.0,
+              "p25": 24.0,
+              "p50": 29.0,
+              "p75": 31.0,
+              "p95": 31.0
+            }
+          },
+          {
+            "calendar_month": 4,
+            "calendar_year": 2020,
+            "cotagged_dates_per_supported_animal": {
+              "max": 30,
+              "min": 6,
+              "n": 69,
+              "p05": 7.4,
+              "p25": 21.0,
+              "p50": 28.0,
+              "p75": 30.0,
+              "p95": 30.0
+            },
+            "n_common_contexts": 92,
+            "n_raw_animals": 83,
+            "n_shared_place_supported_animals": 69,
+            "shared_context_observed_dates_per_supported_animal": {
+              "max": 30,
+              "min": 6,
+              "n": 69,
+              "p05": 9.000000000000002,
+              "p25": 23.0,
+              "p50": 28.0,
+              "p75": 30.0,
+              "p95": 30.0
+            }
+          },
+          {
+            "calendar_month": 5,
+            "calendar_year": 2020,
+            "cotagged_dates_per_supported_animal": {
+              "max": 31,
+              "min": 0,
+              "n": 54,
+              "p05": 4.0,
+              "p25": 11.25,
+              "p50": 20.5,
+              "p75": 27.0,
+              "p95": 31.0
+            },
+            "n_common_contexts": 92,
+            "n_raw_animals": 75,
+            "n_shared_place_supported_animals": 54,
+            "shared_context_observed_dates_per_supported_animal": {
+              "max": 31,
+              "min": 5,
+              "n": 54,
+              "p05": 8.0,
+              "p25": 16.5,
+              "p50": 24.0,
+              "p75": 28.0,
+              "p95": 31.0
+            }
+          },
+          {
+            "calendar_month": 6,
+            "calendar_year": 2020,
+            "cotagged_dates_per_supported_animal": {
+              "max": 30,
+              "min": 2,
+              "n": 50,
+              "p05": 6.3500000000000005,
+              "p25": 18.5,
+              "p50": 27.5,
+              "p75": 30.0,
+              "p95": 30.0
+            },
+            "n_common_contexts": 67,
+            "n_raw_animals": 73,
+            "n_shared_place_supported_animals": 50,
+            "shared_context_observed_dates_per_supported_animal": {
+              "max": 30,
+              "min": 5,
+              "n": 50,
+              "p05": 11.45,
+              "p25": 24.0,
+              "p50": 30.0,
+              "p75": 30.0,
+              "p95": 30.0
+            }
+          },
+          {
+            "calendar_month": 7,
+            "calendar_year": 2020,
+            "cotagged_dates_per_supported_animal": {
+              "max": 31,
+              "min": 4,
+              "n": 42,
+              "p05": 10.3,
+              "p25": 27.25,
+              "p50": 31.0,
+              "p75": 31.0,
+              "p95": 31.0
+            },
+            "n_common_contexts": 56,
+            "n_raw_animals": 72,
+            "n_shared_place_supported_animals": 42,
+            "shared_context_observed_dates_per_supported_animal": {
+              "max": 31,
+              "min": 6,
+              "n": 42,
+              "p05": 20.1,
+              "p25": 29.25,
+              "p50": 31.0,
+              "p75": 31.0,
+              "p95": 31.0
+            }
+          },
+          {
+            "calendar_month": 8,
+            "calendar_year": 2020,
+            "cotagged_dates_per_supported_animal": {
+              "max": 31,
+              "min": 8,
+              "n": 38,
+              "p05": 17.0,
+              "p25": 31.0,
+              "p50": 31.0,
+              "p75": 31.0,
+              "p95": 31.0
+            },
+            "n_common_contexts": 53,
+            "n_raw_animals": 71,
+            "n_shared_place_supported_animals": 38,
+            "shared_context_observed_dates_per_supported_animal": {
+              "max": 31,
+              "min": 26,
+              "n": 38,
+              "p05": 28.7,
+              "p25": 31.0,
+              "p50": 31.0,
+              "p75": 31.0,
+              "p95": 31.0
+            }
+          },
+          {
+            "calendar_month": 9,
+            "calendar_year": 2020,
+            "cotagged_dates_per_supported_animal": {
+              "max": 30,
+              "min": 9,
+              "n": 40,
+              "p05": 10.0,
+              "p25": 28.75,
+              "p50": 30.0,
+              "p75": 30.0,
+              "p95": 30.0
+            },
+            "n_common_contexts": 48,
+            "n_raw_animals": 71,
+            "n_shared_place_supported_animals": 40,
+            "shared_context_observed_dates_per_supported_animal": {
+              "max": 30,
+              "min": 9,
+              "n": 40,
+              "p05": 10.0,
+              "p25": 29.75,
+              "p50": 30.0,
+              "p75": 30.0,
+              "p95": 30.0
+            }
+          },
+          {
+            "calendar_month": 10,
+            "calendar_year": 2020,
+            "cotagged_dates_per_supported_animal": {
+              "max": 31,
+              "min": 0,
+              "n": 52,
+              "p05": 4.1000000000000005,
+              "p25": 13.75,
+              "p50": 22.0,
+              "p75": 26.0,
+              "p95": 28.0
+            },
+            "n_common_contexts": 94,
+            "n_raw_animals": 68,
+            "n_shared_place_supported_animals": 52,
+            "shared_context_observed_dates_per_supported_animal": {
+              "max": 31,
+              "min": 5,
+              "n": 52,
+              "p05": 10.750000000000002,
+              "p25": 18.0,
+              "p50": 26.0,
+              "p75": 28.0,
+              "p95": 31.0
+            }
+          },
+          {
+            "calendar_month": 11,
+            "calendar_year": 2020,
+            "cotagged_dates_per_supported_animal": {
+              "max": 30,
+              "min": 0,
+              "n": 58,
+              "p05": 4.85,
+              "p25": 15.0,
+              "p50": 29.0,
+              "p75": 30.0,
+              "p95": 30.0
+            },
+            "n_common_contexts": 71,
+            "n_raw_animals": 63,
+            "n_shared_place_supported_animals": 58,
+            "shared_context_observed_dates_per_supported_animal": {
+              "max": 30,
+              "min": 5,
+              "n": 58,
+              "p05": 8.85,
+              "p25": 20.25,
+              "p50": 30.0,
+              "p75": 30.0,
+              "p95": 30.0
+            }
+          },
+          {
+            "calendar_month": 12,
+            "calendar_year": 2020,
+            "cotagged_dates_per_supported_animal": {
+              "max": 31,
+              "min": 0,
+              "n": 58,
+              "p05": 8.85,
+              "p25": 22.25,
+              "p50": 30.0,
+              "p75": 31.0,
+              "p95": 31.0
+            },
+            "n_common_contexts": 70,
+            "n_raw_animals": 63,
+            "n_shared_place_supported_animals": 58,
+            "shared_context_observed_dates_per_supported_animal": {
+              "max": 31,
+              "min": 6,
+              "n": 58,
+              "p05": 9.0,
+              "p25": 26.0,
+              "p50": 31.0,
+              "p75": 31.0,
+              "p95": 31.0
+            }
+          }
+        ],
+        "prediction_or_movement_effects_computed": false,
+        "rules": {
+          "animal_context_min_distinct_dates": 2,
+          "animal_context_min_original_fixes": 15,
+          "calendar_months": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "calendar_years": [
+            2018,
+            2019,
+            2020
+          ],
+          "clock_basis": "UTC-like source clock; timezone-aware times normalized to UTC, naive source timestamps retained. Source README allows UTC or GPS time; GPS/UTC offset unresolved.",
+          "clock_bin_hours": 6,
+          "cotagged_dates": "For each supported animal, distinct dates with another context-qualified animal in at least one same 5 km/6 h context. Other animal need not pass the final 3-date condition. This is not exact fix simultaneity.",
+          "final_animal_min_distinct_dates_in_own_qualifying_shared_contexts": 3,
+          "final_animal_min_fixes_in_own_qualifying_shared_contexts": 15,
+          "grid": "Equirectangular, 111320 m/degree, longitude scaled by cosine of the all-valid-source-row mean latitude, origin (0 degrees, 0 degrees). Mean latitude is not emitted.",
+          "grid_m": 5000,
+          "selection": "All 36 calendar months retained, including zero-supported months; no favorable-month or effect selection.",
+          "shared_context_min_qualifying_animals": 2
+        },
+        "site_population_verified": false,
+        "source_mean_latitude_valid_rows": 948632,
+        "status": "fixed_all_months_coarse_common_place_support_audited"
+      },
+      "complete_gps_set_size_bytes": 134497843,
+      "doi": "10.5441/001/1.708",
+      "event_availability": {
+        "cohorts": [
+          {
+            "across_animal_median_positive_interfix_seconds": {
+              "max": 86400.0,
+              "min": 7200.0,
+              "n": 106,
+              "p05": 7200.0,
+              "p25": 7200.0,
+              "p50": 7200.0,
+              "p75": 7200.0,
+              "p95": 7200.0
+            },
+            "animal_pairs_with_at_least_28_shared_days": 5253,
+            "animal_pairs_with_at_least_7_shared_days": 5559,
+            "animals": 106,
+            "animals_at_least_100_rows_7_observed_days": 105,
+            "animals_with_multiple_tags": 0,
+            "calendar_days_with_at_least_n_animals": {
+              "1": 365,
+              "10": 365,
+              "100": 94,
+              "2": 365,
+              "20": 365,
+              "5": 365,
+              "50": 365
+            },
+            "calendar_year": 2018,
+            "daily_animals_on_observed_calendar_days": {
+              "max": 104,
+              "min": 67,
+              "n": 365,
+              "p05": 71.0,
+              "p25": 76.0,
+              "p50": 77.0,
+              "p75": 100.0,
+              "p95": 103.0
+            },
+            "distinct_tags": 106,
+            "duplicate_animal_timestamps": 0,
+            "observed_days_per_animal": {
+              "max": 365,
+              "min": 24,
+              "n": 106,
+              "p05": 96.0,
+              "p25": 97.0,
+              "p50": 365.0,
+              "p75": 365.0,
+              "p95": 365.0
+            },
+            "pairwise_shared_calendar_days_all_pairs_including_zero": {
+              "max": 365,
+              "min": 0,
+              "n": 5565,
+              "p05": 26.0,
+              "p25": 97.0,
+              "p50": 295.0,
+              "p75": 365.0,
+              "p95": 365.0
+            },
+            "valid_visible_gps_rows": 338581,
+            "within_animal_same_day_positive_interfix_seconds": {
+              "max": 79200.0,
+              "min": 3600.0,
+              "n": 308469,
+              "p05": 7200.0,
+              "p25": 7200.0,
+              "p50": 7200.0,
+              "p75": 7200.0,
+              "p95": 7200.0
+            },
+            "within_animal_year_positive_interfix_seconds": {
+              "max": 2505600.0,
+              "min": 3600.0,
+              "n": 338475,
+              "p05": 7200.0,
+              "p25": 7200.0,
+              "p50": 7200.0,
+              "p75": 7200.0,
+              "p95": 7200.0
+            }
+          },
+          {
+            "across_animal_median_positive_interfix_seconds": {
+              "max": 86400.0,
+              "min": 7200.0,
+              "n": 107,
+              "p05": 7200.0,
+              "p25": 7200.0,
+              "p50": 7200.0,
+              "p75": 7200.0,
+              "p95": 7200.0
+            },
+            "animal_pairs_with_at_least_28_shared_days": 5038,
+            "animal_pairs_with_at_least_7_shared_days": 5645,
+            "animals": 107,
+            "animals_at_least_100_rows_7_observed_days": 107,
+            "animals_with_multiple_tags": 0,
+            "calendar_days_with_at_least_n_animals": {
+              "1": 365,
+              "10": 365,
+              "100": 29,
+              "2": 365,
+              "20": 365,
+              "5": 365,
+              "50": 365
+            },
+            "calendar_year": 2019,
+            "daily_animals_on_observed_calendar_days": {
+              "max": 105,
+              "min": 64,
+              "n": 365,
+              "p05": 65.0,
+              "p25": 71.0,
+              "p50": 73.0,
+              "p75": 91.0,
+              "p95": 101.0
+            },
+            "distinct_tags": 107,
+            "duplicate_animal_timestamps": 0,
+            "observed_days_per_animal": {
+              "max": 365,
+              "min": 14,
+              "n": 107,
+              "p05": 27.200000000000003,
+              "p25": 144.5,
+              "p50": 365.0,
+              "p75": 365.0,
+              "p95": 365.0
+            },
+            "pairwise_shared_calendar_days_all_pairs_including_zero": {
+              "max": 365,
+              "min": 0,
+              "n": 5671,
+              "p05": 14.0,
+              "p25": 85.0,
+              "p50": 170.0,
+              "p75": 365.0,
+              "p95": 365.0
+            },
+            "valid_visible_gps_rows": 330944,
+            "within_animal_same_day_positive_interfix_seconds": {
+              "max": 57600.0,
+              "min": 3600.0,
+              "n": 301704,
+              "p05": 7200.0,
+              "p25": 7200.0,
+              "p50": 7200.0,
+              "p75": 7200.0,
+              "p95": 7200.0
+            },
+            "within_animal_year_positive_interfix_seconds": {
+              "max": 1551600.0,
+              "min": 3600.0,
+              "n": 330837,
+              "p05": 7200.0,
+              "p25": 7200.0,
+              "p50": 7200.0,
+              "p75": 7200.0,
+              "p95": 7200.0
+            }
+          },
+          {
+            "across_animal_median_positive_interfix_seconds": {
+              "max": 86400.0,
+              "min": 7200.0,
+              "n": 93,
+              "p05": 7200.0,
+              "p25": 7200.0,
+              "p50": 7200.0,
+              "p75": 7200.0,
+              "p95": 7200.0
+            },
+            "animal_pairs_with_at_least_28_shared_days": 3532,
+            "animal_pairs_with_at_least_7_shared_days": 4131,
+            "animals": 93,
+            "animals_at_least_100_rows_7_observed_days": 92,
+            "animals_with_multiple_tags": 0,
+            "calendar_days_with_at_least_n_animals": {
+              "1": 366,
+              "10": 366,
+              "100": 0,
+              "2": 366,
+              "20": 366,
+              "5": 366,
+              "50": 366
+            },
+            "calendar_year": 2020,
+            "daily_animals_on_observed_calendar_days": {
+              "max": 88,
+              "min": 59,
+              "n": 366,
+              "p05": 60.0,
+              "p25": 63.0,
+              "p50": 69.0,
+              "p75": 72.0,
+              "p95": 84.0
+            },
+            "distinct_tags": 93,
+            "duplicate_animal_timestamps": 0,
+            "observed_days_per_animal": {
+              "max": 366,
+              "min": 8,
+              "n": 93,
+              "p05": 18.400000000000002,
+              "p25": 190.0,
+              "p50": 301.0,
+              "p75": 366.0,
+              "p95": 366.0
+            },
+            "pairwise_shared_calendar_days_all_pairs_including_zero": {
+              "max": 366,
+              "min": 0,
+              "n": 4278,
+              "p05": 8.0,
+              "p25": 66.0,
+              "p50": 234.0,
+              "p75": 301.0,
+              "p95": 366.0
+            },
+            "valid_visible_gps_rows": 278875,
+            "within_animal_same_day_positive_interfix_seconds": {
+              "max": 79200.0,
+              "min": 3600.0,
+              "n": 253730,
+              "p05": 7200.0,
+              "p25": 7200.0,
+              "p50": 7200.0,
+              "p75": 7200.0,
+              "p95": 7200.0
+            },
+            "within_animal_year_positive_interfix_seconds": {
+              "max": 777600.0,
+              "min": 3600.0,
+              "n": 278782,
+              "p05": 7200.0,
+              "p25": 7200.0,
+              "p50": 7200.0,
+              "p75": 7200.0,
+              "p95": 7200.0
+            }
+          },
+          {
+            "across_animal_median_positive_interfix_seconds": {
+              "max": 10800.0,
+              "min": 7200.0,
+              "n": 58,
+              "p05": 7200.0,
+              "p25": 7200.0,
+              "p50": 7200.0,
+              "p75": 7200.0,
+              "p95": 7200.0
+            },
+            "animal_pairs_with_at_least_28_shared_days": 0,
+            "animal_pairs_with_at_least_7_shared_days": 0,
+            "animals": 61,
+            "animals_at_least_100_rows_7_observed_days": 0,
+            "animals_with_multiple_tags": 0,
+            "calendar_days_with_at_least_n_animals": {
+              "1": 1,
+              "10": 1,
+              "100": 0,
+              "2": 1,
+              "20": 1,
+              "5": 1,
+              "50": 1
+            },
+            "calendar_year": 2021,
+            "daily_animals_on_observed_calendar_days": {
+              "max": 61,
+              "min": 61,
+              "n": 1,
+              "p05": 61.0,
+              "p25": 61.0,
+              "p50": 61.0,
+              "p75": 61.0,
+              "p95": 61.0
+            },
+            "distinct_tags": 61,
+            "duplicate_animal_timestamps": 0,
+            "observed_days_per_animal": {
+              "max": 1,
+              "min": 1,
+              "n": 61,
+              "p05": 1.0,
+              "p25": 1.0,
+              "p50": 1.0,
+              "p75": 1.0,
+              "p95": 1.0
+            },
+            "pairwise_shared_calendar_days_all_pairs_including_zero": {
+              "max": 1,
+              "min": 1,
+              "n": 1830,
+              "p05": 1.0,
+              "p25": 1.0,
+              "p50": 1.0,
+              "p75": 1.0,
+              "p95": 1.0
+            },
+            "valid_visible_gps_rows": 232,
+            "within_animal_same_day_positive_interfix_seconds": {
+              "max": 14400.0,
+              "min": 7200.0,
+              "n": 171,
+              "p05": 7200.0,
+              "p25": 7200.0,
+              "p50": 7200.0,
+              "p75": 7200.0,
+              "p95": 7200.0
+            },
+            "within_animal_year_positive_interfix_seconds": {
+              "max": 14400.0,
+              "min": 7200.0,
+              "n": 171,
+              "p05": 7200.0,
+              "p25": 7200.0,
+              "p50": 7200.0,
+              "p75": 7200.0,
+              "p95": 7200.0
+            }
+          }
+        ],
+        "filter_counts": {
+          "all_rows": 948632,
+          "valid_visible_gps_rows": 948632
+        },
+        "raw_distinct_animals": 135,
+        "source_columns": [
+          "event-id",
+          "individual-local-identifier",
+          "individual-taxon-canonical-name",
+          "location-lat",
+          "location-long",
+          "sensor-type",
+          "study-name",
+          "tag-local-identifier",
+          "timestamp",
+          "visible"
+        ],
+        "source_sensor_row_counts": {
+          "gps": 948632
+        },
+        "source_taxon_row_counts": {
+          "Odocoileus hemionus": 948632
+        },
+        "source_visible_row_counts": {
+          "true": 948632
+        },
+        "valid_animals_absent_from_reference": 0,
+        "valid_distinct_animals_all_years": 135
+      },
+      "item_api_url": "https://datarepository.movebank.org/server/api/core/items/0e3a4577-b063-47d9-9d6b-edec949aa5fa",
+      "item_response_sha256": "619ced5e1804b1bcfd073ae2c9b83020c73061d13a96bacdc4a131c4351589f7",
+      "label": "mule_deer",
+      "original_bundle_uuid": "49740022-0317-4d67-b939-1abcb3ae7ae2",
+      "original_file_manifest": [
+        {
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/de7b956a-f5b6-4727-a2cc-a119a1217a68/content",
+          "download_sha256": "4dbed25db77c4da9eea328ff8f41725d1cced1c4a8ee87227f537a7217eafd4e",
+          "downloaded_and_md5_verified": true,
+          "filename": "Wyoming Sublette Mule Deer (2018-2020).csv",
+          "publisher_md5": "a8563f71fa6213919812dc0f2da30c26",
+          "role": "gps",
+          "size_bytes": 134497843,
+          "uuid": "de7b956a-f5b6-4727-a2cc-a119a1217a68"
+        },
+        {
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/b7d477e8-bf33-4cd0-9f49-c9617a99b2f3/content",
+          "download_sha256": "84eb3131c847c03f48b790e0388f4408cbc0a26f6852f5346d579bdd35fffff2",
+          "downloaded_and_md5_verified": true,
+          "filename": "Wyoming Sublette Mule Deer (2018-2020)-reference-data.csv",
+          "publisher_md5": "fe3dcb4fd281b0d9c62a4e3f10bf9324",
+          "role": "reference",
+          "size_bytes": 13150,
+          "uuid": "b7d477e8-bf33-4cd0-9f49-c9617a99b2f3"
+        },
+        {
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/a3d98327-2069-4e1d-9d0c-c8d4f500afa4/content",
+          "download_sha256": "6700e5d9ed86b2fcbeb1a229f633baa5870698fdc85f511d0615966474d411e4",
+          "downloaded_and_md5_verified": true,
+          "filename": "README.txt",
+          "publisher_md5": "e8e1538647cfe1853a7c4e2d648c2cdb",
+          "role": "readme",
+          "size_bytes": 15536,
+          "uuid": "a3d98327-2069-4e1d-9d0c-c8d4f500afa4"
+        }
+      ],
+      "original_manifest_response_sha256": "9bc0fef1a155a2f653c525aa0ae047e4fd0213110de167498e63f72c1f627aed",
+      "original_manifest_url": "https://datarepository.movebank.org/server/api/core/bundles/49740022-0317-4d67-b939-1abcb3ae7ae2/bitstreams?size=100",
+      "package_uuid": "0e3a4577-b063-47d9-9d6b-edec949aa5fa",
+      "primary_inference_eligible": false,
+      "reference": {
+        "columns": [
+          "tag-id",
+          "animal-id",
+          "animal-taxon",
+          "deploy-on-date",
+          "deploy-off-date",
+          "animal-group-id",
+          "animal-life-stage",
+          "animal-sex",
+          "attachment-body-part",
+          "attachment-type",
+          "capture-method",
+          "deployment-id",
+          "manipulation-type"
+        ],
+        "deployment_start_year_row_counts": {
+          "missing": 135
+        },
+        "distinct_animals": 135,
+        "distinct_deployments": 135,
+        "distinct_nonempty_group_labels": 1,
+        "distinct_nonempty_site_labels": 0,
+        "distinct_tags": 135,
+        "rows": 135,
+        "sex_row_counts": {
+          "f": 135
+        },
+        "tags_assigned_to_multiple_animals": 0,
+        "taxon_row_counts": {
+          "Odocoileus hemionus": 135
+        }
+      },
+      "rights": [
+        "CC0 1.0 Universal"
+      ],
+      "rights_urls": [
+        "http://creativecommons.org/publicdomain/zero/1.0/"
+      ],
+      "same_site_common_space_verified": false,
+      "status": "original_gps_verified_and_aggregate_temporal_availability_computed",
+      "title": "Data from: Study \"Wyoming Sublette Mule Deer (2018-2020)\""
+    },
+    {
+      "complete_gps_set_size_bytes": 507963969,
+      "doi": "10.5441/001/1.4192t2j4_2",
+      "event_availability": null,
+      "item_api_url": "https://datarepository.movebank.org/server/api/core/items/520a64ae-2047-445d-af5f-7b961caeef79",
+      "item_response_sha256": "7a39b174f9cff39d61427dace28ecc2c411ad45cf4497c89b9d498471cb984ab",
+      "label": "white_stork",
+      "original_bundle_uuid": "099e59f9-a007-49f2-9c9c-5e735763ba5f",
+      "original_file_manifest": [
+        {
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/f9bcea14-2c53-4e01-bf70-b4d17078cdd6/content",
+          "downloaded_and_md5_verified": false,
+          "filename": "LifeTrack White Stork Rheinland-Pfalz_2015-2023-acc-1of10.csv.zip",
+          "publisher_md5": "3501f1f966f514793e3402a169e623e3",
+          "role": "other_sensor",
+          "size_bytes": 336289762,
+          "uuid": "f9bcea14-2c53-4e01-bf70-b4d17078cdd6"
+        },
+        {
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/f22771f7-7bca-4e6c-a582-d6a890ec5511/content",
+          "downloaded_and_md5_verified": false,
+          "filename": "LifeTrack White Stork Rheinland-Pfalz_2015-2023-acc-2of10.csv.zip",
+          "publisher_md5": "1d6a62b285ca24786535bc03cec58194",
+          "role": "other_sensor",
+          "size_bytes": 339844987,
+          "uuid": "f22771f7-7bca-4e6c-a582-d6a890ec5511"
+        },
+        {
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/7e4b40b3-159e-4757-a206-63221acaa941/content",
+          "downloaded_and_md5_verified": false,
+          "filename": "LifeTrack White Stork Rheinland-Pfalz_2015-2023-acc-3of10.csv.zip",
+          "publisher_md5": "3f4b17784ac1c44751d2b425ca6477e4",
+          "role": "other_sensor",
+          "size_bytes": 344181161,
+          "uuid": "7e4b40b3-159e-4757-a206-63221acaa941"
+        },
+        {
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/771c6d46-f9fa-48ac-8d86-9f779212afbf/content",
+          "downloaded_and_md5_verified": false,
+          "filename": "LifeTrack White Stork Rheinland-Pfalz_2015-2023-acc-4of10.csv.zip",
+          "publisher_md5": "1ab47bdbc94623a98b2de82a621f3a5c",
+          "role": "other_sensor",
+          "size_bytes": 344602424,
+          "uuid": "771c6d46-f9fa-48ac-8d86-9f779212afbf"
+        },
+        {
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/f481dbea-6f5b-480f-a683-282e88ebc498/content",
+          "downloaded_and_md5_verified": false,
+          "filename": "LifeTrack White Stork Rheinland-Pfalz_2015-2023-acc-5of10.csv.zip",
+          "publisher_md5": "bf16a27783660b6f1d9dc7b269a6b993",
+          "role": "other_sensor",
+          "size_bytes": 337059921,
+          "uuid": "f481dbea-6f5b-480f-a683-282e88ebc498"
+        },
+        {
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/4909be14-e914-4076-a484-e26a3c32566b/content",
+          "downloaded_and_md5_verified": false,
+          "filename": "LifeTrack White Stork Rheinland-Pfalz_2015-2023-acc-6of10.csv.zip",
+          "publisher_md5": "779a16412f609b2f0439a784f54e0251",
+          "role": "other_sensor",
+          "size_bytes": 336288452,
+          "uuid": "4909be14-e914-4076-a484-e26a3c32566b"
+        },
+        {
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/ecd2fef8-2bc8-4819-83e1-c958daacc6ee/content",
+          "downloaded_and_md5_verified": false,
+          "filename": "LifeTrack White Stork Rheinland-Pfalz_2015-2023-acc-7of10.csv.zip",
+          "publisher_md5": "8d0778f4e1a8ef15a95df4cb63feaea6",
+          "role": "other_sensor",
+          "size_bytes": 338096974,
+          "uuid": "ecd2fef8-2bc8-4819-83e1-c958daacc6ee"
+        },
+        {
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/2d8016b9-143b-419d-9266-1033ef0c777a/content",
+          "downloaded_and_md5_verified": false,
+          "filename": "LifeTrack White Stork Rheinland-Pfalz_2015-2023-acc-8of10.csv.zip",
+          "publisher_md5": "552b0dcfd360512345e58a420bf33ef4",
+          "role": "other_sensor",
+          "size_bytes": 405029234,
+          "uuid": "2d8016b9-143b-419d-9266-1033ef0c777a"
+        },
+        {
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/f7adf325-07ca-4c90-9525-d48ffc37401b/content",
+          "downloaded_and_md5_verified": false,
+          "filename": "LifeTrack White Stork Rheinland-Pfalz_2015-2023-acc-9of10.csv.zip",
+          "publisher_md5": "028a3b3afa546b4adbe2b6591be8a6ab",
+          "role": "other_sensor",
+          "size_bytes": 377522727,
+          "uuid": "f7adf325-07ca-4c90-9525-d48ffc37401b"
+        },
+        {
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/fd8ff6c5-d77d-440b-a081-31f2e291761e/content",
+          "downloaded_and_md5_verified": false,
+          "filename": "LifeTrack White Stork Rheinland-Pfalz_2015-2023-acc-10of10.csv.zip",
+          "publisher_md5": "f50f7ac0fc8d6b864c9715274f9b50da",
+          "role": "other_sensor",
+          "size_bytes": 101560675,
+          "uuid": "fd8ff6c5-d77d-440b-a081-31f2e291761e"
+        },
+        {
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/9e5662e7-c44f-4e73-8369-fe86b86f3168/content",
+          "downloaded_and_md5_verified": false,
+          "filename": "LifeTrack White Stork Rheinland-Pfalz_2015-2023-gps-1of2.csv.zip",
+          "publisher_md5": "334227d3f1ebcdee75bc6b398a2601f1",
+          "role": "gps",
+          "size_bytes": 262829330,
+          "uuid": "9e5662e7-c44f-4e73-8369-fe86b86f3168"
+        },
+        {
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/a68e0830-c8ef-442a-91d9-51aba7c65159/content",
+          "downloaded_and_md5_verified": false,
+          "filename": "LifeTrack White Stork Rheinland-Pfalz_2015-2023-gps-2of2.csv.zip",
+          "publisher_md5": "d99c31531a80480515dd9ea78237a6b8",
+          "role": "gps",
+          "size_bytes": 245134639,
+          "uuid": "a68e0830-c8ef-442a-91d9-51aba7c65159"
+        },
+        {
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/f318be55-647e-4384-97fe-a52b4a121c13/content",
+          "downloaded_and_md5_verified": false,
+          "filename": "LifeTrack White Stork Rheinland-Pfalz_2015-2023-mag.csv",
+          "publisher_md5": "49aa1d4954e280d86b9869cdf793f693",
+          "role": "other_sensor",
+          "size_bytes": 8246525,
+          "uuid": "f318be55-647e-4384-97fe-a52b4a121c13"
+        },
+        {
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/52845646-b6d6-4a6d-b0e0-c43f4ef74b5f/content",
+          "downloaded_and_md5_verified": false,
+          "filename": "LifeTrack White Stork Rheinland-Pfalz_2015-2023-orientation.csv",
+          "publisher_md5": "cb2705b33d4fa4d4e406c1b02e76c2ed",
+          "role": "other_sensor",
+          "size_bytes": 9193277,
+          "uuid": "52845646-b6d6-4a6d-b0e0-c43f4ef74b5f"
+        },
+        {
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/17cde16e-6f4f-4e24-8eb4-4417bbf59fd0/content",
+          "download_sha256": "2a1312abea7e26efa684175de72a73ca487946e81244bfccc1201812b1fb97a6",
+          "downloaded_and_md5_verified": true,
+          "filename": "LifeTrack White Stork Rheinland-Pfalz_2015-2023-reference-data.csv",
+          "publisher_md5": "d33ae0fef26e7fd33a6aef4d3a7f1777",
+          "role": "reference",
+          "size_bytes": 83921,
+          "uuid": "17cde16e-6f4f-4e24-8eb4-4417bbf59fd0"
+        },
+        {
+          "content_url": "https://datarepository.movebank.org/server/api/core/bitstreams/3f8d68e2-92ec-4fb6-8472-4ae9dcb0db9f/content",
+          "download_sha256": "569d0aec520d9188fd527eb344dbc1ee6e10b31feb0b175762380a1bb3092614",
+          "downloaded_and_md5_verified": true,
+          "filename": "README.txt",
+          "publisher_md5": "550be6391c7a84610b4f619c82f1ec01",
+          "role": "readme",
+          "size_bytes": 41206,
+          "uuid": "3f8d68e2-92ec-4fb6-8472-4ae9dcb0db9f"
+        }
+      ],
+      "original_manifest_response_sha256": "5fe48588bdd12e65857a05ac03278fe4edaf9eaa1c11cf742d7a3c15a37ada7b",
+      "original_manifest_url": "https://datarepository.movebank.org/server/api/core/bundles/099e59f9-a007-49f2-9c9c-5e735763ba5f/bitstreams?size=100",
+      "package_uuid": "520a64ae-2047-445d-af5f-7b961caeef79",
+      "primary_inference_eligible": false,
+      "reference": {
+        "columns": [
+          "tag-id",
+          "animal-id",
+          "animal-taxon",
+          "deploy-on-date",
+          "deploy-off-date",
+          "animal-comments",
+          "animal-death-comments",
+          "animal-exact-date-of-birth",
+          "animal-latest-date-born",
+          "animal-life-stage",
+          "animal-mass",
+          "animal-mortality-date",
+          "animal-mortality-latitude",
+          "animal-mortality-longitude",
+          "animal-mortality-type",
+          "animal-nickname",
+          "animal-ring-id",
+          "animal-sex",
+          "attachment-type",
+          "deploy-off-person",
+          "deploy-on-person",
+          "deployment-comments",
+          "deployment-end-comments",
+          "deployment-end-type",
+          "deployment-id",
+          "duty-cycle",
+          "manipulation-comments",
+          "manipulation-type",
+          "outlier-comments",
+          "study-site",
+          "tag-comments",
+          "tag-manufacturer-name",
+          "tag-mass",
+          "tag-model",
+          "tag-production-date",
+          "tag-readout-method",
+          "tag-serial-no"
+        ],
+        "deployment_start_year_row_counts": {
+          "2015": 27,
+          "2016": 24,
+          "2017": 12,
+          "2018": 21,
+          "2019": 24,
+          "2022": 1
+        },
+        "distinct_animals": 108,
+        "distinct_deployments": 109,
+        "distinct_nonempty_group_labels": 0,
+        "distinct_nonempty_site_labels": 9,
+        "distinct_tags": 70,
+        "rows": 109,
+        "sex_row_counts": {
+          "f": 39,
+          "m": 62,
+          "u": 8
+        },
+        "tags_assigned_to_multiple_animals": 30,
+        "taxon_row_counts": {
+          "Ciconia ciconia": 109
+        }
+      },
+      "rights": [
+        "CC0 1.0 Universal"
+      ],
+      "rights_urls": [
+        "http://creativecommons.org/publicdomain/zero/1.0/"
+      ],
+      "same_site_common_space_verified": false,
+      "status": "original_reference_verified_full_gps_deferred_size_budget",
+      "title": "Data from: Study \"LifeTrack White Stork Rheinland-Pfalz\" (2015-2023)"
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "execution_date": "2026-10-19",
+  "data_type": "actual original public Movebank CC0 GPS event CSV validation (two sources)",
+  "methods": "quoted CSV parser supporting LF, CR, CRLF; checked complete file length, required individual ID, timestamp and coordinate columns; excluded explicit invisible/outlier events; counted per-individual distinct calendar days and fixes",
+  "results": [
+    {
+      "doi": "10.5441/001/1.719",
+      "part": "wild_pig_GPS",
+      "stratum": "terrestrial_mammal",
+      "source_original_bitstream_id": "42323c7f-e101-4d2e-9544-0179d9db121c",
+      "source_original_md5": "ee6a068fd76aa6963e93063603e557e3",
+      "source_rights": "CC0 1.0 Universal",
+      "sensor_source": "GPS",
+      "source_bytes_expected": 12107941,
+      "source_chars_received": 12107941,
+      "source_completeness_check": true,
+      "total_data_records": 79165,
+      "malformed_csv_row_count": 0,
+      "valid_geographic_fixes": 79165,
+      "n_observed_animals_with_valid_fixes": 10,
+      "n_animals_at_least_100_fixes_and_7_dates": 10,
+      "n_animals_at_least_500_fixes_and_14_dates": 10,
+      "minimum_fixes_per_animal": 829,
+      "median_fixes_per_animal": 10505,
+      "max_fixes_per_animal": 12823,
+      "source_taxon_fix_counts": {
+        "Sus scrofa": 79165
+      },
+      "sensor_fix_counts": {
+        "gps": 79165
+      },
+      "rejection_counts": {
+        "visible_false": 0,
+        "outlier_true": 0,
+        "invalid_coords": 0,
+        "no_id_or_date": 0
+      },
+      "required_column_indices": {
+        "animal": 9,
+        "date": 2,
+        "lat": 4,
+        "lon": 3,
+        "taxon": 7,
+        "visible": 1,
+        "outlier": -1,
+        "sensor": 6
+      },
+      "source_ID_values_not_committed": true,
+      "quality_tier": "Real per-animal GPS event count/time gate; no within-cohort ecology or predictive model yet"
+    },
+    {
+      "doi": "10.5441/001/1.313",
+      "part": "green_turtle_GPS",
+      "stratum": "marine_reptile",
+      "source_original_bitstream_id": "f6a7d086-a4e3-434f-bbce-6ba9022543e3",
+      "source_original_md5": "7cc8bd6182182941e792606c3c51b724",
+      "source_rights": "CC0 1.0 Universal",
+      "sensor_source": "GPS",
+      "source_bytes_expected": 9788265,
+      "source_chars_received": 9788265,
+      "source_completeness_check": true,
+      "total_data_records": 52846,
+      "malformed_csv_row_count": 0,
+      "valid_geographic_fixes": 52846,
+      "n_observed_animals_with_valid_fixes": 32,
+      "n_animals_at_least_100_fixes_and_7_dates": 32,
+      "n_animals_at_least_500_fixes_and_14_dates": 31,
+      "minimum_fixes_per_animal": 392,
+      "median_fixes_per_animal": 1544,
+      "max_fixes_per_animal": 3644,
+      "source_taxon_fix_counts": {
+        "Chelonia mydas": 52846
+      },
+      "sensor_fix_counts": {
+        "gps": 52846
+      },
+      "rejection_counts": {
+        "visible_false": 0,
+        "outlier_true": 0,
+        "invalid_coords": 0,
+        "no_id_or_date": 0
+      },
+      "required_column_indices": {
+        "animal": 10,
+        "date": 2,
+        "lat": 4,
+        "lon": 3,
+        "taxon": 8,
+        "visible": 1,
+        "outlier": -1,
+        "sensor": 7
+      },
+      "source_ID_values_not_committed": true,
+      "quality_tier": "Real per-animal GPS event count/time gate; no within-cohort ecology or predictive model yet"
+    }
+  ],
+  "biological_limits": [
+    "These include only GPS records in source-specific source file; other sensors or deployments may be in separate files.",
+    "The original green turtle Argos CSV was screened separately and contains one animal; do not aggregate 1+GPS as distinct animals without ID reconciliation.",
+    "Individual n≥100 fix/≥7 date count is only an exposure gate; it does not prove two held-out same-context spatial niches.",
+    "Actual independent cohort/species sample, geographic support and competition/foraging labels are unverified.",
+    "No empirical conditional identity or segregation/p-values computed yet."
+  ],
+  "id_safety": "only aggregate numbers stored; original animal names/IDs and coordinates are not published"
+}

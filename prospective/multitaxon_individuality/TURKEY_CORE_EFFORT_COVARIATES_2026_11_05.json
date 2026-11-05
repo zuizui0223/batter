@@ -1,0 +1,78 @@
+{
+  "status": "ORIGINAL_REFERENCE_COHORT_JOIN",
+  "rows": [
+    {
+      "year": 2019,
+      "group": "whole_eligible_cohort",
+      "n_animals": 19,
+      "metadata": {
+        "animal-sex": {
+          "f": 15,
+          "m": 4
+        },
+        "animal-life-stage": {
+          "adult": 16,
+          "juvenile": 3
+        }
+      }
+    },
+    {
+      "year": 2019,
+      "group": "component_1",
+      "n_animals": 11,
+      "metadata": {
+        "animal-sex": {
+          "f": 9,
+          "m": 2
+        },
+        "animal-life-stage": {
+          "adult": 10,
+          "juvenile": 1
+        }
+      }
+    },
+    {
+      "year": 2019,
+      "group": "component_2",
+      "n_animals": 7,
+      "metadata": {
+        "animal-sex": {
+          "f": 6,
+          "m": 1
+        },
+        "animal-life-stage": {
+          "adult": 5,
+          "juvenile": 2
+        }
+      }
+    },
+    {
+      "year": 2020,
+      "group": "whole_eligible_cohort",
+      "n_animals": 7,
+      "metadata": {
+        "animal-sex": {
+          "f": 7
+        },
+        "animal-life-stage": {
+          "adult": 6,
+          "juvenile": 1
+        }
+      }
+    },
+    {
+      "year": 2020,
+      "group": "component_1",
+      "n_animals": 6,
+      "metadata": {
+        "animal-sex": {
+          "f": 6
+        },
+        "animal-life-stage": {
+          "adult": 6
+        }
+      }
+    }
+  ],
+  "limit": "Published metadata, not reproductive state or independently validated demographics"
+}

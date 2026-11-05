@@ -1,0 +1,34 @@
+name: Turkey core effort and individual influence
+on:
+  push:
+    branches: [prospective/multitaxon-identity-ecology-v1]
+    paths:
+      - 'prospective/multitaxon_individuality/*core_effort*'
+      - 'prospective/multitaxon_individuality/TURKEY_CORE_EFFORT*'
+      - 'prospective/multitaxon_individuality/tests/test_turkey_core_effort_influence_v1.py'
+      - 'prospective/multitaxon_individuality/screen_turkey_month_support_v1.py'
+      - 'prospective/multitaxon_individuality/tests/test_turkey_independent_month_gate_v1.py'
+      - 'prospective/multitaxon_individuality/TURKEY_INDEPENDENT*'
+      - 'prospective/multitaxon_individuality/audit_maine_source_overlap_v1.py'
+      - 'prospective/multitaxon_individuality/TURKEY_MAINE_AUTHOR_OVERLAP*'
+      - 'prospective/multitaxon_individuality/tests/test_turkey_source_overlap_v1.py'
+      - '.github/workflows/turkey-core-effort-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  aggregate-and-synthetic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Reconcile stored aggregates and numerical/claim boundaries
+        run: python3 prospective/multitaxon_individuality/validate_turkey_core_effort_v1.py
+      - name: Test stationary, distributed, single-animal and missing-day cases
+        run: python3 -m unittest discover -s prospective/multitaxon_individuality/tests -p test_turkey_core_effort_influence_v1.py -v
+      - name: Preserve existing month-center numerical tests
+        run: python3 -m unittest discover -s prospective/multitaxon_individuality/tests -p test_turkey_monthly_core_separation_v1.py -v
+      - name: Verify independent-source temporal admission semantics
+        run: python3 -m unittest discover -s prospective/multitaxon_individuality/tests -p test_turkey_independent_month_gate_v1.py -v
+      - name: Verify source overlap detection under recoded IDs and coordinate rounding
+        run: python3 -m unittest discover -s prospective/multitaxon_individuality/tests -p test_turkey_source_overlap_v1.py -v

@@ -1,0 +1,313 @@
+{
+  "schema_version": 1,
+  "source_census": "MOVEBANK_PUBLISHED_DATAPACKAGES_CENSUS_2026_10_18.json",
+  "retrieval_utc_date": "2026-10-19",
+  "method": "Official DSpace ORIGINAL-bundle reference-data.csv bitstreams parsed as standard RFC4180 CSV with CRLF/CR support. Distinct animal-id counted per data package, not across sources.",
+  "n_pilot_packages": 8,
+  "records": [
+    {
+      "case_name": "tapir",
+      "dataset_doi": "doi:10.5441/001/1.03ck4s52",
+      "reference_bitstream_uuid": "996de5fc-952f-4be0-87d3-d488550673d6",
+      "source_reference_url": "https://datarepository.movebank.org/bitstreams/996de5fc-952f-4be0-87d3-d488550673d6/download",
+      "reference_source_text_length": 11764,
+      "reference_deployment_rows": 82,
+      "distinct_source_animal_ids": 82,
+      "distinct_deployment_ids": 82,
+      "number_of_taxon_labels": 2,
+      "taxon_labels_deployments": {
+        "Tapirus terrestris": 74,
+        "calibration": 8
+      },
+      "distinct_study_sites": 3,
+      "with_deploy_start": 82,
+      "with_deploy_end": 0,
+      "duration_days_available": 0,
+      "median_deployment_duration_days": null,
+      "site_examples": [
+        {
+          "site": "Atlantic Forest",
+          "n": 11
+        },
+        {
+          "site": "Southern Pantanal",
+          "n": 49
+        }
+      ],
+      "duty_cycle_hints": [],
+      "manipulation_type_hints": [
+        "none",
+        "manipulated-other"
+      ],
+      "eligibility_status": "reference_verified_only_not_GPS_event_confirmed",
+      "source_metadata_uuid": "e2fe5582-a707-4954-8329-ba107736fed8",
+      "source_title": "Data from: Study \"Lowland tapirs, Tapirus terrestris, in Southern Brazil\"",
+      "source_rights": "CC0 1.0 Universal"
+    },
+    {
+      "case_name": "elephant",
+      "dataset_doi": "doi:10.5441/001/1.403h24q5",
+      "reference_bitstream_uuid": "715e38b3-1339-4f8c-a997-c27c219de4c9",
+      "source_reference_url": "https://datarepository.movebank.org/bitstreams/715e38b3-1339-4f8c-a997-c27c219de4c9/download",
+      "reference_source_text_length": 4780,
+      "reference_deployment_rows": 14,
+      "distinct_source_animal_ids": 14,
+      "distinct_deployment_ids": 14,
+      "number_of_taxon_labels": 1,
+      "taxon_labels_deployments": {
+        "Loxodonta africana": 14
+      },
+      "distinct_study_sites": 1,
+      "with_deploy_start": 14,
+      "with_deploy_end": 14,
+      "duration_days_available": 14,
+      "median_deployment_duration_days": 730.9166666666666,
+      "site_examples": [
+        {
+          "site": "Kruger National Park, South Africa",
+          "n": 14
+        }
+      ],
+      "duty_cycle_hints": [
+        "30 min"
+      ],
+      "manipulation_type_hints": [
+        "none"
+      ],
+      "eligibility_status": "reference_verified_only_not_GPS_event_confirmed",
+      "source_metadata_uuid": "b777279a-581d-43ce-b790-8e60304fb8b4",
+      "source_title": "Data from: Fine-scale tracking of ambient temperature and movement reveals shuttling behavior of elephants to water",
+      "source_rights": "CC0 1.0 Universal"
+    },
+    {
+      "case_name": "tortoise",
+      "dataset_doi": "doi:10.5441/001/1.2cp86266",
+      "reference_bitstream_uuid": "0c46aa31-7e31-4af0-9fc3-4b1366f957a3",
+      "source_reference_url": "https://datarepository.movebank.org/bitstreams/0c46aa31-7e31-4af0-9fc3-4b1366f957a3/download",
+      "reference_source_text_length": 12851,
+      "reference_deployment_rows": 47,
+      "distinct_source_animal_ids": 46,
+      "distinct_deployment_ids": 47,
+      "number_of_taxon_labels": 4,
+      "taxon_labels_deployments": {
+        "Chelonoidis donfaustoi": 13,
+        "Chelonoidis porteri": 12,
+        "Chelonoidis hoodensis": 11,
+        "Chelonoidis": 11
+      },
+      "distinct_study_sites": 4,
+      "with_deploy_start": 47,
+      "with_deploy_end": 15,
+      "duration_days_available": 15,
+      "median_deployment_duration_days": 801.5414120486112,
+      "site_examples": [
+        {
+          "site": "Isla Santa Cruz east (Cerro Fatal)",
+          "n": 13
+        },
+        {
+          "site": "Isla Santa Cruz west (La Reserva)",
+          "n": 12
+        }
+      ],
+      "duty_cycle_hints": [
+        "hourly from 6:00-19:00 local time"
+      ],
+      "manipulation_type_hints": [
+        "none"
+      ],
+      "eligibility_status": "reference_verified_only_not_GPS_event_confirmed",
+      "source_metadata_uuid": "f9b4b052-8169-4ba8-9f96-9ae0ab883dd0",
+      "source_title": "Data from: Allometric and temporal scaling of movement characteristics in Galapagos tortoises",
+      "source_rights": "CC0 1.0 Universal"
+    },
+    {
+      "case_name": "deer",
+      "dataset_doi": "doi:10.5441/001/1.708",
+      "reference_bitstream_uuid": "b7d477e8-bf33-4cd0-9f49-c9617a99b2f3",
+      "source_reference_url": "https://datarepository.movebank.org/bitstreams/b7d477e8-bf33-4cd0-9f49-c9617a99b2f3/download",
+      "reference_source_text_length": 13150,
+      "reference_deployment_rows": 135,
+      "distinct_source_animal_ids": 135,
+      "distinct_deployment_ids": 135,
+      "number_of_taxon_labels": 1,
+      "taxon_labels_deployments": {
+        "Odocoileus hemionus": 135
+      },
+      "distinct_study_sites": 1,
+      "with_deploy_start": 0,
+      "with_deploy_end": 0,
+      "duration_days_available": 0,
+      "median_deployment_duration_days": null,
+      "site_examples": [
+        {
+          "site": "unspecified",
+          "n": 135
+        }
+      ],
+      "duty_cycle_hints": [],
+      "manipulation_type_hints": [
+        "none"
+      ],
+      "eligibility_status": "reference_verified_only_not_GPS_event_confirmed",
+      "source_metadata_uuid": "0e3a4577-b063-47d9-9d6b-edec949aa5fa",
+      "source_title": "Data from: Study \"Wyoming Sublette Mule Deer (2018-2020)\"",
+      "source_rights": "CC0 1.0 Universal"
+    },
+    {
+      "case_name": "gull",
+      "dataset_doi": "doi:10.5441/001/1.292",
+      "reference_bitstream_uuid": "3f1f760b-2971-4c40-bcb9-6c499631f8a7",
+      "source_reference_url": "https://datarepository.movebank.org/bitstreams/3f1f760b-2971-4c40-bcb9-6c499631f8a7/download",
+      "reference_source_text_length": 4244,
+      "reference_deployment_rows": 15,
+      "distinct_source_animal_ids": 15,
+      "distinct_deployment_ids": 15,
+      "number_of_taxon_labels": 1,
+      "taxon_labels_deployments": {
+        "Larus smithsonianus": 15
+      },
+      "distinct_study_sites": 2,
+      "with_deploy_start": 15,
+      "with_deploy_end": 0,
+      "duration_days_available": 0,
+      "median_deployment_duration_days": null,
+      "site_examples": [
+        {
+          "site": "Bon Portage Island",
+          "n": 7
+        },
+        {
+          "site": "Whitehead Island",
+          "n": 8
+        }
+      ],
+      "duty_cycle_hints": [
+        "15-min fixes during breeding season (late Apr-early Oct); 1-24-h fixes during non-breeding season"
+      ],
+      "manipulation_type_hints": [
+        "none"
+      ],
+      "eligibility_status": "reference_verified_only_not_GPS_event_confirmed",
+      "source_metadata_uuid": "91804022-7b95-4192-a1bb-5288e1141225",
+      "source_title": "Data from: Study \"American Herring Gulls - GPS - Lobster Bay, Southwest Nova Scotia, Canada\"",
+      "source_rights": "CC0 1.0 Universal"
+    },
+    {
+      "case_name": "vulture",
+      "dataset_doi": "doi:10.5441/001/1.320",
+      "reference_bitstream_uuid": "a6d7a766-534a-4bc4-a287-b00b4d053400",
+      "source_reference_url": "https://datarepository.movebank.org/bitstreams/a6d7a766-534a-4bc4-a287-b00b4d053400/download",
+      "reference_source_text_length": 8131,
+      "reference_deployment_rows": 10,
+      "distinct_source_animal_ids": 10,
+      "distinct_deployment_ids": 10,
+      "number_of_taxon_labels": 2,
+      "taxon_labels_deployments": {
+        "Cathartes melambrotus": 5,
+        "Sarcoramphus papa": 5
+      },
+      "distinct_study_sites": 1,
+      "with_deploy_start": 10,
+      "with_deploy_end": 3,
+      "duration_days_available": 3,
+      "median_deployment_duration_days": 393,
+      "site_examples": [
+        {
+          "site": "Los Amigos Biological Station, Peru",
+          "n": 10
+        }
+      ],
+      "duty_cycle_hints": [
+        "10-min GPS fixes with high battery, 1-hour fixes with low battery, 05:00-19:00 local time",
+        "1-hour fixes"
+      ],
+      "manipulation_type_hints": [
+        "manipulated-other"
+      ],
+      "eligibility_status": "reference_verified_only_not_GPS_event_confirmed",
+      "source_metadata_uuid": "cd4e676d-424f-4b40-8e4e-3681a0f26530",
+      "source_title": "Data from: Scouts vs usurpers: alternative foraging strategies facilitate coexistence between Neotropical cathartid vultures",
+      "source_rights": "CC0 1.0 Universal"
+    },
+    {
+      "case_name": "pigeon",
+      "dataset_doi": "doi:10.5441/001/1.245kb7r6",
+      "reference_bitstream_uuid": "4bafd0f2-e566-4329-9d33-c3838eab7f3d",
+      "source_reference_url": "https://datarepository.movebank.org/bitstreams/4bafd0f2-e566-4329-9d33-c3838eab7f3d/download",
+      "reference_source_text_length": 10992,
+      "reference_deployment_rows": 35,
+      "distinct_source_animal_ids": 35,
+      "distinct_deployment_ids": 1,
+      "number_of_taxon_labels": 1,
+      "taxon_labels_deployments": {
+        "Columba livia": 35
+      },
+      "distinct_study_sites": 1,
+      "with_deploy_start": 0,
+      "with_deploy_end": 0,
+      "duration_days_available": 0,
+      "median_deployment_duration_days": null,
+      "site_examples": [
+        {
+          "site": "Arnino field station, Pisa, Italy",
+          "n": 35
+        }
+      ],
+      "duty_cycle_hints": [
+        "1 fix/sec"
+      ],
+      "manipulation_type_hints": [
+        "manipulated-other",
+        "relocated"
+      ],
+      "eligibility_status": "reference_verified_only_not_GPS_event_confirmed",
+      "source_metadata_uuid": "5fa09bd6-afc9-4293-a39a-8458ea1da3c7",
+      "source_title": "Data from: Right hemisphere advantage in the development of route fidelity in homing pigeons",
+      "source_rights": "CC0 1.0 Universal"
+    },
+    {
+      "case_name": "bat",
+      "dataset_doi": "doi:10.5441/001/1.282",
+      "reference_bitstream_uuid": "35cd7452-fe48-4423-81fb-4ff8e0717da8",
+      "source_reference_url": "https://datarepository.movebank.org/bitstreams/35cd7452-fe48-4423-81fb-4ff8e0717da8/download",
+      "reference_source_text_length": 7299,
+      "reference_deployment_rows": 22,
+      "distinct_source_animal_ids": 22,
+      "distinct_deployment_ids": 22,
+      "number_of_taxon_labels": 1,
+      "taxon_labels_deployments": {
+        "Phyllostomus hastatus": 22
+      },
+      "distinct_study_sites": 1,
+      "with_deploy_start": 22,
+      "with_deploy_end": 22,
+      "duration_days_available": 22,
+      "median_deployment_duration_days": 24,
+      "site_examples": [
+        {
+          "site": "La Gruta",
+          "n": 22
+        }
+      ],
+      "duty_cycle_hints": [
+        "1 Hz",
+        "0.5 Hz"
+      ],
+      "manipulation_type_hints": [
+        "none"
+      ],
+      "eligibility_status": "reference_verified_only_not_GPS_event_confirmed",
+      "source_metadata_uuid": "5259147d-04a1-471d-a65c-240cd3d7071d",
+      "source_title": "Data from: Greater spear nosed bats commute long distances alone, rest together, but forage apart",
+      "source_rights": "CC0 1.0 Universal"
+    }
+  ],
+  "hard_limits": [
+    "These are counts of reference table animal labels and deployment rows, not observed valid GPS fixes or independent repeated flight/movement sessions.",
+    "A deployment start/end interval does not establish that the tag actually recorded continuously or met simultaneous-cohort requirements.",
+    "Mixed taxa must be split at actual species/cohort/site; some experimental pigeons or controlled interventions are not population-level natural movement replicates.",
+    "Reference entries may include multiple sensors including radio/VHF and GPS. Check actual GPS CSV and sensor-id before counting viable animals.",
+    "Do not count any of the eight packages as confirmed primary-model eligible before verifying source GPS dates, fixes, repeated sessions, precision and shared cohort support."
+  ]
+}

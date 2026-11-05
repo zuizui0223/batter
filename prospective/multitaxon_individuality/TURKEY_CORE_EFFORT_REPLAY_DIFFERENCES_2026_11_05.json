@@ -1,0 +1,665 @@
+{
+  "numeric_differences": [
+    {
+      "path": "/month_results/0/months/0/group_centroid_pair_distances/0/distance_km/mean",
+      "replay": 7.134850768114352,
+      "stored": 7.134850765677596,
+      "absolute_difference_km": 2.4367556861193407e-09
+    },
+    {
+      "path": "/month_results/0/months/0/group_centroid_pair_distances/1/distance_km/mean",
+      "replay": 0.9871391869602516,
+      "stored": 0.9871391809792855,
+      "absolute_difference_km": 5.980966055751935e-09
+    },
+    {
+      "path": "/month_results/0/months/0/group_centroid_pair_distances/2/distance_km/mean",
+      "replay": 2.061524701040783,
+      "stored": 2.0615247024973824,
+      "absolute_difference_km": 1.4565992856319099e-09
+    },
+    {
+      "path": "/month_results/0/months/1/group_centroid_pair_distances/0/distance_km/mean",
+      "replay": 7.0867351486151815,
+      "stored": 7.086735151716327,
+      "absolute_difference_km": 3.1011451184781436e-09
+    },
+    {
+      "path": "/month_results/0/months/1/group_centroid_pair_distances/0/distance_km/max",
+      "replay": 25.44471567978474,
+      "stored": 25.444715679961842,
+      "absolute_difference_km": 1.7710277688820497e-10
+    },
+    {
+      "path": "/month_results/0/months/1/group_centroid_pair_distances/1/distance_km/mean",
+      "replay": 1.9232685006313255,
+      "stored": 1.9232685066127007,
+      "absolute_difference_km": 5.9813751729365094e-09
+    },
+    {
+      "path": "/month_results/0/months/1/group_centroid_pair_distances/1/distance_km/max",
+      "replay": 6.817829125146629,
+      "stored": 6.817829125807595,
+      "absolute_difference_km": 6.609663927292786e-10
+    },
+    {
+      "path": "/month_results/0/months/1/group_centroid_pair_distances/2/distance_km/median",
+      "replay": 1.0260206646075485,
+      "stored": 1.0260206668030905,
+      "absolute_difference_km": 2.1955419704511314e-09
+    },
+    {
+      "path": "/month_results/0/months/1/group_centroid_pair_distances/2/distance_km/mean",
+      "replay": 0.8678734548889782,
+      "stored": 0.8678734563570011,
+      "absolute_difference_km": 1.4680229254437904e-09
+    },
+    {
+      "path": "/month_results/0/months/2/group_centroid_pair_distances/0/distance_km/mean",
+      "replay": 7.342115136276298,
+      "stored": 7.3421151352833585,
+      "absolute_difference_km": 9.929399524821747e-10
+    },
+    {
+      "path": "/month_results/0/months/2/group_centroid_pair_distances/1/distance_km/mean",
+      "replay": 2.3371259255659464,
+      "stored": 2.3371259242904574,
+      "absolute_difference_km": 1.275489047714018e-09
+    },
+    {
+      "path": "/month_results/0/months/2/group_centroid_pair_distances/2/distance_km/median",
+      "replay": 0.6397174106823482,
+      "stored": 0.6397174036376074,
+      "absolute_difference_km": 7.044740790718151e-09
+    },
+    {
+      "path": "/month_results/0/months/2/group_centroid_pair_distances/2/distance_km/mean",
+      "replay": 0.8255089093378902,
+      "stored": 0.8255089072337677,
+      "absolute_difference_km": 2.1041225428675148e-09
+    },
+    {
+      "path": "/month_results/0/months/3/group_centroid_pair_distances/0/distance_km/median",
+      "replay": 3.7255808058835176,
+      "stored": 3.7255808052759507,
+      "absolute_difference_km": 6.075668856908578e-10
+    },
+    {
+      "path": "/month_results/0/months/3/group_centroid_pair_distances/0/distance_km/mean",
+      "replay": 8.086834005543869,
+      "stored": 8.086834005075053,
+      "absolute_difference_km": 4.688160970545141e-10
+    },
+    {
+      "path": "/month_results/0/months/3/group_centroid_pair_distances/1/distance_km/mean",
+      "replay": 2.338594591228384,
+      "stored": 2.3385945906683565,
+      "absolute_difference_km": 5.600275798656185e-10
+    },
+    {
+      "path": "/month_results/0/months/3/group_centroid_pair_distances/2/distance_km/mean",
+      "replay": 3.477050328975486,
+      "stored": 3.4770503279581746,
+      "absolute_difference_km": 1.0173115683187461e-09
+    },
+    {
+      "path": "/month_results/0/months/4/group_centroid_pair_distances/0/distance_km/min",
+      "replay": 0.0027268088326673256,
+      "stored": 0.002728460943593006,
+      "absolute_difference_km": 1.6521109256805236e-06
+    },
+    {
+      "path": "/month_results/0/months/4/group_centroid_pair_distances/0/distance_km/median",
+      "replay": 4.193929916909186,
+      "stored": 4.193929917986763,
+      "absolute_difference_km": 1.0775771386306587e-09
+    },
+    {
+      "path": "/month_results/0/months/4/group_centroid_pair_distances/0/distance_km/mean",
+      "replay": 8.256194326930904,
+      "stored": 8.256194341240114,
+      "absolute_difference_km": 1.4309209817042756e-08
+    },
+    {
+      "path": "/month_results/0/months/4/group_centroid_pair_distances/0/distance_km/max",
+      "replay": 24.74799754789943,
+      "stored": 24.74799754771734,
+      "absolute_difference_km": 1.8209078689324087e-10
+    },
+    {
+      "path": "/month_results/0/months/4/group_centroid_pair_distances/1/distance_km/min",
+      "replay": 0.0027268088326673256,
+      "stored": 0.002728460943593006,
+      "absolute_difference_km": 1.6521109256805236e-06
+    },
+    {
+      "path": "/month_results/0/months/4/group_centroid_pair_distances/1/distance_km/median",
+      "replay": 2.681582646970338,
+      "stored": 2.681582645289854,
+      "absolute_difference_km": 1.68048375215335e-09
+    },
+    {
+      "path": "/month_results/0/months/4/group_centroid_pair_distances/1/distance_km/mean",
+      "replay": 2.7104178826137977,
+      "stored": 2.7104179140716544,
+      "absolute_difference_km": 3.1457856763950076e-08
+    },
+    {
+      "path": "/month_results/0/months/4/group_centroid_pair_distances/2/distance_km/min",
+      "replay": 0.2549642392589792,
+      "stored": 0.2549642039100556,
+      "absolute_difference_km": 3.5348923621558725e-08
+    },
+    {
+      "path": "/month_results/0/months/4/group_centroid_pair_distances/2/distance_km/median",
+      "replay": 3.635649726565987,
+      "stored": 3.6356497252587348,
+      "absolute_difference_km": 1.3072520843593338e-09
+    },
+    {
+      "path": "/month_results/0/months/4/group_centroid_pair_distances/2/distance_km/mean",
+      "replay": 3.665362686228486,
+      "stored": 3.6653626832107564,
+      "absolute_difference_km": 3.017729621745957e-09
+    },
+    {
+      "path": "/month_results/0/months/4/group_centroid_pair_distances/2/distance_km/max",
+      "replay": 7.000217809745693,
+      "stored": 7.000217809101947,
+      "absolute_difference_km": 6.437455013497129e-10
+    },
+    {
+      "path": "/month_results/0/months/5/group_centroid_pair_distances/0/distance_km/median",
+      "replay": 4.381796159523091,
+      "stored": 4.381796159008803,
+      "absolute_difference_km": 5.142881676079014e-10
+    },
+    {
+      "path": "/month_results/0/months/5/group_centroid_pair_distances/0/distance_km/mean",
+      "replay": 8.395808242030396,
+      "stored": 8.395808241899237,
+      "absolute_difference_km": 1.311590835939569e-10
+    },
+    {
+      "path": "/month_results/0/months/5/group_centroid_pair_distances/1/distance_km/mean",
+      "replay": 2.6088165896208277,
+      "stored": 2.6088165893023936,
+      "absolute_difference_km": 3.184341679229874e-10
+    },
+    {
+      "path": "/month_results/0/months/5/group_centroid_pair_distances/2/distance_km/mean",
+      "replay": 3.623489936617935,
+      "stored": 3.6234899367268776,
+      "absolute_difference_km": 1.0894263269278781e-10
+    },
+    {
+      "path": "/month_results/0/months/6/group_centroid_pair_distances/0/distance_km/min",
+      "replay": 0.007798575028663333,
+      "stored": 0.007799730629918645,
+      "absolute_difference_km": 1.1556012553121109e-06
+    },
+    {
+      "path": "/month_results/0/months/6/group_centroid_pair_distances/0/distance_km/mean",
+      "replay": 8.229063129522165,
+      "stored": 8.229063140134471,
+      "absolute_difference_km": 1.0612305700874458e-08
+    },
+    {
+      "path": "/month_results/0/months/6/group_centroid_pair_distances/1/distance_km/min",
+      "replay": 0.007798575028663333,
+      "stored": 0.007799730629918645,
+      "absolute_difference_km": 1.1556012553121109e-06
+    },
+    {
+      "path": "/month_results/0/months/6/group_centroid_pair_distances/1/distance_km/mean",
+      "replay": 2.6011872343199283,
+      "stored": 2.601187256494922,
+      "absolute_difference_km": 2.217499384116195e-08
+    },
+    {
+      "path": "/month_results/0/months/6/group_centroid_pair_distances/2/distance_km/median",
+      "replay": 2.197985441772894,
+      "stored": 2.1979854429382804,
+      "absolute_difference_km": 1.1653864540051018e-09
+    },
+    {
+      "path": "/month_results/0/months/6/group_centroid_pair_distances/2/distance_km/mean",
+      "replay": 2.8723173707478566,
+      "stored": 2.8723173713781334,
+      "absolute_difference_km": 6.302767197041703e-10
+    },
+    {
+      "path": "/month_results/0/months/7/group_centroid_pair_distances/0/distance_km/mean",
+      "replay": 9.709396788898296,
+      "stored": 9.709396784610432,
+      "absolute_difference_km": 4.287864285856813e-09
+    },
+    {
+      "path": "/month_results/0/months/7/group_centroid_pair_distances/1/distance_km/mean",
+      "replay": 2.961708134314153,
+      "stored": 2.961708124566251,
+      "absolute_difference_km": 9.747902041112866e-09
+    },
+    {
+      "path": "/month_results/1/months/0/group_centroid_pair_distances/0/distance_km/min",
+      "replay": 0.03968227319019092,
+      "stored": 0.03968250031137838,
+      "absolute_difference_km": 2.2712118745438215e-07
+    },
+    {
+      "path": "/month_results/1/months/0/group_centroid_pair_distances/0/distance_km/median",
+      "replay": 0.7501627340434299,
+      "stored": 0.7501627280362594,
+      "absolute_difference_km": 6.00717053877986e-09
+    },
+    {
+      "path": "/month_results/1/months/0/group_centroid_pair_distances/0/distance_km/mean",
+      "replay": 0.7991705448668152,
+      "stored": 0.79917055990668,
+      "absolute_difference_km": 1.5039864798005453e-08
+    },
+    {
+      "path": "/month_results/1/months/0/group_centroid_pair_distances/1/distance_km/min",
+      "replay": 0.03968227319019092,
+      "stored": 0.03968250031137838,
+      "absolute_difference_km": 2.2712118745438215e-07
+    },
+    {
+      "path": "/month_results/1/months/0/group_centroid_pair_distances/1/distance_km/median",
+      "replay": 0.9727698362929356,
+      "stored": 0.9727698409254346,
+      "absolute_difference_km": 4.632499051027139e-09
+    },
+    {
+      "path": "/month_results/1/months/0/group_centroid_pair_distances/1/distance_km/mean",
+      "replay": 0.8854815767135988,
+      "stored": 0.8854815931054105,
+      "absolute_difference_km": 1.6391811685778634e-08
+    },
+    {
+      "path": "/month_results/1/months/0/group_centroid_pair_distances/2/distance_km/median",
+      "replay": 0.3783513773845589,
+      "stored": 0.3783513550145312,
+      "absolute_difference_km": 2.2370027663587422e-08
+    },
+    {
+      "path": "/month_results/1/months/0/group_centroid_pair_distances/2/distance_km/mean",
+      "replay": 0.5833929652498555,
+      "stored": 0.5833929769098535,
+      "absolute_difference_km": 1.165999796715056e-08
+    },
+    {
+      "path": "/month_results/1/months/0/group_centroid_pair_distances/3/distance_km/mean",
+      "replay": 0.6799269412653033,
+      "stored": 0.6799269642053118,
+      "absolute_difference_km": 2.294000855940226e-08
+    },
+    {
+      "path": "/month_results/1/months/1/group_centroid_pair_distances/0/distance_km/min",
+      "replay": 0.003135740340443448,
+      "stored": 0.003137177105852375,
+      "absolute_difference_km": 1.43676540892727e-06
+    },
+    {
+      "path": "/month_results/1/months/1/group_centroid_pair_distances/0/distance_km/median",
+      "replay": 0.3404467545213973,
+      "stored": 0.34044674128480323,
+      "absolute_difference_km": 1.3236594043064542e-08
+    },
+    {
+      "path": "/month_results/1/months/1/group_centroid_pair_distances/0/distance_km/mean",
+      "replay": 0.9256856323597786,
+      "stored": 0.9256856610651999,
+      "absolute_difference_km": 2.870542126220954e-08
+    },
+    {
+      "path": "/month_results/1/months/1/group_centroid_pair_distances/0/distance_km/max",
+      "replay": 2.970711128019622,
+      "stored": 2.970711126502694,
+      "absolute_difference_km": 1.5169279166116212e-09
+    },
+    {
+      "path": "/month_results/1/months/1/group_centroid_pair_distances/1/distance_km/min",
+      "replay": 0.003135740340443448,
+      "stored": 0.003137177105852375,
+      "absolute_difference_km": 1.43676540892727e-06
+    },
+    {
+      "path": "/month_results/1/months/1/group_centroid_pair_distances/1/distance_km/median",
+      "replay": 0.34166604399203027,
+      "stored": 0.341666057181387,
+      "absolute_difference_km": 1.3189356717902001e-08
+    },
+    {
+      "path": "/month_results/1/months/1/group_centroid_pair_distances/1/distance_km/mean",
+      "replay": 1.0716970926879206,
+      "stored": 1.0716971793722867,
+      "absolute_difference_km": 8.668436612957464e-08
+    },
+    {
+      "path": "/month_results/1/months/1/group_centroid_pair_distances/1/distance_km/max",
+      "replay": 2.970711128019622,
+      "stored": 2.970711126502694,
+      "absolute_difference_km": 1.5169279166116212e-09
+    },
+    {
+      "path": "/month_results/1/months/1/group_centroid_pair_distances/2/distance_km/min",
+      "replay": 0.004760037284615972,
+      "stored": 0.004759090484549995,
+      "absolute_difference_km": 9.468000659769438e-07
+    },
+    {
+      "path": "/month_results/1/months/1/group_centroid_pair_distances/2/distance_km/median",
+      "replay": 0.018527949384218267,
+      "stored": 0.018528074058429128,
+      "absolute_difference_km": 1.2467421086140296e-07
+    },
+    {
+      "path": "/month_results/1/months/1/group_centroid_pair_distances/2/distance_km/mean",
+      "replay": 0.5606569815394237,
+      "stored": 0.5606568652974829,
+      "absolute_difference_km": 1.1624194073966976e-07
+    },
+    {
+      "path": "/month_results/1/months/1/group_centroid_pair_distances/3/distance_km/min",
+      "replay": 0.004760037284615972,
+      "stored": 0.004759090484549995,
+      "absolute_difference_km": 9.468000659769438e-07
+    },
+    {
+      "path": "/month_results/1/months/1/group_centroid_pair_distances/3/distance_km/mean",
+      "replay": 0.6711584739742602,
+      "stored": 0.6711583344839315,
+      "absolute_difference_km": 1.3949032873217249e-07
+    },
+    {
+      "path": "/month_results/1/months/2/group_centroid_pair_distances/0/distance_km/min",
+      "replay": 0.15891644288523069,
+      "stored": 0.15891647124198796,
+      "absolute_difference_km": 2.8356757275638245e-08
+    },
+    {
+      "path": "/month_results/1/months/2/group_centroid_pair_distances/0/distance_km/median",
+      "replay": 2.507272907920572,
+      "stored": 2.5072729025286318,
+      "absolute_difference_km": 5.391940227639225e-09
+    },
+    {
+      "path": "/month_results/1/months/2/group_centroid_pair_distances/0/distance_km/mean",
+      "replay": 2.8064275230822253,
+      "stored": 2.8064275222927506,
+      "absolute_difference_km": 7.894747078296405e-10
+    },
+    {
+      "path": "/month_results/1/months/2/group_centroid_pair_distances/0/distance_km/max",
+      "replay": 7.618941644132097,
+      "stored": 7.61894164354063,
+      "absolute_difference_km": 5.914673195661635e-10
+    },
+    {
+      "path": "/month_results/1/months/2/group_centroid_pair_distances/1/distance_km/min",
+      "replay": 0.15891644288523069,
+      "stored": 0.15891647124198796,
+      "absolute_difference_km": 2.8356757275638245e-08
+    },
+    {
+      "path": "/month_results/1/months/2/group_centroid_pair_distances/1/distance_km/median",
+      "replay": 1.9340060718681513,
+      "stored": 1.9340060741982141,
+      "absolute_difference_km": 2.3300628093636533e-09
+    },
+    {
+      "path": "/month_results/1/months/2/group_centroid_pair_distances/1/distance_km/mean",
+      "replay": 1.797762174800578,
+      "stored": 1.7977621737912415,
+      "absolute_difference_km": 1.0093366142882587e-09
+    },
+    {
+      "path": "/month_results/1/months/2/group_centroid_pair_distances/1/distance_km/max",
+      "replay": 4.619533680820374,
+      "stored": 4.619533679844873,
+      "absolute_difference_km": 9.755005692113627e-10
+    },
+    {
+      "path": "/month_results/1/months/2/group_centroid_pair_distances/2/distance_km/median",
+      "replay": 5.151156253030692,
+      "stored": 5.151156252606963,
+      "absolute_difference_km": 4.2372860775685695e-10
+    },
+    {
+      "path": "/month_results/1/months/2/group_centroid_pair_distances/2/distance_km/mean",
+      "replay": 5.328090893786344,
+      "stored": 5.328090893546523,
+      "absolute_difference_km": 2.398206078169096e-10
+    },
+    {
+      "path": "/month_results/1/months/2/group_centroid_pair_distances/2/distance_km/max",
+      "replay": 7.618941644132097,
+      "stored": 7.61894164354063,
+      "absolute_difference_km": 5.914673195661635e-10
+    },
+    {
+      "path": "/month_results/1/months/2/group_centroid_pair_distances/3/distance_km/median",
+      "replay": 5.205054983815805,
+      "stored": 5.205054982084275,
+      "absolute_difference_km": 1.7315304745579851e-09
+    },
+    {
+      "path": "/month_results/1/months/2/group_centroid_pair_distances/3/distance_km/mean",
+      "replay": 5.752228352739495,
+      "stored": 5.75222835245171,
+      "absolute_difference_km": 2.877849070159755e-10
+    },
+    {
+      "path": "/month_results/1/months/2/group_centroid_pair_distances/3/distance_km/max",
+      "replay": 7.618941644132097,
+      "stored": 7.61894164354063,
+      "absolute_difference_km": 5.914673195661635e-10
+    },
+    {
+      "path": "/month_results/1/months/3/group_centroid_pair_distances/0/distance_km/median",
+      "replay": 6.315634981310604,
+      "stored": 6.31563498059708,
+      "absolute_difference_km": 7.135234625366138e-10
+    },
+    {
+      "path": "/month_results/1/months/3/group_centroid_pair_distances/0/distance_km/mean",
+      "replay": 7.877399650616225,
+      "stored": 7.877399650142682,
+      "absolute_difference_km": 4.735429826041582e-10
+    },
+    {
+      "path": "/month_results/1/months/3/group_centroid_pair_distances/0/distance_km/max",
+      "replay": 21.63289025869951,
+      "stored": 21.6328902584912,
+      "absolute_difference_km": 2.0830981384278857e-10
+    },
+    {
+      "path": "/month_results/1/months/3/group_centroid_pair_distances/1/distance_km/mean",
+      "replay": 4.428375628546568,
+      "stored": 4.42837562791752,
+      "absolute_difference_km": 6.290479248605152e-10
+    },
+    {
+      "path": "/month_results/1/months/3/group_centroid_pair_distances/1/distance_km/max",
+      "replay": 9.657409109309958,
+      "stored": 9.657409108843337,
+      "absolute_difference_km": 4.666205200010154e-10
+    },
+    {
+      "path": "/month_results/1/months/3/group_centroid_pair_distances/2/distance_km/mean",
+      "replay": 16.49995970579037,
+      "stored": 16.49995970570559,
+      "absolute_difference_km": 8.478195923089515e-11
+    },
+    {
+      "path": "/month_results/1/months/3/group_centroid_pair_distances/2/distance_km/max",
+      "replay": 21.63289025869951,
+      "stored": 21.6328902584912,
+      "absolute_difference_km": 2.0830981384278857e-10
+    },
+    {
+      "path": "/month_results/1/months/3/group_centroid_pair_distances/3/distance_km/min",
+      "replay": 15.002243080792942,
+      "stored": 15.002243080492565,
+      "absolute_difference_km": 3.0037661247206415e-10
+    },
+    {
+      "path": "/month_results/1/months/3/group_centroid_pair_distances/3/distance_km/mean",
+      "replay": 17.404794367093135,
+      "stored": 17.404794366991396,
+      "absolute_difference_km": 1.0173906161980995e-10
+    },
+    {
+      "path": "/month_results/1/months/3/group_centroid_pair_distances/3/distance_km/max",
+      "replay": 21.63289025869951,
+      "stored": 21.6328902584912,
+      "absolute_difference_km": 2.0830981384278857e-10
+    },
+    {
+      "path": "/month_results/1/months/5/group_centroid_pair_distances/0/distance_km/mean",
+      "replay": 6.831776757395868,
+      "stored": 6.8317767570997425,
+      "absolute_difference_km": 2.9612579055537935e-10
+    },
+    {
+      "path": "/month_results/1/months/5/group_centroid_pair_distances/0/distance_km/max",
+      "replay": 19.491305620497364,
+      "stored": 19.491305620266168,
+      "absolute_difference_km": 2.311963953616214e-10
+    },
+    {
+      "path": "/month_results/1/months/5/group_centroid_pair_distances/1/distance_km/median",
+      "replay": 3.0311556165658176,
+      "stored": 3.031155618052497,
+      "absolute_difference_km": 1.486679224171894e-09
+    },
+    {
+      "path": "/month_results/1/months/5/group_centroid_pair_distances/1/distance_km/mean",
+      "replay": 3.103136136496316,
+      "stored": 3.1031361361341823,
+      "absolute_difference_km": 3.621338784398631e-10
+    },
+    {
+      "path": "/month_results/1/months/5/group_centroid_pair_distances/2/distance_km/median",
+      "replay": 14.97900474677449,
+      "stored": 14.979004746623403,
+      "absolute_difference_km": 1.510862546183489e-10
+    },
+    {
+      "path": "/month_results/1/months/5/group_centroid_pair_distances/2/distance_km/mean",
+      "replay": 16.153378309644747,
+      "stored": 16.153378309513645,
+      "absolute_difference_km": 1.3110224017509609e-10
+    },
+    {
+      "path": "/month_results/1/months/5/group_centroid_pair_distances/2/distance_km/max",
+      "replay": 19.491305620497364,
+      "stored": 19.491305620266168,
+      "absolute_difference_km": 2.311963953616214e-10
+    },
+    {
+      "path": "/month_results/1/months/5/group_centroid_pair_distances/3/distance_km/mean",
+      "replay": 16.419571142661773,
+      "stored": 16.419571142504445,
+      "absolute_difference_km": 1.5732837255200138e-10
+    },
+    {
+      "path": "/month_results/1/months/5/group_centroid_pair_distances/3/distance_km/max",
+      "replay": 19.491305620497364,
+      "stored": 19.491305620266168,
+      "absolute_difference_km": 2.311963953616214e-10
+    },
+    {
+      "path": "/month_results/1/months/6/group_centroid_pair_distances/0/distance_km/min",
+      "replay": 0.0004932982785264248,
+      "stored": 0.000484076936857397,
+      "absolute_difference_km": 9.221341669027772e-06
+    },
+    {
+      "path": "/month_results/1/months/6/group_centroid_pair_distances/0/distance_km/median",
+      "replay": 6.2730890762066975,
+      "stored": 6.273089076925062,
+      "absolute_difference_km": 7.183640349239795e-10
+    },
+    {
+      "path": "/month_results/1/months/6/group_centroid_pair_distances/0/distance_km/mean",
+      "replay": 6.685802410679793,
+      "stored": 6.685801577795213,
+      "absolute_difference_km": 8.328845799709939e-07
+    },
+    {
+      "path": "/month_results/1/months/6/group_centroid_pair_distances/0/distance_km/max",
+      "replay": 19.24155400690905,
+      "stored": 19.24155400667485,
+      "absolute_difference_km": 2.341984384202078e-10
+    },
+    {
+      "path": "/month_results/1/months/6/group_centroid_pair_distances/1/distance_km/min",
+      "replay": 0.0004932982785264248,
+      "stored": 0.000484076936857397,
+      "absolute_difference_km": 9.221341669027772e-06
+    },
+    {
+      "path": "/month_results/1/months/6/group_centroid_pair_distances/1/distance_km/mean",
+      "replay": 3.115239321590346,
+      "stored": 3.11523815569366,
+      "absolute_difference_km": 1.1658966863059561e-06
+    },
+    {
+      "path": "/month_results/1/months/6/group_centroid_pair_distances/1/distance_km/max",
+      "replay": 7.029155574276939,
+      "stored": 7.029155573635845,
+      "absolute_difference_km": 6.41094288766908e-10
+    },
+    {
+      "path": "/month_results/1/months/6/group_centroid_pair_distances/2/distance_km/min",
+      "replay": 14.24405051068161,
+      "stored": 14.244050510048874,
+      "absolute_difference_km": 6.327365298375298e-10
+    },
+    {
+      "path": "/month_results/1/months/6/group_centroid_pair_distances/2/distance_km/median",
+      "replay": 14.393941058132881,
+      "stored": 14.393941057819774,
+      "absolute_difference_km": 3.1310776194004575e-10
+    },
+    {
+      "path": "/month_results/1/months/6/group_centroid_pair_distances/2/distance_km/mean",
+      "replay": 15.61221013340341,
+      "stored": 15.612210133049098,
+      "absolute_difference_km": 3.5431213518677396e-10
+    },
+    {
+      "path": "/month_results/1/months/6/group_centroid_pair_distances/2/distance_km/max",
+      "replay": 19.24155400690905,
+      "stored": 19.24155400667485,
+      "absolute_difference_km": 2.341984384202078e-10
+    },
+    {
+      "path": "/month_results/1/months/6/group_centroid_pair_distances/3/distance_km/min",
+      "replay": 14.24416977515441,
+      "stored": 14.244169774521682,
+      "absolute_difference_km": 6.327276480533328e-10
+    },
+    {
+      "path": "/month_results/1/months/6/group_centroid_pair_distances/3/distance_km/median",
+      "replay": 14.542707856696907,
+      "stored": 14.542707856387036,
+      "absolute_difference_km": 3.098712397786585e-10
+    },
+    {
+      "path": "/month_results/1/months/6/group_centroid_pair_distances/3/distance_km/mean",
+      "replay": 15.885842057947773,
+      "stored": 15.885842057649143,
+      "absolute_difference_km": 2.986304536989337e-10
+    },
+    {
+      "path": "/month_results/1/months/6/group_centroid_pair_distances/3/distance_km/max",
+      "replay": 19.24155400690905,
+      "stored": 19.24155400667485,
+      "absolute_difference_km": 2.341984384202078e-10
+    }
+  ],
+  "other_differences": []
+}

@@ -1,0 +1,56 @@
+{
+  "GPS_clock_and_location_error_calibrated": false,
+  "as_of": "2026-10-23",
+  "nonclaims": [
+    "Five original far pair records are one focal animal appearing five times, NOT independent biological events",
+    "2020 isolate in annual5 GPS graph is not independently proven migrant, flock member or local population",
+    "GPS centers describe recorded usage, not the mechanism of movement or social interactions",
+    "2019 geographically disconnected groups are not verified independent demographic populations",
+    "GPS accuracy, source clock calibration, resources and predation are not controlled",
+    "Seasonal early-year means Jan-Feb, NOT continuous winter; December 2020 unavailable"
+  ],
+  "schema_version": 1,
+  "source_CI": "https://github.com/zuizui0223/batter/actions/runs/39722998742",
+  "source_doi": "10.5441/001/1.671",
+  "source_original_GPS_fixes": 435214,
+  "source_populations_independent_verified": false,
+  "source_result_sha256": "7b84c27d0b05449e0a53dc465964c7fd0c8c3aed81478556387cb706598f4225",
+  "status": "PINNED_ORIGINAL_GPS_TURKEY_SOURCE_SINGLE_MOVER_VERIFIED",
+  "year_2019_components": [
+    {
+      "jan_feb_closer_than_summer_dyads": 38,
+      "median_janfeb_pair_center_distance_km": 0.6099836546730744,
+      "median_summer_pair_center_distance_km": 2.515252736777699,
+      "n_original_annual5_geographic_dyads": 53,
+      "n_source_animals": 11
+    },
+    {
+      "jan_feb_closer_than_summer_dyads": 17,
+      "median_janfeb_pair_center_distance_km": 1.1640519715257693,
+      "median_summer_pair_center_distance_km": 2.4914310998804727,
+      "n_original_annual5_geographic_dyads": 20,
+      "n_source_animals": 7
+    }
+  ],
+  "year_2020": {
+    "all_pairs": 21,
+    "annual10_to25km_pairs_janfeb_center_median_km": 0.17155866941333353,
+    "annual10_to25km_pairs_summer_center_median_km": 14.670568620045762,
+    "annual5_isolated_animal_count": 1,
+    "december_2020_supported_original_animals": 0,
+    "isolated_core_6pairs_JF_median_km": 0.1007565627245268,
+    "isolated_core_6pairs_summer_median_km": 14.642820382640416,
+    "isolated_original_animal_janfeb_to_summer_center_shift_km": 14.52355751362658,
+    "isolated_shift_relative_to_core_median": 31.917440285295022,
+    "n_annual10_to25km_pairs": 5,
+    "n_annual10_to25km_pairs_sharing_isolated_source_animal": 5,
+    "n_annual5_to25km_pairs_sharing_isolated_source_animal": 6,
+    "n_far_pairs_closer_in_janfeb_than_summer": 5,
+    "near5_annual_center_core_animals": 6,
+    "near5_annual_center_core_edges": 14,
+    "six_core_animal_source_shift_max_km": 6.95527109436443,
+    "six_core_animal_source_shift_median_km": 0.4550351589540801,
+    "tracked_animals": 7
+  },
+  "yearly_eligible_animal_ID_sets_reused": 0
+}

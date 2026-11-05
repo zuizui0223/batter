@@ -1,0 +1,55 @@
+name: Original Movebank reversed dyad-anchor day-shift sensitivity (GPS only)
+
+on:
+  push:
+    branches:
+      - prospective/multitaxon-identity-ecology-v1
+    paths:
+      - "prospective/multitaxon_individuality/day_shift_anchor_reverse_v1.py"
+      - "prospective/multitaxon_individuality/tests/test_day_shift_anchor_reverse_v1.py"
+      - "prospective/multitaxon_individuality/DAY_SHIFT_ANCHOR_SYMMETRY_DESIGN_2026_10_21.md"
+      - ".github/workflows/movebank-reversed-day-anchor-v1.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test_source_anchor_direction:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Falsify anchor-direction artifact using independent synthetic GPS sequences
+        run: |
+          PYTHONPATH=prospective/multitaxon_individuality python3 -m unittest discover \
+            -s prospective/multitaxon_individuality/tests \
+            -p "test_day_shift_anchor_reverse_v1.py" -v
+
+  original-source_dual_anchor:
+    needs: test_source_anchor_direction
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        source: [turkey, black_bear, white_tailed_deer]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify complete original Movebank MD5/SHA256 and compare A/B anchoring on same eligible dyads
+        env:
+          SOURCE: ${{ matrix.source }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/movebank-dual-anchor-only
+          python3 prospective/multitaxon_individuality/day_shift_anchor_reverse_v1.py \
+            --source "$SOURCE" \
+            --output "/tmp/movebank-dual-anchor-only/${SOURCE}_day_shift_two_anchors_20261021.json"
+      - name: Upload only source/year/tolerance/radius/seed directional aggregates
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: original-dual-anchor-${{ matrix.source }}
+          path: /tmp/movebank-dual-anchor-only/*.json
+          if-no-files-found: warn
+          retention-days: 20

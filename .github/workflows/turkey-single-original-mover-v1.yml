@@ -1,0 +1,47 @@
+name: Turkey 2020 source GPS single-mover source geography audit
+
+on:
+  push:
+    branches: [prospective/multitaxon-identity-ecology-v1]
+    paths:
+      - "prospective/multitaxon_individuality/turkey_single_mover_v1.py"
+      - "prospective/multitaxon_individuality/tests/test_turkey_single_mover_v1.py"
+      - "prospective/multitaxon_individuality/TURKEY_SINGLE_MOVER_DIAGNOSTIC_DESIGN_2026_10_22.md"
+      - ".github/workflows/turkey-single-original-mover-v1.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  original_source_geometry_contracts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test animal and pair counts, seasonal spherical shifts, original missingness
+        run: |
+          PYTHONPATH=prospective/multitaxon_individuality python3 -m unittest discover \
+            -s prospective/multitaxon_individuality/tests \
+            -p 'test_turkey_single_mover_v1.py' -v
+
+  original_published_gps_single_mover:
+    needs: original_source_geometry_contracts
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+      - name: Recheck complete published source MD5+SHA256 and original time/position multiset
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/source-mover
+          python3 prospective/multitaxon_individuality/turkey_single_mover_v1.py \
+            --output /tmp/source-mover/TURKEY_SINGLE_MOVER_ORIGINAL_GPS_2026_10_22.json
+      - name: Retain anonymous season-centre distance and pair-count summaries only
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: original-turkey-unique-mover-20261022
+          path: /tmp/source-mover/*.json
+          if-no-files-found: warn
+          retention-days: 20

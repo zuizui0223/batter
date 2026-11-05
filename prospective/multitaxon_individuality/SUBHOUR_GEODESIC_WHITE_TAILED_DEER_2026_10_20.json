@@ -1,0 +1,4108 @@
+{
+  "GPS_location_error_quantified": false,
+  "as_of": "2026-10-20",
+  "complete_original_MD5_SHA256_replay_verified": true,
+  "geodesic_radii_km": [
+    1.0,
+    0.5,
+    2.0
+  ],
+  "independent_original_native_timestamp_to_position_QC_verified": true,
+  "limitations": [
+    "Subhour positional nearness is observational GPS proxy, NOT verified animal encounter or social relationship",
+    "Original source native clock basis, fix error and local ecological populations unresolved",
+    "A fixed-date matching-permutation expectation is descriptive and breaks real movement autocorrelation",
+    "Years, dyads and sampling seeds are dependent; no biological p-values or independent source populations",
+    "Black bear 2019 source has too few time-qualified dyads and is STOP, not zero encounter"
+  ],
+  "n_original_fixes": 371080,
+  "n_seeds": 12,
+  "native_clock_absolute_UTC_offset_verified": false,
+  "schema_version": 1,
+  "source": "white_tailed_deer",
+  "source_doi": "10.5441/001/1.718",
+  "source_specific_population_membership_verified": false,
+  "status": "POST_INSPECTION_SOURCE_GPS_TIME_MATCHED_GEODESIC_NEARBY_ONLY",
+  "timestamp_tolerances_seconds": [
+    900,
+    1800
+  ],
+  "year_results": [
+    {
+      "n_original_source_geographic_dyads": 55,
+      "time_tolerance_results": [
+        {
+          "grid_free_geodesic_seed_results": [
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 1.0,
+              "seed": 0,
+              "source_year": 2019,
+              "summer": {
+                "D": -0.0010101010101010103,
+                "N": 0.09018759018759019,
+                "O": 0.08917748917748919
+              },
+              "summer_mean_abs_recording_gap_seconds": 2.4675324675324677,
+              "summer_positive_D_dyad_fraction": 0.03636363636363636,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": 0.004473304473304474,
+                "N": 0.06522366522366521,
+                "O": 0.06969696969696969
+              },
+              "winter_mean_abs_recording_gap_seconds": 2.155844155844156,
+              "winter_minus_summer": {
+                "D": 0.005483405483405484,
+                "N": -0.02496392496392498,
+                "O": -0.0194805194805195
+              },
+              "winter_positive_D_dyad_fraction": 0.12727272727272726
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 0.5,
+              "seed": 0,
+              "source_year": 2019,
+              "summer": {
+                "D": -0.0012987012987012991,
+                "N": 0.0380952380952381,
+                "O": 0.03679653679653679
+              },
+              "summer_mean_abs_recording_gap_seconds": 2.4675324675324677,
+              "summer_positive_D_dyad_fraction": 0.0,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": 0.0028860028860028864,
+                "N": 0.026984126984126982,
+                "O": 0.02987012987012987
+              },
+              "winter_mean_abs_recording_gap_seconds": 2.155844155844156,
+              "winter_minus_summer": {
+                "D": 0.004184704184704185,
+                "N": -0.011111111111111117,
+                "O": -0.006926406926406923
+              },
+              "winter_positive_D_dyad_fraction": 0.05454545454545454
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 2.0,
+              "seed": 0,
+              "source_year": 2019,
+              "summer": {
+                "D": 0.0002886002886002886,
+                "N": 0.1326118326118326,
+                "O": 0.1329004329004329
+              },
+              "summer_mean_abs_recording_gap_seconds": 2.4675324675324677,
+              "summer_positive_D_dyad_fraction": 0.03636363636363636,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": -0.003896103896103896,
+                "N": 0.12424242424242424,
+                "O": 0.12034632034632034
+              },
+              "winter_mean_abs_recording_gap_seconds": 2.155844155844156,
+              "winter_minus_summer": {
+                "D": -0.004184704184704185,
+                "N": -0.00836940836940836,
+                "O": -0.012554112554112568
+              },
+              "winter_positive_D_dyad_fraction": 0.01818181818181818
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 1.0,
+              "seed": 1,
+              "source_year": 2019,
+              "summer": {
+                "D": -2.5232341468753557e-19,
+                "N": 0.09567099567099567,
+                "O": 0.09567099567099567
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.012987012987013,
+              "summer_positive_D_dyad_fraction": 0.01818181818181818,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": 0.001875901875901876,
+                "N": 0.06132756132756133,
+                "O": 0.0632034632034632
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.844155844155844,
+              "winter_minus_summer": {
+                "D": 0.0018759018759018761,
+                "N": -0.03434343434343434,
+                "O": -0.032467532467532464
+              },
+              "winter_positive_D_dyad_fraction": 0.07272727272727272
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 0.5,
+              "seed": 1,
+              "source_year": 2019,
+              "summer": {
+                "D": 0.0007215007215007213,
+                "N": 0.04126984126984127,
+                "O": 0.041991341991341996
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.012987012987013,
+              "summer_positive_D_dyad_fraction": 0.05454545454545454,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": 0.003896103896103896,
+                "N": 0.027705627705627706,
+                "O": 0.0316017316017316
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.844155844155844,
+              "winter_minus_summer": {
+                "D": 0.0031746031746031746,
+                "N": -0.013564213564213563,
+                "O": -0.010389610389610393
+              },
+              "winter_positive_D_dyad_fraction": 0.07272727272727272
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 2.0,
+              "seed": 1,
+              "source_year": 2019,
+              "summer": {
+                "D": 0.0005772005772005769,
+                "N": 0.13924963924963926,
+                "O": 0.13982683982683983
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.012987012987013,
+              "summer_positive_D_dyad_fraction": 0.01818181818181818,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": -0.004040404040404041,
+                "N": 0.12828282828282828,
+                "O": 0.12424242424242424
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.844155844155844,
+              "winter_minus_summer": {
+                "D": -0.0046176046176046185,
+                "N": -0.010966810966810986,
+                "O": -0.01558441558441559
+              },
+              "winter_positive_D_dyad_fraction": 0.07272727272727272
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 1.0,
+              "seed": 2,
+              "source_year": 2019,
+              "summer": {
+                "D": 0.0011544011544011544,
+                "N": 0.09408369408369409,
+                "O": 0.09523809523809523
+              },
+              "summer_mean_abs_recording_gap_seconds": 2.25974025974026,
+              "summer_positive_D_dyad_fraction": 0.05454545454545454,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": 0.00404040404040404,
+                "N": 0.06782106782106782,
+                "O": 0.07186147186147186
+              },
+              "winter_mean_abs_recording_gap_seconds": 2.155844155844156,
+              "winter_minus_summer": {
+                "D": 0.002886002886002886,
+                "N": -0.026262626262626265,
+                "O": -0.02337662337662337
+              },
+              "winter_positive_D_dyad_fraction": 0.10909090909090909
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 0.5,
+              "seed": 2,
+              "source_year": 2019,
+              "summer": {
+                "D": -0.002886002886002886,
+                "N": 0.04098124098124098,
+                "O": 0.0380952380952381
+              },
+              "summer_mean_abs_recording_gap_seconds": 2.25974025974026,
+              "summer_positive_D_dyad_fraction": 0.0,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": 0.0053391053391053395,
+                "N": 0.027994227994227995,
+                "O": 0.03333333333333333
+              },
+              "winter_mean_abs_recording_gap_seconds": 2.155844155844156,
+              "winter_minus_summer": {
+                "D": 0.008225108225108226,
+                "N": -0.012987012987012984,
+                "O": -0.004761904761904766
+              },
+              "winter_positive_D_dyad_fraction": 0.10909090909090909
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 2.0,
+              "seed": 2,
+              "source_year": 2019,
+              "summer": {
+                "D": -0.00014430014430014435,
+                "N": 0.13694083694083695,
+                "O": 0.1367965367965368
+              },
+              "summer_mean_abs_recording_gap_seconds": 2.25974025974026,
+              "summer_positive_D_dyad_fraction": 0.01818181818181818,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": -0.0053391053391053395,
+                "N": 0.12568542568542568,
+                "O": 0.12034632034632034
+              },
+              "winter_mean_abs_recording_gap_seconds": 2.155844155844156,
+              "winter_minus_summer": {
+                "D": -0.005194805194805195,
+                "N": -0.011255411255411268,
+                "O": -0.016450216450216465
+              },
+              "winter_positive_D_dyad_fraction": 0.03636363636363636
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 1.0,
+              "seed": 3,
+              "source_year": 2019,
+              "summer": {
+                "D": -6.308085367188389e-20,
+                "N": 0.08961038961038961,
+                "O": 0.08961038961038961
+              },
+              "summer_mean_abs_recording_gap_seconds": 2.987012987012987,
+              "summer_positive_D_dyad_fraction": 0.03636363636363636,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": 0.00404040404040404,
+                "N": 0.06782106782106782,
+                "O": 0.07186147186147186
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.922077922077922,
+              "winter_minus_summer": {
+                "D": 0.00404040404040404,
+                "N": -0.02178932178932179,
+                "O": -0.01774891774891775
+              },
+              "winter_positive_D_dyad_fraction": 0.10909090909090909
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 0.5,
+              "seed": 3,
+              "source_year": 2019,
+              "summer": {
+                "D": -0.0015873015873015875,
+                "N": 0.04314574314574315,
+                "O": 0.04155844155844156
+              },
+              "summer_mean_abs_recording_gap_seconds": 2.987012987012987,
+              "summer_positive_D_dyad_fraction": 0.03636363636363636,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": 0.005483405483405483,
+                "N": 0.03088023088023088,
+                "O": 0.03636363636363636
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.922077922077922,
+              "winter_minus_summer": {
+                "D": 0.007070707070707071,
+                "N": -0.012265512265512268,
+                "O": -0.0051948051948051965
+              },
+              "winter_positive_D_dyad_fraction": 0.10909090909090909
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 2.0,
+              "seed": 3,
+              "source_year": 2019,
+              "summer": {
+                "D": -0.0012987012987012987,
+                "N": 0.13722943722943723,
+                "O": 0.13593073593073593
+              },
+              "summer_mean_abs_recording_gap_seconds": 2.987012987012987,
+              "summer_positive_D_dyad_fraction": 0.01818181818181818,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": -0.0053391053391053395,
+                "N": 0.13304473304473305,
+                "O": 0.1277056277056277
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.922077922077922,
+              "winter_minus_summer": {
+                "D": -0.00404040404040404,
+                "N": -0.00418470418470418,
+                "O": -0.008225108225108219
+              },
+              "winter_positive_D_dyad_fraction": 0.01818181818181818
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 1.0,
+              "seed": 4,
+              "source_year": 2019,
+              "summer": {
+                "D": -2.5232341468753557e-19,
+                "N": 0.09350649350649351,
+                "O": 0.0935064935064935
+              },
+              "summer_mean_abs_recording_gap_seconds": 2.5454545454545454,
+              "summer_positive_D_dyad_fraction": 0.07272727272727272,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": 0.0038961038961038952,
+                "N": 0.0632034632034632,
+                "O": 0.0670995670995671
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.5324675324675325,
+              "winter_minus_summer": {
+                "D": 0.0038961038961038957,
+                "N": -0.030303030303030304,
+                "O": -0.026406926406926393
+              },
+              "winter_positive_D_dyad_fraction": 0.14545454545454545
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 0.5,
+              "seed": 4,
+              "source_year": 2019,
+              "summer": {
+                "D": -0.0002886002886002888,
+                "N": 0.04011544011544012,
+                "O": 0.03982683982683982
+              },
+              "summer_mean_abs_recording_gap_seconds": 2.5454545454545454,
+              "summer_positive_D_dyad_fraction": 0.03636363636363636,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": 0.00404040404040404,
+                "N": 0.031024531024531024,
+                "O": 0.03506493506493506
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.5324675324675325,
+              "winter_minus_summer": {
+                "D": 0.004329004329004329,
+                "N": -0.009090909090909094,
+                "O": -0.004761904761904759
+              },
+              "winter_positive_D_dyad_fraction": 0.10909090909090909
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 2.0,
+              "seed": 4,
+              "source_year": 2019,
+              "summer": {
+                "D": 0.0005772005772005772,
+                "N": 0.1357864357864358,
+                "O": 0.13636363636363635
+              },
+              "summer_mean_abs_recording_gap_seconds": 2.5454545454545454,
+              "summer_positive_D_dyad_fraction": 0.03636363636363636,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": -0.005627705627705628,
+                "N": 0.13116883116883118,
+                "O": 0.12554112554112554
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.5324675324675325,
+              "winter_minus_summer": {
+                "D": -0.006204906204906205,
+                "N": -0.004617604617604604,
+                "O": -0.010822510822510817
+              },
+              "winter_positive_D_dyad_fraction": 0.07272727272727272
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 1.0,
+              "seed": 5,
+              "source_year": 2019,
+              "summer": {
+                "D": -0.0002886002886002891,
+                "N": 0.09466089466089467,
+                "O": 0.09437229437229437
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.1688311688311686,
+              "summer_positive_D_dyad_fraction": 0.01818181818181818,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": 0.004329004329004329,
+                "N": 0.06536796536796537,
+                "O": 0.06969696969696969
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.2467532467532467,
+              "winter_minus_summer": {
+                "D": 0.0046176046176046185,
+                "N": -0.0292929292929293,
+                "O": -0.024675324675324684
+              },
+              "winter_positive_D_dyad_fraction": 0.09090909090909091
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 0.5,
+              "seed": 5,
+              "source_year": 2019,
+              "summer": {
+                "D": 0.0007215007215007212,
+                "N": 0.04603174603174603,
+                "O": 0.04675324675324675
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.1688311688311686,
+              "summer_positive_D_dyad_fraction": 0.07272727272727272,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": 0.003751803751803752,
+                "N": 0.031746031746031744,
+                "O": 0.03549783549783549
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.2467532467532467,
+              "winter_minus_summer": {
+                "D": 0.0030303030303030307,
+                "N": -0.014285714285714284,
+                "O": -0.011255411255411255
+              },
+              "winter_positive_D_dyad_fraction": 0.10909090909090909
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 2.0,
+              "seed": 5,
+              "source_year": 2019,
+              "summer": {
+                "D": 0.0,
+                "N": 0.13593073593073593,
+                "O": 0.13593073593073593
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.1688311688311686,
+              "summer_positive_D_dyad_fraction": 0.03636363636363636,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": -0.0038961038961038965,
+                "N": 0.1277056277056277,
+                "O": 0.1238095238095238
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.2467532467532467,
+              "winter_minus_summer": {
+                "D": -0.0038961038961038965,
+                "N": -0.008225108225108219,
+                "O": -0.01212121212121213
+              },
+              "winter_positive_D_dyad_fraction": 0.03636363636363636
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 1.0,
+              "seed": 6,
+              "source_year": 2019,
+              "summer": {
+                "D": 0.0004329004329004325,
+                "N": 0.0922077922077922,
+                "O": 0.09264069264069263
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.246753246753247,
+              "summer_positive_D_dyad_fraction": 0.05454545454545454,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": 0.0047619047619047615,
+                "N": 0.0670995670995671,
+                "O": 0.07186147186147186
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.6363636363636365,
+              "winter_minus_summer": {
+                "D": 0.004329004329004329,
+                "N": -0.025108225108225093,
+                "O": -0.020779220779220772
+              },
+              "winter_positive_D_dyad_fraction": 0.10909090909090909
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 0.5,
+              "seed": 6,
+              "source_year": 2019,
+              "summer": {
+                "D": -0.00202020202020202,
+                "N": 0.042279942279942286,
+                "O": 0.04025974025974025
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.246753246753247,
+              "summer_positive_D_dyad_fraction": 0.0,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": 0.004761904761904762,
+                "N": 0.02987012987012987,
+                "O": 0.03463203463203463
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.6363636363636365,
+              "winter_minus_summer": {
+                "D": 0.0067821067821067825,
+                "N": -0.012409812409812416,
+                "O": -0.00562770562770562
+              },
+              "winter_positive_D_dyad_fraction": 0.10909090909090909
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 2.0,
+              "seed": 6,
+              "source_year": 2019,
+              "summer": {
+                "D": -0.0001443001443001443,
+                "N": 0.1378066378066378,
+                "O": 0.13766233766233765
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.246753246753247,
+              "summer_positive_D_dyad_fraction": 0.01818181818181818,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": -0.006204906204906205,
+                "N": 0.12741702741702743,
+                "O": 0.1212121212121212
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.6363636363636365,
+              "winter_minus_summer": {
+                "D": -0.0060606060606060615,
+                "N": -0.010389610389610365,
+                "O": -0.01645021645021645
+              },
+              "winter_positive_D_dyad_fraction": 0.01818181818181818
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 1.0,
+              "seed": 7,
+              "source_year": 2019,
+              "summer": {
+                "D": 0.0002886002886002883,
+                "N": 0.09105339105339105,
+                "O": 0.09134199134199134
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.2207792207792205,
+              "summer_positive_D_dyad_fraction": 0.03636363636363636,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": 0.0033189033189033193,
+                "N": 0.05858585858585859,
+                "O": 0.0619047619047619
+              },
+              "winter_mean_abs_recording_gap_seconds": 2.1298701298701297,
+              "winter_minus_summer": {
+                "D": 0.003030303030303031,
+                "N": -0.032467532467532464,
+                "O": -0.029437229437229435
+              },
+              "winter_positive_D_dyad_fraction": 0.09090909090909091
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 0.5,
+              "seed": 7,
+              "source_year": 2019,
+              "summer": {
+                "D": -0.0002886002886002891,
+                "N": 0.04487734487734488,
+                "O": 0.044588744588744594
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.2207792207792205,
+              "summer_positive_D_dyad_fraction": 0.05454545454545454,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": 0.0027417027417027417,
+                "N": 0.031024531024531024,
+                "O": 0.033766233766233764
+              },
+              "winter_mean_abs_recording_gap_seconds": 2.1298701298701297,
+              "winter_minus_summer": {
+                "D": 0.0030303030303030307,
+                "N": -0.013852813852813853,
+                "O": -0.01082251082251083
+              },
+              "winter_positive_D_dyad_fraction": 0.09090909090909091
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 2.0,
+              "seed": 7,
+              "source_year": 2019,
+              "summer": {
+                "D": 0.0001443001443001443,
+                "N": 0.13362193362193361,
+                "O": 0.13376623376623376
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.2207792207792205,
+              "summer_positive_D_dyad_fraction": 0.01818181818181818,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": -0.005194805194805196,
+                "N": 0.12251082251082251,
+                "O": 0.11731601731601732
+              },
+              "winter_mean_abs_recording_gap_seconds": 2.1298701298701297,
+              "winter_minus_summer": {
+                "D": -0.0053391053391053395,
+                "N": -0.0111111111111111,
+                "O": -0.016450216450216437
+              },
+              "winter_positive_D_dyad_fraction": 0.03636363636363636
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 1.0,
+              "seed": 8,
+              "source_year": 2019,
+              "summer": {
+                "D": 0.0007215007215007215,
+                "N": 0.09148629148629149,
+                "O": 0.0922077922077922
+              },
+              "summer_mean_abs_recording_gap_seconds": 2.8051948051948052,
+              "summer_positive_D_dyad_fraction": 0.05454545454545454,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": 0.0025974025974025974,
+                "N": 0.06536796536796537,
+                "O": 0.06796536796536796
+              },
+              "winter_mean_abs_recording_gap_seconds": 2.5974025974025974,
+              "winter_minus_summer": {
+                "D": 0.001875901875901876,
+                "N": -0.026118326118326124,
+                "O": -0.024242424242424232
+              },
+              "winter_positive_D_dyad_fraction": 0.07272727272727272
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 0.5,
+              "seed": 8,
+              "source_year": 2019,
+              "summer": {
+                "D": -0.0008658008658008662,
+                "N": 0.04069264069264069,
+                "O": 0.03982683982683982
+              },
+              "summer_mean_abs_recording_gap_seconds": 2.8051948051948052,
+              "summer_positive_D_dyad_fraction": 0.05454545454545454,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": 0.003607503607503608,
+                "N": 0.02756132756132756,
+                "O": 0.03116883116883117
+              },
+              "winter_mean_abs_recording_gap_seconds": 2.5974025974025974,
+              "winter_minus_summer": {
+                "D": 0.004473304473304475,
+                "N": -0.01313131313131313,
+                "O": -0.008658008658008653
+              },
+              "winter_positive_D_dyad_fraction": 0.09090909090909091
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 2.0,
+              "seed": 8,
+              "source_year": 2019,
+              "summer": {
+                "D": -0.0007215007215007215,
+                "N": 0.13665223665223666,
+                "O": 0.13593073593073593
+              },
+              "summer_mean_abs_recording_gap_seconds": 2.8051948051948052,
+              "summer_positive_D_dyad_fraction": 0.0,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": -0.004473304473304474,
+                "N": 0.12655122655122655,
+                "O": 0.12207792207792208
+              },
+              "winter_mean_abs_recording_gap_seconds": 2.5974025974025974,
+              "winter_minus_summer": {
+                "D": -0.0037518037518037522,
+                "N": -0.01010101010101011,
+                "O": -0.013852813852813853
+              },
+              "winter_positive_D_dyad_fraction": 0.0
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 1.0,
+              "seed": 9,
+              "source_year": 2019,
+              "summer": {
+                "D": 0.0017316017316017312,
+                "N": 0.09393939393939395,
+                "O": 0.09567099567099567
+              },
+              "summer_mean_abs_recording_gap_seconds": 2.909090909090909,
+              "summer_positive_D_dyad_fraction": 0.05454545454545454,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": 0.002741702741702741,
+                "N": 0.06479076479076479,
+                "O": 0.06753246753246753
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.7922077922077921,
+              "winter_minus_summer": {
+                "D": 0.0010101010101010097,
+                "N": -0.02914862914862916,
+                "O": -0.028138528138528143
+              },
+              "winter_positive_D_dyad_fraction": 0.10909090909090909
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 0.5,
+              "seed": 9,
+              "source_year": 2019,
+              "summer": {
+                "D": -0.002308802308802309,
+                "N": 0.043001443001443,
+                "O": 0.04069264069264069
+              },
+              "summer_mean_abs_recording_gap_seconds": 2.909090909090909,
+              "summer_positive_D_dyad_fraction": 0.0,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": 0.0047619047619047615,
+                "N": 0.02727272727272727,
+                "O": 0.032034632034632034
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.7922077922077921,
+              "winter_minus_summer": {
+                "D": 0.00707070707070707,
+                "N": -0.015728715728715727,
+                "O": -0.008658008658008656
+              },
+              "winter_positive_D_dyad_fraction": 0.10909090909090909
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 2.0,
+              "seed": 9,
+              "source_year": 2019,
+              "summer": {
+                "D": -0.0001443001443001443,
+                "N": 0.1365079365079365,
+                "O": 0.13636363636363635
+              },
+              "summer_mean_abs_recording_gap_seconds": 2.909090909090909,
+              "summer_positive_D_dyad_fraction": 0.01818181818181818,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": -0.0024531024531024535,
+                "N": 0.12323232323232323,
+                "O": 0.12077922077922076
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.7922077922077921,
+              "winter_minus_summer": {
+                "D": -0.0023088023088023092,
+                "N": -0.01327561327561326,
+                "O": -0.01558441558441559
+              },
+              "winter_positive_D_dyad_fraction": 0.07272727272727272
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 1.0,
+              "seed": 10,
+              "source_year": 2019,
+              "summer": {
+                "D": 0.001875901875901876,
+                "N": 0.09509379509379509,
+                "O": 0.09696969696969698
+              },
+              "summer_mean_abs_recording_gap_seconds": 2.935064935064935,
+              "summer_positive_D_dyad_fraction": 0.05454545454545454,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": 0.0025974025974025974,
+                "N": 0.05887445887445888,
+                "O": 0.06147186147186147
+              },
+              "winter_mean_abs_recording_gap_seconds": 2.155844155844156,
+              "winter_minus_summer": {
+                "D": 0.0007215007215007215,
+                "N": -0.036219336219336214,
+                "O": -0.035497835497835514
+              },
+              "winter_positive_D_dyad_fraction": 0.09090909090909091
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 0.5,
+              "seed": 10,
+              "source_year": 2019,
+              "summer": {
+                "D": -0.0014430014430014434,
+                "N": 0.0455988455988456,
+                "O": 0.04415584415584415
+              },
+              "summer_mean_abs_recording_gap_seconds": 2.935064935064935,
+              "summer_positive_D_dyad_fraction": 0.05454545454545454,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": 0.0030303030303030303,
+                "N": 0.025974025974025976,
+                "O": 0.029004329004329
+              },
+              "winter_mean_abs_recording_gap_seconds": 2.155844155844156,
+              "winter_minus_summer": {
+                "D": 0.004473304473304474,
+                "N": -0.01962481962481962,
+                "O": -0.015151515151515148
+              },
+              "winter_positive_D_dyad_fraction": 0.09090909090909091
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 2.0,
+              "seed": 10,
+              "source_year": 2019,
+              "summer": {
+                "D": 0.0004329004329004329,
+                "N": 0.13852813852813853,
+                "O": 0.13896103896103898
+              },
+              "summer_mean_abs_recording_gap_seconds": 2.935064935064935,
+              "summer_positive_D_dyad_fraction": 0.03636363636363636,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": -0.005194805194805196,
+                "N": 0.1251082251082251,
+                "O": 0.1199134199134199
+              },
+              "winter_mean_abs_recording_gap_seconds": 2.155844155844156,
+              "winter_minus_summer": {
+                "D": -0.005627705627705629,
+                "N": -0.013419913419913415,
+                "O": -0.019047619047619077
+              },
+              "winter_positive_D_dyad_fraction": 0.05454545454545454
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 1.0,
+              "seed": 11,
+              "source_year": 2019,
+              "summer": {
+                "D": 0.00043290043290043306,
+                "N": 0.09610389610389611,
+                "O": 0.09653679653679653
+              },
+              "summer_mean_abs_recording_gap_seconds": 2.857142857142857,
+              "summer_positive_D_dyad_fraction": 0.03636363636363636,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": 0.003318903318903319,
+                "N": 0.06637806637806638,
+                "O": 0.06969696969696969
+              },
+              "winter_mean_abs_recording_gap_seconds": 2.077922077922078,
+              "winter_minus_summer": {
+                "D": 0.002886002886002886,
+                "N": -0.029725829725829725,
+                "O": -0.026839826839826844
+              },
+              "winter_positive_D_dyad_fraction": 0.09090909090909091
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 0.5,
+              "seed": 11,
+              "source_year": 2019,
+              "summer": {
+                "D": -0.0010101010101010105,
+                "N": 0.03823953823953824,
+                "O": 0.03722943722943722
+              },
+              "summer_mean_abs_recording_gap_seconds": 2.857142857142857,
+              "summer_positive_D_dyad_fraction": 0.05454545454545454,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": 0.005483405483405482,
+                "N": 0.025252525252525252,
+                "O": 0.030735930735930735
+              },
+              "winter_mean_abs_recording_gap_seconds": 2.077922077922078,
+              "winter_minus_summer": {
+                "D": 0.006493506493506492,
+                "N": -0.012987012987012988,
+                "O": -0.006493506493506489
+              },
+              "winter_positive_D_dyad_fraction": 0.07272727272727272
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 2.0,
+              "seed": 11,
+              "source_year": 2019,
+              "summer": {
+                "D": 0.0004329004329004328,
+                "N": 0.1367965367965368,
+                "O": 0.13722943722943723
+              },
+              "summer_mean_abs_recording_gap_seconds": 2.857142857142857,
+              "summer_positive_D_dyad_fraction": 0.05454545454545454,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": -0.00404040404040404,
+                "N": 0.13564213564213565,
+                "O": 0.1316017316017316
+              },
+              "winter_mean_abs_recording_gap_seconds": 2.077922077922078,
+              "winter_minus_summer": {
+                "D": -0.004473304473304473,
+                "N": -0.0011544011544011579,
+                "O": -0.00562770562770562
+              },
+              "winter_positive_D_dyad_fraction": 0.05454545454545454
+            }
+          ],
+          "max_abs_timestamp_gap_seconds": 900,
+          "n_animal_ids_aggregated": 11,
+          "n_clock_matched_dyads": 55,
+          "status": "DESCRIPTIVE_NEAR_SYNCHRONOUS_GPS_NEARBY_PROXY"
+        },
+        {
+          "grid_free_geodesic_seed_results": [
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 1.0,
+              "seed": 0,
+              "source_year": 2019,
+              "summer": {
+                "D": -0.0007215007215007217,
+                "N": 0.09033189033189033,
+                "O": 0.08961038961038961
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.1168831168831166,
+              "summer_positive_D_dyad_fraction": 0.01818181818181818,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": 0.0030303030303030303,
+                "N": 0.0645021645021645,
+                "O": 0.06753246753246754
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.5584415584415583,
+              "winter_minus_summer": {
+                "D": 0.003751803751803752,
+                "N": -0.025829725829725828,
+                "O": -0.02207792207792207
+              },
+              "winter_positive_D_dyad_fraction": 0.07272727272727272
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 0.5,
+              "seed": 0,
+              "source_year": 2019,
+              "summer": {
+                "D": -0.00043290043290043366,
+                "N": 0.04285714285714286,
+                "O": 0.04242424242424243
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.1168831168831166,
+              "summer_positive_D_dyad_fraction": 0.01818181818181818,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": 0.005627705627705627,
+                "N": 0.029004329004329005,
+                "O": 0.03463203463203463
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.5584415584415583,
+              "winter_minus_summer": {
+                "D": 0.006060606060606061,
+                "N": -0.013852813852813853,
+                "O": -0.007792207792207795
+              },
+              "winter_positive_D_dyad_fraction": 0.09090909090909091
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 2.0,
+              "seed": 0,
+              "source_year": 2019,
+              "summer": {
+                "D": 0.0005772005772005772,
+                "N": 0.13665223665223666,
+                "O": 0.13722943722943723
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.1168831168831166,
+              "summer_positive_D_dyad_fraction": 0.07272727272727272,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": -0.0024531024531024535,
+                "N": 0.12886002886002887,
+                "O": 0.1264069264069264
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.5584415584415583,
+              "winter_minus_summer": {
+                "D": -0.0030303030303030307,
+                "N": -0.007792207792207795,
+                "O": -0.010822510822510817
+              },
+              "winter_positive_D_dyad_fraction": 0.05454545454545454
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 1.0,
+              "seed": 1,
+              "source_year": 2019,
+              "summer": {
+                "D": -0.00043290043290043317,
+                "N": 0.09567099567099567,
+                "O": 0.09523809523809523
+              },
+              "summer_mean_abs_recording_gap_seconds": 2.623376623376623,
+              "summer_positive_D_dyad_fraction": 0.03636363636363636,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": 0.00202020202020202,
+                "N": 0.05815295815295815,
+                "O": 0.06017316017316017
+              },
+              "winter_mean_abs_recording_gap_seconds": 2.103896103896104,
+              "winter_minus_summer": {
+                "D": 0.0024531024531024535,
+                "N": -0.03751803751803752,
+                "O": -0.03506493506493506
+              },
+              "winter_positive_D_dyad_fraction": 0.09090909090909091
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 0.5,
+              "seed": 1,
+              "source_year": 2019,
+              "summer": {
+                "D": 0.0007215007215007212,
+                "N": 0.03953823953823953,
+                "O": 0.04025974025974026
+              },
+              "summer_mean_abs_recording_gap_seconds": 2.623376623376623,
+              "summer_positive_D_dyad_fraction": 0.03636363636363636,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": 0.0036075036075036075,
+                "N": 0.024098124098124098,
+                "O": 0.027705627705627706
+              },
+              "winter_mean_abs_recording_gap_seconds": 2.103896103896104,
+              "winter_minus_summer": {
+                "D": 0.0028860028860028864,
+                "N": -0.015440115440115434,
+                "O": -0.012554112554112554
+              },
+              "winter_positive_D_dyad_fraction": 0.07272727272727272
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 2.0,
+              "seed": 1,
+              "source_year": 2019,
+              "summer": {
+                "D": -0.0001443001443001443,
+                "N": 0.13520923520923522,
+                "O": 0.13506493506493508
+              },
+              "summer_mean_abs_recording_gap_seconds": 2.623376623376623,
+              "summer_positive_D_dyad_fraction": 0.01818181818181818,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": -0.004040404040404041,
+                "N": 0.12568542568542568,
+                "O": 0.12164502164502165
+              },
+              "winter_mean_abs_recording_gap_seconds": 2.103896103896104,
+              "winter_minus_summer": {
+                "D": -0.003896103896103897,
+                "N": -0.009523809523809545,
+                "O": -0.013419913419913429
+              },
+              "winter_positive_D_dyad_fraction": 0.03636363636363636
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 1.0,
+              "seed": 2,
+              "source_year": 2019,
+              "summer": {
+                "D": -0.0001443001443001446,
+                "N": 0.09278499278499279,
+                "O": 0.09264069264069265
+              },
+              "summer_mean_abs_recording_gap_seconds": 2.623376623376623,
+              "summer_positive_D_dyad_fraction": 0.05454545454545454,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": 0.0027417027417027417,
+                "N": 0.0647907647907648,
+                "O": 0.06753246753246753
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.844155844155844,
+              "winter_minus_summer": {
+                "D": 0.0028860028860028864,
+                "N": -0.027994227994227988,
+                "O": -0.02510822510822512
+              },
+              "winter_positive_D_dyad_fraction": 0.09090909090909091
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 0.5,
+              "seed": 2,
+              "source_year": 2019,
+              "summer": {
+                "D": -0.00101010101010101,
+                "N": 0.0455988455988456,
+                "O": 0.044588744588744594
+              },
+              "summer_mean_abs_recording_gap_seconds": 2.623376623376623,
+              "summer_positive_D_dyad_fraction": 0.05454545454545454,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": 0.004184704184704184,
+                "N": 0.025685425685425683,
+                "O": 0.02987012987012987
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.844155844155844,
+              "winter_minus_summer": {
+                "D": 0.005194805194805195,
+                "N": -0.019913419913419914,
+                "O": -0.014718614718614725
+              },
+              "winter_positive_D_dyad_fraction": 0.09090909090909091
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 2.0,
+              "seed": 2,
+              "source_year": 2019,
+              "summer": {
+                "D": 0.0004329004329004328,
+                "N": 0.1367965367965368,
+                "O": 0.13722943722943723
+              },
+              "summer_mean_abs_recording_gap_seconds": 2.623376623376623,
+              "summer_positive_D_dyad_fraction": 0.03636363636363636,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": -0.005050505050505051,
+                "N": 0.13145743145743147,
+                "O": 0.1264069264069264
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.844155844155844,
+              "winter_minus_summer": {
+                "D": -0.005483405483405483,
+                "N": -0.005339105339105338,
+                "O": -0.010822510822510817
+              },
+              "winter_positive_D_dyad_fraction": 0.0
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 1.0,
+              "seed": 3,
+              "source_year": 2019,
+              "summer": {
+                "D": 0.0007215007215007213,
+                "N": 0.09624819624819625,
+                "O": 0.09696969696969697
+              },
+              "summer_mean_abs_recording_gap_seconds": 2.8051948051948052,
+              "summer_positive_D_dyad_fraction": 0.05454545454545454,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": 0.004329004329004329,
+                "N": 0.06147186147186147,
+                "O": 0.0658008658008658
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.6623376623376624,
+              "winter_minus_summer": {
+                "D": 0.003607503607503608,
+                "N": -0.03477633477633478,
+                "O": -0.031168831168831165
+              },
+              "winter_positive_D_dyad_fraction": 0.12727272727272726
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 0.5,
+              "seed": 3,
+              "source_year": 2019,
+              "summer": {
+                "D": -0.0002886002886002892,
+                "N": 0.04314574314574315,
+                "O": 0.04285714285714286
+              },
+              "summer_mean_abs_recording_gap_seconds": 2.8051948051948052,
+              "summer_positive_D_dyad_fraction": 0.01818181818181818,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": 0.005916305916305916,
+                "N": 0.028282828282828285,
+                "O": 0.0341991341991342
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.6623376623376624,
+              "winter_minus_summer": {
+                "D": 0.006204906204906205,
+                "N": -0.014862914862914862,
+                "O": -0.008658008658008656
+              },
+              "winter_positive_D_dyad_fraction": 0.09090909090909091
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 2.0,
+              "seed": 3,
+              "source_year": 2019,
+              "summer": {
+                "D": 0.0007215007215007215,
+                "N": 0.13953823953823954,
+                "O": 0.14025974025974025
+              },
+              "summer_mean_abs_recording_gap_seconds": 2.8051948051948052,
+              "summer_positive_D_dyad_fraction": 0.05454545454545454,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": -0.004906204906204907,
+                "N": 0.13131313131313133,
+                "O": 0.1264069264069264
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.6623376623376624,
+              "winter_minus_summer": {
+                "D": -0.005627705627705629,
+                "N": -0.008225108225108219,
+                "O": -0.013852813852813839
+              },
+              "winter_positive_D_dyad_fraction": 0.03636363636363636
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 1.0,
+              "seed": 4,
+              "source_year": 2019,
+              "summer": {
+                "D": -0.0015873015873015873,
+                "N": 0.09725829725829727,
+                "O": 0.09567099567099567
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.012987012987013,
+              "summer_positive_D_dyad_fraction": 0.01818181818181818,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": 0.0033189033189033193,
+                "N": 0.06118326118326119,
+                "O": 0.0645021645021645
+              },
+              "winter_mean_abs_recording_gap_seconds": 2.1298701298701297,
+              "winter_minus_summer": {
+                "D": 0.004906204906204907,
+                "N": -0.03607503607503608,
+                "O": -0.031168831168831165
+              },
+              "winter_positive_D_dyad_fraction": 0.09090909090909091
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 0.5,
+              "seed": 4,
+              "source_year": 2019,
+              "summer": {
+                "D": -0.001298701298701299,
+                "N": 0.04675324675324675,
+                "O": 0.045454545454545456
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.012987012987013,
+              "summer_positive_D_dyad_fraction": 0.01818181818181818,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": 0.005194805194805195,
+                "N": 0.02987012987012987,
+                "O": 0.03506493506493506
+              },
+              "winter_mean_abs_recording_gap_seconds": 2.1298701298701297,
+              "winter_minus_summer": {
+                "D": 0.006493506493506494,
+                "N": -0.01688311688311688,
+                "O": -0.010389610389610393
+              },
+              "winter_positive_D_dyad_fraction": 0.09090909090909091
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 2.0,
+              "seed": 4,
+              "source_year": 2019,
+              "summer": {
+                "D": -0.00101010101010101,
+                "N": 0.13737373737373737,
+                "O": 0.13636363636363635
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.012987012987013,
+              "summer_positive_D_dyad_fraction": 0.01818181818181818,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": -0.0018759018759018766,
+                "N": 0.12395382395382396,
+                "O": 0.12207792207792208
+              },
+              "winter_mean_abs_recording_gap_seconds": 2.1298701298701297,
+              "winter_minus_summer": {
+                "D": -0.0008658008658008665,
+                "N": -0.013419913419913415,
+                "O": -0.014285714285714277
+              },
+              "winter_positive_D_dyad_fraction": 0.07272727272727272
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 1.0,
+              "seed": 5,
+              "source_year": 2019,
+              "summer": {
+                "D": 0.0015873015873015869,
+                "N": 0.09451659451659453,
+                "O": 0.09610389610389611
+              },
+              "summer_mean_abs_recording_gap_seconds": 2.753246753246753,
+              "summer_positive_D_dyad_fraction": 0.07272727272727272,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": 0.0034632034632034636,
+                "N": 0.0606060606060606,
+                "O": 0.06406926406926407
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.974025974025974,
+              "winter_minus_summer": {
+                "D": 0.0018759018759018768,
+                "N": -0.033910533910533926,
+                "O": -0.03203463203463204
+              },
+              "winter_positive_D_dyad_fraction": 0.10909090909090909
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 0.5,
+              "seed": 5,
+              "source_year": 2019,
+              "summer": {
+                "D": 0.000865800865800866,
+                "N": 0.044588744588744594,
+                "O": 0.045454545454545456
+              },
+              "summer_mean_abs_recording_gap_seconds": 2.753246753246753,
+              "summer_positive_D_dyad_fraction": 0.07272727272727272,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": 0.002308802308802309,
+                "N": 0.026695526695526696,
+                "O": 0.029004329004329
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.974025974025974,
+              "winter_minus_summer": {
+                "D": 0.0014430014430014428,
+                "N": -0.0178932178932179,
+                "O": -0.016450216450216455
+              },
+              "winter_positive_D_dyad_fraction": 0.05454545454545454
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 2.0,
+              "seed": 5,
+              "source_year": 2019,
+              "summer": {
+                "D": 0.0004329004329004329,
+                "N": 0.13982683982683983,
+                "O": 0.14025974025974025
+              },
+              "summer_mean_abs_recording_gap_seconds": 2.753246753246753,
+              "summer_positive_D_dyad_fraction": 0.03636363636363636,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": -0.005050505050505051,
+                "N": 0.1227994227994228,
+                "O": 0.11774891774891776
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.974025974025974,
+              "winter_minus_summer": {
+                "D": -0.005483405483405484,
+                "N": -0.01702741702741703,
+                "O": -0.022510822510822495
+              },
+              "winter_positive_D_dyad_fraction": 0.03636363636363636
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 1.0,
+              "seed": 6,
+              "source_year": 2019,
+              "summer": {
+                "D": 0.0011544011544011546,
+                "N": 0.09451659451659453,
+                "O": 0.09567099567099567
+              },
+              "summer_mean_abs_recording_gap_seconds": 2.8311688311688314,
+              "summer_positive_D_dyad_fraction": 0.05454545454545454,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": 0.002886002886002886,
+                "N": 0.05988455988455989,
+                "O": 0.06277056277056277
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.8961038961038963,
+              "winter_minus_summer": {
+                "D": 0.0017316017316017314,
+                "N": -0.03463203463203464,
+                "O": -0.0329004329004329
+              },
+              "winter_positive_D_dyad_fraction": 0.12727272727272726
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 0.5,
+              "seed": 6,
+              "source_year": 2019,
+              "summer": {
+                "D": 0.00028860028860028865,
+                "N": 0.04126984126984127,
+                "O": 0.04155844155844156
+              },
+              "summer_mean_abs_recording_gap_seconds": 2.8311688311688314,
+              "summer_positive_D_dyad_fraction": 0.05454545454545454,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": 0.00202020202020202,
+                "N": 0.027417027417027416,
+                "O": 0.02943722943722944
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.8961038961038963,
+              "winter_minus_summer": {
+                "D": 0.0017316017316017316,
+                "N": -0.013852813852813853,
+                "O": -0.01212121212121212
+              },
+              "winter_positive_D_dyad_fraction": 0.09090909090909091
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 2.0,
+              "seed": 6,
+              "source_year": 2019,
+              "summer": {
+                "D": 0.0007215007215007215,
+                "N": 0.1365079365079365,
+                "O": 0.13722943722943723
+              },
+              "summer_mean_abs_recording_gap_seconds": 2.8311688311688314,
+              "summer_positive_D_dyad_fraction": 0.05454545454545454,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": -0.0011544011544011548,
+                "N": 0.11976911976911976,
+                "O": 0.11861471861471862
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.8961038961038963,
+              "winter_minus_summer": {
+                "D": -0.0018759018759018763,
+                "N": -0.016738816738816734,
+                "O": -0.01861471861471861
+              },
+              "winter_positive_D_dyad_fraction": 0.10909090909090909
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 1.0,
+              "seed": 7,
+              "source_year": 2019,
+              "summer": {
+                "D": 0.0005772005772005769,
+                "N": 0.0821067821067821,
+                "O": 0.08268398268398268
+              },
+              "summer_mean_abs_recording_gap_seconds": 2.8831168831168834,
+              "summer_positive_D_dyad_fraction": 0.05454545454545454,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": 0.003751803751803752,
+                "N": 0.0681096681096681,
+                "O": 0.07186147186147186
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.8181818181818181,
+              "winter_minus_summer": {
+                "D": 0.003174603174603175,
+                "N": -0.013997113997113994,
+                "O": -0.010822510822510817
+              },
+              "winter_positive_D_dyad_fraction": 0.10909090909090909
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 0.5,
+              "seed": 7,
+              "source_year": 2019,
+              "summer": {
+                "D": -0.0024531024531024535,
+                "N": 0.031024531024531024,
+                "O": 0.02857142857142857
+              },
+              "summer_mean_abs_recording_gap_seconds": 2.8831168831168834,
+              "summer_positive_D_dyad_fraction": 0.01818181818181818,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": 0.002886002886002886,
+                "N": 0.030447330447330445,
+                "O": 0.03333333333333333
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.8181818181818181,
+              "winter_minus_summer": {
+                "D": 0.0053391053391053395,
+                "N": -0.0005772005772005789,
+                "O": 0.004761904761904762
+              },
+              "winter_positive_D_dyad_fraction": 0.07272727272727272
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 2.0,
+              "seed": 7,
+              "source_year": 2019,
+              "summer": {
+                "D": -0.0005772005772005772,
+                "N": 0.13001443001443003,
+                "O": 0.12943722943722943
+              },
+              "summer_mean_abs_recording_gap_seconds": 2.8831168831168834,
+              "summer_positive_D_dyad_fraction": 0.0,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": -0.0053391053391053395,
+                "N": 0.12481962481962482,
+                "O": 0.11948051948051948
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.8181818181818181,
+              "winter_minus_summer": {
+                "D": -0.004761904761904762,
+                "N": -0.00519480519480521,
+                "O": -0.009956709956709955
+              },
+              "winter_positive_D_dyad_fraction": 0.01818181818181818
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 1.0,
+              "seed": 8,
+              "source_year": 2019,
+              "summer": {
+                "D": 0.0021645021645021645,
+                "N": 0.08225108225108226,
+                "O": 0.08441558441558442
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.012987012987013,
+              "summer_positive_D_dyad_fraction": 0.03636363636363636,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": 0.004617604617604618,
+                "N": 0.06334776334776335,
+                "O": 0.06796536796536796
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.7922077922077921,
+              "winter_minus_summer": {
+                "D": 0.002453102453102453,
+                "N": -0.018903318903318908,
+                "O": -0.01645021645021645
+              },
+              "winter_positive_D_dyad_fraction": 0.10909090909090909
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 0.5,
+              "seed": 8,
+              "source_year": 2019,
+              "summer": {
+                "D": -0.001875901875901876,
+                "N": 0.03477633477633477,
+                "O": 0.0329004329004329
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.012987012987013,
+              "summer_positive_D_dyad_fraction": 0.03636363636363636,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": 0.004761904761904762,
+                "N": 0.029004329004329,
+                "O": 0.033766233766233764
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.7922077922077921,
+              "winter_minus_summer": {
+                "D": 0.006637806637806639,
+                "N": -0.005772005772005772,
+                "O": 0.0008658008658008615
+              },
+              "winter_positive_D_dyad_fraction": 0.09090909090909091
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 2.0,
+              "seed": 8,
+              "source_year": 2019,
+              "summer": {
+                "D": 0.0007215007215007216,
+                "N": 0.12784992784992785,
+                "O": 0.12857142857142856
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.012987012987013,
+              "summer_positive_D_dyad_fraction": 0.03636363636363636,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": -0.0024531024531024535,
+                "N": 0.12496392496392496,
+                "O": 0.12251082251082251
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.7922077922077921,
+              "winter_minus_summer": {
+                "D": -0.003174603174603175,
+                "N": -0.0028860028860028947,
+                "O": -0.006060606060606044
+              },
+              "winter_positive_D_dyad_fraction": 0.05454545454545454
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 1.0,
+              "seed": 9,
+              "source_year": 2019,
+              "summer": {
+                "D": -0.0015873015873015875,
+                "N": 0.09336219336219335,
+                "O": 0.09177489177489177
+              },
+              "summer_mean_abs_recording_gap_seconds": 2.857142857142857,
+              "summer_positive_D_dyad_fraction": 0.0,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": 0.004184704184704184,
+                "N": 0.05945165945165945,
+                "O": 0.06363636363636363
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.5324675324675325,
+              "winter_minus_summer": {
+                "D": 0.005772005772005772,
+                "N": -0.033910533910533905,
+                "O": -0.028138528138528143
+              },
+              "winter_positive_D_dyad_fraction": 0.07272727272727272
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 0.5,
+              "seed": 9,
+              "source_year": 2019,
+              "summer": {
+                "D": -0.0002886002886002889,
+                "N": 0.04098124098124098,
+                "O": 0.04069264069264069
+              },
+              "summer_mean_abs_recording_gap_seconds": 2.857142857142857,
+              "summer_positive_D_dyad_fraction": 0.03636363636363636,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": 0.0038961038961038965,
+                "N": 0.025541125541125538,
+                "O": 0.02943722943722944
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.5324675324675325,
+              "winter_minus_summer": {
+                "D": 0.004184704184704185,
+                "N": -0.015440115440115441,
+                "O": -0.011255411255411251
+              },
+              "winter_positive_D_dyad_fraction": 0.07272727272727272
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 2.0,
+              "seed": 9,
+              "source_year": 2019,
+              "summer": {
+                "D": -0.0011544011544011544,
+                "N": 0.13968253968253969,
+                "O": 0.13852813852813853
+              },
+              "summer_mean_abs_recording_gap_seconds": 2.857142857142857,
+              "summer_positive_D_dyad_fraction": 0.0,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": -0.005627705627705628,
+                "N": 0.1251082251082251,
+                "O": 0.11948051948051948
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.5324675324675325,
+              "winter_minus_summer": {
+                "D": -0.004473304473304474,
+                "N": -0.014574314574314573,
+                "O": -0.01904761904761905
+              },
+              "winter_positive_D_dyad_fraction": 0.07272727272727272
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 1.0,
+              "seed": 10,
+              "source_year": 2019,
+              "summer": {
+                "D": 0.0014430014430014423,
+                "N": 0.09422799422799423,
+                "O": 0.09567099567099567
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.1168831168831166,
+              "summer_positive_D_dyad_fraction": 0.07272727272727272,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": 0.0007215007215007212,
+                "N": 0.06464646464646465,
+                "O": 0.06536796536796537
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.8961038961038963,
+              "winter_minus_summer": {
+                "D": -0.0007215007215007212,
+                "N": -0.029581529581529584,
+                "O": -0.030303030303030304
+              },
+              "winter_positive_D_dyad_fraction": 0.07272727272727272
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 0.5,
+              "seed": 10,
+              "source_year": 2019,
+              "summer": {
+                "D": -0.00202020202020202,
+                "N": 0.042279942279942286,
+                "O": 0.04025974025974026
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.1168831168831166,
+              "summer_positive_D_dyad_fraction": 0.01818181818181818,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": 0.006060606060606061,
+                "N": 0.02987012987012987,
+                "O": 0.03593073593073593
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.8961038961038963,
+              "winter_minus_summer": {
+                "D": 0.00808080808080808,
+                "N": -0.012409812409812416,
+                "O": -0.004329004329004328
+              },
+              "winter_positive_D_dyad_fraction": 0.09090909090909091
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 2.0,
+              "seed": 10,
+              "source_year": 2019,
+              "summer": {
+                "D": -0.0005772005772005772,
+                "N": 0.13997113997113997,
+                "O": 0.1393939393939394
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.1168831168831166,
+              "summer_positive_D_dyad_fraction": 0.03636363636363636,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": -0.00043290043290043333,
+                "N": 0.12727272727272726,
+                "O": 0.12683982683982684
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.8961038961038963,
+              "winter_minus_summer": {
+                "D": 0.00014430014430014387,
+                "N": -0.012698412698412709,
+                "O": -0.012554112554112568
+              },
+              "winter_positive_D_dyad_fraction": 0.09090909090909091
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 1.0,
+              "seed": 11,
+              "source_year": 2019,
+              "summer": {
+                "D": -0.00014430014430014465,
+                "N": 0.09624819624819625,
+                "O": 0.09610389610389611
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.246753246753247,
+              "summer_positive_D_dyad_fraction": 0.05454545454545454,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": 0.003751803751803751,
+                "N": 0.06681096681096681,
+                "O": 0.07056277056277056
+              },
+              "winter_mean_abs_recording_gap_seconds": 2.077922077922078,
+              "winter_minus_summer": {
+                "D": 0.0038961038961038957,
+                "N": -0.029437229437229442,
+                "O": -0.025541125541125545
+              },
+              "winter_positive_D_dyad_fraction": 0.09090909090909091
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 0.5,
+              "seed": 11,
+              "source_year": 2019,
+              "summer": {
+                "D": -0.0010101010101010108,
+                "N": 0.04603174603174603,
+                "O": 0.045021645021645025
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.246753246753247,
+              "summer_positive_D_dyad_fraction": 0.03636363636363636,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": 0.005627705627705628,
+                "N": 0.02683982683982684,
+                "O": 0.032467532467532464
+              },
+              "winter_mean_abs_recording_gap_seconds": 2.077922077922078,
+              "winter_minus_summer": {
+                "D": 0.006637806637806639,
+                "N": -0.019191919191919187,
+                "O": -0.01255411255411256
+              },
+              "winter_positive_D_dyad_fraction": 0.09090909090909091
+            },
+            {
+              "n_matched_dyads": 55,
+              "n_selected_direct_fix_pairs": 4620,
+              "n_selected_dyad_dates": 1540,
+              "radius_km": 2.0,
+              "seed": 11,
+              "source_year": 2019,
+              "summer": {
+                "D": -0.0005772005772005772,
+                "N": 0.13823953823953825,
+                "O": 0.13766233766233765
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.246753246753247,
+              "summer_positive_D_dyad_fraction": 0.0,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": -0.004184704184704185,
+                "N": 0.1292929292929293,
+                "O": 0.1251082251082251
+              },
+              "winter_mean_abs_recording_gap_seconds": 2.077922077922078,
+              "winter_minus_summer": {
+                "D": -0.003607503607503608,
+                "N": -0.008946608946608953,
+                "O": -0.01255411255411254
+              },
+              "winter_positive_D_dyad_fraction": 0.09090909090909091
+            }
+          ],
+          "max_abs_timestamp_gap_seconds": 1800,
+          "n_animal_ids_aggregated": 11,
+          "n_clock_matched_dyads": 55,
+          "status": "DESCRIPTIVE_NEAR_SYNCHRONOUS_GPS_NEARBY_PROXY"
+        }
+      ],
+      "year": 2019
+    },
+    {
+      "n_original_source_geographic_dyads": 205,
+      "time_tolerance_results": [
+        {
+          "grid_free_geodesic_seed_results": [
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 1.0,
+              "seed": 0,
+              "source_year": 2020,
+              "summer": {
+                "D": 7.742934572202866e-05,
+                "N": 0.09225706542779713,
+                "O": 0.09233449477351915
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.4425087108013934,
+              "summer_positive_D_dyad_fraction": 0.05853658536585366,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": 0.0030197444831591173,
+                "N": 0.0667828106852497,
+                "O": 0.06980255516840883
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.4912891986062717,
+              "winter_minus_summer": {
+                "D": 0.0029423151374370887,
+                "N": -0.025474254742547428,
+                "O": -0.022531939605110324
+              },
+              "winter_positive_D_dyad_fraction": 0.07804878048780488
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 0.5,
+              "seed": 0,
+              "source_year": 2020,
+              "summer": {
+                "D": -0.0007355787843592724,
+                "N": 0.0348819202477739,
+                "O": 0.03414634146341464
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.4425087108013934,
+              "summer_positive_D_dyad_fraction": 0.03414634146341464,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": 0.002671312427409988,
+                "N": 0.02195121951219512,
+                "O": 0.02462253193960511
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.4912891986062717,
+              "winter_minus_summer": {
+                "D": 0.0034068912117692605,
+                "N": -0.012930700735578782,
+                "O": -0.009523809523809528
+              },
+              "winter_positive_D_dyad_fraction": 0.06829268292682927
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 2.0,
+              "seed": 0,
+              "source_year": 2020,
+              "summer": {
+                "D": 0.00023228803716608595,
+                "N": 0.14773519163763066,
+                "O": 0.14796747967479673
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.4425087108013934,
+              "summer_positive_D_dyad_fraction": 0.024390243902439025,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": -0.002090592334494774,
+                "N": 0.13449477351916375,
+                "O": 0.13240418118466898
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.4912891986062717,
+              "winter_minus_summer": {
+                "D": -0.00232288037166086,
+                "N": -0.013240418118466907,
+                "O": -0.015563298490127747
+              },
+              "winter_positive_D_dyad_fraction": 0.05365853658536585
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 1.0,
+              "seed": 1,
+              "source_year": 2020,
+              "summer": {
+                "D": 0.0008517228029423151,
+                "N": 0.09345722028648858,
+                "O": 0.09430894308943089
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.470383275261324,
+              "summer_positive_D_dyad_fraction": 0.06829268292682927,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": 0.0029036004645760743,
+                "N": 0.05981416957026713,
+                "O": 0.0627177700348432
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.637630662020906,
+              "winter_minus_summer": {
+                "D": 0.002051877661633759,
+                "N": -0.033643050716221444,
+                "O": -0.03159117305458768
+              },
+              "winter_positive_D_dyad_fraction": 0.0975609756097561
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 0.5,
+              "seed": 1,
+              "source_year": 2020,
+              "summer": {
+                "D": -3.8714672861014473e-05,
+                "N": 0.03557878435927216,
+                "O": 0.03554006968641115
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.470383275261324,
+              "summer_positive_D_dyad_fraction": 0.03902439024390244,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": 0.0038714672861014324,
+                "N": 0.022144792876500192,
+                "O": 0.026016260162601626
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.637630662020906,
+              "winter_minus_summer": {
+                "D": 0.003910181958962447,
+                "N": -0.013433991482771971,
+                "O": -0.009523809523809525
+              },
+              "winter_positive_D_dyad_fraction": 0.07804878048780488
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 2.0,
+              "seed": 1,
+              "source_year": 2020,
+              "summer": {
+                "D": -0.00030971738288811465,
+                "N": 0.14723190089043747,
+                "O": 0.14692218350754938
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.470383275261324,
+              "summer_positive_D_dyad_fraction": 0.01951219512195122,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": -0.0012775842044134731,
+                "N": 0.1332171893147503,
+                "O": 0.1319396051103368
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.637630662020906,
+              "winter_minus_summer": {
+                "D": -0.0009678668215253585,
+                "N": -0.014014711575687178,
+                "O": -0.014982578397212565
+              },
+              "winter_positive_D_dyad_fraction": 0.03902439024390244
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 1.0,
+              "seed": 2,
+              "source_year": 2020,
+              "summer": {
+                "D": -0.00019357336430507176,
+                "N": 0.09415408439798684,
+                "O": 0.09396051103368178
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.6167247386759582,
+              "summer_positive_D_dyad_fraction": 0.03902439024390244,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": 0.0023615950445218734,
+                "N": 0.06209833526906698,
+                "O": 0.06445993031358885
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.7003484320557491,
+              "winter_minus_summer": {
+                "D": 0.002555168408826945,
+                "N": -0.032055749128919855,
+                "O": -0.029500580720092928
+              },
+              "winter_positive_D_dyad_fraction": 0.08780487804878048
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 0.5,
+              "seed": 2,
+              "source_year": 2020,
+              "summer": {
+                "D": 0.0016260162601626016,
+                "N": 0.03449477351916376,
+                "O": 0.03612078977932636
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.6167247386759582,
+              "summer_positive_D_dyad_fraction": 0.07317073170731707,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": 0.004452187379016647,
+                "N": 0.021215640727835848,
+                "O": 0.025667828106852496
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.7003484320557491,
+              "winter_minus_summer": {
+                "D": 0.0028261711188540452,
+                "N": -0.013279132791327912,
+                "O": -0.010452961672473865
+              },
+              "winter_positive_D_dyad_fraction": 0.07317073170731707
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 2.0,
+              "seed": 2,
+              "source_year": 2020,
+              "summer": {
+                "D": 0.00011614401858304295,
+                "N": 0.14854819976771197,
+                "O": 0.148664343786295
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.6167247386759582,
+              "summer_positive_D_dyad_fraction": 0.014634146341463415,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": -0.001974448315911731,
+                "N": 0.13252032520325205,
+                "O": 0.13054587688734032
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.7003484320557491,
+              "winter_minus_summer": {
+                "D": -0.002090592334494774,
+                "N": -0.01602787456445992,
+                "O": -0.018118466898954688
+              },
+              "winter_positive_D_dyad_fraction": 0.04878048780487805
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 1.0,
+              "seed": 3,
+              "source_year": 2020,
+              "summer": {
+                "D": 0.0004645760743321718,
+                "N": 0.09198606271777003,
+                "O": 0.0924506387921022
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.477351916376307,
+              "summer_positive_D_dyad_fraction": 0.06341463414634146,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": 0.0027874564459930314,
+                "N": 0.06376306620209059,
+                "O": 0.06655052264808362
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.5540069686411149,
+              "winter_minus_summer": {
+                "D": 0.0023228803716608595,
+                "N": -0.028222996515679444,
+                "O": -0.02590011614401859
+              },
+              "winter_positive_D_dyad_fraction": 0.09268292682926829
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 0.5,
+              "seed": 3,
+              "source_year": 2020,
+              "summer": {
+                "D": 0.00019357336430507154,
+                "N": 0.03290747193186218,
+                "O": 0.033101045296167246
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.477351916376307,
+              "summer_positive_D_dyad_fraction": 0.04390243902439024,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": 0.0027874564459930314,
+                "N": 0.023344947735191638,
+                "O": 0.026132404181184666
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.5540069686411149,
+              "winter_minus_summer": {
+                "D": 0.0025938830816879597,
+                "N": -0.00956252419667054,
+                "O": -0.00696864111498258
+              },
+              "winter_positive_D_dyad_fraction": 0.05853658536585366
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 2.0,
+              "seed": 3,
+              "source_year": 2020,
+              "summer": {
+                "D": 0.0001548586914440573,
+                "N": 0.1475803329461866,
+                "O": 0.14773519163763066
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.477351916376307,
+              "summer_positive_D_dyad_fraction": 0.014634146341463415,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": -0.0006581494386372438,
+                "N": 0.13224932249322494,
+                "O": 0.13159117305458767
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.5540069686411149,
+              "winter_minus_summer": {
+                "D": -0.0008130081300813011,
+                "N": -0.015331010452961674,
+                "O": -0.016144018583042985
+              },
+              "winter_positive_D_dyad_fraction": 0.04878048780487805
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 1.0,
+              "seed": 4,
+              "source_year": 2020,
+              "summer": {
+                "D": -0.0004258614014711576,
+                "N": 0.09194734804490902,
+                "O": 0.09152148664343787
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.3588850174216027,
+              "summer_positive_D_dyad_fraction": 0.04390243902439024,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": 0.0029423151374370887,
+                "N": 0.0651180797522261,
+                "O": 0.06806039488966319
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.686411149825784,
+              "winter_minus_summer": {
+                "D": 0.0033681765389082462,
+                "N": -0.026829268292682923,
+                "O": -0.023461091753774685
+              },
+              "winter_positive_D_dyad_fraction": 0.08780487804878048
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 0.5,
+              "seed": 4,
+              "source_year": 2020,
+              "summer": {
+                "D": 0.0012775842044134725,
+                "N": 0.03449477351916377,
+                "O": 0.03577235772357724
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.3588850174216027,
+              "summer_positive_D_dyad_fraction": 0.05365853658536585,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": 0.0041037553232675175,
+                "N": 0.02272551296941541,
+                "O": 0.026829268292682926
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.686411149825784,
+              "winter_minus_summer": {
+                "D": 0.0028261711188540452,
+                "N": -0.011769260549748358,
+                "O": -0.008943089430894311
+              },
+              "winter_positive_D_dyad_fraction": 0.07804878048780488
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 2.0,
+              "seed": 4,
+              "source_year": 2020,
+              "summer": {
+                "D": 0.0005807200929152149,
+                "N": 0.14738675958188155,
+                "O": 0.14796747967479673
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.3588850174216027,
+              "summer_positive_D_dyad_fraction": 0.024390243902439025,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": -0.0029036004645760743,
+                "N": 0.13286875725900116,
+                "O": 0.12996515679442508
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.686411149825784,
+              "winter_minus_summer": {
+                "D": -0.003484320557491289,
+                "N": -0.014518002322880391,
+                "O": -0.018002322880371652
+              },
+              "winter_positive_D_dyad_fraction": 0.024390243902439025
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 1.0,
+              "seed": 5,
+              "source_year": 2020,
+              "summer": {
+                "D": 0.0005807200929152149,
+                "N": 0.09268292682926829,
+                "O": 0.09326364692218352
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.651567944250871,
+              "summer_positive_D_dyad_fraction": 0.06341463414634146,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": 0.001780874951606659,
+                "N": 0.06128532713898568,
+                "O": 0.06306620209059234
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.588850174216028,
+              "winter_minus_summer": {
+                "D": 0.001200154858691444,
+                "N": -0.031397599690282614,
+                "O": -0.030197444831591175
+              },
+              "winter_positive_D_dyad_fraction": 0.08780487804878048
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 0.5,
+              "seed": 5,
+              "source_year": 2020,
+              "summer": {
+                "D": 0.0005032907471931859,
+                "N": 0.03480449090205188,
+                "O": 0.035307781649245064
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.651567944250871,
+              "summer_positive_D_dyad_fraction": 0.03902439024390244,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": 0.0036004645760743317,
+                "N": 0.02311265969802555,
+                "O": 0.026713124274099883
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.588850174216028,
+              "winter_minus_summer": {
+                "D": 0.003097173828881146,
+                "N": -0.011691831204026327,
+                "O": -0.008594657375145181
+              },
+              "winter_positive_D_dyad_fraction": 0.06341463414634146
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 2.0,
+              "seed": 5,
+              "source_year": 2020,
+              "summer": {
+                "D": 7.742934572202858e-05,
+                "N": 0.14777390631049167,
+                "O": 0.1478513356562137
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.651567944250871,
+              "summer_positive_D_dyad_fraction": 0.014634146341463415,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": -0.0016260162601626018,
+                "N": 0.13205574912891987,
+                "O": 0.13042973286875725
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.588850174216028,
+              "winter_minus_summer": {
+                "D": -0.0017034456058846305,
+                "N": -0.015718157181571796,
+                "O": -0.01742160278745644
+              },
+              "winter_positive_D_dyad_fraction": 0.04878048780487805
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 1.0,
+              "seed": 6,
+              "source_year": 2020,
+              "summer": {
+                "D": 0.00019357336430507151,
+                "N": 0.09272164150212932,
+                "O": 0.09291521486643438
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.5331010452961675,
+              "summer_positive_D_dyad_fraction": 0.04390243902439024,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": 0.00313588850174216,
+                "N": 0.062485481997677124,
+                "O": 0.06562137049941928
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.7560975609756098,
+              "winter_minus_summer": {
+                "D": 0.0029423151374370882,
+                "N": -0.030236159504452194,
+                "O": -0.027293844367015097
+              },
+              "winter_positive_D_dyad_fraction": 0.08292682926829269
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 0.5,
+              "seed": 6,
+              "source_year": 2020,
+              "summer": {
+                "D": -0.0005032907471931864,
+                "N": 0.03639179248935347,
+                "O": 0.035888501742160274
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.5331010452961675,
+              "summer_positive_D_dyad_fraction": 0.04390243902439024,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": 0.003987611304684475,
+                "N": 0.02307394502516454,
+                "O": 0.027061556329849013
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.7560975609756098,
+              "winter_minus_summer": {
+                "D": 0.004490902051877662,
+                "N": -0.013317847464188928,
+                "O": -0.00882694541231126
+              },
+              "winter_positive_D_dyad_fraction": 0.07317073170731707
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 2.0,
+              "seed": 6,
+              "source_year": 2020,
+              "summer": {
+                "D": 3.8714672861014304e-05,
+                "N": 0.14816105303910182,
+                "O": 0.14819976771196283
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.5331010452961675,
+              "summer_positive_D_dyad_fraction": 0.014634146341463415,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": -0.0015485869144405732,
+                "N": 0.1308168795973674,
+                "O": 0.12926829268292683
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.7560975609756098,
+              "winter_minus_summer": {
+                "D": -0.0015873015873015875,
+                "N": -0.017344173441734417,
+                "O": -0.018931475029036
+              },
+              "winter_positive_D_dyad_fraction": 0.04390243902439024
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 1.0,
+              "seed": 7,
+              "source_year": 2020,
+              "summer": {
+                "D": 0.00019357336430507151,
+                "N": 0.0921409214092141,
+                "O": 0.09233449477351915
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.5818815331010456,
+              "summer_positive_D_dyad_fraction": 0.04390243902439024,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": 0.0023615950445218734,
+                "N": 0.06314363143631437,
+                "O": 0.06550522648083623
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.6794425087108014,
+              "winter_minus_summer": {
+                "D": 0.0021680216802168017,
+                "N": -0.02899728997289973,
+                "O": -0.026829268292682923
+              },
+              "winter_positive_D_dyad_fraction": 0.07804878048780488
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 0.5,
+              "seed": 7,
+              "source_year": 2020,
+              "summer": {
+                "D": -3.8714672861014494e-05,
+                "N": 0.03255903987611305,
+                "O": 0.032520325203252036
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.5818815331010456,
+              "summer_positive_D_dyad_fraction": 0.05365853658536585,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": 0.003987611304684475,
+                "N": 0.022028648857917152,
+                "O": 0.026016260162601626
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.6794425087108014,
+              "winter_minus_summer": {
+                "D": 0.00402632597754549,
+                "N": -0.010530391018195896,
+                "O": -0.00650406504065041
+              },
+              "winter_positive_D_dyad_fraction": 0.07804878048780488
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 2.0,
+              "seed": 7,
+              "source_year": 2020,
+              "summer": {
+                "D": 7.742934572202862e-05,
+                "N": 0.14707704219899342,
+                "O": 0.14715447154471545
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.5818815331010456,
+              "summer_positive_D_dyad_fraction": 0.014634146341463415,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": -0.0010452961672473872,
+                "N": 0.1307781649245064,
+                "O": 0.129732868757259
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.6794425087108014,
+              "winter_minus_summer": {
+                "D": -0.0011227255129694158,
+                "N": -0.016298877274487034,
+                "O": -0.01742160278745644
+              },
+              "winter_positive_D_dyad_fraction": 0.06341463414634146
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 1.0,
+              "seed": 8,
+              "source_year": 2020,
+              "summer": {
+                "D": 0.0008517228029423151,
+                "N": 0.09148277197057685,
+                "O": 0.09233449477351915
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.3658536585365852,
+              "summer_positive_D_dyad_fraction": 0.06829268292682927,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": 0.002361595044521874,
+                "N": 0.06465350367789392,
+                "O": 0.06701509872241579
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.5121951219512195,
+              "winter_minus_summer": {
+                "D": 0.0015098722415795587,
+                "N": -0.026829268292682923,
+                "O": -0.025319396051103366
+              },
+              "winter_positive_D_dyad_fraction": 0.07804878048780488
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 0.5,
+              "seed": 8,
+              "source_year": 2020,
+              "summer": {
+                "D": 0.00015485869144405722,
+                "N": 0.033759194734804494,
+                "O": 0.03391405342624855
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.3658536585365852,
+              "summer_positive_D_dyad_fraction": 0.03414634146341464,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": 0.003290747193186217,
+                "N": 0.02237708091366628,
+                "O": 0.025667828106852496
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.5121951219512195,
+              "winter_minus_summer": {
+                "D": 0.00313588850174216,
+                "N": -0.011382113821138216,
+                "O": -0.008246225319396054
+              },
+              "winter_positive_D_dyad_fraction": 0.06341463414634146
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 2.0,
+              "seed": 8,
+              "source_year": 2020,
+              "summer": {
+                "D": 3.871467286101426e-05,
+                "N": 0.14781262098335268,
+                "O": 0.1478513356562137
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.3658536585365852,
+              "summer_positive_D_dyad_fraction": 0.01951219512195122,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": -0.0021293070073557883,
+                "N": 0.12849399922570653,
+                "O": 0.12636469221835075
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.5121951219512195,
+              "winter_minus_summer": {
+                "D": -0.0021680216802168026,
+                "N": -0.01931862175764615,
+                "O": -0.02148664343786294
+              },
+              "winter_positive_D_dyad_fraction": 0.02926829268292683
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 1.0,
+              "seed": 9,
+              "source_year": 2020,
+              "summer": {
+                "D": 0.0003097173828881145,
+                "N": 0.09283778552071235,
+                "O": 0.09314750290360047
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.4355400696864113,
+              "summer_positive_D_dyad_fraction": 0.04390243902439024,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": 0.003290747193186217,
+                "N": 0.06465350367789392,
+                "O": 0.06794425087108014
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.6933797909407666,
+              "winter_minus_summer": {
+                "D": 0.0029810298102981025,
+                "N": -0.02818428184281843,
+                "O": -0.02520325203252033
+              },
+              "winter_positive_D_dyad_fraction": 0.09268292682926829
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 0.5,
+              "seed": 9,
+              "source_year": 2020,
+              "summer": {
+                "D": -0.00011614401858304333,
+                "N": 0.03554006968641115,
+                "O": 0.03542392566782811
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.4355400696864113,
+              "summer_positive_D_dyad_fraction": 0.03414634146341464,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": 0.00286488579171506,
+                "N": 0.02210607820363918,
+                "O": 0.02497096399535424
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.6933797909407666,
+              "winter_minus_summer": {
+                "D": 0.0029810298102981034,
+                "N": -0.013433991482771971,
+                "O": -0.010452961672473868
+              },
+              "winter_positive_D_dyad_fraction": 0.06341463414634146
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 2.0,
+              "seed": 9,
+              "source_year": 2020,
+              "summer": {
+                "D": -0.00011614401858304297,
+                "N": 0.1484320557491289,
+                "O": 0.14831591173054587
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.4355400696864113,
+              "summer_positive_D_dyad_fraction": 0.00975609756097561,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": -0.0029036004645760748,
+                "N": 0.1311265969802555,
+                "O": 0.12822299651567945
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.6933797909407666,
+              "winter_minus_summer": {
+                "D": -0.002787456445993032,
+                "N": -0.017305458768873405,
+                "O": -0.02009291521486642
+              },
+              "winter_positive_D_dyad_fraction": 0.03414634146341464
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 1.0,
+              "seed": 10,
+              "source_year": 2020,
+              "summer": {
+                "D": 3.871467286101412e-05,
+                "N": 0.09194734804490902,
+                "O": 0.09198606271777003
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.72822299651568,
+              "summer_positive_D_dyad_fraction": 0.06341463414634146,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": 0.0024777390631049168,
+                "N": 0.06430507162214479,
+                "O": 0.0667828106852497
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.5540069686411149,
+              "winter_minus_summer": {
+                "D": 0.0024390243902439024,
+                "N": -0.027642276422764234,
+                "O": -0.02520325203252033
+              },
+              "winter_positive_D_dyad_fraction": 0.09268292682926829
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 0.5,
+              "seed": 10,
+              "source_year": 2020,
+              "summer": {
+                "D": -0.0003871467286101434,
+                "N": 0.033372048006194345,
+                "O": 0.0329849012775842
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.72822299651568,
+              "summer_positive_D_dyad_fraction": 0.02926829268292683,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": 0.0024777390631049168,
+                "N": 0.022957801006581496,
+                "O": 0.025435540069686412
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.5540069686411149,
+              "winter_minus_summer": {
+                "D": 0.00286488579171506,
+                "N": -0.01041424699961285,
+                "O": -0.00754936120789779
+              },
+              "winter_positive_D_dyad_fraction": 0.06341463414634146
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 2.0,
+              "seed": 10,
+              "source_year": 2020,
+              "summer": {
+                "D": -5.077239441883338e-20,
+                "N": 0.14761904761904762,
+                "O": 0.14761904761904762
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.72822299651568,
+              "summer_positive_D_dyad_fraction": 0.014634146341463415,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": -0.0012388695315524586,
+                "N": 0.13097173828881145,
+                "O": 0.129732868757259
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.5540069686411149,
+              "winter_minus_summer": {
+                "D": -0.0012388695315524586,
+                "N": -0.01664730933023617,
+                "O": -0.017886178861788615
+              },
+              "winter_positive_D_dyad_fraction": 0.05365853658536585
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 1.0,
+              "seed": 11,
+              "source_year": 2020,
+              "summer": {
+                "D": -0.000232288037166086,
+                "N": 0.09303135888501743,
+                "O": 0.09279907084785134
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.735191637630662,
+              "summer_positive_D_dyad_fraction": 0.03902439024390244,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": 0.0017421602787456444,
+                "N": 0.06283391405342625,
+                "O": 0.06457607433217188
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.6306620209059233,
+              "winter_minus_summer": {
+                "D": 0.0019744483159117305,
+                "N": -0.030197444831591175,
+                "O": -0.028222996515679458
+              },
+              "winter_positive_D_dyad_fraction": 0.08292682926829269
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 0.5,
+              "seed": 11,
+              "source_year": 2020,
+              "summer": {
+                "D": -0.00011614401858304304,
+                "N": 0.03588850174216028,
+                "O": 0.03577235772357724
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.735191637630662,
+              "summer_positive_D_dyad_fraction": 0.03414634146341464,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": 0.0032520325203252032,
+                "N": 0.02404181184668989,
+                "O": 0.027293844367015097
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.6306620209059233,
+              "winter_minus_summer": {
+                "D": 0.0033681765389082462,
+                "N": -0.01184668989547039,
+                "O": -0.008478513356562141
+              },
+              "winter_positive_D_dyad_fraction": 0.07804878048780488
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 2.0,
+              "seed": 11,
+              "source_year": 2020,
+              "summer": {
+                "D": -0.00042586140147115757,
+                "N": 0.14746418892760357,
+                "O": 0.1470383275261324
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.735191637630662,
+              "summer_positive_D_dyad_fraction": 0.004878048780487805,
+              "timestamp_tolerance_seconds": 900,
+              "winter": {
+                "D": -0.0020518776616337596,
+                "N": 0.13329461866047232,
+                "O": 0.13124274099883856
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.6306620209059233,
+              "winter_minus_summer": {
+                "D": -0.001626016260162602,
+                "N": -0.014169570267131254,
+                "O": -0.015795586527293848
+              },
+              "winter_positive_D_dyad_fraction": 0.03414634146341464
+            }
+          ],
+          "max_abs_timestamp_gap_seconds": 900,
+          "n_animal_ids_aggregated": 21,
+          "n_clock_matched_dyads": 205,
+          "status": "DESCRIPTIVE_NEAR_SYNCHRONOUS_GPS_NEARBY_PROXY"
+        },
+        {
+          "grid_free_geodesic_seed_results": [
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 1.0,
+              "seed": 0,
+              "source_year": 2020,
+              "summer": {
+                "D": -0.00030971738288811476,
+                "N": 0.09206349206349207,
+                "O": 0.09175377468060396
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.5609756097560976,
+              "summer_positive_D_dyad_fraction": 0.02926829268292683,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": 0.0024777390631049168,
+                "N": 0.061749903213317844,
+                "O": 0.06422764227642276
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.8745644599303135,
+              "winter_minus_summer": {
+                "D": 0.0027874564459930314,
+                "N": -0.030313588850174225,
+                "O": -0.027526132404181197
+              },
+              "winter_positive_D_dyad_fraction": 0.09268292682926829
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 0.5,
+              "seed": 0,
+              "source_year": 2020,
+              "summer": {
+                "D": -0.0008517228029423152,
+                "N": 0.035346496322106076,
+                "O": 0.03449477351916376
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.5609756097560976,
+              "summer_positive_D_dyad_fraction": 0.024390243902439025,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": 0.0019357336430507158,
+                "N": 0.02257065427797135,
+                "O": 0.02450638792102207
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.8745644599303135,
+              "winter_minus_summer": {
+                "D": 0.002787456445993031,
+                "N": -0.012775842044134726,
+                "O": -0.009988385598141691
+              },
+              "winter_positive_D_dyad_fraction": 0.06341463414634146
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 2.0,
+              "seed": 0,
+              "source_year": 2020,
+              "summer": {
+                "D": 0.0,
+                "N": 0.14761904761904762,
+                "O": 0.14761904761904762
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.5609756097560976,
+              "summer_positive_D_dyad_fraction": 0.01951219512195122,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": -0.0020518776616337596,
+                "N": 0.13143631436314362,
+                "O": 0.12938443670150987
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.8745644599303135,
+              "winter_minus_summer": {
+                "D": -0.0020518776616337596,
+                "N": -0.016182733255903997,
+                "O": -0.018234610917537752
+              },
+              "winter_positive_D_dyad_fraction": 0.04390243902439024
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 1.0,
+              "seed": 1,
+              "source_year": 2020,
+              "summer": {
+                "D": -3.871467286101441e-05,
+                "N": 0.09492837785520714,
+                "O": 0.09488966318234611
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.3658536585365852,
+              "summer_positive_D_dyad_fraction": 0.04390243902439024,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": 0.0022067363530778165,
+                "N": 0.061207897793263646,
+                "O": 0.06341463414634146
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.7630662020905925,
+              "winter_minus_summer": {
+                "D": 0.002245451025938831,
+                "N": -0.03372048006194349,
+                "O": -0.031475029036004645
+              },
+              "winter_positive_D_dyad_fraction": 0.07804878048780488
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 0.5,
+              "seed": 1,
+              "source_year": 2020,
+              "summer": {
+                "D": 0.00042586140147115746,
+                "N": 0.03708865660085172,
+                "O": 0.03751451800232288
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.3658536585365852,
+              "summer_positive_D_dyad_fraction": 0.04878048780487805,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": 0.0034456058846302744,
+                "N": 0.02094463801780875,
+                "O": 0.024390243902439025
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.7630662020905925,
+              "winter_minus_summer": {
+                "D": 0.003019744483159117,
+                "N": -0.01614401858304297,
+                "O": -0.013124274099883856
+              },
+              "winter_positive_D_dyad_fraction": 0.07804878048780488
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 2.0,
+              "seed": 1,
+              "source_year": 2020,
+              "summer": {
+                "D": -3.871467286101436e-05,
+                "N": 0.14800619434765777,
+                "O": 0.14796747967479673
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.3658536585365852,
+              "summer_positive_D_dyad_fraction": 0.014634146341463415,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": -0.00143244289585753,
+                "N": 0.13093302361595044,
+                "O": 0.1295005807200929
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.7630662020905925,
+              "winter_minus_summer": {
+                "D": -0.0013937282229965157,
+                "N": -0.017073170731707332,
+                "O": -0.018466898954703825
+              },
+              "winter_positive_D_dyad_fraction": 0.05365853658536585
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 1.0,
+              "seed": 2,
+              "source_year": 2020,
+              "summer": {
+                "D": 0.00034843205574912903,
+                "N": 0.09419279907084785,
+                "O": 0.09454123112659697
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.4425087108013934,
+              "summer_positive_D_dyad_fraction": 0.05365853658536585,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": 0.003174603174603174,
+                "N": 0.06453735965931089,
+                "O": 0.06771196283391405
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.651567944250871,
+              "winter_minus_summer": {
+                "D": 0.0028261711188540452,
+                "N": -0.029655439411536963,
+                "O": -0.026829268292682923
+              },
+              "winter_positive_D_dyad_fraction": 0.1024390243902439
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 0.5,
+              "seed": 2,
+              "source_year": 2020,
+              "summer": {
+                "D": 7.742934572202849e-05,
+                "N": 0.0332559039876113,
+                "O": 0.03333333333333333
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.4425087108013934,
+              "summer_positive_D_dyad_fraction": 0.03414634146341464,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": 0.004607046070460704,
+                "N": 0.021060782036391792,
+                "O": 0.025667828106852496
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.651567944250871,
+              "winter_minus_summer": {
+                "D": 0.0045296167247386755,
+                "N": -0.01219512195121951,
+                "O": -0.007665505226480837
+              },
+              "winter_positive_D_dyad_fraction": 0.08780487804878048
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 2.0,
+              "seed": 2,
+              "source_year": 2020,
+              "summer": {
+                "D": 0.0,
+                "N": 0.1478513356562137,
+                "O": 0.1478513356562137
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.4425087108013934,
+              "summer_positive_D_dyad_fraction": 0.004878048780487805,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": -0.001858304297328688,
+                "N": 0.13391405342624854,
+                "O": 0.13205574912891985
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.651567944250871,
+              "winter_minus_summer": {
+                "D": -0.001858304297328688,
+                "N": -0.013937282229965153,
+                "O": -0.015795586527293848
+              },
+              "winter_positive_D_dyad_fraction": 0.02926829268292683
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 1.0,
+              "seed": 3,
+              "source_year": 2020,
+              "summer": {
+                "D": 0.00011614401858304288,
+                "N": 0.09337979094076655,
+                "O": 0.0934959349593496
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.4634146341463414,
+              "summer_positive_D_dyad_fraction": 0.05365853658536585,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": 0.003368176538908246,
+                "N": 0.0610917537746806,
+                "O": 0.06445993031358885
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.7142857142857144,
+              "winter_minus_summer": {
+                "D": 0.003252032520325203,
+                "N": -0.03228803716608595,
+                "O": -0.029036004645760755
+              },
+              "winter_positive_D_dyad_fraction": 0.09268292682926829
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 0.5,
+              "seed": 3,
+              "source_year": 2020,
+              "summer": {
+                "D": 0.0005420054200542005,
+                "N": 0.03464963221060782,
+                "O": 0.03519163763066202
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.4634146341463414,
+              "summer_positive_D_dyad_fraction": 0.03414634146341464,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": 0.003329461866047232,
+                "N": 0.023035230352303523,
+                "O": 0.026364692218350753
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.7142857142857144,
+              "winter_minus_summer": {
+                "D": 0.0027874564459930314,
+                "N": -0.011614401858304299,
+                "O": -0.008826945412311268
+              },
+              "winter_positive_D_dyad_fraction": 0.07804878048780488
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 2.0,
+              "seed": 3,
+              "source_year": 2020,
+              "summer": {
+                "D": 7.742934572202868e-05,
+                "N": 0.14707704219899342,
+                "O": 0.14715447154471545
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.4634146341463414,
+              "summer_positive_D_dyad_fraction": 0.01951219512195122,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": -0.0010452961672473872,
+                "N": 0.13391405342624854,
+                "O": 0.13286875725900116
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.7142857142857144,
+              "winter_minus_summer": {
+                "D": -0.0011227255129694158,
+                "N": -0.013162988772744882,
+                "O": -0.01428571428571429
+              },
+              "winter_positive_D_dyad_fraction": 0.03414634146341464
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 1.0,
+              "seed": 4,
+              "source_year": 2020,
+              "summer": {
+                "D": 0.0002710027100271001,
+                "N": 0.09427022841656989,
+                "O": 0.09454123112659697
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.4006968641114983,
+              "summer_positive_D_dyad_fraction": 0.06341463414634146,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": 0.0030584591560201316,
+                "N": 0.06291134339914828,
+                "O": 0.0659698025551684
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.5052264808362368,
+              "winter_minus_summer": {
+                "D": 0.0027874564459930314,
+                "N": -0.03135888501742161,
+                "O": -0.028571428571428567
+              },
+              "winter_positive_D_dyad_fraction": 0.09268292682926829
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 0.5,
+              "seed": 4,
+              "source_year": 2020,
+              "summer": {
+                "D": 0.0010065814943863722,
+                "N": 0.03383662408052652,
+                "O": 0.03484320557491289
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.4006968641114983,
+              "summer_positive_D_dyad_fraction": 0.04390243902439024,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": 0.0024777390631049168,
+                "N": 0.02435152922957801,
+                "O": 0.026829268292682926
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.5052264808362368,
+              "winter_minus_summer": {
+                "D": 0.0014711575687185445,
+                "N": -0.009485094850948509,
+                "O": -0.008013937282229964
+              },
+              "winter_positive_D_dyad_fraction": 0.06341463414634146
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 2.0,
+              "seed": 4,
+              "source_year": 2020,
+              "summer": {
+                "D": 3.8714672861014304e-05,
+                "N": 0.14839334107626792,
+                "O": 0.1484320557491289
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.4006968641114983,
+              "summer_positive_D_dyad_fraction": 0.01951219512195122,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": -0.0016647309330236162,
+                "N": 0.13151374370886568,
+                "O": 0.12984901277584204
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.5052264808362368,
+              "winter_minus_summer": {
+                "D": -0.0017034456058846305,
+                "N": -0.016879597367402244,
+                "O": -0.018583042973286862
+              },
+              "winter_positive_D_dyad_fraction": 0.02926829268292683
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 1.0,
+              "seed": 5,
+              "source_year": 2020,
+              "summer": {
+                "D": -0.0004258614014711577,
+                "N": 0.09322493224932249,
+                "O": 0.09279907084785134
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.4006968641114983,
+              "summer_positive_D_dyad_fraction": 0.04390243902439024,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": 0.0018970189701897017,
+                "N": 0.06453735965931087,
+                "O": 0.06643437862950058
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.6445993031358885,
+              "winter_minus_summer": {
+                "D": 0.0023228803716608595,
+                "N": -0.028687572590011617,
+                "O": -0.026364692218350763
+              },
+              "winter_positive_D_dyad_fraction": 0.07804878048780488
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 0.5,
+              "seed": 5,
+              "source_year": 2020,
+              "summer": {
+                "D": -0.0003097173828881147,
+                "N": 0.03364305071622145,
+                "O": 0.03333333333333333
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.4006968641114983,
+              "summer_positive_D_dyad_fraction": 0.03414634146341464,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": 0.004181184668989547,
+                "N": 0.023925667828106855,
+                "O": 0.0281068524970964
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.6445993031358885,
+              "winter_minus_summer": {
+                "D": 0.004490902051877662,
+                "N": -0.009717382888114596,
+                "O": -0.0052264808362369325
+              },
+              "winter_positive_D_dyad_fraction": 0.08292682926829269
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 2.0,
+              "seed": 5,
+              "source_year": 2020,
+              "summer": {
+                "D": -0.0005032907471931862,
+                "N": 0.14719318621757646,
+                "O": 0.14668989547038327
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.4006968641114983,
+              "summer_positive_D_dyad_fraction": 0.004878048780487805,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": -0.0015485869144405734,
+                "N": 0.13383662408052652,
+                "O": 0.13228803716608595
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.6445993031358885,
+              "winter_minus_summer": {
+                "D": -0.0010452961672473872,
+                "N": -0.013356562137049943,
+                "O": -0.014401858304297327
+              },
+              "winter_positive_D_dyad_fraction": 0.04878048780487805
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 1.0,
+              "seed": 6,
+              "source_year": 2020,
+              "summer": {
+                "D": -0.0007742934572202867,
+                "N": 0.09485094850948508,
+                "O": 0.0940766550522648
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.4355400696864113,
+              "summer_positive_D_dyad_fraction": 0.01951219512195122,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": 0.0036391792489353465,
+                "N": 0.06267905536198219,
+                "O": 0.06631823461091754
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.8466898954703832,
+              "winter_minus_summer": {
+                "D": 0.004413472706155633,
+                "N": -0.03217189314750289,
+                "O": -0.027758420441347256
+              },
+              "winter_positive_D_dyad_fraction": 0.1024390243902439
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 0.5,
+              "seed": 6,
+              "source_year": 2020,
+              "summer": {
+                "D": 0.000735578784359272,
+                "N": 0.03689508323654665,
+                "O": 0.037630662020905925
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.4355400696864113,
+              "summer_positive_D_dyad_fraction": 0.04390243902439024,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": 0.0033294618660472315,
+                "N": 0.02338366240805265,
+                "O": 0.026713124274099883
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.8466898954703832,
+              "winter_minus_summer": {
+                "D": 0.0025938830816879593,
+                "N": -0.013511420828494002,
+                "O": -0.010917537746806042
+              },
+              "winter_positive_D_dyad_fraction": 0.07317073170731707
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 2.0,
+              "seed": 6,
+              "source_year": 2020,
+              "summer": {
+                "D": 3.8714672861014304e-05,
+                "N": 0.1475803329461866,
+                "O": 0.14761904761904762
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.4355400696864113,
+              "summer_positive_D_dyad_fraction": 0.024390243902439025,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": -0.00259388308168796,
+                "N": 0.1302361595044522,
+                "O": 0.12764227642276424
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.8466898954703832,
+              "winter_minus_summer": {
+                "D": -0.0026325977545489745,
+                "N": -0.017344173441734417,
+                "O": -0.019976771196283383
+              },
+              "winter_positive_D_dyad_fraction": 0.03902439024390244
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 1.0,
+              "seed": 7,
+              "source_year": 2020,
+              "summer": {
+                "D": 0.0007742934572202865,
+                "N": 0.09237320944638018,
+                "O": 0.09314750290360047
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.8536585365853657,
+              "summer_positive_D_dyad_fraction": 0.06829268292682927,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": 0.002400309717382888,
+                "N": 0.06264034068912118,
+                "O": 0.06504065040650407
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.797909407665505,
+              "winter_minus_summer": {
+                "D": 0.0016260162601626016,
+                "N": -0.029732868757259,
+                "O": -0.028106852497096393
+              },
+              "winter_positive_D_dyad_fraction": 0.08780487804878048
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 0.5,
+              "seed": 7,
+              "source_year": 2020,
+              "summer": {
+                "D": 0.00034843205574912865,
+                "N": 0.036353077816492455,
+                "O": 0.03670150987224158
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.8536585365853657,
+              "summer_positive_D_dyad_fraction": 0.03902439024390244,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": 0.0031746031746031746,
+                "N": 0.02086720867208672,
+                "O": 0.024041811846689895
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.797909407665505,
+              "winter_minus_summer": {
+                "D": 0.002826171118854046,
+                "N": -0.015485869144405733,
+                "O": -0.012659698025551683
+              },
+              "winter_positive_D_dyad_fraction": 0.08292682926829269
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 2.0,
+              "seed": 7,
+              "source_year": 2020,
+              "summer": {
+                "D": -0.00027100271002710027,
+                "N": 0.1475416182733256,
+                "O": 0.14727061556329848
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.8536585365853657,
+              "summer_positive_D_dyad_fraction": 0.00975609756097561,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": -0.0013550135501355018,
+                "N": 0.132481610530391,
+                "O": 0.1311265969802555
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.797909407665505,
+              "winter_minus_summer": {
+                "D": -0.0010840108401084015,
+                "N": -0.015060007742934589,
+                "O": -0.016144018583042985
+              },
+              "winter_positive_D_dyad_fraction": 0.04878048780487805
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 1.0,
+              "seed": 8,
+              "source_year": 2020,
+              "summer": {
+                "D": 0.00042586140147115757,
+                "N": 0.0935346496322106,
+                "O": 0.09396051103368178
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.456445993031359,
+              "summer_positive_D_dyad_fraction": 0.04878048780487805,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": 0.0025938830816879597,
+                "N": 0.060820751064653504,
+                "O": 0.06341463414634146
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.8745644599303135,
+              "winter_minus_summer": {
+                "D": 0.002168021680216802,
+                "N": -0.0327138985675571,
+                "O": -0.030545876887340312
+              },
+              "winter_positive_D_dyad_fraction": 0.0975609756097561
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 0.5,
+              "seed": 8,
+              "source_year": 2020,
+              "summer": {
+                "D": 0.00042586140147115735,
+                "N": 0.035346496322106076,
+                "O": 0.03577235772357724
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.456445993031359,
+              "summer_positive_D_dyad_fraction": 0.05853658536585366,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": 0.003484320557491289,
+                "N": 0.022531939605110334,
+                "O": 0.026016260162601626
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.8745644599303135,
+              "winter_minus_summer": {
+                "D": 0.003058459156020132,
+                "N": -0.012814556716995742,
+                "O": -0.009756097560975611
+              },
+              "winter_positive_D_dyad_fraction": 0.08780487804878048
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 2.0,
+              "seed": 8,
+              "source_year": 2020,
+              "summer": {
+                "D": -0.00027100271002710027,
+                "N": 0.14696089818041036,
+                "O": 0.14668989547038327
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.456445993031359,
+              "summer_positive_D_dyad_fraction": 0.00975609756097561,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": -0.0012388695315524588,
+                "N": 0.13039101819589624,
+                "O": 0.12915214866434377
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.8745644599303135,
+              "winter_minus_summer": {
+                "D": -0.0009678668215253585,
+                "N": -0.01656987998451412,
+                "O": -0.017537746806039506
+              },
+              "winter_positive_D_dyad_fraction": 0.07317073170731707
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 1.0,
+              "seed": 9,
+              "source_year": 2020,
+              "summer": {
+                "D": 0.0006968641114982576,
+                "N": 0.0916376306620209,
+                "O": 0.09233449477351915
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.498257839721254,
+              "summer_positive_D_dyad_fraction": 0.05853658536585366,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": 0.003832752613240418,
+                "N": 0.06236933797909408,
+                "O": 0.06620209059233449
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.749128919860627,
+              "winter_minus_summer": {
+                "D": 0.0031358885017421607,
+                "N": -0.029268292682926814,
+                "O": -0.026132404181184662
+              },
+              "winter_positive_D_dyad_fraction": 0.09268292682926829
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 0.5,
+              "seed": 9,
+              "source_year": 2020,
+              "summer": {
+                "D": 0.0008904374758033295,
+                "N": 0.034068912117692605,
+                "O": 0.034959349593495934
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.498257839721254,
+              "summer_positive_D_dyad_fraction": 0.06829268292682927,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": 0.003755323267518389,
+                "N": 0.02353852109949671,
+                "O": 0.027293844367015097
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.749128919860627,
+              "winter_minus_summer": {
+                "D": 0.0028648857917150596,
+                "N": -0.010530391018195896,
+                "O": -0.007665505226480837
+              },
+              "winter_positive_D_dyad_fraction": 0.07804878048780488
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 2.0,
+              "seed": 9,
+              "source_year": 2020,
+              "summer": {
+                "D": 0.00019357336430507165,
+                "N": 0.1478900503290747,
+                "O": 0.1480836236933798
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.498257839721254,
+              "summer_positive_D_dyad_fraction": 0.014634146341463415,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": -0.0025164537359659315,
+                "N": 0.1294618660472319,
+                "O": 0.12694541231126596
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.749128919860627,
+              "winter_minus_summer": {
+                "D": -0.002710027100271003,
+                "N": -0.018428184281842813,
+                "O": -0.02113821138211383
+              },
+              "winter_positive_D_dyad_fraction": 0.03414634146341464
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 1.0,
+              "seed": 10,
+              "source_year": 2020,
+              "summer": {
+                "D": -0.0007355787843592724,
+                "N": 0.09330236159504451,
+                "O": 0.09256678281068524
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.268292682926829,
+              "summer_positive_D_dyad_fraction": 0.03902439024390244,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": 0.0033294618660472315,
+                "N": 0.06345334881920248,
+                "O": 0.06678281068524972
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.797909407665505,
+              "winter_minus_summer": {
+                "D": 0.004065040650406504,
+                "N": -0.029849012775842038,
+                "O": -0.025783972125435525
+              },
+              "winter_positive_D_dyad_fraction": 0.08292682926829269
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 0.5,
+              "seed": 10,
+              "source_year": 2020,
+              "summer": {
+                "D": 0.0003484320557491288,
+                "N": 0.03356562137049942,
+                "O": 0.03391405342624855
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.268292682926829,
+              "summer_positive_D_dyad_fraction": 0.03414634146341464,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": 0.0035230352303523035,
+                "N": 0.022028648857917152,
+                "O": 0.02555168408826945
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.797909407665505,
+              "winter_minus_summer": {
+                "D": 0.0031746031746031746,
+                "N": -0.011536972512582268,
+                "O": -0.008362369337979101
+              },
+              "winter_positive_D_dyad_fraction": 0.06341463414634146
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 2.0,
+              "seed": 10,
+              "source_year": 2020,
+              "summer": {
+                "D": -0.0003871467286101433,
+                "N": 0.1475416182733256,
+                "O": 0.14715447154471545
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.268292682926829,
+              "summer_positive_D_dyad_fraction": 0.004878048780487805,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": -0.0014324428958575304,
+                "N": 0.13244289585753,
+                "O": 0.13101045296167246
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.797909407665505,
+              "winter_minus_summer": {
+                "D": -0.0010452961672473872,
+                "N": -0.015098722415795601,
+                "O": -0.016144018583042985
+              },
+              "winter_positive_D_dyad_fraction": 0.04390243902439024
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 1.0,
+              "seed": 11,
+              "source_year": 2020,
+              "summer": {
+                "D": -0.0006194347657762293,
+                "N": 0.09423151374370886,
+                "O": 0.09361207897793264
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.6167247386759582,
+              "summer_positive_D_dyad_fraction": 0.04878048780487805,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": 0.0029036004645760743,
+                "N": 0.061207897793263646,
+                "O": 0.06411149825783972
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.5749128919860627,
+              "winter_minus_summer": {
+                "D": 0.0035230352303523035,
+                "N": -0.033023615950445215,
+                "O": -0.029500580720092914
+              },
+              "winter_positive_D_dyad_fraction": 0.08780487804878048
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 0.5,
+              "seed": 11,
+              "source_year": 2020,
+              "summer": {
+                "D": -0.0001548586914440575,
+                "N": 0.03639179248935347,
+                "O": 0.036236933797909404
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.6167247386759582,
+              "summer_positive_D_dyad_fraction": 0.04390243902439024,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": 0.003755323267518389,
+                "N": 0.02133178474641889,
+                "O": 0.02508710801393728
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.5749128919860627,
+              "winter_minus_summer": {
+                "D": 0.003910181958962446,
+                "N": -0.015060007742934575,
+                "O": -0.011149825783972125
+              },
+              "winter_positive_D_dyad_fraction": 0.08292682926829269
+            },
+            {
+              "n_matched_dyads": 205,
+              "n_selected_direct_fix_pairs": 17220,
+              "n_selected_dyad_dates": 5740,
+              "radius_km": 2.0,
+              "seed": 11,
+              "source_year": 2020,
+              "summer": {
+                "D": 0.00015485869144405732,
+                "N": 0.148625629113434,
+                "O": 0.14878048780487804
+              },
+              "summer_mean_abs_recording_gap_seconds": 3.6167247386759582,
+              "summer_positive_D_dyad_fraction": 0.01951219512195122,
+              "timestamp_tolerance_seconds": 1800,
+              "winter": {
+                "D": -0.002090592334494774,
+                "N": 0.13368176538908247,
+                "O": 0.13159117305458767
+              },
+              "winter_mean_abs_recording_gap_seconds": 1.5749128919860627,
+              "winter_minus_summer": {
+                "D": -0.0022454510259388312,
+                "N": -0.014943863724351525,
+                "O": -0.01718931475029037
+              },
+              "winter_positive_D_dyad_fraction": 0.024390243902439025
+            }
+          ],
+          "max_abs_timestamp_gap_seconds": 1800,
+          "n_animal_ids_aggregated": 21,
+          "n_clock_matched_dyads": 205,
+          "status": "DESCRIPTIVE_NEAR_SYNCHRONOUS_GPS_NEARBY_PROXY"
+        }
+      ],
+      "year": 2020
+    }
+  ]
+}

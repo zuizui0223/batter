@@ -1,0 +1,98 @@
+name: Publish verified wild-turkey geographic components and seasonal centres
+
+on:
+  push:
+    branches:
+      - prospective/multitaxon-identity-ecology-v1
+    paths:
+      - ".github/workflows/publish-turkey-source-season-centres-20261022.yml"
+
+permissions:
+  actions: read
+  contents: write
+
+jobs:
+  commit-source-aggregate-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - name: Retrieve fixed original public Movebank GPS source aggregate
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/source-turkey-season-centres
+          gh run download 39720900386 --repo "$GITHUB_REPOSITORY" \
+            -n source-turkey-component-centres-20261022 \
+            -D /tmp/source-turkey-season-centres
+      - name: Independent pinned SHA256, previous L1 replay and all source centroid estimates
+        run: |
+          set -euo pipefail
+          root=prospective/multitaxon_individuality
+          python3 "$root/validate_turkey_component_centers_v1.py" \
+            --source-dir /tmp/source-turkey-season-centres \
+            --old-dir "$root" \
+            --output /tmp/source-turkey-season-centres/TURKEY_COMPONENT_SEASON_CENTERS_REVIEW_2026_10_22.json
+          PYTHONPATH="$root" python3 -m unittest discover -s "$root/tests" \
+            -p test_turkey_component_season_centers_v1.py -v
+      - name: Publish only anonymous source geographic group aggregate rows
+        run: |
+          set -euo pipefail
+          root=prospective/multitaxon_individuality
+          cp /tmp/source-turkey-season-centres/TURKEY_COMPONENT_SEASON_CENTERS_SOURCE_2026_10_22.json \
+            "$root/TURKEY_COMPONENT_SEASON_CENTERS_SOURCE_2026_10_22.json"
+          cp /tmp/source-turkey-season-centres/TURKEY_COMPONENT_SEASON_CENTERS_REVIEW_2026_10_22.json \
+            "$root/TURKEY_COMPONENT_SEASON_CENTERS_REVIEW_2026_10_22.json"
+          python3 "$root/validate_turkey_component_centers_v1.py" \
+            --source-dir "$root" --old-dir "$root" \
+            --output /tmp/source-turkey-season-centres/published_recheck.json
+          cmp /tmp/source-turkey-season-centres/published_recheck.json \
+              "$root/TURKEY_COMPONENT_SEASON_CENTERS_REVIEW_2026_10_22.json"
+          python3 - <<'PY'
+          import csv,json
+          from pathlib import Path
+          root=Path('prospective/multitaxon_individuality')
+          data=json.loads((root/'TURKEY_COMPONENT_SEASON_CENTERS_REVIEW_2026_10_22.json').read_text())
+          columns=('year','time_gap_minutes','group','n_original_dyads','n_source_animals',
+                   'L1_500m_original','L1_500m_reverse','positive_source_seeds_original',
+                   'positive_source_seeds_reverse','winter_center_median_km',
+                   'summer_center_median_km','winter_closer_fraction',
+                   'JanFeb_comparable_dyads','December_comparable_dyads',
+                   'paired_source_center_winter_median_km',
+                   'paired_source_center_summer_median_km',
+                   'paired_source_center_winter_closer_seeds')
+          records=[]
+          for cohort in data['source_comparisons']:
+            for entry in cohort['groups']:
+              l=entry['original_GPS_L1_500m']
+              record=dict(year=cohort['year'],time_gap_minutes=cohort['time_tolerance_seconds']/60,
+                  group=entry['name'],n_original_dyads=entry['n_pairs'],
+                  n_source_animals=entry['n_source_animals'],
+                  L1_500m_original=next((x['delta'] for x in l if x['direction']=='original_A_to_B'),None),
+                  L1_500m_reverse=next((x['delta'] for x in l if x['direction']=='reversed_B_to_A'),None),
+                  positive_source_seeds_original=next((x['positive_draws'] for x in l if x['direction']=='original_A_to_B'),None),
+                  positive_source_seeds_reverse=next((x['positive_draws'] for x in l if x['direction']=='reversed_B_to_A'),None),
+                  winter_center_median_km=entry['winter_summer_center_median_km'][0],
+                  summer_center_median_km=entry['winter_summer_center_median_km'][1],
+                  winter_closer_fraction=entry['winter_center_pairs_closer_fraction'],
+                  JanFeb_comparable_dyads=entry['jan_feb_n_source_pairs'],
+                  December_comparable_dyads=entry['dec_only_n_source_pairs'],
+                  paired_source_center_winter_median_km=entry['paired_original_fix_centers_median_km'][0],
+                  paired_source_center_summer_median_km=entry['paired_original_fix_centers_median_km'][1],
+                  paired_source_center_winter_closer_seeds=entry['paired_original_fix_n_seeds_winter_mean_centers_closer'])
+              records.append(record)
+          assert len(records)==26
+          with (root/'TURKEY_COMPONENT_SEASON_CENTERS_REVIEW_2026_10_22.csv').open('w',newline='',encoding='utf-8') as f:
+             writer=csv.DictWriter(f,fieldnames=columns)
+             writer.writeheader();writer.writerows(records)
+          print('PASS 26 source/year/tolerance/group rows, all old GPS effects and original seasonal centre receipts')
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$root/TURKEY_COMPONENT_SEASON_CENTERS_SOURCE_2026_10_22.json"
+          git add "$root/TURKEY_COMPONENT_SEASON_CENTERS_REVIEW_2026_10_22.json"
+          git add "$root/TURKEY_COMPONENT_SEASON_CENTERS_REVIEW_2026_10_22.csv"
+          git diff --cached --stat
+          git commit -m "data: pin wild turkey GPS component replication and seasonal centroid distances"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

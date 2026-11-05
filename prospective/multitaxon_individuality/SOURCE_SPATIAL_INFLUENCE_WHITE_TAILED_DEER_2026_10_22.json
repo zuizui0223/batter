@@ -1,0 +1,1670 @@
+{
+  "as_of": "2026-10-22",
+  "distance_filter_thresholds_km": [
+    5.0,
+    10.0,
+    25.0
+  ],
+  "full_original_GPS_and_reference_MD5_SHA256_verified": true,
+  "full_source_GPS_position_and_timestamp_multiset_replayed": true,
+  "limits": [
+    "Spatial components are GPS-usage-centroid graph components, not biological populations",
+    "The 2019 and 2020 years can reuse original animals and pairs; report counts rather than claiming independent replication",
+    "LOO is sensitivity to removing one animal and its incident dyads, not an iid sampling or jackknife confidence interval",
+    "A same-day within-15/30min GPS distance pair is not an animal encounter, social contact or resource overlap",
+    "Missing 25km/10km/5km or tag metadata sources are NOT_ESTIMABLE/NOT_VERIFIED, not null effects",
+    "Post-inspection exploratory source-specific analysis, not a causal ecological law or significance test"
+  ],
+  "location_radii_km": [
+    0.5,
+    1.0,
+    2.0
+  ],
+  "n_seeds": 12,
+  "original_dual_anchor_aggregate_SHA256_exactly_verified": true,
+  "original_year_results": [
+    {
+      "n_original_geographic_dyads": 55,
+      "time_tolerance_rows": [
+        {
+          "leave_one_animal_out": [
+            {
+              "all_valid_omissions_positive_10_of_12": true,
+              "n_animal_deletions_attempted": 11,
+              "n_estimable_animal_deletions": 11,
+              "n_omissions_with_at_least_10_of_12_positive_source_draws": 11,
+              "n_omissions_with_positive_mean": 11,
+              "n_unestimable_deletions": 0,
+              "orientation": "original_A_to_B",
+              "radius_km": 0.5,
+              "smallest_positive_seed_count_among_omissions": 10,
+              "source_animal_loo_delta_mean_median": 0.004982363315696649,
+              "source_animal_loo_delta_mean_range": [
+                0.002645502645502644,
+                0.0058421516754850085
+              ]
+            },
+            {
+              "all_valid_omissions_positive_10_of_12": false,
+              "n_animal_deletions_attempted": 11,
+              "n_estimable_animal_deletions": 11,
+              "n_omissions_with_at_least_10_of_12_positive_source_draws": 0,
+              "n_omissions_with_positive_mean": 11,
+              "n_unestimable_deletions": 0,
+              "orientation": "reversed_B_to_A",
+              "radius_km": 0.5,
+              "smallest_positive_seed_count_among_omissions": 7,
+              "source_animal_loo_delta_mean_median": 0.0026014109347442696,
+              "source_animal_loo_delta_mean_range": [
+                0.0014550264550264554,
+                0.00275573192239859
+              ]
+            },
+            {
+              "all_valid_omissions_positive_10_of_12": false,
+              "n_animal_deletions_attempted": 11,
+              "n_estimable_animal_deletions": 11,
+              "n_omissions_with_at_least_10_of_12_positive_source_draws": 1,
+              "n_omissions_with_positive_mean": 11,
+              "n_unestimable_deletions": 0,
+              "orientation": "original_A_to_B",
+              "radius_km": 1.0,
+              "smallest_positive_seed_count_among_omissions": 6,
+              "source_animal_loo_delta_mean_median": 0.0014329805996472673,
+              "source_animal_loo_delta_mean_range": [
+                0.0001322751322751337,
+                0.002799823633156968
+              ]
+            },
+            {
+              "all_valid_omissions_positive_10_of_12": false,
+              "n_animal_deletions_attempted": 11,
+              "n_estimable_animal_deletions": 11,
+              "n_omissions_with_at_least_10_of_12_positive_source_draws": 3,
+              "n_omissions_with_positive_mean": 11,
+              "n_unestimable_deletions": 0,
+              "orientation": "reversed_B_to_A",
+              "radius_km": 1.0,
+              "smallest_positive_seed_count_among_omissions": 6,
+              "source_animal_loo_delta_mean_median": 0.0025352733686067005,
+              "source_animal_loo_delta_mean_range": [
+                0.0009038800705467358,
+                0.002667548500881833
+              ]
+            },
+            {
+              "all_valid_omissions_positive_10_of_12": false,
+              "n_animal_deletions_attempted": 11,
+              "n_estimable_animal_deletions": 11,
+              "n_omissions_with_at_least_10_of_12_positive_source_draws": 0,
+              "n_omissions_with_positive_mean": 0,
+              "n_unestimable_deletions": 0,
+              "orientation": "original_A_to_B",
+              "radius_km": 2.0,
+              "smallest_positive_seed_count_among_omissions": 2,
+              "source_animal_loo_delta_mean_median": -0.0023368606701940045,
+              "source_animal_loo_delta_mean_range": [
+                -0.0026014109347442687,
+                -0.0007495590828924172
+              ]
+            },
+            {
+              "all_valid_omissions_positive_10_of_12": false,
+              "n_animal_deletions_attempted": 11,
+              "n_estimable_animal_deletions": 11,
+              "n_omissions_with_at_least_10_of_12_positive_source_draws": 0,
+              "n_omissions_with_positive_mean": 0,
+              "n_unestimable_deletions": 0,
+              "orientation": "reversed_B_to_A",
+              "radius_km": 2.0,
+              "smallest_positive_seed_count_among_omissions": 3,
+              "source_animal_loo_delta_mean_median": -0.002138447971781305,
+              "source_animal_loo_delta_mean_range": [
+                -0.002447089947089947,
+                -0.0007716049382716062
+              ]
+            }
+          ],
+          "n_both_direction_day_shift_dyads": 55,
+          "n_same_day_source_dyads": 55,
+          "n_source_animals_in_matched_pair_set": 11,
+          "original_result_reconstructed": true,
+          "spatial_filters": [
+            {
+              "component_animal_counts": [
+                8,
+                2
+              ],
+              "component_dyad_counts": [
+                26,
+                1
+              ],
+              "n_animals": 10,
+              "n_component_pairs_sum": 27,
+              "n_components_meeting_3_animals_and_8_dyads": 1,
+              "n_connected_components": 2,
+              "n_pairs": 27,
+              "radii": [
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "original_A_to_B",
+                  "radius_km": 0.5,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 1,
+                    "positive": 11
+                  },
+                  "winter_minus_summer_L_mean": 0.008267195767195767,
+                  "winter_minus_summer_L_seed_max": 0.027336860670194002,
+                  "winter_minus_summer_L_seed_min": -0.010141093474426805
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "reversed_B_to_A",
+                  "radius_km": 0.5,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 4,
+                    "positive": 8
+                  },
+                  "winter_minus_summer_L_mean": 0.004372427983539097,
+                  "winter_minus_summer_L_seed_max": 0.017636684303350973,
+                  "winter_minus_summer_L_seed_min": -0.0035273368606702016
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "original_A_to_B",
+                  "radius_km": 1.0,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 5,
+                    "positive": 7
+                  },
+                  "winter_minus_summer_L_mean": 0.002057613168724282,
+                  "winter_minus_summer_L_seed_max": 0.012345679012345685,
+                  "winter_minus_summer_L_seed_min": -0.009700176366843031
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "reversed_B_to_A",
+                  "radius_km": 1.0,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 3,
+                    "positive": 9
+                  },
+                  "winter_minus_summer_L_mean": 0.0042621987066431485,
+                  "winter_minus_summer_L_seed_max": 0.01102292768959435,
+                  "winter_minus_summer_L_seed_min": -0.0008818342151675638
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "original_A_to_B",
+                  "radius_km": 2.0,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 9,
+                    "positive": 3
+                  },
+                  "winter_minus_summer_L_mean": -0.004482657260435038,
+                  "winter_minus_summer_L_seed_max": 0.006613756613756612,
+                  "winter_minus_summer_L_seed_min": -0.01234567901234568
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "reversed_B_to_A",
+                  "radius_km": 2.0,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 8,
+                    "positive": 4
+                  },
+                  "winter_minus_summer_L_mean": -0.004151969429747208,
+                  "winter_minus_summer_L_seed_max": 0.016313932980599646,
+                  "winter_minus_summer_L_seed_min": -0.02028218694885362
+                }
+              ],
+              "status": "DESCRIPTIVE_SOURCE_GPS_EDGE_SET_ONLY",
+              "threshold_km": 5.0
+            },
+            {
+              "component_animal_counts": [
+                11
+              ],
+              "component_dyad_counts": [
+                32
+              ],
+              "n_animals": 11,
+              "n_component_pairs_sum": 32,
+              "n_components_meeting_3_animals_and_8_dyads": 1,
+              "n_connected_components": 1,
+              "n_pairs": 32,
+              "radii": [
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "original_A_to_B",
+                  "radius_km": 0.5,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 1,
+                    "positive": 11
+                  },
+                  "winter_minus_summer_L_mean": 0.006975446428571428,
+                  "winter_minus_summer_L_seed_max": 0.02306547619047619,
+                  "winter_minus_summer_L_seed_min": -0.008556547619047616
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "reversed_B_to_A",
+                  "radius_km": 0.5,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 4,
+                    "positive": 8
+                  },
+                  "winter_minus_summer_L_mean": 0.0036892361111111136,
+                  "winter_minus_summer_L_seed_max": 0.014880952380952382,
+                  "winter_minus_summer_L_seed_min": -0.0029761904761904825
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "original_A_to_B",
+                  "radius_km": 1.0,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 5,
+                    "positive": 7
+                  },
+                  "winter_minus_summer_L_mean": 0.001736111111111113,
+                  "winter_minus_summer_L_seed_max": 0.010416666666666671,
+                  "winter_minus_summer_L_seed_min": -0.008184523809523808
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "reversed_B_to_A",
+                  "radius_km": 1.0,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 3,
+                    "positive": 9
+                  },
+                  "winter_minus_summer_L_mean": 0.003596230158730157,
+                  "winter_minus_summer_L_seed_max": 0.009300595238095233,
+                  "winter_minus_summer_L_seed_min": -0.000744047619047632
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "original_A_to_B",
+                  "radius_km": 2.0,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 9,
+                    "positive": 3
+                  },
+                  "winter_minus_summer_L_mean": -0.003782242063492064,
+                  "winter_minus_summer_L_seed_max": 0.005580357142857141,
+                  "winter_minus_summer_L_seed_min": -0.010416666666666668
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "reversed_B_to_A",
+                  "radius_km": 2.0,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 8,
+                    "positive": 4
+                  },
+                  "winter_minus_summer_L_mean": -0.0035032242063492065,
+                  "winter_minus_summer_L_seed_max": 0.013764880952380952,
+                  "winter_minus_summer_L_seed_min": -0.017113095238095243
+                }
+              ],
+              "status": "DESCRIPTIVE_SOURCE_GPS_EDGE_SET_ONLY",
+              "threshold_km": 10.0
+            },
+            {
+              "component_animal_counts": [
+                11
+              ],
+              "component_dyad_counts": [
+                55
+              ],
+              "n_animals": 11,
+              "n_component_pairs_sum": 55,
+              "n_components_meeting_3_animals_and_8_dyads": 1,
+              "n_connected_components": 1,
+              "n_pairs": 55,
+              "radii": [
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "original_A_to_B",
+                  "radius_km": 0.5,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 1,
+                    "positive": 11
+                  },
+                  "winter_minus_summer_L_mean": 0.004473304473304473,
+                  "winter_minus_summer_L_seed_max": 0.013636363636363634,
+                  "winter_minus_summer_L_seed_min": -0.00541125541125541
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "reversed_B_to_A",
+                  "radius_km": 0.5,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 3,
+                    "positive": 9
+                  },
+                  "winter_minus_summer_L_mean": 0.0022546897546897554,
+                  "winter_minus_summer_L_seed_max": 0.008874458874458873,
+                  "winter_minus_summer_L_seed_min": -0.0030303030303030355
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "original_A_to_B",
+                  "radius_km": 1.0,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 5,
+                    "positive": 7
+                  },
+                  "winter_minus_summer_L_mean": 0.0013888888888888902,
+                  "winter_minus_summer_L_seed_max": 0.0064935064935064965,
+                  "winter_minus_summer_L_seed_min": -0.0036796536796536773
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "reversed_B_to_A",
+                  "radius_km": 1.0,
+                  "seed_signs": {
+                    "near_zero": 1,
+                    "negative": 2,
+                    "positive": 9
+                  },
+                  "winter_minus_summer_L_mean": 0.0020923520923520913,
+                  "winter_minus_summer_L_seed_max": 0.005194805194805191,
+                  "winter_minus_summer_L_seed_min": -0.0006493506493506501
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "original_A_to_B",
+                  "radius_km": 2.0,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 9,
+                    "positive": 3
+                  },
+                  "winter_minus_summer_L_mean": -0.002092352092352093,
+                  "winter_minus_summer_L_seed_max": 0.0032467532467532457,
+                  "winter_minus_summer_L_seed_min": -0.0060606060606060615
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "reversed_B_to_A",
+                  "radius_km": 2.0,
+                  "seed_signs": {
+                    "near_zero": 1,
+                    "negative": 7,
+                    "positive": 4
+                  },
+                  "winter_minus_summer_L_mean": -0.001984126984126984,
+                  "winter_minus_summer_L_seed_max": 0.008008658008658008,
+                  "winter_minus_summer_L_seed_min": -0.009956709956709959
+                }
+              ],
+              "status": "DESCRIPTIVE_SOURCE_GPS_EDGE_SET_ONLY",
+              "threshold_km": 25.0
+            }
+          ],
+          "status": "SOURCE_PAIR_SET_GEOGRAPHIC_INFLUENCE_EXPLORATORY",
+          "tolerance_seconds": 900
+        },
+        {
+          "leave_one_animal_out": [
+            {
+              "all_valid_omissions_positive_10_of_12": false,
+              "n_animal_deletions_attempted": 11,
+              "n_estimable_animal_deletions": 11,
+              "n_omissions_with_at_least_10_of_12_positive_source_draws": 3,
+              "n_omissions_with_positive_mean": 11,
+              "n_unestimable_deletions": 0,
+              "orientation": "original_A_to_B",
+              "radius_km": 0.5,
+              "smallest_positive_seed_count_among_omissions": 6,
+              "source_animal_loo_delta_mean_median": 0.0026455026455026454,
+              "source_animal_loo_delta_mean_range": [
+                0.000418871252204585,
+                0.0033289241622574957
+              ]
+            },
+            {
+              "all_valid_omissions_positive_10_of_12": false,
+              "n_animal_deletions_attempted": 11,
+              "n_estimable_animal_deletions": 11,
+              "n_omissions_with_at_least_10_of_12_positive_source_draws": 10,
+              "n_omissions_with_positive_mean": 11,
+              "n_unestimable_deletions": 0,
+              "orientation": "reversed_B_to_A",
+              "radius_km": 0.5,
+              "smallest_positive_seed_count_among_omissions": 9,
+              "source_animal_loo_delta_mean_median": 0.0051146384479717815,
+              "source_animal_loo_delta_mean_range": [
+                0.002954144620811288,
+                0.006084656084656085
+              ]
+            },
+            {
+              "all_valid_omissions_positive_10_of_12": false,
+              "n_animal_deletions_attempted": 11,
+              "n_estimable_animal_deletions": 11,
+              "n_omissions_with_at_least_10_of_12_positive_source_draws": 0,
+              "n_omissions_with_positive_mean": 11,
+              "n_unestimable_deletions": 0,
+              "orientation": "original_A_to_B",
+              "radius_km": 1.0,
+              "smallest_positive_seed_count_among_omissions": 4,
+              "source_animal_loo_delta_mean_median": 0.0009700176366843052,
+              "source_animal_loo_delta_mean_range": [
+                0.00017636684303351147,
+                0.0016313932980599648
+              ]
+            },
+            {
+              "all_valid_omissions_positive_10_of_12": false,
+              "n_animal_deletions_attempted": 11,
+              "n_estimable_animal_deletions": 11,
+              "n_omissions_with_at_least_10_of_12_positive_source_draws": 0,
+              "n_omissions_with_positive_mean": 10,
+              "n_unestimable_deletions": 0,
+              "orientation": "reversed_B_to_A",
+              "radius_km": 1.0,
+              "smallest_positive_seed_count_among_omissions": 5,
+              "source_animal_loo_delta_mean_median": 0.0004409171075837755,
+              "source_animal_loo_delta_mean_range": [
+                -0.0004409171075837744,
+                0.001146384479717814
+              ]
+            },
+            {
+              "all_valid_omissions_positive_10_of_12": false,
+              "n_animal_deletions_attempted": 11,
+              "n_estimable_animal_deletions": 11,
+              "n_omissions_with_at_least_10_of_12_positive_source_draws": 0,
+              "n_omissions_with_positive_mean": 0,
+              "n_unestimable_deletions": 0,
+              "orientation": "original_A_to_B",
+              "radius_km": 2.0,
+              "smallest_positive_seed_count_among_omissions": 0,
+              "source_animal_loo_delta_mean_median": -0.002954144620811288,
+              "source_animal_loo_delta_mean_range": [
+                -0.003813932980599647,
+                -0.0007495590828924162
+              ]
+            },
+            {
+              "all_valid_omissions_positive_10_of_12": false,
+              "n_animal_deletions_attempted": 11,
+              "n_estimable_animal_deletions": 11,
+              "n_omissions_with_at_least_10_of_12_positive_source_draws": 0,
+              "n_omissions_with_positive_mean": 0,
+              "n_unestimable_deletions": 0,
+              "orientation": "reversed_B_to_A",
+              "radius_km": 2.0,
+              "smallest_positive_seed_count_among_omissions": 3,
+              "source_animal_loo_delta_mean_median": -0.0012786596119929458,
+              "source_animal_loo_delta_mean_range": [
+                -0.0018077601410934748,
+                -0.0003968253968253973
+              ]
+            }
+          ],
+          "n_both_direction_day_shift_dyads": 55,
+          "n_same_day_source_dyads": 55,
+          "n_source_animals_in_matched_pair_set": 11,
+          "original_result_reconstructed": true,
+          "spatial_filters": [
+            {
+              "component_animal_counts": [
+                8,
+                2
+              ],
+              "component_dyad_counts": [
+                26,
+                1
+              ],
+              "n_animals": 10,
+              "n_component_pairs_sum": 27,
+              "n_components_meeting_3_animals_and_8_dyads": 1,
+              "n_connected_components": 2,
+              "n_pairs": 27,
+              "radii": [
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "original_A_to_B",
+                  "radius_km": 0.5,
+                  "seed_signs": {
+                    "near_zero": 1,
+                    "negative": 1,
+                    "positive": 10
+                  },
+                  "winter_minus_summer_L_mean": 0.005548206937095825,
+                  "winter_minus_summer_L_seed_max": 0.01234567901234568,
+                  "winter_minus_summer_L_seed_min": -0.002645502645502646
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "reversed_B_to_A",
+                  "radius_km": 0.5,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 1,
+                    "positive": 11
+                  },
+                  "winter_minus_summer_L_mean": 0.00940623162845385,
+                  "winter_minus_summer_L_seed_max": 0.022045855379188708,
+                  "winter_minus_summer_L_seed_min": -0.0035273368606701955
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "original_A_to_B",
+                  "radius_km": 1.0,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 8,
+                    "positive": 4
+                  },
+                  "winter_minus_summer_L_mean": 0.001212522045855382,
+                  "winter_minus_summer_L_seed_max": 0.017636684303350966,
+                  "winter_minus_summer_L_seed_min": -0.008818342151675483
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "reversed_B_to_A",
+                  "radius_km": 1.0,
+                  "seed_signs": {
+                    "near_zero": 1,
+                    "negative": 6,
+                    "positive": 5
+                  },
+                  "winter_minus_summer_L_mean": 7.348618459729762e-05,
+                  "winter_minus_summer_L_seed_max": 0.011904761904761915,
+                  "winter_minus_summer_L_seed_min": -0.01058201058201058
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "original_A_to_B",
+                  "radius_km": 2.0,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 9,
+                    "positive": 3
+                  },
+                  "winter_minus_summer_L_mean": -0.005254262198706643,
+                  "winter_minus_summer_L_seed_max": 0.0030864197530864174,
+                  "winter_minus_summer_L_seed_min": -0.015432098765432096
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "reversed_B_to_A",
+                  "radius_km": 2.0,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 6,
+                    "positive": 6
+                  },
+                  "winter_minus_summer_L_mean": -0.002094356261022929,
+                  "winter_minus_summer_L_seed_max": 0.00837742504409171,
+                  "winter_minus_summer_L_seed_min": -0.011022927689594357
+                }
+              ],
+              "status": "DESCRIPTIVE_SOURCE_GPS_EDGE_SET_ONLY",
+              "threshold_km": 5.0
+            },
+            {
+              "component_animal_counts": [
+                11
+              ],
+              "component_dyad_counts": [
+                32
+              ],
+              "n_animals": 11,
+              "n_component_pairs_sum": 32,
+              "n_components_meeting_3_animals_and_8_dyads": 1,
+              "n_connected_components": 1,
+              "n_pairs": 32,
+              "radii": [
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "original_A_to_B",
+                  "radius_km": 0.5,
+                  "seed_signs": {
+                    "near_zero": 1,
+                    "negative": 1,
+                    "positive": 10
+                  },
+                  "winter_minus_summer_L_mean": 0.004681299603174603,
+                  "winter_minus_summer_L_seed_max": 0.010416666666666668,
+                  "winter_minus_summer_L_seed_min": -0.0022321428571428575
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "reversed_B_to_A",
+                  "radius_km": 0.5,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 1,
+                    "positive": 11
+                  },
+                  "winter_minus_summer_L_mean": 0.007936507936507936,
+                  "winter_minus_summer_L_seed_max": 0.018601190476190473,
+                  "winter_minus_summer_L_seed_min": -0.0029761904761904773
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "original_A_to_B",
+                  "radius_km": 1.0,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 8,
+                    "positive": 4
+                  },
+                  "winter_minus_summer_L_mean": 0.0010230654761904784,
+                  "winter_minus_summer_L_seed_max": 0.014880952380952377,
+                  "winter_minus_summer_L_seed_min": -0.007440476190476189
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "reversed_B_to_A",
+                  "radius_km": 1.0,
+                  "seed_signs": {
+                    "near_zero": 1,
+                    "negative": 6,
+                    "positive": 5
+                  },
+                  "winter_minus_summer_L_mean": 6.200396825396981e-05,
+                  "winter_minus_summer_L_seed_max": 0.010044642857142865,
+                  "winter_minus_summer_L_seed_min": -0.008928571428571426
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "original_A_to_B",
+                  "radius_km": 2.0,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 9,
+                    "positive": 3
+                  },
+                  "winter_minus_summer_L_mean": -0.00443328373015873,
+                  "winter_minus_summer_L_seed_max": 0.002604166666666665,
+                  "winter_minus_summer_L_seed_min": -0.01302083333333333
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "reversed_B_to_A",
+                  "radius_km": 2.0,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 6,
+                    "positive": 6
+                  },
+                  "winter_minus_summer_L_mean": -0.0017671130952380961,
+                  "winter_minus_summer_L_seed_max": 0.00706845238095238,
+                  "winter_minus_summer_L_seed_min": -0.00930059523809524
+                }
+              ],
+              "status": "DESCRIPTIVE_SOURCE_GPS_EDGE_SET_ONLY",
+              "threshold_km": 10.0
+            },
+            {
+              "component_animal_counts": [
+                11
+              ],
+              "component_dyad_counts": [
+                55
+              ],
+              "n_animals": 11,
+              "n_component_pairs_sum": 55,
+              "n_components_meeting_3_animals_and_8_dyads": 1,
+              "n_connected_components": 1,
+              "n_pairs": 55,
+              "radii": [
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "original_A_to_B",
+                  "radius_km": 0.5,
+                  "seed_signs": {
+                    "near_zero": 1,
+                    "negative": 3,
+                    "positive": 8
+                  },
+                  "winter_minus_summer_L_mean": 0.0021825396825396826,
+                  "winter_minus_summer_L_seed_max": 0.007792207792207792,
+                  "winter_minus_summer_L_seed_min": -0.0023809523809523825
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "reversed_B_to_A",
+                  "radius_km": 0.5,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 0,
+                    "positive": 12
+                  },
+                  "winter_minus_summer_L_mean": 0.004978354978354979,
+                  "winter_minus_summer_L_seed_max": 0.009956709956709954,
+                  "winter_minus_summer_L_seed_min": 0.0004329004329004389
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "original_A_to_B",
+                  "radius_km": 1.0,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 7,
+                    "positive": 5
+                  },
+                  "winter_minus_summer_L_mean": 0.0009018759018759033,
+                  "winter_minus_summer_L_seed_max": 0.008658008658008661,
+                  "winter_minus_summer_L_seed_min": -0.004112554112554112
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "reversed_B_to_A",
+                  "radius_km": 1.0,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 7,
+                    "positive": 5
+                  },
+                  "winter_minus_summer_L_mean": 0.00039682539682539764,
+                  "winter_minus_summer_L_seed_max": 0.006493506493506497,
+                  "winter_minus_summer_L_seed_min": -0.004545454545454544
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "original_A_to_B",
+                  "radius_km": 2.0,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 8,
+                    "positive": 4
+                  },
+                  "winter_minus_summer_L_mean": -0.002471139971139971,
+                  "winter_minus_summer_L_seed_max": 0.001515151515151514,
+                  "winter_minus_summer_L_seed_min": -0.007575757575757574
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "reversed_B_to_A",
+                  "radius_km": 2.0,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 6,
+                    "positive": 6
+                  },
+                  "winter_minus_summer_L_mean": -0.0011183261183261187,
+                  "winter_minus_summer_L_seed_max": 0.004329004329004329,
+                  "winter_minus_summer_L_seed_min": -0.005844155844155844
+                }
+              ],
+              "status": "DESCRIPTIVE_SOURCE_GPS_EDGE_SET_ONLY",
+              "threshold_km": 25.0
+            }
+          ],
+          "status": "SOURCE_PAIR_SET_GEOGRAPHIC_INFLUENCE_EXPLORATORY",
+          "tolerance_seconds": 1800
+        }
+      ],
+      "year": 2019
+    },
+    {
+      "n_original_geographic_dyads": 205,
+      "time_tolerance_rows": [
+        {
+          "leave_one_animal_out": [
+            {
+              "all_valid_omissions_positive_10_of_12": false,
+              "n_animal_deletions_attempted": 21,
+              "n_estimable_animal_deletions": 21,
+              "n_omissions_with_at_least_10_of_12_positive_source_draws": 19,
+              "n_omissions_with_positive_mean": 21,
+              "n_unestimable_deletions": 0,
+              "orientation": "original_A_to_B",
+              "radius_km": 0.5,
+              "smallest_positive_seed_count_among_omissions": 8,
+              "source_animal_loo_delta_mean_median": 0.0014961389961389967,
+              "source_animal_loo_delta_mean_range": [
+                0.00102960102960103,
+                0.001914414414414415
+              ]
+            },
+            {
+              "all_valid_omissions_positive_10_of_12": false,
+              "n_animal_deletions_attempted": 21,
+              "n_estimable_animal_deletions": 21,
+              "n_omissions_with_at_least_10_of_12_positive_source_draws": 10,
+              "n_omissions_with_positive_mean": 21,
+              "n_unestimable_deletions": 0,
+              "orientation": "reversed_B_to_A",
+              "radius_km": 0.5,
+              "smallest_positive_seed_count_among_omissions": 8,
+              "source_animal_loo_delta_mean_median": 0.0010827359617682207,
+              "source_animal_loo_delta_mean_range": [
+                0.00047190047190047224,
+                0.0013542454018644502
+              ]
+            },
+            {
+              "all_valid_omissions_positive_10_of_12": false,
+              "n_animal_deletions_attempted": 21,
+              "n_estimable_animal_deletions": 21,
+              "n_omissions_with_at_least_10_of_12_positive_source_draws": 14,
+              "n_omissions_with_positive_mean": 21,
+              "n_unestimable_deletions": 0,
+              "orientation": "original_A_to_B",
+              "radius_km": 1.0,
+              "smallest_positive_seed_count_among_omissions": 6,
+              "source_animal_loo_delta_mean_median": 0.001360087045570916,
+              "source_animal_loo_delta_mean_range": [
+                0.0005094380094380087,
+                0.0014961389961389952
+              ]
+            },
+            {
+              "all_valid_omissions_positive_10_of_12": false,
+              "n_animal_deletions_attempted": 21,
+              "n_estimable_animal_deletions": 21,
+              "n_omissions_with_at_least_10_of_12_positive_source_draws": 1,
+              "n_omissions_with_positive_mean": 19,
+              "n_unestimable_deletions": 0,
+              "orientation": "reversed_B_to_A",
+              "radius_km": 1.0,
+              "smallest_positive_seed_count_among_omissions": 5,
+              "source_animal_loo_delta_mean_median": 0.0004826254826254829,
+              "source_animal_loo_delta_mean_range": [
+                -0.00014934289127837487,
+                0.0010135135135135138
+              ]
+            },
+            {
+              "all_valid_omissions_positive_10_of_12": false,
+              "n_animal_deletions_attempted": 21,
+              "n_estimable_animal_deletions": 21,
+              "n_omissions_with_at_least_10_of_12_positive_source_draws": 14,
+              "n_omissions_with_positive_mean": 21,
+              "n_unestimable_deletions": 0,
+              "orientation": "original_A_to_B",
+              "radius_km": 2.0,
+              "smallest_positive_seed_count_among_omissions": 7,
+              "source_animal_loo_delta_mean_median": 0.0009277134277134273,
+              "source_animal_loo_delta_mean_range": [
+                0.0005898755898755894,
+                0.0011307390339648405
+              ]
+            },
+            {
+              "all_valid_omissions_positive_10_of_12": false,
+              "n_animal_deletions_attempted": 21,
+              "n_estimable_animal_deletions": 21,
+              "n_omissions_with_at_least_10_of_12_positive_source_draws": 20,
+              "n_omissions_with_positive_mean": 21,
+              "n_unestimable_deletions": 0,
+              "orientation": "reversed_B_to_A",
+              "radius_km": 2.0,
+              "smallest_positive_seed_count_among_omissions": 9,
+              "source_animal_loo_delta_mean_median": 0.001603389103389103,
+              "source_animal_loo_delta_mean_range": [
+                0.000954727769243898,
+                0.0017281105990783407
+              ]
+            }
+          ],
+          "n_both_direction_day_shift_dyads": 205,
+          "n_same_day_source_dyads": 205,
+          "n_source_animals_in_matched_pair_set": 21,
+          "original_result_reconstructed": true,
+          "spatial_filters": [
+            {
+              "component_animal_counts": [
+                12,
+                4,
+                4
+              ],
+              "component_dyad_counts": [
+                51,
+                6,
+                3
+              ],
+              "n_animals": 20,
+              "n_component_pairs_sum": 60,
+              "n_components_meeting_3_animals_and_8_dyads": 1,
+              "n_connected_components": 3,
+              "n_pairs": 60,
+              "radii": [
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "original_A_to_B",
+                  "radius_km": 0.5,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 1,
+                    "positive": 11
+                  },
+                  "winter_minus_summer_L_mean": 0.004728835978835981,
+                  "winter_minus_summer_L_seed_max": 0.011507936507936505,
+                  "winter_minus_summer_L_seed_min": -0.0015873015873015836
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "reversed_B_to_A",
+                  "radius_km": 0.5,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 2,
+                    "positive": 10
+                  },
+                  "winter_minus_summer_L_mean": 0.0033564814814814833,
+                  "winter_minus_summer_L_seed_max": 0.014484126984126981,
+                  "winter_minus_summer_L_seed_min": -0.007341269841269838
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "original_A_to_B",
+                  "radius_km": 1.0,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 2,
+                    "positive": 10
+                  },
+                  "winter_minus_summer_L_mean": 0.004216269841269839,
+                  "winter_minus_summer_L_seed_max": 0.017460317460317447,
+                  "winter_minus_summer_L_seed_min": -0.004365079365079361
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "reversed_B_to_A",
+                  "radius_km": 1.0,
+                  "seed_signs": {
+                    "near_zero": 1,
+                    "negative": 5,
+                    "positive": 6
+                  },
+                  "winter_minus_summer_L_mean": 0.0015542328042328051,
+                  "winter_minus_summer_L_seed_max": 0.011507936507936505,
+                  "winter_minus_summer_L_seed_min": -0.00734126984126983
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "original_A_to_B",
+                  "radius_km": 2.0,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 1,
+                    "positive": 11
+                  },
+                  "winter_minus_summer_L_mean": 0.0029761904761904747,
+                  "winter_minus_summer_L_seed_max": 0.01507936507936507,
+                  "winter_minus_summer_L_seed_min": -0.005158730158730159
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "reversed_B_to_A",
+                  "radius_km": 2.0,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 2,
+                    "positive": 10
+                  },
+                  "winter_minus_summer_L_mean": 0.005092592592592592,
+                  "winter_minus_summer_L_seed_max": 0.010714285714285706,
+                  "winter_minus_summer_L_seed_min": -0.006944444444444438
+                }
+              ],
+              "status": "DESCRIPTIVE_SOURCE_GPS_EDGE_SET_ONLY",
+              "threshold_km": 5.0
+            },
+            {
+              "component_animal_counts": [
+                21
+              ],
+              "component_dyad_counts": [
+                97
+              ],
+              "n_animals": 21,
+              "n_component_pairs_sum": 97,
+              "n_components_meeting_3_animals_and_8_dyads": 1,
+              "n_connected_components": 1,
+              "n_pairs": 97,
+              "radii": [
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "original_A_to_B",
+                  "radius_km": 0.5,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 1,
+                    "positive": 11
+                  },
+                  "winter_minus_summer_L_mean": 0.002925053182785143,
+                  "winter_minus_summer_L_seed_max": 0.007118311242022581,
+                  "winter_minus_summer_L_seed_min": -0.0009818360333824227
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "reversed_B_to_A",
+                  "radius_km": 0.5,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 2,
+                    "positive": 10
+                  },
+                  "winter_minus_summer_L_mean": 0.0020761741122565878,
+                  "winter_minus_summer_L_seed_max": 0.008959253804614627,
+                  "winter_minus_summer_L_seed_min": -0.004540991654393714
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "original_A_to_B",
+                  "radius_km": 1.0,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 2,
+                    "positive": 10
+                  },
+                  "winter_minus_summer_L_mean": 0.0026080019636720657,
+                  "winter_minus_summer_L_seed_max": 0.010800196367206668,
+                  "winter_minus_summer_L_seed_min": -0.0027000490918016665
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "reversed_B_to_A",
+                  "radius_km": 1.0,
+                  "seed_signs": {
+                    "near_zero": 1,
+                    "negative": 5,
+                    "positive": 6
+                  },
+                  "winter_minus_summer_L_mean": 0.0009613811160202918,
+                  "winter_minus_summer_L_seed_max": 0.007118311242022581,
+                  "winter_minus_summer_L_seed_min": -0.00454099165439371
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "original_A_to_B",
+                  "radius_km": 2.0,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 1,
+                    "positive": 11
+                  },
+                  "winter_minus_summer_L_mean": 0.0018409425625920464,
+                  "winter_minus_summer_L_seed_max": 0.009327442317133032,
+                  "winter_minus_summer_L_seed_min": -0.0031909671084928816
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "reversed_B_to_A",
+                  "radius_km": 2.0,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 2,
+                    "positive": 10
+                  },
+                  "winter_minus_summer_L_mean": 0.003150057273768613,
+                  "winter_minus_summer_L_seed_max": 0.006627393225331364,
+                  "winter_minus_summer_L_seed_min": -0.004295532646048106
+                }
+              ],
+              "status": "DESCRIPTIVE_SOURCE_GPS_EDGE_SET_ONLY",
+              "threshold_km": 10.0
+            },
+            {
+              "component_animal_counts": [
+                21
+              ],
+              "component_dyad_counts": [
+                205
+              ],
+              "n_animals": 21,
+              "n_component_pairs_sum": 205,
+              "n_components_meeting_3_animals_and_8_dyads": 1,
+              "n_connected_components": 1,
+              "n_pairs": 205,
+              "radii": [
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "original_A_to_B",
+                  "radius_km": 0.5,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 1,
+                    "positive": 11
+                  },
+                  "winter_minus_summer_L_mean": 0.0013840495547812626,
+                  "winter_minus_summer_L_seed_max": 0.003368176538908246,
+                  "winter_minus_summer_L_seed_min": -0.0004645760743321708
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "reversed_B_to_A",
+                  "radius_km": 0.5,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 2,
+                    "positive": 10
+                  },
+                  "winter_minus_summer_L_mean": 0.0009823848238482392,
+                  "winter_minus_summer_L_seed_max": 0.004239256678281068,
+                  "winter_minus_summer_L_seed_min": -0.002148664343786294
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "original_A_to_B",
+                  "radius_km": 1.0,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 2,
+                    "positive": 10
+                  },
+                  "winter_minus_summer_L_mean": 0.001234030197444831,
+                  "winter_minus_summer_L_seed_max": 0.0051103368176538865,
+                  "winter_minus_summer_L_seed_min": -0.0012775842044134714
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "reversed_B_to_A",
+                  "radius_km": 1.0,
+                  "seed_signs": {
+                    "near_zero": 1,
+                    "negative": 5,
+                    "positive": 6
+                  },
+                  "winter_minus_summer_L_mean": 0.0004548974061169185,
+                  "winter_minus_summer_L_seed_max": 0.003368176538908246,
+                  "winter_minus_summer_L_seed_min": -0.0021486643437862918
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "original_A_to_B",
+                  "radius_km": 2.0,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 1,
+                    "positive": 11
+                  },
+                  "winter_minus_summer_L_mean": 0.000871080139372822,
+                  "winter_minus_summer_L_seed_max": 0.0044134727061556295,
+                  "winter_minus_summer_L_seed_min": -0.0015098722415795587
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "reversed_B_to_A",
+                  "radius_km": 2.0,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 2,
+                    "positive": 10
+                  },
+                  "winter_minus_summer_L_mean": 0.0014905149051490513,
+                  "winter_minus_summer_L_seed_max": 0.0031358885017421577,
+                  "winter_minus_summer_L_seed_min": -0.00203252032520325
+                }
+              ],
+              "status": "DESCRIPTIVE_SOURCE_GPS_EDGE_SET_ONLY",
+              "threshold_km": 25.0
+            }
+          ],
+          "status": "SOURCE_PAIR_SET_GEOGRAPHIC_INFLUENCE_EXPLORATORY",
+          "tolerance_seconds": 900
+        },
+        {
+          "leave_one_animal_out": [
+            {
+              "all_valid_omissions_positive_10_of_12": false,
+              "n_animal_deletions_attempted": 21,
+              "n_estimable_animal_deletions": 21,
+              "n_omissions_with_at_least_10_of_12_positive_source_draws": 3,
+              "n_omissions_with_positive_mean": 21,
+              "n_unestimable_deletions": 0,
+              "orientation": "original_A_to_B",
+              "radius_km": 0.5,
+              "smallest_positive_seed_count_among_omissions": 7,
+              "source_animal_loo_delta_mean_median": 0.0016033891033891033,
+              "source_animal_loo_delta_mean_range": [
+                0.0010778635778635776,
+                0.0016784641784641785
+              ]
+            },
+            {
+              "all_valid_omissions_positive_10_of_12": true,
+              "n_animal_deletions_attempted": 21,
+              "n_estimable_animal_deletions": 21,
+              "n_omissions_with_at_least_10_of_12_positive_source_draws": 21,
+              "n_omissions_with_positive_mean": 21,
+              "n_unestimable_deletions": 0,
+              "orientation": "reversed_B_to_A",
+              "radius_km": 0.5,
+              "smallest_positive_seed_count_among_omissions": 10,
+              "source_animal_loo_delta_mean_median": 0.0022683397683397684,
+              "source_animal_loo_delta_mean_range": [
+                0.0016001024065540202,
+                0.002461389961389962
+              ]
+            },
+            {
+              "all_valid_omissions_positive_10_of_12": false,
+              "n_animal_deletions_attempted": 21,
+              "n_estimable_animal_deletions": 21,
+              "n_omissions_with_at_least_10_of_12_positive_source_draws": 19,
+              "n_omissions_with_positive_mean": 21,
+              "n_unestimable_deletions": 0,
+              "orientation": "original_A_to_B",
+              "radius_km": 1.0,
+              "smallest_positive_seed_count_among_omissions": 7,
+              "source_animal_loo_delta_mean_median": 0.0014425139425139422,
+              "source_animal_loo_delta_mean_range": [
+                0.000471900471900472,
+                0.0015604890604890601
+              ]
+            },
+            {
+              "all_valid_omissions_positive_10_of_12": false,
+              "n_animal_deletions_attempted": 21,
+              "n_estimable_animal_deletions": 21,
+              "n_omissions_with_at_least_10_of_12_positive_source_draws": 0,
+              "n_omissions_with_positive_mean": 20,
+              "n_unestimable_deletions": 0,
+              "orientation": "reversed_B_to_A",
+              "radius_km": 1.0,
+              "smallest_positive_seed_count_among_omissions": 5,
+              "source_animal_loo_delta_mean_median": 0.00048536439665471933,
+              "source_animal_loo_delta_mean_range": [
+                -0.00014478764478764445,
+                0.0008258258258258261
+              ]
+            },
+            {
+              "all_valid_omissions_positive_10_of_12": false,
+              "n_animal_deletions_attempted": 21,
+              "n_estimable_animal_deletions": 21,
+              "n_omissions_with_at_least_10_of_12_positive_source_draws": 17,
+              "n_omissions_with_positive_mean": 21,
+              "n_unestimable_deletions": 0,
+              "orientation": "original_A_to_B",
+              "radius_km": 2.0,
+              "smallest_positive_seed_count_among_omissions": 9,
+              "source_animal_loo_delta_mean_median": 0.0015873015873015877,
+              "source_animal_loo_delta_mean_range": [
+                0.0009920634920634927,
+                0.0017320892320892324
+              ]
+            },
+            {
+              "all_valid_omissions_positive_10_of_12": false,
+              "n_animal_deletions_attempted": 21,
+              "n_estimable_animal_deletions": 21,
+              "n_omissions_with_at_least_10_of_12_positive_source_draws": 0,
+              "n_omissions_with_positive_mean": 5,
+              "n_unestimable_deletions": 0,
+              "orientation": "reversed_B_to_A",
+              "radius_km": 2.0,
+              "smallest_positive_seed_count_among_omissions": 5,
+              "source_animal_loo_delta_mean_median": -8.580008580008615e-05,
+              "source_animal_loo_delta_mean_range": [
+                -0.00027885027885027905,
+                0.00035928785928785915
+              ]
+            }
+          ],
+          "n_both_direction_day_shift_dyads": 205,
+          "n_same_day_source_dyads": 205,
+          "n_source_animals_in_matched_pair_set": 21,
+          "original_result_reconstructed": true,
+          "spatial_filters": [
+            {
+              "component_animal_counts": [
+                12,
+                4,
+                4
+              ],
+              "component_dyad_counts": [
+                51,
+                6,
+                3
+              ],
+              "n_animals": 20,
+              "n_component_pairs_sum": 60,
+              "n_components_meeting_3_animals_and_8_dyads": 1,
+              "n_connected_components": 3,
+              "n_pairs": 60,
+              "radii": [
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "original_A_to_B",
+                  "radius_km": 0.5,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 4,
+                    "positive": 8
+                  },
+                  "winter_minus_summer_L_mean": 0.005158730158730159,
+                  "winter_minus_summer_L_seed_max": 0.01805555555555555,
+                  "winter_minus_summer_L_seed_min": -0.008134920634920636
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "reversed_B_to_A",
+                  "radius_km": 0.5,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 1,
+                    "positive": 11
+                  },
+                  "winter_minus_summer_L_mean": 0.007457010582010583,
+                  "winter_minus_summer_L_seed_max": 0.016865079365079368,
+                  "winter_minus_summer_L_seed_min": -0.00575396825396825
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "original_A_to_B",
+                  "radius_km": 1.0,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 2,
+                    "positive": 10
+                  },
+                  "winter_minus_summer_L_mean": 0.0045138888888888885,
+                  "winter_minus_summer_L_seed_max": 0.009126984126984133,
+                  "winter_minus_summer_L_seed_min": -0.010714285714285716
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "reversed_B_to_A",
+                  "radius_km": 1.0,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 4,
+                    "positive": 8
+                  },
+                  "winter_minus_summer_L_mean": 0.00150462962962963,
+                  "winter_minus_summer_L_seed_max": 0.012698412698412693,
+                  "winter_minus_summer_L_seed_min": -0.010714285714285713
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "original_A_to_B",
+                  "radius_km": 2.0,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 2,
+                    "positive": 10
+                  },
+                  "winter_minus_summer_L_mean": 0.005092592592592594,
+                  "winter_minus_summer_L_seed_max": 0.011309523809523813,
+                  "winter_minus_summer_L_seed_min": -0.0037698412698412656
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "reversed_B_to_A",
+                  "radius_km": 2.0,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 4,
+                    "positive": 8
+                  },
+                  "winter_minus_summer_L_mean": -0.0002645502645502657,
+                  "winter_minus_summer_L_seed_max": 0.005753968253968252,
+                  "winter_minus_summer_L_seed_min": -0.013293650793650797
+                }
+              ],
+              "status": "DESCRIPTIVE_SOURCE_GPS_EDGE_SET_ONLY",
+              "threshold_km": 5.0
+            },
+            {
+              "component_animal_counts": [
+                21
+              ],
+              "component_dyad_counts": [
+                97
+              ],
+              "n_animals": 21,
+              "n_component_pairs_sum": 97,
+              "n_components_meeting_3_animals_and_8_dyads": 1,
+              "n_connected_components": 1,
+              "n_pairs": 97,
+              "radii": [
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "original_A_to_B",
+                  "radius_km": 0.5,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 4,
+                    "positive": 8
+                  },
+                  "winter_minus_summer_L_mean": 0.003190967108492882,
+                  "winter_minus_summer_L_seed_max": 0.011168384879725083,
+                  "winter_minus_summer_L_seed_min": -0.005031909671084929
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "reversed_B_to_A",
+                  "radius_km": 0.5,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 1,
+                    "positive": 11
+                  },
+                  "winter_minus_summer_L_mean": 0.004612583865161186,
+                  "winter_minus_summer_L_seed_max": 0.010432007854688268,
+                  "winter_minus_summer_L_seed_min": -0.003559155621011289
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "original_A_to_B",
+                  "radius_km": 1.0,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 2,
+                    "positive": 10
+                  },
+                  "winter_minus_summer_L_mean": 0.0027920962199312707,
+                  "winter_minus_summer_L_seed_max": 0.005645557191948949,
+                  "winter_minus_summer_L_seed_min": -0.006627393225331371
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "reversed_B_to_A",
+                  "radius_km": 1.0,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 4,
+                    "positive": 8
+                  },
+                  "winter_minus_summer_L_mean": 0.0009306987399770908,
+                  "winter_minus_summer_L_seed_max": 0.0078546882670594,
+                  "winter_minus_summer_L_seed_min": -0.006627393225331369
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "original_A_to_B",
+                  "radius_km": 2.0,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 2,
+                    "positive": 10
+                  },
+                  "winter_minus_summer_L_mean": 0.0031500572737686145,
+                  "winter_minus_summer_L_seed_max": 0.00699558173784978,
+                  "winter_minus_summer_L_seed_min": -0.002331860579283257
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "reversed_B_to_A",
+                  "radius_km": 2.0,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 4,
+                    "positive": 8
+                  },
+                  "winter_minus_summer_L_mean": -0.0001636393388970716,
+                  "winter_minus_summer_L_seed_max": 0.0035591556210112897,
+                  "winter_minus_summer_L_seed_min": -0.008222876779577813
+                }
+              ],
+              "status": "DESCRIPTIVE_SOURCE_GPS_EDGE_SET_ONLY",
+              "threshold_km": 10.0
+            },
+            {
+              "component_animal_counts": [
+                21
+              ],
+              "component_dyad_counts": [
+                205
+              ],
+              "n_animals": 21,
+              "n_component_pairs_sum": 205,
+              "n_components_meeting_3_animals_and_8_dyads": 1,
+              "n_connected_components": 1,
+              "n_pairs": 205,
+              "radii": [
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "original_A_to_B",
+                  "radius_km": 0.5,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 4,
+                    "positive": 8
+                  },
+                  "winter_minus_summer_L_mean": 0.0015098722415795589,
+                  "winter_minus_summer_L_seed_max": 0.005284552845528454,
+                  "winter_minus_summer_L_seed_min": -0.002380952380952381
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "reversed_B_to_A",
+                  "radius_km": 0.5,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 1,
+                    "positive": 11
+                  },
+                  "winter_minus_summer_L_mean": 0.002182539682539683,
+                  "winter_minus_summer_L_seed_max": 0.0049361207897793274,
+                  "winter_minus_summer_L_seed_min": -0.001684088269454122
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "original_A_to_B",
+                  "radius_km": 1.0,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 2,
+                    "positive": 10
+                  },
+                  "winter_minus_summer_L_mean": 0.0013211382113821135,
+                  "winter_minus_summer_L_seed_max": 0.00267131242740999,
+                  "winter_minus_summer_L_seed_min": -0.003135888501742161
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "reversed_B_to_A",
+                  "radius_km": 1.0,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 4,
+                    "positive": 8
+                  },
+                  "winter_minus_summer_L_mean": 0.00044037940379403805,
+                  "winter_minus_summer_L_seed_max": 0.003716608594657374,
+                  "winter_minus_summer_L_seed_min": -0.00313588850174216
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "original_A_to_B",
+                  "radius_km": 2.0,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 2,
+                    "positive": 10
+                  },
+                  "winter_minus_summer_L_mean": 0.001490514905149052,
+                  "winter_minus_summer_L_seed_max": 0.0033101045296167254,
+                  "winter_minus_summer_L_seed_min": -0.001103368176538907
+                },
+                {
+                  "n_seed_draws": 12,
+                  "orientation": "reversed_B_to_A",
+                  "radius_km": 2.0,
+                  "seed_signs": {
+                    "near_zero": 0,
+                    "negative": 4,
+                    "positive": 8
+                  },
+                  "winter_minus_summer_L_mean": -7.742934572202899e-05,
+                  "winter_minus_summer_L_seed_max": 0.0016840882694541225,
+                  "winter_minus_summer_L_seed_min": -0.0038908246225319403
+                }
+              ],
+              "status": "DESCRIPTIVE_SOURCE_GPS_EDGE_SET_ONLY",
+              "threshold_km": 25.0
+            }
+          ],
+          "status": "SOURCE_PAIR_SET_GEOGRAPHIC_INFLUENCE_EXPLORATORY",
+          "tolerance_seconds": 1800
+        }
+      ],
+      "year": 2020
+    }
+  ],
+  "same_animal_and_pair_reuse_by_time_tolerance": [
+    {
+      "independent_source_populations_established": false,
+      "n_2019_matched_animals": 11,
+      "n_2019_matched_pairs": 55,
+      "n_2020_matched_animals": 21,
+      "n_2020_matched_pairs": 205,
+      "n_both_years_matched_animals": 11,
+      "n_both_years_matched_pair_identities": 55,
+      "tolerance_seconds": 900
+    },
+    {
+      "independent_source_populations_established": false,
+      "n_2019_matched_animals": 11,
+      "n_2019_matched_pairs": 55,
+      "n_2020_matched_animals": 21,
+      "n_2020_matched_pairs": 205,
+      "n_both_years_matched_animals": 11,
+      "n_both_years_matched_pair_identities": 55,
+      "tolerance_seconds": 1800
+    }
+  ],
+  "schema_version": 1,
+  "source": "white_tailed_deer",
+  "source_doi": "10.5441/001/1.718",
+  "source_original_fixes": 371080,
+  "source_reference_audit": {
+    "animals_with_nonempty_explicit_site_field": 0,
+    "explicit_site_or_group_metadata_fields": [],
+    "local_population_membership_verified": false,
+    "location_accuracy_or_GPS_quality_fields": [],
+    "median_observed_fixes_per_animal_day": 24.0,
+    "median_observed_within_day_interfix_seconds": 3600.0,
+    "n_source_animal_calendar_dates": 15648,
+    "note": "Nonempty generic site labels alone would not prove local population membership; no animal IDs or locations released.",
+    "original_GPS_columns_present_but_no_values_shared": 11,
+    "reference_columns_present_but_no_values_shared": 14,
+    "reference_table_n_rows": 34,
+    "source_clock_basis_verified": false,
+    "tag_schedule_fields": [],
+    "tag_specific_GPS_location_error_calibrated": false
+  },
+  "status": "POST_INSPECTION_SPATIAL_CLUSTER_SUBJECT_INFLUENCE_AUDIT",
+  "time_tolerances_seconds": [
+    900,
+    1800
+  ]
+}

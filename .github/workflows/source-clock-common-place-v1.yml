@@ -1,0 +1,54 @@
+name: Source-clock co-use versus geographic X (original GPS only)
+
+on:
+  push:
+    branches:
+      - prospective/multitaxon-identity-ecology-v1
+    paths:
+      - "prospective/multitaxon_individuality/same_clock_bin_couse_v1.py"
+      - "prospective/multitaxon_individuality/tests/test_same_clock_bin_couse_v1.py"
+      - "prospective/multitaxon_individuality/SAME_CLOCK_BIN_COUSE_DESIGN_2026_10_20.md"
+      - ".github/workflows/source-clock-common-place-v1.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  synthetic-time-geography-contracts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test distinct geographic and source-clock co-use estimands
+        run: |
+          PYTHONPATH=prospective/multitaxon_individuality python3 -m unittest discover \
+            -s prospective/multitaxon_individuality/tests \
+            -p 'test_same_clock_bin_couse_v1.py' -v
+
+  original-tracks-temporal-analysis:
+    needs: synthetic-time-geography-contracts
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    strategy:
+      fail-fast: false
+      matrix:
+        source: [black_bear, turkey, white_tailed_deer]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download and validate original Movebank source and compute aggregate X T6 T3
+        env:
+          TAXON_SOURCE: ${{ matrix.source }}
+        run: |
+          mkdir -p /tmp/source-clock-aggregates
+          python3 prospective/multitaxon_individuality/same_clock_bin_couse_v1.py \
+            --source "$TAXON_SOURCE" \
+            --output "/tmp/source-clock-aggregates/${TAXON_SOURCE}_clock_couse_20261020.json"
+      - name: Upload source-year/season aggregate only (no animal tracks)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: source-clock-${{ matrix.source }}
+          path: /tmp/source-clock-aggregates/*.json
+          if-no-files-found: warn
+          retention-days: 15

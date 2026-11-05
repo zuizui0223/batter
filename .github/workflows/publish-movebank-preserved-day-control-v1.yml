@@ -1,0 +1,95 @@
+name: Publish checksum-pinned preserved-source-day GPS control aggregates
+
+on:
+  push:
+    branches:
+      - prospective/multitaxon-identity-ecology-v1
+    paths:
+      - ".github/workflows/publish-movebank-preserved-day-control-v1.yml"
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  publish-three-original-study-aggregates:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch exact completed original source-day GPS studies
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/preserved-gps
+          for source in turkey black_bear white_tailed_deer; do
+            mkdir -p "/tmp/preserved-artifact-${source}"
+            gh run download 39595138997 --repo "$GITHUB_REPOSITORY" \
+              -n "original-source-day-shift-${source}" \
+              -D "/tmp/preserved-artifact-${source}"
+            mv "/tmp/preserved-artifact-${source}/${source}_day_shift_control_20261021.json" \
+               "/tmp/preserved-gps/${source}_day_shift_control_20261021.json"
+          done
+      - name: Validate pinned SHA256 and all 288 source-year/tolerance/seed/radius comparisons
+        run: |
+          python3 prospective/multitaxon_individuality/validate_source_day_shift_v1.py \
+            --input-dir /tmp/preserved-gps \
+            --output /tmp/preserved-gps/DAY_SHIFT_PRESERVED_TRAJECTORY_SUMMARY_2026_10_21.json
+      - name: Commit only privacy-safe original source/year control aggregates and CSV
+        run: |
+          set -euo pipefail
+          root=prospective/multitaxon_individuality
+          for source in turkey black_bear white_tailed_deer; do
+            uppercase="$(echo "$source" | tr '[:lower:]' '[:upper:]')"
+            cp "/tmp/preserved-gps/${source}_day_shift_control_20261021.json" \
+               "$root/DAY_SHIFT_PRESERVED_TRAJECTORY_${uppercase}_2026_10_21.json"
+          done
+          cp /tmp/preserved-gps/DAY_SHIFT_PRESERVED_TRAJECTORY_SUMMARY_2026_10_21.json \
+            "$root/DAY_SHIFT_PRESERVED_TRAJECTORY_SUMMARY_2026_10_21.json"
+          python3 "$root/validate_source_day_shift_v1.py" \
+            --input-dir "$root" \
+            --output /tmp/preserved-gps/republished_source_check.json
+          cmp /tmp/preserved-gps/republished_source_check.json \
+              "$root/DAY_SHIFT_PRESERVED_TRAJECTORY_SUMMARY_2026_10_21.json"
+          python3 - <<'PY'
+          from pathlib import Path
+          import csv,json
+          root=Path('prospective/multitaxon_individuality')
+          data=json.loads((root/'DAY_SHIFT_PRESERVED_TRAJECTORY_SUMMARY_2026_10_21.json').read_text())
+          cols=('source','year','time_gap_minutes','radius_km','n_dyads',
+                'winter_O_same','winter_O_prior','winter_O_next','winter_O_lagmean','winter_L',
+                'summer_O_same','summer_O_prior','summer_O_next','summer_O_lagmean','summer_L',
+                'winter_minus_summer_L','positive_seed_draws','negative_seed_draws','near_zero_seed_draws')
+          rows=[]
+          for item in data['rows']:
+            w,s,d=item['winter'],item['summer'],item['winter_minus_summer']
+            signs=item['delta_day_reference_sign_counts']
+            rows.append({'source':item['source'],'year':item['year'],
+             'time_gap_minutes':item['time_gap_seconds']/60,'radius_km':item['radius_km'],
+             'n_dyads':item['source_dyads'],
+             'winter_O_same':w['same'],'winter_O_prior':w['previous_day'],
+             'winter_O_next':w['next_day'],'winter_O_lagmean':w['adjacent_day_reference'],
+             'winter_L':w['same_minus_adjacent'],
+             'summer_O_same':s['same'],'summer_O_prior':s['previous_day'],
+             'summer_O_next':s['next_day'],'summer_O_lagmean':s['adjacent_day_reference'],
+             'summer_L':s['same_minus_adjacent'],
+             'winter_minus_summer_L':d['same_minus_adjacent'],
+             'positive_seed_draws':signs['positive'],
+             'negative_seed_draws':signs['negative'],
+             'near_zero_seed_draws':signs['near_zero']})
+          assert len(rows)==24 and len(data['stop_groups'])==4
+          out=root/'DAY_SHIFT_PRESERVED_TRAJECTORY_REVIEW_2026_10_21.csv'
+          with out.open('w',newline='',encoding='utf-8') as f:
+            writer=csv.DictWriter(f,fieldnames=cols)
+            writer.writeheader()
+            writer.writerows(rows)
+          print('PASS 24 complete comparison CSV rows; 4 original source time-support stops')
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$root"/DAY_SHIFT_PRESERVED_TRAJECTORY_*_2026_10_21.json
+          git add "$root"/DAY_SHIFT_PRESERVED_TRAJECTORY_REVIEW_2026_10_21.csv
+          git diff --cached --stat
+          git commit -m "data: pin original GPS previous/next-day trajectory reference and 24-row review table"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

@@ -1,0 +1,54 @@
+name: Published original-GPS subhour timestamp opportunity (no encounter inference)
+
+on:
+  push:
+    branches:
+      - prospective/multitaxon-identity-ecology-v1
+    paths:
+      - "prospective/multitaxon_individuality/subhour_timestamp_opportunity_v1.py"
+      - "prospective/multitaxon_individuality/tests/test_subhour_timestamp_opportunity_v1.py"
+      - "prospective/multitaxon_individuality/SUBHOUR_PAIR_TIMESTAMP_OPPORTUNITY_DESIGN_2026_10_20.md"
+      - ".github/workflows/movebank-subhour-time-opportunity-v1.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  subhour-synthetic-contracts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test one-to-one source-fix timestamp matching and predeclared support
+        run: |
+          PYTHONPATH=prospective/multitaxon_individuality python3 -m unittest discover \
+            -s prospective/multitaxon_individuality/tests \
+            -p 'test_subhour_timestamp_opportunity_v1.py' -v
+
+  complete-original-source-time-gate:
+    needs: subhour-synthetic-contracts
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        source: [turkey, black_bear, white_tailed_deer]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify original source MD5/SHA256 and screen 15/30-min paired fix opportunity
+        env:
+          SOURCE: ${{ matrix.source }}
+        run: |
+          mkdir -p /tmp/original-time-opportunity
+          python3 prospective/multitaxon_individuality/subhour_timestamp_opportunity_v1.py \
+            --source "$SOURCE" \
+            --output "/tmp/original-time-opportunity/${SOURCE}_subhour_opportunity.json"
+      - name: Upload only source-year date/time opportunity aggregates
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: original-time-opportunity-${{ matrix.source }}
+          path: /tmp/original-time-opportunity/*.json
+          if-no-files-found: warn
+          retention-days: 15

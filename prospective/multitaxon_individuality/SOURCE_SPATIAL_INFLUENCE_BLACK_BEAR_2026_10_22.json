@@ -1,0 +1,126 @@
+{
+  "as_of": "2026-10-22",
+  "distance_filter_thresholds_km": [
+    5.0,
+    10.0,
+    25.0
+  ],
+  "full_original_GPS_and_reference_MD5_SHA256_verified": true,
+  "full_source_GPS_position_and_timestamp_multiset_replayed": true,
+  "limits": [
+    "Spatial components are GPS-usage-centroid graph components, not biological populations",
+    "The 2019 and 2020 years can reuse original animals and pairs; report counts rather than claiming independent replication",
+    "LOO is sensitivity to removing one animal and its incident dyads, not an iid sampling or jackknife confidence interval",
+    "A same-day within-15/30min GPS distance pair is not an animal encounter, social contact or resource overlap",
+    "Missing 25km/10km/5km or tag metadata sources are NOT_ESTIMABLE/NOT_VERIFIED, not null effects",
+    "Post-inspection exploratory source-specific analysis, not a causal ecological law or significance test"
+  ],
+  "location_radii_km": [
+    0.5,
+    1.0,
+    2.0
+  ],
+  "n_seeds": 12,
+  "original_dual_anchor_aggregate_SHA256_exactly_verified": true,
+  "original_year_results": [
+    {
+      "n_original_geographic_dyads": 1,
+      "time_tolerance_rows": [
+        {
+          "leave_one_animal_out": [],
+          "n_both_direction_day_shift_dyads": 0,
+          "n_same_day_source_dyads": 0,
+          "n_source_animals_in_matched_pair_set": 0,
+          "original_result_reconstructed": false,
+          "spatial_filters": [],
+          "status": "STOP_PREVIOUS_SOURCE_TIME_OPPORTUNITY",
+          "tolerance_seconds": 900
+        },
+        {
+          "leave_one_animal_out": [],
+          "n_both_direction_day_shift_dyads": 0,
+          "n_same_day_source_dyads": 0,
+          "n_source_animals_in_matched_pair_set": 0,
+          "original_result_reconstructed": false,
+          "spatial_filters": [],
+          "status": "STOP_PREVIOUS_SOURCE_TIME_OPPORTUNITY",
+          "tolerance_seconds": 1800
+        }
+      ],
+      "year": 2019
+    },
+    {
+      "n_original_geographic_dyads": 104,
+      "time_tolerance_rows": [
+        {
+          "leave_one_animal_out": [],
+          "n_both_direction_day_shift_dyads": 5,
+          "n_same_day_source_dyads": 38,
+          "n_source_animals_in_matched_pair_set": 4,
+          "original_result_reconstructed": false,
+          "spatial_filters": [],
+          "status": "STOP_PREVIOUS_SOURCE_TIME_OPPORTUNITY",
+          "tolerance_seconds": 900
+        },
+        {
+          "leave_one_animal_out": [],
+          "n_both_direction_day_shift_dyads": 6,
+          "n_same_day_source_dyads": 47,
+          "n_source_animals_in_matched_pair_set": 4,
+          "original_result_reconstructed": false,
+          "spatial_filters": [],
+          "status": "STOP_PREVIOUS_SOURCE_TIME_OPPORTUNITY",
+          "tolerance_seconds": 1800
+        }
+      ],
+      "year": 2020
+    }
+  ],
+  "same_animal_and_pair_reuse_by_time_tolerance": [
+    {
+      "independent_source_populations_established": false,
+      "n_2019_matched_animals": 0,
+      "n_2019_matched_pairs": 0,
+      "n_2020_matched_animals": 4,
+      "n_2020_matched_pairs": 5,
+      "n_both_years_matched_animals": 0,
+      "n_both_years_matched_pair_identities": 0,
+      "tolerance_seconds": 900
+    },
+    {
+      "independent_source_populations_established": false,
+      "n_2019_matched_animals": 0,
+      "n_2019_matched_pairs": 0,
+      "n_2020_matched_animals": 4,
+      "n_2020_matched_pairs": 6,
+      "n_both_years_matched_animals": 0,
+      "n_both_years_matched_pair_identities": 0,
+      "tolerance_seconds": 1800
+    }
+  ],
+  "schema_version": 1,
+  "source": "black_bear",
+  "source_doi": "10.5441/001/1.706",
+  "source_original_fixes": 148394,
+  "source_reference_audit": {
+    "animals_with_nonempty_explicit_site_field": 0,
+    "explicit_site_or_group_metadata_fields": [],
+    "local_population_membership_verified": false,
+    "location_accuracy_or_GPS_quality_fields": [],
+    "median_observed_fixes_per_animal_day": 9.0,
+    "median_observed_within_day_interfix_seconds": 3600.0,
+    "n_source_animal_calendar_dates": 12024,
+    "note": "Nonempty generic site labels alone would not prove local population membership; no animal IDs or locations released.",
+    "original_GPS_columns_present_but_no_values_shared": 10,
+    "reference_columns_present_but_no_values_shared": 21,
+    "reference_table_n_rows": 21,
+    "source_clock_basis_verified": false,
+    "tag_schedule_fields": [],
+    "tag_specific_GPS_location_error_calibrated": false
+  },
+  "status": "POST_INSPECTION_SPATIAL_CLUSTER_SUBJECT_INFLUENCE_AUDIT",
+  "time_tolerances_seconds": [
+    900,
+    1800
+  ]
+}

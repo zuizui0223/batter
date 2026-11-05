@@ -1,0 +1,347 @@
+{
+  "annual_source_centroid_bands_km": [
+    5,
+    10,
+    25
+  ],
+  "as_of": "2026-10-22",
+  "caveats": [
+    "One source 2020 animal with no <=5km eligible annual-centroid dyad is assigned by geometric graph, not local population or behavior",
+    "One 2020 tagged animal may occur in several distinct dyads; pair counts are not independent biological observations",
+    "Original GPS medians need not equal animal true position: fix accuracy/time clock unverified",
+    "Date-weighted source GPS centers describe observed seasonal geography, not contact/flocking/feeding",
+    "January-February is separated from December and is not a continuous overwintering stage",
+    "All source results post-inspection ecological mechanisms hypotheses only, not causal or population inference"
+  ],
+  "complete_original_source_MD5_SHA256_reference_verified": true,
+  "data_windows": {
+    "december": [
+      12
+    ],
+    "early_year": [
+      1,
+      2
+    ],
+    "summer": [
+      6,
+      7,
+      8
+    ]
+  },
+  "doi": "10.5441/001/1.671",
+  "fixed_time_tolerance_seconds": 900,
+  "groups": [
+    {
+      "anonymous_5km_components": [
+        {
+          "individual_jan_feb_to_summer_movement_km": {
+            "max": 5.641569121791339,
+            "mean": 2.0072627250358996,
+            "median": 1.5485653927741836,
+            "min": 0.3351810723358025,
+            "n": 11
+          },
+          "n_original_dyads": 53,
+          "n_source_animals": 11,
+          "pair_source_centers": {
+            "annual_centroid_separation_km": {
+              "max": 4.27849091782842,
+              "mean": 1.983454046142373,
+              "median": 1.7387086351273306,
+              "min": 0.13397668036107357,
+              "n": 53
+            },
+            "jan_feb_centroid_separation_km": {
+              "max": 5.4950562943472905,
+              "mean": 1.6663856053514057,
+              "median": 0.6099836546730744,
+              "min": 0.014437970359120223,
+              "n": 53
+            },
+            "jan_feb_minus_summer_distance_km": {
+              "max": 4.201441414539303,
+              "mean": -0.8733171189065091,
+              "median": -1.041490251970059,
+              "min": -4.819268642052621,
+              "n": 53
+            },
+            "n_original_source_pairs": 53,
+            "n_source_pairs_closer_in_jan_feb": 38,
+            "n_source_pairs_farther_in_jan_feb": 15,
+            "n_without_both_supported_source_season_centers": 0,
+            "summer_centroid_separation_km": {
+              "max": 4.98705695539872,
+              "mean": 2.539702724257915,
+              "median": 2.515252736777699,
+              "min": 0.004792117185350398,
+              "n": 53
+            }
+          },
+          "size_rank": 1
+        },
+        {
+          "individual_jan_feb_to_summer_movement_km": {
+            "max": 5.028386916553727,
+            "mean": 2.3552330867376057,
+            "median": 1.7763827690960265,
+            "min": 1.3580378061201124,
+            "n": 7
+          },
+          "n_original_dyads": 20,
+          "n_source_animals": 7,
+          "pair_source_centers": {
+            "annual_centroid_separation_km": {
+              "max": 4.9872098954163135,
+              "mean": 2.151089899087807,
+              "median": 1.8919314458505623,
+              "min": 0.3480985724015347,
+              "n": 20
+            },
+            "jan_feb_centroid_separation_km": {
+              "max": 3.2037162052232513,
+              "mean": 1.3249191541069454,
+              "median": 1.1640519715257693,
+              "min": 0.02590411853712497,
+              "n": 20
+            },
+            "jan_feb_minus_summer_distance_km": {
+              "max": 2.2004973632861633,
+              "mean": -1.7322325771206188,
+              "median": -1.6514295938751693,
+              "min": -5.523530100567022,
+              "n": 20
+            },
+            "n_original_source_pairs": 20,
+            "n_source_pairs_closer_in_jan_feb": 17,
+            "n_source_pairs_farther_in_jan_feb": 3,
+            "n_without_both_supported_source_season_centers": 0,
+            "summer_centroid_separation_km": {
+              "max": 6.673888725220833,
+              "mean": 3.057151731227564,
+              "median": 2.4914310998804727,
+              "min": 0.22778475955708996,
+              "n": 20
+            }
+          },
+          "size_rank": 2
+        }
+      ],
+      "n_original_eligible_animals": 19,
+      "total_dual_anchor_dyads": 112,
+      "year": 2019
+    },
+    {
+      "annual_5km_graph_core_n_animals": 6,
+      "annual_5km_graph_core_n_dyads": 14,
+      "n_2020_animals_with_at_least7_janfeb_dates": 7,
+      "n_2020_animals_with_at_least7_source_december_observed_dates": 0,
+      "n_2020_animals_with_at_least7_summer_dates": 7,
+      "n_core_animals_with_greater_seasonal_shift_than_isolated": 0,
+      "n_original_eligible_animals": 7,
+      "original_source_graph_topology": {
+        "n_all_25km_dyads": 21,
+        "n_annual10_to25km_dyads": 5,
+        "n_annual5_to10km_dyads": 2,
+        "n_annual5_to25km_dyads": 7,
+        "n_core_core_dyads_all_25km": 15,
+        "n_isolated_core_dyads_all_25km": 6,
+        "n_outer10_dyads_incident_to_isolated_animal": 5,
+        "n_outer5_dyads_incident_to_isolated_animal": 6,
+        "n_outer5_to10_dyads_incident_to_isolated_animal": 1
+      },
+      "six_animal_annual5_core_individual_janfeb_to_summer_shift_km": {
+        "max": 6.95527109436443,
+        "mean": 1.462323643613817,
+        "median": 0.4550351589540801,
+        "min": 0.047474483832491365,
+        "n": 6
+      },
+      "source_geographic_groups": {
+        "all_eligible_25km": {
+          "annual_centroid_separation_km": {
+            "max": 13.870261296814132,
+            "mean": 5.076815728428666,
+            "median": 4.11703556936588,
+            "min": 0.28407825051926644,
+            "n": 21
+          },
+          "jan_feb_centroid_separation_km": {
+            "max": 2.609483389726096,
+            "mean": 0.8855859864638338,
+            "median": 0.3699330857348667,
+            "min": 0.00601698091098653,
+            "n": 21
+          },
+          "jan_feb_minus_summer_distance_km": {
+            "max": 0.2622031534267419,
+            "mean": -5.852675464792458,
+            "median": -3.7034290003474957,
+            "min": -19.171183807622153,
+            "n": 21
+          },
+          "n_original_source_pairs": 21,
+          "n_source_pairs_closer_in_jan_feb": 18,
+          "n_source_pairs_farther_in_jan_feb": 3,
+          "n_without_both_supported_source_season_centers": 0,
+          "summer_centroid_separation_km": {
+            "max": 19.342742477035486,
+            "mean": 6.7382614512562915,
+            "median": 6.281709086927063,
+            "min": 0.10175336894114782,
+            "n": 21
+          }
+        },
+        "annual_10_to25km_5_pairs": {
+          "annual_centroid_separation_km": {
+            "max": 13.870261296814132,
+            "mean": 11.58842839114947,
+            "median": 10.584052994329268,
+            "min": 10.172035815518536,
+            "n": 5
+          },
+          "jan_feb_centroid_separation_km": {
+            "max": 2.609483389726096,
+            "mean": 0.6639965621354432,
+            "median": 0.17155866941333353,
+            "min": 0.00601698091098653,
+            "n": 5
+          },
+          "jan_feb_minus_summer_distance_km": {
+            "max": -14.151544686879069,
+            "mean": -15.460812264916314,
+            "median": -14.601172307774961,
+            "min": -19.171183807622153,
+            "n": 5
+          },
+          "n_original_source_pairs": 5,
+          "n_source_pairs_closer_in_jan_feb": 5,
+          "n_source_pairs_farther_in_jan_feb": 0,
+          "n_without_both_supported_source_season_centers": 0,
+          "summer_centroid_separation_km": {
+            "max": 19.342742477035486,
+            "mean": 16.12480882705176,
+            "median": 14.670568620045762,
+            "min": 14.545273774477097,
+            "n": 5
+          }
+        },
+        "annual_5_to25km_7_pairs": {
+          "annual_centroid_separation_km": {
+            "max": 13.870261296814132,
+            "mean": 10.310132561355859,
+            "median": 10.560259348717645,
+            "min": 5.140138404488653,
+            "n": 7
+          },
+          "jan_feb_centroid_separation_km": {
+            "max": 2.609483389726096,
+            "mean": 0.5068235815296237,
+            "median": 0.17155866941333353,
+            "min": 0.00601698091098653,
+            "n": 7
+          },
+          "jan_feb_minus_summer_distance_km": {
+            "max": -6.703703248383169,
+            "mean": -14.069613051411517,
+            "median": -14.53925679356611,
+            "min": -19.171183807622153,
+            "n": 7
+          },
+          "n_original_source_pairs": 7,
+          "n_source_pairs_closer_in_jan_feb": 7,
+          "n_source_pairs_farther_in_jan_feb": 0,
+          "n_without_both_supported_source_season_centers": 0,
+          "summer_centroid_separation_km": {
+            "max": 19.342742477035486,
+            "mean": 14.576436632941139,
+            "median": 14.615072145235068,
+            "min": 6.9015310523775995,
+            "n": 7
+          }
+        },
+        "isolate_to_core_6_pairs": {
+          "annual_centroid_separation_km": {
+            "max": 13.870261296814132,
+            "mean": 11.17179825416706,
+            "median": 10.572156171523456,
+            "min": 9.088647569255007,
+            "n": 6
+          },
+          "jan_feb_centroid_separation_km": {
+            "max": 2.609483389726096,
+            "mean": 0.5583228777854893,
+            "median": 0.1007565627245268,
+            "min": 0.00601698091098653,
+            "n": 6
+          },
+          "jan_feb_minus_summer_distance_km": {
+            "max": -14.151544686879069,
+            "mean": -15.297264685249573,
+            "median": -14.570214550670535,
+            "min": -19.171183807622153,
+            "n": 6
+          },
+          "n_original_source_pairs": 6,
+          "n_source_pairs_closer_in_jan_feb": 6,
+          "n_source_pairs_farther_in_jan_feb": 0,
+          "n_without_both_supported_source_season_centers": 0,
+          "summer_centroid_separation_km": {
+            "max": 19.342742477035486,
+            "mean": 15.855587563035064,
+            "median": 14.642820382640416,
+            "min": 14.509481242951589,
+            "n": 6
+          }
+        },
+        "within_core_15_pairs": {
+          "annual_centroid_separation_km": {
+            "max": 5.140138404488653,
+            "mean": 2.638822718133309,
+            "median": 2.563258605530905,
+            "min": 0.28407825051926644,
+            "n": 15
+          },
+          "jan_feb_centroid_separation_km": {
+            "max": 2.6051256444969,
+            "mean": 1.0164912299351718,
+            "median": 0.5051493735647821,
+            "min": 0.007942289524341534,
+            "n": 15
+          },
+          "jan_feb_minus_summer_distance_km": {
+            "max": 0.2622031534267419,
+            "mean": -2.0748397766096116,
+            "median": -0.3805804027317339,
+            "min": -6.703703248383169,
+            "n": 15
+          },
+          "n_original_source_pairs": 15,
+          "n_source_pairs_closer_in_jan_feb": 12,
+          "n_source_pairs_farther_in_jan_feb": 3,
+          "n_without_both_supported_source_season_centers": 0,
+          "summer_centroid_separation_km": {
+            "max": 6.9015310523775995,
+            "mean": 3.0913310065447837,
+            "median": 2.9312585212968827,
+            "min": 0.10175336894114782,
+            "n": 15
+          }
+        }
+      },
+      "total_dual_anchor_dyads": 21,
+      "unique_annual5_isolated_individual_janfeb_to_summer_center_shift_km": 14.52355751362658,
+      "unique_annual5_isolated_original_animal_n": 1,
+      "year": 2020
+    }
+  ],
+  "independent_original_time_position_multiset_verified": true,
+  "n_reused_original_animal_IDs_between_years": 0,
+  "original_2019_2020_complete_GPS_fix_count": 435214,
+  "original_GPS_location_error_calibrated": false,
+  "schema_version": 1,
+  "source": "turkey",
+  "source_group_geometry_threshold_km": 5,
+  "source_native_clock_UTC_offset_calibrated": false,
+  "source_population_labels_biologically_verified": false,
+  "status": "POST_INSPECTION_SINGLE_ORIGINAL_TURKEY_SEASONAL_MOVER_GEOGRAPHY"
+}

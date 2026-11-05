@@ -1,0 +1,56 @@
+name: Publish source-verified turkey single-mover geography (no original tracks)
+
+on:
+  push:
+    branches:
+      - prospective/multitaxon-identity-ecology-v1
+    paths:
+      - "prospective/multitaxon_individuality/validate_turkey_single_mover_v1.py"
+      - "prospective/multitaxon_individuality/tests/test_turkey_single_mover_receipt_v1.py"
+      - ".github/workflows/publish-turkey-single-mover-20261023.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  source-receipt-and-scientific-identity-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch pinned successful full original Movebank GPS result
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          root=prospective/multitaxon_individuality
+          mkdir -p /tmp/turkey-source-aggregate-only
+          gh run download 39722998742 --repo "$GITHUB_REPOSITORY" \
+            -n original-turkey-unique-mover-20261022 -D /tmp/turkey-source-aggregate-only
+          cp /tmp/turkey-source-aggregate-only/TURKEY_SINGLE_MOVER_ORIGINAL_GPS_2026_10_22.json \
+             "$root/TURKEY_SINGLE_MOVER_ORIGINAL_GPS_2026_10_22.json"
+      - name: Verify original source SHA256, nonindependent dyad graph and signed seasonal distance deltas
+        run: |
+          set -euo pipefail
+          root=prospective/multitaxon_individuality
+          python3 "$root/validate_turkey_single_mover_v1.py" \
+            --input-dir "$root" \
+            --output "$root/TURKEY_SINGLE_MOVER_VERIFIED_SUMMARY_2026_10_23.json"
+          PYTHONPATH="$root" python3 -m unittest discover -s "$root/tests" \
+            -p "test_turkey_single_mover_receipt_v1.py" -v
+          python3 "$root/validate_turkey_single_mover_v1.py" \
+            --input-dir "$root" \
+            --compare "$root/TURKEY_SINGLE_MOVER_VERIFIED_SUMMARY_2026_10_23.json"
+      - name: Commit only source/year aggregate JSON, no animal tags or coordinates
+        run: |
+          set -euo pipefail
+          root=prospective/multitaxon_individuality
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$root/TURKEY_SINGLE_MOVER_ORIGINAL_GPS_2026_10_22.json"
+          git add "$root/TURKEY_SINGLE_MOVER_VERIFIED_SUMMARY_2026_10_23.json"
+          git diff --cached --stat
+          git commit -m "data: pin independently validated source turkey single seasonal mover result"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

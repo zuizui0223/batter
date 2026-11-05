@@ -1,0 +1,51 @@
+name: Multitaxon source QA and exploratory estimator tests
+
+on:
+  push:
+    branches:
+      - prospective/multitaxon-identity-ecology-v1
+    paths:
+      - 'prospective/multitaxon_individuality/**'
+      - '.github/workflows/multitaxon-individuality-metadata-v1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check-source-census-and-synthetic-separation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out exact candidate branch
+        uses: actions/checkout@v4
+      - name: Validate original Movebank published-source metadata inventory, rights and seed coverage
+        run: python3 prospective/multitaxon_individuality/validate_metadata_census_v1.py
+      - name: Verify movement identity and habitat overlap are distinct in synthetic-only examples
+        run: python3 prospective/multitaxon_individuality/validate_distinct_identity_partition_estimands_v1.py
+      - name: Verify original 437-package GPS metadata screening, rights and nonbat pilot queue
+        run: python3 prospective/multitaxon_individuality/validate_movebank_metadata_triage_v1.py
+      - name: Independently audit wider GPS/GSM metadata screen and 8 real source reference metadata pilots
+        run: python3 prospective/multitaxon_individuality/validate_movebank_437_sensor_triage_v1.py
+      - name: Test privacy-safe streaming GPS CSV/GZIP preflight on invented animal-day records
+        run: PYTHONPATH=prospective/multitaxon_individuality python3 -m unittest discover -s prospective/multitaxon_individuality/tests -p 'test_*.py' -v
+      - name: Test exploratory 2D GPS cohort overlap on synthetic invented tracks only
+        run: python3 prospective/multitaxon_individuality/source_2d_overlap_cli_v1.py --self-test
+      - name: Confirm the complete source census still reflects source metadata, not independently eligible biology
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path("prospective/multitaxon_individuality")
+          j=json.loads((root/"MOVEBANK_PUBLISHED_DATAPACKAGES_CENSUS_2026_10_18.json").read_text())
+          assert j["summary"]["total_count"] == 437
+          assert any("eligibility" in x.lower() for x in j["interpretation_limits"])
+          assert any("no animal gps positions" in x.lower() for x in j["interpretation_limits"])
+          assert (root/"EXPLORATORY_SOURCE_2D_OVERLAP_2026_10_19.json").exists()
+          result=json.loads((root/"EXPLORATORY_SOURCE_2D_OVERLAP_2026_10_19.json").read_text())
+          assert len(result["results"])==3
+          assert result["evidence_status"].startswith("REAL_SOURCE_GPS_EXPLORATORY")
+          assert not result["source_positions_exported"] and not result["individual_identifiers_exported"]
+          print("PASS: 437 published package metadata; public raw GPS are never committed or fetched in CI; empirical X aggregates are explicitly exploratory, not universal ecological partitioning")
+          PY
+

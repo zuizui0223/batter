@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-10-20",
+  "status": "SESSION_REPORTED_UNVERIFIED_CROSS_SOURCE_VALUES",
+  "original_source_results_reproduced_this_turn": false,
+  "provisional_5km_winter_minus_summer": [
+    {
+      "taxon": "wild_turkey",
+      "year": 2019,
+      "value": 0.1223
+    },
+    {
+      "taxon": "wild_turkey",
+      "year": 2020,
+      "value": 0.284
+    },
+    {
+      "taxon": "moose",
+      "year": 2019,
+      "value": -0.0195
+    },
+    {
+      "taxon": "black_bear",
+      "year": 2020,
+      "value": 0.0002
+    },
+    {
+      "taxon": "white_tailed_deer",
+      "year": 2020,
+      "value": 0.0064
+    }
+  ],
+  "black_bear_marginals": {
+    "winter_nonzero_pairs": 6,
+    "winter_positive_mean": 0.544,
+    "summer_nonzero_pairs": 14,
+    "summer_positive_mean": 0.232,
+    "shared_pair_denominator_verified": null,
+    "arithmetic_unnormalized_winter_sum": 3.264,
+    "arithmetic_unnormalized_summer_sum": 3.248,
+    "arithmetic_difference_numerator": 0.016,
+    "arithmetic_incidence_component_numerator": -3.104,
+    "arithmetic_strength_component_numerator": 3.12,
+    "illustrative_N78_not_observed": {
+      "incidence": -0.039794871794871796,
+      "strength": 0.04,
+      "net": 0.00020512820512820514
+    }
+  },
+  "archival_status": "Deer 36-month original-source audit already committed in prior source analysis. Cross-source source receipts and risk sets absent.",
+  "unverified_early_late_comparison": "No numerical results retained. Do not impute."
+}

@@ -1,0 +1,99 @@
+{
+  "as_of": "2026-10-20",
+  "complete_original_source_MD5_SHA256_and_QC_verified": true,
+  "fix_pair_thresholds_seconds": [
+    900,
+    1800
+  ],
+  "future_gate_min_animals": 3,
+  "future_gate_min_dyads": 8,
+  "independent_source_timestamp_to_original_position_multiset_verified": true,
+  "limitations": [
+    "Time matching opportunity does not measure spatial nearness or encounters",
+    "Source timestamp absolute UTC/GPS clock basis unresolved",
+    "No verified local biological population label among candidate dyads",
+    "Fix intervals/detection precision may differ by source, season and animal",
+    "Original publication pool and source-years reuse animals, not independent species-population replications"
+  ],
+  "method": "greedy maximal one-to-one pairing of recorded source-native GPS timestamps within same animal-pair date, without spatial location test",
+  "min_dates_per_qualifying_month": 7,
+  "min_fix_pairs_per_qualifying_date": 3,
+  "min_months_per_season": 2,
+  "n_original_source_fixes": 371080,
+  "original_population_membership_verified": false,
+  "schema_version": 1,
+  "source": "white_tailed_deer",
+  "source_clock_absolute_UTC_offset_verified": false,
+  "source_doi": "10.5441/001/1.718",
+  "status": "TIMESTAMP_MATCHING_OPPORTUNITY_PREFLIGHT_ONLY",
+  "year_results": [
+    {
+      "n_original_geographic_dyads": 55,
+      "subhour_tolerance_results": [
+        {
+          "fraction_original_dyads_eligible": 1.0,
+          "max_fix_time_gap_seconds": 900,
+          "n_dyad_dates_with_at_least_three_matched_fixes": 7741,
+          "n_eligible_animals": 11,
+          "n_eligible_dyads": 55,
+          "qualifying_dates_per_eligible_dyad": {
+            "max": 158,
+            "median": 137.0,
+            "min": 135
+          },
+          "status": "TIME_OPPORTUNITY_SUFFICIENT_FOR_SEPARATE_SOURCE_ACCURACY_AND_POPULATION_AUDIT",
+          "total_greedy_one_to_one_fix_matches_on_qualifying_dyad_dates": 183639
+        },
+        {
+          "fraction_original_dyads_eligible": 1.0,
+          "max_fix_time_gap_seconds": 1800,
+          "n_dyad_dates_with_at_least_three_matched_fixes": 7741,
+          "n_eligible_animals": 11,
+          "n_eligible_dyads": 55,
+          "qualifying_dates_per_eligible_dyad": {
+            "max": 158,
+            "median": 137.0,
+            "min": 135
+          },
+          "status": "TIME_OPPORTUNITY_SUFFICIENT_FOR_SEPARATE_SOURCE_ACCURACY_AND_POPULATION_AUDIT",
+          "total_greedy_one_to_one_fix_matches_on_qualifying_dyad_dates": 183639
+        }
+      ],
+      "year": 2019
+    },
+    {
+      "n_original_geographic_dyads": 205,
+      "subhour_tolerance_results": [
+        {
+          "fraction_original_dyads_eligible": 1.0,
+          "max_fix_time_gap_seconds": 900,
+          "n_dyad_dates_with_at_least_three_matched_fixes": 33568,
+          "n_eligible_animals": 21,
+          "n_eligible_dyads": 205,
+          "qualifying_dates_per_eligible_dyad": {
+            "max": 183,
+            "median": 167.0,
+            "min": 115
+          },
+          "status": "TIME_OPPORTUNITY_SUFFICIENT_FOR_SEPARATE_SOURCE_ACCURACY_AND_POPULATION_AUDIT",
+          "total_greedy_one_to_one_fix_matches_on_qualifying_dyad_dates": 789211
+        },
+        {
+          "fraction_original_dyads_eligible": 1.0,
+          "max_fix_time_gap_seconds": 1800,
+          "n_dyad_dates_with_at_least_three_matched_fixes": 33568,
+          "n_eligible_animals": 21,
+          "n_eligible_dyads": 205,
+          "qualifying_dates_per_eligible_dyad": {
+            "max": 183,
+            "median": 167.0,
+            "min": 115
+          },
+          "status": "TIME_OPPORTUNITY_SUFFICIENT_FOR_SEPARATE_SOURCE_ACCURACY_AND_POPULATION_AUDIT",
+          "total_greedy_one_to_one_fix_matches_on_qualifying_dyad_dates": 789211
+        }
+      ],
+      "year": 2020
+    }
+  ]
+}

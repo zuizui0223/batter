@@ -1,0 +1,133 @@
+name: Publish original Movebank seasonal GPS centroid and spatial-component aggregates
+
+on:
+  push:
+    branches:
+      - prospective/multitaxon-identity-ecology-v1
+    paths:
+      - "prospective/multitaxon_individuality/validate_source_seasonal_centroid_v1.py"
+      - ".github/workflows/publish-movebank-season-centroid-components-v1.yml"
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  verify-and-publish-only-source-season-aggregates:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Retrieve complete-original-GPS CI source/year result artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/original-source-season-geo
+          for source in turkey black_bear white_tailed_deer; do
+            mkdir -p "/tmp/centroid-artifact-${source}"
+            gh run download 39715501915 --repo "$GITHUB_REPOSITORY" \
+              -n "source-seasonal-centroids-${source}" \
+              -D "/tmp/centroid-artifact-${source}"
+            mv "/tmp/centroid-artifact-${source}/${source}_seasonal_centroid_components_20261022.json" \
+              "/tmp/original-source-season-geo/${source}_seasonal_centroid_components_20261022.json"
+          done
+      - name: Verify exact 3 source SHA256 receipts, seasonal center identities and all geographic components
+        run: |
+          set -euo pipefail
+          root=prospective/multitaxon_individuality
+          python3 "$root/validate_source_seasonal_centroid_v1.py" \
+            --input-dir /tmp/original-source-season-geo \
+            --output /tmp/original-source-season-geo/SEASONAL_GPS_CENTROID_COMPONENT_SUMMARY_2026_10_22.json
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('/tmp/original-source-season-geo/SEASONAL_GPS_CENTROID_COMPONENT_SUMMARY_2026_10_22.json').read_text())
+          assert d['n_original_GPS_source_archives']==3
+          assert d['n_valid_source_year_time_tolerance_groups']==8
+          assert d['n_STOP_groups']==4
+          assert d['n_source_component_estimates']==28
+          assert d['n_source_season_centroid_distance_groups']==32
+          a=next(x for x in d['groups'] if x['source']=='turkey' and x['year']==2020 and x['time_gap_seconds']==900)
+          far=next(x for x in a['seasonal_GPS_center_distance_by_ANNUAL_center_band'] if x['annual_centroid_pair_separation_band']=='(10,25] km')
+          assert far['n_source_pairs_with_both_season_centers']==5
+          assert far['n_pairs_winter_centers_closer']==5
+          assert far['winter_km']['median'] < far['summer_km']['median']
+          print('PASS three original whole-GPS sources, 28 supported anonymous components, 32 seasonal GPS center cohorts, complete STOPs')
+          PY
+      - name: Commit only fully verified source/year aggregate JSON and component/seasonal-center CSVs
+        run: |
+          set -euo pipefail
+          root=prospective/multitaxon_individuality
+          for source in turkey black_bear white_tailed_deer; do
+            upper="$(echo "$source" | tr '[:lower:]' '[:upper:]')"
+            cp "/tmp/original-source-season-geo/${source}_seasonal_centroid_components_20261022.json" \
+              "$root/SEASONAL_GPS_CENTROID_COMPONENT_${upper}_2026_10_22.json"
+          done
+          cp /tmp/original-source-season-geo/SEASONAL_GPS_CENTROID_COMPONENT_SUMMARY_2026_10_22.json \
+             "$root/SEASONAL_GPS_CENTROID_COMPONENT_SUMMARY_2026_10_22.json"
+          python3 "$root/validate_source_seasonal_centroid_v1.py" \
+            --input-dir "$root" --output /tmp/original-source-season-geo/recheck.json
+          cmp /tmp/original-source-season-geo/recheck.json \
+              "$root/SEASONAL_GPS_CENTROID_COMPONENT_SUMMARY_2026_10_22.json"
+          python3 - <<'PY'
+          from pathlib import Path
+          import csv,json
+          root=Path('prospective/multitaxon_individuality')
+          data=json.loads((root/'SEASONAL_GPS_CENTROID_COMPONENT_SUMMARY_2026_10_22.json').read_text())
+          center_rows=[]
+          component_rows=[]
+          for group in data['groups']:
+            for site in group['seasonal_GPS_center_distance_by_ANNUAL_center_band']:
+              winter=site['winter_km'];summer=site['summer_km'];delta=site['winter_minus_summer_km']
+              center_rows.append({'source':group['source'],'year':group['year'],
+                'source_clock_tolerance_min':group['time_gap_seconds']/60,
+                'annual_centroid_separation_band':site['annual_centroid_pair_separation_band'],
+                'n_pairs':site['n_source_pairs_requested'],
+                'n_pairs_with_valid_winter_summer_centroids':site['n_source_pairs_with_both_season_centers'],
+                'winter_pair_centroid_distance_median_km':winter['median'] if winter else None,
+                'summer_pair_centroid_distance_median_km':summer['median'] if summer else None,
+                'winter_pair_centroid_distance_mean_km':winter['mean'] if winter else None,
+                'summer_pair_centroid_distance_mean_km':summer['mean'] if summer else None,
+                'winter_minus_summer_distance_mean_km':delta['mean'] if delta else None,
+                'winter_minus_summer_distance_median_km':delta['median'] if delta else None,
+                'n_pairs_winter_centroids_closer':site['n_pairs_winter_centers_closer'],
+                'fraction_pairs_winter_centroids_closer':site['fraction_pairs_winter_centers_closer'],
+                'status':site['status']})
+            for collection in group['anonymous_spatial_components']:
+              for component in collection['components']:
+                r=component['original_source_component_L1_by_radius_direction']
+                if r['status']!='DESCRIPTIVE_SOURCE_GPS_EDGE_SET_ONLY':
+                  continue
+                for value in r['radii']:
+                  component_rows.append({'source':group['source'],'year':group['year'],
+                    'source_clock_tolerance_min':group['time_gap_seconds']/60,
+                    'annual_centroid_edge_cutoff_km':collection['cutoff_km'],
+                    'anonymous_component_rank_by_animal_count':component['anonymous_geographic_component_rank_by_animals'],
+                    'component_n_animals':component['n_component_original_animals'],
+                    'component_n_pairs':component['n_component_original_dyads'],
+                    'source_nearness_radius_km':value['radius_km'],
+                    'source_original_anchor_direction':value['orientation'],
+                    'winter_minus_summer_original_day_shift_L':value['winter_minus_summer_L_mean'],
+                    'n_positive_seed_subsamples':value['seed_signs']['positive'],
+                    'n_negative_seed_subsamples':value['seed_signs']['negative'],
+                    'n_near_zero_seed_subsamples':value['seed_signs']['near_zero']})
+          assert len(center_rows)==32 and len(component_rows)==168
+          for name,records in (
+              ('SEASONAL_GPS_CENTER_PAIR_DISTANCE_REVIEW_2026_10_22.csv',center_rows),
+              ('SEASONAL_GPS_COMPONENT_DAY_SHIFT_L1_REVIEW_2026_10_22.csv',component_rows)):
+            p=root/name
+            with p.open('w',newline='',encoding='utf-8') as f:
+              writer=csv.DictWriter(f,fieldnames=records[0].keys())
+              writer.writeheader()
+              writer.writerows(records)
+          print('PASS 32 seasonal source-center cohorts and 168 component/radius/orientation review rows (STOP details remain in full JSON)')
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$root"/SEASONAL_GPS_CENTROID_COMPONENT_*_2026_10_22.json
+          git add "$root"/SEASONAL_GPS_CENTER_PAIR_DISTANCE_REVIEW_2026_10_22.csv
+          git add "$root"/SEASONAL_GPS_COMPONENT_DAY_SHIFT_L1_REVIEW_2026_10_22.csv
+          git diff --cached --stat
+          git commit -m "data: original GPS seasonal centroid spatial-convergence and anonymous component L1 summaries"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

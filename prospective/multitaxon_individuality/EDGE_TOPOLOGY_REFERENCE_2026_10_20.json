@@ -1,0 +1,316 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-10-20",
+  "status": "POST_INSPECTION_EXPLORATORY_SOURCE_AGGREGATE_EDGE_TOPOLOGY",
+  "source_archive": {
+    "path": "prospective/multitaxon_individuality/CROSS_SOURCE_NEARBY_DYAD_V2_FULL_AGGREGATES_2026_10_20.zip",
+    "git_blob_sha": "0da5fe5f429e08194525c59b70d0840735d958ac",
+    "internal_json_sha256": "fd5524c76eceb46d3694828773336de7c5a15edfdd89b4421af1124facb31ebc"
+  },
+  "protocol": {
+    "primary_comparison": "Within calendar year, December/January/February vs June/July/August; >=2 supported months in each season",
+    "grid": "5 km, origin (0,0)",
+    "sensitivity": "1,2,5,10 km each with 4 origins; 16 dependent settings",
+    "cohort": "Fixed dyad opportunity mask, annual centroid within 25 km, >=20 matched dyads for descriptive focus; focus chosen post-inspection",
+    "edge_cutoff": "positive grid occupancy overlap (>0), not animal encounter",
+    "estimands": [
+      "mean overlap",
+      "positive-edge fraction",
+      "mean positive-edge strength",
+      "edge Jaccard persistence",
+      "dyad binary phi",
+      "prevalence-conditioned reference lift"
+    ],
+    "inferential_boundary": "No calibrated biological null test, population confidence interval, independent taxon replication or causal/resource/encounter inference"
+  },
+  "coverage": {
+    "original_published_source_packages": 5,
+    "source_files_with_valid_geographic_X": 4,
+    "original_source_timestamp_STOP": 1,
+    "all_fixed_strata_in_archive": 80,
+    "all_grid_settings_checked": 1280,
+    "focused_winter_summer_cohorts": 5,
+    "additional_seasons_not_pooled": "early_late not equivalent to winter/summer",
+    "source_specific_populations_verified": false
+  },
+  "results": [
+    {
+      "source": "turkey",
+      "year": 2019,
+      "doi": "10.5441/001/1.671",
+      "risk_set": "annual-centroid <=25 km, same matched dyads in both calendar windows",
+      "n_animals": 19,
+      "n_dyads": 112,
+      "edge_states": {
+        "both": 68,
+        "winter_only": 8,
+        "summer_only": 0,
+        "neither": 36
+      },
+      "overlap_mean_winter": 0.4838679097631116,
+      "overlap_mean_summer": 0.34250100364428065,
+      "delta_X_winter_minus_summer": 0.14136690611883096,
+      "positive_fraction_winter": 0.6785714285714286,
+      "positive_fraction_summer": 0.6071428571428571,
+      "positive_strength_winter": 0.7130684985982697,
+      "positive_strength_summer": 0.5641193001199917,
+      "decomposition": {
+        "incidence_component": 0.04561384995422367,
+        "conditional_strength_component": 0.0957530561646073
+      },
+      "edge_persistence": {
+        "jaccard": 0.8947368421052632,
+        "turnover": 0.10526315789473684,
+        "winter_retained_in_summer": 0.8947368421052632,
+        "summer_already_in_winter": 1,
+        "binary_phi": 0.8556035391861949,
+        "density_reference_lift": 1.4736842105263157
+      },
+      "grid_sensitivity_16": {
+        "X": {
+          "positive": 15,
+          "negative": 1,
+          "zero": 0
+        },
+        "incidence": {
+          "positive": 14,
+          "negative": 1,
+          "zero": 1
+        },
+        "conditional_strength": {
+          "positive": 15,
+          "negative": 1,
+          "zero": 0
+        },
+        "jaccard_range": {
+          "min": 0.6973684210526315,
+          "max": 1
+        }
+      }
+    },
+    {
+      "source": "turkey",
+      "year": 2020,
+      "doi": "10.5441/001/1.671",
+      "risk_set": "annual-centroid <=25 km, same matched dyads in both calendar windows",
+      "n_animals": 7,
+      "n_dyads": 21,
+      "edge_states": {
+        "both": 10,
+        "winter_only": 11,
+        "summer_only": 0,
+        "neither": 0
+      },
+      "overlap_mean_winter": 0.6615914670465888,
+      "overlap_mean_summer": 0.28293451685885274,
+      "delta_X_winter_minus_summer": 0.37865695018773604,
+      "positive_fraction_winter": 1,
+      "positive_fraction_summer": 0.47619047619047616,
+      "positive_strength_winter": 0.6615914670465888,
+      "positive_strength_summer": 0.5941624854035907,
+      "decomposition": {
+        "incidence_component": 0.328887939927428,
+        "conditional_strength_component": 0.04976901026030808
+      },
+      "edge_persistence": {
+        "jaccard": 0.47619047619047616,
+        "turnover": 0.5238095238095238,
+        "winter_retained_in_summer": 0.47619047619047616,
+        "summer_already_in_winter": 1,
+        "binary_phi": null,
+        "density_reference_lift": 1
+      },
+      "grid_sensitivity_16": {
+        "X": {
+          "positive": 16,
+          "negative": 0,
+          "zero": 0
+        },
+        "incidence": {
+          "positive": 16,
+          "negative": 0,
+          "zero": 0
+        },
+        "conditional_strength": {
+          "positive": 6,
+          "negative": 9,
+          "zero": 1
+        },
+        "jaccard_range": {
+          "min": 0.2857142857142857,
+          "max": 0.7142857142857143
+        }
+      }
+    },
+    {
+      "source": "black_bear",
+      "year": 2020,
+      "doi": "10.5441/001/1.706",
+      "risk_set": "annual-centroid <=25 km, same matched dyads in both calendar windows",
+      "n_animals": 17,
+      "n_dyads": 104,
+      "edge_states": {
+        "both": 7,
+        "winter_only": 1,
+        "summer_only": 10,
+        "neither": 86
+      },
+      "overlap_mean_winter": 0.0351920947817714,
+      "overlap_mean_summer": 0.03459989956981841,
+      "delta_X_winter_minus_summer": 0.0005921952119529866,
+      "positive_fraction_winter": 0.07692307692307693,
+      "positive_fraction_summer": 0.16346153846153846,
+      "positive_strength_winter": 0.4574972321630282,
+      "positive_strength_summer": 0.21166997383888908,
+      "decomposition": {
+        "incidence_component": -0.028954350259698343,
+        "conditional_strength_component": 0.029546545471651333
+      },
+      "edge_persistence": {
+        "jaccard": 0.3888888888888889,
+        "turnover": 0.6111111111111112,
+        "winter_retained_in_summer": 0.875,
+        "summer_already_in_winter": 0.4117647058823529,
+        "binary_phi": 0.5554653972369554,
+        "density_reference_lift": 5.352941176470588
+      },
+      "grid_sensitivity_16": {
+        "X": {
+          "positive": 9,
+          "negative": 7,
+          "zero": 0
+        },
+        "incidence": {
+          "positive": 0,
+          "negative": 16,
+          "zero": 0
+        },
+        "conditional_strength": {
+          "positive": 13,
+          "negative": 3,
+          "zero": 0
+        },
+        "jaccard_range": {
+          "min": 0.25,
+          "max": 0.7209302325581395
+        }
+      }
+    },
+    {
+      "source": "white_tailed_deer",
+      "year": 2019,
+      "doi": "10.5441/001/1.718",
+      "risk_set": "annual-centroid <=25 km, same matched dyads in both calendar windows",
+      "n_animals": 11,
+      "n_dyads": 55,
+      "edge_states": {
+        "both": 14,
+        "winter_only": 8,
+        "summer_only": 8,
+        "neither": 25
+      },
+      "overlap_mean_winter": 0.09922503668997358,
+      "overlap_mean_summer": 0.09564614116858157,
+      "delta_X_winter_minus_summer": 0.0035788955213920115,
+      "positive_fraction_winter": 0.4,
+      "positive_fraction_summer": 0.4,
+      "positive_strength_winter": 0.24806259172493395,
+      "positive_strength_summer": 0.23911535292145392,
+      "decomposition": {
+        "incidence_component": 0,
+        "conditional_strength_component": 0.0035788955213920115
+      },
+      "edge_persistence": {
+        "jaccard": 0.4666666666666667,
+        "turnover": 0.5333333333333333,
+        "winter_retained_in_summer": 0.6363636363636364,
+        "summer_already_in_winter": 0.6363636363636364,
+        "binary_phi": 0.3939393939393939,
+        "density_reference_lift": 1.5909090909090908
+      },
+      "grid_sensitivity_16": {
+        "X": {
+          "positive": 5,
+          "negative": 11,
+          "zero": 0
+        },
+        "incidence": {
+          "positive": 4,
+          "negative": 8,
+          "zero": 4
+        },
+        "conditional_strength": {
+          "positive": 8,
+          "negative": 8,
+          "zero": 0
+        },
+        "jaccard_range": {
+          "min": 0.4666666666666667,
+          "max": 0.7037037037037037
+        }
+      }
+    },
+    {
+      "source": "white_tailed_deer",
+      "year": 2020,
+      "doi": "10.5441/001/1.718",
+      "risk_set": "annual-centroid <=25 km, same matched dyads in both calendar windows",
+      "n_animals": 21,
+      "n_dyads": 205,
+      "edge_states": {
+        "both": 34,
+        "winter_only": 15,
+        "summer_only": 2,
+        "neither": 154
+      },
+      "overlap_mean_winter": 0.09799419485813701,
+      "overlap_mean_summer": 0.09161205465065829,
+      "delta_X_winter_minus_summer": 0.006382140207478723,
+      "positive_fraction_winter": 0.23902439024390243,
+      "positive_fraction_summer": 0.17560975609756097,
+      "positive_strength_winter": 0.40997571318200177,
+      "positive_strength_summer": 0.5216797556495819,
+      "decomposition": {
+        "incidence_component": 0.029540295353196556,
+        "conditional_strength_component": -0.023158155145717833
+      },
+      "edge_persistence": {
+        "jaccard": 0.6666666666666666,
+        "turnover": 0.33333333333333337,
+        "winter_retained_in_summer": 0.6938775510204082,
+        "summer_already_in_winter": 0.9444444444444444,
+        "binary_phi": 0.7633948431403696,
+        "density_reference_lift": 3.95124716553288
+      },
+      "grid_sensitivity_16": {
+        "X": {
+          "positive": 3,
+          "negative": 13,
+          "zero": 0
+        },
+        "incidence": {
+          "positive": 16,
+          "negative": 0,
+          "zero": 0
+        },
+        "conditional_strength": {
+          "positive": 0,
+          "negative": 16,
+          "zero": 0
+        },
+        "jaccard_range": {
+          "min": 0.6666666666666666,
+          "max": 0.9491525423728814
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "All results are derived from previously verified aggregated source files, not a fresh original-GPS reprocessing",
+    "Grid-positive edges depend on cell scale, spatial resolution, sampling and observation support",
+    "The five focus cohorts span three species and may contain year-reused animals, nonindependent dyads and unknown local populations",
+    "Annual centroid <=25 km is post-inspection spatial restriction, not direct encounter or competition",
+    "Conditional strength and 2D overlap are not niche or food differentiation",
+    "Full-grid component sign counts are independently recomputed by validate_edge_topology_v1.py from the pinned ZIP"
+  ]
+}

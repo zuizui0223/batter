@@ -1,0 +1,58 @@
+{
+  "maine": {
+    "checked_at_utc": "2026-11-05T08:15:25.977715+00:00",
+    "doi": "10.5061/dryad.s4mw6m9gg",
+    "attempts": [
+      {
+        "url": "https://datadryad.org/dataset/doi:10.5061/dryad.s4mw6m9gg",
+        "status": 200,
+        "response_content_type": "text/html; charset=utf-8"
+      },
+      {
+        "url": "https://datadryad.org/downloads/file_stream/3528443",
+        "status": 403,
+        "response_content_type": "text/html"
+      },
+      {
+        "url": "https://datadryad.org/api/v2/files/3528443/download",
+        "status": 401,
+        "response_content_type": "application/json; charset=utf-8"
+      }
+    ],
+    "acquired": false,
+    "browser_checks": {
+      "individual_download": "timeout_20_seconds",
+      "preview": "partial_table_rendered_not_full_file",
+      "full_dataset": "not_completed"
+    }
+  },
+  "male": {
+    "checked_at_utc": "2026-11-05T08:13:21.426138+00:00",
+    "doi": "10.5061/dryad.rv15dv4fb",
+    "version": 289285,
+    "attempts": [
+      {
+        "file_id": 3078872,
+        "url": "https://datadryad.org/downloads/file_stream/3078872",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "file_id": 3078873,
+        "url": "https://datadryad.org/downloads/file_stream/3078873",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://datadryad.org/api/v2/files/3078872/download",
+        "error": "HTTP Error 401: Unauthorized"
+      },
+      {
+        "url": "https://datadryad.org/api/v2/files/3078873/download",
+        "error": "HTTP Error 401: Unauthorized"
+      }
+    ],
+    "acquired": false,
+    "coverage_status": "not_verified",
+    "overlap_status": "not_verified",
+    "interpretation": "These endpoint failures do not establish that data are unavailable through every legitimate public route. No records available for February-April or duplicate audit."
+  }
+}

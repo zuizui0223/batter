@@ -1,0 +1,122 @@
+name: Publish verified original GPS source spatial-influence and year-reuse aggregates
+
+on:
+  push:
+    branches:
+      - prospective/multitaxon-identity-ecology-v1
+    paths:
+      - ".github/workflows/publish-movebank-source-spatial-influence-v1.yml"
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  publish-source-only-geographic-influence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Retrieve the three exact completed original-Movebank GPS cohort studies
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/verified-original-source-geography
+          for source in turkey black_bear white_tailed_deer; do
+            mkdir -p "/tmp/spatial-source-${source}"
+            gh run download 39713436699 --repo "$GITHUB_REPOSITORY" \
+              -n "original-source-spatial-influence-${source}" \
+              -D "/tmp/spatial-source-${source}"
+            mv "/tmp/spatial-source-${source}/${source}_spatial_influence_20261022.json" \
+              "/tmp/verified-original-source-geography/${source}_spatial_influence_20261022.json"
+          done
+      - name: Validate 3 pinned original-source SHA256 files, annual animal reuse and all 576 exact score replays
+        run: |
+          set -euo pipefail
+          root=prospective/multitaxon_individuality
+          python3 "$root/validate_source_spatial_influence_v1.py" \
+            --input-dir /tmp/verified-original-source-geography \
+            --output /tmp/verified-original-source-geography/SOURCE_SPATIAL_INFLUENCE_SUMMARY_2026_10_22.json
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('/tmp/verified-original-source-geography/SOURCE_SPATIAL_INFLUENCE_SUMMARY_2026_10_22.json')
+          d=json.loads(p.read_text())
+          assert d['n_original_source_studies']==3
+          assert d['n_source_year_tolerance_rows']==12
+          assert d['n_valid_original_dyad_groups']==8
+          assert d['n_stopped_source_year_tolerance_rows']==4
+          assert d['n_replayed_original_source_seed_radius_scores']==576
+          turkey=next(x for x in d['year_reuse_audits'] if x['source']=='turkey' and x['tolerance_seconds']==900)
+          deer=next(x for x in d['year_reuse_audits'] if x['source']=='white_tailed_deer' and x['tolerance_seconds']==900)
+          assert (turkey['n_both_years_matched_animals'],deer['n_both_years_matched_animals'])==(0,11)
+          print('PASS exact original GPS source receipts, year reuse, anonymous geometry and per-individual omission summary')
+          PY
+      - name: Persist only source-year summaries and reviewable geographic cutoff CSV
+        run: |
+          set -euo pipefail
+          root=prospective/multitaxon_individuality
+          for source in turkey black_bear white_tailed_deer; do
+            uppercase="$(echo "$source" | tr '[:lower:]' '[:upper:]')"
+            cp "/tmp/verified-original-source-geography/${source}_spatial_influence_20261022.json" \
+              "$root/SOURCE_SPATIAL_INFLUENCE_${uppercase}_2026_10_22.json"
+          done
+          cp /tmp/verified-original-source-geography/SOURCE_SPATIAL_INFLUENCE_SUMMARY_2026_10_22.json \
+             "$root/SOURCE_SPATIAL_INFLUENCE_SUMMARY_2026_10_22.json"
+          python3 "$root/validate_source_spatial_influence_v1.py" \
+            --input-dir "$root" \
+            --output /tmp/verified-original-source-geography/published-recheck.json
+          cmp /tmp/verified-original-source-geography/published-recheck.json \
+              "$root/SOURCE_SPATIAL_INFLUENCE_SUMMARY_2026_10_22.json"
+          python3 - <<'PY'
+          import csv,json
+          from pathlib import Path
+          root=Path('prospective/multitaxon_individuality')
+          d=json.loads((root/'SOURCE_SPATIAL_INFLUENCE_SUMMARY_2026_10_22.json').read_text())
+          columns=('source','year','time_gap_min','centroid_distance_cutoff_km',
+                   'n_pairs','n_animals','n_connected_spatial_components','component_animal_counts',
+                   'radius_km','original_anchor_direction','winter_minus_summer_L',
+                   'positive_seeds','negative_seeds','n_valid_individual_deletions',
+                   'n_deletions_with_10_of_12_positive_seeds','LOO_min_mean','LOO_max_mean',
+                   'centroid_5_10km_ring_mean','centroid_10_25km_ring_mean')
+          out=[]
+          for cohort in d['summaries']:
+            for x in cohort['radii']:
+              loo=x['animal_deletion_mean_min_max']
+              rings=x['conditional_annulus_means_exploratory']
+              out.append({
+                'source':cohort['source'],'year':cohort['year'],
+                'time_gap_min':cohort['tolerance_seconds']/60,
+                'centroid_distance_cutoff_km':cohort['centroid_pair_distance_max_km'],
+                'n_pairs':cohort['n_dyads'],'n_animals':cohort['n_animals'],
+                'n_connected_spatial_components':cohort['n_distinct_source_geographic_components'],
+                'component_animal_counts':str(cohort['component_animal_counts']),
+                'radius_km':x['radius_km'],'original_anchor_direction':x['orientation'],
+                'winter_minus_summer_L':x['mean_winter_minus_summer_L'],
+                'positive_seeds':x['n_positive_source_subsampling_seeds'],
+                'negative_seeds':x['n_negative_source_subsampling_seeds'],
+                'n_valid_individual_deletions':x['n_eligible_animal_deletions'],
+                'n_deletions_with_10_of_12_positive_seeds':
+                    x['n_animal_omissions_with_positive_10_of_12'],
+                'LOO_min_mean':loo[0] if loo else None,'LOO_max_mean':loo[1] if loo else None,
+                'centroid_5_10km_ring_mean':rings['5_10km_mean'] if rings else None,
+                'centroid_10_25km_ring_mean':rings['10_25km_mean'] if rings else None})
+          assert len(out)==144
+          path=root/'SOURCE_SPATIAL_INFLUENCE_REVIEW_2026_10_22.csv'
+          with path.open('w',newline='',encoding='utf-8') as f:
+             writer=csv.DictWriter(f,fieldnames=columns)
+             writer.writeheader()
+             writer.writerows(out)
+          print('PASS 144 fully source-traceable spatial sensitivity CSV rows, all excluded/STOP comparisons preserved in JSON')
+          PY
+      - name: Commit no individual source GPS fixes or animal IDs
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add prospective/multitaxon_individuality/SOURCE_SPATIAL_INFLUENCE_*_2026_10_22.json
+          git add prospective/multitaxon_individuality/SOURCE_SPATIAL_INFLUENCE_REVIEW_2026_10_22.csv
+          git diff --cached --stat
+          git commit -m "data: preserve verified original-GPS spatial subcohorts and animal omission aggregate audit"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

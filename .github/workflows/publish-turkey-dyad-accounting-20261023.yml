@@ -1,0 +1,77 @@
+name: Source GPS turkey single-mover signed dyad accounting (aggregate only)
+
+on:
+  push:
+    branches:
+      - prospective/multitaxon-identity-ecology-v1
+    paths:
+      - "prospective/multitaxon_individuality/turkey_dyad_accounting_v1.py"
+      - "prospective/multitaxon_individuality/tests/test_turkey_dyad_accounting_v1.py"
+      - ".github/workflows/publish-turkey-dyad-accounting-20261023.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  pinned-source-accounting:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate full original-source two-year dyad accounting and distinct far-pair pseudoreplication
+        run: |
+          set -euo pipefail
+          root=prospective/multitaxon_individuality
+          PYTHONPATH="$root" python3 -m unittest discover -s "$root/tests" \
+            -p "test_turkey_dyad_accounting_v1.py" -v
+          python3 "$root/turkey_dyad_accounting_v1.py" \
+            --input-dir "$root" \
+            --output "$root/TURKEY_DYAD_ACCOUNTING_2026_10_23.json"
+          python3 "$root/turkey_dyad_accounting_v1.py" \
+            --input-dir "$root" \
+            --verify "$root/TURKEY_DYAD_ACCOUNTING_2026_10_23.json"
+      - name: Write fully auditable 24-row source-only CSV and preserve all tiny source groups with STOP
+        run: |
+          python3 - <<'PY'
+          import csv,json
+          from pathlib import Path
+          root=Path("prospective/multitaxon_individuality")
+          rows=json.loads((root/"TURKEY_DYAD_ACCOUNTING_2026_10_23.json").read_text())["results"]
+          assert len(rows)==24
+          keys=("year","time_gap_min","orientation","near_radius_km",
+                "full_n","full_delta_L1",
+                "n_under5","delta_under5",
+                "n_5to10","delta_5to10",
+                "n_10to25","delta_10to25",
+                "share_of_signed_25km_sum_from_10to25",
+                "far_annulus_below_standalone_support")
+          def flatten(r):
+            a,b,c=r["annuli"]
+            return dict(year=r["year"],time_gap_min=r["time_tolerance_seconds"]/60,
+                orientation=r["animal_anchor_orientation"],
+                near_radius_km=r["geodesic_GPS_near_radius_km"],
+                full_n=r["whole_source"]["n_original_dyads"],
+                full_delta_L1=r["whole_source"]["winter_minus_summer_L_mean"],
+                n_under5=a["n_original_dyads"],delta_under5=a["winter_minus_summer_L_mean"],
+                n_5to10=b["n_original_dyads"],delta_5to10=b["winter_minus_summer_L_mean"],
+                n_10to25=c["n_original_dyads"],delta_10to25=c["winter_minus_summer_L_mean"],
+                share_of_signed_25km_sum_from_10to25=r["far10to25_fraction_of_signed_whole_source_sum"],
+                far_annulus_below_standalone_support=c["below_minimum_eight_pair_standalone_biological_gate"])
+          with (root/"TURKEY_DYAD_ACCOUNTING_REVIEW_2026_10_23.csv").open("w",newline="",encoding="utf-8") as fh:
+            writer=csv.DictWriter(fh,fieldnames=keys)
+            writer.writeheader()
+            writer.writerows(flatten(r) for r in rows)
+          print("PASS exact original source SHA256, 24 weighted annulus decompositions, source-only review")
+          PY
+      - name: Commit original-source aggregate decompositions only
+        run: |
+          set -euo pipefail
+          root=prospective/multitaxon_individuality
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$root/TURKEY_DYAD_ACCOUNTING_2026_10_23.json"
+          git add "$root/TURKEY_DYAD_ACCOUNTING_REVIEW_2026_10_23.csv"
+          git diff --cached --stat
+          git commit -m "data: preserve source-pinned 24-comparison turkey dyad pseudoreplication accounting"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

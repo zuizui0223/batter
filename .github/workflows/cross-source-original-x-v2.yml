@@ -1,0 +1,58 @@
+name: Cross-source original GPS seasonal dyad overlap v2
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - prospective/multitaxon-identity-ecology-v1
+    paths:
+      - 'prospective/multitaxon_individuality/cross_source_seasonal_x_v2.py'
+      - 'prospective/multitaxon_individuality/tests/test_cross_source_seasonal_x_v2.py'
+      - '.github/workflows/cross-source-original-x-v2.yml'
+      - 'prospective/multitaxon_individuality/validate_cross_source_seasonal_x_v2.py'
+      - 'prospective/multitaxon_individuality/tests/test_validate_cross_source_seasonal_x_v2.py'
+
+permissions:
+  contents: read
+
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Exact decomposition, source joins, and aggregate-output synthetic tests
+        run: |
+          python3 -m unittest discover -s prospective/multitaxon_individuality/tests -p 'test_cross_source_seasonal_x_v2.py' -v
+          python3 -m unittest discover -s prospective/multitaxon_individuality/tests -p 'test_validate_cross_source_seasonal_x_v2.py' -v
+
+  public-original-source-analysis:
+    needs: unit-tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        source: [black_bear, turkey, moose, moose_snowy_range, white_tailed_deer]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download full public originals, verify MD5, calculate aggregate-only X
+        env:
+          SOURCE_LABEL: ${{ matrix.source }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/movebank_originals" "$RUNNER_TEMP/aggregate"
+          python3 prospective/multitaxon_individuality/cross_source_seasonal_x_v2.py \
+            --only "$SOURCE_LABEL" \
+            --cache "$RUNNER_TEMP/movebank_originals" \
+            --output "$RUNNER_TEMP/aggregate/${SOURCE_LABEL}.json"
+          python3 prospective/multitaxon_individuality/validate_cross_source_seasonal_x_v2.py \
+            --input "$RUNNER_TEMP/aggregate/${SOURCE_LABEL}.json"
+      - name: Save ONLY aggregate summaries and checksum receipts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: seasonal-dyad-${{ matrix.source }}
+          path: ${{ runner.temp }}/aggregate/${{ matrix.source }}.json
+          if-no-files-found: ignore
+          retention-days: 14
