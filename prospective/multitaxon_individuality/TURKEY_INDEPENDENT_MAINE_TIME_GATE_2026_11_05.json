@@ -1,0 +1,89 @@
+{
+  "accepted_timestamp_rows": 3205,
+  "unusable_timestamp_or_id_rows": 0,
+  "source_animal_labels": 24,
+  "monthly_support": [
+    {
+      "year": 2018,
+      "month": 4,
+      "rows": 891,
+      "animals": 7,
+      "animals_at_least_seven_dates": 4
+    },
+    {
+      "year": 2018,
+      "month": 5,
+      "rows": 33,
+      "animals": 1,
+      "animals_at_least_seven_dates": 0
+    },
+    {
+      "year": 2019,
+      "month": 3,
+      "rows": 55,
+      "animals": 1,
+      "animals_at_least_seven_dates": 0
+    },
+    {
+      "year": 2019,
+      "month": 4,
+      "rows": 511,
+      "animals": 6,
+      "animals_at_least_seven_dates": 3
+    },
+    {
+      "year": 2019,
+      "month": 5,
+      "rows": 233,
+      "animals": 2,
+      "animals_at_least_seven_dates": 1
+    },
+    {
+      "year": 2020,
+      "month": 3,
+      "rows": 745,
+      "animals": 6,
+      "animals_at_least_seven_dates": 2
+    },
+    {
+      "year": 2020,
+      "month": 4,
+      "rows": 737,
+      "animals": 9,
+      "animals_at_least_seven_dates": 4
+    }
+  ],
+  "primary_time_gate": [
+    {
+      "year": 2018,
+      "paired_animals_at_least_seven_dates_per_month": 0,
+      "common_dates_february": 0,
+      "common_dates_april": 0,
+      "status": "STOP_NO_FEBRUARY_OBSERVATIONS"
+    },
+    {
+      "year": 2019,
+      "paired_animals_at_least_seven_dates_per_month": 0,
+      "common_dates_february": 0,
+      "common_dates_april": 0,
+      "status": "STOP_NO_FEBRUARY_OBSERVATIONS"
+    },
+    {
+      "year": 2020,
+      "paired_animals_at_least_seven_dates_per_month": 0,
+      "common_dates_february": 0,
+      "common_dates_april": 0,
+      "status": "STOP_NO_FEBRUARY_OBSERVATIONS"
+    }
+  ],
+  "spatial_outcomes_computed": false,
+  "source_url": "https://github.com/mattgonnerman/MaineTurkeyConnectivity/blob/e639fb66bf27b16d83c72d03faa638a496246ff4/GPS%20Seasonal%20-%20Used.csv",
+  "source_sha256": "2c7f1651235dbc4d411bee524393d91a761fd493751c845ac53eae223501e996",
+  "source_bytes": 154101,
+  "columns": [
+    "BirdID",
+    "location_lat",
+    "location_long",
+    "timestamp"
+  ]
+}

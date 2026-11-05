@@ -1,5 +1,25 @@
 # Pattern-first cross-taxon movement individuality and ecological use (database programme)
 
+## 5 November 2026: spring core expansion and independent-source eligibility
+
+The [new original-GPS follow-up](TURKEY_CORE_EFFORT_RESULT_2026_11_05.md)
+separates concentration in the known2020 isolate's pairs from expansion among
+the remaining six animals. February-to-April core mean distance rises3.357km;
+after seven-common-day balancing and every single-animal deletion, all24 draws
+remain positive (worst1.704km). The isolate-related term accounts for65.5% of
+the full21-pair mean change, an arithmetic contribution rather than a causal
+share. The2019 larger component fails deletion robustness;2020 March and
+summer persistence also fail the all-draw/all-deletion rule. These are
+post-inspection, within-source diagnostics, not independent replications.
+
+An [independent-source admission contract](TURKEY_INDEPENDENT_REPLICATION_GATE_2026_11_05.md)
+was applied to a pinned original-author Maine GPS release. Its3205 rows and24
+animal labels contain no February observations in2018–2020, so the exact
+February–April test cannot be fitted. That author file is not byte-identical
+to the still-unacquired Dryad file; their eligibility states remain separate.
+[Full independent-source audit and executed timestamp gate](TURKEY_INDEPENDENT_SOURCE_AUDIT_2026_11_05.md).
+No new independent spatial effect, age effect or social mechanism is claimed.
+
 ## 28 October 2026: ORIGINAL turkey GPS reveals February–March monthly range separation
 
 The [month-resolved original Movebank turkey result](TURKEY_MONTHLY_CORE_SEPARATION_RESULT_2026_10_28.md)
