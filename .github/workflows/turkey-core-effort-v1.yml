@@ -9,6 +9,9 @@ on:
       - 'prospective/multitaxon_individuality/screen_turkey_month_support_v1.py'
       - 'prospective/multitaxon_individuality/tests/test_turkey_independent_month_gate_v1.py'
       - 'prospective/multitaxon_individuality/TURKEY_INDEPENDENT*'
+      - 'prospective/multitaxon_individuality/audit_maine_source_overlap_v1.py'
+      - 'prospective/multitaxon_individuality/TURKEY_MAINE_AUTHOR_OVERLAP*'
+      - 'prospective/multitaxon_individuality/tests/test_turkey_source_overlap_v1.py'
       - '.github/workflows/turkey-core-effort-v1.yml'
   workflow_dispatch:
 permissions:
@@ -27,3 +30,5 @@ jobs:
         run: python3 -m unittest discover -s prospective/multitaxon_individuality/tests -p test_turkey_monthly_core_separation_v1.py -v
       - name: Verify independent-source temporal admission semantics
         run: python3 -m unittest discover -s prospective/multitaxon_individuality/tests -p test_turkey_independent_month_gate_v1.py -v
+      - name: Verify source overlap detection under recoded IDs and coordinate rounding
+        run: python3 -m unittest discover -s prospective/multitaxon_individuality/tests -p test_turkey_source_overlap_v1.py -v

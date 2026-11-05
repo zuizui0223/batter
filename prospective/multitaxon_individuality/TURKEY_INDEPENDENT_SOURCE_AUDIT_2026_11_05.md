@@ -1,6 +1,8 @@
 # Independent turkey source audit and executed calendar gate
 
-**5 November 2026. No independent spatial effect has been fitted.** A new-source
+**5 November 2026. No independent spatial effect has been fitted.**
+
+[Later same-day acquisition and full-archive overlap follow-up](TURKEY_INDEPENDENT_FOLLOWUP_2026_11_05.md): the pinned Maine author release has zero matching timestamp-position rows against all 796,419 discovery rows, but still lacks February. Dryad and male original downloads remain unresolved. A new-source
 eligibility contract was saved before examining candidate GPS spatial outcomes.
 The exact primary endpoint remains April minus February mean pair-centroid
 distance, seven shared observation days/month and leave-one-animal robustness.
