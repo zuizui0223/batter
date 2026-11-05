@@ -1,5 +1,7 @@
 # Independent turkey source audit and executed calendar gate
 
+[Latest non-Dryad and live Movebank follow-up](TURKEY_INDEPENDENT_ALTERNATIVES_2026_11_05.md): two author CSVs acquired but no original-fix coordinates; one Forest Park turkey metadata screen fails seven-day February support; further original-file acquisition remains unresolved.
+
 **5 November 2026. No independent spatial effect has been fitted.**
 
 [Later same-day acquisition and full-archive overlap follow-up](TURKEY_INDEPENDENT_FOLLOWUP_2026_11_05.md): the pinned Maine author release has zero matching timestamp-position rows against all 796,419 discovery rows, but still lacks February. Dryad and male original downloads remain unresolved. A new-source
