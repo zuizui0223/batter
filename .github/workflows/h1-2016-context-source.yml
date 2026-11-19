@@ -1,0 +1,35 @@
+name: H1 roost-versus-foraging original supplementary workbook gate
+on:
+  push:
+    branches: [prospective/social-information-macro-h1-v1]
+    paths:
+      - 'prospective/social_macro_h1/h1_2016_context_source_gate.py'
+      - '.github/workflows/h1-2016-context-source.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  original-source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Inspect 2016 source schema only and 2015 Figshare file listings
+        id: source
+        continue-on-error: true
+        run: python prospective/social_macro_h1/h1_2016_context_source_gate.py
+      - name: Upload metadata-only provenance receipt; never original animal data
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: h1-2016-context-original-source-schema
+          path: /tmp/h1_saccopteryx_2016_source_receipt.json
+          if-no-files-found: error
+      - name: Stop when original workbook not authenticated
+        if: steps.source.outcome == 'failure'
+        run: |
+          echo "::error::Original 2016 supplement not verified; no new empirical inference"
+          exit 1
