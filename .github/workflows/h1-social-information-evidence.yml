@@ -29,6 +29,7 @@ jobs:
           python prospective/social_macro_h1/run_h1_feasibility.py --output /tmp/h1-feasibility.json
           python prospective/social_macro_h1/published_contrast_and_change_score_audit_v1.py --output /tmp/h1-aggregate-null.json
           python prospective/social_macro_h1/h1_cue_interaction_known_truth_v1.py | tee /tmp/h1-synthetic-cue-interaction.json
+          python prospective/social_macro_h1/h1_two_channel_value_of_information_v1.py --out /tmp/h1-two-channel-theory.json > /dev/null
       - uses: actions/upload-artifact@v4
         with:
           name: h1-evidence-and-negative-control-receipts
@@ -36,4 +37,5 @@ jobs:
             /tmp/h1-feasibility.json
             /tmp/h1-aggregate-null.json
             /tmp/h1-synthetic-cue-interaction.json
+            /tmp/h1-two-channel-theory.json
           if-no-files-found: error
