@@ -26,7 +26,7 @@ jobs:
         run: |
           python prospective/social_macro_h1/run_h1_feasibility.py --output /tmp/h1-feasibility.json
           python prospective/social_macro_h1/published_contrast_and_change_score_audit_v1.py --output /tmp/h1-aggregate-null.json
-          python prospective/social_macro_h1/h1_cue_interaction_known_truth_v1.py > /tmp/h1-synthetic-cue-interaction.json
+          python prospective/social_macro_h1/h1_cue_interaction_known_truth_v1.py | tee /tmp/h1-synthetic-cue-interaction.json
       - uses: actions/upload-artifact@v4
         with:
           name: h1-evidence-and-negative-control-receipts
