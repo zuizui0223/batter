@@ -1,0 +1,90 @@
+{
+  "status": "AUTHENTICATED_AUTHOR_SOURCE_RESPONDERS_ONLY",
+  "date": "2026-11-19",
+  "original_paper": "Gamba-Rios et al. 2025, Biology Letters",
+  "paper_doi": "10.1098/rsbl.2025.0042",
+  "data_doi": "10.5061/dryad.6djh9w1d3",
+  "source_repository": "https://github.com/morceglo/Predator-recognition",
+  "original_author_git_blob_sha1": "b8a119df0204ed0beb90b971c97f60cafbdb74cd",
+  "original_csv_sha256": "11e281708be94ad76b0875d8cf43adf605e8095bb500ad43936f20a3c98d77d3",
+  "source_bytes": 9979,
+  "source_rows": 228,
+  "tested_animals_in_paper": 117,
+  "tested_social_groups_in_paper": 33,
+  "original_csv_individuals": 38,
+  "unrepresented_tested_animals": 79,
+  "tested_groups_all_represented_by_responders_author_statement": true,
+  "treatment": "predator Vampyrum spectrum vs non-predator bat echolocation, overlapping conspecific inquiry calls",
+  "response": "number of Thyroptera tricolor response calls per 30-second period",
+  "primary_estimand": "individual-level [log1p(during_P)-log1p(before_P)] minus [log1p(during_NP)-log1p(before_NP)]",
+  "primary": {
+    "n": 38,
+    "mean": -2.1652937703974704,
+    "median": -2.1458566478176304,
+    "negative_bats": 35,
+    "positive_bats": 3,
+    "zero_bats": 0,
+    "raw_count_change_difference_mean": -19.05263157894737,
+    "predator_before_mean": 30.63157894736842,
+    "predator_during_mean": 0.7631578947368421,
+    "nonpredator_before_mean": 28.710526315789473,
+    "nonpredator_during_mean": 17.894736842105264
+  },
+  "stimulus_order": [
+    {
+      "order": "NP-P",
+      "n": 22,
+      "mean": -2.126012608624888,
+      "negative": 20
+    },
+    {
+      "order": "P-NP",
+      "n": 16,
+      "mean": -2.2193053678347714,
+      "negative": 15
+    }
+  ],
+  "nonpredator_class": [
+    {
+      "class": "control",
+      "n": 14,
+      "mean": -3.3248425243799877,
+      "negative": 14
+    },
+    {
+      "class": "frugivorous",
+      "n": 12,
+      "mean": -1.0662414680652224,
+      "negative": 11
+    },
+    {
+      "class": "insectivorous",
+      "n": 12,
+      "mean": -1.9115391930834487,
+      "negative": 10
+    }
+  ],
+  "group_identification": {
+    "n_groups": 33,
+    "observed_responders": 38,
+    "extra_responders": 5,
+    "feasible_size_allocations": 7,
+    "sharp_possible_mean_interval": [
+      -2.5692434118700658,
+      -1.7530193838817538
+    ],
+    "assumption": "At least one responsive bat among 33 groups; 38 responders; no group ID, all feasible size/assignment patterns considered",
+    "type": "STRUCTURAL_PARTIAL_IDENTIFICATION_NOT_SAMPLING_CONFIDENCE_INTERVAL",
+    "group_cluster_p": "NOT_IDENTIFIED"
+  },
+  "integrity_checks": "Source Git blob SHA1 + SHA256 + original structural row/subject/treatment/phase codes verified by GitHub Actions",
+  "original_source_biological_result_already_published": true,
+  "source_exactly_replicates_2019_buzz_density": false,
+  "selected_responder_population_only": true,
+  "group_independent_uncertainty_available": false,
+  "all_117_tested_population_effect_available": false,
+  "cage_group_cohesion_raw_in_this_csv": false,
+  "novel_biological_mechanism_claim": false,
+  "github_action": "https://github.com/zuizui0223/batter/actions/runs/44473278891",
+  "raw_subject_data_committed": false
+}
