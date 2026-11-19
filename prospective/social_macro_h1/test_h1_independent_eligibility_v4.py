@@ -29,6 +29,7 @@ class TestIndependentCueH1Eligibility(unittest.TestCase):
         self.assertIn("not a measure of",self.by["GlobalRoost2024"]["reason_for_2019_transfer_stop"])
         self.assertIn("not experimentally demonstrated",self.by["SafiKerth2007"]["reason_for_2019_transfer_stop"])
         self.assertIn("filename inventory",self.by["CorcoranWeller2018"]["data_access"])
+        self.assertEqual(self.by["CalderonCapote2025"]["original_rows_verified"],"NO")
 
     def test_original_sources_independence_does_not_imply_same_measure(self):
         for key in ("Fenton1976","CorcoranWeller2018","Halat2024","CalderonCapote2025","Wilson2026"):
