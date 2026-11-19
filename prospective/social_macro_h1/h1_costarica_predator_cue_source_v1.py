@@ -108,6 +108,54 @@ def describe(rows):
       "mean_nonpredator_during":statistics.mean(r["during_nonpred"] for r in rows),
     }
 
+def extra_partitions(total,minimum=1):
+    """Enumerate unordered integer partitions of the extra bat slots."""
+    if total==0:
+        yield ()
+        return
+    for k in range(minimum,total+1):
+        for rest in extra_partitions(total-k,k):
+            yield (k,)+rest
+
+def group_bounds(effects,n_groups):
+    """Exact sharp deterministic bounds for group-equal responder mean.
+
+    Every group has >=1 recorded responder; individual group membership is
+    unavailable. The remaining n_bats - n_groups bat slots are distributed
+    among any group sizes. Fixed group size weights 1/n_g are rearranged
+    against the sorted subject-level values to achieve min and max.
+    These bounds do NOT quantify sampling uncertainty among physical groups.
+    """
+    n=len(effects)
+    extras=n-n_groups
+    if extras<0:raise ValueError("Fewer responders than observed groups")
+    vals=sorted(effects)
+    shapes=[]
+    for parts in extra_partitions(extras):
+        singleton=n_groups-len(parts)
+        weights=[1.0]*singleton
+        for extra in parts:
+            size=1+extra
+            weights.extend([1.0/size]*size)
+        if len(weights)!=n or abs(sum(weights)-n_groups)>1e-9:
+            raise ValueError("Invalid group-weight allocation")
+        weights.sort()
+        # Rearrangement inequality: max pairs similarly sorted,
+        # min pairs oppositely sorted.
+        maximum=sum(x*w for x,w in zip(vals,weights))/n_groups
+        minimum=sum(x*w for x,w in zip(vals,weights[::-1]))/n_groups
+        shapes.append({"extra_allocation":list(parts),
+                       "lower":minimum,"upper":maximum})
+    return {"n_source_responders":n,"n_published_groups":n_groups,
+            "groups_all_represented_assumed":True,"excess_responder_slots":extras,
+            "enumerated_group_size_shapes":len(shapes),
+            "sharp_lower_equal_group_mean":min(q["lower"] for q in shapes),
+            "sharp_upper_equal_group_mean":max(q["upper"] for q in shapes),
+            "bound_type":"POSSIBLE_ALLOCATION_NOT_CONFIDENCE_INTERVAL",
+            "applies_to":"RECORDED_RESPONDER_BATS_ONLY_NOT_ALL_117_TESTED",
+            "unknown_physical_group_cluster_p":"STOP_NO_GROUP_ID",
+            "shapes":shapes}
+
 def analyze():
     payload=source_bytes()
     rows=parse(payload)
@@ -125,6 +173,7 @@ def analyze():
           "group_cluster_uncertainty":"NOT_IDENTIFIED"},
       "estimand":"within-bat [log1p(during_P)-log1p(before_P)] minus [log1p(during_NP)-log1p(before_NP)]",
       "primary":describe(rows),
+      "group_equal_mean_partial_identification":group_bounds([r["primary"] for r in rows],PUBLISHED_SOCIAL_GROUPS),
       "by_order":{k:describe([r for r in rows if r["order"]==k]) for k in ["NP-P","P-NP"]},
       "by_nonpredator_caller":{
           k:describe([r for r in rows if r["np_type"]==k])
