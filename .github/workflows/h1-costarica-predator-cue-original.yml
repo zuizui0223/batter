@@ -1,0 +1,43 @@
+name: H1 Costa Rica 2025 predator-risk cue original-source audit
+on:
+  push:
+    branches: [prospective/social-information-macro-h1-v1]
+    paths:
+      - 'prospective/social_macro_h1/h1_costarica_predator_cue_source_v1.py'
+      - 'prospective/social_macro_h1/test_h1_costarica_predator_source_v1.py'
+      - '.github/workflows/h1-costarica-predator-cue-original.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  original-source-and-paired-contrast:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Test paired estimand under known truth
+        run: python -m unittest discover -s prospective/social_macro_h1 -p 'test_h1_costarica_predator_source_v1.py' -v
+      - name: Verify immutable author Git blob and compute selected-responder contrasts
+        run: python prospective/social_macro_h1/h1_costarica_predator_cue_source_v1.py --out /tmp/h1_costa_rica_2025_derived.json
+      - name: Check denominators and scientific restrictions
+        run: |
+          python - <<'PY'
+          import json
+          x=json.load(open('/tmp/h1_costa_rica_2025_derived.json'))
+          assert x['status']=='ORIGINAL_GITHUB_BLOB_VERIFIED_CONDITIONAL_RESPONDER_REANALYSIS'
+          assert (x['original_rows'],x['sample_design']['tested_bats'],x['sample_design']['source_recorded_responder_bats'])==(228,117,38)
+          assert x['sample_design']['social_group_ids_in_source'] is False
+          assert x['raw_rows_or_subject_identifiers_committed'] is False
+          assert x['not_independent_2019_foraging_buzz_moderation_replication'] is True
+          assert len(x['by_nonpredator_caller'])==3
+          PY
+      - name: Archive aggregate-only authenticated source receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: h1-costa-rica-2025-responder-only-aggregate
+          path: /tmp/h1_costa_rica_2025_derived.json
+          if-no-files-found: warn
