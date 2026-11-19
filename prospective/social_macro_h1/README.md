@@ -47,3 +47,17 @@ Valid proposed treatment interaction: difference in during-cue and randomized ti
 Original Lewanzik 2019 Dryad source is an ~84 KB XLSX (https://datadryad.org/dataset/doi:10.5061/dryad.gp65g2t). Public metadata was verified, but binary download via this environment was blocked. Do not claim a raw reanalysis. Current Dryad access may require tokenized API downloads. Source-provenance gate must precede any computation or ingestion. The 2026 individual-bat data are in supplementary files/requested from the corresponding author and were not ingested. A genuine held-out across-study test is not yet possible.
 
 **Branch/claim firewall:** proposal and source QA only. No `main` merge or change to frozen 3D individuality outcome.
+
+
+## 2026-11-19 source/identifiability gate update (v4)
+
+**Empirical Dryad source acquisition: STOP.** The original 2019 XLSX is listed by Dryad, but the fresh GitHub Actions runner got HTTP403 (published file_stream) and HTTP401 (both documented API routes). No source workbook or biological results were retrieved; the dedicated source-gate CI intentionally FAILED with JSON receipt. See [source attempt run](https://github.com/zuizui0223/batter/actions/runs/44452289881), `LEWANZIK_2019_ORIGINAL_SOURCE_ACCESS_STOP_V1.md` and `source_schema_lewanzik_gate_v1.py`. Do not claim the original 2019 data were re-fitted.
+
+**New prospective response estimand frozen before opening any 2019 outcomes:** evaluate the buzz-information signal, 0/12/24/48/96 feeding buzzes/min *within acoustic caller identity*, against baseline activity using absolute Y_playback as response, with `buzz×X_pre` moderation and lake-blocked transfer. 0 buzz includes bat search-phase calls and is not a no-social-acoustic control; pre/post silent controls are phase-confounded. This source is 12 lakes, 30 randomized blocks per lake, not 24 independent recipient bat species. See `LEWANZIK_2019_FROZEN_ANALYSIS_AND_SOURCE_GATE_V1.md`.
+
+**Synthetic-only estimator positive/negative control: PASS** (12 lakes×30 blocks×128 replicates per world):
+- Known truth cue×baseline interaction=0.0: recovered mean +0.008619, while naive difference-score baseline slope mean -0.346658.
+- Known truth cue×baseline interaction=+0.8: recovered mean +0.808944, while naive difference-score baseline slope mean -0.048503; 128/128 estimated interactions positive.
+- Source-code-only tests and all pre-existing H1 tests: **7/7 PASS** with [CI and JSON receipt](https://github.com/zuizui0223/batter/actions/runs/44452894981). No real bat effect estimate is identified by this simulation.
+
+**Scientific decision:** strong *methodological* reason to separate receiver baseline density from baseline-subtracted response, but the original empirical source is inaccessible via verified interfaces. STOP empirical density-context interaction and H3 cognitive-memory/social-information generality until authenticated original row-level source or independently eligible other experiment is available. Frozen batter JAE/BE claims stay unchanged.
