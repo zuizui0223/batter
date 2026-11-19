@@ -59,6 +59,13 @@ class TestDistressContextAggregate(unittest.TestCase):
             self.assertLessEqual(lo-1e-12,v)
             self.assertGreaterEqual(hi+1e-12,v)
 
+    def test_same_bci_geographic_non_independence(self):
+        g=self.r["cross_study_geography"]
+        self.assertFalse(g["geographic_independence"])
+        self.assertFalse(g["count_as_two_independent_regions"])
+        self.assertIn("Barro Colorado Island",g["field_station"])
+        self.assertIn("NOT_IDENTIFIED",g["animal_or_roost_overlap_status"])
+
     def test_2015_two_recipient_hierarchy_and_no_meta(self):
         x=self.r["source_2015"]
         self.assertEqual((x["original_trials"],x["distress_trials"],x["noise_trials"]),(308,155,153))
