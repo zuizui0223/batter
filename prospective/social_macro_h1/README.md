@@ -61,3 +61,18 @@ Original Lewanzik 2019 Dryad source is an ~84 KB XLSX (https://datadryad.org/dat
 - Source-code-only tests and all pre-existing H1 tests: **7/7 PASS** with [CI and JSON receipt](https://github.com/zuizui0223/batter/actions/runs/44452894981). No real bat effect estimate is identified by this simulation.
 
 **Scientific decision:** strong *methodological* reason to separate receiver baseline density from baseline-subtracted response, but the original empirical source is inaccessible via verified interfaces. STOP empirical density-context interaction and H3 cognitive-memory/social-information generality until authenticated original row-level source or independently eligible other experiment is available. Frozen batter JAE/BE claims stay unchanged.
+
+
+## 2026-11-19 v5: ORIGINAL USER-SUPPLIED DATA RECOVERED; prospective H1 empirical test completed
+
+The independent Dryad automatic fetch STOP from earlier in the same day remains documented as a historical **401/403 access-path failure**. It is no longer a missing input: the user uploaded Dryad v20190410 ZIP and the original XLSX SHA256 was verified as `fbabb5021c613aa7033ad13bc1a357a68700a7d3683ec16ae1bcf4a65e121c86`. **No raw XLSX uploaded to this GitHub branch.**
+
+- **Verified original design:** 1,440 complete source rows, 12 lakes, 6 callers ×5 buzz rates ×4 response classifications. 360 unique stimulus blocks, no duplicate 6×5 combination within lake, and published authors' 250/94/110/180 selection counts exactly reproduced.
+- **Structural eligibility:** *P. nathusii* absent at one of 12 original lakes, leaving 330 rows/11 independent lake-folds for its recipient-specific H1 (all other groups 360/12). `NEV` remains a pooled three-genus response, not a species.
+- **Frozen *new H1* test:** buzz×pre-playback-activity interaction for actual playback activity (not `Y-X`), with caller and caller×buzz adjustment, pre-period heterospecific presence, time and lake grouping; genuinely unseen lake out-of-sample prediction.
+- **Empirical result:** interaction confidence interval includes zero in all 4 responses and equal-lake held-out log-score increment is **negative in all 4**: Myotis `-0.00119484`, NEV `-0.00171772`, Pnat `-0.00309600`, Ppip `-0.00308932`. **STOP** strong ecological moderation/generalization claim.
+- **Sensitivity:** quadratic buzz×caller nuisance keeps all four increments negative; author's exclusion of `pre=0 & during=0` changes Pnat to a *positive* `+0.00627` but conditions selection on the post-treatment outcome, so is not admissible as a replacement primary causal test. This sensitivity explicitly limits the generality of the negative result.
+- **Reproducibility:** `H1_EMPIRICAL_LEWANZIK2019_RESULT_V1.md` / `H1_EMPIRICAL_LEWANZIK2019_RECEIPT_V1.json` document results and source checksum; `h1_empirical_reanalysis_v1.py` is the source-pinned executable taking `--xlsx` (local original) and `--out` aggregate JSON; `test_h1_empirical_receipt_v1.py` validates claim/format consistency without falsely implying an original-source CI rerun.
+- **Unchanged:** frozen batter JAE/BE, `main`, and all original author findings. This is one central European study, not a multi-paper global meta-analysis.
+
+Next valid scientific progress is an **independent matched randomized cue×baseline study**, not more outcome-driven tuning of this original dataset.
