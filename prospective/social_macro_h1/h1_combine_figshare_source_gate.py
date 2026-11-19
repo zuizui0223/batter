@@ -73,38 +73,57 @@ def _numeric(x):
     except (ValueError,TypeError):return False
 
 def main():
-    out={"status":"STOP_NO_VERIFIED_ORIGINAL",
+    out={"status":"STOP_NO_VERIFIED_ORIGINAL_CONTENT",
          "article_id":13028255,"article_version":4,"file_id":FIG_FILE_ID,
          "reported_source_md5":FIG_MD5,"expected_bytes":FIG_SIZE,
          "original_outcomes_not_fitted":True,"attempts":[]}
     try:
-        b,status=get(API)
-        meta=json.loads(b)
+        meta_body,st=get(API)
+        meta=json.loads(meta_body)
         source=[f for f in meta.get("files",[]) if f.get("id")==FIG_FILE_ID and f.get("name")=="trait_data_reported.csv"]
         if len(source)!=1:raise ValueError("Figshare metadata no unique reported CSV")
         f=source[0]
         assert f["size"]==FIG_SIZE and f.get("supplied_md5")==FIG_MD5
-        out["attempts"].append({"source":"figshare_version4_metadata","status":status,"result":"PASS"})
-        raw,st=get(f["download_url"])
-        digest=hashlib.md5(raw).hexdigest()
-        if digest!=FIG_MD5 or len(raw)!=FIG_SIZE:
-            raise ValueError("Original Figshare reported CSV size or MD5 mismatch")
-        out["attempts"].append({"source":"figshare_original_csv","status":st,"bytes":len(raw),"md5":digest,"result":"PASS"})
+        out["attempts"].append({"source":"Figshare_v4_metadata","status":st,"result":"PASS"})
+
         mirror,sm=get(MIRROR)
         gitsha=hashlib.sha1(b"blob "+str(len(mirror)).encode()+b"\x00"+mirror).hexdigest()
+        md5=hashlib.md5(mirror).hexdigest()
         if gitsha!=MIRROR_BLOB:raise ValueError("Git mirror blob SHA mismatch")
-        if mirror!=raw:raise ValueError("Git mirror not byte-identical to original Figshare")
-        out["attempts"].append({"source":"GitHub_mirror","status":sm,"bytes":len(mirror),"git_blob_sha1":gitsha,"result":"BYTE_IDENTICAL"})
-        out["official_original_sha256"]=hashlib.sha256(raw).hexdigest()
-        out["original_figshare_md5_verified"]=True
-        out["secondary_github_mirror_byte_identical_verified"]=True
-        out["original_csv_profile"]=profile(raw)
-        out["status"]="ORIGINAL_FIGSHARE_MD5_AND_MIRROR_IDENTITY_PASS"
+        if md5!=FIG_MD5 or len(mirror)!=FIG_SIZE:
+            raise ValueError("Git mirror does not match official original Figshare MD5/size")
+        out["attempts"].append({"source":"GitHub mirror","status":sm,"bytes":len(mirror),
+                                 "md5":md5,"git_blob_sha1":gitsha,
+                                 "result":"MATCHES_OFFICIAL_FIGSHARE_HASH"})
+        out["source_sha256"]=hashlib.sha256(mirror).hexdigest()
+        out["official_original_published_md5_verified"]=True
+        out["original_reported_source_profile"]=profile(mirror)
+        out["status"]="ORIGINAL_PUBLISHED_HASH_MATCH_VIA_MIRROR"
+        # The exact Figshare file-stream remains an optional independent
+        # origin check. A 403 here is not a false data-schema failure because
+        # its authoritative checksum has already authenticated the bytes.
+        try:
+            actual,st=get(f["download_url"])
+            if actual!=mirror:raise ValueError("Original Figshare differs from published-hash-matching mirror")
+            out["attempts"].append({"source":"Direct Figshare original","status":st,
+                                     "result":"BYTE_IDENTICAL"})
+            out["original_download_direct_verified"]=True
+            out["status"]="ORIGINAL_DOWNLOAD_AND_MIRROR_BYTE_IDENTICAL"
+        except Exception as ex:
+            out["attempts"].append({"source":"Direct Figshare original",
+                                  "result":"ACCESS_OR_ORIGIN_NOT_VERIFIED",
+                                  "exception":type(ex).__name__,
+                                  "detail":str(ex)[:170]})
+            out["original_download_direct_verified"]=False
     except Exception as e:
-        out["attempts"].append({"source":"source_verification","exception":type(e).__name__,"detail":str(e)[:230],"result":"STOP"})
+        out["attempts"].append({"source":"source_verification",
+                                  "exception":type(e).__name__,"detail":str(e)[:180],"result":"STOP"})
     OUT.parent.mkdir(parents=True,exist_ok=True)
     OUT.write_text(json.dumps(out,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     print(json.dumps(out,ensure_ascii=False,indent=2))
-    if out["status"]!="ORIGINAL_FIGSHARE_MD5_AND_MIRROR_IDENTITY_PASS":raise SystemExit(2)
+    if out["status"] not in ("ORIGINAL_PUBLISHED_HASH_MATCH_VIA_MIRROR",
+                             "ORIGINAL_DOWNLOAD_AND_MIRROR_BYTE_IDENTICAL"):
+        raise SystemExit(2)
 
-if __name__=="__main__":main()
+if __name__=="__main__":
+    main()
