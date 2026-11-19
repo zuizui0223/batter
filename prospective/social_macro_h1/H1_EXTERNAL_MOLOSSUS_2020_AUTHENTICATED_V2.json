@@ -1,0 +1,37 @@
+{
+  "status": "ORIGINAL_ZENODO_CSV_MD5_VERIFIED_REANALYSIS_PASS",
+  "source": "Kohles_et_al_2020",
+  "source_doi": "10.5061/dryad.tqjq2bvvx",
+  "source_url": "https://zenodo.org/records/4953622/files/molossusinddiscrim_data_videoanalysis.csv?download=1",
+  "original_file_bytes": 3298,
+  "original_md5": "b4b9970eac190601b4a291725137c110",
+  "original_md5_verified": true,
+  "workflow_run_id": 44462987103,
+  "workflow_url": "https://github.com/zuizui0223/batter/actions/runs/44462987103",
+  "data_rows": 51,
+  "source_file_committed": false,
+  "recalculation_ci_passed": true,
+  "search_phase": {
+    "trials": 34,
+    "subjects": 19,
+    "test_trials": 20,
+    "control_trials": 14,
+    "matched_bats": 12,
+    "matched_roosts": 5,
+    "bat_equal_test_minus_control_headwaggles_40sec": 12.708333333333334,
+    "roost_equal_test_minus_control_headwaggles_40sec": 10.4,
+    "roost_signflip_p_two_sided": 0.25,
+    "roost_response_signs": {
+      "positive": 4,
+      "negative": 1
+    },
+    "previous_web_transcription_agreed": true
+  },
+  "approach_phase": {
+    "original_csv_trials": 17,
+    "article_reported_trials": 19,
+    "matched_subjects": 4,
+    "gate": "STOP_approach_confirmation"
+  },
+  "interpretation": "This authenticates the numerical reanalysis of the already-published 2020 individual-call discrimination study; it is a separate estimator from 2019 buzz×baseline foraging response and does NOT establish cross-study global H1 generalization."
+}
