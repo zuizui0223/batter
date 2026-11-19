@@ -1,38 +1,49 @@
-# H1 — ecological rules for personal and social information use in bats
+# H1 — can social cues update personal knowledge across bats?
 
-**2026-11-19 status: source-audited prospective study design, not a completed meta-analysis.**
-This branch preserves the frozen JAE `batter` results and does not alter `main`. The positive results below refer to *published prior work* and independently audited descriptive counts, NOT new phylogenetic evidence or causal inferences.
+**2026-11-19, v3: prospective external validation design + source-backed aggregates + known-truth estimator falsification. No novel multi-species biological effect is claimed.**
 
-## Verified inventory
+All work remains separate from frozen batter JAE inferential results and from `main`.
 
-- **2022 theory-development reference sample**: Kohles et al. Table 2 contains 35 cases, including 29 explicit named bat taxa and one pooled taxon row; 20 cases have one of four social information strategy labels; 25 cases have both resource persistence and social information location classifications. They are **not independent external tests** of the hypothesis.
-- **Targeted post-2022 original-paper sample**: 12 context/receiver-specific observations, eight explicitly named taxa, six source-study clusters; none (0) independently codes one of Kohles's four classical strategies with measured resource predictors. Not a systematic census, not 12 independent studies, not a worldwide sampled absence frame.
-- **Source-data QA, not author-result replication**: Original Lourie et al. 2024 field table + bat-tag visitor table produce 10 naive visitors / 56 naive tagged animals = 17.86% following social odor manipulation. One source CSV `n_total` cell for 19 July 2020 Gershom lists 22 while 4 manipulated + 19 naive = 23; author manuscript's 23 is consistent. This does not change the naive 10/56 descriptive count and cannot be interpreted as a new p-value.
-- **Main hypothesis revision**: Personal place memory and social *timing* information can be complementary. Information about food presence, availability, competition and social role should not be collapsed to one social-versus-individual trait.
-- **STOP gates**: no phylogenetic four-strategy outcome test, no species-wide social-information absence model, and no H3 individual-memory-vs-social-cue negative correlation from the current data. Tested negatives, resource observability, independent study cohorts and taxonomic join quality do not yet meet requirements.
+## Completed / independently auditable work
+
+1. **Theory seed, not an external test:** 2022 review Table 2 extracted into 35 rows, 29 explicitly named bat species plus one pooled-taxonomy row. Twenty rows have one of four strategies; the subset of 25 with measurable persistence and information-use site matches the review's framework by construction. Do NOT count this as replication.
+2. **Original paper ledger:** 12 targeted context/receiver observations, eight named taxa, six original-study clusters from 2024–2026. No new independent fully measured cases yet meet the classical four-strategy global phylogenetic response test. No systematic worldwide sampling frame/absence denominator.
+3. **New prior-art guardrail:** 2019 experimental study (Lewanzik et al.) already tested 24 emitted-signal×recipient group combinations at 12 lakes, not 24 independent recipient species, and ecological context modulated cue responses. Four recipient groups had negative coefficients of pre-playback activity on the response defined as playback-minus-pre-playback activity; 3 species + one mixed NEV group, not four separate studies.
+4. **Known-truth mathematical gate:** In a stationary no-social-effect world, fitting (during-pre) ~ pre yields slope rho-1; all 128 simulation replicates at each of rho=0,0.5,0.9 had negative slopes, reproducing the negative-baseline *sign* with true social competition=0. The observed 2019 negative signs therefore cannot alone identify an actual social-cost effect; this does not disprove the published interpretation or invalidate cue-specific results.
+5. **Sex-specific actual published model contrasts:** 2026 Glossophaga paper reported male/female playback-vs-silent flower-visit RRs 0.17/6.57 for alert and 0.73/2.58 for benign calls (16 biological bats; 8 each). Descriptive female/male ratio-of-rate-ratios =38.65 alert, 3.53 benign. Both effects belong to ONE prior study, not novel bat evidence or independent replicated species.
+6. **2024 author-original data QA:** Rousettus odor intervention 10 naive visitor IDs out of 56 naive bats (17.86%); source total cell 22 rather than 23 on 19 July 2020, no effect on naive denominator. This was a count verification, not new cue information/memory mechanism.
+7. **Automated validation:** isolated GitHub Action checks source-unit boundaries, deterministic 2019/2026 reconstruction, known-truth null, and analysis STOP gates (6 unit tests PASS).
+   - [Latest validated negative-control run](https://github.com/zuizui0223/batter/actions/runs/44449278361)
+   - [Source tracking](https://doi.org/10.1111/1365-2656.12989) and [2026 original](https://doi.org/10.1111/nyas.70427)
+
+## Primary scientific decision
+
+The publication-grade novelty cannot be merely 'social information is context dependent' or 'fruits mean personal knowledge and insects mean social knowledge'. Those are prior art or overly restrictive, respectively.
+
+**Testable next question**: Does the *causal* effect of a given acoustic or social cue on foraging decisions change with independently measured baseline resource/social context (receiver sex, competitive ability and actual alternative patch opportunity), beyond regression-to-the-mean and method-specific observation effects?
+
+Valid proposed treatment interaction: difference in during-cue and randomized time-matched silent-control response, conditional on a pre-treatment activity stratum; the raw baseline shared with a difference-score outcome must not be confused with actual crowding moderation. A 0-buzz playback that contains search calls is **not** a true silent control.
+
+**STOP** global H1 effect fit / H3 individual memory tradeoff: sources have incompatible outcome units (activity change in bat-seconds/min vs flower-visit RR vs tree visitation), and no controlled multi-study comparable summary/detection-negative frame yet.
 
 ## Files
 
-| Path | Status |
-|---|---|
-| `H1_PREREG_AND_FEASIBILITY_V1.md` | Predeclared feasibility and stop logic |
-| `H1_CODING_DICTIONARY_V1.md` | Blinded ecological and behavioral coding rules |
-| `H1_V2_INFORMATION_CHANNEL_AMENDMENT.md` | Novelty boundary and revised information-channel hypotheses |
-| `SOURCE_SEED_V1.csv` | Source-discovery seed (not an outcome dataset) |
-| `REVIEW_TABLE2_BASELINE_V1.csv` | 35-case 2022 prior-art reference inventory |
-| `POST2022_PRIMARY_EVIDENCE_V1.csv` | Targeted post-2022 evidence ledger with study clusters and unknowns |
-| `ROUSETTUS_ORIGINAL_SOURCE_QA_V1.md` | Primary-data traceability and 1-cell source discrepancy |
-| `run_h1_feasibility.py` | Deterministic structural audit; no statistical effect estimation |
-| `test_h1_feasibility.py` | Unit tests of counts and analysis stops |
-| `.github/workflows/h1-social-information-evidence.yml` | Branch-scoped automated check + JSON artifact |
+- `H1_PREREG_AND_FEASIBILITY_V1.md` — initial hypotheses, gates, source selection
+- `H1_CODING_DICTIONARY_V1.md` — independent blinded coding dictionary
+- `H1_V2_INFORMATION_CHANNEL_AMENDMENT.md` — when-versus-where hypothesis, source provenance
+- `REVIEW_TABLE2_BASELINE_V1.csv` — 35 legacy review cases
+- `POST2022_PRIMARY_EVIDENCE_V1.csv` — 12 targeted ecological context rows
+- `PUBLISHED_LEWANZIK_2019_DENSITY_V1.csv` — four published baseline coefficients and 95% CrIs
+- `PUBLISHED_GLOSSOPHAGA_CONTRASTS_V1.csv` — eight published rate-ratio/z pairs; no invented raw data
+- `CROSS_STUDY_SIGN_AND_BASELINE_COUPLING_AUDIT_V1.md` — identification proof, estimator compatibility, ecology limits
+- `published_contrast_and_change_score_audit_v1.py` — deterministic aggregate and simulated-null receipt
+- `test_published_contrast_and_change_score_audit_v1.py` — 3 dedicated tests
+- `ROUSETTUS_ORIGINAL_SOURCE_QA_V1.md` — author original CSV QA
+- `run_h1_feasibility.py` and `test_h1_feasibility.py` — primary feasibility and 3 tests
+- `.github/workflows/h1-social-information-evidence.yml` — 2 JSON receipts in CI artifact
 
-Last verified Actions success (2026-11-19): https://github.com/zuizui0223/batter/actions/runs/44446583428
+## Next empirical gate, not yet executed
 
-## Next experiment gate
+Original Lewanzik 2019 Dryad source is an ~84 KB XLSX (https://datadryad.org/dataset/doi:10.5061/dryad.gp65g2t). Public metadata was verified, but binary download via this environment was blocked. Do not claim a raw reanalysis. Current Dryad access may require tokenized API downloads. Source-provenance gate must precede any computation or ingestion. The 2026 individual-bat data are in supplementary files/requested from the corresponding author and were not ingested. A genuine held-out across-study test is not yet possible.
 
-1. Use a preregistered/dated literature search to sample original field and lab *foraging cue use*, preserving all screened negatives.
-2. Validate each source’s primary original tables, taxa, physical IDs and experimental effort.
-3. Have ecological predictor and behavioral outcome codes independently assigned and checked blind.
-4. Only after enough independent study-population responses support a comparable outcome: evaluate held-out cue-response sign/strength and moderator transfer. Treat phylogenetic model as optional, not a substitute for a valid observational denominator.
-
-**Do not merge into the JAE inference ledger or rewrite its scientific claims.**
+**Branch/claim firewall:** proposal and source QA only. No `main` merge or change to frozen 3D individuality outcome.
