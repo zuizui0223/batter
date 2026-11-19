@@ -198,3 +198,4 @@ if __name__=="__main__":
     print("PRIMARY",json.dumps(out["primary"]))
     print("BY_ORDER",json.dumps({k:{"n":v["n_responder_bats"],"mean":v["mean_primary_log_contrast"],"negative":v["negative_bats"]} for k,v in out["by_order"].items()}))
     print("BY_NONPRED",json.dumps({k:{"n":v["n_responder_bats"],"mean":v["mean_primary_log_contrast"],"negative":v["negative_bats"]} for k,v in out["by_nonpredator_caller"].items()}))
+    print("GROUP_PARTIAL_ID",json.dumps({k:v for k,v in out["group_equal_mean_partial_identification"].items() if k!="shapes"}))
