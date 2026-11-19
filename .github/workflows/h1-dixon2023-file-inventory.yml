@@ -1,0 +1,32 @@
+name: H1 Dixon 2023 Dryad original file list
+on:
+  push:
+    branches: [prospective/social-information-macro-h1-v1]
+    paths:
+      - 'prospective/social_macro_h1/h1_dixon2023_file_inventory_v1.py'
+      - '.github/workflows/h1-dixon2023-file-inventory.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  file-listing:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Inspect original pinned Dryad version and file metadata only
+        id: orig
+        continue-on-error: true
+        run: python prospective/social_macro_h1/h1_dixon2023_file_inventory_v1.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: h1-dixon2023-versioned-filelist
+          path: /tmp/h1_dixon_original_files_receipt.json
+          if-no-files-found: error
+      - name: Do not infer raw-data accessibility from metadata
+        if: steps.orig.outcome == 'failure'
+        run: exit 1
