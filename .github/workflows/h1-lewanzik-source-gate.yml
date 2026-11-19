@@ -1,0 +1,41 @@
+name: H1 Lewanzik 2019 original-source schema gate
+
+on:
+  push:
+    branches: [prospective/social-information-macro-h1-v1]
+    paths:
+      - 'prospective/social_macro_h1/source_schema_lewanzik_gate_v1.py'
+      - 'prospective/social_macro_h1/LEWANZIK_2019_FROZEN_ANALYSIS_AND_SOURCE_GATE_V1.md'
+      - '.github/workflows/h1-lewanzik-source-gate.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  retrieve-original-schema-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Access original Dryad file and inspect schema without animal outcomes
+        id: retrieval
+        continue-on-error: true
+        env:
+          H1_SOURCE_RECEIPT: /tmp/lewanzik_2019_original_schema_receipt.json
+        run: python prospective/social_macro_h1/source_schema_lewanzik_gate_v1.py
+      - name: Upload receipt (no original animal data)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: h1-lewanzik-original-schema-receipt
+          path: /tmp/lewanzik_2019_original_schema_receipt.json
+          if-no-files-found: error
+      - name: Enforce scientific STOP when source is inaccessible
+        if: steps.retrieval.outcome == 'failure'
+        run: |
+          echo "::error::Original Dryad source cannot be independently accessed/validated. No empirical effect claimed."
+          exit 1
