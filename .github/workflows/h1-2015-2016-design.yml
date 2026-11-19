@@ -1,0 +1,28 @@
+name: H1 2015-2016 cross-source blind design inventory
+on:
+  push:
+    branches: [prospective/social-information-macro-h1-v1]
+    paths:
+      - 'prospective/social_macro_h1/h1_2015_2016_design_inventory.py'
+      - '.github/workflows/h1-2015-2016-design.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  two-public-source-designs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Inspect source-design categorical levels and original file checksums only
+        run: python prospective/social_macro_h1/h1_2015_2016_design_inventory.py
+      - name: Store aggregate designs only
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: h1-original-2015-2016-design-codes
+          path: /tmp/h1_original_context_design_receipt.json
+          if-no-files-found: warn
