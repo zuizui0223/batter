@@ -1,0 +1,35 @@
+name: H1 COMBINE global bat group-size original schema gate
+on:
+  push:
+    branches: [prospective/social-information-macro-h1-v1]
+    paths:
+      - 'prospective/social_macro_h1/h1_combine_figshare_source_gate.py'
+      - '.github/workflows/h1-combine-source-gate.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  original-source-headers:
+    runs-on: ubuntu-latest
+    timeout-minutes: 9
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validate Figshare v4 metadata files MD5 and column headers only
+        id: source
+        continue-on-error: true
+        run: python prospective/social_macro_h1/h1_combine_figshare_source_gate.py
+      - name: Store source receipt only
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: h1-combine-figshare-v4-source-schema
+          path: /tmp/h1_combine_original_headers.json
+          if-no-files-found: error
+      - name: Fail closed on unavailable original source
+        if: steps.source.outcome == 'failure'
+        run: |
+          echo "::error::Original COMBINE dataset failed source authenticity/schema check; no macro effects authorized"
+          exit 1

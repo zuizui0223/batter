@@ -1,0 +1,31 @@
+name: H1 2018 vampire original bat subject paired maze outcome audit
+
+on:
+  push:
+    branches: [prospective/social-information-macro-h1-v1]
+    paths:
+      - 'prospective/social_macro_h1/h1_vampire2018_original_reanalysis_v1.py'
+      - '.github/workflows/h1-vampire2018-empirical.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  original-naive-transition:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify Figshare SHA256 and reconstruct all naive bat pre during post exits
+        run: python prospective/social_macro_h1/h1_vampire2018_original_reanalysis_v1.py
+      - name: Upload aggregate original-unit receipt only
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: h1-vampire2018-source-authenticated-phase-transition-aggregates
+          path: /tmp/h1_vampire2018_derived_only.json
+          if-no-files-found: error

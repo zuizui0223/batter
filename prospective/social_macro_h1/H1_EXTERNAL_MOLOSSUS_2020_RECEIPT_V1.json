@@ -1,0 +1,61 @@
+{
+  "status": "PUBLIC_WEB_TEXT_TRANSCRIPTION_EMPIRICAL_RECALCULATION_NOT_ORIGINAL_BYTE_VERIFIED",
+  "source_doi": "10.5061/dryad.tqjq2bvvx",
+  "source_url": "https://zenodo.org/records/4953622/files/molossusinddiscrim_data_videoanalysis.csv?download=1",
+  "original_file_expected_md5": "b4b9970eac190601b4a291725137c110",
+  "original_file_bytes_verified": false,
+  "transcribed_source_rows": 51,
+  "search": {
+    "n_trials": 34,
+    "n_subjects": 19,
+    "n_test": 20,
+    "n_control": 14,
+    "n_matched_bats": 12,
+    "n_matched_roosts": 5,
+    "bat_equal_mean_test_minus_control": 12.708333333333334,
+    "bat_signflip_p_two_sided": 0.01123046875,
+    "bat_bootstrap95": [
+      5.082291666666667,
+      20.041666666666668
+    ],
+    "n_positive_bats": 10,
+    "n_negative_bats": 2,
+    "roosts": {
+      "251": {
+        "n": 1,
+        "mean": -14
+      },
+      "263": {
+        "n": 2,
+        "mean": 16.75
+      },
+      "275": {
+        "n": 3,
+        "mean": 8
+      },
+      "150A": {
+        "n": 4,
+        "mean": 13.25
+      },
+      "152A": {
+        "n": 2,
+        "mean": 28
+      }
+    },
+    "roost_equal_mean": 10.4,
+    "roost_signflip_p_two_sided": 0.25,
+    "roost_bootstrap95": [
+      -2.4,
+      21.25
+    ]
+  },
+  "approach": {
+    "n_trials_in_public_page": 17,
+    "n_subjects_in_public_page": 13,
+    "n_matched_bats": 4,
+    "n_matched_roosts": 3,
+    "original_publication_reports_n_trials": 19,
+    "status": "STOP_ORIGINAL_RECONCILIATION_AND_SMALL_N"
+  },
+  "interpretation": "published 2020 auditory identity discrimination independently recalculated from web-displayed public source; not same estimand as 2019 foraging buzz×baseline, not new biological discovery, population-wide or macro replication unsupported"
+}

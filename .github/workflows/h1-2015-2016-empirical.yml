@@ -1,0 +1,28 @@
+name: H1 empirical 2015-2016 two original bat distress-call source audits
+on:
+  push:
+    branches: [prospective/social-information-macro-h1-v1]
+    paths:
+      - 'prospective/social_macro_h1/h1_2015_2016_original_empirical_v1.py'
+      - '.github/workflows/h1-2015-2016-empirical.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  two-original-empirical:
+    runs-on: ubuntu-latest
+    timeout-minutes: 9
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify published original bytes and compute predefined contrasts
+        run: python prospective/social_macro_h1/h1_2015_2016_original_empirical_v1.py
+      - name: Archive derived contrast receipt only (never originals)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: h1-2015-2016-original-bat-derived-contrasts
+          path: /tmp/h1_2015_2016_context_aggregate.json
+          if-no-files-found: warn

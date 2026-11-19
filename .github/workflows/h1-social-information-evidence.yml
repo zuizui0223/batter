@@ -1,0 +1,41 @@
+name: Bat social-information H1 evidence gate
+
+on:
+  push:
+    branches:
+      - prospective/social-information-macro-h1-v1
+    paths:
+      - 'prospective/social_macro_h1/**'
+      - '.github/workflows/h1-social-information-evidence.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  structural-evidence-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Syntax check original-source local reanalysis script (raw source not in repo)
+        run: python -m py_compile prospective/social_macro_h1/h1_empirical_reanalysis_v1.py prospective/social_macro_h1/reanalyze_molossus_2020_source_v1.py prospective/social_macro_h1/fetch_original_molossus_2020.py
+      - name: Verify original-review versus prospective-primary boundary
+        run: python -m unittest discover -s prospective/social_macro_h1 -p 'test_*.py' -v
+      - name: Produce deterministic source feasibility and aggregate/null receipts
+        run: |
+          python prospective/social_macro_h1/run_h1_feasibility.py --output /tmp/h1-feasibility.json
+          python prospective/social_macro_h1/published_contrast_and_change_score_audit_v1.py --output /tmp/h1-aggregate-null.json
+          python prospective/social_macro_h1/h1_cue_interaction_known_truth_v1.py | tee /tmp/h1-synthetic-cue-interaction.json
+          python prospective/social_macro_h1/h1_two_channel_value_of_information_v1.py --out /tmp/h1-two-channel-theory.json > /dev/null
+      - uses: actions/upload-artifact@v4
+        with:
+          name: h1-evidence-and-negative-control-receipts
+          path: |
+            /tmp/h1-feasibility.json
+            /tmp/h1-aggregate-null.json
+            /tmp/h1-synthetic-cue-interaction.json
+            /tmp/h1-two-channel-theory.json
+          if-no-files-found: error

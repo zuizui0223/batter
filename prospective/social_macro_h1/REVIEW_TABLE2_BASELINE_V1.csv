@@ -1,0 +1,36 @@
+review_case_id,review_table_row,family_verbatim,taxon_verbatim,resource_description_paraphrase,persistence_relative_to_bout,social_information_location,relative_social_information_value,foraging_context,strategy_verbatim_category,taxon_is_pooled_group,evidence_provenance,independent_post2022_holdout,source_url,original_primary_study_verified
+K22_T2_01,1,Emballonuridae,Rhynchonycteris naso,aquatic insects,unknown,unknown,higher,coordinated,unknown,no,Kohles_et_al_2022_Table2,no,https://doi.org/10.1111/brv.12881,no
+K22_T2_02,2,Megadermatidae,Lavia frons,insects near trees,short,near,higher,coordinated,group_facilitation,no,Kohles_et_al_2022_Table2,no,https://doi.org/10.1111/brv.12881,no
+K22_T2_03,3,Molossidae,Molossus molossus,swarming insects,short,near,higher,coordinated,group_facilitation,no,Kohles_et_al_2022_Table2,no,https://doi.org/10.1111/brv.12881,no
+K22_T2_04,4,Molossidae,Tadarida brasiliensis,moths,short,near,unknown,opportunistic,local_enhancement,no,Kohles_et_al_2022_Table2,no,https://doi.org/10.1111/brv.12881,no
+K22_T2_05,5,Molossidae,Tadarida teniotis,swarming insects,unknown,near,unknown,unknown,unknown,no,Kohles_et_al_2022_Table2,no,https://doi.org/10.1111/brv.12881,no
+K22_T2_06,6,Noctilionidae,Noctilio albiventris,swarming insects,short,near,higher,coordinated,group_facilitation,no,Kohles_et_al_2022_Table2,no,https://doi.org/10.1111/brv.12881,no
+K22_T2_07,7,Noctilionidae,Noctilio albiventris,swarming insects; playback context,short,near,unknown,opportunistic,local_enhancement,no,Kohles_et_al_2022_Table2,no,https://doi.org/10.1111/brv.12881,no
+K22_T2_08,8,Noctilionidae,Noctilio leporinus,swarming insects,short,near,unknown,opportunistic,local_enhancement,no,Kohles_et_al_2022_Table2,no,https://doi.org/10.1111/brv.12881,no
+K22_T2_09,9,Noctilionidae,Noctilio leporinus,fish and flying insects,short,unknown,unknown,unknown,unknown,no,Kohles_et_al_2022_Table2,no,https://doi.org/10.1111/brv.12881,no
+K22_T2_10,10,Phyllostomidae,Carollia perspicillata,piper fruits,long,away,unknown,unknown,unknown,no,Kohles_et_al_2022_Table2,no,https://doi.org/10.1111/brv.12881,no
+K22_T2_11,11,Phyllostomidae,Carollia perspicillata,resource unspecified in review table,short,near,unknown,unknown,unknown,no,Kohles_et_al_2022_Table2,no,https://doi.org/10.1111/brv.12881,no
+K22_T2_12,12,Phyllostomidae,Desmodus rotundus,mammalian blood,unknown,near,unknown,unknown,unknown,no,Kohles_et_al_2022_Table2,no,https://doi.org/10.1111/brv.12881,no
+K22_T2_13,13,Phyllostomidae,Glossophaga soricina,resource unspecified in review table,short,near,lower,opportunistic,local_enhancement,no,Kohles_et_al_2022_Table2,no,https://doi.org/10.1111/brv.12881,no
+K22_T2_14,14,Phyllostomidae,Leptonycteris yerbabuenae,agave nectar,long,unknown,unknown,coordinated,unknown,no,Kohles_et_al_2022_Table2,no,https://doi.org/10.1111/brv.12881,no
+K22_T2_15,15,Phyllostomidae,Phyllostomus discolor,balsa flower nectar,long,unknown,unknown,unknown,unknown,no,Kohles_et_al_2022_Table2,no,https://doi.org/10.1111/brv.12881,no
+K22_T2_16,16,Phyllostomidae,Phyllostomus hastatus,balsa flower nectar,long,away,higher,coordinated,recruitment,no,Kohles_et_al_2022_Table2,no,https://doi.org/10.1111/brv.12881,no
+K22_T2_17,17,Phyllostomidae,Uroderma bilobatum,fruiting figs,long,away,unknown,unknown,unknown,no,Kohles_et_al_2022_Table2,no,https://doi.org/10.1111/brv.12881,no
+K22_T2_18,18,Pteropodidae,Rousettus aegyptiacus,fruiting trees,long,unknown,unknown,unknown,unknown,no,Kohles_et_al_2022_Table2,no,https://doi.org/10.1111/brv.12881,no
+K22_T2_19,19,Rhinopomatidae,Rhinopoma microphyllum,swarming winged ants,short,near,higher,coordinated,group_facilitation,no,Kohles_et_al_2022_Table2,no,https://doi.org/10.1111/brv.12881,no
+K22_T2_20,20,Vespertilionidae,Euderma maculatum,moths,unknown,near,unknown,unknown,unknown,no,Kohles_et_al_2022_Table2,no,https://doi.org/10.1111/brv.12881,no
+K22_T2_21,21,Vespertilionidae,Myotis capaccinii,lake insect swarms,short,near,unknown,opportunistic,local_enhancement,no,Kohles_et_al_2022_Table2,no,https://doi.org/10.1111/brv.12881,no
+K22_T2_22,22,Vespertilionidae,Myotis daubentonii,lake insect swarms,short,near,unknown,opportunistic,local_enhancement,no,Kohles_et_al_2022_Table2,no,https://doi.org/10.1111/brv.12881,no
+K22_T2_23,23,Vespertilionidae,Myotis lucifugus,lake insect swarms,short,near,unknown,opportunistic,local_enhancement,no,Kohles_et_al_2022_Table2,no,https://doi.org/10.1111/brv.12881,no
+K22_T2_24,24,Vespertilionidae,Myotis macrodactylus,river insect swarms,short,near,unknown,unknown,unknown,no,Kohles_et_al_2022_Table2,no,https://doi.org/10.1111/brv.12881,no
+K22_T2_25,25,Vespertilionidae,Myotis nattereri,beetle emergence,unknown,near,unknown,unknown,unknown,no,Kohles_et_al_2022_Table2,no,https://doi.org/10.1111/brv.12881,no
+K22_T2_26,26,Vespertilionidae,Myotis vivesi,fish and crustaceans,short,near,higher,coordinated,group_facilitation,no,Kohles_et_al_2022_Table2,no,https://doi.org/10.1111/brv.12881,no
+K22_T2_27,27,Vespertilionidae,Myotis yumanensis,lake insect swarms,short,near,unknown,opportunistic,local_enhancement,no,Kohles_et_al_2022_Table2,no,https://doi.org/10.1111/brv.12881,no
+K22_T2_28,28,MULTI_FAMILY,Nyctalus/Eptesicus/Vespertilio pooled,lake insect swarms,short,near,unknown,opportunistic,local_enhancement,yes,Kohles_et_al_2022_Table2,no,https://doi.org/10.1111/brv.12881,no
+K22_T2_29,29,Vespertilionidae,Nyctalus noctula,cropland insect swarms,short,near,lower,opportunistic,local_enhancement,no,Kohles_et_al_2022_Table2,no,https://doi.org/10.1111/brv.12881,no
+K22_T2_30,30,Vespertilionidae,Nyctalus noctula,lake insect swarms,short,near,lower,opportunistic,local_enhancement,no,Kohles_et_al_2022_Table2,no,https://doi.org/10.1111/brv.12881,no
+K22_T2_31,31,Vespertilionidae,Nycticeius humeralis,fly mass emergence over several nights,long,away,unknown,opportunistic,following,no,Kohles_et_al_2022_Table2,no,https://doi.org/10.1111/brv.12881,no
+K22_T2_32,32,Vespertilionidae,Pipistrellus nathusii,lake insect swarms,short,near,unknown,opportunistic,local_enhancement,no,Kohles_et_al_2022_Table2,no,https://doi.org/10.1111/brv.12881,no
+K22_T2_33,33,Vespertilionidae,Pipistrellus pipistrellus,lake insect swarms,short,near,unknown,opportunistic,local_enhancement,no,Kohles_et_al_2022_Table2,no,https://doi.org/10.1111/brv.12881,no
+K22_T2_34,34,Vespertilionidae,Pipistrellus pipistrellus,insect swarms; coordinated context,short,near,unknown,coordinated,unknown,no,Kohles_et_al_2022_Table2,no,https://doi.org/10.1111/brv.12881,no
+K22_T2_35,35,Vespertilionidae,Vespertilio murinus,insect swarms,short,unknown,unknown,unknown,unknown,no,Kohles_et_al_2022_Table2,no,https://doi.org/10.1111/brv.12881,no
