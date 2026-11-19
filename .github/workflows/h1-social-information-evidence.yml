@@ -22,6 +22,7 @@ jobs:
           python-version: '3.11'
       - name: Syntax check original-source local reanalysis script (raw source not in repo)
         run: python -m py_compile prospective/social_macro_h1/h1_empirical_reanalysis_v1.py
+          python -m py_compile prospective/social_macro_h1/reanalyze_molossus_2020_source_v1.py
       - name: Verify original-review versus prospective-primary boundary
         run: python -m unittest discover -s prospective/social_macro_h1 -p 'test_*.py' -v
       - name: Produce deterministic source feasibility and aggregate/null receipts
