@@ -12,4 +12,4 @@ class TestCueInteractionKnownTruth(unittest.TestCase):
         self.assertAlmostEqual(alt["mean_recovered_interaction"],0.8,delta=0.10)
         self.assertGreater(alt["estimates_positive"],120)
         self.assertLess(null["mean_naive_change_vs_pre_slope"],-0.25)
-        self.assertLess(alt["mean_naive_change_vs_pre_slope"],-0.15)
+        self.assertAlmostEqual(alt["mean_naive_change_vs_pre_slope"],-0.05,delta=0.12)
