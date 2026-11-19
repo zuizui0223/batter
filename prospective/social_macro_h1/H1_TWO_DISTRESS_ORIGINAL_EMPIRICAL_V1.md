@@ -36,6 +36,12 @@ At the whole-sequence level, mean `D_distress−D_noise` for M. molossus is **+0
 
 **Selection sensitivity:** author-style removal of both pre=0 and playback=0 recordings retains only 116 M. molossus and 59 S. bilineata trials. Distress-minus-noise contrast of the filtered means becomes **+1.25913** and **+1.66667**, respectively, versus all-trial contrasts +0.50441 and +0.31187. The larger magnitudes reflect a different response-selected sample; this check neither disproves the original study nor licenses replacing the original target post hoc.
 
+## Geographic non-independence correction (mandatory)
+
+**Both source studies were conducted at the same Smithsonian Barro Colorado Island field station, Panama**, not at independent landscapes: Carter et al. (2015) used eight M. molossus field sites at the BCI station; Eckenweber & Knörnschild (2016) repeatedly sampled 11 S. bilineata colonies on external walls of the same station during 2012–2014. **Published source papers do not provide a reconciled physical site/year identity crosswalk**, and some individual animals / local activity conditions may be shared. These are two distinct published experimental datasets with different response contrasts, but they must NOT be counted as independent **geographic population** replicates or as evidence of generalization to a new region. They were not scientifically independent sites merely because the papers have different years, stimuli or samples.
+
+Sources: https://pmc.ncbi.nlm.nih.gov/articles/PMC4892459/ ; https://pmc.ncbi.nlm.nih.gov/articles/PMC4564210/ .
+
 ## Cross-study and novelty assessment
 
 2016: a location/caller conditional ecological context *within one species*. 2015: a distress-vs-noise contrast in a two-recipient community under a different cue and observation process. They jointly reinforce **the need to distinguish sender identity, signal meaning, patch/roost setting, and observation opportunity**, but are not commensurate effect-size replications. Both response patterns have been published; the added derived novelty here is *source QA, unit-respecting reanalysis and a mathematically bounded 11-colony mean under unknown mapping*, not a new ecological law.
