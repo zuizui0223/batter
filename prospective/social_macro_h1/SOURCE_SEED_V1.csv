@@ -1,0 +1,6 @@
+seed_id,species_or_group,context,source_doi,known_observation,evidence_type,can_be_negative_control,is_independent_holdout,coding_status
+REVIEW_2022,Chiroptera,Global review,10.1111/brv.12881,52 cases 34 species and original four social-information strategy categories,review_only,no,no,prior_art_discovery_only
+MALE_ROOST_2007,Temperate bats,Male-group comparative data,10.1086/520116,Ecological correlates of male roost grouping not direct foraging information,comparative_roost_only,no,no,do_not_use_as_foraging_response
+MOLOSSUS_2010,Molossus molossus,Panama tracked group foraging,10.1371/journal.pone.0009012,Same-colony individuals forage together above a chance comparison,observational_coforaging,no,no,requires_primary_extract
+MOLOSSUS_2024,Molossus molossus,Acoustic conspecific density and prey capture,10.1073/pnas.2321724121,Functional payoff curve already published not a new social information mechanism,observational_functional,no,no,prior_art_context
+BATTER_2026,Four bat taxa,Frozen six source panels,https://github.com/zuizui0223/batter,Repeatable vertical use does not directly measure individual information use or reciprocity,individual_geometry_only,no,no,not_eligible_H1_response
