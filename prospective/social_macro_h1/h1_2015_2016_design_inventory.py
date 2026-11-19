@@ -76,8 +76,9 @@ def main():
     md5=hashlib.md5(file2015).hexdigest()
     if md5!=EXPECTED_2015_MD5:raise ValueError("2015 Figshare source MD5 drift")
     decoded=file2015.decode("utf-8-sig")
-    dialect=csv.Sniffer().sniff(decoded[:2000],delimiters=",;\t")
-    rows=list(csv.DictReader(io.StringIO(decoded),dialect=dialect))
+    # Figshare CSV uses literal commas; Sniffer mis-infers the quote convention
+    # from natural-language header/metadata, corrupting newlines in source cells.
+    rows=list(csv.DictReader(io.StringIO(decoded,newline=""),delimiter=","))
     fields=list(rows[0]) if rows else []
     important={c:dict(Counter(str(r[c]) for r in rows).most_common(20))
                for c in fields if any(p in c.lower() for p in ["treatment","roost","session","sequence","day"])}
