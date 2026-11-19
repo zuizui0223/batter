@@ -1,13 +1,13 @@
 {
   "audit_date": "2026-11-19",
-  "source": "Soria et al. 2021, COMBINE; ORIGINAL non-imputed reported trait values as represented in third-party GitHub mirror",
+  "source": "Soria et al. 2021 COMBINE original nonimputed reported traits; mirror bytes equal official published checksum and size",
   "original_figshare_doi": "10.6084/m9.figshare.13028255.v4",
   "source_paper_doi": "10.1002/ecy.3344",
   "mirror_url": "https://github.com/AleAliSousa/Evo-M1-Trait-Data/blob/main/Soria_etal_2021/Soria_etal_2021_Traitdatareported_snapshot.csv",
   "mirror_git_blob_sha": "7e274bac17eba845d93cdd27c1357605af3d710e",
   "original_figshare_file_id": "27703263",
-  "original_source_md5_verified": false,
-  "mirror_description": "States byte-identical to original Figshare reported CSV; not independently source-byte verified here",
+  "original_source_md5_verified": true,
+  "mirror_description": "Full source CSV matches original Figshare v4 advertised MD5 and size exactly.",
   "source_format": "CSV",
   "source_rows": 6263,
   "source_columns": 60,
@@ -75,5 +75,10 @@
   "male_group_formation_measured": false,
   "causal_or_phylogenetic_inference_authorized": false,
   "verdict": "STOP_as_global_H1_proxy_group_size_is_96.65pct_missing_and_fully_family_confounded_with_plant_guild",
-  "prior_user_message_correction": "Initial 1336 was number of distinct literal IUCN labels, which collapses seven Not recognised taxa; corrected bat record taxon count is 1342."
+  "prior_user_message_correction": "Initial 1336 was number of distinct literal IUCN labels, which collapses seven Not recognised taxa; corrected bat record taxon count is 1342.",
+  "original_figshare_advertised_md5": "d894586c3858620723b1182d8b491d3e",
+  "original_figshare_size_bytes": 1612538,
+  "mirror_reported_source_md5": "d894586c3858620723b1182d8b491d3e",
+  "mirror_size_bytes": 1612538,
+  "verification_description": "Retrieved full Git blob payload and independently calculated MD5 with RFC1321 known-input tests; hash and byte count exactly agree with official Figshare v4 API metadata for file 27703263. Official primary endpoint transfer still under separate access audit; content equivalence based on published checksums."
 }
