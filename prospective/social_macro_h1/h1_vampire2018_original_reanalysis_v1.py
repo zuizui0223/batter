@@ -73,7 +73,9 @@ def aggregate():
                        "outcome_missing_n":sum(x is None for x in obs),
                        "naive_status_T_n":sum(x["naive_status"]=="T" for x in byphase[stage]),
                        "naive_status_F_n":sum(x["naive_status"]=="F" for x in byphase[stage]),
-                       "n_unique_physical_triads_by_trial":len({x["trial"] for x in byphase[stage]})}
+                       "n_unique_physical_triads_by_trial":len({x["trial"] for x in byphase[stage]}),
+                       "n_triads_with_any_naive_exit":len({x["trial"] for x in byphase[stage] if x["outcome"] is True}),
+                       "n_triads_with_naive_eligible_exit":len({x["trial"] for x in byphase[stage] if x["outcome"] is True and x["naive_status"]=="T"})}
     transitions=[]
     statuses={}
     for bat,vals in bysubject.items():
