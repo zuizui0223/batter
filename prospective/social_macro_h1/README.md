@@ -76,3 +76,14 @@ The independent Dryad automatic fetch STOP from earlier in the same day remains 
 - **Unchanged:** frozen batter JAE/BE, `main`, and all original author findings. This is one central European study, not a multi-paper global meta-analysis.
 
 Next valid scientific progress is an **independent matched randomized cue×baseline study**, not more outcome-driven tuning of this original dataset.
+
+
+## 2026-11-19 v6 — independent published Molossus 2020 source audited
+
+- Published Kohles et al. 2020 original *Molossus molossus* video-analysis CSV (DOI 10.5061/dryad.tqjq2bvvx) is readable as a public 51-row web text document. **Only web text transcription, original byte-MD5 not yet verified.** Source-specific search-phase 34 trials, **19 biological bats**, 5 roosts, 20 test/14 controls. Exactly 12 animals have matched test and control.
+- This outcome is **individual auditory discrimination** (40-second head waggles after changing caller vs retaining the caller), not the 2019 graded buzz×baseline foraging response. **No numerical pooling.**
+- Source-published discrimination result recalculated from web text: bat-equal matched increase **+12.71 head waggles/40 sec**, 10/12 bats positive, exploratory bat-level signflip p=0.01123. Roost-equal contrast **+10.4**, **4/5 roosts positive**, signflip p=0.25 with low-n bootstrap interval [-2.4,+21.25]; **cross-roost generality unproven**. These are existing published biological phenomena, not new discoveries.
+- Approach-call data are 17 public rows vs 19 article-described trials; four matched bats do not pass the registered minimum. **STOP** any approach-based confirmatory interpretation.
+- [External source methods and limits](EXTERNAL_SOURCE_DISCRIMINATION_CONTRACT_V1.md), [empirical report](H1_EXTERNAL_MOLOSSUS_2020_RESULT_V1.md), [aggregation receipt](H1_EXTERNAL_MOLOSSUS_2020_RECEIPT_V1.json), [cross-study compatibility](H1_EXTERNAL_SOURCE_ELIGIBILITY_V1.csv), [source-reading script](reanalyze_molossus_2020_source_v1.py). GitHub CI tests aggregate integrity and compiles source reading code, but does not rerun original source because raw CSV is not committed.
+
+**Programme conclusion:** The claimed simple private-vs-social tradeoff is still unsupported; the independent Molossus case illustrates an additional class of social information (caller identity) but does not externally reproduce Lewanzik's cue-density interaction. True between-study standardized H1 test still requires an eligible independent original experiment with matched treatments, controls and response.
