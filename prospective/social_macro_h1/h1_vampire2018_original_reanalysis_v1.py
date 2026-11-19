@@ -38,6 +38,7 @@ def aggregate():
     byphase=defaultdict(list)
     bysubject=defaultdict(dict)
     trainings=[]
+    original_naive_status=defaultdict(dict)
     for r in rows:
         if r["experiment"]=="train":
             if r["phase"]!="train" or r["demonstrator"]!="T":raise ValueError("Training role mismatch")
@@ -51,7 +52,9 @@ def aggregate():
             subject=r["bat"]
             if stage in bysubject[subject]:raise ValueError("Duplicate naive subject × stage")
             bysubject[subject][stage]=outcome
-            byphase[stage].append({"bat":subject,"outcome":outcome,"trial":r["trial "]})
+            if r["naive"] not in ("T","F"):raise ValueError("Unexpected source naïve status")
+            original_naive_status[subject][stage]=r["naive"]
+            byphase[stage].append({"bat":subject,"outcome":outcome,"trial":r["trial "],"naive_status":r["naive"]})
         elif r["demonstrator"]!="T" or stage!="2test":
             raise ValueError("Trained demonstrator included outside 2test")
     if len(trainings)!=104 or len({x["bat"] for x in trainings})!=12:
@@ -68,6 +71,8 @@ def aggregate():
                        "exit_in_15_yes":sum(x is True for x in obs),
                        "exit_in_15_no":sum(x is False for x in obs),
                        "outcome_missing_n":sum(x is None for x in obs),
+                       "naive_status_T_n":sum(x["naive_status"]=="T" for x in byphase[stage]),
+                       "naive_status_F_n":sum(x["naive_status"]=="F" for x in byphase[stage]),
                        "n_unique_physical_triads_by_trial":len({x["trial"] for x in byphase[stage]})}
     transitions=[]
     statuses={}
@@ -77,8 +82,15 @@ def aggregate():
         if pre is not None and post is not None:
             transitions.append((pre,post))
         statuses.setdefault("all_pairs",[]).append((pre,during,post))
-    valid_during=[x for x in statuses["all_pairs"] if x[1] is not None]
-    during_winners=[x for x in statuses["all_pairs"] if x[1] is True]
+    # The paper excludes one bat who already exited during handling after
+    # the first pre-demonstrator trial. Keep all 24 original during-role
+    # records, but include only original naive-status T rows in the
+    # published 23-bat demonstrator-naive analysis. This is NOT treating
+    # the excluded experienced bat as a missing observation.
+    eligible_during=[x for x in byphase["2test"] if x["naive_status"]=="T" and x["outcome"] is not None]
+    valid_during=[bysubject[x["bat"]] for x in eligible_during]
+    during_winner_bats=[x["bat"] for x in eligible_during if x["outcome"] is True]
+    during_winners=[(bysubject[bat]["1pre"],bysubject[bat]["2test"],bysubject[bat]["3post"]) for bat in during_winner_bats]
     during_winner_with_post=[x for x in during_winners if x[2] is not None]
     conditional_post_n=sum(x[2] is True for x in during_winner_with_post)
     table=Counter(f"{'T' if a else 'F'}->{'T' if b else 'F'}" for a,b in transitions)
@@ -94,13 +106,18 @@ def aggregate():
       "matched_pre_to_post_binary_n":len(transitions),
       "individual_pre_post_transition_table":table_all,
       "during_exit_positive_naive_n":len(during_winners),
+      "during_original_role_bats_n":len(byphase["2test"]),
+      "during_original_status_T_n":sum(x["naive_status"]=="T" for x in byphase["2test"]),
+      "during_original_status_F_n":sum(x["naive_status"]=="F" for x in byphase["2test"]),
+      "during_status_F_exit_true_n":sum(x["outcome"] is True for x in byphase["2test"] if x["naive_status"]=="F"),
+      "pre_capture_experience_exclusion_verified_by_original_status":(sum(x["naive_status"]=="F" for x in byphase["2test"])==1),
       "during_exit_valid_naive_n":len(valid_during),
       "during_exit_positive_with_post_binary_n":len(during_winner_with_post),
       "after_demonstrator_retention_positive_n":conditional_post_n,
       "after_demonstrator_retention_fraction":(
             conditional_post_n/len(during_winner_with_post) if during_winner_with_post else None),
       "published_pre_0_24_consistent":design["1pre"]["exit_in_15_yes"]==0 and design["1pre"]["valid_exit_binary_n"]==24,
-      "published_during_5_23_consistent":design["2test"]["exit_in_15_yes"]==5 and design["2test"]["valid_exit_binary_n"]==23,
+      "published_during_5_23_consistent":len(during_winners)==5 and len(valid_during)==23,
       "published_four_of_five_retained_consistent":conditional_post_n==4 and len(during_winner_with_post)==5,
       "claim_boundary":{
          "individual_trial_rows_committed":False,
