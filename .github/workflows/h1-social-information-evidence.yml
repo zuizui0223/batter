@@ -1,0 +1,32 @@
+name: Bat social-information H1 evidence gate
+
+on:
+  push:
+    branches:
+      - prospective/social-information-macro-h1-v1
+    paths:
+      - 'prospective/social_macro_h1/**'
+      - '.github/workflows/h1-social-information-evidence.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  structural-evidence-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify original-review versus prospective-primary boundary
+        run: python -m unittest discover -s prospective/social_macro_h1 -p 'test_*.py' -v
+      - name: Produce deterministic source feasibility receipt
+        run: |
+          python prospective/social_macro_h1/run_h1_feasibility.py --output /tmp/h1-feasibility.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: h1-structural-evidence-feasibility
+          path: /tmp/h1-feasibility.json
+          if-no-files-found: error
