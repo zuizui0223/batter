@@ -1,0 +1,61 @@
+name: H1 Molossus 2020 independent original CSV authenticity
+
+on:
+  push:
+    branches: [prospective/social-information-macro-h1-v1]
+    paths:
+      - 'prospective/social_macro_h1/fetch_original_molossus_2020.py'
+      - 'prospective/social_macro_h1/reanalyze_molossus_2020_source_v1.py'
+      - '.github/workflows/h1-molossus-original-csv.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  source-and-reanalysis:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Retrieve Zenodo original and check publisher MD5
+        id: original
+        continue-on-error: true
+        env:
+          H1_MOLOSSUS_SOURCE: /tmp/molossus_2020_original.csv
+          H1_MOLOSSUS_RECEIPT: /tmp/molossus_2020_original_receipt.json
+        run: python prospective/social_macro_h1/fetch_original_molossus_2020.py
+      - name: Recalculate only if original source MD5 verified
+        if: steps.original.outcome == 'success'
+        run: |
+          python -m pip install --quiet numpy
+          python prospective/social_macro_h1/reanalyze_molossus_2020_source_v1.py \
+            --csv /tmp/molossus_2020_original.csv \
+            --out /tmp/molossus_2020_independent_result.json
+          python - <<'PY'
+          import json
+          d=json.load(open('/tmp/molossus_2020_independent_result.json'))
+          s=d['search']
+          assert d['source_authentication']['source_bytes_verified']
+          assert s['n_trials']==34 and s['n_individuals']==19
+          assert s['n_matched_bats']==12 and s['n_matched_roosts']==5
+          assert abs(s['bat_equal_contrast']-12.708333333333334)<1e-9
+          assert abs(s['roost_equal_mean']-10.4)<1e-9
+          assert abs(s['roost_signflip_p_exploratory']-0.25)<1e-12
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: h1-molossus-authenticity-and-aggregate-only
+          path: |
+            /tmp/molossus_2020_original_receipt.json
+            /tmp/molossus_2020_independent_result.json
+          if-no-files-found: warn
+      - name: Enforce source failure as scientific STOP
+        if: steps.original.outcome != 'success'
+        run: |
+          echo "::error::Original Molossus CSV unavailable or MD5 mismatch; do not claim verified raw-data replication."
+          exit 1
