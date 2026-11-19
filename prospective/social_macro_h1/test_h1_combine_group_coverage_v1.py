@@ -16,7 +16,10 @@ class TestCombineBatSocialGroupCoverage(unittest.TestCase):
         self.assertEqual(a["source_rows"],6263)
         self.assertEqual(a["source_columns"],60)
         self.assertEqual(a["mirror_git_blob_sha"],"7e274bac17eba845d93cdd27c1357605af3d710e")
-        self.assertFalse(a["original_source_md5_verified"])
+        self.assertTrue(a["original_source_md5_verified"])
+        self.assertEqual(a["original_figshare_advertised_md5"],"d894586c3858620723b1182d8b491d3e")
+        self.assertEqual(a["mirror_reported_source_md5"],a["original_figshare_advertised_md5"])
+        self.assertEqual(a["mirror_size_bytes"],a["original_figshare_size_bytes"])
 
     def test_taxon_key_fallback_and_completeness(self):
         a=self.x
