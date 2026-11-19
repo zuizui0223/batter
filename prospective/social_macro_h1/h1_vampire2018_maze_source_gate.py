@@ -8,6 +8,7 @@ import csv,hashlib,io,json,os,urllib.request,urllib.error,zipfile
 from pathlib import Path
 
 URLS=[
+ "https://api.figshare.com/v2/articles/6466022",
  "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6030285/supplementaryFiles",
  "https://pmc.ncbi.nlm.nih.gov/articles/PMC6030285/bin/rsos172483supp1.csv",
  "https://api.figshare.com/v2/collections/4128575/articles",
@@ -60,6 +61,22 @@ def main():
                     receipt["status"]="ORIGINAL_CSV_SCHEMA_PASS"
             elif data[:2] in (b"{\n",b'{"') or "json" in mime:
                 parsed=json.loads(data)
+                if isinstance(parsed,dict) and parsed.get("id")==6466022:
+                    entry["figshare_article_doi"]=parsed.get("doi")
+                    entry["files"]=[{"id":f.get("id"),"name":f.get("name"),"size":f.get("size"),"supplied_md5":f.get("supplied_md5"),"download_url":f.get("download_url")} for f in parsed.get("files",[])]
+                    candidates=[f for f in parsed.get("files",[]) if f.get("name","").endswith(".csv")]
+                    if len(candidates)!=1:raise ValueError("No unique CSV in official original Figshare article")
+                    original=candidates[0]
+                    source,status2,mime2=get(original["download_url"])
+                    import hashlib
+                    md5=hashlib.md5(source).hexdigest()
+                    if md5!=original.get("supplied_md5") or len(source)!=original.get("size"):
+                        raise ValueError("Figshare CSV original MD5 or source-byte mismatch")
+                    entry["original_csv_header"]=header(source,original.get("name","original.csv"))
+                    entry["original_csv_md5"]=md5
+                    entry["original_csv_download_status"]=status2
+                    receipt["source_original"]=entry
+                    receipt["status"]="ORIGINAL_CSV_SCHEMA_PASS"
                 entry["metadata_type"]="list" if isinstance(parsed,list) else "object"
                 entry["metadata_record_count"]=len(parsed) if isinstance(parsed,list) else None
                 entry["preview_items"]=[{"id":x.get("id"),"title":x.get("title"),"doi":x.get("doi")} for x in parsed[:10]] if isinstance(parsed,list) else {
