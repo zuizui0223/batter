@@ -1,0 +1,5 @@
+study_id,doi,response_taxon_or_group,taxon_resolution,playback_blocks,estimated_conspecific_activity_coefficient,cri95_lower,cri95_upper,coefficient_predictor_scaling,response_units,source_url,independence
+LEWANZIK_2019,10.1111/1365-2656.12989,Myotis daubentonii,species,250,-5.66,-7.52,-3.95,conspecific_activity_species_specific_standardized,change_in_bat_seconds_per_min,https://doi.org/10.1111/1365-2656.12989,single_experiment_12_lakes
+LEWANZIK_2019,10.1111/1365-2656.12989,NEV_group,pooled_Nyctalus_Eptesicus_Vespertilio,94,-4.54,-7.06,-1.70,conspecific_activity_species_specific_standardized,change_in_bat_seconds_per_min,https://doi.org/10.1111/1365-2656.12989,single_experiment_12_lakes
+LEWANZIK_2019,10.1111/1365-2656.12989,Pipistrellus nathusii,species,110,-5.93,-8.41,-3.50,conspecific_activity_species_specific_standardized,change_in_bat_seconds_per_min,https://doi.org/10.1111/1365-2656.12989,single_experiment_12_lakes
+LEWANZIK_2019,10.1111/1365-2656.12989,Pipistrellus pipistrellus,species,180,-6.34,-7.64,-5.07,conspecific_activity_species_specific_standardized,change_in_bat_seconds_per_min,https://doi.org/10.1111/1365-2656.12989,single_experiment_12_lakes
