@@ -4,6 +4,7 @@ This checks internal consistency of saved results; it does NOT rerun the raw XLS
 Actual animal-data execution requires the original SHA-pinned workbook.
 """
 import json
+import csv
 import unittest
 from pathlib import Path
 
@@ -29,6 +30,19 @@ class TestEmpiricalResultReceipt(unittest.TestCase):
             self.assertLessEqual(x["positive_lakes"],x["lakes"])
         self.assertEqual(next(x for x in r["results"] if x["group"]=="Pnat")["lakes"],11)
         self.assertGreater(next(x for x in r["results"] if x["group"]=="Pnat")["author_filter_delta"],0)
+
+    def test_heldout_lake_receipt_reconciles(self):
+        r=json.loads((HERE/"H1_EMPIRICAL_LEWANZIK2019_RECEIPT_V1.json").read_text())
+        with (HERE/"H1_EMPIRICAL_LEWANZIK2019_LOLO_LAKES_V1.csv").open(newline="",encoding="utf-8") as fh:
+            rows=list(csv.DictReader(fh))
+        self.assertEqual(len(rows),47)
+        for x in r["results"]:
+            rr=[y for y in rows if y["recipient_group"]==x["group"]]
+            self.assertEqual(len(rr),x["lakes"])
+            self.assertEqual(sum(float(y["delta_mean_gaussian_logscore_interaction_vs_main"])>0 for y in rr),x["positive_lakes"])
+            avg=sum(float(y["delta_mean_gaussian_logscore_interaction_vs_main"]) for y in rr)/len(rr)
+            self.assertAlmostEqual(avg,x["delta_heldout"],places=7)
+            self.assertEqual(sum(int(y["test_rows"]) for y in rr),x["n"])
 
 if __name__=="__main__":
     unittest.main()
