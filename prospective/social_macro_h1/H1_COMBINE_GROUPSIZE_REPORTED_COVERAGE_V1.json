@@ -1,0 +1,79 @@
+{
+  "audit_date": "2026-11-19",
+  "source": "Soria et al. 2021, COMBINE; ORIGINAL non-imputed reported trait values as represented in third-party GitHub mirror",
+  "original_figshare_doi": "10.6084/m9.figshare.13028255.v4",
+  "source_paper_doi": "10.1002/ecy.3344",
+  "mirror_url": "https://github.com/AleAliSousa/Evo-M1-Trait-Data/blob/main/Soria_etal_2021/Soria_etal_2021_Traitdatareported_snapshot.csv",
+  "mirror_git_blob_sha": "7e274bac17eba845d93cdd27c1357605af3d710e",
+  "original_figshare_file_id": "27703263",
+  "original_source_md5_verified": false,
+  "mirror_description": "States byte-identical to original Figshare reported CSV; not independently source-byte verified here",
+  "source_format": "CSV",
+  "source_rows": 6263,
+  "source_columns": 60,
+  "chiroptera_rows": 1342,
+  "iucn_recognized_unique_labels": 1335,
+  "unrecognized_iucn_labels": 7,
+  "unrecognized_source_explanation": "Seven distinct PHYLACINE taxa all recorded as literal Not recognised in IUCN column; none has group size",
+  "social_group_n_nonimputed_reported_bats": 45,
+  "group_size_missing_bats": 1297,
+  "group_size_nonimputed_coverage_percent": 3.3532041728763042,
+  "group_size_one": 33,
+  "group_size_greater_than_one": 12,
+  "group_size_greater_than_five": 3,
+  "group_size_value_histogram": {
+    "1": 33,
+    "6": 1,
+    "45": 1,
+    "1.25": 2,
+    "1.33": 1,
+    "1.5": 6,
+    "5.5": 1
+  },
+  "reported_group_size_min": 1,
+  "reported_group_size_max": 45,
+  "recorded_group_size_families": 6,
+  "family_source_coverage": {
+    "Pteropodidae": {
+      "total": 199,
+      "recorded": 30
+    },
+    "Vespertilionidae": {
+      "total": 471,
+      "recorded": 9
+    },
+    "Emballonuridae": {
+      "total": 54,
+      "recorded": 3
+    },
+    "Nycteridae": {
+      "total": 16,
+      "recorded": 1
+    },
+    "Hipposideridae": {
+      "total": 95,
+      "recorded": 1
+    },
+    "Rhinolophidae": {
+      "total": 93,
+      "recorded": 1
+    }
+  },
+  "pteropodidae_reported_n": 30,
+  "pteropodidae_missing_n": 169,
+  "all_other_bats_reported_n": 15,
+  "all_other_bats_missing_n": 1128,
+  "pteropodidae_vs_other_reporting_odds_ratio": 13.349112426035504,
+  "pteropodidae_share_of_group_size_reported_percent": 66.66666666666667,
+  "reported_bat_plant_diet_gt50_n": 30,
+  "plant_gt50_all_pteropodidae": true,
+  "reported_bat_invertebrate_gt50_n": 14,
+  "family_fixed_effect_plus_plant_diet_parameter_identified": false,
+  "all_45_social_and_diet_present": true,
+  "group_size_data_class": "published nonimputed reported trait value; NOT direct individual-level group observations in this audit",
+  "primary_H1_information_transfer_measured": false,
+  "male_group_formation_measured": false,
+  "causal_or_phylogenetic_inference_authorized": false,
+  "verdict": "STOP_as_global_H1_proxy_group_size_is_96.65pct_missing_and_fully_family_confounded_with_plant_guild",
+  "prior_user_message_correction": "Initial 1336 was number of distinct literal IUCN labels, which collapses seven Not recognised taxa; corrected bat record taxon count is 1342."
+}
