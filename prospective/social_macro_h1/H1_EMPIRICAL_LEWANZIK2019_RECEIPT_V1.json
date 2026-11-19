@@ -1,0 +1,91 @@
+{
+  "status": "EMPIRICAL_SINGLE_SOURCE_FINAL_V1",
+  "source_doi": "10.5061/dryad.gp65g2t",
+  "original_xlsx_sha256": "fbabb5021c613aa7033ad13bc1a357a68700a7d3683ec16ae1bcf4a65e121c86",
+  "original_zip_sha256": "903fa69ed15110322c37805bbf609f3704e84306a0319111c389742a2ece86cf",
+  "input_rows": 1440,
+  "study_lakes": 12,
+  "buzz_rates": [
+    0,
+    12,
+    24,
+    48,
+    96
+  ],
+  "caller_species": 6,
+  "recipient_groups": 4,
+  "original_author_activity_gate": {
+    "Myotis": 250,
+    "NEV": 94,
+    "Pnat": 110,
+    "Ppip": 180
+  },
+  "structural_absent_recipient": {
+    "Pnat": "Maistaettenweiher_Paehl"
+  },
+  "methods": "lake fixed effects for coefficients; clustered SE with t df lake-1; LOLO no holdout lake intercept; Gaussian log score on log1p original playback activity; buzz scaled 0..1, train-only covariate normalization",
+  "results": [
+    {
+      "group": "Myotis",
+      "n": 360,
+      "lakes": 12,
+      "beta": -0.013318,
+      "ci95": [
+        -0.207942,
+        0.181306
+      ],
+      "p_exploratory": 0.883012,
+      "delta_heldout": -0.00119484,
+      "positive_lakes": 3,
+      "quadratic_delta": -0.00113618,
+      "author_filter_delta": -0.00219549
+    },
+    {
+      "group": "NEV",
+      "n": 360,
+      "lakes": 12,
+      "beta": 0.108547,
+      "ci95": [
+        -0.12337,
+        0.340464
+      ],
+      "p_exploratory": 0.325056,
+      "delta_heldout": -0.00171772,
+      "positive_lakes": 7,
+      "quadratic_delta": -0.000632,
+      "author_filter_delta": -0.01048413
+    },
+    {
+      "group": "Pnat",
+      "n": 330,
+      "lakes": 11,
+      "beta": 0.033968,
+      "ci95": [
+        -0.203182,
+        0.271117
+      ],
+      "p_exploratory": 0.756184,
+      "delta_heldout": -0.003096,
+      "positive_lakes": 1,
+      "quadratic_delta": -0.00299257,
+      "author_filter_delta": 0.00626978
+    },
+    {
+      "group": "Ppip",
+      "n": 360,
+      "lakes": 12,
+      "beta": -0.023004,
+      "ci95": [
+        -0.313932,
+        0.267924
+      ],
+      "p_exploratory": 0.864999,
+      "delta_heldout": -0.00308932,
+      "positive_lakes": 1,
+      "quadratic_delta": -0.00342574,
+      "author_filter_delta": -0.00585156
+    }
+  ],
+  "claim_boundary": "Single 2019 source; no positive cue×baseline effect transferred to new lake on average in this model; not absence proof, not macro meta-analysis, not personal-memory/reciprocity causal test",
+  "user_raw_source_uploaded_to_github": false
+}
