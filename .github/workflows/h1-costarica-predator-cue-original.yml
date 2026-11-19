@@ -33,6 +33,10 @@ jobs:
           assert x['raw_rows_or_subject_identifiers_committed'] is False
           assert x['not_independent_2019_foraging_buzz_moderation_replication'] is True
           assert len(x['by_nonpredator_caller'])==3
+          bounds=x['group_equal_mean_partial_identification']
+          assert bounds['n_published_groups']==33 and bounds['enumerated_group_size_shapes']==7
+          assert bounds['sharp_lower_equal_group_mean'] < bounds['sharp_upper_equal_group_mean'] < 0
+          assert bounds['unknown_physical_group_cluster_p'].startswith('STOP')
           PY
       - name: Archive aggregate-only authenticated source receipt
         if: always()
