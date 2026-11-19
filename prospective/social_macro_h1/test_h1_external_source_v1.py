@@ -18,6 +18,18 @@ class TestMolossusSourceReceipt(unittest.TestCase):
         self.assertFalse(x["original_file_bytes_verified"])
         self.assertEqual(x["transcribed_source_rows"],51)
         self.assertEqual(x["original_file_expected_md5"],"b4b9970eac190601b4a291725137c110")
+    def test_authentic_original_source_v2(self):
+        a=json.loads((ROOT/"H1_EXTERNAL_MOLOSSUS_2020_AUTHENTICATED_V2.json").read_text())
+        self.assertTrue(a["original_md5_verified"])
+        self.assertEqual(a["original_file_bytes"],3298)
+        self.assertEqual(a["original_md5"],"b4b9970eac190601b4a291725137c110")
+        self.assertTrue(a["recalculation_ci_passed"])
+        self.assertEqual(a["search_phase"]["subjects"],19)
+        self.assertAlmostEqual(a["search_phase"]["bat_equal_test_minus_control_headwaggles_40sec"],12.708333333333334)
+        self.assertAlmostEqual(a["search_phase"]["roost_equal_test_minus_control_headwaggles_40sec"],10.4)
+        self.assertEqual(a["search_phase"]["roost_signflip_p_two_sided"],0.25)
+        self.assertFalse(a["source_file_committed"])
+
     def test_observation_grain_and_roost_hierarchy(self):
         s=self.d["search"]
         self.assertEqual((s["n_trials"],s["n_subjects"],s["n_matched_bats"],s["n_matched_roosts"]),(34,19,12,5))
