@@ -36,7 +36,6 @@ class TestIndependentCueH1Eligibility(unittest.TestCase):
             self.assertEqual(r["independent_of_2019"],"YES")
             self.assertEqual(r["exact_2019_buzz_x_baseline_transfer"],"NO")
         self.assertEqual(self.by["Lewanzik2019"]["biological_unit"],"12 lakes")
-        self.assertIn("sample",self.by["SafiKerth2007"]["data_access"].lower()) if False else None
 
 if __name__=="__main__":
     unittest.main()
