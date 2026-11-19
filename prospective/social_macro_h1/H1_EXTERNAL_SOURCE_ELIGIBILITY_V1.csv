@@ -1,0 +1,8 @@
+year,source_doi,organism,response,raw_source_identifier,same_2019_buzz_x_baseline_estimand,eligible_to_pool,verdict
+2018,10.1016/j.cub.2018.09.064,Five bat taxa; two playback taxa,resource predictability and group foraging,10.17632/rb7r4cb74r.1,no,no,prior_art_theory_development
+2019,10.1111/1365-2656.12989,Three species and pooled bat genus group,graded buzz content × bat activity across 12 lakes,10.5061/dryad.gp65g2t,yes,reference_only,source_test_does_not_generalize_novel_interaction
+2020,10.1093/beheco/araa056,Molossus molossus,within-bat search-call caller discrimination via head waggle,10.5061/dryad.tqjq2bvvx,no,no,independent_information_channel_prior_art
+2020,10.1111/oik.07158,Nyctalus noctula,habitat-conditional reliance on other foraging bats,Movebank_622521340,no,no,landscape_comparison_prior_art
+2023,10.1111/gcb.17063,Nyctalus noctula,urban-rural attack rate and conspecific co-use,10.17632/67njb78d59.1,no,no,not_same_controlled_acoustic_treatment
+2024,10.1098/rstb.2024.0060,Rousettus aegyptiacus,odor cue and remembered tree visitation,10.5061/dryad.51c59zwgp,no,no,timing_place_complementarity_prior_art
+2026,10.1016/j.anbehav.2025.123406,Four vesper bat species,feeding and distress playback attraction/repulsion,original_raw_table_unverified,no,no,original_event_denominators_not_verified
