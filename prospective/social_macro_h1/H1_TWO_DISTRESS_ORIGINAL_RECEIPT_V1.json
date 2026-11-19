@@ -97,5 +97,17 @@
   "h1_2019_buzz_density_exact_replication": false,
   "direct_memory_reciprocity_social_information_causal_proof": false,
   "raw_original_sources_committed": false,
-  "evidence_log": "https://github.com/zuizui0223/batter/actions/runs/44464841326"
+  "evidence_log": "https://github.com/zuizui0223/batter/actions/runs/44464841326",
+  "cross_study_geography": {
+    "geographic_independence": false,
+    "field_station": "Smithsonian Tropical Research Institute, Barro Colorado Island, Panama",
+    "study_2015": "Carter et al. 2015 at 8 field sites around BCI station",
+    "study_2016": "Eckenweber & Knörnschild 2016 at 11 Saccopteryx colonies on station buildings, 2012–2014",
+    "animal_or_roost_overlap_status": "NOT_IDENTIFIED; possible shared locations/individuals/conditions",
+    "count_as_two_independent_regions": false,
+    "source_urls": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC4892459/",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC4564210/"
+    ]
+  }
 }
