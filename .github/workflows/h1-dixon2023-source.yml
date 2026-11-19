@@ -1,0 +1,40 @@
+name: H1 Dixon 2023 cue conflict original Dryad DOI gate
+
+on:
+  push:
+    branches: [prospective/social-information-macro-h1-v1]
+    paths:
+      - 'prospective/social_macro_h1/h1_dixon2023_original_dryad_gate_v1.py'
+      - '.github/workflows/h1-dixon2023-source.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  original-doi-gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify original paper cited Dryad accession and metadata only
+        id: source
+        continue-on-error: true
+        env:
+          H1_DIXON_DRYAD_GATE: /tmp/h1_dixon_original_dryad_source.json
+        run: python prospective/social_macro_h1/h1_dixon2023_original_dryad_gate_v1.py
+      - name: Archive source access receipt only
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: h1-dixon2023-original-doi-gate
+          path: /tmp/h1_dixon_original_dryad_source.json
+          if-no-files-found: error
+      - name: Enforce original DOI source stop
+        if: steps.source.outcome == 'failure'
+        run: |
+          echo "::error::Published Dryad data DOI not reachable or not registered. Do not invent bat choice records."
+          exit 1
