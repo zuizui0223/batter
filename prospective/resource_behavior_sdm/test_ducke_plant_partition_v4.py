@@ -48,6 +48,11 @@ class PlantPartitionControls(unittest.TestCase):
         self.assertAlmostEqual(r["exploratory_plus_one_tail_fraction"],.025)
         self.assertTrue(r["not_confirmatory_p_value"])
 
+    def test_linear_percentiles_match_original_scipy_audit(self):
+        v=null_stats(list(range(199)),100.,0.)
+        self.assertAlmostEqual(v["null_quantile_05_minus_total"],9.9,places=12)
+        self.assertAlmostEqual(v["null_quantile_95_minus_total"],188.1,places=12)
+
     def test_number_of_simulation_draws_is_frozen(self):
         with self.assertRaisesRegex(ValueError,"UNKNOWN_NULL"):
             list(draw_partitions(self.names,FOOD12,self.counts,"unrestricted",n=9))

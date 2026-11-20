@@ -169,14 +169,22 @@ def null_stats(scores,observed,reference):
         raise ValueError("STOP_MISSING_FROZEN_RANDOM_DRAWS")
     x=sorted(scores)
     atleast=sum(v>=observed-1e-11 for v in x)
+    def percentile(q):
+        # Match frozen v4 NumPy default linear sample-quantile convention
+        # with only the Python standard library.
+        pos=(len(x)-1)*q
+        lower=int(pos)
+        upper=min(lower+1,len(x)-1)
+        fraction=pos-lower
+        return (1-fraction)*x[lower]+fraction*x[upper]
     return {
        "n_draws":len(x),
        "n_at_least_observed":atleast,
        "exploratory_plus_one_tail_fraction":(1+atleast)/(N_DRAW+1),
        "null_mean_minus_total":math.fsum(x)/len(x)-reference,
-       "null_quantile_05_minus_total":x[9]-reference,
+       "null_quantile_05_minus_total":percentile(.05)-reference,
        "null_median_minus_total":x[len(x)//2]-reference,
-       "null_quantile_95_minus_total":x[189]-reference,
+       "null_quantile_95_minus_total":percentile(.95)-reference,
        "observed_minus_null_mean":observed-math.fsum(x)/len(x),
        "not_confirmatory_p_value":True,
     }
