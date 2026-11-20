@@ -237,6 +237,8 @@ def main():
     target=pathlib.Path(v.out);target.parent.mkdir(parents=True,exist_ok=True)
     target.write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\n")
     print("HENDEL_META",result.get("metadata",{}).get("status",result.get("status")))
+    if result.get("status") == "SOURCE_METADATA_STOP":
+        print("HENDEL_META_STOP_REASON",result.get("reason","UNKNOWN"))
     print("HENDEL_ORIGINAL",result.get("original_source_attempt",{}).get("status","STOP"))
     if "reason" in result.get("original_source_attempt",{}):
         print("HENDEL_STOP_REASON",result["original_source_attempt"]["reason"])
