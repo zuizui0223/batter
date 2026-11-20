@@ -155,6 +155,8 @@ def main():
         }
     output.write_text(json.dumps(r, indent=2, ensure_ascii=False)+"\n",encoding="utf-8")
     print("ROUS_META",r["status"],flush=True)
+    if r["status"] != STATUS:
+        print("ROUS_SOURCE_STOP_REASON",r.get("reason","UNSPECIFIED"),flush=True)
     return 0 if r["status"] == STATUS else 3
 
 
