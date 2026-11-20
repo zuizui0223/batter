@@ -1,0 +1,43 @@
+name: PLOS 3D bat target trial group pre-outcome support
+
+on:
+  push:
+    branches:
+      - prospective/resource-behavior-higher-dimensional-sdm-v1-20261120
+    paths:
+      - 'prospective/resource_behavior_sdm/plos2016_bat_target_trial_gate.py'
+      - 'prospective/resource_behavior_sdm/test_plos2016_bat_target_trial_gate.py'
+      - '.github/workflows/resource-behavior-plos2016-bat-target-gate.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  source-free:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s prospective/resource_behavior_sdm -p test_plos2016_bat_target_trial_gate.py -v
+
+  original-group-labels:
+    needs: source-free
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Original author Bat Target Test labels; no X/Y/Z outcome
+        run: python prospective/resource_behavior_sdm/plos2016_bat_target_trial_gate.py
+      - name: Retain structural-only receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: plos2016-bat-target-trial-structure
+          path: prospective/resource_behavior_sdm/plos2016_bat_target_trial_structure.json
+          if-no-files-found: error
+          retention-days: 30
