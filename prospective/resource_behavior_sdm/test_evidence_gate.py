@@ -83,6 +83,20 @@ class ResourceBehaviorClaimGateTests(unittest.TestCase):
         self.assertIsNone(self.data["strict_unestimated"]["ecological_partner_m3_minus_m1"])
         self.assertIsNone(self.data["strict_unestimated"]["higher_dim_resource_conditional_bat_logscore_gain"])
 
+    def test_ducke_v4_abundance_matched_null_does_not_support_unique_food_identity(self):
+        c={x["id"]:x for x in self.data["claims"]}["DUCKE_MEASURED_FOOD_LOCAL_GUILD_PREDICTION"]
+        v=c["plant_partition_label_null_v4"]
+        self.assertEqual(v["n_original_plant_categories"],22)
+        self.assertEqual(v["n_named_genera"],21)
+        self.assertEqual(v["n_unidentified_observed_fruiting_plant_entries"],52)
+        self.assertAlmostEqual(v["random_12_of_22_null"]["exploratory_plus_one_fraction"],.025)
+        self.assertAlmostEqual(v["abundance_quartile_matched_12_of_22_null"]["exploratory_plus_one_fraction"],.055)
+        self.assertFalse(v["label_specific_food_causal_effect_established"])
+        self.assertFalse(v["real_individual_bat_GPS_height_resource_join_estimated"])
+        self.assertIsNone(v["new_ecological_species_SDM"])
+        self.assertIsNone(v["new_5d_resource_height_gain"])
+        self.assertIsNone(self.data["strict_unestimated"]["ecological_partner_m3_minus_m1"])
+
     def test_no_frozen_manuscript_or_parent_main_overwrite(self):
         self.assertFalse(self.data["changes_to_frozen_bat_manuscripts"])
         self.assertFalse(self.data["changes_to_esdm_main"])

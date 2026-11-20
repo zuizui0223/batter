@@ -195,6 +195,59 @@
         "causal_fruiting_plant_guild_effect": null,
         "empirical_resource_conditional_3D_height_gain": null,
         "interpretation": "Measured source fruiting-plant composition predicts captured-guild relative composition on the same study's heldout source blocks better than one total count, even in restricted L3-L8 plots. Does not prove exclusive diet or 5D source-level ecology."
+      },
+      "plant_partition_label_null_v4": {
+        "tier": "OBSERVED_EXPLORATORY_LABEL_SPECIFICITY_WEAK_AFTER_ABUNDANCE_MATCHED_CONTROL",
+        "source": "prospective/resource_behavior_sdm/DUCKE_EQUAL_COMPLEXITY_V4_RESULT.md",
+        "protocol_committed_before_v4_run": "9c35ebf09945ea138c239917291d5b333c3765d3",
+        "original_source_Dryad_DOI": "10.5061/dryad.9rb48c5",
+        "original_source_SHA256": "55c784e2f7b37987e3657d3ba3d5cf6a41bb3554a11904969d1376c977bcdbce",
+        "n_original_plant_categories": 22,
+        "n_named_genera": 21,
+        "n_unidentified_categories": 1,
+        "n_unidentified_observed_fruiting_plant_entries": 52,
+        "n_matched_observed_fruiting_plant_entries": 661,
+        "heldout_original_source_groups": 7,
+        "n_original_source_plots": 46,
+        "n_matched_source_days": 103,
+        "original_12_vs_other10_split_gain_over_pooled_total": 0.026106713469882692,
+        "random_12_of_22_null": {
+          "n_draws": 199,
+          "n_at_least_observed": 4,
+          "exploratory_plus_one_fraction": 0.025,
+          "null_mean_gain_over_total": -0.002700617528526017
+        },
+        "abundance_quartile_matched_12_of_22_null": {
+          "n_draws": 199,
+          "n_at_least_observed": 10,
+          "exploratory_plus_one_fraction": 0.055,
+          "null_mean_gain_over_total": 0.0012463798957562666,
+          "food_labels_per_4_abundance_quartiles": [
+            4,
+            2,
+            2,
+            4
+          ]
+        },
+        "sensitivity_excluding_unidentified": {
+          "remaining_real_named_genera": 21,
+          "food_candidate_named_genera": 12,
+          "other_named_genera": 9,
+          "split_gain_vs_named_only_total": 0.028159016545033833
+        },
+        "sensitivity_excluding_17_PO_plots": {
+          "n_original_plots": 29,
+          "n_heldout_L3_L8_groups": 6,
+          "split_gain_vs_total": 0.013778178015096287
+        },
+        "result_from_source_opened_before_null_defined": true,
+        "statistic_not_preregistered_significance": true,
+        "label_specific_food_causal_effect_established": false,
+        "fruit_composition_guild_predictability_persists_within_original_source": true,
+        "real_individual_bat_GPS_height_resource_join_estimated": false,
+        "unknown_plant_taxonomy_can_be_called_genus": false,
+        "new_ecological_species_SDM": null,
+        "new_5d_resource_height_gain": null
       }
     }
   ],
