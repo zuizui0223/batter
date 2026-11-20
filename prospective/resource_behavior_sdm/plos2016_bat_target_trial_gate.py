@@ -73,6 +73,14 @@ def parse_labels(payload):
             targets.add(target)
             pairs[(individual,target)].add(test)
     sizes=list(groups.values())
+    per_target_group_counts=Counter()
+    per_bat_target_coverage=defaultdict(set)
+    per_bat_group_counts=Counter()
+    for bat, target, test in groups:
+        per_target_group_counts[target]+=1
+        per_bat_target_coverage[bat].add(target)
+        per_bat_group_counts[bat]+=1
+    coverage_hist=Counter(len(v) for v in per_bat_target_coverage.values())
     result={
       "schema":"batter.plos_2016_source_bat_target_test.v1",
       "status":PASS,
@@ -83,6 +91,9 @@ def parse_labels(payload):
       "n_source_target_levels":len(targets),
       "n_bat_target_pairs":len(pairs),
       "n_distinct_bat_target_trial_sequences":len(groups),
+      "bat_target_coverage_histogram":{str(k):v for k,v in sorted(coverage_hist.items())},
+      "target_group_counts_sorted":sorted(per_target_group_counts.values()),
+      "individual_total_trial_counts_sorted":sorted(per_bat_group_counts.values()),
       "min_rows_per_sequence":min(sizes) if sizes else None,
       "max_rows_per_sequence":max(sizes) if sizes else None,
       "bat_target_sequence_count_values_sorted":sorted(Counter(len(t) for t in pairs.values()).items()),
@@ -120,6 +131,12 @@ def main():
               "n_distinct_bat_target_trial_sequences",
               "bat_target_sequence_count_values_sorted"]
         print("PLOS_LABEL_STRUCTURE",json.dumps({k:result[k] for k in keys}),flush=True)
+        print("PLOS_LABEL_DIAGNOSTICS",json.dumps({
+            "bat_target_coverage_histogram":result["bat_target_coverage_histogram"],
+            "target_group_counts_sorted":result["target_group_counts_sorted"],
+            "individual_total_trial_counts_sorted":result["individual_total_trial_counts_sorted"],
+            "per_bat_target_number_of_tests_histogram":result["bat_target_sequence_count_values_sorted"],
+        },sort_keys=True),flush=True)
     else:
         print("PLOS_LABEL_STRUCTURE_STOP",result["reason"],flush=True)
     return 0 if result["status"]==PASS else 3
