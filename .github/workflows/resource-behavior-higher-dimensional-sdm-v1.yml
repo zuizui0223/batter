@@ -18,7 +18,7 @@ permissions:
 
 jobs:
   synthetic-and-claim-gates:
-    name: Python ${{ matrix.python-version } pure-stdlib tests
+    name: Python ${{ matrix.python-version }} pure-stdlib tests
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -28,7 +28,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: ${{ matrix.python-version }
+          python-version: ${{ matrix.python-version }}
       - name: Syntax audit
         run: python -m compileall -q prospective/resource_behavior_sdm
       - name: Known-truth mathematics and no-promotion evidence gates
