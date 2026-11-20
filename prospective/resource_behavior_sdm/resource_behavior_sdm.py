@@ -69,6 +69,40 @@ def habitat_log_scores(
     return combined
 
 
+def resource_conditioned_state_policies(
+    base_state_logits: Mapping[tuple[str, str, str], Mapping[str, float]],
+    measured_resource_index: Mapping[SpaceTime, float],
+    response_by_state: Mapping[str, float],
+) -> dict[tuple[str, str, str], dict[str, float]]:
+    """Prespecified resource -> behavior allocation, before vertical use.
+
+    Inputs are hypothetical or separately estimated; beta_by_state is NEVER
+    learned from this function. This may be useful even if horizontal use
+    does not change: the same XY cell can have different behavior/time
+    mixtures. It is not evidence of real fruit-dependent bat flight.
+    """
+    if not base_state_logits or not response_by_state:
+        raise ValueError("state logits and response coefficients are required")
+    needed = {(cell, time) for (_, cell, time) in base_state_logits}
+    if set(measured_resource_index) != needed:
+        raise ValueError("resource scores must match every XY-time stratum exactly")
+    if any(not math.isfinite(v) for v in measured_resource_index.values()):
+        raise ValueError("resource indices must be finite and measured")
+    if any(not math.isfinite(v) for v in response_by_state.values()):
+        raise ValueError("state response coefficients must be finite")
+    result = {}
+    for key, logits in base_state_logits.items():
+        individual, cell, time = key
+        if set(logits) != set(response_by_state):
+            raise ValueError(f"behavior support / coefficient mismatch: {key!r}")
+        resource = measured_resource_index[(cell, time)]
+        result[key] = _softmax({
+            state: score + response_by_state[state] * resource
+            for state, score in logits.items()
+        })
+    return result
+
+
 def joint_use_distribution(
     horizontal_time_logits: Mapping[SpaceTime, float],
     individual_weights: Mapping[str, float],
@@ -149,6 +183,34 @@ def identity_vertical_information(joint: Mapping[UseEvent, float]) -> float:
             continue
         numerator = p * p_xt[(x, t)]
         denominator = p_ixt[(i, x, t)] * p_zxt[(z, x, t)]
+        info += p * math.log(numerator / denominator)
+    return max(info, 0.0) if info > -1e-12 else info
+
+
+def identity_vertical_information_given_state(joint: Mapping[UseEvent, float]) -> float:
+    """I(individual; height | horizontal cell, time, *observed* behavior).
+
+    Comparing with identity_vertical_information can distinguish identity
+    arising entirely from behavioral mixture from within-state residual.
+    A behavioral label inferred from height itself is circular and invalid.
+    """
+    p_xtb = defaultdict(float)
+    p_ixtb = defaultdict(float)
+    p_zxtb = defaultdict(float)
+    p_izxtb = defaultdict(float)
+    for (i, x, t, b, z), p in joint.items():
+        if not math.isfinite(p) or p < 0.0:
+            raise ValueError("joint weights must be finite/nonnegative")
+        p_xtb[(x, t, b)] += p
+        p_ixtb[(i, x, t, b)] += p
+        p_zxtb[(z, x, t, b)] += p
+        p_izxtb[(i, z, x, t, b)] += p
+    info = 0.0
+    for (i, z, x, t, b), p in p_izxtb.items():
+        if p == 0.0:
+            continue
+        numerator = p * p_xtb[(x, t, b)]
+        denominator = p_ixtb[(i, x, t, b)] * p_zxtb[(z, x, t, b)]
         info += p * math.log(numerator / denominator)
     return max(info, 0.0) if info > -1e-12 else info
 
