@@ -35,6 +35,15 @@ class ResourceBehaviorClaimGateTests(unittest.TestCase):
         self.assertEqual(bat["n_spatial_excess_positive"], 0)
         self.assertIn("true physical separation", bat["not_claim"])
 
+    def test_independent_external_originals_do_not_become_5d_ecology(self):
+        a=self.data["independent_external_evidence_progress_20261120"]
+        self.assertEqual(len(a["candidates"]),2)
+        self.assertFalse(a["live_source_crossstudy_join_allowed"])
+        self.assertIsNone(a["real_highdimensional_resource_behavior_height_effect"])
+        self.assertTrue(all(x["original_metadata_verified"] for x in a["candidates"]))
+        self.assertTrue(all(not x["original_file_content_read"] for x in a["candidates"]))
+        self.assertTrue(all(x["original_file_http_error"]==401 for x in a["candidates"]))
+
     def test_no_frozen_manuscript_or_parent_main_overwrite(self):
         self.assertFalse(self.data["changes_to_frozen_bat_manuscripts"])
         self.assertFalse(self.data["changes_to_esdm_main"])

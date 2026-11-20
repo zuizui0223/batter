@@ -110,5 +110,39 @@
   "claim_gate": "UNVALIDATED_HIGHDIMENSIONAL_RESOURCE_SDM_PROTOTYPE",
   "migration_target": "batter/prospective/resource_behavior_sdm",
   "changes_to_frozen_bat_manuscripts": false,
-  "changes_to_esdm_main": false
+  "changes_to_esdm_main": false,
+  "independent_external_evidence_progress_20261120": {
+    "schema": "batter.resource_behavior_sdm.independent_external_source_admission.v2",
+    "original_metadata_verification_run": "https://github.com/zuizui0223/batter/actions/runs/44729699721",
+    "small_original_file_access_run": "https://github.com/zuizui0223/batter/actions/runs/44729946430",
+    "candidates": [
+      {
+        "id": "chrotopterus_2026",
+        "doi": "10.5061/dryad.7d7wm38c0",
+        "original_metadata_verified": true,
+        "original_expected_files_verified": 5,
+        "original_file_content_read": false,
+        "original_file_http_error": 401,
+        "height_datum": "MSL not AGL",
+        "landcover_vs_food": "HABITAT_PROXY_ONLY",
+        "empirical_conditional_height_gain": null
+      },
+      {
+        "id": "ducke_bats_2018",
+        "doi": "10.5061/dryad.9rb48c5",
+        "original_metadata_verified": true,
+        "original_expected_files_verified": 1,
+        "original_file_content_read": false,
+        "original_file_http_error": 401,
+        "fruit_insect_independently_surveyed_in_published_study": true,
+        "individual_flight_height_available": false,
+        "empirical_true_food_distribution_gain": null
+      }
+    ],
+    "live_source_crossstudy_join_allowed": false,
+    "grouped_conditional_height_scorer_implemented": true,
+    "grouped_scorer_original_animal_rows_tested": false,
+    "grouped_scorer_synthetic_tests_passed": true,
+    "real_highdimensional_resource_behavior_height_effect": null
+  }
 }
