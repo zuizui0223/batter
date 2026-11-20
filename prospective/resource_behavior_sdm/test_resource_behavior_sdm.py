@@ -92,7 +92,7 @@ class ResourceBehaviorSDMTests(unittest.TestCase):
              ("I2", "A", "t", "forage"): {"low": 0.2, "high": 0.8},
              ("I2", "A", "t", "commute"): {"low": 0.8, "high": 0.2}},
         )
-        self.assertGreater(identity_vertical_information(use), 0.06)
+        self.assertAlmostEqual(identity_vertical_information(use), 0.06627772298751894, places=12)
         self.assertAlmostEqual(identity_vertical_information_given_state(use), 0.0, places=12)
         self.assertAlmostEqual(project_horizontal(use)["A"], 1.0, places=12)
         self.assertTrue(all(p > 0.0 for p in use.values()))
@@ -130,6 +130,8 @@ class ResourceBehaviorSDMTests(unittest.TestCase):
         high_dry = sum(p for (i, x, t, b, z), p in use.items()
                        if t == "dry" and z == "high")
         self.assertGreater(high_fruiting, high_dry)
+        self.assertAlmostEqual(high_dry / 0.5, 0.5, places=12)
+        self.assertAlmostEqual(high_fruiting / 0.5, 0.8046376623823058, places=12)
 
     def test_resource_policy_missing_support_is_stop(self):
         base = {("I1", "A", "t"): {"forage": 0.0, "commute": 0.0}}
