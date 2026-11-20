@@ -44,6 +44,17 @@ class ResourceBehaviorClaimGateTests(unittest.TestCase):
         self.assertTrue(all(not x["original_file_content_read"] for x in a["candidates"]))
         self.assertTrue(all(x["original_file_http_error"]==401 for x in a["candidates"]))
 
+    def test_ducke_food_positive_is_only_source_local_guild(self):
+        d={r["id"]:r for r in self.data["claims"]}["DUCKE_MEASURED_FOOD_LOCAL_GUILD_PREDICTION"]
+        self.assertEqual(d["n_matched_plots"],46)
+        self.assertEqual(d["n_same_site_same_day_nights"],103)
+        self.assertGreater(d["heldout_food_12_minus_baseline_nats_per_capture"],0)
+        self.assertIn("SOURCE_LOCAL_EXPLORATORY",d["tier"])
+        self.assertIn("not occupancy",d["response"])
+        self.assertTrue(d["source_anomalies"]["missing_vegetation_clutter"])
+        self.assertIsNone(self.data["strict_unestimated"]["ecological_partner_m3_minus_m1"])
+        self.assertIsNone(self.data["strict_unestimated"]["higher_dim_resource_conditional_bat_logscore_gain"])
+
     def test_no_frozen_manuscript_or_parent_main_overwrite(self):
         self.assertFalse(self.data["changes_to_frozen_bat_manuscripts"])
         self.assertFalse(self.data["changes_to_esdm_main"])

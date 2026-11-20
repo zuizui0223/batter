@@ -85,6 +85,34 @@
       "eligible_claim": "held-out transition class prediction conditional on prior climb class in the analyzed source extraction",
       "not_claim": "physical inertia, unique bat flight force, resource-linked prediction",
       "source": "boids_prediction"
+    },
+    {
+      "id": "DUCKE_MEASURED_FOOD_LOCAL_GUILD_PREDICTION",
+      "tier": "OBSERVED_MEASURED_FOOD_SOURCE_LOCAL_EXPLORATORY_PREDICTIVE_POSITIVE",
+      "source_original_dataset_doi": "10.5061/dryad.9rb48c5",
+      "original_zip_sha256": "55c784e2f7b37987e3657d3ba3d5cf6a41bb3554a11904969d1376c977bcdbce",
+      "original_bat_rows": 1189,
+      "source_anomalies": {
+        "date_years_after_2014_source_rows": 42,
+        "pseudo_bat_rows": 2,
+        "source_counts_mismatch_published": true,
+        "missing_vegetation_clutter": true
+      },
+      "n_source_plots": 49,
+      "n_matched_plots": 46,
+      "n_same_site_same_day_nights": 103,
+      "n_matched_captures": 810,
+      "n_source_blocks": 7,
+      "response": "captured-frugivore guild share conditional on observed bats (not occupancy)",
+      "heldout_food_12_minus_baseline_nats_per_capture": 0.016084661100832526,
+      "leave_plot_out_food_12_minus_baseline": 0.0071302334906864035,
+      "number_blocks_with_positive_food_increment": 5,
+      "source_open_block_restricted_shuffle_fraction_ge_observed": 0.0225,
+      "matched_source_time_window": "2013-10 through 2014-02, authors' stated field months",
+      "controls": "terrain elevation, additional riparian sampling-frame indicator, matched-night count; missing vegetation clutter",
+      "strict_claim_ceiling": "one published study, source-local heldout capture composition; not independent study replication, not causal, not measured feeding behavior, not true occupancy SDM",
+      "not_claim": "new original publication finding, universally predictive food resource selection, independently matched 3D altitude, NeoBat M3-M1/N1 effect",
+      "source": "DUCKE_ORIGINAL_RESOURCE_BLOCKED_CV_V1.md"
     }
   ],
   "strict_unestimated": {
