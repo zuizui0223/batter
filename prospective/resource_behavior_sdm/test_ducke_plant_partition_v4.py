@@ -22,7 +22,7 @@ class PlantPartitionControls(unittest.TestCase):
         q=abundance_quartiles(self.names,self.counts)
         c=[len(set(x)&FOOD12) for x in q]
         constrained=list(draw_partitions(self.names,FOOD12,self.counts,"abundance_stratified"))
-        self.assertTrue(all([len(set(x)&p) for p in q]==c for x in constrained))
+        self.assertTrue(all([len(set(x)&set(p)) for p in q]==c for x in constrained))
         self.assertEqual(len(constrained),N_DRAW)
 
     def test_missing_categories_and_invalid_fruit_fail(self):
