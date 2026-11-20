@@ -31,7 +31,9 @@ This resolves the conceptual problem that a species can have:
 3. Repeatable individual vertical distributions;
 4. Extensive 3-D overlap with other individuals.
 
-These can co-occur; none entails active 3-D partitioning. In particular, a 2-D model could show `ΔAUC ≈ 0` even when an appropriately validated conditional `p(z,b,t | x,resource)` carries predictive information. **That outcome is a falsifiable prediction, not an observed explanation for the current shadow failure.**
+These can co-occur; none entails active 3-D partitioning. In particular, a 2-D model could show `ΔAUC ≈ 0` even when an appropriately validated conditional `p(z,b,t | x,resource)` carries predictive information.
+
+**Behavior-mixture mediation test:** compare `I(individual; z | XY,time)` with `I(individual; z | XY,time, independently observed behavior)`. The first can be positive and the second exactly zero in a known-truth world where individuals only differ in **how frequently** they forage/commute, not in how they fly vertically *within* each state. Positive residual after proper state conditioning would instead motivate a within-state policy, subject to independent estimation and detector calibration. Neither direction is yet measured in the current `batter` wild panel. Do not infer state from the same height response being tested. **That outcome is a falsifiable prediction, not an observed explanation for the current shadow failure.**
 
 ### Probability contract
 
@@ -64,8 +66,9 @@ Evaluate **both** horizontal `Δ log-score/AUC` (only if valid heldout species-l
 `resource_behavior_sdm.py` provides:
 
 - strict `habitat_log_scores(abiotic, generic_plant, linked_plant, beta_*)` — **externally assigned** predictor weights only, no parameter estimation;
+- `resource_conditioned_state_policies` — a prespecified, resource-index-dependent softmax for behavioral state allocation, allowing resource changes to alter *conditional height use* while holding total horizontal use fixed; known-truth only;
 - strict `joint_use_distribution` for horizontal × time × individual × behavioral state × height;
-- marginal projection and `I(individual;z | cell,time)` diagnostics;
+- marginal projection plus `I(individual;z | cell,time)` **and** `I(individual;z | cell,time,behavior)` mediation diagnostics;
 - separate detector-conditioned recorded-event distribution `p_obs`;
 - heldout event log-score that does **not** create probability mass for unseen support.
 
