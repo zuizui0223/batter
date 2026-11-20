@@ -58,9 +58,17 @@ def metadata(fetch=get_json):
     d=fetch(ENTRY)
     if str(d.get("identifier","")).lower()!=DOI.lower():
         raise ValueError("STOP_SOURCE_DOI_MISMATCH")
-    ver=fetch(link(d,"stash:version"))
-    if not isinstance(ver,dict) or not ver.get("id"):
-        raise ValueError("STOP_SOURCE_VERSION_UNVERIFIED")
+    version_url=link(d,"stash:version")
+    parsed_ver=urllib.parse.urlparse(version_url).path
+    match_ver=re.fullmatch(r"/api/v2/versions/([0-9]+)",parsed_ver)
+    if match_ver is None:
+        raise ValueError("STOP_SOURCE_VERSION_LINK_NOT_CANONICAL")
+    version_id=int(match_ver.group(1))
+    ver=fetch(version_url)
+    if not isinstance(ver,dict) or type(ver.get("versionNumber")) is not int:
+        raise ValueError("STOP_SOURCE_VERSION_NUMBER_UNVERIFIED")
+    if ver.get("id") is not None and ver.get("id")!=version_id:
+        raise ValueError("STOP_SOURCE_VERSION_URL_FIELD_MISMATCH")
     url=link(ver,"stash:files")
     files={}
     seen=set()
@@ -103,7 +111,7 @@ def metadata(fetch=get_json):
     if type(d.get("storageSize")) is int and sum(f["original_file_bytes"] for f in files.values())!=d["storageSize"]:
         raise ValueError("STOP_PUBLISHED_STORAGE_SUM_DRIFT")
     return {
-        "status":API_STATUS,"doi":DOI,"dataset_version_id":ver["id"],
+        "status":API_STATUS,"doi":DOI,"dataset_version_id":version_id,
         "version_number":ver.get("versionNumber"),
         "publisher_files":files,
         "source_biological_rows_read":False
