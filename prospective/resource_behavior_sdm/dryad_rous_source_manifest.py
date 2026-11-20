@@ -112,6 +112,7 @@ def audit(fetch=fetch_json):
                 raise RuntimeError("SOURCE_DUPLICATE_FILE")
             seen.add(item_id)
             by_path[name] = {
+                "public_file_id": item_id,
                 "file_name": name,
                 "size_bytes": nbytes,
                 "digest_type": row.get("digestType"),
