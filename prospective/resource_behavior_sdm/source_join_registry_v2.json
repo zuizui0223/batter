@@ -1,0 +1,135 @@
+{
+  "schema": "batter.resource_behavior_sdm.original_source_join_registry.v2",
+  "created_date": "2026-11-20",
+  "verified_false_means": "Not demonstrated by inspected source evidence; not biological absence.",
+  "scope": "Original named public sources. Metadata eligibility only; ZERO new resource-conditioned 3D field fit.",
+  "columns": [
+    "same_population",
+    "original_bat_rows_authenticated_and_opened",
+    "verified_same_event_join",
+    "vertical_height_verified",
+    "independent_time_aligned_food_supply",
+    "behavior_label_independent_of_height",
+    "observation_sampling_calibrated"
+  ],
+  "sources": [
+    {
+      "id": "hmon_congo_2020",
+      "species": "Hypsignathus monstrosus",
+      "study_locality": "Lek Njoukou, Republic of Congo",
+      "period": "2020",
+      "source_tracking": "https://doi.org/10.5441/001/1.278",
+      "source_resource": null,
+      "role": "Existing vertical comparison; cannot join Cameroon 2022–2023 LiDAR",
+      "flags": {
+        "same_population": true,
+        "original_bat_rows_authenticated_and_opened": true,
+        "verified_same_event_join": false,
+        "vertical_height_verified": true,
+        "independent_time_aligned_food_supply": false,
+        "behavior_label_independent_of_height": false,
+        "observation_sampling_calibrated": false
+      }
+    },
+    {
+      "id": "hmon_cameroon_lidar_2022_2023",
+      "species": "Hypsignathus monstrosus",
+      "study_locality": "Dja Reserve, Cameroon",
+      "period": "2022–2023",
+      "source_tracking": "https://doi.org/10.5061/dryad.7m0cfxq4t",
+      "source_resource": "https://doi.org/10.5061/dryad.7m0cfxq4t",
+      "role": "Original study GPS XY/time plus 10m canopy, plant volume, swamp, habitat; no original height field confirmed; 6.86GB source ZIP not opened",
+      "flags": {
+        "same_population": true,
+        "original_bat_rows_authenticated_and_opened": false,
+        "verified_same_event_join": false,
+        "vertical_height_verified": false,
+        "independent_time_aligned_food_supply": false,
+        "behavior_label_independent_of_height": false,
+        "observation_sampling_calibrated": false
+      }
+    },
+    {
+      "id": "phast_panama_2016_2023",
+      "species": "Phyllostomus hastatus",
+      "study_locality": "Isla Colon, Bocas del Toro, Panama",
+      "period": "2016, 2021–2023 distinct study sessions",
+      "source_tracking": "https://doi.org/10.5441/001/1.321",
+      "other_tracking": [
+        "https://doi.org/10.5441/001/1.282",
+        "https://doi.org/10.5441/001/1.322"
+      ],
+      "source_resource": "https://doi.org/10.5061/dryad.5qfttdzgj",
+      "role": "Vertical and source seasons measured; balsa flowering qualitative ground-truth, NOT sampled fruit/nectar supply matched to bat fixes; satellite climatology invalid",
+      "flags": {
+        "same_population": true,
+        "original_bat_rows_authenticated_and_opened": true,
+        "verified_same_event_join": false,
+        "vertical_height_verified": true,
+        "independent_time_aligned_food_supply": false,
+        "behavior_label_independent_of_height": false,
+        "observation_sampling_calibrated": false
+      }
+    },
+    {
+      "id": "rousettus_israel_manipulation_2020",
+      "species": "Rousettus aegyptiacus",
+      "study_locality": "Hula Valley, Israel",
+      "period": "June, July, December 2020",
+      "source_tracking": "https://doi.org/10.5061/dryad.51c59zwgp",
+      "source_resource": "https://doi.org/10.5061/dryad.51c59zwgp",
+      "role": "Tree coordinates, treatment and visitation track original source listed, experimentally fruitless Ficus sycomorus target cue; 2D behavior pilot, not available food supply. Original CSV/SQLite record linkage unverified (direct file download HTTP403).",
+      "flags": {
+        "same_population": true,
+        "original_bat_rows_authenticated_and_opened": false,
+        "verified_same_event_join": false,
+        "vertical_height_verified": false,
+        "independent_time_aligned_food_supply": false,
+        "behavior_label_independent_of_height": false,
+        "observation_sampling_calibrated": false
+      }
+    },
+    {
+      "id": "nyctalus_noctula_rsf",
+      "species": "Nyctalus noctula",
+      "study_locality": "Original Reusch et al. European wind-turbine GPS source",
+      "period": "Source 2023 release",
+      "source_tracking": "https://doi.org/10.5281/zenodo.7535030",
+      "source_resource": "https://doi.org/10.5281/zenodo.7535030",
+      "role": "Original 8129 observed GPS records verified 1:1 against source RSF land cover/potential roost rows, height and HMM labels; habitat proxy not food supply. Prior post-freeze context analyses are not independent replications.",
+      "flags": {
+        "same_population": true,
+        "original_bat_rows_authenticated_and_opened": true,
+        "verified_same_event_join": true,
+        "vertical_height_verified": true,
+        "independent_time_aligned_food_supply": false,
+        "behavior_label_independent_of_height": true,
+        "observation_sampling_calibrated": false
+      }
+    },
+    {
+      "id": "nyctalus_aviator_single_bat",
+      "species": "Nyctalus aviator",
+      "study_locality": "Asahikawa, Hokkaido, Japan",
+      "period": "2020–2021 acoustic/GPS programme",
+      "source_tracking": "https://doi.org/10.5061/dryad.mgqnk993n",
+      "source_resource": null,
+      "role": "Actual feeding buzz and relative altitude in a GPS-tagged bat, but single individual and no measured prey field; independent broader microphone survey not individual-3D resource join.",
+      "flags": {
+        "same_population": true,
+        "original_bat_rows_authenticated_and_opened": false,
+        "verified_same_event_join": false,
+        "vertical_height_verified": true,
+        "independent_time_aligned_food_supply": false,
+        "behavior_label_independent_of_height": true,
+        "observation_sampling_calibrated": false
+      }
+    }
+  ],
+  "forbidden_cross_source_pair": {
+    "left": "hmon_congo_2020",
+    "right": "hmon_cameroon_lidar_2022_2023",
+    "reason": "Different countries, original investigators, years and individual identities: species name alone is not a join key."
+  },
+  "real_joint_3d_resource_effect": null
+}
