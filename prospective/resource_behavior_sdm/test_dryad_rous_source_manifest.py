@@ -6,7 +6,8 @@ from dryad_rous_source_manifest import DOI, ENTRY, REQUIRED_FILES, STATUS, audit
 class DryadRousSourceTests(unittest.TestCase):
     def fake(self, drop=None):
         names = [x for x in REQUIRED_FILES if x!=drop]
-        files = [{"id":i+1,"path":n,"size":100+i, "digest":"aaa", "digestType":"md5"}
+        files = [{"_links":{"self":{"href":"/api/v2/files/"+str(i+1)}},
+                  "path":n,"size":100+i, "digest":"aaa", "digestType":"md5"}
                  for i,n in enumerate(names)]
         d={
             ENTRY:{"identifier":DOI, "_links":{"stash:version":{"href":"/api/v2/versions/1"}},

@@ -9,6 +9,7 @@ from __future__ import annotations
 import argparse
 import json
 import pathlib
+import re
 from datetime import datetime, timezone
 from urllib.parse import urljoin, urlparse
 from urllib.request import Request, urlopen
@@ -89,9 +90,23 @@ def audit(fetch=fetch_json):
         if not isinstance(rows, list):
             raise RuntimeError("SOURCE_MISSING_FILE_LIST")
         for row in rows:
-            item_id, name, nbytes = row.get("id"), row.get("path"), row.get("size")
-            if (type(item_id) is not int or not isinstance(name,str)
-                    or not name or type(nbytes) is not int or nbytes < 0):
+            # Official Dryad REST v2 file-list entries use _links.self.href,
+            # NOT a required top-level integer 'id'. Verify that self
+            # identifies an exact, official public /api/v2/files/<id> object.
+            self_href = row.get("_links", {}).get("self", {}).get("href")
+            if not isinstance(self_href, str):
+                raise RuntimeError("SOURCE_PUBLIC_FILE_SELF_LINK_MISSING")
+            api_file_path = urlparse(official_url(self_href)).path
+            match = re.fullmatch(r"/api/v2/files/([0-9]+)", api_file_path)
+            if not match:
+                raise RuntimeError("SOURCE_UNEXPECTED_FILE_SELF_LINK")
+            item_id = int(match.group(1))
+            raw_id = row.get("id")
+            if raw_id is not None and raw_id != item_id:
+                raise RuntimeError("SOURCE_PUBLIC_ID_LINK_DISAGREEMENT")
+            name, nbytes = row.get("path"), row.get("size")
+            if (not isinstance(name,str) or not name or
+                    type(nbytes) is not int or nbytes < 0):
                 raise RuntimeError("SOURCE_BAD_FILE_METADATA")
             if item_id in seen or name in by_path:
                 raise RuntimeError("SOURCE_DUPLICATE_FILE")
