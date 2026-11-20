@@ -1,0 +1,23 @@
+{
+  "schema": "batter.resource_behavior_sdm.cactus_resource_original_source.v1",
+  "date": "2026-11-20",
+  "publication": "https://doi.org/10.1016/j.cub.2020.07.079",
+  "dataset": "https://doi.org/10.17632/jxghjjsttw.1",
+  "taxon": "Leptonycteris yerbabuenae",
+  "published_observational_support": {
+    "gps_bats": 17,
+    "cactus_mapped_bats": 8,
+    "approx_cacti": 3600,
+    "height_agl_reported": true,
+    "cactus_flower_counts_reported": true
+  },
+  "still_unverified": {
+    "original_file_inventory": true,
+    "original_altitude_columns": true,
+    "resource_night_alignment": true,
+    "source_heldout_join": true,
+    "observation_effort": true
+  },
+  "circularity_stop": "Published cactus visit classification uses altitude <20 m; invalid to predict altitude conditional on height-defined visits.",
+  "current_5d_biological_gain": null
+}

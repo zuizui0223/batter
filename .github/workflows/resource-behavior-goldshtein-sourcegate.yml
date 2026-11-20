@@ -1,0 +1,43 @@
+name: Goldshtein 2020 original Mendeley metadata-only gate
+
+on:
+  push:
+    branches:
+      - prospective/resource-behavior-higher-dimensional-sdm-v1-20261120
+    paths:
+      - 'prospective/resource_behavior_sdm/goldshtein_*'
+      - '.github/workflows/resource-behavior-goldshtein-sourcegate.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  schema-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Pure source-free contract tests
+        run: python -m unittest discover -s prospective/resource_behavior_sdm -p 'test_goldshtein_mendeley_metadata_gate_v1.py' -v
+
+  original-mendeley-metadata:
+    needs: schema-contract
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Official published metadata only, no original biological file reads
+        run: python prospective/resource_behavior_sdm/goldshtein_mendeley_metadata_gate_v1.py --out prospective/resource_behavior_sdm/goldshtein_metadata_receipt_v1.json
+      - name: Preserve PASS or STOP metadata receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: goldshtein-original-source-metadata-v1
+          path: prospective/resource_behavior_sdm/goldshtein_metadata_receipt_v1.json
+          if-no-files-found: error
+          retention-days: 30
