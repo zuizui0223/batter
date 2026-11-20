@@ -1,0 +1,81 @@
+{
+  "schema": "batter.ducke.genus_label_partition_equal_complexity.v4",
+  "date": "2026-11-20",
+  "source_doi": "10.5061/dryad.9rb48c5",
+  "original_dryad_zip_sha256": "55c784e2f7b37987e3657d3ba3d5cf6a41bb3554a11904969d1376c977bcdbce",
+  "design_freeze_git_commit": "9c35ebf09945ea138c239917291d5b333c3765d3",
+  "status": "POST_OUTCOME_SINGLE_STUDY_EXPLORATORY_PARTITION_RANDOMIZATION",
+  "n_qualified_plots": 46,
+  "n_matched_plot_nights": 103,
+  "n_analyzed_captured_four_guild_bats": 809,
+  "all_source_plant_categories": 22,
+  "named_genera": 21,
+  "unidentified_category_label": "Not_identified",
+  "total_individual_fruiting_plant_count_in_matched_nights": 661,
+  "unidentified_source_count": 52,
+  "published_food_candidate_named_genera_n": 12,
+  "remaining_source_plant_categories_n": 10,
+  "response": "site-equal heldout log score for one normalized 4-guild distribution among captured bats",
+  "heldout": "seven original spatial/layout source blocks",
+  "n_random_draws_per_null": 199,
+  "observed_published_F12_O10_minus_baseline": 0.028769056084009925,
+  "observed_published_F12_O10_minus_pooled_total": 0.026106713469882692,
+  "v3_comparison_reference": 0.026106662918648254,
+  "unrestricted_random_partition": {
+    "n_draws": 199,
+    "n_unique_partitions": 199,
+    "n_at_least_observed": 4,
+    "exploratory_plus_one_tail_fraction": 0.025,
+    "null_mean_gain_vs_total": -0.002700617528526017,
+    "null_5_to_95_gain_vs_total": [
+      -0.020762787611050326,
+      0.021932826150678597
+    ],
+    "null_median_gain_vs_total": -0.003141585959601345,
+    "observed_minus_null_mean_score": 0.02880733099840871
+  },
+  "abundance_matched_random_partition": {
+    "n_draws": 199,
+    "n_unique_partitions": 198,
+    "n_at_least_observed": 10,
+    "exploratory_plus_one_tail_fraction": 0.055,
+    "null_mean_gain_vs_total": 0.0012463798957562666,
+    "null_5_to_95_gain_vs_total": [
+      -0.01492549268346055,
+      0.025910831700207693
+    ],
+    "null_median_gain_vs_total": -0.0023434423753849742,
+    "observed_minus_null_mean_score": 0.024860333574126425,
+    "abundance_quartile_12food_count": [
+      4,
+      2,
+      2,
+      4
+    ]
+  },
+  "sensitivity_exclude_unidentified": {
+    "number_named_genera": 21,
+    "candidate_food_n": 12,
+    "remaining_named_genera_n": 9,
+    "split_minus_named_total": 0.028159016545033833
+  },
+  "sensitivity_L3_L8_without_PO": {
+    "n_plots": 29,
+    "n_blocks": 6,
+    "split_minus_baseline": 0.022878166844738423,
+    "split_minus_total": 0.013778178015096287
+  },
+  "numerical_replay": {
+    "SciPy_vs_earlier_v3_abs_delta_less_than": 5.1e-8,
+    "purePython_vs_SciPy_observed_and_one_fixed_random_abs_delta_less_than": 1.7e-8,
+    "GitHub_sourcefree_CI_success": "https://github.com/zuizui0223/batter/actions/runs/44748952410"
+  },
+  "original_plant_genus_bat_diet_specificity_established": false,
+  "original_vegetation_clutter_adjusted": false,
+  "new_external_replication": false,
+  "causal_mechanism_estimated": null,
+  "resource_conditioned_vertical_height_gain": null,
+  "original_NeoBat_M3_minus_M1_or_N1": null,
+  "raw_original_site_plant_bat_data_committed": false,
+  "random_draw_score_vectors_committed": false
+}
