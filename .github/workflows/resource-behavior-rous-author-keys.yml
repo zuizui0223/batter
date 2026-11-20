@@ -1,0 +1,45 @@
+name: Rousettus author source key-only structural admission
+
+on:
+  push:
+    branches:
+      - prospective/resource-behavior-higher-dimensional-sdm-v1-20261120
+    paths:
+      - 'prospective/resource_behavior_sdm/dryad_rous_author_source_keys.py'
+      - 'prospective/resource_behavior_sdm/test_dryad_rous_author_source_keys.py'
+      - '.github/workflows/resource-behavior-rous-author-keys.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  synthetic-schema:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Gate tests without network
+        run: python -m unittest discover -s prospective/resource_behavior_sdm -p test_dryad_rous_author_source_keys.py -v
+
+  original-author-only:
+    needs: synthetic-schema
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Pinned author CSV blob verify and structural keys only
+        run: python prospective/resource_behavior_sdm/dryad_rous_author_source_keys.py
+      - name: Archive aggregate source-only receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rous-source-key-only-v1
+          path: prospective/resource_behavior_sdm/rous_author_source_key_receipt.json
+          retention-days: 30
+          if-no-files-found: error
