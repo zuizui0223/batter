@@ -74,6 +74,12 @@ Evaluate **both** horizontal `Δ log-score/AUC` (only if valid heldout species-l
 
 `test_resource_behavior_sdm.py` supplies synthetic unit tests showing that a positive individual vertical-information value can coexist with **identical horizontal use** by individuals, that resource-weight ablations change logits by construction, and that unequal detection changes recorded rates without changing true-use probabilities. These demonstrate **logical possibility and numerical bookkeeping only**, not fitted bat mechanisms or empirical gains.
 
+### Worked known-truth counterexample (simulation mathematics only)
+
+In the exact source-free behavioral-mixture fixture, two equally weighted individuals have **identical horizontal use** and share **both** height bins. They differ only in the proportion of two objectively assigned behaviors: one forages 80% and the other 20%; the *within-behavior* height probabilities are identical for both. The generated marginal (p(high)) is 0.68 versus 0.32. This yields `I(individual;z | XY,time) = 0.06627772` nats but `I(individual;z | XY,time,behavior) = 0`. Thus individual height fingerprints need **not** imply within-state flight differences, competition, or exclusive 3-D space use.
+
+In a separate single-location, two-time resource-policy fixture, an **assigned** resource score change from 0 to 1 with `beta_forage=2` changes `p(forage)` from 0.5000 to 0.880797 and `p(high | time)` from **0.5000 to 0.804638** while keeping the entire horizontal projection at exactly one cell. These are probabilities computed from chosen toy coefficients, **not estimates or replications of wild bats**. This makes the paper's prospective question measurable: resource information might improve *conditional* movement-state/height prediction even if the 2-D distribution metric cannot change.
+
 No raw source coordinates, personally identifying bat labels, copyrighted supplements, fine-resolution spatial arrays or field resource measurements are committed. This is a computational interface to which independently authenticated/fitted predictors can later be attached.
 
 ## 4. Immediate empirical gate and STOP conditions
