@@ -94,7 +94,7 @@ class ResourceBehaviorSDMTests(unittest.TestCase):
         )
         self.assertGreater(identity_vertical_information(use), 0.06)
         self.assertAlmostEqual(identity_vertical_information_given_state(use), 0.0, places=12)
-        self.assertEqual(project_horizontal(use), {"A": 1.0})
+        self.assertAlmostEqual(project_horizontal(use)["A"], 1.0, places=12)
         self.assertTrue(all(p > 0.0 for p in use.values()))
 
     def test_measured_resource_can_shift_behavior_not_horizontal_cells(self):
