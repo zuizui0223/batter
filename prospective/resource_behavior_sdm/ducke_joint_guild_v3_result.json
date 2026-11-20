@@ -87,10 +87,10 @@
   "claim_ceiling": "Single published forest study; local captured-guild composition predictive information, no independently identified diet or causal mechanism",
   "exclusions": {
     "sanguivore_excluded": true,
-    "unrecorded_vegetation_clutter": false,
     "independent_external_study": false,
     "actual_fruit_consumption_observed": false,
-    "source_capture_differences_resolved": false
+    "source_capture_differences_resolved": false,
+    "vegetation_clutter_available_in_uploaded_workbook": false
   },
   "source_local_3D_resource_height_gain": null,
   "NeoBat_species_M3_M1_increment": null
