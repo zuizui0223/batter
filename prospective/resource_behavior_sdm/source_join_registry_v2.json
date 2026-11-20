@@ -142,6 +142,42 @@
         "behavior_label_independent_of_height": false,
         "observation_sampling_calibrated": false
       }
+    },
+    {
+      "id": "chrotopterus_mexico_2026",
+      "species": "Chrotopterus auritus",
+      "study_locality": "Calakmul, Mexico (3 sites)",
+      "period": "Original field program, published 2026-10-30",
+      "source_tracking": "https://doi.org/10.5061/dryad.7d7wm38c0",
+      "source_resource": "https://doi.org/10.5061/dryad.7d7wm38c0",
+      "role": "Published 17 bats/57 nightly trajectories: 3D GPS height MSL, XY HMM state proxies, 10m binary forest/landcover. Official original DOI/version/file metadata PASS action 44729699721; original raw GPS ZIP content download HTTP401 action 44729946430. Landcover not measured prey supply; original height, event join not opened.",
+      "flags": {
+        "same_population": true,
+        "original_bat_rows_authenticated_and_opened": false,
+        "verified_same_event_join": false,
+        "vertical_height_verified": false,
+        "independent_time_aligned_food_supply": false,
+        "behavior_label_independent_of_height": false,
+        "observation_sampling_calibrated": false
+      }
+    },
+    {
+      "id": "ducke_fruit_insect_captures_2018",
+      "species": "Phyllostomidae community; 52 captured bat species",
+      "study_locality": "Reserva Adolpho Ducke, Amazonas, Brazil (49 plots)",
+      "period": "Bat sampling 2013-2014; published 2018",
+      "source_tracking": "https://doi.org/10.5061/dryad.9rb48c5",
+      "source_resource": "https://doi.org/10.5061/dryad.9rb48c5",
+      "role": "Same plot independently measured fruited plant and insect biomass plus bat captures, plot elevation and vegetation. Original Dryad metadata PASS 44729699721, original 67k XLSX HTTP401 44729946430. No individual GPS 3D flight heights. Eligible future LOCAL resource and bat guild association, NOT 5D joint source.",
+      "flags": {
+        "same_population": true,
+        "original_bat_rows_authenticated_and_opened": false,
+        "verified_same_event_join": false,
+        "vertical_height_verified": false,
+        "independent_time_aligned_food_supply": false,
+        "behavior_label_independent_of_height": false,
+        "observation_sampling_calibrated": false
+      }
     }
   ],
   "forbidden_cross_source_pair": {

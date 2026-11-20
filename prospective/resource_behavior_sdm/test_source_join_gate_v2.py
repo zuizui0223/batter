@@ -13,7 +13,7 @@ class SourceJoinTests(unittest.TestCase):
 
     def test_every_real_candidate_fails_at_least_one_unverified_input(self):
         result = audit_registry(self.registry)
-        self.assertEqual(result["candidate_count"], 7)
+        self.assertEqual(result["candidate_count"], 9)
         self.assertEqual(result["strict_ready_count"], 0)
         self.assertIsNone(result["claimed_ecological_gain"])
         self.assertTrue(all(r["all_stop_reasons"] for r in result["decisions"]))
@@ -41,6 +41,17 @@ class SourceJoinTests(unittest.TestCase):
                       gate_source(row)["all_stop_reasons"])
         self.assertIn("STOP_NO_VERIFIED_HEIGHT",
                       gate_source(row)["all_stop_reasons"])
+
+    def test_new_original_metadata_only_source_stop(self):
+        for label in ("chrotopterus_mexico_2026","ducke_fruit_insect_captures_2018"):
+            row=next(x for x in self.registry["sources"] if x["id"]==label)
+            self.assertTrue(row["flags"]["same_population"])
+            self.assertFalse(row["flags"]["original_bat_rows_authenticated_and_opened"])
+            self.assertFalse(row["flags"]["verified_same_event_join"])
+            self.assertIn("STOP_SOURCE_BYTES_UNVERIFIED",gate_source(row)["all_stop_reasons"])
+        duck=next(x for x in self.registry["sources"]
+                  if x["id"]=="ducke_fruit_insect_captures_2018")
+        self.assertFalse(duck["flags"]["vertical_height_verified"])
 
     def test_missing_or_non_boolean_flags_stop(self):
         c = {"id":"toy", "flags": {name:True for name,_ in FIELDS}}
