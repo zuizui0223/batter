@@ -1,0 +1,114 @@
+{
+  "schema": "batter.resource_behavior_sdm.claim_gate.v1",
+  "created_utc": "2026-11-20",
+  "purpose": "Provenance-anchored evidence migration; NOT a fitted empirical resource-behavior SDM.",
+  "source_of_truth": "https://github.com/zuizui0223/esdm/blob/design/neobat-trophic-sdm-phase1-20261119/docs/replication/NEOBAT_RESOURCE_SDM_STATUS_LEDGER_20261119.md",
+  "reference_sources": {
+    "neobat_prefit": "https://github.com/zuizui0223/esdm/pull/244",
+    "neobat_shadow": "https://github.com/zuizui0223/esdm/pull/266",
+    "botanical_source_transfer": "https://github.com/zuizui0223/esdm/pull/259",
+    "fixed35_gate": "https://github.com/zuizui0223/esdm/pull/268",
+    "batter_behavior": "https://github.com/zuizui0223/batter/pull/99",
+    "boids_prediction": "https://github.com/zuizui0223/boids/blob/main/docs/EVIDENCE_AND_PREDICTION.md"
+  },
+  "claims": [
+    {
+      "id": "LINK_RECURRENCE",
+      "tier": "SOURCE_NETWORK_EXPLORATORY_POSITIVE",
+      "n_countries_qualified": 6,
+      "n_countries_candidate": 12,
+      "n_links_tested": 338,
+      "observed_percent": 46.94,
+      "rewired_null_percent": 40.55,
+      "difference_percentage_points": 6.39,
+      "monte_carlo_p": 0.001,
+      "eligible_claim": "published NeoBat bat–plant source-link recurrence within the original source universe",
+      "not_claim": "independent fruit supply, measured bat feeding, ecological resource SDM gain",
+      "source": "neobat_prefit"
+    },
+    {
+      "id": "BOTANICAL_RECORD_RANK",
+      "tier": "OBSERVATION_RANK_EXPLORATORY_POSITIVE",
+      "n_candidate": 1802,
+      "n_evaluable": 647,
+      "country_equal_increment_auc": 0.02539,
+      "descriptive_country_resample_interval": [
+        0.01534,
+        0.03733
+      ],
+      "eligible_claim": "additional abiotic rank information in GBIF botanical recording patterns beyond source-derived intensity",
+      "not_claim": "ecological fruit abundance or bat species availability",
+      "source": "botanical_source_transfer"
+    },
+    {
+      "id": "RESOURCE_DATA_FEASIBILITY",
+      "tier": "PREFIT_FEASIBILITY_ONLY",
+      "n_original_bat_country_total": 754,
+      "n_initial_strict": 84,
+      "n_joint_source_raster_qualified": 36,
+      "n_joint_species": 11,
+      "n_joint_countries": 10,
+      "n_fixed_plant_species": 35,
+      "n_plant_country_source_raster_qualified": 592,
+      "n_plant_country_total": 595,
+      "eligible_claim": "audited data eligibility and source/raster compatibility for future fits",
+      "not_claim": "calibrated botanical maps, validated bat prediction",
+      "source": "fixed35_gate"
+    },
+    {
+      "id": "SHADOW_LINKED_FRUIT_IDENTITY",
+      "tier": "EXPLORATORY_NO_POSITIVE_GENERAL_GAIN",
+      "n_original_strict": 84,
+      "n_prefit_qualified": 51,
+      "n_fitted": 49,
+      "mean_linked_minus_generic_auc": -0.00569,
+      "mean_linked_minus_rewired_auc": -0.008,
+      "eligible_claim": "no consistent linked-partner identity increment in the weak climate-only GBIF source-rank shadow test",
+      "not_claim": "M3 is ecologically ineffective, independent country resource availability measured",
+      "source": "neobat_shadow"
+    },
+    {
+      "id": "WILD_VERTICAL_IDENTITY",
+      "tier": "EMPIRICAL_SOURCE_SPECIFIC_POSITIVE",
+      "n_comparative_shape_panels": 5,
+      "n_tropical_terrain_panels": 4,
+      "n_tropical_terrain_positive": 4,
+      "n_spatial_excess_positive": 0,
+      "eligible_claim": "within-source individual vertical-use map fidelity and centered-height shape",
+      "not_claim": "individual resource specialization, true physical separation, universal 3D SDM rule",
+      "source": "batter_behavior"
+    },
+    {
+      "id": "TADARIDA_TRANSITION",
+      "tier": "OBSERVED_PREDICTION_WITH_SENSOR_ALIASING_BOUND",
+      "m1_minus_m0_nats_per_transition": 0.01383,
+      "eligible_claim": "held-out transition class prediction conditional on prior climb class in the analyzed source extraction",
+      "not_claim": "physical inertia, unique bat flight force, resource-linked prediction",
+      "source": "boids_prediction"
+    }
+  ],
+  "strict_unestimated": {
+    "ecological_partner_m3_minus_m1": null,
+    "ecological_partner_m3_minus_rewired_n1": null,
+    "higher_dim_resource_conditional_bat_logscore_gain": null,
+    "independent_fruit_supply_map": null,
+    "individual_resource_behavior_join": null,
+    "sensor_calibrated_altitude_policy": null,
+    "external_resource_sdm_confirmation": null
+  },
+  "not_directly_joinable": [
+    "NeoBat primary frugivore occurrence partners vs wild tropical individual tracking panels",
+    "country-level 25-km presence-record support vs 500-m XY conditional height",
+    "WorldClim historical averages vs time-aligned fruit availability",
+    "GBIF reporting intensity vs sampled animal absence or detector probability"
+  ],
+  "frozen_positive_test_hypotheses": [
+    "Does independently measured resource opportunity change p(behavior,height,time | XY) even if horizontal AUC stays unchanged?",
+    "Does individual vertical fidelity remain after independently annotated behavior and measured patch availability?",
+    "Does authentic linked-partner prediction beat degree-preserving rewiring on identical out-of-source folds and heldout events?"
+  ],
+  "claim_gate": "UNVALIDATED_HIGHDIMENSIONAL_RESOURCE_SDM_PROTOTYPE",
+  "migration_target": "batter/prospective/resource_behavior_sdm",
+  "changes_to_frozen_bat_manuscripts": false,
+  "changes_to_esdm_main": false
+}
