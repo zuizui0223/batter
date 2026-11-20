@@ -78,7 +78,7 @@
       "period": "June, July, December 2020",
       "source_tracking": "https://doi.org/10.5061/dryad.51c59zwgp",
       "source_resource": "https://doi.org/10.5061/dryad.51c59zwgp",
-      "role": "Tree coordinates, treatment and visitation track original source listed, experimentally fruitless Ficus sycomorus target cue; 2D behavior pilot, not available food supply. Original CSV/SQLite record linkage unverified (direct file download HTTP403).",
+      "role": "Experimental 2D fruitless-Ficus odor-cue and individual visits; official Dryad original dataset metadata PASS, direct original CSV 401. Author GitHub is separately published but does not match original Dryad reported byte sizes, not a publisher-identical mirror. No actual event-level link to food or 3D heights.",
       "flags": {
         "same_population": true,
         "original_bat_rows_authenticated_and_opened": false,
@@ -122,6 +122,24 @@
         "vertical_height_verified": true,
         "independent_time_aligned_food_supply": false,
         "behavior_label_independent_of_height": true,
+        "observation_sampling_calibrated": false
+      }
+    },
+    {
+      "id": "leptonycteris_cactus_goldshtein_2020",
+      "species": "Leptonycteris yerbabuenae",
+      "study_locality": "Sonoran Desert, Mexico; original mapped cactus foraging fields",
+      "period": "Goldshtein et al. 2020 published original",
+      "source_tracking": "https://doi.org/10.17632/jxghjjsttw.1",
+      "source_resource": "https://doi.org/10.17632/jxghjjsttw.1",
+      "role": "Same field study published 17 GPS bats, altitude above ground and approx 3600 flower-mapped cacti in fields of 8 bats; publisher Mendeley original dataset API HTTP401 (Actions 44683043418) means released raw height + flower alignment not verified. Published cactus-visit state uses height below 20m; circular to use it to predict heldout height.",
+      "flags": {
+        "same_population": true,
+        "original_bat_rows_authenticated_and_opened": false,
+        "verified_same_event_join": false,
+        "vertical_height_verified": false,
+        "independent_time_aligned_food_supply": false,
+        "behavior_label_independent_of_height": false,
         "observation_sampling_calibrated": false
       }
     }
