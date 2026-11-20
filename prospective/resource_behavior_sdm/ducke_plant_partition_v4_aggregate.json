@@ -77,5 +77,7 @@
   "resource_conditioned_vertical_height_gain": null,
   "original_NeoBat_M3_minus_M1_or_N1": null,
   "raw_original_site_plant_bat_data_committed": false,
-  "random_draw_score_vectors_committed": false
+  "random_draw_score_vectors_committed": false,
+  "n_unidentified_original_source_rows_with_match": 12,
+  "unidentified_source_count_unit": "sum of source Amount across 12 original same-plot/same-date fruit rows, not number of records"
 }

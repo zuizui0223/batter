@@ -247,7 +247,9 @@
         "real_individual_bat_GPS_height_resource_join_estimated": false,
         "unknown_plant_taxonomy_can_be_called_genus": false,
         "new_ecological_species_SDM": null,
-        "new_5d_resource_height_gain": null
+        "new_5d_resource_height_gain": null,
+        "n_original_matched_rows_for_unidentified_source_category": 12,
+        "unidentified_count_value_is_sum_of_original_Amount_field": true
       }
     }
   ],

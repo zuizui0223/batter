@@ -89,6 +89,8 @@ class ResourceBehaviorClaimGateTests(unittest.TestCase):
         self.assertEqual(v["n_original_plant_categories"],22)
         self.assertEqual(v["n_named_genera"],21)
         self.assertEqual(v["n_unidentified_observed_fruiting_plant_entries"],52)
+        self.assertEqual(v["n_original_matched_rows_for_unidentified_source_category"],12)
+        self.assertTrue(v["unidentified_count_value_is_sum_of_original_Amount_field"])
         self.assertAlmostEqual(v["random_12_of_22_null"]["exploratory_plus_one_fraction"],.025)
         self.assertAlmostEqual(v["abundance_quartile_matched_12_of_22_null"]["exploratory_plus_one_fraction"],.055)
         self.assertFalse(v["label_specific_food_causal_effect_established"])
