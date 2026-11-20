@@ -6,6 +6,8 @@ from resource_behavior_sdm import (
     detected_event_distribution,
     habitat_log_scores,
     identity_vertical_information,
+    identity_vertical_information_given_state,
+    resource_conditioned_state_policies,
     joint_use_distribution,
     mean_heldout_event_log_score,
     project_horizontal,
@@ -78,6 +80,67 @@ class ResourceBehaviorSDMTests(unittest.TestCase):
         self.assertAlmostEqual(use[("I1", "A", "dusk", "commute", "high")], 0.5)
         self.assertAlmostEqual(use[("I1", "A", "night", "forage", "low")], 0.5)
         self.assertEqual(project_horizontal(use), {"A": 1.0})
+
+    def test_behavioral_mixture_can_explain_individuality_without_partition(self):
+        """Same vertical rule per state, different state proportions per bat."""
+        use = joint_use_distribution(
+            {("A", "t"): 0.0}, {"I1": 1.0, "I2": 1.0},
+            {("I1", "A", "t"): {"forage": 0.8, "commute": 0.2},
+             ("I2", "A", "t"): {"forage": 0.2, "commute": 0.8}},
+            {("I1", "A", "t", "forage"): {"low": 0.2, "high": 0.8},
+             ("I1", "A", "t", "commute"): {"low": 0.8, "high": 0.2},
+             ("I2", "A", "t", "forage"): {"low": 0.2, "high": 0.8},
+             ("I2", "A", "t", "commute"): {"low": 0.8, "high": 0.2}},
+        )
+        self.assertGreater(identity_vertical_information(use), 0.06)
+        self.assertAlmostEqual(identity_vertical_information_given_state(use), 0.0, places=12)
+        self.assertEqual(project_horizontal(use), {"A": 1.0})
+        self.assertTrue(all(p > 0.0 for p in use.values()))
+
+    def test_measured_resource_can_shift_behavior_not_horizontal_cells(self):
+        base = {
+            ("I1", "A", "dry"): {"forage": 0.0, "commute": 0.0},
+            ("I1", "A", "fruiting"): {"forage": 0.0, "commute": 0.0},
+        }
+        resources = {("A", "dry"): 0.0, ("A", "fruiting"): 1.0}
+        states = resource_conditioned_state_policies(
+            base, resources, {"forage": 2.0, "commute": 0.0}
+        )
+        zero = resource_conditioned_state_policies(
+            base, resources, {"forage": 0.0, "commute": 0.0}
+        )
+        self.assertGreater(
+            states[("I1", "A", "fruiting")]["forage"],
+            states[("I1", "A", "dry")]["forage"],
+        )
+        self.assertAlmostEqual(zero[("I1", "A", "fruiting")]["forage"], 0.5)
+        height = {
+            ("I1", "A", t, b): {"low": 0.1, "high": 0.9} if b == "forage"
+                              else {"low": 0.9, "high": 0.1}
+            for t in ("dry", "fruiting")
+            for b in ("forage", "commute")
+        }
+        use = joint_use_distribution(
+            {("A", "dry"): 0.0, ("A", "fruiting"): 0.0},
+            {"I1": 1.0}, states, height,
+        )
+        self.assertEqual(project_horizontal(use), {"A": 1.0})
+        high_fruiting = sum(p for (i, x, t, b, z), p in use.items()
+                           if t == "fruiting" and z == "high")
+        high_dry = sum(p for (i, x, t, b, z), p in use.items()
+                       if t == "dry" and z == "high")
+        self.assertGreater(high_fruiting, high_dry)
+
+    def test_resource_policy_missing_support_is_stop(self):
+        base = {("I1", "A", "t"): {"forage": 0.0, "commute": 0.0}}
+        with self.assertRaises(ValueError):
+            resource_conditioned_state_policies(
+                base, {}, {"forage": 1.0, "commute": 0.0}
+            )
+        with self.assertRaises(ValueError):
+            resource_conditioned_state_policies(
+                base, {("A", "t"): 1.0}, {"forage": 1.0}
+            )
 
     def test_resource_ablation_not_an_empirical_fit(self):
         space = {("A", "t"): 0.0, ("B", "t"): 0.0}
