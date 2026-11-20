@@ -43,6 +43,20 @@ class GroupedVerticalTests(unittest.TestCase):
         self.assertEqual(len(x["source_group_scores"]),2)
         self.assertNotIn("p_value",x)
 
+    def test_food_model_does_not_alter_baseline_prediction_denominator(self):
+        a=score_group_heldout(simulated_rows(),"individual",use_food=False)
+        b=score_group_heldout(simulated_rows(with_food=True),"individual",use_food=True)
+        self.assertEqual(a["n_folds"],b["n_folds"])
+        for aa,bb in zip(a["source_group_scores"],b["source_group_scores"]):
+            self.assertAlmostEqual(
+                aa["matched_scores_nats_per_observed_fix"]["kinematic_time"],
+                bb["matched_scores_nats_per_observed_fix"]["kinematic_time"],places=12)
+            self.assertAlmostEqual(
+                aa["matched_scores_nats_per_observed_fix"]["add_habitat"],
+                bb["matched_scores_nats_per_observed_fix"]["add_habitat"],places=12)
+            self.assertNotIn("heldout_block",aa)
+            self.assertIn("heldout_block_ordinal",aa)
+
     def test_true_food_cannot_be_assumed_from_habitat(self):
         with self.assertRaisesRegex(ValueError,"NO_INDEPENDENT_TIME_MATCHED_FOOD"):
             score_group_heldout(simulated_rows(),use_food=True)

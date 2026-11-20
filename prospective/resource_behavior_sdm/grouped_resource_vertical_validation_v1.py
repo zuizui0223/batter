@@ -120,7 +120,7 @@ def score_group_heldout(rows, heldout="individual", use_food=False):
     if len(folds)<2:
         raise ValueError("STOP_TOO_FEW_HELDOUT_GROUPS")
     fold_records=[]
-    for group in folds:
+    for fold_idx,group in enumerate(folds, start=1):
         train=[r for r in data if _fold_value(r,heldout)!=group]
         test=[r for r in data if _fold_value(r,heldout)==group]
         if len({r["individual"] for r in train})<3:
@@ -142,14 +142,14 @@ def score_group_heldout(rows, heldout="individual", use_food=False):
             for name,vals in d.items():
                 by_bat[nk[0]][name].append(math.fsum(vals)/len(vals))
         scores={name:math.fsum(
-                   math.fsum(nightly[name])/len(nightly)
+                   math.fsum(nightly[name])/len(nightly[name])
                    for nightly in by_bat.values())/len(by_bat)
                 for name in feats}
         deltas={"habitat_minus_base":scores["add_habitat"]-scores["kinematic_time"]}
         if use_food:
             deltas["true_food_minus_habitat"]=scores["add_true_food"]-scores["add_habitat"]
         fold_records.append({
-            "heldout_block":str(group), # anonymized externally; NEVER archive real bat IDs
+            "heldout_block_ordinal":fold_idx, # no original bat/site labels ever returned
             "heldout_bats":len(by_bat),
             "heldout_bat_nights":len(by_night),
             "original_fix_count_for_scoring":len(test),
