@@ -99,6 +99,19 @@ class ResourceBehaviorClaimGateTests(unittest.TestCase):
         self.assertIsNone(v["new_5d_resource_height_gain"])
         self.assertIsNone(self.data["strict_unestimated"]["ecological_partner_m3_minus_m1"])
 
+    def test_hendel_external_published_qualitative_not_empirical_transfer(self):
+        x=self.data["independent_prey_transfer_20261121"]
+        self.assertEqual(x["source_sites_published"],64)
+        self.assertTrue(x["original_publisher_metadata_version_and_two_file_inventory_verified"])
+        self.assertFalse(x["original_publisher_content_available"])
+        self.assertEqual(x["original_publisher_dataset_download_http_status"],401)
+        self.assertIsNone(x["new_external_test_outcome"])
+        self.assertIsNone(x["external_resource_conditional_height_gain"])
+        self.assertTrue(x["cannot_compare_numeric_scores_to_ducke_fruit_capture_guild"])
+        self.assertFalse(x["raw_source_bytes_or_location_rows_uploaded_to_batter"])
+        self.assertIsNone(self.data["strict_unestimated"]["external_resource_sdm_confirmation"])
+        self.assertIsNone(self.data["strict_unestimated"]["higher_dim_resource_conditional_bat_logscore_gain"])
+
     def test_no_frozen_manuscript_or_parent_main_overwrite(self):
         self.assertFalse(self.data["changes_to_frozen_bat_manuscripts"])
         self.assertFalse(self.data["changes_to_esdm_main"])

@@ -310,5 +310,42 @@
     "grouped_scorer_original_animal_rows_tested": false,
     "grouped_scorer_synthetic_tests_passed": true,
     "real_highdimensional_resource_behavior_height_effect": null
+  },
+  "independent_prey_transfer_20261121": {
+    "evidence_tier": "EXTERNAL_PUBLISHED_EVIDENCE_AND_SOURCE_METADATA_ONLY",
+    "source_citation": "Hendel et al. 2025 JAE DOI 10.1111/1365-2664.14822",
+    "source_dryad_doi": "10.5061/dryad.xksn02vr1",
+    "source_publication_online": "2024-11-11",
+    "source_sites_published": 64,
+    "source_recording_mode": "bat acoustic one-minute call activity; NOT mutually-exclusive captured bat guild counts",
+    "source_resource_measurements": [
+      "moth abundance UV trap second night",
+      "moth taxonomic richness",
+      "ground beetle abundance pitfall earlier season",
+      "ground beetle species richness"
+    ],
+    "source_environment_controls": [
+      "elevation",
+      "DOY",
+      "temp_min",
+      "Opn_mean",
+      "ndsm_sd",
+      "ForMI"
+    ],
+    "original_publisher_metadata_version_and_two_file_inventory_verified": true,
+    "original_publisher_content_available": false,
+    "original_publisher_dataset_download_http_status": 401,
+    "official_source_gate_run": "https://github.com/zuizui0223/batter/actions/runs/44762637892",
+    "sourcefree_predictor_tests_run": "https://github.com/zuizui0223/batter/actions/runs/44763244302",
+    "published_orig_author_results_not_new_reanalysis": "SRE bat acoustic activity associated positively with moth abundance and negatively with moth species richness; LRE linked to beetle abundance and richness; SEM direction assumptions and different trap timing limit causal interpretation",
+    "new_external_test_outcome": null,
+    "cannot_compare_numeric_scores_to_ducke_fruit_capture_guild": true,
+    "independent_field_sample_overlap_with_Ducke": false,
+    "raw_source_bytes_or_location_rows_uploaded_to_batter": false,
+    "source_3d_individual_trajectory_available": false,
+    "external_resource_conditional_height_gain": null,
+    "field_biological_claim_permitted": "Original authors' published qualitative cross-context triangulation only; new heldout forecast is not fitted",
+    "followup_source_file_name": "Hendel_etal_2024_Data_DRYAD.xlsx",
+    "protected_main_and_frozen_manuscripts_changed": false
   }
 }
