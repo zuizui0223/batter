@@ -1,0 +1,45 @@
+name: Original independent bat 3D and measured-food Dryad metadata gate
+
+on:
+  push:
+    branches:
+      - prospective/resource-behavior-higher-dimensional-sdm-v1-20261120
+    paths:
+      - 'prospective/resource_behavior_sdm/independent_resource_vertical_dryad_gate_v1.py'
+      - 'prospective/resource_behavior_sdm/test_independent_resource_vertical_dryad_gate_v1.py'
+      - '.github/workflows/resource-behavior-independent-source-meta.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  source-free-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Fixed-source-scope, metadata-only and anti-crossjoin assertions
+        run: python -m unittest discover -s prospective/resource_behavior_sdm -p test_independent_resource_vertical_dryad_gate_v1.py -v
+
+  original-publisher-metadata:
+    needs: source-free-checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify official Dryad DOI/version/file list of both independent candidate sources only
+        run: python prospective/resource_behavior_sdm/independent_resource_vertical_dryad_gate_v1.py
+      - name: Archive metadata-only PASS/STOP receipts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bat-independent-3d-food-original-dryad-metadata
+          path: prospective/resource_behavior_sdm/independent_resource_vertical_dryad_metadata_v1.json
+          if-no-files-found: error
+          retention-days: 30
