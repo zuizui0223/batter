@@ -14,6 +14,10 @@ def simulated_rows(with_food=False,all_interpolated=False):
                     "individual":"toy_ind_"+str(i),
                     "night":"night_"+str(night),
                     "site":"site_a" if i<4 else "site_b",
+                    "horizontal_cell":"coarse_XY_shared",
+                    "height_datum_verified":True,
+                    "state_annotation_outcome_blind":True,
+                    "habitat_independently_measured":True,
                     "time_bin":"night",
                     "kinematic_state":"moving",
                     "height_bin":z,
@@ -63,6 +67,20 @@ class GroupedVerticalTests(unittest.TestCase):
         x=score_group_heldout(simulated_rows(with_food=True),use_food=True)
         self.assertIn("true_food_minus_habitat",x["equal_heldout_group_mean_gain"])
         self.assertTrue(x["food_channel_is_directly_measured_and_time_matched"])
+
+    def test_unsafe_annotation_provenance_never_enters_fit(self):
+        for flag in ("height_datum_verified","state_annotation_outcome_blind",
+                     "habitat_independently_measured"):
+            sample=simulated_rows()
+            sample[0][flag]=False
+            with self.assertRaisesRegex(ValueError,"UNVERIFIED_HEIGHT_STATE_OR_HABITAT"):
+                score_group_heldout(sample)
+
+    def test_coarse_xy_must_be_prespecified_not_derived_from_target_height(self):
+        data=simulated_rows()
+        del data[0]["horizontal_cell"]
+        with self.assertRaisesRegex(ValueError,"SOURCE_SCHEMA"):
+            score_group_heldout(data)
 
     def test_interpolated_source_is_never_a_new_gps_fix(self):
         with self.assertRaisesRegex(ValueError,"NONORIGINAL_OR_INTERPOLATED_FIX"):

@@ -15,9 +15,10 @@ import math
 HEIGHT_CLASSES=("low","middle","high")
 ALPHA=0.5
 PRIOR_STRENGTH=1.0
-CORE=("individual","night","site","time_bin","kinematic_state",
-      "height_bin","habitat_class","is_original_fix","is_interpolated")
-BASE=("time_bin","kinematic_state")
+CORE=("individual","night","site","horizontal_cell","time_bin","kinematic_state",
+      "height_bin","habitat_class","is_original_fix","is_interpolated",
+      "height_datum_verified","state_annotation_outcome_blind","habitat_independently_measured")
+BASE=("horizontal_cell","time_bin","kinematic_state")
 HABITAT=BASE+("habitat_class",)
 FOOD=HABITAT+("food_bin",)
 
@@ -31,8 +32,12 @@ def validate(rows, use_food=False):
             raise ValueError("STOP_INVALID_FROZEN_SOURCE_SCHEMA")
         if r["is_original_fix"] is not True or r["is_interpolated"] is not False:
             raise ValueError("STOP_NONORIGINAL_OR_INTERPOLATED_FIX")
-        if any(not isinstance(r[k],str) or not r[k].strip() for k in CORE[:7]):
+        if any(not isinstance(r[k],str) or not r[k].strip() for k in CORE[:8]):
             raise ValueError("STOP_MISSING_SOURCE_ID_TIME_STATE_HABITAT")
+        if (r["height_datum_verified"] is not True or
+            r["state_annotation_outcome_blind"] is not True or
+            r["habitat_independently_measured"] is not True):
+            raise ValueError("STOP_UNVERIFIED_HEIGHT_STATE_OR_HABITAT_PROVENANCE")
         if r["height_bin"] not in HEIGHT_CLASSES:
             raise ValueError("STOP_UNFROZEN_OR_MISSING_HEIGHT_CATEGORY")
         if use_food:
