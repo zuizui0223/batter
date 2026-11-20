@@ -1,6 +1,6 @@
 """Known-truth software tests only; no original Ducke bat or plant rows."""
 import unittest
-from ducke_guild_cv_engine_v1 import grouped_cv
+from ducke_guild_cv_engine_v1 import grouped_cv,predict
 
 def world():
     result=[]

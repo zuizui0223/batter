@@ -38,8 +38,12 @@ def _encode(items, names):
 def _standardize(train,test,names):
     a=_encode(train,names);b=_encode(test,names);n=len(a)
     mean=[math.fsum(r[j] for r in a)/n for j in range(len(names))]
-    sd=[max(math.sqrt(math.fsum((r[j]-mean[j])**2 for r in a)/n),1e-8)
-        for j in range(len(names))]
+    raw_sd=[math.sqrt(math.fsum((r[j]-mean[j])**2 for r in a)/n)
+            for j in range(len(names))]
+    # Crucial for a withheld source layout level absent from training:
+    # a constant training covariate must NOT be divided by 1e-8 and
+    # extrapolated into numerical saturation. Keep its scale at 1.
+    sd=[v if v>1e-8 else 1.0 for v in raw_sd]
     return ([[1.0]+[(r[j]-mean[j])/sd[j] for j in range(len(names))] for r in a],
             [[1.0]+[(r[j]-mean[j])/sd[j] for j in range(len(names))] for r in b])
 
