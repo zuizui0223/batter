@@ -69,6 +69,20 @@ class ResourceBehaviorClaimGateTests(unittest.TestCase):
         self.assertIsNone(self.data["strict_unestimated"]["ecological_partner_m3_minus_m1"])
         self.assertIsNone(self.data["strict_unestimated"]["higher_dim_resource_conditional_bat_logscore_gain"])
 
+    def test_ducke_joint_four_guild_v3_is_multivariate_but_not_validated_5d(self):
+        d={r["id"]:r for r in self.data["claims"]}["DUCKE_MEASURED_FOOD_LOCAL_GUILD_PREDICTION"]
+        v=d["joint_four_guild_composition_v3"]
+        self.assertEqual(v["four_guild_captures"],809)
+        self.assertEqual(v["excluded_single_sanguivore_captures"],1)
+        self.assertGreater(v["seven_source_blocks"]["split12plus10_minus_baseline"],0)
+        self.assertEqual(v["seven_source_blocks"]["positive_split_vs_baseline"],6)
+        self.assertEqual(v["six_L3_L8_only"]["positive_split_vs_baseline"],6)
+        self.assertFalse(v["actual_plant_food_consumption_established"])
+        self.assertFalse(v["resource_vertical_GPS_event_join_available"])
+        self.assertIsNone(v["empirical_resource_conditional_3D_height_gain"])
+        self.assertIsNone(self.data["strict_unestimated"]["ecological_partner_m3_minus_m1"])
+        self.assertIsNone(self.data["strict_unestimated"]["higher_dim_resource_conditional_bat_logscore_gain"])
+
     def test_no_frozen_manuscript_or_parent_main_overwrite(self):
         self.assertFalse(self.data["changes_to_frozen_bat_manuscripts"])
         self.assertFalse(self.data["changes_to_esdm_main"])

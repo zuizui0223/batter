@@ -148,6 +148,53 @@
         "empirical_resource_conditioned_flight_height_gain": null,
         "eligible_claim": "Source-internal grouped predictive information associated with fruiting-plant composition beyond total plant count, among captured bat guild shares",
         "not_claim": "Species-specific plant consumption, neutral/control nonfood plant group, causal filtering, independently validated SDM, true 5-D bat distribution"
+      },
+      "joint_four_guild_composition_v3": {
+        "tier": "ORIGINAL_SOURCE_LOCAL_POST_OUTCOME_MULTIVARIATE_GUILD_PREDICTION",
+        "design_frozen_before_v3_new_fit_commit": "abec244fb044fcff90f6fe368ebd76c92a2ef2b0",
+        "source": "prospective/resource_behavior_sdm/DUCKE_JOINT_FOUR_GUILD_V3_RESULT.md",
+        "original_dryad_DOI": "10.5061/dryad.9rb48c5",
+        "n_matched_plots": 46,
+        "n_source_blocks": 7,
+        "n_matched_captures": 810,
+        "four_guild_captures": 809,
+        "excluded_single_sanguivore_captures": 1,
+        "source_4guild_counts": {
+          "frug": 573,
+          "glean": 132,
+          "nectar": 58,
+          "aerial": 46
+        },
+        "response": "single normalized multinomial distribution over four captured guilds, plot-balanced conditional log predictive score",
+        "seven_source_blocks": {
+          "split12plus10_minus_baseline": 0.028769012688418298,
+          "split12plus10_minus_total22": 0.026106662918648254,
+          "candidate12_given_remaining10": 0.011854727027845307,
+          "remaining10_given_candidate12": 0.011533114018223687,
+          "positive_split_vs_baseline": 6,
+          "n_source_blocks": 7
+        },
+        "six_L3_L8_only": {
+          "n_plots": 29,
+          "split12plus10_minus_baseline": 0.022878088636233845,
+          "split12plus10_minus_total22": 0.013778112654121044,
+          "candidate12_given_remaining10": 0.0029339131807515164,
+          "remaining10_given_candidate12": 0.01523877633750198,
+          "positive_split_vs_baseline": 6,
+          "n_source_blocks": 6
+        },
+        "sourcefree_python_ci_pass": true,
+        "independent_SciPy_vs_purePython_max_abs_gain_difference": 3.080807875477376e-8,
+        "one_sanguivore_excluded_not_reassigned": true,
+        "full_original_vegetation_clutter_covariate_available": false,
+        "new_significance_p_value_estimated": false,
+        "independent_study_replication": false,
+        "actual_plant_food_consumption_established": false,
+        "ecological_species_occurrence_estimated": false,
+        "resource_vertical_GPS_event_join_available": false,
+        "causal_fruiting_plant_guild_effect": null,
+        "empirical_resource_conditional_3D_height_gain": null,
+        "interpretation": "Measured source fruiting-plant composition predicts captured-guild relative composition on the same study's heldout source blocks better than one total count, even in restricted L3-L8 plots. Does not prove exclusive diet or 5D source-level ecology."
       }
     }
   ],
