@@ -55,6 +55,20 @@ class ResourceBehaviorClaimGateTests(unittest.TestCase):
         self.assertIsNone(self.data["strict_unestimated"]["ecological_partner_m3_minus_m1"])
         self.assertIsNone(self.data["strict_unestimated"]["higher_dim_resource_conditional_bat_logscore_gain"])
 
+    def test_ducke_specificity_v2_never_promotes_to_causal_resource_height(self):
+        d={r["id"]:r for r in self.data["claims"]}["DUCKE_MEASURED_FOOD_LOCAL_GUILD_PREDICTION"]
+        r=d["source_specificity_v2"]
+        self.assertGreater(r["frugivore"]["both_separate_fruit_axes_minus_baseline"],0)
+        self.assertGreater(r["frugivore"]["food12_given_remaining10"],0)
+        self.assertGreater(r["gleaning_animalivore"]["remaining10_given_food12"],0)
+        self.assertFalse(r["true_independent_nonfood_negative_control"])
+        self.assertFalse(r["adjusted_for_paper_vegetation_clutter"])
+        self.assertFalse(r["independent_external_replication"])
+        self.assertIsNone(r["causal_plant_diet_selection_effect"])
+        self.assertIsNone(r["empirical_resource_conditioned_flight_height_gain"])
+        self.assertIsNone(self.data["strict_unestimated"]["ecological_partner_m3_minus_m1"])
+        self.assertIsNone(self.data["strict_unestimated"]["higher_dim_resource_conditional_bat_logscore_gain"])
+
     def test_no_frozen_manuscript_or_parent_main_overwrite(self):
         self.assertFalse(self.data["changes_to_frozen_bat_manuscripts"])
         self.assertFalse(self.data["changes_to_esdm_main"])

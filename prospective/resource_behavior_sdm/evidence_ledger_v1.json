@@ -112,7 +112,43 @@
       "controls": "terrain elevation, additional riparian sampling-frame indicator, matched-night count; missing vegetation clutter",
       "strict_claim_ceiling": "one published study, source-local heldout capture composition; not independent study replication, not causal, not measured feeding behavior, not true occupancy SDM",
       "not_claim": "new original publication finding, universally predictive food resource selection, independently matched 3D altitude, NeoBat M3-M1/N1 effect",
-      "source": "DUCKE_ORIGINAL_RESOURCE_BLOCKED_CV_V1.md"
+      "source": "DUCKE_ORIGINAL_RESOURCE_BLOCKED_CV_V1.md",
+      "source_specificity_v2": {
+        "tier": "POST_OUTCOME_SOURCE_LOCAL_PREDICTIVE_COMPOSITION_SIGNAL",
+        "result_file": "prospective/resource_behavior_sdm/ducke_source_specificity_v2.json",
+        "design_frozen_before_v2_fit_commit": "8a19e182514bfb0ba02ccbca7b0aad8d04d5e0a4",
+        "original_v1_frug_food_replay_diff_nats_less_than": 1.3e-9,
+        "n_matched_source_plots": 46,
+        "n_source_blocks": 7,
+        "frugivore": {
+          "both_separate_fruit_axes_minus_baseline": 0.02401058,
+          "food12_given_remaining10": 0.01103608,
+          "remaining10_given_food12": 0.00792591,
+          "both_vs_total_22": 0.02627405,
+          "both_vs_baseline_positive_blocks": 6,
+          "food12_given_other10_positive_blocks": 5,
+          "L3_L8_only_29plot_both_vs_baseline": 0.01473254,
+          "L3_L8_only_29plot_food12_given_other10": 0.00503562
+        },
+        "gleaning_animalivore": {
+          "food12_given_remaining10": 0.00012715,
+          "remaining10_given_food12": 0.01344538,
+          "remaining10_given_food12_positive_blocks": 7
+        },
+        "nectarivore": {
+          "food12_given_remaining10": 0.00546406,
+          "remaining10_given_food12": -0.00265177,
+          "remaining10_given_food12_positive_blocks": 0
+        },
+        "true_independent_nonfood_negative_control": false,
+        "adjusted_for_paper_vegetation_clutter": false,
+        "independent_external_replication": false,
+        "comparison_multitesting_preregistered": false,
+        "causal_plant_diet_selection_effect": null,
+        "empirical_resource_conditioned_flight_height_gain": null,
+        "eligible_claim": "Source-internal grouped predictive information associated with fruiting-plant composition beyond total plant count, among captured bat guild shares",
+        "not_claim": "Species-specific plant consumption, neutral/control nonfood plant group, causal filtering, independently validated SDM, true 5-D bat distribution"
+      }
     }
   ],
   "strict_unestimated": {
