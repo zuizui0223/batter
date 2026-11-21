@@ -134,6 +134,21 @@ class ResourceBehaviorClaimGateTests(unittest.TestCase):
         self.assertFalse(x["source_rows_committed"])
         self.assertIsNone(self.data["strict_unestimated"]["higher_dim_resource_conditional_bat_logscore_gain"])
 
+    def test_3d_forest_bird_prior_art_narrows_novelty_without_promotion(self):
+        p=self.data["prior_art_novelty_audit_20261121"]
+        self.assertEqual(p["seabird_3d_2026_n_taxa"],44)
+        self.assertTrue(p["behavior_hmm_ssf_simulated_utilization_distribution"])
+        self.assertEqual(p["number_of_hmm_ssf_simulated_tracks"],5)
+        self.assertIn("10.1002/ece3.11138",p["forest_bird_18_sector_binomial_model"])
+        self.assertIn("10.1016/j.foreco.2022.120668",
+                      p["forest_detection_adjusted_four_strata"])
+        self.assertFalse(p["empirical_joint_5d_model_fitted"])
+        self.assertFalse(p["source_3d_joint_data_verified"])
+        self.assertIsNone(p["new_resource_height_out_of_group_gain"])
+        self.assertTrue(p["horizontal_marginal_conservation_is_probability_identity_not_discovery"])
+        self.assertFalse(p["main_branch_or_frozen_article_changed"])
+        self.assertIsNone(self.data["strict_unestimated"]["higher_dim_resource_conditional_bat_logscore_gain"])
+
     def test_no_frozen_manuscript_or_parent_main_overwrite(self):
         self.assertFalse(self.data["changes_to_frozen_bat_manuscripts"])
         self.assertFalse(self.data["changes_to_esdm_main"])
