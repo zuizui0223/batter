@@ -1036,5 +1036,48 @@
       "author_contact_made": false,
       "resource_height_score": null
     }
+  },
+  "cistrone_uploaded_recorded_stratum_resource_20261121": {
+    "paper_doi": "10.1016/j.foreco.2026.124382",
+    "source_zip_sha256": "3eed7ceeb9c1201a3e8594c6d28115d268a7c64e1c1acdccfb6e5d50da872653",
+    "source_access_history_key": "vertical_measured_resource_source_access_20261121.cistrone_ground_canopy",
+    "earlier_source_access_block_resolved_by_user_upload": true,
+    "frozen_protocol_commit": "0f7b9a6972f81203f95c6eaf7d161c768946eacf",
+    "source_open_exploratory": true,
+    "source_plots": 20,
+    "positive_pass_plot_blocks": 19,
+    "zero_pass_plots_in_coverage_only": 1,
+    "insect_samples": 40,
+    "recorder_nights": 80,
+    "insect_individuals": 1123,
+    "recorded_bat_passes": 1301,
+    "same_study_plot_stratum_join_verified": true,
+    "time_effort_exact_recorder_height_join_verified": false,
+    "pooling": "two ordinal nights and all 17 species/acoustic groups within each plot",
+    "validation": "leave entire positive-pass plot out",
+    "score_unit": "nats per recorded pass within plot, macro-averaged over positive-pass plots",
+    "primary_total_catch_mean_gain": -0.015784009798270507,
+    "primary_positive_plots": 11,
+    "primary_plot_gain_range": [
+      -0.3332832230347128,
+      0.01852184217526409
+    ],
+    "secondary_order_catch_mean_gain": -0.01587029302247777,
+    "secondary_positive_plots": 3,
+    "secondary_plot_gain_range": [
+      -0.06039252074517065,
+      0.007223748375314476
+    ],
+    "both_fixed_comparisons_negative_on_macro_mean": true,
+    "source_comparison_closed": true,
+    "new_synthetic_tests_passed": 48,
+    "independent_numeric_comparison_passed": true,
+    "individual_resource_height_gain": null,
+    "individual_flight_or_observed_feeding_behavior_measured": false,
+    "causal_or_regional_sdm_claim": false,
+    "ecological_absence_of_association_claim": false,
+    "original_observations_plot_ids_or_source_spreadsheets_committed": false,
+    "result_document": "CISTRONE_RECORDED_STRATUM_RESOURCE_RESULT_20261121.md",
+    "aggregate_receipt": "cistrone_recorded_stratum_resource_receipt_20261121.json"
   }
 }
