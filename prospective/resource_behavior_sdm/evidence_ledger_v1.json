@@ -441,5 +441,36 @@
     "cactus_location_conditional_height_holdout_gain": null,
     "source_rows_committed": false,
     "protected_main_or_manuscripts_changed": false
+  },
+  "prior_art_novelty_audit_20261121": {
+    "evidence_tier": "PUBLISHED_PRIOR_ART_SOURCE_VERIFICATION_NOT_NEW_EMPIRICAL_STUDY",
+    "audit": "prospective/resource_behavior_sdm/PRIOR_ART_3D_FOREST_VERTICAL_AND_HMM_SSF_AUDIT_20261121.md",
+    "strongest_preexisting_2d_to_3d_seabird_form": "10.5038/2074-1235.54.1.1695",
+    "seabird_3d_2026_n_taxa": 44,
+    "seabird_3d_vertical_response": "P(flying above 10 meters ASL | flight group, wind)",
+    "marine_2026_full_pdf_unread_large": "SOURCE_ACCESS_LIMIT_NOT_FULL_ARTICLE_FIGURE_VERIFICATION",
+    "forest_detection_adjusted_four_strata": "10.1016/j.foreco.2022.120668",
+    "forest_bird_18_sector_binomial_model": "10.1002/ece3.11138",
+    "urban_bird_observed_height_ordinal_mixed_model": "10.3390/d17010016",
+    "amazon_mixed_flocks_xy_lidar_and_separate_height_samples": "10.1002/ecs2.4720",
+    "broadscale_bird_occurrence_lidar_structure_not_observed_bird_height": "10.1111/1365-2656.70326",
+    "behavior_hmm_ssf_state_dependent_use_distribution": "10.1186/s40462-023-00392-3",
+    "behavior_hmm_ssf_simulated_utilization_distribution": true,
+    "number_of_hmm_ssf_simulated_tracks": 5,
+    "fixes_per_hmm_ssf_simulated_track": 100000,
+    "claims_not_original": [
+      "2D horizontal spatial density times conditional vertical threshold probability",
+      "Terrestrial animal occupancy/use by forest vertical strata",
+      "Bird activity height predicted from structural covariates",
+      "HMM-SSF inferred behavioral states and generated utilization distribution",
+      "Resource/habitat opportunities allowed to influence HMM state transition or within-state selection"
+    ],
+    "candidate_unverified_novelty": "Independent measured resource × time × validated behavior × repeated-individual terrain-relative height conditional out-of-group empirical forecast with calibrated horizontal marginal",
+    "no_globally_exhaustive_review": true,
+    "empirical_joint_5d_model_fitted": false,
+    "new_resource_height_out_of_group_gain": null,
+    "horizontal_marginal_conservation_is_probability_identity_not_discovery": true,
+    "source_3d_joint_data_verified": false,
+    "main_branch_or_frozen_article_changed": false
   }
 }
