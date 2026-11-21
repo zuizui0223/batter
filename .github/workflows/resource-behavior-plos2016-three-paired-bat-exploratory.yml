@@ -1,0 +1,49 @@
+name: PLOS2016 3D height transfer (3 source-paired bats, exploratory)
+
+on:
+  push:
+    branches:
+      - prospective/resource-behavior-higher-dimensional-sdm-v1-20261120
+    paths:
+      - 'prospective/resource_behavior_sdm/plos2016_three_paired_bats_exploratory_transfer_v1.py'
+      - 'prospective/resource_behavior_sdm/test_plos2016_three_paired_bats_exploratory_transfer_v1.py'
+      - 'prospective/resource_behavior_sdm/PLOS2016_EXPLORATORY_THREE_PAIRED_BATS_HEIGHT_TRANSFER_FROZEN_20261121.md'
+      - '.github/workflows/resource-behavior-plos2016-three-paired-bat-exploratory.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  freeze-and-synthetic-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify synthetic-only original-source and bat-pair structural gates
+        run: python -m unittest discover -s prospective/resource_behavior_sdm -p 'test_plos2016_three_paired_bats_exploratory_transfer_v1.py' -v
+
+  publisher-original-exploratory-3d:
+    needs: freeze-and-synthetic-tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Official XLSX checksum, strict 5-bat STOP and new explicitly exploratory 3-paired-bat source-only height transfer
+        shell: bash
+        run: |
+          python prospective/resource_behavior_sdm/plos2016_three_paired_bats_exploratory_transfer_v1.py \
+            --out /tmp/plos2016_three_paired_bats_exploratory_source_receipt.json
+      - name: Archive ONLY source-redacted aggregate or a source-stop report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: plos2016-three-paired-bats-postgate-exploratory
+          path: /tmp/plos2016_three_paired_bats_exploratory_source_receipt.json
+          if-no-files-found: error
+          retention-days: 30
