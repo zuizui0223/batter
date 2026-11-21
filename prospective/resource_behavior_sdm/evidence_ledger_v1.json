@@ -117,7 +117,7 @@
         "tier": "POST_OUTCOME_SOURCE_LOCAL_PREDICTIVE_COMPOSITION_SIGNAL",
         "result_file": "prospective/resource_behavior_sdm/ducke_source_specificity_v2.json",
         "design_frozen_before_v2_fit_commit": "8a19e182514bfb0ba02ccbca7b0aad8d04d5e0a4",
-        "original_v1_frug_food_replay_diff_nats_less_than": 1.3e-9,
+        "original_v1_frug_food_replay_diff_nats_less_than": 1.3e-09,
         "n_matched_source_plots": 46,
         "n_source_blocks": 7,
         "frugivore": {
@@ -184,7 +184,7 @@
           "n_source_blocks": 6
         },
         "sourcefree_python_ci_pass": true,
-        "independent_SciPy_vs_purePython_max_abs_gain_difference": 3.080807875477376e-8,
+        "independent_SciPy_vs_purePython_max_abs_gain_difference": 3.080807875477376e-08,
         "one_sanguivore_excluded_not_reassigned": true,
         "full_original_vegetation_clutter_covariate_available": false,
         "new_significance_p_value_estimated": false,
@@ -520,11 +520,11 @@
         "M1_minus_M0": {
           "joint": -0.0025458358696155425,
           "horizontal": -0.002508923738964247,
-          "conditional_height": -0.00003691213065126764
+          "conditional_height": -3.691213065126764e-05
         },
         "M2_minus_M1": {
           "joint": -0.0008852064000565429,
-          "horizontal": -0.0000058702400166366075,
+          "horizontal": -5.8702400166366075e-06,
           "conditional_height": -0.0008793361600399896
         }
       },
@@ -532,7 +532,7 @@
         "M1_minus_M0": {
           "joint": 0.09662164093990175,
           "horizontal": 0.09653327525365989,
-          "conditional_height": 0.00008836568624176477
+          "conditional_height": 8.836568624176477e-05
         },
         "M2_minus_M1": {
           "joint": -0.0005317843231950337,
@@ -626,7 +626,7 @@
     "changes_to_frozen_JAE_BE_or_main": false,
     "independent_scipy_optional_replay": "prospective/resource_behavior_sdm/verify_proposal_scipy_independent_v1.py",
     "independent_optimizers_compared": 12,
-    "maximum_independent_scipy_vs_pure_stdlib_beta_difference": 2.8561362226675602e-8,
+    "maximum_independent_scipy_vs_pure_stdlib_beta_difference": 2.8561362226675602e-08,
     "independent_scipy_check_is_not_github_actions_ci": true
   },
   "paired_3d_known_q_bridge_20261121": {
@@ -901,5 +901,140 @@
     "original_5_bat_confirmatory_paired_support_gate_still_stop": true,
     "field_resource_conditioned_3d_height_gain": null,
     "real_animal_xyz_or_trial_ids_committed": false
+  },
+  "krauel2018_published_field_acoustic_table_20261121": {
+    "status": "SOURCE_OPEN_EXPLORATORY_REAL_PUBLISHED_ACOUSTIC_COUNTS_MEAN_RESOURCE_GAIN_NEGATIVE",
+    "source": {
+      "paper_doi": "10.1139/cjz-2017-0284",
+      "url": "https://krauel.com/publications/Krauel%20et%20al%202018%20CJZ%20early.pdf",
+      "version": "author_hosted_accepted_manuscript_table_1_page_29",
+      "access_mode": "web_reader_table_text_with_independent_transcription",
+      "original_pdf_sha256": null,
+      "transcription_sha256": "cc85b52cbb8d43fb9d580ae5c859c900d7d806b2d38386452ec53d186971d69e",
+      "independent_transcription_agreement": true
+    },
+    "design_freeze_commit": "677efa131705736f860e15ad479f19532ffc4f2e",
+    "engine_commit_before_original_fit": "bff4c6be577e37bfea445bea5128a75a4ab1d4ff",
+    "source_audit": {
+      "n_source_nights": 13,
+      "n_observed_cells": 36,
+      "missing_cells": 3,
+      "source_total_passes": 1104,
+      "source_buzz_positive_passes": 97,
+      "complete_total_passes": 1073,
+      "complete_buzz_positive_passes": 95,
+      "n_complete_nights": 10,
+      "excluded_incomplete_nights": 3
+    },
+    "leave_night_out": {
+      "n_folds": 10,
+      "mean_gains": {
+        "height": -0.004403805961918072,
+        "buzz_given_height": -0.00032547345657502893,
+        "joint": -0.004729279418493082
+      },
+      "positive_folds": {
+        "height": 6,
+        "buzz_given_height": 5,
+        "joint": 6
+      }
+    },
+    "adjacent_pair_out": {
+      "n_folds": 5,
+      "mean_gains": {
+        "height": -0.014254202951297468,
+        "buzz_given_height": -0.002395796142279727,
+        "joint": -0.016649999093577207
+      },
+      "positive_folds": {
+        "height": 2,
+        "buzz_given_height": 2,
+        "joint": 2
+      }
+    },
+    "independent_numerical_verification": {
+      "status": "PASS",
+      "methods": [
+        "pure_stdlib_analytic_Newton",
+        "independent_NumPy_SciPy_BFGS"
+      ],
+      "scipy": "1.17.0",
+      "numpy": "2.3.5",
+      "n_fold_score_comparisons": 195,
+      "n_aggregate_comparisons": 18,
+      "maximum_absolute_fold_score_difference_nats": 4.357141314415003e-10,
+      "maximum_absolute_aggregate_difference_nats": 8.786948946237771e-11,
+      "tolerance_nats": 1e-07,
+      "n_reference_fits": 60,
+      "reference_maximum_gradient": 1.4562954335346182e-10,
+      "reference_fits_with_precision_loss_message_but_gradient_gate_passed": 2,
+      "reference_gradient_acceptance_threshold": 1e-08,
+      "maximum_direct_joint_decomposition_residual": 2.7755575615628914e-16,
+      "reference_script_sha256": "089610c2c29f9f78c0f8372282b270e2dd7d8b112a26522d0bcb9cf480af4745",
+      "reference_result_sha256": "38a15b75ce55fcff0378aecc0295dfc691d20a8c4cbde08bed667dc33e3e91ca",
+      "source_free_unit_tests_passed": 18,
+      "engine_commit_before_original_fit": "bff4c6be577e37bfea445bea5128a75a4ab1d4ff"
+    },
+    "scientific_boundaries": {
+      "one_acoustic_site": true,
+      "dates_not_proven_independent": true,
+      "recorded_stratum_not_individual_flight_altitude": true,
+      "ground_trap_count_not_aerial_prey_density": true,
+      "absent_buzz_not_verified_nonfeeding": true,
+      "recorder_effort_and_detection_not_calibrated": true,
+      "weather_not_controlled": true,
+      "same_night_resource_not_prospective_forecast": true,
+      "p_value": null,
+      "wild_individual_resource_height_gain": null,
+      "resource_conditioned_3d_sdm_gain": null,
+      "causal_resource_effect": null,
+      "raw_source_rows_coordinates_or_individual_ids_included": false,
+      "source_exploration_closed_after_fixed_comparisons": true
+    },
+    "result_note": "KRAUEL2018_FIELD_ACOUSTIC_HEIGHT_RESOURCE_RESULT_20261121.md",
+    "receipt": "krauel2018_field_acoustic_height_resource_receipt_20261121.json",
+    "claim": "Measured ground trap catches did not improve mean heldout recorded-height or buzz-mark prediction under the two fixed split designs; not a zero ecological effect, independent replication, or individual 3D resource fit.",
+    "post_review_validation": {
+      "status": "PASS",
+      "source_free_unit_tests_passed": 21,
+      "invalid_scorer_inputs_reproduced_before_fix": true,
+      "scorer_checks_exact_shapes_complete_counts_finite_normalized_log_probabilities": true,
+      "log_normalization_tolerance": 1e-10,
+      "extreme_finite_log_support_preserved": true,
+      "original_engine_result_values_exactly_unchanged_after_fix": true,
+      "heldout_outcome_test_checks_each_factor_on_fresh_record": true,
+      "unresolved_critical_or_important_code_findings": 0,
+      "original_pdf_byte_authentication_still_unavailable": true
+    }
+  },
+  "vertical_measured_resource_source_access_20261121": {
+    "cistrone_ground_canopy": {
+      "paper_doi": "10.1016/j.foreco.2026.124382",
+      "public_page": "https://www.sciencedirect.com/science/article/pii/S0378112726008807",
+      "publisher_issue_date": "2027-01-01",
+      "audit_date": "2026-11-21",
+      "reported_plots": 20,
+      "publisher_data_statement": "Supplementary S1 and S2",
+      "source_access_result": "403_FORBIDDEN_AVAILABLE_PUBLISHER_ROUTES",
+      "original_files_opened": false,
+      "join_keys_verified": false,
+      "next_required_input": "Original Supplementary S1 and S2, one bundled upload",
+      "resource_height_score": null
+    },
+    "srilopan_five_heights": {
+      "paper_doi": "10.1007/s10531-026-03307-x",
+      "public_page": "https://link.springer.com/article/10.1007/s10531-026-03307-x",
+      "reported_detector_and_insect_trap_heights_m": [
+        2,
+        25,
+        50,
+        75,
+        100
+      ],
+      "data_availability": "Available from corresponding author on reasonable request",
+      "original_numeric_data_opened": false,
+      "author_contact_made": false,
+      "resource_height_score": null
+    }
   }
 }

@@ -111,8 +111,9 @@ class TestPredictions(unittest.TestCase):
 
     def test_heldout_outcomes_are_not_prediction_inputs(self):
         rows = fixture("height")
-        train, test = rows[:-1], copy.deepcopy(rows[-1])
+        train = rows[:-1]
         for factor in ("height", "buzz"):
+            test = copy.deepcopy(rows[-1])
             model = k.fit_factor(train, factor, True)
             first = k.predict_factor(model, test)
             test["passes"] = [100, 100, 100]
@@ -137,6 +138,41 @@ class TestPredictions(unittest.TestCase):
         self.assertAlmostEqual(score["height"], -1.0397207708399179)
         self.assertAlmostEqual(score["buzz_given_height"], -0.6931471805599453)
         self.assertAlmostEqual(score["joint"], -1.7328679513998633)
+
+    def test_scorer_rejects_malformed_probability_distributions(self):
+        row = {"passes": [2, 1, 1], "buzz": [1, 0, 1]}
+        h = [math.log(p) for p in (.5, .25, .25)]
+        b = [[math.log(.5), math.log(.5)]] * 3
+        cases = [([], []), (h[:2], b), (h + [float("nan")], b),
+                 (h, b + [[0., 0.]]), (h, [[0.]] * 3),
+                 ([1., 1., 1.], b), (h, [[1., 1.]] * 3),
+                 ([0., 0., 0.], b), (h, [[0., 0.]] * 3),
+                 ([float("nan")] + h[1:], b),
+                 ([float("-inf")] + h[1:], b),
+                 (h, [[float("-inf"), 0.]] * 3)]
+        for invalid_h, invalid_b in cases:
+            with self.subTest(height=invalid_h, buzz=invalid_b):
+                with self.assertRaises(ValueError):
+                    k.score_night(row, invalid_h, invalid_b)
+
+    def test_scorer_rejects_malformed_counts_when_called_directly(self):
+        h = [math.log(p) for p in (.5, .25, .25)]
+        b = [[math.log(.5), math.log(.5)]] * 3
+        cases = [([2, 1, 1], [3, 0, 1]), ([-2, 4, 1], [0, 0, 1]),
+                 ([2, 1, 1], [-1, 0, 1]), ([2, 1, 1], [1, None, 1]),
+                 ([2, True, 1], [1, 0, 1]), ([2, 1.5, 1], [1, 0, 1]),
+                 ([0, 0, 0], [0, 0, 0]), ([2, 1], [1, 0])]
+        for passes, buzz in cases:
+            with self.subTest(passes=passes, buzz=buzz):
+                with self.assertRaises(ValueError):
+                    k.score_night({"passes": passes, "buzz": buzz}, h, b)
+
+    def test_scorer_preserves_extreme_finite_log_support(self):
+        row = {"passes": [2, 1, 1], "buzz": [1, 0, 1]}
+        result = k.score_night(row, [0., -1000., -1000.], [[0., -1000.]] * 3)
+        self.assertAlmostEqual(result["height"], -500.)
+        self.assertAlmostEqual(result["buzz_given_height"], -500.)
+        self.assertAlmostEqual(result["joint"], -1000.)
 
     def test_four_joint_candidates_decompose_on_identical_support(self):
         result = k.cross_validate(fixture("height"), "leave_night_out")

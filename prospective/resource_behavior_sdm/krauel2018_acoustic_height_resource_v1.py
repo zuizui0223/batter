@@ -230,11 +230,34 @@ def predict_factor(model, row):
     raise ValueError("STOP_UNKNOWN_PREDICTION_FACTOR")
 
 
+def _validate_log_distribution(logp, size):
+    if not isinstance(logp, (list, tuple)) or len(logp) != size:
+        raise ValueError("STOP_INVALID_PROBABILITY_SHAPE")
+    if not all(type(v) in (int, float) and math.isfinite(v) and v <= 0 for v in logp):
+        raise ValueError("STOP_INVALID_LOG_PROBABILITY")
+    maximum = max(logp)
+    log_total = maximum + math.log(math.fsum(math.exp(v - maximum) for v in logp))
+    if abs(log_total) > 1e-10:
+        raise ValueError("STOP_UNNORMALIZED_LOG_PROBABILITIES")
+
+
 def score_night(row, height_logp, buzz_logp):
-    """Proper empirical log score conditional on a pass in this recorded night."""
-    counts, positive = row["passes"], row["buzz"]
-    if len(counts) != 3 or len(positive) != 3 or sum(counts) <= 0:
+    """Proper empirical log score; refuse incomplete or unnormalized inputs."""
+    if not isinstance(row, dict):
+        raise ValueError("STOP_INVALID_SCORE_ROW")
+    counts, positive = row.get("passes"), row.get("buzz")
+    if not (isinstance(counts, (list, tuple)) and isinstance(positive, (list, tuple))
+            and len(counts) == len(positive) == 3):
+        raise ValueError("STOP_INVALID_SCORE_COUNT_SHAPE")
+    if not all(_integer(n) and _integer(b) and b <= n for n, b in zip(counts, positive)):
+        raise ValueError("STOP_INVALID_SCORE_COUNTS")
+    if sum(counts) <= 0:
         raise ValueError("STOP_INVALID_SCORE_DENOMINATOR")
+    _validate_log_distribution(height_logp, 3)
+    if not isinstance(buzz_logp, (list, tuple)) or len(buzz_logp) != 3:
+        raise ValueError("STOP_INVALID_BUZZ_PROBABILITY_SHAPE")
+    for logp in buzz_logp:
+        _validate_log_distribution(logp, 2)
     total = sum(counts)
     height = math.fsum(n * lp for n, lp in zip(counts, height_logp)) / total
     buzz = math.fsum(b * lp[1] + (n - b) * lp[0]
