@@ -43,3 +43,16 @@ SRE shows no new-site moth gain although the authors' descriptive SEM suggested 
 **NOT inferred**: prey consumption, behavioral state switching, individual GPS movements, flight height, conditional 3D vertical niche, geographically independent transfer, or whole-species range. The 64/65 discrepancy is unresolved. Protect JAE/BE and main. Keep PR draft.
 
 Reproduction adapter: hendel_uploaded_xlsx_original_adapter_v1.py, within this folder; original XLSX needed locally. Source DOI: https://doi.org/10.5061/dryad.xksn02vr1
+
+
+## Conditional coefficient directions (post-outcome association diagnostic, NOT mechanism)
+
+Across the 65 leave-one-plot-out **training fits**, the fitted standardized ridge coefficient of the added prey variable is stable in direction:
+- MRE on log-moth abundance: mean coefficient **−0.2952** (65/65 fits negative).
+- Ppip on log-moth abundance: **−0.3722** (65/65 negative).
+- LRE on log-ground-beetle richness: **−0.3370** (65/65 negative).
+- SRE on log-moth abundance: **+0.0960** (65/65 positive), although its withheld-site prediction gain is negative.
+
+With all seven other source forest covariates included in the baseline (13 controls in total), the four coefficient means remain **−0.2921, −0.3903, −0.3700, +0.0596**, respectively, with the same 65/65 sign stability. Source-open association diagnostics computed independently with a NumPy ridge implementation using the frozen model's exact fold-wise training standardization; they do not establish dietary use or causal resource effects.
+
+**Key separation:** The positive forecast information in MRE, Ppip and LRE is *not* evidence that those measured insects positively attract those guilds. Opposite signs among acoustic groups, and the SRE positive coefficient without improved heldout forecast, motivate resource composition/structural-proxy hypotheses. This is a prospective interpretation, not an independently verified mechanism.
