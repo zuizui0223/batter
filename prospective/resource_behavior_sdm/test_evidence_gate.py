@@ -264,6 +264,37 @@ class ResourceBehaviorClaimGateTests(unittest.TestCase):
         self.assertFalse(x["regional_ecological_species_occupancy_estimated"])
         self.assertIsNone(self.data["strict_unestimated"]["higher_dim_resource_conditional_bat_logscore_gain"])
 
+    def test_real_plos_source_three_paired_bat_height_transfer_remains_exploratory(self):
+        a=self.data["plos2016_original_three_paired_bat_exploratory_20261121"]
+        self.assertEqual(a["n_source_bats_all"],5)
+        self.assertEqual(a["n_bats_full_both_targets"],3)
+        self.assertEqual(a["n_distinct_eligible_source_trials"],24)
+        self.assertEqual(a["n_real_three_dimensional_recorded_frames_eligible"],2671)
+        self.assertEqual(a["n_positive_animal_folds"],0)
+        self.assertAlmostEqual(
+            a["equal_bat_mean_target_class_height_gain_nats_per_frame"],
+            -0.02970719061394642,places=12)
+        self.assertTrue(all(g<0 for g in
+            a["cross_bat_fold_gains_nats_per_recorded_frame"]))
+        self.assertEqual(a["original_five_bat_completely_paired_protocol_status"],
+                         "STOP_UNPAIRED_SOURCE")
+        self.assertTrue(a["changed_hypothesis_support_after_original_failure_exploratory_only"])
+        self.assertFalse(a["any_population_general_or_confirmatory_0_05_claim"])
+        self.assertTrue(a["real_source_target_class_not_local_food_abundance"])
+        self.assertIsNone(a["actual_wild_resource_height_gain_estimated"])
+        self.assertFalse(a["raw_original_XYZ_or_bat_ids_committed"])
+        self.assertIsNone(self.data["strict_unestimated"]
+                          ["higher_dim_resource_conditional_bat_logscore_gain"])
+
+    def test_hermans_2023_dataverse_is_restricted_and_not_food(self):
+        x=self.data["hermans_lidar_original_source_audit_20261121"]
+        self.assertEqual(x["publisher_original_files_listed"],9)
+        self.assertEqual(x["officially_restricted_file_count"],9)
+        self.assertFalse(x["original_source_bat_xyz_files_accessible_in_this_session"])
+        self.assertFalse(x["source_plant_food_amount_measured"])
+        self.assertTrue(x["request_access_needed_to_open"])
+        self.assertTrue(x["not_a_direct_true_resource_height_source"])
+
     def test_no_frozen_manuscript_or_parent_main_overwrite(self):
         self.assertFalse(self.data["changes_to_frozen_bat_manuscripts"])
         self.assertFalse(self.data["changes_to_esdm_main"])
