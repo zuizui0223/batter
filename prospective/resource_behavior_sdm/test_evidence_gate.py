@@ -241,6 +241,29 @@ class ResourceBehaviorClaimGateTests(unittest.TestCase):
         self.assertGreater(s[2]["sensor_aware_M2_joint_minus_hard_bin"],0)
         self.assertLess(a["source_free_true_no_resource_effect_sigma_11_height_gain"],0.001)
 
+    def test_q_noisy_height_combined_likelihood_sourcefree_and_MonteCarlo_ceiling(self):
+        x=self.data["q_noisy_observation_integration_20261121"]
+        self.assertTrue(x["latent_z_integrated_out_using_independent_q_stratified_controls"])
+        self.assertTrue(x["complete_xy_z_reference_reproduced_at_q_equal_reference"])
+        self.assertTrue(x["finite_MC_importance_estimator_biased"])
+        self.assertEqual(x["sourcefree_number_of_GPS_observations"],48)
+        self.assertEqual(x["true_resource_height_K_grid"],[12,24,96,384,1536])
+        self.assertGreater(
+            x["sourcefree_two_world_M2_minus_M1_height_gain"]["true_resource_height_effect"]["corrected"],0)
+        self.assertLess(
+            x["true_resource_height_corrected_mae_nats"][-1],
+            x["true_resource_height_corrected_mae_nats"][0])
+        self.assertLess(
+            x["true_resource_height_corrected_mae_nats"][-1],
+            x["true_resource_height_uncorrected_mae_nats"][-1])
+        self.assertTrue(x["no_general_K_threshold_established"])
+        self.assertFalse(x["source_original_q_or_height_sensor_calibrated"])
+        self.assertTrue(x["no_source_Goldshtein_raw_GPS_or_dated_flowers_opened"])
+        self.assertIsNone(x["empirical_source_resource_height_gain"])
+        self.assertFalse(x["continuous_full_ssf3d_reproduction_estimated"])
+        self.assertFalse(x["regional_ecological_species_occupancy_estimated"])
+        self.assertIsNone(self.data["strict_unestimated"]["higher_dim_resource_conditional_bat_logscore_gain"])
+
     def test_no_frozen_manuscript_or_parent_main_overwrite(self):
         self.assertFalse(self.data["changes_to_frozen_bat_manuscripts"])
         self.assertFalse(self.data["changes_to_esdm_main"])
