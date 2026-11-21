@@ -492,5 +492,82 @@
       "Resource-free 3D vertical bat heldout baselines from batter existing original sources"
     ],
     "original_joint_measured_resource_state_bat_individual_agl_gain": null
+  },
+  "paired_3d_ssf_known_truth_20261121": {
+    "evidence_tier": "SOURCE_FREE_SIMULATION_ONLY_NOT_EMPIRICAL_3D_SDM",
+    "code": "prospective/resource_behavior_sdm/paired_3d_ssf_resource_benchmark_v1.py",
+    "regression_tests": "prospective/resource_behavior_sdm/test_paired_3d_ssf_resource_benchmark_v1.py",
+    "report": "prospective/resource_behavior_sdm/PAIRED_3D_SSF_RESOURCE_KNOWN_TRUTH_RESULT_V1.md",
+    "direct_prior_art": "10.1111/ele.70414",
+    "is_reproduction_of_ssf3d_R_package": false,
+    "is_full_continuous_space_3d_step_selection_likelihood": false,
+    "is_species_occupancy_or_3d_resource_sdm": false,
+    "model": "Training-only ridge conditional multinomial step choice on same rectangular XY × AGL candidates, bat-night balanced, whole-bat heldout",
+    "models": [
+      "M0 observed 3D movement and structure, candidate AGL",
+      "M1 + XY resource count",
+      "M2 + resource × candidate AGL",
+      "M3 + independently height-blind state × resource and state × resource × AGL"
+    ],
+    "exact_discrete_joint_horizontal_vertical_log_score_identity": true,
+    "simulator_seed": 1834,
+    "fictional_bats": 8,
+    "fictional_bat_nights": 16,
+    "fictional_observed_risksets": 240,
+    "alternatives_per_riskset": 6,
+    "simulation_8_bat_holdout_gains_nats_per_step": {
+      "no_resource_effect": {
+        "M1_minus_M0": {
+          "joint": -0.0025458358696155425,
+          "horizontal": -0.002508923738964247,
+          "conditional_height": -0.00003691213065126764
+        },
+        "M2_minus_M1": {
+          "joint": -0.0008852064000565429,
+          "horizontal": -0.0000058702400166366075,
+          "conditional_height": -0.0008793361600399896
+        }
+      },
+      "only_horizontal_resource": {
+        "M1_minus_M0": {
+          "joint": 0.09662164093990175,
+          "horizontal": 0.09653327525365989,
+          "conditional_height": 0.00008836568624176477
+        },
+        "M2_minus_M1": {
+          "joint": -0.0005317843231950337,
+          "horizontal": 0.00048150311469380425,
+          "conditional_height": -0.0010132874378886991
+        }
+      },
+      "resource_by_height": {
+        "M2_minus_M1": {
+          "joint": 0.06255882778512556,
+          "horizontal": 0.023542293820153104,
+          "conditional_height": 0.03901653396497237
+        }
+      },
+      "resource_height_by_height_blind_behavior": {
+        "M3_minus_M2": {
+          "joint": 0.6017912932771627,
+          "horizontal": 0.1370345302887019,
+          "conditional_height": 0.46475676298846086
+        }
+      }
+    },
+    "source_gates": [
+      "original raw GPS fixes with verified AGL and regular interval",
+      "frozen 3D XY×Z candidate supports",
+      "independent resource xy survey and aligned dates for true flowers",
+      "behavior state inferred independent of response height",
+      "original source file digest/data grain audit outside model"
+    ],
+    "boolean_source_input_provenance_is_authentication": false,
+    "source_original_real_goldshtein_files_read": false,
+    "real_resource_height_night_bat_joint_model_fitted": false,
+    "ecological_joint_height_outcome_gain": null,
+    "independent_site_level_species_range_gain": null,
+    "script_requires_full_ssf3d_continuous_kernel_and_sampling_proposal_correction_for_scientific_competitor": true,
+    "changes_to_main_JAE_BE": false
   }
 }
