@@ -155,6 +155,29 @@ class ResourceBehaviorClaimGateTests(unittest.TestCase):
         self.assertFalse(p["main_branch_or_frozen_article_changed"])
         self.assertIsNone(self.data["strict_unestimated"]["higher_dim_resource_conditional_bat_logscore_gain"])
 
+    def test_paired_3d_ssf_known_truth_cannot_become_empirical_field_result(self):
+        v=self.data["paired_3d_ssf_known_truth_20261121"]
+        self.assertEqual(v["evidence_tier"],"SOURCE_FREE_SIMULATION_ONLY_NOT_EMPIRICAL_3D_SDM")
+        self.assertEqual(v["fictional_bats"],8)
+        self.assertEqual(v["fictional_observed_risksets"],240)
+        self.assertTrue(v["exact_discrete_joint_horizontal_vertical_log_score_identity"])
+        self.assertFalse(v["is_reproduction_of_ssf3d_R_package"])
+        self.assertFalse(v["is_species_occupancy_or_3d_resource_sdm"])
+        self.assertFalse(v["source_original_real_goldshtein_files_read"])
+        self.assertFalse(v["real_resource_height_night_bat_joint_model_fitted"])
+        self.assertIsNone(v["ecological_joint_height_outcome_gain"])
+        self.assertIsNone(self.data["strict_unestimated"]["higher_dim_resource_conditional_bat_logscore_gain"])
+        s=v["simulation_8_bat_holdout_gains_nats_per_step"]
+        self.assertLess(s["no_resource_effect"]["M1_minus_M0"]["joint"],0)
+        self.assertGreater(s["only_horizontal_resource"]["M1_minus_M0"]["horizontal"],0)
+        self.assertGreater(s["resource_by_height"]["M2_minus_M1"]["conditional_height"],0)
+        self.assertGreater(s["resource_height_by_height_blind_behavior"]["M3_minus_M2"]["conditional_height"],0)
+        for world in s.values():
+            for contrast in world.values():
+                self.assertAlmostEqual(contrast["joint"],
+                                       contrast["horizontal"]+contrast["conditional_height"],
+                                       places=10)
+
     def test_no_frozen_manuscript_or_parent_main_overwrite(self):
         self.assertFalse(self.data["changes_to_frozen_bat_manuscripts"])
         self.assertFalse(self.data["changes_to_esdm_main"])
