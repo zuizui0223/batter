@@ -15,8 +15,10 @@ import plos2016_three_paired_bats_exploratory_transfer_v1 as m
 def mock_trials(target_z_effect=0.4,seed=401):
     rng=random.Random(seed)
     rows=[]
-    for bat in range(5):
-        targets=(0,1) if bat<3 else ((0,) if bat==3 else (1,))
+    # The exploratory score function receives ONLY the three paired bats;
+    # the original five-bat and unpaired structure is tested in the ZIP fixture.
+    for bat in range(3):
+        targets=(0,1)
         for target in targets:
             n=4 if bat<3 else 3
             for trial in range(n):
