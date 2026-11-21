@@ -205,6 +205,24 @@ class ResourceBehaviorClaimGateTests(unittest.TestCase):
         self.assertIsNone(self.data["strict_unestimated"]
                           ["higher_dim_resource_conditional_bat_logscore_gain"])
 
+    def test_known_q_sampled_3d_m0_m3_bridge_is_only_methodology(self):
+        x=self.data["paired_3d_known_q_bridge_20261121"]
+        self.assertEqual(x["supported_modes"],
+                         ["enumerated_xy_z","known_q_sampled_controls"])
+        self.assertEqual(x["known_q_logit_offset"],
+                         "log(reference mass) - log(proposal mass)")
+        self.assertTrue(x["exact_backward_compatibility_under_reference_equals_q"])
+        self.assertTrue(x["zero_or_missing_or_unverified_q_stopped"])
+        self.assertTrue(x["horizontal_component_scored_on_sampled_riskset_not_true_horizontal_sdm"])
+        self.assertTrue(x["vertical_component_scored_on_sampled_riskset_not_true_z_given_xy_area_density"])
+        self.assertFalse(x["independent_fitted_ssf3d_continuous_competitor_completed"])
+        self.assertFalse(x["original_goldshtein_source_raw_file_headers_verified"])
+        self.assertFalse(x["real_individual_tracked_resource_join_estimated"])
+        self.assertIsNone(x["original_measured_resource_height_heldout_gain"])
+        self.assertIsNone(x["original_ecological_m3_minus_m1_n1"])
+        self.assertIsNone(self.data["strict_unestimated"]
+                          ["higher_dim_resource_conditional_bat_logscore_gain"])
+
     def test_no_frozen_manuscript_or_parent_main_overwrite(self):
         self.assertFalse(self.data["changes_to_frozen_bat_manuscripts"])
         self.assertFalse(self.data["changes_to_esdm_main"])
