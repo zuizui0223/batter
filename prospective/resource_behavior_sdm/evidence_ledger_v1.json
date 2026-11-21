@@ -628,5 +628,32 @@
     "independent_optimizers_compared": 12,
     "maximum_independent_scipy_vs_pure_stdlib_beta_difference": 2.8561362226675602e-8,
     "independent_scipy_check_is_not_github_actions_ci": true
+  },
+  "paired_3d_known_q_bridge_20261121": {
+    "evidence_tier": "SOURCE_FREE_SOFTWARE_AND_SYNTHETIC_VALIDATION_NOT_BAT_ECOLOGICAL_EVIDENCE",
+    "code": "prospective/resource_behavior_sdm/paired_3d_ssf_resource_benchmark_v1.py",
+    "tests": "prospective/resource_behavior_sdm/test_paired_3d_sampling_proposal_bridge_v1.py",
+    "report": "prospective/resource_behavior_sdm/PAIRED_3D_PROPOSAL_BRIDGE_RESULT_20261121.md",
+    "supported_modes": [
+      "enumerated_xy_z",
+      "known_q_sampled_controls"
+    ],
+    "known_q_logit_offset": "log(reference mass) - log(proposal mass)",
+    "domain": "Finite endpoint case-control choice: one p-observed endpoint plus iid controls drawn from known frozen q",
+    "exact_backward_compatibility_under_reference_equals_q": true,
+    "known_truth_control_duplicates_accepted_in_sampled_mode": true,
+    "zero_or_missing_or_unverified_q_stopped": true,
+    "observed_target_used_to_generate_controls_rejected": true,
+    "fixed_same_test_events_for_nested_M0_M1_M2_M3": true,
+    "horizontal_component_scored_on_sampled_riskset_not_true_horizontal_sdm": true,
+    "vertical_component_scored_on_sampled_riskset_not_true_z_given_xy_area_density": true,
+    "avoids_asserting_real_source_validity_from_flags": true,
+    "independent_fitted_ssf3d_continuous_competitor_completed": false,
+    "original_goldshtein_source_raw_file_headers_verified": false,
+    "real_individual_tracked_resource_join_estimated": false,
+    "original_measured_resource_height_heldout_gain": null,
+    "original_ecological_m3_minus_m1_n1": null,
+    "current_ci": "https://github.com/zuizui0223/batter/actions/runs/44855061276",
+    "frozen_JAE_BE_and_main_changed": false
   }
 }
