@@ -56,3 +56,16 @@ Across the 65 leave-one-plot-out **training fits**, the fitted standardized ridg
 With all seven other source forest covariates included in the baseline (13 controls in total), the four coefficient means remain **−0.2921, −0.3903, −0.3700, +0.0596**, respectively, with the same 65/65 sign stability. Source-open association diagnostics computed independently with a NumPy ridge implementation using the frozen model's exact fold-wise training standardization; they do not establish dietary use or causal resource effects.
 
 **Key separation:** The positive forecast information in MRE, Ppip and LRE is *not* evidence that those measured insects positively attract those guilds. Opposite signs among acoustic groups, and the SRE positive coefficient without improved heldout forecast, motivate resource composition/structural-proxy hypotheses. This is a prospective interpretation, not an independently verified mechanism.
+
+
+## Further post-outcome grouped validation (predictor retention, NOT independent geographic transfer)
+
+To distinguish site-by-site interpolation from broader within-source transfer, the same source-local train-only scaling / fixed ridge contrast was re-evaluated holding out (A) **all plots with the same source DOY label** (17 distinct groups), and (B) **entire contiguous elevation quintiles** (five groups). Score averages below are **site-weighted** over disjoint test groups, not independent-study p-values:
+
+| Target resource contrast | One entire DOY-label group out | One elevation-quintile group out | Favorable DOY groups | Favorable elevation groups |
+|---|---:|---:|---:|---:|
+| MRE, + moth abundance | +0.1254 | +0.1380 | 11/17 | 5/5 |
+| Ppip, + moth abundance | +0.1942 | +0.1895 | 10/17 | 4/5 |
+| LRE, + beetle richness | +0.1197 | +0.1173 | 10/17 | 4/5 |
+
+Elevation quintile boundaries from source values were 512, 678.6, 821, 925.6, 992.4 and 1334 m; group membership was determined from source elevation alone. DOY groups have 1–6 plots each, and the single-site DOY=231 group has an outsized Ppip advantage. Gains vary substantially across DOY groups; these sensitivities **do not** establish that resource predictivity is uniform among environments. Neither grouping excludes spatial proximity among training and test plots: **NOT a geographically independent transport validation**. These are additional post-outcome tests, not part of the original frozen primary estimator.
