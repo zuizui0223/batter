@@ -463,7 +463,10 @@
       "Terrestrial animal occupancy/use by forest vertical strata",
       "Bird activity height predicted from structural covariates",
       "HMM-SSF inferred behavioral states and generated utilization distribution",
-      "Resource/habitat opportunities allowed to influence HMM state transition or within-state selection"
+      "Resource/habitat opportunities allowed to influence HMM state transition or within-state selection",
+      "Movement/habitat step selection in genuinely three-dimensional space using 3D correlated random walks",
+      "3D bat flight localization co-registered with LiDAR forest obstacles",
+      "Vertical stratification of forest bat acoustic activity across heights and season"
     ],
     "candidate_unverified_novelty": "Independent measured resource × time × validated behavior × repeated-individual terrain-relative height conditional out-of-group empirical forecast with calibrated horizontal marginal",
     "no_globally_exhaustive_review": true,
@@ -471,6 +474,23 @@
     "new_resource_height_out_of_group_gain": null,
     "horizontal_marginal_conservation_is_probability_identity_not_discovery": true,
     "source_3d_joint_data_verified": false,
-    "main_branch_or_frozen_article_changed": false
+    "main_branch_or_frozen_article_changed": false,
+    "direct_2026_3d_ssf_method_doi": "10.1111/ele.70414",
+    "direct_2026_3d_ssf_package": "https://github.com/NJKlappstein/ssf3D",
+    "direct_2026_3d_ssf_reproducible_code_and_petrel_source": "https://doi.org/10.5281/zenodo.17553938",
+    "direct_2026_3d_ssf_empirical_height_dependent_wind": true,
+    "direct_2026_3d_ssf_3d_crw_movement_habitat_selection_joint": true,
+    "direct_2026_3d_ssf_empirical_resource_state_individual_combination_demonstrated": false,
+    "forest_bat_micarray_lidar_joint_3d_prior_art": "10.1186/s40462-023-00387-0",
+    "forest_bat_vertical_acoustic_height_season_prior_art": "10.1002/ece3.8363",
+    "methods_3d_overview_prior_art": "10.1111/eth.13529",
+    "required_competing_benchmarks": [
+      "Schneider et al 2026 marine 2D density × threshold vertical overlay",
+      "Klappstein et al 2026 ssf3D three-dimensional movement and habitat selection",
+      "Klappstein et al 2023 joint HMM-SSF state selection and simulation-based use distributions",
+      "Hermans et al 2023 bat 3D flight × vegetation alignment",
+      "Resource-free 3D vertical bat heldout baselines from batter existing original sources"
+    ],
+    "original_joint_measured_resource_state_bat_individual_agl_gain": null
   }
 }
