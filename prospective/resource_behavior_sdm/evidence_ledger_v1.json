@@ -655,5 +655,65 @@
     "original_ecological_m3_minus_m1_n1": null,
     "current_ci": "https://github.com/zuizui0223/batter/actions/runs/44855061276",
     "frozen_JAE_BE_and_main_changed": false
+  },
+  "gps_height_error_known_truth_20261121": {
+    "evidence_tier": "SOURCE_FREE_PREDECLARED_GAUSSIAN_GPS_HEIGHT_OBSERVATION_ERROR_SENSITIVITY",
+    "source_original_bat_record_count": 0,
+    "code": "prospective/resource_behavior_sdm/gps_height_error_likelihood_v1.py",
+    "tests": "prospective/resource_behavior_sdm/test_gps_height_error_likelihood_v1.py",
+    "fixed_scenario_generator": "prospective/resource_behavior_sdm/gps_height_error_sensitivity_sourcefree_v1.py",
+    "scientific_result": "prospective/resource_behavior_sdm/GPS_HEIGHT_ERROR_KNOWN_TRUTH_RESULT_V1.md",
+    "github_run": "https://github.com/zuizui0223/batter/actions/runs/44889812634",
+    "github_sourcefree_artifact_id": 14701144217,
+    "number_of_precommitted_simulation_scenarios": 5,
+    "synthetic_bats": 6,
+    "synthetic_bat_nights": 12,
+    "synthetic_recorded_steps": 60,
+    "completely_withheld_sites": 2,
+    "independently_calibrated_sensor_sigma_assumed": true,
+    "actual_goldshtein_sensor_sigma_verified": false,
+    "gaussian_altitude_emission_not_full_continuous_3d_ssf": true,
+    "measurement_observation": "continuous recorded height with per-fix known Gaussian SD; true latent Z integrated out",
+    "target_height_leakage_prohibited": true,
+    "same_recorded_observation_scored_for_sensor_aware_and_hard_binned_models": true,
+    "reference_sampling_mode": "complete prespecified XYxZ enumeration",
+    "known_q_sampled_control_correction_integrated": false,
+    "sensor_sd_scenario_values_m": [
+      0.5,
+      11,
+      25
+    ],
+    "source_free_true_resource_height_sensitivities": [
+      {
+        "sigma_m": 0.5,
+        "conditional_height_M2_minus_M1_sensor_aware": 0.067275,
+        "hard_bin": 0.067275,
+        "sensor_aware_M2_joint_minus_hard_bin": 0
+      },
+      {
+        "sigma_m": 11,
+        "conditional_height_M2_minus_M1_sensor_aware": 0.069186,
+        "hard_bin": 0.069679,
+        "sensor_aware_M2_joint_minus_hard_bin": 0.002353
+      },
+      {
+        "sigma_m": 25,
+        "conditional_height_M2_minus_M1_sensor_aware": 0.030019,
+        "hard_bin": 0.033408,
+        "sensor_aware_M2_joint_minus_hard_bin": 0.042272
+      }
+    ],
+    "source_free_true_no_resource_effect_sigma_11_height_gain": 0.000165,
+    "source_free_xy_dependent_noise_sigmas_m": [
+      6.6,
+      18.7
+    ],
+    "source_free_xy_dependent_noise_height_gain": 0.065389,
+    "comparison_values_are_nats_per_recorded_xy_and_gps_height": true,
+    "no_causal_food_interpretation": true,
+    "no_region_wide_bat_sdm_fitted": true,
+    "original_goldshtein_bat_flower_agl_join_verified": false,
+    "empirical_wild_bat_resource_conditioned_height_gain": null,
+    "protected_main_JAE_BE_or_esdm_main_modified": false
   }
 }
