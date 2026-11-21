@@ -553,6 +553,20 @@
           "horizontal": 0.1370345302887019,
           "conditional_height": 0.46475676298846086
         }
+      },
+      "unmeasured_habitat_proxy_with_zero_resource_causal_effect": {
+        "data_generating_graph": "Hidden habitat H -> resource R; H -> bat horizontal/vertical use; direct R->bat coefficient zero",
+        "M1_minus_M0": {
+          "joint": 0.31269657711511334,
+          "horizontal": 0.3116959335634489,
+          "conditional_height": 0.0010006435516644874
+        },
+        "M2_minus_M1": {
+          "joint": 0.18613007378625085,
+          "horizontal": 0.03197773790283151,
+          "conditional_height": 0.1541523358834193
+        },
+        "interpretation": "Strong heldout resource×AGL prediction is possible from a latent structural confounder without any direct causal food effect"
       }
     },
     "source_gates": [
@@ -568,6 +582,9 @@
     "ecological_joint_height_outcome_gain": null,
     "independent_site_level_species_range_gain": null,
     "script_requires_full_ssf3d_continuous_kernel_and_sampling_proposal_correction_for_scientific_competitor": true,
-    "changes_to_main_JAE_BE": false
+    "changes_to_main_JAE_BE": false,
+    "resource_conditioned_height_prediction_identifies_causal_resource_mechanism": false,
+    "require_within_site_repeated_independently_measured_bloom_plus_structure_weather_effort_controls_for_mechanistic_hypothesis": true,
+    "synthetic_hidden_structure_confounding_test_verified_locally": true
   }
 }
