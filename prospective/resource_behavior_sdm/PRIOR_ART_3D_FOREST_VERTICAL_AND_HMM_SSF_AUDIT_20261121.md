@@ -48,3 +48,32 @@ Maintain explicit targets:
 - Karpińska 2024, Klappstein 2023, Coddington 2023 and Re 2025: full HTML methods inspected. The Karpińska PDF page containing binomial GLMM details was also visually verified.
 - Godoy-Güinao 2023: publisher full abstract and methods excerpt, plus bibliographic record inspected; the full original PDF text was not necessary for the conservative stratum-occupancy claim.
 - The search was targeted to directly relevant marine flight height × XY, terrestrial forest/urban vertical height/occupancy, and HMM-SSF behaviour/space use; it is **not exhaustive** or a field-wide novelty certification. In particular, the lack of a found integrated model does not prove none exists.
+
+
+---
+
+## Stronger newly verified numerical and bat-specific prior art (added 2026-11-21)
+
+**Klappstein et al. (2026), Ecology Letters 29:e70414, 3D-SSF.**
+DOI https://doi.org/10.1111/ele.70414; full publisher HTML https://onlinelibrary.wiley.com/doi/full/10.1111/ele.70414
+- First published **2026-07-01**; 3-D correlated random walks, integrated step-selection function, movement constraints, individual step availability and vertically stratified **wind** in real Antarctic petrel telemetry. Models 3-D flight movement and habitat selection jointly, rather than just thresholding a 2-D presence surface.
+- The paper itself proposes future **3-D HMM-SSFs**, individual random effects and measurement error models as extensions; it does not establish those combined components empirically. The underlying model assumes regular tracking intervals and sufficiently precise 3-D measurements; vertical error can be a major issue in bat data.
+- Authors publish a functional but under-development **R package ssf3D** at https://github.com/NJKlappstein/ssf3D with processing, fitting and correlated random walk simulation vignettes; Zenodo data/code https://doi.org/10.5281/zenodo.17553938. Repo README still cites 2025 preprint although the peer-reviewed article is 2026. This is **direct numerical prior art**. No new "first 3-D SSF" or "first joint 3-D movement + environmental selection" claim can be made here.
+
+**Hermans et al. (2023), Movement Ecology 11:25, direct bat 3D x LiDAR.**
+DOI https://doi.org/10.1186/s40462-023-00387-0
+- Aligned mic-array-localized **3-D bat trajectories** to LiDAR vegetation point clouds. Acoustic source foraging guilds; 138 array-nights, average 6,822 localized 3-D positions per array night. Quantified stereotyped pipistrelle flight around trunks (multiple nights), and vegetation/light-post distance.
+- Critically, mic-array tracking **did not determine whether the same bat returned across nights**, so individual-specific repeatability and individual cold-start transfer cannot be inferred. No independent same-night true food availability or bat-species distribution SDM. But **the empirical 3-D bat flight × fine vegetation structure join is established prior art**.
+
+**Erasmy et al. (2021), Ecology and Evolution 11:17273–17288, bats at vertical strata.**
+DOI https://doi.org/10.1002/ece3.8363
+- Forest interior/gaps and **three acoustic recorder heights** over reproductive seasons; species/guild- and habitat-conditional vertical bat acoustic activity. NOT novel to assess forest bat vertical activity as a function of vegetation context and season. As height is sensor stratum and acoustics are detected passes, these are not individual repeated GPS use probability without an observation model.
+
+**Lennox et al. (2025), Ethology 131:e13529, review**, DOI https://doi.org/10.1111/eth.13529: surveys already extant 3D UDs, 3D movement and habitat-selection methods. This is contextual methods prior art, not an empirical 5-D result.
+
+### Revised short claim gate: methodological originality is NOT available merely from adding z
+
+- **No originality:** A 3D-SSF, 3D movement-environment selection, LiDAR-aligned 3D bat tracking, vertical-layer bat/forest bird occurrence, height-from-structure prediction, HMM state-dependent use and simulation-based UD, or horizontal density × height probability.
+- **Unproven candidate empirical advance:** independently measured true-food availability (not proxies), independently defined behavior (not height-derived labels), repeated individual 3D AGL under joint survey support; whole-animal, night, site and source heldout **increment for resource-conditioned altitude and state allocation** beyond competitive 3D-SSF and resource-free vertical benchmarks, while maintaining an explicitly calibrated horizontal species distribution/use marginal.
+- **Prior art baseline priority:** 3D SSF from ssf3D is the mathematically nearest **movement and habitat selection competitor**; Klappstein 2023 HMM-SSF is the nearest state-switching competitor; Schneider 2026 is the 2D-to-vertical abundance overlay competitor; Hermans 2023 is the finest direct forest-bat 3D vegetation data competitor. All must be cited and benchmarked where matching data exist. A synthetic proof that probability factors normalize is not an ecological or computational novelty.
+- **Still STOP:** No original Goldshtein direct resource × AGL same-night matched table verified. The data and observation-process differences between Ducke, Hendel, main batter tracks and ssf3D's Antarctic petrels prevent combining their coefficients into a single new joint bat 3D effect.
