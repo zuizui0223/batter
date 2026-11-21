@@ -99,13 +99,22 @@ class ResourceBehaviorClaimGateTests(unittest.TestCase):
         self.assertIsNone(v["new_5d_resource_height_gain"])
         self.assertIsNone(self.data["strict_unestimated"]["ecological_partner_m3_minus_m1"])
 
-    def test_hendel_external_published_qualitative_not_empirical_transfer(self):
+    def test_hendel_original_upload_within_source_not_geographic_or_3d(self):
         x=self.data["independent_prey_transfer_20261121"]
         self.assertEqual(x["source_sites_published"],64)
         self.assertTrue(x["original_publisher_metadata_version_and_two_file_inventory_verified"])
         self.assertFalse(x["original_publisher_content_available"])
         self.assertEqual(x["original_publisher_dataset_download_http_status"],401)
-        self.assertIsNone(x["new_external_test_outcome"])
+        self.assertTrue(x["user_uploaded_original_xlsx_opened"])
+        self.assertEqual(x["new_external_test_outcome"]["n_unique_forest_plots"],65)
+        self.assertEqual(x["source_sites_published"],64)
+        gain=x["new_external_test_outcome"]["gains"]
+        self.assertLess(gain["SRE"]["moth_abundance"],0)
+        self.assertGreater(gain["MRE"]["moth_abundance"],0)
+        self.assertGreater(gain["Ppip"]["moth_abundance"],0)
+        self.assertGreater(gain["LRE"]["beetle_richness"],0)
+        self.assertFalse(x["new_external_test_outcome"]["independent_geographic_holdout"])
+        self.assertIsNone(x["new_external_test_outcome"]["height_3d_gain"])
         self.assertIsNone(x["external_resource_conditional_height_gain"])
         self.assertTrue(x["cannot_compare_numeric_scores_to_ducke_fruit_capture_guild"])
         self.assertFalse(x["raw_source_bytes_or_location_rows_uploaded_to_batter"])
