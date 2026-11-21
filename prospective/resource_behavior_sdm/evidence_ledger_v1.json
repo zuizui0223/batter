@@ -715,5 +715,89 @@
     "original_goldshtein_bat_flower_agl_join_verified": false,
     "empirical_wild_bat_resource_conditioned_height_gain": null,
     "protected_main_JAE_BE_or_esdm_main_modified": false
+  },
+  "q_noisy_observation_integration_20261121": {
+    "evidence_tier": "SOURCE_FREE_FINITE_Q_STRATIFIED_IMPORTANCE_NOISY_GPS_OBSERVATION_LIKELIHOOD",
+    "model_code": "prospective/resource_behavior_sdm/q_stratified_noisy_height_bridge_v1.py",
+    "sourcefree_tests": "prospective/resource_behavior_sdm/test_q_stratified_noisy_height_bridge_v1.py",
+    "two_world_sourcefree_runner": "prospective/resource_behavior_sdm/q_stratified_noisy_height_two_world_receipt_v1.py",
+    "precommitted_mc_k_grid": "prospective/resource_behavior_sdm/Q_NOISY_HEIGHT_MC_CONVERGENCE_FREEZE_V1.md",
+    "mc_convergence_runner": "prospective/resource_behavior_sdm/q_noisy_height_mc_convergence_v1.py",
+    "scientific_report": "prospective/resource_behavior_sdm/Q_STRATIFIED_NOISY_GPS_HEIGHT_INTEGRATION_RESULT_20261121.md",
+    "two_world_github_run": "https://github.com/zuizui0223/batter/actions/runs/44891053058",
+    "two_world_github_artifact_id": 14702001629,
+    "mc_convergence_run": "https://github.com/zuizui0223/batter/actions/runs/44891213983",
+    "mc_convergence_artifact_id": 14702280601,
+    "latent_z_integrated_out_using_independent_q_stratified_controls": true,
+    "target": "observed coarse XY and continuous noisy AGL with Gaussian sigma",
+    "known_sampling_offset": "log(mu_xy/K_xy)+log(mu_z/q_z)",
+    "sampling_estimand": "source-free importance quadrature approximation to observed GPS density, not case-control chosen endpoint label likelihood",
+    "complete_xy_z_reference_reproduced_at_q_equal_reference": true,
+    "finite_MC_importance_estimator_biased": true,
+    "sourcefree_number_of_bats": 6,
+    "sourcefree_number_of_GPS_observations": 48,
+    "sourcefree_two_world_K_per_xy": 24,
+    "q_site_tilt": [
+      1.7,
+      -1.7
+    ],
+    "sigma_11m_is_illustrative_not_source_calibrated": true,
+    "sourcefree_two_world_M2_minus_M1_height_gain": {
+      "true_no_resource_effect": {
+        "corrected": 0.002493392398594807,
+        "uncorrected": -0.056657348554952414
+      },
+      "true_resource_height_effect": {
+        "corrected": 0.0703489673494948,
+        "uncorrected": 0.023771774234310428
+      }
+    },
+    "sourcefree_two_world_absolute_M2_joint_log_density": {
+      "true_no_resource_effect": {
+        "corrected": -6.241626531739377,
+        "uncorrected": -7.071208985121616
+      },
+      "true_resource_height_effect": {
+        "corrected": -7.153291480975444,
+        "uncorrected": -7.124888199252796
+      }
+    },
+    "true_resource_height_K_grid": [
+      12,
+      24,
+      96,
+      384,
+      1536
+    ],
+    "true_resource_height_corrected_mae_nats": [
+      2.996401494522548,
+      2.1730632689000946,
+      0.8232764678339436,
+      0.08149973566255514,
+      0.050050562708875625
+    ],
+    "true_resource_height_uncorrected_mae_nats": [
+      3.3268786516199476,
+      2.6051824656822054,
+      1.6408677070080284,
+      1.0461398325305662,
+      1.0881362154267802
+    ],
+    "min_sampled_z_coverage_fractions": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0.6666666666666666,
+      1,
+      1
+    ],
+    "minimum_importance_effective_sample_fraction_at_K1536": 0.149,
+    "no_general_K_threshold_established": true,
+    "no_source_Goldshtein_raw_GPS_or_dated_flowers_opened": true,
+    "empirical_source_resource_height_gain": null,
+    "continuous_full_ssf3d_reproduction_estimated": false,
+    "regional_ecological_species_occupancy_estimated": false,
+    "source_original_q_or_height_sensor_calibrated": false,
+    "case_control_matched_selected_label_likelihood_unchanged_and_separate": true,
+    "protected_main_esdm_and_frozen_JAE_BE_unchanged": true
   }
 }
