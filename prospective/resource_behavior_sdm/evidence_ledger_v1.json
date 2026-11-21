@@ -382,7 +382,22 @@
       "source_raw_rows_committed": false,
       "independent_geographic_holdout": false,
       "causal_insect_consumption_test": false,
-      "height_3d_gain": null
+      "height_3d_gain": null,
+      "post_outcome_conditional_added_prey_ridge_coefficients": {
+        "model": "train-only standardized log1p/activity ridge, same 65 LOSO fits",
+        "MRE_moth_abundance": -0.2952,
+        "Ppip_moth_abundance": -0.3722,
+        "LRE_ground_beetle_richness": -0.337,
+        "SRE_moth_abundance": 0.096,
+        "all_65_training_folds_same_sign": true,
+        "richer_13forest_covariate_baseline_means": [
+          -0.2921,
+          -0.3903,
+          -0.37,
+          0.0596
+        ],
+        "causal_or_direct_consumption_interpretation": false
+      }
     },
     "cannot_compare_numeric_scores_to_ducke_fruit_capture_guild": true,
     "independent_field_sample_overlap_with_Ducke": false,
