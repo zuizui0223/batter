@@ -33,3 +33,19 @@ Does independent cactus resource opportunity, conditioned on horizontal cell, ti
 - Independent out-of-population replication: NULL / NOT ESTIMATED.
 
 This source is a **candidate to test the 5-D model**, not an empirical positive result. Keep frozen JAE/BE manuscript untouched; maintain batter PR #102 as DRAFT.
+
+
+---
+
+## 2026-11-21 source-grain correction and recovered STOP receipt (supersedes earlier access/flower claims)
+
+Recovered **actual** artifact goldshtein-original-source-metadata-v1 from GitHub [run #44683043418](https://github.com/zuizui0223/batter/actions/runs/44683043418): SOURCE_METADATA_STOP, HTTP Error 401 Unauthorized; original file roster, biological rows and event-level join remain unseen. This is **not** a negative ecological response.
+
+Original article methods separate **~3,600 mapped cactus positions at the foraging sites of eight tracked bats** from **414 cacti with repeated direct open-flower observations across three fields** (327 via drone, 87 manual). The evolutionary simulation samples *synthetic* per-cactus flower counts from the empirically observed distribution. Thus, matched observed flower count on every GPS bat-night is **not established**, despite mapped cactus location availability in the published study.
+
+**Revised admission ladder:**
+1. A (after original source schema): measured cactus **XY location/density** vs heldout bat AGL conditional on XY/time/XY-only kinematics. This is *vegetation opportunity*, not night-resolved food quantity.
+2. B (much stronger; conditional STOP): independently measured, *dated*, field/site-matched cactus **open-flower counts** vs the **same** heldout AGL fixes. Do not use a synthetic/model-drawn nectar distribution as empirically measured resource. If no direct time-matched join, STOP stage B.
+3. Exclude the paper's cactus-visit (XY <15m AND height <20m) label, derived personal core labels and any Z-defined state from height predictors. This is target leakage even under animal-heldout CV.
+
+[Detailed original publication-source audit](GOLDSHTEIN_OBSERVATION_GRAIN_AND_ACCESS_AUDIT_V2.md), [privacy-safe Mendeley ZIP structural intake](goldshtein_user_archive_structural_gate_v1.py), and [unresolved evidence manifest](goldshtein_external_candidate_v1.json). JAE/BE/main protected; **no resource-conditioned 3D gain yet**.
