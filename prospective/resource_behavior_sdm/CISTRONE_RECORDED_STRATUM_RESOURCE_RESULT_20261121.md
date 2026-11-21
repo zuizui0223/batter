@@ -87,7 +87,7 @@ published stratum-level associations or establish their absence.
 | No detector calibration, deployment geometry or detection volumes | Differences in detection remain part of the recorded outcome. |
 | No individual IDs, tracks or feeding marks | No observed individual behavior or resource-to-flight-height mechanism is identified. |
 | All species/acoustic groups pooled | Prediction may reflect community composition; no within-species diet response is estimated. |
-| No coordinates, stand IDs or deployment dates | Whole-plot withholding does not certify independent spatial or temporal transfer. Eleven repeated stand-covariate profiles do not define verified spatial blocks. |
+| No coordinates, stand IDs or deployment dates | Whole-plot withholding does not certify independent spatial or temporal transfer. The 11 distinct stand-covariate profiles, some shared across plots, do not define verified spatial blocks. |
 
 S1 canopy cover and openness complement within 0.01 percentage point. Their
 values differ between strata in all plots; the model uses the supplied openness
