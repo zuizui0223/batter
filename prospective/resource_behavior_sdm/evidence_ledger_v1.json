@@ -586,5 +586,43 @@
     "resource_conditioned_height_prediction_identifies_causal_resource_mechanism": false,
     "require_within_site_repeated_independently_measured_bloom_plus_structure_weather_effort_controls_for_mechanistic_hypothesis": true,
     "synthetic_hidden_structure_confounding_test_verified_locally": true
+  },
+  "proposal_density_bias_known_truth_20261121": {
+    "evidence_tier": "SOURCE_FREE_KNOWN_TRUTH_CASE_CONTROL_SAMPLING_CORRECTION",
+    "report": "prospective/resource_behavior_sdm/PROPOSAL_CORRECTED_3D_SSF_KNOWN_TRUTH_V1.md",
+    "source_free_code": "prospective/resource_behavior_sdm/proposal_corrected_3d_stepchoice_v1.py",
+    "synthetic_tests": "prospective/resource_behavior_sdm/test_proposal_corrected_3d_stepchoice_v1.py",
+    "reference_prior_art": "10.1111/ele.70414",
+    "exact_design": "One target p-sampled observed endpoint, 8 independent q-sampled controls, 12 finite XY×height endpoints, q frozen externally, and source-site heldout transfer",
+    "mathematical_choice_offset": "log(reference_mass) - log(proposal_mass)",
+    "synthetic_true_coefficient_null": 0,
+    "synthetic_n_fictional_bats": 16,
+    "synthetic_n_nights": 32,
+    "synthetic_n_observed_steps": 1120,
+    "site_proposal_exponents": [
+      2.2,
+      -2.2
+    ],
+    "null_pooled_corrected_beta": -0.05739068996479588,
+    "null_pooled_naive_beta": -0.006412384414009644,
+    "null_site_holdout_corrected_minus_naive_scores": [
+      2.3904026618006586,
+      2.457802146023737
+    ],
+    "null_site_equal_mean_corrected_minus_naive_nats_per_step": 2.424102403912198,
+    "null_site_heldout_naive_training_betas": [
+      2.034226143787195,
+      -2.1385098907633746
+    ],
+    "true_0_95_world_pooled_corrected_beta": 0.998684342795897,
+    "true_0_95_world_site_heldout_gain": 2.1199348473405006,
+    "not_full_ssf3d_reference_implementation": true,
+    "full_continuous_space_reference_measure_model_unimplemented": true,
+    "original_source_authenticity_verified_by_boolean_flags": false,
+    "real_goldshtein_bat_resource_height_data_opened": false,
+    "real_bat_vertical_resource_effect": null,
+    "comparison_3d_ssf_original_bat_holdout_gain": null,
+    "protective_claim": "Correcting a known q is essential for this sampled-case-control task; scores and coefficients here are artificial and should not be conflated with ecological inference.",
+    "changes_to_frozen_JAE_BE_or_main": false
   }
 }
