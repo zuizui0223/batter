@@ -185,6 +185,26 @@ class ResourceBehaviorClaimGateTests(unittest.TestCase):
                                        contrast["horizontal"]+contrast["conditional_height"],
                                        places=10)
 
+    def test_proposal_correction_3d_known_truth_is_not_field_evidence(self):
+        a=self.data["proposal_density_bias_known_truth_20261121"]
+        self.assertEqual(a["synthetic_n_fictional_bats"],16)
+        self.assertEqual(a["synthetic_n_observed_steps"],1120)
+        self.assertAlmostEqual(
+            a["null_site_equal_mean_corrected_minus_naive_nats_per_step"],
+            2.424102403912198, places=9)
+        self.assertLess(abs(a["null_pooled_corrected_beta"]), .15)
+        self.assertAlmostEqual(a["true_0_95_world_pooled_corrected_beta"],
+                               .998684342795897, places=9)
+        self.assertEqual(a["mathematical_choice_offset"],
+                         "log(reference_mass) - log(proposal_mass)")
+        self.assertTrue(a["not_full_ssf3d_reference_implementation"])
+        self.assertFalse(a["original_source_authenticity_verified_by_boolean_flags"])
+        self.assertFalse(a["real_goldshtein_bat_resource_height_data_opened"])
+        self.assertIsNone(a["real_bat_vertical_resource_effect"])
+        self.assertIsNone(a["comparison_3d_ssf_original_bat_holdout_gain"])
+        self.assertIsNone(self.data["strict_unestimated"]
+                          ["higher_dim_resource_conditional_bat_logscore_gain"])
+
     def test_no_frozen_manuscript_or_parent_main_overwrite(self):
         self.assertFalse(self.data["changes_to_frozen_bat_manuscripts"])
         self.assertFalse(self.data["changes_to_esdm_main"])
