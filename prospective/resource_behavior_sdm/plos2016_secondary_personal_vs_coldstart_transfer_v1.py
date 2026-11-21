@@ -35,7 +35,7 @@ def _single_test_trial_delta(trial,model):
     return total/len(trial["frames"])
 
 
-def secondary_within_vs_other_bats_original(payload):
+def secondary_within_vs_other_bats_original(payload, enforce_frozen_coldstart=True):
     trials=_source_rows_after_gate(payload)
     bats=sorted({trial["bat"] for trial in trials})
     if len(bats)!=3 or len(trials)!=24:
@@ -77,7 +77,8 @@ def secondary_within_vs_other_bats_original(payload):
              for field in ("personal_trial_target_increment",
                            "other_bats_target_increment",
                            "personal_minus_other_bat_target_increment")}
-    if abs(summary["other_bats_target_increment"]-FROZEN_CROSS_BAT_MEAN)>1e-11:
+    if (enforce_frozen_coldstart and
+        abs(summary["other_bats_target_increment"]-FROZEN_CROSS_BAT_MEAN)>1e-11):
         raise ValueError("STOP_PRIOR_ORIGINAL_COLD_START_RESULT_NOT_REPRODUCED")
     return {
         "schema":"batter.PLOS2016_secondary_within_trial_vs_other_bats.v1",
