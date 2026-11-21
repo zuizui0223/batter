@@ -623,6 +623,10 @@
     "real_bat_vertical_resource_effect": null,
     "comparison_3d_ssf_original_bat_holdout_gain": null,
     "protective_claim": "Correcting a known q is essential for this sampled-case-control task; scores and coefficients here are artificial and should not be conflated with ecological inference.",
-    "changes_to_frozen_JAE_BE_or_main": false
+    "changes_to_frozen_JAE_BE_or_main": false,
+    "independent_scipy_optional_replay": "prospective/resource_behavior_sdm/verify_proposal_scipy_independent_v1.py",
+    "independent_optimizers_compared": 12,
+    "maximum_independent_scipy_vs_pure_stdlib_beta_difference": 2.8561362226675602e-8,
+    "independent_scipy_check_is_not_github_actions_ci": true
   }
 }
