@@ -1,0 +1,71 @@
+{
+  "schema": "batter.ducke.conditional_fruit_12_vs_other_10_source_local.v2",
+  "date": "2026-11-20",
+  "source_doi": "10.5061/dryad.9rb48c5",
+  "source_original_zip_sha256": "55c784e2f7b37987e3657d3ba3d5cf6a41bb3554a11904969d1376c977bcdbce",
+  "design_frozen_at_commit": "8a19e182514bfb0ba02ccbca7b0aad8d04d5e0a4",
+  "design_status": "POST_OUTCOME_FROZEN_EXPLORATORY_NOT_CONFIRMATORY",
+  "n_plots": 46,
+  "n_matched_nights": 103,
+  "n_captures": 810,
+  "n_source_blocks": 7,
+  "fold_metric": "natural log predictive score for plot-level captured guild fraction",
+  "feature_family": "same baseline elevation, sampled PO frame, matched nights; F12 and O10 measured source fruiting plants, L2 0.15",
+  "results": {
+    "frug": {
+      "seven_block": {
+        "food_minus_base": 0.016084661100832526,
+        "other_minus_base": 0.012974495422439844,
+        "both_minus_base": 0.02401058,
+        "food_given_other": 0.01103608,
+        "other_given_food": 0.00792591,
+        "both_minus_total_fruits": 0.02627405,
+        "food_given_other_positive": 5,
+        "both_positive": 6
+      },
+      "leave_plot_out": {
+        "n_plots": 46,
+        "food_given_other": 0.00477513,
+        "both_minus_base": 0.0075209
+      },
+      "six_L3_L8_blocks": {
+        "n_plots": 29,
+        "food_given_other": 0.00503562,
+        "other_given_food": 0.00419721,
+        "both_minus_base": 0.01473254,
+        "both_positive": 5
+      }
+    },
+    "glean": {
+      "seven_block": {
+        "food_minus_base": 0.002225195976665904,
+        "other_minus_base": 0.01554342653869035,
+        "both_minus_base": 0.01567057,
+        "food_given_other": 0.00012715,
+        "other_given_food": 0.01344538,
+        "other_given_food_positive": 7
+      }
+    },
+    "nectar": {
+      "seven_block": {
+        "food_minus_base": 0.005168852774614934,
+        "other_minus_base": -0.0029469723704715423,
+        "both_minus_base": 0.00251708,
+        "food_given_other": 0.00546406,
+        "other_given_food": -0.00265177,
+        "other_given_food_positive": 0
+      },
+      "six_L3_L8_blocks": {
+        "n_plots": 29,
+        "both_minus_base": -0.00014765
+      }
+    }
+  },
+  "claim_gate": "SOURCE_LOCAL_COMPOSITION_SCORE_POSITIVE_NO_INDEPENDENT_FOOD_SPECIFIC_CAUSAL_CLAIM",
+  "other10_is_validated_unconsumed_by_bats": false,
+  "original_vegetation_clutter_adjusted": false,
+  "multiple_comparisons_no_new_pvalue": true,
+  "raw_coordinates_or_source_rows_committed": false,
+  "empirical_resource_conditional_3D_GPS_height_gain": null,
+  "ecological_NeoBat_species_M3_minus_M1": null
+}

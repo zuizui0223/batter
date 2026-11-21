@@ -1,0 +1,43 @@
+name: Rousettus author GitHub vs official Dryad publisher digest gate
+
+on:
+  push:
+    branches:
+      - prospective/resource-behavior-higher-dimensional-sdm-v1-20261120
+    paths:
+      - 'prospective/resource_behavior_sdm/dryad_rous_author_hash_comparison.py'
+      - 'prospective/resource_behavior_sdm/test_dryad_rous_author_hash_comparison.py'
+      - '.github/workflows/resource-behavior-rous-author-hash.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  source-free:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s prospective/resource_behavior_sdm -p 'test_dryad_rous_author_hash_comparison.py' -v
+
+  original-author-publisher-hash:
+    needs: source-free
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify pinned original author Github tiny CSV vs official Dryad digest
+        run: python prospective/resource_behavior_sdm/dryad_rous_author_hash_comparison.py --out prospective/resource_behavior_sdm/rous_author_hash_comparison.json
+      - name: Archive aggregate digest/column names and source STOP only
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rous-author-2csv-publisher-hash
+          path: prospective/resource_behavior_sdm/rous_author_hash_comparison.json
+          retention-days: 30
+          if-no-files-found: error

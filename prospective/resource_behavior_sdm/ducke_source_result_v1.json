@@ -1,0 +1,103 @@
+{
+  "schema": "batter.ducke_original_2018_exploratory_resource_guild.v1",
+  "date": "2026-11-20",
+  "source": {
+    "dataset_doi": "10.5061/dryad.9rb48c5",
+    "paper_doi": "10.1111/btp.12546",
+    "user_zip_sha256": "55c784e2f7b37987e3657d3ba3d5cf6a41bb3554a11904969d1376c977bcdbce",
+    "source_xlsx_sha256": "1fad327f61de4f144a44d1d889726ee8743d4edaf1eae87cdc2d5e2bc86bb9a6",
+    "raw_original_rows_committed": false
+  },
+  "source_quality": {
+    "bat_table_rows": 1189,
+    "noncapture_rows": 2,
+    "unique_species_labels_excluding_noncapture": 51,
+    "raw_years_2015_to_2030_rows": 42,
+    "invalid_year_biological_capture_rows": 41,
+    "march_2014_rows_beyond_published_period": 45,
+    "published_source_species_and_capture_numbers": "52 species, 1138 bats",
+    "raw_and_paper_census_disagree": true,
+    "fruit_table_rows": 309,
+    "fruit_genera_raw": 22,
+    "food_genera_qualified_from_original_figure": 12,
+    "all_bat_insect_terrain_plots_matched_after_one_to_one_alias": 49,
+    "fruit_record_plots": 48,
+    "missing_fruit_not_zero_imputed": true,
+    "vegetation_clutter_unavailable_in_uploaded_xlsx": true
+  },
+  "eligible_input": {
+    "period": "October 2013 through February 2014, dates unmodified",
+    "same_plot_same_date_only": true,
+    "matched_plot_nights": 103,
+    "matched_plots": 46,
+    "matched_captures": 810,
+    "matched_frugivore_captures": 573,
+    "outer_spatial_layout_blocks": 7,
+    "food_metric": "equal-night mean number of fruiting plants in 12 genus list from paper Fig.4",
+    "response": "frugivore proportion among captured identified bats, not species occupancy",
+    "baseline": [
+      "source terrain elevation",
+      "added-riparian sample-frame indicator",
+      "number matched nights"
+    ],
+    "equal_plot_training_weight": true,
+    "ridge_lambda": 0.15
+  },
+  "predictive_gain_nats_per_captured_guild_fraction": {
+    "seven_block_equal_group_bat_food_12": 0.016084661100832526,
+    "seven_block_equal_group_all_fruit": -0.0022634782,
+    "seven_block_equal_group_remaining_10_genera": 0.012974495422439843,
+    "seven_block_equal_group_insect_mass": -0.000442429,
+    "seven_block_equal_group_food_plus_insect": 0.014979,
+    "food_positive_spatial_groups": 5,
+    "spatial_groups_total": 7,
+    "food_leave_plot_out": 0.0071302334906864035,
+    "food_with_coordinate_adjustment": 0.014600974893728373,
+    "food_without_459_carollia_captures": 0.00852293595278107,
+    "food_7block_resample_descriptive_95": [
+      0.0035781308328857652,
+      0.027995849240680944
+    ],
+    "within_block_shuffles": 399,
+    "shuffle_null_mean": -0.0002669155307864218,
+    "shuffle_upper_95_percentile": 0.00973188997317581,
+    "shuffle_fraction_ge_observed_with_plus_one": 0.0225,
+    "within_site_last_night_food_gain": 0.004047352805701713,
+    "within_site_last_night_positive_plots": 20,
+    "within_site_last_night_total_plots": 36
+  },
+  "method": {
+    "source_data_opened_before_design": true,
+    "status": "post-outcome exploratory test, not pre-registered",
+    "outer_block_design": "L3–L8, plus PO as a distinct sampling-frame block",
+    "training_only_feature_standardization": true,
+    "mean_site_level_fractional_binomial_logscore": true,
+    "source_plot_night_dates_match_strictly": true,
+    "figure_food_genera": [
+      "Annona",
+      "Anthurium",
+      "Astrocaryum",
+      "Bactris",
+      "Clidemia",
+      "Henriettea",
+      "Mauritia",
+      "Oenocarpus",
+      "Peperomia",
+      "Philodendron",
+      "Piper",
+      "Rhodospatha"
+    ],
+    "source_model_vs_stdlib_numerical_agreement": "under 3e-9 nats in tested endpoints"
+  },
+  "claim_gate": "EXPLORATORY_CAPTURE_GUILD_RESOURCE_PREDICTION_ONLY",
+  "strict_unestimated": {
+    "external_geographic_replication": null,
+    "causal_food_effect": null,
+    "true_species_occupancy": null,
+    "vegetation_clutter_adjusted_increment": null,
+    "source_linked_neobat_M3_M1": null,
+    "resource_conditional_bat_3d_height": null,
+    "validated_highdimensional_SDM": null
+  },
+  "batter_and_esdm_frozen_branches_modified": false
+}

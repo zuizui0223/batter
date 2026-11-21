@@ -1,0 +1,44 @@
+name: One-shot original independent 3D and measured food small files
+
+on:
+  push:
+    branches:
+      - prospective/resource-behavior-higher-dimensional-sdm-v1-20261120
+    paths:
+      - 'prospective/resource_behavior_sdm/independent_resource_vertical_smallfile_gate_v1.py'
+      - 'prospective/resource_behavior_sdm/test_independent_resource_vertical_smallfile_gate_v1.py'
+      - '.github/workflows/resource-behavior-independent-smallfile.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  source-free:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Contract and checksum/ZIP header-only tests
+        run: python -m unittest discover -s prospective/resource_behavior_sdm -p test_independent_resource_vertical_smallfile_gate_v1.py -v
+
+  one-public-source-attempt:
+    needs: source-free
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: One official public Dryad original source GET per file after metadata and digest gate
+        run: python prospective/resource_behavior_sdm/independent_resource_vertical_smallfile_gate_v1.py
+      - name: Archive source structure or explicit STOP receipts only
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: independent-food-and-3d-original-file-structure-or-stop
+          path: prospective/resource_behavior_sdm/independent_resource_vertical_original_smallfile_v1.json
+          retention-days: 30
+          if-no-files-found: error

@@ -1,0 +1,47 @@
+{
+  "schema": "batter.resource_behavior_sdm.cactus_resource_original_source.v1",
+  "date": "2026-11-20",
+  "publication": "https://doi.org/10.1016/j.cub.2020.07.079",
+  "dataset": "https://doi.org/10.17632/jxghjjsttw.1",
+  "taxon": "Leptonycteris yerbabuenae",
+  "published_observational_support": {
+    "gps_bats": 17,
+    "cactus_mapped_bats": 8,
+    "approx_cacti": 3600,
+    "height_agl_reported": true,
+    "cactus_flower_counts_reported": true
+  },
+  "still_unverified": {
+    "original_file_inventory": true,
+    "original_altitude_columns": true,
+    "resource_night_alignment": true,
+    "source_heldout_join": true,
+    "observation_effort": true
+  },
+  "circularity_stop": "Published cactus visit classification uses altitude <20 m; invalid to predict altitude conditional on height-defined visits.",
+  "current_5d_biological_gain": null,
+  "source_access_audit_20261121": {
+    "workflow_run": "https://github.com/zuizui0223/batter/actions/runs/44683043418",
+    "recovered_artifact_id": 14604727847,
+    "recovered_receipt_status": "SOURCE_METADATA_STOP",
+    "error": "HTTP 401 Unauthorized",
+    "original_source_values_read": false,
+    "current_original_file_roster_verified": false,
+    "user_archive_intake_tool": "prospective/resource_behavior_sdm/goldshtein_user_archive_structural_gate_v1.py"
+  },
+  "published_measurement_grain_audit_20261121": {
+    "total_gps_tracked_bats": 17,
+    "mapped_cactus_foraging_bats": 8,
+    "mapped_cactus_locations_approx": 3600,
+    "observed_repeated_flowering_cacti": 414,
+    "measured_flowering_sites": 3,
+    "drone_flower_cacti": 327,
+    "separate_manual_flower_cacti": 87,
+    "model_synthetic_flowers_drawn_from_measured_distribution": true,
+    "same_night_same_cactus_for_all_gps_bat_resource_mapping_verified": false,
+    "stage_A_cactus_location_x_y_conditioned_height_gain": null,
+    "stage_B_direct_dated_bloom_x_y_conditioned_height_gain": null,
+    "paper_defined_visits_used_altitude_under_20m": true,
+    "visit_label_is_invalid_as_height_predictor": true
+  }
+}

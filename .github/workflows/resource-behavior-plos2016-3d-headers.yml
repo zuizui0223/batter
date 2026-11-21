@@ -1,0 +1,44 @@
+name: PLOS 2016 original source seven-column header gate
+
+on:
+  push:
+    branches:
+      - prospective/resource-behavior-higher-dimensional-sdm-v1-20261120
+    paths:
+      - 'prospective/resource_behavior_sdm/plos2016_3d_header_semantics.py'
+      - 'prospective/resource_behavior_sdm/test_plos2016_3d_header_semantics.py'
+      - '.github/workflows/resource-behavior-plos2016-3d-headers.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  synthetic:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s prospective/resource_behavior_sdm -p test_plos2016_3d_header_semantics.py -v
+
+  original-headers-only:
+    needs: synthetic
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Official S1 original shared-string headers, no animal data
+        run: python prospective/resource_behavior_sdm/plos2016_3d_header_semantics.py
+      - name: Keep header-only reproducible receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: plos2016-verified-header-names-v1
+          path: prospective/resource_behavior_sdm/plos2016_header_semantics_v1.json
+          if-no-files-found: error
+          retention-days: 30

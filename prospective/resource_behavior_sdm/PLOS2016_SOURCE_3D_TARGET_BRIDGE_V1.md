@@ -1,0 +1,13 @@
+# A separate original 3D resource-target behavioral bridge: PLOS 2016
+
+2026-11-20. Source structural audit ONLY. Not a wild SDM or independently measured fruit abundance.
+
+Publisher: Gonzalez-Terrazas et al. (2016), PLOS ONE DOI [10.1371/journal.pone.0163492](https://doi.org/10.1371/journal.pone.0163492), supplement **S1** DOI [10.1371/journal.pone.0163492.s001](https://doi.org/10.1371/journal.pone.0163492.s001). CC BY original, reconstructed 3D bat approaches by two IR cameras synchronized to echolocation.
+
+Source paper: 5 wild-caught female *Leptonycteris yerbabuenae*, 3 flight sequences per bat per target, 15 flower versus 15 acrylic hemisphere sequences, within an experimental cage. True cactus flower *Pachycereus pringlei* is an external manipulated object; artificial target is acoustically conspicuous but scentless. They report contrasting trajectory geometry and terminal acoustic behavior. **These ecological differences are already the original authors' published result, not a new `batter` discovery.**
+
+The PLOS S1 file is a 228.5 kB original XLSX (as published); the source-only workflow obtains it from the publisher's canonical link, checks redirect to the publisher's current Cloudflare R2 object, validates XLSX ZIP structure and only reads workbook sheet count, declared dimensions and first-row storage *types*. It computes original file SHA256 for future immutable reference. Raw byte content, names/locations and bat movement/height are not committed. Uploaded receipt holds no individual observations.
+
+**Possible genuine prediction task after source qualifications:** can source-verified `target` (natural flower vs acrylic hemisphere) predict a heldout bat's conditional 3D approach direction/elevation better than geometry-only baseline? Freeze 5-bat leave-one-individual-out design and prediction target definition without using target-dependent exit/turnaway status as a feature. Compare predicted signed relative-height and heading at a declared common source distance interval on the EXACT same eligible source frames. Original target is not true fruit supply; odor and echo jointly differ; transfer to Goldshtein wild Saguaro field, NeoBat, country-level range or species-general resource suitability is **NOT demonstrated**.
+
+Hard STOP: if S1 does not provide individual IDs, target labels, consistent coordinate axes/time, or repeated balanced trials, do not retrofit unrelated PLOS experimental flight trajectories into wild population SDM. Do not infer context from the outcome itself. A mere between-target difference or original published effect does not authorize independent replication.
