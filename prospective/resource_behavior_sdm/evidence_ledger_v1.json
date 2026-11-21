@@ -860,5 +860,46 @@
     "source_plant_food_amount_measured": false,
     "request_access_needed_to_open": true,
     "not_a_direct_true_resource_height_source": true
+  },
+  "plos2016_real_secondary_personal_vs_coldstart_20261121": {
+    "evidence_tier": "ORIGINAL_PUBLISHER_XYZ_POST_OUTCOME_SAME_THREE_BAT_SECONDARY_EXPLORATORY",
+    "parent_real_study": "plos2016_original_three_paired_bat_exploratory_20261121",
+    "secondary_freeze_before_this_new_outcome": "prospective/resource_behavior_sdm/PLOS2016_SECONDARY_WITHIN_VS_BETWEEN_TRIAL_FROZEN_20261121.md",
+    "secondary_original_script": "prospective/resource_behavior_sdm/plos2016_secondary_personal_vs_coldstart_transfer_v1.py",
+    "secondary_source_free_tests": "prospective/resource_behavior_sdm/test_plos2016_secondary_personal_vs_coldstart_transfer_v1.py",
+    "original_source_run": "https://github.com/zuizui0223/batter/actions/runs/44903292033",
+    "original_redacted_artifact_id": 14706388992,
+    "source_sha256": "3cce76e3f75c1eb49ac1a8344880a42da1de163886372a944080e074cdd1fb42",
+    "independent_bat_clusters": 3,
+    "original_eligible_target_trials": 24,
+    "original_eligible_3d_frames": 2671,
+    "personal_model_training_other_trials_per_bat": 7,
+    "coldstart_model_training_other_bats_trials": 16,
+    "same_24_target_trials_as_heldout_endpoints": true,
+    "personal_target_increments_by_bat_nats_per_frame": [
+      -0.007662487595650689,
+      -0.013263135799451388,
+      -0.018181772938507375
+    ],
+    "coldstart_target_increments_by_bat_nats_per_frame": [
+      -0.01874457782425384,
+      -0.04002344632721185,
+      -0.030353547690370852
+    ],
+    "equal_bat_personal_target_gain": -0.013035798777869817,
+    "equal_bat_coldstart_target_gain": -0.029707190613945514,
+    "exact_frozen_previous_coldstart_value_reproduced_within_1e11": true,
+    "personal_minus_coldstart_increment": 0.0166713918360757,
+    "n_personal_target_gain_positive_bats": 0,
+    "n_coldstart_target_gain_positive_bats": 0,
+    "all_three_positive_difference_but_both_target_gains_negative": true,
+    "unequal_training_trial_counts_prevent_causal_mechanism_attribution": true,
+    "not_new_independent_study": true,
+    "post_outcome_exploration_closed_after_this_fixed_comparison": true,
+    "not_true_food_nectar_resource_quantity": true,
+    "not_wild_GPS_AGL_or_species_3d_sdm": true,
+    "original_5_bat_confirmatory_paired_support_gate_still_stop": true,
+    "field_resource_conditioned_3d_height_gain": null,
+    "real_animal_xyz_or_trial_ids_committed": false
   }
 }
