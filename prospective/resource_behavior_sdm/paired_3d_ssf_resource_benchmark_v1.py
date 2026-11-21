@@ -54,7 +54,21 @@ def _finite(v, nonnegative=False):
             and (not nonnegative or float(v) >= 0.0))
 
 
-def validate_risksets(risksets, require_dated_flower=False, include_state=False):
+SAMPLING_MODES = ("enumerated_xy_z", "known_q_sampled_controls")
+
+
+def _proposal_offset(candidate, sampling_mode):
+    if sampling_mode == "enumerated_xy_z":
+        return 0.0
+    if sampling_mode != "known_q_sampled_controls":
+        raise ValueError("STOP_UNKNOWN_3D_CANDIDATE_SAMPLING_MODE")
+    return math.log(candidate["reference_mass"]) - math.log(candidate["proposal_mass"])
+
+
+def validate_risksets(risksets, require_dated_flower=False, include_state=False,
+                      sampling_mode="enumerated_xy_z"):
+    if sampling_mode not in SAMPLING_MODES:
+        raise ValueError("STOP_UNKNOWN_3D_CANDIDATE_SAMPLING_MODE")
     if not isinstance(risksets, (list, tuple)) or len(risksets) < MIN_BATS * 3:
         raise ValueError("STOP_UNAVAILABLE_OR_TOO_FEW_SOURCE_RISKSETS")
     keys = set()
@@ -76,6 +90,14 @@ def validate_risksets(risksets, require_dated_flower=False, include_state=False)
                      "resource_independent_of_tracking"):
             if event.get(gate) is not True:
                 raise ValueError("STOP_SOURCE_PROVENANCE_" + gate)
+        if sampling_mode == "known_q_sampled_controls":
+            for flag in ("controls_independently_sampled_from_q",
+                         "proposal_distribution_known_or_training_fitted",
+                         "reference_measure_source_supported",
+                         "proposal_positive_over_target_support_verified",
+                         "sampling_frozen_for_all_nested_models"):
+                if event.get(flag) is not True:
+                    raise ValueError("STOP_SAMPLED_3D_PROPOSAL_" + flag)
         kind = event.get("resource_kind")
         if kind not in ("cactus_location_proxy", "dated_measured_flower"):
             raise ValueError("STOP_RESOURCE_KIND_NOT_INDEPENDENTLY_DEFINED")
@@ -104,9 +126,14 @@ def validate_risksets(risksets, require_dated_flower=False, include_state=False)
             xy, z = c.get("xy_cell"), c.get("z_level")
             if not isinstance(xy, str) or not xy or not isinstance(z, str) or not z:
                 raise ValueError("STOP_CANDIDATE_XYZ_SUPPORT_MISSING")
-            if (xy, z) in seen:
+            if sampling_mode == "enumerated_xy_z" and (xy, z) in seen:
                 raise ValueError("STOP_DUPLICATE_XY_HEIGHT_CANDIDATE")
             seen.add((xy, z))
+            if sampling_mode == "known_q_sampled_controls":
+                for mass in ("reference_mass", "proposal_mass"):
+                    v = c.get(mass)
+                    if (not _finite(v) or not 0.0 < float(v) <= 1.0):
+                        raise ValueError("STOP_MISSING_OR_ZERO_Q_REFERENCE_MASS")
             by_xy[xy].add(z)
             for field in ("step_m", "cos_turn", "omega_delta",
                           "forest_structure", "agl_m"):
@@ -122,9 +149,13 @@ def validate_risksets(risksets, require_dated_flower=False, include_state=False)
                 raise ValueError("STOP_XY_RESOURCE_CHANGES_WITH_CANDIDATE_HEIGHT")
             if c.get("is_control_built_from_test_endpoint") is not False:
                 raise ValueError("STOP_RESPONSE_LEAKING_CONTROL_SAMPLER")
-        if (len(by_xy) < 2 or len(next(iter(by_xy.values()))) < 2 or
-            len(set(map(frozenset, by_xy.values()))) != 1):
-            raise ValueError("STOP_UNBALANCED_XY_BY_Z_CANDIDATES")
+        if sampling_mode == "enumerated_xy_z":
+            if (len(by_xy) < 2 or len(next(iter(by_xy.values()))) < 2 or
+                len(set(map(frozenset, by_xy.values()))) != 1):
+                raise ValueError("STOP_UNBALANCED_XY_BY_Z_CANDIDATES")
+        # Independently q-sampled controls may repeat a cell or omit one or
+        # more XY/Z levels in a particular riskset. They are NOT an
+        # exhaustive/cartesian horizontal × height prediction lattice.
     if len(bats) < MIN_BATS:
         raise ValueError("STOP_TOO_FEW_INDEPENDENT_ANIMALS")
     if len(resource_kinds) != 1:
@@ -186,7 +217,8 @@ def _softmax(scores):
     return [s / denom for s in unnormalized], m + math.log(denom)
 
 
-def _obj_grad_hess(data, fields, center, scale, beta, weights, with_hessian=True):
+def _obj_grad_hess(data, fields, center, scale, beta, weights,
+                   with_hessian=True, sampling_mode="enumerated_xy_z"):
     p = len(fields)
     loss = RIDGE * math.fsum(b * b for b in beta) / 2.0
     gradient = [RIDGE * b for b in beta]
@@ -194,7 +226,9 @@ def _obj_grad_hess(data, fields, center, scale, beta, weights, with_hessian=True
                for j in range(p)] if with_hessian else None
     for event, w in zip(data, weights):
         rows = _matrix(event, fields, center, scale)
-        scores = [math.fsum(x[j] * beta[j] for j in range(p)) for x in rows]
+        scores = [math.fsum(x[j] * beta[j] for j in range(p)) +
+                  _proposal_offset(c, sampling_mode)
+                  for x, c in zip(rows, event["choices"])]
         prob, lse = _softmax(scores)
         chosen = event["observed_choice"]
         loss += w * (lse - scores[chosen])
@@ -214,7 +248,7 @@ def _obj_grad_hess(data, fields, center, scale, beta, weights, with_hessian=True
     return loss, gradient, hessian
 
 
-def fit(events, fields, max_iter=18):
+def fit(events, fields, max_iter=18, sampling_mode="enumerated_xy_z"):
     events = tuple(events)
     if len(events) < 10:
         raise ValueError("STOP_FEWER_THAN_TEN_TRAINING_STEPS")
@@ -222,7 +256,9 @@ def fit(events, fields, max_iter=18):
     weights = _weights(events)
     beta = [0.0] * len(fields)
     for _ in range(max_iter):
-        loss, grad, hess = _obj_grad_hess(events, fields, center, scale, beta, weights)
+        loss, grad, hess = _obj_grad_hess(
+            events, fields, center, scale, beta, weights,
+            sampling_mode=sampling_mode)
         if max(abs(v) for v in grad) < 1e-8:
             break
         direction = _solve(hess, grad)
@@ -231,7 +267,8 @@ def fit(events, fields, max_iter=18):
         while step > 1e-7:
             trial = [b - step * d for b, d in zip(beta, direction)]
             new_loss, _, _ = _obj_grad_hess(
-                events, fields, center, scale, trial, weights, False)
+                events, fields, center, scale, trial, weights, False,
+                sampling_mode=sampling_mode)
             if new_loss <= loss + 1e-12:
                 beta = trial
                 accepted = True
@@ -240,17 +277,21 @@ def fit(events, fields, max_iter=18):
         if not accepted:
             raise ValueError("STOP_CONDITIONAL_LOGISTIC_OPTIMIZATION_FAILED")
     else:
-        _, g, _ = _obj_grad_hess(events, fields, center, scale, beta, weights, False)
+        _, g, _ = _obj_grad_hess(events, fields, center, scale, beta,
+                                  weights, False, sampling_mode=sampling_mode)
         if max(abs(v) for v in g) > 1e-5:
             raise ValueError("STOP_CONDITIONAL_LOGISTIC_NOT_CONVERGED")
-    return {"fields": fields, "center": center, "scale": scale, "beta": beta}
+    return {"fields": fields, "center": center, "scale": scale, "beta": beta,
+            "sampling_mode": sampling_mode}
 
 
 def score_event(model, event):
     rows = _matrix(event, model["fields"], model["center"], model["scale"])
     beta = model["beta"]
     probs, _ = _softmax([
-        math.fsum(r[j] * beta[j] for j in range(len(beta))) for r in rows])
+        math.fsum(r[j] * beta[j] for j in range(len(beta))) +
+        _proposal_offset(c, model.get("sampling_mode", "enumerated_xy_z"))
+        for r, c in zip(rows, event["choices"])])
     idx = event["observed_choice"]
     xy = event["choices"][idx]["xy_cell"]
     pjoint = probs[idx]
@@ -287,8 +328,10 @@ def _aggregate(events, model):
              for k in components}, len(by_bat), len(by_night))
 
 
-def evaluate(risksets, heldout="bat", require_dated_flower=False, include_state=False):
-    events = validate_risksets(risksets, require_dated_flower, include_state)
+def evaluate(risksets, heldout="bat", require_dated_flower=False,
+             include_state=False, sampling_mode="enumerated_xy_z"):
+    events = validate_risksets(
+        risksets, require_dated_flower, include_state, sampling_mode)
     models = {key: value for key, value in LEVELS.items()
               if include_state or key != "M3_state_interactions"}
     folds = sorted({_fold_value(e, heldout) for e in events}, key=str)
@@ -303,7 +346,7 @@ def evaluate(risksets, heldout="bat", require_dated_flower=False, include_state=
         scores = {}
         n_bats = n_nights = None
         for name, fields in models.items():
-            model = fit(train, fields)
+            model = fit(train, fields, sampling_mode=sampling_mode)
             result, n_bats, n_nights = _aggregate(test, model)
             scores[name] = result
         deltas = {}
@@ -330,6 +373,11 @@ def evaluate(risksets, heldout="bat", require_dated_flower=False, include_state=
         "schema": "batter.paired_3d_ssf_resource_benchmark.v1",
         "status": "DISCRETE_MATCHED_RISKSET_HELDOUT_PREDICTION_NOT_CONTINUOUS_SSF",
         "model_family": "conditional multinomial step-choice softmax with ridge; not ssf3D reproduction",
+        "sampling_mode": sampling_mode,
+        "known_proposal_offset_in_all_nested_models": sampling_mode == "known_q_sampled_controls",
+        "sampling_offset": ("log(reference mass)-log(proposal mass)"
+                            if sampling_mode == "known_q_sampled_controls" else "zero"),
+        "horizontal_component_is_conditional_on_sampled_riskset": True,
         "resource_kind": events[0]["resource_kind"],
         "heldout_unit": heldout, "n_folds": len(rows),
         "n_unique_bats": len({e["bat"] for e in events}),
@@ -344,6 +392,8 @@ def evaluate(risksets, heldout="bat", require_dated_flower=False, include_state=
         "gains_equal_holdout_group_mean": summary,
         "fold_aggregates_without_ids": rows,
         "no_individual_fix_level_pvalues": True,
-        "vertical_height_marginalization_exact_on_discrete_XYxZ_riskset": True,
-        "scientific_boundary": "3D-SSF alternative endpoint proposals and continuous normalizer not implemented; sampling correction and 3D telemetry/detection validation needed before causal interpretation",
+        "vertical_height_marginalization_exact_on_discrete_XYxZ_riskset":
+            sampling_mode == "enumerated_xy_z",
+        "vertical_decomposition_exact_for_matched_sampled_candidate_labels": True,
+        "scientific_boundary": "Known q sampled-case-control correction or exhaustive-grid model only; matched sampled-choice horizontal/height terms are not ecological p(x) and p(z|x), full continuous 3D-SSF availability/normalizer and 3D telemetry/detection remain unverified",
     }
