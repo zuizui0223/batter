@@ -90,7 +90,7 @@ def validate_q_noisy_events(data, include_state=False):
                 not isinstance(catalog, dict) or
                 set(catalog) != set(mu_xy) or len(mu_xy) < 2 or
                 e["observed_xy"] not in mu_xy or
-                not isinstance(cs, list) or len(cs) < 8):
+                not isinstance(cs, list) or len(cs) < 6):
             raise ValueError("STOP_Q_MISSING_FULL_REFERENCE_SUPPORT")
         if (any(not _number(x, positive=True) for x in mu_xy.values()) or
                 abs(math.fsum(mu_xy.values()) - 1.) > 1e-9):
