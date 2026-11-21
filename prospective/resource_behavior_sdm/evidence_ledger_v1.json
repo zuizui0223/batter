@@ -312,7 +312,7 @@
     "real_highdimensional_resource_behavior_height_effect": null
   },
   "independent_prey_transfer_20261121": {
-    "evidence_tier": "EXTERNAL_PUBLISHED_EVIDENCE_AND_SOURCE_METADATA_ONLY",
+    "evidence_tier": "ORIGINAL_USER_UPLOAD_REAL_WITHIN_STUDY_HELDOUT_EXPLORATORY",
     "source_citation": "Hendel et al. 2025 JAE DOI 10.1111/1365-2664.14822",
     "source_dryad_doi": "10.5061/dryad.xksn02vr1",
     "source_publication_online": "2024-11-11",
@@ -338,14 +338,69 @@
     "official_source_gate_run": "https://github.com/zuizui0223/batter/actions/runs/44762637892",
     "sourcefree_predictor_tests_run": "https://github.com/zuizui0223/batter/actions/runs/44763244302",
     "published_orig_author_results_not_new_reanalysis": "SRE bat acoustic activity associated positively with moth abundance and negatively with moth species richness; LRE linked to beetle abundance and richness; SEM direction assumptions and different trap timing limit causal interpretation",
-    "new_external_test_outcome": null,
+    "new_external_test_outcome": {
+      "status": "MEASURED_ORIGINAL_USER_UPLOAD_SOURCE_LOCAL_LOSO_POSTOUTCOME_EXPLORATORY",
+      "n_unique_forest_plots": 65,
+      "paper_reports_n": 64,
+      "heldout_unit": "entire independent plot within same study",
+      "score": "negative squared heldout standardized log1p acoustic activity; difference model-minus-baseline",
+      "frozen_baseline": [
+        "elevation",
+        "DOY",
+        "temp_min",
+        "Opn_mean",
+        "ndsm_sd",
+        "ForMI"
+      ],
+      "ridge_lambda": 0.15,
+      "gains": {
+        "SRE": {
+          "moth_abundance": -0.01199
+        },
+        "MRE": {
+          "moth_abundance": 0.1099,
+          "sites_favorable": 40
+        },
+        "Ppip": {
+          "moth_abundance": 0.16283,
+          "sites_favorable": 38
+        },
+        "LRE": {
+          "beetle_richness": 0.13708,
+          "sites_favorable": 38,
+          "beetle_abundance_and_richness": 0.17649
+        }
+      },
+      "exhaustive_delete_one_64_site_all_positive": {
+        "MRE_moth_abundance": 65,
+        "Ppip_moth_abundance": 65,
+        "LRE_beetle_richness": 65
+      },
+      "forest13_and_ridge_and_mae_postoutcome_robustness": true,
+      "analysis_report": "prospective/resource_behavior_sdm/HENDEL_USER_UPLOAD_ORIGINAL_HELDOUT_RESULT_V1.md",
+      "source_adapter": "prospective/resource_behavior_sdm/hendel_uploaded_xlsx_original_adapter_v1.py",
+      "source_raw_rows_committed": false,
+      "independent_geographic_holdout": false,
+      "causal_insect_consumption_test": false,
+      "height_3d_gain": null
+    },
     "cannot_compare_numeric_scores_to_ducke_fruit_capture_guild": true,
     "independent_field_sample_overlap_with_Ducke": false,
     "raw_source_bytes_or_location_rows_uploaded_to_batter": false,
     "source_3d_individual_trajectory_available": false,
     "external_resource_conditional_height_gain": null,
-    "field_biological_claim_permitted": "Original authors' published qualitative cross-context triangulation only; new heldout forecast is not fitted",
+    "field_biological_claim_permitted": "New within-source measured insect covariates add LOSO predictive information for MRE and Ppip acoustic activity (moth abundance) and LRE acoustic activity (ground-beetle richness), conditional on fixed forest/weather predictors; exploratory, one German source, not causal, not a replicated three-dimensional bat SDM.",
     "followup_source_file_name": "Hendel_etal_2024_Data_DRYAD.xlsx",
-    "protected_main_and_frozen_manuscripts_changed": false
+    "protected_main_and_frozen_manuscripts_changed": false,
+    "user_uploaded_original_xlsx_opened": true,
+    "user_uploaded_xlsx_sha256": "b550d9b2ed1448191dfee85caaa5f27321c6a78c65c8925816a340695513b5a3",
+    "original_publisher_content_still_blocked_but_user_upload_accessible": true,
+    "published_64_vs_uploaded_65_plot_discrepancy_unresolved": true,
+    "source_original_23_columns_verified": true,
+    "source_original_65_unique_plot_rows_no_missing_values": true,
+    "source_aliases_to_preexisting_frozen_engine": {
+      "mothcount_total": "mothcount",
+      "carabidae_SR": "carabidae_S"
+    }
   }
 }
