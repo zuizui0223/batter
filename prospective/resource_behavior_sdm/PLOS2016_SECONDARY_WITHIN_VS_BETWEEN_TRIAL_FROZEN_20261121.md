@@ -1,0 +1,18 @@
+# Exploratory after-outcome source reanalysis — PLOS 2016 within-bat trial transfer versus between-bat prediction
+
+2026-11-21. **POST-OUTCOME EXPLORATORY ONLY**. The prior same-source original three-paired-bat cross-bat result was already opened: n=3 paired bats, 24 trial sequences, 2,671 frames; all three leave-entire-bat-out target-condition height improvements negative, equal-bat Δlog score = −0.02970719061394642 nats/frame. Original frozen 5-bat fully paired target experiment remains STOP. This follow-up is a new secondary diagnostic, **not a rescue or confirmatory validation**.
+
+**New question:** Does knowledge of the assigned physical target category improve prediction of target-relative Z *for a different trial of the same bat* even when it does not transfer to an unseen bat? This addresses source-specific repeatability vs generalization but cannot distinguish mechanisms with only three bats.
+
+Predeclared method, BEFORE reading any within-bat withheld trial result:
+1. Same official original PLOS S1 DOI 10.1371/journal.pone.0163492.s001, strict SHA256 3cce76e3f75c1eb49ac1a8344880a42da1de163886372a944080e074cdd1fb42; 5-bat structural failure plus exactly 3 paired bats and 24 eligible original Bat×Target×Test trial groups; source X/Y/Z and labels only; never Distance toT.
+2. For each of 24 trials: hold out **the entire trial including all frames**. Two distinct predictors, trained strictly on other trials:
+   A. **Personal seen-bat**: training from same heldout bat's seven other trials, both targets represented; do not train on withheld trial frames.
+   B. **Other-bat cold start**: all 16 trials from the other two paired bats; no data from heldout bat. This reproduces the 3-bat LOBO result across identical trial targets (comparison check must recover −0.02970719061394642 within rounding).
+3. Both training modes use exactly the previous frozen model family: training-only trial/bat/target-weighted 3 XY radial quantile bins, 5 Z quantile bins, alpha=0.5 smoothed conditional categorical Z prediction with target class vs target-blind baseline, and trial mean logscore. No interpolation, bin tuning, target semantic recoding, subject identity in test model, or frame-based p-values.
+4. Aggregate per trial → equal target category within each bat → equal 3 bat means. Record three anonymous bat-level effects and 0..3 sign concordance separately for personal and cold-start model; one descriptive change (personal minus other-bat target-*increment*) using identical 24 test trials.
+5. **Different training-set sizes (7 same-bat trials versus 16 other-bat trials)** mean any positive/negative difference does not isolate memory, causal learning, or pure individuality. Target condition may differ by session or target identity; no source-proven observation effort or independent resource quantity.
+6. Source-free synthetic tests and response-blind original source gates must pass first. Any real data result is source-local, exploratory and non-generalizable; no 0.05 one-sided bat signflip possible (minimum 1/8). Original JAE/BE and both batter/esdm main untouched. Never commit original XYZ, bat/target labels or trial-level results to GitHub. Persist bat-level pseudonymous aggregate receipts only.
+7. Stop outcome exploration after this fixed within-versus-between comparison. Do not tune or investigate further subsets of the same three bats seeking a positive discovery.
+
+Research motivation: if personal target increment is greater than across-bat, it would be *consistent with context/individual dependence* but not a proof of memory or mechanism. If both fail, the target-label-only coarse conditional height forecast is unsupported even within these source trials. No outcome sign is assumed.
