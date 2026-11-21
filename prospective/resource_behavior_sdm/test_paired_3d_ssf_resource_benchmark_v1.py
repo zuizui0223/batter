@@ -16,9 +16,18 @@ def simulated(world="resource_agl", n_bats=8, steps=15, seed=1834, dated=False):
             for step in range(steps):
                 state = (step + night) % 2
                 # Nuisance environment partly correlated with prey.
-                r0 = rng.uniform(0.0, 3.0)
-                r1 = rng.uniform(0.0, 3.0)
-                resources = (r0, r1)
+                if world == "unmeasured_habitat_proxy":
+                    # Latent quality causes BOTH insect/plant proxy and true use.
+                    latent = (rng.uniform(-1, 1), rng.uniform(-1, 1))
+                    resources = tuple(
+                        max(0.0, math.exp(0.9 + 1.1 * q + rng.uniform(-.15, .15)) - 1)
+                        for q in latent
+                    )
+                else:
+                    latent = (0.0, 0.0)
+                    r0 = rng.uniform(0.0, 3.0)
+                    r1 = rng.uniform(0.0, 3.0)
+                    resources = (r0, r1)
                 choices = []
                 logits = []
                 for xy in range(2):
@@ -44,6 +53,11 @@ def simulated(world="resource_agl", n_bats=8, steps=15, seed=1834, dated=False):
                         elif world == "resource_agl_state":
                             score += (3.5 if state == 1 else -3.5) * \
                                      math.log1p(resources[xy]) * z / 50
+                        elif world == "unmeasured_habitat_proxy":
+                            # World definition: hidden habitat -> resource proxy,
+                            # hidden habitat -> horizontal and vertical selection;
+                            # NO direct arrow resource -> animal behavior.
+                            score += 2.0 * latent[xy] + 2.5 * latent[xy] * z / 50
                         elif world != "null":
                             raise ValueError("unknown test world")
                         logits.append(score)
@@ -86,6 +100,18 @@ class Paired3DResourceSSFKnownTruthTests(unittest.TestCase):
         self.assertAlmostEqual(g["resource_main_M1_minus_M0"]["horizontal"],
                                -0.002508923738964247, places=5)
         self.assertLess(g["resource_height_M2_minus_M1"]["height_given_horizontal"], 0)
+
+    def test_hidden_habitat_generates_false_causal_resource_height_conclusion(self):
+        out = evaluate(simulated("unmeasured_habitat_proxy"), heldout="bat")
+        gain = out["gains_equal_holdout_group_mean"]
+        self.assertAlmostEqual(
+            gain["resource_main_M1_minus_M0"]["horizontal"], 0.3116959335634489,
+            places=5)
+        self.assertAlmostEqual(
+            gain["resource_height_M2_minus_M1"]["height_given_horizontal"],
+            0.1541523358834193, places=5)
+        # Fitted associations CAN predict but NEVER establish direct food use.
+        self.assertFalse(out["empirical_resource_height_bat_gain_claim_allowed"])
 
     def test_discrete_horizontal_projection_is_exact(self):
         data = simulated(steps=4)
