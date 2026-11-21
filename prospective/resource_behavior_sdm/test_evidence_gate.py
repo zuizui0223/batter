@@ -295,6 +295,32 @@ class ResourceBehaviorClaimGateTests(unittest.TestCase):
         self.assertTrue(x["request_access_needed_to_open"])
         self.assertTrue(x["not_a_direct_true_resource_height_source"])
 
+    def test_plos_three_bat_secondary_personal_vs_other_bats_negative_and_not_confirmatory(self):
+        x=self.data["plos2016_real_secondary_personal_vs_coldstart_20261121"]
+        self.assertEqual(x["independent_bat_clusters"],3)
+        self.assertEqual(x["original_eligible_target_trials"],24)
+        self.assertEqual(x["original_eligible_3d_frames"],2671)
+        self.assertTrue(x["exact_frozen_previous_coldstart_value_reproduced_within_1e11"])
+        self.assertAlmostEqual(x["equal_bat_personal_target_gain"],
+                               -0.013035798777869817,places=12)
+        self.assertAlmostEqual(x["equal_bat_coldstart_target_gain"],
+                               -0.029707190613945514,places=12)
+        self.assertAlmostEqual(x["personal_minus_coldstart_increment"],
+                                0.0166713918360757,places=12)
+        self.assertEqual(x["n_personal_target_gain_positive_bats"],0)
+        self.assertEqual(x["n_coldstart_target_gain_positive_bats"],0)
+        self.assertTrue(all(v<0 for v in x["personal_target_increments_by_bat_nats_per_frame"]))
+        self.assertTrue(all(v<0 for v in x["coldstart_target_increments_by_bat_nats_per_frame"]))
+        self.assertTrue(x["unequal_training_trial_counts_prevent_causal_mechanism_attribution"])
+        self.assertTrue(x["post_outcome_exploration_closed_after_this_fixed_comparison"])
+        self.assertTrue(x["original_5_bat_confirmatory_paired_support_gate_still_stop"])
+        self.assertFalse(x["not_new_independent_study"] is False)
+        self.assertFalse(x["not_true_food_nectar_resource_quantity"] is False)
+        self.assertIsNone(x["field_resource_conditioned_3d_height_gain"])
+        self.assertFalse(x["real_animal_xyz_or_trial_ids_committed"])
+        self.assertIsNone(self.data["strict_unestimated"]
+                          ["higher_dim_resource_conditional_bat_logscore_gain"])
+
     def test_no_frozen_manuscript_or_parent_main_overwrite(self):
         self.assertFalse(self.data["changes_to_frozen_bat_manuscripts"])
         self.assertFalse(self.data["changes_to_esdm_main"])
