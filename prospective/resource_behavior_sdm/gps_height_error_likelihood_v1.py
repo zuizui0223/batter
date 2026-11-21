@@ -100,6 +100,8 @@ def validate_observed_noisy_events(events, include_state=False):
                 raise ValueError("STOP_HEIGHT_DEFINED_RESOURCE_COVARIATE")
             if c.get("is_control_built_from_test_endpoint") is not False:
                 raise ValueError("STOP_TEST_OBSERVED_HEIGHT_USED_FOR_CANDIDATES")
+            if "log_sampling_weight" in c:
+                raise ValueError("STOP_UNVERIFIED_NONUNIFORM_WEIGHT_IN_ENUMERATED_GRID")
         if (len(cells)<2 or e["observed_xy"] not in cells or
             min(map(len,cells.values()))<2 or
             len({frozenset(z) for z in cells.values()})!=1):
@@ -129,7 +131,10 @@ def _precomputed(data,fields,center,scale):
         log_emission=[_emission(e,c) for c in e["choices"]]
         if not any(math.isfinite(a) for a in log_emission):
             raise ValueError("STOP_OBSERVATION_XY_HAS_NO_CANDIDATE_SUPPORT")
-        out.append((x,log_emission))
+        offsets=[float(c.get("log_sampling_weight",0.)) for c in e["choices"]]
+        if not all(math.isfinite(v) for v in offsets):
+            raise ValueError("STOP_NONFINITE_IMPORTANCE_LOG_WEIGHT")
+        out.append((x,log_emission,offsets))
     return tuple(out)
 
 
@@ -137,8 +142,9 @@ def _loss_gradient(beta,table,weights):
     p=len(beta)
     total=RIDGE*math.fsum(t*t for t in beta)/2
     grad=[RIDGE*t for t in beta]
-    for (x,obs),w in zip(table,weights):
-        eta=[math.fsum(row[j]*beta[j] for j in range(p)) for row in x]
+    for (x,obs,offsets),w in zip(table,weights):
+        eta=[math.fsum(row[j]*beta[j] for j in range(p))+offsets[k]
+             for k,row in enumerate(x)]
         probs,den=_prob_from_log(eta)
         post,obsden=_prob_from_log([
             (eta[i]+obs[i]) if math.isfinite(obs[i]) else float("-inf")
@@ -226,7 +232,8 @@ def fit_hard_bin_naive(events,fields):
 
 def score_observed(model,event):
     rows=_matrix(event,model["fields"],model["center"],model["scale"])
-    eta=[_dot(x,model["beta"]) for x in rows]
+    eta=[_dot(x,model["beta"])+float(c.get("log_sampling_weight",0.))
+         for x,c in zip(rows,event["choices"])]
     xy=event["observed_xy"]
     sum_all=_logsumexp(eta)
     sum_xy=_logsumexp([eta[i] for i,c in enumerate(event["choices"])
