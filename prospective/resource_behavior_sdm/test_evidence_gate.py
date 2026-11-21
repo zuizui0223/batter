@@ -223,6 +223,24 @@ class ResourceBehaviorClaimGateTests(unittest.TestCase):
         self.assertIsNone(self.data["strict_unestimated"]
                           ["higher_dim_resource_conditional_bat_logscore_gain"])
 
+    def test_gps_height_error_11m_is_simulation_not_a_verified_field_result(self):
+        a=self.data["gps_height_error_known_truth_20261121"]
+        self.assertEqual(a["number_of_precommitted_simulation_scenarios"],5)
+        self.assertEqual(a["synthetic_bats"],6)
+        self.assertEqual(a["synthetic_recorded_steps"],60)
+        self.assertFalse(a["actual_goldshtein_sensor_sigma_verified"])
+        self.assertFalse(a["known_q_sampled_control_correction_integrated"])
+        self.assertTrue(a["target_height_leakage_prohibited"])
+        self.assertTrue(a["same_recorded_observation_scored_for_sensor_aware_and_hard_binned_models"])
+        self.assertFalse(a["original_goldshtein_bat_flower_agl_join_verified"])
+        self.assertIsNone(a["empirical_wild_bat_resource_conditioned_height_gain"])
+        self.assertIsNone(self.data["strict_unestimated"]
+                          ["higher_dim_resource_conditional_bat_logscore_gain"])
+        s=a["source_free_true_resource_height_sensitivities"]
+        self.assertGreater(s[1]["conditional_height_M2_minus_M1_sensor_aware"],0)
+        self.assertGreater(s[2]["sensor_aware_M2_joint_minus_hard_bin"],0)
+        self.assertLess(a["source_free_true_no_resource_effect_sigma_11_height_gain"],0.001)
+
     def test_no_frozen_manuscript_or_parent_main_overwrite(self):
         self.assertFalse(self.data["changes_to_frozen_bat_manuscripts"])
         self.assertFalse(self.data["changes_to_esdm_main"])
