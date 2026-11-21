@@ -121,6 +121,19 @@ class ResourceBehaviorClaimGateTests(unittest.TestCase):
         self.assertIsNone(self.data["strict_unestimated"]["external_resource_sdm_confirmation"])
         self.assertIsNone(self.data["strict_unestimated"]["higher_dim_resource_conditional_bat_logscore_gain"])
 
+    def test_goldshtein_source_access_and_true_resource_join_remain_stop(self):
+        x=self.data["goldshtein_source_audit_20261121"]
+        self.assertEqual(x["official_metadata_http_status"],401)
+        self.assertFalse(x["source_file_inventory_verified"])
+        self.assertEqual(x["gps_bats_in_mapped_cactus_field"],8)
+        self.assertEqual(x["directly_monitored_open_flower_cacti"],414)
+        self.assertFalse(x["same_night_mapped_cactus_flower_bat_gps_join_verified"])
+        self.assertTrue(x["using_author_visit_labels_to_predict_height_is_response_leakage"])
+        self.assertIsNone(x["true_resource_conditioned_height_holdout_gain"])
+        self.assertIsNone(x["cactus_location_conditional_height_holdout_gain"])
+        self.assertFalse(x["source_rows_committed"])
+        self.assertIsNone(self.data["strict_unestimated"]["higher_dim_resource_conditional_bat_logscore_gain"])
+
     def test_no_frozen_manuscript_or_parent_main_overwrite(self):
         self.assertFalse(self.data["changes_to_frozen_bat_manuscripts"])
         self.assertFalse(self.data["changes_to_esdm_main"])
