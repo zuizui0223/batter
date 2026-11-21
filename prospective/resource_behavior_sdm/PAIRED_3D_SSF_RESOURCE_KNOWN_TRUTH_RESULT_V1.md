@@ -48,3 +48,25 @@ The newly implemented code: [paired_3d_ssf_resource_benchmark_v1.py](paired_3d_s
 Original Goldshtein Mendeley DOI https://doi.org/10.17632/jxghjjsttw.1 remains officially HTTP 401 from GitHub (recovered original source gate artifact). Publication documents approximately 3,600 mapped cacti for 8 GPS bats versus direct bloom observations of 414 cacti in 3 different fields. Whether exact same-night observed bloom counts align with GPS events is **UNVERIFIED**. The separate safe ZIP intake [goldshtein_user_archive_structural_gate_v1.py](goldshtein_user_archive_structural_gate_v1.py) is ready when author files become accessible. Until then, M0–M3 results above are known-truth software checks only.
 
 Frozen JAE/BE, esdm main and batter main untouched; PR remains Draft.
+
+
+---
+
+## Unmeasured-habitat confounder counterexample (same 8 fictional-bat holdouts)
+
+An additional synthetic data-generating world specifies latent habitat quality H at candidate XY. H causes **both** (i) measured resource abundance R, and (ii) bat horizontal and vertical step-choice probability. The direct causal coefficient **R → bat is explicitly ZERO** in the generator; the coarse observed forest_structure predictor does not fully measure H.
+
+This world nevertheless produces:
+
+| Contrast | Δjoint | Δhorizontal | Δheight conditional XY |
+|---|---:|---:|---:|
+| M1−M0 (add observed resource proxy) | +0.312697 | +0.311696 | +0.001001 |
+| M2−M1 (add resource × height interaction) | +0.186130 | +0.031978 | **+0.154152** |
+
+Thus, **out-of-bat heldout prediction of height can improve strongly even without ANY causal role for the measured resource**. A reproducible test named test_hidden_habitat_generates_false_causal_resource_height_conclusion is now in the source-free test suite. This is a **methodological counterexample**, not a measurement of forests or bats.
+
+**Implications for later field inference:**
+- Distinguish the predictive claim (R helps forecast Z conditional XY) from causal claims (changing R changes Z).
+- Require observed *same-XY repeated nights* with real flower changes, habitat/terrain and weather controls, verified survey effort, and contemporaneous altitude observations before proposing a time-varying resource mechanism. A temporally stable cactus XY map alone cannot identify that mechanism.
+- Test food versus matched nonfood and within-habitat/time resource shuffle nulls, and quantify unmeasured-structure sensitivity. If such data are missing, report the extra forecast information but STOP before claiming mechanism.
+- Do not use dated or proxy flags alone as guarantees of causal identifiability, even with perfect nested group holdout.
