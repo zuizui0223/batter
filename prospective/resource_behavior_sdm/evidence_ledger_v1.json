@@ -417,5 +417,29 @@
       "mothcount_total": "mothcount",
       "carabidae_SR": "carabidae_S"
     }
+  },
+  "goldshtein_source_audit_20261121": {
+    "evidence_tier": "PUBLISHED_METHODS_AND_RECOVERED_OFFICIAL_401_ARTIFACT_ONLY",
+    "source_publication": "10.1016/j.cub.2020.07.079",
+    "source_dataset": "10.17632/jxghjjsttw.1",
+    "official_metadata_run": "https://github.com/zuizui0223/batter/actions/runs/44683043418",
+    "source_original_receipt_artifact_id": 14604727847,
+    "official_metadata_http_status": 401,
+    "source_file_inventory_verified": false,
+    "gps_bats_published": 17,
+    "gps_bats_in_mapped_cactus_field": 8,
+    "mapped_cacti_approx": 3600,
+    "directly_monitored_open_flower_cacti": 414,
+    "flower_survey_field_count": 3,
+    "same_night_mapped_cactus_flower_bat_gps_join_verified": false,
+    "author_simulation_samples_flowers_from_empirical_distribution": true,
+    "published_visit_height_condition_under_m": 20,
+    "published_visit_horizontal_condition_under_m": 15,
+    "using_author_visit_labels_to_predict_height_is_response_leakage": true,
+    "original_zip_intake_protocol": "prospective/resource_behavior_sdm/goldshtein_user_archive_structural_gate_v1.py",
+    "true_resource_conditioned_height_holdout_gain": null,
+    "cactus_location_conditional_height_holdout_gain": null,
+    "source_rows_committed": false,
+    "protected_main_or_manuscripts_changed": false
   }
 }
