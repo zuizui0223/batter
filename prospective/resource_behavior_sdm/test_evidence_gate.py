@@ -172,8 +172,15 @@ class ResourceBehaviorClaimGateTests(unittest.TestCase):
         self.assertGreater(s["only_horizontal_resource"]["M1_minus_M0"]["horizontal"],0)
         self.assertGreater(s["resource_by_height"]["M2_minus_M1"]["conditional_height"],0)
         self.assertGreater(s["resource_height_by_height_blind_behavior"]["M3_minus_M2"]["conditional_height"],0)
+        proxy=s["unmeasured_habitat_proxy_with_zero_resource_causal_effect"]
+        self.assertFalse(v["resource_conditioned_height_prediction_identifies_causal_resource_mechanism"])
+        self.assertGreater(proxy["M1_minus_M0"]["horizontal"],0)
+        self.assertAlmostEqual(proxy["M2_minus_M1"]["conditional_height"],
+                               0.1541523358834193,places=5)
         for world in s.values():
             for contrast in world.values():
+                if not isinstance(contrast,dict) or not {"joint","horizontal","conditional_height"}.issubset(contrast):
+                    continue
                 self.assertAlmostEqual(contrast["joint"],
                                        contrast["horizontal"]+contrast["conditional_height"],
                                        places=10)
