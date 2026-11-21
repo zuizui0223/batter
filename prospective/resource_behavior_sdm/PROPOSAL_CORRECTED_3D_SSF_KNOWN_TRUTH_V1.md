@@ -52,3 +52,8 @@ These are **illustrative fixed-generator conditional label log scores**. Nats/st
 Goldshtein et al. 2020 [Mendeley Data](https://doi.org/10.17632/jxghjjsttw.1) Version 1 is listed as public, with description of movement, video and nectar data. On 2026-11-21, the publisher HTML landing page can be read but its embedded file list is not exposed in the tool's retrieved content; direct public Mendeley API metadata/files read from the browser tool is inaccessible. The original GitHub Actions gate yielded **HTTP 401**. Thus raw source files and true bat GPS × dated cactus bloom join remain **NOT VERIFIED**, and the resource-conditioned **wild 3D height predictive gain remains NULL**.
 
 No raw GPS or author source rows are committed. Keep draft PR #102 and protect existing JAE/BE and parent main.
+
+
+## Independent solver verification
+
+In addition to the standard-library Newton implementation and Python-version CI, an independent NumPy + SciPy bounded-scalar minimizer using scipy.special.logsumexp replayed **12** source-free fits: the no-effect and beta=0.95 worlds × all sites/A-only/B-only × corrected/uncorrected models. The largest absolute coefficient disagreement was **2.86e−8**, well within 1e−6. This cross-check does not authenticate wild-bat source rows or imply any empirical mechanism. Reproduction script: [verify_proposal_scipy_independent_v1.py](verify_proposal_scipy_independent_v1.py), optional dependencies and not run by the pure-stdlib GitHub Actions job.
