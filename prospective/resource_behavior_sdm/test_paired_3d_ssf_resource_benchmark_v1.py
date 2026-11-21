@@ -80,6 +80,13 @@ def simulated(world="resource_agl", n_bats=8, steps=15, seed=1834, dated=False):
 
 
 class Paired3DResourceSSFKnownTruthTests(unittest.TestCase):
+    def test_frozen_null_world_rejects_automatic_resource_gain(self):
+        out = evaluate(simulated("null"), heldout="bat")
+        g = out["gains_equal_holdout_group_mean"]
+        self.assertAlmostEqual(g["resource_main_M1_minus_M0"]["horizontal"],
+                               -0.002508923738964247, places=5)
+        self.assertLess(g["resource_height_M2_minus_M1"]["height_given_horizontal"], 0)
+
     def test_discrete_horizontal_projection_is_exact(self):
         data = simulated(steps=4)
         model = fit(data[20:], LEVELS["M2_resource_by_height"])
@@ -96,6 +103,7 @@ class Paired3DResourceSSFKnownTruthTests(unittest.TestCase):
         gain = out["gains_equal_holdout_group_mean"]["resource_height_M2_minus_M1"]
         self.assertGreater(gain["height_given_horizontal"], 0)
         self.assertGreater(gain["joint"], 0)
+        self.assertAlmostEqual(gain["height_given_horizontal"], 0.03901653396497237, places=5)
         self.assertAlmostEqual(
             gain["joint"], gain["horizontal"] + gain["height_given_horizontal"], places=11)
         self.assertFalse(out["empirical_resource_height_bat_gain_claim_allowed"])
@@ -108,12 +116,14 @@ class Paired3DResourceSSFKnownTruthTests(unittest.TestCase):
         gain = out["gains_equal_holdout_group_mean"]["resource_main_M1_minus_M0"]
         self.assertGreater(gain["horizontal"], 0)
         self.assertGreater(gain["joint"], 0)
+        self.assertAlmostEqual(gain["horizontal"], 0.09653327525365989, places=5)
 
     def test_state_change_only_if_height_blind(self):
         data = simulated("resource_agl_state")
         out = evaluate(data, heldout="bat", include_state=True)
         gain = out["gains_equal_holdout_group_mean"]["state_interactions_M3_minus_M2"]
         self.assertGreater(gain["joint"], 0)
+        self.assertAlmostEqual(gain["height_given_horizontal"], 0.46475676298846086, places=5)
         bad = deepcopy(data)
         bad[0]["state_annotation_height_blind"] = False
         with self.assertRaisesRegex(ValueError, "STATE_DERIVED_FROM_HEIGHT"):
