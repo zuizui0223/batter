@@ -13,3 +13,19 @@ Biological limitations: Moth UV light traps operated on night 2 whereas bat acou
 **The precise Ducke-to-Germany transfer claim is not a numerical coefficient**: local measured resource abundance or richness may add predictive information beyond physical habitat; abundance and diversity may exert different relationships. Testing whether this principle survives across food channel/continent/detection mode is a **new out-of-study analytical goal**, not yet a new confirmed result. Ducke's 4-guild negative log likelihood and German acoustic activity squared error are **incompatible units**; do not pool their gains as a meta-analysis. Full 5D bat resource/height gain and NeoBat true M3−M1/N1 remain unestimated.
 
 Protected frozen JAE/BE, `batter` main and `esdm` main are untouched.
+---
+
+## 2026-11-21: original workbook uploaded and fitted (supersedes the source-free outcome status above)
+
+The **publisher's own HTTPS download is still blocked** in cloud CI (HTTP 401), but the user provided the actual workbook. It is SHA-256 pinned and heldout prediction was computed on **65 observed complete unique plot rows**, not just synthetic values. The paper says 64; no row was removed without an author-approved exclusion key. Every possible 64-site subset was refitted and the main positive directions survived 65/65 tests.
+
+Matched source columns in the original Excel differ from the synthetic runner: mothcount_total corresponds to mothcount; carabidae_SR to carabidae_S. The new [SHA-pinned local adapter](hendel_uploaded_xlsx_original_adapter_v1.py) prevents silent header mismatch; the raw workbook and animal records are **not** in the repository.
+
+- MRE acoustic activity: added moth abundance +0.10990 standardized heldout score; Ppip +0.16283.
+- LRE acoustic activity: added ground beetle richness +0.13708; abundance and richness jointly +0.17649.
+- SRE: added moth abundance −0.01199, **not a positive heldout prediction**.
+- A larger 13-variable forest covariate baseline, ridge strength alternatives, and an MAE loss check all preserve the main three positive directions.
+
+The primary model was defined before source XLSX values were opened in this project; robustness analyses are **post-outcome**. Publication already described in-sample prey/activity associations, so this new *exploratory within-study predictive test* is not novel proof of bat diet or causality, not independent geographic holdout, and not 3D vertical GPS. Neither Ducke's 4-guild log-score units nor its target can be numerically pooled with Hendel.
+
+**Authoritative new result and explicit caveats:** [HENDEL_USER_UPLOAD_ORIGINAL_HELDOUT_RESULT_V1.md](HENDEL_USER_UPLOAD_ORIGINAL_HELDOUT_RESULT_V1.md). Current evidence ledger: [evidence_ledger_v1.json](evidence_ledger_v1.json). Original source gate history above remains intact; frozen manuscripts and main branches remain unchanged.
