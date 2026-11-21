@@ -138,6 +138,12 @@ class ResourceBehaviorClaimGateTests(unittest.TestCase):
         p=self.data["prior_art_novelty_audit_20261121"]
         self.assertEqual(p["seabird_3d_2026_n_taxa"],44)
         self.assertTrue(p["behavior_hmm_ssf_simulated_utilization_distribution"])
+        self.assertEqual(p["direct_2026_3d_ssf_method_doi"], "10.1111/ele.70414")
+        self.assertTrue(p["direct_2026_3d_ssf_3d_crw_movement_habitat_selection_joint"])
+        self.assertFalse(p["direct_2026_3d_ssf_empirical_resource_state_individual_combination_demonstrated"])
+        self.assertEqual(p["forest_bat_micarray_lidar_joint_3d_prior_art"],
+                         "10.1186/s40462-023-00387-0")
+        self.assertIsNone(p["original_joint_measured_resource_state_bat_individual_agl_gain"])
         self.assertEqual(p["number_of_hmm_ssf_simulated_tracks"],5)
         self.assertIn("10.1002/ece3.11138",p["forest_bird_18_sector_binomial_model"])
         self.assertIn("10.1016/j.foreco.2022.120668",
