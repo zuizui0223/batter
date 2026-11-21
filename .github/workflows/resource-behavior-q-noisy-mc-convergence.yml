@@ -1,0 +1,43 @@
+name: Bat q-stratified noisy AGL Monte Carlo convergence (source-free)
+
+on:
+  push:
+    branches:
+      - prospective/resource-behavior-higher-dimensional-sdm-v1-20261120
+    paths:
+      - 'prospective/resource_behavior_sdm/q_noisy_height_mc_convergence_v1.py'
+      - 'prospective/resource_behavior_sdm/Q_NOISY_HEIGHT_MC_CONVERGENCE_FREEZE_V1.md'
+      - '.github/workflows/resource-behavior-q-noisy-mc-convergence.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  fixed-coefficient-convergence:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run prespecified candidate K grid (synthetic only)
+        shell: bash
+        run: |
+          set +e
+          python prospective/resource_behavior_sdm/q_noisy_height_mc_convergence_v1.py \
+            --out /tmp/q_noisy_height_mc_convergence_v1.json \
+            > /tmp/q_noisy_height_mc_convergence_trace.txt 2>&1
+          status=$?
+          cat /tmp/q_noisy_height_mc_convergence_trace.txt
+          exit "$status"
+      - name: Archive source-free aggregate scores and error trace
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: q-noisy-height-mc-K-grid-sourcefree-v1
+          path: |
+            /tmp/q_noisy_height_mc_convergence_v1.json
+            /tmp/q_noisy_height_mc_convergence_trace.txt
+          retention-days: 30
+          if-no-files-found: warn
