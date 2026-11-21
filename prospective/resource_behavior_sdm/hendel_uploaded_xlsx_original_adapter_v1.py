@@ -44,10 +44,10 @@ def normalize_original_matrix(matrix):
     return data
 
 def build_receipt(path, include_delete_one=False):
-    from artifact_tool import Blob, SpreadsheetFile
     digest = hashlib.sha256(Path(path).read_bytes()).hexdigest()
     if digest != EXPECTED_SHA256:
         raise ValueError("STOP_HENDEL_UPLOADED_XLSX_SHA256_MISMATCH")
+    from artifact_tool import Blob, SpreadsheetFile
     workbook = SpreadsheetFile.import_xlsx(Blob.load(str(path)))
     matrix = workbook.worksheets.get_item_at(0).get_range("A1:W66").values
     data = normalize_original_matrix(matrix)
