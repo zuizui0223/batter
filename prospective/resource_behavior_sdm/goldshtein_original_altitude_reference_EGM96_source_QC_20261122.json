@@ -1,0 +1,60 @@
+{
+  "schema": "batter.goldshtein_20261122_additional_independent_altitude_reference_QC.v1",
+  "status": "ORIGINAL_USER_SOURCE_XY_ONLY_QUALITY_CHECK_VERTICAL_DATUM_STILL_UNQUALIFIED",
+  "original_zip_sha256": "069b12e6383fa7d84a1f7164fcfe16b0ce693469a7661262ce1a0ed73e423ebb",
+  "grid": {
+    "name": "PROJ supplied EGM96 15 minute vertical shift, not EGM2008",
+    "local_path_for_reproducibility": "/usr/share/proj/egm96_15.gtx",
+    "sha256": "c02a6eb70a7a78efebe5adf3ade626eb75390e170bb8b3f36136a2c28f5326a0",
+    "geoid_shift_field_cactus_xlsx_m_quantiles_05_25_50_75_95": [
+      -33.75,
+      -33.41,
+      -32.95,
+      -32.84,
+      -32.82
+    ],
+    "geoid_shift_drone_332_cactus_m_quantiles_05_25_50_75_95": [
+      -33.27,
+      -33.26,
+      -33.26,
+      -33.26,
+      -33.26
+    ],
+    "model_sign_convention_must_be_verified_before_ellipsoid_orthometric_conversion": true
+  },
+  "per_bat_cactus_altitude_reference": {
+    "n_source_cactus_map_files": 8,
+    "n_source_cactus_map_files_with_numeric_alt": 4,
+    "n_source_cactus_coordinate_rows_with_numeric_alt": 1951,
+    "n_distinct_bats_with_XY_matched_valid_RMC_GGA": 4,
+    "source_XY_15m_n_matched_altitude_references": 36082,
+    "source_XY_50m_n_matched_altitude_references": 48948,
+    "raw_GGA_minus_nearest_source_cactus_alt_m_quantiles_15m": [
+      -83.02,
+      -64.7,
+      -57.23,
+      -51.46,
+      -34.62
+    ],
+    "raw_GGA_minus_nearest_source_cactus_alt_m_quantiles_50m": [
+      -83.14,
+      -64.54,
+      -56.86,
+      -50.42,
+      -28.46
+    ],
+    "anonymous_bat_equal_median_range_m": [
+      -79.35,
+      -28.2
+    ],
+    "anonymous_bat_median_spread_m": 51.15,
+    "animal_fixes_are_serially_correlated_and_do_not_create_independent_replicates": true
+  },
+  "previous_drone_GGA_minus_source_drone_alt_median_near15m": -86.51,
+  "EGM96_shift_magnitude_does_not_reconcile_both_independent_source_ground_alt_references": true,
+  "GPS_GGA_altitude_semantics_unverified_ellipsoidal_vs_orthometric": true,
+  "per_flight_fix_corrected_AGL_reconstructed": false,
+  "calibrate_constant_vertical_offset_using_response_data_permitted": false,
+  "observed_bat_resource_conditioned_height_predictive_gain": null,
+  "no_private_coordinates_animal_ids_or_altitude_series_exported": true
+}
