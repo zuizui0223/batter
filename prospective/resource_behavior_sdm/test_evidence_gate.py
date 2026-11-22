@@ -321,6 +321,26 @@ class ResourceBehaviorClaimGateTests(unittest.TestCase):
         self.assertIsNone(self.data["strict_unestimated"]
                           ["higher_dim_resource_conditional_bat_logscore_gain"])
 
+    def test_goldshtein_uploaded_original_xy_is_only_spatial_eligibility_not_resource_height(self):
+        r=self.data["goldshtein_uploaded_source_xy_audit_20261122"]
+        self.assertEqual(r["n_tracking_animal_folders"],17)
+        self.assertEqual(r["n_cactus_map_files"],8)
+        self.assertEqual(r["n_cactus_map_rows"],2483)
+        self.assertEqual(r["n_valid_rmc_fixes_raw"],205166)
+        self.assertEqual(r["n_mapped_bat_time_xy_deduplicated"],105580)
+        self.assertEqual(r["n_mapped_bat_fixes_in_cactus_convex_hull"],42562)
+        self.assertTrue(r["convex_hull_NOT_original_survey_polygon"])
+        self.assertFalse(r["publisher_digest_verified"])
+        self.assertFalse(r["terrain_relative_AGL_and_uncertainty_independently_validated"])
+        self.assertFalse(r["original_legacy_open_flowers_xls_schema_decoded"])
+        self.assertFalse(r["source_video_bat_and_cactus_keys_joined"])
+        self.assertFalse(r["any_new_fitted_wild_resource_height_gain"])
+        self.assertIsNone(r["empirical_resource_height_gain"])
+        self.assertIsNone(r["regional_species_SDM_gain"])
+        self.assertIsNone(self.data["strict_unestimated"]
+                          ["higher_dim_resource_conditional_bat_logscore_gain"])
+        self.assertTrue(r["no_original_xy_or_height_values_or_animal_ids_committed"])
+
     def test_no_frozen_manuscript_or_parent_main_overwrite(self):
         self.assertFalse(self.data["changes_to_frozen_bat_manuscripts"])
         self.assertFalse(self.data["changes_to_esdm_main"])
