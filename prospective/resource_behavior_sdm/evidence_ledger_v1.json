@@ -117,7 +117,7 @@
         "tier": "POST_OUTCOME_SOURCE_LOCAL_PREDICTIVE_COMPOSITION_SIGNAL",
         "result_file": "prospective/resource_behavior_sdm/ducke_source_specificity_v2.json",
         "design_frozen_before_v2_fit_commit": "8a19e182514bfb0ba02ccbca7b0aad8d04d5e0a4",
-        "original_v1_frug_food_replay_diff_nats_less_than": 1.3e-09,
+        "original_v1_frug_food_replay_diff_nats_less_than": 1.3e-9,
         "n_matched_source_plots": 46,
         "n_source_blocks": 7,
         "frugivore": {
@@ -184,7 +184,7 @@
           "n_source_blocks": 6
         },
         "sourcefree_python_ci_pass": true,
-        "independent_SciPy_vs_purePython_max_abs_gain_difference": 3.080807875477376e-08,
+        "independent_SciPy_vs_purePython_max_abs_gain_difference": 3.080807875477376e-8,
         "one_sanguivore_excluded_not_reassigned": true,
         "full_original_vegetation_clutter_covariate_available": false,
         "new_significance_p_value_estimated": false,
@@ -520,11 +520,11 @@
         "M1_minus_M0": {
           "joint": -0.0025458358696155425,
           "horizontal": -0.002508923738964247,
-          "conditional_height": -3.691213065126764e-05
+          "conditional_height": -0.00003691213065126764
         },
         "M2_minus_M1": {
           "joint": -0.0008852064000565429,
-          "horizontal": -5.8702400166366075e-06,
+          "horizontal": -0.0000058702400166366075,
           "conditional_height": -0.0008793361600399896
         }
       },
@@ -532,7 +532,7 @@
         "M1_minus_M0": {
           "joint": 0.09662164093990175,
           "horizontal": 0.09653327525365989,
-          "conditional_height": 8.836568624176477e-05
+          "conditional_height": 0.00008836568624176477
         },
         "M2_minus_M1": {
           "joint": -0.0005317843231950337,
@@ -626,7 +626,7 @@
     "changes_to_frozen_JAE_BE_or_main": false,
     "independent_scipy_optional_replay": "prospective/resource_behavior_sdm/verify_proposal_scipy_independent_v1.py",
     "independent_optimizers_compared": 12,
-    "maximum_independent_scipy_vs_pure_stdlib_beta_difference": 2.8561362226675602e-08,
+    "maximum_independent_scipy_vs_pure_stdlib_beta_difference": 2.8561362226675602e-8,
     "independent_scipy_check_is_not_github_actions_ci": true
   },
   "paired_3d_known_q_bridge_20261121": {
@@ -964,11 +964,11 @@
       "n_aggregate_comparisons": 18,
       "maximum_absolute_fold_score_difference_nats": 4.357141314415003e-10,
       "maximum_absolute_aggregate_difference_nats": 8.786948946237771e-11,
-      "tolerance_nats": 1e-07,
+      "tolerance_nats": 1e-7,
       "n_reference_fits": 60,
       "reference_maximum_gradient": 1.4562954335346182e-10,
       "reference_fits_with_precision_loss_message_but_gradient_gate_passed": 2,
-      "reference_gradient_acceptance_threshold": 1e-08,
+      "reference_gradient_acceptance_threshold": 1e-8,
       "maximum_direct_joint_decomposition_residual": 2.7755575615628914e-16,
       "reference_script_sha256": "089610c2c29f9f78c0f8372282b270e2dd7d8b112a26522d0bcb9cf480af4745",
       "reference_result_sha256": "38a15b75ce55fcff0378aecc0295dfc691d20a8c4cbde08bed667dc33e3e91ca",
@@ -1202,5 +1202,47 @@
     "closed_comparisons_reopened": false,
     "source_rows_committed": false,
     "protected_main_or_manuscripts_changed": false
+  },
+  "fruit_flower_source_admission_20261122": {
+    "evidence_tier": "PRIMARY_SOURCE_METADATA_AND_PUBLISHED_METHODS_REAUDIT_WITH_SOURCEFREE_INPUT_GATE_ONLY",
+    "audit_date_jst": "2026-11-22",
+    "report": "prospective/resource_behavior_sdm/FRUIT_FLOWER_FIELD_SOURCE_ADMISSION_20261122.md",
+    "height_blind_gate": "prospective/resource_behavior_sdm/fruit_flower_source_support_gate_v1.py",
+    "synthetic_tests": "prospective/resource_behavior_sdm/test_fruit_flower_source_support_gate_v1.py",
+    "study_candidates": [
+      {
+        "id": "goldshtein_2020",
+        "dataset_doi": "10.17632/jxghjjsttw.1",
+        "most_recent_authenticated_source_access": "2026-11-21 HTTP401",
+        "new_original_files_opened": false,
+        "stage_a": "NOT_SOURCE_ADMITTED_STATIC_CACTUS_LAYOUT_POTENTIAL_ONLY",
+        "stage_b": "STOP_UNVERIFIED_DATED_FLOWER_JOIN",
+        "observed_414_flowers_same_night_gps_join_verified": false
+      },
+      {
+        "id": "phast_panama_2016_2023",
+        "dataset_doi": "10.5061/dryad.5qfttdzgj",
+        "official_public_roster": [
+          "README.md",
+          "stan.zip"
+        ],
+        "movebank_gps_cohorts": [
+          "10.5441/001/1.282",
+          "10.5441/001/1.321",
+          "10.5441/001/1.322"
+        ],
+        "quantitative_dated_food_table_verified": false,
+        "stage_b": "STOP_NO_QUANTITATIVE_MATCHED_RESOURCE_TABLE"
+      }
+    ],
+    "stage_b_strict_requirement": "every mapped cactus directly observed for each field-night, missing is not zero; partial surveys require new predeclared design",
+    "declared_coverage_does_not_prove_original_polygon_or_publisher_identity": true,
+    "does_not_use_altitude_or_height_defined_visit_labels": true,
+    "no_original_animal_or_cactus_records_committed": true,
+    "real_food_height_field_gain": null,
+    "regional_species_sdm_gain": null,
+    "empirical_new_fit": false,
+    "closed_negative_studies_reopened": false,
+    "protected_main_or_frozen_manuscript_changed": false
   }
 }
