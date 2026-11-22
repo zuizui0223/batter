@@ -43,5 +43,12 @@
   "stage_b_source_admission": "STOP_NO_FULL_OR_DESIGN_CORRECTED_DIRECT_NIGHT_CACTUS_BLOOM_JOIN",
   "height_values_or_raw_positions_exported": false,
   "real_resource_conditioned_vertical_gain": null,
-  "strict_regional_species_SDM_gain": null
+  "strict_regional_species_SDM_gain": null,
+  "mapped_bats_distinct_utc_dates_union": 25,
+  "mapped_bats_distinct_bat_utc_date_pairs": 33,
+  "mapped_bats_with_2_or_more_utc_dates": 8,
+  "mapped_bats_with_3_or_more_utc_dates": 4,
+  "video_dates_overlapping_any_mapped_bat_utc_date": 6,
+  "source_utc_calendar_date_not_equivalent_to_confirmed_local_bat_night": true,
+  "mapped_bat_RMC_rows_removed_as_exact_duplicate_time_xy": 31687
 }
