@@ -371,6 +371,25 @@ class ResourceBehaviorClaimGateTests(unittest.TestCase):
         self.assertIsNone(self.data["strict_unestimated"]
                           ["higher_dim_resource_conditional_bat_logscore_gain"])
 
+    def test_goldshtein_source_cactus_altitude_offsets_not_AGL_or_food_prediction(self):
+        s=self.data["goldshtein_source_cactus_alt_EGM96_QC_20261122"]
+        self.assertEqual(s["source_altitude_map_count"],4)
+        self.assertEqual(s["source_cactus_altitude_coordinate_rows"],1951)
+        self.assertEqual(s["original_matched_GGA_vs_cactus_alt_15m_fixes"],36082)
+        self.assertEqual(s["original_matched_GGA_vs_cactus_alt_50m_fixes"],48948)
+        self.assertAlmostEqual(s["raw_GGA_minus_local_cactus_alt_quantiles_15m_m"][2],
+                               -57.23,places=2)
+        self.assertAlmostEqual(s["source_drone_GGA_minus_cactus_alt_median_15m_m"],
+                               -86.51,places=2)
+        self.assertTrue(s["original_authors_model_is_EGM2008_not_EGM96"])
+        self.assertFalse(s["original_GGA_effective_vertical_datum_independently_verified"])
+        self.assertFalse(s["original_AGL_per_fix_recovered"])
+        self.assertIsNone(s["actual_food_conditional_height_effect"])
+        self.assertIsNone(s["actual_region_wide_species_3D_SDM_effect"])
+        self.assertTrue(s["does_not_emit_source_animal_geography_or_raw_GGA_altitude"])
+        self.assertIsNone(self.data["strict_unestimated"]
+                          ["higher_dim_resource_conditional_bat_logscore_gain"])
+
     def test_no_frozen_manuscript_or_parent_main_overwrite(self):
         self.assertFalse(self.data["changes_to_frozen_bat_manuscripts"])
         self.assertFalse(self.data["changes_to_esdm_main"])
