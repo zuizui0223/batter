@@ -1,0 +1,35 @@
+name: Lunar 3D v4 pre-frozen native-height heldout test
+on:
+  push:
+    branches:
+      - prospective/lunar-3d-response-gate-v1-20261122
+    paths:
+      - 'prospective/lunar_3d/lunar_height_score_v4.py'
+      - 'prospective/lunar_3d/test_lunar_height_score_v4.py'
+      - '.github/workflows/lunar-3d-height-v4.yml'
+  workflow_dispatch:
+jobs:
+  lunar_height_v4:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Pin astronomy package
+        run: python -m pip install 'pyswisseph==2.10.3.2'
+      - name: Tests using synthetic responses only
+        run: python -m unittest -v prospective.lunar_3d.test_lunar_height_score_v4
+      - name: Open original numeric heights only after pre-frozen protocol
+        run: python -m prospective.lunar_3d.lunar_height_score_v4
+      - name: Archive aggregate scores and quality diagnostics without raw GPS
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lunar-v4-night-block-native-height-scores
+          path: results/lunar_3d_height_heldout_v4.json
+          if-no-files-found: warn
+          retention-days: 60
