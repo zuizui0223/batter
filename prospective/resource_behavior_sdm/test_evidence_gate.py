@@ -344,6 +344,33 @@ class ResourceBehaviorClaimGateTests(unittest.TestCase):
                           ["higher_dim_resource_conditional_bat_logscore_gain"])
         self.assertTrue(r["no_original_xy_or_height_values_or_animal_ids_committed"])
 
+    def test_goldshtein_restored_414_real_bloom_GPS_nearby_datum_mismatch_not_height_gain(self):
+        d=self.data["goldshtein_legacy_direct_bloom_xy_and_height_datum_qc_20261122"]
+        self.assertEqual(d["n_original_direct_openflower_cacti"],414)
+        self.assertEqual(d["n_drone_cacti_mapped"],327)
+        self.assertEqual(d["n_drone_cacti_daily_numeric"],121)
+        self.assertEqual(d["n_drone_cacti_daily_not_measured"],206)
+        self.assertEqual(d["n_drone_cactus_days_numeric"],1016)
+        self.assertEqual(d["n_drone_cactus_days_observed_positive"],377)
+        self.assertEqual(d["n_drone_cactus_days_observed_zero"],639)
+        self.assertEqual(d["n_local_candidate_GPS_morning_cactus_15m_fixes"],227)
+        self.assertEqual(d["n_candidate_bats"],5)
+        self.assertEqual(d["n_candidate_bat_nights"],6)
+        self.assertEqual(d["n_XY_proximity_episodes_60s"],99)
+        self.assertEqual(d["n_positive_flower_proximity_episodes_60s"],22)
+        self.assertEqual(d["n_exact_source_GGA_RMC_time_XY_pairs_on_drone_census_days"],57378)
+        self.assertEqual(d["n_source_NMEA_GGA_geoid_sep_available_for_matched"],0)
+        self.assertAlmostEqual(d["raw_GGA_minus_drone_alt_median_m"],-86.51,places=2)
+        self.assertFalse(d["GGA_and_drone_altitudes_have_same_vertical_datum_verified"])
+        self.assertFalse(d["numbered_column_to_morning_date_convention_independently_verified"])
+        self.assertFalse(d["source_complete_census_survey_effort_verified"])
+        self.assertFalse(d["new_ecological_food_height_model_fitted"])
+        self.assertIsNone(d["original_5D_resource_conditional_height_gain"])
+        self.assertIsNone(d["regional_species_3D_SDM_gain"])
+        self.assertFalse(d["raw_source_private_animal_plant_XY_GPS_height_rows_committed"])
+        self.assertIsNone(self.data["strict_unestimated"]
+                          ["higher_dim_resource_conditional_bat_logscore_gain"])
+
     def test_no_frozen_manuscript_or_parent_main_overwrite(self):
         self.assertFalse(self.data["changes_to_frozen_bat_manuscripts"])
         self.assertFalse(self.data["changes_to_esdm_main"])
