@@ -1283,6 +1283,13 @@
     "empirical_resource_height_gain": null,
     "regional_species_SDM_gain": null,
     "prior_source_closed_results_reopened": false,
-    "protected_main_JAE_BE_modified": false
+    "protected_main_JAE_BE_modified": false,
+    "n_mapped_animal_utc_date_pairs": 33,
+    "n_mapped_animal_utc_date_union": 25,
+    "n_mapped_animals_with_at_least_two_UTC_dates": 8,
+    "n_mapped_animals_with_at_least_three_UTC_dates": 4,
+    "n_video_dates_overlapping_mapped_RMC_dates": 6,
+    "duplicate_RMC_fix_records_removed": 31687,
+    "independent_scipy_Delaunay_reproduces_XY_inside_and_total_exactly": true
   }
 }
