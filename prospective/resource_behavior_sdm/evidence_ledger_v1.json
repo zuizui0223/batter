@@ -1346,5 +1346,44 @@
     "raw_source_private_animal_plant_XY_GPS_height_rows_committed": false,
     "prior_plos_krauel_cistrone_closed_results_reopened": false,
     "protected_parent_main_esdm_main_and_frozen_JAE_BE_modified": false
+  },
+  "goldshtein_source_cactus_alt_EGM96_QC_20261122": {
+    "evidence_tier": "USER_UPLOADED_SOURCE_ORIGINAL_GGA_VS_INDEPENDENT_CACTUS_ALT_MAPS_EGM96_ONLY_QC_NOT_AGL",
+    "file_sha256": "069b12e6383fa7d84a1f7164fcfe16b0ce693469a7661262ce1a0ed73e423ebb",
+    "source_report": "prospective/resource_behavior_sdm/GOLDSHTEIN_GGA_ORIGINAL_CACTUS_ALT_EGM96_DATUM_AUDIT_20261122.md",
+    "source_replay_code": "prospective/resource_behavior_sdm/goldshtein_cactus_alt_geoid96_sensitivity_v1.py",
+    "sourcefree_tests": "prospective/resource_behavior_sdm/test_goldshtein_cactus_alt_geoid96_sensitivity_v1.py",
+    "source_safe_aggregate": "prospective/resource_behavior_sdm/goldshtein_original_altitude_reference_EGM96_source_QC_20261122.json",
+    "source_altitude_map_count": 4,
+    "source_cactus_altitude_coordinate_rows": 1951,
+    "original_matched_GGA_vs_cactus_alt_15m_fixes": 36082,
+    "original_matched_GGA_vs_cactus_alt_50m_fixes": 48948,
+    "raw_GGA_minus_local_cactus_alt_quantiles_15m_m": [
+      -83.02,
+      -64.7,
+      -57.23,
+      -51.46,
+      -34.62
+    ],
+    "n_independently_replicated_source_animal_groups": 4,
+    "anonymous_bat_medians_min_max_m": [
+      -79.35,
+      -28.2
+    ],
+    "across_bat_median_spread_m": 51.15,
+    "source_drone_GGA_minus_cactus_alt_median_15m_m": -86.51,
+    "offline_public_EGM96_grid_sha256": "c02a6eb70a7a78efebe5adf3ade626eb75390e170bb8b3f36136a2c28f5326a0",
+    "EGM96_shift_source_bat_map_median_m": -32.95,
+    "EGM96_shift_drone_map_median_m": -33.26,
+    "original_authors_model_is_EGM2008_not_EGM96": true,
+    "original_GGA_effective_vertical_datum_independently_verified": false,
+    "original_cactus_map_and_drone_alt_semantics_verified": false,
+    "original_GGA_geoid_separation_field_present": false,
+    "original_AGL_per_fix_recovered": false,
+    "false_positive_vertical_claim_prohibited": true,
+    "actual_food_conditional_height_effect": null,
+    "actual_region_wide_species_3D_SDM_effect": null,
+    "does_not_emit_source_animal_geography_or_raw_GGA_altitude": true,
+    "protected_main_JAE_BE_and_esdm_changed": false
   }
 }
