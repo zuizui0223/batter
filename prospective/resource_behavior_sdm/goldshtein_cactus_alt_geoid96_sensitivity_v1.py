@@ -87,9 +87,17 @@ def _original_map(z, member):
 
 
 def _quantiles(xs):
-    import numpy as np
-    return [round(float(x), 2) for x in np.quantile(
-        xs, [0.05, 0.25, 0.5, 0.75, 0.95])]
+    """NumPy-compatible linear quantiles, with NO optional dependencies."""
+    if not xs:
+        raise ValueError("STOP_EMPTY_ALTITUDE_DISTRIBUTION")
+    values = sorted(float(v) for v in xs)
+    n = len(values)
+    def one(q):
+        pos = (n - 1) * q
+        lo = int(pos)
+        hi = min(n - 1, lo + 1)
+        return round(values[lo] + (values[hi] - values[lo]) * (pos - lo), 2)
+    return [one(q) for q in (0.05, 0.25, 0.5, 0.75, 0.95)]
 
 
 def _source_GGA_near_cactus_alt(z, maps):
@@ -164,10 +172,12 @@ def _source_GGA_near_cactus_alt(z, maps):
 
 def audit_original(source_zip, egm96_grid, source_drone_points=None):
     """Aggregate-only. source_drone_points: list of (lat,lon) from pinned XLS source."""
-    from pyproj import Transformer
-    import numpy as np
+    # Reject untrusted bytes BEFORE importing optional geospatial libraries.
+    # The pure-stdlib CI intentionally has no numpy/scipy/pyproj/artifact_tool.
     if _digest(source_zip) != ORIGINAL_SHA or _digest(egm96_grid) != EGM96_GRID_SHA:
         raise ValueError("STOP_SOURCE_OR_REFERENCE_GRID_SHA256_MISMATCH")
+    from pyproj import Transformer
+    import numpy as np
     grid_transform = Transformer.from_pipeline(
         "+proj=vgridshift +grids=" + str(Path(egm96_grid).resolve()) + " +multiplier=1")
     with zipfile.ZipFile(source_zip) as source:
