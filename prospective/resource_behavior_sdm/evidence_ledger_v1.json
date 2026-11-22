@@ -1,0 +1,1389 @@
+{
+  "schema": "batter.resource_behavior_sdm.claim_gate.v1",
+  "created_utc": "2026-11-20",
+  "purpose": "Provenance-anchored evidence migration; NOT a fitted empirical resource-behavior SDM.",
+  "source_of_truth": "https://github.com/zuizui0223/esdm/blob/design/neobat-trophic-sdm-phase1-20261119/docs/replication/NEOBAT_RESOURCE_SDM_STATUS_LEDGER_20261119.md",
+  "reference_sources": {
+    "neobat_prefit": "https://github.com/zuizui0223/esdm/pull/244",
+    "neobat_shadow": "https://github.com/zuizui0223/esdm/pull/266",
+    "botanical_source_transfer": "https://github.com/zuizui0223/esdm/pull/259",
+    "fixed35_gate": "https://github.com/zuizui0223/esdm/pull/268",
+    "batter_behavior": "https://github.com/zuizui0223/batter/pull/99",
+    "boids_prediction": "https://github.com/zuizui0223/boids/blob/main/docs/EVIDENCE_AND_PREDICTION.md"
+  },
+  "claims": [
+    {
+      "id": "LINK_RECURRENCE",
+      "tier": "SOURCE_NETWORK_EXPLORATORY_POSITIVE",
+      "n_countries_qualified": 6,
+      "n_countries_candidate": 12,
+      "n_links_tested": 338,
+      "observed_percent": 46.94,
+      "rewired_null_percent": 40.55,
+      "difference_percentage_points": 6.39,
+      "monte_carlo_p": 0.001,
+      "eligible_claim": "published NeoBat bat–plant source-link recurrence within the original source universe",
+      "not_claim": "independent fruit supply, measured bat feeding, ecological resource SDM gain",
+      "source": "neobat_prefit"
+    },
+    {
+      "id": "BOTANICAL_RECORD_RANK",
+      "tier": "OBSERVATION_RANK_EXPLORATORY_POSITIVE",
+      "n_candidate": 1802,
+      "n_evaluable": 647,
+      "country_equal_increment_auc": 0.02539,
+      "descriptive_country_resample_interval": [
+        0.01534,
+        0.03733
+      ],
+      "eligible_claim": "additional abiotic rank information in GBIF botanical recording patterns beyond source-derived intensity",
+      "not_claim": "ecological fruit abundance or bat species availability",
+      "source": "botanical_source_transfer"
+    },
+    {
+      "id": "RESOURCE_DATA_FEASIBILITY",
+      "tier": "PREFIT_FEASIBILITY_ONLY",
+      "n_original_bat_country_total": 754,
+      "n_initial_strict": 84,
+      "n_joint_source_raster_qualified": 36,
+      "n_joint_species": 11,
+      "n_joint_countries": 10,
+      "n_fixed_plant_species": 35,
+      "n_plant_country_source_raster_qualified": 592,
+      "n_plant_country_total": 595,
+      "eligible_claim": "audited data eligibility and source/raster compatibility for future fits",
+      "not_claim": "calibrated botanical maps, validated bat prediction",
+      "source": "fixed35_gate"
+    },
+    {
+      "id": "SHADOW_LINKED_FRUIT_IDENTITY",
+      "tier": "EXPLORATORY_NO_POSITIVE_GENERAL_GAIN",
+      "n_original_strict": 84,
+      "n_prefit_qualified": 51,
+      "n_fitted": 49,
+      "mean_linked_minus_generic_auc": -0.00569,
+      "mean_linked_minus_rewired_auc": -0.008,
+      "eligible_claim": "no consistent linked-partner identity increment in the weak climate-only GBIF source-rank shadow test",
+      "not_claim": "M3 is ecologically ineffective, independent country resource availability measured",
+      "source": "neobat_shadow"
+    },
+    {
+      "id": "WILD_VERTICAL_IDENTITY",
+      "tier": "EMPIRICAL_SOURCE_SPECIFIC_POSITIVE",
+      "n_comparative_shape_panels": 5,
+      "n_tropical_terrain_panels": 4,
+      "n_tropical_terrain_positive": 4,
+      "n_spatial_excess_positive": 0,
+      "eligible_claim": "within-source individual vertical-use map fidelity and centered-height shape",
+      "not_claim": "individual resource specialization, true physical separation, universal 3D SDM rule",
+      "source": "batter_behavior"
+    },
+    {
+      "id": "TADARIDA_TRANSITION",
+      "tier": "OBSERVED_PREDICTION_WITH_SENSOR_ALIASING_BOUND",
+      "m1_minus_m0_nats_per_transition": 0.01383,
+      "eligible_claim": "held-out transition class prediction conditional on prior climb class in the analyzed source extraction",
+      "not_claim": "physical inertia, unique bat flight force, resource-linked prediction",
+      "source": "boids_prediction"
+    },
+    {
+      "id": "DUCKE_MEASURED_FOOD_LOCAL_GUILD_PREDICTION",
+      "tier": "OBSERVED_MEASURED_FOOD_SOURCE_LOCAL_EXPLORATORY_PREDICTIVE_POSITIVE",
+      "source_original_dataset_doi": "10.5061/dryad.9rb48c5",
+      "original_zip_sha256": "55c784e2f7b37987e3657d3ba3d5cf6a41bb3554a11904969d1376c977bcdbce",
+      "original_bat_rows": 1189,
+      "source_anomalies": {
+        "date_years_after_2014_source_rows": 42,
+        "pseudo_bat_rows": 2,
+        "source_counts_mismatch_published": true,
+        "missing_vegetation_clutter": true
+      },
+      "n_source_plots": 49,
+      "n_matched_plots": 46,
+      "n_same_site_same_day_nights": 103,
+      "n_matched_captures": 810,
+      "n_source_blocks": 7,
+      "response": "captured-frugivore guild share conditional on observed bats (not occupancy)",
+      "heldout_food_12_minus_baseline_nats_per_capture": 0.016084661100832526,
+      "leave_plot_out_food_12_minus_baseline": 0.0071302334906864035,
+      "number_blocks_with_positive_food_increment": 5,
+      "source_open_block_restricted_shuffle_fraction_ge_observed": 0.0225,
+      "matched_source_time_window": "2013-10 through 2014-02, authors' stated field months",
+      "controls": "terrain elevation, additional riparian sampling-frame indicator, matched-night count; missing vegetation clutter",
+      "strict_claim_ceiling": "one published study, source-local heldout capture composition; not independent study replication, not causal, not measured feeding behavior, not true occupancy SDM",
+      "not_claim": "new original publication finding, universally predictive food resource selection, independently matched 3D altitude, NeoBat M3-M1/N1 effect",
+      "source": "DUCKE_ORIGINAL_RESOURCE_BLOCKED_CV_V1.md",
+      "source_specificity_v2": {
+        "tier": "POST_OUTCOME_SOURCE_LOCAL_PREDICTIVE_COMPOSITION_SIGNAL",
+        "result_file": "prospective/resource_behavior_sdm/ducke_source_specificity_v2.json",
+        "design_frozen_before_v2_fit_commit": "8a19e182514bfb0ba02ccbca7b0aad8d04d5e0a4",
+        "original_v1_frug_food_replay_diff_nats_less_than": 1.3e-9,
+        "n_matched_source_plots": 46,
+        "n_source_blocks": 7,
+        "frugivore": {
+          "both_separate_fruit_axes_minus_baseline": 0.02401058,
+          "food12_given_remaining10": 0.01103608,
+          "remaining10_given_food12": 0.00792591,
+          "both_vs_total_22": 0.02627405,
+          "both_vs_baseline_positive_blocks": 6,
+          "food12_given_other10_positive_blocks": 5,
+          "L3_L8_only_29plot_both_vs_baseline": 0.01473254,
+          "L3_L8_only_29plot_food12_given_other10": 0.00503562
+        },
+        "gleaning_animalivore": {
+          "food12_given_remaining10": 0.00012715,
+          "remaining10_given_food12": 0.01344538,
+          "remaining10_given_food12_positive_blocks": 7
+        },
+        "nectarivore": {
+          "food12_given_remaining10": 0.00546406,
+          "remaining10_given_food12": -0.00265177,
+          "remaining10_given_food12_positive_blocks": 0
+        },
+        "true_independent_nonfood_negative_control": false,
+        "adjusted_for_paper_vegetation_clutter": false,
+        "independent_external_replication": false,
+        "comparison_multitesting_preregistered": false,
+        "causal_plant_diet_selection_effect": null,
+        "empirical_resource_conditioned_flight_height_gain": null,
+        "eligible_claim": "Source-internal grouped predictive information associated with fruiting-plant composition beyond total plant count, among captured bat guild shares",
+        "not_claim": "Species-specific plant consumption, neutral/control nonfood plant group, causal filtering, independently validated SDM, true 5-D bat distribution"
+      },
+      "joint_four_guild_composition_v3": {
+        "tier": "ORIGINAL_SOURCE_LOCAL_POST_OUTCOME_MULTIVARIATE_GUILD_PREDICTION",
+        "design_frozen_before_v3_new_fit_commit": "abec244fb044fcff90f6fe368ebd76c92a2ef2b0",
+        "source": "prospective/resource_behavior_sdm/DUCKE_JOINT_FOUR_GUILD_V3_RESULT.md",
+        "original_dryad_DOI": "10.5061/dryad.9rb48c5",
+        "n_matched_plots": 46,
+        "n_source_blocks": 7,
+        "n_matched_captures": 810,
+        "four_guild_captures": 809,
+        "excluded_single_sanguivore_captures": 1,
+        "source_4guild_counts": {
+          "frug": 573,
+          "glean": 132,
+          "nectar": 58,
+          "aerial": 46
+        },
+        "response": "single normalized multinomial distribution over four captured guilds, plot-balanced conditional log predictive score",
+        "seven_source_blocks": {
+          "split12plus10_minus_baseline": 0.028769012688418298,
+          "split12plus10_minus_total22": 0.026106662918648254,
+          "candidate12_given_remaining10": 0.011854727027845307,
+          "remaining10_given_candidate12": 0.011533114018223687,
+          "positive_split_vs_baseline": 6,
+          "n_source_blocks": 7
+        },
+        "six_L3_L8_only": {
+          "n_plots": 29,
+          "split12plus10_minus_baseline": 0.022878088636233845,
+          "split12plus10_minus_total22": 0.013778112654121044,
+          "candidate12_given_remaining10": 0.0029339131807515164,
+          "remaining10_given_candidate12": 0.01523877633750198,
+          "positive_split_vs_baseline": 6,
+          "n_source_blocks": 6
+        },
+        "sourcefree_python_ci_pass": true,
+        "independent_SciPy_vs_purePython_max_abs_gain_difference": 3.080807875477376e-8,
+        "one_sanguivore_excluded_not_reassigned": true,
+        "full_original_vegetation_clutter_covariate_available": false,
+        "new_significance_p_value_estimated": false,
+        "independent_study_replication": false,
+        "actual_plant_food_consumption_established": false,
+        "ecological_species_occurrence_estimated": false,
+        "resource_vertical_GPS_event_join_available": false,
+        "causal_fruiting_plant_guild_effect": null,
+        "empirical_resource_conditional_3D_height_gain": null,
+        "interpretation": "Measured source fruiting-plant composition predicts captured-guild relative composition on the same study's heldout source blocks better than one total count, even in restricted L3-L8 plots. Does not prove exclusive diet or 5D source-level ecology."
+      },
+      "plant_partition_label_null_v4": {
+        "tier": "OBSERVED_EXPLORATORY_LABEL_SPECIFICITY_WEAK_AFTER_ABUNDANCE_MATCHED_CONTROL",
+        "source": "prospective/resource_behavior_sdm/DUCKE_EQUAL_COMPLEXITY_V4_RESULT.md",
+        "protocol_committed_before_v4_run": "9c35ebf09945ea138c239917291d5b333c3765d3",
+        "original_source_Dryad_DOI": "10.5061/dryad.9rb48c5",
+        "original_source_SHA256": "55c784e2f7b37987e3657d3ba3d5cf6a41bb3554a11904969d1376c977bcdbce",
+        "n_original_plant_categories": 22,
+        "n_named_genera": 21,
+        "n_unidentified_categories": 1,
+        "n_unidentified_observed_fruiting_plant_entries": 52,
+        "n_matched_observed_fruiting_plant_entries": 661,
+        "heldout_original_source_groups": 7,
+        "n_original_source_plots": 46,
+        "n_matched_source_days": 103,
+        "original_12_vs_other10_split_gain_over_pooled_total": 0.026106713469882692,
+        "random_12_of_22_null": {
+          "n_draws": 199,
+          "n_at_least_observed": 4,
+          "exploratory_plus_one_fraction": 0.025,
+          "null_mean_gain_over_total": -0.002700617528526017
+        },
+        "abundance_quartile_matched_12_of_22_null": {
+          "n_draws": 199,
+          "n_at_least_observed": 10,
+          "exploratory_plus_one_fraction": 0.055,
+          "null_mean_gain_over_total": 0.0012463798957562666,
+          "food_labels_per_4_abundance_quartiles": [
+            4,
+            2,
+            2,
+            4
+          ]
+        },
+        "sensitivity_excluding_unidentified": {
+          "remaining_real_named_genera": 21,
+          "food_candidate_named_genera": 12,
+          "other_named_genera": 9,
+          "split_gain_vs_named_only_total": 0.028159016545033833
+        },
+        "sensitivity_excluding_17_PO_plots": {
+          "n_original_plots": 29,
+          "n_heldout_L3_L8_groups": 6,
+          "split_gain_vs_total": 0.013778178015096287
+        },
+        "result_from_source_opened_before_null_defined": true,
+        "statistic_not_preregistered_significance": true,
+        "label_specific_food_causal_effect_established": false,
+        "fruit_composition_guild_predictability_persists_within_original_source": true,
+        "real_individual_bat_GPS_height_resource_join_estimated": false,
+        "unknown_plant_taxonomy_can_be_called_genus": false,
+        "new_ecological_species_SDM": null,
+        "new_5d_resource_height_gain": null,
+        "n_original_matched_rows_for_unidentified_source_category": 12,
+        "unidentified_count_value_is_sum_of_original_Amount_field": true
+      }
+    }
+  ],
+  "strict_unestimated": {
+    "ecological_partner_m3_minus_m1": null,
+    "ecological_partner_m3_minus_rewired_n1": null,
+    "higher_dim_resource_conditional_bat_logscore_gain": null,
+    "independent_fruit_supply_map": null,
+    "individual_resource_behavior_join": null,
+    "sensor_calibrated_altitude_policy": null,
+    "external_resource_sdm_confirmation": null
+  },
+  "not_directly_joinable": [
+    "NeoBat primary frugivore occurrence partners vs wild tropical individual tracking panels",
+    "country-level 25-km presence-record support vs 500-m XY conditional height",
+    "WorldClim historical averages vs time-aligned fruit availability",
+    "GBIF reporting intensity vs sampled animal absence or detector probability"
+  ],
+  "frozen_positive_test_hypotheses": [
+    "Does independently measured resource opportunity change p(behavior,height,time | XY) even if horizontal AUC stays unchanged?",
+    "Does individual vertical fidelity remain after independently annotated behavior and measured patch availability?",
+    "Does authentic linked-partner prediction beat degree-preserving rewiring on identical out-of-source folds and heldout events?"
+  ],
+  "claim_gate": "UNVALIDATED_HIGHDIMENSIONAL_RESOURCE_SDM_PROTOTYPE",
+  "migration_target": "batter/prospective/resource_behavior_sdm",
+  "changes_to_frozen_bat_manuscripts": false,
+  "changes_to_esdm_main": false,
+  "independent_external_evidence_progress_20261120": {
+    "schema": "batter.resource_behavior_sdm.independent_external_source_admission.v2",
+    "original_metadata_verification_run": "https://github.com/zuizui0223/batter/actions/runs/44729699721",
+    "small_original_file_access_run": "https://github.com/zuizui0223/batter/actions/runs/44729946430",
+    "candidates": [
+      {
+        "id": "chrotopterus_2026",
+        "doi": "10.5061/dryad.7d7wm38c0",
+        "original_metadata_verified": true,
+        "original_expected_files_verified": 5,
+        "original_file_content_read": false,
+        "original_file_http_error": 401,
+        "height_datum": "MSL not AGL",
+        "landcover_vs_food": "HABITAT_PROXY_ONLY",
+        "empirical_conditional_height_gain": null
+      },
+      {
+        "id": "ducke_bats_2018",
+        "doi": "10.5061/dryad.9rb48c5",
+        "original_metadata_verified": true,
+        "original_expected_files_verified": 1,
+        "original_file_content_read": false,
+        "original_file_http_error": 401,
+        "fruit_insect_independently_surveyed_in_published_study": true,
+        "individual_flight_height_available": false,
+        "empirical_true_food_distribution_gain": null
+      }
+    ],
+    "live_source_crossstudy_join_allowed": false,
+    "grouped_conditional_height_scorer_implemented": true,
+    "grouped_scorer_original_animal_rows_tested": false,
+    "grouped_scorer_synthetic_tests_passed": true,
+    "real_highdimensional_resource_behavior_height_effect": null
+  },
+  "independent_prey_transfer_20261121": {
+    "evidence_tier": "ORIGINAL_USER_UPLOAD_REAL_WITHIN_STUDY_HELDOUT_EXPLORATORY",
+    "source_citation": "Hendel et al. 2025 JAE DOI 10.1111/1365-2664.14822",
+    "source_dryad_doi": "10.5061/dryad.xksn02vr1",
+    "source_publication_online": "2024-11-11",
+    "source_sites_published": 64,
+    "source_recording_mode": "bat acoustic one-minute call activity; NOT mutually-exclusive captured bat guild counts",
+    "source_resource_measurements": [
+      "moth abundance UV trap second night",
+      "moth taxonomic richness",
+      "ground beetle abundance pitfall earlier season",
+      "ground beetle species richness"
+    ],
+    "source_environment_controls": [
+      "elevation",
+      "DOY",
+      "temp_min",
+      "Opn_mean",
+      "ndsm_sd",
+      "ForMI"
+    ],
+    "original_publisher_metadata_version_and_two_file_inventory_verified": true,
+    "original_publisher_content_available": false,
+    "original_publisher_dataset_download_http_status": 401,
+    "official_source_gate_run": "https://github.com/zuizui0223/batter/actions/runs/44762637892",
+    "sourcefree_predictor_tests_run": "https://github.com/zuizui0223/batter/actions/runs/44763244302",
+    "published_orig_author_results_not_new_reanalysis": "SRE bat acoustic activity associated positively with moth abundance and negatively with moth species richness; LRE linked to beetle abundance and richness; SEM direction assumptions and different trap timing limit causal interpretation",
+    "new_external_test_outcome": {
+      "status": "MEASURED_ORIGINAL_USER_UPLOAD_SOURCE_LOCAL_LOSO_POSTOUTCOME_EXPLORATORY",
+      "n_unique_forest_plots": 65,
+      "paper_reports_n": 64,
+      "heldout_unit": "entire independent plot within same study",
+      "score": "negative squared heldout standardized log1p acoustic activity; difference model-minus-baseline",
+      "frozen_baseline": [
+        "elevation",
+        "DOY",
+        "temp_min",
+        "Opn_mean",
+        "ndsm_sd",
+        "ForMI"
+      ],
+      "ridge_lambda": 0.15,
+      "gains": {
+        "SRE": {
+          "moth_abundance": -0.01199
+        },
+        "MRE": {
+          "moth_abundance": 0.1099,
+          "sites_favorable": 40
+        },
+        "Ppip": {
+          "moth_abundance": 0.16283,
+          "sites_favorable": 38
+        },
+        "LRE": {
+          "beetle_richness": 0.13708,
+          "sites_favorable": 38,
+          "beetle_abundance_and_richness": 0.17649
+        }
+      },
+      "exhaustive_delete_one_64_site_all_positive": {
+        "MRE_moth_abundance": 65,
+        "Ppip_moth_abundance": 65,
+        "LRE_beetle_richness": 65
+      },
+      "forest13_and_ridge_and_mae_postoutcome_robustness": true,
+      "analysis_report": "prospective/resource_behavior_sdm/HENDEL_USER_UPLOAD_ORIGINAL_HELDOUT_RESULT_V1.md",
+      "source_adapter": "prospective/resource_behavior_sdm/hendel_uploaded_xlsx_original_adapter_v1.py",
+      "source_raw_rows_committed": false,
+      "independent_geographic_holdout": false,
+      "causal_insect_consumption_test": false,
+      "height_3d_gain": null,
+      "post_outcome_conditional_added_prey_ridge_coefficients": {
+        "model": "train-only standardized log1p/activity ridge, same 65 LOSO fits",
+        "MRE_moth_abundance": -0.2952,
+        "Ppip_moth_abundance": -0.3722,
+        "LRE_ground_beetle_richness": -0.337,
+        "SRE_moth_abundance": 0.096,
+        "all_65_training_folds_same_sign": true,
+        "richer_13forest_covariate_baseline_means": [
+          -0.2921,
+          -0.3903,
+          -0.37,
+          0.0596
+        ],
+        "causal_or_direct_consumption_interpretation": false
+      }
+    },
+    "cannot_compare_numeric_scores_to_ducke_fruit_capture_guild": true,
+    "independent_field_sample_overlap_with_Ducke": false,
+    "raw_source_bytes_or_location_rows_uploaded_to_batter": false,
+    "source_3d_individual_trajectory_available": false,
+    "external_resource_conditional_height_gain": null,
+    "field_biological_claim_permitted": "New within-source measured insect covariates add LOSO predictive information for MRE and Ppip acoustic activity (moth abundance) and LRE acoustic activity (ground-beetle richness), conditional on fixed forest/weather predictors; exploratory, one German source, not causal, not a replicated three-dimensional bat SDM.",
+    "followup_source_file_name": "Hendel_etal_2024_Data_DRYAD.xlsx",
+    "protected_main_and_frozen_manuscripts_changed": false,
+    "user_uploaded_original_xlsx_opened": true,
+    "user_uploaded_xlsx_sha256": "b550d9b2ed1448191dfee85caaa5f27321c6a78c65c8925816a340695513b5a3",
+    "original_publisher_content_still_blocked_but_user_upload_accessible": true,
+    "published_64_vs_uploaded_65_plot_discrepancy_unresolved": true,
+    "source_original_23_columns_verified": true,
+    "source_original_65_unique_plot_rows_no_missing_values": true,
+    "source_aliases_to_preexisting_frozen_engine": {
+      "mothcount_total": "mothcount",
+      "carabidae_SR": "carabidae_S"
+    }
+  },
+  "goldshtein_source_audit_20261121": {
+    "evidence_tier": "PUBLISHED_METHODS_AND_RECOVERED_OFFICIAL_401_ARTIFACT_ONLY",
+    "source_publication": "10.1016/j.cub.2020.07.079",
+    "source_dataset": "10.17632/jxghjjsttw.1",
+    "official_metadata_run": "https://github.com/zuizui0223/batter/actions/runs/44683043418",
+    "source_original_receipt_artifact_id": 14604727847,
+    "official_metadata_http_status": 401,
+    "source_file_inventory_verified": false,
+    "gps_bats_published": 17,
+    "gps_bats_in_mapped_cactus_field": 8,
+    "mapped_cacti_approx": 3600,
+    "directly_monitored_open_flower_cacti": 414,
+    "flower_survey_field_count": 3,
+    "same_night_mapped_cactus_flower_bat_gps_join_verified": false,
+    "author_simulation_samples_flowers_from_empirical_distribution": true,
+    "published_visit_height_condition_under_m": 20,
+    "published_visit_horizontal_condition_under_m": 15,
+    "using_author_visit_labels_to_predict_height_is_response_leakage": true,
+    "original_zip_intake_protocol": "prospective/resource_behavior_sdm/goldshtein_user_archive_structural_gate_v1.py",
+    "true_resource_conditioned_height_holdout_gain": null,
+    "cactus_location_conditional_height_holdout_gain": null,
+    "source_rows_committed": false,
+    "protected_main_or_manuscripts_changed": false
+  },
+  "prior_art_novelty_audit_20261121": {
+    "evidence_tier": "PUBLISHED_PRIOR_ART_SOURCE_VERIFICATION_NOT_NEW_EMPIRICAL_STUDY",
+    "audit": "prospective/resource_behavior_sdm/PRIOR_ART_3D_FOREST_VERTICAL_AND_HMM_SSF_AUDIT_20261121.md",
+    "strongest_preexisting_2d_to_3d_seabird_form": "10.5038/2074-1235.54.1.1695",
+    "seabird_3d_2026_n_taxa": 44,
+    "seabird_3d_vertical_response": "P(flying above 10 meters ASL | flight group, wind)",
+    "marine_2026_full_pdf_unread_large": "SOURCE_ACCESS_LIMIT_NOT_FULL_ARTICLE_FIGURE_VERIFICATION",
+    "forest_detection_adjusted_four_strata": "10.1016/j.foreco.2022.120668",
+    "forest_bird_18_sector_binomial_model": "10.1002/ece3.11138",
+    "urban_bird_observed_height_ordinal_mixed_model": "10.3390/d17010016",
+    "amazon_mixed_flocks_xy_lidar_and_separate_height_samples": "10.1002/ecs2.4720",
+    "broadscale_bird_occurrence_lidar_structure_not_observed_bird_height": "10.1111/1365-2656.70326",
+    "behavior_hmm_ssf_state_dependent_use_distribution": "10.1186/s40462-023-00392-3",
+    "behavior_hmm_ssf_simulated_utilization_distribution": true,
+    "number_of_hmm_ssf_simulated_tracks": 5,
+    "fixes_per_hmm_ssf_simulated_track": 100000,
+    "claims_not_original": [
+      "2D horizontal spatial density times conditional vertical threshold probability",
+      "Terrestrial animal occupancy/use by forest vertical strata",
+      "Bird activity height predicted from structural covariates",
+      "HMM-SSF inferred behavioral states and generated utilization distribution",
+      "Resource/habitat opportunities allowed to influence HMM state transition or within-state selection",
+      "Movement/habitat step selection in genuinely three-dimensional space using 3D correlated random walks",
+      "3D bat flight localization co-registered with LiDAR forest obstacles",
+      "Vertical stratification of forest bat acoustic activity across heights and season"
+    ],
+    "candidate_unverified_novelty": "Independent measured resource × time × validated behavior × repeated-individual terrain-relative height conditional out-of-group empirical forecast with calibrated horizontal marginal",
+    "no_globally_exhaustive_review": true,
+    "empirical_joint_5d_model_fitted": false,
+    "new_resource_height_out_of_group_gain": null,
+    "horizontal_marginal_conservation_is_probability_identity_not_discovery": true,
+    "source_3d_joint_data_verified": false,
+    "main_branch_or_frozen_article_changed": false,
+    "direct_2026_3d_ssf_method_doi": "10.1111/ele.70414",
+    "direct_2026_3d_ssf_package": "https://github.com/NJKlappstein/ssf3D",
+    "direct_2026_3d_ssf_reproducible_code_and_petrel_source": "https://doi.org/10.5281/zenodo.17553938",
+    "direct_2026_3d_ssf_empirical_height_dependent_wind": true,
+    "direct_2026_3d_ssf_3d_crw_movement_habitat_selection_joint": true,
+    "direct_2026_3d_ssf_empirical_resource_state_individual_combination_demonstrated": false,
+    "forest_bat_micarray_lidar_joint_3d_prior_art": "10.1186/s40462-023-00387-0",
+    "forest_bat_vertical_acoustic_height_season_prior_art": "10.1002/ece3.8363",
+    "methods_3d_overview_prior_art": "10.1111/eth.13529",
+    "required_competing_benchmarks": [
+      "Schneider et al 2026 marine 2D density × threshold vertical overlay",
+      "Klappstein et al 2026 ssf3D three-dimensional movement and habitat selection",
+      "Klappstein et al 2023 joint HMM-SSF state selection and simulation-based use distributions",
+      "Hermans et al 2023 bat 3D flight × vegetation alignment",
+      "Resource-free 3D vertical bat heldout baselines from batter existing original sources"
+    ],
+    "original_joint_measured_resource_state_bat_individual_agl_gain": null
+  },
+  "paired_3d_ssf_known_truth_20261121": {
+    "evidence_tier": "SOURCE_FREE_SIMULATION_ONLY_NOT_EMPIRICAL_3D_SDM",
+    "code": "prospective/resource_behavior_sdm/paired_3d_ssf_resource_benchmark_v1.py",
+    "regression_tests": "prospective/resource_behavior_sdm/test_paired_3d_ssf_resource_benchmark_v1.py",
+    "report": "prospective/resource_behavior_sdm/PAIRED_3D_SSF_RESOURCE_KNOWN_TRUTH_RESULT_V1.md",
+    "direct_prior_art": "10.1111/ele.70414",
+    "is_reproduction_of_ssf3d_R_package": false,
+    "is_full_continuous_space_3d_step_selection_likelihood": false,
+    "is_species_occupancy_or_3d_resource_sdm": false,
+    "model": "Training-only ridge conditional multinomial step choice on same rectangular XY × AGL candidates, bat-night balanced, whole-bat heldout",
+    "models": [
+      "M0 observed 3D movement and structure, candidate AGL",
+      "M1 + XY resource count",
+      "M2 + resource × candidate AGL",
+      "M3 + independently height-blind state × resource and state × resource × AGL"
+    ],
+    "exact_discrete_joint_horizontal_vertical_log_score_identity": true,
+    "simulator_seed": 1834,
+    "fictional_bats": 8,
+    "fictional_bat_nights": 16,
+    "fictional_observed_risksets": 240,
+    "alternatives_per_riskset": 6,
+    "simulation_8_bat_holdout_gains_nats_per_step": {
+      "no_resource_effect": {
+        "M1_minus_M0": {
+          "joint": -0.0025458358696155425,
+          "horizontal": -0.002508923738964247,
+          "conditional_height": -0.00003691213065126764
+        },
+        "M2_minus_M1": {
+          "joint": -0.0008852064000565429,
+          "horizontal": -0.0000058702400166366075,
+          "conditional_height": -0.0008793361600399896
+        }
+      },
+      "only_horizontal_resource": {
+        "M1_minus_M0": {
+          "joint": 0.09662164093990175,
+          "horizontal": 0.09653327525365989,
+          "conditional_height": 0.00008836568624176477
+        },
+        "M2_minus_M1": {
+          "joint": -0.0005317843231950337,
+          "horizontal": 0.00048150311469380425,
+          "conditional_height": -0.0010132874378886991
+        }
+      },
+      "resource_by_height": {
+        "M2_minus_M1": {
+          "joint": 0.06255882778512556,
+          "horizontal": 0.023542293820153104,
+          "conditional_height": 0.03901653396497237
+        }
+      },
+      "resource_height_by_height_blind_behavior": {
+        "M3_minus_M2": {
+          "joint": 0.6017912932771627,
+          "horizontal": 0.1370345302887019,
+          "conditional_height": 0.46475676298846086
+        }
+      },
+      "unmeasured_habitat_proxy_with_zero_resource_causal_effect": {
+        "data_generating_graph": "Hidden habitat H -> resource R; H -> bat horizontal/vertical use; direct R->bat coefficient zero",
+        "M1_minus_M0": {
+          "joint": 0.31269657711511334,
+          "horizontal": 0.3116959335634489,
+          "conditional_height": 0.0010006435516644874
+        },
+        "M2_minus_M1": {
+          "joint": 0.18613007378625085,
+          "horizontal": 0.03197773790283151,
+          "conditional_height": 0.1541523358834193
+        },
+        "interpretation": "Strong heldout resource×AGL prediction is possible from a latent structural confounder without any direct causal food effect"
+      }
+    },
+    "source_gates": [
+      "original raw GPS fixes with verified AGL and regular interval",
+      "frozen 3D XY×Z candidate supports",
+      "independent resource xy survey and aligned dates for true flowers",
+      "behavior state inferred independent of response height",
+      "original source file digest/data grain audit outside model"
+    ],
+    "boolean_source_input_provenance_is_authentication": false,
+    "source_original_real_goldshtein_files_read": false,
+    "real_resource_height_night_bat_joint_model_fitted": false,
+    "ecological_joint_height_outcome_gain": null,
+    "independent_site_level_species_range_gain": null,
+    "script_requires_full_ssf3d_continuous_kernel_and_sampling_proposal_correction_for_scientific_competitor": true,
+    "changes_to_main_JAE_BE": false,
+    "resource_conditioned_height_prediction_identifies_causal_resource_mechanism": false,
+    "require_within_site_repeated_independently_measured_bloom_plus_structure_weather_effort_controls_for_mechanistic_hypothesis": true,
+    "synthetic_hidden_structure_confounding_test_verified_locally": true
+  },
+  "proposal_density_bias_known_truth_20261121": {
+    "evidence_tier": "SOURCE_FREE_KNOWN_TRUTH_CASE_CONTROL_SAMPLING_CORRECTION",
+    "report": "prospective/resource_behavior_sdm/PROPOSAL_CORRECTED_3D_SSF_KNOWN_TRUTH_V1.md",
+    "source_free_code": "prospective/resource_behavior_sdm/proposal_corrected_3d_stepchoice_v1.py",
+    "synthetic_tests": "prospective/resource_behavior_sdm/test_proposal_corrected_3d_stepchoice_v1.py",
+    "reference_prior_art": "10.1111/ele.70414",
+    "exact_design": "One target p-sampled observed endpoint, 8 independent q-sampled controls, 12 finite XY×height endpoints, q frozen externally, and source-site heldout transfer",
+    "mathematical_choice_offset": "log(reference_mass) - log(proposal_mass)",
+    "synthetic_true_coefficient_null": 0,
+    "synthetic_n_fictional_bats": 16,
+    "synthetic_n_nights": 32,
+    "synthetic_n_observed_steps": 1120,
+    "site_proposal_exponents": [
+      2.2,
+      -2.2
+    ],
+    "null_pooled_corrected_beta": -0.05739068996479588,
+    "null_pooled_naive_beta": -0.006412384414009644,
+    "null_site_holdout_corrected_minus_naive_scores": [
+      2.3904026618006586,
+      2.457802146023737
+    ],
+    "null_site_equal_mean_corrected_minus_naive_nats_per_step": 2.424102403912198,
+    "null_site_heldout_naive_training_betas": [
+      2.034226143787195,
+      -2.1385098907633746
+    ],
+    "true_0_95_world_pooled_corrected_beta": 0.998684342795897,
+    "true_0_95_world_site_heldout_gain": 2.1199348473405006,
+    "not_full_ssf3d_reference_implementation": true,
+    "full_continuous_space_reference_measure_model_unimplemented": true,
+    "original_source_authenticity_verified_by_boolean_flags": false,
+    "real_goldshtein_bat_resource_height_data_opened": false,
+    "real_bat_vertical_resource_effect": null,
+    "comparison_3d_ssf_original_bat_holdout_gain": null,
+    "protective_claim": "Correcting a known q is essential for this sampled-case-control task; scores and coefficients here are artificial and should not be conflated with ecological inference.",
+    "changes_to_frozen_JAE_BE_or_main": false,
+    "independent_scipy_optional_replay": "prospective/resource_behavior_sdm/verify_proposal_scipy_independent_v1.py",
+    "independent_optimizers_compared": 12,
+    "maximum_independent_scipy_vs_pure_stdlib_beta_difference": 2.8561362226675602e-8,
+    "independent_scipy_check_is_not_github_actions_ci": true
+  },
+  "paired_3d_known_q_bridge_20261121": {
+    "evidence_tier": "SOURCE_FREE_SOFTWARE_AND_SYNTHETIC_VALIDATION_NOT_BAT_ECOLOGICAL_EVIDENCE",
+    "code": "prospective/resource_behavior_sdm/paired_3d_ssf_resource_benchmark_v1.py",
+    "tests": "prospective/resource_behavior_sdm/test_paired_3d_sampling_proposal_bridge_v1.py",
+    "report": "prospective/resource_behavior_sdm/PAIRED_3D_PROPOSAL_BRIDGE_RESULT_20261121.md",
+    "supported_modes": [
+      "enumerated_xy_z",
+      "known_q_sampled_controls"
+    ],
+    "known_q_logit_offset": "log(reference mass) - log(proposal mass)",
+    "domain": "Finite endpoint case-control choice: one p-observed endpoint plus iid controls drawn from known frozen q",
+    "exact_backward_compatibility_under_reference_equals_q": true,
+    "known_truth_control_duplicates_accepted_in_sampled_mode": true,
+    "zero_or_missing_or_unverified_q_stopped": true,
+    "observed_target_used_to_generate_controls_rejected": true,
+    "fixed_same_test_events_for_nested_M0_M1_M2_M3": true,
+    "horizontal_component_scored_on_sampled_riskset_not_true_horizontal_sdm": true,
+    "vertical_component_scored_on_sampled_riskset_not_true_z_given_xy_area_density": true,
+    "avoids_asserting_real_source_validity_from_flags": true,
+    "independent_fitted_ssf3d_continuous_competitor_completed": false,
+    "original_goldshtein_source_raw_file_headers_verified": false,
+    "real_individual_tracked_resource_join_estimated": false,
+    "original_measured_resource_height_heldout_gain": null,
+    "original_ecological_m3_minus_m1_n1": null,
+    "current_ci": "https://github.com/zuizui0223/batter/actions/runs/44855061276",
+    "frozen_JAE_BE_and_main_changed": false
+  },
+  "gps_height_error_known_truth_20261121": {
+    "evidence_tier": "SOURCE_FREE_PREDECLARED_GAUSSIAN_GPS_HEIGHT_OBSERVATION_ERROR_SENSITIVITY",
+    "source_original_bat_record_count": 0,
+    "code": "prospective/resource_behavior_sdm/gps_height_error_likelihood_v1.py",
+    "tests": "prospective/resource_behavior_sdm/test_gps_height_error_likelihood_v1.py",
+    "fixed_scenario_generator": "prospective/resource_behavior_sdm/gps_height_error_sensitivity_sourcefree_v1.py",
+    "scientific_result": "prospective/resource_behavior_sdm/GPS_HEIGHT_ERROR_KNOWN_TRUTH_RESULT_V1.md",
+    "github_run": "https://github.com/zuizui0223/batter/actions/runs/44889812634",
+    "github_sourcefree_artifact_id": 14701144217,
+    "number_of_precommitted_simulation_scenarios": 5,
+    "synthetic_bats": 6,
+    "synthetic_bat_nights": 12,
+    "synthetic_recorded_steps": 60,
+    "completely_withheld_sites": 2,
+    "independently_calibrated_sensor_sigma_assumed": true,
+    "actual_goldshtein_sensor_sigma_verified": false,
+    "gaussian_altitude_emission_not_full_continuous_3d_ssf": true,
+    "measurement_observation": "continuous recorded height with per-fix known Gaussian SD; true latent Z integrated out",
+    "target_height_leakage_prohibited": true,
+    "same_recorded_observation_scored_for_sensor_aware_and_hard_binned_models": true,
+    "reference_sampling_mode": "complete prespecified XYxZ enumeration",
+    "known_q_sampled_control_correction_integrated": false,
+    "sensor_sd_scenario_values_m": [
+      0.5,
+      11,
+      25
+    ],
+    "source_free_true_resource_height_sensitivities": [
+      {
+        "sigma_m": 0.5,
+        "conditional_height_M2_minus_M1_sensor_aware": 0.067275,
+        "hard_bin": 0.067275,
+        "sensor_aware_M2_joint_minus_hard_bin": 0
+      },
+      {
+        "sigma_m": 11,
+        "conditional_height_M2_minus_M1_sensor_aware": 0.069186,
+        "hard_bin": 0.069679,
+        "sensor_aware_M2_joint_minus_hard_bin": 0.002353
+      },
+      {
+        "sigma_m": 25,
+        "conditional_height_M2_minus_M1_sensor_aware": 0.030019,
+        "hard_bin": 0.033408,
+        "sensor_aware_M2_joint_minus_hard_bin": 0.042272
+      }
+    ],
+    "source_free_true_no_resource_effect_sigma_11_height_gain": 0.000165,
+    "source_free_xy_dependent_noise_sigmas_m": [
+      6.6,
+      18.7
+    ],
+    "source_free_xy_dependent_noise_height_gain": 0.065389,
+    "comparison_values_are_nats_per_recorded_xy_and_gps_height": true,
+    "no_causal_food_interpretation": true,
+    "no_region_wide_bat_sdm_fitted": true,
+    "original_goldshtein_bat_flower_agl_join_verified": false,
+    "empirical_wild_bat_resource_conditioned_height_gain": null,
+    "protected_main_JAE_BE_or_esdm_main_modified": false
+  },
+  "q_noisy_observation_integration_20261121": {
+    "evidence_tier": "SOURCE_FREE_FINITE_Q_STRATIFIED_IMPORTANCE_NOISY_GPS_OBSERVATION_LIKELIHOOD",
+    "model_code": "prospective/resource_behavior_sdm/q_stratified_noisy_height_bridge_v1.py",
+    "sourcefree_tests": "prospective/resource_behavior_sdm/test_q_stratified_noisy_height_bridge_v1.py",
+    "two_world_sourcefree_runner": "prospective/resource_behavior_sdm/q_stratified_noisy_height_two_world_receipt_v1.py",
+    "precommitted_mc_k_grid": "prospective/resource_behavior_sdm/Q_NOISY_HEIGHT_MC_CONVERGENCE_FREEZE_V1.md",
+    "mc_convergence_runner": "prospective/resource_behavior_sdm/q_noisy_height_mc_convergence_v1.py",
+    "scientific_report": "prospective/resource_behavior_sdm/Q_STRATIFIED_NOISY_GPS_HEIGHT_INTEGRATION_RESULT_20261121.md",
+    "two_world_github_run": "https://github.com/zuizui0223/batter/actions/runs/44891053058",
+    "two_world_github_artifact_id": 14702001629,
+    "mc_convergence_run": "https://github.com/zuizui0223/batter/actions/runs/44891213983",
+    "mc_convergence_artifact_id": 14702280601,
+    "latent_z_integrated_out_using_independent_q_stratified_controls": true,
+    "target": "observed coarse XY and continuous noisy AGL with Gaussian sigma",
+    "known_sampling_offset": "log(mu_xy/K_xy)+log(mu_z/q_z)",
+    "sampling_estimand": "source-free importance quadrature approximation to observed GPS density, not case-control chosen endpoint label likelihood",
+    "complete_xy_z_reference_reproduced_at_q_equal_reference": true,
+    "finite_MC_importance_estimator_biased": true,
+    "sourcefree_number_of_bats": 6,
+    "sourcefree_number_of_GPS_observations": 48,
+    "sourcefree_two_world_K_per_xy": 24,
+    "q_site_tilt": [
+      1.7,
+      -1.7
+    ],
+    "sigma_11m_is_illustrative_not_source_calibrated": true,
+    "sourcefree_two_world_M2_minus_M1_height_gain": {
+      "true_no_resource_effect": {
+        "corrected": 0.002493392398594807,
+        "uncorrected": -0.056657348554952414
+      },
+      "true_resource_height_effect": {
+        "corrected": 0.0703489673494948,
+        "uncorrected": 0.023771774234310428
+      }
+    },
+    "sourcefree_two_world_absolute_M2_joint_log_density": {
+      "true_no_resource_effect": {
+        "corrected": -6.241626531739377,
+        "uncorrected": -7.071208985121616
+      },
+      "true_resource_height_effect": {
+        "corrected": -7.153291480975444,
+        "uncorrected": -7.124888199252796
+      }
+    },
+    "true_resource_height_K_grid": [
+      12,
+      24,
+      96,
+      384,
+      1536
+    ],
+    "true_resource_height_corrected_mae_nats": [
+      2.996401494522548,
+      2.1730632689000946,
+      0.8232764678339436,
+      0.08149973566255514,
+      0.050050562708875625
+    ],
+    "true_resource_height_uncorrected_mae_nats": [
+      3.3268786516199476,
+      2.6051824656822054,
+      1.6408677070080284,
+      1.0461398325305662,
+      1.0881362154267802
+    ],
+    "min_sampled_z_coverage_fractions": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0.6666666666666666,
+      1,
+      1
+    ],
+    "minimum_importance_effective_sample_fraction_at_K1536": 0.149,
+    "no_general_K_threshold_established": true,
+    "no_source_Goldshtein_raw_GPS_or_dated_flowers_opened": true,
+    "empirical_source_resource_height_gain": null,
+    "continuous_full_ssf3d_reproduction_estimated": false,
+    "regional_ecological_species_occupancy_estimated": false,
+    "source_original_q_or_height_sensor_calibrated": false,
+    "case_control_matched_selected_label_likelihood_unchanged_and_separate": true,
+    "protected_main_esdm_and_frozen_JAE_BE_unchanged": true
+  },
+  "plos2016_original_three_paired_bat_exploratory_20261121": {
+    "evidence_tier": "PUBLISHER_ORIGINAL_S001_REAL_THREE_BAT_POST_STRUCTURAL_FAILURE_EXPLORATORY",
+    "original_publication_doi": "10.1371/journal.pone.0163492",
+    "original_supplement_doi": "10.1371/journal.pone.0163492.s001",
+    "original_SHA256": "3cce76e3f75c1eb49ac1a8344880a42da1de163886372a944080e074cdd1fb42",
+    "frozen_before_new_original_XYZ_response": "prospective/resource_behavior_sdm/PLOS2016_EXPLORATORY_THREE_PAIRED_BATS_HEIGHT_TRANSFER_FROZEN_20261121.md",
+    "code": "prospective/resource_behavior_sdm/plos2016_three_paired_bats_exploratory_transfer_v1.py",
+    "synthetic_regression_tests": "prospective/resource_behavior_sdm/test_plos2016_three_paired_bats_exploratory_transfer_v1.py",
+    "original_run": "https://github.com/zuizui0223/batter/actions/runs/44903000259",
+    "original_redacted_artifact_id": 14706433264,
+    "report": "prospective/resource_behavior_sdm/PLOS2016_REAL_THREE_BAT_TARGET_3D_HEIGHT_TRANSFER_RESULT_20261121.md",
+    "original_five_bat_completely_paired_protocol_status": "STOP_UNPAIRED_SOURCE",
+    "changed_hypothesis_support_after_original_failure_exploratory_only": true,
+    "n_source_bats_all": 5,
+    "n_bats_full_both_targets": 3,
+    "n_distinct_target_trial_sequences_all": 30,
+    "n_distinct_eligible_source_trials": 24,
+    "n_real_three_dimensional_recorded_frames_eligible": 2671,
+    "n_independent_biological_replicates": 3,
+    "heldout_group": "one entire animal per fold; all trials and frames",
+    "z_measurement": "experimental target-relative vertical position, not AGL",
+    "real_source_target_class_not_local_food_abundance": true,
+    "leave_bat_out_same_heldout_frames_scored": true,
+    "original_distance_column_includes_Z_and_excluded": true,
+    "fixed_training_only_radial_bins": 3,
+    "fixed_training_only_vertical_bins": 5,
+    "alpha_pseudocount": 0.5,
+    "n_positive_animal_folds": 0,
+    "cross_bat_fold_gains_nats_per_recorded_frame": [
+      -0.018744577824254826,
+      -0.04002344632721303,
+      -0.030353547690371407
+    ],
+    "equal_bat_mean_target_class_height_gain_nats_per_frame": -0.02970719061394642,
+    "minimum_exact_signflip_one_sided_p": 0.125,
+    "all_training_bat_label_swap_negative_controls_descriptive_only": true,
+    "any_population_general_or_confirmatory_0_05_claim": false,
+    "actual_wild_resource_height_gain_estimated": null,
+    "actual_goldshtein_bat_flower_agl_source_opened": false,
+    "raw_original_XYZ_or_bat_ids_committed": false,
+    "protected_frozen_release_or_main_modified": false
+  },
+  "hermans_lidar_original_source_audit_20261121": {
+    "literature_doi": "10.1186/s40462-023-00387-0",
+    "archive_doi": "10.34894/CHW0HB",
+    "official_dataset": "https://dataverse.nl/dataset.xhtml?persistentId=doi:10.34894/CHW0HB",
+    "official_dataverse_version": "2.0",
+    "publisher_original_files_listed": 9,
+    "officially_restricted_file_count": 9,
+    "official_terms": "Data available upon request",
+    "original_source_bat_xyz_files_accessible_in_this_session": false,
+    "source_possible_raw_height_column": "z_from_ground, z_from_array_centre",
+    "source_possible_sensor_quality_columns": [
+      "max_error_mm",
+      "tan_error",
+      "rad_error"
+    ],
+    "source_plant_food_amount_measured": false,
+    "request_access_needed_to_open": true,
+    "not_a_direct_true_resource_height_source": true
+  },
+  "plos2016_real_secondary_personal_vs_coldstart_20261121": {
+    "evidence_tier": "ORIGINAL_PUBLISHER_XYZ_POST_OUTCOME_SAME_THREE_BAT_SECONDARY_EXPLORATORY",
+    "parent_real_study": "plos2016_original_three_paired_bat_exploratory_20261121",
+    "secondary_freeze_before_this_new_outcome": "prospective/resource_behavior_sdm/PLOS2016_SECONDARY_WITHIN_VS_BETWEEN_TRIAL_FROZEN_20261121.md",
+    "secondary_original_script": "prospective/resource_behavior_sdm/plos2016_secondary_personal_vs_coldstart_transfer_v1.py",
+    "secondary_source_free_tests": "prospective/resource_behavior_sdm/test_plos2016_secondary_personal_vs_coldstart_transfer_v1.py",
+    "original_source_run": "https://github.com/zuizui0223/batter/actions/runs/44903292033",
+    "original_redacted_artifact_id": 14706388992,
+    "source_sha256": "3cce76e3f75c1eb49ac1a8344880a42da1de163886372a944080e074cdd1fb42",
+    "independent_bat_clusters": 3,
+    "original_eligible_target_trials": 24,
+    "original_eligible_3d_frames": 2671,
+    "personal_model_training_other_trials_per_bat": 7,
+    "coldstart_model_training_other_bats_trials": 16,
+    "same_24_target_trials_as_heldout_endpoints": true,
+    "personal_target_increments_by_bat_nats_per_frame": [
+      -0.007662487595650689,
+      -0.013263135799451388,
+      -0.018181772938507375
+    ],
+    "coldstart_target_increments_by_bat_nats_per_frame": [
+      -0.01874457782425384,
+      -0.04002344632721185,
+      -0.030353547690370852
+    ],
+    "equal_bat_personal_target_gain": -0.013035798777869817,
+    "equal_bat_coldstart_target_gain": -0.029707190613945514,
+    "exact_frozen_previous_coldstart_value_reproduced_within_1e11": true,
+    "personal_minus_coldstart_increment": 0.0166713918360757,
+    "n_personal_target_gain_positive_bats": 0,
+    "n_coldstart_target_gain_positive_bats": 0,
+    "all_three_positive_difference_but_both_target_gains_negative": true,
+    "unequal_training_trial_counts_prevent_causal_mechanism_attribution": true,
+    "not_new_independent_study": true,
+    "post_outcome_exploration_closed_after_this_fixed_comparison": true,
+    "not_true_food_nectar_resource_quantity": true,
+    "not_wild_GPS_AGL_or_species_3d_sdm": true,
+    "original_5_bat_confirmatory_paired_support_gate_still_stop": true,
+    "field_resource_conditioned_3d_height_gain": null,
+    "real_animal_xyz_or_trial_ids_committed": false
+  },
+  "krauel2018_published_field_acoustic_table_20261121": {
+    "status": "SOURCE_OPEN_EXPLORATORY_REAL_PUBLISHED_ACOUSTIC_COUNTS_MEAN_RESOURCE_GAIN_NEGATIVE",
+    "source": {
+      "paper_doi": "10.1139/cjz-2017-0284",
+      "url": "https://krauel.com/publications/Krauel%20et%20al%202018%20CJZ%20early.pdf",
+      "version": "author_hosted_accepted_manuscript_table_1_page_29",
+      "access_mode": "web_reader_table_text_with_independent_transcription",
+      "original_pdf_sha256": null,
+      "transcription_sha256": "cc85b52cbb8d43fb9d580ae5c859c900d7d806b2d38386452ec53d186971d69e",
+      "independent_transcription_agreement": true
+    },
+    "design_freeze_commit": "677efa131705736f860e15ad479f19532ffc4f2e",
+    "engine_commit_before_original_fit": "bff4c6be577e37bfea445bea5128a75a4ab1d4ff",
+    "source_audit": {
+      "n_source_nights": 13,
+      "n_observed_cells": 36,
+      "missing_cells": 3,
+      "source_total_passes": 1104,
+      "source_buzz_positive_passes": 97,
+      "complete_total_passes": 1073,
+      "complete_buzz_positive_passes": 95,
+      "n_complete_nights": 10,
+      "excluded_incomplete_nights": 3
+    },
+    "leave_night_out": {
+      "n_folds": 10,
+      "mean_gains": {
+        "height": -0.004403805961918072,
+        "buzz_given_height": -0.00032547345657502893,
+        "joint": -0.004729279418493082
+      },
+      "positive_folds": {
+        "height": 6,
+        "buzz_given_height": 5,
+        "joint": 6
+      }
+    },
+    "adjacent_pair_out": {
+      "n_folds": 5,
+      "mean_gains": {
+        "height": -0.014254202951297468,
+        "buzz_given_height": -0.002395796142279727,
+        "joint": -0.016649999093577207
+      },
+      "positive_folds": {
+        "height": 2,
+        "buzz_given_height": 2,
+        "joint": 2
+      }
+    },
+    "independent_numerical_verification": {
+      "status": "PASS",
+      "methods": [
+        "pure_stdlib_analytic_Newton",
+        "independent_NumPy_SciPy_BFGS"
+      ],
+      "scipy": "1.17.0",
+      "numpy": "2.3.5",
+      "n_fold_score_comparisons": 195,
+      "n_aggregate_comparisons": 18,
+      "maximum_absolute_fold_score_difference_nats": 4.357141314415003e-10,
+      "maximum_absolute_aggregate_difference_nats": 8.786948946237771e-11,
+      "tolerance_nats": 1e-7,
+      "n_reference_fits": 60,
+      "reference_maximum_gradient": 1.4562954335346182e-10,
+      "reference_fits_with_precision_loss_message_but_gradient_gate_passed": 2,
+      "reference_gradient_acceptance_threshold": 1e-8,
+      "maximum_direct_joint_decomposition_residual": 2.7755575615628914e-16,
+      "reference_script_sha256": "089610c2c29f9f78c0f8372282b270e2dd7d8b112a26522d0bcb9cf480af4745",
+      "reference_result_sha256": "38a15b75ce55fcff0378aecc0295dfc691d20a8c4cbde08bed667dc33e3e91ca",
+      "source_free_unit_tests_passed": 18,
+      "engine_commit_before_original_fit": "bff4c6be577e37bfea445bea5128a75a4ab1d4ff"
+    },
+    "scientific_boundaries": {
+      "one_acoustic_site": true,
+      "dates_not_proven_independent": true,
+      "recorded_stratum_not_individual_flight_altitude": true,
+      "ground_trap_count_not_aerial_prey_density": true,
+      "absent_buzz_not_verified_nonfeeding": true,
+      "recorder_effort_and_detection_not_calibrated": true,
+      "weather_not_controlled": true,
+      "same_night_resource_not_prospective_forecast": true,
+      "p_value": null,
+      "wild_individual_resource_height_gain": null,
+      "resource_conditioned_3d_sdm_gain": null,
+      "causal_resource_effect": null,
+      "raw_source_rows_coordinates_or_individual_ids_included": false,
+      "source_exploration_closed_after_fixed_comparisons": true
+    },
+    "result_note": "KRAUEL2018_FIELD_ACOUSTIC_HEIGHT_RESOURCE_RESULT_20261121.md",
+    "receipt": "krauel2018_field_acoustic_height_resource_receipt_20261121.json",
+    "claim": "Measured ground trap catches did not improve mean heldout recorded-height or buzz-mark prediction under the two fixed split designs; not a zero ecological effect, independent replication, or individual 3D resource fit.",
+    "post_review_validation": {
+      "status": "PASS",
+      "source_free_unit_tests_passed": 21,
+      "invalid_scorer_inputs_reproduced_before_fix": true,
+      "scorer_checks_exact_shapes_complete_counts_finite_normalized_log_probabilities": true,
+      "log_normalization_tolerance": 1e-10,
+      "extreme_finite_log_support_preserved": true,
+      "original_engine_result_values_exactly_unchanged_after_fix": true,
+      "heldout_outcome_test_checks_each_factor_on_fresh_record": true,
+      "unresolved_critical_or_important_code_findings": 0,
+      "original_pdf_byte_authentication_still_unavailable": true
+    }
+  },
+  "vertical_measured_resource_source_access_20261121": {
+    "cistrone_ground_canopy": {
+      "paper_doi": "10.1016/j.foreco.2026.124382",
+      "public_page": "https://www.sciencedirect.com/science/article/pii/S0378112726008807",
+      "publisher_issue_date": "2027-01-01",
+      "audit_date": "2026-11-21",
+      "reported_plots": 20,
+      "publisher_data_statement": "Supplementary S1 and S2",
+      "source_access_result": "403_FORBIDDEN_AVAILABLE_PUBLISHER_ROUTES",
+      "original_files_opened": false,
+      "join_keys_verified": false,
+      "next_required_input": "Original Supplementary S1 and S2, one bundled upload",
+      "resource_height_score": null
+    },
+    "srilopan_five_heights": {
+      "paper_doi": "10.1007/s10531-026-03307-x",
+      "public_page": "https://link.springer.com/article/10.1007/s10531-026-03307-x",
+      "reported_detector_and_insect_trap_heights_m": [
+        2,
+        25,
+        50,
+        75,
+        100
+      ],
+      "data_availability": "Available from corresponding author on reasonable request",
+      "original_numeric_data_opened": false,
+      "author_contact_made": false,
+      "resource_height_score": null
+    }
+  },
+  "cistrone_uploaded_recorded_stratum_resource_20261121": {
+    "paper_doi": "10.1016/j.foreco.2026.124382",
+    "source_zip_sha256": "3eed7ceeb9c1201a3e8594c6d28115d268a7c64e1c1acdccfb6e5d50da872653",
+    "source_access_history_key": "vertical_measured_resource_source_access_20261121.cistrone_ground_canopy",
+    "earlier_source_access_block_resolved_by_user_upload": true,
+    "frozen_protocol_commit": "0f7b9a6972f81203f95c6eaf7d161c768946eacf",
+    "source_open_exploratory": true,
+    "source_plots": 20,
+    "positive_pass_plot_blocks": 19,
+    "zero_pass_plots_in_coverage_only": 1,
+    "insect_samples": 40,
+    "recorder_nights": 80,
+    "insect_individuals": 1123,
+    "recorded_bat_passes": 1301,
+    "same_study_plot_stratum_join_verified": true,
+    "time_effort_exact_recorder_height_join_verified": false,
+    "pooling": "two ordinal nights and all 17 species/acoustic groups within each plot",
+    "validation": "leave entire positive-pass plot out",
+    "score_unit": "nats per recorded pass within plot, macro-averaged over positive-pass plots",
+    "primary_total_catch_mean_gain": -0.015784009798270507,
+    "primary_positive_plots": 11,
+    "primary_plot_gain_range": [
+      -0.3332832230347128,
+      0.01852184217526409
+    ],
+    "secondary_order_catch_mean_gain": -0.01587029302247777,
+    "secondary_positive_plots": 3,
+    "secondary_plot_gain_range": [
+      -0.06039252074517065,
+      0.007223748375314476
+    ],
+    "both_fixed_comparisons_negative_on_macro_mean": true,
+    "source_comparison_closed": true,
+    "new_synthetic_tests_passed": 48,
+    "independent_numeric_comparison_passed": true,
+    "individual_resource_height_gain": null,
+    "individual_flight_or_observed_feeding_behavior_measured": false,
+    "causal_or_regional_sdm_claim": false,
+    "ecological_absence_of_association_claim": false,
+    "original_observations_plot_ids_or_source_spreadsheets_committed": false,
+    "result_document": "CISTRONE_RECORDED_STRATUM_RESOURCE_RESULT_20261121.md",
+    "aggregate_receipt": "cistrone_recorded_stratum_resource_receipt_20261121.json"
+  },
+  "design_revision_20261122": {
+    "evidence_tier": "COMMITTED_RESULT_AND_PRIMARY_SOURCE_AUDIT_NO_NEW_EMPIRICAL_FIT",
+    "audit_date_jst": "2026-11-22",
+    "audited_batter_head": "731972c2ecce3275e1d7469346bff85f2e5ec3e3",
+    "current_design": "prospective/resource_behavior_sdm/DESIGN_REVISION_20261122.md",
+    "previous_source_entries_preserved": true,
+    "summary": "Local resource indicators add source-local prediction for selected recorded activity and captured-guild composition outcomes; heterogeneous negative vertical-related comparisons do not identify a horizontal-versus-height or diet mechanism.",
+    "hendel": {
+      "source_report": "prospective/resource_behavior_sdm/HENDEL_USER_UPLOAD_ORIGINAL_HELDOUT_RESULT_V1.md",
+      "score": "reduction in squared error of training-standardized log1p acoustic activity; dimensionless, not nats",
+      "groups_are_echolocation_range_not_body_size": true,
+      "contrasts": [
+        {
+          "target": "MRE",
+          "resource": "moth count",
+          "gain_reported_precision": 0.1099,
+          "mean_standardized_coefficient": -0.2952,
+          "positive_test_plots": 40,
+          "test_plots": 65,
+          "positive_full_cv_deletion_variants": 65,
+          "full_cv_deletion_variants": 65
+        },
+        {
+          "target": "Pipistrellus pipistrellus",
+          "resource": "moth count",
+          "gain_reported_precision": 0.16283,
+          "mean_standardized_coefficient": -0.3722,
+          "positive_test_plots": 38,
+          "test_plots": 65,
+          "positive_full_cv_deletion_variants": 65,
+          "full_cv_deletion_variants": 65
+        },
+        {
+          "target": "LRE",
+          "resource": "ground-beetle richness",
+          "gain_reported_precision": 0.13708,
+          "mean_standardized_coefficient": -0.337,
+          "positive_test_plots": 38,
+          "test_plots": 65,
+          "positive_full_cv_deletion_variants": 65,
+          "full_cv_deletion_variants": 65
+        }
+      ],
+      "all_three_resource_coefficients_negative_in_training_folds": true,
+      "paper_64_vs_workbook_65_resolved": false,
+      "new_raw_data_refit_in_this_revision": false
+    },
+    "ducke": {
+      "target": "conditional four-guild composition among mist-net captures",
+      "not_total_acoustic_activity_or_species_occupancy": true,
+      "same_estimand_or_effect_scale_as_hendel": false,
+      "abundance_matched_partition_exploratory_tail": 0.055
+    },
+    "closed_vertical_related_results": [
+      {
+        "source": "Krauel 2018",
+        "height_only_gain": -0.004403805961918072,
+        "height_buzz_joint_gain": -0.004729279418493082,
+        "unit": "nats per recorded pass, equal-night aggregation",
+        "target": "recorded detector-stratum allocation, not individual altitude"
+      },
+      {
+        "source": "Cistrone original S1/S2",
+        "total_catch_gain": -0.015784009798270507,
+        "positive_folds": 11,
+        "folds": 19,
+        "unit": "nats per recorded pass within plot, equal-plot aggregation",
+        "target": "two-night-pooled recorded ground/canopy pass allocation"
+      },
+      {
+        "source": "PLOS 2016",
+        "target_label_gain": -0.02970719061394642,
+        "positive_folds": 0,
+        "folds": 3,
+        "unit": "nats per recorded frame; trial-target-bat aggregation",
+        "target": "actual laboratory XYZ relative to target",
+        "predictor": "natural cactus flower versus acrylic hemisphere",
+        "nectar_feeding_bats_not_insectivores": true,
+        "direct_resource_amount_test": false
+      }
+    ],
+    "cross_study_stage_specific_or_diet_mechanism_identified": false,
+    "insectivore_wind_time_vs_resource_hypothesis_confirmed": false,
+    "priority_or_first_vertical_sdm_claim": false,
+    "architecture": {
+      "status": "WORKING_DESIGN_DECISION_NOT_EXECUTED_MODEL_MIGRATION",
+      "current_research_and_evidence_home": "batter/prospective/resource_behavior_sdm",
+      "intended_qualified_process_model_home": "esdm",
+      "common_forecast_scoring_and_transfer_evaluation": "odsp",
+      "esdm_reference_commit": "5affa0658123a2702d93e803860ce5c1c435ce7c",
+      "odsp_reference_commit": "13b884f5cfb94beef36e8e5c5b031559e81b8b4b",
+      "original_external_placement_comment_located": false,
+      "original_external_comment_resolved": false
+    },
+    "one_active_goal": "qualify original resource-survey x bat-event joins for a fruit/flower-using field source before a new empirical fit",
+    "next_source_admission": {
+      "goldshtein_latest_authenticated_access_date": "2026-11-21",
+      "goldshtein_latest_authenticated_http_status": 401,
+      "goldshtein_new_access_attempt_in_this_revision": false,
+      "goldshtein_stage_a": "static mapped cactus location opportunity; original file, survey coverage, GPS and altitude admission still required",
+      "goldshtein_stage_b": "dated observed flower counts matched to GPS fields/nights; not verified",
+      "panama_species": "Phyllostomus hastatus",
+      "panama_location": "Isla Colon / Bocas del Toro",
+      "panama_paper_doi": "10.1098/rsbl.2024.0424",
+      "panama_gps_dois": [
+        "10.5441/001/1.282",
+        "10.5441/001/1.321",
+        "10.5441/001/1.322"
+      ],
+      "panama_dryad_doi": "10.5061/dryad.5qfttdzgj",
+      "panama_dryad_public_file_roster_checked_20261122": [
+        "README.md",
+        "stan.zip"
+      ],
+      "panama_same_event_quantitative_resource_join_verified": false,
+      "panama_is_bien_botanical_validation": false
+    },
+    "all_seven_strict_unestimated_fields_remain_null": true,
+    "new_empirical_fit": false,
+    "closed_comparisons_reopened": false,
+    "source_rows_committed": false,
+    "protected_main_or_manuscripts_changed": false
+  },
+  "fruit_flower_source_admission_20261122": {
+    "evidence_tier": "PRIMARY_SOURCE_METADATA_AND_PUBLISHED_METHODS_REAUDIT_WITH_SOURCEFREE_INPUT_GATE_ONLY",
+    "audit_date_jst": "2026-11-22",
+    "report": "prospective/resource_behavior_sdm/FRUIT_FLOWER_FIELD_SOURCE_ADMISSION_20261122.md",
+    "height_blind_gate": "prospective/resource_behavior_sdm/fruit_flower_source_support_gate_v1.py",
+    "synthetic_tests": "prospective/resource_behavior_sdm/test_fruit_flower_source_support_gate_v1.py",
+    "study_candidates": [
+      {
+        "id": "goldshtein_2020",
+        "dataset_doi": "10.17632/jxghjjsttw.1",
+        "most_recent_authenticated_source_access": "2026-11-21 HTTP401",
+        "new_original_files_opened": false,
+        "stage_a": "NOT_SOURCE_ADMITTED_STATIC_CACTUS_LAYOUT_POTENTIAL_ONLY",
+        "stage_b": "STOP_UNVERIFIED_DATED_FLOWER_JOIN",
+        "observed_414_flowers_same_night_gps_join_verified": false
+      },
+      {
+        "id": "phast_panama_2016_2023",
+        "dataset_doi": "10.5061/dryad.5qfttdzgj",
+        "official_public_roster": [
+          "README.md",
+          "stan.zip"
+        ],
+        "movebank_gps_cohorts": [
+          "10.5441/001/1.282",
+          "10.5441/001/1.321",
+          "10.5441/001/1.322"
+        ],
+        "quantitative_dated_food_table_verified": false,
+        "stage_b": "STOP_NO_QUANTITATIVE_MATCHED_RESOURCE_TABLE"
+      }
+    ],
+    "stage_b_strict_requirement": "every mapped cactus directly observed for each field-night, missing is not zero; partial surveys require new predeclared design",
+    "declared_coverage_does_not_prove_original_polygon_or_publisher_identity": true,
+    "does_not_use_altitude_or_height_defined_visit_labels": true,
+    "no_original_animal_or_cactus_records_committed": true,
+    "real_food_height_field_gain": null,
+    "regional_species_sdm_gain": null,
+    "empirical_new_fit": false,
+    "closed_negative_studies_reopened": false,
+    "protected_main_or_frozen_manuscript_changed": false
+  },
+  "goldshtein_uploaded_source_xy_audit_20261122": {
+    "evidence_tier": "USER_UPLOAD_SOURCE_HASH_PINNED_GPS_XY_AND_CACTUS_COORDINATES_ONLY",
+    "source_doi_claim": "10.17632/jxghjjsttw.1",
+    "source_zip_sha256": "069b12e6383fa7d84a1f7164fcfe16b0ce693469a7661262ce1a0ed73e423ebb",
+    "publisher_digest_verified": false,
+    "source_reader": "prospective/resource_behavior_sdm/goldshtein_original_xy_source_audit_20261122.py",
+    "sourcefree_regression_tests": "prospective/resource_behavior_sdm/test_goldshtein_original_xy_source_audit_20261122.py",
+    "scientific_report": "prospective/resource_behavior_sdm/GOLDSHTEIN_UPLOADED_ORIGINAL_SOURCE_AUDIT_20261122.md",
+    "aggregate_receipt": "prospective/resource_behavior_sdm/goldshtein_original_source_structural_receipt_20261122.json",
+    "n_tracking_animal_folders": 17,
+    "n_nmea_files": 19,
+    "n_valid_rmc_fixes_raw": 205166,
+    "n_distinct_rmc_utc_dates": 34,
+    "n_cactus_map_files": 8,
+    "n_cactus_map_rows": 2483,
+    "n_mapped_bat_rmc_raw_valid": 137267,
+    "n_mapped_bat_time_xy_deduplicated": 105580,
+    "n_mapped_bat_fixes_in_cactus_convex_hull": 42562,
+    "convex_hull_NOT_original_survey_polygon": true,
+    "n_cactus_maps_with_undated_openflowers": 4,
+    "n_positive_undated_flower_fields": 225,
+    "n_missing_undated_flower_fields": 160,
+    "n_video_observation_rows": 2726,
+    "n_video_unique_dates": 32,
+    "n_dates_with_original_RMC_date_overlap": 9,
+    "source_video_bat_and_cactus_keys_joined": false,
+    "original_legacy_open_flowers_xls_schema_decoded": false,
+    "author_original_matlab_analysis_requires_absent_source_dependencies": true,
+    "original_reported_approx_3600_cacti_disagrees_with_uploaded_maps_2483": true,
+    "gga_altitude_unit_metres_present": true,
+    "terrain_relative_AGL_and_uncertainty_independently_validated": false,
+    "stage_a": "SPATIAL_CANDIDATE_ONLY_STOP_NO_INDEPENDENT_SURVEY_POLYGON_OR_AGL",
+    "stage_b": "STOP_NO_INDEPENDENT_DIRECT_DATED_CACTUS_NIGHT_BLOOM_JOIN",
+    "no_original_xy_or_height_values_or_animal_ids_committed": true,
+    "any_new_fitted_wild_resource_height_gain": false,
+    "empirical_resource_height_gain": null,
+    "regional_species_SDM_gain": null,
+    "prior_source_closed_results_reopened": false,
+    "protected_main_JAE_BE_modified": false,
+    "n_mapped_animal_utc_date_pairs": 33,
+    "n_mapped_animal_utc_date_union": 25,
+    "n_mapped_animals_with_at_least_two_UTC_dates": 8,
+    "n_mapped_animals_with_at_least_three_UTC_dates": 4,
+    "n_video_dates_overlapping_mapped_RMC_dates": 6,
+    "duplicate_RMC_fix_records_removed": 31687,
+    "independent_scipy_Delaunay_reproduces_XY_inside_and_total_exactly": true,
+    "video_bat_tag_literals_matching_eight_mapped_GPS_tags": 0,
+    "video_tag_crosswalk_proven_impossible": false,
+    "independent_delaunay_original_source_XY_coverage_count_verified_exactly": true
+  },
+  "goldshtein_legacy_direct_bloom_xy_and_height_datum_qc_20261122": {
+    "evidence_tier": "USER_UPLOADED_ORIGINAL_LEGACY_BIFF8_DIRECT_FLOWER_DATA_AND_GPS_SOURCE_SUPPORT_ONLY",
+    "source_original_zip_sha256": "069b12e6383fa7d84a1f7164fcfe16b0ce693469a7661262ce1a0ed73e423ebb",
+    "source_BIFF8_xls_sha256": "459b3d838b56ed465bcddf495565b03ced421ae9b7b45a9d1425658f0cad7b6c",
+    "source_opened_after_previous_manifest_without_publisher_checksum_equivalence": true,
+    "report": "prospective/resource_behavior_sdm/GOLDSHTEIN_REAL_LEGACY_BLOOM_GPS_NIGHT_SOURCE_QC_20261122.md",
+    "data_receipt": "prospective/resource_behavior_sdm/goldshtein_legacy_bloom_GPS_datum_source_receipt_20261122.json",
+    "source_legacy_reader": "prospective/resource_behavior_sdm/goldshtein_legacy_biff_source_gate_v1.py",
+    "source_BIFF8_stdlib_tests": "prospective/resource_behavior_sdm/test_goldshtein_legacy_biff_source_gate_v1.py",
+    "source_XY_morning_gate": "prospective/resource_behavior_sdm/goldshtein_drone_bloom_xy_morning_gate_v1.py",
+    "source_GGA_datum_gate": "prospective/resource_behavior_sdm/goldshtein_gga_drone_datum_source_gate_v1.py",
+    "source_local_night_pairing_tests": "prospective/resource_behavior_sdm/test_goldshtein_drone_bloom_gga_source_gate_v1.py",
+    "height_audit_frozen_before_numerical_GGA_inspection": "prospective/resource_behavior_sdm/GOLDSHTEIN_DRONE_GGA_DATUM_DIAGNOSTIC_FREEZE_20261122.md",
+    "n_original_direct_openflower_cacti": 414,
+    "n_drone_cacti_mapped": 327,
+    "n_drone_cacti_daily_numeric": 121,
+    "n_drone_cacti_daily_not_measured": 206,
+    "n_drone_cactus_days_numeric": 1016,
+    "n_drone_cactus_days_observed_positive": 377,
+    "n_drone_cactus_days_observed_zero": 639,
+    "n_independent_drone_alt_reference_locations": 332,
+    "n_source_drone_flower_coordinates_matched_to_independent_ground_2m": 327,
+    "n_local_candidate_GPS_morning_cactus_15m_fixes": 227,
+    "n_candidate_GPS_fix_positive_flower_nearest_cactus": 34,
+    "n_candidate_bats": 5,
+    "n_candidate_bat_nights": 6,
+    "n_distinct_drone_cacti_reached_xy": 42,
+    "n_cactus_morning_pairs": 44,
+    "n_XY_proximity_episodes_60s": 99,
+    "n_positive_flower_proximity_episodes_60s": 22,
+    "n_exact_source_GGA_RMC_time_XY_pairs_on_drone_census_days": 57378,
+    "n_source_NMEA_GGA_geoid_sep_available_for_matched": 0,
+    "n_sensor_matches_within15m": 499,
+    "raw_GGA_minus_drone_alt_median_m": -86.51,
+    "raw_GGA_minus_drone_alt_05_95_range_m": [
+      -211.28,
+      -74.21
+    ],
+    "GGA_and_drone_altitudes_have_same_vertical_datum_verified": false,
+    "numbered_column_to_morning_date_convention_independently_verified": false,
+    "source_complete_census_survey_effort_verified": false,
+    "true_cactus_nectar_use_directly_observed_at_these_GPS_fix_rows": false,
+    "actual_resource_XY_proximity_cannot_be_assumed_feeding": true,
+    "true_animal_nights_much_fewer_than_GPS_fix_rows": true,
+    "new_ecological_food_height_model_fitted": false,
+    "true_direct_0_05_inferential_claim_allowed": false,
+    "original_5D_resource_conditional_height_gain": null,
+    "regional_species_3D_SDM_gain": null,
+    "raw_source_private_animal_plant_XY_GPS_height_rows_committed": false,
+    "prior_plos_krauel_cistrone_closed_results_reopened": false,
+    "protected_parent_main_esdm_main_and_frozen_JAE_BE_modified": false
+  },
+  "goldshtein_source_cactus_alt_EGM96_QC_20261122": {
+    "evidence_tier": "USER_UPLOADED_SOURCE_ORIGINAL_GGA_VS_INDEPENDENT_CACTUS_ALT_MAPS_EGM96_ONLY_QC_NOT_AGL",
+    "file_sha256": "069b12e6383fa7d84a1f7164fcfe16b0ce693469a7661262ce1a0ed73e423ebb",
+    "source_report": "prospective/resource_behavior_sdm/GOLDSHTEIN_GGA_ORIGINAL_CACTUS_ALT_EGM96_DATUM_AUDIT_20261122.md",
+    "source_replay_code": "prospective/resource_behavior_sdm/goldshtein_cactus_alt_geoid96_sensitivity_v1.py",
+    "sourcefree_tests": "prospective/resource_behavior_sdm/test_goldshtein_cactus_alt_geoid96_sensitivity_v1.py",
+    "source_safe_aggregate": "prospective/resource_behavior_sdm/goldshtein_original_altitude_reference_EGM96_source_QC_20261122.json",
+    "source_altitude_map_count": 4,
+    "source_cactus_altitude_coordinate_rows": 1951,
+    "original_matched_GGA_vs_cactus_alt_15m_fixes": 36082,
+    "original_matched_GGA_vs_cactus_alt_50m_fixes": 48948,
+    "raw_GGA_minus_local_cactus_alt_quantiles_15m_m": [
+      -83.02,
+      -64.7,
+      -57.23,
+      -51.46,
+      -34.62
+    ],
+    "n_independently_replicated_source_animal_groups": 4,
+    "anonymous_bat_medians_min_max_m": [
+      -79.35,
+      -28.2
+    ],
+    "across_bat_median_spread_m": 51.15,
+    "source_drone_GGA_minus_cactus_alt_median_15m_m": -86.51,
+    "offline_public_EGM96_grid_sha256": "c02a6eb70a7a78efebe5adf3ade626eb75390e170bb8b3f36136a2c28f5326a0",
+    "EGM96_shift_source_bat_map_median_m": -32.95,
+    "EGM96_shift_drone_map_median_m": -33.26,
+    "original_authors_model_is_EGM2008_not_EGM96": true,
+    "original_GGA_effective_vertical_datum_independently_verified": false,
+    "original_cactus_map_and_drone_alt_semantics_verified": false,
+    "original_GGA_geoid_separation_field_present": false,
+    "original_AGL_per_fix_recovered": false,
+    "false_positive_vertical_claim_prohibited": true,
+    "actual_food_conditional_height_effect": null,
+    "actual_region_wide_species_3D_SDM_effect": null,
+    "does_not_emit_source_animal_geography_or_raw_GGA_altitude": true,
+    "protected_main_JAE_BE_and_esdm_changed": false
+  }
+}

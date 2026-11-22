@@ -1,0 +1,322 @@
+{
+  "schema": "batter.cistrone.recorded_stratum.resource_holdout.v1",
+  "paper_doi": "10.1016/j.foreco.2026.124382",
+  "protocol_freeze_commit": "0f7b9a6972f81203f95c6eaf7d161c768946eacf",
+  "engine_sha256": "a7bbc65741110aacd8869a29a14101b4be116f29aa24057a045691853b5bd7cc",
+  "source_audit": {
+    "adapter_version": "cistrone_supplement_adapter_v1",
+    "insect_rows": 40,
+    "bat_rows": 80,
+    "insect_taxa": 23,
+    "bat_species_groups": 17,
+    "plot_pairs": 20,
+    "matched_plot_stratum_pairs": 40,
+    "nights_per_plot": 2,
+    "resource_taxon_counts": {
+      "total": 23,
+      "lepidoptera": 14,
+      "diptera": 4,
+      "other": 5
+    },
+    "totals": {
+      "insect_individuals": 1123,
+      "bat_passes": 1301,
+      "insect_by_stratum": {
+        "ground": 826,
+        "canopy": 297
+      },
+      "bat_passes_by_stratum": {
+        "ground": 789,
+        "canopy": 512
+      },
+      "lepidoptera_individuals": 381,
+      "diptera_individuals": 692
+    },
+    "zero_pass_plots": 1,
+    "zero_pass_plot_stratum_pairs": 2,
+    "zero_pass_recorder_nights": 6,
+    "zero_insect_samples": 1,
+    "height_ranges_m": {
+      "insect_trap": {
+        "ground": [
+          1.0,
+          1.31
+        ],
+        "canopy": [
+          8.61,
+          11.8
+        ]
+      },
+      "stand_tree_height": [
+        13.6,
+        22.5
+      ],
+      "recorder": null
+    },
+    "canopy_complement_tolerance_pp": 0.010000001,
+    "canopy_complement_max_error_pp": 0.010000000000005116,
+    "strict_coarse_join": true,
+    "time_join": false,
+    "effort_standardized": false,
+    "exact_recorder_height_join": false,
+    "calendar_dates_available": false,
+    "recording_hours_available": false,
+    "insect_trapping_duration_available": false,
+    "strict_source_hashes": true,
+    "formula_cache_check": true,
+    "formula_cache_count": 80,
+    "checksums": {
+      "archive_sha256": "3eed7ceeb9c1201a3e8594c6d28115d268a7c64e1c1acdccfb6e5d50da872653",
+      "workbook_sha256": {
+        "mmc1": "7220410f012954b82ae12d33a06d0a6ff70abb66aaa7e17a5aaaf874242f9259",
+        "mmc2": "adcfc18635b5f7d804dad496f3f5108f642a86ba4aaec6d90a932c724148531d"
+      }
+    },
+    "s1_annotation_rows_skipped": 1
+  },
+  "analysis": {
+    "split": "leave_entire_plot_out",
+    "n_heldout_plots": 19,
+    "coverage": {
+      "source_plots": 20,
+      "eligible_positive_pass_plots": 19,
+      "zero_pass_plots_excluded_from_conditional_score": 1,
+      "recorded_passes": 1301
+    },
+    "models": {
+      "baseline": {
+        "mean_score": -0.7127508821705455,
+        "mean_gain": 0.0,
+        "positive_plots": 0,
+        "min_gain": 0.0,
+        "max_gain": 0.0,
+        "sorted_plot_gains": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "max_fit_gradient": 5.516289898824245e-11
+      },
+      "total": {
+        "mean_score": -0.7285348919688159,
+        "mean_gain": -0.015784009798270507,
+        "positive_plots": 11,
+        "min_gain": -0.3332832230347128,
+        "max_gain": 0.01852184217526409,
+        "sorted_plot_gains": [
+          -0.3332832230347128,
+          -0.019464340898939114,
+          -0.013350685490039815,
+          -0.010916974625968079,
+          -0.008524069533418666,
+          -0.00802955067202149,
+          -0.0014324711380887534,
+          -0.0013561686204337509,
+          0.00013784556048390684,
+          0.004487662528745773,
+          0.0047645820605269895,
+          0.005598832804072584,
+          0.009038960217659708,
+          0.009319272755034302,
+          0.009803176717496531,
+          0.010164658929476267,
+          0.010452740093741975,
+          0.014171724003980701,
+          0.01852184217526409
+        ],
+        "max_fit_gradient": 8.755315699868205e-12
+      },
+      "orders": {
+        "mean_score": -0.7286211751930233,
+        "mean_gain": -0.01587029302247777,
+        "positive_plots": 3,
+        "min_gain": -0.06039252074517065,
+        "max_gain": 0.007223748375314476,
+        "sorted_plot_gains": [
+          -0.06039252074517065,
+          -0.04277598560531115,
+          -0.03855006599398081,
+          -0.03664759006581941,
+          -0.03402113580552557,
+          -0.02435275386379021,
+          -0.01883842315258699,
+          -0.011183664773940616,
+          -0.010769119940340577,
+          -0.009290192963623434,
+          -0.005731514653883996,
+          -0.005692661607826777,
+          -0.004990656728162235,
+          -0.004210682306419078,
+          -0.002288213228755609,
+          -0.0005888945213907704,
+          3.563053126953708e-05,
+          0.001529129622866221,
+          0.007223748375314476
+        ],
+        "max_fit_gradient": 8.434136895829614e-11
+      }
+    },
+    "score_unit": "nats per recorded pass within plot, macro-averaged over positive-pass plots",
+    "primary_comparison": "total minus baseline",
+    "secondary_comparison": "orders minus baseline",
+    "independent_replication_claim": false,
+    "original_plot_ids_or_observations_included": false
+  },
+  "scope": {
+    "source_open_exploratory": true,
+    "same_study_plot_stratum_join_verified": true,
+    "same_night_insect_bat_matching_verified": false,
+    "actual_sampling_effort_verified": false,
+    "per_plot_recorder_heights_available": false,
+    "individuals_or_flight_trajectories_measured": false,
+    "feeding_behavior_measured": false,
+    "capture_counts_are_effort_standardized": false,
+    "spatial_or_temporal_independent_validation": false,
+    "species_specific_diet_response_estimated": false,
+    "causal_resource_tracking_established": false,
+    "regional_ecological_sdm_confirmed": false,
+    "strict_individual_resource_height_gain": null
+  },
+  "source_adapter_sha256": "1c73c840cfb80d496b394e37be4d6dd1e60a811169a38e6f0c9f5575e8c52ba9",
+  "protocol_sha256": "4f1930c9e95d653cee5d01f30d178a3c9582d03fcb89c951218b3f4750bfd637",
+  "independent_verification": {
+    "reference_script": "verify_cistrone_scipy_independent_v1.py",
+    "reference_script_sha256": "3c0c10d86dfcd46dba8ed73086476dfa96a6d60de3adb9c7e418b6ae836e6884",
+    "private_reference_result_sha256": "2c9102f00b0ab9a4bff44ad4d42a37fae34ff7942a20a9f7911e813d63cc8e2f",
+    "private_comparison_receipt_sha256": "d0143cf477cab21144331d79577cdd9b0465186cc0e789c530acf1921d0e079c",
+    "versions": {
+      "numpy": "2.3.5",
+      "openpyxl": "3.1.5",
+      "python": "3.12.14",
+      "scipy": "1.17.0"
+    },
+    "reference_optimizer_diagnostics": {
+      "fit_count": 57,
+      "gradient_gate_pass_count": 57,
+      "max_abs_gradient": 7.527997981926493e-09,
+      "max_iterations": 26,
+      "scipy_non_success_accepted_by_gradient_count": 36,
+      "scipy_success_count": 21
+    },
+    "comparison": {
+      "absolute_comparison_tolerance": 1e-07,
+      "differences": {
+        "aggregate_maximum_gain": {
+          "count": 2,
+          "max_absolute_difference": 1.0764545921304602e-09
+        },
+        "aggregate_mean_gain": {
+          "count": 2,
+          "max_absolute_difference": 7.263631571219342e-10
+        },
+        "aggregate_mean_score": {
+          "count": 3,
+          "max_absolute_difference": 4.7362647137561e-10
+        },
+        "aggregate_minimum_gain": {
+          "count": 2,
+          "max_absolute_difference": 6.530508134261481e-09
+        },
+        "aggregate_sorted_gain": {
+          "count": 38,
+          "max_absolute_difference": 8.152775565761772e-09
+        },
+        "coefficient": {
+          "count": 399,
+          "max_absolute_difference": 2.1441919115239294e-08
+        },
+        "fold_score": {
+          "count": 57,
+          "max_absolute_difference": 8.53639803288786e-09
+        },
+        "log_probability": {
+          "count": 114,
+          "max_absolute_difference": 3.819031713092613e-08
+        },
+        "paired_gain": {
+          "count": 38,
+          "max_absolute_difference": 8.152775565761772e-09
+        },
+        "probability": {
+          "count": 114,
+          "max_absolute_difference": 1.810874555863151e-08
+        },
+        "training_feature_mean": {
+          "count": 342,
+          "max_absolute_difference": 7.105427357601002e-15
+        },
+        "training_feature_scale": {
+          "count": 342,
+          "max_absolute_difference": 1.7763568394002505e-15
+        }
+      },
+      "gated_quantities": [
+        "log_probability",
+        "probability",
+        "fold_score",
+        "paired_gain",
+        "aggregate_mean_score",
+        "aggregate_mean_gain",
+        "aggregate_sorted_gain",
+        "aggregate_minimum_gain",
+        "aggregate_maximum_gain"
+      ],
+      "independent_fit_diagnostics": {
+        "fit_count": 57,
+        "gradient_gate_pass_count": 57,
+        "max_abs_gradient": 7.527997981926493e-09,
+        "max_iterations": 26,
+        "scipy_non_success_accepted_by_gradient_count": 36,
+        "scipy_success_count": 21
+      },
+      "independent_runtime_versions": {
+        "numpy": "2.3.5",
+        "openpyxl": "3.1.5",
+        "python": "3.12.14",
+        "scipy": "1.17.0"
+      },
+      "independent_script_sha256": "3c0c10d86dfcd46dba8ed73086476dfa96a6d60de3adb9c7e418b6ae836e6884",
+      "matching_model_fit_count": 57,
+      "matching_plot_identifier_count": 19,
+      "passed": true,
+      "positive_plot_counts_match": true,
+      "production_output_sha256": "8d0ee4fbd9f6006ebb3e671bf20b95138802d89c82a3ee743dbc0680f3318c40",
+      "protocol_sha256": "4f1930c9e95d653cee5d01f30d178a3c9582d03fcb89c951218b3f4750bfd637",
+      "reference_output_sha256": "2c9102f00b0ab9a4bff44ad4d42a37fae34ff7942a20a9f7911e813d63cc8e2f",
+      "schema": "cistrone_independent_scipy_comparison_v1",
+      "source_coverage_matches": true,
+      "source_zip_sha256": "3eed7ceeb9c1201a3e8594c6d28115d268a7c64e1c1acdccfb6e5d50da872653"
+    }
+  },
+  "review_and_tests": {
+    "independent_source_audit_completed": true,
+    "independent_design_review_before_fitting": true,
+    "independent_code_and_scope_review_completed": true,
+    "new_synthetic_tests_passed": 48,
+    "production_source_results_exactly_unchanged_after_input_precision_guard_fix": true,
+    "cv_level_heldout_response_exclusion_test_passed": true,
+    "cv_level_zero_pass_plot_invariance_test_passed": true
+  },
+  "stopping_rule": {
+    "status": "CLOSED_AFTER_TWO_FROZEN_RESOURCE_COMPARISONS",
+    "post_outcome_model_changes": false,
+    "post_outcome_plot_exclusions": false,
+    "next_metadata_question": "Original methods and deployment metadata would be needed to resolve dates, effort, detector geometry and spatial grouping. No retuning of this comparison."
+  }
+}

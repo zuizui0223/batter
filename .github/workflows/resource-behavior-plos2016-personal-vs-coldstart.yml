@@ -1,0 +1,45 @@
+name: PLOS2016 three-bat personal vs cold-start trial transfer (post-outcome exploratory)
+
+on:
+  push:
+    branches:
+      - prospective/resource-behavior-higher-dimensional-sdm-v1-20261120
+    paths:
+      - 'prospective/resource_behavior_sdm/PLOS2016_SECONDARY_WITHIN_VS_BETWEEN_TRIAL_FROZEN_20261121.md'
+      - 'prospective/resource_behavior_sdm/plos2016_secondary_personal_vs_coldstart_transfer_v1.py'
+      - 'prospective/resource_behavior_sdm/test_plos2016_secondary_personal_vs_coldstart_transfer_v1.py'
+      - '.github/workflows/resource-behavior-plos2016-personal-vs-coldstart.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  no-real-data-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s prospective/resource_behavior_sdm -p 'test_plos2016_secondary_personal_vs_coldstart_transfer_v1.py' -v
+
+  secondary-publisher-original:
+    needs: no-real-data-test
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: PLOS official SHA-only original, paired 3 bats, trial holdout, previously frozen cross-bat check
+        run: python prospective/resource_behavior_sdm/plos2016_secondary_personal_vs_coldstart_transfer_v1.py --out /tmp/plos2016_postoutcome_personal_vs_coldstart_receipt.json
+      - name: Preserve source-free bat-level aggregates or STOP; never original trial rows
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: plos2016-3bat-personal-vs-coldstart-postresult
+          path: /tmp/plos2016_postoutcome_personal_vs_coldstart_receipt.json
+          if-no-files-found: error
+          retention-days: 30

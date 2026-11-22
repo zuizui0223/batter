@@ -1,0 +1,45 @@
+name: PLOS original 3D flower-vs-sham source schema only
+
+on:
+  push:
+    branches:
+      - prospective/resource-behavior-higher-dimensional-sdm-v1-20261120
+    paths:
+      - 'prospective/resource_behavior_sdm/plos2016_3d_xlsx_source_gate.py'
+      - 'prospective/resource_behavior_sdm/test_plos2016_3d_xlsx_source_gate.py'
+      - '.github/workflows/resource-behavior-plos2016-3d-source.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  source-free:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Synthetic source and rights safety tests
+        run: python -m unittest discover -s prospective/resource_behavior_sdm -p test_plos2016_3d_xlsx_source_gate.py -v
+
+  original-publisher-schema:
+    needs: source-free
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Official PLOS original supplementary file schema audit (no biological rows)
+        run: python prospective/resource_behavior_sdm/plos2016_3d_xlsx_source_gate.py
+      - name: Archive schema-only receipt including STOP
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: plos2016-3d-source-structure-v1
+          path: prospective/resource_behavior_sdm/plos2016_original_3d_structure_v1.json
+          if-no-files-found: error
+          retention-days: 30

@@ -1,0 +1,215 @@
+{
+  "schema": "batter.resource_behavior_sdm.original_source_join_registry.v2",
+  "created_date": "2026-11-20",
+  "verified_false_means": "Not demonstrated by inspected source evidence; not biological absence.",
+  "scope": "Original named public sources. Metadata eligibility only; ZERO new resource-conditioned 3D field fit.",
+  "columns": [
+    "same_population",
+    "original_bat_rows_authenticated_and_opened",
+    "verified_same_event_join",
+    "vertical_height_verified",
+    "independent_time_aligned_food_supply",
+    "behavior_label_independent_of_height",
+    "observation_sampling_calibrated"
+  ],
+  "sources": [
+    {
+      "id": "hmon_congo_2020",
+      "species": "Hypsignathus monstrosus",
+      "study_locality": "Lek Njoukou, Republic of Congo",
+      "period": "2020",
+      "source_tracking": "https://doi.org/10.5441/001/1.278",
+      "source_resource": null,
+      "role": "Existing vertical comparison; cannot join Cameroon 2022–2023 LiDAR",
+      "flags": {
+        "same_population": true,
+        "original_bat_rows_authenticated_and_opened": true,
+        "verified_same_event_join": false,
+        "vertical_height_verified": true,
+        "independent_time_aligned_food_supply": false,
+        "behavior_label_independent_of_height": false,
+        "observation_sampling_calibrated": false
+      }
+    },
+    {
+      "id": "hmon_cameroon_lidar_2022_2023",
+      "species": "Hypsignathus monstrosus",
+      "study_locality": "Dja Reserve, Cameroon",
+      "period": "2022–2023",
+      "source_tracking": "https://doi.org/10.5061/dryad.7m0cfxq4t",
+      "source_resource": "https://doi.org/10.5061/dryad.7m0cfxq4t",
+      "role": "Original study GPS XY/time plus 10m canopy, plant volume, swamp, habitat; no original height field confirmed; 6.86GB source ZIP not opened",
+      "flags": {
+        "same_population": true,
+        "original_bat_rows_authenticated_and_opened": false,
+        "verified_same_event_join": false,
+        "vertical_height_verified": false,
+        "independent_time_aligned_food_supply": false,
+        "behavior_label_independent_of_height": false,
+        "observation_sampling_calibrated": false
+      }
+    },
+    {
+      "id": "phast_panama_2016_2023",
+      "species": "Phyllostomus hastatus",
+      "study_locality": "Isla Colon, Bocas del Toro, Panama",
+      "period": "2016, 2021–2023 distinct study sessions",
+      "source_tracking": "https://doi.org/10.5441/001/1.321",
+      "other_tracking": [
+        "https://doi.org/10.5441/001/1.282",
+        "https://doi.org/10.5441/001/1.322"
+      ],
+      "source_resource": "https://doi.org/10.5061/dryad.5qfttdzgj",
+      "role": "Vertical and source seasons measured; balsa flowering qualitative ground-truth, NOT sampled fruit/nectar supply matched to bat fixes; satellite climatology invalid",
+      "flags": {
+        "same_population": true,
+        "original_bat_rows_authenticated_and_opened": true,
+        "verified_same_event_join": false,
+        "vertical_height_verified": true,
+        "independent_time_aligned_food_supply": false,
+        "behavior_label_independent_of_height": false,
+        "observation_sampling_calibrated": false
+      }
+    },
+    {
+      "id": "rousettus_israel_manipulation_2020",
+      "species": "Rousettus aegyptiacus",
+      "study_locality": "Hula Valley, Israel",
+      "period": "June, July, December 2020",
+      "source_tracking": "https://doi.org/10.5061/dryad.51c59zwgp",
+      "source_resource": "https://doi.org/10.5061/dryad.51c59zwgp",
+      "role": "Experimental 2D fruitless-Ficus odor-cue and individual visits; official Dryad original dataset metadata PASS, direct original CSV 401. Author GitHub is separately published but does not match original Dryad reported byte sizes, not a publisher-identical mirror. No actual event-level link to food or 3D heights.",
+      "flags": {
+        "same_population": true,
+        "original_bat_rows_authenticated_and_opened": false,
+        "verified_same_event_join": false,
+        "vertical_height_verified": false,
+        "independent_time_aligned_food_supply": false,
+        "behavior_label_independent_of_height": false,
+        "observation_sampling_calibrated": false
+      }
+    },
+    {
+      "id": "nyctalus_noctula_rsf",
+      "species": "Nyctalus noctula",
+      "study_locality": "Original Reusch et al. European wind-turbine GPS source",
+      "period": "Source 2023 release",
+      "source_tracking": "https://doi.org/10.5281/zenodo.7535030",
+      "source_resource": "https://doi.org/10.5281/zenodo.7535030",
+      "role": "Original 8129 observed GPS records verified 1:1 against source RSF land cover/potential roost rows, height and HMM labels; habitat proxy not food supply. Prior post-freeze context analyses are not independent replications.",
+      "flags": {
+        "same_population": true,
+        "original_bat_rows_authenticated_and_opened": true,
+        "verified_same_event_join": true,
+        "vertical_height_verified": true,
+        "independent_time_aligned_food_supply": false,
+        "behavior_label_independent_of_height": true,
+        "observation_sampling_calibrated": false
+      }
+    },
+    {
+      "id": "nyctalus_aviator_single_bat",
+      "species": "Nyctalus aviator",
+      "study_locality": "Asahikawa, Hokkaido, Japan",
+      "period": "2020–2021 acoustic/GPS programme",
+      "source_tracking": "https://doi.org/10.5061/dryad.mgqnk993n",
+      "source_resource": null,
+      "role": "Actual feeding buzz and relative altitude in a GPS-tagged bat, but single individual and no measured prey field; independent broader microphone survey not individual-3D resource join.",
+      "flags": {
+        "same_population": true,
+        "original_bat_rows_authenticated_and_opened": false,
+        "verified_same_event_join": false,
+        "vertical_height_verified": true,
+        "independent_time_aligned_food_supply": false,
+        "behavior_label_independent_of_height": true,
+        "observation_sampling_calibrated": false
+      }
+    },
+    {
+      "id": "leptonycteris_cactus_goldshtein_2020",
+      "species": "Leptonycteris yerbabuenae",
+      "study_locality": "Sonoran Desert, Mexico; original mapped cactus foraging fields",
+      "period": "Goldshtein et al. 2020 published original",
+      "source_tracking": "https://doi.org/10.17632/jxghjjsttw.1",
+      "source_resource": "https://doi.org/10.17632/jxghjjsttw.1",
+      "role": "Updated source 2026-11-22: exact user-upload ZIP + pinned open flowers.xls BIFF8 workbook opened. Independent 327 drone-cactus positions (121 with 1,016 numeric daily flower observations) physically co-occur with original GPS tracks on nominal morning survey dates: 227 original XY fixes / 99 horizontal proximity episodes from 5 bats and 6 candidate nights within 15m. However source dawn-census date convention, sampling support/effort, and true terrain-corrected AGL are NOT yet qualified; frozen original GGA-minus-drone altitude at 15m has median −86.51m and NMEA geoid separation missing. No 3D resource-height fit or causal claim.",
+      "flags": {
+        "same_population": true,
+        "original_bat_rows_authenticated_and_opened": false,
+        "verified_same_event_join": false,
+        "vertical_height_verified": false,
+        "independent_time_aligned_food_supply": false,
+        "behavior_label_independent_of_height": false,
+        "observation_sampling_calibrated": false
+      },
+      "local_uploaded_source_audit": "prospective/resource_behavior_sdm/GOLDSHTEIN_UPLOADED_ORIGINAL_SOURCE_AUDIT_20261122.md",
+      "user_uploaded_source_sha256": "069b12e6383fa7d84a1f7164fcfe16b0ce693469a7661262ce1a0ed73e423ebb",
+      "local_source_gps_xy_and_cactus_layout_structural_overlap_verified": true,
+      "original_publisher_checksum_equivalence_verified": false,
+      "n_mapped_animal_utc_date_pairs_only_not_nights": 33,
+      "verified_independent_survey_polygon": false,
+      "verified_corrected_AGL": false,
+      "verified_dated_direct_flower_join": false,
+      "source_legacy_direct_bloom_XLS_parsed": true,
+      "original_legacy_workbook_SHA256": "459b3d838b56ed465bcddf495565b03ced421ae9b7b45a9d1425658f0cad7b6c",
+      "source_morning_drone_cactus_spatialtemporal_candidate_fixes": 227,
+      "source_morning_drone_cactus_spatialtemporal_candidate_bat_nights": 6,
+      "source_morning_candidate_GPS_XY_episodes_60s": 99,
+      "original_dated_flower_counts_not_a_complete_daily_field_census": true,
+      "source_GGA_vs_drone_ground_alt_datum_verified": false,
+      "original_5D_resource_height_gain": null,
+      "additional_vertical_datum_audit": "prospective/resource_behavior_sdm/GOLDSHTEIN_GGA_ORIGINAL_CACTUS_ALT_EGM96_DATUM_AUDIT_20261122.md",
+      "source_original_4_cactus_map_alt_15m_GGA_median_difference_m": -57.23,
+      "source_original_4_bat_alt_median_range_m": [
+        -79.35,
+        -28.2
+      ],
+      "public_available_local_EGM96_datum_shift_m_approx": -33,
+      "original_paper_uses_EGM2008_not_EGM96": true,
+      "original_sensor_effective_datum_and_ground_alt_unverified": true,
+      "original_field_AGL_fitted": false
+    },
+    {
+      "id": "chrotopterus_mexico_2026",
+      "species": "Chrotopterus auritus",
+      "study_locality": "Calakmul, Mexico (3 sites)",
+      "period": "Original field program, published 2026-10-30",
+      "source_tracking": "https://doi.org/10.5061/dryad.7d7wm38c0",
+      "source_resource": "https://doi.org/10.5061/dryad.7d7wm38c0",
+      "role": "Published 17 bats/57 nightly trajectories: 3D GPS height MSL, XY HMM state proxies, 10m binary forest/landcover. Official original DOI/version/file metadata PASS action 44729699721; original raw GPS ZIP content download HTTP401 action 44729946430. Landcover not measured prey supply; original height, event join not opened.",
+      "flags": {
+        "same_population": true,
+        "original_bat_rows_authenticated_and_opened": false,
+        "verified_same_event_join": false,
+        "vertical_height_verified": false,
+        "independent_time_aligned_food_supply": false,
+        "behavior_label_independent_of_height": false,
+        "observation_sampling_calibrated": false
+      }
+    },
+    {
+      "id": "ducke_fruit_insect_captures_2018",
+      "species": "Phyllostomidae community; 52 captured bat species",
+      "study_locality": "Reserva Adolpho Ducke, Amazonas, Brazil (49 plots)",
+      "period": "Bat sampling 2013-2014; published 2018",
+      "source_tracking": "https://doi.org/10.5061/dryad.9rb48c5",
+      "source_resource": "https://doi.org/10.5061/dryad.9rb48c5",
+      "role": "Same plot independently measured fruited plant and insect biomass plus bat captures, plot elevation and vegetation. Original Dryad metadata PASS 44729699721, original 67k XLSX HTTP401 44729946430. No individual GPS 3D flight heights. Eligible future LOCAL resource and bat guild association, NOT 5D joint source.",
+      "flags": {
+        "same_population": true,
+        "original_bat_rows_authenticated_and_opened": false,
+        "verified_same_event_join": false,
+        "vertical_height_verified": false,
+        "independent_time_aligned_food_supply": false,
+        "behavior_label_independent_of_height": false,
+        "observation_sampling_calibrated": false
+      }
+    }
+  ],
+  "forbidden_cross_source_pair": {
+    "left": "hmon_congo_2020",
+    "right": "hmon_cameroon_lidar_2022_2023",
+    "reason": "Different countries, original investigators, years and individual identities: species name alone is not a join key."
+  },
+  "real_joint_3d_resource_effect": null
+}

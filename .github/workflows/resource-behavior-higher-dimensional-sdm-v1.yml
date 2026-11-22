@@ -1,0 +1,35 @@
+name: Resource-behavior high-dimensional SDM (source-free)
+
+on:
+  push:
+    branches:
+      - prospective/resource-behavior-higher-dimensional-sdm-v1-20261120
+    paths:
+      - "prospective/resource_behavior_sdm/**"
+      - ".github/workflows/resource-behavior-higher-dimensional-sdm-v1.yml"
+  pull_request:
+    paths:
+      - "prospective/resource_behavior_sdm/**"
+      - ".github/workflows/resource-behavior-higher-dimensional-sdm-v1.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  synthetic-and-claim-gates:
+    name: Python ${{ matrix.python-version }} pure-stdlib tests
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Syntax audit
+        run: python -m compileall -q prospective/resource_behavior_sdm
+      - name: Known-truth mathematics and no-promotion evidence gates
+        run: python -m unittest discover -s prospective/resource_behavior_sdm -p 'test_*.py' -v

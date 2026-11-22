@@ -1,0 +1,186 @@
+{
+  "schema": "batter.resource_behavior_sdm.behavior_extension.v2",
+  "prepared": "2026-11-20",
+  "role": "Previously frozen exploratory outcomes, source-summary migration; not new reanalysis or independent replication.",
+  "source_branch": "https://github.com/zuizui0223/batter/tree/post-freeze/mechanism-synthesis-v9-final",
+  "evidence": [
+    {
+      "id": "SPEED_STATE_5",
+      "source": "post_freeze_extensions/movement_state_conditioning/RESULT_V1.md",
+      "analysis": "5km horizontal cell x three preselected horizontal-speed states; speed-only (not verified foraging)",
+      "panels": 5,
+      "positive": 5,
+      "records": [
+        [
+          "Eidolon_helvum",
+          14,
+          0.316,
+          0.0002
+        ],
+        [
+          "Hypsignathus_monstrosus",
+          24,
+          0.135,
+          0.0002
+        ],
+        [
+          "Phyllostomus_hastatus_2022",
+          33,
+          0.128,
+          0.0002
+        ],
+        [
+          "Phyllostomus_hastatus_2023",
+          14,
+          0.06,
+          0.0002
+        ],
+        [
+          "Phyllostomus_hastatus_2016",
+          10,
+          0.547,
+          0.0076
+        ]
+      ],
+      "interpretation": "Vertical identity survives broad horizontal movement intensity adjustment."
+    },
+    {
+      "id": "SPEED_TURN_5",
+      "source": "post_freeze_extensions/kinematic_state_conditioning/RESULT_V1.md",
+      "analysis": "5km horizontal cell x preselected two speed x two turning bins; proxy not observed task",
+      "panels": 5,
+      "positive": 5,
+      "records": [
+        [
+          "Eidolon_helvum",
+          12,
+          0.335,
+          0.0002
+        ],
+        [
+          "Hypsignathus_monstrosus",
+          23,
+          0.148,
+          0.0002
+        ],
+        [
+          "Phyllostomus_hastatus_2022",
+          32,
+          0.11,
+          0.0002
+        ],
+        [
+          "Phyllostomus_hastatus_2023",
+          14,
+          0.061,
+          0.0002
+        ],
+        [
+          "Phyllostomus_hastatus_2016",
+          10,
+          0.526,
+          0.0064
+        ]
+      ],
+      "interpretation": "A simple change of speed/turning-state mixture cannot account for all source-specific vertical individuality."
+    },
+    {
+      "id": "FINE_PLACE_SPEED_TURN_4",
+      "source": "post_freeze_extensions/fine_place_kinematic_four_panel/RESULT_V1.md",
+      "analysis": "2km cells x broad speed-turn; secondary structurally eligible subset, NOT replacement for failed five-panel preflight",
+      "panels": 4,
+      "positive": 4,
+      "records": [
+        [
+          "Hypsignathus_monstrosus",
+          22,
+          0.286,
+          0.0002
+        ],
+        [
+          "Phyllostomus_hastatus_2022",
+          30,
+          0.187,
+          0.0002
+        ],
+        [
+          "Phyllostomus_hastatus_2023",
+          14,
+          0.0723,
+          0.0022
+        ],
+        [
+          "Phyllostomus_hastatus_2016",
+          10,
+          0.545,
+          0.012
+        ]
+      ],
+      "noneligible": "Eidolon_helvum (only 1/12 eligible 2km individuals; vertical outcome NOT opened)",
+      "interpretation": "Residual identity after 2km place and coarse horizontal kinematic matching in four eligible panels; not exact routes/resources."
+    },
+    {
+      "id": "PHASE_SPEED_TURN_4",
+      "source": "post_freeze_extensions/temporal_phase_kinematic_four_panel/RESULT_V1.md",
+      "analysis": "relative tracked-session early/middle/late phase x coarse kinematic, not solar/circadian or feeding time",
+      "panels": 4,
+      "positive": 3,
+      "records": [
+        [
+          "Hypsignathus_monstrosus",
+          20,
+          0.156,
+          0.0002
+        ],
+        [
+          "Phyllostomus_hastatus_2022",
+          32,
+          0.0896,
+          0.0002
+        ],
+        [
+          "Phyllostomus_hastatus_2023",
+          14,
+          0.0221,
+          0.1068
+        ],
+        [
+          "Phyllostomus_hastatus_2016",
+          10,
+          0.483,
+          0.0214
+        ]
+      ],
+      "interpretation": "Three positive panels, 2023 wet-season panel does not pass; single wet panel is not a seasonal interaction test."
+    },
+    {
+      "id": "NYCTALUS_SOURCE_HMM_NONATTENUATION",
+      "source": "post_freeze_extensions/NYCTALUS_HMM_STATE_ATTRIBUTION_RESULT_V1.md",
+      "analysis": "source independently generated HMM ARM/COM states; paired identical support",
+      "panels": 1,
+      "positive": 0,
+      "notes": {
+        "evaluable_individuals": 27,
+        "paired_context_increment": 0.01191,
+        "attenuation_one_sided_p": 0.5431,
+        "state_conditioned_calibrated_p": 0.0707
+      },
+      "interpretation": "No support for attenuation by HMM states; conditional individuality itself fails p<=0.05. NOT external positive replication."
+    },
+    {
+      "id": "PATCH_FIDELITY_FAIL",
+      "source": "post_freeze_extensions/resource_patch_fidelity/RESULT_V1.md",
+      "analysis": "1km fine horizontal patch fidelity vs vertical identity across five panels",
+      "panels": 5,
+      "positive": 0,
+      "notes": {
+        "primary_mean_spearman_rho": 0.1759,
+        "primary_one_sided_p": 0.05731,
+        "panel_positive_correlations": 4
+      },
+      "interpretation": "Frozen primary FAIL; does not exclude resource response more broadly."
+    }
+  ],
+  "primary_ecological_5d_resource_gain": null,
+  "caution": "Repeated years/analyses from the same source cohorts are dependent. Do not meta-analyze as independent species, reclassify post-hoc subgroups, or call kinematic bins measured foraging."
+}

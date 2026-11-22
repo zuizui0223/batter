@@ -1,0 +1,34 @@
+name: Bat GPS altitude observation-error sensitivity (source-free)
+
+on:
+  push:
+    branches:
+      - prospective/resource-behavior-higher-dimensional-sdm-v1-20261120
+    paths:
+      - 'prospective/resource_behavior_sdm/gps_height_error_*'
+      - 'prospective/resource_behavior_sdm/test_gps_height_error_*'
+      - '.github/workflows/resource-behavior-gps-height-sensitivity.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  known-truth-gps-error:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Check source-free GPS error tests
+        run: python -m unittest discover -s prospective/resource_behavior_sdm -p 'test_gps_height_error_likelihood_v1.py' -v
+      - name: Predeclared five synthetic measurement-error scenarios
+        run: python prospective/resource_behavior_sdm/gps_height_error_sensitivity_sourcefree_v1.py --out /tmp/gps_height_error_sensitivity_sourcefree_v1.json
+      - name: Save only aggregated source-free results
+        uses: actions/upload-artifact@v4
+        with:
+          name: gps-height-error-five-synthetic-scenarios-v1
+          path: /tmp/gps_height_error_sensitivity_sourcefree_v1.json
+          retention-days: 30
+          if-no-files-found: error

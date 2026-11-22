@@ -1,0 +1,97 @@
+{
+  "schema": "batter.ducke.four_guild_multinomial_original_source.v3",
+  "status": "POST_OUTCOME_SOURCE_LOCAL_MULTINOMIAL_PREDICTION_NOT_SDM",
+  "date": "2026-11-20",
+  "original_source": {
+    "doi": "10.5061/dryad.9rb48c5",
+    "zip_sha256": "55c784e2f7b37987e3657d3ba3d5cf6a41bb3554a11904969d1376c977bcdbce",
+    "v3_source_open_frozen_design_commit": "abec244fb044fcff90f6fe368ebd76c92a2ef2b0",
+    "original_source_rows_committed": false
+  },
+  "input": {
+    "n_matched_plots": 46,
+    "n_matched_plot_nights": 103,
+    "n_matched_captures": 810,
+    "analyzed_four_guild_captures": 809,
+    "excluded_single_sanguivore_captures": 1,
+    "guild_counts": {
+      "frug": 573,
+      "glean": 132,
+      "nectar": 58,
+      "aerial": 46
+    },
+    "n_spatial_design_blocks": 7,
+    "food_candidate_genera_count": 12,
+    "remaining_fruit_genera_count": 10
+  },
+  "estimator": {
+    "type": "four-category site-equal fractional multinomial softmax",
+    "ridge_l2": 0.15,
+    "softmax_reference": "aerial",
+    "data_weight": "equal plot regardless of captures",
+    "covariates_baseline": [
+      "terrain elevation",
+      "PO sampling-frame indicator",
+      "eligible matched nights"
+    ],
+    "food_covariates": "log1p fruit plants of F12/O10 from matching same-plot source fruit dates",
+    "heldout": "7 entire RAPELD source blocks, plus 6 L3–L8 bands after excluding all 17 PO sites",
+    "no_fix_level_independence_claim": true
+  },
+  "seven_blocks": {
+    "n_plots": 46,
+    "n_four_guild_captures": 809,
+    "equal_block_gain": {
+      "both_minus_baseline": 0.028769012688418298,
+      "both_minus_total": 0.026106662918648254,
+      "candidate12_given_remaining10": 0.011854727027845307,
+      "remaining10_given_candidate12": 0.011533114018223687,
+      "candidate12_minus_baseline": 0.01723589867019461,
+      "remaining10_minus_baseline": 0.01691428566057299
+    },
+    "n_positive": {
+      "both_minus_baseline": 6,
+      "both_minus_total": 5,
+      "candidate12_given_remaining10": 4,
+      "remaining10_given_candidate12": 6,
+      "candidate12_minus_baseline": 4,
+      "remaining10_minus_baseline": 6
+    }
+  },
+  "six_L3_L8_blocks": {
+    "n_plots": 29,
+    "n_four_guild_captures": 475,
+    "equal_block_gain": {
+      "both_minus_baseline": 0.022878088636233845,
+      "both_minus_total": 0.013778112654121044,
+      "candidate12_given_remaining10": 0.0029339131807515164,
+      "remaining10_given_candidate12": 0.01523877633750198,
+      "candidate12_minus_baseline": 0.007639312298731863,
+      "remaining10_minus_baseline": 0.019944175455482327
+    },
+    "n_positive": {
+      "both_minus_baseline": 6,
+      "both_minus_total": 5,
+      "candidate12_given_remaining10": 3,
+      "remaining10_given_candidate12": 5,
+      "candidate12_minus_baseline": 3,
+      "remaining10_minus_baseline": 6
+    }
+  },
+  "numerical_verification": {
+    "independent_method": "SciPy L-BFGS-B",
+    "second_method": "source-free full-Hessian pure Python Newton",
+    "max_abs_reported_gain_difference_nats": 3.080807875477376e-8,
+    "source_free_GitHub_CI_passed": true
+  },
+  "claim_ceiling": "Single published forest study; local captured-guild composition predictive information, no independently identified diet or causal mechanism",
+  "exclusions": {
+    "sanguivore_excluded": true,
+    "independent_external_study": false,
+    "actual_fruit_consumption_observed": false,
+    "source_capture_differences_resolved": false,
+    "vegetation_clutter_available_in_uploaded_workbook": false
+  },
+  "source_local_3D_resource_height_gain": null,
+  "NeoBat_species_M3_M1_increment": null
+}

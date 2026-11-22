@@ -1,0 +1,43 @@
+name: Original Rousettus Dryad 2D resource-behavior metadata gate
+
+on:
+  push:
+    branches:
+      - prospective/resource-behavior-higher-dimensional-sdm-v1-20261120
+    paths:
+      - 'prospective/resource_behavior_sdm/dryad_rous_source_manifest.py'
+      - 'prospective/resource_behavior_sdm/test_dryad_rous_source_manifest.py'
+      - '.github/workflows/resource-behavior-rous-dryad-sourcegate.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  source-free-safety:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s prospective/resource_behavior_sdm -p 'test_dryad_rous_source_manifest.py' -v
+
+  original-metadata:
+    needs: source-free-safety
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Public Dryad official version and original file listing only
+        run: python prospective/resource_behavior_sdm/dryad_rous_source_manifest.py --out prospective/resource_behavior_sdm/rous_meta_receipt.json
+      - name: Archive metadata-only PASS/STOP receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rous-dryad-metadata-sourcegate
+          path: prospective/resource_behavior_sdm/rous_meta_receipt.json
+          if-no-files-found: error
+          retention-days: 30

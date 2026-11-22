@@ -1,0 +1,43 @@
+name: Independent Hendel bat-prey source original publisher admission
+
+on:
+  push:
+    branches:
+      - prospective/resource-behavior-higher-dimensional-sdm-v1-20261120
+    paths:
+      - 'prospective/resource_behavior_sdm/hendel_external_original_gate_v1.py'
+      - 'prospective/resource_behavior_sdm/test_hendel_external_original_gate_v1.py'
+      - '.github/workflows/resource-behavior-hendel-original-source.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  source-free-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s prospective/resource_behavior_sdm -p 'test_hendel_external_original_gate_v1.py' -v
+  original-publisher-once:
+    needs: source-free-tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Only official dataset, version, original file digests, and canonical publisher zip
+        run: python prospective/resource_behavior_sdm/hendel_external_original_gate_v1.py
+      - name: Preserve version and explicit source STOP receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: hendel-independent-publisher-source-status
+          path: prospective/resource_behavior_sdm/hendel_external_original_source_receipt_v1.json
+          if-no-files-found: error
+          retention-days: 30
