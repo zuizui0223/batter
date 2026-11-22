@@ -132,7 +132,7 @@
       "period": "Goldshtein et al. 2020 published original",
       "source_tracking": "https://doi.org/10.17632/jxghjjsttw.1",
       "source_resource": "https://doi.org/10.17632/jxghjjsttw.1",
-      "role": "Same field study published 17 GPS bats, altitude above ground and approx 3600 flower-mapped cacti in fields of 8 bats; publisher Mendeley original dataset API HTTP401 (Actions 44683043418) means released raw height + flower alignment not verified. Published cactus-visit state uses height below 20m; circular to use it to predict heldout height.",
+      "role": "User-provided claimed Mendeley v1 source ZIP SHA pinned 069b12e6...; raw original 17 GPS animal folders/19 NMEA and 8 matched cactus coordinate XLSX opened source-only. Source XY geometry 42562/105580 deduplicated mapped-bat fixes inside cactus-point hulls. The polygon is NOT independently surveyed habitat, NMEA metre altitude NOT corrected AGL, no source-verified dated flower/night/cactus join. Old official API 401 remains historical, no longer bars local upload. HEIGHT AND TRUE FOOD FULL 5D NOT ESTIMATED.",
       "flags": {
         "same_population": true,
         "original_bat_rows_authenticated_and_opened": false,
@@ -141,7 +141,15 @@
         "independent_time_aligned_food_supply": false,
         "behavior_label_independent_of_height": false,
         "observation_sampling_calibrated": false
-      }
+      },
+      "local_uploaded_source_audit": "prospective/resource_behavior_sdm/GOLDSHTEIN_UPLOADED_ORIGINAL_SOURCE_AUDIT_20261122.md",
+      "user_uploaded_source_sha256": "069b12e6383fa7d84a1f7164fcfe16b0ce693469a7661262ce1a0ed73e423ebb",
+      "local_source_gps_xy_and_cactus_layout_structural_overlap_verified": true,
+      "original_publisher_checksum_equivalence_verified": false,
+      "n_mapped_animal_utc_date_pairs_only_not_nights": 33,
+      "verified_independent_survey_polygon": false,
+      "verified_corrected_AGL": false,
+      "verified_dated_direct_flower_join": false
     },
     {
       "id": "chrotopterus_mexico_2026",
