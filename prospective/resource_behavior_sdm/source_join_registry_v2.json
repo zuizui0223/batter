@@ -157,7 +157,17 @@
       "source_morning_candidate_GPS_XY_episodes_60s": 99,
       "original_dated_flower_counts_not_a_complete_daily_field_census": true,
       "source_GGA_vs_drone_ground_alt_datum_verified": false,
-      "original_5D_resource_height_gain": null
+      "original_5D_resource_height_gain": null,
+      "additional_vertical_datum_audit": "prospective/resource_behavior_sdm/GOLDSHTEIN_GGA_ORIGINAL_CACTUS_ALT_EGM96_DATUM_AUDIT_20261122.md",
+      "source_original_4_cactus_map_alt_15m_GGA_median_difference_m": -57.23,
+      "source_original_4_bat_alt_median_range_m": [
+        -79.35,
+        -28.2
+      ],
+      "public_available_local_EGM96_datum_shift_m_approx": -33,
+      "original_paper_uses_EGM2008_not_EGM96": true,
+      "original_sensor_effective_datum_and_ground_alt_unverified": true,
+      "original_field_AGL_fitted": false
     },
     {
       "id": "chrotopterus_mexico_2026",
