@@ -1079,5 +1079,128 @@
     "original_observations_plot_ids_or_source_spreadsheets_committed": false,
     "result_document": "CISTRONE_RECORDED_STRATUM_RESOURCE_RESULT_20261121.md",
     "aggregate_receipt": "cistrone_recorded_stratum_resource_receipt_20261121.json"
+  },
+  "design_revision_20261122": {
+    "evidence_tier": "COMMITTED_RESULT_AND_PRIMARY_SOURCE_AUDIT_NO_NEW_EMPIRICAL_FIT",
+    "audit_date_jst": "2026-11-22",
+    "audited_batter_head": "731972c2ecce3275e1d7469346bff85f2e5ec3e3",
+    "current_design": "prospective/resource_behavior_sdm/DESIGN_REVISION_20261122.md",
+    "previous_source_entries_preserved": true,
+    "summary": "Local resource indicators add source-local prediction for selected recorded activity and captured-guild composition outcomes; heterogeneous negative vertical-related comparisons do not identify a horizontal-versus-height or diet mechanism.",
+    "hendel": {
+      "source_report": "prospective/resource_behavior_sdm/HENDEL_USER_UPLOAD_ORIGINAL_HELDOUT_RESULT_V1.md",
+      "score": "reduction in squared error of training-standardized log1p acoustic activity; dimensionless, not nats",
+      "groups_are_echolocation_range_not_body_size": true,
+      "contrasts": [
+        {
+          "target": "MRE",
+          "resource": "moth count",
+          "gain_reported_precision": 0.1099,
+          "mean_standardized_coefficient": -0.2952,
+          "positive_test_plots": 40,
+          "test_plots": 65,
+          "positive_full_cv_deletion_variants": 65,
+          "full_cv_deletion_variants": 65
+        },
+        {
+          "target": "Pipistrellus pipistrellus",
+          "resource": "moth count",
+          "gain_reported_precision": 0.16283,
+          "mean_standardized_coefficient": -0.3722,
+          "positive_test_plots": 38,
+          "test_plots": 65,
+          "positive_full_cv_deletion_variants": 65,
+          "full_cv_deletion_variants": 65
+        },
+        {
+          "target": "LRE",
+          "resource": "ground-beetle richness",
+          "gain_reported_precision": 0.13708,
+          "mean_standardized_coefficient": -0.337,
+          "positive_test_plots": 38,
+          "test_plots": 65,
+          "positive_full_cv_deletion_variants": 65,
+          "full_cv_deletion_variants": 65
+        }
+      ],
+      "all_three_resource_coefficients_negative_in_training_folds": true,
+      "paper_64_vs_workbook_65_resolved": false,
+      "new_raw_data_refit_in_this_revision": false
+    },
+    "ducke": {
+      "target": "conditional four-guild composition among mist-net captures",
+      "not_total_acoustic_activity_or_species_occupancy": true,
+      "same_estimand_or_effect_scale_as_hendel": false,
+      "abundance_matched_partition_exploratory_tail": 0.055
+    },
+    "closed_vertical_related_results": [
+      {
+        "source": "Krauel 2018",
+        "height_only_gain": -0.004403805961918072,
+        "height_buzz_joint_gain": -0.004729279418493082,
+        "unit": "nats per recorded pass, equal-night aggregation",
+        "target": "recorded detector-stratum allocation, not individual altitude"
+      },
+      {
+        "source": "Cistrone original S1/S2",
+        "total_catch_gain": -0.015784009798270507,
+        "positive_folds": 11,
+        "folds": 19,
+        "unit": "nats per recorded pass within plot, equal-plot aggregation",
+        "target": "two-night-pooled recorded ground/canopy pass allocation"
+      },
+      {
+        "source": "PLOS 2016",
+        "target_label_gain": -0.02970719061394642,
+        "positive_folds": 0,
+        "folds": 3,
+        "unit": "nats per recorded frame; trial-target-bat aggregation",
+        "target": "actual laboratory XYZ relative to target",
+        "predictor": "natural cactus flower versus acrylic hemisphere",
+        "nectar_feeding_bats_not_insectivores": true,
+        "direct_resource_amount_test": false
+      }
+    ],
+    "cross_study_stage_specific_or_diet_mechanism_identified": false,
+    "insectivore_wind_time_vs_resource_hypothesis_confirmed": false,
+    "priority_or_first_vertical_sdm_claim": false,
+    "architecture": {
+      "status": "WORKING_DESIGN_DECISION_NOT_EXECUTED_MODEL_MIGRATION",
+      "current_research_and_evidence_home": "batter/prospective/resource_behavior_sdm",
+      "intended_qualified_process_model_home": "esdm",
+      "common_forecast_scoring_and_transfer_evaluation": "odsp",
+      "esdm_reference_commit": "5affa0658123a2702d93e803860ce5c1c435ce7c",
+      "odsp_reference_commit": "13b884f5cfb94beef36e8e5c5b031559e81b8b4b",
+      "original_external_placement_comment_located": false,
+      "original_external_comment_resolved": false
+    },
+    "one_active_goal": "qualify original resource-survey x bat-event joins for a fruit/flower-using field source before a new empirical fit",
+    "next_source_admission": {
+      "goldshtein_latest_authenticated_access_date": "2026-11-21",
+      "goldshtein_latest_authenticated_http_status": 401,
+      "goldshtein_new_access_attempt_in_this_revision": false,
+      "goldshtein_stage_a": "static mapped cactus location opportunity; original file, survey coverage, GPS and altitude admission still required",
+      "goldshtein_stage_b": "dated observed flower counts matched to GPS fields/nights; not verified",
+      "panama_species": "Phyllostomus hastatus",
+      "panama_location": "Isla Colon / Bocas del Toro",
+      "panama_paper_doi": "10.1098/rsbl.2024.0424",
+      "panama_gps_dois": [
+        "10.5441/001/1.282",
+        "10.5441/001/1.321",
+        "10.5441/001/1.322"
+      ],
+      "panama_dryad_doi": "10.5061/dryad.5qfttdzgj",
+      "panama_dryad_public_file_roster_checked_20261122": [
+        "README.md",
+        "stan.zip"
+      ],
+      "panama_same_event_quantitative_resource_join_verified": false,
+      "panama_is_bien_botanical_validation": false
+    },
+    "all_seven_strict_unestimated_fields_remain_null": true,
+    "new_empirical_fit": false,
+    "closed_comparisons_reopened": false,
+    "source_rows_committed": false,
+    "protected_main_or_manuscripts_changed": false
   }
 }
