@@ -1,4 +1,4 @@
-name: Lunar 3D source exposure gate v1
+name: Lunar 3D source exposure gates (outcome-blind)
 on:
   push:
     branches:
@@ -8,7 +8,7 @@ on:
       - '.github/workflows/lunar-3d-source-exposure-v1.yml'
   workflow_dispatch:
 jobs:
-  lunar_source_gate:
+  lunar_source_gates:
     runs-on: ubuntu-latest
     timeout-minutes: 25
     permissions:
@@ -20,15 +20,21 @@ jobs:
           python-version: '3.11'
       - name: Install pinned astronomy dependency
         run: python -m pip install 'pyswisseph==2.10.3.2'
-      - name: Run outcome-blind synthetic tests
-        run: python -m unittest -v prospective.lunar_3d.test_lunar_source_gate_v1
+      - name: Run outcome-blind v1 and v2 synthetic tests
+        run: |
+          python -m unittest -v prospective.lunar_3d.test_lunar_source_gate_v1
+          python -m unittest -v prospective.lunar_3d.test_lunar_common_support_v2
       - name: Check six hash-pinned public source exposure windows
         run: python -m prospective.lunar_3d.lunar_source_gate_v1
-      - name: Preserve data-support decision only
+      - name: Check within-animal XY/time common support without heights
+        run: python -m prospective.lunar_3d.lunar_common_support_v2
+      - name: Preserve data-support decisions only
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: lunar-3d-exposure-source-gate-v1
-          path: results/lunar_source_exposure_support_v1.json
+          name: lunar-3d-exposure-source-gates-v1-v2
+          path: |
+            results/lunar_source_exposure_support_v1.json
+            results/lunar_3d_common_support_v2.json
           if-no-files-found: warn
           retention-days: 30
