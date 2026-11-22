@@ -8,7 +8,7 @@ Never interpret GPS MSL/ellipsoid as independently calibrated AGL.
 from __future__ import annotations
 from collections import Counter, defaultdict
 from datetime import datetime, timedelta
-from bisect import bisect_right
+from bisect import bisect_left
 import itertools
 import json
 import math
@@ -140,7 +140,7 @@ def requalify_quality_rows(rows, original_matched, doi):
     return coverage,keep_admitted_fixes(good,eligible),eligible,"ready"
 
 def cat(z):
-    return bisect_right(EDGES,z)
+    return bisect_left(EDGES,z)
 
 def hist(vals):
     c=[0]*5
