@@ -1,5 +1,9 @@
 # Goldshtein 2020 Mendeley v1 upload: source-admission audit, 2026-11-22
 
+
+**LATER 2026-11-22 SOURCE SUPPLEMENT — SUPERSEDES LEGACY-XLS LIMITATION BELOW:** A custom read-only, hash-locked BIFF8 reader now decoded original open flowers.xls; **414** original source cacti, **327** drone-census (121 monitored with 1,016 numeric daily records, 206 unmeasured daily, never imputed zero), **87** additional manual. Crucially, although drone mapped cacti are spatially separate from the *eight per-bat cactus catalogs*, the original bat GPS tracks actually pass near the independently observed drone cactus sites. Provisional Sonora UTC−7 local evening/morning alignment gives **227** GPS fixes within 15m of a cactus with direct dated flower count, **99** height-blind proximity episodes on **5 bats/6 candidate nights**; 22 episodes have positive source flower observations. This is direct *spatial+temporal source eligibility* and NOT feeding events. A frozen GPS GGA vs independent drone altitude audit found 499 ≤15m source pairs and **−86.51m median GGA-minus-drone-alt**, while the NMEA geoid separation field is blank. **Raw altitude and drone alt are not qualified AGL**; survey effort and authored calendar semantics remain unresolved. [New full result](GOLDSHTEIN_REAL_LEGACY_BLOOM_GPS_NIGHT_SOURCE_QC_20261122.md). The earlier statements that legacy XLS was unparsed or actual GPS never approached its flowers are historical and superseded. Strict field height effect remains NOT ESTIMATED.
+
+
 **This is original user-upload ZIP structural/XY evidence, not a new 3D resource × height fit.** Claimed published DOI: [10.17632/jxghjjsttw.1](https://doi.org/10.17632/jxghjjsttw.1). SHA256 of the actual uploaded ZIP:
 
     069b12e6383fa7d84a1f7164fcfe16b0ce693469a7661262ce1a0ed73e423ebb
