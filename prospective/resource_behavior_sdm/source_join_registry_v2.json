@@ -132,7 +132,7 @@
       "period": "Goldshtein et al. 2020 published original",
       "source_tracking": "https://doi.org/10.17632/jxghjjsttw.1",
       "source_resource": "https://doi.org/10.17632/jxghjjsttw.1",
-      "role": "User-provided claimed Mendeley v1 source ZIP SHA pinned 069b12e6...; raw original 17 GPS animal folders/19 NMEA and 8 matched cactus coordinate XLSX opened source-only. Source XY geometry 42562/105580 deduplicated mapped-bat fixes inside cactus-point hulls. The polygon is NOT independently surveyed habitat, NMEA metre altitude NOT corrected AGL, no source-verified dated flower/night/cactus join. Old official API 401 remains historical, no longer bars local upload. HEIGHT AND TRUE FOOD FULL 5D NOT ESTIMATED.",
+      "role": "Updated source 2026-11-22: exact user-upload ZIP + pinned open flowers.xls BIFF8 workbook opened. Independent 327 drone-cactus positions (121 with 1,016 numeric daily flower observations) physically co-occur with original GPS tracks on nominal morning survey dates: 227 original XY fixes / 99 horizontal proximity episodes from 5 bats and 6 candidate nights within 15m. However source dawn-census date convention, sampling support/effort, and true terrain-corrected AGL are NOT yet qualified; frozen original GGA-minus-drone altitude at 15m has median −86.51m and NMEA geoid separation missing. No 3D resource-height fit or causal claim.",
       "flags": {
         "same_population": true,
         "original_bat_rows_authenticated_and_opened": false,
@@ -149,7 +149,15 @@
       "n_mapped_animal_utc_date_pairs_only_not_nights": 33,
       "verified_independent_survey_polygon": false,
       "verified_corrected_AGL": false,
-      "verified_dated_direct_flower_join": false
+      "verified_dated_direct_flower_join": false,
+      "source_legacy_direct_bloom_XLS_parsed": true,
+      "original_legacy_workbook_SHA256": "459b3d838b56ed465bcddf495565b03ced421ae9b7b45a9d1425658f0cad7b6c",
+      "source_morning_drone_cactus_spatialtemporal_candidate_fixes": 227,
+      "source_morning_drone_cactus_spatialtemporal_candidate_bat_nights": 6,
+      "source_morning_candidate_GPS_XY_episodes_60s": 99,
+      "original_dated_flower_counts_not_a_complete_daily_field_census": true,
+      "source_GGA_vs_drone_ground_alt_datum_verified": false,
+      "original_5D_resource_height_gain": null
     },
     {
       "id": "chrotopterus_mexico_2026",
