@@ -2,7 +2,8 @@
 from __future__ import annotations
 
 import csv, io, json
-import cv2
+import pytest
+cv2 = pytest.importorskip('cv2')
 import numpy as np
 import pytest
 
