@@ -25,3 +25,10 @@ def test_missing_and_ambiguous_original_tokens_separate():
 def test_semicolon_and_tab_delimiters_as_source_types_only():
     assert lexical_preview(b"1;2;3\n")["delimiter_type"]=="semicolon"
     assert lexical_preview(b"1\t2\t3\n")["delimiter_type"]=="tab"
+
+def test_source_header_containing_numeric_suffix_exposes_labels_only():
+    r=lexical_preview(b"X1,Y1,Z1,X2,Y2,Z2\n1.2,3.4,5.6,7.8,9.1,10.1\n")
+    assert r["possible_literal_textual_first_row_header_tokens"]==[
+        "X1","Y1","Z1","X2","Y2","Z2"]
+    assert "1.2" not in str(r)
+    assert r["numeric_XYZ_values_opened_or_printed"] is False
