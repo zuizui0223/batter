@@ -1,0 +1,33 @@
+name: Münster public thermal 3D bats source-only admission v1
+on:
+  push:
+    branches:
+      - prospective/air-volume-observation-kernel-20261123
+    paths:
+      - 'scripts/audit_muenster_thermal_3d_source_v1.py'
+      - 'tests/test_muenster_thermal_3d_source_v1.py'
+      - '.github/workflows/muenster-thermal-3d-source-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  original_thermal_track_source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Synthetic source-only ZIP/header and safety tests
+        run: python -m unittest -v tests.test_muenster_thermal_3d_source_v1
+      - name: Verify original Zenodo 3D tracks ZIP + methodological README
+        run: python -m scripts.audit_muenster_thermal_3d_source_v1
+      - name: Preserve source-only PASS or STOP receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: muenster-thermal-3dtracks-source-v1
+          path: results/muenster_3dtracks_source_gate_v1.json
+          if-no-files-found: error
+          retention-days: 60
