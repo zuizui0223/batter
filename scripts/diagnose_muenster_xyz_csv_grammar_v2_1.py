@@ -46,7 +46,7 @@ def lexical_preview(data:bytes):
             # No numeric XYZ values or later source rows are printed.
             for s in row:
                 t=s.strip()
-                if re.fullmatch(r"[A-Za-z_][A-Za-z0-9_./ :()\\[\\]\\-]{0,79}",t):
+                if t and len(t)<=80 and (t[0].isalpha() or t[0]=="_") and all(c.isprintable() for c in t):
                     text_headers.append(t)
     return {
         "delimiter_type":"comma" if delimiter=="," else ("tab" if delimiter=="\t" else "semicolon"),
