@@ -19,6 +19,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+      - name: Install repository test runner
+        run: python -m pip install -e '.[test]'
       - name: Test no numeric bat xyz is disclosed by source grammar scanner
         run: python -m pytest -q tests/test_muenster_xyz_lexical_diag_v2_1.py
       - name: Diagnose all original XYZ CSV members without numerical positions
