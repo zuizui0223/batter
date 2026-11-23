@@ -1,6 +1,7 @@
 """Pure synthetic tests for independently reproduced author stereo candidate matcher."""
 import numpy as np
 import pytest
+pytest.importorskip('cv2')
 
 from scripts.verify_happ_real_bat_stereo_v4_independent import (
     independent_fundamental,independent_original_style_pairs,
