@@ -3,6 +3,8 @@ from __future__ import annotations
 import hashlib
 import numpy as np
 import pytest
+pytest.importorskip('cv2')
+pytest.importorskip('pandas')
 
 from scripts.happ_real_bat_stereo_source_v3 import (
     fundamental_from_known_source_projections,
