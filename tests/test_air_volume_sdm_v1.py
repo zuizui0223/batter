@@ -181,3 +181,36 @@ def test_unknown_voxels_cannot_be_an_observed_negative_control():
     bad_k=np.array([[1,1]])
     with pytest.raises(ValueError,match="unknown and vegetation"):
         validate_measurements(v,bad_k,np.ones(1))
+
+
+def test_detector_heterogeneity_alone_can_mimic_a_strong_clutter_niche():
+    """Known-truth q-confounding witness, no original field bat observations.
+
+    Identical detected source counts can arise from true uniform physical-air
+    activity with unequal q, or unequal physical-air activity with equal q.
+    Even a rank-full 3D count design does NOT identify λ if q is unknown.
+    """
+    v=AirVolume(
+        np.array([[.5,.5,.5],[1.5,.5,.5]]),
+        np.ones(2),
+        np.ones(2,dtype=int),
+        ("near_vegetation","open_air"),
+        "local_projected_m",
+    )
+    ideal=binned_3d_kernel(v)
+    # First voxel near vegetation, second in open air. True habitat
+    # intensity is equal but visibility/detector q is not.
+    true_lambda=np.array([100.,100.])
+    q=np.array([.2,1.])
+    observed_detected=expected_counts(v,true_lambda,ideal*q[None,:],np.ones(2))
+    # An analyst falsely using q=1 obtains the appearance of a 5× open
+    # air preference from the EXACT same expected observation table.
+    false_lambda=np.array([20.,100.])
+    observed_false=expected_counts(v,false_lambda,ideal,np.ones(2))
+    assert observed_detected.tolist()==[20.,100.]
+    np.testing.assert_allclose(observed_detected,observed_false,rtol=0,atol=1e-12)
+    assert float(false_lambda[1]/false_lambda[0])==pytest.approx(5.)
+    assert float(true_lambda[1]/true_lambda[0])==pytest.approx(1.)
+    assert kernel_rank_diagnostic(v,ideal)["unidentified_arbitrary_voxel_directions"]==0
+    # The observation *combined q and lambda* is not identifiable when q
+    # is unconstrained, despite full physical-voxel kernel rank.
