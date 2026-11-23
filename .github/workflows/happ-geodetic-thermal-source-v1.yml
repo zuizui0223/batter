@@ -1,0 +1,38 @@
+name: Happ GPS-calibrated stereo thermal source-only v1
+on:
+  push:
+    branches:
+      - prospective/air-volume-observation-kernel-20261123
+    paths:
+      - 'scripts/audit_happ_georeferenced_stereo_source_v1.py'
+      - 'tests/test_happ_georeferenced_stereo_source_v1.py'
+      - '.github/workflows/happ-geodetic-thermal-source-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  frozen_original_drone_schema:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Source-only format and integrity known-truth tests
+        run: python -m unittest -v tests.test_happ_georeferenced_stereo_source_v1
+      - name: Fetch original public author tag and verify exact commit
+        run: |
+          mkdir -p external
+          git clone --depth 1 --branch v1.0.1 https://github.com/christofhapp/batflight3D_publication.git external/happ
+          test "$(git -C external/happ rev-parse HEAD)" = "34d2f56bcee1eab9207890938aedd90a079bfcde"
+      - name: Authenticate original drone GPS and camera parameter *structure* only
+        run: python -m scripts.audit_happ_georeferenced_stereo_source_v1
+      - name: Save source-only status (no original GPS or bat outcomes)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: happ-public-GPS-stereo-source-v1
+          path: results/happ_georeferenced_thermal_source_v1.json
+          if-no-files-found: warn
+          retention-days: 60
