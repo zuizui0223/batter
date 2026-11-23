@@ -1,0 +1,41 @@
+name: Happ original real bat thermal GPS-referenced stereo v3
+on:
+  push:
+    branches:
+      - prospective/air-volume-observation-kernel-20261123
+    paths:
+      - 'scripts/happ_real_bat_stereo_source_v3.py'
+      - 'tests/test_happ_real_bat_stereo_v3.py'
+      - '.github/workflows/happ-real-bat-stereo-v3.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  author_source_bat_stereo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install headless original-author thermal stereo requirements
+        run: |
+          python -m pip install -e '.[test]' 'numpy>=1.26,<2' 'opencv-python-headless==4.9.0.80' 'pandas==2.0.3' 'utm==0.7.0' 'scikit-image==0.21.0' 'scikit-learn==1.3.2'
+      - name: Synthetic stereo fundamental matrix and reproduction tests before original bat pixels
+        run: python -m pytest -q tests/test_happ_real_bat_stereo_v3.py
+      - name: Fetch publicly pinned original author repository v1.0.1
+        run: |
+          mkdir -p external
+          git clone --depth 1 --branch v1.0.1 https://github.com/christofhapp/batflight3D_publication.git external/happ
+          test "$(git -C external/happ rev-parse HEAD)" = "34d2f56bcee1eab9207890938aedd90a079bfcde"
+      - name: Use original author epipolar matching of real bat images after GPS drone camera calibration
+        run: python -m scripts.happ_real_bat_stereo_source_v3
+      - name: Preserve real original source technical bat XYZ QC or STOP receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: happ-original-bat-thermal-stereo-3d-v3
+          path: results/happ_GPS_bat_stereo_localisation_v3.json
+          if-no-files-found: warn
+          retention-days: 60
