@@ -151,7 +151,7 @@ def reconstruct_source(root:Path):
     den=triangulated[3]
     good=np.isfinite(triangulated).all(axis=0)&(abs(den)>1e-12)
     xyz=np.full((len(matching),3),np.nan)
-    xyz[good]= (triangulated[:3,good]/den[good,None]).T
+    xyz[good]= (triangulated[:3,good]/den[good][None,:]).T
     pixerr,goodreproj=reprojection_residual_px(xyz,pixel,P1,P2)
     valid=good&goodreproj
     if int(valid.sum())==0:
