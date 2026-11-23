@@ -158,7 +158,7 @@ def run_real_source_QC(raw:bytes,readme_raw:bytes):
             "canonical_source_target_streams_present":len(stream_counts),
             "canonical_source_target_streams_with_ge1_valid_xyz":len(positive_streams),
             "source_pt2_additional_streams_nonzero":len([
-                x for (night,bat,pt),value in positive_streams.items() if pt=="pt2"]),
+                value for (night,bat,pt),value in positive_streams.items() if pt=="pt2"]),
             "author_abstract_9_and_3_flights":"potentially consistent only if pt2 denotes a distinct animal; requires original author confirmation",
             "canonical_observed_valid_xyz_local_points_total":sum(positive_streams.values()),
             "individual_original_source_geometry_QC":files,
