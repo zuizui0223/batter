@@ -40,13 +40,14 @@ def lexical_preview(data:bytes):
         row=next(csv.reader(StringIO(line),delimiter=delimiter))
         labels=[describe_cell(v) for v in row]
         patterns.append({"row":row_idx+1,"columns":len(row),"lexical_cell_types":labels})
-        if row_idx==0:
+        if row_idx==0 and all(v=="text_or_metadata" for v in labels):
+            # Source v2.2: literal *non-numeric* first-row column headers,
+            # which may include digits such as X1, Y1 or vector labels.
+            # No numeric XYZ values or later source rows are printed.
             for s in row:
-                if describe_cell(s)=="text_or_metadata":
-                    t=s.strip()
-                    # Do not print an unknown source number/symbol as a bat xyz.
-                    if re.fullmatch(r"[A-Za-z_./ \-]{1,40}",t):
-                        text_headers.append(t)
+                t=s.strip()
+                if re.fullmatch(r"[A-Za-z_][A-Za-z0-9_./ :()\\[\\]\\-]{0,79}",t):
+                    text_headers.append(t)
     return {
         "delimiter_type":"comma" if delimiter=="," else ("tab" if delimiter=="\t" else "semicolon"),
         "source_physical_rows":len(lines),
