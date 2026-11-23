@@ -1,0 +1,33 @@
+name: Münster original thermal 3D tracks geometry v2
+on:
+  push:
+    branches:
+      - prospective/air-volume-observation-kernel-20261123
+    paths:
+      - 'scripts/audit_muenster_thermal_3d_geometry_v2.py'
+      - 'tests/test_muenster_thermal_3d_geometry_v2.py'
+      - '.github/workflows/muenster-thermal-3d-geometry-v2.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  genuine_local_3d_tracks_QC:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Synthetic known-truth 3D coordinate schema and registration caveat
+        run: python -m unittest -v tests.test_muenster_thermal_3d_geometry_v2
+      - name: Original authenticated flight XYZ structure (no ecological model)
+        run: python -m scripts.audit_muenster_thermal_3d_geometry_v2
+      - name: Preserve original data geometry PASS or exact STOP receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: muenster-real-3dtracks-source-geometry-v2
+          path: results/muenster_thermal_3D_tracks_geometry_v2.json
+          if-no-files-found: error
+          retention-days: 60
