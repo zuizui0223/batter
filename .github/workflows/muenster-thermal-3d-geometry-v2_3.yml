@@ -1,0 +1,33 @@
+name: Münster authenticated real thermal local XYZ geometry v2.3
+on:
+  push:
+    branches:
+      - prospective/air-volume-observation-kernel-20261123
+    paths:
+      - 'scripts/audit_muenster_thermal_3d_geometry_v2_3.py'
+      - 'tests/test_muenster_thermal_3d_geometry_v2_3.py'
+      - '.github/workflows/muenster-thermal-3d-geometry-v2_3.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  original_pt1_pt2_source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Source-free dual-point stream, variants and missingness tests
+        run: python -m unittest -v tests.test_muenster_thermal_3d_geometry_v2_3
+      - name: Original exact-hash Münster pt1/pt2 3D local source structure
+        run: python -m scripts.audit_muenster_thermal_3d_geometry_v2_3
+      - name: Save exact real XYZ QC or source-format STOP, never raw tracks
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: muenster-real-local-pt1-pt2-xyz-v2_3
+          path: results/muenster_real_3d_local_geometry_v2_3.json
+          if-no-files-found: error
+          retention-days: 60
