@@ -1,0 +1,31 @@
+name: Bayer supplementary classification source V27
+on:
+  push:
+    branches:
+      - prospective/trait-wind-roundtrip-20261124
+    paths:
+      - scripts/bayer_supplement_v27.py
+      - .github/workflows/bayer-supplement-v27.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install pypdf
+      - run: python scripts/bayer_supplement_v27.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bayer-supplement-v27
+          path: |
+            results/bayer_supplement_v27.json
+            results/jexbio-229-251521-s1.pdf
+          if-no-files-found: error
+          retention-days: 60
