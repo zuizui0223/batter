@@ -1,0 +1,51 @@
+name: Carollia ART AFPT and joint time-energy V14
+on:
+  push:
+    branches:
+      - prospective/trait-wind-roundtrip-20261124
+    paths:
+      - scripts/carollia_art_afpt_curves_v14.R
+      - scripts/carollia_art_afpt_summary_v14.py
+      - .github/workflows/carollia-art-afpt-v14.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  analysis:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: '4.5.2'
+      - run: python -m pip install numpy==2.4.6 pandas scipy
+      - name: Retrieve and verify original public source
+        run: |
+          mkdir -p external results
+          python - <<'PY'
+          import hashlib, pathlib, urllib.request
+          url="https://zenodo.org/api/records/20738264/files/CarolliaWings.txt/content"
+          with urllib.request.urlopen(urllib.request.Request(url,headers={"User-Agent":"batter-research-source-audit/1.0"}),timeout=45) as f: b=f.read(100001)
+          assert hashlib.md5(b).hexdigest()=="a7bb180dc8db5e66a116ba55929fa8c5"
+          assert hashlib.sha256(b).hexdigest()=="492100e67f429e0e0e57c698ab0d680d791d12cb20f67a0b3caa66b0fcc74d6f"
+          pathlib.Path("external/CarolliaWings.txt").write_bytes(b)
+          PY
+      - name: Install pinned AFPT
+        run: Rscript -e 'options(repos=c(CRAN="https://cloud.r-project.org")); install.packages("afpt"); stopifnot(as.character(packageVersion("afpt"))=="1.1.0.4")'
+      - name: Compute detailed power curves
+        run: Rscript scripts/carollia_art_afpt_curves_v14.R external/CarolliaWings.txt external
+      - name: Compare matched-support airspace and budgets
+        run: python scripts/carollia_art_afpt_summary_v14.py external/CarolliaWings.txt external
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: carollia-art-afpt-v14
+          path: |
+            results/carollia_art_afpt_v14.json
+            external/afpt_support.csv
+          retention-days: 60
+          if-no-files-found: warn
