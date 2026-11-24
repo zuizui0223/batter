@@ -1,0 +1,32 @@
+name: Troxell original flight power workbook source admission v1
+on:
+  push:
+    branches:
+      - prospective/trait-wind-roundtrip-20261124
+    paths:
+      - scripts/troxell_power_source_gate_v1.py
+      - .github/workflows/troxell-power-source-gate-v1.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  schema_only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install xlrd==2.0.1 numpy
+      - name: Rerun existing synthetic directional-cost witness
+        run: python scripts/trait_wind_roundtrip_v1.py
+      - name: Admit original Troxell XLS and inspect schema only
+        run: python scripts/troxell_power_source_gate_v1.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: troxell-flight-power-source-gate-v1
+          path: results/troxell_power_source_gate_v1.json
+          retention-days: 60
+          if-no-files-found: error
