@@ -1,0 +1,27 @@
+name: Roost slope acoustic GPS schema V32
+on:
+  push:
+    branches: [prospective/roost-3d-connectivity-fd-20261124]
+    paths:
+      - scripts/roost_slope_acoustic_gps_schema_v32.py
+      - .github/workflows/roost-slope-acoustic-gps-schema-v32.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas==2.2.3 numpy==1.26.4 scipy==1.13.1 requests==2.32.3 openpyxl==3.1.5 h5py==3.11.0
+      - run: python scripts/roost_slope_acoustic_gps_schema_v32.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: roost-slope-acoustic-gps-schema-v32
+          path: roost_fd_audit/audit_v32_acoustic_gps_schema.json
+          if-no-files-found: error
