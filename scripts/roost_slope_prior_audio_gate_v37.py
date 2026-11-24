@@ -83,7 +83,7 @@ def inspect_species(x,s):
         report["gap_near_multiple_"+str(step)+"s"]=int((near&(np.round(gp/step)>=1)).sum())
     for tu,tsc in SCALE.items():
         maxclip=MAXCLIP.get(s,5.)
-        supported=sum(bool(len(t)) and np.min(t)>=0 and np.max(t)*tsc<=maxclip+.01 for _,_,t,*_ in clips)
+        supported=sum(int(bool(len(t)) and np.min(t)>=0 and np.max(t)*tsc<=maxclip+.01) for _,_,t,*_ in clips)
         report["clip_duration_checks"][tu]={"clips_with_finite_time":sum(bool(len(t)) for _,_,t,*_ in clips),"compatible_clips":supported,"nominal_max_s":maxclip}
         for pu,psc in SCALE.items():
             for align,pp in ips.items():
