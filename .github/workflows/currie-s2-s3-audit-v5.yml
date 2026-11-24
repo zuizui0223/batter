@@ -1,0 +1,29 @@
+name: Currie authenticated S2 S3 bat flight comparison v5
+on:
+  push:
+    branches:
+      - prospective/trait-wind-roundtrip-20261124
+    paths:
+      - scripts/currie_s2_s3_audit_v5.py
+      - .github/workflows/currie-s2-s3-audit-v5.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install numpy==2.4.6
+      - run: python scripts/currie_s2_s3_audit_v5.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: currie-s2-s3-v5
+          path: results/currie_s2_s3_v5.json
+          retention-days: 60
+          if-no-files-found: error
