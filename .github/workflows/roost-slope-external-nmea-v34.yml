@@ -1,0 +1,27 @@
+name: Roost slope external NMEA V34
+on:
+  push:
+    branches: [prospective/roost-3d-connectivity-fd-20261124]
+    paths:
+      - scripts/roost_slope_external_nmea_v34.py
+      - .github/workflows/roost-slope-external-nmea-v34.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  replication:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas==2.2.3 numpy==1.26.4 scipy==1.13.1 requests==2.32.3 openpyxl==3.1.5 h5py==3.11.0 pyproj==3.7.0 rasterio==1.4.3 && pip install -e .
+      - run: python scripts/roost_slope_external_nmea_v34.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: roost-slope-external-nmea-v34
+          path: roost_fd_audit/audit_v34_external_nmea.json
+          if-no-files-found: error
