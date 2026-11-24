@@ -1,0 +1,19 @@
+# Fixed-speed commuting geometry and source admission V3 — 2026-11-24
+Status: conditional analytic result, no empirical cross-species power transfer. Main and other branches untouched.
+
+## Source receipts
+- Troxell Actions 45354608468 artifact 14901378126: synthetic computation PASS, original XLS URL HTTP 403.
+- Currie Actions 45354756107 artifact 14902420103: published-fit computation PASS, all four original file-stream URLs HTTP 403.
+- Official API audit 45356804918 artifact 14902877902 SHA256 edaa4dff7089035981f2476ae59a4b2e7f6d454d439474731963c17190cf4386: both metadata records verified (Dryad versions 229210 and 23805), official dataset download HTTP 401 for each. Figshare collection 6602651 lists public supplement 22643762.v1, file 40195337, 732642 bytes, published MD5 bcf9720442c11db72f0382764f830139. V3 mistakenly read camelCase downloadUrl rather than snake_case download_url; no supplement bytes downloaded in V3. V4 corrects this based on Figshare public API docs and validates original bytes, then audits DOCX table labels only. No response values fitted.
+- Currie et al. 2023 (10.1098/rspb.2023.0045) meta-analysis intentionally excludes speeds below observed minimum metabolic power and aerodynamic red flags. It is a selected partial-curve dataset; cannot independently validate whole U-shaped curves or re-estimate the minimum using held-out power to select rows. Need full primary curves; also treat digitized/fit-derived records as study summaries. Hedenstrom 2025 (10.1242/jeb.248123) reviews the unresolved metabolic conversion problem and lists multiple non-U-shaped bat cases.
+
+## Exact fixed-speed benchmark
+Assume steady spatially uniform horizontal wind magnitude w, fixed airspeed u>w, same positive power P on both legs, straight reciprocal routes at direction theta relative to wind and fixed energy budget E. No obstacles, time variation, turns, prey or speed choice.
+Ground speeds g+/- = sqrt(u²-w² sin²(theta)) +/- w cos(theta).
+Roundtrip time for one-way length L is T=L(1/g+ +1/g-)=2L sqrt(u²-w² sin²(theta))/(u²-w²). In still air r0=Eu/(2P).
+Let beta=w/u. Radius along wind / r0 = 1-beta²; radius across wind / r0 = sqrt(1-beta²). Radial formula is exactly that of an ellipse with these semiaxes, not an assumed fitted shape.
+A(w)/A(0)=(1-beta²)^(3/2). At 4 m/s wind, u=5/7/9 m/s gives .216/.5526838698/.7188570009 respectively. Local independent direct ground-speed numerical angular integration verified nine u x w conditions (u=5,7,9; w=0,2,4). Committed script tests radius and area. This is conditional mathematics, not a first-discovery claim nor observed home range.
+Critical consequence: normalized geometry is independent of absolute power and wing shape at fixed u and beta. Wing traits enter only through independent power/range scale and speed choice or aerodynamic feasibility; do not interpret equal-speed wind anisotropy as a direct wing morphology effect. With fixed speed and equal distance both along and cross directions are compared under the same wind and resource; across is cheaper. Free speed optimization, varying weather and climb may violate ellipse and alter rank. Hence earlier illustrative reversal depends on optimized speed, unequal distances, objective and boundaries; not a robust empirical species prediction.
+
+## Next empirical gate
+Download the original Currie ZIP via a normal browser or authorized Dryad API if supplement lacks measured response series; supply archive for verification. Supplement S2 is useful for trait/study provenance, not a substitute for original power response. Pre-outcome matched-support LOSO/leave-study-out model comparison as V2; test any trait effect beyond flexible speed/mass model. An independent directional commuting validation requires trajectories and independently sampled wind at candidate steps. No new paper submission, merge or biological claim.
