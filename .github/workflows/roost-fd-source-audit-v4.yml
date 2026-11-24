@@ -1,0 +1,27 @@
+name: Roost FD source audit V4
+on:
+  push:
+    branches: [prospective/roost-3d-connectivity-fd-20261124]
+    paths:
+      - scripts/roost_fd_source_audit_v4.py
+      - .github/workflows/roost-fd-source-audit-v4.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas==2.2.3 numpy==1.26.4 requests==2.32.3 openpyxl==3.1.5 remotezip==0.12.3
+      - run: python scripts/roost_fd_source_audit_v4.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: roost-fd-source-audit-v4
+          path: roost_fd_audit/audit_v4.json
+          if-no-files-found: error
