@@ -1,0 +1,34 @@
+name: Roost slope audio unit provenance V38
+on:
+  push:
+    branches: [prospective/roost-3d-connectivity-fd-20261124]
+    paths:
+      - scripts/roost_slope_audio_unit_provenance_v38.py
+      - .github/workflows/roost-slope-audio-unit-v38.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify released decoder wheel
+        run: |
+          mkdir -p /tmp/matio-wheel
+          pip download --only-binary=:all: --no-deps --dest /tmp/matio-wheel mat-io==1.0.0
+          echo "22aab7814322caeae47b5a58aa9e65a287bedede793e838673c3159f1e852061  /tmp/matio-wheel/mat_io-1.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl" | sha256sum -c -
+      - run: pip install /tmp/matio-wheel/*.whl numpy==2.4.6 pandas==3.1.1 scipy==1.17.1 h5py==3.16.0 requests==2.32.3 openpyxl==3.1.5
+      - run: python scripts/roost_slope_audio_unit_provenance_v38.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: roost-slope-audio-unit-v38
+          path: roost_fd_audit/audit_v38_unit_provenance.json
+          if-no-files-found: error
