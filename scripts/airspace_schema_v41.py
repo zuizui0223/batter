@@ -1,5 +1,5 @@
 """V41 pinned small-file structure audit. No outcome values or track rows emitted."""
-import csv,io,json,re,hashlib,math
+import csv,io,json,re,hashlib,math,traceback
 from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import PurePosixPath
@@ -23,7 +23,9 @@ def fetch(spec):
         files=[f for f in j["files"] if f["name"]==name]
         assert len(files)==1
         f=files[0];assert f["size"]==size and (f.get("computed_md5") or f.get("supplied_md5"))==md5
-        url=f["downloadUrl"]
+        # Figshare v2 returns download_url; documented file-id endpoint is a bounded fallback.
+        fid=int(f["id"]);assert fid>0
+        url=f.get("download_url") or f.get("downloadUrl") or f"https://api.figshare.com/v2/file/download/{fid}"
     else:
         j=get(f"https://zenodo.org/api/records/{i}")
         files=[f for f in j["files"] if f["key"]==name]
@@ -42,7 +44,7 @@ def fetch(spec):
 def normalized(x):return re.sub(r"[^a-z0-9]","",str(x or "").strip().casefold())
 def tags(x):
     q=normalized(x);ans=[]
-    if re.search(r"(?:^x$|^y$|^z$|^xcoord|^ycoord|^zcoord|^coordx|^coordy|^coordz|^posx|^posy|^posz|^latitude|^longitude|^easting|^northing|^utm|^lat$|^lon$|^height|altitude|elevation)",q):ans.append("position")
+    if re.search(r"(?:^x$|^y$|^z$|^xm$|^ym$|^zm$|^xcoord|^ycoord|^zcoord|^coordx|^coordy|^coordz|^posx|^posy|^posz|^latitude|^longitude|^easting|^northing|^utm|^lat$|^lon$|^height|altitude|elevation)",q):ans.append("position")
     if re.search(r"time|frame|timestamp|datetime|^date$|^fps$|^second|^duration|^dt$",q):ans.append("time")
     if re.search(r"site|location|plot|turbine|station|survey|^night|^farm",q):ans.append("site")
     if re.search(r"track|trajectory|flightid|passid|sequence|^id$|^flight$",q):ans.append("track")
@@ -60,7 +62,11 @@ def kind(x):
         s=x.strip()
         if s.casefold() in ("","na","nan","null","none","#n/a"):return "missing"
         try:return "numeric_finite" if math.isfinite(float(s)) else "numeric_nonfinite"
-        except (TypeError,ValueError):return "text"
+        except (TypeError,ValueError):
+            # Decimal-comma recognition is a type diagnostic, not a value analysis.
+            if re.fullmatch(r"[-+]?\d+,\d+(?:[eE][-+]?\d+)?",s):
+                return "numeric_decimal_comma" if math.isfinite(float(s.replace(",","."))) else "numeric_nonfinite"
+            return "text"
     if isinstance(x,bool):return "bool"
     if isinstance(x,(int,float)):return "numeric_finite" if math.isfinite(float(x)) else "numeric_nonfinite"
     return type(x).__name__
@@ -68,8 +74,8 @@ def quant_counts(c):
     vals=sorted(c.values())
     if not vals:return {"distinct":0}
     return {"distinct":len(vals),"min_rows":int(vals[0]),"median_rows":float((vals[(len(vals)-1)//2]+vals[len(vals)//2])/2),"max_rows":int(vals[-1])}
-SITE_KEYS={"site","siteid","sitename","plot","plotid","turbine","turbineid","station","stationid","farm","farmid"}
-TRACK_KEYS={"track","trackid","trajectory","trajectoryid","flight","flightid","pass","passid","sequence","sequenceid"}
+SITE_KEYS={"site","idsite","siteid","sitename","plot","plotid","turbine","turbineid","station","stationid","farm","farmid"}
+TRACK_KEYS={"track","trackid","trajectoryidentifier","trackidentifier","trajectory","trajectoryid","flight","flightid","pass","passid","sequence","sequenceid"}
 ANIMAL_KEYS={"animal","animalid","individual","individualid","batid","batname","tagid"}
 TIME_KEYS={"frame","frameid","framenumber","framenum","time","timestamp","timepoint","timeindex","datetime","seconds","timeinseconds","t"}
 NIGHT_KEYS={"night","nightid","surveydate","date","survey","surveyid","session","sessionid"}
@@ -80,8 +86,8 @@ def structure(header,rows):
     inds={k:[i for i,v in enumerate(q) if v in keys] for k,keys in keysets.items()}
     chosen={k:i[0] for k,i in inds.items() if len(i)==1}
     kcounts={k:Counter() for k in chosen}
-    site_track=Counter();site_night=Counter();site_night_track=Counter();full=Counter()
-    combinations={"site_track":site_track,"site_night":site_night,"site_night_track":site_night_track,"site_night_track_time":full}
+    site_track=Counter();site_night=Counter();site_night_track=Counter();site_track_time=Counter();full=Counter()
+    combinations={"site_track":site_track,"site_night":site_night,"site_night_track":site_night_track,"site_track_time":site_track_time,"site_night_track_time":full}
     for row in rows:
         if not any(kind(v)!="missing" for v in row):continue
         rows_count+=1
@@ -93,7 +99,7 @@ def structure(header,rows):
             v=row[i]
             if kind(v) not in ("missing","numeric_nonfinite"):
                 kk[k]=str(v).strip();kcounts[k][kk[k]]+=1
-        for keys,ctr in [(("site","track"),site_track),(("site","night_or_session"),site_night),(("site","night_or_session","track"),site_night_track),(("site","night_or_session","track","time_or_frame"),full)]:
+        for keys,ctr in [(("site","track"),site_track),(("site","night_or_session"),site_night),(("site","night_or_session","track"),site_night_track),(("site","track","time_or_frame"),site_track_time),(("site","night_or_session","track","time_or_frame"),full)]:
             if all(k in kk for k in keys):ctr[tuple(kk[k] for k in keys)]+=1
     return {"header_columns":n,"nonempty_data_rows":rows_count,"wrong_width_rows":bad,
        "columns":[{"index":i,"name":field(h),"tags":tags(h),"types":dict(c[i])} for i,h in enumerate(head)],
@@ -148,12 +154,17 @@ def task(k,s):
         audit=csv_schema(b) if ext==".csv" else xlsx_schema(b) if ext==".xlsx" else code_schema(b)
         return {"status":"inspected","size":len(b),"published_MD5_verified":True,"md5":hashlib.md5(b).hexdigest(),"sha256":hashlib.sha256(b).hexdigest(),"audit":audit}
     except requests.HTTPError as e:return {"status":"blocked","error":"HTTPError","http_status":e.response.status_code if e.response is not None else None}
-    except Exception as e:return {"status":"blocked","error":type(e).__name__}
+    except Exception as e:
+        return {"status":"blocked","error":type(e).__name__,
+            "trace_functions":[f.name for f in traceback.extract_tb(e.__traceback__)[-5:]],
+            "recognized_missing_API_key":str(e.args[0]) if isinstance(e,KeyError) and e.args and e.args[0] in {"files","id","name","size","downloadUrl","download_url","links","self","key","checksum"} else None}
 def main():
     out={"status":"source_structure_only","ecological_outcomes_analyzed":False,"third_party_code_executed":False,"files":{}}
     dest=OUT/"audit_v41_airspace_schema.json"
     def save():dest.write_text(json.dumps(out,indent=2,allow_nan=False))
-    save()
+    assert kind("1,234")=="numeric_decimal_comma" and kind("1.234")=="numeric_finite"
+    assert "position" in tags("x (m)") and "idsite" in SITE_KEYS and "trajectoryidentifier" in TRACK_KEYS
+    out["synthetic_schema_checks"]="pass";save()
     with ThreadPoolExecutor(max_workers=3) as pool:
         jobs={k:pool.submit(task,k,s) for k,s in ITEMS.items()}
         for k,f in jobs.items():out["files"][k]=f.result();save()
