@@ -1,0 +1,31 @@
+name: Roost FD measured force V17
+on:
+  push:
+    branches: [prospective/roost-3d-connectivity-fd-20261124]
+    paths:
+      - scripts/roost_fd_measured_force_v17.py
+      - .github/workflows/roost-fd-measured-force-v17.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/cache@v4
+        with:
+          path: .roost_public_source_cache/wingReview_wm_data_final.csv
+          key: crane-study-wing-sha256-60666f4892dfe536534ad953bc1810b93ded33ce454373ec1e1b410a97ba2c97
+      - run: pip install pandas==2.2.3 numpy==1.26.4 requests==2.32.3 openpyxl==3.1.5 remotezip==0.12.3 biopython==1.85
+      - run: python scripts/roost_fd_measured_force_v17.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: roost-fd-measured-force-v17
+          path: roost_fd_audit/audit_v17.json
+          if-no-files-found: error
