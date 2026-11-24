@@ -1,0 +1,64 @@
+name: Currie published curve roundtrip and source schema audit
+on:
+  push:
+    branches:
+      - prospective/trait-wind-roundtrip-20261124
+    paths:
+      - scripts/currie_published_curve_roundtrip_v1.py
+      - .github/workflows/currie-power-source-gate-v1.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  published_curve_and_source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install numpy
+      - run: python scripts/currie_published_curve_roundtrip_v1.py
+      - name: Source schema only (no outcome values)
+        run: |
+          python - <<'PY'
+          import csv, hashlib, io, json, pathlib, urllib.request
+          files={"Meta-analysis.csv":2218304,"NABI_data_final.csv":2218314,"PIV_data.csv":2218315,"README.md":2218316}
+          receipt={"doi":"10.5061/dryad.6q573n631","files":{}}
+          for name,id in files.items():
+              row={"url":f"https://datadryad.org/downloads/file_stream/{id}"}
+              receipt["files"][name]=row
+              try:
+                  req=urllib.request.Request(row["url"],headers={"User-Agent":"batter-research-source-audit/1.0"})
+                  with urllib.request.urlopen(req,timeout=45) as r:
+                      b=r.read(1_000_001)
+                      row["http_status"]=r.status
+                  if not b or len(b)>100000 or b.lstrip().lower().startswith((b"<!doctype",b"<html")):
+                      raise ValueError("Unexpected content or size")
+                  row.update(bytes=len(b),sha256=hashlib.sha256(b).hexdigest(),md5=hashlib.md5(b).hexdigest())
+                  t=b.decode("utf-8-sig")
+                  if name.endswith(".csv"):
+                      reader=csv.reader(io.StringIO(t))
+                      row["header"]=next(reader)
+                      row["data_rows"]=sum(1 for _ in reader)
+                      if len(row["header"])<2: raise ValueError("Not a parsed CSV header")
+                  else:
+                      row["markdown_headings"]=[x[:160] for x in t.splitlines() if x.startswith("#")][:50]
+                  row["status"]="SCHEMA_READ"
+              except Exception as e:
+                  row["status"]="SOURCE_STOP"
+                  row["error"]=str(e)
+          pathlib.Path("results/currie_power_source_gate_v1.json").write_text(json.dumps(receipt,indent=2)+"\n")
+          print(json.dumps(receipt,indent=2))
+          if any(r["status"]=="SOURCE_STOP" for r in receipt["files"].values()): raise SystemExit(1)
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: currie-power-roundtrip-and-source-gate-v1
+          path: |
+            results/currie_published_curve_roundtrip_v1.json
+            results/currie_power_source_gate_v1.json
+          retention-days: 60
+          if-no-files-found: error
