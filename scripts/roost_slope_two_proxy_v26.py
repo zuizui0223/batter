@@ -3,7 +3,7 @@ import json
 import numpy as np
 import pandas as pd
 from roost_fd_source_audit_v2 import OUT
-from roost_fd_empirical_null_v5 import SEED
+SEED=20261124  # identical frozen V5 seed; avoid unrelated wing-source imports
 from roost_slope_matched_panels_v21 import summary
 from roost_slope_error_dem_v25 import reconstruct,Copernicus,load,tadarida,EXPECTED,K
 
