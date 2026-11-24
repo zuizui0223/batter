@@ -1,0 +1,31 @@
+name: Bayer flight decision tree visual inspection V28
+on:
+  push:
+    branches:
+      - prospective/trait-wind-roundtrip-20261124
+    paths:
+      - scripts/bayer_supplement_page_v28.py
+      - .github/workflows/bayer-supplement-page-v28.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install pymupdf pillow
+      - run: python scripts/bayer_supplement_page_v28.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bayer-fig-s2-page2-v28
+          path: |
+            results/bayer_fig_s2_page2_v28.png
+            results/bayer_fig_s2_page2_v28.json
+          if-no-files-found: error
+          retention-days: 60
