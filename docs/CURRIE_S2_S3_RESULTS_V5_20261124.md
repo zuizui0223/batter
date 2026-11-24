@@ -1,0 +1,23 @@
+# V5 outcome: authenticated morphology scenario and conversion-efficiency transfer boundary
+2026-11-24; Actions 45357952086 SUCCESS, artifact 14902333729, artifact SHA256 9a2d5e40dfcfffb7e5666f67d315ce4ede66520a5a014667ca85184e5870247d. V5 contract bfec19f3d1be7919d2bd55dde4366188cd52f51f before numerical table extraction. Original Figshare DOCX SHA256 a3fd844edc28df1bf28da8f6cb3fb6f5db536a12418b78441b05731b9c5eb206 verified again. Raw Dryad dataset remains unavailable. Source DOI 10.6084/m9.figshare.22643762.v1 / article 10.1098/rspb.2023.0045.
+
+## S2 trait inputs and reduced model results
+These are conditional estimates using published morphology inputs, NOT observed airspeed or accessible area. Original table has 23 rows, eight bats and 15 birds (article says 16 birds). Preserve source label Pteropus alecto (gouldii). Word XML confirms source typo "Wing Area (m)" (no superscript), interpreted as m² because the original article §5d specifies 0.0077 m² for P. nathusii, matching S2, and AFPT requires area. §5d reports mass 0.089 kg whereas S2 reports 0.0088 kg and capture mass ~7.6 g; retain S2, flag discrepancy rather than silently changing source. No claims of verified same-individual trait provenance for other species.
+| Species | AR | WL N/m² | proxy U_mr m/s | area fraction at 4 m/s | common k/CD scenario range |
+|---|---:|---:|---:|---:|---:|
+| P. nathusii | 6.87 | 11.21 | 3.947 | 0 | 0–0.124 |
+| L. yerbabuenae | 7.03 | 13.92 | 4.374 | .066 | 0–.242 |
+| C. perspicillata | 5.76 | 12.98 | 4.438 | .081 | 0–.258 |
+| P. hastatus | 7.52 | 21.88 | 5.390 | .301 | .133–.461 |
+| H. monstrosus | 6.73 | 22.01 | 5.558 | .335 | .168–.489 |
+| P. poliocephalus | 6.83 | 26.40 | 6.065 | .425 | .269–.563 |
+| P. alecto (gouldii) | 6.81 | 28.57 | 6.313 | .463 | .313–.593 |
+| E. helvum | 6.92 | 35.16 | 6.976 | .550 | .418–.662 |
+A/B simplification gives U_mr = [4k WL²/(rho² pi CD AR)]^(1/4). Thus common k, CD changes all species' speeds by the same multiplier; apparent invariant ranks are algebraic, not evidence of robustness to species-specific drag or behavior. Mass-only proxy calibrated on morphology-predicted speeds, not data; E. helvum +.080 and P. poliocephalus -.151 area fraction vs mass-only scenario; not a validation. In fact P. nathusii proxy 3.947 m/s is outside the common measured 5–9 m/s comparison band and 47.2% below 7.4711 m/s, numerical maximum-range speed from the published mechanical power fit within that band (not direct observed selected speed). At the latter fixed speed, 4 m/s wind yields .6025 area fraction, vs 0 at proxy speed. This defeats interpreting zero from the crude model as real inability to fly in wind. Do NOT calibrate species-wise to outcomes and call transfer.
+
+## S3 observed efficiency comparison
+Common 5/6/7 m/s measured values (%): Carollia 7.2/5.9/6.1, Pipistrellus 7.0/8.1/8.8. OLS training slopes -0.55 and +0.90 percentage points/(m/s), respectively. Transfer Carollia→Pipistrellus: constant MAE 1.5667 pp, speed slope 1.5667 pp (numerically equal); Pipistrellus→Carollia: constant 1.5667, slope 1.6556 pp. No benefit in either direction. This is an aggregated two-species demonstration, not general evidence of lack of transfer. The opposing tendencies are already described by the original paper; new numerical audit only.
+Published AFPT-derived efficiency vs mass-model MAE on paired cells: Carollia n=4, .70 vs 1.45 pp; Pipistrellus n=5, 1.64 vs 2.66; Sylvia n=1, 2.1 vs 12.3. Original estimates use overlapping data and measured metabolic denominator, so do not count as heldout estimates of metabolic power. No absolute energy prediction validated.
+
+## Decision
+STOP using reduced proxy as a biological energy field. Keep analytic fixed-speed geometry benchmark and true source tables. Next compare a published full aerodynamic model (AFPT, which the original study found more consistent with measured mechanical power) against published-fit/primary measured mechanical curves on the same support, audit model settings, speed red flags, mass units, wingspan/area provenance. Then independent metabolism tests with study-level/whole-species exclusion; no recalibration on heldout species. Primary source access still matters: Hedenstrom 2025 review DOI 10.1242/jeb.248123 lists independent original-study curves, but selected/normalized/estimated summaries cannot stand in for full measured individual data. Large fruit bat heat-limited endurance (Carpenter 1985 DOI 10.1242/jeb.114.1.619) is an additional biological feasibility constraint, not to be silently absorbed into drag. No new manuscript claim, merge, or submission.
