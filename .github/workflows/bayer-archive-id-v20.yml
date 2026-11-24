@@ -1,0 +1,29 @@
+name: Bayer historical archive and GPS ID repair V20
+on:
+  push:
+    branches:
+      - prospective/trait-wind-roundtrip-20261124
+    paths:
+      - scripts/bayer_archive_id_v20.py
+      - .github/workflows/bayer-archive-id-v20.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  analysis:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install pandas numpy==2.4.6
+      - run: python scripts/bayer_archive_id_v20.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bayer-archive-id-v20
+          path: results/bayer_archive_id_v20.json
+          if-no-files-found: error
+          retention-days: 60
