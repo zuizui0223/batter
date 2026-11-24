@@ -1,0 +1,29 @@
+name: Bayer source unit and flight gate V29
+on:
+  push:
+    branches:
+      - prospective/trait-wind-roundtrip-20261124
+    paths:
+      - scripts/bayer_flight_gate_v29.py
+      - .github/workflows/bayer-flight-gate-v29.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  pilot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install pandas numpy==2.4.6
+      - run: python scripts/bayer_flight_gate_v29.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bayer-flight-gate-v29
+          path: results/bayer_flight_gate_v29.json
+          if-no-files-found: error
+          retention-days: 60
