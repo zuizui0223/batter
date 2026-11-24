@@ -1,0 +1,29 @@
+name: Carollia external measurements source gate V7
+on:
+  push:
+    branches:
+      - prospective/trait-wind-roundtrip-20261124
+    paths:
+      - scripts/carollia_sources_v7.py
+      - .github/workflows/carollia-sources-v7.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  sources:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install pillow
+      - run: python scripts/carollia_sources_v7.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: carollia-sources-v7
+          path: results/carollia_sources_v7.json
+          retention-days: 60
+          if-no-files-found: error
