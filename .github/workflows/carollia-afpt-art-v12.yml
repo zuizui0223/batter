@@ -1,0 +1,67 @@
+name: Carollia individual AFPT and ART source V12
+on:
+  push:
+    branches:
+      - prospective/trait-wind-roundtrip-20261124
+    paths:
+      - scripts/carollia_afpt_art_source_v12.py
+      - scripts/carollia_individual_afpt_v12.R
+      - .github/workflows/carollia-afpt-art-v12.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      wing: ${{ steps.source.outputs.wing }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - id: source
+        run: |
+          python scripts/carollia_afpt_art_source_v12.py
+          if test -f results/WingMorph.txt; then echo wing=true >> "$GITHUB_OUTPUT"; else echo wing=false >> "$GITHUB_OUTPUT"; fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: carollia-art-source-v12
+          path: results/carollia_source_v12.json
+          if-no-files-found: error
+          retention-days: 60
+      - uses: actions/upload-artifact@v4
+        if: steps.source.outputs.wing == 'true'
+        with:
+          name: carollia-afpt-public-source-temp-v12
+          path: results/WingMorph.txt
+          retention-days: 1
+  afpt:
+    needs: audit
+    if: needs.audit.outputs.wing == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    strategy:
+      fail-fast: false
+      matrix:
+        freq: [7, 9, 11]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: carollia-afpt-public-source-temp-v12
+          path: external
+      - run: echo '46fb9c339feb2a9b0a9277aa52dd3e8e25ffd598cd1457a663f96ed8c8a394a4  external/WingMorph.txt' | sha256sum --check
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: '4.5.2'
+      - run: Rscript -e 'options(repos=c(CRAN="https://cloud.r-project.org")); install.packages("afpt"); stopifnot(as.character(packageVersion("afpt"))=="1.1.0.4")'
+      - run: Rscript scripts/carollia_individual_afpt_v12.R external/WingMorph.txt ${{ matrix.freq }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: carollia-afpt-v12-${{ matrix.freq }}
+          path: results/afpt_individual_*_v12.csv
+          if-no-files-found: warn
+          retention-days: 60
