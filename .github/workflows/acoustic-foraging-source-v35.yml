@@ -1,0 +1,29 @@
+name: Acoustic foraging 3D source admission V35
+on:
+  push:
+    branches:
+      - prospective/trait-wind-roundtrip-20261124
+    paths:
+      - scripts/acoustic_foraging_source_v35.py
+      - .github/workflows/acoustic-foraging-source-v35.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install pandas numpy
+      - run: python scripts/acoustic_foraging_source_v35.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: acoustic-foraging-source-v35
+          path: results/acoustic_foraging_source_v35.json
+          if-no-files-found: error
+          retention-days: 60
