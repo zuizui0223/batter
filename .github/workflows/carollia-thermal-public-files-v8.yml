@@ -1,0 +1,29 @@
+name: Carollia thermal public per-file source V8
+on:
+  push:
+    branches:
+      - prospective/trait-wind-roundtrip-20261124
+    paths:
+      - scripts/carollia_thermal_public_files_v8.py
+      - .github/workflows/carollia-thermal-public-files-v8.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  admission:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install pillow
+      - run: python -m scripts.carollia_thermal_public_files_v8
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: carollia-thermal-source-v8
+          path: results/carollia_thermal_public_files_v8.json
+          retention-days: 60
+          if-no-files-found: error
