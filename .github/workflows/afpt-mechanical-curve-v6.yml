@@ -1,0 +1,52 @@
+name: AFPT mechanical curve and wind geometry V6
+on:
+  push:
+    branches:
+      - prospective/trait-wind-roundtrip-20261124
+    paths:
+      - scripts/afpt_mechanical_curve_v6.R
+      - .github/workflows/afpt-mechanical-curve-v6.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: '4.5.2'
+      - run: python -m pip install numpy==2.4.6
+      - name: Extract exact source traits from authenticated S2
+        run: |
+          python scripts/currie_s2_s3_audit_v5.py > /dev/null
+          python - <<'PY'
+          import csv,json
+          from scripts.currie_s2_s3_audit_v5 import BATS
+          s=json.load(open("results/currie_s2_s3_v5.json"))
+          assert s["source_sha256"]=="a3fd844edc28df1bf28da8f6cb3fb6f5db536a12418b78441b05731b9c5eb206"
+          rows=[r for r in s["s2_rows"][1:] if r[0] in BATS]
+          assert len(rows)==8
+          with open("results/afpt_traits_v6.csv","w") as f:
+              w=csv.writer(f); w.writerow(["species","mass","frequency","cdb","span","area","source"])
+              for r in rows:
+                  for val in r[1:6]: assert float(val)>0
+                  w.writerow(r)
+          PY
+      - name: Install exact official CRAN package
+        run: |
+          Rscript -e 'options(repos=c(CRAN="https://cloud.r-project.org")); install.packages("afpt"); stopifnot(as.character(packageVersion("afpt"))=="1.1.0.4")'
+      - name: Compute fixed common-support mechanical curves and conditional geometry
+        run: Rscript scripts/afpt_mechanical_curve_v6.R
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: afpt-mechanical-curve-v6
+          path: results/afpt_*_v6.csv
+          retention-days: 60
+          if-no-files-found: error
