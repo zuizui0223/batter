@@ -1,0 +1,54 @@
+name: GVSM multitrait cold-start diagnostic
+on:
+  push:
+    branches: [prospective/gedi-trait-macro-sdm-20261125]
+    paths:
+      - prospective/gedi_trait_macro_sdm/multitrait_cold_start_v1.py
+      - .github/workflows/gvsm-multitrait-cold-start.yml
+permissions:
+  contents: read
+  actions: read
+jobs:
+  diagnostic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      OPENBLAS_NUM_THREADS: "1"
+      OMP_NUM_THREADS: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          name: europe-common-forest-support-v1
+          run-id: 45585033345
+          github-token: ${{ github.token }}
+          path: common_forest
+      - uses: actions/download-artifact@v4
+        with:
+          name: gedi-macro-input-diagnosis
+          run-id: 45575708211
+          github-token: ${{ github.token }}
+          path: physical
+      - uses: actions/download-artifact@v4
+        with:
+          name: gedi-macro-iberia-join
+          run-id: 45575962660
+          github-token: ${{ github.token }}
+          path: traits
+      - uses: actions/download-artifact@v4
+        with:
+          name: gedi-macro-real-inputs
+          run-id: 45575472120
+          github-token: ${{ github.token }}
+          path: euro
+      - run: python -m pip install numpy pandas scipy
+      - run: python prospective/gedi_trait_macro_sdm/multitrait_cold_start_v1.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: gvsm-multitrait-cold-start
+          path: multitrait_cold_start/
+          if-no-files-found: error
