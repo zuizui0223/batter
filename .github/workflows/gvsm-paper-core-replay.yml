@@ -4,6 +4,7 @@ on:
     branches: [prospective/gedi-trait-macro-sdm-20261125]
     paths:
       - .github/workflows/gvsm-paper-core-replay.yml
+      - prospective/gedi_trait_macro_sdm/paper_core_replay_v1.py
 permissions:
   contents: read
   actions: read
