@@ -1,0 +1,268 @@
+{
+  "stage": "source support only; no new ecological fit",
+  "doi": "10.5281/zenodo.4265167",
+  "source_hashes": {
+    "Bats.csv": "5e09a20dbc80d9405f522a576d42f85c4b8f0a19d35dda8c50f8a26135b0fa14",
+    "Bats_Unconsolidated.csv": "2fc73130d23ae4bbc173ce2c7d92bad50a171eb8887b9af64d1f22d88d26a902",
+    "Headers.txt": "0233dd99a7f335b4f28133a526ac72aa860cde5756d4bc1726c151d87b17b73b",
+    "Headers_Unconsolidated.txt": "1928e4879b0227e2cca8a9dcd49adce3505820bf483f5a44be06f06a9d456d41",
+    "Nunez_etal_2019.csv": "ca75813d91dd6e4dbcbe6b2e18d780ca8c00b3c0638870aa599c3a01eebd278f"
+  },
+  "status": "PAIR_SUPPORT_READY_REQUIRES_EFFORT_SEMANTICS",
+  "header_documentation": {
+    "Headers.txt": "Header description for Bats.csv\n-------------------------------------------------------------\nDAY\tDay of study; range: 10-18\nHOUR\tHour of the night; this is converted to hour after sunset in R code\nTower\tThe name of the tower (either green or red)\nCanopy\tEither 'above' or 'below' the forest canopy\nBat\tThe species or acoustic complex identified\nNumber\tThe number of bat passes for any given hour (row) and Bat complex (see above)\nDate\tMonth/Day/Year\n\n-------------------------------------------------------------\nBelow is output from custom command line code. We only used M Illm in our models, but we include it all here for any convenience that future researchers might have\n-------------------------------------------------------------\n\nS Az\tSun azimuth [degrees]\nS Alt\tSun altitude [degrees]\nM Az\tMoon azimuth [degrees]\nM Alt\tMoon altitude [degrees]\nPhase\tMoon illuminated fraction [-]\nM SD \tMoon angular semidiameter [degrees]\nS Dir\tSun direct illuminance [lux]\nS Sky\tSun diffuse illuminance [lux]\nS Illm\tSun total illuminance (direct+diffuse) [lux]\nM Dir\tMoon direct illuminance [lux]\nM Sky\tMoon diffuse illuminance [lux]\nM Illm\tMoon total illuminance (direct+diffuse) [lux]\nT Illm\tTotal illuminance (total sun + moon + airglow) [lux]",
+    "Headers_Unconsolidated.txt": "Header description for Bats_Unconsolidated.csv\n-------------------------------------------------------------\nIN FILE\t\tName of file from SM3 (Wildlife Acoustics recording unit); SM3Serial#__0__YEARMONTHDAY_TIME.wav\nDATE\t\tDate (extracted from 'IN FILE')\nTIME\t\tTime (extracted from 'IN FILE')\nHOUR     \tHour (just the first two digits of time)\nMANUAL_ID\tSpecies / acoustic complex in house code\nbuzz\t\tWas a feeding buzz present or not\nPosition_color\tPosition is relative to the canopy (above or below) separated (with a '.') by tower color (red or green)."
+  },
+  "consolidated_rows": 7854,
+  "unconsolidated_rows": 16123,
+  "design_levels": {
+    "DAY": [
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18"
+    ],
+    "HOUR": [
+      "0",
+      "1",
+      "18",
+      "19",
+      "2",
+      "20",
+      "21",
+      "22",
+      "23",
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "Tower": [
+      "green",
+      "red"
+    ],
+    "Canopy": [
+      "above",
+      "below"
+    ],
+    "Bat": [
+      "cen1",
+      "corbre",
+      "dic.sp",
+      "mol1",
+      "mol2",
+      "molossidae3",
+      "myorip",
+      "myosp",
+      "perkap",
+      "permac",
+      "pertri",
+      "phyllo",
+      "pteali",
+      "ptegym",
+      "pterub",
+      "ptesp",
+      "sacbil",
+      "sacgym",
+      "saclep",
+      "vesp1",
+      "vesp2"
+    ]
+  },
+  "duplicate_design_keys": 0,
+  "paired_species_units": 3276,
+  "unpaired_species_units": 1302,
+  "explicit_all_zero_paired_units": 2414,
+  "positive_paired_units": 862,
+  "candidate_detector_events": 218,
+  "paired_detector_events": 156,
+  "candidate_nights": 9,
+  "candidate_towers": 2,
+  "by_species_support": {
+    "cen1": {
+      "paired_units": 156,
+      "positive_paired_units": 131,
+      "positive_nights": 9,
+      "positive_towers": 2
+    },
+    "corbre": {
+      "paired_units": 156,
+      "positive_paired_units": 50,
+      "positive_nights": 9,
+      "positive_towers": 2
+    },
+    "dic.sp": {
+      "paired_units": 156,
+      "positive_paired_units": 4,
+      "positive_nights": 3,
+      "positive_towers": 2
+    },
+    "mol1": {
+      "paired_units": 156,
+      "positive_paired_units": 9,
+      "positive_nights": 7,
+      "positive_towers": 2
+    },
+    "mol2": {
+      "paired_units": 156,
+      "positive_paired_units": 63,
+      "positive_nights": 9,
+      "positive_towers": 2
+    },
+    "molossidae3": {
+      "paired_units": 156,
+      "positive_paired_units": 50,
+      "positive_nights": 9,
+      "positive_towers": 2
+    },
+    "myorip": {
+      "paired_units": 156,
+      "positive_paired_units": 16,
+      "positive_nights": 7,
+      "positive_towers": 2
+    },
+    "myosp": {
+      "paired_units": 156,
+      "positive_paired_units": 27,
+      "positive_nights": 9,
+      "positive_towers": 2
+    },
+    "perkap": {
+      "paired_units": 156,
+      "positive_paired_units": 66,
+      "positive_nights": 9,
+      "positive_towers": 2
+    },
+    "permac": {
+      "paired_units": 156,
+      "positive_paired_units": 85,
+      "positive_nights": 9,
+      "positive_towers": 2
+    },
+    "pertri": {
+      "paired_units": 156,
+      "positive_paired_units": 1,
+      "positive_nights": 1,
+      "positive_towers": 1
+    },
+    "phyllo": {
+      "paired_units": 156,
+      "positive_paired_units": 51,
+      "positive_nights": 9,
+      "positive_towers": 2
+    },
+    "pteali": {
+      "paired_units": 156,
+      "positive_paired_units": 72,
+      "positive_nights": 9,
+      "positive_towers": 2
+    },
+    "ptegym": {
+      "paired_units": 156,
+      "positive_paired_units": 13,
+      "positive_nights": 5,
+      "positive_towers": 2
+    },
+    "pterub": {
+      "paired_units": 156,
+      "positive_paired_units": 13,
+      "positive_nights": 8,
+      "positive_towers": 2
+    },
+    "ptesp": {
+      "paired_units": 156,
+      "positive_paired_units": 1,
+      "positive_nights": 1,
+      "positive_towers": 1
+    },
+    "sacbil": {
+      "paired_units": 156,
+      "positive_paired_units": 114,
+      "positive_nights": 9,
+      "positive_towers": 2
+    },
+    "sacgym": {
+      "paired_units": 156,
+      "positive_paired_units": 0,
+      "positive_nights": 0,
+      "positive_towers": 0
+    },
+    "saclep": {
+      "paired_units": 156,
+      "positive_paired_units": 72,
+      "positive_nights": 9,
+      "positive_towers": 2
+    },
+    "vesp1": {
+      "paired_units": 156,
+      "positive_paired_units": 5,
+      "positive_nights": 3,
+      "positive_towers": 2
+    },
+    "vesp2": {
+      "paired_units": 156,
+      "positive_paired_units": 19,
+      "positive_nights": 9,
+      "positive_towers": 1
+    }
+  },
+  "trait_code_support": {
+    "rows": 27,
+    "nonempty_code_rows": 10,
+    "distinct_nonempty_codes": 8,
+    "ambiguous_codes": 2,
+    "unique_codes_exactly_matching_acoustic_labels": [
+      "corbre",
+      "myorip",
+      "perkap",
+      "permac",
+      "saclep"
+    ]
+  },
+  "raw_design_levels": {
+    "position_codes": [
+      "above.green",
+      "above.red",
+      "below.green",
+      "below.red"
+    ],
+    "manual_id_cardinality": 22,
+    "calendar_date_cardinality": 10
+  },
+  "limits": [
+    "Explicit table zeros are recording counts, not biological absence or verified detector operation.",
+    "DAY/Date semantics, twilight boundary and partial hours require source documentation; paired table rows do not prove matched exposure.",
+    "Acoustic complex names require validated mapping; exact trait code matches are only candidates.",
+    "One study; no cross-study fit or calibrated altitude response."
+  ],
+  "audit": {
+    "run_id": 45653499131,
+    "job_id": 139343933598,
+    "artifact_id": 15040858824,
+    "registry_digest": "sha256:1630b06da09a53b042bfcbeb7414040c98d9d881fa3abfb4f5f32a98d86b6411",
+    "checks": {
+      "no_duplicate_keys": true,
+      "rows_reconcile": true,
+      "positive_zero_reconcile": true,
+      "paired_event_roster": true,
+      "species_positive_counts": true,
+      "unpaired_event_roster": true,
+      "registry_matches_log": true
+    }
+  },
+  "summary": {
+    "acoustic_labels": 21,
+    "labels_with_positive_pairs": 20,
+    "source_study_count": 1,
+    "paired_recording_events": 156,
+    "positive_label_event_pairs": 862,
+    "unpaired_detector_events": 62,
+    "exact_unique_candidate_trait_codes": 5,
+    "scope": "Actual original data schema and support, no fitted ecological relationship or standardized detection effort. No cross-study model admission."
+  }
+}
