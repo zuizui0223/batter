@@ -1,0 +1,718 @@
+{
+  "stage": "fixed GBIF snapshot conditional label prediction, post-pilot check",
+  "snapshot_doi": "10.15468/dl.8yrbe7",
+  "source_hashes": {
+    "environment": "85ad737229aa7b10720a8d5c8bd0ea389f63f908c37871c7ce46ae87c9bed1d6",
+    "pilot": "5bd65cd8c56bac84c033a4972064622c172554a676d198868ef0776c49a2786b",
+    "flags": "de971292065a8aee3491880adb00a5623efae61bc83b2bd2ae4d663b45edf0f0"
+  },
+  "fixed_snapshot_raw_records": 219960,
+  "all_roost_flags_excluded": 684,
+  "explicit_captive_flags": 0,
+  "metadata_unknown": "establishment missing for all records; no assertion of wild status/actual flight, same source/year not equal effort",
+  "bridge_species": [
+    {
+      "species": "Eptesicus serotinus",
+      "old_key": "2432359",
+      "snapshot_key": "6FZ6J"
+    },
+    {
+      "species": "Myotis daubentonii",
+      "old_key": "2432439",
+      "snapshot_key": "73S3M"
+    },
+    {
+      "species": "Myotis emarginatus",
+      "old_key": "2432470",
+      "snapshot_key": "7443L"
+    },
+    {
+      "species": "Myotis myotis",
+      "old_key": "2432416",
+      "snapshot_key": "456G3"
+    },
+    {
+      "species": "Myotis mystacinus",
+      "old_key": "9754263",
+      "snapshot_key": "456G4"
+    },
+    {
+      "species": "Myotis nattereri",
+      "old_key": "2432389",
+      "snapshot_key": "456G6"
+    },
+    {
+      "species": "Nyctalus leisleri",
+      "old_key": "5218522",
+      "snapshot_key": "6SCMV"
+    },
+    {
+      "species": "Nyctalus noctula",
+      "old_key": "5218524",
+      "snapshot_key": "484XC"
+    },
+    {
+      "species": "Pipistrellus kuhlii",
+      "old_key": "5218464",
+      "snapshot_key": "4J6KR"
+    },
+    {
+      "species": "Pipistrellus nathusii",
+      "old_key": "5218471",
+      "snapshot_key": "4J6L8"
+    },
+    {
+      "species": "Plecotus auritus",
+      "old_key": "5218507",
+      "snapshot_key": "4K2Z9"
+    },
+    {
+      "species": "Rhinolophus ferrumequinum",
+      "old_key": "2432655",
+      "snapshot_key": "4S97C"
+    },
+    {
+      "species": "Rhinolophus hipposideros",
+      "old_key": "2432614",
+      "snapshot_key": "4S97S"
+    },
+    {
+      "species": "Vespertilio murinus",
+      "old_key": "2432564",
+      "snapshot_key": "7FQRQ"
+    }
+  ],
+  "coverage_before_roster_gate": [
+    {
+      "species_key": "2432359",
+      "cells": 443,
+      "blocks_ge5": 16,
+      "pass": true
+    },
+    {
+      "species_key": "2432389",
+      "cells": 91,
+      "blocks_ge5": 6,
+      "pass": true
+    },
+    {
+      "species_key": "2432416",
+      "cells": 93,
+      "blocks_ge5": 7,
+      "pass": true
+    },
+    {
+      "species_key": "2432439",
+      "cells": 243,
+      "blocks_ge5": 12,
+      "pass": true
+    },
+    {
+      "species_key": "2432470",
+      "cells": 84,
+      "blocks_ge5": 4,
+      "pass": true
+    },
+    {
+      "species_key": "2432564",
+      "cells": 50,
+      "blocks_ge5": 4,
+      "pass": true
+    },
+    {
+      "species_key": "2432614",
+      "cells": 105,
+      "blocks_ge5": 6,
+      "pass": true
+    },
+    {
+      "species_key": "2432655",
+      "cells": 101,
+      "blocks_ge5": 4,
+      "pass": true
+    },
+    {
+      "species_key": "5218464",
+      "cells": 242,
+      "blocks_ge5": 11,
+      "pass": true
+    },
+    {
+      "species_key": "5218471",
+      "cells": 206,
+      "blocks_ge5": 7,
+      "pass": true
+    },
+    {
+      "species_key": "5218507",
+      "cells": 358,
+      "blocks_ge5": 9,
+      "pass": true
+    },
+    {
+      "species_key": "5218522",
+      "cells": 234,
+      "blocks_ge5": 12,
+      "pass": true
+    },
+    {
+      "species_key": "5218524",
+      "cells": 491,
+      "blocks_ge5": 19,
+      "pass": true
+    },
+    {
+      "species_key": "9754263",
+      "cells": 85,
+      "blocks_ge5": 5,
+      "pass": true
+    }
+  ],
+  "eligible_shared_taxa": 14,
+  "eligible_south_records": 9705,
+  "eligible_south_species_cells": 2826,
+  "main_sdm_admitted": false,
+  "limitations": [
+    "Fixed snapshot may share observations with November pilot; A is not independent replication.",
+    "Observed label allocation, no inference of nonoccurrence or calibrated habitat preference.",
+    "No terrain/roost/effort causal controls; keyword screening only, missing fields unknown.",
+    "Within GVSM training latitude only; northern predictions not used in primary validation."
+  ],
+  "overlap": {
+    "recorded_cells": 1763,
+    "cells_overlapping_pilot": 1635,
+    "comparison_sources": 42,
+    "sources_overlapping_pilot": 36,
+    "comparison_blocks": 50,
+    "blocks_overlapping_pilot": 47,
+    "novel_blocks": 3,
+    "comparisons": 34350,
+    "pair_stratum_groups": 1685
+  },
+  "A": {
+    "status": "COMPLETE_DESCRIPTIVE_ONLY",
+    "support": {
+      "blocks": 50,
+      "fold_blocks": [
+        10,
+        10,
+        10,
+        10,
+        10
+      ],
+      "contributing_taxa": 14,
+      "comparisons": 34350
+    },
+    "scores": {
+      "B0": -0.6931471805599625,
+      "B1": -0.6734177167084234,
+      "B2": -0.6635749438561562,
+      "B3": -0.6671405056225639
+    },
+    "gains": {
+      "B1_B0": 0.019729463851539064,
+      "B2_B1": 0.009842772852267201,
+      "B3_B2": -0.0035655617664076544,
+      "B3_B1": 0.0062772110858595465
+    },
+    "scored_blocks": 50,
+    "scored_comparisons": 34350,
+    "positive_blocks_profile": 32,
+    "profile_block_gain_quantiles": [
+      -0.009459468070914152,
+      0.006637922241284122,
+      0.04555639357565225
+    ],
+    "profile_omission_mean_range": [
+      0.008385485156451723,
+      0.011331555362943295
+    ],
+    "block_gains": [
+      0.03276674064270135,
+      0.019200041311663307,
+      -0.063107570170861,
+      -0.0061200819110170945,
+      0.048661432102969915,
+      -0.005053965584614906,
+      -0.005573272763147008,
+      0.010949525257429205,
+      -0.0011780218332684278,
+      -0.00976517229056939,
+      -0.007988708884910434,
+      0.01418595932527944,
+      -0.023193627483664825,
+      0.008447693267832679,
+      -0.009085829580224414,
+      0.009741345039986915,
+      -0.0011112974382742058,
+      0.030998606929239725,
+      0.005934555647155948,
+      -0.002814289453377916,
+      -0.006800327943028761,
+      0.00023388633015342108,
+      0.036437300194889444,
+      -0.006220121044313354,
+      0.016628826941321728,
+      0.003928707605627468,
+      0.0042368243697163965,
+      -0.002706834834272809,
+      0.08124986994722616,
+      -0.0008539971026637616,
+      0.012204826662023716,
+      0.006426721994178597,
+      0.006849122488389647,
+      0.01527917223076447,
+      -0.0026033444088724433,
+      0.01768857405823332,
+      0.009034082016586398,
+      0.035804781843154554,
+      0.010905292405866795,
+      0.00001653691328018514,
+      0.006899111693575932,
+      0.041761346486708484,
+      0.029403157107521616,
+      -0.0032650424406380774,
+      0.07952392407817155,
+      0.013691249979833953,
+      0.02587690135559373,
+      0.004889829951991276,
+      -0.003912490450489581,
+      0.01363669205250162
+    ],
+    "folds": [
+      {
+        "fold": 1,
+        "scores": {
+          "B0": -0.6931471805599454,
+          "B1": -0.6468643885346176,
+          "B2": -0.6391566332076765,
+          "B3": -0.6460753540596206
+        },
+        "gains": {
+          "B1_B0": 0.04628279202532781,
+          "B2_B1": 0.007707755326941124,
+          "B3_B2": -0.006918720851944116,
+          "B3_B1": 0.000789034474997008
+        },
+        "scored_blocks": 10,
+        "scored_comparisons": 2407,
+        "positive_blocks_profile": 7,
+        "profile_block_gain_quantiles": [
+          -0.007453937461063803,
+          0.008320228366781535,
+          0.02598156567969113
+        ],
+        "profile_omission_mean_range": [
+          0.004923423625191856,
+          0.009451806906037648
+        ],
+        "block_gains": [
+          0.032766740642701464,
+          -0.00505396558461485,
+          -0.007988708884910656,
+          0.009741345039986915,
+          -0.006800327943028761,
+          0.00392870760562658,
+          0.012204826662023605,
+          0.017688574058234097,
+          0.006899111693576154,
+          0.01369124997983362
+        ],
+        "optimizers": [
+          {
+            "model": "B1",
+            "success": true,
+            "iterations": 17,
+            "max_abs_gradient": 4.30691232786661e-7
+          },
+          {
+            "model": "B2",
+            "success": true,
+            "iterations": 17,
+            "max_abs_gradient": 7.208503698340581e-7
+          },
+          {
+            "model": "B3",
+            "success": true,
+            "iterations": 17,
+            "max_abs_gradient": 3.955978688865991e-7
+          }
+        ],
+        "gamma_AR_profile": -0.09723048559947785
+      },
+      {
+        "fold": 2,
+        "scores": {
+          "B0": -0.6931471805599204,
+          "B1": -0.6813007483631468,
+          "B2": -0.6698736290642989,
+          "B3": -0.6681647245878506
+        },
+        "gains": {
+          "B1_B0": 0.011846432196773615,
+          "B2_B1": 0.011427119298847876,
+          "B3_B2": 0.0017089044764483363,
+          "B3_B1": 0.013136023775296213
+        },
+        "scored_blocks": 10,
+        "scored_comparisons": 8831,
+        "positive_blocks_profile": 8,
+        "profile_block_gain_quantiles": [
+          -0.0035653838669542468,
+          0.007730402005382719,
+          0.034613346177706825
+        ],
+        "profile_omission_mean_range": [
+          0.008056649611306095,
+          0.013316051750178927
+        ],
+        "block_gains": [
+          0.019200041311663307,
+          -0.005573272763147008,
+          0.01418595932527933,
+          -0.0011112974382742058,
+          0.00023388633015331006,
+          0.0042368243697209484,
+          0.006426721994179263,
+          0.009034082016586176,
+          0.041761346486708484,
+          0.02587690135559373
+        ],
+        "optimizers": [
+          {
+            "model": "B1",
+            "success": true,
+            "iterations": 17,
+            "max_abs_gradient": 4.915669226507845e-7
+          },
+          {
+            "model": "B2",
+            "success": true,
+            "iterations": 16,
+            "max_abs_gradient": 1.5149219674851985e-7
+          },
+          {
+            "model": "B3",
+            "success": true,
+            "iterations": 18,
+            "max_abs_gradient": 2.498030778601973e-7
+          }
+        ],
+        "gamma_AR_profile": -0.03432722421193418
+      },
+      {
+        "fold": 3,
+        "scores": {
+          "B0": -0.6931471805599444,
+          "B1": -0.6695017928058545,
+          "B2": -0.6628693636774731,
+          "B3": -0.6672478334001472
+        },
+        "gains": {
+          "B1_B0": 0.023645387754089864,
+          "B2_B1": 0.006632429128381467,
+          "B3_B2": -0.004378469722674083,
+          "B3_B1": 0.002253959405707384
+        },
+        "scored_blocks": 10,
+        "scored_comparisons": 463,
+        "positive_blocks_profile": 7,
+        "profile_block_gain_quantiles": [
+          -0.04514629596162277,
+          0.008899323872909592,
+          0.03615266693660887
+        ],
+        "profile_omission_mean_range": [
+          0.0033207767876586736,
+          0.014381317939408746
+        ],
+        "block_gains": [
+          -0.063107570170861,
+          0.010949525257429427,
+          -0.023193627483664936,
+          0.030998606929239725,
+          0.036437300194889666,
+          -0.0027068348342723647,
+          0.006849122488389758,
+          0.035804781843154554,
+          0.02940315710752106,
+          0.004889829951991831
+        ],
+        "optimizers": [
+          {
+            "model": "B1",
+            "success": true,
+            "iterations": 16,
+            "max_abs_gradient": 3.6470705317044605e-7
+          },
+          {
+            "model": "B2",
+            "success": true,
+            "iterations": 15,
+            "max_abs_gradient": 6.622040507869159e-8
+          },
+          {
+            "model": "B3",
+            "success": true,
+            "iterations": 18,
+            "max_abs_gradient": 2.6917416629489155e-7
+          }
+        ],
+        "gamma_AR_profile": 0.021075055604607755
+      },
+      {
+        "fold": 4,
+        "scores": {
+          "B0": -0.6931471805599535,
+          "B1": -0.6805035291383992,
+          "B2": -0.6703914465564847,
+          "B3": -0.6706536128620122
+        },
+        "gains": {
+          "B1_B0": 0.012643651421554325,
+          "B2_B1": 0.010112082581914428,
+          "B3_B2": -0.0002621663055274448,
+          "B3_B1": 0.009849916276386983
+        },
+        "scored_blocks": 10,
+        "scored_comparisons": 13384,
+        "positive_blocks_profile": 5,
+        "profile_block_gain_quantiles": [
+          -0.006175103434330098,
+          0.002378266906947535,
+          0.05156305597481828
+        ],
+        "profile_omission_mean_range": [
+          0.0022078839857666934,
+          0.01192677187371554
+        ],
+        "block_gains": [
+          -0.0061200819110170945,
+          -0.0011780218332609893,
+          0.008447693267832679,
+          0.005934555647156059,
+          -0.006220121044313465,
+          0.08124986994722616,
+          0.01527917223076436,
+          0.010905292405866907,
+          -0.0032650424406389655,
+          -0.003912490450489248
+        ],
+        "optimizers": [
+          {
+            "model": "B1",
+            "success": true,
+            "iterations": 16,
+            "max_abs_gradient": 6.8642822023679e-8
+          },
+          {
+            "model": "B2",
+            "success": true,
+            "iterations": 17,
+            "max_abs_gradient": 6.724573678451584e-8
+          },
+          {
+            "model": "B3",
+            "success": true,
+            "iterations": 16,
+            "max_abs_gradient": 9.817517852145352e-8
+          }
+        ],
+        "gamma_AR_profile": -0.06091997506015299
+      },
+      {
+        "fold": 5,
+        "scores": {
+          "B0": -0.6931471805599221,
+          "B1": -0.6889181247000972,
+          "B2": -0.6755836467748444,
+          "B3": -0.6835610032031948
+        },
+        "gains": {
+          "B1_B0": 0.004229055859824915,
+          "B2_B1": 0.013334477925252775,
+          "B3_B2": -0.007977356428350402,
+          "B3_B1": 0.005357121496902373
+        },
+        "scored_blocks": 10,
+        "scored_comparisons": 9265,
+        "positive_blocks_profile": 5,
+        "profile_block_gain_quantiles": [
+          -0.009459468070914473,
+          -0.00041873009469134415,
+          0.06563580268933078
+        ],
+        "profile_omission_mean_range": [
+          0.005980095019373466,
+          0.015901105727011262
+        ],
+        "block_gains": [
+          0.048661432102969915,
+          -0.009765172290568613,
+          -0.009085829580226079,
+          -0.002814289453383023,
+          0.016628826941322172,
+          -0.0008539971026628734,
+          -0.0026033444088725544,
+          0.00001653691328018514,
+          0.07952392407817155,
+          0.013636692052502064
+        ],
+        "optimizers": [
+          {
+            "model": "B1",
+            "success": true,
+            "iterations": 17,
+            "max_abs_gradient": 5.984046284185363e-8
+          },
+          {
+            "model": "B2",
+            "success": true,
+            "iterations": 17,
+            "max_abs_gradient": 3.0783183565044614e-7
+          },
+          {
+            "model": "B3",
+            "success": true,
+            "iterations": 18,
+            "max_abs_gradient": 2.718672479709583e-7
+          }
+        ],
+        "gamma_AR_profile": -0.08608635925537012
+      }
+    ],
+    "positive_folds_profile": 5,
+    "screen": true
+  },
+  "B": {
+    "status": "STOP_INSUFFICIENT_NOVEL_BLOCK_SUPPORT",
+    "shared_taxa_from_support": 13,
+    "training_coverage": [
+      {
+        "species_key": "2432359",
+        "cells": 423,
+        "blocks_ge5": 15,
+        "pass": true
+      },
+      {
+        "species_key": "2432389",
+        "cells": 90,
+        "blocks_ge5": 6,
+        "pass": true
+      },
+      {
+        "species_key": "2432416",
+        "cells": 92,
+        "blocks_ge5": 7,
+        "pass": true
+      },
+      {
+        "species_key": "2432439",
+        "cells": 232,
+        "blocks_ge5": 12,
+        "pass": true
+      },
+      {
+        "species_key": "2432470",
+        "cells": 73,
+        "blocks_ge5": 4,
+        "pass": true
+      },
+      {
+        "species_key": "2432564",
+        "cells": 48,
+        "blocks_ge5": 4,
+        "pass": true
+      },
+      {
+        "species_key": "2432614",
+        "cells": 104,
+        "blocks_ge5": 6,
+        "pass": true
+      },
+      {
+        "species_key": "2432655",
+        "cells": 76,
+        "blocks_ge5": 4,
+        "pass": true
+      },
+      {
+        "species_key": "5218464",
+        "cells": 227,
+        "blocks_ge5": 10,
+        "pass": true
+      },
+      {
+        "species_key": "5218471",
+        "cells": 203,
+        "blocks_ge5": 7,
+        "pass": true
+      },
+      {
+        "species_key": "5218507",
+        "cells": 355,
+        "blocks_ge5": 9,
+        "pass": true
+      },
+      {
+        "species_key": "5218522",
+        "cells": 227,
+        "blocks_ge5": 12,
+        "pass": true
+      },
+      {
+        "species_key": "5218524",
+        "cells": 481,
+        "blocks_ge5": 18,
+        "pass": true
+      },
+      {
+        "species_key": "9754263",
+        "cells": 85,
+        "blocks_ge5": 5,
+        "pass": true
+      }
+    ],
+    "overlap": {
+      "recorded_cells": 1723,
+      "cells_overlapping_pilot": 1595,
+      "comparison_sources": 42,
+      "sources_overlapping_pilot": 36,
+      "comparison_blocks": 50,
+      "blocks_overlapping_pilot": 47,
+      "novel_blocks": 3,
+      "comparisons": 30898,
+      "pair_stratum_groups": 1462
+    },
+    "support": {
+      "train_blocks": 47,
+      "novel_test_blocks": 3,
+      "train_taxa": 13,
+      "test_taxa": 6,
+      "train_comparisons": 30894,
+      "test_comparisons": 4,
+      "train_test_source_overlap": 1
+    }
+  },
+  "status": "VALIDATION_FINISHED_WITH_SUPPORT_GATES",
+  "audit": {
+    "run_id": 45599009912,
+    "job_id": 139152609674,
+    "artifact_id": 15014187887,
+    "registry_digest": "sha256:dcafd0822bf95ef4d9d548437e67bf2bdefb758dc0c4661e2ca28b2670a88176",
+    "head_sha": "e067d9b96febcdc5ff9999504f13b16a7f2601b4",
+    "checks": {
+      "artifact_registry_agrees_with_log": true,
+      "score_delta": true,
+      "block_mean": true,
+      "block_count": true,
+      "fold_count": true,
+      "fold_comparisons": true,
+      "positive_folds": true,
+      "positive_blocks": true,
+      "all_optimizers": true,
+      "novel_gate_stop": true
+    },
+    "scope": "Exact completed job aggregate and registry/upload digest. Archive ZIP not independently rehashed in this session."
+  }
+}
