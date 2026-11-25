@@ -47,12 +47,16 @@ def audit():
     for name,region in REGIONS.items():
         l,b,r,t=region["bbox"]
         where=C("order")+"='Chiroptera' AND "+C("countrycode")+" IN ("+",".join(map(lit,region["countries"]))+") AND "+C("decimallongitude")+f" BETWEEN {l} AND {r} AND "+C("decimallatitude")+f" BETWEEN {b} AND {t}"
-        con.execute("CREATE OR REPLACE TEMP TABLE regional AS SELECT "+projection+" FROM "+src+" WHERE "+where)
-        n=con.execute("SELECT count(*) FROM regional").fetchone()[0]
-        if n>4_000_000:raise RuntimeError("fixed region audit row budget exceeded")
+        # Count historical rows without materializing them; materialize only the frozen dates.
+        date_filter="TRY_CAST("+C("eventdate")+" AS DATE) BETWEEN DATE '2019-04-17' AND DATE '2023-03-16'"
+        n,nd=con.execute("SELECT count(*), count(*) FILTER (WHERE "+date_filter+") FROM "+src+" WHERE "+where).fetchone()
+        report["regions"][name]={"historical_coordinate_rows":int(n),"within_frozen_date_rows":int(nd),"status":"DATE_COUNT_READY"};save()
+        if nd>4_000_000:raise RuntimeError("within-date audit row budget exceeded: "+str(nd))
+        con.execute("CREATE OR REPLACE TEMP TABLE regional AS SELECT "+projection+" FROM "+src+" WHERE "+where+" AND "+date_filter)
+        assert con.execute("SELECT count(*) FROM regional").fetchone()[0]==nd
         current="TRUE"
-        rows=[{"step":"regional_named_order_with_numeric_coordinates","records":n}]
-        for key,check in checks:
+        rows=[{"step":"regional_named_order_with_numeric_coordinates","records":n},{"step":"date","records":nd,"lost_at_step":n-nd}]
+        for key,check in checks[1:]:
             current+=" AND ("+check+")"
             nn=con.execute("SELECT count(*) FROM regional WHERE "+current).fetchone()[0]
             rows.append({"step":key,"records":nn,"lost_at_step":rows[-1]["records"]-nn})
@@ -105,7 +109,9 @@ def nabat():
     save()
 if __name__=="__main__":
     try:
-        audit();nabat()
+        try:nabat()
+        except Exception as e:report["nabat"].update(status="METADATA_ERROR",error=type(e).__name__+": "+str(e)[:220]);save()
+        audit()
         report["status"]="ATTRITION_DIAGNOSIS_COMPLETE";save()
     except Exception as e:
         report.update(status="INCOMPLETE",error=type(e).__name__+": "+str(e)[:300]);save();raise
