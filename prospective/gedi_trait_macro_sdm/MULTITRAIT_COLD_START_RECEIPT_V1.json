@@ -1,0 +1,469 @@
+{
+  "stage": "post-pilot multitrait cold-start diagnostic, not an SDM",
+  "source_sha256": "5bd65cd8c56bac84c033a4972064622c172554a676d198868ef0776c49a2786b",
+  "comparisons": 31601,
+  "blocks": 51,
+  "species": 14,
+  "trait_sources": {
+    "physical": "10.5281/zenodo.7226367",
+    "roost": "10.6084/m9.figshare.21777161.v2"
+  },
+  "trait_columns": [
+    "AR",
+    "log_WL",
+    "log_body_mass",
+    "log_frequency_geometric_midpoint",
+    "log_mean_call_duration"
+  ],
+  "roost_category_counts": {
+    "human-made roost": 1,
+    "tree roost": 7,
+    "thermally stable underground roosts": 5,
+    "rock crevices": 1
+  },
+  "foraging_trait_dictionary": [
+    {
+      "Category": "foraging_habitat",
+      "Name": "SpeciesHabitatSpecializationIndex",
+      "Unit": "NA",
+      "Type": "Quantitative_continuous",
+      "Definition": "Species habitat specialisation index: degree of specialisation of a species in its use of a habitat for foraging/commuting calculated using the coefficient of variation: higher values indicate high level of specialisation towards a given habitat.",
+      "comments": ""
+    },
+    {
+      "Category": "foraging_habitat",
+      "Name": "DeciduousForestAffinitySmallScale",
+      "Unit": "NA",
+      "Type": "Quantitative_continuous",
+      "Definition": "Estimated response to decideous forest at 50 m radius buffer scale calculated from generalized linear mixed model",
+      "comments": ""
+    },
+    {
+      "Category": "foraging_habitat",
+      "Name": "ConiferousForestAffinitySmallScale",
+      "Unit": "NA",
+      "Type": "Quantitative_continuous",
+      "Definition": "Estimated response to coniferous forest at 50 m radius buffer scale calculated from generalized linear mixed model",
+      "comments": ""
+    },
+    {
+      "Category": "foraging_habitat",
+      "Name": "DenseUrbanAreaAffinitySmallScale",
+      "Unit": "NA",
+      "Type": "Quantitative_continuous",
+      "Definition": "Estimated response to dense urban area at 50 m radius buffer scale calculated from generalized linear mixed model",
+      "comments": ""
+    },
+    {
+      "Category": "foraging_habitat",
+      "Name": "FreshwaterAffinitySmallScale",
+      "Unit": "NA",
+      "Type": "Quantitative_continuous",
+      "Definition": "Estimated response to freshwater at 50 m radius buffer scale calculated from generalized linear mixed model",
+      "comments": ""
+    },
+    {
+      "Category": "foraging_habitat",
+      "Name": "CroplandAffinitySmallScale",
+      "Unit": "NA",
+      "Type": "Quantitative_continuous",
+      "Definition": "Estimated response to cropland at 50 m radius buffer scale calculated from generalized linear mixed model",
+      "comments": ""
+    },
+    {
+      "Category": "foraging_habitat",
+      "Name": "GrasslandAffinitySmallScale",
+      "Unit": "NA",
+      "Type": "Quantitative_continuous",
+      "Definition": "Estimated response to grassland at 50 m radius buffer scale calculated from generalized linear mixed model",
+      "comments": ""
+    },
+    {
+      "Category": "foraging_habitat",
+      "Name": "DeciduousForestAffinityMediumScale",
+      "Unit": "NA",
+      "Type": "Quantitative_continuous",
+      "Definition": "Estimated response to decideous forest at 500 m radius buffer scale calculated from generalized linear mixed model",
+      "comments": ""
+    },
+    {
+      "Category": "foraging_habitat",
+      "Name": "ConiferousForestAffinityMediumScale",
+      "Unit": "NA",
+      "Type": "Quantitative_continuous",
+      "Definition": "Estimated response to coniferous at 500 m radius buffer scale calculated from generalized linear mixed model",
+      "comments": ""
+    },
+    {
+      "Category": "foraging_habitat",
+      "Name": "DenseUrbanAreaAffinityMediumScale",
+      "Unit": "NA",
+      "Type": "Quantitative_continuous",
+      "Definition": "Estimated response to dense urban area at 500 m radius buffer scale calculated from generalized linear mixed model",
+      "comments": ""
+    },
+    {
+      "Category": "foraging_habitat",
+      "Name": "FreshwaterAffinityMediumScale",
+      "Unit": "NA",
+      "Type": "Quantitative_continuous",
+      "Definition": "Estimated response to freshwater at 500 m radius buffer scale calculated from generalized linear mixed model",
+      "comments": ""
+    },
+    {
+      "Category": "foraging_habitat",
+      "Name": "CroplandAffinityMediumScale",
+      "Unit": "NA",
+      "Type": "Quantitative_continuous",
+      "Definition": "Estimated response to cropland at 500 m radius buffer scale calculated from generalized linear mixed model",
+      "comments": ""
+    },
+    {
+      "Category": "foraging_habitat",
+      "Name": "GrasslandAffinityMediumScale",
+      "Unit": "NA",
+      "Type": "Quantitative_continuous",
+      "Definition": "Estimated response to grassland at 500 m radius buffer scale calculated from generalized linear mixed model",
+      "comments": ""
+    },
+    {
+      "Category": "foraging_habitat",
+      "Name": "DeciduousForestAffinityLargeScale",
+      "Unit": "NA",
+      "Type": "Quantitative_continuous",
+      "Definition": "Estimated response to cropland at 5000 m radius buffer scale calculated from generalized linear mixed model",
+      "comments": ""
+    },
+    {
+      "Category": "foraging_habitat",
+      "Name": "ConiferousForestAffinityLargeScale",
+      "Unit": "NA",
+      "Type": "Quantitative_continuous",
+      "Definition": "Estimated response to grassland at 5000 m radius buffer scale calculated from generalized linear mixed model",
+      "comments": ""
+    },
+    {
+      "Category": "foraging_habitat",
+      "Name": "DenseUrbanAreaAffinityLargeScale",
+      "Unit": "NA",
+      "Type": "Quantitative_continuous",
+      "Definition": "Estimated response to dense urban area at 5000 m radius buffer scale calculated from generalized linear mixed model",
+      "comments": ""
+    },
+    {
+      "Category": "foraging_habitat",
+      "Name": "FreshwaterAffinityLargeScale",
+      "Unit": "NA",
+      "Type": "Quantitative_continuous",
+      "Definition": "Estimated response to freshwater at 5000 m radius buffer scale calculated from generalized linear mixed model",
+      "comments": ""
+    },
+    {
+      "Category": "foraging_habitat",
+      "Name": "CroplandAffinityLargeScale",
+      "Unit": "NA",
+      "Type": "Quantitative_continuous",
+      "Definition": "Estimated response to cropland at 5000 m radius buffer scale calculated from generalized linear mixed model",
+      "comments": ""
+    },
+    {
+      "Category": "foraging_habitat",
+      "Name": "GrasslandAffinityLargeScale",
+      "Unit": "NA",
+      "Type": "Quantitative_continuous",
+      "Definition": "Estimated response to grassland at 5000 m radius buffer scale calculated from generalized linear mixed model",
+      "comments": ""
+    },
+    {
+      "Category": "foraging_habitat",
+      "Name": "CriticalFeedingAreasForest",
+      "Unit": "NA",
+      "Type": "Categorical_nominal",
+      "Definition": "Forest as critical feeding areas: yes, no",
+      "comments": ""
+    },
+    {
+      "Category": "foraging_habitat",
+      "Name": "CriticalFeedingAreasWoodedRiparianHabitat",
+      "Unit": "NA",
+      "Type": "Categorical_nominal",
+      "Definition": "Wooded riparian habitat as critical feeding areas: yes, no",
+      "comments": ""
+    },
+    {
+      "Category": "foraging_habitat",
+      "Name": "CriticalFeedingAreasWetland",
+      "Unit": "NA",
+      "Type": "Categorical_nominal",
+      "Definition": "Wetland as critical feeding areas: yes, no",
+      "comments": ""
+    },
+    {
+      "Category": "foraging_habitat",
+      "Name": "CriticalFeedingAreasWaterBodies",
+      "Unit": "NA",
+      "Type": "Categorical_nominal",
+      "Definition": "Water bodies as critical feeding areas: yes, no",
+      "comments": ""
+    },
+    {
+      "Category": "foraging_habitat",
+      "Name": "CriticalFeedingAreasGrassland",
+      "Unit": "NA",
+      "Type": "Categorical_nominal",
+      "Definition": "Grassland as critical feeding areas: yes, no",
+      "comments": ""
+    },
+    {
+      "Category": "foraging_habitat",
+      "Name": "CriticalFeedingAreasHedgerows",
+      "Unit": "NA",
+      "Type": "Categorical_nominal",
+      "Definition": "Hedgerows as critical feeding areas: yes, no",
+      "comments": ""
+    },
+    {
+      "Category": "foraging_habitat",
+      "Name": "CriticalFeedingAreasOrchard",
+      "Unit": "NA",
+      "Type": "Categorical_nominal",
+      "Definition": "Orchard as critical feeding areas: yes, no",
+      "comments": ""
+    },
+    {
+      "Category": "foraging_habitat",
+      "Name": "CriticalFeedingAreasShrubland",
+      "Unit": "NA",
+      "Type": "Categorical_nominal",
+      "Definition": "Shrubland as critical feeding areas: yes, no",
+      "comments": ""
+    },
+    {
+      "Category": "foraging_habitat",
+      "Name": "CriticalFeedingAreasOpenHabitat",
+      "Unit": "NA",
+      "Type": "Categorical_nominal",
+      "Definition": "Open habitat as critical feeding areas: yes, no",
+      "comments": ""
+    },
+    {
+      "Category": "foraging_habitat",
+      "Name": "CriticalFeedingAreasUrbanParKGarden",
+      "Unit": "NA",
+      "Type": "Categorical_nominal",
+      "Definition": "Urban park/garden as critical feeding areas: yes, no",
+      "comments": ""
+    }
+  ],
+  "foraging_trait_counts": {
+    "SpeciesHabitatSpecializationIndex": 27,
+    "FreshwaterAffinitySmallScale": 22,
+    "DenseUrbanAreaAffinitySmallScale": 22,
+    "CroplandAffinitySmallScale": 22,
+    "GrasslandAffinitySmallScale": 22,
+    "DeciduousForestAffinitySmallScale": 22,
+    "ConiferousForestAffinitySmallScale": 22,
+    "FreshwaterAffinityMediumScale": 22,
+    "DenseUrbanAreaAffinityMediumScale": 22,
+    "CroplandAffinityMediumScale": 22,
+    "GrasslandAffinityMediumScale": 22,
+    "DeciduousForestAffinityMediumScale": 22,
+    "ConiferousForestAffinityMediumScale": 22,
+    "FreshwaterAffinityLargeScale": 22,
+    "DenseUrbanAreaAffinityLargeScale": 22,
+    "CroplandAffinityLargeScale": 22,
+    "GrasslandAffinityLargeScale": 22,
+    "DeciduousForestAffinityLargeScale": 22,
+    "ConiferousForestAffinityLargeScale": 22,
+    "CriticalFeedingAreasForest": 47,
+    "CriticalFeedingAreasWoodedRiparianHabitat": 47,
+    "CriticalFeedingAreasWetland": 47,
+    "CriticalFeedingAreasWaterBodies": 47,
+    "CriticalFeedingAreasGrassland": 47,
+    "CriticalFeedingAreasHedgerows": 47,
+    "CriticalFeedingAreasOrchard": 47,
+    "CriticalFeedingAreasShrubland": 47,
+    "CriticalFeedingAreasOpenHabitat": 47,
+    "CriticalFeedingAreasUrbanParKGarden": 47
+  },
+  "explicit_foraging_mode_candidates": [],
+  "foraging_used": false,
+  "note": "Foraging habitat affinity not used; explicit functional modes require separate source review. Acoustic midpoint is not peak frequency. Fixed ridge penalty, no feature selection.",
+  "primary_sdm_admitted": false,
+  "tiers": {
+    "W": {
+      "complete_taxa": 14,
+      "complete_species": [
+        "2432359",
+        "2432389",
+        "2432416",
+        "2432439",
+        "2432470",
+        "2432564",
+        "2432614",
+        "2432655",
+        "5218464",
+        "5218471",
+        "5218507",
+        "5218522",
+        "5218524",
+        "9754263"
+      ],
+      "eligible_comparisons": 31601,
+      "score_names": [
+        "AR_base",
+        "AR_profile",
+        "tier_base",
+        "tier_profile"
+      ],
+      "skips": {
+        "support": 378
+      },
+      "status": "DIAGNOSTIC_COMPLETE",
+      "scored_comparisons": 14047,
+      "coverage_all": 0.44451124964399863,
+      "scored_taxa": 14,
+      "scored_blocks": 37,
+      "scored_pair_folds": 77,
+      "mean_scores": {
+        "AR_base": -0.7429144243601685,
+        "AR_profile": -0.7566000547531134,
+        "tier_base": -0.7927611935669756,
+        "tier_profile": -0.8389865748527623
+      },
+      "AR_profile_gain": -0.013685630392944903,
+      "tier_profile_gain": -0.04622538128578668,
+      "tier_vs_AR_profile": -0.08238652009964886,
+      "difference_of_gains": -0.03253975089284178,
+      "positive_blocks_tier_profile": 12,
+      "block_gain_quantiles": [
+        -0.2150408449818584,
+        -0.012537749771636244,
+        0.024069063534189146
+      ]
+    },
+    "WA": {
+      "complete_taxa": 14,
+      "complete_species": [
+        "2432359",
+        "2432389",
+        "2432416",
+        "2432439",
+        "2432470",
+        "2432564",
+        "2432614",
+        "2432655",
+        "5218464",
+        "5218471",
+        "5218507",
+        "5218522",
+        "5218524",
+        "9754263"
+      ],
+      "eligible_comparisons": 31601,
+      "score_names": [
+        "AR_base",
+        "AR_profile",
+        "tier_base",
+        "tier_profile"
+      ],
+      "skips": {
+        "support": 378
+      },
+      "status": "DIAGNOSTIC_COMPLETE",
+      "scored_comparisons": 14047,
+      "coverage_all": 0.44451124964399863,
+      "scored_taxa": 14,
+      "scored_blocks": 37,
+      "scored_pair_folds": 77,
+      "mean_scores": {
+        "AR_base": -0.7429144243601685,
+        "AR_profile": -0.7566000547531134,
+        "tier_base": -0.7575144146359861,
+        "tier_profile": -0.7470001744987579
+      },
+      "AR_profile_gain": -0.013685630392944903,
+      "tier_profile_gain": 0.010514240137228237,
+      "tier_vs_AR_profile": 0.009599880254355542,
+      "difference_of_gains": 0.02419987053017314,
+      "positive_blocks_tier_profile": 21,
+      "block_gain_quantiles": [
+        -0.07573245725820169,
+        0.0014883677038506767,
+        0.12816487429155649
+      ]
+    },
+    "WAR": {
+      "complete_taxa": 14,
+      "complete_species": [
+        "2432359",
+        "2432389",
+        "2432416",
+        "2432439",
+        "2432470",
+        "2432564",
+        "2432614",
+        "2432655",
+        "5218464",
+        "5218471",
+        "5218507",
+        "5218522",
+        "5218524",
+        "9754263"
+      ],
+      "eligible_comparisons": 31601,
+      "score_names": [
+        "AR_base",
+        "AR_profile",
+        "tier_base",
+        "tier_profile"
+      ],
+      "skips": {
+        "unknown_category_or_constant": 27,
+        "support": 378
+      },
+      "status": "DIAGNOSTIC_COMPLETE",
+      "scored_comparisons": 9690,
+      "coverage_all": 0.3066358659536091,
+      "scored_taxa": 12,
+      "scored_blocks": 34,
+      "scored_pair_folds": 50,
+      "mean_scores": {
+        "AR_base": -0.7449852133655589,
+        "AR_profile": -0.7581567296826585,
+        "tier_base": -0.8013107419519864,
+        "tier_profile": -0.7665700122079838
+      },
+      "AR_profile_gain": -0.013171516317099563,
+      "tier_profile_gain": 0.03474072974400255,
+      "tier_vs_AR_profile": -0.00841328252532536,
+      "difference_of_gains": 0.047912246061102115,
+      "positive_blocks_tier_profile": 22,
+      "block_gain_quantiles": [
+        -0.0495142981979417,
+        0.00825453513359717,
+        0.11799633284026978
+      ]
+    }
+  },
+  "status": "MULTITRAIT_DIAGNOSTIC_COMPLETE",
+  "limitations": [
+    "Same already inspected archive; not independent replication or actual distribution probability.",
+    "Same observation source/year/block does not establish shared effort or non-detection.",
+    "Small taxon count, complete-case and known-category coverage; tier gains not comparable across unmatched subsets.",
+    "No causal attribution to physical flight or acoustic mechanisms. No further outcome-driven tuning on this archive."
+  ],
+  "audit": {
+    "run_id": 45594105716,
+    "job_id": 139135534198,
+    "artifact_id": 15012716993,
+    "registry_digest": "sha256:422c36c41111f00aebcd92ec0ebd86d87109172a45d8136df8e5ef30f87a6688",
+    "head_sha": "e3a61d8e72bfd26fe34706441d0dacf2e8424768",
+    "checks": {
+      "artifact_digest_log": true,
+      "score_deltas": true,
+      "same_support_W_WA": true
+    },
+    "scope": "Exact completed job aggregate report and registry/upload digest; ZIP bytes not separately rehashed."
+  }
+}
