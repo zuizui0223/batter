@@ -1,0 +1,366 @@
+{
+  "stage": "joined original data; no ecological model; GVSM proxy not PAVD",
+  "source_files_sha256": {
+    "occurrence_physical_trait_join.csv": "aabef6ce174ec097be5afe159656f5dda49911d3b1dbd46368a90ae3df405ac7",
+    "gbif_iberia_qc_search.jsonl.gz": "7ad294e5b6a92b38b434b9cdaa30fa23242e0ab96ece9c3ab6399986405b1d7d",
+    "physical_trait_crosswalk.csv": "43bb5284308a9fe732beda51886172cb87268e5d00620eb27956d5808dae809f",
+    "bio1": "08ee9f1402d8be90a4f246eeb123e645152897351323fbe1442e399a68dbba2f",
+    "bio4": "03ca2fd97b4b1b8257e82e8fe7378c2b34f714e9c41019417e561209aafae974",
+    "bio5": "0b845f0d5dffae47b9c990542eea71ff0406e09bc9c593dd0648903ecdd1459c",
+    "bio6": "d428c1153dd7acb73353b460e85b3f3d2c87650bd52dc02e1a66b2721784884b",
+    "bio12": "edc256e5bbf65900df3af55795f0907f1ea360527aa8e95476b973ba2b44bd9d",
+    "bio15": "7b5660770f64f92427410de6039eaed972250dc6a0fe3db65ecd5876a7ed5a04",
+    "RH10": "90c58aa1e834d2564ce6d0ebecd3a22459585f90c2142c7c30c07102846f76a5",
+    "RH25": "83a98654a7d48bfe92a7e930b6a714217cfcf1c3beb3c71c9d65b82dea7ead00",
+    "RH50": "e450b51bd803e4cb5ff590ea34ac2abf08ebb7942540f453f5759887edfbd81a",
+    "RH75": "ad2bdedc090900dc9e93d43f730c92eadc0886dd5c72defd3c54732fdc90f4ca",
+    "RH90": "07a2a0bcde62d4d9e5731dd2ba6cca800d54e21700ee20cd400b3c303b53b53d",
+    "RH98": "8d46055ba839feeb0eefae21e69470812f49db3286a4358e11cfabc2f9348296",
+    "worldcover": "364ce79eb4b5c18f0c1117d88ad9a07b6186888190cfa20bdb3502f30e1411fe"
+  },
+  "shape": [
+    891,
+    1351
+  ],
+  "climate_valid_cells": 1203741,
+  "landcover_valid_cells": 899155,
+  "gvsm_valid_cells": 738901,
+  "gvsm_order_errors_on_supported": 0,
+  "joint_cells": 738901,
+  "joint_forest_cells": 294059,
+  "input_occurrence_records": 18779,
+  "input_species": 20,
+  "joined_records": 18779,
+  "joined_species": 20,
+  "joined_species_cells": 828,
+  "forest_records": 3620,
+  "forest_species": 20,
+  "forest_species_cells": 481,
+  "target_group_joined_records": 22060,
+  "target_group_cells": 364,
+  "all_support": [
+    {
+      "species_key": "5218465",
+      "species": "Pipistrellus pipistrellus",
+      "cells": 207,
+      "blocks_5_cells": 7,
+      "provisional_coverage_pass": true
+    },
+    {
+      "species_key": "2433009",
+      "species": "Tadarida teniotis",
+      "cells": 129,
+      "blocks_5_cells": 3,
+      "provisional_coverage_pass": false
+    },
+    {
+      "species_key": "5218464",
+      "species": "Pipistrellus kuhlii",
+      "cells": 123,
+      "blocks_5_cells": 1,
+      "provisional_coverage_pass": false
+    },
+    {
+      "species_key": "5218522",
+      "species": "Nyctalus leisleri",
+      "cells": 122,
+      "blocks_5_cells": 3,
+      "provisional_coverage_pass": false
+    },
+    {
+      "species_key": "2432439",
+      "species": "Myotis daubentonii",
+      "cells": 50,
+      "blocks_5_cells": 2,
+      "provisional_coverage_pass": false
+    },
+    {
+      "species_key": "2432655",
+      "species": "Rhinolophus ferrumequinum",
+      "cells": 42,
+      "blocks_5_cells": 3,
+      "provisional_coverage_pass": false
+    },
+    {
+      "species_key": "2432582",
+      "species": "Barbastella barbastellus",
+      "cells": 36,
+      "blocks_5_cells": 1,
+      "provisional_coverage_pass": false
+    },
+    {
+      "species_key": "2432614",
+      "species": "Rhinolophus hipposideros",
+      "cells": 36,
+      "blocks_5_cells": 2,
+      "provisional_coverage_pass": false
+    },
+    {
+      "species_key": "2432359",
+      "species": "Eptesicus serotinus",
+      "cells": 21,
+      "blocks_5_cells": 1,
+      "provisional_coverage_pass": false
+    },
+    {
+      "species_key": "9796816",
+      "species": "Miniopterus schreibersii",
+      "cells": 10,
+      "blocks_5_cells": 0,
+      "provisional_coverage_pass": false
+    },
+    {
+      "species_key": "5218471",
+      "species": "Pipistrellus nathusii",
+      "cells": 10,
+      "blocks_5_cells": 1,
+      "provisional_coverage_pass": false
+    },
+    {
+      "species_key": "2432470",
+      "species": "Myotis emarginatus",
+      "cells": 8,
+      "blocks_5_cells": 0,
+      "provisional_coverage_pass": false
+    },
+    {
+      "species_key": "5218524",
+      "species": "Nyctalus noctula",
+      "cells": 8,
+      "blocks_5_cells": 1,
+      "provisional_coverage_pass": false
+    },
+    {
+      "species_key": "5218507",
+      "species": "Plecotus auritus",
+      "cells": 8,
+      "blocks_5_cells": 0,
+      "provisional_coverage_pass": false
+    },
+    {
+      "species_key": "5218525",
+      "species": "Nyctalus lasiopterus",
+      "cells": 6,
+      "blocks_5_cells": 0,
+      "provisional_coverage_pass": false
+    },
+    {
+      "species_key": "5739437",
+      "species": "Plecotus austriacus",
+      "cells": 4,
+      "blocks_5_cells": 0,
+      "provisional_coverage_pass": false
+    },
+    {
+      "species_key": "2432621",
+      "species": "Rhinolophus euryale",
+      "cells": 3,
+      "blocks_5_cells": 0,
+      "provisional_coverage_pass": false
+    },
+    {
+      "species_key": "2432414",
+      "species": "Myotis blythii",
+      "cells": 2,
+      "blocks_5_cells": 0,
+      "provisional_coverage_pass": false
+    },
+    {
+      "species_key": "2432416",
+      "species": "Myotis myotis",
+      "cells": 2,
+      "blocks_5_cells": 0,
+      "provisional_coverage_pass": false
+    },
+    {
+      "species_key": "2432427",
+      "species": "Myotis bechsteinii",
+      "cells": 1,
+      "blocks_5_cells": 0,
+      "provisional_coverage_pass": false
+    }
+  ],
+  "forest_support": [
+    {
+      "species_key": "5218465",
+      "species": "Pipistrellus pipistrellus",
+      "cells": 111,
+      "blocks_5_cells": 3,
+      "provisional_coverage_pass": false
+    },
+    {
+      "species_key": "5218522",
+      "species": "Nyctalus leisleri",
+      "cells": 67,
+      "blocks_5_cells": 3,
+      "provisional_coverage_pass": false
+    },
+    {
+      "species_key": "5218464",
+      "species": "Pipistrellus kuhlii",
+      "cells": 67,
+      "blocks_5_cells": 1,
+      "provisional_coverage_pass": false
+    },
+    {
+      "species_key": "2433009",
+      "species": "Tadarida teniotis",
+      "cells": 67,
+      "blocks_5_cells": 1,
+      "provisional_coverage_pass": false
+    },
+    {
+      "species_key": "2432439",
+      "species": "Myotis daubentonii",
+      "cells": 32,
+      "blocks_5_cells": 1,
+      "provisional_coverage_pass": false
+    },
+    {
+      "species_key": "2432655",
+      "species": "Rhinolophus ferrumequinum",
+      "cells": 31,
+      "blocks_5_cells": 2,
+      "provisional_coverage_pass": false
+    },
+    {
+      "species_key": "2432582",
+      "species": "Barbastella barbastellus",
+      "cells": 27,
+      "blocks_5_cells": 1,
+      "provisional_coverage_pass": false
+    },
+    {
+      "species_key": "2432614",
+      "species": "Rhinolophus hipposideros",
+      "cells": 24,
+      "blocks_5_cells": 2,
+      "provisional_coverage_pass": false
+    },
+    {
+      "species_key": "2432359",
+      "species": "Eptesicus serotinus",
+      "cells": 10,
+      "blocks_5_cells": 1,
+      "provisional_coverage_pass": false
+    },
+    {
+      "species_key": "9796816",
+      "species": "Miniopterus schreibersii",
+      "cells": 7,
+      "blocks_5_cells": 0,
+      "provisional_coverage_pass": false
+    },
+    {
+      "species_key": "2432470",
+      "species": "Myotis emarginatus",
+      "cells": 7,
+      "blocks_5_cells": 0,
+      "provisional_coverage_pass": false
+    },
+    {
+      "species_key": "5218507",
+      "species": "Plecotus auritus",
+      "cells": 7,
+      "blocks_5_cells": 0,
+      "provisional_coverage_pass": false
+    },
+    {
+      "species_key": "5218471",
+      "species": "Pipistrellus nathusii",
+      "cells": 6,
+      "blocks_5_cells": 0,
+      "provisional_coverage_pass": false
+    },
+    {
+      "species_key": "5218525",
+      "species": "Nyctalus lasiopterus",
+      "cells": 5,
+      "blocks_5_cells": 0,
+      "provisional_coverage_pass": false
+    },
+    {
+      "species_key": "5218524",
+      "species": "Nyctalus noctula",
+      "cells": 4,
+      "blocks_5_cells": 0,
+      "provisional_coverage_pass": false
+    },
+    {
+      "species_key": "5739437",
+      "species": "Plecotus austriacus",
+      "cells": 3,
+      "blocks_5_cells": 0,
+      "provisional_coverage_pass": false
+    },
+    {
+      "species_key": "2432416",
+      "species": "Myotis myotis",
+      "cells": 2,
+      "blocks_5_cells": 0,
+      "provisional_coverage_pass": false
+    },
+    {
+      "species_key": "2432621",
+      "species": "Rhinolophus euryale",
+      "cells": 2,
+      "blocks_5_cells": 0,
+      "provisional_coverage_pass": false
+    },
+    {
+      "species_key": "2432427",
+      "species": "Myotis bechsteinii",
+      "cells": 1,
+      "blocks_5_cells": 0,
+      "provisional_coverage_pass": false
+    },
+    {
+      "species_key": "2432414",
+      "species": "Myotis blythii",
+      "cells": 1,
+      "blocks_5_cells": 0,
+      "provisional_coverage_pass": false
+    }
+  ],
+  "provisional_all_species_gate": 1,
+  "provisional_forest_species_gate": 0,
+  "original_PAVD_admission": false,
+  "limitations": [
+    "Live GBIF snapshot; no final DOI or source-level effort/roost/captive audit.",
+    "GVSM mean height quantiles, not vegetation density or 3D use.",
+    "Target group recorded support is not absence or a completed observation-effort model.",
+    "No terrain layer or model fit."
+  ],
+  "outputs": {
+    "species_cell_environment_source_year.csv.gz": {
+      "bytes": 86619,
+      "sha256": "ce20b48e7b83019d353876963d1a688460af800c479c91fdaa64ef4acaef8092"
+    },
+    "environment_1km.csv.gz": {
+      "bytes": 60049560,
+      "sha256": "c2d6b58868b8f67553ff87511effd4d48b895833d1cb44aace50c49bf9fde56a"
+    },
+    "target_group_cell_source_year.csv.gz": {
+      "bytes": 10685,
+      "sha256": "c1d6572adc1810c2b8e6579fd082f05c8ea6b15a2a6437eb1afe70ed5ceb979f"
+    }
+  },
+  "audit": {
+    "run_id": 45579099931,
+    "job_id": 139084305962,
+    "artifact_id": 15005453786,
+    "registry_digest": "sha256:8e3b510b482cc669f089a12cefb4ba748cb42482d359a87da746788f3537dacf",
+    "artifact_bytes": 60167965,
+    "head_sha": "0a5913ce4fd380af569a112421e0051662ce37a0",
+    "checks": {
+      "all_species_cells_reconcile": true,
+      "forest_species_cells_reconcile": true,
+      "all_records_joined": true,
+      "forest_subset": true,
+      "all_gates_reconcile": true,
+      "forest_gates_reconcile": true,
+      "no_order_errors": true
+    },
+    "scope": "Exact aggregate JSON parsed from successful Actions logs; artifact metadata verified; archive bytes not independently rehashed in chat."
+  }
+}
