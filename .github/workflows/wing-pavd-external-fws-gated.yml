@@ -1,0 +1,134 @@
+name: Wing PAVD frozen continental external test
+on:
+  push:
+    branches: [prospective/gedi-trait-macro-sdm-20261125]
+    paths:
+      - .github/workflows/wing-pavd-external-fws-gated.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: wing-pavd-fws-external-v1
+  cancel-in-progress: false
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 667fff8ac57c46f9923a33d17ad26b123a52b9bf
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          name: crane-physical-lsa-crosswalk-v1
+          run-id: 45717291943
+          github-token: ${{ github.token }}
+          path: wing
+      - uses: actions/download-artifact@v4
+        with:
+          name: wing-pavd-frozen-europe-transfer-model
+          run-id: 45718786057
+          github-token: ${{ github.token }}
+          path: frozen
+      - run: python -m pip install numpy pandas scipy
+      - run: python prospective/gedi_trait_macro_sdm/wing_pavd_external_gate_v1.py preflight
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: wing-pavd-external-preflight
+          path: wing_external_gate/report.json
+          if-no-files-found: warn
+  external:
+    needs: preflight
+    runs-on: ubuntu-latest
+    timeout-minutes: 145
+    env:
+      OPENBLAS_NUM_THREADS: "1"
+      OMP_NUM_THREADS: "1"
+      MKL_NUM_THREADS: "1"
+    steps:
+      - name: Bounded wait for original measured source run; do not duplicate live acquisition
+        id: predecessor
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          for i in $(seq 1 65); do
+            st=$(gh api "repos/$REPO/actions/runs/45717643905" --jq '.status')
+            if [ "$st" = completed ]; then
+              echo "ready=true" >> "$GITHUB_OUTPUT"
+              echo "PREDECESSOR_COMPLETED"
+              exit 0
+            fi
+            echo "PREDECESSOR_PENDING $i"
+            sleep 60
+          done
+          echo "ready=false" >> "$GITHUB_OUTPUT"
+          echo "STOP_PREDECESSOR_NOT_COMPLETE_WITHIN_BUDGET"
+      - uses: actions/checkout@v4
+        if: steps.predecessor.outputs.ready == 'true'
+        with:
+          ref: 667fff8ac57c46f9923a33d17ad26b123a52b9bf
+      - uses: actions/setup-python@v5
+        if: steps.predecessor.outputs.ready == 'true'
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        if: steps.predecessor.outputs.ready == 'true'
+        with:
+          name: fws-independent-measured-pavd-v1
+          run-id: 45717643905
+          github-token: ${{ github.token }}
+          path: predecessor
+      - uses: actions/download-artifact@v4
+        if: steps.predecessor.outputs.ready == 'true'
+        with:
+          name: crane-physical-lsa-crosswalk-v1
+          run-id: 45717291943
+          github-token: ${{ github.token }}
+          path: wing
+      - uses: actions/download-artifact@v4
+        if: steps.predecessor.outputs.ready == 'true'
+        with:
+          name: wing-pavd-frozen-europe-transfer-model
+          run-id: 45718786057
+          github-token: ${{ github.token }}
+          path: frozen
+      - name: Inspect predecessor admission before installing GIS dependencies or retrieving data
+        if: steps.predecessor.outputs.ready == 'true'
+        id: admitted
+        run: |
+          python - <<'PY'
+          import json,os,pathlib
+          d=json.loads(pathlib.Path("predecessor/report.json").read_text())
+          s=d.get("forest_comparison_support") or {}
+          ok=d.get("status") in {"COMPLETE_DESCRIPTIVE_INDEPENDENT_MEASURED_PAVD_DIAGNOSTIC","STOP_INSUFFICIENT_DISJOINT_SCORED_SUPPORT"}
+          ok=bool(ok and s.get("eligible_taxa",0)>=6 and s.get("comparison_taxa",0)>=6 and s.get("comparison_routes",0)>=10 and s.get("comparison_blocks",0)>=8 and s.get("comparisons",0)>=300 and s.get("comparison_cells",0)>=30)
+          print("PREDECESSOR_ADMISSION",ok,d.get("status"))
+          with open(os.environ["GITHUB_OUTPUT"],"a") as f:f.write("ready="+str(ok).lower()+"\n")
+          pathlib.Path("wing_external_gate").mkdir(exist_ok=True)
+          pathlib.Path("wing_external_gate/predecessor_gate.json").write_text(json.dumps({"admitted":ok,"status":d.get("status"),"support":s,"ecological_external_fit_run":False}))
+          PY
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq mdbtools
+        if: steps.admitted.outputs.ready == 'true'
+      - run: python -m pip install 'earthaccess>=0.14' 'rasterio>=1.4' requests numpy pandas scipy pyproj
+        if: steps.admitted.outputs.ready == 'true'
+      - run: python prospective/gedi_trait_macro_sdm/wing_pavd_external_gate_v1.py external
+        if: steps.admitted.outputs.ready == 'true'
+        timeout-minutes: 72
+        env:
+          EARTHDATA_TOKEN: ${{ secrets.EARTHDATA_TOKEN }}
+      - uses: actions/upload-artifact@v4
+        if: always() && steps.predecessor.outputs.ready == 'true'
+        with:
+          name: wing-pavd-fws-external-v1
+          path: |
+            wing_external_gate/
+            wing_pavd_transfer/external_report.json
+          if-no-files-found: warn
+          retention-days: 90
