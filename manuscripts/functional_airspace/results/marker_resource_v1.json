@@ -1,0 +1,64 @@
+{
+  "scope": "post-V3 secondary mechanism exploration; two camera localities; no true prey density, causal effect, new regions or 3D SDM",
+  "contract": "MARKER_RESOURCE_CONTRACT_V1.md",
+  "source_sha256": {
+    "cleaed_manual.output_27.11.2023.csv": "5b38a948d10488702c99bae21dd65fb511100b3b2025822c2a838e18f9313a71",
+    "Marker_night_inventory_0704.2022_edit_(2).csv": "dedcd14bffc2c29696b58b085ffd8de49fb7526eb24478eae13a5a73ed3a9561",
+    "raw_insect_data_tidied_27112023.csv": "f0dc944fccc73779dd5441510fa0a3d871baecaa87adc2aa14788ee13df3fcfb",
+    "README.md": "ff378f60cdeaf8e2246bd3b219f8095459237b5045cc32988e5dfe3911b08109",
+    "Turbines_(3).kml": "7704b87af5d0d4945a01e23573cce0655ff1edd14948237561531ffeeca4824d"
+  },
+  "source_zip_sha256": "077a71633049ee970ac9f164579ae6d3ba8c0f749a4624891eb4f2ae3b92741c",
+  "input_rows": 11420,
+  "valid_photos": 10644,
+  "unviable_photos": 776,
+  "camera_date_format": "MM.DD.YYYY, inconsistent with README",
+  "camera_keys_unique": true,
+  "ground_clock_alignment_verified": true,
+  "valid_photos_on_active_nights": 10644,
+  "paired_camera_hours_pre_night_gate": 785,
+  "paired_camera_hours": 783,
+  "paired_camera_nights": 78,
+  "photos_in_matched_hours": 8966,
+  "camera_nights_per_locality": [
+    31,
+    47
+  ],
+  "resource_contrast_quantiles": [
+    -0.8284885284297074,
+    -0.008875843235252128,
+    0.022066417083778222,
+    0.20826844558313234,
+    0.9036234266733896
+  ],
+  "matched_target_guild_passes": 1954,
+  "matched_feeding_passes": 285,
+  "both_pass_strata": 97,
+  "informative_strata": 43,
+  "informative_per_locality_guild": [
+    {
+      "locality": 1,
+      "guild": "SRE",
+      "n": 8
+    },
+    {
+      "locality": 1,
+      "guild": "LRE",
+      "n": 10
+    },
+    {
+      "locality": 2,
+      "guild": "SRE",
+      "n": 7
+    },
+    {
+      "locality": 2,
+      "guild": "LRE",
+      "n": 18
+    }
+  ],
+  "weeks_total": 9,
+  "weeks_both_localities": 5,
+  "support_gate": false,
+  "status": "STOP_INSUFFICIENT_MATCHED_RESOURCE_SUPPORT"
+}
