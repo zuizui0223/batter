@@ -1,0 +1,29 @@
+name: Functional space source recovery V44
+on:
+  push:
+    branches:
+      - prospective/trait-wind-roundtrip-20261124
+    paths:
+      - scripts/functional_space_external_v44.py
+      - .github/workflows/functional-space-external-v44.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install pandas numpy
+      - run: python scripts/functional_space_external_v44.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: functional-space-external-v44
+          path: results/functional_space_external_v44.json
+          if-no-files-found: error
+          retention-days: 60
