@@ -1,0 +1,352 @@
+{
+  "stage": "local measured versus predicted structure diagnostic; not occupancy or continental SDM",
+  "input_sha256": {
+    "fixed_environment/all_bat_species_cell_source_year_environment.csv.gz": "85ad737229aa7b10720a8d5c8bd0ea389f63f908c37871c7ce46ae87c9bed1d6",
+    "observation/source_cell_year_observation_flags.csv.gz": "de971292065a8aee3491880adb00a5623efae61bc83b2bd2ae4d663b45edf0f0",
+    "holdout/fixed_source_cell_year_holdout_masks.csv.gz": "6796dcc358dd1990cb3cca25b95fe068b52cce7a979ff8602ce639c5708e4b96",
+    "ecodes/matched_ecodes_gvsm_cells.csv.gz": "1a133c3932fd19aed8369c75544fd612bb11a18d06dbe99a3321b8fa1b8e2377"
+  },
+  "candidate_measured_cells": 375,
+  "matched_strict_northern_cells": 346,
+  "matched_species": 13,
+  "matched_species_cells": 1558,
+  "matched_records_before_label_deduplication_note": "records are screened before source-year-cell-label deduplication; no abundance weights",
+  "source_year_block_strata": 91,
+  "sources": 5,
+  "status": "DIAGNOSTIC_COMPLETE",
+  "limitations": [
+    "2014–15 ALS vs 2020 GVSM; all-return mean/H95 and waveform RH50/RH98 are distinct proxies.",
+    "Strictly disjoint prior archive providers and 200km blocks; new local 50km CV diagnostic only.",
+    "Same provider/year/block does not equal common effort; no absence or altitude inference.",
+    "Known-taxon predictions only; no primary SDM admission. Small local sample and source bias."
+  ],
+  "comparison_support": {
+    "comparisons": 28321,
+    "blocks": 24,
+    "sources": 5,
+    "taxa": 12,
+    "groups": 994,
+    "cells": 314
+  },
+  "block_cv": {
+    "status": "COMPLETE_DESCRIPTIVE_ONLY",
+    "scored_comparisons": 28259,
+    "coverage": 0.9978108117651213,
+    "scored_blocks": 24,
+    "scored_taxa": 11,
+    "scored_sources": 5,
+    "completed_folds": 5,
+    "completed_block_folds": 5,
+    "skips": {},
+    "scores": {
+      "B": -0.696109285369749,
+      "G": -0.6962018892276965,
+      "L": -0.6956289750338511,
+      "GL": -0.6958557259903891
+    },
+    "gains": {
+      "G_B": {
+        "gain": -0.00009260385794751524,
+        "positive_blocks": 10,
+        "block_quantiles": [
+          -0.004893890176353376,
+          -0.00008514302475660827,
+          0.004158432887056501
+        ],
+        "conditional_block_bootstrap_95": [
+          -0.0011280447062354678,
+          0.0008963291617474283
+        ]
+      },
+      "L_B": {
+        "gain": 0.0004803103358979044,
+        "positive_blocks": 13,
+        "block_quantiles": [
+          -0.003951257933680368,
+          0.00020212672778458358,
+          0.010102090977532136
+        ],
+        "conditional_block_bootstrap_95": [
+          -0.0013061213585967351,
+          0.002387454840326926
+        ]
+      },
+      "L_G": {
+        "gain": 0.0005729141938454196,
+        "positive_blocks": 14,
+        "block_quantiles": [
+          -0.006504805462753491,
+          0.000587776617571671,
+          0.009515685379180967
+        ],
+        "conditional_block_bootstrap_95": [
+          -0.0010757862417889452,
+          0.002327067019246709
+        ]
+      },
+      "GL_G": {
+        "gain": 0.0003461632373074064,
+        "positive_blocks": 12,
+        "block_quantiles": [
+          -0.004329670119998208,
+          0.000034150692475834666,
+          0.009411001534577313
+        ],
+        "conditional_block_bootstrap_95": [
+          -0.001325011846914001,
+          0.002191920876957653
+        ]
+      },
+      "GL_L": {
+        "gain": -0.00022675095653801325,
+        "positive_blocks": 10,
+        "block_quantiles": [
+          -0.005312431418365033,
+          -0.00016199098995497605,
+          0.004247361221439915
+        ],
+        "conditional_block_bootstrap_95": [
+          -0.0012203720363166545,
+          0.0007324011064673157
+        ]
+      }
+    },
+    "folds": [
+      {
+        "block_fold": 1,
+        "source_fold": null,
+        "test_comparisons": 6506,
+        "test_blocks": 5,
+        "test_sources": 4,
+        "scores": [
+          -0.7089840548014191,
+          -0.7075254627578956,
+          -0.7075168794116732,
+          -0.7062724294396605
+        ]
+      },
+      {
+        "block_fold": 2,
+        "source_fold": null,
+        "test_comparisons": 7743,
+        "test_blocks": 5,
+        "test_sources": 3,
+        "scores": [
+          -0.6957521634712875,
+          -0.696656830625176,
+          -0.6955500113866117,
+          -0.6968010927926086
+        ]
+      },
+      {
+        "block_fold": 3,
+        "source_fold": null,
+        "test_comparisons": 3310,
+        "test_blocks": 5,
+        "test_sources": 2,
+        "scores": [
+          -0.6874725460556602,
+          -0.6898567318115384,
+          -0.6892428789083955,
+          -0.6915259439900134
+        ]
+      },
+      {
+        "block_fold": 4,
+        "source_fold": null,
+        "test_comparisons": 533,
+        "test_blocks": 5,
+        "test_sources": 1,
+        "scores": [
+          -0.6875777227345963,
+          -0.6865181181272643,
+          -0.6857805334171847,
+          -0.6848642759251876
+        ]
+      },
+      {
+        "block_fold": 5,
+        "source_fold": null,
+        "test_comparisons": 10167,
+        "test_blocks": 4,
+        "test_sources": 3,
+        "scores": [
+          -0.7019226033898138,
+          -0.7015149062138345,
+          -0.7011609712982793,
+          -0.7008046782579881
+        ]
+      }
+    ]
+  },
+  "strict_source_block_cv": {
+    "status": "COMPLETE_DESCRIPTIVE_ONLY",
+    "scored_comparisons": 19451,
+    "coverage": 0.6868048444617069,
+    "scored_blocks": 17,
+    "scored_taxa": 11,
+    "scored_sources": 3,
+    "completed_folds": 5,
+    "completed_block_folds": 5,
+    "skips": {
+      "support": 20
+    },
+    "scores": {
+      "B": -0.7292684624560738,
+      "G": -0.7276358460371465,
+      "L": -0.7307445746896237,
+      "GL": -0.728862078616269
+    },
+    "gains": {
+      "G_B": {
+        "gain": 0.001632616418927313,
+        "positive_blocks": 9,
+        "block_quantiles": [
+          -0.003561484989077332,
+          0.0003462779007172505,
+          0.009170106053537179
+        ],
+        "conditional_block_bootstrap_95": [
+          -0.00026524538366591674,
+          0.003548213503621059
+        ]
+      },
+      "L_B": {
+        "gain": -0.001476112233549931,
+        "positive_blocks": 9,
+        "block_quantiles": [
+          -0.012081706537636483,
+          0.00004719319689449749,
+          0.0053558833232057014
+        ],
+        "conditional_block_bootstrap_95": [
+          -0.0045692715282468245,
+          0.0012974230003373686
+        ]
+      },
+      "L_G": {
+        "gain": -0.003108728652477244,
+        "positive_blocks": 8,
+        "block_quantiles": [
+          -0.02118114770348674,
+          -0.00020215587008171081,
+          0.006607214776306515
+        ],
+        "conditional_block_bootstrap_95": [
+          -0.007341457891546484,
+          0.000507521019710323
+        ]
+      },
+      "GL_G": {
+        "gain": -0.001226232579122466,
+        "positive_blocks": 8,
+        "block_quantiles": [
+          -0.01143610266181618,
+          -0.00012223015576949355,
+          0.005126304768974185
+        ],
+        "conditional_block_bootstrap_95": [
+          -0.004157612890473489,
+          0.0013533198818886758
+        ]
+      },
+      "GL_L": {
+        "gain": 0.001882496073354778,
+        "positive_blocks": 9,
+        "block_quantiles": [
+          -0.002763518203472227,
+          0.000059709727049685085,
+          0.010115802761448097
+        ],
+        "conditional_block_bootstrap_95": [
+          0.00004590771858818119,
+          0.0037857458121772114
+        ]
+      }
+    },
+    "folds": [
+      {
+        "block_fold": 1,
+        "source_fold": 3,
+        "test_comparisons": 16,
+        "test_blocks": 2,
+        "test_sources": 1,
+        "scores": [
+          -0.7253130984692215,
+          -0.7173226629308502,
+          -0.7319252277944089,
+          -0.7234803567998236
+        ]
+      },
+      {
+        "block_fold": 2,
+        "source_fold": 5,
+        "test_comparisons": 5681,
+        "test_blocks": 2,
+        "test_sources": 1,
+        "scores": [
+          -0.6977355246978582,
+          -0.6987649522992261,
+          -0.6982148988947824,
+          -0.6995091739259091
+        ]
+      },
+      {
+        "block_fold": 3,
+        "source_fold": 2,
+        "test_comparisons": 3294,
+        "test_blocks": 4,
+        "test_sources": 1,
+        "scores": [
+          -0.7185552012907437,
+          -0.7165701321336893,
+          -0.7197460254629997,
+          -0.7175069909130483
+        ]
+      },
+      {
+        "block_fold": 4,
+        "source_fold": 2,
+        "test_comparisons": 533,
+        "test_blocks": 5,
+        "test_sources": 1,
+        "scores": [
+          -0.7367053181662705,
+          -0.7371336444643722,
+          -0.7397219355738823,
+          -0.7395715277945581
+        ]
+      },
+      {
+        "block_fold": 5,
+        "source_fold": 2,
+        "test_comparisons": 9927,
+        "test_blocks": 4,
+        "test_sources": 1,
+        "scores": [
+          -0.748429804856188,
+          -0.746421350328689,
+          -0.7461959341559544,
+          -0.7441976681000282
+        ]
+      }
+    ]
+  },
+  "original_primary_sdm_admitted": false,
+  "audit": {
+    "run_id": 45642275218,
+    "job_id": 139303821426,
+    "artifact_id": 15035637628,
+    "registry_digest": "sha256:b5370bbd522794272cabb43a5a945ff61415eca4d9090aea0025bb40767f7015",
+    "head_sha": "42a191667b0e53e661ba442ae9abdc8a9ad47574",
+    "checks": {
+      "complete": true,
+      "scores_match": true,
+      "counts_match": true,
+      "main_not_admitted": true,
+      "registry_matches_log": true
+    },
+    "scope": "Successful job summary and registry/upload digest; actual ZIP not independently rehashed in this turn."
+  },
+  "interpretation": "No robust replacement rescue by measured ALS mean/H95. Local block CV L-B +0.000480, L-G +0.000573; strict block+source CV L-B -0.001476, L-G -0.003109. Conditional block bootstrap intervals for each of G-B, L-B, L-G and GL-G span zero under both designs. GL-L strict conditional interval narrowly positive but does not establish positive GL-G or a measured-profile rescue; all results retained. Different proxies, 2014–15 vs 2020 timing, source and geographic limitations; no causal partition of continental transfer failure."
+}
