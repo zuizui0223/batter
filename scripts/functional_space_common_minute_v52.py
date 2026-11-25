@@ -1,5 +1,5 @@
 """V52 common minute-bundle reference on separate, source-defined archived cohorts."""
-import concurrent.futures as cf,hashlib,json,pathlib,time
+import concurrent.futures as cf,hashlib,json,pathlib,time,traceback
 import numpy as np
 import pandas as pd
 import roeleke_minute_bundle_v50 as v50
@@ -7,6 +7,9 @@ import roeleke_functional_space_v46 as v46
 import roeleke_json_export_v48 as v48
 import hurme_detected_functional_space_v41 as v41
 from hurme_label_semantics_v40 import get,read
+from hurme_detected_functional_space_v41 import quant,distribution
+from hurme_functional_space_v42 import B,SEED,GRIDS,OFFSETS,metric,summarize
+from roeleke_minute_bundle_v50 import bundle_rotations
 OUT=pathlib.Path("results/functional_space_common_minute_v52.json")
 def prepare(d):
     x=d.copy();o={"raw_rows":len(x),"clock":"recorded minute; timezone not inferred"}
@@ -49,12 +52,60 @@ def prepare(d):
     if not len(gaps) or gaps.le(2).mean()<.5:return None,o,"STOP_COARSE_CONTINUITY"
     return x,o,"COMPLETE"
 
+def analyze(rows):
+    rng=np.random.default_rng(SEED);observed={};simulated={}
+    for r in rows:
+        n=len(r["marks"])
+        rot=bundle_rotations(r["bundles"],n,B,rng)
+        for kind,w in (("count",r["marks"]),("positive_fix",(r["marks"]>0).astype(int))):
+            expected=np.zeros(n)
+            for ix in r["groups"]:expected[ix]=float(w[ix].sum())/len(ix)
+            rw=w[rot];assert np.all(rw.sum(1)==w.sum())
+            for size in GRIDS:
+                aa=[];ss=[]
+                for off in OFFSETS:
+                    _,cc=np.unique(np.floor(r["xy"]/size-np.array(off)).astype(np.int64),axis=0,return_inverse=True)
+                    if off==(0.,0.):assert np.array_equal(cc,r["cells"][size])
+                    k=int(cc.max())+1
+                    ref=distribution(cc,expected,k);q=distribution(cc,w,k)
+                    aa.append(metric(q,ref))
+                    ss.append(np.asarray([metric(distribution(cc,z,k),ref) for z in rw]))
+                key=f"{kind}_{size}m";observed.setdefault(key,[]).append(np.stack(aa));simulated.setdefault(key,[]).append(np.stack(ss))
+    out={}
+    for key,a in observed.items():
+        a=np.stack(a);s=np.stack(simulated[key])
+        per=[summarize(rows,a[:,i,:],s[:,i,:,:]) for i in range(4)]
+        avg=summarize(rows,a.mean(1),s.mean(1))
+        for k in avg:
+            avg[k]["passing_origins"]=sum(p[k]["gate"] for p in per)
+            avg[k]["origin_robust_gate"]=bool(avg[k]["gate"] and avg[k]["passing_origins"]>=3)
+        out[key]={"origins":[{"offset":list(o),"metrics":p} for o,p in zip(OFFSETS,per)],"equal_origin":avg}
+    return out
+
+
+def end_to_end_test():
+    # Exercise complete analysis, rather than only rotation construction.
+    tables=[]
+    for a in range(2):
+        n=120
+        k=np.arange(n)
+        tables.append(pd.DataFrame({"animal":str(a),"tag":str(a),"site":"synthetic","t":pd.Timestamp("2018-07-01T21:00:00")+pd.to_timedelta(k//2,unit="min"),"lon":13.+.002*k,"lat":52.+.0002*k,"marks":(k%5==0).astype(np.int64)}))
+    rows,s=v50.collect(pd.concat(tables,ignore_index=True))
+    assert len(rows)==2 and s["fixes"]==240 and s["marks"]==48
+    assert s["movable_mark_fraction"]==1.0
+    z=analyze(rows)
+    assert set(z)=={f"{kind}_{size}m" for kind in ("count","positive_fix") for size in GRIDS}
+    for entry in z.values():
+        assert len(entry["origins"])==4
+        for m in entry["equal_origin"].values():
+            assert np.isfinite(m["observed"]) and np.isfinite(m["reference_mean"])
+    assert quant([1,2,3])[2]==2
 def primary(z):
     return {k:z[k+"_1000m"]["equal_origin"]["concentration_log_effective_cell_ratio"] for k in ("count","positive_fix")}
 def evaluate(rows,s,o):
     o["support"]=s
     if s["movable_mark_fraction"]<.5:o["status"]="STOP_LOW_ROTATABLE_SUPPORT";return o
-    z=v50.analyze(rows)
+    z=analyze(rows)
     o["results"]=z;o["primary"]=primary(z)
     o["gate"]=bool(all(x["origin_robust_gate"] for x in o["primary"].values()))
     o["status"]="COMPLETE"
@@ -114,12 +165,12 @@ def vivesi():
     return evaluate(rows,support,o)
 def safe(fn):
     try:return fn()
-    except Exception as e:return {"status":"STOP","error_type":type(e).__name__,"http_status":getattr(e,"code",None)}
+    except Exception as e:return {"status":"STOP","error_type":type(e).__name__,"http_status":getattr(e,"code",None),"trace_frames":[{"file":pathlib.Path(f.filename).name,"function":f.name,"line":f.lineno} for f in traceback.extract_tb(e.__traceback__)],"undefined_symbol":getattr(e,"name",None) if isinstance(e,NameError) else None}
 def run():
-    v50.test();v41.test()
+    v50.test();v41.test();end_to_end_test()
     # Independent seed initialization in each dataset; no pooling or matched individuals across species.
     a=safe(vivesi);b=safe(noctule)
-    return {"scope":"new V52 harmonized minute-resolution archived-track comparison; no exact article replication or causal claim","synthetic_tests":"PASS","reference":{"rotations":499,"seed":41025,"strata":"within deployment or animal; recorded hour x occupied-minute segment gap>3min x bundle size","grids_m":[1000,500,2000],"origins":4,"actual_audio_effort":"unknown"},"vivesi":a,"noctule":b,"common_reference_gate":bool(a.get("status")=="COMPLETE" and b.get("status")=="COMPLETE" and a.get("gate") and b.get("gate"))}
+    return {"scope":"new V52 harmonized minute-resolution archived-track comparison; no exact article replication or causal claim","synthetic_tests":"PASS including complete estimator","repair":"V52 implementation-only: import quant and bind n; preserve V50 historical code and all analytical settings","reference":{"rotations":499,"seed":41025,"strata":"within deployment or animal; recorded hour x occupied-minute segment gap>3min x bundle size","grids_m":[1000,500,2000],"origins":4,"actual_audio_effort":"unknown"},"vivesi":a,"noctule":b,"common_reference_gate":bool(a.get("status")=="COMPLETE" and b.get("status")=="COMPLETE" and a.get("gate") and b.get("gate"))}
 if __name__=="__main__":
     try:r=run()
     except Exception as e:r={"status":"STOP","error_type":type(e).__name__}
