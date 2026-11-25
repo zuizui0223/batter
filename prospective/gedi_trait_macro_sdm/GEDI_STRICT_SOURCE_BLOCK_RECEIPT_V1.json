@@ -1,0 +1,707 @@
+{
+  "status": "COMPLETE_DESCRIPTIVE_ONLY",
+  "strict_admitted_splits": 13,
+  "omitted": [
+    {
+      "fold": "block3_source1",
+      "train_pairs": 19000,
+      "test_pairs": 5874,
+      "train_blocks": 38,
+      "test_blocks": 2,
+      "test_providers": 2,
+      "test_taxa": 8,
+      "train_taxa": 14
+    },
+    {
+      "fold": "block3_source5",
+      "train_pairs": 10573,
+      "test_pairs": 92,
+      "train_blocks": 34,
+      "test_blocks": 2,
+      "test_providers": 2,
+      "test_taxa": 9,
+      "train_taxa": 14
+    }
+  ],
+  "strict": {
+    "comparisons": 20327,
+    "blocks": 44,
+    "providers": 28,
+    "taxa": 14,
+    "scores": {
+      "neutral": -0.6931471805599462,
+      "TLG": -0.6258841411571562,
+      "TLG+R50": -0.6212940241237651,
+      "TLG+PAVD": -0.6318892177242108,
+      "TLG+R50+PAVD": -0.6267366059813657
+    }
+  },
+  "species_slopes": [
+    {
+      "species": "Eptesicus serotinus",
+      "species_key": "2432359",
+      "spatial_r50_per_0.1": {
+        "n": 5,
+        "median": -0.035398276597289974,
+        "min": -0.06108942843576748,
+        "max": -0.017871094086638863,
+        "positive": 0,
+        "negative": 5
+      },
+      "spatial_pavd_fraction_per_0.1": {
+        "n": 5,
+        "median": 0.03761219378988043,
+        "min": 0.02160386782647452,
+        "max": 0.05801497770737225,
+        "positive": 5,
+        "negative": 0
+      },
+      "strict_r50_per_0.1": {
+        "n": 13,
+        "median": -0.04207977005882228,
+        "min": -0.08596601040790179,
+        "max": -0.014673435976592175,
+        "positive": 0,
+        "negative": 13
+      },
+      "strict_pavd_fraction_per_0.1": {
+        "n": 13,
+        "median": 0.04072047713718911,
+        "min": 0.012172538904548063,
+        "max": 0.05916051768950725,
+        "positive": 13,
+        "negative": 0
+      }
+    },
+    {
+      "species": "Myotis nattereri",
+      "species_key": "2432389",
+      "spatial_r50_per_0.1": {
+        "n": 5,
+        "median": 0.03287006639461695,
+        "min": 0.030397031087440515,
+        "max": 0.04310019777905927,
+        "positive": 5,
+        "negative": 0
+      },
+      "spatial_pavd_fraction_per_0.1": {
+        "n": 5,
+        "median": 0.016035027966871368,
+        "min": -0.010497572581569359,
+        "max": 0.025297820008731153,
+        "positive": 4,
+        "negative": 1
+      },
+      "strict_r50_per_0.1": {
+        "n": 13,
+        "median": 0.030875365289354913,
+        "min": 0.014152966844957796,
+        "max": 0.042732891586352184,
+        "positive": 13,
+        "negative": 0
+      },
+      "strict_pavd_fraction_per_0.1": {
+        "n": 13,
+        "median": 0.014554574094776722,
+        "min": -0.029803970997658188,
+        "max": 0.03768484420706289,
+        "positive": 9,
+        "negative": 4
+      }
+    },
+    {
+      "species": "Myotis myotis",
+      "species_key": "2432416",
+      "spatial_r50_per_0.1": {
+        "n": 5,
+        "median": 0.014930137242041903,
+        "min": 0.0005433865613308524,
+        "max": 0.022599721934904837,
+        "positive": 5,
+        "negative": 0
+      },
+      "spatial_pavd_fraction_per_0.1": {
+        "n": 5,
+        "median": -0.03861304007774697,
+        "min": -0.05215896392150542,
+        "max": -0.018237369660474668,
+        "positive": 0,
+        "negative": 5
+      },
+      "strict_r50_per_0.1": {
+        "n": 13,
+        "median": 0.01302949995999549,
+        "min": -0.02091950570165977,
+        "max": 0.07487238047501239,
+        "positive": 8,
+        "negative": 5
+      },
+      "strict_pavd_fraction_per_0.1": {
+        "n": 13,
+        "median": -0.026086195756842335,
+        "min": -0.0942396844454883,
+        "max": 0.019760841378168303,
+        "positive": 1,
+        "negative": 12
+      }
+    },
+    {
+      "species": "Myotis daubentonii",
+      "species_key": "2432439",
+      "spatial_r50_per_0.1": {
+        "n": 5,
+        "median": 0.05526755136349523,
+        "min": 0.014427583798082361,
+        "max": 0.08207999232367647,
+        "positive": 5,
+        "negative": 0
+      },
+      "spatial_pavd_fraction_per_0.1": {
+        "n": 5,
+        "median": 0.004755199708076464,
+        "min": -0.01815834632495579,
+        "max": 0.015401039217121227,
+        "positive": 3,
+        "negative": 2
+      },
+      "strict_r50_per_0.1": {
+        "n": 13,
+        "median": 0.01144421009300201,
+        "min": -0.06905947470990996,
+        "max": 0.12206108458718071,
+        "positive": 8,
+        "negative": 5
+      },
+      "strict_pavd_fraction_per_0.1": {
+        "n": 13,
+        "median": 0.013876224337329863,
+        "min": -0.053185107692050315,
+        "max": 0.06693252485618109,
+        "positive": 8,
+        "negative": 5
+      }
+    },
+    {
+      "species": "Myotis emarginatus",
+      "species_key": "2432470",
+      "spatial_r50_per_0.1": {
+        "n": 5,
+        "median": 0.007017288137190134,
+        "min": -0.026226489228087103,
+        "max": 0.04081458340867967,
+        "positive": 3,
+        "negative": 2
+      },
+      "spatial_pavd_fraction_per_0.1": {
+        "n": 5,
+        "median": -0.11411519468977481,
+        "min": -0.15842240303523736,
+        "max": -0.06653605947192108,
+        "positive": 0,
+        "negative": 5
+      },
+      "strict_r50_per_0.1": {
+        "n": 13,
+        "median": 0.030682811814796852,
+        "min": -0.047056457489840504,
+        "max": 0.11573909734216914,
+        "positive": 11,
+        "negative": 2
+      },
+      "strict_pavd_fraction_per_0.1": {
+        "n": 13,
+        "median": -0.1004644160994275,
+        "min": -0.168337090289425,
+        "max": 0.0489179108211969,
+        "positive": 4,
+        "negative": 9
+      }
+    },
+    {
+      "species": "Vespertilio murinus",
+      "species_key": "2432564",
+      "spatial_r50_per_0.1": {
+        "n": 5,
+        "median": -0.02033245076009387,
+        "min": -0.04209196083600718,
+        "max": -0.014220881485158014,
+        "positive": 0,
+        "negative": 5
+      },
+      "spatial_pavd_fraction_per_0.1": {
+        "n": 5,
+        "median": 0.03149445190427962,
+        "min": 0.02014844287446181,
+        "max": 0.05550538708598392,
+        "positive": 5,
+        "negative": 0
+      },
+      "strict_r50_per_0.1": {
+        "n": 13,
+        "median": -0.011362880398815521,
+        "min": -0.06718005174590758,
+        "max": 0.010461238161722168,
+        "positive": 3,
+        "negative": 10
+      },
+      "strict_pavd_fraction_per_0.1": {
+        "n": 13,
+        "median": 0.042614295446556955,
+        "min": -0.027540069428405606,
+        "max": 0.07472350259631753,
+        "positive": 8,
+        "negative": 5
+      }
+    },
+    {
+      "species": "Rhinolophus hipposideros",
+      "species_key": "2432614",
+      "spatial_r50_per_0.1": {
+        "n": 5,
+        "median": 0.051631225931155704,
+        "min": 0.016542684995954567,
+        "max": 0.06457840692058281,
+        "positive": 5,
+        "negative": 0
+      },
+      "spatial_pavd_fraction_per_0.1": {
+        "n": 5,
+        "median": 0.008247526648945302,
+        "min": 0.0037321377445045053,
+        "max": 0.01687764937676704,
+        "positive": 5,
+        "negative": 0
+      },
+      "strict_r50_per_0.1": {
+        "n": 13,
+        "median": 0.030770362831298182,
+        "min": 0.001782690541753798,
+        "max": 0.0832640140561222,
+        "positive": 13,
+        "negative": 0
+      },
+      "strict_pavd_fraction_per_0.1": {
+        "n": 13,
+        "median": 0.012076559931465452,
+        "min": -0.02503988380827083,
+        "max": 0.03249879351410779,
+        "positive": 9,
+        "negative": 4
+      }
+    },
+    {
+      "species": "Rhinolophus ferrumequinum",
+      "species_key": "2432655",
+      "spatial_r50_per_0.1": {
+        "n": 5,
+        "median": 0.1286373035644748,
+        "min": 0.06346171158661316,
+        "max": 0.16197770958359012,
+        "positive": 5,
+        "negative": 0
+      },
+      "spatial_pavd_fraction_per_0.1": {
+        "n": 5,
+        "median": 0.07054117960891702,
+        "min": 0.03088085276384991,
+        "max": 0.09134405575319482,
+        "positive": 5,
+        "negative": 0
+      },
+      "strict_r50_per_0.1": {
+        "n": 13,
+        "median": 0.10786031103133165,
+        "min": -0.00018115003867097152,
+        "max": 0.17400338519275793,
+        "positive": 12,
+        "negative": 1
+      },
+      "strict_pavd_fraction_per_0.1": {
+        "n": 13,
+        "median": 0.053704289861525346,
+        "min": -0.03314268000523878,
+        "max": 0.1182371539807094,
+        "positive": 8,
+        "negative": 5
+      }
+    },
+    {
+      "species": "Pipistrellus kuhlii",
+      "species_key": "5218464",
+      "spatial_r50_per_0.1": {
+        "n": 5,
+        "median": -0.004368676261671965,
+        "min": -0.010086479996452714,
+        "max": 0.056887539985509994,
+        "positive": 2,
+        "negative": 3
+      },
+      "spatial_pavd_fraction_per_0.1": {
+        "n": 5,
+        "median": 0.0007223198329851856,
+        "min": -0.023997940340859357,
+        "max": 0.050254905962413436,
+        "positive": 3,
+        "negative": 2
+      },
+      "strict_r50_per_0.1": {
+        "n": 13,
+        "median": 0.014717316040525945,
+        "min": -0.027085233615285517,
+        "max": 0.08083136985028486,
+        "positive": 9,
+        "negative": 4
+      },
+      "strict_pavd_fraction_per_0.1": {
+        "n": 13,
+        "median": 0.0033532856474594815,
+        "min": -0.05509561407977997,
+        "max": 0.03751101349307592,
+        "positive": 7,
+        "negative": 6
+      }
+    },
+    {
+      "species": "Pipistrellus nathusii",
+      "species_key": "5218471",
+      "spatial_r50_per_0.1": {
+        "n": 5,
+        "median": -0.0008276214374652742,
+        "min": -0.018675785548873346,
+        "max": 0.02158871724790956,
+        "positive": 2,
+        "negative": 3
+      },
+      "spatial_pavd_fraction_per_0.1": {
+        "n": 5,
+        "median": -0.023137831094273205,
+        "min": -0.025308257046948075,
+        "max": -0.01956802628844984,
+        "positive": 0,
+        "negative": 5
+      },
+      "strict_r50_per_0.1": {
+        "n": 13,
+        "median": 0.009527108556459012,
+        "min": -0.03513081331927998,
+        "max": 0.037248056491907204,
+        "positive": 8,
+        "negative": 5
+      },
+      "strict_pavd_fraction_per_0.1": {
+        "n": 13,
+        "median": -0.02803614273601549,
+        "min": -0.05367148193394771,
+        "max": 0.009511424025619405,
+        "positive": 1,
+        "negative": 12
+      }
+    },
+    {
+      "species": "Plecotus auritus",
+      "species_key": "5218507",
+      "spatial_r50_per_0.1": {
+        "n": 5,
+        "median": -0.1723999028798429,
+        "min": -0.20977078927940718,
+        "max": -0.13178446237241187,
+        "positive": 0,
+        "negative": 5
+      },
+      "spatial_pavd_fraction_per_0.1": {
+        "n": 5,
+        "median": 0.040365491114215724,
+        "min": 0.009570269204371817,
+        "max": 0.059834292053967376,
+        "positive": 5,
+        "negative": 0
+      },
+      "strict_r50_per_0.1": {
+        "n": 13,
+        "median": -0.1516233240725813,
+        "min": -0.1862350752527597,
+        "max": -0.07601578034428522,
+        "positive": 0,
+        "negative": 13
+      },
+      "strict_pavd_fraction_per_0.1": {
+        "n": 13,
+        "median": 0.03235455741469894,
+        "min": -0.03373888189088831,
+        "max": 0.06939370785533756,
+        "positive": 11,
+        "negative": 2
+      }
+    },
+    {
+      "species": "Nyctalus leisleri",
+      "species_key": "5218522",
+      "spatial_r50_per_0.1": {
+        "n": 5,
+        "median": 0.018621396699001688,
+        "min": 0.0035700684479290905,
+        "max": 0.03625127959566282,
+        "positive": 5,
+        "negative": 0
+      },
+      "spatial_pavd_fraction_per_0.1": {
+        "n": 5,
+        "median": 0.008112373523497111,
+        "min": -0.00573876957666826,
+        "max": 0.01863688284377528,
+        "positive": 4,
+        "negative": 1
+      },
+      "strict_r50_per_0.1": {
+        "n": 13,
+        "median": 0.016581445001152384,
+        "min": -0.010557980703656473,
+        "max": 0.06451780370480452,
+        "positive": 11,
+        "negative": 2
+      },
+      "strict_pavd_fraction_per_0.1": {
+        "n": 13,
+        "median": 0.012234274037136667,
+        "min": -0.007176393895642369,
+        "max": 0.07273078593258935,
+        "positive": 12,
+        "negative": 1
+      }
+    },
+    {
+      "species": "Nyctalus noctula",
+      "species_key": "5218524",
+      "spatial_r50_per_0.1": {
+        "n": 5,
+        "median": -0.08218657679815528,
+        "min": -0.09758321780523829,
+        "max": -0.06277711405141577,
+        "positive": 0,
+        "negative": 5
+      },
+      "spatial_pavd_fraction_per_0.1": {
+        "n": 5,
+        "median": 0.003556172214695814,
+        "min": -0.020349406202535402,
+        "max": 0.026688593589800566,
+        "positive": 3,
+        "negative": 2
+      },
+      "strict_r50_per_0.1": {
+        "n": 13,
+        "median": -0.07147636127040877,
+        "min": -0.10439446543506613,
+        "max": -0.017358528536715306,
+        "positive": 0,
+        "negative": 13
+      },
+      "strict_pavd_fraction_per_0.1": {
+        "n": 13,
+        "median": -0.006449210066157861,
+        "min": -0.08688240126921616,
+        "max": 0.03920365956052708,
+        "positive": 5,
+        "negative": 8
+      }
+    },
+    {
+      "species": "Myotis mystacinus",
+      "species_key": "9754263",
+      "spatial_r50_per_0.1": {
+        "n": 5,
+        "median": 0.012662246736735376,
+        "min": -0.008332918246210056,
+        "max": 0.030027397279631936,
+        "positive": 4,
+        "negative": 1
+      },
+      "spatial_pavd_fraction_per_0.1": {
+        "n": 5,
+        "median": -0.036357882271032774,
+        "min": -0.05090350107520844,
+        "max": -0.008900556711420695,
+        "positive": 0,
+        "negative": 5
+      },
+      "strict_r50_per_0.1": {
+        "n": 13,
+        "median": -0.00016249012771903988,
+        "min": -0.04486094508999822,
+        "max": 0.025865634003759182,
+        "positive": 6,
+        "negative": 7
+      },
+      "strict_pavd_fraction_per_0.1": {
+        "n": 13,
+        "median": -0.03701606909305274,
+        "min": -0.0661394991633877,
+        "max": 0.003165490254936234,
+        "positive": 1,
+        "negative": 12
+      }
+    }
+  ],
+  "contrasts": [
+    {
+      "contrast": "TLG+PAVD minus TLG",
+      "gain": -0.006005076567054746,
+      "positive_blocks": 18,
+      "positive_intersections": 4,
+      "intersection_gains": [
+        0.001693818294402627,
+        -0.002839738784561341,
+        0.005015112793757104,
+        0.002725108190212322,
+        -0.014584963845506893,
+        -0.017918436632546775,
+        -0.007174152453484961,
+        -0.0046510260482317545,
+        -0.012681378870796123,
+        -0.0036482048483658103,
+        -0.0031001907443354293,
+        0.0006768643276711117,
+        -0.00039563344496174047
+      ],
+      "delete_one_block_range": [
+        -0.006412811064425061,
+        -0.004378243138420975
+      ],
+      "conditional_block_bootstrap_95": [
+        -0.011164812940624009,
+        -0.0017818395525055805
+      ],
+      "screen": false
+    },
+    {
+      "contrast": "TLG+R50 minus TLG",
+      "gain": 0.004590117033391113,
+      "positive_blocks": 25,
+      "positive_intersections": 9,
+      "intersection_gains": [
+        0.012500931921239467,
+        0.00044813252085140753,
+        0.0014972430196332764,
+        0.026612318273737,
+        0.004365315984569351,
+        -0.01374166818030187,
+        -0.005248354079935513,
+        -0.0008146816156366921,
+        0.021356321989647653,
+        0.008534585928898442,
+        0.00949334318813766,
+        -0.0011574973823651469,
+        0.03190570549032812
+      ],
+      "delete_one_block_range": [
+        0.0031112352060105476,
+        0.005665664280588322
+      ],
+      "conditional_block_bootstrap_95": [
+        -0.0011357049787310508,
+        0.010905189629789548
+      ],
+      "screen": false
+    },
+    {
+      "contrast": "TLG+R50+PAVD minus TLG+R50",
+      "gain": -0.005442581857600666,
+      "positive_blocks": 18,
+      "positive_intersections": 3,
+      "intersection_gains": [
+        0.0016519871743803094,
+        -0.002511045982689364,
+        0.004452418811698666,
+        0.001850974023345331,
+        -0.014228341093629249,
+        -0.016474091328402052,
+        -0.006651758310702638,
+        -0.004656976938765212,
+        -0.011029399655155259,
+        -0.003238494010644355,
+        -0.0033382760125486577,
+        -0.00006666914398867352,
+        -0.001005516079956692
+      ],
+      "delete_one_block_range": [
+        -0.005816327091575088,
+        -0.003935399408921103
+      ],
+      "conditional_block_bootstrap_95": [
+        -0.010017976102063357,
+        -0.0016451016932519066
+      ],
+      "screen": false
+    },
+    {
+      "contrast": "TLG+R50+PAVD minus TLG+PAVD",
+      "gain": 0.005152611742845193,
+      "positive_blocks": 26,
+      "positive_intersections": 9,
+      "intersection_gains": [
+        0.012459100801217149,
+        0.0007768253227233846,
+        0.0009345490375748389,
+        0.02573818410687001,
+        0.004721938736446996,
+        -0.012297322876157146,
+        -0.00472595993715319,
+        -0.0008206325061701492,
+        0.023008301205288517,
+        0.008944296766619897,
+        0.009255257919924431,
+        -0.001901030854024932,
+        0.031295822855333166
+      ],
+      "delete_one_block_range": [
+        0.003497897874090003,
+        0.006216377499552826
+      ],
+      "conditional_block_bootstrap_95": [
+        -0.0006543568743523517,
+        0.011741930105559033
+      ],
+      "screen": false
+    },
+    {
+      "contrast": "TLG+R50+PAVD minus TLG",
+      "gain": -0.0008524648242095533,
+      "positive_blocks": 23,
+      "positive_intersections": 7,
+      "intersection_gains": [
+        0.014152919095619776,
+        -0.0020629134618379563,
+        0.005949661831331943,
+        0.028463292297082332,
+        -0.009863025109059897,
+        -0.03021575950870392,
+        -0.011900112390638151,
+        -0.005471658554401904,
+        0.010326922334492394,
+        0.005296091918254087,
+        0.006155067175589002,
+        -0.0012241665263538204,
+        0.030900189410371426
+      ],
+      "delete_one_block_range": [
+        -0.002245645570022179,
+        0.00155737668907895
+      ],
+      "conditional_block_bootstrap_95": [
+        -0.008457474965465735,
+        0.005961553917017374
+      ],
+      "screen": false
+    }
+  ],
+  "decision": "PAVD fails strict simultaneous provider and geography transfer (negative increment); R50 mean positive but strict screen also fails on matched support. Do not promote PAVD or slopes to validated ecological generalization. Next diagnostic on identical held-out intersection rows; preserve all prior scores.",
+  "audit": {
+    "run_id": 45717569136,
+    "job_id": 139567453759,
+    "artifact_id": 15069484471,
+    "artifact_zip_digest": "sha256:93d7886bf31541d8aaf4b39878784c5a088745e38ed7eba7a18ae87d227317a9",
+    "source_grid_sha256": "35fd3897562e9b8a6ee909d86b3d36c429098d939ace120016d76f1815a6fa7c",
+    "ordinary_spatial_folds_reproduced": true,
+    "notes": "Summary and contrast rows copied from successful job log; complete fold-level report in artifact."
+  }
+}
