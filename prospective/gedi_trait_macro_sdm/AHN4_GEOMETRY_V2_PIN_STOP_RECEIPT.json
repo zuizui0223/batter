@@ -1,0 +1,110 @@
+{
+  "stage": "independent ALS structural proxy validation, V2 geometry correction only",
+  "source_doi": "10.5281/zenodo.15261042",
+  "source_environment_sha256": "5fc8ae81149ba9436882f3614b6eac8e51c7e79d0d88aa3c5ba15ccc717331e8",
+  "status": "INCOMPLETE",
+  "members": {
+    "brw": {
+      "archive": "6_Masks.zip",
+      "member": "6_Masks/ahn4_10m_mask_building_road_water.tif",
+      "bytes": 86253446,
+      "compressed_bytes": 61225386,
+      "zip_crc32": "5c61266a",
+      "sha256": "57fdd56f2319093c242f3ceb23c0bbe492d19154aebe6cc960df3ea5c94e364f",
+      "crc_checked": true
+    },
+    "power": {
+      "archive": "6_Masks.zip",
+      "member": "6_Masks/ahn4_10m_mask_powerline.tif",
+      "bytes": 37601958,
+      "compressed_bytes": 7310653,
+      "zip_crc32": "29011d94",
+      "sha256": "2ad64705922036c1f565ec2fc50ef36294b745c0799b4a80cc1120b4d9a7411d",
+      "crc_checked": true
+    },
+    "H50": {
+      "archive": "4_AHN4.zip",
+      "member": "4_AHN4/ahn4_10m_perc_50_normalized_height.tif",
+      "bytes": 647003458,
+      "compressed_bytes": 622135597,
+      "zip_crc32": "fdd18d26",
+      "sha256": "82883f749681380501680ff86c71b51edf85541a87416977e2e246247ce4194b",
+      "crc_checked": true
+    },
+    "H95": {
+      "archive": "4_AHN4.zip",
+      "member": "4_AHN4/ahn4_10m_perc_95_normalized_height.tif",
+      "bytes": 763217494,
+      "compressed_bytes": 725514069,
+      "zip_crc32": "d65b55fd",
+      "sha256": "155ca0959ed5b99a6a88acec899775799bb51af9649932ab63fc7ec71f593ccc",
+      "crc_checked": true
+    },
+    "PPR": {
+      "archive": "4_AHN4.zip",
+      "member": "4_AHN4/ahn4_10m_pulse_penetration_ratio.tif",
+      "bytes": 826610282,
+      "compressed_bytes": 773416025,
+      "zip_crc32": "2cf22635",
+      "sha256": "1410255cf0bbbc63f33e2e2488603a2f4f927a5edf5535f09534253d05f17b56",
+      "crc_checked": true
+    }
+  },
+  "metrics": {},
+  "limitations": [
+    "ALS vegetation return count percentiles differ from GVSM full-waveform return-energy quantiles.",
+    "AHN4 2020–2022 vs GVSM 2020; acquisition season and canopy change not harmonized.",
+    "Selection from actual forest occurrence support, not a national random sample.",
+    "No biological occupancy, PAVD or actual flyable volume. Latitude comparison not causal.",
+    "Cross-CRS destination aggregation uses GDAL average, not exact geodesic intersections; native rectangle overlaps are integrated before it."
+  ],
+  "original_acquisition_and_comparison_blob": "7b220c5451349d0fd46e5d9d5cea6bbd99c0b198",
+  "geometry": "exact shared native rectangle intersections, then approximate GDAL area-average to EPSG:6933",
+  "synthetic_tests": {
+    "aligned": true,
+    "half_pixel": true,
+    "fractional_shift": true,
+    "joint_shifted_masks": true,
+    "missing_metric": true,
+    "sparse_mask_footprint": true,
+    "weighted_numeric_conservation": true
+  },
+  "candidate_cells": 636,
+  "candidate_south": 318,
+  "candidate_north": 312,
+  "archives": {
+    "4_AHN4.zip": {
+      "size": 15557285189,
+      "published_checksum": "md5:1709d1e9a001a611502f48d1a55686a3",
+      "url": "https://zenodo.org/records/15261042/files/4_AHN4.zip?download=1",
+      "actual_range_url": "https://zenodo.org/api/records/15261042/files/4_AHN4.zip/content",
+      "inventory_sha256": "8ad96a4a33ff7a383a9f8f21d54608f2d20d242aa6d4ec01a55028cf5b972b48",
+      "range_bytes_read": 2131318086,
+      "full_archive_md5_verified": false
+    },
+    "6_Masks.zip": {
+      "size": 243149518,
+      "published_checksum": "md5:af4cd8fb643f71ed9a23674fbe2b250f",
+      "url": "https://zenodo.org/records/15261042/files/6_Masks.zip?download=1",
+      "full_archive_md5_verified": true,
+      "inventory_sha256": "7a2ef358d1c4bea829e6b19aacf16fe89bbfa2cdf15b56323cfbc1759ccc5037"
+    }
+  },
+  "error": "AssertionError: power",
+  "audit": {
+    "run_id": 45622383530,
+    "job_id": 139233651118,
+    "artifact_id": 15026118429,
+    "registry_digest": "sha256:b6031e3a45970c5e6dfb645d5c25e0c134f552e9d38f060c6b3ce3b6d468340c",
+    "job_conclusion": "failure",
+    "checks": {
+      "all_five_retrieved": true,
+      "all_member_hashes_same": true,
+      "all_synthetic_checks_pass": true,
+      "expected_error": true,
+      "no_structural_outcome": true,
+      "registry_matches_log": true
+    }
+  },
+  "diagnosis": "The hardcoded expected power-mask SHA256 in script blob bd35467b5d1dcd4f0a0125ed0419ad7f221b31e6 was accidentally truncated to 53 characters. The actual 64-character member SHA256 agrees with original verified acquisition, as do all four other members. No structural metric was fitted. Corrective commit 95d457ca880964c3b40d430401100cbd7c527a5b loads the five pins directly from the prior receipt, with pre-network CRC and length validation."
+}
