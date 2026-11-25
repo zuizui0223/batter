@@ -1,0 +1,29 @@
+name: Hurme functional space geometry V42
+on:
+  push:
+    branches:
+      - prospective/trait-wind-roundtrip-20261124
+    paths:
+      - scripts/hurme_functional_space_v42.py
+      - .github/workflows/hurme-functional-space-v42.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  analysis:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install pandas numpy pyproj
+      - run: python scripts/hurme_functional_space_v42.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: hurme-functional-space-v42
+          path: results/hurme_functional_space_v42.json
+          if-no-files-found: error
+          retention-days: 60
