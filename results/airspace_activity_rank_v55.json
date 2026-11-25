@@ -1,0 +1,51 @@
+{
+  "status": "published_table_exploratory_only",
+  "doi": "10.1002/ece3.3196",
+  "nights": 20,
+  "tests": "PASS",
+  "full": {
+    "raw_pearson": 0.6402141361609912,
+    "log1p_pearson": 0.2246391051013674,
+    "spearman": 0.24435240963855423,
+    "kendall_tau_b": 0.19148936170212766,
+    "top5": {
+      "status": "defined",
+      "intersection": 2,
+      "jaccard": 0.25
+    }
+  },
+  "leave_one_night_omission": {
+    "raw_pearson": {
+      "min": 0.35549458398275574,
+      "max": 0.7066203463978632,
+      "positive_count": 20
+    },
+    "log1p_pearson": {
+      "min": 0.04154318212086327,
+      "max": 0.3333232928289363,
+      "positive_count": 20
+    },
+    "spearman": {
+      "min": 0.11818980667838312,
+      "max": 0.37038664323374343,
+      "positive_count": 20
+    },
+    "kendall_tau_b": {
+      "min": 0.10059171597633136,
+      "max": 0.28994082840236685,
+      "positive_count": 20
+    },
+    "top5": {
+      "defined_omissions": 20,
+      "intersection_range": [
+        2,
+        3
+      ],
+      "jaccard_range": [
+        0.25,
+        0.42857142857142855
+      ]
+    }
+  },
+  "claim_boundary": "Nightly recorded event counts; not effort-normalized, true activity, independent site validation, or causal detection."
+}
