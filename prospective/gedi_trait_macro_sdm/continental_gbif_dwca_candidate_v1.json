@@ -1,0 +1,110 @@
+{
+  "format": "DWCA",
+  "sendNotification": false,
+  "predicate": {
+    "type": "and",
+    "predicates": [
+      {
+        "type": "equals",
+        "key": "TAXON_KEY",
+        "value": "734"
+      },
+      {
+        "type": "in",
+        "key": "COUNTRY",
+        "values": [
+          "AD",
+          "AL",
+          "AT",
+          "BE",
+          "BA",
+          "BG",
+          "BY",
+          "HR",
+          "CZ",
+          "DK",
+          "EE",
+          "FI",
+          "FR",
+          "DE",
+          "GR",
+          "HU",
+          "IE",
+          "IT",
+          "LV",
+          "LI",
+          "LT",
+          "LU",
+          "MT",
+          "MD",
+          "MC",
+          "ME",
+          "NL",
+          "MK",
+          "NO",
+          "PL",
+          "PT",
+          "RO",
+          "SM",
+          "RS",
+          "SK",
+          "SI",
+          "ES",
+          "SE",
+          "CH",
+          "UA",
+          "GB",
+          "VA"
+        ]
+      },
+      {
+        "type": "within",
+        "geometry": "POLYGON((-12 35,32 35,32 71,-12 71,-12 35))"
+      },
+      {
+        "type": "equals",
+        "key": "HAS_COORDINATE",
+        "value": "true"
+      },
+      {
+        "type": "equals",
+        "key": "HAS_GEOSPATIAL_ISSUE",
+        "value": "false"
+      },
+      {
+        "type": "greaterThanOrEquals",
+        "key": "EVENT_DATE",
+        "value": "2019-04-17"
+      },
+      {
+        "type": "lessThanOrEquals",
+        "key": "EVENT_DATE",
+        "value": "2023-03-16"
+      },
+      {
+        "type": "equals",
+        "key": "OCCURRENCE_STATUS",
+        "value": "DETECTED"
+      },
+      {
+        "type": "greaterThanOrEquals",
+        "key": "COORDINATE_UNCERTAINTY_IN_METERS",
+        "value": "0.000001"
+      },
+      {
+        "type": "lessThanOrEquals",
+        "key": "COORDINATE_UNCERTAINTY_IN_METERS",
+        "value": "500"
+      },
+      {
+        "type": "in",
+        "key": "BASIS_OF_RECORD",
+        "values": [
+          "HUMAN_OBSERVATION",
+          "MACHINE_OBSERVATION",
+          "OBSERVATION"
+        ]
+      }
+    ]
+  }
+}
