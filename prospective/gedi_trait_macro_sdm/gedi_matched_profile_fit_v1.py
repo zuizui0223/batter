@@ -46,8 +46,15 @@ assert [int((fold==k).sum()) for k in range(5)]==[12867,2315,6228,450,9741]
 # New measured-profile sensitivity, frozen before source access.
 report={"status":"START","original_comparisons":len(z),"original_blocks":len(blocks),"source_doi":"10.3334/ORNLDAAC/2339","main_sdm_admitted":False}
 def save():
-    (OUT/"report.json").write_text(json.dumps(report,indent=2,allow_nan=False)+"\n")
+    # JSON conversion only; retain the original numeric arrays and fit settings.
+    def scalar(v):
+        if isinstance(v,np.generic):return v.item()
+        if isinstance(v,np.ndarray):return v.tolist()
+        raise TypeError(type(v).__name__)
+    raw=json.dumps(report,indent=2,allow_nan=False,default=scalar)
+    (OUT/"report.json").write_text(raw+"\n")
     print("GEDI_MATCHED_FIT",report["status"],flush=True)
+    print("GEDI_MATCHED_REPORT="+json.dumps(report,allow_nan=False,default=scalar),flush=True)
 for mode,cols in [("terrain",terrain),("leaf",leaf)]:
     p=pathlib.Path(("baseline_lc100" if mode=="leaf" else "baseline_terrain")+"/report.json")
     a=json.loads(p.read_text());q=p.parent/"cell_covariates.csv.gz"
