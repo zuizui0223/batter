@@ -1,0 +1,3087 @@
+{
+  "status": "PASS_LOG_JSON_VS_DRAFT; artifact metadata digest matched; ZIP bytes not independently rehashed",
+  "scope": "Exact aggregate metrics parsed from successful Actions job logs, not new fits. Rotations are descriptive reference; not formal p-values or confidence intervals.",
+  "sources": {
+    "V52": {
+      "run": 45556390387,
+      "job": 139009343136,
+      "artifact": 14995603320,
+      "sha256": "7daf965b5a4ddfd4be678e1872cca25c77c30fb1309b46df1cb5eeedfc98779b",
+      "head": "d395a8bc5580b06be50544bd177f0efe26f30e1b"
+    },
+    "V53": {
+      "run": 45559784386,
+      "job": 139020460551,
+      "artifact": 14996359555,
+      "sha256": "07405a359e236952b68b5f0a765459f8a47dce02cc7c4c9915a2668e977f55c1",
+      "head": "e4ffa4bae7789489e483f62f115dc334c38201db"
+    }
+  },
+  "checks_passed": 22,
+  "common_reference_gate": true,
+  "common_prediction_gate": false,
+  "cohorts": {
+    "vivesi": {
+      "concentration_support": {
+        "eligible_deployments": 14,
+        "eligible_animals": 11,
+        "fixes": 13855,
+        "positive_fixes": 602,
+        "marks": 693,
+        "movable_fixes": 13528,
+        "movable_marks": 687,
+        "strata": 440,
+        "rotatable_strata": 269,
+        "minute_bundles": 3904,
+        "movable_mark_fraction": 0.9913419913419913,
+        "movable_fix_fraction": 0.9763984121255864
+      },
+      "prediction_support": {
+        "eligible_tracks": 9,
+        "eligible_animals": 7,
+        "excluded_tracks": {
+          "below5_positive_fixes": 5
+        },
+        "train_fixes": 4961,
+        "test_fixes": 5141,
+        "embargo_fixes": 354,
+        "train_marks": 308,
+        "test_marks": 190,
+        "train_positive_fixes": 254,
+        "test_positive_fixes": 178,
+        "equal_animal_test_fix_overlap_by_origin": [
+          0.25510189382750503,
+          0.25568113246129215,
+          0.307964791924978,
+          0.29053301715495844
+        ]
+      },
+      "concentration": {
+        "count_1000m": {
+          "origins": [
+            {
+              "offset": [
+                0,
+                0
+              ],
+              "metrics": {
+                "displacement_JS": {
+                  "observed": 0.1660493742870139,
+                  "reference_mean": 0.15223710935593157,
+                  "reference_q05_median_q95": [
+                    0.14339727161018193,
+                    0.15197233916068462,
+                    0.16220588805947997
+                  ],
+                  "excess": 0.013812264931082334,
+                  "positive_animals": 10,
+                  "leave_one_animal_excess_range": [
+                    0.011879573843438957,
+                    0.01673063491882571
+                  ],
+                  "gate": true
+                },
+                "concentration_log_effective_cell_ratio": {
+                  "observed": 0.8898703205928121,
+                  "reference_mean": 0.5665323449220805,
+                  "reference_q05_median_q95": [
+                    0.486042679083405,
+                    0.5644835079802212,
+                    0.6521896899685153
+                  ],
+                  "excess": 0.3233379756707315,
+                  "positive_animals": 10,
+                  "leave_one_animal_excess_range": [
+                    0.2548711833207891,
+                    0.3582705127128333
+                  ],
+                  "gate": true
+                }
+              }
+            },
+            {
+              "offset": [
+                0.5,
+                0
+              ],
+              "metrics": {
+                "displacement_JS": {
+                  "observed": 0.1552412705845352,
+                  "reference_mean": 0.15224602428046285,
+                  "reference_q05_median_q95": [
+                    0.14332599087269038,
+                    0.15211086065904347,
+                    0.16173609424126487
+                  ],
+                  "excess": 0.0029952463040723563,
+                  "positive_animals": 8,
+                  "leave_one_animal_excess_range": [
+                    0.00010339591153749328,
+                    0.005782707136480848
+                  ],
+                  "gate": false
+                },
+                "concentration_log_effective_cell_ratio": {
+                  "observed": 0.893621688467778,
+                  "reference_mean": 0.5690384771116801,
+                  "reference_q05_median_q95": [
+                    0.4916942727161853,
+                    0.566937731111206,
+                    0.6614533371749038
+                  ],
+                  "excess": 0.324583211356098,
+                  "positive_animals": 10,
+                  "leave_one_animal_excess_range": [
+                    0.25787921924139,
+                    0.3648331907230925
+                  ],
+                  "gate": true
+                }
+              }
+            },
+            {
+              "offset": [
+                0,
+                0.5
+              ],
+              "metrics": {
+                "displacement_JS": {
+                  "observed": 0.16340245509403412,
+                  "reference_mean": 0.15811515826805753,
+                  "reference_q05_median_q95": [
+                    0.14882775919221689,
+                    0.15810040873694403,
+                    0.16786325901375934
+                  ],
+                  "excess": 0.005287296825976565,
+                  "positive_animals": 8,
+                  "leave_one_animal_excess_range": [
+                    0.0027149345202572076,
+                    0.010252671757253948
+                  ],
+                  "gate": false
+                },
+                "concentration_log_effective_cell_ratio": {
+                  "observed": 0.9192604012830554,
+                  "reference_mean": 0.5901488343550283,
+                  "reference_q05_median_q95": [
+                    0.5182021379542029,
+                    0.590885658832026,
+                    0.6678675058102621
+                  ],
+                  "excess": 0.3291115669280274,
+                  "positive_animals": 11,
+                  "leave_one_animal_excess_range": [
+                    0.2792438092780144,
+                    0.3526572889965608
+                  ],
+                  "gate": true
+                }
+              }
+            },
+            {
+              "offset": [
+                0.5,
+                0.5
+              ],
+              "metrics": {
+                "displacement_JS": {
+                  "observed": 0.15695788275402453,
+                  "reference_mean": 0.156770451827701,
+                  "reference_q05_median_q95": [
+                    0.1477161112897233,
+                    0.15661210102540332,
+                    0.16617198098745387
+                  ],
+                  "excess": 0.00018743092632356374,
+                  "positive_animals": 6,
+                  "leave_one_animal_excess_range": [
+                    -0.002475480934845445,
+                    0.003313660739137111
+                  ],
+                  "gate": false
+                },
+                "concentration_log_effective_cell_ratio": {
+                  "observed": 0.9212480286690493,
+                  "reference_mean": 0.5845796967988651,
+                  "reference_q05_median_q95": [
+                    0.5104838070143672,
+                    0.579313897894412,
+                    0.6713025775779865
+                  ],
+                  "excess": 0.33666833187018413,
+                  "positive_animals": 11,
+                  "leave_one_animal_excess_range": [
+                    0.2809480184700063,
+                    0.3613802005133194
+                  ],
+                  "gate": true
+                }
+              }
+            }
+          ],
+          "equal_origin": {
+            "displacement_JS": {
+              "observed": 0.16041274567990194,
+              "reference_mean": 0.15484218593303825,
+              "reference_q05_median_q95": [
+                0.1478957990098485,
+                0.1546562776571427,
+                0.16259152919700706
+              ],
+              "excess": 0.005570559746863724,
+              "positive_animals": 8,
+              "leave_one_animal_excess_range": [
+                0.00340314631413646,
+                0.009019918637924439
+              ],
+              "gate": false,
+              "passing_origins": 1,
+              "origin_robust_gate": false
+            },
+            "concentration_log_effective_cell_ratio": {
+              "observed": 0.9060001097531739,
+              "reference_mean": 0.5775748382969135,
+              "reference_q05_median_q95": [
+                0.5099056245826138,
+                0.5749884867029587,
+                0.651065950063537
+              ],
+              "excess": 0.32842527145626016,
+              "positive_animals": 11,
+              "leave_one_animal_excess_range": [
+                0.26823555757754997,
+                0.35826078232295383
+              ],
+              "gate": true,
+              "passing_origins": 4,
+              "origin_robust_gate": true
+            }
+          }
+        },
+        "count_500m": {
+          "origins": [
+            {
+              "offset": [
+                0,
+                0
+              ],
+              "metrics": {
+                "displacement_JS": {
+                  "observed": 0.21087531021196337,
+                  "reference_mean": 0.22151269387250339,
+                  "reference_q05_median_q95": [
+                    0.21164609156151967,
+                    0.2211396910694037,
+                    0.2323979182633124
+                  ],
+                  "excess": -0.010637383660540097,
+                  "positive_animals": 4,
+                  "leave_one_animal_excess_range": [
+                    -0.012789361851272732,
+                    -0.007487037620017451
+                  ],
+                  "gate": false
+                },
+                "concentration_log_effective_cell_ratio": {
+                  "observed": 1.177597739491297,
+                  "reference_mean": 0.8599734591413571,
+                  "reference_q05_median_q95": [
+                    0.7805720722656033,
+                    0.8574153447095033,
+                    0.9446412658378839
+                  ],
+                  "excess": 0.3176242803499402,
+                  "positive_animals": 10,
+                  "leave_one_animal_excess_range": [
+                    0.263033726514569,
+                    0.35297215014923233
+                  ],
+                  "gate": true
+                }
+              }
+            },
+            {
+              "offset": [
+                0.5,
+                0
+              ],
+              "metrics": {
+                "displacement_JS": {
+                  "observed": 0.21231168776246753,
+                  "reference_mean": 0.2213986271976539,
+                  "reference_q05_median_q95": [
+                    0.21188827414056952,
+                    0.2213712731577454,
+                    0.2310456076694014
+                  ],
+                  "excess": -0.00908693943518638,
+                  "positive_animals": 3,
+                  "leave_one_animal_excess_range": [
+                    -0.011591413357555308,
+                    -0.005693284587754047
+                  ],
+                  "gate": false
+                },
+                "concentration_log_effective_cell_ratio": {
+                  "observed": 1.153270277698152,
+                  "reference_mean": 0.8597439113553353,
+                  "reference_q05_median_q95": [
+                    0.7761586392465557,
+                    0.8563790075613678,
+                    0.943042999015317
+                  ],
+                  "excess": 0.29352636634281654,
+                  "positive_animals": 11,
+                  "leave_one_animal_excess_range": [
+                    0.24666389894026,
+                    0.3204536575840725
+                  ],
+                  "gate": true
+                }
+              }
+            },
+            {
+              "offset": [
+                0,
+                0.5
+              ],
+              "metrics": {
+                "displacement_JS": {
+                  "observed": 0.21276566302947456,
+                  "reference_mean": 0.22254169870713722,
+                  "reference_q05_median_q95": [
+                    0.2132505701972739,
+                    0.222521765845617,
+                    0.23319684784564929
+                  ],
+                  "excess": -0.009776035677662732,
+                  "positive_animals": 4,
+                  "leave_one_animal_excess_range": [
+                    -0.012554475287465889,
+                    -0.006882890672491428
+                  ],
+                  "gate": false
+                },
+                "concentration_log_effective_cell_ratio": {
+                  "observed": 1.1894986478568337,
+                  "reference_mean": 0.8672072473884661,
+                  "reference_q05_median_q95": [
+                    0.7790405481471876,
+                    0.8651029589200276,
+                    0.9613807946748302
+                  ],
+                  "excess": 0.3222914004683677,
+                  "positive_animals": 10,
+                  "leave_one_animal_excess_range": [
+                    0.255079753178041,
+                    0.35681449309264923
+                  ],
+                  "gate": true
+                }
+              }
+            },
+            {
+              "offset": [
+                0.5,
+                0.5
+              ],
+              "metrics": {
+                "displacement_JS": {
+                  "observed": 0.20360293893442158,
+                  "reference_mean": 0.21968374239367747,
+                  "reference_q05_median_q95": [
+                    0.210135604492912,
+                    0.21972069652429116,
+                    0.2289683089641434
+                  ],
+                  "excess": -0.01608080345925583,
+                  "positive_animals": 3,
+                  "leave_one_animal_excess_range": [
+                    -0.018747938587415577,
+                    -0.012747033924355644
+                  ],
+                  "gate": false
+                },
+                "concentration_log_effective_cell_ratio": {
+                  "observed": 1.148862270889824,
+                  "reference_mean": 0.8548349713713995,
+                  "reference_q05_median_q95": [
+                    0.7736977777646707,
+                    0.855395650180007,
+                    0.9360051650107097
+                  ],
+                  "excess": 0.29402729951842405,
+                  "positive_animals": 10,
+                  "leave_one_animal_excess_range": [
+                    0.24340756877084094,
+                    0.325396910487865
+                  ],
+                  "gate": true
+                }
+              }
+            }
+          ],
+          "equal_origin": {
+            "displacement_JS": {
+              "observed": 0.20988889998458174,
+              "reference_mean": 0.221284190542743,
+              "reference_q05_median_q95": [
+                0.2134745205882772,
+                0.22149629718100786,
+                0.22946036032566514
+              ],
+              "excess": -0.011395290558161254,
+              "positive_animals": 3,
+              "leave_one_animal_excess_range": [
+                -0.01344397553998195,
+                -0.009034095215180064
+              ],
+              "gate": false,
+              "passing_origins": 0,
+              "origin_robust_gate": false
+            },
+            "concentration_log_effective_cell_ratio": {
+              "observed": 1.1673072339840267,
+              "reference_mean": 0.8604398973141396,
+              "reference_q05_median_q95": [
+                0.7844964922145684,
+                0.8585301331847958,
+                0.9398577004733223
+              ],
+              "excess": 0.3068673366698871,
+              "positive_animals": 10,
+              "leave_one_animal_excess_range": [
+                0.2520462368509276,
+                0.3389093028284547
+              ],
+              "gate": true,
+              "passing_origins": 4,
+              "origin_robust_gate": true
+            }
+          }
+        },
+        "count_2000m": {
+          "origins": [
+            {
+              "offset": [
+                0,
+                0
+              ],
+              "metrics": {
+                "displacement_JS": {
+                  "observed": 0.10350711055381683,
+                  "reference_mean": 0.09602420781971988,
+                  "reference_q05_median_q95": [
+                    0.08640831386790998,
+                    0.0958990545727679,
+                    0.10615611741644025
+                  ],
+                  "excess": 0.007482902734096933,
+                  "positive_animals": 6,
+                  "leave_one_animal_excess_range": [
+                    0.0023997772201751867,
+                    0.011192171075942494
+                  ],
+                  "gate": false
+                },
+                "concentration_log_effective_cell_ratio": {
+                  "observed": 0.6520300120991019,
+                  "reference_mean": 0.34809122201751785,
+                  "reference_q05_median_q95": [
+                    0.26924923376830034,
+                    0.3451283851896711,
+                    0.43632141713158096
+                  ],
+                  "excess": 0.3039387900815842,
+                  "positive_animals": 11,
+                  "leave_one_animal_excess_range": [
+                    0.2092026541402115,
+                    0.32898236413713267
+                  ],
+                  "gate": true
+                }
+              }
+            },
+            {
+              "offset": [
+                0.5,
+                0
+              ],
+              "metrics": {
+                "displacement_JS": {
+                  "observed": 0.10999248562141263,
+                  "reference_mean": 0.10123327361771511,
+                  "reference_q05_median_q95": [
+                    0.09116732995339549,
+                    0.10124410576342897,
+                    0.11063237970310776
+                  ],
+                  "excess": 0.008759212003697532,
+                  "positive_animals": 8,
+                  "leave_one_animal_excess_range": [
+                    0.005889674729767281,
+                    0.013507926728768702
+                  ],
+                  "gate": false
+                },
+                "concentration_log_effective_cell_ratio": {
+                  "observed": 0.6328403882088595,
+                  "reference_mean": 0.3660728017869162,
+                  "reference_q05_median_q95": [
+                    0.2917735115619117,
+                    0.36495911799351965,
+                    0.44369939884273796
+                  ],
+                  "excess": 0.26676758642194315,
+                  "positive_animals": 10,
+                  "leave_one_animal_excess_range": [
+                    0.20378977118481573,
+                    0.3025520015871076
+                  ],
+                  "gate": true
+                }
+              }
+            },
+            {
+              "offset": [
+                0,
+                0.5
+              ],
+              "metrics": {
+                "displacement_JS": {
+                  "observed": 0.11440080122993837,
+                  "reference_mean": 0.09988438054135093,
+                  "reference_q05_median_q95": [
+                    0.09060066267049369,
+                    0.09983363068028449,
+                    0.10939215746516245
+                  ],
+                  "excess": 0.014516420688587413,
+                  "positive_animals": 10,
+                  "leave_one_animal_excess_range": [
+                    0.010660111354539734,
+                    0.017643335122804447
+                  ],
+                  "gate": true
+                },
+                "concentration_log_effective_cell_ratio": {
+                  "observed": 0.6576592924776342,
+                  "reference_mean": 0.36161251823294954,
+                  "reference_q05_median_q95": [
+                    0.28411180448385315,
+                    0.3608453289955371,
+                    0.4460753483521844
+                  ],
+                  "excess": 0.2960467742446846,
+                  "positive_animals": 11,
+                  "leave_one_animal_excess_range": [
+                    0.21601432896665257,
+                    0.3175393116558392
+                  ],
+                  "gate": true
+                }
+              }
+            },
+            {
+              "offset": [
+                0.5,
+                0.5
+              ],
+              "metrics": {
+                "displacement_JS": {
+                  "observed": 0.11878115104809667,
+                  "reference_mean": 0.1004348964723512,
+                  "reference_q05_median_q95": [
+                    0.09154968295766318,
+                    0.10032721621575219,
+                    0.1095176516861681
+                  ],
+                  "excess": 0.018346254575745454,
+                  "positive_animals": 10,
+                  "leave_one_animal_excess_range": [
+                    0.016746539752694613,
+                    0.02143767806730533
+                  ],
+                  "gate": true
+                },
+                "concentration_log_effective_cell_ratio": {
+                  "observed": 0.5924965149395628,
+                  "reference_mean": 0.36323078470080644,
+                  "reference_q05_median_q95": [
+                    0.3009514519552063,
+                    0.3616836565362277,
+                    0.4301152985413049
+                  ],
+                  "excess": 0.22926573023875632,
+                  "positive_animals": 9,
+                  "leave_one_animal_excess_range": [
+                    0.17648732120265623,
+                    0.2571017212377232
+                  ],
+                  "gate": true
+                }
+              }
+            }
+          ],
+          "equal_origin": {
+            "displacement_JS": {
+              "observed": 0.1116703871133161,
+              "reference_mean": 0.09939418961278429,
+              "reference_q05_median_q95": [
+                0.09209570459127096,
+                0.09923731234015948,
+                0.1069071767733248
+              ],
+              "excess": 0.012276197500531844,
+              "positive_animals": 10,
+              "leave_one_animal_excess_range": [
+                0.009844350096999164,
+                0.01594527774870527
+              ],
+              "gate": true,
+              "passing_origins": 2,
+              "origin_robust_gate": false
+            },
+            "concentration_log_effective_cell_ratio": {
+              "observed": 0.6337565519312897,
+              "reference_mean": 0.3597518316845475,
+              "reference_q05_median_q95": [
+                0.2976628659387132,
+                0.35737932451444504,
+                0.43245199571364923
+              ],
+              "excess": 0.27400472024674216,
+              "positive_animals": 11,
+              "leave_one_animal_excess_range": [
+                0.20137351887358398,
+                0.2999275580965496
+              ],
+              "gate": true,
+              "passing_origins": 4,
+              "origin_robust_gate": true
+            }
+          }
+        },
+        "positive_fix_1000m": {
+          "origins": [
+            {
+              "offset": [
+                0,
+                0
+              ],
+              "metrics": {
+                "displacement_JS": {
+                  "observed": 0.16382015491299018,
+                  "reference_mean": 0.15059771599440497,
+                  "reference_q05_median_q95": [
+                    0.14184518390725503,
+                    0.1503532875346937,
+                    0.16039763104084506
+                  ],
+                  "excess": 0.013222438918585244,
+                  "positive_animals": 10,
+                  "leave_one_animal_excess_range": [
+                    0.011179588042238219,
+                    0.015964563329040775
+                  ],
+                  "gate": true
+                },
+                "concentration_log_effective_cell_ratio": {
+                  "observed": 0.8808099029071467,
+                  "reference_mean": 0.5537755409312675,
+                  "reference_q05_median_q95": [
+                    0.46934154881044277,
+                    0.5524263897195634,
+                    0.6403820986861882
+                  ],
+                  "excess": 0.3270343619758797,
+                  "positive_animals": 10,
+                  "leave_one_animal_excess_range": [
+                    0.25195860838921486,
+                    0.3619045610160009
+                  ],
+                  "gate": true
+                }
+              }
+            },
+            {
+              "offset": [
+                0.5,
+                0
+              ],
+              "metrics": {
+                "displacement_JS": {
+                  "observed": 0.15310492557519237,
+                  "reference_mean": 0.1502881163923381,
+                  "reference_q05_median_q95": [
+                    0.14136559977107543,
+                    0.15018742496100043,
+                    0.15972766178607015
+                  ],
+                  "excess": 0.002816809182854214,
+                  "positive_animals": 7,
+                  "leave_one_animal_excess_range": [
+                    -0.0000900526615577657,
+                    0.005610452741754003
+                  ],
+                  "gate": false
+                },
+                "concentration_log_effective_cell_ratio": {
+                  "observed": 0.8847350914805971,
+                  "reference_mean": 0.5560345938852506,
+                  "reference_q05_median_q95": [
+                    0.4704864194108371,
+                    0.5528793256434347,
+                    0.6535370089319178
+                  ],
+                  "excess": 0.3287004975953465,
+                  "positive_animals": 10,
+                  "leave_one_animal_excess_range": [
+                    0.256315181343884,
+                    0.3689014445220307
+                  ],
+                  "gate": true
+                }
+              }
+            },
+            {
+              "offset": [
+                0,
+                0.5
+              ],
+              "metrics": {
+                "displacement_JS": {
+                  "observed": 0.16120842975463617,
+                  "reference_mean": 0.15529407723652433,
+                  "reference_q05_median_q95": [
+                    0.1462897767097177,
+                    0.15530431611784853,
+                    0.1650111179622435
+                  ],
+                  "excess": 0.005914352518111843,
+                  "positive_animals": 9,
+                  "leave_one_animal_excess_range": [
+                    0.003732678942979384,
+                    0.010764283458657214
+                  ],
+                  "gate": false
+                },
+                "concentration_log_effective_cell_ratio": {
+                  "observed": 0.915372482450662,
+                  "reference_mean": 0.5739679386119173,
+                  "reference_q05_median_q95": [
+                    0.4953325621780107,
+                    0.5741928179669488,
+                    0.6540140548367631
+                  ],
+                  "excess": 0.3414045438387446,
+                  "positive_animals": 11,
+                  "leave_one_animal_excess_range": [
+                    0.2797428465262709,
+                    0.3661246647713704
+                  ],
+                  "gate": true
+                }
+              }
+            },
+            {
+              "offset": [
+                0.5,
+                0.5
+              ],
+              "metrics": {
+                "displacement_JS": {
+                  "observed": 0.15574013455804028,
+                  "reference_mean": 0.15440531849161865,
+                  "reference_q05_median_q95": [
+                    0.14600102345788413,
+                    0.15438426179722983,
+                    0.16341509448801259
+                  ],
+                  "excess": 0.0013348160664216479,
+                  "positive_animals": 7,
+                  "leave_one_animal_excess_range": [
+                    -0.001261342152714194,
+                    0.00441077596620376
+                  ],
+                  "gate": false
+                },
+                "concentration_log_effective_cell_ratio": {
+                  "observed": 0.9205050058848819,
+                  "reference_mean": 0.5699971277685881,
+                  "reference_q05_median_q95": [
+                    0.4896811326551708,
+                    0.5648404278851552,
+                    0.6586844639756751
+                  ],
+                  "excess": 0.35050787811629386,
+                  "positive_animals": 11,
+                  "leave_one_animal_excess_range": [
+                    0.2816240691813805,
+                    0.37570605477371116
+                  ],
+                  "gate": true
+                }
+              }
+            }
+          ],
+          "equal_origin": {
+            "displacement_JS": {
+              "observed": 0.15846841120021476,
+              "reference_mean": 0.1526463070287215,
+              "reference_q05_median_q95": [
+                0.14579293384244782,
+                0.15260254932134967,
+                0.16019577118797967
+              ],
+              "excess": 0.005822104171493287,
+              "positive_animals": 9,
+              "leave_one_animal_excess_range": [
+                0.0036582067179325335,
+                0.009187518873913995
+              ],
+              "gate": false,
+              "passing_origins": 1,
+              "origin_robust_gate": false
+            },
+            "concentration_log_effective_cell_ratio": {
+              "observed": 0.900355620680822,
+              "reference_mean": 0.5634438002992558,
+              "reference_q05_median_q95": [
+                0.4892326383993216,
+                0.5611943929998793,
+                0.646290813447614
+              ],
+              "excess": 0.3369118203815662,
+              "positive_animals": 11,
+              "leave_one_animal_excess_range": [
+                0.2674101763601876,
+                0.3671324772216149
+              ],
+              "gate": true,
+              "passing_origins": 4,
+              "origin_robust_gate": true
+            }
+          }
+        },
+        "positive_fix_500m": {
+          "origins": [
+            {
+              "offset": [
+                0,
+                0
+              ],
+              "metrics": {
+                "displacement_JS": {
+                  "observed": 0.20862629594252421,
+                  "reference_mean": 0.21856026791599745,
+                  "reference_q05_median_q95": [
+                    0.2088474282638806,
+                    0.21834143118176855,
+                    0.22907428806888175
+                  ],
+                  "excess": -0.009933971973473262,
+                  "positive_animals": 4,
+                  "leave_one_animal_excess_range": [
+                    -0.012014981043475842,
+                    -0.006789258327190156
+                  ],
+                  "gate": false
+                },
+                "concentration_log_effective_cell_ratio": {
+                  "observed": 1.1719498422460022,
+                  "reference_mean": 0.8378843379174835,
+                  "reference_q05_median_q95": [
+                    0.7574269802906362,
+                    0.8349554324563553,
+                    0.9278442086387005
+                  ],
+                  "excess": 0.33406550432851795,
+                  "positive_animals": 10,
+                  "leave_one_animal_excess_range": [
+                    0.2623037946068886,
+                    0.3702557891001529
+                  ],
+                  "gate": true
+                }
+              }
+            },
+            {
+              "offset": [
+                0.5,
+                0
+              ],
+              "metrics": {
+                "displacement_JS": {
+                  "observed": 0.20946179422196315,
+                  "reference_mean": 0.21864028537664082,
+                  "reference_q05_median_q95": [
+                    0.20910942333522323,
+                    0.21859898202027342,
+                    0.22816084873248305
+                  ],
+                  "excess": -0.009178491154677669,
+                  "positive_animals": 2,
+                  "leave_one_animal_excess_range": [
+                    -0.011752420073611802,
+                    -0.005703526404186735
+                  ],
+                  "gate": false
+                },
+                "concentration_log_effective_cell_ratio": {
+                  "observed": 1.1390705846933,
+                  "reference_mean": 0.8383429256265438,
+                  "reference_q05_median_q95": [
+                    0.7549056846895311,
+                    0.8338872462216933,
+                    0.9226186641595511
+                  ],
+                  "excess": 0.3007276590667568,
+                  "positive_animals": 11,
+                  "leave_one_animal_excess_range": [
+                    0.24518861937402212,
+                    0.3286371987324363
+                  ],
+                  "gate": true
+                }
+              }
+            },
+            {
+              "offset": [
+                0,
+                0.5
+              ],
+              "metrics": {
+                "displacement_JS": {
+                  "observed": 0.21145793733341442,
+                  "reference_mean": 0.22097371044235165,
+                  "reference_q05_median_q95": [
+                    0.2118030024320639,
+                    0.22092121582709237,
+                    0.23154943340687084
+                  ],
+                  "excess": -0.009515773108937121,
+                  "positive_animals": 4,
+                  "leave_one_animal_excess_range": [
+                    -0.0122278657403254,
+                    -0.006460571894155503
+                  ],
+                  "gate": false
+                },
+                "concentration_log_effective_cell_ratio": {
+                  "observed": 1.1898124988165153,
+                  "reference_mean": 0.8493787109342184,
+                  "reference_q05_median_q95": [
+                    0.755955967323582,
+                    0.8471587533317471,
+                    0.9481259520582181
+                  ],
+                  "excess": 0.3404337878822965,
+                  "positive_animals": 10,
+                  "leave_one_animal_excess_range": [
+                    0.25248208786250953,
+                    0.3761541930461497
+                  ],
+                  "gate": true
+                }
+              }
+            },
+            {
+              "offset": [
+                0.5,
+                0.5
+              ],
+              "metrics": {
+                "displacement_JS": {
+                  "observed": 0.20216688089396584,
+                  "reference_mean": 0.21826052573778107,
+                  "reference_q05_median_q95": [
+                    0.20900651098085332,
+                    0.21821533902689705,
+                    0.22717971656854113
+                  ],
+                  "excess": -0.01609364484381516,
+                  "positive_animals": 3,
+                  "leave_one_animal_excess_range": [
+                    -0.018917648998453215,
+                    -0.01278466505378166
+                  ],
+                  "gate": false
+                },
+                "concentration_log_effective_cell_ratio": {
+                  "observed": 1.143026507410076,
+                  "reference_mean": 0.8379021254937736,
+                  "reference_q05_median_q95": [
+                    0.7550545119148666,
+                    0.8347039588370503,
+                    0.9273975058037587
+                  ],
+                  "excess": 0.305124381916303,
+                  "positive_animals": 10,
+                  "leave_one_animal_excess_range": [
+                    0.2446711607039657,
+                    0.33805489681887535
+                  ],
+                  "gate": true
+                }
+              }
+            }
+          ],
+          "equal_origin": {
+            "displacement_JS": {
+              "observed": 0.2079282270979669,
+              "reference_mean": 0.21910869736819272,
+              "reference_q05_median_q95": [
+                0.21088913651096755,
+                0.21932616534335886,
+                0.22680093394267245
+              ],
+              "excess": -0.011180470270225859,
+              "positive_animals": 3,
+              "leave_one_animal_excess_range": [
+                -0.013143260533709528,
+                -0.008902805321053784
+              ],
+              "gate": false,
+              "passing_origins": 0,
+              "origin_robust_gate": false
+            },
+            "concentration_log_effective_cell_ratio": {
+              "observed": 1.1609648582914733,
+              "reference_mean": 0.8408770249930049,
+              "reference_q05_median_q95": [
+                0.761836340871038,
+                0.8387989831780889,
+                0.9239809243725452
+              ],
+              "excess": 0.3200878332984688,
+              "positive_animals": 10,
+              "leave_one_animal_excess_range": [
+                0.25116141563684674,
+                0.35327551942440366
+              ],
+              "gate": true,
+              "passing_origins": 4,
+              "origin_robust_gate": true
+            }
+          }
+        },
+        "positive_fix_2000m": {
+          "origins": [
+            {
+              "offset": [
+                0,
+                0
+              ],
+              "metrics": {
+                "displacement_JS": {
+                  "observed": 0.1027325610256543,
+                  "reference_mean": 0.09550183547308487,
+                  "reference_q05_median_q95": [
+                    0.0865191971892381,
+                    0.09519002253086825,
+                    0.10541783878581848
+                  ],
+                  "excess": 0.007230725552569408,
+                  "positive_animals": 6,
+                  "leave_one_animal_excess_range": [
+                    0.002052521307958327,
+                    0.01102706414111215
+                  ],
+                  "gate": false
+                },
+                "concentration_log_effective_cell_ratio": {
+                  "observed": 0.6532369444378341,
+                  "reference_mean": 0.3436936214460375,
+                  "reference_q05_median_q95": [
+                    0.25755435993431386,
+                    0.3431116378781653,
+                    0.43671399085229556
+                  ],
+                  "excess": 0.3095433229917967,
+                  "positive_animals": 11,
+                  "leave_one_animal_excess_range": [
+                    0.20973942939050644,
+                    0.3332192600790158
+                  ],
+                  "gate": true
+                }
+              }
+            },
+            {
+              "offset": [
+                0.5,
+                0
+              ],
+              "metrics": {
+                "displacement_JS": {
+                  "observed": 0.10922867564320389,
+                  "reference_mean": 0.10059367413130918,
+                  "reference_q05_median_q95": [
+                    0.0908382941238497,
+                    0.10052531349145388,
+                    0.1099336122203323
+                  ],
+                  "excess": 0.00863500151189467,
+                  "positive_animals": 8,
+                  "leave_one_animal_excess_range": [
+                    0.005748339605985513,
+                    0.013193574020260423
+                  ],
+                  "gate": false
+                },
+                "concentration_log_effective_cell_ratio": {
+                  "observed": 0.6329232239229302,
+                  "reference_mean": 0.36159755941079286,
+                  "reference_q05_median_q95": [
+                    0.28376466999272115,
+                    0.36052285307119286,
+                    0.4405151185291909
+                  ],
+                  "excess": 0.2713256645121371,
+                  "positive_animals": 9,
+                  "leave_one_animal_excess_range": [
+                    0.1971376771176771,
+                    0.3056961984090236
+                  ],
+                  "gate": true
+                }
+              }
+            },
+            {
+              "offset": [
+                0,
+                0.5
+              ],
+              "metrics": {
+                "displacement_JS": {
+                  "observed": 0.11230909484833053,
+                  "reference_mean": 0.09924842052873883,
+                  "reference_q05_median_q95": [
+                    0.08979703069131455,
+                    0.09932879154318387,
+                    0.10866607628813307
+                  ],
+                  "excess": 0.013060674319591665,
+                  "positive_animals": 10,
+                  "leave_one_animal_excess_range": [
+                    0.009918189806303513,
+                    0.016160844931908808
+                  ],
+                  "gate": true
+                },
+                "concentration_log_effective_cell_ratio": {
+                  "observed": 0.6423028360937666,
+                  "reference_mean": 0.3568215850346315,
+                  "reference_q05_median_q95": [
+                    0.27492052712524434,
+                    0.35465950503166527,
+                    0.4484719610687577
+                  ],
+                  "excess": 0.2854812510591351,
+                  "positive_animals": 11,
+                  "leave_one_animal_excess_range": [
+                    0.21079123062800353,
+                    0.3050259295946617
+                  ],
+                  "gate": true
+                }
+              }
+            },
+            {
+              "offset": [
+                0.5,
+                0.5
+              ],
+              "metrics": {
+                "displacement_JS": {
+                  "observed": 0.11654393629411026,
+                  "reference_mean": 0.10004009673430371,
+                  "reference_q05_median_q95": [
+                    0.09093166818081179,
+                    0.09987220362426114,
+                    0.10914245713461858
+                  ],
+                  "excess": 0.01650383955980658,
+                  "positive_animals": 10,
+                  "leave_one_animal_excess_range": [
+                    0.01461078819439659,
+                    0.019419589565385125
+                  ],
+                  "gate": true
+                },
+                "concentration_log_effective_cell_ratio": {
+                  "observed": 0.5875369811158184,
+                  "reference_mean": 0.35963481099700456,
+                  "reference_q05_median_q95": [
+                    0.2964054831181524,
+                    0.35747802323461825,
+                    0.4309300363349809
+                  ],
+                  "excess": 0.2279021701188136,
+                  "positive_animals": 9,
+                  "leave_one_animal_excess_range": [
+                    0.1744049108685764,
+                    0.25450935374265515
+                  ],
+                  "gate": true
+                }
+              }
+            }
+          ],
+          "equal_origin": {
+            "displacement_JS": {
+              "observed": 0.11020356695282474,
+              "reference_mean": 0.09884600671685914,
+              "reference_q05_median_q95": [
+                0.09118788887383339,
+                0.09874578977747844,
+                0.10659121922313912
+              ],
+              "excess": 0.011357560235965618,
+              "positive_animals": 9,
+              "leave_one_animal_excess_range": [
+                0.008860660429875199,
+                0.014880372689881733
+              ],
+              "gate": true,
+              "passing_origins": 2,
+              "origin_robust_gate": false
+            },
+            "concentration_log_effective_cell_ratio": {
+              "observed": 0.6289999963925873,
+              "reference_mean": 0.3554368942221166,
+              "reference_q05_median_q95": [
+                0.2904262315281435,
+                0.3535733345431792,
+                0.4296953790744733
+              ],
+              "excess": 0.2735631021704709,
+              "positive_animals": 11,
+              "leave_one_animal_excess_range": [
+                0.19801831200119097,
+                0.2984231449165311
+              ],
+              "gate": true,
+              "passing_origins": 4,
+              "origin_robust_gate": true
+            }
+          }
+        }
+      },
+      "prediction": {
+        "count": {
+          "equal_origin": {
+            "mean_gain_nats_per_mark": 0.010342098356207492,
+            "reference_mean": -0.005422025178265554,
+            "reference_q05_median_q95": [
+              -0.018888294889817282,
+              -0.005418297065618708,
+              0.008843659525751328
+            ],
+            "excess_gain": 0.015764123534473047,
+            "positive_gain_animals": 5,
+            "positive_excess_animals": 6,
+            "leave_one_animal_gain_range": [
+              0.00043246479908759977,
+              0.012911362987173491
+            ],
+            "leave_one_animal_excess_range": [
+              0.0031341152850174214,
+              0.019231553024045982
+            ],
+            "gate": true,
+            "passing_origins": 1,
+            "origin_robust_gate": false
+          },
+          "origins": [
+            {
+              "offset": [
+                0,
+                0
+              ],
+              "metrics": {
+                "mean_gain_nats_per_mark": 0.02418205528538105,
+                "reference_mean": -0.004423425896086768,
+                "reference_q05_median_q95": [
+                  -0.0226008127850743,
+                  -0.004962818061857798,
+                  0.013914270696708801
+                ],
+                "excess_gain": 0.02860548118146782,
+                "positive_gain_animals": 4,
+                "positive_excess_animals": 5,
+                "leave_one_animal_gain_range": [
+                  0.0068178646450680475,
+                  0.028760520033916298
+                ],
+                "leave_one_animal_excess_range": [
+                  0.008783974503345485,
+                  0.033915127116691264
+                ],
+                "gate": true
+              }
+            },
+            {
+              "offset": [
+                0.5,
+                0
+              ],
+              "metrics": {
+                "mean_gain_nats_per_mark": 0.0001755008132144071,
+                "reference_mean": -0.004689525566626919,
+                "reference_q05_median_q95": [
+                  -0.022062564455008836,
+                  -0.0043767644804241276,
+                  0.012397514947462909
+                ],
+                "excess_gain": 0.0048650263798413265,
+                "positive_gain_animals": 3,
+                "positive_excess_animals": 3,
+                "leave_one_animal_gain_range": [
+                  -0.001858009228692657,
+                  0.0028605320329612503
+                ],
+                "leave_one_animal_excess_range": [
+                  0.0012665157622243108,
+                  0.008340356576335306
+                ],
+                "gate": false
+              }
+            },
+            {
+              "offset": [
+                0,
+                0.5
+              ],
+              "metrics": {
+                "mean_gain_nats_per_mark": 0.011406990039221772,
+                "reference_mean": -0.006158603242104413,
+                "reference_q05_median_q95": [
+                  -0.02486694800286149,
+                  -0.005819426419092523,
+                  0.012498694920249189
+                ],
+                "excess_gain": 0.017565593281326182,
+                "positive_gain_animals": 4,
+                "positive_excess_animals": 5,
+                "leave_one_animal_gain_range": [
+                  -0.0013452089188942574,
+                  0.018530762121223242
+                ],
+                "leave_one_animal_excess_range": [
+                  0.0009306316536590679,
+                  0.024423144188081378
+                ],
+                "gate": false
+              }
+            },
+            {
+              "offset": [
+                0.5,
+                0.5
+              ],
+              "metrics": {
+                "mean_gain_nats_per_mark": 0.005603847287012745,
+                "reference_mean": -0.006416546008244115,
+                "reference_q05_median_q95": [
+                  -0.022584811875303586,
+                  -0.006415492780818548,
+                  0.00966515228161477
+                ],
+                "excess_gain": 0.012020393295256863,
+                "positive_gain_animals": 4,
+                "positive_excess_animals": 5,
+                "leave_one_animal_gain_range": [
+                  -0.0018847873011307303,
+                  0.008540775893729329
+                ],
+                "leave_one_animal_excess_range": [
+                  0.0015553392208408183,
+                  0.014787168638341203
+                ],
+                "gate": false
+              }
+            }
+          ]
+        },
+        "positive_fix": {
+          "equal_origin": {
+            "mean_gain_nats_per_mark": 0.006975001873331449,
+            "reference_mean": -0.004036866991888933,
+            "reference_q05_median_q95": [
+              -0.01576000144363504,
+              -0.003652212357328905,
+              0.007755315719101281
+            ],
+            "excess_gain": 0.01101186886522038,
+            "positive_gain_animals": 4,
+            "positive_excess_animals": 6,
+            "leave_one_animal_gain_range": [
+              0.0002183459688316162,
+              0.008934610603019555
+            ],
+            "leave_one_animal_excess_range": [
+              0.0026044111773999797,
+              0.013639607308265802
+            ],
+            "gate": false,
+            "passing_origins": 1,
+            "origin_robust_gate": false
+          },
+          "origins": [
+            {
+              "offset": [
+                0,
+                0
+              ],
+              "metrics": {
+                "mean_gain_nats_per_mark": 0.018259888552004274,
+                "reference_mean": -0.0032605846542088043,
+                "reference_q05_median_q95": [
+                  -0.01860578415415737,
+                  -0.00299426625859093,
+                  0.012017511959124766
+                ],
+                "excess_gain": 0.02152047320621308,
+                "positive_gain_animals": 4,
+                "positive_excess_animals": 5,
+                "leave_one_animal_gain_range": [
+                  0.006335016557349788,
+                  0.021771398566937075
+                ],
+                "leave_one_animal_excess_range": [
+                  0.007980105538656537,
+                  0.025570073463022976
+                ],
+                "gate": true
+              }
+            },
+            {
+              "offset": [
+                0.5,
+                0
+              ],
+              "metrics": {
+                "mean_gain_nats_per_mark": -0.0010747002045759148,
+                "reference_mean": -0.0037559245907273827,
+                "reference_q05_median_q95": [
+                  -0.018351113630039006,
+                  -0.0037884300714771182,
+                  0.01096637590200882
+                ],
+                "excess_gain": 0.0026812243861514683,
+                "positive_gain_animals": 3,
+                "positive_excess_animals": 3,
+                "leave_one_animal_gain_range": [
+                  -0.002749171225941002,
+                  0.0013656279619979285
+                ],
+                "leave_one_animal_excess_range": [
+                  -0.000265580029285628,
+                  0.0057583716536701674
+                ],
+                "gate": false
+              }
+            },
+            {
+              "offset": [
+                0,
+                0.5
+              ],
+              "metrics": {
+                "mean_gain_nats_per_mark": 0.007969496628726862,
+                "reference_mean": -0.004324505597718654,
+                "reference_q05_median_q95": [
+                  -0.02013469174671975,
+                  -0.004207500562071435,
+                  0.01019335157945284
+                ],
+                "excess_gain": 0.012294002226445515,
+                "positive_gain_animals": 4,
+                "positive_excess_animals": 5,
+                "leave_one_animal_gain_range": [
+                  -0.002244799359255914,
+                  0.015988127071756696
+                ],
+                "leave_one_animal_excess_range": [
+                  -0.00022382591694565987,
+                  0.019990203257433305
+                ],
+                "gate": false
+              }
+            },
+            {
+              "offset": [
+                0.5,
+                0.5
+              ],
+              "metrics": {
+                "mean_gain_nats_per_mark": 0.0027453225171705778,
+                "reference_mean": -0.00480645312490089,
+                "reference_q05_median_q95": [
+                  -0.018586959258939967,
+                  -0.0042986613438508875,
+                  0.008333264417141798
+                ],
+                "excess_gain": 0.007551775642071468,
+                "positive_gain_animals": 4,
+                "positive_excess_animals": 5,
+                "leave_one_animal_gain_range": [
+                  -0.001474896466596521,
+                  0.0051435654487330855
+                ],
+                "leave_one_animal_excess_range": [
+                  0.0015749005355410392,
+                  0.009528495133049071
+                ],
+                "gate": false
+              }
+            }
+          ]
+        }
+      }
+    },
+    "noctule": {
+      "concentration_support": {
+        "eligible_animals": 22,
+        "excluded_tracks": {
+          "inconsistent_tag_or_site": 0,
+          "below100_fixes": 4,
+          "below10_positive_fixes": 1
+        },
+        "fixes": 5227,
+        "positive_fixes": 1079,
+        "marks": 1272,
+        "movable_fixes": 5204,
+        "movable_marks": 1267,
+        "strata": 170,
+        "rotatable_strata": 156,
+        "minute_bundles": 2862,
+        "track_fix_quantiles": [
+          104,
+          109.65,
+          223,
+          353.45,
+          364
+        ],
+        "track_mark_quantiles": [
+          23,
+          26.05,
+          47.5,
+          105.69999999999999,
+          138
+        ],
+        "movable_mark_fraction": 0.9960691823899371,
+        "movable_fix_fraction": 0.9955997704228047
+      },
+      "prediction_support": {
+        "eligible_tracks": 20,
+        "eligible_animals": 20,
+        "excluded_tracks": {
+          "below5_positive_fixes": 2
+        },
+        "train_fixes": 2148,
+        "test_fixes": 2121,
+        "embargo_fixes": 364,
+        "train_marks": 750,
+        "test_marks": 371,
+        "train_positive_fixes": 618,
+        "test_positive_fixes": 331,
+        "equal_animal_test_fix_overlap_by_origin": [
+          0.2949157070149496,
+          0.36234496143354133,
+          0.3227535874555344,
+          0.3615711830473726
+        ]
+      },
+      "concentration": {
+        "count_1000m": {
+          "origins": [
+            {
+              "offset": [
+                0,
+                0
+              ],
+              "metrics": {
+                "displacement_JS": {
+                  "observed": 0.08546923477165581,
+                  "reference_mean": 0.08464025387666832,
+                  "reference_q05_median_q95": [
+                    0.07875881454433283,
+                    0.08466144551583682,
+                    0.09048569236739136
+                  ],
+                  "excess": 0.0008289808949875128,
+                  "positive_animals": 14,
+                  "leave_one_animal_excess_range": [
+                    -0.0008634454044632642,
+                    0.0026423981850298662
+                  ],
+                  "gate": false
+                },
+                "concentration_log_effective_cell_ratio": {
+                  "observed": 0.433958810632944,
+                  "reference_mean": 0.301833428383567,
+                  "reference_q05_median_q95": [
+                    0.2479044286911304,
+                    0.2999623316285332,
+                    0.3599292125613429
+                  ],
+                  "excess": 0.13212538224937675,
+                  "positive_animals": 16,
+                  "leave_one_animal_excess_range": [
+                    0.11415622106132695,
+                    0.15104194789572267
+                  ],
+                  "gate": true
+                }
+              }
+            },
+            {
+              "offset": [
+                0.5,
+                0
+              ],
+              "metrics": {
+                "displacement_JS": {
+                  "observed": 0.09051131654119762,
+                  "reference_mean": 0.08224005456266337,
+                  "reference_q05_median_q95": [
+                    0.07636231946666293,
+                    0.08223892707152461,
+                    0.08787624592876142
+                  ],
+                  "excess": 0.00827126197853423,
+                  "positive_animals": 15,
+                  "leave_one_animal_excess_range": [
+                    0.005977983223448297,
+                    0.010122581356282398
+                  ],
+                  "gate": true
+                },
+                "concentration_log_effective_cell_ratio": {
+                  "observed": 0.4406227719255616,
+                  "reference_mean": 0.29346720985226166,
+                  "reference_q05_median_q95": [
+                    0.24150161929316363,
+                    0.29301185701964705,
+                    0.34453922577688506
+                  ],
+                  "excess": 0.14715556207330002,
+                  "positive_animals": 18,
+                  "leave_one_animal_excess_range": [
+                    0.13239857868090868,
+                    0.17211611897346704
+                  ],
+                  "gate": true
+                }
+              }
+            },
+            {
+              "offset": [
+                0,
+                0.5
+              ],
+              "metrics": {
+                "displacement_JS": {
+                  "observed": 0.0928668104092051,
+                  "reference_mean": 0.08683549585070474,
+                  "reference_q05_median_q95": [
+                    0.08091811405242076,
+                    0.08690073660237273,
+                    0.09242004718068403
+                  ],
+                  "excess": 0.006031314558500359,
+                  "positive_animals": 15,
+                  "leave_one_animal_excess_range": [
+                    0.0031424571360121173,
+                    0.007879900895274896
+                  ],
+                  "gate": true
+                },
+                "concentration_log_effective_cell_ratio": {
+                  "observed": 0.43028512525020035,
+                  "reference_mean": 0.3070336597516073,
+                  "reference_q05_median_q95": [
+                    0.2533820639440411,
+                    0.30526510022701603,
+                    0.36399572508315214
+                  ],
+                  "excess": 0.1232514654985931,
+                  "positive_animals": 17,
+                  "leave_one_animal_excess_range": [
+                    0.09695996022072476,
+                    0.14034803020823008
+                  ],
+                  "gate": true
+                }
+              }
+            },
+            {
+              "offset": [
+                0.5,
+                0.5
+              ],
+              "metrics": {
+                "displacement_JS": {
+                  "observed": 0.0984709558596721,
+                  "reference_mean": 0.08500409412084325,
+                  "reference_q05_median_q95": [
+                    0.07910594581662286,
+                    0.08497729104542731,
+                    0.09076470556194997
+                  ],
+                  "excess": 0.01346686173882883,
+                  "positive_animals": 17,
+                  "leave_one_animal_excess_range": [
+                    0.011442589817749552,
+                    0.015066300589034388
+                  ],
+                  "gate": true
+                },
+                "concentration_log_effective_cell_ratio": {
+                  "observed": 0.4379477001046645,
+                  "reference_mean": 0.3012485783753352,
+                  "reference_q05_median_q95": [
+                    0.25209090309139914,
+                    0.3004366916785752,
+                    0.35338726685770794
+                  ],
+                  "excess": 0.13669912172932924,
+                  "positive_animals": 19,
+                  "leave_one_animal_excess_range": [
+                    0.1247730364290246,
+                    0.15834036529627568
+                  ],
+                  "gate": true
+                }
+              }
+            }
+          ],
+          "equal_origin": {
+            "displacement_JS": {
+              "observed": 0.09182957939543267,
+              "reference_mean": 0.0846799746027199,
+              "reference_q05_median_q95": [
+                0.0805476224363172,
+                0.08466124595739477,
+                0.089280157470738
+              ],
+              "excess": 0.007149604792712716,
+              "positive_animals": 14,
+              "leave_one_animal_excess_range": [
+                0.00565733239573893,
+                0.008475023162541534
+              ],
+              "gate": true,
+              "passing_origins": 3,
+              "origin_robust_gate": true
+            },
+            "concentration_log_effective_cell_ratio": {
+              "observed": 0.4357036019783425,
+              "reference_mean": 0.30089571909069285,
+              "reference_q05_median_q95": [
+                0.25460676286507516,
+                0.2990067386855902,
+                0.34973320492908444
+              ],
+              "excess": 0.13480788288764975,
+              "positive_animals": 19,
+              "leave_one_animal_excess_range": [
+                0.11806419963112089,
+                0.15546161559342384
+              ],
+              "gate": true,
+              "passing_origins": 4,
+              "origin_robust_gate": true
+            }
+          }
+        },
+        "count_500m": {
+          "origins": [
+            {
+              "offset": [
+                0,
+                0
+              ],
+              "metrics": {
+                "displacement_JS": {
+                  "observed": 0.15279690918330047,
+                  "reference_mean": 0.15232775277747435,
+                  "reference_q05_median_q95": [
+                    0.14649908578473286,
+                    0.15232009403669503,
+                    0.15827426561016675
+                  ],
+                  "excess": 0.00046915640582616394,
+                  "positive_animals": 13,
+                  "leave_one_animal_excess_range": [
+                    -0.0011981242646006444,
+                    0.002267228981741592
+                  ],
+                  "gate": false
+                },
+                "concentration_log_effective_cell_ratio": {
+                  "observed": 0.6774291456536957,
+                  "reference_mean": 0.5500987910747499,
+                  "reference_q05_median_q95": [
+                    0.4904951078396514,
+                    0.5480923776624743,
+                    0.61209700903556
+                  ],
+                  "excess": 0.12733035457894581,
+                  "positive_animals": 16,
+                  "leave_one_animal_excess_range": [
+                    0.1037242604222735,
+                    0.1430589361949156
+                  ],
+                  "gate": true
+                }
+              }
+            },
+            {
+              "offset": [
+                0.5,
+                0
+              ],
+              "metrics": {
+                "displacement_JS": {
+                  "observed": 0.15921832171864192,
+                  "reference_mean": 0.15377685045837997,
+                  "reference_q05_median_q95": [
+                    0.14794338539390994,
+                    0.15374496189754666,
+                    0.15979056398042296
+                  ],
+                  "excess": 0.005441471260261957,
+                  "positive_animals": 13,
+                  "leave_one_animal_excess_range": [
+                    0.0030528038998521695,
+                    0.006893255983105785
+                  ],
+                  "gate": false
+                },
+                "concentration_log_effective_cell_ratio": {
+                  "observed": 0.7065541237539551,
+                  "reference_mean": 0.5557088222021659,
+                  "reference_q05_median_q95": [
+                    0.495206732165698,
+                    0.5554708460257772,
+                    0.6173235259812724
+                  ],
+                  "excess": 0.15084530155178905,
+                  "positive_animals": 14,
+                  "leave_one_animal_excess_range": [
+                    0.11920006826006506,
+                    0.17845261419784814
+                  ],
+                  "gate": true
+                }
+              }
+            },
+            {
+              "offset": [
+                0,
+                0.5
+              ],
+              "metrics": {
+                "displacement_JS": {
+                  "observed": 0.15496232562864584,
+                  "reference_mean": 0.15317772946242783,
+                  "reference_q05_median_q95": [
+                    0.14734959100944062,
+                    0.15301741421521764,
+                    0.15934839777527077
+                  ],
+                  "excess": 0.0017845961662180413,
+                  "positive_animals": 13,
+                  "leave_one_animal_excess_range": [
+                    0.0008156910085460918,
+                    0.003200201015998432
+                  ],
+                  "gate": false
+                },
+                "concentration_log_effective_cell_ratio": {
+                  "observed": 0.691154613346958,
+                  "reference_mean": 0.5548797515009035,
+                  "reference_q05_median_q95": [
+                    0.5005496051044349,
+                    0.5547036328557403,
+                    0.6094911160546184
+                  ],
+                  "excess": 0.13627486184605456,
+                  "positive_animals": 17,
+                  "leave_one_animal_excess_range": [
+                    0.11707043787512307,
+                    0.15953028745345746
+                  ],
+                  "gate": true
+                }
+              }
+            },
+            {
+              "offset": [
+                0.5,
+                0.5
+              ],
+              "metrics": {
+                "displacement_JS": {
+                  "observed": 0.1575776214675679,
+                  "reference_mean": 0.15349469478647218,
+                  "reference_q05_median_q95": [
+                    0.14782230890900658,
+                    0.1532535496783385,
+                    0.15989778850734895
+                  ],
+                  "excess": 0.004082926681095723,
+                  "positive_animals": 12,
+                  "leave_one_animal_excess_range": [
+                    0.0022387819030118433,
+                    0.0059958690889697925
+                  ],
+                  "gate": false
+                },
+                "concentration_log_effective_cell_ratio": {
+                  "observed": 0.7196105103918958,
+                  "reference_mean": 0.5558914051950915,
+                  "reference_q05_median_q95": [
+                    0.4982202435855749,
+                    0.5577975918445272,
+                    0.6201005677023254
+                  ],
+                  "excess": 0.16371910519680447,
+                  "positive_animals": 19,
+                  "leave_one_animal_excess_range": [
+                    0.1360461059862073,
+                    0.191910157082027
+                  ],
+                  "gate": true
+                }
+              }
+            }
+          ],
+          "equal_origin": {
+            "displacement_JS": {
+              "observed": 0.15613879449953902,
+              "reference_mean": 0.15319425687118857,
+              "reference_q05_median_q95": [
+                0.14882695989945338,
+                0.1529061962172697,
+                0.15786656738761345
+              ],
+              "excess": 0.0029445376283503883,
+              "positive_animals": 12,
+              "leave_one_animal_excess_range": [
+                0.001448322159915346,
+                0.004390109220931224
+              ],
+              "gate": false,
+              "passing_origins": 0,
+              "origin_robust_gate": false
+            },
+            "concentration_log_effective_cell_ratio": {
+              "observed": 0.698687098286626,
+              "reference_mean": 0.5541446924932277,
+              "reference_q05_median_q95": [
+                0.5008427160172897,
+                0.5530460148479066,
+                0.6100976118036053
+              ],
+              "excess": 0.14454240579339847,
+              "positive_animals": 17,
+              "leave_one_animal_excess_range": [
+                0.11901021813591724,
+                0.16823799873206205
+              ],
+              "gate": true,
+              "passing_origins": 4,
+              "origin_robust_gate": true
+            }
+          }
+        },
+        "count_2000m": {
+          "origins": [
+            {
+              "offset": [
+                0,
+                0
+              ],
+              "metrics": {
+                "displacement_JS": {
+                  "observed": 0.042105382427594505,
+                  "reference_mean": 0.03968647673184005,
+                  "reference_q05_median_q95": [
+                    0.034876968521630754,
+                    0.03979697306800017,
+                    0.04440067449697126
+                  ],
+                  "excess": 0.002418905695754435,
+                  "positive_animals": 11,
+                  "leave_one_animal_excess_range": [
+                    0.0011957293603607852,
+                    0.0033861648269745267
+                  ],
+                  "gate": false
+                },
+                "concentration_log_effective_cell_ratio": {
+                  "observed": 0.2408253417054782,
+                  "reference_mean": 0.14290877159630236,
+                  "reference_q05_median_q95": [
+                    0.10129826936242349,
+                    0.14237811358142782,
+                    0.19026734739566986
+                  ],
+                  "excess": 0.09791657010917586,
+                  "positive_animals": 16,
+                  "leave_one_animal_excess_range": [
+                    0.08304274768864091,
+                    0.11402388156142458
+                  ],
+                  "gate": true
+                }
+              }
+            },
+            {
+              "offset": [
+                0.5,
+                0
+              ],
+              "metrics": {
+                "displacement_JS": {
+                  "observed": 0.04415346119172909,
+                  "reference_mean": 0.03897069116611864,
+                  "reference_q05_median_q95": [
+                    0.034444574681608865,
+                    0.038924996140768636,
+                    0.043220383038634534
+                  ],
+                  "excess": 0.005182770025610454,
+                  "positive_animals": 14,
+                  "leave_one_animal_excess_range": [
+                    0.004205480941747835,
+                    0.006326404734887719
+                  ],
+                  "gate": true
+                },
+                "concentration_log_effective_cell_ratio": {
+                  "observed": 0.2612489616424085,
+                  "reference_mean": 0.14204247269632272,
+                  "reference_q05_median_q95": [
+                    0.09876818674080638,
+                    0.14255783390790233,
+                    0.18520717360818068
+                  ],
+                  "excess": 0.11920648894608572,
+                  "positive_animals": 17,
+                  "leave_one_animal_excess_range": [
+                    0.10381892676406201,
+                    0.13398927916271378
+                  ],
+                  "gate": true
+                }
+              }
+            },
+            {
+              "offset": [
+                0,
+                0.5
+              ],
+              "metrics": {
+                "displacement_JS": {
+                  "observed": 0.042896544314590314,
+                  "reference_mean": 0.04106738009360975,
+                  "reference_q05_median_q95": [
+                    0.03608683176450642,
+                    0.0410603103610367,
+                    0.046157825533002954
+                  ],
+                  "excess": 0.001829164220980551,
+                  "positive_animals": 9,
+                  "leave_one_animal_excess_range": [
+                    0.00011527383437013522,
+                    0.002995936478343965
+                  ],
+                  "gate": false
+                },
+                "concentration_log_effective_cell_ratio": {
+                  "observed": 0.2553998761129899,
+                  "reference_mean": 0.1452359930585516,
+                  "reference_q05_median_q95": [
+                    0.09787431544372968,
+                    0.14398261669894918,
+                    0.1940129866454029
+                  ],
+                  "excess": 0.11016388305443835,
+                  "positive_animals": 18,
+                  "leave_one_animal_excess_range": [
+                    0.08663138061216466,
+                    0.12277315877155523
+                  ],
+                  "gate": true
+                }
+              }
+            },
+            {
+              "offset": [
+                0.5,
+                0.5
+              ],
+              "metrics": {
+                "displacement_JS": {
+                  "observed": 0.04461558851893985,
+                  "reference_mean": 0.041870413118478736,
+                  "reference_q05_median_q95": [
+                    0.037380884261053716,
+                    0.04165564626721561,
+                    0.04689002778512323
+                  ],
+                  "excess": 0.002745175400461121,
+                  "positive_animals": 11,
+                  "leave_one_animal_excess_range": [
+                    0.0010812501216870803,
+                    0.0037122656060945927
+                  ],
+                  "gate": false
+                },
+                "concentration_log_effective_cell_ratio": {
+                  "observed": 0.281281488023894,
+                  "reference_mean": 0.15077373688421344,
+                  "reference_q05_median_q95": [
+                    0.10675733862201373,
+                    0.14915683173046868,
+                    0.1976655356780561
+                  ],
+                  "excess": 0.1305077511396805,
+                  "positive_animals": 19,
+                  "leave_one_animal_excess_range": [
+                    0.11794401223789688,
+                    0.13900846694485744
+                  ],
+                  "gate": true
+                }
+              }
+            }
+          ],
+          "equal_origin": {
+            "displacement_JS": {
+              "observed": 0.04344274411321344,
+              "reference_mean": 0.040398740277511794,
+              "reference_q05_median_q95": [
+                0.037239675785478224,
+                0.04034633731224872,
+                0.04379238824903132
+              ],
+              "excess": 0.0030440038357016337,
+              "positive_animals": 14,
+              "leave_one_animal_excess_range": [
+                0.001910570050206892,
+                0.003979490963167777
+              ],
+              "gate": false,
+              "passing_origins": 1,
+              "origin_robust_gate": false
+            },
+            "concentration_log_effective_cell_ratio": {
+              "observed": 0.25968891687119267,
+              "reference_mean": 0.14524024355884751,
+              "reference_q05_median_q95": [
+                0.10921507565775898,
+                0.14383395563385123,
+                0.18412648973485957
+              ],
+              "excess": 0.1144486733123451,
+              "positive_animals": 18,
+              "leave_one_animal_excess_range": [
+                0.10431354488709979,
+                0.12701474630483597
+              ],
+              "gate": true,
+              "passing_origins": 4,
+              "origin_robust_gate": true
+            }
+          }
+        },
+        "positive_fix_1000m": {
+          "origins": [
+            {
+              "offset": [
+                0,
+                0
+              ],
+              "metrics": {
+                "displacement_JS": {
+                  "observed": 0.08201711799687987,
+                  "reference_mean": 0.08106818747342377,
+                  "reference_q05_median_q95": [
+                    0.07534953424175182,
+                    0.08108447429555476,
+                    0.08710811143107054
+                  ],
+                  "excess": 0.0009489305234560805,
+                  "positive_animals": 15,
+                  "leave_one_animal_excess_range": [
+                    -0.0006692305819782723,
+                    0.0027416815368769896
+                  ],
+                  "gate": false
+                },
+                "concentration_log_effective_cell_ratio": {
+                  "observed": 0.4056383814247445,
+                  "reference_mean": 0.2850879507887112,
+                  "reference_q05_median_q95": [
+                    0.233944006286538,
+                    0.28314624769581886,
+                    0.3413311955519834
+                  ],
+                  "excess": 0.12055043063603327,
+                  "positive_animals": 16,
+                  "leave_one_animal_excess_range": [
+                    0.10344454930146497,
+                    0.13807274470266742
+                  ],
+                  "gate": true
+                }
+              }
+            },
+            {
+              "offset": [
+                0.5,
+                0
+              ],
+              "metrics": {
+                "displacement_JS": {
+                  "observed": 0.08748349989735534,
+                  "reference_mean": 0.0788657619183281,
+                  "reference_q05_median_q95": [
+                    0.0733803827300247,
+                    0.07892252946429174,
+                    0.08423666566194464
+                  ],
+                  "excess": 0.008617737979027245,
+                  "positive_animals": 15,
+                  "leave_one_animal_excess_range": [
+                    0.006355275701124356,
+                    0.010437736149624984
+                  ],
+                  "gate": true
+                },
+                "concentration_log_effective_cell_ratio": {
+                  "observed": 0.42037454318296796,
+                  "reference_mean": 0.27762475594178654,
+                  "reference_q05_median_q95": [
+                    0.22769648252104327,
+                    0.27713504931137406,
+                    0.3290110300997739
+                  ],
+                  "excess": 0.14274978724118162,
+                  "positive_animals": 18,
+                  "leave_one_animal_excess_range": [
+                    0.12831538513659796,
+                    0.165870957619735
+                  ],
+                  "gate": true
+                }
+              }
+            },
+            {
+              "offset": [
+                0,
+                0.5
+              ],
+              "metrics": {
+                "displacement_JS": {
+                  "observed": 0.08962055406120194,
+                  "reference_mean": 0.08340457588890691,
+                  "reference_q05_median_q95": [
+                    0.07784042777737084,
+                    0.08356367903454504,
+                    0.08879848187780572
+                  ],
+                  "excess": 0.0062159781722950225,
+                  "positive_animals": 15,
+                  "leave_one_animal_excess_range": [
+                    0.003373064291562865,
+                    0.007983751829285044
+                  ],
+                  "gate": true
+                },
+                "concentration_log_effective_cell_ratio": {
+                  "observed": 0.4054636962184283,
+                  "reference_mean": 0.29105942942319146,
+                  "reference_q05_median_q95": [
+                    0.2406674032059806,
+                    0.2899489334231757,
+                    0.3444142369622612
+                  ],
+                  "excess": 0.11440426679523687,
+                  "positive_animals": 17,
+                  "leave_one_animal_excess_range": [
+                    0.08795697182704107,
+                    0.1294528685506271
+                  ],
+                  "gate": true
+                }
+              }
+            },
+            {
+              "offset": [
+                0.5,
+                0.5
+              ],
+              "metrics": {
+                "displacement_JS": {
+                  "observed": 0.09564619925955907,
+                  "reference_mean": 0.08180211628681038,
+                  "reference_q05_median_q95": [
+                    0.07615166717898206,
+                    0.08192204903496991,
+                    0.08744332925576219
+                  ],
+                  "excess": 0.01384408297274869,
+                  "positive_animals": 18,
+                  "leave_one_animal_excess_range": [
+                    0.012003781448879607,
+                    0.015319802869730328
+                  ],
+                  "gate": true
+                },
+                "concentration_log_effective_cell_ratio": {
+                  "observed": 0.4135478035202867,
+                  "reference_mean": 0.2861099691146519,
+                  "reference_q05_median_q95": [
+                    0.23673060238241994,
+                    0.2845064091506708,
+                    0.3371319191609575
+                  ],
+                  "excess": 0.12743783440563464,
+                  "positive_animals": 18,
+                  "leave_one_animal_excess_range": [
+                    0.11484922560368913,
+                    0.14778869393083324
+                  ],
+                  "gate": true
+                }
+              }
+            }
+          ],
+          "equal_origin": {
+            "displacement_JS": {
+              "observed": 0.08869184280374907,
+              "reference_mean": 0.0812851603918673,
+              "reference_q05_median_q95": [
+                0.07745418271602693,
+                0.08119013970238947,
+                0.08564161800682281
+              ],
+              "excess": 0.007406682411881749,
+              "positive_animals": 15,
+              "leave_one_animal_excess_range": [
+                0.005966498610463267,
+                0.008595338320222797
+              ],
+              "gate": true,
+              "passing_origins": 3,
+              "origin_robust_gate": true
+            },
+            "concentration_log_effective_cell_ratio": {
+              "observed": 0.41125610608660684,
+              "reference_mean": 0.2849705263170853,
+              "reference_q05_median_q95": [
+                0.23941355507606613,
+                0.2839029826528924,
+                0.3319814784224343
+              ],
+              "excess": 0.1262855797695215,
+              "positive_animals": 19,
+              "leave_one_animal_excess_range": [
+                0.10990716030327716,
+                0.14529631620096561
+              ],
+              "gate": true,
+              "passing_origins": 4,
+              "origin_robust_gate": true
+            }
+          }
+        },
+        "positive_fix_500m": {
+          "origins": [
+            {
+              "offset": [
+                0,
+                0
+              ],
+              "metrics": {
+                "displacement_JS": {
+                  "observed": 0.15082458587654132,
+                  "reference_mean": 0.14895449492236063,
+                  "reference_q05_median_q95": [
+                    0.14297355624254846,
+                    0.14901963275331861,
+                    0.15477277576141815
+                  ],
+                  "excess": 0.0018700909541807162,
+                  "positive_animals": 12,
+                  "leave_one_animal_excess_range": [
+                    0.0003824935456657698,
+                    0.003639053719831301
+                  ],
+                  "gate": false
+                },
+                "concentration_log_effective_cell_ratio": {
+                  "observed": 0.6540668725407794,
+                  "reference_mean": 0.530850803054888,
+                  "reference_q05_median_q95": [
+                    0.47425908610343764,
+                    0.5294993395071489,
+                    0.5907386421150023
+                  ],
+                  "excess": 0.12321606948589144,
+                  "positive_animals": 14,
+                  "leave_one_animal_excess_range": [
+                    0.10006116048311364,
+                    0.13748008551167748
+                  ],
+                  "gate": true
+                }
+              }
+            },
+            {
+              "offset": [
+                0.5,
+                0
+              ],
+              "metrics": {
+                "displacement_JS": {
+                  "observed": 0.15683693157222212,
+                  "reference_mean": 0.15050550484632622,
+                  "reference_q05_median_q95": [
+                    0.14498667597942513,
+                    0.15039986139634792,
+                    0.1561841769722875
+                  ],
+                  "excess": 0.006331426725895934,
+                  "positive_animals": 12,
+                  "leave_one_animal_excess_range": [
+                    0.003894913471999225,
+                    0.007538049238851515
+                  ],
+                  "gate": true
+                },
+                "concentration_log_effective_cell_ratio": {
+                  "observed": 0.6808032223134226,
+                  "reference_mean": 0.5370566976899918,
+                  "reference_q05_median_q95": [
+                    0.4765685126241617,
+                    0.537599692163847,
+                    0.5964404813103201
+                  ],
+                  "excess": 0.14374652462343093,
+                  "positive_animals": 15,
+                  "leave_one_animal_excess_range": [
+                    0.11388870996457937,
+                    0.1700296526616098
+                  ],
+                  "gate": true
+                }
+              }
+            },
+            {
+              "offset": [
+                0,
+                0.5
+              ],
+              "metrics": {
+                "displacement_JS": {
+                  "observed": 0.15102993203250628,
+                  "reference_mean": 0.14975698775728358,
+                  "reference_q05_median_q95": [
+                    0.1441789675023149,
+                    0.14956601775005474,
+                    0.15571932391265642
+                  ],
+                  "excess": 0.0012729442752227537,
+                  "positive_animals": 11,
+                  "leave_one_animal_excess_range": [
+                    0.00033892280190852777,
+                    0.00256743557109177
+                  ],
+                  "gate": false
+                },
+                "concentration_log_effective_cell_ratio": {
+                  "observed": 0.6595570110784597,
+                  "reference_mean": 0.5350114717968735,
+                  "reference_q05_median_q95": [
+                    0.48458401658924977,
+                    0.5340875655002432,
+                    0.5865451080720661
+                  ],
+                  "excess": 0.12454553928158645,
+                  "positive_animals": 18,
+                  "leave_one_animal_excess_range": [
+                    0.10698309309971091,
+                    0.146273571773597
+                  ],
+                  "gate": true
+                }
+              }
+            },
+            {
+              "offset": [
+                0.5,
+                0.5
+              ],
+              "metrics": {
+                "displacement_JS": {
+                  "observed": 0.15455392527238282,
+                  "reference_mean": 0.15033260014541183,
+                  "reference_q05_median_q95": [
+                    0.1448183075115017,
+                    0.15017935486370917,
+                    0.15647943384627022
+                  ],
+                  "excess": 0.004221325126970953,
+                  "positive_animals": 13,
+                  "leave_one_animal_excess_range": [
+                    0.0024239438962347106,
+                    0.005578415845113647
+                  ],
+                  "gate": false
+                },
+                "concentration_log_effective_cell_ratio": {
+                  "observed": 0.6913418547691473,
+                  "reference_mean": 0.5376930939907455,
+                  "reference_q05_median_q95": [
+                    0.4824866387402253,
+                    0.5388200963615803,
+                    0.5940053713418152
+                  ],
+                  "excess": 0.15364876077840164,
+                  "positive_animals": 19,
+                  "leave_one_animal_excess_range": [
+                    0.12815899783209608,
+                    0.1812570954804118
+                  ],
+                  "gate": true
+                }
+              }
+            }
+          ],
+          "equal_origin": {
+            "displacement_JS": {
+              "observed": 0.15331134368841315,
+              "reference_mean": 0.14988739691784553,
+              "reference_q05_median_q95": [
+                0.1458166011190878,
+                0.14963072190756047,
+                0.15461688238273089
+              ],
+              "excess": 0.0034239467705675917,
+              "positive_animals": 13,
+              "leave_one_animal_excess_range": [
+                0.0019088180534619563,
+                0.004615004191061621
+              ],
+              "gate": false,
+              "passing_origins": 1,
+              "origin_robust_gate": false
+            },
+            "concentration_log_effective_cell_ratio": {
+              "observed": 0.6714422401754523,
+              "reference_mean": 0.5351530166331248,
+              "reference_q05_median_q95": [
+                0.4849263627327173,
+                0.5336619096588996,
+                0.5883503933259098
+              ],
+              "excess": 0.13628922354232767,
+              "positive_animals": 17,
+              "leave_one_animal_excess_range": [
+                0.11227299034487503,
+                0.15876010135682406
+              ],
+              "gate": true,
+              "passing_origins": 4,
+              "origin_robust_gate": true
+            }
+          }
+        },
+        "positive_fix_2000m": {
+          "origins": [
+            {
+              "offset": [
+                0,
+                0
+              ],
+              "metrics": {
+                "displacement_JS": {
+                  "observed": 0.03925355116161204,
+                  "reference_mean": 0.03719968806353174,
+                  "reference_q05_median_q95": [
+                    0.032516234549141654,
+                    0.03719652081224603,
+                    0.04170332426891091
+                  ],
+                  "excess": 0.002053863098080304,
+                  "positive_animals": 12,
+                  "leave_one_animal_excess_range": [
+                    0.000913845835914291,
+                    0.003118615653142493
+                  ],
+                  "gate": false
+                },
+                "concentration_log_effective_cell_ratio": {
+                  "observed": 0.22316686050956394,
+                  "reference_mean": 0.13214870166528675,
+                  "reference_q05_median_q95": [
+                    0.09310834443949506,
+                    0.13094417038939551,
+                    0.17586172943343195
+                  ],
+                  "excess": 0.09101815884427729,
+                  "positive_animals": 17,
+                  "leave_one_animal_excess_range": [
+                    0.07587117232751195,
+                    0.10624758431263615
+                  ],
+                  "gate": true
+                }
+              }
+            },
+            {
+              "offset": [
+                0.5,
+                0
+              ],
+              "metrics": {
+                "displacement_JS": {
+                  "observed": 0.04102274849263888,
+                  "reference_mean": 0.03641483146747198,
+                  "reference_q05_median_q95": [
+                    0.032114617531846384,
+                    0.03637283334856358,
+                    0.040477398641910495
+                  ],
+                  "excess": 0.0046079170251669055,
+                  "positive_animals": 13,
+                  "leave_one_animal_excess_range": [
+                    0.003673976639868052,
+                    0.00553078487989589
+                  ],
+                  "gate": true
+                },
+                "concentration_log_effective_cell_ratio": {
+                  "observed": 0.23761471191527547,
+                  "reference_mean": 0.1309302247222775,
+                  "reference_q05_median_q95": [
+                    0.08846871657090316,
+                    0.13148183945952577,
+                    0.1709682447545992
+                  ],
+                  "excess": 0.106684487192998,
+                  "positive_animals": 16,
+                  "leave_one_animal_excess_range": [
+                    0.09073790255484662,
+                    0.12222382054986405
+                  ],
+                  "gate": true
+                }
+              }
+            },
+            {
+              "offset": [
+                0,
+                0.5
+              ],
+              "metrics": {
+                "displacement_JS": {
+                  "observed": 0.039566725081765314,
+                  "reference_mean": 0.03822431513394107,
+                  "reference_q05_median_q95": [
+                    0.03349069042796921,
+                    0.03797114556728714,
+                    0.043298347747645474
+                  ],
+                  "excess": 0.001342409947824254,
+                  "positive_animals": 11,
+                  "leave_one_animal_excess_range": [
+                    -0.00031587867890306925,
+                    0.0025368811635938784
+                  ],
+                  "gate": false
+                },
+                "concentration_log_effective_cell_ratio": {
+                  "observed": 0.23629603956719167,
+                  "reference_mean": 0.13329961194664133,
+                  "reference_q05_median_q95": [
+                    0.08789829218144994,
+                    0.13237644262836507,
+                    0.18189513541965932
+                  ],
+                  "excess": 0.10299642762055033,
+                  "positive_animals": 17,
+                  "leave_one_animal_excess_range": [
+                    0.08103176114973429,
+                    0.11307896310709858
+                  ],
+                  "gate": true
+                }
+              }
+            },
+            {
+              "offset": [
+                0.5,
+                0.5
+              ],
+              "metrics": {
+                "displacement_JS": {
+                  "observed": 0.041397046046496605,
+                  "reference_mean": 0.03894236545406042,
+                  "reference_q05_median_q95": [
+                    0.0347152644911751,
+                    0.03868009201726512,
+                    0.04387112859041843
+                  ],
+                  "excess": 0.0024546805924361764,
+                  "positive_animals": 14,
+                  "leave_one_animal_excess_range": [
+                    0.0007755622108918501,
+                    0.003452995660743299
+                  ],
+                  "gate": false
+                },
+                "concentration_log_effective_cell_ratio": {
+                  "observed": 0.25341434867418755,
+                  "reference_mean": 0.13836257678107944,
+                  "reference_q05_median_q95": [
+                    0.09642670775465094,
+                    0.13705727678789362,
+                    0.18273897347959198
+                  ],
+                  "excess": 0.11505177189310815,
+                  "positive_animals": 18,
+                  "leave_one_animal_excess_range": [
+                    0.1030867846988503,
+                    0.12267896831537717
+                  ],
+                  "gate": true
+                }
+              }
+            }
+          ],
+          "equal_origin": {
+            "displacement_JS": {
+              "observed": 0.04031001769562821,
+              "reference_mean": 0.0376953000297513,
+              "reference_q05_median_q95": [
+                0.03462584370278449,
+                0.037685616069208644,
+                0.040813298404191393
+              ],
+              "excess": 0.00261471766587691,
+              "positive_animals": 13,
+              "leave_one_animal_excess_range": [
+                0.0014755046625609418,
+                0.0035086545958105805
+              ],
+              "gate": false,
+              "passing_origins": 1,
+              "origin_robust_gate": false
+            },
+            "concentration_log_effective_cell_ratio": {
+              "observed": 0.2376229901665547,
+              "reference_mean": 0.13368527877882125,
+              "reference_q05_median_q95": [
+                0.09938316531284663,
+                0.13296674251929141,
+                0.1696753842578937
+              ],
+              "excess": 0.10393771138773339,
+              "positive_animals": 18,
+              "leave_one_animal_excess_range": [
+                0.09420691981387004,
+                0.1158838279946688
+              ],
+              "gate": true,
+              "passing_origins": 4,
+              "origin_robust_gate": true
+            }
+          }
+        }
+      },
+      "prediction": {
+        "count": {
+          "equal_origin": {
+            "mean_gain_nats_per_mark": -0.0012668687755420691,
+            "reference_mean": -0.003139784253265872,
+            "reference_q05_median_q95": [
+              -0.01144305110254456,
+              -0.0030687609311229637,
+              0.005631265049345705
+            ],
+            "excess_gain": 0.0018729154777238019,
+            "positive_gain_animals": 10,
+            "positive_excess_animals": 11,
+            "leave_one_animal_gain_range": [
+              -0.003976938283349242,
+              0.001066619059166167
+            ],
+            "leave_one_animal_excess_range": [
+              -0.0010306965013589305,
+              0.004264090327215798
+            ],
+            "gate": false,
+            "passing_origins": 0,
+            "origin_robust_gate": false
+          },
+          "origins": [
+            {
+              "offset": [
+                0,
+                0
+              ],
+              "metrics": {
+                "mean_gain_nats_per_mark": -0.007922718703314778,
+                "reference_mean": -0.0022140145820464334,
+                "reference_q05_median_q95": [
+                  -0.01231057709423494,
+                  -0.0022963135618180716,
+                  0.008136674329612716
+                ],
+                "excess_gain": -0.0057087041212683445,
+                "positive_gain_animals": 6,
+                "positive_excess_animals": 6,
+                "leave_one_animal_gain_range": [
+                  -0.010647114898969487,
+                  -0.005788163170100517
+                ],
+                "leave_one_animal_excess_range": [
+                  -0.008623472662193344,
+                  -0.0038811860281485937
+                ],
+                "gate": false
+              }
+            },
+            {
+              "offset": [
+                0.5,
+                0
+              ],
+              "metrics": {
+                "mean_gain_nats_per_mark": -0.0031803494955313385,
+                "reference_mean": -0.004028187885256082,
+                "reference_q05_median_q95": [
+                  -0.014904961578340087,
+                  -0.003989369788287343,
+                  0.008023113271253848
+                ],
+                "excess_gain": 0.0008478383897247433,
+                "positive_gain_animals": 9,
+                "positive_excess_animals": 8,
+                "leave_one_animal_gain_range": [
+                  -0.006048918846512545,
+                  0.0008109961658040681
+                ],
+                "leave_one_animal_excess_range": [
+                  -0.0030113949383445767,
+                  0.004943690663398889
+                ],
+                "gate": false
+              }
+            },
+            {
+              "offset": [
+                0,
+                0.5
+              ],
+              "metrics": {
+                "mean_gain_nats_per_mark": 0.00029449298554431563,
+                "reference_mean": -0.003096726273621163,
+                "reference_q05_median_q95": [
+                  -0.013607165942610733,
+                  -0.003313678353470892,
+                  0.0077597048455101
+                ],
+                "excess_gain": 0.003391219259165478,
+                "positive_gain_animals": 7,
+                "positive_excess_animals": 8,
+                "leave_one_animal_gain_range": [
+                  -0.0021590842323153214,
+                  0.0020848822395927386
+                ],
+                "leave_one_animal_excess_range": [
+                  0.0007703039085848101,
+                  0.0052229321978092885
+                ],
+                "gate": false
+              }
+            },
+            {
+              "offset": [
+                0.5,
+                0.5
+              ],
+              "metrics": {
+                "mean_gain_nats_per_mark": 0.005741100111133526,
+                "reference_mean": -0.00322020827213981,
+                "reference_q05_median_q95": [
+                  -0.014502457465153247,
+                  -0.003073874544437627,
+                  0.008475698037267377
+                ],
+                "excess_gain": 0.008961308383273336,
+                "positive_gain_animals": 10,
+                "positive_excess_animals": 10,
+                "leave_one_animal_gain_range": [
+                  0.0025086309742174376,
+                  0.008248371032548808
+                ],
+                "leave_one_animal_excess_range": [
+                  0.005186558767290912,
+                  0.011626655148365375
+                ],
+                "gate": false
+              }
+            }
+          ]
+        },
+        "positive_fix": {
+          "equal_origin": {
+            "mean_gain_nats_per_mark": -0.002068689537017067,
+            "reference_mean": -0.0020617386413567364,
+            "reference_q05_median_q95": [
+              -0.008544913401988371,
+              -0.0022001767285546744,
+              0.004679945854641473
+            ],
+            "excess_gain": -0.000006950895660331417,
+            "positive_gain_animals": 9,
+            "positive_excess_animals": 10,
+            "leave_one_animal_gain_range": [
+              -0.003872199008584165,
+              0.0003199406584808129
+            ],
+            "leave_one_animal_excess_range": [
+              -0.001954087420065374,
+              0.0024061902236573738
+            ],
+            "gate": false,
+            "passing_origins": 0,
+            "origin_robust_gate": false
+          },
+          "origins": [
+            {
+              "offset": [
+                0,
+                0
+              ],
+              "metrics": {
+                "mean_gain_nats_per_mark": -0.00782358107652817,
+                "reference_mean": -0.0014752235413339782,
+                "reference_q05_median_q95": [
+                  -0.00985751724361116,
+                  -0.0014437435453111688,
+                  0.006967535099092844
+                ],
+                "excess_gain": -0.006348357535194191,
+                "positive_gain_animals": 5,
+                "positive_excess_animals": 6,
+                "leave_one_animal_gain_range": [
+                  -0.009882757276104026,
+                  -0.0055462609574362925
+                ],
+                "leave_one_animal_excess_range": [
+                  -0.008495243405017363,
+                  -0.004320094844155543
+                ],
+                "gate": false
+              }
+            },
+            {
+              "offset": [
+                0.5,
+                0
+              ],
+              "metrics": {
+                "mean_gain_nats_per_mark": -0.004428710157465258,
+                "reference_mean": -0.002609654998039717,
+                "reference_q05_median_q95": [
+                  -0.010840200603950662,
+                  -0.0025571812696322574,
+                  0.006558687272975246
+                ],
+                "excess_gain": -0.00181905515942554,
+                "positive_gain_animals": 8,
+                "positive_excess_animals": 7,
+                "leave_one_animal_gain_range": [
+                  -0.006178977847728567,
+                  -0.0005245116546297592
+                ],
+                "leave_one_animal_excess_range": [
+                  -0.00428172550654664,
+                  0.0021680778130784752
+                ],
+                "gate": false
+              }
+            },
+            {
+              "offset": [
+                0,
+                0.5
+              ],
+              "metrics": {
+                "mean_gain_nats_per_mark": 0.0009572360329623402,
+                "reference_mean": -0.0020623693794731084,
+                "reference_q05_median_q95": [
+                  -0.010473008282474994,
+                  -0.002102456636145607,
+                  0.006620983483671972
+                ],
+                "excess_gain": 0.0030196054124354494,
+                "positive_gain_animals": 7,
+                "positive_excess_animals": 9,
+                "leave_one_animal_gain_range": [
+                  -0.001093854477907128,
+                  0.003143326936193619
+                ],
+                "leave_one_animal_excess_range": [
+                  0.0008434289338764782,
+                  0.005012215612477738
+                ],
+                "gate": false
+              }
+            },
+            {
+              "offset": [
+                0.5,
+                0.5
+              ],
+              "metrics": {
+                "mean_gain_nats_per_mark": 0.0030202970529628137,
+                "reference_mean": -0.0020997066465801412,
+                "reference_q05_median_q95": [
+                  -0.010408471087679522,
+                  -0.0022174011294586733,
+                  0.007006768705966083
+                ],
+                "excess_gain": 0.005120003699542954,
+                "positive_gain_animals": 12,
+                "positive_excess_animals": 11,
+                "leave_one_animal_gain_range": [
+                  0.0002850127930060432,
+                  0.00575402410292136
+                ],
+                "leave_one_animal_excess_range": [
+                  0.0019142630521552634,
+                  0.007942814845401555
+                ],
+                "gate": false
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}
