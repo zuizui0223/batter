@@ -1,0 +1,84 @@
+{
+  "stage": "independent historical northern ALS proxy validation, no ecological fit",
+  "doi": "10.5281/zenodo.5752926",
+  "publication": "10.5194/essd-14-823-2022",
+  "source_environment_sha256": "5fc8ae81149ba9436882f3614b6eac8e51c7e79d0d88aa3c5ba15ccc717331e8",
+  "ALS_period": "2014-2015",
+  "GVSM_year": 2020,
+  "status": "INCOMPLETE",
+  "archives": {
+    "masks": {
+      "bytes": 5488948,
+      "md5": "994af8e8cdeee5f85ee4aedcdff0b0c3",
+      "md5_verified": true,
+      "sha256": "1c82bca246499d272702fcae0a0874d4e27e269a426a6296619c5b00d1a0467c",
+      "url": "https://zenodo.org/records/5752926/files/masks.tar.bz2?download=1",
+      "raster_members_total": 99346,
+      "selected_members": 11368,
+      "manifest_sha256": "dd53d86978ec102cd289241aaa32928210b01eb76357234ca195cff8d96b9a80"
+    },
+    "building_proportion": {
+      "bytes": 36970337,
+      "md5": "2b1f149d954d15346fb63b864b5f0525",
+      "md5_verified": true,
+      "sha256": "84d51a7c45252e05711c3d07d05aaa1d1da089bf7f2a38c80072f90918f0539c",
+      "url": "https://zenodo.org/records/5752926/files/building_proportion.tar.bz2?download=1",
+      "raster_members_total": 49673,
+      "selected_members": 5684,
+      "manifest_sha256": "40fd4e13af086510b5e473ece0162f9733d3e5a4c2f7b3ec8204ec4756935540"
+    },
+    "canopy_height": {
+      "bytes": 302128118,
+      "md5": "0fcbae7de6442800f6815d1951fa5cc6",
+      "md5_verified": true,
+      "sha256": "36094eb2374c2bc33a95bcafadb11f79eb05df053fb8cfa1bfb120863d85fcb6",
+      "url": "https://zenodo.org/api/records/5752926/files/canopy_height.tar.bz2/content",
+      "raster_members_total": 49673,
+      "selected_members": 5684,
+      "manifest_sha256": "154f14c00e37e242f51c4442674d80e66d3ba76679d60c4473152989d1fc14f6"
+    },
+    "normalized_z_mean": {
+      "bytes": 277194318,
+      "md5": "3fbbf56ef15a932d63040dd26ef5cbfd",
+      "md5_verified": true,
+      "sha256": "72d5d455344fc75494ce34e7c3768fd70f53cc08ebcda011be978c9f8b801734",
+      "url": "https://zenodo.org/records/5752926/files/normalized_z_mean.tar.bz2?download=1",
+      "raster_members_total": 49673,
+      "selected_members": 5684,
+      "manifest_sha256": "903322cb514a4b9e1eba566b46177889de39be87a6e0de200dd5eb17acc90bbb"
+    },
+    "canopy_openness": {
+      "bytes": 412793146,
+      "md5": "29c230ec59064110b41062881740835c",
+      "md5_verified": true,
+      "sha256": "7aaa738991a13cc82aad152e22c134ae184a4d50b1271d119843e14775c5215d",
+      "url": "https://zenodo.org/records/5752926/files/canopy_openness.tar.bz2?download=1",
+      "raster_members_total": 49673,
+      "selected_members": 5684,
+      "manifest_sha256": "86648d037137f5bd8d3d0633fe6bcb9a226be817c29e2c27e67562e1a7ac5718"
+    }
+  },
+  "limitations": [
+    "All-return ALS mean height/vegetation P95 is not GVSM RH50/RH98, PAVD, or air volume.",
+    "2014-15 ALS vs 2020 GVSM; temporal change and acquisition conditions may affect agreement.",
+    "Selected forest-support occurrence cells, not a random sample of Danish forests.",
+    "Northern-only historical comparison, no direct south/north error contrast or bat occupancy inference."
+  ],
+  "candidate_cells": 909,
+  "candidate_tile_ids": 12655,
+  "error": "ValueError: unexpected raster extent ecodes_local/building_proportion/building_proportion_6053_692.tif",
+  "audit": {
+    "run_id": 45602222014,
+    "job_id": 139163759494,
+    "artifact_id": 15016354344,
+    "registry_digest": "sha256:9a4a91ee1325224bbc022a8a0d7ab77d5c9d8977a0afe546ce84373d4ae5a92c",
+    "job_conclusion": "failure",
+    "registry_agrees_with_upload": true,
+    "failure_detail": [
+      "2026-11-25T11:27:18.8835644Z ECODES_REPORT={\"stage\": \"independent historical northern ALS proxy validation, no ecological fit\", \"doi\": \"10.5281/zenodo.5752926\", \"publication\": \"10.5194/essd-14-823-2022\", \"source_environment_sha256\": \"5fc8ae81149ba9436882f3614b6eac8e51c7e79d0d88aa3c5ba15ccc717331e8\", \"ALS_period\": \"2014-2015\", \"GVSM_year\": 2020, \"status\": \"INCOMPLETE\", \"archives\": {\"masks\": {\"bytes\": 5488948, \"md5\": \"994af8e8cdeee5f85ee4aedcdff0b0c3\", \"md5_verified\": true, \"sha256\": \"1c82bca246499d272702fcae0a0874d4e27e269a426a6296619c5b00d1a0467c\", \"url\": \"https://zenodo.org/records/5752926/files/masks.tar.bz2?download=1\", \"raster_members_total\": 99346, \"selected_members\": 11368, \"manifest_sha256\": \"dd53d86978ec102cd289241aaa32928210b01eb76357234ca195cff8d96b9a80\"}, \"building_proportion\": {\"bytes\": 36970337, \"md5\": \"2b1f149d954d15346fb63b864b5f0525\", \"md5_verified\": true, \"sha256\": \"84d51a7c45252e05711c3d07d05aaa1d1da089bf7f2a38c80072f90918f0539c\", \"url\": \"https://zenodo.org/records/5752926/files/building_proportion.tar.bz2?download=1\", \"raster_members_total\": 49673, \"selected_members\": 5684, \"manifest_sha256\": \"40fd4e13af086510b5e473ece0162f9733d3e5a4c2f7b3ec8204ec4756935540\"}, \"canopy_height\": {\"bytes\": 302128118, \"md5\": \"0fcbae7de6442800f6815d1951fa5cc6\", \"md5_verified\": true, \"sha256\": \"36094eb2374c2bc33a95bcafadb11f79eb05df053fb8cfa1bfb120863d85fcb6\", \"url\": \"https://zenodo.org/api/records/5752926/files/canopy_height.tar.bz2/content\", \"raster_members_total\": 49673, \"selected_members\": 5684, \"manifest_sha256\": \"154f14c00e37e242f51c4442674d80e66d3ba76679d60c4473152989d1fc14f6\"}, \"normalized_z_mean\": {\"bytes\": 277194318, \"md5\": \"3fbbf56ef15a932d63040dd26ef5cbfd\", \"md5_verified\": true, \"sha256\": \"72d5d455344fc75494ce34e7c3768fd70f53cc08ebcda011be978c9f8b801734\", \"url\": \"https://zenodo.org/records/5752926/files/normalized_z_mean.tar.bz2?download=1\", \"raster_members_total\": 49673, \"selected_members\": 5684, \"manifest_sha256\": \"903322cb514a4b9e1eba566b46177889de39be87a6e0de200dd5eb17acc90bbb\"}, \"canopy_openness\": {\"bytes\": 412793146, \"md5\": \"29c230ec59064110b41062881740835c\", \"md5_verified\": true, \"sha256\": \"7aaa738991a13cc82aad152e22c134ae184a4d50b1271d119843e14775c5215d\", \"url\": \"https://zenodo.org/records/5752926/files/canopy_openness.tar.bz2?download=1\", \"raster_members_total\": 49673, \"selected_members\": 5684, \"manifest_sha256\": \"86648d037137f5bd8d3d0633fe6bcb9a226be817c29e2c27e67562e1a7ac5718\"}}, \"limitations\": [\"All-return ALS mean height/vegetation P95 is not GVSM RH50/RH98, PAVD, or air volume.\", \"2014-15 ALS vs 2020 GVSM; temporal change and acquisition conditions may affect agreement.\", \"Selected forest-support occurrence cells, not a random sample of Danish forests.\", \"Northern-only historical comparison, no direct south/north error contrast or bat occupancy inference.\"], \"candidate_cells\": 909, \"candidate_tile_ids\": 12655, \"error\": \"ValueError: unexpected raster extent ecodes_local/building_proportion/building_proportion_6053_692.tif\"}",
+      "2026-11-25T11:27:18.8857436Z     if not key.endswith(\"_mask\") or key in wide:raise ValueError(\"unexpected raster extent \"+str(p))",
+      "2026-11-25T11:27:18.8859000Z ValueError: unexpected raster extent ecodes_local/building_proportion/building_proportion_6053_692.tif"
+    ],
+    "scope": "Completed job logs and registry; no matched ALS structural results."
+  }
+}
