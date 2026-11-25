@@ -1,0 +1,10 @@
+# Paired-site prediction calibration V2 (pre-simulation freeze)
+Date 2026-11-25 JST. New source-free diagnostic; preserve V1 known-truth outcomes and regional data admission. V1's null example passed, so the directional screen cannot be treated as a test. Do not change its cutoffs after looking at these simulations.
+
+Design: 1000 independent simulations per world, 7 localities, 30 informative paired nights/locality, 2 guilds, each stratum 20 natural and 20 turbine passes with 8 total feeding-mark passes. Fixed counts are artificial and enable exact sufficient-statistic fitting; not a field-power calculation. K conditional on true beta has support 0..8 with weight C(20,k)C(20,8-k)exp(beta*k). Generate worlds independently via fixed seed 2026112502 and deterministic PRNG:
+A exact exchangeable null beta=0;
+B zero-population-mean heterogeneous localities beta=0.9*independent N(0,1) by locality and guild, shared within each locality/guild (not sharp null conditional on a locality; no common transferable fixed effect);
+C common beta=+0.9 both guilds;
+D opposed beta=+0.9 SRE and -0.9 LRE;
+E opposed guild effect + local heterogeneity, beta=(+/-0.9)+0.9*N(0,1) by locality/guild.
+Use exact conditional likelihood, equal localities, ridge 0.1 sum beta^2, bounds ±6, gradient bisection; identical model comparisons, leave-one-locality-out and V1 directional gate (M2-M0>0, all omission means >0, at least 5/7 positive). Balanced sufficient statistics yield same objective as V1. Record score mean, q05/median/q95 and gate frequency, with MC SE; show M2-M1 separately. Include normalization, swap, null mean and grouped-vs-expanded objective invariant. Do not infer real prevalence, actual statistical significance, or choose a threshold from these outputs. If false support occurs, directional screen remains descriptive; a real study needs independent localities/regions and an inferential framework matched to its correlation structure. No new source outcome, raw data or manuscript changes.
