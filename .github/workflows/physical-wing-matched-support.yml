@@ -1,0 +1,52 @@
+name: Physical wing traits matched observation support
+on:
+  push:
+    branches: [prospective/gedi-trait-macro-sdm-20261125]
+    paths:
+      - prospective/gedi_trait_macro_sdm/physical_wing_matched_support_v1.py
+      - .github/workflows/physical-wing-matched-support.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  support:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          name: crane-physical-lsa-crosswalk-v1
+          run-id: 45717291943
+          github-token: ${{ github.token }}
+          path: wing
+      - uses: actions/download-artifact@v4
+        with:
+          name: gvsm-fixed-snapshot-environment
+          run-id: 45591426116
+          github-token: ${{ github.token }}
+          path: fixed
+      - uses: actions/download-artifact@v4
+        with:
+          name: gvsm-fixed-snapshot-observation-audit
+          run-id: 45593509220
+          github-token: ${{ github.token }}
+          path: observation
+      - uses: actions/download-artifact@v4
+        with:
+          name: fws-coarse-observation-support-only
+          run-id: 45715631341
+          github-token: ${{ github.token }}
+          path: fws
+      - run: python -m pip install numpy pandas
+      - run: python prospective/gedi_trait_macro_sdm/physical_wing_matched_support_v1.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: physical-wing-matched-support-v1
+          path: wing_matched_support/report.json
+          if-no-files-found: warn
