@@ -1,0 +1,581 @@
+{
+  "stage": "geographic coverage only, no model",
+  "domain_bbox": [
+    -12,
+    35,
+    32,
+    71
+  ],
+  "country_whitelist": [
+    "AD",
+    "AL",
+    "AT",
+    "BE",
+    "BA",
+    "BG",
+    "BY",
+    "HR",
+    "CZ",
+    "DK",
+    "EE",
+    "FI",
+    "FR",
+    "DE",
+    "GR",
+    "HU",
+    "IE",
+    "IT",
+    "LV",
+    "LI",
+    "LT",
+    "LU",
+    "MT",
+    "MD",
+    "MC",
+    "ME",
+    "NL",
+    "MK",
+    "NO",
+    "PL",
+    "PT",
+    "RO",
+    "SM",
+    "RS",
+    "SK",
+    "SI",
+    "ES",
+    "SE",
+    "CH",
+    "UA",
+    "GB",
+    "VA"
+  ],
+  "candidate_upper_bound": 22,
+  "prior_total": 314593,
+  "source_sha256": "e559ac4c340cafc5dadc6acd03cae251ca45d5db9d7b42abdecfa5ef4949194a",
+  "start_utc": "2026-11-25T09:59:24.629439+00:00",
+  "species": [
+    {
+      "species_key": "2432359",
+      "species": "Eptesicus serotinus",
+      "prior_records": 7189,
+      "prior_block_upper_bound": 40,
+      "live_count": 7189,
+      "status": "COMPLETE_LIVE_QUERY",
+      "raw_retrieved": 7189,
+      "eligible": 7189,
+      "excluded": 0,
+      "unique_cells": 1723,
+      "blocks_ge5": 32,
+      "provisional_geographic_gate": true,
+      "unique_cells_north_51_6": 1254
+    },
+    {
+      "species_key": "2432389",
+      "species": "Myotis nattereri",
+      "prior_records": 1336,
+      "prior_block_upper_bound": 29,
+      "live_count": 1336,
+      "status": "COMPLETE_LIVE_QUERY",
+      "raw_retrieved": 1336,
+      "eligible": 1336,
+      "excluded": 0,
+      "unique_cells": 797,
+      "blocks_ge5": 26,
+      "provisional_geographic_gate": true,
+      "unique_cells_north_51_6": 621
+    },
+    {
+      "species_key": "2432414",
+      "species": "Myotis oxygnathus",
+      "prior_records": 35,
+      "prior_block_upper_bound": 1,
+      "status": "PRIOR_RECORD_UPPER_BOUND_NONADMISSION"
+    },
+    {
+      "species_key": "2432416",
+      "species": "Myotis myotis",
+      "prior_records": 306,
+      "prior_block_upper_bound": 12,
+      "live_count": 306,
+      "status": "COMPLETE_LIVE_QUERY",
+      "raw_retrieved": 306,
+      "eligible": 306,
+      "excluded": 0,
+      "unique_cells": 179,
+      "blocks_ge5": 10,
+      "provisional_geographic_gate": true,
+      "unique_cells_north_51_6": 51
+    },
+    {
+      "species_key": "2432427",
+      "species": "Myotis bechsteinii",
+      "prior_records": 122,
+      "prior_block_upper_bound": 7,
+      "live_count": 122,
+      "status": "COMPLETE_LIVE_QUERY",
+      "raw_retrieved": 122,
+      "eligible": 122,
+      "excluded": 0,
+      "unique_cells": 74,
+      "blocks_ge5": 4,
+      "provisional_geographic_gate": true,
+      "unique_cells_north_51_6": 23
+    },
+    {
+      "species_key": "2432430",
+      "species": "Myotis capaccinii",
+      "prior_records": 3,
+      "prior_block_upper_bound": 0,
+      "status": "PRIOR_RECORD_UPPER_BOUND_NONADMISSION"
+    },
+    {
+      "species_key": "2432439",
+      "species": "Myotis daubentonii",
+      "prior_records": 9547,
+      "prior_block_upper_bound": 56,
+      "live_count": 9547,
+      "status": "COMPLETE_LIVE_QUERY",
+      "raw_retrieved": 9547,
+      "eligible": 9547,
+      "excluded": 0,
+      "unique_cells": 3024,
+      "blocks_ge5": 51,
+      "provisional_geographic_gate": true,
+      "unique_cells_north_51_6": 2630
+    },
+    {
+      "species_key": "2432452",
+      "species": "Myotis dasycneme",
+      "prior_records": 2180,
+      "prior_block_upper_bound": 17,
+      "live_count": 2180,
+      "status": "COMPLETE_LIVE_QUERY",
+      "raw_retrieved": 2180,
+      "eligible": 2180,
+      "excluded": 0,
+      "unique_cells": 548,
+      "blocks_ge5": 14,
+      "provisional_geographic_gate": true,
+      "unique_cells_north_51_6": 528
+    },
+    {
+      "species_key": "2432470",
+      "species": "Myotis emarginatus",
+      "prior_records": 233,
+      "prior_block_upper_bound": 10,
+      "live_count": 233,
+      "status": "COMPLETE_LIVE_QUERY",
+      "raw_retrieved": 233,
+      "eligible": 233,
+      "excluded": 0,
+      "unique_cells": 127,
+      "blocks_ge5": 5,
+      "provisional_geographic_gate": true,
+      "unique_cells_north_51_6": 0
+    },
+    {
+      "species_key": "2432564",
+      "species": "Vespertilio murinus",
+      "prior_records": 3530,
+      "prior_block_upper_bound": 30,
+      "live_count": 3530,
+      "status": "COMPLETE_LIVE_QUERY",
+      "raw_retrieved": 3530,
+      "eligible": 3530,
+      "excluded": 0,
+      "unique_cells": 1310,
+      "blocks_ge5": 25,
+      "provisional_geographic_gate": true,
+      "unique_cells_north_51_6": 1229
+    },
+    {
+      "species_key": "2432582",
+      "species": "Barbastella barbastellus",
+      "prior_records": 1095,
+      "prior_block_upper_bound": 13,
+      "live_count": 1095,
+      "status": "COMPLETE_LIVE_QUERY",
+      "raw_retrieved": 1095,
+      "eligible": 1095,
+      "excluded": 0,
+      "unique_cells": 477,
+      "blocks_ge5": 10,
+      "provisional_geographic_gate": true,
+      "unique_cells_north_51_6": 412
+    },
+    {
+      "species_key": "2432614",
+      "species": "Rhinolophus hipposideros",
+      "prior_records": 207,
+      "prior_block_upper_bound": 11,
+      "live_count": 207,
+      "status": "COMPLETE_LIVE_QUERY",
+      "raw_retrieved": 207,
+      "eligible": 207,
+      "excluded": 0,
+      "unique_cells": 130,
+      "blocks_ge5": 7,
+      "provisional_geographic_gate": true,
+      "unique_cells_north_51_6": 0
+    },
+    {
+      "species_key": "2432621",
+      "species": "Rhinolophus euryale",
+      "prior_records": 11,
+      "prior_block_upper_bound": 1,
+      "status": "PRIOR_RECORD_UPPER_BOUND_NONADMISSION"
+    },
+    {
+      "species_key": "2432655",
+      "species": "Rhinolophus ferrumequinum",
+      "prior_records": 177,
+      "prior_block_upper_bound": 10,
+      "live_count": 177,
+      "status": "COMPLETE_LIVE_QUERY",
+      "raw_retrieved": 177,
+      "eligible": 177,
+      "excluded": 0,
+      "unique_cells": 144,
+      "blocks_ge5": 7,
+      "provisional_geographic_gate": true,
+      "unique_cells_north_51_6": 1
+    },
+    {
+      "species_key": "2432666",
+      "species": "Rhinolophus blasii",
+      "prior_records": 2,
+      "prior_block_upper_bound": 0,
+      "status": "PRIOR_RECORD_UPPER_BOUND_NONADMISSION"
+    },
+    {
+      "species_key": "2433009",
+      "species": "Tadarida teniotis",
+      "prior_records": 768,
+      "prior_block_upper_bound": 11,
+      "live_count": 768,
+      "status": "COMPLETE_LIVE_QUERY",
+      "raw_retrieved": 768,
+      "eligible": 768,
+      "excluded": 0,
+      "unique_cells": 199,
+      "blocks_ge5": 6,
+      "provisional_geographic_gate": true,
+      "unique_cells_north_51_6": 0
+    },
+    {
+      "species_key": "5218464",
+      "species": "Pipistrellus kuhlii",
+      "prior_records": 1057,
+      "prior_block_upper_bound": 9,
+      "live_count": 1057,
+      "status": "COMPLETE_LIVE_QUERY",
+      "raw_retrieved": 1057,
+      "eligible": 1057,
+      "excluded": 0,
+      "unique_cells": 213,
+      "blocks_ge5": 7,
+      "provisional_geographic_gate": true,
+      "unique_cells_north_51_6": 1
+    },
+    {
+      "species_key": "5218465",
+      "species": "Pipistrellus pipistrellus",
+      "prior_records": 232878,
+      "prior_block_upper_bound": 55,
+      "live_count": 232878,
+      "witness_blocks": [
+        {
+          "block_x": 5,
+          "block_y": 31,
+          "prior_n": 5
+        },
+        {
+          "block_x": 6,
+          "block_y": 27,
+          "prior_n": 6
+        },
+        {
+          "block_x": 8,
+          "block_y": 27,
+          "prior_n": 6
+        },
+        {
+          "block_x": 7,
+          "block_y": 27,
+          "prior_n": 7
+        },
+        {
+          "block_x": 8,
+          "block_y": 30,
+          "prior_n": 7
+        },
+        {
+          "block_x": 0,
+          "block_y": 29,
+          "prior_n": 11
+        },
+        {
+          "block_x": 6,
+          "block_y": 28,
+          "prior_n": 12
+        },
+        {
+          "block_x": 1,
+          "block_y": 24,
+          "prior_n": 19
+        },
+        {
+          "block_x": -2,
+          "block_y": 30,
+          "prior_n": 21
+        },
+        {
+          "block_x": 6,
+          "block_y": 26,
+          "prior_n": 21
+        },
+        {
+          "block_x": 7,
+          "block_y": 31,
+          "prior_n": 21
+        },
+        {
+          "block_x": -1,
+          "block_y": 30,
+          "prior_n": 22
+        },
+        {
+          "block_x": -3,
+          "block_y": 28,
+          "prior_n": 26
+        },
+        {
+          "block_x": 4,
+          "block_y": 25,
+          "prior_n": 27
+        },
+        {
+          "block_x": 6,
+          "block_y": 29,
+          "prior_n": 31
+        },
+        {
+          "block_x": 6,
+          "block_y": 31,
+          "prior_n": 31
+        },
+        {
+          "block_x": 0,
+          "block_y": 24,
+          "prior_n": 33
+        },
+        {
+          "block_x": 8,
+          "block_y": 31,
+          "prior_n": 34
+        },
+        {
+          "block_x": 5,
+          "block_y": 27,
+          "prior_n": 37
+        },
+        {
+          "block_x": 4,
+          "block_y": 29,
+          "prior_n": 40
+        },
+        {
+          "block_x": 9,
+          "block_y": 24,
+          "prior_n": 45
+        },
+        {
+          "block_x": 5,
+          "block_y": 28,
+          "prior_n": 47
+        },
+        {
+          "block_x": 7,
+          "block_y": 30,
+          "prior_n": 47
+        },
+        {
+          "block_x": 3,
+          "block_y": 26,
+          "prior_n": 55
+        }
+      ],
+      "status": "PARTIAL_COVERAGE_WITNESS_ONLY",
+      "raw_retrieved": 611,
+      "eligible": 611,
+      "excluded": 0,
+      "unique_cells": 359,
+      "blocks_ge5": 21,
+      "provisional_geographic_gate": true,
+      "unique_cells_north_51_6": 187
+    },
+    {
+      "species_key": "5218471",
+      "species": "Pipistrellus nathusii",
+      "prior_records": 19584,
+      "prior_block_upper_bound": 58,
+      "live_count": 19584,
+      "status": "COMPLETE_LIVE_QUERY",
+      "raw_retrieved": 19584,
+      "eligible": 19584,
+      "excluded": 0,
+      "unique_cells": 2685,
+      "blocks_ge5": 47,
+      "provisional_geographic_gate": true,
+      "unique_cells_north_51_6": 2226
+    },
+    {
+      "species_key": "5218507",
+      "species": "Plecotus auritus",
+      "prior_records": 7925,
+      "prior_block_upper_bound": 48,
+      "live_count": 7925,
+      "status": "COMPLETE_LIVE_QUERY",
+      "raw_retrieved": 7925,
+      "eligible": 7925,
+      "excluded": 0,
+      "unique_cells": 3063,
+      "blocks_ge5": 44,
+      "provisional_geographic_gate": true,
+      "unique_cells_north_51_6": 2305
+    },
+    {
+      "species_key": "5218522",
+      "species": "Nyctalus leisleri",
+      "prior_records": 4721,
+      "prior_block_upper_bound": 38,
+      "live_count": 4721,
+      "status": "COMPLETE_LIVE_QUERY",
+      "raw_retrieved": 4721,
+      "eligible": 4721,
+      "excluded": 0,
+      "unique_cells": 538,
+      "blocks_ge5": 29,
+      "provisional_geographic_gate": true,
+      "unique_cells_north_51_6": 132
+    },
+    {
+      "species_key": "5218524",
+      "species": "Nyctalus noctula",
+      "prior_records": 15893,
+      "prior_block_upper_bound": 60,
+      "live_count": 15893,
+      "status": "COMPLETE_LIVE_QUERY",
+      "raw_retrieved": 15893,
+      "eligible": 15893,
+      "excluded": 0,
+      "unique_cells": 4458,
+      "blocks_ge5": 54,
+      "provisional_geographic_gate": true,
+      "unique_cells_north_51_6": 3543
+    },
+    {
+      "species_key": "5218525",
+      "species": "Nyctalus lasiopterus",
+      "prior_records": 42,
+      "prior_block_upper_bound": 2,
+      "status": "PRIOR_RECORD_UPPER_BOUND_NONADMISSION"
+    },
+    {
+      "species_key": "5739437",
+      "species": "Plecotus austriacus",
+      "prior_records": 66,
+      "prior_block_upper_bound": 7,
+      "live_count": 66,
+      "status": "COMPLETE_LIVE_QUERY",
+      "raw_retrieved": 66,
+      "eligible": 66,
+      "excluded": 0,
+      "unique_cells": 47,
+      "blocks_ge5": 4,
+      "provisional_geographic_gate": true,
+      "unique_cells_north_51_6": 5
+    },
+    {
+      "species_key": "7261816",
+      "species": "Eptesicus nilssonii",
+      "prior_records": 4523,
+      "prior_block_upper_bound": 30,
+      "live_count": 4523,
+      "status": "COMPLETE_LIVE_QUERY",
+      "raw_retrieved": 4523,
+      "eligible": 4523,
+      "excluded": 0,
+      "unique_cells": 1329,
+      "blocks_ge5": 28,
+      "provisional_geographic_gate": true,
+      "unique_cells_north_51_6": 1315
+    },
+    {
+      "species_key": "7261875",
+      "species": "Myotis brandtii",
+      "prior_records": 552,
+      "prior_block_upper_bound": 22,
+      "live_count": 552,
+      "status": "COMPLETE_LIVE_QUERY",
+      "raw_retrieved": 552,
+      "eligible": 552,
+      "excluded": 0,
+      "unique_cells": 175,
+      "blocks_ge5": 15,
+      "provisional_geographic_gate": true,
+      "unique_cells_north_51_6": 157
+    },
+    {
+      "species_key": "9754263",
+      "species": "Myotis mystacinus",
+      "prior_records": 564,
+      "prior_block_upper_bound": 28,
+      "live_count": 564,
+      "status": "COMPLETE_LIVE_QUERY",
+      "raw_retrieved": 564,
+      "eligible": 564,
+      "excluded": 0,
+      "unique_cells": 370,
+      "blocks_ge5": 21,
+      "provisional_geographic_gate": true,
+      "unique_cells_north_51_6": 238
+    },
+    {
+      "species_key": "9796816",
+      "species": "Miniopterus schreibersii",
+      "prior_records": 47,
+      "prior_block_upper_bound": 2,
+      "status": "PRIOR_RECORD_UPPER_BOUND_NONADMISSION"
+    }
+  ],
+  "limits": [
+    "No forest or GVSM mask in this phase.",
+    "P. pipistrellus partial witness cannot train an SDM.",
+    "North of 51.6 degrees predicted RH extrapolation; independent reporting required.",
+    "Complete live searches are not immutable DOI downloads."
+  ],
+  "complete_species": 21,
+  "complete_records": 81575,
+  "complete_species_cells": 21610,
+  "complete_geographic_pass_species": 21,
+  "coverage_witness_pass_species": 1,
+  "finished_species": 28,
+  "eligible_for_model": false,
+  "status": "SPECIES_CENSUS_COMPLETE",
+  "audit": {
+    "run_id": 45590554134,
+    "job_id": 139123344976,
+    "artifact_id": 15012437011,
+    "registry_digest": "sha256:7e5441f334a0333228b2ceafd2fb0a8a8d2e291b801cbdb923e69e7d3f879130",
+    "head_sha": "6340478406a4502acf66052c4033430332bdc62a",
+    "checks": {
+      "artifact_registry_agrees_with_log": true,
+      "roster_complete": true,
+      "eligible_not_admitted": true,
+      "complete_species": true
+    },
+    "scope": "Exact completed job aggregate and registry/upload digest. Archive ZIP not independently rehashed in this session."
+  }
+}
