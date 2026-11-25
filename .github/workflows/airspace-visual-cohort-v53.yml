@@ -1,0 +1,29 @@
+name: Airspace visual cohort V53
+on:
+  push:
+    branches: [prospective/roost-3d-connectivity-fd-20261124]
+    paths:
+      - scripts/airspace_visual_cohort_v53.py
+      - .github/workflows/airspace-visual-cohort-v53.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy==1.26.4 scipy==1.13.1 pandas==2.2.3 requests==2.32.3 openpyxl==3.1.5
+      - run: python scripts/airspace_visual_cohort_v53.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: airspace-visual-cohort-v53
+          path: roost_fd_audit/audit_v53_visual_cohort_prediction.json
+          if-no-files-found: error
