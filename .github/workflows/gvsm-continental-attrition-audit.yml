@@ -1,0 +1,35 @@
+name: GVSM continental source attrition and NABat gate
+on:
+  push:
+    branches: [prospective/gedi-trait-macro-sdm-20261125]
+    paths:
+      - prospective/gedi_trait_macro_sdm/continental_attrition_audit_v1.py
+      - .github/workflows/gvsm-continental-attrition-audit.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          name: gvsm-gbif-fixed-snapshot
+          run-id: 45591123869
+          github-token: ${{ github.token }}
+          path: fixed
+      - run: python -m pip install duckdb requests
+      - run: python -m py_compile prospective/gedi_trait_macro_sdm/continental_attrition_audit_v1.py
+      - run: python prospective/gedi_trait_macro_sdm/continental_attrition_audit_v1.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: gvsm-continental-attrition-audit
+          path: continental_attrition/
+          if-no-files-found: warn
