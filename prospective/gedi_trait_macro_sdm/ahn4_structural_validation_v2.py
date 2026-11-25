@@ -19,7 +19,7 @@ OUT=old.OUT
 WINDOWS=OUT/"native_window_checkpoints";WINDOWS.mkdir(exist_ok=True)
 MEMBER_PINS={
  "brw":"57fdd56f2319093c242f3ceb23c0bbe492d19154aebe6cc960df3ea5c94e364f",
- "power":"2ad64705922036c1f565ec2fc50ef36294b745c0799b4d9a7411d",
+ "power":"2ad64705922036c1f565ec2fc50ef36294b745c0799b4a80cc1120b4d9a7411d",
  "H50":"82883f749681380501680ff86c71b51edf85541a87416977e2e246247ce4194b",
  "H95":"155ca0959ed5b99a6a88acec899775799bb51af9649932ab63fc7ec71f593ccc",
  "PPR":"1410255cf0bbbc63f33e2e2488603a2f4f927a5edf5535f09534253d05f17b56"}
@@ -132,6 +132,7 @@ def main():
     u=u[forest&u.lon.between(3.57,7.11)&u.lat.between(50.77,53.36)].copy().reset_index(drop=True)
     assert (len(u),int(u.south.sum()),int(u.north.sum()))==(636,318,312)
     report.update(candidate_cells=len(u),candidate_south=int(u.south.sum()),candidate_north=int(u.north.sum()));checkpoint()
+    assert set(MEMBER_PINS)==set(overlap.KEYS) and all(len(h)==64 and all(c in "0123456789abcdef" for c in h) for h in MEMBER_PINS.values()), "invalid SHA256 manifest before network acquisition"
     paths=old.acquire()
     for k,p in paths.items():
         assert report["members"][k]["sha256"]==MEMBER_PINS[k] and sha(p)==MEMBER_PINS[k],k
