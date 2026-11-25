@@ -1,0 +1,1388 @@
+{
+  "stage": "fixed source extraction, spatial coverage only; no ecological model",
+  "snapshot_date": "2026-08-01",
+  "doi": "10.15468/dl.8yrbe7",
+  "source_documentation": "https://data-blog.gbif.org/post/extending-parquet-snapshots/",
+  "source_prefix": "development/2026-08-01-DWCA/p_taxon/",
+  "bbox": [
+    -12,
+    35,
+    32,
+    71
+  ],
+  "countries": [
+    "AD",
+    "AL",
+    "AT",
+    "BE",
+    "BA",
+    "BG",
+    "BY",
+    "HR",
+    "CZ",
+    "DK",
+    "EE",
+    "FI",
+    "FR",
+    "DE",
+    "GR",
+    "HU",
+    "IE",
+    "IT",
+    "LV",
+    "LI",
+    "LT",
+    "LU",
+    "MT",
+    "MD",
+    "MC",
+    "ME",
+    "NL",
+    "MK",
+    "NO",
+    "PL",
+    "PT",
+    "RO",
+    "SM",
+    "RS",
+    "SK",
+    "SI",
+    "ES",
+    "SE",
+    "CH",
+    "UA",
+    "GB",
+    "VA"
+  ],
+  "filters": {
+    "order": "Chiroptera",
+    "event_dates": [
+      "2019-04-17",
+      "2023-03-16"
+    ],
+    "coordinate_uncertainty_m": [
+      0.000001,
+      500
+    ],
+    "occurrence_status": [
+      "PRESENT",
+      "DETECTED"
+    ],
+    "basis": [
+      "HUMAN_OBSERVATION",
+      "MACHINE_OBSERVATION",
+      "OBSERVATION"
+    ]
+  },
+  "status": "FIXED_SNAPSHOT_EXTRACTED",
+  "errors": [],
+  "partition_count": 194,
+  "mammal_partitions": [
+    "development/2026-08-01-DWCA/p_taxon/taxonpartition=Animalia_Chordata_Mammalia_Rodentia/",
+    "development/2026-08-01-DWCA/p_taxon/taxonpartition=Animalia_Chordata_Mammalia__PARTIAL/"
+  ],
+  "partition_rule": "Mammalia unpartitioned remainder; order filter required",
+  "selected_partitions": [
+    "development/2026-08-01-DWCA/p_taxon/taxonpartition=Animalia_Chordata_Mammalia__PARTIAL/"
+  ],
+  "source_file_count": 8,
+  "source_object_bytes": 9077637625,
+  "inventory_sha256": "14692b344c86a9f392f987924921d2c4cc723483a1669d808192d5003b0a3fae",
+  "schema": [
+    {
+      "name": "gbifID",
+      "type": "BIGINT"
+    },
+    {
+      "name": "accessRights",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "bibliographicCitation",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "language",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "license",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "modified",
+      "type": "TIMESTAMP WITH TIME ZONE"
+    },
+    {
+      "name": "publisher",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "references",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "rightsHolder",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "type",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "institutionID",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "collectionID",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "datasetID",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "institutionCode",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "collectionCode",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "datasetName",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "ownerInstitutionCode",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "basisOfRecord",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "informationWithheld",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "dataGeneralizations",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "dynamicProperties",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "occurrenceID",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "catalogNumber",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "recordNumber",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "recordedBy",
+      "type": "VARCHAR[]"
+    },
+    {
+      "name": "recordedByID",
+      "type": "VARCHAR[]"
+    },
+    {
+      "name": "individualCount",
+      "type": "BIGINT"
+    },
+    {
+      "name": "organismQuantity",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "organismQuantityType",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "sex",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "lifeStage",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "reproductiveCondition",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "caste",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "behavior",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "vitality",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "establishmentMeans",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "degreeOfEstablishment",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "pathway",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "georeferenceVerificationStatus",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "occurrenceStatus",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "preparations",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "disposition",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "associatedOccurrences",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "associatedReferences",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "associatedSequences",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "associatedTaxa",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "otherCatalogNumbers",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "occurrenceRemarks",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "organismID",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "organismName",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "organismScope",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "associatedOrganisms",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "previousIdentifications",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "organismRemarks",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "materialEntityID",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "materialEntityRemarks",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "verbatimLabel",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "materialSampleID",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "eventID",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "parentEventID",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "eventType",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "fieldNumber",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "eventDate",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "eventTime",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "startDayOfYear",
+      "type": "USMALLINT"
+    },
+    {
+      "name": "endDayOfYear",
+      "type": "USMALLINT"
+    },
+    {
+      "name": "year",
+      "type": "USMALLINT"
+    },
+    {
+      "name": "month",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "day",
+      "type": "UTINYINT"
+    },
+    {
+      "name": "verbatimEventDate",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "habitat",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "samplingProtocol",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "sampleSizeValue",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "sampleSizeUnit",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "samplingEffort",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "fieldNotes",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "eventRemarks",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "locationID",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "higherGeographyID",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "higherGeography",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "continent",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "waterBody",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "islandGroup",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "island",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "countryCode",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "stateProvince",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "county",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "municipality",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "locality",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "verbatimLocality",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "verbatimElevation",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "verticalDatum",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "verbatimDepth",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "minimumDistanceAboveSurfaceInMeters",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "maximumDistanceAboveSurfaceInMeters",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "locationAccordingTo",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "locationRemarks",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "decimalLatitude",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "decimalLongitude",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "coordinateUncertaintyInMeters",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "coordinatePrecision",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "pointRadiusSpatialFit",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "verbatimCoordinateSystem",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "verbatimSRS",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "footprintWKT",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "footprintSRS",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "footprintSpatialFit",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "georeferencedBy",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "georeferencedDate",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "georeferenceProtocol",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "georeferenceSources",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "georeferenceRemarks",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "geologicalContextID",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "earliestEonOrLowestEonothem",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "latestEonOrHighestEonothem",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "earliestEraOrLowestErathem",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "latestEraOrHighestErathem",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "earliestPeriodOrLowestSystem",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "latestPeriodOrHighestSystem",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "earliestEpochOrLowestSeries",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "latestEpochOrHighestSeries",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "earliestAgeOrLowestStage",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "latestAgeOrHighestStage",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "lowestBiostratigraphicZone",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "highestBiostratigraphicZone",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "lithostratigraphicTerms",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "group",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "formation",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "member",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "bed",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "identificationID",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "verbatimIdentification",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "identificationQualifier",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "typestatus",
+      "type": "VARCHAR[]"
+    },
+    {
+      "name": "identifiedby",
+      "type": "VARCHAR[]"
+    },
+    {
+      "name": "identifiedbyid",
+      "type": "VARCHAR[]"
+    },
+    {
+      "name": "dateidentified",
+      "type": "TIMESTAMP"
+    },
+    {
+      "name": "identificationReferences",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "identificationVerificationStatus",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "identificationRemarks",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "taxonID",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "scientificNameID",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "acceptedNameUsageID",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "parentNameUsageID",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "originalNameUsageID",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "nameAccordingToID",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "namePublishedInID",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "taxonConceptID",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "scientificName",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "acceptedNameUsage",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "parentNameUsage",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "originalNameUsage",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "nameAccordingTo",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "namePublishedIn",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "namePublishedInYear",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "higherClassification",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "kingdom",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "phylum",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "class",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "order",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "superfamily",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "family",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "subfamily",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "tribe",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "subtribe",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "genus",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "genericName",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "subgenus",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "infragenericEpithet",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "specificEpithet",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "infraspecificEpithet",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "cultivarEpithet",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "taxonRank",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "verbatimTaxonRank",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "vernacularName",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "nomenclaturalCode",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "taxonomicStatus",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "nomenclaturalStatus",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "taxonRemarks",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "datasetKey",
+      "type": "UUID"
+    },
+    {
+      "name": "publishingCountry",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "lastInterpreted",
+      "type": "TIMESTAMP WITH TIME ZONE"
+    },
+    {
+      "name": "elevation",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "elevationAccuracy",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "depth",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "depthAccuracy",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "distanceFromCentroidInMeters",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "issue",
+      "type": "VARCHAR[]"
+    },
+    {
+      "name": "taxonomicissue",
+      "type": "VARCHAR[]"
+    },
+    {
+      "name": "nontaxonomicissue",
+      "type": "VARCHAR[]"
+    },
+    {
+      "name": "mediatype",
+      "type": "VARCHAR[]"
+    },
+    {
+      "name": "hasCoordinate",
+      "type": "BOOLEAN"
+    },
+    {
+      "name": "hasGeospatialIssues",
+      "type": "BOOLEAN"
+    },
+    {
+      "name": "taxonKey",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "acceptedTaxonKey",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "kingdomKey",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "phylumKey",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "classKey",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "orderKey",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "superfamilyKey",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "familyKey",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "subfamilyKey",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "tribeKey",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "subtribeKey",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "genusKey",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "subgenusKey",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "speciesKey",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "species",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "acceptedScientificName",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "verbatimScientificName",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "typifiedName",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "protocol",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "lastParsed",
+      "type": "TIMESTAMP WITH TIME ZONE"
+    },
+    {
+      "name": "lastCrawled",
+      "type": "TIMESTAMP WITH TIME ZONE"
+    },
+    {
+      "name": "isInvasive",
+      "type": "BOOLEAN"
+    },
+    {
+      "name": "repatriated",
+      "type": "BOOLEAN"
+    },
+    {
+      "name": "relativeOrganismQuantity",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "projectId",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "isSequenced",
+      "type": "BOOLEAN"
+    },
+    {
+      "name": "gbifRegion",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "publishedByGbifRegion",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "level0Gid",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "level0Name",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "level1Gid",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "level1Name",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "level2Gid",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "level2Name",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "level3Gid",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "level3Name",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "iucnRedListCategory",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "coordinates",
+      "type": "GEOMETRY"
+    },
+    {
+      "name": "verbatim",
+      "type": "STRUCT(gbifID BIGINT, accessRights VARCHAR, bibliographicCitation VARCHAR, \"language\" VARCHAR, license VARCHAR, modified VARCHAR, publisher VARCHAR, \"references\" VARCHAR, rightsHolder VARCHAR, \"type\" VARCHAR, institutionID VARCHAR, collectionID VARCHAR, datasetID VARCHAR, institutionCode VARCHAR, collectionCode VARCHAR, datasetName VARCHAR, ownerInstitutionCode VARCHAR, basisOfRecord VARCHAR, informationWithheld VARCHAR, dataGeneralizations VARCHAR, dynamicProperties VARCHAR, occurrenceID VARCHAR, catalogNumber VARCHAR, recordNumber VARCHAR, recordedBy VARCHAR, recordedByID VARCHAR, individualCount VARCHAR, organismQuantity VARCHAR, organismQuantityType VARCHAR, sex VARCHAR, lifeStage VARCHAR, reproductiveCondition VARCHAR, caste VARCHAR, behavior VARCHAR, vitality VARCHAR, establishmentMeans VARCHAR, degreeOfEstablishment VARCHAR, pathway VARCHAR, georeferenceVerificationStatus VARCHAR, occurrenceStatus VARCHAR, preparations VARCHAR, disposition VARCHAR, associatedMedia VARCHAR, associatedOccurrences VARCHAR, associatedReferences VARCHAR, associatedSequences VARCHAR, associatedTaxa VARCHAR, otherCatalogNumbers VARCHAR, occurrenceRemarks VARCHAR, organismID VARCHAR, organismName VARCHAR, organismScope VARCHAR, associatedOrganisms VARCHAR, previousIdentifications VARCHAR, organismRemarks VARCHAR, materialEntityID VARCHAR, materialEntityRemarks VARCHAR, verbatimLabel VARCHAR, materialSampleID VARCHAR, eventID VARCHAR, parentEventID VARCHAR, eventType VARCHAR, fieldNumber VARCHAR, eventDate VARCHAR, eventTime VARCHAR, startDayOfYear VARCHAR, endDayOfYear VARCHAR, \"year\" VARCHAR, \"month\" VARCHAR, \"day\" VARCHAR, verbatimEventDate VARCHAR, habitat VARCHAR, samplingProtocol VARCHAR, sampleSizeValue VARCHAR, sampleSizeUnit VARCHAR, samplingEffort VARCHAR, fieldNotes VARCHAR, eventRemarks VARCHAR, projectTitle VARCHAR, projectID VARCHAR, fundingAttribution VARCHAR, fundingAttributionID VARCHAR, locationID VARCHAR, higherGeographyID VARCHAR, higherGeography VARCHAR, continent VARCHAR, waterBody VARCHAR, islandGroup VARCHAR, island VARCHAR, country VARCHAR, countryCode VARCHAR, stateProvince VARCHAR, county VARCHAR, municipality VARCHAR, locality VARCHAR, verbatimLocality VARCHAR, minimumElevationInMeters VARCHAR, maximumElevationInMeters VARCHAR, verbatimElevation VARCHAR, verticalDatum VARCHAR, minimumDepthInMeters VARCHAR, maximumDepthInMeters VARCHAR, verbatimDepth VARCHAR, minimumDistanceAboveSurfaceInMeters VARCHAR, maximumDistanceAboveSurfaceInMeters VARCHAR, locationAccordingTo VARCHAR, locationRemarks VARCHAR, decimalLatitude VARCHAR, decimalLongitude VARCHAR, geodeticDatum VARCHAR, coordinateUncertaintyInMeters VARCHAR, coordinatePrecision VARCHAR, pointRadiusSpatialFit VARCHAR, verbatimCoordinates VARCHAR, verbatimLatitude VARCHAR, verbatimLongitude VARCHAR, verbatimCoordinateSystem VARCHAR, verbatimSRS VARCHAR, footprintWKT VARCHAR, footprintSRS VARCHAR, footprintSpatialFit VARCHAR, georeferencedBy VARCHAR, georeferencedDate VARCHAR, georeferenceProtocol VARCHAR, georeferenceSources VARCHAR, georeferenceRemarks VARCHAR, geologicalContextID VARCHAR, earliestEonOrLowestEonothem VARCHAR, latestEonOrHighestEonothem VARCHAR, earliestEraOrLowestErathem VARCHAR, latestEraOrHighestErathem VARCHAR, earliestPeriodOrLowestSystem VARCHAR, latestPeriodOrHighestSystem VARCHAR, earliestEpochOrLowestSeries VARCHAR, latestEpochOrHighestSeries VARCHAR, earliestAgeOrLowestStage VARCHAR, latestAgeOrHighestStage VARCHAR, lowestBiostratigraphicZone VARCHAR, highestBiostratigraphicZone VARCHAR, lithostratigraphicTerms VARCHAR, \"group\" VARCHAR, formation VARCHAR, member VARCHAR, bed VARCHAR, identificationID VARCHAR, verbatimIdentification VARCHAR, identificationQualifier VARCHAR, typeStatus VARCHAR, identifiedBy VARCHAR, identifiedByID VARCHAR, dateIdentified VARCHAR, identificationReferences VARCHAR, identificationVerificationStatus VARCHAR, identificationRemarks VARCHAR, taxonID VARCHAR, scientificNameID VARCHAR, acceptedNameUsageID VARCHAR, parentNameUsageID VARCHAR, originalNameUsageID VARCHAR, nameAccordingToID VARCHAR, namePublishedInID VARCHAR, taxonConceptID VARCHAR, scientificName VARCHAR, acceptedNameUsage VARCHAR, parentNameUsage VARCHAR, originalNameUsage VARCHAR, nameAccordingTo VARCHAR, namePublishedIn VARCHAR, namePublishedInYear VARCHAR, higherClassification VARCHAR, kingdom VARCHAR, phylum VARCHAR, \"class\" VARCHAR, \"order\" VARCHAR, superfamily VARCHAR, \"family\" VARCHAR, subfamily VARCHAR, tribe VARCHAR, subtribe VARCHAR, genus VARCHAR, genericName VARCHAR, subgenus VARCHAR, infragenericEpithet VARCHAR, specificEpithet VARCHAR, infraspecificEpithet VARCHAR, cultivarEpithet VARCHAR, taxonRank VARCHAR, verbatimTaxonRank VARCHAR, scientificNameAuthorship VARCHAR, vernacularName VARCHAR, nomenclaturalCode VARCHAR, taxonomicStatus VARCHAR, nomenclaturalStatus VARCHAR, taxonRemarks VARCHAR, gbifid_div1000000 UBIGINT)"
+    },
+    {
+      "name": "multimedia",
+      "type": "STRUCT(gbifID BIGINT, \"type\" VARCHAR, format VARCHAR, identifier VARCHAR, \"references\" VARCHAR, title VARCHAR, description VARCHAR, \"source\" VARCHAR, audience VARCHAR, created TIMESTAMP WITH TIME ZONE, creator VARCHAR, contributor VARCHAR, publisher VARCHAR, license VARCHAR, rightsHolder VARCHAR, gbifid_div1000000 UBIGINT)[]"
+    },
+    {
+      "name": "a5_cell",
+      "type": "STRUCT(r0 UBIGINT, r1 UBIGINT, r2 UBIGINT, r3 UBIGINT, r4 UBIGINT, r5 UBIGINT, r6 UBIGINT, r7 UBIGINT, r8 UBIGINT, r9 UBIGINT, r10 UBIGINT, r11 UBIGINT, r12 UBIGINT, r13 UBIGINT, r14 UBIGINT, r15 UBIGINT, r16 UBIGINT, r17 UBIGINT, r18 UBIGINT, r19 UBIGINT, r20 UBIGINT, r21 UBIGINT, r22 UBIGINT, r23 UBIGINT)"
+    },
+    {
+      "name": "h3_cell",
+      "type": "STRUCT(r0 UBIGINT, r1 UBIGINT, r2 UBIGINT, r3 UBIGINT, r4 UBIGINT, r5 UBIGINT, r6 UBIGINT, r7 UBIGINT, r8 UBIGINT, r9 UBIGINT, r10 UBIGINT, r11 UBIGINT, r12 UBIGINT, r13 UBIGINT, r14 UBIGINT, r15 UBIGINT)"
+    }
+  ],
+  "sql_filters": [
+    "\"order\" = 'Chiroptera'",
+    "\"countryCode\" IN ('AD','AL','AT','BE','BA','BG','BY','HR','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LI','LT','LU','MT','MD','MC','ME','NL','MK','NO','PL','PT','RO','SM','RS','SK','SI','ES','SE','CH','UA','GB','VA')",
+    "\"decimalLongitude\" BETWEEN -12 AND 32",
+    "\"decimalLatitude\" BETWEEN 35 AND 71",
+    "\"coordinateUncertaintyInMeters\" BETWEEN 0.000001 AND 500",
+    "TRY_CAST(\"eventDate\" AS DATE) BETWEEN DATE '2019-04-17' AND DATE '2023-03-16'",
+    "upper(replace(CAST(\"occurrenceStatus\" AS VARCHAR),' ','')) IN ('PRESENT','DETECTED')",
+    "upper(replace(CAST(\"basisOfRecord\" AS VARCHAR),' ','_')) IN ('HUMAN_OBSERVATION','MACHINE_OBSERVATION','OBSERVATION')",
+    "TRY_CAST(\"hasGeospatialIssues\" AS BOOLEAN) = false",
+    "\"species\" IS NOT NULL",
+    "\"speciesKey\" IS NOT NULL",
+    "\"gbifID\" IS NOT NULL"
+  ],
+  "selected_columns": [
+    "gbifid",
+    "datasetkey",
+    "species",
+    "specieskey",
+    "order",
+    "countrycode",
+    "decimallatitude",
+    "decimallongitude",
+    "coordinateuncertaintyinmeters",
+    "eventdate",
+    "basisofrecord",
+    "occurrencestatus",
+    "hasgeospatialissues",
+    "license",
+    "occurrenceid",
+    "eventid",
+    "samplingprotocol",
+    "establishmentmeans",
+    "occurrenceremarks",
+    "habitat",
+    "individualcount",
+    "year",
+    "issue",
+    "scientificname",
+    "taxonkey",
+    "taxonomicstatus",
+    "recordedby",
+    "identificationqualifier",
+    "locality",
+    "lifestage",
+    "behavior"
+  ],
+  "completed_objects": 8,
+  "extracted_records": 219960,
+  "subset_manifest_sha256": "0071a731cd65bf68db09d514a9107572e16b738ccfc52d9b4edb908ca56293b9",
+  "unique_gbif_ids": 219960,
+  "dataset_count": 240,
+  "status_counts": {
+    "PRESENT": 219960
+  },
+  "snapshot_species_count": 39,
+  "license_counts": {
+    "CC_BY_4_0": 133532,
+    "CC0_1_0": 7893,
+    "CC_BY_NC_4_0": 78535
+  },
+  "target_group_records": 219960,
+  "target_group_species_cells": 23489,
+  "target_group_cells": 11006,
+  "output_sha256": "f0124127cd55b7abe4ee0deab935895e150918fc0b0c6e33942ba1591e89ef53",
+  "physical_traits_geographic_pass": 20,
+  "species_coverage": [
+    {
+      "species": "Barbastella barbastellus",
+      "snapshot_species_keys": [
+        "KM7J"
+      ],
+      "cells": 236,
+      "blocks_ge5": 8,
+      "provisional_exact_name_pass": true
+    },
+    {
+      "species": "Eptesicus nilssonii",
+      "snapshot_species_keys": [
+        "7TKLR"
+      ],
+      "cells": 1679,
+      "blocks_ge5": 39,
+      "provisional_exact_name_pass": true
+    },
+    {
+      "species": "Eptesicus serotinus",
+      "snapshot_species_keys": [
+        "6FZ6J"
+      ],
+      "cells": 2059,
+      "blocks_ge5": 33,
+      "provisional_exact_name_pass": true
+    },
+    {
+      "species": "Miniopterus schreibersii",
+      "snapshot_species_keys": [
+        "43JSW"
+      ],
+      "cells": 27,
+      "blocks_ge5": 1,
+      "provisional_exact_name_pass": false
+    },
+    {
+      "species": "Myotis bechsteinii",
+      "snapshot_species_keys": [
+        "456DH"
+      ],
+      "cells": 51,
+      "blocks_ge5": 2,
+      "provisional_exact_name_pass": false
+    },
+    {
+      "species": "Myotis brandtii",
+      "snapshot_species_keys": [
+        "456DP"
+      ],
+      "cells": 136,
+      "blocks_ge5": 10,
+      "provisional_exact_name_pass": true
+    },
+    {
+      "species": "Myotis capaccinii",
+      "snapshot_species_keys": [
+        "6RRRM"
+      ],
+      "cells": 3,
+      "blocks_ge5": 0,
+      "provisional_exact_name_pass": false
+    },
+    {
+      "species": "Myotis dasycneme",
+      "snapshot_species_keys": [
+        "73RRM"
+      ],
+      "cells": 217,
+      "blocks_ge5": 7,
+      "provisional_exact_name_pass": true
+    },
+    {
+      "species": "Myotis daubentonii",
+      "snapshot_species_keys": [
+        "73S3M"
+      ],
+      "cells": 1859,
+      "blocks_ge5": 46,
+      "provisional_exact_name_pass": true
+    },
+    {
+      "species": "Myotis emarginatus",
+      "snapshot_species_keys": [
+        "7443L"
+      ],
+      "cells": 103,
+      "blocks_ge5": 5,
+      "provisional_exact_name_pass": true
+    },
+    {
+      "species": "Myotis myotis",
+      "snapshot_species_keys": [
+        "456G3"
+      ],
+      "cells": 145,
+      "blocks_ge5": 7,
+      "provisional_exact_name_pass": true
+    },
+    {
+      "species": "Myotis mystacinus",
+      "snapshot_species_keys": [
+        "456G4"
+      ],
+      "cells": 258,
+      "blocks_ge5": 18,
+      "provisional_exact_name_pass": true
+    },
+    {
+      "species": "Myotis nattereri",
+      "snapshot_species_keys": [
+        "456G6"
+      ],
+      "cells": 462,
+      "blocks_ge5": 20,
+      "provisional_exact_name_pass": true
+    },
+    {
+      "species": "Myotis oxygnathus",
+      "snapshot_species_keys": [],
+      "cells": 0,
+      "blocks_ge5": 0,
+      "provisional_exact_name_pass": false
+    },
+    {
+      "species": "Nyctalus lasiopterus",
+      "snapshot_species_keys": [
+        "484X9"
+      ],
+      "cells": 16,
+      "blocks_ge5": 0,
+      "provisional_exact_name_pass": false
+    },
+    {
+      "species": "Nyctalus leisleri",
+      "snapshot_species_keys": [
+        "6SCMV"
+      ],
+      "cells": 455,
+      "blocks_ge5": 23,
+      "provisional_exact_name_pass": true
+    },
+    {
+      "species": "Nyctalus noctula",
+      "snapshot_species_keys": [
+        "484XC"
+      ],
+      "cells": 2880,
+      "blocks_ge5": 49,
+      "provisional_exact_name_pass": true
+    },
+    {
+      "species": "Pipistrellus kuhlii",
+      "snapshot_species_keys": [
+        "4J6KR"
+      ],
+      "cells": 420,
+      "blocks_ge5": 15,
+      "provisional_exact_name_pass": true
+    },
+    {
+      "species": "Pipistrellus nathusii",
+      "snapshot_species_keys": [
+        "4J6L8"
+      ],
+      "cells": 1681,
+      "blocks_ge5": 34,
+      "provisional_exact_name_pass": true
+    },
+    {
+      "species": "Pipistrellus pipistrellus",
+      "snapshot_species_keys": [
+        "6VKNS"
+      ],
+      "cells": 4408,
+      "blocks_ge5": 48,
+      "provisional_exact_name_pass": true
+    },
+    {
+      "species": "Plecotus auritus",
+      "snapshot_species_keys": [
+        "4K2Z9"
+      ],
+      "cells": 1851,
+      "blocks_ge5": 35,
+      "provisional_exact_name_pass": true
+    },
+    {
+      "species": "Plecotus austriacus",
+      "snapshot_species_keys": [
+        "6W36Q"
+      ],
+      "cells": 37,
+      "blocks_ge5": 3,
+      "provisional_exact_name_pass": false
+    },
+    {
+      "species": "Rhinolophus blasii",
+      "snapshot_species_keys": [
+        "4S967"
+      ],
+      "cells": 2,
+      "blocks_ge5": 0,
+      "provisional_exact_name_pass": false
+    },
+    {
+      "species": "Rhinolophus euryale",
+      "snapshot_species_keys": [
+        "4S977"
+      ],
+      "cells": 9,
+      "blocks_ge5": 1,
+      "provisional_exact_name_pass": false
+    },
+    {
+      "species": "Rhinolophus ferrumequinum",
+      "snapshot_species_keys": [
+        "4S97C"
+      ],
+      "cells": 141,
+      "blocks_ge5": 7,
+      "provisional_exact_name_pass": true
+    },
+    {
+      "species": "Rhinolophus hipposideros",
+      "snapshot_species_keys": [
+        "4S97S"
+      ],
+      "cells": 130,
+      "blocks_ge5": 6,
+      "provisional_exact_name_pass": true
+    },
+    {
+      "species": "Tadarida teniotis",
+      "snapshot_species_keys": [
+        "54GH4"
+      ],
+      "cells": 197,
+      "blocks_ge5": 6,
+      "provisional_exact_name_pass": true
+    },
+    {
+      "species": "Vespertilio murinus",
+      "snapshot_species_keys": [
+        "7FQRQ"
+      ],
+      "cells": 769,
+      "blocks_ge5": 19,
+      "provisional_exact_name_pass": true
+    }
+  ],
+  "unmatched_names": {
+    "Hypsugo savii": 1145,
+    "Pipistrellus pygmaeus": 8285,
+    "Myotis escalerai": 2,
+    "Plecotus macrobullaris": 10,
+    "Myotis crypticus": 105,
+    "Pteropus niger": 1,
+    "Myotis alcathoe": 41,
+    "Myotis blythii": 32,
+    "Scotophilus viridis": 1,
+    "Myotis punicus": 1,
+    "Eptesicus isabellinus": 7,
+    "Plecotus kolombatovici": 3
+  },
+  "limitations": [
+    "Official experimental 2026-08-01 DWCA snapshot (not November live query). Do not combine with November snapshots.",
+    "Exact-name trait crosswalk provisional; confirm snapshot COL keys and synonyms.",
+    "Missing/ambiguous event dates excluded; snapshot query semantics may differ from interval-based live search.",
+    "Source-specific effort, roost/captive status, environment and 20-species forest gate not verified.",
+    "Publish snapshot DOI and derived dataset with dataset keys; no SDM fitted."
+  ],
+  "audit": {
+    "run_id": 45591123869,
+    "job_id": 139125296661,
+    "artifact_id": 15011316511,
+    "registry_digest": "sha256:9cbf03a3a72916ad4fd1195fadc920a92dfbf930ef6238893f76957754ac44b5",
+    "head_sha": "4113fd6d55d2b549c5f76656b579555422c784ef",
+    "checks": {
+      "source_objects": true,
+      "record_counts": true,
+      "license_sum": true,
+      "status_sum": true,
+      "trait_coverage_count": true,
+      "trait_roster": true
+    },
+    "scope": "Successful fixed snapshot extraction log and registry; source DOI reported by extraction; not a new subset-specific DOI, archive ZIP not independently rehashed in this session."
+  }
+}
