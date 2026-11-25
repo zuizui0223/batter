@@ -1,5 +1,6 @@
 """V54B timestamp ambiguity audit; not a reconstruction of the published cohort."""
 import csv,io,json,math,re
+import requests
 from datetime import date
 from bisect import bisect_left,bisect_right
 from collections import Counter,defaultdict
@@ -142,6 +143,7 @@ def main():
     except Exception as e:
         import traceback
         o["status"]="blocked";o["error_type"]=type(e).__name__;o["failure_functions"]=[x.name for x in traceback.extract_tb(e.__traceback__)[-5:]]
+        if isinstance(e,requests.HTTPError) and e.response is not None:o["http_status"]=int(e.response.status_code)
     save();print(dest.read_text())
     return 2 if o["status"]=="blocked" else 0
 if __name__=="__main__":raise SystemExit(main())
