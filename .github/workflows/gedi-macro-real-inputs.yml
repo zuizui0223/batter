@@ -1,0 +1,41 @@
+name: GEDI macro real input QC
+on:
+  push:
+    branches: [prospective/gedi-trait-macro-sdm-20261125]
+    paths:
+      - prospective/gedi_trait_macro_sdm/real_input_stage.py
+      - .github/workflows/gedi-macro-real-inputs.yml
+permissions:
+  contents: read
+jobs:
+  real-inputs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      EARTHDATA_TOKEN: ${{ secrets.EARTHDATA_TOKEN }}
+      EARTHDATA_USERNAME: ${{ secrets.EARTHDATA_USERNAME }}
+      EARTHDATA_PASSWORD: ${{ secrets.EARTHDATA_PASSWORD }}
+      GBIF_USER: ${{ secrets.GBIF_USER }}
+      GBIF_PWD: ${{ secrets.GBIF_PWD }}
+      GBIF_USERNAME: ${{ secrets.GBIF_USERNAME }}
+      GBIF_PASSWORD: ${{ secrets.GBIF_PASSWORD }}
+      GBIF_EMAIL: ${{ secrets.GBIF_EMAIL }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install HTTP and optional authenticated raster libraries
+        run: |
+          python -m pip install requests
+          if [[ -n "$EARTHDATA_TOKEN" || ( -n "$EARTHDATA_USERNAME" && -n "$EARTHDATA_PASSWORD" ) ]]; then
+            python -m pip install 'rasterio>=1.4' earthaccess
+          fi
+      - name: Acquire and audit original records
+        run: python prospective/gedi_trait_macro_sdm/real_input_stage.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: gedi-macro-real-inputs
+          path: macro_inputs/
+          if-no-files-found: error
