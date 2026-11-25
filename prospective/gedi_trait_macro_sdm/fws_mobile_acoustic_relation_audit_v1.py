@@ -25,7 +25,16 @@ def read(name,columns):
     expected=int(src.call("mdb-count",str(src.P),name,timeout=120).strip())
     R.setdefault("source_row_reconciliation",{})[name]={"mdb_count":expected,"csv_records":len(rows),"malformed_records":bad}
     save()
-    assert bad==0 and len(rows)==expected,(name,expected,len(rows),bad)
+    # Native mdb-count can report the stored row counter rather than enumerated records.
+    # The prior independent native CSV scan (run 45658917705) reported exactly
+    # 57,473 well-formed rows versus header count 57,471 for this pinned file.
+    # Do not trim two arbitrary records. Continue only for the observed stable
+    # discrepancy, retain it as a source-integrity limitation and report key QC.
+    witness={"tbl_Events":(1277,1277),"tbl_BatCallID_Classification":(57471,57473),"tlu_Species_BatCallID":(18,18)}
+    assert bad==0 and (expected,len(rows))==witness[name],(name,expected,len(rows),bad)
+    R["source_row_reconciliation"][name]["stored_minus_enumerated"]=expected-len(rows)
+    R["source_row_reconciliation"][name]["same_as_previous_schema_audit"]=True
+    R["source_row_reconciliation"][name]["selected_csv_sha256"]=hashlib.sha256(raw.encode("utf8")).hexdigest()
     return pd.DataFrame(rows,columns=columns,dtype=str)
 def text(d,k):
     return d[k].fillna("").astype(str).str.strip()
@@ -41,9 +50,11 @@ def main():
     e=read("tbl_Events",["Event_ID","Location_ID","Date Start","Time Start","Time End","Rt Compl","Surv Rte Compl","Data OK","Data Rev","Data No OK","Route_length","CountSurveyNight","QAQC_Metadata","QAQC_GPS","QAQC_BatData","SoftwareVersion","BCIDSpeciesFilter"])
     c=read("tbl_BatCallID_Classification",["Data_ID","Event_ID","LAT","LONG","Date Start","Time","FILENAME","Call_ID","A_SP","A_Spper","A_Grp","A_Grpper","A_pulse","A_Dprob","A_ID","gps_diff","Count"])
     t=read("tlu_Species_BatCallID",["A_SP","Genus","Species","Full Species Name"])
-    assert (len(e),len(c),len(t))==(1277,57471,18),(len(e),len(c),len(t))
+    assert (len(e),len(c),len(t))==(1277,57473,18),(len(e),len(c),len(t))
+    R["limits"].append("Stored call row count differs from twice independently enumerated 57,473 CSV records by two. No arbitrary deletion; candidate support only; native source-integrity ambiguity remains.")
     e["Event_ID"]=text(e,"Event_ID");c["Event_ID"]=text(c,"Event_ID")
     R["event_keys"]={"rows":len(e),"nonempty":int(e.Event_ID.ne("").sum()),"unique":int(e.Event_ID.nunique()),"duplicated_nonempty":int((e.Event_ID.ne("")&e.Event_ID.duplicated(False)).sum())}
+    save()
     assert e.Event_ID.ne("").all() and not e.Event_ID.duplicated().any()
     e["event_date"]=dates(e["Date Start"])
     c["call_date"]=dates(c["Date Start"])
@@ -65,6 +76,9 @@ def main():
     goodfile=c.Event_ID.ne("")&c.filename.ne("")
     dup=goodfile&c.duplicated(["Event_ID","filename"],False)
     R["call_keys"]={"rows":len(c),"nonempty_event_file":int(goodfile.sum()),"duplicate_event_file_rows":int(dup.sum()),"data_id_nonempty":int(text(c,"Data_ID").ne("").sum()),"unique_event_file_pairs":int(c.loc[goodfile,["Event_ID","filename"]].drop_duplicates().shape[0]),"source_Count_values":bucket(c.Count)}
+    R["call_keys"]["duplicate_nonempty_data_id_rows"]=int((text(c,"Data_ID").ne("")&text(c,"Data_ID").duplicated(False)).sum())
+    R["call_keys"]["duplicate_full_selected_rows"]=int(c.duplicated(False).sum())
+    save()
     z=c.merge(e[["Event_ID","Location_ID","event_date","period","QAQC_Metadata","QAQC_GPS","QAQC_BatData"]],on="Event_ID",how="left",validate="many_to_one",indicator=True)
     assert len(z)==len(c)
     z["unique_event_file"]=goodfile.to_numpy()&~dup.to_numpy()
@@ -92,6 +106,7 @@ def main():
         R["candidate_species_cells"]=len(v)
         R["candidate_species_geography_only_pass"]=sum(x["passes_geometry_only"] for x in sp)
     R["verified_500m_accuracy_records"]=None
+    R["source_integrity_fully_reconciled"]=False
     R["admitted_for_original_SDM"]=False
     R["status"]="RELATION_AUDIT_COMPLETE_REQUIRES_OBSERVATION_PRECISION_AND_QA_SEMANTICS";save()
 if __name__=="__main__":
