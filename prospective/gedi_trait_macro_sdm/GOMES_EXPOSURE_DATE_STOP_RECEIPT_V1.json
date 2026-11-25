@@ -1,0 +1,33 @@
+{
+  "stage": "source-count and nominal-exposure reconciliation; no ecological fit",
+  "status": "STOP",
+  "error": "unknown source date format",
+  "source_hashes": {
+    "Bats.csv": "5e09a20dbc80d9405f522a576d42f85c4b8f0a19d35dda8c50f8a26135b0fa14",
+    "Bats_Unconsolidated.csv": "2fc73130d23ae4bbc173ce2c7d92bad50a171eb8887b9af64d1f22d88d26a902",
+    "Headers.txt": "0233dd99a7f335b4f28133a526ac72aa860cde5756d4bc1726c151d87b17b73b",
+    "Headers_Unconsolidated.txt": "1928e4879b0227e2cca8a9dcd49adce3505820bf483f5a44be06f06a9d456d41",
+    "Hourly_Models.R": "0f334c55262e853cf4dcd94f617324041dc781521da3ca12754b559f5d62947b",
+    "Species_DensityPlots.R": "2fc6607de617512db242a0f21feae2743c86ea09a99fb5365fb02f451199a498",
+    "Nunez_etal_2019.csv": "ca75813d91dd6e4dbcbe6b2e18d780ca8c00b3c0638870aa599c3a01eebd278f"
+  },
+  "source_semantic_evidence": {
+    "original_script": "Species_DensityPlots.R",
+    "line": 7,
+    "description": "Original author code extracts day from positions 1–2, month from 4–5 and year from 7–10; raw date format differs from consolidated header documentation."
+  },
+  "audit": {
+    "run_id": 45657040556,
+    "job_id": 139356398492,
+    "artifact_id": 15042987097,
+    "registry_digest": "sha256:cd0b6615de0cbb2030cdeb832d983d087bbb3314fd2048424ce513b6c3b7b7dd",
+    "checks": {
+      "original_source_hashes_verified": true,
+      "raw_date_parser_stop": true,
+      "original_source_date_semantics": true,
+      "registry_matches_log": true
+    }
+  },
+  "repair_commit": "877093edc7a9340b4a1d09fe0c852514f917ca81",
+  "interpretation": "Date-parser engineering stop before count reconciliation. No response fit or ecological outcome; exact source bytes unchanged. Raw parser corrected separately based on original author's source code, with documented April 2018 date-range check."
+}
