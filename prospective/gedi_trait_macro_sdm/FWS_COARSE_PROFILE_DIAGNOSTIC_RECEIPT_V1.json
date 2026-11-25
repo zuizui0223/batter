@@ -1,0 +1,716 @@
+{
+  "stage": "independent 6-km FWS roadside recorded-label diagnostic",
+  "status": "COMPLETE_DESCRIPTIVE_INDEPENDENT_ROADSIDE_DIAGNOSTIC",
+  "source_sha256": "adc036ca0e0b8f822925db22151562b01321ab61fc7d9c611aca21257da9b490",
+  "grain_km": 6,
+  "original_SDM_admitted": false,
+  "limits": [
+    "Source MABM usable GPS time difference <=5 seconds, not verified absolute metre accuracy. Six-km aggregation reduces sensitivity to detector coordinate error but does not calibrate it.",
+    "BCID automated acoustic labels, not actual occupancy, abundance, or flight altitude; unknown uptime/QA semantics.",
+    "LC100 classified forest area, not WorldCover or directly measured forest leaf cover.",
+    "Source-specific known-label prediction, not transport of trained European coefficients. No causal effect.",
+    "Native point locations, route and event IDs, per-cell detections not exported. Stored Access count and enumerated CSV differ by two."
+  ],
+  "source_attrition": [
+    {
+      "step": "joined",
+      "rows": 57387
+    },
+    {
+      "step": "same_date",
+      "rows": 57349
+    },
+    {
+      "step": "period",
+      "rows": 10746
+    },
+    {
+      "step": "unique_event_file",
+      "rows": 10746
+    },
+    {
+      "step": "source_binomial",
+      "rows": 10416
+    },
+    {
+      "step": "finite_regional_coords",
+      "rows": 10069
+    },
+    {
+      "step": "documented_gps_time_match_5s",
+      "rows": 9975
+    },
+    {
+      "step": "numeric_pulses_ge5",
+      "rows": 9975
+    },
+    {
+      "step": "route_id_present",
+      "rows": 9975
+    }
+  ],
+  "source_reconciliation": {
+    "tbl_Events": {
+      "mdb_count": 1277,
+      "csv_records": 1277,
+      "malformed_records": 0,
+      "stored_minus_enumerated": 0,
+      "same_as_previous_schema_audit": true,
+      "selected_csv_sha256": "d725388f45bdb5b983bdd1e485e97898c1be260943f0e83df3d10815bda7922b"
+    },
+    "tbl_BatCallID_Classification": {
+      "mdb_count": 57471,
+      "csv_records": 57473,
+      "malformed_records": 0,
+      "stored_minus_enumerated": -2,
+      "same_as_previous_schema_audit": true,
+      "selected_csv_sha256": "11231bd009440d60ca15ce41b76f8ee0ad96f29ea9215080b05320e30c52ff88"
+    },
+    "tlu_Species_BatCallID": {
+      "mdb_count": 18,
+      "csv_records": 18,
+      "malformed_records": 0,
+      "stored_minus_enumerated": 0,
+      "same_as_previous_schema_audit": true,
+      "selected_csv_sha256": "b99dd470b3b28b7293b7a1045df25b8f1d4d7b14edd8c562dc48a4fca3b95660"
+    }
+  },
+  "source_georeferenced_domain_records": 8816,
+  "source_georeferenced_domain_routes": 50,
+  "source_georeferenced_domain_species": 11,
+  "source_georeferenced_domain_cells": 241,
+  "pre_environment_comparison_support": {
+    "taxon_support": [
+      {
+        "species": "Corynorhinus rafinesquii",
+        "cells": 13,
+        "routes": 11,
+        "eligible": true
+      },
+      {
+        "species": "Eptesicus fuscus",
+        "cells": 123,
+        "routes": 39,
+        "eligible": true
+      },
+      {
+        "species": "Lasiurus borealis",
+        "cells": 209,
+        "routes": 50,
+        "eligible": true
+      },
+      {
+        "species": "Lasiurus cinereus",
+        "cells": 51,
+        "routes": 20,
+        "eligible": true
+      },
+      {
+        "species": "Myotis austroriparius",
+        "cells": 34,
+        "routes": 21,
+        "eligible": true
+      },
+      {
+        "species": "Myotis grisescens",
+        "cells": 8,
+        "routes": 5,
+        "eligible": false
+      },
+      {
+        "species": "Myotis lucifugus",
+        "cells": 58,
+        "routes": 24,
+        "eligible": true
+      },
+      {
+        "species": "Myotis septentrionalis",
+        "cells": 8,
+        "routes": 6,
+        "eligible": false
+      },
+      {
+        "species": "Myotis sodalis",
+        "cells": 16,
+        "routes": 12,
+        "eligible": true
+      },
+      {
+        "species": "Nycticeius humeralis",
+        "cells": 228,
+        "routes": 50,
+        "eligible": true
+      },
+      {
+        "species": "Perimyotis subflavus",
+        "cells": 189,
+        "routes": 50,
+        "eligible": true
+      }
+    ],
+    "eligible_taxa": 9,
+    "comparison_taxa": 9,
+    "comparison_routes": 47,
+    "comparison_blocks": 24,
+    "comparisons": 10480,
+    "comparison_cells": 236,
+    "groups": 1764
+  },
+  "candidate_environment_cells": 241,
+  "raster_source_windows": {
+    "RH10": {
+      "url": "https://data.source.coop/geoai-ucph/gvsm/mosaics/2020/RH10_Q1.tif",
+      "shape": [
+        886,
+        1930
+      ],
+      "transform": [
+        0.01,
+        0,
+        -95.02999999991764,
+        0,
+        -0.01,
+        39.07291859248707,
+        0,
+        0,
+        1
+      ],
+      "scale": 0.1,
+      "offset": 0,
+      "value_sha256": "3f4fdab1031395a1c99dd2baa527ff02e80de40ecbe14bad68d740faf96eae7b",
+      "mask_sha256": "603ed964db26b3196a63da21992502b02c34e808f06ab3fefed00d86a24a2693"
+    },
+    "RH25": {
+      "url": "https://data.source.coop/geoai-ucph/gvsm/mosaics/2020/RH25_Q1.tif",
+      "shape": [
+        886,
+        1930
+      ],
+      "transform": [
+        0.01,
+        0,
+        -95.02999999991764,
+        0,
+        -0.01,
+        39.07291859248707,
+        0,
+        0,
+        1
+      ],
+      "scale": 0.1,
+      "offset": 0,
+      "value_sha256": "eb1c6d92f7252df78c8dbcba289772e20facc1ed7abc9153cd533d1f9a169b45",
+      "mask_sha256": "603ed964db26b3196a63da21992502b02c34e808f06ab3fefed00d86a24a2693"
+    },
+    "RH50": {
+      "url": "https://data.source.coop/geoai-ucph/gvsm/mosaics/2020/RH50_Q1.tif",
+      "shape": [
+        886,
+        1930
+      ],
+      "transform": [
+        0.01,
+        0,
+        -95.02999999991764,
+        0,
+        -0.01,
+        39.07291859248707,
+        0,
+        0,
+        1
+      ],
+      "scale": 0.1,
+      "offset": 0,
+      "value_sha256": "1a57679d0aa65b5bef6a7077fa896e0859361b4526eb32ed0abc37b08523b8d4",
+      "mask_sha256": "603ed964db26b3196a63da21992502b02c34e808f06ab3fefed00d86a24a2693"
+    },
+    "RH75": {
+      "url": "https://data.source.coop/geoai-ucph/gvsm/mosaics/2020/RH75_Q1.tif",
+      "shape": [
+        886,
+        1930
+      ],
+      "transform": [
+        0.01,
+        0,
+        -95.02999999991764,
+        0,
+        -0.01,
+        39.07291859248707,
+        0,
+        0,
+        1
+      ],
+      "scale": 0.1,
+      "offset": 0,
+      "value_sha256": "31a92abdaed5d146f1258bffdc5c36c2fb03eaa8b59bfe211b4ceb8985821d40",
+      "mask_sha256": "603ed964db26b3196a63da21992502b02c34e808f06ab3fefed00d86a24a2693"
+    },
+    "RH90": {
+      "url": "https://data.source.coop/geoai-ucph/gvsm/mosaics/2020/RH90_Q1.tif",
+      "shape": [
+        886,
+        1930
+      ],
+      "transform": [
+        0.01,
+        0,
+        -95.02999999991764,
+        0,
+        -0.01,
+        39.07291859248707,
+        0,
+        0,
+        1
+      ],
+      "scale": 0.1,
+      "offset": 0,
+      "value_sha256": "f631df5c3055bbd517eb524dca7d9dca8edca36a6ee33a0802be5b4eeba1c147",
+      "mask_sha256": "603ed964db26b3196a63da21992502b02c34e808f06ab3fefed00d86a24a2693"
+    },
+    "RH98": {
+      "url": "https://data.source.coop/geoai-ucph/gvsm/mosaics/2020/RH98_Q1.tif",
+      "shape": [
+        886,
+        1930
+      ],
+      "transform": [
+        0.01,
+        0,
+        -95.02999999991764,
+        0,
+        -0.01,
+        39.07291859248707,
+        0,
+        0,
+        1
+      ],
+      "scale": 0.1,
+      "offset": 0,
+      "value_sha256": "9e7593791cd2cc6aaa72572bb6747c118471506ea04013f4b4d6a5efd04b8615",
+      "mask_sha256": "603ed964db26b3196a63da21992502b02c34e808f06ab3fefed00d86a24a2693"
+    },
+    "bio1": {
+      "url": "https://os.zhdk.cloud.switch.ch/chelsav2/GLOBAL/climatologies/1981-2010/bio/CHELSA_bio1_1981-2010_V.2.1.tif",
+      "shape": [
+        1063,
+        2317
+      ],
+      "transform": [
+        0.0083333333,
+        0,
+        -95.03347256205001,
+        0,
+        -0.0083333333,
+        39.07486059485001,
+        0,
+        0,
+        1
+      ],
+      "scale": 0.1,
+      "offset": -273.15,
+      "value_sha256": "2f8a5d669e2ead6a3637222342657de9bf51c731cf4805908d0ad196031dba1a",
+      "mask_sha256": "60f940621b6ed088e66a5bd44bf8e4876c009f4888e8e332fa2901b02a9dd4b7"
+    },
+    "bio4": {
+      "url": "https://os.zhdk.cloud.switch.ch/chelsav2/GLOBAL/climatologies/1981-2010/bio/CHELSA_bio4_1981-2010_V.2.1.tif",
+      "shape": [
+        1063,
+        2317
+      ],
+      "transform": [
+        0.0083333333,
+        0,
+        -95.03347256205001,
+        0,
+        -0.0083333333,
+        39.07486059485001,
+        0,
+        0,
+        1
+      ],
+      "scale": 0.1,
+      "offset": 0,
+      "value_sha256": "36d40fe593916c11c4d8aaa743e86f13db6fb46dd5dc1c151583e52c5f834b35",
+      "mask_sha256": "60f940621b6ed088e66a5bd44bf8e4876c009f4888e8e332fa2901b02a9dd4b7"
+    },
+    "bio5": {
+      "url": "https://os.zhdk.cloud.switch.ch/chelsav2/GLOBAL/climatologies/1981-2010/bio/CHELSA_bio5_1981-2010_V.2.1.tif",
+      "shape": [
+        1063,
+        2317
+      ],
+      "transform": [
+        0.0083333333,
+        0,
+        -95.03347256205001,
+        0,
+        -0.0083333333,
+        39.07486059485001,
+        0,
+        0,
+        1
+      ],
+      "scale": 0.1,
+      "offset": -273.15,
+      "value_sha256": "f52dd27850b8ec80d5942a7454934bcc3e62a97984345a13ffdf44005c00c9c1",
+      "mask_sha256": "60f940621b6ed088e66a5bd44bf8e4876c009f4888e8e332fa2901b02a9dd4b7"
+    },
+    "bio6": {
+      "url": "https://os.zhdk.cloud.switch.ch/chelsav2/GLOBAL/climatologies/1981-2010/bio/CHELSA_bio6_1981-2010_V.2.1.tif",
+      "shape": [
+        1063,
+        2317
+      ],
+      "transform": [
+        0.0083333333,
+        0,
+        -95.03347256205001,
+        0,
+        -0.0083333333,
+        39.07486059485001,
+        0,
+        0,
+        1
+      ],
+      "scale": 0.1,
+      "offset": -273.15,
+      "value_sha256": "b0dd6356a9c67f7afa9b4901c363d284c8f6bf09dc3b2f2f8e80c17a0ccb2271",
+      "mask_sha256": "60f940621b6ed088e66a5bd44bf8e4876c009f4888e8e332fa2901b02a9dd4b7"
+    },
+    "bio12": {
+      "url": "https://os.zhdk.cloud.switch.ch/chelsav2/GLOBAL/climatologies/1981-2010/bio/CHELSA_bio12_1981-2010_V.2.1.tif",
+      "shape": [
+        1063,
+        2317
+      ],
+      "transform": [
+        0.0083333333,
+        0,
+        -95.03347256205001,
+        0,
+        -0.0083333333,
+        39.07486059485001,
+        0,
+        0,
+        1
+      ],
+      "scale": 0.1,
+      "offset": 0,
+      "value_sha256": "68d7cbf0b2a81c3cfb0eb28c7e8a71457233816ee4ea1a096f473c70cb67c584",
+      "mask_sha256": "60f940621b6ed088e66a5bd44bf8e4876c009f4888e8e332fa2901b02a9dd4b7"
+    },
+    "bio15": {
+      "url": "https://os.zhdk.cloud.switch.ch/chelsav2/GLOBAL/climatologies/1981-2010/bio/CHELSA_bio15_1981-2010_V.2.1.tif",
+      "shape": [
+        1063,
+        2317
+      ],
+      "transform": [
+        0.0083333333,
+        0,
+        -95.03347256205001,
+        0,
+        -0.0083333333,
+        39.07486059485001,
+        0,
+        0,
+        1
+      ],
+      "scale": 0.1,
+      "offset": 0,
+      "value_sha256": "027ccd9613bab6bb2496c7a3861e190f6b491b84669aa25a87154046988249ca",
+      "mask_sha256": "60f940621b6ed088e66a5bd44bf8e4876c009f4888e8e332fa2901b02a9dd4b7"
+    }
+  },
+  "native_profile_order_errors": 0,
+  "LC100": {
+    "doi": "10.5281/zenodo.3939050",
+    "bytes": 1713345228,
+    "md5": "6898fbe3fb46a1110cd65e3a81ed7624",
+    "sha256": "b2203d6dd8b6918e27cd1413e7dfec4a9e4ce03dbf50f209d7f04c550c23cf53",
+    "groups": {
+      "broadleaf": [
+        112,
+        114,
+        122,
+        124
+      ],
+      "needleleaf": [
+        111,
+        113,
+        121,
+        123
+      ],
+      "mixed": [
+        115,
+        125
+      ],
+      "other_forest": [
+        116,
+        126
+      ],
+      "shrub": [
+        20
+      ],
+      "herb": [
+        30
+      ],
+      "crop": [
+        40
+      ],
+      "built": [
+        50
+      ],
+      "bare": [
+        60
+      ],
+      "water": [
+        80,
+        200
+      ],
+      "wetland": [
+        90
+      ]
+    },
+    "observed_class_counts": {
+      "20": 2458,
+      "30": 24479,
+      "40": 175505,
+      "50": 4568,
+      "60": 94,
+      "80": 19956,
+      "90": 14159,
+      "111": 162118,
+      "114": 138635,
+      "115": 268,
+      "116": 216917,
+      "121": 2075,
+      "124": 565,
+      "126": 126296,
+      "200": 5399
+    }
+  },
+  "environment_support": {
+    "joint_profile_cells": 235,
+    "joint_climate_cells": 241,
+    "landcover_cells": 241,
+    "common_cells": 235,
+    "forest_cells": 221
+  },
+  "forest_comparison_support": {
+    "taxon_support": [
+      {
+        "species": "Corynorhinus rafinesquii",
+        "cells": 13,
+        "routes": 11,
+        "eligible": true
+      },
+      {
+        "species": "Eptesicus fuscus",
+        "cells": 121,
+        "routes": 39,
+        "eligible": true
+      },
+      {
+        "species": "Lasiurus borealis",
+        "cells": 197,
+        "routes": 50,
+        "eligible": true
+      },
+      {
+        "species": "Lasiurus cinereus",
+        "cells": 51,
+        "routes": 20,
+        "eligible": true
+      },
+      {
+        "species": "Myotis austroriparius",
+        "cells": 34,
+        "routes": 21,
+        "eligible": true
+      },
+      {
+        "species": "Myotis grisescens",
+        "cells": 8,
+        "routes": 5,
+        "eligible": false
+      },
+      {
+        "species": "Myotis lucifugus",
+        "cells": 57,
+        "routes": 24,
+        "eligible": true
+      },
+      {
+        "species": "Myotis septentrionalis",
+        "cells": 8,
+        "routes": 6,
+        "eligible": false
+      },
+      {
+        "species": "Myotis sodalis",
+        "cells": 16,
+        "routes": 12,
+        "eligible": true
+      },
+      {
+        "species": "Nycticeius humeralis",
+        "cells": 210,
+        "routes": 50,
+        "eligible": true
+      },
+      {
+        "species": "Perimyotis subflavus",
+        "cells": 177,
+        "routes": 50,
+        "eligible": true
+      }
+    ],
+    "eligible_taxa": 9,
+    "comparison_taxa": 9,
+    "comparison_routes": 46,
+    "comparison_blocks": 24,
+    "comparisons": 9962,
+    "comparison_cells": 215,
+    "groups": 1716
+  },
+  "evaluation_support": {
+    "scored_comparisons": 9962,
+    "fraction": 1,
+    "scored_blocks": 24,
+    "scored_taxa": 9,
+    "scored_routes": 46,
+    "completed_folds": 5,
+    "folds": [
+      {
+        "fold": 1,
+        "train_pairs": 7004,
+        "test_pairs": 2958,
+        "train_routes": 34,
+        "test_routes": 12,
+        "test_blocks": 5,
+        "scores": {
+          "B": -1.9567263333976161,
+          "R": -1.9378374014050797
+        }
+      },
+      {
+        "fold": 2,
+        "train_pairs": 8681,
+        "test_pairs": 1281,
+        "train_routes": 39,
+        "test_routes": 7,
+        "test_blocks": 5,
+        "scores": {
+          "B": -0.691360048664567,
+          "R": -0.6933367163178261
+        }
+      },
+      {
+        "fold": 3,
+        "train_pairs": 7831,
+        "test_pairs": 1998,
+        "train_routes": 37,
+        "test_routes": 9,
+        "test_blocks": 5,
+        "scores": {
+          "B": -0.7016649422349123,
+          "R": -0.70278661671821
+        }
+      },
+      {
+        "fold": 4,
+        "train_pairs": 7188,
+        "test_pairs": 2774,
+        "train_routes": 38,
+        "test_routes": 8,
+        "test_blocks": 5,
+        "scores": {
+          "B": -0.7024951493505065,
+          "R": -0.7022365010904817
+        }
+      },
+      {
+        "fold": 5,
+        "train_pairs": 8841,
+        "test_pairs": 951,
+        "train_routes": 34,
+        "test_routes": 12,
+        "test_blocks": 4,
+        "scores": {
+          "B": -0.6924957927732005,
+          "R": -0.6934235819290939
+        }
+      }
+    ],
+    "skips": {}
+  },
+  "result": {
+    "neutral": -0.6931471805599453,
+    "baseline": -0.9596339808054514,
+    "profile": -0.9564450210572637,
+    "profile_gain": 0.0031889597481876697,
+    "profile_minus_neutral": -0.2632978404973184,
+    "positive_blocks": 9,
+    "conditional_block_bootstrap_95": [
+      -0.0022511520567066253,
+      0.012830909632251135
+    ],
+    "block_quantiles": [
+      -0.006292366741217267,
+      -0.000590338741561136,
+      0.0017367765203855825
+    ]
+  },
+  "post_result_fold_influence_diagnostic": [
+    {
+      "omitted_fold": 1,
+      "blocks": 19,
+      "baseline": -0.6972412564390911,
+      "profile": -0.698183868334156,
+      "gain": -0.0009426118950649487,
+      "profile_minus_neutral": -0.005036687774210735
+    },
+    {
+      "omitted_fold": 2,
+      "blocks": 19,
+      "baseline": -1.03023238400042,
+      "profile": -1.0256840486202754,
+      "gain": 0.004548335380144541,
+      "profile_minus_neutral": -0.3325368680603301
+    },
+    {
+      "omitted_fold": 3,
+      "blocks": 19,
+      "baseline": -1.0275205699029606,
+      "profile": -1.0231972327254375,
+      "gain": 0.00432333717752309,
+      "profile_minus_neutral": -0.3300500521654922
+    },
+    {
+      "omitted_fold": 4,
+      "blocks": 19,
+      "baseline": -1.0273020943462252,
+      "profile": -1.0233419999958921,
+      "gain": 0.0039600943503330654,
+      "profile_minus_neutral": -0.33019481943594686
+    },
+    {
+      "omitted_fold": 5,
+      "blocks": 20,
+      "baseline": -1.0130616184119003,
+      "profile": -1.0090493088828993,
+      "gain": 0.004012309529001001,
+      "profile_minus_neutral": -0.31590212832295406
+    }
+  ],
+  "decision": "Independent source-local model not predictively useful: profile and baseline both worse than neutral; R50 increment positive on average but only two positive folds, nine positive blocks, and interval crosses zero. Do not drop fold 1 or tune to obtain a positive result. Leave-one-fold results are influence diagnostics only, not replacement primary estimates.",
+  "audit": {
+    "run_id": 45714990980,
+    "job_id": 139558652489,
+    "artifact_id": 15070622524,
+    "artifact_zip_digest": "sha256:8755bc91e5d84c89a1866ec09ef9b948f49a76c613119713e7958df8e1816b9b",
+    "scope": "Completed result and support from logs, registry digest; post-result influence computed using equal block weights."
+  }
+}
