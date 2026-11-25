@@ -1,0 +1,43 @@
+name: NABat public dated parquet source gate
+on:
+  push:
+    branches: [prospective/gedi-trait-macro-sdm-20261125]
+    paths:
+      - prospective/gedi_trait_macro_sdm/nabat_20260925_parquet_source_gate.py
+      - .github/workflows/gvsm-nabat-parquet-source-gate.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/cache/restore@v4
+        id: source_cache
+        with:
+          path: nabat_public_tables_cache/
+          key: nabat-20260925-original-tables-v1
+          restore-keys: |
+            nabat-20260925-original-tables-v1-
+      - run: python -m pip install requests pyarrow
+      - run: python prospective/gedi_trait_macro_sdm/nabat_20260925_parquet_source_gate.py
+        timeout-minutes: 16
+      - uses: actions/cache/save@v4
+        if: always() && steps.source_cache.outputs.cache-hit != 'true'
+        with:
+          path: |
+            nabat_public_tables_cache/*.parquet
+            nabat_public_tables_cache/*.receipt.json
+            nabat_public_tables_cache/README.md
+          key: nabat-20260925-original-tables-v1-${{ github.run_id }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: nabat-20260925-parquet-schema
+          path: nabat_source_gate/
+          if-no-files-found: warn
