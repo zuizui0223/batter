@@ -1,0 +1,27 @@
+name: NABat public file transport diagnosis
+on:
+  push:
+    branches: [prospective/gedi-trait-macro-sdm-20261125]
+    paths:
+      - prospective/gedi_trait_macro_sdm/nabat_public_download_route_diagnostic.py
+      - .github/workflows/gvsm-nabat-route-diagnostic.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install requests
+      - run: python prospective/gedi_trait_macro_sdm/nabat_public_download_route_diagnostic.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: nabat-public-route-diagnosis
+          path: nabat_route_diagnostic/report.json
+          if-no-files-found: warn
