@@ -1,0 +1,224 @@
+{
+  "stage": "prospective geographic/provider disjointness coverage; no outcomes fitted",
+  "source_doi": "10.15468/dl.8yrbe7",
+  "source_sha256": {
+    "fixed": "f0124127cd55b7abe4ee0deab935895e150918fc0b0c6e33942ba1591e89ef53",
+    "pilot": "5bd65cd8c56bac84c033a4972064622c172554a676d198868ef0776c49a2786b",
+    "traits": "43bb5284308a9fe732beda51886172cb87268e5d00620eb27956d5808dae809f"
+  },
+  "previous_archive": {
+    "entire_narrow_archive": {
+      "blocks": 100,
+      "providers": 180
+    },
+    "14_species_forest_pilot": {
+      "blocks": 87,
+      "providers": 116
+    }
+  },
+  "fixed_records": 219960,
+  "scenarios": {
+    "all_fixed": {
+      "all_latitudes": {
+        "trait_records": 210327,
+        "species_cells": 20231,
+        "species": 27,
+        "blocks": 177,
+        "species_geographic_gate": 20,
+        "multispecies_provider_year_blocks": 816
+      },
+      "training_latitude": {
+        "trait_records": 149100,
+        "species_cells": 7472,
+        "species": 27,
+        "blocks": 104,
+        "species_geographic_gate": 16,
+        "multispecies_provider_year_blocks": 454
+      },
+      "north_extrapolation": {
+        "trait_records": 61078,
+        "species_cells": 12715,
+        "species": 20,
+        "blocks": 86,
+        "species_geographic_gate": 14,
+        "multispecies_provider_year_blocks": 401
+      }
+    },
+    "outside_archive_blocks": {
+      "all_latitudes": {
+        "trait_records": 34118,
+        "species_cells": 10307,
+        "species": 20,
+        "blocks": 80,
+        "species_geographic_gate": 13,
+        "multispecies_provider_year_blocks": 350
+      },
+      "training_latitude": {
+        "trait_records": 13,
+        "species_cells": 11,
+        "species": 3,
+        "blocks": 7,
+        "species_geographic_gate": 0,
+        "multispecies_provider_year_blocks": 0
+      },
+      "north_extrapolation": {
+        "trait_records": 34105,
+        "species_cells": 10296,
+        "species": 19,
+        "blocks": 74,
+        "species_geographic_gate": 13,
+        "multispecies_provider_year_blocks": 350
+      }
+    },
+    "outside_pilot_blocks": {
+      "all_latitudes": {
+        "trait_records": 34171,
+        "species_cells": 10346,
+        "species": 23,
+        "blocks": 91,
+        "species_geographic_gate": 13,
+        "multispecies_provider_year_blocks": 353
+      },
+      "training_latitude": {
+        "trait_records": 66,
+        "species_cells": 50,
+        "species": 9,
+        "blocks": 18,
+        "species_geographic_gate": 0,
+        "multispecies_provider_year_blocks": 3
+      },
+      "north_extrapolation": {
+        "trait_records": 34105,
+        "species_cells": 10296,
+        "species": 19,
+        "blocks": 74,
+        "species_geographic_gate": 13,
+        "multispecies_provider_year_blocks": 350
+      }
+    },
+    "outside_archive_providers": {
+      "all_latitudes": {
+        "trait_records": 19592,
+        "species_cells": 7571,
+        "species": 19,
+        "blocks": 64,
+        "species_geographic_gate": 12,
+        "multispecies_provider_year_blocks": 248
+      },
+      "training_latitude": {
+        "trait_records": 1282,
+        "species_cells": 100,
+        "species": 5,
+        "blocks": 13,
+        "species_geographic_gate": 1,
+        "multispecies_provider_year_blocks": 21
+      },
+      "north_extrapolation": {
+        "trait_records": 18310,
+        "species_cells": 7471,
+        "species": 17,
+        "blocks": 51,
+        "species_geographic_gate": 12,
+        "multispecies_provider_year_blocks": 227
+      }
+    },
+    "outside_archive_both": {
+      "all_latitudes": {
+        "trait_records": 18309,
+        "species_cells": 7470,
+        "species": 17,
+        "blocks": 50,
+        "species_geographic_gate": 12,
+        "multispecies_provider_year_blocks": 227
+      },
+      "training_latitude": {
+        "trait_records": 0,
+        "species_cells": 0,
+        "species": 0,
+        "blocks": 0,
+        "species_geographic_gate": 0,
+        "multispecies_provider_year_blocks": 0
+      },
+      "north_extrapolation": {
+        "trait_records": 18309,
+        "species_cells": 7470,
+        "species": 17,
+        "blocks": 50,
+        "species_geographic_gate": 12,
+        "multispecies_provider_year_blocks": 227
+      }
+    },
+    "outside_pilot_both": {
+      "all_latitudes": {
+        "trait_records": 18312,
+        "species_cells": 7473,
+        "species": 18,
+        "blocks": 51,
+        "species_geographic_gate": 12,
+        "multispecies_provider_year_blocks": 227
+      },
+      "training_latitude": {
+        "trait_records": 2,
+        "species_cells": 2,
+        "species": 1,
+        "blocks": 1,
+        "species_geographic_gate": 0,
+        "multispecies_provider_year_blocks": 0
+      },
+      "north_extrapolation": {
+        "trait_records": 18310,
+        "species_cells": 7471,
+        "species": 17,
+        "blocks": 50,
+        "species_geographic_gate": 12,
+        "multispecies_provider_year_blocks": 227
+      }
+    },
+    "unseen_pilot_taxa_and_outside_pilot_blocks": {
+      "all_latitudes": {
+        "trait_records": 15795,
+        "species_cells": 3338,
+        "species": 10,
+        "blocks": 75,
+        "species_geographic_gate": 5,
+        "multispecies_provider_year_blocks": 111
+      },
+      "training_latitude": {
+        "trait_records": 43,
+        "species_cells": 29,
+        "species": 4,
+        "blocks": 9,
+        "species_geographic_gate": 0,
+        "multispecies_provider_year_blocks": 0
+      },
+      "north_extrapolation": {
+        "trait_records": 15752,
+        "species_cells": 3309,
+        "species": 8,
+        "blocks": 66,
+        "species_geographic_gate": 5,
+        "multispecies_provider_year_blocks": 111
+      }
+    }
+  },
+  "limits": [
+    "Block and provider disjointness from inspected archive is a conservative validation split, not proof of independent biological observations.",
+    "Provider metadata does not identify equal effort or absences.",
+    "No forest/environment mask yet. Northern GVSM extrapolation separate. Original 20-species model admission remains false.",
+    "No outcome-based selection of held-out regions. Fixed snapshot never merged with November observations."
+  ],
+  "mask_sha256": "6796dcc358dd1990cb3cca25b95fe068b52cce7a979ff8602ce639c5708e4b96",
+  "audit": {
+    "run_id": 45594276934,
+    "job_id": 139136126859,
+    "artifact_id": 15010764600,
+    "registry_digest": "sha256:4ce5c239b1ad442d83b4861b899c504e40dfb02bb1a0c5e9ef335a650b34460c",
+    "head_sha": "2ef24c820ba1928d2e2456aec9d0ecb33e39650f",
+    "checks": {
+      "artifact_digest_log": true,
+      "source": true,
+      "all_disjoint_south_zero": true
+    },
+    "scope": "Exact completed job aggregate report and registry/upload digest; ZIP bytes not separately rehashed."
+  }
+}
