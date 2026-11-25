@@ -1,0 +1,28 @@
+name: FWS mobile acoustic relation audit
+on:
+  push:
+    branches: [prospective/gedi-trait-macro-sdm-20261125]
+    paths:
+      - prospective/gedi_trait_macro_sdm/fws_mobile_acoustic_relation_audit_v1.py
+      - .github/workflows/gvsm-fws-relation-audit.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq mdbtools
+      - run: python -m pip install requests pandas numpy pyproj
+      - run: python prospective/gedi_trait_macro_sdm/fws_mobile_acoustic_relation_audit_v1.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: fws-mobile-acoustic-relation-audit
+          path: fws_relation_audit/report.json
+          if-no-files-found: warn
