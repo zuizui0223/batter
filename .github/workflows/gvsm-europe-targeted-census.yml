@@ -1,0 +1,41 @@
+name: GVSM European targeted species census
+on:
+  push:
+    branches: [prospective/gedi-trait-macro-sdm-20261125]
+    paths:
+      - prospective/gedi_trait_macro_sdm/europe_targeted_species_census.py
+      - .github/workflows/gvsm-europe-targeted-census.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  census:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          name: gvsm-europe-spatial-coverage
+          run-id: 45579077129
+          github-token: ${{ github.token }}
+          path: block_prior
+      - uses: actions/download-artifact@v4
+        with:
+          name: gedi-macro-iberia-join
+          run-id: 45575962660
+          github-token: ${{ github.token }}
+          path: occ
+      - run: python -m pip install requests pyproj
+      - run: python prospective/gedi_trait_macro_sdm/europe_targeted_species_census.py
+        timeout-minutes: 35
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: gvsm-europe-targeted-census
+          path: europe_targeted/
+          if-no-files-found: error
