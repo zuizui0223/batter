@@ -1,0 +1,33 @@
+name: Crane global wing trait physical QA
+on:
+  push:
+    branches: [prospective/gedi-trait-macro-sdm-20261125]
+    paths:
+      - prospective/gedi_trait_macro_sdm/crane_wing_physical_audit_v1.py
+      - .github/workflows/gvsm-crane-wing-physical-audit.yml
+permissions:
+  contents: read
+  actions: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          name: crane-global-wing-source-v1
+          run-id: 45715573899
+          github-token: ${{ github.token }}
+          path: crane
+      - run: python -m pip install numpy pandas
+      - run: python prospective/gedi_trait_macro_sdm/crane_wing_physical_audit_v1.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: crane-wing-physical-audit-v1
+          path: crane_physical_audit/report.json
+          if-no-files-found: warn
