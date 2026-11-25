@@ -27,7 +27,20 @@ jobs:
           run-id: 45591426116
           github-token: ${{ github.token }}
           path: fixed
+      - uses: actions/cache/restore@v4
+        id: raster_cache
+        with:
+          path: ahn_local/*.tif
+          key: ahn4-15261042-verified-members-v2
+          restore-keys: |
+            ahn4-15261042-verified-members-v2-
       - run: python prospective/gedi_trait_macro_sdm/ahn4_structural_validation_v2.py
+        timeout-minutes: 80
+      - uses: actions/cache/save@v4
+        if: always() && steps.raster_cache.outputs.cache-hit != 'true'
+        with:
+          path: ahn_local/*.tif
+          key: ahn4-15261042-verified-members-v2-${{ github.run_id }}
       - uses: actions/upload-artifact@v4
         if: always()
         with:
