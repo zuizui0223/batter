@@ -1,0 +1,35 @@
+name: Independent macro grain and precision census
+on:
+  push:
+    branches: [prospective/gedi-trait-macro-sdm-20261125]
+    paths:
+      - .github/workflows/gvsm-macro-grain-precision-census.yml
+      - prospective/gedi_trait_macro_sdm/macro_grain_precision_census_v1.py
+permissions:
+  contents: read
+  actions: read
+jobs:
+  census:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          name: gvsm-gbif-fixed-snapshot
+          run-id: 45591123869
+          github-token: ${{ github.token }}
+          path: fixed
+      - run: python -m pip install duckdb requests pyproj
+      - run: python -m py_compile prospective/gedi_trait_macro_sdm/macro_grain_precision_census_v1.py
+      - run: python prospective/gedi_trait_macro_sdm/macro_grain_precision_census_v1.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: macro-grain-precision-census-v1
+          path: macro_grain_census/
+          if-no-files-found: error
+          retention-days: 90
