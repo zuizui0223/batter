@@ -10,7 +10,7 @@ def save():
     print("STATIONARY_SOURCE_REPORT="+json.dumps(R,allow_nan=False),flush=True)
 def allowed(u):
     p=urllib.parse.urlparse(u)
-    return p.scheme=="https" and bool(p.hostname) and (p.hostname.endswith(".usgs.gov") or p.hostname=="usgs.gov" or p.hostname=="doi.org" or p.hostname.endswith(".amazonaws.com"))
+    return p.scheme=="https" and bool(p.hostname) and (p.hostname.endswith(".usgs.gov") or p.hostname=="usgs.gov" or p.hostname in ("sciencebase.gov","www.sciencebase.gov") or p.hostname=="doi.org" or p.hostname.endswith(".amazonaws.com"))
 def bounded(u,limit,headers=None):
     if not allowed(u):return {"status":"STOP_UNVERIFIED_HOST"},None
     try:
