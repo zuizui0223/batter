@@ -1,0 +1,97 @@
+{
+  "stage": "independent ALS structural proxy validation, no bat response fit",
+  "source_doi": "10.5281/zenodo.15261042",
+  "source_environment_sha256": "5fc8ae81149ba9436882f3614b6eac8e51c7e79d0d88aa3c5ba15ccc717331e8",
+  "status": "INCOMPLETE",
+  "members": {
+    "brw": {
+      "archive": "6_Masks.zip",
+      "member": "6_Masks/ahn4_10m_mask_building_road_water.tif",
+      "bytes": 86253446,
+      "compressed_bytes": 61225386,
+      "zip_crc32": "5c61266a",
+      "sha256": "57fdd56f2319093c242f3ceb23c0bbe492d19154aebe6cc960df3ea5c94e364f",
+      "crc_checked": true
+    },
+    "power": {
+      "archive": "6_Masks.zip",
+      "member": "6_Masks/ahn4_10m_mask_powerline.tif",
+      "bytes": 37601958,
+      "compressed_bytes": 7310653,
+      "zip_crc32": "29011d94",
+      "sha256": "2ad64705922036c1f565ec2fc50ef36294b745c0799b4a80cc1120b4d9a7411d",
+      "crc_checked": true
+    },
+    "H50": {
+      "archive": "4_AHN4.zip",
+      "member": "4_AHN4/ahn4_10m_perc_50_normalized_height.tif",
+      "bytes": 647003458,
+      "compressed_bytes": 622135597,
+      "zip_crc32": "fdd18d26",
+      "sha256": "82883f749681380501680ff86c71b51edf85541a87416977e2e246247ce4194b",
+      "crc_checked": true
+    },
+    "H95": {
+      "archive": "4_AHN4.zip",
+      "member": "4_AHN4/ahn4_10m_perc_95_normalized_height.tif",
+      "bytes": 763217494,
+      "compressed_bytes": 725514069,
+      "zip_crc32": "d65b55fd",
+      "sha256": "155ca0959ed5b99a6a88acec899775799bb51af9649932ab63fc7ec71f593ccc",
+      "crc_checked": true
+    },
+    "PPR": {
+      "archive": "4_AHN4.zip",
+      "member": "4_AHN4/ahn4_10m_pulse_penetration_ratio.tif",
+      "bytes": 826610282,
+      "compressed_bytes": 773416025,
+      "zip_crc32": "2cf22635",
+      "sha256": "1410255cf0bbbc63f33e2e2488603a2f4f927a5edf5535f09534253d05f17b56",
+      "crc_checked": true
+    }
+  },
+  "metrics": {},
+  "limitations": [
+    "ALS vegetation return count percentiles differ from GVSM full-waveform return-energy quantiles.",
+    "AHN4 2020–2022 vs GVSM 2020; acquisition season and canopy change not harmonized.",
+    "Selection from actual forest occurrence support, not a national random sample.",
+    "No biological occupancy, PAVD or actual flyable volume. Latitude comparison not causal."
+  ],
+  "candidate_cells": 636,
+  "candidate_south": 318,
+  "candidate_north": 312,
+  "archives": {
+    "4_AHN4.zip": {
+      "size": 15557285189,
+      "published_checksum": "md5:1709d1e9a001a611502f48d1a55686a3",
+      "url": "https://zenodo.org/records/15261042/files/4_AHN4.zip?download=1",
+      "actual_range_url": "https://zenodo.org/api/records/15261042/files/4_AHN4.zip/content",
+      "inventory_sha256": "8ad96a4a33ff7a383a9f8f21d54608f2d20d242aa6d4ec01a55028cf5b972b48",
+      "range_bytes_read": 2131318086,
+      "full_archive_md5_verified": false
+    },
+    "6_Masks.zip": {
+      "size": 243149518,
+      "published_checksum": "md5:af4cd8fb643f71ed9a23674fbe2b250f",
+      "url": "https://zenodo.org/records/15261042/files/6_Masks.zip?download=1",
+      "full_archive_md5_verified": true,
+      "inventory_sha256": "7a2ef358d1c4bea829e6b19aacf16fe89bbfa2cdf15b56323cfbc1759ccc5037"
+    }
+  },
+  "error": "AssertionError: ",
+  "audit": {
+    "run_id": 45601066021,
+    "job_id": 139159805945,
+    "artifact_id": 15017921905,
+    "registry_digest": "sha256:514c79c46037c12f6e5f60d02bf1e3300d3a4065833b62a29ba93877ea993bcd",
+    "job_conclusion": "failure",
+    "registry_agrees_with_upload": true,
+    "failure_detail": [
+      "2026-11-25T11:45:05.0097329Z AHN_REPORT={\"stage\": \"independent ALS structural proxy validation, no bat response fit\", \"source_doi\": \"10.5281/zenodo.15261042\", \"source_environment_sha256\": \"5fc8ae81149ba9436882f3614b6eac8e51c7e79d0d88aa3c5ba15ccc717331e8\", \"status\": \"INCOMPLETE\", \"members\": {\"brw\": {\"archive\": \"6_Masks.zip\", \"member\": \"6_Masks/ahn4_10m_mask_building_road_water.tif\", \"bytes\": 86253446, \"compressed_bytes\": 61225386, \"zip_crc32\": \"5c61266a\", \"sha256\": \"57fdd56f2319093c242f3ceb23c0bbe492d19154aebe6cc960df3ea5c94e364f\", \"crc_checked\": true}, \"power\": {\"archive\": \"6_Masks.zip\", \"member\": \"6_Masks/ahn4_10m_mask_powerline.tif\", \"bytes\": 37601958, \"compressed_bytes\": 7310653, \"zip_crc32\": \"29011d94\", \"sha256\": \"2ad64705922036c1f565ec2fc50ef36294b745c0799b4a80cc1120b4d9a7411d\", \"crc_checked\": true}, \"H50\": {\"archive\": \"4_AHN4.zip\", \"member\": \"4_AHN4/ahn4_10m_perc_50_normalized_height.tif\", \"bytes\": 647003458, \"compressed_bytes\": 622135597, \"zip_crc32\": \"fdd18d26\", \"sha256\": \"82883f749681380501680ff86c71b51edf85541a87416977e2e246247ce4194b\", \"crc_checked\": true}, \"H95\": {\"archive\": \"4_AHN4.zip\", \"member\": \"4_AHN4/ahn4_10m_perc_95_normalized_height.tif\", \"bytes\": 763217494, \"compressed_bytes\": 725514069, \"zip_crc32\": \"d65b55fd\", \"sha256\": \"155ca0959ed5b99a6a88acec899775799bb51af9649932ab63fc7ec71f593ccc\", \"crc_checked\": true}, \"PPR\": {\"archive\": \"4_AHN4.zip\", \"member\": \"4_AHN4/ahn4_10m_pulse_penetration_ratio.tif\", \"bytes\": 826610282, \"compressed_bytes\": 773416025, \"zip_crc32\": \"2cf22635\", \"sha256\": \"1410255cf0bbbc63f33e2e2488603a2f4f927a5edf5535f09534253d05f17b56\", \"crc_checked\": true}}, \"metrics\": {}, \"limitations\": [\"ALS vegetation return count percentiles differ from GVSM full-waveform return-energy quantiles.\", \"AHN4 2020\\u20132022 vs GVSM 2020; acquisition season and canopy change not harmonized.\", \"Selection from actual forest occurrence support, not a national random sample.\", \"No biological occupancy, PAVD or actual flyable volume. Latitude comparison not causal.\"], \"candidate_cells\": 636, \"candidate_south\": 318, \"candidate_north\": 312, \"archives\": {\"4_AHN4.zip\": {\"size\": 15557285189, \"published_checksum\": \"md5:1709d1e9a001a611502f48d1a55686a3\", \"url\": \"https://zenodo.org/records/15261042/files/4_AHN4.zip?download=1\", \"actual_range_url\": \"https://zenodo.org/api/records/15261042/files/4_AHN4.zip/content\", \"inventory_sha256\": \"8ad96a4a33ff7a383a9f8f21d54608f2d20d242aa6d4ec01a55028cf5b972b48\", \"range_bytes_read\": 2131318086, \"full_archive_md5_verified\": false}, \"6_Masks.zip\": {\"size\": 243149518, \"published_checksum\": \"md5:af4cd8fb643f71ed9a23674fbe2b250f\", \"url\": \"https://zenodo.org/records/15261042/files/6_Masks.zip?download=1\", \"full_archive_md5_verified\": true, \"inventory_sha256\": \"7a2ef358d1c4bea829e6b19aacf16fe89bbfa2cdf15b56323cfbc1759ccc5037\"}}, \"error\": \"AssertionError: \"}",
+      "2026-11-25T11:45:05.0123642Z   File \"/home/runner/work/batter/batter/prospective/gedi_trait_macro_sdm/ahn4_structural_validation_v1.py\", line 221, in main",
+      "2026-11-25T11:45:05.0124847Z     assert abs((s.transform.c-ref.transform.c)/10-round((s.transform.c-ref.transform.c)/10))<1e-6",
+      "2026-11-25T11:45:05.0126278Z AssertionError"
+    ],
+    "scope": "Completed job logs and registry; no matched ALS structural results."
+  }
+}
