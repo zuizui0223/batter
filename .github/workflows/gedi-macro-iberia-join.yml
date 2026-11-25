@@ -1,0 +1,39 @@
+name: GEDI macro Iberian real occurrence join
+on:
+  push:
+    branches: [prospective/gedi-trait-macro-sdm-20261125]
+    paths:
+      - prospective/gedi_trait_macro_sdm/prepare_iberia_occurrences.py
+      - .github/workflows/gedi-macro-iberia-join.yml
+permissions:
+  contents: read
+  actions: read
+jobs:
+  join:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          name: gedi-macro-real-inputs
+          run-id: 45575472120
+          github-token: ${{ github.token }}
+          path: prior_inputs
+      - uses: actions/download-artifact@v4
+        with:
+          name: gedi-macro-input-diagnosis
+          run-id: 45575708211
+          github-token: ${{ github.token }}
+          path: prior_diagnosis
+      - run: python -m pip install requests pyproj
+      - run: python prospective/gedi_trait_macro_sdm/prepare_iberia_occurrences.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: gedi-macro-iberia-join
+          path: iberia_inputs/
+          if-no-files-found: error
