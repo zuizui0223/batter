@@ -1,0 +1,538 @@
+{
+  "stage": "independent ALS structural proxy validation, V2 geometry correction only",
+  "source_doi": "10.5281/zenodo.15261042",
+  "source_environment_sha256": "5fc8ae81149ba9436882f3614b6eac8e51c7e79d0d88aa3c5ba15ccc717331e8",
+  "status": "AHN4_STRUCTURE_PROXY_VALIDATION_COMPLETE",
+  "members": {
+    "brw": {
+      "archive": "6_Masks.zip",
+      "member": "6_Masks/ahn4_10m_mask_building_road_water.tif",
+      "bytes": 86253446,
+      "compressed_bytes": 61225386,
+      "zip_crc32": "5c61266a",
+      "sha256": "57fdd56f2319093c242f3ceb23c0bbe492d19154aebe6cc960df3ea5c94e364f",
+      "crc_checked": true
+    },
+    "power": {
+      "archive": "6_Masks.zip",
+      "member": "6_Masks/ahn4_10m_mask_powerline.tif",
+      "bytes": 37601958,
+      "compressed_bytes": 7310653,
+      "zip_crc32": "29011d94",
+      "sha256": "2ad64705922036c1f565ec2fc50ef36294b745c0799b4a80cc1120b4d9a7411d",
+      "crc_checked": true
+    },
+    "H50": {
+      "archive": "4_AHN4.zip",
+      "member": "4_AHN4/ahn4_10m_perc_50_normalized_height.tif",
+      "bytes": 647003458,
+      "compressed_bytes": 622135597,
+      "zip_crc32": "fdd18d26",
+      "sha256": "82883f749681380501680ff86c71b51edf85541a87416977e2e246247ce4194b",
+      "crc_checked": true
+    },
+    "H95": {
+      "archive": "4_AHN4.zip",
+      "member": "4_AHN4/ahn4_10m_perc_95_normalized_height.tif",
+      "bytes": 763217494,
+      "compressed_bytes": 725514069,
+      "zip_crc32": "d65b55fd",
+      "sha256": "155ca0959ed5b99a6a88acec899775799bb51af9649932ab63fc7ec71f593ccc",
+      "crc_checked": true
+    },
+    "PPR": {
+      "archive": "4_AHN4.zip",
+      "member": "4_AHN4/ahn4_10m_pulse_penetration_ratio.tif",
+      "bytes": 826610282,
+      "compressed_bytes": 773416025,
+      "zip_crc32": "2cf22635",
+      "sha256": "1410255cf0bbbc63f33e2e2488603a2f4f927a5edf5535f09534253d05f17b56",
+      "crc_checked": true
+    }
+  },
+  "metrics": {
+    "brw": {
+      "crs": "EPSG:28992",
+      "shape": [
+        31386,
+        26643
+      ],
+      "transform": [
+        10,
+        0,
+        11817.524,
+        0,
+        -10,
+        620565.237,
+        0,
+        0,
+        1
+      ],
+      "dtype": "float32",
+      "nodata": -3.3999999521443642e+38,
+      "units": null,
+      "scale": 1,
+      "offset": 0
+    },
+    "power": {
+      "crs": "EPSG:28992",
+      "shape": [
+        30900,
+        26600
+      ],
+      "transform": [
+        10,
+        0,
+        12892.190000000002,
+        0,
+        -10,
+        615783.87,
+        0,
+        0,
+        1
+      ],
+      "dtype": "float32",
+      "nodata": -3.3999999521443642e+38,
+      "units": null,
+      "scale": 1,
+      "offset": 0
+    },
+    "H50": {
+      "crs": "EPSG:28992",
+      "shape": [
+        30900,
+        26600
+      ],
+      "transform": [
+        10,
+        0,
+        12892.19,
+        0,
+        -10,
+        615783.87,
+        0,
+        0,
+        1
+      ],
+      "dtype": "float32",
+      "nodata": -3.3999999521443642e+38,
+      "units": null,
+      "scale": 1,
+      "offset": 0
+    },
+    "H95": {
+      "crs": "EPSG:28992",
+      "shape": [
+        30900,
+        26600
+      ],
+      "transform": [
+        10,
+        0,
+        12892.19,
+        0,
+        -10,
+        615783.87,
+        0,
+        0,
+        1
+      ],
+      "dtype": "float32",
+      "nodata": -3.3999999521443642e+38,
+      "units": null,
+      "scale": 1,
+      "offset": 0
+    },
+    "PPR": {
+      "crs": "EPSG:28992",
+      "shape": [
+        30900,
+        26600
+      ],
+      "transform": [
+        10,
+        0,
+        12892.19,
+        0,
+        -10,
+        615783.87,
+        0,
+        0,
+        1
+      ],
+      "dtype": "float32",
+      "nodata": 3.3999999521443642e+38,
+      "units": null,
+      "scale": 1,
+      "offset": 0
+    }
+  },
+  "limitations": [
+    "ALS vegetation return count percentiles differ from GVSM full-waveform return-energy quantiles.",
+    "AHN4 2020–2022 vs GVSM 2020; acquisition season and canopy change not harmonized.",
+    "Selection from actual forest occurrence support, not a national random sample.",
+    "No biological occupancy, PAVD or actual flyable volume. Latitude comparison not causal.",
+    "Cross-CRS destination aggregation uses GDAL average, not exact geodesic intersections; native rectangle overlaps are integrated before it."
+  ],
+  "original_acquisition_and_comparison_blob": "7b220c5451349d0fd46e5d9d5cea6bbd99c0b198",
+  "geometry": "exact shared native rectangle intersections, then approximate GDAL area-average to EPSG:6933",
+  "synthetic_tests": {
+    "aligned": true,
+    "half_pixel": true,
+    "fractional_shift": true,
+    "joint_shifted_masks": true,
+    "missing_metric": true,
+    "sparse_mask_footprint": true,
+    "weighted_numeric_conservation": true
+  },
+  "member_pin_source": {
+    "receipt": "AHN4_GRID_STOP_RECEIPT_V1.json",
+    "sha256": "c9b80b585039578982f0769a27526d43d737c89eacdc5e6937da3208b6ee99f5",
+    "validated_members": 5
+  },
+  "candidate_cells": 636,
+  "candidate_south": 318,
+  "candidate_north": 312,
+  "reused_source_members": [],
+  "archives": {
+    "4_AHN4.zip": {
+      "size": 15557285189,
+      "published_checksum": "md5:1709d1e9a001a611502f48d1a55686a3",
+      "url": "https://zenodo.org/records/15261042/files/4_AHN4.zip?download=1",
+      "actual_range_url": "https://zenodo.org/api/records/15261042/files/4_AHN4.zip/content",
+      "inventory_sha256": "8ad96a4a33ff7a383a9f8f21d54608f2d20d242aa6d4ec01a55028cf5b972b48",
+      "range_bytes_read": 2131318086,
+      "full_archive_md5_verified": false
+    },
+    "6_Masks.zip": {
+      "size": 243149518,
+      "published_checksum": "md5:af4cd8fb643f71ed9a23674fbe2b250f",
+      "url": "https://zenodo.org/records/15261042/files/6_Masks.zip?download=1",
+      "full_archive_md5_verified": true,
+      "inventory_sha256": "7a2ef358d1c4bea829e6b19aacf16fe89bbfa2cdf15b56323cfbc1759ccc5037"
+    }
+  },
+  "all_five_member_hashes_reverified": true,
+  "native_origin_offsets_m": {
+    "brw": {
+      "x": -1074.666000000001,
+      "southward": -4781.366999999969,
+      "x_mod10": 5.333999999998923,
+      "southward_mod10": 8.633000000030734
+    },
+    "power": {
+      "x": 1.8189894035458565e-12,
+      "southward": 0,
+      "x_mod10": 1.8189894035458565e-12,
+      "southward_mod10": 0
+    },
+    "H50": {
+      "x": 0,
+      "southward": 0,
+      "x_mod10": 0,
+      "southward_mod10": 0
+    },
+    "H95": {
+      "x": 0,
+      "southward": 0,
+      "x_mod10": 0,
+      "southward_mod10": 0
+    },
+    "PPR": {
+      "x": 0,
+      "southward": 0,
+      "x_mod10": 0,
+      "southward_mod10": 0
+    }
+  },
+  "native_grid_schema": "PASS_REAL_AFFINES_NOT_SNAPPED",
+  "native_window_checkpoints": {
+    "count": 177,
+    "bytes": 121434259,
+    "manifest_sha256": "207ddd7afec72927ff4f07675f7c970ee97d275c63a6aff570e58a2b4b30eae0",
+    "all_candidate_cells": 636
+  },
+  "native_overlap_qc": {
+    "windows": 177,
+    "invalid_equivalent_10m_pixels_sum_over_windows": 1,
+    "max_x_intervals": 2,
+    "max_y_intervals": 2,
+    "valid_fraction_min": 0,
+    "valid_fraction_max": 0.969272700163644
+  },
+  "valid_any_als_cells": 362,
+  "support": {
+    "0.7": {
+      "threshold": 0.7,
+      "all": {
+        "cells": 58,
+        "blocks": 13,
+        "ratio": {
+          "pearson": 0.5095687103156633,
+          "spearman": 0.4837122027746163
+        },
+        "penetration": {
+          "pearson": -0.7005623758739896,
+          "spearman": -0.6912239687471163
+        },
+        "height": {
+          "pearson": 0.7626046656098361,
+          "spearman": 0.7259835737795688
+        }
+      },
+      "south": {
+        "cells": 22,
+        "blocks": 5,
+        "ratio": {
+          "pearson": 0.50196906190344,
+          "spearman": 0.4511575381140599
+        },
+        "penetration": {
+          "pearson": -0.7351782333999745,
+          "spearman": -0.723320158102767
+        },
+        "height": {
+          "pearson": 0.7282283272094213,
+          "spearman": 0.72557876905703
+        }
+      },
+      "north": {
+        "cells": 36,
+        "blocks": 9,
+        "ratio": {
+          "pearson": 0.508227257522809,
+          "spearman": 0.4983268983268983
+        },
+        "penetration": {
+          "pearson": -0.6868843134331103,
+          "spearman": -0.654054054054054
+        },
+        "height": {
+          "pearson": 0.7742477842189813,
+          "spearman": 0.7335907335907337
+        }
+      },
+      "boundary_cells": 0,
+      "spatial_cv": {
+        "all": {
+          "status": "COMPLETE",
+          "cells": 58,
+          "blocks": 13,
+          "baseline_RMSE": 0.05498142382194298,
+          "profile_RMSE": 0.05628878903311852,
+          "gain": -0.0013073652111755402
+        },
+        "south": {
+          "status": "INSUFFICIENT_SIDE_SUPPORT",
+          "cells": 22,
+          "blocks": 5
+        },
+        "north": {
+          "status": "COMPLETE",
+          "cells": 36,
+          "blocks": 9,
+          "baseline_RMSE": 0.05818641704269199,
+          "profile_RMSE": 0.05961340088840842,
+          "gain": -0.0014269838457164272
+        }
+      },
+      "south_to_north": {
+        "status": "INSUFFICIENT_DISJOINT_SUPPORT",
+        "train_cells": 19,
+        "test_cells": 36
+      }
+    },
+    "0.5": {
+      "threshold": 0.5,
+      "all": {
+        "cells": 298,
+        "blocks": 22,
+        "ratio": {
+          "pearson": 0.5603540479621064,
+          "spearman": 0.44457708099377197
+        },
+        "penetration": {
+          "pearson": -0.5850803815525187,
+          "spearman": -0.5494805748672104
+        },
+        "height": {
+          "pearson": 0.6624581541452954,
+          "spearman": 0.5538283329354237
+        }
+      },
+      "south": {
+        "cells": 103,
+        "blocks": 7,
+        "ratio": {
+          "pearson": 0.49101268012054905,
+          "spearman": 0.4441088608707113
+        },
+        "penetration": {
+          "pearson": -0.5986150334961953,
+          "spearman": -0.5278961472565128
+        },
+        "height": {
+          "pearson": 0.6492563200610451,
+          "spearman": 0.5719149496990731
+        }
+      },
+      "north": {
+        "cells": 194,
+        "blocks": 18,
+        "ratio": {
+          "pearson": 0.5876532919457452,
+          "spearman": 0.4239821179835068
+        },
+        "penetration": {
+          "pearson": -0.6039666887249374,
+          "spearman": -0.5707362772369983
+        },
+        "height": {
+          "pearson": 0.6657533040264575,
+          "spearman": 0.5354324432044639
+        }
+      },
+      "boundary_cells": 1,
+      "spatial_cv": {
+        "all": {
+          "status": "COMPLETE",
+          "cells": 298,
+          "blocks": 22,
+          "baseline_RMSE": 0.047707512126833496,
+          "profile_RMSE": 0.04596413459456104,
+          "gain": 0.0017433775322724526
+        },
+        "south": {
+          "status": "COMPLETE",
+          "cells": 103,
+          "blocks": 7,
+          "baseline_RMSE": 0.050612272120413006,
+          "profile_RMSE": 0.04972634918520023,
+          "gain": 0.0008859229352127726
+        },
+        "north": {
+          "status": "COMPLETE",
+          "cells": 194,
+          "blocks": 18,
+          "baseline_RMSE": 0.04621742122901966,
+          "profile_RMSE": 0.04395920563370149,
+          "gain": 0.0022582155953181707
+        }
+      },
+      "south_to_north": {
+        "train_cells": 62,
+        "test_cells": 194,
+        "base_RMSE": 0.046240850047204914,
+        "profile_RMSE": 0.04550078960670528,
+        "gain": 0.0007400604404996305
+      }
+    },
+    "0.9": {
+      "threshold": 0.9,
+      "all": {
+        "cells": 10,
+        "blocks": 4,
+        "ratio": {
+          "pearson": 0.5323532394790619,
+          "spearman": 0.5515151515151515
+        },
+        "penetration": {
+          "pearson": -0.3216392210921721,
+          "spearman": -0.18787878787878787
+        },
+        "height": {
+          "pearson": 0.5152246621407751,
+          "spearman": 0.5515151515151515
+        }
+      },
+      "south": {
+        "cells": 5,
+        "blocks": 2,
+        "ratio": {
+          "pearson": 0.1639232710022408,
+          "spearman": 0.09999999999999999
+        },
+        "penetration": {
+          "pearson": -0.7723411288671622,
+          "spearman": -0.6
+        },
+        "height": {
+          "pearson": -0.08518999008192073,
+          "spearman": 0
+        }
+      },
+      "north": {
+        "cells": 5,
+        "blocks": 2,
+        "ratio": {
+          "pearson": 0.4567511034944358,
+          "spearman": 0.19999999999999998
+        },
+        "penetration": {
+          "pearson": -0.9799437993582389,
+          "spearman": -0.6
+        },
+        "height": {
+          "pearson": 0.9304457652186545,
+          "spearman": 0.7
+        }
+      },
+      "boundary_cells": 0,
+      "spatial_cv": {
+        "status": "INSUFFICIENT_BLOCK_SUPPORT"
+      }
+    }
+  },
+  "output_sha256": "a8018c854ce85e138f084e66bb4cc60a7560b496aa69f9be748ae5cd5fee8924",
+  "audit": {
+    "run_id": 45642146713,
+    "job_id": 139303365374,
+    "artifacts": [
+      {
+        "id": 15037903269,
+        "name": "gvsm-ahn4-native-window-checkpoints-v2",
+        "digest": "sha256:37091a5a10786f316d28f85d1b7c0d7404d895f08e5c813a7f626ead03ecd51e",
+        "bytes": 121483888,
+        "registry_matches_log": true
+      },
+      {
+        "id": 15037429310,
+        "name": "gvsm-ahn4-geometry-v2",
+        "digest": "sha256:0b9da8c4ecb1943b37fcbdb98b474b2d8e058bab5991de360592cf5d8b981da2",
+        "bytes": 48536,
+        "registry_matches_log": true
+      }
+    ],
+    "repeat_run_id": 45642032490,
+    "repeat_job_id": 139302974624,
+    "repeat_artifacts": [
+      {
+        "id": 15039005203,
+        "name": "gvsm-ahn4-native-window-checkpoints-v2",
+        "digest": "sha256:0a485a55777a5f7643d35510ecd57839b92721704d1bdbcc8f0be7ba7dbffdf5",
+        "bytes": 121483888,
+        "registry_matches_log": true
+      },
+      {
+        "id": 15038610570,
+        "name": "gvsm-ahn4-geometry-v2",
+        "digest": "sha256:2ed6aaffb4771d4bac9f21fd32d7e10d64221a3ed835ccec7a26bd441aaae03a",
+        "bytes": 48536,
+        "registry_matches_log": true
+      }
+    ],
+    "checks": {
+      "both_complete": true,
+      "all_five_source_members_match": true,
+      "member_reverified": true,
+      "synthetic_pass": true,
+      "matched_output_hash": true,
+      "native_windows_hash": true,
+      "exact_support": true,
+      "primary_south_stop": true,
+      "all_registry_match": true
+    },
+    "scope": "Completed job reports, archive registry and upload digests; matched-table and native-window manifest hashes equal across two executions. Actual output ZIP bytes not independently rehashed in this turn; original source members reverified in both jobs."
+  },
+  "interpretation": "At 0.70 primary threshold R50 versus ALS vegetation H50/H95 correlates +0.50957, but adding R50 to RH98 and tree fraction worsens spatially blocked ratio RMSE by 0.00130737. South has only 22 valid cells; no admitted south-side score or south-to-north transfer. At 0.50 sensitivity, 298 cells, modest positive gains both sides and disjoint south-to-north; 0.90 has only 10 cells, no model. No direct inference about abrupt latitude accuracy change, biological mechanism, PAVD or bat altitude."
+}
