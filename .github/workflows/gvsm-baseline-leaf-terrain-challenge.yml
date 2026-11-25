@@ -1,0 +1,77 @@
+name: Frozen leaf type and topography baseline challenge
+on:
+  push:
+    branches: [prospective/gedi-trait-macro-sdm-20261125]
+    paths:
+      - .github/workflows/gvsm-baseline-leaf-terrain-challenge.yml
+permissions:
+  contents: read
+  actions: read
+jobs:
+  covariates:
+    strategy:
+      fail-fast: false
+      matrix:
+        mode: [leaf, terrain]
+    runs-on: ubuntu-latest
+    timeout-minutes: 65
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          name: europe-common-forest-support-v1
+          run-id: 45585033345
+          github-token: ${{ github.token }}
+          path: pilot
+      - run: python -m pip install numpy pandas requests rasterio pyproj
+      - run: python -m py_compile prospective/gedi_trait_macro_sdm/baseline_leaf_terrain_covariates_v1.py
+      - run: python prospective/gedi_trait_macro_sdm/baseline_leaf_terrain_covariates_v1.py ${{ matrix.mode }}
+        timeout-minutes: 55
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: baseline-covariates-${{ matrix.mode }}
+          path: baseline_${{ matrix.mode }}/
+          if-no-files-found: error
+          retention-days: 90
+  challenge:
+    needs: covariates
+    if: always() && !cancelled()
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          name: europe-common-forest-support-v1
+          run-id: 45585033345
+          github-token: ${{ github.token }}
+          path: pilot
+      - uses: actions/download-artifact@v4
+        with:
+          name: baseline-covariates-leaf
+          path: baseline_leaf
+      - uses: actions/download-artifact@v4
+        with:
+          name: baseline-covariates-terrain
+          path: baseline_terrain
+      - run: python -m pip install numpy pandas scipy
+      - run: python -m py_compile prospective/gedi_trait_macro_sdm/baseline_leaf_terrain_challenge_v1.py
+      - run: python prospective/gedi_trait_macro_sdm/baseline_leaf_terrain_challenge_v1.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: baseline-leaf-terrain-challenge-v1
+          path: baseline_challenge/
+          if-no-files-found: error
+          retention-days: 90
