@@ -1,0 +1,29 @@
+name: Airspace dual modality V50
+on:
+  push:
+    branches: [prospective/roost-3d-connectivity-fd-20261124]
+    paths:
+      - scripts/airspace_dual_modality_v50.py
+      - .github/workflows/airspace-dual-modality-v50.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy==1.26.4 pandas==2.2.3 scipy==1.13.1 requests==2.32.3 openpyxl==3.1.5 py7zr==1.0.0
+      - run: python scripts/airspace_dual_modality_v50.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: airspace-dual-modality-v50
+          path: roost_fd_audit/audit_v50_dual_modality_schema.json
+          if-no-files-found: error
