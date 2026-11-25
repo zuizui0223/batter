@@ -1,9 +1,11 @@
 """Frozen paired comparison: R50 beyond leaf composition and topography."""
-import hashlib,itertools,json,math,pathlib
+import hashlib,itertools,json,math,pathlib,sys
 import numpy as np,pandas as pd
 from scipy.special import expit
 from scipy.optimize import minimize
-OUT=pathlib.Path("baseline_challenge");OUT.mkdir(exist_ok=True)
+assert sys.argv[1:] in ([],["--lc100-alternative"])
+ALT=sys.argv[1:]==["--lc100-alternative"]
+OUT=pathlib.Path("baseline_lc100_challenge" if ALT else "baseline_challenge");OUT.mkdir(exist_ok=True)
 SRC=pathlib.Path("pilot/species_cell_source_year_environment.csv.gz")
 PIN="5bd65cd8c56bac84c033a4972064622c172554a676d198868ef0776c49a2786b"
 def sha(p):
@@ -12,7 +14,7 @@ assert sha(SRC)==PIN
 K=["cell_x","cell_y"];G=["dataset_key","year","bx","by"]
 roster=sorted(["5218524","5218507","2432439","5218522","2432359","5218471","5218464","2432389","2432416","2432655","2432614","2432470","9754263","2432564"])
 base=["bio1","bio4","bio5","bio6","bio12","bio15",*[f"worldcover_class_{v}_fraction" for v in [10,20,30,40,50]],"GVSM_area_mean_RH98_m"]
-terrain=["surface_elev_mean_m","surface_elev_sd_m"];leaf=["broadleaf_fraction","conifer_fraction"]
+terrain=["surface_elev_mean_m","surface_elev_sd_m"];leaf=["lc100_broadleaf_class_fraction","lc100_needleleaf_class_fraction","lc100_mixed_class_fraction","lc100_other_forest_class_fraction"] if ALT else ["broadleaf_fraction","conifer_fraction"]
 features=base+["R50"]
 d=pd.read_csv(SRC,dtype={"species_key":str,"dataset_key":str,"year":str,"license":str},keep_default_na=False,low_memory=False)
 yes=lambda x:x.astype(str).str.lower().eq("true")
@@ -50,9 +52,15 @@ def save():
     serialized=json.dumps(report,allow_nan=False,default=native_scalar)
     (OUT/"report.json").write_text(json.dumps(report,indent=2,allow_nan=False,default=native_scalar)+"\n")
     print("BASELINE_CHALLENGE_REPORT="+serialized,flush=True)
+if ALT:
+    report.update(stage="post-pilot LC100 classified forest area and surface-topography sensitivity (not DLT)",original_DLT_challenge_admitted=False,alternative_source="LC100 2019 V3.0.1, DOI 10.5281/zenodo.3939050")
+    report["limits"].append("LC100 fractions are areas of classified open/closed forest types, not DLT leaf cover; four fixed fractions including mixed/other.")
 for mode,cols in [("terrain",terrain),("leaf",leaf)]:
-    p=pathlib.Path("baseline_"+mode+"/report.json")
+    p=pathlib.Path(("baseline_lc100" if ALT and mode=="leaf" else "baseline_"+mode)+"/report.json")
     a=json.loads(p.read_text())
+    if mode=="leaf" and ALT:assert a.get("source_variant")=="LC100_2019_DISCRETE_NOT_DLT"
+    if mode=="leaf" and not ALT:assert a.get("source_variant")!="LC100_2019_DISCRETE_NOT_DLT"
+    if mode=="terrain":assert a.get("output_sha256")=="0b24b047ad6ce0209b0de93dc3e8fa3aae4c78078d69d40d9a6991530ed65d43"
     report["source_reports"][mode]={k:v for k,v in a.items() if k!="sources"}
     q=p.parent/"cell_covariates.csv.gz"
     if not q.exists() or "output_sha256" not in a:
@@ -132,7 +140,7 @@ try:
         # Separate partial diagnostic, never a replacement for full baseline.
         report["terrain_only_diagnostic"]=run("terrain_only",t,{"T":base+terrain})
         report["leaf_only_diagnostic"]=run("leaf_only",l,{"L":base+leaf})
-    report["status"]="FULL_BASELINE_CHALLENGE_COMPLETE" if report["full_challenge"]["status"]=="COMPLETE_DESCRIPTIVE_ONLY" else "FULL_BASELINE_NOT_ADMITTED"
+    report["status"]=("LC100_ALTERNATIVE_CHALLENGE_COMPLETE" if ALT else "FULL_BASELINE_CHALLENGE_COMPLETE") if report["full_challenge"]["status"]=="COMPLETE_DESCRIPTIVE_ONLY" else ("LC100_ALTERNATIVE_NOT_ADMITTED" if ALT else "FULL_BASELINE_NOT_ADMITTED")
     save()
 except Exception as e:
     report.update(status="STOP",error=type(e).__name__+": "+str(e)[:200]);save();raise
