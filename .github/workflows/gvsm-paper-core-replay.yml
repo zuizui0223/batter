@@ -1,0 +1,33 @@
+name: Vertical forest profiles paper core replay
+on:
+  push:
+    branches: [prospective/gedi-trait-macro-sdm-20261125]
+    paths:
+      - .github/workflows/gvsm-paper-core-replay.yml
+permissions:
+  contents: read
+  actions: read
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy==2.5.5 pandas==3.1.1 scipy==1.18.1 requests
+      - run: python prospective/gedi_trait_macro_sdm/paper_core_replay_v1.py
+        env:
+          GH_TOKEN: ${{ github.token }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: vertical-forest-paper-core-replay
+          path: paper_replay/
+          if-no-files-found: error
+          retention-days: 90
