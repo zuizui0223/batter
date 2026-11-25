@@ -1,0 +1,220 @@
+{
+  "stage": "disjoint north stress test; no primary SDM or causal mechanism",
+  "source_sha256": {
+    "common_forest/species_cell_source_year_environment.csv.gz": "5bd65cd8c56bac84c033a4972064622c172554a676d198868ef0776c49a2786b",
+    "fixed_environment/all_bat_species_cell_source_year_environment.csv.gz": "85ad737229aa7b10720a8d5c8bd0ea389f63f908c37871c7ce46ae87c9bed1d6",
+    "holdout/fixed_source_cell_year_holdout_masks.csv.gz": "6796dcc358dd1990cb3cca25b95fe068b52cce7a979ff8602ce639c5708e4b96",
+    "observation/source_cell_year_observation_flags.csv.gz": "de971292065a8aee3491880adb00a5623efae61bc83b2bd2ae4d663b45edf0f0",
+    "traits/physical_trait_crosswalk.csv": "43bb5284308a9fe732beda51886172cb87268e5d00620eb27956d5808dae809f",
+    "physical/physical_wing_traits_original.csv": "d3ebe7656a60b44933f4da1a8302ca800bed07e0864d557698bf322eb7b85f49"
+  },
+  "coverage": {
+    "all": {
+      "before": {
+        "rows": 14251,
+        "raw_records": 50514,
+        "screened_records": 50268,
+        "species_cells": 12095,
+        "species": 27,
+        "blocks": 166,
+        "species_passing": 20
+      },
+      "after": {
+        "rows": 14101,
+        "raw_records": 50327,
+        "screened_records": 50268,
+        "species_cells": 11970,
+        "species": 27,
+        "blocks": 165,
+        "species_passing": 20
+      }
+    },
+    "training_latitude": {
+      "before": {
+        "rows": 5660,
+        "raw_records": 21096,
+        "screened_records": 20906,
+        "species_cells": 4578,
+        "species": 27,
+        "blocks": 94,
+        "species_passing": 16
+      },
+      "after": {
+        "rows": 5555,
+        "raw_records": 20958,
+        "screened_records": 20906,
+        "species_cells": 4496,
+        "species": 27,
+        "blocks": 93,
+        "species_passing": 16
+      }
+    },
+    "north": {
+      "before": {
+        "rows": 8566,
+        "raw_records": 29349,
+        "screened_records": 29295,
+        "species_cells": 7492,
+        "species": 19,
+        "blocks": 82,
+        "species_passing": 12
+      },
+      "after": {
+        "rows": 8523,
+        "raw_records": 29302,
+        "screened_records": 29295,
+        "species_cells": 7451,
+        "species": 19,
+        "blocks": 82,
+        "species_passing": 12
+      }
+    },
+    "disjoint_north": {
+      "before": {
+        "rows": 5652,
+        "raw_records": 14016,
+        "screened_records": 14014,
+        "species_cells": 5042,
+        "species": 17,
+        "blocks": 48,
+        "species_passing": 12
+      },
+      "after": {
+        "rows": 5651,
+        "raw_records": 14015,
+        "screened_records": 14014,
+        "species_cells": 5041,
+        "species": 17,
+        "blocks": 48,
+        "species_passing": 12
+      }
+    }
+  },
+  "status": "TRANSFER_STRESS_TEST_COMPLETE",
+  "pair_data": {
+    "train_comparisons": 31601,
+    "train_blocks": 51,
+    "train_taxa": 14,
+    "test_comparisons": 89684,
+    "test_blocks": 35,
+    "test_taxa": 15,
+    "test_sources": 15,
+    "test_cells": 2561
+  },
+  "complete_WA_taxa": 20,
+  "known_species_transfer": {
+    "status": "COMPLETE",
+    "scored_comparisons": 47741,
+    "coverage_of_test_pairs": 0.5323246063957897,
+    "scored_taxa": 10,
+    "scored_blocks": 28,
+    "scored_sources": 15,
+    "scores": {
+      "flex_base": -0.6904365524620982,
+      "flex_profile": -0.6930309981273282
+    },
+    "gains": {
+      "flex_profile": {
+        "gain": -0.0025944456652299275,
+        "positive_blocks": 8,
+        "block_quantiles": [
+          -0.03212834958285031,
+          -0.002098959655955939,
+          0.036080056126249045
+        ],
+        "conditional_block_bootstrap_95": [
+          -0.010536282382417429,
+          0.005200263260639481
+        ]
+      }
+    }
+  },
+  "trait_cold_start_transfer": {
+    "status": "COMPLETE",
+    "scored_comparisons": 89267,
+    "coverage_of_test_pairs": 0.995350341197984,
+    "scored_taxa": 15,
+    "scored_blocks": 35,
+    "scored_sources": 15,
+    "scores": {
+      "AR_base": -0.6946337751431257,
+      "AR_profile": -0.6959815590223526,
+      "W_base": -0.699212991301973,
+      "W_profile": -0.7006136760235504,
+      "WA_base": -0.6867503947412532,
+      "WA_profile": -0.6867262718147626
+    },
+    "gains": {
+      "AR_profile": {
+        "gain": -0.0013477838792268493,
+        "positive_blocks": 22,
+        "block_quantiles": [
+          -0.006473980644087076,
+          0.0007668579047430779,
+          0.006928702060585229
+        ],
+        "conditional_block_bootstrap_95": [
+          -0.0055870824742759685,
+          0.0014788525290183494
+        ]
+      },
+      "W_profile": {
+        "gain": -0.0014006847215773943,
+        "positive_blocks": 17,
+        "block_quantiles": [
+          -0.009923768634190224,
+          -0.00019477848693659169,
+          0.01365163845199055
+        ],
+        "conditional_block_bootstrap_95": [
+          -0.008440997191095364,
+          0.003436640429802613
+        ]
+      },
+      "WA_profile": {
+        "gain": 0.000024122926490566243,
+        "positive_blocks": 19,
+        "block_quantiles": [
+          -0.028571804131240185,
+          0.0010796037265141695,
+          0.02839625130141229
+        ],
+        "conditional_block_bootstrap_95": [
+          -0.006058265377744269,
+          0.006278086695733369
+        ]
+      }
+    },
+    "skips": {
+      "support": 16
+    },
+    "WA_minus_AR_profile": 0.009255287207589946,
+    "WA_minus_AR_base": 0.007907503328363097,
+    "WA_minus_W_profile": 0.013887404208787757,
+    "WA_minus_AR_gain": 0.0013719068057174155
+  },
+  "original_primary_sdm_admitted": false,
+  "limits": [
+    "Northern test observations are disjoint by provider and 200-km block, but GVSM northern structural predictions are outside GEDI training latitude.",
+    "Same recorded-label estimand, not detection-adjusted ecological occurrence or actual altitude. Unknown observation context remains.",
+    "Block bootstrap conditional on trained models is descriptive, not a population-level confidence interval.",
+    "Test taxa selected by pre-outcome geographic coverage; no new model selection or tuning. No independent airborne structure calibration."
+  ],
+  "audit": {
+    "run_id": 45599153163,
+    "job_id": 139153102661,
+    "artifact_id": 15014832006,
+    "registry_digest": "sha256:36447f8b3d4c074c038d28c3fa7916c6274efe61c0b4fca917f38d865c24e02e",
+    "head_sha": "3fe270fa2e82b27f124e98bf7bfd150bc2e6360b",
+    "checks": {
+      "artifact_registry_agrees_with_log": true,
+      "known_score_delta": true,
+      "trait_score_deltas": true,
+      "WA_vs_AR_base": true,
+      "known_coverage": true,
+      "trait_coverage": true,
+      "main_not_admitted": true
+    },
+    "scope": "Exact completed job aggregate and registry/upload digest. Archive ZIP not independently rehashed in this session."
+  }
+}
