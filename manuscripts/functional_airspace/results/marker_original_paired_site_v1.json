@@ -1,0 +1,221 @@
+{
+  "scope": "Authenticated user-supplied original ZIP; final author corrections; empirical frozen paired-site observed-mark prediction, descriptive only",
+  "zip_sha256": "077a71633049ee970ac9f164579ae6d3ba8c0f749a4624891eb4f2ae3b92741c",
+  "source_sha256": {
+    "cleaed_manual.output_27.11.2023.csv": "5b38a948d10488702c99bae21dd65fb511100b3b2025822c2a838e18f9313a71",
+    "Marker_night_inventory_0704.2022_edit_(2).csv": "dedcd14bffc2c29696b58b085ffd8de49fb7526eb24478eae13a5a73ed3a9561",
+    "raw_insect_data_tidied_27112023.csv": "f0dc944fccc73779dd5441510fa0a3d871baecaa87adc2aa14788ee13df3fcfb",
+    "README.md": "ff378f60cdeaf8e2246bd3b219f8095459237b5045cc32988e5dfe3911b08109",
+    "Turbines_(3).kml": "7704b87af5d0d4945a01e23573cce0655ff1edd14948237561531ffeeca4824d"
+  },
+  "author_cleaning_code_blob": "043a31dfa6c475898059d99cf49ae4a0fbdb4770",
+  "environment": {
+    "python": "3.13.5",
+    "pandas": "2.2.3",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "local_replay_sha256": "8288d5b1a9d1360c9da3d107036a00ffacfdcaf5524664c947e37914318d51c3",
+  "local_result_sha256": "8d4533c85ea33370672cf6551d2b4feb6b38adcac96e4829b0eced20c64dc907",
+  "local_diagnostic_sha256": "3d5cbb6a6083ef68e06609970d86381142b75a9a613c00ed9ff0082620e4a8eb",
+  "counts": {
+    "raw_rows": 27516,
+    "after_auto_noise": 19297,
+    "second_pass_complete": 186,
+    "parsed_passes": 19483,
+    "all_passes": 19438,
+    "guild_total": {
+      "LRE": 14718,
+      "SRE": 4141,
+      "NoID": 484,
+      "MRE": 95
+    },
+    "site_role_count": 16,
+    "ground_passes": 19206,
+    "ground_behavior": {
+      "Commuting": 14626,
+      "Feeding": 4033,
+      "Social": 547
+    },
+    "tower_passes": 232,
+    "ground_active_nights": 811,
+    "total_active_nights": 951,
+    "ground_passes_unmatched_active_inventory": 0,
+    "unmatched_ground_feeding": 0,
+    "paired_active_nights": 389,
+    "paired_active_target_guild_passes": 17481,
+    "paired_active_target_guild_feeding": 3678,
+    "eligible_localities": 7,
+    "informative_strata": 287
+  },
+  "reconciliation": {
+    "initial_status": "STOP_RECONCILIATION",
+    "ground_feeding_published": 4034,
+    "ground_feeding_final_author_code": 4033,
+    "diagnostic_without_correction2": {
+      "Commuting": 14625,
+      "Feeding": 4034,
+      "Social": 547
+    },
+    "resolution": "Author expressly reclassified one PAUR feeding mark as commuting; retain correction, do not tune labels. Third correction reclassifies one BABA to SR1; stale author comments not used as target. Undefined mo replaced by preceding read_csv source. Diagnostic did not fit ecological models."
+  },
+  "support": [
+    {
+      "locality": 1,
+      "SRE": 9,
+      "LRE": 31
+    },
+    {
+      "locality": 2,
+      "SRE": 11,
+      "LRE": 22
+    },
+    {
+      "locality": 3,
+      "SRE": 11,
+      "LRE": 17
+    },
+    {
+      "locality": 4,
+      "SRE": 15,
+      "LRE": 35
+    },
+    {
+      "locality": 5,
+      "SRE": 30,
+      "LRE": 29
+    },
+    {
+      "locality": 6,
+      "SRE": 10,
+      "LRE": 30
+    },
+    {
+      "locality": 7,
+      "SRE": 10,
+      "LRE": 27
+    }
+  ],
+  "folds": [
+    {
+      "locality": 1,
+      "n_strata": 40,
+      "M1_beta": 0.30299762432471744,
+      "M2_beta": {
+        "SRE": 0.3225965367008129,
+        "LRE": 0.2558324966097627
+      },
+      "M0": -1.210122721122297,
+      "M1": -1.2091668274325575,
+      "M2": -1.2071545314497405,
+      "M1_M0": 0.0009558936897393622,
+      "M2_M1": 0.0020122959828170472,
+      "M2_M0": 0.0029681896725564094
+    },
+    {
+      "locality": 2,
+      "n_strata": 33,
+      "M1_beta": 0.3159089553651611,
+      "M2_beta": {
+        "SRE": 0.26402414462500273,
+        "LRE": 0.2837565650624637
+      },
+      "M0": -1.3578376898015365,
+      "M1": -1.3965442477882752,
+      "M2": -1.3905665537500957,
+      "M1_M0": -0.03870655798673872,
+      "M2_M1": 0.005977694038179493,
+      "M2_M0": -0.03272886394855923
+    },
+    {
+      "locality": 3,
+      "n_strata": 28,
+      "M1_beta": 0.28185347834978847,
+      "M2_beta": {
+        "SRE": 0.20873666590979933,
+        "LRE": 0.25961713283207194
+      },
+      "M0": -0.9498099699750605,
+      "M1": -0.9026867234440431,
+      "M2": -0.9146945326153435,
+      "M1_M0": 0.047123246531017404,
+      "M2_M1": -0.012007809171300399,
+      "M2_M0": 0.035115437359717006
+    },
+    {
+      "locality": 4,
+      "n_strata": 50,
+      "M1_beta": -0.16359404709517678,
+      "M2_beta": {
+        "SRE": 0.3630779062004539,
+        "LRE": -0.35289757091055723
+      },
+      "M0": -4.218712483656517,
+      "M1": -4.9134901805731745,
+      "M2": -5.938033588294907,
+      "M1_M0": -0.6947776969166579,
+      "M2_M1": -1.0245434077217324,
+      "M2_M0": -1.7193211046383903
+    },
+    {
+      "locality": 5,
+      "n_strata": 59,
+      "M1_beta": 0.304048989292921,
+      "M2_beta": {
+        "SRE": 0.24489212517701164,
+        "LRE": 0.2751307156209896
+      },
+      "M0": -1.0203074084669008,
+      "M1": -1.0290088785327247,
+      "M2": -1.0291124098195628,
+      "M1_M0": -0.00870147006582389,
+      "M2_M1": -0.00010353128683804336,
+      "M2_M0": -0.008805001352661934
+    },
+    {
+      "locality": 6,
+      "n_strata": 40,
+      "M1_beta": 0.31983703936324903,
+      "M2_beta": {
+        "SRE": 0.3106045527708396,
+        "LRE": 0.27884236384231875
+      },
+      "M0": -0.7854544268921929,
+      "M1": -0.8556303344180428,
+      "M2": -0.8446909201838244,
+      "M1_M0": -0.0701759075258499,
+      "M2_M1": 0.010939414234218403,
+      "M2_M0": -0.0592364932916315
+    },
+    {
+      "locality": 7,
+      "n_strata": 37,
+      "M1_beta": 0.4523820448028022,
+      "M2_beta": {
+        "SRE": 0.21304879221603923,
+        "LRE": 0.4429298702081663
+      },
+      "M0": -2.3161484881454113,
+      "M1": -2.9480079203320635,
+      "M2": -2.972175767859432,
+      "M1_M0": -0.6318594321866522,
+      "M2_M1": -0.024167847527368558,
+      "M2_M0": -0.6560272797140208
+    }
+  ],
+  "means": {
+    "M0": -1.694056169722845,
+    "M1": -1.8935050160744118,
+    "M2": -2.042346900567558,
+    "M1_M0": -0.19944884635156654,
+    "M2_M1": -0.14884188449314634,
+    "M2_M0": -0.3482907308447129
+  },
+  "positive_localities": 2,
+  "omission_mean_range": [
+    -0.4121917588787846,
+    -0.11978566854576671
+  ],
+  "directional_screen": false,
+  "status": "EMPIRICAL_CONDITIONAL_PREDICTION_COMPLETE_DESCRIPTIVE_ONLY"
+}
