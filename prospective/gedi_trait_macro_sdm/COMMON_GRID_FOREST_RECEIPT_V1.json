@@ -1,0 +1,684 @@
+{
+  "stage": "area-weighted common-grid source support, no model",
+  "input_sha256": {
+    "census": "a3bac38f1961240a235e351207b1497712585fc9d2f8506ab0209d28019354b9",
+    "environment": "89b63e7229447377064d189c8532b232640192cf343d43cb24260dcc3e97c5e5",
+    "traits": "43bb5284308a9fe732beda51886172cb87268e5d00620eb27956d5808dae809f"
+  },
+  "cells": 2982,
+  "source_records": 20784,
+  "source_species_cells": 4854,
+  "source_domain": "[-12,35,30,51.6]; no country filter; already acquired archive only",
+  "source_windows": {
+    "RH10": {
+      "url": "https://data.source.coop/geoai-ucph/gvsm/mosaics/2020/RH10_Q1.tif",
+      "shape": [
+        1632,
+        3898
+      ],
+      "transform": [
+        0.01,
+        0,
+        -9.17999999991764,
+        0,
+        -0.01,
+        51.62291859248707,
+        0,
+        0,
+        1
+      ],
+      "window": [
+        17082,
+        3123,
+        3898,
+        1632
+      ],
+      "source_shape": [
+        13889,
+        36000
+      ],
+      "scale": 0.1,
+      "offset": 0,
+      "source_nodata": 32767,
+      "native_valid": 4049610,
+      "encoded_bytes_sha256": "2e7349c7a06bc8a50220046631e1e2537100b2ede505565cbe0205778acd5558",
+      "valid_mask_sha256": "ba4d59576f9618f7b4bb956876195fd932e2c6818b750cf788f6d624e6bd5980",
+      "converted_array_sha256": "a7d9235f4cf3ab772ef9855ce0904762a18ea98362c3d2808ee8d22b15a0ab60"
+    },
+    "RH25": {
+      "url": "https://data.source.coop/geoai-ucph/gvsm/mosaics/2020/RH25_Q1.tif",
+      "shape": [
+        1632,
+        3898
+      ],
+      "transform": [
+        0.01,
+        0,
+        -9.17999999991764,
+        0,
+        -0.01,
+        51.62291859248707,
+        0,
+        0,
+        1
+      ],
+      "window": [
+        17082,
+        3123,
+        3898,
+        1632
+      ],
+      "source_shape": [
+        13889,
+        36000
+      ],
+      "scale": 0.1,
+      "offset": 0,
+      "source_nodata": 32767,
+      "native_valid": 4049610,
+      "encoded_bytes_sha256": "b07cf45a1ec9c767b71611a3bf251d320906649328c13bcfa1738821837c98ca",
+      "valid_mask_sha256": "ba4d59576f9618f7b4bb956876195fd932e2c6818b750cf788f6d624e6bd5980",
+      "converted_array_sha256": "67fe5dbb057fd87521c3167ba63e357f8149e8dae6220f5d4fbc1a290914cd51"
+    },
+    "RH50": {
+      "url": "https://data.source.coop/geoai-ucph/gvsm/mosaics/2020/RH50_Q1.tif",
+      "shape": [
+        1632,
+        3898
+      ],
+      "transform": [
+        0.01,
+        0,
+        -9.17999999991764,
+        0,
+        -0.01,
+        51.62291859248707,
+        0,
+        0,
+        1
+      ],
+      "window": [
+        17082,
+        3123,
+        3898,
+        1632
+      ],
+      "source_shape": [
+        13889,
+        36000
+      ],
+      "scale": 0.1,
+      "offset": 0,
+      "source_nodata": 32767,
+      "native_valid": 4049610,
+      "encoded_bytes_sha256": "2dd9fa3c0b5f6eeb2f51a15d23f8aa449be3d5222d11287982eb109d06e1934b",
+      "valid_mask_sha256": "ba4d59576f9618f7b4bb956876195fd932e2c6818b750cf788f6d624e6bd5980",
+      "converted_array_sha256": "3347fa0d310189e31589e5ca83999fbd16a661379c0f783c23308d20023688a5"
+    },
+    "RH75": {
+      "url": "https://data.source.coop/geoai-ucph/gvsm/mosaics/2020/RH75_Q1.tif",
+      "shape": [
+        1632,
+        3898
+      ],
+      "transform": [
+        0.01,
+        0,
+        -9.17999999991764,
+        0,
+        -0.01,
+        51.62291859248707,
+        0,
+        0,
+        1
+      ],
+      "window": [
+        17082,
+        3123,
+        3898,
+        1632
+      ],
+      "source_shape": [
+        13889,
+        36000
+      ],
+      "scale": 0.1,
+      "offset": 0,
+      "source_nodata": 32767,
+      "native_valid": 4049610,
+      "encoded_bytes_sha256": "ed1cf95ecdc35672ccfe8ef03420f111b305d40ad1e5957488921eeedf0da924",
+      "valid_mask_sha256": "ba4d59576f9618f7b4bb956876195fd932e2c6818b750cf788f6d624e6bd5980",
+      "converted_array_sha256": "6dac969652043ff3614aae3bcf187fca2492039054e859faf9c05bed671fbca3"
+    },
+    "RH90": {
+      "url": "https://data.source.coop/geoai-ucph/gvsm/mosaics/2020/RH90_Q1.tif",
+      "shape": [
+        1632,
+        3898
+      ],
+      "transform": [
+        0.01,
+        0,
+        -9.17999999991764,
+        0,
+        -0.01,
+        51.62291859248707,
+        0,
+        0,
+        1
+      ],
+      "window": [
+        17082,
+        3123,
+        3898,
+        1632
+      ],
+      "source_shape": [
+        13889,
+        36000
+      ],
+      "scale": 0.1,
+      "offset": 0,
+      "source_nodata": 32767,
+      "native_valid": 4049610,
+      "encoded_bytes_sha256": "d7a7389e8da9531fc1bde9fdf13085d8e3a51de23516a50c460ad51f55978940",
+      "valid_mask_sha256": "ba4d59576f9618f7b4bb956876195fd932e2c6818b750cf788f6d624e6bd5980",
+      "converted_array_sha256": "ea1629ce9de4fc4e978fbceae1f81638bd65a4e425aba39f6f5c59e2cde15ebf"
+    },
+    "RH98": {
+      "url": "https://data.source.coop/geoai-ucph/gvsm/mosaics/2020/RH98_Q1.tif",
+      "shape": [
+        1632,
+        3898
+      ],
+      "transform": [
+        0.01,
+        0,
+        -9.17999999991764,
+        0,
+        -0.01,
+        51.62291859248707,
+        0,
+        0,
+        1
+      ],
+      "window": [
+        17082,
+        3123,
+        3898,
+        1632
+      ],
+      "source_shape": [
+        13889,
+        36000
+      ],
+      "scale": 0.1,
+      "offset": 0,
+      "source_nodata": 32767,
+      "native_valid": 4049610,
+      "encoded_bytes_sha256": "7a6cf038227038e863c8abb878013479676a024588f79b460ac10ec9409b92c0",
+      "valid_mask_sha256": "ba4d59576f9618f7b4bb956876195fd932e2c6818b750cf788f6d624e6bd5980",
+      "converted_array_sha256": "bbed66996704b533b8b3351bc80a3a3163436a8a25f5332121fb2266c4af9116"
+    },
+    "bio1": {
+      "url": "https://os.zhdk.cloud.switch.ch/chelsav2/GLOBAL/climatologies/1981-2010/bio/CHELSA_bio1_1981-2010_V.2.1.tif",
+      "shape": [
+        1958,
+        4677
+      ],
+      "transform": [
+        0.0083333333,
+        0,
+        -9.175139572150016,
+        0,
+        -0.0083333333,
+        51.624860544650005,
+        0,
+        0,
+        1
+      ],
+      "window": [
+        20499,
+        3885,
+        4677,
+        1958
+      ],
+      "source_shape": [
+        20880,
+        43200
+      ],
+      "scale": 0.1,
+      "offset": -273.15,
+      "source_nodata": null,
+      "native_valid": 9157566,
+      "encoded_bytes_sha256": "39e8cfca1ee5959d8e75b12a17f4b745e6d4afbbf94f81a270fd697f68cdc781",
+      "valid_mask_sha256": "d4c703febc925b7d966e9c6fb16f5a1be0d49895364221c665ff0d54fd2e8b33",
+      "converted_array_sha256": "bc1b422c77d619bdbba8b4e6143e614b8ad69637c35126d3b213913e94bb77dd"
+    },
+    "bio4": {
+      "url": "https://os.zhdk.cloud.switch.ch/chelsav2/GLOBAL/climatologies/1981-2010/bio/CHELSA_bio4_1981-2010_V.2.1.tif",
+      "shape": [
+        1958,
+        4677
+      ],
+      "transform": [
+        0.0083333333,
+        0,
+        -9.175139572150016,
+        0,
+        -0.0083333333,
+        51.624860544650005,
+        0,
+        0,
+        1
+      ],
+      "window": [
+        20499,
+        3885,
+        4677,
+        1958
+      ],
+      "source_shape": [
+        20880,
+        43200
+      ],
+      "scale": 0.1,
+      "offset": 0,
+      "source_nodata": null,
+      "native_valid": 9157566,
+      "encoded_bytes_sha256": "7a45593ff5ad6f93a6ddf54d929d5613d2f36aee094062babb4c11caabf3fd97",
+      "valid_mask_sha256": "d4c703febc925b7d966e9c6fb16f5a1be0d49895364221c665ff0d54fd2e8b33",
+      "converted_array_sha256": "d5d5586793fd3b7a29867970777ae834f2f768a653884b4a4e798e295bed9c73"
+    },
+    "bio5": {
+      "url": "https://os.zhdk.cloud.switch.ch/chelsav2/GLOBAL/climatologies/1981-2010/bio/CHELSA_bio5_1981-2010_V.2.1.tif",
+      "shape": [
+        1958,
+        4677
+      ],
+      "transform": [
+        0.0083333333,
+        0,
+        -9.175139572150016,
+        0,
+        -0.0083333333,
+        51.624860544650005,
+        0,
+        0,
+        1
+      ],
+      "window": [
+        20499,
+        3885,
+        4677,
+        1958
+      ],
+      "source_shape": [
+        20880,
+        43200
+      ],
+      "scale": 0.1,
+      "offset": -273.15,
+      "source_nodata": null,
+      "native_valid": 9157566,
+      "encoded_bytes_sha256": "b2c513b47c34f942e619647310885c79efe5790a897bde88a8378b9522234823",
+      "valid_mask_sha256": "d4c703febc925b7d966e9c6fb16f5a1be0d49895364221c665ff0d54fd2e8b33",
+      "converted_array_sha256": "c7cd459d65f87ab6b65f08f410f82077ac621653ae9d5218f2429ec92ba211db"
+    },
+    "bio6": {
+      "url": "https://os.zhdk.cloud.switch.ch/chelsav2/GLOBAL/climatologies/1981-2010/bio/CHELSA_bio6_1981-2010_V.2.1.tif",
+      "shape": [
+        1958,
+        4677
+      ],
+      "transform": [
+        0.0083333333,
+        0,
+        -9.175139572150016,
+        0,
+        -0.0083333333,
+        51.624860544650005,
+        0,
+        0,
+        1
+      ],
+      "window": [
+        20499,
+        3885,
+        4677,
+        1958
+      ],
+      "source_shape": [
+        20880,
+        43200
+      ],
+      "scale": 0.1,
+      "offset": -273.15,
+      "source_nodata": null,
+      "native_valid": 9157566,
+      "encoded_bytes_sha256": "f13e37ee8ca05916c3fc9e9c028625f429e35a1d76691691adb1c94ea5173cdf",
+      "valid_mask_sha256": "d4c703febc925b7d966e9c6fb16f5a1be0d49895364221c665ff0d54fd2e8b33",
+      "converted_array_sha256": "60d17a3954c432e613d518605b705aadadfeaf530f23320832f419d04d0f71fd"
+    },
+    "bio12": {
+      "url": "https://os.zhdk.cloud.switch.ch/chelsav2/GLOBAL/climatologies/1981-2010/bio/CHELSA_bio12_1981-2010_V.2.1.tif",
+      "shape": [
+        1958,
+        4677
+      ],
+      "transform": [
+        0.0083333333,
+        0,
+        -9.175139572150016,
+        0,
+        -0.0083333333,
+        51.624860544650005,
+        0,
+        0,
+        1
+      ],
+      "window": [
+        20499,
+        3885,
+        4677,
+        1958
+      ],
+      "source_shape": [
+        20880,
+        43200
+      ],
+      "scale": 0.1,
+      "offset": 0,
+      "source_nodata": null,
+      "native_valid": 9157566,
+      "encoded_bytes_sha256": "6ca5b60916ec03cc663c0e458b255e6f422233eaf6f25cf4495321ac19e42e40",
+      "valid_mask_sha256": "d4c703febc925b7d966e9c6fb16f5a1be0d49895364221c665ff0d54fd2e8b33",
+      "converted_array_sha256": "16433d24d5e3e3a0c361d4be4cc8a24f2a5a1297b04738d1ed80f9226bad258a"
+    },
+    "bio15": {
+      "url": "https://os.zhdk.cloud.switch.ch/chelsav2/GLOBAL/climatologies/1981-2010/bio/CHELSA_bio15_1981-2010_V.2.1.tif",
+      "shape": [
+        1958,
+        4677
+      ],
+      "transform": [
+        0.0083333333,
+        0,
+        -9.175139572150016,
+        0,
+        -0.0083333333,
+        51.624860544650005,
+        0,
+        0,
+        1
+      ],
+      "window": [
+        20499,
+        3885,
+        4677,
+        1958
+      ],
+      "source_shape": [
+        20880,
+        43200
+      ],
+      "scale": 0.1,
+      "offset": 0,
+      "source_nodata": null,
+      "native_valid": 9157566,
+      "encoded_bytes_sha256": "7f36b43baa53851222bea4441499884bbf8bc307ffd2d24316d02176b1a39720",
+      "valid_mask_sha256": "d4c703febc925b7d966e9c6fb16f5a1be0d49895364221c665ff0d54fd2e8b33",
+      "converted_array_sha256": "3711a0224b4a46f4a53b8c32aebe9c95b4d192c5525f7db1d4c1fdaa2d1ce68b"
+    }
+  },
+  "native_profile_order_error_pixels": 0,
+  "joint_RH_cells": 2980,
+  "joint_climate_cells": 2982,
+  "common_environment_cells": 2980,
+  "forest_cells": 1850,
+  "forest_records": 8811,
+  "forest_species_cells": 2977,
+  "forest_species": 26,
+  "species_support": [
+    {
+      "species_key": "5218524",
+      "species": "Nyctalus noctula",
+      "cells": 517,
+      "blocks_ge5": 20,
+      "coverage_pass": true
+    },
+    {
+      "species_key": "5218507",
+      "species": "Plecotus auritus",
+      "cells": 456,
+      "blocks_ge5": 10,
+      "coverage_pass": true
+    },
+    {
+      "species_key": "2432439",
+      "species": "Myotis daubentonii",
+      "cells": 259,
+      "blocks_ge5": 12,
+      "coverage_pass": true
+    },
+    {
+      "species_key": "5218522",
+      "species": "Nyctalus leisleri",
+      "cells": 252,
+      "blocks_ge5": 14,
+      "coverage_pass": true
+    },
+    {
+      "species_key": "2432359",
+      "species": "Eptesicus serotinus",
+      "cells": 235,
+      "blocks_ge5": 10,
+      "coverage_pass": true
+    },
+    {
+      "species_key": "5218471",
+      "species": "Pipistrellus nathusii",
+      "cells": 227,
+      "blocks_ge5": 7,
+      "coverage_pass": true
+    },
+    {
+      "species_key": "5218464",
+      "species": "Pipistrellus kuhlii",
+      "cells": 124,
+      "blocks_ge5": 4,
+      "coverage_pass": true
+    },
+    {
+      "species_key": "2432389",
+      "species": "Myotis nattereri",
+      "cells": 118,
+      "blocks_ge5": 7,
+      "coverage_pass": true
+    },
+    {
+      "species_key": "2432416",
+      "species": "Myotis myotis",
+      "cells": 108,
+      "blocks_ge5": 8,
+      "coverage_pass": true
+    },
+    {
+      "species_key": "2432655",
+      "species": "Rhinolophus ferrumequinum",
+      "cells": 106,
+      "blocks_ge5": 4,
+      "coverage_pass": true
+    },
+    {
+      "species_key": "2432614",
+      "species": "Rhinolophus hipposideros",
+      "cells": 105,
+      "blocks_ge5": 6,
+      "coverage_pass": true
+    },
+    {
+      "species_key": "2432470",
+      "species": "Myotis emarginatus",
+      "cells": 103,
+      "blocks_ge5": 4,
+      "coverage_pass": true
+    },
+    {
+      "species_key": "9754263",
+      "species": "Myotis mystacinus",
+      "cells": 98,
+      "blocks_ge5": 6,
+      "coverage_pass": true
+    },
+    {
+      "species_key": "2432564",
+      "species": "Vespertilio murinus",
+      "cells": 53,
+      "blocks_ge5": 4,
+      "coverage_pass": true
+    },
+    {
+      "species_key": "2432582",
+      "species": "Barbastella barbastellus",
+      "cells": 52,
+      "blocks_ge5": 2,
+      "coverage_pass": false
+    },
+    {
+      "species_key": "2432427",
+      "species": "Myotis bechsteinii",
+      "cells": 42,
+      "blocks_ge5": 3,
+      "coverage_pass": false
+    },
+    {
+      "species_key": "5739437",
+      "species": "Plecotus austriacus",
+      "cells": 22,
+      "blocks_ge5": 1,
+      "coverage_pass": false
+    },
+    {
+      "species_key": "9796816",
+      "species": "Miniopterus schreibersii",
+      "cells": 21,
+      "blocks_ge5": 1,
+      "coverage_pass": false
+    },
+    {
+      "species_key": "2432414",
+      "species": "Myotis oxygnathus",
+      "cells": 17,
+      "blocks_ge5": 1,
+      "coverage_pass": false
+    },
+    {
+      "species_key": "7261875",
+      "species": "Myotis brandtii",
+      "cells": 15,
+      "blocks_ge5": 1,
+      "coverage_pass": false
+    },
+    {
+      "species_key": "2432452",
+      "species": "Myotis dasycneme",
+      "cells": 15,
+      "blocks_ge5": 1,
+      "coverage_pass": false
+    },
+    {
+      "species_key": "7261816",
+      "species": "Eptesicus nilssonii",
+      "cells": 8,
+      "blocks_ge5": 0,
+      "coverage_pass": false
+    },
+    {
+      "species_key": "2432621",
+      "species": "Rhinolophus euryale",
+      "cells": 8,
+      "blocks_ge5": 1,
+      "coverage_pass": false
+    },
+    {
+      "species_key": "5218525",
+      "species": "Nyctalus lasiopterus",
+      "cells": 7,
+      "blocks_ge5": 0,
+      "coverage_pass": false
+    },
+    {
+      "species_key": "2432430",
+      "species": "Myotis capaccinii",
+      "cells": 6,
+      "blocks_ge5": 0,
+      "coverage_pass": false
+    },
+    {
+      "species_key": "2432666",
+      "species": "Rhinolophus blasii",
+      "cells": 3,
+      "blocks_ge5": 0,
+      "coverage_pass": false
+    }
+  ],
+  "geographic_pass_species": 14,
+  "nearest_to_area_forest_changes": {
+    "lost": 6,
+    "gained": 15
+  },
+  "forest_source_support_all": {
+    "strata": 506,
+    "multi_species_strata": 272,
+    "multi_species_source_year_cells": 722,
+    "source_year_cells": 2313
+  },
+  "forest_source_support_geographic_pass": {
+    "strata": 491,
+    "multi_species_strata": 262,
+    "multi_species_source_year_cells": 669,
+    "source_year_cells": 2249
+  },
+  "pairs": 91,
+  "pairs_ge1_block": 91,
+  "pairs_ge4_blocks": 81,
+  "pairs_shared_cell": 85,
+  "unique_prior_native_RH_pixels": 2982,
+  "original_S1_admission": false,
+  "limits": [
+    "GVSM predicted mean return-height quantiles, not PAVD or flight volume.",
+    "Area-weighted projected source-pixel overlap, shared native valid area >=95%; no actual vegetation-density measurements.",
+    "No terrain/roost/effort model, DOI-pinned download or independent validation. Matched source-year cells are not proven common effort or absences.",
+    "26 species narrow rectangle only. No ecological model or trait response fit."
+  ],
+  "outputs": {
+    "forest_pair_support.csv": {
+      "bytes": 2242,
+      "sha256": "55b1f47c3e7b8a3c41317da561b9c7e760515e6c02b5ef2e6d813a3f999f5fd9"
+    },
+    "cell_environment_common_grid.csv.gz": {
+      "bytes": 528896,
+      "sha256": "915cd8ffd2b63fb768c7cd2eba8e9faa5b40ab8ffd92efeb5dc8ea42dafdccc3"
+    },
+    "species_cell_source_year_environment.csv.gz": {
+      "bytes": 952222,
+      "sha256": "5bd65cd8c56bac84c033a4972064622c172554a676d198868ef0776c49a2786b"
+    }
+  },
+  "audit": {
+    "run_id": 45585033345,
+    "job_id": 139104339522,
+    "job_conclusion": "success",
+    "artifact_id": 15007174727,
+    "registry_digest": "sha256:a5a08ae265f9729cd0b57f820b88b8440199288749006cb14dd82ee38616cbbb",
+    "artifact_bytes": 1486227,
+    "checks": {
+      "cell_sum": true,
+      "gate_sum": true,
+      "pair_sum": true,
+      "subset": true
+    },
+    "scope": "Exact log report and registry; artifact ZIP not independently rehashed."
+  }
+}
