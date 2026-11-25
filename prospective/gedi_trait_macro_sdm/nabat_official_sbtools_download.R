@@ -61,8 +61,8 @@ tryCatch({
 },error=function(e) {
   # Avoid leaking any signed URL or response body in exception strings.
   msg <- conditionMessage(e)
-  report$status <- if (grepl("authenticat|log.?in|session|401|403|ACCESS_STOP",msg,ignore.case=TRUE)) "OFFICIAL_AUTH_OR_ACCESS_STOP" else "OFFICIAL_ROUTE_UNRESOLVED"
-  report$error_class <- class(e)[1]
+  report$status <<- if (grepl("authenticat|log.?in|session|401|403|ACCESS_STOP",msg,ignore.case=TRUE)) "OFFICIAL_AUTH_OR_ACCESS_STOP" else "OFFICIAL_ROUTE_UNRESOLVED"
+  report$error_class <<- class(e)[1]
   save_report()
   quit(status=1)
 })
