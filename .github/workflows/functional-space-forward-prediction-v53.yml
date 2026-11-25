@@ -1,0 +1,29 @@
+name: Functional space forward prediction V53
+on:
+  push:
+    branches:
+      - prospective/trait-wind-roundtrip-20261124
+    paths:
+      - scripts/functional_space_forward_prediction_v53.py
+      - .github/workflows/functional-space-forward-prediction-v53.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  analysis:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install pandas numpy pyproj
+      - run: OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python scripts/functional_space_forward_prediction_v53.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: functional-space-forward-prediction-v53
+          path: results/functional_space_forward_prediction_v53.json
+          if-no-files-found: error
+          retention-days: 60
