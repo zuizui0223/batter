@@ -1,0 +1,16 @@
+{
+  "run_id": 45590764191,
+  "job_id": 139124068698,
+  "artifact_id": 15010607324,
+  "registry_digest": "sha256:6fbbd755d4da29093114943f3d6a7bc54142a89e79e3db7d4b7fbee278a04091",
+  "status": "STOP_QUERY_VALIDATION",
+  "credentials_present": {
+    "username": false,
+    "password": false
+  },
+  "count_http": 200,
+  "all_chiroptera_live_count": 389283,
+  "conversion_http": 404,
+  "request_submitted": false,
+  "scope": "Live count only; no official DOI or DWCA obtained. No repeated acquisition without valid credentials and verified request route."
+}
