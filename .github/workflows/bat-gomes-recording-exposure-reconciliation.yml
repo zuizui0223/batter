@@ -1,0 +1,33 @@
+name: Gomes recording exposure reconciliation
+on:
+  push:
+    branches: [prospective/gedi-trait-macro-sdm-20261125]
+    paths:
+      - .github/workflows/bat-gomes-recording-exposure-reconciliation.yml
+      - prospective/gedi_trait_macro_sdm/gomes_recording_exposure_reconciliation_v1.py
+permissions:
+  contents: read
+  actions: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          name: multistudy-vertical-stratum-source-v1
+          run-id: 45653170554
+          github-token: ${{ github.token }}
+          path: source_artifact
+      - run: python prospective/gedi_trait_macro_sdm/gomes_recording_exposure_reconciliation_v1.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: gomes-recording-exposure-audit-v1
+          path: gomes_exposure_audit/
+          if-no-files-found: error
+          retention-days: 90
