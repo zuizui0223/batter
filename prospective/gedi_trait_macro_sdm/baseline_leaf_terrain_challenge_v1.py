@@ -44,8 +44,12 @@ assert (len(z),len(gb),len(blocks))==(31601,1626,51)
 assert [int((fold==k).sum()) for k in range(5)]==[12867,2315,6228,450,9741]
 report={"stage":"post-pilot forest composition and surface-topography baseline challenge","input_sha256":PIN,"original_comparisons":len(z),"original_blocks":len(blocks),"original_groups":len(gb),"fixed_folds_verified":True,"source_reports":{},"status":"START","main_sdm_admitted":False,"limits":["Recorded label orientation, not biological occupancy, causal vertical effect or actual altitude.","DLT 2018 superseded vintage; DSM elevation includes surface objects; observation interactions remain.","Post-pilot matched sensitivity, not independent ecological replication."]}
 def save():
-    (OUT/"report.json").write_text(json.dumps(report,indent=2,allow_nan=False)+"\n")
-    print("BASELINE_CHALLENGE_REPORT="+json.dumps(report,allow_nan=False),flush=True)
+    def native_scalar(v):
+        if isinstance(v,np.generic):return v.item()
+        raise TypeError("unsupported result value "+type(v).__name__)
+    serialized=json.dumps(report,allow_nan=False,default=native_scalar)
+    (OUT/"report.json").write_text(json.dumps(report,indent=2,allow_nan=False,default=native_scalar)+"\n")
+    print("BASELINE_CHALLENGE_REPORT="+serialized,flush=True)
 for mode,cols in [("terrain",terrain),("leaf",leaf)]:
     p=pathlib.Path("baseline_"+mode+"/report.json")
     a=json.loads(p.read_text())
