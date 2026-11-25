@@ -1,0 +1,46 @@
+name: European common-grid forest and observation support
+on:
+  push:
+    branches: [prospective/gedi-trait-macro-sdm-20261125]
+    paths:
+      - prospective/gedi_trait_macro_sdm/common_grid_forest_support_v1.py
+      - .github/workflows/gedi-macro-common-forest-support.yml
+permissions:
+  contents: read
+  actions: read
+jobs:
+  integrate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          name: europe-own-database-support-v1
+          run-id: 45579163494
+          github-token: ${{ github.token }}
+          path: census
+      - uses: actions/download-artifact@v4
+        with:
+          name: gvsm-europe-cell-environment-support
+          run-id: 45583806660
+          github-token: ${{ github.token }}
+          path: cell_environment
+      - uses: actions/download-artifact@v4
+        with:
+          name: gedi-macro-iberia-join
+          run-id: 45575962660
+          github-token: ${{ github.token }}
+          path: traits
+      - run: python -m pip install numpy pandas rasterio pyproj
+      - run: python prospective/gedi_trait_macro_sdm/common_grid_forest_support_v1.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: europe-common-forest-support-v1
+          path: common_forest_support/
+          retention-days: 90
+          if-no-files-found: error
