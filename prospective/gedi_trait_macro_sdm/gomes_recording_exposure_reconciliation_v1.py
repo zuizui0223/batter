@@ -19,6 +19,15 @@ def date(s):
         try:return dt.datetime.strptime(s,fmt).date()
         except ValueError:pass
     raise ValueError("unknown source date format")
+def raw_date(s):
+    # Species_DensityPlots.R line 7 explicitly reads DD?MM?YYYY by positions.
+    # Consolidated Dates use the separate documented calendar convention.
+    s=s.strip()
+    m=re.fullmatch(r"(\d{2})([/.-])(\d{2})\2(\d{4})",s)
+    if not m:raise ValueError("raw DATE does not match author documented DD/MM/YYYY shape")
+    d=dt.date(int(m[4]),int(m[3]),int(m[1]))
+    if not dt.date(2018,4,10)<=d<=dt.date(2018,4,19):raise ValueError("raw date outside documented study window")
+    return d
 def integer(s):
     x=float(s);assert math.isfinite(x) and x==int(x);return int(x)
 def evening(d,h):return d-dt.timedelta(days=1) if h<12 else d
@@ -50,10 +59,11 @@ try:
         assert 0<=h<=23 and n>=0 and v["Tower"] in ("green","red") and v["Canopy"] in ("above","below")
         cr.append((d,h,day,v["Tower"],v["Canopy"],v["Bat"],n))
     for v in r:
-        d=date(v["DATE"]);h=integer(v["HOUR"])
+        d=raw_date(v["DATE"]);h=integer(v["HOUR"])
         canopy,tower=v["Position_color"].split(".")
         assert 0<=h<=23 and canopy in ("above","below") and tower in ("green","red")
         rr.append((d,h,tower,canopy,v["MANUAL_ID"],v["buzz"]))
+    assert all(dt.date(2018,4,10)<=v[0]<=dt.date(2018,4,19) for v in cr),"consolidated date outside documented study window"
     report["table_counts"]={"raw_rows":len(rr),"consolidated_rows":len(cr),"consolidated_sum":sum(v[-1] for v in cr),"raw_by_position":dict(collections.Counter(v[3] for v in rr)),"consolidated_by_position":{k:sum(v[-1] for v in cr if v[4]==k) for k in ("above","below")},"published_pass_count_check":len(rr)==16123}
     report["date_semantics"]={"consolidated_date_cardinality":len({v[0] for v in cr}),"raw_date_cardinality":len({v[0] for v in rr}),"DAY_equals_calendar_date_rows":sum(v[0].day==v[2] for v in cr),"DAY_equals_evening_date_rows":sum(evening(v[0],v[1]).day==v[2] for v in cr),"consolidated_hour_levels":sorted({v[1] for v in cr}),"raw_hour_levels":sorted({v[1] for v in rr})}
     report["acoustic_code_support"]={"raw_only_codes":sorted({v[4] for v in rr}-{v[5] for v in cr}),"consolidated_only_codes":sorted({v[5] for v in cr}-{v[4] for v in rr}),"raw_codes":len({v[4] for v in rr}),"consolidated_codes":len({v[5] for v in cr}),"buzz_recorded_code_levels":sorted({v[5] for v in rr})}
