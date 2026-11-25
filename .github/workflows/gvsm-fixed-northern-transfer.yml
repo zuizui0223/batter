@@ -1,0 +1,68 @@
+name: GVSM fixed northern transfer
+on:
+  push:
+    branches: [prospective/gedi-trait-macro-sdm-20261125]
+    paths:
+      - prospective/gedi_trait_macro_sdm/fixed_northern_transfer_v1.py
+      - .github/workflows/gvsm-fixed-northern-transfer.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  transfer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      OPENBLAS_NUM_THREADS: "1"
+      OMP_NUM_THREADS: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          name: europe-common-forest-support-v1
+          run-id: 45585033345
+          github-token: ${{ github.token }}
+          path: common_forest
+      - uses: actions/download-artifact@v4
+        with:
+          name: gvsm-fixed-snapshot-environment
+          run-id: 45591426116
+          github-token: ${{ github.token }}
+          path: fixed_environment
+      - uses: actions/download-artifact@v4
+        with:
+          name: gvsm-fixed-snapshot-holdout-support
+          run-id: 45594276934
+          github-token: ${{ github.token }}
+          path: holdout
+      - uses: actions/download-artifact@v4
+        with:
+          name: gvsm-fixed-snapshot-observation-audit
+          run-id: 45593509220
+          github-token: ${{ github.token }}
+          path: observation
+      - uses: actions/download-artifact@v4
+        with:
+          name: gedi-macro-iberia-join
+          run-id: 45575962660
+          github-token: ${{ github.token }}
+          path: traits
+      - uses: actions/download-artifact@v4
+        with:
+          name: gedi-macro-input-diagnosis
+          run-id: 45575708211
+          github-token: ${{ github.token }}
+          path: physical
+      - run: python -m pip install numpy pandas scipy
+      - run: python -m py_compile prospective/gedi_trait_macro_sdm/fixed_northern_transfer_v1.py
+      - run: python prospective/gedi_trait_macro_sdm/fixed_northern_transfer_v1.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: gvsm-fixed-northern-transfer
+          path: northern_transfer/
+          if-no-files-found: error
