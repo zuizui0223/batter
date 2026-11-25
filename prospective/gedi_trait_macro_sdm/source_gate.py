@@ -71,6 +71,7 @@ def dryad(doi, target=None):
             result["raw_trait_csv"]={**save(target,raw),"columns":rows[0],"data_rows":len(rows)-1}
         except Exception as e:
             result["raw_file_error"]=str(e)
+            result["next"]="Dryad API requires authentication; do not bypass access controls"
     return result
 
 def gedi():
@@ -86,12 +87,24 @@ def gedi():
     return {"doi":"10.3334/ORNLDAAC/2339","collection":params["collection_concept_id"],"granules_returned":len(entries),"inventory":file,"profile_candidates":[x["title"] for x in result if re.search("pavd|rh.?98|pai",str(x["title"]),re.I)][:40],"note":"Metadata only: actual raster bytes, authentication, masks and shot counts not checked."}
 
 def euro():
-    d=js("https://api.figshare.com/v2/articles/search",{"search_for":"EuroBaTrait","limit":100})
+    d=[js("https://api.figshare.com/v2/articles/21777161")]
     out=[]
     for x in d:
-        if "eurobatrait" in str(x.get("title","")).lower().replace(" ",""):
+        if x.get("id")==21777161:
             a=js("https://api.figshare.com/v2/articles/"+str(x["id"]))
-            out.append({"id":a.get("id"),"title":a.get("title"),"doi":a.get("doi"),"version":a.get("version"),"files":[{"name":f.get("name"),"size":f.get("size"),"downloadUrl":f.get("downloadUrl"),"computed_md5":f.get("computed_md5")} for f in a.get("files",[])]})
+            item={"id":a.get("id"),"title":a.get("title"),"doi":a.get("doi"),"version":a.get("version"),"files":[{"name":f.get("name"),"size":f.get("size"),"downloadUrl":f.get("downloadUrl"),"computed_md5":f.get("computed_md5")} for f in a.get("files",[])]}
+            for f in a.get("files",[]):
+                if f.get("size",0)>20_000_000 or not f.get("downloadUrl"):
+                    continue
+                try:
+                    raw=get(f["downloadUrl"],limit=20_000_000)
+                    md5=hashlib.md5(raw).hexdigest()
+                    if f.get("computed_md5") and md5!=f["computed_md5"]:
+                        raise ValueError("MD5 mismatch")
+                    item.setdefault("acquired",[]).append(save("euro_"+pathlib.PurePath(f["name"]).name,raw))
+                except Exception as e:
+                    item.setdefault("errors",[]).append(str(e))
+            out.append(item)
     if not out:
         return {"figshare_matches":d,"crossref":js("https://api.crossref.org/works/10.1038/s41597-023-02157-4")["message"],"status":"unresolved; inspect linked repository"}
     return out
