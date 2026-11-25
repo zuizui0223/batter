@@ -91,13 +91,14 @@ def euro():
     out=[]
     for x in d:
         if x.get("id")==21777161:
-            a=js("https://api.figshare.com/v2/articles/"+str(x["id"]))
-            item={"id":a.get("id"),"title":a.get("title"),"doi":a.get("doi"),"version":a.get("version"),"files":[{"name":f.get("name"),"size":f.get("size"),"downloadUrl":f.get("downloadUrl"),"computed_md5":f.get("computed_md5")} for f in a.get("files",[])]}
+            a=js("https://api.figshare.com/v2/articles/"+str(x["id"])+"/versions/2")
+            print("FIGSHARE_RAW_FILE_METADATA",json.dumps(a.get("files",[])))
+            item={"id":a.get("id"),"title":a.get("title"),"doi":a.get("doi"),"version":a.get("version"),"files":[{"name":f.get("name"),"size":f.get("size"),"downloadUrl":(f.get("downloadUrl") or f.get("download_url")),"computed_md5":f.get("computed_md5")} for f in a.get("files",[])]}
             for f in a.get("files",[]):
-                if f.get("size",0)>20_000_000 or not f.get("downloadUrl"):
+                if f.get("size",0)>20_000_000 or not (f.get("downloadUrl") or f.get("download_url")):
                     continue
                 try:
-                    raw=get(f["downloadUrl"],limit=20_000_000)
+                    raw=get(f.get("downloadUrl") or f.get("download_url"),limit=20_000_000)
                     md5=hashlib.md5(raw).hexdigest()
                     if f.get("computed_md5") and md5!=f["computed_md5"]:
                         raise ValueError("MD5 mismatch")
