@@ -73,19 +73,54 @@ def inspect(p):
                     if x is not None:out["tables"][m.filename]={"sha256":hashlib.sha256(v).hexdigest(),**x}
             return out
     return inspect_bytes(p.read_bytes(),p.name)
+def acquire_zip_members(rec,d):
+    # Published version is a single 648 MB ZIP; use the already proven
+    # public Zenodo HTTP range implementation from AHN4. Never load all
+    # figure/model binaries or claim complete archive MD5 on partial reads.
+    from ahn4_structural_validation_v1 import RangeReader
+    f=[x for x in d["files"] if x["key"]=="Supplementary Files.zip"]
+    assert len(f)==1
+    f=f[0];size=int(f["size"]);assert 600_000_000<=size<=700_000_000
+    assert f["checksum"]=="md5:3b34b6cf8b466190537b9a13ea57d459"
+    url=f"https://zenodo.org/api/records/{rec}/files/{quote(f['key'],safe='')}/content"
+    R["archive"]={"name":f["key"],"size":size,"published_checksum":f["checksum"],"full_archive_md5_verified":False,"public_url":url}
+    save()
+    rr=RangeReader(url,size)
+    tables=OUT/"original_tables";tables.mkdir(exist_ok=True)
+    with zipfile.ZipFile(rr) as z:
+        members=[i for i in z.infolist() if not i.is_dir()]
+        inv=[{"name":i.filename,"size":i.file_size,"compressed_size":i.compress_size,"crc32":f"{i.CRC:08x}"} for i in members]
+        (OUT/"zip_inventory.json").write_text(json.dumps(inv,indent=2))
+        R["archive"]["member_count"]=len(inv)
+        R["archive"]["inventory_sha256"]=sha(OUT/"zip_inventory.json")
+        candidates=[i for i in members if re.search(r"\.(csv|tsv|xlsx|xlsm|txt)$",i.filename,re.I) and 0<i.file_size<=10_000_000 and not any(x in i.filename.lower() for x in ["/.git/","__macosx","/figures/","/plots/"])]
+        # Retrieve all actual small source tables, bounded before inspecting values.
+        R["archive"]["selected_candidates"]=[{"name":i.filename,"size":i.file_size} for i in candidates]
+        save()
+        assert len(candidates)<=150 and sum(i.file_size for i in candidates)<=50_000_000,"source selection budget"
+        for j,i in enumerate(candidates):
+            try:
+                raw=z.read(i)
+                assert len(raw)==i.file_size
+                q=tables/(f"{j+1:03d}_"+pathlib.PurePosixPath(i.filename).name)
+                q.write_bytes(raw)
+                schema=inspect_bytes(raw,i.filename)
+                receipt={"name":i.filename,"local_file":str(q.relative_to(OUT)),"bytes":len(raw),"sha256":sha(q),"zip_crc32":f"{i.CRC:08x}","zip_crc_verified":True}
+                if schema is not None:
+                    # Log only structural previews; full verified source table in artifact.
+                    receipt["schema"]=schema
+                R["files"].append(receipt)
+                # Avoid printing the entire growing archive table on every file.
+                print("CRANE_MEMBER",j+1,q.name,len(raw),flush=True)
+            except Exception as e:
+                R["files"].append({"name":i.filename,"status":"SOURCE_STOP","error_type":type(e).__name__})
+    R["archive"]["range_bytes_read"]=rr.transferred
+    rr.session.close()
 def main():
     rec,d=record()
-    selected=[v for v in d["files"] if re.search(r"\.(csv|tsv|xlsx|xlsm|txt|zip)$",v["key"],re.I) and int(v["size"])<=30_000_000]
-    assert selected and sum(int(v["size"]) for v in selected)<=60_000_000
-    for v in selected:
-        try:
-            p,receipt=acquire(rec,v)
-            receipt["schema"]=inspect(p)
-            R["files"].append(receipt);save()
-        except Exception as e:
-            R["files"].append({"name":v["key"],"status":"SOURCE_STOP","error_type":type(e).__name__});save()
-    R["status"]="SOURCE_SCHEMA_READY" if any(x.get("schema") is not None and x.get("publisher_checksum_verified") for x in R["files"]) else "SOURCE_NOT_ADMITTED"
+    acquire_zip_members(rec,d)
+    R["status"]="SOURCE_SCHEMA_READY" if any(x.get("schema") is not None and x.get("zip_crc_verified") for x in R["files"]) else "SOURCE_NOT_ADMITTED"
     save()
 if __name__=="__main__":
     try:main()
-    except Exception as e:R.update(status="INCOMPLETE",error_type=type(e).__name__);save();raise
+    except Exception as e:R.update(status="INCOMPLETE",error_type=type(e).__name__,error=str(e)[:200]);save();raise
