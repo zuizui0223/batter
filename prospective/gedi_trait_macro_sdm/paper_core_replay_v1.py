@@ -20,7 +20,8 @@ inputs=[
 ("holdout",15010764600,"4ce5c239b1ad442d83b4861b899c504e40dfb02bb1a0c5e9ef335a650b34460c"),
 ("observation",15012136742,"053567fa0cc43993aec472a3c5bc966a2c6df5306767e66ff6d65f826a7cf900"),
 ("traits",15005261316,"7ed2df73b812f51f6376590136c79fb5acf42b41395e4e3f68830fb66120b490"),
-("physical",15004406365,"3866df0cc71e1e5556162d26f9a757b7f31b0edddc339c1105ba7bd47e197408")]
+("physical",15004406365,"3866df0cc71e1e5556162d26f9a757b7f31b0edddc339c1105ba7bd47e197408"),
+("original_northern_result",15014832006,"36447f8b3d4c074c038d28c3fa7916c6274efe61c0b4fca917f38d865c24e02e")]
 def download(name,aid,pin):
     url=f"https://api.github.com/repos/{repo}/actions/artifacts/{aid}/zip"
     dest=W/(name+".zip");h=hashlib.sha256();n=0
@@ -87,15 +88,22 @@ try:
             # No raw source data or signed URL; only exception category and exit code.
             raise RuntimeError("replay failed: "+script+" exit "+str(result.returncode))
         got=load(W/out/"report.json");expected=load(R/receipt)
-        # Northern archived log intentionally omitted nested per-species support lists;
-        # check those independently for sums and omit ONLY these lists in the comparison.
+        # Compare northern replay with the original digest-verified full report,
+        # including the two lists deliberately omitted from the historical log.
+        full_checks=None
         if out=="northern_transfer":
+            original=load(W/"original_northern_result"/"report.json")
+            full_checks=compare(got,original)
             for domain in got["coverage"].values():
                 for v in domain.values():
                     sp=v.pop("species_support")
                     assert sum(s["pass"] for s in sp)==v["species_passing"]
                     assert sum(s["cells"] for s in sp)==v["species_cells"]
+            cold=got["trait_cold_start_transfer"]
+            pairs=cold.pop("pairs")
+            assert sum(v["test_comparisons"] for v in pairs)==cold["scored_comparisons"]
         checks=compare(got,expected)
+        if full_checks is not None:checks["original_full_report_checks"]=full_checks
         report["analyses"][out]={"script_blob":pin,**checks,"status":"MATCH","result_sha256":sha(W/out/"report.json")}
         print("REPLAY_ANALYSIS_MATCH",out,checks,flush=True)
         save()
