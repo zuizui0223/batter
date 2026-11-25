@@ -1,0 +1,16 @@
+# Marker resource-conditioned activity V1 — source support closeout (2026-11-25 JST)
+
+The pre-outcome contract was committed as 734525e9215bcfe80a842a7ef25f29c4c2ad4c11 before any matched resource–feeding results. Independent of the earlier negative 7-locality habitat/guild transfer, this is a secondary new estimand on two camera localities within the same source. It is neither a third GPS cohort nor an independent region.
+
+Original user ZIP SHA256 077a71633049ee970ac9f164579ae6d3ba8c0f749a4624891eb4f2ae3b92741c. Reused exact authenticated marker_replay.py bytes (SHA256 8288d5b1a9d1360c9da3d107036a00ffacfdcaf5524664c947e37914318d51c3) before its prior model fit. All 5 publisher hashes match. Verified camera date format actually MM.DD.YYYY, despite README DD.MM.YYYY, by complete valid parse and survey range; no arbitrary date or time shift. All acoustic dates/hours reproduce noon-based DATE.12/HOUR.12. Camera site-time key unique; binary/count agree; 776 unviable records all have missing counts and were excluded rather than zero-filled (10,644 viable). Exact same-hour paired camera support on both active acoustic site-nights (>=3 viable photos per side/hour and >=3 common hours per night): 783 hours in 78 locality-nights, 8,966 usable photographs, 1,954 detected target-guild passes including 285 feeding-related passes.
+
+| Anonymous locality | SRE informative nights | LRE informative nights |
+|---|---:|---:|
+| 1 | 8 | 10 |
+| 2 | 7 | 18 |
+
+Total 43 informative paired locality-night-guild strata (97 with both sides positive before mark-variation gate); 9 temporal blocks, only 5 with both localities. Contract required >=12 informative nights in each of four locality×guild categories and >=6 blocks with both localities. Both conditions fail. STOP_INSUFFICIENT_MATCHED_RESOURCE_SUPPORT. Model A0–A3 was not fitted; no coefficient, gain, significance, association, or absence-of-effect statement. The model's after-gate gradient tests were not executed. Do not drop guilds, pool localities, lower thresholds, change grain, or repeat on this source to rescue the hypothesis.
+
+The exact executed source-safe script marker_resource_v1.py SHA256 1056598a10410701015bdcd3cfcc742e359d6dd17c6c75e368cee97d3140b579 (Git blob e2a03abc9bf1ca26fbad3f2d171b497bcd6c512a); aggregate result results/marker_resource_v1.json SHA256 6791c39bb4a53e8487751c290c50f6068b7892a524ba1d89a0473714ae1c6616 (blob b247ad77d4fb38b0d0b0a5f458611843a76829f7). Both exact blobs read back after synchronization. Run diagnostic from the earlier replay in the same directory first, then python marker_resource_v1.py ORIGINAL_ZIP OUTPUT_JSON. Python 3.13.5, pandas 2.2.3, NumPy 2.3.5, SciPy 1.17.0. No raw records, coordinates or dates exported. The frozen V3 empirical outcomes remain unchanged.
+
+Next scientific gate: independent dataset with jointly measured feeding-related marks, all-pass denominator, contemporaneous resource measurements and sufficient independent spatial blocks. Do not treat total activity-only resource models as validation of functional-rate predictions. For the macro branch, vertical environment prediction and activity-mark allocation remain distinct; no calibrated 3D function from 2D or detector proxies.
