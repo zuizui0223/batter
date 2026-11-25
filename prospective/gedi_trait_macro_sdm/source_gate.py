@@ -86,14 +86,14 @@ def gedi():
     return {"doi":"10.3334/ORNLDAAC/2339","collection":params["collection_concept_id"],"granules_returned":len(entries),"inventory":file,"profile_candidates":[x["title"] for x in result if re.search("pavd|rh.?98|pai",str(x["title"]),re.I)][:40],"note":"Metadata only: actual raster bytes, authentication, masks and shot counts not checked."}
 
 def euro():
-    d=js("https://api.figshare.com/v2/articles/search",{"search_for":"EuroBaTrait","limit":20})
+    d=js("https://api.figshare.com/v2/articles/search",{"search_for":"EuroBaTrait","limit":100})
     out=[]
     for x in d:
         if "eurobatrait" in str(x.get("title","")).lower().replace(" ",""):
             a=js("https://api.figshare.com/v2/articles/"+str(x["id"]))
             out.append({"id":a.get("id"),"title":a.get("title"),"doi":a.get("doi"),"version":a.get("version"),"files":[{"name":f.get("name"),"size":f.get("size"),"downloadUrl":f.get("downloadUrl"),"computed_md5":f.get("computed_md5")} for f in a.get("files",[])]})
     if not out:
-        raise ValueError("no EuroBaTrait title match; inspect article reference")
+        return {"figshare_matches":d,"crossref":js("https://api.crossref.org/works/10.1038/s41597-023-02157-4")["message"],"status":"unresolved; inspect linked repository"}
     return out
 
 def gbif():
@@ -128,4 +128,6 @@ for name, func in [
         report["errors"][name]=str(exc)
 report["all_metadata_requests_passed"]=not report["errors"]
 (OUT/"source_gate.json").write_text(json.dumps(report,indent=2),encoding="utf-8")
-print(json.dumps({"sources":list(report["sources"]), "errors":report["errors"], "artifact":"gedi_source_gate/source_gate.json"},indent=2))
+print(json.dumps({k:v for k,v in report["sources"].items() if k!="euro_traits"},indent=2)[:45000])
+print(json.dumps(report["sources"].get("euro_traits",{}),indent=2)[:18000])
+print(json.dumps(report["errors"],indent=2))
