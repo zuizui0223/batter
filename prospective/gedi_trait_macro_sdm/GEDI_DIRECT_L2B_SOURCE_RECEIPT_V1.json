@@ -1,0 +1,35 @@
+{
+  "status": "DIRECT_L2B_PROFILE_READ_OK_VERIFIED_ARTIFACT",
+  "doi": "10.5067/GEDI/GEDI02_B.002",
+  "granule": {
+    "id": "G2719012140-LPCLOUD",
+    "title": "GEDI02_B_2020153140839_O08328_02_T01558_02_003_01_V002"
+  },
+  "audit": {
+    "run_id": 45715480130,
+    "job_id": 139560312989,
+    "artifact_id": 15069926561,
+    "actual_zip_sha256": "fd85d85ddf925b022a5af225eff5dc205b06a468299c605953bc952d410ff66e",
+    "zip_bytes": 24932,
+    "zip_digest_rehashed": true,
+    "table_sha256": "6e676b941771efe17496866715cf9808e6d450a20c62f06f579db3cfb6e508e7",
+    "table_digest_rehashed": true,
+    "source_http_status": 206,
+    "hdf5_magic": true
+  },
+  "sample": {
+    "unique_shots": 266,
+    "beams_read": 1,
+    "profile_bins": 30,
+    "vertical_step_m": 5,
+    "all_profile_values_finite": true,
+    "all_profile_values_nonnegative": true,
+    "sensitivity_min": 0.9000429511070251,
+    "cover_min": 0.0005839183577336,
+    "cover_max": 0.9243447184562684,
+    "median_abs_difference_5_sum_pavd_vs_pai": 0.05502965371124322,
+    "max_abs_difference_5_sum_pavd_vs_pai": 1.894451342523098,
+    "shots_in_requested_iberian_bbox": 0
+  },
+  "interpretation": "Actual authenticated NASA L2B numerical profile read; independently rehashed ZIP/table and audited sample. The selected granule intersects the CMR bounding box but the sampled beam slices contain zero shots in that bbox. This is a source/schema smoke test ONLY, not Iberian, European, forest, biological or representative sample. Do not pool with occurrence data or interpret sum-vs-PAI disagreement as validated identity. Full original 1-km ORNL grid job remains separate; no ecology fit or main SDM admission."
+}
