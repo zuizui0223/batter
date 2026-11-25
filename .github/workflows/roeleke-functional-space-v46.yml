@@ -1,0 +1,29 @@
+name: Roeleke functional space replication V46
+on:
+  push:
+    branches:
+      - prospective/trait-wind-roundtrip-20261124
+    paths:
+      - scripts/roeleke_functional_space_v46.py
+      - .github/workflows/roeleke-functional-space-v46.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  analysis:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install pandas numpy pyproj
+      - run: python scripts/roeleke_functional_space_v46.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: roeleke-functional-space-v46
+          path: results/roeleke_functional_space_v46.json
+          if-no-files-found: error
+          retention-days: 60
