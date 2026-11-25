@@ -68,7 +68,7 @@ raw=ct[raw_names].to_numpy(float)
 valid=ct.terrain_support&ct.leaf_support&yes(ct.gedi_support)&np.isfinite(raw).all(1)
 mask=valid.to_numpy()[ca]&valid.to_numpy()[cb];live=sorted(set(block[mask]))
 def taxa(m):return set(np.r_[sa[m],sb[m]])
-tax=taxa(mask);report.update(eligible_cells=int(valid.sum()),matched_pairs=int(mask.sum()),blocks=len(live),taxa=len(tax),fold_blocks=[sum(b%5==k for b in live) for k in range(5)])
+tax=taxa(mask);report.update(eligible_cells=int(valid.sum()),matched_pairs=int(mask.sum()),blocks=len(live),taxa=len(tax),fold_blocks=[int(sum(b%5==k for b in live)) for k in range(5)])
 if len(live)<20 or min(report["fold_blocks"])<4 or len(tax)<10 or any(taxa(mask&(fold!=k))!=tax for k in range(5)):
     report["status"]="STOP_INSUFFICIENT_MATCHED_SUPPORT";save();sys.exit(0)
 A=np.eye(nsp)[sa]-np.eye(nsp)[sb];D=A@P;trait=A@az
