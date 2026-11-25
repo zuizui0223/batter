@@ -1,0 +1,47 @@
+name: NABat official sbtools public route
+on:
+  push:
+    branches: [prospective/gedi-trait-macro-sdm-20261125]
+    paths:
+      - prospective/gedi_trait_macro_sdm/nabat_official_sbtools_download.R
+      - .github/workflows/gvsm-nabat-official-sbtools.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  official_route:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true
+      - uses: actions/cache/restore@v4
+        id: tables_cache
+        with:
+          path: nabat_public_tables_cache/
+          key: nabat-20260925-original-tables-v1
+          restore-keys: |
+            nabat-20260925-original-tables-v1-
+      - name: Install official pinned R library
+        run: |
+          install.packages("pak")
+          pak::pkg_install(c("github::DOI-USGS/sbtools@e0ba39bc5a7beb6c1a7f0af87df65dbb4fad363a","jsonlite","httr"),ask=FALSE)
+        shell: Rscript {0}
+      - run: Rscript prospective/gedi_trait_macro_sdm/nabat_official_sbtools_download.R
+        timeout-minutes: 14
+      - uses: actions/cache/save@v4
+        if: always() && steps.tables_cache.outputs.cache-hit != 'true'
+        with:
+          path: |
+            nabat_public_tables_cache/*.parquet
+            nabat_public_tables_cache/*.receipt.json
+            nabat_public_tables_cache/README.md
+          key: nabat-20260925-original-tables-v1-${{ github.run_id }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: nabat-official-sbtools-receipt
+          path: nabat_sbtools_gate/report.json
+          if-no-files-found: warn
