@@ -1,0 +1,79 @@
+name: GEDI full vertical shape comparison V1
+on:
+  workflow_dispatch:
+  push:
+    branches: [prospective/gedi-trait-macro-sdm-20261125]
+    paths:
+      - .github/workflows/gedi-full-profile-shape-v1.yml
+permissions:
+  contents: read
+  actions: read
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          name: europe-common-forest-support-v1
+          run-id: 45585033345
+          github-token: ${{ github.token }}
+          path: pilot
+      - uses: actions/download-artifact@v4
+        with:
+          name: baseline-covariates-terrain
+          run-id: 45659440994
+          github-token: ${{ github.token }}
+          path: baseline_terrain
+      - uses: actions/download-artifact@v4
+        with:
+          name: baseline-lc100-alternative-v1
+          run-id: 45713474572
+          github-token: ${{ github.token }}
+          path: .
+      - uses: actions/download-artifact@v4
+        with:
+          name: gedi-measured-grid-validation-v1
+          run-id: 45715480130
+          github-token: ${{ github.token }}
+          path: .
+      - uses: actions/download-artifact@v4
+        with:
+          name: gedi-direct-l2b-v1
+          run-id: 45715480130
+          github-token: ${{ github.token }}
+          path: gedi_raw
+      - name: Verify original receipt and compile
+        run: |
+          python - <<'PY'
+          import hashlib,json,pathlib
+          for folder,filename,status in [
+              ('gedi_grid','cell_gedi_profiles.csv.gz','GRID_PROFILE_SUPPORT_READY'),
+              ('gedi_raw','l2b_quality_sample.csv.gz','DIRECT_L2B_PROFILE_READ_OK')]:
+              p=pathlib.Path(folder);r=json.loads((p/'receipt.json').read_text())
+              assert r['status']==status
+              with (p/filename).open('rb') as f:
+                  assert hashlib.file_digest(f,'sha256').hexdigest()==r['output_sha256']
+              print('VERIFIED_RECEIPT',folder,json.dumps({k:v for k,v in r.items() if k in ('status','doi','candidate_cells','eligible_cells','joint_native_pixels','unique_shots','beam_schema','output_sha256')}))
+          PY
+          python -m py_compile prospective/gedi_trait_macro_sdm/gedi_full_profile_shape_v1.py
+      - run: python -m pip install numpy==2.5.5 pandas==3.1.1 scipy==1.18.1
+      - run: python prospective/gedi_trait_macro_sdm/gedi_full_profile_shape_v1.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: gedi-full-profile-shape-v1
+          path: |
+            gedi_full_profile/
+            gedi_grid/receipt.json
+            gedi_raw/receipt.json
+          if-no-files-found: error
+          retention-days: 90
