@@ -122,11 +122,23 @@ def test():
     assert np.allclose(avg_animal(rows,[1,3,5]),[2,5])
 def run():
     test();o={"scope":"detected buzz mark spatial divergence, not true foraging or detection-adjusted intensity","test":"PASS","sources":{},"status":"SOURCE_REVIEW"}
+    # V41 transport-only repair: at most two attempts per exact authenticated bitstream.
+    # No retry on checksum/size/assertion failure. No estimator/eligibility change.
+    import concurrent.futures as cf
+    import time
+    def get_retry(k):
+        b,r=get(k);first=dict(r)
+        if b is None and "TimeoutError" in r.get("error",""):
+            time.sleep(2)
+            b,r=get(k)
+            return k,b,{"attempts":[first,dict(r)],**r}
+        return k,b,{"attempts":[first],**r}
     raw={}
-    for k in ["gps","reference","readme"]:
-        b,r=get(k);o["sources"][k]=r
-        if b is None:o["status"]="STOP_SOURCE";return o
-        raw[k]=b
+    with cf.ThreadPoolExecutor(max_workers=3) as ex:
+        for k,b,r in ex.map(get_retry,["gps","reference","readme"]):
+            o["sources"][k]=r
+            if b is not None:raw[k]=b
+    if len(raw)!=3:o["status"]="STOP_SOURCE";return o
     assert hashlib.sha256(raw["reference"]).hexdigest()==REF_SHA
     g,r=read(raw["gps"]),read(raw["reference"])
     assert r["behavior-according-to"].str.strip().str.casefold().eq("values indicate buzz count").all()
