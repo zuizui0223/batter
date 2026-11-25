@@ -1,0 +1,35 @@
+name: GVSM GBIF fixed snapshot acquisition
+on:
+  push:
+    branches: [prospective/gedi-trait-macro-sdm-20261125]
+    paths:
+      - prospective/gedi_trait_macro_sdm/gbif_partition_snapshot.py
+      - .github/workflows/gvsm-gbif-fixed-snapshot.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          name: gedi-macro-iberia-join
+          run-id: 45575962660
+          github-token: ${{ github.token }}
+          path: occ
+      - run: python -m pip install duckdb requests pyproj
+      - run: python prospective/gedi_trait_macro_sdm/gbif_partition_snapshot.py
+        timeout-minutes: 25
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: gvsm-gbif-fixed-snapshot
+          path: gbif_fixed_snapshot/
+          if-no-files-found: error
