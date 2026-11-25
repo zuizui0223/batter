@@ -1,0 +1,80 @@
+{
+  "stage": "independent stationary acoustic original source audit",
+  "status": "SOURCE_GATE_FINISHED_NO_FIT",
+  "sources": {
+    "washington_parks": {
+      "doi": "10.5066/P149M8V5",
+      "items": [
+        {
+          "id": "681d4453d4be0209b5cbb5b1",
+          "metadata": {
+            "http": 403,
+            "content_type": "text/html; charset=UTF-8",
+            "content_length": null,
+            "status": "ACCESS_DENIED_STOP"
+          },
+          "files": []
+        },
+        {
+          "id": "682b943fd4be024992ebd7ba",
+          "metadata": {
+            "http": 403,
+            "content_type": "text/html; charset=UTF-8",
+            "content_length": null,
+            "status": "ACCESS_DENIED_STOP"
+          },
+          "files": []
+        },
+        {
+          "id": "682b942fd4be024992ebd7b5",
+          "metadata": {
+            "http": 403,
+            "content_type": "text/html; charset=UTF-8",
+            "content_length": null,
+            "status": "ACCESS_DENIED_STOP"
+          },
+          "files": []
+        }
+      ]
+    },
+    "nabat_october_2026": {
+      "doi": "10.5066/P1HDZNY9",
+      "items": [
+        {
+          "id": "6ace802b1ba49b69a5819e47",
+          "metadata": {
+            "http": 403,
+            "content_type": "text/html; charset=UTF-8",
+            "content_length": null,
+            "status": "ACCESS_DENIED_STOP"
+          },
+          "files": []
+        }
+      ]
+    }
+  },
+  "limits": [
+    "No absence inferred from missing detections; no raw locations or identities exported.",
+    "No raw audio, biological fit, or primary SDM admission."
+  ],
+  "total_table_document_bytes": 0,
+  "files_attempted": 0,
+  "decision": "First run stopped before HTTP because official ScienceBase host was accidentally absent from the allowlist. Corrected exact host and reran; all four catalog item requests returned HTTP 403. No source files acquired, no retry of denied endpoints and no inference about actual public availability in user browser. Public USGS catalog separately confirms both releases.",
+  "audit": {
+    "initial_run_id": 45718766792,
+    "run_id": 45719174422,
+    "job_id": 139572863621,
+    "artifact_id": 15071187900,
+    "artifact_zip_digest": "sha256:e2b15a292bcd43d6ba7c61e1033ece49ac9594fe9a0d0f00b0ebea5207188576"
+  },
+  "alternative": {
+    "doi": "10.5061/dryad.kd51c5bj3",
+    "article_doi": "10.1111/geb.70175",
+    "source": "Ashton-Butt et al. 2025, Polesia, 506 stationary sites 2019–2022, minimum four consecutive nights, species complexes explicitly retained; original per-night occurrence and activity R data in species_occurence_activity.zip.",
+    "public_catalog": "https://datadryad.org/dataset/doi:10.5061/dryad.kd51c5bj3",
+    "public_download": "https://datadryad.org/downloads/file_stream/4521177",
+    "status": "PUBLIC_CATALOG_CONFIRMED_FILE_ACCESS_STOP",
+    "download_http": 403,
+    "limitations": "Study region spans 50.5–53.04 N; measured GEDI support is limited to southern portion. Exact site coordinates and detection-history semantics not yet verified. Do not assume all 506 sites eligible or impute zeros. User-provided public file is permissible if subsequently available."
+  }
+}
