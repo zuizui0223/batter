@@ -1,0 +1,842 @@
+{
+  "stage": "environment support audit of 26 completely retrieved species, southern-central rectangle; no fitted model",
+  "input_sha256": "a3bac38f1961240a235e351207b1497712585fc9d2f8506ab0209d28019354b9",
+  "species_cells": 4854,
+  "unique_cells": 2982,
+  "raw_source_records": 20784,
+  "source_rect": "[-12,35,30,51.6]; no country filter in archived occurrence query",
+  "sources": {
+    "RH10": {
+      "url": "https://data.source.coop/geoai-ucph/gvsm/mosaics/2020/RH10_Q1.tif",
+      "source_grid": [
+        "EPSG:4326",
+        [
+          0.01,
+          0,
+          -179.99999999991763,
+          0,
+          -0.01,
+          82.85291859248707,
+          0,
+          0,
+          1
+        ],
+        13889,
+        36000
+      ],
+      "nodata": 32767,
+      "declared_scale": 1,
+      "declared_offset": 0,
+      "source_unit": null,
+      "valid_cells": 2981,
+      "sample_sha256": "3d3cb704569815ee35825698be48932c78ccaddd1f703fe36a273119cb3b2c91"
+    },
+    "RH25": {
+      "url": "https://data.source.coop/geoai-ucph/gvsm/mosaics/2020/RH25_Q1.tif",
+      "source_grid": [
+        "EPSG:4326",
+        [
+          0.01,
+          0,
+          -179.99999999991763,
+          0,
+          -0.01,
+          82.85291859248707,
+          0,
+          0,
+          1
+        ],
+        13889,
+        36000
+      ],
+      "nodata": 32767,
+      "declared_scale": 1,
+      "declared_offset": 0,
+      "source_unit": null,
+      "valid_cells": 2981,
+      "sample_sha256": "24a1f9be5f8ffbf644cb43392f32560753698739b6c5d78fbdce427a54be121d"
+    },
+    "RH50": {
+      "url": "https://data.source.coop/geoai-ucph/gvsm/mosaics/2020/RH50_Q1.tif",
+      "source_grid": [
+        "EPSG:4326",
+        [
+          0.01,
+          0,
+          -179.99999999991763,
+          0,
+          -0.01,
+          82.85291859248707,
+          0,
+          0,
+          1
+        ],
+        13889,
+        36000
+      ],
+      "nodata": 32767,
+      "declared_scale": 1,
+      "declared_offset": 0,
+      "source_unit": null,
+      "valid_cells": 2981,
+      "sample_sha256": "c46768b3b4ad9b14c9cd0b8119a928ffbc2dc343ef47e3278d7f07f9b26e721e"
+    },
+    "RH75": {
+      "url": "https://data.source.coop/geoai-ucph/gvsm/mosaics/2020/RH75_Q1.tif",
+      "source_grid": [
+        "EPSG:4326",
+        [
+          0.01,
+          0,
+          -179.99999999991763,
+          0,
+          -0.01,
+          82.85291859248707,
+          0,
+          0,
+          1
+        ],
+        13889,
+        36000
+      ],
+      "nodata": 32767,
+      "declared_scale": 1,
+      "declared_offset": 0,
+      "source_unit": null,
+      "valid_cells": 2981,
+      "sample_sha256": "29a3cc2aee38eebf080295b771d28ff7b6a503f19cf7323dd18baf322423524b"
+    },
+    "RH90": {
+      "url": "https://data.source.coop/geoai-ucph/gvsm/mosaics/2020/RH90_Q1.tif",
+      "source_grid": [
+        "EPSG:4326",
+        [
+          0.01,
+          0,
+          -179.99999999991763,
+          0,
+          -0.01,
+          82.85291859248707,
+          0,
+          0,
+          1
+        ],
+        13889,
+        36000
+      ],
+      "nodata": 32767,
+      "declared_scale": 1,
+      "declared_offset": 0,
+      "source_unit": null,
+      "valid_cells": 2981,
+      "sample_sha256": "8bc7597335e6bef9e6f9606d5567f388d11173aea8c06e9f9b16cb0943f66ed4"
+    },
+    "RH98": {
+      "url": "https://data.source.coop/geoai-ucph/gvsm/mosaics/2020/RH98_Q1.tif",
+      "source_grid": [
+        "EPSG:4326",
+        [
+          0.01,
+          0,
+          -179.99999999991763,
+          0,
+          -0.01,
+          82.85291859248707,
+          0,
+          0,
+          1
+        ],
+        13889,
+        36000
+      ],
+      "nodata": 32767,
+      "declared_scale": 1,
+      "declared_offset": 0,
+      "source_unit": null,
+      "valid_cells": 2981,
+      "sample_sha256": "864cb050c8793ef0f65a032249faf06186d6e91475f791f7c19e24b1f0ecb3e0"
+    }
+  },
+  "errors": {},
+  "worldcover_tiles": [
+    {
+      "tile": "N33E024",
+      "status": "read",
+      "cells": 1,
+      "bytes": 15017011,
+      "sha256": "4b3b6c6c046fc159dcfbdcd5bb8a5105e0e5d3f38b4bd5958ebd7ab76a1a7114"
+    },
+    {
+      "tile": "N36W012",
+      "status": "read",
+      "cells": 2,
+      "bytes": 5877422,
+      "sha256": "5efee3a0b07d3366d0d929fe1f50cb9028f6afa74cf64aac27c33cd520dc352d"
+    },
+    {
+      "tile": "N36W009",
+      "status": "read",
+      "cells": 3,
+      "bytes": 88848530,
+      "sha256": "749cfbeed65bb6fe20b4d92638d61bc94c650e60d3b0ecb9817dbacb81f86322"
+    },
+    {
+      "tile": "N36W006",
+      "status": "read",
+      "cells": 12,
+      "bytes": 108471952,
+      "sha256": "224ffccb57011119e7395a2ff172f3b1b6059add8d12a4280ae1a994d0b71212"
+    },
+    {
+      "tile": "N36W003",
+      "status": "read",
+      "cells": 1,
+      "bytes": 85376945,
+      "sha256": "4870a0de11b68bb25085e9ddaf56869ea14ce745c5db53d0a0d6b1b063482a02"
+    },
+    {
+      "tile": "N36E012",
+      "status": "read",
+      "cells": 1,
+      "bytes": 39179639,
+      "sha256": "868a73947679644d10a522dc5e177fcaa5d5b35f7785179180020678e3f7e801"
+    },
+    {
+      "tile": "N36E024",
+      "status": "read",
+      "cells": 4,
+      "bytes": 20302054,
+      "sha256": "703c4d61a5d2ea8cfec0c6f12b476c2aaecd7bb9598c8a001be9ed7363472e59"
+    },
+    {
+      "tile": "N36E027",
+      "status": "read",
+      "cells": 2,
+      "bytes": 97921380,
+      "sha256": "b918f22481007830031ca0a38e0f797c5f1183377b08c1387341756728cef63f"
+    },
+    {
+      "tile": "N39W009",
+      "status": "read",
+      "cells": 124,
+      "bytes": 129131375,
+      "sha256": "e47dcc281ebdeeb41ada0321659804cae89914c37329acca802703f24d56682e"
+    },
+    {
+      "tile": "N39W006",
+      "status": "read",
+      "cells": 8,
+      "bytes": 110846692,
+      "sha256": "0d3985cd7e7a73ce71c8e4970d28d23025b9ed839601d20cd618761182d43879"
+    },
+    {
+      "tile": "N39W003",
+      "status": "read",
+      "cells": 2,
+      "bytes": 127965948,
+      "sha256": "9e00b9de4ba5782742ef453cd45462fd1de38c8992d3fb93e3a14a5cb9005907"
+    },
+    {
+      "tile": "N39E000",
+      "status": "read",
+      "cells": 1,
+      "bytes": 54214296,
+      "sha256": "6e30666f95174faebf25815f76634300eeb53c805ac1f300a31f58bee871dca3"
+    },
+    {
+      "tile": "N39E006",
+      "status": "read",
+      "cells": 1,
+      "bytes": 23426377,
+      "sha256": "7b18bb597e188acded7b3eb4db7493e88e64abcbe54e37c3a6b350e8e6648c60"
+    },
+    {
+      "tile": "N39E009",
+      "status": "read",
+      "cells": 5,
+      "bytes": 26277576,
+      "sha256": "3ff241e0d050209359837d93fcc55e464be7db5cc339c9c6261bd11549b6513f"
+    },
+    {
+      "tile": "N39E012",
+      "status": "read",
+      "cells": 6,
+      "bytes": 41236803,
+      "sha256": "5d951afb19e5fdcb90773bac374b556d425f8945ba4b719114c7f7b03157464a"
+    },
+    {
+      "tile": "N39E015",
+      "status": "read",
+      "cells": 6,
+      "bytes": 66637135,
+      "sha256": "5f5adf574916d94891b32a0237dca0493d354ba898840c87daf915499b14a16d"
+    },
+    {
+      "tile": "N39E018",
+      "status": "read",
+      "cells": 2,
+      "bytes": 60148624,
+      "sha256": "221cd99d48e0066bae1df97c3221f2fa6e02fc3e38122d8aedb9726dc20915cf"
+    },
+    {
+      "tile": "N39E021",
+      "status": "read",
+      "cells": 3,
+      "bytes": 87399010,
+      "sha256": "ab3f8cd2b984deb530e53100ab97ec7e4801e3a3b96ebb3bb764332bb64fcf30"
+    },
+    {
+      "tile": "N39E024",
+      "status": "read",
+      "cells": 2,
+      "bytes": 55602696,
+      "sha256": "4b4b07af608fdac2c0b632a00e65a6bb64f0a024aa5ade38d8b7351a2cb69b5d"
+    },
+    {
+      "tile": "N39E027",
+      "status": "read",
+      "cells": 3,
+      "bytes": 75565146,
+      "sha256": "6a27dcbc962e87a39fff839594b1a70c2e7ac1e8b5228c6031a32b1334f49831"
+    },
+    {
+      "tile": "N42W009",
+      "status": "read",
+      "cells": 22,
+      "bytes": 61877040,
+      "sha256": "7473e83fbdb35492f4667f48bb3f0d98aece72dac1ae762b507bba88e7070f2e"
+    },
+    {
+      "tile": "N42W006",
+      "status": "read",
+      "cells": 15,
+      "bytes": 49698929,
+      "sha256": "3d2593bc3cb1942c07eb2d056ff35c69853a5b00de73eb95cdece563d8e569f1"
+    },
+    {
+      "tile": "N42W003",
+      "status": "read",
+      "cells": 11,
+      "bytes": 78464251,
+      "sha256": "be43e3ab3a41b8a29aebcf5ed3db243226f62807a9d512a571f447708e9df668"
+    },
+    {
+      "tile": "N42E000",
+      "status": "read",
+      "cells": 56,
+      "bytes": 117009669,
+      "sha256": "6f00549b7d0a3df766ca2366b30b98bd2cf3ece726da01aea4ad42143abe9016"
+    },
+    {
+      "tile": "N42E003",
+      "status": "read",
+      "cells": 41,
+      "bytes": 69615796,
+      "sha256": "5e53545a20a2093b6f1939a79d530302601f536fbfdad3c29359784ce22c356d"
+    },
+    {
+      "tile": "N42E006",
+      "status": "read",
+      "cells": 56,
+      "bytes": 51160212,
+      "sha256": "a96ec5d86f42920bdd29ac8b6214388c2df1e3229b9efb8c283bcd44480c8c20"
+    },
+    {
+      "tile": "N42E009",
+      "status": "read",
+      "cells": 26,
+      "bytes": 72420601,
+      "sha256": "f1877abe2248118de6f3060d30cb586e48f9d0556ab0915dc9b8af8096a916a1"
+    },
+    {
+      "tile": "N42E012",
+      "status": "read",
+      "cells": 5,
+      "bytes": 64880418,
+      "sha256": "f1416ec522d569acf994baff70865907d9d4b0e5c4e8ae4c8ba4e5ab747bb501"
+    },
+    {
+      "tile": "N42E015",
+      "status": "read",
+      "cells": 3,
+      "bytes": 54463449,
+      "sha256": "e18286cbd06ea220b8ebdecea3922ad7b6ca64e63bdbc7a7b39b6b216d5e8ee3"
+    },
+    {
+      "tile": "N42E018",
+      "status": "read",
+      "cells": 136,
+      "bytes": 92152214,
+      "sha256": "29dc9f517b44e00c705d210bd9e3d50dc90edffa69dacf19285af717576bfa0c"
+    },
+    {
+      "tile": "N42E021",
+      "status": "read",
+      "cells": 2,
+      "bytes": 84628979,
+      "sha256": "abd79b6b7ded84268d43cf5fcd320e391397415c5983a677db64578efa76aa6b"
+    },
+    {
+      "tile": "N42E024",
+      "status": "read",
+      "cells": 4,
+      "bytes": 73278657,
+      "sha256": "89148a8977fd7ca35f1b89a7f49f659156a4ec0cb813630d5f58ba03246348f4"
+    },
+    {
+      "tile": "N42E027",
+      "status": "read",
+      "cells": 4,
+      "bytes": 27924603,
+      "sha256": "19bd911232adccdb06bf7a05e2d356a454f40dd35fa6ad3fe1fe9da28374dc12"
+    },
+    {
+      "tile": "N45W006",
+      "status": "read",
+      "cells": 1,
+      "bytes": 7902372,
+      "sha256": "318b3e2646c8c1940bb47b25f498ad2fd9524243c3d6ef123d78650066c20cef"
+    },
+    {
+      "tile": "N45W003",
+      "status": "read",
+      "cells": 11,
+      "bytes": 78897844,
+      "sha256": "ce032b2544a557c60c88ccfd2f2f047ce69063be46d50f4dafc8632003e5cc58"
+    },
+    {
+      "tile": "N45E000",
+      "status": "read",
+      "cells": 47,
+      "bytes": 105264979,
+      "sha256": "b02e0eddb6c0b2fd70cd65283e16e69a3e5a792e56cb15e7974115d2d39630c8"
+    },
+    {
+      "tile": "N45E003",
+      "status": "read",
+      "cells": 30,
+      "bytes": 102017373,
+      "sha256": "fa02d47027d5d437200689a55c40467465e2e4cdc8d7027cc0cee3e479256aa2"
+    },
+    {
+      "tile": "N45E006",
+      "status": "read",
+      "cells": 34,
+      "bytes": 106497465,
+      "sha256": "9d4d371430b1aaec777228df59616cb503a9b62fe192c1de855036c43b07e75d"
+    },
+    {
+      "tile": "N45E009",
+      "status": "read",
+      "cells": 32,
+      "bytes": 106906572,
+      "sha256": "88702b9b5641a9d72d0f53cbc19afe1ae52786355b23757ef0f7fcc59276b552"
+    },
+    {
+      "tile": "N45E012",
+      "status": "read",
+      "cells": 43,
+      "bytes": 85040674,
+      "sha256": "80f665ce258f470e3d18facf5842f3451c5d66e7010d130bc2d3b1e387f8b7b4"
+    },
+    {
+      "tile": "N45E015",
+      "status": "read",
+      "cells": 32,
+      "bytes": 88855733,
+      "sha256": "f4284dd04d616aafa0f33ac33c5e7220f174a9a48fcf859ec44570c8fc630155"
+    },
+    {
+      "tile": "N45E018",
+      "status": "read",
+      "cells": 14,
+      "bytes": 75430355,
+      "sha256": "d793f4cf323d43d7b215fa4dae16d3fe72dea7511d43cff5e33f405e9562836f"
+    },
+    {
+      "tile": "N45E021",
+      "status": "read",
+      "cells": 1,
+      "bytes": 77098975,
+      "sha256": "4581a97c5437058df44f36a679c2f9d2d16d95943ea57ecd7b3189f34e0330f1"
+    },
+    {
+      "tile": "N45E024",
+      "status": "read",
+      "cells": 1,
+      "bytes": 78606123,
+      "sha256": "2ae062010910ae45e78832849f1cb879d43357357e7a3c705d51c8742181d48b"
+    },
+    {
+      "tile": "N45E027",
+      "status": "read",
+      "cells": 2,
+      "bytes": 78839197,
+      "sha256": "f7aadc9d33e0048f97adc49aa7a85dceeb1b2ad7ef0b739eb14ab2eae6cabbc7"
+    },
+    {
+      "tile": "N48W006",
+      "status": "read",
+      "cells": 35,
+      "bytes": 34473529,
+      "sha256": "02808becafb63e5b45a23da045553b7ce815d3ba161d268a4868bbd1a9dcf46d"
+    },
+    {
+      "tile": "N48W003",
+      "status": "read",
+      "cells": 195,
+      "bytes": 61487913,
+      "sha256": "a860d69a3d2860ba5262b8a47a5604abbfee0544e5f3525f2b83acd3db8fbbcb"
+    },
+    {
+      "tile": "N48E000",
+      "status": "read",
+      "cells": 137,
+      "bytes": 74436493,
+      "sha256": "9f5b06e56a3efe48166663fde287c3e73b0ca9533901f75d908e1a3f8fc144c3"
+    },
+    {
+      "tile": "N48E003",
+      "status": "read",
+      "cells": 170,
+      "bytes": 87433810,
+      "sha256": "cfac050a917c39492e1ec2a7ab162f7983c2b7881cc5adbc3815ff6ed4785eee"
+    },
+    {
+      "tile": "N48E006",
+      "status": "read",
+      "cells": 261,
+      "bytes": 94225409,
+      "sha256": "da123c1fc08403733b5f6d63900f412ae6855eb956b8f7ef2f94287372384e6b"
+    },
+    {
+      "tile": "N48E009",
+      "status": "read",
+      "cells": 123,
+      "bytes": 94851935,
+      "sha256": "9f422e4da7ed4c34154983575660a5a26f2d5fb7935fa46f3551af45d5b6c1d3"
+    },
+    {
+      "tile": "N48E012",
+      "status": "read",
+      "cells": 55,
+      "bytes": 96828824,
+      "sha256": "0a7f6973a3612bb0e90d4e7510a5418c752edcb5b50393215767b39815b2a7d5"
+    },
+    {
+      "tile": "N48E015",
+      "status": "read",
+      "cells": 96,
+      "bytes": 88575180,
+      "sha256": "d04868d51c7ddf627a891d11e40eff236ede7366b632c129567737c536bcad81"
+    },
+    {
+      "tile": "N48E018",
+      "status": "read",
+      "cells": 26,
+      "bytes": 96378981,
+      "sha256": "505f9390aa5a21ea47aa5cfa101fe0578407535355628fa8ce05c959d87191e7"
+    },
+    {
+      "tile": "N48E021",
+      "status": "read",
+      "cells": 4,
+      "bytes": 89998793,
+      "sha256": "722bea82a73a5db3f6d963c627eef6230fc416545a5bbc37501bd61f57cecefe"
+    },
+    {
+      "tile": "N48E024",
+      "status": "read",
+      "cells": 2,
+      "bytes": 76912212,
+      "sha256": "b34bc87dbf1175bd18d3ba93804e325c0ee40f15b1a07f51158ef8954b95d5cb"
+    },
+    {
+      "tile": "N48E027",
+      "status": "read",
+      "cells": 2,
+      "bytes": 78787515,
+      "sha256": "b14dfa8dbea422df4c566f4009e1ef865fab317fbac67737ecaffbc5d47c9816"
+    },
+    {
+      "tile": "N51W006",
+      "status": "read",
+      "cells": 7,
+      "bytes": 29037566,
+      "sha256": "7d4c7c9e143b289a48e1c91a058566b787407521014ab4e2b7a43099cadf780e"
+    },
+    {
+      "tile": "N51W003",
+      "status": "read",
+      "cells": 385,
+      "bytes": 107959080,
+      "sha256": "fb3e4cde8caee3c6ad61e9b8fb818efbc463320f28ede017745052305e253fdd"
+    },
+    {
+      "tile": "N51E000",
+      "status": "read",
+      "cells": 80,
+      "bytes": 37111787,
+      "sha256": "2ef6f3339d74493f2c14e15a54cb99bc02e3385d41f05ee306ae35f9536a2529"
+    },
+    {
+      "tile": "N51E003",
+      "status": "read",
+      "cells": 334,
+      "bytes": 54556617,
+      "sha256": "33190aed23427fede8bcb6b99d70aa423ba718644cf2c07453cb6ce09ff08464"
+    },
+    {
+      "tile": "N51E006",
+      "status": "read",
+      "cells": 230,
+      "bytes": 100981165,
+      "sha256": "f65110bccf52ceea21e3e1fb55f7b4b6a7386694d6795ef4dce1bd0d258b8d21"
+    },
+    {
+      "tile": "N51E009",
+      "status": "read",
+      "cells": 34,
+      "bytes": 85525178,
+      "sha256": "52d5f1f872f7c8061b255740cb7da17809297dff2db0de8ef91627c8461f6e34"
+    },
+    {
+      "tile": "N51E012",
+      "status": "read",
+      "cells": 21,
+      "bytes": 76097802,
+      "sha256": "c3a12fe57548a7feca51bef127345fb3f7b709f44fbde90344af3557abad802f"
+    },
+    {
+      "tile": "N51E021",
+      "status": "read",
+      "cells": 1,
+      "bytes": 93342037,
+      "sha256": "9f3bd43e33083b1066878448701bc3745d664b9ed5b406bb4a1a57b80e8b8661"
+    },
+    {
+      "tile": "N51E027",
+      "status": "read",
+      "cells": 1,
+      "bytes": 73065461,
+      "sha256": "5a2c1aa75d65de69ec1face191cc86f451e83863ddfcc36fded9f434a5c5a04c"
+    }
+  ],
+  "worldcover_failed_tiles": 0,
+  "worldcover_missing_tiles": 0,
+  "worldcover_valid_unique_cells": 2982,
+  "gvsm_valid_unique_cells": 2981,
+  "joint_forest_unique_cells": 1841,
+  "forest_tree_fraction_threshold": 0.3,
+  "training_domain_note": "GVSM north of 51.6 degrees is model extrapolation, not equivalent training coverage; this archive stays within the narrower source rectangle.",
+  "species_coverage": [
+    {
+      "species_key": "5218524",
+      "pre_environment_cells": 915,
+      "forest_profile_cells": 514,
+      "blocks_ge5": 19,
+      "passes_forest_gate": true
+    },
+    {
+      "species_key": "5218507",
+      "pre_environment_cells": 761,
+      "forest_profile_cells": 457,
+      "blocks_ge5": 10,
+      "passes_forest_gate": true
+    },
+    {
+      "species_key": "2432439",
+      "pre_environment_cells": 394,
+      "forest_profile_cells": 262,
+      "blocks_ge5": 12,
+      "passes_forest_gate": true
+    },
+    {
+      "species_key": "5218522",
+      "pre_environment_cells": 407,
+      "forest_profile_cells": 250,
+      "blocks_ge5": 14,
+      "passes_forest_gate": true
+    },
+    {
+      "species_key": "2432359",
+      "pre_environment_cells": 469,
+      "forest_profile_cells": 230,
+      "blocks_ge5": 10,
+      "passes_forest_gate": true
+    },
+    {
+      "species_key": "5218471",
+      "pre_environment_cells": 461,
+      "forest_profile_cells": 227,
+      "blocks_ge5": 7,
+      "passes_forest_gate": true
+    },
+    {
+      "species_key": "5218464",
+      "pre_environment_cells": 212,
+      "forest_profile_cells": 123,
+      "blocks_ge5": 5,
+      "passes_forest_gate": true
+    },
+    {
+      "species_key": "2432389",
+      "pre_environment_cells": 179,
+      "forest_profile_cells": 120,
+      "blocks_ge5": 7,
+      "passes_forest_gate": true
+    },
+    {
+      "species_key": "2432416",
+      "pre_environment_cells": 131,
+      "forest_profile_cells": 108,
+      "blocks_ge5": 8,
+      "passes_forest_gate": true
+    },
+    {
+      "species_key": "2432655",
+      "pre_environment_cells": 146,
+      "forest_profile_cells": 107,
+      "blocks_ge5": 4,
+      "passes_forest_gate": true
+    },
+    {
+      "species_key": "2432614",
+      "pre_environment_cells": 130,
+      "forest_profile_cells": 104,
+      "blocks_ge5": 6,
+      "passes_forest_gate": true
+    },
+    {
+      "species_key": "2432470",
+      "pre_environment_cells": 128,
+      "forest_profile_cells": 102,
+      "blocks_ge5": 4,
+      "passes_forest_gate": true
+    },
+    {
+      "species_key": "9754263",
+      "pre_environment_cells": 132,
+      "forest_profile_cells": 98,
+      "blocks_ge5": 6,
+      "passes_forest_gate": true
+    },
+    {
+      "species_key": "2432564",
+      "pre_environment_cells": 82,
+      "forest_profile_cells": 52,
+      "blocks_ge5": 4,
+      "passes_forest_gate": true
+    },
+    {
+      "species_key": "2432582",
+      "pre_environment_cells": 66,
+      "forest_profile_cells": 52,
+      "blocks_ge5": 2,
+      "passes_forest_gate": false
+    },
+    {
+      "species_key": "2432427",
+      "pre_environment_cells": 51,
+      "forest_profile_cells": 41,
+      "blocks_ge5": 3,
+      "passes_forest_gate": false
+    },
+    {
+      "species_key": "5739437",
+      "pre_environment_cells": 48,
+      "forest_profile_cells": 22,
+      "blocks_ge5": 1,
+      "passes_forest_gate": false
+    },
+    {
+      "species_key": "9796816",
+      "pre_environment_cells": 31,
+      "forest_profile_cells": 21,
+      "blocks_ge5": 1,
+      "passes_forest_gate": false
+    },
+    {
+      "species_key": "2432414",
+      "pre_environment_cells": 26,
+      "forest_profile_cells": 17,
+      "blocks_ge5": 1,
+      "passes_forest_gate": false
+    },
+    {
+      "species_key": "2432452",
+      "pre_environment_cells": 20,
+      "forest_profile_cells": 15,
+      "blocks_ge5": 1,
+      "passes_forest_gate": false
+    },
+    {
+      "species_key": "7261875",
+      "pre_environment_cells": 19,
+      "forest_profile_cells": 15,
+      "blocks_ge5": 1,
+      "passes_forest_gate": false
+    },
+    {
+      "species_key": "2432621",
+      "pre_environment_cells": 11,
+      "forest_profile_cells": 8,
+      "blocks_ge5": 1,
+      "passes_forest_gate": false
+    },
+    {
+      "species_key": "7261816",
+      "pre_environment_cells": 15,
+      "forest_profile_cells": 8,
+      "blocks_ge5": 0,
+      "passes_forest_gate": false
+    },
+    {
+      "species_key": "5218525",
+      "pre_environment_cells": 10,
+      "forest_profile_cells": 7,
+      "blocks_ge5": 0,
+      "passes_forest_gate": false
+    },
+    {
+      "species_key": "2432430",
+      "pre_environment_cells": 7,
+      "forest_profile_cells": 6,
+      "blocks_ge5": 0,
+      "passes_forest_gate": false
+    },
+    {
+      "species_key": "2432666",
+      "pre_environment_cells": 3,
+      "forest_profile_cells": 3,
+      "blocks_ge5": 0,
+      "passes_forest_gate": false
+    }
+  ],
+  "species_passing_forest_profile_gate": 14,
+  "forest_profile_species_cells": 2969,
+  "output_sha256": "89b63e7229447377064d189c8532b232640192cf343d43cb24260dcc3e97c5e5",
+  "status": "ACTUAL_FOREST_PROFILE_SUPPORT_READY",
+  "admission": false,
+  "limitations": [
+    "This archive has 26 completely retrieved physical-trait species and at most 14 passing pre-environment coverage; not the wider continental run.",
+    "No background, climate, terrain or final source-level effort/roost/season/DOI gate in this step.",
+    "No SDM, no selection or trait-effect inference. GVSM RH is a predicted waveform profile, not PAVD or air volume.",
+    "WorldCover class fractions are 10m source-pixel equal-area centre assignments; cells with <95% valid source area excluded."
+  ],
+  "audit": {
+    "run_id": 45583806660,
+    "job_id": 139100159907,
+    "artifact_id": 15006874577,
+    "registry_digest": "sha256:7ffac8b6b9de6cc4be2beac9929dea5c875f9e96d06993abacc8f631c509160e",
+    "artifact_bytes": 378367,
+    "head_sha": "ef20c11db6d6ae0c4f2b85a253c3c6b158104eb2",
+    "checks": {
+      "species_cells": true,
+      "forest_cells": true,
+      "gate": true,
+      "source_input": true
+    },
+    "scope": "Exact log report and Actions registry digest; archive bytes not independently rehashed."
+  }
+}
