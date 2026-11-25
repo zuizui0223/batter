@@ -1,0 +1,39 @@
+name: GVSM fixed snapshot observation audit
+on:
+  push:
+    branches: [prospective/gedi-trait-macro-sdm-20261125]
+    paths:
+      - prospective/gedi_trait_macro_sdm/fixed_snapshot_observation_audit.py
+      - .github/workflows/gvsm-fixed-snapshot-observation-audit.yml
+permissions:
+  contents: read
+  actions: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          name: gvsm-gbif-fixed-snapshot
+          run-id: 45591123869
+          github-token: ${{ github.token }}
+          path: fixed
+      - uses: actions/download-artifact@v4
+        with:
+          name: gedi-macro-iberia-join
+          run-id: 45575962660
+          github-token: ${{ github.token }}
+          path: traits
+      - run: python -m pip install duckdb numpy pandas pyproj
+      - run: python prospective/gedi_trait_macro_sdm/fixed_snapshot_observation_audit.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: gvsm-fixed-snapshot-observation-audit
+          path: snapshot_observation_audit/
+          if-no-files-found: error
