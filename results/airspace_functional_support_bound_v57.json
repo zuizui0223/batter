@@ -1,0 +1,140 @@
+{
+  "status": "exact_theory_only",
+  "tests": "PASS",
+  "grid_checks": 6006,
+  "assumptions": "Common support, correctly attributed events, no false positives or spatial mislocalization, bounded positive relative detection, population distribution; calibration not estimated.",
+  "illustrative_rows": [
+    {
+      "reference_share": 0.4,
+      "marked_share": 0.5,
+      "Gamma": 1,
+      "latent_share_lower": 0.5,
+      "latent_share_upper": 0.5,
+      "observed_odds_ratio": 1.4999999999999998,
+      "strict_enrichment": true,
+      "strict_depletion": false,
+      "sharp_max_TV": 0
+    },
+    {
+      "reference_share": 0.4,
+      "marked_share": 0.5,
+      "Gamma": 1.5,
+      "latent_share_lower": 0.4,
+      "latent_share_upper": 0.6,
+      "observed_odds_ratio": 1.4999999999999998,
+      "strict_enrichment": false,
+      "strict_depletion": false,
+      "sharp_max_TV": 0.10102051443364377
+    },
+    {
+      "reference_share": 0.4,
+      "marked_share": 0.5,
+      "Gamma": 2,
+      "latent_share_lower": 0.3333333333333333,
+      "latent_share_upper": 0.6666666666666666,
+      "observed_odds_ratio": 1.4999999999999998,
+      "strict_enrichment": false,
+      "strict_depletion": false,
+      "sharp_max_TV": 0.17157287525380996
+    },
+    {
+      "reference_share": 0.4,
+      "marked_share": 0.5,
+      "Gamma": 4,
+      "latent_share_lower": 0.2,
+      "latent_share_upper": 0.8,
+      "observed_odds_ratio": 1.4999999999999998,
+      "strict_enrichment": false,
+      "strict_depletion": false,
+      "sharp_max_TV": 0.3333333333333333
+    },
+    {
+      "reference_share": 0.4,
+      "marked_share": 0.7,
+      "Gamma": 1,
+      "latent_share_lower": 0.7,
+      "latent_share_upper": 0.7,
+      "observed_odds_ratio": 3.499999999999999,
+      "strict_enrichment": true,
+      "strict_depletion": false,
+      "sharp_max_TV": 0
+    },
+    {
+      "reference_share": 0.4,
+      "marked_share": 0.7,
+      "Gamma": 1.5,
+      "latent_share_lower": 0.6086956521739131,
+      "latent_share_upper": 0.7777777777777777,
+      "observed_odds_ratio": 3.499999999999999,
+      "strict_enrichment": true,
+      "strict_depletion": false,
+      "sharp_max_TV": 0.10102051443364377
+    },
+    {
+      "reference_share": 0.4,
+      "marked_share": 0.7,
+      "Gamma": 2,
+      "latent_share_lower": 0.5384615384615384,
+      "latent_share_upper": 0.8235294117647058,
+      "observed_odds_ratio": 3.499999999999999,
+      "strict_enrichment": true,
+      "strict_depletion": false,
+      "sharp_max_TV": 0.17157287525380996
+    },
+    {
+      "reference_share": 0.4,
+      "marked_share": 0.7,
+      "Gamma": 4,
+      "latent_share_lower": 0.36842105263157887,
+      "latent_share_upper": 0.903225806451613,
+      "observed_odds_ratio": 3.499999999999999,
+      "strict_enrichment": false,
+      "strict_depletion": false,
+      "sharp_max_TV": 0.3333333333333333
+    },
+    {
+      "reference_share": 0.4,
+      "marked_share": 0.9,
+      "Gamma": 1,
+      "latent_share_lower": 0.9,
+      "latent_share_upper": 0.9000000000000001,
+      "observed_odds_ratio": 13.500000000000002,
+      "strict_enrichment": true,
+      "strict_depletion": false,
+      "sharp_max_TV": 0
+    },
+    {
+      "reference_share": 0.4,
+      "marked_share": 0.9,
+      "Gamma": 1.5,
+      "latent_share_lower": 0.8571428571428571,
+      "latent_share_upper": 0.9310344827586207,
+      "observed_odds_ratio": 13.500000000000002,
+      "strict_enrichment": true,
+      "strict_depletion": false,
+      "sharp_max_TV": 0.10102051443364377
+    },
+    {
+      "reference_share": 0.4,
+      "marked_share": 0.9,
+      "Gamma": 2,
+      "latent_share_lower": 0.8181818181818181,
+      "latent_share_upper": 0.9473684210526316,
+      "observed_odds_ratio": 13.500000000000002,
+      "strict_enrichment": true,
+      "strict_depletion": false,
+      "sharp_max_TV": 0.17157287525380996
+    },
+    {
+      "reference_share": 0.4,
+      "marked_share": 0.9,
+      "Gamma": 4,
+      "latent_share_lower": 0.6923076923076924,
+      "latent_share_upper": 0.972972972972973,
+      "observed_odds_ratio": 13.500000000000002,
+      "strict_enrichment": true,
+      "strict_depletion": false,
+      "sharp_max_TV": 0.3333333333333333
+    }
+  ]
+}
