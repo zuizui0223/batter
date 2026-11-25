@@ -1,0 +1,130 @@
+{
+  "status": "COMPLETE_DESCRIPTIVE_ONLY",
+  "matched_test_comparisons": 20327,
+  "matched_test_blocks": 44,
+  "replicates": 10,
+  "contrasts": {
+    "TLG+R50+PAVD minus TLG+R50": {
+      "strict_gain": -0.0054425818586849506,
+      "matched_training_mean_gain": -0.0048846736506152535,
+      "matched_training_gain_by_draw": [
+        -0.005434798566949245,
+        -0.004981049672072117,
+        -0.004768831262329967,
+        -0.004564789596953845,
+        -0.005326457568324511,
+        -0.004382041646509647,
+        -0.005329263068506566,
+        -0.00433800404683508,
+        -0.005210488186034335,
+        -0.004511012891637225
+      ],
+      "matched_minus_strict": 0.0005579082080696963,
+      "positive_delta_draws": 10,
+      "positive_delta_blocks": 23,
+      "delete_one_block_range": [
+        0.00013414700997628343,
+        0.0007622155893667924
+      ],
+      "conditional_block_bootstrap_95": [
+        -0.0005161420809531207,
+        0.0018426614805837846
+      ]
+    },
+    "TLG+R50 minus TLG": {
+      "strict_gain": 0.004590117032992086,
+      "matched_training_mean_gain": 0.0020253855823114827,
+      "matched_training_gain_by_draw": [
+        0.0024597339377581706,
+        0.001305794162205615,
+        0.002068679246602068,
+        0.0011590416598717202,
+        0.0009071943948572647,
+        0.0012715945654198698,
+        0.0020267033152844153,
+        0.002814767795945593,
+        0.0027577525410079325,
+        0.0034825942041621805
+      ],
+      "matched_minus_strict": -0.002564731450680603,
+      "positive_delta_draws": 0,
+      "positive_delta_blocks": 15,
+      "delete_one_block_range": [
+        -0.002799530767387033,
+        -0.0018907651091331773
+      ],
+      "conditional_block_bootstrap_95": [
+        -0.004798592521921743,
+        -0.000627794001692967
+      ]
+    },
+    "TLG+PAVD minus TLG": {
+      "strict_gain": -0.0060050765660334265,
+      "matched_training_mean_gain": -0.005303623706371633,
+      "matched_training_gain_by_draw": [
+        -0.005926112415461168,
+        -0.005422615940920921,
+        -0.005144543526113904,
+        -0.004909215681127275,
+        -0.005671733489560634,
+        -0.004664202140628008,
+        -0.005843375864519502,
+        -0.0047645897472197414,
+        -0.005778365700769481,
+        -0.004911482557395704
+      ],
+      "matched_minus_strict": 0.0007014528596617932,
+      "positive_delta_draws": 10,
+      "positive_delta_blocks": 23,
+      "delete_one_block_range": [
+        0.00020646090754868982,
+        0.0009026759497594503
+      ],
+      "conditional_block_bootstrap_95": [
+        -0.0004558317955594386,
+        0.0021664913644846655
+      ]
+    },
+    "TLG+R50+PAVD minus TLG": {
+      "strict_gain": -0.0008524648256928636,
+      "matched_training_mean_gain": -0.002859288068303771,
+      "matched_training_gain_by_draw": [
+        -0.0029750646291910776,
+        -0.0036752555098665003,
+        -0.0027001520157279003,
+        -0.0034057479370821248,
+        -0.004419263173467246,
+        -0.0031104470810897787,
+        -0.003302559753222149,
+        -0.0015232362508894855,
+        -0.002452735645026404,
+        -0.0010284186874750436
+      ],
+      "matched_minus_strict": -0.002006823242610907,
+      "positive_delta_draws": 0,
+      "positive_delta_blocks": 15,
+      "delete_one_block_range": [
+        -0.002239009081404737,
+        -0.0013066605473717229
+      ],
+      "conditional_block_bootstrap_95": [
+        -0.0042607276788655755,
+        -0.00005856470217214495
+      ]
+    }
+  },
+  "source_overlap": {
+    "draws_with_actual_test_provider": 120,
+    "draws_total": 130,
+    "mean_actual_test_provider_pairs": 271.39230769230767,
+    "mean_held_source_fold_pairs": 832.5230769230769
+  },
+  "decision": "All ten block/group-size matched geographical training draws show negative PAVD gain. Difference relative to strict source exclusion small and conditional interval crosses zero; cannot attribute transfer failure to provider/measurement alone. Matching changes group membership, source/taxon composition and degree of provider exposure; does not isolate training count alone. No further same-archive tuning.",
+  "audit": {
+    "run_id": 45718051107,
+    "job_id": 139569069439,
+    "artifact_id": 15070578062,
+    "artifact_zip_digest": "sha256:bc1a897459b6b23236caf8af35f12dfa82845d55b9fb1e596ac8d00af6e44c17",
+    "strict_replay_verified": true
+  }
+}
