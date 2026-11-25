@@ -1,0 +1,57 @@
+{
+  "status": "hypothetical_reference_only",
+  "source": "Gorresen et al. 2017, published Table 1, doi:10.1002/ece3.3196",
+  "source_totals": {
+    "nights": 20,
+    "acoustic": 2535,
+    "visual": 784,
+    "matched": 383
+  },
+  "reported_match_rate": {
+    "equal_night": 0.3094905738321817,
+    "visual_weighted": 0.4885204081632653
+  },
+  "scenarios": [
+    {
+      "hypothetical_session_hours": 10,
+      "window_plus_minus_seconds": 30,
+      "equal_night_mean_chance_overlap": 0.16749454351699442,
+      "visual_weighted_chance_overlap": 0.3052896442586663,
+      "expected_visual_records_with_at_least_one_candidate": 239.34708109879438,
+      "equal_night_multiple_candidate_probability": 0.03603192260317111,
+      "visual_weighted_multiple_candidate_probability": 0.09002363204070696,
+      "chance_overlap_night_range": [
+        0.0016666666666667052,
+        0.5627964146243885
+      ]
+    },
+    {
+      "hypothetical_session_hours": 12,
+      "window_plus_minus_seconds": 30,
+      "equal_night_mean_chance_overlap": 0.14473931227192505,
+      "visual_weighted_chance_overlap": 0.2673993950099511,
+      "expected_visual_records_with_at_least_one_candidate": 209.64112568780163,
+      "equal_night_multiple_candidate_probability": 0.026603304821504657,
+      "visual_weighted_multiple_candidate_probability": 0.06747262100918683,
+      "chance_overlap_night_range": [
+        0.001388888888888884,
+        0.4981066978357451
+      ]
+    },
+    {
+      "hypothetical_session_hours": 14,
+      "window_plus_minus_seconds": 30,
+      "equal_night_mean_chance_overlap": 0.12739299261211975,
+      "visual_weighted_chance_overlap": 0.23769329414896315,
+      "expected_visual_records_with_at_least_one_candidate": 186.3515426127871,
+      "equal_night_multiple_candidate_probability": 0.020431585072777127,
+      "visual_weighted_multiple_candidate_probability": 0.0523848741881105,
+      "chance_overlap_night_range": [
+        0.0011904761904761862,
+        0.4461314770503
+      ]
+    }
+  ],
+  "assumptions": "Fixed acoustic counts independently uniform on circular sessions, independent visual times, assumed durations; NOT estimated false-positive rates; no subtraction from observed matches",
+  "tests": "published totals verified"
+}
