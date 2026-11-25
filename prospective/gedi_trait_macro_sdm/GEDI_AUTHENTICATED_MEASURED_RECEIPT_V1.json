@@ -1,0 +1,172 @@
+{
+  "status": "COMPLETE_DESCRIPTIVE_ONLY",
+  "original_comparisons": 31601,
+  "original_blocks": 51,
+  "source_doi": "10.3334/ORNLDAAC/2339",
+  "main_sdm_admitted": false,
+  "eligible_cells": 1587,
+  "matched_pairs": 28284,
+  "blocks": 48,
+  "taxa": 14,
+  "fold_blocks": [
+    11,
+    10,
+    8,
+    10,
+    9
+  ],
+  "scores": {
+    "neutral": -0.6931471805599458,
+    "TLG": -0.6393055073337227,
+    "TLG+R50": -0.6298774675524101,
+    "TLG+PAVD": -0.6351340932006581,
+    "TLG+R50+PAVD": -0.6260812600541641
+  },
+  "fold_scores": [
+    {
+      "neutral": -0.693147180559935,
+      "TLG": -0.6799933218297435,
+      "TLG+R50": -0.663629202046403,
+      "TLG+PAVD": -0.6791591152655863,
+      "TLG+R50+PAVD": -0.663280828963877
+    },
+    {
+      "neutral": -0.6931471805599451,
+      "TLG": -0.6105671677479714,
+      "TLG+R50": -0.6077931304892081,
+      "TLG+PAVD": -0.5995418906360043,
+      "TLG+R50+PAVD": -0.5967623706393047
+    },
+    {
+      "neutral": -0.6931471805599498,
+      "TLG": -0.627714594984045,
+      "TLG+R50": -0.6240076895440756,
+      "TLG+PAVD": -0.6317999382880247,
+      "TLG+R50+PAVD": -0.6284138874748529
+    },
+    {
+      "neutral": -0.6931471805599454,
+      "TLG": -0.59801524995058,
+      "TLG+R50": -0.5900685714503053,
+      "TLG+PAVD": -0.594012574357142,
+      "TLG+R50+PAVD": -0.5862527648658707
+    },
+    {
+      "neutral": -0.6931471805599515,
+      "TLG": -0.6776885416703942,
+      "TLG+R50": -0.6626131871397202,
+      "TLG+PAVD": -0.6695268943860418,
+      "TLG+R50+PAVD": -0.6553721010162896
+    }
+  ],
+  "primary": "TLG+PAVD minus TLG",
+  "limits": [
+    "Same source-year conditional label allocation, not occupancy or flight height.",
+    "Post-pilot matched sensitivity; not independent biological replication.",
+    "GEDI gridded shot means, not continuous canopy volume or random complete census."
+  ],
+  "contrasts": [
+    {
+      "contrast": "TLG+PAVD minus TLG",
+      "gain": 0.004171414133064841,
+      "positive_blocks": 27,
+      "positive_folds": 4,
+      "fold_gains": [
+        0.0008342065641572249,
+        0.011025277111967102,
+        -0.004085343303979694,
+        0.004002675593437921,
+        0.008161647284352314
+      ],
+      "delete_one_block_range": [
+        0.0018367119958520206,
+        0.00547236830357437
+      ]
+    },
+    {
+      "contrast": "TLG+R50 minus TLG",
+      "gain": 0.009428039781312634,
+      "positive_blocks": 31,
+      "positive_folds": 5,
+      "fold_gains": [
+        0.016364119783340514,
+        0.00277403725876324,
+        0.0037069054399694323,
+        0.00794667850027464,
+        0.01507535453067399
+      ],
+      "delete_one_block_range": [
+        0.00794046509899157,
+        0.010086183406749247
+      ]
+    },
+    {
+      "contrast": "TLG+PAVD minus TLG+R50",
+      "gain": -0.005256625648247792,
+      "positive_blocks": 20,
+      "positive_folds": 1,
+      "fold_gains": [
+        -0.015529913219183289,
+        0.008251239853203862,
+        -0.007792248743949126,
+        -0.003944002906836719,
+        -0.0069137072463216764
+      ],
+      "delete_one_block_range": [
+        -0.0075664856460873516,
+        -0.002962384862205392
+      ]
+    },
+    {
+      "contrast": "TLG+R50+PAVD minus TLG+R50",
+      "gain": 0.0037962074982458884,
+      "positive_blocks": 27,
+      "positive_folds": 4,
+      "fold_gains": [
+        0.00034837308252599897,
+        0.011030759849903427,
+        -0.004406197930777345,
+        0.003815806584434589,
+        0.007241086123430551
+      ],
+      "delete_one_block_range": [
+        0.001409463198364125,
+        0.004900424130237619
+      ]
+    }
+  ],
+  "grid": {
+    "status": "GRID_PROFILE_SUPPORT_READY",
+    "doi": "10.3334/ORNLDAAC/2339",
+    "candidate_cells": 1796,
+    "joint_native_pixels": 6080,
+    "eligible_cells": 1587,
+    "output_sha256": "35fd3897562e9b8a6ee909d86b3d36c429098d939ace120016d76f1815a6fa7c"
+  },
+  "raw": {
+    "status": "DIRECT_L2B_PROFILE_READ_OK",
+    "doi": "10.5067/GEDI/GEDI02_B.002",
+    "beam_schema": [
+      {
+        "beam": "BEAM0000",
+        "n_total_shots": 109926,
+        "profile_bins": 30,
+        "vertical_resolution_m": 5
+      }
+    ],
+    "unique_shots": 266,
+    "output_sha256": "6e676b941771efe17496866715cf9808e6d450a20c62f06f579db3cfb6e508e7"
+  },
+  "audit": {
+    "source_run_id": 45715480130,
+    "source_grid_artifact_id": 15070306227,
+    "source_grid_artifact_zip_digest": "sha256:7accd3a2be2c5f70ac8bfc6264af0e2c23fdd8637b0c8b266de60f9957590d8d",
+    "replay_run_id": 45717027444,
+    "replay_job_id": 139565596596,
+    "replay_artifact_id": 15069578294,
+    "replay_artifact_zip_digest": "sha256:d61f8315a1d84a45c85e91ebbc664cdced4275abb130bee398d9819a44324951",
+    "verified_input_receipt_sha256": true,
+    "original_failure": "NumPy int64 JSON serialization after 5 completed fits; artifact-only replay succeeded.",
+    "note": "Summary and contrasts copied from completed replay job logs. No numerical retuning."
+  }
+}
