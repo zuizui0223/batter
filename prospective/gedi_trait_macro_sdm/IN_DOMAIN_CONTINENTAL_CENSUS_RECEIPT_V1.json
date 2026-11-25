@@ -1,0 +1,113 @@
+{
+  "stage": "independent in-domain source and coverage census only",
+  "gbif_doi": "10.15468/dl.8yrbe7",
+  "trait_article_doi": "10.3389/fevo.2022.1031548",
+  "regions": {
+    "North_America": {
+      "countries": [
+        "US",
+        "CA",
+        "MX"
+      ],
+      "bbox": [
+        -130,
+        15,
+        -60,
+        51.6
+      ]
+    },
+    "East_Asia": {
+      "countries": [
+        "CN",
+        "JP",
+        "MN",
+        "KP",
+        "KR",
+        "TW"
+      ],
+      "bbox": [
+        73,
+        15,
+        146,
+        51.6
+      ]
+    }
+  },
+  "status": "REGIONAL_COVERAGE_COMPLETE_NO_MODEL",
+  "trait_source": {
+    "status": "NO_VERIFIED_PUBLIC_SUPPLEMENT",
+    "url": "https://www.frontiersin.org/journals/ecology-and-evolution/articles/10.3389/fevo.2022.1031548/full",
+    "published_taxa": 152,
+    "published_families": 15,
+    "article_http": 200,
+    "attempted": [
+      {
+        "url": "https://www.frontiersin.org/files/Articles/1031548/fevo-10-1031548-HTML/image_m/fevo-10-1031548-s001.pdf",
+        "http": 404
+      },
+      {
+        "url": "https://www.frontiersin.org/files/Articles/1031548/fevo-10-1031548-HTML/image_m/fevo-10-1031548-s001.xlsx",
+        "http": 404
+      },
+      {
+        "url": "https://www.frontiersin.org/files/Articles/1031548/fevo-10-1031548-HTML/image_m/fevo-10-1031548-s001.docx",
+        "http": 404
+      },
+      {
+        "url": "https://www.frontiersin.org/files/Articles/1031548/fevo-10-1031548-HTML/image_m/fevo-10-1031548-s001.zip",
+        "http": 404
+      }
+    ],
+    "files": []
+  },
+  "coverage": {
+    "North_America": {
+      "unique_records": 5514,
+      "species_keys": 97,
+      "providers": 5,
+      "species_cells": 4156,
+      "unique_cells": 3591,
+      "geographic_pass_species_before_trait_filter": 9,
+      "coverage_table_sha256": "81c900ad8f201cbbaa6bda3405f9346b930f7b71e3d3f61bcefb535fd3da41ba",
+      "cell_source_year_sha256": "01e116edd83fc5ceeace0ee329fed07b671e6278f6c01cbcd2e0ec8d0fcefe8c",
+      "raw_subset_sha256": "cb722e167c6aa5995e891eef5551440badd885dbc6b40e826cdba00dc1f848c4",
+      "trait_gate": "not yet evaluated"
+    },
+    "East_Asia": {
+      "unique_records": 389,
+      "species_keys": 33,
+      "providers": 3,
+      "species_cells": 173,
+      "unique_cells": 127,
+      "geographic_pass_species_before_trait_filter": 0,
+      "coverage_table_sha256": "37fa0656a310691eb3bec989043421afa9ed5630b117ca9311418c4cf52610c0",
+      "cell_source_year_sha256": "eda2bc72292a42d9748f928c398b941839009c5d50583e7485deec8ca2c6f89a",
+      "raw_subset_sha256": "d384233957bec1f7f4908ac3f040803e7dfb4c98aac943fba5d89aa25cf00711",
+      "trait_gate": "not yet evaluated"
+    }
+  },
+  "limits": [
+    "Occurrence data are recorded detections, not occupancy/effort or height use.",
+    "Provisional spatial coverage before environment/trait/roost screening.",
+    "No cross-study or continental ecological fit."
+  ],
+  "source_inventory_sha256": "14692b344c86a9f392f987924921d2c4cc723483a1669d808192d5003b0a3fae",
+  "verified_original_objects": 8,
+  "audit": {
+    "run_id": 45657223272,
+    "job_id": 139357052003,
+    "artifact_id": 15042772274,
+    "registry_digest": "sha256:b6e8797625bfea3eab046fd3595e1da8f9d836744cc28003cac32be8af97a119",
+    "head_sha": "f21676ee269bfac63bfee9957483c7d1eb0793cd",
+    "checks": {
+      "completed": true,
+      "original_objects": true,
+      "regions": true,
+      "upper_bounds": true,
+      "no_trait_source": true,
+      "registry_matches_log": true
+    },
+    "scope": "Completed source/coverage audit; artifact registry and upload log inspected, ZIP not independently rehashed."
+  },
+  "interpretation": "At the frozen 1-km precision rule, North America has 9 geographic-pass taxa before traits/environment and East Asia zero. Original 20-taxon independent-region SDM is not admitted. No inferred ecological negative. Physical/acoustic trait supplement not retrieved; no silent imputation."
+}
