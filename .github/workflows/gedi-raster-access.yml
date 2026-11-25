@@ -1,0 +1,20 @@
+name: GEDI raster access gate
+on:
+  push:
+    branches: [prospective/gedi-trait-macro-sdm-20261125]
+    paths:
+      - prospective/gedi_trait_macro_sdm/gedi_access_probe.py
+      - .github/workflows/gedi-raster-access.yml
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 prospective/gedi_trait_macro_sdm/gedi_access_probe.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: gedi-raster-access
+          path: gedi_access/
