@@ -1,0 +1,497 @@
+{
+  "stage": "fixed-source environment support, no ecological fit",
+  "snapshot_doi": "10.15468/dl.8yrbe7",
+  "input_sha256": {
+    "snapshot_cells": "f0124127cd55b7abe4ee0deab935895e150918fc0b0c6e33942ba1591e89ef53",
+    "prior_worldcover": "915cd8ffd2b63fb768c7cd2eba8e9faa5b40ab8ffd92efeb5dc8ea42dafdccc3",
+    "physical_traits": "43bb5284308a9fe732beda51886172cb87268e5d00620eb27956d5808dae809f"
+  },
+  "cells": 11006,
+  "source_records": 219960,
+  "source_species_cells": 23489,
+  "reused_verified_worldcover_cells": 2737,
+  "new_worldcover_tiles": 108,
+  "native_profile_order_error_pixels": 0,
+  "joint_RH_cells": 10983,
+  "joint_climate_cells": 11006,
+  "status": "FIXED_SNAPSHOT_ENVIRONMENT_READY",
+  "worldcover_failed_tiles": 0,
+  "worldcover_valid_cells": 11006,
+  "common_environment_cells": 10983,
+  "forest_cells": 6775,
+  "forest_target_group_records": 56847,
+  "forest_target_group_species_cells": 14124,
+  "physical_trait_species_support_all": [
+    {
+      "species": "Pipistrellus pipistrellus",
+      "cells": 2355,
+      "blocks_ge5": 40,
+      "pass": true
+    },
+    {
+      "species": "Nyctalus noctula",
+      "cells": 1626,
+      "blocks_ge5": 41,
+      "pass": true
+    },
+    {
+      "species": "Eptesicus nilssonii",
+      "cells": 1346,
+      "blocks_ge5": 38,
+      "pass": true
+    },
+    {
+      "species": "Plecotus auritus",
+      "cells": 1183,
+      "blocks_ge5": 30,
+      "pass": true
+    },
+    {
+      "species": "Myotis daubentonii",
+      "cells": 1182,
+      "blocks_ge5": 42,
+      "pass": true
+    },
+    {
+      "species": "Eptesicus serotinus",
+      "cells": 1054,
+      "blocks_ge5": 27,
+      "pass": true
+    },
+    {
+      "species": "Pipistrellus nathusii",
+      "cells": 850,
+      "blocks_ge5": 25,
+      "pass": true
+    },
+    {
+      "species": "Vespertilio murinus",
+      "cells": 426,
+      "blocks_ge5": 16,
+      "pass": true
+    },
+    {
+      "species": "Myotis nattereri",
+      "cells": 304,
+      "blocks_ge5": 16,
+      "pass": true
+    },
+    {
+      "species": "Nyctalus leisleri",
+      "cells": 281,
+      "blocks_ge5": 14,
+      "pass": true
+    },
+    {
+      "species": "Pipistrellus kuhlii",
+      "cells": 242,
+      "blocks_ge5": 11,
+      "pass": true
+    },
+    {
+      "species": "Myotis mystacinus",
+      "cells": 199,
+      "blocks_ge5": 15,
+      "pass": true
+    },
+    {
+      "species": "Barbastella barbastellus",
+      "cells": 193,
+      "blocks_ge5": 8,
+      "pass": true
+    },
+    {
+      "species": "Tadarida teniotis",
+      "cells": 125,
+      "blocks_ge5": 4,
+      "pass": true
+    },
+    {
+      "species": "Myotis myotis",
+      "cells": 115,
+      "blocks_ge5": 7,
+      "pass": true
+    },
+    {
+      "species": "Myotis brandtii",
+      "cells": 114,
+      "blocks_ge5": 8,
+      "pass": true
+    },
+    {
+      "species": "Myotis dasycneme",
+      "cells": 107,
+      "blocks_ge5": 4,
+      "pass": true
+    },
+    {
+      "species": "Rhinolophus hipposideros",
+      "cells": 105,
+      "blocks_ge5": 6,
+      "pass": true
+    },
+    {
+      "species": "Rhinolophus ferrumequinum",
+      "cells": 103,
+      "blocks_ge5": 4,
+      "pass": true
+    },
+    {
+      "species": "Myotis emarginatus",
+      "cells": 84,
+      "blocks_ge5": 4,
+      "pass": true
+    },
+    {
+      "species": "Myotis bechsteinii",
+      "cells": 40,
+      "blocks_ge5": 2,
+      "pass": false
+    },
+    {
+      "species": "Plecotus austriacus",
+      "cells": 19,
+      "blocks_ge5": 0,
+      "pass": false
+    },
+    {
+      "species": "Miniopterus schreibersii",
+      "cells": 18,
+      "blocks_ge5": 1,
+      "pass": false
+    },
+    {
+      "species": "Nyctalus lasiopterus",
+      "cells": 12,
+      "blocks_ge5": 0,
+      "pass": false
+    },
+    {
+      "species": "Rhinolophus euryale",
+      "cells": 7,
+      "blocks_ge5": 1,
+      "pass": false
+    },
+    {
+      "species": "Myotis capaccinii",
+      "cells": 3,
+      "blocks_ge5": 0,
+      "pass": false
+    },
+    {
+      "species": "Rhinolophus blasii",
+      "cells": 2,
+      "blocks_ge5": 0,
+      "pass": false
+    }
+  ],
+  "physical_trait_species_support_training_latitude": [
+    {
+      "species": "Pipistrellus pipistrellus",
+      "cells": 1416,
+      "blocks_ge5": 28,
+      "pass": true
+    },
+    {
+      "species": "Nyctalus noctula",
+      "cells": 492,
+      "blocks_ge5": 19,
+      "pass": true
+    },
+    {
+      "species": "Eptesicus serotinus",
+      "cells": 446,
+      "blocks_ge5": 16,
+      "pass": true
+    },
+    {
+      "species": "Plecotus auritus",
+      "cells": 389,
+      "blocks_ge5": 9,
+      "pass": true
+    },
+    {
+      "species": "Myotis daubentonii",
+      "cells": 243,
+      "blocks_ge5": 12,
+      "pass": true
+    },
+    {
+      "species": "Pipistrellus kuhlii",
+      "cells": 242,
+      "blocks_ge5": 11,
+      "pass": true
+    },
+    {
+      "species": "Nyctalus leisleri",
+      "cells": 234,
+      "blocks_ge5": 12,
+      "pass": true
+    },
+    {
+      "species": "Pipistrellus nathusii",
+      "cells": 206,
+      "blocks_ge5": 7,
+      "pass": true
+    },
+    {
+      "species": "Tadarida teniotis",
+      "cells": 125,
+      "blocks_ge5": 4,
+      "pass": true
+    },
+    {
+      "species": "Rhinolophus hipposideros",
+      "cells": 105,
+      "blocks_ge5": 6,
+      "pass": true
+    },
+    {
+      "species": "Rhinolophus ferrumequinum",
+      "cells": 102,
+      "blocks_ge5": 4,
+      "pass": true
+    },
+    {
+      "species": "Myotis nattereri",
+      "cells": 94,
+      "blocks_ge5": 6,
+      "pass": true
+    },
+    {
+      "species": "Myotis myotis",
+      "cells": 93,
+      "blocks_ge5": 7,
+      "pass": true
+    },
+    {
+      "species": "Myotis mystacinus",
+      "cells": 87,
+      "blocks_ge5": 5,
+      "pass": true
+    },
+    {
+      "species": "Myotis emarginatus",
+      "cells": 84,
+      "blocks_ge5": 4,
+      "pass": true
+    },
+    {
+      "species": "Barbastella barbastellus",
+      "cells": 51,
+      "blocks_ge5": 2,
+      "pass": false
+    },
+    {
+      "species": "Vespertilio murinus",
+      "cells": 50,
+      "blocks_ge5": 4,
+      "pass": true
+    },
+    {
+      "species": "Myotis bechsteinii",
+      "cells": 33,
+      "blocks_ge5": 2,
+      "pass": false
+    },
+    {
+      "species": "Eptesicus nilssonii",
+      "cells": 18,
+      "blocks_ge5": 0,
+      "pass": false
+    },
+    {
+      "species": "Miniopterus schreibersii",
+      "cells": 18,
+      "blocks_ge5": 1,
+      "pass": false
+    },
+    {
+      "species": "Plecotus austriacus",
+      "cells": 15,
+      "blocks_ge5": 0,
+      "pass": false
+    },
+    {
+      "species": "Myotis brandtii",
+      "cells": 11,
+      "blocks_ge5": 1,
+      "pass": false
+    },
+    {
+      "species": "Rhinolophus euryale",
+      "cells": 7,
+      "blocks_ge5": 1,
+      "pass": false
+    },
+    {
+      "species": "Myotis dasycneme",
+      "cells": 6,
+      "blocks_ge5": 0,
+      "pass": false
+    },
+    {
+      "species": "Nyctalus lasiopterus",
+      "cells": 6,
+      "blocks_ge5": 0,
+      "pass": false
+    },
+    {
+      "species": "Myotis capaccinii",
+      "cells": 3,
+      "blocks_ge5": 0,
+      "pass": false
+    },
+    {
+      "species": "Rhinolophus blasii",
+      "cells": 2,
+      "blocks_ge5": 0,
+      "pass": false
+    }
+  ],
+  "physical_trait_species_support_north": [
+    {
+      "species": "Eptesicus nilssonii",
+      "cells": 1328,
+      "blocks_ge5": 38,
+      "pass": true
+    },
+    {
+      "species": "Nyctalus noctula",
+      "cells": 1130,
+      "blocks_ge5": 26,
+      "pass": true
+    },
+    {
+      "species": "Myotis daubentonii",
+      "cells": 939,
+      "blocks_ge5": 34,
+      "pass": true
+    },
+    {
+      "species": "Pipistrellus pipistrellus",
+      "cells": 927,
+      "blocks_ge5": 19,
+      "pass": true
+    },
+    {
+      "species": "Plecotus auritus",
+      "cells": 793,
+      "blocks_ge5": 27,
+      "pass": true
+    },
+    {
+      "species": "Pipistrellus nathusii",
+      "cells": 643,
+      "blocks_ge5": 22,
+      "pass": true
+    },
+    {
+      "species": "Eptesicus serotinus",
+      "cells": 604,
+      "blocks_ge5": 16,
+      "pass": true
+    },
+    {
+      "species": "Vespertilio murinus",
+      "cells": 375,
+      "blocks_ge5": 12,
+      "pass": true
+    },
+    {
+      "species": "Myotis nattereri",
+      "cells": 209,
+      "blocks_ge5": 10,
+      "pass": true
+    },
+    {
+      "species": "Barbastella barbastellus",
+      "cells": 142,
+      "blocks_ge5": 6,
+      "pass": true
+    },
+    {
+      "species": "Myotis mystacinus",
+      "cells": 112,
+      "blocks_ge5": 11,
+      "pass": true
+    },
+    {
+      "species": "Myotis brandtii",
+      "cells": 103,
+      "blocks_ge5": 7,
+      "pass": true
+    },
+    {
+      "species": "Myotis dasycneme",
+      "cells": 101,
+      "blocks_ge5": 3,
+      "pass": false
+    },
+    {
+      "species": "Nyctalus leisleri",
+      "cells": 46,
+      "blocks_ge5": 2,
+      "pass": false
+    },
+    {
+      "species": "Myotis myotis",
+      "cells": 22,
+      "blocks_ge5": 1,
+      "pass": false
+    },
+    {
+      "species": "Myotis bechsteinii",
+      "cells": 7,
+      "blocks_ge5": 0,
+      "pass": false
+    },
+    {
+      "species": "Nyctalus lasiopterus",
+      "cells": 6,
+      "blocks_ge5": 0,
+      "pass": false
+    },
+    {
+      "species": "Plecotus austriacus",
+      "cells": 4,
+      "blocks_ge5": 0,
+      "pass": false
+    },
+    {
+      "species": "Rhinolophus ferrumequinum",
+      "cells": 1,
+      "blocks_ge5": 0,
+      "pass": false
+    }
+  ],
+  "forest_gate_species_all": 20,
+  "forest_gate_species_training_latitude": 16,
+  "forest_gate_species_north": 12,
+  "admitted_for_model": false,
+  "limitations": [
+    "Fixed August snapshot; no mixing November occurrence records. Exact-name taxonomic bridge remains provisional.",
+    "Area-weighted GVSM RH quantiles, not physical air volume or measured PAVD. Northern extrapolation kept separate.",
+    "No terrain, roost/captive/season or final effort audit; target-group detections not absences. No ecological fit or occupancy estimate."
+  ],
+  "output_sha256": {
+    "cell_environment_common_grid.csv.gz": "5fc8ae81149ba9436882f3614b6eac8e51c7e79d0d88aa3c5ba15ccc717331e8",
+    "all_bat_species_cell_source_year_environment.csv.gz": "85ad737229aa7b10720a8d5c8bd0ea389f63f908c37871c7ce46ae87c9bed1d6"
+  },
+  "audit": {
+    "run_id": 45591426116,
+    "job_id": 139126335031,
+    "artifact_id": 15012939978,
+    "registry_digest": "sha256:afca6bf11fe5a75d7638a49de73b2cba1874e75d8cb24ed3f65c28957f25650a",
+    "head_sha": "1208a1141ce74643463f99f944049b6f61307dfa",
+    "checks": {
+      "artifact_digest_log": true,
+      "complete": true,
+      "cells": true,
+      "all_gate": true,
+      "south_gate": true,
+      "north_gate": true
+    },
+    "scope": "Exact completed job aggregate report and registry/upload digest; ZIP bytes not separately rehashed."
+  }
+}
