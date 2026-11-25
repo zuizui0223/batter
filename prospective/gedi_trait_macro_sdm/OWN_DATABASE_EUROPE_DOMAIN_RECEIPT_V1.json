@@ -1,0 +1,357 @@
+{
+  "stage": "continental-domain coverage only; not fitted SDM",
+  "query": {
+    "hasCoordinate": "true",
+    "hasGeospatialIssue": "false",
+    "eventDate": "2019-04-17,2023-03-16",
+    "geometry": "POLYGON((-12 35,30 35,30 51.6,-12 51.6,-12 35))",
+    "occurrenceStatus": "DETECTED",
+    "coordinateUncertaintyInMeters": "0.000001,500",
+    "basisOfRecord": [
+      "HUMAN_OBSERVATION",
+      "MACHINE_OBSERVATION",
+      "OBSERVATION"
+    ]
+  },
+  "checked_utc": "2026-11-25T08:46:33.470916+00:00",
+  "scope": "fixed Europe_GEDI rectangle includes neighboring non-European land; no country filtering",
+  "species_count": 28,
+  "budget": {
+    "per_species_complete": 6000,
+    "total_complete": 120000
+  },
+  "species": [
+    {
+      "species_key": "2432359",
+      "species": "Eptesicus serotinus",
+      "query_count": 2087,
+      "status": "COMPLETE_LIVE_QUERY",
+      "raw_records": 2087,
+      "eligible_records": 2087,
+      "unique_1km_cells": 469,
+      "blocks_5_cells": 19,
+      "provisional_coverage_pass": true
+    },
+    {
+      "species_key": "2432389",
+      "species": "Myotis nattereri",
+      "query_count": 249,
+      "status": "COMPLETE_LIVE_QUERY",
+      "raw_records": 249,
+      "eligible_records": 249,
+      "unique_1km_cells": 179,
+      "blocks_5_cells": 9,
+      "provisional_coverage_pass": true
+    },
+    {
+      "species_key": "2432414",
+      "species": "Myotis oxygnathus",
+      "query_count": 35,
+      "status": "COMPLETE_LIVE_QUERY",
+      "raw_records": 35,
+      "eligible_records": 35,
+      "unique_1km_cells": 26,
+      "blocks_5_cells": 1,
+      "provisional_coverage_pass": false
+    },
+    {
+      "species_key": "2432416",
+      "species": "Myotis myotis",
+      "query_count": 252,
+      "status": "COMPLETE_LIVE_QUERY",
+      "raw_records": 252,
+      "eligible_records": 252,
+      "unique_1km_cells": 131,
+      "blocks_5_cells": 8,
+      "provisional_coverage_pass": true
+    },
+    {
+      "species_key": "2432427",
+      "species": "Myotis bechsteinii",
+      "query_count": 85,
+      "status": "COMPLETE_LIVE_QUERY",
+      "raw_records": 85,
+      "eligible_records": 85,
+      "unique_1km_cells": 51,
+      "blocks_5_cells": 3,
+      "provisional_coverage_pass": false
+    },
+    {
+      "species_key": "2432430",
+      "species": "Myotis capaccinii",
+      "query_count": 36,
+      "status": "COMPLETE_LIVE_QUERY",
+      "raw_records": 36,
+      "eligible_records": 36,
+      "unique_1km_cells": 7,
+      "blocks_5_cells": 0,
+      "provisional_coverage_pass": false
+    },
+    {
+      "species_key": "2432439",
+      "species": "Myotis daubentonii",
+      "query_count": 767,
+      "status": "COMPLETE_LIVE_QUERY",
+      "raw_records": 767,
+      "eligible_records": 767,
+      "unique_1km_cells": 394,
+      "blocks_5_cells": 16,
+      "provisional_coverage_pass": true
+    },
+    {
+      "species_key": "2432452",
+      "species": "Myotis dasycneme",
+      "query_count": 35,
+      "status": "COMPLETE_LIVE_QUERY",
+      "raw_records": 35,
+      "eligible_records": 35,
+      "unique_1km_cells": 20,
+      "blocks_5_cells": 2,
+      "provisional_coverage_pass": false
+    },
+    {
+      "species_key": "2432470",
+      "species": "Myotis emarginatus",
+      "query_count": 267,
+      "status": "COMPLETE_LIVE_QUERY",
+      "raw_records": 267,
+      "eligible_records": 267,
+      "unique_1km_cells": 128,
+      "blocks_5_cells": 5,
+      "provisional_coverage_pass": true
+    },
+    {
+      "species_key": "2432564",
+      "species": "Vespertilio murinus",
+      "query_count": 170,
+      "status": "COMPLETE_LIVE_QUERY",
+      "raw_records": 170,
+      "eligible_records": 170,
+      "unique_1km_cells": 82,
+      "blocks_5_cells": 6,
+      "provisional_coverage_pass": true
+    },
+    {
+      "species_key": "2432582",
+      "species": "Barbastella barbastellus",
+      "query_count": 103,
+      "status": "COMPLETE_LIVE_QUERY",
+      "raw_records": 103,
+      "eligible_records": 103,
+      "unique_1km_cells": 66,
+      "blocks_5_cells": 2,
+      "provisional_coverage_pass": false
+    },
+    {
+      "species_key": "2432614",
+      "species": "Rhinolophus hipposideros",
+      "query_count": 207,
+      "status": "COMPLETE_LIVE_QUERY",
+      "raw_records": 207,
+      "eligible_records": 207,
+      "unique_1km_cells": 130,
+      "blocks_5_cells": 7,
+      "provisional_coverage_pass": true
+    },
+    {
+      "species_key": "2432621",
+      "species": "Rhinolophus euryale",
+      "query_count": 31,
+      "status": "COMPLETE_LIVE_QUERY",
+      "raw_records": 31,
+      "eligible_records": 31,
+      "unique_1km_cells": 11,
+      "blocks_5_cells": 1,
+      "provisional_coverage_pass": false
+    },
+    {
+      "species_key": "2432655",
+      "species": "Rhinolophus ferrumequinum",
+      "query_count": 198,
+      "status": "COMPLETE_LIVE_QUERY",
+      "raw_records": 198,
+      "eligible_records": 198,
+      "unique_1km_cells": 146,
+      "blocks_5_cells": 7,
+      "provisional_coverage_pass": true
+    },
+    {
+      "species_key": "2432666",
+      "species": "Rhinolophus blasii",
+      "query_count": 3,
+      "status": "COMPLETE_LIVE_QUERY",
+      "raw_records": 3,
+      "eligible_records": 3,
+      "unique_1km_cells": 3,
+      "blocks_5_cells": 0,
+      "provisional_coverage_pass": false
+    },
+    {
+      "species_key": "2433009",
+      "species": "Tadarida teniotis",
+      "query_count": null,
+      "status": "COUNT_ERROR",
+      "error": "RuntimeError: GBIF request failed after bounded retries"
+    },
+    {
+      "species_key": "5218464",
+      "species": "Pipistrellus kuhlii",
+      "query_count": 1056,
+      "status": "COMPLETE_LIVE_QUERY",
+      "raw_records": 1056,
+      "eligible_records": 1056,
+      "unique_1km_cells": 212,
+      "blocks_5_cells": 7,
+      "provisional_coverage_pass": true
+    },
+    {
+      "species_key": "5218465",
+      "species": "Pipistrellus pipistrellus",
+      "query_count": 140530,
+      "status": "COUNT_ONLY_HIGH_VOLUME"
+    },
+    {
+      "species_key": "5218471",
+      "species": "Pipistrellus nathusii",
+      "query_count": 3538,
+      "status": "COMPLETE_LIVE_QUERY",
+      "raw_records": 3538,
+      "eligible_records": 3538,
+      "unique_1km_cells": 461,
+      "blocks_5_cells": 17,
+      "provisional_coverage_pass": true
+    },
+    {
+      "species_key": "5218507",
+      "species": "Plecotus auritus",
+      "query_count": 3462,
+      "status": "COMPLETE_LIVE_QUERY",
+      "raw_records": 3462,
+      "eligible_records": 3462,
+      "unique_1km_cells": 761,
+      "blocks_5_cells": 11,
+      "provisional_coverage_pass": true
+    },
+    {
+      "species_key": "5218522",
+      "species": "Nyctalus leisleri",
+      "query_count": 4389,
+      "status": "COMPLETE_LIVE_QUERY",
+      "raw_records": 4389,
+      "eligible_records": 4389,
+      "unique_1km_cells": 407,
+      "blocks_5_cells": 21,
+      "provisional_coverage_pass": true
+    },
+    {
+      "species_key": "5218524",
+      "species": "Nyctalus noctula",
+      "query_count": 3154,
+      "status": "COMPLETE_LIVE_QUERY",
+      "raw_records": 3154,
+      "eligible_records": 3154,
+      "unique_1km_cells": 915,
+      "blocks_5_cells": 26,
+      "provisional_coverage_pass": true
+    },
+    {
+      "species_key": "5218525",
+      "species": "Nyctalus lasiopterus",
+      "query_count": 30,
+      "status": "COMPLETE_LIVE_QUERY",
+      "raw_records": 30,
+      "eligible_records": 30,
+      "unique_1km_cells": 10,
+      "blocks_5_cells": 0,
+      "provisional_coverage_pass": false
+    },
+    {
+      "species_key": "5739437",
+      "species": "Plecotus austriacus",
+      "query_count": 69,
+      "status": "COMPLETE_LIVE_QUERY",
+      "raw_records": 69,
+      "eligible_records": 69,
+      "unique_1km_cells": 48,
+      "blocks_5_cells": 3,
+      "provisional_coverage_pass": false
+    },
+    {
+      "species_key": "7261816",
+      "species": "Eptesicus nilssonii",
+      "query_count": 101,
+      "status": "COMPLETE_LIVE_QUERY",
+      "raw_records": 101,
+      "eligible_records": 101,
+      "unique_1km_cells": 15,
+      "blocks_5_cells": 0,
+      "provisional_coverage_pass": false
+    },
+    {
+      "species_key": "7261875",
+      "species": "Myotis brandtii",
+      "query_count": 24,
+      "status": "COMPLETE_LIVE_QUERY",
+      "raw_records": 24,
+      "eligible_records": 24,
+      "unique_1km_cells": 19,
+      "blocks_5_cells": 1,
+      "provisional_coverage_pass": false
+    },
+    {
+      "species_key": "9754263",
+      "species": "Myotis mystacinus",
+      "query_count": 173,
+      "status": "COMPLETE_LIVE_QUERY",
+      "raw_records": 173,
+      "eligible_records": 173,
+      "unique_1km_cells": 132,
+      "blocks_5_cells": 7,
+      "provisional_coverage_pass": true
+    },
+    {
+      "species_key": "9796816",
+      "species": "Miniopterus schreibersii",
+      "query_count": 263,
+      "status": "COMPLETE_LIVE_QUERY",
+      "raw_records": 263,
+      "eligible_records": 263,
+      "unique_1km_cells": 31,
+      "blocks_5_cells": 1,
+      "provisional_coverage_pass": false
+    }
+  ],
+  "planned_complete_records": 20784,
+  "completed_species": 26,
+  "complete_query_records": 20784,
+  "eligible_records": 20784,
+  "complete_species_cells": 4854,
+  "provisional_coverage_pass_species": 14,
+  "count_only_high_volume_species": 1,
+  "original_S1_admission": false,
+  "limits": [
+    "Count-only high-volume species are deferred, not failed biological coverage.",
+    "No raster, effort, terrain, roost, season or final DOI audit; no PAVD support.",
+    "No inference about occurrence, selection or trait effects."
+  ],
+  "output_sha256": "a3bac38f1961240a235e351207b1497712585fc9d2f8506ab0209d28019354b9",
+  "audit": {
+    "run_id": 45579163494,
+    "job_id": 139084518296,
+    "artifact_id": 15006026344,
+    "registry_digest": "sha256:663e337d7c1ae6be55bdd82daa7dcfb4322c24694941ff023512ccbf59f8fe57",
+    "artifact_bytes": 48608,
+    "head_sha": "2e58615626f77df67817b90c0649e2ed91afc4d5",
+    "checks": {
+      "species_roster": true,
+      "complete_roster": true,
+      "record_sum": true,
+      "cell_sum": true,
+      "eligible_sum": true,
+      "gate_sum": true
+    },
+    "scope": "Exact report parsed from successful log; registered artifact digest not independently rehashed here."
+  },
+  "provisional_gate_upper_bound_for_completed_snapshot_plus_unresolved": 16,
+  "upper_bound_scope": "Conditional on already completed queries being held fixed; unresolved taxa could at most add one each. Not a bound on wider country-filtered Europe or on a different occurrence snapshot."
+}
