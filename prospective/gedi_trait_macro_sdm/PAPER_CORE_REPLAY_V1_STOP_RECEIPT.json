@@ -1,0 +1,84 @@
+{
+  "status": "STOP",
+  "scope": "independent ZIP rehash and clean replay of four core recorded-label analyses, no new model",
+  "environment": {
+    "python": "3.12.16",
+    "numpy": "2.5.5",
+    "pandas": "3.1.1",
+    "scipy": "1.18.1"
+  },
+  "inputs": {
+    "common_forest": {
+      "artifact_id": 15007174727,
+      "archive_bytes": 1486227,
+      "sha256": "a5a08ae265f9729cd0b57f820b88b8440199288749006cb14dd82ee38616cbbb",
+      "archive_digest_verified": true
+    },
+    "fixed_environment": {
+      "artifact_id": 15012939978,
+      "archive_bytes": 6777535,
+      "sha256": "afca6bf11fe5a75d7638a49de73b2cba1874e75d8cb24ed3f65c28957f25650a",
+      "archive_digest_verified": true
+    },
+    "holdout": {
+      "artifact_id": 15010764600,
+      "archive_bytes": 195711,
+      "sha256": "4ce5c239b1ad442d83b4861b899c504e40dfb02bb1a0c5e9ef335a650b34460c",
+      "archive_digest_verified": true
+    },
+    "observation": {
+      "artifact_id": 15012136742,
+      "archive_bytes": 200708,
+      "sha256": "053567fa0cc43993aec472a3c5bc966a2c6df5306767e66ff6d65f826a7cf900",
+      "archive_digest_verified": true
+    },
+    "traits": {
+      "artifact_id": 15005261316,
+      "archive_bytes": 1052947,
+      "sha256": "7ed2df73b812f51f6376590136c79fb5acf42b41395e4e3f68830fb66120b490",
+      "archive_digest_verified": true
+    },
+    "physical": {
+      "artifact_id": 15004406365,
+      "archive_bytes": 6132,
+      "sha256": "3866df0cc71e1e5556162d26f9a757b7f31b0edddc339c1105ba7bd47e197408",
+      "archive_digest_verified": true
+    }
+  },
+  "analyses": {
+    "observed_label_sorting": {
+      "script_blob": "1b7dd6768aad0735778ffd3744aa764643f2eb48",
+      "numeric": 450,
+      "other": 25,
+      "max_abs_numeric_difference": 7.173559524176198e-10,
+      "status": "MATCH",
+      "result_sha256": "8fccc7353240eb6b7f73e47f273379c27a9308258d7759638aa3f418bbec0792"
+    },
+    "sorting_transfer_diagnostic": {
+      "script_blob": "1ca160c5a1fe179e2f721ec3f4753a28a05d7e59",
+      "numeric": 578,
+      "other": 104,
+      "max_abs_numeric_difference": 0,
+      "status": "MATCH",
+      "result_sha256": "47639dbc90c7cde29d757ba24faa9e46ddf0777adeae87be3a5ac444d8cff053"
+    },
+    "fixed_profile_validation": {
+      "script_blob": "23cfa845156dd8db8abf8051e666d1f4f449a4e4",
+      "numeric": 303,
+      "other": 113,
+      "max_abs_numeric_difference": 0,
+      "status": "MATCH",
+      "result_sha256": "c7b7f3299900c12ce5c472594b8a20f8bf045680495c2b1bacbed886c509108b"
+    }
+  },
+  "error_type": "ValueError",
+  "error": "unexpected field /trait_cold_start_transfer/pairs",
+  "audit": {
+    "run_id": 45601300066,
+    "job_id": 139160605427,
+    "artifact_id": 15014714186,
+    "registry_digest": "sha256:d99d4359f0ab76b21f04b2d63aa265c96aef989858a32d298da1cffec2c45c98",
+    "job_conclusion": "failure"
+  },
+  "interpretation": "All six input ZIP bytes independently verified. Three exact original analyses matched archived reports. Northern fit executed but comparison stopped on pair-specific report field absent from the archived summary. Do not claim northern replay match until complete artifact checked."
+}
