@@ -24,7 +24,15 @@ def sha(p):
 def read(name):
     hit=list(SRC.glob("*_"+name));assert len(hit)==1,(name,len(hit))
     p=hit[0];assert sha(p)==PINS[name],name
-    return pd.read_csv(p,dtype=str,keep_default_na=False)
+    import io
+    raw=p.read_bytes()
+    # Preserve original byte hash and avoid replacement characters. Legacy
+    # European author strings may be encoded Windows-1252/ISO-8859-1.
+    for encoding in ("utf-8-sig","cp1252","iso-8859-1"):
+        try:decoded=raw.decode(encoding,errors="strict");break
+        except UnicodeDecodeError:continue
+    R.setdefault("source_text_decoding",{})[name]=encoding
+    return pd.read_csv(io.StringIO(decoded),dtype=str,keep_default_na=False)
 def num(x):
     v=pd.to_numeric(x,errors="coerce")
     return v.where(np.isfinite(v)&v.gt(0))
