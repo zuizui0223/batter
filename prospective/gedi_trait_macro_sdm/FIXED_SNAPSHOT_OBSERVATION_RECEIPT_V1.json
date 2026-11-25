@@ -1,0 +1,273 @@
+{
+  "stage": "observation metadata audit, no ecological model",
+  "snapshot_doi": "10.15468/dl.8yrbe7",
+  "raw_records": 219960,
+  "unique_keys": 219960,
+  "datasets": 240,
+  "species": 39,
+  "metadata_nonempty": {
+    "event_id": 143476,
+    "protocol": 127033,
+    "establishment": 0,
+    "remarks": 10101,
+    "habitat": 2101,
+    "locality": 26040,
+    "behavior": 175559,
+    "id_qualifier": 0,
+    "taxonomic_status": 219960
+  },
+  "by_basis": {
+    "HUMAN_OBSERVATION": 213969,
+    "MACHINE_OBSERVATION": 5991
+  },
+  "by_taxonomic_status": {
+    "ACCEPTED": 219502,
+    "SYNONYM": 458
+  },
+  "by_establishment": {
+    "None": 219960
+  },
+  "limits": [
+    "Keyword flags are screening candidates, not verified observation classes. Missing text is unknown, not evidence of flight or wild status.",
+    "EventID scoped by dataset; shared IDs/locations do not establish standardized effort or complete species checklists.",
+    "No inference of absence from unreported taxa. License review required before redistribution of derived records."
+  ],
+  "flags": {
+    "flag_explicit_captive": 0,
+    "flag_roost_context": 684,
+    "flag_acoustic_context": 2273,
+    "flag_capture_context": 1271,
+    "event_present": 143476,
+    "protocol_present": 127033
+  },
+  "context_overlap": {
+    "flag_explicit_captive_flag_roost_context": 0,
+    "flag_explicit_captive_flag_acoustic_context": 0,
+    "flag_explicit_captive_flag_capture_context": 0,
+    "flag_roost_context_flag_acoustic_context": 14,
+    "flag_roost_context_flag_capture_context": 0,
+    "flag_acoustic_context_flag_capture_context": 0
+  },
+  "event_structure": {
+    "unique_dataset_event_ids": 132071,
+    "multi_species_events": 4128,
+    "single_day_single_cell_events": 132071,
+    "multi_species_single_day_single_cell_events": 4128,
+    "multi_date_events": 0,
+    "multi_cell_events": 0
+  },
+  "largest_sources": [
+    {
+      "dataset_key": "56ab7bb6-fc2d-4c6a-b2c0-f6a74b57faf2",
+      "records": 78000,
+      "species": 3,
+      "cells": 4,
+      "source_years": 1,
+      "flag_explicit_captive": 0,
+      "flag_roost_context": 0,
+      "flag_acoustic_context": 0,
+      "flag_capture_context": 0,
+      "event_present": 78000,
+      "protocol_present": 78000
+    },
+    {
+      "dataset_key": "bda96dc3-956c-43cc-bf0d-3567f948866d",
+      "records": 58594,
+      "species": 10,
+      "cells": 1070,
+      "source_years": 5,
+      "flag_explicit_captive": 0,
+      "flag_roost_context": 0,
+      "flag_acoustic_context": 0,
+      "flag_capture_context": 0,
+      "event_present": 0,
+      "protocol_present": 0
+    },
+    {
+      "dataset_key": "af9c2438-4009-4f7e-9358-6890d999216e",
+      "records": 15050,
+      "species": 6,
+      "cells": 1,
+      "source_years": 1,
+      "flag_explicit_captive": 0,
+      "flag_roost_context": 0,
+      "flag_acoustic_context": 0,
+      "flag_capture_context": 0,
+      "event_present": 15050,
+      "protocol_present": 15050
+    },
+    {
+      "dataset_key": "67e2335c-4303-4ee3-9bfe-ecfe65662629",
+      "records": 8051,
+      "species": 12,
+      "cells": 2189,
+      "source_years": 5,
+      "flag_explicit_captive": 0,
+      "flag_roost_context": 665,
+      "flag_acoustic_context": 745,
+      "flag_capture_context": 5,
+      "event_present": 8051,
+      "protocol_present": 0
+    },
+    {
+      "dataset_key": "38b4c89f-584c-41bb-bd8f-cd1def33e92f",
+      "records": 7374,
+      "species": 19,
+      "cells": 1887,
+      "source_years": 5,
+      "flag_explicit_captive": 0,
+      "flag_roost_context": 0,
+      "flag_acoustic_context": 799,
+      "flag_capture_context": 243,
+      "event_present": 7374,
+      "protocol_present": 5203
+    },
+    {
+      "dataset_key": "67fabcac-a638-40a6-9bea-aeca8aced9f1",
+      "records": 5953,
+      "species": 14,
+      "cells": 654,
+      "source_years": 4,
+      "flag_explicit_captive": 0,
+      "flag_roost_context": 0,
+      "flag_acoustic_context": 0,
+      "flag_capture_context": 0,
+      "event_present": 5953,
+      "protocol_present": 0
+    },
+    {
+      "dataset_key": "11371714-e323-4e83-89f2-4d809e177514",
+      "records": 5547,
+      "species": 9,
+      "cells": 49,
+      "source_years": 3,
+      "flag_explicit_captive": 0,
+      "flag_roost_context": 0,
+      "flag_acoustic_context": 0,
+      "flag_capture_context": 0,
+      "event_present": 0,
+      "protocol_present": 0
+    },
+    {
+      "dataset_key": "8a863029-f435-446a-821e-275f4f641165",
+      "records": 4265,
+      "species": 31,
+      "cells": 1380,
+      "source_years": 5,
+      "flag_explicit_captive": 0,
+      "flag_roost_context": 0,
+      "flag_acoustic_context": 0,
+      "flag_capture_context": 0,
+      "event_present": 3,
+      "protocol_present": 3619
+    },
+    {
+      "dataset_key": "412fb6c1-ccba-4cd3-b6e0-6b1f61867f19",
+      "records": 3175,
+      "species": 4,
+      "cells": 1,
+      "source_years": 2,
+      "flag_explicit_captive": 0,
+      "flag_roost_context": 0,
+      "flag_acoustic_context": 0,
+      "flag_capture_context": 0,
+      "event_present": 3175,
+      "protocol_present": 3175
+    },
+    {
+      "dataset_key": "a016cf08-3ad0-40cd-8026-46af5b48eef0",
+      "records": 2531,
+      "species": 4,
+      "cells": 6,
+      "source_years": 2,
+      "flag_explicit_captive": 0,
+      "flag_roost_context": 0,
+      "flag_acoustic_context": 0,
+      "flag_capture_context": 0,
+      "event_present": 2531,
+      "protocol_present": 2531
+    }
+  ],
+  "n_sources_event_id_for_all_records": 216,
+  "n_sources_protocol_for_all_records": 89,
+  "geographic_support_sensitivity": {
+    "all": {
+      "all_latitudes": {
+        "records": 210327,
+        "species_cells": 20231,
+        "species_with_geographic_pass": 20
+      },
+      "training_latitude": {
+        "records": 149100,
+        "species_cells": 7472,
+        "species_with_geographic_pass": 16
+      }
+    },
+    "exclude_explicit_captive": {
+      "all_latitudes": {
+        "records": 210327,
+        "species_cells": 20231,
+        "species_with_geographic_pass": 20
+      },
+      "training_latitude": {
+        "records": 149100,
+        "species_cells": 7472,
+        "species_with_geographic_pass": 16
+      }
+    },
+    "exclude_captive_and_roost_flag": {
+      "all_latitudes": {
+        "records": 209832,
+        "species_cells": 19979,
+        "species_with_geographic_pass": 20
+      },
+      "training_latitude": {
+        "records": 148765,
+        "species_cells": 7326,
+        "species_with_geographic_pass": 16
+      }
+    },
+    "explicit_acoustic_no_captive_roost": {
+      "all_latitudes": {
+        "records": 1673,
+        "species_cells": 1183,
+        "species_with_geographic_pass": 5
+      },
+      "training_latitude": {
+        "records": 813,
+        "species_cells": 599,
+        "species_with_geographic_pass": 2
+      }
+    }
+  },
+  "outputs": {
+    "dataset_observation_metadata_audit.csv": "1dc2b77fc61e7619d3c7ff6a1b8f87184fc61cd99b7b92a288bf17bcb0c05753",
+    "source_cell_year_observation_flags.csv.gz": "de971292065a8aee3491880adb00a5623efae61bc83b2bd2ae4d663b45edf0f0"
+  },
+  "status": "OBSERVATION_AUDIT_COMPLETE_NOT_EFFORT_CALIBRATED",
+  "audit": {
+    "run_id": 45593509220,
+    "job_id": 139133497867,
+    "artifact_id": 15012136742,
+    "registry_digest": "sha256:053567fa0cc43993aec472a3c5bc966a2c6df5306767e66ff6d65f826a7cf900",
+    "head_sha": "d362612c028ddbc88e0015c4fb7a7ce3e564daa5",
+    "checks": {
+      "unique_keys": true,
+      "basis_sum": true,
+      "taxon_status_sum": true,
+      "event_subset": true,
+      "artifact_registry_matches_log": true
+    },
+    "scope": "Exact report from completed job log; artifact registry digest matches upload log; archive ZIP not independently rehashed."
+  },
+  "additional_descriptive_summary": {
+    "records": 219960,
+    "protocol": 127033,
+    "roost_flags": 684,
+    "in_domain_pre_environment": {
+      "records": 148765,
+      "species_cells": 7326,
+      "species_with_geographic_pass": 16
+    }
+  }
+}
