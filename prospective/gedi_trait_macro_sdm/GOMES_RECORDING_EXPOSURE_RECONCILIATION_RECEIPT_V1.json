@@ -1,0 +1,401 @@
+{
+  "stage": "source-count and nominal-exposure reconciliation; no ecological fit",
+  "source_doi": "10.5281/zenodo.4265167",
+  "status": "EXPOSURE_AUDIT_COMPLETE_ACTUAL_UPTIME_UNKNOWN",
+  "source_hashes": {
+    "Bats.csv": "5e09a20dbc80d9405f522a576d42f85c4b8f0a19d35dda8c50f8a26135b0fa14",
+    "Bats_Unconsolidated.csv": "2fc73130d23ae4bbc173ce2c7d92bad50a171eb8887b9af64d1f22d88d26a902",
+    "Headers.txt": "0233dd99a7f335b4f28133a526ac72aa860cde5756d4bc1726c151d87b17b73b",
+    "Headers_Unconsolidated.txt": "1928e4879b0227e2cca8a9dcd49adce3505820bf483f5a44be06f06a9d456d41",
+    "Hourly_Models.R": "0f334c55262e853cf4dcd94f617324041dc781521da3ca12754b559f5d62947b",
+    "Species_DensityPlots.R": "2fc6607de617512db242a0f21feae2743c86ea09a99fb5365fb02f451199a498",
+    "Nunez_etal_2019.csv": "ca75813d91dd6e4dbcbe6b2e18d780ca8c00b3c0638870aa599c3a01eebd278f"
+  },
+  "original_code_semantics": {
+    "Hourly_Models.R": [
+      {
+        "line": 67,
+        "text": "Bats<-read.csv(\"Bats.csv\")"
+      },
+      {
+        "line": 70,
+        "text": "Totals<-Bats %>% group_by(Bat) %>% summarise("
+      },
+      {
+        "line": 71,
+        "text": "Total=sum(Number))"
+      },
+      {
+        "line": 72,
+        "text": "Rem<-Totals$Bat[which(Totals$Total<=5)] #Make list of bat groups with fewer than 20 passes"
+      },
+      {
+        "line": 73,
+        "text": "Bats<-Bats[-which(Bats$Bat%in%Rem),] # remove them from data"
+      },
+      {
+        "line": 75,
+        "text": "Bats$Canopy<-as.factor(Bats$Canopy)"
+      },
+      {
+        "line": 76,
+        "text": "Bats$Canopy<-relevel(Bats$Canopy,\"below\") # make \"below\" the reference level"
+      },
+      {
+        "line": 78,
+        "text": "# Change Hour of day into hours since sunset"
+      },
+      {
+        "line": 79,
+        "text": "Bats$HOUR<-ifelse(Bats$HOUR<7,Bats$HOUR+24,Bats$HOUR)"
+      },
+      {
+        "line": 80,
+        "text": "Bats$HOUR<-Bats$HOUR-18"
+      },
+      {
+        "line": 85,
+        "text": "glmmGlobal_sp<-stan_glmer(Number~scale(M.Illm)+HOUR*Canopy+(HOUR*Canopy+scale(M.Illm)|Bat)+(1|Tower),"
+      },
+      {
+        "line": 105,
+        "text": "Batlist<-unique(Bats$Bat)"
+      },
+      {
+        "line": 126,
+        "text": "plot(glmmGlobal_Moonsp,regex_pars = c(\"^HOUR$\",\"HOUR \"),"
+      },
+      {
+        "line": 131,
+        "text": "labs(x=\"\\nEffect size: hour after sunset\\n(negative = fewer over time; positive = more over time)\\n\")+"
+      },
+      {
+        "line": 138,
+        "text": "Bats$Canopy<-relevel(Bats$Canopy,\"above\")"
+      },
+      {
+        "line": 146,
+        "text": "plot(glmmGlobal_Above,regex_pars = c(\"^HOUR$\",\"HOUR \"),"
+      },
+      {
+        "line": 151,
+        "text": "labs(x=\"\\nEffect size: hour after sunset\\n(negative = fewer over time; positive = more over time)\\n\")+"
+      },
+      {
+        "line": 158,
+        "text": "Batlist<-unique(Bats$Bat)"
+      },
+      {
+        "line": 200,
+        "text": "Table$Variable<-gsub(\"HOUR\",\"Hour\",Table$Variable)"
+      },
+      {
+        "line": 203,
+        "text": "Table$Variable<-gsub(\"Bat:\",\"|\",Table$Variable)"
+      },
+      {
+        "line": 213,
+        "text": "-(1-exp(glmmGlobal_sp$coefficients[3])) # estimate for hour below"
+      },
+      {
+        "line": 225,
+        "text": "## Vesp1 by hour"
+      },
+      {
+        "line": 230,
+        "text": "-(1-exp(glmmGlobal_Above$coefficients[3])) # estimate for hour above"
+      }
+    ],
+    "Species_DensityPlots.R": [
+      {
+        "line": 5,
+        "text": "BD<-read.csv(\"Bats_Unconsolidated.csv\",row.names=1)"
+      },
+      {
+        "line": 7,
+        "text": "BD$DATE<-paste0(substr(BD$DATE,7,10),\"-\",substr(BD$DATE,4,5),\"-\",substr(BD$DATE,1,2))"
+      },
+      {
+        "line": 9,
+        "text": "BD$DateTimeOriginal<-paste(BD$DATE,BD$TIME)"
+      },
+      {
+        "line": 11,
+        "text": "BD$Canopy<-substr(BD$Position_color,1,5)"
+      },
+      {
+        "line": 100,
+        "text": "A <- ifelse(A < pi, A, A - 2 * pi)"
+      },
+      {
+        "line": 140,
+        "text": "recordTable$Time.rad <- (as.numeric(as.POSIXct(strptime(recordTable$Time2,"
+      },
+      {
+        "line": 141,
+        "text": "format = \"%H:%M:%S\", tz = timeZone))) - as.numeric(as.POSIXct(strptime(\"0\","
+      },
+      {
+        "line": 162,
+        "text": "subset_species <- subset(recordTable, recordTable[, speciesCol] =="
+      },
+      {
+        "line": 170,
+        "text": "species, \"_\", Sys.Date(), \".png\","
+      },
+      {
+        "line": 189,
+        "text": "subset_species <- subset(recordTable, recordTable[,"
+      },
+      {
+        "line": 201,
+        "text": "spec.tmp, \"_\", Sys.Date(), \".png\","
+      },
+      {
+        "line": 232,
+        "text": "activityDensityC(recordTable = BD[BD$Canopy==AB,],"
+      }
+    ]
+  },
+  "table_counts": {
+    "raw_rows": 16123,
+    "consolidated_rows": 7854,
+    "consolidated_sum": 16123,
+    "raw_by_position": {
+      "below": 3972,
+      "above": 12151
+    },
+    "consolidated_by_position": {
+      "above": 12151,
+      "below": 3972
+    },
+    "published_pass_count_check": true
+  },
+  "date_semantics": {
+    "consolidated_date_cardinality": 9,
+    "raw_date_cardinality": 10,
+    "DAY_equals_calendar_date_rows": 7854,
+    "DAY_equals_evening_date_rows": 3759,
+    "consolidated_hour_levels": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "raw_hour_levels": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ]
+  },
+  "acoustic_code_support": {
+    "raw_only_codes": [
+      "Permac"
+    ],
+    "consolidated_only_codes": [],
+    "raw_codes": 22,
+    "consolidated_codes": 21,
+    "buzz_recorded_code_levels": [
+      "no",
+      "yes"
+    ]
+  },
+  "candidate_date_reconciliations": {
+    "calendar__calendar": {
+      "consolidated_keys": 7854,
+      "raw_positive_keys": 1185,
+      "common_positive_keys": 1060,
+      "exact_consolidated_keys": 7201,
+      "mismatched_consolidated_keys": 653,
+      "positive_consolidated_keys_without_raw": 282,
+      "raw_keys_outside_consolidated": 125,
+      "raw_counts_outside_consolidated": 706,
+      "sum_absolute_count_difference_on_consolidated": 5316,
+      "exact_full_reconciliation": false
+    },
+    "calendar__evening": {
+      "consolidated_keys": 7854,
+      "raw_positive_keys": 1185,
+      "common_positive_keys": 1184,
+      "exact_consolidated_keys": 7853,
+      "mismatched_consolidated_keys": 1,
+      "positive_consolidated_keys_without_raw": 0,
+      "raw_keys_outside_consolidated": 1,
+      "raw_counts_outside_consolidated": 1,
+      "sum_absolute_count_difference_on_consolidated": 1,
+      "exact_full_reconciliation": false
+    },
+    "evening__calendar": {
+      "consolidated_keys": 7854,
+      "raw_positive_keys": 1185,
+      "common_positive_keys": 1007,
+      "exact_consolidated_keys": 7206,
+      "mismatched_consolidated_keys": 648,
+      "positive_consolidated_keys_without_raw": 324,
+      "raw_keys_outside_consolidated": 178,
+      "raw_counts_outside_consolidated": 1160,
+      "sum_absolute_count_difference_on_consolidated": 5486,
+      "exact_full_reconciliation": false
+    },
+    "evening__evening": {
+      "consolidated_keys": 7854,
+      "raw_positive_keys": 1185,
+      "common_positive_keys": 1060,
+      "exact_consolidated_keys": 7201,
+      "mismatched_consolidated_keys": 653,
+      "positive_consolidated_keys_without_raw": 282,
+      "raw_keys_outside_consolidated": 125,
+      "raw_counts_outside_consolidated": 706,
+      "sum_absolute_count_difference_on_consolidated": 5316,
+      "exact_full_reconciliation": false
+    },
+    "day_label__calendar": {
+      "consolidated_keys": 7854,
+      "raw_positive_keys": 1185,
+      "common_positive_keys": 1060,
+      "exact_consolidated_keys": 7201,
+      "mismatched_consolidated_keys": 653,
+      "positive_consolidated_keys_without_raw": 282,
+      "raw_keys_outside_consolidated": 125,
+      "raw_counts_outside_consolidated": 706,
+      "sum_absolute_count_difference_on_consolidated": 5316,
+      "exact_full_reconciliation": false
+    },
+    "day_label__evening": {
+      "consolidated_keys": 7854,
+      "raw_positive_keys": 1185,
+      "common_positive_keys": 1184,
+      "exact_consolidated_keys": 7853,
+      "mismatched_consolidated_keys": 1,
+      "positive_consolidated_keys_without_raw": 0,
+      "raw_keys_outside_consolidated": 1,
+      "raw_counts_outside_consolidated": 1,
+      "sum_absolute_count_difference_on_consolidated": 1,
+      "exact_full_reconciliation": false
+    }
+  },
+  "nominal_grid_support": {
+    "day_labels": 9,
+    "hour_labels": 13,
+    "tower_labels": 2,
+    "cartesian_event_keys": 234,
+    "present_events": 218,
+    "paired_events": 156,
+    "one_sided_events": 62,
+    "absent_events": 16,
+    "complete_label_roster_on_all_present_detector_events": true,
+    "per_hour_support": {
+      "0": {
+        "paired": 11,
+        "one_sided": 6,
+        "absent": 1
+      },
+      "1": {
+        "paired": 8,
+        "one_sided": 9,
+        "absent": 1
+      },
+      "2": {
+        "paired": 12,
+        "one_sided": 3,
+        "absent": 3
+      },
+      "3": {
+        "paired": 12,
+        "one_sided": 5,
+        "absent": 1
+      },
+      "4": {
+        "paired": 12,
+        "one_sided": 4,
+        "absent": 2
+      },
+      "5": {
+        "paired": 13,
+        "one_sided": 4,
+        "absent": 1
+      },
+      "6": {
+        "paired": 11,
+        "one_sided": 6,
+        "absent": 1
+      },
+      "18": {
+        "paired": 11,
+        "one_sided": 6,
+        "absent": 1
+      },
+      "19": {
+        "paired": 15,
+        "one_sided": 2,
+        "absent": 1
+      },
+      "20": {
+        "paired": 14,
+        "one_sided": 3,
+        "absent": 1
+      },
+      "21": {
+        "paired": 13,
+        "one_sided": 4,
+        "absent": 1
+      },
+      "22": {
+        "paired": 12,
+        "one_sided": 5,
+        "absent": 1
+      },
+      "23": {
+        "paired": 12,
+        "one_sided": 5,
+        "absent": 1
+      }
+    },
+    "nominal_schedule_microphone_hours": 432,
+    "verified_actual_detector_hours": null
+  },
+  "limits": [
+    "Original article documents programmed sunset-to-sunrise recording, not independently verified hourly uptime.",
+    "Explicit zero detector counts may not imply a working detector, and unpaired hours remain excluded.",
+    "Raw-versus-consolidated reconciliation is an arithmetic check; do not resolve acoustic aliases by matching outcome patterns.",
+    "Two recording heights are detector placement, not actual flight altitude; no cross-study model admitted."
+  ],
+  "audit": {
+    "run_id": 45657169472,
+    "job_id": 139356846609,
+    "artifact_id": 15043176675,
+    "registry_digest": "sha256:e6358099eaaaa58e99689d52976b600b5f408f5228742b0130f4933b9ffaaed9",
+    "checks": {
+      "complete": true,
+      "original_hashes_verified": true,
+      "raw_consolidated_total_agree": true,
+      "grid_partition": true,
+      "paired_support_matches_prior": true,
+      "all_rows_accounted": true,
+      "remaining_discrepancy_retained": true,
+      "unknown_uptime_retained": true,
+      "registry_matches_log": true
+    },
+    "scope": "Completed original source support audit; no ecological fit."
+  },
+  "interpretation": "Raw dates use recording calendar day; consolidated dates represent evening label. Evening-date reconciliation matches 7853 of 7854 consolidated keys. One residual raw code Permac (case differs from permac), one count outside consolidated keys, and one count mismatch remain explicitly unresolved; no acoustic mapping changed. 156/234 nominal tower-hour-night keys are paired, 62 one-sided and 16 absent. This is table support, not detector uptime. No calibrated altitude or multistudy model admitted."
+}
