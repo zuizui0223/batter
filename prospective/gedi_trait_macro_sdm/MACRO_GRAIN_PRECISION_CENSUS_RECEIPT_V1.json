@@ -1,0 +1,6422 @@
+{
+  "stage": "independent continental macro precision and scale census, no fit",
+  "snapshot_doi": "10.15468/dl.8yrbe7",
+  "inventory_sha256": "14692b344c86a9f392f987924921d2c4cc723483a1669d808192d5003b0a3fae",
+  "prior_run": 45657223272,
+  "status": "MACRO_GRAIN_CENSUS_COMPLETE_NO_MODEL",
+  "regions": {
+    "North_America": {
+      "pre_precision_records": 10069,
+      "precision_attrition": {
+        "1km_eligible": {
+          "rows": 5514,
+          "unique_ids": 5514,
+          "species_keys": 97,
+          "providers": 5
+        },
+        "additional_12km": {
+          "rows": 154,
+          "unique_ids": 154,
+          "species_keys": 41,
+          "providers": 1
+        },
+        "additional_6km": {
+          "rows": 624,
+          "unique_ids": 624,
+          "species_keys": 65,
+          "providers": 2
+        },
+        "missing_or_unparseable": {
+          "rows": 1417,
+          "unique_ids": 1417,
+          "species_keys": 79,
+          "providers": 3
+        },
+        "over_6000m": {
+          "rows": 2360,
+          "unique_ids": 2360,
+          "species_keys": 85,
+          "providers": 1
+        }
+      },
+      "arms": {
+        "1km_same_and_compatible": {
+          "records": 5514,
+          "species_keys": 97,
+          "providers": 5,
+          "species_cells": 4156,
+          "unique_cells": 3591,
+          "top_provider_record_share": 0.9981864345302865,
+          "geographic_pass_center": 9,
+          "geographic_pass_wholly_contained": 9,
+          "geographic_pass_within_training_latitude_and_block": 9,
+          "records_crossing_200km_cell_boundary": 0,
+          "records_in_latitude_boundary_cells": 0,
+          "passing_species_cell_roster": [
+            {
+              "key": "353LY",
+              "names": [
+                "Desmodus rotundus"
+              ],
+              "cells": 44,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "36G4Q",
+              "names": [
+                "Diphylla ecaudata"
+              ],
+              "cells": 11,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "39NQY",
+              "names": [
+                "Enchisthenes hartii"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "3BZR6",
+              "names": [
+                "Euderma maculatum"
+              ],
+              "cells": 9,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "3GDTZ",
+              "names": [
+                "Glossophaga soricina"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "3SFMP",
+              "names": [
+                "Lasionycteris noctivagans"
+              ],
+              "cells": 244,
+              "blocks_ge5": 10,
+              "pass": true
+            },
+            {
+              "key": "3SGVF",
+              "names": [
+                "Lasiurus borealis"
+              ],
+              "cells": 529,
+              "blocks_ge5": 30,
+              "pass": true
+            },
+            {
+              "key": "3SGVZ",
+              "names": [
+                "Lasiurus seminolus"
+              ],
+              "cells": 29,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "3TSK7",
+              "names": [
+                "Leptonycteris nivalis"
+              ],
+              "cells": 3,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "3TSK9",
+              "names": [
+                "Leptonycteris yerbabuenae"
+              ],
+              "cells": 17,
+              "blocks_ge5": 2,
+              "pass": false
+            },
+            {
+              "key": "3VYBY",
+              "names": [
+                "Lonchorhina aurita"
+              ],
+              "cells": 4,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "3W4HB",
+              "names": [
+                "Lophostoma evotis"
+              ],
+              "cells": 3,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "3XCNM",
+              "names": [
+                "Macrotus californicus"
+              ],
+              "cells": 21,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "3XCNQ",
+              "names": [
+                "Macrotus waterhousii"
+              ],
+              "cells": 8,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4326L",
+              "names": [
+                "Micronycteris microtis"
+              ],
+              "cells": 10,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4326R",
+              "names": [
+                "Micronycteris schmidtorum"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "43FSS",
+              "names": [
+                "Mimon cozumelae"
+              ],
+              "cells": 16,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "43YHY",
+              "names": [
+                "Molossus molossus"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "43YJ8",
+              "names": [
+                "Molossus rufus"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "43YJ9",
+              "names": [
+                "Molossus sinaloae"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456DD",
+              "names": [
+                "Myotis auriculus"
+              ],
+              "cells": 6,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456DF",
+              "names": [
+                "Myotis austroriparius"
+              ],
+              "cells": 35,
+              "blocks_ge5": 2,
+              "pass": false
+            },
+            {
+              "key": "456DT",
+              "names": [
+                "Myotis californicus"
+              ],
+              "cells": 32,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "456DZ",
+              "names": [
+                "Myotis ciliolabrum"
+              ],
+              "cells": 22,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456FL",
+              "names": [
+                "Myotis lucifugus"
+              ],
+              "cells": 52,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456GB",
+              "names": [
+                "Myotis occultus"
+              ],
+              "cells": 6,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456H3",
+              "names": [
+                "Myotis septentrionalis"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456HC",
+              "names": [
+                "Myotis thysanodes"
+              ],
+              "cells": 14,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456HF",
+              "names": [
+                "Myotis velifer"
+              ],
+              "cells": 21,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456HG",
+              "names": [
+                "Myotis vivesi"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456HH",
+              "names": [
+                "Myotis volans"
+              ],
+              "cells": 5,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456HN",
+              "names": [
+                "Myotis yumanensis"
+              ],
+              "cells": 21,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "47KW3",
+              "names": [
+                "Noctilio leporinus"
+              ],
+              "cells": 3,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "485K4",
+              "names": [
+                "Nycticeius humeralis"
+              ],
+              "cells": 119,
+              "blocks_ge5": 6,
+              "pass": true
+            },
+            {
+              "key": "485PK",
+              "names": [
+                "Nyctinomops femorosaccus"
+              ],
+              "cells": 3,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "485PL",
+              "names": [
+                "Nyctinomops laticaudatus"
+              ],
+              "cells": 4,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "485PM",
+              "names": [
+                "Nyctinomops macrotis"
+              ],
+              "cells": 4,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4DDQR",
+              "names": [
+                "Parastrellus hesperus"
+              ],
+              "cells": 94,
+              "blocks_ge5": 6,
+              "pass": true
+            },
+            {
+              "key": "4F2FM",
+              "names": [
+                "Perimyotis subflavus"
+              ],
+              "cells": 16,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "4F8PP",
+              "names": [
+                "Peropteryx macrotis"
+              ],
+              "cells": 21,
+              "blocks_ge5": 2,
+              "pass": false
+            },
+            {
+              "key": "4HCWZ",
+              "names": [
+                "Phyllostomus discolor"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4JY2K",
+              "names": [
+                "Platyrrhinus helleri"
+              ],
+              "cells": 5,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4SJV6",
+              "names": [
+                "Rhogeessa aenea"
+              ],
+              "cells": 17,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "4SJVG",
+              "names": [
+                "Rhogeessa parvula"
+              ],
+              "cells": 4,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4SJVH",
+              "names": [
+                "Rhogeessa tumida"
+              ],
+              "cells": 3,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4SS3B",
+              "names": [
+                "Rhynchonycteris naso"
+              ],
+              "cells": 16,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "4TX8S",
+              "names": [
+                "Saccopteryx bilineata"
+              ],
+              "cells": 27,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "5383T",
+              "names": [
+                "Sturnira hondurensis"
+              ],
+              "cells": 3,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "53846",
+              "names": [
+                "Sturnira parvidens"
+              ],
+              "cells": 15,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "54GGQ",
+              "names": [
+                "Tadarida brasiliensis"
+              ],
+              "cells": 509,
+              "blocks_ge5": 30,
+              "pass": true
+            },
+            {
+              "key": "5XZ3L",
+              "names": [
+                "Choeroniscus godmani"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "5Y55Y",
+              "names": [
+                "Chiroderma villosum"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "5YK72",
+              "names": [
+                "Chrotopterus auritus"
+              ],
+              "cells": 5,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "679TK",
+              "names": [
+                "Anoura geoffroyi"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "684CY",
+              "names": [
+                "Artibeus jamaicensis"
+              ],
+              "cells": 154,
+              "blocks_ge5": 10,
+              "pass": true
+            },
+            {
+              "key": "69DLL",
+              "names": [
+                "Carollia sowelli"
+              ],
+              "cells": 7,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "69DLM",
+              "names": [
+                "Carollia perspicillata"
+              ],
+              "cells": 7,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "69YRM",
+              "names": [
+                "Choeronycteris mexicana"
+              ],
+              "cells": 25,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "6FZ59",
+              "names": [
+                "Eptesicus furinalis"
+              ],
+              "cells": 4,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6GYLM",
+              "names": [
+                "Eumops perotis"
+              ],
+              "cells": 9,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6GYLS",
+              "names": [
+                "Eumops underwoodi"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6GYM7",
+              "names": [
+                "Eumops auripendulus"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6MTLT",
+              "names": [
+                "Idionycteris phyllotis"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6NV9B",
+              "names": [
+                "Lampronycteris brachyotis"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6RNMY",
+              "names": [
+                "Molossus alvarezi"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6RPGX",
+              "names": [
+                "Mormoops megalophylla"
+              ],
+              "cells": 18,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6S3RK",
+              "names": [
+                "Myotis evotis"
+              ],
+              "cells": 33,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "743RL",
+              "names": [
+                "Myotis elegans"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "7443K",
+              "names": [
+                "Myotis fortidens"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "745QR",
+              "names": [
+                "Natalus mexicanus"
+              ],
+              "cells": 16,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "7CLH2",
+              "names": [
+                "Trachops cirrhosus"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "7DSX5",
+              "names": [
+                "Uroderma convexum"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "7FDVG",
+              "names": [
+                "Vampyrum spectrum"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "7TKL8",
+              "names": [
+                "Eptesicus fuscus"
+              ],
+              "cells": 1126,
+              "blocks_ge5": 65,
+              "pass": true
+            },
+            {
+              "key": "852KK",
+              "names": [
+                "Glossophaga mutica"
+              ],
+              "cells": 5,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "874HL",
+              "names": [
+                "Pteronotus psilotis"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "874KS",
+              "names": [
+                "Pteronotus fulvus"
+              ],
+              "cells": 7,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "874LF",
+              "names": [
+                "Pteronotus mesoamericanus"
+              ],
+              "cells": 11,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "8LV5N",
+              "names": [
+                "Aeorestes cinereus"
+              ],
+              "cells": 175,
+              "blocks_ge5": 9,
+              "pass": true
+            },
+            {
+              "key": "8LVBM",
+              "names": [
+                "Dasypterus ega"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "8LVBP",
+              "names": [
+                "Dasypterus intermedius"
+              ],
+              "cells": 30,
+              "blocks_ge5": 2,
+              "pass": false
+            },
+            {
+              "key": "8LVBQ",
+              "names": [
+                "Dasypterus xanthinus"
+              ],
+              "cells": 21,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "8LXFX",
+              "names": [
+                "Lasiurus frantzii"
+              ],
+              "cells": 40,
+              "blocks_ge5": 2,
+              "pass": false
+            },
+            {
+              "key": "8M225",
+              "names": [
+                "Myotis pilosatibialis"
+              ],
+              "cells": 15,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "8QF22",
+              "names": [
+                "Molossus nigricans"
+              ],
+              "cells": 6,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "F4NM",
+              "names": [
+                "Antrozous pallidus"
+              ],
+              "cells": 113,
+              "blocks_ge5": 7,
+              "pass": true
+            },
+            {
+              "key": "GZQT",
+              "names": [
+                "Artibeus aztecus"
+              ],
+              "cells": 8,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "GZR7",
+              "names": [
+                "Artibeus hirsutus"
+              ],
+              "cells": 6,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "GZRB",
+              "names": [
+                "Artibeus lituratus"
+              ],
+              "cells": 70,
+              "blocks_ge5": 2,
+              "pass": false
+            },
+            {
+              "key": "GZRG",
+              "names": [
+                "Artibeus phaeotis"
+              ],
+              "cells": 17,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "GZRQ",
+              "names": [
+                "Artibeus toltecus"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "GZRS",
+              "names": [
+                "Artibeus watsoni"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "KGC9",
+              "names": [
+                "Balantiopteryx plicata"
+              ],
+              "cells": 52,
+              "blocks_ge5": 2,
+              "pass": false
+            },
+            {
+              "key": "Q6SWZ",
+              "names": [
+                "Lophostoma nicaraguae"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "SBW2",
+              "names": [
+                "Centurio senex"
+              ],
+              "cells": 15,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "YRRY",
+              "names": [
+                "Corynorhinus rafinesquii"
+              ],
+              "cells": 17,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "YRRZ",
+              "names": [
+                "Corynorhinus townsendii"
+              ],
+              "cells": 79,
+              "blocks_ge5": 3,
+              "pass": false
+            }
+          ],
+          "source_year_block_support_among_domain_passing": {
+            "strata": 787,
+            "multispecies_strata": 363,
+            "comparison_groups": 963,
+            "capped_comparisons": 8712,
+            "pairs_with_at_least_one_block": 33,
+            "pairs_with_at_least_four_blocks": 25,
+            "possible_pairs": 36,
+            "providers": 4,
+            "species_provider_max_share": {
+              "3SFMP": 1,
+              "3SGVF": 1,
+              "485K4": 0.9941176470588236,
+              "4DDQR": 1,
+              "54GGQ": 1,
+              "684CY": 1,
+              "7TKL8": 0.9985250737463127,
+              "8LV5N": 0.9953488372093023,
+              "F4NM": 1
+            }
+          }
+        },
+        "6km_same": {
+          "records": 5514,
+          "species_keys": 97,
+          "providers": 5,
+          "species_cells": 3731,
+          "unique_cells": 3001,
+          "top_provider_record_share": 0.9981864345302865,
+          "geographic_pass_center": 9,
+          "geographic_pass_wholly_contained": 9,
+          "geographic_pass_within_training_latitude_and_block": 9,
+          "records_crossing_200km_cell_boundary": 217,
+          "records_in_latitude_boundary_cells": 0,
+          "passing_species_cell_roster": [
+            {
+              "key": "353LY",
+              "names": [
+                "Desmodus rotundus"
+              ],
+              "cells": 40,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "36G4Q",
+              "names": [
+                "Diphylla ecaudata"
+              ],
+              "cells": 11,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "39NQY",
+              "names": [
+                "Enchisthenes hartii"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "3BZR6",
+              "names": [
+                "Euderma maculatum"
+              ],
+              "cells": 9,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "3GDTZ",
+              "names": [
+                "Glossophaga soricina"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "3SFMP",
+              "names": [
+                "Lasionycteris noctivagans"
+              ],
+              "cells": 205,
+              "blocks_ge5": 8,
+              "pass": true
+            },
+            {
+              "key": "3SGVF",
+              "names": [
+                "Lasiurus borealis"
+              ],
+              "cells": 438,
+              "blocks_ge5": 29,
+              "pass": true
+            },
+            {
+              "key": "3SGVZ",
+              "names": [
+                "Lasiurus seminolus"
+              ],
+              "cells": 28,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "3TSK7",
+              "names": [
+                "Leptonycteris nivalis"
+              ],
+              "cells": 3,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "3TSK9",
+              "names": [
+                "Leptonycteris yerbabuenae"
+              ],
+              "cells": 15,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "3VYBY",
+              "names": [
+                "Lonchorhina aurita"
+              ],
+              "cells": 3,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "3W4HB",
+              "names": [
+                "Lophostoma evotis"
+              ],
+              "cells": 3,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "3XCNM",
+              "names": [
+                "Macrotus californicus"
+              ],
+              "cells": 20,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "3XCNQ",
+              "names": [
+                "Macrotus waterhousii"
+              ],
+              "cells": 7,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4326L",
+              "names": [
+                "Micronycteris microtis"
+              ],
+              "cells": 10,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4326R",
+              "names": [
+                "Micronycteris schmidtorum"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "43FSS",
+              "names": [
+                "Mimon cozumelae"
+              ],
+              "cells": 13,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "43YHY",
+              "names": [
+                "Molossus molossus"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "43YJ8",
+              "names": [
+                "Molossus rufus"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "43YJ9",
+              "names": [
+                "Molossus sinaloae"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456DD",
+              "names": [
+                "Myotis auriculus"
+              ],
+              "cells": 6,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456DF",
+              "names": [
+                "Myotis austroriparius"
+              ],
+              "cells": 27,
+              "blocks_ge5": 2,
+              "pass": false
+            },
+            {
+              "key": "456DT",
+              "names": [
+                "Myotis californicus"
+              ],
+              "cells": 29,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "456DZ",
+              "names": [
+                "Myotis ciliolabrum"
+              ],
+              "cells": 19,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456FL",
+              "names": [
+                "Myotis lucifugus"
+              ],
+              "cells": 45,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456GB",
+              "names": [
+                "Myotis occultus"
+              ],
+              "cells": 5,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456H3",
+              "names": [
+                "Myotis septentrionalis"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456HC",
+              "names": [
+                "Myotis thysanodes"
+              ],
+              "cells": 13,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456HF",
+              "names": [
+                "Myotis velifer"
+              ],
+              "cells": 21,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456HG",
+              "names": [
+                "Myotis vivesi"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456HH",
+              "names": [
+                "Myotis volans"
+              ],
+              "cells": 4,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456HN",
+              "names": [
+                "Myotis yumanensis"
+              ],
+              "cells": 19,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "47KW3",
+              "names": [
+                "Noctilio leporinus"
+              ],
+              "cells": 3,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "485K4",
+              "names": [
+                "Nycticeius humeralis"
+              ],
+              "cells": 105,
+              "blocks_ge5": 6,
+              "pass": true
+            },
+            {
+              "key": "485PK",
+              "names": [
+                "Nyctinomops femorosaccus"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "485PL",
+              "names": [
+                "Nyctinomops laticaudatus"
+              ],
+              "cells": 4,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "485PM",
+              "names": [
+                "Nyctinomops macrotis"
+              ],
+              "cells": 4,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4DDQR",
+              "names": [
+                "Parastrellus hesperus"
+              ],
+              "cells": 85,
+              "blocks_ge5": 6,
+              "pass": true
+            },
+            {
+              "key": "4F2FM",
+              "names": [
+                "Perimyotis subflavus"
+              ],
+              "cells": 14,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "4F8PP",
+              "names": [
+                "Peropteryx macrotis"
+              ],
+              "cells": 14,
+              "blocks_ge5": 2,
+              "pass": false
+            },
+            {
+              "key": "4HCWZ",
+              "names": [
+                "Phyllostomus discolor"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4JY2K",
+              "names": [
+                "Platyrrhinus helleri"
+              ],
+              "cells": 5,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4SJV6",
+              "names": [
+                "Rhogeessa aenea"
+              ],
+              "cells": 16,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4SJVG",
+              "names": [
+                "Rhogeessa parvula"
+              ],
+              "cells": 4,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4SJVH",
+              "names": [
+                "Rhogeessa tumida"
+              ],
+              "cells": 3,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4SS3B",
+              "names": [
+                "Rhynchonycteris naso"
+              ],
+              "cells": 14,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "4TX8S",
+              "names": [
+                "Saccopteryx bilineata"
+              ],
+              "cells": 25,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "5383T",
+              "names": [
+                "Sturnira hondurensis"
+              ],
+              "cells": 3,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "53846",
+              "names": [
+                "Sturnira parvidens"
+              ],
+              "cells": 14,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "54GGQ",
+              "names": [
+                "Tadarida brasiliensis"
+              ],
+              "cells": 419,
+              "blocks_ge5": 27,
+              "pass": true
+            },
+            {
+              "key": "5XZ3L",
+              "names": [
+                "Choeroniscus godmani"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "5Y55Y",
+              "names": [
+                "Chiroderma villosum"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "5YK72",
+              "names": [
+                "Chrotopterus auritus"
+              ],
+              "cells": 5,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "679TK",
+              "names": [
+                "Anoura geoffroyi"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "684CY",
+              "names": [
+                "Artibeus jamaicensis"
+              ],
+              "cells": 113,
+              "blocks_ge5": 9,
+              "pass": true
+            },
+            {
+              "key": "69DLL",
+              "names": [
+                "Carollia sowelli"
+              ],
+              "cells": 6,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "69DLM",
+              "names": [
+                "Carollia perspicillata"
+              ],
+              "cells": 6,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "69YRM",
+              "names": [
+                "Choeronycteris mexicana"
+              ],
+              "cells": 22,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "6FZ59",
+              "names": [
+                "Eptesicus furinalis"
+              ],
+              "cells": 4,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6GYLM",
+              "names": [
+                "Eumops perotis"
+              ],
+              "cells": 9,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6GYLS",
+              "names": [
+                "Eumops underwoodi"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6GYM7",
+              "names": [
+                "Eumops auripendulus"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6MTLT",
+              "names": [
+                "Idionycteris phyllotis"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6NV9B",
+              "names": [
+                "Lampronycteris brachyotis"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6RNMY",
+              "names": [
+                "Molossus alvarezi"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6RPGX",
+              "names": [
+                "Mormoops megalophylla"
+              ],
+              "cells": 16,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6S3RK",
+              "names": [
+                "Myotis evotis"
+              ],
+              "cells": 30,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "743RL",
+              "names": [
+                "Myotis elegans"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "7443K",
+              "names": [
+                "Myotis fortidens"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "745QR",
+              "names": [
+                "Natalus mexicanus"
+              ],
+              "cells": 15,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "7CLH2",
+              "names": [
+                "Trachops cirrhosus"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "7DSX5",
+              "names": [
+                "Uroderma convexum"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "7FDVG",
+              "names": [
+                "Vampyrum spectrum"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "7TKL8",
+              "names": [
+                "Eptesicus fuscus"
+              ],
+              "cells": 961,
+              "blocks_ge5": 61,
+              "pass": true
+            },
+            {
+              "key": "852KK",
+              "names": [
+                "Glossophaga mutica"
+              ],
+              "cells": 5,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "874HL",
+              "names": [
+                "Pteronotus psilotis"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "874KS",
+              "names": [
+                "Pteronotus fulvus"
+              ],
+              "cells": 6,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "874LF",
+              "names": [
+                "Pteronotus mesoamericanus"
+              ],
+              "cells": 11,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "8LV5N",
+              "names": [
+                "Aeorestes cinereus"
+              ],
+              "cells": 158,
+              "blocks_ge5": 8,
+              "pass": true
+            },
+            {
+              "key": "8LVBM",
+              "names": [
+                "Dasypterus ega"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "8LVBP",
+              "names": [
+                "Dasypterus intermedius"
+              ],
+              "cells": 30,
+              "blocks_ge5": 2,
+              "pass": false
+            },
+            {
+              "key": "8LVBQ",
+              "names": [
+                "Dasypterus xanthinus"
+              ],
+              "cells": 19,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "8LXFX",
+              "names": [
+                "Lasiurus frantzii"
+              ],
+              "cells": 37,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "8M225",
+              "names": [
+                "Myotis pilosatibialis"
+              ],
+              "cells": 12,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "8QF22",
+              "names": [
+                "Molossus nigricans"
+              ],
+              "cells": 6,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "F4NM",
+              "names": [
+                "Antrozous pallidus"
+              ],
+              "cells": 106,
+              "blocks_ge5": 7,
+              "pass": true
+            },
+            {
+              "key": "GZQT",
+              "names": [
+                "Artibeus aztecus"
+              ],
+              "cells": 4,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "GZR7",
+              "names": [
+                "Artibeus hirsutus"
+              ],
+              "cells": 4,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "GZRB",
+              "names": [
+                "Artibeus lituratus"
+              ],
+              "cells": 56,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "GZRG",
+              "names": [
+                "Artibeus phaeotis"
+              ],
+              "cells": 16,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "GZRQ",
+              "names": [
+                "Artibeus toltecus"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "GZRS",
+              "names": [
+                "Artibeus watsoni"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "KGC9",
+              "names": [
+                "Balantiopteryx plicata"
+              ],
+              "cells": 41,
+              "blocks_ge5": 2,
+              "pass": false
+            },
+            {
+              "key": "Q6SWZ",
+              "names": [
+                "Lophostoma nicaraguae"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "SBW2",
+              "names": [
+                "Centurio senex"
+              ],
+              "cells": 15,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "YRRY",
+              "names": [
+                "Corynorhinus rafinesquii"
+              ],
+              "cells": 15,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "YRRZ",
+              "names": [
+                "Corynorhinus townsendii"
+              ],
+              "cells": 78,
+              "blocks_ge5": 2,
+              "pass": false
+            }
+          ],
+          "source_year_block_support_among_domain_passing": {
+            "strata": 760,
+            "multispecies_strata": 355,
+            "comparison_groups": 916,
+            "capped_comparisons": 6805,
+            "pairs_with_at_least_one_block": 33,
+            "pairs_with_at_least_four_blocks": 25,
+            "possible_pairs": 36,
+            "providers": 4,
+            "species_provider_max_share": {
+              "3SFMP": 1,
+              "3SGVF": 1,
+              "485K4": 0.9941176470588236,
+              "4DDQR": 1,
+              "54GGQ": 1,
+              "684CY": 1,
+              "7TKL8": 0.9985250737463127,
+              "8LV5N": 0.9953488372093023,
+              "F4NM": 1
+            }
+          },
+          "grain_km": 6,
+          "maximum_uncertainty_m": 500,
+          "domain_cell_table_sha256": "8ceaebaea8b1c93e020c22bb6170a2835b942cd06946a14e09faf3701d67a4dd"
+        },
+        "12km_same": {
+          "records": 5514,
+          "species_keys": 97,
+          "providers": 5,
+          "species_cells": 3472,
+          "unique_cells": 2595,
+          "top_provider_record_share": 0.9981864345302865,
+          "geographic_pass_center": 9,
+          "geographic_pass_wholly_contained": 9,
+          "geographic_pass_within_training_latitude_and_block": 9,
+          "records_crossing_200km_cell_boundary": 427,
+          "records_in_latitude_boundary_cells": 0,
+          "passing_species_cell_roster": [
+            {
+              "key": "353LY",
+              "names": [
+                "Desmodus rotundus"
+              ],
+              "cells": 37,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "36G4Q",
+              "names": [
+                "Diphylla ecaudata"
+              ],
+              "cells": 11,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "39NQY",
+              "names": [
+                "Enchisthenes hartii"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "3BZR6",
+              "names": [
+                "Euderma maculatum"
+              ],
+              "cells": 7,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "3GDTZ",
+              "names": [
+                "Glossophaga soricina"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "3SFMP",
+              "names": [
+                "Lasionycteris noctivagans"
+              ],
+              "cells": 190,
+              "blocks_ge5": 6,
+              "pass": true
+            },
+            {
+              "key": "3SGVF",
+              "names": [
+                "Lasiurus borealis"
+              ],
+              "cells": 383,
+              "blocks_ge5": 29,
+              "pass": true
+            },
+            {
+              "key": "3SGVZ",
+              "names": [
+                "Lasiurus seminolus"
+              ],
+              "cells": 26,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "3TSK7",
+              "names": [
+                "Leptonycteris nivalis"
+              ],
+              "cells": 3,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "3TSK9",
+              "names": [
+                "Leptonycteris yerbabuenae"
+              ],
+              "cells": 12,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "3VYBY",
+              "names": [
+                "Lonchorhina aurita"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "3W4HB",
+              "names": [
+                "Lophostoma evotis"
+              ],
+              "cells": 3,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "3XCNM",
+              "names": [
+                "Macrotus californicus"
+              ],
+              "cells": 18,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "3XCNQ",
+              "names": [
+                "Macrotus waterhousii"
+              ],
+              "cells": 6,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4326L",
+              "names": [
+                "Micronycteris microtis"
+              ],
+              "cells": 9,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4326R",
+              "names": [
+                "Micronycteris schmidtorum"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "43FSS",
+              "names": [
+                "Mimon cozumelae"
+              ],
+              "cells": 12,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "43YHY",
+              "names": [
+                "Molossus molossus"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "43YJ8",
+              "names": [
+                "Molossus rufus"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "43YJ9",
+              "names": [
+                "Molossus sinaloae"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456DD",
+              "names": [
+                "Myotis auriculus"
+              ],
+              "cells": 5,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456DF",
+              "names": [
+                "Myotis austroriparius"
+              ],
+              "cells": 22,
+              "blocks_ge5": 2,
+              "pass": false
+            },
+            {
+              "key": "456DT",
+              "names": [
+                "Myotis californicus"
+              ],
+              "cells": 27,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "456DZ",
+              "names": [
+                "Myotis ciliolabrum"
+              ],
+              "cells": 17,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456FL",
+              "names": [
+                "Myotis lucifugus"
+              ],
+              "cells": 43,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456GB",
+              "names": [
+                "Myotis occultus"
+              ],
+              "cells": 5,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456H3",
+              "names": [
+                "Myotis septentrionalis"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456HC",
+              "names": [
+                "Myotis thysanodes"
+              ],
+              "cells": 12,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456HF",
+              "names": [
+                "Myotis velifer"
+              ],
+              "cells": 21,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456HG",
+              "names": [
+                "Myotis vivesi"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456HH",
+              "names": [
+                "Myotis volans"
+              ],
+              "cells": 3,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456HN",
+              "names": [
+                "Myotis yumanensis"
+              ],
+              "cells": 18,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "47KW3",
+              "names": [
+                "Noctilio leporinus"
+              ],
+              "cells": 3,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "485K4",
+              "names": [
+                "Nycticeius humeralis"
+              ],
+              "cells": 91,
+              "blocks_ge5": 5,
+              "pass": true
+            },
+            {
+              "key": "485PK",
+              "names": [
+                "Nyctinomops femorosaccus"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "485PL",
+              "names": [
+                "Nyctinomops laticaudatus"
+              ],
+              "cells": 4,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "485PM",
+              "names": [
+                "Nyctinomops macrotis"
+              ],
+              "cells": 4,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4DDQR",
+              "names": [
+                "Parastrellus hesperus"
+              ],
+              "cells": 75,
+              "blocks_ge5": 6,
+              "pass": true
+            },
+            {
+              "key": "4F2FM",
+              "names": [
+                "Perimyotis subflavus"
+              ],
+              "cells": 14,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "4F8PP",
+              "names": [
+                "Peropteryx macrotis"
+              ],
+              "cells": 11,
+              "blocks_ge5": 2,
+              "pass": false
+            },
+            {
+              "key": "4HCWZ",
+              "names": [
+                "Phyllostomus discolor"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4JY2K",
+              "names": [
+                "Platyrrhinus helleri"
+              ],
+              "cells": 5,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4SJV6",
+              "names": [
+                "Rhogeessa aenea"
+              ],
+              "cells": 15,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4SJVG",
+              "names": [
+                "Rhogeessa parvula"
+              ],
+              "cells": 4,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4SJVH",
+              "names": [
+                "Rhogeessa tumida"
+              ],
+              "cells": 3,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4SS3B",
+              "names": [
+                "Rhynchonycteris naso"
+              ],
+              "cells": 13,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "4TX8S",
+              "names": [
+                "Saccopteryx bilineata"
+              ],
+              "cells": 23,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "5383T",
+              "names": [
+                "Sturnira hondurensis"
+              ],
+              "cells": 3,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "53846",
+              "names": [
+                "Sturnira parvidens"
+              ],
+              "cells": 14,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "54GGQ",
+              "names": [
+                "Tadarida brasiliensis"
+              ],
+              "cells": 357,
+              "blocks_ge5": 25,
+              "pass": true
+            },
+            {
+              "key": "5XZ3L",
+              "names": [
+                "Choeroniscus godmani"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "5Y55Y",
+              "names": [
+                "Chiroderma villosum"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "5YK72",
+              "names": [
+                "Chrotopterus auritus"
+              ],
+              "cells": 5,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "679TK",
+              "names": [
+                "Anoura geoffroyi"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "684CY",
+              "names": [
+                "Artibeus jamaicensis"
+              ],
+              "cells": 94,
+              "blocks_ge5": 7,
+              "pass": true
+            },
+            {
+              "key": "69DLL",
+              "names": [
+                "Carollia sowelli"
+              ],
+              "cells": 6,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "69DLM",
+              "names": [
+                "Carollia perspicillata"
+              ],
+              "cells": 6,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "69YRM",
+              "names": [
+                "Choeronycteris mexicana"
+              ],
+              "cells": 16,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "6FZ59",
+              "names": [
+                "Eptesicus furinalis"
+              ],
+              "cells": 4,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6GYLM",
+              "names": [
+                "Eumops perotis"
+              ],
+              "cells": 9,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6GYLS",
+              "names": [
+                "Eumops underwoodi"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6GYM7",
+              "names": [
+                "Eumops auripendulus"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6MTLT",
+              "names": [
+                "Idionycteris phyllotis"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6NV9B",
+              "names": [
+                "Lampronycteris brachyotis"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6RNMY",
+              "names": [
+                "Molossus alvarezi"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6RPGX",
+              "names": [
+                "Mormoops megalophylla"
+              ],
+              "cells": 15,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6S3RK",
+              "names": [
+                "Myotis evotis"
+              ],
+              "cells": 28,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "743RL",
+              "names": [
+                "Myotis elegans"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "7443K",
+              "names": [
+                "Myotis fortidens"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "745QR",
+              "names": [
+                "Natalus mexicanus"
+              ],
+              "cells": 15,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "7CLH2",
+              "names": [
+                "Trachops cirrhosus"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "7DSX5",
+              "names": [
+                "Uroderma convexum"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "7FDVG",
+              "names": [
+                "Vampyrum spectrum"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "7TKL8",
+              "names": [
+                "Eptesicus fuscus"
+              ],
+              "cells": 849,
+              "blocks_ge5": 57,
+              "pass": true
+            },
+            {
+              "key": "852KK",
+              "names": [
+                "Glossophaga mutica"
+              ],
+              "cells": 5,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "874HL",
+              "names": [
+                "Pteronotus psilotis"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "874KS",
+              "names": [
+                "Pteronotus fulvus"
+              ],
+              "cells": 6,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "874LF",
+              "names": [
+                "Pteronotus mesoamericanus"
+              ],
+              "cells": 11,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "8LV5N",
+              "names": [
+                "Aeorestes cinereus"
+              ],
+              "cells": 144,
+              "blocks_ge5": 5,
+              "pass": true
+            },
+            {
+              "key": "8LVBM",
+              "names": [
+                "Dasypterus ega"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "8LVBP",
+              "names": [
+                "Dasypterus intermedius"
+              ],
+              "cells": 30,
+              "blocks_ge5": 2,
+              "pass": false
+            },
+            {
+              "key": "8LVBQ",
+              "names": [
+                "Dasypterus xanthinus"
+              ],
+              "cells": 19,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "8LXFX",
+              "names": [
+                "Lasiurus frantzii"
+              ],
+              "cells": 35,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "8M225",
+              "names": [
+                "Myotis pilosatibialis"
+              ],
+              "cells": 11,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "8QF22",
+              "names": [
+                "Molossus nigricans"
+              ],
+              "cells": 5,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "F4NM",
+              "names": [
+                "Antrozous pallidus"
+              ],
+              "cells": 98,
+              "blocks_ge5": 6,
+              "pass": true
+            },
+            {
+              "key": "GZQT",
+              "names": [
+                "Artibeus aztecus"
+              ],
+              "cells": 3,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "GZR7",
+              "names": [
+                "Artibeus hirsutus"
+              ],
+              "cells": 4,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "GZRB",
+              "names": [
+                "Artibeus lituratus"
+              ],
+              "cells": 52,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "GZRG",
+              "names": [
+                "Artibeus phaeotis"
+              ],
+              "cells": 14,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "GZRQ",
+              "names": [
+                "Artibeus toltecus"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "GZRS",
+              "names": [
+                "Artibeus watsoni"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "KGC9",
+              "names": [
+                "Balantiopteryx plicata"
+              ],
+              "cells": 34,
+              "blocks_ge5": 2,
+              "pass": false
+            },
+            {
+              "key": "Q6SWZ",
+              "names": [
+                "Lophostoma nicaraguae"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "SBW2",
+              "names": [
+                "Centurio senex"
+              ],
+              "cells": 14,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "YRRY",
+              "names": [
+                "Corynorhinus rafinesquii"
+              ],
+              "cells": 15,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "YRRZ",
+              "names": [
+                "Corynorhinus townsendii"
+              ],
+              "cells": 72,
+              "blocks_ge5": 2,
+              "pass": false
+            }
+          ],
+          "source_year_block_support_among_domain_passing": {
+            "strata": 747,
+            "multispecies_strata": 343,
+            "comparison_groups": 870,
+            "capped_comparisons": 5539,
+            "pairs_with_at_least_one_block": 33,
+            "pairs_with_at_least_four_blocks": 25,
+            "possible_pairs": 36,
+            "providers": 3,
+            "species_provider_max_share": {
+              "3SFMP": 1,
+              "3SGVF": 1,
+              "485K4": 0.9941176470588236,
+              "4DDQR": 1,
+              "54GGQ": 1,
+              "684CY": 1,
+              "7TKL8": 0.9985250737463127,
+              "8LV5N": 0.9953488372093023,
+              "F4NM": 1
+            }
+          },
+          "grain_km": 12,
+          "maximum_uncertainty_m": 500,
+          "domain_cell_table_sha256": "a4b13f257f8c9592347d8ce213a69498a7aeae9ae62deda7811d037f016090d8"
+        },
+        "6km_compatible": {
+          "records": 6138,
+          "species_keys": 101,
+          "providers": 5,
+          "species_cells": 4141,
+          "unique_cells": 3310,
+          "top_provider_record_share": 0.9982078853046595,
+          "geographic_pass_center": 10,
+          "geographic_pass_wholly_contained": 10,
+          "geographic_pass_within_training_latitude_and_block": 10,
+          "records_crossing_200km_cell_boundary": 235,
+          "records_in_latitude_boundary_cells": 0,
+          "passing_species_cell_roster": [
+            {
+              "key": "353LY",
+              "names": [
+                "Desmodus rotundus"
+              ],
+              "cells": 57,
+              "blocks_ge5": 2,
+              "pass": false
+            },
+            {
+              "key": "36G4Q",
+              "names": [
+                "Diphylla ecaudata"
+              ],
+              "cells": 22,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "39NQY",
+              "names": [
+                "Enchisthenes hartii"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "3BZR6",
+              "names": [
+                "Euderma maculatum"
+              ],
+              "cells": 9,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "3GDTZ",
+              "names": [
+                "Glossophaga soricina"
+              ],
+              "cells": 4,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "3SFMP",
+              "names": [
+                "Lasionycteris noctivagans"
+              ],
+              "cells": 217,
+              "blocks_ge5": 11,
+              "pass": true
+            },
+            {
+              "key": "3SGVF",
+              "names": [
+                "Lasiurus borealis"
+              ],
+              "cells": 480,
+              "blocks_ge5": 33,
+              "pass": true
+            },
+            {
+              "key": "3SGVZ",
+              "names": [
+                "Lasiurus seminolus"
+              ],
+              "cells": 31,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "3TSK7",
+              "names": [
+                "Leptonycteris nivalis"
+              ],
+              "cells": 3,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "3TSK9",
+              "names": [
+                "Leptonycteris yerbabuenae"
+              ],
+              "cells": 15,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "3VYBY",
+              "names": [
+                "Lonchorhina aurita"
+              ],
+              "cells": 4,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "3W4HB",
+              "names": [
+                "Lophostoma evotis"
+              ],
+              "cells": 3,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "3XCNM",
+              "names": [
+                "Macrotus californicus"
+              ],
+              "cells": 22,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "3XCNQ",
+              "names": [
+                "Macrotus waterhousii"
+              ],
+              "cells": 8,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4326L",
+              "names": [
+                "Micronycteris microtis"
+              ],
+              "cells": 13,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4326R",
+              "names": [
+                "Micronycteris schmidtorum"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "43FSS",
+              "names": [
+                "Mimon cozumelae"
+              ],
+              "cells": 19,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "43YHY",
+              "names": [
+                "Molossus molossus"
+              ],
+              "cells": 3,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "43YJ8",
+              "names": [
+                "Molossus rufus"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "43YJ9",
+              "names": [
+                "Molossus sinaloae"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456DD",
+              "names": [
+                "Myotis auriculus"
+              ],
+              "cells": 6,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456DF",
+              "names": [
+                "Myotis austroriparius"
+              ],
+              "cells": 32,
+              "blocks_ge5": 2,
+              "pass": false
+            },
+            {
+              "key": "456DT",
+              "names": [
+                "Myotis californicus"
+              ],
+              "cells": 30,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "456DZ",
+              "names": [
+                "Myotis ciliolabrum"
+              ],
+              "cells": 19,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456FL",
+              "names": [
+                "Myotis lucifugus"
+              ],
+              "cells": 47,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456GB",
+              "names": [
+                "Myotis occultus"
+              ],
+              "cells": 5,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456H3",
+              "names": [
+                "Myotis septentrionalis"
+              ],
+              "cells": 3,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456HC",
+              "names": [
+                "Myotis thysanodes"
+              ],
+              "cells": 13,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456HF",
+              "names": [
+                "Myotis velifer"
+              ],
+              "cells": 27,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456HG",
+              "names": [
+                "Myotis vivesi"
+              ],
+              "cells": 3,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456HH",
+              "names": [
+                "Myotis volans"
+              ],
+              "cells": 4,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456HN",
+              "names": [
+                "Myotis yumanensis"
+              ],
+              "cells": 19,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "47KW3",
+              "names": [
+                "Noctilio leporinus"
+              ],
+              "cells": 3,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "485K4",
+              "names": [
+                "Nycticeius humeralis"
+              ],
+              "cells": 112,
+              "blocks_ge5": 6,
+              "pass": true
+            },
+            {
+              "key": "485PK",
+              "names": [
+                "Nyctinomops femorosaccus"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "485PL",
+              "names": [
+                "Nyctinomops laticaudatus"
+              ],
+              "cells": 5,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "485PM",
+              "names": [
+                "Nyctinomops macrotis"
+              ],
+              "cells": 6,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4DDQR",
+              "names": [
+                "Parastrellus hesperus"
+              ],
+              "cells": 97,
+              "blocks_ge5": 6,
+              "pass": true
+            },
+            {
+              "key": "4F2FM",
+              "names": [
+                "Perimyotis subflavus"
+              ],
+              "cells": 17,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "4F8PP",
+              "names": [
+                "Peropteryx macrotis"
+              ],
+              "cells": 15,
+              "blocks_ge5": 2,
+              "pass": false
+            },
+            {
+              "key": "4HCWZ",
+              "names": [
+                "Phyllostomus discolor"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4JY2K",
+              "names": [
+                "Platyrrhinus helleri"
+              ],
+              "cells": 5,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4SJV6",
+              "names": [
+                "Rhogeessa aenea"
+              ],
+              "cells": 17,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "4SJVG",
+              "names": [
+                "Rhogeessa parvula"
+              ],
+              "cells": 6,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4SJVH",
+              "names": [
+                "Rhogeessa tumida"
+              ],
+              "cells": 3,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4SS3B",
+              "names": [
+                "Rhynchonycteris naso"
+              ],
+              "cells": 16,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "4TX8S",
+              "names": [
+                "Saccopteryx bilineata"
+              ],
+              "cells": 31,
+              "blocks_ge5": 2,
+              "pass": false
+            },
+            {
+              "key": "5383T",
+              "names": [
+                "Sturnira hondurensis"
+              ],
+              "cells": 4,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "53846",
+              "names": [
+                "Sturnira parvidens"
+              ],
+              "cells": 16,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "54GGQ",
+              "names": [
+                "Tadarida brasiliensis"
+              ],
+              "cells": 449,
+              "blocks_ge5": 29,
+              "pass": true
+            },
+            {
+              "key": "5XZ3L",
+              "names": [
+                "Choeroniscus godmani"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "5Y55Y",
+              "names": [
+                "Chiroderma villosum"
+              ],
+              "cells": 3,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "5YK72",
+              "names": [
+                "Chrotopterus auritus"
+              ],
+              "cells": 8,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "679TK",
+              "names": [
+                "Anoura geoffroyi"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "684CY",
+              "names": [
+                "Artibeus jamaicensis"
+              ],
+              "cells": 133,
+              "blocks_ge5": 11,
+              "pass": true
+            },
+            {
+              "key": "69DLL",
+              "names": [
+                "Carollia sowelli"
+              ],
+              "cells": 6,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "69DLM",
+              "names": [
+                "Carollia perspicillata"
+              ],
+              "cells": 7,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "69YRM",
+              "names": [
+                "Choeronycteris mexicana"
+              ],
+              "cells": 26,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "6FZ59",
+              "names": [
+                "Eptesicus furinalis"
+              ],
+              "cells": 5,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6GYLM",
+              "names": [
+                "Eumops perotis"
+              ],
+              "cells": 9,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6GYLS",
+              "names": [
+                "Eumops underwoodi"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6GYM6",
+              "names": [
+                "Eumops ferox"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6GYM7",
+              "names": [
+                "Eumops auripendulus"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6MTLT",
+              "names": [
+                "Idionycteris phyllotis"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6NV9B",
+              "names": [
+                "Lampronycteris brachyotis"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6RNMY",
+              "names": [
+                "Molossus alvarezi"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6RPGX",
+              "names": [
+                "Mormoops megalophylla"
+              ],
+              "cells": 21,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6S3RK",
+              "names": [
+                "Myotis evotis"
+              ],
+              "cells": 33,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "743RL",
+              "names": [
+                "Myotis elegans"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "7443K",
+              "names": [
+                "Myotis fortidens"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "745QR",
+              "names": [
+                "Natalus mexicanus"
+              ],
+              "cells": 19,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "7CLH2",
+              "names": [
+                "Trachops cirrhosus"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "7DSWT",
+              "names": [
+                "Uroderma bilobatum"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "7DSX5",
+              "names": [
+                "Uroderma convexum"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "7FDVG",
+              "names": [
+                "Vampyrum spectrum"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "7T5XY",
+              "names": [
+                "Diclidurus albus"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "7TKL8",
+              "names": [
+                "Eptesicus fuscus"
+              ],
+              "cells": 1039,
+              "blocks_ge5": 62,
+              "pass": true
+            },
+            {
+              "key": "852KK",
+              "names": [
+                "Glossophaga mutica"
+              ],
+              "cells": 6,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "874HL",
+              "names": [
+                "Pteronotus psilotis"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "874JV",
+              "names": [
+                "Pteronotus mexicanus"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "874KS",
+              "names": [
+                "Pteronotus fulvus"
+              ],
+              "cells": 6,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "874LF",
+              "names": [
+                "Pteronotus mesoamericanus"
+              ],
+              "cells": 15,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "8LV5N",
+              "names": [
+                "Aeorestes cinereus"
+              ],
+              "cells": 175,
+              "blocks_ge5": 8,
+              "pass": true
+            },
+            {
+              "key": "8LVBM",
+              "names": [
+                "Dasypterus ega"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "8LVBP",
+              "names": [
+                "Dasypterus intermedius"
+              ],
+              "cells": 30,
+              "blocks_ge5": 2,
+              "pass": false
+            },
+            {
+              "key": "8LVBQ",
+              "names": [
+                "Dasypterus xanthinus"
+              ],
+              "cells": 19,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "8LXFX",
+              "names": [
+                "Lasiurus frantzii"
+              ],
+              "cells": 42,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "8M225",
+              "names": [
+                "Myotis pilosatibialis"
+              ],
+              "cells": 13,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "8QF22",
+              "names": [
+                "Molossus nigricans"
+              ],
+              "cells": 7,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "F4NM",
+              "names": [
+                "Antrozous pallidus"
+              ],
+              "cells": 117,
+              "blocks_ge5": 8,
+              "pass": true
+            },
+            {
+              "key": "GZQT",
+              "names": [
+                "Artibeus aztecus"
+              ],
+              "cells": 6,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "GZR7",
+              "names": [
+                "Artibeus hirsutus"
+              ],
+              "cells": 4,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "GZRB",
+              "names": [
+                "Artibeus lituratus"
+              ],
+              "cells": 64,
+              "blocks_ge5": 4,
+              "pass": true
+            },
+            {
+              "key": "GZRG",
+              "names": [
+                "Artibeus phaeotis"
+              ],
+              "cells": 16,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "GZRQ",
+              "names": [
+                "Artibeus toltecus"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "GZRS",
+              "names": [
+                "Artibeus watsoni"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "KGC9",
+              "names": [
+                "Balantiopteryx plicata"
+              ],
+              "cells": 55,
+              "blocks_ge5": 3,
+              "pass": false
+            },
+            {
+              "key": "Q6SWZ",
+              "names": [
+                "Lophostoma nicaraguae"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "SBW2",
+              "names": [
+                "Centurio senex"
+              ],
+              "cells": 18,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "YRRY",
+              "names": [
+                "Corynorhinus rafinesquii"
+              ],
+              "cells": 19,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "YRRZ",
+              "names": [
+                "Corynorhinus townsendii"
+              ],
+              "cells": 87,
+              "blocks_ge5": 2,
+              "pass": false
+            }
+          ],
+          "source_year_block_support_among_domain_passing": {
+            "strata": 820,
+            "multispecies_strata": 407,
+            "comparison_groups": 1034,
+            "capped_comparisons": 7996,
+            "pairs_with_at_least_one_block": 38,
+            "pairs_with_at_least_four_blocks": 27,
+            "possible_pairs": 45,
+            "providers": 4,
+            "species_provider_max_share": {
+              "3SFMP": 1,
+              "3SGVF": 1,
+              "485K4": 0.9944444444444445,
+              "4DDQR": 1,
+              "54GGQ": 1,
+              "684CY": 1,
+              "7TKL8": 0.9986329460013671,
+              "8LV5N": 0.9957081545064378,
+              "F4NM": 1,
+              "GZRB": 1
+            }
+          },
+          "grain_km": 6,
+          "maximum_uncertainty_m": 3000,
+          "domain_cell_table_sha256": "17004d75a664af252e77d0b3755c043885c262a456aa432f6191810ee0369dc3"
+        },
+        "12km_compatible": {
+          "records": 6292,
+          "species_keys": 104,
+          "providers": 5,
+          "species_cells": 3938,
+          "unique_cells": 2910,
+          "top_provider_record_share": 0.9982517482517482,
+          "geographic_pass_center": 10,
+          "geographic_pass_wholly_contained": 10,
+          "geographic_pass_within_training_latitude_and_block": 10,
+          "records_crossing_200km_cell_boundary": 466,
+          "records_in_latitude_boundary_cells": 0,
+          "passing_species_cell_roster": [
+            {
+              "key": "353LY",
+              "names": [
+                "Desmodus rotundus"
+              ],
+              "cells": 56,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "36G4Q",
+              "names": [
+                "Diphylla ecaudata"
+              ],
+              "cells": 19,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "39NQY",
+              "names": [
+                "Enchisthenes hartii"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "3BZR6",
+              "names": [
+                "Euderma maculatum"
+              ],
+              "cells": 8,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "3GDTW",
+              "names": [
+                "Glossophaga morenoi"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "3GDTZ",
+              "names": [
+                "Glossophaga soricina"
+              ],
+              "cells": 4,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "3SFMP",
+              "names": [
+                "Lasionycteris noctivagans"
+              ],
+              "cells": 204,
+              "blocks_ge5": 8,
+              "pass": true
+            },
+            {
+              "key": "3SGVF",
+              "names": [
+                "Lasiurus borealis"
+              ],
+              "cells": 424,
+              "blocks_ge5": 32,
+              "pass": true
+            },
+            {
+              "key": "3SGVZ",
+              "names": [
+                "Lasiurus seminolus"
+              ],
+              "cells": 30,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "3TSK7",
+              "names": [
+                "Leptonycteris nivalis"
+              ],
+              "cells": 3,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "3TSK9",
+              "names": [
+                "Leptonycteris yerbabuenae"
+              ],
+              "cells": 12,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "3VYBY",
+              "names": [
+                "Lonchorhina aurita"
+              ],
+              "cells": 4,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "3W4HB",
+              "names": [
+                "Lophostoma evotis"
+              ],
+              "cells": 3,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "3XCNM",
+              "names": [
+                "Macrotus californicus"
+              ],
+              "cells": 21,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "3XCNQ",
+              "names": [
+                "Macrotus waterhousii"
+              ],
+              "cells": 8,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4326L",
+              "names": [
+                "Micronycteris microtis"
+              ],
+              "cells": 12,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4326R",
+              "names": [
+                "Micronycteris schmidtorum"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "43FSS",
+              "names": [
+                "Mimon cozumelae"
+              ],
+              "cells": 18,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "43YHY",
+              "names": [
+                "Molossus molossus"
+              ],
+              "cells": 3,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "43YJ8",
+              "names": [
+                "Molossus rufus"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "43YJ9",
+              "names": [
+                "Molossus sinaloae"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456DD",
+              "names": [
+                "Myotis auriculus"
+              ],
+              "cells": 5,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456DF",
+              "names": [
+                "Myotis austroriparius"
+              ],
+              "cells": 26,
+              "blocks_ge5": 2,
+              "pass": false
+            },
+            {
+              "key": "456DT",
+              "names": [
+                "Myotis californicus"
+              ],
+              "cells": 29,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "456DZ",
+              "names": [
+                "Myotis ciliolabrum"
+              ],
+              "cells": 17,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456FL",
+              "names": [
+                "Myotis lucifugus"
+              ],
+              "cells": 47,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456GB",
+              "names": [
+                "Myotis occultus"
+              ],
+              "cells": 5,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456H3",
+              "names": [
+                "Myotis septentrionalis"
+              ],
+              "cells": 3,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456HC",
+              "names": [
+                "Myotis thysanodes"
+              ],
+              "cells": 12,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456HF",
+              "names": [
+                "Myotis velifer"
+              ],
+              "cells": 28,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456HG",
+              "names": [
+                "Myotis vivesi"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456HH",
+              "names": [
+                "Myotis volans"
+              ],
+              "cells": 3,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456HN",
+              "names": [
+                "Myotis yumanensis"
+              ],
+              "cells": 19,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "47KW3",
+              "names": [
+                "Noctilio leporinus"
+              ],
+              "cells": 3,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "485K4",
+              "names": [
+                "Nycticeius humeralis"
+              ],
+              "cells": 98,
+              "blocks_ge5": 5,
+              "pass": true
+            },
+            {
+              "key": "485PK",
+              "names": [
+                "Nyctinomops femorosaccus"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "485PL",
+              "names": [
+                "Nyctinomops laticaudatus"
+              ],
+              "cells": 5,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "485PM",
+              "names": [
+                "Nyctinomops macrotis"
+              ],
+              "cells": 6,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4DDQR",
+              "names": [
+                "Parastrellus hesperus"
+              ],
+              "cells": 87,
+              "blocks_ge5": 6,
+              "pass": true
+            },
+            {
+              "key": "4F2FM",
+              "names": [
+                "Perimyotis subflavus"
+              ],
+              "cells": 18,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "4F8PP",
+              "names": [
+                "Peropteryx macrotis"
+              ],
+              "cells": 12,
+              "blocks_ge5": 2,
+              "pass": false
+            },
+            {
+              "key": "4HCWZ",
+              "names": [
+                "Phyllostomus discolor"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4JY2K",
+              "names": [
+                "Platyrrhinus helleri"
+              ],
+              "cells": 5,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4SJV6",
+              "names": [
+                "Rhogeessa aenea"
+              ],
+              "cells": 15,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4SJVG",
+              "names": [
+                "Rhogeessa parvula"
+              ],
+              "cells": 6,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4SJVH",
+              "names": [
+                "Rhogeessa tumida"
+              ],
+              "cells": 3,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4SS3B",
+              "names": [
+                "Rhynchonycteris naso"
+              ],
+              "cells": 15,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "4TX8S",
+              "names": [
+                "Saccopteryx bilineata"
+              ],
+              "cells": 28,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "5383T",
+              "names": [
+                "Sturnira hondurensis"
+              ],
+              "cells": 4,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "53846",
+              "names": [
+                "Sturnira parvidens"
+              ],
+              "cells": 17,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "54GGQ",
+              "names": [
+                "Tadarida brasiliensis"
+              ],
+              "cells": 393,
+              "blocks_ge5": 30,
+              "pass": true
+            },
+            {
+              "key": "5XDLK",
+              "names": [
+                "Carollia subrufa"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "5XZ3L",
+              "names": [
+                "Choeroniscus godmani"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "5Y55Y",
+              "names": [
+                "Chiroderma villosum"
+              ],
+              "cells": 3,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "5YK72",
+              "names": [
+                "Chrotopterus auritus"
+              ],
+              "cells": 9,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "679TK",
+              "names": [
+                "Anoura geoffroyi"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "684CY",
+              "names": [
+                "Artibeus jamaicensis"
+              ],
+              "cells": 112,
+              "blocks_ge5": 10,
+              "pass": true
+            },
+            {
+              "key": "69DLL",
+              "names": [
+                "Carollia sowelli"
+              ],
+              "cells": 6,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "69DLM",
+              "names": [
+                "Carollia perspicillata"
+              ],
+              "cells": 7,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "69YRM",
+              "names": [
+                "Choeronycteris mexicana"
+              ],
+              "cells": 22,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "6FZ59",
+              "names": [
+                "Eptesicus furinalis"
+              ],
+              "cells": 5,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6GYLM",
+              "names": [
+                "Eumops perotis"
+              ],
+              "cells": 9,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6GYLS",
+              "names": [
+                "Eumops underwoodi"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6GYM6",
+              "names": [
+                "Eumops ferox"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6GYM7",
+              "names": [
+                "Eumops auripendulus"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6MTLT",
+              "names": [
+                "Idionycteris phyllotis"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6NV9B",
+              "names": [
+                "Lampronycteris brachyotis"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6RNMY",
+              "names": [
+                "Molossus alvarezi"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6RPGX",
+              "names": [
+                "Mormoops megalophylla"
+              ],
+              "cells": 21,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6S3RK",
+              "names": [
+                "Myotis evotis"
+              ],
+              "cells": 31,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "743RL",
+              "names": [
+                "Myotis elegans"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "7443K",
+              "names": [
+                "Myotis fortidens"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "745QR",
+              "names": [
+                "Natalus mexicanus"
+              ],
+              "cells": 19,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "7CLH2",
+              "names": [
+                "Trachops cirrhosus"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "7DSWT",
+              "names": [
+                "Uroderma bilobatum"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "7DSX5",
+              "names": [
+                "Uroderma convexum"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "7FDVG",
+              "names": [
+                "Vampyrum spectrum"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "7T5XY",
+              "names": [
+                "Diclidurus albus"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "7TKL8",
+              "names": [
+                "Eptesicus fuscus"
+              ],
+              "cells": 933,
+              "blocks_ge5": 63,
+              "pass": true
+            },
+            {
+              "key": "852KK",
+              "names": [
+                "Glossophaga mutica"
+              ],
+              "cells": 6,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "874HL",
+              "names": [
+                "Pteronotus psilotis"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "874JV",
+              "names": [
+                "Pteronotus mexicanus"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "874KS",
+              "names": [
+                "Pteronotus fulvus"
+              ],
+              "cells": 7,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "874LF",
+              "names": [
+                "Pteronotus mesoamericanus"
+              ],
+              "cells": 16,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "8LV5N",
+              "names": [
+                "Aeorestes cinereus"
+              ],
+              "cells": 164,
+              "blocks_ge5": 5,
+              "pass": true
+            },
+            {
+              "key": "8LVBM",
+              "names": [
+                "Dasypterus ega"
+              ],
+              "cells": 3,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "8LVBP",
+              "names": [
+                "Dasypterus intermedius"
+              ],
+              "cells": 30,
+              "blocks_ge5": 2,
+              "pass": false
+            },
+            {
+              "key": "8LVBQ",
+              "names": [
+                "Dasypterus xanthinus"
+              ],
+              "cells": 19,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "8LXFX",
+              "names": [
+                "Lasiurus frantzii"
+              ],
+              "cells": 41,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "8M225",
+              "names": [
+                "Myotis pilosatibialis"
+              ],
+              "cells": 13,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "8QF22",
+              "names": [
+                "Molossus nigricans"
+              ],
+              "cells": 6,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "F4NM",
+              "names": [
+                "Antrozous pallidus"
+              ],
+              "cells": 109,
+              "blocks_ge5": 7,
+              "pass": true
+            },
+            {
+              "key": "GZQT",
+              "names": [
+                "Artibeus aztecus"
+              ],
+              "cells": 5,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "GZR7",
+              "names": [
+                "Artibeus hirsutus"
+              ],
+              "cells": 4,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "GZRB",
+              "names": [
+                "Artibeus lituratus"
+              ],
+              "cells": 62,
+              "blocks_ge5": 4,
+              "pass": true
+            },
+            {
+              "key": "GZRG",
+              "names": [
+                "Artibeus phaeotis"
+              ],
+              "cells": 15,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "GZRQ",
+              "names": [
+                "Artibeus toltecus"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "GZRS",
+              "names": [
+                "Artibeus watsoni"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "KGC9",
+              "names": [
+                "Balantiopteryx plicata"
+              ],
+              "cells": 47,
+              "blocks_ge5": 3,
+              "pass": false
+            },
+            {
+              "key": "MT9WR",
+              "names": [
+                "Corynorhinus leonpaniaguae"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "Q6SWZ",
+              "names": [
+                "Lophostoma nicaraguae"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "SBW2",
+              "names": [
+                "Centurio senex"
+              ],
+              "cells": 17,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "YRRY",
+              "names": [
+                "Corynorhinus rafinesquii"
+              ],
+              "cells": 18,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "YRRZ",
+              "names": [
+                "Corynorhinus townsendii"
+              ],
+              "cells": 87,
+              "blocks_ge5": 3,
+              "pass": false
+            }
+          ],
+          "source_year_block_support_among_domain_passing": {
+            "strata": 811,
+            "multispecies_strata": 399,
+            "comparison_groups": 1001,
+            "capped_comparisons": 6694,
+            "pairs_with_at_least_one_block": 37,
+            "pairs_with_at_least_four_blocks": 27,
+            "possible_pairs": 45,
+            "providers": 3,
+            "species_provider_max_share": {
+              "3SFMP": 1,
+              "3SGVF": 1,
+              "485K4": 0.9945054945054945,
+              "4DDQR": 1,
+              "54GGQ": 1,
+              "684CY": 1,
+              "7TKL8": 0.9986684420772304,
+              "8LV5N": 0.9957983193277311,
+              "F4NM": 1,
+              "GZRB": 1
+            }
+          },
+          "grain_km": 12,
+          "maximum_uncertainty_m": 6000,
+          "domain_cell_table_sha256": "8c6961cfbffc5caec063cd1b1e6ca2ef518acbce7efd5cade8f3d4341f3e8ce1"
+        }
+      },
+      "strict_1km_replay_checks": {
+        "records": true,
+        "species_keys": true,
+        "providers": true,
+        "species_cells": true,
+        "unique_cells": true,
+        "geographic_pass_center": true
+      },
+      "primary_1km_admitted": false,
+      "any_coarse_geographic_upper_bound_20": false,
+      "any_model_admitted": false
+    },
+    "East_Asia": {
+      "pre_precision_records": 1016,
+      "precision_attrition": {
+        "1km_eligible": {
+          "rows": 389,
+          "unique_ids": 389,
+          "species_keys": 33,
+          "providers": 3
+        },
+        "additional_12km": {
+          "rows": 11,
+          "unique_ids": 11,
+          "species_keys": 7,
+          "providers": 1
+        },
+        "additional_6km": {
+          "rows": 66,
+          "unique_ids": 66,
+          "species_keys": 17,
+          "providers": 1
+        },
+        "missing_or_unparseable": {
+          "rows": 339,
+          "unique_ids": 339,
+          "species_keys": 27,
+          "providers": 9
+        },
+        "over_6000m": {
+          "rows": 211,
+          "unique_ids": 211,
+          "species_keys": 30,
+          "providers": 1
+        }
+      },
+      "arms": {
+        "1km_same_and_compatible": {
+          "records": 389,
+          "species_keys": 33,
+          "providers": 3,
+          "species_cells": 173,
+          "unique_cells": 127,
+          "top_provider_record_share": 0.5347043701799485,
+          "geographic_pass_center": 0,
+          "geographic_pass_wholly_contained": 0,
+          "geographic_pass_within_training_latitude_and_block": 0,
+          "records_crossing_200km_cell_boundary": 0,
+          "records_in_latitude_boundary_cells": 0,
+          "passing_species_cell_roster": [
+            {
+              "key": "3M35X",
+              "names": [
+                "Hipposideros armiger"
+              ],
+              "cells": 31,
+              "blocks_ge5": 2,
+              "pass": false
+            },
+            {
+              "key": "3M374",
+              "names": [
+                "Hipposideros gentilis"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "3P4RL",
+              "names": [
+                "Hypsugo alaschanicus"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "44N35",
+              "names": [
+                "Murina hilgendorfi"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "44N3Q",
+              "names": [
+                "Murina ussuriensis"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456FB",
+              "names": [
+                "Myotis laniger"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "484XD",
+              "names": [
+                "Nyctalus plancyi"
+              ],
+              "cells": 5,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4J6JF",
+              "names": [
+                "Pipistrellus abramus"
+              ],
+              "cells": 14,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "4K2ZN",
+              "names": [
+                "Plecotus ognevi"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4S97C",
+              "names": [
+                "Rhinolophus ferrumequinum"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4S993",
+              "names": [
+                "Rhinolophus nippon"
+              ],
+              "cells": 3,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4S99Z",
+              "names": [
+                "Rhinolophus sinicus"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4VY5J",
+              "names": [
+                "Scotophilus kuhlii"
+              ],
+              "cells": 10,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "54GGV",
+              "names": [
+                "Tadarida insignis"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6BVYB",
+              "names": [
+                "Cynopterus sphinx"
+              ],
+              "cells": 14,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "6WTR5",
+              "names": [
+                "Rhinolophus monoceros"
+              ],
+              "cells": 21,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "6X5QT",
+              "names": [
+                "Rhinolophus perniger"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6X5R5",
+              "names": [
+                "Rhinolophus luctus"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6X62T",
+              "names": [
+                "Rhinolophus pusillus"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "7443M",
+              "names": [
+                "Myotis davidii"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "795R6",
+              "names": [
+                "Rhinolophus formosae"
+              ],
+              "cells": 12,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "799XV",
+              "names": [
+                "Rousettus leschenaultii"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "7BK96",
+              "names": [
+                "Taphozous theobaldi"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "7FQRQ",
+              "names": [
+                "Vespertilio murinus"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "7G2S7",
+              "names": [
+                "Vespertilio sinensis"
+              ],
+              "cells": 4,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "8LVDZ",
+              "names": [
+                "Kerivoula furva"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "8LVHH",
+              "names": [
+                "Submyotodon latirostris"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "8LZ7N",
+              "names": [
+                "Eptesicus pachyomus"
+              ],
+              "cells": 16,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "8LZ7Q",
+              "names": [
+                "Myotis rufoniger"
+              ],
+              "cells": 4,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "8LZ92",
+              "names": [
+                "Myotis secundus"
+              ],
+              "cells": 4,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "8LZJS",
+              "names": [
+                "Thainycteris torquatus"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "8Q7NJ",
+              "names": [
+                "Miniopterus fuliginosus"
+              ],
+              "cells": 12,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "H8ZK",
+              "names": [
+                "Aselliscus stoliczkanus"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            }
+          ],
+          "source_year_block_support_among_domain_passing": {
+            "strata": 0,
+            "multispecies_strata": 0,
+            "comparison_groups": 0,
+            "capped_comparisons": 0,
+            "pairs_with_at_least_one_block": 0,
+            "pairs_with_at_least_four_blocks": 0,
+            "possible_pairs": 0,
+            "providers": 0,
+            "species_provider_max_share": {}
+          }
+        },
+        "6km_same": {
+          "records": 389,
+          "species_keys": 33,
+          "providers": 3,
+          "species_cells": 147,
+          "unique_cells": 95,
+          "top_provider_record_share": 0.5347043701799485,
+          "geographic_pass_center": 0,
+          "geographic_pass_wholly_contained": 0,
+          "geographic_pass_within_training_latitude_and_block": 0,
+          "records_crossing_200km_cell_boundary": 41,
+          "records_in_latitude_boundary_cells": 0,
+          "passing_species_cell_roster": [
+            {
+              "key": "3M35X",
+              "names": [
+                "Hipposideros armiger"
+              ],
+              "cells": 24,
+              "blocks_ge5": 2,
+              "pass": false
+            },
+            {
+              "key": "3M374",
+              "names": [
+                "Hipposideros gentilis"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "3P4RL",
+              "names": [
+                "Hypsugo alaschanicus"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "44N35",
+              "names": [
+                "Murina hilgendorfi"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "44N3Q",
+              "names": [
+                "Murina ussuriensis"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456FB",
+              "names": [
+                "Myotis laniger"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "484XD",
+              "names": [
+                "Nyctalus plancyi"
+              ],
+              "cells": 4,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4J6JF",
+              "names": [
+                "Pipistrellus abramus"
+              ],
+              "cells": 13,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "4K2ZN",
+              "names": [
+                "Plecotus ognevi"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4S97C",
+              "names": [
+                "Rhinolophus ferrumequinum"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4S993",
+              "names": [
+                "Rhinolophus nippon"
+              ],
+              "cells": 3,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4S99Z",
+              "names": [
+                "Rhinolophus sinicus"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4VY5J",
+              "names": [
+                "Scotophilus kuhlii"
+              ],
+              "cells": 8,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "54GGV",
+              "names": [
+                "Tadarida insignis"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6BVYB",
+              "names": [
+                "Cynopterus sphinx"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6WTR5",
+              "names": [
+                "Rhinolophus monoceros"
+              ],
+              "cells": 17,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "6X5QT",
+              "names": [
+                "Rhinolophus perniger"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6X5R5",
+              "names": [
+                "Rhinolophus luctus"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6X62T",
+              "names": [
+                "Rhinolophus pusillus"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "7443M",
+              "names": [
+                "Myotis davidii"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "795R6",
+              "names": [
+                "Rhinolophus formosae"
+              ],
+              "cells": 11,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "7BK96",
+              "names": [
+                "Taphozous theobaldi"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "7FQRQ",
+              "names": [
+                "Vespertilio murinus"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "7G2S7",
+              "names": [
+                "Vespertilio sinensis"
+              ],
+              "cells": 4,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "8LVDZ",
+              "names": [
+                "Kerivoula furva"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "8LVHH",
+              "names": [
+                "Submyotodon latirostris"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "8LZ7N",
+              "names": [
+                "Eptesicus pachyomus"
+              ],
+              "cells": 15,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "8LZ7Q",
+              "names": [
+                "Myotis rufoniger"
+              ],
+              "cells": 4,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "8LZ92",
+              "names": [
+                "Myotis secundus"
+              ],
+              "cells": 3,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "8LZJS",
+              "names": [
+                "Thainycteris torquatus"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "8Q7NJ",
+              "names": [
+                "Miniopterus fuliginosus"
+              ],
+              "cells": 10,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "H8ZK",
+              "names": [
+                "Aselliscus stoliczkanus"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            }
+          ],
+          "source_year_block_support_among_domain_passing": {
+            "strata": 0,
+            "multispecies_strata": 0,
+            "comparison_groups": 0,
+            "capped_comparisons": 0,
+            "pairs_with_at_least_one_block": 0,
+            "pairs_with_at_least_four_blocks": 0,
+            "possible_pairs": 0,
+            "providers": 0,
+            "species_provider_max_share": {}
+          },
+          "grain_km": 6,
+          "maximum_uncertainty_m": 500,
+          "domain_cell_table_sha256": "536e0852b379a7ba4d678766e8a7e374ebe951649646c3f0b5cbd25ebde5170b"
+        },
+        "12km_same": {
+          "records": 389,
+          "species_keys": 33,
+          "providers": 3,
+          "species_cells": 130,
+          "unique_cells": 80,
+          "top_provider_record_share": 0.5347043701799485,
+          "geographic_pass_center": 0,
+          "geographic_pass_wholly_contained": 0,
+          "geographic_pass_within_training_latitude_and_block": 0,
+          "records_crossing_200km_cell_boundary": 52,
+          "records_in_latitude_boundary_cells": 0,
+          "passing_species_cell_roster": [
+            {
+              "key": "3M35X",
+              "names": [
+                "Hipposideros armiger"
+              ],
+              "cells": 22,
+              "blocks_ge5": 2,
+              "pass": false
+            },
+            {
+              "key": "3M374",
+              "names": [
+                "Hipposideros gentilis"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "3P4RL",
+              "names": [
+                "Hypsugo alaschanicus"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "44N35",
+              "names": [
+                "Murina hilgendorfi"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "44N3Q",
+              "names": [
+                "Murina ussuriensis"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456FB",
+              "names": [
+                "Myotis laniger"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "484XD",
+              "names": [
+                "Nyctalus plancyi"
+              ],
+              "cells": 4,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4J6JF",
+              "names": [
+                "Pipistrellus abramus"
+              ],
+              "cells": 8,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "4K2ZN",
+              "names": [
+                "Plecotus ognevi"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4S97C",
+              "names": [
+                "Rhinolophus ferrumequinum"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4S993",
+              "names": [
+                "Rhinolophus nippon"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4S99Z",
+              "names": [
+                "Rhinolophus sinicus"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4VY5J",
+              "names": [
+                "Scotophilus kuhlii"
+              ],
+              "cells": 6,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "54GGV",
+              "names": [
+                "Tadarida insignis"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6BVYB",
+              "names": [
+                "Cynopterus sphinx"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6WTR5",
+              "names": [
+                "Rhinolophus monoceros"
+              ],
+              "cells": 16,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "6X5QT",
+              "names": [
+                "Rhinolophus perniger"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6X5R5",
+              "names": [
+                "Rhinolophus luctus"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6X62T",
+              "names": [
+                "Rhinolophus pusillus"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "7443M",
+              "names": [
+                "Myotis davidii"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "795R6",
+              "names": [
+                "Rhinolophus formosae"
+              ],
+              "cells": 10,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "7BK96",
+              "names": [
+                "Taphozous theobaldi"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "7FQRQ",
+              "names": [
+                "Vespertilio murinus"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "7G2S7",
+              "names": [
+                "Vespertilio sinensis"
+              ],
+              "cells": 4,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "8LVDZ",
+              "names": [
+                "Kerivoula furva"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "8LVHH",
+              "names": [
+                "Submyotodon latirostris"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "8LZ7N",
+              "names": [
+                "Eptesicus pachyomus"
+              ],
+              "cells": 11,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "8LZ7Q",
+              "names": [
+                "Myotis rufoniger"
+              ],
+              "cells": 3,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "8LZ92",
+              "names": [
+                "Myotis secundus"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "8LZJS",
+              "names": [
+                "Thainycteris torquatus"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "8Q7NJ",
+              "names": [
+                "Miniopterus fuliginosus"
+              ],
+              "cells": 10,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "H8ZK",
+              "names": [
+                "Aselliscus stoliczkanus"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            }
+          ],
+          "source_year_block_support_among_domain_passing": {
+            "strata": 0,
+            "multispecies_strata": 0,
+            "comparison_groups": 0,
+            "capped_comparisons": 0,
+            "pairs_with_at_least_one_block": 0,
+            "pairs_with_at_least_four_blocks": 0,
+            "possible_pairs": 0,
+            "providers": 0,
+            "species_provider_max_share": {}
+          },
+          "grain_km": 12,
+          "maximum_uncertainty_m": 500,
+          "domain_cell_table_sha256": "20a7176dad2bb41c0488b65c87f5720908fb9383af3a1aafec39ea98b5c22c48"
+        },
+        "6km_compatible": {
+          "records": 455,
+          "species_keys": 35,
+          "providers": 3,
+          "species_cells": 172,
+          "unique_cells": 116,
+          "top_provider_record_share": 0.6021978021978022,
+          "geographic_pass_center": 0,
+          "geographic_pass_wholly_contained": 0,
+          "geographic_pass_within_training_latitude_and_block": 0,
+          "records_crossing_200km_cell_boundary": 48,
+          "records_in_latitude_boundary_cells": 0,
+          "passing_species_cell_roster": [
+            {
+              "key": "3M35X",
+              "names": [
+                "Hipposideros armiger"
+              ],
+              "cells": 26,
+              "blocks_ge5": 2,
+              "pass": false
+            },
+            {
+              "key": "3M374",
+              "names": [
+                "Hipposideros gentilis"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "3P4RL",
+              "names": [
+                "Hypsugo alaschanicus"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "44N35",
+              "names": [
+                "Murina hilgendorfi"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "44N3Q",
+              "names": [
+                "Murina ussuriensis"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456DY",
+              "names": [
+                "Myotis chinensis"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456FB",
+              "names": [
+                "Myotis laniger"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "484XD",
+              "names": [
+                "Nyctalus plancyi"
+              ],
+              "cells": 4,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4J6JF",
+              "names": [
+                "Pipistrellus abramus"
+              ],
+              "cells": 13,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "4K2ZN",
+              "names": [
+                "Plecotus ognevi"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4S97C",
+              "names": [
+                "Rhinolophus ferrumequinum"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4S993",
+              "names": [
+                "Rhinolophus nippon"
+              ],
+              "cells": 4,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4S99Z",
+              "names": [
+                "Rhinolophus sinicus"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4VXXZ",
+              "names": [
+                "Scotomanes ornatus"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4VY5J",
+              "names": [
+                "Scotophilus kuhlii"
+              ],
+              "cells": 8,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "54GGV",
+              "names": [
+                "Tadarida insignis"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6BVYB",
+              "names": [
+                "Cynopterus sphinx"
+              ],
+              "cells": 3,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6WTR5",
+              "names": [
+                "Rhinolophus monoceros"
+              ],
+              "cells": 22,
+              "blocks_ge5": 2,
+              "pass": false
+            },
+            {
+              "key": "6X5QT",
+              "names": [
+                "Rhinolophus perniger"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6X5R5",
+              "names": [
+                "Rhinolophus luctus"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6X62T",
+              "names": [
+                "Rhinolophus pusillus"
+              ],
+              "cells": 3,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "7443M",
+              "names": [
+                "Myotis davidii"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "795R6",
+              "names": [
+                "Rhinolophus formosae"
+              ],
+              "cells": 15,
+              "blocks_ge5": 2,
+              "pass": false
+            },
+            {
+              "key": "7BK96",
+              "names": [
+                "Taphozous theobaldi"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "7FQRQ",
+              "names": [
+                "Vespertilio murinus"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "7G2S7",
+              "names": [
+                "Vespertilio sinensis"
+              ],
+              "cells": 6,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "8LVDZ",
+              "names": [
+                "Kerivoula furva"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "8LVHH",
+              "names": [
+                "Submyotodon latirostris"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "8LZ7N",
+              "names": [
+                "Eptesicus pachyomus"
+              ],
+              "cells": 16,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "8LZ7Q",
+              "names": [
+                "Myotis rufoniger"
+              ],
+              "cells": 4,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "8LZ92",
+              "names": [
+                "Myotis secundus"
+              ],
+              "cells": 3,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "8LZJS",
+              "names": [
+                "Thainycteris torquatus"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "8Q7NJ",
+              "names": [
+                "Miniopterus fuliginosus"
+              ],
+              "cells": 11,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "H8ZK",
+              "names": [
+                "Aselliscus stoliczkanus"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            }
+          ],
+          "source_year_block_support_among_domain_passing": {
+            "strata": 0,
+            "multispecies_strata": 0,
+            "comparison_groups": 0,
+            "capped_comparisons": 0,
+            "pairs_with_at_least_one_block": 0,
+            "pairs_with_at_least_four_blocks": 0,
+            "possible_pairs": 0,
+            "providers": 0,
+            "species_provider_max_share": {}
+          },
+          "grain_km": 6,
+          "maximum_uncertainty_m": 3000,
+          "domain_cell_table_sha256": "47fba4ff8678b54430bad5bc9a7fe90d0ca23991bfa5c4d7effa8374be8ab85f"
+        },
+        "12km_compatible": {
+          "records": 466,
+          "species_keys": 36,
+          "providers": 3,
+          "species_cells": 157,
+          "unique_cells": 105,
+          "top_provider_record_share": 0.6115879828326181,
+          "geographic_pass_center": 0,
+          "geographic_pass_wholly_contained": 0,
+          "geographic_pass_within_training_latitude_and_block": 0,
+          "records_crossing_200km_cell_boundary": 60,
+          "records_in_latitude_boundary_cells": 0,
+          "passing_species_cell_roster": [
+            {
+              "key": "3M35X",
+              "names": [
+                "Hipposideros armiger"
+              ],
+              "cells": 27,
+              "blocks_ge5": 2,
+              "pass": false
+            },
+            {
+              "key": "3M374",
+              "names": [
+                "Hipposideros gentilis"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "3P4RL",
+              "names": [
+                "Hypsugo alaschanicus"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "44N35",
+              "names": [
+                "Murina hilgendorfi"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "44N39",
+              "names": [
+                "Murina leucogaster"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "44N3Q",
+              "names": [
+                "Murina ussuriensis"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456DY",
+              "names": [
+                "Myotis chinensis"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "456FB",
+              "names": [
+                "Myotis laniger"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "484XD",
+              "names": [
+                "Nyctalus plancyi"
+              ],
+              "cells": 4,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4J6JF",
+              "names": [
+                "Pipistrellus abramus"
+              ],
+              "cells": 8,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "4K2ZN",
+              "names": [
+                "Plecotus ognevi"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4S97C",
+              "names": [
+                "Rhinolophus ferrumequinum"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4S993",
+              "names": [
+                "Rhinolophus nippon"
+              ],
+              "cells": 3,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4S99Z",
+              "names": [
+                "Rhinolophus sinicus"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4VXXZ",
+              "names": [
+                "Scotomanes ornatus"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "4VY5J",
+              "names": [
+                "Scotophilus kuhlii"
+              ],
+              "cells": 6,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "54GGV",
+              "names": [
+                "Tadarida insignis"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6BVYB",
+              "names": [
+                "Cynopterus sphinx"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6WTR5",
+              "names": [
+                "Rhinolophus monoceros"
+              ],
+              "cells": 19,
+              "blocks_ge5": 2,
+              "pass": false
+            },
+            {
+              "key": "6X5QT",
+              "names": [
+                "Rhinolophus perniger"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6X5R5",
+              "names": [
+                "Rhinolophus luctus"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "6X62T",
+              "names": [
+                "Rhinolophus pusillus"
+              ],
+              "cells": 3,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "7443M",
+              "names": [
+                "Myotis davidii"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "795R6",
+              "names": [
+                "Rhinolophus formosae"
+              ],
+              "cells": 13,
+              "blocks_ge5": 2,
+              "pass": false
+            },
+            {
+              "key": "7BK96",
+              "names": [
+                "Taphozous theobaldi"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "7FQRQ",
+              "names": [
+                "Vespertilio murinus"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "7G2S7",
+              "names": [
+                "Vespertilio sinensis"
+              ],
+              "cells": 7,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "8LVDZ",
+              "names": [
+                "Kerivoula furva"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "8LVHH",
+              "names": [
+                "Submyotodon latirostris"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "8LZ7N",
+              "names": [
+                "Eptesicus pachyomus"
+              ],
+              "cells": 12,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "8LZ7Q",
+              "names": [
+                "Myotis rufoniger"
+              ],
+              "cells": 3,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "8LZ92",
+              "names": [
+                "Myotis secundus"
+              ],
+              "cells": 2,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "8LZJS",
+              "names": [
+                "Thainycteris torquatus"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            },
+            {
+              "key": "8Q7NJ",
+              "names": [
+                "Miniopterus fuliginosus"
+              ],
+              "cells": 11,
+              "blocks_ge5": 1,
+              "pass": false
+            },
+            {
+              "key": "H8ZK",
+              "names": [
+                "Aselliscus stoliczkanus"
+              ],
+              "cells": 1,
+              "blocks_ge5": 0,
+              "pass": false
+            }
+          ],
+          "source_year_block_support_among_domain_passing": {
+            "strata": 0,
+            "multispecies_strata": 0,
+            "comparison_groups": 0,
+            "capped_comparisons": 0,
+            "pairs_with_at_least_one_block": 0,
+            "pairs_with_at_least_four_blocks": 0,
+            "possible_pairs": 0,
+            "providers": 0,
+            "species_provider_max_share": {}
+          },
+          "grain_km": 12,
+          "maximum_uncertainty_m": 6000,
+          "domain_cell_table_sha256": "94c1735a28facc799897f7094157aac6171ba994f9c0c2eeee1d441b9ddf4495"
+        }
+      },
+      "strict_1km_replay_checks": {
+        "records": true,
+        "species_keys": true,
+        "providers": true,
+        "species_cells": true,
+        "unique_cells": true,
+        "geographic_pass_center": true
+      },
+      "primary_1km_admitted": false,
+      "any_coarse_geographic_upper_bound_20": false,
+      "any_model_admitted": false
+    }
+  },
+  "limits": [
+    "Counts before trait, forest, terrain, roost and calibrated effort admission.",
+    "Coordinate-uncertainty metadata are source-reported, not verified positional error.",
+    "Grain-compatible cohorts are different from same-record aggregation.",
+    "No missing uncertainty imputation, no actual 3D occupancy, no primary gate relaxation."
+  ],
+  "source_objects_verified": 8,
+  "audit": {
+    "run_id": 45657997576,
+    "job_id": 139359804787,
+    "artifact_id": 15042953257,
+    "registry_digest": "sha256:1593bf52dbe7c00fead9fc38104ac25baf47f0310a6d80710af77efd10142026",
+    "checks": {
+      "complete": true,
+      "replay": true,
+      "attrition": true,
+      "coarse_no_20": true,
+      "same_row_counts": true,
+      "registry_matches_log": true
+    },
+    "scope": "Verified final job report and registry/upload digest; actual ZIP not separately rehashed in this turn."
+  },
+  "interpretation": "Coarsening plus additional precision-compatible records increases North American pre-environment geographic pass count only 9→10, East Asia remains zero. North American admitted records 99.8% from one provider. Original primary SDM remains nonadmitted. No ecological scale effect estimated by this census."
+}
