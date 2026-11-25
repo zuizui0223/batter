@@ -1,0 +1,116 @@
+{
+  "status": "CORE_REPLAY_MATCH",
+  "scope": "independent ZIP rehash and clean replay of four core recorded-label analyses, no new model",
+  "environment": {
+    "python": "3.12.16",
+    "numpy": "2.5.5",
+    "pandas": "3.1.1",
+    "scipy": "1.18.1"
+  },
+  "inputs": {
+    "common_forest": {
+      "artifact_id": 15007174727,
+      "archive_bytes": 1486227,
+      "sha256": "a5a08ae265f9729cd0b57f820b88b8440199288749006cb14dd82ee38616cbbb",
+      "archive_digest_verified": true
+    },
+    "fixed_environment": {
+      "artifact_id": 15012939978,
+      "archive_bytes": 6777535,
+      "sha256": "afca6bf11fe5a75d7638a49de73b2cba1874e75d8cb24ed3f65c28957f25650a",
+      "archive_digest_verified": true
+    },
+    "holdout": {
+      "artifact_id": 15010764600,
+      "archive_bytes": 195711,
+      "sha256": "4ce5c239b1ad442d83b4861b899c504e40dfb02bb1a0c5e9ef335a650b34460c",
+      "archive_digest_verified": true
+    },
+    "observation": {
+      "artifact_id": 15012136742,
+      "archive_bytes": 200708,
+      "sha256": "053567fa0cc43993aec472a3c5bc966a2c6df5306767e66ff6d65f826a7cf900",
+      "archive_digest_verified": true
+    },
+    "traits": {
+      "artifact_id": 15005261316,
+      "archive_bytes": 1052947,
+      "sha256": "7ed2df73b812f51f6376590136c79fb5acf42b41395e4e3f68830fb66120b490",
+      "archive_digest_verified": true
+    },
+    "physical": {
+      "artifact_id": 15004406365,
+      "archive_bytes": 6132,
+      "sha256": "3866df0cc71e1e5556162d26f9a757b7f31b0edddc339c1105ba7bd47e197408",
+      "archive_digest_verified": true
+    },
+    "original_northern_result": {
+      "artifact_id": 15014832006,
+      "archive_bytes": 11164,
+      "sha256": "36447f8b3d4c074c038d28c3fa7916c6274efe61c0b4fca917f38d865c24e02e",
+      "archive_digest_verified": true
+    }
+  },
+  "analyses": {
+    "observed_label_sorting": {
+      "script_blob": "1b7dd6768aad0735778ffd3744aa764643f2eb48",
+      "numeric": 450,
+      "other": 25,
+      "max_abs_numeric_difference": 0,
+      "status": "MATCH",
+      "result_sha256": "a9a692950e09e8c5d5723fd774bdb798e2598d96904595a9789a1f808180c369"
+    },
+    "sorting_transfer_diagnostic": {
+      "script_blob": "1ca160c5a1fe179e2f721ec3f4753a28a05d7e59",
+      "numeric": 578,
+      "other": 104,
+      "max_abs_numeric_difference": 2.0322910021519647e-10,
+      "status": "MATCH",
+      "result_sha256": "886bc4c79f467169ab7066271c420f3e09d67ce245aef0b92807d0d085ea3cf0"
+    },
+    "fixed_profile_validation": {
+      "script_blob": "23cfa845156dd8db8abf8051e666d1f4f449a4e4",
+      "numeric": 303,
+      "other": 113,
+      "max_abs_numeric_difference": 3.32424088256289e-11,
+      "status": "MATCH",
+      "result_sha256": "e66b34ec3f00b8e27986ae21a21eb5add67bf95d3f3072a9883e7af9f1f8eaef"
+    },
+    "northern_transfer": {
+      "script_blob": "f25d1d25b923e5cb8ce108bc9da4c3cbbd1a60e3",
+      "numeric": 116,
+      "other": 15,
+      "max_abs_numeric_difference": 1.2248399993905479e-11,
+      "original_full_report_checks": {
+        "numeric": 1277,
+        "other": 553,
+        "max_abs_numeric_difference": 8.412667229507065e-10
+      },
+      "status": "MATCH",
+      "result_sha256": "54ffab89486ca460e1f2cf422c211a54d6690038817887f68e723c80d46472f7"
+    }
+  },
+  "summary": {
+    "numeric_aggregate_checks": 1447,
+    "numeric_full_northern_report_checks": 1277,
+    "numeric_total_checks_including_overlap": 2724,
+    "max_abs_numeric_difference": 8.412667229507065e-10,
+    "input_archives": 6,
+    "original_northern_reference_archive": 1,
+    "interpretation": "Independent execution on authenticated existing inputs, not independent biological replication; no model tuning."
+  },
+  "audit": {
+    "run_id": 45601651413,
+    "job_id": 139161809895,
+    "artifact_id": 15014894075,
+    "registry_digest": "sha256:026d15086b9687613d753038e525fe17fbb6a2908ee38072b09f8aaa67c16130",
+    "head_sha": "0d3e0507ecc2d2dfdd837753ebbe1d27452e5c2e",
+    "checks": {
+      "status": true,
+      "all_input_zip_bytes": true,
+      "four_analyses": true,
+      "full_northern_check": true,
+      "registry_digest_matches_upload": true
+    }
+  }
+}
