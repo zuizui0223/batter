@@ -1,0 +1,39 @@
+name: GFZ public actual GEDI V3 PAVD source gate
+on:
+  push:
+    branches: [prospective/gedi-trait-macro-sdm-20261125]
+    paths:
+      - .github/workflows/gfz-gedidb-public-pavd-gate.yml
+permissions:
+  contents: read
+  actions: read
+jobs:
+  source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      AWS_EC2_METADATA_DISABLED: 'true'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          name: europe-common-forest-support-v1
+          run-id: 45585033345
+          github-token: ${{ github.token }}
+          path: pilot
+      - run: python -m pip install 'gedidb @ git+https://github.com/simonbesnard1/gedidb.git@cb42331f86fd64e4e9d4b9e5ecac7abadb6c2cd9' pyproj
+      - run: python -m py_compile prospective/gedi_trait_macro_sdm/gedidb_v3_public_pavd_gate_v1.py
+      - run: python prospective/gedi_trait_macro_sdm/gedidb_v3_public_pavd_gate_v1.py
+        timeout-minutes: 25
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: gfz-gedidb-public-pavd-gate-v1
+          path: gedidb_v3_pavd_gate/
+          if-no-files-found: warn
+          retention-days: 90
