@@ -1,0 +1,76 @@
+{
+  "status": "GLOBAL_AR_COVERAGE_AUDIT_COMPLETE_PRIMARY_NOT_ADMITTED",
+  "trait_source": {
+    "article_doi": "10.1111/mam.12270",
+    "resolved_data_doi": "10.5281/zenodo.4309199",
+    "artifact_id": 15069213234,
+    "actual_zip_sha256": "692b1d7b3556769bb670e0cc1b88e0e51138e319303d711cdc496d2c5d21ccac",
+    "all_14_member_hashes_verified": true,
+    "raw_table_sha256": "f1d0f91bdc71e75de77ebaed50fc7263d93a08a3a4bcde37bc924ed569f52eff",
+    "final_table_sha256": "60666f4892dfe536534ad953bc1810b93ded33ce454373ec1e1b410a97ba2c97",
+    "pooled_table_sha256": "26d06fa7b64b00756259d010d098232d98b40a3e899d62afc9d63ac6815d9fea",
+    "raw_positive_AR_species": 386,
+    "final_positive_AR_species": 378,
+    "pooled_positive_AR_and_nAR_species": 366,
+    "pooled_AR_raw_and_final_supported_species": 354,
+    "pooled_positive_WL_below_one": 20,
+    "minimum_positive_raw_WL": 3.38
+  },
+  "inputs": {
+    "environment": {
+      "artifact_id": 15012939978,
+      "actual_zip_sha256": "afca6bf11fe5a75d7638a49de73b2cba1874e75d8cb24ed3f65c28957f25650a",
+      "table_sha256": "85ad737229aa7b10720a8d5c8bd0ea389f63f908c37871c7ce46ae87c9bed1d6"
+    },
+    "observation_flags": {
+      "artifact_id": 15012136742,
+      "actual_zip_sha256": "053567fa0cc43993aec472a3c5bc966a2c6df5306767e66ff6d65f826a7cf900",
+      "table_sha256": "de971292065a8aee3491880adb00a5623efae61bc83b2bd2ae4d663b45edf0f0"
+    }
+  },
+  "methods": "Locally downloaded and rehashed all three actual archive ZIP bytes and selected members. Positive finite pooled aspectRatio with n.AR>0, unique normalized name and positive finite aspectRatio in both raw and final source tables; no imputation, no inferred synonym or use of AR_calc. Exact casefolded whitespace-normalized names and one-to-one snapshot key/name. Original source-year-license restrictions, subtract explicit roost count (zero captive flags), retain positive screened records. Geographic pass >=30 distinct 1km occupied cells and >=4 fixed 200km blocks each >=5 cells. Candidate forest/GVSM masks unchanged; separate within-latitude tree cover >=0.3 only upper-bound arm without GVSM height mask. No response fit.",
+  "matched_snapshot_species": 26,
+  "domains": {
+    "all_land": {
+      "species": 39,
+      "geographic_pass": 22,
+      "crane_AR_pass": 19,
+      "previous_AR_pass": 20,
+      "union_pass": 20
+    },
+    "forest_all": {
+      "species": 38,
+      "geographic_pass": 22,
+      "crane_AR_pass": 19,
+      "previous_AR_pass": 20,
+      "union_pass": 20
+    },
+    "forest_within": {
+      "species": 37,
+      "geographic_pass": 18,
+      "crane_AR_pass": 16,
+      "previous_AR_pass": 16,
+      "union_pass": 16
+    },
+    "within_cover_only": {
+      "species": 37,
+      "geographic_pass": 18,
+      "crane_AR_pass": 16,
+      "previous_AR_pass": 16,
+      "union_pass": 16
+    }
+  },
+  "within_geographic_pass_without_previous_or_crane_AR": [
+    {
+      "species": "Hypsugo savii",
+      "cells": 173,
+      "blocks_ge5": 10
+    },
+    {
+      "species": "Pipistrellus pygmaeus",
+      "cells": 473,
+      "blocks_ge5": 13
+    }
+  ],
+  "interpretation": "This independently executed aggregate support audit finds no increase in in-domain geographically eligible AR roster after admitting the new source. Even before actual GEDI shot support, the current forest upper bound is 18 geographic-pass species. Pooled WL table has 20 positive values below 1 in the stated units while raw positive minimum is 3.38; investigate units/calculation lineage before using WL, no silent correction. The published pooled AR with raw/final support is an observed-source provenance screen, not proof of directly measured rather than derived AR. No 20-taxon main fit or direct PAVD association admitted."
+}
