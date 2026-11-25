@@ -1,0 +1,285 @@
+{
+  "stage": "pre-model source coverage; no ecological fit",
+  "time": "2026-11-25T08:45:45.254745+00:00",
+  "bbox": [
+    -12,
+    35,
+    32,
+    71
+  ],
+  "country_whitelist": [
+    "AD",
+    "AL",
+    "AT",
+    "BE",
+    "BA",
+    "BG",
+    "BY",
+    "HR",
+    "CZ",
+    "DK",
+    "EE",
+    "FI",
+    "FR",
+    "DE",
+    "GR",
+    "HU",
+    "IE",
+    "IT",
+    "LV",
+    "LI",
+    "LT",
+    "LU",
+    "MT",
+    "MD",
+    "MC",
+    "ME",
+    "NL",
+    "MK",
+    "NO",
+    "PL",
+    "PT",
+    "RO",
+    "SM",
+    "RS",
+    "SK",
+    "SI",
+    "ES",
+    "SE",
+    "CH",
+    "UA",
+    "GB",
+    "VA"
+  ],
+  "physical_trait_species": 28,
+  "total_record_count": 314593,
+  "blocks_queried": 330,
+  "limits": {
+    "max_total_records": 500000,
+    "max_single_search_records": 40000,
+    "workers": 3
+  },
+  "limitations": [
+    "Only physical-trait species in query; target-group background/effort not acquired here.",
+    "Live search; final model requires immutable DOI download and further roost/season/effort QC.",
+    "No environmental mask or model."
+  ],
+  "facet_count_total": 314593,
+  "upper_bound_species_gate": 22,
+  "upper_bound_by_species": [
+    {
+      "species": "Barbastella barbastellus",
+      "key": "2432582",
+      "records_upper_bound": 1095,
+      "blocks_with_5_records_upper_bound": 13,
+      "potential_gate": true
+    },
+    {
+      "species": "Eptesicus nilssonii",
+      "key": "7261816",
+      "records_upper_bound": 4523,
+      "blocks_with_5_records_upper_bound": 30,
+      "potential_gate": true
+    },
+    {
+      "species": "Eptesicus serotinus",
+      "key": "2432359",
+      "records_upper_bound": 7189,
+      "blocks_with_5_records_upper_bound": 40,
+      "potential_gate": true
+    },
+    {
+      "species": "Myotis bechsteinii",
+      "key": "2432427",
+      "records_upper_bound": 122,
+      "blocks_with_5_records_upper_bound": 7,
+      "potential_gate": true
+    },
+    {
+      "species": "Myotis brandtii",
+      "key": "7261875",
+      "records_upper_bound": 552,
+      "blocks_with_5_records_upper_bound": 22,
+      "potential_gate": true
+    },
+    {
+      "species": "Myotis capaccinii",
+      "key": "2432430",
+      "records_upper_bound": 3,
+      "blocks_with_5_records_upper_bound": 0,
+      "potential_gate": false
+    },
+    {
+      "species": "Myotis dasycneme",
+      "key": "2432452",
+      "records_upper_bound": 2180,
+      "blocks_with_5_records_upper_bound": 17,
+      "potential_gate": true
+    },
+    {
+      "species": "Myotis daubentonii",
+      "key": "2432439",
+      "records_upper_bound": 9547,
+      "blocks_with_5_records_upper_bound": 56,
+      "potential_gate": true
+    },
+    {
+      "species": "Myotis emarginatus",
+      "key": "2432470",
+      "records_upper_bound": 233,
+      "blocks_with_5_records_upper_bound": 10,
+      "potential_gate": true
+    },
+    {
+      "species": "Myotis myotis",
+      "key": "2432416",
+      "records_upper_bound": 306,
+      "blocks_with_5_records_upper_bound": 12,
+      "potential_gate": true
+    },
+    {
+      "species": "Myotis mystacinus",
+      "key": "9754263",
+      "records_upper_bound": 564,
+      "blocks_with_5_records_upper_bound": 28,
+      "potential_gate": true
+    },
+    {
+      "species": "Myotis nattereri",
+      "key": "2432389",
+      "records_upper_bound": 1336,
+      "blocks_with_5_records_upper_bound": 29,
+      "potential_gate": true
+    },
+    {
+      "species": "Myotis oxygnathus",
+      "key": "2432414",
+      "records_upper_bound": 35,
+      "blocks_with_5_records_upper_bound": 1,
+      "potential_gate": false
+    },
+    {
+      "species": "Miniopterus schreibersii",
+      "key": "9796816",
+      "records_upper_bound": 47,
+      "blocks_with_5_records_upper_bound": 2,
+      "potential_gate": false
+    },
+    {
+      "species": "Nyctalus lasiopterus",
+      "key": "5218525",
+      "records_upper_bound": 42,
+      "blocks_with_5_records_upper_bound": 2,
+      "potential_gate": false
+    },
+    {
+      "species": "Nyctalus leisleri",
+      "key": "5218522",
+      "records_upper_bound": 4721,
+      "blocks_with_5_records_upper_bound": 38,
+      "potential_gate": true
+    },
+    {
+      "species": "Nyctalus noctula",
+      "key": "5218524",
+      "records_upper_bound": 15893,
+      "blocks_with_5_records_upper_bound": 60,
+      "potential_gate": true
+    },
+    {
+      "species": "Plecotus auritus",
+      "key": "5218507",
+      "records_upper_bound": 7925,
+      "blocks_with_5_records_upper_bound": 48,
+      "potential_gate": true
+    },
+    {
+      "species": "Plecotus austriacus",
+      "key": "5739437",
+      "records_upper_bound": 66,
+      "blocks_with_5_records_upper_bound": 7,
+      "potential_gate": true
+    },
+    {
+      "species": "Pipistrellus kuhlii",
+      "key": "5218464",
+      "records_upper_bound": 1057,
+      "blocks_with_5_records_upper_bound": 9,
+      "potential_gate": true
+    },
+    {
+      "species": "Pipistrellus nathusii",
+      "key": "5218471",
+      "records_upper_bound": 19584,
+      "blocks_with_5_records_upper_bound": 58,
+      "potential_gate": true
+    },
+    {
+      "species": "Pipistrellus pipistrellus",
+      "key": "5218465",
+      "records_upper_bound": 232878,
+      "blocks_with_5_records_upper_bound": 55,
+      "potential_gate": true
+    },
+    {
+      "species": "Rhinolophus blasii",
+      "key": "2432666",
+      "records_upper_bound": 2,
+      "blocks_with_5_records_upper_bound": 0,
+      "potential_gate": false
+    },
+    {
+      "species": "Rhinolophus euryale",
+      "key": "2432621",
+      "records_upper_bound": 11,
+      "blocks_with_5_records_upper_bound": 1,
+      "potential_gate": false
+    },
+    {
+      "species": "Rhinolophus ferrumequinum",
+      "key": "2432655",
+      "records_upper_bound": 177,
+      "blocks_with_5_records_upper_bound": 10,
+      "potential_gate": true
+    },
+    {
+      "species": "Rhinolophus hipposideros",
+      "key": "2432614",
+      "records_upper_bound": 207,
+      "blocks_with_5_records_upper_bound": 11,
+      "potential_gate": true
+    },
+    {
+      "species": "Tadarida teniotis",
+      "key": "2433009",
+      "records_upper_bound": 768,
+      "blocks_with_5_records_upper_bound": 11,
+      "potential_gate": true
+    },
+    {
+      "species": "Vespertilio murinus",
+      "key": "2432564",
+      "records_upper_bound": 3530,
+      "blocks_with_5_records_upper_bound": 30,
+      "potential_gate": true
+    }
+  ],
+  "status": "BLOCK_COUNTS_READY",
+  "audit": {
+    "run_id": 45579077129,
+    "job_id": 139084232574,
+    "job_conclusion": "cancelled",
+    "artifact_id": 15009597492,
+    "registry_digest": "sha256:cfe93a102299091ef0083beccdd866b2a332b85fdc1ef12c0a207d8b062dcb9e",
+    "artifact_bytes": 9548,
+    "checks": {
+      "count_sum": true,
+      "upper_bound": true,
+      "roster": true
+    },
+    "scope": "Exact log report and registry; artifact ZIP not independently rehashed."
+  },
+  "final_status": "CANCELLED_DURING_LIVE_PAGINATION; counts only; not an acquired snapshot",
+  "actual_spatial_gate": "unknown",
+  "note": "No full-record artifact claimed. Do not rerun large search pagination; official bulk download needed."
+}
