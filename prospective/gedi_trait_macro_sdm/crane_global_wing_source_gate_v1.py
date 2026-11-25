@@ -23,7 +23,9 @@ def record():
     rec=int(m[1]);z=requests.get(f"https://zenodo.org/api/records/{rec}",timeout=(15,45));z.raise_for_status();d=z.json()
     assert d["doi"]==DOI or d.get("conceptdoi")==DOI,(d.get("doi"),d.get("conceptdoi"))
     R["resolved_record"]={"record":rec,"doi":d["doi"],"conceptdoi":d.get("conceptdoi"),"title":d.get("metadata",{}).get("title"),"license":d.get("metadata",{}).get("license")}
-    assert "bat" in R["resolved_record"]["title"].lower()
+    # DOI resolves to the authors\u0027 earlier working title, not the final paper title.
+    assert rec==4309199 and d["doi"]=="10.5281/zenodo.4309199" and d.get("conceptdoi")==DOI
+    assert "crane" in R["resolved_record"]["title"].lower() and "wing" in R["resolved_record"]["title"].lower()
     R["inventory"]=[{"name":v["key"],"size":v["size"],"checksum":v["checksum"]} for v in d["files"]]
     save();return rec,d
 def acquire(rec,v):
