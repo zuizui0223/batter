@@ -1,0 +1,27 @@
+name: Multistudy vertical-stratum original source gate
+on:
+  push:
+    branches: [prospective/gedi-trait-macro-sdm-20261125]
+    paths:
+      - .github/workflows/bat-multistudy-vertical-stratum-source.yml
+permissions:
+  contents: read
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install requests
+      - run: python -m py_compile prospective/gedi_trait_macro_sdm/multistudy_vertical_stratum_source_gate_v1.py
+      - run: python prospective/gedi_trait_macro_sdm/multistudy_vertical_stratum_source_gate_v1.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: multistudy-vertical-stratum-source-v1
+          path: vertical_stratum_source_gate/
+          if-no-files-found: error
+          retention-days: 90
