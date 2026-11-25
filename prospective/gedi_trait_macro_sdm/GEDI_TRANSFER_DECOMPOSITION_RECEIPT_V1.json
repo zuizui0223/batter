@@ -1,0 +1,1207 @@
+{
+  "status": "COMPLETE_DESCRIPTIVE_ONLY",
+  "matched_comparisons": 20327,
+  "matched_blocks": 44,
+  "matched_providers": 28,
+  "taxa": 14,
+  "modes": [
+    {
+      "mode": "geography_only",
+      "comparisons": 20327,
+      "blocks": 44,
+      "providers": 28,
+      "taxa": 14,
+      "scores": {
+        "neutral": -0.6931471805599462,
+        "TLG": -0.627762009205645,
+        "TLG+R50": -0.6188219597740483,
+        "TLG+PAVD": -0.6235150958778611,
+        "TLG+R50+PAVD": -0.6148966562138947
+      },
+      "contrasts": {
+        "TLG+PAVD minus TLG": {
+          "gain": 0.0042469133277838874,
+          "positive_blocks": 23,
+          "positive_intersections": 7,
+          "intersection_gains": [
+            0.004318642646065518,
+            0.0014369782487654303,
+            0.002437559107963172,
+            0.0014993323438970974,
+            -0.009801022271609283,
+            0.019468402138578034,
+            -0.003458155408365693,
+            -0.002517137872281361,
+            0.016505267125518808,
+            -0.003700780550943694,
+            -0.002051025498096548,
+            0.024086337600022212,
+            -0.0026006150142793283
+          ],
+          "delete_one_block_range": [
+            0.0016967853916377588,
+            0.0056706422861249745
+          ],
+          "conditional_block_bootstrap_95": [
+            -0.0029754911823740224,
+            0.012376315042342774
+          ],
+          "screen": false
+        },
+        "TLG+R50 minus TLG": {
+          "gain": 0.008940049431596842,
+          "positive_blocks": 30,
+          "positive_intersections": 10,
+          "intersection_gains": [
+            0.01384807691329426,
+            0.004394093827321699,
+            -0.0005137594073310048,
+            0.03413378547095125,
+            0.011180908493830577,
+            0.005497125275326975,
+            -0.006648582364618405,
+            0.007036122209997719,
+            0.005929378390849616,
+            0.002164066588509428,
+            0.008018921317597516,
+            -0.006536874625530431,
+            0.02499857666728411
+          ],
+          "delete_one_block_range": [
+            0.007302747096275782,
+            0.009859313181435774
+          ],
+          "conditional_block_bootstrap_95": [
+            0.0029559524641496076,
+            0.015524807393445344
+          ],
+          "screen": false
+        },
+        "TLG+R50+PAVD minus TLG+R50": {
+          "gain": 0.00392530356015346,
+          "positive_blocks": 24,
+          "positive_intersections": 7,
+          "intersection_gains": [
+            0.0038146684435609313,
+            0.0008323023639091875,
+            0.001897501784974387,
+            0.0005841069846627134,
+            -0.00924341826654651,
+            0.01933724404016457,
+            -0.0032054251040640747,
+            -0.0032345041917476447,
+            0.018228948427232772,
+            -0.0035569973708046154,
+            -0.0023912936703838206,
+            0.021681963043243768,
+            -0.002938610932928354
+          ],
+          "delete_one_block_range": [
+            0.0013195387686991509,
+            0.0051352402523748295
+          ],
+          "conditional_block_bootstrap_95": [
+            -0.0029133428698890113,
+            0.011792707339208586
+          ],
+          "screen": false
+        },
+        "TLG+R50+PAVD minus TLG+PAVD": {
+          "gain": 0.008618439663966415,
+          "positive_blocks": 30,
+          "positive_intersections": 10,
+          "intersection_gains": [
+            0.013344102710789674,
+            0.003789417942465456,
+            -0.0010538167303197898,
+            0.033218560111716866,
+            0.01173851249889335,
+            0.005365967176913511,
+            -0.006395852060316787,
+            0.006318755890531436,
+            0.00765305969256358,
+            0.0023078497686485067,
+            0.0076786531453102436,
+            -0.008941249182308875,
+            0.024660580748635086
+          ],
+          "delete_one_block_range": [
+            0.006977151536895204,
+            0.009523334719733984
+          ],
+          "conditional_block_bootstrap_95": [
+            0.002778717928655485,
+            0.015081644670154869
+          ],
+          "screen": false
+        },
+        "TLG+R50+PAVD minus TLG": {
+          "gain": 0.012865352991750302,
+          "positive_blocks": 26,
+          "positive_intersections": 11,
+          "intersection_gains": [
+            0.017662745356855192,
+            0.0052263961912308865,
+            0.0013837423776433821,
+            0.03471789245561396,
+            0.0019374902272840666,
+            0.024834369315491545,
+            -0.00985400746868248,
+            0.0038016180182500747,
+            0.024158326818082387,
+            -0.0013929307822951875,
+            0.0056276276472136955,
+            0.015145088417713337,
+            0.022059965734355758
+          ],
+          "delete_one_block_range": [
+            0.01022108655145276,
+            0.01401073806222228
+          ],
+          "conditional_block_bootstrap_95": [
+            0.0035968605278126767,
+            0.023250728058219837
+          ],
+          "screen": true
+        }
+      },
+      "splits": [
+        {
+          "fold": "block1_source1",
+          "scores": {
+            "neutral": -0.6931471805599452,
+            "TLG": -0.6842019653138719,
+            "TLG+R50": -0.6703538884005776,
+            "TLG+PAVD": -0.6798833226678064,
+            "TLG+R50+PAVD": -0.6665392199570167
+          },
+          "train_pairs": 16556,
+          "test_pairs": 3236,
+          "train_blocks": 37,
+          "test_blocks": 5,
+          "shared_blocks": 0,
+          "shared_providers": 2,
+          "shared_cells": 0
+        },
+        {
+          "fold": "block1_source2",
+          "scores": {
+            "neutral": -0.693147180559945,
+            "TLG": -0.6382066055970117,
+            "TLG+R50": -0.63381251176969,
+            "TLG+PAVD": -0.6367696273482463,
+            "TLG+R50+PAVD": -0.6329802094057808
+          },
+          "train_pairs": 16556,
+          "test_pairs": 439,
+          "train_blocks": 37,
+          "test_blocks": 5,
+          "shared_blocks": 0,
+          "shared_providers": 1,
+          "shared_cells": 0
+        },
+        {
+          "fold": "block1_source3",
+          "scores": {
+            "neutral": -0.6931471805599493,
+            "TLG": -0.7101189871549192,
+            "TLG+R50": -0.7106327465622502,
+            "TLG+PAVD": -0.707681428046956,
+            "TLG+R50+PAVD": -0.7087352447772758
+          },
+          "train_pairs": 16556,
+          "test_pairs": 1283,
+          "train_blocks": 37,
+          "test_blocks": 3,
+          "shared_blocks": 0,
+          "shared_providers": 1,
+          "shared_cells": 0
+        },
+        {
+          "fold": "block1_source4",
+          "scores": {
+            "neutral": -0.6931471805599569,
+            "TLG": -0.6496179481056159,
+            "TLG+R50": -0.6154841626346647,
+            "TLG+PAVD": -0.6481186157617188,
+            "TLG+R50+PAVD": -0.6149000556500019
+          },
+          "train_pairs": 16556,
+          "test_pairs": 3062,
+          "train_blocks": 37,
+          "test_blocks": 5,
+          "shared_blocks": 0,
+          "shared_providers": 2,
+          "shared_cells": 0
+        },
+        {
+          "fold": "block1_source5",
+          "scores": {
+            "neutral": -0.6931471805599473,
+            "TLG": -0.7312203666689437,
+            "TLG+R50": -0.7200394581751132,
+            "TLG+PAVD": -0.741021388940553,
+            "TLG+R50+PAVD": -0.7292828764416597
+          },
+          "train_pairs": 16556,
+          "test_pairs": 3708,
+          "train_blocks": 37,
+          "test_blocks": 4,
+          "shared_blocks": 0,
+          "shared_providers": 1,
+          "shared_cells": 0
+        },
+        {
+          "fold": "block2_source4",
+          "scores": {
+            "neutral": -0.6931471805599454,
+            "TLG": -0.5536712532060437,
+            "TLG+R50": -0.5481741279307167,
+            "TLG+PAVD": -0.5342028510674657,
+            "TLG+R50+PAVD": -0.5288368838905522
+          },
+          "train_pairs": 26263,
+          "test_pairs": 112,
+          "train_blocks": 38,
+          "test_blocks": 6,
+          "shared_blocks": 0,
+          "shared_providers": 2,
+          "shared_cells": 0
+        },
+        {
+          "fold": "block2_source5",
+          "scores": {
+            "neutral": -0.6931471805599453,
+            "TLG": -0.5374810455893484,
+            "TLG+R50": -0.5441296279539668,
+            "TLG+PAVD": -0.5409392009977141,
+            "TLG+R50+PAVD": -0.5473350530580309
+          },
+          "train_pairs": 26263,
+          "test_pairs": 178,
+          "train_blocks": 38,
+          "test_blocks": 4,
+          "shared_blocks": 0,
+          "shared_providers": 1,
+          "shared_cells": 0
+        },
+        {
+          "fold": "block3_source4",
+          "scores": {
+            "neutral": -0.6931471805599453,
+            "TLG": -0.6125770888371361,
+            "TLG+R50": -0.6055409666271384,
+            "TLG+PAVD": -0.6150942267094175,
+            "TLG+R50+PAVD": -0.608775470818886
+          },
+          "train_pairs": 22248,
+          "test_pairs": 63,
+          "train_blocks": 40,
+          "test_blocks": 6,
+          "shared_blocks": 0,
+          "shared_providers": 1,
+          "shared_cells": 0
+        },
+        {
+          "fold": "block4_source4",
+          "scores": {
+            "neutral": -0.6931471805599453,
+            "TLG": -0.6124522987008153,
+            "TLG+R50": -0.6065229203099657,
+            "TLG+PAVD": -0.5959470315752965,
+            "TLG+R50+PAVD": -0.5882939718827329
+          },
+          "train_pairs": 28001,
+          "test_pairs": 23,
+          "train_blocks": 38,
+          "test_blocks": 4,
+          "shared_blocks": 0,
+          "shared_providers": 2,
+          "shared_cells": 0
+        },
+        {
+          "fold": "block4_source5",
+          "scores": {
+            "neutral": -0.6931471805599453,
+            "TLG": -0.5625036883506758,
+            "TLG+R50": -0.5603396217621663,
+            "TLG+PAVD": -0.5662044689016195,
+            "TLG+R50+PAVD": -0.563896619132971
+          },
+          "train_pairs": 28001,
+          "test_pairs": 35,
+          "train_blocks": 38,
+          "test_blocks": 6,
+          "shared_blocks": 0,
+          "shared_providers": 1,
+          "shared_cells": 0
+        },
+        {
+          "fold": "block5_source2",
+          "scores": {
+            "neutral": -0.6931471805599455,
+            "TLG": -0.7316442243201089,
+            "TLG+R50": -0.7236253030025114,
+            "TLG+PAVD": -0.7336952498182054,
+            "TLG+R50+PAVD": -0.7260165966728952
+          },
+          "train_pairs": 20068,
+          "test_pairs": 341,
+          "train_blocks": 39,
+          "test_blocks": 4,
+          "shared_blocks": 0,
+          "shared_providers": 1,
+          "shared_cells": 0
+        },
+        {
+          "fold": "block5_source4",
+          "scores": {
+            "neutral": -0.6931471805599453,
+            "TLG": -0.6878362095337323,
+            "TLG+R50": -0.6943730841592627,
+            "TLG+PAVD": -0.66374987193371,
+            "TLG+R50+PAVD": -0.6726911211160189
+          },
+          "train_pairs": 20068,
+          "test_pairs": 93,
+          "train_blocks": 39,
+          "test_blocks": 6,
+          "shared_blocks": 0,
+          "shared_providers": 2,
+          "shared_cells": 0
+        },
+        {
+          "fold": "block5_source5",
+          "scores": {
+            "neutral": -0.6931471805599486,
+            "TLG": -0.7046224318080629,
+            "TLG+R50": -0.6796238551407788,
+            "TLG+PAVD": -0.7072230468223423,
+            "TLG+R50+PAVD": -0.6825624660737072
+          },
+          "train_pairs": 20068,
+          "test_pairs": 7754,
+          "train_blocks": 39,
+          "test_blocks": 5,
+          "shared_blocks": 0,
+          "shared_providers": 1,
+          "shared_cells": 0
+        }
+      ]
+    },
+    {
+      "mode": "provider_only",
+      "comparisons": 20327,
+      "blocks": 44,
+      "providers": 28,
+      "taxa": 14,
+      "scores": {
+        "neutral": -0.6931471805599462,
+        "TLG": -0.6339485935776914,
+        "TLG+R50": -0.6297303972089906,
+        "TLG+PAVD": -0.640766969855515,
+        "TLG+R50+PAVD": -0.6359436508389433
+      },
+      "contrasts": {
+        "TLG+PAVD minus TLG": {
+          "gain": -0.006818376277823215,
+          "positive_blocks": 16,
+          "positive_intersections": 1,
+          "intersection_gains": [
+            0.00004618484877416673,
+            -0.003453113891599302,
+            -0.006134959392910311,
+            -0.00041304138174091953,
+            -0.015999587804399806,
+            -0.01754578174270005,
+            -0.00796106128706009,
+            -0.003172294782110341,
+            -0.00841476859770418,
+            -0.0019307520848608206,
+            -0.005042693890239591,
+            -0.0035896352671789256,
+            -0.0022118352632001237
+          ],
+          "delete_one_block_range": [
+            -0.007157775492953134,
+            -0.005306520512407642
+          ],
+          "conditional_block_bootstrap_95": [
+            -0.011631409973743212,
+            -0.0028549227465151116
+          ],
+          "screen": false
+        },
+        "TLG+R50 minus TLG": {
+          "gain": 0.004218196368700869,
+          "positive_blocks": 24,
+          "positive_intersections": 7,
+          "intersection_gains": [
+            0.011172016396083784,
+            -0.00018012035794989778,
+            -0.0035330226001870635,
+            0.023017834944696558,
+            0.0017330473576012695,
+            -0.011523154091141796,
+            -0.003932652056268138,
+            -0.0014015125957640429,
+            0.025150621935025153,
+            0.005144757799878996,
+            0.013665240262729528,
+            -0.005792979521947239,
+            0.02720416640327139
+          ],
+          "delete_one_block_range": [
+            0.00269610477740895,
+            0.005020462100699212
+          ],
+          "conditional_block_bootstrap_95": [
+            -0.0013937344546413675,
+            0.010462248346709925
+          ],
+          "screen": false
+        },
+        "TLG+R50+PAVD minus TLG+R50": {
+          "gain": -0.006213253629952476,
+          "positive_blocks": 16,
+          "positive_intersections": 0,
+          "intersection_gains": [
+            -0.00001819152687998482,
+            -0.002553157505045034,
+            -0.005646657243118858,
+            -0.0012767003150296885,
+            -0.014148536273002277,
+            -0.01659740515545105,
+            -0.007321362232686313,
+            -0.003168129068916281,
+            -0.007285441153297545,
+            -0.001518627215199353,
+            -0.004851115461612765,
+            -0.004110499318875416,
+            -0.002193349872548378
+          ],
+          "delete_one_block_range": [
+            -0.006555263076671597,
+            -0.004955621479989361
+          ],
+          "conditional_block_bootstrap_95": [
+            -0.010553826085736661,
+            -0.002644467294028802
+          ],
+          "screen": false
+        },
+        "TLG+R50+PAVD minus TLG+PAVD": {
+          "gain": 0.004823319016571607,
+          "positive_blocks": 25,
+          "positive_intersections": 8,
+          "intersection_gains": [
+            0.011107640020429632,
+            0.0007198360286043703,
+            -0.0030447204503956105,
+            0.02215417601140779,
+            0.003584098888998799,
+            -0.010574777503892796,
+            -0.003292953001894361,
+            -0.001397346882569983,
+            0.02627994937943179,
+            0.005556882669540464,
+            0.013856818691356354,
+            -0.006313843573643729,
+            0.027222651793923136
+          ],
+          "delete_one_block_range": [
+            0.003236903365990181,
+            0.0056312255187026174
+          ],
+          "conditional_block_bootstrap_95": [
+            -0.000893304634013602,
+            0.011261839291284438
+          ],
+          "screen": false
+        },
+        "TLG+R50+PAVD minus TLG": {
+          "gain": -0.0019950572612516078,
+          "positive_blocks": 22,
+          "positive_intersections": 6,
+          "intersection_gains": [
+            0.011153824869203799,
+            -0.0027332778629949317,
+            -0.009179679843305921,
+            0.02174113462966687,
+            -0.012415488915401007,
+            -0.028120559246592847,
+            -0.01125401428895445,
+            -0.004569641664680324,
+            0.017865180781727608,
+            0.0036261305846796432,
+            0.008814124801116763,
+            -0.009903478840822655,
+            0.025010816530723012
+          ],
+          "delete_one_block_range": [
+            -0.0035765721164809933,
+            -0.000020103181153898726
+          ],
+          "conditional_block_bootstrap_95": [
+            -0.00917680014875052,
+            0.004740065817719239
+          ],
+          "screen": false
+        }
+      },
+      "splits": [
+        {
+          "fold": "block1_source1",
+          "scores": {
+            "neutral": -0.6931471805599452,
+            "TLG": -0.6726861634359784,
+            "TLG+R50": -0.6615141470398946,
+            "TLG+PAVD": -0.6726399785872043,
+            "TLG+R50+PAVD": -0.6615323385667746
+          },
+          "train_pairs": 19162,
+          "test_pairs": 3236,
+          "train_blocks": 45,
+          "test_blocks": 5,
+          "shared_blocks": 4,
+          "shared_providers": 0,
+          "shared_cells": 53
+        },
+        {
+          "fold": "block1_source2",
+          "scores": {
+            "neutral": -0.693147180559945,
+            "TLG": -0.6368705468340047,
+            "TLG+R50": -0.6370506671919546,
+            "TLG+PAVD": -0.640323660725604,
+            "TLG+R50+PAVD": -0.6396038246969996
+          },
+          "train_pairs": 25663,
+          "test_pairs": 439,
+          "train_blocks": 48,
+          "test_blocks": 5,
+          "shared_blocks": 5,
+          "shared_providers": 0,
+          "shared_cells": 0
+        },
+        {
+          "fold": "block1_source3",
+          "scores": {
+            "neutral": -0.6931471805599493,
+            "TLG": -0.6961092310652613,
+            "TLG+R50": -0.6996422536654484,
+            "TLG+PAVD": -0.7022441904581717,
+            "TLG+R50+PAVD": -0.7052889109085673
+          },
+          "train_pairs": 26863,
+          "test_pairs": 1283,
+          "train_blocks": 46,
+          "test_blocks": 3,
+          "shared_blocks": 2,
+          "shared_providers": 0,
+          "shared_cells": 30
+        },
+        {
+          "fold": "block1_source4",
+          "scores": {
+            "neutral": -0.6931471805599569,
+            "TLG": -0.6373399660485474,
+            "TLG+R50": -0.6143221311038508,
+            "TLG+PAVD": -0.6377530074302883,
+            "TLG+R50+PAVD": -0.6155988314188805
+          },
+          "train_pairs": 24931,
+          "test_pairs": 3062,
+          "train_blocks": 32,
+          "test_blocks": 5,
+          "shared_blocks": 4,
+          "shared_providers": 0,
+          "shared_cells": 8
+        },
+        {
+          "fold": "block1_source5",
+          "scores": {
+            "neutral": -0.6931471805599473,
+            "TLG": -0.6832356386007341,
+            "TLG+R50": -0.6815025912431328,
+            "TLG+PAVD": -0.6992352264051339,
+            "TLG+R50+PAVD": -0.6956511275161351
+          },
+          "train_pairs": 16517,
+          "test_pairs": 3708,
+          "train_blocks": 42,
+          "test_blocks": 4,
+          "shared_blocks": 4,
+          "shared_providers": 0,
+          "shared_cells": 31
+        },
+        {
+          "fold": "block2_source4",
+          "scores": {
+            "neutral": -0.6931471805599454,
+            "TLG": -0.6223746088018797,
+            "TLG+R50": -0.6338977628930215,
+            "TLG+PAVD": -0.6399203905445797,
+            "TLG+R50+PAVD": -0.6504951680484725
+          },
+          "train_pairs": 24931,
+          "test_pairs": 112,
+          "train_blocks": 32,
+          "test_blocks": 6,
+          "shared_blocks": 0,
+          "shared_providers": 0,
+          "shared_cells": 0
+        },
+        {
+          "fold": "block2_source5",
+          "scores": {
+            "neutral": -0.6931471805599453,
+            "TLG": -0.5481937261369294,
+            "TLG+R50": -0.5521263781931975,
+            "TLG+PAVD": -0.5561547874239895,
+            "TLG+R50+PAVD": -0.5594477404258839
+          },
+          "train_pairs": 16517,
+          "test_pairs": 178,
+          "train_blocks": 42,
+          "test_blocks": 4,
+          "shared_blocks": 2,
+          "shared_providers": 0,
+          "shared_cells": 0
+        },
+        {
+          "fold": "block3_source4",
+          "scores": {
+            "neutral": -0.6931471805599453,
+            "TLG": -0.5997039562256333,
+            "TLG+R50": -0.6011054688213974,
+            "TLG+PAVD": -0.6028762510077437,
+            "TLG+R50+PAVD": -0.6042735978903137
+          },
+          "train_pairs": 24931,
+          "test_pairs": 63,
+          "train_blocks": 32,
+          "test_blocks": 6,
+          "shared_blocks": 2,
+          "shared_providers": 0,
+          "shared_cells": 2
+        },
+        {
+          "fold": "block4_source4",
+          "scores": {
+            "neutral": -0.6931471805599453,
+            "TLG": -0.7753943549122937,
+            "TLG+R50": -0.7502437329772685,
+            "TLG+PAVD": -0.7838091235099979,
+            "TLG+R50+PAVD": -0.7575291741305661
+          },
+          "train_pairs": 24931,
+          "test_pairs": 23,
+          "train_blocks": 32,
+          "test_blocks": 4,
+          "shared_blocks": 2,
+          "shared_providers": 0,
+          "shared_cells": 0
+        },
+        {
+          "fold": "block4_source5",
+          "scores": {
+            "neutral": -0.6931471805599453,
+            "TLG": -0.5821722638991291,
+            "TLG+R50": -0.5770275060992501,
+            "TLG+PAVD": -0.58410301598399,
+            "TLG+R50+PAVD": -0.5785461333144495
+          },
+          "train_pairs": 16517,
+          "test_pairs": 35,
+          "train_blocks": 42,
+          "test_blocks": 6,
+          "shared_blocks": 4,
+          "shared_providers": 0,
+          "shared_cells": 3
+        },
+        {
+          "fold": "block5_source2",
+          "scores": {
+            "neutral": -0.6931471805599455,
+            "TLG": -0.6990919423941612,
+            "TLG+R50": -0.6854267021314316,
+            "TLG+PAVD": -0.7041346362844008,
+            "TLG+R50+PAVD": -0.6902778175930444
+          },
+          "train_pairs": 25663,
+          "test_pairs": 341,
+          "train_blocks": 48,
+          "test_blocks": 4,
+          "shared_blocks": 4,
+          "shared_providers": 0,
+          "shared_cells": 5
+        },
+        {
+          "fold": "block5_source4",
+          "scores": {
+            "neutral": -0.6931471805599453,
+            "TLG": -0.6100323280190854,
+            "TLG+R50": -0.6158253075410326,
+            "TLG+PAVD": -0.6136219632862643,
+            "TLG+R50+PAVD": -0.619935806859908
+          },
+          "train_pairs": 24931,
+          "test_pairs": 93,
+          "train_blocks": 32,
+          "test_blocks": 6,
+          "shared_blocks": 3,
+          "shared_providers": 0,
+          "shared_cells": 3
+        },
+        {
+          "fold": "block5_source5",
+          "scores": {
+            "neutral": -0.6931471805599486,
+            "TLG": -0.764112914789543,
+            "TLG+R50": -0.7369087483862716,
+            "TLG+PAVD": -0.7663247500527431,
+            "TLG+R50+PAVD": -0.73910209825882
+          },
+          "train_pairs": 16517,
+          "test_pairs": 7754,
+          "train_blocks": 42,
+          "test_blocks": 5,
+          "shared_blocks": 3,
+          "shared_providers": 0,
+          "shared_cells": 2
+        }
+      ]
+    },
+    {
+      "mode": "both",
+      "comparisons": 20327,
+      "blocks": 44,
+      "providers": 28,
+      "taxa": 14,
+      "scores": {
+        "neutral": -0.6931471805599462,
+        "TLG": -0.6258841411581212,
+        "TLG+R50": -0.6212940241251291,
+        "TLG+PAVD": -0.6318892177241545,
+        "TLG+R50+PAVD": -0.626736605983814
+      },
+      "contrasts": {
+        "TLG+PAVD minus TLG": {
+          "gain": -0.006005076566033521,
+          "positive_blocks": 18,
+          "positive_intersections": 4,
+          "intersection_gains": [
+            0.001693818295079308,
+            -0.0028397387848290156,
+            0.005015112796402321,
+            0.0027251081869390514,
+            -0.01458496384388297,
+            -0.01791843663242987,
+            -0.007174152453287674,
+            -0.0046510260482316435,
+            -0.012681378870789128,
+            -0.0036482048483664764,
+            -0.003100190730026431,
+            0.0006768643276670039,
+            -0.0003956334449618515
+          ],
+          "delete_one_block_range": [
+            -0.0064128110633915845,
+            -0.004378243137373135
+          ],
+          "conditional_block_bootstrap_95": [
+            -0.011164812937842402,
+            -0.0017818395515317269
+          ],
+          "screen": false
+        },
+        "TLG+R50 minus TLG": {
+          "gain": 0.004590117032991995,
+          "positive_blocks": 25,
+          "positive_intersections": 9,
+          "intersection_gains": [
+            0.012500931921239578,
+            0.0004481325206079356,
+            0.001497242962622547,
+            0.02661231826523336,
+            0.004365315984395046,
+            -0.013741668180185074,
+            -0.005248354079935513,
+            -0.000814681615636581,
+            0.021356321989631,
+            0.008534585928898442,
+            0.009493343202594096,
+            -0.0011574973823695878,
+            0.03190570549039062
+          ],
+          "delete_one_block_range": [
+            0.0031112352056021455,
+            0.005665664280177534
+          ],
+          "conditional_block_bootstrap_95": [
+            -0.0011357049790368216,
+            0.010905189627569615
+          ],
+          "screen": false
+        },
+        "TLG+R50+PAVD minus TLG+R50": {
+          "gain": -0.005442581858684938,
+          "positive_blocks": 18,
+          "positive_intersections": 3,
+          "intersection_gains": [
+            0.0016519871750174664,
+            -0.0025110459826266363,
+            0.004452418871071173,
+            0.0018509740289994747,
+            -0.014228341093520891,
+            -0.01647409132866129,
+            -0.006651758310723621,
+            -0.004656976934710011,
+            -0.011029399655138272,
+            -0.003238494009205284,
+            -0.003338276012695429,
+            -0.0000666691520335716,
+            -0.0010055161573805371
+          ],
+          "delete_one_block_range": [
+            -0.005816327092628628,
+            -0.003935399410039116
+          ],
+          "conditional_block_bootstrap_95": [
+            -0.010017976101918388,
+            -0.001645101688152718
+          ],
+          "screen": false
+        },
+        "TLG+R50+PAVD minus TLG+PAVD": {
+          "gain": 0.005152611740340577,
+          "positive_blocks": 26,
+          "positive_intersections": 9,
+          "intersection_gains": [
+            0.012459100801177736,
+            0.000776825322810315,
+            0.0009345490372913989,
+            0.025738184107293782,
+            0.004721938734757125,
+            -0.012297322876416494,
+            -0.00472595993737146,
+            -0.0008206325021149485,
+            0.023008301205281856,
+            0.008944296768059634,
+            0.009255257919925097,
+            -0.0019010308620701633,
+            0.03129582277797194
+          ],
+          "delete_one_block_range": [
+            0.00349789787317829,
+            0.006216377496984925
+          ],
+          "conditional_block_bootstrap_95": [
+            -0.0006543568725124871,
+            0.011741930104985754
+          ],
+          "screen": false
+        },
+        "TLG+R50+PAVD minus TLG": {
+          "gain": -0.0008524648256929436,
+          "positive_blocks": 23,
+          "positive_intersections": 7,
+          "intersection_gains": [
+            0.014152919096257044,
+            -0.0020629134620187006,
+            0.00594966183369372,
+            0.028463292294232834,
+            -0.009863025109125845,
+            -0.030215759508846363,
+            -0.011900112390659134,
+            -0.005471658550346592,
+            0.010326922334492727,
+            0.005296091919693158,
+            0.006155067189898666,
+            -0.0012241665344031594,
+            0.030900189333010086
+          ],
+          "delete_one_block_range": [
+            -0.0022456455715434594,
+            0.0015573766875554079
+          ],
+          "conditional_block_bootstrap_95": [
+            -0.008457474964133878,
+            0.00596155391474163
+          ],
+          "screen": false
+        }
+      },
+      "splits": [
+        {
+          "fold": "block1_source1",
+          "scores": {
+            "neutral": -0.6931471805599452,
+            "TLG": -0.6877536782138942,
+            "TLG+R50": -0.6752527462926546,
+            "TLG+PAVD": -0.6860598599188149,
+            "TLG+R50+PAVD": -0.6736007591176372
+          },
+          "train_pairs": 10670,
+          "test_pairs": 3236,
+          "train_blocks": 35,
+          "test_blocks": 5,
+          "shared_blocks": 0,
+          "shared_providers": 0,
+          "shared_cells": 0
+        },
+        {
+          "fold": "block1_source2",
+          "scores": {
+            "neutral": -0.693147180559945,
+            "TLG": -0.6293423372450585,
+            "TLG+R50": -0.6288942047244506,
+            "TLG+PAVD": -0.6321820760298875,
+            "TLG+R50+PAVD": -0.6314052507070772
+          },
+          "train_pairs": 14374,
+          "test_pairs": 439,
+          "train_blocks": 37,
+          "test_blocks": 5,
+          "shared_blocks": 0,
+          "shared_providers": 0,
+          "shared_cells": 0
+        },
+        {
+          "fold": "block1_source3",
+          "scores": {
+            "neutral": -0.6931471805599493,
+            "TLG": -0.757860967821866,
+            "TLG+R50": -0.7563637248592434,
+            "TLG+PAVD": -0.7528458550254636,
+            "TLG+R50+PAVD": -0.7519113059881722
+          },
+          "train_pairs": 16418,
+          "test_pairs": 1283,
+          "train_blocks": 36,
+          "test_blocks": 3,
+          "shared_blocks": 0,
+          "shared_providers": 0,
+          "shared_cells": 0
+        },
+        {
+          "fold": "block1_source4",
+          "scores": {
+            "neutral": -0.6931471805599569,
+            "TLG": -0.6412144603139325,
+            "TLG+R50": -0.6146021420486991,
+            "TLG+PAVD": -0.6384893521269934,
+            "TLG+R50+PAVD": -0.6127511680196996
+          },
+          "train_pairs": 16265,
+          "test_pairs": 3062,
+          "train_blocks": 22,
+          "test_blocks": 5,
+          "shared_blocks": 0,
+          "shared_providers": 0,
+          "shared_cells": 0
+        },
+        {
+          "fold": "block1_source5",
+          "scores": {
+            "neutral": -0.6931471805599473,
+            "TLG": -0.6693542869570304,
+            "TLG+R50": -0.6649889709726353,
+            "TLG+PAVD": -0.6839392508009133,
+            "TLG+R50+PAVD": -0.6792173120661562
+          },
+          "train_pairs": 8497,
+          "test_pairs": 3708,
+          "train_blocks": 31,
+          "test_blocks": 4,
+          "shared_blocks": 0,
+          "shared_providers": 0,
+          "shared_cells": 0
+        },
+        {
+          "fold": "block2_source4",
+          "scores": {
+            "neutral": -0.6931471805599454,
+            "TLG": -0.5803489854800885,
+            "TLG+R50": -0.5940906536602736,
+            "TLG+PAVD": -0.5982674221125184,
+            "TLG+R50+PAVD": -0.6105647449889349
+          },
+          "train_pairs": 23022,
+          "test_pairs": 112,
+          "train_blocks": 28,
+          "test_blocks": 6,
+          "shared_blocks": 0,
+          "shared_providers": 0,
+          "shared_cells": 0
+        },
+        {
+          "fold": "block2_source5",
+          "scores": {
+            "neutral": -0.6931471805599453,
+            "TLG": -0.5179928590895387,
+            "TLG+R50": -0.5232412131694743,
+            "TLG+PAVD": -0.5251670115428264,
+            "TLG+R50+PAVD": -0.5298929714801979
+          },
+          "train_pairs": 14674,
+          "test_pairs": 178,
+          "train_blocks": 34,
+          "test_blocks": 4,
+          "shared_blocks": 0,
+          "shared_providers": 0,
+          "shared_cells": 0
+        },
+        {
+          "fold": "block3_source4",
+          "scores": {
+            "neutral": -0.6931471805599453,
+            "TLG": -0.6090458830721827,
+            "TLG+R50": -0.6098605646878192,
+            "TLG+PAVD": -0.6136969091204143,
+            "TLG+R50+PAVD": -0.6145175416225293
+          },
+          "train_pairs": 18958,
+          "test_pairs": 63,
+          "train_blocks": 28,
+          "test_blocks": 6,
+          "shared_blocks": 0,
+          "shared_providers": 0,
+          "shared_cells": 0
+        },
+        {
+          "fold": "block4_source4",
+          "scores": {
+            "neutral": -0.6931471805599453,
+            "TLG": -0.7135294614080735,
+            "TLG+R50": -0.6921731394184425,
+            "TLG+PAVD": -0.7262108402788626,
+            "TLG+R50+PAVD": -0.7032025390735808
+          },
+          "train_pairs": 24671,
+          "test_pairs": 23,
+          "train_blocks": 24,
+          "test_blocks": 4,
+          "shared_blocks": 0,
+          "shared_providers": 0,
+          "shared_cells": 0
+        },
+        {
+          "fold": "block4_source5",
+          "scores": {
+            "neutral": -0.6931471805599453,
+            "TLG": -0.5606964946579629,
+            "TLG+R50": -0.5521619087290645,
+            "TLG+PAVD": -0.5643446995063294,
+            "TLG+R50+PAVD": -0.5554004027382697
+          },
+          "train_pairs": 16269,
+          "test_pairs": 35,
+          "train_blocks": 34,
+          "test_blocks": 6,
+          "shared_blocks": 0,
+          "shared_providers": 0,
+          "shared_cells": 0
+        },
+        {
+          "fold": "block5_source2",
+          "scores": {
+            "neutral": -0.6931471805599455,
+            "TLG": -0.7420017474764983,
+            "TLG+R50": -0.7325084042739042,
+            "TLG+PAVD": -0.7451019382065247,
+            "TLG+R50+PAVD": -0.7358466802865996
+          },
+          "train_pairs": 17788,
+          "test_pairs": 341,
+          "train_blocks": 39,
+          "test_blocks": 4,
+          "shared_blocks": 0,
+          "shared_providers": 0,
+          "shared_cells": 0
+        },
+        {
+          "fold": "block5_source4",
+          "scores": {
+            "neutral": -0.6931471805599453,
+            "TLG": -0.6456497509345405,
+            "TLG+R50": -0.64680724831691,
+            "TLG+PAVD": -0.6449728866068735,
+            "TLG+R50+PAVD": -0.6468739174689436
+          },
+          "train_pairs": 16808,
+          "test_pairs": 93,
+          "train_blocks": 26,
+          "test_blocks": 6,
+          "shared_blocks": 0,
+          "shared_providers": 0,
+          "shared_cells": 0
+        },
+        {
+          "fold": "block5_source5",
+          "scores": {
+            "neutral": -0.6931471805599486,
+            "TLG": -0.7567082323261276,
+            "TLG+R50": -0.724802526835737,
+            "TLG+PAVD": -0.7571038657710895,
+            "TLG+R50+PAVD": -0.7258080429931175
+          },
+          "train_pairs": 16055,
+          "test_pairs": 7754,
+          "train_blocks": 35,
+          "test_blocks": 5,
+          "shared_blocks": 0,
+          "shared_providers": 0,
+          "shared_cells": 0
+        }
+      ]
+    }
+  ],
+  "paired_changes": {
+    "geography_only minus both": {
+      "gain_difference": 0.00936788541883865,
+      "positive_blocks": 24,
+      "delete_one_block_range": [
+        0.005254938178738522,
+        0.010263680561613902
+      ],
+      "conditional_block_bootstrap_95": [
+        0.001643074305236391,
+        0.019905716350014223
+      ]
+    },
+    "provider_only minus both": {
+      "gain_difference": -0.000770671771267505,
+      "positive_blocks": 25,
+      "delete_one_block_range": [
+        -0.0010202220699502143,
+        -0.00034101566632908887
+      ],
+      "conditional_block_bootstrap_95": [
+        -0.0024180418607338524,
+        0.0007683772120485293
+      ]
+    },
+    "geography_only minus provider_only": {
+      "gain_difference": 0.010138557190106152,
+      "positive_blocks": 24,
+      "delete_one_block_range": [
+        0.006275160248688735,
+        0.011125841642464065
+      ],
+      "conditional_block_bootstrap_95": [
+        0.0023805442112520042,
+        0.02044545988023788
+      ]
+    }
+  },
+  "decision": "Incremental measured PAVD changes sign when source IDs are excluded even without geographic exclusion. Training support differs; no causal attribution to detection. Preserve nonportable PAVD and strict R50 limitations; prioritize independent structured survey.",
+  "audit": {
+    "run_id": 45717759749,
+    "job_id": 139568115642,
+    "artifact_id": 15069844361,
+    "artifact_zip_digest": "sha256:2e82b4ca49289a12e3486cd056e970a2ef12f3d80494600bca7711db70c1db07",
+    "strict_scores_replayed": true
+  }
+}
