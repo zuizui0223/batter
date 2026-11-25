@@ -25,7 +25,7 @@ def checkpoint():
 class RangeReader(io.RawIOBase):
     """Strict bounded range reader; no fallback to a multi-GB unbounded GET."""
     def __init__(self,url,expected):
-        self.url=url;self.expected=expected;self.pos=0;self.block=16*1024*1024
+        self.url=url;self.expected=expected;self.pos=0;self.block=4*1024*1024
         self.cache=None;self.start=-1;self.transferred=0;self.session=requests.Session()
         self.session.headers.update({"User-Agent":"batter-ahn4-validation/1.0","Accept-Encoding":"identity"})
         self.etag=None
@@ -44,6 +44,10 @@ class RangeReader(io.RawIOBase):
         for j in range(3):
             try:
                 with self.session.get(self.url,headers={"Range":f"bytes={a}-{b}"},stream=True,timeout=(25,90)) as r:
+                    if r.status_code in (429,500,502,503,504):
+                        if j==2:raise RuntimeError(f"range HTTP {r.status_code} after bounded retries, bytes {a}-{b}")
+                        delay=r.headers.get("Retry-After","")
+                        time.sleep(min(60,max(2**(j+2),int(delay) if delay.isdigit() else 0)));continue
                     if r.status_code!=206:
                         raise RuntimeError(f"public range request HTTP {r.status_code}, expected 206")
                     m=re.fullmatch(r"bytes (\d+)-(\d+)/(\d+)",r.headers.get("Content-Range",""))
@@ -100,25 +104,55 @@ def extract(z,i,label,archive):
     print("AHN_MEMBER="+json.dumps({"label":label,**report["members"][label]}),flush=True)
     checkpoint()
     return p
+def full_download(url,path,size,md5,budget):
+    """A complete public file, no unrestricted range fallback."""
+    if size>budget:raise RuntimeError("download exceeds explicit budget")
+    for j in range(3):
+        h=hashlib.md5();n=0
+        try:
+            with requests.get(url,stream=True,timeout=(25,120),headers={"User-Agent":"batter-ahn4-validation/1.1","Accept-Encoding":"identity"}) as r:
+                r.raise_for_status()
+                with path.open("wb") as f:
+                    for block in r.iter_content(4*1024*1024):
+                        n+=len(block)
+                        if n>size:raise RuntimeError("oversized download")
+                        h.update(block);f.write(block)
+            if n!=size or h.hexdigest()!=md5:raise RuntimeError("full download length/MD5 mismatch")
+            return
+        except (requests.RequestException,OSError,RuntimeError) as e:
+            path.unlink(missing_ok=True)
+            if j==2:raise
+            print("AHN_FULL_RETRY",j+1,type(e).__name__,str(e)[:180],flush=True)
+            time.sleep(2**(j+2))
+def inventory(z,archive):
+    inv=[{"name":i.filename,"size":i.file_size,"compressed_size":i.compress_size,"crc32":f"{i.CRC:08x}"} for i in z.infolist() if not i.is_dir()]
+    path=OUT/(archive+".inventory.json");path.write_text(json.dumps(inv,indent=2))
+    report["archives"][archive]["inventory_sha256"]=sha(path)
+    print("AHN_ARCHIVE_INVENTORY "+archive+" "+json.dumps(inv)[:18000],flush=True)
 def acquire():
     metadata()
     paths={}
-    # Read masks first; fail before multi-GB acquisition if schema not as documented.
-    for archive,names in [
-      ("6_Masks.zip",{"brw":"ahn4_10m_mask_building_road_water.tif","power":"ahn4_10m_mask_powerline.tif"}),
-      ("4_AHN4.zip",{"H50":"ahn4_10m_perc_50_normalized_height.tif","H95":"ahn4_10m_perc_95_normalized_height.tif","PPR":"ahn4_10m_pulse_penetration_ratio.tif"})]:
-        info=report["archives"][archive]
-        rr=RangeReader(info["url"],info["size"])
-        with zipfile.ZipFile(rr) as z:
-            inventory=[{"name":i.filename,"size":i.file_size,"compressed_size":i.compress_size,"crc32":f"{i.CRC:08x}"} for i in z.infolist() if not i.is_dir()]
-            path=OUT/(archive+".inventory.json")
-            path.write_text(json.dumps(inventory,indent=2))
-            report["archives"][archive]["inventory_sha256"]=sha(path)
-            print("AHN_ARCHIVE_INVENTORY "+archive+" "+json.dumps(inventory)[:18000],flush=True)
-            for k,v in names.items():paths[k]=extract(z,member(z,v),k,archive)
-        report["archives"][archive]["range_bytes_read"]=rr.transferred
-        report["archives"][archive]["full_archive_md5_verified"]=False
-        rr.session.close()
+    archive="6_Masks.zip";info=report["archives"][archive]
+    localmask=LOCAL/archive
+    full_download(info["url"],localmask,info["size"],info["published_checksum"].split(":")[1],300_000_000)
+    report["archives"][archive]["full_archive_md5_verified"]=True
+    with zipfile.ZipFile(localmask) as z:
+        inventory(z,archive)
+        for k,v in {"brw":"ahn4_10m_mask_building_road_water.tif","power":"ahn4_10m_mask_powerline.tif"}.items():
+            paths[k]=extract(z,member(z,v),k,archive)
+    localmask.unlink()
+    archive="4_AHN4.zip";info=report["archives"][archive]
+    api_url=f"https://zenodo.org/api/records/{RECORD}/files/{archive}/content"
+    # Public API content endpoint, strict 206 and published size required.
+    rr=RangeReader(api_url,info["size"])
+    report["archives"][archive]["actual_range_url"]=api_url
+    with zipfile.ZipFile(rr) as z:
+        inventory(z,archive)
+        for k,v in {"H50":"ahn4_10m_perc_50_normalized_height.tif","H95":"ahn4_10m_perc_95_normalized_height.tif","PPR":"ahn4_10m_pulse_penetration_ratio.tif"}.items():
+            paths[k]=extract(z,member(z,v),k,archive)
+    report["archives"][archive]["range_bytes_read"]=rr.transferred
+    report["archives"][archive]["full_archive_md5_verified"]=False
+    rr.session.close()
     return paths
 def correlation(x,y):
     if len(x)<3 or np.std(x)<=1e-12 or np.std(y)<=1e-12:return {"pearson":None,"spearman":None}
