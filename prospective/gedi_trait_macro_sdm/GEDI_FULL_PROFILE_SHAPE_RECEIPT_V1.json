@@ -1,0 +1,151 @@
+{
+  "status": "COMPLETE_DESCRIPTIVE_ONLY",
+  "matched_cells": 1587,
+  "matched_pairs": 28284,
+  "blocks": 48,
+  "species": 14,
+  "source_grid_sha256": "35fd3897562e9b8a6ee909d86b3d36c429098d939ace120016d76f1815a6fa7c",
+  "contrasts": [
+    {
+      "contrast": "TLG+R50+PAVD+shape3 minus TLG+R50+PAVD",
+      "gain": 0.0017681873121597007,
+      "positive_blocks": 27,
+      "positive_folds": 3,
+      "fold_gains": [
+        -0.002867020082692129,
+        0.014976865952153418,
+        0.0029142957871346464,
+        0.002189396393461829,
+        -0.008729641984437375
+      ],
+      "delete_one_block_range": [
+        -0.0007413787452836167,
+        0.004246886263420026
+      ],
+      "conditional_block_bootstrap_95": [
+        -0.0058371284432805984,
+        0.00965250574886318
+      ],
+      "screen": false
+    },
+    {
+      "contrast": "TLG+R50+PAVD+shape14 minus TLG+R50+PAVD",
+      "gain": 0.002011101336387152,
+      "positive_blocks": 28,
+      "positive_folds": 3,
+      "fold_gains": [
+        -0.0007788155840894317,
+        0.00885263748806242,
+        0.00029236065790694266,
+        0.004023231319598475,
+        -0.0028886375298101674
+      ],
+      "delete_one_block_range": [
+        0.0005102444889583207,
+        0.002784358881739563
+      ],
+      "conditional_block_bootstrap_95": [
+        -0.0019775277968609524,
+        0.006558177159879046
+      ],
+      "screen": false
+    },
+    {
+      "contrast": "TLG+PAVD+shape14 minus TLG+PAVD",
+      "gain": 0.00206487970157295,
+      "positive_blocks": 28,
+      "positive_folds": 3,
+      "fold_gains": [
+        -0.0005803794789540628,
+        0.00884519736420808,
+        0.000518345327309877,
+        0.004119401489708241,
+        -0.0031438168015173185
+      ],
+      "delete_one_block_range": [
+        0.0005859304165412346,
+        0.0029407867842264276
+      ],
+      "conditional_block_bootstrap_95": [
+        -0.002088585049086977,
+        0.006716608055006157
+      ],
+      "screen": false
+    },
+    {
+      "contrast": "TLG+PAVD+shape14 minus TLG+R50",
+      "gain": -0.003191745946674842,
+      "positive_blocks": 21,
+      "positive_folds": 2,
+      "fold_gains": [
+        -0.016110292698137352,
+        0.01709643721741194,
+        -0.007273903416639249,
+        0.0001753985828715221,
+        -0.010057524047838995
+      ],
+      "delete_one_block_range": [
+        -0.006980555229546117,
+        -0.000021598077978964634
+      ],
+      "conditional_block_bootstrap_95": [
+        -0.015335940570594911,
+        0.009464776281873494
+      ],
+      "screen": false
+    },
+    {
+      "contrast": "TLG+R50+PAVD+shape14 minus TLG+R50+PAVD+shape3",
+      "gain": 0.0002429140242274514,
+      "positive_blocks": 26,
+      "positive_folds": 3,
+      "fold_gains": [
+        0.002088204498602697,
+        -0.006124228464090997,
+        -0.0026219351292277038,
+        0.001833834926136646,
+        0.005841004454627208
+      ],
+      "delete_one_block_range": [
+        -0.0014625273816804634,
+        0.0012516232342419376
+      ],
+      "conditional_block_bootstrap_95": [
+        -0.004446947057248846,
+        0.005417607787896507
+      ],
+      "screen": false
+    },
+    {
+      "contrast": "TLG+R50+PAVD+shape14 minus TLG",
+      "gain": 0.015235348615945674,
+      "positive_blocks": 28,
+      "positive_folds": 4,
+      "fold_gains": [
+        0.015933677281777747,
+        0.022657434596728532,
+        -0.00040693183290285706,
+        0.015785716404307704,
+        0.019427803124297593
+      ],
+      "delete_one_block_range": [
+        0.01132290532926182,
+        0.01667180370458881
+      ],
+      "conditional_block_bootstrap_95": [
+        0.004321384799489869,
+        0.02771926776267262
+      ],
+      "screen": true
+    }
+  ],
+  "decision": "Primary compact residual shape and full residual shape both fail predeclared screen. Retain R50 + measured lower fraction as principal exploratory result; detailed shape secondary, no model or feature tuning.",
+  "audit": {
+    "run_id": 45717247164,
+    "job_id": 139566337727,
+    "artifact_id": 15069698951,
+    "artifact_zip_digest": "sha256:bf6bc464db578e6756dbbdfb0e15fdb296915a30d3ea8bcab7ffaf872b1f8e06",
+    "old_scores_replayed": true,
+    "note": "Contrasts from successful job log; full report and coefficients in artifact."
+  }
+}
