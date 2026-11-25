@@ -2,7 +2,7 @@
 Do not infer AR/WL from index proxies or impute data; source rows only if verified.
 No biological response fitting. Inspect original tabular files or archives.
 """
-import collections,csv,hashlib,io,json,pathlib,re,zipfile,tarfile
+import collections,csv,hashlib,io,json,pathlib,re,zipfile,tarfile,time
 from urllib.parse import urlparse,quote
 import requests,openpyxl
 OUT=pathlib.Path("crane_wing_source");OUT.mkdir(exist_ok=True)
@@ -73,11 +73,66 @@ def inspect(p):
                     if x is not None:out["tables"][m.filename]={"sha256":hashlib.sha256(v).hexdigest(),**x}
             return out
     return inspect_bytes(p.read_bytes(),p.name)
+class RangeReader(io.RawIOBase):
+    """Strict bounded range reader; no fallback to a multi-GB unbounded GET."""
+    def __init__(self,url,expected):
+        self.url=url;self.expected=expected;self.pos=0;self.block=4*1024*1024
+        self.cache=None;self.start=-1;self.transferred=0;self.session=requests.Session()
+        self.session.headers.update({"User-Agent":"batter-ahn4-validation/1.0","Accept-Encoding":"identity"})
+        self.etag=None
+        self._fetch(0,0)
+    def readable(self):return True
+    def seekable(self):return True
+    def tell(self):return self.pos
+    def seek(self,off,whence=0):
+        if whence==0:p=off
+        elif whence==1:p=self.pos+off
+        elif whence==2:p=self.expected+off
+        else:raise ValueError("invalid whence")
+        if p<0:raise ValueError("negative seek")
+        self.pos=p;return p
+    def _fetch(self,a,b):
+        for j in range(3):
+            try:
+                with self.session.get(self.url,headers={"Range":f"bytes={a}-{b}"},stream=True,timeout=(25,90)) as r:
+                    if r.status_code in (429,500,502,503,504):
+                        if j==2:raise RuntimeError(f"range HTTP {r.status_code} after bounded retries, bytes {a}-{b}")
+                        delay=r.headers.get("Retry-After","")
+                        time.sleep(min(60,max(2**(j+2),int(delay) if delay.isdigit() else 0)));continue
+                    if r.status_code!=206:
+                        raise RuntimeError(f"public range request HTTP {r.status_code}, expected 206")
+                    m=re.fullmatch(r"bytes (\d+)-(\d+)/(\d+)",r.headers.get("Content-Range",""))
+                    if not m or tuple(map(int,m.groups()))!=(a,b,self.expected):
+                        raise RuntimeError("incorrect Content-Range")
+                    tag=r.headers.get("ETag")
+                    if self.etag is not None and tag!=self.etag:raise RuntimeError("object ETag changed")
+                    if tag:self.etag=tag
+                    raw=r.raw.read(b-a+2)
+                    if len(raw)!=b-a+1:raise RuntimeError("incomplete range")
+                    self.transferred+=len(raw)
+                    if self.transferred>5_500_000_000:raise RuntimeError("range acquisition budget exceeded")
+                    return raw
+            except (requests.Timeout,requests.ConnectionError,OSError):
+                if j==2:raise
+                time.sleep(2**j)
+    def read(self,n=-1):
+        if n is None or n<0:n=max(0,self.expected-self.pos)
+        n=min(n,max(0,self.expected-self.pos))
+        if n>64*1024*1024:raise RuntimeError("single remote read exceeds 64MiB")
+        parts=[]
+        while n:
+            if self.cache is None or not(self.start<=self.pos<self.start+len(self.cache)):
+                self.start=(self.pos//self.block)*self.block
+                self.cache=self._fetch(self.start,min(self.expected-1,self.start+self.block-1))
+            i=self.pos-self.start;take=min(n,len(self.cache)-i)
+            if take<=0:raise RuntimeError("range read stalled")
+            parts.append(self.cache[i:i+take]);self.pos+=take;n-=take
+        return b"".join(parts)
+
 def acquire_zip_members(rec,d):
     # Published version is a single 648 MB ZIP; use the already proven
     # public Zenodo HTTP range implementation from AHN4. Never load all
     # figure/model binaries or claim complete archive MD5 on partial reads.
-    from ahn4_structural_validation_v1 import RangeReader
     f=[x for x in d["files"] if x["key"]=="Supplementary Files.zip"]
     assert len(f)==1
     f=f[0];size=int(f["size"]);assert 600_000_000<=size<=700_000_000
