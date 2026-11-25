@@ -74,7 +74,7 @@ def objective(b,rr):
         x=design(r,len(b));lp,e=stat(r,float(x@b));w=1/(L*counts[r['loc']]);v-=w*lp;grad+=w*(e-r['k'])*x
     return v,grad
 def fit(rr,m):
-    z=minimize(objective,np.zeros(m),args=(rr,),jac=True,method='L-BFGS-B',bounds=[(-6,6)]*m,options={'ftol':1e-13,'gtol':1e-9,'maxiter':1000})
+    z=minimize(objective,np.zeros(m),args=(rr,),jac=True,method='L-BFGS-B',bounds=[(-6,6)]*m,options={'ftol':1e-13,'gtol':1e-9,'maxiter':1000});
     if not z.success:raise RuntimeError('fit nonconvergence: '+str(z.message))
     return z.x
 # numerical checks: normalized conditional mass, swap, and finite difference gradient
