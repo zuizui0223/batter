@@ -1,0 +1,29 @@
+name: Hurme label semantics and effort V40
+on:
+  push:
+    branches:
+      - prospective/trait-wind-roundtrip-20261124
+    paths:
+      - scripts/hurme_label_semantics_v40.py
+      - .github/workflows/hurme-label-semantics-v40.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install pandas numpy
+      - run: python scripts/hurme_label_semantics_v40.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: hurme-label-semantics-v40
+          path: results/hurme_label_semantics_v40.json
+          if-no-files-found: error
+          retention-days: 60
