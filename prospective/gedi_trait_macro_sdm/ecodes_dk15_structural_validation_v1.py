@@ -13,6 +13,7 @@ from scipy.stats import pearsonr,spearmanr
 from sklearn.linear_model import Ridge
 OUT=pathlib.Path("ecodes_validation");OUT.mkdir(exist_ok=True)
 LOCAL=pathlib.Path("ecodes_local");LOCAL.mkdir(exist_ok=True)
+CACHE=pathlib.Path("ecodes_download_cache");CACHE.mkdir(exist_ok=True)
 SOURCE=pathlib.Path("fixed/cell_environment_common_grid.csv.gz")
 PIN="5fc8ae81149ba9436882f3614b6eac8e51c7e79d0d88aa3c5ba15ccc717331e8"
 RECORD=5752926
@@ -24,7 +25,13 @@ def save():
     (OUT/"report.json").write_text(json.dumps(report,indent=2,allow_nan=False))
     print("ECODES_REPORT="+json.dumps(report,allow_nan=False),flush=True)
 def download(name):
-    digest,cap=SPECS[name];filename=name+".tar.bz2";p=LOCAL/filename
+    digest,cap=SPECS[name];filename=name+".tar.bz2";p=CACHE/filename
+    if p.exists():
+        with p.open("rb") as f:cached_md5=hashlib.file_digest(f,"md5").hexdigest()
+        if p.stat().st_size<=cap and cached_md5==digest:
+            report["archives"][name]={"bytes":p.stat().st_size,"md5":digest,"md5_verified":True,"sha256":sha(p),"url":"verified local cache"}
+            print("ECODES_CACHE_HIT",name,p.stat().st_size,flush=True);return p
+        p.unlink()
     urls=[f"https://zenodo.org/records/{RECORD}/files/{filename}?download=1",f"https://zenodo.org/api/records/{RECORD}/files/{filename}/content"]
     for i,url in enumerate(urls):
         n=0;h=hashlib.md5()
@@ -71,30 +78,49 @@ def extract(name,ids):
             with z.extractfile(item) as src,out.open("wb") as dst:shutil.copyfileobj(src,dst)
             if out.stat().st_size!=item.size:raise ValueError("member size mismatch")
             files.append((k,out));manifest.append({"layer":k,"member":item.name,"bytes":item.size,"sha256":sha(out)})
-    p.unlink()
+    # Keep verified original archives for future repair; no repeated downloads.
     if not files:raise ValueError("no target files extracted for "+name)
     mp=OUT/(name+"_members.json");mp.write_text(json.dumps(manifest,indent=2))
     report["archives"][name].update({"raster_members_total":n,"selected_members":len(files),"manifest_sha256":sha(mp)})
     print("ECODES_EXTRACT",name,n,len(files),flush=True);save()
     return files
 def catalog(files):
-    result=collections.defaultdict(dict);wide={}
+    # Do not infer footprints from the filename or assume every tile is 100x100.
+    # Every actual native grid edge is checked and indexed, including cropped tiles.
+    result=collections.defaultdict(lambda:collections.defaultdict(list));wide={}
+    inventory=[];shapes=collections.defaultdict(collections.Counter);unusual=[]
     for key,p in files:
         with rasterio.open(p) as s:
-            assert s.crs.to_epsg()==25832 and s.count==1
-            assert s.transform.a==10 and s.transform.e==-10 and s.transform.b==s.transform.d==0
-            assert abs(s.transform.c/10-round(s.transform.c/10))<1e-6 and abs(s.transform.f/10-round(s.transform.f/10))<1e-6
-            assert s.nodata==-9999 or (key.endswith("_mask") and s.nodata is None), (key,s.nodata)
-            l,b,rr,t=s.bounds
-            if s.width==s.height==100 and l%1000==0 and b%1000==0:
-                xy=(int(l//1000),int(b//1000))
-                if xy in result[key]:raise ValueError("duplicate actual tile location "+str(xy))
-                result[key][xy]=p
-            else:
-                if not key.endswith("_mask") or key in wide:raise ValueError("unexpected raster extent "+str(p))
-                wide[key]=p
+            row={"layer":key,"file":p.name,"crs":str(s.crs),"shape":[s.height,s.width],"transform":list(s.transform),"bounds":list(s.bounds),"nodata":s.nodata,"dtype":s.dtypes[0]}
+            inventory.append(row)
+            assert s.crs.to_epsg()==25832 and s.count==1,row
+            assert abs(s.transform.a-10)<1e-7 and abs(s.transform.e+10)<1e-7 and s.transform.b==s.transform.d==0,row
+            assert abs(s.transform.c/10-round(s.transform.c/10))<1e-6 and abs(s.transform.f/10-round(s.transform.f/10))<1e-6,row
+            assert s.nodata==-9999 or (key.endswith("_mask") and s.nodata is None),row
+            l,bt,rr,tt=[int(round(v/10))*10 for v in s.bounds]
+            assert rr-l==s.width*10 and tt-bt==s.height*10,row
+            shapes[key][f"{s.width}x{s.height}"]+=1
+            if not (s.width==s.height==100 and l%1000==0 and bt%1000==0):
+                if len(unusual)<12:unusual.append(row)
+            # A national mask is handled as a single source. Other extents may be
+            # clipped or padded tiles; use their actual bounds, not filename bounds.
+            if s.width>1500 or s.height>1500:
+                if not key.endswith("_mask") or key in wide:raise ValueError("unexpected wide raster: "+str(row))
+                wide[key]=p;continue
+            entry=(p,l,bt,rr,tt)
+            for i in range(l//1000,math.ceil(rr/1000)):
+                for j in range(bt//1000,math.ceil(tt/1000)):result[key][(i,j)].append(entry)
     for name in ["canopy_height","normalized_z_mean","canopy_openness","building_proportion","inland_water_mask","sea_mask"]:
         if name not in result and name not in wide:raise ValueError("missing source layer "+name)
+        if name in result and name in wide:raise ValueError("ambiguous national and tiled source: "+name)
+    p=OUT/"native_tile_metadata.json.gz"
+    import gzip
+    with gzip.open(p,"wt",encoding="utf8") as f:json.dump(inventory,f,allow_nan=False)
+    report["native_tile_metadata_sha256"]=sha(p)
+    report["native_tile_shapes"]={k:dict(v) for k,v in shapes.items()}
+    report["native_nonstandard_examples"]=unusual
+    report["native_tiles_by_layer"]=dict(collections.Counter(x["layer"] for x in inventory))
+    print("ECODES_GRID_QC="+json.dumps({"shapes":report["native_tile_shapes"],"examples":unusual}),flush=True);save()
     return result,wide
 @lru_cache(maxsize=192)
 def read_tile(p):
@@ -103,6 +129,8 @@ def read_tile(p):
         a=z.data.astype("float32")
         a[np.ma.getmaskarray(z)|~np.isfinite(a)|(a==-9999)]=np.nan
         return a
+CONFLICTS=collections.Counter()
+OVERLAPS=collections.Counter()
 def raster_window(name,box,tile_paths,wide):
     l,b,r,t=box;h=(t-b)//10;w=(r-l)//10
     if name in wide:
@@ -111,16 +139,29 @@ def raster_window(name,box,tile_paths,wide):
             z=s.read(1,window=Window(c,rr,w,h),boundless=True,masked=True,fill_value=-9999)
             a=z.data.astype("float32")
             a[np.ma.getmaskarray(z)|~np.isfinite(a)|(a==-9999)]=np.nan
+            # Explicitly exclude boundless padding, including masks with no declared nodata.
+            inside=(np.arange(rr,rr+h)[:,None]>=0)&(np.arange(rr,rr+h)[:,None]<s.height)&(np.arange(c,c+w)[None,:]>=0)&(np.arange(c,c+w)[None,:]<s.width)
+            a[~inside]=np.nan
             return a
-    a=np.full((h,w),np.nan,np.float32)
+    a=np.full((h,w),np.nan,np.float32);bad=np.zeros((h,w),bool)
+    entries=set()
     for i in range(l//1000,math.ceil(r/1000)):
-        for j in range(b//1000,math.ceil(t/1000)):
-            p=tile_paths[name].get((i,j))
-            if p is None:continue
-            x0=max(l,i*1000);x1=min(r,(i+1)*1000);y0=max(b,j*1000);y1=min(t,(j+1)*1000)
-            if x0>=x1 or y0>=y1:continue
-            z=read_tile(p)
-            a[(t-y1)//10:(t-y0)//10,(x0-l)//10:(x1-l)//10]=z[((j+1)*1000-y1)//10:((j+1)*1000-y0)//10,(x0-i*1000)//10:(x1-i*1000)//10]
+        for j in range(b//1000,math.ceil(t/1000)):entries.update(tile_paths[name].get((i,j),[]))
+    for p,L,B,R,T in sorted(entries,key=lambda v:str(v[0])):
+        x0=max(l,L);x1=min(r,R);y0=max(b,B);y1=min(t,T)
+        if x0>=x1 or y0>=y1:continue
+        z=read_tile(p)[(T-y1)//10:(T-y0)//10,(x0-L)//10:(x1-L)//10]
+        dst=a[(t-y1)//10:(t-y0)//10,(x0-l)//10:(x1-l)//10]
+        flags=bad[(t-y1)//10:(t-y0)//10,(x0-l)//10:(x1-l)//10]
+        assert z.shape==dst.shape
+        overlap=np.isfinite(dst)&np.isfinite(z)
+        conflict=overlap&(dst!=z)
+        OVERLAPS[name]+=int(overlap.sum());CONFLICTS[name]+=int(conflict.sum())
+        # Identical overlapping pixels are counted once. Conflicting source
+        # pixels are excluded, never silently resolved by tile order.
+        flags|=conflict
+        take=~np.isfinite(dst)&np.isfinite(z)&~flags
+        dst[take]=z[take];dst[flags]=np.nan
     return a
 def match(u,tiles,wide):
     ans=np.full((len(u),4),np.nan)
@@ -189,14 +230,17 @@ def main():
     files=[]
     for name in SPECS:files.extend(extract(name,ids))
     tiles,wide=catalog(files)
-    report["verified_tile_counts"]={k:len(v) for k,v in tiles.items()}
+    report["verified_spatial_index_bins"]={k:len(v) for k,v in tiles.items()}
     report["verified_wide_masks"]=sorted(wide);save()
     u[["ALS_valid_area_fraction","ALS_canopy_H95_m","ALS_all_return_mean_height_m","ALS_openness"]]=match(u,tiles,wide)
     u["ALS_mean_to_H95"]=np.where(u.ALS_canopy_H95_m>5,u.ALS_all_return_mean_height_m/u.ALS_canopy_H95_m,np.nan)
-    report["support"]={str(t):compare(u,t) for t in [.7,.5,.9]}
+    report["overlapping_source_pixel_checks"]=dict(OVERLAPS)
+    report["excluded_conflicting_source_pixels"]=dict(CONFLICTS)
     p=OUT/"matched_ecodes_gvsm_cells.csv.gz"
     u[["cell_x","cell_y","lon","lat","worldcover_class_10_fraction","GVSM_area_mean_RH98_m","R50","ALS_valid_area_fraction","ALS_canopy_H95_m","ALS_all_return_mean_height_m","ALS_openness","ALS_mean_to_H95"]].to_csv(p,index=False,compression={"method":"gzip","mtime":0})
-    report["matched_output_sha256"]=sha(p);report["status"]="ECODES_STRUCTURE_CHECK_COMPLETE";save()
+    report["matched_output_sha256"]=sha(p);report["status"]="MATCHED_SOURCE_CELLS_READY";save()
+    report["support"]={str(t):compare(u,t) for t in [.7,.5,.9]}
+    report["status"]="ECODES_STRUCTURE_CHECK_COMPLETE";save()
 if __name__=="__main__":
     try:main()
     except Exception as e:
