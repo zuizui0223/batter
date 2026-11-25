@@ -13,11 +13,20 @@ def save():
     (OUT/"report.json").write_text(json.dumps(R,indent=2,allow_nan=False))
     print("FWS_RELATION_REPORT="+json.dumps(R,allow_nan=False),flush=True)
 def read(name,columns):
-    from io import StringIO
+    import csv,io
     raw=src.call("mdb-export",str(src.P),name,timeout=120)
-    d=pd.read_csv(StringIO(raw),dtype=str,keep_default_na=False)
-    assert set(columns)<=set(d.columns),(name,columns)
-    return d[columns].copy()
+    reader=csv.reader(io.StringIO(raw))
+    header=next(reader);assert len(set(header))==len(header)
+    assert set(columns)<=set(header),(name,"missing fields")
+    idx=[header.index(k) for k in columns];rows=[];bad=0
+    for v in reader:
+        if len(v)!=len(header):bad+=1;continue
+        rows.append([v[i] for i in idx])
+    expected=int(src.call("mdb-count",str(src.P),name,timeout=120).strip())
+    R.setdefault("source_row_reconciliation",{})[name]={"mdb_count":expected,"csv_records":len(rows),"malformed_records":bad}
+    save()
+    assert bad==0 and len(rows)==expected,(name,expected,len(rows),bad)
+    return pd.DataFrame(rows,columns=columns,dtype=str)
 def text(d,k):
     return d[k].fillna("").astype(str).str.strip()
 def dates(s):
@@ -32,7 +41,7 @@ def main():
     e=read("tbl_Events",["Event_ID","Location_ID","Date Start","Time Start","Time End","Rt Compl","Surv Rte Compl","Data OK","Data Rev","Data No OK","Route_length","CountSurveyNight","QAQC_Metadata","QAQC_GPS","QAQC_BatData","SoftwareVersion","BCIDSpeciesFilter"])
     c=read("tbl_BatCallID_Classification",["Data_ID","Event_ID","LAT","LONG","Date Start","Time","FILENAME","Call_ID","A_SP","A_Spper","A_Grp","A_Grpper","A_pulse","A_Dprob","A_ID","gps_diff","Count"])
     t=read("tlu_Species_BatCallID",["A_SP","Genus","Species","Full Species Name"])
-    assert len(e)==1277 and len(c)==57471 and len(t)==18
+    assert (len(e),len(c),len(t))==(1277,57471,18),(len(e),len(c),len(t))
     e["Event_ID"]=text(e,"Event_ID");c["Event_ID"]=text(c,"Event_ID")
     R["event_keys"]={"rows":len(e),"nonempty":int(e.Event_ID.ne("").sum()),"unique":int(e.Event_ID.nunique()),"duplicated_nonempty":int((e.Event_ID.ne("")&e.Event_ID.duplicated(False)).sum())}
     assert e.Event_ID.ne("").all() and not e.Event_ID.duplicated().any()
