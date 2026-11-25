@@ -1,0 +1,77 @@
+{
+  "status": "aggregate_identifiability_audit_only",
+  "source_run": 45524948853,
+  "source_job": 138905862482,
+  "source_commit": "d74264265e0bb979128fd725300af6d90d902cea",
+  "synthetic_exact_moment_checks": "pass",
+  "new_empirical_fits": false,
+  "claim_boundary": "Median coefficients are illustrative, not a paired fold. Each scale is a separate counterexample. No calibrated error, no cross-lag compatibility claim.",
+  "results": [
+    {
+      "lag_s": 0.1,
+      "n_sites": 8,
+      "n_paths": 397,
+      "n_windows": 2095,
+      "mse_common": 0.08864051786184156,
+      "mse_axis": 0.08793116749878409,
+      "h_median": 0.9580216861845143,
+      "v_median": 0.8927005027628088,
+      "min_fold_gap": 0.05992504552443689,
+      "max_h": 0.9658887585033533,
+      "observed_mse_relative_gain_pct": 0.800255210786438,
+      "example_common_latent_rho": 0.9580216861845143,
+      "vertical_error_variance_fraction_of_observed_prior_increment_m2": 0.022400621349002038,
+      "vertical_position_error_sd_over_observed_prior_increment_rms": 0.14966837123788726,
+      "sufficient_all_fold_error_variance_fraction_bound": 0.020439833915371353,
+      "sufficient_all_fold_error_sd_ratio_bound": 0.1429679471607932,
+      "illustrative_population_excess_mse_common_vs_axis": 0.0009481904452471337,
+      "exact_synthetic_moment_witness": {
+        "horizontal": {
+          "latent_slope": 0.9580216861845142,
+          "observed_slope": 0.9580216861845142,
+          "observed_prior_second_moment": 1,
+          "observed_next_second_moment": 1
+        },
+        "vertical": {
+          "latent_slope": 0.958021686184514,
+          "observed_slope": 0.8927005027628088,
+          "observed_prior_second_moment": 1,
+          "observed_next_second_moment": 0.9999999999999999
+        }
+      }
+    },
+    {
+      "lag_s": 0.2,
+      "n_sites": 8,
+      "n_paths": 364,
+      "n_windows": 938,
+      "mse_common": 0.16914047354545272,
+      "mse_axis": 0.15985213899099676,
+      "h_median": 0.9668591479648557,
+      "v_median": 0.7567677766010268,
+      "min_fold_gap": 0.1882692182070389,
+      "max_h": 0.9755176627542135,
+      "observed_mse_relative_gain_pct": 5.491491397509852,
+      "example_common_latent_rho": 0.9668591479648557,
+      "vertical_error_variance_fraction_of_observed_prior_increment_m2": 0.07161266017098954,
+      "vertical_position_error_sd_over_observed_prior_increment_rms": 0.2676054187997499,
+      "sufficient_all_fold_error_variance_fraction_bound": 0.06379768367381453,
+      "sufficient_all_fold_error_sd_ratio_bound": 0.2525820335530905,
+      "illustrative_population_excess_mse_common_vs_axis": 0.00980852984922984,
+      "exact_synthetic_moment_witness": {
+        "horizontal": {
+          "latent_slope": 0.9668591479648558,
+          "observed_slope": 0.9668591479648558,
+          "observed_prior_second_moment": 1,
+          "observed_next_second_moment": 1.0000000000000002
+        },
+        "vertical": {
+          "latent_slope": 0.9668591479648565,
+          "observed_slope": 0.7567677766010271,
+          "observed_prior_second_moment": 0.9999999999999998,
+          "observed_next_second_moment": 0.9999999999999998
+        }
+      }
+    }
+  ]
+}
