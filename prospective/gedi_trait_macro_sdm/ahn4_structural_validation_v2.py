@@ -121,6 +121,57 @@ def aggregate(u,manifest):
     diag["valid_fraction_min"]=float(ans[:,0].min());diag["valid_fraction_max"]=float(ans[:,0].max())
     report["native_overlap_qc"]=diag
     return ans
+def acquire_verified_members():
+    """Recover already verified source members, with per-member hash checks.
+    Keep original acquisition functions unchanged; no invalid cache can enter analysis.
+    """
+    names={"brw":"ahn4_10m_mask_building_road_water.tif","power":"ahn4_10m_mask_powerline.tif","H50":"ahn4_10m_perc_50_normalized_height.tif","H95":"ahn4_10m_perc_95_normalized_height.tif","PPR":"ahn4_10m_pulse_penetration_ratio.tif"}
+    sizes={"brw":86253446,"power":37601958,"H50":647003458,"H95":763217494,"PPR":826610282}
+    paths={}
+    for k,h in MEMBER_PINS.items():
+        p=old.LOCAL/(k+".tif")
+        if p.exists():
+            actual=sha(p)
+            if p.stat().st_size==sizes[k] and actual==h:
+                paths[k]=p
+                report["members"][k]={"member":names[k],"bytes":sizes[k],"sha256":actual,"verified_cache_hit":True}
+            else:
+                p.unlink()
+    report["reused_source_members"]=sorted(paths)
+    checkpoint()
+    if len(paths)<5:
+        old.metadata()
+    missing=[k for k in ("brw","power") if k not in paths]
+    if missing:
+        import zipfile
+        archive="6_Masks.zip";info=report["archives"][archive]
+        p=old.LOCAL/archive
+        old.full_download(info["url"],p,info["size"],info["published_checksum"].split(":")[1],300_000_000)
+        report["archives"][archive]["full_archive_md5_verified"]=True
+        with zipfile.ZipFile(p) as z:
+            old.inventory(z,archive)
+            for k in missing:
+                paths[k]=old.extract(z,old.member(z,names[k]),k,archive)
+                assert paths[k].stat().st_size==sizes[k] and sha(paths[k])==MEMBER_PINS[k],k
+        p.unlink()
+    missing=[k for k in ("H50","H95","PPR") if k not in paths]
+    if missing:
+        import zipfile
+        archive="4_AHN4.zip";info=report["archives"][archive]
+        url=f"https://zenodo.org/api/records/{old.RECORD}/files/{archive}/content"
+        rr=old.RangeReader(url,info["size"])
+        report["archives"][archive]["actual_range_url"]=url
+        with zipfile.ZipFile(rr) as z:
+            old.inventory(z,archive)
+            for k in missing:
+                paths[k]=old.extract(z,old.member(z,names[k]),k,archive)
+                assert paths[k].stat().st_size==sizes[k] and sha(paths[k])==MEMBER_PINS[k],k
+        report["archives"][archive]["range_bytes_read"]=rr.transferred
+        report["archives"][archive]["full_archive_md5_verified"]=False
+        rr.session.close()
+    assert set(paths)==set(MEMBER_PINS)
+    return paths
+
 def main():
     assert subprocess.check_output(["git","hash-object",str(ROOT/"ahn4_structural_validation_v1.py")],text=True).strip()==PIN
     report["synthetic_tests"]=overlap.synthetic_checks();assert all(report["synthetic_tests"].values())
@@ -137,7 +188,7 @@ def main():
     assert (len(u),int(u.south.sum()),int(u.north.sum()))==(636,318,312)
     report.update(candidate_cells=len(u),candidate_south=int(u.south.sum()),candidate_north=int(u.north.sum()));checkpoint()
     assert set(MEMBER_PINS)==set(overlap.KEYS) and all(len(h)==64 and all(c in "0123456789abcdef" for c in h) for h in MEMBER_PINS.values()), "invalid SHA256 manifest before network acquisition"
-    paths=old.acquire()
+    paths=acquire_verified_members()
     for k,p in paths.items():
         assert report["members"][k]["sha256"]==MEMBER_PINS[k] and sha(p)==MEMBER_PINS[k],k
     report["all_five_member_hashes_reverified"]=True;checkpoint()
