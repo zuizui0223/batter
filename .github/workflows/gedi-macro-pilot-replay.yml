@@ -1,0 +1,61 @@
+name: GEDI macro corrected pilot replay
+on:
+  push:
+    branches: [prospective/gedi-trait-macro-sdm-20261125]
+    paths:
+      - .github/workflows/gedi-macro-pilot-replay.yml
+permissions:
+  contents: read
+  actions: read
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          name: gedi-macro-real-inputs
+          run-id: 45575472120
+          github-token: ${{ github.token }}
+          path: prior_inputs
+      - uses: actions/download-artifact@v4
+        with:
+          name: gedi-macro-input-diagnosis
+          run-id: 45575708211
+          github-token: ${{ github.token }}
+          path: prior_diagnosis
+      - run: python -m pip install pyproj
+      - name: Replay exact source bytes with corrected detection labels
+        run: |
+          python - <<'PY'
+          import collections,csv,hashlib,json,math,pathlib
+          from pyproj import Transformer
+          p=pathlib.Path('prior_inputs/gbif_pilot.json');q=pathlib.Path('prior_diagnosis/physical_wing_traits_original.csv')
+          assert hashlib.sha256(p.read_bytes()).hexdigest()=='42577b98946a3bbe67c8c6516932dc85e208ce9f40746a715fc305c4f0bcea08'
+          assert hashlib.sha256(q.read_bytes()).hexdigest()=='d3ebe7656a60b44933f4da1a8302ca800bed07e0864d557698bf322eb7b85f49'
+          raw=json.loads(p.read_text())
+          with q.open(encoding='utf-8-sig') as f:
+              sample=f.read(8192);f.seek(0);traits=list(csv.DictReader(f,dialect=csv.Sniffer().sniff(sample,delimiters=',;\t')))
+          def positive(s):
+              try:return math.isfinite(float(s)) and float(s)>0
+              except (ValueError,TypeError):return False
+          def norm(s):return ' '.join(str(s).replace('_',' ').split()).lower()
+          tr={norm(t['Latin names']):t for t in traits if positive(t['Aspect ratio'])}
+          detected=[r for r in raw if r['occurrenceStatus'] in {'DETECTED','PRESENT'}]
+          strict=[r for r in detected if r['species'] and r['basisOfRecord'] in {'HUMAN_OBSERVATION','MACHINE_OBSERVATION','OBSERVATION'} and isinstance(r['coordinateUncertaintyInMeters'],(int,float)) and 0<r['coordinateUncertaintyInMeters']<=500]
+          matched=[r for r in strict if norm(r['species']) in tr]
+          byspecies=collections.defaultdict(set);blocks=collections.defaultdict(lambda:collections.defaultdict(set));P=Transformer.from_crs(4326,6933,always_xy=True)
+          for r in matched:
+              x,y=P.transform(r['decimalLongitude'],r['decimalLatitude']);cell=(math.floor(x/1000),math.floor(y/1000));block=(math.floor(x/200000),math.floor(y/200000));s=r['species'];byspecies[s].add(cell);blocks[s][block].add(cell)
+          coverage=[{'species':s,'cells':len(c),'blocks_5_cells':sum(len(v)>=5 for v in blocks[s].values())} for s,c in sorted(byspecies.items())]
+          report={'stage':'nonrepresentative pilot, exact-name trait match only, no ecological fit','original_records':len(raw),'detected':len(detected),'eligible':len(strict),'eligible_species':len({r['species'] for r in strict}),'physical_AR_numeric_species':len(tr),'AR_WL_numeric_species':sum(positive(t['Wingloading']) for t in tr.values()),'matched_records':len(matched),'matched_species':len(byspecies),'matched_species_cells':sum(map(len,byspecies.values())),'provisional_gate_species':sum(c['cells']>=30 and c['blocks_5_cells']>=4 for c in coverage),'coverage':coverage,'unmatched_species':sorted({r['species'] for r in strict if norm(r['species']) not in tr}),'limitations':['Nonrepresentative first-page tile sample; no ecological inference.','Exact names only; accepted-key taxonomy reconciliation belongs to full acquisition.','No GEDI or forest coverage mask.']}
+          pathlib.Path('pilot_replay').mkdir(exist_ok=True);pathlib.Path('pilot_replay/result.json').write_text(json.dumps(report,indent=2));print('PILOT_REPLAY='+json.dumps(report))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: corrected-pilot-coverage
+          path: pilot_replay/
