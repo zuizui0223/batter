@@ -1,0 +1,44 @@
+name: FWS frozen 6-km observation support only
+on:
+  push:
+    branches: [prospective/gedi-trait-macro-sdm-20261125]
+    paths:
+      - .github/workflows/gvsm-fws-coarse-support-only.yml
+permissions:
+  contents: read
+jobs:
+  support:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    env:
+      OPENBLAS_NUM_THREADS: "1"
+      OMP_NUM_THREADS: "1"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 448ea3b355c04cdd578c107481c8a095063ee31f
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq mdbtools
+      - run: python -m pip install requests pandas numpy scipy pyproj rasterio
+      - name: Evaluate frozen observation support without raster acquisition or model fit
+        run: |
+          PYTHONPATH=prospective/gedi_trait_macro_sdm python - <<'PY'
+          import fws_coarse_profile_diagnostic_v1 as f
+          try:
+              d=f.source_rows()
+              ct,z,gb,gr,taxa,s=f.labels_and_pairs(d)
+              f.R["pre_environment_comparison_support"]=s
+              f.R["status"]="PRE_ENVIRONMENT_GATE_PASS" if f.passes(s) else "STOP_INSUFFICIENT_PRE_ENVIRONMENT_SUPPORT"
+              f.R["ecological_fit_run"]=False
+              f.save()
+          finally:
+              f.src.P.unlink(missing_ok=True)
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: fws-coarse-observation-support-only
+          path: fws_coarse_profile/report.json
+          if-no-files-found: warn
