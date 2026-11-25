@@ -1,0 +1,57 @@
+{
+  "stage": "independent ALS structural proxy validation, no bat response fit",
+  "source_doi": "10.5281/zenodo.8422129",
+  "source_environment_sha256": "5fc8ae81149ba9436882f3614b6eac8e51c7e79d0d88aa3c5ba15ccc717331e8",
+  "status": "INCOMPLETE",
+  "members": {
+    "brw": {
+      "archive": "6_Masks.zip",
+      "member": "6_Masks/ahn4_10m_mask_building_road_water.tif",
+      "bytes": 86253446,
+      "compressed_bytes": 61225386,
+      "zip_crc32": "5c61266a",
+      "sha256": "57fdd56f2319093c242f3ceb23c0bbe492d19154aebe6cc960df3ea5c94e364f",
+      "crc_checked": true
+    },
+    "power": {
+      "archive": "6_Masks.zip",
+      "member": "6_Masks/ahn4_10m_mask_powerline.tif",
+      "bytes": 37601958,
+      "compressed_bytes": 7310653,
+      "zip_crc32": "29011d94",
+      "sha256": "2ad64705922036c1f565ec2fc50ef36294b745c0799b4a80cc1120b4d9a7411d",
+      "crc_checked": true
+    }
+  },
+  "metrics": {},
+  "limitations": [
+    "ALS vegetation return count percentiles differ from GVSM full-waveform return-energy quantiles.",
+    "AHN4 2020–2022 vs GVSM 2020; acquisition season and canopy change not harmonized.",
+    "Selection from actual forest occurrence support, not a national random sample.",
+    "No biological occupancy, PAVD or actual flyable volume. Latitude comparison not causal.",
+    "Original 2023 metric release may differ from updated 2025 values; no equivalence asserted. Masks from updated release."
+  ],
+  "candidate_cells": 636,
+  "candidate_south": 318,
+  "candidate_north": 312,
+  "archives": {
+    "6_Masks.zip": {
+      "size": 243149518,
+      "published_checksum": "md5:af4cd8fb643f71ed9a23674fbe2b250f",
+      "url": "https://zenodo.org/records/15261042/files/6_Masks.zip?download=1",
+      "full_archive_md5_verified": true,
+      "inventory_sha256": "7a2ef358d1c4bea829e6b19aacf16fe89bbfa2cdf15b56323cfbc1759ccc5037"
+    }
+  },
+  "mask_doi": "10.5281/zenodo.15261042",
+  "release_scope": "Secondary original 2023 AHN4 individual metric files; not the revised 2025 metric archive.",
+  "error": "ReadTimeout: HTTPSConnectionPool(host='zenodo.org', port=443): Read timed out. (read timeout=45)",
+  "audit": {
+    "run_id": 45601122371,
+    "job_id": 139159990073,
+    "artifact_id": 15016021730,
+    "registry_digest": "sha256:a3efd45636ec1ff23aae67574c14d0d2b341bbf19f521efa54949755b8e1b5f1",
+    "job_conclusion": "failure"
+  },
+  "interpretation": "Revised mask archive complete and MD5 verified, two mask members verified by CRC. Legacy metric release request timed out; no height or penetration values retrieved and no structural validation statistic. No substitution into ecological model."
+}
