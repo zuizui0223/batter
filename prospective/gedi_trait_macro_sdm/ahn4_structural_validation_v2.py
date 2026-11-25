@@ -17,12 +17,15 @@ PIN="7b220c5451349d0fd46e5d9d5cea6bbd99c0b198"
 SOURCE=old.SOURCE
 OUT=old.OUT
 WINDOWS=OUT/"native_window_checkpoints";WINDOWS.mkdir(exist_ok=True)
-MEMBER_PINS={
- "brw":"57fdd56f2319093c242f3ceb23c0bbe492d19154aebe6cc960df3ea5c94e364f",
- "power":"2ad64705922036c1f565ec2fc50ef36294b745c0799b4a80cc1120b4d9a7411d",
- "H50":"82883f749681380501680ff86c71b51edf85541a87416977e2e246247ce4194b",
- "H95":"155ca0959ed5b99a6a88acec899775799bb51af9649932ab63fc7ec71f593ccc",
- "PPR":"1410255cf0bbbc63f33e2e2488603a2f4f927a5edf5535f09534253d05f17b56"}
+# Read canonical member hashes from the previous completed acquisition receipt.
+# Validate the receipt before issuing any network requests.
+RECEIPT=ROOT/"AHN4_GRID_STOP_RECEIPT_V1.json"
+receipt=json.loads(RECEIPT.read_text())
+assert receipt["audit"]["run_id"]==45601066021
+assert receipt["source_doi"]=="10.5281/zenodo.15261042"
+assert set(receipt["members"])==set(overlap.KEYS)
+MEMBER_PINS={k:v["sha256"] for k,v in receipt["members"].items()}
+assert all(v["crc_checked"] and len(v["sha256"])==64 and all(c in "0123456789abcdef" for c in v["sha256"]) for v in receipt["members"].values())
 report=old.report
 report.update(stage="independent ALS structural proxy validation, V2 geometry correction only",original_acquisition_and_comparison_blob=PIN,geometry="exact shared native rectangle intersections, then approximate GDAL area-average to EPSG:6933")
 report["limitations"].append("Cross-CRS destination aggregation uses GDAL average, not exact geodesic intersections; native rectangle overlaps are integrated before it.")
@@ -121,6 +124,7 @@ def aggregate(u,manifest):
 def main():
     assert subprocess.check_output(["git","hash-object",str(ROOT/"ahn4_structural_validation_v1.py")],text=True).strip()==PIN
     report["synthetic_tests"]=overlap.synthetic_checks();assert all(report["synthetic_tests"].values())
+    report["member_pin_source"]={"receipt":RECEIPT.name,"sha256":sha(RECEIPT),"validated_members":len(MEMBER_PINS)}
     assert sha(SOURCE)==old.PIN
     u=pd.read_csv(SOURCE);assert len(u)==11006 and not u.duplicated(["cell_x","cell_y"]).any()
     I=Transformer.from_crs(6933,4326,always_xy=True)
