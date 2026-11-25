@@ -1,0 +1,381 @@
+{
+  "stage": "original source bytes and schema only; no ecological fit",
+  "status": "SOURCE_GATE_COMPLETE_NO_FIT",
+  "sources": {
+    "erasmy_2022": {
+      "doi": "10.5061/dryad.cjsxksn6m",
+      "provider": "Dryad",
+      "status": "PUBLIC_ACCESS_STOP",
+      "files": [],
+      "metadata_title": "Three-dimensional stratification pattern in an old-growth lowland forest: how does height in canopy and season influence temperate bat activity?",
+      "metadata_identifier": "doi:10.5061/dryad.cjsxksn6m",
+      "license": "https://spdx.org/licenses/CC0-1.0.html",
+      "version": 4,
+      "version_url": "https://datadryad.org/api/v2/versions/186362",
+      "public_file_inventory": [
+        {
+          "path": "guildact.csv",
+          "size": 68966,
+          "digest": "db11b3f442c5b192bcf02440b53df649f747de6e9296d3f3bec902cd9ccf40a3",
+          "digestType": "sha-256"
+        },
+        {
+          "path": "README_verticalstrat_models.txt",
+          "size": 817,
+          "digest": "7fd0476274201fe74490f0454888dd8a5f9c90a841a577e3e6f4c0a8b366f5b3",
+          "digestType": "sha-256"
+        },
+        {
+          "path": "species_act.csv",
+          "size": 33694,
+          "digest": "4c15238f71d03c29ea431cd1c213e5d1482c24af6c9452d46c37d6b9223668d7",
+          "digestType": "sha-256"
+        }
+      ],
+      "expected_files": [
+        "species_act.csv",
+        "guildact.csv",
+        "README_verticalstrat_models.txt"
+      ],
+      "http_status": 401,
+      "error_type": "HTTPError"
+    },
+    "yoh_2024": {
+      "doi": "10.5061/dryad.0vt4b8h2d",
+      "provider": "Dryad",
+      "status": "PUBLIC_ACCESS_STOP",
+      "files": [],
+      "metadata_title": "Edge effects and vertical stratification of aerial insectivorous bats across the interface of primary-secondary Amazonian rainforest",
+      "metadata_identifier": "doi:10.5061/dryad.0vt4b8h2d",
+      "license": "https://spdx.org/licenses/CC0-1.0.html",
+      "version": 5,
+      "version_url": "https://datadryad.org/api/v2/versions/286547",
+      "public_file_inventory": [
+        {
+          "path": "Auto_UC_orginial.csv",
+          "size": 28959294,
+          "digest": "ee4e5f78392e936ae1120832dd45040a60c7cec031e39db0d623e8dcff3dbe1e",
+          "digestType": "sha-256"
+        },
+        {
+          "path": "Auto_UC_species_clean.csv",
+          "size": 80235,
+          "digest": "cd4dd59e8e6ad93ed60bcd2c568f997cd97b7872846f1377bdd47f84749900c7",
+          "digestType": "sha-256"
+        },
+        {
+          "path": "README.md",
+          "size": 1538,
+          "digest": "2fed5276a952f0147a396734a2772abdf787c14145238fc5ca972599daaf7855",
+          "digestType": "sha-256"
+        },
+        {
+          "path": "README.txt",
+          "size": 6850,
+          "digest": "b4676856470564efacb54b0a0ff794f95f08e6ea942ae0f339847a80e65ed21f",
+          "digestType": "sha-256"
+        }
+      ],
+      "expected_files": [
+        "Auto_UC_species_clean.csv",
+        "README.md"
+      ],
+      "http_status": 401,
+      "error_type": "HTTPError"
+    },
+    "gomes_2020": {
+      "doi": "10.5281/zenodo.4265167",
+      "provider": "Zenodo",
+      "status": "SCHEMA_READY_REQUIRES_DESIGN_AUDIT",
+      "files": [
+        {
+          "name": "Bats.csv",
+          "bytes": 694020,
+          "sha256": "5e09a20dbc80d9405f522a576d42f85c4b8f0a19d35dda8c50f8a26135b0fa14",
+          "published_digest": "md5:8c5b8fa181096759996b77f2ae17bed8",
+          "published_digest_algorithm": null,
+          "published_digest_verified": true,
+          "table_schema": {
+            "rows": 7854,
+            "columns": [
+              "DAY",
+              "HOUR",
+              "Tower",
+              "Canopy",
+              "Bat",
+              "Number",
+              "Date",
+              "S.Az",
+              "S.Alt",
+              "M.Az",
+              "M.Alt",
+              "Phase",
+              "M.SD",
+              "S.Illm",
+              "M.Illm",
+              "T.Illm"
+            ],
+            "malformed_rows": 0,
+            "missing_by_column": {
+              "DAY": 0,
+              "HOUR": 0,
+              "Tower": 0,
+              "Canopy": 0,
+              "Bat": 0,
+              "Number": 0,
+              "Date": 0,
+              "S.Az": 0,
+              "S.Alt": 0,
+              "M.Az": 0,
+              "M.Alt": 0,
+              "Phase": 0,
+              "M.SD": 0,
+              "S.Illm": 0,
+              "M.Illm": 0,
+              "T.Illm": 0
+            },
+            "design_field_unique_counts": {
+              "HOUR": 13,
+              "Tower": 2,
+              "Date": 9
+            },
+            "candidate_stratum_levels": {},
+            "delimiter": ","
+          },
+          "archived_permitted_source_bytes": true
+        },
+        {
+          "name": "Bats_Unconsolidated.csv",
+          "bytes": 1573991,
+          "sha256": "2fc73130d23ae4bbc173ce2c7d92bad50a171eb8887b9af64d1f22d88d26a902",
+          "published_digest": "md5:0243272c2ca4a4029c8c7c37ec1a4c2c",
+          "published_digest_algorithm": null,
+          "published_digest_verified": true,
+          "table_schema": {
+            "rows": 16123,
+            "columns": [
+              "",
+              "IN.FILE",
+              "DATE",
+              "TIME",
+              "HOUR",
+              "MANUAL_ID",
+              "buzz",
+              "Position_color"
+            ],
+            "malformed_rows": 0,
+            "missing_by_column": {
+              "": 0,
+              "IN.FILE": 0,
+              "DATE": 0,
+              "TIME": 0,
+              "HOUR": 0,
+              "MANUAL_ID": 0,
+              "buzz": 0,
+              "Position_color": 0
+            },
+            "design_field_unique_counts": {
+              "DATE": 10,
+              "HOUR": 13,
+              "Position_color": 4
+            },
+            "candidate_stratum_levels": {},
+            "delimiter": ","
+          },
+          "archived_permitted_source_bytes": true
+        },
+        {
+          "name": "Headers.txt",
+          "bytes": 1269,
+          "sha256": "0233dd99a7f335b4f28133a526ac72aa860cde5756d4bc1726c151d87b17b73b",
+          "published_digest": "md5:3df46e61fa3ef867b1d729fd4e69f55c",
+          "published_digest_algorithm": null,
+          "published_digest_verified": true,
+          "archived_permitted_source_bytes": true
+        },
+        {
+          "name": "Headers_Unconsolidated.txt",
+          "bytes": 560,
+          "sha256": "1928e4879b0227e2cca8a9dcd49adce3505820bf483f5a44be06f06a9d456d41",
+          "published_digest": "md5:fd043d09dd669edc49a422129a325ac3",
+          "published_digest_algorithm": null,
+          "published_digest_verified": true,
+          "archived_permitted_source_bytes": true
+        },
+        {
+          "name": "Hourly_Models.R",
+          "bytes": 10703,
+          "sha256": "0f334c55262e853cf4dcd94f617324041dc781521da3ca12754b559f5d62947b",
+          "published_digest": "md5:d76f967e701c3bda3359baf0e517c193",
+          "published_digest_algorithm": null,
+          "published_digest_verified": true,
+          "archived_permitted_source_bytes": true
+        },
+        {
+          "name": "Model_Table.csv",
+          "bytes": 10181,
+          "sha256": "2264f436527d45f470959885c8f58f2f5fb5684ce053e627152b04068a4e3467",
+          "published_digest": "md5:dd8bc574443a0d79039a63454e7a5106",
+          "published_digest_algorithm": null,
+          "published_digest_verified": true,
+          "table_schema": {
+            "rows": 92,
+            "columns": [
+              "",
+              "Estimate",
+              "SE",
+              "CI.90",
+              "CI.80",
+              "N.Eff",
+              "Rhat",
+              "Variable"
+            ],
+            "malformed_rows": 0,
+            "missing_by_column": {
+              "": 0,
+              "Estimate": 0,
+              "SE": 0,
+              "CI.90": 0,
+              "CI.80": 0,
+              "N.Eff": 0,
+              "Rhat": 0,
+              "Variable": 0
+            },
+            "design_field_unique_counts": {},
+            "candidate_stratum_levels": {},
+            "delimiter": ","
+          },
+          "archived_permitted_source_bytes": true
+        },
+        {
+          "name": "Nunez_etal_2019.csv",
+          "bytes": 903,
+          "sha256": "ca75813d91dd6e4dbcbe6b2e18d780ca8c00b3c0638870aa599c3a01eebd278f",
+          "published_digest": "md5:23aea67cea3c154d5200534d65999f10",
+          "published_digest_algorithm": null,
+          "published_digest_verified": true,
+          "table_schema": {
+            "rows": 27,
+            "columns": [
+              "code",
+              "Species",
+              "AR",
+              "WL"
+            ],
+            "malformed_rows": 0,
+            "missing_by_column": {
+              "code": 17,
+              "Species": 0,
+              "AR": 0,
+              "WL": 0
+            },
+            "design_field_unique_counts": {
+              "Species": 23
+            },
+            "candidate_stratum_levels": {},
+            "delimiter": ","
+          },
+          "archived_permitted_source_bytes": true
+        },
+        {
+          "name": "Species_DensityPlots.R",
+          "bytes": 12069,
+          "sha256": "2fc6607de617512db242a0f21feae2743c86ea09a99fb5365fb02f451199a498",
+          "published_digest": "md5:6a9e528a1826a54e03feb3506f41c8e0",
+          "published_digest_algorithm": null,
+          "published_digest_verified": true,
+          "archived_permitted_source_bytes": true
+        }
+      ],
+      "metadata_title": "Data and code for: Time of night and moonlight structure vertical space use by insectivorous bats in a Neotropical rainforest: an acoustic monitoring study",
+      "license": {
+        "id": "cc-by-4.0"
+      },
+      "public_file_inventory": [
+        {
+          "key": "Model_Table.csv",
+          "size": 10181,
+          "checksum": "md5:dd8bc574443a0d79039a63454e7a5106"
+        },
+        {
+          "key": "Species_DensityPlots.R",
+          "size": 12069,
+          "checksum": "md5:6a9e528a1826a54e03feb3506f41c8e0"
+        },
+        {
+          "key": "Headers_Unconsolidated.txt",
+          "size": 560,
+          "checksum": "md5:fd043d09dd669edc49a422129a325ac3"
+        },
+        {
+          "key": "Nunez_etal_2019.csv",
+          "size": 903,
+          "checksum": "md5:23aea67cea3c154d5200534d65999f10"
+        },
+        {
+          "key": "Supplement.pdf",
+          "size": 590663,
+          "checksum": "md5:41cd4c82276743f967d8c0c9dde7a96b"
+        },
+        {
+          "key": "Model.rds",
+          "size": 4857448,
+          "checksum": "md5:1a351859fea4aaa4f6a83c7db21174e5"
+        },
+        {
+          "key": "Headers.txt",
+          "size": 1269,
+          "checksum": "md5:3df46e61fa3ef867b1d729fd4e69f55c"
+        },
+        {
+          "key": "Model_above.rds",
+          "size": 4864566,
+          "checksum": "md5:8018d132c90b0c62717cd85292ca5631"
+        },
+        {
+          "key": "Hourly_Models.R",
+          "size": 10703,
+          "checksum": "md5:d76f967e701c3bda3359baf0e517c193"
+        },
+        {
+          "key": "Bats_Unconsolidated.csv",
+          "size": 1573991,
+          "checksum": "md5:0243272c2ca4a4029c8c7c37ec1a4c2c"
+        },
+        {
+          "key": "Bats.csv",
+          "size": 694020,
+          "checksum": "md5:8c5b8fa181096759996b77f2ae17bed8"
+        },
+        {
+          "key": "Supplement.Rmd",
+          "size": 20157,
+          "checksum": "md5:1250bb7372a20267abddf8df9b9a0df1"
+        }
+      ]
+    }
+  },
+  "limits": [
+    "Detector stratum is not animal altitude.",
+    "Activity indices and pass counts remain distinct.",
+    "No absent label, exact effort, common taxa or study independence asserted from metadata alone.",
+    "No raw locations or responses printed or committed."
+  ],
+  "n_schema_ready": 1,
+  "multistudy_model_admitted": false,
+  "audit": {
+    "run_id": 45653170554,
+    "job_id": 139342756916,
+    "artifact_id": 15041707440,
+    "registry_digest": "sha256:34618b8aa89506a0f9e36db5499dac9033401e4a6c6f12a2446823564a2f24e5",
+    "checks": {
+      "source_count": true,
+      "one_schema_ready": true,
+      "gomes_source_digests": true,
+      "dryad_metadata_but_bytes_blocked": true,
+      "main_not_admitted": true,
+      "registry_matches_log": true
+    },
+    "scope": "Original Gomes source bytes verified against published MD5; Dryad metadata and hashes only, no file bytes. No fit. Artifact registry/upload digest checked."
+  }
+}
