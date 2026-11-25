@@ -1,0 +1,26 @@
+name: Functional regional site source gate
+on:
+  push:
+    branches: [paper/functional-airspace-niche-20261125]
+    paths:
+      - .github/workflows/functional-regional-source-gate.yml
+      - manuscripts/functional_airspace/regional_source_gate.py
+permissions:
+  contents: read
+jobs:
+  public-source-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Authenticate public metadata and inspect bounded headers
+        run: python manuscripts/functional_airspace/regional_source_gate.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: functional-regional-source-receipt
+          path: functional_site_source_receipt.json
+          if-no-files-found: error
