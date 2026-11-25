@@ -4,6 +4,8 @@ on:
     branches: [prospective/gedi-trait-macro-sdm-20261125]
     paths:
       - .github/workflows/gvsm-ahn4-geometry-v2.yml
+      - prospective/gedi_trait_macro_sdm/ahn4_structural_validation_v2.py
+      - prospective/gedi_trait_macro_sdm/ahn_native_grid_overlap.py
 permissions:
   contents: read
   actions: read
