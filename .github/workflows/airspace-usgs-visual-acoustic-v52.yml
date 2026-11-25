@@ -1,0 +1,29 @@
+name: Airspace USGS visual acoustic V52
+on:
+  push:
+    branches: [prospective/roost-3d-connectivity-fd-20261124]
+    paths:
+      - scripts/airspace_usgs_visual_acoustic_v52.py
+      - .github/workflows/airspace-usgs-visual-acoustic-v52.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy==1.26.4 pandas==2.2.3 requests==2.32.3 openpyxl==3.1.5
+      - run: python scripts/airspace_usgs_visual_acoustic_v52.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: airspace-usgs-visual-acoustic-v52
+          path: roost_fd_audit/audit_v52_usgs_visual_acoustic.json
+          if-no-files-found: error
