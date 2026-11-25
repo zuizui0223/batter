@@ -77,7 +77,7 @@ def main():
     dup=goodfile&c.duplicated(["Event_ID","filename"],False)
     R["call_keys"]={"rows":len(c),"nonempty_event_file":int(goodfile.sum()),"duplicate_event_file_rows":int(dup.sum()),"data_id_nonempty":int(text(c,"Data_ID").ne("").sum()),"unique_event_file_pairs":int(c.loc[goodfile,["Event_ID","filename"]].drop_duplicates().shape[0]),"source_Count_values":bucket(c.Count)}
     R["call_keys"]["duplicate_nonempty_data_id_rows"]=int((text(c,"Data_ID").ne("")&text(c,"Data_ID").duplicated(False)).sum())
-    R["call_keys"]["duplicate_full_selected_rows"]=int(c.duplicated(False).sum())
+    R["call_keys"]["duplicate_full_selected_rows"]=int(c.duplicated(keep=False).sum())
     save()
     z=c.merge(e[["Event_ID","Location_ID","event_date","period","QAQC_Metadata","QAQC_GPS","QAQC_BatData"]],on="Event_ID",how="left",validate="many_to_one",indicator=True)
     assert len(z)==len(c)
