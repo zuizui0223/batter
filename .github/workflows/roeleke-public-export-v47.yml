@@ -1,0 +1,29 @@
+name: Roeleke public export replication V47
+on:
+  push:
+    branches:
+      - prospective/trait-wind-roundtrip-20261124
+    paths:
+      - scripts/roeleke_public_export_v47.py
+      - .github/workflows/roeleke-public-export-v47.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  analysis:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install pandas numpy pyproj
+      - run: python scripts/roeleke_public_export_v47.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: roeleke-public-export-v47
+          path: results/roeleke_public_export_v47.json
+          if-no-files-found: error
+          retention-days: 60
