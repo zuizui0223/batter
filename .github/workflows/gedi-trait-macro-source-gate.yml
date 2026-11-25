@@ -1,0 +1,30 @@
+name: GEDI trait macro source gate
+on:
+  push:
+    branches:
+      - prospective/gedi-trait-macro-sdm-20261125
+    paths:
+      - prospective/gedi_trait_macro_sdm/source_gate.py
+      - .github/workflows/gedi-trait-macro-source-gate.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source-gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Query public source metadata and acquire bounded trait CSV
+        run: python prospective/gedi_trait_macro_sdm/source_gate.py
+      - name: Upload raw-source provenance and counts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gedi-trait-macro-source-gate
+          path: gedi_source_gate/
+          if-no-files-found: error
+          retention-days: 30
