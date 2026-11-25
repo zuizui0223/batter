@@ -54,20 +54,30 @@ def fetch(o):
     files=[f for f in ff if PurePosixPath(str(f.get("name") or "")).suffix.lower() in (".csv",".xml")]
     o["inventory"]=[{"name":publicname(f.get("name")),"size":fsize(f),"extension":PurePosixPath(str(f.get("name") or "")).suffix.lower(),"download_link_advertised":bool(f.get("downloadUri") or f.get("url"))} for f in ff]
     assert len(files)==2 and {PurePosixPath(f["name"]).suffix.lower() for f in files}=={".csv",".xml"}
-    result={};o["receipts"]={}
+    result={};o["receipts"]={};o["file_transport_status"]={}
+    exact_sizes={".csv":31144,".xml":27066}
     for f in files:
         ext=PurePosixPath(f["name"]).suffix.lower();n=fsize(f);u=f.get("downloadUri") or f.get("url")
-        assert n is not None and 0<n<=CAP and isinstance(u,str)
+        assert n==exact_sizes[ext] and 0<n<=CAP and isinstance(u,str)
+        if ext==".csv":assert f["name"]=="Hawaii hoary bat nightly acoustic-visual detections and conditions.csv"
+        if ext==".xml":assert "field_"+sha(f["name"].encode())[:12]=="field_aeca0fe098f9"
         p=urlparse(u);assert p.scheme=="https" and (p.hostname or "").endswith((".usgs.gov",".sciencebase.gov"))
-        data=bytearray()
-        with requests.get(u,headers=HEAD,stream=True,timeout=(15,65)) as r:
-            r.raise_for_status()
-            for c in r.iter_content(65536):
-                data.extend(c);assert len(data)<=n
-        b=bytes(data);assert len(b)==n
-        hashes=check(f,b)
-        o["receipts"][ext]={"bytes":len(b),"sha256":sha(b),"publisher_hashes_verified":hashes}
-        result[ext]=b
+        try:
+            data=bytearray()
+            with requests.get(u,headers=HEAD,stream=True,timeout=(15,65)) as r:
+                r.raise_for_status()
+                for c in r.iter_content(65536):
+                    data.extend(c);assert len(data)<=n
+            b=bytes(data);assert len(b)==n
+            hashes=check(f,b)
+            o["receipts"][ext]={"bytes":len(b),"sha256":sha(b),"publisher_hashes_verified":hashes}
+            o["file_transport_status"][ext]={"status":"received"}
+            result[ext]=b
+        except requests.HTTPError as e:
+            o["file_transport_status"][ext]={"status":"blocked","http_status":int(e.response.status_code) if e.response is not None else None}
+        except requests.RequestException as e:
+            o["file_transport_status"][ext]={"status":"blocked","error_type":type(e).__name__}
+    if set(result)!={".csv",".xml"}:raise RuntimeError("exact_source_transport_incomplete")
     return result[".csv"],result[".xml"]
 def role_candidates(h,d):
     res={k:[] for k in ("turbine","date","a_count","v_count","a_effort","v_effort")}
