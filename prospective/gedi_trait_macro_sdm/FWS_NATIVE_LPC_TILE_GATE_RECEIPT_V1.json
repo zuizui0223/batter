@@ -1,0 +1,1694 @@
+{
+  "stage": "official USGS LPC REST polygon strict support V3",
+  "status": "COMPLETE_CATALOG_AND_SMOKE_ONLY",
+  "url": "https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer/8",
+  "actual_geometry_admitted": false,
+  "transfers": [
+    {
+      "endpoint": "https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer/8",
+      "where_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "http": 200,
+      "bytes": 8593,
+      "sha256": "355de690b7b53f840ee2cf528892509ca49a55ad3bc725f8115adcd34fa502f9",
+      "etag": "W/\"556a881b\"",
+      "last_modified": null
+    },
+    {
+      "endpoint": "https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer/8/query",
+      "where_sha256": "661027b5f287f5620db02a132296c435e937a7e765fd5cd6fc6732657dd19bf4",
+      "http": 200,
+      "bytes": 498168,
+      "sha256": "dc3bdbcabfb30d8fe3bf19db3028537d13f5418f6a5720b09f402f5977f2577e",
+      "etag": "W/\"1795035466\"",
+      "last_modified": null
+    },
+    {
+      "endpoint": "https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer/8/query",
+      "where_sha256": "8e6fb192dad372dde99a99bd3a55406b2eb2d65b4c4e79af96c37ab800b39e3a",
+      "http": 200,
+      "bytes": 189953,
+      "sha256": "18856288233325dc0e0b914f8bd6a48e8cde29a96e9fd09b3302be35ddec4234",
+      "etag": "W/\"1795035466\"",
+      "last_modified": null
+    },
+    {
+      "endpoint": "https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer/8/query",
+      "where_sha256": "a520888b1388bf4cca3abc5d5004c79520eb4171be68aadd1c5eeb4c7973d338",
+      "http": 200,
+      "bytes": 4130557,
+      "sha256": "b0cf245ba9e2da51decbe1931446f7adf68064f6e20519f3bdead4f3cc3caa88",
+      "etag": "W/\"1795035466\"",
+      "last_modified": null
+    },
+    {
+      "endpoint": "https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer/8/query",
+      "where_sha256": "6bbbb97c3c01af4e24bbef1477c010b512b43c2e2ad7868ce1129edba6912fb0",
+      "http": 200,
+      "bytes": 696955,
+      "sha256": "17f22ae96921a591712237c64425a2e481407454492d928f7882984be1c5e8e5",
+      "etag": "W/\"1795035466\"",
+      "last_modified": null
+    },
+    {
+      "endpoint": "https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer/8/query",
+      "where_sha256": "82cc1914c38f19085fb0f758b796f41a692b0c06c9590934f8d8791cbcf0c2ed",
+      "http": 200,
+      "bytes": 636725,
+      "sha256": "3f05da439ebd679f16dade5b82b814481a5c0b52b0ce95d463f4b96850e390f9",
+      "etag": "W/\"1795035466\"",
+      "last_modified": null
+    },
+    {
+      "endpoint": "https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer/8/query",
+      "where_sha256": "daba621419ad98cc50cbc6caf7d07e93d39d63d7cb73aa3065d70b62e41d3dc3",
+      "http": 200,
+      "bytes": 987643,
+      "sha256": "2989607e9c7ba14f99cc8a65c2865025e9a4f7a2448d8987f5e4442b238a9662",
+      "etag": "W/\"1795035466\"",
+      "last_modified": null
+    },
+    {
+      "endpoint": "https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer/8/query",
+      "where_sha256": "84decddcfb4e42db624422bb4a21607b5a1cdf31e0fe950bfa547e3557059fbb",
+      "http": 200,
+      "bytes": 449524,
+      "sha256": "076b96c4b59e92b8287c6b70879a9942566c1d2e771b27c890e6353e538881aa",
+      "etag": "W/\"1795035466\"",
+      "last_modified": null
+    },
+    {
+      "endpoint": "https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer/8/query",
+      "where_sha256": "3cfc68419bf1e1ceb1acc79e0ab25026c4128f19d61aab1a21e4a18172ac7378",
+      "http": 200,
+      "bytes": 376482,
+      "sha256": "09a6c815273072a5c0e47642c97ea9edd6e0bb2d958548d282b179f887161591",
+      "etag": "W/\"1795035466\"",
+      "last_modified": null
+    },
+    {
+      "endpoint": "https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer/8/query",
+      "where_sha256": "17061eab716ecd17409ba7881d2f3ed7a10e8523c0eace29f72dbcac145bd3d8",
+      "http": 200,
+      "bytes": 1011366,
+      "sha256": "0247dd68a2d49acaaa8932a3f02a5d6233922a007d6ad13a102c3809a6081240",
+      "etag": "W/\"1795035466\"",
+      "last_modified": null
+    },
+    {
+      "endpoint": "https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer/8/query",
+      "where_sha256": "cc7291ca86a618540637cfffe4ebdff83f62e7d4762366909134fc5d72903d15",
+      "http": 200,
+      "bytes": 600395,
+      "sha256": "56c80b26a14c2fefe4936e0668246cf2134c299dd345d776eb353fe30ea0bf18",
+      "etag": "W/\"1795035466\"",
+      "last_modified": null
+    },
+    {
+      "endpoint": "https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer/8/query",
+      "where_sha256": "010b5f1f1c2102520a45c0f514fa83a0f7d5d66a214832f77900bfd291a4d0bf",
+      "http": 200,
+      "bytes": 485413,
+      "sha256": "e77c9dd43a0546f339648fa7835715b283a6ca1729fc6b2b69bd26a81d4c0563",
+      "etag": "W/\"1795035466\"",
+      "last_modified": null
+    },
+    {
+      "endpoint": "https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer/8/query",
+      "where_sha256": "a765a4f6808d9e573624a1ae6c157bbd450415419e0e6e1614a7335fc5b6aca6",
+      "http": 200,
+      "bytes": 697382,
+      "sha256": "0e068b0d63e952fde31264df38443bed35c2f9125d174eab1ec9b48fd0d7e756",
+      "etag": "W/\"1795035466\"",
+      "last_modified": null
+    },
+    {
+      "endpoint": "https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer/8/query",
+      "where_sha256": "b55386397831e228af3ca02f24c2e6dcc741b53abd6a73a3cfd86ad139ec5ba6",
+      "http": 200,
+      "bytes": 323188,
+      "sha256": "ce6f33e4267d5295cce7faf14eca4a55463b3e54977b021596730bf277954610",
+      "etag": "W/\"1795035466\"",
+      "last_modified": null
+    },
+    {
+      "endpoint": "https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer/8/query",
+      "where_sha256": "36c48c920810da41ff38390935e294653b05c6a23c7b098094a2291baf0257de",
+      "http": 200,
+      "bytes": 295173,
+      "sha256": "69cd7cad6e35ac6eccaf8d3c465e2780df5543da9f592b8e231bd05848d20bc8",
+      "etag": "W/\"1795035466\"",
+      "last_modified": null
+    },
+    {
+      "endpoint": "https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer/8/query",
+      "where_sha256": "9e339d91571dae0a06624979ef459f83490dfc1bca3ac4bfd93e52bbbe43fb31",
+      "http": 200,
+      "bytes": 676207,
+      "sha256": "f4673357eefc45f90e5e74d9ad5a61cb0acf92ebc759f10c5f978930e7fd8b04",
+      "etag": "W/\"1795035466\"",
+      "last_modified": null
+    },
+    {
+      "endpoint": "https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer/8/query",
+      "where_sha256": "9e8b954244f814831f000394ad6284d7ba5326ff1502ad54dc2e23fb4674971e",
+      "http": 200,
+      "bytes": 603228,
+      "sha256": "1917ff01bc82b712432d65e47fd317032c7dabdb7af6db2da670d5c080a0eff0",
+      "etag": "W/\"1795035466\"",
+      "last_modified": null
+    },
+    {
+      "endpoint": "https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer/8/query",
+      "where_sha256": "9229692e4e4a87fd71ed3ac402c3d07c8abfb8bbf16355479c32c07837a47bc2",
+      "http": 200,
+      "bytes": 504355,
+      "sha256": "11d253ff85013b78de3c466b8d6774f98e69b1a313afe8505d1c7e235172083c",
+      "etag": "W/\"1795035466\"",
+      "last_modified": null
+    },
+    {
+      "endpoint": "https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer/8/query",
+      "where_sha256": "f6fc1f3c5b8e757d645552ce34d6379e8e593403ac47604f82fb2d50e6c18fd1",
+      "http": 200,
+      "bytes": 546582,
+      "sha256": "4ab685e9cc799c7a82d3cccade0c7d7fda47efe281bd45848d893d3aeb3d0499",
+      "etag": "W/\"1795035466\"",
+      "last_modified": null
+    },
+    {
+      "endpoint": "https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer/8/query",
+      "where_sha256": "8e477cdbad6a02136e639270845a751cb3e3dae5bcecf8ad3b0fbe719e5f4dbf",
+      "http": 200,
+      "bytes": 629822,
+      "sha256": "5d2978a9aab82c2c741047a95e9977bdac162df8e57bc70792e9867c6e2d06df",
+      "etag": "W/\"1795035466\"",
+      "last_modified": null
+    },
+    {
+      "endpoint": "https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer/8/query",
+      "where_sha256": "61a2dcdea29494c9552f77de77080c9f2225a81450287f7d8fe9c0a94cd6633b",
+      "http": 200,
+      "bytes": 4413567,
+      "sha256": "fdeeaa6fd68f7565dbc2f3a9e77f2798f9e6df20438a70bf329251e6281c4f7a",
+      "etag": "W/\"1795035466\"",
+      "last_modified": null
+    },
+    {
+      "endpoint": "https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer/8/query",
+      "where_sha256": "770342963d3ad7fe1658127862ff07a2140e4a5dd3687e71a6b56f4e505f6612",
+      "http": 200,
+      "bytes": 691779,
+      "sha256": "9e50648bcbd3186d30765068150333bf88c846cc100c275feb1b57db183dd28d",
+      "etag": "W/\"1795035466\"",
+      "last_modified": null
+    },
+    {
+      "endpoint": "https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer/8/query",
+      "where_sha256": "514458aff8cb1dcec003c685f5babade36fc5315dbb5d8ee3113c42a4f792e78",
+      "http": 200,
+      "bytes": 921105,
+      "sha256": "c6558a2838c71a6d31554e012355ccec0281e9fd95a92081d9a57b7c35cbc4a5",
+      "etag": "W/\"1795035466\"",
+      "last_modified": null
+    },
+    {
+      "endpoint": "https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer/8/query",
+      "where_sha256": "473e096f5d81dd2054b7d17ac4a8b4ba73cf46772ba96f5cd4aa28a482440928",
+      "http": 200,
+      "bytes": 739179,
+      "sha256": "dc8c41e5deb0f7e9ca7fcbe36a5678db243427aa9dbd76c6dc035b782eee89bf",
+      "etag": "W/\"1795035466\"",
+      "last_modified": null
+    },
+    {
+      "endpoint": "https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer/8/query",
+      "where_sha256": "0de05ef18a1210af8cd93c9140817073f4a12bf8b73a163ed3a05c8f4528340f",
+      "http": 200,
+      "bytes": 23114,
+      "sha256": "edccbc60d423c307d718bfcf80c76b37a411a9276b94e302362527431d84aeb2",
+      "etag": "W/\"1795035466\"",
+      "last_modified": null
+    }
+  ],
+  "limitations": [
+    "Official REST polygon coverage, not decoded LAZ coverage or physical accessibility.",
+    "Exact CSV metadata match only, no inferred EPT aliases.",
+    "No precise FWS locations transmitted or exported; queries use only public workunit IDs.",
+    "No ecological fit."
+  ],
+  "csv_sha256": "87f5d330a8953f32fa2682529029b48c844df06f43e8d11f55e46670021fcfa9",
+  "csv_missing_or_duplicate_ids": 688,
+  "strict_csv_workunit_count": 576,
+  "service_metadata": {
+    "name": "Lidar Point Cloud",
+    "fields": {
+      "OBJECTID": "esriFieldTypeOID",
+      "workunit": "esriFieldTypeString",
+      "workunit_id": "esriFieldTypeInteger",
+      "collect_start": "esriFieldTypeDate",
+      "collect_end": "esriFieldTypeDate",
+      "ql": "esriFieldTypeString",
+      "p_method": "esriFieldTypeString",
+      "vert_crs": "esriFieldTypeString",
+      "lpc_link": "esriFieldTypeString",
+      "lpc_category": "esriFieldTypeString"
+    },
+    "maxRecordCount": 2000,
+    "extent_spatial_reference": {
+      "wkid": 102100,
+      "latestWkid": 3857,
+      "xyTolerance": 0.001,
+      "zTolerance": 0.001,
+      "mTolerance": 0.001,
+      "falseX": -22040479.784895003,
+      "falseY": -30241100,
+      "xyUnits": 144149830.65927747,
+      "falseZ": -100000,
+      "zUnits": 10000,
+      "falseM": -100000,
+      "mUnits": 10000
+    },
+    "editingInfo": null,
+    "currentVersion": 11.3
+  },
+  "service_returned_features": 576,
+  "missing_strict_csv_ids": 0,
+  "ambiguous_workunit_ids": 0,
+  "attrition_counts": {
+    "exact_metadata_bridge_pass": 576,
+    "invalid_geometry": 1
+  },
+  "geometry_repaired": 10,
+  "qualified_geometry_ids": 575,
+  "arms": {
+    "native_LPC_strict": {
+      "candidate_workunits": 575,
+      "workunits_intersecting_cells": 16,
+      "cells": 57,
+      "records": 2272,
+      "support": {
+        "taxon_support": [
+          {
+            "species": "Corynorhinus rafinesquii",
+            "cells": 4,
+            "routes": 3,
+            "eligible": false
+          },
+          {
+            "species": "Eptesicus fuscus",
+            "cells": 33,
+            "routes": 11,
+            "eligible": true
+          },
+          {
+            "species": "Lasiurus borealis",
+            "cells": 49,
+            "routes": 14,
+            "eligible": true
+          },
+          {
+            "species": "Lasiurus cinereus",
+            "cells": 11,
+            "routes": 4,
+            "eligible": true
+          },
+          {
+            "species": "Myotis austroriparius",
+            "cells": 15,
+            "routes": 10,
+            "eligible": true
+          },
+          {
+            "species": "Myotis grisescens",
+            "cells": 1,
+            "routes": 1,
+            "eligible": false
+          },
+          {
+            "species": "Myotis lucifugus",
+            "cells": 20,
+            "routes": 8,
+            "eligible": true
+          },
+          {
+            "species": "Myotis septentrionalis",
+            "cells": 4,
+            "routes": 2,
+            "eligible": false
+          },
+          {
+            "species": "Myotis sodalis",
+            "cells": 3,
+            "routes": 3,
+            "eligible": false
+          },
+          {
+            "species": "Nycticeius humeralis",
+            "cells": 54,
+            "routes": 14,
+            "eligible": true
+          },
+          {
+            "species": "Perimyotis subflavus",
+            "cells": 45,
+            "routes": 14,
+            "eligible": true
+          }
+        ],
+        "eligible_taxa": 7,
+        "comparison_taxa": 7,
+        "comparison_routes": 12,
+        "comparison_blocks": 9,
+        "comparisons": 2595,
+        "comparison_cells": 55,
+        "groups": 462
+      },
+      "passes_original_support": true
+    },
+    "native_LPC_strict_meets_category": {
+      "candidate_workunits": 569,
+      "workunits_intersecting_cells": 16,
+      "cells": 57,
+      "records": 2272,
+      "support": {
+        "taxon_support": [
+          {
+            "species": "Corynorhinus rafinesquii",
+            "cells": 4,
+            "routes": 3,
+            "eligible": false
+          },
+          {
+            "species": "Eptesicus fuscus",
+            "cells": 33,
+            "routes": 11,
+            "eligible": true
+          },
+          {
+            "species": "Lasiurus borealis",
+            "cells": 49,
+            "routes": 14,
+            "eligible": true
+          },
+          {
+            "species": "Lasiurus cinereus",
+            "cells": 11,
+            "routes": 4,
+            "eligible": true
+          },
+          {
+            "species": "Myotis austroriparius",
+            "cells": 15,
+            "routes": 10,
+            "eligible": true
+          },
+          {
+            "species": "Myotis grisescens",
+            "cells": 1,
+            "routes": 1,
+            "eligible": false
+          },
+          {
+            "species": "Myotis lucifugus",
+            "cells": 20,
+            "routes": 8,
+            "eligible": true
+          },
+          {
+            "species": "Myotis septentrionalis",
+            "cells": 4,
+            "routes": 2,
+            "eligible": false
+          },
+          {
+            "species": "Myotis sodalis",
+            "cells": 3,
+            "routes": 3,
+            "eligible": false
+          },
+          {
+            "species": "Nycticeius humeralis",
+            "cells": 54,
+            "routes": 14,
+            "eligible": true
+          },
+          {
+            "species": "Perimyotis subflavus",
+            "cells": 45,
+            "routes": 14,
+            "eligible": true
+          }
+        ],
+        "eligible_taxa": 7,
+        "comparison_taxa": 7,
+        "comparison_routes": 12,
+        "comparison_blocks": 9,
+        "comparisons": 2595,
+        "comparison_cells": 55,
+        "groups": 462
+      },
+      "passes_original_support": true
+    },
+    "EPT_exact_name_intersect_official_strict": {
+      "candidate_workunits": 521,
+      "workunits_intersecting_cells": 14,
+      "cells": 50,
+      "records": 1830,
+      "support": {
+        "taxon_support": [
+          {
+            "species": "Corynorhinus rafinesquii",
+            "cells": 4,
+            "routes": 3,
+            "eligible": false
+          },
+          {
+            "species": "Eptesicus fuscus",
+            "cells": 29,
+            "routes": 9,
+            "eligible": true
+          },
+          {
+            "species": "Lasiurus borealis",
+            "cells": 42,
+            "routes": 12,
+            "eligible": true
+          },
+          {
+            "species": "Lasiurus cinereus",
+            "cells": 11,
+            "routes": 4,
+            "eligible": true
+          },
+          {
+            "species": "Myotis austroriparius",
+            "cells": 13,
+            "routes": 8,
+            "eligible": true
+          },
+          {
+            "species": "Myotis grisescens",
+            "cells": 1,
+            "routes": 1,
+            "eligible": false
+          },
+          {
+            "species": "Myotis lucifugus",
+            "cells": 16,
+            "routes": 7,
+            "eligible": true
+          },
+          {
+            "species": "Myotis septentrionalis",
+            "cells": 4,
+            "routes": 2,
+            "eligible": false
+          },
+          {
+            "species": "Myotis sodalis",
+            "cells": 2,
+            "routes": 2,
+            "eligible": false
+          },
+          {
+            "species": "Nycticeius humeralis",
+            "cells": 47,
+            "routes": 12,
+            "eligible": true
+          },
+          {
+            "species": "Perimyotis subflavus",
+            "cells": 38,
+            "routes": 12,
+            "eligible": true
+          }
+        ],
+        "eligible_taxa": 7,
+        "comparison_taxa": 7,
+        "comparison_routes": 10,
+        "comparison_blocks": 7,
+        "comparisons": 2244,
+        "comparison_cells": 48,
+        "groups": 399
+      },
+      "passes_original_support": false
+    }
+  },
+  "ept_index_sha256": "b0510390f8090e46f77b3b8c7c82e24a720157fd8ad31c7345bf2764959148f7",
+  "tile_catalog_transfers": [
+    {
+      "endpoint": "datasets",
+      "workunit_id": null,
+      "offset": null,
+      "http": 200,
+      "bytes": 42717,
+      "sha256": "72c4c58dab26f55ac626e4164a709194162abc7582d8543edcf880a229f141ec"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "182548",
+      "offset": 0,
+      "http": 200,
+      "bytes": 1628813,
+      "sha256": "5b0e28e829916d18994dc52f21c0b255d83113fa634f82108594e5f1cb1388bc"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "182548",
+      "offset": 500,
+      "http": 200,
+      "bytes": 1628896,
+      "sha256": "b4047556ce29899625ee74ff920e3b38171ae53fbc1a3307595affde8115a952"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "182548",
+      "offset": 1000,
+      "http": 200,
+      "bytes": 1628860,
+      "sha256": "8e2f8cf84f96c6a24b40923e356933f913ec181b9b3635e3c4f7d0ad05f95fe2"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "182548",
+      "offset": 1500,
+      "http": 200,
+      "bytes": 1628906,
+      "sha256": "0de18656b9d67598e8006bad9cee822d18d25e110740709bc6724a1da03ee725"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "182548",
+      "offset": 2000,
+      "http": 200,
+      "bytes": 1628911,
+      "sha256": "898cdee646e6d3734b75ca5916320fb53a0bc06ec83c3aef0dfcc26e98bf4a80"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "182548",
+      "offset": 2500,
+      "http": 200,
+      "bytes": 1628875,
+      "sha256": "4c4fd0d3bcb94ffe063297116aecb6973f0f00954a2b795e45627339e7831a65"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "182771",
+      "offset": 0,
+      "http": 200,
+      "bytes": 1671538,
+      "sha256": "44d41fa4826d4bc91360084d3ed83ad5313cbd29105fcded61fe82fe5d12a142"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "182771",
+      "offset": 500,
+      "http": 200,
+      "bytes": 1671392,
+      "sha256": "f285109930c9aa954305a9c276b6eab382bf01e7ae6bce83fdd41c9681600bbb"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "182771",
+      "offset": 1000,
+      "http": 200,
+      "bytes": 1671398,
+      "sha256": "24a2f335ef2d2a2c8ffcd65b50d0ffe04b5ca77eff3149e428c20909c3896adf"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "182771",
+      "offset": 1500,
+      "http": 200,
+      "bytes": 1671425,
+      "sha256": "1bce0ca64fd024d4e41b70f18e017c5c01b375e427ae5da0ba4815b6eedc0af5"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "182771",
+      "offset": 2000,
+      "http": 200,
+      "bytes": 1671442,
+      "sha256": "b8206568a852a714331798fee6f10e92e6518c69ed4c2bd40c385011a9468859"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "182771",
+      "offset": 2500,
+      "http": 200,
+      "bytes": 1671424,
+      "sha256": "2aa31dda166563c93448532d1db3838a69c3245a82a8b216a430c4dcc9c2959a"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "183399",
+      "offset": 0,
+      "http": 200,
+      "bytes": 1783876,
+      "sha256": "51cdf6d9f1681b11ecaa205d4fe48806ef1afdd0951a00e3852847621af9e18a"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "183399",
+      "offset": 500,
+      "http": 200,
+      "bytes": 1783922,
+      "sha256": "1990fe9b2b09059b1faea452022e39c23d2fdd46fd821d5ee4b7ec6a444eb41f"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "183399",
+      "offset": 1000,
+      "http": 200,
+      "bytes": 1783925,
+      "sha256": "9db258ad4c6498d85071b07700fb875480e9f0f077563c5fbdbfb3872a0b2b40"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "183399",
+      "offset": 1500,
+      "http": 200,
+      "bytes": 1783916,
+      "sha256": "596cda49d3224ad4be658dd2288787a5af6cc74a108a1a864efb44a5ef1d90a1"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "183399",
+      "offset": 2000,
+      "http": 200,
+      "bytes": 1783970,
+      "sha256": "660109362ec0be42add992738d557cf567cc1953370ede7084c39f6b833c16be"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "183399",
+      "offset": 2500,
+      "http": 200,
+      "bytes": 1783947,
+      "sha256": "94b1648fc95a777aac77d9320243fdea31b4ec121fc3908a69163451d13c8fff"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "191531",
+      "offset": 0,
+      "http": 200,
+      "bytes": 1632860,
+      "sha256": "09576e1bc2061f05c574090676f948612825e4cf34ec40158d621eae87cdef95"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "191531",
+      "offset": 500,
+      "http": 200,
+      "bytes": 1632840,
+      "sha256": "d957dd175153f3601b8735479c5be3e69760393a902cada74991f2e7b13cec7e"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "191531",
+      "offset": 1000,
+      "http": 200,
+      "bytes": 1632896,
+      "sha256": "6ae357ccc46cb90bb682648b9e788c55a4b51e53599d5d45bcd970da51f0ba0f"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "191531",
+      "offset": 1500,
+      "http": 200,
+      "bytes": 1632852,
+      "sha256": "7a1af5ba70e1ed6274abb14403ef31d40fca3fb14af5b1ee6ea6ed5ea68aa061"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "191531",
+      "offset": 2000,
+      "http": 200,
+      "bytes": 1632897,
+      "sha256": "b6b6ca311f3c53b8fae1203726b51bc47ee137b3b3b2c96f12088d46376fdd85"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "191531",
+      "offset": 2500,
+      "http": 200,
+      "bytes": 1632922,
+      "sha256": "395fcb4d5672eb3e26fdaa2c9ef6833ce064193327020253a9dd9a120d2b205b"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "196680",
+      "offset": 0,
+      "http": 200,
+      "bytes": 1671409,
+      "sha256": "69b545f83df9d18aeabb7cbc320025ffbc9bb54e86d5856119d0347bacf7a83e"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "196680",
+      "offset": 500,
+      "http": 200,
+      "bytes": 1671442,
+      "sha256": "8f7d5fc82a71442a3a70a6f131eabf96ee8e18266dac12722d910e2201c8956b"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "196680",
+      "offset": 1000,
+      "http": 200,
+      "bytes": 1567847,
+      "sha256": "497b95d66a19a4e285154e7f2a54ccdaf84ac2824dad66f0dfd84806f9b3d841"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "211679",
+      "offset": 0,
+      "http": 200,
+      "bytes": 1720823,
+      "sha256": "2f6aaf12d05b5a0cddec83580651767eda0cd0ffeaee1ace533ac3b860b13065"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "211679",
+      "offset": 500,
+      "http": 200,
+      "bytes": 1720851,
+      "sha256": "bbe190b15ecb8b72a1ec29c8ec057e82967791bbe8f769db47e8ebb8b7de555d"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "211679",
+      "offset": 1000,
+      "http": 200,
+      "bytes": 1720827,
+      "sha256": "f900272117fe1c8e49e972d5e596168a0dc22e9d0db4d79708b204cd60cb69e5"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "211679",
+      "offset": 1500,
+      "http": 200,
+      "bytes": 1720826,
+      "sha256": "ae605ad6f4991e705bafd9d9ccd88de8a4d213c34433262e7ea81114003d1ddd"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "211679",
+      "offset": 2000,
+      "http": 200,
+      "bytes": 1720823,
+      "sha256": "885a9ea752aa0081a3a7fd052899265d44fec7ca704df722c9cf6837424abddb"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "211679",
+      "offset": 2500,
+      "http": 200,
+      "bytes": 1720841,
+      "sha256": "29d49a205de69dddf3cbdf4d30ce98e74d2aabdd4dbc43d7b576718fe02a2915"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "214102",
+      "offset": 0,
+      "http": 200,
+      "bytes": 1681609,
+      "sha256": "2541f425ed56467550e7425c1afbd92d77b222bef911e4c7a48eefaab8c5cd85"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "214102",
+      "offset": 500,
+      "http": 200,
+      "bytes": 1681563,
+      "sha256": "9e15cc1d811ffb80aa1700fdbed322b2d22593865a186ffdfeb8b040ebab48e5"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "214102",
+      "offset": 1000,
+      "http": 200,
+      "bytes": 1681535,
+      "sha256": "a3cdc20f708d7c3cc6e2eb467922fa8bc9729cebefe5329fab205476f71079dd"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "214102",
+      "offset": 1500,
+      "http": 200,
+      "bytes": 1681519,
+      "sha256": "318b71accbda65477e678081508692fde26de8ba02f053a1ac36c1db5189613a"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "214102",
+      "offset": 2000,
+      "http": 200,
+      "bytes": 1681493,
+      "sha256": "927b3afad7e9923f848c9099897eaff1719352ddd1efb16cb6d5584a6800b6de"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "214102",
+      "offset": 2500,
+      "http": 200,
+      "bytes": 1681556,
+      "sha256": "410ad291987c2e3496fd408ce69afb4a72d643800b1e4e325e0b453cc44ff9d9"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "217629",
+      "offset": 0,
+      "http": 200,
+      "bytes": 1642423,
+      "sha256": "856d71b3ad4ed2463d6e0b6f39a2d508f83361d7d1505f320588203f7d45ccb1"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "217629",
+      "offset": 500,
+      "http": 200,
+      "bytes": 1642456,
+      "sha256": "f79272046bd9d5f6d9275aab34e388d7bbe2cdd7bc440558d4f8f85ccce074da"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "217629",
+      "offset": 1000,
+      "http": 200,
+      "bytes": 1642465,
+      "sha256": "0cbec9829676061faab3d9b1f6af2f37d521f991f5643341fb146d0343bd91a7"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "217629",
+      "offset": 1500,
+      "http": 200,
+      "bytes": 1642445,
+      "sha256": "4637b9c732c7b3c83b57514585e82b784e2bd86e99e0297cd2aa14a54b11cfd7"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "217629",
+      "offset": 2000,
+      "http": 200,
+      "bytes": 1642465,
+      "sha256": "1c2640270061b81c3660113fc9511d7727005f58d8b0abacc84543bfef63cf39"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "217629",
+      "offset": 2500,
+      "http": 200,
+      "bytes": 1642466,
+      "sha256": "01e20bb73949d1a199d1108069332773b98d3e027ca467b3a92a0f0039f78364"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "220804",
+      "offset": 0,
+      "http": 200,
+      "bytes": 1716525,
+      "sha256": "3c16c77fe708f6faa9ccc3124bff524f83f0fc8dfcc1c27dfc2143b8f1937171"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "220804",
+      "offset": 500,
+      "http": 200,
+      "bytes": 1716609,
+      "sha256": "8c116673448cb2dc0602a496f6bf21313471feb1e90eeb2202ce34bbadd62971"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "220804",
+      "offset": 1000,
+      "http": 200,
+      "bytes": 1716587,
+      "sha256": "91b0e340a2bbd0a97630e2cfa14c80dc17c83d10930bf88a1ef4827d68874295"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "220804",
+      "offset": 1500,
+      "http": 200,
+      "bytes": 1716578,
+      "sha256": "c5be5cf52028b57ab60f4c11c8631f9c0b73bcc285f6a7d0279c76bdcf9e9dba"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "220804",
+      "offset": 2000,
+      "http": 200,
+      "bytes": 1716528,
+      "sha256": "aef916e6577c687490668f55e3d63c7d5de253a0bb6c21e9a65a80b26923640b"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "220804",
+      "offset": 2500,
+      "http": 200,
+      "bytes": 1716615,
+      "sha256": "0ce7801eab23d7016cc9b58a17db63d3f201635b5c22e64b12cf40a5064bb633"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "222509",
+      "offset": 0,
+      "http": 200,
+      "bytes": 1771225,
+      "sha256": "06fb79ce11029e2580d64fe6ed1cd74dc81437cd5c2750d173c1aaae29b5cc2a"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "222509",
+      "offset": 500,
+      "http": 200,
+      "bytes": 1771291,
+      "sha256": "a586a91df799b3007fb64bdcb42cbf6be16d206b4a4e4162f0896a78240cd368"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "222509",
+      "offset": 1000,
+      "http": 200,
+      "bytes": 1771389,
+      "sha256": "87dad5ed13fd295e74e6048c4aebcf2f98aa1183ce478f1132faf1ea82522196"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "222509",
+      "offset": 1500,
+      "http": 200,
+      "bytes": 1771345,
+      "sha256": "935c4b97bf24467502d8378f519257f8317b170f2e88f7e64bfd37816f10e8f6"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "222509",
+      "offset": 2000,
+      "http": 200,
+      "bytes": 1771364,
+      "sha256": "b2bf298ecb16cf078c7350bd6be89ea80b00e98f0bca3a5e4fb84eb771de3557"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "222509",
+      "offset": 2500,
+      "http": 200,
+      "bytes": 1771375,
+      "sha256": "8bb3da16c015d730d8407b7ad983e4bf5a01ed3f138ecc1957c94b9ff0ecacd1"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "223947",
+      "offset": 0,
+      "http": 200,
+      "bytes": 1622021,
+      "sha256": "13852ac377e904c2453496bad40369af1274a61586a2af8ebadb7c67349b8921"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "223947",
+      "offset": 500,
+      "http": 200,
+      "bytes": 1622077,
+      "sha256": "48ca8d7e7f764b992b2b64e4b6bd701df8a95f52f0b177b1028f12df00c30656"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "223947",
+      "offset": 1000,
+      "http": 200,
+      "bytes": 1622075,
+      "sha256": "e8dcb539277d2e44b1dfa4b785b6182243adce0fdbe8acdd7bd10c06f9b68f16"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "223947",
+      "offset": 1500,
+      "http": 200,
+      "bytes": 1622139,
+      "sha256": "46ca973dd7d5bd8245a07f7a1e7fc5fd1379565c49f988688cb1287af5fd8f4d"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "223947",
+      "offset": 2000,
+      "http": 200,
+      "bytes": 1622131,
+      "sha256": "b2fd2f62b063142776e777226df5ceb54b0dbd099325dd2b1e8902cb52f3e79a"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "223947",
+      "offset": 2500,
+      "http": 200,
+      "bytes": 140319,
+      "sha256": "899bc9759896fc41337575730086853524d8e4f0baf429a016db30a2cea2e064"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "224678",
+      "offset": 0,
+      "http": 200,
+      "bytes": 1716496,
+      "sha256": "c78af85d297594b3981853e07f3ce7155587829ecc874eb93188bb132146ca41"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "224678",
+      "offset": 500,
+      "http": 200,
+      "bytes": 1716496,
+      "sha256": "011c301f6ac5b895d39e86dbeabdf257070e316e3c1233ffb2cf0c9fa13ca853"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "224678",
+      "offset": 1000,
+      "http": 200,
+      "bytes": 1716510,
+      "sha256": "0a2a21b93125793754b1be35eb594aac338e8e50e064af4972603448299d18a0"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "224678",
+      "offset": 1500,
+      "http": 200,
+      "bytes": 1716504,
+      "sha256": "f78ee11fdf820370553a9834151f9d179460f67e9576f6f8c123bed9dad6efb1"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "224678",
+      "offset": 2000,
+      "http": 200,
+      "bytes": 1716556,
+      "sha256": "77cb459ee788352d3fd0e1a4fb5e053d9bcb81d14187fa4b2a2969b3ceefbf36"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "224678",
+      "offset": 2500,
+      "http": 200,
+      "bytes": 1716531,
+      "sha256": "3b9b78bf962621e5917749b8651ff3dc61d3634e3bdb8babfdcdc2fca38de40f"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "227907",
+      "offset": 0,
+      "http": 200,
+      "bytes": 1684666,
+      "sha256": "3593a997a6122c9594c3ff380812c7ff27f1b3612712d5786e27438faec8fcf0"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "227907",
+      "offset": 500,
+      "http": 200,
+      "bytes": 1684780,
+      "sha256": "ca684371471baa7151a456f1160f595bdbba9831ceae4dd271d3914e31d66e32"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "227907",
+      "offset": 1000,
+      "http": 200,
+      "bytes": 1684814,
+      "sha256": "c55335b848751d8fe9cb6e2fbafb5713df4af5cd4649cc564d99efd26989f441"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "227907",
+      "offset": 1500,
+      "http": 200,
+      "bytes": 1684842,
+      "sha256": "389dfa0e6bfdcd16ac9c314b6f8348d21677753c0841b6dcf9939e92c7eb934d"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "227907",
+      "offset": 2000,
+      "http": 200,
+      "bytes": 1684907,
+      "sha256": "3ebff77436b6d00924efd512b326a7bd105c3664a7b21551330b144b6e6783e3"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "227907",
+      "offset": 2500,
+      "http": 200,
+      "bytes": 1684863,
+      "sha256": "656f9a810be657668f0235f9839731e0f1f33047388ab8c98c46d117bfb03776"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "300570",
+      "offset": 0,
+      "http": 200,
+      "bytes": 1693127,
+      "sha256": "7221330b4ea14de5533797921eff6164388937ec9854f0f56c5d01f7bdb95f90"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "300570",
+      "offset": 500,
+      "http": 200,
+      "bytes": 1693150,
+      "sha256": "052236a15d1d6953c50b4aa8bcdff713a2bce0c5517468ef616826ba7fff3a5d"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "300570",
+      "offset": 1000,
+      "http": 200,
+      "bytes": 1693110,
+      "sha256": "552802dd92cc307dd560509a8bf5b13eea91d92f3b120f52c30459bb08864dcd"
+    },
+    {
+      "endpoint": "products",
+      "workunit_id": "300570",
+      "offset": 1500,
+      "http": 200,
+      "bytes": 190429,
+      "sha256": "72be34f97672d67eb528cbeee0ac39c239f860bfe7fce9dcabdaa5d33c08bf35"
+    }
+  ],
+  "native_smoke_samples": [
+    {
+      "url": "https://rockyweb.usgs.gov/vdelivery/Datasets/Staged/Elevation/LPC/Projects/AL_NorthAL_2019_B19/AL_NorthAL_2019/LAZ/USGS_LPC_AL_NorthAL_2019_B19_e0842n1317.laz",
+      "declared_size": 4643787,
+      "http": 200,
+      "download_bytes": 4643787,
+      "sha256": "2a5188ad3d31fc124a95d757fad18d7f4053ef1c84c0068620521b0317d7486d",
+      "header_points": 1021658,
+      "compressed": true,
+      "point_format": 6,
+      "las_version": "1.4",
+      "scales": [
+        0.001,
+        0.001,
+        0.001
+      ],
+      "las_crs": "COMPD_CS[\"NAD83(2011) / Conus Albers + NAVD88 height - Geoid12B (Meters)\",PROJCS[\"NAD83(2011) / Conus Albers\",GEOGCS[\"NAD83(2011)\",DATUM[\"NAD83_National_Spatial_Reference_System_2011\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"1116\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"6318\"]],PROJECTION[\"Albers_Conic_Equal_Area\"],PARAMETER[\"standard_parallel_1\",29.5],PARAMETER[\"standard_parallel_2\",45.5],PARAMETER[\"latitude_of_center\",23],PARAMETER[\"longitude_of_center\",-96],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"X\",EAST],AXIS[\"Y\",NORTH],AUTHORITY[\"EPSG\",\"6350\"]],VERT_CS[\"NAVD88 height\",VERT_DATUM[\"North American Vertical Datum 1988\",2005,AUTHORITY[\"EPSG\",\"5103\"]],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Gravity-related height\",UP],AUTHORITY[\"EPSG\",\"5703\"]]]",
+      "vertical_crs_matches": true,
+      "horizontal_crs_matches": true,
+      "decoded_points": 1021658,
+      "header_bounds_match": true,
+      "retained_class_counts": {
+        "1": 943664,
+        "2": 64086,
+        "7": 14,
+        "9": 13892,
+        "18": 2
+      },
+      "retained_ground_points": 64086,
+      "retained_nonground_points": 957556,
+      "status": "DECODE_OK_NATIVE_CRS_MATCH",
+      "workunit_id": "182548",
+      "overlaps_catalog_candidate_center": true
+    },
+    {
+      "url": "https://rockyweb.usgs.gov/vdelivery/Datasets/Staged/Elevation/LPC/Projects/MS_NRCS_East_2018_B19/MS_NRCS_East_2_2018/LAZ/USGS_LPC_MS_NRCS_East_2018_B19_16_S_CB_41810_76892.laz",
+      "declared_size": 23587695,
+      "http": 429,
+      "status": "STOP_LAZ_HTTP",
+      "workunit_id": "182771",
+      "overlaps_catalog_candidate_center": true
+    },
+    {
+      "url": "https://rockyweb.usgs.gov/vdelivery/Datasets/Staged/Elevation/LPC/Projects/IL_HicksDome_FluorsparDistrict_2019_D19/IL_HicksDome_FluorsparDistrict_B1_2019/LAZ/USGS_LPC_IL_HicksDome_FluorsparDistrict_2019_D19_7430_4150.laz",
+      "declared_size": 1703,
+      "http": 200,
+      "download_bytes": 1703,
+      "sha256": "9e4fbc9be617934e1c9c709e487046ce90a1bcf8d5925c45f95db4945a8bd3da",
+      "header_points": 4,
+      "compressed": true,
+      "point_format": 6,
+      "las_version": "1.4",
+      "scales": [
+        0.01,
+        0.01,
+        0.01
+      ],
+      "las_crs": "COMPD_CS[\"NAD83(2011) / Illinois East (ftUS) + NAVD88 height - Geoid12B (ftUS)\",PROJCS[\"NAD83(2011) / Illinois East (ftUS)\",GEOGCS[\"NAD83(2011)\",DATUM[\"NAD83 (National Spatial Reference System 2011)\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"1116\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"6318\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",36.66666666666666],PARAMETER[\"central_meridian\",-88.33333333333333],PARAMETER[\"scale_factor\",0.999975],PARAMETER[\"false_easting\",984250.0000000002],PARAMETER[\"false_northing\",0],UNIT[\"US survey foot\",0.3048006096012192,AUTHORITY[\"EPSG\",\"9003\"]],AXIS[\"X\",EAST],AXIS[\"Y\",NORTH],AUTHORITY[\"EPSG\",\"6455\"]],VERT_CS[\"NAVD88 height - Geoid12B (ftUS)\",VERT_DATUM[\"North American Vertical Datum 1988\",2005,AUTHORITY[\"EPSG\",\"5103\"]],UNIT[\"US survey foot\",0.3048006096012192,AUTHORITY[\"EPSG\",\"9003\"]],AXIS[\"Up\",UP],AUTHORITY[\"EPSG\",\"6360\"]]]",
+      "vertical_crs_matches": true,
+      "horizontal_crs_matches": true,
+      "decoded_points": 4,
+      "header_bounds_match": true,
+      "retained_class_counts": {
+        "2": 2,
+        "18": 2
+      },
+      "retained_ground_points": 2,
+      "retained_nonground_points": 0,
+      "status": "DECODE_OK_NATIVE_CRS_MATCH",
+      "workunit_id": "183399",
+      "overlaps_catalog_candidate_center": false
+    },
+    {
+      "url": "https://rockyweb.usgs.gov/vdelivery/Datasets/Staged/Elevation/LPC/Projects/AL_17County_2020_B20/AL_17Co_1_2020/LAZ/USGS_LPC_AL_17County_2020_B20_16SCD997858.laz",
+      "declared_size": 3397,
+      "http": 429,
+      "status": "STOP_LAZ_HTTP",
+      "workunit_id": "191531",
+      "overlaps_catalog_candidate_center": false
+    },
+    {
+      "url": "https://rockyweb.usgs.gov/vdelivery/Datasets/Staged/Elevation/LPC/Projects/MO_WestCentral_2018_D19/MO_WestCentral_3_2018/LAZ/USGS_LPC_MO_WestCentral_2018_D19_15SYV75609915.laz",
+      "declared_size": 31912100,
+      "http": 429,
+      "status": "STOP_LAZ_HTTP",
+      "workunit_id": "196680",
+      "overlaps_catalog_candidate_center": true
+    },
+    {
+      "url": "https://rockyweb.usgs.gov/vdelivery/Datasets/Staged/Elevation/LPC/Projects/LA_Catahoula_Concordia_2017_D17/LA_Catahoula_Concordia_3_2017/LAZ/USGS_LPC_LA_Catahoula_Concordia_2017_D17_15RXP1413.laz",
+      "declared_size": 2542,
+      "http": 200,
+      "download_bytes": 2542,
+      "sha256": "cf2436d20bda697f359627b48dd27d4512e1f3faa55225fa63015b0492247f66",
+      "header_points": 76,
+      "compressed": true,
+      "point_format": 6,
+      "las_version": "1.4",
+      "scales": [
+        0.01,
+        0.01,
+        0.01
+      ],
+      "las_crs": "COMPD_CS[\"NAD83(2011) / UTM zone 15N + NAVD88 height - Geoid12B (Meters)\",PROJCS[\"NAD83(2011) / UTM zone 15N\",GEOGCS[\"NAD83(2011)\",DATUM[\"NAD83 (National Spatial Reference System 2011)\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"1116\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"6318\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-93],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"X\",EAST],AXIS[\"Y\",NORTH],AUTHORITY[\"EPSG\",\"6344\"]],VERT_CS[\"NAVD88 height - Geoid12B (Meters)\",VERT_DATUM[\"North American Vertical Datum 1988\",2005,AUTHORITY[\"EPSG\",\"5103\"]],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Gravity-related height\",UP],AUTHORITY[\"EPSG\",\"5703\"]]]",
+      "vertical_crs_matches": true,
+      "horizontal_crs_matches": true,
+      "decoded_points": 76,
+      "header_bounds_match": true,
+      "retained_class_counts": {
+        "1": 59,
+        "2": 17
+      },
+      "retained_ground_points": 17,
+      "retained_nonground_points": 59,
+      "status": "DECODE_OK_NATIVE_CRS_MATCH",
+      "workunit_id": "211679",
+      "overlaps_catalog_candidate_center": false
+    },
+    {
+      "url": "https://rockyweb.usgs.gov/vdelivery/Datasets/Staged/Elevation/LPC/Projects/SC_SavannahPeeDee_2019_B19/SC_SavannahPeeDee_6_2019/LAZ/USGS_LPC_SC_SavannahPeeDee_2019_B19_20000826.laz",
+      "declared_size": 1730,
+      "http": 429,
+      "status": "STOP_LAZ_HTTP",
+      "workunit_id": "214102",
+      "overlaps_catalog_candidate_center": false
+    },
+    {
+      "url": "https://rockyweb.usgs.gov/vdelivery/Datasets/Staged/Elevation/LPC/Projects/KY_Statewide_2021_A21/KY_Statewide_1_2021/LAZ/USGS_LPC_KY_Statewide_2021_A21_N193E029.laz",
+      "declared_size": 2020182,
+      "http": 429,
+      "status": "STOP_LAZ_HTTP",
+      "workunit_id": "217629",
+      "overlaps_catalog_candidate_center": false
+    },
+    {
+      "url": "https://rockyweb.usgs.gov/vdelivery/Datasets/Staged/Elevation/LPC/Projects/NC_HurricaneFlorence_2020_D20/NC_HurricaneFlorence_9_2020/LAZ/USGS_LPC_NC_HurricaneFlorence_2020_D20_18SUE31209832.laz",
+      "declared_size": 39627203,
+      "http": 200,
+      "download_bytes": 39627203,
+      "sha256": "2d96bf914eec73d2a63201cefade0ba666016094efa7ac329405097840133cc5",
+      "header_points": 10461946,
+      "compressed": true,
+      "point_format": 6,
+      "las_version": "1.4",
+      "scales": [
+        0.01,
+        0.01,
+        0.01
+      ],
+      "status": "STOP_HEADER_POINT_GATE",
+      "workunit_id": "220804",
+      "overlaps_catalog_candidate_center": true
+    },
+    {
+      "url": "https://rockyweb.usgs.gov/vdelivery/Datasets/Staged/Elevation/LPC/Projects/IL_HicksDome_FluorsparDistrict_2019_D19/IL_HicksDome_FluorsparDist_3_2019/LAZ/USGS_LPC_IL_HicksDome_FluorsparDistrict_2019_D19_2237_6010.laz",
+      "declared_size": 1741,
+      "http": 200,
+      "download_bytes": 1741,
+      "sha256": "5cce66791fef44eeb425fdf27da6b5553abbe7bd2525b3f7d85a34248b905b45",
+      "header_points": 8,
+      "compressed": true,
+      "point_format": 6,
+      "las_version": "1.4",
+      "scales": [
+        0.01,
+        0.01,
+        0.01
+      ],
+      "las_crs": "COMPD_CS[\"NAD83(2011) / Illinois West (ftUS) + NAVD88 height - Geoid12B (ftUS)\",PROJCS[\"NAD83(2011) / Illinois West (ftUS)\",GEOGCS[\"NAD83(2011)\",DATUM[\"NAD83 (National Spatial Reference System 2011)\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"1116\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"6318\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",36.66666666666666],PARAMETER[\"central_meridian\",-90.16666666666667],PARAMETER[\"scale_factor\",0.999941],PARAMETER[\"false_easting\",2296583.333300001],PARAMETER[\"false_northing\",0],UNIT[\"US survey foot\",0.3048006096012192,AUTHORITY[\"EPSG\",\"9003\"]],AXIS[\"X\",EAST],AXIS[\"Y\",NORTH],AUTHORITY[\"EPSG\",\"6457\"]],VERT_CS[\"NAVD88 height - Geoid12B (ftUS)\",VERT_DATUM[\"North American Vertical Datum 1988\",2005,AUTHORITY[\"EPSG\",\"5103\"]],UNIT[\"US survey foot\",0.3048006096012192,AUTHORITY[\"EPSG\",\"9003\"]],AXIS[\"Up\",UP],AUTHORITY[\"EPSG\",\"6360\"]]]",
+      "vertical_crs_matches": true,
+      "horizontal_crs_matches": false,
+      "decoded_points": 8,
+      "header_bounds_match": true,
+      "retained_class_counts": {
+        "1": 2,
+        "9": 6
+      },
+      "retained_ground_points": 0,
+      "retained_nonground_points": 8,
+      "status": "DECODE_OK_CRS_OR_BOUNDS_UNRESOLVED",
+      "workunit_id": "222509",
+      "overlaps_catalog_candidate_center": false
+    },
+    {
+      "url": "https://rockyweb.usgs.gov/vdelivery/Datasets/Staged/Elevation/LPC/Projects/KY_2020Western_C22/KY_Western_1_2020/LAZ/USGS_LPC_KY_2020Western_C22_N178E082.laz",
+      "declared_size": 46687109,
+      "http": 429,
+      "status": "STOP_LAZ_HTTP",
+      "workunit_id": "223947",
+      "overlaps_catalog_candidate_center": true
+    },
+    {
+      "url": "https://rockyweb.usgs.gov/vdelivery/Datasets/Staged/Elevation/LPC/Projects/NC_HurricaneFlorence_2020_D20/NC_HurricaneFlorence_6_2020/LAZ/USGS_LPC_NC_HurricaneFlorence_2020_D20_18SUE31059772.laz",
+      "declared_size": 40287269,
+      "http": 429,
+      "status": "STOP_LAZ_HTTP",
+      "workunit_id": "224678",
+      "overlaps_catalog_candidate_center": true
+    },
+    {
+      "url": "https://rockyweb.usgs.gov/vdelivery/Datasets/Staged/Elevation/LPC/Projects/MS_Central_Delta_2018_D18/MS_MississippiDelta_4_2018/LAZ/USGS_LPC_MS_Central_Delta_2018_D18_e0461n1189.laz",
+      "declared_size": 8753883,
+      "http": 429,
+      "status": "STOP_LAZ_HTTP",
+      "workunit_id": "227907",
+      "overlaps_catalog_candidate_center": true
+    },
+    {
+      "url": "https://rockyweb.usgs.gov/vdelivery/Datasets/Staged/Elevation/LPC/Projects/LA_2021FloridaParishes_C24/LA_2021FloridaParishes_2_C24/LAZ/USGS_LPC_LA_2021FloridaParishes_C24_16RBV0408.laz",
+      "declared_size": 5415,
+      "http": 429,
+      "status": "STOP_LAZ_HTTP",
+      "workunit_id": "300570",
+      "overlaps_catalog_candidate_center": false
+    }
+  ],
+  "tile_workunits": [
+    {
+      "workunit_id": "182548",
+      "workunit_name": "AL_NorthAL_2019",
+      "official_lpc_link": "https://rockyweb.usgs.gov/vdelivery/Datasets/Staged/Elevation/LPC/Projects/AL_NorthAL_2019_B19/AL_NorthAL_2019",
+      "status": "CATALOG_DISCOVERY_COMPLETE_LOWER_BOUND",
+      "pages": 6,
+      "returned_products": 3000,
+      "strict_url_products": 3000,
+      "valid_bbox_products": 3000,
+      "stops": {},
+      "reported_total": 3112,
+      "search_exhausted": false,
+      "bbox_tiles_covering_candidate_centers": 12
+    },
+    {
+      "workunit_id": "182771",
+      "workunit_name": "MS_NRCS_East_2_2018",
+      "official_lpc_link": "https://rockyweb.usgs.gov/vdelivery/Datasets/Staged/Elevation/LPC/Projects/MS_NRCS_East_2018_B19/MS_NRCS_East_2_2018",
+      "status": "CATALOG_DISCOVERY_COMPLETE_LOWER_BOUND",
+      "pages": 6,
+      "returned_products": 3000,
+      "strict_url_products": 3000,
+      "valid_bbox_products": 3000,
+      "stops": {},
+      "reported_total": 5997,
+      "search_exhausted": false,
+      "bbox_tiles_covering_candidate_centers": 73
+    },
+    {
+      "workunit_id": "183399",
+      "workunit_name": "IL_HicksDome_FluorsparDistrict_B1_2019",
+      "official_lpc_link": "https://rockyweb.usgs.gov/vdelivery/Datasets/Staged/Elevation/LPC/Projects/IL_HicksDome_FluorsparDistrict_2019_D19/IL_HicksDome_FluorsparDistrict_B1_2019",
+      "status": "CATALOG_DISCOVERY_COMPLETE_LOWER_BOUND",
+      "pages": 6,
+      "returned_products": 3000,
+      "strict_url_products": 3000,
+      "valid_bbox_products": 3000,
+      "stops": {},
+      "reported_total": 18608,
+      "search_exhausted": false,
+      "bbox_tiles_covering_candidate_centers": 0
+    },
+    {
+      "workunit_id": "191531",
+      "workunit_name": "AL_17Co_1_2020",
+      "official_lpc_link": "https://rockyweb.usgs.gov/vdelivery/Datasets/Staged/Elevation/LPC/Projects/AL_17County_2020_B20/AL_17Co_1_2020",
+      "status": "CATALOG_DISCOVERY_COMPLETE_LOWER_BOUND",
+      "pages": 6,
+      "returned_products": 3000,
+      "strict_url_products": 3000,
+      "valid_bbox_products": 3000,
+      "stops": {},
+      "reported_total": 7410,
+      "search_exhausted": false,
+      "bbox_tiles_covering_candidate_centers": 0
+    },
+    {
+      "workunit_id": "196680",
+      "workunit_name": "MO_WestCentral_3_2018",
+      "official_lpc_link": "https://rockyweb.usgs.gov/vdelivery/Datasets/Staged/Elevation/LPC/Projects/MO_WestCentral_2018_D19/MO_WestCentral_3_2018",
+      "status": "CATALOG_DISCOVERY_COMPLETE_LOWER_BOUND",
+      "pages": 3,
+      "returned_products": 1469,
+      "strict_url_products": 1469,
+      "valid_bbox_products": 1469,
+      "stops": {},
+      "reported_total": 1469,
+      "search_exhausted": true,
+      "bbox_tiles_covering_candidate_centers": 9
+    },
+    {
+      "workunit_id": "211679",
+      "workunit_name": "LA_Catahoula_Concordia_3_2017",
+      "official_lpc_link": "https://rockyweb.usgs.gov/vdelivery/Datasets/Staged/Elevation/LPC/Projects/LA_Catahoula_Concordia_2017_D17/LA_Catahoula_Concordia_3_2017",
+      "status": "CATALOG_DISCOVERY_COMPLETE_LOWER_BOUND",
+      "pages": 6,
+      "returned_products": 3000,
+      "strict_url_products": 3000,
+      "valid_bbox_products": 3000,
+      "stops": {},
+      "reported_total": 4086,
+      "search_exhausted": false,
+      "bbox_tiles_covering_candidate_centers": 9
+    },
+    {
+      "workunit_id": "214102",
+      "workunit_name": "SC_SavannahPeeDee_6_2019",
+      "official_lpc_link": "https://rockyweb.usgs.gov/vdelivery/Datasets/Staged/Elevation/LPC/Projects/SC_SavannahPeeDee_2019_B19/SC_SavannahPeeDee_6_2019",
+      "status": "CATALOG_DISCOVERY_COMPLETE_LOWER_BOUND",
+      "pages": 6,
+      "returned_products": 3000,
+      "strict_url_products": 3000,
+      "valid_bbox_products": 3000,
+      "stops": {},
+      "reported_total": 8382,
+      "search_exhausted": false,
+      "bbox_tiles_covering_candidate_centers": 0
+    },
+    {
+      "workunit_id": "217629",
+      "workunit_name": "KY_Statewide_1_2021",
+      "official_lpc_link": "https://rockyweb.usgs.gov/vdelivery/Datasets/Staged/Elevation/LPC/Projects/KY_Statewide_2021_A21/KY_Statewide_1_2021",
+      "status": "CATALOG_DISCOVERY_COMPLETE_LOWER_BOUND",
+      "pages": 6,
+      "returned_products": 3000,
+      "strict_url_products": 3000,
+      "valid_bbox_products": 3000,
+      "stops": {},
+      "reported_total": 3271,
+      "search_exhausted": false,
+      "bbox_tiles_covering_candidate_centers": 0
+    },
+    {
+      "workunit_id": "220804",
+      "workunit_name": "NC_HurricaneFlorence_9_2020",
+      "official_lpc_link": "https://rockyweb.usgs.gov/vdelivery/Datasets/Staged/Elevation/LPC/Projects/NC_HurricaneFlorence_2020_D20/NC_HurricaneFlorence_9_2020",
+      "status": "CATALOG_DISCOVERY_COMPLETE_LOWER_BOUND",
+      "pages": 6,
+      "returned_products": 3000,
+      "strict_url_products": 3000,
+      "valid_bbox_products": 3000,
+      "stops": {},
+      "reported_total": 11918,
+      "search_exhausted": false,
+      "bbox_tiles_covering_candidate_centers": 36
+    },
+    {
+      "workunit_id": "222509",
+      "workunit_name": "IL_HicksDome_FluorsparDist_3_2019",
+      "official_lpc_link": "https://rockyweb.usgs.gov/vdelivery/Datasets/Staged/Elevation/LPC/Projects/IL_HicksDome_FluorsparDistrict_2019_D19/IL_HicksDome_FluorsparDist_3_2019",
+      "status": "CATALOG_DISCOVERY_COMPLETE_LOWER_BOUND",
+      "pages": 6,
+      "returned_products": 3000,
+      "strict_url_products": 3000,
+      "valid_bbox_products": 2999,
+      "stops": {
+        "invalid_product_bbox": 1
+      },
+      "reported_total": 19250,
+      "search_exhausted": false,
+      "bbox_tiles_covering_candidate_centers": 0
+    },
+    {
+      "workunit_id": "223947",
+      "workunit_name": "KY_Western_1_2020",
+      "official_lpc_link": "https://rockyweb.usgs.gov/vdelivery/Datasets/Staged/Elevation/LPC/Projects/KY_2020Western_C22/KY_Western_1_2020",
+      "status": "CATALOG_DISCOVERY_COMPLETE_LOWER_BOUND",
+      "pages": 6,
+      "returned_products": 2543,
+      "strict_url_products": 2543,
+      "valid_bbox_products": 2543,
+      "stops": {},
+      "reported_total": 2543,
+      "search_exhausted": true,
+      "bbox_tiles_covering_candidate_centers": 48
+    },
+    {
+      "workunit_id": "224678",
+      "workunit_name": "NC_HurricaneFlorence_6_2020",
+      "official_lpc_link": "https://rockyweb.usgs.gov/vdelivery/Datasets/Staged/Elevation/LPC/Projects/NC_HurricaneFlorence_2020_D20/NC_HurricaneFlorence_6_2020",
+      "status": "CATALOG_DISCOVERY_COMPLETE_LOWER_BOUND",
+      "pages": 6,
+      "returned_products": 3000,
+      "strict_url_products": 3000,
+      "valid_bbox_products": 3000,
+      "stops": {},
+      "reported_total": 10569,
+      "search_exhausted": false,
+      "bbox_tiles_covering_candidate_centers": 18
+    },
+    {
+      "workunit_id": "227907",
+      "workunit_name": "MS_MississippiDelta_4_2018",
+      "official_lpc_link": "https://rockyweb.usgs.gov/vdelivery/Datasets/Staged/Elevation/LPC/Projects/MS_Central_Delta_2018_D18/MS_MississippiDelta_4_2018",
+      "status": "CATALOG_DISCOVERY_COMPLETE_LOWER_BOUND",
+      "pages": 6,
+      "returned_products": 3000,
+      "strict_url_products": 3000,
+      "valid_bbox_products": 3000,
+      "stops": {},
+      "reported_total": 12637,
+      "search_exhausted": false,
+      "bbox_tiles_covering_candidate_centers": 42
+    },
+    {
+      "workunit_id": "300570",
+      "workunit_name": "LA_2021FloridaParishes_2_C24",
+      "official_lpc_link": "https://rockyweb.usgs.gov/vdelivery/Datasets/Staged/Elevation/LPC/Projects/LA_2021FloridaParishes_C24/LA_2021FloridaParishes_2_C24",
+      "status": "CATALOG_DISCOVERY_COMPLETE_LOWER_BOUND",
+      "pages": 4,
+      "returned_products": 1556,
+      "strict_url_products": 1556,
+      "valid_bbox_products": 1556,
+      "stops": {},
+      "reported_total": 1556,
+      "search_exhausted": true,
+      "bbox_tiles_covering_candidate_centers": 18
+    }
+  ],
+  "tile_stage": "COMPLETE_CATALOG_AND_SMOKE_ONLY",
+  "original_strict_candidate_cells": 57,
+  "relevant_workunits": 14,
+  "dataset_tag_verified": true,
+  "tile_catalog_bbox_support": {
+    "candidate_workunits": 38567,
+    "workunits_intersecting_cells": 1075,
+    "cells": 24,
+    "records": 1099,
+    "support": {
+      "taxon_support": [
+        {
+          "species": "Corynorhinus rafinesquii",
+          "cells": 2,
+          "routes": 2,
+          "eligible": false
+        },
+        {
+          "species": "Eptesicus fuscus",
+          "cells": 14,
+          "routes": 6,
+          "eligible": true
+        },
+        {
+          "species": "Lasiurus borealis",
+          "cells": 21,
+          "routes": 8,
+          "eligible": true
+        },
+        {
+          "species": "Lasiurus cinereus",
+          "cells": 6,
+          "routes": 1,
+          "eligible": false
+        },
+        {
+          "species": "Myotis austroriparius",
+          "cells": 7,
+          "routes": 5,
+          "eligible": false
+        },
+        {
+          "species": "Myotis lucifugus",
+          "cells": 9,
+          "routes": 3,
+          "eligible": false
+        },
+        {
+          "species": "Myotis septentrionalis",
+          "cells": 3,
+          "routes": 2,
+          "eligible": false
+        },
+        {
+          "species": "Myotis sodalis",
+          "cells": 1,
+          "routes": 1,
+          "eligible": false
+        },
+        {
+          "species": "Nycticeius humeralis",
+          "cells": 24,
+          "routes": 8,
+          "eligible": true
+        },
+        {
+          "species": "Perimyotis subflavus",
+          "cells": 20,
+          "routes": 7,
+          "eligible": true
+        }
+      ],
+      "eligible_taxa": 4,
+      "comparison_taxa": 4,
+      "comparison_routes": 7,
+      "comparison_blocks": 5,
+      "comparisons": 938,
+      "comparison_cells": 22,
+      "groups": 133
+    },
+    "passes_original_support": false
+  },
+  "summary": {
+    "catalog_reported_total_sum": 110808,
+    "estimated_complete_500_item_pages": 229,
+    "actual_catalog_bytes": 130381078,
+    "decoded_files": 4,
+    "strict_CRS_matches": 3,
+    "download_http429": 9
+  },
+  "audit": {
+    "run_id": 45770786282,
+    "job_id": 139742645721,
+    "artifact_id": 15094876366,
+    "artifact_zip_digest": "sha256:304b0cca09c31b36804980563d8b5990dbca521a4d7c71e19edf729b4dc71b61",
+    "scope": "Successful log report and artifact registry digest verified; source LAZ bytes not independently rehashed in local runtime."
+  },
+  "decision": "Catalog bound stopped 11/14 workunits before exhaustion. Actual decoded coverage is not established; one co-located file passed complete CRS/count smoke gate, two tiny noncolocated files passed CRS/count, one tiny noncolocated decoded file had CRS mismatch; 9 HTTP 429 and one header point-cap stop. Do not retry file downloads against rate limit. Next catalog-only complete inventory with fixed paging budget based on reported totals; no new LAZ GET, no credential/requester-pays route, no rate-limit evasion, no support or date threshold change."
+}
