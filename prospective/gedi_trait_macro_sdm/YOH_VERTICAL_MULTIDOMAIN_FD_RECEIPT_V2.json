@@ -1,0 +1,181 @@
+{
+  "status": "COMPLETE_MULTIDOMAIN_RESTRICTED_AND_PROXY_DIAGNOSTIC",
+  "contract": "109d5efc830a085fe56ba822ecebe3e0b7cd07b8",
+  "sources": {
+    "yoh_sha256": "77caabe49c8cd761b1bece56eae4c23ea292b287f38a19d9c015990e43685ad6",
+    "traits_doi": "10.1007/s10980-022-01493-x",
+    "trait_source_run": 45781084359,
+    "artifact_id": 15098176978,
+    "archive_sha256": "b8ecb52ff7850258e890500600a9bbb64f3affd8f229d55661226bd6b95c22d2",
+    "original_docx_sha256": "9ebb619961bda9dc06b042d98b7fbe668563565e54ff16ceeaa6dd3c628e72aa",
+    "named_source_rows": 20,
+    "domains": {
+      "size": [
+        "log reported mass"
+      ],
+      "flight": [
+        "AR",
+        "log RWL"
+      ],
+      "sensory": [
+        "log call frequency",
+        "call shape nominal",
+        "call alternation nominal"
+      ]
+    },
+    "equal_domain_weights": true,
+    "vertical_association_excluded": true,
+    "code_swap_guard": "Yoh P5 Pteronotus alitonus matches source P6 by name; no code-only match; Yoh E1 differs from source E1."
+  },
+  "support": {
+    "points": 99,
+    "groups": 8,
+    "sites": 2,
+    "exact11": {
+      "labels": [
+        "CB",
+        "EB",
+        "FH",
+        "MRN",
+        "P5",
+        "PK",
+        "PM",
+        "PP",
+        "RN",
+        "SB",
+        "SL"
+      ],
+      "passes_C_U": [
+        78545,
+        14520
+      ],
+      "coverage_C_U": [
+        0.4957209396261187,
+        0.44217065594737803
+      ],
+      "median_point_coverage_C_U": [
+        0.5387453874538746,
+        0.48514851485148514
+      ],
+      "whole_community": false
+    },
+    "proxy14": {
+      "additional_unverified_labels": {
+        "CM": "Centronycteris maximiliani proxy for maximiliani/centralis complex",
+        "P6": "Pteronotus rubiginosus proxy for cf. rubiginosus",
+        "PG": "Pteronotus gymnonotus proxy for spelling gymonotus"
+      },
+      "passes_C_U": [
+        146848,
+        31463
+      ],
+      "coverage_C_U": [
+        0.9268015601529859,
+        0.9581277787928619
+      ],
+      "median_point_coverage_C_U": [
+        0.9397363465160076,
+        0.9645390070921985
+      ],
+      "whole_community": false
+    }
+  },
+  "primary": {
+    "exact11": {
+      "alpha_C": 0.2663253839740839,
+      "alpha_U": 0.19309556635250313,
+      "alpha": 0.22971047516329351,
+      "gamma": 0.314734548442013,
+      "beta": 0.08502407327871947,
+      "beta_share": 0.2701453453381664,
+      "beta_null": 0.058338678777834115,
+      "null_q025_q975": [
+        0.03731623597073042,
+        0.0849870934996471
+      ],
+      "percentile": 0.97513,
+      "excess": 0.026685394500885355,
+      "positive_groups": 8,
+      "domain_excess": [
+        0.041897564828321354,
+        0.0007711534809967391,
+        0.03738746519333791
+      ],
+      "domain_positive_groups": [
+        8,
+        4,
+        8
+      ],
+      "incidence_excess": 0.0023256836723369,
+      "incidence_percentile": 0.88765,
+      "incidence_positive_groups": 7,
+      "token_excess": 0.02667065040171502,
+      "token_percentile": 0.97496
+    },
+    "proxy14": {
+      "alpha_C": 0.24537512181423338,
+      "alpha_U": 0.1768391249749886,
+      "alpha": 0.21110712339461102,
+      "gamma": 0.2926559931288252,
+      "beta": 0.0815488697342142,
+      "beta_share": 0.2786509473541413,
+      "beta_null": 0.04946585588472581,
+      "null_q025_q975": [
+        0.032508100265106206,
+        0.07275433159189301
+      ],
+      "percentile": 0.9947,
+      "excess": 0.03208301384948839,
+      "positive_groups": 8,
+      "domain_excess": [
+        0.06569185331869207,
+        -0.0030996266270105557,
+        0.0336568148567836
+      ],
+      "domain_positive_groups": [
+        8,
+        2,
+        8
+      ],
+      "incidence_excess": 0.004723092082990347,
+      "incidence_percentile": 0.99572,
+      "incidence_positive_groups": 8,
+      "token_excess": 0.03204241433108169,
+      "token_percentile": 0.99463
+    }
+  },
+  "all_proxy_inclusion_excess": {
+    "exact11": 0.026685394500885355,
+    "PG": 0.028183763303533137,
+    "P6": 0.03789676891779828,
+    "P6_PG": 0.03890257527605277,
+    "CM": 0.017678770321929285,
+    "CM_PG": 0.01869366659875408,
+    "CM_P6": 0.03132571189428171,
+    "CM_P6_PG": 0.03208301384948839
+  },
+  "full16_missing_trait_beta_excess_outer_bounds": {
+    "exact11_known": [
+      -0.09880720765763505,
+      0.11855378234411752
+    ],
+    "conditional_proxy14_known": [
+      0.0029207243704876575,
+      0.05022685903142059
+    ],
+    "interpretation": "Conservative linear relaxation with unknown pair distances in [0,1], not confidence intervals. Positive lower bound only CONDITIONAL on unverified three proxy profiles."
+  },
+  "audit": {
+    "all_input_hashes_verified": true,
+    "raw_count_reconciliation": true,
+    "permutations_per_case": 100000,
+    "all_8_scenarios_same_roster": true,
+    "domain_additivity": true,
+    "analytic_mean_MC_check": true,
+    "synthetic_bounds_check": true,
+    "script_sha256": "8804b854ad54a48574fe09161be810cf33524b53fd116bee0c112f70eaa69cb5",
+    "report_sha256": "4576fb851329441cb1575211ec1313d00d7f4b8050f2a4476a989555649b2a4f",
+    "bundle_sha256": "ab1854c10c71a30d65fd3bcc160712c7af03905094294c210eecc88230f3b651"
+  },
+  "decision": "Community FD is the new focus. Recorded functional differentiation on restricted exact 11 labels is mainly size/sensory, but overall coverage fails, null percentile is near boundary and incidence attenuates. Proxy14 result stronger but remains conditional on three unverified taxonomic/proxy assignments, and source traits do not independently calibrate detector responses. Full16 exact-only missing-distance bounds cross zero; no whole-community claim. Do not conflate these trait axes with realized ecosystem function, actual altitude, independent geographic replication or causal mechanism. Next resolve complex trait distributions with original reference call/taxon documentation and acquire wider multi-domain traits; evaluate forest structure/edge variation of functional beta on independent data rather than tune original source. No main merge/manuscript changes."
+}
