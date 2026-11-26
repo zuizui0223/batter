@@ -33,7 +33,13 @@ def main():
     a=d.merge(t[cols],on="species",how="left",validate="one_to_one")
     R["unmatched_or_complex_labels"]=a.loc[a.relative_profile_score.isna(),"acoustic_label"].tolist()
     a=a[a.relative_profile_score.notna()].copy()
-    R["support"]={"matched_single_species":len(a),"training_species":int(a.training_species.sum()),"unseen_species":int((~a.training_species).sum()),"in_training_hull":int(a.within_training_convex_hull.sum()),"single_reference":int(a.reference_count.eq(1).sum())}
+    for col in ["training_species","within_training_convex_hull"]:
+        val=a[col].astype(str).str.lower()
+        assert val.isin(["true","false"]).all()
+        a[col]=val.eq("true")
+    ntrain=int(a.training_species.sum())
+    R["support"]={"matched_single_species":len(a),"training_species":ntrain,"unseen_species":len(a)-ntrain,"in_training_hull":int(a.within_training_convex_hull.sum()),"single_reference":int(a.reference_count.eq(1).sum())}
+    assert 0<=R["support"]["unseen_species"]<=len(a)
     R["rows"]=json.loads(a.to_json(orient="records"))
     R["ranks"]={}
     if len(a)<5:R["status"]="STOP_TOO_FEW_MATCHED_SPECIES";save();return
