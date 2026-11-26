@@ -1,0 +1,120 @@
+{
+  "stage": "Yoh archived paired recorded-stratum sorting and forest-edge transfer V1",
+  "status": "COMPLETE_RECORDED_LABEL_ONLY",
+  "contract_commit": "83ce58a749b061d9c0cdfc9c8e507fe855b547ba",
+  "source": {
+    "doi": "10.5061/dryad.0vt4b8h2d",
+    "archive_version": "v20240329",
+    "archive_sha256": "77caabe49c8cd761b1bece56eae4c23ea292b287f38a19d9c015990e43685ad6",
+    "all_four_members_match_prior_official_inventory": true,
+    "crc_verified": true,
+    "raw_records": 287699,
+    "aggregate_rows": 2664,
+    "exact_raw_to_aggregate_reconciliation": true,
+    "nominal_design_points": 164,
+    "observed_physical_points": 72,
+    "point_season_visits": 136,
+    "paired_visits": 99,
+    "one_stratum_visits": 37,
+    "documented_labels": 16,
+    "undocumented_P_records_excluded": 16877,
+    "repeated_code_filename_species_rows_all_labels": 17783,
+    "multilabel_code_filename_keys": 34429
+  },
+  "support": {
+    "paired_recorded_passes": 191284,
+    "composite_pairs": 6799,
+    "groups": 8,
+    "sites": 2,
+    "transects": 4,
+    "seasons": 2,
+    "paired_token_sensitivity_records": 176604,
+    "token_sensitivity_pairs": 6799,
+    "token_sensitivity_same_visit_roster": true
+  },
+  "model": {
+    "N": "neutral",
+    "R": "label intercept differences",
+    "E": "R plus label-specific sign(distance) and abs(distance)/1000 differences",
+    "ridge": 0.01,
+    "weighting": "equal transect-season group, then equal visits, then equal informative label-pairs"
+  },
+  "scores": {
+    "strict": {
+      "N": -0.6931471805599453,
+      "R": -0.5879311836721167,
+      "E": -0.5939482982744151,
+      "R_minus_N": 0.1052159968878286,
+      "E_minus_R": -0.006017114602298451
+    },
+    "location_only": {
+      "N": -0.6931471805599453,
+      "R": -0.5781114864916599,
+      "E": -0.5740785421399538,
+      "R_minus_N": 0.11503569406828544,
+      "E_minus_R": 0.004032944351706078
+    },
+    "transect_only": {
+      "N": -0.6931471805599453,
+      "R": -0.576297014438741,
+      "E": -0.5735802207748468,
+      "R_minus_N": 0.11685016612120425,
+      "E_minus_R": 0.002716793663894143
+    },
+    "token_collapse_strict": {
+      "N": -0.6931471805599453,
+      "R": -0.5877838073267163,
+      "E": -0.5938044537991631,
+      "R_minus_N": 0.10536337323322897,
+      "E_minus_R": -0.006020646472446781
+    }
+  },
+  "strict_contrasts": {
+    "R_minus_N": {
+      "positive_groups": 8,
+      "positive_folds": 4,
+      "mean_gain": 0.1052159968878286,
+      "fold_gains": [
+        0.11709174115643695,
+        0.06479187387487051,
+        0.12122573774824125,
+        0.11775463477176568
+      ],
+      "leave_one_transect_min": 0.09793271081941747,
+      "leave_one_transect_max": 0.11112543698960732,
+      "screen": true
+    },
+    "E_minus_R": {
+      "positive_groups": 1,
+      "positive_folds": 0,
+      "mean_gain": -0.006017114602298451,
+      "fold_gains": [
+        -0.0068472827421020566,
+        -0.007694763279778749,
+        -0.003663165765065979,
+        -0.00586324662224702
+      ],
+      "leave_one_transect_min": -0.008517601164456767,
+      "leave_one_transect_max": -0.004352566979234769,
+      "screen": false
+    }
+  },
+  "audit": {
+    "all_28_CV_fits_passed": true,
+    "maximum_newton_gradient": 5.5456526523722793e-11,
+    "maximum_alternative_optimizer_gradient": 8.022634138613038e-9,
+    "independent_raw_csv_counter_reconstruction": true,
+    "independent_BFGS_fits": 28,
+    "independent_group_score_comparisons": 64,
+    "maximum_independent_group_score_error": 4.2668703015280585e-9,
+    "maximum_independent_gradient": 3.9197962388009275e-9,
+    "synthetic_checks_passed": true,
+    "engineering_correction": "README.txt SHA256 transcription initially omitted 10 characters, stopped before fit; corrected to exact prior public inventory. No change to frozen contract or model.",
+    "code_sha256": "52503a04c9c9c23d37dd43cfb939ed2984a025ad8d2f5f05dbfb87c1f798c890",
+    "verifier_sha256": "c22f18637fc4adcc4c90dbf8bcd5eba6ed2890ee838321f14051a8aa4541e17b",
+    "report_sha256": "2447f4d12be98ae293398daca24b47d2b6d9b55e8dbed4724fae6464853da6f4",
+    "independent_check_sha256": "edec3af0e95730c40e6c3caaf442649db9aa76f67b864ac14ad5c2ea149691b8",
+    "local_user_bundle_sha256": "ed2e1a10929aeb0d927dcac52301dbc17252ffeface17d321351d3b8085fee72"
+  },
+  "decision": "Label-level relative canopy-understory recorded-pass ordering transfers within the two sites and seasons of this one source, but additional forest-side/edge distance predictors fail the stricter split despite small positive gains in weaker splits. Source-open exploratory, no actual altitude, detection-calibrated use, causal forest effects, macro-SDM or independent multi-study replication. Do not tune E after result. Next prospectively assess trait overlap and independently observed relative vertical sorting; preserve raw token semantics and undocumented label exclusion. No raw data or location coordinates committed."
+}
