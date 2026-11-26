@@ -1,0 +1,279 @@
+{
+  "stage": "forest-screened additional patches V3",
+  "status": "COMPLETE_GEOMETRY_ONLY",
+  "run": 45759626927,
+  "contract": "5d6f6885b1e3d2109180cb9a122637cf339a6c00",
+  "audit": {
+    "archives_rehashed_against_registry": true,
+    "zip_crc_checked": true,
+    "selection_frozen_all": true,
+    "synthetic_checks_passed_all": true
+  },
+  "projects": [
+    {
+      "id": "NH1",
+      "artifact": 15089800927,
+      "sha256": "eb0f1c863fa0bbdff7bbc86f871ae9f5556849839aa94e740dfca225c28d9dde",
+      "screened": 36,
+      "forest_candidates": 21,
+      "processed": 21,
+      "passed": 0,
+      "stops": {
+        "too_few_ground_returns": 12,
+        "ground_distance": 7,
+        "obstacle_ground_distance": 1,
+        "vertical_unit_not_confirmed": 1
+      }
+    },
+    {
+      "id": "NH2",
+      "artifact": 15088684206,
+      "sha256": "3881579460b35f29cc57e39ed1a0d01e97b3d99c66ba33b20b7e43652dccbb94",
+      "screened": 36,
+      "forest_candidates": 23,
+      "processed": 23,
+      "passed": 1,
+      "stops": {
+        "too_few_ground_returns": 16,
+        "ground_distance": 4,
+        "obstacle_ground_distance": 1,
+        "density_cover": 1
+      }
+    },
+    {
+      "id": "WA1",
+      "artifact": 15089990462,
+      "sha256": "c064b9513f76e88b81486b502d8c2c03ae0abe1a2e1e668070685e47b5586933",
+      "screened": 36,
+      "forest_candidates": 21,
+      "processed": 10,
+      "passed": 6,
+      "stops": {
+        "too_few_ground_returns": 4
+      },
+      "not_processed_due_to_six_patch_cap": 11
+    }
+  ],
+  "patches": [
+    {
+      "project": "NH2",
+      "index": 23,
+      "r1": [
+        0.10572935,
+        -0.00208796,
+        -0.00208796
+      ],
+      "r2": [
+        0.12637279,
+        0.01364565,
+        0.01364565
+      ],
+      "r1_gt_q975": [
+        true,
+        false,
+        false
+      ],
+      "r2_gt_q975": [
+        true,
+        true,
+        true
+      ],
+      "finite_lcc_gt_q975": [
+        false,
+        true
+      ],
+      "dem_error_m": 0.028666992
+    },
+    {
+      "project": "WA1",
+      "index": 4,
+      "r1": [
+        0.12625497,
+        -0.00273581,
+        -0.00273581
+      ],
+      "r2": [
+        0.11478335,
+        0.04371651,
+        0.81025339
+      ],
+      "r1_gt_q975": [
+        true,
+        false,
+        false
+      ],
+      "r2_gt_q975": [
+        true,
+        true,
+        true
+      ],
+      "finite_lcc_gt_q975": [
+        true,
+        true
+      ],
+      "dem_error_m": 0.143034668
+    },
+    {
+      "project": "WA1",
+      "index": 8,
+      "r1": [
+        0.10308404,
+        -0.00018434,
+        -0.00018434
+      ],
+      "r2": [
+        0.130017,
+        0.00273978,
+        0.00273978
+      ],
+      "r1_gt_q975": [
+        true,
+        false,
+        false
+      ],
+      "r2_gt_q975": [
+        true,
+        true,
+        true
+      ],
+      "finite_lcc_gt_q975": [
+        true,
+        true
+      ],
+      "dem_error_m": 0.15220459
+    },
+    {
+      "project": "WA1",
+      "index": 9,
+      "r1": [
+        0.08612856,
+        -0.00016734,
+        -0.00016734
+      ],
+      "r2": [
+        0.10424334,
+        0.00157418,
+        0.00157418
+      ],
+      "r1_gt_q975": [
+        true,
+        false,
+        false
+      ],
+      "r2_gt_q975": [
+        true,
+        true,
+        true
+      ],
+      "finite_lcc_gt_q975": [
+        true,
+        true
+      ],
+      "dem_error_m": 0.282556152
+    },
+    {
+      "project": "WA1",
+      "index": 10,
+      "r1": [
+        0.05891963,
+        0.0012394,
+        0.0012394
+      ],
+      "r2": [
+        0.07409804,
+        0.00551508,
+        0.03528961
+      ],
+      "r1_gt_q975": [
+        true,
+        true,
+        true
+      ],
+      "r2_gt_q975": [
+        true,
+        true,
+        true
+      ],
+      "finite_lcc_gt_q975": [
+        true,
+        true
+      ],
+      "dem_error_m": 0.262883301
+    },
+    {
+      "project": "WA1",
+      "index": 17,
+      "r1": [
+        0.09874503,
+        0.04487435,
+        0.69652953
+      ],
+      "r2": [
+        0.08738227,
+        0.02413186,
+        0.99403549
+      ],
+      "r1_gt_q975": [
+        true,
+        true,
+        true
+      ],
+      "r2_gt_q975": [
+        true,
+        true,
+        true
+      ],
+      "finite_lcc_gt_q975": [
+        true,
+        true
+      ],
+      "dem_error_m": 0.153613281
+    },
+    {
+      "project": "WA1",
+      "index": 20,
+      "r1": [
+        0.09478163,
+        -0.00197424,
+        -0.00197424
+      ],
+      "r2": [
+        0.13200268,
+        0.00015343,
+        0.00015343
+      ],
+      "r1_gt_q975": [
+        true,
+        false,
+        false
+      ],
+      "r2_gt_q975": [
+        true,
+        false,
+        false
+      ],
+      "finite_lcc_gt_q975": [
+        false,
+        true
+      ],
+      "dem_error_m": 0.010769043
+    }
+  ],
+  "metric_order": [
+    "vertical_neighbor_edge_fraction",
+    "periodic_largest_given_candidate_fraction",
+    "periodic_bottom_to_top_given_candidate_fraction"
+  ],
+  "r1_r2_definition": "Observed minus mean of 100 independent horizontal layer shifts, with horizontal periodic seams. Rounded to eight decimals.",
+  "summary": {
+    "supported_new_patches": 7,
+    "projects": 2,
+    "vertical_adjacency_above_q975_r1": 7,
+    "vertical_adjacency_above_q975_r2": 7,
+    "periodic_lcc_above_q975_r1": 2,
+    "periodic_lcc_above_q975_r2": 6,
+    "finite_permutation_lcc_above_q975_r1": 5,
+    "finite_permutation_lcc_above_q975_r2": 7
+  },
+  "decision": "Minimum geometry feasibility support passed, but strong QA selection and six of seven patches in WA1 preclude macro generalization. Layer shifts preserve cleared horizontal masks but destroy vertical correlation including correlation induced by 3D distance dilation; result is relative to this null, not proof of independent biological accessibility or tree architecture mechanism. Periodic LCC often saturates and sensitivity differs by clearance. Retain 2m adjacency excess as candidate environmental metric only. No species-level flight feasibility, no SDM admission. Next gate co-location with existing observation support."
+}
