@@ -1,0 +1,31 @@
+name: FWS native LPC catalog and measured LAZ decode gate
+on:
+  workflow_dispatch:
+  push:
+    branches: [prospective/gedi-trait-macro-sdm-20261125]
+    paths:
+      - .github/workflows/fws-native-lpc-tile-gate-v1.yml
+permissions:
+  contents: read
+jobs:
+  tile_gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 14bebd8059f8296f834e91f04f89fd4d91e36026
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq mdbtools
+      - run: python -m pip install numpy pandas scipy requests rasterio pyproj 'shapely>=2' pyogrio 'laspy[lazrs]'
+      - run: python -m py_compile prospective/gedi_trait_macro_sdm/fws_native_lpc_tile_gate_v1.py
+      - run: python prospective/gedi_trait_macro_sdm/fws_native_lpc_tile_gate_v1.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: fws-native-lpc-tile-gate-v1
+          path: fws_native_lpc_tile_gate/report.json
+          if-no-files-found: error
+          retention-days: 90
