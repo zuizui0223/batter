@@ -1,0 +1,21 @@
+{
+  "status": "STOP_ITEM_PERMISSION_NO_RASTER_BYTES",
+  "run_id": 45868907395,
+  "artifact_id": 15141816459,
+  "archive_sha256": "751b9e43d4c0c0ea2337bc28f94ffecf2e3f3c27a5d3e9709c01115201e508b7",
+  "zip_crc_verified": true,
+  "ckan_id": "7ac16040-f61f-4ace-9c07-22945e6d0292",
+  "ckan_http": 200,
+  "ckan_sha256": "8b84640904d33bcc0a557354e76285a14a0124e7fe4a7507eb04d20c3620d3b2",
+  "official_item_id": "d6f291297c8e47ea8420d0dc54aa7911",
+  "item_http": 200,
+  "item_json_error_code": 403,
+  "item_message_code": "GWM_0003",
+  "item_sha256": "9c0f313cfa3d399abb1dedb14f7d50ed9bc32c4bcdc87cd616e5de988e787542",
+  "policy": "Stop on application-level permission denial. No retry, alternate host, authentication guess or guessed raster URL.",
+  "raster_bytes_acquired": 0,
+  "joined_observations": 0,
+  "ecological_fit": false,
+  "main_merged": false,
+  "source_trait_receipt_commit": "61491e7220deb46d96ba78c31691f267b993bd09"
+}
