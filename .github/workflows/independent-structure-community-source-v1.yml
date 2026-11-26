@@ -1,0 +1,33 @@
+name: Independent structure community observation sources
+on:
+  workflow_dispatch:
+  push:
+    branches: [prospective/gedi-trait-macro-sdm-20261125]
+    paths:
+      - .github/workflows/independent-structure-community-source-v1.yml
+permissions:
+  contents: read
+jobs:
+  source:
+    strategy:
+      fail-fast: false
+      matrix:
+        provider: [swiss, england]
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: c5a30258d2226b22c7b3ecae63dc710fdc5f8449
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install requests
+      - run: python prospective/gedi_trait_macro_sdm/independent_structure_community_source_v1.py ${{ matrix.provider }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: independent-community-${{ matrix.provider }}-v1
+          path: independent_${{ matrix.provider }}/
+          if-no-files-found: error
+          retention-days: 90
