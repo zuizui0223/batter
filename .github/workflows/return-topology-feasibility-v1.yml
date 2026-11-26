@@ -1,0 +1,35 @@
+name: Public airborne LiDAR return topology feasibility V1
+on:
+  workflow_dispatch:
+  push:
+    branches: [prospective/gedi-trait-macro-sdm-20261125]
+    paths:
+      - .github/workflows/return-topology-feasibility-v1.yml
+permissions:
+  contents: read
+jobs:
+  geometry:
+    strategy:
+      fail-fast: false
+      matrix:
+        project: [NH1, NH2, WA1]
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install 'laspy[lazrs]' numpy scipy pyproj requests
+      - run: python -m py_compile prospective/gedi_trait_macro_sdm/return_topology_feasibility_v1.py
+      - run: python prospective/gedi_trait_macro_sdm/return_topology_feasibility_v1.py ${{ matrix.project }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: return-topology-${{ matrix.project }}-v1
+          path: return_topology/
+          if-no-files-found: error
+          retention-days: 90
