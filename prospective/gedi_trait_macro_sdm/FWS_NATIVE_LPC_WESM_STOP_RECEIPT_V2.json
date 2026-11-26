@@ -1,0 +1,27 @@
+{
+  "stage": "official native LPC WESM footprint metadata gate V2",
+  "status": "STOP_SOURCE_OR_QC",
+  "url": "https://rockyweb.usgs.gov/vdelivery/Datasets/Staged/Elevation/metadata/WESM.gpkg",
+  "actual_geometry_admitted": false,
+  "limits": [
+    "Native official LPC route, not a proof of EPT alias identity.",
+    "WESM polygon and public LPC link do not establish downloaded LAZ or point density, flight-line timing, leaf conditions, or flight accessibility.",
+    "No coordinates, raw FWS rows, site identifiers, or ecological fit exported."
+  ],
+  "csv_sha256": "87f5d330a8953f32fa2682529029b48c844df06f43e8d11f55e46670021fcfa9",
+  "http": 200,
+  "gpkg_bytes": 65536,
+  "gpkg_sha256": "dc15c7e2c14f1ad6823121e0c1212801b8d170aff4cc32ab099ac3ff3b4ce2f8",
+  "gpkg_etag": "\"6b07d4a2-10000\"",
+  "gpkg_last_modified": "Thu, 26 Nov 2026 06:41:38 GMT",
+  "error_type": "DataSourceError",
+  "reason": "'wesm_private.gpkg' not recognized as being in a supported file format.; It might help to specify the correct driver explicitly by prefixing the file path with '<DRIVER>:', e.g. 'C",
+  "audit": {
+    "run_id": 45770015555,
+    "job_id": 139740138688,
+    "artifact_id": 15093349039,
+    "artifact_zip_digest": "sha256:1c7601ab3dbafe43db10046e5b9de99a96550bb377710c9efe5764a428bd95d3",
+    "scope": "Final log and registry digest verified; source bytes not retained. No decoded polygons."
+  },
+  "decision": "HTTP 200 and SQLite header but GeoPackage download was 65,536 bytes and unreadable by pyogrio. Cause unverified. Do not retry unchanged download. Official USGS 3DEPElevationIndex layer 8 REST geometry alternative frozen at f2fa017318b7f7cce43a4de96f957412945976ea, implementation ebc2535e009bcbde19fa076f4a9c3f9501f966a9, run 45770373906. Preserve exact CSV metadata, strict acquisition-period and support gate, query public workunit IDs only; no ecological fit."
+}
