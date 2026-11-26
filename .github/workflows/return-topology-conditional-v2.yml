@@ -1,0 +1,42 @@
+name: Return topology matched clearance and resolution V2
+on:
+  workflow_dispatch:
+  push:
+    branches: [prospective/gedi-trait-macro-sdm-20261125]
+    paths:
+      - .github/workflows/return-topology-conditional-v2.yml
+permissions:
+  contents: read
+  actions: read
+jobs:
+  geometry:
+    strategy:
+      fail-fast: false
+      matrix:
+        project: [NH1, WA1]
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          name: return-topology-${{ matrix.project }}-v1
+          run-id: 45758911081
+          github-token: ${{ github.token }}
+          path: prior_return_topology
+      - run: python -m pip install 'laspy[lazrs]' numpy scipy pyproj requests
+      - run: python -m py_compile prospective/gedi_trait_macro_sdm/return_topology_conditional_v2.py
+      - run: python prospective/gedi_trait_macro_sdm/return_topology_conditional_v2.py ${{ matrix.project }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: return-topology-conditional-${{ matrix.project }}-v2
+          path: return_topology_v2/
+          if-no-files-found: error
+          retention-days: 90
