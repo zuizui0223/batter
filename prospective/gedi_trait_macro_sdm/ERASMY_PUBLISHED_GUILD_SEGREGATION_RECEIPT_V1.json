@@ -1,0 +1,134 @@
+{
+  "status": "COMPLETE_PUBLISHED_COEFFICIENT_TRANSFORMATION_ONLY",
+  "contract_commit": "058c7698bff85e27dae55b2d1c71471bc5c41dc2",
+  "source": {
+    "doi": "10.1002/ece3.8363",
+    "table": 2,
+    "published_html_and_pdf_text_crosscheck": true,
+    "pdf_page_screenshot": "CACHE_MISS",
+    "raw_data_and_covariance_available": false,
+    "supplementary_table_acquired": false,
+    "dryad_previous_access_stop": 401,
+    "guilds": [
+      "OSF",
+      "ESF",
+      "NSF"
+    ],
+    "mean_detector_heights_m": [
+      3,
+      11,
+      19
+    ],
+    "coefficients": {
+      "OSF": [
+        "7.47",
+        "29.31",
+        "0.55",
+        "0.09",
+        "0.73",
+        "3.42"
+      ],
+      "ESF": [
+        "0.44",
+        "0.32",
+        "1",
+        "0.43",
+        "3.07",
+        "5.21"
+      ],
+      "NSF": [
+        "0.22",
+        "0.28",
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "coefficient_order": [
+      "height_mid",
+      "height_high",
+      "mid_period_II",
+      "high_period_II",
+      "mid_gap",
+      "high_gap"
+    ],
+    "note": "Absent fitted interactions factor 1. Published model rates, not observed guild abundances. Period II is postlactation/juvenile independent flight."
+  },
+  "estimand": "RMS of nine guild-pair x height-pair log cross-ratios; equals doubly centered log-rate matrix Frobenius norm for 3x3; invariance to multiplicative guild and height margins, not guild-by-height detection.",
+  "scores": {
+    "interior_I": 2.7366362329629514,
+    "gap_I": 3.064448484761436,
+    "interior_II": 1.8634953458900658,
+    "gap_II": 1.9614418897950567
+  },
+  "changes": {
+    "gap_minus_interior_I": {
+      "difference": 0.3278122517984845,
+      "percent": 11.978656419511143,
+      "rounding_outer_bounds": [
+        0.28556491250150273,
+        0.36998270389988974
+      ],
+      "same_direction_draw_fraction": 1
+    },
+    "gap_minus_interior_II": {
+      "difference": 0.09794654390499091,
+      "percent": 5.256065925842624,
+      "rounding_outer_bounds": [
+        -0.3437912237906897,
+        0.4868285478117158
+      ],
+      "same_direction_draw_fraction": 0.9271
+    },
+    "II_minus_I_interior": {
+      "difference": -0.8731408870728856,
+      "percent": -31.905624743100674,
+      "rounding_outer_bounds": [
+        -1.0627325364480125,
+        -0.6222928381786912
+      ],
+      "same_direction_draw_fraction": 1
+    },
+    "II_minus_I_gap": {
+      "difference": -1.1030065949663792,
+      "percent": -35.99364128492593,
+      "rounding_outer_bounds": [
+        -1.3360667658692706,
+        -0.8614689011377994
+      ],
+      "same_direction_draw_fraction": 1
+    }
+  },
+  "checks": {
+    "double_centered_identity": true,
+    "row_col_scaling_invariance": true,
+    "permutation_invariance": true,
+    "all_draws_within_outer_bounds": true,
+    "rounding_draws": 10000,
+    "seed": 20261127,
+    "rounding_is_not_statistical_uncertainty": true,
+    "ESF_printed_one_half_digit": 0.5
+  },
+  "audit": {
+    "script_sha256": "bdbf6ebfb6b6c77b3893a5b3550c9969eaf53a68afee62ad05f8bb2e7733eaa5",
+    "report_sha256": "031a6937205bee7144fd82ebb1d2760dcdf8e85bf374112f603f65aeb4b99716",
+    "bundle_sha256": "04a7c2ff27611be75988c5720a2cf8fb35bd347a7002799057c37d623c93a6be",
+    "local_zip_crc_pass": true
+  },
+  "new_source_candidates": [
+    {
+      "doi": "10.5281/zenodo.7740421",
+      "paired_lidar_doi": "10.5281/zenodo.4020697",
+      "status": "METADATA_ONLY_ZENODO_WEB_FAILED_429",
+      "scope": "Borneo community+ALS, not height-resolved bat activity."
+    },
+    {
+      "doi": "10.5281/zenodo.16754613",
+      "paper": "10.1016/j.cub.2026.04.058",
+      "status": "METADATA_ONLY_ZENODO_WEB_429",
+      "scope": "German replicated structural restoration; already studied FD, require novel endpoint."
+    }
+  ],
+  "decision": "Seasonal weakening of modeled guild-height cross-ratios is insensitive to printed rounding, not established statistical significance. Gap effect differs from marginal overall activity stratification, and late gap effect not rounding-robust. No actual FD, parameter covariance, raw observations, independent replication within study, macro SDM or causal/detection calibration claims. No further denied downloads. Need original site-night-height data; no main/frozen manuscript changes."
+}
