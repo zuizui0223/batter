@@ -1,0 +1,29 @@
+name: FWS EPT WESM acquisition-date support
+on:
+  push:
+    branches: [prospective/gedi-trait-macro-sdm-20261125]
+    paths:
+      - .github/workflows/fws-ept-wesm-date-support-v1.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  metadata:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 0870ef4a1ce085641312c6c86e9c30a04790a183
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq mdbtools
+      - run: python -m pip install numpy pandas scipy requests rasterio pyproj 'shapely>=2'
+      - run: python prospective/gedi_trait_macro_sdm/fws_ept_wesm_date_support_v1.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: fws-ept-wesm-date-support-v1
+          path: fws_wesm_support/report.json
+          if-no-files-found: warn
