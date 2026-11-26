@@ -1,0 +1,146 @@
+{
+  "status": "COMPLETE_RECORDED_SEASON_HEIGHT_FD_ONLY",
+  "contract_commit": "64fc381b958a4148f4d1613e8e60ac06e41f8563",
+  "sources": {
+    "yoh_archive_sha256": "77caabe49c8cd761b1bece56eae4c23ea292b287f38a19d9c015990e43685ad6",
+    "trait_archive_sha256": "b8ecb52ff7850258e890500600a9bbb64f3affd8f229d55661226bd6b95c22d2",
+    "prior_v3_bundle_sha256": "f8c4fa3ec527b7dc76dd3d2441ce983de827aa7980f3be7928e82ac08c24f8e5"
+  },
+  "support": {
+    "nominal_points": 164,
+    "points_with_at_least_one_paired_season": 63,
+    "both_seasons": 36,
+    "point_seasons": 72,
+    "transect_counts": [
+      9,
+      5,
+      12,
+      10
+    ],
+    "forest_sides": {
+      "primary": 15,
+      "secondary": 20,
+      "edge": 1
+    },
+    "dry_2013_C_U": [
+      56080,
+      14442
+    ],
+    "wet_2014_C_U": [
+      36360,
+      7693
+    ],
+    "exact10_coverage_dry_C_U_wet_C_U": [
+      0.5886947218259629,
+      0.48532059271569034,
+      0.5787953795379538,
+      0.5641492265696088
+    ],
+    "unparseable_filename_dates_retained": 6558
+  },
+  "guild_full12": {
+    "fixed_category_permutations": 18480,
+    "pass": {
+      "dry": 0.22297866497621074,
+      "wet": 0.16568409396177142,
+      "change": -0.0572945710144393,
+      "null_change": -0.02748984256182962,
+      "excess_change": -0.029804728452609678,
+      "null_interval": [
+        -0.0683124642545905,
+        0.020544710430933567
+      ],
+      "transect_changes": [
+        0.01993989086630447,
+        -0.14977067253590262,
+        -0.06628996278034537,
+        -0.033057539607813644
+      ],
+      "component_shares_height_season_interaction": [
+        0.8311500101700335,
+        0.07449095112049371,
+        0.09435903870947267
+      ]
+    },
+    "incidence": {
+      "dry": 0.029111,
+      "wet": 0.021197,
+      "change": -0.007913377549870829,
+      "excess_change": 0.002203854131459633,
+      "component_shares": [
+        0.5326653105835553,
+        0.24202012981204332,
+        0.22531455960440255
+      ]
+    },
+    "equal_count": {
+      "dry": 0.079543,
+      "wet": 0.051133,
+      "change": -0.028410232980946422,
+      "excess_change": -0.01453429514794092,
+      "component_shares": [
+        0.6472168663236353,
+        0.1455899498657459,
+        0.20719318381062166
+      ],
+      "depth_min_median_max": [
+        2,
+        99,
+        1300
+      ],
+      "draws_per_cell": 2048,
+      "repeat_change": -0.029010218450022794
+    },
+    "screen_pass": false
+  },
+  "resolved10": {
+    "domains": [
+      "size",
+      "flight",
+      "sensory",
+      "guild"
+    ],
+    "family_permutations": 480,
+    "pass_four_domain_component_shares": [
+      0.6892506107966864,
+      0.12805819544011532,
+      0.18269119376319837
+    ],
+    "equal_count_four_domain_component_shares": [
+      0.5229075157509155,
+      0.20111621300629776,
+      0.27597627124278296
+    ],
+    "sensory_change": {
+      "pass": -0.07764799107994656,
+      "pass_null_excess": -0.01002327058317068,
+      "pass_excess_transects": [
+        -0.009189869506654721,
+        -0.013023860010640792,
+        -0.004571625562777029,
+        -0.013307727252610188
+      ],
+      "incidence_excess": -0.0033525720265578374,
+      "equal_count_excess": -0.005952620987461368,
+      "equal_count_excess_transects": [
+        -0.006257186535085356,
+        -0.01047754444278741,
+        -0.0022804919780061994,
+        -0.004795260993966532
+      ],
+      "repeat_equal_count_excess": -0.006086277898293607
+    }
+  },
+  "audit": {
+    "source_pins_and_published_96_cells": true,
+    "synthetic_pure_axis_and_reversal_tests": true,
+    "balanced_rao_decomposition": true,
+    "exact_null_mean_check": true,
+    "domain_additivity": true,
+    "script_sha256": "5004e15fc005ec3a8c8e41ada926227895e930a58138eac28dabc450604dab38",
+    "report_sha256": "263b1abdc314cd7f74d56c605241801e465789b7fdac279b040e6f4c34a6f845",
+    "bundle_sha256": "3cb9ee4b36718ba9214c0e7a25bca3f91ac1314101f0f90c40fb1d0c67f161d9",
+    "bundle_crc_verified": true
+  },
+  "decision": "Season and year confounded. Same nominal 36 points selected by paired positive recorded support. Mean guild beta decline is descriptive and fails all-transect/null-adjusted sensitivity screen. New balanced decomposition quantifies relative contributions to between-layer-season diversity, not all gamma diversity or causal variance explained. Exact10 sensory secondary residual changes negative but incomplete coverage and overlapping source-open tests preclude general mechanism. Proxy12 conditional. Erasmy comparison only analogy, not same seasonal transition. No actual altitude/detection calibration, causal effect, macro-SDM admission, submission or main merge."
+}
