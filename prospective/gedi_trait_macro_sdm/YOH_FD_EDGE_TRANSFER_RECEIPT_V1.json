@@ -1,0 +1,80 @@
+{
+  "status": "COMPLETE_RECORDED_FD_EDGE_TRANSFER_ONLY",
+  "contract": "369e1322195d71f5e068993bbb30a02c5d704b21",
+  "support": {
+    "paired_point_seasons": 99,
+    "transect_season_groups": 8,
+    "locations": 2,
+    "primary_forest": 45,
+    "secondary_forest": 51,
+    "boundary": 3,
+    "exact_labels": 11,
+    "proxy_labels": 14,
+    "whole_community_admitted": false
+  },
+  "primary": {
+    "exact11": {
+      "rmse": {
+        "N": 0.03492117857431846,
+        "B": 0.021882942803930903,
+        "G": 0.022040954186248886
+      },
+      "G_B_gain_mse": -0.000006940475680210956,
+      "G_N_gain_mse": 0.0007336850515791164,
+      "positive_groups_G_B": 3,
+      "positive_folds_G_B": 2,
+      "location_G_B": {
+        "CaboFrio": 0.0000013485741978133824,
+        "Dimona": -0.000015229525558235294
+      },
+      "side_excess": {
+        "primary": 0.025216535099643743,
+        "secondary": 0.024743503355237555,
+        "boundary": 0.059912045535791734
+      },
+      "other_domain_G_B_gain": {
+        "size": -0.00006279742748624111,
+        "flight": 0.000029427960677948492,
+        "sensory": -0.00006987609658900271
+      }
+    },
+    "proxy14": {
+      "rmse": {
+        "N": 0.03396611221532335,
+        "B": 0.02872755480303854,
+        "G": 0.029572292635660694
+      },
+      "G_B_gain_mse": -0.0000492480867675688,
+      "positive_groups_G_B": 2,
+      "positive_folds_G_B": 1,
+      "side_excess": {
+        "primary": 0.027238467189754756,
+        "secondary": 0.03093462877170893,
+        "boundary": 0.07433861629705757
+      }
+    }
+  },
+  "sensitivity": {
+    "exact11_G_B": {
+      "incidence": -8.022192869662366e-7,
+      "token": -0.000006701456358632335,
+      "location_only": -0.000005716744279063769,
+      "transect_only": -0.000002795681462032909
+    },
+    "proxy14_G_B": {
+      "incidence": -0.000006014860095234792,
+      "token": -0.000048978850691772834,
+      "location_only": 0.000010798191007002133,
+      "transect_only": 0.00002315174768373507
+    }
+  },
+  "audit": {
+    "prior_fd_all_six_replayed": true,
+    "normal_eq_augmented_lstsq": true,
+    "heldout_outcome_exclusion": true,
+    "code_sha256": "15f2d52089ba487c4fffd30ee132dd1beae235390a14547d0ffd8c23e65dc7a6",
+    "report_sha256": "0b26c2d129e6acc183e3bd7c633a3e6500083567c28a29447575b89e3c516851",
+    "bundle_sha256": "e5df7b304451598bfdc695a02b3f764c7db1de783addcc55631519edaf280487"
+  },
+  "decision": "No robust incremental prediction by forest side or edge distance. B's predictor T is mathematically coupled to response E=B_functional - T*mean(D); not independent ecological evidence. Boundary only 3 points, descriptive. Exact11 lacks whole-community coverage; proxy14 conditional. No ecological zero-effect conclusion, actual forest topology, actual altitude or independent replication. Close edge tuning. Additional diet/roost and feeding-mode source acquisition is separate; no values inferred. Main and frozen manuscripts unchanged."
+}
