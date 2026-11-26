@@ -1,0 +1,153 @@
+{
+  "status": "COMPLETE_GEOMETRY_ONLY",
+  "initial_run": 45757993888,
+  "initial_decision": "Invalid integer row indexing from bitwise complement of uint8 LAS withheld flags. All original extracted point counts and classifications withdrawn; no original topology results.",
+  "fixed_commit": "1c1ee9e5d98a3aac60ce4aa3b50a0fd4643c214c",
+  "replay_run": 45758911081,
+  "artifact_audit": "All three ZIPs independently rehashed against registry digests, CRC checked, exact reports read locally.",
+  "projects": [
+    {
+      "id": "NH1",
+      "screened": 9,
+      "passed": 1,
+      "artifact": 15088504302,
+      "sha256": "0f0c6600d05ef70eed5107aee245ab0a50d5671fecade9276d2ff1b22b384c2c",
+      "unit_note": "NOAA InPort 67441 EPT lineage names EPSG:5703 but reference system 2 names EPSG:6360 (US survey feet). EPT Z treated as metres provisionally, independently validate against public DEM before interpretation.",
+      "patches": [
+        {
+          "position_index": 9,
+          "observed_largest_component": [
+            0.84600830078125,
+            0.6208670479910714,
+            0.43662806919642855
+          ],
+          "null_mean": [
+            0.8486732700892857,
+            0.25140136718749995,
+            0.020090506417410715
+          ],
+          "null_q975": [
+            0.8487461635044643,
+            0.3625418526785714,
+            0.028027125767299103
+          ],
+          "half_point_largest": [
+            0.8954554966517857,
+            0.6773158482142857,
+            0.47746058872767855
+          ],
+          "coarse_2m_largest": [
+            0.6130719866071429,
+            0.34047154017857145
+          ]
+        }
+      ]
+    },
+    {
+      "id": "NH2",
+      "screened": 9,
+      "passed": 0,
+      "artifact": 15089055812,
+      "sha256": "bf3ebd7a3783d1f5ffa0b960cb524c5dc1841f6bfbffc114b493cf0ef5d350c0",
+      "unit_note": "Same EPT lineage/reference-system discrepancy in InPort 67394; no passing patches."
+    },
+    {
+      "id": "WA1",
+      "screened": 8,
+      "passed": 3,
+      "artifact": 15088956111,
+      "sha256": "cece103f0e502750f6a1d16c7d85d4bfb1ab07537bbf32ef6abda0c9173fc5f9",
+      "unit_note": "InPort 73306 process step 3 explicitly documents conversion to vertical metres and NAVD88 GEOID18.",
+      "patches": [
+        {
+          "position_index": 2,
+          "observed_largest_component": [
+            0.83668,
+            0.74223,
+            0.68052
+          ],
+          "null_mean": [
+            0.83051,
+            0.65747,
+            0.56717
+          ],
+          "null_q975": [
+            0.83196,
+            0.65833,
+            0.56865
+          ],
+          "half_point_largest": [
+            0.86295,
+            0.75276,
+            0.68782
+          ],
+          "coarse_2m_largest": [
+            0.74337,
+            0.64572
+          ]
+        },
+        {
+          "position_index": 6,
+          "observed_largest_component": [
+            0.81004,
+            0.64718,
+            0.55189
+          ],
+          "null_mean": [
+            0.81286,
+            0.4429,
+            0.32382
+          ],
+          "null_q975": [
+            0.81306,
+            0.44441,
+            0.3258
+          ],
+          "half_point_largest": [
+            0.84452,
+            0.66279,
+            0.56222
+          ],
+          "coarse_2m_largest": [
+            0.64893,
+            0.49128
+          ]
+        },
+        {
+          "position_index": 8,
+          "observed_largest_component": [
+            0.89569,
+            0.79651,
+            0.72332
+          ],
+          "null_mean": [
+            0.89805,
+            0.64028,
+            0.52463
+          ],
+          "null_q975": [
+            0.89819,
+            0.64238,
+            0.52639
+          ],
+          "half_point_largest": [
+            0.9176,
+            0.81415,
+            0.73357
+          ],
+          "coarse_2m_largest": [
+            0.7952,
+            0.68192
+          ]
+        }
+      ],
+      "precision": "WA summary rounded to 5 decimal places; full precision in verified artifact."
+    }
+  ],
+  "radii_m": [
+    0,
+    1,
+    2
+  ],
+  "decision": "26 screened, 4 nominal passing patches in 2 projects, NH1 provisional pending vertical-unit check; all four observed largest components exceed layer-count null 97.5th percentile at positive radii. Existing null preserves pre-dilation occupied counts, not cleared-space amount: overlap of buffered obstacles may account for gains. Thinning/coarse sensitivity so far observed curves only, not matched nulls. No true free-volume or bat movement inference. New matched clearance-volume null and vertical-unit audit needed; no ecological fitting."
+}
