@@ -54,7 +54,14 @@ def main():
         k=m[1].upper();assert k not in orig
         code=k.split("_")[0];assert code in set(codes)|{"NOISE"}
         orig[k]=code
-    truth=collections.Counter(orig.values());assert truth["NOISE"]==380 and sum(truth[c] for c in codes)==1120
+    truth=collections.Counter(orig.values())
+    R["reference_inventory"]={"actual_counts":dict(truth),"source_species_lookup":names,"article_noise_count":380,"article_named_count":1120,"article_margins_match":truth["NOISE"]==380 and sum(truth[c] for c in codes)==1120}
+    save()
+    # Keep the exact published file list and flag discrepancy rather than
+    # altering true labels or deleting rows to reproduce article counts.
+    assert sum(truth.values())==1500
+    if not R["reference_inventory"]["article_margins_match"]:
+        R["limits"].append("Published S4 filename-list margins differ from article narrative; exact file-list labels only. No reconciliation by invented labels or exclusions.")
     header=["FILENAME","SPECIES","SP PERCENT","GROUP","GR PERCENT","TOTAL PULSES","DISC PROB","FOLDER"]
     rows={};odd=collections.Counter()
     for line in d["zc_files_5.txt"].splitlines():
@@ -80,6 +87,7 @@ def main():
     # Keep all explicit predicted categories, including unknown/empty/noise.
     matrix={c:dict(collections.Counter(p for k,p in rows.items() if orig[k]==c)) for c in codes+["NOISE"]}
     R["reported_confusion_counts"]=matrix;R["reference_metrics"]={}
+    save()
     for c in codes:
         q=matrix[c];n=sum(q.values())
         R["reference_metrics"][names[c]]={"reference_files":truth[c],"reported_rows":n,"correct_reported":q.get(c,0),"conditional_correct_fraction":q.get(c,0)/n if n else None,"wrong_named":sum(q.get(k,0) for k in codes if k!=c),"other_reported":sum(v for k,v in q.items() if k not in codes)}
