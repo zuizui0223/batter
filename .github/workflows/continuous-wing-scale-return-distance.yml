@@ -1,0 +1,84 @@
+name: Continuous wing-scale observed return distance
+on:
+  push:
+    branches: [prospective/gedi-trait-macro-sdm-20261125]
+    paths:
+      - .github/workflows/continuous-wing-scale-return-distance.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  geometry:
+    strategy:
+      fail-fast: false
+      matrix:
+        project: [NH1, WA1]
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      OPENBLAS_NUM_THREADS: "1"
+      OMP_NUM_THREADS: "1"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 89e765c795b674087fb7ad5de5410650da705d3d
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          name: return-topology-conditional-${{ matrix.project }}-v2
+          run-id: 45759195978
+          github-token: ${{ github.token }}
+          path: v2
+      - uses: actions/download-artifact@v4
+        with:
+          name: wing-span-voxel-scale-v1
+          run-id: 45759037081
+          github-token: ${{ github.token }}
+          path: spans
+      - uses: actions/download-artifact@v4
+        with:
+          name: wing-pavd-frozen-trait-domain-v1
+          run-id: 45719681892
+          github-token: ${{ github.token }}
+          path: domain
+      - run: python -m pip install 'laspy[lazrs]' numpy pandas scipy pyproj requests
+      - run: python -m py_compile prospective/gedi_trait_macro_sdm/continuous_wing_scale_return_distance_v1.py
+      - run: python prospective/gedi_trait_macro_sdm/continuous_wing_scale_return_distance_v1.py ${{ matrix.project }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: continuous-wing-distance-${{ matrix.project }}-v1
+          path: continuous_wing_distance/
+          if-no-files-found: warn
+          retention-days: 90
+  matched_null_summary:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: return-topology-conditional-*-v2
+          run-id: 45759195978
+          github-token: ${{ github.token }}
+          path: v2_summary
+      - name: Report fixed matched-candidate null results without refitting
+        run: |
+          python - <<'PY'
+          import json,pathlib
+          out=[]
+          for p in sorted(pathlib.Path("v2_summary").rglob("report.json")):
+              d=json.loads(p.read_text())
+              assert d["status"]=="COMPLETE_GEOMETRY_ONLY"
+              for q in d["patches"]:
+                  assert q["status"]=="COMPLETE_GEOMETRY_ONLY"
+                  row={"project":d["project"],"position":q["position_index"],"vertical_unit":q["vertical_unit_audit"]["hypothesis"],"scales":{}}
+                  for n,s in q["scales"].items():
+                      a=s["post_dilation_clearance_layer_count_null"]
+                      row["scales"][n]=[{"radius":r,"candidate_fraction":o[0],"observed_largest_given_candidate":o[2],"null_largest_given_candidate_mean":m[2],"null_largest_given_candidate_q975":h[2],"observed_minus_null":o[2]-m[2]} for r,o,m,h in zip(s["radii_m"],a["observed"],a["null_mean"],a["null_q975"])]
+                  out.append(row)
+          assert len(out)==4
+          print("MATCHED_CLEARANCE_SUMMARY="+json.dumps(out))
+          PY
