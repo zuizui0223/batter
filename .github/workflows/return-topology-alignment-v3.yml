@@ -1,0 +1,39 @@
+name: Return topology alignment V3
+on:
+  workflow_dispatch:
+  push:
+    branches: [prospective/gedi-trait-macro-sdm-20261125]
+    paths:
+      - '.github/workflows/return-topology-alignment-v3.yml'
+      - 'prospective/gedi_trait_macro_sdm/return_topology_alignment_v3.py'
+      - 'prospective/gedi_trait_macro_sdm/RETURN_TOPOLOGY_ALIGNMENT_CONTRACT_V3.md'
+permissions:
+  contents: read
+jobs:
+  alignment:
+    strategy:
+      fail-fast: false
+      matrix:
+        project: [NH1, NH2, WA1]
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install geometry and raster dependencies
+        run: pip install numpy scipy laspy lazrs requests pyproj rasterio
+      - name: Evaluate frozen forest-screened registration null
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+        run: python prospective/gedi_trait_macro_sdm/return_topology_alignment_v3.py ${{ matrix.project }}
+      - name: Upload bounded diagnostic
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: return-topology-alignment-v3-${{ matrix.project }}
+          path: return_topology_v3/${{ matrix.project }}/
+          if-no-files-found: error
+          retention-days: 30
