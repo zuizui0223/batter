@@ -1,0 +1,125 @@
+{
+  "status": "COMPLETE_RECORDED_COMMUNITY_FD_DIAGNOSTIC",
+  "contract_commit": "67dab367770032782274832e564fad265a2cb05d",
+  "sources": {
+    "polesia_archive_sha256": "c0453f9e9bc1b5c1546660e7f47a5320d9fbccb732d353c455df36b52b02e56d",
+    "gedi_archive_sha256": "a2ab0adeb9fbadba34e3f6345c48916ee457bd4a34561d465116a0b8e7cc3bdb",
+    "eurobatrait_artifact_id": 15004196518,
+    "eurobatrait_archive_sha256": "173f6af963c41e8db2fe314a3ffd1285566e564e4e941d2df83c892c84ec23d9",
+    "domains": [
+      "log body mass",
+      "aspect ratio index and log wing loading index",
+      "log free-flight call peak frequency and duration",
+      "main maternity roost"
+    ],
+    "excluded_complexes": [
+      "myotis_brandtii_or_myotis_mystacinus",
+      "nyctalus_leisleri_or_vespertilio_murinus"
+    ],
+    "actual_effort_calibration": false
+  },
+  "support": {
+    "sites": 124,
+    "cells": 116,
+    "nights": 733,
+    "original_labels": 15,
+    "exact_species": 13,
+    "positive_matched_label_night_incidence": 3865,
+    "positive_all_label_night_incidence": 4741,
+    "coverage": 0.8152288546720101,
+    "median_site_coverage": 0.8160580021482278,
+    "three_night_combinations": 3076,
+    "empty_combinations": 4,
+    "sites_with_empty_combinations": 1,
+    "blocks25": 28,
+    "blocks50": 13
+  },
+  "primary": {
+    "E_integrated": {
+      "grain25": {
+        "rmse": {
+          "N": 0.027267404888724842,
+          "B": 0.024579589780708337,
+          "P": 0.024565159172787607
+        },
+        "P_B_gain": 7.091886035107629e-7,
+        "P_B_positive_blocks": 13,
+        "P_B_positive_folds": 2,
+        "P_N_gain": 0.0001400643241812644
+      },
+      "grain50": {
+        "rmse": {
+          "N": 0.027924801870664314,
+          "B": 0.03863784449791877,
+          "P": 0.03819139605556728
+        },
+        "P_B_gain": 0.000034300294772151655,
+        "P_B_positive_blocks": 7,
+        "P_B_positive_folds": 4,
+        "P_N_gain": -0.0006787881731573432
+      }
+    },
+    "Q_integrated": {
+      "grain25": {
+        "N": 0.029465487415878452,
+        "B": 0.026814909668571713,
+        "P": 0.0268433876907341
+      },
+      "grain50": {
+        "N": 0.029010997610663336,
+        "B": 0.03094680399906434,
+        "P": 0.03096265395114025
+      }
+    },
+    "Q_taxonomy": {
+      "grain25": {
+        "N": 0.04729038577729037,
+        "B": 0.05709864517154476,
+        "P": 0.057759081929650964
+      },
+      "grain50": {
+        "N": 0.053652431719621155,
+        "B": 0.07024349789759587,
+        "P": 0.06974204271781939
+      }
+    },
+    "site_equal_E_domain_means": {
+      "size": -0.006504933499720432,
+      "flight_indices": 0.02580969908675049,
+      "sensory": -0.026345822631599434,
+      "maternity_roost": -0.025278889803731282,
+      "integrated": -0.008079986712075174
+    }
+  },
+  "sensitivity_integrated_E_P_B_gain_micro_MSE": {
+    "three_night_incidence": [
+      0.7092,
+      34.3003
+    ],
+    "three_night_detection_frequency": [
+      -5.5409,
+      10.3821
+    ],
+    "all_night_incidence": [
+      7.4761,
+      69.7961
+    ],
+    "grain_order": [
+      25,
+      50
+    ]
+  },
+  "screen_pass": false,
+  "audit": {
+    "source_checks_pass": true,
+    "scalar_fits_plus_heldout_checks": 726,
+    "independent_max_prediction_difference": 2.19824158875781e-14,
+    "heldout_target_perturbation_pass": true,
+    "domain_additivity_pass": true,
+    "code_sha256": "d172f7923fbe41837d7f223195e2a30157702afd7eea9732684bf7ba2cce6ec6",
+    "report_sha256": "b09a2419f46ea2cd8f091b686115383e006728726de55031cbc676b9bc223048",
+    "bundle_sha256": "744f28217f7ae1a68bf4df55202cd193d6438fdc1870d0556489c8e95146256b",
+    "scope": "Local source hashes, exact combination enumeration, independent solver agreement and verified ZIP. No per-site data or coordinates committed."
+  },
+  "decision": "Integrated FD prediction better than intercept-only at 25 km but not 50 km, PAVD increment insufficient, no robust individual-domain improvement. No calibrated vertical bat observation or whole-community FD. Distinct exploratory endpoint in previously inspected archive, not independent geographic replication. Close same-source outcome tuning; prioritize independent multi-stratum surveys (Erasmy original archive not supplied, prior denial not retried) and structural gradients with verified height/detection metadata. Main and frozen manuscripts unchanged."
+}
