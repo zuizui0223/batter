@@ -63,27 +63,48 @@ def main():
     if not R["reference_inventory"]["article_margins_match"]:
         R["limits"].append("Published S4 filename-list margins differ from article narrative; exact file-list labels only. No reconciliation by invented labels or exclusions.")
     header=["FILENAME","SPECIES","SP PERCENT","GROUP","GR PERCENT","TOTAL PULSES","DISC PROB","FOLDER"]
-    rows={};odd=collections.Counter()
+    rows={};odd=collections.Counter();discard=collections.Counter();structure=collections.Counter()
     for line in d["zc_files_5.txt"].splitlines():
         a=line.split("\t")
         if a==header:odd["headers"]+=1;continue
         if not a[0].strip().lower().endswith(".zc"):
-            odd["non_data_lines"]+=1;continue
+            odd["non_data_lines"]+=1
+            structure["non_zc_fields_"+str(len(a))]+=1
+            if len(a)==8 and a[1].strip().upper() in codes:discard["non_zc_named_prediction"]+=1
+            continue
         assert len(a)==8,"unexpected report column count"
         m=re.fullmatch(r"([A-Z]+_[0-9]+)(?:_[0-9]+_[0-9]+)?\.zc",a[0].strip(),re.I)
-        if not m:odd["unrecognized_report_keys"]+=1;continue
+        if not m:
+            odd["unrecognized_report_keys"]+=1
+            discard["unrecognized_key_named_prediction"]+=int(a[1].strip().upper() in codes)
+            continue
         k=m[1].upper()
-        if k not in orig:odd["unmatched_report_keys"]+=1;continue
+        if k not in orig:
+            odd["unmatched_report_keys"]+=1
+            discard["unmatched_key_named_prediction"]+=int(a[1].strip().upper() in codes)
+            continue
         assert k not in rows,"duplicate BCID reference key"
         # Folder and independent input-file reference label must agree.
         actual=orig[k];folder=a[7].strip().upper()
-        if folder!=actual:odd["folder_reference_disagreement"]+=1;continue
+        if folder!=actual:
+            odd["folder_reference_disagreement"]+=1
+            discard["folder_disagreement_named_prediction"]+=int(a[1].strip().upper() in codes)
+            continue
         pred=a[1].strip().upper()
         rows[k]=pred if pred else "EMPTY_REPORTED_LABEL"
     R["reference_reconciliation"]={"reference_total":len(orig),"true_counts":dict(truth),"matched_output_rows":len(rows),"omitted_reference_rows":len(orig)-len(rows),"omitted_by_true_label":dict(collections.Counter(orig[k] for k in orig if k not in rows)),"report_structure":dict(odd),"predicted_labels":dict(collections.Counter(rows.values()))}
     save()
-    assert not any(odd[k] for k in ["unrecognized_report_keys","unmatched_report_keys","folder_reference_disagreement"])
-    assert len(rows)>0
+    R["unresolved_record_structure"]=dict(structure)
+    R["unresolved_named_prediction_rows"]=dict(discard)
+    # The estimand is conditional on explicitly reported, independently
+    # matched file key and agreeing folder. Quarantine every unresolved
+    # row; do not impute, rename or broaden the accepted-key convention.
+    # The previous source audit demonstrated these issues; this is NOT a
+    # reconstructed complete reference confusion matrix.
+    R["limits"].append("Eight unrecognized report keys and two folder/reference disagreements were observed in the preceding audit. Exclude all unresolved records, keep omitted counts, and report only the strict matched-output subset. Full study metrics cannot be reconstructed from these rows.")
+    assert len(rows)==798 and odd["unrecognized_report_keys"]==8 and odd["folder_reference_disagreement"]==2
+    R["strict_matched_subset_only"]=True
+    save()
     # Keep all explicit predicted categories, including unknown/empty/noise.
     matrix={c:dict(collections.Counter(p for k,p in rows.items() if orig[k]==c)) for c in codes+["NOISE"]}
     R["reported_confusion_counts"]=matrix;R["reference_metrics"]={}
