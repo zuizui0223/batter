@@ -1,0 +1,88 @@
+{
+  "status": "OBSERVATION_TRAITS_READY_ENVIRONMENT_ACCESS_STOP",
+  "contract": "9dc2ee3df9eb35ea49c1b0ac5e2e777d2abc8ddd",
+  "nwbs": {
+    "run": 45867952345,
+    "artifact": 15140444499,
+    "zip_sha256": "1a2e553f559406a328e3854aae2a9cc014d10fb772d74297d81493dff1149072",
+    "csv_sha256": "8556647d60d288a3e98a872afd9a5623f5c6a0d09fae84388e81b2fb47b61bd7",
+    "evidence_sha256": "7d24f15b1e4cbae840e393c28fdfeaa784f765074942f7490cd7db528f824c8c",
+    "attribution": "© Forestry Commission & Bat Conservation Trust 2026",
+    "all_rows": 1813,
+    "all_sites": 310,
+    "all_public_grids": 289,
+    "primary_rows": 1298,
+    "primary_sites": 221,
+    "primary_public_grids": 208,
+    "primary_regions": 8,
+    "primary_blocks50": 49,
+    "sites_multiyear": 28,
+    "sites_per_grid": {
+      "1": 196,
+      "2": 11,
+      "3": 1
+    },
+    "exact_species": 9,
+    "matched_rows": 1080,
+    "record_coverage": 0.8320493066255779,
+    "activity_coverage": 0.9192589499029749,
+    "median_site_record_coverage": 0.8333333333333334,
+    "median_site_activity_coverage": 0.9486580265655814,
+    "sites_record_coverage_ge80pct": 208,
+    "matched_labels_per_site_range": [
+      3,
+      7
+    ],
+    "exclusions": [
+      "Myotis genus",
+      "Plecotus austriacus plausible not confirmed"
+    ],
+    "trait_source": "EuroBaTrait DOI 10.6084/m9.figshare.21777161.v2",
+    "trait_source_zip_sha256": "173f6af963c41e8db2fe314a3ffd1285566e564e4e941d2df83c892c84ec23d9",
+    "trait_domains": [
+      "size",
+      "flight indices",
+      "sensory",
+      "maternity roost"
+    ],
+    "all_trait_checks_passed": true
+  },
+  "environment": {
+    "official_package": "7ac16040-f61f-4ace-9c07-22945e6d0292",
+    "source": "Forestry Commission & Environment Agency ©2026, Woodland Structure In England",
+    "published_metrics": [
+      "30m H90",
+      "canopy gap fraction",
+      "30m FHD effective foliage layers"
+    ],
+    "metadata_run": 45868907395,
+    "metadata_artifact": 15141816459,
+    "metadata_artifact_digest": "sha256:751b9e43d4c0c0ea2337bc28f94ffecf2e3f3c27a5d3e9709c01115201e508b7",
+    "metadata_stop": "public ArcGIS item identity/access",
+    "run": 45869175427,
+    "job": 140079790557,
+    "artifact": 15141372312,
+    "artifact_digest": "sha256:0efcebd13585dc3cc89407787e3910195c71e8236b073c8d6badd97e7345cc1a",
+    "direct_listed_zip_range_probe_http": 403,
+    "raster_bytes": 0,
+    "admitted_environment_cells": 0,
+    "reason": "Access stop, not absent environmental structure. Do not retry denied endpoint."
+  },
+  "documentation": {
+    "run": 45869175427,
+    "job": 140079790224,
+    "artifact": 15142640581,
+    "artifact_digest": "sha256:b82f041d2beaf94392c470d2ed28f49912e196edb829810f34eb4fd7af133",
+    "ncea_pdf_http": 404,
+    "ncea_pdf_reviewed": false,
+    "limitation": "The NCEA record page lists the PDF, but attempted retrieval URL returned 404; no assertion about document content beyond official metadata."
+  },
+  "audit": {
+    "local_source_archives_crc_verified": true,
+    "audit_code_sha256": "d082fd151eff2d84c0dd9f42a24f226a7c27018f0e2ade0b1f5f46a01e0bf9aa",
+    "local_report_sha256": "99dd726c727533f45b7e0b234642d8a1d7c5efd08ec10ec8b208c397b619fece",
+    "user_bundle_sha256": "4af51be177103c149615f7c6c6806b1a2ab2b0b666b138a9ce32963752b1a91a",
+    "environment_code_commit": "7af1a999be10be939d4d5bdca562540c16b370a7"
+  },
+  "decision": "Ready for independent community FD test only after environmental source and NCEA limitations review. No model fit or outcome calculation here. Preserve public rectangles and group repeated public location IDs; no NFI localization, actual flight height, true abundance, causal effect, full national representativeness or seasonal four-dimensional claim. No further retries of denied source. Main/frozen manuscript unchanged."
+}
