@@ -1,0 +1,171 @@
+{
+  "status": "COMPLETE_PUBLICATION_SCREENED_FD_CONDITIONAL_REFERENCE",
+  "contract_commit": "838dadb99ec81a5ced58a7df2e7a62ecb03cc236",
+  "sources": {
+    "publication_doi": "10.1371/journal.pone.0274637",
+    "table_doi": "10.1371/journal.pone.0274637.t001",
+    "yoh_archive_sha256": "77caabe49c8cd761b1bece56eae4c23ea292b287f38a19d9c015990e43685ad6",
+    "traits_archive_sha256": "b8ecb52ff7850258e890500600a9bbb64f3affd8f229d55661226bd6b95c22d2",
+    "published_table_cells_reconciled": 96,
+    "published_documented_passes": 270822,
+    "publication_selected12_all_passes": 252912,
+    "publication_excluded": [
+      "E1",
+      "M",
+      "PP",
+      "RN"
+    ],
+    "PG_identity": "Source README gymonotus spelling resolved by explicit paper Pteronotus gymnonotus and all six exact cell counts; CM and P6 remain conditional proxies.",
+    "classification_scope": "Author selection after comparison of aggregate manual and automated counts in understory only; not demonstrated per-call accuracy or comparable detection across heights."
+  },
+  "support": {
+    "paired_points": 99,
+    "groups": 8,
+    "locations": 2,
+    "selected12_passes_C_U": [
+      146458,
+      31407
+    ],
+    "selected12_share_documented16_C_U": [
+      0.92434015,
+      0.95642244
+    ],
+    "exact9_passes_C_U": [
+      78155,
+      14464
+    ],
+    "resolved10_passes_C_U": [
+      78534,
+      14688
+    ],
+    "resolved10_coverage_relative_selected12_C_U": [
+      0.5362219885564462,
+      0.46766644378641703
+    ],
+    "resolved10_median_point_coverage_C_U": [
+      0.5958395245170877,
+      0.54
+    ],
+    "conditional12_coverage_relative_selected12_C_U": [
+      1,
+      1
+    ],
+    "whole_community_multidomain_admitted": false
+  },
+  "guild_full12": {
+    "alpha_C": 0.23042860316150457,
+    "alpha_U": 0.2985495739732711,
+    "alpha": 0.26448908856738784,
+    "gamma": 0.4490789709742879,
+    "beta": 0.1845898824069,
+    "beta_share": 0.411041029167827,
+    "null_mean": 0.0856294066288445,
+    "excess": 0.0989604757780555,
+    "null_interval": [
+      0.03391568378214633,
+      0.16190480797327
+    ],
+    "rank_inclusive": 0.9991341991341991,
+    "positive_groups": 8,
+    "exact_allocations": 18480,
+    "incidence_excess": 0.01170538,
+    "incidence_rank": 0.98041,
+    "incidence_positive_groups": 6,
+    "token_excess": 0.09907342,
+    "within_family_excess": 0,
+    "family_conditioning_degenerate": true
+  },
+  "resolved10": {
+    "domain_order": [
+      "size",
+      "flight",
+      "sensory",
+      "guild",
+      "three_domains",
+      "four_domains"
+    ],
+    "unrestricted_excess": [
+      0.03935808672067212,
+      0.0028073422208534232,
+      0.03714043115647113,
+      0.07062594148226221,
+      0.026435286699332226,
+      0.037482950395064704
+    ],
+    "within_family_excess": [
+      0.020427814702438624,
+      -0.00010917684690263385,
+      0.011696684150224637,
+      0,
+      0.010671774001920237,
+      0.008003830501440143
+    ],
+    "within_family_positive_groups": [
+      8,
+      3,
+      7,
+      0,
+      8,
+      8
+    ],
+    "within_family_four_domain_beta": {
+      "observed": 0.10531409297740227,
+      "expected": 0.09731026247596213,
+      "interval": [
+        0.08442752281414928,
+        0.10930360381251092
+      ],
+      "rank": 0.825
+    },
+    "four_domain_beta_share": 0.29491814299768115
+  },
+  "exact9": {
+    "four_domain_unrestricted_excess": 0.037152661492520056,
+    "four_domain_within_family_excess": 0.0013733639540951387,
+    "within_family_rank": 0.65
+  },
+  "conditional_proxy12": {
+    "four_domain_unrestricted_excess": 0.04783905204891263,
+    "four_domain_within_family_excess": 0.004238785065264955,
+    "within_family_rank": 0.7299768518518519,
+    "proxies": [
+      "CM",
+      "P6"
+    ],
+    "four_domain_beta_share": 0.32399133846983463
+  },
+  "incidence_sensory_family": {
+    "exact9": {
+      "excess": 0.0016967590234842622,
+      "rank": 0.9958333333333333,
+      "positive_groups": 8
+    },
+    "resolved10": {
+      "excess": 0.0024654855061565853,
+      "rank": 0.9979166666666667,
+      "positive_groups": 8
+    },
+    "conditional12": {
+      "excess": 0.002925879554118962,
+      "rank": 0.984837962962963,
+      "positive_groups": 8
+    }
+  },
+  "audit": {
+    "local_execution": true,
+    "all_96_published_cells_match": true,
+    "all_99_rosters_match": true,
+    "source_hash_checks": true,
+    "within_family_exact_counts": [
+      240,
+      480,
+      8640
+    ],
+    "analytic_null_expectation_checks": true,
+    "domain_additivity": true,
+    "report_sha256": "52208a35fc308377b8c071542d9b527113bdd357733e8e51b8588fd2c4d534f8",
+    "script_sha256": "27dbec2259758b6732847f80ad16c8759c97046ed38d66b802a7154d8b853394",
+    "bundle_sha256": "f8c4fa3ec527b7dc76dd3d2441ce983de827aa7980f3be7928e82ac08c24f8e5"
+  },
+  "decision": "Publication selection and table exact reconciliation improve observation scope. Authors already reported guild-level vertical stratification; new result is diversity partition and conditional reference, not discovery of vertical guild differences. Guild deterministic by family, so no independent guild effect. Four-domain excess strongly attenuated under family-conditioned trait permutations, no robust out-of-null primary result; family is not complete phylogenetic or causal control. Sensory incidence residual above q975 in all three predeclared overlapping cohorts, exploratory sensitivity only, not three independent replications. Exact10 coverage insufficient, proxy12 conditional, no whole-community multidomain conclusion. Diet/roost traits not admitted (Voss table image inaccessible; no guessing); seek independent structure/strata studies for genuine validation. No true abundance, actual altitude, ecosystem services, SDM, main merge or submission."
+}
