@@ -1,0 +1,157 @@
+{
+  "status": "COMPLETE_EXTERNAL_DIAGNOSTIC_AND_COUNT_CHALLENGE",
+  "contracts": {
+    "gomes": "dac4b7729c6f9223f5ca9447ea931bac0b6cce38",
+    "yoh": "d8cc26fec66fa5ef25d049f3e507e0c8e58a83bd"
+  },
+  "sources": {
+    "gomes_doi": "10.7717/peerj.10591",
+    "gomes_archive_sha256": "34618b8aa89506a0f9e36db5499dac9033401e4a6c6f12a2446823564a2f24e5",
+    "yoh_doi": "10.1371/journal.pone.0274637",
+    "yoh_archive_sha256": "77caabe49c8cd761b1bece56eae4c23ea292b287f38a19d9c015990e43685ad6",
+    "trait_archive_sha256": "b8ecb52ff7850258e890500600a9bbb64f3affd8f229d55661226bd6b95c22d2",
+    "prior_yoh_bundle_sha256": "f8c4fa3ec527b7dc76dd3d2441ce983de827aa7980f3be7928e82ac08c24f8e5"
+  },
+  "gomes": {
+    "support": {
+      "species": 10,
+      "published_table_cells_exact": 42,
+      "paired_hours": 134,
+      "retained_hours": 133,
+      "groups": 16,
+      "green": 9,
+      "red": 7,
+      "days": 9,
+      "matched_passes_above_below": [
+        10756,
+        1859
+      ],
+      "coverage": [
+        0.9593292900463789,
+        0.9431760527650939
+      ],
+      "median_coverage": [
+        0.932370820668693,
+        0.9741830065359477
+      ],
+      "min_max_layer_counts": [
+        [
+          4,
+          1774
+        ],
+        [
+          21,
+          299
+        ]
+      ]
+    },
+    "exact_family_permutations": 4320,
+    "incidence_excess": {
+      "size": 0.0018135584401691926,
+      "flight": 0.005072426766746501,
+      "sensory": 0.00217461299541466,
+      "integrated": 0.0030201994007766353
+    },
+    "sensory": {
+      "observed": 0.03493664787762314,
+      "expected": 0.03276203488220848,
+      "rank": 0.8159722222222222,
+      "positive_groups": 4,
+      "tower_excess": {
+        "green": -0.0024118824039490393,
+        "red": 0.006761108394778356
+      },
+      "leave_one_night_range": [
+        -0.0015514437978018578,
+        0.003385544508946236
+      ],
+      "pass_excess": -0.011899740580621092,
+      "all_hours_incidence_excess": 0.0016512674203379048,
+      "equal_count_incidence_excess": -0.0033238166955341236,
+      "equal_count_tower_excess": {
+        "green": -0.0019358907866906154,
+        "red": -0.004711742604377628
+      }
+    },
+    "screen_pass": false,
+    "common_pool_audit": {
+      "original_optional_seven_omitted": "Pteronotus alitonus (Yoh P5)",
+      "corrected_exact_common_species": 8,
+      "eligible_groups": 13,
+      "green": 9,
+      "red": 4,
+      "coverage": [
+        0.8800822089178805,
+        0.529608938547486
+      ],
+      "status": "SUPPORT_ONLY_NOT_ADMITTED",
+      "primary_ten_unchanged": true
+    }
+  },
+  "yoh": {
+    "status": "POST_EXTERNAL_SENSITIVITY_ONLY",
+    "prior_incidence_replayed": true,
+    "points": 99,
+    "groups": 8,
+    "draws_per_layer_per_point": 2048,
+    "seed": 20261126,
+    "repeat_seed": 20261127,
+    "cohorts": {
+      "exact9": {
+        "prior_excess": 0.0016967590234842642,
+        "equal_count_excess": 0.0034005690938926805,
+        "rank": 1,
+        "positive_groups": 7,
+        "repeat": 0.00339058488361391,
+        "min_median_max_depth": [
+          1,
+          81,
+          983
+        ],
+        "under5": 4
+      },
+      "resolved10": {
+        "prior_excess": 0.0024654855061565888,
+        "equal_count_excess": 0.0035346278169545798,
+        "rank": 1,
+        "positive_groups": 8,
+        "repeat": 0.00355396424269514,
+        "min_median_max_depth": [
+          1,
+          83,
+          985
+        ],
+        "under5": 4
+      },
+      "conditional_proxy12": {
+        "prior_excess": 0.0029258795541189635,
+        "equal_count_excess": 0.002944614289399501,
+        "rank": 0.9975694444444444,
+        "positive_groups": 7,
+        "repeat": 0.0029559248295697657,
+        "min_median_max_depth": [
+          2,
+          158,
+          2746
+        ],
+        "under5": 2
+      }
+    },
+    "four_domain_equal_count_excess": [
+      0.0003467021653199773,
+      0.0011812698943620518,
+      0.001342710549257898
+    ]
+  },
+  "audit": {
+    "gomes_script_sha256": "2a0e34bfd5ffcc0026fa5d4624a51144efd9dc035a8273ff05433f59270fe736",
+    "gomes_report_sha256": "58fc3e87cc92a89575cb8c905633782f5bf217f3ffa8cd8f09f01b3c3c509e0c",
+    "yoh_script_sha256": "4eba7209ca3f5a71f3f33b12f1cfc3036907f61ad7c8be6b1400b7945622e689",
+    "yoh_report_sha256": "3c77fdbe6a7187537d49b989286c0eb5a369340d8651e356cfb589f8b6cecf7d",
+    "common_pool_audit_sha256": "797b5cd92273f72ab5fe658cd3f0b277c3dec6d39c0541a9a19e616fb1922f6a",
+    "bundle_sha256": "4d5638beab6959c282e4f92b5048e6ed365abaa885b970a7cfddfafe69dc70be",
+    "local_zip_crc": true,
+    "scope": "Actual local source rehashes, exact permutations, prior replay and count sampling checks; code and complete reports in verified user ZIP."
+  },
+  "decision": "Yoh sensory incidence excess persists after count matching but external Gomes fails. Different observed layer contrast (canopy vs understory versus above canopy vs understory), matched species pool, aggregation units and detection limit comparability; cannot isolate ecological or observation cause. Common-pool support insufficient; do not tune same studies or claim universal FD, causal sensory mechanism, actual flight altitude, or calibrated SDM. Need new genuinely independent comparable canopy-understory surveys and independently documented structural gradients. Roost/diet not admitted. No main merge or manuscript submission."
+}
