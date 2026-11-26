@@ -1,0 +1,552 @@
+{
+  "stage": "FWS fixed 6km cell candidate EPT footprint overlap, no fit",
+  "status": "COMPLETE_CANDIDATE_SUPPORT_ONLY",
+  "index_url": "https://raw.githubusercontent.com/hobu/usgs-lidar/master/boundaries/resources.geojson",
+  "limitations": [
+    "Footprint metadata overlap is not decoded point coverage; no verified acquisition dates, vertical units or forest support.",
+    "No precise survey cells, source rows or route IDs exported.",
+    "No biological prediction, flight height or physical passability."
+  ],
+  "original_support": {
+    "taxon_support": [
+      {
+        "species": "Corynorhinus rafinesquii",
+        "cells": 13,
+        "routes": 11,
+        "eligible": true
+      },
+      {
+        "species": "Eptesicus fuscus",
+        "cells": 123,
+        "routes": 39,
+        "eligible": true
+      },
+      {
+        "species": "Lasiurus borealis",
+        "cells": 209,
+        "routes": 50,
+        "eligible": true
+      },
+      {
+        "species": "Lasiurus cinereus",
+        "cells": 51,
+        "routes": 20,
+        "eligible": true
+      },
+      {
+        "species": "Myotis austroriparius",
+        "cells": 34,
+        "routes": 21,
+        "eligible": true
+      },
+      {
+        "species": "Myotis grisescens",
+        "cells": 8,
+        "routes": 5,
+        "eligible": false
+      },
+      {
+        "species": "Myotis lucifugus",
+        "cells": 58,
+        "routes": 24,
+        "eligible": true
+      },
+      {
+        "species": "Myotis septentrionalis",
+        "cells": 8,
+        "routes": 6,
+        "eligible": false
+      },
+      {
+        "species": "Myotis sodalis",
+        "cells": 16,
+        "routes": 12,
+        "eligible": true
+      },
+      {
+        "species": "Nycticeius humeralis",
+        "cells": 228,
+        "routes": 50,
+        "eligible": true
+      },
+      {
+        "species": "Perimyotis subflavus",
+        "cells": 189,
+        "routes": 50,
+        "eligible": true
+      }
+    ],
+    "eligible_taxa": 9,
+    "comparison_taxa": 9,
+    "comparison_routes": 47,
+    "comparison_blocks": 24,
+    "comparisons": 10480,
+    "comparison_cells": 236,
+    "groups": 1764
+  },
+  "index_http": 200,
+  "index_bytes": 8772518,
+  "index_sha256": "b0510390f8090e46f77b3b8c7c82e24a720157fd8ad31c7345bf2764959148f7",
+  "index_etag": "W/\"d557d7faa39417e72f74516f621e981c317513b81297978df805e25b4f085f2c\"",
+  "index_features": 2284,
+  "property_keys": [
+    "count",
+    "id",
+    "name",
+    "url"
+  ],
+  "index_exclusions": {},
+  "usable_features": 2284,
+  "unique_project_names": 2284,
+  "duplicate_project_names": 0,
+  "area_fraction_quantiles": [
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "covered_position_histogram": {
+    "0": 5,
+    "6": 2,
+    "9": 234
+  },
+  "cell_project_count_histogram": {
+    "0": 5,
+    "1": 67,
+    "2": 90,
+    "3": 54,
+    "4": 12,
+    "5": 12,
+    "6": 1
+  },
+  "matched_project_names_count": 99,
+  "arms": {
+    "any_position": {
+      "cells": 236,
+      "records": 8609,
+      "projects": 99,
+      "support": {
+        "taxon_support": [
+          {
+            "species": "Corynorhinus rafinesquii",
+            "cells": 13,
+            "routes": 11,
+            "eligible": true
+          },
+          {
+            "species": "Eptesicus fuscus",
+            "cells": 119,
+            "routes": 38,
+            "eligible": true
+          },
+          {
+            "species": "Lasiurus borealis",
+            "cells": 204,
+            "routes": 49,
+            "eligible": true
+          },
+          {
+            "species": "Lasiurus cinereus",
+            "cells": 51,
+            "routes": 20,
+            "eligible": true
+          },
+          {
+            "species": "Myotis austroriparius",
+            "cells": 33,
+            "routes": 20,
+            "eligible": true
+          },
+          {
+            "species": "Myotis grisescens",
+            "cells": 8,
+            "routes": 5,
+            "eligible": false
+          },
+          {
+            "species": "Myotis lucifugus",
+            "cells": 58,
+            "routes": 24,
+            "eligible": true
+          },
+          {
+            "species": "Myotis septentrionalis",
+            "cells": 8,
+            "routes": 6,
+            "eligible": false
+          },
+          {
+            "species": "Myotis sodalis",
+            "cells": 16,
+            "routes": 12,
+            "eligible": true
+          },
+          {
+            "species": "Nycticeius humeralis",
+            "cells": 223,
+            "routes": 49,
+            "eligible": true
+          },
+          {
+            "species": "Perimyotis subflavus",
+            "cells": 184,
+            "routes": 49,
+            "eligible": true
+          }
+        ],
+        "eligible_taxa": 9,
+        "comparison_taxa": 9,
+        "comparison_routes": 46,
+        "comparison_blocks": 23,
+        "comparisons": 10262,
+        "comparison_cells": 231,
+        "groups": 1730
+      },
+      "passes_original_support": true
+    },
+    "at_least_5_positions": {
+      "cells": 236,
+      "records": 8609,
+      "projects": 99,
+      "support": {
+        "taxon_support": [
+          {
+            "species": "Corynorhinus rafinesquii",
+            "cells": 13,
+            "routes": 11,
+            "eligible": true
+          },
+          {
+            "species": "Eptesicus fuscus",
+            "cells": 119,
+            "routes": 38,
+            "eligible": true
+          },
+          {
+            "species": "Lasiurus borealis",
+            "cells": 204,
+            "routes": 49,
+            "eligible": true
+          },
+          {
+            "species": "Lasiurus cinereus",
+            "cells": 51,
+            "routes": 20,
+            "eligible": true
+          },
+          {
+            "species": "Myotis austroriparius",
+            "cells": 33,
+            "routes": 20,
+            "eligible": true
+          },
+          {
+            "species": "Myotis grisescens",
+            "cells": 8,
+            "routes": 5,
+            "eligible": false
+          },
+          {
+            "species": "Myotis lucifugus",
+            "cells": 58,
+            "routes": 24,
+            "eligible": true
+          },
+          {
+            "species": "Myotis septentrionalis",
+            "cells": 8,
+            "routes": 6,
+            "eligible": false
+          },
+          {
+            "species": "Myotis sodalis",
+            "cells": 16,
+            "routes": 12,
+            "eligible": true
+          },
+          {
+            "species": "Nycticeius humeralis",
+            "cells": 223,
+            "routes": 49,
+            "eligible": true
+          },
+          {
+            "species": "Perimyotis subflavus",
+            "cells": 184,
+            "routes": 49,
+            "eligible": true
+          }
+        ],
+        "eligible_taxa": 9,
+        "comparison_taxa": 9,
+        "comparison_routes": 46,
+        "comparison_blocks": 23,
+        "comparisons": 10262,
+        "comparison_cells": 231,
+        "groups": 1730
+      },
+      "passes_original_support": true
+    },
+    "all_9_positions": {
+      "cells": 234,
+      "records": 8595,
+      "projects": 99,
+      "support": {
+        "taxon_support": [
+          {
+            "species": "Corynorhinus rafinesquii",
+            "cells": 13,
+            "routes": 11,
+            "eligible": true
+          },
+          {
+            "species": "Eptesicus fuscus",
+            "cells": 119,
+            "routes": 38,
+            "eligible": true
+          },
+          {
+            "species": "Lasiurus borealis",
+            "cells": 202,
+            "routes": 49,
+            "eligible": true
+          },
+          {
+            "species": "Lasiurus cinereus",
+            "cells": 51,
+            "routes": 20,
+            "eligible": true
+          },
+          {
+            "species": "Myotis austroriparius",
+            "cells": 33,
+            "routes": 20,
+            "eligible": true
+          },
+          {
+            "species": "Myotis grisescens",
+            "cells": 8,
+            "routes": 5,
+            "eligible": false
+          },
+          {
+            "species": "Myotis lucifugus",
+            "cells": 58,
+            "routes": 24,
+            "eligible": true
+          },
+          {
+            "species": "Myotis septentrionalis",
+            "cells": 8,
+            "routes": 6,
+            "eligible": false
+          },
+          {
+            "species": "Myotis sodalis",
+            "cells": 16,
+            "routes": 12,
+            "eligible": true
+          },
+          {
+            "species": "Nycticeius humeralis",
+            "cells": 221,
+            "routes": 49,
+            "eligible": true
+          },
+          {
+            "species": "Perimyotis subflavus",
+            "cells": 183,
+            "routes": 49,
+            "eligible": true
+          }
+        ],
+        "eligible_taxa": 9,
+        "comparison_taxa": 9,
+        "comparison_routes": 46,
+        "comparison_blocks": 22,
+        "comparisons": 10260,
+        "comparison_cells": 229,
+        "groups": 1728
+      },
+      "passes_original_support": true
+    },
+    "area95": {
+      "cells": 234,
+      "records": 8595,
+      "projects": 99,
+      "support": {
+        "taxon_support": [
+          {
+            "species": "Corynorhinus rafinesquii",
+            "cells": 13,
+            "routes": 11,
+            "eligible": true
+          },
+          {
+            "species": "Eptesicus fuscus",
+            "cells": 119,
+            "routes": 38,
+            "eligible": true
+          },
+          {
+            "species": "Lasiurus borealis",
+            "cells": 202,
+            "routes": 49,
+            "eligible": true
+          },
+          {
+            "species": "Lasiurus cinereus",
+            "cells": 51,
+            "routes": 20,
+            "eligible": true
+          },
+          {
+            "species": "Myotis austroriparius",
+            "cells": 33,
+            "routes": 20,
+            "eligible": true
+          },
+          {
+            "species": "Myotis grisescens",
+            "cells": 8,
+            "routes": 5,
+            "eligible": false
+          },
+          {
+            "species": "Myotis lucifugus",
+            "cells": 58,
+            "routes": 24,
+            "eligible": true
+          },
+          {
+            "species": "Myotis septentrionalis",
+            "cells": 8,
+            "routes": 6,
+            "eligible": false
+          },
+          {
+            "species": "Myotis sodalis",
+            "cells": 16,
+            "routes": 12,
+            "eligible": true
+          },
+          {
+            "species": "Nycticeius humeralis",
+            "cells": 221,
+            "routes": 49,
+            "eligible": true
+          },
+          {
+            "species": "Perimyotis subflavus",
+            "cells": 183,
+            "routes": 49,
+            "eligible": true
+          }
+        ],
+        "eligible_taxa": 9,
+        "comparison_taxa": 9,
+        "comparison_routes": 46,
+        "comparison_blocks": 22,
+        "comparisons": 10260,
+        "comparison_cells": 229,
+        "groups": 1728
+      },
+      "passes_original_support": true
+    },
+    "all_9_and_area95": {
+      "cells": 234,
+      "records": 8595,
+      "projects": 99,
+      "support": {
+        "taxon_support": [
+          {
+            "species": "Corynorhinus rafinesquii",
+            "cells": 13,
+            "routes": 11,
+            "eligible": true
+          },
+          {
+            "species": "Eptesicus fuscus",
+            "cells": 119,
+            "routes": 38,
+            "eligible": true
+          },
+          {
+            "species": "Lasiurus borealis",
+            "cells": 202,
+            "routes": 49,
+            "eligible": true
+          },
+          {
+            "species": "Lasiurus cinereus",
+            "cells": 51,
+            "routes": 20,
+            "eligible": true
+          },
+          {
+            "species": "Myotis austroriparius",
+            "cells": 33,
+            "routes": 20,
+            "eligible": true
+          },
+          {
+            "species": "Myotis grisescens",
+            "cells": 8,
+            "routes": 5,
+            "eligible": false
+          },
+          {
+            "species": "Myotis lucifugus",
+            "cells": 58,
+            "routes": 24,
+            "eligible": true
+          },
+          {
+            "species": "Myotis septentrionalis",
+            "cells": 8,
+            "routes": 6,
+            "eligible": false
+          },
+          {
+            "species": "Myotis sodalis",
+            "cells": 16,
+            "routes": 12,
+            "eligible": true
+          },
+          {
+            "species": "Nycticeius humeralis",
+            "cells": 221,
+            "routes": 49,
+            "eligible": true
+          },
+          {
+            "species": "Perimyotis subflavus",
+            "cells": 183,
+            "routes": 49,
+            "eligible": true
+          }
+        ],
+        "eligible_taxa": 9,
+        "comparison_taxa": 9,
+        "comparison_routes": 46,
+        "comparison_blocks": 22,
+        "comparisons": 10260,
+        "comparison_cells": 229,
+        "groups": 1728
+      },
+      "passes_original_support": true
+    }
+  },
+  "actual_point_geometry_admitted": false,
+  "audit": {
+    "run_id": 45760126791,
+    "job_id": 139707913669,
+    "artifact_id": 15090025995,
+    "artifact_zip_digest": "sha256:61a23f47cb6194e07ed9759bd725c4f484a8a5210f13201d0438e2a55886b176",
+    "scope": "Final log and registry digest verified; no actual point decoding."
+  },
+  "decision": "234/241 candidate cells pass both >=95% footprint area and nine-position coverage, retaining 9 taxa, 46 routes, 22 blocks and 10,260 capped comparisons. Proceed with acquisition-date and measured-point quality gates, no biological fit. WESM first run 45760856002 exact match 43/99 project names, 192 covered cells, but all 43 matched date strings rejected by strict parser; zero admitted dates not evidence of no temporal overlap. Repair run 45769748455 pins prior WESM bytes and accepts only unambiguous year-first dates and midnight timestamps, logs actual lexical forms, retains all ecological gates."
+}
