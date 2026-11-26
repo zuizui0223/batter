@@ -1,0 +1,123 @@
+{
+  "status": "COMPLETE_RESTRICTED_FLIGHT_TRAIT_FD_DIAGNOSTIC",
+  "contract_commit": "b44ccc6509cb5cf8bc6b82aa5ba0ce2572bb1be3",
+  "sources": {
+    "yoh_archive_sha256": "77caabe49c8cd761b1bece56eae4c23ea292b287f38a19d9c015990e43685ad6",
+    "gomes_archive_sha256": "34618b8aa89506a0f9e36db5499dac9033401e4a6c6f12a2446823564a2f24e5",
+    "nunez_member_sha256": "ca75813d91dd6e4dbcbe6b2e18d780ca8c00b3c0638870aa599c3a01eebd278f",
+    "traits": [
+      "AR",
+      "log reported WL"
+    ],
+    "labels": [
+      "CB",
+      "EB",
+      "FH",
+      "MRN",
+      "PK",
+      "PM",
+      "PP",
+      "SB",
+      "SL"
+    ]
+  },
+  "support": {
+    "full16_points": 99,
+    "matched9_points": 96,
+    "matched_passes_C_U": [
+      60617,
+      5164
+    ],
+    "full16_passes_on_matched_points_C_U": [
+      145730,
+      32624
+    ],
+    "coverage_C_U": [
+      0.41595416180607975,
+      0.15828837665522316
+    ],
+    "median_point_coverage_C_U": [
+      0.42862588643223426,
+      0.08840887134036207
+    ],
+    "points_ge80pct_both": 0,
+    "groups": 8,
+    "whole_community_FD_admitted": false
+  },
+  "taxonomy": {
+    "full16": {
+      "alpha_C": 0.6958734913545483,
+      "alpha_U": 0.5968968278969097,
+      "alpha": 0.6463851596257291,
+      "gamma": 0.7618892948869092,
+      "beta": 0.11550413526117993,
+      "beta_share": 0.15160225512595601
+    },
+    "matched9": {
+      "alpha_C": 0.6343016292673354,
+      "alpha_U": 0.495671580110597,
+      "alpha": 0.5649866046889662,
+      "gamma": 0.6899265587779451,
+      "beta": 0.12493995408897864,
+      "beta_share": 0.1810916720038762
+    }
+  },
+  "primary": {
+    "alpha_C": 0.18599724447908939,
+    "alpha_U": 0.16352021660498559,
+    "alpha": 0.17475873054203753,
+    "gamma": 0.22167490035816806,
+    "beta": 0.04691616981613058,
+    "beta_share": 0.21164403250131814,
+    "beta_null_mean": 0.04530163414839515,
+    "beta_null_interval": [
+      0.03051677564145159,
+      0.06282387507972241
+    ],
+    "beta_excess": 0.0016145356677354297,
+    "positive_groups": 3,
+    "conditional_rank": 0.5911981922398589,
+    "locations": {
+      "CaboFrio": 0.008760261004973515,
+      "Dimona": -0.005531189669503932
+    },
+    "alpha_C_U_difference": 0.02247702787410385,
+    "alpha_difference_null_mean": 0.0502654880471645
+  },
+  "sensitivity": {
+    "incidence": {
+      "beta": 0.02691824117223729,
+      "null_mean": 0.022434550845211357,
+      "excess": 0.004483690327025933,
+      "positive_groups": 7,
+      "conditional_rank": 0.8925374779541446,
+      "null_interval": [
+        0.016855228798410504,
+        0.02993089213353476
+      ]
+    },
+    "token_collapse": {
+      "beta": 0.046945652895331515,
+      "null_mean": 0.04536918914022458,
+      "excess": 0.0015764637551069355,
+      "positive_groups": 3
+    },
+    "duplicate_trait_row_choice_beta_excess": [
+      0.004625780842069514,
+      0.0018014455328834444,
+      0.006389939227253887,
+      0.003535384889536579
+    ]
+  },
+  "audit": {
+    "permutations_per_variant": 362880,
+    "variants": 7,
+    "analytic_null_mean_agrees": true,
+    "source_adapter_sha256": "a167f698e97bc5ec50f0eabd07a1ac2a587ea316e7ca9fee2502b25438d15a9c",
+    "script_sha256": "64ed03068755980a70d4a4b99915b4741f216a6596183cbf7d793840752f8ead",
+    "report_sha256": "6bd9fb1dd73e554eb5c592df7a5349e4ea54e0ef9313d588577b5e54fb3c6ab7",
+    "bundle_sha256": "c664e27429617ebca7de8ebbb16b1bf479f7e018709647aff52f8cc6ab024708",
+    "scope": "Actual local archived data, no raw records in repo."
+  },
+  "decision": "User redirected to community FD. Nine-species flight-trait subset has severely asymmetric pass coverage; no whole-community functional diversity claim. Observed beta is near the exact conditional null, 3/8 groups positive; incidence 7/8 positive but below null q975. Do not promote wing-based complementarity or redundancy as proven. Expand independent traits across size, sensory, feeding and roost/movement domains without using vertical use trait to explain vertical use. Candidate López-Baucells et al 2022 DOI 10.1007/s10980-022-01493-x official supplement Table S2 and Colombo et al DOI 10.5061/dryad.sn02v6x6w; source bytes not obtained locally. Main/frozen manuscripts unchanged."
+}
