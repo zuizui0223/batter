@@ -1,0 +1,161 @@
+{
+  "status": "COMPLETE_RECORDED_LABEL_PREDICTION_ONLY",
+  "contract": "83ce58a749b061d9c0cdfc9c8e507fe855b547ba",
+  "source": {
+    "doi": "10.5061/dryad.0vt4b8h2d",
+    "uploaded_zip_sha256": "77caabe49c8cd761b1bece56eae4c23ea292b287f38a19d9c015990e43685ad6",
+    "member_sha256": {
+      "Auto_UC_species_clean.csv": "cd4dd59e8e6ad93ed60bcd2c568f997cd97b7872846f1377bdd47f84749900c7",
+      "Auto_UC_orginial.csv": "ee4e5f78392e936ae1120832dd45040a60c7cec031e39db0d623e8dcff3dbe1e",
+      "README.txt": "b4676856470564efacb54b0a0ff794f95f08e6ea942ae0f339847a80e65ed21f",
+      "README.md": "2fed5276a952f0147a396734a2772abdf787c14145238fc5ca972599daaf7855"
+    },
+    "crc_pass": true,
+    "raw_rows": 287699,
+    "clean_rows": 2664,
+    "all_keys_counts_reconcile": true,
+    "undocumented_P_excluded": 16877,
+    "source_labels": 17,
+    "documented_labels": 16,
+    "nominal_point_seasons": 328,
+    "reported_point_seasons": 136,
+    "paired_point_seasons": 99,
+    "unpaired_point_seasons": 37,
+    "actual_uptime_verified": false,
+    "token_duplicates_removed_documented_all": 17435
+  },
+  "support": {
+    "points": 99,
+    "recorded_passes": 191284,
+    "pair_units": 6799,
+    "cross_products_not_independent": 53508762,
+    "sites": 2,
+    "transects": 4,
+    "seasons": 2,
+    "groups": 8,
+    "token_sensitivity_recorded_passes": 176604
+  },
+  "results": {
+    "strict_location_season": {
+      "N": -0.6931471805599453,
+      "R": -0.5879311836687116,
+      "E": -0.5939482982721724,
+      "R_minus_N": 0.1052159968912337,
+      "E_minus_R": -0.006017114603460688,
+      "R_positive_groups": 8,
+      "R_positive_folds": 4,
+      "E_increment_positive_groups": 1,
+      "E_increment_positive_folds": 0,
+      "R_leave_one_transect_range": [
+        0.09793271082226311,
+        0.11112543699511522
+      ],
+      "E_increment_leave_one_transect_range": [
+        -0.008517601165459151,
+        -0.0043525669822193636
+      ],
+      "R_held_locations": {
+        "CaboFrio": 0.09094180751930991,
+        "Dimona": 0.1194901862631575
+      },
+      "unseen_label_weight_one_fold_RN": 0.003472222222222222
+    },
+    "location_only": {
+      "R_minus_N": 0.11503569407126496,
+      "E_minus_R": 0.004032944359015758
+    },
+    "transect_only": {
+      "R_minus_N": 0.11685016612125797,
+      "E_minus_R": 0.0027167936717245877
+    },
+    "token_collapse_strict": {
+      "R_minus_N": 0.10536337323661281,
+      "E_minus_R": -0.006020646473584745
+    }
+  },
+  "screen_R_N": true,
+  "screen_E_R": false,
+  "full_R_coefficients": {
+    "CB": 0.2146548992089565,
+    "CM": 0.11020077124929362,
+    "E1": 0.1647999250872279,
+    "EB": 0.2591281377448547,
+    "FH": -0.14489533744815375,
+    "M": -0.28958504368155197,
+    "MRN": -0.11588400502925233,
+    "P5": -0.8851456563723181,
+    "P6": -1.4397976995823398,
+    "PG": -0.3289404590531115,
+    "PK": 0.9861526759541662,
+    "PM": 0.33861140590934313,
+    "PP": 0.18472578821435312,
+    "RN": 0.1332336470896774,
+    "SB": 0.4280835273345376,
+    "SL": 0.384657423374318
+  },
+  "gomes_external": {
+    "contract": "d20152443b1e84175215002d3dd9ed2b9828e33c",
+    "target_fit": false,
+    "archive_sha256": "34618b8aa89506a0f9e36db5499dac9033401e4a6c6f12a2446823564a2f24e5",
+    "exact_labels": [
+      "CB",
+      "MRN",
+      "PK",
+      "PM",
+      "SB",
+      "SL"
+    ],
+    "support": {
+      "events": 48,
+      "pairs": 176,
+      "groups": 14,
+      "nights": 9,
+      "recorded_passes": 5313,
+      "towers": 2
+    },
+    "primary": {
+      "neutral": -0.6931471805599453,
+      "transported": -0.6408379873904335,
+      "tower_balanced_gain": 0.052309193169511714,
+      "tower_gains": {
+        "green": -0.03416366604179861,
+        "red": 0.13878205238082203
+      },
+      "group_equal_gain": 0.02760266196628019,
+      "positive_groups": 8,
+      "leave_one_night_range": [
+        0.04394398624555206,
+        0.06728280761404756
+      ],
+      "green_events": 40,
+      "red_events": 8,
+      "green_pairs": 164,
+      "red_pairs": 12
+    },
+    "all_hours": {
+      "events": 57,
+      "pairs": 201,
+      "groups": 15,
+      "tower_balanced_gain": 0.06279196699455329,
+      "green": -0.03146679077725057,
+      "red": 0.15705072476635715,
+      "group_equal_gain": 0.043940215440192526,
+      "positive_groups": 9
+    },
+    "screen": false
+  },
+  "audit": {
+    "executed_locally": true,
+    "synthetic_checks_passed": true,
+    "gradient_fd_error": 1.971750540619155e-11,
+    "max_cv_gradient": 8.006456608811163e-12,
+    "max_objective_difference_newton_lbfgs": 1.6653345369377348e-15,
+    "script_sha256": "a167f698e97bc5ec50f0eabd07a1ac2a587ea316e7ca9fee2502b25438d15a9c",
+    "report_sha256": "a283b6da7320fe7817d3bb2b8d9fd3ddd91d54653393dc3daaed72eb0a835971",
+    "gomes_script_sha256": "75b6e15de2c7d19d834aa5ef91ee759ba9096da2fd0a4a5b2584cf3ac74014e9",
+    "gomes_report_sha256": "93f14e62cc1d0e52d629ab2831c97ead14a29e58e193eb19513c9a68a39b595f",
+    "user_bundle_sha256": "9b1ed6ebce8db7c7751f3c7756fc834d7ef027794d5aff34ac168c6533f9933b",
+    "scope": "Aggregate receipt; full scripts and reports in verified user ZIP, no original source rows committed."
+  },
+  "decision": "Within one Yoh study the recorded-stratum species ranking transfers across both held location and held season, but forest-edge terms fail strict incremental prediction. No claim that forest edges have no ecological effect. Frozen cross-study ordering shows mixed tower-specific transfer and fails screen; do not tune target scores or call generalizable altitude response. Different recorder strata and detection, sparse and imbalanced target support, and two sites within Yoh limit inference. Source-open diagnostic, not prospectively blind. Next independent height-stratified multi-site original data with comparable detector design needed. Main and frozen manuscripts unchanged."
+}
