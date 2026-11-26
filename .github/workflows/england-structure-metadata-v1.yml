@@ -1,0 +1,24 @@
+name: England woodland LiDAR metadata gate
+on:
+  push:
+    branches: [prospective/gedi-trait-macro-sdm-20261125]
+    paths: ['.github/workflows/england-structure-metadata-v1.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  metadata:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install requests
+      - run: python prospective/gedi_trait_macro_sdm/england_structure_metadata_gate_v1.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: england-structure-metadata-v1
+          path: england_structure_metadata/
+          if-no-files-found: error
