@@ -1,0 +1,162 @@
+{
+  "stage": "measured return topology conditional-clearance null V2",
+  "status": "COMPLETE_GEOMETRY_ONLY",
+  "contract": "c354673611e9124d12c52d35170171bf8c9a179e",
+  "run": 45759195978,
+  "patches": [
+    {
+      "project": "NH1",
+      "index": 9,
+      "dem_unit_median_abs_error_m": [
+        0.0918603520000616,
+        42.35701442574953
+      ],
+      "full_1m_r1": [
+        0.6208670479910714,
+        0.6091013009207589,
+        0.6105821881975446
+      ],
+      "full_1m_r2": [
+        0.43662806919642855,
+        0.22583687918526787,
+        0.22776598249162947
+      ],
+      "conditional_lcc_r2": [
+        0.9943211151264842,
+        0.5142921250148921,
+        0.5186852190143363
+      ],
+      "half_1m_r2": [
+        0.47977992466517855,
+        0.2871883719308036,
+        0.42651476178850445
+      ],
+      "full_2m_r2": [
+        0.34047154017857145,
+        0.16215541294642868,
+        0.16563371930803572
+      ]
+    },
+    {
+      "project": "WA1",
+      "index": 2,
+      "dem_unit_median_abs_error_m": [
+        0.18864013699999305,
+        646.1879919551704
+      ],
+      "full_1m_r1": [
+        0.74223,
+        0.72439,
+        0.72521
+      ],
+      "full_1m_r2": [
+        0.68052,
+        0.6668,
+        0.66745
+      ],
+      "conditional_lcc_r2": [
+        0.99958,
+        0.97943,
+        0.98037
+      ],
+      "half_1m_r2": [
+        0.68822,
+        0.67361,
+        0.67432
+      ],
+      "full_2m_r2": [
+        0.64572,
+        0.63773,
+        0.63906
+      ]
+    },
+    {
+      "project": "WA1",
+      "index": 6,
+      "dem_unit_median_abs_error_m": [
+        0.05829589800009671,
+        560.1035293141456
+      ],
+      "full_1m_r1": [
+        0.64718,
+        0.59689,
+        0.6
+      ],
+      "full_1m_r2": [
+        0.55189,
+        0.49785,
+        0.49925
+      ],
+      "conditional_lcc_r2": [
+        0.99718,
+        0.89954,
+        0.90208
+      ],
+      "half_1m_r2": [
+        0.56226,
+        0.50749,
+        0.50879
+      ],
+      "full_2m_r2": [
+        0.49128,
+        0.45359,
+        0.45634
+      ]
+    },
+    {
+      "project": "WA1",
+      "index": 8,
+      "dem_unit_median_abs_error_m": [
+        0.15489990200001102,
+        461.1114754958318
+      ],
+      "full_1m_r1": [
+        0.79651,
+        0.77985,
+        0.7817
+      ],
+      "full_1m_r2": [
+        0.72332,
+        0.69899,
+        0.69981
+      ],
+      "conditional_lcc_r2": [
+        0.99872,
+        0.96513,
+        0.96626
+      ],
+      "half_1m_r2": [
+        0.73277,
+        0.70856,
+        0.70937
+      ],
+      "full_2m_r2": [
+        0.68192,
+        0.66386,
+        0.66624
+      ]
+    }
+  ],
+  "array_order": [
+    "observed",
+    "post_clearance_null_mean",
+    "post_clearance_null_q975"
+  ],
+  "precision": "WA summaries rounded to five decimal places. Full precision in source reports.",
+  "audit": {
+    "original_observed_replayed_all_four": true,
+    "all_retrieved_node_hashes_rechecked_against_V1": true,
+    "archive_sha256_rehashed_and_crc_verified": true,
+    "artifacts": [
+      {
+        "id": 15089580460,
+        "sha256": "a88b6f738a7361885047455b3c668cb8ce67edc740cee737ef1a165473a77a4c"
+      },
+      {
+        "id": 15088814664,
+        "sha256": "48c088b2a4c3496447a203d64f119a65d171d98170f88e4596fc0439fa9e7441"
+      }
+    ]
+  },
+  "decision": "4/4 original passing patches exceed exact candidate-layer-count null q975 for both positive radii; same at half points and 2m pitch for 2m clearance. DEM consistency supports metre interpretation all four. The post-dilation null destroys all within-layer structure and interlayer alignment, so does not identify specifically 3D alignment or establish biological relevance. Null draws are not independent sites; 4 selected patches / 2 projects insufficient macro generalization. No true flight feasibility or SDM admission. Next prospectively test forest-selected independent plots and stronger layer-preserving null."
+}
