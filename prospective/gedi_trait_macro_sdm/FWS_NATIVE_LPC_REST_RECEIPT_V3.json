@@ -1,0 +1,546 @@
+{
+  "stage": "official USGS LPC REST polygon strict support V3",
+  "status": "COMPLETE_METADATA_ONLY",
+  "url": "https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer/8",
+  "actual_geometry_admitted": false,
+  "transfers": [
+    {
+      "endpoint": "https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer/8",
+      "where_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "http": 200,
+      "bytes": 8593,
+      "sha256": "355de690b7b53f840ee2cf528892509ca49a55ad3bc725f8115adcd34fa502f9",
+      "etag": "W/\"556a881b\"",
+      "last_modified": null
+    },
+    {
+      "endpoint": "https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer/8/query",
+      "where_sha256": "661027b5f287f5620db02a132296c435e937a7e765fd5cd6fc6732657dd19bf4",
+      "http": 200,
+      "bytes": 498168,
+      "sha256": "dc3bdbcabfb30d8fe3bf19db3028537d13f5418f6a5720b09f402f5977f2577e",
+      "etag": "W/\"1795035466\"",
+      "last_modified": null
+    },
+    {
+      "endpoint": "https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer/8/query",
+      "where_sha256": "8e6fb192dad372dde99a99bd3a55406b2eb2d65b4c4e79af96c37ab800b39e3a",
+      "http": 200,
+      "bytes": 189953,
+      "sha256": "18856288233325dc0e0b914f8bd6a48e8cde29a96e9fd09b3302be35ddec4234",
+      "etag": "W/\"1795035466\"",
+      "last_modified": null
+    },
+    {
+      "endpoint": "https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer/8/query",
+      "where_sha256": "a520888b1388bf4cca3abc5d5004c79520eb4171be68aadd1c5eeb4c7973d338",
+      "http": 200,
+      "bytes": 4130557,
+      "sha256": "b0cf245ba9e2da51decbe1931446f7adf68064f6e20519f3bdead4f3cc3caa88",
+      "etag": "W/\"1795035466\"",
+      "last_modified": null
+    },
+    {
+      "endpoint": "https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer/8/query",
+      "where_sha256": "6bbbb97c3c01af4e24bbef1477c010b512b43c2e2ad7868ce1129edba6912fb0",
+      "http": 200,
+      "bytes": 696955,
+      "sha256": "17f22ae96921a591712237c64425a2e481407454492d928f7882984be1c5e8e5",
+      "etag": "W/\"1795035466\"",
+      "last_modified": null
+    },
+    {
+      "endpoint": "https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer/8/query",
+      "where_sha256": "82cc1914c38f19085fb0f758b796f41a692b0c06c9590934f8d8791cbcf0c2ed",
+      "http": 200,
+      "bytes": 636725,
+      "sha256": "3f05da439ebd679f16dade5b82b814481a5c0b52b0ce95d463f4b96850e390f9",
+      "etag": "W/\"1795035466\"",
+      "last_modified": null
+    },
+    {
+      "endpoint": "https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer/8/query",
+      "where_sha256": "daba621419ad98cc50cbc6caf7d07e93d39d63d7cb73aa3065d70b62e41d3dc3",
+      "http": 200,
+      "bytes": 987643,
+      "sha256": "2989607e9c7ba14f99cc8a65c2865025e9a4f7a2448d8987f5e4442b238a9662",
+      "etag": "W/\"1795035466\"",
+      "last_modified": null
+    },
+    {
+      "endpoint": "https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer/8/query",
+      "where_sha256": "84decddcfb4e42db624422bb4a21607b5a1cdf31e0fe950bfa547e3557059fbb",
+      "http": 200,
+      "bytes": 449524,
+      "sha256": "076b96c4b59e92b8287c6b70879a9942566c1d2e771b27c890e6353e538881aa",
+      "etag": "W/\"1795035466\"",
+      "last_modified": null
+    },
+    {
+      "endpoint": "https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer/8/query",
+      "where_sha256": "3cfc68419bf1e1ceb1acc79e0ab25026c4128f19d61aab1a21e4a18172ac7378",
+      "http": 200,
+      "bytes": 376482,
+      "sha256": "09a6c815273072a5c0e47642c97ea9edd6e0bb2d958548d282b179f887161591",
+      "etag": "W/\"1795035466\"",
+      "last_modified": null
+    },
+    {
+      "endpoint": "https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer/8/query",
+      "where_sha256": "17061eab716ecd17409ba7881d2f3ed7a10e8523c0eace29f72dbcac145bd3d8",
+      "http": 200,
+      "bytes": 1011366,
+      "sha256": "0247dd68a2d49acaaa8932a3f02a5d6233922a007d6ad13a102c3809a6081240",
+      "etag": "W/\"1795035466\"",
+      "last_modified": null
+    },
+    {
+      "endpoint": "https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer/8/query",
+      "where_sha256": "cc7291ca86a618540637cfffe4ebdff83f62e7d4762366909134fc5d72903d15",
+      "http": 200,
+      "bytes": 600395,
+      "sha256": "56c80b26a14c2fefe4936e0668246cf2134c299dd345d776eb353fe30ea0bf18",
+      "etag": "W/\"1795035466\"",
+      "last_modified": null
+    },
+    {
+      "endpoint": "https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer/8/query",
+      "where_sha256": "010b5f1f1c2102520a45c0f514fa83a0f7d5d66a214832f77900bfd291a4d0bf",
+      "http": 200,
+      "bytes": 485413,
+      "sha256": "e77c9dd43a0546f339648fa7835715b283a6ca1729fc6b2b69bd26a81d4c0563",
+      "etag": "W/\"1795035466\"",
+      "last_modified": null
+    },
+    {
+      "endpoint": "https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer/8/query",
+      "where_sha256": "a765a4f6808d9e573624a1ae6c157bbd450415419e0e6e1614a7335fc5b6aca6",
+      "http": 200,
+      "bytes": 697382,
+      "sha256": "0e068b0d63e952fde31264df38443bed35c2f9125d174eab1ec9b48fd0d7e756",
+      "etag": "W/\"1795035466\"",
+      "last_modified": null
+    },
+    {
+      "endpoint": "https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer/8/query",
+      "where_sha256": "b55386397831e228af3ca02f24c2e6dcc741b53abd6a73a3cfd86ad139ec5ba6",
+      "http": 200,
+      "bytes": 323188,
+      "sha256": "ce6f33e4267d5295cce7faf14eca4a55463b3e54977b021596730bf277954610",
+      "etag": "W/\"1795035466\"",
+      "last_modified": null
+    },
+    {
+      "endpoint": "https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer/8/query",
+      "where_sha256": "36c48c920810da41ff38390935e294653b05c6a23c7b098094a2291baf0257de",
+      "http": 200,
+      "bytes": 295173,
+      "sha256": "69cd7cad6e35ac6eccaf8d3c465e2780df5543da9f592b8e231bd05848d20bc8",
+      "etag": "W/\"1795035466\"",
+      "last_modified": null
+    },
+    {
+      "endpoint": "https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer/8/query",
+      "where_sha256": "9e339d91571dae0a06624979ef459f83490dfc1bca3ac4bfd93e52bbbe43fb31",
+      "http": 200,
+      "bytes": 676207,
+      "sha256": "f4673357eefc45f90e5e74d9ad5a61cb0acf92ebc759f10c5f978930e7fd8b04",
+      "etag": "W/\"1795035466\"",
+      "last_modified": null
+    },
+    {
+      "endpoint": "https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer/8/query",
+      "where_sha256": "9e8b954244f814831f000394ad6284d7ba5326ff1502ad54dc2e23fb4674971e",
+      "http": 200,
+      "bytes": 603228,
+      "sha256": "1917ff01bc82b712432d65e47fd317032c7dabdb7af6db2da670d5c080a0eff0",
+      "etag": "W/\"1795035466\"",
+      "last_modified": null
+    },
+    {
+      "endpoint": "https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer/8/query",
+      "where_sha256": "9229692e4e4a87fd71ed3ac402c3d07c8abfb8bbf16355479c32c07837a47bc2",
+      "http": 200,
+      "bytes": 504355,
+      "sha256": "11d253ff85013b78de3c466b8d6774f98e69b1a313afe8505d1c7e235172083c",
+      "etag": "W/\"1795035466\"",
+      "last_modified": null
+    },
+    {
+      "endpoint": "https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer/8/query",
+      "where_sha256": "f6fc1f3c5b8e757d645552ce34d6379e8e593403ac47604f82fb2d50e6c18fd1",
+      "http": 200,
+      "bytes": 546582,
+      "sha256": "4ab685e9cc799c7a82d3cccade0c7d7fda47efe281bd45848d893d3aeb3d0499",
+      "etag": "W/\"1795035466\"",
+      "last_modified": null
+    },
+    {
+      "endpoint": "https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer/8/query",
+      "where_sha256": "8e477cdbad6a02136e639270845a751cb3e3dae5bcecf8ad3b0fbe719e5f4dbf",
+      "http": 200,
+      "bytes": 629822,
+      "sha256": "5d2978a9aab82c2c741047a95e9977bdac162df8e57bc70792e9867c6e2d06df",
+      "etag": "W/\"1795035466\"",
+      "last_modified": null
+    },
+    {
+      "endpoint": "https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer/8/query",
+      "where_sha256": "61a2dcdea29494c9552f77de77080c9f2225a81450287f7d8fe9c0a94cd6633b",
+      "http": 200,
+      "bytes": 4413567,
+      "sha256": "fdeeaa6fd68f7565dbc2f3a9e77f2798f9e6df20438a70bf329251e6281c4f7a",
+      "etag": "W/\"1795035466\"",
+      "last_modified": null
+    },
+    {
+      "endpoint": "https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer/8/query",
+      "where_sha256": "770342963d3ad7fe1658127862ff07a2140e4a5dd3687e71a6b56f4e505f6612",
+      "http": 200,
+      "bytes": 691779,
+      "sha256": "9e50648bcbd3186d30765068150333bf88c846cc100c275feb1b57db183dd28d",
+      "etag": "W/\"1795035466\"",
+      "last_modified": null
+    },
+    {
+      "endpoint": "https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer/8/query",
+      "where_sha256": "514458aff8cb1dcec003c685f5babade36fc5315dbb5d8ee3113c42a4f792e78",
+      "http": 200,
+      "bytes": 921105,
+      "sha256": "c6558a2838c71a6d31554e012355ccec0281e9fd95a92081d9a57b7c35cbc4a5",
+      "etag": "W/\"1795035466\"",
+      "last_modified": null
+    },
+    {
+      "endpoint": "https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer/8/query",
+      "where_sha256": "473e096f5d81dd2054b7d17ac4a8b4ba73cf46772ba96f5cd4aa28a482440928",
+      "http": 200,
+      "bytes": 739179,
+      "sha256": "dc8c41e5deb0f7e9ca7fcbe36a5678db243427aa9dbd76c6dc035b782eee89bf",
+      "etag": "W/\"1795035466\"",
+      "last_modified": null
+    },
+    {
+      "endpoint": "https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer/8/query",
+      "where_sha256": "0de05ef18a1210af8cd93c9140817073f4a12bf8b73a163ed3a05c8f4528340f",
+      "http": 200,
+      "bytes": 23114,
+      "sha256": "edccbc60d423c307d718bfcf80c76b37a411a9276b94e302362527431d84aeb2",
+      "etag": "W/\"1795035466\"",
+      "last_modified": null
+    }
+  ],
+  "limitations": [
+    "Official REST polygon coverage, not decoded LAZ coverage or physical accessibility.",
+    "Exact CSV metadata match only, no inferred EPT aliases.",
+    "No precise FWS locations transmitted or exported; queries use only public workunit IDs.",
+    "No ecological fit."
+  ],
+  "csv_sha256": "87f5d330a8953f32fa2682529029b48c844df06f43e8d11f55e46670021fcfa9",
+  "csv_missing_or_duplicate_ids": 688,
+  "strict_csv_workunit_count": 576,
+  "service_metadata": {
+    "name": "Lidar Point Cloud",
+    "fields": {
+      "OBJECTID": "esriFieldTypeOID",
+      "workunit": "esriFieldTypeString",
+      "workunit_id": "esriFieldTypeInteger",
+      "collect_start": "esriFieldTypeDate",
+      "collect_end": "esriFieldTypeDate",
+      "ql": "esriFieldTypeString",
+      "p_method": "esriFieldTypeString",
+      "vert_crs": "esriFieldTypeString",
+      "lpc_link": "esriFieldTypeString",
+      "lpc_category": "esriFieldTypeString"
+    },
+    "maxRecordCount": 2000,
+    "extent_spatial_reference": {
+      "wkid": 102100,
+      "latestWkid": 3857,
+      "xyTolerance": 0.001,
+      "zTolerance": 0.001,
+      "mTolerance": 0.001,
+      "falseX": -22040479.784895003,
+      "falseY": -30241100,
+      "xyUnits": 144149830.65927747,
+      "falseZ": -100000,
+      "zUnits": 10000,
+      "falseM": -100000,
+      "mUnits": 10000
+    },
+    "editingInfo": null,
+    "currentVersion": 11.3
+  },
+  "service_returned_features": 576,
+  "missing_strict_csv_ids": 0,
+  "ambiguous_workunit_ids": 0,
+  "attrition_counts": {
+    "exact_metadata_bridge_pass": 576,
+    "invalid_geometry": 1
+  },
+  "geometry_repaired": 10,
+  "qualified_geometry_ids": 575,
+  "arms": {
+    "native_LPC_strict": {
+      "candidate_workunits": 575,
+      "workunits_intersecting_cells": 16,
+      "cells": 57,
+      "records": 2272,
+      "support": {
+        "taxon_support": [
+          {
+            "species": "Corynorhinus rafinesquii",
+            "cells": 4,
+            "routes": 3,
+            "eligible": false
+          },
+          {
+            "species": "Eptesicus fuscus",
+            "cells": 33,
+            "routes": 11,
+            "eligible": true
+          },
+          {
+            "species": "Lasiurus borealis",
+            "cells": 49,
+            "routes": 14,
+            "eligible": true
+          },
+          {
+            "species": "Lasiurus cinereus",
+            "cells": 11,
+            "routes": 4,
+            "eligible": true
+          },
+          {
+            "species": "Myotis austroriparius",
+            "cells": 15,
+            "routes": 10,
+            "eligible": true
+          },
+          {
+            "species": "Myotis grisescens",
+            "cells": 1,
+            "routes": 1,
+            "eligible": false
+          },
+          {
+            "species": "Myotis lucifugus",
+            "cells": 20,
+            "routes": 8,
+            "eligible": true
+          },
+          {
+            "species": "Myotis septentrionalis",
+            "cells": 4,
+            "routes": 2,
+            "eligible": false
+          },
+          {
+            "species": "Myotis sodalis",
+            "cells": 3,
+            "routes": 3,
+            "eligible": false
+          },
+          {
+            "species": "Nycticeius humeralis",
+            "cells": 54,
+            "routes": 14,
+            "eligible": true
+          },
+          {
+            "species": "Perimyotis subflavus",
+            "cells": 45,
+            "routes": 14,
+            "eligible": true
+          }
+        ],
+        "eligible_taxa": 7,
+        "comparison_taxa": 7,
+        "comparison_routes": 12,
+        "comparison_blocks": 9,
+        "comparisons": 2595,
+        "comparison_cells": 55,
+        "groups": 462
+      },
+      "passes_original_support": true
+    },
+    "native_LPC_strict_meets_category": {
+      "candidate_workunits": 569,
+      "workunits_intersecting_cells": 16,
+      "cells": 57,
+      "records": 2272,
+      "support": {
+        "taxon_support": [
+          {
+            "species": "Corynorhinus rafinesquii",
+            "cells": 4,
+            "routes": 3,
+            "eligible": false
+          },
+          {
+            "species": "Eptesicus fuscus",
+            "cells": 33,
+            "routes": 11,
+            "eligible": true
+          },
+          {
+            "species": "Lasiurus borealis",
+            "cells": 49,
+            "routes": 14,
+            "eligible": true
+          },
+          {
+            "species": "Lasiurus cinereus",
+            "cells": 11,
+            "routes": 4,
+            "eligible": true
+          },
+          {
+            "species": "Myotis austroriparius",
+            "cells": 15,
+            "routes": 10,
+            "eligible": true
+          },
+          {
+            "species": "Myotis grisescens",
+            "cells": 1,
+            "routes": 1,
+            "eligible": false
+          },
+          {
+            "species": "Myotis lucifugus",
+            "cells": 20,
+            "routes": 8,
+            "eligible": true
+          },
+          {
+            "species": "Myotis septentrionalis",
+            "cells": 4,
+            "routes": 2,
+            "eligible": false
+          },
+          {
+            "species": "Myotis sodalis",
+            "cells": 3,
+            "routes": 3,
+            "eligible": false
+          },
+          {
+            "species": "Nycticeius humeralis",
+            "cells": 54,
+            "routes": 14,
+            "eligible": true
+          },
+          {
+            "species": "Perimyotis subflavus",
+            "cells": 45,
+            "routes": 14,
+            "eligible": true
+          }
+        ],
+        "eligible_taxa": 7,
+        "comparison_taxa": 7,
+        "comparison_routes": 12,
+        "comparison_blocks": 9,
+        "comparisons": 2595,
+        "comparison_cells": 55,
+        "groups": 462
+      },
+      "passes_original_support": true
+    },
+    "EPT_exact_name_intersect_official_strict": {
+      "candidate_workunits": 521,
+      "workunits_intersecting_cells": 14,
+      "cells": 50,
+      "records": 1830,
+      "support": {
+        "taxon_support": [
+          {
+            "species": "Corynorhinus rafinesquii",
+            "cells": 4,
+            "routes": 3,
+            "eligible": false
+          },
+          {
+            "species": "Eptesicus fuscus",
+            "cells": 29,
+            "routes": 9,
+            "eligible": true
+          },
+          {
+            "species": "Lasiurus borealis",
+            "cells": 42,
+            "routes": 12,
+            "eligible": true
+          },
+          {
+            "species": "Lasiurus cinereus",
+            "cells": 11,
+            "routes": 4,
+            "eligible": true
+          },
+          {
+            "species": "Myotis austroriparius",
+            "cells": 13,
+            "routes": 8,
+            "eligible": true
+          },
+          {
+            "species": "Myotis grisescens",
+            "cells": 1,
+            "routes": 1,
+            "eligible": false
+          },
+          {
+            "species": "Myotis lucifugus",
+            "cells": 16,
+            "routes": 7,
+            "eligible": true
+          },
+          {
+            "species": "Myotis septentrionalis",
+            "cells": 4,
+            "routes": 2,
+            "eligible": false
+          },
+          {
+            "species": "Myotis sodalis",
+            "cells": 2,
+            "routes": 2,
+            "eligible": false
+          },
+          {
+            "species": "Nycticeius humeralis",
+            "cells": 47,
+            "routes": 12,
+            "eligible": true
+          },
+          {
+            "species": "Perimyotis subflavus",
+            "cells": 38,
+            "routes": 12,
+            "eligible": true
+          }
+        ],
+        "eligible_taxa": 7,
+        "comparison_taxa": 7,
+        "comparison_routes": 10,
+        "comparison_blocks": 7,
+        "comparisons": 2244,
+        "comparison_cells": 48,
+        "groups": 399
+      },
+      "passes_original_support": false
+    }
+  },
+  "ept_index_sha256": "b0510390f8090e46f77b3b8c7c82e24a720157fd8ad31c7345bf2764959148f7",
+  "audit": {
+    "run_id": 45770373906,
+    "job_id": 139741295782,
+    "artifact_id": 15093553555,
+    "artifact_zip_digest": "sha256:e3a1ad167f8e183e2da03dc9d5b36119d617b7b37ebab08fc4d010dd2de86ee4",
+    "scope": "Successful final report and registry digest verified; no LAZ decoding."
+  },
+  "decision": "Native official LPC polygons pass fixed support: 57 eligible cells, 7 taxa, 12 routes, 9 blocks, 2595 capped comparisons. Exact EPT intersect-official arm remains below eight blocks. Next native LPC tile inventory and actual geometry gate, no ecological fit; metadata geometry repairs and one invalid polygon excluded."
+}
