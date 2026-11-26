@@ -1,0 +1,171 @@
+{
+  "status": "COMPLETE_DESCRIPTIVE_ONLY",
+  "stage": "Polesia fixed Gaussian partial pooling MAP, exact matched spatial replay",
+  "contract_commit": "32cba4cb6198be2a49bcb3dbc39c718f1038a549",
+  "support": {
+    "sites": 124,
+    "reported_nights": 733,
+    "grid_cells": 116,
+    "acoustic_labels": 8,
+    "blocks25": 28,
+    "blocks50": 13
+  },
+  "prior": {
+    "rho": 0.75,
+    "marginal_slope_sd": 1.5,
+    "independent_intercept_sd": 2.5
+  },
+  "primary": {
+    "grain_km": 25,
+    "scores": {
+      "N": -3.219235484942478,
+      "I_B": -3.607630992091098,
+      "I_O": -3.568433056789876,
+      "I_D": -3.6606826489875814,
+      "I_OD": -3.633992513544975,
+      "P_B": -3.4423912400403642,
+      "P_O": -3.447993449560008,
+      "P_D": -3.496606204830209,
+      "P_OD": -3.4966262410084155
+    },
+    "contrasts": {
+      "P_B-I_B": {
+        "gain": 0.1652397520507338,
+        "positive_folds": 5,
+        "positive_blocks": 23,
+        "screen": true,
+        "conditional_bootstrap_95": [
+          0.07807015167548664,
+          0.2702356802749651
+        ]
+      },
+      "P_B-N": {
+        "gain": -0.2231557550978862,
+        "positive_folds": 2,
+        "positive_blocks": 12,
+        "screen": false
+      },
+      "P_O-P_B": {
+        "gain": -0.0056022095196438,
+        "positive_folds": 3,
+        "positive_blocks": 16,
+        "screen": false,
+        "conditional_bootstrap_95": [
+          -0.03322589684230752,
+          0.020552136808697084
+        ]
+      },
+      "P_D-P_B": {
+        "gain": -0.0542149647898448,
+        "positive_folds": 3,
+        "positive_blocks": 14,
+        "screen": false
+      },
+      "P_OD-P_D": {
+        "gain": -0.0000200361782065,
+        "positive_folds": 2,
+        "screen": false
+      },
+      "P_OD-P_O": {
+        "gain": -0.0486327914484075,
+        "positive_folds": 2,
+        "screen": false
+      },
+      "P_OD-P_B": {
+        "gain": -0.0542350009680513,
+        "positive_folds": 2,
+        "screen": false
+      }
+    },
+    "optimization": {
+      "joint_fits": 20,
+      "min_converged_starts": 5,
+      "max_gradient": 0.00018361566607533186,
+      "max_start_objective_spread": 1.7306144402268728
+    }
+  },
+  "sensitivity": {
+    "grain_km": 50,
+    "scores": {
+      "N": -3.17590534535806,
+      "I_B": -3.6529544172558635,
+      "I_O": -3.6439719205242693,
+      "I_D": -3.6257074078697227,
+      "I_OD": -3.635924193496506,
+      "P_B": -3.5390536643879096,
+      "P_O": -3.5377664025579483,
+      "P_D": -3.560714221517128,
+      "P_OD": -3.5367742855552993
+    },
+    "contrasts": {
+      "P_B-I_B": {
+        "gain": 0.1139007528679539,
+        "positive_folds": 5,
+        "positive_blocks": 9,
+        "screen": true,
+        "conditional_bootstrap_95": [
+          0.03870508252491859,
+          0.20819170021181232
+        ]
+      },
+      "P_B-N": {
+        "gain": -0.3631483190298496,
+        "positive_folds": 1,
+        "positive_blocks": 3,
+        "screen": false
+      },
+      "P_O-P_B": {
+        "gain": 0.0012872618299613,
+        "positive_folds": 3,
+        "positive_blocks": 9,
+        "screen": false,
+        "conditional_bootstrap_95": [
+          -0.04622537132990524,
+          0.03853928418720432
+        ]
+      },
+      "P_D-P_B": {
+        "gain": -0.0216605571292184,
+        "positive_folds": 3,
+        "positive_blocks": 7,
+        "screen": false
+      },
+      "P_OD-P_D": {
+        "gain": 0.0239399359618287,
+        "positive_folds": 2,
+        "positive_blocks": 7,
+        "screen": false
+      },
+      "P_OD-P_O": {
+        "gain": 0.000992117002649,
+        "positive_folds": 3,
+        "positive_blocks": 6,
+        "screen": false
+      },
+      "P_OD-P_B": {
+        "gain": 0.0022793788326103,
+        "positive_folds": 3,
+        "positive_blocks": 10,
+        "screen": false
+      }
+    },
+    "optimization": {
+      "joint_fits": 20,
+      "min_converged_starts": 5,
+      "max_gradient": 0.00017665052049237184,
+      "max_start_objective_spread": 0.9712561989053938
+    }
+  },
+  "audit": {
+    "replayed_all_independent_fold_scores": true,
+    "gradient_check_max_error": 6.7617855759039e-9,
+    "reference_report_actual_sha256": "2959a3cb1b2912bab9867b97ba057c44882878fc420f718046f344d609f0a114",
+    "reference_archive_sha256": "2435ec7a1dcad13d65f469f370a7d7123738f593061702672306ae3ab29173ef",
+    "reference_report_hash_correction": "Previous receipt reported a different internal report hash; exact delivered archive hash and source scripts match. Independently regenerated all reference fold scores to 1e-6.",
+    "full_report_sha256": "ebf1c50bafe99acac23ca14a11ad5434240f7ff0ac7e03b8cfeaafd226a4fc1d",
+    "local_code_sha256": "b848d245b9a5a2f982b97450fcee87232db2596162bacd1d25a60c3e4f918ccc",
+    "user_bundle_sha256": "7f12b183a862a8678daba3fea0ffe15b2cdea063d6a2ff96d94dd0b1ecbb9f0f",
+    "execution": "Local checkpoint per fold; initial combined execution exceeded time limit, all ten checkpoints subsequently completed; no model or data change. Full report and code provided in user ZIP. Aggregate receipt only; no coordinates or site histories committed."
+  },
+  "decision": "Fixed partial pooling improves independent-slope models at both spatial grains, but no environmental arm beats intercept-only and no incremental PAVD contrast passes screen. Full-data signs are not evidence of mechanism; joint solutions remain multimodal. Do not tune rho or expand same-archive models. Prioritize independent effort-calibrated data or new evaluation design."
+}
