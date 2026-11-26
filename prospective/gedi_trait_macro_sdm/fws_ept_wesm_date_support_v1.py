@@ -1,5 +1,5 @@
 """Metadata-only date/quality gate. No raw observations, point clouds or model fit."""
-import collections,hashlib,io,json,pathlib,re,urllib.parse
+import collections,datetime as dt,hashlib,io,json,pathlib,re,urllib.parse
 import numpy as np,pandas as pd,requests
 from shapely.geometry import box,Point
 from shapely.ops import unary_union
@@ -28,6 +28,26 @@ def fetch():
     cols=["workunit","workunit_id","collect_start","collect_end","ql","p_method","horiz_crs","vert_crs","geoid","lpc_pub_date","lpc_link"]
     assert set(cols)<=set(t.columns) and 100<=len(t)<=100000
     return t
+def date_only(x):
+    # Normalize only unambiguous year-first date or a midnight ISO-style
+    # timestamp. Do not guess day/month order for slash-delimited short dates.
+    x=x.strip()
+    m=re.fullmatch(r"(\d{4})([-/])(\d{1,2})\2(\d{1,2})(?:[ T]00:00:00(?:\.0+)?(?:Z|\+00:00)?)?",x)
+    if not m:return pd.NaT
+    try:return pd.Timestamp(dt.date(int(m[1]),int(m[3]),int(m[4])))
+    except (ValueError,OverflowError):return pd.NaT
+def date_witness(q):
+    assert date_only("2020-04-08")==pd.Timestamp("2020-04-08")
+    assert date_only("2020-04-08T00:00:00.000Z")==pd.Timestamp("2020-04-08")
+    assert date_only("2020/04/08 00:00:00")==pd.Timestamp("2020-04-08")
+    assert pd.isna(date_only("04/08/2020"))
+    assert pd.isna(date_only("2020-02-30"))
+    assert pd.isna(date_only("2020-04-08T23:59:59"))
+    for k in ("collect_start","collect_end"):
+        v=q[k].astype(str)
+        parsed=v.map(date_only)
+        R.setdefault("date_lexical_audit",{})[k]={"original_examples":sorted(v.unique().tolist())[:12],"lexical_patterns":v.str.replace(r"[0-9]","D",regex=True).value_counts().to_dict(),"parsed":int(parsed.notna().sum()),"unparsed_examples":sorted(v[parsed.isna()].unique().tolist())[:12]}
+    save()
 def units(x):
     if not re.fullmatch(r"[0-9]{4,6}",x.strip()):return None
     try:
@@ -65,13 +85,16 @@ def main():
                 matched.update(names[int(i)] for i in tree.query(Point((x+u)*6000,(y+v)*6000),predicate="covered_by"))
     assert len(matched)==99
     R["overlap_project_count"]=len(matched);save()
-    t=fetch();q=t[t.workunit.isin(matched)].copy()
+    t=fetch()
+    assert R["wesm_sha256"]=="87f5d330a8953f32fa2682529029b48c844df06f43e8d11f55e46670021fcfa9","WESM source changed; no silent replacement"
+    q=t[t.workunit.isin(matched)].copy()
     ids=q.groupby("workunit").size();unique=set(ids[ids==1].index)
     R["exact_name_match"]={"matched_names":len(ids),"unique":len(unique),"ambiguous":int((ids>1).sum()),"unmatched":len(matched-set(ids.index))}
     q=q[q.workunit.isin(unique)].copy()
     # No modification of project IDs or resolution of multiple source rows.
-    start=pd.to_datetime(q.collect_start,format="%Y-%m-%d",errors="coerce")
-    end=pd.to_datetime(q.collect_end,format="%Y-%m-%d",errors="coerce")
+    date_witness(q)
+    start=pd.to_datetime(q.collect_start.map(date_only))
+    end=pd.to_datetime(q.collect_end.map(date_only))
     mask=start.notna()&end.notna()&(start<=end)
     masks=[("ordered_date",mask),("ql_0_1_2",q.ql.str.strip().isin(["QL 0","QL 1","QL 2"])),("linear_mode",q.p_method.str.strip().str.lower().eq("linear-mode lidar")),("recognized_native_vertical_units",q.vert_crs.map(units).notna()),("official_lpc_link",q.lpc_link.map(official))]
     R["metadata_distributions"]={"ql":q.ql.value_counts().to_dict(),"p_method":q.p_method.value_counts().to_dict(),"vertical_units":q.vert_crs.map(units).fillna("unrecognized").value_counts().to_dict()}
@@ -87,7 +110,7 @@ def main():
     for k,v in a.items():
         R["arms"][k]={"projects":len(v),**coverage(d,geoms,names,v)}
         save()
-    R["status"]="COMPLETE_METADATA_ONLY";save()
+    R["status"]="COMPLETE_METADATA_ONLY" if int(mask.sum()) else "STOP_DATE_FORMAT_UNRESOLVED";save()
 if __name__=="__main__":
     try:main()
     except Exception as e:R.update(status="STOP_SOURCE_OR_QC",error_type=type(e).__name__,reason=str(e)[:180]);save();raise
