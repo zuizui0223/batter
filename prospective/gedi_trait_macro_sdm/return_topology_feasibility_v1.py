@@ -73,6 +73,14 @@ def enumerate_nodes(bb,box):
                 nodes[k]=n
         need(len(nodes)<=1200,"intersecting nodes budget")
     return sorted(nodes.items(),key=lambda v:tuple(map(int,v[0].split("-"))))
+def retained_mask(X,Y,x,y,cls,withheld):
+    # LAS subfield views can expose uint8, not bool. Never use their
+    # bitwise complement directly as an indexing array.
+    withheld=np.asarray(withheld,dtype=bool)
+    cls=np.asarray(cls,dtype=int)
+    keep=(np.abs(X-x)<40)&(np.abs(Y-y)<40)&(~withheld)&(~np.isin(cls,[7,18]))
+    need(keep.dtype==np.dtype(bool) and keep.shape==X.shape,"boolean row mask")
+    return keep
 def acquire(meta,ctr):
     lon,lat=Transformer.from_crs(3857,4326,always_xy=True).transform(*ctr)
     utm=32600+int((lon+180)//6)+1 if lat>=0 else 32700+int((lon+180)//6)+1
@@ -93,7 +101,7 @@ def acquire(meta,ctr):
         if not take.any():continue
         X,Y=f.transform(X[take],Y[take]);Z=np.asarray(a.z)[take]
         cls=np.asarray(a.classification)[take].astype(int)
-        keep=(np.abs(X-x)<40)&(np.abs(Y-y)<40)&~np.asarray(a.withheld)[take]&~np.isin(cls,[7,18])
+        keep=retained_mask(X,Y,x,y,cls,np.asarray(a.withheld,dtype=bool)[take])
         arr=np.column_stack((X[keep]-x,Y[keep]-y,Z[keep],cls[keep]))
         if len(arr):pieces.append(arr)
         counts.update(cls[keep].tolist())
@@ -150,6 +158,15 @@ def null(v,rng):
     need(np.array_equal(p.sum((0,1)),v.sum((0,1))),"null layer count")
     return p
 def synthetic():
+    # Check exact row selection for uint8 flags, including a one-point node.
+    X=np.array([0.,0.,0.,0.,41.,0.]);Y=np.zeros(6)
+    cls=np.array([1,2,7,18,1,1]);w=np.array([0,1,0,0,0,0],dtype=np.uint8)
+    k=retained_mask(X,Y,0.,0.,cls,w)
+    need(k.tolist()==[True,False,False,False,False,True],"uint8 mask regression")
+    need(X[k].tolist()==[0.,0.],"row selection regression")
+    for flag,expected in [(0,True),(1,False)]:
+        k=retained_mask(np.array([0.]),np.array([0.]),0.,0.,np.array([2]),np.array([flag],dtype=np.uint8))
+        need(k.tolist()==[expected],"single point regression")
     v=np.zeros((16,16,8),bool);v[8,:,:]=True
     a=curves(v,1,[0,1,2]);need(a[0,2]==0 and a[0,3]>0,"plane crossing check")
     need(np.all(np.diff(a,axis=0)<=1e-12),"radius monotonicity")
