@@ -1,0 +1,103 @@
+{
+  "status": "COMPLETE_RECORDED_LABEL_COLD_START_ONLY",
+  "contract_commit": "23766f4d768059e5fe8e22c7e57bd46f4e0d9934",
+  "support": {
+    "labels": 9,
+    "trait_rows": 11,
+    "paired_point_seasons": 96,
+    "pair_units": 1751,
+    "groups": 8,
+    "folds_per_arm": 142,
+    "min_train_pairs": 164,
+    "min_train_points": 15,
+    "min_train_labels": 7
+  },
+  "sources": {
+    "yoh_zip_sha256": "77caabe49c8cd761b1bece56eae4c23ea292b287f38a19d9c015990e43685ad6",
+    "gomes_artifact": 15041707440,
+    "gomes_zip_sha256": "34618b8aa89506a0f9e36db5499dac9033401e4a6c6f12a2446823564a2f24e5",
+    "nunez_member_sha256": "ca75813d91dd6e4dbcbe6b2e18d780ca8c00b3c0638870aa599c3a01eebd278f",
+    "crane_artifact": 15069663941,
+    "crane_zip_sha256": "fa45d435204439bd4600143540bc6960e0b814405cec938c3275c19ebbd2fb09",
+    "crane_exact_labels": [
+      "RN",
+      "SB"
+    ],
+    "used_exact_nunez_labels": [
+      "CB",
+      "EB",
+      "FH",
+      "MRN",
+      "PK",
+      "PM",
+      "PP",
+      "SB",
+      "SL"
+    ],
+    "limits": "Reported trait columns from Nunez; WL unit not independently verified; no merging or complex/cf. matching."
+  },
+  "primary": {
+    "neutral": -0.6931471805599453,
+    "A": {
+      "score": -0.8116042117123281,
+      "gain": -0.11845703115238282,
+      "positive_groups": 0,
+      "positive_folds": 0
+    },
+    "W": {
+      "score": -0.7148576877136485,
+      "gain": -0.021710507153703262,
+      "positive_groups": 1,
+      "positive_folds": 0
+    },
+    "AW": {
+      "score": -0.8316932558301676,
+      "gain": -0.13854607527022234,
+      "positive_groups": 0,
+      "positive_folds": 0,
+      "held_location_gains": {
+        "CaboFrio": -0.2204833119974683,
+        "Dimona": -0.05660883854297616
+      },
+      "leave_one_label_range": [
+        -0.17134823426177026,
+        -0.033802721647375855
+      ]
+    },
+    "screen": false
+  },
+  "known_species_benchmark": {
+    "R": {
+      "score": -0.6761011471189458,
+      "gain": 0.01704603344099953,
+      "positive_groups": 6,
+      "positive_folds": 3,
+      "held_location_gains": {
+        "CaboFrio": -0.0021746475837434165,
+        "Dimona": 0.036266714465742256
+      }
+    },
+    "AW": {
+      "score": -0.7169915531787926,
+      "gain": -0.02384437261884731
+    }
+  },
+  "token_sensitivity_AW_gain": -0.13879248911795838,
+  "row_choice_AW_gains": {
+    "FH1_SB1": -0.07401160303762844,
+    "FH1_SB2": -0.04053583142830608,
+    "FH2_SB1": -0.07931332274109226,
+    "FH2_SB2": -0.045791952544741554
+  },
+  "audit": {
+    "fits": 1144,
+    "max_gradient": 9.976918596832363e-12,
+    "max_independent_objective_difference": 5.551115123125783e-16,
+    "serialization_repair": "First computation failed during JSON writing on NumPy int64. Explicit scalar conversion; unchanged scientific specification fully rerun.",
+    "script_sha256": "293221b64c8bb57f1473fbdbce6ad738bcf7a0635dd67ad822702b4f0ae5f839",
+    "report_sha256": "fc0a07287c0c329dd43327248f84ae05865c43429710510a6e4a597eb83f6d37",
+    "bundle_sha256": "2c3587edd1a1937e4c5f62392c7e6cfa38414620959499d46a38e1eb1e870a2e",
+    "scope": "Local execution and verified bundle; aggregate receipt only in repository."
+  },
+  "decision": "Wing traits fail cold-start and known-species prediction on matched support. Nine-label ranking itself weak/mixed; do not equate it with previous 16-label result or infer that wings have no biological effect. Close this source-open analysis without posthoc trait tuning. Prioritize independently documented multi-site vertical strata and observation calibration. No physical flight height, phylogenetic or causal claim, main merge, or submission."
+}
