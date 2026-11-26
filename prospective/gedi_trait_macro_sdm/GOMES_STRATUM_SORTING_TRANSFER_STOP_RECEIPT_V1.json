@@ -1,0 +1,66 @@
+{
+  "stage": "Gomes archived recorded-stratum species sorting transfer",
+  "status": "STOP_SUPPORT",
+  "contract_commit": "bd5fd9c6b2e51930993152666bf6996b18e97c65",
+  "source": {
+    "doi": "10.5281/zenodo.4265167",
+    "archive_artifact_id": 15041707440,
+    "archive_sha256": "34618b8aa89506a0f9e36db5499dac9033401e4a6c6f12a2446823564a2f24e5",
+    "Bats_csv_sha256": "5e09a20dbc80d9405f522a576d42f85c4b8f0a19d35dda8c50f8a26135b0fa14",
+    "local_zip_crc_pass": true,
+    "all_six_pinned_source_members_rehashed": true,
+    "rows": 7854,
+    "recorded_passes": 16123,
+    "labels": 21,
+    "towers": 2,
+    "study_nights": 9
+  },
+  "primary": {
+    "paired_events": 134,
+    "both_strata_positive": 134,
+    "informative_events": 128,
+    "informative_pass_count": 13139,
+    "informative_pairs": 1153,
+    "cross_products_not_independent": 89946,
+    "passing_groups": 16,
+    "required_groups": 18,
+    "excluded_group_support": [
+      {
+        "tower": "red",
+        "study_day": 10,
+        "events": 0,
+        "labels": 0
+      },
+      {
+        "tower": "red",
+        "study_day": 11,
+        "events": 1,
+        "labels": 3
+      }
+    ],
+    "fit_performed": false
+  },
+  "all_hours_support_only": {
+    "paired_events": 156,
+    "informative_events": 149,
+    "informative_pass_count": 14166,
+    "informative_pairs": 1347,
+    "cross_products_not_independent": 94993,
+    "passing_groups": 17,
+    "required_groups": 18,
+    "fit_performed": false
+  },
+  "synthetic_checks": {
+    "common_stratum_scaling_invariance": true,
+    "orientation_reversal": true,
+    "label_permutation": true,
+    "known_signal": true,
+    "finite_difference_gradient_error": 9.544254041459028e-9
+  },
+  "audit": {
+    "code_sha256": "68f525118a0cd4dfb0be68db7142358c4a66187aeaa8d6267db2fae77ae0a9ae",
+    "report_sha256": "b0dca50a2c4c0f3810e9478d2d0ba4c4d7e70cb805079a0bac650ff002cf5008",
+    "local_bundle_sha256": "4cc682f9a8454972de0896d60f9224b3679f96494e757110f5fcdb1685af0d3a"
+  },
+  "decision": "Do not relax frozen support or fit remaining groups as rescue. Verified code/estimand, no new ecological predictive result. Common multiplicative effort cancellation is conditional, not species-specific detector calibration. For the next genuine independent test need original height-stratified multi-site data and deployment documentation; Yoh 2024 DOI 10.5061/dryad.0vt4b8h2d version 5 is a candidate with verified inventory but prior HTTP401. No repeated denied-source acquisition, no main merge, no submission."
+}
