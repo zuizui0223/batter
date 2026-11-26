@@ -1,0 +1,60 @@
+{
+  "status": "EXTERNAL_TRANSFER_COMPLETE_DESCRIPTIVE_ONLY",
+  "training_model_sha256": "3e282cdcf4d21bf41234f1cae0e2ef71a3359269c68d592742c10101ac1feb97",
+  "test_support": {
+    "comparisons": 1265,
+    "taxa": 6,
+    "blocks": 9,
+    "routes": 15,
+    "cells": 42
+  },
+  "scores": {
+    "AR_B": -0.6933394442023461,
+    "AR_M": -0.6941270606847744,
+    "W_B": -0.7211898076560245,
+    "W_M": -0.7215678749627471,
+    "neutral": -0.6931471805599453
+  },
+  "contrasts": {
+    "W_M minus W_B": {
+      "gain": -0.00037806730672386283,
+      "positive_blocks": 5,
+      "conditional_block_bootstrap_95": [
+        -0.0014439871817053776,
+        0.0006064800625079293
+      ]
+    },
+    "W_M minus AR_M": {
+      "gain": -0.0274408142779736,
+      "positive_blocks": 2,
+      "conditional_block_bootstrap_95": [
+        -0.055124061867986594,
+        -0.007387937445069049
+      ]
+    },
+    "AR_M minus AR_B": {
+      "gain": -0.0007876164824280761,
+      "positive_blocks": 3,
+      "conditional_block_bootstrap_95": [
+        -0.0016308270880610013,
+        0.00011911283771066618
+      ]
+    },
+    "W_M minus neutral": {
+      "gain": -0.028420694402802087,
+      "positive_blocks": 1,
+      "conditional_block_bootstrap_95": [
+        -0.055398053592779654,
+        -0.008640686663892592
+      ]
+    }
+  },
+  "audit": {
+    "run_id": 45719304682,
+    "artifact_id": 15072506880,
+    "artifact_zip_sha256": "208231ae0b7ca2450b743c73b2b0bc98d29000c7696e1c9bc60336eae420f76e",
+    "zip_independently_rehashed": true,
+    "crc_verified": true
+  },
+  "decision": "Frozen European coefficients do not improve independent FWS prediction; all models worse than neutral. No local refit, no alternate predictor search. Different scale and protocol prevent causal attribution."
+}
