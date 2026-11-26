@@ -1,0 +1,261 @@
+{
+  "status": "COMPLETE_DESCRIPTIVE_ONLY",
+  "stage": "Polesia independently acquired repeated-night conditional site-use and detection model",
+  "source": {
+    "doi": "10.5061/dryad.kd51c5bj3",
+    "archive_sha256": "c0453f9e9bc1b5c1546660e7f47a5320d9fbccb732d353c455df36b52b02e56d",
+    "rda_sha256": "58e2e2f99e5961a4f6daffadec4cf7799dd744d1cbf9379e13c9a24ba0b0ecff"
+  },
+  "gedi": {
+    "run": 45719957097,
+    "artifact": 15072056242,
+    "zip_sha256": "a2ab0adeb9fbadba34e3f6345c48916ee457bd4a34561d465116a0b8e7cc3bdb",
+    "grid_sha256": "f39a3b5cfe9effd759fb6270527786530cd91464f0b11172b33eb8a546a71c87",
+    "candidate_cells": 160,
+    "eligible_cells": 142
+  },
+  "contract": "d3624a5cadac12500d1946dea2c34e06b61873fc",
+  "support": {
+    "sites": 124,
+    "nights": 733,
+    "cells": 116,
+    "labels": 8,
+    "blocks25": 28,
+    "blocks50": 13,
+    "labels_admitted": [
+      "barbastella_barbastellus",
+      "eptesicus_nilssonii",
+      "eptesicus_serotinus",
+      "myotis_brandtii_or_myotis_mystacinus",
+      "myotis_daubentonii",
+      "myotis_nattereri",
+      "pipistrellus_pipistrellus",
+      "plecotus_auritus"
+    ]
+  },
+  "primary": {
+    "grain_km": 25,
+    "fold_sites": [
+      32,
+      28,
+      19,
+      23,
+      22
+    ],
+    "scores": {
+      "N": -3.219235484942478,
+      "B": -3.607630992091098,
+      "O": -3.568433056789876,
+      "D": -3.6606826489875814,
+      "OD": -3.633992513544975
+    },
+    "contrasts": {
+      "O-B": {
+        "gain": 0.03919793530122221,
+        "positive_folds": 4,
+        "positive_blocks": 19,
+        "loo_range": [
+          0.020302896603627926,
+          0.04653841191382958
+        ],
+        "conditional_bootstrap_95": [
+          -0.003930992194802528,
+          0.09265810506200707
+        ],
+        "screen": true
+      },
+      "D-B": {
+        "gain": -0.053051656896483626,
+        "positive_folds": 2,
+        "positive_blocks": 16,
+        "loo_range": [
+          -0.0712721475915138,
+          0.024978561699325268
+        ],
+        "conditional_bootstrap_95": [
+          -0.2376646917965581,
+          0.06608527780712216
+        ],
+        "screen": false
+      },
+      "OD-D": {
+        "gain": 0.026690135442606382,
+        "positive_folds": 4,
+        "positive_blocks": 19,
+        "loo_range": [
+          0.012366267348066064,
+          0.03605271544502608
+        ],
+        "conditional_bootstrap_95": [
+          -0.011572259120734134,
+          0.06972453706349055
+        ],
+        "screen": true
+      },
+      "OD-O": {
+        "gain": -0.06555945675509944,
+        "positive_folds": 2,
+        "positive_blocks": 15,
+        "conditional_bootstrap_95": [
+          -0.25856910745039813,
+          0.05813492296290657
+        ],
+        "screen": false
+      },
+      "OD-B": {
+        "gain": -0.026361521453877244,
+        "positive_folds": 3,
+        "positive_blocks": 18,
+        "screen": false
+      },
+      "B-N": {
+        "gain": -0.38839550714861965,
+        "positive_folds": 0,
+        "screen": false
+      }
+    },
+    "optimization": {
+      "fit_count": 200,
+      "max_gradient": 0.000613316332068875,
+      "max_start_objective_spread": 1.8786519067676295,
+      "min_converged_starts": 3
+    }
+  },
+  "sensitivity": {
+    "grain_km": 50,
+    "fold_sites": [
+      40,
+      25,
+      30,
+      18,
+      11
+    ],
+    "scores": {
+      "N": -3.17590534535806,
+      "B": -3.6529544172558635,
+      "O": -3.6439719205242693,
+      "D": -3.625707407869722,
+      "OD": -3.635924193496506
+    },
+    "contrasts": {
+      "O-B": {
+        "gain": 0.008982496731594295,
+        "positive_folds": 4,
+        "positive_blocks": 7,
+        "loo_range": [
+          -0.014996053712547456,
+          0.030833793996360288
+        ],
+        "conditional_bootstrap_95": [
+          -0.05328424844067629,
+          0.07365929967624554
+        ],
+        "screen": false
+      },
+      "D-B": {
+        "gain": 0.02724700938614098,
+        "positive_folds": 3,
+        "positive_blocks": 9,
+        "conditional_bootstrap_95": [
+          -0.04612335077864608,
+          0.09280130867504661
+        ],
+        "screen": false
+      },
+      "OD-D": {
+        "gain": -0.010216785626783888,
+        "positive_folds": 2,
+        "positive_blocks": 5,
+        "screen": false
+      },
+      "OD-O": {
+        "gain": 0.008047727027762797,
+        "positive_folds": 1,
+        "positive_blocks": 7,
+        "screen": false
+      },
+      "OD-B": {
+        "gain": 0.01703022375935709,
+        "positive_folds": 3,
+        "positive_blocks": 7,
+        "screen": false
+      },
+      "B-N": {
+        "gain": -0.477049071897803,
+        "positive_folds": 1,
+        "screen": false
+      }
+    },
+    "optimization": {
+      "fit_count": 200,
+      "max_gradient": 0.00041469210666120193,
+      "max_start_objective_spread": 0.8265888007367153,
+      "min_converged_starts": 3
+    }
+  },
+  "joint_full_data_regularized_coefficients": [
+    [
+      "barbastella_barbastellus",
+      1.9310436206094517,
+      0.0728306729165186
+    ],
+    [
+      "eptesicus_nilssonii",
+      1.168509206148735,
+      0.8375761445817437
+    ],
+    [
+      "eptesicus_serotinus",
+      -0.04875228706780169,
+      0.9158221792849024
+    ],
+    [
+      "myotis_brandtii_or_myotis_mystacinus",
+      0.990585531810739,
+      0.47368114879934203
+    ],
+    [
+      "myotis_daubentonii",
+      0.6722520804314015,
+      0.055557013420088244
+    ],
+    [
+      "myotis_nattereri",
+      0.3314195919763599,
+      0.715261488356975
+    ],
+    [
+      "pipistrellus_pipistrellus",
+      1.3533427123644497,
+      -0.25346823135393876
+    ],
+    [
+      "plecotus_auritus",
+      0.6533678073523596,
+      -0.21893440036041673
+    ]
+  ],
+  "coefficient_columns": [
+    "acoustic_label",
+    "site_use_PAVD",
+    "conditional_detection_PAVD"
+  ],
+  "audit": {
+    "local_execution": true,
+    "gradient_check_max_error": 1.6670209657121404e-10,
+    "runtime": {
+      "python": "3.13.5",
+      "numpy": "2.3.5",
+      "scipy": "1.17.0",
+      "pandas": "2.2.3",
+      "pyproj": "3.7.2"
+    },
+    "read_rda_py_sha256": "3553834f39c5c0d2aed8990c7160542fee387ca565249d3808f4654f2dc2a056",
+    "prepare_py_sha256": "0b6b385901ddab9c536245f2a7fd082e3c79414a251b74b16ed9a7c90ccd98fb",
+    "fit_py_sha256": "70f59fbaddad63547b8a8b2eb6a8abf1a76e095e402484011f1f390678eac825",
+    "full_report_sha256": "d83193b9bac1a9b8699ef5cf29940ec1ebe0da6f33d370e689234e8fb887b688",
+    "local_source_bundle_sha256": "2435ec7a1dcad13d65f469f370a7d7123738f593061702672306ae3ab29173ef",
+    "note": "R signaling-NaN payloads normalized using exact reported-night mask before calculation. No source data, coordinates, or site detections published. Actual scripts and full report bundled separately for user; this committed receipt is an aggregate transcription, not an automated GitHub reproduction."
+  },
+  "decision": "25km site-use-only increment and conditional site-use increment pass descriptive screen but conditional intervals include zero; 50km sensitivity fails both, and full models never beat intercept-only at either grain. Some fixed starts converge to distinct local minima. No causal separation of acoustic detection from nightly activity, no evidence of validated ecological mechanism or portable 3D SDM. Do not promote or tune post hoc."
+}
