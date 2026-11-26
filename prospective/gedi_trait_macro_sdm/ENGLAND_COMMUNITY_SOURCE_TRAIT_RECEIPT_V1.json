@@ -1,0 +1,61 @@
+{
+  "status": "SOURCE_TRAIT_SUPPORT_AUDITED_NO_MODEL",
+  "source_run": 45867952345,
+  "england_artifact": 15140444499,
+  "archive_sha256": "1a2e553f559406a328e3854aae2a9cc014d10fb772d74297d81493dff1149072",
+  "member_sha256": {
+    "csv": "8556647d60d288a3e98a872afd9a5623f5c6a0d09fae84388e81b2fb47b61bd7",
+    "evidence_pdf": "7d24f15b1e4cbae840e393c28fdfeaa784f765074942f7490cd7db528f824c8c",
+    "package": "168ff69fe890ba245bd9ccf442935e928806915c7553b24837423b4589cbaf07"
+  },
+  "local_crc_pass": true,
+  "source_support": {
+    "rows": 1813,
+    "sites": 310,
+    "location_tiles": 289,
+    "regions": 8,
+    "excluded_labels": {
+      "Myotis": 305,
+      "Plecotus austriacus": 3
+    },
+    "confirmed_single_species": 9,
+    "matched_all_four_domains_species": 9,
+    "matched_records": 1505,
+    "matched_sites": 310,
+    "match_fraction": 0.8301158301158301,
+    "median_site_fraction": 0.8333333333333334,
+    "public_tile_area_km2_min_median_max": [
+      25,
+      25,
+      375
+    ],
+    "overlapping_distinct_tile_pairs": 2,
+    "effort_min_median_max": [
+      5,
+      27,
+      90
+    ],
+    "cross_year_sites": 33
+  },
+  "trait_archive_sha256": "173f6af963c41e8db2fe314a3ffd1285566e564e4e941d2df83c892c84ec23d9",
+  "trait_domains": [
+    "mass",
+    "flight indices",
+    "free-flight peak frequency and duration",
+    "main maternity roost category"
+  ],
+  "swiss_status": "STOP_UNVERIFIED_REDIRECT_HOST_HTTP302_NO_SOURCE_BYTES",
+  "new_structure_catalogue": {
+    "dataset_id": "7ac16040-f61f-4ace-9c07-22945e6d0292",
+    "script_commit": "24d27d40440ef7d2574a20e05c0897bd47a8401a",
+    "workflow_commit": "ad9e6bd9c31c94e998afc86137779651d88eb1c0"
+  },
+  "limitations": [
+    "Incidence only; source warns against acoustic activity weighted diversity.",
+    "Myotis genus is excluded despite 305 sites; cannot call whole-community FD.",
+    "Public bounding rectangles only; no confidential square reconstruction. Overlapping tiles must remain together for validation.",
+    "Single approximately 2m detector height, site-year aggregation; no direct height/time FD.",
+    "General NCEA limitations PDF not yet obtained; current survey not fully representative.",
+    "No raster join or ecological fit; no main merge."
+  ]
+}
