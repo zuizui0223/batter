@@ -50,7 +50,10 @@ jobs:
               out['title']=m.get('title');out['license']=m.get('license')
               assert len(m['files'])<=30 and sum(int(f['size']) for f in m['files'])<=100*1024**2
               for f in m['files']:
-                  n=int(f['size']);b=get(f['downloadUrl'],min(n,100*1024**2))
+                  n=int(f['size']);url=f.get('downloadUrl') or f.get('download_url')
+                  if not url:
+                      out['file_schema_keys']=sorted(f);raise ValueError('no documented download URL')
+                  assert url.startswith('https://');b=get(url,min(n,100*1024**2))
                   md=f.get('computed_md5') or f.get('supplied_md5')
                   assert md and len(b)==n and hashlib.md5(b).hexdigest()==md
                   receipt={'name':f['name'],'id':f['id'],'bytes':n,'md5':md,'sha256':hashlib.sha256(b).hexdigest()}
