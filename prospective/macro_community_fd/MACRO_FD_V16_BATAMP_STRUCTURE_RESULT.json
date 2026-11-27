@@ -1,0 +1,245 @@
+{
+  "stage": "coarse-grid BatAMP monitored-pool wing FD and measured vegetation",
+  "status": "ENVIRONMENT_SUPPORT_STOP",
+  "source_commit": "15e2bf60d63aea0246fcec178ebd152b4164f367",
+  "response_order": [
+    "wing_MPD_excess_monitored_pool",
+    "wing_MPD_detected",
+    "size_MPD_excess_monitored_pool"
+  ],
+  "feature_order": [
+    "log_monitored_matched",
+    "log_detected_matched",
+    "trait_coverage",
+    "mean_reported_nights",
+    "sd_reported_nights",
+    "log1p_mic_height",
+    "nabat",
+    "activity",
+    "month_sin",
+    "month_cos",
+    "year",
+    "abs_lat",
+    "bio1",
+    "bio4",
+    "bio5",
+    "bio6",
+    "bio12",
+    "bio15",
+    "log1p_RH98",
+    "cover",
+    "log1p_PAI",
+    "climate_area_support",
+    "GEDI_area_support",
+    "monitored_wing_MPD",
+    "log1p_range_richness",
+    "log1p_range_wing_richness",
+    "bottom_half_PAVD_fraction"
+  ],
+  "limits": [
+    "no true occupancy, altitude-specific use or actual competitive partitioning",
+    "published monthly aggregates and source-imputed zeros",
+    "coarse vegetation association, 15km guard not coordinate calibration",
+    "no raw locations or identifiers exported",
+    "not independent of all prior US sources"
+  ],
+  "batamp_files": {
+    "ui/static/data/detectors.feather": {
+      "bytes": 915034,
+      "git_blob": "d7a8a122e47e2a116be975765760c8376a801b91",
+      "sha256": "a47274522aa3446407833316a3338ecdfc7966fe24213bb5b93a2e86d8a96129"
+    },
+    "ui/static/data/spp_detections.feather": {
+      "bytes": 2387282,
+      "git_blob": "b293bacbd1c0eedf0be67231f982c6eb1fb41c47",
+      "sha256": "69abe3c7b26d6cd739fd3b0ac879f906b7f23b640ce7a9431d273072c10b4c04"
+    },
+    "ui/src/config.js": {
+      "bytes": 6673,
+      "git_blob": "cab3c375f1ea93db2582100875d7d0ac5bef4f47",
+      "sha256": "75bf9bf24db8a9db7d1df5508c4a29b09632b7e396403d25f2c0a022d38cfa3c"
+    },
+    "analysis/README.md": {
+      "bytes": 17325,
+      "git_blob": "b24e548ca06c3ae0cd3eb930902c936422bb3499",
+      "sha256": "2687e13f9233deb545971fc8c5afd279adfd7d97ac1a6ea4ddcd70bba29b1cfd"
+    },
+    "analysis/merge.py": {
+      "bytes": 33255,
+      "git_blob": "86151a9dd662e78af0ed0d7cc08483733fd3c303",
+      "sha256": "3ef74a39d0d9ed8d2ece7b91f0f9a698eb0dd28bbe8437468f7d5abf024bfb80"
+    }
+  },
+  "range_source": {
+    "commit": "db6f0a5584ef5b0d899770d231476c6589cb16b8",
+    "metadata_blob": "f2538374945f602f7c148d1a534be491895cd6e1",
+    "all_current_maps": 5831,
+    "chiroptera_metadata": 1162,
+    "positive_maps_before_count_gate": 1141,
+    "verified_maps": 1162,
+    "exact_count": 1162,
+    "zero_maps": 21,
+    "count_mismatches": [],
+    "exact_positive_maps": 1141,
+    "grid_shape": [
+      142,
+      360
+    ],
+    "pixel_m": [
+      96486.27222222222,
+      96514.95774647887
+    ],
+    "crs": "EPSG:6933"
+  },
+  "trait_source": {
+    "artifact": 15069663941,
+    "zip_sha256": "fa45d435204439bd4600143540bc6960e0b814405cec938c3275c19ebbd2fb09",
+    "member_sha256": "99a19c169e18a0bafa4a518b7f844b56d2fe846cac13d5c035f4eae562a74c7b",
+    "species": 280
+  },
+  "detector_support": {
+    "regional_positive_height_nonempty_source": 9082,
+    "grid_interior_and_GEDI_latitude": 4246
+  },
+  "unit_attrition": {
+    "all_detector_months": 381,
+    "monitored_trait_gate": 379,
+    "detected_gate": 267
+  },
+  "pre_environment": {
+    "units": 267,
+    "sites": 200,
+    "native_cells": 64,
+    "blocks2": 47,
+    "dataset_strings": 54,
+    "distinct_source_dataset_strings": 54
+  },
+  "climate": {
+    "bytes": 49869449,
+    "sha256": "00513224583665ec0f2f955a4ec252730c4deb2004cce9e793492a3f26df4dcf",
+    "members": {
+      "wc2.1_10m_bio_1.tif": "f61633ffac9d44ed220442b3f7171a06f931726668bfbe9d07d53700b257d8cf",
+      "wc2.1_10m_bio_4.tif": "a1bacac2f3d645284ee506fdde14226d7c2cafd5997a2af2f802f45e3550ae19",
+      "wc2.1_10m_bio_5.tif": "32e02d85868734c32547da70cf9c620f4739a3cf5dbc4f2b751e16ebb2338ae1",
+      "wc2.1_10m_bio_6.tif": "7cc728620cba21564bbed19d5fe6268a0ef0bd2578b757a3acf45ef65b8b4007",
+      "wc2.1_10m_bio_12.tif": "1e823e951ace0186c6eadd7368b4d0385c8f51cc952282c0f2d640bf7790fea5",
+      "wc2.1_10m_bio_15.tif": "6e16bf2e37752932cdeb2b209d1e06ba1a154ac012c372e56bc98e774cdfa6c6"
+    },
+    "native_shape": [
+      1080,
+      2160
+    ],
+    "common_valid_pixels": 808053,
+    "range_cells_ge50pct": 15070
+  },
+  "GEDI": {
+    "doi": "10.3334/ORNLDAAC/2339",
+    "metrics": {
+      "rh-98-a0": {
+        "bytes": 35602554,
+        "sha256": "72ade8803e3b80aad3316633a3a61ea1bb2c745e8166932776e5e89da0b6b413",
+        "granule_id": "G3258087918-ORNL_CLOUD",
+        "title": "GEDI_HighQuality_Shots_Rasters.gediv002_rh-98-a0_vf_20190417_20230316_12000m.tif",
+        "descriptions": [
+          "mean",
+          "meanbse",
+          "median",
+          "sd",
+          "iqr",
+          "p95",
+          "shan",
+          "countf"
+        ],
+        "band_lookup": {
+          "mean": 1,
+          "count": 8
+        },
+        "native_valid": 754369
+      },
+      "cover-a0": {
+        "bytes": 39867315,
+        "sha256": "48d852d46634b917fbc0a2544ed604b70ff7fa2a5d8585597c6c58cdb196d13b",
+        "granule_id": "G3258087844-ORNL_CLOUD",
+        "title": "GEDI_HighQuality_Shots_Rasters.gediv002_cover-a0_vf_20190417_20230316_12000m.tif",
+        "descriptions": [
+          "mean",
+          "meanbse",
+          "median",
+          "sd",
+          "iqr",
+          "p95",
+          "shan",
+          "countf"
+        ],
+        "band_lookup": {
+          "mean": 1,
+          "count": 8
+        },
+        "native_valid": 754369
+      },
+      "pai-a0": {
+        "bytes": 39987100,
+        "sha256": "39a3ddf5dd8fca5324c68a6b916a3020eb39a9d7da15962e554479a938c4acab",
+        "granule_id": "G3258087708-ORNL_CLOUD",
+        "title": "GEDI_HighQuality_Shots_Rasters.gediv002_pai-a0_vf_20190417_20230316_12000m.tif",
+        "descriptions": [
+          "mean",
+          "meanbse",
+          "median",
+          "sd",
+          "iqr",
+          "p95",
+          "shan",
+          "countf"
+        ],
+        "band_lookup": {
+          "mean": 1,
+          "count": 8
+        },
+        "native_valid": 754369
+      },
+      "pavd-bot-frac": {
+        "bytes": 36635049,
+        "sha256": "644b9b2c62d3b59c5d6929ce7a71fee537b3c94e6f89b883eff13b847000a2b6",
+        "granule_id": "G3258087271-ORNL_CLOUD",
+        "title": "GEDI_HighQuality_Shots_Rasters.gediv002_pavd-bot-frac_vf_20190417_20230316_12000m.tif",
+        "descriptions": [
+          "mean",
+          "meanbse",
+          "median",
+          "sd",
+          "iqr",
+          "p95",
+          "shan",
+          "countf"
+        ],
+        "band_lookup": {
+          "mean": 1,
+          "count": 8
+        },
+        "native_valid": 749456
+      }
+    },
+    "common_native_pixels": 749456,
+    "native_shape": [
+      965,
+      2881
+    ],
+    "range_cells_ge50pct": 11659
+  },
+  "post_environment": {
+    "units": 105,
+    "sites": 70,
+    "native_cells": 17,
+    "blocks2": 14,
+    "dataset_strings": 23,
+    "distinct_source_dataset_strings": 23
+  },
+  "audit": {
+    "run": 46081693092,
+    "job": 140781904233,
+    "head": "bb8639c9257942aa868221b823601da3a0b485c1",
+    "scope": "executed aggregate log; output ZIP not independently rehashed",
+    "decision": "V16 ENVIRONMENT_SUPPORT_STOP: 105 units/70 sites/17 native cells/14 blocks2/23 dataset strings after environment gate; minimum 20 cells and 15 blocks2 fail. No fit or ecological outcome. Preserve original gates. Distinct next estimand: broad landscape monitored species conditional detection allocation, not local or vertical FD."
+  }
+}
