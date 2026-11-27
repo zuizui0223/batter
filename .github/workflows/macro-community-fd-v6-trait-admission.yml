@@ -1,0 +1,76 @@
+name: Macro community FD V6 trait database admission
+on:
+  push:
+    branches: [prospective/macro-community-fd-20261127]
+    paths: ['.github/workflows/macro-community-fd-v6-trait-admission.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  traits:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Acquire exact published COMBINE version and inspect data dictionary
+        run: |
+          python - <<'PY'
+          import urllib.request,json,hashlib,zipfile,io,collections,csv,re
+          from pathlib import Path
+          out={'doi':'10.6084/m9.figshare.13028255.v4','status':'START','files':[]}
+          def get(u,cap):
+              q=urllib.request.Request(u,headers={'User-Agent':'batter-public-source-audit/1.0'})
+              with urllib.request.urlopen(q,timeout=45) as r:b=r.read(cap+1)
+              if len(b)>cap:raise ValueError('size cap')
+              return b
+          def inspect(name,b):
+              if not name.lower().endswith(('.csv','.tsv','.txt')):return {}
+              for enc in ('utf-8-sig','cp1252'):
+                  try:s=b.decode(enc);break
+                  except UnicodeDecodeError:continue
+              else:return {}
+              if not s.strip():return {}
+              try:dialect=csv.Sniffer().sniff(s[:8192],delimiters=',;\t')
+              except csv.Error:return {'text_preview':s[:1600]} if len(b)<100000 else {}
+              r=csv.reader(io.StringIO(s),dialect=dialect)
+              h=next(r);n=0;bad=0
+              examples=[]
+              for x in r:
+                  n+=1;bad+=int(len(x)!=len(h))
+                  if len(examples)<3 and len(x)==len(h):examples.append(x)
+              # Public species trait tables, report field names and limited metadata only.
+              low=name.lower()
+              meta=any(k in low for k in ['description','definition','dictionary','metadata','readme','data_source','trait_source'])
+              return {'columns':h,'rows':n,'irregular':bad,**({'metadata_examples':examples} if meta else {})}
+          try:
+              m=json.loads(get('https://api.figshare.com/v2/articles/13028255/versions/4',2*1024**2))
+              assert m.get('doi')=='10.6084/m9.figshare.13028255.v4' and int(m['version'])==4
+              out['title']=m.get('title');out['license']=m.get('license')
+              assert len(m['files'])<=30 and sum(int(f['size']) for f in m['files'])<=100*1024**2
+              for f in m['files']:
+                  n=int(f['size']);b=get(f['downloadUrl'],min(n,100*1024**2))
+                  md=f.get('computed_md5') or f.get('supplied_md5')
+                  assert md and len(b)==n and hashlib.md5(b).hexdigest()==md
+                  receipt={'name':f['name'],'id':f['id'],'bytes':n,'md5':md,'sha256':hashlib.sha256(b).hexdigest()}
+                  if zipfile.is_zipfile(io.BytesIO(b)):
+                      with zipfile.ZipFile(io.BytesIO(b)) as z:
+                          assert len(z.infolist())<=1000 and sum(x.file_size for x in z.infolist())<=500*1024**2 and z.testzip() is None
+                          receipt['members']=[]
+                          for i in z.infolist():
+                              if i.is_dir():continue
+                              a=z.read(i);s={'path':i.filename,'bytes':len(a),'sha256':hashlib.sha256(a).hexdigest()}
+                              s.update(inspect(i.filename,a));receipt['members'].append(s)
+                  else:receipt.update(inspect(f['name'],b))
+                  out['files'].append(receipt)
+              out['status']='SOURCE_ADMITTED_SCHEMA_ONLY'
+          except Exception as e:out.update(status='STOP',error_type=type(e).__name__,error=str(e)[:120])
+          Path('combine_v6_admission.json').write_text(json.dumps(out,indent=2,ensure_ascii=False))
+          print('COMBINE_V6_REPORT='+json.dumps(out,ensure_ascii=False))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: combine-v6-source-admission
+          path: combine_v6_admission.json
+          retention-days: 30
