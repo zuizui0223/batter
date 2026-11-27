@@ -1,0 +1,2088 @@
+{
+  "status": "COMPLETE_COVERAGE_ONLY",
+  "scope": "range-domain coverage only; no biological effect fit",
+  "doi": "10.6084/m9.figshare.13028255.v4",
+  "sources": {
+    "trait_data_reported.csv": {
+      "id": 27703263,
+      "bytes": 1612538,
+      "sha256": "14ace2dff03b71c20dc923a9eb293aaadc29934e21c6f11fa30d1b70e5abab92",
+      "md5": "d894586c3858620723b1182d8b491d3e",
+      "rows": 6263,
+      "duplicate_key_rows": 0
+    },
+    "trait_data_sources.csv": {
+      "id": 27703260,
+      "bytes": 3552819,
+      "sha256": "f0d8ba1e42fabed49ffd0d4e61a577c3bfee0a787b9886c5891f8707112a1200",
+      "md5": "f883e787cfed1a27342db4711eedaabd",
+      "rows": 6263,
+      "duplicate_key_rows": 0
+    },
+    "trait_data_imputed.csv": {
+      "id": 27703266,
+      "bytes": 1891897,
+      "sha256": "b576cfd9f12b1441eb564bbf7acb65f06e676108aa0651aed9594585e7ff65f9",
+      "md5": "5c0af319124163830a8e7fa89c0abda5",
+      "rows": 6263,
+      "duplicate_key_rows": 0
+    }
+  },
+  "table_bat_rows": 1342,
+  "range_source": {
+    "commit": "db6f0a5584ef5b0d899770d231476c6589cb16b8",
+    "metadata_blob": "f2538374945f602f7c148d1a534be491895cd6e1",
+    "all_current_maps": 5831,
+    "chiroptera_metadata": 1162,
+    "positive_maps_before_count_gate": 1141,
+    "verified_maps": 1162,
+    "exact_count": 1162,
+    "zero_maps": 21,
+    "count_mismatches": [],
+    "exact_positive_maps": 1141,
+    "grid_shape": [
+      142,
+      360
+    ],
+    "pixel_m": [
+      96486.27222222222,
+      96514.95774647887
+    ],
+    "crs": "EPSG:6933"
+  },
+  "trait_source": {
+    "artifact": 15069663941,
+    "zip_sha256": "fa45d435204439bd4600143540bc6960e0b814405cec938c3275c19ebbd2fb09",
+    "member_sha256": "99a19c169e18a0bafa4a518b7f844b56d2fe846cac13d5c035f4eae562a74c7b",
+    "species": 280
+  },
+  "name_mapping": {
+    "positive_range_species": 1141,
+    "COMBINE_bat_rows": 1342,
+    "exact_matching_rows": 1256,
+    "ambiguous_range_labels": 72,
+    "exact_unique_matches": 1069,
+    "unmatched_or_ambiguous_range_labels": 72
+  },
+  "field_coverage": {
+    "adult_mass_g": {
+      "reported_nonmissing": 1058,
+      "strict_reported": 1058,
+      "imputed_table_nonmissing": 1058,
+      "imputed_flag_with_reported_value": 0,
+      "source_annotations_for_reported_values": {
+        "Amniotes": 935,
+        "PHYLACINE": 92,
+        "split from Artibeus jamaicensis": 1,
+        "Smith et al. (2003) (EltonTraits)": 19,
+        "split from Cynomops paranus": 1,
+        "split from Eptesicus serotinus": 1,
+        "split from Eumops glaucinus": 1,
+        "split from Lophostoma silvicolum": 1,
+        "split from Megaloglossus woermanni": 1,
+        "split from Myonycteris torquata": 1,
+        "split from Myotis martiniquensis": 1,
+        "split from Platyrrhinus dorsalis": 1,
+        "split from Pteronotus parnellii": 2,
+        "split from Vampyrodes caraccioli": 1
+      },
+      "reported_numeric": {
+        "finite_numeric": 1058,
+        "non_numeric": 0,
+        "quantiles": [
+          1.98,
+          7.4,
+          13.58,
+          28.0875,
+          1087.04
+        ]
+      }
+    },
+    "adult_forearm_length_mm": {
+      "reported_nonmissing": 842,
+      "strict_reported": 842,
+      "imputed_table_nonmissing": 842,
+      "imputed_flag_with_reported_value": 0,
+      "source_annotations_for_reported_values": {
+        "PanTHERIA": 810,
+        "split from Artibeus jamaicensis": 2,
+        "split from Carollia brevicauda": 1,
+        "split from Eptesicus serotinus": 1,
+        "split from Eumops glaucinus": 2,
+        "split from Hipposideros bicolor": 1,
+        "split from Lonchophylla mordax": 1,
+        "split from Lophostoma silvicolum": 1,
+        "split from Megaloglossus woermanni": 1,
+        "split from Miniopterus fraterculus": 1,
+        "split from Myonycteris torquata": 1,
+        "split from Myotis levis": 1,
+        "split from Myotis martiniquensis": 1,
+        "split from Myotis formosus": 1,
+        "split from Natalus stramineus": 2,
+        "split from Neoromicia somalica": 1,
+        "split from Paremballonura atrata": 1,
+        "split from Pipistrellus tenuis": 1,
+        "split from Platyrrhinus dorsalis": 2,
+        "split from Platyrrhinus helleri": 1,
+        "split from Plecotus auritus": 3,
+        "split from Promops centralis": 1,
+        "split from Pteralopex anceps": 1,
+        "split from Pteronotus parnellii": 3,
+        "split from Vampyrodes caraccioli": 1
+      },
+      "reported_numeric": {
+        "finite_numeric": 842,
+        "non_numeric": 0,
+        "quantiles": [
+          23,
+          37.5,
+          45,
+          58.565000000000005,
+          200
+        ]
+      }
+    },
+    "adult_body_length_mm": {
+      "reported_nonmissing": 456,
+      "strict_reported": 456,
+      "imputed_table_nonmissing": 1069,
+      "imputed_flag_with_reported_value": 0,
+      "source_annotations_for_reported_values": {
+        "Amniotes": 425,
+        "split from Artibeus jamaicensis": 2,
+        "split from Carollia brevicauda": 1,
+        "split from Cynomops paranus": 1,
+        "split from Dermanura glauca": 1,
+        "split from Eptesicus serotinus": 1,
+        "split from Eumops glaucinus": 2,
+        "split from Lonchophylla mordax": 1,
+        "split from Lophostoma silvicolum": 1,
+        "split from Megaloglossus woermanni": 1,
+        "split from Miniopterus fraterculus": 1,
+        "split from Myonycteris torquata": 1,
+        "split from Myotis mystacinus": 2,
+        "split from Natalus stramineus": 2,
+        "split from Neoromicia somalica": 1,
+        "split from Paremballonura atrata": 1,
+        "split from Platyrrhinus dorsalis": 2,
+        "split from Platyrrhinus helleri": 1,
+        "split from Plecotus auritus": 3,
+        "split from Promops centralis": 1,
+        "split from Pteralopex anceps": 1,
+        "split from Pteronotus parnellii": 3,
+        "split from Vampyrodes caraccioli": 1
+      },
+      "reported_numeric": {
+        "finite_numeric": 456,
+        "non_numeric": 0,
+        "quantiles": [
+          30.99,
+          59,
+          75,
+          103.375,
+          340
+        ]
+      }
+    },
+    "dphy_plant": {
+      "reported_nonmissing": 1069,
+      "strict_reported": 1069,
+      "imputed_table_nonmissing": 1069,
+      "imputed_flag_with_reported_value": 0,
+      "source_annotations_for_reported_values": {
+        "PHYLACINE": 1069
+      },
+      "reported_numeric": {
+        "finite_numeric": 1069,
+        "non_numeric": 0,
+        "quantiles": [
+          0,
+          0,
+          0,
+          80,
+          100
+        ]
+      }
+    },
+    "dphy_vertebrate": {
+      "reported_nonmissing": 1069,
+      "strict_reported": 1069,
+      "imputed_table_nonmissing": 1069,
+      "imputed_flag_with_reported_value": 0,
+      "source_annotations_for_reported_values": {
+        "PHYLACINE": 1069
+      },
+      "reported_numeric": {
+        "finite_numeric": 1069,
+        "non_numeric": 0,
+        "quantiles": [
+          0,
+          0,
+          0,
+          0,
+          100
+        ]
+      }
+    },
+    "dphy_invertebrate": {
+      "reported_nonmissing": 1069,
+      "strict_reported": 1069,
+      "imputed_table_nonmissing": 1069,
+      "imputed_flag_with_reported_value": 0,
+      "source_annotations_for_reported_values": {
+        "PHYLACINE": 1069
+      },
+      "reported_numeric": {
+        "finite_numeric": 1069,
+        "non_numeric": 0,
+        "quantiles": [
+          0,
+          20,
+          100,
+          100,
+          100
+        ]
+      }
+    },
+    "det_inv": {
+      "reported_nonmissing": 837,
+      "strict_reported": 837,
+      "imputed_table_nonmissing": 837,
+      "imputed_flag_with_reported_value": 0,
+      "source_annotations_for_reported_values": {
+        "EltonTraits": 799,
+        "split from Artibeus jamaicensis": 2,
+        "split from Carollia brevicauda": 1,
+        "split from Cynomops paranus": 1,
+        "split from Dermanura glauca": 1,
+        "split from Epomophorus labiatus": 1,
+        "split from Eptesicus serotinus": 1,
+        "split from Eumops glaucinus": 2,
+        "split from Hipposideros bicolor": 1,
+        "split from Lonchophylla mordax": 1,
+        "split from Lophostoma silvicolum": 1,
+        "split from Megaloglossus woermanni": 1,
+        "split from Miniopterus minor": 2,
+        "split from Miniopterus fraterculus": 1,
+        "split from Myotis mystacinus": 2,
+        "split from Myotis levis": 1,
+        "split from Myotis martiniquensis": 1,
+        "split from Myotis formosus": 1,
+        "split from Natalus stramineus": 2,
+        "split from Neoromicia somalica": 1,
+        "split from Paremballonura atrata": 1,
+        "split from Pipistrellus tenuis": 1,
+        "split from Platyrrhinus dorsalis": 2,
+        "split from Platyrrhinus helleri": 1,
+        "split from Plecotus auritus": 3,
+        "split from Promops centralis": 1,
+        "split from Pteralopex anceps": 1,
+        "split from Pteronotus parnellii": 3,
+        "split from Vampyrodes caraccioli": 1
+      },
+      "reported_numeric": {
+        "finite_numeric": 837,
+        "non_numeric": 0,
+        "quantiles": [
+          0,
+          20,
+          100,
+          100,
+          100
+        ]
+      }
+    },
+    "det_vend": {
+      "reported_nonmissing": 837,
+      "strict_reported": 837,
+      "imputed_table_nonmissing": 837,
+      "imputed_flag_with_reported_value": 0,
+      "source_annotations_for_reported_values": {
+        "EltonTraits": 799,
+        "split from Artibeus jamaicensis": 2,
+        "split from Carollia brevicauda": 1,
+        "split from Cynomops paranus": 1,
+        "split from Dermanura glauca": 1,
+        "split from Epomophorus labiatus": 1,
+        "split from Eptesicus serotinus": 1,
+        "split from Eumops glaucinus": 2,
+        "split from Hipposideros bicolor": 1,
+        "split from Lonchophylla mordax": 1,
+        "split from Lophostoma silvicolum": 1,
+        "split from Megaloglossus woermanni": 1,
+        "split from Miniopterus minor": 2,
+        "split from Miniopterus fraterculus": 1,
+        "split from Myotis mystacinus": 2,
+        "split from Myotis levis": 1,
+        "split from Myotis martiniquensis": 1,
+        "split from Myotis formosus": 1,
+        "split from Natalus stramineus": 2,
+        "split from Neoromicia somalica": 1,
+        "split from Paremballonura atrata": 1,
+        "split from Pipistrellus tenuis": 1,
+        "split from Platyrrhinus dorsalis": 2,
+        "split from Platyrrhinus helleri": 1,
+        "split from Plecotus auritus": 3,
+        "split from Promops centralis": 1,
+        "split from Pteralopex anceps": 1,
+        "split from Pteronotus parnellii": 3,
+        "split from Vampyrodes caraccioli": 1
+      },
+      "reported_numeric": {
+        "finite_numeric": 837,
+        "non_numeric": 0,
+        "quantiles": [
+          0,
+          0,
+          0,
+          0,
+          100
+        ]
+      }
+    },
+    "det_vect": {
+      "reported_nonmissing": 837,
+      "strict_reported": 837,
+      "imputed_table_nonmissing": 837,
+      "imputed_flag_with_reported_value": 0,
+      "source_annotations_for_reported_values": {
+        "EltonTraits": 799,
+        "split from Artibeus jamaicensis": 2,
+        "split from Carollia brevicauda": 1,
+        "split from Cynomops paranus": 1,
+        "split from Dermanura glauca": 1,
+        "split from Epomophorus labiatus": 1,
+        "split from Eptesicus serotinus": 1,
+        "split from Eumops glaucinus": 2,
+        "split from Hipposideros bicolor": 1,
+        "split from Lonchophylla mordax": 1,
+        "split from Lophostoma silvicolum": 1,
+        "split from Megaloglossus woermanni": 1,
+        "split from Miniopterus minor": 2,
+        "split from Miniopterus fraterculus": 1,
+        "split from Myotis mystacinus": 2,
+        "split from Myotis levis": 1,
+        "split from Myotis martiniquensis": 1,
+        "split from Myotis formosus": 1,
+        "split from Natalus stramineus": 2,
+        "split from Neoromicia somalica": 1,
+        "split from Paremballonura atrata": 1,
+        "split from Pipistrellus tenuis": 1,
+        "split from Platyrrhinus dorsalis": 2,
+        "split from Platyrrhinus helleri": 1,
+        "split from Plecotus auritus": 3,
+        "split from Promops centralis": 1,
+        "split from Pteralopex anceps": 1,
+        "split from Pteronotus parnellii": 3,
+        "split from Vampyrodes caraccioli": 1
+      },
+      "reported_numeric": {
+        "finite_numeric": 837,
+        "non_numeric": 0,
+        "quantiles": [
+          0,
+          0,
+          0,
+          0,
+          50
+        ]
+      }
+    },
+    "det_vfish": {
+      "reported_nonmissing": 837,
+      "strict_reported": null,
+      "imputed_table_nonmissing": 837,
+      "source_status": "exact source field absent",
+      "reported_numeric": {
+        "finite_numeric": 837,
+        "non_numeric": 0,
+        "quantiles": [
+          0,
+          0,
+          0,
+          0,
+          50
+        ]
+      }
+    },
+    "det_vunk": {
+      "reported_nonmissing": 837,
+      "strict_reported": 837,
+      "imputed_table_nonmissing": 837,
+      "imputed_flag_with_reported_value": 0,
+      "source_annotations_for_reported_values": {
+        "EltonTraits": 799,
+        "split from Artibeus jamaicensis": 2,
+        "split from Carollia brevicauda": 1,
+        "split from Cynomops paranus": 1,
+        "split from Dermanura glauca": 1,
+        "split from Epomophorus labiatus": 1,
+        "split from Eptesicus serotinus": 1,
+        "split from Eumops glaucinus": 2,
+        "split from Hipposideros bicolor": 1,
+        "split from Lonchophylla mordax": 1,
+        "split from Lophostoma silvicolum": 1,
+        "split from Megaloglossus woermanni": 1,
+        "split from Miniopterus minor": 2,
+        "split from Miniopterus fraterculus": 1,
+        "split from Myotis mystacinus": 2,
+        "split from Myotis levis": 1,
+        "split from Myotis martiniquensis": 1,
+        "split from Myotis formosus": 1,
+        "split from Natalus stramineus": 2,
+        "split from Neoromicia somalica": 1,
+        "split from Paremballonura atrata": 1,
+        "split from Pipistrellus tenuis": 1,
+        "split from Platyrrhinus dorsalis": 2,
+        "split from Platyrrhinus helleri": 1,
+        "split from Plecotus auritus": 3,
+        "split from Promops centralis": 1,
+        "split from Pteralopex anceps": 1,
+        "split from Pteronotus parnellii": 3,
+        "split from Vampyrodes caraccioli": 1
+      },
+      "reported_numeric": {
+        "finite_numeric": 837,
+        "non_numeric": 0,
+        "quantiles": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "det_scav": {
+      "reported_nonmissing": 837,
+      "strict_reported": 837,
+      "imputed_table_nonmissing": 837,
+      "imputed_flag_with_reported_value": 0,
+      "source_annotations_for_reported_values": {
+        "EltonTraits": 799,
+        "split from Artibeus jamaicensis": 2,
+        "split from Carollia brevicauda": 1,
+        "split from Cynomops paranus": 1,
+        "split from Dermanura glauca": 1,
+        "split from Epomophorus labiatus": 1,
+        "split from Eptesicus serotinus": 1,
+        "split from Eumops glaucinus": 2,
+        "split from Hipposideros bicolor": 1,
+        "split from Lonchophylla mordax": 1,
+        "split from Lophostoma silvicolum": 1,
+        "split from Megaloglossus woermanni": 1,
+        "split from Miniopterus minor": 2,
+        "split from Miniopterus fraterculus": 1,
+        "split from Myotis mystacinus": 2,
+        "split from Myotis levis": 1,
+        "split from Myotis martiniquensis": 1,
+        "split from Myotis formosus": 1,
+        "split from Natalus stramineus": 2,
+        "split from Neoromicia somalica": 1,
+        "split from Paremballonura atrata": 1,
+        "split from Pipistrellus tenuis": 1,
+        "split from Platyrrhinus dorsalis": 2,
+        "split from Platyrrhinus helleri": 1,
+        "split from Plecotus auritus": 3,
+        "split from Promops centralis": 1,
+        "split from Pteralopex anceps": 1,
+        "split from Pteronotus parnellii": 3,
+        "split from Vampyrodes caraccioli": 1
+      },
+      "reported_numeric": {
+        "finite_numeric": 837,
+        "non_numeric": 0,
+        "quantiles": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "det_fruit": {
+      "reported_nonmissing": 837,
+      "strict_reported": 837,
+      "imputed_table_nonmissing": 837,
+      "imputed_flag_with_reported_value": 0,
+      "source_annotations_for_reported_values": {
+        "EltonTraits": 799,
+        "split from Artibeus jamaicensis": 2,
+        "split from Carollia brevicauda": 1,
+        "split from Cynomops paranus": 1,
+        "split from Dermanura glauca": 1,
+        "split from Epomophorus labiatus": 1,
+        "split from Eptesicus serotinus": 1,
+        "split from Eumops glaucinus": 2,
+        "split from Hipposideros bicolor": 1,
+        "split from Lonchophylla mordax": 1,
+        "split from Lophostoma silvicolum": 1,
+        "split from Megaloglossus woermanni": 1,
+        "split from Miniopterus minor": 2,
+        "split from Miniopterus fraterculus": 1,
+        "split from Myotis mystacinus": 2,
+        "split from Myotis levis": 1,
+        "split from Myotis martiniquensis": 1,
+        "split from Myotis formosus": 1,
+        "split from Natalus stramineus": 2,
+        "split from Neoromicia somalica": 1,
+        "split from Paremballonura atrata": 1,
+        "split from Pipistrellus tenuis": 1,
+        "split from Platyrrhinus dorsalis": 2,
+        "split from Platyrrhinus helleri": 1,
+        "split from Plecotus auritus": 3,
+        "split from Promops centralis": 1,
+        "split from Pteralopex anceps": 1,
+        "split from Pteronotus parnellii": 3,
+        "split from Vampyrodes caraccioli": 1
+      },
+      "reported_numeric": {
+        "finite_numeric": 837,
+        "non_numeric": 0,
+        "quantiles": [
+          0,
+          0,
+          0,
+          30,
+          100
+        ]
+      }
+    },
+    "det_nect": {
+      "reported_nonmissing": 837,
+      "strict_reported": 837,
+      "imputed_table_nonmissing": 837,
+      "imputed_flag_with_reported_value": 0,
+      "source_annotations_for_reported_values": {
+        "EltonTraits": 799,
+        "split from Artibeus jamaicensis": 2,
+        "split from Carollia brevicauda": 1,
+        "split from Cynomops paranus": 1,
+        "split from Dermanura glauca": 1,
+        "split from Epomophorus labiatus": 1,
+        "split from Eptesicus serotinus": 1,
+        "split from Eumops glaucinus": 2,
+        "split from Hipposideros bicolor": 1,
+        "split from Lonchophylla mordax": 1,
+        "split from Lophostoma silvicolum": 1,
+        "split from Megaloglossus woermanni": 1,
+        "split from Miniopterus minor": 2,
+        "split from Miniopterus fraterculus": 1,
+        "split from Myotis mystacinus": 2,
+        "split from Myotis levis": 1,
+        "split from Myotis martiniquensis": 1,
+        "split from Myotis formosus": 1,
+        "split from Natalus stramineus": 2,
+        "split from Neoromicia somalica": 1,
+        "split from Paremballonura atrata": 1,
+        "split from Pipistrellus tenuis": 1,
+        "split from Platyrrhinus dorsalis": 2,
+        "split from Platyrrhinus helleri": 1,
+        "split from Plecotus auritus": 3,
+        "split from Promops centralis": 1,
+        "split from Pteralopex anceps": 1,
+        "split from Pteronotus parnellii": 3,
+        "split from Vampyrodes caraccioli": 1
+      },
+      "reported_numeric": {
+        "finite_numeric": 837,
+        "non_numeric": 0,
+        "quantiles": [
+          0,
+          0,
+          0,
+          0,
+          100
+        ]
+      }
+    },
+    "det_seed": {
+      "reported_nonmissing": 837,
+      "strict_reported": 837,
+      "imputed_table_nonmissing": 837,
+      "imputed_flag_with_reported_value": 0,
+      "source_annotations_for_reported_values": {
+        "EltonTraits": 799,
+        "split from Artibeus jamaicensis": 2,
+        "split from Carollia brevicauda": 1,
+        "split from Cynomops paranus": 1,
+        "split from Dermanura glauca": 1,
+        "split from Epomophorus labiatus": 1,
+        "split from Eptesicus serotinus": 1,
+        "split from Eumops glaucinus": 2,
+        "split from Hipposideros bicolor": 1,
+        "split from Lonchophylla mordax": 1,
+        "split from Lophostoma silvicolum": 1,
+        "split from Megaloglossus woermanni": 1,
+        "split from Miniopterus minor": 2,
+        "split from Miniopterus fraterculus": 1,
+        "split from Myotis mystacinus": 2,
+        "split from Myotis levis": 1,
+        "split from Myotis martiniquensis": 1,
+        "split from Myotis formosus": 1,
+        "split from Natalus stramineus": 2,
+        "split from Neoromicia somalica": 1,
+        "split from Paremballonura atrata": 1,
+        "split from Pipistrellus tenuis": 1,
+        "split from Platyrrhinus dorsalis": 2,
+        "split from Platyrrhinus helleri": 1,
+        "split from Plecotus auritus": 3,
+        "split from Promops centralis": 1,
+        "split from Pteralopex anceps": 1,
+        "split from Pteronotus parnellii": 3,
+        "split from Vampyrodes caraccioli": 1
+      },
+      "reported_numeric": {
+        "finite_numeric": 837,
+        "non_numeric": 0,
+        "quantiles": [
+          0,
+          0,
+          0,
+          0,
+          60
+        ]
+      }
+    },
+    "det_plantother": {
+      "reported_nonmissing": 837,
+      "strict_reported": 837,
+      "imputed_table_nonmissing": 837,
+      "imputed_flag_with_reported_value": 0,
+      "source_annotations_for_reported_values": {
+        "EltonTraits": 799,
+        "split from Artibeus jamaicensis": 2,
+        "split from Carollia brevicauda": 1,
+        "split from Cynomops paranus": 1,
+        "split from Dermanura glauca": 1,
+        "split from Epomophorus labiatus": 1,
+        "split from Eptesicus serotinus": 1,
+        "split from Eumops glaucinus": 2,
+        "split from Hipposideros bicolor": 1,
+        "split from Lonchophylla mordax": 1,
+        "split from Lophostoma silvicolum": 1,
+        "split from Megaloglossus woermanni": 1,
+        "split from Miniopterus minor": 2,
+        "split from Miniopterus fraterculus": 1,
+        "split from Myotis mystacinus": 2,
+        "split from Myotis levis": 1,
+        "split from Myotis martiniquensis": 1,
+        "split from Myotis formosus": 1,
+        "split from Natalus stramineus": 2,
+        "split from Neoromicia somalica": 1,
+        "split from Paremballonura atrata": 1,
+        "split from Pipistrellus tenuis": 1,
+        "split from Platyrrhinus dorsalis": 2,
+        "split from Platyrrhinus helleri": 1,
+        "split from Plecotus auritus": 3,
+        "split from Promops centralis": 1,
+        "split from Pteralopex anceps": 1,
+        "split from Pteronotus parnellii": 3,
+        "split from Vampyrodes caraccioli": 1
+      },
+      "reported_numeric": {
+        "finite_numeric": 837,
+        "non_numeric": 0,
+        "quantiles": [
+          0,
+          0,
+          0,
+          0,
+          10
+        ]
+      }
+    },
+    "det_diet_breadth_n": {
+      "reported_nonmissing": 837,
+      "strict_reported": 837,
+      "imputed_table_nonmissing": 1068,
+      "imputed_flag_with_reported_value": 0,
+      "source_annotations_for_reported_values": {
+        "EltonTraits": 799,
+        "split from Artibeus jamaicensis": 2,
+        "split from Carollia brevicauda": 1,
+        "split from Cynomops paranus": 1,
+        "split from Dermanura glauca": 1,
+        "split from Epomophorus labiatus": 1,
+        "split from Eptesicus serotinus": 1,
+        "split from Eumops glaucinus": 2,
+        "split from Hipposideros bicolor": 1,
+        "split from Lonchophylla mordax": 1,
+        "split from Lophostoma silvicolum": 1,
+        "split from Megaloglossus woermanni": 1,
+        "split from Miniopterus minor": 2,
+        "split from Miniopterus fraterculus": 1,
+        "split from Myotis mystacinus": 2,
+        "split from Myotis levis": 1,
+        "split from Myotis martiniquensis": 1,
+        "split from Myotis formosus": 1,
+        "split from Natalus stramineus": 2,
+        "split from Neoromicia somalica": 1,
+        "split from Paremballonura atrata": 1,
+        "split from Pipistrellus tenuis": 1,
+        "split from Platyrrhinus dorsalis": 2,
+        "split from Platyrrhinus helleri": 1,
+        "split from Plecotus auritus": 3,
+        "split from Promops centralis": 1,
+        "split from Pteralopex anceps": 1,
+        "split from Pteronotus parnellii": 3,
+        "split from Vampyrodes caraccioli": 1
+      },
+      "reported_numeric": {
+        "finite_numeric": 837,
+        "non_numeric": 0,
+        "quantiles": [
+          1,
+          1,
+          1,
+          1,
+          4
+        ]
+      }
+    },
+    "trophic_level": {
+      "reported_nonmissing": 1060,
+      "strict_reported": 1060,
+      "imputed_table_nonmissing": 1069,
+      "imputed_flag_with_reported_value": 0,
+      "source_annotations_for_reported_values": {
+        "MammalDIET2": 1046,
+        "split from Artibeus jamaicensis": 1,
+        "split from Cynomops paranus": 1,
+        "PanTHERIA": 1,
+        "split from Eptesicus serotinus": 1,
+        "split from Eumops glaucinus": 1,
+        "split from Lophostoma silvicolum": 1,
+        "split from Megaloglossus woermanni": 1,
+        "split from Myonycteris torquata": 1,
+        "split from Myotis martiniquensis": 1,
+        "split from Platyrrhinus dorsalis": 1,
+        "split from Promops centralis": 1,
+        "split from Pteronotus parnellii": 2,
+        "split from Vampyrodes caraccioli": 1
+      },
+      "reported_numeric": {
+        "finite_numeric": 1060,
+        "non_numeric": 0,
+        "quantiles": [
+          1,
+          2,
+          3,
+          3,
+          3
+        ]
+      }
+    },
+    "foraging_stratum": {
+      "reported_nonmissing": 1035,
+      "strict_reported": 1035,
+      "imputed_table_nonmissing": 1069,
+      "imputed_flag_with_reported_value": 0,
+      "source_annotations_for_reported_values": {
+        "EltonTraits": 999,
+        "split from Artibeus jamaicensis": 2,
+        "split from Cynomops paranus": 1,
+        "split from Dermanura glauca": 1,
+        "split from Eptesicus serotinus": 1,
+        "split from Eumops glaucinus": 2,
+        "split from Hipposideros bicolor": 1,
+        "split from Lonchophylla mordax": 1,
+        "split from Lophostoma silvicolum": 1,
+        "split from Megaloglossus woermanni": 1,
+        "split from Miniopterus minor": 2,
+        "split from Miniopterus fraterculus": 1,
+        "split from Myonycteris torquata": 1,
+        "split from Myotis mystacinus": 1,
+        "split from Myotis levis": 1,
+        "split from Myotis martiniquensis": 1,
+        "split from Myotis formosus": 1,
+        "split from Natalus stramineus": 2,
+        "split from Neoromicia somalica": 1,
+        "split from Paremballonura atrata": 1,
+        "split from Pipistrellus tenuis": 1,
+        "split from Platyrrhinus dorsalis": 2,
+        "split from Platyrrhinus helleri": 1,
+        "split from Plecotus auritus": 2,
+        "split from Promops centralis": 1,
+        "split from Pteralopex anceps": 1,
+        "split from Pteronotus parnellii": 3,
+        "split from Thyroptera lavali": 1,
+        "split from Vampyrodes caraccioli": 1
+      },
+      "reported_levels": {
+        "Ar": 282,
+        "A": 678,
+        "G": 15,
+        "S": 60
+      }
+    },
+    "activity_cycle": {
+      "reported_nonmissing": 1035,
+      "strict_reported": 1035,
+      "imputed_table_nonmissing": 1069,
+      "imputed_flag_with_reported_value": 0,
+      "source_annotations_for_reported_values": {
+        "EltonTraits": 999,
+        "split from Artibeus jamaicensis": 2,
+        "split from Cynomops paranus": 1,
+        "split from Dermanura glauca": 1,
+        "split from Eptesicus serotinus": 1,
+        "split from Eumops glaucinus": 2,
+        "split from Hipposideros bicolor": 1,
+        "split from Lonchophylla mordax": 1,
+        "split from Lophostoma silvicolum": 1,
+        "split from Megaloglossus woermanni": 1,
+        "split from Miniopterus minor": 2,
+        "split from Miniopterus fraterculus": 1,
+        "split from Myonycteris torquata": 1,
+        "split from Myotis mystacinus": 1,
+        "split from Myotis levis": 1,
+        "split from Myotis martiniquensis": 1,
+        "split from Myotis formosus": 1,
+        "split from Natalus stramineus": 2,
+        "split from Neoromicia somalica": 1,
+        "split from Paremballonura atrata": 1,
+        "split from Pipistrellus tenuis": 1,
+        "split from Platyrrhinus dorsalis": 2,
+        "split from Platyrrhinus helleri": 1,
+        "split from Plecotus auritus": 2,
+        "split from Promops centralis": 1,
+        "split from Pteralopex anceps": 1,
+        "split from Pteronotus parnellii": 3,
+        "split from Thyroptera lavali": 1,
+        "split from Vampyrodes caraccioli": 1
+      },
+      "reported_levels": {
+        "1": 999,
+        "2": 36
+      }
+    },
+    "hibernation_torpor": {
+      "reported_nonmissing": 240,
+      "strict_reported": 240,
+      "imputed_table_nonmissing": 1054,
+      "imputed_flag_with_reported_value": 0,
+      "source_annotations_for_reported_values": {
+        "Botero et al. (2013)": 124,
+        "Buckley et al. (2018)": 33,
+        "split from Artibeus jamaicensis": 2,
+        "Heldstab et al. (2018)": 60,
+        "Turbill et al. (2011)": 7,
+        "split from Epomophorus labiatus": 1,
+        "split from Eptesicus serotinus": 1,
+        "split from Megaloglossus woermanni": 1,
+        "split from Miniopterus fraterculus": 1,
+        "split from Myonycteris torquata": 1,
+        "split from Myotis mystacinus": 2,
+        "split from Natalus stramineus": 2,
+        "split from Platyrrhinus helleri": 1,
+        "split from Plecotus auritus": 3,
+        "split from Pteralopex anceps": 1
+      },
+      "reported_levels": {
+        "0": 169,
+        "1": 71
+      }
+    }
+  },
+  "source_schema_difference": [
+    "det_vfish"
+  ],
+  "domain_species_counts": {
+    "body_morphology_strict": 378,
+    "coarse_diet_strict": 1069,
+    "detailed_diet_reported_10": 837,
+    "detailed_diet_strict_9": 837,
+    "detailed_diet_reported10_strict9": 837,
+    "foraging_stratum_strict": 1035,
+    "activity_cycle_strict": 1035,
+    "body_mass_strict": 1058,
+    "mass_coarse_diet_stratum_strict": 1034,
+    "LSA_wing": 264,
+    "exact_COMBINE_match": 1069,
+    "wing_and_body_morphology_strict": 116,
+    "wing_and_coarse_diet_strict": 236,
+    "wing_and_detailed_diet_reported_10": 221,
+    "wing_and_detailed_diet_strict_9": 221,
+    "wing_and_detailed_diet_reported10_strict9": 221,
+    "wing_and_foraging_stratum_strict": 234,
+    "wing_and_activity_cycle_strict": 234,
+    "wing_and_body_mass_strict": 236,
+    "wing_and_mass_coarse_diet_stratum_strict": 234
+  },
+  "diet_sum_diagnostic": {
+    "coarse_strict": {
+      "n": 1069,
+      "sum_quantiles": [
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "sums_1": 0,
+      "sums_100": 1069
+    },
+    "detailed_reported10": {
+      "n": 837,
+      "sum_quantiles": [
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "sums_1": 0,
+      "sums_100": 837
+    },
+    "detailed_reported10_strict9": {
+      "n": 837,
+      "sum_quantiles": [
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "sums_1": 0,
+      "sums_100": 837
+    }
+  },
+  "range_coverage": {
+    "all": {
+      "body_morphology_strict": {
+        "species": 378,
+        "occupied_cells": 15206,
+        "any_domain_cells": 13444,
+        "eligible_ge5_ge20": 7232,
+        "eligible_ge5_ge80": 279,
+        "median_coverage": 0.47058823529411764
+      },
+      "coarse_diet_strict": {
+        "species": 1069,
+        "occupied_cells": 15206,
+        "any_domain_cells": 14630,
+        "eligible_ge5_ge20": 10981,
+        "eligible_ge5_ge80": 9672,
+        "median_coverage": 0.9215686274509803
+      },
+      "detailed_diet_reported_10": {
+        "species": 837,
+        "occupied_cells": 15206,
+        "any_domain_cells": 14380,
+        "eligible_ge5_ge20": 10494,
+        "eligible_ge5_ge80": 7479,
+        "median_coverage": 0.826530612244898
+      },
+      "detailed_diet_strict_9": {
+        "species": 837,
+        "occupied_cells": 15206,
+        "any_domain_cells": 14380,
+        "eligible_ge5_ge20": 10494,
+        "eligible_ge5_ge80": 7479,
+        "median_coverage": 0.826530612244898
+      },
+      "detailed_diet_reported10_strict9": {
+        "species": 837,
+        "occupied_cells": 15206,
+        "any_domain_cells": 14380,
+        "eligible_ge5_ge20": 10494,
+        "eligible_ge5_ge80": 7479,
+        "median_coverage": 0.826530612244898
+      },
+      "foraging_stratum_strict": {
+        "species": 1035,
+        "occupied_cells": 15206,
+        "any_domain_cells": 14630,
+        "eligible_ge5_ge20": 10974,
+        "eligible_ge5_ge80": 9631,
+        "median_coverage": 0.92
+      },
+      "activity_cycle_strict": {
+        "species": 1035,
+        "occupied_cells": 15206,
+        "any_domain_cells": 14630,
+        "eligible_ge5_ge20": 10974,
+        "eligible_ge5_ge80": 9631,
+        "median_coverage": 0.92
+      },
+      "body_mass_strict": {
+        "species": 1058,
+        "occupied_cells": 15206,
+        "any_domain_cells": 14630,
+        "eligible_ge5_ge20": 10981,
+        "eligible_ge5_ge80": 9671,
+        "median_coverage": 0.9210526315789473
+      },
+      "mass_coarse_diet_stratum_strict": {
+        "species": 1034,
+        "occupied_cells": 15206,
+        "any_domain_cells": 14630,
+        "eligible_ge5_ge20": 10974,
+        "eligible_ge5_ge80": 9631,
+        "median_coverage": 0.92
+      },
+      "LSA_wing": {
+        "species": 264,
+        "occupied_cells": 15206,
+        "any_domain_cells": 14722,
+        "eligible_ge5_ge20": 9310,
+        "eligible_ge5_ge80": 1826,
+        "median_coverage": 0.5714285714285714
+      },
+      "exact_COMBINE_match": {
+        "species": 1069,
+        "occupied_cells": 15206,
+        "any_domain_cells": 14630,
+        "eligible_ge5_ge20": 10981,
+        "eligible_ge5_ge80": 9672,
+        "median_coverage": 0.9215686274509803
+      },
+      "wing_and_body_morphology_strict": {
+        "species": 116,
+        "occupied_cells": 15206,
+        "any_domain_cells": 13057,
+        "eligible_ge5_ge20": 5098,
+        "eligible_ge5_ge80": 65,
+        "median_coverage": 0.2857142857142857
+      },
+      "wing_and_coarse_diet_strict": {
+        "species": 236,
+        "occupied_cells": 15206,
+        "any_domain_cells": 14046,
+        "eligible_ge5_ge20": 9018,
+        "eligible_ge5_ge80": 854,
+        "median_coverage": 0.5
+      },
+      "wing_and_detailed_diet_reported_10": {
+        "species": 221,
+        "occupied_cells": 15206,
+        "any_domain_cells": 14015,
+        "eligible_ge5_ge20": 8997,
+        "eligible_ge5_ge80": 765,
+        "median_coverage": 0.5
+      },
+      "wing_and_detailed_diet_strict_9": {
+        "species": 221,
+        "occupied_cells": 15206,
+        "any_domain_cells": 14015,
+        "eligible_ge5_ge20": 8997,
+        "eligible_ge5_ge80": 765,
+        "median_coverage": 0.5
+      },
+      "wing_and_detailed_diet_reported10_strict9": {
+        "species": 221,
+        "occupied_cells": 15206,
+        "any_domain_cells": 14015,
+        "eligible_ge5_ge20": 8997,
+        "eligible_ge5_ge80": 765,
+        "median_coverage": 0.5
+      },
+      "wing_and_foraging_stratum_strict": {
+        "species": 234,
+        "occupied_cells": 15206,
+        "any_domain_cells": 14046,
+        "eligible_ge5_ge20": 9018,
+        "eligible_ge5_ge80": 854,
+        "median_coverage": 0.5
+      },
+      "wing_and_activity_cycle_strict": {
+        "species": 234,
+        "occupied_cells": 15206,
+        "any_domain_cells": 14046,
+        "eligible_ge5_ge20": 9018,
+        "eligible_ge5_ge80": 854,
+        "median_coverage": 0.5
+      },
+      "wing_and_body_mass_strict": {
+        "species": 236,
+        "occupied_cells": 15206,
+        "any_domain_cells": 14046,
+        "eligible_ge5_ge20": 9018,
+        "eligible_ge5_ge80": 854,
+        "median_coverage": 0.5
+      },
+      "wing_and_mass_coarse_diet_stratum_strict": {
+        "species": 234,
+        "occupied_cells": 15206,
+        "any_domain_cells": 14046,
+        "eligible_ge5_ge20": 9018,
+        "eligible_ge5_ge80": 854,
+        "median_coverage": 0.5
+      }
+    },
+    "Europe": {
+      "body_morphology_strict": {
+        "species": 27,
+        "occupied_cells": 1113,
+        "any_domain_cells": 1110,
+        "eligible_ge5_ge20": 899,
+        "eligible_ge5_ge80": 17,
+        "median_coverage": 0.6774193548387096
+      },
+      "coarse_diet_strict": {
+        "species": 36,
+        "occupied_cells": 1113,
+        "any_domain_cells": 1110,
+        "eligible_ge5_ge20": 946,
+        "eligible_ge5_ge80": 689,
+        "median_coverage": 0.8333333333333334
+      },
+      "detailed_diet_reported_10": {
+        "species": 32,
+        "occupied_cells": 1113,
+        "any_domain_cells": 1110,
+        "eligible_ge5_ge20": 936,
+        "eligible_ge5_ge80": 475,
+        "median_coverage": 0.8
+      },
+      "detailed_diet_strict_9": {
+        "species": 32,
+        "occupied_cells": 1113,
+        "any_domain_cells": 1110,
+        "eligible_ge5_ge20": 936,
+        "eligible_ge5_ge80": 475,
+        "median_coverage": 0.8
+      },
+      "detailed_diet_reported10_strict9": {
+        "species": 32,
+        "occupied_cells": 1113,
+        "any_domain_cells": 1110,
+        "eligible_ge5_ge20": 936,
+        "eligible_ge5_ge80": 475,
+        "median_coverage": 0.8
+      },
+      "foraging_stratum_strict": {
+        "species": 36,
+        "occupied_cells": 1113,
+        "any_domain_cells": 1110,
+        "eligible_ge5_ge20": 946,
+        "eligible_ge5_ge80": 689,
+        "median_coverage": 0.8333333333333334
+      },
+      "activity_cycle_strict": {
+        "species": 36,
+        "occupied_cells": 1113,
+        "any_domain_cells": 1110,
+        "eligible_ge5_ge20": 946,
+        "eligible_ge5_ge80": 689,
+        "median_coverage": 0.8333333333333334
+      },
+      "body_mass_strict": {
+        "species": 36,
+        "occupied_cells": 1113,
+        "any_domain_cells": 1110,
+        "eligible_ge5_ge20": 946,
+        "eligible_ge5_ge80": 689,
+        "median_coverage": 0.8333333333333334
+      },
+      "mass_coarse_diet_stratum_strict": {
+        "species": 36,
+        "occupied_cells": 1113,
+        "any_domain_cells": 1110,
+        "eligible_ge5_ge20": 946,
+        "eligible_ge5_ge80": 689,
+        "median_coverage": 0.8333333333333334
+      },
+      "LSA_wing": {
+        "species": 28,
+        "occupied_cells": 1113,
+        "any_domain_cells": 1108,
+        "eligible_ge5_ge20": 937,
+        "eligible_ge5_ge80": 664,
+        "median_coverage": 0.8333333333333334
+      },
+      "exact_COMBINE_match": {
+        "species": 36,
+        "occupied_cells": 1113,
+        "any_domain_cells": 1110,
+        "eligible_ge5_ge20": 946,
+        "eligible_ge5_ge80": 689,
+        "median_coverage": 0.8333333333333334
+      },
+      "wing_and_body_morphology_strict": {
+        "species": 22,
+        "occupied_cells": 1113,
+        "any_domain_cells": 1104,
+        "eligible_ge5_ge20": 888,
+        "eligible_ge5_ge80": 9,
+        "median_coverage": 0.625
+      },
+      "wing_and_coarse_diet_strict": {
+        "species": 23,
+        "occupied_cells": 1113,
+        "any_domain_cells": 1104,
+        "eligible_ge5_ge20": 919,
+        "eligible_ge5_ge80": 40,
+        "median_coverage": 0.6666666666666666
+      },
+      "wing_and_detailed_diet_reported_10": {
+        "species": 23,
+        "occupied_cells": 1113,
+        "any_domain_cells": 1104,
+        "eligible_ge5_ge20": 919,
+        "eligible_ge5_ge80": 40,
+        "median_coverage": 0.6666666666666666
+      },
+      "wing_and_detailed_diet_strict_9": {
+        "species": 23,
+        "occupied_cells": 1113,
+        "any_domain_cells": 1104,
+        "eligible_ge5_ge20": 919,
+        "eligible_ge5_ge80": 40,
+        "median_coverage": 0.6666666666666666
+      },
+      "wing_and_detailed_diet_reported10_strict9": {
+        "species": 23,
+        "occupied_cells": 1113,
+        "any_domain_cells": 1104,
+        "eligible_ge5_ge20": 919,
+        "eligible_ge5_ge80": 40,
+        "median_coverage": 0.6666666666666666
+      },
+      "wing_and_foraging_stratum_strict": {
+        "species": 23,
+        "occupied_cells": 1113,
+        "any_domain_cells": 1104,
+        "eligible_ge5_ge20": 919,
+        "eligible_ge5_ge80": 40,
+        "median_coverage": 0.6666666666666666
+      },
+      "wing_and_activity_cycle_strict": {
+        "species": 23,
+        "occupied_cells": 1113,
+        "any_domain_cells": 1104,
+        "eligible_ge5_ge20": 919,
+        "eligible_ge5_ge80": 40,
+        "median_coverage": 0.6666666666666666
+      },
+      "wing_and_body_mass_strict": {
+        "species": 23,
+        "occupied_cells": 1113,
+        "any_domain_cells": 1104,
+        "eligible_ge5_ge20": 919,
+        "eligible_ge5_ge80": 40,
+        "median_coverage": 0.6666666666666666
+      },
+      "wing_and_mass_coarse_diet_stratum_strict": {
+        "species": 23,
+        "occupied_cells": 1113,
+        "any_domain_cells": 1104,
+        "eligible_ge5_ge20": 919,
+        "eligible_ge5_ge80": 40,
+        "median_coverage": 0.6666666666666666
+      }
+    },
+    "North_America": {
+      "body_morphology_strict": {
+        "species": 109,
+        "occupied_cells": 2309,
+        "any_domain_cells": 2271,
+        "eligible_ge5_ge20": 1102,
+        "eligible_ge5_ge80": 43,
+        "median_coverage": 0.5714285714285714
+      },
+      "coarse_diet_strict": {
+        "species": 178,
+        "occupied_cells": 2309,
+        "any_domain_cells": 2309,
+        "eligible_ge5_ge20": 1562,
+        "eligible_ge5_ge80": 1562,
+        "median_coverage": 1
+      },
+      "detailed_diet_reported_10": {
+        "species": 154,
+        "occupied_cells": 2309,
+        "any_domain_cells": 2296,
+        "eligible_ge5_ge20": 1442,
+        "eligible_ge5_ge80": 1292,
+        "median_coverage": 0.8771929824561403
+      },
+      "detailed_diet_strict_9": {
+        "species": 154,
+        "occupied_cells": 2309,
+        "any_domain_cells": 2296,
+        "eligible_ge5_ge20": 1442,
+        "eligible_ge5_ge80": 1292,
+        "median_coverage": 0.8771929824561403
+      },
+      "detailed_diet_reported10_strict9": {
+        "species": 154,
+        "occupied_cells": 2309,
+        "any_domain_cells": 2296,
+        "eligible_ge5_ge20": 1442,
+        "eligible_ge5_ge80": 1292,
+        "median_coverage": 0.8771929824561403
+      },
+      "foraging_stratum_strict": {
+        "species": 177,
+        "occupied_cells": 2309,
+        "any_domain_cells": 2309,
+        "eligible_ge5_ge20": 1562,
+        "eligible_ge5_ge80": 1562,
+        "median_coverage": 1
+      },
+      "activity_cycle_strict": {
+        "species": 177,
+        "occupied_cells": 2309,
+        "any_domain_cells": 2309,
+        "eligible_ge5_ge20": 1562,
+        "eligible_ge5_ge80": 1562,
+        "median_coverage": 1
+      },
+      "body_mass_strict": {
+        "species": 177,
+        "occupied_cells": 2309,
+        "any_domain_cells": 2309,
+        "eligible_ge5_ge20": 1562,
+        "eligible_ge5_ge80": 1562,
+        "median_coverage": 1
+      },
+      "mass_coarse_diet_stratum_strict": {
+        "species": 177,
+        "occupied_cells": 2309,
+        "any_domain_cells": 2309,
+        "eligible_ge5_ge20": 1562,
+        "eligible_ge5_ge80": 1562,
+        "median_coverage": 1
+      },
+      "LSA_wing": {
+        "species": 64,
+        "occupied_cells": 2309,
+        "any_domain_cells": 2289,
+        "eligible_ge5_ge20": 1421,
+        "eligible_ge5_ge80": 407,
+        "median_coverage": 0.7777777777777778
+      },
+      "exact_COMBINE_match": {
+        "species": 178,
+        "occupied_cells": 2309,
+        "any_domain_cells": 2309,
+        "eligible_ge5_ge20": 1562,
+        "eligible_ge5_ge80": 1562,
+        "median_coverage": 1
+      },
+      "wing_and_body_morphology_strict": {
+        "species": 42,
+        "occupied_cells": 2309,
+        "any_domain_cells": 2269,
+        "eligible_ge5_ge20": 920,
+        "eligible_ge5_ge80": 0,
+        "median_coverage": 0.5
+      },
+      "wing_and_coarse_diet_strict": {
+        "species": 58,
+        "occupied_cells": 2309,
+        "any_domain_cells": 2289,
+        "eligible_ge5_ge20": 1416,
+        "eligible_ge5_ge80": 407,
+        "median_coverage": 0.7777777777777778
+      },
+      "wing_and_detailed_diet_reported_10": {
+        "species": 56,
+        "occupied_cells": 2309,
+        "any_domain_cells": 2289,
+        "eligible_ge5_ge20": 1416,
+        "eligible_ge5_ge80": 407,
+        "median_coverage": 0.7777777777777778
+      },
+      "wing_and_detailed_diet_strict_9": {
+        "species": 56,
+        "occupied_cells": 2309,
+        "any_domain_cells": 2289,
+        "eligible_ge5_ge20": 1416,
+        "eligible_ge5_ge80": 407,
+        "median_coverage": 0.7777777777777778
+      },
+      "wing_and_detailed_diet_reported10_strict9": {
+        "species": 56,
+        "occupied_cells": 2309,
+        "any_domain_cells": 2289,
+        "eligible_ge5_ge20": 1416,
+        "eligible_ge5_ge80": 407,
+        "median_coverage": 0.7777777777777778
+      },
+      "wing_and_foraging_stratum_strict": {
+        "species": 58,
+        "occupied_cells": 2309,
+        "any_domain_cells": 2289,
+        "eligible_ge5_ge20": 1416,
+        "eligible_ge5_ge80": 407,
+        "median_coverage": 0.7777777777777778
+      },
+      "wing_and_activity_cycle_strict": {
+        "species": 58,
+        "occupied_cells": 2309,
+        "any_domain_cells": 2289,
+        "eligible_ge5_ge20": 1416,
+        "eligible_ge5_ge80": 407,
+        "median_coverage": 0.7777777777777778
+      },
+      "wing_and_body_mass_strict": {
+        "species": 58,
+        "occupied_cells": 2309,
+        "any_domain_cells": 2289,
+        "eligible_ge5_ge20": 1416,
+        "eligible_ge5_ge80": 407,
+        "median_coverage": 0.7777777777777778
+      },
+      "wing_and_mass_coarse_diet_stratum_strict": {
+        "species": 58,
+        "occupied_cells": 2309,
+        "any_domain_cells": 2289,
+        "eligible_ge5_ge20": 1416,
+        "eligible_ge5_ge80": 407,
+        "median_coverage": 0.7777777777777778
+      }
+    },
+    "East_Asia": {
+      "body_morphology_strict": {
+        "species": 46,
+        "occupied_cells": 2508,
+        "any_domain_cells": 2119,
+        "eligible_ge5_ge20": 427,
+        "eligible_ge5_ge80": 102,
+        "median_coverage": 0.2727272727272727
+      },
+      "coarse_diet_strict": {
+        "species": 207,
+        "occupied_cells": 2508,
+        "any_domain_cells": 2494,
+        "eligible_ge5_ge20": 1572,
+        "eligible_ge5_ge80": 1323,
+        "median_coverage": 0.9230769230769231
+      },
+      "detailed_diet_reported_10": {
+        "species": 163,
+        "occupied_cells": 2508,
+        "any_domain_cells": 2285,
+        "eligible_ge5_ge20": 1327,
+        "eligible_ge5_ge80": 626,
+        "median_coverage": 0.7142857142857143
+      },
+      "detailed_diet_strict_9": {
+        "species": 163,
+        "occupied_cells": 2508,
+        "any_domain_cells": 2285,
+        "eligible_ge5_ge20": 1327,
+        "eligible_ge5_ge80": 626,
+        "median_coverage": 0.7142857142857143
+      },
+      "detailed_diet_reported10_strict9": {
+        "species": 163,
+        "occupied_cells": 2508,
+        "any_domain_cells": 2285,
+        "eligible_ge5_ge20": 1327,
+        "eligible_ge5_ge80": 626,
+        "median_coverage": 0.7142857142857143
+      },
+      "foraging_stratum_strict": {
+        "species": 203,
+        "occupied_cells": 2508,
+        "any_domain_cells": 2494,
+        "eligible_ge5_ge20": 1572,
+        "eligible_ge5_ge80": 1302,
+        "median_coverage": 0.9230769230769231
+      },
+      "activity_cycle_strict": {
+        "species": 203,
+        "occupied_cells": 2508,
+        "any_domain_cells": 2494,
+        "eligible_ge5_ge20": 1572,
+        "eligible_ge5_ge80": 1302,
+        "median_coverage": 0.9230769230769231
+      },
+      "body_mass_strict": {
+        "species": 206,
+        "occupied_cells": 2508,
+        "any_domain_cells": 2494,
+        "eligible_ge5_ge20": 1572,
+        "eligible_ge5_ge80": 1323,
+        "median_coverage": 0.9230769230769231
+      },
+      "mass_coarse_diet_stratum_strict": {
+        "species": 203,
+        "occupied_cells": 2508,
+        "any_domain_cells": 2494,
+        "eligible_ge5_ge20": 1572,
+        "eligible_ge5_ge80": 1302,
+        "median_coverage": 0.9230769230769231
+      },
+      "LSA_wing": {
+        "species": 76,
+        "occupied_cells": 2508,
+        "any_domain_cells": 2219,
+        "eligible_ge5_ge20": 911,
+        "eligible_ge5_ge80": 116,
+        "median_coverage": 0.5
+      },
+      "exact_COMBINE_match": {
+        "species": 207,
+        "occupied_cells": 2508,
+        "any_domain_cells": 2494,
+        "eligible_ge5_ge20": 1572,
+        "eligible_ge5_ge80": 1323,
+        "median_coverage": 0.9230769230769231
+      },
+      "wing_and_body_morphology_strict": {
+        "species": 25,
+        "occupied_cells": 2508,
+        "any_domain_cells": 2078,
+        "eligible_ge5_ge20": 140,
+        "eligible_ge5_ge80": 21,
+        "median_coverage": 0.17647058823529413
+      },
+      "wing_and_coarse_diet_strict": {
+        "species": 67,
+        "occupied_cells": 2508,
+        "any_domain_cells": 2141,
+        "eligible_ge5_ge20": 859,
+        "eligible_ge5_ge80": 38,
+        "median_coverage": 0.46153846153846156
+      },
+      "wing_and_detailed_diet_reported_10": {
+        "species": 62,
+        "occupied_cells": 2508,
+        "any_domain_cells": 2137,
+        "eligible_ge5_ge20": 850,
+        "eligible_ge5_ge80": 37,
+        "median_coverage": 0.43070362473347545
+      },
+      "wing_and_detailed_diet_strict_9": {
+        "species": 62,
+        "occupied_cells": 2508,
+        "any_domain_cells": 2137,
+        "eligible_ge5_ge20": 850,
+        "eligible_ge5_ge80": 37,
+        "median_coverage": 0.43070362473347545
+      },
+      "wing_and_detailed_diet_reported10_strict9": {
+        "species": 62,
+        "occupied_cells": 2508,
+        "any_domain_cells": 2137,
+        "eligible_ge5_ge20": 850,
+        "eligible_ge5_ge80": 37,
+        "median_coverage": 0.43070362473347545
+      },
+      "wing_and_foraging_stratum_strict": {
+        "species": 65,
+        "occupied_cells": 2508,
+        "any_domain_cells": 2141,
+        "eligible_ge5_ge20": 859,
+        "eligible_ge5_ge80": 38,
+        "median_coverage": 0.45742753623188404
+      },
+      "wing_and_activity_cycle_strict": {
+        "species": 65,
+        "occupied_cells": 2508,
+        "any_domain_cells": 2141,
+        "eligible_ge5_ge20": 859,
+        "eligible_ge5_ge80": 38,
+        "median_coverage": 0.45742753623188404
+      },
+      "wing_and_body_mass_strict": {
+        "species": 67,
+        "occupied_cells": 2508,
+        "any_domain_cells": 2141,
+        "eligible_ge5_ge20": 859,
+        "eligible_ge5_ge80": 38,
+        "median_coverage": 0.46153846153846156
+      },
+      "wing_and_mass_coarse_diet_stratum_strict": {
+        "species": 65,
+        "occupied_cells": 2508,
+        "any_domain_cells": 2141,
+        "eligible_ge5_ge20": 859,
+        "eligible_ge5_ge80": 38,
+        "median_coverage": 0.45742753623188404
+      }
+    },
+    "South_America": {
+      "body_morphology_strict": {
+        "species": 157,
+        "occupied_cells": 2153,
+        "any_domain_cells": 2138,
+        "eligible_ge5_ge20": 1873,
+        "eligible_ge5_ge80": 59,
+        "median_coverage": 0.6901408450704225
+      },
+      "coarse_diet_strict": {
+        "species": 269,
+        "occupied_cells": 2153,
+        "any_domain_cells": 2152,
+        "eligible_ge5_ge20": 1954,
+        "eligible_ge5_ge80": 1925,
+        "median_coverage": 0.9259259259259259
+      },
+      "detailed_diet_reported_10": {
+        "species": 219,
+        "occupied_cells": 2153,
+        "any_domain_cells": 2139,
+        "eligible_ge5_ge20": 1951,
+        "eligible_ge5_ge80": 1723,
+        "median_coverage": 0.8404255319148937
+      },
+      "detailed_diet_strict_9": {
+        "species": 219,
+        "occupied_cells": 2153,
+        "any_domain_cells": 2139,
+        "eligible_ge5_ge20": 1951,
+        "eligible_ge5_ge80": 1723,
+        "median_coverage": 0.8404255319148937
+      },
+      "detailed_diet_reported10_strict9": {
+        "species": 219,
+        "occupied_cells": 2153,
+        "any_domain_cells": 2139,
+        "eligible_ge5_ge20": 1951,
+        "eligible_ge5_ge80": 1723,
+        "median_coverage": 0.8404255319148937
+      },
+      "foraging_stratum_strict": {
+        "species": 252,
+        "occupied_cells": 2153,
+        "any_domain_cells": 2152,
+        "eligible_ge5_ge20": 1954,
+        "eligible_ge5_ge80": 1924,
+        "median_coverage": 0.9230769230769231
+      },
+      "activity_cycle_strict": {
+        "species": 252,
+        "occupied_cells": 2153,
+        "any_domain_cells": 2152,
+        "eligible_ge5_ge20": 1954,
+        "eligible_ge5_ge80": 1924,
+        "median_coverage": 0.9230769230769231
+      },
+      "body_mass_strict": {
+        "species": 261,
+        "occupied_cells": 2153,
+        "any_domain_cells": 2152,
+        "eligible_ge5_ge20": 1954,
+        "eligible_ge5_ge80": 1924,
+        "median_coverage": 0.9252336448598131
+      },
+      "mass_coarse_diet_stratum_strict": {
+        "species": 252,
+        "occupied_cells": 2153,
+        "any_domain_cells": 2152,
+        "eligible_ge5_ge20": 1954,
+        "eligible_ge5_ge80": 1924,
+        "median_coverage": 0.9230769230769231
+      },
+      "LSA_wing": {
+        "species": 53,
+        "occupied_cells": 2153,
+        "any_domain_cells": 2127,
+        "eligible_ge5_ge20": 1841,
+        "eligible_ge5_ge80": 16,
+        "median_coverage": 0.375
+      },
+      "exact_COMBINE_match": {
+        "species": 269,
+        "occupied_cells": 2153,
+        "any_domain_cells": 2152,
+        "eligible_ge5_ge20": 1954,
+        "eligible_ge5_ge80": 1925,
+        "median_coverage": 0.9259259259259259
+      },
+      "wing_and_body_morphology_strict": {
+        "species": 41,
+        "occupied_cells": 2153,
+        "any_domain_cells": 2127,
+        "eligible_ge5_ge20": 1803,
+        "eligible_ge5_ge80": 16,
+        "median_coverage": 0.2872340425531915
+      },
+      "wing_and_coarse_diet_strict": {
+        "species": 46,
+        "occupied_cells": 2153,
+        "any_domain_cells": 2127,
+        "eligible_ge5_ge20": 1823,
+        "eligible_ge5_ge80": 16,
+        "median_coverage": 0.34285714285714286
+      },
+      "wing_and_detailed_diet_reported_10": {
+        "species": 44,
+        "occupied_cells": 2153,
+        "any_domain_cells": 2127,
+        "eligible_ge5_ge20": 1818,
+        "eligible_ge5_ge80": 16,
+        "median_coverage": 0.3333333333333333
+      },
+      "wing_and_detailed_diet_strict_9": {
+        "species": 44,
+        "occupied_cells": 2153,
+        "any_domain_cells": 2127,
+        "eligible_ge5_ge20": 1818,
+        "eligible_ge5_ge80": 16,
+        "median_coverage": 0.3333333333333333
+      },
+      "wing_and_detailed_diet_reported10_strict9": {
+        "species": 44,
+        "occupied_cells": 2153,
+        "any_domain_cells": 2127,
+        "eligible_ge5_ge20": 1818,
+        "eligible_ge5_ge80": 16,
+        "median_coverage": 0.3333333333333333
+      },
+      "wing_and_foraging_stratum_strict": {
+        "species": 46,
+        "occupied_cells": 2153,
+        "any_domain_cells": 2127,
+        "eligible_ge5_ge20": 1823,
+        "eligible_ge5_ge80": 16,
+        "median_coverage": 0.34285714285714286
+      },
+      "wing_and_activity_cycle_strict": {
+        "species": 46,
+        "occupied_cells": 2153,
+        "any_domain_cells": 2127,
+        "eligible_ge5_ge20": 1823,
+        "eligible_ge5_ge80": 16,
+        "median_coverage": 0.34285714285714286
+      },
+      "wing_and_body_mass_strict": {
+        "species": 46,
+        "occupied_cells": 2153,
+        "any_domain_cells": 2127,
+        "eligible_ge5_ge20": 1823,
+        "eligible_ge5_ge80": 16,
+        "median_coverage": 0.34285714285714286
+      },
+      "wing_and_mass_coarse_diet_stratum_strict": {
+        "species": 46,
+        "occupied_cells": 2153,
+        "any_domain_cells": 2127,
+        "eligible_ge5_ge20": 1823,
+        "eligible_ge5_ge80": 16,
+        "median_coverage": 0.34285714285714286
+      }
+    },
+    "Africa": {
+      "body_morphology_strict": {
+        "species": 85,
+        "occupied_cells": 3780,
+        "any_domain_cells": 3163,
+        "eligible_ge5_ge20": 1913,
+        "eligible_ge5_ge80": 24,
+        "median_coverage": 0.3333333333333333
+      },
+      "coarse_diet_strict": {
+        "species": 245,
+        "occupied_cells": 3780,
+        "any_domain_cells": 3234,
+        "eligible_ge5_ge20": 2436,
+        "eligible_ge5_ge80": 1978,
+        "median_coverage": 0.8333333333333334
+      },
+      "detailed_diet_reported_10": {
+        "species": 194,
+        "occupied_cells": 3780,
+        "any_domain_cells": 3232,
+        "eligible_ge5_ge20": 2388,
+        "eligible_ge5_ge80": 1571,
+        "median_coverage": 0.75
+      },
+      "detailed_diet_strict_9": {
+        "species": 194,
+        "occupied_cells": 3780,
+        "any_domain_cells": 3232,
+        "eligible_ge5_ge20": 2388,
+        "eligible_ge5_ge80": 1571,
+        "median_coverage": 0.75
+      },
+      "detailed_diet_reported10_strict9": {
+        "species": 194,
+        "occupied_cells": 3780,
+        "any_domain_cells": 3232,
+        "eligible_ge5_ge20": 2388,
+        "eligible_ge5_ge80": 1571,
+        "median_coverage": 0.75
+      },
+      "foraging_stratum_strict": {
+        "species": 236,
+        "occupied_cells": 3780,
+        "any_domain_cells": 3234,
+        "eligible_ge5_ge20": 2429,
+        "eligible_ge5_ge80": 1959,
+        "median_coverage": 0.8333333333333334
+      },
+      "activity_cycle_strict": {
+        "species": 236,
+        "occupied_cells": 3780,
+        "any_domain_cells": 3234,
+        "eligible_ge5_ge20": 2429,
+        "eligible_ge5_ge80": 1959,
+        "median_coverage": 0.8333333333333334
+      },
+      "body_mass_strict": {
+        "species": 245,
+        "occupied_cells": 3780,
+        "any_domain_cells": 3234,
+        "eligible_ge5_ge20": 2436,
+        "eligible_ge5_ge80": 1978,
+        "median_coverage": 0.8333333333333334
+      },
+      "mass_coarse_diet_stratum_strict": {
+        "species": 236,
+        "occupied_cells": 3780,
+        "any_domain_cells": 3234,
+        "eligible_ge5_ge20": 2429,
+        "eligible_ge5_ge80": 1959,
+        "median_coverage": 0.8333333333333334
+      },
+      "LSA_wing": {
+        "species": 80,
+        "occupied_cells": 3780,
+        "any_domain_cells": 3756,
+        "eligible_ge5_ge20": 2273,
+        "eligible_ge5_ge80": 357,
+        "median_coverage": 0.5714285714285714
+      },
+      "exact_COMBINE_match": {
+        "species": 245,
+        "occupied_cells": 3780,
+        "any_domain_cells": 3234,
+        "eligible_ge5_ge20": 2436,
+        "eligible_ge5_ge80": 1978,
+        "median_coverage": 0.8333333333333334
+      },
+      "wing_and_body_morphology_strict": {
+        "species": 37,
+        "occupied_cells": 3780,
+        "any_domain_cells": 3140,
+        "eligible_ge5_ge20": 835,
+        "eligible_ge5_ge80": 2,
+        "median_coverage": 0.2
+      },
+      "wing_and_coarse_diet_strict": {
+        "species": 69,
+        "occupied_cells": 3780,
+        "any_domain_cells": 3193,
+        "eligible_ge5_ge20": 2170,
+        "eligible_ge5_ge80": 236,
+        "median_coverage": 0.46551724137931033
+      },
+      "wing_and_detailed_diet_reported_10": {
+        "species": 65,
+        "occupied_cells": 3780,
+        "any_domain_cells": 3193,
+        "eligible_ge5_ge20": 2164,
+        "eligible_ge5_ge80": 154,
+        "median_coverage": 0.4473684210526316
+      },
+      "wing_and_detailed_diet_strict_9": {
+        "species": 65,
+        "occupied_cells": 3780,
+        "any_domain_cells": 3193,
+        "eligible_ge5_ge20": 2164,
+        "eligible_ge5_ge80": 154,
+        "median_coverage": 0.4473684210526316
+      },
+      "wing_and_detailed_diet_reported10_strict9": {
+        "species": 65,
+        "occupied_cells": 3780,
+        "any_domain_cells": 3193,
+        "eligible_ge5_ge20": 2164,
+        "eligible_ge5_ge80": 154,
+        "median_coverage": 0.4473684210526316
+      },
+      "wing_and_foraging_stratum_strict": {
+        "species": 69,
+        "occupied_cells": 3780,
+        "any_domain_cells": 3193,
+        "eligible_ge5_ge20": 2170,
+        "eligible_ge5_ge80": 236,
+        "median_coverage": 0.46551724137931033
+      },
+      "wing_and_activity_cycle_strict": {
+        "species": 69,
+        "occupied_cells": 3780,
+        "any_domain_cells": 3193,
+        "eligible_ge5_ge20": 2170,
+        "eligible_ge5_ge80": 236,
+        "median_coverage": 0.46551724137931033
+      },
+      "wing_and_body_mass_strict": {
+        "species": 69,
+        "occupied_cells": 3780,
+        "any_domain_cells": 3193,
+        "eligible_ge5_ge20": 2170,
+        "eligible_ge5_ge80": 236,
+        "median_coverage": 0.46551724137931033
+      },
+      "wing_and_mass_coarse_diet_stratum_strict": {
+        "species": 69,
+        "occupied_cells": 3780,
+        "any_domain_cells": 3193,
+        "eligible_ge5_ge20": 2170,
+        "eligible_ge5_ge80": 236,
+        "median_coverage": 0.46551724137931033
+      }
+    },
+    "Australasia": {
+      "body_morphology_strict": {
+        "species": 38,
+        "occupied_cells": 1085,
+        "any_domain_cells": 554,
+        "eligible_ge5_ge20": 60,
+        "eligible_ge5_ge80": 0,
+        "median_coverage": 0.058823529411764705
+      },
+      "coarse_diet_strict": {
+        "species": 151,
+        "occupied_cells": 1085,
+        "any_domain_cells": 1085,
+        "eligible_ge5_ge20": 987,
+        "eligible_ge5_ge80": 986,
+        "median_coverage": 1
+      },
+      "detailed_diet_reported_10": {
+        "species": 119,
+        "occupied_cells": 1085,
+        "any_domain_cells": 1083,
+        "eligible_ge5_ge20": 978,
+        "eligible_ge5_ge80": 847,
+        "median_coverage": 0.8888888888888888
+      },
+      "detailed_diet_strict_9": {
+        "species": 119,
+        "occupied_cells": 1085,
+        "any_domain_cells": 1083,
+        "eligible_ge5_ge20": 978,
+        "eligible_ge5_ge80": 847,
+        "median_coverage": 0.8888888888888888
+      },
+      "detailed_diet_reported10_strict9": {
+        "species": 119,
+        "occupied_cells": 1085,
+        "any_domain_cells": 1083,
+        "eligible_ge5_ge20": 978,
+        "eligible_ge5_ge80": 847,
+        "median_coverage": 0.8888888888888888
+      },
+      "foraging_stratum_strict": {
+        "species": 151,
+        "occupied_cells": 1085,
+        "any_domain_cells": 1085,
+        "eligible_ge5_ge20": 987,
+        "eligible_ge5_ge80": 986,
+        "median_coverage": 1
+      },
+      "activity_cycle_strict": {
+        "species": 151,
+        "occupied_cells": 1085,
+        "any_domain_cells": 1085,
+        "eligible_ge5_ge20": 987,
+        "eligible_ge5_ge80": 986,
+        "median_coverage": 1
+      },
+      "body_mass_strict": {
+        "species": 151,
+        "occupied_cells": 1085,
+        "any_domain_cells": 1085,
+        "eligible_ge5_ge20": 987,
+        "eligible_ge5_ge80": 986,
+        "median_coverage": 1
+      },
+      "mass_coarse_diet_stratum_strict": {
+        "species": 151,
+        "occupied_cells": 1085,
+        "any_domain_cells": 1085,
+        "eligible_ge5_ge20": 987,
+        "eligible_ge5_ge80": 986,
+        "median_coverage": 1
+      },
+      "LSA_wing": {
+        "species": 43,
+        "occupied_cells": 1085,
+        "any_domain_cells": 1052,
+        "eligible_ge5_ge20": 636,
+        "eligible_ge5_ge80": 72,
+        "median_coverage": 0.5
+      },
+      "exact_COMBINE_match": {
+        "species": 151,
+        "occupied_cells": 1085,
+        "any_domain_cells": 1085,
+        "eligible_ge5_ge20": 987,
+        "eligible_ge5_ge80": 986,
+        "median_coverage": 1
+      },
+      "wing_and_body_morphology_strict": {
+        "species": 11,
+        "occupied_cells": 1085,
+        "any_domain_cells": 316,
+        "eligible_ge5_ge20": 1,
+        "eligible_ge5_ge80": 0,
+        "median_coverage": 0
+      },
+      "wing_and_coarse_diet_strict": {
+        "species": 40,
+        "occupied_cells": 1085,
+        "any_domain_cells": 1052,
+        "eligible_ge5_ge20": 632,
+        "eligible_ge5_ge80": 72,
+        "median_coverage": 0.5
+      },
+      "wing_and_detailed_diet_reported_10": {
+        "species": 38,
+        "occupied_cells": 1085,
+        "any_domain_cells": 1031,
+        "eligible_ge5_ge20": 632,
+        "eligible_ge5_ge80": 66,
+        "median_coverage": 0.5
+      },
+      "wing_and_detailed_diet_strict_9": {
+        "species": 38,
+        "occupied_cells": 1085,
+        "any_domain_cells": 1031,
+        "eligible_ge5_ge20": 632,
+        "eligible_ge5_ge80": 66,
+        "median_coverage": 0.5
+      },
+      "wing_and_detailed_diet_reported10_strict9": {
+        "species": 38,
+        "occupied_cells": 1085,
+        "any_domain_cells": 1031,
+        "eligible_ge5_ge20": 632,
+        "eligible_ge5_ge80": 66,
+        "median_coverage": 0.5
+      },
+      "wing_and_foraging_stratum_strict": {
+        "species": 40,
+        "occupied_cells": 1085,
+        "any_domain_cells": 1052,
+        "eligible_ge5_ge20": 632,
+        "eligible_ge5_ge80": 72,
+        "median_coverage": 0.5
+      },
+      "wing_and_activity_cycle_strict": {
+        "species": 40,
+        "occupied_cells": 1085,
+        "any_domain_cells": 1052,
+        "eligible_ge5_ge20": 632,
+        "eligible_ge5_ge80": 72,
+        "median_coverage": 0.5
+      },
+      "wing_and_body_mass_strict": {
+        "species": 40,
+        "occupied_cells": 1085,
+        "any_domain_cells": 1052,
+        "eligible_ge5_ge20": 632,
+        "eligible_ge5_ge80": 72,
+        "median_coverage": 0.5
+      },
+      "wing_and_mass_coarse_diet_stratum_strict": {
+        "species": 40,
+        "occupied_cells": 1085,
+        "any_domain_cells": 1052,
+        "eligible_ge5_ge20": 632,
+        "eligible_ge5_ge80": 72,
+        "median_coverage": 0.5
+      }
+    }
+  }
+}
