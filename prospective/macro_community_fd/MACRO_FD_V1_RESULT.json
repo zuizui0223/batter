@@ -1,0 +1,310 @@
+{
+  "stage": "source-conditional macro observed-assemblage trait dispersion",
+  "metric_order": [
+    "combined",
+    "flight",
+    "size",
+    "sensory"
+  ],
+  "features": [
+    "log_richness",
+    "log_fine_cells",
+    "log_species_cell",
+    "trait_coverage",
+    "bio1",
+    "bio4",
+    "bio5",
+    "bio6",
+    "bio12",
+    "bio15",
+    "worldcover_class_10_fraction",
+    "worldcover_class_20_fraction",
+    "worldcover_class_30_fraction",
+    "worldcover_class_40_fraction",
+    "worldcover_class_50_fraction",
+    "height_mean",
+    "height_sd",
+    "R50_mean",
+    "R50_sd"
+  ],
+  "sources": {
+    "environment": {
+      "artifact": 15012939978,
+      "zip_sha256": "afca6bf11fe5a75d7638a49de73b2cba1874e75d8cb24ed3f65c28957f25650a",
+      "member_sha256": "85ad737229aa7b10720a8d5c8bd0ea389f63f908c37871c7ce46ae87c9bed1d6",
+      "archive_bytes": 6777535
+    },
+    "flags": {
+      "artifact": 15012136742,
+      "zip_sha256": "053567fa0cc43993aec472a3c5bc966a2c6df5306767e66ff6d65f826a7cf900",
+      "member_sha256": "de971292065a8aee3491880adb00a5623efae61bc83b2bd2ae4d663b45edf0f0",
+      "archive_bytes": 200708
+    },
+    "crosswalk": {
+      "artifact": 15005261316,
+      "zip_sha256": "7ed2df73b812f51f6376590136c79fb5acf42b41395e4e3f68830fb66120b490",
+      "member_sha256": "43bb5284308a9fe732beda51886172cb87268e5d00620eb27956d5808dae809f",
+      "archive_bytes": 1052947
+    },
+    "physical": {
+      "artifact": 15004406365,
+      "zip_sha256": "3866df0cc71e1e5556162d26f9a757b7f31b0edddc339c1105ba7bd47e197408",
+      "member_sha256": "d3ebe7656a60b44933f4da1a8302ca800bed07e0864d557698bf322eb7b85f49",
+      "archive_bytes": 6132
+    }
+  },
+  "trait_roster": {
+    "complete_taxa": 27,
+    "species": [
+      "Miniopterus schreibersii",
+      "Myotis bechsteinii",
+      "Myotis brandtii",
+      "Myotis myotis",
+      "Myotis mystacinus",
+      "Myotis nattereri",
+      "Nyctalus lasiopterus",
+      "Nyctalus noctula",
+      "Pipistrellus kuhlii",
+      "Pipistrellus nathusii",
+      "Plecotus auritus",
+      "Rhinolophus blasii",
+      "Rhinolophus euryale",
+      "Rhinolophus ferrumequinum",
+      "Rhinolophus hipposideros",
+      "Tadarida teniotis",
+      "Eptesicus serotinus",
+      "Myotis capaccinii",
+      "Nyctalus leisleri",
+      "Pipistrellus pipistrellus",
+      "Plecotus austriacus",
+      "Myotis dasycneme",
+      "Myotis daubentonii",
+      "Myotis emarginatus",
+      "Vespertilio murinus",
+      "Eptesicus nilssonii",
+      "Barbastella barbastellus"
+    ],
+    "excluded": {
+      "raw_AR_WL_disagree": 1
+    },
+    "uniform_pair_reference": [
+      2.0769230769230798,
+      2.076923076923079,
+      2.076923076923075,
+      2.076923076923082
+    ]
+  },
+  "source_support": {
+    "raw_records": 219960,
+    "raw_cells": 11006,
+    "raw_taxa": 39,
+    "forest_records": 56847,
+    "forest_cells": 6775,
+    "south_rows": 6427,
+    "south_clean_records": 23017,
+    "south_cells": 2599,
+    "south_taxa": 37,
+    "north_rows": 9975,
+    "north_cells": 4097
+  },
+  "grains": {
+    "50": {
+      "provider_period_units": {
+        "candidate_units": 887,
+        "eligible_units": 72,
+        "excluded": {
+          "fewer_than_5_fine_cells": 769,
+          "trait_coverage_below_80pct": 39,
+          "fewer_than_3_complete_species": 7
+        },
+        "taxa": 22,
+        "providers": 14,
+        "blocks": 21,
+        "median_support": {
+          "richness": 6,
+          "fine": 9,
+          "incidences": 17,
+          "coverage": 1,
+          "inc_coverage": 1
+        },
+        "trait_mpd_means": {
+          "equal": [
+            1.9341270743668448,
+            1.9066026642465448,
+            2.770696808501112,
+            1.1250817503528756
+          ],
+          "incidence": [
+            2.087694271013382,
+            1.8915780496433783,
+            3.233536379415346,
+            1.1379683839814232
+          ]
+        }
+      },
+      "pooled_provider_census": {
+        "candidate_units": 613,
+        "eligible_units": 80,
+        "excluded": {
+          "fewer_than_5_fine_cells": 475,
+          "trait_coverage_below_80pct": 51,
+          "fewer_than_3_complete_species": 7
+        },
+        "taxa": 22,
+        "providers": 1,
+        "blocks": 27,
+        "median_support": {
+          "richness": 6.5,
+          "fine": 9,
+          "incidences": 16,
+          "coverage": 1,
+          "inc_coverage": 1
+        },
+        "trait_mpd_means": {
+          "equal": [
+            1.9279022585144663,
+            1.9291201177789739,
+            2.72474761570331,
+            1.1298390420611182
+          ],
+          "incidence": [
+            2.0551776582349714,
+            1.886855769787757,
+            3.1243987178770185,
+            1.1542784870401424
+          ]
+        }
+      },
+      "fits": {
+        "equal_spatial": {
+          "pairs": 87,
+          "blocks": 8,
+          "providers": 5,
+          "strata": 12,
+          "status": "insufficient_support"
+        },
+        "equal_strict": {
+          "pairs": 87,
+          "blocks": 8,
+          "providers": 5,
+          "strata": 12,
+          "status": "insufficient_support"
+        },
+        "incidence_spatial": {
+          "pairs": 87,
+          "blocks": 8,
+          "providers": 5,
+          "strata": 12,
+          "status": "insufficient_support"
+        },
+        "incidence_strict": {
+          "pairs": 87,
+          "blocks": 8,
+          "providers": 5,
+          "strata": 12,
+          "status": "insufficient_support"
+        }
+      }
+    },
+    "100": {
+      "provider_period_units": {
+        "candidate_units": 638,
+        "eligible_units": 73,
+        "excluded": {
+          "fewer_than_5_fine_cells": 524,
+          "trait_coverage_below_80pct": 31,
+          "fewer_than_3_complete_species": 10
+        },
+        "taxa": 24,
+        "providers": 17,
+        "blocks": 27,
+        "median_support": {
+          "richness": 6,
+          "fine": 10,
+          "incidences": 16,
+          "coverage": 1,
+          "inc_coverage": 1
+        },
+        "trait_mpd_means": {
+          "equal": [
+            1.9125205282526492,
+            1.9375996337901287,
+            2.5021383763649774,
+            1.2978235746028408
+          ],
+          "incidence": [
+            2.049144482178524,
+            1.9362094931678664,
+            2.9080841362677474,
+            1.3031398170999564
+          ]
+        }
+      },
+      "pooled_provider_census": {
+        "candidate_units": 343,
+        "eligible_units": 72,
+        "excluded": {
+          "fewer_than_5_fine_cells": 224,
+          "trait_coverage_below_80pct": 37,
+          "fewer_than_3_complete_species": 10
+        },
+        "taxa": 24,
+        "providers": 1,
+        "blocks": 30,
+        "median_support": {
+          "richness": 8,
+          "fine": 11,
+          "incidences": 17,
+          "coverage": 1,
+          "inc_coverage": 1
+        },
+        "trait_mpd_means": {
+          "equal": [
+            1.9320257551049584,
+            1.9194175694373377,
+            2.4709384704207737,
+            1.405721225456766
+          ],
+          "incidence": [
+            2.06394099673282,
+            1.874239162374443,
+            2.926358256296972,
+            1.3912255715270463
+          ]
+        }
+      },
+      "fits": {
+        "equal_spatial": {
+          "pairs": 38,
+          "blocks": 10,
+          "providers": 5,
+          "strata": 16,
+          "status": "insufficient_support"
+        },
+        "equal_strict": {
+          "pairs": 38,
+          "blocks": 10,
+          "providers": 5,
+          "strata": 16,
+          "status": "insufficient_support"
+        },
+        "incidence_spatial": {
+          "pairs": 38,
+          "blocks": 10,
+          "providers": 5,
+          "strata": 16,
+          "status": "insufficient_support"
+        },
+        "incidence_strict": {
+          "pairs": 38,
+          "blocks": 10,
+          "providers": 5,
+          "strata": 16,
+          "status": "insufficient_support"
+        }
+      }
+    }
+  },
+  "primary_screen": false,
+  "status": "completed"
+}
