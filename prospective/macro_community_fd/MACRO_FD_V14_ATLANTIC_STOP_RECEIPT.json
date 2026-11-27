@@ -1,0 +1,130 @@
+{
+  "stage": "independent Atlantic Forest regional survey admission",
+  "status": "STOP",
+  "source_doi": "10.1002/ecy.2007",
+  "source_commit": "136aa78f49e14a4160b40b4456f21b7677c625c4",
+  "limits": [
+    "historical capture records, not 2019–2023 observations",
+    "Precise is a source category, not calibrated coordinate error",
+    "capture sample is not occupancy or vertical activity",
+    "current range maps not contemporaneous",
+    "no GEDI or ecological model fit"
+  ],
+  "sources": {
+    "ATLANTIC_BATS_Capture.csv": {
+      "bytes": 4920410,
+      "git_blob": "ef1af2d4f2a3ead54bdef403c05eca6bd5fdb6b8",
+      "sha256": "70de42917ac6bf6bdd98bbf299df53556bd89c23181021fe205f165266986a9c"
+    },
+    "ATLANTIC_BATS_Study_site.csv": {
+      "bytes": 47940,
+      "git_blob": "b16f12a538ba92b8455905ab16a7a72f3f19a528",
+      "sha256": "3d89dd95a753d4997b200d846ad83816331ee65474ad0b07ca29a1354855d233"
+    },
+    "ATLANTIC_BATS_Reference.csv": {
+      "bytes": 62158,
+      "git_blob": "cee57b2287a1aabe8241f0c671de5ea76bd88524",
+      "sha256": "c8d28631f22e2e40eb7cafb5622fbab340b80571719a438b116281745e9fbeb0"
+    },
+    "ATLANTIC_BATS_2020_comp.xlsx": {
+      "bytes": 167893,
+      "git_blob": "2bdfc0a8eccd1906471881ec852d380e0ad28f34",
+      "sha256": "f12c1adcd44db500c05d04ae0732ec884f067398de973cb1b4483bc0e0a5b10e"
+    }
+  },
+  "tables": {
+    "site": {
+      "rows": 205,
+      "columns": [
+        "ID",
+        "Country",
+        "State",
+        "Municipality",
+        "Study_location",
+        "Latitude",
+        "Longitude",
+        "Precision",
+        "Reserve_Area",
+        "Altitude",
+        "Altitude1km",
+        "Annual_mean_temperature",
+        "Annual_rainfall",
+        "Olsong200r",
+        "Olsoneconame",
+        "ribeirovegtype",
+        "BSRs",
+        "uc",
+        "protectedtype"
+      ]
+    },
+    "reference": {
+      "rows": 205,
+      "columns": [
+        "ID",
+        "Authors",
+        "Type",
+        "References",
+        "Voucher_Specimens"
+      ]
+    },
+    "capture": {
+      "rows": 21320,
+      "columns": [
+        "ID,\"Year_start\",\"Year_finish\",\"Duration\",\"Season\",\"Method\",\"Strata_sampling\",\"Nights\",\"hours_per_night\",\"number_of_mistnets\",\"effort_straube_bianconi\",\"Sampling_habitat\",\"Community\",\"Class\",\"Order\",\"Superfamily\",\"Family\",\"Capture_number\",\"Species\",\"Status\""
+      ]
+    }
+  },
+  "source_sites": {
+    "precision": {
+      "Not-Precise": 105,
+      "Precise": 100
+    },
+    "reference_rows": 205,
+    "site_ref_ID_overlap": 204,
+    "distinct_nonempty_reference_texts": 101
+  },
+  "updated_2020_census": {
+    "ATLANTIC BATS": {
+      "shape": [
+        207,
+        141
+      ],
+      "first_row_nonempty_cells": 141
+    },
+    "SITE INFO": {
+      "shape": [
+        55,
+        5
+      ],
+      "first_row_nonempty_cells": 0
+    },
+    "REFERENCE INFO": {
+      "shape": [
+        8,
+        7
+      ],
+      "first_row_nonempty_cells": 5
+    },
+    "CAPTURE INFO": {
+      "shape": [
+        60,
+        5
+      ],
+      "first_row_nonempty_cells": 5
+    }
+  },
+  "selected_fields": {
+    "site": null,
+    "species": null,
+    "genus": null
+  },
+  "last_status": "START",
+  "error_type": "ValueError",
+  "validation": "capture schema: site/species key not unambiguous",
+  "audit": {
+    "run": 46078875587,
+    "job": 140772936334,
+    "head": "70ed40392fb6b38e5eee330ae2e9b84fc5ebfa53",
+    "scope": "executed aggregate log; artifact ZIP not independently rehashed"
+  }
+}
