@@ -1,0 +1,189 @@
+{
+  "status": "COMPLETE_RETROSPECTIVE_COMMON_POOL_DIAGNOSTIC",
+  "contract_commit": "86e17bdaefd485aac4aa60c7b002ecffbcabd7e3",
+  "source_scope": "Reopened original NWBS, Polesia Dryad, EuroBaTrait, previously admitted environmental cohort and both original FD bundles; all eight ZIP hashes/CRCs verified. England trait audit exactly replayed and common trait values identical in both prior source reports. No environmental or species model fit.",
+  "common_species": [
+    "Barbastella barbastellus",
+    "Nyctalus noctula",
+    "Pipistrellus nathusii",
+    "Pipistrellus pipistrellus",
+    "Pipistrellus pygmaeus",
+    "Plecotus auritus"
+  ],
+  "support": {
+    "England": {
+      "sites": 216,
+      "cells": 203,
+      "blocks50": 48,
+      "shared_records": 959,
+      "prior_matched_records": 1060,
+      "coverage": 0.9047169811320754,
+      "row_richness_counts": {
+        "3": 15,
+        "4": 96,
+        "5": 100,
+        "6": 5
+      },
+      "species_incidence": [
+        121,
+        203,
+        8,
+        216,
+        216,
+        195
+      ]
+    },
+    "Polesia": {
+      "sites": 124,
+      "cells": 116,
+      "blocks50": 13,
+      "shared_records": 649,
+      "prior_matched_records": 988,
+      "coverage": 0.6568825910931174,
+      "row_richness_counts": {
+        "2": 1,
+        "3": 7,
+        "4": 14,
+        "5": 42,
+        "6": 60
+      },
+      "species_incidence": [
+        100,
+        124,
+        118,
+        103,
+        117,
+        87
+      ],
+      "three_night_combinations": 3076,
+      "empty": 4,
+      "singleton": 77
+    }
+  },
+  "domain_order": [
+    "size",
+    "flight_indices",
+    "sensory",
+    "maternity_roost",
+    "integrated"
+  ],
+  "trait_label_permutation": {
+    "permutations": 720,
+    "England": [
+      0.077640914,
+      0.070021997,
+      0.055766816,
+      0.102085176,
+      0.076378726
+    ],
+    "Polesia": [
+      0.027563159,
+      0.029063375,
+      0.016458743,
+      -0.008978336,
+      0.016026735
+    ],
+    "England_equal_site": [
+      0.069601521,
+      0.059816757,
+      0.046580563,
+      0.095679012,
+      0.067919463
+    ],
+    "Polesia_equal_site": [
+      0.030763105339854324,
+      0.028973511163773336,
+      0.014438201855126398,
+      -0.016590501792114742,
+      0.014396079141659912
+    ],
+    "Polesia_three_night": [
+      0.046364202938970756,
+      0.04536493364949584,
+      0.024589861059632345,
+      -0.004068747638323766,
+      0.028062562502443822
+    ],
+    "joint_predeclared_sign_pattern_count": 0,
+    "England_count": 0,
+    "Polesia_count": 11,
+    "screen_pass": false
+  },
+  "fixed_margins": {
+    "chains_per_study": 4,
+    "draws_per_chain": 1000,
+    "burn_sweeps": 1000,
+    "thin_sweeps": 10,
+    "all_margins_verified": true,
+    "England": {
+      "residual_MC": [
+        -9.044584262929423e-7,
+        -0.00005234574727971952,
+        -0.00019608509419734993,
+        0,
+        -0.00006233382497590478
+      ],
+      "residual_exact": [
+        -0.0000017725132847312697,
+        -0.0000526844328121584,
+        -0.00019798817097929633,
+        0,
+        -0.00006311127926897364
+      ],
+      "movable_blocks": 8,
+      "total_blocks": 48,
+      "roost_reference_constant": true,
+      "all_outside_reference": false,
+      "max_feasible_labeled_matrices_in_block": "296"
+    },
+    "Polesia": {
+      "residual_MC": [
+        -0.0010502043915987767,
+        0.00027176968195959453,
+        -0.0010009583508939907,
+        -0.00020284092007528606,
+        -0.0004955584951521277
+      ],
+      "residual_exact": [
+        -0.0010455744050349228,
+        0.0002724418632022614,
+        -0.0009986404613508935,
+        -0.00020674218977130218,
+        -0.0004946287982387151
+      ],
+      "movable_blocks": 6,
+      "total_blocks": 13,
+      "outside_reference_domains": [
+        "size",
+        "sensory"
+      ],
+      "negative_residual_blocks_for_size_and_sensory": 5,
+      "max_feasible_labeled_matrices_in_block": "440667"
+    },
+    "screen_pass": false,
+    "max_nonconstant_split_Rhat": 1.0010087841228847,
+    "min_nonconstant_ESS": 2190.303352035057,
+    "exact_DP_arithmetic_audit_all_means_agree": true,
+    "maximum_DP_states_per_block": {
+      "England": 58,
+      "Polesia": 537
+    }
+  },
+  "audit": {
+    "source_and_trait_checks": true,
+    "exact_permutation_mean": true,
+    "synthetic_transition_symmetry": true,
+    "every_saved_margin_verified": true,
+    "domain_additivity": true,
+    "precision_fix": "Reference endpoint tolerance 1e-12 prevents reporting constant England maternity-roost score outside its reference due to floating point. Full rerun changed only one Boolean field; no score changed.",
+    "exact_margin_audit": "Post-Monte Carlo independent combinatorial expectation audit on fixed support; checked tiny direct enumeration and exact row and column marginal expectations, all means within six approximate MC SE plus tolerance. No new ecological gate.",
+    "script_sha256": "f5e55e73a05e693392f33c9028f482be4955b979a4c71611034c0b6cf9d16d46",
+    "exact_audit_script_sha256": "1ebb985289b795ab5f24bc7925b68fad27f9194ea05c3f6b14081d97bf12cce6",
+    "report_sha256": "7d11be1e762eef86a345780d6489fc5a947c8a1d1b5e37b23bcef36c0b62af18",
+    "exact_audit_report_sha256": "ad1589f9364dead88f142c860e0aec767bc449036cd6cca32140300d3ef1ee3a",
+    "bundle_sha256": "ef47431dabc6e80e34503325ca4109c1d4887f95fad1a6b933934448f7854ee5",
+    "bundle_crc_verified": true,
+    "scope": "Complete code and exact original numerical values in locally verified user ZIP; aggregate receipt only in repository."
+  },
+  "decision": "The previously noticed three-domain concordance fails common-pool harmonization. Flight dispersion retains positive sign under trait shuffle, but near-zero conditional residual when recorded prevalence and richness are fixed. Sensory sign reverses in both studies; roost differs. Null mobility limited; fixed margins can condition away real ecological sorting as well as observation effects. No claim of absent filtering, universal rule, independent replicate, real altitude, calibrated abundance or macro SDM. Close this harmonization; prioritize new independent observation/trait sources with adequate species pool and repeated strata rather than tuning previously inspected studies. England NCEA PDF remains unreviewed. Main/frozen manuscripts unchanged."
+}
