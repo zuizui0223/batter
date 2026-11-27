@@ -45,16 +45,35 @@ jobs:
           out={'status':'started'}
           try:
               w=workbook(5018280,'Haysom_etal_2021_Frontiers.xlsx',10358292,'7c356be1ecae1a4a6a0a118fe2ca508c2afb7277eaf93a1e771df76234084c2a')
-              rs=w['Rarefaction_Input'];head=list(next(rs.iter_rows(min_row=3,max_row=3,values_only=True)))
+              taxa={norm(x[0]):norm(x[1]) for x in w['Taxa'].iter_rows(min_row=2,values_only=True) if x[0] is not None}
+              def headers(s,mode):
+                  diagnostics=[]
+                  for i,r in enumerate(s.iter_rows(min_row=1,max_row=12,values_only=True),1):
+                      q=[norm(x) for x in r];tag=q[0]
+                      matches=sum(x in taxa for x in q[2:])
+                      diagnostics.append({'row':i,'metadata_tag':tag if tag in ('field_type','description','levels','units','unit','field_name','field','name','field_names') else '<other>','nonempty':sum(bool(x) for x in q),'taxon_matches':matches})
+                      if mode=='rare' and matches==55:
+                          out[mode+'_header_diagnostics']=diagnostics
+                          return i,list(r)
+                      if mode=='ord' and (tag in ('field_name','field_names','field','name') or ('location' in q[1] and any('disturb' in x or 'forest' in x for x in q[2:5]))):
+                          if tag not in ('field_type','description','levels','units','unit'):
+                              out[mode+'_header_diagnostics']=diagnostics
+                              return i,list(r)
+                      if mode=='trait' and (tag in ('field_name','field_names','field','name') or ('movement' in q[18] or 'locomot' in q[18])):
+                          if tag not in ('field_type','description','levels','units','unit'):
+                              out[mode+'_header_diagnostics']=diagnostics
+                              return i,list(r)
+                  out[mode+'_header_diagnostics']=diagnostics
+                  raise ValueError(mode+' semantic header not identified')
+              rs=w['Rarefaction_Input'];rh,head=headers(rs,'rare')
               out['rarefaction_header']=[str(x) if x is not None else None for x in head]
               names=[norm(x) for x in head[2:]]
-              taxa={norm(x[0]):norm(x[1]) for x in w['Taxa'].iter_rows(min_row=2,values_only=True) if x[0] is not None}
               out['header_taxon_matches']=sum(x in taxa for x in names)
               assert len(names)==55 and len(set(names))==55 and all(names)
               # Independent author disturbance assignment, with no geographic-name inference.
-              od=w['Ordination_Input'];out['ordination_header']=[str(x) if x is not None else None for x in next(od.iter_rows(min_row=3,max_row=3,values_only=True))]
+              od=w['Ordination_Input'];oh,ordhead=headers(od,'ord');out['ordination_header']=[str(x) if x is not None else None for x in ordhead]
               site_types=collections.defaultdict(set);categories=collections.Counter();bad_ordination=0
-              for row in od.iter_rows(min_row=4,values_only=True):
+              for row in od.iter_rows(min_row=oh+1,values_only=True):
                   if all(x is None for x in row):continue
                   k=layer(row[1]);t=typ(row[2]);categories[str(row[2])]+=1
                   if k and t:site_types[k[0]].add(t)
@@ -63,7 +82,7 @@ jobs:
               out['ordination_invalid_rows']=bad_ordination
               out['ordination_unique_base_keys']=len(site_types)
               counts={};eff=collections.Counter();invalid=collections.Counter();blank=0
-              for row in rs.iter_rows(min_row=4,values_only=True):
+              for row in rs.iter_rows(min_row=rh+1,values_only=True):
                   if all(x is None for x in row):blank+=1;continue
                   k=layer(row[1])
                   if not k:invalid['location_suffix']+=1;continue
@@ -124,13 +143,13 @@ jobs:
               w.close()
               # Exact taxonomic crosswalk to author trait table, without outcomes.
               tw=workbook(7789416,'SAFE_Functional_Groups_template.xlsx',2084581,'2baa7270dbd7f19b1234b962defd5b45f06696ef1b91f482c617c975e0d08e7a')
-              tm=tw['TraitMatrix'];th=list(next(tm.iter_rows(min_row=3,max_row=3,values_only=True)))
+              tm=tw['TraitMatrix'];trh,th=headers(tm,'trait')
               out['trait_header']=[str(x) if x is not None else None for x in th]
               lookup=collections.defaultdict(set)
               for row in tw['Taxa'].iter_rows(min_row=2,values_only=True):
                   if row[0] is not None and row[1] is not None:lookup[norm(row[0])].add(norm(row[1]))
               mm=collections.defaultdict(set);mass=collections.defaultdict(set)
-              for row in tm.iter_rows(min_row=4,values_only=True):
+              for row in tm.iter_rows(min_row=trh+1,values_only=True):
                   code=norm(row[11])
                   if len(lookup.get(code,set()))!=1:continue
                   tax=next(iter(lookup[code]));v=norm(row[18])
