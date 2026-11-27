@@ -1,0 +1,165 @@
+name: Hidden vertical FD V6e V7 verified source adapter
+on:
+  push:
+    branches: [prospective/hidden-vertical-functional-diversity-20261127]
+    paths: ['.github/workflows/hidden-vertical-fd-haysom-v7.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Verify source keys and evaluate only admitted estimands
+        run: |
+          python -m pip install --quiet openpyxl==3.1.5 numpy
+          python - <<'PY'
+          import urllib.request,json,hashlib,io,zipfile,collections,re,math
+          import numpy as np
+          from openpyxl import load_workbook
+          from pathlib import Path
+          def get(u,cap):
+              req=urllib.request.Request(u,headers={'User-Agent':'batter-source-audit/1.0'})
+              with urllib.request.urlopen(req,timeout=45) as r:b=r.read(cap+1)
+              if len(b)>cap:raise ValueError('size gate')
+              return b
+          def book():
+              meta=json.loads(get('https://zenodo.org/api/records/5018280',2097152))
+              f=next(x for x in meta['files'] if x['key']=='Haysom_etal_2021_Frontiers.xlsx')
+              b=get(f['links']['self'],10358292)
+              assert len(b)==10358292 and hashlib.sha256(b).hexdigest()=='7c356be1ecae1a4a6a0a118fe2ca508c2afb7277eaf93a1e771df76234084c2a'
+              with zipfile.ZipFile(io.BytesIO(b)) as z:
+                  assert sum(x.file_size for x in z.infolist())<=768*1024**2 and z.testzip() is None
+                  return load_workbook(io.BytesIO(b),read_only=True,data_only=True)
+          def norm(x):return ' '.join(str(x if x is not None else '').strip().casefold().split())
+          def name(x):return norm(str(x or '').replace('_',' '))
+          def key(x):
+              m=re.fullmatch(r'(.+?)(?:_)?([ct])',norm(x))
+              return (m[1],m[2].upper()) if m else None
+          def numeric(v,n):
+              return len(v)==n and all(isinstance(x,(int,float)) and math.isfinite(x) and x>=0 and int(x)==x for x in v)
+          def parse(s,offset,n):
+              rows=list(s.iter_rows(min_row=1,max_row=10,values_only=True))
+              assert norm(rows[9][0])=='field_name' and norm(rows[4][0])=='taxon_name'
+              hdr=rows[9][offset:];tax=rows[4][offset:]
+              assert len(hdr)==n and len(set(map(norm,hdr)))==n and all(norm(x) for x in hdr)
+              assert list(map(norm,hdr))==list(map(norm,tax))
+              return hdr
+          def metrics(a,b,mode):
+              if mode=='incidence':a=(a>0).astype(float);b=(b>0).astype(float)
+              p=a/a.sum();q=b/b.sum()
+              qa=1-p@p;qt=1-q@q;cross=1-p@q
+              if mode=='rarefied':
+                  m=min(a.sum(),b.sum())
+                  if m<2:return None
+                  qa*=((m-1)/m)*(a.sum()/(a.sum()-1));qt*=((m-1)/m)*(b.sum()/(b.sum()-1))
+              alpha=(qa+qt)/2
+              v=np.array([qa,qt,cross,alpha,(cross-alpha)/2,(cross+alpha)/2])
+              assert np.all(np.isfinite(v)) and abs(v[4]+v[3]-v[5])<1e-10
+              return v
+          def summarize(pairs):
+              result={}
+              for mode in ['count','incidence','rarefied','count_matched_rarefied']:
+                  fmeans={};ns={}
+                  for f in ['unlogged','logged']:
+                      vals=[]
+                      for forest,a,b in pairs:
+                          if forest!=f:continue
+                          if mode in ['rarefied','count_matched_rarefied'] and min(a.sum(),b.sum())<2:continue
+                          vals.append(metrics(a,b,'count' if mode=='count_matched_rarefied' else mode))
+                      ns[f]=len(vals);fmeans[f]=np.mean(vals,axis=0).tolist() if vals else None
+                  if all(ns.values()):fmeans['logged_minus_unlogged']=(np.array(fmeans['logged'])-np.array(fmeans['unlogged'])).tolist()
+                  result[mode]={'n':ns,'means':fmeans}
+              return result
+          out={'metric_order':['Q_C','Q_T','cross','alpha','beta','gamma']}
+          try:
+              w=book();r=w['Rarefaction_Input'];oh=w['Ordination_Input'];h=parse(r,2,55);ohead=parse(oh,5,43)
+              tax=collections.defaultdict(list)
+              for x in w['Taxa'].iter_rows(min_row=2,values_only=True):
+                  if x[0] is not None:tax[name(x[0])].append(norm(x[1]))
+              out['taxon_mapping_unique']=sum(len(tax[name(x)])==1 for x in h)
+              out['taxon_mapping_nonunique']=sum(len(tax[name(x)])>1 for x in h)
+              out['mapped_taxon_names_distinct']=len({tax[name(x)][0] for x in h if len(tax[name(x)])==1})
+              counts={};eff=collections.Counter();bad=collections.Counter();forms=collections.Counter();global_numeric=0;global_rows=0
+              for row in r.iter_rows(min_row=11,values_only=True):
+                  if all(v is None for v in row):continue
+                  global_rows+=1
+                  if not numeric(row[2:],55):bad['counts']+=1;continue
+                  a=np.array(row[2:],dtype=np.int64);global_numeric+=int(a.sum());k=key(row[1])
+                  if k is None:bad['camera_suffix']+=1;continue
+                  forms['underscore' if norm(row[1])[-2:-1]=='_' else 'no_underscore']+=1
+                  if k not in counts:counts[k]=np.zeros(55,dtype=np.int64)
+                  counts[k]+=a;eff[k]+=1
+              out['daily']={'rows':global_rows,'events_all_numeric':global_numeric,'deployments':len(counts),'parsed_nights':sum(eff.values()),'invalid':dict(bad),'forms':dict(forms),'layer_nights':{l:sum(v for k,v in eff.items() if k[1]==l) for l in ['C','T']},'layer_events':{l:sum(int(v.sum()) for k,v in counts.items() if k[1]==l) for l in ['C','T']},'union_taxa':int((sum(counts.values(),np.zeros(55,dtype=int))>0).sum())}
+              allbase={k[0] for k in counts}
+              out['daily']['possible_pairs']=sum((b,'C') in counts and (b,'T') in counts for b in allbase)
+              layerpos={l:sum((v for k,v in counts.items() if k[1]==l),np.zeros(55,dtype=int))>0 for l in ['C','T']}
+              out['daily']['shared_taxa']=int((layerpos['C']&layerpos['T']).sum())
+              # Ordination's explicit habitat and tree identifiers are authoritative.
+              orows={};site=collections.defaultdict(set);pairrows=collections.defaultdict(dict);obad=collections.Counter();shape=collections.Counter();nrows=0
+              for row in oh.iter_rows(min_row=11,values_only=True):
+                  if all(v is None for v in row):continue
+                  nrows+=1
+                  k=key(row[1]);f=norm(row[2]);tree=norm(row[3]);st=norm(row[4])
+                  if f not in ('unlogged','logged') or st not in ('canopy','terrestrial') or not tree or not k or not numeric(row[5:],43):
+                      obad['invalid_fields']+=1;continue
+                  l='C' if st=='canopy' else 'T'
+                  if k[1]!=l:obad['layer_conflict']+=1;continue
+                  if k[0]!=tree:obad['tree_base_conflict']+=1
+                  if k in orows or l in pairrows[f,tree]:obad['duplicate']+=1;continue
+                  a=np.array(row[5:],dtype=np.int64)
+                  orows[k]=(f,tree,l,a);site[k[0]].add(f);pairrows[f,tree][l]=(k,a)
+                  shape['camera_in_daily']+=int(k in counts)
+                  shape['camera_atleast91']+=int(eff[k]>=91)
+              out['ordination']={'rows':nrows,'unique_cameras':len(orows),'invalid':dict(obad),'daily_crosswalk':dict(shape),'habitat_counts':dict(collections.Counter(x[0] for x in orows.values()))}
+              # No treatment inferred from site name. Use only direct explicit assignments.
+              for row in w['Locations'].iter_rows(min_row=2,values_only=True):
+                  if len(row)<5:continue
+                  f=norm(row[4]);b=norm(row[0])
+                  if f in ('unlogged','logged') and b in allbase:site[b].add(f)
+              out['daily']['unmapped_deployments']=sum(len(site[k[0]])!=1 for k in counts)
+              out['daily']['explicit_treatment_base_count']=sum(len(v)==1 for v in site.values())
+              ss={}
+              for f in ['unlogged','logged','unknown']:
+                  for l in ['C','T']:
+                      kk=[k for k in counts if k[1]==l and (next(iter(site[k[0]])) if len(site[k[0]])==1 else 'unknown')==f]
+                      v=sum((counts[k] for k in kk),np.zeros(55,dtype=int))
+                      ss[f+'_'+l]=[len(kk),sum(eff[k] for k in kk),int(v.sum()),int((v>0).sum())]
+              out['daily']['summary_deployments_nights_events_taxa']=ss
+              expected={'unlogged_C':[25,6041,705,18],'unlogged_T':[24,3995,3880,35],'logged_C':[25,3115,418,20],'logged_T':[25,2666,3005,29]}
+              full=(not bad and not obad and out['taxon_mapping_unique']==55 and out['mapped_taxon_names_distinct']==55 and out['daily']['unmapped_deployments']==0 and all(ss[k]==v for k,v in expected.items()) and out['daily']['union_taxa']==55 and out['daily']['shared_taxa']==9)
+              out['V6_full_admitted']=bool(full)
+              if full:
+                  pp=[]
+                  for b in allbase:
+                      if (b,'C') not in counts or (b,'T') not in counts:continue
+                      a,c=counts[b,'C'],counts[b,'T']
+                      if min(eff[b,'C'],eff[b,'T'])>=30 and min(a.sum(),c.sum())>0:pp.append((next(iter(site[b])),a,c))
+                  out['V6_results']=summarize(pp)
+              # Separate 91-day author subset. TreeID and camera base must agree.
+              pp=[];eligible=collections.Counter();paired=collections.Counter();rich=collections.defaultdict(list);excluded=collections.Counter()
+              for (f,t),d in pairrows.items():
+                  if set(d)!={'C','T'}:continue
+                  paired[f]+=1
+                  ka,a=d['C'];kb,b=d['T']
+                  if ka[0]!=kb[0] or ka[0]!=t:excluded['tree_conflict']+=1;continue
+                  if min(eff[ka],eff[kb])<91:excluded['daily_support_lt91']+=1;continue
+                  if min(a.sum(),b.sum())<=0:excluded['empty_layer']+=1;continue
+                  eligible[f]+=1;pp.append((f,a,b));rich[f].append(int(((a+b)>0).sum()))
+              out['ordination']['paired']=dict(paired);out['ordination']['eligible']=dict(eligible);out['ordination']['excluded']=dict(excluded)
+              admitted=(nrows==79 and len(orows)==79 and not obad and not bad and all(eligible[f]>=10 for f in ['unlogged','logged']))
+              out['V7_91day_admitted']=bool(admitted)
+              if admitted:
+                  out['V7_results']=summarize(pp);out['V7_union_richness']={f:float(np.mean(v)) for f,v in rich.items()}
+              out['status']='complete' if full or admitted else 'not_admitted'
+              w.close()
+          except Exception as e:out.update(status='stopped',error=type(e).__name__+': '+str(e)[:250])
+          Path('haysom_v7.json').write_text(json.dumps(out,indent=2))
+          print(json.dumps(out))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: haysom-v7-verified-aggregate
+          path: haysom_v7.json
+          retention-days: 14
