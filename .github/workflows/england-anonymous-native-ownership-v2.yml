@@ -1,0 +1,43 @@
+name: England public woodland profile native ownership V2
+on:
+  workflow_dispatch:
+  push:
+    branches: [prospective/gedi-trait-macro-sdm-20261125]
+    paths:
+      - .github/workflows/england-anonymous-native-ownership-v2.yml
+permissions:
+  contents: read
+  actions: read
+jobs:
+  public_structure:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: f4c9f7085a1b230a0ccaeb947e76d5158f1a33a4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          name: independent-community-england-v1
+          run-id: 45867952345
+          github-token: ${{ github.token }}
+          path: nwbs
+      - uses: actions/download-artifact@v4
+        with:
+          name: england-anonymous-structure-v1
+          run-id: 45912082653
+          github-token: ${{ github.token }}
+          path: cached_v1
+      - run: python -m pip install numpy pandas requests rasterio pyproj shapely
+      - run: python -m py_compile prospective/gedi_trait_macro_sdm/england_anonymous_native_ownership_v2.py
+      - run: python prospective/gedi_trait_macro_sdm/england_anonymous_native_ownership_v2.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: england-anonymous-native-v2
+          path: england_anonymous_native_v2/
+          if-no-files-found: error
+          retention-days: 90
