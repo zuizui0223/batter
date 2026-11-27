@@ -20,6 +20,21 @@ def read(b):
         try:return pd.read_csv(io.BytesIO(b),encoding=enc,dtype=str,keep_default_na=False)
         except UnicodeDecodeError:pass
     raise ValueError("unknown encoding")
+def read_capture(b):
+    import csv
+    text=None
+    for enc in ("utf-8-sig","cp1252"):
+        try:text=b.decode(enc);break
+        except UnicodeDecodeError:pass
+    if text is None:raise ValueError("unknown capture encoding")
+    rows=list(csv.reader(io.StringIO(text)))
+    expected=["ID","Year_start","Year_finish","Duration","Season","Method","Strata_sampling","Nights","hours_per_night","number_of_mistnets","effort_straube_bianconi","Sampling_habitat","Community","Class","Order","Superfamily","Family","Capture_number","Species","Status"]
+    nested=all(len(x)==1 for x in rows)
+    if nested:
+        rows=[next(csv.reader(io.StringIO(x[0]))) for x in rows]
+    if rows[0]!=expected or not all(len(x)==len(expected) for x in rows):
+        raise ValueError("exact capture schema or record width mismatch")
+    return pd.DataFrame(rows[1:],columns=rows[0]),nested
 def key(x):return re.sub("[^a-z0-9]","",str(x).casefold())
 def pick(d,opts):
     a=[x for x in d if key(x) in opts];return a[0] if len(a)==1 else None
@@ -31,7 +46,8 @@ def main():
         for fn,(n,sha) in FILES.items():
             b=(ROOT/fn).read_bytes();assert len(b)==n and blob(b)==sha
             raw[fn]=b;o["sources"][fn]={"bytes":n,"git_blob":sha,"sha256":hashlib.sha256(b).hexdigest()}
-        s,r,d=[read(raw[f"ATLANTIC_BATS_{x}.csv"]) for x in ("Study_site","Reference","Capture")]
+        s,r=[read(raw[f"ATLANTIC_BATS_{x}.csv"]) for x in ("Study_site","Reference")]
+        d,nested=read_capture(raw["ATLANTIC_BATS_Capture.csv"]);o["capture_nested_csv"]=nested
         o["tables"]={k:{"rows":len(v),"columns":v.columns.tolist()} for k,v in [("site",s),("reference",r),("capture",d)]}
         assert set(["ID","Latitude","Longitude","Precision"])<=set(s) and set(["ID","References"])<=set(r)
         assert len(s)==205 and s.ID.is_unique and r.ID.is_unique
@@ -62,11 +78,20 @@ def main():
         good|=vals.str.fullmatch(r"[a-z]+ [a-z][a-z-]+",case=True)
         good&=~vals.str.casefold().str.split().str[-1].isin(["sp","spp","cf","aff","unknown","indet","unidentified"])
         site_ok=d[sid].isin(s.ID)
-        # Source capture table is individual capture data; no abundance inference.
-        o["capture_census"]={"capture_rows":len(d),"matched_site_rows":int(site_ok.sum()),"exact_binomial_rows":int(good.sum()),"eligible_rows":int((site_ok&good).sum()),"distinct_exact_labels":int(vals[good].map(norm).nunique()),"unique_matched_sites":int(d.loc[site_ok,sid].nunique()),"missing_site_rows":int((~site_ok).sum()),"unresolved_taxon_rows":int((~good).sum())}
-        if len(d)<10000 or int(site_ok.sum())<.95*len(d):raise ValueError("capture grain/site coverage not admitted")
-        c=pd.DataFrame({"site":d.loc[site_ok&good,sid],"name":vals[site_ok&good].map(norm)}).drop_duplicates()
-        # No source grain beyond distinct capture labels.
+        raw_count=d["Capture_number"].str.strip()
+        count=pd.to_numeric(raw_count,errors="coerce")
+        finite=np.isfinite(count)
+        integer=finite&count.eq(np.floor(count))
+        positive=integer&count.gt(0)
+        sel=site_ok&good&positive
+        o["capture_census"]={"capture_rows":len(d),"matched_site_rows":int(site_ok.sum()),"exact_binomial_rows":int(good.sum()),"positive_integer_rows":int(positive.sum()),"positive_capture_count_sum":int(count[positive].sum()),"zero_rows":int((integer&count.eq(0)).sum()),"negative_rows":int((integer&count.lt(0)).sum()),"missing_or_non_numeric_rows":int((~finite).sum()),"noninteger_rows":int((finite&~integer).sum()),"eligible_rows":int(sel.sum()),"eligible_capture_count_sum":int(count[sel].sum()),"distinct_exact_positive_labels":int(vals[sel].map(norm).nunique()),"unique_matched_sites":int(d.loc[site_ok,sid].nunique()),"missing_site_rows":int((~site_ok).sum()),"unresolved_positive_taxon_rows":int((positive&~good).sum())}
+        if len(d)<10000 or int(site_ok.sum())<.95*len(d) or not positive.any():raise ValueError("capture grain/site coverage not admitted")
+        sample=d.loc[sel,[sid,"Method","Strata_sampling","Year_start","Year_finish"]].copy()
+        o["sampling_census"]={"positive_row_method_categories":dict(C.Counter(sample.Method)),"positive_row_strata_categories":dict(C.Counter(sample.Strata_sampling)),"site_counts_by_stratum_category":{str(k):int(v[sid].nunique()) for k,v in sample.groupby("Strata_sampling")},"sites_with_multiple_stratum_strings":int((sample.groupby(sid).Strata_sampling.nunique()>1).sum()),"sites_with_multiple_method_strings":int((sample.groupby(sid).Method.nunique()>1).sum())}
+        for col in ("Year_start","Year_finish"):
+            yr=pd.to_numeric(sample[col],errors="coerce");yr=yr[np.isfinite(yr)]
+            o["sampling_census"][col]={"numeric_rows":len(yr),"minimum":float(yr.min()) if len(yr) else None,"maximum":float(yr.max()) if len(yr) else None}
+        c=pd.DataFrame({"site":d.loc[sel,sid],"name":vals[sel].map(norm)}).drop_duplicates()
         o["capture_census"]["site_species_incidence"]=len(c)
         o["status"]="SOURCE_CENSUS";save(o)
         names,X,shape,crs,T=read_ranges(o);assert len(names)==1141
