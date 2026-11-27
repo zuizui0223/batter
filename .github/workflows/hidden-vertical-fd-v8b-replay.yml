@@ -1,0 +1,31 @@
+name: Hidden vertical FD V8b binary environment replay
+on:
+  push:
+    branches: [prospective/hidden-vertical-functional-diversity-20261127]
+    paths: ['.github/workflows/hidden-vertical-fd-v8b-replay.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  paired_gradient:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install exact binary wheels
+        run: |
+          python --version
+          python -m pip install --only-binary=:all: numpy==2.2.6 openpyxl==3.1.5 rasterio==1.4.3 pyproj==3.7.1
+          python -c "import rasterio, pyproj, numpy; print(rasterio.__version__, rasterio.__gdal_version__, pyproj.__version__, numpy.__version__)"
+      - name: Replay unchanged V8 gradient script
+        run: python prospective/hidden_vertical_fd/haysom_v8_gradient.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: haysom-v8b-gradient
+          path: haysom_v8_gradient.json
+          retention-days: 14
+          if-no-files-found: error
