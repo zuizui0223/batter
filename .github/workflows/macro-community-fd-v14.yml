@@ -1,4 +1,4 @@
-name: Macro community FD V14b Atlantic survey count-aware admission
+name: Macro community FD V14c Atlantic exact-name trait coverage
 on:
   push:
     branches: [prospective/macro-community-fd-20261127]
