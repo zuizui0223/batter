@@ -1,0 +1,347 @@
+{
+  "stage": "public BatAMP detector-height monthly audit",
+  "status": "HEIGHT_SUPPORT_STOP",
+  "source_commit": "15e2bf60d63aea0246fcec178ebd152b4164f367",
+  "limits": [
+    "monthly summaries not simultaneous nights",
+    "microphone heights not animal flight heights",
+    "source coordinates can be GRTS centroids; no local structural join",
+    "upstream merging and imputation of survey zeros; no occupancy inference",
+    "dataset strings are not necessarily independent studies",
+    "no raw locations, IDs, or detector metadata values exported",
+    "support only; no ecological outcome fit"
+  ],
+  "files": {
+    "ui/static/data/detectors.feather": {
+      "bytes": 915034,
+      "git_blob": "d7a8a122e47e2a116be975765760c8376a801b91",
+      "sha256": "a47274522aa3446407833316a3338ecdfc7966fe24213bb5b93a2e86d8a96129"
+    },
+    "ui/static/data/spp_detections.feather": {
+      "bytes": 2387282,
+      "git_blob": "b293bacbd1c0eedf0be67231f982c6eb1fb41c47",
+      "sha256": "69abe3c7b26d6cd739fd3b0ac879f906b7f23b640ce7a9431d273072c10b4c04"
+    },
+    "analysis/README.md": {
+      "bytes": 17325,
+      "git_blob": "b24e548ca06c3ae0cd3eb930902c936422bb3499",
+      "sha256": "2687e13f9233deb545971fc8c5afd279adfd7d97ac1a6ea4ddcd70bba29b1cfd"
+    },
+    "analysis/merge.py": {
+      "bytes": 33255,
+      "git_blob": "86151a9dd662e78af0ed0d7cc08483733fd3c303",
+      "sha256": "3ef74a39d0d9ed8d2ece7b91f0f9a698eb0dd28bbe8437468f7d5abf024bfb80"
+    },
+    "ui/src/config.js": {
+      "bytes": 6673,
+      "git_blob": "cab3c375f1ea93db2582100875d7d0ac5bef4f47",
+      "sha256": "75bf9bf24db8a9db7d1df5508c4a29b09632b7e396403d25f2c0a022d38cfa3c"
+    },
+    "ui/data/summary.json": {
+      "bytes": 19072,
+      "git_blob": "2f21d78a0947bedd8b79ec86471014998f4151bc",
+      "sha256": "9b9c56b7f5b55fe1d324efa17b41f25e13d27f3d4118b7ca3bccae891aa7cbdd"
+    }
+  },
+  "schemas": {
+    "detectors": {
+      "id": "uint16",
+      "source": "category",
+      "siteId": "category",
+      "micHt": "category",
+      "detType": "category",
+      "micType": "category",
+      "reflType": "category",
+      "wthrProf": "category",
+      "callId": "category",
+      "countType": "category",
+      "dataset": "category",
+      "organization": "category",
+      "contributors": "category",
+      "siteName": "category",
+      "detectorNights": "category",
+      "dateRange": "category",
+      "detectionNights": "category",
+      "admin1Name": "category",
+      "lat": "float32",
+      "lon": "float32",
+      "h3l3": "category",
+      "h3l4": "category",
+      "h3l5": "category",
+      "h3l6": "category",
+      "h3l7": "category",
+      "h3l8": "category"
+    },
+    "species": {
+      "detId": "category",
+      "year": "category",
+      "month": "category",
+      "species": "category",
+      "detections": "category",
+      "detectionNights": "category",
+      "detectorNights": "category"
+    }
+  },
+  "source_census": {
+    "detectors": 9485,
+    "species_month_rows": 262107,
+    "sites": 8249,
+    "total_detections": 6982180,
+    "species_detected": 41,
+    "species_monitored": 44,
+    "reported_detector_nights": 287894,
+    "year_min": 2001,
+    "year_max": 2026,
+    "height_finite_positive_detectors": 9396,
+    "exact_binomial_codes": 43,
+    "count_types": {
+      "a": 4842,
+      "p": 4643
+    },
+    "sources": {
+      "batamp": 7121,
+      "nabat": 2364
+    },
+    "coordinate_precision_field_present": false
+  },
+  "summary_checks": {
+    "detectors_match": true,
+    "detections_match": true,
+    "species_detected_match": true,
+    "species_monitored_match": true,
+    "nights_match": true
+  },
+  "range_metadata": {
+    "bytes": 977639,
+    "git_blob": "f2538374945f602f7c148d1a534be491895cd6e1",
+    "sha256": "ac70e5925cdbdb085757d84fcff7fa6fbab9fe285b2fd5b182233ee19ecfc479"
+  },
+  "trait_source": {
+    "artifact": 15069663941,
+    "zip_sha256": "fa45d435204439bd4600143540bc6960e0b814405cec938c3275c19ebbd2fb09",
+    "member_sha256": "99a19c169e18a0bafa4a518b7f844b56d2fe846cac13d5c035f4eae562a74c7b",
+    "species": 280
+  },
+  "sources": {
+    "trait_data_reported.csv": {
+      "id": 27703263,
+      "bytes": 1612538,
+      "sha256": "14ace2dff03b71c20dc923a9eb293aaadc29934e21c6f11fa30d1b70e5abab92",
+      "md5": "d894586c3858620723b1182d8b491d3e",
+      "rows": 6263,
+      "duplicate_key_rows": 0
+    },
+    "trait_data_sources.csv": {
+      "id": 27703260,
+      "bytes": 3552819,
+      "sha256": "f0d8ba1e42fabed49ffd0d4e61a577c3bfee0a787b9886c5891f8707112a1200",
+      "md5": "f883e787cfed1a27342db4711eedaabd",
+      "rows": 6263,
+      "duplicate_key_rows": 0
+    },
+    "trait_data_imputed.csv": {
+      "id": 27703266,
+      "bytes": 1891897,
+      "sha256": "b576cfd9f12b1441eb564bbf7acb65f06e676108aa0651aed9594585e7ff65f9",
+      "md5": "5c0af319124163830a8e7fa89c0abda5",
+      "rows": 6263,
+      "duplicate_key_rows": 0
+    }
+  },
+  "trait_mapping": {
+    "exact_unique_matches": 1069,
+    "ambiguous_labels": 72,
+    "broad_species": 1034,
+    "common_wing_species": 234,
+    "broad_without_split_annotations": 998,
+    "stratum_codes": {
+      "Ar": 282,
+      "A": 677,
+      "G": 15,
+      "S": 60
+    }
+  },
+  "matched_trait_species": {
+    "wing": 26,
+    "broad": 40
+  },
+  "period_census": {
+    "regional_positive_height_detectors": 9082,
+    "2019_22_month_species_rows_ge5_nights": 19652,
+    "detectors_on_support": 678,
+    "sites_on_support": 586
+  },
+  "primary": {
+    "candidate_site_source_type_months_height_gap": 0,
+    "strict_metadata_matched": {
+      "site_month_pairs": 0,
+      "sites": 0,
+      "blocks200": 0,
+      "dataset_strings": 0,
+      "sites_all_included_species_positive_overlap_bound": 0,
+      "height_gap_quantiles_m": null,
+      "low_height_quantiles_m": null,
+      "high_height_quantiles_m": null,
+      "common_monitored_species_quantiles": null,
+      "monitor_night_min_quantiles": null,
+      "monitor_night_max_quantiles": null,
+      "year_counts": {},
+      "source_counts": {},
+      "admitted": false
+    },
+    "at_least_two": {
+      "site_month_pairs": 0,
+      "sites": 0,
+      "blocks200": 0,
+      "dataset_strings": 0,
+      "sites_all_included_species_positive_overlap_bound": 0,
+      "height_gap_quantiles_m": null,
+      "low_height_quantiles_m": null,
+      "high_height_quantiles_m": null,
+      "common_monitored_species_quantiles": null,
+      "monitor_night_min_quantiles": null,
+      "monitor_night_max_quantiles": null,
+      "year_counts": {},
+      "source_counts": {},
+      "admitted": false
+    },
+    "at_least_five": {
+      "site_month_pairs": 0,
+      "sites": 0,
+      "blocks200": 0,
+      "dataset_strings": 0,
+      "sites_all_included_species_positive_overlap_bound": 0,
+      "height_gap_quantiles_m": null,
+      "low_height_quantiles_m": null,
+      "high_height_quantiles_m": null,
+      "common_monitored_species_quantiles": null,
+      "monitor_night_min_quantiles": null,
+      "monitor_night_max_quantiles": null,
+      "year_counts": {},
+      "source_counts": {},
+      "admitted": false
+    },
+    "wing": {
+      "site_month_pairs": 0,
+      "sites": 0,
+      "blocks200": 0,
+      "dataset_strings": 0,
+      "sites_all_included_species_positive_overlap_bound": 0,
+      "height_gap_quantiles_m": null,
+      "low_height_quantiles_m": null,
+      "high_height_quantiles_m": null,
+      "common_monitored_species_quantiles": null,
+      "monitor_night_min_quantiles": null,
+      "monitor_night_max_quantiles": null,
+      "year_counts": {},
+      "source_counts": {},
+      "admitted": false
+    },
+    "broad": {
+      "site_month_pairs": 0,
+      "sites": 0,
+      "blocks200": 0,
+      "dataset_strings": 0,
+      "sites_all_included_species_positive_overlap_bound": 0,
+      "height_gap_quantiles_m": null,
+      "low_height_quantiles_m": null,
+      "high_height_quantiles_m": null,
+      "common_monitored_species_quantiles": null,
+      "monitor_night_min_quantiles": null,
+      "monitor_night_max_quantiles": null,
+      "year_counts": {},
+      "source_counts": {},
+      "admitted": false
+    }
+  },
+  "calendar_sensitivity": {
+    "candidate_site_source_type_months_height_gap": 0,
+    "strict_metadata_matched": {
+      "site_month_pairs": 0,
+      "sites": 0,
+      "blocks200": 0,
+      "dataset_strings": 0,
+      "sites_all_included_species_positive_overlap_bound": 0,
+      "height_gap_quantiles_m": null,
+      "low_height_quantiles_m": null,
+      "high_height_quantiles_m": null,
+      "common_monitored_species_quantiles": null,
+      "monitor_night_min_quantiles": null,
+      "monitor_night_max_quantiles": null,
+      "year_counts": {},
+      "source_counts": {},
+      "admitted": false
+    },
+    "at_least_two": {
+      "site_month_pairs": 0,
+      "sites": 0,
+      "blocks200": 0,
+      "dataset_strings": 0,
+      "sites_all_included_species_positive_overlap_bound": 0,
+      "height_gap_quantiles_m": null,
+      "low_height_quantiles_m": null,
+      "high_height_quantiles_m": null,
+      "common_monitored_species_quantiles": null,
+      "monitor_night_min_quantiles": null,
+      "monitor_night_max_quantiles": null,
+      "year_counts": {},
+      "source_counts": {},
+      "admitted": false
+    },
+    "at_least_five": {
+      "site_month_pairs": 0,
+      "sites": 0,
+      "blocks200": 0,
+      "dataset_strings": 0,
+      "sites_all_included_species_positive_overlap_bound": 0,
+      "height_gap_quantiles_m": null,
+      "low_height_quantiles_m": null,
+      "high_height_quantiles_m": null,
+      "common_monitored_species_quantiles": null,
+      "monitor_night_min_quantiles": null,
+      "monitor_night_max_quantiles": null,
+      "year_counts": {},
+      "source_counts": {},
+      "admitted": false
+    },
+    "wing": {
+      "site_month_pairs": 0,
+      "sites": 0,
+      "blocks200": 0,
+      "dataset_strings": 0,
+      "sites_all_included_species_positive_overlap_bound": 0,
+      "height_gap_quantiles_m": null,
+      "low_height_quantiles_m": null,
+      "high_height_quantiles_m": null,
+      "common_monitored_species_quantiles": null,
+      "monitor_night_min_quantiles": null,
+      "monitor_night_max_quantiles": null,
+      "year_counts": {},
+      "source_counts": {},
+      "admitted": false
+    },
+    "broad": {
+      "site_month_pairs": 0,
+      "sites": 0,
+      "blocks200": 0,
+      "dataset_strings": 0,
+      "sites_all_included_species_positive_overlap_bound": 0,
+      "height_gap_quantiles_m": null,
+      "low_height_quantiles_m": null,
+      "high_height_quantiles_m": null,
+      "common_monitored_species_quantiles": null,
+      "monitor_night_min_quantiles": null,
+      "monitor_night_max_quantiles": null,
+      "year_counts": {},
+      "source_counts": {},
+      "admitted": false
+    }
+  },
+  "audit": {
+    "run": 46081497406,
+    "job": 140781270809,
+    "head": "dbe7556083341afedf8cd7af95fad52dbae9d373",
+    "scope": "executed aggregate log; no independent output ZIP rehash",
+    "decision": "Height support STOP, zero candidate pairs in frozen region and date/effort support before metadata gate. No ecological fit. New distinct coarse-scale observed community question only, no relaxation of height pairing or exact location claims."
+  }
+}
