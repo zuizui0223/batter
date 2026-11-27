@@ -1,0 +1,108 @@
+{
+  "status": "GVSM_REPLAY_PASS_WORLDCOVER_SEAM_QC_STOP",
+  "source_run": 45912082653,
+  "source_job": 140222591254,
+  "artifact_id": 15160676603,
+  "artifact_zip_sha256": "96b5d52788df82795306967c63416b694d4a8d3b4d28895977cd818a75861c18",
+  "audit": {
+    "zip_crc_verified_locally": true,
+    "all_six_native_crop_raw_and_mask_sha256_verified_locally": true,
+    "source_csv_sha256_verified_locally": true,
+    "profile_valid_pixels": 220594,
+    "unordered_profile_pixels": 0,
+    "RH98_out_of_range": 0,
+    "WorldCover_anonymous_header_probes": 8,
+    "all_six_GVSM_header_probes_http206": true,
+    "WorldCover_conflict_detected": true,
+    "actual_native_overlap_cause_not_yet_verified": true
+  },
+  "profile_only_precheck": {
+    "candidate_cells": 208,
+    "max_area_partition_error_m2": 0.000016614794731140137,
+    "max_densification_pixel_error_m2": 0.2916080716531724,
+    "coverage_quantiles": [
+      0.8288424266417611,
+      0.9999999999997289,
+      0.9999999999998346,
+      0.9999999999999057,
+      1.0000000000000124
+    ],
+    "upper_bounds_after_profile_area_and_RH98_only": {
+      "0.5": {
+        "all": {
+          "cells": 203,
+          "regions": 8,
+          "blocks50": 48
+        },
+        "training": {
+          "cells": 101,
+          "regions": 2,
+          "blocks50": 19
+        },
+        "north": {
+          "cells": 100,
+          "regions": 8,
+          "blocks50": 30
+        },
+        "boundary": {
+          "cells": 2,
+          "regions": 1,
+          "blocks50": 1
+        }
+      },
+      "0.7": {
+        "all": {
+          "cells": 203,
+          "regions": 8,
+          "blocks50": 48
+        },
+        "training": {
+          "cells": 101,
+          "regions": 2,
+          "blocks50": 19
+        },
+        "north": {
+          "cells": 100,
+          "regions": 8,
+          "blocks50": 30
+        },
+        "boundary": {
+          "cells": 2,
+          "regions": 1,
+          "blocks50": 1
+        }
+      },
+      "0.9": {
+        "all": {
+          "cells": 202,
+          "regions": 8,
+          "blocks50": 48
+        },
+        "training": {
+          "cells": 100,
+          "regions": 2,
+          "blocks50": 19
+        },
+        "north": {
+          "cells": 100,
+          "regions": 8,
+          "blocks50": 30
+        },
+        "boundary": {
+          "cells": 2,
+          "regions": 1,
+          "blocks50": 1
+        }
+      }
+    },
+    "scope": "Upper bounds prior to tree/land classification and common land support; no admitted FD cohort or fit. At most 101 fully within GEDI training latitude, so not broad in-domain validation."
+  },
+  "repair": {
+    "contract_commit": "669ff6f03e6cd2fa2bff878934da4264cdb02aa1",
+    "code_commit": "f4c9f7085a1b230a0ccaeb947e76d5158f1a33a4",
+    "workflow_commit": "1970bb873ecc1adcac5b9d5ba8bd2cecbea31a5d",
+    "run": 45919106402,
+    "method": "Reuse archived GVSM; verify exact original anonymous WorldCover versions and native 3-degree tile extents; explicit inverse-transform destination center sampling with unique native ownership; compare old warp conflict on same public cells; checkpoint derived aggregates; unchanged gates."
+  },
+  "decision": "No authentication for alternatives. Government access stop remains closed. No confirmed landcover/environment join yet; no ecological fit, no NFI localization, true altitude, measured FHD, or nationally representative inference. Main/frozen manuscripts unchanged."
+}
