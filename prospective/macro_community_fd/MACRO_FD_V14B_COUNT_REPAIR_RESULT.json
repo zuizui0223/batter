@@ -1,0 +1,284 @@
+{
+  "stage": "independent Atlantic Forest regional survey admission",
+  "status": "REGIONAL_SUPPORT_STOP",
+  "source_doi": "10.1002/ecy.2007",
+  "source_commit": "136aa78f49e14a4160b40b4456f21b7677c625c4",
+  "limits": [
+    "historical capture records, not 2019–2023 observations",
+    "Precise is a source category, not calibrated coordinate error",
+    "capture sample is not occupancy or vertical activity",
+    "current range maps not contemporaneous",
+    "no GEDI or ecological model fit"
+  ],
+  "sources": {
+    "trait_data_reported.csv": {
+      "id": 27703263,
+      "bytes": 1612538,
+      "sha256": "14ace2dff03b71c20dc923a9eb293aaadc29934e21c6f11fa30d1b70e5abab92",
+      "md5": "d894586c3858620723b1182d8b491d3e",
+      "rows": 6263,
+      "duplicate_key_rows": 0
+    },
+    "trait_data_sources.csv": {
+      "id": 27703260,
+      "bytes": 3552819,
+      "sha256": "f0d8ba1e42fabed49ffd0d4e61a577c3bfee0a787b9886c5891f8707112a1200",
+      "md5": "f883e787cfed1a27342db4711eedaabd",
+      "rows": 6263,
+      "duplicate_key_rows": 0
+    },
+    "trait_data_imputed.csv": {
+      "id": 27703266,
+      "bytes": 1891897,
+      "sha256": "b576cfd9f12b1441eb564bbf7acb65f06e676108aa0651aed9594585e7ff65f9",
+      "md5": "5c0af319124163830a8e7fa89c0abda5",
+      "rows": 6263,
+      "duplicate_key_rows": 0
+    }
+  },
+  "capture_nested_csv": true,
+  "tables": {
+    "site": {
+      "rows": 205,
+      "columns": [
+        "ID",
+        "Country",
+        "State",
+        "Municipality",
+        "Study_location",
+        "Latitude",
+        "Longitude",
+        "Precision",
+        "Reserve_Area",
+        "Altitude",
+        "Altitude1km",
+        "Annual_mean_temperature",
+        "Annual_rainfall",
+        "Olsong200r",
+        "Olsoneconame",
+        "ribeirovegtype",
+        "BSRs",
+        "uc",
+        "protectedtype"
+      ]
+    },
+    "reference": {
+      "rows": 205,
+      "columns": [
+        "ID",
+        "Authors",
+        "Type",
+        "References",
+        "Voucher_Specimens"
+      ]
+    },
+    "capture": {
+      "rows": 21320,
+      "columns": [
+        "ID",
+        "Year_start",
+        "Year_finish",
+        "Duration",
+        "Season",
+        "Method",
+        "Strata_sampling",
+        "Nights",
+        "hours_per_night",
+        "number_of_mistnets",
+        "effort_straube_bianconi",
+        "Sampling_habitat",
+        "Community",
+        "Class",
+        "Order",
+        "Superfamily",
+        "Family",
+        "Capture_number",
+        "Species",
+        "Status"
+      ]
+    }
+  },
+  "source_sites": {
+    "precision": {
+      "Not-Precise": 105,
+      "Precise": 100
+    },
+    "reference_rows": 205,
+    "site_ref_ID_overlap": 204,
+    "distinct_nonempty_reference_texts": 101
+  },
+  "updated_2020_census": {
+    "ATLANTIC BATS": {
+      "shape": [
+        207,
+        141
+      ],
+      "first_row_nonempty_cells": 141
+    },
+    "SITE INFO": {
+      "shape": [
+        55,
+        5
+      ],
+      "first_row_nonempty_cells": 0
+    },
+    "REFERENCE INFO": {
+      "shape": [
+        8,
+        7
+      ],
+      "first_row_nonempty_cells": 5
+    },
+    "CAPTURE INFO": {
+      "shape": [
+        60,
+        5
+      ],
+      "first_row_nonempty_cells": 5
+    }
+  },
+  "selected_fields": {
+    "site": "ID",
+    "species": "Species",
+    "genus": null
+  },
+  "capture_census": {
+    "capture_rows": 21320,
+    "matched_site_rows": 21320,
+    "exact_binomial_rows": 0,
+    "positive_integer_rows": 2517,
+    "positive_capture_count_sum": 91880,
+    "zero_rows": 18803,
+    "negative_rows": 0,
+    "missing_or_non_numeric_rows": 0,
+    "noninteger_rows": 0,
+    "eligible_rows": 0,
+    "eligible_capture_count_sum": 0,
+    "distinct_exact_positive_labels": 0,
+    "unique_matched_sites": 205,
+    "missing_site_rows": 0,
+    "unresolved_positive_taxon_rows": 2517,
+    "site_species_incidence": 0
+  },
+  "sampling_census": {
+    "positive_row_method_categories": {},
+    "positive_row_strata_categories": {},
+    "site_counts_by_stratum_category": {},
+    "sites_with_multiple_stratum_strings": 0,
+    "sites_with_multiple_method_strings": 0,
+    "Year_start": {
+      "numeric_rows": 0,
+      "minimum": null,
+      "maximum": null
+    },
+    "Year_finish": {
+      "numeric_rows": 0,
+      "minimum": null,
+      "maximum": null
+    }
+  },
+  "range_source": {
+    "commit": "db6f0a5584ef5b0d899770d231476c6589cb16b8",
+    "metadata_blob": "f2538374945f602f7c148d1a534be491895cd6e1",
+    "all_current_maps": 5831,
+    "chiroptera_metadata": 1162,
+    "positive_maps_before_count_gate": 1141,
+    "verified_maps": 1162,
+    "exact_count": 1162,
+    "zero_maps": 21,
+    "count_mismatches": [],
+    "exact_positive_maps": 1141,
+    "grid_shape": [
+      142,
+      360
+    ],
+    "pixel_m": [
+      96486.27222222222,
+      96514.95774647887
+    ],
+    "crs": "EPSG:6933"
+  },
+  "trait_source": {
+    "artifact": 15069663941,
+    "zip_sha256": "fa45d435204439bd4600143540bc6960e0b814405cec938c3275c19ebbd2fb09",
+    "member_sha256": "99a19c169e18a0bafa4a518b7f844b56d2fe846cac13d5c035f4eae562a74c7b",
+    "species": 280
+  },
+  "trait_mapping": {
+    "exact_unique_matches": 1069,
+    "ambiguous_labels": 72,
+    "broad_species": 1034,
+    "common_wing_species": 234,
+    "broad_without_split_annotations": 998,
+    "stratum_codes": {
+      "Ar": 282,
+      "A": 677,
+      "G": 15,
+      "S": 60
+    }
+  },
+  "coordinate_admission": {
+    "precise_finite_regional": 100,
+    "inside_native_grid": 100
+  },
+  "cohorts": {
+    "broad": {
+      "matched_species": 0,
+      "median_all_site_trait_coverage": null,
+      "precise_eligible_sites": 0,
+      "distinct_nonempty_references": 0,
+      "blocks_200km": 0,
+      "matched_capture_incidence": 0,
+      "in_current_range_cell_incidence": 0,
+      "median_observed_matched_richness": null,
+      "median_potential_matched_richness": null,
+      "range_overlap_fraction": null,
+      "admitted": false
+    },
+    "nosplit": {
+      "matched_species": 0,
+      "median_all_site_trait_coverage": null,
+      "precise_eligible_sites": 0,
+      "distinct_nonempty_references": 0,
+      "blocks_200km": 0,
+      "matched_capture_incidence": 0,
+      "in_current_range_cell_incidence": 0,
+      "median_observed_matched_richness": null,
+      "median_potential_matched_richness": null,
+      "range_overlap_fraction": null,
+      "admitted": false
+    },
+    "wing": {
+      "matched_species": 0,
+      "median_all_site_trait_coverage": null,
+      "precise_eligible_sites": 0,
+      "distinct_nonempty_references": 0,
+      "blocks_200km": 0,
+      "matched_capture_incidence": 0,
+      "in_current_range_cell_incidence": 0,
+      "median_observed_matched_richness": null,
+      "median_potential_matched_richness": null,
+      "range_overlap_fraction": null,
+      "admitted": false
+    },
+    "common": {
+      "matched_species": 0,
+      "median_all_site_trait_coverage": null,
+      "precise_eligible_sites": 0,
+      "distinct_nonempty_references": 0,
+      "blocks_200km": 0,
+      "matched_capture_incidence": 0,
+      "in_current_range_cell_incidence": 0,
+      "median_observed_matched_richness": null,
+      "median_potential_matched_richness": null,
+      "range_overlap_fraction": null,
+      "admitted": false
+    }
+  },
+  "audit": {
+    "run": 46078996519,
+    "job": 140773321409,
+    "head": "d649992172f9ee5864824a2301e7bfd3bc78501b",
+    "scope": "executed final aggregate log; source blob hashes in prior stop receipt; final sources field overwritten by COMBINE acquisition, original pinned source validation executed; no ecological fit"
+  }
+}
