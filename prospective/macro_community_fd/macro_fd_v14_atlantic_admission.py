@@ -72,6 +72,9 @@ def main():
             g=d[gen].str.strip()
             vals=vals.where(~ep,g+" "+vals)
         # Exact binomial only. Case-normalized, no subspecies, cf./aff., or aliases.
+        # V14c: source uses exactly Genus.epithet, verified by direct source inspection.
+        dot=vals.str.fullmatch(r"[A-Z][A-Za-z-]+\.[a-z][a-z-]+",case=True)
+        vals=vals.where(~dot,vals.str.replace(".", " ",regex=False))
         vals=vals.str.replace("_"," ",regex=False).str.replace(r"\s+"," ",regex=True).str.strip()
         good=vals.str.fullmatch(r"[A-Z][a-zA-Z-]+ [a-z][a-z-]+",case=True)
         # Allow source lower-case binomials when no ambiguous qualifier.
@@ -86,7 +89,7 @@ def main():
         sel=site_ok&good&positive
         o["capture_census"]={"capture_rows":len(d),"matched_site_rows":int(site_ok.sum()),"exact_binomial_rows":int(good.sum()),"positive_integer_rows":int(positive.sum()),"positive_capture_count_sum":int(count[positive].sum()),"zero_rows":int((integer&count.eq(0)).sum()),"negative_rows":int((integer&count.lt(0)).sum()),"missing_or_non_numeric_rows":int((~finite).sum()),"noninteger_rows":int((finite&~integer).sum()),"eligible_rows":int(sel.sum()),"eligible_capture_count_sum":int(count[sel].sum()),"distinct_exact_positive_labels":int(vals[sel].map(norm).nunique()),"unique_matched_sites":int(d.loc[site_ok,sid].nunique()),"missing_site_rows":int((~site_ok).sum()),"unresolved_positive_taxon_rows":int((positive&~good).sum())}
         if len(d)<10000 or int(site_ok.sum())<.95*len(d) or not positive.any():raise ValueError("capture grain/site coverage not admitted")
-        sample=d.loc[sel,[sid,"Method","Strata_sampling","Year_start","Year_finish"]].copy()
+        sample=d.loc[site_ok&positive,[sid,"Method","Strata_sampling","Year_start","Year_finish"]].copy()
         o["sampling_census"]={"positive_row_method_categories":dict(C.Counter(sample.Method)),"positive_row_strata_categories":dict(C.Counter(sample.Strata_sampling)),"site_counts_by_stratum_category":{str(k):int(v[sid].nunique()) for k,v in sample.groupby("Strata_sampling")},"sites_with_multiple_stratum_strings":int((sample.groupby(sid).Strata_sampling.nunique()>1).sum()),"sites_with_multiple_method_strings":int((sample.groupby(sid).Method.nunique()>1).sum())}
         for col in ("Year_start","Year_finish"):
             yr=pd.to_numeric(sample[col],errors="coerce");yr=yr[np.isfinite(yr)]
@@ -94,6 +97,7 @@ def main():
         c=pd.DataFrame({"site":d.loc[sel,sid],"name":vals[sel].map(norm)}).drop_duplicates()
         o["capture_census"]["site_species_incidence"]=len(c)
         o["status"]="SOURCE_CENSUS";save(o)
+        o["atlantic_sources"]=o["sources"].copy()
         names,X,shape,crs,T=read_ranges(o);assert len(names)==1141
         w=wing(o);a,b,_=acquire(o);f=mapping(a,b,names,w,o);common=set(f.index)&set(w.index)
         wi=set(names)&set(w.index);assert len(wi)==264
