@@ -1,0 +1,154 @@
+name: Hidden vertical FD V6 Haysom paired audit
+on:
+  push:
+    branches: [prospective/hidden-vertical-functional-diversity-20261127]
+    paths: ['.github/workflows/hidden-vertical-fd-haysom-v6.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Reconcile source and execute frozen paired comparison if admitted
+        run: |
+          python -m pip install --quiet openpyxl==3.1.5 numpy
+          python - <<'PY'
+          import urllib.request, json, hashlib, io, zipfile, collections, re, math
+          import numpy as np
+          from openpyxl import load_workbook
+          from pathlib import Path
+          def get(u,cap):
+              req=urllib.request.Request(u,headers={'User-Agent':'batter-source-audit/1.0'})
+              with urllib.request.urlopen(req,timeout=45) as r:b=r.read(cap+1)
+              if len(b)>cap:raise ValueError('size gate')
+              return b
+          def workbook(rid,name,size,sha):
+              meta=json.loads(get(f'https://zenodo.org/api/records/{rid}',2097152))
+              f=next(x for x in meta['files'] if x['key']==name)
+              b=get(f['links']['self'],size)
+              assert len(b)==size and hashlib.sha256(b).hexdigest()==sha
+              with zipfile.ZipFile(io.BytesIO(b)) as z:
+                  assert sum(x.file_size for x in z.infolist())<=768*1024**2 and z.testzip() is None
+              return load_workbook(io.BytesIO(b),read_only=True,data_only=True)
+          def norm(x):return ' '.join(str(x or '').strip().casefold().split())
+          def layer(x):
+              m=re.fullmatch(r'(.+)_([CT])',str(x or '').strip(),re.I)
+              return (m.group(1).casefold(),m.group(2).upper()) if m else None
+          def typ(x):
+              v=norm(x)
+              if v in ('unlogged','unlogged forest','ul','u','uf'):return 'unlogged'
+              if v in ('logged','logged forest','l','lf'):return 'logged'
+          def sumstat(vec):
+              return [int(np.sum(vec)),int(np.sum(vec>0))]
+          out={'status':'started'}
+          try:
+              w=workbook(5018280,'Haysom_etal_2021_Frontiers.xlsx',10358292,'7c356be1ecae1a4a6a0a118fe2ca508c2afb7277eaf93a1e771df76234084c2a')
+              rs=w['Rarefaction_Input'];head=list(next(rs.iter_rows(min_row=3,max_row=3,values_only=True)))
+              out['rarefaction_header']=[str(x) if x is not None else None for x in head]
+              names=[norm(x) for x in head[2:]]
+              taxa={norm(x[0]):norm(x[1]) for x in w['Taxa'].iter_rows(min_row=2,values_only=True) if x[0] is not None}
+              out['header_taxon_matches']=sum(x in taxa for x in names)
+              assert len(names)==55 and len(set(names))==55 and all(names)
+              # Independent author disturbance assignment, with no geographic-name inference.
+              od=w['Ordination_Input'];out['ordination_header']=[str(x) if x is not None else None for x in next(od.iter_rows(min_row=3,max_row=3,values_only=True))]
+              site_types=collections.defaultdict(set);categories=collections.Counter();bad_ordination=0
+              for row in od.iter_rows(min_row=4,values_only=True):
+                  if all(x is None for x in row):continue
+                  k=layer(row[1]);t=typ(row[2]);categories[str(row[2])]+=1
+                  if k and t:site_types[k[0]].add(t)
+                  else:bad_ordination+=1
+              out['ordination_disturbance_categories']=dict(categories)
+              out['ordination_invalid_rows']=bad_ordination
+              out['ordination_unique_base_keys']=len(site_types)
+              counts={};eff=collections.Counter();invalid=collections.Counter();blank=0
+              for row in rs.iter_rows(min_row=4,values_only=True):
+                  if all(x is None for x in row):blank+=1;continue
+                  k=layer(row[1])
+                  if not k:invalid['location_suffix']+=1;continue
+                  a=row[2:]
+                  if len(a)!=55 or any(not isinstance(x,(int,float)) or not math.isfinite(x) or x<0 or x!=int(x) for x in a):
+                      invalid['noninteger_missing_or_invalid_count']+=1;continue
+                  v=np.array(a,dtype=np.int64)
+                  if k not in counts:counts[k]=np.zeros(55,dtype=np.int64)
+                  counts[k]+=v;eff[k]+=1
+              out['blank_rows']=blank;out['invalid_rows']=dict(invalid)
+              out['archive_deployments']=len(counts);out['archive_nights']=sum(eff.values());out['archive_events']=sum(int(v.sum()) for v in counts.values())
+              out['unmapped_deployments']=sum(len(site_types.get(k[0],set()))!=1 for k in counts)
+              summaries={}
+              for f in ['unlogged','logged','unknown']:
+                  for l in ['C','T']:
+                      keys=[k for k in counts if k[1]==l and (next(iter(site_types[k[0]])) if len(site_types.get(k[0],set()))==1 else 'unknown')==f]
+                      vv=np.sum([counts[k] for k in keys],axis=0) if keys else np.zeros(55)
+                      summaries[f+'_'+l]=[len(keys),sum(eff[k] for k in keys),*sumstat(vv)]
+              out['summary_deployments_nights_events_taxa']=summaries
+              expected={'unlogged_C':[25,6041,705,18],'unlogged_T':[24,3995,3880,35],'logged_C':[25,3115,418,20],'logged_T':[25,2666,3005,29]}
+              union=np.sum(list(counts.values()),axis=0)>0 if counts else np.zeros(55,dtype=bool)
+              lc={l:np.sum([v for k,v in counts.items() if k[1]==l],axis=0)>0 for l in ['C','T']}
+              out['union_taxa']=int(union.sum());out['shared_taxa']=int((lc['C']&lc['T']).sum())
+              good=(not invalid and out['header_taxon_matches']==55 and out['unmapped_deployments']==0 and all(summaries[k]==v for k,v in expected.items()) and out['union_taxa']==55 and out['shared_taxa']==9)
+              out['source_reconciliation_pass']=bool(good)
+              bases=sorted({k[0] for k in counts})
+              pairs=[b for b in bases if (b,'C') in counts and (b,'T') in counts]
+              out['paired_bases']=len(pairs)
+              def metric(a,b,mode):
+                  if mode=='incidence':a=(a>0).astype(float);b=(b>0).astype(float)
+                  p=a/a.sum();q=b/b.sum()
+                  qa=1-p@p;qt=1-q@q;cross=1-p@q
+                  if mode=='rarefied':
+                      m=min(a.sum(),b.sum())
+                      if m<2:return None
+                      qa*=((m-1)/m)*(a.sum()/(a.sum()-1))
+                      qt*=((m-1)/m)*(b.sum()/(b.sum()-1))
+                  alpha=(qa+qt)/2
+                  return np.array([qa,qt,cross,alpha,(cross-alpha)/2,(cross+alpha)/2])
+              if good:
+                  result={};eligible={}
+                  for mode in ['count','incidence','rarefied','count_matched_rarefied']:
+                      means={}
+                      for f in ['unlogged','logged']:
+                          vals=[]
+                          for b in pairs:
+                              if site_types[b]!={f}:continue
+                              a,c=counts[b,'C'],counts[b,'T']
+                              if min(eff[b,'C'],eff[b,'T'])<30 or min(a.sum(),c.sum())<1:continue
+                              if mode in ['rarefied','count_matched_rarefied'] and min(a.sum(),c.sum())<2:continue
+                              x=metric(a,c,'count' if mode=='count_matched_rarefied' else mode)
+                              vals.append(x)
+                          eligible[mode+'_'+f]=len(vals)
+                          means[f]=np.mean(vals,axis=0).tolist() if vals else None
+                      if all(means.values()):means['logged_minus_unlogged']=(np.array(means['logged'])-np.array(means['unlogged'])).tolist()
+                      result[mode]=means
+                  out['eligible_pairs']=eligible;out['metric_order']=['Q_C','Q_T','cross','alpha','beta','gamma'];out['paired_results']=result
+              w.close()
+              # Exact taxonomic crosswalk to author trait table, without outcomes.
+              tw=workbook(7789416,'SAFE_Functional_Groups_template.xlsx',2084581,'2baa7270dbd7f19b1234b962defd5b45f06696ef1b91f482c617c975e0d08e7a')
+              tm=tw['TraitMatrix'];th=list(next(tm.iter_rows(min_row=3,max_row=3,values_only=True)))
+              out['trait_header']=[str(x) if x is not None else None for x in th]
+              lookup=collections.defaultdict(set)
+              for row in tw['Taxa'].iter_rows(min_row=2,values_only=True):
+                  if row[0] is not None and row[1] is not None:lookup[norm(row[0])].add(norm(row[1]))
+              mm=collections.defaultdict(set);mass=collections.defaultdict(set)
+              for row in tm.iter_rows(min_row=4,values_only=True):
+                  code=norm(row[11])
+                  if len(lookup.get(code,set()))!=1:continue
+                  tax=next(iter(lookup[code]));v=norm(row[18])
+                  if v and v not in ('na','nan','none','unknown'):mm[tax].add(v)
+                  if isinstance(row[15],(float,int)) and row[15]>0:mass[tax].add(float(row[15]))
+              target={taxa[n] for n in names if n in taxa}
+              matched={n:next(iter(mm[n])) for n in target if len(mm.get(n,set()))==1}
+              out['movement_exact_match_count']=len(matched);out['movement_categories']=dict(collections.Counter(matched.values()))
+              out['mass_exact_unique_count']=sum(len(mass.get(n,set()))==1 for n in target)
+              out['status']='complete' if good else 'source_reconciliation_failed'
+              tw.close()
+          except Exception as e:
+              out.update(status='stopped',error=type(e).__name__+': '+str(e)[:240])
+          Path('haysom_v6.json').write_text(json.dumps(out,indent=2,ensure_ascii=False))
+          print(json.dumps(out,ensure_ascii=False))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: haysom-v6-aggregate
+          path: haysom_v6.json
+          retention-days: 14
