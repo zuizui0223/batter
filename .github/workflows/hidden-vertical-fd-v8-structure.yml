@@ -1,0 +1,39 @@
+name: Hidden vertical FD V8 measured structure gradient and bat census
+on:
+  push:
+    branches: [prospective/hidden-vertical-functional-diversity-20261127]
+    paths: ['.github/workflows/hidden-vertical-fd-v8-structure.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  paired_gradient:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verified native LiDAR and paired camera gradient
+        run: |
+          python -m pip install --quiet numpy==2.2.6 openpyxl==3.1.5 rasterio==1.4.3 pyproj==3.7.1
+          python prospective/hidden_vertical_fd/haysom_v8_gradient.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: haysom-v8-gradient
+          path: haysom_v8_gradient.json
+          retention-days: 14
+  bat_census:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Final phonic label and site support census
+        run: |
+          python -m pip install --quiet openpyxl==3.1.5
+          python prospective/hidden_vertical_fd/yoh_v8_census.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: yoh-v8-census
+          path: yoh_v8_census.json
+          retention-days: 14
