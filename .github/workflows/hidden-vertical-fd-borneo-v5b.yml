@@ -1,0 +1,68 @@
+name: Hidden vertical FD V5b Borneo schema
+on:
+  push:
+    branches: [prospective/hidden-vertical-functional-diversity-20261127]
+    paths: ['.github/workflows/hidden-vertical-fd-borneo-v5b.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  schema:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Parse only pinned public workbook schemas
+        shell: bash
+        run: |
+          python -m pip install --quiet openpyxl==3.1.5
+          python - <<'PY'
+          import urllib.request, json, hashlib, zipfile, io, re, collections
+          from pathlib import Path
+          from openpyxl import load_workbook
+          sources=[
+              (5018280,'Haysom_etal_2021_Frontiers.xlsx',10358292,'7c356be1ecae1a4a6a0a118fe2ca508c2afb7277eaf93a1e771df76234084c2a'),
+              (7740421,'SAFE_data_archive_Yoh2.xlsx',8911914,'0c874b45b265d326c9cff12db30f96fa6cbf5f19cbfe24530a64bc72fcf25da2'),
+              (4010757,'DeereEtAl2020_PNAS.xlsx',1154266,'e597ac5e2e3d382c64dfc89f257ec074c16a97d362f27ef3b42556bcdf872f61'),
+              (7789416,'SAFE_Functional_Groups_template.xlsx',2084581,'2baa7270dbd7f19b1234b962defd5b45f06696ef1b91f482c617c975e0d08e7a')]
+          def get(u,cap):
+              req=urllib.request.Request(u,headers={'User-Agent':'batter-public-source-audit/1.0'})
+              with urllib.request.urlopen(req,timeout=45) as r: b=r.read(cap+1)
+              if len(b)>cap: raise ValueError('file too large')
+              return b
+          out=[]
+          # Only output column headings, never raw records. For ambiguous wide matrices,
+          # use generic names/type counts instead of potential site IDs.
+          for rid,name,size,sha in sources:
+              result={'record':rid,'file':name}
+              try:
+                  meta=json.loads(get(f'https://zenodo.org/api/records/{rid}',2*1024*1024))
+                  f=next(x for x in meta['files'] if x['key']==name)
+                  b=get(f['links']['self'],size)
+                  assert len(b)==size and hashlib.sha256(b).hexdigest()==sha
+                  with zipfile.ZipFile(io.BytesIO(b)) as z:
+                      ms=z.infolist()
+                      result['expanded_bytes']=sum(m.file_size for m in ms)
+                      assert len(ms)<=1000 and result['expanded_bytes']<=768*1024**2 and max(m.file_size for m in ms)<=384*1024**2
+                      assert z.testzip() is None
+                  w=load_workbook(io.BytesIO(b),read_only=True,data_only=True)
+                  result['sha256']=sha
+                  result['sheets']=[]
+                  for s in w:
+                      dim=s.calculate_dimension()
+                      first=next(s.iter_rows(min_row=1,max_row=1,values_only=True),())
+                      # Restrict headers to short text field names with no long numeric strings.
+                      # A workbook may use IDs/taxa as column headings; mask ID-like values.
+                      heads=[str(v) if isinstance(v,str) and len(v)<=80 and not re.search(r'[-+]?\d{2,}\.\d+|\b\d{4,}\b',v) else ('<numeric or ID>' if v is not None else None) for v in first[:85]]
+                      result['sheets'].append({'name':s.title,'dimensions':dim,'header':heads,'header_count':sum(x is not None for x in first)})
+                  w.close()
+                  result['status']='schema_verified'
+              except Exception as e:result.update(status='stopped',error=str(e)[:200])
+              out.append(result)
+          Path('borneo_v5b_schema.json').write_text(json.dumps(out,indent=2))
+          print(json.dumps(out,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: borneo-v5b-schema
+          path: borneo_v5b_schema.json
+          retention-days: 14
