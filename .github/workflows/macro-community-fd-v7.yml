@@ -1,0 +1,48 @@
+name: Macro community FD V7 measured multidomain traits
+on:
+  push:
+    branches: [prospective/macro-community-fd-20261127]
+    paths: ['.github/workflows/macro-community-fd-v7.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  macro:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    env:
+      OPENBLAS_NUM_THREADS: '2'
+      OMP_NUM_THREADS: '2'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Checkout pinned current range maps
+        uses: actions/checkout@v4
+        with:
+          repository: MegaPast2Future/PHYLACINE_1.2
+          ref: db6f0a5584ef5b0d899770d231476c6589cb16b8
+          path: phylacine
+          persist-credentials: false
+          lfs: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /Data/Ranges/Current/
+            /Data/Ranges/Spatial_metadata.csv
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install numerical runtime
+        run: |
+          python -m pip install --only-binary=:all: numpy==2.2.6 pandas==2.2.3 requests==2.32.5 pyproj==3.7.1 rasterio==1.4.3 scipy==1.15.3 'earthaccess>=0.14'
+      - name: Execute frozen matched functional-domain models
+        env:
+          GH_TOKEN: ${{ github.token }}
+          EARTHDATA_TOKEN: ${{ secrets.EARTHDATA_TOKEN }}
+        run: python prospective/macro_community_fd/macro_fd_v7_multidomain.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: macro-community-fd-v7-aggregate
+          path: macro_fd_v7_result.json
+          retention-days: 30
+          if-no-files-found: error
