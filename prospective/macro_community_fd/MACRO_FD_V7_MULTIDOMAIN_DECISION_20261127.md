@@ -1,0 +1,21 @@
+# V7 measured vegetation × functional domains — decision 2026-11-27 JST
+Contract edc1acf79ecc47642e05cd95278923fc1a494d98, implementation 524cf4923f981188520612fe338757119def57b7, workflow aec6b48fbbcf04ed0c240b3e8b7bc7adbc0711c7. Successful run 45971360423/job 140412318317, artifact 15185101818 registry SHA256 a28d2214910ca5b06f6c58390f7132067da5790f2bd78d13a5dc8847ea6db163. Full executed aggregate from job log committed db9d67e6bd26b112f7817240a3a04d49d9cff5e5; output artifact ZIP not independently rehashed. Source ZIP/member hashes, PHYLACINE 1162/1141 exact count gate, V6b 1069 unique matches, V5 climate archive/member and four GEDI original raster hashes verified; exact V5 regional environmental join counts reproduced. No outcome data published beyond aggregate.
+## Cohorts
+1034-species broad mass/diet/stratum roster: 2324 admitted native cells, median coverage by admitted region .84375–1, four regions (NA 453, EA 456, SA 888, Africa 527); Europe 82 and Australasia 39 fail >=100 support. 998 species after excluding selected-field split-source annotations: 2253 admitted cells, same four regions. 234 wing/common-trait roster: 2232 cells (NA 413, EA 414, SA 883, Africa 522), median regional trait coverage .29464–.71429 (>=20% rule, not >=80%). These are input rosters, not a claim all roster species occur on environmental support. Trait data reported/compiled, not necessarily independently measured, diet source PHYLACINE; broad diet comprises only plant/vertebrate/invertebrate percentages, not detailed prey groups. Categorical source stratum codes A/Ar/G/S treated nominally, not observed flight heights. 
+## Relative held-out MSE gain (%) from adding bottom-half PAVD fraction, genus-conditioned MPD residual
+|cohort/domain|~482 km|~965 km|region holdout|
+|---|---:|---:|---:|
+|broad mass|+1.9370|+.8607|+2.6537|
+|broad diet|+.6870|-.7465|+.4096|
+|broad stratum|+.4353|+.5305|-9.4727|
+|no-split mass|+3.0330|+1.8672|+5.2133|
+|no-split diet|+.7921|-1.1134|+.1682|
+|no-split stratum|-.1756|-.2139|-12.5325|
+|wing-common mass|-.0403|-.7413|+.3826|
+|wing-common diet|+.8357|+1.1055|+.6153|
+|wing-common stratum|+.0554|+.0188|-.5428|
+|wing-common wing|+1.5362|-1.5731|+.0801|
+No domain passes joint frozen screen. Broad stratum passes only 10x10 block single split-family screen (56/93 positive blocks, 4/5 folds). Transfer worsens for stratum in both broader cohorts. Mass residual gains are positive in all three validation designs broad/no-split, but block fractions insufficient and leave-region-out V worse than intercept-only N (V-N -0.00058538/-0.00206908 respectively). No claim of useful mass prediction or strongest domain. Broad raw diet and stratum MPD gains differ from residual; all raw and residual results retained in JSON. Broad residual SD mass .05885, diet .01143, stratum .05890 vs raw SD .24740/.44296/.47089; subtracting genus-specific expected MPD greatly reduces spatial variation, especially coarse diet. This is not causal variance explained or a complete phylogenetic analysis. 
+Wing-common transfer only 2/4 regional fold gains positive and equal-region improvement +.0801%, vs V5 4/4, +5.33% on 264-species full-wing roster. Changes in roster, species standardization and cell support are bundled; this is a robustness limitation, not proof which causes it. Do not recast V5 signal as replicated.
+## Decision
+Primary "stratum strongest" hypothesis fails. No demonstrated general predictive superiority of forest vertical architecture across these traits; no conclusion that ecological effects are absent. V5 and V7 are same measured environment/range source and overlapping traits, not independent replications. Stop same-cohort model tuning or promotion of a favorable secondary outcome. The broader verified database is a new usable research resource: 1069 matched dietary records/1035 stratum/1058 mass, with source annotations and high coverage. Next distinct macro question should address whether alternative functional domains vary systematically with habitat and geographic structure at independent support, with expanded diet data only after semantic provenance resolution; not another local paper reanalysis. Main and frozen manuscripts unchanged, no submission.
