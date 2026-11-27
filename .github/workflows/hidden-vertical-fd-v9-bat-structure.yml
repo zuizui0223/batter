@@ -1,0 +1,29 @@
+name: Hidden vertical FD V9 bat call-type spatial structure
+on:
+  push:
+    branches: [prospective/hidden-vertical-functional-diversity-20261127]
+    paths: ['.github/workflows/hidden-vertical-fd-v9-bat-structure.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install binary wheels
+        run: |
+          python -m pip install --only-binary=:all: numpy==2.2.6 openpyxl==3.1.5 pyproj==3.7.1
+      - name: Fixed site-level prediction and decomposition
+        run: python prospective/hidden_vertical_fd/yoh_v9_calltype_structure.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: yoh-v9-calltype-structure
+          path: yoh_v9_calltype_structure.json
+          retention-days: 14
+          if-no-files-found: error
