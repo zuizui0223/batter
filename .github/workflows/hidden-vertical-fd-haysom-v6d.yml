@@ -1,0 +1,106 @@
+name: Hidden vertical FD V6d source representation diagnosis
+on:
+  push:
+    branches: [prospective/hidden-vertical-functional-diversity-20261127]
+    paths: ['.github/workflows/hidden-vertical-fd-haysom-v6d.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Diagnose metadata and data representation, not ecological effects
+        run: |
+          python -m pip install --quiet openpyxl==3.1.5
+          python - <<'PY'
+          import urllib.request, json, hashlib, io, zipfile, collections, re, math
+          from openpyxl import load_workbook
+          from pathlib import Path
+          def get(u,cap):
+              req=urllib.request.Request(u,headers={'User-Agent':'batter-source-audit/1.0'})
+              with urllib.request.urlopen(req,timeout=45) as r:b=r.read(cap+1)
+              if len(b)>cap:raise ValueError('size gate')
+              return b
+          def book(rid,name,size,sha):
+              meta=json.loads(get(f'https://zenodo.org/api/records/{rid}',2097152))
+              f=next(x for x in meta['files'] if x['key']==name)
+              b=get(f['links']['self'],size)
+              assert len(b)==size and hashlib.sha256(b).hexdigest()==sha
+              with zipfile.ZipFile(io.BytesIO(b)) as z:
+                  assert sum(x.file_size for x in z.infolist())<=768*1024**2 and z.testzip() is None
+              return load_workbook(io.BytesIO(b),read_only=True,data_only=True)
+          def norm(x):return ' '.join(str(x or '').strip().casefold().split())
+          def parse(s):
+              rows={}
+              for i,r in enumerate(s.iter_rows(min_row=1,max_row=20,values_only=True),1):
+                  tag=norm(r[0])
+                  rows[str(i)]={'tag':str(r[0]),'nonempty':sum(x is not None for x in r)}
+                  if tag=='field_name' or tag.startswith('taxon') or tag in ('method','range','levels','units'):
+                      rows[str(i)]['values']=[str(x) if x is not None else None for x in r]
+                  if tag=='field_name':return i,rows,list(r)
+              raise ValueError('field_name missing')
+          def key(v):
+              # Only inspect suffix convention; never emit raw identifiers.
+              v=str(v or '').strip()
+              m=re.fullmatch(r'(.+)_([CT])',v,re.I)
+              if m:return (m[1].casefold(),m[2].upper())
+              return None
+          def ntype(x):
+              if x is None:return 'blank'
+              if isinstance(x,(int,float)) and math.isfinite(x) and x>=0 and int(x)==x:return 'zero' if x==0 else 'positive'
+              if isinstance(x,str):return 'text:'+x[:30] if norm(x) in ('na','n/a','nan','0','-','none','null') else 'other_text'
+              return 'other'
+          out={}
+          try:
+              w=book(5018280,'Haysom_etal_2021_Frontiers.xlsx',10358292,'7c356be1ecae1a4a6a0a118fe2ca508c2afb7277eaf93a1e771df76234084c2a')
+              taxa=[list(r[:3]) for r in w['Taxa'].iter_rows(min_row=2,values_only=True) if r[0] is not None]
+              out['taxa']=taxa
+              result={}
+              for n in ['Rarefaction_Input','Ordination_Input']:
+                  s=w[n];h,metadata,head=parse(s)
+                  result[n]={'header_row':h,'metadata':metadata,'header':head}
+                  counts=collections.Counter();patterns=collections.Counter();categories=collections.Counter();eff=collections.Counter();events=collections.Counter();per_layer=[collections.Counter(),collections.Counter()]
+                  offset=2 if n=='Rarefaction_Input' else 5
+                  all_blank=0;rows=0;invalid_loc=0;partial=0;location_counts=collections.Counter();nonzero_labels=set()
+                  for r in s.iter_rows(min_row=h+1,values_only=True):
+                      if all(x is None for x in r):all_blank+=1;continue
+                      rows+=1;k=key(r[1])
+                      if k is None:invalid_loc+=1
+                      if n=='Ordination_Input':categories[str(r[2])]+=1
+                      a=r[offset:];t=[ntype(x) for x in a];counts.update(t)
+                      patterns[(sum(x=='blank' for x in t),sum(x=='zero' for x in t),sum(x=='positive' for x in t),sum(x not in ('blank','zero','positive') for x in t))]+=1
+                      partial+=int('blank' in t and 'positive' in t)
+                      if k:
+                          eff[k]+=1
+                          for j,(x,kind) in enumerate(zip(a,t)):
+                              if kind=='positive':events[k]+=int(x);nonzero_labels.add(j);per_layer[k[1]=='T'][j]+=int(x)
+                  r=result[n];r.update(data_rows=rows,fully_blank_rows=all_blank,unparsed_locations=invalid_loc,cell_types=dict(counts),top_patterns=[(list(k),v) for k,v in patterns.most_common(15)],partial_positive_rows=partial,deployments=len(eff),numeric_sum=sum(events.values()),effort_by_layer={l:sum(v for k,v in eff.items() if k[1]==l) for l in ['C','T']},numeric_sum_by_layer={l:sum(v for k,v in events.items() if k[1]==l) for l in ['C','T']},nonzero_columns=len(nonzero_labels),nonzero_columns_by_layer=[len(x) for x in per_layer],disturbance_categories=dict(categories))
+              out['sheets']=result
+              w.close()
+              t=book(7789416,'SAFE_Functional_Groups_template.xlsx',2084581,'2baa7270dbd7f19b1234b962defd5b45f06696ef1b91f482c617c975e0d08e7a')
+              sh=t['TraitMatrix'];h,metadata,head=parse(sh)
+              # Inspect categorical movement codes and exact Taxa lookup, without response data.
+              lookup=collections.defaultdict(set)
+              for r in t['Taxa'].iter_rows(min_row=2,values_only=True):
+                  if r[0] and r[1]:lookup[norm(r[0])].add(norm(r[1]))
+              target={norm(r[1]) for r in taxa if r[1] is not None}
+              mv=collections.defaultdict(set);mass=collections.defaultdict(set)
+              for r in sh.iter_rows(min_row=h+1,values_only=True):
+                  if len(lookup.get(norm(r[11]),set()))!=1:continue
+                  name=next(iter(lookup[norm(r[11])]))
+                  if name not in target:continue
+                  if r[18] is not None:mv[name].add(str(r[18]))
+                  if isinstance(r[15],(float,int)) and r[15]>0:mass[name].add(float(r[15]))
+              out['trait']={'header_row':h,'header':head,'target_taxa':len(target),'unique_movement':{n:sorted(v) for n,v in mv.items() if len(v)==1},'ambiguous_movement':sum(len(v)>1 for v in mv.values()),'mass_unique':sum(len(v)==1 for v in mass.values())}
+              out['status']='diagnostic_complete'
+          except Exception as e:out.update(status='stopped',error=type(e).__name__+': '+str(e)[:300])
+          Path('haysom_v6d_diagnostic.json').write_text(json.dumps(out,indent=2,default=str))
+          print(json.dumps(out,default=str))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: haysom-v6d-diagnostic
+          path: haysom_v6d_diagnostic.json
+          retention-days: 14
