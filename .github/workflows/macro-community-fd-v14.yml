@@ -1,4 +1,4 @@
-name: Macro community FD V14 Atlantic survey admission
+name: Macro community FD V14b Atlantic survey count-aware admission
 on:
   push:
     branches: [prospective/macro-community-fd-20261127]
