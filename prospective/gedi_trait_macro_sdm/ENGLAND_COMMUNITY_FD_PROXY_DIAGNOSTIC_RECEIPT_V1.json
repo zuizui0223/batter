@@ -1,0 +1,154 @@
+{
+  "status": "COMPLETE_PROVISIONAL_RECORDED_COMMUNITY_DIAGNOSTIC",
+  "contract_commit": "e8bceacda4c058f55e365f275a09bb8db98ba92a",
+  "environment": {
+    "run": 45919106402,
+    "job": 140245303494,
+    "artifact": 15163860815,
+    "zip_sha256": "77bf688b8a21dffd69deb27563076ad171585aed70047def4bbd53a0d4c9c61e",
+    "derived_sha256": "dd522773761d283eabd64656423c5b21d5e781787c937e47d5220f5bb342a793",
+    "anonymous": true,
+    "actual_measured_FHD": false,
+    "all_208_landcover_valid_fraction": 1,
+    "source_native_sample_checks": 2240,
+    "old_warp_diagnostic": {
+      "multitile_cells": 16,
+      "cells_with_conflicts": 3,
+      "conflicting_pixels": 5,
+      "differences_vs_native": 10562
+    },
+    "support_cells": [
+      203,
+      203,
+      202
+    ],
+    "coverage_thresholds": [
+      0.5,
+      0.7,
+      0.9
+    ],
+    "training_latitude_primary": 101,
+    "north_primary": 100,
+    "boundary_primary": 2
+  },
+  "observations": {
+    "attribution": "© Forestry Commission & Bat Conservation Trust 2026",
+    "nwbs_archive_sha256": "1a2e553f559406a328e3854aae2a9cc014d10fb772d74297d81493dff1149072",
+    "eurobatrait_archive_sha256": "173f6af963c41e8db2fe314a3ffd1285566e564e4e941d2df83c892c84ec23d9",
+    "input_audit_archive_sha256": "4af51be177103c149615f7c6c6806b1a2ab2b0b666b138a9ce32963752b1a91a",
+    "sites": 216,
+    "cells": 203,
+    "blocks50": 48,
+    "regions": 8,
+    "exact_species": 9,
+    "matched_label_records": 1060,
+    "record_coverage": 0.8326787117046347,
+    "activity_as_abundance": false,
+    "incidence_only": true
+  },
+  "documentation": {
+    "NWBS_evidence_sections_reviewed": [
+      3,
+      15,
+      16,
+      17,
+      20
+    ],
+    "general_NCEA_PDF_reviewed": false,
+    "public_limitations_metadata_reviewed": true,
+    "public_metadata_url": "https://environment.data.gov.uk/dataset/5d4b2584-53b2-49f7-b96a-a7d9252e439a",
+    "formal_ecological_admission": false
+  },
+  "primary": {
+    "region_block": {
+      "rmse": {
+        "N": 0.04266596201547491,
+        "S": 0.043713077667292974,
+        "B": 0.04609710637622149,
+        "H": 0.04617440828559446,
+        "P": 0.046888259865708715
+      },
+      "P_H_mse_gain": -0.00006643293270945606,
+      "P_N_mse_gain": -0.0003781245985282826,
+      "positive_regions": 2,
+      "positive_blocks": 15,
+      "latitude_P_H_gain": {
+        "training": -0.00015632690081617015,
+        "north": -0.00007519046231495744
+      }
+    },
+    "block": {
+      "rmse": {
+        "N": 0.04431941481328789,
+        "S": 0.04259012395830339,
+        "B": 0.04842818512975832,
+        "H": 0.048512871338398524,
+        "P": 0.049354859393454666
+      },
+      "P_H_mse_gain": -0.00008240346025167097,
+      "P_N_mse_gain": -0.0004716916163553979,
+      "positive_folds": 1,
+      "positive_blocks": 16,
+      "latitude_P_H_gain": {
+        "training": -0.00009352937835508464,
+        "north": -0.0000725284497156095
+      }
+    }
+  },
+  "sensitivity": {
+    "coverage90": {
+      "cells": 202,
+      "sites": 215,
+      "region_block_P_H": -0.00006504561656877532,
+      "block_P_H": -0.00007974728304349383
+    },
+    "same_year": {
+      "cells": 182,
+      "sites": 188,
+      "region_block_P_H": -0.000050662520526572295,
+      "block_P_H": -0.0000761501970219943
+    }
+  },
+  "domain_secondary": {
+    "names": [
+      "size",
+      "flight",
+      "sensory",
+      "maternity_roost"
+    ],
+    "region_block_P_H": [
+      0.0000400223190995053,
+      -0.00006322712867106849,
+      -0.00009778012615917556,
+      -0.000004614576135202053
+    ],
+    "block_P_H": [
+      0.000036446328357963523,
+      -0.00009178934058548397,
+      -0.00007470285748083055,
+      -0.00005078833402869399
+    ],
+    "size_block_P_N": -0.0004960700228179796,
+    "descriptive_block_weighted_means": [
+      0.05391248073921231,
+      0.024246598498296565,
+      -0.04279878314852124,
+      -0.023133883505702994
+    ],
+    "integrated_descriptive_mean": 0.003056603145821158
+  },
+  "screen_pass": false,
+  "audit": {
+    "all_source_archives_rehashed_and_crc_checked": true,
+    "trait_input_report_exact_replay": true,
+    "solver_comparisons": 390,
+    "max_solver_difference": 9.14823772291129e-14,
+    "heldout_perturbation_max_difference": 0,
+    "domain_additivity": true,
+    "synthetic_permutation_expectation": true,
+    "script_sha256": "90f60562d3036c0f92af28fbb50e9679cdf2cc201b2b55c1604c0ddfda041677",
+    "report_sha256": "aa32a83febf9d2a60d9ad7fde76f2d22cb335e5c5075368c7ce930e5216e6349",
+    "bundle_sha256": "d8ebe0d401c10a6bae34fbdb4334fd242ea3efc53bc4f05850a6cbe4194d1dcc"
+  },
+  "decision": "Complete provisional independent-source technical diagnostic only; negative integrated profile increment at both designs and sensitivity arms. Body-size secondary increment does not outperform neutral in block CV. Descriptive flight positive, sensory and maternity-roost negative signs agree with previous Polesia means, size differs; exploratory concordance with different trait pools/weights and survey designs, not replication. Close England same-archive tuning. Main and frozen manuscripts untouched; no actual vertical bat use, measured FHD, calibrated occupancy, causal or national estimate. Full NCEA general limitations PDF remains unreviewed."
+}
