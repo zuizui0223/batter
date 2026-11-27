@@ -1,0 +1,862 @@
+{
+  "stage": "matched monitored species sorting, wing x vertical vegetation allocation",
+  "status": "COMPLETE",
+  "source_commit": "15e2bf60d63aea0246fcec178ebd152b4164f367",
+  "limits": [
+    "equal reported nights not necessarily the same nights",
+    "conditional published detections, not occupancy or true habitat selection",
+    "not measured bat flight height or competitive partitioning",
+    "same public archive as V15/V16; independent of all earlier US data not established",
+    "coarse-grid nominal edge guard not calibrated coordinate precision",
+    "woody subgroup descriptive; all-cover primary landscape test",
+    "no raw locations, identifiers or pair records exported"
+  ],
+  "batamp_files": {
+    "ui/static/data/detectors.feather": {
+      "bytes": 915034,
+      "git_blob": "d7a8a122e47e2a116be975765760c8376a801b91",
+      "sha256": "a47274522aa3446407833316a3338ecdfc7966fe24213bb5b93a2e86d8a96129"
+    },
+    "ui/static/data/spp_detections.feather": {
+      "bytes": 2387282,
+      "git_blob": "b293bacbd1c0eedf0be67231f982c6eb1fb41c47",
+      "sha256": "69abe3c7b26d6cd739fd3b0ac879f906b7f23b640ce7a9431d273072c10b4c04"
+    },
+    "ui/src/config.js": {
+      "bytes": 6673,
+      "git_blob": "cab3c375f1ea93db2582100875d7d0ac5bef4f47",
+      "sha256": "75bf9bf24db8a9db7d1df5508c4a29b09632b7e396403d25f2c0a022d38cfa3c"
+    },
+    "analysis/README.md": {
+      "bytes": 17325,
+      "git_blob": "b24e548ca06c3ae0cd3eb930902c936422bb3499",
+      "sha256": "2687e13f9233deb545971fc8c5afd279adfd7d97ac1a6ea4ddcd70bba29b1cfd"
+    },
+    "analysis/merge.py": {
+      "bytes": 33255,
+      "git_blob": "86151a9dd662e78af0ed0d7cc08483733fd3c303",
+      "sha256": "3ef74a39d0d9ed8d2ece7b91f0f9a698eb0dd28bbe8437468f7d5abf024bfb80"
+    }
+  },
+  "range_source": {
+    "commit": "db6f0a5584ef5b0d899770d231476c6589cb16b8",
+    "metadata_blob": "f2538374945f602f7c148d1a534be491895cd6e1",
+    "all_current_maps": 5831,
+    "chiroptera_metadata": 1162,
+    "positive_maps_before_count_gate": 1141,
+    "verified_maps": 1162,
+    "exact_count": 1162,
+    "zero_maps": 21,
+    "count_mismatches": [],
+    "exact_positive_maps": 1141,
+    "grid_shape": [
+      142,
+      360
+    ],
+    "pixel_m": [
+      96486.27222222222,
+      96514.95774647887
+    ],
+    "crs": "EPSG:6933"
+  },
+  "trait_source": {
+    "artifact": 15069663941,
+    "zip_sha256": "fa45d435204439bd4600143540bc6960e0b814405cec938c3275c19ebbd2fb09",
+    "member_sha256": "99a19c169e18a0bafa4a518b7f844b56d2fe846cac13d5c035f4eae562a74c7b",
+    "species": 280
+  },
+  "detector_support": {
+    "regional": 9082,
+    "grid_interior_whole_GEDI_latitude": 4246
+  },
+  "detector_months_before_dedup": 381,
+  "deduplicated_units": 381,
+  "pre_environment": {
+    "units": 348,
+    "sites": 224,
+    "native_cells": 67,
+    "blocks2": 47,
+    "source_components": 33,
+    "pairs": 8261,
+    "species": 23
+  },
+  "climate": {
+    "bytes": 49869449,
+    "sha256": "00513224583665ec0f2f955a4ec252730c4deb2004cce9e793492a3f26df4dcf",
+    "members": {
+      "wc2.1_10m_bio_1.tif": "f61633ffac9d44ed220442b3f7171a06f931726668bfbe9d07d53700b257d8cf",
+      "wc2.1_10m_bio_4.tif": "a1bacac2f3d645284ee506fdde14226d7c2cafd5997a2af2f802f45e3550ae19",
+      "wc2.1_10m_bio_5.tif": "32e02d85868734c32547da70cf9c620f4739a3cf5dbc4f2b751e16ebb2338ae1",
+      "wc2.1_10m_bio_6.tif": "7cc728620cba21564bbed19d5fe6268a0ef0bd2578b757a3acf45ef65b8b4007",
+      "wc2.1_10m_bio_12.tif": "1e823e951ace0186c6eadd7368b4d0385c8f51cc952282c0f2d640bf7790fea5",
+      "wc2.1_10m_bio_15.tif": "6e16bf2e37752932cdeb2b209d1e06ba1a154ac012c372e56bc98e774cdfa6c6"
+    },
+    "native_shape": [
+      1080,
+      2160
+    ],
+    "common_valid_pixels": 808053,
+    "range_cells_ge50pct": 15070
+  },
+  "GEDI": {
+    "doi": "10.3334/ORNLDAAC/2339",
+    "metrics": {
+      "rh-98-a0": {
+        "bytes": 35602554,
+        "sha256": "72ade8803e3b80aad3316633a3a61ea1bb2c745e8166932776e5e89da0b6b413",
+        "granule_id": "G3258087918-ORNL_CLOUD",
+        "title": "GEDI_HighQuality_Shots_Rasters.gediv002_rh-98-a0_vf_20190417_20230316_12000m.tif",
+        "descriptions": [
+          "mean",
+          "meanbse",
+          "median",
+          "sd",
+          "iqr",
+          "p95",
+          "shan",
+          "countf"
+        ],
+        "band_lookup": {
+          "mean": 1,
+          "count": 8
+        },
+        "native_valid": 754369
+      },
+      "cover-a0": {
+        "bytes": 39867315,
+        "sha256": "48d852d46634b917fbc0a2544ed604b70ff7fa2a5d8585597c6c58cdb196d13b",
+        "granule_id": "G3258087844-ORNL_CLOUD",
+        "title": "GEDI_HighQuality_Shots_Rasters.gediv002_cover-a0_vf_20190417_20230316_12000m.tif",
+        "descriptions": [
+          "mean",
+          "meanbse",
+          "median",
+          "sd",
+          "iqr",
+          "p95",
+          "shan",
+          "countf"
+        ],
+        "band_lookup": {
+          "mean": 1,
+          "count": 8
+        },
+        "native_valid": 754369
+      },
+      "pai-a0": {
+        "bytes": 39987100,
+        "sha256": "39a3ddf5dd8fca5324c68a6b916a3020eb39a9d7da15962e554479a938c4acab",
+        "granule_id": "G3258087708-ORNL_CLOUD",
+        "title": "GEDI_HighQuality_Shots_Rasters.gediv002_pai-a0_vf_20190417_20230316_12000m.tif",
+        "descriptions": [
+          "mean",
+          "meanbse",
+          "median",
+          "sd",
+          "iqr",
+          "p95",
+          "shan",
+          "countf"
+        ],
+        "band_lookup": {
+          "mean": 1,
+          "count": 8
+        },
+        "native_valid": 754369
+      },
+      "pavd-bot-frac": {
+        "bytes": 36635049,
+        "sha256": "644b9b2c62d3b59c5d6929ce7a71fee537b3c94e6f89b883eff13b847000a2b6",
+        "granule_id": "G3258087271-ORNL_CLOUD",
+        "title": "GEDI_HighQuality_Shots_Rasters.gediv002_pavd-bot-frac_vf_20190417_20230316_12000m.tif",
+        "descriptions": [
+          "mean",
+          "meanbse",
+          "median",
+          "sd",
+          "iqr",
+          "p95",
+          "shan",
+          "countf"
+        ],
+        "band_lookup": {
+          "mean": 1,
+          "count": 8
+        },
+        "native_valid": 749456
+      }
+    },
+    "common_native_pixels": 749456,
+    "native_shape": [
+      965,
+      2881
+    ],
+    "range_cells_ge50pct": 11659
+  },
+  "post_environment": {
+    "units": 333,
+    "sites": 217,
+    "native_cells": 65,
+    "blocks2": 46,
+    "source_components": 30,
+    "pairs": 7937,
+    "species": 23
+  },
+  "woody_units": 107,
+  "features": {
+    "baseline_columns": 127,
+    "vertical_columns": [
+      "AR_x_PAVD",
+      "logWL_x_PAVD",
+      "logmass_x_PAVD"
+    ],
+    "context_order": [
+      "bio1",
+      "bio4",
+      "bio5",
+      "bio6",
+      "bio12",
+      "bio15",
+      "abs_lat",
+      "month_sin",
+      "month_cos",
+      "year",
+      "log1p_mic_height",
+      "log1p_reported_nights",
+      "nabat",
+      "activity",
+      "log1p_RH98",
+      "cover",
+      "log1p_PAI",
+      "climate_area_support",
+      "GEDI_area_support"
+    ],
+    "ridge": 0.1,
+    "outcome": "one label positive and one zero, identical reported effort"
+  },
+  "tests": {
+    "spatial_2": {
+      "status": "scored",
+      "grain": 2,
+      "strict": false,
+      "folds": [
+        {
+          "fold": [
+            0,
+            null
+          ],
+          "units": 53,
+          "test_blocks": 10,
+          "test_sites": 39,
+          "training_sites": 178,
+          "V_M": -0.00007616714290709092,
+          "V_B": -0.0000160414162574396,
+          "V_N": 0.28436710474145066,
+          "M_B": 0.00006012572664965132,
+          "W_B": -0.00007920342013412185
+        },
+        {
+          "fold": [
+            1,
+            null
+          ],
+          "units": 62,
+          "test_blocks": 9,
+          "test_sites": 55,
+          "training_sites": 162,
+          "V_M": 0.00010963552483678196,
+          "V_B": 0.00010748688788964067,
+          "V_N": 0.12102557683179072,
+          "M_B": -0.0000021486369471412914,
+          "W_B": 0.00010481339716816862
+        },
+        {
+          "fold": [
+            2,
+            null
+          ],
+          "units": 38,
+          "test_blocks": 9,
+          "test_sites": 22,
+          "training_sites": 195,
+          "V_M": 0.0002026579681401186,
+          "V_B": 0.0000810959498422914,
+          "V_N": -0.020220879131041314,
+          "M_B": -0.0001215620182978272,
+          "W_B": 0.00019252458136720385
+        },
+        {
+          "fold": [
+            3,
+            null
+          ],
+          "units": 117,
+          "test_blocks": 9,
+          "test_sites": 68,
+          "training_sites": 149,
+          "V_M": -0.0003581284526775752,
+          "V_B": -0.00037641623881812247,
+          "V_N": 0.1882913827146977,
+          "M_B": -0.00001828778614054727,
+          "W_B": -0.000353606654479921
+        },
+        {
+          "fold": [
+            4,
+            null
+          ],
+          "units": 63,
+          "test_blocks": 9,
+          "test_sites": 33,
+          "training_sites": 184,
+          "V_M": -0.0002449323959697325,
+          "V_B": -0.0001463641734876786,
+          "V_N": 0.22572117659304758,
+          "M_B": 0.00009856822248205388,
+          "W_B": -0.000250636593762843
+        }
+      ],
+      "scored_units": 333,
+      "scored_fraction": 1,
+      "scored_blocks": 46,
+      "log_scores": {
+        "N": -0.6931471805599453,
+        "B": -0.5305342554985389,
+        "M": -0.5305296819051396,
+        "W": -0.530611520316554,
+        "V": -0.5306031292449244
+      },
+      "V_M": -0.00007344733978485354,
+      "V_B": -0.00006887374638542276,
+      "V_N": 0.16254405131502092,
+      "M_B": 0.000004573593399337383,
+      "W_B": -0.0000772648180150659,
+      "positive_blocks": 21,
+      "positive_folds": 2,
+      "delete_one_block_range": [
+        -0.00010117426102294835,
+        -0.00002636987000914315
+      ],
+      "primary_pass": false,
+      "subgroups": {
+        "woody": {
+          "units": 107,
+          "blocks": 14,
+          "V_M": -0.00012255272594563493,
+          "V_B": -0.00020581648830741983,
+          "V_N": 0.022335156310062
+        },
+        "other": {
+          "units": 226,
+          "blocks": 35,
+          "V_M": -0.000043425223875237506,
+          "V_B": -5.897311916580605e-7,
+          "V_N": 0.22220885773714782
+        }
+      }
+    },
+    "spatial_4": {
+      "status": "scored",
+      "grain": 4,
+      "strict": false,
+      "folds": [
+        {
+          "fold": [
+            0,
+            null
+          ],
+          "units": 83,
+          "test_blocks": 7,
+          "test_sites": 60,
+          "training_sites": 157,
+          "V_M": -0.00015921414031971892,
+          "V_B": -0.00004827046867300622,
+          "V_N": 0.26714640093553993,
+          "M_B": 0.0001109436716467127,
+          "W_B": -0.0001599825853068615
+        },
+        {
+          "fold": [
+            1,
+            null
+          ],
+          "units": 39,
+          "test_blocks": 7,
+          "test_sites": 28,
+          "training_sites": 189,
+          "V_M": -0.00017558740759726632,
+          "V_B": -0.000022624916033220366,
+          "V_N": 0.11549565213677415,
+          "M_B": 0.00015296249156404595,
+          "W_B": -0.0001779268362126496
+        },
+        {
+          "fold": [
+            2,
+            null
+          ],
+          "units": 36,
+          "test_blocks": 7,
+          "test_sites": 25,
+          "training_sites": 192,
+          "V_M": 0.00003458768583564087,
+          "V_B": -0.00040271019590454316,
+          "V_N": 0.1034264413928857,
+          "M_B": -0.000437297881740184,
+          "W_B": 0.000020952132740559293
+        },
+        {
+          "fold": [
+            3,
+            null
+          ],
+          "units": 138,
+          "test_blocks": 6,
+          "test_sites": 80,
+          "training_sites": 137,
+          "V_M": -0.00007168023051651318,
+          "V_B": 0.00008050269747439387,
+          "V_N": 0.17458039748790966,
+          "M_B": 0.00015218292799090705,
+          "W_B": -0.00007323678077331142
+        },
+        {
+          "fold": [
+            4,
+            null
+          ],
+          "units": 37,
+          "test_blocks": 6,
+          "test_sites": 24,
+          "training_sites": 193,
+          "V_M": -0.0003960578986362817,
+          "V_B": -0.0002389737849003426,
+          "V_N": 0.07541283092113038,
+          "M_B": 0.0001570841137359391,
+          "W_B": -0.00039468826526156686
+        }
+      ],
+      "scored_units": 333,
+      "scored_fraction": 1,
+      "scored_blocks": 33,
+      "log_scores": {
+        "N": -0.6931471805599453,
+        "B": -0.5444591533690522,
+        "M": -0.5444397030593355,
+        "W": -0.5446114640144358,
+        "V": -0.5445884280838653
+      },
+      "V_M": -0.00014872502452988146,
+      "V_B": -0.00012927471481316566,
+      "V_N": 0.14855875247607997,
+      "M_B": 0.000019450309716617653,
+      "W_B": -0.00015231064538367978,
+      "positive_blocks": 17,
+      "positive_folds": 1,
+      "delete_one_block_range": [
+        -0.00017828488042723667,
+        -0.00011616343538753984
+      ],
+      "primary_pass": false,
+      "subgroups": {
+        "woody": {
+          "units": 107,
+          "blocks": 11,
+          "V_M": -0.00017452965371433926,
+          "V_B": -0.00040128735406386173,
+          "V_N": -0.012815060062668415
+        },
+        "other": {
+          "units": 226,
+          "blocks": 24,
+          "V_M": -0.0001297581646162449,
+          "V_B": 0.000008353268507232947,
+          "V_N": 0.2217751292031157
+        }
+      }
+    },
+    "strict_source_spatial_2": {
+      "status": "scored",
+      "grain": 2,
+      "strict": true,
+      "folds": [
+        {
+          "fold": [
+            0,
+            1
+          ],
+          "units": 17,
+          "test_blocks": 4,
+          "test_sites": 12,
+          "training_sites": 144,
+          "V_M": -0.0003892714162898603,
+          "V_B": -0.00008148057707091372,
+          "V_N": 0.19989485035139598,
+          "M_B": 0.00030779083921894657,
+          "W_B": -0.0003973378534018468
+        },
+        {
+          "fold": [
+            0,
+            2
+          ],
+          "units": 5,
+          "test_blocks": 3,
+          "test_sites": 4,
+          "training_sites": 123,
+          "V_M": -0.00011908597303555979,
+          "V_B": -0.00009931736368773425,
+          "V_N": 0.2172060020613053,
+          "M_B": 0.00001976860934782554,
+          "W_B": -0.0001276949153463658
+        },
+        {
+          "fold": [
+            0,
+            3
+          ],
+          "units": 13,
+          "test_blocks": 5,
+          "test_sites": 9,
+          "training_sites": 158,
+          "V_M": 0.000003048574810426974,
+          "V_B": 0.000036678305799897615,
+          "V_N": 0.27023618556421986,
+          "M_B": 0.00003362973098947064,
+          "W_B": 0.0000017657035221163575
+        },
+        {
+          "fold": [
+            0,
+            4
+          ],
+          "units": 17,
+          "test_blocks": 3,
+          "test_sites": 13,
+          "training_sites": 155,
+          "V_M": 0.0006703085491825411,
+          "V_B": 0.00041938014580861216,
+          "V_N": 0.2794067839247274,
+          "M_B": -0.00025092840337392897,
+          "W_B": 0.0006859090719352756
+        },
+        {
+          "fold": [
+            1,
+            0
+          ],
+          "units": 4,
+          "test_blocks": 2,
+          "test_sites": 4,
+          "training_sites": 130,
+          "V_M": -0.0000762386799397774,
+          "V_B": -0.00020614942334429287,
+          "V_N": -0.31125144512234615,
+          "M_B": -0.00012991074340451547,
+          "W_B": -0.00006696921566051728
+        },
+        {
+          "fold": [
+            1,
+            1
+          ],
+          "units": 23,
+          "test_blocks": 5,
+          "test_sites": 20,
+          "training_sites": 136,
+          "V_M": -0.00007926298709071133,
+          "V_B": 0.00008440139215371012,
+          "V_N": 0.09391839116724165,
+          "M_B": 0.00016366437924442145,
+          "W_B": -0.00008067708892500747
+        },
+        {
+          "fold": [
+            1,
+            2
+          ],
+          "units": 22,
+          "test_blocks": 2,
+          "test_sites": 18,
+          "training_sites": 121,
+          "V_M": 0.00011076896463224628,
+          "V_B": 0.00004889666398943948,
+          "V_N": 0.18001091151661897,
+          "M_B": -0.0000618723006428068,
+          "W_B": 0.00011191890712369812
+        },
+        {
+          "fold": [
+            1,
+            3
+          ],
+          "units": 5,
+          "test_blocks": 3,
+          "test_sites": 5,
+          "training_sites": 138,
+          "V_M": 0.0002087923698053662,
+          "V_B": 0.0002842045395510806,
+          "V_N": 0.2888950006544913,
+          "M_B": 0.00007541216974571441,
+          "W_B": 0.00020622779767620614
+        },
+        {
+          "fold": [
+            1,
+            4
+          ],
+          "units": 8,
+          "test_blocks": 2,
+          "test_sites": 8,
+          "training_sites": 134,
+          "V_M": 0.00002770877951446815,
+          "V_B": 0.00031627052040006376,
+          "V_N": 0.2220807044321822,
+          "M_B": 0.0002885617408855956,
+          "W_B": 0.000022042702505498113
+        },
+        {
+          "fold": [
+            2,
+            0
+          ],
+          "units": 20,
+          "test_blocks": 4,
+          "test_sites": 13,
+          "training_sites": 167,
+          "V_M": 0.000015726809218685744,
+          "V_B": -0.00022095934946753104,
+          "V_N": -0.31976784161977856,
+          "M_B": -0.00023668615868621679,
+          "W_B": 0.000006082634125714748
+        },
+        {
+          "fold": [
+            2,
+            1
+          ],
+          "units": 10,
+          "test_blocks": 2,
+          "test_sites": 7,
+          "training_sites": 151,
+          "V_M": 0.0007782131068060361,
+          "V_B": -0.0006825352360456671,
+          "V_N": -0.23632861278484696,
+          "M_B": -0.0014607483428517032,
+          "W_B": 0.0007150863376662597
+        },
+        {
+          "fold": [
+            2,
+            3
+          ],
+          "units": 4,
+          "test_blocks": 3,
+          "test_sites": 3,
+          "training_sites": 169,
+          "V_M": 0.00045958587743999413,
+          "V_B": 0.00035068222597856025,
+          "V_N": 0.21235895499369234,
+          "M_B": -0.00010890365146143388,
+          "W_B": 0.00043400520973924106
+        },
+        {
+          "fold": [
+            2,
+            4
+          ],
+          "units": 2,
+          "test_blocks": 2,
+          "test_sites": 2,
+          "training_sites": 161,
+          "V_M": -0.0007135446252922728,
+          "V_B": -0.0019287171199812159,
+          "V_N": 0.08160091693524618,
+          "M_B": -0.001215172494688943,
+          "W_B": -0.0006825981919509339
+        },
+        {
+          "fold": [
+            3,
+            0
+          ],
+          "units": 56,
+          "test_blocks": 2,
+          "test_sites": 14,
+          "training_sites": 127,
+          "V_M": 0.0003397178385513011,
+          "V_B": 0.0004914629169821549,
+          "V_N": 0.25114282034879143,
+          "M_B": 0.00015174507843085383,
+          "W_B": 0.00032054148031968044
+        },
+        {
+          "fold": [
+            3,
+            1
+          ],
+          "units": 12,
+          "test_blocks": 4,
+          "test_sites": 12,
+          "training_sites": 111,
+          "V_M": 0.00024600434337929133,
+          "V_B": 0.000006416187221414127,
+          "V_N": -0.15752854769763613,
+          "M_B": -0.0002395881561578772,
+          "W_B": 0.00024931892269741684
+        },
+        {
+          "fold": [
+            3,
+            2
+          ],
+          "units": 26,
+          "test_blocks": 3,
+          "test_sites": 25,
+          "training_sites": 111,
+          "V_M": 0.0004292983820727292,
+          "V_B": 0.0003282397281201277,
+          "V_N": 0.04819500656297626,
+          "M_B": -0.0001010586539526015,
+          "W_B": 0.0004283420784423342
+        },
+        {
+          "fold": [
+            3,
+            3
+          ],
+          "units": 12,
+          "test_blocks": 3,
+          "test_sites": 10,
+          "training_sites": 130,
+          "V_M": -0.000325275598106578,
+          "V_B": -0.0002280625711668094,
+          "V_N": 0.25712827929578785,
+          "M_B": 0.00009721302693976863,
+          "W_B": -0.00032547044438957506
+        },
+        {
+          "fold": [
+            3,
+            4
+          ],
+          "units": 11,
+          "test_blocks": 3,
+          "test_sites": 11,
+          "training_sites": 124,
+          "V_M": -0.0015991056505657575,
+          "V_B": -0.0018464493713141739,
+          "V_N": 0.11958856481910807,
+          "M_B": -0.0002473437207484164,
+          "W_B": -0.001571318239885544
+        },
+        {
+          "fold": [
+            4,
+            0
+          ],
+          "units": 25,
+          "test_blocks": 3,
+          "test_sites": 11,
+          "training_sites": 157,
+          "V_M": -0.0007183830680236314,
+          "V_B": -0.0006815501211944741,
+          "V_N": 0.20453992893995276,
+          "M_B": 0.000036832946829157276,
+          "W_B": -0.0007354641925604866
+        },
+        {
+          "fold": [
+            4,
+            1
+          ],
+          "units": 10,
+          "test_blocks": 3,
+          "test_sites": 6,
+          "training_sites": 142,
+          "V_M": -0.00009626292984166174,
+          "V_B": -0.00007515702076488218,
+          "V_N": 0.023553909945516316,
+          "M_B": 0.00002110590907677956,
+          "W_B": -0.00009844766948696737
+        },
+        {
+          "fold": [
+            4,
+            2
+          ],
+          "units": 23,
+          "test_blocks": 3,
+          "test_sites": 14,
+          "training_sites": 139,
+          "V_M": -0.0004732116220205196,
+          "V_B": -0.00033130128225627997,
+          "V_N": 0.25906707547026114,
+          "M_B": 0.0001419103397642396,
+          "W_B": -0.0004824938516377886
+        },
+        {
+          "fold": [
+            4,
+            3
+          ],
+          "units": 3,
+          "test_blocks": 2,
+          "test_sites": 2,
+          "training_sites": 157,
+          "V_M": -0.00021142698624548872,
+          "V_B": -0.00019787841076479573,
+          "V_N": 0.3056397451202374,
+          "M_B": 0.000013548575480692993,
+          "W_B": -0.0002220602752451839
+        }
+      ],
+      "scored_units": 328,
+      "scored_fraction": 0.984984984984985,
+      "scored_blocks": 45,
+      "log_scores": {
+        "N": -0.6931471805599452,
+        "B": -0.571000138201989,
+        "M": -0.5710231068954114,
+        "W": -0.5711468078789519,
+        "V": -0.5711675485379658
+      },
+      "V_M": -0.0001444416425547482,
+      "V_B": -0.0001674103359767809,
+      "V_N": 0.12197963202197937,
+      "M_B": -0.000022968693422331654,
+      "W_B": -0.00014666967696286282,
+      "positive_blocks": 21,
+      "positive_folds": 11,
+      "delete_one_block_range": [
+        -0.00016936819803651368,
+        -0.00006334677127245363
+      ],
+      "primary_pass": false,
+      "subgroups": {
+        "woody": {
+          "units": 105,
+          "blocks": 14,
+          "V_M": -0.00023989950696401419,
+          "V_B": -0.0002694593105079246,
+          "V_N": -0.061387136603864634
+        },
+        "other": {
+          "units": 223,
+          "blocks": 34,
+          "V_M": -0.0001044123999514035,
+          "V_B": -0.00010777505918097008,
+          "V_N": 0.1961865791587753
+        }
+      }
+    }
+  },
+  "primary_pass": false,
+  "audit": {
+    "run": 46084157977,
+    "job": 140789712066,
+    "head": "31bfc0055bbb8c2a477587f6b9ee4eaf64aedd9e",
+    "scope": "executed aggregate log; output ZIP not independently rehashed",
+    "decision": "V17 primary FAIL across all 3 admitted validation designs; V-M and V-B negative, all block deletion means V-M negative. Woody subgroup negative too; B and V generally beat neutral on broad support, not evidence of incremental PAVD or trait mechanism. Close same-source PAVD outcome fitting; no threshold change or posthoc rescue."
+  }
+}
