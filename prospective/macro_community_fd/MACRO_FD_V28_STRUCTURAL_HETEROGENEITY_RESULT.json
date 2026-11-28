@@ -1,0 +1,376 @@
+{
+  "stage": "global mapped range-edge sorting by landscape structural heterogeneity",
+  "status": "SPECIES_SUPPORT_STOP",
+  "axis_order": [
+    "joint",
+    "RH98_between_12km_SD",
+    "bottom_PAVD_fraction_between_12km_SD"
+  ],
+  "limits": [
+    "range-map occupancy, not observed presence/absence or actual boundaries at fine scale",
+    "between-12km means SD, not within-footprint complexity or navigable volume",
+    "same source archives, new estimand not independent replication",
+    "matched-pair block sign null not complete spatial exchangeability",
+    "descriptive trait bridge only"
+  ],
+  "range_source": {
+    "commit": "db6f0a5584ef5b0d899770d231476c6589cb16b8",
+    "metadata_blob": "f2538374945f602f7c148d1a534be491895cd6e1",
+    "all_current_maps": 5831,
+    "chiroptera_metadata": 1162,
+    "positive_maps_before_count_gate": 1141,
+    "verified_maps": 1162,
+    "exact_count": 1162,
+    "zero_maps": 21,
+    "count_mismatches": [],
+    "exact_positive_maps": 1141,
+    "grid_shape": [
+      142,
+      360
+    ],
+    "pixel_m": [
+      96486.27222222222,
+      96514.95774647887
+    ],
+    "crs": "EPSG:6933"
+  },
+  "climate": {
+    "bytes": 49869449,
+    "sha256": "00513224583665ec0f2f955a4ec252730c4deb2004cce9e793492a3f26df4dcf",
+    "members": {
+      "wc2.1_10m_bio_1.tif": "f61633ffac9d44ed220442b3f7171a06f931726668bfbe9d07d53700b257d8cf",
+      "wc2.1_10m_bio_4.tif": "a1bacac2f3d645284ee506fdde14226d7c2cafd5997a2af2f802f45e3550ae19",
+      "wc2.1_10m_bio_5.tif": "32e02d85868734c32547da70cf9c620f4739a3cf5dbc4f2b751e16ebb2338ae1",
+      "wc2.1_10m_bio_6.tif": "7cc728620cba21564bbed19d5fe6268a0ef0bd2578b757a3acf45ef65b8b4007",
+      "wc2.1_10m_bio_12.tif": "1e823e951ace0186c6eadd7368b4d0385c8f51cc952282c0f2d640bf7790fea5",
+      "wc2.1_10m_bio_15.tif": "6e16bf2e37752932cdeb2b209d1e06ba1a154ac012c372e56bc98e774cdfa6c6"
+    },
+    "native_shape": [
+      1080,
+      2160
+    ],
+    "common_valid_pixels": 808053,
+    "range_cells_ge50pct": 15070
+  },
+  "GEDI": {
+    "doi": "10.3334/ORNLDAAC/2339",
+    "metrics": {
+      "rh-98-a0": {
+        "bytes": 35602554,
+        "sha256": "72ade8803e3b80aad3316633a3a61ea1bb2c745e8166932776e5e89da0b6b413",
+        "granule_id": "G3258087918-ORNL_CLOUD",
+        "title": "GEDI_HighQuality_Shots_Rasters.gediv002_rh-98-a0_vf_20190417_20230316_12000m.tif",
+        "descriptions": [
+          "mean",
+          "meanbse",
+          "median",
+          "sd",
+          "iqr",
+          "p95",
+          "shan",
+          "countf"
+        ],
+        "band_lookup": {
+          "mean": 1,
+          "count": 8
+        },
+        "native_valid": 754369
+      },
+      "cover-a0": {
+        "bytes": 39867315,
+        "sha256": "48d852d46634b917fbc0a2544ed604b70ff7fa2a5d8585597c6c58cdb196d13b",
+        "granule_id": "G3258087844-ORNL_CLOUD",
+        "title": "GEDI_HighQuality_Shots_Rasters.gediv002_cover-a0_vf_20190417_20230316_12000m.tif",
+        "descriptions": [
+          "mean",
+          "meanbse",
+          "median",
+          "sd",
+          "iqr",
+          "p95",
+          "shan",
+          "countf"
+        ],
+        "band_lookup": {
+          "mean": 1,
+          "count": 8
+        },
+        "native_valid": 754369
+      },
+      "pai-a0": {
+        "bytes": 39987100,
+        "sha256": "39a3ddf5dd8fca5324c68a6b916a3020eb39a9d7da15962e554479a938c4acab",
+        "granule_id": "G3258087708-ORNL_CLOUD",
+        "title": "GEDI_HighQuality_Shots_Rasters.gediv002_pai-a0_vf_20190417_20230316_12000m.tif",
+        "descriptions": [
+          "mean",
+          "meanbse",
+          "median",
+          "sd",
+          "iqr",
+          "p95",
+          "shan",
+          "countf"
+        ],
+        "band_lookup": {
+          "mean": 1,
+          "count": 8
+        },
+        "native_valid": 754369
+      },
+      "pavd-bot-frac": {
+        "bytes": 36635049,
+        "sha256": "644b9b2c62d3b59c5d6929ce7a71fee537b3c94e6f89b883eff13b847000a2b6",
+        "granule_id": "G3258087271-ORNL_CLOUD",
+        "title": "GEDI_HighQuality_Shots_Rasters.gediv002_pavd-bot-frac_vf_20190417_20230316_12000m.tif",
+        "descriptions": [
+          "mean",
+          "meanbse",
+          "median",
+          "sd",
+          "iqr",
+          "p95",
+          "shan",
+          "countf"
+        ],
+        "band_lookup": {
+          "mean": 1,
+          "count": 8
+        },
+        "native_valid": 749456
+      }
+    },
+    "common_native_pixels": 749456,
+    "native_shape": [
+      965,
+      2881
+    ],
+    "range_cells_ge50pct": 11659
+  },
+  "region_support": {
+    "North_America": {
+      "cells": 459,
+      "adjacent_candidates": 533,
+      "caliper_candidates": 275,
+      "disjoint_pairs": 133,
+      "blocks5": 43,
+      "blocks10": 22,
+      "baseline_RMS_quantiles": [
+        0.048404363688485955,
+        0.1378423247956128,
+        0.21296470470148912,
+        0.30811154996892487,
+        0.4586061113742489
+      ],
+      "eligible_species": 3,
+      "eligible_genera": 1,
+      "exclusive_pairs_quantiles": [
+        8,
+        8.5,
+        9,
+        9.5,
+        10
+      ],
+      "RH98_SD_quantiles": [
+        1.0161082238464187,
+        2.494924475089592,
+        3.4964452143810223,
+        4.765170546692249,
+        9.822541511661353
+      ],
+      "PAVD_SD_quantiles": [
+        0.010221122140664519,
+        0.017064575127973967,
+        0.021702346876565064,
+        0.027823558843636943,
+        0.0665836459278809
+      ],
+      "matched_absolute_standardized_difference_quantiles": [
+        [
+          0.0001104273300241377,
+          0.20811997910735192,
+          0.3812906151303532,
+          0.7002908970872619,
+          2.0742055506521346
+        ],
+        [
+          0.005985736263362201,
+          0.14075176035606962,
+          0.40320361387770337,
+          0.7761601906612333,
+          4.625305582807107
+        ]
+      ]
+    },
+    "East_Asia": {
+      "cells": 611,
+      "adjacent_candidates": 767,
+      "caliper_candidates": 405,
+      "disjoint_pairs": 180,
+      "blocks5": 49,
+      "blocks10": 22,
+      "baseline_RMS_quantiles": [
+        0.03945161220443307,
+        0.1500747601563041,
+        0.20808601817072203,
+        0.2964415314685548,
+        0.4908404857250147
+      ],
+      "eligible_species": 49,
+      "eligible_genera": 24,
+      "exclusive_pairs_quantiles": [
+        8,
+        9,
+        10,
+        13,
+        22
+      ],
+      "RH98_SD_quantiles": [
+        0.5787023907061584,
+        3.4825326113750235,
+        4.594796783390873,
+        5.912366023856251,
+        12.286875362652095
+      ],
+      "PAVD_SD_quantiles": [
+        0.005884309102455327,
+        0.019962631346564903,
+        0.02616882511915222,
+        0.036067117306486804,
+        0.07519552912918985
+      ],
+      "matched_absolute_standardized_difference_quantiles": [
+        [
+          0.003361686017750559,
+          0.1949610150073547,
+          0.4158418772416884,
+          0.6529351984168107,
+          2.0388668356151642
+        ],
+        [
+          0.015209748272751539,
+          0.20629849437532802,
+          0.3835258314483606,
+          0.7020178915369516,
+          2.175773152928537
+        ]
+      ]
+    },
+    "South_America": {
+      "cells": 905,
+      "adjacent_candidates": 1249,
+      "caliper_candidates": 849,
+      "disjoint_pairs": 315,
+      "blocks5": 55,
+      "blocks10": 24,
+      "baseline_RMS_quantiles": [
+        0.04979477164420205,
+        0.1267671169941641,
+        0.1816596860752346,
+        0.26169679901318577,
+        0.49551047939927134
+      ],
+      "eligible_species": 83,
+      "eligible_genera": 43,
+      "exclusive_pairs_quantiles": [
+        8,
+        10,
+        12,
+        15,
+        23
+      ],
+      "RH98_SD_quantiles": [
+        0.6532066367433398,
+        2.4741662329426,
+        4.0138239208035085,
+        5.56590252769313,
+        13.034738342117315
+      ],
+      "PAVD_SD_quantiles": [
+        0.00610230321856355,
+        0.01611344106422983,
+        0.020661398045455956,
+        0.026934345303008225,
+        0.06654232084532681
+      ],
+      "matched_absolute_standardized_difference_quantiles": [
+        [
+          0.002552867726677636,
+          0.14830876406581067,
+          0.298209561844641,
+          0.6090911056044637,
+          2.2897242211821145
+        ],
+        [
+          0.0026274704914791354,
+          0.19682129202359827,
+          0.3840376110949927,
+          0.7610408031412372,
+          4.6506145886074854
+        ]
+      ]
+    },
+    "Africa": {
+      "cells": 538,
+      "adjacent_candidates": 684,
+      "caliper_candidates": 500,
+      "disjoint_pairs": 181,
+      "blocks5": 37,
+      "blocks10": 16,
+      "baseline_RMS_quantiles": [
+        0.07923233414537781,
+        0.14601775236766149,
+        0.19130614781747068,
+        0.2647021811520148,
+        0.4620662556898874
+      ],
+      "eligible_species": 52,
+      "eligible_genera": 24,
+      "exclusive_pairs_quantiles": [
+        8,
+        9,
+        10.5,
+        13.25,
+        19
+      ],
+      "RH98_SD_quantiles": [
+        0.8129227483132732,
+        2.466829388814114,
+        3.570434382468678,
+        5.248856533409926,
+        11.785021174291861
+      ],
+      "PAVD_SD_quantiles": [
+        0.009703046644266907,
+        0.020763243351960798,
+        0.0255743693683433,
+        0.03297769887304266,
+        0.07595337724106709
+      ],
+      "matched_absolute_standardized_difference_quantiles": [
+        [
+          0.0006915055742090371,
+          0.17409325044986182,
+          0.3576539105431569,
+          0.7269445669645648,
+          2.845663156275166
+        ],
+        [
+          0.0015908855838112957,
+          0.2500961210030347,
+          0.5560216023154682,
+          0.9026875061232202,
+          1.9200463723434602
+        ]
+      ]
+    }
+  },
+  "unique_species": 187,
+  "audit": {
+    "run": 46111020034,
+    "job": 140874345735,
+    "head": "219da38fef448d47bb79c12d0593930263c53490",
+    "scope": "executed aggregate log; input hashes verified, output ZIP not independently rehashed",
+    "decision": "SPECIES_SUPPORT_STOP: all four pair-support gates passed (809 disjoint pairs total); 187 unique eligible species, North America only 3 species / 1 genus versus required 20; East Asia49, South America83, Africa52. No sign-null test or functional bridge. Preserve original gate and heterogeneity calculation. Distinct new community-level turnover estimand is not a rescue of species-level repeatability."
+  }
+}
