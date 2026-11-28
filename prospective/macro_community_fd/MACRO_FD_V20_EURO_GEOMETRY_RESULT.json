@@ -1,0 +1,154 @@
+{
+  "stage": "European range-defined flight/sensory geometry",
+  "status": "ACOUSTIC_SUPPORT_STOP",
+  "limits": [
+    "reported acoustic summaries not new waveform measurements",
+    "potential range assemblages not observed coexistence",
+    "genus shuffles not full phylogenetic control",
+    "no GEDI fit, altitude or causal partitioning claim"
+  ],
+  "euro_source": {
+    "metadata_http": 200,
+    "metadata_receipt": {
+      "bytes": 17435,
+      "sha256": "3f70c09bad1f6bae5254897e324c06f290695145fe8a831797b3382c2b3f9ad9",
+      "md5": "f9487c2735400572d45171afc12a7d64"
+    },
+    "04_acoustic_signature.csv": {
+      "download_http": 200,
+      "download_receipt": {
+        "bytes": 410816,
+        "sha256": "22381fc194772a55190d463278dee95707d7d3ca5e84a60e980c8c7bd18f3604",
+        "md5": "0c31584cdb2d0bf21d8bbea4232d8221"
+      }
+    },
+    "Taxon.csv": {
+      "download_http": 200,
+      "download_receipt": {
+        "bytes": 3511,
+        "sha256": "d2789d8e8775c7693282b45f7832d54475054d9d596cab37464b505e91d9db68",
+        "md5": "10ec8729d351e7151697649c9016e5e9"
+      }
+    },
+    "Trait_description.csv": {
+      "download_http": 200,
+      "download_receipt": {
+        "bytes": 19195,
+        "sha256": "a990aa682fc9d417181368ed6a23eb24847d79640c573de9e71293bde9c6e2e7",
+        "md5": "7069b8c6dfa842f6a7e8db9f600cb09d"
+      }
+    }
+  },
+  "trait_names": {
+    "CallDuration": 217,
+    "CallMinFrequency": 94,
+    "CallPeakFrequency": 221,
+    "CallMaxFrequency": 94,
+    "InterpulseInterval": 142,
+    "CallStartFrequency": 123,
+    "CallEndFrequency": 123,
+    "CallMidFrequency": 90,
+    "CallBandwidth": 98,
+    "CallSlope": 68,
+    "buzzDuration": 19,
+    "buzzPeakFrequency": 19,
+    "rateBuzz": 19,
+    "CallType": 46
+  },
+  "traits": {
+    "callpeakfrequency": {
+      "definition": "Frequency with the greatest amount of energy in a call",
+      "dictionary_unit": "kHz",
+      "name": "CallPeakFrequency",
+      "all_rows": 221,
+      "units": {
+        "kHz": 221
+      },
+      "types": {
+        "mean": 187,
+        "mean of means": 34
+      },
+      "methods": {
+        "hand-release": 39,
+        "free-flight": 46,
+        "leaving roost": 21,
+        "free-flight & leaving roost": 5,
+        "hand-release & leaving roost": 20,
+        "hand-release & leaving roost & free-flight": 10,
+        "hand-release & free-flight": 8,
+        "free-flight & hand-release & light-tagged": 9,
+        "free-flight & light-tagged": 1,
+        "free-flight & free-statiounknownry": 1,
+        "free-flight & in-hand": 1,
+        "free-flight & free-statiounknownry & hand-release & light-tagged": 1,
+        "free-flight & free-statiounknownry & hand-release & in-hand": 1,
+        "in-hand": 1,
+        "free-flight & hand-release & light-tagged & unknown": 8,
+        "hand-release & light-tagged & unknown": 4,
+        "free-flight & hand-release": 1,
+        "hand-release & light-tagged": 2,
+        "light-tagged": 1,
+        "free-flight & hand-release & leaving roost": 3,
+        "unknown": 38
+      },
+      "all_species": 40,
+      "reported_numeric_summary_rows": 187,
+      "reported_numeric_species": 39,
+      "admitted_rows": 0,
+      "species": 0,
+      "distinct_references": 0,
+      "reference_species_pairs": 0
+    },
+    "callduration": {
+      "definition": "Duration of a call",
+      "dictionary_unit": "ms",
+      "name": "CallDuration",
+      "all_rows": 217,
+      "units": {
+        "ms": 217
+      },
+      "types": {
+        "mean": 187,
+        "mean of means": 30
+      },
+      "methods": {
+        "hand-release": 39,
+        "free-flight": 46,
+        "leaving roost": 21,
+        "free-flight & leaving roost": 5,
+        "hand-release & leaving roost": 20,
+        "hand-release & leaving roost & free-flight": 10,
+        "hand-release & free-flight": 8,
+        "free-flight & hand-release & light-tagged": 9,
+        "free-flight & light-tagged": 1,
+        "free-flight & free-statiounknownry": 1,
+        "free-flight & in-hand": 1,
+        "free-flight & free-statiounknownry & hand-release & light-tagged": 1,
+        "free-flight & free-statiounknownry & hand-release & in-hand": 1,
+        "in-hand": 1,
+        "free-flight & hand-release & light-tagged & unknown": 8,
+        "hand-release & light-tagged & unknown": 4,
+        "free-flight & hand-release": 1,
+        "hand-release & light-tagged": 2,
+        "light-tagged": 1,
+        "free-flight & hand-release & leaving roost": 3,
+        "unknown": 34
+      },
+      "all_species": 40,
+      "reported_numeric_summary_rows": 187,
+      "reported_numeric_species": 39,
+      "admitted_rows": 0,
+      "species": 0,
+      "distinct_references": 0,
+      "reference_species_pairs": 0
+    }
+  },
+  "common_acoustic_species_before_range_wing": 0,
+  "audit": {
+    "run": 46098147885,
+    "job": 140834210213,
+    "head": "797db6a33ec68118a8d55b5714fd601c15ab95f7",
+    "scope": "executed aggregate log; output ZIP not independently rehashed",
+    "decision": "No direct-method row admitted because verbatimTraitMethod is recording context, not measurement method. Source definitions, exact units and 187 reported means/39 species per trait verified. Primary V20 stopped, not negative biology. Distinct documented free-flight reported-summary scope only."
+  }
+}
