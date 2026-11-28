@@ -1,0 +1,755 @@
+{
+  "stage": "measured vegetation and conditional flight–sensory covariance",
+  "status": "COMPLETE",
+  "response_order": [
+    "K_genus_residual",
+    "K_raw",
+    "wing_MPD",
+    "acoustic_MPD",
+    "acoustic_MPD_genus_residual"
+  ],
+  "limits": [
+    "potential range assemblages, not surveyed cooccurrence",
+    "same V20b species and range data",
+    "genus-conditioned distance expectation not full phylogenetic correction",
+    "coarse vegetation allocation not actual flight space",
+    "known lineage composition used as covariate",
+    "no causal partitioning or occupancy claim"
+  ],
+  "euro_source": {
+    "metadata_http": 200,
+    "metadata_receipt": {
+      "bytes": 17435,
+      "sha256": "3f70c09bad1f6bae5254897e324c06f290695145fe8a831797b3382c2b3f9ad9",
+      "md5": "f9487c2735400572d45171afc12a7d64"
+    },
+    "04_acoustic_signature.csv": {
+      "download_http": 200,
+      "download_receipt": {
+        "bytes": 410816,
+        "sha256": "22381fc194772a55190d463278dee95707d7d3ca5e84a60e980c8c7bd18f3604",
+        "md5": "0c31584cdb2d0bf21d8bbea4232d8221"
+      }
+    },
+    "Taxon.csv": {
+      "download_http": 200,
+      "download_receipt": {
+        "bytes": 3511,
+        "sha256": "d2789d8e8775c7693282b45f7832d54475054d9d596cab37464b505e91d9db68",
+        "md5": "10ec8729d351e7151697649c9016e5e9"
+      }
+    },
+    "Trait_description.csv": {
+      "download_http": 200,
+      "download_receipt": {
+        "bytes": 19195,
+        "sha256": "a990aa682fc9d417181368ed6a23eb24847d79640c573de9e71293bde9c6e2e7",
+        "md5": "7069b8c6dfa842f6a7e8db9f600cb09d"
+      }
+    }
+  },
+  "trait_names": {
+    "CallDuration": 217,
+    "CallMinFrequency": 94,
+    "CallPeakFrequency": 221,
+    "CallMaxFrequency": 94,
+    "InterpulseInterval": 142,
+    "CallStartFrequency": 123,
+    "CallEndFrequency": 123,
+    "CallMidFrequency": 90,
+    "CallBandwidth": 98,
+    "CallSlope": 68,
+    "buzzDuration": 19,
+    "buzzPeakFrequency": 19,
+    "rateBuzz": 19,
+    "CallType": 46
+  },
+  "traits": {
+    "callpeakfrequency": {
+      "definition": "Frequency with the greatest amount of energy in a call",
+      "dictionary_unit": "kHz",
+      "name": "CallPeakFrequency",
+      "all_rows": 221,
+      "units": {
+        "kHz": 221
+      },
+      "types": {
+        "mean": 187,
+        "mean of means": 34
+      },
+      "methods": {
+        "hand-release": 39,
+        "free-flight": 46,
+        "leaving roost": 21,
+        "free-flight & leaving roost": 5,
+        "hand-release & leaving roost": 20,
+        "hand-release & leaving roost & free-flight": 10,
+        "hand-release & free-flight": 8,
+        "free-flight & hand-release & light-tagged": 9,
+        "free-flight & light-tagged": 1,
+        "free-flight & free-statiounknownry": 1,
+        "free-flight & in-hand": 1,
+        "free-flight & free-statiounknownry & hand-release & light-tagged": 1,
+        "free-flight & free-statiounknownry & hand-release & in-hand": 1,
+        "in-hand": 1,
+        "free-flight & hand-release & light-tagged & unknown": 8,
+        "hand-release & light-tagged & unknown": 4,
+        "free-flight & hand-release": 1,
+        "hand-release & light-tagged": 2,
+        "light-tagged": 1,
+        "free-flight & hand-release & leaving roost": 3,
+        "unknown": 38
+      },
+      "all_species": 40,
+      "reported_numeric_summary_rows": 187,
+      "reported_numeric_species": 39,
+      "admitted_rows": 46,
+      "species": 36,
+      "distinct_references": 7,
+      "reference_species_pairs": 44
+    },
+    "callduration": {
+      "definition": "Duration of a call",
+      "dictionary_unit": "ms",
+      "name": "CallDuration",
+      "all_rows": 217,
+      "units": {
+        "ms": 217
+      },
+      "types": {
+        "mean": 187,
+        "mean of means": 30
+      },
+      "methods": {
+        "hand-release": 39,
+        "free-flight": 46,
+        "leaving roost": 21,
+        "free-flight & leaving roost": 5,
+        "hand-release & leaving roost": 20,
+        "hand-release & leaving roost & free-flight": 10,
+        "hand-release & free-flight": 8,
+        "free-flight & hand-release & light-tagged": 9,
+        "free-flight & light-tagged": 1,
+        "free-flight & free-statiounknownry": 1,
+        "free-flight & in-hand": 1,
+        "free-flight & free-statiounknownry & hand-release & light-tagged": 1,
+        "free-flight & free-statiounknownry & hand-release & in-hand": 1,
+        "in-hand": 1,
+        "free-flight & hand-release & light-tagged & unknown": 8,
+        "hand-release & light-tagged & unknown": 4,
+        "free-flight & hand-release": 1,
+        "hand-release & light-tagged": 2,
+        "light-tagged": 1,
+        "free-flight & hand-release & leaving roost": 3,
+        "unknown": 34
+      },
+      "all_species": 40,
+      "reported_numeric_summary_rows": 187,
+      "reported_numeric_species": 39,
+      "admitted_rows": 46,
+      "species": 36,
+      "distinct_references": 7,
+      "reference_species_pairs": 44
+    }
+  },
+  "range_source": {
+    "commit": "db6f0a5584ef5b0d899770d231476c6589cb16b8",
+    "metadata_blob": "f2538374945f602f7c148d1a534be491895cd6e1",
+    "all_current_maps": 5831,
+    "chiroptera_metadata": 1162,
+    "positive_maps_before_count_gate": 1141,
+    "verified_maps": 1162,
+    "exact_count": 1162,
+    "zero_maps": 21,
+    "count_mismatches": [],
+    "exact_positive_maps": 1141,
+    "grid_shape": [
+      142,
+      360
+    ],
+    "pixel_m": [
+      96486.27222222222,
+      96514.95774647887
+    ],
+    "crs": "EPSG:6933"
+  },
+  "trait_source": {
+    "artifact": 15069663941,
+    "zip_sha256": "fa45d435204439bd4600143540bc6960e0b814405cec938c3275c19ebbd2fb09",
+    "member_sha256": "99a19c169e18a0bafa4a518b7f844b56d2fe846cac13d5c035f4eae562a74c7b",
+    "species": 280
+  },
+  "before_environment": {
+    "species": 23,
+    "cells": 934,
+    "exact_genus_residual_mean_cell_weight": 0.0697732205297923
+  },
+  "climate": {
+    "bytes": 49869449,
+    "sha256": "00513224583665ec0f2f955a4ec252730c4deb2004cce9e793492a3f26df4dcf",
+    "members": {
+      "wc2.1_10m_bio_1.tif": "f61633ffac9d44ed220442b3f7171a06f931726668bfbe9d07d53700b257d8cf",
+      "wc2.1_10m_bio_4.tif": "a1bacac2f3d645284ee506fdde14226d7c2cafd5997a2af2f802f45e3550ae19",
+      "wc2.1_10m_bio_5.tif": "32e02d85868734c32547da70cf9c620f4739a3cf5dbc4f2b751e16ebb2338ae1",
+      "wc2.1_10m_bio_6.tif": "7cc728620cba21564bbed19d5fe6268a0ef0bd2578b757a3acf45ef65b8b4007",
+      "wc2.1_10m_bio_12.tif": "1e823e951ace0186c6eadd7368b4d0385c8f51cc952282c0f2d640bf7790fea5",
+      "wc2.1_10m_bio_15.tif": "6e16bf2e37752932cdeb2b209d1e06ba1a154ac012c372e56bc98e774cdfa6c6"
+    },
+    "native_shape": [
+      1080,
+      2160
+    ],
+    "common_valid_pixels": 808053,
+    "range_cells_ge50pct": 15070
+  },
+  "GEDI": {
+    "doi": "10.3334/ORNLDAAC/2339",
+    "metrics": {
+      "rh-98-a0": {
+        "bytes": 35602554,
+        "sha256": "72ade8803e3b80aad3316633a3a61ea1bb2c745e8166932776e5e89da0b6b413",
+        "granule_id": "G3258087918-ORNL_CLOUD",
+        "title": "GEDI_HighQuality_Shots_Rasters.gediv002_rh-98-a0_vf_20190417_20230316_12000m.tif",
+        "descriptions": [
+          "mean",
+          "meanbse",
+          "median",
+          "sd",
+          "iqr",
+          "p95",
+          "shan",
+          "countf"
+        ],
+        "band_lookup": {
+          "mean": 1,
+          "count": 8
+        },
+        "native_valid": 754369
+      },
+      "cover-a0": {
+        "bytes": 39867315,
+        "sha256": "48d852d46634b917fbc0a2544ed604b70ff7fa2a5d8585597c6c58cdb196d13b",
+        "granule_id": "G3258087844-ORNL_CLOUD",
+        "title": "GEDI_HighQuality_Shots_Rasters.gediv002_cover-a0_vf_20190417_20230316_12000m.tif",
+        "descriptions": [
+          "mean",
+          "meanbse",
+          "median",
+          "sd",
+          "iqr",
+          "p95",
+          "shan",
+          "countf"
+        ],
+        "band_lookup": {
+          "mean": 1,
+          "count": 8
+        },
+        "native_valid": 754369
+      },
+      "pai-a0": {
+        "bytes": 39987100,
+        "sha256": "39a3ddf5dd8fca5324c68a6b916a3020eb39a9d7da15962e554479a938c4acab",
+        "granule_id": "G3258087708-ORNL_CLOUD",
+        "title": "GEDI_HighQuality_Shots_Rasters.gediv002_pai-a0_vf_20190417_20230316_12000m.tif",
+        "descriptions": [
+          "mean",
+          "meanbse",
+          "median",
+          "sd",
+          "iqr",
+          "p95",
+          "shan",
+          "countf"
+        ],
+        "band_lookup": {
+          "mean": 1,
+          "count": 8
+        },
+        "native_valid": 754369
+      },
+      "pavd-bot-frac": {
+        "bytes": 36635049,
+        "sha256": "644b9b2c62d3b59c5d6929ce7a71fee537b3c94e6f89b883eff13b847000a2b6",
+        "granule_id": "G3258087271-ORNL_CLOUD",
+        "title": "GEDI_HighQuality_Shots_Rasters.gediv002_pavd-bot-frac_vf_20190417_20230316_12000m.tif",
+        "descriptions": [
+          "mean",
+          "meanbse",
+          "median",
+          "sd",
+          "iqr",
+          "p95",
+          "shan",
+          "countf"
+        ],
+        "band_lookup": {
+          "mean": 1,
+          "count": 8
+        },
+        "native_valid": 749456
+      }
+    },
+    "common_native_pixels": 749456,
+    "native_shape": [
+      965,
+      2881
+    ],
+    "range_cells_ge50pct": 11659
+  },
+  "post_environment": {
+    "cells": 508,
+    "blocks2": 172,
+    "blocks4": 56,
+    "woody_cells": 91
+  },
+  "means": {
+    "K_genus_residual": 0.05921187062051286,
+    "K_raw": 0.23419717020349207,
+    "wing_MPD": 1.0210838314521433,
+    "acoustic_MPD": 1.0448019377402495,
+    "acoustic_MPD_genus_residual": 0.03183616628515957
+  },
+  "tests": {
+    "2": {
+      "grain": 2,
+      "folds": [
+        {
+          "fold": 0,
+          "cells": 98,
+          "blocks": 35,
+          "V_B": [
+            0.000002037824287668376,
+            0.00004869293595797554,
+            0.000018059961599934185,
+            0.0003067044486987202,
+            -0.00002119372775845731
+          ],
+          "V_N": [
+            0.001005684296382152,
+            0.0034874662631993875,
+            0.06311353844722584,
+            0.08300213367733149,
+            -0.0002448966205465743
+          ]
+        },
+        {
+          "fold": 1,
+          "cells": 91,
+          "blocks": 35,
+          "V_B": [
+            -0.000003227060814155972,
+            -0.00002869314276919121,
+            -0.00004180167556490366,
+            0.0004345742514372192,
+            0.000013538927324873579
+          ],
+          "V_N": [
+            0.0019311247131939147,
+            0.0066575836876735656,
+            0.07912238603770538,
+            0.062490734374211335,
+            0.0011554759391442476
+          ]
+        },
+        {
+          "fold": 2,
+          "cells": 104,
+          "blocks": 34,
+          "V_B": [
+            -0.000028817481986506688,
+            0.00004065807650495759,
+            0.000015686818418479687,
+            0.00003313414865751055,
+            0.000004149279051398041
+          ],
+          "V_N": [
+            -0.0004420517176385915,
+            0.010191802328711775,
+            0.07491953499959259,
+            0.08172038367402656,
+            0.001428313270425453
+          ]
+        },
+        {
+          "fold": 3,
+          "cells": 105,
+          "blocks": 34,
+          "V_B": [
+            7.430800974277032e-7,
+            -0.00001984556497811171,
+            -0.000058522068550884675,
+            -0.0002869191381269856,
+            -8.585838804256278e-7
+          ],
+          "V_N": [
+            0.00041498600117523764,
+            0.008155778315351627,
+            0.05277162248335351,
+            0.04437873840955247,
+            0.00012511954420314775
+          ]
+        },
+        {
+          "fold": 4,
+          "cells": 110,
+          "blocks": 34,
+          "V_B": [
+            -0.0000035986738000956357,
+            -0.00006622613724012374,
+            -0.00001053826376988358,
+            0.0002680904788805588,
+            0.000008115172268933005
+          ],
+          "V_N": [
+            0.00022244501815594565,
+            0.007108353758669266,
+            0.0625904068074695,
+            0.0506851197202785,
+            0.0008007887801269858
+          ]
+        }
+      ],
+      "status": "scored",
+      "MSE": {
+        "N": [
+          0.00337217972367813,
+          0.011131795338107474,
+          0.0752062271677263,
+          0.07282728545039369,
+          0.003714388342594952
+        ],
+        "D": [
+          0.002760886099466577,
+          0.003989460141503173,
+          0.00964879666082537,
+          0.008830968262919042,
+          0.0032424267284571415
+        ],
+        "B": [
+          0.0027294487966748205,
+          0.004030501219002184,
+          0.008633691107795143,
+          0.00842912578765868,
+          0.0030644236397180473
+        ],
+        "V": [
+          0.0027359517493019065,
+          0.004035408605703608,
+          0.00864907284885009,
+          0.008275456362398598,
+          0.0030637266543821107
+        ]
+      },
+      "V_B": [
+        -0.000006502952627087373,
+        -0.0000049073867014179055,
+        -0.000015381741054949596,
+        0.00015366942526008585,
+        6.969853359390606e-7
+      ],
+      "V_N": [
+        0.0006362279743762234,
+        0.007096386732403866,
+        0.06655715431887621,
+        0.06455182908799509,
+        0.0006506616882128412
+      ],
+      "relative_V_B": [
+        -0.0023825149733564016,
+        -0.001217562391069766,
+        -0.0017815950168823863,
+        0.01823076664546608,
+        0.00022744418457860122
+      ],
+      "blocks": 172,
+      "positive_blocks": [
+        86,
+        87,
+        77,
+        80,
+        77
+      ],
+      "positive_folds": 2,
+      "delete_one_block_range": [
+        [
+          -0.000011007334519879384,
+          -0.000016486775280416187,
+          -0.00002043948648934167,
+          0.00010468266730978445,
+          -0.000008115695871077963
+        ],
+        [
+          -0.000003459624456126218,
+          0.000007422581489387142,
+          -0.0000069996722489019234,
+          0.00019885104106435035,
+          0.000009405001208046393
+        ]
+      ],
+      "primary_pass": false,
+      "subgroups": {
+        "woody": {
+          "cells": 91,
+          "blocks": 54,
+          "V_B": [
+            0.000009606303403250985,
+            1.8942886719029023e-7,
+            -0.000013045025650392558,
+            0.00008908135516734732,
+            0.000007762677624437815
+          ],
+          "V_N": [
+            0.0000053678899732030345,
+            0.0034274367940674818,
+            0.03323472598599807,
+            0.013400957753758776,
+            -0.0000026594492644976906
+          ]
+        },
+        "other": {
+          "cells": 417,
+          "blocks": 168,
+          "V_B": [
+            -0.000010000645781544151,
+            -0.000013062365905890105,
+            -0.000020868575251947047,
+            0.00006253621746171376,
+            -0.0000049338097161907325
+          ],
+          "V_N": [
+            0.0006784784928691632,
+            0.007172551115408414,
+            0.06659827983076216,
+            0.0664902240196739,
+            0.0006188868941576311
+          ]
+        }
+      }
+    },
+    "4": {
+      "grain": 4,
+      "folds": [
+        {
+          "fold": 0,
+          "cells": 125,
+          "blocks": 12,
+          "V_B": [
+            0.0000052356582080619746,
+            -0.000010722101080729192,
+            -0.00002418650236241885,
+            -0.0003880386389351724,
+            -0.00012712040597247752
+          ],
+          "V_N": [
+            -0.000019721364630432506,
+            0.0064051847697253195,
+            0.0679152535948461,
+            0.04892519952033912,
+            -0.0010685579108644344
+          ]
+        },
+        {
+          "fold": 1,
+          "cells": 91,
+          "blocks": 11,
+          "V_B": [
+            0.00003491621001148158,
+            0.00011672252410713495,
+            0.00005450028128198281,
+            0.0013484445990045169,
+            -0.00010673772328223703
+          ],
+          "V_N": [
+            0.0007211076591799774,
+            0.010335032327277767,
+            0.10037670845442755,
+            0.07031214856469167,
+            0.001973647297428117
+          ]
+        },
+        {
+          "fold": 2,
+          "cells": 116,
+          "blocks": 11,
+          "V_B": [
+            -0.00013725758439890904,
+            -0.000068721547170253,
+            0.000031946230793659935,
+            -0.0003260281380874988,
+            -0.000011163863333807453
+          ],
+          "V_N": [
+            -0.00039613405877720383,
+            0.004768594993604819,
+            0.061337629404632714,
+            0.044160257838819945,
+            -0.0005543221669350867
+          ]
+        },
+        {
+          "fold": 3,
+          "cells": 99,
+          "blocks": 11,
+          "V_B": [
+            0.00004320563525232919,
+            0.000040504071038017717,
+            0.000009952830105131039,
+            0.0006957679408278895,
+            -0.0001093752766990301
+          ],
+          "V_N": [
+            0.0003161596911143401,
+            0.008708771263800874,
+            0.06808089891775128,
+            0.035848523130164595,
+            -0.0002988903793611931
+          ]
+        },
+        {
+          "fold": 4,
+          "cells": 77,
+          "blocks": 11,
+          "V_B": [
+            0.000003467501577199966,
+            -0.00016659071040569205,
+            0.00002361781581243852,
+            0.00045641600023914666,
+            0.00002387399105235888
+          ],
+          "V_N": [
+            0.0016274915187731928,
+            0.008374645683641319,
+            0.07103880002696611,
+            0.09778592718379078,
+            0.0018807664724570586
+          ]
+        }
+      ],
+      "status": "scored",
+      "MSE": {
+        "N": [
+          0.005095423801284467,
+          0.013564346966412927,
+          0.08462174364117453,
+          0.07163894619235572,
+          0.005227509644335413
+        ],
+        "D": [
+          0.0045244667610007125,
+          0.005666016996329751,
+          0.012286273133739983,
+          0.012721721703228057,
+          0.0050788771453848395
+        ],
+        "B": [
+          0.004644214171779678,
+          0.00585171640055609,
+          0.010994466904207923,
+          0.012763701953398404,
+          0.004799770447984265
+        ],
+        "V": [
+          0.00465402707739825,
+          0.0058693522487651495,
+          0.010976074927251197,
+          0.012419699439923366,
+          0.004866964670601405
+        ]
+      },
+      "V_B": [
+        -0.000009812905618573778,
+        -0.000017635848209061554,
+        0.000018391976956720255,
+        0.0003440025134750451,
+        -0.00006719422261713613
+      ],
+      "V_N": [
+        0.00044139672388621674,
+        0.007694994717647777,
+        0.07364566871392333,
+        0.059219246752432356,
+        0.0003605449737340083
+      ],
+      "relative_V_B": [
+        -0.0021129313282323156,
+        -0.00301379065591518,
+        0.0016728393579211263,
+        0.026951625377263887,
+        -0.013999465879739175
+      ],
+      "blocks": 56,
+      "positive_blocks": [
+        27,
+        22,
+        29,
+        28,
+        23
+      ],
+      "positive_folds": 4,
+      "delete_one_block_range": [
+        [
+          -0.00002224202467757869,
+          -0.00004482898305566103,
+          0.000008950569431681804,
+          0.00021561564351994792,
+          -0.00010099971958592867
+        ],
+        [
+          0.000011865202273624336,
+          0.000015689070839527375,
+          0.00003163372626839307,
+          0.00042196166839642517,
+          -0.00003002590450976362
+        ]
+      ],
+      "primary_pass": false,
+      "subgroups": {
+        "woody": {
+          "cells": 91,
+          "blocks": 29,
+          "V_B": [
+            0.00004008328469687328,
+            0.000012966496515133801,
+            -0.00001377387988739983,
+            0.00020073696408022534,
+            -0.000038480540653400546
+          ],
+          "V_N": [
+            -0.00038205070066536524,
+            0.0053325317764807145,
+            0.042425032622267336,
+            0.012570063905022036,
+            -0.0005716112972641136
+          ]
+        },
+        "other": {
+          "cells": 417,
+          "blocks": 55,
+          "V_B": [
+            -0.000018055834024467005,
+            -0.000031631697890049416,
+            0.00001575877004114483,
+            0.00022947983406379838,
+            -0.00007895418584908873
+          ],
+          "V_N": [
+            0.0005490304541438231,
+            0.007822862640786733,
+            0.07335220144130505,
+            0.06184545648773855,
+            0.00033091133119411177
+          ]
+        }
+      }
+    }
+  },
+  "primary_pass": false,
+  "audit": {
+    "run": 46100114552,
+    "job": 140840403430,
+    "head": "32cf928ede628f89f1511ede720661285b3d9288",
+    "scope": "executed aggregate log; no independent output ZIP rehash",
+    "decision": "COMPLETE, primary FAIL at both grains. V-B for conditional K -6.503e-6/-9.813e-6; raw acoustic MPD relative gain +1.823/+2.695% but genus-residual acoustic MPD +0.0227/-1.400%; 80/172 and 28/56 positive blocks for raw acoustic. Woody subgroup K positive both but V-N negative coarse, not a rescue. Close same archive PAVD tests. Not evidence that structural effects are absent. No actual heights or coexistence."
+  }
+}
