@@ -1,0 +1,475 @@
+{
+  "stage": "independent structural and updated protocol source admission",
+  "status": "COMPLETE_SOURCE_AUDIT",
+  "limits": [
+    "no ecological fit",
+    "aggregate schema and support only",
+    "no personal or raw location information",
+    "no restricted access bypass"
+  ],
+  "registry": {
+    "status": "COMPLETE_CENSUS",
+    "record": 20067652,
+    "metadata_http": 200,
+    "metadata_receipt": {
+      "bytes": 22219,
+      "md5": "e39b1a280d6f60f425b383f0c5800dc7",
+      "sha256": "0de8a637b00388756d48cf3df6b170d1767668c3958684ad0c60df0830bb48e6"
+    },
+    "inventory": [
+      {
+        "name": "Bat Monitoring Protocols - European countries - v.1.1.0..xlsx",
+        "bytes": 273108,
+        "checksum": "md5:6ed99d8f1449ff819c63f761cb0565f5"
+      }
+    ],
+    "workbook_http": 200,
+    "workbook_receipt": {
+      "bytes": 273108,
+      "md5": "6ed99d8f1449ff819c63f761cb0565f5",
+      "sha256": "af8e0c91529623ce4a216407c21ffce21c45625a9c702a67f47dc3aec73d4a49"
+    },
+    "sheets": {
+      "Readme": {
+        "dimensions": [
+          5,
+          1
+        ],
+        "nonempty_rows_including_headers": 3,
+        "header_fields": [],
+        "strong_height_rows": 0,
+        "weak_height_rows": 0,
+        "height_terms": {}
+      },
+      "Under- and overground roost mon": {
+        "dimensions": [
+          1009,
+          29
+        ],
+        "nonempty_rows_including_headers": 148,
+        "header_fields": [
+          "Country",
+          "Region",
+          "Hibernation",
+          "Maternity/summer",
+          "Migration",
+          "Swarming",
+          "Method",
+          "Period",
+          "Periodicity",
+          "Video camera model",
+          "Acoustic detector",
+          "Timing",
+          "Type of worker",
+          "Data repository",
+          "Link",
+          "Target species",
+          "Start monitoring",
+          "Comments",
+          "Collaborators",
+          "Contact person",
+          "E-mail",
+          "Institution"
+        ],
+        "strong_height_rows": 0,
+        "weak_height_rows": 0,
+        "height_terms": {}
+      },
+      "Bat foraging activity monitorin": {
+        "dimensions": [
+          74,
+          35
+        ],
+        "nonempty_rows_including_headers": 74,
+        "header_fields": [
+          "Country",
+          "Region",
+          "Spring",
+          "Summer",
+          "Autumn",
+          "Winter",
+          "Method",
+          "Period",
+          "Periodicity",
+          "Timing",
+          "Acoustic detector",
+          "Transect length",
+          "Driving speed",
+          "Analyses",
+          "Sample rate (kHz)",
+          "Gain",
+          "Time expansion",
+          "High pass filter",
+          "Max length file",
+          "Bat pass definition",
+          "Software to detect bats",
+          "Min-Max freq",
+          "Min-Max length",
+          "Max inter-syllabe gap",
+          "Minimum number of pulses",
+          "Type of worker",
+          "Data repository",
+          "Link",
+          "Target species",
+          "Start monitoring",
+          "Comments",
+          "Collaborators",
+          "Contact person",
+          "E-mail",
+          "Institution"
+        ],
+        "strong_height_rows": 0,
+        "weak_height_rows": 0,
+        "height_terms": {}
+      },
+      "Bat box monitoring": {
+        "dimensions": [
+          1001,
+          20
+        ],
+        "nonempty_rows_including_headers": 28,
+        "header_fields": [
+          "Country",
+          "Region",
+          "Spring",
+          "Summer",
+          "Autumn",
+          "Winter",
+          "Method",
+          "Period",
+          "Periodicity",
+          "Camera",
+          "Timing",
+          "Type of worker",
+          "Target species",
+          "Start monitoring",
+          "Data repository",
+          "Link",
+          "Comments",
+          "Contact person",
+          "E-mail",
+          "Institution"
+        ],
+        "strong_height_rows": 0,
+        "weak_height_rows": 0,
+        "height_terms": {}
+      },
+      "Trawling bats monitoring": {
+        "dimensions": [
+          1000,
+          22
+        ],
+        "nonempty_rows_including_headers": 5,
+        "header_fields": [
+          "Country",
+          "Region",
+          "Bat cycle period",
+          "Method",
+          "Period",
+          "Periodicity",
+          "Timing",
+          "Sampling duration",
+          "Sampling points",
+          "Method",
+          "Acoustic detector",
+          "Sampling location",
+          "Environmental variables measured",
+          "Type of worker",
+          "Start monitoring",
+          "Data repository",
+          "Link",
+          "Observations",
+          "Contact person",
+          "E-mail",
+          "Institution",
+          "Collaborators"
+        ],
+        "strong_height_rows": 0,
+        "weak_height_rows": 0,
+        "height_terms": {}
+      },
+      "Indicators and trends": {
+        "dimensions": [
+          1001,
+          14
+        ],
+        "nonempty_rows_including_headers": 59,
+        "header_fields": [
+          "Country",
+          "Region",
+          "Type of indicator",
+          "Variable",
+          "Environmental variables",
+          "Data source",
+          "Trends calculation",
+          "Period",
+          "References",
+          "Observations",
+          "Contact person",
+          "E-mail",
+          "Institution",
+          "Collaborators"
+        ],
+        "strong_height_rows": 0,
+        "weak_height_rows": 0,
+        "height_terms": {}
+      }
+    },
+    "foraging": {
+      "method_rows": 73,
+      "countries": 20,
+      "method_counts": {
+        "Passive acoustic surveys": 38,
+        "Passive acoustic surveys during mistnetting": 2,
+        "Passive acoustic surveys - conitnuous monitoring": 1,
+        "Mistnetting": 3,
+        "Walked transects": 10,
+        "Walked transects / point counts (parallel)": 1,
+        "Car acoustic transects": 7,
+        "Fixed active acoustic surveys": 1,
+        "Passive acoustic monitoring": 1,
+        "Passive acoustic surveys / Walked transects": 1,
+        "Acoustics": 1,
+        "Mobile acoustic transects / Walked Transects": 3,
+        "Mistnetting / Acoustics": 1,
+        "Passive acoustic surveys / Walked transect": 3
+      },
+      "acoustic_fixed_flags": 47,
+      "rows_with_public_url": 35,
+      "comparison_v1": {
+        "method_rows": 73,
+        "countries": 20,
+        "acoustic_fixed_flags": 46
+      }
+    }
+  },
+  "hedgerows": {
+    "status": "STOP",
+    "doi": "10.5061/dryad.9s4mw6mvz",
+    "dataset_http": 200,
+    "dataset_receipt": {
+      "bytes": 7218,
+      "md5": "b9684bb84014c41d5cc9ecc15a26f81a",
+      "sha256": "84b44cc825408c0a425ef6ff681d95deb40e64c3f1ff5d9d56d5a163ca89e42a"
+    },
+    "version_http": 200,
+    "version_receipt": {
+      "bytes": 7139,
+      "md5": "ff63b5bba5a8bdcdc36df0e7f877d5c1",
+      "sha256": "d8abd497315a2fc7058f59e46edfffb91d96d2c7d44a440a733e4b3dc17264ee"
+    },
+    "file_inventory_http": 200,
+    "file_inventory_receipt": {
+      "bytes": 1476,
+      "md5": "43ae5cc6015b13cf3223a54166d41b3d",
+      "sha256": "d1a0eda21a21063e0698b3179681355ed0de7303940a83469012b0d1347df824"
+    },
+    "inventory": [
+      {
+        "path": "Dataset_hegderow_bat_activity_2025.csv",
+        "size": 691951,
+        "digest": "694b87568735087a0e73ddcfae8e47d821be46eeb269414d15eed4bfab94d52e",
+        "digestType": "sha-256"
+      },
+      {
+        "path": "README.md",
+        "size": 12737,
+        "digest": "8acd35c7d72f18d0df3e6719beac5932f15717741ebb0d49aa0f20b394872be6",
+        "digestType": "sha-256"
+      }
+    ],
+    "Dataset_hegderow_bat_activity_2025.csv_http": 401,
+    "error": "Dataset_hegderow_bat_activity_2025.csv HTTP 401"
+  },
+  "river": {
+    "status": "COMPLETE_CENSUS",
+    "record": 10893096,
+    "limits": [
+      "one opportunistic expedition, not nationwide independent sampling",
+      "accepted classifier labels not final expert-vetted labels",
+      "no height pairs",
+      "not a detection calibrated survey"
+    ],
+    "metadata_http": 200,
+    "metadata_receipt": {
+      "bytes": 7445,
+      "md5": "7642f9fe83f677a29e859c9dc19ed6e5",
+      "sha256": "71f82654e851506d24f44072d59ecf2711c42127e1505e1aa52c27b13c18471b"
+    },
+    "inventory": [
+      {
+        "name": "Green.Colorado_Bats.csv",
+        "bytes": 14049965,
+        "checksum": "md5:0b30365712fd920df1d87dcadd2c0f00"
+      },
+      {
+        "name": "README.md",
+        "bytes": 9858,
+        "checksum": "md5:9f1615dd89ac2a9b5af325ef497894c5"
+      },
+      {
+        "name": "KPRO-output-11.15.22.csv",
+        "bytes": 22054732,
+        "checksum": "md5:102de7251d9a95661d96da72fc7efee3"
+      }
+    ],
+    "csv_http": 200,
+    "csv_receipt": {
+      "bytes": 14049965,
+      "md5": "0b30365712fd920df1d87dcadd2c0f00",
+      "sha256": "b72e1a739fdcf687da24349ff0f169ff7a2bdf94ae238b89c861cbcdb374ca76"
+    },
+    "readme_http": 200,
+    "readme_receipt": {
+      "bytes": 9858,
+      "md5": "9f1615dd89ac2a9b5af325ef497894c5",
+      "sha256": "b3ff78e8ced25ad554ccd9ce7e2d452cd1f7da38926a324e6334236343c81699"
+    },
+    "table": {
+      "rows": 59567,
+      "columns": [
+        "Path",
+        "Filename",
+        "Bat_day",
+        "Latitude",
+        "Longitude",
+        "HiF",
+        "LoF",
+        "SppAccp",
+        "Prob",
+        "#Maj",
+        "#Accp",
+        "~Spp",
+        "~Prob",
+        "Fc mean",
+        "Fc StdDev",
+        "Dur mean",
+        "Dur StdDev",
+        "calls/sec",
+        "mean HiFreq",
+        "mean LoFreq",
+        "mean UpprSlp",
+        "mean LwrSlp",
+        "mean TotalSlp",
+        "mean PrecedingIntvl",
+        "Unnamed: 24",
+        "Unnamed: 25",
+        "Unnamed: 26"
+      ]
+    },
+    "support": {
+      "valid_coordinate_rows": 59567,
+      "site_day_units": 63,
+      "day_strings": 63,
+      "accepted_nonempty_label_rows": 18490,
+      "accepted_label_counts": {
+        "Lano": 1655,
+        "Mylu": 19,
+        "Myci": 55,
+        "Pahe": 8757,
+        "Tabr": 2012,
+        "Coto": 9,
+        "Laci": 330,
+        "Myvo": 78,
+        "Epfu": 72,
+        "Euma": 18,
+        "Myca": 4374,
+        "Myev": 35,
+        "Myth": 124,
+        "Myyu": 176,
+        "Anpa": 522,
+        "Labl": 19,
+        "Eupe": 157,
+        "Idph": 62,
+        "Nysp": 16
+      },
+      "both_positive_call_features": 51627,
+      "labeled_georeferenced_positive_features": 18490
+    },
+    "label_day_support": {
+      "Anpa": {
+        "rows": 522,
+        "distinct_day_strings": 33
+      },
+      "Coto": {
+        "rows": 9,
+        "distinct_day_strings": 8
+      },
+      "Epfu": {
+        "rows": 72,
+        "distinct_day_strings": 20
+      },
+      "Euma": {
+        "rows": 18,
+        "distinct_day_strings": 9
+      },
+      "Eupe": {
+        "rows": 157,
+        "distinct_day_strings": 19
+      },
+      "Idph": {
+        "rows": 62,
+        "distinct_day_strings": 15
+      },
+      "Labl": {
+        "rows": 19,
+        "distinct_day_strings": 12
+      },
+      "Laci": {
+        "rows": 330,
+        "distinct_day_strings": 34
+      },
+      "Lano": {
+        "rows": 1655,
+        "distinct_day_strings": 53
+      },
+      "Myca": {
+        "rows": 4374,
+        "distinct_day_strings": 53
+      },
+      "Myci": {
+        "rows": 55,
+        "distinct_day_strings": 10
+      },
+      "Myev": {
+        "rows": 35,
+        "distinct_day_strings": 12
+      },
+      "Mylu": {
+        "rows": 19,
+        "distinct_day_strings": 11
+      },
+      "Myth": {
+        "rows": 124,
+        "distinct_day_strings": 24
+      },
+      "Myvo": {
+        "rows": 78,
+        "distinct_day_strings": 5
+      },
+      "Myyu": {
+        "rows": 176,
+        "distinct_day_strings": 31
+      },
+      "Nysp": {
+        "rows": 16,
+        "distinct_day_strings": 7
+      },
+      "Pahe": {
+        "rows": 8757,
+        "distinct_day_strings": 59
+      },
+      "Tabr": {
+        "rows": 2012,
+        "distinct_day_strings": 58
+      }
+    }
+  },
+  "audit": {
+    "run": 46105968292,
+    "job": 140858658834,
+    "head": "b2eaccb29398e135d6134bb803634daa212c399d",
+    "scope": "executed aggregate logs, source checksums verified, output ZIP not independently rehashed",
+    "decision": "Updated registry 73 protocol rows/20 countries/47 fixed acoustic text flags, no explicit height field. Hedgerow CSV public-catalog download returned 401, no bypass. River raw SonoBat output and README verified; 63 site-day units, 59,567 file rows, 18,490 accepted labels including genus complex; no paired heights and no ecological fit. One transect confounds date and geography. Source accepted as candidate independent acoustic descriptor archive only."
+  }
+}
