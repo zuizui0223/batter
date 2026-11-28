@@ -1,0 +1,374 @@
+{
+  "stage": "global reported acoustic traits admission",
+  "status": "COMPLETE_CENSUS",
+  "limits": [
+    "source compilations not independent experiments",
+    "no imputation, no ecological fit",
+    "exact name coverage not taxonomic reconciliation",
+    "schema census, not validated acoustic trait semantics"
+  ],
+  "range_metadata": {
+    "bytes": 977639,
+    "git_blob": "f2538374945f602f7c148d1a534be491895cd6e1",
+    "sha256": "ac70e5925cdbdb085757d84fcff7fa6fbab9fe285b2fd5b182233ee19ecfc479"
+  },
+  "trait_source": {
+    "artifact": 15069663941,
+    "zip_sha256": "fa45d435204439bd4600143540bc6960e0b814405cec938c3275c19ebbd2fb09",
+    "member_sha256": "99a19c169e18a0bafa4a518b7f844b56d2fe846cac13d5c035f4eae562a74c7b",
+    "species": 280
+  },
+  "sources": {
+    "conenna": {
+      "doi": "10.5061/dryad.tmpg4f4xm",
+      "status": "STOP",
+      "files": {
+        "conenna_et_al_2021_trait_data_csv.csv": {
+          "download_http": 401,
+          "status": "STOP",
+          "error": "download HTTP 401"
+        },
+        "conenna_et_al_2021_trait_references_list.txt": {
+          "download_http": 401,
+          "status": "STOP",
+          "error": "download HTTP 401"
+        },
+        "README.txt": {
+          "download_http": 401,
+          "status": "STOP",
+          "error": "download HTTP 401"
+        }
+      },
+      "dataset_http": 200,
+      "dataset_receipt": {
+        "bytes": 7344,
+        "sha256": "91194a75d5b4855828310a50b02034601ab57ca62038e6f3d01a21735754912a",
+        "md5": "7d349bc177298287aae7a28d014758c9"
+      },
+      "version_http": 200,
+      "version_receipt": {
+        "bytes": 7702,
+        "sha256": "3796b5cdaf47a537d3977cff96733521a9d44e48ad659d35ae9299e84ebd8439",
+        "md5": "77c54a070204942300183ed62bebbed3"
+      },
+      "file_inventory_http": 200,
+      "file_inventory_receipt": {
+        "bytes": 6070,
+        "sha256": "320d83baebfbddfdc04c425f47db905ccf61658ccbd28eedd5d4bb76241d714f",
+        "md5": "30b0e97a0e109de75c00023dfb91db09"
+      },
+      "inventory": [
+        {
+          "path": "conenna_et_al_2021_analyses_code.R",
+          "size": 21952,
+          "digest": "4fb6b8d35944d6438313c9d467e6d5fb8c23af38db765ea3ef1958791cb6b977",
+          "digestType": "sha-256"
+        },
+        {
+          "path": "conenna_et_al_2021_cells_5species.csv",
+          "size": 313369,
+          "digest": "032aa31c35031bdf855984240e8b0f4917bd9d02e1fcb31321de8693f2bc186d",
+          "digestType": "sha-256"
+        },
+        {
+          "path": "conenna_et_al_2021_species_aridity_stats.csv",
+          "size": 53210,
+          "digest": "0aa7c481709495f33c0fdecf7a062a30817abd2a3f16147006bded458535f2c9",
+          "digestType": "sha-256"
+        },
+        {
+          "path": "conenna_et_al_2021_species_grid.csv",
+          "size": 12262373,
+          "digest": "4888a6b57b3b635f597fb98d543d00d2292f95c0698df88efbc6d062454ddb81",
+          "digestType": "sha-256"
+        },
+        {
+          "path": "conenna_et_al_2021_trait_data_csv.csv",
+          "size": 97631,
+          "digest": "5c21f59c45b970047edf040a9702cbdf72c8cf5a5aa8c4f3da62d41e19826023",
+          "digestType": "sha-256"
+        },
+        {
+          "path": "conenna_et_al_2021_trait_data.xlsx",
+          "size": 111337,
+          "digest": "4f8ea7dfcef4d65d3bad41ca44b19d0bdd09111a18037646136dbe4a53f69e81",
+          "digestType": "sha-256"
+        },
+        {
+          "path": "conenna_et_al_2021_trait_references_list.txt",
+          "size": 33202,
+          "digest": "040583f2d356a5b4591e17798576bd0f44f1b246428445098c2ee1f9c9fc28c4",
+          "digestType": "sha-256"
+        },
+        {
+          "path": "README.pdf",
+          "size": 649128,
+          "digest": "65dc568760606b8dc46192efcbb80e9a1617e85f7c222adfca66db36cbd9c14b",
+          "digestType": "sha-256"
+        },
+        {
+          "path": "README.txt",
+          "size": 4480,
+          "digest": "270f8c49a35f843e0361ece18fee5bbcb7f65b9f8f31f499cc167cb5864725df",
+          "digestType": "sha-256"
+        }
+      ]
+    },
+    "giacomini": {
+      "doi": "10.5061/dryad.c59zw3rnt",
+      "status": "STOP",
+      "files": {
+        "Covariates.csv": {
+          "download_http": 401,
+          "status": "STOP",
+          "error": "download HTTP 401"
+        },
+        "README.md": {
+          "download_http": 401,
+          "status": "STOP",
+          "error": "download HTTP 401"
+        }
+      },
+      "dataset_http": 200,
+      "dataset_receipt": {
+        "bytes": 4685,
+        "sha256": "8987b916464d3165468edbe6799797e3011fc837b5a35c9c5d354c375c13665c",
+        "md5": "8495c5a0d2c22e8028d2cd52dc074509"
+      },
+      "version_http": 200,
+      "version_receipt": {
+        "bytes": 4676,
+        "sha256": "feae046200a4f7d86ef7ee81640ffb78bef89a7bab14f18f2c7c21bc92086cde",
+        "md5": "fe853632c3efc8711865d375ebf4a2e5"
+      },
+      "file_inventory_http": 200,
+      "file_inventory_receipt": {
+        "bytes": 3326,
+        "sha256": "6c8b132ddc73c2b4a0d7516e72d227b719a5879a668682d61caf0aa829c3b22a",
+        "md5": "bf4de50870f64022e24908c88ca93b89"
+      },
+      "inventory": [
+        {
+          "path": "chiroptera.no_outgroups.absolute.tre",
+          "size": 32661,
+          "digest": "810626c69794f896532fb18965a1699f3b822a67cf761fb8bace48a3d616e2bf",
+          "digestType": "sha-256"
+        },
+        {
+          "path": "Covariates.csv",
+          "size": 37284,
+          "digest": "81745153d267e36beccd84c9f0379e94888563206d64afea7c0fec777042bd1f",
+          "digestType": "sha-256"
+        },
+        {
+          "path": "Data_complete_Ch3_from_R.tps",
+          "size": 468490,
+          "digest": "2d767f5af1f1801eaa957277bb07ea69a9f5cf46eb0136d4db05ba08bdb18830",
+          "digestType": "sha-256"
+        },
+        {
+          "path": "Lables_Ch3.csv",
+          "size": 41614,
+          "digest": "bcf53aa1f430f3df407589845eb3838fefa570844ef64fb61c25d73b99197b55",
+          "digestType": "sha-256"
+        },
+        {
+          "path": "README.md",
+          "size": 3927,
+          "digest": "3383e8176849ff969002542130cd1386899ee97e539fc7a9851bd6d3022cc773",
+          "digestType": "sha-256"
+        }
+      ]
+    },
+    "eurobatrait": {
+      "doi": "10.6084/m9.figshare.21777161.v2",
+      "status": "COMPLETE_CENSUS",
+      "files": {
+        "04_acoustic_signature.csv": {
+          "download_http": 200,
+          "download_receipt": {
+            "bytes": 410816,
+            "sha256": "22381fc194772a55190d463278dee95707d7d3ca5e84a60e980c8c7bd18f3604",
+            "md5": "0c31584cdb2d0bf21d8bbea4232d8221"
+          },
+          "table": {
+            "rows": 1373,
+            "columns": [
+              "verbatimScientificName",
+              "verbatimTraitName",
+              "verbatimTraitValue",
+              "verbatimTraitValueSD",
+              "verbatimTraitValueCV",
+              "verbatimTraitValueType",
+              "verbatimTraitMethod",
+              "verbatimTraitUnit",
+              "verbatimN1",
+              "verbatimN1Unit",
+              "Area",
+              "ShortReference",
+              "FullReference",
+              "AdditionalInfo1",
+              "AdditionalInfo2",
+              "AdditionalInfo3"
+            ],
+            "numeric_positive_coverage": {},
+            "name_candidates": []
+          },
+          "status": "VERIFIED"
+        },
+        "Taxon.csv": {
+          "download_http": 200,
+          "download_receipt": {
+            "bytes": 3511,
+            "sha256": "d2789d8e8775c7693282b45f7832d54475054d9d596cab37464b505e91d9db68",
+            "md5": "10ec8729d351e7151697649c9016e5e9"
+          },
+          "table": {
+            "rows": 47,
+            "columns": [
+              "Family",
+              "verbatimScientificName",
+              "TaxonURI"
+            ],
+            "numeric_positive_coverage": {},
+            "name_candidates": []
+          },
+          "status": "VERIFIED"
+        },
+        "Trait_description.csv": {
+          "download_http": 200,
+          "download_receipt": {
+            "bytes": 19195,
+            "sha256": "a990aa682fc9d417181368ed6a23eb24847d79640c573de9e71293bde9c6e2e7",
+            "md5": "7069b8c6dfa842f6a7e8db9f600cb09d"
+          },
+          "table": {
+            "rows": 118,
+            "columns": [
+              "Category",
+              "Name",
+              "Unit",
+              "Type",
+              "Definition",
+              "comments"
+            ],
+            "numeric_positive_coverage": {},
+            "name_candidates": []
+          },
+          "status": "VERIFIED"
+        }
+      },
+      "metadata_http": 200,
+      "metadata_receipt": {
+        "bytes": 17435,
+        "sha256": "3f70c09bad1f6bae5254897e324c06f290695145fe8a831797b3382c2b3f9ad9",
+        "md5": "f9487c2735400572d45171afc12a7d64"
+      },
+      "inventory": [
+        {
+          "name": "01_genetic_composition.csv",
+          "size": 81722,
+          "id": 38642855,
+          "md5": "e96b70eed57f2ef38c750e87b92f43c0"
+        },
+        {
+          "name": "02_physiology.csv",
+          "size": 31609,
+          "id": 38642858,
+          "md5": "3e008e02335f145d1e6722ef9dc7e036"
+        },
+        {
+          "name": "04_acoustic_signature.csv",
+          "size": 410816,
+          "id": 38642864,
+          "md5": "0c31584cdb2d0bf21d8bbea4232d8221"
+        },
+        {
+          "name": "05_climatic_associations.csv",
+          "size": 28663,
+          "id": 38642867,
+          "md5": "8da37440b8372b4205fb280e55a01146"
+        },
+        {
+          "name": "06_foraging_habitat.csv",
+          "size": 371925,
+          "id": 38642870,
+          "md5": "3cf4f87a3ce04182b52c2305f878af73"
+        },
+        {
+          "name": "07_roost_type.csv",
+          "size": 202903,
+          "id": 38642873,
+          "md5": "7de91680e8c10a5ed9456b1b00a291f4"
+        },
+        {
+          "name": "08_diet.csv",
+          "size": 116527,
+          "id": 38642876,
+          "md5": "92663ea6f9ea432e6c446f06676e1728"
+        },
+        {
+          "name": "09_spatial_behaviour.csv",
+          "size": 196261,
+          "id": 38642879,
+          "md5": "66875e1631d292594acd1b5295f5041b"
+        },
+        {
+          "name": "10_life_history.csv",
+          "size": 39245,
+          "id": 38642882,
+          "md5": "1ea7861046d94f3da455120f9ce28b8b"
+        },
+        {
+          "name": "11_pathogens.csv",
+          "size": 656208,
+          "id": 38642885,
+          "md5": "1c81bdf1482e49bde6f7d297f5b03e3e"
+        },
+        {
+          "name": "12_phenology.csv",
+          "size": 12216,
+          "id": 38642888,
+          "md5": "a4a96a46128680d13181579d8dfbf804"
+        },
+        {
+          "name": "13_distribution.csv",
+          "size": 24686,
+          "id": 38642891,
+          "md5": "511c1eb2972fd31b78919b1246422e22"
+        },
+        {
+          "name": "Taxon.csv",
+          "size": 3511,
+          "id": 38642894,
+          "md5": "10ec8729d351e7151697649c9016e5e9"
+        },
+        {
+          "name": "Trait_description.csv",
+          "size": 19195,
+          "id": 38642897,
+          "md5": "7069b8c6dfa842f6a7e8db9f600cb09d"
+        },
+        {
+          "name": "Trait_references.csv",
+          "size": 109041,
+          "id": 38642900,
+          "md5": "b8685004ebfcbabda9ac5c2f37588d9c"
+        },
+        {
+          "name": "03_morphology.csv",
+          "size": 187365,
+          "id": 39765382,
+          "md5": "1c81cb5ed08848a9396d96a6798071b7"
+        }
+      ]
+    }
+  },
+  "audit": {
+    "run": 46097981076,
+    "job": 140833667274,
+    "head": "6ef7aefb076abb6b0f0cf2768923b267216fe1bb",
+    "scope": "executed aggregate log; output ZIP not independently rehashed",
+    "decision": "Dryad sources catalog verified but original files denied HTTP401. EuroBaTrait acoustic, Taxon and trait definition original files verified. Next use source-defined long-form traits with direct reference method and exact units; do not report source census as ecological result."
+  }
+}
