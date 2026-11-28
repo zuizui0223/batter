@@ -1,0 +1,286 @@
+{
+  "stage": "European free-flight reported flight/sensory geometry",
+  "status": "COMPLETE",
+  "limits": [
+    "reported acoustic summaries not new waveform measurements",
+    "potential range assemblages not observed coexistence",
+    "genus shuffles not full phylogenetic control",
+    "no GEDI fit, altitude or causal partitioning claim"
+  ],
+  "euro_source": {
+    "metadata_http": 200,
+    "metadata_receipt": {
+      "bytes": 17435,
+      "sha256": "3f70c09bad1f6bae5254897e324c06f290695145fe8a831797b3382c2b3f9ad9",
+      "md5": "f9487c2735400572d45171afc12a7d64"
+    },
+    "04_acoustic_signature.csv": {
+      "download_http": 200,
+      "download_receipt": {
+        "bytes": 410816,
+        "sha256": "22381fc194772a55190d463278dee95707d7d3ca5e84a60e980c8c7bd18f3604",
+        "md5": "0c31584cdb2d0bf21d8bbea4232d8221"
+      }
+    },
+    "Taxon.csv": {
+      "download_http": 200,
+      "download_receipt": {
+        "bytes": 3511,
+        "sha256": "d2789d8e8775c7693282b45f7832d54475054d9d596cab37464b505e91d9db68",
+        "md5": "10ec8729d351e7151697649c9016e5e9"
+      }
+    },
+    "Trait_description.csv": {
+      "download_http": 200,
+      "download_receipt": {
+        "bytes": 19195,
+        "sha256": "a990aa682fc9d417181368ed6a23eb24847d79640c573de9e71293bde9c6e2e7",
+        "md5": "7069b8c6dfa842f6a7e8db9f600cb09d"
+      }
+    }
+  },
+  "trait_names": {
+    "CallDuration": 217,
+    "CallMinFrequency": 94,
+    "CallPeakFrequency": 221,
+    "CallMaxFrequency": 94,
+    "InterpulseInterval": 142,
+    "CallStartFrequency": 123,
+    "CallEndFrequency": 123,
+    "CallMidFrequency": 90,
+    "CallBandwidth": 98,
+    "CallSlope": 68,
+    "buzzDuration": 19,
+    "buzzPeakFrequency": 19,
+    "rateBuzz": 19,
+    "CallType": 46
+  },
+  "traits": {
+    "callpeakfrequency": {
+      "definition": "Frequency with the greatest amount of energy in a call",
+      "dictionary_unit": "kHz",
+      "name": "CallPeakFrequency",
+      "all_rows": 221,
+      "units": {
+        "kHz": 221
+      },
+      "types": {
+        "mean": 187,
+        "mean of means": 34
+      },
+      "methods": {
+        "hand-release": 39,
+        "free-flight": 46,
+        "leaving roost": 21,
+        "free-flight & leaving roost": 5,
+        "hand-release & leaving roost": 20,
+        "hand-release & leaving roost & free-flight": 10,
+        "hand-release & free-flight": 8,
+        "free-flight & hand-release & light-tagged": 9,
+        "free-flight & light-tagged": 1,
+        "free-flight & free-statiounknownry": 1,
+        "free-flight & in-hand": 1,
+        "free-flight & free-statiounknownry & hand-release & light-tagged": 1,
+        "free-flight & free-statiounknownry & hand-release & in-hand": 1,
+        "in-hand": 1,
+        "free-flight & hand-release & light-tagged & unknown": 8,
+        "hand-release & light-tagged & unknown": 4,
+        "free-flight & hand-release": 1,
+        "hand-release & light-tagged": 2,
+        "light-tagged": 1,
+        "free-flight & hand-release & leaving roost": 3,
+        "unknown": 38
+      },
+      "all_species": 40,
+      "reported_numeric_summary_rows": 187,
+      "reported_numeric_species": 39,
+      "admitted_rows": 46,
+      "species": 36,
+      "distinct_references": 7,
+      "reference_species_pairs": 44
+    },
+    "callduration": {
+      "definition": "Duration of a call",
+      "dictionary_unit": "ms",
+      "name": "CallDuration",
+      "all_rows": 217,
+      "units": {
+        "ms": 217
+      },
+      "types": {
+        "mean": 187,
+        "mean of means": 30
+      },
+      "methods": {
+        "hand-release": 39,
+        "free-flight": 46,
+        "leaving roost": 21,
+        "free-flight & leaving roost": 5,
+        "hand-release & leaving roost": 20,
+        "hand-release & leaving roost & free-flight": 10,
+        "hand-release & free-flight": 8,
+        "free-flight & hand-release & light-tagged": 9,
+        "free-flight & light-tagged": 1,
+        "free-flight & free-statiounknownry": 1,
+        "free-flight & in-hand": 1,
+        "free-flight & free-statiounknownry & hand-release & light-tagged": 1,
+        "free-flight & free-statiounknownry & hand-release & in-hand": 1,
+        "in-hand": 1,
+        "free-flight & hand-release & light-tagged & unknown": 8,
+        "hand-release & light-tagged & unknown": 4,
+        "free-flight & hand-release": 1,
+        "hand-release & light-tagged": 2,
+        "light-tagged": 1,
+        "free-flight & hand-release & leaving roost": 3,
+        "unknown": 34
+      },
+      "all_species": 40,
+      "reported_numeric_summary_rows": 187,
+      "reported_numeric_species": 39,
+      "admitted_rows": 46,
+      "species": 36,
+      "distinct_references": 7,
+      "reference_species_pairs": 44
+    }
+  },
+  "common_acoustic_species_before_range_wing": 36,
+  "range_source": {
+    "commit": "db6f0a5584ef5b0d899770d231476c6589cb16b8",
+    "metadata_blob": "f2538374945f602f7c148d1a534be491895cd6e1",
+    "all_current_maps": 5831,
+    "chiroptera_metadata": 1162,
+    "positive_maps_before_count_gate": 1141,
+    "verified_maps": 1162,
+    "exact_count": 1162,
+    "zero_maps": 21,
+    "count_mismatches": [],
+    "exact_positive_maps": 1141,
+    "grid_shape": [
+      142,
+      360
+    ],
+    "pixel_m": [
+      96486.27222222222,
+      96514.95774647887
+    ],
+    "crs": "EPSG:6933"
+  },
+  "trait_source": {
+    "artifact": 15069663941,
+    "zip_sha256": "fa45d435204439bd4600143540bc6960e0b814405cec938c3275c19ebbd2fb09",
+    "member_sha256": "99a19c169e18a0bafa4a518b7f844b56d2fe846cac13d5c035f4eae562a74c7b",
+    "species": 280
+  },
+  "joint_species": 23,
+  "roster_support": {
+    "species": 23,
+    "genera": 9,
+    "mutable_acoustic_species": 20,
+    "trait_names": [
+      "barbastella_barbastellus",
+      "eptesicus_nilssonii",
+      "eptesicus_serotinus",
+      "miniopterus_schreibersii",
+      "myotis_bechsteinii",
+      "myotis_blythii",
+      "myotis_dasycneme",
+      "myotis_daubentonii",
+      "myotis_emarginatus",
+      "myotis_myotis",
+      "myotis_mystacinus",
+      "myotis_nattereri",
+      "nyctalus_leisleri",
+      "nyctalus_noctula",
+      "pipistrellus_kuhlii",
+      "pipistrellus_nathusii",
+      "pipistrellus_pipistrellus",
+      "plecotus_auritus",
+      "plecotus_austriacus",
+      "rhinolophus_euryale",
+      "rhinolophus_ferrumequinum",
+      "rhinolophus_hipposideros",
+      "vespertilio_murinus"
+    ]
+  },
+  "cell_support": {
+    "cells": 934,
+    "blocks2": 281,
+    "blocks4": 84,
+    "coverage_median": 0.8333333333333334
+  },
+  "tests": {
+    "2": {
+      "grain": 2,
+      "blocks": 281,
+      "cells": 934,
+      "mean_W": 1.0778781345566484,
+      "mean_A": 0.919297159036621,
+      "observed_K": 0.2608462257805083,
+      "null": {
+        "unrestricted": {
+          "mean": 0.0015161563081720817,
+          "q025": -0.22923835820309732,
+          "q975": 0.48090183846956647,
+          "rank": 0.8791758351670335,
+          "residual": 0.2593300694723362,
+          "outside": false
+        },
+        "genus": {
+          "mean": 0.19520777884371546,
+          "q025": 0.08229600851190369,
+          "q975": 0.3245808907769602,
+          "rank": 0.8279655931186237,
+          "residual": 0.06563844693679285,
+          "outside": false
+        }
+      },
+      "genus_residual_positive_blocks": 246,
+      "delete_one_block_range": [
+        0.06482236099325524,
+        0.06642677233282157
+      ],
+      "primary_pass": false
+    },
+    "4": {
+      "grain": 4,
+      "blocks": 84,
+      "cells": 934,
+      "mean_W": 1.076368440841898,
+      "mean_A": 0.9521410341629956,
+      "observed_K": 0.25145806681497146,
+      "null": {
+        "unrestricted": {
+          "mean": 0.0025940570854559837,
+          "q025": -0.2297494528078856,
+          "q975": 0.5042226917220641,
+          "rank": 0.8715743148629725,
+          "residual": 0.24886400972951547,
+          "outside": false
+        },
+        "genus": {
+          "mean": 0.1929257704905134,
+          "q025": 0.07284199391707155,
+          "q975": 0.32447767306197683,
+          "rank": 0.7831566313262652,
+          "residual": 0.058532296324458055,
+          "outside": false
+        }
+      },
+      "genus_residual_positive_blocks": 71,
+      "delete_one_block_range": [
+        0.05599478695246503,
+        0.061104285259439416
+      ],
+      "primary_pass": false
+    }
+  },
+  "primary_pass": false,
+  "secondary_roster_global_mass_acoustic_distance_covariance": 0.0929436603825633,
+  "audit": {
+    "run": 46098239636,
+    "job": 140834505866,
+    "head": "d05627ccf9fb8c78aee87499476b3a44ff287fb9",
+    "scope": "executed aggregate log; output ZIP not independently rehashed",
+    "decision": "COMPLETE, primary FAIL at both grains. Positive raw K and genus residual are descriptive; global shuffles encompass observed values. Spatial delete-one-block signs do not establish species-level independence. Preserve fixed 23-species reported free-flight roster for distinct prospective environment test; no more tuning of trait geometry."
+  }
+}
