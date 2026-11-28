@@ -1,0 +1,29 @@
+name: Macro community FD V24 independent structure source admission
+on:
+  push:
+    branches: [prospective/macro-community-fd-20261127]
+    paths: ['.github/workflows/macro-community-fd-v24.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  registry:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install census runtime
+        run: |
+          python -m pip install --only-binary=:all: requests==2.32.5 openpyxl==3.1.5 numpy==2.2.6 pandas==2.2.3
+      - name: Audit new independent source archives
+        run: python prospective/macro_community_fd/macro_fd_v24_structure_sources.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: macro-community-fd-v24-aggregate
+          path: macro_fd_v24_result.json
+          retention-days: 30
+          if-no-files-found: error
