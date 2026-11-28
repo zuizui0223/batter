@@ -1,0 +1,29 @@
+name: Macro community FD V23 protocol registry audit
+on:
+  push:
+    branches: [prospective/macro-community-fd-20261127]
+    paths: ['.github/workflows/macro-community-fd-v23.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  registry:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install source census runtime
+        run: |
+          python -m pip install --only-binary=:all: requests==2.32.5 openpyxl==3.1.5
+      - name: Audit public European protocol workbook
+        run: python prospective/macro_community_fd/macro_fd_v23_protocol_registry.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: macro-community-fd-v23-registry
+          path: macro_fd_v23_result.json
+          retention-days: 30
+          if-no-files-found: error
