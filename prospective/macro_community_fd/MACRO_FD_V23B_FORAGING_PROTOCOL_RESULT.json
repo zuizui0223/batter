@@ -1,0 +1,799 @@
+{
+  "stage": "European foraging protocol table structural census",
+  "status": "COMPLETE_CENSUS",
+  "limits": [
+    "program metadata only, not observed bats",
+    "no evidence of paired height from any rows",
+    "public links are candidate programme pages, not verified public raw files"
+  ],
+  "metadata_http": 200,
+  "workbook_http": 200,
+  "headers": [
+    {
+      "column": 1,
+      "name": "Country"
+    },
+    {
+      "column": 2,
+      "name": "Region"
+    },
+    {
+      "column": 3,
+      "name": "Spring"
+    },
+    {
+      "column": 4,
+      "name": "Summer"
+    },
+    {
+      "column": 5,
+      "name": "Autumn"
+    },
+    {
+      "column": 6,
+      "name": "Winter"
+    },
+    {
+      "column": 7,
+      "name": "Method"
+    },
+    {
+      "column": 8,
+      "name": "Period"
+    },
+    {
+      "column": 9,
+      "name": "Periodicity"
+    },
+    {
+      "column": 10,
+      "name": "Timing"
+    },
+    {
+      "column": 11,
+      "name": "Acoustic detector"
+    },
+    {
+      "column": 12,
+      "name": "Transect length"
+    },
+    {
+      "column": 13,
+      "name": "Driving speed"
+    },
+    {
+      "column": 14,
+      "name": "Analyses"
+    },
+    {
+      "column": 15,
+      "name": "Sample rate (kHz)"
+    },
+    {
+      "column": 16,
+      "name": "Gain"
+    },
+    {
+      "column": 17,
+      "name": "Time expansion"
+    },
+    {
+      "column": 18,
+      "name": "High pass filter"
+    },
+    {
+      "column": 19,
+      "name": "Max length file"
+    },
+    {
+      "column": 20,
+      "name": "Bat pass definition"
+    },
+    {
+      "column": 21,
+      "name": "Software to detect bats"
+    },
+    {
+      "column": 22,
+      "name": "Min-Max freq"
+    },
+    {
+      "column": 23,
+      "name": "Min-Max length"
+    },
+    {
+      "column": 24,
+      "name": "Max inter-syllabe gap"
+    },
+    {
+      "column": 25,
+      "name": "Minimum number of pulses"
+    },
+    {
+      "column": 26,
+      "name": "Type of worker"
+    },
+    {
+      "column": 27,
+      "name": "Data repository"
+    },
+    {
+      "column": 28,
+      "name": "Link"
+    },
+    {
+      "column": 29,
+      "name": "Target species"
+    },
+    {
+      "column": 30,
+      "name": "Start monitoring"
+    },
+    {
+      "column": 31,
+      "name": "Comments"
+    },
+    {
+      "column": 32,
+      "name": "Collaborators"
+    },
+    {
+      "column": 33,
+      "name": "Contact person"
+    },
+    {
+      "column": 34,
+      "name": "E-mail"
+    },
+    {
+      "column": 35,
+      "name": "Institution"
+    }
+  ],
+  "project_name_field_candidates": [],
+  "source_rows": {
+    "nonempty": 73,
+    "method_nonempty": 73,
+    "method_empty": 0,
+    "country_unresolved": 0,
+    "countries": 20,
+    "public_url_rows": 35
+  },
+  "method_counts": {
+    "Passive acoustic surveys": 38,
+    "Passive acoustic surveys during mistnetting": 2,
+    "Passive acoustic surveys - conitnuous monitoring": 1,
+    "Mistnetting": 3,
+    "Walked transects": 11,
+    "Walked transects / point counts (parallel)": 1,
+    "Car acoustic transects": 7,
+    "Fixed active acoustic surveys": 1,
+    "Passive acoustic surveys / Walked transects": 1,
+    "Acoustics": 1,
+    "Mobile acoustic transects / Walked Transects": 3,
+    "Mistnetting / Acoustics": 1,
+    "Passive acoustic surveys / Walked transect": 3
+  },
+  "acoustic_rows": 58,
+  "acoustic_fixed_flags": 46,
+  "acoustic_programme_candidates": [
+    {
+      "row": 2,
+      "country": "Algeria",
+      "method": "Passive acoustic surveys",
+      "programme": null,
+      "public_programme_url": null,
+      "acoustic_method_flag": true,
+      "fixed_method_flag": true,
+      "mobile_method_flag": false
+    },
+    {
+      "row": 3,
+      "country": "Bulgaria",
+      "method": "Passive acoustic surveys",
+      "programme": null,
+      "public_programme_url": "http://www.batmonitoring.org/",
+      "acoustic_method_flag": true,
+      "fixed_method_flag": true,
+      "mobile_method_flag": false
+    },
+    {
+      "row": 4,
+      "country": "Bulgaria",
+      "method": "Passive acoustic surveys",
+      "programme": null,
+      "public_programme_url": "http://www.batmonitoring.org/",
+      "acoustic_method_flag": true,
+      "fixed_method_flag": true,
+      "mobile_method_flag": false
+    },
+    {
+      "row": 5,
+      "country": "Bulgaria",
+      "method": "Passive acoustic surveys",
+      "programme": null,
+      "public_programme_url": "http://www.batmonitoring.org/",
+      "acoustic_method_flag": true,
+      "fixed_method_flag": true,
+      "mobile_method_flag": false
+    },
+    {
+      "row": 6,
+      "country": "Bulgaria",
+      "method": "Passive acoustic surveys",
+      "programme": null,
+      "public_programme_url": null,
+      "acoustic_method_flag": true,
+      "fixed_method_flag": true,
+      "mobile_method_flag": false
+    },
+    {
+      "row": 7,
+      "country": "Croatia",
+      "method": "Passive acoustic surveys during mistnetting",
+      "programme": null,
+      "public_programme_url": null,
+      "acoustic_method_flag": true,
+      "fixed_method_flag": true,
+      "mobile_method_flag": false
+    },
+    {
+      "row": 8,
+      "country": "Croatia",
+      "method": "Passive acoustic surveys - conitnuous monitoring",
+      "programme": null,
+      "public_programme_url": null,
+      "acoustic_method_flag": true,
+      "fixed_method_flag": true,
+      "mobile_method_flag": false
+    },
+    {
+      "row": 13,
+      "country": "Estonia",
+      "method": "Walked transects / point counts (parallel)",
+      "programme": null,
+      "public_programme_url": "https://kese.envir.ee/kese/welcome.action",
+      "acoustic_method_flag": false,
+      "fixed_method_flag": true,
+      "mobile_method_flag": true
+    },
+    {
+      "row": 14,
+      "country": "France",
+      "method": "Car acoustic transects",
+      "programme": null,
+      "public_programme_url": "https://croemer3.wixsite.com/teamchiro/vigie-chiro",
+      "acoustic_method_flag": true,
+      "fixed_method_flag": false,
+      "mobile_method_flag": true
+    },
+    {
+      "row": 16,
+      "country": "France",
+      "method": "Car acoustic transects",
+      "programme": null,
+      "public_programme_url": "https://croemer3.wixsite.com/teamchiro/vigie-chiro",
+      "acoustic_method_flag": true,
+      "fixed_method_flag": false,
+      "mobile_method_flag": true
+    },
+    {
+      "row": 17,
+      "country": "France",
+      "method": "Car acoustic transects",
+      "programme": null,
+      "public_programme_url": "https://croemer3.wixsite.com/teamchiro/vigie-chiro",
+      "acoustic_method_flag": true,
+      "fixed_method_flag": false,
+      "mobile_method_flag": true
+    },
+    {
+      "row": 19,
+      "country": "France",
+      "method": "Passive acoustic surveys",
+      "programme": null,
+      "public_programme_url": "https://croemer3.wixsite.com/teamchiro/vigie-chiro",
+      "acoustic_method_flag": true,
+      "fixed_method_flag": true,
+      "mobile_method_flag": false
+    },
+    {
+      "row": 20,
+      "country": "France",
+      "method": "Fixed active acoustic surveys",
+      "programme": null,
+      "public_programme_url": "http://ecologieacoustique.fr/",
+      "acoustic_method_flag": true,
+      "fixed_method_flag": true,
+      "mobile_method_flag": false
+    },
+    {
+      "row": 21,
+      "country": "France",
+      "method": "Passive acoustic surveys",
+      "programme": null,
+      "public_programme_url": "https://gmb.bzh/wp-content/uploads/2023/10/2023-LeGallDubos-Bilan_analyses_approfondies_tendances_evolution_activite_chauves-souris_forets_bretonnes.pdf",
+      "acoustic_method_flag": true,
+      "fixed_method_flag": true,
+      "mobile_method_flag": false
+    },
+    {
+      "row": 22,
+      "country": "Germany",
+      "method": "Passive acoustic surveys",
+      "programme": null,
+      "public_programme_url": null,
+      "acoustic_method_flag": true,
+      "fixed_method_flag": true,
+      "mobile_method_flag": false
+    },
+    {
+      "row": 23,
+      "country": "Germany",
+      "method": "Passive acoustic surveys",
+      "programme": null,
+      "public_programme_url": null,
+      "acoustic_method_flag": true,
+      "fixed_method_flag": true,
+      "mobile_method_flag": false
+    },
+    {
+      "row": 24,
+      "country": "Germany",
+      "method": "Passive acoustic surveys",
+      "programme": null,
+      "public_programme_url": null,
+      "acoustic_method_flag": true,
+      "fixed_method_flag": true,
+      "mobile_method_flag": false
+    },
+    {
+      "row": 25,
+      "country": "Germany",
+      "method": "Passive acoustic surveys",
+      "programme": null,
+      "public_programme_url": "https://www.anl.bayern.de/publikationen/anliegen/doc/an44103zahn_et_al_2022_jagdhabitate_fledermaeuse.pdf",
+      "acoustic_method_flag": true,
+      "fixed_method_flag": true,
+      "mobile_method_flag": false
+    },
+    {
+      "row": 26,
+      "country": "Germany",
+      "method": "Passive acoustic surveys",
+      "programme": null,
+      "public_programme_url": null,
+      "acoustic_method_flag": true,
+      "fixed_method_flag": true,
+      "mobile_method_flag": false
+    },
+    {
+      "row": 28,
+      "country": "Hungary",
+      "method": "Passive acoustic surveys",
+      "programme": null,
+      "public_programme_url": null,
+      "acoustic_method_flag": true,
+      "fixed_method_flag": true,
+      "mobile_method_flag": false
+    },
+    {
+      "row": 29,
+      "country": "Ireland",
+      "method": "Car acoustic transects",
+      "programme": null,
+      "public_programme_url": null,
+      "acoustic_method_flag": true,
+      "fixed_method_flag": false,
+      "mobile_method_flag": true
+    },
+    {
+      "row": 30,
+      "country": "Italy",
+      "method": "Passive acoustic surveys / Walked transects",
+      "programme": null,
+      "public_programme_url": null,
+      "acoustic_method_flag": true,
+      "fixed_method_flag": true,
+      "mobile_method_flag": true
+    },
+    {
+      "row": 32,
+      "country": "Italy",
+      "method": "Acoustics",
+      "programme": null,
+      "public_programme_url": null,
+      "acoustic_method_flag": true,
+      "fixed_method_flag": false,
+      "mobile_method_flag": false
+    },
+    {
+      "row": 33,
+      "country": "Italy",
+      "method": "Passive acoustic surveys",
+      "programme": null,
+      "public_programme_url": null,
+      "acoustic_method_flag": true,
+      "fixed_method_flag": true,
+      "mobile_method_flag": false
+    },
+    {
+      "row": 34,
+      "country": "Malta",
+      "method": "Mobile acoustic transects / Walked Transects",
+      "programme": null,
+      "public_programme_url": null,
+      "acoustic_method_flag": true,
+      "fixed_method_flag": false,
+      "mobile_method_flag": true
+    },
+    {
+      "row": 35,
+      "country": "Malta",
+      "method": "Mobile acoustic transects / Walked Transects",
+      "programme": null,
+      "public_programme_url": null,
+      "acoustic_method_flag": true,
+      "fixed_method_flag": false,
+      "mobile_method_flag": true
+    },
+    {
+      "row": 36,
+      "country": "Malta",
+      "method": "Mobile acoustic transects / Walked Transects",
+      "programme": null,
+      "public_programme_url": null,
+      "acoustic_method_flag": true,
+      "fixed_method_flag": false,
+      "mobile_method_flag": true
+    },
+    {
+      "row": 37,
+      "country": "Malta",
+      "method": "Passive acoustic surveys",
+      "programme": null,
+      "public_programme_url": null,
+      "acoustic_method_flag": true,
+      "fixed_method_flag": true,
+      "mobile_method_flag": false
+    },
+    {
+      "row": 38,
+      "country": "Malta",
+      "method": "Passive acoustic surveys",
+      "programme": null,
+      "public_programme_url": null,
+      "acoustic_method_flag": true,
+      "fixed_method_flag": true,
+      "mobile_method_flag": false
+    },
+    {
+      "row": 39,
+      "country": "Malta",
+      "method": "Passive acoustic surveys",
+      "programme": null,
+      "public_programme_url": null,
+      "acoustic_method_flag": true,
+      "fixed_method_flag": true,
+      "mobile_method_flag": false
+    },
+    {
+      "row": 40,
+      "country": "Netherlands",
+      "method": "Car acoustic transects",
+      "programme": null,
+      "public_programme_url": "https://www.zoogdiervereniging.nl/wat-we-doen/monitoring/meetprogrammas-nem/nem-meetprogramma-vleermuis-transecttellingen",
+      "acoustic_method_flag": true,
+      "fixed_method_flag": false,
+      "mobile_method_flag": true
+    },
+    {
+      "row": 41,
+      "country": "Romania",
+      "method": "Passive acoustic surveys",
+      "programme": null,
+      "public_programme_url": null,
+      "acoustic_method_flag": true,
+      "fixed_method_flag": true,
+      "mobile_method_flag": false
+    },
+    {
+      "row": 42,
+      "country": "Slovakia",
+      "method": "Mistnetting / Acoustics",
+      "programme": null,
+      "public_programme_url": null,
+      "acoustic_method_flag": true,
+      "fixed_method_flag": false,
+      "mobile_method_flag": false
+    },
+    {
+      "row": 43,
+      "country": "Slovakia",
+      "method": "Car acoustic transects",
+      "programme": null,
+      "public_programme_url": null,
+      "acoustic_method_flag": true,
+      "fixed_method_flag": false,
+      "mobile_method_flag": true
+    },
+    {
+      "row": 44,
+      "country": "Slovakia",
+      "method": "Car acoustic transects",
+      "programme": null,
+      "public_programme_url": null,
+      "acoustic_method_flag": true,
+      "fixed_method_flag": false,
+      "mobile_method_flag": true
+    },
+    {
+      "row": 46,
+      "country": "Slovenia",
+      "method": "Passive acoustic surveys during mistnetting",
+      "programme": null,
+      "public_programme_url": "https://natura2000.gov.si/natura-2000/natura-2000-v-sloveniji/monitoring/sesalci/",
+      "acoustic_method_flag": true,
+      "fixed_method_flag": true,
+      "mobile_method_flag": false
+    },
+    {
+      "row": 47,
+      "country": "Spain",
+      "method": "Passive acoustic surveys",
+      "programme": null,
+      "public_programme_url": "http://www.batmonitoring.org/",
+      "acoustic_method_flag": true,
+      "fixed_method_flag": true,
+      "mobile_method_flag": false
+    },
+    {
+      "row": 48,
+      "country": "Spain",
+      "method": "Passive acoustic surveys",
+      "programme": null,
+      "public_programme_url": "http://www.batmonitoring.org/",
+      "acoustic_method_flag": true,
+      "fixed_method_flag": true,
+      "mobile_method_flag": false
+    },
+    {
+      "row": 49,
+      "country": "Spain",
+      "method": "Passive acoustic surveys",
+      "programme": null,
+      "public_programme_url": "http://www.batmonitoring.org/",
+      "acoustic_method_flag": true,
+      "fixed_method_flag": true,
+      "mobile_method_flag": false
+    },
+    {
+      "row": 50,
+      "country": "Spain",
+      "method": "Passive acoustic surveys",
+      "programme": null,
+      "public_programme_url": "http://www.batmonitoring.org/",
+      "acoustic_method_flag": true,
+      "fixed_method_flag": true,
+      "mobile_method_flag": false
+    },
+    {
+      "row": 51,
+      "country": "Spain",
+      "method": "Passive acoustic surveys",
+      "programme": null,
+      "public_programme_url": "http://www.batmonitoring.org/",
+      "acoustic_method_flag": true,
+      "fixed_method_flag": true,
+      "mobile_method_flag": false
+    },
+    {
+      "row": 52,
+      "country": "Sweden",
+      "method": "Passive acoustic surveys",
+      "programme": null,
+      "public_programme_url": "https://batlife-sweden.se/",
+      "acoustic_method_flag": true,
+      "fixed_method_flag": true,
+      "mobile_method_flag": false
+    },
+    {
+      "row": 53,
+      "country": "Sweden",
+      "method": "Passive acoustic surveys",
+      "programme": null,
+      "public_programme_url": "https://batlife-sweden.se/",
+      "acoustic_method_flag": true,
+      "fixed_method_flag": true,
+      "mobile_method_flag": false
+    },
+    {
+      "row": 54,
+      "country": "Sweden",
+      "method": "Passive acoustic surveys",
+      "programme": null,
+      "public_programme_url": "https://batlife-sweden.se/",
+      "acoustic_method_flag": true,
+      "fixed_method_flag": true,
+      "mobile_method_flag": false
+    },
+    {
+      "row": 55,
+      "country": "Sweden",
+      "method": "Passive acoustic surveys",
+      "programme": null,
+      "public_programme_url": "https://batlife-sweden.se/",
+      "acoustic_method_flag": true,
+      "fixed_method_flag": true,
+      "mobile_method_flag": false
+    },
+    {
+      "row": 56,
+      "country": "Sweden",
+      "method": "Passive acoustic surveys",
+      "programme": null,
+      "public_programme_url": "https://batlife-sweden.se/",
+      "acoustic_method_flag": true,
+      "fixed_method_flag": true,
+      "mobile_method_flag": false
+    },
+    {
+      "row": 57,
+      "country": "Sweden",
+      "method": "Passive acoustic surveys",
+      "programme": null,
+      "public_programme_url": "https://batlife-sweden.se/",
+      "acoustic_method_flag": true,
+      "fixed_method_flag": true,
+      "mobile_method_flag": false
+    },
+    {
+      "row": 58,
+      "country": "Sweden",
+      "method": "Passive acoustic surveys",
+      "programme": null,
+      "public_programme_url": "https://batlife-sweden.se/",
+      "acoustic_method_flag": true,
+      "fixed_method_flag": true,
+      "mobile_method_flag": false
+    },
+    {
+      "row": 59,
+      "country": "Sweden",
+      "method": "Passive acoustic surveys",
+      "programme": null,
+      "public_programme_url": "https://batlife-sweden.se/",
+      "acoustic_method_flag": true,
+      "fixed_method_flag": true,
+      "mobile_method_flag": false
+    },
+    {
+      "row": 60,
+      "country": "Sweden",
+      "method": "Passive acoustic surveys",
+      "programme": null,
+      "public_programme_url": null,
+      "acoustic_method_flag": true,
+      "fixed_method_flag": true,
+      "mobile_method_flag": false
+    },
+    {
+      "row": 61,
+      "country": "Sweden",
+      "method": "Passive acoustic surveys",
+      "programme": null,
+      "public_programme_url": null,
+      "acoustic_method_flag": true,
+      "fixed_method_flag": true,
+      "mobile_method_flag": false
+    },
+    {
+      "row": 62,
+      "country": "Sweden",
+      "method": "Passive acoustic surveys / Walked transect",
+      "programme": null,
+      "public_programme_url": "http://www.artportalen.se/",
+      "acoustic_method_flag": true,
+      "fixed_method_flag": true,
+      "mobile_method_flag": true
+    },
+    {
+      "row": 63,
+      "country": "Sweden",
+      "method": "Passive acoustic surveys / Walked transect",
+      "programme": null,
+      "public_programme_url": null,
+      "acoustic_method_flag": true,
+      "fixed_method_flag": true,
+      "mobile_method_flag": true
+    },
+    {
+      "row": 64,
+      "country": "Sweden",
+      "method": "Passive acoustic surveys / Walked transect",
+      "programme": null,
+      "public_programme_url": "http://www.artportalen.se/",
+      "acoustic_method_flag": true,
+      "fixed_method_flag": true,
+      "mobile_method_flag": true
+    },
+    {
+      "row": 65,
+      "country": "Switzerland",
+      "method": "Passive acoustic surveys",
+      "programme": null,
+      "public_programme_url": null,
+      "acoustic_method_flag": true,
+      "fixed_method_flag": true,
+      "mobile_method_flag": false
+    },
+    {
+      "row": 71,
+      "country": "Israel",
+      "method": "Passive acoustic surveys",
+      "programme": null,
+      "public_programme_url": null,
+      "acoustic_method_flag": true,
+      "fixed_method_flag": true,
+      "mobile_method_flag": false
+    },
+    {
+      "row": 72,
+      "country": "Israel",
+      "method": "Passive acoustic surveys",
+      "programme": null,
+      "public_programme_url": null,
+      "acoustic_method_flag": true,
+      "fixed_method_flag": true,
+      "mobile_method_flag": false
+    },
+    {
+      "row": 73,
+      "country": "Israel",
+      "method": "Passive acoustic surveys",
+      "programme": null,
+      "public_programme_url": null,
+      "acoustic_method_flag": true,
+      "fixed_method_flag": true,
+      "mobile_method_flag": false
+    },
+    {
+      "row": 74,
+      "country": "Israel",
+      "method": "Passive acoustic surveys",
+      "programme": null,
+      "public_programme_url": null,
+      "acoustic_method_flag": true,
+      "fixed_method_flag": true,
+      "mobile_method_flag": false
+    }
+  ],
+  "fixed_method_candidate_summary": {
+    "rows": 46,
+    "countries": 14,
+    "public_url_rows": 23,
+    "distinct_public_url_count": 8,
+    "limits": "method text flags, not independent programmes, sites, or paired strata"
+  },
+  "audit": {
+    "run": 46105618461,
+    "job": 140857576830,
+    "head": "bb74e2c50fa82ba4e3848a0810ad06b3bd71d7f2",
+    "scope": "verified input workbook hash replay and executed aggregate logs, not independent output ZIP rehash"
+  },
+  "decision": "No explicit height field. The GMB Brittany linked programme documents ground/canopy surveys at 12 forests with three recording points in each, 2014–2020; primary data not obtained, limited geographic replication. ChiroHabitats programme page reports 4,591 sites and 11,865 sessions, but published protocol does not document height pairing and accessible raw export has not been verified. Neither admits V22. Do not infer raw height data or reopen failed PAVD analyses.",
+  "followup_sources": [
+    {
+      "url": "https://www.batmonitoring.org/habitats/en/home/",
+      "status": "programme scale only"
+    },
+    {
+      "url": "https://www.batmonitoring.org/habitats/en/protocol/",
+      "status": "no explicit height pairing in protocol page"
+    },
+    {
+      "url": "https://gmb.bzh/document/observatoire-des-mammiferes-de-bretagne-bilan-2025/",
+      "status": "regional height-paired candidate, original raw data not obtained"
+    }
+  ]
+}
