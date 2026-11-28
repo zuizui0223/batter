@@ -1,0 +1,255 @@
+{
+  "stage": "European monitoring protocol source registry",
+  "status": "REGISTRY_CENSUS_COMPLETE",
+  "doi": "10.5281/zenodo.15346727",
+  "limits": [
+    "protocol metadata only",
+    "text flags not paired-height observations",
+    "absence of a term is not evidence of no height sampling",
+    "no contact details, survey locations or raw records exported",
+    "no ecology fit"
+  ],
+  "metadata_http": 200,
+  "workbook_http": 200,
+  "workbook": {
+    "bytes": 353395,
+    "md5": "52993a33c834441c9fbee9decbdc6030",
+    "sha256": "b5597730000d23b2a5b1e87cfd11cbbf03c08619d8c420de82a169f8ced4b58e"
+  },
+  "sheets": {
+    "Readme": {
+      "dimensions": [
+        5,
+        1
+      ],
+      "nonempty_cells": 3,
+      "header_matches": [],
+      "strong_term_counts": {},
+      "strong_rows": 0,
+      "strong_and_acoustic_rows": 0,
+      "strong_and_access_rows": 0,
+      "weak_height_rows": 0,
+      "acoustic_rows": 0,
+      "access_text_rows": 1,
+      "flagged_rows": []
+    },
+    "Under- and overground roost mon": {
+      "dimensions": [
+        996,
+        29
+      ],
+      "nonempty_cells": 1875,
+      "header_matches": [
+        {
+          "row": 1,
+          "column": 1,
+          "field": "Country"
+        },
+        {
+          "row": 1,
+          "column": 7,
+          "field": "Method"
+        },
+        {
+          "row": 1,
+          "column": 15,
+          "field": "Link"
+        }
+      ],
+      "strong_term_counts": {},
+      "strong_rows": 0,
+      "strong_and_acoustic_rows": 0,
+      "strong_and_access_rows": 0,
+      "weak_height_rows": 0,
+      "acoustic_rows": 25,
+      "access_text_rows": 5,
+      "flagged_rows": []
+    },
+    "Bat foraging activity monitorin": {
+      "dimensions": [
+        994,
+        35
+      ],
+      "nonempty_cells": 1608,
+      "header_matches": [
+        {
+          "row": 1,
+          "column": 1,
+          "field": "Country"
+        },
+        {
+          "row": 1,
+          "column": 7,
+          "field": "Method"
+        },
+        {
+          "row": 1,
+          "column": 28,
+          "field": "Link"
+        }
+      ],
+      "strong_term_counts": {},
+      "strong_rows": 0,
+      "strong_and_acoustic_rows": 0,
+      "strong_and_access_rows": 0,
+      "weak_height_rows": 0,
+      "acoustic_rows": 59,
+      "access_text_rows": 1,
+      "flagged_rows": []
+    },
+    "Bat box monitoring": {
+      "dimensions": [
+        1001,
+        20
+      ],
+      "nonempty_cells": 368,
+      "header_matches": [
+        {
+          "row": 1,
+          "column": 1,
+          "field": "Country"
+        },
+        {
+          "row": 1,
+          "column": 7,
+          "field": "Method"
+        },
+        {
+          "row": 1,
+          "column": 16,
+          "field": "Link"
+        }
+      ],
+      "strong_term_counts": {},
+      "strong_rows": 0,
+      "strong_and_acoustic_rows": 0,
+      "strong_and_access_rows": 0,
+      "weak_height_rows": 0,
+      "acoustic_rows": 0,
+      "access_text_rows": 5,
+      "flagged_rows": []
+    },
+    "Trawling bats monitoring": {
+      "dimensions": [
+        1000,
+        22
+      ],
+      "nonempty_cells": 98,
+      "header_matches": [
+        {
+          "row": 1,
+          "column": 1,
+          "field": "Country"
+        },
+        {
+          "row": 1,
+          "column": 4,
+          "field": "Method"
+        },
+        {
+          "row": 1,
+          "column": 10,
+          "field": "Method"
+        },
+        {
+          "row": 1,
+          "column": 17,
+          "field": "Link"
+        }
+      ],
+      "strong_term_counts": {},
+      "strong_rows": 0,
+      "strong_and_acoustic_rows": 0,
+      "strong_and_access_rows": 0,
+      "weak_height_rows": 0,
+      "acoustic_rows": 3,
+      "access_text_rows": 1,
+      "flagged_rows": []
+    },
+    "Indicators and trends": {
+      "dimensions": [
+        1001,
+        14
+      ],
+      "nonempty_cells": 633,
+      "header_matches": [
+        {
+          "row": 1,
+          "column": 1,
+          "field": "Country"
+        }
+      ],
+      "strong_term_counts": {},
+      "strong_rows": 0,
+      "strong_and_acoustic_rows": 0,
+      "strong_and_access_rows": 0,
+      "weak_height_rows": 0,
+      "acoustic_rows": 24,
+      "access_text_rows": 2,
+      "flagged_rows": []
+    }
+  },
+  "totals": {
+    "strong_rows": 0,
+    "strong_and_acoustic_rows": 0,
+    "strong_and_access_rows": 0
+  },
+  "audit": {
+    "run": 46105525050,
+    "job": 140857289339,
+    "head": "b6128190337063fa0ed0232f03317b4d6fa9459b",
+    "scope": "executed aggregate log; exact published workbook MD5 and zip CRC verified; output ZIP not independently rehashed",
+    "decision": "Registry workbook verified. No height-related text flags across six sheets; this is lack of metadata, not proof no height observations. Next identify static detector protocols by actual worksheet schema, without inferring paired height."
+  },
+  "tropical_registry": {
+    "source": "10.1111/brv.12896",
+    "repository": "schefferslab/Vert-Strata-Meta",
+    "commit": "a68a2fca81407800855ea482f94104b425911232",
+    "site_blob": "92004cec07440762aa1182d9d5453a74f0388dd3",
+    "plot_blob": "e045c28885fde7cab99594bc4a6abfd259c27d87",
+    "site_rows": 87,
+    "studies": 62,
+    "bat_units": 26,
+    "bat_studies": 22,
+    "bat_metric_rows": 88,
+    "bat_abundance_rows": 47,
+    "bat_richness_rows": 41,
+    "bat_methods": {
+      "mist_nets": 20,
+      "mist_nets_audio": 1,
+      "audio": 1,
+      "stable_isotopes": 4
+    },
+    "countries_or_territories": 12,
+    "publication_years": [
+      1993,
+      2020
+    ],
+    "species_field": false,
+    "studies_list": [
+      "Bernard_2001",
+      "Brosset_1996",
+      "Duya_2017",
+      "Gregorin_2017",
+      "Henry_2004",
+      "Kalko_2001",
+      "Lim_2001",
+      "MacSwiney_2008",
+      "Marques_2015",
+      "Pech-Canche_2011",
+      "Pereira_2010",
+      "Peters_2006",
+      "Rodríguez_2009",
+      "Silva_2020b",
+      "McEnnerney_2008",
+      "Clarke_2005",
+      "Hodgkison_2004",
+      "Rex_2011",
+      "Francis_1994",
+      "Zubaid_1994",
+      "Ingle_1993",
+      "Weber_2011"
+    ],
+    "decision": "Directly parsed original curation tables through GitHub connector. No species-level height response; source discovery only."
+  }
+}
