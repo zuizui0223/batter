@@ -1,0 +1,1229 @@
+{
+  "stage": "global functional replacement across structural transitions",
+  "status": "COMPLETE",
+  "domain_order": [
+    "joint",
+    "wing",
+    "strategy",
+    "mass"
+  ],
+  "decomposition_order": [
+    "raw_squared_contrast",
+    "genus_squared_contrast",
+    "within_genus_squared_residual",
+    "cross_term"
+  ],
+  "limits": [
+    "potential range assemblages, not observed coexistence",
+    "neighbor transitions not temporal turnover or dispersal",
+    "same sources as V7/V12, distinct outcome, not independent validation",
+    "GEDI bottom-half PAVD fraction is relative vegetation allocation, not navigable air volume",
+    "genus expected replacement not complete phylogenetic control",
+    "edges share species and endpoints; not independent replicates",
+    "coarse diet and stratum source labels not measured flight heights"
+  ],
+  "range_source": {
+    "commit": "db6f0a5584ef5b0d899770d231476c6589cb16b8",
+    "metadata_blob": "f2538374945f602f7c148d1a534be491895cd6e1",
+    "all_current_maps": 5831,
+    "chiroptera_metadata": 1162,
+    "positive_maps_before_count_gate": 1141,
+    "verified_maps": 1162,
+    "exact_count": 1162,
+    "zero_maps": 21,
+    "count_mismatches": [],
+    "exact_positive_maps": 1141,
+    "grid_shape": [
+      142,
+      360
+    ],
+    "pixel_m": [
+      96486.27222222222,
+      96514.95774647887
+    ],
+    "crs": "EPSG:6933"
+  },
+  "trait_source": {
+    "artifact": 15069663941,
+    "zip_sha256": "fa45d435204439bd4600143540bc6960e0b814405cec938c3275c19ebbd2fb09",
+    "member_sha256": "99a19c169e18a0bafa4a518b7f844b56d2fe846cac13d5c035f4eae562a74c7b",
+    "species": 280
+  },
+  "sources": {
+    "trait_data_reported.csv": {
+      "id": 27703263,
+      "bytes": 1612538,
+      "sha256": "14ace2dff03b71c20dc923a9eb293aaadc29934e21c6f11fa30d1b70e5abab92",
+      "md5": "d894586c3858620723b1182d8b491d3e",
+      "rows": 6263,
+      "duplicate_key_rows": 0
+    },
+    "trait_data_sources.csv": {
+      "id": 27703260,
+      "bytes": 3552819,
+      "sha256": "f0d8ba1e42fabed49ffd0d4e61a577c3bfee0a787b9886c5891f8707112a1200",
+      "md5": "f883e787cfed1a27342db4711eedaabd",
+      "rows": 6263,
+      "duplicate_key_rows": 0
+    },
+    "trait_data_imputed.csv": {
+      "id": 27703266,
+      "bytes": 1891897,
+      "sha256": "b576cfd9f12b1441eb564bbf7acb65f06e676108aa0651aed9594585e7ff65f9",
+      "md5": "5c0af319124163830a8e7fa89c0abda5",
+      "rows": 6263,
+      "duplicate_key_rows": 0
+    }
+  },
+  "trait_mapping": {
+    "exact_unique_matches": 1069,
+    "ambiguous_labels": 72,
+    "broad_species": 1034,
+    "common_wing_species": 234,
+    "broad_without_split_annotations": 998,
+    "stratum_codes": {
+      "Ar": 282,
+      "A": 677,
+      "G": 15,
+      "S": 60
+    }
+  },
+  "climate": {
+    "bytes": 49869449,
+    "sha256": "00513224583665ec0f2f955a4ec252730c4deb2004cce9e793492a3f26df4dcf",
+    "members": {
+      "wc2.1_10m_bio_1.tif": "f61633ffac9d44ed220442b3f7171a06f931726668bfbe9d07d53700b257d8cf",
+      "wc2.1_10m_bio_4.tif": "a1bacac2f3d645284ee506fdde14226d7c2cafd5997a2af2f802f45e3550ae19",
+      "wc2.1_10m_bio_5.tif": "32e02d85868734c32547da70cf9c620f4739a3cf5dbc4f2b751e16ebb2338ae1",
+      "wc2.1_10m_bio_6.tif": "7cc728620cba21564bbed19d5fe6268a0ef0bd2578b757a3acf45ef65b8b4007",
+      "wc2.1_10m_bio_12.tif": "1e823e951ace0186c6eadd7368b4d0385c8f51cc952282c0f2d640bf7790fea5",
+      "wc2.1_10m_bio_15.tif": "6e16bf2e37752932cdeb2b209d1e06ba1a154ac012c372e56bc98e774cdfa6c6"
+    },
+    "native_shape": [
+      1080,
+      2160
+    ],
+    "common_valid_pixels": 808053,
+    "range_cells_ge50pct": 15070
+  },
+  "GEDI": {
+    "doi": "10.3334/ORNLDAAC/2339",
+    "metrics": {
+      "rh-98-a0": {
+        "bytes": 35602554,
+        "sha256": "72ade8803e3b80aad3316633a3a61ea1bb2c745e8166932776e5e89da0b6b413",
+        "granule_id": "G3258087918-ORNL_CLOUD",
+        "title": "GEDI_HighQuality_Shots_Rasters.gediv002_rh-98-a0_vf_20190417_20230316_12000m.tif",
+        "descriptions": [
+          "mean",
+          "meanbse",
+          "median",
+          "sd",
+          "iqr",
+          "p95",
+          "shan",
+          "countf"
+        ],
+        "band_lookup": {
+          "mean": 1,
+          "count": 8
+        },
+        "native_valid": 754369
+      },
+      "cover-a0": {
+        "bytes": 39867315,
+        "sha256": "48d852d46634b917fbc0a2544ed604b70ff7fa2a5d8585597c6c58cdb196d13b",
+        "granule_id": "G3258087844-ORNL_CLOUD",
+        "title": "GEDI_HighQuality_Shots_Rasters.gediv002_cover-a0_vf_20190417_20230316_12000m.tif",
+        "descriptions": [
+          "mean",
+          "meanbse",
+          "median",
+          "sd",
+          "iqr",
+          "p95",
+          "shan",
+          "countf"
+        ],
+        "band_lookup": {
+          "mean": 1,
+          "count": 8
+        },
+        "native_valid": 754369
+      },
+      "pai-a0": {
+        "bytes": 39987100,
+        "sha256": "39a3ddf5dd8fca5324c68a6b916a3020eb39a9d7da15962e554479a938c4acab",
+        "granule_id": "G3258087708-ORNL_CLOUD",
+        "title": "GEDI_HighQuality_Shots_Rasters.gediv002_pai-a0_vf_20190417_20230316_12000m.tif",
+        "descriptions": [
+          "mean",
+          "meanbse",
+          "median",
+          "sd",
+          "iqr",
+          "p95",
+          "shan",
+          "countf"
+        ],
+        "band_lookup": {
+          "mean": 1,
+          "count": 8
+        },
+        "native_valid": 754369
+      },
+      "pavd-bot-frac": {
+        "bytes": 36635049,
+        "sha256": "644b9b2c62d3b59c5d6929ce7a71fee537b3c94e6f89b883eff13b847000a2b6",
+        "granule_id": "G3258087271-ORNL_CLOUD",
+        "title": "GEDI_HighQuality_Shots_Rasters.gediv002_pavd-bot-frac_vf_20190417_20230316_12000m.tif",
+        "descriptions": [
+          "mean",
+          "meanbse",
+          "median",
+          "sd",
+          "iqr",
+          "p95",
+          "shan",
+          "countf"
+        ],
+        "band_lookup": {
+          "mean": 1,
+          "count": 8
+        },
+        "native_valid": 749456
+      }
+    },
+    "common_native_pixels": 749456,
+    "native_shape": [
+      965,
+      2881
+    ],
+    "range_cells_ge50pct": 11659
+  },
+  "cell_support": {
+    "North_America": 413,
+    "East_Asia": 414,
+    "South_America": 883,
+    "Africa": 522
+  },
+  "neighbor_edges_before_T_gate": 2915,
+  "roster": {
+    "species": 234,
+    "genera": 106,
+    "cells": 2232,
+    "domains": [
+      "wing",
+      "joint_diet_stratum",
+      "mass"
+    ]
+  },
+  "edge_support": {
+    "North_America": {
+      "edges": 208,
+      "endpoint_cells": 262,
+      "blocks5": 33,
+      "blocks10": 18,
+      "T_quantiles": [
+        0.05555555555555557,
+        0.09090909090909093,
+        0.11111111111111113,
+        0.15751008064516128,
+        0.29999999999999993
+      ],
+      "high_T_edges": 109,
+      "high_coverage_both_edges": 145
+    },
+    "East_Asia": {
+      "edges": 422,
+      "endpoint_cells": 378,
+      "blocks5": 33,
+      "blocks10": 15,
+      "T_quantiles": [
+        0.05,
+        0.08333333333333337,
+        0.12499999999999997,
+        0.19838709677419353,
+        1
+      ],
+      "high_T_edges": 251,
+      "high_coverage_both_edges": 212
+    },
+    "South_America": {
+      "edges": 211,
+      "endpoint_cells": 278,
+      "blocks5": 36,
+      "blocks10": 18,
+      "T_quantiles": [
+        0.05882352941176472,
+        0.06666666666666667,
+        0.0740740740740741,
+        0.103448275862069,
+        0.3448275862068966
+      ],
+      "high_T_edges": 58,
+      "high_coverage_both_edges": 0
+    },
+    "Africa": {
+      "edges": 465,
+      "endpoint_cells": 452,
+      "blocks5": 37,
+      "blocks10": 15,
+      "T_quantiles": [
+        0.05,
+        0.06666666666666665,
+        0.09523809523809523,
+        0.13636363636363635,
+        0.5
+      ],
+      "high_T_edges": 218,
+      "high_coverage_both_edges": 126
+    }
+  },
+  "decomposition": {
+    "North_America": {
+      "squared_components": [
+        [
+          0.8335203569823356,
+          0.5627908555803256,
+          1.1042498583843467,
+          0.22128229112795103
+        ],
+        [
+          0.8398217824688831,
+          0.6635753320477311,
+          1.0160682328900366,
+          0.16432471495210896
+        ],
+        [
+          0.07467766914864327,
+          0.1057103660107724,
+          0.04364497228651406,
+          0.03997171147891412
+        ],
+        [
+          -0.08097909463519094,
+          -0.20649484247817704,
+          0.04453665320779521,
+          0.016985864696927942
+        ]
+      ],
+      "residual_over_raw": [
+        0.08959309574514192,
+        0.18783241583015495,
+        0.039524544155588134,
+        0.18063673905021826
+      ]
+    },
+    "East_Asia": {
+      "squared_components": [
+        [
+          0.9379250671830104,
+          1.2704332659991018,
+          0.605416868366917,
+          0.5992890063892437
+        ],
+        [
+          0.8466282955497838,
+          1.10291685576462,
+          0.5903397353349485,
+          0.47143097627838787
+        ],
+        [
+          0.07481491570691369,
+          0.13793237809998524,
+          0.01169745331384204,
+          0.18482800268753594
+        ],
+        [
+          0.01648185592631206,
+          0.0295840321344973,
+          0.003379679718126822,
+          -0.05696997257667987
+        ]
+      ],
+      "residual_over_raw": [
+        0.07976641026517699,
+        0.1085711322204017,
+        0.019321320440567436,
+        0.3084121362431409
+      ]
+    },
+    "South_America": {
+      "squared_components": [
+        [
+          0.5520600437340168,
+          0.474660780610825,
+          0.6294593068572085,
+          0.5286385091689891
+        ],
+        [
+          0.5525311868589541,
+          0.4905676073825372,
+          0.6144947663353721,
+          0.4989672966614061
+        ],
+        [
+          0.023678761216171428,
+          0.037792797323359564,
+          0.009564725108983268,
+          0.029382640631299757
+        ],
+        [
+          -0.024149904341109384,
+          -0.05369962409507168,
+          0.005399815412852921,
+          0.0002885718762828871
+        ]
+      ],
+      "residual_over_raw": [
+        0.04289164101791051,
+        0.07962064461008403,
+        0.015195144475245649,
+        0.055581725738234194
+      ]
+    },
+    "Africa": {
+      "squared_components": [
+        [
+          0.7878144548069149,
+          0.7329283790725852,
+          0.8427005305412446,
+          1.0829054637511444
+        ],
+        [
+          0.7498090241917812,
+          0.6876503069993688,
+          0.8119677413841937,
+          1.002418492552121
+        ],
+        [
+          0.06106800448032098,
+          0.1015778416258046,
+          0.020558167334837323,
+          0.07172229630734404
+        ],
+        [
+          -0.02306257386518717,
+          -0.05629976955258747,
+          0.010174621822213119,
+          0.008764674891680164
+        ]
+      ],
+      "residual_over_raw": [
+        0.07751571973287556,
+        0.13859177039144896,
+        0.02439557896282959,
+        0.0662313550980717
+      ]
+    },
+    "equal_region_block": {
+      "squared_components": [
+        [
+          0.777829980676568,
+          0.760203320315709,
+          0.7954566410374297,
+          0.6080288176093327
+        ],
+        [
+          0.7471975722673502,
+          0.7361775255485644,
+          0.7582176189861389,
+          0.5342853701110066
+        ],
+        [
+          0.05855983763801218,
+          0.09575334576498064,
+          0.021366329511044203,
+          0.08147616277627326
+        ],
+        [
+          -0.027927429228793873,
+          -0.0717275509978347,
+          0.015872692540246983,
+          -0.007732715277947203
+        ]
+      ],
+      "residual_over_raw": [
+        0.07528616676240221,
+        0.12595754741667625,
+        0.026860457765716012,
+        0.13400049539859618
+      ]
+    }
+  },
+  "total_edges": 1306,
+  "total_endpoint_cells": 1370,
+  "feature_order": [
+    "delta_bio1",
+    "delta_bio4",
+    "delta_bio5",
+    "delta_bio6",
+    "delta_bio12",
+    "delta_bio15",
+    "delta_abs_lat",
+    "delta_log_range_richness",
+    "delta_log_matched_richness",
+    "delta_trait_coverage",
+    "delta_climate_area_support",
+    "delta_GEDI_area_support",
+    "delta_log1p_RH98",
+    "delta_cover",
+    "delta_log1p_PAI",
+    "replacement_genus_fraction_antrozous",
+    "replacement_genus_fraction_artibeus",
+    "replacement_genus_fraction_aselliscus",
+    "replacement_genus_fraction_austronomus",
+    "replacement_genus_fraction_barbastella",
+    "replacement_genus_fraction_carollia",
+    "replacement_genus_fraction_chaerephon",
+    "replacement_genus_fraction_chalinolobus",
+    "replacement_genus_fraction_chiroderma",
+    "replacement_genus_fraction_choeroniscus",
+    "replacement_genus_fraction_choeronycteris",
+    "replacement_genus_fraction_chrotopterus",
+    "replacement_genus_fraction_cistugo",
+    "replacement_genus_fraction_cloeotis",
+    "replacement_genus_fraction_coelops",
+    "replacement_genus_fraction_coleura",
+    "replacement_genus_fraction_corynorhinus",
+    "replacement_genus_fraction_craseonycteris",
+    "replacement_genus_fraction_cynopterus",
+    "replacement_genus_fraction_desmodus",
+    "replacement_genus_fraction_diaemus",
+    "replacement_genus_fraction_diphylla",
+    "replacement_genus_fraction_dobsonia",
+    "replacement_genus_fraction_eidolon",
+    "replacement_genus_fraction_emballonura",
+    "replacement_genus_fraction_eonycteris",
+    "replacement_genus_fraction_epomophorus",
+    "replacement_genus_fraction_epomops",
+    "replacement_genus_fraction_eptesicus",
+    "replacement_genus_fraction_erophylla",
+    "replacement_genus_fraction_eumops",
+    "replacement_genus_fraction_falsistrellus",
+    "replacement_genus_fraction_glauconycteris",
+    "replacement_genus_fraction_glossophaga",
+    "replacement_genus_fraction_harpiocephalus",
+    "replacement_genus_fraction_harpyionycteris",
+    "replacement_genus_fraction_hipposideros",
+    "replacement_genus_fraction_histiotus",
+    "replacement_genus_fraction_hypsignathus",
+    "replacement_genus_fraction_ia",
+    "replacement_genus_fraction_idionycteris",
+    "replacement_genus_fraction_kerivoula",
+    "replacement_genus_fraction_laephotis",
+    "replacement_genus_fraction_lasionycteris",
+    "replacement_genus_fraction_lasiurus",
+    "replacement_genus_fraction_lavia",
+    "replacement_genus_fraction_leptonycteris",
+    "replacement_genus_fraction_macroderma",
+    "replacement_genus_fraction_macroglossus",
+    "replacement_genus_fraction_macrotus",
+    "replacement_genus_fraction_megaderma",
+    "replacement_genus_fraction_micronycteris",
+    "replacement_genus_fraction_micropteropus",
+    "replacement_genus_fraction_mimetillus",
+    "replacement_genus_fraction_miniopterus",
+    "replacement_genus_fraction_molossops",
+    "replacement_genus_fraction_molossus",
+    "replacement_genus_fraction_mops",
+    "replacement_genus_fraction_mormoops",
+    "replacement_genus_fraction_mormopterus",
+    "replacement_genus_fraction_murina",
+    "replacement_genus_fraction_myotis",
+    "replacement_genus_fraction_mystacina",
+    "replacement_genus_fraction_natalus",
+    "replacement_genus_fraction_neoromicia",
+    "replacement_genus_fraction_noctilio",
+    "replacement_genus_fraction_notopteris",
+    "replacement_genus_fraction_nyctalus",
+    "replacement_genus_fraction_nycteris",
+    "replacement_genus_fraction_nycticeinops",
+    "replacement_genus_fraction_nycticeius",
+    "replacement_genus_fraction_nyctimene",
+    "replacement_genus_fraction_nyctophilus",
+    "replacement_genus_fraction_paranyctimene",
+    "replacement_genus_fraction_phyllostomus",
+    "replacement_genus_fraction_pipistrellus",
+    "replacement_genus_fraction_plecotus",
+    "replacement_genus_fraction_pteronotus",
+    "replacement_genus_fraction_pteropus",
+    "replacement_genus_fraction_rhinolophus",
+    "replacement_genus_fraction_rhinopoma",
+    "replacement_genus_fraction_rhynchonycteris",
+    "replacement_genus_fraction_rousettus",
+    "replacement_genus_fraction_saccolaimus",
+    "replacement_genus_fraction_saccopteryx",
+    "replacement_genus_fraction_sauromys",
+    "replacement_genus_fraction_scoteanax",
+    "replacement_genus_fraction_scotoecus",
+    "replacement_genus_fraction_scotomanes",
+    "replacement_genus_fraction_scotophilus",
+    "replacement_genus_fraction_scotorepens",
+    "replacement_genus_fraction_scotozous",
+    "replacement_genus_fraction_sphaerias",
+    "replacement_genus_fraction_stenoderma",
+    "replacement_genus_fraction_styloctenium",
+    "replacement_genus_fraction_syconycteris",
+    "replacement_genus_fraction_tadarida",
+    "replacement_genus_fraction_taphozous",
+    "replacement_genus_fraction_thyroptera",
+    "replacement_genus_fraction_trachops",
+    "replacement_genus_fraction_tylonycteris",
+    "replacement_genus_fraction_uroderma",
+    "replacement_genus_fraction_vampyrodes",
+    "replacement_genus_fraction_vampyrum",
+    "replacement_genus_fraction_vespadelus",
+    "replacement_genus_fraction_vespertilio",
+    "delta_bottom_half_PAVD_fraction"
+  ],
+  "PAVD_absolute_difference_quantiles": [
+    0.0000020135916947161547,
+    0.005789055290931586,
+    0.012806569968023762,
+    0.022617702288936017,
+    0.09377790253167628
+  ],
+  "tests": {
+    "spatial_5": {
+      "status": "scored",
+      "grain": 5,
+      "transfer": false,
+      "edges": 1306,
+      "blocks": 139,
+      "MSE": {
+        "N": [
+          0.05855983763801218,
+          0.09575334576498064,
+          0.021366329511044203,
+          0.08147616277627326
+        ],
+        "B": [
+          0.05686697918360094,
+          0.10523283580472803,
+          0.008501122562473798,
+          0.09115076005918232
+        ],
+        "V": [
+          0.05647516837250931,
+          0.10444614032072938,
+          0.008504196424288932,
+          0.08996053757454577
+        ]
+      },
+      "V_B": [
+        0.00039181081109163074,
+        0.0007866954839986506,
+        -0.000003073861815134152,
+        0.0011902224846365578
+      ],
+      "V_N": [
+        0.002084669265502874,
+        -0.008692794555748742,
+        0.012862133086755271,
+        -0.008484374798272507
+      ],
+      "relative_V_B": [
+        0.006889952951899008,
+        0.007475760564492029,
+        -0.00036158304889085947,
+        0.013057735161657135
+      ],
+      "positive_blocks": [
+        78,
+        77,
+        66,
+        84
+      ],
+      "positive_folds": 4,
+      "folds": [
+        {
+          "fold": "0",
+          "edges": 283,
+          "blocks": 30,
+          "V_B": [
+            0.00004623924474131402,
+            0.00006940988865344888,
+            0.000023068600829307534,
+            0.0006041090236236918
+          ],
+          "V_N": [
+            0.016730707416684684,
+            0.0143674800705679,
+            0.01909393476280153,
+            0.005865606821913297
+          ]
+        },
+        {
+          "fold": "1",
+          "edges": 282,
+          "blocks": 29,
+          "V_B": [
+            0.0009937002316276894,
+            0.0019603005489674252,
+            0.000027099914287733243,
+            0.0018524946822826571
+          ],
+          "V_N": [
+            -0.012369218490604947,
+            -0.03269398301479641,
+            0.00795554603358623,
+            -0.012497303666735918
+          ]
+        },
+        {
+          "fold": "2",
+          "edges": 252,
+          "blocks": 28,
+          "V_B": [
+            -0.0002629978800695529,
+            -0.0004841726375857808,
+            -0.00004182312255332325,
+            0.0007200567320315709
+          ],
+          "V_N": [
+            0.007723913748216182,
+            0.0009375646105157648,
+            0.014510262885916581,
+            -0.004901520778517313
+          ]
+        },
+        {
+          "fold": "3",
+          "edges": 284,
+          "blocks": 26,
+          "V_B": [
+            0.0003673549641857246,
+            0.0007216349475550193,
+            0.000013074980816405596,
+            0.0010732227327380772
+          ],
+          "V_N": [
+            0.016908824286818877,
+            0.019035896614109052,
+            0.014781751959528827,
+            -0.0013812641053135982
+          ]
+        },
+        {
+          "fold": "4",
+          "edges": 205,
+          "blocks": 26,
+          "V_B": [
+            0.0008634991427968058,
+            0.0017690314479610059,
+            -0.00004203316236716867,
+            0.0017378156249198001
+          ],
+          "V_N": [
+            -0.019889251932296986,
+            -0.04742024343518084,
+            0.007641739570586989,
+            -0.03198446908174257
+          ]
+        }
+      ],
+      "delete_one_region_block_range": [
+        [
+          0.00029176738459837774,
+          0.0005908717741821336,
+          -0.000011216820672817937,
+          0.0009896099480343561
+        ],
+        [
+          0.0004422194030330369,
+          0.0008899513096726577,
+          0.000007054938382198892,
+          0.0013382458463185153
+        ]
+      ],
+      "regions": {
+        "Africa": {
+          "edges": 465,
+          "V_B": [
+            0.000281575349027785,
+            0.0005945310870802689,
+            -0.000031380389024750904,
+            0.00032272067712915686
+          ],
+          "V_N": [
+            0.0070214034827307675,
+            0.001876121228481853,
+            0.012166685736979585,
+            -0.0070898601447795945
+          ]
+        },
+        "East_Asia": {
+          "edges": 422,
+          "V_B": [
+            0.00031647620819846844,
+            0.0006432129348425408,
+            -0.000010260518445774809,
+            0.0024771353082672642
+          ],
+          "V_N": [
+            -0.024415642269150398,
+            -0.05597150183696037,
+            0.007140217298659401,
+            -0.015135274368214074
+          ]
+        },
+        "North_America": {
+          "edges": 208,
+          "V_B": [
+            0.0008800789612016524,
+            0.0016860360009951503,
+            0.00007412192140820312,
+            0.002254052619926755
+          ],
+          "V_N": [
+            0.023082863425404318,
+            0.014995656881243435,
+            0.031170069969565083,
+            -0.005018697444094521
+          ]
+        },
+        "South_America": {
+          "edges": 211,
+          "V_B": [
+            0.00008911272593925545,
+            0.00022300191307670497,
+            -0.000044776461198169776,
+            -0.00029301866677597377
+          ],
+          "V_N": [
+            0.002650052423028057,
+            0.004328545504239195,
+            0.000971559341816905,
+            -0.006693667236000803
+          ]
+        }
+      },
+      "primary_pass": false
+    },
+    "spatial_10": {
+      "status": "scored",
+      "grain": 10,
+      "transfer": false,
+      "edges": 1306,
+      "blocks": 66,
+      "MSE": {
+        "N": [
+          0.0554947509548184,
+          0.08841050667652647,
+          0.02257899523311062,
+          0.09087819776560363
+        ],
+        "B": [
+          0.050046343691857634,
+          0.0888662492806822,
+          0.011226438103033014,
+          0.10765898486014298
+        ],
+        "V": [
+          0.05023512106115861,
+          0.08919109816755141,
+          0.011279143954765416,
+          0.10757574464956081
+        ]
+      },
+      "V_B": [
+        -0.00018877736930097283,
+        -0.00032484888686921953,
+        -0.000052705851732401734,
+        0.00008324021058217501
+      ],
+      "V_N": [
+        0.005259629893659794,
+        -0.0007805914910249401,
+        0.011299851278345202,
+        -0.01669754688395718
+      ],
+      "relative_V_B": [
+        -0.00377205117047714,
+        -0.003655481012180351,
+        -0.004694797338985225,
+        0.0007731840560294175
+      ],
+      "positive_blocks": [
+        30,
+        30,
+        35,
+        41
+      ],
+      "positive_folds": 1,
+      "folds": [
+        {
+          "fold": "0",
+          "edges": 455,
+          "blocks": 14,
+          "V_B": [
+            -0.00016283823372757744,
+            -0.00023988931267261704,
+            -0.00008578715478256733,
+            0.00024007569873762957
+          ],
+          "V_N": [
+            0.008411847724444775,
+            0.009483218171638913,
+            0.007340477277250422,
+            -0.0238055327593253
+          ]
+        },
+        {
+          "fold": "1",
+          "edges": 209,
+          "blocks": 14,
+          "V_B": [
+            -0.0002714689020509725,
+            -0.0003835416404891351,
+            -0.00015939616361280128,
+            0.00038911357697730964
+          ],
+          "V_N": [
+            0.013424103398867009,
+            0.006512765946426441,
+            0.02033544085130754,
+            -0.010920219751972854
+          ]
+        },
+        {
+          "fold": "2",
+          "edges": 257,
+          "blocks": 14,
+          "V_B": [
+            -0.0001834207822200562,
+            -0.00026371754310057505,
+            -0.0001031240213395894,
+            -0.00013708332436430937
+          ],
+          "V_N": [
+            -0.0021694041737403275,
+            -0.015170165405236899,
+            0.010831357057756317,
+            -0.02012256236647926
+          ]
+        },
+        {
+          "fold": "3",
+          "edges": 158,
+          "blocks": 12,
+          "V_B": [
+            -0.0004440829734329438,
+            -0.0009433007418272049,
+            0.00005513479496124969,
+            -0.0003442104317685629
+          ],
+          "V_N": [
+            0.014159801194723792,
+            0.01179726094506136,
+            0.016522341444386163,
+            0.01060904725869094
+          ]
+        },
+        {
+          "fold": "4",
+          "edges": 227,
+          "blocks": 12,
+          "V_B": [
+            0.00019877037414670062,
+            0.0003130492804645224,
+            0.00008449146782881292,
+            0.0002639454868654384
+          ],
+          "V_N": [
+            -0.009789699639622104,
+            -0.020045826221199048,
+            0.00046642694195484294,
+            -0.03821981616363416
+          ]
+        }
+      ],
+      "delete_one_region_block_range": [
+        [
+          -0.0002138702058501734,
+          -0.0003735771517683203,
+          -0.00006572357007367232,
+          -0.00023551604269604222
+        ],
+        [
+          -0.0001167708729222169,
+          -0.00018748855990842537,
+          -0.000009524263118172596,
+          0.000317888692343557
+        ]
+      ],
+      "regions": {
+        "Africa": {
+          "edges": 465,
+          "V_B": [
+            -0.000357630111872044,
+            -0.0006854413691665118,
+            -0.00002981885457739239,
+            -0.001141947032600163
+          ],
+          "V_N": [
+            0.00787944867334097,
+            0.000053303565287529664,
+            0.015705593781394415,
+            -0.0076872632791379625
+          ]
+        },
+        "East_Asia": {
+          "edges": 422,
+          "V_B": [
+            -0.00011008650104477047,
+            -0.00021311607258164833,
+            -0.00000705692950749362,
+            0.0009029498205651854
+          ],
+          "V_N": [
+            -0.016415031445498024,
+            -0.0414130898207975,
+            0.008583026929801632,
+            -0.03538545512042346
+          ]
+        },
+        "North_America": {
+          "edges": 208,
+          "V_B": [
+            -0.00006354048563798204,
+            -0.0001317975643508676,
+            0.0000047165930749694385,
+            0.0009398747814891445
+          ],
+          "V_N": [
+            0.030188482654529725,
+            0.03756851596783919,
+            0.022808449341220307,
+            -0.008307417239458742
+          ]
+        },
+        "South_America": {
+          "edges": 211,
+          "V_B": [
+            -0.0002238523786489907,
+            -0.000269040541378357,
+            -0.00017866421591963833,
+            -0.00036791672712525175
+          ],
+          "V_N": [
+            -0.0006143803077331041,
+            0.0006689043235694331,
+            -0.0018976649390356863,
+            -0.015410051896808621
+          ]
+        }
+      },
+      "primary_pass": false
+    },
+    "region_transfer": {
+      "status": "scored",
+      "grain": 5,
+      "transfer": true,
+      "edges": 1306,
+      "blocks": 139,
+      "MSE": {
+        "N": [
+          0.05855983763801218,
+          0.09575334576498064,
+          0.021366329511044203,
+          0.08147616277627326
+        ],
+        "B": [
+          0.11678455002226756,
+          0.223223856266948,
+          0.010345243777586962,
+          0.1346837273819269
+        ],
+        "V": [
+          0.11376466792491925,
+          0.21712086903108185,
+          0.010408466818756661,
+          0.1318321144341796
+        ]
+      },
+      "V_B": [
+        0.0030198820973483115,
+        0.006102987235866136,
+        -0.000063223041169699,
+        0.0028516129477473007
+      ],
+      "V_N": [
+        -0.05520483028690707,
+        -0.12136752326610122,
+        0.010957862692287542,
+        -0.05035595165790635
+      ],
+      "relative_V_B": [
+        0.025858575443177236,
+        0.027340210575735786,
+        -0.006111314777006234,
+        0.021172661339115537
+      ],
+      "positive_blocks": [
+        72,
+        74,
+        62,
+        88
+      ],
+      "positive_folds": 3,
+      "folds": [
+        {
+          "fold": "Africa",
+          "edges": 465,
+          "blocks": 37,
+          "V_B": [
+            0.012446878940553602,
+            0.025068388648934126,
+            -0.00017463076782657343,
+            0.007357609824858946
+          ],
+          "V_N": [
+            -0.18009319353417985,
+            -0.37045949332251626,
+            0.010273106254156708,
+            -0.07766917933970759
+          ]
+        },
+        {
+          "fold": "East_Asia",
+          "edges": 422,
+          "blocks": 33,
+          "V_B": [
+            -0.0008088574912059193,
+            -0.0015752779446876752,
+            -0.000042437037723832075,
+            0.0005922297530514542
+          ],
+          "V_N": [
+            -0.04347301838372904,
+            -0.09249770119683359,
+            0.005551664429375462,
+            -0.08269596246403968
+          ]
+        },
+        {
+          "fold": "North_America",
+          "edges": 208,
+          "blocks": 33,
+          "V_B": [
+            0.000268517602216814,
+            0.0005557972116198573,
+            -0.000018762007186196375,
+            0.0007837895701949121
+          ],
+          "V_N": [
+            0.022152078165749982,
+            0.012878140083358788,
+            0.03142601624814116,
+            -0.0067433703385765195
+          ]
+        },
+        {
+          "fold": "South_America",
+          "edges": 211,
+          "blocks": 36,
+          "V_B": [
+            0.00017298933782795844,
+            0.0003630410275981405,
+            -0.00001706235194221667,
+            0.0026728226428833213
+          ],
+          "V_N": [
+            -0.019405187395468607,
+            -0.035391038628413946,
+            -0.0034193361625232573,
+            -0.03431529448930145
+          ]
+        }
+      ],
+      "delete_one_region_block_range": [
+        [
+          0.002083746994508763,
+          0.004218057667356056,
+          -0.0000681995067322472,
+          0.0024430114722711906
+        ],
+        [
+          0.0031246854182212644,
+          0.00630748901769125,
+          -0.00005056367833871725,
+          0.003032326681585085
+        ]
+      ],
+      "regions": {
+        "Africa": {
+          "edges": 465,
+          "V_B": [
+            0.012446878940553602,
+            0.025068388648934126,
+            -0.00017463076782657343,
+            0.007357609824858946
+          ],
+          "V_N": [
+            -0.18009319353417985,
+            -0.37045949332251626,
+            0.010273106254156708,
+            -0.07766917933970759
+          ]
+        },
+        "East_Asia": {
+          "edges": 422,
+          "V_B": [
+            -0.0008088574912059193,
+            -0.0015752779446876752,
+            -0.000042437037723832075,
+            0.0005922297530514542
+          ],
+          "V_N": [
+            -0.04347301838372904,
+            -0.09249770119683359,
+            0.005551664429375462,
+            -0.08269596246403968
+          ]
+        },
+        "North_America": {
+          "edges": 208,
+          "V_B": [
+            0.000268517602216814,
+            0.0005557972116198573,
+            -0.000018762007186196375,
+            0.0007837895701949121
+          ],
+          "V_N": [
+            0.022152078165749982,
+            0.012878140083358788,
+            0.03142601624814116,
+            -0.0067433703385765195
+          ]
+        },
+        "South_America": {
+          "edges": 211,
+          "V_B": [
+            0.00017298933782795844,
+            0.0003630410275981405,
+            -0.00001706235194221667,
+            0.0026728226428833213
+          ],
+          "V_N": [
+            -0.019405187395468607,
+            -0.035391038628413946,
+            -0.0034193361625232573,
+            -0.03431529448930145
+          ]
+        }
+      },
+      "primary_pass": false
+    }
+  },
+  "primary_pass": false,
+  "audit": {
+    "run": 46110236745,
+    "job": 140871914251,
+    "head": "80a8b2099eefdf64507dfccb63fa66fe04ea622e",
+    "scope": "executed aggregate log; output ZIP not independently rehashed; climate and GEDI input hashes verified by executed code",
+    "decision": "COMPLETE, all three primary screens fail. On 1306 edges of 1370 distinct endpoints and 139/66 regional blocks, joint relative V-B +0.6890%/-0.3772%/+2.5859%, wing +0.7476%/-0.3655%/+2.7340%, strategy -0.0362%/-0.4695%/-0.6111%; region-transfer V worse than genus-expectation N jointly and for wing. Strategy base B/V beats N in all three aggregated designs but not all regions; not structural mechanism. Descriptive exact neighbor replacement reconstruction: residual/raw squared norm ratio 0.125958 wing, 0.026860 strategy, 0.134000 mass. Strategy ratio smaller than wing in all four regions; not independently calibrated domain difference, causality, or variance explained. Common roster 20% coverage; South America has zero high-coverage-both edges. No same-outcome tuning."
+  }
+}
