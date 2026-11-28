@@ -1,0 +1,226 @@
+{
+  "stage": "independent-source acoustic descriptor pilot",
+  "status": "SPECTRAL_FEASIBILITY_STOP",
+  "record": 20773227,
+  "limits": [
+    "curated audio library not a survey",
+    "spectral peak is not pulse duration or validated characteristic frequency",
+    "no ecological model",
+    "source overlap possible",
+    "no coordinates or raw audio output"
+  ],
+  "metadata_http": 200,
+  "files": {
+    "ChirosetEurope_manifest_v1.csv": {
+      "size": 8586652,
+      "checksum": "md5:f0f02664000c0b0e4f44102106401585"
+    },
+    "ChirosetEurope_starter.ipynb": {
+      "size": 43054,
+      "checksum": "md5:f55c3ecc3b3bb909b0e3f6edf83321fc"
+    },
+    "audio.zip": {
+      "size": 9552152333,
+      "checksum": "md5:603c022cf4526f9df3df3ad2f8324942"
+    }
+  },
+  "manifest_verified": {
+    "size": 8586652,
+    "md5": "f0f02664000c0b0e4f44102106401585",
+    "sha256": "dd19eb99db128c310621f3be5abc21abdee179efd2e4d2d49ae94969cb0994ff"
+  },
+  "columns": [
+    "chiroset_id",
+    "source_id",
+    "genus",
+    "species",
+    "subspecies",
+    "latin",
+    "common_name",
+    "IUCN_status",
+    "IUCN_scope",
+    "annex_ii",
+    "annex_iv",
+    "recordist",
+    "time",
+    "date",
+    "when_uploaded",
+    "country",
+    "location",
+    "latitude",
+    "longitude",
+    "altitude",
+    "remarks",
+    "rec_method",
+    "voc_type",
+    "sex",
+    "life_stage",
+    "background_species",
+    "animal_seen",
+    "playback_used",
+    "temperature",
+    "ring_number",
+    "automated_rec",
+    "device",
+    "mic",
+    "sampling_rate",
+    "time_expansion_factor",
+    "length",
+    "observation_url",
+    "audio_url",
+    "sound_id",
+    "file_name",
+    "license",
+    "audio_quality",
+    "verification",
+    "source",
+    "file_path",
+    "audio_hash",
+    "mode",
+    "group_key",
+    "split"
+  ],
+  "rows": 11517,
+  "source_counts": {
+    "xc": 7271,
+    "inat": 1009,
+    "skiba": 1595,
+    "obs": 306,
+    "ms": 1336
+  },
+  "vocalization_categories": {
+    "echolocation": 6372,
+    "unknown": 1439,
+    "echolocation call": 1216,
+    "social call": 657,
+    "echolocation, feeding buzz": 162,
+    "echolocation call, feeding buzz": 100,
+    "echolocation, verrucosus": 1,
+    "echolocation, playback of pipistrellus nathusii social calls.": 1,
+    "echolocation, noise": 3,
+    "distress call, echolocation": 8,
+    "distress call, echolocation, social call": 3,
+    "echolocation, song": 50,
+    "distress call": 19,
+    "echolocation, social call": 1227,
+    "echolocation, social calls": 49,
+    "call": 3,
+    "defence call": 1,
+    "echolocation, feeding buzz, social call": 94,
+    "song": 16,
+    "echolocation, buzz feeding": 6,
+    "echolocation, feedingbuzz": 1,
+    "echolocation, wing sound": 14,
+    "echolocation, feeding buzz, wing sound": 4,
+    "echolocation, social call ?": 1,
+    "social call, practising echolocation ?": 1,
+    "stationary echolocation": 2,
+    "distress call, echolocation, feeding buzz": 1,
+    "social call, song": 33,
+    "echolocation, social call, song": 16,
+    "echolocation, social call, feeding buzz": 4,
+    "echolocation, releasing call": 1,
+    "echolocation, distress call?": 1,
+    "distress call, social call": 2,
+    "echolocation, feeding buzz, social call, song": 1,
+    "social call, plus echolocation in clutter": 1,
+    "echolocation, wing beats": 1,
+    "feeding buzz": 1,
+    "echolocation, feeding buzz, wing flaps": 1,
+    "echolocation, isolation call": 2,
+    "isolation call": 2
+  },
+  "recording_method_categories": {
+    "hand-release": 81,
+    "field recording": 8201,
+    "web upload": 495,
+    "unknown": 331,
+    "in enclosure": 4,
+    "emerging from roost": 337,
+    "roosting": 219,
+    "inaturalist iphone app": 167,
+    "oauth app client 612": 293,
+    "sound trapped": 14,
+    "with batdetector": 270,
+    "inaturalist android app": 8,
+    "oauth app client 919": 29,
+    "oauth app client 945": 14,
+    "stationary in anechoic box, @ ca. 10 cm": 499,
+    "stationary in large flightroom, @ 1m": 287,
+    "stationary in echoic box, @ ca. 10 cm": 249,
+    "thermal imaging scope": 1,
+    "oauth app client 843": 3,
+    "seen and heard": 4,
+    "in the hand": 10,
+    "heard": 1
+  },
+  "license_categories": {
+    "CC-BY-NC-SA": 6245,
+    "CC-BY-NC-ND": 2029,
+    "CC-BY-NC": 670,
+    "CC-BY": 313,
+    "CC-BY-SA": 2223,
+    "CC0": 36,
+    "CC-BY-ND": 1
+  },
+  "distinct_species_labels": 35,
+  "attrition": {
+    "exact_binomial": {
+      "rows": 11517,
+      "species": 35
+    },
+    "explicit_echo": {
+      "rows": 6372,
+      "species": 34
+    },
+    "explicit_field": {
+      "rows": 4698,
+      "species": 33
+    },
+    "sample_rate": {
+      "rows": 4698,
+      "species": 33
+    },
+    "unexpanded": {
+      "rows": 4698,
+      "species": 33
+    },
+    "known_source_group_file": {
+      "rows": 4698,
+      "species": 33
+    },
+    "permissive_license": {
+      "rows": 857,
+      "species": 12
+    }
+  },
+  "selected": {
+    "rows": 36,
+    "species": 12,
+    "source_counts": {
+      "xc": 36
+    }
+  },
+  "archive_inventory": {
+    "members": 5902,
+    "unique_basenames": 5864
+  },
+  "archive_transfer": {
+    "bytes": 954197,
+    "requests": 4,
+    "whole_archive_md5_verified": false
+  },
+  "rejections": {
+    "nonunique_or_missing_filename": 36
+  },
+  "valid_clips": 0,
+  "species_summary": {},
+  "qualified_species": 0,
+  "audit": {
+    "run": 46084431231,
+    "job": 140790563020,
+    "head": "ae68dee5f7c2a4155403f9fea0b981f0bcad02ad",
+    "scope": "executed aggregate log, manifest MD5 verified, no full audio ZIP or output ZIP rehash",
+    "decision": "STOP: permissive field recording set 12 species and one source, selected filenames not matched in audio ZIP, no real clips measured; do not interpret as spectral biology. Next use source-reported global acoustic traits and new ecological question, no same-source threshold relaxation."
+  }
+}
